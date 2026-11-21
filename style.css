@@ -166,3 +166,28 @@ figure img, .md img { display: block; width: 100%; border-radius: 10px; border: 
 .brand { text-align: center; padding: 8px 0 16px; font-size: 13px; }
 .brand a { color: var(--hint); text-decoration: none; font-weight: 600; }
 .err { color: var(--bad); }
+
+/* bosh sahifa: modullar 2 ustunli setkada (6 modul = 3 qator) */
+.mods { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 12px; }
+.mods .mod { display: flex; flex-direction: column; align-items: stretch; gap: 10px; margin: 0; height: 100%; padding: 14px; }
+.mods .mtop { display: flex; align-items: center; gap: 10px; }
+.mods .mnum { width: 40px; height: 40px; font-size: 21px; }
+.mods .mt { font-size: 16px; line-height: 1.3; }
+.mods .mt .tr { font-size: 14px; }
+.mods .mmeta { margin-top: 8px; font-size: 12px; gap: 6px; }
+@media (max-width: 330px) { .mods { grid-template-columns: 1fr; } }
+/* modul sahifasi: darslar ketma-ketligi */
+.seq h2 { margin-bottom: 6px; }
+.lrow { display: flex; align-items: flex-start; gap: 12px; width: 100%; text-align: left; background: none; border: 0;
+        border-top: 1px solid var(--line, rgba(0,0,0,.08)); padding: 12px 0; color: inherit; font: inherit; }
+.seq h2 + .lrow { border-top: 0; }
+button.lrow { cursor: pointer; }
+.lrow.off { opacity: .6; }
+.lnum { flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-weight: 700;
+        font-size: 14px; background: var(--chip, rgba(31,111,178,.10)); color: var(--primary); }
+.lesson .lnum { background: var(--primary); color: #fff; }
+.lbody { flex: 1; min-width: 0; }
+.lhead { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
+.lt { font-size: 16px; font-weight: 600; }
+.lrow .stats { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px; font-size: 12px; color: var(--hint); }
+.lrow .chev { align-self: center; }

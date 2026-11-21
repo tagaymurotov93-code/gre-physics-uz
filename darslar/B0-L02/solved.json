@@ -1,0 +1,482 @@
+[
+ {
+  "id": "B0-L02-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Tekis harakatlanayotgan jism koordinatasining grafigi $(0;\\ 5\\ \\mathrm{m})$ va $(4\\ \\mathrm{s};\\ 25\\ \\mathrm{m})$ nuqtalardan o'tadi. Jism tezligini, $x(t)$ tenglamasini va jism $x=45\\ \\mathrm{m}$ nuqtaga yetib keladigan vaqtni toping.",
+   "ru": "График координаты равномерно движущегося тела проходит через точки $(0;\\ 5\\ \\mathrm{м})$ и $(4\\ \\mathrm{с};\\ 25\\ \\mathrm{м})$. Найдите скорость тела, уравнение $x(t)$ и момент времени, когда тело достигнет точки $x=45\\ \\mathrm{м}$.",
+   "en": "The position graph of a body in uniform motion passes through the points $(0,\\ 5\\ \\mathrm{m})$ and $(4\\ \\mathrm{s},\\ 25\\ \\mathrm{m})$. Find the velocity of the body, the equation $x(t)$ and the time at which the body reaches $x=45\\ \\mathrm{m}$."
+  },
+  "figure": "figures/B0-L02-S01.png",
+  "solution": {
+   "uz": [
+    "Tezlik — grafik og'masi: $$v=\\frac{\\Delta x}{\\Delta t}=\\frac{25-5}{4-0}=5\\ \\mathrm{m/s}$$",
+    "Chiziq $x$ o'qini $t=0$ da $x_0=5\\ \\mathrm{m}$ da kesadi: $$x(t)=5+5t\\quad(\\mathrm{m})$$",
+    "$x=45\\ \\mathrm{m}$ shartidan: $$5+5t=45\\ \\Rightarrow\\ t=8\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Скорость — наклон графика: $$v=\\frac{\\Delta x}{\\Delta t}=\\frac{25-5}{4-0}=5\\ \\mathrm{m/s}$$",
+    "Прямая пересекает ось $x$ при $t=0$ в точке $x_0=5\\ \\mathrm{м}$: $$x(t)=5+5t\\quad(\\mathrm{m})$$",
+    "Из условия $x=45\\ \\mathrm{м}$: $$5+5t=45\\ \\Rightarrow\\ t=8\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The velocity is the slope of the graph: $$v=\\frac{\\Delta x}{\\Delta t}=\\frac{25-5}{4-0}=5\\ \\mathrm{m/s}$$",
+    "The line crosses the $x$-axis at $t=0$ at $x_0=5\\ \\mathrm{m}$: $$x(t)=5+5t\\quad(\\mathrm{m})$$",
+    "From the condition $x=45\\ \\mathrm{m}$: $$5+5t=45\\ \\Rightarrow\\ t=8\\ \\mathrm{s}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Chiziqli funksiya: og'ma $k=\\Delta y/\\Delta x$, $y=kx+b$",
+   "ru": "Линейная функция: наклон $k=\\Delta y/\\Delta x$, $y=kx+b$",
+   "en": "Linear function: slope $k=\\Delta y/\\Delta x$, $y=kx+b$"
+  },
+  "answer": "v=5\\ \\mathrm{m/s},\\quad x=5+5t,\\quad t=8\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original"
+ },
+ {
+  "id": "B0-L02-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Yuqoriga otilgan to'p balandligi $h(t)=20t-5t^2$ (metrda, $t$ — sekundda). To'p qachon eng katta balandlikka ko'tariladi va bu balandlik qancha? To'p qachon yerga qaytib tushadi?",
+   "ru": "Высота мяча, брошенного вверх, $h(t)=20t-5t^2$ (в метрах, $t$ — в секундах). Когда мяч поднимется на наибольшую высоту и чему она равна? Когда мяч упадёт на землю?",
+   "en": "The height of a ball thrown upward is $h(t)=20t-5t^2$ (in meters, $t$ in seconds). When does the ball reach its maximum height and what is that height? When does the ball return to the ground?"
+  },
+  "figure": "figures/B0-L02-S02.png",
+  "solution": {
+   "uz": [
+    "Parabola uchi ($a=-5$, $b=20$): $$t_0=-\\frac{b}{2a}=-\\frac{20}{2\\cdot(-5)}=2\\ \\mathrm{s}$$",
+    "Eng katta balandlik: $$h(2)=20\\cdot2-5\\cdot2^2=20\\ \\mathrm{m}$$",
+    "Yerga tushish: $h=0$. $$5t(4-t)=0\\ \\Rightarrow\\ t_1=0,\\quad t_2=4\\ \\mathrm{s}$$",
+    "$t=0$ — otilgan payt, demak to'p $t=4\\ \\mathrm{s}$ da tushadi (parabola simmetrik: ko'tarilish va tushish vaqtlari teng)."
+   ],
+   "ru": [
+    "Вершина параболы ($a=-5$, $b=20$): $$t_0=-\\frac{b}{2a}=-\\frac{20}{2\\cdot(-5)}=2\\ \\mathrm{s}$$",
+    "Наибольшая высота: $$h(2)=20\\cdot2-5\\cdot2^2=20\\ \\mathrm{m}$$",
+    "Падение на землю: $h=0$. $$5t(4-t)=0\\ \\Rightarrow\\ t_1=0,\\quad t_2=4\\ \\mathrm{s}$$",
+    "$t=0$ — момент броска, значит мяч падает при $t=4\\ \\mathrm{с}$ (парабола симметрична: время подъёма равно времени падения)."
+   ],
+   "en": [
+    "Vertex of the parabola ($a=-5$, $b=20$): $$t_0=-\\frac{b}{2a}=-\\frac{20}{2\\cdot(-5)}=2\\ \\mathrm{s}$$",
+    "Maximum height: $$h(2)=20\\cdot2-5\\cdot2^2=20\\ \\mathrm{m}$$",
+    "Landing: $h=0$. $$5t(4-t)=0\\ \\Rightarrow\\ t_1=0,\\quad t_2=4\\ \\mathrm{s}$$",
+    "$t=0$ is the moment of the throw, so the ball lands at $t=4\\ \\mathrm{s}$ (the parabola is symmetric: the rise and fall times are equal)."
+   ]
+  },
+  "basis": {
+   "uz": "Kvadratik funksiya: parabola uchi $x_0=-b/(2a)$, ildizlari",
+   "ru": "Квадратичная функция: вершина параболы $x_0=-b/(2a)$, корни",
+   "en": "Quadratic function: vertex $x_0=-b/(2a)$, roots"
+  },
+  "answer": "t_0=2\\ \\mathrm{s},\\quad h_{\\max}=20\\ \\mathrm{m},\\quad t=4\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original"
+ },
+ {
+  "id": "B0-L02-S03",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Nuqtaviy manbadan $2\\ \\mathrm{m}$ masofada yorug'lik intensivligi $36\\ \\mathrm{W/m^2}$. Intensivlik masofa kvadratiga teskari proporsional. $6\\ \\mathrm{m}$ masofadagi intensivlikni va intensivlik $9\\ \\mathrm{W/m^2}$ bo'ladigan masofani toping.",
+   "ru": "На расстоянии $2\\ \\mathrm{м}$ от точечного источника интенсивность света $36\\ \\mathrm{Вт/м^2}$. Интенсивность обратно пропорциональна квадрату расстояния. Найдите интенсивность на расстоянии $6\\ \\mathrm{м}$ и расстояние, на котором интенсивность равна $9\\ \\mathrm{Вт/м^2}$.",
+   "en": "At a distance of $2\\ \\mathrm{m}$ from a point source the light intensity is $36\\ \\mathrm{W/m^2}$. The intensity is inversely proportional to the square of the distance. Find the intensity at $6\\ \\mathrm{m}$ and the distance at which the intensity is $9\\ \\mathrm{W/m^2}$."
+  },
+  "figure": "figures/B0-L02-S03.png",
+  "solution": {
+   "uz": [
+    "Masshtab qoidasi ($n=-2$): $$\\frac{I_2}{I_1}=\\left(\\frac{r_1}{r_2}\\right)^2$$",
+    "Masofa 3 marta ortadi: $$I(6\\ \\mathrm{m})=36\\cdot\\left(\\frac{2}{6}\\right)^2=\\frac{36}{9}=4\\ \\mathrm{W/m^2}$$",
+    "Intensivlik 4 marta kamayishi uchun masofa 2 marta ortishi kerak: $$\\frac{r}{2\\ \\mathrm{m}}=\\sqrt{\\frac{36}{9}}=2\\ \\Rightarrow\\ r=4\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Правило масштабирования ($n=-2$): $$\\frac{I_2}{I_1}=\\left(\\frac{r_1}{r_2}\\right)^2$$",
+    "Расстояние увеличивается в 3 раза: $$I(6\\ \\mathrm{m})=36\\cdot\\left(\\frac{2}{6}\\right)^2=\\frac{36}{9}=4\\ \\mathrm{W/m^2}$$",
+    "Чтобы интенсивность уменьшилась в 4 раза, расстояние должно вырасти в 2 раза: $$\\frac{r}{2\\ \\mathrm{m}}=\\sqrt{\\frac{36}{9}}=2\\ \\Rightarrow\\ r=4\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Scaling rule ($n=-2$): $$\\frac{I_2}{I_1}=\\left(\\frac{r_1}{r_2}\\right)^2$$",
+    "The distance triples: $$I(6\\ \\mathrm{m})=36\\cdot\\left(\\frac{2}{6}\\right)^2=\\frac{36}{9}=4\\ \\mathrm{W/m^2}$$",
+    "For the intensity to drop by a factor of 4, the distance must double: $$\\frac{r}{2\\ \\mathrm{m}}=\\sqrt{\\frac{36}{9}}=2\\ \\Rightarrow\\ r=4\\ \\mathrm{m}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Darajali qonun $y=Cx^{n}$ va masshtab qoidasi $y_2/y_1=(x_2/x_1)^{n}$",
+   "ru": "Степенной закон $y=Cx^{n}$ и правило масштабирования $y_2/y_1=(x_2/x_1)^{n}$",
+   "en": "Power law $y=Cx^{n}$ and the scaling rule $y_2/y_1=(x_2/x_1)^{n}$"
+  },
+  "answer": "I=4\\ \\mathrm{W/m^2},\\quad r=4\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original"
+ },
+ {
+  "id": "B0-L02-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radioaktiv izotopning yarim yemirilish davri $T_{1/2}=5$ sutka. $20$ sutkadan keyin yadrolarning qancha qismi qoladi? Qancha vaqtdan keyin $1/8$ qism qoladi? Vaqt doimiysi $\\tau$ ni toping ($\\ln2\\approx0.693$).",
+   "ru": "Период полураспада радиоактивного изотопа $T_{1/2}=5$ суток. Какая доля ядер останется через $20$ суток? Через какое время останется $1/8$ часть? Найдите постоянную времени $\\tau$ ($\\ln2\\approx0.693$).",
+   "en": "The half-life of a radioactive isotope is $T_{1/2}=5$ days. What fraction of the nuclei remains after $20$ days? After what time does $1/8$ remain? Find the time constant $\\tau$ ($\\ln2\\approx0.693$)."
+  },
+  "figure": "figures/B0-L02-S04.png",
+  "solution": {
+   "uz": [
+    "$20$ sutka — $4$ ta yarim yemirilish davri: $$\\frac{N}{N_0}=2^{-t/T_{1/2}}=2^{-20/5}=\\frac{1}{16}$$",
+    "$1/8=2^{-3}$, demak $3$ ta davr: $$t=3T_{1/2}=15\\ \\mathrm{d}$$",
+    "Vaqt doimiysi: $$\\tau=\\frac{T_{1/2}}{\\ln2}=\\frac{5}{0.693}\\approx7.2\\ \\mathrm{d}$$"
+   ],
+   "ru": [
+    "$20$ суток — это $4$ периода полураспада: $$\\frac{N}{N_0}=2^{-t/T_{1/2}}=2^{-20/5}=\\frac{1}{16}$$",
+    "$1/8=2^{-3}$, значит, $3$ периода: $$t=3T_{1/2}=15\\ \\mathrm{d}$$",
+    "Постоянная времени: $$\\tau=\\frac{T_{1/2}}{\\ln2}=\\frac{5}{0.693}\\approx7.2\\ \\mathrm{d}$$"
+   ],
+   "en": [
+    "$20$ days is $4$ half-lives: $$\\frac{N}{N_0}=2^{-t/T_{1/2}}=2^{-20/5}=\\frac{1}{16}$$",
+    "$1/8=2^{-3}$, so $3$ half-lives: $$t=3T_{1/2}=15\\ \\mathrm{d}$$",
+    "Time constant: $$\\tau=\\frac{T_{1/2}}{\\ln2}=\\frac{5}{0.693}\\approx7.2\\ \\mathrm{d}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Eksponensial yemirilish: $N=N_0\\,2^{-t/T_{1/2}}$, $T_{1/2}=\\tau\\ln2$",
+   "ru": "Экспоненциальный распад: $N=N_0\\,2^{-t/T_{1/2}}$, $T_{1/2}=\\tau\\ln2$",
+   "en": "Exponential decay: $N=N_0\\,2^{-t/T_{1/2}}$, $T_{1/2}=\\tau\\ln2$"
+  },
+  "answer": "\\frac{N}{N_0}=\\frac{1}{16},\\quad t=3T_{1/2},\\quad \\tau=\\frac{T_{1/2}}{\\ln2}\\approx1.44\\,T_{1/2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original"
+ },
+ {
+  "id": "B0-L02-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Kondensator rezistor orqali razryadlanmoqda: $V(t)=V_0e^{-t/\\tau}$, $V_0=12\\ \\mathrm{V}$, $\\tau=RC=2.0\\ \\mathrm{s}$. $t=2.0\\ \\mathrm{s}$ dagi kuchlanishni va kuchlanish $V_0$ ning $10\\%$ iga tushadigan vaqtni toping ($e^{-1}\\approx0.368$, $\\ln10\\approx2.30$).",
+   "ru": "Конденсатор разряжается через резистор: $V(t)=V_0e^{-t/\\tau}$, $V_0=12\\ \\mathrm{В}$, $\\tau=RC=2.0\\ \\mathrm{с}$. Найдите напряжение при $t=2.0\\ \\mathrm{с}$ и время, за которое напряжение упадёт до $10\\%$ от $V_0$ ($e^{-1}\\approx0.368$, $\\ln10\\approx2.30$).",
+   "en": "A capacitor discharges through a resistor: $V(t)=V_0e^{-t/\\tau}$, $V_0=12\\ \\mathrm{V}$, $\\tau=RC=2.0\\ \\mathrm{s}$. Find the voltage at $t=2.0\\ \\mathrm{s}$ and the time for the voltage to fall to $10\\%$ of $V_0$ ($e^{-1}\\approx0.368$, $\\ln10\\approx2.30$)."
+  },
+  "figure": "figures/B0-L02-S05.png",
+  "solution": {
+   "uz": [
+    "$t=\\tau$ da kuchlanish $e$ marta kamayadi: $$V(\\tau)=V_0e^{-1}=12\\cdot0.368\\approx4.4\\ \\mathrm{V}$$",
+    "$10\\%$ sharti, ikkala tomonni logarifmlaymiz: $$e^{-t/\\tau}=0.1\\ \\Rightarrow\\ \\frac{t}{\\tau}=\\ln10$$",
+    "Vaqt: $$t=\\tau\\ln10=2.0\\cdot2.30\\approx4.6\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "При $t=\\tau$ напряжение уменьшается в $e$ раз: $$V(\\tau)=V_0e^{-1}=12\\cdot0.368\\approx4.4\\ \\mathrm{V}$$",
+    "Условие $10\\%$, логарифмируем обе части: $$e^{-t/\\tau}=0.1\\ \\Rightarrow\\ \\frac{t}{\\tau}=\\ln10$$",
+    "Время: $$t=\\tau\\ln10=2.0\\cdot2.30\\approx4.6\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "At $t=\\tau$ the voltage drops by a factor of $e$: $$V(\\tau)=V_0e^{-1}=12\\cdot0.368\\approx4.4\\ \\mathrm{V}$$",
+    "The $10\\%$ condition; take the logarithm of both sides: $$e^{-t/\\tau}=0.1\\ \\Rightarrow\\ \\frac{t}{\\tau}=\\ln10$$",
+    "Time: $$t=\\tau\\ln10=2.0\\cdot2.30\\approx4.6\\ \\mathrm{s}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Eksponenta va logarifm: $e^{-t/\\tau}=a\\Rightarrow t=\\tau\\ln(1/a)$",
+   "ru": "Экспонента и логарифм: $e^{-t/\\tau}=a\\Rightarrow t=\\tau\\ln(1/a)$",
+   "en": "Exponential and logarithm: $e^{-t/\\tau}=a\\Rightarrow t=\\tau\\ln(1/a)$"
+  },
+  "answer": "V\\approx4.4\\ \\mathrm{V},\\quad t=\\tau\\ln10\\approx4.6\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original"
+ },
+ {
+  "id": "B0-L02-S06",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Radiusi $r=0.30\\ \\mathrm{m}$ bo'lgan g'ildirak $150^\\circ$ ga burildi. Burilish burchagini radianlarda va g'ildirak gardishidagi nuqta bosib o'tgan yoy uzunligini toping. $2.5\\ \\mathrm{rad}$ necha gradusga teng?",
+   "ru": "Колесо радиусом $r=0.30\\ \\mathrm{м}$ повернулось на $150^\\circ$. Найдите угол поворота в радианах и длину дуги, пройденной точкой обода. Сколько градусов в $2.5\\ \\mathrm{рад}$?",
+   "en": "A wheel of radius $r=0.30\\ \\mathrm{m}$ turns through $150^\\circ$. Find the angle of rotation in radians and the arc length traveled by a point on the rim. How many degrees is $2.5\\ \\mathrm{rad}$?"
+  },
+  "figure": "figures/B0-L02-S06.png",
+  "solution": {
+   "uz": [
+    "Gradusdan radianga: $$\\theta=150^\\circ\\cdot\\frac{\\pi}{180^\\circ}=\\frac{5\\pi}{6}\\ \\mathrm{rad}\\approx2.62\\ \\mathrm{rad}$$",
+    "Yoy uzunligi $s=r\\theta$: $$s=0.30\\cdot\\frac{5\\pi}{6}=\\frac{\\pi}{4}\\approx0.785\\ \\mathrm{m}$$",
+    "Radiandan gradusga: $$2.5\\cdot\\frac{180^\\circ}{\\pi}\\approx143^\\circ$$"
+   ],
+   "ru": [
+    "Из градусов в радианы: $$\\theta=150^\\circ\\cdot\\frac{\\pi}{180^\\circ}=\\frac{5\\pi}{6}\\ \\mathrm{rad}\\approx2.62\\ \\mathrm{rad}$$",
+    "Длина дуги $s=r\\theta$: $$s=0.30\\cdot\\frac{5\\pi}{6}=\\frac{\\pi}{4}\\approx0.785\\ \\mathrm{m}$$",
+    "Из радиан в градусы: $$2.5\\cdot\\frac{180^\\circ}{\\pi}\\approx143^\\circ$$"
+   ],
+   "en": [
+    "Degrees to radians: $$\\theta=150^\\circ\\cdot\\frac{\\pi}{180^\\circ}=\\frac{5\\pi}{6}\\ \\mathrm{rad}\\approx2.62\\ \\mathrm{rad}$$",
+    "Arc length $s=r\\theta$: $$s=0.30\\cdot\\frac{5\\pi}{6}=\\frac{\\pi}{4}\\approx0.785\\ \\mathrm{m}$$",
+    "Radians to degrees: $$2.5\\cdot\\frac{180^\\circ}{\\pi}\\approx143^\\circ$$"
+   ]
+  },
+  "basis": {
+   "uz": "Radian ta'rifi: $\\theta=s/r$, $180^\\circ=\\pi\\ \\mathrm{rad}$",
+   "ru": "Определение радиана: $\\theta=s/r$, $180^\\circ=\\pi\\ \\mathrm{рад}$",
+   "en": "Definition of the radian: $\\theta=s/r$, $180^\\circ=\\pi\\ \\mathrm{rad}$"
+  },
+  "answer": "\\theta=\\frac{5\\pi}{6},\\quad s=\\frac{\\pi}{4}\\approx0.785\\ \\mathrm{m},\\quad 2.5\\ \\mathrm{rad}\\approx143^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original"
+ },
+ {
+  "id": "B0-L02-S07",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$\\sin\\theta=\\frac35$ va $\\theta$ II chorakda yotadi. $\\cos\\theta$, $\\tan\\theta$ va $\\sin2\\theta$ ni toping.",
+   "ru": "$\\sin\\theta=\\frac35$, и $\\theta$ лежит во II четверти. Найдите $\\cos\\theta$, $\\tan\\theta$ и $\\sin2\\theta$.",
+   "en": "$\\sin\\theta=\\frac35$ and $\\theta$ lies in quadrant II. Find $\\cos\\theta$, $\\tan\\theta$ and $\\sin2\\theta$."
+  },
+  "figure": "figures/B0-L02-S07.png",
+  "solution": {
+   "uz": [
+    "Asosiy ayniyatdan; II chorakda $\\cos\\theta<0$: $$\\cos\\theta=-\\sqrt{1-\\frac{9}{25}}=-\\frac45$$",
+    "Tangens: $$\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}=\\frac{3/5}{-4/5}=-\\frac34$$",
+    "Ikkilangan burchak formulasi: $$\\sin2\\theta=2\\sin\\theta\\cos\\theta=2\\cdot\\frac35\\cdot\\left(-\\frac45\\right)=-\\frac{24}{25}$$"
+   ],
+   "ru": [
+    "Из основного тождества; во II четверти $\\cos\\theta<0$: $$\\cos\\theta=-\\sqrt{1-\\frac{9}{25}}=-\\frac45$$",
+    "Тангенс: $$\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}=\\frac{3/5}{-4/5}=-\\frac34$$",
+    "Формула двойного угла: $$\\sin2\\theta=2\\sin\\theta\\cos\\theta=2\\cdot\\frac35\\cdot\\left(-\\frac45\\right)=-\\frac{24}{25}$$"
+   ],
+   "en": [
+    "From the Pythagorean identity; in quadrant II $\\cos\\theta<0$: $$\\cos\\theta=-\\sqrt{1-\\frac{9}{25}}=-\\frac45$$",
+    "Tangent: $$\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}=\\frac{3/5}{-4/5}=-\\frac34$$",
+    "Double-angle formula: $$\\sin2\\theta=2\\sin\\theta\\cos\\theta=2\\cdot\\frac35\\cdot\\left(-\\frac45\\right)=-\\frac{24}{25}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$\\sin^2\\theta+\\cos^2\\theta=1$, choraklardagi ishoralar, $\\sin2\\theta=2\\sin\\theta\\cos\\theta$",
+   "ru": "$\\sin^2\\theta+\\cos^2\\theta=1$, знаки по четвертям, $\\sin2\\theta=2\\sin\\theta\\cos\\theta$",
+   "en": "$\\sin^2\\theta+\\cos^2\\theta=1$, signs by quadrant, $\\sin2\\theta=2\\sin\\theta\\cos\\theta$"
+  },
+  "answer": "\\cos\\theta=-\\frac45,\\quad \\tan\\theta=-\\frac34,\\quad \\sin2\\theta=-\\frac{24}{25}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original"
+ },
+ {
+  "id": "B0-L02-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Qo'shish formulalari yordamida $\\cos75^\\circ$ va $\\sin15^\\circ$ ning aniq qiymatini toping.",
+   "ru": "С помощью формул сложения найдите точные значения $\\cos75^\\circ$ и $\\sin15^\\circ$.",
+   "en": "Using the addition formulas, find the exact values of $\\cos75^\\circ$ and $\\sin15^\\circ$."
+  },
+  "figure": "figures/B0-L02-S08.png",
+  "solution": {
+   "uz": [
+    "$75^\\circ=45^\\circ+30^\\circ$: $$\\cos75^\\circ=\\cos45^\\circ\\cos30^\\circ-\\sin45^\\circ\\sin30^\\circ=\\frac{\\sqrt2}{2}\\cdot\\frac{\\sqrt3}{2}-\\frac{\\sqrt2}{2}\\cdot\\frac12$$",
+    "Soddalashtiramiz: $$\\cos75^\\circ=\\frac{\\sqrt6-\\sqrt2}{4}\\approx0.259$$",
+    "$15^\\circ=90^\\circ-75^\\circ$, shuning uchun: $$\\sin15^\\circ=\\cos75^\\circ=\\frac{\\sqrt6-\\sqrt2}{4}$$"
+   ],
+   "ru": [
+    "$75^\\circ=45^\\circ+30^\\circ$: $$\\cos75^\\circ=\\cos45^\\circ\\cos30^\\circ-\\sin45^\\circ\\sin30^\\circ=\\frac{\\sqrt2}{2}\\cdot\\frac{\\sqrt3}{2}-\\frac{\\sqrt2}{2}\\cdot\\frac12$$",
+    "Упрощаем: $$\\cos75^\\circ=\\frac{\\sqrt6-\\sqrt2}{4}\\approx0.259$$",
+    "$15^\\circ=90^\\circ-75^\\circ$, поэтому: $$\\sin15^\\circ=\\cos75^\\circ=\\frac{\\sqrt6-\\sqrt2}{4}$$"
+   ],
+   "en": [
+    "$75^\\circ=45^\\circ+30^\\circ$: $$\\cos75^\\circ=\\cos45^\\circ\\cos30^\\circ-\\sin45^\\circ\\sin30^\\circ=\\frac{\\sqrt2}{2}\\cdot\\frac{\\sqrt3}{2}-\\frac{\\sqrt2}{2}\\cdot\\frac12$$",
+    "Simplify: $$\\cos75^\\circ=\\frac{\\sqrt6-\\sqrt2}{4}\\approx0.259$$",
+    "$15^\\circ=90^\\circ-75^\\circ$, therefore: $$\\sin15^\\circ=\\cos75^\\circ=\\frac{\\sqrt6-\\sqrt2}{4}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$\\cos(\\alpha+\\beta)=\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta$, $\\sin(\\pi/2-\\theta)=\\cos\\theta$",
+   "ru": "$\\cos(\\alpha+\\beta)=\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta$, $\\sin(\\pi/2-\\theta)=\\cos\\theta$",
+   "en": "$\\cos(\\alpha+\\beta)=\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta$, $\\sin(\\pi/2-\\theta)=\\cos\\theta$"
+  },
+  "answer": "\\cos75^\\circ=\\sin15^\\circ=\\frac{\\sqrt6-\\sqrt2}{4}\\approx0.259",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original"
+ },
+ {
+  "id": "B0-L02-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$\\theta=0.10\\ \\mathrm{rad}$ uchun kichik burchak yaqinlashuvi bo'yicha $\\sin\\theta$ va $\\cos\\theta$ ni baholang. $\\sin\\theta\\approx\\theta$ ning nisbiy xatosi qancha?",
+   "ru": "Для $\\theta=0.10\\ \\mathrm{рад}$ оцените $\\sin\\theta$ и $\\cos\\theta$ с помощью приближения малых углов. Какова относительная погрешность $\\sin\\theta\\approx\\theta$?",
+   "en": "For $\\theta=0.10\\ \\mathrm{rad}$, estimate $\\sin\\theta$ and $\\cos\\theta$ using the small-angle approximation. What is the relative error of $\\sin\\theta\\approx\\theta$?"
+  },
+  "figure": "figures/B0-L02-S09.png",
+  "solution": {
+   "uz": [
+    "Yaqinlashuv: $$\\sin\\theta\\approx\\theta=0.100,\\qquad \\cos\\theta\\approx1-\\frac{\\theta^2}{2}=1-0.005=0.995$$",
+    "Aniq qiymatlar: $$\\sin0.1=0.09983\\ldots,\\qquad \\cos0.1=0.99500\\ldots$$",
+    "Nisbiy xato taxminan $\\theta^2/6$: $$\\frac{\\theta-\\sin\\theta}{\\sin\\theta}\\approx\\frac{\\theta^2}{6}=\\frac{0.01}{6}\\approx0.17\\%$$"
+   ],
+   "ru": [
+    "Приближение: $$\\sin\\theta\\approx\\theta=0.100,\\qquad \\cos\\theta\\approx1-\\frac{\\theta^2}{2}=1-0.005=0.995$$",
+    "Точные значения: $$\\sin0.1=0.09983\\ldots,\\qquad \\cos0.1=0.99500\\ldots$$",
+    "Относительная погрешность примерно $\\theta^2/6$: $$\\frac{\\theta-\\sin\\theta}{\\sin\\theta}\\approx\\frac{\\theta^2}{6}=\\frac{0.01}{6}\\approx0.17\\%$$"
+   ],
+   "en": [
+    "Approximation: $$\\sin\\theta\\approx\\theta=0.100,\\qquad \\cos\\theta\\approx1-\\frac{\\theta^2}{2}=1-0.005=0.995$$",
+    "Exact values: $$\\sin0.1=0.09983\\ldots,\\qquad \\cos0.1=0.99500\\ldots$$",
+    "The relative error is about $\\theta^2/6$: $$\\frac{\\theta-\\sin\\theta}{\\sin\\theta}\\approx\\frac{\\theta^2}{6}=\\frac{0.01}{6}\\approx0.17\\%$$"
+   ]
+  },
+  "basis": {
+   "uz": "Kichik burchak yaqinlashuvi: $\\sin\\theta\\approx\\theta$, $\\cos\\theta\\approx1-\\theta^2/2$",
+   "ru": "Приближение малых углов: $\\sin\\theta\\approx\\theta$, $\\cos\\theta\\approx1-\\theta^2/2$",
+   "en": "Small-angle approximation: $\\sin\\theta\\approx\\theta$, $\\cos\\theta\\approx1-\\theta^2/2$"
+  },
+  "answer": "\\sin\\theta\\approx0.100,\\quad \\cos\\theta\\approx0.995,\\quad \\delta\\approx0.17\\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original"
+ },
+ {
+  "id": "B0-L02-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jism $x(t)=0.05\\cos\\left(4\\pi t+\\frac{\\pi}{3}\\right)\\ \\mathrm{m}$ qonun bo'yicha tebranmoqda ($t$ — sekundda). Amplituda, siklik chastota, davr va chastotani toping. $t=0$ dagi koordinatani va jism birinchi marta muvozanat holatidan ($x=0$) o'tadigan vaqtni toping.",
+   "ru": "Тело колеблется по закону $x(t)=0.05\\cos\\left(4\\pi t+\\frac{\\pi}{3}\\right)\\ \\mathrm{м}$ ($t$ — в секундах). Найдите амплитуду, циклическую частоту, период и частоту. Найдите координату при $t=0$ и момент, когда тело впервые проходит положение равновесия ($x=0$).",
+   "en": "A body oscillates as $x(t)=0.05\\cos\\left(4\\pi t+\\frac{\\pi}{3}\\right)\\ \\mathrm{m}$ ($t$ in seconds). Find the amplitude, angular frequency, period and frequency. Find the position at $t=0$ and the first time the body passes through equilibrium ($x=0$)."
+  },
+  "figure": "figures/B0-L02-S10.png",
+  "solution": {
+   "uz": [
+    "$x=A\\cos(\\omega t+\\varphi)$ bilan solishtiramiz: $$A=0.05\\ \\mathrm{m},\\qquad \\omega=4\\pi\\ \\mathrm{rad/s},\\qquad \\varphi=\\frac{\\pi}{3}$$",
+    "Davr va chastota: $$T=\\frac{2\\pi}{\\omega}=0.5\\ \\mathrm{s},\\qquad f=\\frac1T=2\\ \\mathrm{Hz}$$",
+    "Boshlang'ich koordinata: $$x(0)=0.05\\cos\\frac{\\pi}{3}=0.025\\ \\mathrm{m}$$",
+    "Faza $\\pi/3$ dan o'sib, birinchi marta $\\pi/2$ ga yetganda $x=0$: $$4\\pi t+\\frac{\\pi}{3}=\\frac{\\pi}{2}\\ \\Rightarrow\\ t=\\frac{1}{24}\\ \\mathrm{s}\\approx0.042\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Сравниваем с $x=A\\cos(\\omega t+\\varphi)$: $$A=0.05\\ \\mathrm{m},\\qquad \\omega=4\\pi\\ \\mathrm{rad/s},\\qquad \\varphi=\\frac{\\pi}{3}$$",
+    "Период и частота: $$T=\\frac{2\\pi}{\\omega}=0.5\\ \\mathrm{s},\\qquad f=\\frac1T=2\\ \\mathrm{Hz}$$",
+    "Начальная координата: $$x(0)=0.05\\cos\\frac{\\pi}{3}=0.025\\ \\mathrm{m}$$",
+    "Фаза растёт от $\\pi/3$ и впервые достигает $\\pi/2$, когда $x=0$: $$4\\pi t+\\frac{\\pi}{3}=\\frac{\\pi}{2}\\ \\Rightarrow\\ t=\\frac{1}{24}\\ \\mathrm{s}\\approx0.042\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "Compare with $x=A\\cos(\\omega t+\\varphi)$: $$A=0.05\\ \\mathrm{m},\\qquad \\omega=4\\pi\\ \\mathrm{rad/s},\\qquad \\varphi=\\frac{\\pi}{3}$$",
+    "Period and frequency: $$T=\\frac{2\\pi}{\\omega}=0.5\\ \\mathrm{s},\\qquad f=\\frac1T=2\\ \\mathrm{Hz}$$",
+    "Initial position: $$x(0)=0.05\\cos\\frac{\\pi}{3}=0.025\\ \\mathrm{m}$$",
+    "The phase grows from $\\pi/3$ and first reaches $\\pi/2$ when $x=0$: $$4\\pi t+\\frac{\\pi}{3}=\\frac{\\pi}{2}\\ \\Rightarrow\\ t=\\frac{1}{24}\\ \\mathrm{s}\\approx0.042\\ \\mathrm{s}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Garmonik tebranish: $x=A\\cos(\\omega t+\\varphi)$, $T=2\\pi/\\omega$, $f=1/T$",
+   "ru": "Гармоническое колебание: $x=A\\cos(\\omega t+\\varphi)$, $T=2\\pi/\\omega$, $f=1/T$",
+   "en": "Harmonic oscillation: $x=A\\cos(\\omega t+\\varphi)$, $T=2\\pi/\\omega$, $f=1/T$"
+  },
+  "answer": "A=0.05\\ \\mathrm{m},\\ \\omega=4\\pi\\ \\mathrm{s^{-1}},\\ T=0.5\\ \\mathrm{s},\\ f=2\\ \\mathrm{Hz},\\ x(0)=0.025\\ \\mathrm{m},\\ t=\\tfrac{1}{24}\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original"
+ },
+ {
+  "id": "B0-L02-S11",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ikki tebranish qo'shiladi: $x(t)=3\\cos\\omega t+4\\sin\\omega t$ (santimetrda). Natijaviy tebranishni $x=R\\cos(\\omega t-\\delta)$ ko'rinishida yozing: amplituda $R$ va faza siljishi $\\delta$ ni toping.",
+   "ru": "Складываются два колебания: $x(t)=3\\cos\\omega t+4\\sin\\omega t$ (в сантиметрах). Запишите результирующее колебание в виде $x=R\\cos(\\omega t-\\delta)$: найдите амплитуду $R$ и сдвиг фазы $\\delta$.",
+   "en": "Two oscillations are added: $x(t)=3\\cos\\omega t+4\\sin\\omega t$ (in centimeters). Write the resulting oscillation as $x=R\\cos(\\omega t-\\delta)$: find the amplitude $R$ and the phase shift $\\delta$."
+  },
+  "figure": "figures/B0-L02-S11.png",
+  "solution": {
+   "uz": [
+    "Ayirma kosinusini yoyamiz: $$R\\cos(\\omega t-\\delta)=R\\cos\\delta\\cos\\omega t+R\\sin\\delta\\sin\\omega t$$",
+    "Koeffitsiyentlarni tenglaymiz: $$R\\cos\\delta=3,\\qquad R\\sin\\delta=4$$",
+    "Kvadratlab qo'shamiz va bo'lamiz: $$R=\\sqrt{3^2+4^2}=5\\ \\mathrm{cm},\\qquad \\tan\\delta=\\frac43$$",
+    "$\\cos\\delta>0$, $\\sin\\delta>0$ — I chorak: $$\\delta=\\arctan\\frac43\\approx53.1^\\circ\\approx0.927\\ \\mathrm{rad}$$"
+   ],
+   "ru": [
+    "Раскрываем косинус разности: $$R\\cos(\\omega t-\\delta)=R\\cos\\delta\\cos\\omega t+R\\sin\\delta\\sin\\omega t$$",
+    "Приравниваем коэффициенты: $$R\\cos\\delta=3,\\qquad R\\sin\\delta=4$$",
+    "Возводим в квадрат и складываем, затем делим: $$R=\\sqrt{3^2+4^2}=5\\ \\mathrm{cm},\\qquad \\tan\\delta=\\frac43$$",
+    "$\\cos\\delta>0$, $\\sin\\delta>0$ — I четверть: $$\\delta=\\arctan\\frac43\\approx53.1^\\circ\\approx0.927\\ \\mathrm{rad}$$"
+   ],
+   "en": [
+    "Expand the cosine of a difference: $$R\\cos(\\omega t-\\delta)=R\\cos\\delta\\cos\\omega t+R\\sin\\delta\\sin\\omega t$$",
+    "Match the coefficients: $$R\\cos\\delta=3,\\qquad R\\sin\\delta=4$$",
+    "Square and add, then divide: $$R=\\sqrt{3^2+4^2}=5\\ \\mathrm{cm},\\qquad \\tan\\delta=\\frac43$$",
+    "$\\cos\\delta>0$, $\\sin\\delta>0$ — quadrant I: $$\\delta=\\arctan\\frac43\\approx53.1^\\circ\\approx0.927\\ \\mathrm{rad}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$a\\cos\\omega t+b\\sin\\omega t=R\\cos(\\omega t-\\delta)$, $R=\\sqrt{a^2+b^2}$, $\\tan\\delta=b/a$",
+   "ru": "$a\\cos\\omega t+b\\sin\\omega t=R\\cos(\\omega t-\\delta)$, $R=\\sqrt{a^2+b^2}$, $\\tan\\delta=b/a$",
+   "en": "$a\\cos\\omega t+b\\sin\\omega t=R\\cos(\\omega t-\\delta)$, $R=\\sqrt{a^2+b^2}$, $\\tan\\delta=b/a$"
+  },
+  "answer": "x=5\\cos(\\omega t-\\delta)\\ \\mathrm{cm},\\quad \\delta=\\arctan\\tfrac43\\approx53.1^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original"
+ },
+ {
+  "id": "B0-L02-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Laboratoriyada mayatnik davri $T$ ning uzunlik $L$ ga bog'liqligi o'lchandi: $L=0.25\\ \\mathrm{m}$ da $T=1.0\\ \\mathrm{s}$, $L=1.0\\ \\mathrm{m}$ da $T=2.0\\ \\mathrm{s}$. Log-log grafik to'g'ri chiziq bo'ldi. $T=CL^{n}$ dagi $n$ va $C$ ni toping; $L=2.25\\ \\mathrm{m}$ da davr qancha bo'ladi?",
+   "ru": "В лаборатории измерили зависимость периода маятника $T$ от длины $L$: при $L=0.25\\ \\mathrm{м}$ $T=1.0\\ \\mathrm{с}$, при $L=1.0\\ \\mathrm{м}$ $T=2.0\\ \\mathrm{с}$. График в логарифмических координатах оказался прямой. Найдите $n$ и $C$ в $T=CL^{n}$; каким будет период при $L=2.25\\ \\mathrm{м}$?",
+   "en": "In a lab the period $T$ of a pendulum was measured as a function of length $L$: $T=1.0\\ \\mathrm{s}$ at $L=0.25\\ \\mathrm{m}$ and $T=2.0\\ \\mathrm{s}$ at $L=1.0\\ \\mathrm{m}$. The log-log plot is a straight line. Find $n$ and $C$ in $T=CL^{n}$; what is the period at $L=2.25\\ \\mathrm{m}$?"
+  },
+  "figure": "figures/B0-L02-S12.png",
+  "solution": {
+   "uz": [
+    "Log-log grafik og'masi: $$n=\\frac{\\log(T_2/T_1)}{\\log(L_2/L_1)}=\\frac{\\log2}{\\log4}=\\frac12$$",
+    "$L=1.0\\ \\mathrm{m}$ nuqtadan: $$C=\\frac{T_2}{L_2^{1/2}}=2.0\\ \\mathrm{s/m^{1/2}}\\ \\Rightarrow\\ T=2.0\\sqrt{L}$$",
+    "Yangi uzunlik uchun: $$T=2.0\\sqrt{2.25}=2.0\\cdot1.5=3.0\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Наклон графика в log-log: $$n=\\frac{\\log(T_2/T_1)}{\\log(L_2/L_1)}=\\frac{\\log2}{\\log4}=\\frac12$$",
+    "Из точки $L=1.0\\ \\mathrm{м}$: $$C=\\frac{T_2}{L_2^{1/2}}=2.0\\ \\mathrm{s/m^{1/2}}\\ \\Rightarrow\\ T=2.0\\sqrt{L}$$",
+    "Для новой длины: $$T=2.0\\sqrt{2.25}=2.0\\cdot1.5=3.0\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "Slope of the log-log plot: $$n=\\frac{\\log(T_2/T_1)}{\\log(L_2/L_1)}=\\frac{\\log2}{\\log4}=\\frac12$$",
+    "From the point $L=1.0\\ \\mathrm{m}$: $$C=\\frac{T_2}{L_2^{1/2}}=2.0\\ \\mathrm{s/m^{1/2}}\\ \\Rightarrow\\ T=2.0\\sqrt{L}$$",
+    "For the new length: $$T=2.0\\sqrt{2.25}=2.0\\cdot1.5=3.0\\ \\mathrm{s}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Log-log grafik: $y=Cx^{n}\\Rightarrow\\log y=\\log C+n\\log x$",
+   "ru": "График log-log: $y=Cx^{n}\\Rightarrow\\log y=\\log C+n\\log x$",
+   "en": "Log-log plot: $y=Cx^{n}\\Rightarrow\\log y=\\log C+n\\log x$"
+  },
+  "answer": "n=\\tfrac12,\\quad C=2.0\\ \\mathrm{s/m^{1/2}},\\quad T(2.25\\ \\mathrm{m})=3.0\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original"
+ },
+ {
+  "id": "B0-L02-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$[0,\\ 2\\pi)$ oraliqda $2\\sin2x=1$ tenglamani yeching.",
+   "ru": "Решите уравнение $2\\sin2x=1$ на промежутке $[0,\\ 2\\pi)$.",
+   "en": "Solve the equation $2\\sin2x=1$ on the interval $[0,\\ 2\\pi)$."
+  },
+  "figure": "figures/B0-L02-S13.png",
+  "solution": {
+   "uz": [
+    "$u=2x$ belgilaymiz; $x\\in[0,\\ 2\\pi)$ bo'lsa $u\\in[0,\\ 4\\pi)$: $$\\sin u=\\frac12$$",
+    "Bir davrda ikki yechim (I va II chorak): $$u=\\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{13\\pi}{6},\\ \\frac{17\\pi}{6}$$",
+    "$x=u/2$: $$x=\\frac{\\pi}{12},\\ \\frac{5\\pi}{12},\\ \\frac{13\\pi}{12},\\ \\frac{17\\pi}{12}$$",
+    "Grafik bilan tekshiramiz: $\\sin2x$ ning davri $\\pi$, demak $[0,\\ 2\\pi)$ da $y=1/2$ chizig'i bilan 4 ta kesishish bor."
+   ],
+   "ru": [
+    "Обозначим $u=2x$; при $x\\in[0,\\ 2\\pi)$ имеем $u\\in[0,\\ 4\\pi)$: $$\\sin u=\\frac12$$",
+    "Два решения за один период (I и II четверти): $$u=\\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{13\\pi}{6},\\ \\frac{17\\pi}{6}$$",
+    "$x=u/2$: $$x=\\frac{\\pi}{12},\\ \\frac{5\\pi}{12},\\ \\frac{13\\pi}{12},\\ \\frac{17\\pi}{12}$$",
+    "Проверка по графику: период $\\sin2x$ равен $\\pi$, значит, на $[0,\\ 2\\pi)$ есть 4 пересечения с прямой $y=1/2$."
+   ],
+   "en": [
+    "Let $u=2x$; for $x\\in[0,\\ 2\\pi)$ we have $u\\in[0,\\ 4\\pi)$: $$\\sin u=\\frac12$$",
+    "Two solutions per period (quadrants I and II): $$u=\\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{13\\pi}{6},\\ \\frac{17\\pi}{6}$$",
+    "$x=u/2$: $$x=\\frac{\\pi}{12},\\ \\frac{5\\pi}{12},\\ \\frac{13\\pi}{12},\\ \\frac{17\\pi}{12}$$",
+    "Check with the graph: the period of $\\sin2x$ is $\\pi$, so on $[0,\\ 2\\pi)$ there are 4 intersections with the line $y=1/2$."
+   ]
+  },
+  "basis": {
+   "uz": "Trigonometrik tenglama: $\\sin u=a$ ning bir davrdagi ikki yechimi, funksiya davri",
+   "ru": "Тригонометрическое уравнение: два решения $\\sin u=a$ за период, период функции",
+   "en": "Trigonometric equation: two solutions of $\\sin u=a$ per period, period of the function"
+  },
+  "answer": "x=\\frac{\\pi}{12},\\ \\frac{5\\pi}{12},\\ \\frac{13\\pi}{12},\\ \\frac{17\\pi}{12}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original"
+ }
+]

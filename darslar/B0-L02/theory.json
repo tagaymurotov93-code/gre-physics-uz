@@ -1,0 +1,511 @@
+[
+ {
+  "t": "h1",
+  "uz": "Funksiyalar, grafiklar, trigonometriya (Functions, graphs and trigonometry)",
+  "ru": "Функции, графики, тригонометрия",
+  "en": "Functions, graphs and trigonometry"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz fizikada eng ko'p uchraydigan funksiyalarni (chiziqli, kvadratik, darajali, eksponensial, logarifmik va trigonometrik) taniysiz, ularning grafigini tez chizasiz, trigonometrik qiymat va ayniyatlarni kalkulyatorsiz qo'llaysiz hamda tebranish va yemirilish masalalarini yechasiz.",
+  "ru": "**Цель.** После урока вы будете узнавать функции, которые чаще всего встречаются в физике (линейные, квадратичные, степенные, показательные, логарифмические и тригонометрические), быстро строить их графики, применять тригонометрические значения и тождества без калькулятора и решать задачи о колебаниях и распаде.",
+  "en": "**Goal.** By the end of the lesson you will recognize the functions that appear most often in physics (linear, quadratic, power, exponential, logarithmic and trigonometric), sketch their graphs quickly, use trigonometric values and identities without a calculator, and solve problems on oscillations and decay."
+ },
+ {
+  "t": "p",
+  "uz": "**GRE'da o'rni.** Bu mavzu alohida bo'lim emas, lekin deyarli har bir savolda ishlatiladi: kinematika grafiklari, tebranishlar, radioaktiv yemirilish, $RC$ zanjir, optikadagi kichik burchaklar va laboratoriya ma'lumotlari grafiklari. Kalkulyator yo'qligi sababli asosiy qiymatlar va yaqinlashuvlarni bilish shart.",
+  "ru": "**Роль в GRE.** Эта тема не выделена в отдельный раздел, но используется почти в каждом вопросе: графики кинематики, колебания, радиоактивный распад, $RC$-цепь, малые углы в оптике и графики лабораторных данных. Поскольку калькулятора нет, основные значения и приближения нужно знать.",
+  "en": "**Role on the GRE.** This topic is not a separate content area, but it is used in almost every question: kinematics graphs, oscillations, radioactive decay, $RC$ circuits, small angles in optics and graphs of laboratory data. Since there is no calculator, the basic values and approximations must be known."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Funksiya tushunchasi (The concept of a function)",
+  "ru": "1. Понятие функции",
+  "en": "1. The concept of a function"
+ },
+ {
+  "t": "p",
+  "uz": "**Funksiya (function)** — $x$ to'plamdagi har bir qiymatga yagona $y$ qiymatini mos qo'yuvchi qoida: $y=f(x)$. $x$ — erkli o'zgaruvchi (argument), $y$ — funksiya qiymati.",
+  "ru": "**Функция** — правило, которое каждому значению $x$ из множества ставит в соответствие единственное значение $y$: $y=f(x)$. $x$ — независимая переменная (аргумент), $y$ — значение функции.",
+  "en": "A **function** is a rule that assigns to each value $x$ in a set exactly one value $y$: $y=f(x)$. Here $x$ is the independent variable (the argument) and $y$ is the value of the function."
+ },
+ {
+  "t": "li",
+  "uz": "**Aniqlanish sohasi (domain)** — $x$ qabul qila oladigan barcha qiymatlar; masalan, $\\sqrt{x}$ uchun $x\\ge0$, $\\ln x$ uchun $x>0$, $1/x$ uchun $x\\ne0$.",
+  "ru": "**Область определения** — все значения, которые может принимать $x$; например, для $\\sqrt{x}$ это $x\\ge0$, для $\\ln x$ — $x>0$, для $1/x$ — $x\\ne0$.",
+  "en": "The **domain** is the set of all values $x$ can take; for example, $x\\ge0$ for $\\sqrt{x}$, $x>0$ for $\\ln x$ and $x\\ne0$ for $1/x$."
+ },
+ {
+  "t": "li",
+  "uz": "**Qiymatlar sohasi (range)** — $y$ qabul qiladigan barcha qiymatlar; masalan, $\\sin x$ uchun $[-1,\\ 1]$, $e^x$ uchun $(0,\\ \\infty)$.",
+  "ru": "**Область значений** — все значения, которые принимает $y$; например, для $\\sin x$ это $[-1,\\ 1]$, для $e^x$ — $(0,\\ \\infty)$.",
+  "en": "The **range** is the set of all values $y$ takes; for example, $[-1,\\ 1]$ for $\\sin x$ and $(0,\\ \\infty)$ for $e^x$."
+ },
+ {
+  "t": "li",
+  "uz": "**Juft funksiya (even function):** $f(-x)=f(x)$, grafigi $y$ o'qiga nisbatan simmetrik ($x^2$, $\\cos x$). **Toq funksiya (odd function):** $f(-x)=-f(x)$, grafigi koordinata boshiga nisbatan simmetrik ($x^3$, $\\sin x$).",
+  "ru": "**Чётная функция:** $f(-x)=f(x)$, её график симметричен относительно оси $y$ ($x^2$, $\\cos x$). **Нечётная функция:** $f(-x)=-f(x)$, её график симметричен относительно начала координат ($x^3$, $\\sin x$).",
+  "en": "**Even function:** $f(-x)=f(x)$; its graph is symmetric about the $y$-axis ($x^2$, $\\cos x$). **Odd function:** $f(-x)=-f(x)$; its graph is symmetric about the origin ($x^3$, $\\sin x$)."
+ },
+ {
+  "t": "p",
+  "uz": "Fizikada argument ko'pincha vaqt yoki masofa bo'ladi: jism koordinatasi $x(t)$, tezligi $v(t)$, kuch $F(r)$. Funksiya grafigi (graph) bog'lanishni bir qarashda ko'rsatadi.",
+  "ru": "В физике аргументом обычно служит время или расстояние: координата тела $x(t)$, скорость $v(t)$, сила $F(r)$. График функции показывает зависимость с одного взгляда.",
+  "en": "In physics the argument is usually time or distance: the position of a body $x(t)$, its velocity $v(t)$, a force $F(r)$. The graph of a function shows the dependence at a glance."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Chiziqli va kvadratik funksiyalar (Linear and quadratic functions)",
+  "ru": "2. Линейная и квадратичная функции",
+  "en": "2. Linear and quadratic functions"
+ },
+ {
+  "t": "p",
+  "uz": "**Chiziqli funksiya (linear function)** grafigi to'g'ri chiziq. $k$ — **burchak koeffitsiyenti (slope)**, ya'ni $y$ ning $x$ bo'yicha o'zgarish tezligi; $b$ — chiziqning $y$ o'qini kesish nuqtasi (y-intercept):",
+  "ru": "График **линейной функции** — прямая. $k$ — **угловой коэффициент**, то есть скорость изменения $y$ по $x$; $b$ — точка пересечения прямой с осью $y$:",
+  "en": "The graph of a **linear function** is a straight line. $k$ is the **slope**, that is, the rate of change of $y$ with $x$; $b$ is the $y$-intercept:"
+ },
+ {
+  "t": "m",
+  "m": "y=kx+b,\\qquad k=\\frac{\\Delta y}{\\Delta x}=\\frac{y_2-y_1}{x_2-x_1}"
+ },
+ {
+  "t": "p",
+  "uz": "Misol: tekis harakatda $x(t)=x_0+vt$ — grafik og'masi tezlikka teng (F01).",
+  "ru": "Пример: при равномерном движении $x(t)=x_0+vt$ — наклон графика равен скорости (F01).",
+  "en": "Example: in uniform motion $x(t)=x_0+vt$ — the slope of the graph equals the velocity (F01)."
+ },
+ {
+  "t": "p",
+  "uz": "**Kvadratik funksiya (quadratic function)** grafigi parabola. $a>0$ da tarmoqlari yuqoriga, $a<0$ da pastga yo'nalgan. Parabola **uchi (vertex)** — funksiyaning eng kichik yoki eng katta qiymati:",
+  "ru": "График **квадратичной функции** — парабола. При $a>0$ её ветви направлены вверх, при $a<0$ — вниз. **Вершина** параболы — наименьшее или наибольшее значение функции:",
+  "en": "The graph of a **quadratic function** is a parabola. For $a>0$ its branches point up, for $a<0$ down. The **vertex** of the parabola is the minimum or maximum value of the function:"
+ },
+ {
+  "t": "m",
+  "m": "y=ax^2+bx+c,\\qquad x_0=-\\frac{b}{2a},\\qquad y_0=c-\\frac{b^2}{4a},\\qquad x_{1,2}=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}"
+ },
+ {
+  "t": "p",
+  "uz": "Misol: yuqoriga otilgan jism balandligi $h(t)=v_0t-\\tfrac12gt^2$; eng katta balandlikka $t=v_0/g$ da erishiladi va u $h_{\\max}=v_0^2/(2g)$ ga teng (F01).",
+  "ru": "Пример: высота тела, брошенного вверх, $h(t)=v_0t-\\tfrac12gt^2$; наибольшая высота достигается при $t=v_0/g$ и равна $h_{\\max}=v_0^2/(2g)$ (F01).",
+  "en": "Example: the height of a body thrown upward is $h(t)=v_0t-\\tfrac12gt^2$; the maximum height is reached at $t=v_0/g$ and equals $h_{\\max}=v_0^2/(2g)$ (F01)."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B0-L02-F01.png",
+   "ru": "figures/B0-L02-F01-ru.png",
+   "en": "figures/B0-L02-F01-en.png"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Darajali funksiyalar (Power functions)",
+  "ru": "3. Степенные функции",
+  "en": "3. Power functions"
+ },
+ {
+  "t": "p",
+  "uz": "**Darajali funksiya (power function):** $y=Cx^n$. Fizikada eng ko'p uchraydigan holatlar: $n=-1$ — teskari proporsionallik (potensial $\\propto 1/r$), $n=-2$ — **masofa kvadratiga teskari qonun (inverse-square law)**: gravitatsiya kuchi, Kulon kuchi, nuqtaviy manba yorug'lik intensivligi (F02).",
+  "ru": "**Степенная функция:** $y=Cx^n$. Наиболее частые в физике случаи: $n=-1$ — обратная пропорциональность (потенциал $\\propto 1/r$), $n=-2$ — **закон обратных квадратов**: сила тяготения, сила Кулона, интенсивность света точечного источника (F02).",
+  "en": "**Power function:** $y=Cx^n$. The most common cases in physics are $n=-1$, inverse proportionality (potential $\\propto 1/r$), and $n=-2$, the **inverse-square law**: the gravitational force, the Coulomb force and the light intensity of a point source (F02)."
+ },
+ {
+  "t": "p",
+  "uz": "**Masshtab qoidasi (scaling).** $C$ ni bilmasdan ham nisbatni topish mumkin — GRE'da eng tez usul:",
+  "ru": "**Правило масштабирования.** Отношение можно найти, не зная $C$, — самый быстрый способ на GRE:",
+  "en": "**Scaling rule.** The ratio can be found without knowing $C$ — the fastest method on the GRE:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{y_2}{y_1}=\\left(\\frac{x_2}{x_1}\\right)^{n}\\qquad\\Rightarrow\\qquad F\\propto\\frac{1}{r^2}:\\ r\\to2r\\ \\Rightarrow\\ F\\to\\frac{F}{4}"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B0-L02-F02.png",
+   "ru": "figures/B0-L02-F02-ru.png",
+   "en": "figures/B0-L02-F02-en.png"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Eksponenta va logarifm (Exponential and logarithm)",
+  "ru": "4. Экспонента и логарифм",
+  "en": "4. Exponential and logarithm"
+ },
+ {
+  "t": "p",
+  "uz": "**Eksponensial funksiya (exponential function)** $y=e^x$, bunda $e\\approx2.718$. Uning asosiy xossalari:",
+  "ru": "**Показательная функция (экспонента)** $y=e^x$, где $e\\approx2.718$. Её основные свойства:",
+  "en": "The **exponential function** is $y=e^x$, where $e\\approx2.718$. Its main properties are:"
+ },
+ {
+  "t": "m",
+  "m": "e^{a}e^{b}=e^{a+b},\\qquad \\frac{e^{a}}{e^{b}}=e^{a-b},\\qquad \\left(e^{a}\\right)^{n}=e^{na},\\qquad e^{0}=1"
+ },
+ {
+  "t": "p",
+  "uz": "**Natural logarifm (natural logarithm)** — eksponentaga teskari funksiya: $y=\\ln x\\iff x=e^{y}$ ($x>0$). O'nli logarifm: $\\log_{10}x=\\ln x/\\ln10$.",
+  "ru": "**Натуральный логарифм** — функция, обратная экспоненте: $y=\\ln x\\iff x=e^{y}$ ($x>0$). Десятичный логарифм: $\\log_{10}x=\\ln x/\\ln10$.",
+  "en": "The **natural logarithm** is the inverse of the exponential: $y=\\ln x\\iff x=e^{y}$ ($x>0$). The common logarithm is $\\log_{10}x=\\ln x/\\ln10$."
+ },
+ {
+  "t": "m",
+  "m": "\\ln(ab)=\\ln a+\\ln b,\\qquad \\ln\\frac{a}{b}=\\ln a-\\ln b,\\qquad \\ln a^{n}=n\\ln a,\\qquad \\ln e=1,\\ \\ \\ln1=0"
+ },
+ {
+  "t": "p",
+  "uz": "**Eksponensial yemirilish (exponential decay).** Kattalik o'z miqdoriga proporsional tezlik bilan kamaysa, u eksponenta bo'yicha kamayadi: radioaktiv yadrolar soni, kondensator razryadidagi kuchlanish. $\\tau$ — **vaqt doimiysi (time constant)**: shu vaqtda kattalik $e$ marta kamayadi; $T_{1/2}$ — **yarim yemirilish davri (half-life)**: shu vaqtda ikki marta kamayadi (F03).",
+  "ru": "**Экспоненциальный распад.** Если величина убывает со скоростью, пропорциональной самой величине, она убывает по экспоненте: число радиоактивных ядер, напряжение при разрядке конденсатора. $\\tau$ — **постоянная времени**: за это время величина уменьшается в $e$ раз; $T_{1/2}$ — **период полураспада**: за это время она уменьшается вдвое (F03).",
+  "en": "**Exponential decay.** If a quantity decreases at a rate proportional to the quantity itself, it decreases exponentially: the number of radioactive nuclei, the voltage of a discharging capacitor. $\\tau$ is the **time constant**: in this time the quantity decreases by a factor of $e$; $T_{1/2}$ is the **half-life**: in this time it decreases by half (F03)."
+ },
+ {
+  "t": "m",
+  "m": "N(t)=N_0\\,e^{-t/\\tau}=N_0\\,2^{-t/T_{1/2}},\\qquad T_{1/2}=\\tau\\ln2\\approx0.693\\,\\tau"
+ },
+ {
+  "t": "p",
+  "uz": "Kalkulyatorsiz hisob uchun: $\\ln2\\approx0.693$, $\\ln3\\approx1.099$, $\\ln10\\approx2.303$, $e^{-1}\\approx0.368$. $n$ ta yarim yemirilish davridan keyin $1/2^{n}$ qism qoladi.",
+  "ru": "Для расчётов без калькулятора: $\\ln2\\approx0.693$, $\\ln3\\approx1.099$, $\\ln10\\approx2.303$, $e^{-1}\\approx0.368$. После $n$ периодов полураспада остаётся доля $1/2^{n}$.",
+  "en": "For calculations without a calculator: $\\ln2\\approx0.693$, $\\ln3\\approx1.099$, $\\ln10\\approx2.303$, $e^{-1}\\approx0.368$. After $n$ half-lives a fraction $1/2^{n}$ remains."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B0-L02-F03.png",
+   "ru": "figures/B0-L02-F03-ru.png",
+   "en": "figures/B0-L02-F03-en.png"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Grafiklarni almashtirish (Graph transformations)",
+  "ru": "5. Преобразования графиков",
+  "en": "5. Graph transformations"
+ },
+ {
+  "t": "p",
+  "uz": "$y=f(x)$ grafigi ma'lum bo'lsa, quyidagi funksiyalar grafigini uni siljitish, cho'zish yoki aks ettirish orqali tez chizish mumkin (F04):",
+  "ru": "Если известен график $y=f(x)$, графики следующих функций можно быстро построить с помощью сдвига, растяжения или отражения (F04):",
+  "en": "If the graph of $y=f(x)$ is known, the graphs of the following functions can be sketched quickly by shifting, stretching or reflecting it (F04):"
+ },
+ {
+  "t": "li",
+  "uz": "$f(x-a)$ — $a$ birlik **o'ngga siljitish (shift)** ($a>0$); $f(x)+b$ — $b$ birlik yuqoriga siljitish.",
+  "ru": "$f(x-a)$ — **сдвиг** на $a$ единиц вправо ($a>0$); $f(x)+b$ — сдвиг на $b$ единиц вверх.",
+  "en": "$f(x-a)$ — **shift** $a$ units to the right ($a>0$); $f(x)+b$ — shift $b$ units up."
+ },
+ {
+  "t": "li",
+  "uz": "$A\\,f(x)$ — vertikal bo'yicha $A$ marta **cho'zish (stretch)**; $f(kx)$ — gorizontal bo'yicha $k$ marta siqish ($k>1$).",
+  "ru": "$A\\,f(x)$ — **растяжение** по вертикали в $A$ раз; $f(kx)$ — сжатие по горизонтали в $k$ раз ($k>1$).",
+  "en": "$A\\,f(x)$ — vertical **stretch** by a factor of $A$; $f(kx)$ — horizontal compression by a factor of $k$ ($k>1$)."
+ },
+ {
+  "t": "li",
+  "uz": "$-f(x)$ — $x$ o'qiga nisbatan **aks ettirish (reflection)**; $f(-x)$ — $y$ o'qiga nisbatan aks ettirish.",
+  "ru": "$-f(x)$ — **отражение** относительно оси $x$; $f(-x)$ — отражение относительно оси $y$.",
+  "en": "$-f(x)$ — **reflection** in the $x$-axis; $f(-x)$ — reflection in the $y$-axis."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B0-L02-F04.png",
+   "ru": "figures/B0-L02-F04-ru.png",
+   "en": "figures/B0-L02-F04-en.png"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Trigonometriya (Trigonometry)",
+  "ru": "6. Тригонометрия",
+  "en": "6. Trigonometry"
+ },
+ {
+  "t": "p",
+  "uz": "**Radian (radian).** Markaziy burchak radianlarda yoy uzunligining radiusga nisbati bilan o'lchanadi. Fizikada burchaklar deyarli har doim radianlarda yoziladi:",
+  "ru": "**Радиан.** Центральный угол в радианах измеряется отношением длины дуги к радиусу. В физике углы почти всегда записывают в радианах:",
+  "en": "**Radian.** A central angle in radians is measured by the ratio of the arc length to the radius. In physics angles are almost always written in radians:"
+ },
+ {
+  "t": "m",
+  "m": "\\theta=\\frac{s}{r},\\qquad 360^\\circ=2\\pi\\ \\mathrm{rad},\\qquad 1\\ \\mathrm{rad}=\\frac{180^\\circ}{\\pi}\\approx57.3^\\circ"
+ },
+ {
+  "t": "p",
+  "uz": "**Birlik aylana (unit circle).** Radiusi 1 bo'lgan aylanada $x$ o'qidan soat mili harakatiga teskari yo'nalishda $\\theta$ burchakka burilgan nuqtaning koordinatalari $(\\cos\\theta,\\ \\sin\\theta)$ ga teng (F05). To'g'ri burchakli uchburchakda: $\\sin\\theta$ — qarshi katetning gipotenuzaga, $\\cos\\theta$ — yopishgan katetning gipotenuzaga nisbati.",
+  "ru": "**Единичная окружность.** На окружности радиуса 1 точка, повёрнутая от оси $x$ против часовой стрелки на угол $\\theta$, имеет координаты $(\\cos\\theta,\\ \\sin\\theta)$ (F05). В прямоугольном треугольнике $\\sin\\theta$ — отношение противолежащего катета к гипотенузе, $\\cos\\theta$ — прилежащего катета к гипотенузе.",
+  "en": "**Unit circle.** On a circle of radius 1, the point rotated counterclockwise from the $x$-axis by an angle $\\theta$ has coordinates $(\\cos\\theta,\\ \\sin\\theta)$ (F05). In a right triangle, $\\sin\\theta$ is the ratio of the opposite side to the hypotenuse and $\\cos\\theta$ is the ratio of the adjacent side to the hypotenuse."
+ },
+ {
+  "t": "m",
+  "m": "\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta},\\qquad \\sin^2\\theta+\\cos^2\\theta=1"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "$\\theta=0$",
+    "ru": "$\\theta=0$",
+    "en": "$\\theta=0$",
+    "m": "\\sin0=0,\\quad \\cos0=1,\\quad \\tan0=0"
+   },
+   {
+    "uz": "$\\theta=30^\\circ=\\pi/6$",
+    "ru": "$\\theta=30^\\circ=\\pi/6$",
+    "en": "$\\theta=30^\\circ=\\pi/6$",
+    "m": "\\sin=\\tfrac12,\\quad \\cos=\\tfrac{\\sqrt3}{2},\\quad \\tan=\\tfrac{1}{\\sqrt3}"
+   },
+   {
+    "uz": "$\\theta=45^\\circ=\\pi/4$",
+    "ru": "$\\theta=45^\\circ=\\pi/4$",
+    "en": "$\\theta=45^\\circ=\\pi/4$",
+    "m": "\\sin=\\cos=\\tfrac{\\sqrt2}{2},\\quad \\tan=1"
+   },
+   {
+    "uz": "$\\theta=60^\\circ=\\pi/3$",
+    "ru": "$\\theta=60^\\circ=\\pi/3$",
+    "en": "$\\theta=60^\\circ=\\pi/3$",
+    "m": "\\sin=\\tfrac{\\sqrt3}{2},\\quad \\cos=\\tfrac12,\\quad \\tan=\\sqrt3"
+   },
+   {
+    "uz": "$\\theta=90^\\circ=\\pi/2$",
+    "ru": "$\\theta=90^\\circ=\\pi/2$",
+    "en": "$\\theta=90^\\circ=\\pi/2$",
+    "m": "\\sin=1,\\quad \\cos=0,\\quad \\tan\\ \\text{---}"
+   }
+  ]
+ },
+ {
+  "t": "p",
+  "uz": "**Ishoralar.** I chorakda barcha funksiyalar musbat; II chorakda faqat $\\sin$; III chorakda faqat $\\tan$; IV chorakda faqat $\\cos$ musbat.",
+  "ru": "**Знаки.** В I четверти все функции положительны; во II — только $\\sin$; в III — только $\\tan$; в IV — только $\\cos$.",
+  "en": "**Signs.** In quadrant I all functions are positive; in quadrant II only $\\sin$; in quadrant III only $\\tan$; in quadrant IV only $\\cos$."
+ },
+ {
+  "t": "p",
+  "uz": "**Asosiy ayniyatlar (identities).** Juft-toqlik, qo'shish formulalari (addition formulas) va ikkilangan burchak formulalari (double-angle formulas):",
+  "ru": "**Основные тождества.** Чётность, формулы сложения и формулы двойного угла:",
+  "en": "**Basic identities.** Parity, the addition formulas and the double-angle formulas:"
+ },
+ {
+  "t": "m",
+  "m": "\\sin(-\\theta)=-\\sin\\theta,\\qquad \\cos(-\\theta)=\\cos\\theta,\\qquad \\sin\\left(\\tfrac{\\pi}{2}-\\theta\\right)=\\cos\\theta"
+ },
+ {
+  "t": "m",
+  "m": "\\sin(\\alpha\\pm\\beta)=\\sin\\alpha\\cos\\beta\\pm\\cos\\alpha\\sin\\beta,\\qquad \\cos(\\alpha\\pm\\beta)=\\cos\\alpha\\cos\\beta\\mp\\sin\\alpha\\sin\\beta"
+ },
+ {
+  "t": "m",
+  "m": "\\sin2\\alpha=2\\sin\\alpha\\cos\\alpha,\\qquad \\cos2\\alpha=\\cos^2\\alpha-\\sin^2\\alpha=1-2\\sin^2\\alpha=2\\cos^2\\alpha-1"
+ },
+ {
+  "t": "p",
+  "uz": "**Teskari trigonometrik funksiyalar (inverse trigonometric functions).** $\\arcsin x\\in[-\\pi/2,\\ \\pi/2]$, $\\arccos x\\in[0,\\ \\pi]$, $\\arctan x\\in(-\\pi/2,\\ \\pi/2)$. Kalkulyator yoki jadval faqat shu oraliqdagi burchakni beradi, shuning uchun burchakning qaysi chorakda ekanini ishoralar bo'yicha alohida aniqlash kerak.",
+  "ru": "**Обратные тригонометрические функции.** $\\arcsin x\\in[-\\pi/2,\\ \\pi/2]$, $\\arccos x\\in[0,\\ \\pi]$, $\\arctan x\\in(-\\pi/2,\\ \\pi/2)$. Калькулятор или таблица дают угол только из этого промежутка, поэтому четверть угла нужно отдельно определить по знакам.",
+  "en": "**Inverse trigonometric functions.** $\\arcsin x\\in[-\\pi/2,\\ \\pi/2]$, $\\arccos x\\in[0,\\ \\pi]$, $\\arctan x\\in(-\\pi/2,\\ \\pi/2)$. A calculator or table gives an angle only in this interval, so the quadrant of the angle must be determined separately from the signs."
+ },
+ {
+  "t": "p",
+  "uz": "**Kichik burchak yaqinlashuvi (small-angle approximation).** $\\theta\\ll1$ ($\\theta$ radianlarda) bo'lganda (mayatnik, difraksiya, optika):",
+  "ru": "**Приближение малых углов.** При $\\theta\\ll1$ ($\\theta$ в радианах) (маятник, дифракция, оптика):",
+  "en": "**Small-angle approximation.** For $\\theta\\ll1$ ($\\theta$ in radians) (pendulum, diffraction, optics):"
+ },
+ {
+  "t": "m",
+  "m": "\\sin\\theta\\approx\\theta,\\qquad \\tan\\theta\\approx\\theta,\\qquad \\cos\\theta\\approx1-\\frac{\\theta^2}{2}"
+ },
+ {
+  "t": "p",
+  "uz": "$\\sin\\theta\\approx\\theta$ ning nisbiy xatosi taxminan $\\theta^2/6$ ga teng: $\\theta=0.1$ da atigi $0.17\\%$.",
+  "ru": "Относительная погрешность $\\sin\\theta\\approx\\theta$ примерно равна $\\theta^2/6$: при $\\theta=0.1$ всего $0.17\\%$.",
+  "en": "The relative error of $\\sin\\theta\\approx\\theta$ is about $\\theta^2/6$: only $0.17\\%$ at $\\theta=0.1$."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B0-L02-F05.png",
+   "ru": "figures/B0-L02-F05-ru.png",
+   "en": "figures/B0-L02-F05-en.png"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Garmonik funksiyalar va tebranishlar (Sinusoidal functions and oscillations)",
+  "ru": "7. Гармонические функции и колебания",
+  "en": "7. Sinusoidal functions and oscillations"
+ },
+ {
+  "t": "p",
+  "uz": "**Garmonik tebranish (harmonic oscillation)** kosinus (yoki sinus) funksiyasi bilan yoziladi. $A$ — **amplituda (amplitude)**, $\\omega$ — **siklik chastota (angular frequency)**, $\\varphi$ — **boshlang'ich faza (initial phase)**, $T$ — **davr (period)**, $f$ — **chastota (frequency)** (F06):",
+  "ru": "**Гармоническое колебание** описывается функцией косинус (или синус). $A$ — **амплитуда**, $\\omega$ — **циклическая частота**, $\\varphi$ — **начальная фаза**, $T$ — **период**, $f$ — **частота** (F06):",
+  "en": "A **harmonic oscillation** is described by a cosine (or sine) function. $A$ is the **amplitude**, $\\omega$ the **angular frequency**, $\\varphi$ the **initial phase**, $T$ the **period** and $f$ the **frequency** (F06):"
+ },
+ {
+  "t": "m",
+  "m": "x(t)=A\\cos(\\omega t+\\varphi),\\qquad T=\\frac{2\\pi}{\\omega},\\qquad f=\\frac{1}{T},\\qquad \\omega=2\\pi f"
+ },
+ {
+  "t": "p",
+  "uz": "**Bir xil chastotali tebranishlarni qo'shish.** Kosinus va sinusning yig'indisi yana o'sha chastotali garmonik tebranish bo'ladi:",
+  "ru": "**Сложение колебаний одной частоты.** Сумма косинуса и синуса — снова гармоническое колебание той же частоты:",
+  "en": "**Adding oscillations of the same frequency.** The sum of a cosine and a sine is again a harmonic oscillation of the same frequency:"
+ },
+ {
+  "t": "m",
+  "m": "a\\cos\\omega t+b\\sin\\omega t=R\\cos(\\omega t-\\delta),\\qquad R=\\sqrt{a^2+b^2},\\qquad \\tan\\delta=\\frac{b}{a}"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B0-L02-F06.png",
+   "ru": "figures/B0-L02-F06-ru.png",
+   "en": "figures/B0-L02-F06-en.png"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Logarifmik shkala va log-log grafiklar (Logarithmic scales and log-log graphs)",
+  "ru": "8. Логарифмический масштаб и графики в логарифмических координатах",
+  "en": "8. Logarithmic scales and log-log graphs"
+ },
+ {
+  "t": "p",
+  "uz": "**Log-log grafik (log-log plot).** Darajali bog'lanishni logarifmlasak, chiziqli bog'lanish hosil bo'ladi; uning og'masi daraja ko'rsatkichi $n$ ga teng (F07):",
+  "ru": "**График в логарифмических координатах (log-log).** Если прологарифмировать степенную зависимость, получится линейная зависимость; её наклон равен показателю степени $n$ (F07):",
+  "en": "**Log-log plot.** Taking the logarithm of a power law gives a linear relation; its slope equals the exponent $n$ (F07):"
+ },
+ {
+  "t": "m",
+  "m": "y=Cx^{n}\\quad\\Rightarrow\\quad \\log y=\\log C+n\\log x,\\qquad n=\\frac{\\log(y_2/y_1)}{\\log(x_2/x_1)}"
+ },
+ {
+  "t": "p",
+  "uz": "**Yarim logarifmik grafik (semi-log plot).** Eksponensial bog'lanish $\\ln y$ — $t$ koordinatalarida to'g'ri chiziq bo'ladi, og'masi $-1/\\tau$:",
+  "ru": "**Полулогарифмический график.** Экспоненциальная зависимость в координатах $\\ln y$ — $t$ становится прямой с наклоном $-1/\\tau$:",
+  "en": "**Semi-log plot.** An exponential relation becomes a straight line in the coordinates $\\ln y$ versus $t$, with slope $-1/\\tau$:"
+ },
+ {
+  "t": "m",
+  "m": "y=y_0e^{-t/\\tau}\\quad\\Rightarrow\\quad \\ln y=\\ln y_0-\\frac{t}{\\tau}"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B0-L02-F07.png",
+   "ru": "figures/B0-L02-F07-ru.png",
+   "en": "figures/B0-L02-F07-en.png"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. GRE uchun tez tekshiruvlar (Quick checks for the GRE)",
+  "ru": "9. Быстрые проверки для GRE",
+  "en": "9. Quick checks for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "$\\sin$, $\\cos$, $e^{x}$ va $\\ln x$ funksiyalarining argumenti o'lchamsiz bo'lishi shart: masalan, $e^{-t/\\tau}$ da $t/\\tau$, $\\cos\\omega t$ da $\\omega t$.",
+  "ru": "Аргумент функций $\\sin$, $\\cos$, $e^{x}$ и $\\ln x$ должен быть безразмерным: например, $t/\\tau$ в $e^{-t/\\tau}$, $\\omega t$ в $\\cos\\omega t$.",
+  "en": "The argument of $\\sin$, $\\cos$, $e^{x}$ and $\\ln x$ must be dimensionless: for example, $t/\\tau$ in $e^{-t/\\tau}$ and $\\omega t$ in $\\cos\\omega t$."
+ },
+ {
+  "t": "li",
+  "uz": "Chegaraviy holatlarni tekshiring: $t=0$ va $t\\to\\infty$, $\\theta\\to0$ va $\\theta=90^\\circ$ da javob mantiqiymi?",
+  "ru": "Проверяйте предельные случаи: разумен ли ответ при $t=0$ и $t\\to\\infty$, при $\\theta\\to0$ и $\\theta=90^\\circ$?",
+  "en": "Check limiting cases: does the answer make sense at $t=0$ and $t\\to\\infty$, at $\\theta\\to0$ and $\\theta=90^\\circ$?"
+ },
+ {
+  "t": "li",
+  "uz": "Yod biling: $\\sqrt2\\approx1.414$, $\\sqrt3\\approx1.732$, $\\pi\\approx3.14$, $e\\approx2.72$, $\\ln2\\approx0.69$, $1\\ \\mathrm{rad}\\approx57.3^\\circ$.",
+  "ru": "Помните: $\\sqrt2\\approx1.414$, $\\sqrt3\\approx1.732$, $\\pi\\approx3.14$, $e\\approx2.72$, $\\ln2\\approx0.69$, $1\\ \\mathrm{рад}\\approx57.3^\\circ$.",
+  "en": "Memorize: $\\sqrt2\\approx1.414$, $\\sqrt3\\approx1.732$, $\\pi\\approx3.14$, $e\\approx2.72$, $\\ln2\\approx0.69$, $1\\ \\mathrm{rad}\\approx57.3^\\circ$."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "To'g'ri chiziq og'masi",
+    "ru": "Наклон прямой",
+    "en": "Slope of a line",
+    "m": "k=\\frac{\\Delta y}{\\Delta x}"
+   },
+   {
+    "uz": "Parabola uchi",
+    "ru": "Вершина параболы",
+    "en": "Vertex of a parabola",
+    "m": "x_0=-\\frac{b}{2a}"
+   },
+   {
+    "uz": "Darajali qonun nisbati",
+    "ru": "Отношение для степенного закона",
+    "en": "Power-law ratio",
+    "m": "\\frac{y_2}{y_1}=\\left(\\frac{x_2}{x_1}\\right)^{n}"
+   },
+   {
+    "uz": "Eksponensial yemirilish",
+    "ru": "Экспоненциальный распад",
+    "en": "Exponential decay",
+    "m": "N=N_0e^{-t/\\tau}=N_0\\,2^{-t/T_{1/2}}"
+   },
+   {
+    "uz": "Yarim yemirilish davri",
+    "ru": "Период полураспада",
+    "en": "Half-life",
+    "m": "T_{1/2}=\\tau\\ln2"
+   },
+   {
+    "uz": "Radian",
+    "ru": "Радиан",
+    "en": "Radian",
+    "m": "\\theta=\\frac{s}{r}"
+   },
+   {
+    "uz": "Asosiy ayniyat",
+    "ru": "Основное тождество",
+    "en": "Pythagorean identity",
+    "m": "\\sin^2\\theta+\\cos^2\\theta=1"
+   },
+   {
+    "uz": "Kichik burchak",
+    "ru": "Малый угол",
+    "en": "Small angle",
+    "m": "\\sin\\theta\\approx\\tan\\theta\\approx\\theta"
+   },
+   {
+    "uz": "Garmonik tebranish",
+    "ru": "Гармоническое колебание",
+    "en": "Harmonic oscillation",
+    "m": "x=A\\cos(\\omega t+\\varphi),\\ T=\\frac{2\\pi}{\\omega}"
+   },
+   {
+    "uz": "Tebranishlarni qo'shish",
+    "ru": "Сложение колебаний",
+    "en": "Adding oscillations",
+    "m": "R=\\sqrt{a^2+b^2},\\ \\tan\\delta=\\frac{b}{a}"
+   },
+   {
+    "uz": "Log-log og'masi",
+    "ru": "Наклон в log-log",
+    "en": "Log-log slope",
+    "m": "n=\\frac{\\log(y_2/y_1)}{\\log(x_2/x_1)}"
+   }
+  ]
+ }
+]

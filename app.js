@@ -16,6 +16,8 @@
     ready:    { uz: "tayyor", ru: "готово", en: "ready" },
     planned:  { uz: "rejada", ru: "в плане", en: "planned" },
     soon:     { uz: "Darslar tez orada qo'shiladi.", ru: "Уроки скоро появятся.", en: "Lessons are coming soon." },
+    sequence: { uz: "Darslar ketma-ketligi", ru: "Последовательность уроков", en: "Lesson sequence" },
+    later:    { uz: "tez orada", ru: "скоро", en: "coming soon" },
     tabs: {
       nazariya:  { i: "📘", uz: "Nazariya", ru: "Теория", en: "Theory" },
       lugat:     { i: "📖", uz: "Lug'at", ru: "Словарь", en: "Glossary" },
@@ -56,8 +58,8 @@
   };
   const TAB_ORDER = ["nazariya", "lugat", "masalalar", "test", "mustaqil"];
   const LETTERS = "ABCDE";
-  // Barcha vektorlar uchun bir xil belgi: \vec A, \vec i, \overrightarrow{AB} — hammasi \overrightarrow
-  const KATEX_MACROS = { "\\vec": "\\overrightarrow{#1}" };
+  // Belgilash: bitta harfli vektor — \vec A (qisqa strelka), ikki nuqta — \overrightarrow{AB}
+  const KATEX_MACROS = {};
 
   // ------------------------------------------------------------------ holat
   const store = {
@@ -174,16 +176,15 @@
     $("#tabs").hidden = true;
     header("GRE PHYSICS · UZ", t(T.modules));
     const [M, idx] = await Promise.all([getJSON("moduller.json"), getJSON("darslar/index.json")]);
-    view.innerHTML = `<div class="hero">${bi(M.hero.title, "div", "ht")}${bi(M.hero.sub, "div", "hs")}</div>` +
+    view.innerHTML = `<div class="hero">${bi(M.hero.title, "div", "ht")}${bi(M.hero.sub, "div", "hs")}</div><div class="mods">` +
       M.modules.map((m) => {
         const ready = idx.filter((L) => L.module === m.id).length;
         const meta = m.about ? "" : `<div class="mmeta"><span class="chip ${ready ? "ok" : ""}">${ready} ${esc(t(T.ready))}</span>
             <span class="muted">${m.planned} ${esc(t(T.lessons))} ${esc(t(T.planned))}</span></div>`;
         return `<button class="card mod" data-id="${m.id}">
-            <div class="mnum">${m.icon}</div>
-            <div class="mbody"><div class="mk">${m.n}-${esc(t(T.module))}</div>${bi(m.title, "div", "mt")}${meta}</div>
-            <div class="chev">›</div></button>`;
-      }).join("");
+            <div class="mtop"><div class="mnum">${m.icon}</div><div class="mk">${m.n}-${esc(t(T.module))}</div></div>
+            <div class="mbody">${bi(m.title, "div", "mt")}${meta}</div></button>`;
+      }).join("") + `</div>`;
     view.querySelectorAll(".mod").forEach((b) => b.addEventListener("click", () => {
       const m = M.modules.find((x) => x.id === b.dataset.id);
       go(m.about ? { view: "about" } : { view: "module", mod: m.id });
@@ -197,13 +198,21 @@
     const m = M.modules.find((x) => x.id === mid) || M.modules[0];
     header(`${m.n}-${t(T.module)}`, t(m.title));
     const lessons = idx.filter((L) => L.module === m.id);
+    const byId = Object.fromEntries(lessons.map((L) => [L.id, L]));
+    const plan = (m.plan && m.plan.length) ? m.plan : lessons.map((L) => ({ id: L.id, title: L.title }));
+    const rows = plan.map((p, i) => {
+      const L = byId[p.id];
+      const stats = L ? `<div class="stats">${Object.entries(L.counts).map(([k, n]) => `<span>${n} ${esc(t(T.counts[k]))}</span>`).join("")}</div>` : "";
+      const chip = L ? `<span class="chip ok">${esc(t(T.ready))}</span>` : `<span class="chip">${esc(t(T.later))}</span>`;
+      return `<${L ? "button" : "div"} class="lrow ${L ? "lesson" : "off"}" data-id="${p.id}">
+          <div class="lnum">${i + 1}</div>
+          <div class="lbody"><div class="lhead"><span class="code">${p.id}</span>${chip}</div>${bi(p.title, "div", "lt")}${stats}</div>
+          ${L ? '<div class="chev">›</div>' : ""}</${L ? "button" : "div"}>`;
+    }).join("");
     view.innerHTML = `<section class="card">${bi(m.title, "h2")}${bi(m.desc, "p")}
         <div class="mmeta"><span class="chip ${lessons.length ? "ok" : ""}">${lessons.length} ${esc(t(T.ready))}</span>
         <span class="muted">${m.planned} ${esc(t(T.lessons))} ${esc(t(T.planned))}</span></div></section>` +
-      (lessons.length ? lessons.map((L) => `<button class="card lesson" data-id="${L.id}">
-          <span class="code">${L.id}</span>${bi(L.title, "div", "big")}
-          <div class="stats">${Object.entries(L.counts).map(([k, n]) => `<span>${n} ${esc(t(T.counts[k]))}</span>`).join("")}</div>
-        </button>`).join("") : `<div class="card muted">${esc(t(T.soon))}</div>`);
+      (plan.length ? `<section class="card seq"><h2>${esc(t(T.sequence))}</h2>${rows}</section>` : `<div class="card muted">${esc(t(T.soon))}</div>`);
     view.querySelectorAll(".lesson").forEach((b) => b.addEventListener("click", () => go({ view: "lesson", id: b.dataset.id, tab: "nazariya", mod: m.id })));
   }
 
