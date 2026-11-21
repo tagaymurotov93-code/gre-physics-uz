@@ -1,0 +1,131 @@
+/* GRE Physics Uz — Mini App. Telegram mavzusi (theme) ranglaridan foydalanadi, bo'lmasa — kanal uslubi. */
+:root {
+  --primary: #1F4E79;
+  --accent: #E07B00;
+  --ok: #2E7D32;
+  --bad: #C62828;
+  --bg: var(--tg-theme-bg-color, #ffffff);
+  --bg2: var(--tg-theme-secondary-bg-color, #F2F5F9);
+  --text: var(--tg-theme-text-color, #1d2430);
+  --hint: var(--tg-theme-hint-color, #6B7785);
+  --link: var(--tg-theme-link-color, #1F6FB2);
+  --btn: var(--tg-theme-button-color, #1F4E79);
+  --btn-text: var(--tg-theme-button-text-color, #ffffff);
+  --card: var(--tg-theme-section-bg-color, #ffffff);
+  --line: color-mix(in srgb, var(--hint) 25%, transparent);
+  --radius: 14px;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; background: var(--bg2); color: var(--text);
+  font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "DejaVu Sans", sans-serif; }
+body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+button { font: inherit; color: inherit; }
+img { max-width: 100%; }
+
+/* ---- sarlavha ---- */
+.top { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; background: var(--bg); border-bottom: 1px solid var(--line); }
+.back { border: 0; background: none; font-size: 30px; line-height: 1; padding: 0 6px 4px 0; color: var(--link); cursor: pointer; }
+.titles { flex: 1; min-width: 0; }
+.kicker { font-size: 12px; color: var(--hint); text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+h1 { margin: 0; font-size: 20px; line-height: 1.25; }
+.langs { display: flex; background: var(--bg2); border-radius: 10px; padding: 2px; }
+.langs button { border: 0; background: none; padding: 5px 9px; border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--hint); cursor: pointer; }
+.langs button.on { background: var(--btn); color: var(--btn-text); }
+
+main { max-width: 760px; margin: 0 auto; padding: 14px; }
+
+/* ---- kartochkalar ---- */
+.card { background: var(--card); border-radius: var(--radius); padding: 16px; margin: 0 0 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05); overflow-wrap: anywhere; }
+.card h2 { margin: 0 0 8px; font-size: 18px; color: var(--primary); }
+.card h3 { margin: 18px 0 6px; font-size: 16px; color: var(--primary); }
+.muted { color: var(--hint); font-size: 14px; }
+.row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.chip { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--bg2); color: var(--hint); }
+.chip.easy { color: var(--ok); } .chip.medium { color: var(--accent); } .chip.hard { color: var(--bad); }
+.code { font-weight: 700; color: var(--primary); }
+
+/* ---- bosh sahifa ---- */
+.lesson { display: block; width: 100%; text-align: left; border: 0; cursor: pointer; }
+.lesson .big { font-size: 22px; font-weight: 700; margin: 2px 0; }
+.lesson .stats { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; font-size: 13px; color: var(--hint); }
+.hero { background: var(--primary); color: #fff; border-radius: var(--radius); padding: 18px; margin-bottom: 14px; }
+.hero .k { color: #F5B56B; font-weight: 700; font-size: 13px; letter-spacing: .04em; }
+.hero p { margin: 6px 0 0; opacity: .9; font-size: 14px; }
+
+/* ---- nazariya (markdown) ---- */
+.md h1 { display: none; }
+.md h2 { font-size: 18px; margin: 22px 0 8px; color: var(--primary); }
+.md h2:first-child { margin-top: 0; }
+.md p, .md li { margin: 6px 0; }
+.md img { display: block; margin: 12px auto; border-radius: 10px; border: 1px solid var(--line); cursor: zoom-in; }
+.md table { border-collapse: collapse; width: 100%; font-size: 14px; display: block; overflow-x: auto; }
+.md th, .md td { border-bottom: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+.md strong { color: var(--primary); }
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: 4px 0; margin: 8px 0; }
+.katex { font-size: 1.08em; }
+
+/* ---- masalalar ---- */
+.fig { display: block; margin: 12px auto 4px; width: 100%; max-width: 460px; border-radius: 10px; border: 1px solid var(--line); cursor: zoom-in; background: #fff; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; border: 0; cursor: pointer;
+  background: var(--btn); color: var(--btn-text); border-radius: 10px; padding: 10px 16px; font-weight: 600; }
+.btn.ghost { background: var(--bg2); color: var(--link); }
+.btn.wide { width: 100%; }
+.steps { margin: 12px 0 0; padding-left: 22px; }
+.steps li { margin: 8px 0; }
+.answer { margin-top: 12px; border: 1.5px solid var(--accent); border-radius: 12px; padding: 10px 12px; background: color-mix(in srgb, var(--accent) 7%, var(--card)); }
+.answer b { color: var(--accent); }
+.basis { margin-top: 6px; font-size: 14px; }
+.sol { animation: fade .25s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+/* ---- test ---- */
+.progress { height: 6px; background: var(--bg2); border-radius: 99px; overflow: hidden; margin: 4px 0 12px; }
+.progress > i { display: block; height: 100%; background: var(--accent); transition: width .3s; }
+.opts { display: grid; gap: 8px; margin-top: 12px; }
+.opt { display: flex; gap: 10px; align-items: center; text-align: left; width: 100%; cursor: pointer;
+  border: 1.5px solid var(--line); background: var(--card); border-radius: 12px; padding: 10px 12px; }
+.opt .l { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; background: var(--bg2); color: var(--hint); }
+.opt.ok { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 9%, var(--card)); }
+.opt.ok .l { background: var(--ok); color: #fff; }
+.opt.bad { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 8%, var(--card)); }
+.opt.bad .l { background: var(--bad); color: #fff; }
+.opt:disabled { cursor: default; }
+.verdict { font-weight: 700; margin-top: 12px; }
+.verdict.ok { color: var(--ok); } .verdict.bad { color: var(--bad); }
+.distr { font-size: 13px; color: var(--hint); margin-top: 8px; }
+.score { text-align: center; }
+.score .n { font-size: 44px; font-weight: 800; color: var(--primary); line-height: 1.1; }
+.dots { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin: 12px 0; }
+.dots span { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; font-size: 12px; font-weight: 700; color: #fff; background: var(--hint); }
+.dots span.ok { background: var(--ok); } .dots span.bad { background: var(--bad); }
+
+/* ---- lug'at ---- */
+.search { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--text); font: inherit; margin-bottom: 10px; }
+.term { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.term:last-child { border-bottom: 0; }
+.term .en { font-weight: 700; }
+.term .tr { font-size: 14px; }
+.term .f { margin-top: 2px; }
+
+/* ---- mustaqil ish ---- */
+.hw { padding-left: 4px; list-style: none; margin: 0; counter-reset: h; }
+.hw li { counter-increment: h; padding: 10px 0 10px 44px; position: relative; border-bottom: 1px solid var(--line); }
+.hw li:last-child { border-bottom: 0; }
+.hw li::before { content: "H" counter(h); position: absolute; left: 0; top: 10px; font-weight: 700; color: var(--primary); font-size: 14px; }
+
+/* ---- pastki tablar ---- */
+.tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; display: flex; background: var(--bg);
+  border-top: 1px solid var(--line); padding: 4px 4px calc(4px + env(safe-area-inset-bottom)); }
+.tabs button { flex: 1; border: 0; background: none; cursor: pointer; padding: 6px 2px; border-radius: 10px;
+  display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 11px; color: var(--hint); }
+.tabs button .i { font-size: 20px; line-height: 1; }
+.tabs button.on { color: var(--btn); font-weight: 700; }
+
+.zoom { position: fixed; inset: 0; z-index: 20; background: rgba(0,0,0,.85); display: grid; place-items: center; padding: 12px; }
+.zoom img { max-height: 100%; border-radius: 8px; background: #fff; }
+.brand { text-align: center; padding: 8px 0 16px; font-size: 13px; }
+.brand a { color: var(--hint); text-decoration: none; font-weight: 600; }
+.err { color: var(--bad); }
