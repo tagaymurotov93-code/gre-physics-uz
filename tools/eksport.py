@@ -4,8 +4,8 @@
 Ishlatish (Hujjatlar_GRE_Physics papkasida):
     python miniapp\\tools\\eksport.py B0-L01
 
-Nima qiladi: <dars papkasi>/theory.md, glossary.json, solved.json, quiz.json, homework.json va
-figures/*.png ni miniapp/darslar/<ID>/ ga ko'chiradi, theory.md ni uch tilga ajratadi va
+Nima qiladi: <dars papkasi>/theory.json, glossary.json, solved.json, quiz.json, homework.json va
+figures/*.png (har bir til versiyasi bilan) ni miniapp/darslar/<ID>/ ga ko'chiradi va
 miniapp/darslar/index.json ro'yxatini yangilaydi. Javoblar yashirin (homework answer_hidden)
 va manba kodlari Mini App'ga KIRITILMAYDI.
 """
@@ -53,26 +53,8 @@ def main():
     shutil.rmtree(dst, ignore_errors=True)
     os.makedirs(os.path.join(dst, "figures"))
 
-    front, th = split_theory(open(os.path.join(src, "theory.md"), encoding="utf-8").read())
-    # o'zbekcha qismdagi chizmalarni bo'lim raqami bo'yicha rus va ingliz qismlariga ham qo'yamiz
-    figs_by_sec, sec = {}, None
-    for line in th.get("uz", "").splitlines():
-        m = re.match(r"## (\d+)\.", line)
-        if m:
-            sec = m.group(1)
-        if line.startswith("![") and sec:
-            figs_by_sec.setdefault(sec, []).append(line.strip())
-    for lang in ("ru", "en"):
-        if lang in th and "![" not in th[lang]:
-            out, cur = [], None
-            for chunk in re.split(r"(?=^## )", th[lang], flags=re.M):
-                m = re.match(r"## (\d+)\.", chunk)
-                out.append(chunk.rstrip() + "\n")
-                if m and m.group(1) in figs_by_sec:
-                    out.append("\n" + "\n\n".join(figs_by_sec[m.group(1)]) + "\n\n")
-            th[lang] = "".join(out)
-    for lang, text in th.items():
-        open(os.path.join(dst, f"theory_{lang}.md"), "w", encoding="utf-8").write(text + "\n")
+    front, _ = split_theory(open(os.path.join(src, "theory.md"), encoding="utf-8").read())
+    shutil.copy(os.path.join(src, "theory.json"), os.path.join(dst, "theory.json"))   # uch tilli bloklar
 
     J = lambda n: json.load(open(os.path.join(src, n), encoding="utf-8"))
     solved, quiz, hw, gloss = J("solved.json"), J("quiz.json"), J("homework.json"), J("glossary.json")
@@ -89,13 +71,13 @@ def main():
 
     idx_path = os.path.join(APP, "darslar", "index.json")
     idx = json.load(open(idx_path, encoding="utf-8")) if os.path.exists(idx_path) else []
-    entry = {"id": lid, "stage": STAGES.get(lid[:2], ""),
+    entry = {"id": lid, "module": "M" + str(int(lid[1]) + 1), "stage": STAGES.get(lid[:2], ""),
              "title": {k: front.get(f"title_{k}", lid) for k in ("uz", "ru", "en")},
              "counts": {"solved": len(solved), "quiz": len(quiz), "homework": len(hw), "glossary": len(gloss)}}
     idx = [e for e in idx if e["id"] != lid] + [entry]
     idx.sort(key=lambda e: e["id"])
     json.dump(idx, open(idx_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print(f"✓ {lid}: nazariya (3 til), {len(solved)} masala, {len(quiz)} test, {len(hw)} mustaqil, "
+    print(f"✓ {lid}: nazariya (theory.json, 3 til), {len(solved)} masala, {len(quiz)} test, {len(hw)} mustaqil, "
           f"{len(gloss)} atama, {figs} rasm → miniapp/darslar/{lid}/")
 
 

@@ -1,17 +1,21 @@
 /* GRE Physics Uz — Telegram Mini App.
- * Ma'lumotlar: darslar/index.json va darslar/<ID>/{theory_<til>.md, solved, quiz, homework, glossary}.json
- * Holat xotirada saqlanadi (URL "#" qismi Telegram'ning o'z ma'lumotlari uchun band — unga tegmaymiz).
- * To'g'ridan-to'g'ri ochish: t.me/<bot>/<app>?startapp=B0-L01  yoki  index.html?dars=B0-L01&bolim=test
+ * Ma'lumotlar: moduller.json (modullar, "GRE haqida"), darslar/index.json,
+ *              darslar/<ID>/{theory, solved, quiz, homework, glossary}.json
+ * Til qoidasi: UZ (yoki RU) tanlansa — har bir blok avval o'zbekcha (ruscha), ostida ko'k rangda inglizcha;
+ *              EN tanlansa — faqat inglizcha.
+ * Holat xotirada (URL "#" Telegram ma'lumotlari uchun band). Deep link: ?startapp=B0-L01 yoki ?dars=B0-L01&bolim=test
  */
 (() => {
   "use strict";
 
-  // ------------------------------------------------------------------ matnlar
+  // ------------------------------------------------------------------ interfeys matnlari (bir tilli)
   const T = {
-    lessons:  { uz: "Darslar", ru: "Уроки", en: "Lessons" },
-    hero:     { uz: "Noldan GRE Physics 700+ gacha: nazariya, yechilgan masalalar va GRE uslubidagi testlar.",
-                ru: "С нуля до GRE Physics 700+: теория, решённые задачи и тесты в стиле GRE.",
-                en: "From zero to GRE Physics 700+: theory, worked problems and GRE-style quizzes." },
+    modules:  { uz: "Modullar", ru: "Модули", en: "Modules" },
+    module:   { uz: "modul", ru: "модуль", en: "module" },
+    lessons:  { uz: "dars", ru: "уроков", en: "lessons" },
+    ready:    { uz: "tayyor", ru: "готово", en: "ready" },
+    planned:  { uz: "rejada", ru: "в плане", en: "planned" },
+    soon:     { uz: "Darslar tez orada qo'shiladi.", ru: "Уроки скоро появятся.", en: "Lessons are coming soon." },
     tabs: {
       nazariya:  { i: "📘", uz: "Nazariya", ru: "Теория", en: "Theory" },
       lugat:     { i: "📖", uz: "Lug'at", ru: "Словарь", en: "Glossary" },
@@ -32,17 +36,14 @@
     wrong:    { uz: "Noto'g'ri. To'g'ri javob:", ru: "Неверно. Правильный ответ:", en: "Wrong. Correct answer:" },
     restart:  { uz: "Qaytadan yechish", ru: "Решить заново", en: "Try again" },
     of:       { uz: "to'g'ri", ru: "верно", en: "correct" },
-    review:   { uz: "Savolni bosib, yechimini qayta ko'ring.", ru: "Нажмите на вопрос, чтобы снова посмотреть решение.",
-                en: "Tap a question to review its solution." },
-    distr:    { uz: "Chalg'ituvchi variantlar", ru: "", en: "" },
+    review:   { uz: "Savolni bosib, yechimini qayta ko'ring.", ru: "Нажмите на вопрос, чтобы снова посмотреть решение.", en: "Tap a question to review its solution." },
+    distr:    { uz: "Noto'g'ri variantlar tahlili", ru: "Разбор неверных вариантов", en: "Why the other choices are wrong" },
     search:   { uz: "Qidirish…", ru: "Поиск…", en: "Search…" },
-    hwnote:   { uz: "Yechimlar berilmaydi — javoblaringizni kanal izohlarida yozing.",
-                ru: "Решения не приводятся — пишите ответы в комментариях канала.",
+    hwnote:   { uz: "Yechimlar berilmaydi — javoblaringizni kanal izohlarida yozing.", ru: "Решения не приводятся — пишите ответы в комментариях канала.",
                 en: "Solutions are not provided — post your answers in the channel comments." },
     counts:   { solved: { uz: "masala", ru: "задач", en: "problems" }, quiz: { uz: "test", ru: "тестов", en: "quiz items" },
                 homework: { uz: "mustaqil", ru: "сам. задач", en: "homework" }, glossary: { uz: "atama", ru: "терминов", en: "terms" } },
-    loadErr:  { uz: "Ma'lumotni yuklab bo'lmadi. Internetni tekshirib, qayta oching.",
-                ru: "Не удалось загрузить данные. Проверьте интернет и откройте снова.",
+    loadErr:  { uz: "Ma'lumotni yuklab bo'lmadi. Internetni tekshirib, qayta oching.", ru: "Не удалось загрузить данные. Проверьте интернет и откройте снова.",
                 en: "Could not load data. Check your connection and reopen." },
   };
   // javob va variantlardagi o'zbekcha so'zlar (boshqa tillar uchun)
@@ -55,18 +56,26 @@
   };
   const TAB_ORDER = ["nazariya", "lugat", "masalalar", "test", "mustaqil"];
   const LETTERS = "ABCDE";
+  // Barcha vektorlar uchun bir xil belgi: \vec A, \vec i, \overrightarrow{AB} — hammasi \overrightarrow
+  const KATEX_MACROS = { "\\vec": "\\overrightarrow{#1}" };
 
   // ------------------------------------------------------------------ holat
   const store = {
     get(k, d) { try { const v = localStorage.getItem("gre:" + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
-    set(k, v) { try { localStorage.setItem("gre:" + k, JSON.stringify(v)); } catch { /* xotira yo'q — e'tiborsiz */ } },
+    set(k, v) { try { localStorage.setItem("gre:" + k, JSON.stringify(v)); } catch { /* xotira yo'q */ } },
   };
   let lang = store.get("lang", "uz");
   const cache = {};
   const $ = (s, el = document) => el.querySelector(s);
   const view = $("#view");
   const t = (o) => (o && (o[lang] ?? o.uz)) || "";
-  const loc = (s) => LOCAL[lang].reduce((a, [x, y]) => a.split(x).join(y), s);
+  const locIn = (s, L) => LOCAL[L].reduce((a, [x, y]) => a.split(x).join(y), s);
+
+  // ------------------------------------------------------------------ marshrut holati
+  const qs = new URLSearchParams(location.search);
+  const state = qs.get("dars")
+    ? { view: "lesson", id: qs.get("dars").toUpperCase(), tab: qs.get("bolim") || "nazariya" }
+    : { view: "home" };
 
   // ------------------------------------------------------------------ Telegram
   let tg = null;
@@ -77,8 +86,8 @@
     try {
       tg.ready(); tg.expand();
       tg.BackButton.onClick(() => goBack());
-      const sp = tg.initDataUnsafe && tg.initDataUnsafe.start_param;   // t.me/<bot>/<app>?startapp=B0-L01
-      if (sp && !state.id) go(sp.toUpperCase().replace(/_/g, "-"), "nazariya");
+      const sp = tg.initDataUnsafe && tg.initDataUnsafe.start_param;   // ?startapp=B0-L01
+      if (sp && state.view === "home") go({ view: "lesson", id: sp.toUpperCase().replace(/_/g, "-"), tab: "nazariya" });
       else syncBack();
     } catch (e) { /* Telegram'dan tashqarida — oddiy sahifa */ }
   }
@@ -88,34 +97,41 @@
   const haptic = (kind) => { try { tg && tg.HapticFeedback.notificationOccurred(kind); } catch { } };
 
   // ------------------------------------------------------------------ formulalar va matn
-  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const MATH = /\$\$([\s\S]+?)\$\$|\$([^$\n]+?)\$/g;
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const MATH = /\$\$([\s\S]+?)\$\$|\$((?:[^$\\]|\\[\s\S])+?)\$/g;
   function tex(src, display) {
-    try { return katex.renderToString(src, { displayMode: display, throwOnError: false, strict: false }); }
+    try { return katex.renderToString(src, { displayMode: display, throwOnError: false, strict: false, macros: { ...KATEX_MACROS } }); }
     catch { return esc(src); }
   }
-  // matn + $..$ / $$..$$ formulalar -> HTML. md=true bo'lsa, markdown sifatida
-  function rich(text, md = false) {
+  // matn (+ **qalin**) va $..$ / $$..$$ formulalar -> HTML
+  function rich(text) {
+    if (text == null) return "";
     const parts = [];
-    const tokenized = text.replace(MATH, (m, d, i) => { parts.push([d ?? i, d !== undefined]); return `%%M${parts.length - 1}%%`; });
-    let html = md ? marked.parse(tokenized) : esc(tokenized);
-    return html.replace(/%%M(\d+)%%/g, (m, n) => tex(parts[+n][0], parts[+n][1]));
+    let s = String(text).replace(MATH, (m, d, i) => { parts.push([d ?? i, d !== undefined]); return `\u0000${parts.length - 1}\u0000`; });
+    s = esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    return s.replace(/\u0000(\d+)\u0000/g, (m, n) => tex(parts[+n][0], parts[+n][1]));
   }
+  // Ikki tilli blok: asosiy til + (uz/ru rejimida) ko'k rangdagi inglizcha tarjima
+  function bi(obj, tag = "div", cls = "") {
+    if (!obj) return "";
+    const main = obj[lang] ?? obj.uz ?? "";
+    let html = `<${tag} class="${cls}">${rich(main)}</${tag}>`;
+    if (lang !== "en" && obj.en && obj.en.trim() !== String(main).trim()) {
+      html += `<${tag} class="${cls} tr" lang="en">${rich(obj.en)}</${tag}>`;
+    }
+    return `<div class="bi">${html}</div>`;
+  }
+  // o'zbekcha manbali qisqa matnni (variant, javob) har bir tilga moslash
+  const biLoc = (s) => ({ uz: s, ru: locIn(s, "ru"), en: locIn(s, "en") });
 
   async function getJSON(path) {
     if (!cache[path]) cache[path] = fetch(path).then((r) => { if (!r.ok) throw new Error(path); return r.json(); });
     return cache[path];
   }
-  async function getText(path) {
-    if (!cache[path]) cache[path] = fetch(path).then((r) => { if (!r.ok) throw new Error(path); return r.text(); });
-    return cache[path];
-  }
   const base = (id) => `darslar/${id}/`;
 
-  function zoomable(root, prefix) {
+  function zoomable(root) {
     root.querySelectorAll("img").forEach((img) => {
-      const src = img.getAttribute("src") || "";
-      if (prefix && !/^(https?:|data:|darslar\/)/.test(src)) img.setAttribute("src", prefix + src);
       img.loading = "lazy";
       img.addEventListener("click", () => { const z = $("#zoom"); $("img", z).src = img.src; z.hidden = false; });
     });
@@ -123,100 +139,162 @@
   $("#zoom").addEventListener("click", (e) => { e.currentTarget.hidden = true; });
 
   // ------------------------------------------------------------------ marshrut
-  const qs = new URLSearchParams(location.search);
-  const state = { id: (qs.get("dars") || "").toUpperCase(), tab: qs.get("bolim") || "nazariya" };
-  function route() {
-    if (!state.id) return home();
-    lesson(state.id, TAB_ORDER.includes(state.tab) ? state.tab : "nazariya");
+  function go(s) { Object.assign(state, s); render(); syncBack(); window.scrollTo(0, 0); }
+  function goBack() {
+    if (state.view === "lesson") go({ view: "module", mod: state.mod || "M1" });
+    else go({ view: "home" });
   }
-  function go(id, tab) {
-    state.id = id; state.tab = tab || "nazariya";
-    store.set("last", state);
-    route(); syncBack(); window.scrollTo(0, 0);
-  }
-  function goBack() { go("", ""); }
   function syncBack() {
-    const inLesson = !!state.id;
-    $("#back").hidden = !!tg || !inLesson;
-    try { tg && (inLesson ? tg.BackButton.show() : tg.BackButton.hide()); } catch { }
+    const deep = state.view !== "home";
+    $("#back").hidden = !!tg || !deep;
+    try { tg && (deep ? tg.BackButton.show() : tg.BackButton.hide()); } catch { }
   }
   $("#back").addEventListener("click", goBack);
-
   document.querySelectorAll(".langs button").forEach((b) => b.addEventListener("click", () => {
-    lang = b.dataset.lang; store.set("lang", lang); paintLang(); route();
+    lang = b.dataset.lang; store.set("lang", lang); paintLang(); render();
   }));
   function paintLang() {
     document.documentElement.lang = lang;
     document.querySelectorAll(".langs button").forEach((b) => b.classList.toggle("on", b.dataset.lang === lang));
   }
+  function header(kicker, title) { $("#kicker").textContent = kicker; $("#title").textContent = title; }
+  function fail() { view.innerHTML = `<div class="card err">${esc(t(T.loadErr))}</div>`; }
 
-  // ------------------------------------------------------------------ bosh sahifa
+  async function render() {
+    try {
+      if (state.view === "home") return await home();
+      if (state.view === "module") return await moduleView(state.mod);
+      if (state.view === "about") return await about();
+      return await lesson(state.id, TAB_ORDER.includes(state.tab) ? state.tab : "nazariya");
+    } catch (e) { console.error(e); fail(); }
+  }
+
+  // ------------------------------------------------------------------ bosh sahifa: modullar
   async function home() {
     $("#tabs").hidden = true;
-    $("#kicker").textContent = "GRE Physics Uz";
-    $("#title").textContent = t(T.lessons);
-    let idx;
-    try { idx = await getJSON("darslar/index.json"); } catch { return fail(); }
-    view.innerHTML = `<div class="hero"><div class="k">GRE PHYSICS · UZ</div><p>${esc(t(T.hero))}</p></div>` +
-      idx.map((L) => `<button class="card lesson" data-id="${L.id}">
-          <div class="row"><span class="code">${L.id}</span><span class="muted">${esc(L.stage)}</span></div>
-          <div class="big">${esc(t(L.title))}</div>
+    header("GRE PHYSICS · UZ", t(T.modules));
+    const [M, idx] = await Promise.all([getJSON("moduller.json"), getJSON("darslar/index.json")]);
+    view.innerHTML = `<div class="hero">${bi(M.hero.title, "div", "ht")}${bi(M.hero.sub, "div", "hs")}</div>` +
+      M.modules.map((m) => {
+        const ready = idx.filter((L) => L.module === m.id).length;
+        const meta = m.about ? "" : `<div class="mmeta"><span class="chip ${ready ? "ok" : ""}">${ready} ${esc(t(T.ready))}</span>
+            <span class="muted">${m.planned} ${esc(t(T.lessons))} ${esc(t(T.planned))}</span></div>`;
+        return `<button class="card mod" data-id="${m.id}">
+            <div class="mnum">${m.icon}</div>
+            <div class="mbody"><div class="mk">${m.n}-${esc(t(T.module))}</div>${bi(m.title, "div", "mt")}${meta}</div>
+            <div class="chev">›</div></button>`;
+      }).join("");
+    view.querySelectorAll(".mod").forEach((b) => b.addEventListener("click", () => {
+      const m = M.modules.find((x) => x.id === b.dataset.id);
+      go(m.about ? { view: "about" } : { view: "module", mod: m.id });
+    }));
+  }
+
+  // ------------------------------------------------------------------ modul sahifasi
+  async function moduleView(mid) {
+    $("#tabs").hidden = true;
+    const [M, idx] = await Promise.all([getJSON("moduller.json"), getJSON("darslar/index.json")]);
+    const m = M.modules.find((x) => x.id === mid) || M.modules[0];
+    header(`${m.n}-${t(T.module)}`, t(m.title));
+    const lessons = idx.filter((L) => L.module === m.id);
+    view.innerHTML = `<section class="card">${bi(m.title, "h2")}${bi(m.desc, "p")}
+        <div class="mmeta"><span class="chip ${lessons.length ? "ok" : ""}">${lessons.length} ${esc(t(T.ready))}</span>
+        <span class="muted">${m.planned} ${esc(t(T.lessons))} ${esc(t(T.planned))}</span></div></section>` +
+      (lessons.length ? lessons.map((L) => `<button class="card lesson" data-id="${L.id}">
+          <span class="code">${L.id}</span>${bi(L.title, "div", "big")}
           <div class="stats">${Object.entries(L.counts).map(([k, n]) => `<span>${n} ${esc(t(T.counts[k]))}</span>`).join("")}</div>
-        </button>`).join("");
-    view.querySelectorAll(".lesson").forEach((b) => b.addEventListener("click", () => go(b.dataset.id, "nazariya")));
+        </button>`).join("") : `<div class="card muted">${esc(t(T.soon))}</div>`);
+    view.querySelectorAll(".lesson").forEach((b) => b.addEventListener("click", () => go({ view: "lesson", id: b.dataset.id, tab: "nazariya", mod: m.id })));
+  }
+
+  // ------------------------------------------------------------------ GRE haqida
+  async function about() {
+    $("#tabs").hidden = true;
+    const M = await getJSON("moduller.json");
+    const m = M.modules.find((x) => x.about);
+    header(`${m.n}-${t(T.module)}`, t(m.title));
+    view.innerHTML = `<article class="card md">${blocks(M.about, "")}</article>`;
+  }
+
+  // ------------------------------------------------------------------ bloklar (nazariya va "GRE haqida")
+  function blocks(list, figBase) {
+    let html = "", inList = false;
+    const closeList = () => { if (inList) { html += "</ul>"; inList = false; } };
+    for (const b of list) {
+      if (b.t !== "li") closeList();
+      if (b.t === "h1") continue;
+      else if (b.t === "h2") html += bi(b, "h2");
+      else if (b.t === "p") html += bi(b, "p");
+      else if (b.t === "note") html += bi(b, "p", "note");
+      else if (b.t === "li") { if (!inList) { html += `<ul class="blist">`; inList = true; } html += `<li>${bi(b, "div")}</li>`; }
+      else if (b.t === "m") html += `<div class="fm">${tex(b.m, true)}</div>`;
+      else if (b.t === "fig") html += `<figure><img src="${figBase}${b.src[lang] || b.src.uz}" alt="${b.fig}"></figure>`;
+      else if (b.t === "tbl") html += `<div class="tbl">${b.rows.map((r) => `<div class="trow"><div class="tn">${bi(r, "div")}</div>
+          <div class="tv">${r.m ? tex(r.m, false) : esc(r.v)}</div></div>`).join("")}</div>`;
+      else if (b.t === "links") html += `<div class="links">${b.items.map((x) => `<a class="btn ghost wide" href="${x.url}" target="_blank" rel="noopener">${esc(t(x))} ↗</a>`).join("")}</div>`;
+    }
+    closeList();
+    return html;
   }
 
   // ------------------------------------------------------------------ dars
   async function lesson(id, tab) {
-    let idx;
-    try { idx = await getJSON("darslar/index.json"); } catch { return fail(); }
+    const [idx, M] = await Promise.all([getJSON("darslar/index.json"), getJSON("moduller.json")]);
     const L = idx.find((x) => x.id === id);
-    if (!L) { goBack(); return; }
-    $("#kicker").textContent = `${L.id} · ${L.stage}`;
-    $("#title").textContent = t(L.title);
+    if (!L) { go({ view: "home" }); return; }
+    state.mod = L.module;
+    const m = M.modules.find((x) => x.id === L.module);
+    header(`${L.id} · ${m ? t(m.title) : ""}`, t(L.title));
     const nav = $("#tabs");
     nav.hidden = false;
     nav.innerHTML = TAB_ORDER.map((k) => `<button data-t="${k}" class="${k === tab ? "on" : ""}"><span class="i">${T.tabs[k].i}</span>${esc(t(T.tabs[k]))}</button>`).join("");
-    nav.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => go(id, b.dataset.t)));
+    nav.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => go({ tab: b.dataset.t })));
     view.innerHTML = `<div class="card muted">…</div>`;
-    try {
-      await ({ nazariya: theory, lugat: glossary, masalalar: solved, test: quiz, mustaqil: homework })[tab](id);
-    } catch (e) { console.error(e); fail(); }
+    await ({ nazariya: theory, lugat: glossary, masalalar: solved, test: quiz, mustaqil: homework })[tab](id);
   }
-  function fail() { view.innerHTML = `<div class="card err">${esc(t(T.loadErr))}</div>`; }
 
   async function theory(id) {
-    const md = await getText(`${base(id)}theory_${lang}.md`);
-    view.innerHTML = `<article class="card md">${rich(md, true)}</article>`;
-    zoomable(view, base(id));
+    const B = await getJSON(`${base(id)}theory.json`);
+    view.innerHTML = `<article class="card md">${blocks(B, base(id))}</article>`;
+    zoomable(view);
   }
 
   async function glossary(id) {
     const g = await getJSON(`${base(id)}glossary.json`);
     view.innerHTML = `<input class="search" type="search" placeholder="${esc(t(T.search))}"><div class="card" id="gl"></div>`;
     const box = $("#gl");
-    const order = lang === "en" ? ["en", "uz", "ru"] : lang === "ru" ? ["ru", "en", "uz"] : ["uz", "en", "ru"];
     const paint = (q) => {
-      const rows = g.filter((x) => !q || [x.en, x.uz, x.ru].join(" ").toLowerCase().includes(q));
-      box.innerHTML = rows.map((x) => `<div class="term"><div class="en">${esc(x[order[0]])}</div>
-          <div class="tr muted">${esc(x[order[1]])} · ${esc(x[order[2]])}</div>
+      const rows = g.filter((x) => !q || [x.en, x[lang]].join(" ").toLowerCase().includes(q));
+      box.innerHTML = rows.map((x) => `<div class="term">
+          <div class="tm">${esc(x[lang] || x.en)}</div>
+          ${lang !== "en" ? `<div class="tr" lang="en">${esc(x.en)}</div>` : ""}
           ${x.formula ? `<div class="f">${tex(x.formula, false)}</div>` : ""}</div>`).join("") || `<div class="muted">—</div>`;
     };
     paint("");
     $(".search").addEventListener("input", (e) => paint(e.target.value.trim().toLowerCase()));
   }
 
+  // yechim qadamlari: {uz:[...], ru:[...], en:[...]} parallel; har qadam: matn (+ $$formula$$)
+  function steps(sol, tag = "ol") {
+    const split = (x) => { const k = x.indexOf("$$"); return k < 0 ? [x, ""] : [x.slice(0, k).trim(), x.slice(k)]; };
+    const main = sol[lang] || sol.uz, en = sol.en || [];
+    return `<${tag} class="steps">${main.map((s, i) => {
+      const [txt, math] = split(s), [txtEn] = split(en[i] || "");
+      return `<li>${txt ? bi({ [lang]: txt, en: txtEn }, "div") : ""}${math ? `<div class="fm">${rich(math)}</div>` : ""}</li>`;
+    }).join("")}</${tag}>`;
+  }
+
   async function solved(id) {
     const S = await getJSON(`${base(id)}solved.json`);
     view.innerHTML = S.map((s, i) => `<section class="card">
         <div class="row"><span class="code">${s.id.split("-").pop()}</span><span class="chip ${s.difficulty}">${esc(t(T.diff[s.difficulty]))}</span></div>
-        <p>${rich(s.statement[lang] || s.statement.uz)}</p>
+        ${bi(s.statement, "p")}
         ${s.figure ? `<img class="fig" src="${base(id)}${s.figure}" alt="${s.id}">` : ""}
         <button class="btn ghost wide" data-i="${i}">${esc(t(T.show))}</button>
         <div class="sol" id="sol${i}" hidden>
-          <ol class="steps">${(s.solution[lang] || s.solution.uz).map((st) => `<li>${rich(st)}</li>`).join("")}</ol>
-          <div class="answer"><b>${esc(t(T.answer))}:</b> ${tex(loc(s.answer), false)}
-            <div class="basis"><b>${esc(t(T.basis))}:</b> ${rich(s.basis[lang] || s.basis.uz)}</div></div>
+          ${steps(s.solution)}
+          <div class="answer"><b>${esc(t(T.answer))}:</b> ${tex(locIn(s.answer, lang), false)}
+            <div class="basis"><b>${esc(t(T.basis))}:</b> ${bi(s.basis, "span")}</div></div>
         </div></section>`).join("");
     zoomable(view);
     view.querySelectorAll("button[data-i]").forEach((b) => b.addEventListener("click", () => {
@@ -231,7 +309,7 @@
     const Q = await getJSON(`${base(id)}quiz.json`);
     const key = `${id}:quiz`;
     const st = store.get(key, { i: 0, a: {} });
-    const qkey = { uz: "question_uz", ru: "question_ru", en: "question_en" }[lang];
+    const qObj = (q) => ({ uz: q.question_uz, ru: q.question_ru, en: q.question_en });
 
     const paint = () => {
       if (st.i >= Q.length) return results();
@@ -239,17 +317,18 @@
       const chosen = st.a[q.id];
       const done = chosen !== undefined;
       const pct = Math.round(100 * st.i / Q.length);
+      const dist = q.distractors ? Object.keys(q.distractors).map((k) => `<li><b>(${k})</b> ${bi({ uz: q.distractors[k], ru: (q.distractors_ru || {})[k], en: (q.distractors_en || {})[k] }, "span")}</li>`).join("") : "";
       view.innerHTML = `<div class="muted">${esc(t(T.question))} ${st.i + 1} / ${Q.length}</div>
         <div class="progress"><i style="width:${pct}%"></i></div>
-        <section class="card"><p>${rich(q[qkey] || q.question_uz)}</p>
+        <section class="card">${bi(qObj(q), "p")}
           <div class="opts">${q.options.map((o, k) => {
             const cls = done ? (k === q.correct ? "ok" : (k === chosen ? "bad" : "")) : "";
-            return `<button class="opt ${cls}" data-k="${k}" ${done ? "disabled" : ""}><span class="l">${LETTERS[k]}</span><span>${rich(loc(o.replace(/^\([A-E]\)\s*/, "")))}</span></button>`;
+            return `<button class="opt ${cls}" data-k="${k}" ${done ? "disabled" : ""}><span class="l">${LETTERS[k]}</span><span class="ot">${bi(biLoc(o.replace(/^\([A-E]\)\s*/, "")), "span")}</span></button>`;
           }).join("")}</div>
           ${done ? `<div class="sol">
             <div class="verdict ${chosen === q.correct ? "ok" : "bad"}">${chosen === q.correct ? esc(t(T.correct)) : `${esc(t(T.wrong))} ${LETTERS[q.correct]}`}</div>
-            <ul class="steps">${(q.full_solution[lang] || q.full_solution.uz).map((s) => `<li>${rich(s)}</li>`).join("")}</ul>
-            ${lang === "uz" && q.distractors ? `<div class="distr"><b>${esc(t(T.distr))}:</b> ${Object.entries(q.distractors).map(([k, v]) => `(${k}) ${rich(v)}`).join("; ")}</div>` : ""}
+            ${steps(q.full_solution, "ul")}
+            ${dist ? `<div class="distr"><b>${esc(t(T.distr))}:</b><ul>${dist}</ul></div>` : ""}
             <p><button class="btn wide" id="nx">${esc(t(st.i === Q.length - 1 ? T.results : T.next))}</button></p></div>` : ""}
         </section>`;
       view.querySelectorAll(".opt:not([disabled])").forEach((b) => b.addEventListener("click", () => {
@@ -277,11 +356,11 @@
   async function homework(id) {
     const H = await getJSON(`${base(id)}homework.json`);
     view.innerHTML = `<section class="card"><div class="muted" style="margin-bottom:6px">${esc(t(T.hwnote))}</div>
-      <ol class="hw">${H.map((h) => `<li>${rich(h.statement[lang] || h.statement.uz)} <span class="chip ${h.difficulty}">${esc(t(T.diff[h.difficulty]))}</span></li>`).join("")}</ol></section>`;
+      <ol class="hw">${H.map((h) => `<li>${bi(h.statement, "div")} <span class="chip ${h.difficulty}">${esc(t(T.diff[h.difficulty]))}</span></li>`).join("")}</ol></section>`;
   }
 
   // ------------------------------------------------------------------ start
   paintLang();
-  route();
+  render();
   syncBack();
 })();

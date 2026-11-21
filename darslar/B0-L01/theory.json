@@ -1,0 +1,545 @@
+[
+ {
+  "t": "h1",
+  "uz": "Vektorlar (Vectors)",
+  "ru": "Векторы",
+  "en": "Vectors"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz vektorni koordinatalarga ajratasiz, vektorlarni qo'shasiz va ayirasiz, skalyar (dot) va vektor (cross) ko'paytmani hisoblaysiz hamda ularni ish, kuch momenti va Lorens kuchi kabi fizik kattaliklarga qo'llaysiz.",
+  "ru": "**Цель.** После урока вы сможете раскладывать вектор по координатам, складывать и вычитать векторы, вычислять скалярное и векторное произведения и применять их к таким физическим величинам, как работа, момент силы и сила Лоренца.",
+  "en": "**Goal.** By the end of the lesson you will be able to resolve a vector into components, add and subtract vectors, compute the dot and cross products, and apply them to physical quantities such as work, torque and the Lorentz force."
+ },
+ {
+  "t": "p",
+  "uz": "**GRE'da o'rni.** Vektorlar alohida bo'lim emas, lekin klassik mexanika (20%) va elektromagnetizm (18%) savollarining deyarli hammasida ishlatiladi. Hisobni qo'lda tez va xatosiz bajarish hamda javobni tekshirish usullarini bilish muhim.",
+  "ru": "**Роль в GRE.** Векторы не выделены в отдельный раздел, но используются почти во всех вопросах по классической механике (20%) и электромагнетизму (18%). Важно быстро и без ошибок считать вручную и уметь проверять ответ.",
+  "en": "**Role on the GRE.** Vectors are not a separate content area, but they are used in almost every classical mechanics (20%) and electromagnetism (18%) question. It is important to calculate quickly and accurately by hand and to know how to check an answer."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Skalyar va vektor kattaliklar (Scalar and vector quantities)",
+  "ru": "1. Скалярные и векторные величины",
+  "en": "1. Scalar and vector quantities"
+ },
+ {
+  "t": "li",
+  "uz": "**Skalyar kattalik (scalar)** faqat son qiymati (va o'lchov birligi) bilan to'liq aniqlanadi: massa, vaqt, temperatura, energiya, ish.",
+  "ru": "**Скалярная величина** полностью определяется числовым значением (и единицей измерения): масса, время, температура, энергия, работа.",
+  "en": "A **scalar quantity** is fully specified by a number (and a unit): mass, time, temperature, energy, work."
+ },
+ {
+  "t": "li",
+  "uz": "**Vektor kattalik (vector)** son qiymati (**modul, magnitude**) va **yo'nalishi (direction)** bilan aniqlanadi: ko'chish, tezlik, tezlanish, kuch, impuls, maydon kuchlanganligi.",
+  "ru": "**Векторная величина** определяется числовым значением (**модулем**) и **направлением**: перемещение, скорость, ускорение, сила, импульс, напряжённость поля.",
+  "en": "A **vector quantity** is specified by a numerical value (**magnitude**) and a **direction**: displacement, velocity, acceleration, force, momentum, field strength."
+ },
+ {
+  "t": "p",
+  "uz": "**Belgilash.** Bitta harf bilan belgilangan vektor ustiga strelka qo'yiladi: $\\vec A$ (kitoblarda qalin harf ham ishlatiladi: **A**). Vektorning moduli: $|\\vec A|=A\\ge 0$.",
+  "ru": "**Обозначение.** Над вектором, обозначенным одной буквой, ставится стрелка: $\\vec A$ (в книгах также используют жирную букву: **A**). Модуль вектора: $|\\vec A|=A\\ge 0$.",
+  "en": "**Notation.** A vector denoted by a single letter carries an arrow: $\\vec A$ (books also use a bold letter: **A**). The magnitude of the vector is $|\\vec A|=A\\ge 0$."
+ },
+ {
+  "t": "p",
+  "uz": "Boshi $A$ nuqtada, oxiri $B$ nuqtada bo'lgan vektor ikki katta harf ustiga strelka qo'yib belgilanadi: $\\overrightarrow{AB}$. Chizmada vektor yo'naltirilgan kesma bilan tasvirlanadi: **boshi (tail)** nuqta bilan, **uchi (head)** strelka bilan belgilanadi, uzunligi esa modulga proporsional (F01).",
+  "ru": "Вектор с началом в точке $A$ и концом в точке $B$ обозначается двумя заглавными буквами со стрелкой: $\\overrightarrow{AB}$. На рисунке вектор изображается направленным отрезком: **начало** отмечается точкой, **конец** — стрелкой, а длина пропорциональна модулю (F01).",
+  "en": "A vector with its tail at point $A$ and its head at point $B$ is written with two capital letters under an arrow: $\\overrightarrow{AB}$. In a figure a vector is drawn as a directed segment: the **tail** is marked with a dot, the **head** with an arrowhead, and the length is proportional to the magnitude (F01)."
+ },
+ {
+  "t": "li",
+  "uz": "**Nol vektor (zero vector)** $\\vec 0$: moduli 0 ga teng, yo'nalishi aniqlanmagan.",
+  "ru": "**Нулевой вектор** $\\vec 0$: модуль равен 0, направление не определено.",
+  "en": "**Zero vector** $\\vec 0$: its magnitude is 0 and its direction is undefined."
+ },
+ {
+  "t": "li",
+  "uz": "**Teng vektorlar (equal vectors):** moduli va yo'nalishi bir xil; vektorni o'ziga parallel ko'chirish mumkin.",
+  "ru": "**Равные векторы:** одинаковые модуль и направление; вектор можно переносить параллельно самому себе.",
+  "en": "**Equal vectors:** the same magnitude and direction; a vector may be moved parallel to itself."
+ },
+ {
+  "t": "li",
+  "uz": "**Qarama-qarshi vektor (opposite vector)** $-\\vec A$: moduli bir xil, yo'nalishi teskari.",
+  "ru": "**Противоположный вектор** $-\\vec A$: тот же модуль, обратное направление.",
+  "en": "**Opposite vector** $-\\vec A$: the same magnitude, the opposite direction."
+ },
+ {
+  "t": "li",
+  "uz": "**Birlik vektor (unit vector)** $\\vec e_A=\\vec A/A$: moduli 1 ga teng, faqat yo'nalishni bildiradi.",
+  "ru": "**Единичный вектор (орт)** $\\vec e_A=\\vec A/A$: модуль равен 1, задаёт только направление.",
+  "en": "**Unit vector** $\\vec e_A=\\vec A/A$: its magnitude is 1; it specifies only a direction."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B0-L01-F01.png",
+   "ru": "figures/B0-L01-F01-ru.png",
+   "en": "figures/B0-L01-F01-en.png"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Vektorlarni qo'shish va ayirish (Vector addition and subtraction)",
+  "ru": "2. Сложение и вычитание векторов",
+  "en": "2. Vector addition and subtraction"
+ },
+ {
+  "t": "p",
+  "uz": "**Uchburchak qoidasi (triangle rule):** $\\vec B$ ning boshini $\\vec A$ ning uchiga qo'yamiz; $\\vec A+\\vec B$ — $\\vec A$ ning boshidan $\\vec B$ ning uchiga yo'nalgan vektor.",
+  "ru": "**Правило треугольника:** начало $\\vec B$ совмещаем с концом $\\vec A$; $\\vec A+\\vec B$ — вектор, направленный из начала $\\vec A$ в конец $\\vec B$.",
+  "en": "**Triangle (head-to-tail) rule:** place the tail of $\\vec B$ at the head of $\\vec A$; $\\vec A+\\vec B$ points from the tail of $\\vec A$ to the head of $\\vec B$."
+ },
+ {
+  "t": "p",
+  "uz": "**Parallelogramm qoidasi (parallelogram rule):** ikkala vektor bir nuqtadan qo'yiladi; yig'indi — shu nuqtadan chiqqan parallelogramm diagonali.",
+  "ru": "**Правило параллелограмма:** оба вектора откладываются от одной точки; сумма — диагональ параллелограмма, выходящая из этой точки.",
+  "en": "**Parallelogram rule:** both vectors are drawn from one point; the sum is the diagonal of the parallelogram that starts at that point."
+ },
+ {
+  "t": "p",
+  "uz": "**Ayirish (subtraction):** $\\vec A-\\vec B=\\vec A+(-\\vec B)$. Bir nuqtadan qo'yilgan vektorlar uchun $\\vec A-\\vec B$ — $\\vec B$ ning uchidan $\\vec A$ ning uchiga yo'nalgan vektor (F02).",
+  "ru": "**Вычитание:** $\\vec A-\\vec B=\\vec A+(-\\vec B)$. Для векторов, отложенных от одной точки, $\\vec A-\\vec B$ — вектор, направленный из конца $\\vec B$ в конец $\\vec A$ (F02).",
+  "en": "**Subtraction:** $\\vec A-\\vec B=\\vec A+(-\\vec B)$. For vectors drawn from one point, $\\vec A-\\vec B$ points from the head of $\\vec B$ to the head of $\\vec A$ (F02)."
+ },
+ {
+  "t": "p",
+  "uz": "**Songa ko'paytirish (scalar multiplication):** $k\\vec A$ ning moduli $|k|A$ ga teng; $k>0$ bo'lsa yo'nalish saqlanadi, $k<0$ bo'lsa teskarisiga o'zgaradi.",
+  "ru": "**Умножение на число:** модуль $k\\vec A$ равен $|k|A$; при $k>0$ направление сохраняется, при $k<0$ меняется на противоположное.",
+  "en": "**Scalar multiplication:** the magnitude of $k\\vec A$ is $|k|A$; for $k>0$ the direction is kept, for $k<0$ it is reversed."
+ },
+ {
+  "t": "p",
+  "uz": "**Xossalar (properties):** $\\vec A+\\vec B=\\vec B+\\vec A$ (kommutativlik); $(\\vec A+\\vec B)+\\vec C=\\vec A+(\\vec B+\\vec C)$ (assotsiativlik); $k(\\vec A+\\vec B)=k\\vec A+k\\vec B$ (distributivlik).",
+  "ru": "**Свойства:** $\\vec A+\\vec B=\\vec B+\\vec A$ (коммутативность); $(\\vec A+\\vec B)+\\vec C=\\vec A+(\\vec B+\\vec C)$ (ассоциативность); $k(\\vec A+\\vec B)=k\\vec A+k\\vec B$ (дистрибутивность).",
+  "en": "**Properties:** $\\vec A+\\vec B=\\vec B+\\vec A$ (commutative); $(\\vec A+\\vec B)+\\vec C=\\vec A+(\\vec B+\\vec C)$ (associative); $k(\\vec A+\\vec B)=k\\vec A+k\\vec B$ (distributive)."
+ },
+ {
+  "t": "p",
+  "uz": "**Kosinuslar teoremasi (law of cosines).** $\\vec A$ va $\\vec B$ orasidagi burchak $\\theta$ bo'lsa:",
+  "ru": "**Теорема косинусов.** Если угол между $\\vec A$ и $\\vec B$ равен $\\theta$, то",
+  "en": "**Law of cosines.** If the angle between $\\vec A$ and $\\vec B$ is $\\theta$, then"
+ },
+ {
+  "t": "m",
+  "m": "|\\vec A+\\vec B|^2=A^2+B^2+2AB\\cos\\theta,\\qquad |\\vec A-\\vec B|^2=A^2+B^2-2AB\\cos\\theta"
+ },
+ {
+  "t": "p",
+  "uz": "**Uchburchak tengsizligi (triangle inequality):** $|A-B|\\le|\\vec A+\\vec B|\\le A+B$. GRE'dagi \"qaysi qiymat bo'lishi mumkin emas?\" turidagi savollar shunga asoslanadi.",
+  "ru": "**Неравенство треугольника:** $|A-B|\\le|\\vec A+\\vec B|\\le A+B$. На нём основаны вопросы GRE вида «какое значение невозможно?».",
+  "en": "**Triangle inequality:** $|A-B|\\le|\\vec A+\\vec B|\\le A+B$. GRE questions of the type \"which value is impossible?\" are based on it."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B0-L01-F02.png",
+   "ru": "figures/B0-L01-F02-ru.png",
+   "en": "figures/B0-L01-F02-en.png"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Vektorning koordinatalari (Components of a vector)",
+  "ru": "3. Координаты (компоненты) вектора",
+  "en": "3. Components of a vector"
+ },
+ {
+  "t": "p",
+  "uz": "Dekart koordinatalar sistemasida (Cartesian coordinates) $x,\\ y,\\ z$ o'qlari bo'ylab yo'nalgan birlik vektorlar **bazis vektorlar (basis vectors)** deyiladi: $\\vec i,\\ \\vec j,\\ \\vec k$. Har qanday vektor ular orqali yoziladi:",
+  "ru": "В декартовой системе координат единичные векторы, направленные вдоль осей $x,\\ y,\\ z$, называются **базисными векторами (ортами)**: $\\vec i,\\ \\vec j,\\ \\vec k$. Любой вектор записывается через них:",
+  "en": "In Cartesian coordinates the unit vectors along the $x,\\ y,\\ z$ axes are called the **basis vectors**: $\\vec i,\\ \\vec j,\\ \\vec k$. Any vector can be written in terms of them:"
+ },
+ {
+  "t": "m",
+  "m": "\\vec A=A_x\\vec i+A_y\\vec j+A_z\\vec k=(A_x,\\ A_y,\\ A_z)"
+ },
+ {
+  "t": "p",
+  "uz": "$A_x,\\ A_y,\\ A_z$ — vektorning **koordinatalari (components)**; ular skalyar sonlar va manfiy bo'lishi mumkin.",
+  "ru": "$A_x,\\ A_y,\\ A_z$ — **координаты (компоненты)** вектора; это скалярные числа, и они могут быть отрицательными.",
+  "en": "$A_x,\\ A_y,\\ A_z$ are the **components** of the vector; they are scalars and may be negative."
+ },
+ {
+  "t": "p",
+  "uz": "**Modul:** $A=\\sqrt{A_x^2+A_y^2+A_z^2}$.",
+  "ru": "**Модуль:** $A=\\sqrt{A_x^2+A_y^2+A_z^2}$.",
+  "en": "**Magnitude:** $A=\\sqrt{A_x^2+A_y^2+A_z^2}$."
+ },
+ {
+  "t": "p",
+  "uz": "**Tekislikda (2D):** vektor $x$ o'qi bilan $\\theta$ burchak hosil qilsa (F03):",
+  "ru": "**На плоскости (2D):** если вектор образует угол $\\theta$ с осью $x$ (F03), то",
+  "en": "**In a plane (2D):** if the vector makes an angle $\\theta$ with the $x$-axis (F03), then"
+ },
+ {
+  "t": "m",
+  "m": "A_x=A\\cos\\theta,\\qquad A_y=A\\sin\\theta,\\qquad \\tan\\theta=\\frac{A_y}{A_x}"
+ },
+ {
+  "t": "p",
+  "uz": "Diqqat: burchakni $\\tan\\theta=A_y/A_x$ dan topganda chorakni (quadrant) $A_x$ va $A_y$ ishoralariga qarab aniqlang.",
+  "ru": "Внимание: находя угол из $\\tan\\theta=A_y/A_x$, определяйте четверть по знакам $A_x$ и $A_y$.",
+  "en": "Caution: when finding the angle from $\\tan\\theta=A_y/A_x$, determine the quadrant from the signs of $A_x$ and $A_y$."
+ },
+ {
+  "t": "p",
+  "uz": "**Yo'naltiruvchi kosinuslar (direction cosines):** $\\cos\\alpha=A_x/A,\\ \\cos\\beta=A_y/A,\\ \\cos\\gamma=A_z/A$, bunda $\\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma=1$. Ular birlik vektorning koordinatalari: $\\vec e_A=(\\cos\\alpha,\\ \\cos\\beta,\\ \\cos\\gamma)$.",
+  "ru": "**Направляющие косинусы:** $\\cos\\alpha=A_x/A,\\ \\cos\\beta=A_y/A,\\ \\cos\\gamma=A_z/A$, причём $\\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma=1$. Они являются координатами единичного вектора: $\\vec e_A=(\\cos\\alpha,\\ \\cos\\beta,\\ \\cos\\gamma)$.",
+  "en": "**Direction cosines:** $\\cos\\alpha=A_x/A,\\ \\cos\\beta=A_y/A,\\ \\cos\\gamma=A_z/A$, with $\\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma=1$. They are the components of the unit vector: $\\vec e_A=(\\cos\\alpha,\\ \\cos\\beta,\\ \\cos\\gamma)$."
+ },
+ {
+  "t": "p",
+  "uz": "**Koordinatalarda amallar** har bir o'q bo'yicha alohida bajariladi: $\\vec A\\pm\\vec B=(A_x\\pm B_x,\\ A_y\\pm B_y,\\ A_z\\pm B_z)$, $\\ k\\vec A=(kA_x,\\ kA_y,\\ kA_z)$.",
+  "ru": "**Действия в координатах** выполняются по каждой оси отдельно: $\\vec A\\pm\\vec B=(A_x\\pm B_x,\\ A_y\\pm B_y,\\ A_z\\pm B_z)$, $\\ k\\vec A=(kA_x,\\ kA_y,\\ kA_z)$.",
+  "en": "**Operations in components** are carried out axis by axis: $\\vec A\\pm\\vec B=(A_x\\pm B_x,\\ A_y\\pm B_y,\\ A_z\\pm B_z)$, $\\ k\\vec A=(kA_x,\\ kA_y,\\ kA_z)$."
+ },
+ {
+  "t": "p",
+  "uz": "**Radius-vektor va ko'chish (position vector, displacement):** $P(x,\\,y,\\,z)$ nuqtaning radius-vektori $\\vec r=(x,\\ y,\\ z)$. $A$ nuqtadan $B$ nuqtaga ko'chish: $\\overrightarrow{AB}=\\vec r_B-\\vec r_A=(x_B-x_A,\\ y_B-y_A,\\ z_B-z_A)$ (F04).",
+  "ru": "**Радиус-вектор и перемещение:** радиус-вектор точки $P(x,\\,y,\\,z)$ равен $\\vec r=(x,\\ y,\\ z)$. Перемещение из точки $A$ в точку $B$: $\\overrightarrow{AB}=\\vec r_B-\\vec r_A=(x_B-x_A,\\ y_B-y_A,\\ z_B-z_A)$ (F04).",
+  "en": "**Position vector and displacement:** the position vector of the point $P(x,\\,y,\\,z)$ is $\\vec r=(x,\\ y,\\ z)$. The displacement from point $A$ to point $B$ is $\\overrightarrow{AB}=\\vec r_B-\\vec r_A=(x_B-x_A,\\ y_B-y_A,\\ z_B-z_A)$ (F04)."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B0-L01-F03.png",
+   "ru": "figures/B0-L01-F03-ru.png",
+   "en": "figures/B0-L01-F03-en.png"
+  }
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B0-L01-F04.png",
+   "ru": "figures/B0-L01-F04-ru.png",
+   "en": "figures/B0-L01-F04-en.png"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Skalyar ko'paytma (Dot product, scalar product)",
+  "ru": "4. Скалярное произведение",
+  "en": "4. Dot (scalar) product"
+ },
+ {
+  "t": "p",
+  "uz": "**Ta'rif:**",
+  "ru": "**Определение:**",
+  "en": "**Definition:**"
+ },
+ {
+  "t": "m",
+  "m": "\\vec A\\cdot\\vec B=AB\\cos\\theta=A_xB_x+A_yB_y+A_zB_z"
+ },
+ {
+  "t": "p",
+  "uz": "Natija — **skalyar** son; $\\theta$ — vektorlar orasidagi burchak ($0\\le\\theta\\le180^\\circ$).",
+  "ru": "Результат — **скаляр**; $\\theta$ — угол между векторами ($0\\le\\theta\\le180^\\circ$).",
+  "en": "The result is a **scalar**; $\\theta$ is the angle between the vectors ($0\\le\\theta\\le180^\\circ$)."
+ },
+ {
+  "t": "p",
+  "uz": "**Xossalar (properties):**",
+  "ru": "**Свойства:**",
+  "en": "**Properties:**"
+ },
+ {
+  "t": "li",
+  "uz": "$\\vec A\\cdot\\vec B=\\vec B\\cdot\\vec A$; $\\ \\vec A\\cdot(\\vec B+\\vec C)=\\vec A\\cdot\\vec B+\\vec A\\cdot\\vec C$.",
+  "ru": "$\\vec A\\cdot\\vec B=\\vec B\\cdot\\vec A$; $\\ \\vec A\\cdot(\\vec B+\\vec C)=\\vec A\\cdot\\vec B+\\vec A\\cdot\\vec C$.",
+  "en": "$\\vec A\\cdot\\vec B=\\vec B\\cdot\\vec A$; $\\ \\vec A\\cdot(\\vec B+\\vec C)=\\vec A\\cdot\\vec B+\\vec A\\cdot\\vec C$."
+ },
+ {
+  "t": "li",
+  "uz": "$\\vec A\\cdot\\vec A=A^2$.",
+  "ru": "$\\vec A\\cdot\\vec A=A^2$.",
+  "en": "$\\vec A\\cdot\\vec A=A^2$."
+ },
+ {
+  "t": "li",
+  "uz": "$\\vec A\\perp\\vec B\\iff\\vec A\\cdot\\vec B=0$ (perpendikulyarlik sharti).",
+  "ru": "$\\vec A\\perp\\vec B\\iff\\vec A\\cdot\\vec B=0$ (условие перпендикулярности).",
+  "en": "$\\vec A\\perp\\vec B\\iff\\vec A\\cdot\\vec B=0$ (orthogonality condition)."
+ },
+ {
+  "t": "li",
+  "uz": "$\\vec i\\cdot\\vec i=\\vec j\\cdot\\vec j=\\vec k\\cdot\\vec k=1$, $\\ \\vec i\\cdot\\vec j=\\vec j\\cdot\\vec k=\\vec k\\cdot\\vec i=0$.",
+  "ru": "$\\vec i\\cdot\\vec i=\\vec j\\cdot\\vec j=\\vec k\\cdot\\vec k=1$, $\\ \\vec i\\cdot\\vec j=\\vec j\\cdot\\vec k=\\vec k\\cdot\\vec i=0$.",
+  "en": "$\\vec i\\cdot\\vec i=\\vec j\\cdot\\vec j=\\vec k\\cdot\\vec k=1$, $\\ \\vec i\\cdot\\vec j=\\vec j\\cdot\\vec k=\\vec k\\cdot\\vec i=0$."
+ },
+ {
+  "t": "li",
+  "uz": "Ishorasi: $\\theta<90^\\circ$ da musbat, $\\theta=90^\\circ$ da nol, $\\theta>90^\\circ$ da manfiy.",
+  "ru": "Знак: положительно при $\\theta<90^\\circ$, равно нулю при $\\theta=90^\\circ$, отрицательно при $\\theta>90^\\circ$.",
+  "en": "Sign: positive for $\\theta<90^\\circ$, zero for $\\theta=90^\\circ$, negative for $\\theta>90^\\circ$."
+ },
+ {
+  "t": "p",
+  "uz": "**Burchakni topish:** $\\cos\\theta=\\dfrac{\\vec A\\cdot\\vec B}{AB}$.",
+  "ru": "**Нахождение угла:** $\\cos\\theta=\\dfrac{\\vec A\\cdot\\vec B}{AB}$.",
+  "en": "**Finding the angle:** $\\cos\\theta=\\dfrac{\\vec A\\cdot\\vec B}{AB}$."
+ },
+ {
+  "t": "p",
+  "uz": "**Proyeksiya (projection, F05):** $\\vec A$ vektorning $\\vec B$ yo'nalishiga skalyar proyeksiyasi $A_B=\\vec A\\cdot\\vec e_B=A\\cos\\theta$, vektor proyeksiyasi esa $\\vec A_\\parallel=(\\vec A\\cdot\\vec e_B)\\,\\vec e_B$. Xususan, $A_x=\\vec A\\cdot\\vec i$.",
+  "ru": "**Проекция (F05):** скалярная проекция вектора $\\vec A$ на направление $\\vec B$ равна $A_B=\\vec A\\cdot\\vec e_B=A\\cos\\theta$, а векторная проекция — $\\vec A_\\parallel=(\\vec A\\cdot\\vec e_B)\\,\\vec e_B$. В частности, $A_x=\\vec A\\cdot\\vec i$.",
+  "en": "**Projection (F05):** the scalar projection of $\\vec A$ onto the direction of $\\vec B$ is $A_B=\\vec A\\cdot\\vec e_B=A\\cos\\theta$, and the vector projection is $\\vec A_\\parallel=(\\vec A\\cdot\\vec e_B)\\,\\vec e_B$. In particular, $A_x=\\vec A\\cdot\\vec i$."
+ },
+ {
+  "t": "p",
+  "uz": "**Fizikada:** o'zgarmas kuch ishi (work) $W=\\vec F\\cdot\\Delta\\vec r$; quvvat (power) $P=\\vec F\\cdot\\vec v$; magnit oqimi (magnetic flux) $\\Phi=\\vec B\\cdot\\vec S$.",
+  "ru": "**В физике:** работа постоянной силы $W=\\vec F\\cdot\\Delta\\vec r$; мощность $P=\\vec F\\cdot\\vec v$; магнитный поток $\\Phi=\\vec B\\cdot\\vec S$.",
+  "en": "**In physics:** the work done by a constant force $W=\\vec F\\cdot\\Delta\\vec r$; power $P=\\vec F\\cdot\\vec v$; magnetic flux $\\Phi=\\vec B\\cdot\\vec S$."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B0-L01-F05.png",
+   "ru": "figures/B0-L01-F05-ru.png",
+   "en": "figures/B0-L01-F05-en.png"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Vektor ko'paytma (Cross product, vector product)",
+  "ru": "5. Векторное произведение",
+  "en": "5. Cross (vector) product"
+ },
+ {
+  "t": "p",
+  "uz": "**Ta'rif:** $\\vec C=\\vec A\\times\\vec B$ — **vektor**, uning:",
+  "ru": "**Определение:** $\\vec C=\\vec A\\times\\vec B$ — **вектор**, у которого:",
+  "en": "**Definition:** $\\vec C=\\vec A\\times\\vec B$ is a **vector** whose"
+ },
+ {
+  "t": "li",
+  "uz": "moduli $|\\vec A\\times\\vec B|=AB\\sin\\theta$ — $\\vec A$ va $\\vec B$ ga qurilgan parallelogramm yuzasiga teng;",
+  "ru": "модуль $|\\vec A\\times\\vec B|=AB\\sin\\theta$ равен площади параллелограмма, построенного на $\\vec A$ и $\\vec B$;",
+  "en": "magnitude $|\\vec A\\times\\vec B|=AB\\sin\\theta$ equals the area of the parallelogram spanned by $\\vec A$ and $\\vec B$;"
+ },
+ {
+  "t": "li",
+  "uz": "yo'nalishi $\\vec A$ ga ham, $\\vec B$ ga ham perpendikulyar va **o'ng qo'l qoidasi (right-hand rule)** bilan aniqlanadi: o'ng qo'l barmoqlari $\\vec A$ dan $\\vec B$ ga (kichik burchak bo'ylab) bukilsa, bosh barmoq $\\vec C$ yo'nalishini ko'rsatadi (F06).",
+  "ru": "направление перпендикулярно и $\\vec A$, и $\\vec B$ и определяется **правилом правой руки**: если пальцы правой руки сгибаются от $\\vec A$ к $\\vec B$ (по меньшему углу), большой палец указывает направление $\\vec C$ (F06).",
+  "en": "direction is perpendicular to both $\\vec A$ and $\\vec B$ and is given by the **right-hand rule**: if the fingers of the right hand curl from $\\vec A$ to $\\vec B$ (through the smaller angle), the thumb points along $\\vec C$ (F06)."
+ },
+ {
+  "t": "p",
+  "uz": "**Koordinatalarda (determinant ko'rinishi):**",
+  "ru": "**В координатах (через определитель):**",
+  "en": "**In components (determinant form):**"
+ },
+ {
+  "t": "m",
+  "m": "\\vec A\\times\\vec B=\\begin{vmatrix}\\vec i&\\vec j&\\vec k\\\\ A_x&A_y&A_z\\\\ B_x&B_y&B_z\\end{vmatrix}=(A_yB_z-A_zB_y)\\,\\vec i+(A_zB_x-A_xB_z)\\,\\vec j+(A_xB_y-A_yB_x)\\,\\vec k"
+ },
+ {
+  "t": "p",
+  "uz": "**Xossalar (properties):**",
+  "ru": "**Свойства:**",
+  "en": "**Properties:**"
+ },
+ {
+  "t": "li",
+  "uz": "$\\vec A\\times\\vec B=-\\vec B\\times\\vec A$ (antikommutativlik) — ko'paytuvchilar tartibi muhim!",
+  "ru": "$\\vec A\\times\\vec B=-\\vec B\\times\\vec A$ (антикоммутативность) — порядок множителей важен!",
+  "en": "$\\vec A\\times\\vec B=-\\vec B\\times\\vec A$ (anticommutative) — the order of the factors matters!"
+ },
+ {
+  "t": "li",
+  "uz": "$\\vec A\\times\\vec A=\\vec 0$; parallel vektorlar uchun $\\vec A\\times\\vec B=\\vec 0$.",
+  "ru": "$\\vec A\\times\\vec A=\\vec 0$; для параллельных векторов $\\vec A\\times\\vec B=\\vec 0$.",
+  "en": "$\\vec A\\times\\vec A=\\vec 0$; for parallel vectors $\\vec A\\times\\vec B=\\vec 0$."
+ },
+ {
+  "t": "li",
+  "uz": "$\\vec A\\times(\\vec B+\\vec C)=\\vec A\\times\\vec B+\\vec A\\times\\vec C$.",
+  "ru": "$\\vec A\\times(\\vec B+\\vec C)=\\vec A\\times\\vec B+\\vec A\\times\\vec C$.",
+  "en": "$\\vec A\\times(\\vec B+\\vec C)=\\vec A\\times\\vec B+\\vec A\\times\\vec C$."
+ },
+ {
+  "t": "li",
+  "uz": "$\\vec i\\times\\vec j=\\vec k,\\quad \\vec j\\times\\vec k=\\vec i,\\quad \\vec k\\times\\vec i=\\vec j$: siklik tartibda ($i\\to j\\to k\\to i$) ishora \"+\", teskari tartibda \"−\", masalan, $\\vec i\\times\\vec k=-\\vec j$.",
+  "ru": "$\\vec i\\times\\vec j=\\vec k,\\quad \\vec j\\times\\vec k=\\vec i,\\quad \\vec k\\times\\vec i=\\vec j$: в циклическом порядке ($i\\to j\\to k\\to i$) знак «+», в обратном — «−», например, $\\vec i\\times\\vec k=-\\vec j$.",
+  "en": "$\\vec i\\times\\vec j=\\vec k,\\quad \\vec j\\times\\vec k=\\vec i,\\quad \\vec k\\times\\vec i=\\vec j$: in cyclic order ($i\\to j\\to k\\to i$) the sign is \"+\", in reverse order \"−\"; for example, $\\vec i\\times\\vec k=-\\vec j$."
+ },
+ {
+  "t": "p",
+  "uz": "**Fizikada:** kuch momenti (torque) $\\vec\\tau=\\vec r\\times\\vec F$; impuls momenti (angular momentum) $\\vec L=\\vec r\\times\\vec p$; Lorens kuchi (Lorentz force) $\\vec F=q\\,\\vec v\\times\\vec B$; aylanma harakatdagi chiziqli tezlik $\\vec v=\\vec\\omega\\times\\vec r$.",
+  "ru": "**В физике:** момент силы $\\vec\\tau=\\vec r\\times\\vec F$; момент импульса $\\vec L=\\vec r\\times\\vec p$; сила Лоренца $\\vec F=q\\,\\vec v\\times\\vec B$; линейная скорость при вращении $\\vec v=\\vec\\omega\\times\\vec r$.",
+  "en": "**In physics:** torque $\\vec\\tau=\\vec r\\times\\vec F$; angular momentum $\\vec L=\\vec r\\times\\vec p$; the Lorentz force $\\vec F=q\\,\\vec v\\times\\vec B$; linear velocity in rotation $\\vec v=\\vec\\omega\\times\\vec r$."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B0-L01-F06.png",
+   "ru": "figures/B0-L01-F06-ru.png",
+   "en": "figures/B0-L01-F06-en.png"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Uchlik ko'paytmalar (Triple products)",
+  "ru": "6. Тройные произведения",
+  "en": "6. Triple products"
+ },
+ {
+  "t": "p",
+  "uz": "**Aralash ko'paytma (scalar triple product):**",
+  "ru": "**Смешанное произведение:**",
+  "en": "**Scalar triple product:**"
+ },
+ {
+  "t": "m",
+  "m": "\\vec A\\cdot(\\vec B\\times\\vec C)=\\begin{vmatrix}A_x&A_y&A_z\\\\ B_x&B_y&B_z\\\\ C_x&C_y&C_z\\end{vmatrix}"
+ },
+ {
+  "t": "p",
+  "uz": "Uning moduli uchta vektorga qurilgan parallelepiped hajmiga teng. U nolga teng bo'lsa, vektorlar bir tekislikda yotadi (komplanar, coplanar). Siklik almashtirishda qiymati o'zgarmaydi: $\\vec A\\cdot(\\vec B\\times\\vec C)=\\vec B\\cdot(\\vec C\\times\\vec A)=\\vec C\\cdot(\\vec A\\times\\vec B)$. Natija: $\\vec A\\cdot(\\vec A\\times\\vec B)=0$.",
+  "ru": "Его модуль равен объёму параллелепипеда, построенного на трёх векторах. Если оно равно нулю, векторы лежат в одной плоскости (компланарны). При циклической перестановке значение не меняется: $\\vec A\\cdot(\\vec B\\times\\vec C)=\\vec B\\cdot(\\vec C\\times\\vec A)=\\vec C\\cdot(\\vec A\\times\\vec B)$. Следствие: $\\vec A\\cdot(\\vec A\\times\\vec B)=0$.",
+  "en": "Its absolute value equals the volume of the parallelepiped spanned by the three vectors. If it is zero, the vectors lie in one plane (they are coplanar). Its value is unchanged by cyclic permutation: $\\vec A\\cdot(\\vec B\\times\\vec C)=\\vec B\\cdot(\\vec C\\times\\vec A)=\\vec C\\cdot(\\vec A\\times\\vec B)$. Consequence: $\\vec A\\cdot(\\vec A\\times\\vec B)=0$."
+ },
+ {
+  "t": "p",
+  "uz": "**Ikki karra vektor ko'paytma (vector triple product), «BAC − CAB» qoidasi:**",
+  "ru": "**Двойное векторное произведение, правило «BAC − CAB»:**",
+  "en": "**Vector triple product, the \"BAC − CAB\" rule:**"
+ },
+ {
+  "t": "m",
+  "m": "\\vec A\\times(\\vec B\\times\\vec C)=\\vec B\\,(\\vec A\\cdot\\vec C)-\\vec C\\,(\\vec A\\cdot\\vec B)"
+ },
+ {
+  "t": "h2",
+  "uz": "7. GRE uchun tez tekshirish usullari",
+  "ru": "7. Быстрые проверки для GRE",
+  "en": "7. Quick checks for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "**Ishorani tekshiring:** ish musbatmi yoki manfiy — burchak $90^\\circ$ dan kichikmi?",
+  "ru": "**Проверьте знак:** работа положительна или отрицательна — угол меньше $90^\\circ$?",
+  "en": "**Check the sign:** is the work positive or negative — is the angle less than $90^\\circ$?"
+ },
+ {
+  "t": "li",
+  "uz": "**Perpendikulyarlik:** vektor ko'paytma natijasini ikkala ko'paytuvchiga skalyar ko'paytiring — 0 chiqishi shart.",
+  "ru": "**Перпендикулярность:** умножьте результат векторного произведения скалярно на каждый множитель — должен получиться 0.",
+  "en": "**Perpendicularity:** take the dot product of the cross product with each factor — the result must be 0."
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaraviy holatlar:** $\\theta=0$ da $|\\vec A\\times\\vec B|=0$, $\\theta=90^\\circ$ da $\\vec A\\cdot\\vec B=0$.",
+  "ru": "**Предельные случаи:** при $\\theta=0$ $|\\vec A\\times\\vec B|=0$, при $\\theta=90^\\circ$ $\\vec A\\cdot\\vec B=0$.",
+  "en": "**Limiting cases:** at $\\theta=0$, $|\\vec A\\times\\vec B|=0$; at $\\theta=90^\\circ$, $\\vec A\\cdot\\vec B=0$."
+ },
+ {
+  "t": "li",
+  "uz": "**Yig'indi moduli** har doim $[\\,|A-B|,\\ A+B\\,]$ oralig'ida bo'ladi.",
+  "ru": "**Модуль суммы** всегда лежит в промежутке $[\\,|A-B|,\\ A+B\\,]$.",
+  "en": "**The magnitude of a sum** always lies in the interval $[\\,|A-B|,\\ A+B\\,]$."
+ },
+ {
+  "t": "li",
+  "uz": "**\"Qulay\" sonlar:** $3$-$4$-$5$, $1$-$2$-$2$ (modul 3), $2$-$3$-$6$ (modul 7), $2$-$6$-$9$ (modul 11) — bunday sonlar hisobni osonlashtiradi va test masalalarida tez-tez uchraydi.",
+  "ru": "**«Удобные» числа:** $3$-$4$-$5$, $1$-$2$-$2$ (модуль 3), $2$-$3$-$6$ (модуль 7), $2$-$6$-$9$ (модуль 11) — такие числа упрощают вычисления и часто встречаются в тестовых задачах.",
+  "en": "**\"Nice\" numbers:** $3$-$4$-$5$, $1$-$2$-$2$ (magnitude 3), $2$-$3$-$6$ (magnitude 7), $2$-$6$-$9$ (magnitude 11) — such numbers simplify the arithmetic and often appear in test problems."
+ },
+ {
+  "t": "li",
+  "uz": "**Tartib:** $\\vec r\\times\\vec F$ va $q\\vec v\\times\\vec B$ da ko'paytuvchilar o'rnini almashtirsangiz, ishora o'zgaradi.",
+  "ru": "**Порядок:** если в $\\vec r\\times\\vec F$ и $q\\vec v\\times\\vec B$ поменять множители местами, знак изменится.",
+  "en": "**Order:** swapping the factors in $\\vec r\\times\\vec F$ and $q\\vec v\\times\\vec B$ changes the sign."
+ },
+ {
+  "t": "h2",
+  "uz": "Formulalar jamlanmasi (Formula sheet)",
+  "ru": "Сводка формул",
+  "en": "Formula sheet"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Modul",
+    "ru": "Модуль",
+    "en": "Magnitude",
+    "m": "A=\\sqrt{A_x^2+A_y^2+A_z^2}"
+   },
+   {
+    "uz": "Birlik vektor",
+    "ru": "Единичный вектор",
+    "en": "Unit vector",
+    "m": "\\vec e_A=\\vec A/A"
+   },
+   {
+    "uz": "Ikki nuqta bilan berilgan vektor",
+    "ru": "Вектор, заданный двумя точками",
+    "en": "Vector given by two points",
+    "m": "\\overrightarrow{AB}=(x_B-x_A,\\ y_B-y_A,\\ z_B-z_A)"
+   },
+   {
+    "uz": "Tekislikdagi koordinatalar",
+    "ru": "Координаты на плоскости",
+    "en": "Components in 2D",
+    "m": "A_x=A\\cos\\theta,\\ A_y=A\\sin\\theta"
+   },
+   {
+    "uz": "Yig'indi moduli",
+    "ru": "Модуль суммы",
+    "en": "Magnitude of a sum",
+    "m": "\\lvert\\vec A+\\vec B\\rvert^2=A^2+B^2+2AB\\cos\\theta"
+   },
+   {
+    "uz": "Skalyar ko'paytma",
+    "ru": "Скалярное произведение",
+    "en": "Dot product",
+    "m": "\\vec A\\cdot\\vec B=AB\\cos\\theta=A_xB_x+A_yB_y+A_zB_z"
+   },
+   {
+    "uz": "Vektorlar orasidagi burchak",
+    "ru": "Угол между векторами",
+    "en": "Angle between vectors",
+    "m": "\\cos\\theta=\\dfrac{\\vec A\\cdot\\vec B}{AB}"
+   },
+   {
+    "uz": "Proyeksiya",
+    "ru": "Проекция",
+    "en": "Projection",
+    "m": "A_B=\\vec A\\cdot\\vec e_B"
+   },
+   {
+    "uz": "Vektor ko'paytma moduli",
+    "ru": "Модуль векторного произведения",
+    "en": "Magnitude of the cross product",
+    "m": "\\lvert\\vec A\\times\\vec B\\rvert=AB\\sin\\theta"
+   },
+   {
+    "uz": "Bazis vektorlarning vektor ko'paytmasi",
+    "ru": "Векторные произведения ортов",
+    "en": "Cross products of basis vectors",
+    "m": "\\vec i\\times\\vec j=\\vec k,\\ \\vec j\\times\\vec k=\\vec i,\\ \\vec k\\times\\vec i=\\vec j"
+   },
+   {
+    "uz": "Aralash ko'paytma (hajm)",
+    "ru": "Смешанное произведение (объём)",
+    "en": "Scalar triple product (volume)",
+    "m": "V=\\lvert\\vec A\\cdot(\\vec B\\times\\vec C)\\rvert"
+   },
+   {
+    "uz": "«BAC − CAB» qoidasi",
+    "ru": "Правило «BAC − CAB»",
+    "en": "The \"BAC − CAB\" rule",
+    "m": "\\vec A\\times(\\vec B\\times\\vec C)=\\vec B(\\vec A\\cdot\\vec C)-\\vec C(\\vec A\\cdot\\vec B)"
+   }
+  ]
+ }
+]
