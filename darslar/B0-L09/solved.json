@@ -1,0 +1,512 @@
+[
+ {
+  "id": "B0-L09-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$A=\\begin{pmatrix}1&2\\\\0&1\\end{pmatrix}$ va $B=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$ matritsalar berilgan. $AB$, $BA$ va kommutator $[A,B]=AB-BA$ ni toping.",
+   "ru": "Даны матрицы $A=\\begin{pmatrix}1&2\\\\0&1\\end{pmatrix}$ и $B=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$. Найдите $AB$, $BA$ и коммутатор $[A,B]=AB-BA$.",
+   "en": "The matrices $A=\\begin{pmatrix}1&2\\\\0&1\\end{pmatrix}$ and $B=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$ are given. Find $AB$, $BA$ and the commutator $[A,B]=AB-BA$."
+  },
+  "figure": "figures/B0-L09-S01.png",
+  "solution": {
+   "uz": [
+    "$AB$ ning har bir elementi — $A$ qatorining $B$ ustuniga skalyar ko'paytmasi: $$AB=\\begin{pmatrix}1\\cdot0+2\\cdot1&1\\cdot1+2\\cdot0\\\\0\\cdot0+1\\cdot1&0\\cdot1+1\\cdot0\\end{pmatrix}=\\begin{pmatrix}2&1\\\\1&0\\end{pmatrix}$$",
+    "Xuddi shunday $BA$ ni hisoblaymiz: $$BA=\\begin{pmatrix}0\\cdot1+1\\cdot0&0\\cdot2+1\\cdot1\\\\1\\cdot1+0\\cdot0&1\\cdot2+0\\cdot1\\end{pmatrix}=\\begin{pmatrix}0&1\\\\1&2\\end{pmatrix}$$",
+    "$AB\\neq BA$, ayirmasi — kommutator: $${[A,B]}=\\begin{pmatrix}2&0\\\\0&-2\\end{pmatrix}$$",
+    "Tekshiruv: kommutatorning izi doim nolga teng, chunki $\\mathrm{tr}(AB)=\\mathrm{tr}(BA)$; bu yerda $2+(-2)=0$."
+   ],
+   "ru": [
+    "Каждый элемент $AB$ — скалярное произведение строки $A$ на столбец $B$: $$AB=\\begin{pmatrix}1\\cdot0+2\\cdot1&1\\cdot1+2\\cdot0\\\\0\\cdot0+1\\cdot1&0\\cdot1+1\\cdot0\\end{pmatrix}=\\begin{pmatrix}2&1\\\\1&0\\end{pmatrix}$$",
+    "Аналогично вычисляем $BA$: $$BA=\\begin{pmatrix}0\\cdot1+1\\cdot0&0\\cdot2+1\\cdot1\\\\1\\cdot1+0\\cdot0&1\\cdot2+0\\cdot1\\end{pmatrix}=\\begin{pmatrix}0&1\\\\1&2\\end{pmatrix}$$",
+    "$AB\\neq BA$, их разность — коммутатор: $${[A,B]}=\\begin{pmatrix}2&0\\\\0&-2\\end{pmatrix}$$",
+    "Проверка: след коммутатора всегда равен нулю, так как $\\mathrm{tr}(AB)=\\mathrm{tr}(BA)$; здесь $2+(-2)=0$."
+   ],
+   "en": [
+    "Each entry of $AB$ is the dot product of a row of $A$ with a column of $B$: $$AB=\\begin{pmatrix}1\\cdot0+2\\cdot1&1\\cdot1+2\\cdot0\\\\0\\cdot0+1\\cdot1&0\\cdot1+1\\cdot0\\end{pmatrix}=\\begin{pmatrix}2&1\\\\1&0\\end{pmatrix}$$",
+    "Similarly we compute $BA$: $$BA=\\begin{pmatrix}0\\cdot1+1\\cdot0&0\\cdot2+1\\cdot1\\\\1\\cdot1+0\\cdot0&1\\cdot2+0\\cdot1\\end{pmatrix}=\\begin{pmatrix}0&1\\\\1&2\\end{pmatrix}$$",
+    "$AB\\neq BA$; their difference is the commutator: $${[A,B]}=\\begin{pmatrix}2&0\\\\0&-2\\end{pmatrix}$$",
+    "Check: the trace of a commutator is always zero, because $\\mathrm{tr}(AB)=\\mathrm{tr}(BA)$; here $2+(-2)=0$."
+   ]
+  },
+  "basis": {
+   "uz": "Matritsalarni ko'paytirish qoidasi (qator × ustun), kommutator ta'rifi",
+   "ru": "Правило умножения матриц (строка × столбец), определение коммутатора",
+   "en": "Matrix multiplication rule (row × column), definition of the commutator"
+  },
+  "answer": "AB=\\begin{pmatrix}2&1\\\\1&0\\end{pmatrix},\\quad BA=\\begin{pmatrix}0&1\\\\1&2\\end{pmatrix},\\quad [A,B]=\\begin{pmatrix}2&0\\\\0&-2\\end{pmatrix}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$A=\\begin{pmatrix}2&1&3\\\\0&-1&4\\\\1&2&0\\end{pmatrix}$ matritsaning determinantini birinchi qator bo'yicha yoyib hisoblang. Teskari matritsa mavjudmi?",
+   "ru": "Вычислите определитель матрицы $A=\\begin{pmatrix}2&1&3\\\\0&-1&4\\\\1&2&0\\end{pmatrix}$ разложением по первой строке. Существует ли обратная матрица?",
+   "en": "Compute the determinant of $A=\\begin{pmatrix}2&1&3\\\\0&-1&4\\\\1&2&0\\end{pmatrix}$ by expanding along the first row. Does the inverse matrix exist?"
+  },
+  "figure": "figures/B0-L09-S02.png",
+  "solution": {
+   "uz": [
+    "Birinchi qator elementlarini ishoralari almashinib keluvchi $2\\times2$ minorlarga ko'paytiramiz: $$\\det A=2\\begin{vmatrix}-1&4\\\\2&0\\end{vmatrix}-1\\begin{vmatrix}0&4\\\\1&0\\end{vmatrix}+3\\begin{vmatrix}0&-1\\\\1&2\\end{vmatrix}$$",
+    "Minorlarni hisoblaymiz: $$\\det A=2(0-8)-1(0-4)+3(0+1)=-16+4+3=-9$$",
+    "$\\det A=-9\\neq0$, demak $A$ xos emas va $A^{-1}$ mavjud; $\\ \\det A^{-1}=-\\dfrac{1}{9}$."
+   ],
+   "ru": [
+    "Умножаем элементы первой строки на миноры $2\\times2$ с чередующимися знаками: $$\\det A=2\\begin{vmatrix}-1&4\\\\2&0\\end{vmatrix}-1\\begin{vmatrix}0&4\\\\1&0\\end{vmatrix}+3\\begin{vmatrix}0&-1\\\\1&2\\end{vmatrix}$$",
+    "Вычисляем миноры: $$\\det A=2(0-8)-1(0-4)+3(0+1)=-16+4+3=-9$$",
+    "$\\det A=-9\\neq0$, значит, $A$ невырожденная и $A^{-1}$ существует; $\\ \\det A^{-1}=-\\dfrac{1}{9}$."
+   ],
+   "en": [
+    "Multiply the entries of the first row by the $2\\times2$ minors with alternating signs: $$\\det A=2\\begin{vmatrix}-1&4\\\\2&0\\end{vmatrix}-1\\begin{vmatrix}0&4\\\\1&0\\end{vmatrix}+3\\begin{vmatrix}0&-1\\\\1&2\\end{vmatrix}$$",
+    "Compute the minors: $$\\det A=2(0-8)-1(0-4)+3(0+1)=-16+4+3=-9$$",
+    "$\\det A=-9\\neq0$, so $A$ is not singular and $A^{-1}$ exists; $\\ \\det A^{-1}=-\\dfrac{1}{9}$."
+   ]
+  },
+  "basis": {
+   "uz": "Determinantni qator bo'yicha yoyish; $\\det A\\neq0$ — teskari matritsa mavjudligi sharti",
+   "ru": "Разложение определителя по строке; $\\det A\\neq0$ — условие существования обратной матрицы",
+   "en": "Expansion of the determinant along a row; $\\det A\\neq0$ is the condition for the inverse to exist"
+  },
+  "answer": "\\det A=-9",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$A=\\begin{pmatrix}3&1\\\\5&2\\end{pmatrix}$ uchun $A^{-1}$ ni toping va uning yordamida $3x+y=4,\\ 5x+2y=7$ sistemani yeching.",
+   "ru": "Найдите $A^{-1}$ для $A=\\begin{pmatrix}3&1\\\\5&2\\end{pmatrix}$ и с её помощью решите систему $3x+y=4,\\ 5x+2y=7$.",
+   "en": "Find $A^{-1}$ for $A=\\begin{pmatrix}3&1\\\\5&2\\end{pmatrix}$ and use it to solve the system $3x+y=4,\\ 5x+2y=7$."
+  },
+  "figure": "figures/B0-L09-S03.png",
+  "solution": {
+   "uz": [
+    "Determinant: $$\\det A=3\\cdot2-1\\cdot5=1$$",
+    "Diagonal elementlar o'rnini almashtiramiz, qolganlarining ishorasini o'zgartiramiz va $\\det A$ ga bo'lamiz: $$A^{-1}=\\begin{pmatrix}2&-1\\\\-5&3\\end{pmatrix}$$",
+    "Tekshiruv: $$AA^{-1}=\\begin{pmatrix}6-5&-3+3\\\\10-10&-5+6\\end{pmatrix}=I$$",
+    "Sistema $A\\vec x=\\vec b$ ko'rinishida, $\\vec b=(4,\\ 7)$. Yechim — ikki to'g'ri chiziqning kesishish nuqtasi: $$\\vec x=A^{-1}\\vec b=\\begin{pmatrix}2\\cdot4-1\\cdot7\\\\-5\\cdot4+3\\cdot7\\end{pmatrix}=\\begin{pmatrix}1\\\\1\\end{pmatrix}$$"
+   ],
+   "ru": [
+    "Определитель: $$\\det A=3\\cdot2-1\\cdot5=1$$",
+    "Меняем местами диагональные элементы, меняем знак остальных и делим на $\\det A$: $$A^{-1}=\\begin{pmatrix}2&-1\\\\-5&3\\end{pmatrix}$$",
+    "Проверка: $$AA^{-1}=\\begin{pmatrix}6-5&-3+3\\\\10-10&-5+6\\end{pmatrix}=I$$",
+    "Система имеет вид $A\\vec x=\\vec b$, $\\vec b=(4,\\ 7)$. Решение — точка пересечения двух прямых: $$\\vec x=A^{-1}\\vec b=\\begin{pmatrix}2\\cdot4-1\\cdot7\\\\-5\\cdot4+3\\cdot7\\end{pmatrix}=\\begin{pmatrix}1\\\\1\\end{pmatrix}$$"
+   ],
+   "en": [
+    "The determinant: $$\\det A=3\\cdot2-1\\cdot5=1$$",
+    "Swap the diagonal entries, change the sign of the others and divide by $\\det A$: $$A^{-1}=\\begin{pmatrix}2&-1\\\\-5&3\\end{pmatrix}$$",
+    "Check: $$AA^{-1}=\\begin{pmatrix}6-5&-3+3\\\\10-10&-5+6\\end{pmatrix}=I$$",
+    "The system has the form $A\\vec x=\\vec b$ with $\\vec b=(4,\\ 7)$. The solution is the intersection point of two lines: $$\\vec x=A^{-1}\\vec b=\\begin{pmatrix}2\\cdot4-1\\cdot7\\\\-5\\cdot4+3\\cdot7\\end{pmatrix}=\\begin{pmatrix}1\\\\1\\end{pmatrix}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$2\\times2$ teskari matritsa formulasi, $\\vec x=A^{-1}\\vec b$",
+   "ru": "Формула обратной матрицы $2\\times2$, $\\vec x=A^{-1}\\vec b$",
+   "en": "The $2\\times2$ inverse formula, $\\vec x=A^{-1}\\vec b$"
+  },
+  "answer": "A^{-1}=\\begin{pmatrix}2&-1\\\\-5&3\\end{pmatrix},\\quad x=1,\\ y=1",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$W=100\\ \\mathrm{N}$ og'irlikdagi yuk ikki ip bilan osilgan: chap ip gorizontga $\\alpha=30^\\circ$, o'ng ip $\\beta=60^\\circ$ burchak ostida. Muvozanat tenglamalarini matritsa ko'rinishida yozing va iplarning taranglik kuchlarini Kramer qoidasi bilan toping.",
+   "ru": "Груз весом $W=100\\ \\mathrm{N}$ подвешен на двух нитях: левая нить составляет с горизонтом угол $\\alpha=30^\\circ$, правая — $\\beta=60^\\circ$. Запишите уравнения равновесия в матричном виде и найдите силы натяжения нитей по правилу Крамера.",
+   "en": "A load of weight $W=100\\ \\mathrm{N}$ hangs on two strings: the left string makes an angle $\\alpha=30^\\circ$ with the horizontal, the right one $\\beta=60^\\circ$. Write the equilibrium equations in matrix form and find the string tensions using Cramer's rule."
+  },
+  "figure": "figures/B0-L09-S04.png",
+  "solution": {
+   "uz": [
+    "Gorizontal va vertikal yo'nalishlarda kuchlar yig'indisi nolga teng: $$\\begin{pmatrix}\\cos\\alpha&-\\cos\\beta\\\\\\sin\\alpha&\\sin\\beta\\end{pmatrix}\\begin{pmatrix}T_1\\\\T_2\\end{pmatrix}=\\begin{pmatrix}0\\\\W\\end{pmatrix}$$",
+    "Sistema determinanti: $$\\Delta=\\cos\\alpha\\sin\\beta+\\sin\\alpha\\cos\\beta=\\sin(\\alpha+\\beta)=\\sin90^\\circ=1$$",
+    "Kramer qoidasi: ustunni o'ng tomon bilan almashtiramiz: $$T_1=\\frac{W\\cos\\beta}{\\sin(\\alpha+\\beta)}=100\\cdot\\frac{1}{2}=50\\ \\mathrm{N},\\qquad T_2=\\frac{W\\cos\\alpha}{\\sin(\\alpha+\\beta)}=50\\sqrt{3}\\approx86.6\\ \\mathrm{N}$$",
+    "Tekshiruv: tikroq ip ($\\beta=60^\\circ$) yukning ko'proq qismini ko'taradi; $\\ \\beta\\to90^\\circ$ da $T_2\\to W$, $\\ T_1\\to0$ — to'g'ri."
+   ],
+   "ru": [
+    "Сумма сил по горизонтали и по вертикали равна нулю: $$\\begin{pmatrix}\\cos\\alpha&-\\cos\\beta\\\\\\sin\\alpha&\\sin\\beta\\end{pmatrix}\\begin{pmatrix}T_1\\\\T_2\\end{pmatrix}=\\begin{pmatrix}0\\\\W\\end{pmatrix}$$",
+    "Определитель системы: $$\\Delta=\\cos\\alpha\\sin\\beta+\\sin\\alpha\\cos\\beta=\\sin(\\alpha+\\beta)=\\sin90^\\circ=1$$",
+    "Правило Крамера: заменяем столбец правой частью: $$T_1=\\frac{W\\cos\\beta}{\\sin(\\alpha+\\beta)}=100\\cdot\\frac{1}{2}=50\\ \\mathrm{N},\\qquad T_2=\\frac{W\\cos\\alpha}{\\sin(\\alpha+\\beta)}=50\\sqrt{3}\\approx86.6\\ \\mathrm{N}$$",
+    "Проверка: более крутая нить ($\\beta=60^\\circ$) держит большую часть груза; $\\ $при $\\beta\\to90^\\circ$: $T_2\\to W$, $\\ T_1\\to0$ — верно."
+   ],
+   "en": [
+    "The sum of forces in the horizontal and vertical directions is zero: $$\\begin{pmatrix}\\cos\\alpha&-\\cos\\beta\\\\\\sin\\alpha&\\sin\\beta\\end{pmatrix}\\begin{pmatrix}T_1\\\\T_2\\end{pmatrix}=\\begin{pmatrix}0\\\\W\\end{pmatrix}$$",
+    "The determinant of the system: $$\\Delta=\\cos\\alpha\\sin\\beta+\\sin\\alpha\\cos\\beta=\\sin(\\alpha+\\beta)=\\sin90^\\circ=1$$",
+    "Cramer's rule: replace a column by the right-hand side: $$T_1=\\frac{W\\cos\\beta}{\\sin(\\alpha+\\beta)}=100\\cdot\\frac{1}{2}=50\\ \\mathrm{N},\\qquad T_2=\\frac{W\\cos\\alpha}{\\sin(\\alpha+\\beta)}=50\\sqrt{3}\\approx86.6\\ \\mathrm{N}$$",
+    "Check: the steeper string ($\\beta=60^\\circ$) carries more of the load; $\\ $for $\\beta\\to90^\\circ$, $T_2\\to W$ and $T_1\\to0$ — correct."
+   ]
+  },
+  "basis": {
+   "uz": "Nyutonning birinchi qonuni (muvozanat), Kramer qoidasi",
+   "ru": "Первый закон Ньютона (равновесие), правило Крамера",
+   "en": "Newton's first law (equilibrium), Cramer's rule"
+  },
+  "answer": "T_1=50\\ \\mathrm{N},\\quad T_2=50\\sqrt{3}\\approx86.6\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$\\vec v=(\\sqrt{3},\\ 1)$ vektor soat strelkasiga qarshi $30^\\circ$ ga burildi. Yangi vektorni toping, uzunlik saqlanishini tekshiring va $R(30^\\circ)^3=R(90^\\circ)$ ekanini ko'rsating.",
+   "ru": "Вектор $\\vec v=(\\sqrt{3},\\ 1)$ повернули против часовой стрелки на $30^\\circ$. Найдите новый вектор, проверьте сохранение длины и покажите, что $R(30^\\circ)^3=R(90^\\circ)$.",
+   "en": "The vector $\\vec v=(\\sqrt{3},\\ 1)$ is rotated counterclockwise by $30^\\circ$. Find the new vector, check that its length is preserved, and show that $R(30^\\circ)^3=R(90^\\circ)$."
+  },
+  "figure": "figures/B0-L09-S05.png",
+  "solution": {
+   "uz": [
+    "Burish matritsasi: $$R(30^\\circ)=\\begin{pmatrix}\\frac{\\sqrt{3}}{2}&-\\frac{1}{2}\\\\\\frac{1}{2}&\\frac{\\sqrt{3}}{2}\\end{pmatrix}$$",
+    "Vektorga ta'sir ettiramiz: $$\\vec v\\,'=\\begin{pmatrix}\\frac{3}{2}-\\frac{1}{2}\\\\\\frac{\\sqrt{3}}{2}+\\frac{\\sqrt{3}}{2}\\end{pmatrix}=\\begin{pmatrix}1\\\\\\sqrt{3}\\end{pmatrix}$$",
+    "Uzunliklar: $|\\vec v|=\\sqrt{3+1}=2$, $\\ |\\vec v\\,'|=\\sqrt{1+3}=2$ — saqlanadi. Vektor $x$ o'qi bilan $30^\\circ$ o'rniga endi $60^\\circ$ hosil qiladi.",
+    "$R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$ bo'lgani uchun: $$R(30^\\circ)^3=R(90^\\circ)=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix},\\qquad \\det R=\\cos^2\\theta+\\sin^2\\theta=1$$"
+   ],
+   "ru": [
+    "Матрица поворота: $$R(30^\\circ)=\\begin{pmatrix}\\frac{\\sqrt{3}}{2}&-\\frac{1}{2}\\\\\\frac{1}{2}&\\frac{\\sqrt{3}}{2}\\end{pmatrix}$$",
+    "Действуем на вектор: $$\\vec v\\,'=\\begin{pmatrix}\\frac{3}{2}-\\frac{1}{2}\\\\\\frac{\\sqrt{3}}{2}+\\frac{\\sqrt{3}}{2}\\end{pmatrix}=\\begin{pmatrix}1\\\\\\sqrt{3}\\end{pmatrix}$$",
+    "Длины: $|\\vec v|=\\sqrt{3+1}=2$, $\\ |\\vec v\\,'|=\\sqrt{1+3}=2$ — сохраняется. Вектор теперь составляет с осью $x$ угол $60^\\circ$ вместо $30^\\circ$.",
+    "Так как $R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$: $$R(30^\\circ)^3=R(90^\\circ)=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix},\\qquad \\det R=\\cos^2\\theta+\\sin^2\\theta=1$$"
+   ],
+   "en": [
+    "The rotation matrix: $$R(30^\\circ)=\\begin{pmatrix}\\frac{\\sqrt{3}}{2}&-\\frac{1}{2}\\\\\\frac{1}{2}&\\frac{\\sqrt{3}}{2}\\end{pmatrix}$$",
+    "Apply it to the vector: $$\\vec v\\,'=\\begin{pmatrix}\\frac{3}{2}-\\frac{1}{2}\\\\\\frac{\\sqrt{3}}{2}+\\frac{\\sqrt{3}}{2}\\end{pmatrix}=\\begin{pmatrix}1\\\\\\sqrt{3}\\end{pmatrix}$$",
+    "Lengths: $|\\vec v|=\\sqrt{3+1}=2$, $\\ |\\vec v\\,'|=\\sqrt{1+3}=2$ — preserved. The vector now makes $60^\\circ$ with the $x$ axis instead of $30^\\circ$.",
+    "Since $R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$: $$R(30^\\circ)^3=R(90^\\circ)=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix},\\qquad \\det R=\\cos^2\\theta+\\sin^2\\theta=1$$"
+   ]
+  },
+  "basis": {
+   "uz": "Burish matritsasi, $R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$, ortogonal matritsa uzunlikni saqlaydi",
+   "ru": "Матрица поворота, $R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$, ортогональная матрица сохраняет длину",
+   "en": "Rotation matrix, $R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$, an orthogonal matrix preserves length"
+  },
+  "answer": "\\vec v\\,'=(1,\\ \\sqrt{3}),\\quad |\\vec v\\,'|=2",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-S06",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$A=\\begin{pmatrix}2&1\\\\1&2\\end{pmatrix}$ matritsaning xos qiymatlari va xos vektorlarini toping.",
+   "ru": "Найдите собственные значения и собственные векторы матрицы $A=\\begin{pmatrix}2&1\\\\1&2\\end{pmatrix}$.",
+   "en": "Find the eigenvalues and eigenvectors of $A=\\begin{pmatrix}2&1\\\\1&2\\end{pmatrix}$."
+  },
+  "figure": "figures/B0-L09-S06.png",
+  "solution": {
+   "uz": [
+    "Xarakteristik tenglama ($\\mathrm{tr}\\,A=4$, $\\ \\det A=3$): $$\\lambda^2-4\\lambda+3=0\\quad\\Rightarrow\\quad \\lambda_1=3,\\quad \\lambda_2=1$$",
+    "$\\lambda_1=3$ uchun $(A-3I)\\vec v=0$: $$\\begin{pmatrix}-1&1\\\\1&-1\\end{pmatrix}\\begin{pmatrix}v_1\\\\v_2\\end{pmatrix}=0\\ \\Rightarrow\\ v_1=v_2,\\quad \\vec v_1=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\1\\end{pmatrix}$$",
+    "$\\lambda_2=1$ uchun $(A-I)\\vec v=0$: $$\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}\\begin{pmatrix}v_1\\\\v_2\\end{pmatrix}=0\\ \\Rightarrow\\ v_2=-v_1,\\quad \\vec v_2=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\-1\\end{pmatrix}$$",
+    "Tekshiruv: $3+1=4=\\mathrm{tr}\\,A$, $\\ 3\\cdot1=3=\\det A$. Matritsa simmetrik, xos vektorlar ortogonal: $\\vec v_1\\cdot\\vec v_2=0$."
+   ],
+   "ru": [
+    "Характеристическое уравнение ($\\mathrm{tr}\\,A=4$, $\\ \\det A=3$): $$\\lambda^2-4\\lambda+3=0\\quad\\Rightarrow\\quad \\lambda_1=3,\\quad \\lambda_2=1$$",
+    "Для $\\lambda_1=3$: $(A-3I)\\vec v=0$: $$\\begin{pmatrix}-1&1\\\\1&-1\\end{pmatrix}\\begin{pmatrix}v_1\\\\v_2\\end{pmatrix}=0\\ \\Rightarrow\\ v_1=v_2,\\quad \\vec v_1=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\1\\end{pmatrix}$$",
+    "Для $\\lambda_2=1$: $(A-I)\\vec v=0$: $$\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}\\begin{pmatrix}v_1\\\\v_2\\end{pmatrix}=0\\ \\Rightarrow\\ v_2=-v_1,\\quad \\vec v_2=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\-1\\end{pmatrix}$$",
+    "Проверка: $3+1=4=\\mathrm{tr}\\,A$, $\\ 3\\cdot1=3=\\det A$. Матрица симметрична, собственные векторы ортогональны: $\\vec v_1\\cdot\\vec v_2=0$."
+   ],
+   "en": [
+    "Characteristic equation ($\\mathrm{tr}\\,A=4$, $\\ \\det A=3$): $$\\lambda^2-4\\lambda+3=0\\quad\\Rightarrow\\quad \\lambda_1=3,\\quad \\lambda_2=1$$",
+    "For $\\lambda_1=3$: $(A-3I)\\vec v=0$: $$\\begin{pmatrix}-1&1\\\\1&-1\\end{pmatrix}\\begin{pmatrix}v_1\\\\v_2\\end{pmatrix}=0\\ \\Rightarrow\\ v_1=v_2,\\quad \\vec v_1=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\1\\end{pmatrix}$$",
+    "For $\\lambda_2=1$: $(A-I)\\vec v=0$: $$\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}\\begin{pmatrix}v_1\\\\v_2\\end{pmatrix}=0\\ \\Rightarrow\\ v_2=-v_1,\\quad \\vec v_2=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\-1\\end{pmatrix}$$",
+    "Check: $3+1=4=\\mathrm{tr}\\,A$, $\\ 3\\cdot1=3=\\det A$. The matrix is symmetric, so the eigenvectors are orthogonal: $\\vec v_1\\cdot\\vec v_2=0$."
+   ]
+  },
+  "basis": {
+   "uz": "Xarakteristik tenglama $\\det(A-\\lambda I)=0$, $(A-\\lambda I)\\vec v=0$",
+   "ru": "Характеристическое уравнение $\\det(A-\\lambda I)=0$, $(A-\\lambda I)\\vec v=0$",
+   "en": "Characteristic equation $\\det(A-\\lambda I)=0$, $(A-\\lambda I)\\vec v=0$"
+  },
+  "answer": "\\lambda_1=3,\\ \\vec v_1\\propto(1,\\ 1);\\quad \\lambda_2=1,\\ \\vec v_2\\propto(1,\\ -1)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$A=\\begin{pmatrix}4&1\\\\2&3\\end{pmatrix}$ matritsaning xos qiymatlari va xos vektorlarini toping. Xos vektorlar ortogonalmi?",
+   "ru": "Найдите собственные значения и собственные векторы матрицы $A=\\begin{pmatrix}4&1\\\\2&3\\end{pmatrix}$. Ортогональны ли собственные векторы?",
+   "en": "Find the eigenvalues and eigenvectors of $A=\\begin{pmatrix}4&1\\\\2&3\\end{pmatrix}$. Are the eigenvectors orthogonal?"
+  },
+  "figure": "figures/B0-L09-S07.png",
+  "solution": {
+   "uz": [
+    "$\\mathrm{tr}\\,A=7$, $\\ \\det A=12-2=10$: $$\\lambda^2-7\\lambda+10=0\\quad\\Rightarrow\\quad \\lambda_1=5,\\quad \\lambda_2=2$$",
+    "$\\lambda_1=5$: birinchi tenglama $-v_1+v_2=0$: $$\\vec v_1=\\begin{pmatrix}1\\\\1\\end{pmatrix}$$",
+    "$\\lambda_2=2$: birinchi tenglama $2v_1+v_2=0$: $$\\vec v_2=\\begin{pmatrix}1\\\\-2\\end{pmatrix}$$",
+    "Tekshiruv: $A\\vec v_2=(4-2,\\ 2-6)=(2,\\ -4)=2\\vec v_2$. Skalyar ko'paytma noldan farqli — matritsa simmetrik emas, xos vektorlar ortogonal emas: $$\\vec v_1\\cdot\\vec v_2=1-2=-1\\neq0$$"
+   ],
+   "ru": [
+    "$\\mathrm{tr}\\,A=7$, $\\ \\det A=12-2=10$: $$\\lambda^2-7\\lambda+10=0\\quad\\Rightarrow\\quad \\lambda_1=5,\\quad \\lambda_2=2$$",
+    "$\\lambda_1=5$: первое уравнение $-v_1+v_2=0$: $$\\vec v_1=\\begin{pmatrix}1\\\\1\\end{pmatrix}$$",
+    "$\\lambda_2=2$: первое уравнение $2v_1+v_2=0$: $$\\vec v_2=\\begin{pmatrix}1\\\\-2\\end{pmatrix}$$",
+    "Проверка: $A\\vec v_2=(4-2,\\ 2-6)=(2,\\ -4)=2\\vec v_2$. Скалярное произведение отлично от нуля — матрица несимметрична, собственные векторы не ортогональны: $$\\vec v_1\\cdot\\vec v_2=1-2=-1\\neq0$$"
+   ],
+   "en": [
+    "$\\mathrm{tr}\\,A=7$, $\\ \\det A=12-2=10$: $$\\lambda^2-7\\lambda+10=0\\quad\\Rightarrow\\quad \\lambda_1=5,\\quad \\lambda_2=2$$",
+    "$\\lambda_1=5$: the first equation is $-v_1+v_2=0$: $$\\vec v_1=\\begin{pmatrix}1\\\\1\\end{pmatrix}$$",
+    "$\\lambda_2=2$: the first equation is $2v_1+v_2=0$: $$\\vec v_2=\\begin{pmatrix}1\\\\-2\\end{pmatrix}$$",
+    "Check: $A\\vec v_2=(4-2,\\ 2-6)=(2,\\ -4)=2\\vec v_2$. The dot product is nonzero — the matrix is not symmetric, so the eigenvectors are not orthogonal: $$\\vec v_1\\cdot\\vec v_2=1-2=-1\\neq0$$"
+   ]
+  },
+  "basis": {
+   "uz": "Xarakteristik tenglama, iz va determinant, simmetrik bo'lmagan matritsa",
+   "ru": "Характеристическое уравнение, след и определитель, несимметричная матрица",
+   "en": "Characteristic equation, trace and determinant, non-symmetric matrix"
+  },
+  "answer": "\\lambda_1=5,\\ \\vec v_1\\propto(1,\\ 1);\\quad \\lambda_2=2,\\ \\vec v_2\\propto(1,\\ -2)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$\\sigma_y=\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}$ Pauli matritsasining xos qiymatlari va normallashgan xos vektorlarini toping. $\\sigma_x\\sigma_y=i\\sigma_z$ ekanini tekshiring.",
+   "ru": "Найдите собственные значения и нормированные собственные векторы матрицы Паули $\\sigma_y=\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}$. Проверьте, что $\\sigma_x\\sigma_y=i\\sigma_z$.",
+   "en": "Find the eigenvalues and normalized eigenvectors of the Pauli matrix $\\sigma_y=\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}$. Check that $\\sigma_x\\sigma_y=i\\sigma_z$."
+  },
+  "figure": "figures/B0-L09-S08.png",
+  "solution": {
+   "uz": [
+    "$\\mathrm{tr}\\,\\sigma_y=0$, $\\ \\det\\sigma_y=0-(-i)(i)=-1$: $$\\lambda^2-1=0\\quad\\Rightarrow\\quad \\lambda=\\pm1$$",
+    "$\\lambda=+1$: $-v_1-iv_2=0$, ya'ni $v_2=iv_1$. $\\ \\lambda=-1$: $v_2=-iv_1$. Normallashtirish $|v_1|^2+|v_2|^2=1$: $$\\vec v_+=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\i\\end{pmatrix},\\qquad \\vec v_-=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\-i\\end{pmatrix}$$",
+    "Kompleks vektorlar uchun skalyar ko'paytma $\\vec v_+^{\\,\\dagger}\\vec v_-$ — ular ortogonal, chunki $\\sigma_y$ ermit: $$\\vec v_+^{\\,\\dagger}\\vec v_-=\\frac{1}{2}\\left(1\\cdot1+(-i)(-i)\\right)=\\frac{1}{2}(1-1)=0$$",
+    "Ko'paytma: $$\\sigma_x\\sigma_y=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}=\\begin{pmatrix}i&0\\\\0&-i\\end{pmatrix}=i\\sigma_z$$"
+   ],
+   "ru": [
+    "$\\mathrm{tr}\\,\\sigma_y=0$, $\\ \\det\\sigma_y=0-(-i)(i)=-1$: $$\\lambda^2-1=0\\quad\\Rightarrow\\quad \\lambda=\\pm1$$",
+    "$\\lambda=+1$: $-v_1-iv_2=0$, т. е. $v_2=iv_1$. $\\ \\lambda=-1$: $v_2=-iv_1$. Нормировка $|v_1|^2+|v_2|^2=1$: $$\\vec v_+=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\i\\end{pmatrix},\\qquad \\vec v_-=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\-i\\end{pmatrix}$$",
+    "Для комплексных векторов скалярное произведение $\\vec v_+^{\\,\\dagger}\\vec v_-$ — они ортогональны, так как $\\sigma_y$ эрмитова: $$\\vec v_+^{\\,\\dagger}\\vec v_-=\\frac{1}{2}\\left(1\\cdot1+(-i)(-i)\\right)=\\frac{1}{2}(1-1)=0$$",
+    "Произведение: $$\\sigma_x\\sigma_y=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}=\\begin{pmatrix}i&0\\\\0&-i\\end{pmatrix}=i\\sigma_z$$"
+   ],
+   "en": [
+    "$\\mathrm{tr}\\,\\sigma_y=0$, $\\ \\det\\sigma_y=0-(-i)(i)=-1$: $$\\lambda^2-1=0\\quad\\Rightarrow\\quad \\lambda=\\pm1$$",
+    "$\\lambda=+1$: $-v_1-iv_2=0$, i.e. $v_2=iv_1$. $\\ \\lambda=-1$: $v_2=-iv_1$. Normalization $|v_1|^2+|v_2|^2=1$: $$\\vec v_+=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\i\\end{pmatrix},\\qquad \\vec v_-=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\-i\\end{pmatrix}$$",
+    "For complex vectors the inner product is $\\vec v_+^{\\,\\dagger}\\vec v_-$; they are orthogonal because $\\sigma_y$ is Hermitian: $$\\vec v_+^{\\,\\dagger}\\vec v_-=\\frac{1}{2}\\left(1\\cdot1+(-i)(-i)\\right)=\\frac{1}{2}(1-1)=0$$",
+    "The product: $$\\sigma_x\\sigma_y=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}=\\begin{pmatrix}i&0\\\\0&-i\\end{pmatrix}=i\\sigma_z$$"
+   ]
+  },
+  "basis": {
+   "uz": "Ermit matritsaning xos qiymatlari haqiqiy, kompleks vektorlar skalyar ko'paytmasi, Pauli matritsalari",
+   "ru": "Собственные значения эрмитовой матрицы вещественны, скалярное произведение комплексных векторов, матрицы Паули",
+   "en": "Eigenvalues of a Hermitian matrix are real, inner product of complex vectors, Pauli matrices"
+  },
+  "answer": "\\lambda=\\pm1,\\quad \\vec v_\\pm=\\frac{1}{\\sqrt{2}}(1,\\ \\pm i)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$A=\\begin{pmatrix}2&0&0\\\\0&3&4\\\\0&4&-3\\end{pmatrix}$ matritsaning xos qiymatlari va xos vektorlarini toping.",
+   "ru": "Найдите собственные значения и собственные векторы матрицы $A=\\begin{pmatrix}2&0&0\\\\0&3&4\\\\0&4&-3\\end{pmatrix}$.",
+   "en": "Find the eigenvalues and eigenvectors of $A=\\begin{pmatrix}2&0&0\\\\0&3&4\\\\0&4&-3\\end{pmatrix}$."
+  },
+  "figure": "figures/B0-L09-S09.png",
+  "solution": {
+   "uz": [
+    "Matritsa blok-diagonal: $1\\times1$ blok $(2)$ va $2\\times2$ blok $B$. Birinchi xos qiymat darhol: $$\\lambda_1=2,\\qquad \\vec v_1=(1,\\ 0,\\ 0)$$",
+    "$B=\\begin{pmatrix}3&4\\\\4&-3\\end{pmatrix}$ uchun $\\mathrm{tr}\\,B=0$, $\\ \\det B=-9-16=-25$: $$\\lambda^2-25=0\\quad\\Rightarrow\\quad \\lambda_2=5,\\quad \\lambda_3=-5$$",
+    "$\\lambda_2=5$: $-2v_2+4v_3=0$; $\\ \\lambda_3=-5$: $8v_2+4v_3=0$: $$\\vec v_2=(0,\\ 2,\\ 1),\\qquad \\vec v_3=(0,\\ 1,\\ -2)$$",
+    "Tekshiruv: $2+5-5=2=\\mathrm{tr}\\,A$; $\\ 2\\cdot5\\cdot(-5)=-50=\\det A$. Uchala vektor o'zaro ortogonal ($A$ simmetrik)."
+   ],
+   "ru": [
+    "Матрица блочно-диагональная: блок $1\\times1$ $(2)$ и блок $2\\times2$ $B$. Первое собственное значение сразу: $$\\lambda_1=2,\\qquad \\vec v_1=(1,\\ 0,\\ 0)$$",
+    "Для $B=\\begin{pmatrix}3&4\\\\4&-3\\end{pmatrix}$: $\\mathrm{tr}\\,B=0$, $\\ \\det B=-9-16=-25$: $$\\lambda^2-25=0\\quad\\Rightarrow\\quad \\lambda_2=5,\\quad \\lambda_3=-5$$",
+    "$\\lambda_2=5$: $-2v_2+4v_3=0$; $\\ \\lambda_3=-5$: $8v_2+4v_3=0$: $$\\vec v_2=(0,\\ 2,\\ 1),\\qquad \\vec v_3=(0,\\ 1,\\ -2)$$",
+    "Проверка: $2+5-5=2=\\mathrm{tr}\\,A$; $\\ 2\\cdot5\\cdot(-5)=-50=\\det A$. Все три вектора взаимно ортогональны ($A$ симметрична)."
+   ],
+   "en": [
+    "The matrix is block-diagonal: a $1\\times1$ block $(2)$ and a $2\\times2$ block $B$. The first eigenvalue is immediate: $$\\lambda_1=2,\\qquad \\vec v_1=(1,\\ 0,\\ 0)$$",
+    "For $B=\\begin{pmatrix}3&4\\\\4&-3\\end{pmatrix}$: $\\mathrm{tr}\\,B=0$, $\\ \\det B=-9-16=-25$: $$\\lambda^2-25=0\\quad\\Rightarrow\\quad \\lambda_2=5,\\quad \\lambda_3=-5$$",
+    "$\\lambda_2=5$: $-2v_2+4v_3=0$; $\\ \\lambda_3=-5$: $8v_2+4v_3=0$: $$\\vec v_2=(0,\\ 2,\\ 1),\\qquad \\vec v_3=(0,\\ 1,\\ -2)$$",
+    "Check: $2+5-5=2=\\mathrm{tr}\\,A$; $\\ 2\\cdot5\\cdot(-5)=-50=\\det A$. All three vectors are mutually orthogonal ($A$ is symmetric)."
+   ]
+  },
+  "basis": {
+   "uz": "Blok-diagonal matritsa xos qiymatlari, iz va determinant orqali tekshirish",
+   "ru": "Собственные значения блочно-диагональной матрицы, проверка через след и определитель",
+   "en": "Eigenvalues of a block-diagonal matrix, check via trace and determinant"
+  },
+  "answer": "\\lambda=2,\\ 5,\\ -5;\\quad \\vec v\\propto(1,0,0),\\ (0,2,1),\\ (0,1,-2)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-S10",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ikki bir xil $m=0.5\\ \\mathrm{kg}$ massali jism devorlarga bikrligi $k=50\\ \\mathrm{N/m}$ bo'lgan prujinalar bilan, o'zaro esa bikrligi $\\kappa=25\\ \\mathrm{N/m}$ bo'lgan prujina bilan bog'langan (gorizontal, ishqalanishsiz). Normal chastotalar va normal modalarni toping.",
+   "ru": "Два одинаковых тела массой $m=0.5\\ \\mathrm{kg}$ соединены со стенками пружинами жёсткости $k=50\\ \\mathrm{N/m}$, а друг с другом — пружиной жёсткости $\\kappa=25\\ \\mathrm{N/m}$ (горизонтально, без трения). Найдите нормальные частоты и нормальные моды.",
+   "en": "Two identical bodies of mass $m=0.5\\ \\mathrm{kg}$ are attached to the walls by springs of stiffness $k=50\\ \\mathrm{N/m}$ and to each other by a spring of stiffness $\\kappa=25\\ \\mathrm{N/m}$ (horizontal, frictionless). Find the normal frequencies and normal modes."
+  },
+  "figure": "figures/B0-L09-S10.png",
+  "solution": {
+   "uz": [
+    "Har bir jismga ta'sir qiluvchi kuch (o'rta prujina cho'zilishi $x_2-x_1$): $$m\\ddot x_1=-kx_1+\\kappa(x_2-x_1),\\qquad m\\ddot x_2=-kx_2-\\kappa(x_2-x_1)$$",
+    "Matritsa ko'rinishida $m\\ddot{\\vec x}=-K\\vec x$; $\\vec x=\\vec a\\cos\\omega t$ qo'yamiz: $$K=\\begin{pmatrix}k+\\kappa&-\\kappa\\\\-\\kappa&k+\\kappa\\end{pmatrix},\\qquad K\\vec a=m\\omega^2\\vec a$$",
+    "$K$ — $\\begin{pmatrix}a&b\\\\b&a\\end{pmatrix}$ ko'rinishida, shuning uchun xos qiymatlari $a\\pm b$: $$m\\omega_1^2=k,\\quad \\vec a_1=(1,\\ 1);\\qquad m\\omega_2^2=k+2\\kappa,\\quad \\vec a_2=(1,\\ -1)$$",
+    "Sonlarni qo'yamiz: $$\\omega_1=\\sqrt{\\frac{50}{0.5}}=10\\ \\mathrm{rad/s},\\qquad \\omega_2=\\sqrt{\\frac{50+2\\cdot25}{0.5}}=\\sqrt{200}\\approx14.1\\ \\mathrm{rad/s}$$",
+    "1-moda: jismlar bir xil fazada, o'rta prujina deformatsiyalanmaydi — chastota $\\kappa$ ga bog'liq emas. 2-moda: qarama-qarshi fazada, o'rta prujina ikki marta kuchliroq cho'ziladi. Tekshiruv: $\\kappa=0$ da ikkala chastota $\\sqrt{k/m}$ ga teng."
+   ],
+   "ru": [
+    "Сила, действующая на каждое тело (растяжение средней пружины $x_2-x_1$): $$m\\ddot x_1=-kx_1+\\kappa(x_2-x_1),\\qquad m\\ddot x_2=-kx_2-\\kappa(x_2-x_1)$$",
+    "В матричном виде $m\\ddot{\\vec x}=-K\\vec x$; подставляем $\\vec x=\\vec a\\cos\\omega t$: $$K=\\begin{pmatrix}k+\\kappa&-\\kappa\\\\-\\kappa&k+\\kappa\\end{pmatrix},\\qquad K\\vec a=m\\omega^2\\vec a$$",
+    "$K$ имеет вид $\\begin{pmatrix}a&b\\\\b&a\\end{pmatrix}$, поэтому её собственные значения $a\\pm b$: $$m\\omega_1^2=k,\\quad \\vec a_1=(1,\\ 1);\\qquad m\\omega_2^2=k+2\\kappa,\\quad \\vec a_2=(1,\\ -1)$$",
+    "Подставляем числа: $$\\omega_1=\\sqrt{\\frac{50}{0.5}}=10\\ \\mathrm{rad/s},\\qquad \\omega_2=\\sqrt{\\frac{50+2\\cdot25}{0.5}}=\\sqrt{200}\\approx14.1\\ \\mathrm{rad/s}$$",
+    "Мода 1: тела движутся в фазе, средняя пружина не деформируется — частота не зависит от $\\kappa$. Мода 2: в противофазе, средняя пружина растягивается вдвое сильнее. Проверка: при $\\kappa=0$ обе частоты равны $\\sqrt{k/m}$."
+   ],
+   "en": [
+    "The force on each body (the middle spring is stretched by $x_2-x_1$): $$m\\ddot x_1=-kx_1+\\kappa(x_2-x_1),\\qquad m\\ddot x_2=-kx_2-\\kappa(x_2-x_1)$$",
+    "In matrix form $m\\ddot{\\vec x}=-K\\vec x$; substitute $\\vec x=\\vec a\\cos\\omega t$: $$K=\\begin{pmatrix}k+\\kappa&-\\kappa\\\\-\\kappa&k+\\kappa\\end{pmatrix},\\qquad K\\vec a=m\\omega^2\\vec a$$",
+    "$K$ has the form $\\begin{pmatrix}a&b\\\\b&a\\end{pmatrix}$, so its eigenvalues are $a\\pm b$: $$m\\omega_1^2=k,\\quad \\vec a_1=(1,\\ 1);\\qquad m\\omega_2^2=k+2\\kappa,\\quad \\vec a_2=(1,\\ -1)$$",
+    "Substitute the numbers: $$\\omega_1=\\sqrt{\\frac{50}{0.5}}=10\\ \\mathrm{rad/s},\\qquad \\omega_2=\\sqrt{\\frac{50+2\\cdot25}{0.5}}=\\sqrt{200}\\approx14.1\\ \\mathrm{rad/s}$$",
+    "Mode 1: the bodies move in phase and the middle spring is not deformed — the frequency does not depend on $\\kappa$. Mode 2: out of phase, the middle spring is stretched twice as much. Check: for $\\kappa=0$ both frequencies equal $\\sqrt{k/m}$."
+   ]
+  },
+  "basis": {
+   "uz": "Nyutonning ikkinchi qonuni, Guk qonuni, xos qiymatlar masalasi $K\\vec a=m\\omega^2\\vec a$",
+   "ru": "Второй закон Ньютона, закон Гука, задача на собственные значения $K\\vec a=m\\omega^2\\vec a$",
+   "en": "Newton's second law, Hooke's law, eigenvalue problem $K\\vec a=m\\omega^2\\vec a$"
+  },
+  "answer": "\\omega_1=10\\ \\mathrm{rad/s}\\ (1,\\ 1);\\quad \\omega_2=10\\sqrt{2}\\approx14.1\\ \\mathrm{rad/s}\\ (1,\\ -1)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$A=\\begin{pmatrix}1&2\\\\2&1\\end{pmatrix}$ matritsani diagonallashtiring va $A^n$ uchun formula toping. $A^4$ ni hisoblang.",
+   "ru": "Диагонализуйте матрицу $A=\\begin{pmatrix}1&2\\\\2&1\\end{pmatrix}$ и найдите формулу для $A^n$. Вычислите $A^4$.",
+   "en": "Diagonalize the matrix $A=\\begin{pmatrix}1&2\\\\2&1\\end{pmatrix}$ and find a formula for $A^n$. Compute $A^4$."
+  },
+  "figure": "figures/B0-L09-S11.png",
+  "solution": {
+   "uz": [
+    "$\\begin{pmatrix}a&b\\\\b&a\\end{pmatrix}$ ko'rinish: $\\lambda=1\\pm2$, xos vektorlar $(1,\\ 1)$ va $(1,\\ -1)$: $$P=\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix},\\qquad D=\\begin{pmatrix}3&0\\\\0&-1\\end{pmatrix},\\qquad P^{-1}=\\frac{1}{2}\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}$$",
+    "$A=PDP^{-1}$, shuning uchun $A^n=PD^nP^{-1}$ — diagonal matritsani darajaga ko'tarish oson: $$A^n=\\frac{1}{2}\\begin{pmatrix}3^n+(-1)^n&3^n-(-1)^n\\\\3^n-(-1)^n&3^n+(-1)^n\\end{pmatrix}$$",
+    "$n=4$: $$A^4=\\frac{1}{2}\\begin{pmatrix}81+1&81-1\\\\81-1&81+1\\end{pmatrix}=\\begin{pmatrix}41&40\\\\40&41\\end{pmatrix}$$",
+    "Tekshiruv: $n=1$ da formula $A$ ni beradi; $\\ \\det A^4=41^2-40^2=81=(\\det A)^4=(-3)^4$."
+   ],
+   "ru": [
+    "Вид $\\begin{pmatrix}a&b\\\\b&a\\end{pmatrix}$: $\\lambda=1\\pm2$, собственные векторы $(1,\\ 1)$ и $(1,\\ -1)$: $$P=\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix},\\qquad D=\\begin{pmatrix}3&0\\\\0&-1\\end{pmatrix},\\qquad P^{-1}=\\frac{1}{2}\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}$$",
+    "$A=PDP^{-1}$, поэтому $A^n=PD^nP^{-1}$ — диагональную матрицу легко возвести в степень: $$A^n=\\frac{1}{2}\\begin{pmatrix}3^n+(-1)^n&3^n-(-1)^n\\\\3^n-(-1)^n&3^n+(-1)^n\\end{pmatrix}$$",
+    "$n=4$: $$A^4=\\frac{1}{2}\\begin{pmatrix}81+1&81-1\\\\81-1&81+1\\end{pmatrix}=\\begin{pmatrix}41&40\\\\40&41\\end{pmatrix}$$",
+    "Проверка: при $n=1$ формула даёт $A$; $\\ \\det A^4=41^2-40^2=81=(\\det A)^4=(-3)^4$."
+   ],
+   "en": [
+    "Form $\\begin{pmatrix}a&b\\\\b&a\\end{pmatrix}$: $\\lambda=1\\pm2$, eigenvectors $(1,\\ 1)$ and $(1,\\ -1)$: $$P=\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix},\\qquad D=\\begin{pmatrix}3&0\\\\0&-1\\end{pmatrix},\\qquad P^{-1}=\\frac{1}{2}\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}$$",
+    "$A=PDP^{-1}$, so $A^n=PD^nP^{-1}$ — a diagonal matrix is easy to raise to a power: $$A^n=\\frac{1}{2}\\begin{pmatrix}3^n+(-1)^n&3^n-(-1)^n\\\\3^n-(-1)^n&3^n+(-1)^n\\end{pmatrix}$$",
+    "$n=4$: $$A^4=\\frac{1}{2}\\begin{pmatrix}81+1&81-1\\\\81-1&81+1\\end{pmatrix}=\\begin{pmatrix}41&40\\\\40&41\\end{pmatrix}$$",
+    "Check: for $n=1$ the formula gives $A$; $\\ \\det A^4=41^2-40^2=81=(\\det A)^4=(-3)^4$."
+   ]
+  },
+  "basis": {
+   "uz": "Diagonallashtirish $A=PDP^{-1}$, $A^n=PD^nP^{-1}$",
+   "ru": "Диагонализация $A=PDP^{-1}$, $A^n=PD^nP^{-1}$",
+   "en": "Diagonalization $A=PDP^{-1}$, $A^n=PD^nP^{-1}$"
+  },
+  "answer": "A^4=\\begin{pmatrix}41&40\\\\40&41\\end{pmatrix}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) $R(\\theta)$ burish matritsasining xos qiymatlarini toping. b) $y=x$ to'g'ri chiziqqa nisbatan akslantirish matritsasini yozing, uning xos qiymat va xos vektorlarini toping hamda geometrik ma'nosini tushuntiring.",
+   "ru": "а) Найдите собственные значения матрицы поворота $R(\\theta)$. б) Запишите матрицу отражения относительно прямой $y=x$, найдите её собственные значения и векторы и объясните их геометрический смысл.",
+   "en": "a) Find the eigenvalues of the rotation matrix $R(\\theta)$. b) Write the matrix of reflection in the line $y=x$, find its eigenvalues and eigenvectors, and explain their geometric meaning."
+  },
+  "figure": "figures/B0-L09-S12.png",
+  "solution": {
+   "uz": [
+    "a) $\\mathrm{tr}\\,R=2\\cos\\theta$, $\\ \\det R=1$: $$\\lambda^2-2\\lambda\\cos\\theta+1=0\\quad\\Rightarrow\\quad \\lambda=\\cos\\theta\\pm i\\sin\\theta=e^{\\pm i\\theta}$$",
+    "$\\theta\\neq0,\\ \\pi$ da xos qiymatlar kompleks — burishda hech bir haqiqiy vektor o'z yo'nalishida qolmaydi. $|\\lambda|=1$, chunki burish uzunlikni saqlaydi.",
+    "b) Akslantirish $x$ va $y$ ni almashtiradi: $\\vec i\\mapsto\\vec j$, $\\ \\vec j\\mapsto\\vec i$: $$M=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix},\\qquad \\lambda^2-1=0,\\quad \\lambda=\\pm1$$",
+    "$\\lambda=1$: $\\vec v=(1,\\ 1)$ — akslantirish chizig'i bo'ylab vektor o'zgarmaydi. $\\ \\lambda=-1$: $\\vec v=(1,\\ -1)$ — chiziqqa perpendikulyar vektor qarama-qarshi yo'nalishga o'tadi. $\\det M=-1$ — orientatsiya o'zgaradi."
+   ],
+   "ru": [
+    "а) $\\mathrm{tr}\\,R=2\\cos\\theta$, $\\ \\det R=1$: $$\\lambda^2-2\\lambda\\cos\\theta+1=0\\quad\\Rightarrow\\quad \\lambda=\\cos\\theta\\pm i\\sin\\theta=e^{\\pm i\\theta}$$",
+    "При $\\theta\\neq0,\\ \\pi$ собственные значения комплексные — при повороте ни один вещественный вектор не сохраняет направление. $|\\lambda|=1$, так как поворот сохраняет длину.",
+    "б) Отражение меняет местами $x$ и $y$: $\\vec i\\mapsto\\vec j$, $\\ \\vec j\\mapsto\\vec i$: $$M=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix},\\qquad \\lambda^2-1=0,\\quad \\lambda=\\pm1$$",
+    "$\\lambda=1$: $\\vec v=(1,\\ 1)$ — вектор вдоль линии отражения не меняется. $\\ \\lambda=-1$: $\\vec v=(1,\\ -1)$ — вектор, перпендикулярный линии, меняет направление на противоположное. $\\det M=-1$ — ориентация меняется."
+   ],
+   "en": [
+    "a) $\\mathrm{tr}\\,R=2\\cos\\theta$, $\\ \\det R=1$: $$\\lambda^2-2\\lambda\\cos\\theta+1=0\\quad\\Rightarrow\\quad \\lambda=\\cos\\theta\\pm i\\sin\\theta=e^{\\pm i\\theta}$$",
+    "For $\\theta\\neq0,\\ \\pi$ the eigenvalues are complex — under a rotation no real vector keeps its direction. $|\\lambda|=1$ because a rotation preserves length.",
+    "b) The reflection swaps $x$ and $y$: $\\vec i\\mapsto\\vec j$, $\\ \\vec j\\mapsto\\vec i$: $$M=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix},\\qquad \\lambda^2-1=0,\\quad \\lambda=\\pm1$$",
+    "$\\lambda=1$: $\\vec v=(1,\\ 1)$ — a vector along the mirror line is unchanged. $\\ \\lambda=-1$: $\\vec v=(1,\\ -1)$ — a vector perpendicular to the line is reversed. $\\det M=-1$ — the orientation is reversed."
+   ]
+  },
+  "basis": {
+   "uz": "Xarakteristik tenglama, Eyler formulasi (B0-L07), chiziqli almashtirishlarning geometrik ma'nosi",
+   "ru": "Характеристическое уравнение, формула Эйлера (B0-L07), геометрический смысл линейных преобразований",
+   "en": "Characteristic equation, Euler's formula (B0-L07), geometric meaning of linear transformations"
+  },
+  "answer": "R:\\ \\lambda=e^{\\pm i\\theta};\\quad M:\\ \\lambda=1\\ (1,\\ 1),\\ \\lambda=-1\\ (1,\\ -1)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ikki sathli kvant sistemaning gamiltoniani bazis holatlarda $H=\\begin{pmatrix}E_1&V\\\\V&E_2\\end{pmatrix}$, bu yerda $E_1=2\\ \\mathrm{eV}$, $E_2=4\\ \\mathrm{eV}$, $V=\\sqrt{3}\\ \\mathrm{eV}$. Energiya sathlarini toping. Asosiy holatda sistema $1$-bazis holatda topilish ehtimoli qancha?",
+   "ru": "Гамильтониан двухуровневой квантовой системы в базисных состояниях $H=\\begin{pmatrix}E_1&V\\\\V&E_2\\end{pmatrix}$, где $E_1=2\\ \\mathrm{eV}$, $E_2=4\\ \\mathrm{eV}$, $V=\\sqrt{3}\\ \\mathrm{eV}$. Найдите уровни энергии. Какова вероятность обнаружить систему в основном состоянии в базисном состоянии $1$?",
+   "en": "The Hamiltonian of a two-level quantum system in the basis states is $H=\\begin{pmatrix}E_1&V\\\\V&E_2\\end{pmatrix}$, where $E_1=2\\ \\mathrm{eV}$, $E_2=4\\ \\mathrm{eV}$, $V=\\sqrt{3}\\ \\mathrm{eV}$. Find the energy levels. In the ground state, what is the probability of finding the system in basis state $1$?"
+  },
+  "figure": "figures/B0-L09-S13.png",
+  "solution": {
+   "uz": [
+    "Energiya sathlari — $H$ ning xos qiymatlari. Umumiy holda: $$E_\\pm=\\frac{E_1+E_2}{2}\\pm\\sqrt{\\left(\\frac{E_1-E_2}{2}\\right)^2+V^2}$$",
+    "Sonlarni qo'yamiz: $$E_\\pm=3\\pm\\sqrt{1+3}=3\\pm2\\quad\\Rightarrow\\quad E_-=1\\ \\mathrm{eV},\\quad E_+=5\\ \\mathrm{eV}$$",
+    "Bog'lanish sathlarni bir-biridan uzoqlashtiradi: $2\\ \\mathrm{eV}$ o'rniga $4\\ \\mathrm{eV}$ farq. Asosiy holat $E_-=1\\ \\mathrm{eV}$ uchun $(H-E_-I)\\vec v=0$: $$\\begin{pmatrix}1&\\sqrt{3}\\\\\\sqrt{3}&3\\end{pmatrix}\\vec v=0\\ \\Rightarrow\\ v_1=-\\sqrt{3}\\,v_2,\\qquad \\vec v=\\frac{1}{2}\\begin{pmatrix}\\sqrt{3}\\\\-1\\end{pmatrix}$$",
+    "Ehtimollik — mos koordinata modulining kvadrati: $$P_1=|v_1|^2=\\frac{3}{4}$$",
+    "Tekshiruv: $1+5=6=\\mathrm{tr}\\,H$, $\\ 1\\cdot5=8-3=\\det H$. Asosiy holatda pastroq sath ($E_1$) ulushi kattaroq — kutilganidek."
+   ],
+   "ru": [
+    "Уровни энергии — собственные значения $H$. В общем виде: $$E_\\pm=\\frac{E_1+E_2}{2}\\pm\\sqrt{\\left(\\frac{E_1-E_2}{2}\\right)^2+V^2}$$",
+    "Подставляем числа: $$E_\\pm=3\\pm\\sqrt{1+3}=3\\pm2\\quad\\Rightarrow\\quad E_-=1\\ \\mathrm{eV},\\quad E_+=5\\ \\mathrm{eV}$$",
+    "Связь отталкивает уровни друг от друга: разность $4\\ \\mathrm{eV}$ вместо $2\\ \\mathrm{eV}$. Для основного состояния $E_-=1\\ \\mathrm{eV}$: $(H-E_-I)\\vec v=0$: $$\\begin{pmatrix}1&\\sqrt{3}\\\\\\sqrt{3}&3\\end{pmatrix}\\vec v=0\\ \\Rightarrow\\ v_1=-\\sqrt{3}\\,v_2,\\qquad \\vec v=\\frac{1}{2}\\begin{pmatrix}\\sqrt{3}\\\\-1\\end{pmatrix}$$",
+    "Вероятность — квадрат модуля соответствующей координаты: $$P_1=|v_1|^2=\\frac{3}{4}$$",
+    "Проверка: $1+5=6=\\mathrm{tr}\\,H$, $\\ 1\\cdot5=8-3=\\det H$. В основном состоянии доля нижнего уровня ($E_1$) больше — как и ожидалось."
+   ],
+   "en": [
+    "The energy levels are the eigenvalues of $H$. In general: $$E_\\pm=\\frac{E_1+E_2}{2}\\pm\\sqrt{\\left(\\frac{E_1-E_2}{2}\\right)^2+V^2}$$",
+    "Substitute the numbers: $$E_\\pm=3\\pm\\sqrt{1+3}=3\\pm2\\quad\\Rightarrow\\quad E_-=1\\ \\mathrm{eV},\\quad E_+=5\\ \\mathrm{eV}$$",
+    "The coupling pushes the levels apart: a difference of $4\\ \\mathrm{eV}$ instead of $2\\ \\mathrm{eV}$. For the ground state $E_-=1\\ \\mathrm{eV}$: $(H-E_-I)\\vec v=0$: $$\\begin{pmatrix}1&\\sqrt{3}\\\\\\sqrt{3}&3\\end{pmatrix}\\vec v=0\\ \\Rightarrow\\ v_1=-\\sqrt{3}\\,v_2,\\qquad \\vec v=\\frac{1}{2}\\begin{pmatrix}\\sqrt{3}\\\\-1\\end{pmatrix}$$",
+    "The probability is the squared modulus of the corresponding coordinate: $$P_1=|v_1|^2=\\frac{3}{4}$$",
+    "Check: $1+5=6=\\mathrm{tr}\\,H$, $\\ 1\\cdot5=8-3=\\det H$. In the ground state the lower level ($E_1$) has the larger share — as expected."
+   ]
+  },
+  "basis": {
+   "uz": "Energiya sathlari — gamiltonian xos qiymatlari, ehtimollik $|v_i|^2$ (normallashgan xos vektor)",
+   "ru": "Уровни энергии — собственные значения гамильтониана, вероятность $|v_i|^2$ (нормированный собственный вектор)",
+   "en": "Energy levels are eigenvalues of the Hamiltonian, probability $|v_i|^2$ (normalized eigenvector)"
+  },
+  "answer": "E_-=1\\ \\mathrm{eV},\\quad E_+=5\\ \\mathrm{eV},\\quad P_1=\\frac{3}{4}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original"
+ }
+]

@@ -1,0 +1,583 @@
+[
+ {
+  "t": "h1",
+  "uz": "Matritsalar, xos qiymatlar (Matrices, eigenvalues)",
+  "ru": "Матрицы, собственные значения",
+  "en": "Matrices, eigenvalues"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz matritsalarni qo'shasiz va ko'paytirasiz, determinant va teskari matritsani topasiz, chiziqli tenglamalar sistemasini yechasiz, chiziqli almashtirishlarni matritsa bilan yozasiz, xos qiymat va xos vektorlarni topasiz hamda ularni bog'langan tebranishlar va kvant mexanikasi masalalarida qo'llaysiz.",
+  "ru": "**Цель.** После урока вы будете складывать и умножать матрицы, находить определитель и обратную матрицу, решать системы линейных уравнений, записывать линейные преобразования матрицами, находить собственные значения и собственные векторы и применять их в задачах о связанных колебаниях и в квантовой механике.",
+  "en": "**Goal.** After this lesson you will add and multiply matrices, find the determinant and the inverse matrix, solve systems of linear equations, write linear transformations as matrices, find eigenvalues and eigenvectors, and apply them to coupled oscillations and quantum mechanics."
+ },
+ {
+  "t": "p",
+  "uz": "**GRE'da o'rni.** Kvant mexanikasida kuzatiladigan kattaliklar — ermit matritsalar, o'lchash natijalari — ularning xos qiymatlari (spin, Pauli matritsalari, ikki sathli sistema). Klassik mexanikada bog'langan tebranishlarning normal chastotalari xos qiymatlar masalasidan topiladi. GRE'da odatda $2\\times2$ yoki $3\\times3$ matritsa beriladi va iz hamda determinant orqali tez hisoblash kutiladi.",
+  "ru": "**Роль в GRE.** В квантовой механике наблюдаемые величины — эрмитовы матрицы, а результаты измерений — их собственные значения (спин, матрицы Паули, двухуровневая система). В классической механике нормальные частоты связанных колебаний находятся из задачи на собственные значения. На GRE обычно даётся матрица $2\\times2$ или $3\\times3$ и ожидается быстрый расчёт через след и определитель.",
+  "en": "**Role in the GRE.** In quantum mechanics observables are Hermitian matrices, and measurement results are their eigenvalues (spin, Pauli matrices, two-level systems). In classical mechanics the normal frequencies of coupled oscillations come from an eigenvalue problem. The GRE usually gives a $2\\times2$ or $3\\times3$ matrix and expects a quick calculation using the trace and the determinant."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Matritsa va uning turlari (Matrix and its types)",
+  "ru": "1. Матрица и её виды",
+  "en": "1. A matrix and its types"
+ },
+ {
+  "t": "p",
+  "uz": "$m\\times n$ o'lchamli **matritsa (matrix)** — $m$ ta qator (row) va $n$ ta ustundan (column) iborat sonlar jadvali. $a_{ij}$ — $i$-qator va $j$-ustundagi **element (entry)**:",
+  "ru": "**Матрица** размера $m\\times n$ — таблица чисел из $m$ строк и $n$ столбцов. $a_{ij}$ — **элемент**, стоящий в $i$-й строке и $j$-м столбце:",
+  "en": "An $m\\times n$ **matrix** is a table of numbers with $m$ rows and $n$ columns. $a_{ij}$ is the **entry** in row $i$ and column $j$:"
+ },
+ {
+  "t": "m",
+  "m": "A=\\begin{pmatrix}a_{11}&a_{12}\\\\a_{21}&a_{22}\\end{pmatrix},\\qquad \\vec v=\\begin{pmatrix}v_1\\\\v_2\\end{pmatrix}"
+ },
+ {
+  "t": "li",
+  "uz": "$m=n$ bo'lsa — **kvadrat matritsa (square matrix)**; $a_{11},\\ a_{22},\\ \\ldots$ elementlar **bosh diagonal (main diagonal)** ni tashkil qiladi.",
+  "ru": "При $m=n$ — **квадратная матрица**; элементы $a_{11},\\ a_{22},\\ \\ldots$ образуют **главную диагональ**.",
+  "en": "If $m=n$, it is a **square matrix**; the entries $a_{11},\\ a_{22},\\ \\ldots$ form the **main diagonal**."
+ },
+ {
+  "t": "li",
+  "uz": "Vektor — bitta ustunli matritsa: **ustun-vektor (column vector)** $\\vec v$. Uning koordinatalari — $v_1,\\ v_2,\\ \\ldots$",
+  "ru": "Вектор — матрица из одного столбца: **вектор-столбец** $\\vec v$. Его координаты — $v_1,\\ v_2,\\ \\ldots$",
+  "en": "A vector is a matrix with one column: a **column vector** $\\vec v$. Its coordinates are $v_1,\\ v_2,\\ \\ldots$"
+ },
+ {
+  "t": "li",
+  "uz": "**Birlik matritsa (identity matrix)** $I$: diagonalda $1$, qolgan joylarda $0$. **Diagonal matritsa (diagonal matrix)**: diagonaldan tashqaridagi barcha elementlar $0$.",
+  "ru": "**Единичная матрица** $I$: на диагонали $1$, остальные элементы $0$. **Диагональная матрица**: все элементы вне диагонали равны $0$.",
+  "en": "**Identity matrix** $I$: $1$ on the diagonal, $0$ elsewhere. **Diagonal matrix**: all off-diagonal entries are $0$."
+ },
+ {
+  "t": "li",
+  "uz": "**Transponirlangan matritsa (transpose)** $A^T$: qatorlar ustunlarga aylanadi, $(A^T)_{ij}=a_{ji}$. $A^T=A$ bo'lsa — **simmetrik matritsa (symmetric matrix)**.",
+  "ru": "**Транспонированная матрица** $A^T$: строки становятся столбцами, $(A^T)_{ij}=a_{ji}$. Если $A^T=A$ — **симметричная матрица**.",
+  "en": "**Transpose** $A^T$: rows become columns, $(A^T)_{ij}=a_{ji}$. If $A^T=A$, the matrix is **symmetric**."
+ },
+ {
+  "t": "li",
+  "uz": "**Iz (trace)** — diagonal elementlar yig'indisi: $\\mathrm{tr}\\,A=a_{11}+a_{22}+\\ldots+a_{nn}$.",
+  "ru": "**След** — сумма диагональных элементов: $\\mathrm{tr}\\,A=a_{11}+a_{22}+\\ldots+a_{nn}$.",
+  "en": "The **trace** is the sum of the diagonal entries: $\\mathrm{tr}\\,A=a_{11}+a_{22}+\\ldots+a_{nn}$."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Matritsalar ustida amallar (Matrix operations)",
+  "ru": "2. Действия над матрицами",
+  "en": "2. Matrix operations"
+ },
+ {
+  "t": "li",
+  "uz": "Bir xil o'lchamli matritsalar elementma-element qo'shiladi; songa ko'paytirishda har bir element shu songa ko'paytiriladi: $(A+B)_{ij}=a_{ij}+b_{ij}$, $\\ (cA)_{ij}=c\\,a_{ij}$.",
+  "ru": "Матрицы одного размера складываются поэлементно; при умножении на число каждый элемент умножается на это число: $(A+B)_{ij}=a_{ij}+b_{ij}$, $\\ (cA)_{ij}=c\\,a_{ij}$.",
+  "en": "Matrices of the same size are added entry by entry; multiplying by a number multiplies every entry by that number: $(A+B)_{ij}=a_{ij}+b_{ij}$, $\\ (cA)_{ij}=c\\,a_{ij}$."
+ },
+ {
+  "t": "p",
+  "uz": "**Matritsalarni ko'paytirish (matrix multiplication).** $AB$ ning $(i,j)$ elementi — $A$ ning $i$-qatori va $B$ ning $j$-ustunining skalyar ko'paytmasi ([[F01]]):",
+  "ru": "**Умножение матриц.** Элемент $(i,j)$ произведения $AB$ — скалярное произведение $i$-й строки $A$ на $j$-й столбец $B$ ([[F01]]):",
+  "en": "**Matrix multiplication.** The $(i,j)$ entry of $AB$ is the dot product of row $i$ of $A$ with column $j$ of $B$ ([[F01]]):"
+ },
+ {
+  "t": "m",
+  "m": "(AB)_{ij}=\\sum_{k}a_{ik}\\,b_{kj},\\qquad \\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}\\begin{pmatrix}x\\\\y\\end{pmatrix}=\\begin{pmatrix}ax+by\\\\cx+dy\\end{pmatrix}"
+ },
+ {
+  "t": "li",
+  "uz": "Ko'paytma faqat $A$ ning ustunlari soni $B$ ning qatorlari soniga teng bo'lganda aniqlangan: $(m\\times n)(n\\times p)=(m\\times p)$.",
+  "ru": "Произведение определено, только если число столбцов $A$ равно числу строк $B$: $(m\\times n)(n\\times p)=(m\\times p)$.",
+  "en": "The product is defined only when the number of columns of $A$ equals the number of rows of $B$: $(m\\times n)(n\\times p)=(m\\times p)$."
+ },
+ {
+  "t": "li",
+  "uz": "Umuman olganda $AB\\neq BA$ — ko'paytirish **kommutativ emas (non-commutative)**. Farq **kommutator (commutator)** deyiladi: $[A,B]=AB-BA$. Kvant mexanikasida $[x,p_x]=i\\hbar$ — noaniqlik munosabatining asosi.",
+  "ru": "В общем случае $AB\\neq BA$ — умножение **некоммутативно**. Разность называется **коммутатором**: $[A,B]=AB-BA$. В квантовой механике $[x,p_x]=i\\hbar$ — основа соотношения неопределённостей.",
+  "en": "In general $AB\\neq BA$ — multiplication is **non-commutative**. The difference is called the **commutator**: $[A,B]=AB-BA$. In quantum mechanics $[x,p_x]=i\\hbar$ is the basis of the uncertainty relation."
+ },
+ {
+  "t": "li",
+  "uz": "Ko'paytirish assotsiativ: $(AB)C=A(BC)$; $\\ AI=IA=A$; $\\ (AB)^T=B^TA^T$.",
+  "ru": "Умножение ассоциативно: $(AB)C=A(BC)$; $\\ AI=IA=A$; $\\ (AB)^T=B^TA^T$.",
+  "en": "Multiplication is associative: $(AB)C=A(BC)$; $\\ AI=IA=A$; $\\ (AB)^T=B^TA^T$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B0-L09-F01.png",
+   "ru": "figures/B0-L09-F01-ru.png",
+   "en": "figures/B0-L09-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Determinant (Determinant)",
+  "ru": "3. Определитель",
+  "en": "3. The determinant"
+ },
+ {
+  "t": "p",
+  "uz": "Kvadrat matritsaga bitta son — **determinant (determinant)** mos qo'yiladi. $2\\times2$ va $3\\times3$ uchun (birinchi qator bo'yicha yoyish):",
+  "ru": "Квадратной матрице сопоставляется одно число — **определитель** (детерминант). Для $2\\times2$ и $3\\times3$ (разложение по первой строке):",
+  "en": "A square matrix is assigned a single number, the **determinant**. For $2\\times2$ and $3\\times3$ (expansion along the first row):"
+ },
+ {
+  "t": "m",
+  "m": "\\det\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}=ad-bc"
+ },
+ {
+  "t": "m",
+  "m": "\\det\\begin{pmatrix}a_1&a_2&a_3\\\\b_1&b_2&b_3\\\\c_1&c_2&c_3\\end{pmatrix}=a_1(b_2c_3-b_3c_2)-a_2(b_1c_3-b_3c_1)+a_3(b_1c_2-b_2c_1)"
+ },
+ {
+  "t": "li",
+  "uz": "**Geometrik ma'nosi:** $|\\det A|$ — almashtirishda yuza (3D da hajm) necha marta o'zgarishi. Birlik kvadrat $A$ ning ustunlari ustiga qurilgan parallelogrammga o'tadi ([[F02]]). $\\det A<0$ — orientatsiya teskarisiga o'zgaradi.",
+  "ru": "**Геометрический смысл:** $|\\det A|$ — во сколько раз преобразование изменяет площадь (в 3D — объём). Единичный квадрат переходит в параллелограмм, построенный на столбцах $A$ ([[F02]]). $\\det A<0$ — ориентация меняется на противоположную.",
+  "en": "**Geometric meaning:** $|\\det A|$ is the factor by which the transformation changes area (volume in 3D). The unit square maps to the parallelogram spanned by the columns of $A$ ([[F02]]). $\\det A<0$ means the orientation is reversed."
+ },
+ {
+  "t": "li",
+  "uz": "Xossalar: $\\det(AB)=\\det A\\cdot\\det B$; $\\ \\det A^T=\\det A$; $n\\times n$ matritsa uchun $\\det(cA)=c^n\\det A$.",
+  "ru": "Свойства: $\\det(AB)=\\det A\\cdot\\det B$; $\\ \\det A^T=\\det A$; для матрицы $n\\times n$: $\\det(cA)=c^n\\det A$.",
+  "en": "Properties: $\\det(AB)=\\det A\\cdot\\det B$; $\\ \\det A^T=\\det A$; for an $n\\times n$ matrix, $\\det(cA)=c^n\\det A$."
+ },
+ {
+  "t": "li",
+  "uz": "Ikki qator (ustun) o'rni almashsa, determinant ishorasi o'zgaradi; ikki qator proporsional bo'lsa, $\\det A=0$. Uchburchakli matritsaning determinanti — diagonal elementlar ko'paytmasi.",
+  "ru": "При перестановке двух строк (столбцов) определитель меняет знак; если две строки пропорциональны, $\\det A=0$. Определитель треугольной матрицы — произведение диагональных элементов.",
+  "en": "Swapping two rows (columns) changes the sign of the determinant; if two rows are proportional, $\\det A=0$. The determinant of a triangular matrix is the product of its diagonal entries."
+ },
+ {
+  "t": "li",
+  "uz": "B0-L01 bilan bog'liqlik: vektor ko'paytma $\\vec a\\times\\vec b$ va aralash ko'paytma $\\vec a\\cdot(\\vec b\\times\\vec c)$ ham $3\\times3$ determinant ko'rinishida yoziladi.",
+  "ru": "Связь с B0-L01: векторное произведение $\\vec a\\times\\vec b$ и смешанное произведение $\\vec a\\cdot(\\vec b\\times\\vec c)$ тоже записываются в виде определителя $3\\times3$.",
+  "en": "Link to B0-L01: the cross product $\\vec a\\times\\vec b$ and the triple product $\\vec a\\cdot(\\vec b\\times\\vec c)$ are also written as $3\\times3$ determinants."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B0-L09-F02.png",
+   "ru": "figures/B0-L09-F02-ru.png",
+   "en": "figures/B0-L09-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Teskari matritsa va chiziqli sistemalar (Inverse matrix and linear systems)",
+  "ru": "4. Обратная матрица и линейные системы",
+  "en": "4. The inverse matrix and linear systems"
+ },
+ {
+  "t": "p",
+  "uz": "$AA^{-1}=A^{-1}A=I$ shartni qanoatlantiruvchi $A^{-1}$ — **teskari matritsa (inverse matrix)**. U faqat $\\det A\\neq0$ bo'lganda mavjud. $2\\times2$ uchun:",
+  "ru": "$A^{-1}$, удовлетворяющая условию $AA^{-1}=A^{-1}A=I$, — **обратная матрица**. Она существует только при $\\det A\\neq0$. Для $2\\times2$:",
+  "en": "The matrix $A^{-1}$ satisfying $AA^{-1}=A^{-1}A=I$ is the **inverse matrix**. It exists only if $\\det A\\neq0$. For $2\\times2$:"
+ },
+ {
+  "t": "m",
+  "m": "\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}^{-1}=\\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}"
+ },
+ {
+  "t": "li",
+  "uz": "Qoida: diagonal elementlar o'rnini almashtiring, diagonaldan tashqaridagilar ishorasini o'zgartiring va determinantga bo'ling.",
+  "ru": "Правило: поменяйте местами диагональные элементы, смените знак у внедиагональных и разделите на определитель.",
+  "en": "Rule: swap the diagonal entries, change the sign of the off-diagonal ones, and divide by the determinant."
+ },
+ {
+  "t": "li",
+  "uz": "$\\det A=0$ bo'lgan matritsa **xos (singular)** matritsa deyiladi: teskari matritsa yo'q, $A\\vec v=0$ tenglama nolmas yechimga ega.",
+  "ru": "Матрица с $\\det A=0$ называется **вырожденной**: обратной матрицы нет, уравнение $A\\vec v=0$ имеет ненулевое решение.",
+  "en": "A matrix with $\\det A=0$ is called **singular**: it has no inverse, and the equation $A\\vec v=0$ has a nonzero solution."
+ },
+ {
+  "t": "li",
+  "uz": "$(AB)^{-1}=B^{-1}A^{-1}$ — tartib teskarisiga o'zgaradi; $\\ \\det A^{-1}=\\dfrac{1}{\\det A}$.",
+  "ru": "$(AB)^{-1}=B^{-1}A^{-1}$ — порядок меняется на обратный; $\\ \\det A^{-1}=\\dfrac{1}{\\det A}$.",
+  "en": "$(AB)^{-1}=B^{-1}A^{-1}$ — the order is reversed; $\\ \\det A^{-1}=\\dfrac{1}{\\det A}$."
+ },
+ {
+  "t": "p",
+  "uz": "**Chiziqli tenglamalar sistemasi (system of linear equations)** $A\\vec x=\\vec b$ ko'rinishida yoziladi. $\\det A\\neq0$ bo'lsa, yechim yagona: $\\vec x=A^{-1}\\vec b$. Ikki noma'lum uchun **Kramer qoidasi (Cramer's rule)**:",
+  "ru": "**Система линейных уравнений** записывается в виде $A\\vec x=\\vec b$. При $\\det A\\neq0$ решение единственно: $\\vec x=A^{-1}\\vec b$. Для двух неизвестных — **правило Крамера**:",
+  "en": "A **system of linear equations** is written as $A\\vec x=\\vec b$. If $\\det A\\neq0$, the solution is unique: $\\vec x=A^{-1}\\vec b$. For two unknowns, **Cramer's rule**:"
+ },
+ {
+  "t": "m",
+  "m": "\\begin{cases}a x+b y=e\\\\c x+d y=f\\end{cases}\\quad\\Rightarrow\\quad x=\\frac{ed-bf}{ad-bc},\\qquad y=\\frac{af-ec}{ad-bc}"
+ },
+ {
+  "t": "li",
+  "uz": "Fizikada: Kirxgof qoidalari (elektr zanjirlari), muvozanatdagi kuchlar, bog'langan jismlar dinamikasi — barchasi chiziqli sistemaga keladi.",
+  "ru": "В физике: правила Кирхгофа (электрические цепи), равновесие сил, динамика связанных тел — всё сводится к линейной системе.",
+  "en": "In physics, Kirchhoff's rules (electric circuits), force balance and the dynamics of connected bodies all lead to a linear system."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Chiziqli almashtirishlar (Linear transformations)",
+  "ru": "5. Линейные преобразования",
+  "en": "5. Linear transformations"
+ },
+ {
+  "t": "p",
+  "uz": "Matritsa vektorni vektorga o'tkazadi: $\\vec v\\mapsto A\\vec v$. $A$ ning ustunlari — bazis vektorlar $\\vec i$ va $\\vec j$ qayerga o'tishi. Tekislikdagi asosiy almashtirishlar ([[F03]]):",
+  "ru": "Матрица переводит вектор в вектор: $\\vec v\\mapsto A\\vec v$. Столбцы $A$ — это образы базисных векторов $\\vec i$ и $\\vec j$. Основные преобразования плоскости ([[F03]]):",
+  "en": "A matrix maps a vector to a vector: $\\vec v\\mapsto A\\vec v$. The columns of $A$ are the images of the basis vectors $\\vec i$ and $\\vec j$. The main transformations of the plane ([[F03]]):"
+ },
+ {
+  "t": "m",
+  "m": "R(\\theta)=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{pmatrix},\\qquad S=\\begin{pmatrix}k_1&0\\\\0&k_2\\end{pmatrix},\\qquad M_x=\\begin{pmatrix}1&0\\\\0&-1\\end{pmatrix}"
+ },
+ {
+  "t": "li",
+  "uz": "$R(\\theta)$ — soat strelkasiga qarshi $\\theta$ burchakka **burish (rotation)**; uzunlik va burchaklarni saqlaydi, $\\det R=1$, $\\ R^{-1}=R(-\\theta)=R^T$, $\\ R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$.",
+  "ru": "$R(\\theta)$ — **поворот** против часовой стрелки на угол $\\theta$; сохраняет длины и углы, $\\det R=1$, $\\ R^{-1}=R(-\\theta)=R^T$, $\\ R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$.",
+  "en": "$R(\\theta)$ is a counterclockwise **rotation** by the angle $\\theta$; it preserves lengths and angles, $\\det R=1$, $\\ R^{-1}=R(-\\theta)=R^T$, $\\ R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$."
+ },
+ {
+  "t": "li",
+  "uz": "$S$ — o'qlar bo'yicha **cho'zish (scaling)**: yuza $k_1k_2$ marta o'zgaradi. $M_x$ — $x$ o'qiga nisbatan **akslantirish (reflection)**: $\\det M_x=-1$.",
+  "ru": "$S$ — **растяжение** вдоль осей: площадь меняется в $k_1k_2$ раз. $M_x$ — **отражение** относительно оси $x$: $\\det M_x=-1$.",
+  "en": "$S$ is **scaling** along the axes: area changes by the factor $k_1k_2$. $M_x$ is a **reflection** in the $x$ axis: $\\det M_x=-1$."
+ },
+ {
+  "t": "li",
+  "uz": "$R^TR=I$ shartni qanoatlantiruvchi matritsa **ortogonal (orthogonal)** deyiladi; burish va akslantirishlar — ortogonal matritsalar, ular uchun $\\det=\\pm1$.",
+  "ru": "Матрица, удовлетворяющая условию $R^TR=I$, называется **ортогональной**; повороты и отражения — ортогональные матрицы, для них $\\det=\\pm1$.",
+  "en": "A matrix satisfying $R^TR=I$ is called **orthogonal**; rotations and reflections are orthogonal matrices, and their $\\det=\\pm1$."
+ },
+ {
+  "t": "li",
+  "uz": "Almashtirishlar ketma-ketligi — matritsalar ko'paytmasi, o'ngdan chapga o'qiladi: $AB\\vec v$ da avval $B$, keyin $A$ ta'sir qiladi.",
+  "ru": "Последовательность преобразований — произведение матриц, читаемое справа налево: в $AB\\vec v$ сначала действует $B$, затем $A$.",
+  "en": "A sequence of transformations is a product of matrices read from right to left: in $AB\\vec v$, first $B$ acts, then $A$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B0-L09-F03.png",
+   "ru": "figures/B0-L09-F03-ru.png",
+   "en": "figures/B0-L09-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Xos qiymatlar va xos vektorlar (Eigenvalues and eigenvectors)",
+  "ru": "6. Собственные значения и собственные векторы",
+  "en": "6. Eigenvalues and eigenvectors"
+ },
+ {
+  "t": "p",
+  "uz": "Agar nolmas vektor $\\vec v$ uchun $A\\vec v=\\lambda\\vec v$ bo'lsa, $\\vec v$ — **xos vektor (eigenvector)**, $\\lambda$ — **xos qiymat (eigenvalue)**. Almashtirish xos vektorni burmaydi, faqat $\\lambda$ marta cho'zadi ([[F04]]). $(A-\\lambda I)\\vec v=0$ nolmas yechimga ega bo'lishi uchun:",
+  "ru": "Если для ненулевого вектора $\\vec v$ выполняется $A\\vec v=\\lambda\\vec v$, то $\\vec v$ — **собственный вектор**, $\\lambda$ — **собственное значение**. Преобразование не поворачивает собственный вектор, а только растягивает его в $\\lambda$ раз ([[F04]]). Чтобы $(A-\\lambda I)\\vec v=0$ имело ненулевое решение, нужно:",
+  "en": "If $A\\vec v=\\lambda\\vec v$ for a nonzero vector $\\vec v$, then $\\vec v$ is an **eigenvector** and $\\lambda$ is an **eigenvalue**. The transformation does not turn an eigenvector, it only stretches it by the factor $\\lambda$ ([[F04]]). For $(A-\\lambda I)\\vec v=0$ to have a nonzero solution, we need:"
+ },
+ {
+  "t": "m",
+  "m": "\\det(A-\\lambda I)=0"
+ },
+ {
+  "t": "li",
+  "uz": "Bu — **xarakteristik tenglama (characteristic equation)**; $n\\times n$ matritsa uchun u $n$-darajali tenglama va $n$ ta (karrali yoki kompleks bo'lishi mumkin) ildizga ega.",
+  "ru": "Это — **характеристическое уравнение**; для матрицы $n\\times n$ это уравнение степени $n$, у него $n$ корней (возможно, кратных или комплексных).",
+  "en": "This is the **characteristic equation**; for an $n\\times n$ matrix it has degree $n$ and $n$ roots (possibly repeated or complex)."
+ },
+ {
+  "t": "p",
+  "uz": "$2\\times2$ matritsa uchun xarakteristik tenglama iz va determinant orqali yoziladi:",
+  "ru": "Для матрицы $2\\times2$ характеристическое уравнение записывается через след и определитель:",
+  "en": "For a $2\\times2$ matrix the characteristic equation is written in terms of the trace and the determinant:"
+ },
+ {
+  "t": "m",
+  "m": "\\lambda^2-(\\mathrm{tr}\\,A)\\,\\lambda+\\det A=0,\\qquad \\lambda_{1,2}=\\frac{\\mathrm{tr}\\,A}{2}\\pm\\sqrt{\\left(\\frac{\\mathrm{tr}\\,A}{2}\\right)^2-\\det A}"
+ },
+ {
+  "t": "li",
+  "uz": "Har qanday $n\\times n$ matritsa uchun: $\\lambda_1+\\lambda_2+\\ldots+\\lambda_n=\\mathrm{tr}\\,A$, $\\ \\lambda_1\\lambda_2\\cdots\\lambda_n=\\det A$. Bu — javobni tez tekshirish usuli.",
+  "ru": "Для любой матрицы $n\\times n$: $\\lambda_1+\\lambda_2+\\ldots+\\lambda_n=\\mathrm{tr}\\,A$, $\\ \\lambda_1\\lambda_2\\cdots\\lambda_n=\\det A$. Это быстрый способ проверить ответ.",
+  "en": "For any $n\\times n$ matrix: $\\lambda_1+\\lambda_2+\\ldots+\\lambda_n=\\mathrm{tr}\\,A$, $\\ \\lambda_1\\lambda_2\\cdots\\lambda_n=\\det A$. This is a quick way to check an answer."
+ },
+ {
+  "t": "li",
+  "uz": "Xos vektorni topish: har bir $\\lambda$ uchun $(A-\\lambda I)\\vec v=0$ ni yeching. Xos vektor uzunligi ixtiyoriy — odatda normallashtiriladi: $|\\vec v|=1$.",
+  "ru": "Нахождение собственного вектора: для каждого $\\lambda$ решите $(A-\\lambda I)\\vec v=0$. Длина собственного вектора произвольна — обычно его нормируют: $|\\vec v|=1$.",
+  "en": "Finding an eigenvector: for each $\\lambda$ solve $(A-\\lambda I)\\vec v=0$. The length of an eigenvector is arbitrary; it is usually normalized: $|\\vec v|=1$."
+ },
+ {
+  "t": "li",
+  "uz": "Uchburchakli (va diagonal) matritsaning xos qiymatlari — diagonal elementlari.",
+  "ru": "Собственные значения треугольной (и диагональной) матрицы — её диагональные элементы.",
+  "en": "The eigenvalues of a triangular (and diagonal) matrix are its diagonal entries."
+ },
+ {
+  "t": "li",
+  "uz": "$A\\vec v=\\lambda\\vec v$ bo'lsa: $A^n\\vec v=\\lambda^n\\vec v$, $\\ A^{-1}\\vec v=\\lambda^{-1}\\vec v$, $\\ (A+cI)\\vec v=(\\lambda+c)\\vec v$ — xos vektor o'sha, xos qiymat o'zgaradi.",
+  "ru": "Если $A\\vec v=\\lambda\\vec v$, то: $A^n\\vec v=\\lambda^n\\vec v$, $\\ A^{-1}\\vec v=\\lambda^{-1}\\vec v$, $\\ (A+cI)\\vec v=(\\lambda+c)\\vec v$ — собственный вектор тот же, собственное значение меняется.",
+  "en": "If $A\\vec v=\\lambda\\vec v$, then $A^n\\vec v=\\lambda^n\\vec v$, $\\ A^{-1}\\vec v=\\lambda^{-1}\\vec v$, $\\ (A+cI)\\vec v=(\\lambda+c)\\vec v$ — the eigenvector stays the same, the eigenvalue changes."
+ },
+ {
+  "t": "li",
+  "uz": "Burish matritsasi $R(\\theta)$ hech bir haqiqiy vektorni o'z yo'nalishida qoldirmaydi: uning xos qiymatlari kompleks, $\\lambda=e^{\\pm i\\theta}$ (B0-L07 bilan bog'liqlik).",
+  "ru": "Матрица поворота $R(\\theta)$ не оставляет ни один вещественный вектор на своём направлении: её собственные значения комплексные, $\\lambda=e^{\\pm i\\theta}$ (связь с B0-L07).",
+  "en": "The rotation matrix $R(\\theta)$ leaves no real vector along its own direction: its eigenvalues are complex, $\\lambda=e^{\\pm i\\theta}$ (link to B0-L07)."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B0-L09-F04.png",
+   "ru": "figures/B0-L09-F04-ru.png",
+   "en": "figures/B0-L09-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Diagonallashtirish va simmetrik (ermit) matritsalar (Diagonalization and symmetric (Hermitian) matrices)",
+  "ru": "7. Диагонализация и симметричные (эрмитовы) матрицы",
+  "en": "7. Diagonalization and symmetric (Hermitian) matrices"
+ },
+ {
+  "t": "p",
+  "uz": "Agar $n\\times n$ matritsaning $n$ ta chiziqli erkli xos vektori bo'lsa, ularni ustun qilib $P$ matritsa tuzamiz; xos vektorlar bazisida $A$ diagonal ko'rinishga keladi — **diagonallashtirish (diagonalization)**:",
+  "ru": "Если у матрицы $n\\times n$ есть $n$ линейно независимых собственных векторов, составим из них (как из столбцов) матрицу $P$; в базисе собственных векторов $A$ принимает диагональный вид — **диагонализация**:",
+  "en": "If an $n\\times n$ matrix has $n$ linearly independent eigenvectors, we put them as columns into a matrix $P$; in the eigenvector basis $A$ becomes diagonal — **diagonalization**:"
+ },
+ {
+  "t": "m",
+  "m": "P^{-1}AP=D=\\begin{pmatrix}\\lambda_1&0\\\\0&\\lambda_2\\end{pmatrix},\\qquad A^n=P\\,D^n\\,P^{-1}"
+ },
+ {
+  "t": "li",
+  "uz": "Turli xos qiymatlarga mos xos vektorlar doim chiziqli erkli, shuning uchun barcha xos qiymatlari turli bo'lgan matritsa diagonallashadi.",
+  "ru": "Собственные векторы, отвечающие различным собственным значениям, всегда линейно независимы, поэтому матрица со всеми различными собственными значениями диагонализуема.",
+  "en": "Eigenvectors belonging to different eigenvalues are always linearly independent, so a matrix whose eigenvalues are all different is diagonalizable."
+ },
+ {
+  "t": "li",
+  "uz": "**Haqiqiy simmetrik matritsa ($A^T=A$):** barcha xos qiymatlari haqiqiy, turli xos qiymatlarga mos xos vektorlari o'zaro **ortogonal (orthogonal)**. Ular — **bosh o'qlar (principal axes)**: kvadratik forma $\\vec v^{\\,T}A\\vec v=1$ ellipsi o'qlari xos vektorlar bo'ylab yo'naladi ([[F05]]).",
+  "ru": "**Вещественная симметричная матрица ($A^T=A$):** все собственные значения вещественны, собственные векторы для различных собственных значений взаимно **ортогональны**. Это **главные оси**: оси эллипса квадратичной формы $\\vec v^{\\,T}A\\vec v=1$ направлены вдоль собственных векторов ([[F05]]).",
+  "en": "**Real symmetric matrix ($A^T=A$):** all eigenvalues are real, and eigenvectors for different eigenvalues are mutually **orthogonal**. They are the **principal axes**: the axes of the ellipse of the quadratic form $\\vec v^{\\,T}A\\vec v=1$ point along the eigenvectors ([[F05]])."
+ },
+ {
+  "t": "li",
+  "uz": "Kompleks matritsa uchun **ermit qo'shma (Hermitian conjugate)** $A^\\dagger=(A^T)^*$ — transponirlash va kompleks qo'shma olish. $A^\\dagger=A$ bo'lsa — **ermit matritsa (Hermitian matrix)**: diagonali haqiqiy, xos qiymatlari haqiqiy, xos vektorlari ortogonal.",
+  "ru": "Для комплексной матрицы **эрмитово сопряжение** $A^\\dagger=(A^T)^*$ — транспонирование и комплексное сопряжение. Если $A^\\dagger=A$ — **эрмитова матрица**: диагональ вещественная, собственные значения вещественные, собственные векторы ортогональны.",
+  "en": "For a complex matrix the **Hermitian conjugate** is $A^\\dagger=(A^T)^*$ — transpose and complex conjugate. If $A^\\dagger=A$, it is a **Hermitian matrix**: its diagonal is real, its eigenvalues are real and its eigenvectors are orthogonal."
+ },
+ {
+  "t": "li",
+  "uz": "$U^\\dagger U=I$ bo'lsa — **unitar matritsa (unitary matrix)**: vektor uzunligini saqlaydi, xos qiymatlari $|\\lambda|=1$. Kvant mexanikasida vaqt bo'yicha evolyutsiya unitar.",
+  "ru": "Если $U^\\dagger U=I$ — **унитарная матрица**: сохраняет длину вектора, её собственные значения $|\\lambda|=1$. В квантовой механике эволюция во времени унитарна.",
+  "en": "If $U^\\dagger U=I$, it is a **unitary matrix**: it preserves the length of a vector and its eigenvalues have $|\\lambda|=1$. In quantum mechanics time evolution is unitary."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B0-L09-F05.png",
+   "ru": "figures/B0-L09-F05-ru.png",
+   "en": "figures/B0-L09-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Fizikada matritsalar (Matrices in physics)",
+  "ru": "8. Матрицы в физике",
+  "en": "8. Matrices in physics"
+ },
+ {
+  "t": "p",
+  "uz": "**Bog'langan tebranishlar (coupled oscillations).** Ikki bir xil $m$ massa uchta bir xil $k$ bikrlikdagi prujina bilan devorlar orasida bog'langan ([[F06]]). $x_1,\\ x_2$ siljishlar uchun Nyuton tenglamalari $m\\ddot{\\vec x}=-K\\vec x$ ko'rinishida; $\\vec x=\\vec a\\cos\\omega t$ yechim izlasak, xos qiymatlar masalasi hosil bo'ladi:",
+  "ru": "**Связанные колебания.** Две одинаковые массы $m$ соединены тремя одинаковыми пружинами жёсткости $k$ между стенками ([[F06]]). Уравнения Ньютона для смещений $x_1,\\ x_2$ имеют вид $m\\ddot{\\vec x}=-K\\vec x$; ища решение $\\vec x=\\vec a\\cos\\omega t$, получаем задачу на собственные значения:",
+  "en": "**Coupled oscillations.** Two identical masses $m$ are connected between walls by three identical springs of stiffness $k$ ([[F06]]). Newton's equations for the displacements $x_1,\\ x_2$ take the form $m\\ddot{\\vec x}=-K\\vec x$; looking for a solution $\\vec x=\\vec a\\cos\\omega t$ gives an eigenvalue problem:"
+ },
+ {
+  "t": "m",
+  "m": "K=\\begin{pmatrix}2k&-k\\\\-k&2k\\end{pmatrix},\\qquad K\\vec a=m\\omega^2\\vec a\\quad\\Rightarrow\\quad \\omega_1=\\sqrt{\\frac{k}{m}},\\qquad \\omega_2=\\sqrt{\\frac{3k}{m}}"
+ },
+ {
+  "t": "li",
+  "uz": "$\\omega_1$ ga xos vektor $(1,\\ 1)$ — massalar bir xil fazada tebranadi, o'rta prujina cho'zilmaydi. $\\omega_2$ ga xos vektor $(1,\\ -1)$ — qarama-qarshi fazada. Bular — **normal modalar (normal modes)**.",
+  "ru": "Для $\\omega_1$ собственный вектор $(1,\\ 1)$ — массы колеблются в одной фазе, средняя пружина не растягивается. Для $\\omega_2$ собственный вектор $(1,\\ -1)$ — в противофазе. Это **нормальные моды**.",
+  "en": "For $\\omega_1$ the eigenvector is $(1,\\ 1)$ — the masses oscillate in phase and the middle spring is not stretched. For $\\omega_2$ the eigenvector is $(1,\\ -1)$ — they oscillate out of phase. These are the **normal modes**."
+ },
+ {
+  "t": "li",
+  "uz": "Ixtiyoriy harakat — normal modalar yig'indisi. Normal chastotalar soni erkinlik darajalari soniga teng.",
+  "ru": "Любое движение — сумма нормальных мод. Число нормальных частот равно числу степеней свободы.",
+  "en": "Any motion is a sum of normal modes. The number of normal frequencies equals the number of degrees of freedom."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B0-L09-F06.png",
+   "ru": "figures/B0-L09-F06-ru.png",
+   "en": "figures/B0-L09-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "p",
+  "uz": "**Kvant mexanikasi (quantum mechanics).** Kuzatiladigan kattalik — ermit operator (matritsa); o'lchash natijasi — uning xos qiymatlaridan biri, o'lchashdan keyingi holat — mos xos vektor. Spin-$\\frac{1}{2}$ uchun $\\vec S=\\frac{\\hbar}{2}\\vec\\sigma$, bu yerda **Pauli matritsalari (Pauli matrices)**:",
+  "ru": "**Квантовая механика.** Наблюдаемая величина — эрмитов оператор (матрица); результат измерения — одно из его собственных значений, состояние после измерения — соответствующий собственный вектор. Для спина $\\frac{1}{2}$: $\\vec S=\\frac{\\hbar}{2}\\vec\\sigma$, где **матрицы Паули**:",
+  "en": "**Quantum mechanics.** An observable is a Hermitian operator (matrix); a measurement result is one of its eigenvalues, and the state after the measurement is the corresponding eigenvector. For spin $\\frac{1}{2}$, $\\vec S=\\frac{\\hbar}{2}\\vec\\sigma$, where the **Pauli matrices** are:"
+ },
+ {
+  "t": "m",
+  "m": "\\sigma_x=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix},\\qquad \\sigma_y=\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix},\\qquad \\sigma_z=\\begin{pmatrix}1&0\\\\0&-1\\end{pmatrix}"
+ },
+ {
+  "t": "li",
+  "uz": "Har birining xos qiymatlari $\\pm1$ (iz $0$, determinant $-1$), shuning uchun spin proyeksiyasi o'lchanganda faqat $\\pm\\dfrac{\\hbar}{2}$ chiqadi.",
+  "ru": "Собственные значения каждой из них равны $\\pm1$ (след $0$, определитель $-1$), поэтому при измерении проекции спина получается только $\\pm\\dfrac{\\hbar}{2}$.",
+  "en": "Each has eigenvalues $\\pm1$ (trace $0$, determinant $-1$), so a measurement of a spin component gives only $\\pm\\dfrac{\\hbar}{2}$."
+ },
+ {
+  "t": "li",
+  "uz": "$\\sigma_x^2=\\sigma_y^2=\\sigma_z^2=I$, $\\ \\sigma_x\\sigma_y=i\\sigma_z$, $\\ [\\sigma_x,\\sigma_y]=2i\\sigma_z$ (va siklik almashtirishlar).",
+  "ru": "$\\sigma_x^2=\\sigma_y^2=\\sigma_z^2=I$, $\\ \\sigma_x\\sigma_y=i\\sigma_z$, $\\ [\\sigma_x,\\sigma_y]=2i\\sigma_z$ (и циклические перестановки).",
+  "en": "$\\sigma_x^2=\\sigma_y^2=\\sigma_z^2=I$, $\\ \\sigma_x\\sigma_y=i\\sigma_z$, $\\ [\\sigma_x,\\sigma_y]=2i\\sigma_z$ (and cyclic permutations)."
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki sathli sistema (two-level system):** $H=\\begin{pmatrix}E_0&V\\\\V&E_0\\end{pmatrix}$ ning xos qiymatlari $E_0\\pm V$ — bog'lanish $V$ sathlarni $2|V|$ ga ajratadi (masalan, ammiak molekulasi, kimyoviy bog').",
+  "ru": "**Двухуровневая система:** собственные значения $H=\\begin{pmatrix}E_0&V\\\\V&E_0\\end{pmatrix}$ равны $E_0\\pm V$ — связь $V$ расщепляет уровни на $2|V|$ (например, молекула аммиака, химическая связь).",
+  "en": "**Two-level system:** the eigenvalues of $H=\\begin{pmatrix}E_0&V\\\\V&E_0\\end{pmatrix}$ are $E_0\\pm V$ — the coupling $V$ splits the levels by $2|V|$ (for example, the ammonia molecule or a chemical bond)."
+ },
+ {
+  "t": "li",
+  "uz": "Boshqa misollar: inersiya tenzori (bosh inersiya o'qlari — xos vektorlar), Lorens almashtirishi (maxsus nisbiylik), optikada Jons matritsalari.",
+  "ru": "Другие примеры: тензор инерции (главные оси инерции — собственные векторы), преобразование Лоренца (специальная теория относительности), матрицы Джонса в оптике.",
+  "en": "Other examples: the inertia tensor (the principal axes of inertia are eigenvectors), the Lorentz transformation (special relativity), Jones matrices in optics."
+ },
+ {
+  "t": "h2",
+  "uz": "9. GRE uchun tez tekshiruvlar (Quick checks for the GRE)",
+  "ru": "9. Быстрые проверки для GRE",
+  "en": "9. Quick checks for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "Xos qiymatlarni topgach, ular yig'indisi izga, ko'paytmasi determinantga tengligini tekshiring.",
+  "ru": "Найдя собственные значения, проверьте, что их сумма равна следу, а произведение — определителю.",
+  "en": "After finding the eigenvalues, check that their sum equals the trace and their product equals the determinant."
+ },
+ {
+  "t": "li",
+  "uz": "$\\begin{pmatrix}a&b\\\\b&a\\end{pmatrix}$ ko'rinishidagi matritsa: $\\lambda=a\\pm b$, xos vektorlar $(1,\\ 1)$ va $(1,\\ -1)$ — buni yoddan biling.",
+  "ru": "Матрица вида $\\begin{pmatrix}a&b\\\\b&a\\end{pmatrix}$: $\\lambda=a\\pm b$, собственные векторы $(1,\\ 1)$ и $(1,\\ -1)$ — это надо знать наизусть.",
+  "en": "A matrix of the form $\\begin{pmatrix}a&b\\\\b&a\\end{pmatrix}$ has $\\lambda=a\\pm b$ with eigenvectors $(1,\\ 1)$ and $(1,\\ -1)$ — know this by heart."
+ },
+ {
+  "t": "li",
+  "uz": "Blok-diagonal matritsa xos qiymatlari bloklarniki bilan bir xil: masalan, $3\\times3$ matritsada bitta element alohida tursa, u darhol xos qiymat.",
+  "ru": "Собственные значения блочно-диагональной матрицы совпадают с собственными значениями блоков: например, если в матрице $3\\times3$ один элемент стоит отдельно, он сразу является собственным значением.",
+  "en": "The eigenvalues of a block-diagonal matrix are those of its blocks: for example, if one entry of a $3\\times3$ matrix stands alone, it is immediately an eigenvalue."
+ },
+ {
+  "t": "li",
+  "uz": "Ermit (simmetrik) matritsada kompleks xos qiymat chiqsa — hisobda xato bor. Unitar (ortogonal) matritsada $|\\lambda|\\neq1$ chiqsa — ham xato.",
+  "ru": "Если у эрмитовой (симметричной) матрицы получилось комплексное собственное значение — в расчёте ошибка. Если у унитарной (ортогональной) матрицы получилось $|\\lambda|\\neq1$ — тоже ошибка.",
+  "en": "If a Hermitian (symmetric) matrix gives a complex eigenvalue, there is a mistake in the calculation. If a unitary (orthogonal) matrix gives $|\\lambda|\\neq1$, that is also a mistake."
+ },
+ {
+  "t": "li",
+  "uz": "Xos vektorni tekshirish uchun uni matritsaga ko'paytiring: natija o'sha vektorga proporsional bo'lishi kerak. Javob variantlarida bu eng tez usul.",
+  "ru": "Чтобы проверить собственный вектор, умножьте на него матрицу: результат должен быть пропорционален этому же вектору. Среди вариантов ответа это самый быстрый способ.",
+  "en": "To check an eigenvector, multiply the matrix by it: the result must be proportional to the same vector. Among answer choices this is the fastest method."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Matritsalar ko'paytmasi",
+    "ru": "Произведение матриц",
+    "en": "Matrix product",
+    "m": "(AB)_{ij}=\\sum_k a_{ik}b_{kj}"
+   },
+   {
+    "uz": "$2\\times2$ determinant",
+    "ru": "Определитель $2\\times2$",
+    "en": "$2\\times2$ determinant",
+    "m": "\\det A=ad-bc"
+   },
+   {
+    "uz": "$2\\times2$ teskari matritsa",
+    "ru": "Обратная матрица $2\\times2$",
+    "en": "$2\\times2$ inverse",
+    "m": "A^{-1}=\\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}"
+   },
+   {
+    "uz": "Burish matritsasi",
+    "ru": "Матрица поворота",
+    "en": "Rotation matrix",
+    "m": "R(\\theta)=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{pmatrix}"
+   },
+   {
+    "uz": "Xarakteristik tenglama",
+    "ru": "Характеристическое уравнение",
+    "en": "Characteristic equation",
+    "m": "\\det(A-\\lambda I)=0"
+   },
+   {
+    "uz": "Iz va determinant",
+    "ru": "След и определитель",
+    "en": "Trace and determinant",
+    "m": "\\sum\\lambda_i=\\mathrm{tr}\\,A,\\quad \\prod\\lambda_i=\\det A"
+   },
+   {
+    "uz": "Diagonallashtirish",
+    "ru": "Диагонализация",
+    "en": "Diagonalization",
+    "m": "A=PDP^{-1},\\quad A^n=PD^nP^{-1}"
+   },
+   {
+    "uz": "Pauli matritsalari",
+    "ru": "Матрицы Паули",
+    "en": "Pauli matrices",
+    "m": "\\sigma_i^2=I,\\quad [\\sigma_x,\\sigma_y]=2i\\sigma_z"
+   }
+  ]
+ }
+]

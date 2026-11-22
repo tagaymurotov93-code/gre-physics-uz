@@ -1,0 +1,578 @@
+[
+ {
+  "id": "B0-L09-Q01",
+  "question_en": "A $2\\times2$ matrix has trace $5$ and determinant $6$. What are its eigenvalues?",
+  "question_uz": "$2\\times2$ matritsaning izi $5$ ga, determinanti $6$ ga teng. Uning xos qiymatlari qaysi?",
+  "question_ru": "След матрицы $2\\times2$ равен $5$, определитель равен $6$. Каковы её собственные значения?",
+  "options": [
+   "(A) $1,\\ 6$",
+   "(B) $-2,\\ -3$",
+   "(C) $2,\\ 3$",
+   "(D) $1,\\ 5$",
+   "(E) $-1,\\ 6$"
+  ],
+  "correct": 2,
+  "explanation_200": "To'g'ri: C. λ₁+λ₂=tr=5, λ₁λ₂=det=6 → λ=2, 3.\nAsos: λ²−(tr A)λ+det A=0.",
+  "full_solution": {
+   "uz": [
+    "$\\lambda^2-5\\lambda+6=0$, $\\ (\\lambda-2)(\\lambda-3)=0$: $$\\lambda_1=2,\\qquad \\lambda_2=3$$"
+   ],
+   "ru": [
+    "$\\lambda^2-5\\lambda+6=0$, $\\ (\\lambda-2)(\\lambda-3)=0$: $$\\lambda_1=2,\\qquad \\lambda_2=3$$"
+   ],
+   "en": [
+    "$\\lambda^2-5\\lambda+6=0$, $\\ (\\lambda-2)(\\lambda-3)=0$: $$\\lambda_1=2,\\qquad \\lambda_2=3$$"
+   ]
+  },
+  "distractors": {
+   "A": "ko'paytma $6$, lekin yig'indi $7$",
+   "B": "yig'indi ishorasi teskari",
+   "D": "yig'indi $6$ ga, ko'paytma $5$ ga teng — iz va determinant almashtirilgan",
+   "E": "yig'indi $5$, lekin ko'paytma $-6$"
+  },
+  "distractors_ru": {
+   "A": "произведение $6$, но сумма $7$",
+   "B": "знак суммы перепутан",
+   "D": "сумма $6$, произведение $5$ — след и определитель перепутаны",
+   "E": "сумма $5$, но произведение $-6$"
+  },
+  "distractors_en": {
+   "A": "the product is $6$ but the sum is $7$",
+   "B": "the sign of the sum is reversed",
+   "D": "sum $6$, product $5$ — trace and determinant swapped",
+   "E": "the sum is $5$ but the product is $-6$"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q01",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-Q02",
+  "question_en": "For a $3\\times3$ matrix, $\\det A=4$. What is $\\det(2A^{-1})$?",
+  "question_uz": "$3\\times3$ matritsa uchun $\\det A=4$. $\\det(2A^{-1})$ nimaga teng?",
+  "question_ru": "Для матрицы $3\\times3$: $\\det A=4$. Чему равен $\\det(2A^{-1})$?",
+  "options": [
+   "(A) $\\dfrac{1}{2}$",
+   "(B) $\\dfrac{1}{32}$",
+   "(C) $8$",
+   "(D) $32$",
+   "(E) $2$"
+  ],
+  "correct": 4,
+  "explanation_200": "To'g'ri: E. det(cA)=cⁿdet A, det A⁻¹=1/det A: 2³·(1/4)=2.\nAsos: determinant xossalari.",
+  "full_solution": {
+   "uz": [
+    "$n\\times n$ matritsa uchun $\\det(cA)=c^n\\det A$ va $\\det A^{-1}=\\dfrac{1}{\\det A}$: $$\\det(2A^{-1})=2^3\\cdot\\frac{1}{4}=2$$"
+   ],
+   "ru": [
+    "Для матрицы $n\\times n$: $\\det(cA)=c^n\\det A$ и $\\det A^{-1}=\\dfrac{1}{\\det A}$: $$\\det(2A^{-1})=2^3\\cdot\\frac{1}{4}=2$$"
+   ],
+   "en": [
+    "For an $n\\times n$ matrix, $\\det(cA)=c^n\\det A$ and $\\det A^{-1}=\\dfrac{1}{\\det A}$: $$\\det(2A^{-1})=2^3\\cdot\\frac{1}{4}=2$$"
+   ]
+  },
+  "distractors": {
+   "A": "$2$ ning darajasi $3$ ekani unutilgan",
+   "B": "bu $\\det(2A)^{-1}$",
+   "C": "$\\det A^{-1}$ hisobga olinmagan",
+   "D": "bu $\\det(2A)$"
+  },
+  "distractors_ru": {
+   "A": "забыта степень $3$ у множителя $2$",
+   "B": "это $\\det(2A)^{-1}$",
+   "C": "не учтён $\\det A^{-1}$",
+   "D": "это $\\det(2A)$"
+  },
+  "distractors_en": {
+   "A": "forgot that the factor $2$ is cubed",
+   "B": "this is $\\det(2A)^{-1}$",
+   "C": "$\\det A^{-1}$ was ignored",
+   "D": "this is $\\det(2A)$"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q02",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-Q03",
+  "question_en": "What are the eigenvalues of $\\sigma_x=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$?",
+  "question_uz": "$\\sigma_x=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$ matritsaning xos qiymatlari qaysi?",
+  "question_ru": "Каковы собственные значения матрицы $\\sigma_x=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$?",
+  "options": [
+   "(A) $1,\\ -1$",
+   "(B) $0,\\ 1$",
+   "(C) $i,\\ -i$",
+   "(D) $1,\\ 1$",
+   "(E) $0,\\ 2$"
+  ],
+  "correct": 0,
+  "explanation_200": "To'g'ri: A. tr=0, det=−1 → λ²−1=0, λ=±1.\nAsos: xarakteristik tenglama; ermit → λ haqiqiy.",
+  "full_solution": {
+   "uz": [
+    "$\\mathrm{tr}\\,\\sigma_x=0$, $\\ \\det\\sigma_x=-1$: $$\\lambda^2-1=0,\\qquad \\lambda=\\pm1$$"
+   ],
+   "ru": [
+    "$\\mathrm{tr}\\,\\sigma_x=0$, $\\ \\det\\sigma_x=-1$: $$\\lambda^2-1=0,\\qquad \\lambda=\\pm1$$"
+   ],
+   "en": [
+    "$\\mathrm{tr}\\,\\sigma_x=0$, $\\ \\det\\sigma_x=-1$: $$\\lambda^2-1=0,\\qquad \\lambda=\\pm1$$"
+   ]
+  },
+  "distractors": {
+   "B": "diagonal elementlar emas — matritsa diagonal emas",
+   "C": "ermit matritsaning xos qiymatlari haqiqiy bo'ladi",
+   "D": "ko'paytma $\\det=-1$ ga teng bo'lishi kerak",
+   "E": "yig'indi $\\mathrm{tr}=0$ ga teng bo'lishi kerak"
+  },
+  "distractors_ru": {
+   "B": "это не диагональные элементы — матрица не диагональна",
+   "C": "у эрмитовой матрицы собственные значения вещественны",
+   "D": "произведение должно быть равно $\\det=-1$",
+   "E": "сумма должна быть равна $\\mathrm{tr}=0$"
+  },
+  "distractors_en": {
+   "B": "these are not diagonal entries — the matrix is not diagonal",
+   "C": "a Hermitian matrix has real eigenvalues",
+   "D": "the product must equal $\\det=-1$",
+   "E": "the sum must equal $\\mathrm{tr}=0$"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q03",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-Q04",
+  "question_en": "Which of the following matrices is Hermitian ($A^\\dagger=A$)?",
+  "question_uz": "Quyidagi matritsalardan qaysi biri ermit ($A^\\dagger=A$)?",
+  "question_ru": "Какая из следующих матриц эрмитова ($A^\\dagger=A$)?",
+  "options": [
+   "(A) $\\begin{pmatrix}1&i\\\\i&1\\end{pmatrix}$",
+   "(B) $\\begin{pmatrix}0&1\\\\-1&0\\end{pmatrix}$",
+   "(C) $\\begin{pmatrix}i&0\\\\0&1\\end{pmatrix}$",
+   "(D) $\\begin{pmatrix}2&-i\\\\i&3\\end{pmatrix}$",
+   "(E) $\\begin{pmatrix}1&2\\\\3&1\\end{pmatrix}$"
+  ],
+  "correct": 3,
+  "explanation_200": "To'g'ri: D. Diagonal haqiqiy, a₁₂=−i, a₂₁=i=(a₁₂)*.\nAsos: A†=(Aᵀ)*, ermit ⇔ aⱼᵢ=aᵢⱼ*.",
+  "full_solution": {
+   "uz": [
+    "Ermit matritsada diagonal haqiqiy va $a_{21}=a_{12}^*$. D da $a_{12}=-i$, $\\ a_{21}=i=(-i)^*$: $$A^\\dagger=\\begin{pmatrix}2&-i\\\\i&3\\end{pmatrix}=A$$"
+   ],
+   "ru": [
+    "У эрмитовой матрицы диагональ вещественна и $a_{21}=a_{12}^*$. В D: $a_{12}=-i$, $\\ a_{21}=i=(-i)^*$: $$A^\\dagger=\\begin{pmatrix}2&-i\\\\i&3\\end{pmatrix}=A$$"
+   ],
+   "en": [
+    "A Hermitian matrix has a real diagonal and $a_{21}=a_{12}^*$. In D, $a_{12}=-i$ and $a_{21}=i=(-i)^*$: $$A^\\dagger=\\begin{pmatrix}2&-i\\\\i&3\\end{pmatrix}=A$$"
+   ]
+  },
+  "distractors": {
+   "A": "simmetrik, lekin $i^*=-i\\neq i$",
+   "B": "antisimmetrik: $A^T=-A$",
+   "C": "diagonalda kompleks son $i$",
+   "E": "simmetrik emas: $2\\neq3$"
+  },
+  "distractors_ru": {
+   "A": "симметрична, но $i^*=-i\\neq i$",
+   "B": "антисимметрична: $A^T=-A$",
+   "C": "на диагонали комплексное число $i$",
+   "E": "не симметрична: $2\\neq3$"
+  },
+  "distractors_en": {
+   "A": "symmetric, but $i^*=-i\\neq i$",
+   "B": "antisymmetric: $A^T=-A$",
+   "C": "a complex number $i$ on the diagonal",
+   "E": "not symmetric: $2\\neq3$"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q04",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-Q05",
+  "question_en": "What is the commutator of the Pauli matrices $[\\sigma_x,\\sigma_z]$?",
+  "question_uz": "Pauli matritsalari uchun kommutator $[\\sigma_x,\\sigma_z]$ nimaga teng?",
+  "question_ru": "Чему равен коммутатор матриц Паули $[\\sigma_x,\\sigma_z]$?",
+  "options": [
+   "(A) $2i\\sigma_y$",
+   "(B) $-2i\\sigma_y$",
+   "(C) $0$",
+   "(D) $2\\sigma_y$",
+   "(E) $i\\sigma_y$"
+  ],
+  "correct": 1,
+  "explanation_200": "To'g'ri: B. [σz,σx]=2iσy (siklik), demak [σx,σz]=−2iσy.\nAsos: [σᵢ,σⱼ]=2iεᵢⱼₖσₖ.",
+  "full_solution": {
+   "uz": [
+    "Siklik tartib $x\\to y\\to z\\to x$: $[\\sigma_z,\\sigma_x]=2i\\sigma_y$. Tartib almashsa, ishora o'zgaradi: $${[\\sigma_x,\\sigma_z]}=-2i\\sigma_y=\\begin{pmatrix}0&-2\\\\2&0\\end{pmatrix}$$"
+   ],
+   "ru": [
+    "Циклический порядок $x\\to y\\to z\\to x$: $[\\sigma_z,\\sigma_x]=2i\\sigma_y$. При перестановке знак меняется: $${[\\sigma_x,\\sigma_z]}=-2i\\sigma_y=\\begin{pmatrix}0&-2\\\\2&0\\end{pmatrix}$$"
+   ],
+   "en": [
+    "Cyclic order $x\\to y\\to z\\to x$: $[\\sigma_z,\\sigma_x]=2i\\sigma_y$. Swapping the order changes the sign: $${[\\sigma_x,\\sigma_z]}=-2i\\sigma_y=\\begin{pmatrix}0&-2\\\\2&0\\end{pmatrix}$$"
+   ]
+  },
+  "distractors": {
+   "A": "tartib siklik emas — ishora teskari",
+   "C": "Pauli matritsalari o'zaro kommutatsiyalanmaydi",
+   "D": "$i$ ko'paytuvchi tushib qolgan",
+   "E": "bu $\\sigma_z\\sigma_x$ ko'paytma, kommutator emas"
+  },
+  "distractors_ru": {
+   "A": "порядок не циклический — знак обратный",
+   "C": "матрицы Паули не коммутируют",
+   "D": "пропущен множитель $i$",
+   "E": "это произведение $\\sigma_z\\sigma_x$, а не коммутатор"
+  },
+  "distractors_en": {
+   "A": "the order is not cyclic — the sign is reversed",
+   "C": "Pauli matrices do not commute",
+   "D": "the factor $i$ is missing",
+   "E": "this is the product $\\sigma_z\\sigma_x$, not the commutator"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q05",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-Q06",
+  "question_en": "What are the eigenvalues of $R(\\theta)=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{pmatrix}$?",
+  "question_uz": "$R(\\theta)=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{pmatrix}$ matritsaning xos qiymatlari qaysi?",
+  "question_ru": "Каковы собственные значения матрицы $R(\\theta)=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{pmatrix}$?",
+  "options": [
+   "(A) $\\cos\\theta\\pm\\sin\\theta$",
+   "(B) $\\pm1$",
+   "(C) $e^{\\pm i\\theta}$",
+   "(D) $1,\\ \\cos2\\theta$",
+   "(E) $\\cos\\theta,\\ \\cos\\theta$"
+  ],
+  "correct": 2,
+  "explanation_200": "To'g'ri: C. λ²−2λcosθ+1=0 → λ=cosθ±i·sinθ=e^{±iθ}.\nAsos: tr=2cosθ, det=1; Eyler formulasi.",
+  "full_solution": {
+   "uz": [
+    "$\\mathrm{tr}\\,R=2\\cos\\theta$, $\\ \\det R=1$: $$\\lambda=\\cos\\theta\\pm\\sqrt{\\cos^2\\theta-1}=\\cos\\theta\\pm i\\sin\\theta=e^{\\pm i\\theta}$$"
+   ],
+   "ru": [
+    "$\\mathrm{tr}\\,R=2\\cos\\theta$, $\\ \\det R=1$: $$\\lambda=\\cos\\theta\\pm\\sqrt{\\cos^2\\theta-1}=\\cos\\theta\\pm i\\sin\\theta=e^{\\pm i\\theta}$$"
+   ],
+   "en": [
+    "$\\mathrm{tr}\\,R=2\\cos\\theta$, $\\ \\det R=1$: $$\\lambda=\\cos\\theta\\pm\\sqrt{\\cos^2\\theta-1}=\\cos\\theta\\pm i\\sin\\theta=e^{\\pm i\\theta}$$"
+   ]
+  },
+  "distractors": {
+   "A": "ko'paytma $\\cos2\\theta\\neq1=\\det R$",
+   "B": "bu akslantirish matritsasining xos qiymatlari",
+   "D": "yig'indi $2\\cos\\theta$ ga teng emas",
+   "E": "ko'paytma $\\cos^2\\theta\\neq1$"
+  },
+  "distractors_ru": {
+   "A": "произведение $\\cos2\\theta\\neq1=\\det R$",
+   "B": "это собственные значения матрицы отражения",
+   "D": "сумма не равна $2\\cos\\theta$",
+   "E": "произведение $\\cos^2\\theta\\neq1$"
+  },
+  "distractors_en": {
+   "A": "the product is $\\cos2\\theta\\neq1=\\det R$",
+   "B": "these are the eigenvalues of a reflection",
+   "D": "the sum is not $2\\cos\\theta$",
+   "E": "the product is $\\cos^2\\theta\\neq1$"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q06",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-Q07",
+  "question_en": "What are the eigenvalues of $\\begin{pmatrix}2&5&7\\\\0&-1&3\\\\0&0&4\\end{pmatrix}$?",
+  "question_uz": "$\\begin{pmatrix}2&5&7\\\\0&-1&3\\\\0&0&4\\end{pmatrix}$ matritsaning xos qiymatlari qaysi?",
+  "question_ru": "Каковы собственные значения матрицы $\\begin{pmatrix}2&5&7\\\\0&-1&3\\\\0&0&4\\end{pmatrix}$?",
+  "options": [
+   "(A) $2,\\ -1,\\ 4$",
+   "(B) $2,\\ 5,\\ 7$",
+   "(C) $2,\\ 1,\\ 4$",
+   "(D) $5,\\ 7,\\ 3$",
+   "(E) $-2,\\ 1,\\ -4$"
+  ],
+  "correct": 0,
+  "explanation_200": "To'g'ri: A. Uchburchakli matritsaning xos qiymatlari — diagonalda.\nAsos: det(A−λI)=(2−λ)(−1−λ)(4−λ).",
+  "full_solution": {
+   "uz": [
+    "Uchburchakli matritsada $\\det(A-\\lambda I)$ — diagonal elementlar ko'paytmasi: $$(2-\\lambda)(-1-\\lambda)(4-\\lambda)=0\\quad\\Rightarrow\\quad\\lambda=2,\\ -1,\\ 4$$"
+   ],
+   "ru": [
+    "Для треугольной матрицы $\\det(A-\\lambda I)$ — произведение диагональных элементов: $$(2-\\lambda)(-1-\\lambda)(4-\\lambda)=0\\quad\\Rightarrow\\quad\\lambda=2,\\ -1,\\ 4$$"
+   ],
+   "en": [
+    "For a triangular matrix $\\det(A-\\lambda I)$ is the product of the diagonal entries: $$(2-\\lambda)(-1-\\lambda)(4-\\lambda)=0\\quad\\Rightarrow\\quad\\lambda=2,\\ -1,\\ 4$$"
+   ]
+  },
+  "distractors": {
+   "B": "bu birinchi qator",
+   "C": "$-1$ ning ishorasi yo'qolgan",
+   "D": "bu diagonaldan tashqaridagi elementlar",
+   "E": "barcha ishoralar teskari"
+  },
+  "distractors_ru": {
+   "B": "это первая строка",
+   "C": "потерян знак у $-1$",
+   "D": "это внедиагональные элементы",
+   "E": "все знаки обратные"
+  },
+  "distractors_en": {
+   "B": "this is the first row",
+   "C": "the sign of $-1$ was lost",
+   "D": "these are the off-diagonal entries",
+   "E": "all signs are reversed"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q07",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-Q08",
+  "question_en": "Two identical masses $m$ are connected in series between two walls by three identical springs of stiffness $k$. What are the normal frequencies?",
+  "question_uz": "Ikki bir xil $m$ massa devorlar orasida uchta bir xil $k$ bikrlikdagi prujina bilan ketma-ket bog'langan. Normal chastotalar qaysi?",
+  "question_ru": "Две одинаковые массы $m$ соединены последовательно между стенками тремя одинаковыми пружинами жёсткости $k$. Каковы нормальные частоты?",
+  "options": [
+   "(A) $\\sqrt{k/m},\\ \\sqrt{2k/m}$",
+   "(B) $\\sqrt{2k/m},\\ \\sqrt{2k/m}$",
+   "(C) $\\sqrt{k/2m},\\ \\sqrt{k/m}$",
+   "(D) $\\sqrt{2k/m},\\ \\sqrt{4k/m}$",
+   "(E) $\\sqrt{k/m},\\ \\sqrt{3k/m}$"
+  ],
+  "correct": 4,
+  "explanation_200": "To'g'ri: E. K=[[2k,−k],[−k,2k]] → mω²=2k∓k: ω=√(k/m), √(3k/m).\nAsos: Ka=mω²a, λ=a±b.",
+  "full_solution": {
+   "uz": [
+    "$K=\\begin{pmatrix}2k&-k\\\\-k&2k\\end{pmatrix}$ ning xos qiymatlari $2k\\mp k$: $$\\omega_1=\\sqrt{\\frac{k}{m}}\\ (1,\\ 1),\\qquad \\omega_2=\\sqrt{\\frac{3k}{m}}\\ (1,\\ -1)$$"
+   ],
+   "ru": [
+    "Собственные значения $K=\\begin{pmatrix}2k&-k\\\\-k&2k\\end{pmatrix}$ равны $2k\\mp k$: $$\\omega_1=\\sqrt{\\frac{k}{m}}\\ (1,\\ 1),\\qquad \\omega_2=\\sqrt{\\frac{3k}{m}}\\ (1,\\ -1)$$"
+   ],
+   "en": [
+    "The eigenvalues of $K=\\begin{pmatrix}2k&-k\\\\-k&2k\\end{pmatrix}$ are $2k\\mp k$: $$\\omega_1=\\sqrt{\\frac{k}{m}}\\ (1,\\ 1),\\qquad \\omega_2=\\sqrt{\\frac{3k}{m}}\\ (1,\\ -1)$$"
+   ]
+  },
+  "distractors": {
+   "A": "$\\sqrt{2k/m}$ — bitta massa qo'zg'almas bo'lganda",
+   "B": "ikki karrali chastota emas — modalar turlicha",
+   "C": "massa yoki bikrlik noto'g'ri qo'shilgan",
+   "D": "diagonal $2k$ ga $\\pm$ o'rniga $\\times$ qo'llangan"
+  },
+  "distractors_ru": {
+   "A": "$\\sqrt{2k/m}$ — когда одна масса закреплена",
+   "B": "частота не двукратная — моды разные",
+   "C": "масса или жёсткость сложены неверно",
+   "D": "к диагонали $2k$ применено $\\times$ вместо $\\pm$"
+  },
+  "distractors_en": {
+   "A": "$\\sqrt{2k/m}$ is when one mass is held fixed",
+   "B": "the frequency is not repeated — the modes differ",
+   "C": "masses or stiffnesses combined incorrectly",
+   "D": "applied $\\times$ instead of $\\pm$ to the diagonal $2k$"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q08",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-Q09",
+  "question_en": "Which matrix is the inverse of $\\begin{pmatrix}2&1\\\\3&2\\end{pmatrix}$?",
+  "question_uz": "$\\begin{pmatrix}2&1\\\\3&2\\end{pmatrix}$ matritsaga teskari matritsa qaysi?",
+  "question_ru": "Какая матрица обратна к $\\begin{pmatrix}2&1\\\\3&2\\end{pmatrix}$?",
+  "options": [
+   "(A) $\\begin{pmatrix}2&3\\\\1&2\\end{pmatrix}$",
+   "(B) $\\begin{pmatrix}-2&1\\\\3&-2\\end{pmatrix}$",
+   "(C) $\\begin{pmatrix}1/2&1\\\\1/3&1/2\\end{pmatrix}$",
+   "(D) $\\begin{pmatrix}2&-1\\\\-3&2\\end{pmatrix}$",
+   "(E) $\\begin{pmatrix}2&-3\\\\-1&2\\end{pmatrix}$"
+  ],
+  "correct": 3,
+  "explanation_200": "To'g'ri: D. det=4−3=1; diagonalni almashtirib, qolganini ishorasini o'zgartiramiz.\nAsos: 2×2 teskari matritsa formulasi.",
+  "full_solution": {
+   "uz": [
+    "$\\det A=4-3=1$: $$A^{-1}=\\frac{1}{1}\\begin{pmatrix}2&-1\\\\-3&2\\end{pmatrix},\\qquad AA^{-1}=\\begin{pmatrix}4-3&-2+2\\\\6-6&-3+4\\end{pmatrix}=I$$"
+   ],
+   "ru": [
+    "$\\det A=4-3=1$: $$A^{-1}=\\frac{1}{1}\\begin{pmatrix}2&-1\\\\-3&2\\end{pmatrix},\\qquad AA^{-1}=\\begin{pmatrix}4-3&-2+2\\\\6-6&-3+4\\end{pmatrix}=I$$"
+   ],
+   "en": [
+    "$\\det A=4-3=1$: $$A^{-1}=\\frac{1}{1}\\begin{pmatrix}2&-1\\\\-3&2\\end{pmatrix},\\qquad AA^{-1}=\\begin{pmatrix}4-3&-2+2\\\\6-6&-3+4\\end{pmatrix}=I$$"
+   ]
+  },
+  "distractors": {
+   "A": "bu transponirlangan matritsa",
+   "B": "bu $-A^{-1}$",
+   "C": "elementlarni teskarisiga almashtirish — teskari matritsa emas",
+   "E": "bu $(A^{-1})^T$"
+  },
+  "distractors_ru": {
+   "A": "это транспонированная матрица",
+   "B": "это $-A^{-1}$",
+   "C": "обращение элементов — не обратная матрица",
+   "E": "это $(A^{-1})^T$"
+  },
+  "distractors_en": {
+   "A": "this is the transpose",
+   "B": "this is $-A^{-1}$",
+   "C": "inverting entries is not the inverse matrix",
+   "E": "this is $(A^{-1})^T$"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q09",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-Q10",
+  "question_en": "A $2\\times2$ matrix $A$ has eigenvalues $1$ and $2$. What is $\\mathrm{tr}(A^3)$?",
+  "question_uz": "$2\\times2$ matritsa $A$ ning xos qiymatlari $1$ va $2$. $\\mathrm{tr}(A^3)$ nimaga teng?",
+  "question_ru": "Собственные значения матрицы $A$ $2\\times2$ равны $1$ и $2$. Чему равен $\\mathrm{tr}(A^3)$?",
+  "options": [
+   "(A) $3$",
+   "(B) $9$",
+   "(C) $27$",
+   "(D) $8$",
+   "(E) $6$"
+  ],
+  "correct": 1,
+  "explanation_200": "To'g'ri: B. A³ ning xos qiymatlari 1³ va 2³; tr=1+8=9.\nAsos: Av=λv ⇒ Aⁿv=λⁿv; iz = xos qiymatlar yig'indisi.",
+  "full_solution": {
+   "uz": [
+    "$A^3$ ning xos qiymatlari $\\lambda^3$: $$\\mathrm{tr}(A^3)=1^3+2^3=9$$"
+   ],
+   "ru": [
+    "Собственные значения $A^3$ равны $\\lambda^3$: $$\\mathrm{tr}(A^3)=1^3+2^3=9$$"
+   ],
+   "en": [
+    "The eigenvalues of $A^3$ are $\\lambda^3$: $$\\mathrm{tr}(A^3)=1^3+2^3=9$$"
+   ]
+  },
+  "distractors": {
+   "A": "bu $\\mathrm{tr}\\,A$",
+   "C": "bu $(\\mathrm{tr}\\,A)^3$",
+   "D": "bu $\\det(A^3)$",
+   "E": "bu $\\mathrm{tr}\\,A\\cdot\\det A$"
+  },
+  "distractors_ru": {
+   "A": "это $\\mathrm{tr}\\,A$",
+   "C": "это $(\\mathrm{tr}\\,A)^3$",
+   "D": "это $\\det(A^3)$",
+   "E": "это $\\mathrm{tr}\\,A\\cdot\\det A$"
+  },
+  "distractors_en": {
+   "A": "this is $\\mathrm{tr}\\,A$",
+   "C": "this is $(\\mathrm{tr}\\,A)^3$",
+   "D": "this is $\\det(A^3)$",
+   "E": "this is $\\mathrm{tr}\\,A\\cdot\\det A$"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q10",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-Q11",
+  "question_en": "Which of the following numbers can be an eigenvalue of a unitary matrix?",
+  "question_uz": "Quyidagi sonlardan qaysi biri unitar matritsaning xos qiymati bo'lishi mumkin?",
+  "question_ru": "Какое из следующих чисел может быть собственным значением унитарной матрицы?",
+  "options": [
+   "(A) $2$",
+   "(B) $0$",
+   "(C) $\\dfrac{1+i}{\\sqrt{2}}$",
+   "(D) $1+i$",
+   "(E) $-\\dfrac{1}{2}$"
+  ],
+  "correct": 2,
+  "explanation_200": "To'g'ri: C. Unitar matritsa uzunlikni saqlaydi → |λ|=1; |(1+i)/√2|=1.\nAsos: U†U=I ⇒ |λ|=1.",
+  "full_solution": {
+   "uz": [
+    "$U\\vec v=\\lambda\\vec v$ va $|U\\vec v|=|\\vec v|$ dan $|\\lambda|=1$. Faqat C: $$\\left|\\frac{1+i}{\\sqrt{2}}\\right|=\\frac{\\sqrt{1+1}}{\\sqrt{2}}=1$$"
+   ],
+   "ru": [
+    "Из $U\\vec v=\\lambda\\vec v$ и $|U\\vec v|=|\\vec v|$ следует $|\\lambda|=1$. Только C: $$\\left|\\frac{1+i}{\\sqrt{2}}\\right|=\\frac{\\sqrt{1+1}}{\\sqrt{2}}=1$$"
+   ],
+   "en": [
+    "From $U\\vec v=\\lambda\\vec v$ and $|U\\vec v|=|\\vec v|$ it follows that $|\\lambda|=1$. Only C: $$\\left|\\frac{1+i}{\\sqrt{2}}\\right|=\\frac{\\sqrt{1+1}}{\\sqrt{2}}=1$$"
+   ]
+  },
+  "distractors": {
+   "A": "$|\\lambda|=2$ — uzunlik o'zgaradi",
+   "B": "$\\lambda=0$ — matritsa xos, teskarisi yo'q",
+   "D": "$|1+i|=\\sqrt{2}\\neq1$",
+   "E": "$|\\lambda|=1/2$ — uzunlik o'zgaradi"
+  },
+  "distractors_ru": {
+   "A": "$|\\lambda|=2$ — длина меняется",
+   "B": "$\\lambda=0$ — матрица вырождена, обратной нет",
+   "D": "$|1+i|=\\sqrt{2}\\neq1$",
+   "E": "$|\\lambda|=1/2$ — длина меняется"
+  },
+  "distractors_en": {
+   "A": "$|\\lambda|=2$ — the length changes",
+   "B": "$\\lambda=0$ — the matrix is singular, no inverse",
+   "D": "$|1+i|=\\sqrt{2}\\neq1$",
+   "E": "$|\\lambda|=1/2$ — the length changes"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q11",
+  "source": "original"
+ },
+ {
+  "id": "B0-L09-Q12",
+  "question_en": "In the two-level model of the ammonia molecule the Hamiltonian is $H=\\begin{pmatrix}E_0&-A\\\\-A&E_0\\end{pmatrix}$, $A>0$. What are the energy levels?",
+  "question_uz": "Ammiak molekulasining ikki sathli modelida gamiltonian $H=\\begin{pmatrix}E_0&-A\\\\-A&E_0\\end{pmatrix}$, $A>0$. Energiya sathlari qaysi?",
+  "question_ru": "В двухуровневой модели молекулы аммиака гамильтониан $H=\\begin{pmatrix}E_0&-A\\\\-A&E_0\\end{pmatrix}$, $A>0$. Каковы уровни энергии?",
+  "options": [
+   "(A) $E_0\\pm2A$",
+   "(B) $E_0,\\ A$",
+   "(C) $E_0^2-A^2$",
+   "(D) $E_0\\pm A$",
+   "(E) $E_0\\pm\\dfrac{A}{2}$"
+  ],
+  "correct": 3,
+  "explanation_200": "To'g'ri: D. [[a,b],[b,a]] ko'rinish: λ=a±b=E₀∓A.\nAsos: energiya sathlari — H ning xos qiymatlari.",
+  "full_solution": {
+   "uz": [
+    "$\\begin{pmatrix}a&b\\\\b&a\\end{pmatrix}$ ko'rinish, $a=E_0$, $\\ b=-A$: $$E=E_0\\pm A,\\qquad \\Delta E=2A$$"
+   ],
+   "ru": [
+    "Вид $\\begin{pmatrix}a&b\\\\b&a\\end{pmatrix}$, $a=E_0$, $\\ b=-A$: $$E=E_0\\pm A,\\qquad \\Delta E=2A$$"
+   ],
+   "en": [
+    "The form $\\begin{pmatrix}a&b\\\\b&a\\end{pmatrix}$ with $a=E_0$, $\\ b=-A$: $$E=E_0\\pm A,\\qquad \\Delta E=2A$$"
+   ]
+  },
+  "distractors": {
+   "A": "$2A$ — sathlar orasidagi farq, siljish emas",
+   "B": "bular matritsa elementlari, xos qiymatlar emas",
+   "C": "bu $\\det H$",
+   "E": "$1/2$ ko'paytuvchi ortiqcha"
+  },
+  "distractors_ru": {
+   "A": "$2A$ — расстояние между уровнями, а не сдвиг",
+   "B": "это элементы матрицы, а не собственные значения",
+   "C": "это $\\det H$",
+   "E": "лишний множитель $1/2$"
+  },
+  "distractors_en": {
+   "A": "$2A$ is the level spacing, not the shift",
+   "B": "these are matrix entries, not eigenvalues",
+   "C": "this is $\\det H$",
+   "E": "an extra factor of $1/2$"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q12",
+  "source": "original"
+ }
+]
