@@ -301,12 +301,14 @@
   }
 
   // yechim qadamlari: {uz:[...], ru:[...], en:[...]} parallel; har qadam: matn (+ $$formula$$)
-  function steps(sol, tag = "ol") {
+  // B1+: rules[i] — shu qadamda ishlatilgan qoida/ta'rif/formula (yashil ramka; uz/ru + ko'k inglizcha)
+  function steps(sol, tag = "ol", rules = null) {
     const split = (x) => { const k = x.indexOf("$$"); return k < 0 ? [x, ""] : [x.slice(0, k).trim(), x.slice(k)]; };
     const main = sol[lang] || sol.uz, en = sol.en || [];
     return `<${tag} class="steps">${main.map((s, i) => {
       const [txt, math] = split(s), [txtEn] = split(en[i] || "");
-      return `<li>${txt ? bi({ [lang]: txt, en: txtEn }, "div") : ""}${math ? `<div class="fm">${rich(math)}</div>` : ""}</li>`;
+      const r = rules && rules[i];
+      return `<li>${txt ? bi({ [lang]: txt, en: txtEn }, "div") : ""}${math ? `<div class="fm">${rich(math)}</div>` : ""}${r ? `<div class="rule">${bi(r, "div")}</div>` : ""}</li>`;
     }).join("")}</${tag}>`;
   }
 
@@ -318,7 +320,7 @@
         ${s.figure ? `<img class="fig" src="${base(id)}${s.figure}?v=${VER}" alt="${s.id}">` : ""}
         <button class="btn ghost wide" data-i="${i}">${esc(t(T.show))}</button>
         <div class="sol" id="sol${i}" hidden>
-          ${steps(s.solution)}
+          ${steps(s.solution, "ol", s.rules)}
           <div class="answer"><b>${esc(t(T.answer))}:</b> ${tex(locIn(s.answer, lang), false)}
             <div class="basis"><b>${esc(t(T.basis))}:</b> ${bi(s.basis, "span")}</div></div>
         </div></section>`).join("");
@@ -353,7 +355,7 @@
           }).join("")}</div>
           ${done ? `<div class="sol">
             <div class="verdict ${chosen === q.correct ? "ok" : "bad"}">${chosen === q.correct ? esc(t(T.correct)) : `${esc(t(T.wrong))} ${LETTERS[q.correct]}`}</div>
-            ${steps(q.full_solution, "ul")}
+            ${steps(q.full_solution, "ul", q.rules)}
             ${dist ? `<div class="distr"><b>${esc(t(T.distr))}:</b><ul>${dist}</ul></div>` : ""}
             <p><button class="btn wide" id="nx">${esc(t(st.i === Q.length - 1 ? T.results : T.next))}</button></p></div>` : ""}
         </section>`;

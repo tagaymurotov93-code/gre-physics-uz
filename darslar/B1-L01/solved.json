@@ -1,0 +1,761 @@
+[
+ {
+  "id": "B1-L01-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Basketbol to'pi $3.0\\ \\mathrm{m}$ balandlikdan qo'yib yuborildi. U poldan qaytib, $1.2\\ \\mathrm{m}$ balandlikda tutib olindi. To'pning yo'li va ko'chish modulini toping.",
+   "ru": "Баскетбольный мяч отпустили с высоты $3.0\\ \\mathrm{m}$. Он отскочил от пола и был пойман на высоте $1.2\\ \\mathrm{m}$. Найдите путь мяча и модуль его перемещения.",
+   "en": "A basketball is released from a height of $3.0\\ \\mathrm{m}$. It bounces off the floor and is caught at a height of $1.2\\ \\mathrm{m}$. Find the distance travelled by the ball and the magnitude of its displacement."
+  },
+  "figure": "figures/B1-L01-S01.png",
+  "solution": {
+   "uz": [
+    "To'p avval $3.0\\ \\mathrm{m}$ pastga, so'ng $1.2\\ \\mathrm{m}$ yuqoriga harakatlandi. Yo'l — butun trayektoriya uzunligi: $$l=3.0+1.2=4.2\\ \\mathrm{m}$$",
+    "Ko'chish — boshlang'ich nuqtadan ($3.0\\ \\mathrm{m}$) oxirgi nuqtaga ($1.2\\ \\mathrm{m}$) yo'nalgan kesma, u pastga yo'nalgan: $$|\\Delta\\vec r|=3.0-1.2=1.8\\ \\mathrm{m}$$",
+    "Tekshiruv: yo'l ko'chish modulidan katta ($4.2>1.8$) — shunday bo'lishi kerak, chunki to'p yo'nalishini o'zgartirdi."
+   ],
+   "ru": [
+    "Мяч сначала прошёл $3.0\\ \\mathrm{m}$ вниз, затем $1.2\\ \\mathrm{m}$ вверх. Путь — длина всей траектории: $$l=3.0+1.2=4.2\\ \\mathrm{m}$$",
+    "Перемещение — отрезок из начальной точки ($3.0\\ \\mathrm{m}$) в конечную ($1.2\\ \\mathrm{m}$), он направлен вниз: $$|\\Delta\\vec r|=3.0-1.2=1.8\\ \\mathrm{m}$$",
+    "Проверка: путь больше модуля перемещения ($4.2>1.8$) — так и должно быть, ведь мяч менял направление."
+   ],
+   "en": [
+    "The ball first moved $3.0\\ \\mathrm{m}$ down and then $1.2\\ \\mathrm{m}$ up. The distance is the length of the whole trajectory: $$l=3.0+1.2=4.2\\ \\mathrm{m}$$",
+    "The displacement is the segment from the initial point ($3.0\\ \\mathrm{m}$) to the final point ($1.2\\ \\mathrm{m}$); it points downward: $$|\\Delta\\vec r|=3.0-1.2=1.8\\ \\mathrm{m}$$",
+    "Check: the distance is greater than the displacement ($4.2>1.8$), as it must be, since the ball changed direction."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yo'l — trayektoriya uzunligi (skalyar); ko'chish — boshlang'ich nuqtadan oxirgi nuqtaga yo'nalgan kesma (vektor)",
+    "ru": "Путь — длина траектории (скаляр); перемещение — направленный отрезок из начальной точки в конечную (вектор)",
+    "en": "Distance is the length of the trajectory (a scalar); displacement is the directed segment from the initial point to the final point (a vector)"
+   },
+   {
+    "uz": "Ko'chish faqat boshlang'ich va oxirgi vaziyatga bog'liq, oraliq yo'lga bog'liq emas",
+    "ru": "Перемещение зависит только от начального и конечного положений, а не от пройденного пути",
+    "en": "Displacement depends only on the initial and final positions, not on the path in between"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Yo'l va ko'chish ta'riflari",
+   "ru": "Определения пути и перемещения",
+   "en": "Definitions of distance and displacement"
+  },
+  "answer": "l=4.2\\ \\mathrm{m},\\quad |\\Delta\\vec r|=1.8\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 1-mavzu, 14-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Velosipedchi avval $9\\ \\mathrm{km}$ shimolga, so'ng $4\\ \\mathrm{km}$ sharqqa, keyin $3\\ \\mathrm{km}$ janubga va yana $4\\ \\mathrm{km}$ sharqqa yurdi. Uning yo'li va ko'chish modulini toping.",
+   "ru": "Велосипедист проехал $9\\ \\mathrm{km}$ на север, затем $4\\ \\mathrm{km}$ на восток, потом $3\\ \\mathrm{km}$ на юг и ещё $4\\ \\mathrm{km}$ на восток. Найдите его путь и модуль перемещения.",
+   "en": "A cyclist rides $9\\ \\mathrm{km}$ north, then $4\\ \\mathrm{km}$ east, then $3\\ \\mathrm{km}$ south and another $4\\ \\mathrm{km}$ east. Find the distance travelled and the magnitude of the displacement."
+  },
+  "figure": "figures/B1-L01-S02.png",
+  "solution": {
+   "uz": [
+    "Yo'l — barcha bo'laklar uzunliklari yig'indisi: $$l=9+4+3+4=20\\ \\mathrm{km}$$",
+    "$x$ o'qini sharqqa, $y$ o'qini shimolga yo'naltiramiz va ko'chish proyeksiyalarini qo'shamiz: $$\\Delta x=4+4=8\\ \\mathrm{km},\\qquad \\Delta y=9-3=6\\ \\mathrm{km}$$",
+    "Ko'chish moduli Pifagor teoremasidan: $$|\\Delta\\vec r|=\\sqrt{8^2+6^2}=10\\ \\mathrm{km}$$"
+   ],
+   "ru": [
+    "Путь — сумма длин всех участков: $$l=9+4+3+4=20\\ \\mathrm{km}$$",
+    "Направим ось $x$ на восток, ось $y$ на север и сложим проекции перемещений: $$\\Delta x=4+4=8\\ \\mathrm{km},\\qquad \\Delta y=9-3=6\\ \\mathrm{km}$$",
+    "Модуль перемещения — по теореме Пифагора: $$|\\Delta\\vec r|=\\sqrt{8^2+6^2}=10\\ \\mathrm{km}$$"
+   ],
+   "en": [
+    "The distance is the sum of the lengths of all segments: $$l=9+4+3+4=20\\ \\mathrm{km}$$",
+    "Point the $x$ axis east and the $y$ axis north and add the components of the displacements: $$\\Delta x=4+4=8\\ \\mathrm{km},\\qquad \\Delta y=9-3=6\\ \\mathrm{km}$$",
+    "The magnitude of the displacement from Pythagoras' theorem: $$|\\Delta\\vec r|=\\sqrt{8^2+6^2}=10\\ \\mathrm{km}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yo'l — trayektoriya uzunligi (skalyar); ko'chish — boshlang'ich nuqtadan oxirgi nuqtaga yo'nalgan kesma (vektor)",
+    "ru": "Путь — длина траектории (скаляр); перемещение — направленный отрезок из начальной точки в конечную (вектор)",
+    "en": "Distance is the length of the trajectory (a scalar); displacement is the directed segment from the initial point to the final point (a vector)"
+   },
+   {
+    "uz": "Ketma-ket ko'chishlarda proyeksiyalar qo'shiladi: $\\Delta x=\\Delta x_1+\\Delta x_2+\\ldots$",
+    "ru": "При последовательных перемещениях проекции складываются: $\\Delta x=\\Delta x_1+\\Delta x_2+\\ldots$",
+    "en": "For successive displacements the components add: $\\Delta x=\\Delta x_1+\\Delta x_2+\\ldots$"
+   },
+   {
+    "uz": "Ko'chish moduli: $|\\Delta\\vec r|=\\sqrt{(\\Delta x)^2+(\\Delta y)^2}$",
+    "ru": "Модуль перемещения: $|\\Delta\\vec r|=\\sqrt{(\\Delta x)^2+(\\Delta y)^2}$",
+    "en": "Magnitude of displacement: $|\\Delta\\vec r|=\\sqrt{(\\Delta x)^2+(\\Delta y)^2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ko'chish proyeksiyalarini qo'shish, Pifagor teoremasi",
+   "ru": "Сложение проекций перемещений, теорема Пифагора",
+   "en": "Adding displacement components, Pythagoras' theorem"
+  },
+  "answer": "l=20\\ \\mathrm{km},\\quad |\\Delta\\vec r|=10\\ \\mathrm{km}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 1-mavzu, 12-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Radiusi $40\\ \\mathrm{cm}$ bo'lgan g'ildirak chetidagi nuqta: a) aylananing chorak qismini; b) $3$ marta to'liq aylanib chiqdi. Har bir hol uchun nuqtaning yo'li va ko'chish modulini toping ($\\pi\\approx3.14$).",
+   "ru": "Точка на ободе колеса радиусом $40\\ \\mathrm{cm}$ прошла: а) четверть окружности; б) $3$ полных оборота. Найдите путь и модуль перемещения точки в каждом случае ($\\pi\\approx3.14$).",
+   "en": "A point on the rim of a wheel of radius $40\\ \\mathrm{cm}$ goes: a) a quarter of the circle; b) $3$ full turns. Find the distance and the magnitude of the displacement of the point in each case ($\\pi\\approx3.14$)."
+  },
+  "figure": "figures/B1-L01-S03.png",
+  "solution": {
+   "uz": [
+    "a) Chorak aylanada yo'l aylana uzunligining to'rtdan biriga teng: $$l=\\frac{2\\pi R}{4}=\\frac{2\\cdot3.14\\cdot40}{4}\\approx62.8\\ \\mathrm{cm}$$",
+    "Ko'chish — boshlang'ich va oxirgi nuqtalarni tutashtiruvchi vatar; u katetlari $R$ bo'lgan uchburchak gipotenuzasi: $$|\\Delta\\vec r|=R\\sqrt{2}=40\\sqrt{2}\\approx56.6\\ \\mathrm{cm}$$",
+    "b) $3$ marta to'liq aylanishda nuqta boshlang'ich joyiga qaytadi — ko'chish nolga teng, yo'l esa uchta aylana uzunligi: $$l=3\\cdot2\\pi R\\approx754\\ \\mathrm{cm}=7.54\\ \\mathrm{m},\\qquad |\\Delta\\vec r|=0$$"
+   ],
+   "ru": [
+    "а) За четверть оборота путь равен четверти длины окружности: $$l=\\frac{2\\pi R}{4}=\\frac{2\\cdot3.14\\cdot40}{4}\\approx62.8\\ \\mathrm{cm}$$",
+    "Перемещение — хорда, соединяющая начальную и конечную точки; это гипотенуза треугольника с катетами $R$: $$|\\Delta\\vec r|=R\\sqrt{2}=40\\sqrt{2}\\approx56.6\\ \\mathrm{cm}$$",
+    "б) После $3$ полных оборотов точка возвращается в исходное положение — перемещение равно нулю, а путь равен трём длинам окружности: $$l=3\\cdot2\\pi R\\approx754\\ \\mathrm{cm}=7.54\\ \\mathrm{m},\\qquad |\\Delta\\vec r|=0$$"
+   ],
+   "en": [
+    "a) For a quarter turn the distance is a quarter of the circumference: $$l=\\frac{2\\pi R}{4}=\\frac{2\\cdot3.14\\cdot40}{4}\\approx62.8\\ \\mathrm{cm}$$",
+    "The displacement is the chord joining the initial and final points; it is the hypotenuse of a triangle with legs $R$: $$|\\Delta\\vec r|=R\\sqrt{2}=40\\sqrt{2}\\approx56.6\\ \\mathrm{cm}$$",
+    "b) After $3$ full turns the point returns to its starting position — the displacement is zero, while the distance is three circumferences: $$l=3\\cdot2\\pi R\\approx754\\ \\mathrm{cm}=7.54\\ \\mathrm{m},\\qquad |\\Delta\\vec r|=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Aylana uzunligi: $l=2\\pi R$",
+    "ru": "Длина окружности: $l=2\\pi R$",
+    "en": "Circumference: $l=2\\pi R$"
+   },
+   {
+    "uz": "Chorak aylanada ko'chish — katetlari $R$ bo'lgan to'g'ri burchakli uchburchak gipotenuzasi: $R\\sqrt{2}$",
+    "ru": "За четверть оборота перемещение — гипотенуза прямоугольного треугольника с катетами $R$: $R\\sqrt{2}$",
+    "en": "After a quarter turn the displacement is the hypotenuse of a right triangle with legs $R$: $R\\sqrt{2}$"
+   },
+   {
+    "uz": "Ko'chish faqat boshlang'ich va oxirgi vaziyatga bog'liq, oraliq yo'lga bog'liq emas",
+    "ru": "Перемещение зависит только от начального и конечного положений, а не от пройденного пути",
+    "en": "Displacement depends only on the initial and final positions, not on the path in between"
+   }
+  ],
+  "basis": {
+   "uz": "Aylana uzunligi, ko'chish ta'rifi",
+   "ru": "Длина окружности, определение перемещения",
+   "en": "Circumference, definition of displacement"
+  },
+  "answer": "l\\approx62.8\\ \\mathrm{cm},\\ |\\Delta\\vec r|\\approx56.6\\ \\mathrm{cm};\\quad l\\approx7.54\\ \\mathrm{m},\\ |\\Delta\\vec r|=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 1-mavzu, 17–18-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S04",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) $126\\ \\mathrm{km/h}$ ni $\\mathrm{m/s}$ da; b) $12.5\\ \\mathrm{m/s}$ ni $\\mathrm{km/h}$ da ifodalang. c) Qaysi tezlik katta: $20\\ \\mathrm{m/s}$ mi yoki $75\\ \\mathrm{km/h}$ mi?",
+   "ru": "а) Выразите $126\\ \\mathrm{km/h}$ в $\\mathrm{m/s}$; б) $12.5\\ \\mathrm{m/s}$ в $\\mathrm{km/h}$. в) Какая скорость больше: $20\\ \\mathrm{m/s}$ или $75\\ \\mathrm{km/h}$?",
+   "en": "a) Express $126\\ \\mathrm{km/h}$ in $\\mathrm{m/s}$; b) express $12.5\\ \\mathrm{m/s}$ in $\\mathrm{km/h}$. c) Which speed is greater: $20\\ \\mathrm{m/s}$ or $75\\ \\mathrm{km/h}$?"
+  },
+  "figure": "figures/B1-L01-S04.png",
+  "solution": {
+   "uz": [
+    "a) $1\\ \\mathrm{km/h}=\\frac{1000\\ \\mathrm{m}}{3600\\ \\mathrm{s}}=\\frac{1}{3.6}\\ \\mathrm{m/s}$, shuning uchun $3.6$ ga bo'lamiz: $$126\\ \\mathrm{km/h}=\\frac{126}{3.6}\\ \\mathrm{m/s}=35\\ \\mathrm{m/s}$$",
+    "b) Teskari o'tishda $3.6$ ga ko'paytiramiz: $$12.5\\ \\mathrm{m/s}=12.5\\cdot3.6\\ \\mathrm{km/h}=45\\ \\mathrm{km/h}$$",
+    "c) Taqqoslash uchun bir xil birlikka o'tkazamiz: $$20\\ \\mathrm{m/s}=72\\ \\mathrm{km/h}<75\\ \\mathrm{km/h}$$"
+   ],
+   "ru": [
+    "а) $1\\ \\mathrm{km/h}=\\frac{1000\\ \\mathrm{m}}{3600\\ \\mathrm{s}}=\\frac{1}{3.6}\\ \\mathrm{m/s}$, поэтому делим на $3.6$: $$126\\ \\mathrm{km/h}=\\frac{126}{3.6}\\ \\mathrm{m/s}=35\\ \\mathrm{m/s}$$",
+    "б) При обратном переходе умножаем на $3.6$: $$12.5\\ \\mathrm{m/s}=12.5\\cdot3.6\\ \\mathrm{km/h}=45\\ \\mathrm{km/h}$$",
+    "в) Для сравнения переводим в одинаковые единицы: $$20\\ \\mathrm{m/s}=72\\ \\mathrm{km/h}<75\\ \\mathrm{km/h}$$"
+   ],
+   "en": [
+    "a) $1\\ \\mathrm{km/h}=\\frac{1000\\ \\mathrm{m}}{3600\\ \\mathrm{s}}=\\frac{1}{3.6}\\ \\mathrm{m/s}$, so we divide by $3.6$: $$126\\ \\mathrm{km/h}=\\frac{126}{3.6}\\ \\mathrm{m/s}=35\\ \\mathrm{m/s}$$",
+    "b) For the reverse conversion we multiply by $3.6$: $$12.5\\ \\mathrm{m/s}=12.5\\cdot3.6\\ \\mathrm{km/h}=45\\ \\mathrm{km/h}$$",
+    "c) To compare, convert to the same units: $$20\\ \\mathrm{m/s}=72\\ \\mathrm{km/h}<75\\ \\mathrm{km/h}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tezlik birliklari: $1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}$",
+    "ru": "Единицы скорости: $1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}$",
+    "en": "Units of speed: $1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Tezlik birliklari: $1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}$",
+   "ru": "Единицы скорости: $1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}$",
+   "en": "Units of speed: $1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}$"
+  },
+  "answer": "35\\ \\mathrm{m/s};\\quad 45\\ \\mathrm{km/h};\\quad 75\\ \\mathrm{km/h}>20\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 2-mavzu, 3–7-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S05",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Uzunligi $250\\ \\mathrm{m}$ bo'lgan poyezd $72\\ \\mathrm{km/h}$ tezlik bilan uzunligi $550\\ \\mathrm{m}$ bo'lgan tunnelga kirmoqda. a) Poyezd tunneldan butunlay qancha vaqtda chiqib ketadi? b) Poyezd qancha vaqt davomida tunnel ichida to'liq bo'ladi?",
+   "ru": "Поезд длиной $250\\ \\mathrm{m}$ въезжает со скоростью $72\\ \\mathrm{km/h}$ в тоннель длиной $550\\ \\mathrm{m}$. а) Через какое время поезд полностью выйдет из тоннеля? б) Сколько времени поезд будет целиком находиться внутри тоннеля?",
+   "en": "A train $250\\ \\mathrm{m}$ long enters a tunnel $550\\ \\mathrm{m}$ long at $72\\ \\mathrm{km/h}$. a) How long until the train has completely left the tunnel? b) For how long is the train entirely inside the tunnel?"
+  },
+  "figure": "figures/B1-L01-S05.png",
+  "solution": {
+   "uz": [
+    "Tezlikni SI ga o'tkazamiz: $$v=\\frac{72}{3.6}=20\\ \\mathrm{m/s}$$",
+    "a) Poyezd boshi tunnelga kirgandan oxirgi vagoni chiqqungacha poyezd tunnel uzunligi va o'z uzunligi yig'indisiga teng yo'l bosadi: $$t_1=\\frac{L_1+L_2}{v}=\\frac{250+550}{20}=40\\ \\mathrm{s}$$",
+    "b) Poyezd to'liq ichida bo'lishi oxirgi vagon kirgandan bosh vagon chiqqungacha davom etadi: $$t_2=\\frac{L_2-L_1}{v}=\\frac{550-250}{20}=15\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Переводим скорость в СИ: $$v=\\frac{72}{3.6}=20\\ \\mathrm{m/s}$$",
+    "а) От въезда головы поезда в тоннель до выхода последнего вагона поезд проходит путь, равный сумме длины тоннеля и собственной длины: $$t_1=\\frac{L_1+L_2}{v}=\\frac{250+550}{20}=40\\ \\mathrm{s}$$",
+    "б) Поезд целиком внутри — от въезда последнего вагона до выхода головного: $$t_2=\\frac{L_2-L_1}{v}=\\frac{550-250}{20}=15\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "Convert the speed to SI: $$v=\\frac{72}{3.6}=20\\ \\mathrm{m/s}$$",
+    "a) From the moment the front enters until the last car leaves, the train travels the tunnel length plus its own length: $$t_1=\\frac{L_1+L_2}{v}=\\frac{250+550}{20}=40\\ \\mathrm{s}$$",
+    "b) The train is entirely inside from when its last car enters until its front leaves: $$t_2=\\frac{L_2-L_1}{v}=\\frac{550-250}{20}=15\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tezlik birliklari: $1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}$",
+    "ru": "Единицы скорости: $1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}$",
+    "en": "Units of speed: $1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}$"
+   },
+   {
+    "uz": "Uzun jism ko'prikdan (tunneldan) to'liq o'tishi: $s=L_1+L_2$",
+    "ru": "Полное прохождение длинного тела через мост (тоннель): $s=L_1+L_2$",
+    "en": "A long body completely crossing a bridge (tunnel): $s=L_1+L_2$"
+   },
+   {
+    "uz": "Jism tunnel ichida to'liq bo'lgan vaqtdagi yo'l: $s=L_2-L_1$",
+    "ru": "Путь, пока тело целиком находится в тоннеле: $s=L_2-L_1$",
+    "en": "Distance travelled while the body is entirely inside the tunnel: $s=L_2-L_1$"
+   }
+  ],
+  "basis": {
+   "uz": "$s=vt$; uzun jism uchun yo'lga jism uzunligi qo'shiladi (yoki ayriladi)",
+   "ru": "$s=vt$; для длинного тела к пути прибавляется (или вычитается) его длина",
+   "en": "$s=vt$; for a long body its length is added to (or subtracted from) the distance"
+  },
+  "answer": "t_1=40\\ \\mathrm{s},\\quad t_2=15\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 2-mavzu, 12–15-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S06",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Avtobus $90\\ \\mathrm{km/h}$ tezlik bilan $2.4$ soat tekis harakatlandi. Manzilga yetganda hisoblagich $12\\,480\\ \\mathrm{km}$ ni ko'rsatdi. Yo'l boshida hisoblagich qancha ko'rsatgan edi?",
+   "ru": "Автобус двигался равномерно со скоростью $90\\ \\mathrm{km/h}$ в течение $2.4$ часа. По прибытии счётчик показал $12\\,480\\ \\mathrm{km}$. Что показывал счётчик в начале пути?",
+   "en": "A bus moved uniformly at $90\\ \\mathrm{km/h}$ for $2.4$ hours. On arrival the odometer read $12\\,480\\ \\mathrm{km}$. What did the odometer read at the start?"
+  },
+  "figure": "figures/B1-L01-S06.png",
+  "solution": {
+   "uz": [
+    "Hisoblagich bosilgan yo'lni ko'rsatadi. Yo'lni topamiz: $$s=vt=90\\cdot2.4=216\\ \\mathrm{km}$$",
+    "Boshlang'ich ko'rsatkich oxirgisidan shu yo'lga kam: $$12\\,480-216=12\\,264\\ \\mathrm{km}$$"
+   ],
+   "ru": [
+    "Счётчик показывает пройденный путь. Находим путь: $$s=vt=90\\cdot2.4=216\\ \\mathrm{km}$$",
+    "Начальное показание меньше конечного на этот путь: $$12\\,480-216=12\\,264\\ \\mathrm{km}$$"
+   ],
+   "en": [
+    "The odometer shows the distance travelled. Find the distance: $$s=vt=90\\cdot2.4=216\\ \\mathrm{km}$$",
+    "The initial reading is less than the final one by this distance: $$12\\,480-216=12\\,264\\ \\mathrm{km}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tekis harakat: $s=vt$, $\\ v=\\frac{s}{t}$",
+    "ru": "Равномерное движение: $s=vt$, $\\ v=\\frac{s}{t}$",
+    "en": "Uniform motion: $s=vt$, $\\ v=\\frac{s}{t}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Tekis harakat: $s=vt$",
+   "ru": "Равномерное движение: $s=vt$",
+   "en": "Uniform motion: $s=vt$"
+  },
+  "answer": "12\\,264\\ \\mathrm{km}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 2-mavzu, 10-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki jismning harakat tenglamalari: $x_1=40-3t$ va $x_2=-20+2t$ ($x$ — metrda, $t$ — sekundda). Jismlar qachon va qayerda uchrashadi? $t=5\\ \\mathrm{s}$ da ular orasidagi masofa qancha?",
+   "ru": "Уравнения движения двух тел: $x_1=40-3t$ и $x_2=-20+2t$ ($x$ — в метрах, $t$ — в секундах). Когда и где встретятся тела? Каково расстояние между ними при $t=5\\ \\mathrm{s}$?",
+   "en": "The equations of motion of two bodies are $x_1=40-3t$ and $x_2=-20+2t$ ($x$ in metres, $t$ in seconds). When and where do the bodies meet? What is the distance between them at $t=5\\ \\mathrm{s}$?"
+  },
+  "figure": "figures/B1-L01-S07.png",
+  "solution": {
+   "uz": [
+    "Tenglamalarni $x=x_0+v_xt$ bilan solishtiramiz: birinchi jism $40\\ \\mathrm{m}$ dan $3\\ \\mathrm{m/s}$ tezlik bilan manfiy yo'nalishda, ikkinchisi $-20\\ \\mathrm{m}$ dan $2\\ \\mathrm{m/s}$ tezlik bilan musbat yo'nalishda harakatlanadi — ular bir-biriga qarab yuradi.",
+    "Uchrashganda koordinatalar teng: $$40-3t=-20+2t\\ \\Rightarrow\\ 5t=60\\ \\Rightarrow\\ t=12\\ \\mathrm{s}$$",
+    "Uchrashish joyi — istalgan tenglamaga $t=12\\ \\mathrm{s}$ ni qo'yamiz: $$x=40-3\\cdot12=4\\ \\mathrm{m}$$",
+    "$t=5\\ \\mathrm{s}$ dagi koordinatalar va ular orasidagi masofa: $$x_1=25\\ \\mathrm{m},\\quad x_2=-10\\ \\mathrm{m},\\qquad d=|x_1-x_2|=35\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Сравниваем уравнения с $x=x_0+v_xt$: первое тело движется из $40\\ \\mathrm{m}$ со скоростью $3\\ \\mathrm{m/s}$ в отрицательном направлении, второе — из $-20\\ \\mathrm{m}$ со скоростью $2\\ \\mathrm{m/s}$ в положительном — они движутся навстречу.",
+    "При встрече координаты равны: $$40-3t=-20+2t\\ \\Rightarrow\\ 5t=60\\ \\Rightarrow\\ t=12\\ \\mathrm{s}$$",
+    "Место встречи — подставляем $t=12\\ \\mathrm{s}$ в любое уравнение: $$x=40-3\\cdot12=4\\ \\mathrm{m}$$",
+    "Координаты при $t=5\\ \\mathrm{s}$ и расстояние между телами: $$x_1=25\\ \\mathrm{m},\\quad x_2=-10\\ \\mathrm{m},\\qquad d=|x_1-x_2|=35\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Compare the equations with $x=x_0+v_xt$: the first body moves from $40\\ \\mathrm{m}$ at $3\\ \\mathrm{m/s}$ in the negative direction, the second from $-20\\ \\mathrm{m}$ at $2\\ \\mathrm{m/s}$ in the positive direction — they move towards each other.",
+    "At the meeting the coordinates are equal: $$40-3t=-20+2t\\ \\Rightarrow\\ 5t=60\\ \\Rightarrow\\ t=12\\ \\mathrm{s}$$",
+    "The meeting point — substitute $t=12\\ \\mathrm{s}$ into either equation: $$x=40-3\\cdot12=4\\ \\mathrm{m}$$",
+    "The coordinates at $t=5\\ \\mathrm{s}$ and the distance between the bodies: $$x_1=25\\ \\mathrm{m},\\quad x_2=-10\\ \\mathrm{m},\\qquad d=|x_1-x_2|=35\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Harakat tenglamasi: $x=x_0+v_xt$ ($x_0$ — boshlang'ich koordinata, $v_x$ — tezlik proyeksiyasi)",
+    "ru": "Уравнение движения: $x=x_0+v_xt$ ($x_0$ — начальная координата, $v_x$ — проекция скорости)",
+    "en": "Equation of motion: $x=x_0+v_xt$ ($x_0$ is the initial coordinate, $v_x$ the velocity component)"
+   },
+   {
+    "uz": "Uchrashish sharti: $x_1(t)=x_2(t)$",
+    "ru": "Условие встречи: $x_1(t)=x_2(t)$",
+    "en": "Meeting condition: $x_1(t)=x_2(t)$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Harakat tenglamasi $x=x_0+v_xt$, uchrashish sharti $x_1=x_2$",
+   "ru": "Уравнение движения $x=x_0+v_xt$, условие встречи $x_1=x_2$",
+   "en": "Equation of motion $x=x_0+v_xt$, meeting condition $x_1=x_2$"
+  },
+  "answer": "t=12\\ \\mathrm{s},\\quad x=4\\ \\mathrm{m};\\quad d=35\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 2-mavzu, 28–30-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Piyoda A punktdan B punktga yo'l oldi. U A dan $12\\ \\mathrm{km}$ uzoqlashganda, A dan xuddi shu yo'nalishda piyodanikidan $4$ marta katta tezlik bilan velosipedchi yo'lga chiqdi. Ular B ga bir vaqtda yetib kelishdi. AB masofani toping.",
+   "ru": "Пешеход вышел из пункта A в пункт B. Когда он удалился от A на $12\\ \\mathrm{km}$, из A в том же направлении выехал велосипедист со скоростью в $4$ раза больше скорости пешехода. В B они прибыли одновременно. Найдите расстояние AB.",
+   "en": "A pedestrian set off from A to B. When he was $12\\ \\mathrm{km}$ from A, a cyclist left A in the same direction with a speed $4$ times the pedestrian's. They arrived at B at the same time. Find the distance AB."
+  },
+  "figure": "figures/B1-L01-S08.png",
+  "solution": {
+   "uz": [
+    "AB $=D$, piyoda tezligi $v$ bo'lsin. Velosipedchi chiqqandan keyin piyoda $D-12$, velosipedchi $D$ yo'l bosdi. Harakat vaqtlari: $$t_1=\\frac{D-12}{v},\\qquad t_2=\\frac{D}{4v}$$",
+    "B ga bir vaqtda yetib kelishgani uchun vaqtlar teng: $$\\frac{D-12}{v}=\\frac{D}{4v}\\ \\Rightarrow\\ 4D-48=D\\ \\Rightarrow\\ D=16\\ \\mathrm{km}$$",
+    "Tekshiruv: velosipedchi $16\\ \\mathrm{km}$, piyoda shu vaqtda $4$ marta kam — $4\\ \\mathrm{km}$ yurdi; $12+4=16$ $\\checkmark$."
+   ],
+   "ru": [
+    "Пусть AB $=D$, скорость пешехода $v$. После старта велосипедиста пешеход прошёл $D-12$, велосипедист — $D$. Времена движения: $$t_1=\\frac{D-12}{v},\\qquad t_2=\\frac{D}{4v}$$",
+    "Так как они прибыли в B одновременно, времена равны: $$\\frac{D-12}{v}=\\frac{D}{4v}\\ \\Rightarrow\\ 4D-48=D\\ \\Rightarrow\\ D=16\\ \\mathrm{km}$$",
+    "Проверка: велосипедист проехал $16\\ \\mathrm{km}$, пешеход за то же время — в $4$ раза меньше, $4\\ \\mathrm{km}$; $12+4=16$ $\\checkmark$."
+   ],
+   "en": [
+    "Let AB $=D$ and the pedestrian's speed be $v$. After the cyclist starts, the pedestrian covers $D-12$ and the cyclist covers $D$. The travel times are: $$t_1=\\frac{D-12}{v},\\qquad t_2=\\frac{D}{4v}$$",
+    "Since they arrived at B at the same time, the times are equal: $$\\frac{D-12}{v}=\\frac{D}{4v}\\ \\Rightarrow\\ 4D-48=D\\ \\Rightarrow\\ D=16\\ \\mathrm{km}$$",
+    "Check: the cyclist rode $16\\ \\mathrm{km}$, the pedestrian in the same time walked $4$ times less, $4\\ \\mathrm{km}$; $12+4=16$ $\\checkmark$."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tekis harakat: $s=vt$, $\\ v=\\frac{s}{t}$",
+    "ru": "Равномерное движение: $s=vt$, $\\ v=\\frac{s}{t}$",
+    "en": "Uniform motion: $s=vt$, $\\ v=\\frac{s}{t}$"
+   },
+   {
+    "uz": "Bir vaqtda yetib kelish: harakat vaqtlari teng, $t_1=t_2$",
+    "ru": "Одновременное прибытие: времена движения равны, $t_1=t_2$",
+    "en": "Simultaneous arrival: the travel times are equal, $t_1=t_2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "$t=\\frac{s}{v}$; bir vaqtda yetib kelish — vaqtlar tengligi",
+   "ru": "$t=\\frac{s}{v}$; одновременное прибытие — равенство времён",
+   "en": "$t=\\frac{s}{v}$; simultaneous arrival means equal times"
+  },
+  "answer": "D=16\\ \\mathrm{km}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 2-mavzu, 19-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Moddiy nuqta $XOY$ tekislikda $x=3+6t$, $\\ y=-2+8t$ tenglamalar bo'yicha harakatlanmoqda ($x,\\ y$ — metrda, $t$ — sekundda). Nuqtaning tezligini, dastlabki $4\\ \\mathrm{s}$ dagi ko'chishini va trayektoriya tenglamasini toping.",
+   "ru": "Материальная точка движется в плоскости $XOY$ по уравнениям $x=3+6t$, $\\ y=-2+8t$ ($x,\\ y$ — в метрах, $t$ — в секундах). Найдите скорость точки, её перемещение за первые $4\\ \\mathrm{s}$ и уравнение траектории.",
+   "en": "A material point moves in the $XOY$ plane according to $x=3+6t$, $\\ y=-2+8t$ ($x,\\ y$ in metres, $t$ in seconds). Find its speed, its displacement in the first $4\\ \\mathrm{s}$ and the trajectory equation."
+  },
+  "figure": "figures/B1-L01-S09.png",
+  "solution": {
+   "uz": [
+    "Tenglamalardan tezlik proyeksiyalari: $v_x=6\\ \\mathrm{m/s}$, $\\ v_y=8\\ \\mathrm{m/s}$. Tezlik moduli: $$v=\\sqrt{6^2+8^2}=10\\ \\mathrm{m/s}$$",
+    "Harakat tekis va to'g'ri chiziqli, shuning uchun ko'chish: $$|\\Delta\\vec r|=vt=10\\cdot4=40\\ \\mathrm{m}$$",
+    "Trayektoriya: birinchi tenglamadan $t$ ni topib, ikkinchisiga qo'yamiz: $$t=\\frac{x-3}{6}\\ \\Rightarrow\\ y=-2+\\frac{8(x-3)}{6}=\\frac{4}{3}x-6$$"
+   ],
+   "ru": [
+    "Из уравнений проекции скорости: $v_x=6\\ \\mathrm{m/s}$, $\\ v_y=8\\ \\mathrm{m/s}$. Модуль скорости: $$v=\\sqrt{6^2+8^2}=10\\ \\mathrm{m/s}$$",
+    "Движение равномерное и прямолинейное, поэтому перемещение: $$|\\Delta\\vec r|=vt=10\\cdot4=40\\ \\mathrm{m}$$",
+    "Траектория: находим $t$ из первого уравнения и подставляем во второе: $$t=\\frac{x-3}{6}\\ \\Rightarrow\\ y=-2+\\frac{8(x-3)}{6}=\\frac{4}{3}x-6$$"
+   ],
+   "en": [
+    "From the equations, the velocity components are $v_x=6\\ \\mathrm{m/s}$ and $v_y=8\\ \\mathrm{m/s}$. The speed: $$v=\\sqrt{6^2+8^2}=10\\ \\mathrm{m/s}$$",
+    "The motion is uniform and straight, so the displacement is: $$|\\Delta\\vec r|=vt=10\\cdot4=40\\ \\mathrm{m}$$",
+    "Trajectory: find $t$ from the first equation and substitute into the second: $$t=\\frac{x-3}{6}\\ \\Rightarrow\\ y=-2+\\frac{8(x-3)}{6}=\\frac{4}{3}x-6$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tekislikdagi tezlik: $v=\\sqrt{v_x^2+v_y^2}$",
+    "ru": "Скорость на плоскости: $v=\\sqrt{v_x^2+v_y^2}$",
+    "en": "Speed in a plane: $v=\\sqrt{v_x^2+v_y^2}$"
+   },
+   {
+    "uz": "Tekis harakat: $s=vt$, $\\ v=\\frac{s}{t}$",
+    "ru": "Равномерное движение: $s=vt$, $\\ v=\\frac{s}{t}$",
+    "en": "Uniform motion: $s=vt$, $\\ v=\\frac{s}{t}$"
+   },
+   {
+    "uz": "Trayektoriya tenglamasi: vaqtni yo'qotamiz, $t=\\frac{x-x_0}{v_x}$",
+    "ru": "Уравнение траектории: исключаем время, $t=\\frac{x-x_0}{v_x}$",
+    "en": "Trajectory equation: eliminate time, $t=\\frac{x-x_0}{v_x}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tekislikdagi harakat: $v=\\sqrt{v_x^2+v_y^2}$; trayektoriya — vaqtni yo'qotish",
+   "ru": "Движение на плоскости: $v=\\sqrt{v_x^2+v_y^2}$; траектория — исключение времени",
+   "en": "Motion in a plane: $v=\\sqrt{v_x^2+v_y^2}$; trajectory by eliminating time"
+  },
+  "answer": "v=10\\ \\mathrm{m/s},\\quad |\\Delta\\vec r|=40\\ \\mathrm{m},\\quad y=\\frac{4}{3}x-6",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 2-mavzu, 34–36-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki shahar orasidagi masofa $2400\\ \\mathrm{km}$. Bir vaqtda uchgan ikki samolyotdan $2400\\ \\mathrm{km/h}$ tezlikdagisi ikkinchisidan $2$ soat oldin yetib keldi. Ikkinchi samolyotning tezligini toping.",
+   "ru": "Расстояние между двумя городами $2400\\ \\mathrm{km}$. Из двух самолётов, вылетевших одновременно, тот, что летел со скоростью $2400\\ \\mathrm{km/h}$, прибыл на $2$ часа раньше второго. Найдите скорость второго самолёта.",
+   "en": "The distance between two cities is $2400\\ \\mathrm{km}$. Of two planes that took off at the same time, the one flying at $2400\\ \\mathrm{km/h}$ arrived $2$ hours before the other. Find the speed of the second plane."
+  },
+  "figure": "figures/B1-L01-S10.png",
+  "solution": {
+   "uz": [
+    "Birinchi samolyotning uchish vaqti: $$t_1=\\frac{s}{v_1}=\\frac{2400}{2400}=1\\ \\mathrm{h}$$",
+    "Ikkinchisi $2$ soat ko'p uchdi: $$t_2=t_1+2=3\\ \\mathrm{h}$$",
+    "Ikkinchi samolyot tezligi: $$v_2=\\frac{s}{t_2}=\\frac{2400}{3}=800\\ \\mathrm{km/h}$$"
+   ],
+   "ru": [
+    "Время полёта первого самолёта: $$t_1=\\frac{s}{v_1}=\\frac{2400}{2400}=1\\ \\mathrm{h}$$",
+    "Второй летел на $2$ часа дольше: $$t_2=t_1+2=3\\ \\mathrm{h}$$",
+    "Скорость второго самолёта: $$v_2=\\frac{s}{t_2}=\\frac{2400}{3}=800\\ \\mathrm{km/h}$$"
+   ],
+   "en": [
+    "The flight time of the first plane: $$t_1=\\frac{s}{v_1}=\\frac{2400}{2400}=1\\ \\mathrm{h}$$",
+    "The second flew $2$ hours longer: $$t_2=t_1+2=3\\ \\mathrm{h}$$",
+    "The speed of the second plane: $$v_2=\\frac{s}{t_2}=\\frac{2400}{3}=800\\ \\mathrm{km/h}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tekis harakat: $s=vt$, $\\ v=\\frac{s}{t}$",
+    "ru": "Равномерное движение: $s=vt$, $\\ v=\\frac{s}{t}$",
+    "en": "Uniform motion: $s=vt$, $\\ v=\\frac{s}{t}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Tekis harakat: $t=\\frac{s}{v}$",
+   "ru": "Равномерное движение: $t=\\frac{s}{v}$",
+   "en": "Uniform motion: $t=\\frac{s}{v}$"
+  },
+  "answer": "v_2=800\\ \\mathrm{km/h}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 2-mavzu, 20-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jism koordinatasining vaqtga bog'lanish grafigi uchta to'g'ri chiziq kesmasidan iborat: $(0;\\ 2\\ \\mathrm{m})\\to(2\\ \\mathrm{s};\\ 8\\ \\mathrm{m})\\to(3\\ \\mathrm{s};\\ 8\\ \\mathrm{m})\\to(6\\ \\mathrm{s};\\ -1\\ \\mathrm{m})$. Har bir bo'lakdagi tezlikni, $0$–$6\\ \\mathrm{s}$ oraliqdagi ko'chish va yo'lni toping.",
+   "ru": "График зависимости координаты тела от времени состоит из трёх отрезков: $(0;\\ 2\\ \\mathrm{m})\\to(2\\ \\mathrm{s};\\ 8\\ \\mathrm{m})\\to(3\\ \\mathrm{s};\\ 8\\ \\mathrm{m})\\to(6\\ \\mathrm{s};\\ -1\\ \\mathrm{m})$. Найдите скорость на каждом участке, перемещение и путь за $0$–$6\\ \\mathrm{s}$.",
+   "en": "The graph of the body's coordinate versus time consists of three segments: $(0;\\ 2\\ \\mathrm{m})\\to(2\\ \\mathrm{s};\\ 8\\ \\mathrm{m})\\to(3\\ \\mathrm{s};\\ 8\\ \\mathrm{m})\\to(6\\ \\mathrm{s};\\ -1\\ \\mathrm{m})$. Find the velocity on each segment, and the displacement and distance for $0$–$6\\ \\mathrm{s}$."
+  },
+  "figure": "figures/B1-L01-S11.png",
+  "solution": {
+   "uz": [
+    "Har bir bo'lakdagi tezlik — grafik qiyaligi: $$v_1=\\frac{8-2}{2}=3\\ \\mathrm{m/s},\\qquad v_2=\\frac{8-8}{1}=0,\\qquad v_3=\\frac{-1-8}{3}=-3\\ \\mathrm{m/s}$$",
+    "Ko'chish faqat boshlang'ich va oxirgi koordinatalarga bog'liq: $$\\Delta x=x(6)-x(0)=-1-2=-3\\ \\mathrm{m}$$",
+    "Yo'l — har bir bo'lakdagi ko'chish modullari yig'indisi (ikkinchi bo'lakda jism tinch turgan): $$l=6+0+9=15\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Скорость на каждом участке — наклон графика: $$v_1=\\frac{8-2}{2}=3\\ \\mathrm{m/s},\\qquad v_2=\\frac{8-8}{1}=0,\\qquad v_3=\\frac{-1-8}{3}=-3\\ \\mathrm{m/s}$$",
+    "Перемещение зависит только от начальной и конечной координат: $$\\Delta x=x(6)-x(0)=-1-2=-3\\ \\mathrm{m}$$",
+    "Путь — сумма модулей перемещений на участках (на втором участке тело покоилось): $$l=6+0+9=15\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "The velocity on each segment is the slope of the graph: $$v_1=\\frac{8-2}{2}=3\\ \\mathrm{m/s},\\qquad v_2=\\frac{8-8}{1}=0,\\qquad v_3=\\frac{-1-8}{3}=-3\\ \\mathrm{m/s}$$",
+    "The displacement depends only on the initial and final coordinates: $$\\Delta x=x(6)-x(0)=-1-2=-3\\ \\mathrm{m}$$",
+    "The distance is the sum of the magnitudes of the displacements on the segments (on the second segment the body was at rest): $$l=6+0+9=15\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$x(t)$ grafigining qiyaligi — tezlik proyeksiyasi: $v_x=\\frac{\\Delta x}{\\Delta t}$",
+    "ru": "Наклон графика $x(t)$ — проекция скорости: $v_x=\\frac{\\Delta x}{\\Delta t}$",
+    "en": "The slope of the $x(t)$ graph is the velocity component: $v_x=\\frac{\\Delta x}{\\Delta t}$"
+   },
+   {
+    "uz": "Ko'chish faqat boshlang'ich va oxirgi vaziyatga bog'liq, oraliq yo'lga bog'liq emas",
+    "ru": "Перемещение зависит только от начального и конечного положений, а не от пройденного пути",
+    "en": "Displacement depends only on the initial and final positions, not on the path in between"
+   },
+   {
+    "uz": "Yo'l — barcha bo'laklardagi ko'chishlar modullari yig'indisi: $l=\\sum|\\Delta x_i|$",
+    "ru": "Путь — сумма модулей перемещений на всех участках: $l=\\sum|\\Delta x_i|$",
+    "en": "Distance is the sum of the magnitudes of the displacements on all segments: $l=\\sum|\\Delta x_i|$"
+   }
+  ],
+  "basis": {
+   "uz": "$x(t)$ grafigining qiyaligi — tezlik; yo'l — modullar yig'indisi",
+   "ru": "Наклон графика $x(t)$ — скорость; путь — сумма модулей",
+   "en": "The slope of the $x(t)$ graph is the velocity; distance is the sum of magnitudes"
+  },
+  "answer": "3;\\ 0;\\ -3\\ \\mathrm{m/s};\\quad \\Delta x=-3\\ \\mathrm{m},\\quad l=15\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 3-mavzu, 15–17-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$x$ o'qi bo'ylab harakatlanayotgan jism tezligi grafigi: $0$–$3\\ \\mathrm{s}$ da $v_x=4\\ \\mathrm{m/s}$, $3$–$7\\ \\mathrm{s}$ da $v_x=-2\\ \\mathrm{m/s}$. Boshlang'ich koordinata $x_0=-5\\ \\mathrm{m}$. Ko'chish, yo'l va oxirgi koordinatani toping. Birinchi bosqich uchun harakat tenglamasini yozing.",
+   "ru": "График скорости тела, движущегося вдоль оси $x$: на $0$–$3\\ \\mathrm{s}$ $v_x=4\\ \\mathrm{m/s}$, на $3$–$7\\ \\mathrm{s}$ $v_x=-2\\ \\mathrm{m/s}$. Начальная координата $x_0=-5\\ \\mathrm{m}$. Найдите перемещение, путь и конечную координату. Запишите уравнение движения для первого этапа.",
+   "en": "The velocity graph of a body moving along the $x$ axis: $v_x=4\\ \\mathrm{m/s}$ for $0$–$3\\ \\mathrm{s}$ and $v_x=-2\\ \\mathrm{m/s}$ for $3$–$7\\ \\mathrm{s}$. The initial coordinate is $x_0=-5\\ \\mathrm{m}$. Find the displacement, the distance and the final coordinate. Write the equation of motion for the first stage."
+  },
+  "figure": "figures/B1-L01-S12.png",
+  "solution": {
+   "uz": [
+    "Har bir bosqichdagi ko'chish — $v(t)$ grafigi ostidagi yuza (ikkinchisi o'qdan pastda, manfiy): $$\\Delta x_1=4\\cdot3=12\\ \\mathrm{m},\\qquad \\Delta x_2=-2\\cdot4=-8\\ \\mathrm{m}$$",
+    "Umumiy ko'chish va yo'l: $$\\Delta x=12-8=4\\ \\mathrm{m},\\qquad l=12+8=20\\ \\mathrm{m}$$",
+    "Oxirgi koordinata: $$x=x_0+\\Delta x=-5+4=-1\\ \\mathrm{m}$$",
+    "Birinchi bosqich uchun harakat tenglamasi: $$x=-5+4t\\qquad (0\\leq t\\leq3\\ \\mathrm{s})$$"
+   ],
+   "ru": [
+    "Перемещение на каждом этапе — площадь под графиком $v(t)$ (вторая — ниже оси, отрицательна): $$\\Delta x_1=4\\cdot3=12\\ \\mathrm{m},\\qquad \\Delta x_2=-2\\cdot4=-8\\ \\mathrm{m}$$",
+    "Полное перемещение и путь: $$\\Delta x=12-8=4\\ \\mathrm{m},\\qquad l=12+8=20\\ \\mathrm{m}$$",
+    "Конечная координата: $$x=x_0+\\Delta x=-5+4=-1\\ \\mathrm{m}$$",
+    "Уравнение движения для первого этапа: $$x=-5+4t\\qquad (0\\leq t\\leq3\\ \\mathrm{s})$$"
+   ],
+   "en": [
+    "The displacement on each stage is the area under the $v(t)$ graph (the second lies below the axis and is negative): $$\\Delta x_1=4\\cdot3=12\\ \\mathrm{m},\\qquad \\Delta x_2=-2\\cdot4=-8\\ \\mathrm{m}$$",
+    "Total displacement and distance: $$\\Delta x=12-8=4\\ \\mathrm{m},\\qquad l=12+8=20\\ \\mathrm{m}$$",
+    "Final coordinate: $$x=x_0+\\Delta x=-5+4=-1\\ \\mathrm{m}$$",
+    "Equation of motion for the first stage: $$x=-5+4t\\qquad (0\\leq t\\leq3\\ \\mathrm{s})$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$v(t)$ grafigi ostidagi yuza — ko'chish: $\\Delta x=v_xt$ (o'qdan pastdagi yuza manfiy)",
+    "ru": "Площадь под графиком $v(t)$ — перемещение: $\\Delta x=v_xt$ (площадь ниже оси отрицательна)",
+    "en": "The area under the $v(t)$ graph is the displacement: $\\Delta x=v_xt$ (area below the axis is negative)"
+   },
+   {
+    "uz": "Yo'l — barcha bo'laklardagi ko'chishlar modullari yig'indisi: $l=\\sum|\\Delta x_i|$",
+    "ru": "Путь — сумма модулей перемещений на всех участках: $l=\\sum|\\Delta x_i|$",
+    "en": "Distance is the sum of the magnitudes of the displacements on all segments: $l=\\sum|\\Delta x_i|$"
+   },
+   null,
+   {
+    "uz": "Harakat tenglamasi: $x=x_0+v_xt$ ($x_0$ — boshlang'ich koordinata, $v_x$ — tezlik proyeksiyasi)",
+    "ru": "Уравнение движения: $x=x_0+v_xt$ ($x_0$ — начальная координата, $v_x$ — проекция скорости)",
+    "en": "Equation of motion: $x=x_0+v_xt$ ($x_0$ is the initial coordinate, $v_x$ the velocity component)"
+   }
+  ],
+  "basis": {
+   "uz": "$v(t)$ grafigi ostidagi yuza — ko'chish; $x=x_0+v_xt$",
+   "ru": "Площадь под графиком $v(t)$ — перемещение; $x=x_0+v_xt$",
+   "en": "The area under the $v(t)$ graph is the displacement; $x=x_0+v_xt$"
+  },
+  "answer": "\\Delta x=4\\ \\mathrm{m},\\ l=20\\ \\mathrm{m},\\ x=-1\\ \\mathrm{m};\\quad x=-5+4t",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 3-mavzu, 7–8, 19-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "To'g'ri chiziqli tekis harakatlanayotgan jismning $x(t)$ grafigi $(1\\ \\mathrm{s};\\ 7\\ \\mathrm{m})$ va $(4\\ \\mathrm{s};\\ -2\\ \\mathrm{m})$ nuqtalardan o'tadi. Harakat tenglamasini yozing. Jism qachon $x=-8\\ \\mathrm{m}$ nuqtaga yetadi? Shu vaqtgacha bosilgan yo'l qancha?",
+   "ru": "График $x(t)$ тела, движущегося прямолинейно и равномерно, проходит через точки $(1\\ \\mathrm{s};\\ 7\\ \\mathrm{m})$ и $(4\\ \\mathrm{s};\\ -2\\ \\mathrm{m})$. Запишите уравнение движения. Когда тело достигнет точки $x=-8\\ \\mathrm{m}$? Какой путь оно пройдёт к этому моменту?",
+   "en": "The $x(t)$ graph of a body in uniform straight-line motion passes through $(1\\ \\mathrm{s};\\ 7\\ \\mathrm{m})$ and $(4\\ \\mathrm{s};\\ -2\\ \\mathrm{m})$. Write the equation of motion. When will the body reach $x=-8\\ \\mathrm{m}$? What distance will it have covered by then?"
+  },
+  "figure": "figures/B1-L01-S13.png",
+  "solution": {
+   "uz": [
+    "Tezlik — grafik qiyaligi: $$v_x=\\frac{-2-7}{4-1}=-3\\ \\mathrm{m/s}$$",
+    "Boshlang'ich koordinata: $7=x_0-3\\cdot1$: $$x_0=10\\ \\mathrm{m}\\qquad\\Rightarrow\\qquad x=10-3t$$",
+    "$x=-8\\ \\mathrm{m}$ ga yetish vaqti: $$10-3t=-8\\ \\Rightarrow\\ t=6\\ \\mathrm{s}$$",
+    "Jism yo'nalishini o'zgartirmagan, shuning uchun yo'l ko'chish moduliga teng: $$l=|x-x_0|=|-8-10|=18\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Скорость — наклон графика: $$v_x=\\frac{-2-7}{4-1}=-3\\ \\mathrm{m/s}$$",
+    "Начальная координата: $7=x_0-3\\cdot1$: $$x_0=10\\ \\mathrm{m}\\qquad\\Rightarrow\\qquad x=10-3t$$",
+    "Время достижения $x=-8\\ \\mathrm{m}$: $$10-3t=-8\\ \\Rightarrow\\ t=6\\ \\mathrm{s}$$",
+    "Тело не меняло направления, поэтому путь равен модулю перемещения: $$l=|x-x_0|=|-8-10|=18\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "The velocity is the slope of the graph: $$v_x=\\frac{-2-7}{4-1}=-3\\ \\mathrm{m/s}$$",
+    "Initial coordinate: $7=x_0-3\\cdot1$: $$x_0=10\\ \\mathrm{m}\\qquad\\Rightarrow\\qquad x=10-3t$$",
+    "Time to reach $x=-8\\ \\mathrm{m}$: $$10-3t=-8\\ \\Rightarrow\\ t=6\\ \\mathrm{s}$$",
+    "The body did not change direction, so the distance equals the magnitude of the displacement: $$l=|x-x_0|=|-8-10|=18\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$x(t)$ grafigining qiyaligi — tezlik proyeksiyasi: $v_x=\\frac{\\Delta x}{\\Delta t}$",
+    "ru": "Наклон графика $x(t)$ — проекция скорости: $v_x=\\frac{\\Delta x}{\\Delta t}$",
+    "en": "The slope of the $x(t)$ graph is the velocity component: $v_x=\\frac{\\Delta x}{\\Delta t}$"
+   },
+   {
+    "uz": "Harakat tenglamasi: $x=x_0+v_xt$ ($x_0$ — boshlang'ich koordinata, $v_x$ — tezlik proyeksiyasi)",
+    "ru": "Уравнение движения: $x=x_0+v_xt$ ($x_0$ — начальная координата, $v_x$ — проекция скорости)",
+    "en": "Equation of motion: $x=x_0+v_xt$ ($x_0$ is the initial coordinate, $v_x$ the velocity component)"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Grafikdan tezlik $v_x=\\frac{\\Delta x}{\\Delta t}$; harakat tenglamasi",
+   "ru": "Скорость по графику $v_x=\\frac{\\Delta x}{\\Delta t}$; уравнение движения",
+   "en": "Velocity from the graph $v_x=\\frac{\\Delta x}{\\Delta t}$; equation of motion"
+  },
+  "answer": "x=10-3t;\\quad t=6\\ \\mathrm{s};\\quad l=18\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 3-mavzu, 12–13-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "A va B punktlardan bir vaqtda bir-biriga qarab ikki velosipedchi yo'lga chiqdi. Ular birinchi marta A dan $20\\ \\mathrm{km}$ uzoqlikda uchrashdi. Har biri qarama-qarshi punktga yetib, darhol orqaga qaytdi va ular ikkinchi marta B dan $15\\ \\mathrm{km}$ uzoqlikda uchrashdi. AB masofani toping.",
+   "ru": "Из пунктов A и B одновременно навстречу друг другу выехали два велосипедиста. Впервые они встретились в $20\\ \\mathrm{km}$ от A. Доехав до противоположного пункта, каждый сразу повернул обратно, и второй раз они встретились в $15\\ \\mathrm{km}$ от B. Найдите расстояние AB.",
+   "en": "Two cyclists set off at the same time from A and B towards each other. They first met $20\\ \\mathrm{km}$ from A. Each rode on to the opposite point, turned straight back, and they met a second time $15\\ \\mathrm{km}$ from B. Find the distance AB."
+  },
+  "figure": "figures/B1-L01-S14.png",
+  "solution": {
+   "uz": [
+    "Birinchi uchrashuvgacha ikkalasi birgalikda $D$ yo'l bosdi, A dagi velosipedchi esa $20\\ \\mathrm{km}$ yurdi.",
+    "Ikkinchi uchrashuvgacha ular birgalikda $3D$ yo'l bosdi (har biri bir marta punktgacha va bir qismini orqaga). Tezliklar o'zgarmas, shuning uchun A dagi velosipedchi $3$ marta ko'p yurdi: $$s_A=3\\cdot20=60\\ \\mathrm{km}$$",
+    "A dagi velosipedchi B gacha ($D$) va orqaga $15\\ \\mathrm{km}$ yurdi: $$D+15=60\\ \\Rightarrow\\ D=45\\ \\mathrm{km}$$",
+    "Tekshiruv: tezliklar nisbati $20:25$; B dagisi ikkinchi uchrashuvgacha $3\\cdot25=75\\ \\mathrm{km}=45+30$ yurdi $\\checkmark$."
+   ],
+   "ru": [
+    "До первой встречи оба вместе проехали $D$, а велосипедист из A проехал $20\\ \\mathrm{km}$.",
+    "До второй встречи они вместе проехали $3D$ (каждый — до пункта и часть обратно). Скорости постоянны, поэтому велосипедист из A проехал в $3$ раза больше: $$s_A=3\\cdot20=60\\ \\mathrm{km}$$",
+    "Велосипедист из A проехал до B ($D$) и обратно $15\\ \\mathrm{km}$: $$D+15=60\\ \\Rightarrow\\ D=45\\ \\mathrm{km}$$",
+    "Проверка: отношение скоростей $20:25$; велосипедист из B до второй встречи проехал $3\\cdot25=75\\ \\mathrm{km}=45+30$ $\\checkmark$."
+   ],
+   "en": [
+    "Until the first meeting they covered $D$ together, and the cyclist from A rode $20\\ \\mathrm{km}$.",
+    "Until the second meeting they covered $3D$ together (each to the far point and part of the way back). The speeds are constant, so the cyclist from A rode $3$ times as far: $$s_A=3\\cdot20=60\\ \\mathrm{km}$$",
+    "The cyclist from A rode to B ($D$) and back $15\\ \\mathrm{km}$: $$D+15=60\\ \\Rightarrow\\ D=45\\ \\mathrm{km}$$",
+    "Check: the speed ratio is $20:25$; the cyclist from B rode $3\\cdot25=75\\ \\mathrm{km}=45+30$ by the second meeting $\\checkmark$."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tezliklar o'zgarmas bo'lsa, bir xil vaqtda bosilgan yo'llar tezliklarga proporsional: $\\frac{s_1}{s_2}=\\frac{v_1}{v_2}$",
+    "ru": "При постоянных скоростях пути за одно и то же время пропорциональны скоростям: $\\frac{s_1}{s_2}=\\frac{v_1}{v_2}$",
+    "en": "At constant speeds, distances covered in the same time are proportional to the speeds: $\\frac{s_1}{s_2}=\\frac{v_1}{v_2}$"
+   },
+   {
+    "uz": "Tezliklar o'zgarmas bo'lsa, bir xil vaqtda bosilgan yo'llar tezliklarga proporsional: $\\frac{s_1}{s_2}=\\frac{v_1}{v_2}$",
+    "ru": "При постоянных скоростях пути за одно и то же время пропорциональны скоростям: $\\frac{s_1}{s_2}=\\frac{v_1}{v_2}$",
+    "en": "At constant speeds, distances covered in the same time are proportional to the speeds: $\\frac{s_1}{s_2}=\\frac{v_1}{v_2}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "O'zgarmas tezlikda yo'llar vaqtga proporsional; birgalikdagi yo'l $D$ va $3D$",
+   "ru": "При постоянной скорости пути пропорциональны времени; совместный путь $D$ и $3D$",
+   "en": "At constant speed distances are proportional to time; the combined distance is $D$ and then $3D$"
+  },
+  "answer": "D=45\\ \\mathrm{km}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 2-mavzu, 22-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L01-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Baraban kabelni $2.5\\ \\mathrm{m/s}$ o'zgarmas chiziqli tezlik bilan $80\\ \\mathrm{s}$ davomida o'radi. Shu vaqtda o'ram radiusi $10\\ \\mathrm{cm}$ dan $20\\ \\mathrm{cm}$ gacha ortdi. Kabelning qalinligini toping.",
+   "ru": "Барабан наматывал кабель с постоянной линейной скоростью $2.5\\ \\mathrm{m/s}$ в течение $80\\ \\mathrm{s}$. За это время радиус намотки увеличился с $10\\ \\mathrm{cm}$ до $20\\ \\mathrm{cm}$. Найдите толщину кабеля.",
+   "en": "A drum winds a cable at a constant linear speed of $2.5\\ \\mathrm{m/s}$ for $80\\ \\mathrm{s}$. During this time the winding radius grows from $10\\ \\mathrm{cm}$ to $20\\ \\mathrm{cm}$. Find the thickness of the cable."
+  },
+  "figure": "figures/B1-L01-S15.png",
+  "solution": {
+   "uz": [
+    "O'ralgan kabel uzunligi: $$L=vt=2.5\\cdot80=200\\ \\mathrm{m}$$",
+    "Barabanning yon tomonidan qaralganda o'ralgan qatlam — halqa. Uning yuzasi qalinligi $d$ va uzunligi $L$ bo'lgan lenta yuzasiga teng: $$\\pi(R^2-r^2)=Ld$$",
+    "Qalinlikni topamiz ($R=0.20\\ \\mathrm{m}$, $r=0.10\\ \\mathrm{m}$): $$d=\\frac{\\pi(R^2-r^2)}{L}=\\frac{3.14\\cdot(0.04-0.01)}{200}\\approx4.7\\times10^{-4}\\ \\mathrm{m}=0.47\\ \\mathrm{mm}$$"
+   ],
+   "ru": [
+    "Длина намотанного кабеля: $$L=vt=2.5\\cdot80=200\\ \\mathrm{m}$$",
+    "Если смотреть сбоку, намотанный слой — кольцо. Его площадь равна площади ленты толщиной $d$ и длиной $L$: $$\\pi(R^2-r^2)=Ld$$",
+    "Находим толщину ($R=0.20\\ \\mathrm{m}$, $r=0.10\\ \\mathrm{m}$): $$d=\\frac{\\pi(R^2-r^2)}{L}=\\frac{3.14\\cdot(0.04-0.01)}{200}\\approx4.7\\times10^{-4}\\ \\mathrm{m}=0.47\\ \\mathrm{mm}$$"
+   ],
+   "en": [
+    "The length of cable wound: $$L=vt=2.5\\cdot80=200\\ \\mathrm{m}$$",
+    "Seen from the side, the wound layer is a ring. Its area equals the area of a strip of thickness $d$ and length $L$: $$\\pi(R^2-r^2)=Ld$$",
+    "Find the thickness ($R=0.20\\ \\mathrm{m}$, $r=0.10\\ \\mathrm{m}$): $$d=\\frac{\\pi(R^2-r^2)}{L}=\\frac{3.14\\cdot(0.04-0.01)}{200}\\approx4.7\\times10^{-4}\\ \\mathrm{m}=0.47\\ \\mathrm{mm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tekis harakat: $s=vt$, $\\ v=\\frac{s}{t}$",
+    "ru": "Равномерное движение: $s=vt$, $\\ v=\\frac{s}{t}$",
+    "en": "Uniform motion: $s=vt$, $\\ v=\\frac{s}{t}$"
+   },
+   {
+    "uz": "O'ralgan qatlamning ko'ndalang kesim yuzasi lenta yuzasiga teng: $\\pi(R^2-r^2)=Ld$",
+    "ru": "Площадь поперечного сечения намотанного слоя равна площади ленты: $\\pi(R^2-r^2)=Ld$",
+    "en": "The cross-sectional area of the wound layer equals the tape's area: $\\pi(R^2-r^2)=Ld$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "$L=vt$; halqa yuzasi $\\pi(R^2-r^2)$ lenta yuzasi $Ld$ ga teng",
+   "ru": "$L=vt$; площадь кольца $\\pi(R^2-r^2)$ равна площади ленты $Ld$",
+   "en": "$L=vt$; the ring area $\\pi(R^2-r^2)$ equals the strip area $Ld$"
+  },
+  "answer": "d\\approx0.47\\ \\mathrm{mm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 2-mavzu, 17-masala asosida; sharti o'zgartirilgan"
+ }
+]

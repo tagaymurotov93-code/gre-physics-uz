@@ -1,0 +1,381 @@
+[
+ {
+  "t": "h1",
+  "uz": "Asosiy tushunchalar, to'g'ri chiziqli tekis harakat va uning grafiklari (Basic concepts, uniform straight-line motion and its graphs)",
+  "ru": "Основные понятия, прямолинейное равномерное движение и его графики",
+  "en": "Basic concepts, uniform straight-line motion and its graphs"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz moddiy nuqta va sanoq sistemasi tushunchalarini qo'llaysiz, yo'l va ko'chishni farqlaysiz, tezlik birliklarini almashtirasiz, tekis harakat tenglamasini tuzasiz, jismlarning uchrashish paytini topasiz hamda $x(t)$ va $v(t)$ grafiklaridan tezlik, yo'l va ko'chishni aniqlaysiz.",
+  "ru": "**Цель.** После урока вы будете применять понятия материальной точки и системы отсчёта, различать путь и перемещение, переводить единицы скорости, составлять уравнение равномерного движения, находить момент встречи тел и определять по графикам $x(t)$ и $v(t)$ скорость, путь и перемещение.",
+  "en": "**Goal.** After this lesson you will use the concepts of a material point and a reference frame, distinguish distance from displacement, convert units of speed, write the equation of uniform motion, find when bodies meet, and read speed, distance and displacement from $x(t)$ and $v(t)$ graphs."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Mexanik harakat va sanoq sistemasi (Mechanical motion and reference frame)",
+  "ru": "1. Механическое движение и система отсчёта",
+  "en": "1. Mechanical motion and the reference frame"
+ },
+ {
+  "t": "p",
+  "uz": "**Mexanik harakat (mechanical motion)** — jism vaziyatining boshqa jismlarga nisbatan vaqt o'tishi bilan o'zgarishi. Harakatning uch turi bor: **ilgarilanma (translational)** — jismning barcha nuqtalari bir xil harakatlanadi; **aylanma (rotational)** — nuqtalar aylanalar chizadi; **tebranma (oscillatory)** — harakat takrorlanadi.",
+  "ru": "**Механическое движение** — изменение положения тела относительно других тел с течением времени. Различают три вида движения: **поступательное** — все точки тела движутся одинаково; **вращательное** — точки описывают окружности; **колебательное** — движение повторяется.",
+  "en": "**Mechanical motion** is the change of a body's position relative to other bodies over time. There are three kinds of motion: **translational** — all points of the body move in the same way; **rotational** — the points move along circles; **oscillatory** — the motion repeats."
+ },
+ {
+  "t": "li",
+  "uz": "**Moddiy nuqta (material point)** — masalaning shartida o'lchamlarini hisobga olmasa ham bo'ladigan jism. Bir jism bir masalada moddiy nuqta bo'ladi, boshqasida — yo'q: Toshkentdan Nukusga borayotgan poyezd — moddiy nuqta, ko'prikdan o'tayotgan poyezd — yo'q.",
+  "ru": "**Материальная точка** — тело, размерами которого в условиях задачи можно пренебречь. Одно и то же тело в одной задаче — материальная точка, в другой — нет: поезд, идущий из Ташкента в Нукус, — материальная точка, а поезд, проходящий по мосту, — нет.",
+  "en": "A **material point** is a body whose size can be neglected under the conditions of the problem. The same body may be a material point in one problem and not in another: a train travelling from Tashkent to Nukus is a material point, but a train crossing a bridge is not."
+ },
+ {
+  "t": "li",
+  "uz": "**Sanoq sistemasi (reference frame)** = sanoq jismi + unga bog'langan koordinatalar sistemasi + vaqtni o'lchaydigan asbob (soat) ([[F01]]). Harakat doim biror sanoq sistemasiga nisbatan tasvirlanadi.",
+  "ru": "**Система отсчёта** = тело отсчёта + связанная с ним система координат + прибор для измерения времени (часы) ([[F01]]). Движение всегда описывается относительно какой-либо системы отсчёта.",
+  "en": "A **reference frame** = a reference body + a coordinate system attached to it + a device for measuring time (a clock) ([[F01]]). Motion is always described relative to some reference frame."
+ },
+ {
+  "t": "li",
+  "uz": "SI da uzunlik metrda ($\\mathrm{m}$), vaqt sekundda ($\\mathrm{s}$), tezlik $\\mathrm{m/s}$ da o'lchanadi.",
+  "ru": "В СИ длину измеряют в метрах ($\\mathrm{m}$), время — в секундах ($\\mathrm{s}$), скорость — в $\\mathrm{m/s}$.",
+  "en": "In SI, length is measured in metres ($\\mathrm{m}$), time in seconds ($\\mathrm{s}$) and speed in $\\mathrm{m/s}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B1-L01-F01.png",
+   "ru": "figures/B1-L01-F01-ru.png",
+   "en": "figures/B1-L01-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Trayektoriya, yo'l va ko'chish (Trajectory, distance and displacement)",
+  "ru": "2. Траектория, путь и перемещение",
+  "en": "2. Trajectory, distance and displacement"
+ },
+ {
+  "t": "p",
+  "uz": "**Trayektoriya (trajectory)** — moddiy nuqtaning harakati davomida chizgan chizig'i. **Yo'l (distance, path length)** $l$ — trayektoriya uzunligi, u skalyar va doim musbat. **Ko'chish (displacement)** $\\Delta\\vec r$ — boshlang'ich nuqtadan oxirgi nuqtaga yo'nalgan kesma, u vektor ([[F02]]):",
+  "ru": "**Траектория** — линия, которую описывает материальная точка при движении. **Путь** $l$ — длина траектории, он скалярен и всегда положителен. **Перемещение** $\\Delta\\vec r$ — направленный отрезок из начальной точки в конечную, это вектор ([[F02]]):",
+  "en": "The **trajectory** is the line traced by a material point as it moves. The **distance (path length)** $l$ is the length of the trajectory; it is a scalar and always positive. The **displacement** $\\Delta\\vec r$ is the directed segment from the initial point to the final point; it is a vector ([[F02]]):"
+ },
+ {
+  "t": "m",
+  "m": "l\\geq|\\Delta\\vec r|,\\qquad |\\Delta\\vec r|=\\sqrt{(\\Delta x)^2+(\\Delta y)^2},\\qquad \\Delta x=x-x_0,\\quad \\Delta y=y-y_0"
+ },
+ {
+  "t": "li",
+  "uz": "Yo'l va ko'chish moduli faqat to'g'ri chiziq bo'ylab bir tomonga harakatda teng bo'ladi. Jism chiqqan joyiga qaytsa, ko'chish nolga teng, yo'l esa nolga teng emas.",
+  "ru": "Путь и модуль перемещения равны только при движении по прямой в одну сторону. Если тело вернулось в исходную точку, перемещение равно нулю, а путь — нет.",
+  "en": "Distance and the magnitude of displacement are equal only for motion along a straight line in one direction. If a body returns to its starting point, the displacement is zero but the distance is not."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Koptok $2.4\\ \\mathrm{m}$ balandlikdan tushib, poldan qaytdi va $0.9\\ \\mathrm{m}$ balandlikda tutib olindi. Yo'l: $2.4+0.9=3.3\\ \\mathrm{m}$; ko'chish: $2.4-0.9=1.5\\ \\mathrm{m}$ pastga.",
+  "ru": "**Пример.** Мяч упал с высоты $2.4\\ \\mathrm{m}$, отскочил от пола и был пойман на высоте $0.9\\ \\mathrm{m}$. Путь: $2.4+0.9=3.3\\ \\mathrm{m}$; перемещение: $2.4-0.9=1.5\\ \\mathrm{m}$ вниз.",
+  "en": "**Example.** A ball falls from a height of $2.4\\ \\mathrm{m}$, bounces off the floor and is caught at a height of $0.9\\ \\mathrm{m}$. Distance: $2.4+0.9=3.3\\ \\mathrm{m}$; displacement: $2.4-0.9=1.5\\ \\mathrm{m}$ downward."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Sayyoh $5\\ \\mathrm{km}$ shimolga, so'ng $12\\ \\mathrm{km}$ sharqqa yurdi. Yo'l $17\\ \\mathrm{km}$, ko'chish $\\sqrt{5^2+12^2}=13\\ \\mathrm{km}$.",
+  "ru": "**Пример.** Турист прошёл $5\\ \\mathrm{km}$ на север, затем $12\\ \\mathrm{km}$ на восток. Путь $17\\ \\mathrm{km}$, перемещение $\\sqrt{5^2+12^2}=13\\ \\mathrm{km}$.",
+  "en": "**Example.** A hiker walks $5\\ \\mathrm{km}$ north and then $12\\ \\mathrm{km}$ east. The distance is $17\\ \\mathrm{km}$ and the displacement is $\\sqrt{5^2+12^2}=13\\ \\mathrm{km}$."
+ },
+ {
+  "t": "li",
+  "uz": "Aylana bo'ylab harakatda: to'liq aylanishlarda ko'chish nol; yarim aylanishda yo'l $\\pi R$, ko'chish $2R$; chorak aylanishda yo'l $\\frac{\\pi R}{2}$, ko'chish $R\\sqrt{2}$.",
+  "ru": "При движении по окружности: за целое число оборотов перемещение равно нулю; за пол-оборота путь $\\pi R$, перемещение $2R$; за четверть оборота путь $\\frac{\\pi R}{2}$, перемещение $R\\sqrt{2}$.",
+  "en": "For motion along a circle: after whole turns the displacement is zero; after half a turn the distance is $\\pi R$ and the displacement $2R$; after a quarter turn the distance is $\\frac{\\pi R}{2}$ and the displacement $R\\sqrt{2}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B1-L01-F02.png",
+   "ru": "figures/B1-L01-F02-ru.png",
+   "en": "figures/B1-L01-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. To'g'ri chiziqli tekis harakat (Uniform straight-line motion)",
+  "ru": "3. Прямолинейное равномерное движение",
+  "en": "3. Uniform straight-line motion"
+ },
+ {
+  "t": "p",
+  "uz": "**To'g'ri chiziqli tekis harakat (uniform straight-line motion)** — jism istalgan teng vaqt oraliqlarida teng ko'chishlar qiladigan harakat. Bunda tezlik vektori $\\vec v$ ning moduli ham, yo'nalishi ham o'zgarmaydi:",
+  "ru": "**Прямолинейное равномерное движение** — движение, при котором тело за любые равные промежутки времени совершает равные перемещения. При этом не меняются ни модуль, ни направление вектора скорости $\\vec v$:",
+  "en": "**Uniform straight-line motion** is motion in which a body makes equal displacements in any equal time intervals. Neither the magnitude nor the direction of the velocity $\\vec v$ changes:"
+ },
+ {
+  "t": "m",
+  "m": "v=\\frac{s}{t},\\qquad s=vt,\\qquad t=\\frac{s}{v}"
+ },
+ {
+  "t": "li",
+  "uz": "Tezlik birliklari: $1\\ \\frac{\\mathrm{km}}{\\mathrm{h}}=\\frac{1000\\ \\mathrm{m}}{3600\\ \\mathrm{s}}=\\frac{1}{3.6}\\ \\frac{\\mathrm{m}}{\\mathrm{s}}$. Demak, $\\mathrm{km/h}$ dan $\\mathrm{m/s}$ ga o'tishda $3.6$ ga bo'linadi, teskarisida ko'paytiriladi: $72\\ \\mathrm{km/h}=20\\ \\mathrm{m/s}$, $\\ 15\\ \\mathrm{m/s}=54\\ \\mathrm{km/h}$.",
+  "ru": "Единицы скорости: $1\\ \\frac{\\mathrm{km}}{\\mathrm{h}}=\\frac{1000\\ \\mathrm{m}}{3600\\ \\mathrm{s}}=\\frac{1}{3.6}\\ \\frac{\\mathrm{m}}{\\mathrm{s}}$. Значит, при переходе от $\\mathrm{km/h}$ к $\\mathrm{m/s}$ делят на $3.6$, обратно — умножают: $72\\ \\mathrm{km/h}=20\\ \\mathrm{m/s}$, $\\ 15\\ \\mathrm{m/s}=54\\ \\mathrm{km/h}$.",
+  "en": "Units of speed: $1\\ \\frac{\\mathrm{km}}{\\mathrm{h}}=\\frac{1000\\ \\mathrm{m}}{3600\\ \\mathrm{s}}=\\frac{1}{3.6}\\ \\frac{\\mathrm{m}}{\\mathrm{s}}$. So to go from $\\mathrm{km/h}$ to $\\mathrm{m/s}$ divide by $3.6$, and multiply for the reverse: $72\\ \\mathrm{km/h}=20\\ \\mathrm{m/s}$, $\\ 15\\ \\mathrm{m/s}=54\\ \\mathrm{km/h}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Uzun jism ko'prikdan (tunneldan) o'tishi.** Poyezd ko'prikka kirgandan to undan butunlay chiqqungacha bosh vagoni $s=L_1+L_2$ yo'l bosadi, bu yerda $L_1$ — poyezd, $L_2$ — ko'prik uzunligi.",
+  "ru": "**Прохождение длинного тела через мост (тоннель).** С момента въезда поезда на мост до полного съезда с него голова поезда проходит путь $s=L_1+L_2$, где $L_1$ — длина поезда, $L_2$ — длина моста.",
+  "en": "**A long body crossing a bridge (tunnel).** From the moment the train enters the bridge until it has completely left it, the front of the train travels $s=L_1+L_2$, where $L_1$ is the length of the train and $L_2$ the length of the bridge."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Uzunligi $180\\ \\mathrm{m}$ bo'lgan poyezd $36\\ \\mathrm{km/h}$ tezlik bilan $420\\ \\mathrm{m}$ li tunneldan o'tadi: $t=\\frac{180+420}{10}=60\\ \\mathrm{s}$.",
+  "ru": "**Пример.** Поезд длиной $180\\ \\mathrm{m}$ проходит со скоростью $36\\ \\mathrm{km/h}$ тоннель длиной $420\\ \\mathrm{m}$: $t=\\frac{180+420}{10}=60\\ \\mathrm{s}$.",
+  "en": "**Example.** A train $180\\ \\mathrm{m}$ long passes through a $420\\ \\mathrm{m}$ tunnel at $36\\ \\mathrm{km/h}$: $t=\\frac{180+420}{10}=60\\ \\mathrm{s}$."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Harakat tenglamasi va uchrashish (Equation of motion and meeting)",
+  "ru": "4. Уравнение движения и встреча тел",
+  "en": "4. Equation of motion and meeting"
+ },
+ {
+  "t": "p",
+  "uz": "$x$ o'qi bo'ylab tekis harakatda jism koordinatasi vaqtga chiziqli bog'liq — bu **harakat tenglamasi (equation of motion)** ([[F03]]):",
+  "ru": "При равномерном движении вдоль оси $x$ координата тела линейно зависит от времени — это **уравнение движения** ([[F03]]):",
+  "en": "In uniform motion along the $x$ axis, the coordinate of a body depends linearly on time — this is the **equation of motion** ([[F03]]):"
+ },
+ {
+  "t": "m",
+  "m": "x=x_0+v_xt"
+ },
+ {
+  "t": "li",
+  "uz": "$x_0$ — boshlang'ich koordinata, $v_x$ — tezlik proyeksiyasi: jism $x$ o'qi yo'nalishida harakatlansa $v_x>0$, qarama-qarshi yo'nalishda $v_x<0$. Masalan, $x=40-3t$ da $x_0=40\\ \\mathrm{m}$, $v_x=-3\\ \\mathrm{m/s}$.",
+  "ru": "$x_0$ — начальная координата, $v_x$ — проекция скорости: если тело движется в направлении оси $x$, то $v_x>0$, в противоположном — $v_x<0$. Например, в $x=40-3t$: $x_0=40\\ \\mathrm{m}$, $v_x=-3\\ \\mathrm{m/s}$.",
+  "en": "$x_0$ is the initial coordinate and $v_x$ the velocity component: if the body moves along the $x$ axis, $v_x>0$; in the opposite direction, $v_x<0$. For example, in $x=40-3t$, $x_0=40\\ \\mathrm{m}$ and $v_x=-3\\ \\mathrm{m/s}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Uchrashish (meeting).** Ikki jism uchrashganda ularning koordinatalari teng: $x_1(t)=x_2(t)$. Shu tenglamadan uchrashish payti, so'ng uchrashish joyi topiladi.",
+  "ru": "**Встреча.** При встрече двух тел их координаты равны: $x_1(t)=x_2(t)$. Из этого уравнения находят момент встречи, затем — место встречи.",
+  "en": "**Meeting.** When two bodies meet, their coordinates are equal: $x_1(t)=x_2(t)$. This equation gives the meeting time, and then the meeting point."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $x_1=12+2t$, $\\ x_2=60-4t$: $\\ 12+2t=60-4t\\Rightarrow t=8\\ \\mathrm{s}$, $\\ x=28\\ \\mathrm{m}$. Agar tezliklar bir xil bo'lsa (masalan, $x_1=1+5t$, $x_2=3+5t$), jismlar hech qachon uchrashmaydi — ular orasidagi masofa o'zgarmaydi.",
+  "ru": "**Пример.** $x_1=12+2t$, $\\ x_2=60-4t$: $\\ 12+2t=60-4t\\Rightarrow t=8\\ \\mathrm{s}$, $\\ x=28\\ \\mathrm{m}$. Если скорости одинаковы (например, $x_1=1+5t$, $x_2=3+5t$), тела никогда не встретятся — расстояние между ними не меняется.",
+  "en": "**Example.** $x_1=12+2t$, $\\ x_2=60-4t$: $\\ 12+2t=60-4t\\Rightarrow t=8\\ \\mathrm{s}$, $\\ x=28\\ \\mathrm{m}$. If the velocities are equal (for example, $x_1=1+5t$, $x_2=3+5t$), the bodies never meet — the distance between them does not change."
+ },
+ {
+  "t": "li",
+  "uz": "Bir-biriga qarab harakatlanayotgan jismlar orasidagi masofa $v_1+v_2$ tezlik bilan, bir tomonga harakatlanayotganlarniki $|v_1-v_2|$ tezlik bilan kamayadi.",
+  "ru": "Расстояние между телами, движущимися навстречу друг другу, сокращается со скоростью $v_1+v_2$, а движущимися в одну сторону — со скоростью $|v_1-v_2|$.",
+  "en": "The distance between bodies moving towards each other shrinks at the rate $v_1+v_2$; between bodies moving in the same direction, at the rate $|v_1-v_2|$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B1-L01-F03.png",
+   "ru": "figures/B1-L01-F03-ru.png",
+   "en": "figures/B1-L01-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Tekislikdagi tekis harakat (Uniform motion in a plane)",
+  "ru": "5. Равномерное движение на плоскости",
+  "en": "5. Uniform motion in a plane"
+ },
+ {
+  "t": "p",
+  "uz": "Tekislikda tekis harakatlanayotgan jismning har bir koordinatasi alohida tekis o'zgaradi ([[F04]]):",
+  "ru": "У тела, равномерно движущегося на плоскости, каждая координата меняется равномерно независимо от другой ([[F04]]):",
+  "en": "For a body moving uniformly in a plane, each coordinate changes uniformly on its own ([[F04]]):"
+ },
+ {
+  "t": "m",
+  "m": "x=x_0+v_xt,\\qquad y=y_0+v_yt,\\qquad v=\\sqrt{v_x^2+v_y^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Trayektoriya tenglamasi (trajectory equation)** $y(x)$ vaqtni yo'qotib topiladi: birinchi tenglamadan $t=\\frac{x-x_0}{v_x}$ ni topib, ikkinchisiga qo'yamiz. Tekis harakat trayektoriyasi — to'g'ri chiziq.",
+  "ru": "**Уравнение траектории** $y(x)$ находят, исключив время: из первого уравнения $t=\\frac{x-x_0}{v_x}$ подставляют во второе. Траектория равномерного движения — прямая.",
+  "en": "The **trajectory equation** $y(x)$ is found by eliminating time: take $t=\\frac{x-x_0}{v_x}$ from the first equation and substitute it into the second. The trajectory of uniform motion is a straight line."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $x=4+3t$, $\\ y=1+4t$: $\\ v=\\sqrt{3^2+4^2}=5\\ \\mathrm{m/s}$; $\\ t=\\frac{x-4}{3}$, $\\ y=1+\\frac{4}{3}(x-4)=\\frac{4}{3}x-\\frac{13}{3}$.",
+  "ru": "**Пример.** $x=4+3t$, $\\ y=1+4t$: $\\ v=\\sqrt{3^2+4^2}=5\\ \\mathrm{m/s}$; $\\ t=\\frac{x-4}{3}$, $\\ y=1+\\frac{4}{3}(x-4)=\\frac{4}{3}x-\\frac{13}{3}$.",
+  "en": "**Example.** $x=4+3t$, $\\ y=1+4t$: $\\ v=\\sqrt{3^2+4^2}=5\\ \\mathrm{m/s}$; $\\ t=\\frac{x-4}{3}$, $\\ y=1+\\frac{4}{3}(x-4)=\\frac{4}{3}x-\\frac{13}{3}$."
+ },
+ {
+  "t": "li",
+  "uz": "Qiya tekislik bo'ylab $v$ tezlik bilan harakatda tezlik proyeksiyalari: $v_x=v\\cos\\alpha$ (gorizontal), $v_y=v\\sin\\alpha$ (vertikal), $\\alpha$ — qiyalik burchagi.",
+  "ru": "При движении вдоль наклонной плоскости со скоростью $v$ проекции скорости: $v_x=v\\cos\\alpha$ (горизонтальная), $v_y=v\\sin\\alpha$ (вертикальная), $\\alpha$ — угол наклона.",
+  "en": "For motion along an incline with speed $v$, the velocity components are $v_x=v\\cos\\alpha$ (horizontal) and $v_y=v\\sin\\alpha$ (vertical), where $\\alpha$ is the angle of the incline."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B1-L01-F04.png",
+   "ru": "figures/B1-L01-F04-ru.png",
+   "en": "figures/B1-L01-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Tekis harakat grafiklari (Graphs of uniform motion)",
+  "ru": "6. Графики равномерного движения",
+  "en": "6. Graphs of uniform motion"
+ },
+ {
+  "t": "li",
+  "uz": "$x(t)$ **grafigi** — to'g'ri chiziq. Uning qiyaligi tezlik proyeksiyasiga teng: $v_x=\\frac{\\Delta x}{\\Delta t}$. Chiziq qancha tik bo'lsa, tezlik shuncha katta; pastga tushayotgan chiziq — $v_x<0$; gorizontal chiziq — jism tinch turibdi ([[F05]]).",
+  "ru": "**График** $x(t)$ — прямая. Её наклон равен проекции скорости: $v_x=\\frac{\\Delta x}{\\Delta t}$. Чем круче прямая, тем больше скорость; убывающая прямая — $v_x<0$; горизонтальная — тело покоится ([[F05]]).",
+  "en": "The $x(t)$ **graph** is a straight line. Its slope equals the velocity component: $v_x=\\frac{\\Delta x}{\\Delta t}$. The steeper the line, the greater the speed; a falling line means $v_x<0$; a horizontal line means the body is at rest ([[F05]])."
+ },
+ {
+  "t": "li",
+  "uz": "$v(t)$ **grafigi** — vaqt o'qiga parallel to'g'ri chiziq. Grafik ostidagi yuza ko'chishga teng: $\\Delta x=v_x t$. Vaqt o'qidan pastdagi yuza manfiy ko'chishni beradi; yo'l esa barcha yuzalar modullari yig'indisi.",
+  "ru": "**График** $v(t)$ — прямая, параллельная оси времени. Площадь под графиком равна перемещению: $\\Delta x=v_x t$. Площадь ниже оси времени даёт отрицательное перемещение; путь же равен сумме модулей всех площадей.",
+  "en": "The $v(t)$ **graph** is a line parallel to the time axis. The area under the graph equals the displacement: $\\Delta x=v_x t$. Area below the time axis gives negative displacement, while the distance is the sum of the magnitudes of all areas."
+ },
+ {
+  "t": "li",
+  "uz": "$s(t)$ (yo'l) grafigi hech qachon pastga tushmaydi, chunki yo'l kamaymaydi. Shuning uchun pastga tushuvchi chiziq yo'l grafigi bo'la olmaydi, koordinata grafigi esa bo'la oladi.",
+  "ru": "График пути $s(t)$ никогда не убывает, так как путь не уменьшается. Поэтому убывающая линия не может быть графиком пути, а графиком координаты — может.",
+  "en": "The distance graph $s(t)$ never goes down, because distance never decreases. So a falling line cannot be a distance graph, though it can be a coordinate graph."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $x(t)$ grafigi $(0;\\ 6\\ \\mathrm{m})$ va $(3\\ \\mathrm{s};\\ 0)$ nuqtalardan o'tadi: $v_x=\\frac{0-6}{3}=-2\\ \\mathrm{m/s}$, harakat tenglamasi $x=6-2t$.",
+  "ru": "**Пример.** График $x(t)$ проходит через точки $(0;\\ 6\\ \\mathrm{m})$ и $(3\\ \\mathrm{s};\\ 0)$: $v_x=\\frac{0-6}{3}=-2\\ \\mathrm{m/s}$, уравнение движения $x=6-2t$.",
+  "en": "**Example.** The $x(t)$ graph passes through $(0;\\ 6\\ \\mathrm{m})$ and $(3\\ \\mathrm{s};\\ 0)$: $v_x=\\frac{0-6}{3}=-2\\ \\mathrm{m/s}$, and the equation of motion is $x=6-2t$."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B1-L01-F05.png",
+   "ru": "figures/B1-L01-F05-ru.png",
+   "en": "figures/B1-L01-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Test uchun tez tekshiruvlar (Quick checks for tests)",
+  "ru": "7. Быстрые проверки для тестов",
+  "en": "7. Quick checks for tests"
+ },
+ {
+  "t": "li",
+  "uz": "Avval barcha kattaliklarni bitta birliklar tizimiga o'tkazing: $\\mathrm{km/h}\\to\\mathrm{m/s}$ uchun $3.6$ ga bo'ling.",
+  "ru": "Сначала переведите все величины в одну систему единиц: для $\\mathrm{km/h}\\to\\mathrm{m/s}$ делите на $3.6$.",
+  "en": "First convert all quantities to one system of units: for $\\mathrm{km/h}\\to\\mathrm{m/s}$, divide by $3.6$."
+ },
+ {
+  "t": "li",
+  "uz": "Yo'l $\\geq$ ko'chish moduli. Variantda ko'chish yo'ldan katta bo'lsa — u noto'g'ri.",
+  "ru": "Путь $\\geq$ модуля перемещения. Если в варианте перемещение больше пути — он неверен.",
+  "en": "Distance $\\geq$ magnitude of displacement. If a choice has displacement greater than distance, it is wrong."
+ },
+ {
+  "t": "li",
+  "uz": "Uzun jism: yo'lga jismning o'z uzunligini qo'shishni unutmang.",
+  "ru": "Длинное тело: не забудьте прибавить к пути собственную длину тела.",
+  "en": "Long bodies: do not forget to add the body's own length to the distance."
+ },
+ {
+  "t": "li",
+  "uz": "Harakat tenglamasidagi $t$ oldidagi son — tezlik, ozod had — boshlang'ich koordinata.",
+  "ru": "Число перед $t$ в уравнении движения — скорость, свободный член — начальная координата.",
+  "en": "The number in front of $t$ in the equation of motion is the velocity; the constant term is the initial coordinate."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Ko'chish moduli",
+    "ru": "Модуль перемещения",
+    "en": "Magnitude of displacement",
+    "m": "|\\Delta\\vec r|=\\sqrt{\\Delta x^2+\\Delta y^2}"
+   },
+   {
+    "uz": "Tekis harakat tezligi",
+    "ru": "Скорость равномерного движения",
+    "en": "Speed in uniform motion",
+    "m": "v=\\frac{s}{t}"
+   },
+   {
+    "uz": "Birliklar",
+    "ru": "Единицы",
+    "en": "Units",
+    "m": "1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}"
+   },
+   {
+    "uz": "Ko'prikdan o'tish",
+    "ru": "Прохождение моста",
+    "en": "Crossing a bridge",
+    "m": "t=\\frac{L_1+L_2}{v}"
+   },
+   {
+    "uz": "Harakat tenglamasi",
+    "ru": "Уравнение движения",
+    "en": "Equation of motion",
+    "m": "x=x_0+v_xt"
+   },
+   {
+    "uz": "Uchrashish sharti",
+    "ru": "Условие встречи",
+    "en": "Meeting condition",
+    "m": "x_1(t)=x_2(t)"
+   },
+   {
+    "uz": "Tekislikdagi tezlik",
+    "ru": "Скорость на плоскости",
+    "en": "Speed in a plane",
+    "m": "v=\\sqrt{v_x^2+v_y^2}"
+   },
+   {
+    "uz": "Grafikdan tezlik",
+    "ru": "Скорость по графику",
+    "en": "Speed from a graph",
+    "m": "v_x=\\frac{\\Delta x}{\\Delta t}"
+   }
+  ]
+ }
+]
