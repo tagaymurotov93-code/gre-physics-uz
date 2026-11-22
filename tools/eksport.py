@@ -42,6 +42,16 @@ def split_theory(md):
     return front, dict(zip(("uz", "ru", "en"), parts))
 
 
+def stamp_version():
+    """index.html dagi ?v= belgisini yangilaydi — Telegram keshi yangi app.js/style.css ni yuklashi uchun."""
+    import re, time
+    p = os.path.join(APP, "index.html")
+    h = open(p, encoding="utf-8").read()
+    h2 = re.sub(r"\?v=\d+", "?v=" + time.strftime("%Y%m%d%H%M"), h)
+    if h2 != h:
+        open(p, "w", encoding="utf-8").write(h2)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("dars", help="dars kodi, masalan B0-L01")
@@ -79,6 +89,7 @@ def main():
     json.dump(idx, open(idx_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"✓ {lid}: nazariya (theory.json, 3 til), {len(solved)} masala, {len(quiz)} test, {len(hw)} mustaqil, "
           f"{len(gloss)} atama, {figs} rasm → miniapp/darslar/{lid}/")
+    stamp_version()
 
 
 if __name__ == "__main__":

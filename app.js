@@ -130,10 +130,12 @@
   const biLoc = (s) => ({ uz: s, ru: locIn(s, "ru"), en: locIn(s, "en") });
 
   async function getJSON(path) {
-    if (!cache[path]) cache[path] = fetch(path).then((r) => { if (!r.ok) throw new Error(path); return r.json(); });
+    if (!cache[path]) cache[path] = fetch(path, { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(path); return r.json(); });
     return cache[path];
   }
   const base = (id) => `darslar/${id}/`;
+  // rasmlar ham yangi versiyada yuklansin (Telegram keshi eski rasmni ko'rsatmasligi uchun)
+  const VER = (document.querySelector('script[src^="app.js"]')?.src.match(/v=(\d+)/) || [])[1] || "";
 
   function zoomable(root) {
     root.querySelectorAll("img").forEach((img) => {
@@ -251,7 +253,7 @@
       else if (b.t === "note") html += bi(b, "p", "note");
       else if (b.t === "li") { if (!inList) { html += `<ul class="blist">`; inList = true; } html += `<li>${bi(b, "div")}</li>`; }
       else if (b.t === "m") html += `<div class="fm">${tex(b.m, true)}</div>`;
-      else if (b.t === "fig") html += `<figure id="fig-${b.fig}"><img src="${figBase}${b.src[lang] || b.src.uz}" alt="${esc(t(b.cap || {}) || b.fig)}">
+      else if (b.t === "fig") html += `<figure id="fig-${b.fig}"><img src="${figBase}${b.src[lang] || b.src.uz}?v=${VER}" alt="${esc(t(b.cap || {}) || b.fig)}">
           ${b.cap ? `<figcaption>${bi(b.cap, "span")}</figcaption>` : ""}</figure>`;
       else if (b.t === "tbl") html += `<div class="tbl">${b.rows.map((r) => `<div class="trow"><div class="tn">${bi(r, "div")}</div>
           <div class="tv">${r.m ? tex(r.m, false) : esc(r.v)}</div></div>`).join("")}</div>`;
@@ -313,7 +315,7 @@
     view.innerHTML = S.map((s, i) => `<section class="card">
         <div class="row"><span class="code">${s.id.split("-").pop()}</span><span class="chip ${s.difficulty}">${esc(t(T.diff[s.difficulty]))}</span></div>
         ${bi(s.statement, "p")}
-        ${s.figure ? `<img class="fig" src="${base(id)}${s.figure}" alt="${s.id}">` : ""}
+        ${s.figure ? `<img class="fig" src="${base(id)}${s.figure}?v=${VER}" alt="${s.id}">` : ""}
         <button class="btn ghost wide" data-i="${i}">${esc(t(T.show))}</button>
         <div class="sol" id="sol${i}" hidden>
           ${steps(s.solution)}
