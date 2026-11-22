@@ -1,0 +1,741 @@
+[
+ {
+  "id": "B1-L03-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) Avtomobil tinch holatdan $12.5\\ \\mathrm{s}$ da tezligini $90\\ \\mathrm{km/h}$ ga yetkazdi. b) Samolyot $20\\ \\mathrm{s}$ da tezligini $540\\ \\mathrm{km/h}$ dan $900\\ \\mathrm{km/h}$ gacha oshirdi. Har birining tezlanishini toping.",
+   "ru": "а) Автомобиль из состояния покоя за $12.5\\ \\mathrm{s}$ разогнался до $90\\ \\mathrm{km/h}$. б) Самолёт за $20\\ \\mathrm{s}$ увеличил скорость с $540\\ \\mathrm{km/h}$ до $900\\ \\mathrm{km/h}$. Найдите ускорение каждого.",
+   "en": "a) A car accelerates from rest to $90\\ \\mathrm{km/h}$ in $12.5\\ \\mathrm{s}$. b) A plane increases its speed from $540\\ \\mathrm{km/h}$ to $900\\ \\mathrm{km/h}$ in $20\\ \\mathrm{s}$. Find the acceleration of each."
+  },
+  "figure": "figures/B1-L03-S01.png",
+  "solution": {
+   "uz": [
+    "Tezliklarni SI ga o'tkazamiz: $$90\\ \\mathrm{km/h}=25\\ \\mathrm{m/s},\\qquad 540\\ \\mathrm{km/h}=150\\ \\mathrm{m/s},\\qquad 900\\ \\mathrm{km/h}=250\\ \\mathrm{m/s}$$",
+    "a) Tezlanish — tezlik o'zgarishining vaqtga nisbati: $$a_1=\\frac{25-0}{12.5}=2\\ \\mathrm{m/s^2}$$",
+    "b) Xuddi shunday: $$a_2=\\frac{250-150}{20}=5\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Переводим скорости в СИ: $$90\\ \\mathrm{km/h}=25\\ \\mathrm{m/s},\\qquad 540\\ \\mathrm{km/h}=150\\ \\mathrm{m/s},\\qquad 900\\ \\mathrm{km/h}=250\\ \\mathrm{m/s}$$",
+    "а) Ускорение — отношение изменения скорости ко времени: $$a_1=\\frac{25-0}{12.5}=2\\ \\mathrm{m/s^2}$$",
+    "б) Аналогично: $$a_2=\\frac{250-150}{20}=5\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "Convert the speeds to SI: $$90\\ \\mathrm{km/h}=25\\ \\mathrm{m/s},\\qquad 540\\ \\mathrm{km/h}=150\\ \\mathrm{m/s},\\qquad 900\\ \\mathrm{km/h}=250\\ \\mathrm{m/s}$$",
+    "a) Acceleration is the change in velocity divided by the time: $$a_1=\\frac{25-0}{12.5}=2\\ \\mathrm{m/s^2}$$",
+    "b) Likewise: $$a_2=\\frac{250-150}{20}=5\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tezlik birliklari: $1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}$",
+    "ru": "Единицы скорости: $1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}$",
+    "en": "Units of speed: $1\\ \\mathrm{m/s}=3.6\\ \\mathrm{km/h}$"
+   },
+   {
+    "uz": "Tezlanish: $a=\\frac{v-v_0}{t}$, birligi $\\mathrm{m/s^2}$",
+    "ru": "Ускорение: $a=\\frac{v-v_0}{t}$, единица $\\mathrm{m/s^2}$",
+    "en": "Acceleration: $a=\\frac{v-v_0}{t}$, unit $\\mathrm{m/s^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Tezlanish ta'rifi",
+   "ru": "Определение ускорения",
+   "en": "Definition of acceleration"
+  },
+  "answer": "a_1=2\\ \\mathrm{m/s^2},\\quad a_2=5\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 6-mavzu, 6–10-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$54\\ \\mathrm{km/h}$ tezlik bilan ketayotgan avtomobil tormozlanib, $5\\ \\mathrm{s}$ da to'xtadi. Tezlanishni toping, tezlikning vaqtga bog'lanish tenglamasini yozing va tormozlanish boshlangandan $2\\ \\mathrm{s}$ o'tgandagi tezlikni toping.",
+   "ru": "Автомобиль, ехавший со скоростью $54\\ \\mathrm{km/h}$, затормозил и остановился за $5\\ \\mathrm{s}$. Найдите ускорение, запишите уравнение зависимости скорости от времени и найдите скорость через $2\\ \\mathrm{s}$ после начала торможения.",
+   "en": "A car travelling at $54\\ \\mathrm{km/h}$ brakes and stops in $5\\ \\mathrm{s}$. Find the acceleration, write the equation for velocity as a function of time, and find the velocity $2\\ \\mathrm{s}$ after braking starts."
+  },
+  "figure": "figures/B1-L03-S02.png",
+  "solution": {
+   "uz": [
+    "$v_0=54\\ \\mathrm{km/h}=15\\ \\mathrm{m/s}$, oxirgi tezlik $v=0$: $$a=\\frac{0-15}{5}=-3\\ \\mathrm{m/s^2}$$",
+    "Tezlanish manfiy — harakat sekinlanuvchan, tezlanish tezlikka qarama-qarshi yo'nalgan. Tezlik tenglamasi: $$v=15-3t$$",
+    "$t=2\\ \\mathrm{s}$ da: $$v=15-3\\cdot2=9\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "$v_0=54\\ \\mathrm{km/h}=15\\ \\mathrm{m/s}$, конечная скорость $v=0$: $$a=\\frac{0-15}{5}=-3\\ \\mathrm{m/s^2}$$",
+    "Ускорение отрицательно — движение замедленное, ускорение направлено против скорости. Уравнение скорости: $$v=15-3t$$",
+    "При $t=2\\ \\mathrm{s}$: $$v=15-3\\cdot2=9\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "$v_0=54\\ \\mathrm{km/h}=15\\ \\mathrm{m/s}$, final velocity $v=0$: $$a=\\frac{0-15}{5}=-3\\ \\mathrm{m/s^2}$$",
+    "The acceleration is negative — the motion is slowing down and the acceleration points against the velocity. The velocity equation: $$v=15-3t$$",
+    "At $t=2\\ \\mathrm{s}$: $$v=15-3\\cdot2=9\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tezlanish: $a=\\frac{v-v_0}{t}$, birligi $\\mathrm{m/s^2}$",
+    "ru": "Ускорение: $a=\\frac{v-v_0}{t}$, единица $\\mathrm{m/s^2}$",
+    "en": "Acceleration: $a=\\frac{v-v_0}{t}$, unit $\\mathrm{m/s^2}$"
+   },
+   {
+    "uz": "Tezlanuvchan harakatda $\\vec a$ va $\\vec v$ bir tomonga ($a_x>0$), sekinlanuvchanda qarama-qarshi ($a_x<0$) yo'nalgan",
+    "ru": "При ускоренном движении $\\vec a$ и $\\vec v$ сонаправлены ($a_x>0$), при замедленном — противоположны ($a_x<0$)",
+    "en": "In speeding-up motion $\\vec a$ and $\\vec v$ point the same way ($a_x>0$); in slowing-down motion they are opposite ($a_x<0$)"
+   },
+   {
+    "uz": "Tekis o'zgaruvchan harakatda tezlik: $v=v_0+at$",
+    "ru": "Скорость при равнопеременном движении: $v=v_0+at$",
+    "en": "Velocity in uniformly accelerated motion: $v=v_0+at$"
+   }
+  ],
+  "basis": {
+   "uz": "Tezlanish, tezlik tenglamasi",
+   "ru": "Ускорение, уравнение скорости",
+   "en": "Acceleration, velocity equation"
+  },
+  "answer": "a=-3\\ \\mathrm{m/s^2};\\quad v=15-3t;\\quad v(2)=9\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 6-mavzu, 11–13, 23–24-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Stansiyadan jo'nagan poyezd tekis tezlanuvchan harakatlanib, $8\\ \\mathrm{s}$ dan keyin $0.5\\ \\mathrm{m/s}$ tezlikka erishdi. Harakat boshlangandan qancha vaqt o'tib uning tezligi $3\\ \\mathrm{m/s}$ ga yetadi?",
+   "ru": "Поезд, отходящий от станции, движется равноускоренно и через $8\\ \\mathrm{s}$ достигает скорости $0.5\\ \\mathrm{m/s}$. Через какое время после начала движения его скорость станет $3\\ \\mathrm{m/s}$?",
+   "en": "A train leaving a station accelerates uniformly and reaches $0.5\\ \\mathrm{m/s}$ after $8\\ \\mathrm{s}$. How long after the start will its speed reach $3\\ \\mathrm{m/s}$?"
+  },
+  "figure": "figures/B1-L03-S03.png",
+  "solution": {
+   "uz": [
+    "Tinch holatdan harakatda $v=at$, tezlanish: $$a=\\frac{0.5}{8}=0.0625\\ \\mathrm{m/s^2}$$",
+    "Kerakli vaqt: $$t=\\frac{v}{a}=\\frac{3}{0.0625}=48\\ \\mathrm{s}$$",
+    "Tekshiruv: $v\\sim t$ — tezlik $6$ marta ortdi, vaqt ham $6$ marta: $8\\cdot6=48\\ \\mathrm{s}$."
+   ],
+   "ru": [
+    "При движении из покоя $v=at$, ускорение: $$a=\\frac{0.5}{8}=0.0625\\ \\mathrm{m/s^2}$$",
+    "Искомое время: $$t=\\frac{v}{a}=\\frac{3}{0.0625}=48\\ \\mathrm{s}$$",
+    "Проверка: $v\\sim t$ — скорость выросла в $6$ раз, время тоже: $8\\cdot6=48\\ \\mathrm{s}$."
+   ],
+   "en": [
+    "Starting from rest $v=at$, so the acceleration is $$a=\\frac{0.5}{8}=0.0625\\ \\mathrm{m/s^2}$$",
+    "The required time: $$t=\\frac{v}{a}=\\frac{3}{0.0625}=48\\ \\mathrm{s}$$",
+    "Check: $v\\sim t$ — the speed grew $6$ times, and so did the time: $8\\cdot6=48\\ \\mathrm{s}$."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tezlanish: $a=\\frac{v-v_0}{t}$, birligi $\\mathrm{m/s^2}$",
+    "ru": "Ускорение: $a=\\frac{v-v_0}{t}$, единица $\\mathrm{m/s^2}$",
+    "en": "Acceleration: $a=\\frac{v-v_0}{t}$, unit $\\mathrm{m/s^2}$"
+   },
+   {
+    "uz": "Tekis o'zgaruvchan harakatda tezlik: $v=v_0+at$",
+    "ru": "Скорость при равнопеременном движении: $v=v_0+at$",
+    "en": "Velocity in uniformly accelerated motion: $v=v_0+at$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Tinch holatdan tekis tezlanuvchan harakat: $v=at$",
+   "ru": "Равноускоренное движение из покоя: $v=at$",
+   "en": "Uniform acceleration from rest: $v=at$"
+  },
+  "answer": "t=48\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 6-mavzu, 25-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S04",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Jism tezligi $v=12-3t$ ($\\mathrm{m/s}$) qonun bo'yicha o'zgaradi. a) Boshlang'ich tezlik va tezlanishni toping. b) Tezlik qachon $2$ marta kamayadi? c) Jism qachon to'xtaydi va $t=6\\ \\mathrm{s}$ da tezligi qanday?",
+   "ru": "Скорость тела меняется по закону $v=12-3t$ ($\\mathrm{m/s}$). а) Найдите начальную скорость и ускорение. б) Когда скорость уменьшится в $2$ раза? в) Когда тело остановится и какова его скорость при $t=6\\ \\mathrm{s}$?",
+   "en": "A body's velocity changes as $v=12-3t$ ($\\mathrm{m/s}$). a) Find the initial velocity and the acceleration. b) When does the velocity halve? c) When does the body stop, and what is its velocity at $t=6\\ \\mathrm{s}$?"
+  },
+  "figure": "figures/B1-L03-S04.png",
+  "solution": {
+   "uz": [
+    "a) $v=v_0+at$ bilan solishtiramiz: $$v_0=12\\ \\mathrm{m/s},\\qquad a=-3\\ \\mathrm{m/s^2}$$",
+    "b) Tezlik $6\\ \\mathrm{m/s}$ bo'lganda: $$12-3t=6\\ \\Rightarrow\\ t=2\\ \\mathrm{s}$$",
+    "c) To'xtash payti $v=0$; shundan keyin jism orqaga harakatlanadi: $$t=\\frac{12}{3}=4\\ \\mathrm{s},\\qquad v(6)=12-18=-6\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "а) Сравниваем с $v=v_0+at$: $$v_0=12\\ \\mathrm{m/s},\\qquad a=-3\\ \\mathrm{m/s^2}$$",
+    "б) Когда скорость станет $6\\ \\mathrm{m/s}$: $$12-3t=6\\ \\Rightarrow\\ t=2\\ \\mathrm{s}$$",
+    "в) Момент остановки $v=0$; после этого тело движется назад: $$t=\\frac{12}{3}=4\\ \\mathrm{s},\\qquad v(6)=12-18=-6\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "a) Compare with $v=v_0+at$: $$v_0=12\\ \\mathrm{m/s},\\qquad a=-3\\ \\mathrm{m/s^2}$$",
+    "b) When the velocity is $6\\ \\mathrm{m/s}$: $$12-3t=6\\ \\Rightarrow\\ t=2\\ \\mathrm{s}$$",
+    "c) The stopping moment is $v=0$; after that the body moves backward: $$t=\\frac{12}{3}=4\\ \\mathrm{s},\\qquad v(6)=12-18=-6\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tekis o'zgaruvchan harakatda tezlik: $v=v_0+at$",
+    "ru": "Скорость при равнопеременном движении: $v=v_0+at$",
+    "en": "Velocity in uniformly accelerated motion: $v=v_0+at$"
+   },
+   null,
+   {
+    "uz": "To'xtash payti: $v=0\\ \\Rightarrow\\ t=\\frac{v_0}{|a|}$",
+    "ru": "Момент остановки: $v=0\\ \\Rightarrow\\ t=\\frac{v_0}{|a|}$",
+    "en": "Moment of stopping: $v=0\\ \\Rightarrow\\ t=\\frac{v_0}{|a|}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tezlik tenglamasi $v=v_0+at$",
+   "ru": "Уравнение скорости $v=v_0+at$",
+   "en": "Velocity equation $v=v_0+at$"
+  },
+  "answer": "v_0=12\\ \\mathrm{m/s},\\ a=-3\\ \\mathrm{m/s^2};\\quad 2\\ \\mathrm{s};\\quad 4\\ \\mathrm{s},\\ -6\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 6-mavzu, 26–28-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S05",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) $72\\ \\mathrm{km/h}$ tezlik bilan ketayotgan avtomobil tormozlanib, $5\\ \\mathrm{s}$ da to'xtadi. Tormozlanish yo'li va tezlanish modulini toping. b) Samolyot $216\\ \\mathrm{km/h}$ tezlik bilan qo'nib, $1200\\ \\mathrm{m}$ yugurib to'xtadi. Yugurish vaqti qancha?",
+   "ru": "а) Автомобиль, ехавший со скоростью $72\\ \\mathrm{km/h}$, затормозил и остановился за $5\\ \\mathrm{s}$. Найдите тормозной путь и модуль ускорения. б) Самолёт приземлился со скоростью $216\\ \\mathrm{km/h}$ и остановился, пробежав $1200\\ \\mathrm{m}$. Сколько длился пробег?",
+   "en": "a) A car travelling at $72\\ \\mathrm{km/h}$ brakes and stops in $5\\ \\mathrm{s}$. Find the braking distance and the magnitude of the acceleration. b) A plane lands at $216\\ \\mathrm{km/h}$ and stops after a $1200\\ \\mathrm{m}$ run. How long does the landing run last?"
+  },
+  "figure": "figures/B1-L03-S05.png",
+  "solution": {
+   "uz": [
+    "a) $v_0=20\\ \\mathrm{m/s}$, $v=0$. O'rtacha tezlik $\\frac{v_0+0}{2}=10\\ \\mathrm{m/s}$: $$s=\\frac{v_0+v}{2}t=\\frac{20}{2}\\cdot5=50\\ \\mathrm{m},\\qquad |a|=\\frac{20}{5}=4\\ \\mathrm{m/s^2}$$",
+    "b) $v_0=216\\ \\mathrm{km/h}=60\\ \\mathrm{m/s}$; tormozlanish yo'li formulasidan vaqtni topamiz: $$s=\\frac{v_0t}{2}\\ \\Rightarrow\\ t=\\frac{2s}{v_0}=\\frac{2\\cdot1200}{60}=40\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "а) $v_0=20\\ \\mathrm{m/s}$, $v=0$. Средняя скорость $\\frac{v_0+0}{2}=10\\ \\mathrm{m/s}$: $$s=\\frac{v_0+v}{2}t=\\frac{20}{2}\\cdot5=50\\ \\mathrm{m},\\qquad |a|=\\frac{20}{5}=4\\ \\mathrm{m/s^2}$$",
+    "б) $v_0=216\\ \\mathrm{km/h}=60\\ \\mathrm{m/s}$; находим время из формулы тормозного пути: $$s=\\frac{v_0t}{2}\\ \\Rightarrow\\ t=\\frac{2s}{v_0}=\\frac{2\\cdot1200}{60}=40\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "a) $v_0=20\\ \\mathrm{m/s}$, $v=0$. The average speed is $\\frac{v_0+0}{2}=10\\ \\mathrm{m/s}$: $$s=\\frac{v_0+v}{2}t=\\frac{20}{2}\\cdot5=50\\ \\mathrm{m},\\qquad |a|=\\frac{20}{5}=4\\ \\mathrm{m/s^2}$$",
+    "b) $v_0=216\\ \\mathrm{km/h}=60\\ \\mathrm{m/s}$; find the time from the braking-distance formula: $$s=\\frac{v_0t}{2}\\ \\Rightarrow\\ t=\\frac{2s}{v_0}=\\frac{2\\cdot1200}{60}=40\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tekis o'zgaruvchan harakatda $\\bar v=\\frac{v_0+v}{2}$, $\\ s=\\frac{v_0+v}{2}t$",
+    "ru": "При равнопеременном движении $\\bar v=\\frac{v_0+v}{2}$, $\\ s=\\frac{v_0+v}{2}t$",
+    "en": "In uniformly accelerated motion $\\bar v=\\frac{v_0+v}{2}$, $\\ s=\\frac{v_0+v}{2}t$"
+   },
+   {
+    "uz": "Tormozlanish yo'li: $s=\\frac{v_0^2}{2|a|}=\\frac{v_0t}{2}$",
+    "ru": "Тормозной путь: $s=\\frac{v_0^2}{2|a|}=\\frac{v_0t}{2}$",
+    "en": "Braking distance: $s=\\frac{v_0^2}{2|a|}=\\frac{v_0t}{2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tormozlanish yo'li: $s=\\frac{v_0t}{2}$",
+   "ru": "Тормозной путь: $s=\\frac{v_0t}{2}$",
+   "en": "Braking distance: $s=\\frac{v_0t}{2}$"
+  },
+  "answer": "s=50\\ \\mathrm{m},\\ |a|=4\\ \\mathrm{m/s^2};\\quad t=40\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 7-mavzu, 1–4-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S06",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Avtomobil tinch holatdan $0.8\\ \\mathrm{m/s^2}$ tezlanish bilan harakat boshladi. a) U $40\\ \\mathrm{m}$ yo'lni qancha vaqtda bosadi? b) $15\\ \\mathrm{s}$ da qancha yo'l bosadi?",
+   "ru": "Автомобиль трогается с места с ускорением $0.8\\ \\mathrm{m/s^2}$. а) За какое время он пройдёт $40\\ \\mathrm{m}$? б) Какой путь он пройдёт за $15\\ \\mathrm{s}$?",
+   "en": "A car starts from rest with an acceleration of $0.8\\ \\mathrm{m/s^2}$. a) How long does it take to cover $40\\ \\mathrm{m}$? b) How far does it go in $15\\ \\mathrm{s}$?"
+  },
+  "figure": "figures/B1-L03-S06.png",
+  "solution": {
+   "uz": [
+    "a) Tinch holatdan harakatda $s=\\frac{at^2}{2}$, bundan: $$t=\\sqrt{\\frac{2s}{a}}=\\sqrt{\\frac{2\\cdot40}{0.8}}=10\\ \\mathrm{s}$$",
+    "b) $t=15\\ \\mathrm{s}$ da: $$s=\\frac{0.8\\cdot15^2}{2}=90\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "а) При движении из покоя $s=\\frac{at^2}{2}$, откуда: $$t=\\sqrt{\\frac{2s}{a}}=\\sqrt{\\frac{2\\cdot40}{0.8}}=10\\ \\mathrm{s}$$",
+    "б) При $t=15\\ \\mathrm{s}$: $$s=\\frac{0.8\\cdot15^2}{2}=90\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "a) From rest $s=\\frac{at^2}{2}$, so $$t=\\sqrt{\\frac{2s}{a}}=\\sqrt{\\frac{2\\cdot40}{0.8}}=10\\ \\mathrm{s}$$",
+    "b) At $t=15\\ \\mathrm{s}$: $$s=\\frac{0.8\\cdot15^2}{2}=90\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tinch holatdan: $s=\\frac{at^2}{2}$, $\\ v=at$, $\\ t=\\sqrt{\\frac{2s}{a}}$",
+    "ru": "Из состояния покоя: $s=\\frac{at^2}{2}$, $\\ v=at$, $\\ t=\\sqrt{\\frac{2s}{a}}$",
+    "en": "From rest: $s=\\frac{at^2}{2}$, $\\ v=at$, $\\ t=\\sqrt{\\frac{2s}{a}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Tinch holatdan harakatda yo'l: $s=\\frac{at^2}{2}$",
+   "ru": "Путь при движении из покоя: $s=\\frac{at^2}{2}$",
+   "en": "Distance from rest: $s=\\frac{at^2}{2}$"
+  },
+  "answer": "t=10\\ \\mathrm{s};\\quad s=90\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 7-mavzu, 16–21-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$18\\ \\mathrm{km/h}$ boshlang'ich tezlikka ega tramvay tekis tezlanuvchan harakatlanib, $10\\ \\mathrm{s}$ da $100\\ \\mathrm{m}$ yo'l bosdi. Yo'l oxiridagi tezlik va tezlanishni toping.",
+   "ru": "Трамвай с начальной скоростью $18\\ \\mathrm{km/h}$, двигаясь равноускоренно, прошёл $100\\ \\mathrm{m}$ за $10\\ \\mathrm{s}$. Найдите скорость в конце пути и ускорение.",
+   "en": "A tram with an initial speed of $18\\ \\mathrm{km/h}$ accelerates uniformly and covers $100\\ \\mathrm{m}$ in $10\\ \\mathrm{s}$. Find the speed at the end and the acceleration."
+  },
+  "figure": "figures/B1-L03-S07.png",
+  "solution": {
+   "uz": [
+    "$v_0=5\\ \\mathrm{m/s}$. O'rtacha tezlik $\\bar v=\\frac{100}{10}=10\\ \\mathrm{m/s}$ boshlang'ich va oxirgi tezliklarning o'rta arifmetigiga teng: $$\\frac{v_0+v}{2}=10\\ \\Rightarrow\\ v=20-5=15\\ \\mathrm{m/s}$$",
+    "Tezlanish: $$a=\\frac{15-5}{10}=1\\ \\mathrm{m/s^2}$$",
+    "Tekshiruv: $s=5\\cdot10+\\frac{1\\cdot10^2}{2}=100\\ \\mathrm{m}$."
+   ],
+   "ru": [
+    "$v_0=5\\ \\mathrm{m/s}$. Средняя скорость $\\bar v=\\frac{100}{10}=10\\ \\mathrm{m/s}$ равна среднему арифметическому начальной и конечной скоростей: $$\\frac{v_0+v}{2}=10\\ \\Rightarrow\\ v=20-5=15\\ \\mathrm{m/s}$$",
+    "Ускорение: $$a=\\frac{15-5}{10}=1\\ \\mathrm{m/s^2}$$",
+    "Проверка: $s=5\\cdot10+\\frac{1\\cdot10^2}{2}=100\\ \\mathrm{m}$."
+   ],
+   "en": [
+    "$v_0=5\\ \\mathrm{m/s}$. The average speed $\\bar v=\\frac{100}{10}=10\\ \\mathrm{m/s}$ equals the arithmetic mean of the initial and final speeds: $$\\frac{v_0+v}{2}=10\\ \\Rightarrow\\ v=20-5=15\\ \\mathrm{m/s}$$",
+    "The acceleration: $$a=\\frac{15-5}{10}=1\\ \\mathrm{m/s^2}$$",
+    "Check: $s=5\\cdot10+\\frac{1\\cdot10^2}{2}=100\\ \\mathrm{m}$."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tekis o'zgaruvchan harakatda $\\bar v=\\frac{v_0+v}{2}$, $\\ s=\\frac{v_0+v}{2}t$",
+    "ru": "При равнопеременном движении $\\bar v=\\frac{v_0+v}{2}$, $\\ s=\\frac{v_0+v}{2}t$",
+    "en": "In uniformly accelerated motion $\\bar v=\\frac{v_0+v}{2}$, $\\ s=\\frac{v_0+v}{2}t$"
+   },
+   {
+    "uz": "Tezlanish: $a=\\frac{v-v_0}{t}$, birligi $\\mathrm{m/s^2}$",
+    "ru": "Ускорение: $a=\\frac{v-v_0}{t}$, единица $\\mathrm{m/s^2}$",
+    "en": "Acceleration: $a=\\frac{v-v_0}{t}$, unit $\\mathrm{m/s^2}$"
+   },
+   {
+    "uz": "Ko'chish: $s=v_0t+\\frac{at^2}{2}$",
+    "ru": "Перемещение: $s=v_0t+\\frac{at^2}{2}$",
+    "en": "Displacement: $s=v_0t+\\frac{at^2}{2}$"
+   }
+  ],
+  "basis": {
+   "uz": "$s=\\frac{v_0+v}{2}t$, tezlanish ta'rifi",
+   "ru": "$s=\\frac{v_0+v}{2}t$, определение ускорения",
+   "en": "$s=\\frac{v_0+v}{2}t$, definition of acceleration"
+  },
+  "answer": "v=15\\ \\mathrm{m/s},\\quad a=1\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 7-mavzu, 5–6, 13-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Lokomotiv $300\\ \\mathrm{m}$ masofada tezligini $36\\ \\mathrm{km/h}$ dan $72\\ \\mathrm{km/h}$ gacha tekis oshirdi. Uning tezlanishini va shu masofani o'tish vaqtini toping.",
+   "ru": "Локомотив на пути $300\\ \\mathrm{m}$ равномерно увеличил скорость с $36\\ \\mathrm{km/h}$ до $72\\ \\mathrm{km/h}$. Найдите его ускорение и время прохождения этого пути.",
+   "en": "A locomotive uniformly increases its speed from $36\\ \\mathrm{km/h}$ to $72\\ \\mathrm{km/h}$ over $300\\ \\mathrm{m}$. Find its acceleration and the time taken."
+  },
+  "figure": "figures/B1-L03-S08.png",
+  "solution": {
+   "uz": [
+    "$v_0=10\\ \\mathrm{m/s}$, $v=20\\ \\mathrm{m/s}$. Vaqt noma'lum — vaqtsiz formuladan: $$a=\\frac{v^2-v_0^2}{2s}=\\frac{400-100}{600}=0.5\\ \\mathrm{m/s^2}$$",
+    "Vaqt: $$t=\\frac{v-v_0}{a}=\\frac{20-10}{0.5}=20\\ \\mathrm{s}$$",
+    "Tekshiruv: $\\bar v=15\\ \\mathrm{m/s}$, $\\ 15\\cdot20=300\\ \\mathrm{m}$."
+   ],
+   "ru": [
+    "$v_0=10\\ \\mathrm{m/s}$, $v=20\\ \\mathrm{m/s}$. Время неизвестно — по формуле без времени: $$a=\\frac{v^2-v_0^2}{2s}=\\frac{400-100}{600}=0.5\\ \\mathrm{m/s^2}$$",
+    "Время: $$t=\\frac{v-v_0}{a}=\\frac{20-10}{0.5}=20\\ \\mathrm{s}$$",
+    "Проверка: $\\bar v=15\\ \\mathrm{m/s}$, $\\ 15\\cdot20=300\\ \\mathrm{m}$."
+   ],
+   "en": [
+    "$v_0=10\\ \\mathrm{m/s}$, $v=20\\ \\mathrm{m/s}$. The time is unknown, so use the time-free formula: $$a=\\frac{v^2-v_0^2}{2s}=\\frac{400-100}{600}=0.5\\ \\mathrm{m/s^2}$$",
+    "The time: $$t=\\frac{v-v_0}{a}=\\frac{20-10}{0.5}=20\\ \\mathrm{s}$$",
+    "Check: $\\bar v=15\\ \\mathrm{m/s}$, $\\ 15\\cdot20=300\\ \\mathrm{m}$."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Vaqtsiz formula: $v^2-v_0^2=2as$",
+    "ru": "Формула без времени: $v^2-v_0^2=2as$",
+    "en": "Time-free formula: $v^2-v_0^2=2as$"
+   },
+   {
+    "uz": "Tezlanish: $a=\\frac{v-v_0}{t}$, birligi $\\mathrm{m/s^2}$",
+    "ru": "Ускорение: $a=\\frac{v-v_0}{t}$, единица $\\mathrm{m/s^2}$",
+    "en": "Acceleration: $a=\\frac{v-v_0}{t}$, unit $\\mathrm{m/s^2}$"
+   },
+   {
+    "uz": "Tekis o'zgaruvchan harakatda $\\bar v=\\frac{v_0+v}{2}$, $\\ s=\\frac{v_0+v}{2}t$",
+    "ru": "При равнопеременном движении $\\bar v=\\frac{v_0+v}{2}$, $\\ s=\\frac{v_0+v}{2}t$",
+    "en": "In uniformly accelerated motion $\\bar v=\\frac{v_0+v}{2}$, $\\ s=\\frac{v_0+v}{2}t$"
+   }
+  ],
+  "basis": {
+   "uz": "Vaqtsiz formula: $v^2-v_0^2=2as$",
+   "ru": "Формула без времени: $v^2-v_0^2=2as$",
+   "en": "Time-free formula: $v^2-v_0^2=2as$"
+  },
+  "answer": "a=0.5\\ \\mathrm{m/s^2},\\quad t=20\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 7-mavzu, 43–44, 52-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) Jism $2\\ \\mathrm{m/s}$ boshlang'ich tezlik bilan tekis tezlanuvchan harakatlanib, biror masofani o'tdi va $14\\ \\mathrm{m/s}$ tezlikka erishdi. Shu masofaning o'rtasida tezligi qanday bo'lgan? b) O'qning miltiq stvoli o'rtasidagi tezligi uchib chiqish tezligidan necha marta kichik?",
+   "ru": "а) Тело, двигаясь равноускоренно с начальной скоростью $2\\ \\mathrm{m/s}$, прошло некоторое расстояние и достигло скорости $14\\ \\mathrm{m/s}$. Какой была его скорость в середине этого пути? б) Во сколько раз скорость пули в середине ствола меньше скорости вылета?",
+   "en": "a) A body accelerating uniformly from $2\\ \\mathrm{m/s}$ covers some distance and reaches $14\\ \\mathrm{m/s}$. What was its speed at the midpoint of that distance? b) How many times smaller is a bullet's speed at the middle of the barrel than its muzzle speed?"
+  },
+  "figure": "figures/B1-L03-S09.png",
+  "solution": {
+   "uz": [
+    "Ikkala yarim uchun vaqtsiz formulani yozamiz ($v_1$ — o'rtadagi tezlik): $$v_1^2-v_0^2=2a\\frac{s}{2},\\qquad v^2-v_1^2=2a\\frac{s}{2}\\ \\Rightarrow\\ v_1^2=\\frac{v_0^2+v^2}{2}$$",
+    "a) Qiymatlarni qo'yamiz: $$v_1=\\sqrt{\\frac{4+196}{2}}=\\sqrt{100}=10\\ \\mathrm{m/s}$$",
+    "b) O'q tinch holatdan tezlanadi ($v_0=0$): $$v_1=\\sqrt{\\frac{v^2}{2}}=\\frac{v}{\\sqrt{2}}\\ \\Rightarrow\\ \\frac{v}{v_1}=\\sqrt{2}$$"
+   ],
+   "ru": [
+    "Записываем формулу без времени для обеих половин ($v_1$ — скорость в середине): $$v_1^2-v_0^2=2a\\frac{s}{2},\\qquad v^2-v_1^2=2a\\frac{s}{2}\\ \\Rightarrow\\ v_1^2=\\frac{v_0^2+v^2}{2}$$",
+    "а) Подставляем значения: $$v_1=\\sqrt{\\frac{4+196}{2}}=\\sqrt{100}=10\\ \\mathrm{m/s}$$",
+    "б) Пуля разгоняется из покоя ($v_0=0$): $$v_1=\\sqrt{\\frac{v^2}{2}}=\\frac{v}{\\sqrt{2}}\\ \\Rightarrow\\ \\frac{v}{v_1}=\\sqrt{2}$$"
+   ],
+   "en": [
+    "Write the time-free formula for both halves ($v_1$ is the speed at the midpoint): $$v_1^2-v_0^2=2a\\frac{s}{2},\\qquad v^2-v_1^2=2a\\frac{s}{2}\\ \\Rightarrow\\ v_1^2=\\frac{v_0^2+v^2}{2}$$",
+    "a) Substitute the values: $$v_1=\\sqrt{\\frac{4+196}{2}}=\\sqrt{100}=10\\ \\mathrm{m/s}$$",
+    "b) The bullet accelerates from rest ($v_0=0$): $$v_1=\\sqrt{\\frac{v^2}{2}}=\\frac{v}{\\sqrt{2}}\\ \\Rightarrow\\ \\frac{v}{v_1}=\\sqrt{2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Vaqtsiz formula: $v^2-v_0^2=2as$",
+    "ru": "Формула без времени: $v^2-v_0^2=2as$",
+    "en": "Time-free formula: $v^2-v_0^2=2as$"
+   },
+   {
+    "uz": "Yo'lning o'rtasidagi tezlik: $v_{1/2}=\\sqrt{\\frac{v_0^2+v^2}{2}}$",
+    "ru": "Скорость в середине пути: $v_{1/2}=\\sqrt{\\frac{v_0^2+v^2}{2}}$",
+    "en": "Speed at the midpoint of the path: $v_{1/2}=\\sqrt{\\frac{v_0^2+v^2}{2}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Yo'l o'rtasidagi tezlik",
+   "ru": "Скорость в середине пути",
+   "en": "Speed at the midpoint"
+  },
+  "answer": "v_1=10\\ \\mathrm{m/s};\\quad \\frac{v}{v_1}=\\sqrt{2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 7-mavzu, 50–51-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Tinch holatdan tekis tezlanuvchan harakatlana boshlagan sharcha birinchi sekundda $1.5\\ \\mathrm{m}$ yo'l bosdi. a) To'rtinchi sekundda qancha yo'l bosadi? b) Tezlanishi qanday? c) Dastlabki $4\\ \\mathrm{s}$ da qancha yo'l bosadi?",
+   "ru": "Шарик, начавший равноускоренное движение из покоя, за первую секунду прошёл $1.5\\ \\mathrm{m}$. а) Какой путь он пройдёт за четвёртую секунду? б) Каково его ускорение? в) Какой путь он пройдёт за первые $4\\ \\mathrm{s}$?",
+   "en": "A ball starting from rest with uniform acceleration covers $1.5\\ \\mathrm{m}$ in the first second. a) How far does it go in the fourth second? b) What is its acceleration? c) How far does it go in the first $4\\ \\mathrm{s}$?"
+  },
+  "figure": "figures/B1-L03-S10.png",
+  "solution": {
+   "uz": [
+    "a) Tinch holatdan ketma-ket sekundlardagi yo'llar toq sonlar kabi nisbatda: $1:3:5:7$. To'rtinchi sekund — $7$ ulush: $$s_4=7s_1=7\\cdot1.5=10.5\\ \\mathrm{m}$$",
+    "b) Birinchi sekundda $s_1=\\frac{a\\cdot1^2}{2}$: $$a=2s_1=3\\ \\mathrm{m/s^2}$$",
+    "c) Dastlabki $4\\ \\mathrm{s}$ da (yoki $1+3+5+7=16$ ulush): $$s=\\frac{3\\cdot4^2}{2}=24\\ \\mathrm{m}=16\\cdot1.5\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "а) Из покоя пути за последовательные секунды относятся как нечётные числа: $1:3:5:7$. Четвёртая секунда — $7$ долей: $$s_4=7s_1=7\\cdot1.5=10.5\\ \\mathrm{m}$$",
+    "б) За первую секунду $s_1=\\frac{a\\cdot1^2}{2}$: $$a=2s_1=3\\ \\mathrm{m/s^2}$$",
+    "в) За первые $4\\ \\mathrm{s}$ (или $1+3+5+7=16$ долей): $$s=\\frac{3\\cdot4^2}{2}=24\\ \\mathrm{m}=16\\cdot1.5\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "a) From rest, the distances in successive seconds are in the ratio of odd numbers $1:3:5:7$. The fourth second is $7$ parts: $$s_4=7s_1=7\\cdot1.5=10.5\\ \\mathrm{m}$$",
+    "b) In the first second $s_1=\\frac{a\\cdot1^2}{2}$: $$a=2s_1=3\\ \\mathrm{m/s^2}$$",
+    "c) In the first $4\\ \\mathrm{s}$ (or $1+3+5+7=16$ parts): $$s=\\frac{3\\cdot4^2}{2}=24\\ \\mathrm{m}=16\\cdot1.5\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tinch holatdan $n$-sekunddagi yo'l: $s_n=\\frac{a(2n-1)}{2}$; $\\ s_1:s_2:s_3=1:3:5$",
+    "ru": "Путь за $n$-ю секунду из покоя: $s_n=\\frac{a(2n-1)}{2}$; $\\ s_1:s_2:s_3=1:3:5$",
+    "en": "Distance in the $n$-th second from rest: $s_n=\\frac{a(2n-1)}{2}$; $\\ s_1:s_2:s_3=1:3:5$"
+   },
+   {
+    "uz": "Tinch holatdan: $s=\\frac{at^2}{2}$, $\\ v=at$, $\\ t=\\sqrt{\\frac{2s}{a}}$",
+    "ru": "Из состояния покоя: $s=\\frac{at^2}{2}$, $\\ v=at$, $\\ t=\\sqrt{\\frac{2s}{a}}$",
+    "en": "From rest: $s=\\frac{at^2}{2}$, $\\ v=at$, $\\ t=\\sqrt{\\frac{2s}{a}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Toq sonlar qoidasi: $s_1:s_2:s_3:\\ldots=1:3:5:\\ldots$",
+   "ru": "Правило нечётных чисел: $s_1:s_2:s_3:\\ldots=1:3:5:\\ldots$",
+   "en": "Odd-number rule: $s_1:s_2:s_3:\\ldots=1:3:5:\\ldots$"
+  },
+  "answer": "10.5\\ \\mathrm{m};\\quad 3\\ \\mathrm{m/s^2};\\quad 24\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 7-mavzu, 57–64-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jismning harakat tenglamasi $x=6+10t-t^2$ ($\\mathrm{m}$). a) $x_0$, $v_0$ va $a$ ni toping, tezlik tenglamasini yozing. b) Jism qachon va qayerda to'xtaydi? c) Dastlabki $7\\ \\mathrm{s}$ dagi ko'chish va yo'lni toping.",
+   "ru": "Уравнение движения тела $x=6+10t-t^2$ ($\\mathrm{m}$). а) Найдите $x_0$, $v_0$ и $a$, запишите уравнение скорости. б) Когда и где тело остановится? в) Найдите перемещение и путь за первые $7\\ \\mathrm{s}$.",
+   "en": "A body's equation of motion is $x=6+10t-t^2$ ($\\mathrm{m}$). a) Find $x_0$, $v_0$ and $a$, and write the velocity equation. b) When and where does the body stop? c) Find the displacement and the distance for the first $7\\ \\mathrm{s}$."
+  },
+  "figure": "figures/B1-L03-S11.png",
+  "solution": {
+   "uz": [
+    "a) $x=x_0+v_0t+\\frac{at^2}{2}$ bilan solishtiramiz: $\\frac{a}{2}=-1$: $$x_0=6\\ \\mathrm{m},\\quad v_0=10\\ \\mathrm{m/s},\\quad a=-2\\ \\mathrm{m/s^2},\\quad v=10-2t$$",
+    "b) To'xtash: $v=0$: $$t=5\\ \\mathrm{s},\\qquad x(5)=6+50-25=31\\ \\mathrm{m}$$",
+    "c) $x(7)=6+70-49=27\\ \\mathrm{m}$. Ko'chish $x(7)-x_0$; yo'l — oldinga $25\\ \\mathrm{m}$ va orqaga $4\\ \\mathrm{m}$: $$\\Delta x=27-6=21\\ \\mathrm{m},\\qquad l=25+4=29\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "а) Сравниваем с $x=x_0+v_0t+\\frac{at^2}{2}$: $\\frac{a}{2}=-1$: $$x_0=6\\ \\mathrm{m},\\quad v_0=10\\ \\mathrm{m/s},\\quad a=-2\\ \\mathrm{m/s^2},\\quad v=10-2t$$",
+    "б) Остановка: $v=0$: $$t=5\\ \\mathrm{s},\\qquad x(5)=6+50-25=31\\ \\mathrm{m}$$",
+    "в) $x(7)=6+70-49=27\\ \\mathrm{m}$. Перемещение $x(7)-x_0$; путь — $25\\ \\mathrm{m}$ вперёд и $4\\ \\mathrm{m}$ назад: $$\\Delta x=27-6=21\\ \\mathrm{m},\\qquad l=25+4=29\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "a) Compare with $x=x_0+v_0t+\\frac{at^2}{2}$: $\\frac{a}{2}=-1$: $$x_0=6\\ \\mathrm{m},\\quad v_0=10\\ \\mathrm{m/s},\\quad a=-2\\ \\mathrm{m/s^2},\\quad v=10-2t$$",
+    "b) Stopping: $v=0$: $$t=5\\ \\mathrm{s},\\qquad x(5)=6+50-25=31\\ \\mathrm{m}$$",
+    "c) $x(7)=6+70-49=27\\ \\mathrm{m}$. The displacement is $x(7)-x_0$; the distance is $25\\ \\mathrm{m}$ forward plus $4\\ \\mathrm{m}$ back: $$\\Delta x=27-6=21\\ \\mathrm{m},\\qquad l=25+4=29\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Harakat tenglamasi: $x=x_0+v_0t+\\frac{at^2}{2}$ ($t^2$ oldidagi son — $\\frac{a}{2}$)",
+    "ru": "Уравнение движения: $x=x_0+v_0t+\\frac{at^2}{2}$ (число перед $t^2$ — $\\frac{a}{2}$)",
+    "en": "Equation of motion: $x=x_0+v_0t+\\frac{at^2}{2}$ (the coefficient of $t^2$ is $\\frac{a}{2}$)"
+   },
+   {
+    "uz": "To'xtash payti: $v=0\\ \\Rightarrow\\ t=\\frac{v_0}{|a|}$",
+    "ru": "Момент остановки: $v=0\\ \\Rightarrow\\ t=\\frac{v_0}{|a|}$",
+    "en": "Moment of stopping: $v=0\\ \\Rightarrow\\ t=\\frac{v_0}{|a|}$"
+   },
+   {
+    "uz": "Tezlik ishorasi o'zgarsa, yo'l — har bir bo'lakdagi ko'chishlar modullari yig'indisi",
+    "ru": "Если скорость меняет знак, путь — сумма модулей перемещений на каждом участке",
+    "en": "If the velocity changes sign, the distance is the sum of the magnitudes of the displacements on each part"
+   }
+  ],
+  "basis": {
+   "uz": "Harakat tenglamasi, to'xtash va orqaga qaytish",
+   "ru": "Уравнение движения, остановка и поворот",
+   "en": "Equation of motion, stopping and turning back"
+  },
+  "answer": "a=-2\\ \\mathrm{m/s^2};\\quad x(5)=31\\ \\mathrm{m};\\quad \\Delta x=21\\ \\mathrm{m},\\ l=29\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 7-mavzu, 85–94-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki avtomobilning harakat tenglamalari: $x_1=t^2+4t$ va $x_2=2t^2+t-10$ ($\\mathrm{m}$). Ular qachon va qayerda uchrashadi? Uchrashish paytida tezliklari qanday?",
+   "ru": "Уравнения движения двух автомобилей: $x_1=t^2+4t$ и $x_2=2t^2+t-10$ ($\\mathrm{m}$). Когда и где они встретятся? Каковы их скорости в момент встречи?",
+   "en": "The equations of motion of two cars are $x_1=t^2+4t$ and $x_2=2t^2+t-10$ ($\\mathrm{m}$). When and where do they meet? What are their velocities at the meeting?"
+  },
+  "figure": "figures/B1-L03-S12.png",
+  "solution": {
+   "uz": [
+    "Uchrashganda koordinatalar teng: $$t^2+4t=2t^2+t-10\\ \\Rightarrow\\ t^2-3t-10=0$$",
+    "Musbat ildiz va uchrashish joyi: $$t=5\\ \\mathrm{s},\\qquad x=25+20=45\\ \\mathrm{m}$$",
+    "Tezlik tenglamalari: $v_1=4+2t$, $\\ v_2=1+4t$ ($t^2$ oldidagi son $\\frac{a}{2}$): $$v_1(5)=14\\ \\mathrm{m/s},\\qquad v_2(5)=21\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "При встрече координаты равны: $$t^2+4t=2t^2+t-10\\ \\Rightarrow\\ t^2-3t-10=0$$",
+    "Положительный корень и место встречи: $$t=5\\ \\mathrm{s},\\qquad x=25+20=45\\ \\mathrm{m}$$",
+    "Уравнения скорости: $v_1=4+2t$, $\\ v_2=1+4t$ (число перед $t^2$ — $\\frac{a}{2}$): $$v_1(5)=14\\ \\mathrm{m/s},\\qquad v_2(5)=21\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "At the meeting the coordinates are equal: $$t^2+4t=2t^2+t-10\\ \\Rightarrow\\ t^2-3t-10=0$$",
+    "The positive root and the meeting point: $$t=5\\ \\mathrm{s},\\qquad x=25+20=45\\ \\mathrm{m}$$",
+    "Velocity equations: $v_1=4+2t$, $\\ v_2=1+4t$ (the coefficient of $t^2$ is $\\frac{a}{2}$): $$v_1(5)=14\\ \\mathrm{m/s},\\qquad v_2(5)=21\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uchrashish sharti: $x_1(t)=x_2(t)$",
+    "ru": "Условие встречи: $x_1(t)=x_2(t)$",
+    "en": "Meeting condition: $x_1(t)=x_2(t)$"
+   },
+   null,
+   {
+    "uz": "Harakat tenglamasi: $x=x_0+v_0t+\\frac{at^2}{2}$ ($t^2$ oldidagi son — $\\frac{a}{2}$)",
+    "ru": "Уравнение движения: $x=x_0+v_0t+\\frac{at^2}{2}$ (число перед $t^2$ — $\\frac{a}{2}$)",
+    "en": "Equation of motion: $x=x_0+v_0t+\\frac{at^2}{2}$ (the coefficient of $t^2$ is $\\frac{a}{2}$)"
+   }
+  ],
+  "basis": {
+   "uz": "Uchrashish sharti $x_1=x_2$",
+   "ru": "Условие встречи $x_1=x_2$",
+   "en": "Meeting condition $x_1=x_2$"
+  },
+  "answer": "t=5\\ \\mathrm{s},\\ x=45\\ \\mathrm{m};\\quad v_1=14\\ \\mathrm{m/s},\\ v_2=21\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 8-mavzu, 1–3-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Bir joydan bir vaqtda bir tomonga ikki avtomobil yo'lga chiqdi: birinchisi $15\\ \\mathrm{m/s}$ tezlik bilan tekis, ikkinchisi tinch holatdan $0.6\\ \\mathrm{m/s^2}$ tezlanish bilan. a) Ikkinchisi birinchisini qachon va qayerda quvib yetadi? b) Quvib yetguncha ular orasidagi eng katta masofa qancha?",
+   "ru": "Из одного места одновременно в одну сторону выехали два автомобиля: первый — равномерно со скоростью $15\\ \\mathrm{m/s}$, второй — из покоя с ускорением $0.6\\ \\mathrm{m/s^2}$. а) Когда и где второй догонит первого? б) Каково наибольшее расстояние между ними до момента встречи?",
+   "en": "Two cars leave the same place at the same time in the same direction: the first moves uniformly at $15\\ \\mathrm{m/s}$, the second starts from rest with an acceleration of $0.6\\ \\mathrm{m/s^2}$. a) When and where does the second catch the first? b) What is the greatest distance between them before that?"
+  },
+  "figure": "figures/B1-L03-S13.png",
+  "solution": {
+   "uz": [
+    "a) Harakat tenglamalari va uchrashish sharti: $$15t=0.3t^2\\ \\Rightarrow\\ t=50\\ \\mathrm{s},\\qquad x=15\\cdot50=750\\ \\mathrm{m}$$",
+    "Shu paytda ikkinchisining tezligi $0.6\\cdot50=30\\ \\mathrm{m/s}$ — birinchisinikidan $2$ marta katta.",
+    "b) Masofa tezliklar tenglashganda eng katta: $0.6t=15$: $$t=25\\ \\mathrm{s},\\qquad d_{\\max}=15\\cdot25-0.3\\cdot25^2=187.5\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "а) Уравнения движения и условие встречи: $$15t=0.3t^2\\ \\Rightarrow\\ t=50\\ \\mathrm{s},\\qquad x=15\\cdot50=750\\ \\mathrm{m}$$",
+    "В этот момент скорость второго $0.6\\cdot50=30\\ \\mathrm{m/s}$ — в $2$ раза больше, чем у первого.",
+    "б) Расстояние наибольшее при равенстве скоростей: $0.6t=15$: $$t=25\\ \\mathrm{s},\\qquad d_{\\max}=15\\cdot25-0.3\\cdot25^2=187.5\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "a) The equations of motion and the meeting condition: $$15t=0.3t^2\\ \\Rightarrow\\ t=50\\ \\mathrm{s},\\qquad x=15\\cdot50=750\\ \\mathrm{m}$$",
+    "At that moment the second car's speed is $0.6\\cdot50=30\\ \\mathrm{m/s}$, twice that of the first.",
+    "b) The distance is greatest when the speeds are equal: $0.6t=15$: $$t=25\\ \\mathrm{s},\\qquad d_{\\max}=15\\cdot25-0.3\\cdot25^2=187.5\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uchrashish sharti: $x_1(t)=x_2(t)$",
+    "ru": "Условие встречи: $x_1(t)=x_2(t)$",
+    "en": "Meeting condition: $x_1(t)=x_2(t)$"
+   },
+   null,
+   {
+    "uz": "Jismlar orasidagi masofa tezliklar tenglashgan paytda eng katta (eng kichik) bo'ladi",
+    "ru": "Расстояние между телами максимально (минимально) в момент равенства скоростей",
+    "en": "The distance between the bodies is greatest (least) when their velocities are equal"
+   }
+  ],
+  "basis": {
+   "uz": "Uchrashish sharti, eng katta masofa",
+   "ru": "Условие встречи, наибольшее расстояние",
+   "en": "Meeting condition, greatest distance"
+  },
+  "answer": "t=50\\ \\mathrm{s},\\ x=750\\ \\mathrm{m};\\quad d_{\\max}=187.5\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 8-mavzu, 6–7-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Birinchi avtomobil punktdan $8\\ \\mathrm{m/s}$ tezlik bilan tekis harakat qila boshladi. $8\\ \\mathrm{s}$ dan keyin shu punktdan shu yo'nalishda ikkinchi avtomobil tinch holatdan $4\\ \\mathrm{m/s^2}$ tezlanish bilan yo'lga chiqdi. Ikkinchisi yo'lga chiqqanidan qancha vaqt o'tib birinchisini quvib yetadi? Bu punktdan qanday masofada sodir bo'ladi?",
+   "ru": "Первый автомобиль начал двигаться из пункта равномерно со скоростью $8\\ \\mathrm{m/s}$. Через $8\\ \\mathrm{s}$ из того же пункта в том же направлении выехал второй автомобиль из покоя с ускорением $4\\ \\mathrm{m/s^2}$. Через какое время после своего старта второй догонит первого? На каком расстоянии от пункта это произойдёт?",
+   "en": "The first car starts moving uniformly from a point at $8\\ \\mathrm{m/s}$. $8\\ \\mathrm{s}$ later a second car leaves the same point in the same direction, starting from rest with an acceleration of $4\\ \\mathrm{m/s^2}$. How long after its start does the second car catch the first? How far from the point does this happen?"
+  },
+  "figure": "figures/B1-L03-S14.png",
+  "solution": {
+   "uz": [
+    "Vaqtni ikkinchi avtomobil yo'lga chiqqan paytdan $T$ deb hisoblaymiz. Birinchisi shu paytgacha $8\\ \\mathrm{s}$ yurgan: $$x_1=8(T+8),\\qquad x_2=\\frac{4T^2}{2}=2T^2$$",
+    "Uchrashish sharti: $$8T+64=2T^2\\ \\Rightarrow\\ T^2-4T-32=0\\ \\Rightarrow\\ T=8\\ \\mathrm{s}$$",
+    "Uchrashish joyi: $$x=2\\cdot8^2=128\\ \\mathrm{m}=8\\cdot16\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Отсчитываем время $T$ от старта второго автомобиля. Первый к этому моменту ехал уже $8\\ \\mathrm{s}$: $$x_1=8(T+8),\\qquad x_2=\\frac{4T^2}{2}=2T^2$$",
+    "Условие встречи: $$8T+64=2T^2\\ \\Rightarrow\\ T^2-4T-32=0\\ \\Rightarrow\\ T=8\\ \\mathrm{s}$$",
+    "Место встречи: $$x=2\\cdot8^2=128\\ \\mathrm{m}=8\\cdot16\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Measure the time $T$ from the second car's start. By then the first car had already been moving for $8\\ \\mathrm{s}$: $$x_1=8(T+8),\\qquad x_2=\\frac{4T^2}{2}=2T^2$$",
+    "The meeting condition: $$8T+64=2T^2\\ \\Rightarrow\\ T^2-4T-32=0\\ \\Rightarrow\\ T=8\\ \\mathrm{s}$$",
+    "The meeting point: $$x=2\\cdot8^2=128\\ \\mathrm{m}=8\\cdot16\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tinch holatdan: $s=\\frac{at^2}{2}$, $\\ v=at$, $\\ t=\\sqrt{\\frac{2s}{a}}$",
+    "ru": "Из состояния покоя: $s=\\frac{at^2}{2}$, $\\ v=at$, $\\ t=\\sqrt{\\frac{2s}{a}}$",
+    "en": "From rest: $s=\\frac{at^2}{2}$, $\\ v=at$, $\\ t=\\sqrt{\\frac{2s}{a}}$"
+   },
+   {
+    "uz": "Uchrashish sharti: $x_1(t)=x_2(t)$",
+    "ru": "Условие встречи: $x_1(t)=x_2(t)$",
+    "en": "Meeting condition: $x_1(t)=x_2(t)$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Vaqt farqi bilan chiqqan jismlarning uchrashishi",
+   "ru": "Встреча тел, стартовавших с разницей во времени",
+   "en": "Meeting of bodies that start at different times"
+  },
+  "answer": "T=8\\ \\mathrm{s},\\quad x=128\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 8-mavzu, 9–10-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L03-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ikki velosipedchi bir-biriga qarab harakatlanmoqda: birinchisi $9\\ \\mathrm{m/s}$ boshlang'ich tezlik bilan tekis sekinlanuvchan, ikkinchisi $3\\ \\mathrm{m/s}$ boshlang'ich tezlik bilan tekis tezlanuvchan. Tezlanishlar moduli bir xil va birinchisi uchrashguncha to'xtamaydi. Ular $50\\ \\mathrm{s}$ dan keyin uchrashdi. Boshlang'ich masofa qanday bo'lgan?",
+   "ru": "Два велосипедиста движутся навстречу друг другу: первый — равнозамедленно с начальной скоростью $9\\ \\mathrm{m/s}$, второй — равноускоренно с начальной скоростью $3\\ \\mathrm{m/s}$. Модули ускорений одинаковы, и первый не останавливается до встречи. Они встретились через $50\\ \\mathrm{s}$. Каким было начальное расстояние?",
+   "en": "Two cyclists ride towards each other: the first slows down uniformly from an initial speed of $9\\ \\mathrm{m/s}$, the second speeds up uniformly from $3\\ \\mathrm{m/s}$. The accelerations have equal magnitudes, and the first does not stop before they meet. They meet after $50\\ \\mathrm{s}$. What was the initial distance?"
+  },
+  "figure": "figures/B1-L03-S15.png",
+  "solution": {
+   "uz": [
+    "Har birining yo'li ($a$ — tezlanish moduli): $$s_1=9t-\\frac{at^2}{2},\\qquad s_2=3t+\\frac{at^2}{2}$$",
+    "Bir-biriga qarab harakatda boshlang'ich masofa yo'llar yig'indisiga teng; $a$ qisqarib ketadi: $$D=s_1+s_2=(9+3)t=12\\cdot50=600\\ \\mathrm{m}$$",
+    "Izoh: nisbiy tezlanish $a-a=0$, shuning uchun ular bir-biriga nisbatan tekis, $12\\ \\mathrm{m/s}$ bilan yaqinlashadi."
+   ],
+   "ru": [
+    "Путь каждого ($a$ — модуль ускорения): $$s_1=9t-\\frac{at^2}{2},\\qquad s_2=3t+\\frac{at^2}{2}$$",
+    "При встречном движении начальное расстояние равно сумме путей; $a$ сокращается: $$D=s_1+s_2=(9+3)t=12\\cdot50=600\\ \\mathrm{m}$$",
+    "Замечание: относительное ускорение $a-a=0$, поэтому они сближаются равномерно со скоростью $12\\ \\mathrm{m/s}$."
+   ],
+   "en": [
+    "The distance covered by each ($a$ is the magnitude of the acceleration): $$s_1=9t-\\frac{at^2}{2},\\qquad s_2=3t+\\frac{at^2}{2}$$",
+    "Moving towards each other, the initial distance equals the sum of the distances; $a$ cancels out: $$D=s_1+s_2=(9+3)t=12\\cdot50=600\\ \\mathrm{m}$$",
+    "Note: the relative acceleration is $a-a=0$, so they approach each other uniformly at $12\\ \\mathrm{m/s}$."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ko'chish: $s=v_0t+\\frac{at^2}{2}$",
+    "ru": "Перемещение: $s=v_0t+\\frac{at^2}{2}$",
+    "en": "Displacement: $s=v_0t+\\frac{at^2}{2}$"
+   },
+   {
+    "uz": "Nisbiy harakatda: $v_{12}=v_1+v_2$ (bir-biriga qarab), $\\ s=s_1+s_2$",
+    "ru": "При встречном движении: $v_{12}=v_1+v_2$, $\\ s=s_1+s_2$",
+    "en": "Moving towards each other: $v_{12}=v_1+v_2$, $\\ s=s_1+s_2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Ko'chish formulasi, nisbiy harakat",
+   "ru": "Формула перемещения, относительное движение",
+   "en": "Displacement formula, relative motion"
+  },
+  "answer": "D=600\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 8-mavzu, 5-masala asosida; sharti o'zgartirilgan"
+ }
+]
