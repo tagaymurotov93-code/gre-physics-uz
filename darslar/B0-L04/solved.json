@@ -1,0 +1,464 @@
+[
+ {
+  "id": "B0-L04-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Aniqmas integralni toping: $\\int(3x^2-4x+5)\\,dx$. So'ngra $\\int_0^2(3x^2-4x+5)\\,dx$ ni hisoblang.",
+   "ru": "Найдите неопределённый интеграл $\\int(3x^2-4x+5)\\,dx$. Затем вычислите $\\int_0^2(3x^2-4x+5)\\,dx$.",
+   "en": "Find the indefinite integral $\\int(3x^2-4x+5)\\,dx$. Then evaluate $\\int_0^2(3x^2-4x+5)\\,dx$."
+  },
+  "figure": "figures/B0-L04-S01.png",
+  "solution": {
+   "uz": [
+    "Har bir hadni alohida integrallaymiz (chiziqlilik): $$\\int(3x^2-4x+5)\\,dx=x^3-2x^2+5x+C$$",
+    "Tekshiruv: hosilasi integral ostidagi funksiyaga teng. $$(x^3-2x^2+5x)'=3x^2-4x+5$$",
+    "Nyuton–Leybnits formulasi: $$\\int_0^2(3x^2-4x+5)\\,dx=\\big(8-8+10\\big)-0=10$$"
+   ],
+   "ru": [
+    "Интегрируем каждое слагаемое отдельно (линейность): $$\\int(3x^2-4x+5)\\,dx=x^3-2x^2+5x+C$$",
+    "Проверка: производная равна подынтегральной функции. $$(x^3-2x^2+5x)'=3x^2-4x+5$$",
+    "Формула Ньютона–Лейбница: $$\\int_0^2(3x^2-4x+5)\\,dx=\\big(8-8+10\\big)-0=10$$"
+   ],
+   "en": [
+    "Integrate term by term (linearity): $$\\int(3x^2-4x+5)\\,dx=x^3-2x^2+5x+C$$",
+    "Check: the derivative equals the integrand. $$(x^3-2x^2+5x)'=3x^2-4x+5$$",
+    "Newton–Leibniz formula: $$\\int_0^2(3x^2-4x+5)\\,dx=\\big(8-8+10\\big)-0=10$$"
+   ]
+  },
+  "basis": {
+   "uz": "$\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$, $\\int_a^b f\\,dx=F(b)-F(a)$",
+   "ru": "$\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$, $\\int_a^b f\\,dx=F(b)-F(a)$",
+   "en": "$\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$, $\\int_a^b f\\,dx=F(b)-F(a)$"
+  },
+  "answer": "x^3-2x^2+5x+C;\\quad 10",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original"
+ },
+ {
+  "id": "B0-L04-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Jism tezligi $v(t)=3t^2$ (m/s, $t$ — sekundda). $t=0$ dan $t=2\\ \\mathrm{s}$ gacha ko'chishni toping. Agar $x(0)=1\\ \\mathrm{m}$ bo'lsa, $x(t)$ ni yozing.",
+   "ru": "Скорость тела $v(t)=3t^2$ (м/с, $t$ — в секундах). Найдите перемещение от $t=0$ до $t=2\\ \\mathrm{с}$. Если $x(0)=1\\ \\mathrm{м}$, запишите $x(t)$.",
+   "en": "The velocity of a body is $v(t)=3t^2$ (m/s, $t$ in seconds). Find the displacement from $t=0$ to $t=2\\ \\mathrm{s}$. If $x(0)=1\\ \\mathrm{m}$, write $x(t)$."
+  },
+  "figure": "figures/B0-L04-S02.png",
+  "solution": {
+   "uz": [
+    "Ko'chish — tezlikdan olingan integral: $$\\Delta x=\\int_0^2 3t^2\\,dt=t^3\\Big|_0^2=8\\ \\mathrm{m}$$",
+    "Aniqmas integral va boshlang'ich shart: $$x(t)=t^3+C,\\quad x(0)=1\\ \\Rightarrow\\ C=1$$"
+   ],
+   "ru": [
+    "Перемещение — интеграл от скорости: $$\\Delta x=\\int_0^2 3t^2\\,dt=t^3\\Big|_0^2=8\\ \\mathrm{m}$$",
+    "Неопределённый интеграл и начальное условие: $$x(t)=t^3+C,\\quad x(0)=1\\ \\Rightarrow\\ C=1$$"
+   ],
+   "en": [
+    "Displacement is the integral of velocity: $$\\Delta x=\\int_0^2 3t^2\\,dt=t^3\\Big|_0^2=8\\ \\mathrm{m}$$",
+    "Indefinite integral and initial condition: $$x(t)=t^3+C,\\quad x(0)=1\\ \\Rightarrow\\ C=1$$"
+   ]
+  },
+  "basis": {
+   "uz": "$\\Delta x=\\int v\\,dt$, integrallash o'zgarmasi boshlang'ich shartdan",
+   "ru": "$\\Delta x=\\int v\\,dt$, постоянная интегрирования из начального условия",
+   "en": "$\\Delta x=\\int v\\,dt$, the constant of integration from the initial condition"
+  },
+  "answer": "\\Delta x=8\\ \\mathrm{m},\\quad x(t)=t^3+1\\ (\\mathrm{m})",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original"
+ },
+ {
+  "id": "B0-L04-S03",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jism tezligi $v(t)=10-4t$ (m/s, $t$ — sekundda). $0\\le t\\le5\\ \\mathrm{s}$ oraliqdagi ko'chishni va bosib o'tilgan yo'lni toping.",
+   "ru": "Скорость тела $v(t)=10-4t$ (м/с, $t$ — в секундах). Найдите перемещение и пройденный путь на промежутке $0\\le t\\le5\\ \\mathrm{с}$.",
+   "en": "The velocity of a body is $v(t)=10-4t$ (m/s, $t$ in seconds). Find the displacement and the distance traveled for $0\\le t\\le5\\ \\mathrm{s}$."
+  },
+  "figure": "figures/B0-L04-S03.png",
+  "solution": {
+   "uz": [
+    "Ko'chish — ishorali yuza: $$\\Delta x=\\int_0^5(10-4t)\\,dt=\\big(10t-2t^2\\big)\\Big|_0^5=50-50=0$$",
+    "Jism $v=0$ da to'xtab, orqaga qaytadi: $$10-4t=0\\ \\Rightarrow\\ t=2.5\\ \\mathrm{s}$$",
+    "Yo'l — tezlik moduli grafigi ostidagi yuza (ikkita uchburchak): $$s=\\int_0^5|v|\\,dt=\\frac12\\cdot2.5\\cdot10+\\frac12\\cdot2.5\\cdot10=25\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Перемещение — площадь со знаком: $$\\Delta x=\\int_0^5(10-4t)\\,dt=\\big(10t-2t^2\\big)\\Big|_0^5=50-50=0$$",
+    "Тело останавливается при $v=0$ и поворачивает назад: $$10-4t=0\\ \\Rightarrow\\ t=2.5\\ \\mathrm{s}$$",
+    "Путь — площадь под графиком модуля скорости (два треугольника): $$s=\\int_0^5|v|\\,dt=\\frac12\\cdot2.5\\cdot10+\\frac12\\cdot2.5\\cdot10=25\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Displacement is the signed area: $$\\Delta x=\\int_0^5(10-4t)\\,dt=\\big(10t-2t^2\\big)\\Big|_0^5=50-50=0$$",
+    "The body stops at $v=0$ and turns back: $$10-4t=0\\ \\Rightarrow\\ t=2.5\\ \\mathrm{s}$$",
+    "Distance is the area under the graph of the speed (two triangles): $$s=\\int_0^5|v|\\,dt=\\frac12\\cdot2.5\\cdot10+\\frac12\\cdot2.5\\cdot10=25\\ \\mathrm{m}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$\\Delta x=\\int v\\,dt$ (ishorali yuza), $s=\\int|v|\\,dt$",
+   "ru": "$\\Delta x=\\int v\\,dt$ (площадь со знаком), $s=\\int|v|\\,dt$",
+   "en": "$\\Delta x=\\int v\\,dt$ (signed area), $s=\\int|v|\\,dt$"
+  },
+  "answer": "\\Delta x=0,\\quad s=25\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original"
+ },
+ {
+  "id": "B0-L04-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Bikrligi $k=200\\ \\mathrm{N/m}$ bo'lgan prujina $x_1=0.10\\ \\mathrm{m}$ dan $x_2=0.30\\ \\mathrm{m}$ gacha cho'zildi. Tashqi kuch bajargan ishni toping.",
+   "ru": "Пружину жёсткостью $k=200\\ \\mathrm{Н/м}$ растянули от $x_1=0.10\\ \\mathrm{м}$ до $x_2=0.30\\ \\mathrm{м}$. Найдите работу внешней силы.",
+   "en": "A spring of stiffness $k=200\\ \\mathrm{N/m}$ is stretched from $x_1=0.10\\ \\mathrm{m}$ to $x_2=0.30\\ \\mathrm{m}$. Find the work done by the external force."
+  },
+  "figure": "figures/B0-L04-S04.png",
+  "solution": {
+   "uz": [
+    "Tashqi kuch $F=kx$, ish — integral: $$W=\\int_{x_1}^{x_2}kx\\,dx=\\frac{k}{2}\\left(x_2^2-x_1^2\\right)$$",
+    "Son qiymatlar: $$W=100\\cdot(0.09-0.01)=8.0\\ \\mathrm{J}$$",
+    "Grafikda bu — trapetsiya yuzasi: $\\tfrac12(20+60)\\cdot0.20=8.0\\ \\mathrm{J}$."
+   ],
+   "ru": [
+    "Внешняя сила $F=kx$, работа — интеграл: $$W=\\int_{x_1}^{x_2}kx\\,dx=\\frac{k}{2}\\left(x_2^2-x_1^2\\right)$$",
+    "Числовые значения: $$W=100\\cdot(0.09-0.01)=8.0\\ \\mathrm{J}$$",
+    "На графике это площадь трапеции: $\\tfrac12(20+60)\\cdot0.20=8.0\\ \\mathrm{Дж}$."
+   ],
+   "en": [
+    "The external force is $F=kx$; the work is an integral: $$W=\\int_{x_1}^{x_2}kx\\,dx=\\frac{k}{2}\\left(x_2^2-x_1^2\\right)$$",
+    "Numbers: $$W=100\\cdot(0.09-0.01)=8.0\\ \\mathrm{J}$$",
+    "On the graph this is the area of a trapezoid: $\\tfrac12(20+60)\\cdot0.20=8.0\\ \\mathrm{J}$."
+   ]
+  },
+  "basis": {
+   "uz": "$W=\\int F\\,dx$ ($F$–$x$ grafigi ostidagi yuza), Guk qonuni $F=kx$",
+   "ru": "$W=\\int F\\,dx$ (площадь под графиком $F$–$x$), закон Гука $F=kx$",
+   "en": "$W=\\int F\\,dx$ (area under the $F$–$x$ graph), Hooke's law $F=kx$"
+  },
+  "answer": "W=8.0\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original"
+ },
+ {
+  "id": "B0-L04-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "O'rniga qo'yish usuli bilan hisoblang: $\\int_0^1 x\\,e^{-x^2}\\,dx$.",
+   "ru": "Вычислите методом замены переменной: $\\int_0^1 x\\,e^{-x^2}\\,dx$.",
+   "en": "Evaluate by substitution: $\\int_0^1 x\\,e^{-x^2}\\,dx$."
+  },
+  "figure": "figures/B0-L04-S05.png",
+  "solution": {
+   "uz": [
+    "$u=x^2$ almashtirish; chegaralar ham almashadi: $$du=2x\\,dx,\\qquad x=0\\to u=0,\\quad x=1\\to u=1$$",
+    "Yangi integral: $$\\int_0^1 x\\,e^{-x^2}dx=\\frac12\\int_0^1e^{-u}\\,du=\\frac12\\left(1-e^{-1}\\right)$$",
+    "Son qiymat: $$\\frac12(1-0.368)\\approx0.316$$"
+   ],
+   "ru": [
+    "Замена $u=x^2$; пределы тоже меняются: $$du=2x\\,dx,\\qquad x=0\\to u=0,\\quad x=1\\to u=1$$",
+    "Новый интеграл: $$\\int_0^1 x\\,e^{-x^2}dx=\\frac12\\int_0^1e^{-u}\\,du=\\frac12\\left(1-e^{-1}\\right)$$",
+    "Числовое значение: $$\\frac12(1-0.368)\\approx0.316$$"
+   ],
+   "en": [
+    "Substitute $u=x^2$; the limits change too: $$du=2x\\,dx,\\qquad x=0\\to u=0,\\quad x=1\\to u=1$$",
+    "New integral: $$\\int_0^1 x\\,e^{-x^2}dx=\\frac12\\int_0^1e^{-u}\\,du=\\frac12\\left(1-e^{-1}\\right)$$",
+    "Numerical value: $$\\frac12(1-0.368)\\approx0.316$$"
+   ]
+  },
+  "basis": {
+   "uz": "O'rniga qo'yish: $\\int f(g(x))\\,g'(x)\\,dx=\\int f(u)\\,du$",
+   "ru": "Замена переменной: $\\int f(g(x))\\,g'(x)\\,dx=\\int f(u)\\,du$",
+   "en": "Substitution: $\\int f(g(x))\\,g'(x)\\,dx=\\int f(u)\\,du$"
+  },
+  "answer": "\\frac12\\left(1-e^{-1}\\right)\\approx0.316",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original"
+ },
+ {
+  "id": "B0-L04-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radioaktiv yadrolarning yashash vaqti taqsimoti $e^{-t/\\tau}$ ga proporsional. O'rtacha yashash vaqti $\\langle t\\rangle=\\int_0^\\infty t\\,e^{-t/\\tau}dt\\,\\Big/\\!\\int_0^\\infty e^{-t/\\tau}dt$ ni hisoblang.",
+   "ru": "Распределение времени жизни радиоактивных ядер пропорционально $e^{-t/\\tau}$. Вычислите среднее время жизни $\\langle t\\rangle=\\int_0^\\infty t\\,e^{-t/\\tau}dt\\,\\Big/\\!\\int_0^\\infty e^{-t/\\tau}dt$.",
+   "en": "The lifetime distribution of radioactive nuclei is proportional to $e^{-t/\\tau}$. Compute the mean lifetime $\\langle t\\rangle=\\int_0^\\infty t\\,e^{-t/\\tau}dt\\,\\Big/\\!\\int_0^\\infty e^{-t/\\tau}dt$."
+  },
+  "figure": "figures/B0-L04-S06.png",
+  "solution": {
+   "uz": [
+    "Maxraj: $$\\int_0^\\infty e^{-t/\\tau}dt=-\\tau e^{-t/\\tau}\\Big|_0^\\infty=\\tau$$",
+    "Surat — bo'laklab integrallash ($u=t$, $dv=e^{-t/\\tau}dt$, $v=-\\tau e^{-t/\\tau}$): $$\\int_0^\\infty t\\,e^{-t/\\tau}dt=\\Big[-\\tau t\\,e^{-t/\\tau}\\Big]_0^\\infty+\\tau\\int_0^\\infty e^{-t/\\tau}dt=0+\\tau^2$$",
+    "Natija: $$\\langle t\\rangle=\\frac{\\tau^2}{\\tau}=\\tau$$"
+   ],
+   "ru": [
+    "Знаменатель: $$\\int_0^\\infty e^{-t/\\tau}dt=-\\tau e^{-t/\\tau}\\Big|_0^\\infty=\\tau$$",
+    "Числитель — по частям ($u=t$, $dv=e^{-t/\\tau}dt$, $v=-\\tau e^{-t/\\tau}$): $$\\int_0^\\infty t\\,e^{-t/\\tau}dt=\\Big[-\\tau t\\,e^{-t/\\tau}\\Big]_0^\\infty+\\tau\\int_0^\\infty e^{-t/\\tau}dt=0+\\tau^2$$",
+    "Результат: $$\\langle t\\rangle=\\frac{\\tau^2}{\\tau}=\\tau$$"
+   ],
+   "en": [
+    "Denominator: $$\\int_0^\\infty e^{-t/\\tau}dt=-\\tau e^{-t/\\tau}\\Big|_0^\\infty=\\tau$$",
+    "Numerator — by parts ($u=t$, $dv=e^{-t/\\tau}dt$, $v=-\\tau e^{-t/\\tau}$): $$\\int_0^\\infty t\\,e^{-t/\\tau}dt=\\Big[-\\tau t\\,e^{-t/\\tau}\\Big]_0^\\infty+\\tau\\int_0^\\infty e^{-t/\\tau}dt=0+\\tau^2$$",
+    "Result: $$\\langle t\\rangle=\\frac{\\tau^2}{\\tau}=\\tau$$"
+   ]
+  },
+  "basis": {
+   "uz": "Bo'laklab integrallash $\\int u\\,dv=uv-\\int v\\,du$, xosmas integral",
+   "ru": "Интегрирование по частям $\\int u\\,dv=uv-\\int v\\,du$, несобственный интеграл",
+   "en": "Integration by parts $\\int u\\,dv=uv-\\int v\\,du$, improper integral"
+  },
+  "answer": "\\langle t\\rangle=\\tau",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original"
+ },
+ {
+  "id": "B0-L04-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Kondensator razryadida tok $I(t)=I_0e^{-t/\\tau}$, $I_0=3.0\\ \\mathrm{mA}$, $\\tau=2.0\\ \\mathrm{ms}$. Razryad davomida o'tgan to'liq zaryadni va birinchi $\\tau$ vaqt ichida o'tgan zaryadni toping.",
+   "ru": "При разрядке конденсатора ток $I(t)=I_0e^{-t/\\tau}$, $I_0=3.0\\ \\mathrm{мА}$, $\\tau=2.0\\ \\mathrm{мс}$. Найдите полный заряд, прошедший за время разрядки, и заряд за первые $\\tau$.",
+   "en": "During a capacitor discharge the current is $I(t)=I_0e^{-t/\\tau}$, with $I_0=3.0\\ \\mathrm{mA}$ and $\\tau=2.0\\ \\mathrm{ms}$. Find the total charge that flows during the discharge and the charge in the first $\\tau$."
+  },
+  "figure": "figures/B0-L04-S07.png",
+  "solution": {
+   "uz": [
+    "Zaryad — tokdan olingan integral: $$q=\\int_0^\\infty I_0e^{-t/\\tau}dt=I_0\\tau=3.0\\times10^{-3}\\cdot2.0\\times10^{-3}=6.0\\ \\mu\\mathrm{C}$$",
+    "Birinchi $\\tau$ vaqtda: $$q_1=\\int_0^\\tau I_0e^{-t/\\tau}dt=I_0\\tau\\left(1-e^{-1}\\right)\\approx6.0\\cdot0.632\\approx3.8\\ \\mu\\mathrm{C}$$"
+   ],
+   "ru": [
+    "Заряд — интеграл от тока: $$q=\\int_0^\\infty I_0e^{-t/\\tau}dt=I_0\\tau=3.0\\times10^{-3}\\cdot2.0\\times10^{-3}=6.0\\ \\mu\\mathrm{C}$$",
+    "За первые $\\tau$: $$q_1=\\int_0^\\tau I_0e^{-t/\\tau}dt=I_0\\tau\\left(1-e^{-1}\\right)\\approx6.0\\cdot0.632\\approx3.8\\ \\mu\\mathrm{C}$$"
+   ],
+   "en": [
+    "Charge is the integral of current: $$q=\\int_0^\\infty I_0e^{-t/\\tau}dt=I_0\\tau=3.0\\times10^{-3}\\cdot2.0\\times10^{-3}=6.0\\ \\mu\\mathrm{C}$$",
+    "In the first $\\tau$: $$q_1=\\int_0^\\tau I_0e^{-t/\\tau}dt=I_0\\tau\\left(1-e^{-1}\\right)\\approx6.0\\cdot0.632\\approx3.8\\ \\mu\\mathrm{C}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$q=\\int I\\,dt$ (tok grafigi ostidagi yuza)",
+   "ru": "$q=\\int I\\,dt$ (площадь под графиком тока)",
+   "en": "$q=\\int I\\,dt$ (area under the current graph)"
+  },
+  "answer": "q=6.0\\ \\mu\\mathrm{C},\\quad q_1\\approx3.8\\ \\mu\\mathrm{C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original"
+ },
+ {
+  "id": "B0-L04-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "O'zgaruvchan kuchlanish $V(t)=V_0\\sin\\omega t$. Davr bo'yicha $\\langle\\sin^2\\omega t\\rangle$ ni hisoblang va ta'sir etuvchi qiymat $V_{\\mathrm{rms}}=\\sqrt{\\langle V^2\\rangle}$ ni toping. $V_0=311\\ \\mathrm{V}$ bo'lsa, $V_{\\mathrm{rms}}$ qancha?",
+   "ru": "Переменное напряжение $V(t)=V_0\\sin\\omega t$. Вычислите среднее за период $\\langle\\sin^2\\omega t\\rangle$ и найдите действующее значение $V_{\\mathrm{rms}}=\\sqrt{\\langle V^2\\rangle}$. Чему равно $V_{\\mathrm{rms}}$ при $V_0=311\\ \\mathrm{В}$?",
+   "en": "An alternating voltage is $V(t)=V_0\\sin\\omega t$. Compute the average over a period $\\langle\\sin^2\\omega t\\rangle$ and find the rms value $V_{\\mathrm{rms}}=\\sqrt{\\langle V^2\\rangle}$. What is $V_{\\mathrm{rms}}$ for $V_0=311\\ \\mathrm{V}$?"
+  },
+  "figure": "figures/B0-L04-S08.png",
+  "solution": {
+   "uz": [
+    "Ikkilangan burchak formulasi: $$\\sin^2\\omega t=\\frac{1-\\cos2\\omega t}{2}$$",
+    "Davr $T=2\\pi/\\omega$ bo'yicha o'rtacha ($\\cos$ ning integrali nol): $$\\langle\\sin^2\\omega t\\rangle=\\frac1T\\int_0^T\\frac{1-\\cos2\\omega t}{2}\\,dt=\\frac12$$",
+    "Ta'sir etuvchi qiymat: $$V_{\\mathrm{rms}}=\\sqrt{V_0^2\\cdot\\tfrac12}=\\frac{V_0}{\\sqrt2}=\\frac{311}{1.414}\\approx220\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "Формула двойного угла: $$\\sin^2\\omega t=\\frac{1-\\cos2\\omega t}{2}$$",
+    "Среднее за период $T=2\\pi/\\omega$ (интеграл $\\cos$ равен нулю): $$\\langle\\sin^2\\omega t\\rangle=\\frac1T\\int_0^T\\frac{1-\\cos2\\omega t}{2}\\,dt=\\frac12$$",
+    "Действующее значение: $$V_{\\mathrm{rms}}=\\sqrt{V_0^2\\cdot\\tfrac12}=\\frac{V_0}{\\sqrt2}=\\frac{311}{1.414}\\approx220\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "Double-angle formula: $$\\sin^2\\omega t=\\frac{1-\\cos2\\omega t}{2}$$",
+    "Average over the period $T=2\\pi/\\omega$ (the integral of $\\cos$ is zero): $$\\langle\\sin^2\\omega t\\rangle=\\frac1T\\int_0^T\\frac{1-\\cos2\\omega t}{2}\\,dt=\\frac12$$",
+    "rms value: $$V_{\\mathrm{rms}}=\\sqrt{V_0^2\\cdot\\tfrac12}=\\frac{V_0}{\\sqrt2}=\\frac{311}{1.414}\\approx220\\ \\mathrm{V}$$"
+   ]
+  },
+  "basis": {
+   "uz": "O'rtacha qiymat $\\langle f\\rangle=\\frac1T\\int_0^T f\\,dt$",
+   "ru": "Среднее значение $\\langle f\\rangle=\\frac1T\\int_0^T f\\,dt$",
+   "en": "Average value $\\langle f\\rangle=\\frac1T\\int_0^T f\\,dt$"
+  },
+  "answer": "\\langle\\sin^2\\omega t\\rangle=\\tfrac12,\\quad V_{\\mathrm{rms}}=\\frac{V_0}{\\sqrt2}\\approx220\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original"
+ },
+ {
+  "id": "B0-L04-S09",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Massasi $M=0.60\\ \\mathrm{kg}$, uzunligi $L=1.0\\ \\mathrm{m}$ bo'lgan bir jinsli ingichka sterjenning uning uchidan va o'rtasidan o'tuvchi perpendikulyar o'qlarga nisbatan inersiya momentlarini integral yordamida toping.",
+   "ru": "С помощью интеграла найдите моменты инерции однородного тонкого стержня массой $M=0.60\\ \\mathrm{кг}$ и длиной $L=1.0\\ \\mathrm{м}$ относительно перпендикулярных осей, проходящих через его конец и через его середину.",
+   "en": "Using an integral, find the moments of inertia of a thin uniform rod of mass $M=0.60\\ \\mathrm{kg}$ and length $L=1.0\\ \\mathrm{m}$ about perpendicular axes through its end and through its center."
+  },
+  "figure": "figures/B0-L04-S09.png",
+  "solution": {
+   "uz": [
+    "Massa elementi: $$dm=\\lambda\\,dx=\\frac{M}{L}\\,dx$$",
+    "Uchiga nisbatan ($0\\le x\\le L$): $$I_0=\\int_0^L x^2\\frac{M}{L}dx=\\frac{ML^2}{3}=0.20\\ \\mathrm{kg\\cdot m^2}$$",
+    "O'rtasiga nisbatan ($-L/2\\le x\\le L/2$): $$I_c=\\int_{-L/2}^{L/2}x^2\\frac{M}{L}dx=\\frac{ML^2}{12}=0.050\\ \\mathrm{kg\\cdot m^2}$$",
+    "Tekshiruv — Shteyner teoremasi: $I_0=I_c+M(L/2)^2=0.05+0.15=0.20$."
+   ],
+   "ru": [
+    "Элемент массы: $$dm=\\lambda\\,dx=\\frac{M}{L}\\,dx$$",
+    "Относительно конца ($0\\le x\\le L$): $$I_0=\\int_0^L x^2\\frac{M}{L}dx=\\frac{ML^2}{3}=0.20\\ \\mathrm{kg\\cdot m^2}$$",
+    "Относительно середины ($-L/2\\le x\\le L/2$): $$I_c=\\int_{-L/2}^{L/2}x^2\\frac{M}{L}dx=\\frac{ML^2}{12}=0.050\\ \\mathrm{kg\\cdot m^2}$$",
+    "Проверка — теорема Штейнера: $I_0=I_c+M(L/2)^2=0.05+0.15=0.20$."
+   ],
+   "en": [
+    "Mass element: $$dm=\\lambda\\,dx=\\frac{M}{L}\\,dx$$",
+    "About the end ($0\\le x\\le L$): $$I_0=\\int_0^L x^2\\frac{M}{L}dx=\\frac{ML^2}{3}=0.20\\ \\mathrm{kg\\cdot m^2}$$",
+    "About the center ($-L/2\\le x\\le L/2$): $$I_c=\\int_{-L/2}^{L/2}x^2\\frac{M}{L}dx=\\frac{ML^2}{12}=0.050\\ \\mathrm{kg\\cdot m^2}$$",
+    "Check with the parallel-axis theorem: $I_0=I_c+M(L/2)^2=0.05+0.15=0.20$."
+   ]
+  },
+  "basis": {
+   "uz": "$I=\\int r^2\\,dm$, $dm=\\lambda\\,dx$",
+   "ru": "$I=\\int r^2\\,dm$, $dm=\\lambda\\,dx$",
+   "en": "$I=\\int r^2\\,dm$, $dm=\\lambda\\,dx$"
+  },
+  "answer": "I_0=\\frac{ML^2}{3}=0.20\\ \\mathrm{kg\\cdot m^2},\\quad I_c=\\frac{ML^2}{12}=0.050\\ \\mathrm{kg\\cdot m^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original"
+ },
+ {
+  "id": "B0-L04-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $L$ bo'lgan sterjenning chiziqli zichligi uchidan masofa bo'yicha chiziqli ortadi: $\\lambda(x)=\\lambda_0\\,x/L$. Sterjen massasini va massa markazi holatini toping.",
+   "ru": "Линейная плотность стержня длиной $L$ растёт линейно с расстоянием от конца: $\\lambda(x)=\\lambda_0\\,x/L$. Найдите массу стержня и положение центра масс.",
+   "en": "The linear density of a rod of length $L$ increases linearly with distance from one end: $\\lambda(x)=\\lambda_0\\,x/L$. Find the mass of the rod and the position of its center of mass."
+  },
+  "figure": "figures/B0-L04-S10.png",
+  "solution": {
+   "uz": [
+    "Massa: $$M=\\int_0^L\\lambda_0\\frac{x}{L}\\,dx=\\frac{\\lambda_0L}{2}$$",
+    "Massa markazi: $$x_c=\\frac1M\\int_0^L x\\,\\lambda_0\\frac{x}{L}\\,dx=\\frac{1}{M}\\cdot\\frac{\\lambda_0L^2}{3}=\\frac{2L}{3}$$",
+    "Mantiqiy tekshiruv: og'irroq uchiga yaqin ($x_c>L/2$) — to'g'ri."
+   ],
+   "ru": [
+    "Масса: $$M=\\int_0^L\\lambda_0\\frac{x}{L}\\,dx=\\frac{\\lambda_0L}{2}$$",
+    "Центр масс: $$x_c=\\frac1M\\int_0^L x\\,\\lambda_0\\frac{x}{L}\\,dx=\\frac{1}{M}\\cdot\\frac{\\lambda_0L^2}{3}=\\frac{2L}{3}$$",
+    "Проверка смысла: ближе к тяжёлому концу ($x_c>L/2$) — верно."
+   ],
+   "en": [
+    "Mass: $$M=\\int_0^L\\lambda_0\\frac{x}{L}\\,dx=\\frac{\\lambda_0L}{2}$$",
+    "Center of mass: $$x_c=\\frac1M\\int_0^L x\\,\\lambda_0\\frac{x}{L}\\,dx=\\frac{1}{M}\\cdot\\frac{\\lambda_0L^2}{3}=\\frac{2L}{3}$$",
+    "Sanity check: closer to the heavier end ($x_c>L/2$) — correct."
+   ]
+  },
+  "basis": {
+   "uz": "$M=\\int\\lambda\\,dx$, $x_c=\\frac1M\\int x\\,dm$",
+   "ru": "$M=\\int\\lambda\\,dx$, $x_c=\\frac1M\\int x\\,dm$",
+   "en": "$M=\\int\\lambda\\,dx$, $x_c=\\frac1M\\int x\\,dm$"
+  },
+  "answer": "M=\\frac{\\lambda_0L}{2},\\quad x_c=\\frac{2L}{3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original"
+ },
+ {
+  "id": "B0-L04-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$n=1.0\\ \\mathrm{mol}$ ideal gaz $T=300\\ \\mathrm{K}$ o'zgarmas haroratda hajmi ikki marta ortguncha kengaydi. Gaz bajargan ishni toping ($R=8.31\\ \\mathrm{J/(mol\\cdot K)}$, $\\ln2\\approx0.693$).",
+   "ru": "Идеальный газ количеством $n=1.0\\ \\mathrm{моль}$ расширился при постоянной температуре $T=300\\ \\mathrm{К}$ до удвоения объёма. Найдите работу газа ($R=8.31\\ \\mathrm{Дж/(моль\\cdot К)}$, $\\ln2\\approx0.693$).",
+   "en": "$n=1.0\\ \\mathrm{mol}$ of an ideal gas expands at constant temperature $T=300\\ \\mathrm{K}$ until its volume doubles. Find the work done by the gas ($R=8.31\\ \\mathrm{J/(mol\\cdot K)}$, $\\ln2\\approx0.693$)."
+  },
+  "figure": "figures/B0-L04-S11.png",
+  "solution": {
+   "uz": [
+    "Izotermik jarayonda $p=nRT/V$: $$W=\\int_{V_1}^{2V_1}\\frac{nRT}{V}\\,dV=nRT\\ln2$$",
+    "Son qiymat: $$W=1.0\\cdot8.31\\cdot300\\cdot0.693\\approx1.73\\times10^3\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "В изотермическом процессе $p=nRT/V$: $$W=\\int_{V_1}^{2V_1}\\frac{nRT}{V}\\,dV=nRT\\ln2$$",
+    "Числовое значение: $$W=1.0\\cdot8.31\\cdot300\\cdot0.693\\approx1.73\\times10^3\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "In an isothermal process $p=nRT/V$: $$W=\\int_{V_1}^{2V_1}\\frac{nRT}{V}\\,dV=nRT\\ln2$$",
+    "Numerical value: $$W=1.0\\cdot8.31\\cdot300\\cdot0.693\\approx1.73\\times10^3\\ \\mathrm{J}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$W=\\int p\\,dV$, $\\int\\frac{dV}{V}=\\ln V$",
+   "ru": "$W=\\int p\\,dV$, $\\int\\frac{dV}{V}=\\ln V$",
+   "en": "$W=\\int p\\,dV$, $\\int\\frac{dV}{V}=\\ln V$"
+  },
+  "answer": "W=nRT\\ln2\\approx1.7\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original"
+ },
+ {
+  "id": "B0-L04-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Massasi $m=100\\ \\mathrm{kg}$ bo'lgan sun'iy yo'ldoshni Yer sirtidan ($r=R$) $r=2R$ masofagacha ko'tarish uchun tortishish kuchiga qarshi bajariladigan ishni toping ($R=6.4\\times10^6\\ \\mathrm{m}$, $g=9.8\\ \\mathrm{m/s^2}$, $GM=gR^2$).",
+   "ru": "Найдите работу против силы тяготения при подъёме спутника массой $m=100\\ \\mathrm{кг}$ с поверхности Земли ($r=R$) до $r=2R$ ($R=6.4\\times10^6\\ \\mathrm{м}$, $g=9.8\\ \\mathrm{м/с^2}$, $GM=gR^2$).",
+   "en": "Find the work done against gravity in raising a satellite of mass $m=100\\ \\mathrm{kg}$ from the Earth's surface ($r=R$) to $r=2R$ ($R=6.4\\times10^6\\ \\mathrm{m}$, $g=9.8\\ \\mathrm{m/s^2}$, $GM=gR^2$)."
+  },
+  "figure": "figures/B0-L04-S12.png",
+  "solution": {
+   "uz": [
+    "Kuch masofaga bog'liq, shuning uchun integral: $$W=\\int_R^{2R}\\frac{GMm}{r^2}\\,dr=GMm\\left(\\frac1R-\\frac{1}{2R}\\right)=\\frac{GMm}{2R}$$",
+    "$GM=gR^2$ dan: $$W=\\frac{mgR}{2}=\\frac{100\\cdot9.8\\cdot6.4\\times10^6}{2}\\approx3.1\\times10^9\\ \\mathrm{J}$$",
+    "Taqqoslash: $mgh$ formulasi ($h=R$) ikki marta katta qiymat beradi — u faqat $h\\ll R$ da to'g'ri."
+   ],
+   "ru": [
+    "Сила зависит от расстояния, поэтому интеграл: $$W=\\int_R^{2R}\\frac{GMm}{r^2}\\,dr=GMm\\left(\\frac1R-\\frac{1}{2R}\\right)=\\frac{GMm}{2R}$$",
+    "Из $GM=gR^2$: $$W=\\frac{mgR}{2}=\\frac{100\\cdot9.8\\cdot6.4\\times10^6}{2}\\approx3.1\\times10^9\\ \\mathrm{J}$$",
+    "Сравнение: формула $mgh$ ($h=R$) дала бы вдвое больше — она верна только при $h\\ll R$."
+   ],
+   "en": [
+    "The force depends on distance, so integrate: $$W=\\int_R^{2R}\\frac{GMm}{r^2}\\,dr=GMm\\left(\\frac1R-\\frac{1}{2R}\\right)=\\frac{GMm}{2R}$$",
+    "Using $GM=gR^2$: $$W=\\frac{mgR}{2}=\\frac{100\\cdot9.8\\cdot6.4\\times10^6}{2}\\approx3.1\\times10^9\\ \\mathrm{J}$$",
+    "Comparison: the formula $mgh$ ($h=R$) would give twice as much — it is valid only for $h\\ll R$."
+   ]
+  },
+  "basis": {
+   "uz": "$W=\\int F\\,dr$, $\\int\\frac{dr}{r^2}=-\\frac1r$",
+   "ru": "$W=\\int F\\,dr$, $\\int\\frac{dr}{r^2}=-\\frac1r$",
+   "en": "$W=\\int F\\,dr$, $\\int\\frac{dr}{r^2}=-\\frac1r$"
+  },
+  "answer": "W=\\frac{mgR}{2}\\approx3.1\\times10^9\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original"
+ },
+ {
+  "id": "B0-L04-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radiusi $R$ bo'lgan yupqa diskda zaryad sirt zichligi markazdan masofaga proporsional: $\\sigma(r)=\\sigma_0\\,r/R$. Diskning to'liq zaryadini toping.",
+   "ru": "На тонком диске радиусом $R$ поверхностная плотность заряда пропорциональна расстоянию от центра: $\\sigma(r)=\\sigma_0\\,r/R$. Найдите полный заряд диска.",
+   "en": "On a thin disk of radius $R$ the surface charge density is proportional to the distance from the center: $\\sigma(r)=\\sigma_0\\,r/R$. Find the total charge of the disk."
+  },
+  "figure": "figures/B0-L04-S13.png",
+  "solution": {
+   "uz": [
+    "Radiusi $r$, eni $dr$ bo'lgan halqa elementi: $$dA=2\\pi r\\,dr,\\qquad dq=\\sigma(r)\\,dA$$",
+    "Integrallaymiz: $$Q=\\int_0^R\\sigma_0\\frac{r}{R}\\,2\\pi r\\,dr=\\frac{2\\pi\\sigma_0}{R}\\cdot\\frac{R^3}{3}=\\frac23\\pi\\sigma_0R^2$$",
+    "Tekshiruv: bir jinsli disk ($\\sigma_0\\pi R^2$) dan kichik, chunki markaz yaqinida zaryad kam — to'g'ri."
+   ],
+   "ru": [
+    "Элемент-кольцо радиусом $r$ и шириной $dr$: $$dA=2\\pi r\\,dr,\\qquad dq=\\sigma(r)\\,dA$$",
+    "Интегрируем: $$Q=\\int_0^R\\sigma_0\\frac{r}{R}\\,2\\pi r\\,dr=\\frac{2\\pi\\sigma_0}{R}\\cdot\\frac{R^3}{3}=\\frac23\\pi\\sigma_0R^2$$",
+    "Проверка: меньше, чем для однородного диска ($\\sigma_0\\pi R^2$), так как у центра заряда мало — верно."
+   ],
+   "en": [
+    "A ring element of radius $r$ and width $dr$: $$dA=2\\pi r\\,dr,\\qquad dq=\\sigma(r)\\,dA$$",
+    "Integrate: $$Q=\\int_0^R\\sigma_0\\frac{r}{R}\\,2\\pi r\\,dr=\\frac{2\\pi\\sigma_0}{R}\\cdot\\frac{R^3}{3}=\\frac23\\pi\\sigma_0R^2$$",
+    "Check: less than for a uniform disk ($\\sigma_0\\pi R^2$), since there is little charge near the center — correct."
+   ]
+  },
+  "basis": {
+   "uz": "Halqa elementi $dA=2\\pi r\\,dr$, $Q=\\int\\sigma\\,dA$",
+   "ru": "Элемент-кольцо $dA=2\\pi r\\,dr$, $Q=\\int\\sigma\\,dA$",
+   "en": "Ring element $dA=2\\pi r\\,dr$, $Q=\\int\\sigma\\,dA$"
+  },
+  "answer": "Q=\\frac23\\pi\\sigma_0R^2",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original"
+ }
+]

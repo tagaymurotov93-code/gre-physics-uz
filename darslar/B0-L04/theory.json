@@ -1,0 +1,521 @@
+[
+ {
+  "t": "h1",
+  "uz": "Integral va uning fizik ma'nosi (The integral and its physical meaning)",
+  "ru": "Интеграл и его физический смысл",
+  "en": "The integral and its physical meaning"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz boshlang'ich funksiya va integral tushunchalarini bilasiz, asosiy integrallarni va integrallash usullarini qo'llaysiz, aniq integralni grafik ostidagi yuza sifatida talqin qilasiz hamda ko'chish, ish, zaryad, impuls, massa markazi va inersiya momentini integral orqali hisoblaysiz.",
+  "ru": "**Цель.** После урока вы будете знать понятия первообразной и интеграла, применять основные интегралы и методы интегрирования, понимать определённый интеграл как площадь под графиком и вычислять через интеграл перемещение, работу, заряд, импульс, центр масс и момент инерции.",
+  "en": "**Goal.** By the end of the lesson you will know the concepts of an antiderivative and an integral, use the basic integrals and methods of integration, interpret the definite integral as the area under a graph, and compute displacement, work, charge, impulse, center of mass and moment of inertia with integrals."
+ },
+ {
+  "t": "p",
+  "uz": "**GRE'da o'rni.** GRE'da murakkab integrallar kam uchraydi, lekin grafik ostidagi yuzani o'qish ($v$–$t$, $F$–$x$, $p$–$V$ grafiklari), simmetriyadan foydalanish va oddiy integrallarni bir-ikki qatorda hisoblash ko'p savolda kerak bo'ladi.",
+  "ru": "**Роль в GRE.** Сложные интегралы на GRE встречаются редко, но умение читать площадь под графиком (графики $v$–$t$, $F$–$x$, $p$–$V$), пользоваться симметрией и вычислять простые интегралы в одну-две строки нужно во многих вопросах.",
+  "en": "**Role on the GRE.** Complicated integrals are rare on the GRE, but reading the area under a graph ($v$–$t$, $F$–$x$, $p$–$V$ graphs), using symmetry and evaluating simple integrals in one or two lines are needed in many questions."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Boshlang'ich funksiya va aniqmas integral (Antiderivative and indefinite integral)",
+  "ru": "1. Первообразная и неопределённый интеграл",
+  "en": "1. Antiderivative and indefinite integral"
+ },
+ {
+  "t": "p",
+  "uz": "Agar $F'(x)=f(x)$ bo'lsa, $F$ funksiya $f$ ning **boshlang'ich funksiyasi (antiderivative)** deyiladi. Barcha boshlang'ich funksiyalar to'plami — **aniqmas integral (indefinite integral)**; $C$ — ixtiyoriy o'zgarmas:",
+  "ru": "Если $F'(x)=f(x)$, функция $F$ называется **первообразной** функции $f$. Множество всех первообразных — **неопределённый интеграл**; $C$ — произвольная постоянная:",
+  "en": "If $F'(x)=f(x)$, the function $F$ is called an **antiderivative** of $f$. The set of all antiderivatives is the **indefinite integral**; $C$ is an arbitrary constant:"
+ },
+ {
+  "t": "m",
+  "m": "\\int f(x)\\,dx=F(x)+C,\\qquad F'(x)=f(x)"
+ },
+ {
+  "t": "p",
+  "uz": "Integrallash — differensiallashga teskari amal. Fizikada $C$ boshlang'ich shartdan topiladi: masalan, $v(t)$ ma'lum bo'lsa, $x(t)=\\int v\\,dt+C$, $C=x(0)$.",
+  "ru": "Интегрирование — действие, обратное дифференцированию. В физике $C$ находят из начального условия: например, если известна $v(t)$, то $x(t)=\\int v\\,dt+C$, $C=x(0)$.",
+  "en": "Integration is the inverse of differentiation. In physics $C$ is found from an initial condition: for example, if $v(t)$ is known, then $x(t)=\\int v\\,dt+C$ with $C=x(0)$."
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Darajali funksiya",
+    "ru": "Степенная функция",
+    "en": "Power function",
+    "m": "\\int x^n\\,dx=\\frac{x^{n+1}}{n+1}+C\\quad(n\\ne-1)"
+   },
+   {
+    "uz": "Teskari funksiya",
+    "ru": "Обратная функция",
+    "en": "Reciprocal",
+    "m": "\\int\\frac{dx}{x}=\\ln|x|+C"
+   },
+   {
+    "uz": "Eksponenta",
+    "ru": "Экспонента",
+    "en": "Exponential",
+    "m": "\\int e^{kx}\\,dx=\\frac{1}{k}e^{kx}+C"
+   },
+   {
+    "uz": "Sinus",
+    "ru": "Синус",
+    "en": "Sine",
+    "m": "\\int\\sin kx\\,dx=-\\frac{1}{k}\\cos kx+C"
+   },
+   {
+    "uz": "Kosinus",
+    "ru": "Косинус",
+    "en": "Cosine",
+    "m": "\\int\\cos kx\\,dx=\\frac{1}{k}\\sin kx+C"
+   },
+   {
+    "uz": "Kosinus kvadratiga teskari",
+    "ru": "Обратная квадрату косинуса",
+    "en": "Secant squared",
+    "m": "\\int\\frac{dx}{\\cos^2x}=\\tan x+C"
+   }
+  ]
+ },
+ {
+  "t": "h2",
+  "uz": "2. Integrallash usullari (Methods of integration)",
+  "ru": "2. Методы интегрирования",
+  "en": "2. Methods of integration"
+ },
+ {
+  "t": "li",
+  "uz": "**Chiziqlilik (linearity):** $\\int(af+bg)\\,dx=a\\int f\\,dx+b\\int g\\,dx$.",
+  "ru": "**Линейность:** $\\int(af+bg)\\,dx=a\\int f\\,dx+b\\int g\\,dx$.",
+  "en": "**Linearity:** $\\int(af+bg)\\,dx=a\\int f\\,dx+b\\int g\\,dx$."
+ },
+ {
+  "t": "li",
+  "uz": "**O'rniga qo'yish (substitution):** $u=g(x)$, $du=g'(x)\\,dx$ — zanjir qoidasining teskarisi:",
+  "ru": "**Замена переменной:** $u=g(x)$, $du=g'(x)\\,dx$ — обращение цепного правила:",
+  "en": "**Substitution:** $u=g(x)$, $du=g'(x)\\,dx$ — the chain rule in reverse:"
+ },
+ {
+  "t": "m",
+  "m": "\\int f\\big(g(x)\\big)\\,g'(x)\\,dx=\\int f(u)\\,du,\\qquad \\int2x\\,e^{x^2}dx=e^{x^2}+C"
+ },
+ {
+  "t": "li",
+  "uz": "**Bo'laklab integrallash (integration by parts)** — ko'paytma qoidasining teskarisi:",
+  "ru": "**Интегрирование по частям** — обращение правила произведения:",
+  "en": "**Integration by parts** — the product rule in reverse:"
+ },
+ {
+  "t": "m",
+  "m": "\\int u\\,dv=uv-\\int v\\,du,\\qquad \\int x\\,e^{x}dx=(x-1)\\,e^{x}+C"
+ },
+ {
+  "t": "h2",
+  "uz": "3. Aniq integral va yuza (Definite integral and area)",
+  "ru": "3. Определённый интеграл и площадь",
+  "en": "3. Definite integral and area"
+ },
+ {
+  "t": "p",
+  "uz": "$[a,\\ b]$ oraliqni $n$ ta kichik $\\Delta x$ bo'lakka bo'lib, to'g'ri to'rtburchaklar yuzalarini qo'shamiz (**Riman yig'indisi, Riemann sum**). $\\Delta x\\to0$ dagi limit — **aniq integral (definite integral)**, ya'ni $y=f(x)$ grafigi va $x$ o'qi orasidagi yuza ([[F01]]):",
+  "ru": "Разобьём отрезок $[a,\\ b]$ на $n$ малых частей $\\Delta x$ и сложим площади прямоугольников (**сумма Римана**). Предел при $\\Delta x\\to0$ — **определённый интеграл**, то есть площадь между графиком $y=f(x)$ и осью $x$ ([[F01]]):",
+  "en": "Divide the interval $[a,\\ b]$ into $n$ small pieces $\\Delta x$ and add the areas of the rectangles (a **Riemann sum**). The limit as $\\Delta x\\to0$ is the **definite integral**, that is, the area between the graph $y=f(x)$ and the $x$-axis ([[F01]]):"
+ },
+ {
+  "t": "m",
+  "m": "\\int_a^b f(x)\\,dx=\\lim_{\\Delta x\\to0}\\sum_i f(x_i)\\,\\Delta x"
+ },
+ {
+  "t": "p",
+  "uz": "**Nyuton–Leybnits formulasi (fundamental theorem of calculus):** aniq integral boshlang'ich funksiya qiymatlari ayirmasiga teng:",
+  "ru": "**Формула Ньютона–Лейбница (основная теорема анализа):** определённый интеграл равен разности значений первообразной:",
+  "en": "**Newton–Leibniz formula (fundamental theorem of calculus):** the definite integral equals the difference of the values of an antiderivative:"
+ },
+ {
+  "t": "m",
+  "m": "\\int_a^b f(x)\\,dx=F(b)-F(a)=F(x)\\Big|_a^b"
+ },
+ {
+  "t": "li",
+  "uz": "$x$ o'qidan pastdagi yuza **manfiy** hisoblanadi; integral — ishorali yuza (signed area).",
+  "ru": "Площадь ниже оси $x$ считается **отрицательной**; интеграл — площадь со знаком.",
+  "en": "Area below the $x$-axis counts as **negative**; the integral is a signed area."
+ },
+ {
+  "t": "li",
+  "uz": "$\\int_a^b f\\,dx=\\int_a^c f\\,dx+\\int_c^b f\\,dx$; $\\ \\int_b^a f\\,dx=-\\int_a^b f\\,dx$.",
+  "ru": "$\\int_a^b f\\,dx=\\int_a^c f\\,dx+\\int_c^b f\\,dx$; $\\ \\int_b^a f\\,dx=-\\int_a^b f\\,dx$.",
+  "en": "$\\int_a^b f\\,dx=\\int_a^c f\\,dx+\\int_c^b f\\,dx$; $\\ \\int_b^a f\\,dx=-\\int_a^b f\\,dx$."
+ },
+ {
+  "t": "li",
+  "uz": "**Simmetriya:** toq funksiya uchun $\\int_{-a}^{a}f\\,dx=0$; juft funksiya uchun $\\int_{-a}^{a}f\\,dx=2\\int_0^{a}f\\,dx$.",
+  "ru": "**Симметрия:** для нечётной функции $\\int_{-a}^{a}f\\,dx=0$; для чётной $\\int_{-a}^{a}f\\,dx=2\\int_0^{a}f\\,dx$.",
+  "en": "**Symmetry:** for an odd function $\\int_{-a}^{a}f\\,dx=0$; for an even function $\\int_{-a}^{a}f\\,dx=2\\int_0^{a}f\\,dx$."
+ },
+ {
+  "t": "li",
+  "uz": "**Birligi:** integral birligi funksiya birligi bilan argument birligining ko'paytmasiga teng: $[\\int v\\,dt]=\\mathrm{m/s}\\cdot\\mathrm{s}=\\mathrm{m}$.",
+  "ru": "**Единица измерения:** единица интеграла равна произведению единицы функции на единицу аргумента: $[\\int v\\,dt]=\\mathrm{m/s}\\cdot\\mathrm{s}=\\mathrm{m}$.",
+  "en": "**Units:** the unit of an integral is the unit of the function times the unit of the argument: $[\\int v\\,dt]=\\mathrm{m/s}\\cdot\\mathrm{s}=\\mathrm{m}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B0-L04-F01.png",
+   "ru": "figures/B0-L04-F01-ru.png",
+   "en": "figures/B0-L04-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Integralning fizik ma'nosi (Physical meaning of the integral)",
+  "ru": "4. Физический смысл интеграла",
+  "en": "4. Physical meaning of the integral"
+ },
+ {
+  "t": "p",
+  "uz": "Hosilaga teskari bog'lanishlar integral bilan yoziladi; har biri tegishli grafik ostidagi yuzaga teng:",
+  "ru": "Соотношения, обратные производным, записываются интегралами; каждое равно площади под соответствующим графиком:",
+  "en": "The relations inverse to derivatives are written as integrals; each equals the area under the corresponding graph:"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Ko'chish (displacement)",
+    "ru": "Перемещение",
+    "en": "Displacement",
+    "m": "\\Delta x=\\int_{t_1}^{t_2}v\\,dt"
+   },
+   {
+    "uz": "Tezlik o'zgarishi",
+    "ru": "Изменение скорости",
+    "en": "Change in velocity",
+    "m": "\\Delta v=\\int_{t_1}^{t_2}a\\,dt"
+   },
+   {
+    "uz": "Ish (work)",
+    "ru": "Работа",
+    "en": "Work",
+    "m": "W=\\int_{x_1}^{x_2}F\\,dx"
+   },
+   {
+    "uz": "Zaryad (charge)",
+    "ru": "Заряд",
+    "en": "Charge",
+    "m": "q=\\int_{t_1}^{t_2}I\\,dt"
+   },
+   {
+    "uz": "Kuch impulsi (impulse)",
+    "ru": "Импульс силы",
+    "en": "Impulse",
+    "m": "J=\\int_{t_1}^{t_2}F\\,dt=\\Delta p"
+   },
+   {
+    "uz": "Gaz ishi",
+    "ru": "Работа газа",
+    "en": "Work done by a gas",
+    "m": "W=\\int_{V_1}^{V_2}p\\,dV"
+   }
+  ]
+ },
+ {
+  "t": "p",
+  "uz": "$v$–$t$ grafigida yuza ko'chishni beradi; $x$ o'qidan pastdagi qism orqaga harakatga mos keladi. **Bosib o'tilgan yo'l (distance)** esa $\\int|v|\\,dt$ ga teng ([[F02]]).",
+  "ru": "На графике $v$–$t$ площадь даёт перемещение; часть ниже оси $x$ соответствует движению назад. **Пройденный путь** равен $\\int|v|\\,dt$ ([[F02]]).",
+  "en": "On a $v$–$t$ graph the area gives the displacement; the part below the $x$-axis corresponds to motion backward. The **distance traveled** equals $\\int|v|\\,dt$ ([[F02]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B0-L04-F02.png",
+   "ru": "figures/B0-L04-F02-ru.png",
+   "en": "figures/B0-L04-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "p",
+  "uz": "$F$–$x$ grafigida yuza ishni beradi. Prujinani $0$ dan $x$ gacha cho'zishda bajarilgan ish — uchburchak yuzasi ([[F03]]):",
+  "ru": "На графике $F$–$x$ площадь даёт работу. Работа при растяжении пружины от $0$ до $x$ — площадь треугольника ([[F03]]):",
+  "en": "On an $F$–$x$ graph the area gives the work. The work done in stretching a spring from $0$ to $x$ is the area of a triangle ([[F03]]):"
+ },
+ {
+  "t": "m",
+  "m": "W=\\int_0^{x}kx'\\,dx'=\\frac12kx^2"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B0-L04-F03.png",
+   "ru": "figures/B0-L04-F03-ru.png",
+   "en": "figures/B0-L04-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. O'rtacha qiymat (Average value)",
+  "ru": "5. Среднее значение",
+  "en": "5. Average value"
+ },
+ {
+  "t": "p",
+  "uz": "$[a,\\ b]$ oraliqdagi **o'rtacha qiymat (average value)** — yuzasi integralga teng bo'lgan to'g'ri to'rtburchak balandligi ([[F04]]):",
+  "ru": "**Среднее значение** на отрезке $[a,\\ b]$ — высота прямоугольника, площадь которого равна интегралу ([[F04]]):",
+  "en": "The **average value** on $[a,\\ b]$ is the height of the rectangle whose area equals the integral ([[F04]]):"
+ },
+ {
+  "t": "m",
+  "m": "\\langle f\\rangle=\\frac{1}{b-a}\\int_a^b f(x)\\,dx"
+ },
+ {
+  "t": "p",
+  "uz": "Garmonik kattalik kvadratining davr bo'yicha o'rtachasi $\\tfrac12$ ga teng. Shundan o'zgaruvchan tokning **ta'sir etuvchi (o'rtacha kvadratik) qiymati (rms value)** kelib chiqadi:",
+  "ru": "Среднее за период от квадрата гармонической величины равно $\\tfrac12$. Отсюда следует **действующее (среднеквадратичное) значение** переменного тока:",
+  "en": "The average over a period of the square of a harmonic quantity is $\\tfrac12$. This gives the **rms (root-mean-square) value** of an alternating current:"
+ },
+ {
+  "t": "m",
+  "m": "\\langle\\sin^2\\omega t\\rangle=\\langle\\cos^2\\omega t\\rangle=\\frac12,\\qquad V_{\\mathrm{rms}}=\\sqrt{\\langle V^2\\rangle}=\\frac{V_0}{\\sqrt2}"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B0-L04-F04.png",
+   "ru": "figures/B0-L04-F04-ru.png",
+   "en": "figures/B0-L04-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Massa markazi va inersiya momenti (Center of mass and moment of inertia)",
+  "ru": "6. Центр масс и момент инерции",
+  "en": "6. Center of mass and moment of inertia"
+ },
+ {
+  "t": "p",
+  "uz": "Uzluksiz jismni kichik $dm$ bo'laklarga bo'lamiz; yig'indilar integralga aylanadi. Sterjen uchun $dm=\\lambda\\,dx$, bunda $\\lambda$ — **chiziqli zichlik (linear density)** ([[F05]]):",
+  "ru": "Разобьём сплошное тело на малые части $dm$; суммы превращаются в интегралы. Для стержня $dm=\\lambda\\,dx$, где $\\lambda$ — **линейная плотность** ([[F05]]):",
+  "en": "Divide a continuous body into small pieces $dm$; sums become integrals. For a rod, $dm=\\lambda\\,dx$, where $\\lambda$ is the **linear density** ([[F05]]):"
+ },
+ {
+  "t": "m",
+  "m": "M=\\int dm,\\qquad x_c=\\frac{1}{M}\\int x\\,dm,\\qquad I=\\int r^2\\,dm"
+ },
+ {
+  "t": "p",
+  "uz": "Uzunligi $L$, massasi $M$ bo'lgan bir jinsli sterjenning uchidan o'tuvchi o'qqa nisbatan ($I_0$) va o'rtasidan o'tuvchi o'qqa nisbatan ($I_c$) inersiya momentlari:",
+  "ru": "Моменты инерции однородного стержня длиной $L$ и массой $M$ относительно оси, проходящей через его конец ($I_0$), и через его середину ($I_c$):",
+  "en": "The moments of inertia of a uniform rod of length $L$ and mass $M$ about an axis through its end ($I_0$) and through its center ($I_c$) are:"
+ },
+ {
+  "t": "m",
+  "m": "I_0=\\int_0^L x^2\\,\\frac{M}{L}\\,dx=\\frac{ML^2}{3},\\qquad I_c=\\int_{-L/2}^{L/2}x^2\\,\\frac{M}{L}\\,dx=\\frac{ML^2}{12}"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B0-L04-F05.png",
+   "ru": "figures/B0-L04-F05-ru.png",
+   "en": "figures/B0-L04-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Fizikadagi muhim integrallar (Important integrals in physics)",
+  "ru": "7. Важные интегралы в физике",
+  "en": "7. Important integrals in physics"
+ },
+ {
+  "t": "p",
+  "uz": "**Ideal gazning izotermik ishi (isothermal work).** $pV=nRT=\\text{const}$ bo'lgani uchun $p=nRT/V$ va integral logarifm beradi ([[F06]]):",
+  "ru": "**Изотермическая работа идеального газа.** Поскольку $pV=nRT=\\text{const}$, имеем $p=nRT/V$, и интеграл даёт логарифм ([[F06]]):",
+  "en": "**Isothermal work of an ideal gas.** Since $pV=nRT=\\text{const}$, we have $p=nRT/V$, and the integral gives a logarithm ([[F06]]):"
+ },
+ {
+  "t": "m",
+  "m": "W=\\int_{V_1}^{V_2}\\frac{nRT}{V}\\,dV=nRT\\ln\\frac{V_2}{V_1}"
+ },
+ {
+  "t": "p",
+  "uz": "**Tortishish kuchi ishi.** $F=GMm/r^2$ kuchiga qarshi jismni $r_1$ dan $r_2$ gacha ko'chirishda bajarilgan ish:",
+  "ru": "**Работа против силы тяготения.** Работа при перемещении тела против силы $F=GMm/r^2$ от $r_1$ до $r_2$:",
+  "en": "**Work against gravity.** The work done in moving a body against the force $F=GMm/r^2$ from $r_1$ to $r_2$ is:"
+ },
+ {
+  "t": "m",
+  "m": "W=\\int_{r_1}^{r_2}\\frac{GMm}{r^2}\\,dr=GMm\\left(\\frac{1}{r_1}-\\frac{1}{r_2}\\right)"
+ },
+ {
+  "t": "p",
+  "uz": "**Halqa va sferik qatlam elementlari.** Doirada radiuslari $r$ va $r+dr$ bo'lgan halqa yuzasi $dA=2\\pi r\\,dr$; sharda qalinligi $dr$ bo'lgan sferik qatlam hajmi $dV=4\\pi r^2\\,dr$ ([[F07]]). Bular zaryad yoki massa radius bo'yicha taqsimlanganda ishlatiladi:",
+  "ru": "**Элементы кольца и сферического слоя.** В круге площадь кольца с радиусами $r$ и $r+dr$ равна $dA=2\\pi r\\,dr$; в шаре объём сферического слоя толщиной $dr$ равен $dV=4\\pi r^2\\,dr$ ([[F07]]). Они используются, когда заряд или масса распределены по радиусу:",
+  "en": "**Ring and spherical-shell elements.** In a disk, the area of a ring with radii $r$ and $r+dr$ is $dA=2\\pi r\\,dr$; in a ball, the volume of a spherical shell of thickness $dr$ is $dV=4\\pi r^2\\,dr$ ([[F07]]). They are used when charge or mass is distributed along the radius:"
+ },
+ {
+  "t": "m",
+  "m": "Q=\\int_0^R\\sigma(r)\\,2\\pi r\\,dr,\\qquad Q=\\int_0^R\\rho(r)\\,4\\pi r^2\\,dr"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B0-L04-F06.png",
+   "ru": "figures/B0-L04-F06-ru.png",
+   "en": "figures/B0-L04-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B0-L04-F07.png",
+   "ru": "figures/B0-L04-F07-ru.png",
+   "en": "figures/B0-L04-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. GRE uchun tez tekshiruvlar (Quick checks for the GRE)",
+  "ru": "8. Быстрые проверки для GRE",
+  "en": "8. Quick checks for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "Grafik ostidagi yuzani geometriya bilan hisoblang: uchburchak, trapetsiya, to'g'ri to'rtburchak — integral shart emas.",
+  "ru": "Вычисляйте площадь под графиком геометрически: треугольник, трапеция, прямоугольник — интеграл не нужен.",
+  "en": "Compute the area under a graph geometrically: triangle, trapezoid, rectangle — no integral needed."
+ },
+ {
+  "t": "li",
+  "uz": "Simmetriyani tekshiring: toq funksiyaning $[-a,\\ a]$ dagi integrali nol; $\\sin$ va $\\cos$ ning to'liq davr bo'yicha integrali nol.",
+  "ru": "Проверяйте симметрию: интеграл нечётной функции по $[-a,\\ a]$ равен нулю; интеграл $\\sin$ и $\\cos$ за полный период равен нулю.",
+  "en": "Check symmetry: the integral of an odd function over $[-a,\\ a]$ is zero; the integral of $\\sin$ or $\\cos$ over a full period is zero."
+ },
+ {
+  "t": "li",
+  "uz": "Yod biling: $\\int_0^\\infty e^{-x/\\tau}dx=\\tau$, $\\ \\int_0^\\infty x\\,e^{-x}dx=1$, $\\ \\int_{-\\infty}^{\\infty}e^{-ax^2}dx=\\sqrt{\\pi/a}$.",
+  "ru": "Помните: $\\int_0^\\infty e^{-x/\\tau}dx=\\tau$, $\\ \\int_0^\\infty x\\,e^{-x}dx=1$, $\\ \\int_{-\\infty}^{\\infty}e^{-ax^2}dx=\\sqrt{\\pi/a}$.",
+  "en": "Memorize: $\\int_0^\\infty e^{-x/\\tau}dx=\\tau$, $\\ \\int_0^\\infty x\\,e^{-x}dx=1$, $\\ \\int_{-\\infty}^{\\infty}e^{-ax^2}dx=\\sqrt{\\pi/a}$."
+ },
+ {
+  "t": "li",
+  "uz": "Birlikni tekshiring: $[\\int F\\,dx]=\\mathrm{N\\cdot m}=\\mathrm{J}$, $\\ [\\int I\\,dt]=\\mathrm{A\\cdot s}=\\mathrm{C}$.",
+  "ru": "Проверяйте единицы: $[\\int F\\,dx]=\\mathrm{N\\cdot m}=\\mathrm{J}$, $\\ [\\int I\\,dt]=\\mathrm{A\\cdot s}=\\mathrm{C}$.",
+  "en": "Check units: $[\\int F\\,dx]=\\mathrm{N\\cdot m}=\\mathrm{J}$, $\\ [\\int I\\,dt]=\\mathrm{A\\cdot s}=\\mathrm{C}$."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Aniqmas integral",
+    "ru": "Неопределённый интеграл",
+    "en": "Indefinite integral",
+    "m": "\\int f\\,dx=F+C,\\ F'=f"
+   },
+   {
+    "uz": "Nyuton–Leybnits",
+    "ru": "Ньютон–Лейбниц",
+    "en": "Newton–Leibniz",
+    "m": "\\int_a^b f\\,dx=F(b)-F(a)"
+   },
+   {
+    "uz": "Bo'laklab integrallash",
+    "ru": "По частям",
+    "en": "By parts",
+    "m": "\\int u\\,dv=uv-\\int v\\,du"
+   },
+   {
+    "uz": "Ko'chish",
+    "ru": "Перемещение",
+    "en": "Displacement",
+    "m": "\\Delta x=\\int v\\,dt"
+   },
+   {
+    "uz": "Ish",
+    "ru": "Работа",
+    "en": "Work",
+    "m": "W=\\int F\\,dx"
+   },
+   {
+    "uz": "Prujina ishi",
+    "ru": "Работа пружины",
+    "en": "Spring work",
+    "m": "W=\\tfrac12kx^2"
+   },
+   {
+    "uz": "O'rtacha qiymat",
+    "ru": "Среднее значение",
+    "en": "Average value",
+    "m": "\\langle f\\rangle=\\frac{1}{b-a}\\int_a^b f\\,dx"
+   },
+   {
+    "uz": "Ta'sir etuvchi qiymat",
+    "ru": "Действующее значение",
+    "en": "rms value",
+    "m": "V_{\\mathrm{rms}}=V_0/\\sqrt2"
+   },
+   {
+    "uz": "Inersiya momenti",
+    "ru": "Момент инерции",
+    "en": "Moment of inertia",
+    "m": "I=\\int r^2\\,dm"
+   },
+   {
+    "uz": "Izotermik ish",
+    "ru": "Изотермическая работа",
+    "en": "Isothermal work",
+    "m": "W=nRT\\ln\\frac{V_2}{V_1}"
+   }
+  ]
+ }
+]
