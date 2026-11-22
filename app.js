@@ -51,14 +51,14 @@
   // javob va variantlardagi o'zbekcha so'zlar (boshqa tillar uchun)
   const LOCAL = {
     ru: [["kv. birlik", "кв. ед."], ["komplanar", "компланарны"], ["sharqdan shimolga", "к северу от востока"],
-         ["$\\vec A$ va $\\vec B$ ga bog'liq", "зависит от $\\vec A$ и $\\vec B$"], ["yoki ", "или "]],
+         ["$\\vec a$ va $\\vec b$ ga bog'liq", "зависит от $\\vec a$ и $\\vec b$"], ["yoki ", "или "]],
     en: [["kv. birlik", "sq. units"], ["komplanar", "coplanar"], ["sharqdan shimolga", "north of east"],
-         ["$\\vec A$ va $\\vec B$ ga bog'liq", "depends on $\\vec A$ and $\\vec B$"], ["yoki ", "or "]],
+         ["$\\vec a$ va $\\vec b$ ga bog'liq", "depends on $\\vec a$ and $\\vec b$"], ["yoki ", "or "]],
     uz: [],
   };
   const TAB_ORDER = ["nazariya", "lugat", "masalalar", "test", "mustaqil"];
   const LETTERS = "ABCDE";
-  // Belgilash: bitta harfli vektor — \vec A (qisqa strelka), ikki nuqta — \overrightarrow{AB}
+  // Belgilash: bitta harfli vektor — \vec a (qisqa strelka, kichik harf), ikki nuqta — \overrightarrow{AB}
   const KATEX_MACROS = {};
 
   // ------------------------------------------------------------------ holat
@@ -105,21 +105,24 @@
     try { return katex.renderToString(src, { displayMode: display, throwOnError: false, strict: false, macros: { ...KATEX_MACROS } }); }
     catch { return esc(src); }
   }
+  // rasmga havola: [[F02]] -> "2-rasm" / "рис. 2" / "Fig. 2" (bosilganda rasmga o'tadi)
+  const FIGLBL = { uz: (n) => `${n}-rasm`, ru: (n) => `рис. ${n}`, en: (n) => `Fig. ${n}` };
   // matn (+ **qalin**) va $..$ / $$..$$ formulalar -> HTML
-  function rich(text) {
+  function rich(text, L = lang) {
     if (text == null) return "";
     const parts = [];
     let s = String(text).replace(MATH, (m, d, i) => { parts.push([d ?? i, d !== undefined]); return `\u0000${parts.length - 1}\u0000`; });
-    s = esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    s = esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\[\[(F(\d+))\]\]/g, (m, id, n) => `<a class="figref" href="#fig-${id}" data-fig="${id}">${(FIGLBL[L] || FIGLBL.en)(+n)}</a>`);
     return s.replace(/\u0000(\d+)\u0000/g, (m, n) => tex(parts[+n][0], parts[+n][1]));
   }
   // Ikki tilli blok: asosiy til + (uz/ru rejimida) ko'k rangdagi inglizcha tarjima
   function bi(obj, tag = "div", cls = "") {
     if (!obj) return "";
     const main = obj[lang] ?? obj.uz ?? "";
-    let html = `<${tag} class="${cls}">${rich(main)}</${tag}>`;
+    let html = `<${tag} class="${cls}">${rich(main, obj[lang] != null ? lang : "uz")}</${tag}>`;
     if (lang !== "en" && obj.en && obj.en.trim() !== String(main).trim()) {
-      html += `<${tag} class="${cls} tr" lang="en">${rich(obj.en)}</${tag}>`;
+      html += `<${tag} class="${cls} tr" lang="en">${rich(obj.en, "en")}</${tag}>`;
     }
     return `<div class="bi">${html}</div>`;
   }
@@ -139,6 +142,17 @@
     });
   }
   $("#zoom").addEventListener("click", (e) => { e.currentTarget.hidden = true; });
+  // matndagi rasm havolasi: rasmga silliq o'tish va qisqa yoritish
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a.figref");
+    if (!a) return;
+    e.preventDefault();
+    const f = document.getElementById("fig-" + a.dataset.fig);
+    if (!f) return;
+    f.scrollIntoView({ behavior: "smooth", block: "center" });
+    f.classList.remove("flash"); void f.offsetWidth; f.classList.add("flash");
+    haptic("success");
+  });
 
   // ------------------------------------------------------------------ marshrut
   function go(s) { Object.assign(state, s); render(); syncBack(); window.scrollTo(0, 0); }
@@ -237,7 +251,8 @@
       else if (b.t === "note") html += bi(b, "p", "note");
       else if (b.t === "li") { if (!inList) { html += `<ul class="blist">`; inList = true; } html += `<li>${bi(b, "div")}</li>`; }
       else if (b.t === "m") html += `<div class="fm">${tex(b.m, true)}</div>`;
-      else if (b.t === "fig") html += `<figure><img src="${figBase}${b.src[lang] || b.src.uz}" alt="${b.fig}"></figure>`;
+      else if (b.t === "fig") html += `<figure id="fig-${b.fig}"><img src="${figBase}${b.src[lang] || b.src.uz}" alt="${esc(t(b.cap || {}) || b.fig)}">
+          ${b.cap ? `<figcaption>${bi(b.cap, "span")}</figcaption>` : ""}</figure>`;
       else if (b.t === "tbl") html += `<div class="tbl">${b.rows.map((r) => `<div class="trow"><div class="tn">${bi(r, "div")}</div>
           <div class="tv">${r.m ? tex(r.m, false) : esc(r.v)}</div></div>`).join("")}</div>`;
       else if (b.t === "links") html += `<div class="links">${b.items.map((x) => `<a class="btn ghost wide" href="${x.url}" target="_blank" rel="noopener">${esc(t(x))} ↗</a>`).join("")}</div>`;
