@@ -1,0 +1,642 @@
+[
+ {
+  "t": "h1",
+  "uz": "Kompleks sonlar, Eyler formulasi (Complex numbers, Euler's formula)",
+  "ru": "Комплексные числа, формула Эйлера",
+  "en": "Complex numbers, Euler's formula"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz kompleks sonlar ustida arifmetik amallarni bajarasiz, kompleks sonni kompleks tekislikda tasvirlab, uning moduli va argumentini topasiz, Eyler formulasi yordamida sonni ko'rsatkichli shaklga o'tkazasiz, darajaga ko'tarasiz va ildiz chiqarasiz hamda kompleks sonlarni tebranishlar, o'zgaruvchan tok zanjirlari va to'lqinlarga qo'llaysiz.",
+  "ru": "**Цель.** После урока вы будете выполнять арифметические действия над комплексными числами, изображать комплексное число на комплексной плоскости и находить его модуль и аргумент, переводить число в показательную форму с помощью формулы Эйлера, возводить в степень и извлекать корни, а также применять комплексные числа к колебаниям, цепям переменного тока и волнам.",
+  "en": "**Goal.** By the end of the lesson you will perform arithmetic with complex numbers, represent a complex number in the complex plane and find its modulus and argument, convert a number to exponential form with Euler's formula, raise it to powers and extract roots, and apply complex numbers to oscillations, AC circuits and waves."
+ },
+ {
+  "t": "p",
+  "uz": "**GRE'da o'rni.** Kvant mexanikasida to'lqin funksiyasi kompleks: ehtimollik $|\\psi|^2=\\psi^*\\psi$. Tebranishlar, o'zgaruvchan tok va optikada interferensiya kompleks amplitudalar bilan bir necha qatorda hisoblanadi. GRE'da odatda Eyler formulasini, modulni hisoblashni va fazalarni qo'shishni tez bajarish talab qilinadi.",
+  "ru": "**Роль в GRE.** В квантовой механике волновая функция комплексная: вероятность $|\\psi|^2=\\psi^*\\psi$. Колебания, переменный ток и интерференция в оптике рассчитываются с помощью комплексных амплитуд в несколько строк. На GRE обычно требуется быстро применить формулу Эйлера, вычислить модуль и сложить фазы.",
+  "en": "**Role on the GRE.** In quantum mechanics the wave function is complex: the probability is $|\\psi|^2=\\psi^*\\psi$. Oscillations, alternating current and interference in optics are computed with complex amplitudes in a few lines. The GRE usually requires applying Euler's formula, computing a modulus and adding phases quickly."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Mavhum birlik va kompleks son (Imaginary unit and complex number)",
+  "ru": "1. Мнимая единица и комплексное число",
+  "en": "1. The imaginary unit and a complex number"
+ },
+ {
+  "t": "p",
+  "uz": "$x^2+1=0$ tenglama haqiqiy sonlar orasida yechimga ega emas. Shuning uchun kvadrati $-1$ ga teng yangi son — **mavhum birlik (imaginary unit)** $i$ kiritiladi. $x+iy$ ko'rinishidagi son ($x,\\ y$ — haqiqiy) **kompleks son (complex number)** deyiladi:",
+  "ru": "Уравнение $x^2+1=0$ не имеет решений среди действительных чисел. Поэтому вводится новое число, квадрат которого равен $-1$, — **мнимая единица** $i$. Число вида $x+iy$ ($x,\\ y$ — действительные) называется **комплексным числом**:",
+  "en": "The equation $x^2+1=0$ has no solutions among the real numbers. Therefore a new number whose square equals $-1$ is introduced — the **imaginary unit** $i$. A number of the form $x+iy$ ($x,\\ y$ real) is called a **complex number**:"
+ },
+ {
+  "t": "m",
+  "m": "i^2=-1,\\qquad z=x+iy,\\qquad x=\\mathrm{Re}\\,z,\\qquad y=\\mathrm{Im}\\,z"
+ },
+ {
+  "t": "li",
+  "uz": "$x=\\mathrm{Re}\\,z$ — **haqiqiy qism (real part)**, $y=\\mathrm{Im}\\,z$ — **mavhum qism (imaginary part)**; mavhum qism ham haqiqiy son ekanini unutmang.",
+  "ru": "$x=\\mathrm{Re}\\,z$ — **действительная часть**, $y=\\mathrm{Im}\\,z$ — **мнимая часть**; не забывайте, что мнимая часть тоже действительное число.",
+  "en": "$x=\\mathrm{Re}\\,z$ is the **real part** and $y=\\mathrm{Im}\\,z$ is the **imaginary part**; remember that the imaginary part is also a real number."
+ },
+ {
+  "t": "li",
+  "uz": "$y=0$ bo'lsa $z$ — haqiqiy son, $x=0$ bo'lsa $z$ — **sof mavhum son (purely imaginary number)**.",
+  "ru": "При $y=0$ число $z$ действительное, при $x=0$ число $z$ **чисто мнимое**.",
+  "en": "If $y=0$, $z$ is a real number; if $x=0$, $z$ is **purely imaginary**."
+ },
+ {
+  "t": "li",
+  "uz": "Ikki kompleks son haqiqiy va mavhum qismlari mos ravishda teng bo'lgandagina teng: bitta kompleks tenglik — ikkita haqiqiy tenglik.",
+  "ru": "Два комплексных числа равны только тогда, когда равны их действительные и мнимые части: одно комплексное равенство — два действительных.",
+  "en": "Two complex numbers are equal only when their real parts and imaginary parts are equal: one complex equation is two real equations."
+ },
+ {
+  "t": "p",
+  "uz": "$i$ ning darajalari 4 davr bilan takrorlanadi:",
+  "ru": "Степени $i$ повторяются с периодом 4:",
+  "en": "The powers of $i$ repeat with period 4:"
+ },
+ {
+  "t": "m",
+  "m": "i^1=i,\\quad i^2=-1,\\quad i^3=-i,\\quad i^4=1,\\qquad i^{n+4}=i^n"
+ },
+ {
+  "t": "h2",
+  "uz": "2. Arifmetik amallar (Arithmetic operations)",
+  "ru": "2. Арифметические действия",
+  "en": "2. Arithmetic operations"
+ },
+ {
+  "t": "p",
+  "uz": "Qo'shish va ayirish qismlar bo'yicha bajariladi; ko'paytirishda qavslar ochiladi va $i^2=-1$ qo'yiladi:",
+  "ru": "Сложение и вычитание выполняются по частям; при умножении раскрываются скобки и подставляется $i^2=-1$:",
+  "en": "Addition and subtraction are done part by part; in multiplication the brackets are expanded and $i^2=-1$ is substituted:"
+ },
+ {
+  "t": "m",
+  "m": "(a+ib)\\pm(c+id)=(a\\pm c)+i\\,(b\\pm d)"
+ },
+ {
+  "t": "m",
+  "m": "(a+ib)(c+id)=(ac-bd)+i\\,(ad+bc)"
+ },
+ {
+  "t": "p",
+  "uz": "$z=x+iy$ ning **qo'shma soni (complex conjugate)** — $z^*=x-iy$ (matematikada $\\bar z$ ham yoziladi). Uning asosiy xossalari:",
+  "ru": "**Комплексно сопряжённое число (complex conjugate)** к $z=x+iy$ — это $z^*=x-iy$ (в математике пишут также $\\bar z$). Его основные свойства:",
+  "en": "The **complex conjugate** of $z=x+iy$ is $z^*=x-iy$ (mathematicians also write $\\bar z$). Its main properties:"
+ },
+ {
+  "t": "m",
+  "m": "z\\,z^*=x^2+y^2=|z|^2,\\qquad z+z^*=2\\,\\mathrm{Re}\\,z,\\qquad z-z^*=2i\\,\\mathrm{Im}\\,z"
+ },
+ {
+  "t": "li",
+  "uz": "$z\\,z^*$ har doim haqiqiy va manfiy emas — shuning uchun $|\\psi|^2=\\psi^*\\psi$ ehtimollik bo'la oladi.",
+  "ru": "$z\\,z^*$ всегда действительно и неотрицательно — поэтому $|\\psi|^2=\\psi^*\\psi$ может быть вероятностью.",
+  "en": "$z\\,z^*$ is always real and non-negative — that is why $|\\psi|^2=\\psi^*\\psi$ can be a probability."
+ },
+ {
+  "t": "li",
+  "uz": "Qo'shma olish amallar bilan almashinadi: $(z_1z_2)^*=z_1^*z_2^*$, $\\ (z_1+z_2)^*=z_1^*+z_2^*$; ifodada har bir $i$ ni $-i$ ga almashtirish yetarli.",
+  "ru": "Сопряжение перестановочно с действиями: $(z_1z_2)^*=z_1^*z_2^*$, $\\ (z_1+z_2)^*=z_1^*+z_2^*$; достаточно заменить в выражении каждое $i$ на $-i$.",
+  "en": "Conjugation commutes with the operations: $(z_1z_2)^*=z_1^*z_2^*$, $\\ (z_1+z_2)^*=z_1^*+z_2^*$; it is enough to replace every $i$ in the expression by $-i$."
+ },
+ {
+  "t": "p",
+  "uz": "**Bo'lish (division):** surat va maxrajni maxrajning qo'shmasiga ko'paytiramiz — maxraj haqiqiy songa aylanadi:",
+  "ru": "**Деление:** умножаем числитель и знаменатель на число, сопряжённое знаменателю, — знаменатель становится действительным:",
+  "en": "**Division:** multiply the numerator and the denominator by the conjugate of the denominator — the denominator becomes real:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{a+ib}{c+id}=\\frac{(a+ib)(c-id)}{(c+id)(c-id)}=\\frac{(ac+bd)+i\\,(bc-ad)}{c^2+d^2}"
+ },
+ {
+  "t": "h2",
+  "uz": "3. Kompleks tekislik: modul va argument (Complex plane: modulus and argument)",
+  "ru": "3. Комплексная плоскость: модуль и аргумент",
+  "en": "3. The complex plane: modulus and argument"
+ },
+ {
+  "t": "p",
+  "uz": "$z=x+iy$ son **kompleks tekislik (complex plane)**dagi $(x,\\ y)$ nuqta yoki koordinata boshidan shu nuqtaga o'tkazilgan vektor bilan tasvirlanadi: gorizontal o'q — haqiqiy, vertikal o'q — mavhum ([[F01]]). Kompleks sonlarni qo'shish vektorlarni qo'shishning o'zi.",
+  "ru": "Число $z=x+iy$ изображается точкой $(x,\\ y)$ на **комплексной плоскости** или вектором, проведённым из начала координат в эту точку: горизонтальная ось — действительная, вертикальная — мнимая ([[F01]]). Сложение комплексных чисел — это сложение векторов.",
+  "en": "The number $z=x+iy$ is represented by the point $(x,\\ y)$ in the **complex plane**, or by the vector drawn from the origin to that point: the horizontal axis is real, the vertical axis is imaginary ([[F01]]). Adding complex numbers is just adding vectors."
+ },
+ {
+  "t": "p",
+  "uz": "Vektor uzunligi — **modul (modulus)**, uning haqiqiy o'qdan soat mili teskari yo'nalishida o'lchangan burchagi — **argument (argument)**:",
+  "ru": "Длина вектора — **модуль**, его угол, отсчитанный от действительной оси против часовой стрелки, — **аргумент**:",
+  "en": "The length of the vector is the **modulus**; its angle measured counterclockwise from the real axis is the **argument**:"
+ },
+ {
+  "t": "m",
+  "m": "r=|z|=\\sqrt{x^2+y^2},\\qquad \\cos\\varphi=\\frac{x}{r},\\quad \\sin\\varphi=\\frac{y}{r},\\qquad \\varphi=\\arg z"
+ },
+ {
+  "t": "li",
+  "uz": "Argument $2\\pi k$ aniqligida aniqlanadi; odatda **bosh qiymat (principal value)** $-\\pi<\\varphi\\leq\\pi$ olinadi.",
+  "ru": "Аргумент определён с точностью до $2\\pi k$; обычно берут **главное значение** $-\\pi<\\varphi\\leq\\pi$.",
+  "en": "The argument is defined up to $2\\pi k$; usually the **principal value** $-\\pi<\\varphi\\leq\\pi$ is taken."
+ },
+ {
+  "t": "li",
+  "uz": "**Diqqat:** $\\tan\\varphi=y/x$ burchakni faqat $\\pi$ aniqligida beradi — chorakni $x$ va $y$ ishoralaridan tekshiring. Masalan, $z=-1-i$ uchun $\\arctan(y/x)=\\pi/4$, lekin $\\arg z=-3\\pi/4$.",
+  "ru": "**Внимание:** $\\tan\\varphi=y/x$ даёт угол лишь с точностью до $\\pi$ — проверяйте четверть по знакам $x$ и $y$. Например, для $z=-1-i$ $\\arctan(y/x)=\\pi/4$, но $\\arg z=-3\\pi/4$.",
+  "en": "**Caution:** $\\tan\\varphi=y/x$ gives the angle only up to $\\pi$ — check the quadrant from the signs of $x$ and $y$. For example, for $z=-1-i$, $\\arctan(y/x)=\\pi/4$, but $\\arg z=-3\\pi/4$."
+ },
+ {
+  "t": "li",
+  "uz": "Qo'shma son — haqiqiy o'qqa nisbatan ko'zgu aksi: $|z^*|=|z|$, $\\ \\arg z^*=-\\arg z$.",
+  "ru": "Сопряжённое число — зеркальное отражение относительно действительной оси: $|z^*|=|z|$, $\\ \\arg z^*=-\\arg z$.",
+  "en": "The conjugate is the mirror image in the real axis: $|z^*|=|z|$, $\\ \\arg z^*=-\\arg z$."
+ },
+ {
+  "t": "li",
+  "uz": "$|z_1-z_2|$ — kompleks tekislikdagi ikki nuqta orasidagi masofa.",
+  "ru": "$|z_1-z_2|$ — расстояние между двумя точками комплексной плоскости.",
+  "en": "$|z_1-z_2|$ is the distance between two points of the complex plane."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B0-L07-F01.png",
+   "ru": "figures/B0-L07-F01-ru.png",
+   "en": "figures/B0-L07-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "p",
+  "uz": "$x=r\\cos\\varphi$, $y=r\\sin\\varphi$ bo'lgani uchun kompleks sonning **trigonometrik shakli (trigonometric form)**:",
+  "ru": "Так как $x=r\\cos\\varphi$, $y=r\\sin\\varphi$, получаем **тригонометрическую форму** комплексного числа:",
+  "en": "Since $x=r\\cos\\varphi$ and $y=r\\sin\\varphi$, we get the **trigonometric form** of a complex number:"
+ },
+ {
+  "t": "m",
+  "m": "z=r\\,(\\cos\\varphi+i\\sin\\varphi)"
+ },
+ {
+  "t": "h2",
+  "uz": "4. Eyler formulasi (Euler's formula)",
+  "ru": "4. Формула Эйлера",
+  "en": "4. Euler's formula"
+ },
+ {
+  "t": "p",
+  "uz": "Darsning asosiy formulasi — **Eyler formulasi (Euler's formula)**:",
+  "ru": "Главная формула урока — **формула Эйлера**:",
+  "en": "The key formula of the lesson is **Euler's formula**:"
+ },
+ {
+  "t": "m",
+  "m": "e^{i\\varphi}=\\cos\\varphi+i\\sin\\varphi"
+ },
+ {
+  "t": "p",
+  "uz": "**Nega to'g'ri?** $f(\\varphi)=e^{-i\\varphi}(\\cos\\varphi+i\\sin\\varphi)$ funksiyaning hosilasi nolga teng (hisoblab ko'ring), $f(0)=1$, demak $f\\equiv1$. Boshqa usul (B0-L08 darsida batafsil): $e^x$ ning Teylor qatoriga $x=i\\varphi$ qo'yilsa, juft hadlar $\\cos\\varphi$ qatorini, toq hadlar $i\\sin\\varphi$ qatorini beradi:",
+  "ru": "**Почему это верно?** Производная функции $f(\\varphi)=e^{-i\\varphi}(\\cos\\varphi+i\\sin\\varphi)$ равна нулю (проверьте), $f(0)=1$, значит $f\\equiv1$. Другой способ (подробно в уроке B0-L08): если подставить $x=i\\varphi$ в ряд Тейлора для $e^x$, чётные члены дают ряд $\\cos\\varphi$, а нечётные — ряд $i\\sin\\varphi$:",
+  "en": "**Why is it true?** The derivative of $f(\\varphi)=e^{-i\\varphi}(\\cos\\varphi+i\\sin\\varphi)$ is zero (check it), and $f(0)=1$, so $f\\equiv1$. Another way (in detail in lesson B0-L08): substituting $x=i\\varphi$ into the Taylor series of $e^x$, the even terms give the series of $\\cos\\varphi$ and the odd terms give the series of $i\\sin\\varphi$:"
+ },
+ {
+  "t": "m",
+  "m": "e^{i\\varphi}=1+i\\varphi-\\frac{\\varphi^2}{2!}-i\\,\\frac{\\varphi^3}{3!}+\\frac{\\varphi^4}{4!}+\\ldots=\\left(1-\\frac{\\varphi^2}{2!}+\\frac{\\varphi^4}{4!}-\\ldots\\right)+i\\left(\\varphi-\\frac{\\varphi^3}{3!}+\\ldots\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "$|e^{i\\varphi}|=\\sqrt{\\cos^2\\varphi+\\sin^2\\varphi}=1$: $\\varphi$ ortganda $e^{i\\varphi}$ nuqta **birlik aylana (unit circle)** bo'ylab soat mili teskari yo'nalishida harakatlanadi ([[F02]]).",
+  "ru": "$|e^{i\\varphi}|=\\sqrt{\\cos^2\\varphi+\\sin^2\\varphi}=1$: при росте $\\varphi$ точка $e^{i\\varphi}$ движется по **единичной окружности** против часовой стрелки ([[F02]]).",
+  "en": "$|e^{i\\varphi}|=\\sqrt{\\cos^2\\varphi+\\sin^2\\varphi}=1$: as $\\varphi$ increases, the point $e^{i\\varphi}$ moves counterclockwise along the **unit circle** ([[F02]])."
+ },
+ {
+  "t": "li",
+  "uz": "Muhim qiymatlar: $e^{i0}=1$, $\\ e^{i\\pi/2}=i$, $\\ e^{i\\pi}=-1$, $\\ e^{i3\\pi/2}=-i$, $\\ e^{2\\pi i}=1$ — davr $2\\pi$.",
+  "ru": "Важные значения: $e^{i0}=1$, $\\ e^{i\\pi/2}=i$, $\\ e^{i\\pi}=-1$, $\\ e^{i3\\pi/2}=-i$, $\\ e^{2\\pi i}=1$ — период $2\\pi$.",
+  "en": "Important values: $e^{i0}=1$, $\\ e^{i\\pi/2}=i$, $\\ e^{i\\pi}=-1$, $\\ e^{i3\\pi/2}=-i$, $\\ e^{2\\pi i}=1$ — the period is $2\\pi$."
+ },
+ {
+  "t": "li",
+  "uz": "$\\varphi=\\pi$ da **Eyler ayniyati (Euler's identity)** hosil bo'ladi — u $e,\\ i,\\ \\pi,\\ 1,\\ 0$ sonlarini bog'laydi: $e^{i\\pi}+1=0$.",
+  "ru": "При $\\varphi=\\pi$ получается **тождество Эйлера**, связывающее числа $e,\\ i,\\ \\pi,\\ 1,\\ 0$: $e^{i\\pi}+1=0$.",
+  "en": "At $\\varphi=\\pi$ we get **Euler's identity**, which links the numbers $e,\\ i,\\ \\pi,\\ 1,\\ 0$: $e^{i\\pi}+1=0$."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B0-L07-F02.png",
+   "ru": "figures/B0-L07-F02-ru.png",
+   "en": "figures/B0-L07-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "p",
+  "uz": "Natijada eng qulay — **ko'rsatkichli shakl (exponential form)** hosil bo'ladi:",
+  "ru": "В результате получается самая удобная — **показательная форма**:",
+  "en": "The result is the most convenient form — the **exponential form**:"
+ },
+ {
+  "t": "m",
+  "m": "z=x+iy=r\\,e^{i\\varphi},\\qquad z^*=r\\,e^{-i\\varphi}"
+ },
+ {
+  "t": "p",
+  "uz": "$e^{i\\varphi}$ va $e^{-i\\varphi}$ ni qo'shib va ayirib, kosinus va sinusni eksponentalar orqali ifodalaymiz:",
+  "ru": "Складывая и вычитая $e^{i\\varphi}$ и $e^{-i\\varphi}$, выражаем косинус и синус через экспоненты:",
+  "en": "Adding and subtracting $e^{i\\varphi}$ and $e^{-i\\varphi}$, we express cosine and sine through exponentials:"
+ },
+ {
+  "t": "m",
+  "m": "\\cos\\varphi=\\frac{e^{i\\varphi}+e^{-i\\varphi}}{2},\\qquad \\sin\\varphi=\\frac{e^{i\\varphi}-e^{-i\\varphi}}{2i}"
+ },
+ {
+  "t": "li",
+  "uz": "Giperbolik funksiyalar bilan solishtiring: $\\cosh x=\\dfrac{e^x+e^{-x}}{2}$, shuning uchun $\\cos\\varphi=\\cosh(i\\varphi)$.",
+  "ru": "Сравните с гиперболическими функциями: $\\cosh x=\\dfrac{e^x+e^{-x}}{2}$, поэтому $\\cos\\varphi=\\cosh(i\\varphi)$.",
+  "en": "Compare with the hyperbolic functions: $\\cosh x=\\dfrac{e^x+e^{-x}}{2}$, so $\\cos\\varphi=\\cosh(i\\varphi)$."
+ },
+ {
+  "t": "li",
+  "uz": "Trigonometrik ayniyatlar daraja xossasidan kelib chiqadi: $e^{i(\\alpha+\\beta)}=e^{i\\alpha}e^{i\\beta}$ ning haqiqiy va mavhum qismlari $\\cos(\\alpha+\\beta)$ va $\\sin(\\alpha+\\beta)$ formulalarini beradi.",
+  "ru": "Тригонометрические тождества следуют из свойства степени: действительная и мнимая части $e^{i(\\alpha+\\beta)}=e^{i\\alpha}e^{i\\beta}$ дают формулы $\\cos(\\alpha+\\beta)$ и $\\sin(\\alpha+\\beta)$.",
+  "en": "Trigonometric identities follow from the exponent rule: the real and imaginary parts of $e^{i(\\alpha+\\beta)}=e^{i\\alpha}e^{i\\beta}$ give the formulas for $\\cos(\\alpha+\\beta)$ and $\\sin(\\alpha+\\beta)$."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Ko'paytirish, bo'lish va darajaga ko'tarish (Multiplication, division and powers)",
+  "ru": "5. Умножение, деление и возведение в степень",
+  "en": "5. Multiplication, division and powers"
+ },
+ {
+  "t": "p",
+  "uz": "Ko'rsatkichli shaklda ko'paytirish juda sodda: modullar ko'paytiriladi, argumentlar qo'shiladi ([[F03]]):",
+  "ru": "В показательной форме умножение очень простое: модули перемножаются, аргументы складываются ([[F03]]):",
+  "en": "In exponential form multiplication is very simple: the moduli multiply and the arguments add ([[F03]]):"
+ },
+ {
+  "t": "m",
+  "m": "z_1z_2=r_1r_2\\,e^{i(\\varphi_1+\\varphi_2)},\\qquad \\frac{z_1}{z_2}=\\frac{r_1}{r_2}\\,e^{i(\\varphi_1-\\varphi_2)}"
+ },
+ {
+  "t": "li",
+  "uz": "$e^{i\\alpha}$ ga ko'paytirish — vektorni $\\alpha$ burchakka soat mili teskari yo'nalishida **burish (rotation)**; $i=e^{i\\pi/2}$ ga ko'paytirish — $90^\\circ$ ga burish.",
+  "ru": "Умножение на $e^{i\\alpha}$ — **поворот** вектора на угол $\\alpha$ против часовой стрелки; умножение на $i=e^{i\\pi/2}$ — поворот на $90^\\circ$.",
+  "en": "Multiplying by $e^{i\\alpha}$ is a **rotation** of the vector by the angle $\\alpha$ counterclockwise; multiplying by $i=e^{i\\pi/2}$ is a rotation by $90^\\circ$."
+ },
+ {
+  "t": "li",
+  "uz": "Musbat haqiqiy songa ko'paytirish — vektorni cho'zish yoki qisqartirish; $-1=e^{i\\pi}$ ga ko'paytirish — $180^\\circ$ ga burish.",
+  "ru": "Умножение на положительное действительное число — растяжение или сжатие вектора; умножение на $-1=e^{i\\pi}$ — поворот на $180^\\circ$.",
+  "en": "Multiplying by a positive real number stretches or shrinks the vector; multiplying by $-1=e^{i\\pi}$ is a rotation by $180^\\circ$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B0-L07-F03.png",
+   "ru": "figures/B0-L07-F03-ru.png",
+   "en": "figures/B0-L07-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "p",
+  "uz": "Bir xil sonni $n$ marta ko'paytirib, **Muavr formulasi (de Moivre's formula)**ni olamiz:",
+  "ru": "Умножая число само на себя $n$ раз, получаем **формулу Муавра**:",
+  "en": "Multiplying a number by itself $n$ times, we get **de Moivre's formula**:"
+ },
+ {
+  "t": "m",
+  "m": "z^n=r^n\\,e^{in\\varphi},\\qquad (\\cos\\varphi+i\\sin\\varphi)^n=\\cos n\\varphi+i\\sin n\\varphi"
+ },
+ {
+  "t": "li",
+  "uz": "Algebraik shaklda qo'shish qulay, ko'rsatkichli shaklda — ko'paytirish, bo'lish va darajaga ko'tarish.",
+  "ru": "В алгебраической форме удобно складывать, в показательной — умножать, делить и возводить в степень.",
+  "en": "Algebraic form is convenient for addition; exponential form is convenient for multiplication, division and powers."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Ildiz chiqarish (Roots)",
+  "ru": "6. Извлечение корней",
+  "en": "6. Roots"
+ },
+ {
+  "t": "p",
+  "uz": "$w=\\rho\\,e^{i\\theta}$ uchun $z^n=w$ tenglama aynan $n$ ta turli ildizga ega — argumentga $2\\pi k$ qo'shish $w$ ni o'zgartirmaydi, lekin $n$ ga bo'lingandan keyin yangi nuqtalar beradi:",
+  "ru": "Для $w=\\rho\\,e^{i\\theta}$ уравнение $z^n=w$ имеет ровно $n$ различных корней — прибавление $2\\pi k$ к аргументу не меняет $w$, но после деления на $n$ даёт новые точки:",
+  "en": "For $w=\\rho\\,e^{i\\theta}$ the equation $z^n=w$ has exactly $n$ distinct roots — adding $2\\pi k$ to the argument does not change $w$, but after dividing by $n$ it gives new points:"
+ },
+ {
+  "t": "m",
+  "m": "z_k=\\sqrt[n]{\\rho}\\;e^{i\\frac{\\theta+2\\pi k}{n}},\\qquad k=0,\\,1,\\,\\ldots,\\,n-1"
+ },
+ {
+  "t": "li",
+  "uz": "Ildizlar radiusi $\\sqrt[n]{\\rho}$ bo'lgan aylanada, **muntazam $n$-burchak (regular polygon)** uchlarida yotadi ([[F04]]).",
+  "ru": "Корни лежат на окружности радиуса $\\sqrt[n]{\\rho}$ в вершинах **правильного $n$-угольника** ([[F04]]).",
+  "en": "The roots lie on a circle of radius $\\sqrt[n]{\\rho}$ at the vertices of a **regular $n$-gon** ([[F04]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Birning ildizlari (roots of unity):** $z^n=1$ ning ildizlari $z_k=e^{2\\pi ik/n}$; $n\\geq2$ da ularning yig'indisi $0$ ga teng (muntazam ko'pburchak markazi).",
+  "ru": "**Корни из единицы:** корни уравнения $z^n=1$ — это $z_k=e^{2\\pi ik/n}$; при $n\\geq2$ их сумма равна $0$ (центр правильного многоугольника).",
+  "en": "**Roots of unity:** the roots of $z^n=1$ are $z_k=e^{2\\pi ik/n}$; for $n\\geq2$ their sum equals $0$ (the centre of the regular polygon)."
+ },
+ {
+  "t": "li",
+  "uz": "Haqiqiy koeffitsiyentli ko'phadning haqiqiy bo'lmagan ildizlari qo'shma juftlar bo'lib keladi. Masalan, diskriminant manfiy bo'lgan kvadrat tenglama:",
+  "ru": "Невещественные корни многочлена с действительными коэффициентами появляются сопряжёнными парами. Например, квадратное уравнение с отрицательным дискриминантом:",
+  "en": "The non-real roots of a polynomial with real coefficients come in conjugate pairs. For example, a quadratic equation with a negative discriminant:"
+ },
+ {
+  "t": "m",
+  "m": "ax^2+bx+c=0,\\quad D=b^2-4ac<0:\\qquad x_{1,2}=\\frac{-b\\pm i\\sqrt{-D}}{2a}"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B0-L07-F04.png",
+   "ru": "figures/B0-L07-F04-ru.png",
+   "en": "figures/B0-L07-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Fizikada kompleks sonlar (Complex numbers in physics)",
+  "ru": "7. Комплексные числа в физике",
+  "en": "7. Complex numbers in physics"
+ },
+ {
+  "t": "p",
+  "uz": "**Garmonik tebranish (harmonic oscillation)** — aylanayotgan vektorning haqiqiy o'qdagi proyeksiyasi. Bu vektor **fazor (phasor)** deyiladi ([[F05]]):",
+  "ru": "**Гармоническое колебание** — проекция вращающегося вектора на действительную ось. Этот вектор называется **фазором (векторной диаграммой)** ([[F05]]):",
+  "en": "A **harmonic oscillation** is the projection of a rotating vector onto the real axis. This vector is called a **phasor** ([[F05]]):"
+ },
+ {
+  "t": "m",
+  "m": "x(t)=A\\cos(\\omega t+\\varphi_0)=\\mathrm{Re}\\left[\\tilde A\\,e^{i\\omega t}\\right],\\qquad \\tilde A=A\\,e^{i\\varphi_0}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kompleks amplituda (complex amplitude)** $\\tilde A$ amplituda $A=|\\tilde A|$ ni ham, boshlang'ich faza $\\varphi_0=\\arg\\tilde A$ ni ham saqlaydi.",
+  "ru": "**Комплексная амплитуда** $\\tilde A$ содержит и амплитуду $A=|\\tilde A|$, и начальную фазу $\\varphi_0=\\arg\\tilde A$.",
+  "en": "The **complex amplitude** $\\tilde A$ contains both the amplitude $A=|\\tilde A|$ and the initial phase $\\varphi_0=\\arg\\tilde A$."
+ },
+ {
+  "t": "li",
+  "uz": "Vaqt bo'yicha hosila — $i\\omega$ ga ko'paytirish: $\\dfrac{d}{dt}e^{i\\omega t}=i\\omega\\,e^{i\\omega t}$. $i=e^{i\\pi/2}$ bo'lgani uchun tezlik siljishdan faza bo'yicha $\\pi/2$ ga oldinda.",
+  "ru": "Производная по времени — умножение на $i\\omega$: $\\dfrac{d}{dt}e^{i\\omega t}=i\\omega\\,e^{i\\omega t}$. Так как $i=e^{i\\pi/2}$, скорость опережает смещение по фазе на $\\pi/2$.",
+  "en": "A time derivative is multiplication by $i\\omega$: $\\dfrac{d}{dt}e^{i\\omega t}=i\\omega\\,e^{i\\omega t}$. Since $i=e^{i\\pi/2}$, the velocity leads the displacement in phase by $\\pi/2$."
+ },
+ {
+  "t": "li",
+  "uz": "Chiziqli tenglamalarda kompleks sonlar bilan hisoblab, oxirida haqiqiy qism olinadi. **Diqqat:** chiziqli bo'lmagan kattaliklarda (energiya, quvvat) avval haqiqiy qism olinadi, chunki $\\mathrm{Re}\\,z_1\\cdot\\mathrm{Re}\\,z_2\\neq\\mathrm{Re}\\,(z_1z_2)$.",
+  "ru": "В линейных уравнениях вычисляют с комплексными числами и в конце берут действительную часть. **Внимание:** для нелинейных величин (энергия, мощность) сначала берут действительную часть, так как $\\mathrm{Re}\\,z_1\\cdot\\mathrm{Re}\\,z_2\\neq\\mathrm{Re}\\,(z_1z_2)$.",
+  "en": "In linear equations one computes with complex numbers and takes the real part at the end. **Caution:** for non-linear quantities (energy, power) the real part is taken first, because $\\mathrm{Re}\\,z_1\\cdot\\mathrm{Re}\\,z_2\\neq\\mathrm{Re}\\,(z_1z_2)$."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B0-L07-F05.png",
+   "ru": "figures/B0-L07-F05-ru.png",
+   "en": "figures/B0-L07-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "p",
+  "uz": "Bir xil chastotali tebranishlarni qo'shish — fazorlarni vektor sifatida qo'shish ([[F06]]); natijaviy amplituda kosinuslar teoremasidan topiladi:",
+  "ru": "Сложение колебаний одной частоты — это сложение фазоров как векторов ([[F06]]); результирующая амплитуда находится по теореме косинусов:",
+  "en": "Adding oscillations of the same frequency means adding their phasors as vectors ([[F06]]); the resulting amplitude follows from the law of cosines:"
+ },
+ {
+  "t": "m",
+  "m": "A_1e^{i\\varphi_1}+A_2e^{i\\varphi_2}=A\\,e^{i\\varphi},\\qquad A^2=A_1^2+A_2^2+2A_1A_2\\cos(\\varphi_2-\\varphi_1)"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B0-L07-F06.png",
+   "ru": "figures/B0-L07-F06-ru.png",
+   "en": "figures/B0-L07-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "p",
+  "uz": "**O'zgaruvchan tok zanjirlari (AC circuits).** Tok $I=I_0e^{i\\omega t}$ bo'lsa, har bir element uchun kompleks Om qonuni $U=ZI$ bajariladi; $Z$ — **kompleks impedans (complex impedance)**:",
+  "ru": "**Цепи переменного тока.** Если ток $I=I_0e^{i\\omega t}$, то для каждого элемента выполняется комплексный закон Ома $U=ZI$; $Z$ — **комплексный импеданс**:",
+  "en": "**AC circuits.** If the current is $I=I_0e^{i\\omega t}$, the complex Ohm's law $U=ZI$ holds for each element; $Z$ is the **complex impedance**:"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Rezistor: kuchlanish va tok bir fazada",
+    "ru": "Резистор: напряжение и ток в одной фазе",
+    "en": "Resistor: voltage and current are in phase",
+    "m": "Z_R=R"
+   },
+   {
+    "uz": "G'altak: kuchlanish tokdan $\\pi/2$ ga oldinda",
+    "ru": "Катушка: напряжение опережает ток на $\\pi/2$",
+    "en": "Inductor: voltage leads current by $\\pi/2$",
+    "m": "Z_L=i\\omega L"
+   },
+   {
+    "uz": "Kondensator: kuchlanish tokdan $\\pi/2$ ga orqada",
+    "ru": "Конденсатор: напряжение отстаёт от тока на $\\pi/2$",
+    "en": "Capacitor: voltage lags current by $\\pi/2$",
+    "m": "Z_C=\\frac{1}{i\\omega C}=-\\frac{i}{\\omega C}"
+   },
+   {
+    "uz": "Ketma-ket RLC zanjir",
+    "ru": "Последовательная RLC-цепь",
+    "en": "Series RLC circuit",
+    "m": "Z=R+i\\left(\\omega L-\\frac{1}{\\omega C}\\right),\\quad |Z|=\\sqrt{R^2+\\left(\\omega L-\\frac{1}{\\omega C}\\right)^2},\\quad \\tan\\varphi=\\frac{\\omega L-\\frac{1}{\\omega C}}{R}"
+   }
+  ]
+ },
+ {
+  "t": "li",
+  "uz": "$\\varphi=\\arg Z$ — kuchlanishning tokdan faza bo'yicha oldinlashishi; amplitudalar $U_0=|Z|\\,I_0$ bilan bog'langan. $X=\\omega L-\\dfrac{1}{\\omega C}$ — **reaktiv qarshilik (reactance)**.",
+  "ru": "$\\varphi=\\arg Z$ — опережение тока напряжением по фазе; амплитуды связаны соотношением $U_0=|Z|\\,I_0$. $X=\\omega L-\\dfrac{1}{\\omega C}$ — **реактивное сопротивление**.",
+  "en": "$\\varphi=\\arg Z$ is the phase by which the voltage leads the current; the amplitudes are related by $U_0=|Z|\\,I_0$. $X=\\omega L-\\dfrac{1}{\\omega C}$ is the **reactance**."
+ },
+ {
+  "t": "li",
+  "uz": "**Rezonans (resonance):** $\\omega L=\\dfrac{1}{\\omega C}$ da $Z=R$ eng kichik, tok amplitudasi eng katta: $\\omega_0=\\dfrac{1}{\\sqrt{LC}}$ ([[F07]]).",
+  "ru": "**Резонанс:** при $\\omega L=\\dfrac{1}{\\omega C}$ импеданс $Z=R$ минимален, амплитуда тока максимальна: $\\omega_0=\\dfrac{1}{\\sqrt{LC}}$ ([[F07]]).",
+  "en": "**Resonance:** when $\\omega L=\\dfrac{1}{\\omega C}$, the impedance $Z=R$ is smallest and the current amplitude is largest: $\\omega_0=\\dfrac{1}{\\sqrt{LC}}$ ([[F07]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B0-L07-F07.png",
+   "ru": "figures/B0-L07-F07-ru.png",
+   "en": "figures/B0-L07-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "p",
+  "uz": "**To'lqinlar va kvant mexanikasi.** Yassi to'lqin (plane wave) kompleks eksponenta bilan yoziladi; o'lchanadigan kattalik — modul kvadrati:",
+  "ru": "**Волны и квантовая механика.** Плоская волна записывается комплексной экспонентой; измеряемая величина — квадрат модуля:",
+  "en": "**Waves and quantum mechanics.** A plane wave is written as a complex exponential; the measurable quantity is the squared modulus:"
+ },
+ {
+  "t": "m",
+  "m": "\\psi(x,t)=A\\,e^{i(kx-\\omega t)},\\qquad |\\psi|^2=\\psi^*\\psi=|A|^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Interferensiya (interference):** $|\\psi_1+\\psi_2|^2=|\\psi_1|^2+|\\psi_2|^2+2\\,\\mathrm{Re}\\,(\\psi_1^*\\psi_2)$; oxirgi had — interferensiya hadi. Teng amplitudalar uchun $|1+e^{i\\delta}|^2=4\\cos^2(\\delta/2)$.",
+  "ru": "**Интерференция:** $|\\psi_1+\\psi_2|^2=|\\psi_1|^2+|\\psi_2|^2+2\\,\\mathrm{Re}\\,(\\psi_1^*\\psi_2)$; последний член — интерференционный. Для равных амплитуд $|1+e^{i\\delta}|^2=4\\cos^2(\\delta/2)$.",
+  "en": "**Interference:** $|\\psi_1+\\psi_2|^2=|\\psi_1|^2+|\\psi_2|^2+2\\,\\mathrm{Re}\\,(\\psi_1^*\\psi_2)$; the last term is the interference term. For equal amplitudes $|1+e^{i\\delta}|^2=4\\cos^2(\\delta/2)$."
+ },
+ {
+  "t": "li",
+  "uz": "Umumiy faza ko'paytuvchisi $e^{i\\alpha}$ o'lchanadigan natijani o'zgartirmaydi: $|e^{i\\alpha}\\psi|^2=|\\psi|^2$; faqat fazalar **farqi** muhim.",
+  "ru": "Общий фазовый множитель $e^{i\\alpha}$ не меняет измеряемого результата: $|e^{i\\alpha}\\psi|^2=|\\psi|^2$; важна только **разность** фаз.",
+  "en": "An overall phase factor $e^{i\\alpha}$ does not change the measured result: $|e^{i\\alpha}\\psi|^2=|\\psi|^2$; only the phase **difference** matters."
+ },
+ {
+  "t": "li",
+  "uz": "B0-L06 bilan bog'liqlik: $r^2+2\\beta r+\\omega_0^2=0$ xarakteristik tenglamaning $\\beta<\\omega_0$ dagi ildizlari $r=-\\beta\\pm i\\omega_{\\mathrm{d}}$ kompleks; $e^{rt}=e^{-\\beta t}e^{\\pm i\\omega_{\\mathrm{d}}t}$ — so'nuvchi tebranish.",
+  "ru": "Связь с B0-L06: корни характеристического уравнения $r^2+2\\beta r+\\omega_0^2=0$ при $\\beta<\\omega_0$ комплексные, $r=-\\beta\\pm i\\omega_{\\mathrm{d}}$; $e^{rt}=e^{-\\beta t}e^{\\pm i\\omega_{\\mathrm{d}}t}$ — затухающее колебание.",
+  "en": "Link to B0-L06: for $\\beta<\\omega_0$ the roots of the characteristic equation $r^2+2\\beta r+\\omega_0^2=0$ are complex, $r=-\\beta\\pm i\\omega_{\\mathrm{d}}$; $e^{rt}=e^{-\\beta t}e^{\\pm i\\omega_{\\mathrm{d}}t}$ is a damped oscillation."
+ },
+ {
+  "t": "h2",
+  "uz": "8. GRE uchun tez tekshiruvlar (Quick checks for the GRE)",
+  "ru": "8. Быстрые проверки для GRE",
+  "en": "8. Quick checks for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "Har qanday haqiqiy $\\theta$ uchun $|e^{i\\theta}|=1$ — faza ko'paytuvchisi intensivlik va ehtimollikni o'zgartirmaydi.",
+  "ru": "Для любого действительного $\\theta$ $|e^{i\\theta}|=1$ — фазовый множитель не меняет интенсивность и вероятность.",
+  "en": "For any real $\\theta$, $|e^{i\\theta}|=1$ — a phase factor does not change intensity or probability."
+ },
+ {
+  "t": "li",
+  "uz": "$z\\,z^*$ har doim haqiqiy va $\\geq0$: javobda $|\\psi|^2$ manfiy yoki kompleks chiqsa — xato bor.",
+  "ru": "$z\\,z^*$ всегда действительно и $\\geq0$: если $|\\psi|^2$ получилось отрицательным или комплексным — есть ошибка.",
+  "en": "$z\\,z^*$ is always real and $\\geq0$: if $|\\psi|^2$ comes out negative or complex, there is a mistake."
+ },
+ {
+  "t": "li",
+  "uz": "Argumentning chorakini $x$ va $y$ ishoralari bo'yicha tekshiring.",
+  "ru": "Проверяйте четверть аргумента по знакам $x$ и $y$.",
+  "en": "Check the quadrant of the argument from the signs of $x$ and $y$."
+ },
+ {
+  "t": "li",
+  "uz": "Darajalar uchun ko'rsatkichli shaklni eslang: $1+i=\\sqrt{2}\\,e^{i\\pi/4}$, $\\ (1+i)^2=2i$, $\\ (1+i)^4=-4$.",
+  "ru": "Для степеней вспоминайте показательную форму: $1+i=\\sqrt{2}\\,e^{i\\pi/4}$, $\\ (1+i)^2=2i$, $\\ (1+i)^4=-4$.",
+  "en": "For powers, recall the exponential form: $1+i=\\sqrt{2}\\,e^{i\\pi/4}$, $\\ (1+i)^2=2i$, $\\ (1+i)^4=-4$."
+ },
+ {
+  "t": "li",
+  "uz": "Belgilashlar farqi: muhandislikda $i$ o'rniga $j$ yoziladi; fizikada ba'zan $e^{-i\\omega t}$ ishlatiladi, unda $Z_L=-i\\omega L$. Fizik natijalar ($|Z|$, amplitudalar, faza farqlari) o'zgarmaydi.",
+  "ru": "Различия в обозначениях: в технике вместо $i$ пишут $j$; в физике иногда используют $e^{-i\\omega t}$, тогда $Z_L=-i\\omega L$. Физические результаты ($|Z|$, амплитуды, разности фаз) не меняются.",
+  "en": "Notation differences: engineers write $j$ instead of $i$; physicists sometimes use $e^{-i\\omega t}$, and then $Z_L=-i\\omega L$. Physical results ($|Z|$, amplitudes, phase differences) do not change."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Kompleks son shakllari",
+    "ru": "Формы комплексного числа",
+    "en": "Forms of a complex number",
+    "m": "z=x+iy=r\\,(\\cos\\varphi+i\\sin\\varphi)=r\\,e^{i\\varphi}"
+   },
+   {
+    "uz": "Modul va qo'shma son",
+    "ru": "Модуль и сопряжённое число",
+    "en": "Modulus and conjugate",
+    "m": "|z|=\\sqrt{x^2+y^2},\\quad z\\,z^*=|z|^2"
+   },
+   {
+    "uz": "Eyler formulasi",
+    "ru": "Формула Эйлера",
+    "en": "Euler's formula",
+    "m": "e^{i\\varphi}=\\cos\\varphi+i\\sin\\varphi,\\quad e^{i\\pi}=-1"
+   },
+   {
+    "uz": "Kosinus va sinus",
+    "ru": "Косинус и синус",
+    "en": "Cosine and sine",
+    "m": "\\cos\\varphi=\\frac{e^{i\\varphi}+e^{-i\\varphi}}{2},\\quad \\sin\\varphi=\\frac{e^{i\\varphi}-e^{-i\\varphi}}{2i}"
+   },
+   {
+    "uz": "Ko'paytirish va Muavr formulasi",
+    "ru": "Умножение и формула Муавра",
+    "en": "Multiplication and de Moivre's formula",
+    "m": "z_1z_2=r_1r_2\\,e^{i(\\varphi_1+\\varphi_2)},\\quad z^n=r^ne^{in\\varphi}"
+   },
+   {
+    "uz": "n-darajali ildizlar",
+    "ru": "Корни n-й степени",
+    "en": "n-th roots",
+    "m": "z_k=\\sqrt[n]{\\rho}\\;e^{i\\frac{\\theta+2\\pi k}{n}}"
+   },
+   {
+    "uz": "Fazor",
+    "ru": "Фазор",
+    "en": "Phasor",
+    "m": "A\\cos(\\omega t+\\varphi_0)=\\mathrm{Re}\\left[A\\,e^{i(\\omega t+\\varphi_0)}\\right]"
+   },
+   {
+    "uz": "Impedans",
+    "ru": "Импеданс",
+    "en": "Impedance",
+    "m": "Z_R=R,\\quad Z_L=i\\omega L,\\quad Z_C=\\frac{1}{i\\omega C}"
+   }
+  ]
+ }
+]

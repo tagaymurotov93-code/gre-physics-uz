@@ -1,0 +1,494 @@
+[
+ {
+  "id": "B0-L07-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$z_1=3+2i$ va $z_2=1-4i$ berilgan. $z_1+z_2$, $\\ z_1-z_2$ va $z_1z_2$ ni toping.",
+   "ru": "Даны $z_1=3+2i$ и $z_2=1-4i$. Найдите $z_1+z_2$, $\\ z_1-z_2$ и $z_1z_2$.",
+   "en": "Given $z_1=3+2i$ and $z_2=1-4i$. Find $z_1+z_2$, $\\ z_1-z_2$ and $z_1z_2$."
+  },
+  "figure": "figures/B0-L07-S01.png",
+  "solution": {
+   "uz": [
+    "Qo'shish va ayirish — haqiqiy va mavhum qismlar alohida: $$z_1+z_2=(3+1)+i\\,(2-4)=4-2i,\\qquad z_1-z_2=(3-1)+i\\,(2+4)=2+6i$$",
+    "Ko'paytirish — qavslarni ochamiz: $$z_1z_2=(3+2i)(1-4i)=3-12i+2i-8i^2$$",
+    "$i^2=-1$ ni qo'yamiz: $$z_1z_2=3-10i+8=11-10i$$"
+   ],
+   "ru": [
+    "Сложение и вычитание — действительные и мнимые части отдельно: $$z_1+z_2=(3+1)+i\\,(2-4)=4-2i,\\qquad z_1-z_2=(3-1)+i\\,(2+4)=2+6i$$",
+    "Умножение — раскрываем скобки: $$z_1z_2=(3+2i)(1-4i)=3-12i+2i-8i^2$$",
+    "Подставляем $i^2=-1$: $$z_1z_2=3-10i+8=11-10i$$"
+   ],
+   "en": [
+    "Addition and subtraction — real and imaginary parts separately: $$z_1+z_2=(3+1)+i\\,(2-4)=4-2i,\\qquad z_1-z_2=(3-1)+i\\,(2+4)=2+6i$$",
+    "Multiplication — expand the brackets: $$z_1z_2=(3+2i)(1-4i)=3-12i+2i-8i^2$$",
+    "Substitute $i^2=-1$: $$z_1z_2=3-10i+8=11-10i$$"
+   ]
+  },
+  "basis": {
+   "uz": "Kompleks sonlarni qo'shish va ko'paytirish qoidalari, $i^2=-1$",
+   "ru": "Правила сложения и умножения комплексных чисел, $i^2=-1$",
+   "en": "Rules for adding and multiplying complex numbers, $i^2=-1$"
+  },
+  "answer": "z_1+z_2=4-2i,\\quad z_1-z_2=2+6i,\\quad z_1z_2=11-10i",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original"
+ },
+ {
+  "id": "B0-L07-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$z=\\dfrac{2+3i}{1-i}$ sonni $x+iy$ ko'rinishida yozing va uning modulini toping.",
+   "ru": "Запишите число $z=\\dfrac{2+3i}{1-i}$ в виде $x+iy$ и найдите его модуль.",
+   "en": "Write $z=\\dfrac{2+3i}{1-i}$ in the form $x+iy$ and find its modulus."
+  },
+  "figure": "figures/B0-L07-S02.png",
+  "solution": {
+   "uz": [
+    "Surat va maxrajni maxrajning qo'shmasi $1+i$ ga ko'paytiramiz: $$z=\\frac{(2+3i)(1+i)}{(1-i)(1+i)}=\\frac{2+2i+3i+3i^2}{1+1}$$",
+    "Soddalashtiramiz: $$z=\\frac{-1+5i}{2}=-\\frac{1}{2}+\\frac{5}{2}\\,i$$",
+    "Modul (bo'linmaning moduli modullar bo'linmasiga teng — tekshiruv): $$|z|=\\sqrt{\\frac{1}{4}+\\frac{25}{4}}=\\frac{\\sqrt{26}}{2},\\qquad \\frac{|2+3i|}{|1-i|}=\\frac{\\sqrt{13}}{\\sqrt{2}}=\\frac{\\sqrt{26}}{2}$$"
+   ],
+   "ru": [
+    "Умножаем числитель и знаменатель на сопряжённое знаменателю число $1+i$: $$z=\\frac{(2+3i)(1+i)}{(1-i)(1+i)}=\\frac{2+2i+3i+3i^2}{1+1}$$",
+    "Упрощаем: $$z=\\frac{-1+5i}{2}=-\\frac{1}{2}+\\frac{5}{2}\\,i$$",
+    "Модуль (модуль частного равен частному модулей — проверка): $$|z|=\\sqrt{\\frac{1}{4}+\\frac{25}{4}}=\\frac{\\sqrt{26}}{2},\\qquad \\frac{|2+3i|}{|1-i|}=\\frac{\\sqrt{13}}{\\sqrt{2}}=\\frac{\\sqrt{26}}{2}$$"
+   ],
+   "en": [
+    "Multiply the numerator and the denominator by the conjugate of the denominator, $1+i$: $$z=\\frac{(2+3i)(1+i)}{(1-i)(1+i)}=\\frac{2+2i+3i+3i^2}{1+1}$$",
+    "Simplify: $$z=\\frac{-1+5i}{2}=-\\frac{1}{2}+\\frac{5}{2}\\,i$$",
+    "Modulus (the modulus of a quotient equals the quotient of the moduli — a check): $$|z|=\\sqrt{\\frac{1}{4}+\\frac{25}{4}}=\\frac{\\sqrt{26}}{2},\\qquad \\frac{|2+3i|}{|1-i|}=\\frac{\\sqrt{13}}{\\sqrt{2}}=\\frac{\\sqrt{26}}{2}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Bo'lishda maxrajning qo'shmasiga ko'paytirish; $z\\,z^*=|z|^2$",
+   "ru": "При делении умножение на сопряжённое знаменателю; $z\\,z^*=|z|^2$",
+   "en": "In division, multiplying by the conjugate of the denominator; $z\\,z^*=|z|^2$"
+  },
+  "answer": "z=-\\frac{1}{2}+\\frac{5}{2}\\,i,\\quad |z|=\\frac{\\sqrt{26}}{2}\\approx2.55",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original"
+ },
+ {
+  "id": "B0-L07-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$z=1+i\\sqrt{3}$ sonni kompleks tekislikda tasvirlang, uning moduli va argumentini toping hamda ko'rsatkichli shaklda yozing.",
+   "ru": "Изобразите число $z=1+i\\sqrt{3}$ на комплексной плоскости, найдите его модуль и аргумент и запишите в показательной форме.",
+   "en": "Plot $z=1+i\\sqrt{3}$ in the complex plane, find its modulus and argument, and write it in exponential form."
+  },
+  "figure": "figures/B0-L07-S03.png",
+  "solution": {
+   "uz": [
+    "Haqiqiy qism $x=1$, mavhum qism $y=\\sqrt{3}$ — nuqta I chorakda. Modul: $$r=\\sqrt{1^2+(\\sqrt{3})^2}=2$$",
+    "Argument: $$\\cos\\varphi=\\frac{1}{2},\\quad \\sin\\varphi=\\frac{\\sqrt{3}}{2}\\quad\\Longrightarrow\\quad \\varphi=\\frac{\\pi}{3}$$",
+    "Ko'rsatkichli shakl: $$z=2\\,e^{i\\pi/3}=2\\left(\\cos\\frac{\\pi}{3}+i\\sin\\frac{\\pi}{3}\\right)$$"
+   ],
+   "ru": [
+    "Действительная часть $x=1$, мнимая часть $y=\\sqrt{3}$ — точка в I четверти. Модуль: $$r=\\sqrt{1^2+(\\sqrt{3})^2}=2$$",
+    "Аргумент: $$\\cos\\varphi=\\frac{1}{2},\\quad \\sin\\varphi=\\frac{\\sqrt{3}}{2}\\quad\\Longrightarrow\\quad \\varphi=\\frac{\\pi}{3}$$",
+    "Показательная форма: $$z=2\\,e^{i\\pi/3}=2\\left(\\cos\\frac{\\pi}{3}+i\\sin\\frac{\\pi}{3}\\right)$$"
+   ],
+   "en": [
+    "Real part $x=1$, imaginary part $y=\\sqrt{3}$ — the point is in quadrant I. Modulus: $$r=\\sqrt{1^2+(\\sqrt{3})^2}=2$$",
+    "Argument: $$\\cos\\varphi=\\frac{1}{2},\\quad \\sin\\varphi=\\frac{\\sqrt{3}}{2}\\quad\\Longrightarrow\\quad \\varphi=\\frac{\\pi}{3}$$",
+    "Exponential form: $$z=2\\,e^{i\\pi/3}=2\\left(\\cos\\frac{\\pi}{3}+i\\sin\\frac{\\pi}{3}\\right)$$"
+   ]
+  },
+  "basis": {
+   "uz": "Modul $r=\\sqrt{x^2+y^2}$, argument $\\cos\\varphi=x/r$, $\\sin\\varphi=y/r$; Eyler formulasi",
+   "ru": "Модуль $r=\\sqrt{x^2+y^2}$, аргумент $\\cos\\varphi=x/r$, $\\sin\\varphi=y/r$; формула Эйлера",
+   "en": "Modulus $r=\\sqrt{x^2+y^2}$, argument $\\cos\\varphi=x/r$, $\\sin\\varphi=y/r$; Euler's formula"
+  },
+  "answer": "r=2,\\quad \\varphi=\\frac{\\pi}{3},\\quad z=2\\,e^{i\\pi/3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original"
+ },
+ {
+  "id": "B0-L07-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$z=-1-i$ ning moduli va argumentining bosh qiymatini toping. Nima uchun $\\varphi=\\arctan(y/x)$ formulasi bu yerda noto'g'ri javob beradi?",
+   "ru": "Найдите модуль и главное значение аргумента числа $z=-1-i$. Почему формула $\\varphi=\\arctan(y/x)$ здесь даёт неверный ответ?",
+   "en": "Find the modulus and the principal value of the argument of $z=-1-i$. Why does the formula $\\varphi=\\arctan(y/x)$ give a wrong answer here?"
+  },
+  "figure": "figures/B0-L07-S04.png",
+  "solution": {
+   "uz": [
+    "Modul: $$r=\\sqrt{(-1)^2+(-1)^2}=\\sqrt{2}$$",
+    "$\\arctan(y/x)$ ni hisoblaymiz: $$\\arctan\\frac{-1}{-1}=\\arctan1=\\frac{\\pi}{4}$$",
+    "Lekin $x<0$, $y<0$ — nuqta III chorakda, $\\pi/4$ esa I chorak burchagi. $\\tan\\varphi$ ning davri $\\pi$ bo'lgani uchun to'g'ri burchak $\\pi$ ga farq qiladi: $$\\varphi=\\frac{\\pi}{4}-\\pi=-\\frac{3\\pi}{4}$$",
+    "Tekshiruv: $$\\sqrt{2}\\,e^{-i3\\pi/4}=\\sqrt{2}\\left(-\\frac{\\sqrt{2}}{2}-i\\,\\frac{\\sqrt{2}}{2}\\right)=-1-i$$"
+   ],
+   "ru": [
+    "Модуль: $$r=\\sqrt{(-1)^2+(-1)^2}=\\sqrt{2}$$",
+    "Вычисляем $\\arctan(y/x)$: $$\\arctan\\frac{-1}{-1}=\\arctan1=\\frac{\\pi}{4}$$",
+    "Но $x<0$, $y<0$ — точка в III четверти, а $\\pi/4$ — угол I четверти. Так как период $\\tan\\varphi$ равен $\\pi$, правильный угол отличается на $\\pi$: $$\\varphi=\\frac{\\pi}{4}-\\pi=-\\frac{3\\pi}{4}$$",
+    "Проверка: $$\\sqrt{2}\\,e^{-i3\\pi/4}=\\sqrt{2}\\left(-\\frac{\\sqrt{2}}{2}-i\\,\\frac{\\sqrt{2}}{2}\\right)=-1-i$$"
+   ],
+   "en": [
+    "Modulus: $$r=\\sqrt{(-1)^2+(-1)^2}=\\sqrt{2}$$",
+    "Compute $\\arctan(y/x)$: $$\\arctan\\frac{-1}{-1}=\\arctan1=\\frac{\\pi}{4}$$",
+    "But $x<0$, $y<0$ — the point is in quadrant III, while $\\pi/4$ is a quadrant I angle. Since $\\tan\\varphi$ has period $\\pi$, the correct angle differs by $\\pi$: $$\\varphi=\\frac{\\pi}{4}-\\pi=-\\frac{3\\pi}{4}$$",
+    "Check: $$\\sqrt{2}\\,e^{-i3\\pi/4}=\\sqrt{2}\\left(-\\frac{\\sqrt{2}}{2}-i\\,\\frac{\\sqrt{2}}{2}\\right)=-1-i$$"
+   ]
+  },
+  "basis": {
+   "uz": "Argument chorakka qarab tanlanadi; $\\tan\\varphi$ ning davri $\\pi$",
+   "ru": "Аргумент выбирается с учётом четверти; период $\\tan\\varphi$ равен $\\pi$",
+   "en": "The argument is chosen according to the quadrant; $\\tan\\varphi$ has period $\\pi$"
+  },
+  "answer": "r=\\sqrt{2},\\quad \\varphi=-\\frac{3\\pi}{4}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original"
+ },
+ {
+  "id": "B0-L07-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) $i^{2026}$ ni hisoblang. b) $i=e^{i\\pi/2}$ dan foydalanib, $i^i$ ning (bosh) qiymatini toping. U haqiqiymi?",
+   "ru": "а) Вычислите $i^{2026}$. б) Используя $i=e^{i\\pi/2}$, найдите (главное) значение $i^i$. Является ли оно действительным?",
+   "en": "a) Compute $i^{2026}$. b) Using $i=e^{i\\pi/2}$, find the (principal) value of $i^i$. Is it real?"
+  },
+  "figure": "figures/B0-L07-S05.png",
+  "solution": {
+   "uz": [
+    "a) $i$ ning darajalari 4 davr bilan takrorlanadi; $2026=4\\cdot506+2$: $$i^{2026}=\\left(i^4\\right)^{506}\\cdot i^2=1\\cdot(-1)=-1$$",
+    "b) $i$ ni ko'rsatkichli shaklda yozamiz va daraja xossasidan foydalanamiz: $$i^i=\\left(e^{i\\pi/2}\\right)^i=e^{i\\cdot i\\,\\pi/2}=e^{-\\pi/2}\\approx0.208$$",
+    "Natija — haqiqiy musbat son. (Argumentga $2\\pi k$ qo'shilsa, boshqa qiymatlar $e^{-\\pi/2-2\\pi k}$ chiqadi; bosh qiymat $k=0$ da.)"
+   ],
+   "ru": [
+    "а) Степени $i$ повторяются с периодом 4; $2026=4\\cdot506+2$: $$i^{2026}=\\left(i^4\\right)^{506}\\cdot i^2=1\\cdot(-1)=-1$$",
+    "б) Записываем $i$ в показательной форме и пользуемся свойством степени: $$i^i=\\left(e^{i\\pi/2}\\right)^i=e^{i\\cdot i\\,\\pi/2}=e^{-\\pi/2}\\approx0.208$$",
+    "Результат — действительное положительное число. (Если прибавить к аргументу $2\\pi k$, получатся другие значения $e^{-\\pi/2-2\\pi k}$; главное значение — при $k=0$.)"
+   ],
+   "en": [
+    "a) The powers of $i$ repeat with period 4; $2026=4\\cdot506+2$: $$i^{2026}=\\left(i^4\\right)^{506}\\cdot i^2=1\\cdot(-1)=-1$$",
+    "b) Write $i$ in exponential form and use the exponent rule: $$i^i=\\left(e^{i\\pi/2}\\right)^i=e^{i\\cdot i\\,\\pi/2}=e^{-\\pi/2}\\approx0.208$$",
+    "The result is a positive real number. (Adding $2\\pi k$ to the argument gives other values $e^{-\\pi/2-2\\pi k}$; the principal value is at $k=0$.)"
+   ]
+  },
+  "basis": {
+   "uz": "$i^4=1$ — davriylik; ko'rsatkichli shakl $i=e^{i\\pi/2}$",
+   "ru": "$i^4=1$ — периодичность; показательная форма $i=e^{i\\pi/2}$",
+   "en": "$i^4=1$ — periodicity; the exponential form $i=e^{i\\pi/2}$"
+  },
+  "answer": "i^{2026}=-1,\\quad i^i=e^{-\\pi/2}\\approx0.208",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original"
+ },
+ {
+  "id": "B0-L07-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$(1+i)^{10}$ ni hisoblang.",
+   "ru": "Вычислите $(1+i)^{10}$.",
+   "en": "Compute $(1+i)^{10}$."
+  },
+  "figure": "figures/B0-L07-S06.png",
+  "solution": {
+   "uz": [
+    "Ko'rsatkichli shaklga o'tamiz: $$1+i=\\sqrt{2}\\,e^{i\\pi/4}$$",
+    "Muavr formulasi bo'yicha: $$(1+i)^{10}=\\left(\\sqrt{2}\\right)^{10}e^{i\\,10\\pi/4}=32\\,e^{i5\\pi/2}$$",
+    "$5\\pi/2=2\\pi+\\pi/2$, $e^{2\\pi i}=1$: $$(1+i)^{10}=32\\,e^{i\\pi/2}=32i$$",
+    "Tekshiruv: $(1+i)^2=2i$, shuning uchun: $$(1+i)^{10}=(2i)^5=32\\,i^5=32i$$"
+   ],
+   "ru": [
+    "Переходим к показательной форме: $$1+i=\\sqrt{2}\\,e^{i\\pi/4}$$",
+    "По формуле Муавра: $$(1+i)^{10}=\\left(\\sqrt{2}\\right)^{10}e^{i\\,10\\pi/4}=32\\,e^{i5\\pi/2}$$",
+    "$5\\pi/2=2\\pi+\\pi/2$, $e^{2\\pi i}=1$: $$(1+i)^{10}=32\\,e^{i\\pi/2}=32i$$",
+    "Проверка: $(1+i)^2=2i$, поэтому: $$(1+i)^{10}=(2i)^5=32\\,i^5=32i$$"
+   ],
+   "en": [
+    "Convert to exponential form: $$1+i=\\sqrt{2}\\,e^{i\\pi/4}$$",
+    "By de Moivre's formula: $$(1+i)^{10}=\\left(\\sqrt{2}\\right)^{10}e^{i\\,10\\pi/4}=32\\,e^{i5\\pi/2}$$",
+    "$5\\pi/2=2\\pi+\\pi/2$, $e^{2\\pi i}=1$: $$(1+i)^{10}=32\\,e^{i\\pi/2}=32i$$",
+    "Check: $(1+i)^2=2i$, therefore: $$(1+i)^{10}=(2i)^5=32\\,i^5=32i$$"
+   ]
+  },
+  "basis": {
+   "uz": "Muavr formulasi $z^n=r^ne^{in\\varphi}$",
+   "ru": "Формула Муавра $z^n=r^ne^{in\\varphi}$",
+   "en": "De Moivre's formula $z^n=r^ne^{in\\varphi}$"
+  },
+  "answer": "(1+i)^{10}=32i",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original"
+ },
+ {
+  "id": "B0-L07-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Muavr formulasidan foydalanib, $\\cos3\\varphi$ va $\\sin3\\varphi$ ni mos ravishda $\\cos\\varphi$ va $\\sin\\varphi$ orqali ifodalang.",
+   "ru": "С помощью формулы Муавра выразите $\\cos3\\varphi$ и $\\sin3\\varphi$ соответственно через $\\cos\\varphi$ и $\\sin\\varphi$.",
+   "en": "Using de Moivre's formula, express $\\cos3\\varphi$ and $\\sin3\\varphi$ in terms of $\\cos\\varphi$ and $\\sin\\varphi$, respectively."
+  },
+  "figure": "figures/B0-L07-S07.png",
+  "solution": {
+   "uz": [
+    "Qisqalik uchun $c=\\cos\\varphi$, $s=\\sin\\varphi$. Muavr formulasi: $$\\cos3\\varphi+i\\sin3\\varphi=(c+is)^3$$",
+    "Kubni ochamiz ($i^2=-1$, $i^3=-i$): $$(c+is)^3=c^3+3ic^2s-3cs^2-is^3=\\left(c^3-3cs^2\\right)+i\\left(3c^2s-s^3\\right)$$",
+    "Haqiqiy qismlarni tenglaymiz va $s^2=1-c^2$ qo'yamiz: $$\\cos3\\varphi=c^3-3c\\left(1-c^2\\right)=4\\cos^3\\varphi-3\\cos\\varphi$$",
+    "Mavhum qismlarni tenglaymiz va $c^2=1-s^2$ qo'yamiz: $$\\sin3\\varphi=3\\left(1-s^2\\right)s-s^3=3\\sin\\varphi-4\\sin^3\\varphi$$"
+   ],
+   "ru": [
+    "Для краткости $c=\\cos\\varphi$, $s=\\sin\\varphi$. Формула Муавра: $$\\cos3\\varphi+i\\sin3\\varphi=(c+is)^3$$",
+    "Раскрываем куб ($i^2=-1$, $i^3=-i$): $$(c+is)^3=c^3+3ic^2s-3cs^2-is^3=\\left(c^3-3cs^2\\right)+i\\left(3c^2s-s^3\\right)$$",
+    "Приравниваем действительные части и подставляем $s^2=1-c^2$: $$\\cos3\\varphi=c^3-3c\\left(1-c^2\\right)=4\\cos^3\\varphi-3\\cos\\varphi$$",
+    "Приравниваем мнимые части и подставляем $c^2=1-s^2$: $$\\sin3\\varphi=3\\left(1-s^2\\right)s-s^3=3\\sin\\varphi-4\\sin^3\\varphi$$"
+   ],
+   "en": [
+    "For brevity let $c=\\cos\\varphi$, $s=\\sin\\varphi$. De Moivre's formula: $$\\cos3\\varphi+i\\sin3\\varphi=(c+is)^3$$",
+    "Expand the cube ($i^2=-1$, $i^3=-i$): $$(c+is)^3=c^3+3ic^2s-3cs^2-is^3=\\left(c^3-3cs^2\\right)+i\\left(3c^2s-s^3\\right)$$",
+    "Equate the real parts and substitute $s^2=1-c^2$: $$\\cos3\\varphi=c^3-3c\\left(1-c^2\\right)=4\\cos^3\\varphi-3\\cos\\varphi$$",
+    "Equate the imaginary parts and substitute $c^2=1-s^2$: $$\\sin3\\varphi=3\\left(1-s^2\\right)s-s^3=3\\sin\\varphi-4\\sin^3\\varphi$$"
+   ]
+  },
+  "basis": {
+   "uz": "Muavr formulasi; ikki kompleks son teng bo'lsa, haqiqiy va mavhum qismlari teng",
+   "ru": "Формула Муавра; если два комплексных числа равны, равны их действительные и мнимые части",
+   "en": "De Moivre's formula; if two complex numbers are equal, their real and imaginary parts are equal"
+  },
+  "answer": "\\cos3\\varphi=4\\cos^3\\varphi-3\\cos\\varphi,\\quad \\sin3\\varphi=3\\sin\\varphi-4\\sin^3\\varphi",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original"
+ },
+ {
+  "id": "B0-L07-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$z^3=8$ tenglamaning barcha kompleks ildizlarini toping va ularni kompleks tekislikda tasvirlang. Ildizlar yig'indisi nimaga teng?",
+   "ru": "Найдите все комплексные корни уравнения $z^3=8$ и изобразите их на комплексной плоскости. Чему равна сумма корней?",
+   "en": "Find all complex roots of $z^3=8$ and plot them in the complex plane. What is the sum of the roots?"
+  },
+  "figure": "figures/B0-L07-S08.png",
+  "solution": {
+   "uz": [
+    "$8$ ni argumentning umumiy ko'rinishi bilan yozamiz: $$8=8\\,e^{i\\,2\\pi k},\\qquad z_k=\\sqrt[3]{8}\\,e^{i\\,2\\pi k/3}=2\\,e^{i\\,2\\pi k/3},\\quad k=0,\\,1,\\,2$$",
+    "Ildizlarni algebraik shaklga o'tkazamiz: $$z_0=2,\\qquad z_1=2\\left(-\\frac{1}{2}+i\\,\\frac{\\sqrt{3}}{2}\\right)=-1+i\\sqrt{3},\\qquad z_2=-1-i\\sqrt{3}$$",
+    "Ildizlar radiusi 2 bo'lgan aylanada, muntazam uchburchak uchlarida yotadi; $z_1$ va $z_2$ — qo'shma juft. Yig'indi: $$z_0+z_1+z_2=2-1-1+i\\left(\\sqrt{3}-\\sqrt{3}\\right)=0$$"
+   ],
+   "ru": [
+    "Записываем $8$ с общим видом аргумента: $$8=8\\,e^{i\\,2\\pi k},\\qquad z_k=\\sqrt[3]{8}\\,e^{i\\,2\\pi k/3}=2\\,e^{i\\,2\\pi k/3},\\quad k=0,\\,1,\\,2$$",
+    "Переводим корни в алгебраическую форму: $$z_0=2,\\qquad z_1=2\\left(-\\frac{1}{2}+i\\,\\frac{\\sqrt{3}}{2}\\right)=-1+i\\sqrt{3},\\qquad z_2=-1-i\\sqrt{3}$$",
+    "Корни лежат на окружности радиуса 2 в вершинах правильного треугольника; $z_1$ и $z_2$ — сопряжённая пара. Сумма: $$z_0+z_1+z_2=2-1-1+i\\left(\\sqrt{3}-\\sqrt{3}\\right)=0$$"
+   ],
+   "en": [
+    "Write $8$ with the general form of the argument: $$8=8\\,e^{i\\,2\\pi k},\\qquad z_k=\\sqrt[3]{8}\\,e^{i\\,2\\pi k/3}=2\\,e^{i\\,2\\pi k/3},\\quad k=0,\\,1,\\,2$$",
+    "Convert the roots to algebraic form: $$z_0=2,\\qquad z_1=2\\left(-\\frac{1}{2}+i\\,\\frac{\\sqrt{3}}{2}\\right)=-1+i\\sqrt{3},\\qquad z_2=-1-i\\sqrt{3}$$",
+    "The roots lie on a circle of radius 2 at the vertices of an equilateral triangle; $z_1$ and $z_2$ are a conjugate pair. The sum: $$z_0+z_1+z_2=2-1-1+i\\left(\\sqrt{3}-\\sqrt{3}\\right)=0$$"
+   ]
+  },
+  "basis": {
+   "uz": "$n$-darajali ildiz formulasi $z_k=\\sqrt[n]{\\rho}\\,e^{i(\\theta+2\\pi k)/n}$",
+   "ru": "Формула корня $n$-й степени $z_k=\\sqrt[n]{\\rho}\\,e^{i(\\theta+2\\pi k)/n}$",
+   "en": "The $n$-th root formula $z_k=\\sqrt[n]{\\rho}\\,e^{i(\\theta+2\\pi k)/n}$"
+  },
+  "answer": "z=2,\\quad -1\\pm i\\sqrt{3};\\qquad z_0+z_1+z_2=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original"
+ },
+ {
+  "id": "B0-L07-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Eyler formulasidan foydalanib, $\\cos^2\\varphi=\\dfrac{1+\\cos2\\varphi}{2}$ ekanini isbotlang. Shundan $\\cos^2\\omega t$ ning bir davr bo'yicha o'rtacha qiymatini toping (bu natija o'zgaruvchan tokning o'rtacha quvvatida ishlatiladi).",
+   "ru": "С помощью формулы Эйлера докажите, что $\\cos^2\\varphi=\\dfrac{1+\\cos2\\varphi}{2}$. Найдите отсюда среднее значение $\\cos^2\\omega t$ за период (этот результат используется для средней мощности переменного тока).",
+   "en": "Using Euler's formula, prove that $\\cos^2\\varphi=\\dfrac{1+\\cos2\\varphi}{2}$. Hence find the average of $\\cos^2\\omega t$ over one period (this result is used for the average power of alternating current)."
+  },
+  "figure": "figures/B0-L07-S09.png",
+  "solution": {
+   "uz": [
+    "Kosinusni eksponentalar orqali yozib, kvadratga ko'taramiz: $$\\cos^2\\varphi=\\left(\\frac{e^{i\\varphi}+e^{-i\\varphi}}{2}\\right)^2=\\frac{e^{2i\\varphi}+2+e^{-2i\\varphi}}{4}$$",
+    "$e^{2i\\varphi}+e^{-2i\\varphi}=2\\cos2\\varphi$: $$\\cos^2\\varphi=\\frac{2+2\\cos2\\varphi}{4}=\\frac{1+\\cos2\\varphi}{2}$$",
+    "$\\cos2\\omega t$ ning davr bo'yicha o'rtachasi nol (musbat va manfiy yarim to'lqinlar teng), shuning uchun: $$\\left\\langle\\cos^2\\omega t\\right\\rangle=\\frac{1}{T}\\int_0^T\\cos^2\\omega t\\;dt=\\frac{1}{2}$$"
+   ],
+   "ru": [
+    "Записываем косинус через экспоненты и возводим в квадрат: $$\\cos^2\\varphi=\\left(\\frac{e^{i\\varphi}+e^{-i\\varphi}}{2}\\right)^2=\\frac{e^{2i\\varphi}+2+e^{-2i\\varphi}}{4}$$",
+    "$e^{2i\\varphi}+e^{-2i\\varphi}=2\\cos2\\varphi$: $$\\cos^2\\varphi=\\frac{2+2\\cos2\\varphi}{4}=\\frac{1+\\cos2\\varphi}{2}$$",
+    "Среднее $\\cos2\\omega t$ за период равно нулю (положительные и отрицательные полуволны равны), поэтому: $$\\left\\langle\\cos^2\\omega t\\right\\rangle=\\frac{1}{T}\\int_0^T\\cos^2\\omega t\\;dt=\\frac{1}{2}$$"
+   ],
+   "en": [
+    "Write the cosine through exponentials and square it: $$\\cos^2\\varphi=\\left(\\frac{e^{i\\varphi}+e^{-i\\varphi}}{2}\\right)^2=\\frac{e^{2i\\varphi}+2+e^{-2i\\varphi}}{4}$$",
+    "$e^{2i\\varphi}+e^{-2i\\varphi}=2\\cos2\\varphi$: $$\\cos^2\\varphi=\\frac{2+2\\cos2\\varphi}{4}=\\frac{1+\\cos2\\varphi}{2}$$",
+    "The average of $\\cos2\\omega t$ over a period is zero (the positive and negative half-waves are equal), so: $$\\left\\langle\\cos^2\\omega t\\right\\rangle=\\frac{1}{T}\\int_0^T\\cos^2\\omega t\\;dt=\\frac{1}{2}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$\\cos\\varphi=\\dfrac{e^{i\\varphi}+e^{-i\\varphi}}{2}$; davriy funksiyaning o'rtacha qiymati",
+   "ru": "$\\cos\\varphi=\\dfrac{e^{i\\varphi}+e^{-i\\varphi}}{2}$; среднее значение периодической функции",
+   "en": "$\\cos\\varphi=\\dfrac{e^{i\\varphi}+e^{-i\\varphi}}{2}$; the average of a periodic function"
+  },
+  "answer": "\\cos^2\\varphi=\\frac{1+\\cos2\\varphi}{2},\\quad \\left\\langle\\cos^2\\omega t\\right\\rangle=\\frac{1}{2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original"
+ },
+ {
+  "id": "B0-L07-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Bir xil chastotali ikki tebranish qo'shiladi: $x_1=3\\cos\\omega t$, $\\ x_2=4\\cos\\left(\\omega t+\\dfrac{\\pi}{2}\\right)$ (sm). Natijaviy tebranishning amplitudasi va boshlang'ich fazasini fazorlar yordamida toping.",
+   "ru": "Складываются два колебания одной частоты: $x_1=3\\cos\\omega t$, $\\ x_2=4\\cos\\left(\\omega t+\\dfrac{\\pi}{2}\\right)$ (см). С помощью фазоров найдите амплитуду и начальную фазу результирующего колебания.",
+   "en": "Two oscillations of the same frequency are added: $x_1=3\\cos\\omega t$, $\\ x_2=4\\cos\\left(\\omega t+\\dfrac{\\pi}{2}\\right)$ (cm). Using phasors, find the amplitude and initial phase of the resulting oscillation."
+  },
+  "figure": "figures/B0-L07-S10.png",
+  "solution": {
+   "uz": [
+    "Har bir tebranishning kompleks amplitudasi: $$\\tilde A_1=3,\\qquad \\tilde A_2=4\\,e^{i\\pi/2}=4i$$",
+    "Fazorlarni qo'shamiz: $$\\tilde A=\\tilde A_1+\\tilde A_2=3+4i$$",
+    "Natijaviy amplituda va faza: $$A=|3+4i|=\\sqrt{9+16}=5\\ \\mathrm{cm},\\qquad \\tan\\varphi=\\frac{4}{3},\\quad \\varphi\\approx0.93\\ \\mathrm{rad}\\approx53.1^\\circ$$",
+    "Natija: $$x=x_1+x_2=5\\cos\\left(\\omega t+0.93\\right)\\ \\mathrm{cm}$$"
+   ],
+   "ru": [
+    "Комплексная амплитуда каждого колебания: $$\\tilde A_1=3,\\qquad \\tilde A_2=4\\,e^{i\\pi/2}=4i$$",
+    "Складываем фазоры: $$\\tilde A=\\tilde A_1+\\tilde A_2=3+4i$$",
+    "Результирующая амплитуда и фаза: $$A=|3+4i|=\\sqrt{9+16}=5\\ \\mathrm{cm},\\qquad \\tan\\varphi=\\frac{4}{3},\\quad \\varphi\\approx0.93\\ \\mathrm{rad}\\approx53.1^\\circ$$",
+    "Результат: $$x=x_1+x_2=5\\cos\\left(\\omega t+0.93\\right)\\ \\mathrm{cm}$$"
+   ],
+   "en": [
+    "The complex amplitude of each oscillation: $$\\tilde A_1=3,\\qquad \\tilde A_2=4\\,e^{i\\pi/2}=4i$$",
+    "Add the phasors: $$\\tilde A=\\tilde A_1+\\tilde A_2=3+4i$$",
+    "Resulting amplitude and phase: $$A=|3+4i|=\\sqrt{9+16}=5\\ \\mathrm{cm},\\qquad \\tan\\varphi=\\frac{4}{3},\\quad \\varphi\\approx0.93\\ \\mathrm{rad}\\approx53.1^\\circ$$",
+    "Result: $$x=x_1+x_2=5\\cos\\left(\\omega t+0.93\\right)\\ \\mathrm{cm}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Bir xil chastotali tebranishlarni qo'shish — kompleks amplitudalarni qo'shish",
+   "ru": "Сложение колебаний одной частоты — сложение комплексных амплитуд",
+   "en": "Adding oscillations of the same frequency means adding complex amplitudes"
+  },
+  "answer": "A=5\\ \\mathrm{cm},\\quad \\varphi=\\arctan\\frac{4}{3}\\approx53.1^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original"
+ },
+ {
+  "id": "B0-L07-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ketma-ket RLC zanjirda $R=30\\ \\Omega$, $\\omega L=60\\ \\Omega$, $\\dfrac{1}{\\omega C}=20\\ \\Omega$. Kuchlanish amplitudasi $U_0=100\\ \\mathrm{V}$. Kompleks impedansni, uning modulini, tok amplitudasini va kuchlanish bilan tok orasidagi faza siljishini toping.",
+   "ru": "В последовательной RLC-цепи $R=30\\ \\Omega$, $\\omega L=60\\ \\Omega$, $\\dfrac{1}{\\omega C}=20\\ \\Omega$. Амплитуда напряжения $U_0=100\\ \\mathrm{V}$. Найдите комплексный импеданс, его модуль, амплитуду тока и сдвиг фаз между напряжением и током.",
+   "en": "In a series RLC circuit $R=30\\ \\Omega$, $\\omega L=60\\ \\Omega$, $\\dfrac{1}{\\omega C}=20\\ \\Omega$. The voltage amplitude is $U_0=100\\ \\mathrm{V}$. Find the complex impedance, its modulus, the current amplitude and the phase shift between voltage and current."
+  },
+  "figure": "figures/B0-L07-S11.png",
+  "solution": {
+   "uz": [
+    "Ketma-ket ulanishda impedanslar qo'shiladi: $$Z=R+i\\omega L+\\frac{1}{i\\omega C}=R+i\\left(\\omega L-\\frac{1}{\\omega C}\\right)=30+40i\\ \\ \\Omega$$",
+    "Modul va tok amplitudasi: $$|Z|=\\sqrt{30^2+40^2}=50\\ \\Omega,\\qquad I_0=\\frac{U_0}{|Z|}=\\frac{100}{50}=2\\ \\mathrm{A}$$",
+    "Faza siljishi; $\\varphi>0$ — kuchlanish tokdan oldinda (zanjir induktiv xarakterda): $$\\tan\\varphi=\\frac{40}{30}=\\frac{4}{3},\\qquad \\varphi\\approx53.1^\\circ$$"
+   ],
+   "ru": [
+    "При последовательном соединении импедансы складываются: $$Z=R+i\\omega L+\\frac{1}{i\\omega C}=R+i\\left(\\omega L-\\frac{1}{\\omega C}\\right)=30+40i\\ \\ \\Omega$$",
+    "Модуль и амплитуда тока: $$|Z|=\\sqrt{30^2+40^2}=50\\ \\Omega,\\qquad I_0=\\frac{U_0}{|Z|}=\\frac{100}{50}=2\\ \\mathrm{A}$$",
+    "Сдвиг фаз; $\\varphi>0$ — напряжение опережает ток (цепь имеет индуктивный характер): $$\\tan\\varphi=\\frac{40}{30}=\\frac{4}{3},\\qquad \\varphi\\approx53.1^\\circ$$"
+   ],
+   "en": [
+    "In series the impedances add: $$Z=R+i\\omega L+\\frac{1}{i\\omega C}=R+i\\left(\\omega L-\\frac{1}{\\omega C}\\right)=30+40i\\ \\ \\Omega$$",
+    "Modulus and current amplitude: $$|Z|=\\sqrt{30^2+40^2}=50\\ \\Omega,\\qquad I_0=\\frac{U_0}{|Z|}=\\frac{100}{50}=2\\ \\mathrm{A}$$",
+    "Phase shift; $\\varphi>0$ means the voltage leads the current (the circuit is inductive): $$\\tan\\varphi=\\frac{40}{30}=\\frac{4}{3},\\qquad \\varphi\\approx53.1^\\circ$$"
+   ]
+  },
+  "basis": {
+   "uz": "Kompleks impedans $Z_L=i\\omega L$, $Z_C=1/(i\\omega C)$; kompleks Om qonuni $U=ZI$",
+   "ru": "Комплексный импеданс $Z_L=i\\omega L$, $Z_C=1/(i\\omega C)$; комплексный закон Ома $U=ZI$",
+   "en": "Complex impedance $Z_L=i\\omega L$, $Z_C=1/(i\\omega C)$; complex Ohm's law $U=ZI$"
+  },
+  "answer": "Z=30+40i\\ \\Omega,\\quad |Z|=50\\ \\Omega,\\quad I_0=2\\ \\mathrm{A},\\quad \\varphi\\approx53.1^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original"
+ },
+ {
+  "id": "B0-L07-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$x''+2x'+5x=0$ tenglamani $x(0)=1$, $\\ x'(0)=0$ shartlar bilan yeching. Kompleks ildizlardan haqiqiy yechimga qanday o'tiladi?",
+   "ru": "Решите уравнение $x''+2x'+5x=0$ с условиями $x(0)=1$, $\\ x'(0)=0$. Как перейти от комплексных корней к действительному решению?",
+   "en": "Solve $x''+2x'+5x=0$ with $x(0)=1$, $\\ x'(0)=0$. How do we pass from the complex roots to a real solution?"
+  },
+  "figure": "figures/B0-L07-S12.png",
+  "solution": {
+   "uz": [
+    "Xarakteristik tenglama va uning ildizlari: $$r^2+2r+5=0,\\qquad r=-1\\pm\\sqrt{1-5}=-1\\pm2i$$",
+    "Kompleks yechim $e^{(-1+2i)t}$ ni Eyler formulasi bilan ochamiz: $$e^{(-1+2i)t}=e^{-t}\\left(\\cos2t+i\\sin2t\\right)$$",
+    "Tenglama chiziqli va koeffitsiyentlari haqiqiy, shuning uchun haqiqiy va mavhum qismlar alohida-alohida yechim: $$x=e^{-t}\\left(C_1\\cos2t+C_2\\sin2t\\right)$$",
+    "Boshlang'ich shartlar: $$x(0)=C_1=1,\\qquad x'(0)=-C_1+2C_2=0\\ \\Longrightarrow\\ C_2=\\frac{1}{2}$$",
+    "Javob — so'nuvchi tebranish, $\\omega_{\\mathrm{d}}=2$, $\\beta=1$: $$x(t)=e^{-t}\\left(\\cos2t+\\frac{1}{2}\\sin2t\\right)$$"
+   ],
+   "ru": [
+    "Характеристическое уравнение и его корни: $$r^2+2r+5=0,\\qquad r=-1\\pm\\sqrt{1-5}=-1\\pm2i$$",
+    "Раскрываем комплексное решение $e^{(-1+2i)t}$ по формуле Эйлера: $$e^{(-1+2i)t}=e^{-t}\\left(\\cos2t+i\\sin2t\\right)$$",
+    "Уравнение линейное с действительными коэффициентами, поэтому действительная и мнимая части по отдельности являются решениями: $$x=e^{-t}\\left(C_1\\cos2t+C_2\\sin2t\\right)$$",
+    "Начальные условия: $$x(0)=C_1=1,\\qquad x'(0)=-C_1+2C_2=0\\ \\Longrightarrow\\ C_2=\\frac{1}{2}$$",
+    "Ответ — затухающее колебание, $\\omega_{\\mathrm{d}}=2$, $\\beta=1$: $$x(t)=e^{-t}\\left(\\cos2t+\\frac{1}{2}\\sin2t\\right)$$"
+   ],
+   "en": [
+    "The characteristic equation and its roots: $$r^2+2r+5=0,\\qquad r=-1\\pm\\sqrt{1-5}=-1\\pm2i$$",
+    "Expand the complex solution $e^{(-1+2i)t}$ with Euler's formula: $$e^{(-1+2i)t}=e^{-t}\\left(\\cos2t+i\\sin2t\\right)$$",
+    "The equation is linear with real coefficients, so the real and imaginary parts are separately solutions: $$x=e^{-t}\\left(C_1\\cos2t+C_2\\sin2t\\right)$$",
+    "Initial conditions: $$x(0)=C_1=1,\\qquad x'(0)=-C_1+2C_2=0\\ \\Longrightarrow\\ C_2=\\frac{1}{2}$$",
+    "The answer is a damped oscillation, $\\omega_{\\mathrm{d}}=2$, $\\beta=1$: $$x(t)=e^{-t}\\left(\\cos2t+\\frac{1}{2}\\sin2t\\right)$$"
+   ]
+  },
+  "basis": {
+   "uz": "Xarakteristik tenglamaning kompleks ildizlari $r=-\\beta\\pm i\\omega_{\\mathrm{d}}$; Eyler formulasi; chiziqli tenglamada Re va Im ham yechim",
+   "ru": "Комплексные корни характеристического уравнения $r=-\\beta\\pm i\\omega_{\\mathrm{d}}$; формула Эйлера; в линейном уравнении Re и Im тоже решения",
+   "en": "Complex roots of the characteristic equation $r=-\\beta\\pm i\\omega_{\\mathrm{d}}$; Euler's formula; in a linear equation Re and Im are also solutions"
+  },
+  "answer": "x(t)=e^{-t}\\left(\\cos2t+\\frac{1}{2}\\sin2t\\right)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original"
+ },
+ {
+  "id": "B0-L07-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Difraksion panjaraning $N$ ta tirqishidan kelgan teng amplitudali to'lqinlar qo'shni tirqishlar orasida $\\delta$ faza farqiga ega: $E=E_0\\left(1+e^{i\\delta}+e^{2i\\delta}+\\ldots+e^{i(N-1)\\delta}\\right)$. Intensivlik $I\\propto|E|^2$ uchun formula chiqaring. $N=3$ da $\\delta=0$ va $\\delta=2\\pi/3$ dagi intensivlikni toping.",
+   "ru": "Волны равной амплитуды от $N$ щелей дифракционной решётки имеют разность фаз $\\delta$ между соседними щелями: $E=E_0\\left(1+e^{i\\delta}+e^{2i\\delta}+\\ldots+e^{i(N-1)\\delta}\\right)$. Выведите формулу для интенсивности $I\\propto|E|^2$. Найдите интенсивность при $N=3$ для $\\delta=0$ и $\\delta=2\\pi/3$.",
+   "en": "Equal-amplitude waves from the $N$ slits of a diffraction grating have a phase difference $\\delta$ between neighbouring slits: $E=E_0\\left(1+e^{i\\delta}+e^{2i\\delta}+\\ldots+e^{i(N-1)\\delta}\\right)$. Derive a formula for the intensity $I\\propto|E|^2$. For $N=3$, find the intensity at $\\delta=0$ and $\\delta=2\\pi/3$."
+  },
+  "figure": "figures/B0-L07-S13.png",
+  "solution": {
+   "uz": [
+    "Bu — maxraji $q=e^{i\\delta}$ bo'lgan geometrik progressiya: $$E=E_0\\,\\frac{e^{iN\\delta}-1}{e^{i\\delta}-1}$$",
+    "Surat va maxrajdan yarim burchak fazasini chiqaramiz: $e^{i\\alpha}-1=e^{i\\alpha/2}\\left(e^{i\\alpha/2}-e^{-i\\alpha/2}\\right)=2i\\,e^{i\\alpha/2}\\sin\\dfrac{\\alpha}{2}$: $$E=E_0\\,e^{i(N-1)\\delta/2}\\,\\frac{\\sin(N\\delta/2)}{\\sin(\\delta/2)}$$",
+    "Faza ko'paytuvchisining moduli 1, shuning uchun: $$I=I_0\\,\\frac{\\sin^2(N\\delta/2)}{\\sin^2(\\delta/2)},\\qquad I_0\\propto|E_0|^2$$",
+    "$N=3$, $\\delta\\to0$: barcha to'lqinlar bir fazada — bosh maksimum: $$I\\to I_0\\,\\frac{(3\\delta/2)^2}{(\\delta/2)^2}=9I_0$$",
+    "$N=3$, $\\delta=2\\pi/3$: uchta fazor muntazam uchburchak hosil qiladi va yig'indisi nol (birning kub ildizlari): $$1+e^{i2\\pi/3}+e^{i4\\pi/3}=0\\quad\\Longrightarrow\\quad I=0$$"
+   ],
+   "ru": [
+    "Это геометрическая прогрессия со знаменателем $q=e^{i\\delta}$: $$E=E_0\\,\\frac{e^{iN\\delta}-1}{e^{i\\delta}-1}$$",
+    "Выносим фазу половинного угла из числителя и знаменателя: $e^{i\\alpha}-1=e^{i\\alpha/2}\\left(e^{i\\alpha/2}-e^{-i\\alpha/2}\\right)=2i\\,e^{i\\alpha/2}\\sin\\dfrac{\\alpha}{2}$: $$E=E_0\\,e^{i(N-1)\\delta/2}\\,\\frac{\\sin(N\\delta/2)}{\\sin(\\delta/2)}$$",
+    "Модуль фазового множителя равен 1, поэтому: $$I=I_0\\,\\frac{\\sin^2(N\\delta/2)}{\\sin^2(\\delta/2)},\\qquad I_0\\propto|E_0|^2$$",
+    "$N=3$, $\\delta\\to0$: все волны в фазе — главный максимум: $$I\\to I_0\\,\\frac{(3\\delta/2)^2}{(\\delta/2)^2}=9I_0$$",
+    "$N=3$, $\\delta=2\\pi/3$: три фазора образуют правильный треугольник, и их сумма равна нулю (кубические корни из единицы): $$1+e^{i2\\pi/3}+e^{i4\\pi/3}=0\\quad\\Longrightarrow\\quad I=0$$"
+   ],
+   "en": [
+    "This is a geometric series with ratio $q=e^{i\\delta}$: $$E=E_0\\,\\frac{e^{iN\\delta}-1}{e^{i\\delta}-1}$$",
+    "Factor out the half-angle phase from the numerator and the denominator: $e^{i\\alpha}-1=e^{i\\alpha/2}\\left(e^{i\\alpha/2}-e^{-i\\alpha/2}\\right)=2i\\,e^{i\\alpha/2}\\sin\\dfrac{\\alpha}{2}$: $$E=E_0\\,e^{i(N-1)\\delta/2}\\,\\frac{\\sin(N\\delta/2)}{\\sin(\\delta/2)}$$",
+    "The modulus of the phase factor is 1, therefore: $$I=I_0\\,\\frac{\\sin^2(N\\delta/2)}{\\sin^2(\\delta/2)},\\qquad I_0\\propto|E_0|^2$$",
+    "$N=3$, $\\delta\\to0$: all waves are in phase — the principal maximum: $$I\\to I_0\\,\\frac{(3\\delta/2)^2}{(\\delta/2)^2}=9I_0$$",
+    "$N=3$, $\\delta=2\\pi/3$: the three phasors form an equilateral triangle and their sum is zero (the cube roots of unity): $$1+e^{i2\\pi/3}+e^{i4\\pi/3}=0\\quad\\Longrightarrow\\quad I=0$$"
+   ]
+  },
+  "basis": {
+   "uz": "Geometrik progressiya yig'indisi; $e^{i\\alpha}-1=2i\\,e^{i\\alpha/2}\\sin(\\alpha/2)$; $|e^{i\\theta}|=1$",
+   "ru": "Сумма геометрической прогрессии; $e^{i\\alpha}-1=2i\\,e^{i\\alpha/2}\\sin(\\alpha/2)$; $|e^{i\\theta}|=1$",
+   "en": "Sum of a geometric series; $e^{i\\alpha}-1=2i\\,e^{i\\alpha/2}\\sin(\\alpha/2)$; $|e^{i\\theta}|=1$"
+  },
+  "answer": "I=I_0\\,\\frac{\\sin^2(N\\delta/2)}{\\sin^2(\\delta/2)};\\quad N=3:\\ I(0)=9I_0,\\quad I(2\\pi/3)=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original"
+ }
+]
