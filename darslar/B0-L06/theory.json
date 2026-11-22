@@ -1,0 +1,552 @@
+[
+ {
+  "t": "h1",
+  "uz": "Differensial tenglamalar (1- va 2-tartibli) (Differential equations: first and second order)",
+  "ru": "Дифференциальные уравнения (1-го и 2-го порядка)",
+  "en": "Differential equations (first and second order)"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz differensial tenglamaning tartibini aniqlaysiz, umumiy yechimdan boshlang'ich shartlar yordamida xususiy yechimni topasiz, o'zgaruvchilari ajraladigan va chiziqli birinchi tartibli tenglamalarni yechasiz, o'zgarmas koeffitsiyentli ikkinchi tartibli tenglamani xarakteristik tenglama orqali yechasiz hamda garmonik, so'nuvchi va majburiy tebranishlarni tahlil qilasiz.",
+  "ru": "**Цель.** После урока вы будете определять порядок дифференциального уравнения, находить частное решение из общего с помощью начальных условий, решать уравнения с разделяющимися переменными и линейные уравнения первого порядка, решать уравнение второго порядка с постоянными коэффициентами через характеристическое уравнение, а также анализировать гармонические, затухающие и вынужденные колебания.",
+  "en": "**Goal.** By the end of the lesson you will determine the order of a differential equation, find a particular solution from the general one using initial conditions, solve separable and linear first-order equations, solve a second-order equation with constant coefficients through the characteristic equation, and analyze harmonic, damped and driven oscillations."
+ },
+ {
+  "t": "p",
+  "uz": "**GRE'da o'rni.** Nyutonning ikkinchi qonuni $m\\,x''=F$, RC va LC zanjirlar, radioaktiv yemirilish, so'nuvchi ossilyator va rezonans, Shredinger tenglamasi — bularning hammasi differensial tenglamalar. GRE'da ularni to'liq yechish kamdan-kam so'raladi: tayyor yechimni tanib olish va chegaraviy hollarni tekshirish muhimroq.",
+  "ru": "**Роль в GRE.** Второй закон Ньютона $m\\,x''=F$, RC- и LC-цепи, радиоактивный распад, затухающий осциллятор и резонанс, уравнение Шрёдингера — всё это дифференциальные уравнения. На GRE их редко требуется решать полностью: важнее узнать готовое решение и проверить предельные случаи.",
+  "en": "**Role on the GRE.** Newton's second law $m\\,x''=F$, RC and LC circuits, radioactive decay, the damped oscillator and resonance, the Schrödinger equation — all of these are differential equations. The GRE rarely asks you to solve them in full: recognizing the known solution and checking limiting cases matters more."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Differensial tenglama nima? (What is a differential equation?)",
+  "ru": "1. Что такое дифференциальное уравнение?",
+  "en": "1. What is a differential equation?"
+ },
+ {
+  "t": "p",
+  "uz": "**Differensial tenglama (differential equation)** — noma'lum funksiyani uning hosilalari bilan bog'laydigan tenglama. Tenglamadagi eng yuqori hosila tartibi — **tenglama tartibi (order)**. Bitta o'zgaruvchili funksiya uchun u **oddiy differensial tenglama (ordinary differential equation)** deyiladi. Misollar (birinchi va uchinchisi — birinchi tartibli, ikkinchisi — ikkinchi tartibli):",
+  "ru": "**Дифференциальное уравнение** — уравнение, связывающее неизвестную функцию с её производными. Наивысший порядок производной в уравнении — **порядок уравнения**. Для функции одной переменной оно называется **обыкновенным дифференциальным уравнением**. Примеры (первое и третье — первого порядка, второе — второго порядка):",
+  "en": "A **differential equation** is an equation that relates an unknown function to its derivatives. The highest order of derivative in the equation is the **order** of the equation. For a function of one variable it is called an **ordinary differential equation**. Examples (the first and third are first order, the second is second order):"
+ },
+ {
+  "t": "m",
+  "m": "y'=ky,\\qquad m\\,x''=-kx,\\qquad R\\,\\frac{dq}{dt}+\\frac{q}{C}=\\mathcal{E}"
+ },
+ {
+  "t": "p",
+  "uz": "**Umumiy yechim (general solution)** $n$-tartibli tenglama uchun $n$ ta ixtiyoriy o'zgarmasni o'z ichiga oladi — bu egri chiziqlar oilasi. O'zgarmaslar **boshlang'ich shartlardan (initial conditions)** topiladi va **xususiy yechim (particular solution)** hosil bo'ladi. Masalan, $y'=ky$ ning umumiy yechimi $y=Ce^{kx}$; $y(0)=y_0$ shartidan $C=y_0$ ([[F01]]).",
+  "ru": "**Общее решение** уравнения $n$-го порядка содержит $n$ произвольных постоянных — это семейство кривых. Постоянные находят из **начальных условий** и получают **частное решение**. Например, общее решение $y'=ky$ — это $y=Ce^{kx}$; из условия $y(0)=y_0$ получаем $C=y_0$ ([[F01]]).",
+  "en": "The **general solution** of an $n$th-order equation contains $n$ arbitrary constants — it is a family of curves. The constants are found from the **initial conditions**, which gives a **particular solution**. For example, the general solution of $y'=ky$ is $y=Ce^{kx}$; the condition $y(0)=y_0$ gives $C=y_0$ ([[F01]])."
+ },
+ {
+  "t": "li",
+  "uz": "Birinchi tartibli tenglama uchun bitta shart kerak: $y(0)$.",
+  "ru": "Для уравнения первого порядка нужно одно условие: $y(0)$.",
+  "en": "A first-order equation needs one condition: $y(0)$."
+ },
+ {
+  "t": "li",
+  "uz": "Ikkinchi tartibli tenglama uchun ikkita shart kerak: masalan, boshlang'ich vaziyat $x(0)$ va tezlik $x'(0)$.",
+  "ru": "Для уравнения второго порядка нужны два условия: например, начальное положение $x(0)$ и скорость $x'(0)$.",
+  "en": "A second-order equation needs two conditions: for example, the initial position $x(0)$ and velocity $x'(0)$."
+ },
+ {
+  "t": "li",
+  "uz": "Yechimni tekshirish oson: uni tenglamaga qo'yib, ayniyat hosil bo'lishini ko'ring.",
+  "ru": "Решение легко проверить: подставьте его в уравнение и убедитесь, что получается тождество.",
+  "en": "A solution is easy to check: substitute it into the equation and confirm that it gives an identity."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B0-L06-F01.png",
+   "ru": "figures/B0-L06-F01-ru.png",
+   "en": "figures/B0-L06-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. O'zgaruvchilari ajraladigan tenglamalar (Separable equations)",
+  "ru": "2. Уравнения с разделяющимися переменными",
+  "en": "2. Separable equations"
+ },
+ {
+  "t": "p",
+  "uz": "Agar $\\dfrac{dy}{dx}=g(x)\\,h(y)$ bo'lsa, o'zgaruvchilarni ikki tomonga ajratib, har birini integrallaymiz:",
+  "ru": "Если $\\dfrac{dy}{dx}=g(x)\\,h(y)$, разделяем переменные по разные стороны и интегрируем каждую:",
+  "en": "If $\\dfrac{dy}{dx}=g(x)\\,h(y)$, we separate the variables onto the two sides and integrate each:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{dy}{h(y)}=g(x)\\,dx\\quad\\Longrightarrow\\quad \\int\\frac{dy}{h(y)}=\\int g(x)\\,dx+C"
+ },
+ {
+  "t": "p",
+  "uz": "**Radioaktiv yemirilish (radioactive decay).** Vaqt birligida yemiriladigan yadrolar soni mavjud yadrolar soniga proporsional; $\\lambda$ — **yemirilish doimiysi (decay constant)**:",
+  "ru": "**Радиоактивный распад.** Число ядер, распадающихся за единицу времени, пропорционально числу имеющихся ядер; $\\lambda$ — **постоянная распада**:",
+  "en": "**Radioactive decay.** The number of nuclei decaying per unit time is proportional to the number of nuclei present; $\\lambda$ is the **decay constant**:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{dN}{dt}=-\\lambda N\\ \\Longrightarrow\\ \\int_{N_0}^{N}\\frac{dN}{N}=-\\lambda\\int_0^t dt\\ \\Longrightarrow\\ N=N_0\\,e^{-\\lambda t}"
+ },
+ {
+  "t": "p",
+  "uz": "**Yarim yemirilish davri (half-life)** $T_{1/2}$ — yadrolarning yarmi yemiriladigan vaqt; **o'rtacha yashash vaqti (mean lifetime)** $\\tau$ — miqdor $e$ marta kamayadigan vaqt ([[F02]]):",
+  "ru": "**Период полураспада** $T_{1/2}$ — время, за которое распадается половина ядер; **среднее время жизни** $\\tau$ — время, за которое количество уменьшается в $e$ раз ([[F02]]):",
+  "en": "The **half-life** $T_{1/2}$ is the time in which half of the nuclei decay; the **mean lifetime** $\\tau$ is the time in which the amount decreases by a factor of $e$ ([[F02]]):"
+ },
+ {
+  "t": "m",
+  "m": "T_{1/2}=\\frac{\\ln2}{\\lambda}\\approx\\frac{0.693}{\\lambda},\\qquad \\tau=\\frac1\\lambda,\\qquad N=N_0\\left(\\frac12\\right)^{t/T_{1/2}}"
+ },
+ {
+  "t": "p",
+  "uz": "Xuddi shu tenglama kondensatorning rezistor orqali razryadlanishini, atmosfera bosimining balandlik bo'yicha kamayishini va yorug'likning muhitda yutilishini tavsiflaydi. $k>0$ bo'lsa ($y'=ky$), yechim eksponensial o'sadi.",
+  "ru": "Это же уравнение описывает разряд конденсатора через резистор, убывание атмосферного давления с высотой и поглощение света в среде. При $k>0$ ($y'=ky$) решение растёт экспоненциально.",
+  "en": "The same equation describes a capacitor discharging through a resistor, the decrease of atmospheric pressure with altitude and the absorption of light in a medium. For $k>0$ ($y'=ky$) the solution grows exponentially."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B0-L06-F02.png",
+   "ru": "figures/B0-L06-F02-ru.png",
+   "en": "figures/B0-L06-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Chiziqli birinchi tartibli tenglama (Linear first-order equation)",
+  "ru": "3. Линейное уравнение первого порядка",
+  "en": "3. Linear first-order equation"
+ },
+ {
+  "t": "p",
+  "uz": "Tenglama $y'+p(x)\\,y=q(x)$ ko'rinishida bo'lsa, uni **integrallovchi ko'paytuvchi (integrating factor)** $\\mu(x)$ ga ko'paytiramiz. Shunda chap tomon ko'paytmaning hosilasiga aylanadi:",
+  "ru": "Если уравнение имеет вид $y'+p(x)\\,y=q(x)$, умножаем его на **интегрирующий множитель** $\\mu(x)$. Тогда левая часть превращается в производную произведения:",
+  "en": "If the equation has the form $y'+p(x)\\,y=q(x)$, we multiply it by the **integrating factor** $\\mu(x)$. Then the left side becomes the derivative of a product:"
+ },
+ {
+  "t": "m",
+  "m": "\\mu=e^{\\int p\\,dx},\\qquad (\\mu y)'=\\mu q\\quad\\Longrightarrow\\quad y=\\frac{1}{\\mu}\\left(\\int\\mu q\\,dx+C\\right)"
+ },
+ {
+  "t": "p",
+  "uz": "Fizikada ko'pincha koeffitsiyentlar o'zgarmas bo'ladi. Unda miqdor yangi muvozanat qiymati $y_\\infty$ ga **vaqt doimiysi (time constant)** $\\tau$ bilan eksponensial yaqinlashadi ([[F03]]):",
+  "ru": "В физике коэффициенты часто постоянны. Тогда величина экспоненциально приближается к новому равновесному значению $y_\\infty$ с **постоянной времени** $\\tau$ ([[F03]]):",
+  "en": "In physics the coefficients are often constant. Then the quantity approaches its new equilibrium value $y_\\infty$ exponentially with a **time constant** $\\tau$ ([[F03]]):"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{dy}{dt}=-\\frac{y-y_\\infty}{\\tau}\\quad\\Longrightarrow\\quad y(t)=y_\\infty+\\left(y_0-y_\\infty\\right)e^{-t/\\tau}"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "RC zanjirning zaryadlanishi",
+    "ru": "Зарядка RC-цепи",
+    "en": "Charging an RC circuit",
+    "m": "R\\,q'+\\frac{q}{C}=\\mathcal{E},\\quad \\tau=RC,\\quad q_\\infty=C\\mathcal{E}"
+   },
+   {
+    "uz": "RL zanjirda tok",
+    "ru": "Ток в RL-цепи",
+    "en": "Current in an RL circuit",
+    "m": "L\\,I'+RI=\\mathcal{E},\\quad \\tau=\\frac{L}{R},\\quad I_\\infty=\\frac{\\mathcal{E}}{R}"
+   },
+   {
+    "uz": "Nyutonning sovish qonuni",
+    "ru": "Закон охлаждения Ньютона",
+    "en": "Newton's law of cooling",
+    "m": "T'=-k\\,(T-T_{\\mathrm{env}}),\\quad \\tau=\\frac1k"
+   },
+   {
+    "uz": "Chiziqli qarshilikli muhitda tushish",
+    "ru": "Падение в среде с линейным сопротивлением",
+    "en": "Falling with linear drag",
+    "m": "m\\,v'=mg-bv,\\quad \\tau=\\frac{m}{b},\\quad v_\\infty=\\frac{mg}{b}"
+   }
+  ]
+ },
+ {
+  "t": "li",
+  "uz": "$t=\\tau$ da farqning $e^{-1}\\approx37\\%$ i qoladi (yo'lning $63\\%$ i bosib o'tiladi); $t=5\\tau$ da $1\\%$ dan kami qoladi.",
+  "ru": "При $t=\\tau$ остаётся $e^{-1}\\approx37\\%$ разности (пройдено $63\\%$ пути); при $t=5\\tau$ остаётся меньше $1\\%$.",
+  "en": "At $t=\\tau$, $e^{-1}\\approx37\\%$ of the difference remains ($63\\%$ of the way is covered); at $t=5\\tau$, less than $1\\%$ remains."
+ },
+ {
+  "t": "li",
+  "uz": "Chegaraviy tezlik (terminal velocity) — $v'=0$ bo'lgan holat: og'irlik kuchi qarshilik kuchiga teng.",
+  "ru": "Предельная скорость — состояние, при котором $v'=0$: сила тяжести равна силе сопротивления.",
+  "en": "The terminal velocity is the state with $v'=0$: gravity equals the drag force."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B0-L06-F03.png",
+   "ru": "figures/B0-L06-F03-ru.png",
+   "en": "figures/B0-L06-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. O'zgarmas koeffitsiyentli ikkinchi tartibli tenglama (Second-order equation with constant coefficients)",
+  "ru": "4. Уравнение второго порядка с постоянными коэффициентами",
+  "en": "4. Second-order equation with constant coefficients"
+ },
+ {
+  "t": "p",
+  "uz": "Bir jinsli (homogeneous) chiziqli tenglama $a\\,y''+b\\,y'+c\\,y=0$ ning yechimini $y=e^{rx}$ ko'rinishida izlaymiz. Uni tenglamaga qo'ysak, $e^{rx}$ ga qisqartirib, **xarakteristik tenglama (characteristic equation)** hosil bo'ladi:",
+  "ru": "Решение однородного линейного уравнения $a\\,y''+b\\,y'+c\\,y=0$ ищем в виде $y=e^{rx}$. Подставив его в уравнение и сократив на $e^{rx}$, получаем **характеристическое уравнение**:",
+  "en": "We look for a solution of the homogeneous linear equation $a\\,y''+b\\,y'+c\\,y=0$ in the form $y=e^{rx}$. Substituting it into the equation and cancelling $e^{rx}$ gives the **characteristic equation**:"
+ },
+ {
+  "t": "m",
+  "m": "a\\,r^2+b\\,r+c=0,\\qquad r_{1,2}=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Ikki xil haqiqiy ildiz ($b^2>4ac$)",
+    "ru": "Два различных вещественных корня ($b^2>4ac$)",
+    "en": "Two distinct real roots ($b^2>4ac$)",
+    "m": "y=C_1e^{r_1x}+C_2e^{r_2x}"
+   },
+   {
+    "uz": "Karrali ildiz ($b^2=4ac$)",
+    "ru": "Кратный корень ($b^2=4ac$)",
+    "en": "Repeated root ($b^2=4ac$)",
+    "m": "y=(C_1+C_2x)\\,e^{rx}"
+   },
+   {
+    "uz": "Kompleks ildizlar $r=\\alpha\\pm i\\omega$ ($b^2<4ac$)",
+    "ru": "Комплексные корни $r=\\alpha\\pm i\\omega$ ($b^2<4ac$)",
+    "en": "Complex roots $r=\\alpha\\pm i\\omega$ ($b^2<4ac$)",
+    "m": "y=e^{\\alpha x}\\left(C_1\\cos\\omega x+C_2\\sin\\omega x\\right)"
+   }
+  ]
+ },
+ {
+  "t": "p",
+  "uz": "**Superpozitsiya prinsipi (superposition principle):** chiziqli bir jinsli tenglama yechimlarining istalgan chiziqli kombinatsiyasi ham yechim bo'ladi. Ikki o'zgarmas $C_1$, $C_2$ ikkita boshlang'ich shartdan topiladi. Kompleks ildizlar holi Eyler formulasi $e^{i\\omega x}=\\cos\\omega x+i\\sin\\omega x$ dan kelib chiqadi (B0-L07 darsida batafsil) ([[F04]]).",
+  "ru": "**Принцип суперпозиции:** любая линейная комбинация решений линейного однородного уравнения тоже является решением. Две постоянные $C_1$, $C_2$ находят из двух начальных условий. Случай комплексных корней следует из формулы Эйлера $e^{i\\omega x}=\\cos\\omega x+i\\sin\\omega x$ (подробно — в уроке B0-L07) ([[F04]]).",
+  "en": "**Superposition principle:** any linear combination of solutions of a linear homogeneous equation is also a solution. The two constants $C_1$, $C_2$ are found from two initial conditions. The complex-root case follows from Euler's formula $e^{i\\omega x}=\\cos\\omega x+i\\sin\\omega x$ (in detail in lesson B0-L07) ([[F04]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B0-L06-F04.png",
+   "ru": "figures/B0-L06-F04-ru.png",
+   "en": "figures/B0-L06-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Garmonik ossilyator (Harmonic oscillator)",
+  "ru": "5. Гармонический осциллятор",
+  "en": "5. Harmonic oscillator"
+ },
+ {
+  "t": "p",
+  "uz": "Prujinadagi yuk uchun Nyutonning ikkinchi qonuni va Guk qonuni $m\\,x''=-kx$ ni beradi. Xarakteristik tenglama $r^2+\\omega_0^2=0$, ildizlar $r=\\pm i\\omega_0$; $\\omega_0$ — **xususiy siklik chastota (natural angular frequency)**:",
+  "ru": "Для груза на пружине второй закон Ньютона и закон Гука дают $m\\,x''=-kx$. Характеристическое уравнение $r^2+\\omega_0^2=0$, корни $r=\\pm i\\omega_0$; $\\omega_0$ — **собственная циклическая частота**:",
+  "en": "For a mass on a spring, Newton's second law and Hooke's law give $m\\,x''=-kx$. The characteristic equation is $r^2+\\omega_0^2=0$, with roots $r=\\pm i\\omega_0$; $\\omega_0$ is the **natural angular frequency**:"
+ },
+ {
+  "t": "m",
+  "m": "x''+\\omega_0^2x=0,\\qquad \\omega_0=\\sqrt{\\frac{k}{m}},\\qquad x(t)=A\\cos(\\omega_0t+\\varphi)=C_1\\cos\\omega_0t+C_2\\sin\\omega_0t"
+ },
+ {
+  "t": "p",
+  "uz": "**Amplituda (amplitude)** $A$ va **boshlang'ich faza (initial phase)** $\\varphi$ boshlang'ich shartlardan topiladi; davr va maksimal tezlik ([[F05]]):",
+  "ru": "**Амплитуду** $A$ и **начальную фазу** $\\varphi$ находят из начальных условий; период и максимальная скорость ([[F05]]):",
+  "en": "The **amplitude** $A$ and the **initial phase** $\\varphi$ are found from the initial conditions; the period and maximum speed are ([[F05]]):"
+ },
+ {
+  "t": "m",
+  "m": "A=\\sqrt{x_0^2+\\left(\\frac{v_0}{\\omega_0}\\right)^2},\\qquad T=\\frac{2\\pi}{\\omega_0}=2\\pi\\sqrt{\\frac{m}{k}},\\qquad v_{\\max}=A\\,\\omega_0,\\qquad E=\\frac{kA^2}{2}"
+ },
+ {
+  "t": "p",
+  "uz": "Bir xil tenglama turli sistemalarni tavsiflaydi — faqat $\\omega_0$ ifodasi o'zgaradi:",
+  "ru": "Одно и то же уравнение описывает разные системы — меняется лишь выражение для $\\omega_0$:",
+  "en": "The same equation describes different systems — only the expression for $\\omega_0$ changes:"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Prujinadagi yuk",
+    "ru": "Груз на пружине",
+    "en": "Mass on a spring",
+    "m": "x''+\\frac{k}{m}x=0,\\quad \\omega_0=\\sqrt{k/m}"
+   },
+   {
+    "uz": "Matematik mayatnik (kichik burchak)",
+    "ru": "Математический маятник (малый угол)",
+    "en": "Simple pendulum (small angle)",
+    "m": "\\theta''+\\frac{g}{l}\\theta=0,\\quad \\omega_0=\\sqrt{g/l}"
+   },
+   {
+    "uz": "LC tebranish konturi",
+    "ru": "Колебательный LC-контур",
+    "en": "LC circuit",
+    "m": "q''+\\frac{q}{LC}=0,\\quad \\omega_0=1/\\sqrt{LC}"
+   }
+  ]
+ },
+ {
+  "t": "li",
+  "uz": "Garmonik tebranish davri amplitudaga bog'liq emas (izoxronlik).",
+  "ru": "Период гармонических колебаний не зависит от амплитуды (изохронность).",
+  "en": "The period of harmonic oscillation does not depend on the amplitude (isochronism)."
+ },
+ {
+  "t": "li",
+  "uz": "Mexanik–elektr o'xshashlik: $m\\leftrightarrow L$, $\\ k\\leftrightarrow 1/C$, $\\ b\\leftrightarrow R$, $\\ x\\leftrightarrow q$.",
+  "ru": "Механико-электрическая аналогия: $m\\leftrightarrow L$, $\\ k\\leftrightarrow 1/C$, $\\ b\\leftrightarrow R$, $\\ x\\leftrightarrow q$.",
+  "en": "Mechanical–electrical analogy: $m\\leftrightarrow L$, $\\ k\\leftrightarrow 1/C$, $\\ b\\leftrightarrow R$, $\\ x\\leftrightarrow q$."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B0-L06-F05.png",
+   "ru": "figures/B0-L06-F05-ru.png",
+   "en": "figures/B0-L06-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. So'nuvchi tebranishlar (Damped oscillations)",
+  "ru": "6. Затухающие колебания",
+  "en": "6. Damped oscillations"
+ },
+ {
+  "t": "p",
+  "uz": "Tezlikka proporsional qarshilik kuchi $-bx'$ qo'shilsa, $m\\,x''+b\\,x'+kx=0$. **So'nish koeffitsiyenti (damping coefficient)** $\\beta=b/(2m)$ bilan:",
+  "ru": "Если добавить силу сопротивления $-bx'$, пропорциональную скорости, то $m\\,x''+b\\,x'+kx=0$. С **коэффициентом затухания** $\\beta=b/(2m)$:",
+  "en": "If a drag force $-bx'$ proportional to velocity is added, then $m\\,x''+b\\,x'+kx=0$. With the **damping coefficient** $\\beta=b/(2m)$:"
+ },
+ {
+  "t": "m",
+  "m": "x''+2\\beta x'+\\omega_0^2x=0,\\qquad r_{1,2}=-\\beta\\pm\\sqrt{\\beta^2-\\omega_0^2}"
+ },
+ {
+  "t": "li",
+  "uz": "$\\beta<\\omega_0$ — **kuchsiz so'nish (underdamping)**: $x=A_0e^{-\\beta t}\\cos(\\omega_dt+\\varphi)$, bunda $\\omega_d=\\sqrt{\\omega_0^2-\\beta^2}$; amplituda eksponensial kamayadi.",
+  "ru": "$\\beta<\\omega_0$ — **слабое затухание**: $x=A_0e^{-\\beta t}\\cos(\\omega_dt+\\varphi)$, где $\\omega_d=\\sqrt{\\omega_0^2-\\beta^2}$; амплитуда убывает экспоненциально.",
+  "en": "$\\beta<\\omega_0$ — **underdamping**: $x=A_0e^{-\\beta t}\\cos(\\omega_dt+\\varphi)$, where $\\omega_d=\\sqrt{\\omega_0^2-\\beta^2}$; the amplitude decreases exponentially."
+ },
+ {
+  "t": "li",
+  "uz": "$\\beta=\\omega_0$ — **kritik so'nish (critical damping)**: $x=(C_1+C_2t)\\,e^{-\\beta t}$; sistema muvozanatga tebranishsiz eng tez qaytadi.",
+  "ru": "$\\beta=\\omega_0$ — **критическое затухание**: $x=(C_1+C_2t)\\,e^{-\\beta t}$; система быстрее всего возвращается в равновесие без колебаний.",
+  "en": "$\\beta=\\omega_0$ — **critical damping**: $x=(C_1+C_2t)\\,e^{-\\beta t}$; the system returns to equilibrium fastest without oscillating."
+ },
+ {
+  "t": "li",
+  "uz": "$\\beta>\\omega_0$ — **kuchli so'nish (overdamping)**: $x=C_1e^{r_1t}+C_2e^{r_2t}$ ($r_1,\\,r_2<0$); sekin, tebranishsiz qaytish.",
+  "ru": "$\\beta>\\omega_0$ — **сильное затухание**: $x=C_1e^{r_1t}+C_2e^{r_2t}$ ($r_1,\\,r_2<0$); медленное возвращение без колебаний.",
+  "en": "$\\beta>\\omega_0$ — **overdamping**: $x=C_1e^{r_1t}+C_2e^{r_2t}$ ($r_1,\\,r_2<0$); slow return without oscillation."
+ },
+ {
+  "t": "p",
+  "uz": "Kuchsiz so'nishda energiya $E\\propto e^{-2\\beta t}$ kamayadi. **Asllik (quality factor)** $Q=\\dfrac{\\omega_0}{2\\beta}$ — taxminan bir radian davomida energiya yo'qotilishiga teskari kattalik; $Q$ katta bo'lsa, so'nish kuchsiz. Kritik so'nish sharti: $b=2\\sqrt{mk}$ ([[F06]]).",
+  "ru": "При слабом затухании энергия убывает как $E\\propto e^{-2\\beta t}$. **Добротность** $Q=\\dfrac{\\omega_0}{2\\beta}$ — величина, примерно обратная потере энергии за один радиан; чем больше $Q$, тем слабее затухание. Условие критического затухания: $b=2\\sqrt{mk}$ ([[F06]]).",
+  "en": "With underdamping the energy decreases as $E\\propto e^{-2\\beta t}$. The **quality factor** $Q=\\dfrac{\\omega_0}{2\\beta}$ is roughly the inverse of the energy loss per radian; the larger $Q$, the weaker the damping. The condition for critical damping is $b=2\\sqrt{mk}$ ([[F06]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B0-L06-F06.png",
+   "ru": "figures/B0-L06-F06-ru.png",
+   "en": "figures/B0-L06-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Majburiy tebranishlar va rezonans (Driven oscillations and resonance)",
+  "ru": "7. Вынужденные колебания и резонанс",
+  "en": "7. Driven oscillations and resonance"
+ },
+ {
+  "t": "p",
+  "uz": "Tashqi davriy kuch $F_0\\cos\\omega t$ ta'sirida tenglama **bir jinsli bo'lmagan (inhomogeneous)** bo'ladi. Uning umumiy yechimi = bir jinsli tenglama yechimi (vaqt o'tishi bilan so'nadi) + **xususiy yechim (particular solution)** (barqaror tebranish):",
+  "ru": "Под действием внешней периодической силы $F_0\\cos\\omega t$ уравнение становится **неоднородным**. Его общее решение = решение однородного уравнения (со временем затухает) + **частное решение** (установившиеся колебания):",
+  "en": "Under an external periodic force $F_0\\cos\\omega t$ the equation becomes **inhomogeneous**. Its general solution = the solution of the homogeneous equation (dies out over time) + a **particular solution** (steady-state oscillation):"
+ },
+ {
+  "t": "m",
+  "m": "x''+2\\beta x'+\\omega_0^2x=\\frac{F_0}{m}\\cos\\omega t,\\qquad x_{\\mathrm{p}}=A(\\omega)\\cos(\\omega t-\\delta)"
+ },
+ {
+  "t": "m",
+  "m": "A(\\omega)=\\frac{F_0/m}{\\sqrt{\\left(\\omega_0^2-\\omega^2\\right)^2+4\\beta^2\\omega^2}},\\qquad \\tan\\delta=\\frac{2\\beta\\omega}{\\omega_0^2-\\omega^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Rezonans (resonance):** tashqi chastota $\\omega$ xususiy chastota $\\omega_0$ ga yaqinlashganda amplituda keskin ortadi. Maksimum $\\omega_{\\mathrm{r}}=\\sqrt{\\omega_0^2-2\\beta^2}$ da; kuchsiz so'nishda $\\omega_{\\mathrm{r}}\\approx\\omega_0$ ([[F07]]).",
+  "ru": "**Резонанс:** при приближении внешней частоты $\\omega$ к собственной частоте $\\omega_0$ амплитуда резко возрастает. Максимум при $\\omega_{\\mathrm{r}}=\\sqrt{\\omega_0^2-2\\beta^2}$; при слабом затухании $\\omega_{\\mathrm{r}}\\approx\\omega_0$ ([[F07]]).",
+  "en": "**Resonance:** as the driving frequency $\\omega$ approaches the natural frequency $\\omega_0$, the amplitude rises sharply. The maximum is at $\\omega_{\\mathrm{r}}=\\sqrt{\\omega_0^2-2\\beta^2}$; for weak damping $\\omega_{\\mathrm{r}}\\approx\\omega_0$ ([[F07]])."
+ },
+ {
+  "t": "li",
+  "uz": "$\\omega=\\omega_0$ da amplituda $A=\\dfrac{F_0}{2m\\beta\\omega_0}=\\dfrac{F_0}{b\\,\\omega_0}$: so'nish ikki marta kamaysa, rezonans amplitudasi ikki marta ortadi; faza siljishi $\\delta=\\pi/2$.",
+  "ru": "При $\\omega=\\omega_0$ амплитуда $A=\\dfrac{F_0}{2m\\beta\\omega_0}=\\dfrac{F_0}{b\\,\\omega_0}$: если затухание уменьшить вдвое, резонансная амплитуда вырастет вдвое; сдвиг фазы $\\delta=\\pi/2$.",
+  "en": "At $\\omega=\\omega_0$ the amplitude is $A=\\dfrac{F_0}{2m\\beta\\omega_0}=\\dfrac{F_0}{b\\,\\omega_0}$: halving the damping doubles the resonant amplitude; the phase shift is $\\delta=\\pi/2$."
+ },
+ {
+  "t": "li",
+  "uz": "So'nish bo'lmasa ($\\beta=0$): $A=\\dfrac{F_0}{m\\left|\\omega_0^2-\\omega^2\\right|}$; $\\omega<\\omega_0$ da siljish kuch bilan bir fazada, $\\omega>\\omega_0$ da qarama-qarshi fazada tebranadi.",
+  "ru": "Без затухания ($\\beta=0$): $A=\\dfrac{F_0}{m\\left|\\omega_0^2-\\omega^2\\right|}$; при $\\omega<\\omega_0$ смещение колеблется в фазе с силой, при $\\omega>\\omega_0$ — в противофазе.",
+  "en": "Without damping ($\\beta=0$): $A=\\dfrac{F_0}{m\\left|\\omega_0^2-\\omega^2\\right|}$; for $\\omega<\\omega_0$ the displacement oscillates in phase with the force, for $\\omega>\\omega_0$ in antiphase."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B0-L06-F07.png",
+   "ru": "figures/B0-L06-F07-ru.png",
+   "en": "figures/B0-L06-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. GRE uchun tez tekshiruvlar (Quick checks for the GRE)",
+  "ru": "8. Быстрые проверки для GRE",
+  "en": "8. Quick checks for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "Tenglamani tayyor shaklga keltiring: $x''+(\\ldots)\\,x=0$ bo'lsa, qavsdagi ifoda $\\omega_0^2$ ga teng.",
+  "ru": "Приведите уравнение к стандартному виду: если $x''+(\\ldots)\\,x=0$, то выражение в скобках равно $\\omega_0^2$.",
+  "en": "Bring the equation to standard form: if $x''+(\\ldots)\\,x=0$, the expression in parentheses equals $\\omega_0^2$."
+ },
+ {
+  "t": "li",
+  "uz": "O'lchamni tekshiring: eksponenta ko'rsatkichi o'lchamsiz, shuning uchun $[\\tau]=\\mathrm{s}$, $\\ [RC]=\\mathrm{s}$, $\\ [L/R]=\\mathrm{s}$, $\\ [\\sqrt{LC}]=\\mathrm{s}$.",
+  "ru": "Проверяйте размерность: показатель экспоненты безразмерен, поэтому $[\\tau]=\\mathrm{s}$, $\\ [RC]=\\mathrm{s}$, $\\ [L/R]=\\mathrm{s}$, $\\ [\\sqrt{LC}]=\\mathrm{s}$.",
+  "en": "Check dimensions: an exponent is dimensionless, so $[\\tau]=\\mathrm{s}$, $\\ [RC]=\\mathrm{s}$, $\\ [L/R]=\\mathrm{s}$, $\\ [\\sqrt{LC}]=\\mathrm{s}$."
+ },
+ {
+  "t": "li",
+  "uz": "Chegaraviy hollar: $t=0$ da boshlang'ich shart, $t\\to\\infty$ da muvozanat qiymati bajarilishi kerak.",
+  "ru": "Предельные случаи: при $t=0$ должно выполняться начальное условие, при $t\\to\\infty$ — равновесное значение.",
+  "en": "Limiting cases: the initial condition must hold at $t=0$, and the equilibrium value as $t\\to\\infty$."
+ },
+ {
+  "t": "li",
+  "uz": "Yarim yemirilish davrlari soni $n=t/T_{1/2}$ butun bo'lsa, qolgan ulush $2^{-n}$ — kalkulyatorsiz hisoblanadi.",
+  "ru": "Если число периодов полураспада $n=t/T_{1/2}$ целое, оставшаяся доля $2^{-n}$ — считается без калькулятора.",
+  "en": "If the number of half-lives $n=t/T_{1/2}$ is an integer, the remaining fraction is $2^{-n}$ — computed without a calculator."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Yemirilish",
+    "ru": "Распад",
+    "en": "Decay",
+    "m": "N=N_0e^{-\\lambda t},\\quad T_{1/2}=\\frac{\\ln2}{\\lambda}"
+   },
+   {
+    "uz": "Integrallovchi ko'paytuvchi",
+    "ru": "Интегрирующий множитель",
+    "en": "Integrating factor",
+    "m": "\\mu=e^{\\int p\\,dx},\\quad (\\mu y)'=\\mu q"
+   },
+   {
+    "uz": "Vaqt doimiysi bilan yaqinlashish",
+    "ru": "Приближение с постоянной времени",
+    "en": "Approach with a time constant",
+    "m": "y=y_\\infty+(y_0-y_\\infty)\\,e^{-t/\\tau}"
+   },
+   {
+    "uz": "Xarakteristik tenglama",
+    "ru": "Характеристическое уравнение",
+    "en": "Characteristic equation",
+    "m": "a\\,r^2+b\\,r+c=0"
+   },
+   {
+    "uz": "Garmonik ossilyator",
+    "ru": "Гармонический осциллятор",
+    "en": "Harmonic oscillator",
+    "m": "x=A\\cos(\\omega_0t+\\varphi),\\quad \\omega_0=\\sqrt{k/m}"
+   },
+   {
+    "uz": "LC kontur",
+    "ru": "LC-контур",
+    "en": "LC circuit",
+    "m": "\\omega_0=\\frac{1}{\\sqrt{LC}}"
+   },
+   {
+    "uz": "So'nuvchi ossilyator",
+    "ru": "Затухающий осциллятор",
+    "en": "Damped oscillator",
+    "m": "\\omega_d=\\sqrt{\\omega_0^2-\\beta^2},\\quad \\beta=\\frac{b}{2m}"
+   },
+   {
+    "uz": "Asllik",
+    "ru": "Добротность",
+    "en": "Quality factor",
+    "m": "Q=\\frac{\\omega_0}{2\\beta}"
+   },
+   {
+    "uz": "Rezonans amplitudasi",
+    "ru": "Резонансная амплитуда",
+    "en": "Resonant amplitude",
+    "m": "A(\\omega_0)=\\frac{F_0}{b\\,\\omega_0}"
+   }
+  ]
+ }
+]

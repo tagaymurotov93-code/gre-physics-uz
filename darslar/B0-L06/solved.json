@@ -1,0 +1,491 @@
+[
+ {
+  "id": "B0-L06-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$y=Ce^{-2x}$ funksiya $y'+2y=0$ tenglamaning yechimi ekanini ko'rsating. $y(0)=3$ shartini qanoatlantiruvchi xususiy yechimni toping va $y(1)$ ni hisoblang.",
+   "ru": "Покажите, что функция $y=Ce^{-2x}$ является решением уравнения $y'+2y=0$. Найдите частное решение, удовлетворяющее условию $y(0)=3$, и вычислите $y(1)$.",
+   "en": "Show that $y=Ce^{-2x}$ is a solution of $y'+2y=0$. Find the particular solution satisfying $y(0)=3$ and compute $y(1)$."
+  },
+  "figure": "figures/B0-L06-S01.png",
+  "solution": {
+   "uz": [
+    "Hosilani topib, tenglamaga qo'yamiz: $$y'=-2Ce^{-2x},\\qquad y'+2y=-2Ce^{-2x}+2Ce^{-2x}=0$$",
+    "Ayniyat hosil bo'ldi — $C$ ning istalgan qiymatida yechim. Boshlang'ich shartdan: $$y(0)=C=3\\quad\\Longrightarrow\\quad y=3e^{-2x}$$",
+    "$x=1$ da: $$y(1)=3e^{-2}\\approx0.41$$"
+   ],
+   "ru": [
+    "Находим производную и подставляем в уравнение: $$y'=-2Ce^{-2x},\\qquad y'+2y=-2Ce^{-2x}+2Ce^{-2x}=0$$",
+    "Получено тождество — решение при любом $C$. Из начального условия: $$y(0)=C=3\\quad\\Longrightarrow\\quad y=3e^{-2x}$$",
+    "При $x=1$: $$y(1)=3e^{-2}\\approx0.41$$"
+   ],
+   "en": [
+    "Find the derivative and substitute it into the equation: $$y'=-2Ce^{-2x},\\qquad y'+2y=-2Ce^{-2x}+2Ce^{-2x}=0$$",
+    "We get an identity — a solution for any $C$. From the initial condition: $$y(0)=C=3\\quad\\Longrightarrow\\quad y=3e^{-2x}$$",
+    "At $x=1$: $$y(1)=3e^{-2}\\approx0.41$$"
+   ]
+  },
+  "basis": {
+   "uz": "Yechimni tenglamaga qo'yib tekshirish; boshlang'ich shart o'zgarmasni aniqlaydi",
+   "ru": "Проверка решения подстановкой; начальное условие определяет постоянную",
+   "en": "Checking a solution by substitution; the initial condition fixes the constant"
+  },
+  "answer": "y=3e^{-2x},\\quad y(1)=3e^{-2}\\approx0.41",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original"
+ },
+ {
+  "id": "B0-L06-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$\\dfrac{dy}{dx}=-\\dfrac{x}{y}$ tenglamani $y(0)=2$ shart bilan yeching. Yechim grafigi qanday egri chiziq?",
+   "ru": "Решите уравнение $\\dfrac{dy}{dx}=-\\dfrac{x}{y}$ с условием $y(0)=2$. Какая кривая является графиком решения?",
+   "en": "Solve $\\dfrac{dy}{dx}=-\\dfrac{x}{y}$ with $y(0)=2$. What curve is the graph of the solution?"
+  },
+  "figure": "figures/B0-L06-S02.png",
+  "solution": {
+   "uz": [
+    "O'zgaruvchilarni ajratamiz: $$y\\,dy=-x\\,dx$$",
+    "Integrallaymiz: $$\\frac{y^2}{2}=-\\frac{x^2}{2}+C\\quad\\Longrightarrow\\quad x^2+y^2=2C$$",
+    "$y(0)=2$ dan $2C=4$. $y>0$ bo'lgani uchun yuqori yarim aylana: $$x^2+y^2=4,\\qquad y=\\sqrt{4-x^2},\\quad |x|<2$$"
+   ],
+   "ru": [
+    "Разделяем переменные: $$y\\,dy=-x\\,dx$$",
+    "Интегрируем: $$\\frac{y^2}{2}=-\\frac{x^2}{2}+C\\quad\\Longrightarrow\\quad x^2+y^2=2C$$",
+    "Из $y(0)=2$ получаем $2C=4$. Так как $y>0$, это верхняя полуокружность: $$x^2+y^2=4,\\qquad y=\\sqrt{4-x^2},\\quad |x|<2$$"
+   ],
+   "en": [
+    "Separate the variables: $$y\\,dy=-x\\,dx$$",
+    "Integrate: $$\\frac{y^2}{2}=-\\frac{x^2}{2}+C\\quad\\Longrightarrow\\quad x^2+y^2=2C$$",
+    "From $y(0)=2$ we get $2C=4$. Since $y>0$, it is the upper semicircle: $$x^2+y^2=4,\\qquad y=\\sqrt{4-x^2},\\quad |x|<2$$"
+   ]
+  },
+  "basis": {
+   "uz": "O'zgaruvchilarni ajratish usuli",
+   "ru": "Метод разделения переменных",
+   "en": "Separation of variables"
+  },
+  "answer": "y=\\sqrt{4-x^2}\\ \\ (x^2+y^2=4,\\ y>0)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original"
+ },
+ {
+  "id": "B0-L06-S03",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radioaktiv izotopning yarim yemirilish davri $T_{1/2}=5.0\\ \\mathrm{d}$ (sutka). Yemirilish doimiysi $\\lambda$ ni toping. $20\\ \\mathrm{d}$ dan keyin yadrolarning qancha qismi qoladi? Yadrolar soni necha sutkada boshlang'ich qiymatning $10\\%$ iga tushadi?",
+   "ru": "Период полураспада радиоактивного изотопа $T_{1/2}=5.0\\ \\mathrm{d}$ (сутки). Найдите постоянную распада $\\lambda$. Какая доля ядер останется через $20\\ \\mathrm{d}$? Через сколько суток число ядер уменьшится до $10\\%$ начального?",
+   "en": "A radioactive isotope has half-life $T_{1/2}=5.0\\ \\mathrm{d}$ (days). Find the decay constant $\\lambda$. What fraction of the nuclei remains after $20\\ \\mathrm{d}$? After how many days does the number of nuclei fall to $10\\%$ of the initial value?"
+  },
+  "figure": "figures/B0-L06-S03.png",
+  "solution": {
+   "uz": [
+    "Yemirilish doimiysi: $$\\lambda=\\frac{\\ln2}{T_{1/2}}=\\frac{0.693}{5.0}\\approx0.139\\ \\mathrm{d^{-1}}$$",
+    "$20\\ \\mathrm{d}$ — to'rtta yarim yemirilish davri: $$\\frac{N}{N_0}=\\left(\\frac12\\right)^{20/5}=\\frac{1}{16}\\approx6.3\\%$$",
+    "$N=0.1N_0$ shartidan: $$e^{-\\lambda t}=0.1\\ \\Longrightarrow\\ t=\\frac{\\ln10}{\\lambda}=T_{1/2}\\frac{\\ln10}{\\ln2}\\approx5.0\\cdot3.32\\approx16.6\\ \\mathrm{d}$$"
+   ],
+   "ru": [
+    "Постоянная распада: $$\\lambda=\\frac{\\ln2}{T_{1/2}}=\\frac{0.693}{5.0}\\approx0.139\\ \\mathrm{d^{-1}}$$",
+    "$20\\ \\mathrm{d}$ — четыре периода полураспада: $$\\frac{N}{N_0}=\\left(\\frac12\\right)^{20/5}=\\frac{1}{16}\\approx6.3\\%$$",
+    "Из условия $N=0.1N_0$: $$e^{-\\lambda t}=0.1\\ \\Longrightarrow\\ t=\\frac{\\ln10}{\\lambda}=T_{1/2}\\frac{\\ln10}{\\ln2}\\approx5.0\\cdot3.32\\approx16.6\\ \\mathrm{d}$$"
+   ],
+   "en": [
+    "Decay constant: $$\\lambda=\\frac{\\ln2}{T_{1/2}}=\\frac{0.693}{5.0}\\approx0.139\\ \\mathrm{d^{-1}}$$",
+    "$20\\ \\mathrm{d}$ is four half-lives: $$\\frac{N}{N_0}=\\left(\\frac12\\right)^{20/5}=\\frac{1}{16}\\approx6.3\\%$$",
+    "From the condition $N=0.1N_0$: $$e^{-\\lambda t}=0.1\\ \\Longrightarrow\\ t=\\frac{\\ln10}{\\lambda}=T_{1/2}\\frac{\\ln10}{\\ln2}\\approx5.0\\cdot3.32\\approx16.6\\ \\mathrm{d}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$N=N_0e^{-\\lambda t}$, $\\ T_{1/2}=\\ln2/\\lambda$",
+   "ru": "$N=N_0e^{-\\lambda t}$, $\\ T_{1/2}=\\ln2/\\lambda$",
+   "en": "$N=N_0e^{-\\lambda t}$, $\\ T_{1/2}=\\ln2/\\lambda$"
+  },
+  "answer": "\\lambda\\approx0.139\\ \\mathrm{d^{-1}},\\quad N/N_0=1/16,\\quad t\\approx16.6\\ \\mathrm{d}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original"
+ },
+ {
+  "id": "B0-L06-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$90\\ ^\\circ\\mathrm{C}$ li choy $20\\ ^\\circ\\mathrm{C}$ li xonada $5\\ \\mathrm{min}$ da $60\\ ^\\circ\\mathrm{C}$ gacha soviydi. Nyutonning sovish qonuni $T'=-k\\,(T-20)$ bo'yicha $10\\ \\mathrm{min}$ dan keyingi haroratni va choy necha minutda $30\\ ^\\circ\\mathrm{C}$ gacha sovishini toping.",
+   "ru": "Чай при $90\\ ^\\circ\\mathrm{C}$ в комнате при $20\\ ^\\circ\\mathrm{C}$ остывает до $60\\ ^\\circ\\mathrm{C}$ за $5\\ \\text{мин}$. По закону охлаждения Ньютона $T'=-k\\,(T-20)$ найдите температуру через $10\\ \\text{мин}$ и через сколько минут чай остынет до $30\\ ^\\circ\\mathrm{C}$.",
+   "en": "Tea at $90\\ ^\\circ\\mathrm{C}$ in a $20\\ ^\\circ\\mathrm{C}$ room cools to $60\\ ^\\circ\\mathrm{C}$ in $5\\ \\mathrm{min}$. Using Newton's law of cooling $T'=-k\\,(T-20)$, find the temperature after $10\\ \\mathrm{min}$ and how many minutes it takes the tea to cool to $30\\ ^\\circ\\mathrm{C}$."
+  },
+  "figure": "figures/B0-L06-S04.png",
+  "solution": {
+   "uz": [
+    "Harorat farqi eksponensial kamayadi: $$T-20=70\\,e^{-kt}$$",
+    "$t=5$ dagi qiymatdan: $$40=70\\,e^{-5k}\\ \\Longrightarrow\\ e^{-5k}=\\frac47,\\qquad k=\\frac{\\ln(7/4)}{5}\\approx0.112\\ \\mathrm{min^{-1}}$$",
+    "$10\\ \\mathrm{min}$ — ikki marta $5\\ \\mathrm{min}$: $$T(10)=20+70\\left(\\frac47\\right)^2=20+22.9\\approx42.9\\ ^\\circ\\mathrm{C}$$",
+    "$T=30\\ ^\\circ\\mathrm{C}$ uchun: $$70\\,e^{-kt}=10\\ \\Longrightarrow\\ t=\\frac{\\ln7}{k}=\\frac{5\\ln7}{\\ln(7/4)}\\approx17.4\\ \\mathrm{min}$$"
+   ],
+   "ru": [
+    "Разность температур убывает экспоненциально: $$T-20=70\\,e^{-kt}$$",
+    "Из значения при $t=5$: $$40=70\\,e^{-5k}\\ \\Longrightarrow\\ e^{-5k}=\\frac47,\\qquad k=\\frac{\\ln(7/4)}{5}\\approx0.112\\ \\mathrm{min^{-1}}$$",
+    "$10\\ \\mathrm{min}$ — дважды по $5\\ \\mathrm{min}$: $$T(10)=20+70\\left(\\frac47\\right)^2=20+22.9\\approx42.9\\ ^\\circ\\mathrm{C}$$",
+    "Для $T=30\\ ^\\circ\\mathrm{C}$: $$70\\,e^{-kt}=10\\ \\Longrightarrow\\ t=\\frac{\\ln7}{k}=\\frac{5\\ln7}{\\ln(7/4)}\\approx17.4\\ \\mathrm{min}$$"
+   ],
+   "en": [
+    "The temperature difference decreases exponentially: $$T-20=70\\,e^{-kt}$$",
+    "From the value at $t=5$: $$40=70\\,e^{-5k}\\ \\Longrightarrow\\ e^{-5k}=\\frac47,\\qquad k=\\frac{\\ln(7/4)}{5}\\approx0.112\\ \\mathrm{min^{-1}}$$",
+    "$10\\ \\mathrm{min}$ is twice $5\\ \\mathrm{min}$: $$T(10)=20+70\\left(\\frac47\\right)^2=20+22.9\\approx42.9\\ ^\\circ\\mathrm{C}$$",
+    "For $T=30\\ ^\\circ\\mathrm{C}$: $$70\\,e^{-kt}=10\\ \\Longrightarrow\\ t=\\frac{\\ln7}{k}=\\frac{5\\ln7}{\\ln(7/4)}\\approx17.4\\ \\mathrm{min}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Nyutonning sovish qonuni: $T-T_{\\mathrm{env}}\\propto e^{-kt}$",
+   "ru": "Закон охлаждения Ньютона: $T-T_{\\mathrm{env}}\\propto e^{-kt}$",
+   "en": "Newton's law of cooling: $T-T_{\\mathrm{env}}\\propto e^{-kt}$"
+  },
+  "answer": "T(10)\\approx42.9\\ ^\\circ\\mathrm{C},\\quad t\\approx17.4\\ \\mathrm{min}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original"
+ },
+ {
+  "id": "B0-L06-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$R=10\\ \\mathrm{k}\\Omega$ rezistor va $C=100\\ \\mu\\mathrm{F}$ zaryadsiz kondensator $t=0$ da $\\mathcal{E}=12\\ \\mathrm{V}$ manbaga ketma-ket ulandi. Zaryad uchun differensial tenglamani yozing va yeching. Vaqt doimiysini, $t=2.0\\ \\mathrm{s}$ dagi kondensator kuchlanishini va boshlang'ich tokni toping.",
+   "ru": "Резистор $R=10\\ \\text{кОм}$ и незаряженный конденсатор $C=100\\ \\text{мкФ}$ при $t=0$ последовательно подключены к источнику $\\mathcal{E}=12\\ \\mathrm{В}$. Запишите и решите дифференциальное уравнение для заряда. Найдите постоянную времени, напряжение на конденсаторе при $t=2.0\\ \\mathrm{с}$ и начальный ток.",
+   "en": "A resistor $R=10\\ \\mathrm{k}\\Omega$ and an uncharged capacitor $C=100\\ \\mu\\mathrm{F}$ are connected in series to a source $\\mathcal{E}=12\\ \\mathrm{V}$ at $t=0$. Write and solve the differential equation for the charge. Find the time constant, the capacitor voltage at $t=2.0\\ \\mathrm{s}$ and the initial current."
+  },
+  "figure": "figures/B0-L06-S05.png",
+  "solution": {
+   "uz": [
+    "Kirxgofning kuchlanishlar qoidasi ($I=q'$): $$R\\,q'+\\frac{q}{C}=\\mathcal{E}\\quad\\Longrightarrow\\quad q'=-\\frac{q-C\\mathcal{E}}{RC}$$",
+    "Vaqt doimiysi va $q(0)=0$ dagi yechim: $$\\tau=RC=10^4\\cdot10^{-4}=1.0\\ \\mathrm{s},\\qquad q=C\\mathcal{E}\\left(1-e^{-t/\\tau}\\right)$$",
+    "Kondensator kuchlanishi $t=2.0\\ \\mathrm{s}$ da: $$U_C=\\frac{q}{C}=12\\left(1-e^{-2}\\right)\\approx10.4\\ \\mathrm{V}$$",
+    "Tok — zaryad hosilasi; $t=0$ da kondensator kuchlanishi nol: $$I=q'=\\frac{\\mathcal{E}}{R}e^{-t/\\tau},\\qquad I(0)=\\frac{12}{10^4}=1.2\\ \\mathrm{mA}$$"
+   ],
+   "ru": [
+    "Правило Кирхгофа для напряжений ($I=q'$): $$R\\,q'+\\frac{q}{C}=\\mathcal{E}\\quad\\Longrightarrow\\quad q'=-\\frac{q-C\\mathcal{E}}{RC}$$",
+    "Постоянная времени и решение при $q(0)=0$: $$\\tau=RC=10^4\\cdot10^{-4}=1.0\\ \\mathrm{s},\\qquad q=C\\mathcal{E}\\left(1-e^{-t/\\tau}\\right)$$",
+    "Напряжение на конденсаторе при $t=2.0\\ \\mathrm{s}$: $$U_C=\\frac{q}{C}=12\\left(1-e^{-2}\\right)\\approx10.4\\ \\mathrm{V}$$",
+    "Ток — производная заряда; при $t=0$ напряжение на конденсаторе равно нулю: $$I=q'=\\frac{\\mathcal{E}}{R}e^{-t/\\tau},\\qquad I(0)=\\frac{12}{10^4}=1.2\\ \\mathrm{mA}$$"
+   ],
+   "en": [
+    "Kirchhoff's voltage rule ($I=q'$): $$R\\,q'+\\frac{q}{C}=\\mathcal{E}\\quad\\Longrightarrow\\quad q'=-\\frac{q-C\\mathcal{E}}{RC}$$",
+    "Time constant and the solution with $q(0)=0$: $$\\tau=RC=10^4\\cdot10^{-4}=1.0\\ \\mathrm{s},\\qquad q=C\\mathcal{E}\\left(1-e^{-t/\\tau}\\right)$$",
+    "Capacitor voltage at $t=2.0\\ \\mathrm{s}$: $$U_C=\\frac{q}{C}=12\\left(1-e^{-2}\\right)\\approx10.4\\ \\mathrm{V}$$",
+    "The current is the derivative of the charge; at $t=0$ the capacitor voltage is zero: $$I=q'=\\frac{\\mathcal{E}}{R}e^{-t/\\tau},\\qquad I(0)=\\frac{12}{10^4}=1.2\\ \\mathrm{mA}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Kirxgof qoidasi va chiziqli 1-tartibli tenglama, $\\tau=RC$",
+   "ru": "Правило Кирхгофа и линейное уравнение 1-го порядка, $\\tau=RC$",
+   "en": "Kirchhoff's rule and a linear first-order equation, $\\tau=RC$"
+  },
+  "answer": "\\tau=1.0\\ \\mathrm{s},\\quad U_C(2\\ \\mathrm{s})\\approx10.4\\ \\mathrm{V},\\quad I(0)=1.2\\ \\mathrm{mA}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original"
+ },
+ {
+  "id": "B0-L06-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$m=0.10\\ \\mathrm{kg}$ massali sharcha tinch holatdan qovushoq suyuqlikda tusha boshlaydi; qarshilik kuchi $F=bv$, $b=0.50\\ \\mathrm{kg/s}$ ($g=9.8\\ \\mathrm{m/s^2}$, Arximed kuchi hisobga olinmaydi). $v(t)$ ni toping. Chegaraviy tezlik, vaqt doimiysi va $t=0.40\\ \\mathrm{s}$ dagi tezlik qancha?",
+   "ru": "Шарик массой $m=0.10\\ \\text{кг}$ начинает падать из состояния покоя в вязкой жидкости; сила сопротивления $F=bv$, $b=0.50\\ \\text{кг/с}$ ($g=9.8\\ \\text{м/с}^2$, силу Архимеда не учитывать). Найдите $v(t)$. Чему равны предельная скорость, постоянная времени и скорость при $t=0.40\\ \\mathrm{с}$?",
+   "en": "A ball of mass $m=0.10\\ \\mathrm{kg}$ starts falling from rest in a viscous liquid; the drag force is $F=bv$ with $b=0.50\\ \\mathrm{kg/s}$ ($g=9.8\\ \\mathrm{m/s^2}$, ignore buoyancy). Find $v(t)$. What are the terminal velocity, the time constant and the speed at $t=0.40\\ \\mathrm{s}$?"
+  },
+  "figure": "figures/B0-L06-S06.png",
+  "solution": {
+   "uz": [
+    "Nyutonning ikkinchi qonuni: $$m\\,v'=mg-bv\\quad\\Longrightarrow\\quad v'=-\\frac{v-mg/b}{m/b}$$",
+    "Chegaraviy tezlik ($v'=0$) va vaqt doimiysi: $$v_\\infty=\\frac{mg}{b}=\\frac{0.98}{0.50}=1.96\\ \\mathrm{m/s},\\qquad \\tau=\\frac{m}{b}=0.20\\ \\mathrm{s}$$",
+    "$v(0)=0$ bo'lganda yechim va $t=0.40\\ \\mathrm{s}=2\\tau$ dagi qiymat: $$v=v_\\infty\\left(1-e^{-t/\\tau}\\right),\\qquad v(0.40)=1.96\\left(1-e^{-2}\\right)\\approx1.70\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Второй закон Ньютона: $$m\\,v'=mg-bv\\quad\\Longrightarrow\\quad v'=-\\frac{v-mg/b}{m/b}$$",
+    "Предельная скорость ($v'=0$) и постоянная времени: $$v_\\infty=\\frac{mg}{b}=\\frac{0.98}{0.50}=1.96\\ \\mathrm{m/s},\\qquad \\tau=\\frac{m}{b}=0.20\\ \\mathrm{s}$$",
+    "Решение при $v(0)=0$ и значение при $t=0.40\\ \\mathrm{s}=2\\tau$: $$v=v_\\infty\\left(1-e^{-t/\\tau}\\right),\\qquad v(0.40)=1.96\\left(1-e^{-2}\\right)\\approx1.70\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Newton's second law: $$m\\,v'=mg-bv\\quad\\Longrightarrow\\quad v'=-\\frac{v-mg/b}{m/b}$$",
+    "Terminal velocity ($v'=0$) and time constant: $$v_\\infty=\\frac{mg}{b}=\\frac{0.98}{0.50}=1.96\\ \\mathrm{m/s},\\qquad \\tau=\\frac{m}{b}=0.20\\ \\mathrm{s}$$",
+    "The solution with $v(0)=0$ and its value at $t=0.40\\ \\mathrm{s}=2\\tau$: $$v=v_\\infty\\left(1-e^{-t/\\tau}\\right),\\qquad v(0.40)=1.96\\left(1-e^{-2}\\right)\\approx1.70\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$m\\,v'=mg-bv$ — chiziqli 1-tartibli tenglama",
+   "ru": "$m\\,v'=mg-bv$ — линейное уравнение 1-го порядка",
+   "en": "$m\\,v'=mg-bv$ is a linear first-order equation"
+  },
+  "answer": "v=1.96\\left(1-e^{-t/0.20}\\right)\\ \\mathrm{m/s},\\quad v_\\infty=1.96\\ \\mathrm{m/s},\\quad \\tau=0.20\\ \\mathrm{s},\\quad v(0.40)\\approx1.70\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original"
+ },
+ {
+  "id": "B0-L06-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Integrallovchi ko'paytuvchi yordamida $y'+\\dfrac{y}{x}=x^2$ ($x>0$) tenglamani $y(1)=1$ shart bilan yeching.",
+   "ru": "С помощью интегрирующего множителя решите уравнение $y'+\\dfrac{y}{x}=x^2$ ($x>0$) с условием $y(1)=1$.",
+   "en": "Using an integrating factor, solve $y'+\\dfrac{y}{x}=x^2$ ($x>0$) with $y(1)=1$."
+  },
+  "figure": "figures/B0-L06-S07.png",
+  "solution": {
+   "uz": [
+    "Integrallovchi ko'paytuvchi ($p=1/x$): $$\\mu=e^{\\int dx/x}=e^{\\ln x}=x$$",
+    "Tenglamani $x$ ga ko'paytiramiz — chap tomon ko'paytma hosilasi: $$x\\,y'+y=(xy)'=x^3\\quad\\Longrightarrow\\quad xy=\\frac{x^4}{4}+C$$",
+    "$y(1)=1$ dan $C=\\tfrac34$: $$y=\\frac{x^3}{4}+\\frac{3}{4x}$$"
+   ],
+   "ru": [
+    "Интегрирующий множитель ($p=1/x$): $$\\mu=e^{\\int dx/x}=e^{\\ln x}=x$$",
+    "Умножаем уравнение на $x$ — левая часть становится производной произведения: $$x\\,y'+y=(xy)'=x^3\\quad\\Longrightarrow\\quad xy=\\frac{x^4}{4}+C$$",
+    "Из $y(1)=1$ получаем $C=\\tfrac34$: $$y=\\frac{x^3}{4}+\\frac{3}{4x}$$"
+   ],
+   "en": [
+    "Integrating factor ($p=1/x$): $$\\mu=e^{\\int dx/x}=e^{\\ln x}=x$$",
+    "Multiply the equation by $x$ — the left side becomes the derivative of a product: $$x\\,y'+y=(xy)'=x^3\\quad\\Longrightarrow\\quad xy=\\frac{x^4}{4}+C$$",
+    "From $y(1)=1$ we get $C=\\tfrac34$: $$y=\\frac{x^3}{4}+\\frac{3}{4x}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Integrallovchi ko'paytuvchi $\\mu=e^{\\int p\\,dx}$",
+   "ru": "Интегрирующий множитель $\\mu=e^{\\int p\\,dx}$",
+   "en": "Integrating factor $\\mu=e^{\\int p\\,dx}$"
+  },
+  "answer": "y=\\frac{x^3}{4}+\\frac{3}{4x}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original"
+ },
+ {
+  "id": "B0-L06-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$y''-y'-6y=0$ tenglamani $y(0)=1$, $y'(0)=8$ shartlar bilan yeching.",
+   "ru": "Решите уравнение $y''-y'-6y=0$ с условиями $y(0)=1$, $y'(0)=8$.",
+   "en": "Solve $y''-y'-6y=0$ with $y(0)=1$, $y'(0)=8$."
+  },
+  "figure": "figures/B0-L06-S08.png",
+  "solution": {
+   "uz": [
+    "Xarakteristik tenglama va ildizlar: $$r^2-r-6=0\\quad\\Longrightarrow\\quad r_1=3,\\quad r_2=-2$$",
+    "Ikki xil haqiqiy ildiz — umumiy yechim: $$y=C_1e^{3x}+C_2e^{-2x}$$",
+    "Boshlang'ich shartlar: $$C_1+C_2=1,\\qquad 3C_1-2C_2=8\\quad\\Longrightarrow\\quad C_1=2,\\quad C_2=-1$$"
+   ],
+   "ru": [
+    "Характеристическое уравнение и корни: $$r^2-r-6=0\\quad\\Longrightarrow\\quad r_1=3,\\quad r_2=-2$$",
+    "Два различных вещественных корня — общее решение: $$y=C_1e^{3x}+C_2e^{-2x}$$",
+    "Начальные условия: $$C_1+C_2=1,\\qquad 3C_1-2C_2=8\\quad\\Longrightarrow\\quad C_1=2,\\quad C_2=-1$$"
+   ],
+   "en": [
+    "Characteristic equation and roots: $$r^2-r-6=0\\quad\\Longrightarrow\\quad r_1=3,\\quad r_2=-2$$",
+    "Two distinct real roots — general solution: $$y=C_1e^{3x}+C_2e^{-2x}$$",
+    "Initial conditions: $$C_1+C_2=1,\\qquad 3C_1-2C_2=8\\quad\\Longrightarrow\\quad C_1=2,\\quad C_2=-1$$"
+   ]
+  },
+  "basis": {
+   "uz": "Xarakteristik tenglama: ikki xil haqiqiy ildiz",
+   "ru": "Характеристическое уравнение: два различных вещественных корня",
+   "en": "Characteristic equation: two distinct real roots"
+  },
+  "answer": "y=2e^{3x}-e^{-2x}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original"
+ },
+ {
+  "id": "B0-L06-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$y''+4y'+13y=0$ tenglamani $y(0)=0$, $y'(0)=6$ shartlar bilan yeching. Yechim qanday harakatni tasvirlaydi?",
+   "ru": "Решите уравнение $y''+4y'+13y=0$ с условиями $y(0)=0$, $y'(0)=6$. Какое движение описывает решение?",
+   "en": "Solve $y''+4y'+13y=0$ with $y(0)=0$, $y'(0)=6$. What kind of motion does the solution describe?"
+  },
+  "figure": "figures/B0-L06-S09.png",
+  "solution": {
+   "uz": [
+    "Xarakteristik tenglama: $$r^2+4r+13=0\\quad\\Longrightarrow\\quad r=\\frac{-4\\pm\\sqrt{16-52}}{2}=-2\\pm3i$$",
+    "Kompleks ildizlar ($\\alpha=-2$, $\\omega=3$): $$y=e^{-2x}\\left(C_1\\cos3x+C_2\\sin3x\\right)$$",
+    "$y(0)=C_1=0$; keyin $y'(0)=3C_2=6$: $$C_2=2\\quad\\Longrightarrow\\quad y=2e^{-2x}\\sin3x$$",
+    "Bu — amplitudasi $e^{-2x}$ qonuni bilan kamayadigan so'nuvchi tebranish."
+   ],
+   "ru": [
+    "Характеристическое уравнение: $$r^2+4r+13=0\\quad\\Longrightarrow\\quad r=\\frac{-4\\pm\\sqrt{16-52}}{2}=-2\\pm3i$$",
+    "Комплексные корни ($\\alpha=-2$, $\\omega=3$): $$y=e^{-2x}\\left(C_1\\cos3x+C_2\\sin3x\\right)$$",
+    "$y(0)=C_1=0$; затем $y'(0)=3C_2=6$: $$C_2=2\\quad\\Longrightarrow\\quad y=2e^{-2x}\\sin3x$$",
+    "Это затухающее колебание, амплитуда которого убывает по закону $e^{-2x}$."
+   ],
+   "en": [
+    "Characteristic equation: $$r^2+4r+13=0\\quad\\Longrightarrow\\quad r=\\frac{-4\\pm\\sqrt{16-52}}{2}=-2\\pm3i$$",
+    "Complex roots ($\\alpha=-2$, $\\omega=3$): $$y=e^{-2x}\\left(C_1\\cos3x+C_2\\sin3x\\right)$$",
+    "$y(0)=C_1=0$; then $y'(0)=3C_2=6$: $$C_2=2\\quad\\Longrightarrow\\quad y=2e^{-2x}\\sin3x$$",
+    "This is a damped oscillation whose amplitude decreases as $e^{-2x}$."
+   ]
+  },
+  "basis": {
+   "uz": "Kompleks ildizlar: $y=e^{\\alpha x}(C_1\\cos\\omega x+C_2\\sin\\omega x)$",
+   "ru": "Комплексные корни: $y=e^{\\alpha x}(C_1\\cos\\omega x+C_2\\sin\\omega x)$",
+   "en": "Complex roots: $y=e^{\\alpha x}(C_1\\cos\\omega x+C_2\\sin\\omega x)$"
+  },
+  "answer": "y=2e^{-2x}\\sin3x",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original"
+ },
+ {
+  "id": "B0-L06-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$m=0.50\\ \\mathrm{kg}$ yuk bikrligi $k=50\\ \\mathrm{N/m}$ prujinaga osilgan. $t=0$ da $x_0=0.10\\ \\mathrm{m}$, $v_0=1.0\\ \\mathrm{m/s}$. $x(t)=A\\cos(\\omega_0t+\\varphi)$ ko'rinishida harakat qonunini, davrni va maksimal tezlikni toping.",
+   "ru": "Груз массой $m=0.50\\ \\text{кг}$ подвешен на пружине жёсткостью $k=50\\ \\text{Н/м}$. При $t=0$: $x_0=0.10\\ \\text{м}$, $v_0=1.0\\ \\text{м/с}$. Найдите закон движения в виде $x(t)=A\\cos(\\omega_0t+\\varphi)$, период и максимальную скорость.",
+   "en": "A mass $m=0.50\\ \\mathrm{kg}$ hangs on a spring of stiffness $k=50\\ \\mathrm{N/m}$. At $t=0$, $x_0=0.10\\ \\mathrm{m}$ and $v_0=1.0\\ \\mathrm{m/s}$. Find the law of motion in the form $x(t)=A\\cos(\\omega_0t+\\varphi)$, the period and the maximum speed."
+  },
+  "figure": "figures/B0-L06-S10.png",
+  "solution": {
+   "uz": [
+    "Xususiy siklik chastota: $$\\omega_0=\\sqrt{\\frac{k}{m}}=\\sqrt{100}=10\\ \\mathrm{rad/s}$$",
+    "Amplituda: $$A=\\sqrt{x_0^2+\\left(\\frac{v_0}{\\omega_0}\\right)^2}=\\sqrt{0.01+0.01}=0.1\\sqrt2\\approx0.14\\ \\mathrm{m}$$",
+    "Faza: $x(0)=A\\cos\\varphi$, $\\ v(0)=-A\\omega_0\\sin\\varphi$: $$\\cos\\varphi=\\frac{1}{\\sqrt2},\\quad \\sin\\varphi=-\\frac{1}{\\sqrt2}\\quad\\Longrightarrow\\quad \\varphi=-\\frac{\\pi}{4}$$",
+    "Davr va maksimal tezlik: $$T=\\frac{2\\pi}{\\omega_0}\\approx0.63\\ \\mathrm{s},\\qquad v_{\\max}=A\\omega_0=\\sqrt2\\approx1.41\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Собственная циклическая частота: $$\\omega_0=\\sqrt{\\frac{k}{m}}=\\sqrt{100}=10\\ \\mathrm{rad/s}$$",
+    "Амплитуда: $$A=\\sqrt{x_0^2+\\left(\\frac{v_0}{\\omega_0}\\right)^2}=\\sqrt{0.01+0.01}=0.1\\sqrt2\\approx0.14\\ \\mathrm{m}$$",
+    "Фаза: $x(0)=A\\cos\\varphi$, $\\ v(0)=-A\\omega_0\\sin\\varphi$: $$\\cos\\varphi=\\frac{1}{\\sqrt2},\\quad \\sin\\varphi=-\\frac{1}{\\sqrt2}\\quad\\Longrightarrow\\quad \\varphi=-\\frac{\\pi}{4}$$",
+    "Период и максимальная скорость: $$T=\\frac{2\\pi}{\\omega_0}\\approx0.63\\ \\mathrm{s},\\qquad v_{\\max}=A\\omega_0=\\sqrt2\\approx1.41\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Natural angular frequency: $$\\omega_0=\\sqrt{\\frac{k}{m}}=\\sqrt{100}=10\\ \\mathrm{rad/s}$$",
+    "Amplitude: $$A=\\sqrt{x_0^2+\\left(\\frac{v_0}{\\omega_0}\\right)^2}=\\sqrt{0.01+0.01}=0.1\\sqrt2\\approx0.14\\ \\mathrm{m}$$",
+    "Phase: $x(0)=A\\cos\\varphi$, $\\ v(0)=-A\\omega_0\\sin\\varphi$: $$\\cos\\varphi=\\frac{1}{\\sqrt2},\\quad \\sin\\varphi=-\\frac{1}{\\sqrt2}\\quad\\Longrightarrow\\quad \\varphi=-\\frac{\\pi}{4}$$",
+    "Period and maximum speed: $$T=\\frac{2\\pi}{\\omega_0}\\approx0.63\\ \\mathrm{s},\\qquad v_{\\max}=A\\omega_0=\\sqrt2\\approx1.41\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$x''+\\omega_0^2x=0$, $\\ \\omega_0=\\sqrt{k/m}$",
+   "ru": "$x''+\\omega_0^2x=0$, $\\ \\omega_0=\\sqrt{k/m}$",
+   "en": "$x''+\\omega_0^2x=0$, $\\ \\omega_0=\\sqrt{k/m}$"
+  },
+  "answer": "x=0.14\\cos\\left(10t-\\frac{\\pi}{4}\\right)\\ \\mathrm{m},\\quad T\\approx0.63\\ \\mathrm{s},\\quad v_{\\max}\\approx1.41\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original"
+ },
+ {
+  "id": "B0-L06-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$L=2.0\\ \\mathrm{mH}$ g'altak va $C=5.0\\ \\mu\\mathrm{F}$ kondensatordan iborat konturda $t=0$ da kondensator zaryadi $q_0=10\\ \\mu\\mathrm{C}$, tok nol. Zaryad uchun tenglamani yozing; $\\omega_0$, chastota $f$ va maksimal tokni toping.",
+   "ru": "В контуре из катушки $L=2.0\\ \\text{мГн}$ и конденсатора $C=5.0\\ \\text{мкФ}$ при $t=0$ заряд конденсатора $q_0=10\\ \\text{мкКл}$, ток равен нулю. Запишите уравнение для заряда; найдите $\\omega_0$, частоту $f$ и максимальный ток.",
+   "en": "In a circuit made of a coil $L=2.0\\ \\mathrm{mH}$ and a capacitor $C=5.0\\ \\mu\\mathrm{F}$, at $t=0$ the capacitor charge is $q_0=10\\ \\mu\\mathrm{C}$ and the current is zero. Write the equation for the charge; find $\\omega_0$, the frequency $f$ and the maximum current."
+  },
+  "figure": "figures/B0-L06-S11.png",
+  "solution": {
+   "uz": [
+    "Kirxgof qoidasi: $L\\,I'+q/C=0$, $\\ I=q'$: $$q''+\\frac{1}{LC}\\,q=0\\quad\\Longrightarrow\\quad q=q_0\\cos\\omega_0t$$",
+    "Siklik chastota va chastota: $$\\omega_0=\\frac{1}{\\sqrt{LC}}=\\frac{1}{\\sqrt{10^{-8}}}=1.0\\times10^4\\ \\mathrm{rad/s},\\qquad f=\\frac{\\omega_0}{2\\pi}\\approx1.6\\ \\mathrm{kHz}$$",
+    "Maksimal tok: $$I_{\\max}=\\omega_0q_0=10^4\\cdot10^{-5}=0.10\\ \\mathrm{A}$$",
+    "Tekshiruv — energiya saqlanishi: $$\\frac{q_0^2}{2C}=\\frac{10^{-10}}{10^{-5}}=10^{-5}\\ \\mathrm{J}=\\frac{L\\,I_{\\max}^2}{2}$$"
+   ],
+   "ru": [
+    "Правило Кирхгофа: $L\\,I'+q/C=0$, $\\ I=q'$: $$q''+\\frac{1}{LC}\\,q=0\\quad\\Longrightarrow\\quad q=q_0\\cos\\omega_0t$$",
+    "Циклическая частота и частота: $$\\omega_0=\\frac{1}{\\sqrt{LC}}=\\frac{1}{\\sqrt{10^{-8}}}=1.0\\times10^4\\ \\mathrm{rad/s},\\qquad f=\\frac{\\omega_0}{2\\pi}\\approx1.6\\ \\mathrm{kHz}$$",
+    "Максимальный ток: $$I_{\\max}=\\omega_0q_0=10^4\\cdot10^{-5}=0.10\\ \\mathrm{A}$$",
+    "Проверка — сохранение энергии: $$\\frac{q_0^2}{2C}=\\frac{10^{-10}}{10^{-5}}=10^{-5}\\ \\mathrm{J}=\\frac{L\\,I_{\\max}^2}{2}$$"
+   ],
+   "en": [
+    "Kirchhoff's rule: $L\\,I'+q/C=0$, $\\ I=q'$: $$q''+\\frac{1}{LC}\\,q=0\\quad\\Longrightarrow\\quad q=q_0\\cos\\omega_0t$$",
+    "Angular frequency and frequency: $$\\omega_0=\\frac{1}{\\sqrt{LC}}=\\frac{1}{\\sqrt{10^{-8}}}=1.0\\times10^4\\ \\mathrm{rad/s},\\qquad f=\\frac{\\omega_0}{2\\pi}\\approx1.6\\ \\mathrm{kHz}$$",
+    "Maximum current: $$I_{\\max}=\\omega_0q_0=10^4\\cdot10^{-5}=0.10\\ \\mathrm{A}$$",
+    "Check — energy conservation: $$\\frac{q_0^2}{2C}=\\frac{10^{-10}}{10^{-5}}=10^{-5}\\ \\mathrm{J}=\\frac{L\\,I_{\\max}^2}{2}$$"
+   ]
+  },
+  "basis": {
+   "uz": "LC kontur — garmonik ossilyator: $\\omega_0=1/\\sqrt{LC}$",
+   "ru": "LC-контур — гармонический осциллятор: $\\omega_0=1/\\sqrt{LC}$",
+   "en": "An LC circuit is a harmonic oscillator: $\\omega_0=1/\\sqrt{LC}$"
+  },
+  "answer": "\\omega_0=1.0\\times10^4\\ \\mathrm{rad/s},\\quad f\\approx1.6\\ \\mathrm{kHz},\\quad I_{\\max}=0.10\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original"
+ },
+ {
+  "id": "B0-L06-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$m=1.0\\ \\mathrm{kg}$, $k=100\\ \\mathrm{N/m}$, qarshilik koeffitsiyenti $b=4.0\\ \\mathrm{kg/s}$ bo'lgan ossilyator uchun $\\beta$, $\\omega_0$, $\\omega_d$ ni toping. So'nish turi qanday? Amplituda qancha vaqtda ikki marta kamayadi? Asllik $Q$ va kritik so'nish uchun $b$ qiymati qancha?",
+   "ru": "Для осциллятора с $m=1.0\\ \\text{кг}$, $k=100\\ \\text{Н/м}$ и коэффициентом сопротивления $b=4.0\\ \\text{кг/с}$ найдите $\\beta$, $\\omega_0$, $\\omega_d$. Каков тип затухания? За какое время амплитуда уменьшится вдвое? Чему равны добротность $Q$ и значение $b$ для критического затухания?",
+   "en": "For an oscillator with $m=1.0\\ \\mathrm{kg}$, $k=100\\ \\mathrm{N/m}$ and drag coefficient $b=4.0\\ \\mathrm{kg/s}$, find $\\beta$, $\\omega_0$ and $\\omega_d$. What type of damping is it? In what time does the amplitude halve? What are the quality factor $Q$ and the value of $b$ for critical damping?"
+  },
+  "figure": "figures/B0-L06-S12.png",
+  "solution": {
+   "uz": [
+    "Parametrlar: $$\\beta=\\frac{b}{2m}=2.0\\ \\mathrm{s^{-1}},\\qquad \\omega_0=\\sqrt{\\frac{k}{m}}=10\\ \\mathrm{rad/s}$$",
+    "$\\beta<\\omega_0$ — kuchsiz so'nish; tebranish chastotasi: $$\\omega_d=\\sqrt{\\omega_0^2-\\beta^2}=\\sqrt{96}\\approx9.8\\ \\mathrm{rad/s}$$",
+    "Amplituda $e^{-\\beta t}$ bo'yicha kamayadi: $$e^{-\\beta t_{1/2}}=\\frac12\\ \\Longrightarrow\\ t_{1/2}=\\frac{\\ln2}{\\beta}\\approx0.35\\ \\mathrm{s}$$",
+    "Asllik va kritik so'nish: $$Q=\\frac{\\omega_0}{2\\beta}=2.5,\\qquad b_{\\mathrm{cr}}=2\\sqrt{mk}=20\\ \\mathrm{kg/s}$$"
+   ],
+   "ru": [
+    "Параметры: $$\\beta=\\frac{b}{2m}=2.0\\ \\mathrm{s^{-1}},\\qquad \\omega_0=\\sqrt{\\frac{k}{m}}=10\\ \\mathrm{rad/s}$$",
+    "$\\beta<\\omega_0$ — слабое затухание; частота колебаний: $$\\omega_d=\\sqrt{\\omega_0^2-\\beta^2}=\\sqrt{96}\\approx9.8\\ \\mathrm{rad/s}$$",
+    "Амплитуда убывает как $e^{-\\beta t}$: $$e^{-\\beta t_{1/2}}=\\frac12\\ \\Longrightarrow\\ t_{1/2}=\\frac{\\ln2}{\\beta}\\approx0.35\\ \\mathrm{s}$$",
+    "Добротность и критическое затухание: $$Q=\\frac{\\omega_0}{2\\beta}=2.5,\\qquad b_{\\mathrm{cr}}=2\\sqrt{mk}=20\\ \\mathrm{kg/s}$$"
+   ],
+   "en": [
+    "Parameters: $$\\beta=\\frac{b}{2m}=2.0\\ \\mathrm{s^{-1}},\\qquad \\omega_0=\\sqrt{\\frac{k}{m}}=10\\ \\mathrm{rad/s}$$",
+    "$\\beta<\\omega_0$ — underdamping; oscillation frequency: $$\\omega_d=\\sqrt{\\omega_0^2-\\beta^2}=\\sqrt{96}\\approx9.8\\ \\mathrm{rad/s}$$",
+    "The amplitude decreases as $e^{-\\beta t}$: $$e^{-\\beta t_{1/2}}=\\frac12\\ \\Longrightarrow\\ t_{1/2}=\\frac{\\ln2}{\\beta}\\approx0.35\\ \\mathrm{s}$$",
+    "Quality factor and critical damping: $$Q=\\frac{\\omega_0}{2\\beta}=2.5,\\qquad b_{\\mathrm{cr}}=2\\sqrt{mk}=20\\ \\mathrm{kg/s}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$x''+2\\beta x'+\\omega_0^2x=0$, $\\ \\omega_d=\\sqrt{\\omega_0^2-\\beta^2}$",
+   "ru": "$x''+2\\beta x'+\\omega_0^2x=0$, $\\ \\omega_d=\\sqrt{\\omega_0^2-\\beta^2}$",
+   "en": "$x''+2\\beta x'+\\omega_0^2x=0$, $\\ \\omega_d=\\sqrt{\\omega_0^2-\\beta^2}$"
+  },
+  "answer": "\\beta=2.0\\ \\mathrm{s^{-1}},\\ \\omega_0=10\\ \\mathrm{rad/s},\\ \\omega_d\\approx9.8\\ \\mathrm{rad/s},\\ t_{1/2}\\approx0.35\\ \\mathrm{s},\\ Q=2.5,\\ b_{\\mathrm{cr}}=20\\ \\mathrm{kg/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original"
+ },
+ {
+  "id": "B0-L06-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$m=0.20\\ \\mathrm{kg}$, $k=20\\ \\mathrm{N/m}$ ossilyatorga $F=F_0\\cos\\omega t$, $F_0=0.60\\ \\mathrm{N}$ kuch ta'sir qiladi. (a) So'nish yo'q, $\\omega=5.0\\ \\mathrm{rad/s}$: $x_{\\mathrm{p}}=A\\cos\\omega t$ xususiy yechimni toping. (b) $b=0.40\\ \\mathrm{kg/s}$ va $\\omega=\\omega_0$ bo'lganda barqaror tebranish amplitudasi qancha?",
+   "ru": "На осциллятор с $m=0.20\\ \\text{кг}$, $k=20\\ \\text{Н/м}$ действует сила $F=F_0\\cos\\omega t$, $F_0=0.60\\ \\text{Н}$. (a) Затухания нет, $\\omega=5.0\\ \\text{рад/с}$: найдите частное решение $x_{\\mathrm{p}}=A\\cos\\omega t$. (b) Какова амплитуда установившихся колебаний при $b=0.40\\ \\text{кг/с}$ и $\\omega=\\omega_0$?",
+   "en": "An oscillator with $m=0.20\\ \\mathrm{kg}$, $k=20\\ \\mathrm{N/m}$ is driven by a force $F=F_0\\cos\\omega t$ with $F_0=0.60\\ \\mathrm{N}$. (a) No damping, $\\omega=5.0\\ \\mathrm{rad/s}$: find the particular solution $x_{\\mathrm{p}}=A\\cos\\omega t$. (b) What is the steady-state amplitude for $b=0.40\\ \\mathrm{kg/s}$ and $\\omega=\\omega_0$?"
+  },
+  "figure": "figures/B0-L06-S13.png",
+  "solution": {
+   "uz": [
+    "Xususiy chastota: $$\\omega_0=\\sqrt{\\frac{k}{m}}=10\\ \\mathrm{rad/s}$$",
+    "(a) $x_{\\mathrm{p}}=A\\cos\\omega t$ ni $x''+\\omega_0^2x=\\dfrac{F_0}{m}\\cos\\omega t$ ga qo'yamiz: $$A\\left(\\omega_0^2-\\omega^2\\right)=\\frac{F_0}{m}\\ \\Longrightarrow\\ A=\\frac{0.60}{0.20\\,(100-25)}=0.040\\ \\mathrm{m}$$",
+    "$A>0$: siljish kuch bilan bir fazada ($\\omega<\\omega_0$). $$x_{\\mathrm{p}}=0.040\\cos5t\\ \\mathrm{m}$$",
+    "(b) Rezonansda ($\\omega=\\omega_0$, $\\beta=b/2m=1.0\\ \\mathrm{s^{-1}}$): $$A=\\frac{F_0/m}{2\\beta\\omega_0}=\\frac{F_0}{b\\,\\omega_0}=\\frac{0.60}{0.40\\cdot10}=0.15\\ \\mathrm{m},\\qquad \\delta=\\frac{\\pi}{2}$$"
+   ],
+   "ru": [
+    "Собственная частота: $$\\omega_0=\\sqrt{\\frac{k}{m}}=10\\ \\mathrm{rad/s}$$",
+    "(a) Подставляем $x_{\\mathrm{p}}=A\\cos\\omega t$ в $x''+\\omega_0^2x=\\dfrac{F_0}{m}\\cos\\omega t$: $$A\\left(\\omega_0^2-\\omega^2\\right)=\\frac{F_0}{m}\\ \\Longrightarrow\\ A=\\frac{0.60}{0.20\\,(100-25)}=0.040\\ \\mathrm{m}$$",
+    "$A>0$: смещение в фазе с силой ($\\omega<\\omega_0$). $$x_{\\mathrm{p}}=0.040\\cos5t\\ \\mathrm{m}$$",
+    "(b) При резонансе ($\\omega=\\omega_0$, $\\beta=b/2m=1.0\\ \\mathrm{s^{-1}}$): $$A=\\frac{F_0/m}{2\\beta\\omega_0}=\\frac{F_0}{b\\,\\omega_0}=\\frac{0.60}{0.40\\cdot10}=0.15\\ \\mathrm{m},\\qquad \\delta=\\frac{\\pi}{2}$$"
+   ],
+   "en": [
+    "Natural frequency: $$\\omega_0=\\sqrt{\\frac{k}{m}}=10\\ \\mathrm{rad/s}$$",
+    "(a) Substitute $x_{\\mathrm{p}}=A\\cos\\omega t$ into $x''+\\omega_0^2x=\\dfrac{F_0}{m}\\cos\\omega t$: $$A\\left(\\omega_0^2-\\omega^2\\right)=\\frac{F_0}{m}\\ \\Longrightarrow\\ A=\\frac{0.60}{0.20\\,(100-25)}=0.040\\ \\mathrm{m}$$",
+    "$A>0$: the displacement is in phase with the force ($\\omega<\\omega_0$). $$x_{\\mathrm{p}}=0.040\\cos5t\\ \\mathrm{m}$$",
+    "(b) At resonance ($\\omega=\\omega_0$, $\\beta=b/2m=1.0\\ \\mathrm{s^{-1}}$): $$A=\\frac{F_0/m}{2\\beta\\omega_0}=\\frac{F_0}{b\\,\\omega_0}=\\frac{0.60}{0.40\\cdot10}=0.15\\ \\mathrm{m},\\qquad \\delta=\\frac{\\pi}{2}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Bir jinsli bo'lmagan tenglamaning xususiy yechimi; $A(\\omega_0)=F_0/(b\\,\\omega_0)$",
+   "ru": "Частное решение неоднородного уравнения; $A(\\omega_0)=F_0/(b\\,\\omega_0)$",
+   "en": "Particular solution of an inhomogeneous equation; $A(\\omega_0)=F_0/(b\\,\\omega_0)$"
+  },
+  "answer": "(a)\\ x_{\\mathrm{p}}=0.040\\cos5t\\ \\mathrm{m};\\quad (b)\\ A=0.15\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original"
+ }
+]
