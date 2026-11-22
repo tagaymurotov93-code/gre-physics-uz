@@ -1,0 +1,773 @@
+[
+ {
+  "id": "B1-L04-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Jism tezligining grafigi $(0;\\ 4)$ va $(6;\\ 16)$ nuqtalardan o'tuvchi to'g'ri chiziq ($t$ — sekundda, $v$ — $\\mathrm{m/s}$ da). Boshlang'ich tezlik va tezlanishni toping, $v(t)$ tenglamasini yozing va $t=9\\ \\mathrm{s}$ dagi tezlikni toping.",
+   "ru": "График скорости тела — прямая, проходящая через точки $(0;\\ 4)$ и $(6;\\ 16)$ ($t$ — в секундах, $v$ — в $\\mathrm{m/s}$). Найдите начальную скорость и ускорение, запишите уравнение $v(t)$ и найдите скорость при $t=9\\ \\mathrm{s}$.",
+   "en": "A body's velocity graph is a straight line through the points $(0;\\ 4)$ and $(6;\\ 16)$ ($t$ in seconds, $v$ in $\\mathrm{m/s}$). Find the initial velocity and the acceleration, write the equation $v(t)$, and find the velocity at $t=9\\ \\mathrm{s}$."
+  },
+  "figure": "figures/B1-L04-S01.png",
+  "solution": {
+   "uz": [
+    "Grafik tezlik o'qini $4$ da kesadi: $$v_0=4\\ \\mathrm{m/s}$$",
+    "Tezlanish — grafik qiyaligi: $$a=\\frac{16-4}{6-0}=2\\ \\mathrm{m/s^2}$$",
+    "Tezlik tenglamasi va $t=9\\ \\mathrm{s}$ dagi tezlik: $$v=4+2t,\\qquad v(9)=4+18=22\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "График пересекает ось скорости в точке $4$: $$v_0=4\\ \\mathrm{m/s}$$",
+    "Ускорение — наклон графика: $$a=\\frac{16-4}{6-0}=2\\ \\mathrm{m/s^2}$$",
+    "Уравнение скорости и скорость при $t=9\\ \\mathrm{s}$: $$v=4+2t,\\qquad v(9)=4+18=22\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "The graph crosses the velocity axis at $4$: $$v_0=4\\ \\mathrm{m/s}$$",
+    "The acceleration is the slope of the graph: $$a=\\frac{16-4}{6-0}=2\\ \\mathrm{m/s^2}$$",
+    "The velocity equation and the velocity at $t=9\\ \\mathrm{s}$: $$v=4+2t,\\qquad v(9)=4+18=22\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$v(t)$ grafigining tezlik o'qi bilan kesishish nuqtasi — boshlang'ich tezlik $v_0$",
+    "ru": "Точка пересечения графика $v(t)$ с осью скорости — начальная скорость $v_0$",
+    "en": "The point where the $v(t)$ graph crosses the velocity axis is the initial velocity $v_0$"
+   },
+   {
+    "uz": "$v(t)$ grafigining qiyaligi — tezlanish: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "ru": "Наклон графика $v(t)$ — ускорение: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "en": "The slope of the $v(t)$ graph is the acceleration: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$"
+   },
+   {
+    "uz": "Tekis o'zgaruvchan harakatda tezlik: $v=v_0+at$",
+    "ru": "Скорость при равнопеременном движении: $v=v_0+at$",
+    "en": "Velocity in uniformly accelerated motion: $v=v_0+at$"
+   }
+  ],
+  "basis": {
+   "uz": "Grafik qiyaligi — tezlanish",
+   "ru": "Наклон графика — ускорение",
+   "en": "Slope of the graph is the acceleration"
+  },
+  "answer": "v_0=4\\ \\mathrm{m/s};\\ a=2\\ \\mathrm{m/s^2};\\ v=4+2t;\\ 22\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 5, 9, 18-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Avtomobil tezligi grafigi $(0;\\ 18)$ nuqtadan $(6;\\ 0)$ nuqtagacha to'g'ri chiziq. Harakat turini aniqlang, tezlanishni toping, $v(t)$ tenglamasini yozing. Tezlik qachon $3$ marta kamayadi?",
+   "ru": "График скорости автомобиля — отрезок прямой от точки $(0;\\ 18)$ до точки $(6;\\ 0)$. Определите вид движения, найдите ускорение, запишите уравнение $v(t)$. Когда скорость уменьшится в $3$ раза?",
+   "en": "A car's velocity graph is a straight segment from $(0;\\ 18)$ to $(6;\\ 0)$. Identify the type of motion, find the acceleration and write the equation $v(t)$. When does the speed become $3$ times smaller?"
+  },
+  "figure": "figures/B1-L04-S02.png",
+  "solution": {
+   "uz": [
+    "Grafik $t$ o'qiga yaqinlashmoqda — tezlik moduli kamayadi, harakat tekis sekinlanuvchan.",
+    "Qiyalik: $$a=\\frac{0-18}{6}=-3\\ \\mathrm{m/s^2},\\qquad v=18-3t$$",
+    "Tezlik $3$ marta kamayganda $v=6\\ \\mathrm{m/s}$: $$18-3t=6\\ \\Rightarrow\\ t=4\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "График приближается к оси $t$ — модуль скорости уменьшается, движение равнозамедленное.",
+    "Наклон: $$a=\\frac{0-18}{6}=-3\\ \\mathrm{m/s^2},\\qquad v=18-3t$$",
+    "При уменьшении скорости в $3$ раза $v=6\\ \\mathrm{m/s}$: $$18-3t=6\\ \\Rightarrow\\ t=4\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The graph approaches the $t$ axis — the speed decreases; the motion is uniformly decelerated.",
+    "Slope: $$a=\\frac{0-18}{6}=-3\\ \\mathrm{m/s^2},\\qquad v=18-3t$$",
+    "When the speed is $3$ times smaller, $v=6\\ \\mathrm{m/s}$: $$18-3t=6\\ \\Rightarrow\\ t=4\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$v(t)$ grafigi $t$ o'qiga parallel — tekis harakat; $t$ o'qidan uzoqlashsa — tezlanuvchan, yaqinlashsa — sekinlanuvchan",
+    "ru": "График $v(t)$ параллелен оси $t$ — равномерное движение; удаляется от оси $t$ — ускоренное, приближается — замедленное",
+    "en": "A $v(t)$ graph parallel to the $t$ axis means uniform motion; moving away from the $t$ axis — speeding up; approaching it — slowing down"
+   },
+   {
+    "uz": "$v(t)$ grafigining qiyaligi — tezlanish: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "ru": "Наклон графика $v(t)$ — ускорение: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "en": "The slope of the $v(t)$ graph is the acceleration: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$"
+   },
+   {
+    "uz": "Tekis o'zgaruvchan harakatda tezlik: $v=v_0+at$",
+    "ru": "Скорость при равнопеременном движении: $v=v_0+at$",
+    "en": "Velocity in uniformly accelerated motion: $v=v_0+at$"
+   }
+  ],
+  "basis": {
+   "uz": "Grafik qiyaligi, sekinlanuvchan harakat",
+   "ru": "Наклон графика, замедленное движение",
+   "en": "Slope of the graph, slowing down"
+  },
+  "answer": "a=-3\\ \\mathrm{m/s^2};\\ v=18-3t;\\ t=4\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 19, 25-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Bitta chizmada uchta jismning tezlik grafiklari berilgan: 1) $(0;\\ 0)$ dan $(4;\\ 12)$ gacha; 2) $(0;\\ 6)$ dan $(4;\\ 12)$ gacha; 3) $(0;\\ 12)$ dan $(3;\\ 0)$ gacha. Har birining tezlanishini toping, harakat turini aniqlang va tezlanishlar modullarini taqqoslang.",
+   "ru": "На одном чертеже даны графики скорости трёх тел: 1) от $(0;\\ 0)$ до $(4;\\ 12)$; 2) от $(0;\\ 6)$ до $(4;\\ 12)$; 3) от $(0;\\ 12)$ до $(3;\\ 0)$. Найдите ускорение каждого, определите вид движения и сравните модули ускорений.",
+   "en": "One drawing shows the velocity graphs of three bodies: 1) from $(0;\\ 0)$ to $(4;\\ 12)$; 2) from $(0;\\ 6)$ to $(4;\\ 12)$; 3) from $(0;\\ 12)$ to $(3;\\ 0)$. Find each acceleration, identify each type of motion and compare the magnitudes of the accelerations."
+  },
+  "figure": "figures/B1-L04-S03.png",
+  "solution": {
+   "uz": [
+    "Har bir grafik qiyaligini topamiz: $$a_1=\\frac{12}{4}=3\\ \\mathrm{m/s^2},\\qquad a_2=\\frac{12-6}{4}=1.5\\ \\mathrm{m/s^2},\\qquad a_3=\\frac{0-12}{3}=-4\\ \\mathrm{m/s^2}$$",
+    "1 va 2 grafiklar $t$ o'qidan uzoqlashadi — tezlanuvchan; 3-grafik $t$ o'qiga yaqinlashadi — sekinlanuvchan harakat.",
+    "Eng tik grafik — 3-chi, eng yotiq — 2-chi: $$|a_3|>|a_1|>|a_2|$$"
+   ],
+   "ru": [
+    "Находим наклон каждого графика: $$a_1=\\frac{12}{4}=3\\ \\mathrm{m/s^2},\\qquad a_2=\\frac{12-6}{4}=1.5\\ \\mathrm{m/s^2},\\qquad a_3=\\frac{0-12}{3}=-4\\ \\mathrm{m/s^2}$$",
+    "Графики 1 и 2 удаляются от оси $t$ — ускоренное движение; график 3 приближается к оси $t$ — замедленное.",
+    "Самый крутой график — 3-й, самый пологий — 2-й: $$|a_3|>|a_1|>|a_2|$$"
+   ],
+   "en": [
+    "Find the slope of each graph: $$a_1=\\frac{12}{4}=3\\ \\mathrm{m/s^2},\\qquad a_2=\\frac{12-6}{4}=1.5\\ \\mathrm{m/s^2},\\qquad a_3=\\frac{0-12}{3}=-4\\ \\mathrm{m/s^2}$$",
+    "Graphs 1 and 2 move away from the $t$ axis — speeding up; graph 3 approaches the $t$ axis — slowing down.",
+    "The steepest graph is the 3rd, the flattest the 2nd: $$|a_3|>|a_1|>|a_2|$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$v(t)$ grafigining qiyaligi — tezlanish: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "ru": "Наклон графика $v(t)$ — ускорение: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "en": "The slope of the $v(t)$ graph is the acceleration: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$"
+   },
+   {
+    "uz": "$v(t)$ grafigi $t$ o'qiga parallel — tekis harakat; $t$ o'qidan uzoqlashsa — tezlanuvchan, yaqinlashsa — sekinlanuvchan",
+    "ru": "График $v(t)$ параллелен оси $t$ — равномерное движение; удаляется от оси $t$ — ускоренное, приближается — замедленное",
+    "en": "A $v(t)$ graph parallel to the $t$ axis means uniform motion; moving away from the $t$ axis — speeding up; approaching it — slowing down"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Qiyalik — tezlanish; harakat turi",
+   "ru": "Наклон — ускорение; вид движения",
+   "en": "Slope is acceleration; type of motion"
+  },
+  "answer": "3;\\ 1.5;\\ -4\\ \\mathrm{m/s^2};\\quad |a_3|>|a_1|>|a_2|",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 1–2, 15, 32-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S04",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Jism tezligi grafigi siniq chiziq: $(0;\\ 0)\\to(2;\\ 6)\\to(5;\\ 6)\\to(8;\\ 0)$. Har bir bo'lakda harakat turini va tezlanishni aniqlang, $a(t)$ grafigini chizing.",
+   "ru": "График скорости тела — ломаная: $(0;\\ 0)\\to(2;\\ 6)\\to(5;\\ 6)\\to(8;\\ 0)$. Определите вид движения и ускорение на каждом участке, постройте график $a(t)$.",
+   "en": "A body's velocity graph is a broken line: $(0;\\ 0)\\to(2;\\ 6)\\to(5;\\ 6)\\to(8;\\ 0)$. Identify the type of motion and the acceleration on each part and sketch the $a(t)$ graph."
+  },
+  "figure": "figures/B1-L04-S04.png",
+  "solution": {
+   "uz": [
+    "$0$–$2\\ \\mathrm{s}$: tezlik ortadi — tekis tezlanuvchan: $$a_1=\\frac{6-0}{2}=3\\ \\mathrm{m/s^2}$$",
+    "$2$–$5\\ \\mathrm{s}$: grafik $t$ o'qiga parallel — tekis harakat: $$a_2=0$$",
+    "$5$–$8\\ \\mathrm{s}$: tezlik kamayadi — tekis sekinlanuvchan: $$a_3=\\frac{0-6}{3}=-2\\ \\mathrm{m/s^2}$$",
+    "$a(t)$ grafigi uchta gorizontal kesmadan iborat (chizmaning pastki qismi). $$a(t):\\ 3;\\ 0;\\ -2\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "$0$–$2\\ \\mathrm{s}$: скорость растёт — равноускоренное: $$a_1=\\frac{6-0}{2}=3\\ \\mathrm{m/s^2}$$",
+    "$2$–$5\\ \\mathrm{s}$: график параллелен оси $t$ — равномерное движение: $$a_2=0$$",
+    "$5$–$8\\ \\mathrm{s}$: скорость уменьшается — равнозамедленное: $$a_3=\\frac{0-6}{3}=-2\\ \\mathrm{m/s^2}$$",
+    "График $a(t)$ состоит из трёх горизонтальных отрезков (нижняя часть чертежа). $$a(t):\\ 3;\\ 0;\\ -2\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "$0$–$2\\ \\mathrm{s}$: the speed grows — uniformly accelerated: $$a_1=\\frac{6-0}{2}=3\\ \\mathrm{m/s^2}$$",
+    "$2$–$5\\ \\mathrm{s}$: the graph is parallel to the $t$ axis — uniform motion: $$a_2=0$$",
+    "$5$–$8\\ \\mathrm{s}$: the speed decreases — uniformly decelerated: $$a_3=\\frac{0-6}{3}=-2\\ \\mathrm{m/s^2}$$",
+    "The $a(t)$ graph consists of three horizontal segments (lower part of the drawing). $$a(t):\\ 3;\\ 0;\\ -2\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$v(t)$ grafigining qiyaligi — tezlanish: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "ru": "Наклон графика $v(t)$ — ускорение: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "en": "The slope of the $v(t)$ graph is the acceleration: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$"
+   },
+   {
+    "uz": "$v(t)$ grafigi $t$ o'qiga parallel — tekis harakat; $t$ o'qidan uzoqlashsa — tezlanuvchan, yaqinlashsa — sekinlanuvchan",
+    "ru": "График $v(t)$ параллелен оси $t$ — равномерное движение; удаляется от оси $t$ — ускоренное, приближается — замедленное",
+    "en": "A $v(t)$ graph parallel to the $t$ axis means uniform motion; moving away from the $t$ axis — speeding up; approaching it — slowing down"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Bo'lakli $v(t)$ grafigi va $a(t)$ grafigi",
+   "ru": "Ломаный график $v(t)$ и график $a(t)$",
+   "en": "Piecewise $v(t)$ graph and the $a(t)$ graph"
+  },
+  "answer": "a_1=3,\\ a_2=0,\\ a_3=-2\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 16–17, 26, 31-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S05",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Jism tezlanishining grafigi: $0$–$4\\ \\mathrm{s}$ da $a=1.5\\ \\mathrm{m/s^2}$, $4$–$6\\ \\mathrm{s}$ da $a=0$, $6$–$10\\ \\mathrm{s}$ da $a=-2\\ \\mathrm{m/s^2}$. Boshlang'ich tezlik $2\\ \\mathrm{m/s}$. $t=4$, $6$ va $10\\ \\mathrm{s}$ dagi tezliklarni toping.",
+   "ru": "График ускорения тела: на $0$–$4\\ \\mathrm{s}$ $a=1.5\\ \\mathrm{m/s^2}$, на $4$–$6\\ \\mathrm{s}$ $a=0$, на $6$–$10\\ \\mathrm{s}$ $a=-2\\ \\mathrm{m/s^2}$. Начальная скорость $2\\ \\mathrm{m/s}$. Найдите скорости при $t=4$, $6$ и $10\\ \\mathrm{s}$.",
+   "en": "A body's acceleration graph: $a=1.5\\ \\mathrm{m/s^2}$ for $0$–$4\\ \\mathrm{s}$, $a=0$ for $4$–$6\\ \\mathrm{s}$, $a=-2\\ \\mathrm{m/s^2}$ for $6$–$10\\ \\mathrm{s}$. The initial velocity is $2\\ \\mathrm{m/s}$. Find the velocities at $t=4$, $6$ and $10\\ \\mathrm{s}$."
+  },
+  "figure": "figures/B1-L04-S05.png",
+  "solution": {
+   "uz": [
+    "Har bir bo'lakdagi yuza — tezlik o'zgarishi: $$\\Delta v_1=1.5\\cdot4=6,\\qquad \\Delta v_2=0,\\qquad \\Delta v_3=-2\\cdot4=-8\\ \\mathrm{m/s}$$",
+    "Tezliklarni ketma-ket topamiz: $$v(4)=2+6=8,\\qquad v(6)=8,\\qquad v(10)=8-8=0\\ \\mathrm{m/s}$$",
+    "$t=10\\ \\mathrm{s}$ da jism to'xtaydi."
+   ],
+   "ru": [
+    "Площадь на каждом участке — изменение скорости: $$\\Delta v_1=1.5\\cdot4=6,\\qquad \\Delta v_2=0,\\qquad \\Delta v_3=-2\\cdot4=-8\\ \\mathrm{m/s}$$",
+    "Последовательно находим скорости: $$v(4)=2+6=8,\\qquad v(6)=8,\\qquad v(10)=8-8=0\\ \\mathrm{m/s}$$",
+    "При $t=10\\ \\mathrm{s}$ тело останавливается."
+   ],
+   "en": [
+    "The area of each part is the change in velocity: $$\\Delta v_1=1.5\\cdot4=6,\\qquad \\Delta v_2=0,\\qquad \\Delta v_3=-2\\cdot4=-8\\ \\mathrm{m/s}$$",
+    "Find the velocities one after another: $$v(4)=2+6=8,\\qquad v(6)=8,\\qquad v(10)=8-8=0\\ \\mathrm{m/s}$$",
+    "At $t=10\\ \\mathrm{s}$ the body stops."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$a(t)$ grafigi ostidagi yuza — tezlik o'zgarishi: $\\Delta v=a\\,\\Delta t$",
+    "ru": "Площадь под графиком $a(t)$ — изменение скорости: $\\Delta v=a\\,\\Delta t$",
+    "en": "The area under the $a(t)$ graph is the change in velocity: $\\Delta v=a\\,\\Delta t$"
+   },
+   {
+    "uz": "Tekis o'zgaruvchan harakatda tezlik: $v=v_0+at$",
+    "ru": "Скорость при равнопеременном движении: $v=v_0+at$",
+    "en": "Velocity in uniformly accelerated motion: $v=v_0+at$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "$a(t)$ grafigi ostidagi yuza — $\\Delta v$",
+   "ru": "Площадь под графиком $a(t)$ — $\\Delta v$",
+   "en": "Area under the $a(t)$ graph is $\\Delta v$"
+  },
+  "answer": "8;\\ 8;\\ 0\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 23, 34-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jism tezligi grafigi $(0;\\ 2)$ va $(4;\\ 10)$ nuqtalarni tutashtiruvchi kesma. Jismning $4\\ \\mathrm{s}$ dagi ko'chishini va $t_1=1\\ \\mathrm{s}$ dan $t_2=3\\ \\mathrm{s}$ gacha bosgan yo'lini toping.",
+   "ru": "График скорости тела — отрезок, соединяющий точки $(0;\\ 2)$ и $(4;\\ 10)$. Найдите перемещение тела за $4\\ \\mathrm{s}$ и путь от $t_1=1\\ \\mathrm{s}$ до $t_2=3\\ \\mathrm{s}$.",
+   "en": "A body's velocity graph is the segment joining $(0;\\ 2)$ and $(4;\\ 10)$. Find the displacement in $4\\ \\mathrm{s}$ and the distance from $t_1=1\\ \\mathrm{s}$ to $t_2=3\\ \\mathrm{s}$."
+  },
+  "figure": "figures/B1-L04-S06.png",
+  "solution": {
+   "uz": [
+    "Ko'chish — trapetsiya yuzasi: $$s=\\frac{2+10}{2}\\cdot4=24\\ \\mathrm{m}$$",
+    "Tezlanish va oraliq chegaralaridagi tezliklar: $$a=\\frac{10-2}{4}=2\\ \\mathrm{m/s^2},\\qquad v(1)=4\\ \\mathrm{m/s},\\qquad v(3)=8\\ \\mathrm{m/s}$$",
+    "$1$–$3\\ \\mathrm{s}$ oralig'idagi yuza: $$s_{13}=\\frac{4+8}{2}\\cdot2=12\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Перемещение — площадь трапеции: $$s=\\frac{2+10}{2}\\cdot4=24\\ \\mathrm{m}$$",
+    "Ускорение и скорости на границах интервала: $$a=\\frac{10-2}{4}=2\\ \\mathrm{m/s^2},\\qquad v(1)=4\\ \\mathrm{m/s},\\qquad v(3)=8\\ \\mathrm{m/s}$$",
+    "Площадь на интервале $1$–$3\\ \\mathrm{s}$: $$s_{13}=\\frac{4+8}{2}\\cdot2=12\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "The displacement is the area of the trapezoid: $$s=\\frac{2+10}{2}\\cdot4=24\\ \\mathrm{m}$$",
+    "The acceleration and the velocities at the ends of the interval: $$a=\\frac{10-2}{4}=2\\ \\mathrm{m/s^2},\\qquad v(1)=4\\ \\mathrm{m/s},\\qquad v(3)=8\\ \\mathrm{m/s}$$",
+    "The area over $1$–$3\\ \\mathrm{s}$: $$s_{13}=\\frac{4+8}{2}\\cdot2=12\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Trapetsiya yuzasi: $s=\\frac{v_1+v_2}{2}\\,\\Delta t$",
+    "ru": "Площадь трапеции: $s=\\frac{v_1+v_2}{2}\\,\\Delta t$",
+    "en": "Area of a trapezoid: $s=\\frac{v_1+v_2}{2}\\,\\Delta t$"
+   },
+   {
+    "uz": "$v(t)$ grafigining qiyaligi — tezlanish: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "ru": "Наклон графика $v(t)$ — ускорение: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "en": "The slope of the $v(t)$ graph is the acceleration: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$"
+   },
+   {
+    "uz": "$v(t)$ grafigi ostidagi yuza — ko'chish",
+    "ru": "Площадь под графиком $v(t)$ — перемещение",
+    "en": "The area under the $v(t)$ graph is the displacement"
+   }
+  ],
+  "basis": {
+   "uz": "$v(t)$ grafigi ostidagi yuza — ko'chish",
+   "ru": "Площадь под графиком $v(t)$ — перемещение",
+   "en": "Area under the $v(t)$ graph is the displacement"
+  },
+  "answer": "24\\ \\mathrm{m};\\quad 12\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 39–41-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Liftning tezlik grafigi: $0$–$2\\ \\mathrm{s}$ da tezlik $0$ dan $5\\ \\mathrm{m/s}$ gacha tekis ortadi, $2$–$7\\ \\mathrm{s}$ da o'zgarmaydi, $7$–$10\\ \\mathrm{s}$ da tekis kamayib, nolga teng bo'ladi. Lift qancha balandlikka ko'tarildi va uning o'rtacha tezligi qanday?",
+   "ru": "График скорости лифта: на $0$–$2\\ \\mathrm{s}$ скорость равномерно растёт от $0$ до $5\\ \\mathrm{m/s}$, на $2$–$7\\ \\mathrm{s}$ не меняется, на $7$–$10\\ \\mathrm{s}$ равномерно уменьшается до нуля. На какую высоту поднялся лифт и какова его средняя скорость?",
+   "en": "A lift's velocity graph: for $0$–$2\\ \\mathrm{s}$ the speed rises uniformly from $0$ to $5\\ \\mathrm{m/s}$, for $2$–$7\\ \\mathrm{s}$ it is constant, and for $7$–$10\\ \\mathrm{s}$ it decreases uniformly to zero. How high does the lift rise, and what is its average speed?"
+  },
+  "figure": "figures/B1-L04-S07.png",
+  "solution": {
+   "uz": [
+    "Yuzani uchta shaklga ajratamiz: $$h_1=\\frac{5\\cdot2}{2}=5\\ \\mathrm{m},\\qquad h_2=5\\cdot5=25\\ \\mathrm{m},\\qquad h_3=\\frac{5\\cdot3}{2}=7.5\\ \\mathrm{m}$$",
+    "Balandlik — umumiy yuza: $$h=5+25+7.5=37.5\\ \\mathrm{m}$$",
+    "O'rtacha tezlik: $$\\bar v=\\frac{37.5}{10}=3.75\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Делим площадь на три фигуры: $$h_1=\\frac{5\\cdot2}{2}=5\\ \\mathrm{m},\\qquad h_2=5\\cdot5=25\\ \\mathrm{m},\\qquad h_3=\\frac{5\\cdot3}{2}=7.5\\ \\mathrm{m}$$",
+    "Высота — полная площадь: $$h=5+25+7.5=37.5\\ \\mathrm{m}$$",
+    "Средняя скорость: $$\\bar v=\\frac{37.5}{10}=3.75\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Split the area into three shapes: $$h_1=\\frac{5\\cdot2}{2}=5\\ \\mathrm{m},\\qquad h_2=5\\cdot5=25\\ \\mathrm{m},\\qquad h_3=\\frac{5\\cdot3}{2}=7.5\\ \\mathrm{m}$$",
+    "The height is the total area: $$h=5+25+7.5=37.5\\ \\mathrm{m}$$",
+    "The average speed: $$\\bar v=\\frac{37.5}{10}=3.75\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uchburchak: $s=\\frac{v\\,\\Delta t}{2}$; to'g'ri to'rtburchak: $s=v\\,\\Delta t$",
+    "ru": "Треугольник: $s=\\frac{v\\,\\Delta t}{2}$; прямоугольник: $s=v\\,\\Delta t$",
+    "en": "Triangle: $s=\\frac{v\\,\\Delta t}{2}$; rectangle: $s=v\\,\\Delta t$"
+   },
+   {
+    "uz": "$v(t)$ grafigi ostidagi yuza — ko'chish",
+    "ru": "Площадь под графиком $v(t)$ — перемещение",
+    "en": "The area under the $v(t)$ graph is the displacement"
+   },
+   {
+    "uz": "O'rtacha tezlik: $\\bar v=\\frac{s}{t}$ (butun yo'l / butun vaqt)",
+    "ru": "Средняя скорость: $\\bar v=\\frac{s}{t}$ (весь путь / всё время)",
+    "en": "Average speed: $\\bar v=\\frac{s}{t}$ (total distance / total time)"
+   }
+  ],
+  "basis": {
+   "uz": "Yuza — ko'chish; o'rtacha tezlik",
+   "ru": "Площадь — перемещение; средняя скорость",
+   "en": "Area is displacement; average speed"
+  },
+  "answer": "h=37.5\\ \\mathrm{m};\\quad \\bar v=3.75\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 51, 65-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$x$ o'qi bo'ylab harakatlanayotgan jism tezligi proyeksiyasining grafigi $(0;\\ 8)$ dan $(6;\\ -4)$ gacha to'g'ri chiziq. Jismning $6\\ \\mathrm{s}$ dagi ko'chishi va yo'lini toping.",
+   "ru": "График проекции скорости тела, движущегося вдоль оси $x$, — прямая от $(0;\\ 8)$ до $(6;\\ -4)$. Найдите перемещение и путь тела за $6\\ \\mathrm{s}$.",
+   "en": "The graph of the velocity component of a body moving along the $x$ axis is a straight line from $(0;\\ 8)$ to $(6;\\ -4)$. Find the displacement and the distance in $6\\ \\mathrm{s}$."
+  },
+  "figure": "figures/B1-L04-S08.png",
+  "solution": {
+   "uz": [
+    "Tezlanish va tezlik tenglamasi; grafik $t$ o'qini kesadigan payt: $$a=\\frac{-4-8}{6}=-2\\ \\mathrm{m/s^2},\\qquad v=8-2t=0\\ \\Rightarrow\\ t=4\\ \\mathrm{s}$$",
+    "Uchburchaklar yuzalari: $$S_1=\\frac{8\\cdot4}{2}=16\\ \\mathrm{m},\\qquad S_2=\\frac{4\\cdot2}{2}=4\\ \\mathrm{m}$$",
+    "Ko'chish va yo'l: $$s=16-4=12\\ \\mathrm{m},\\qquad L=16+4=20\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Ускорение и уравнение скорости; момент пересечения графиком оси $t$: $$a=\\frac{-4-8}{6}=-2\\ \\mathrm{m/s^2},\\qquad v=8-2t=0\\ \\Rightarrow\\ t=4\\ \\mathrm{s}$$",
+    "Площади треугольников: $$S_1=\\frac{8\\cdot4}{2}=16\\ \\mathrm{m},\\qquad S_2=\\frac{4\\cdot2}{2}=4\\ \\mathrm{m}$$",
+    "Перемещение и путь: $$s=16-4=12\\ \\mathrm{m},\\qquad L=16+4=20\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "The acceleration and the velocity equation; the moment the graph crosses the $t$ axis: $$a=\\frac{-4-8}{6}=-2\\ \\mathrm{m/s^2},\\qquad v=8-2t=0\\ \\Rightarrow\\ t=4\\ \\mathrm{s}$$",
+    "The areas of the triangles: $$S_1=\\frac{8\\cdot4}{2}=16\\ \\mathrm{m},\\qquad S_2=\\frac{4\\cdot2}{2}=4\\ \\mathrm{m}$$",
+    "Displacement and distance: $$s=16-4=12\\ \\mathrm{m},\\qquad L=16+4=20\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'xtash payti: $v=0\\ \\Rightarrow\\ t=\\frac{v_0}{|a|}$ ($v(t)$ grafigi $t$ o'qini kesadi)",
+    "ru": "Момент остановки: $v=0\\ \\Rightarrow\\ t=\\frac{v_0}{|a|}$ (график $v(t)$ пересекает ось $t$)",
+    "en": "Moment of stopping: $v=0\\ \\Rightarrow\\ t=\\frac{v_0}{|a|}$ (the $v(t)$ graph crosses the $t$ axis)"
+   },
+   {
+    "uz": "Uchburchak: $s=\\frac{v\\,\\Delta t}{2}$; to'g'ri to'rtburchak: $s=v\\,\\Delta t$",
+    "ru": "Треугольник: $s=\\frac{v\\,\\Delta t}{2}$; прямоугольник: $s=v\\,\\Delta t$",
+    "en": "Triangle: $s=\\frac{v\\,\\Delta t}{2}$; rectangle: $s=v\\,\\Delta t$"
+   },
+   {
+    "uz": "Ko'chish — yuzalarning algebraik yig'indisi ($t$ o'qidan pastdagisi manfiy), yo'l — modullari yig'indisi",
+    "ru": "Перемещение — алгебраическая сумма площадей (под осью $t$ — со знаком минус), путь — сумма модулей",
+    "en": "Displacement is the algebraic sum of the areas (below the $t$ axis negative); distance is the sum of their magnitudes"
+   }
+  ],
+  "basis": {
+   "uz": "Yo'l va ko'chish: yuzalar ishorasi",
+   "ru": "Путь и перемещение: знаки площадей",
+   "en": "Distance and displacement: signs of the areas"
+  },
+  "answer": "s=12\\ \\mathrm{m};\\quad L=20\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 30, 52–53, 56–57-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jism tezligi grafigi $(0;\\ 2)$ va $(4;\\ 8)$ nuqtalardan o'tuvchi to'g'ri chiziq. $x_0=0$ deb, jismning harakat tenglamasini yozing va $t=4\\ \\mathrm{s}$ dagi koordinatasini toping.",
+   "ru": "График скорости тела — прямая через точки $(0;\\ 2)$ и $(4;\\ 8)$. Считая $x_0=0$, запишите уравнение движения тела и найдите его координату при $t=4\\ \\mathrm{s}$.",
+   "en": "A body's velocity graph is a straight line through $(0;\\ 2)$ and $(4;\\ 8)$. Taking $x_0=0$, write the equation of motion and find the coordinate at $t=4\\ \\mathrm{s}$."
+  },
+  "figure": "figures/B1-L04-S09.png",
+  "solution": {
+   "uz": [
+    "Grafikdan $v_0$ va $a$: $$v_0=2\\ \\mathrm{m/s},\\qquad a=\\frac{8-2}{4}=1.5\\ \\mathrm{m/s^2}$$",
+    "Harakat tenglamasi ($t^2$ oldidagi son — $\\frac{a}{2}$): $$x=2t+0.75t^2$$",
+    "$t=4\\ \\mathrm{s}$ da; tekshiruv — trapetsiya yuzasi: $$x(4)=8+12=20\\ \\mathrm{m},\\qquad \\frac{2+8}{2}\\cdot4=20\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Из графика $v_0$ и $a$: $$v_0=2\\ \\mathrm{m/s},\\qquad a=\\frac{8-2}{4}=1.5\\ \\mathrm{m/s^2}$$",
+    "Уравнение движения (число перед $t^2$ — $\\frac{a}{2}$): $$x=2t+0.75t^2$$",
+    "При $t=4\\ \\mathrm{s}$; проверка — площадь трапеции: $$x(4)=8+12=20\\ \\mathrm{m},\\qquad \\frac{2+8}{2}\\cdot4=20\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "From the graph, $v_0$ and $a$: $$v_0=2\\ \\mathrm{m/s},\\qquad a=\\frac{8-2}{4}=1.5\\ \\mathrm{m/s^2}$$",
+    "The equation of motion (the coefficient of $t^2$ is $\\frac{a}{2}$): $$x=2t+0.75t^2$$",
+    "At $t=4\\ \\mathrm{s}$; check with the trapezoid area: $$x(4)=8+12=20\\ \\mathrm{m},\\qquad \\frac{2+8}{2}\\cdot4=20\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$v(t)$ grafigining qiyaligi — tezlanish: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "ru": "Наклон графика $v(t)$ — ускорение: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "en": "The slope of the $v(t)$ graph is the acceleration: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$"
+   },
+   {
+    "uz": "Harakat tenglamasi: $x=x_0+v_0t+\\frac{at^2}{2}$",
+    "ru": "Уравнение движения: $x=x_0+v_0t+\\frac{at^2}{2}$",
+    "en": "Equation of motion: $x=x_0+v_0t+\\frac{at^2}{2}$"
+   },
+   {
+    "uz": "Trapetsiya yuzasi: $s=\\frac{v_1+v_2}{2}\\,\\Delta t$",
+    "ru": "Площадь трапеции: $s=\\frac{v_1+v_2}{2}\\,\\Delta t$",
+    "en": "Area of a trapezoid: $s=\\frac{v_1+v_2}{2}\\,\\Delta t$"
+   }
+  ],
+  "basis": {
+   "uz": "$v(t)$ grafigidan harakat tenglamasi",
+   "ru": "Уравнение движения по графику $v(t)$",
+   "en": "Equation of motion from a $v(t)$ graph"
+  },
+  "answer": "x=2t+0.75t^2;\\quad x(4)=20\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 71-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jism koordinatasining grafigi — parabola: u koordinata boshidan chiqadi, uchi $(3;\\ 18)$ nuqtada ($x$ — metrda). Boshlang'ich tezlik va tezlanishni toping, harakat tenglamasini yozing. Jism $5\\ \\mathrm{s}$ da qancha yo'l bosadi va ko'chishi qanday?",
+   "ru": "График координаты тела — парабола: она выходит из начала координат, вершина в точке $(3;\\ 18)$ ($x$ — в метрах). Найдите начальную скорость и ускорение, запишите уравнение движения. Какой путь пройдёт тело за $5\\ \\mathrm{s}$ и каково его перемещение?",
+   "en": "A body's position graph is a parabola that starts at the origin and has its vertex at $(3;\\ 18)$ ($x$ in metres). Find the initial velocity and the acceleration and write the equation of motion. What distance does the body cover in $5\\ \\mathrm{s}$, and what is its displacement?"
+  },
+  "figure": "figures/B1-L04-S10.png",
+  "solution": {
+   "uz": [
+    "Uchida $v=0$: $0$–$3\\ \\mathrm{s}$ da tezlik $v_0$ dan $0$ gacha tekis kamayadi, ko'chish $\\frac{v_0t}{2}$: $$18=\\frac{v_0\\cdot3}{2}\\ \\Rightarrow\\ v_0=12\\ \\mathrm{m/s},\\qquad a=\\frac{0-12}{3}=-4\\ \\mathrm{m/s^2}$$",
+    "Harakat tenglamasi: $$x=12t-2t^2$$",
+    "$t=5\\ \\mathrm{s}$ da $x=60-50=10\\ \\mathrm{m}$. Jism $18\\ \\mathrm{m}$ gacha borib, $8\\ \\mathrm{m}$ orqaga qaytdi: $$s=10\\ \\mathrm{m},\\qquad L=18+8=26\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "В вершине $v=0$: за $0$–$3\\ \\mathrm{s}$ скорость равномерно падает от $v_0$ до $0$, перемещение $\\frac{v_0t}{2}$: $$18=\\frac{v_0\\cdot3}{2}\\ \\Rightarrow\\ v_0=12\\ \\mathrm{m/s},\\qquad a=\\frac{0-12}{3}=-4\\ \\mathrm{m/s^2}$$",
+    "Уравнение движения: $$x=12t-2t^2$$",
+    "При $t=5\\ \\mathrm{s}$ $x=60-50=10\\ \\mathrm{m}$. Тело дошло до $18\\ \\mathrm{m}$ и вернулось на $8\\ \\mathrm{m}$: $$s=10\\ \\mathrm{m},\\qquad L=18+8=26\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "At the vertex $v=0$: during $0$–$3\\ \\mathrm{s}$ the velocity falls uniformly from $v_0$ to $0$, so the displacement is $\\frac{v_0t}{2}$: $$18=\\frac{v_0\\cdot3}{2}\\ \\Rightarrow\\ v_0=12\\ \\mathrm{m/s},\\qquad a=\\frac{0-12}{3}=-4\\ \\mathrm{m/s^2}$$",
+    "The equation of motion: $$x=12t-2t^2$$",
+    "At $t=5\\ \\mathrm{s}$, $x=60-50=10\\ \\mathrm{m}$. The body reached $18\\ \\mathrm{m}$ and came back $8\\ \\mathrm{m}$: $$s=10\\ \\mathrm{m},\\qquad L=18+8=26\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$x(t)$ parabolasining uchida $v=0$: $t_0=-\\frac{v_0}{a}$",
+    "ru": "В вершине параболы $x(t)$ $v=0$: $t_0=-\\frac{v_0}{a}$",
+    "en": "At the vertex of the $x(t)$ parabola $v=0$: $t_0=-\\frac{v_0}{a}$"
+   },
+   {
+    "uz": "Harakat tenglamasi: $x=x_0+v_0t+\\frac{at^2}{2}$",
+    "ru": "Уравнение движения: $x=x_0+v_0t+\\frac{at^2}{2}$",
+    "en": "Equation of motion: $x=x_0+v_0t+\\frac{at^2}{2}$"
+   },
+   {
+    "uz": "Ko'chish — yuzalarning algebraik yig'indisi ($t$ o'qidan pastdagisi manfiy), yo'l — modullari yig'indisi",
+    "ru": "Перемещение — алгебраическая сумма площадей (под осью $t$ — со знаком минус), путь — сумма модулей",
+    "en": "Displacement is the algebraic sum of the areas (below the $t$ axis negative); distance is the sum of their magnitudes"
+   }
+  ],
+  "basis": {
+   "uz": "$x(t)$ parabolasi: uchida $v=0$",
+   "ru": "Парабола $x(t)$: в вершине $v=0$",
+   "en": "The $x(t)$ parabola: $v=0$ at the vertex"
+  },
+  "answer": "v_0=12\\ \\mathrm{m/s};\\ a=-4\\ \\mathrm{m/s^2};\\ L=26\\ \\mathrm{m};\\ s=10\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 56, 71-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Bir joydan bir vaqtda ikki jism bir tomonga harakatlana boshladi: birinchisi $12\\ \\mathrm{m/s}$ tezlik bilan tekis, ikkinchisi tinch holatdan $3\\ \\mathrm{m/s^2}$ tezlanish bilan. Ularning $v(t)$ grafiklarini chizing. Ikkinchi jism birinchisini quvib yetguncha ular orasidagi eng katta masofa qancha? Qachon va qayerda quvib yetadi?",
+   "ru": "Из одного места одновременно в одну сторону начали двигаться два тела: первое равномерно со скоростью $12\\ \\mathrm{m/s}$, второе из покоя с ускорением $3\\ \\mathrm{m/s^2}$. Постройте их графики $v(t)$. Каково наибольшее расстояние между ними до того, как второе догонит первое? Когда и где произойдёт догон?",
+   "en": "Two bodies start together from one place in the same direction: the first moves uniformly at $12\\ \\mathrm{m/s}$, the second starts from rest with acceleration $3\\ \\mathrm{m/s^2}$. Sketch their $v(t)$ graphs. What is the greatest distance between them before the second catches up? When and where does it catch up?"
+  },
+  "figure": "figures/B1-L04-S11.png",
+  "solution": {
+   "uz": [
+    "Grafiklar tezliklar tenglashgan paytda kesishadi: $$12=3t\\ \\Rightarrow\\ t=4\\ \\mathrm{s}$$",
+    "Shu paytdagi masofa — grafiklar orasidagi uchburchak yuzasi: $$d_{\\max}=\\frac{12\\cdot4}{2}=24\\ \\mathrm{m}$$",
+    "Quvib yetganda yuzalar (ko'chishlar) teng: $$12t=\\frac{3t^2}{2}\\ \\Rightarrow\\ t=8\\ \\mathrm{s},\\qquad x=12\\cdot8=96\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Графики пересекаются в момент равенства скоростей: $$12=3t\\ \\Rightarrow\\ t=4\\ \\mathrm{s}$$",
+    "Расстояние в этот момент — площадь треугольника между графиками: $$d_{\\max}=\\frac{12\\cdot4}{2}=24\\ \\mathrm{m}$$",
+    "При догоне площади (перемещения) равны: $$12t=\\frac{3t^2}{2}\\ \\Rightarrow\\ t=8\\ \\mathrm{s},\\qquad x=12\\cdot8=96\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "The graphs cross when the velocities are equal: $$12=3t\\ \\Rightarrow\\ t=4\\ \\mathrm{s}$$",
+    "The distance at that moment is the area of the triangle between the graphs: $$d_{\\max}=\\frac{12\\cdot4}{2}=24\\ \\mathrm{m}$$",
+    "At the catch-up the areas (displacements) are equal: $$12t=\\frac{3t^2}{2}\\ \\Rightarrow\\ t=8\\ \\mathrm{s},\\qquad x=12\\cdot8=96\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$v(t)$ grafiklari kesishganda tezliklar teng — jismlar orasidagi masofa eng katta (eng kichik)",
+    "ru": "При пересечении графиков $v(t)$ скорости равны — расстояние между телами наибольшее (наименьшее)",
+    "en": "Where the $v(t)$ graphs cross the velocities are equal — the distance between the bodies is greatest (least)"
+   },
+   {
+    "uz": "Bir joydan chiqqan jismlar orasidagi masofa — $v(t)$ grafiklari orasidagi yuza",
+    "ru": "Расстояние между телами, вышедшими из одного места, — площадь между графиками $v(t)$",
+    "en": "The distance between bodies that started from one place is the area between their $v(t)$ graphs"
+   },
+   {
+    "uz": "Uchrashish sharti: $x_1(t)=x_2(t)$ (ko'chishlar teng)",
+    "ru": "Условие встречи: $x_1(t)=x_2(t)$ (перемещения равны)",
+    "en": "Meeting condition: $x_1(t)=x_2(t)$ (equal displacements)"
+   }
+  ],
+  "basis": {
+   "uz": "$v(t)$ grafiklari kesishishi — tezliklar tengligi",
+   "ru": "Пересечение графиков $v(t)$ — равенство скоростей",
+   "en": "Crossing of $v(t)$ graphs means equal velocities"
+  },
+  "answer": "d_{\\max}=24\\ \\mathrm{m};\\quad 8\\ \\mathrm{s};\\ 96\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 49–50, 63-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Bir nuqtadan bir vaqtda tinch holatdan ikki jism bir tomonga harakatlana boshladi. Ularning tezlik grafiklari koordinata boshidan chiquvchi to'g'ri chiziqlar: biri $(4;\\ 12)$, ikkinchisi $(4;\\ 4)$ nuqtadan o'tadi. Qancha vaqtdan keyin jismlar orasidagi masofa $64\\ \\mathrm{m}$ bo'ladi?",
+   "ru": "Из одной точки одновременно из состояния покоя в одну сторону начали двигаться два тела. Их графики скорости — прямые из начала координат: одна проходит через $(4;\\ 12)$, другая — через $(4;\\ 4)$. Через какое время расстояние между телами станет $64\\ \\mathrm{m}$?",
+   "en": "Two bodies start together from rest at one point and move in the same direction. Their velocity graphs are straight lines from the origin: one passes through $(4;\\ 12)$, the other through $(4;\\ 4)$. After what time will the distance between them be $64\\ \\mathrm{m}$?"
+  },
+  "figure": "figures/B1-L04-S12.png",
+  "solution": {
+   "uz": [
+    "Qiyaliklardan tezlanishlar: $$a_1=\\frac{12}{4}=3\\ \\mathrm{m/s^2},\\qquad a_2=\\frac{4}{4}=1\\ \\mathrm{m/s^2}$$",
+    "Masofa — grafiklar orasidagi uchburchak yuzasi; $t$ paytda tezliklar farqi $(a_1-a_2)t$: $$d=\\frac{(a_1-a_2)t\\cdot t}{2}=\\frac{2t^2}{2}=t^2$$",
+    "Shartdan: $$t^2=64\\ \\Rightarrow\\ t=8\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Ускорения из наклонов: $$a_1=\\frac{12}{4}=3\\ \\mathrm{m/s^2},\\qquad a_2=\\frac{4}{4}=1\\ \\mathrm{m/s^2}$$",
+    "Расстояние — площадь треугольника между графиками; в момент $t$ разность скоростей $(a_1-a_2)t$: $$d=\\frac{(a_1-a_2)t\\cdot t}{2}=\\frac{2t^2}{2}=t^2$$",
+    "По условию: $$t^2=64\\ \\Rightarrow\\ t=8\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The accelerations from the slopes: $$a_1=\\frac{12}{4}=3\\ \\mathrm{m/s^2},\\qquad a_2=\\frac{4}{4}=1\\ \\mathrm{m/s^2}$$",
+    "The distance is the area of the triangle between the graphs; at time $t$ the velocity difference is $(a_1-a_2)t$: $$d=\\frac{(a_1-a_2)t\\cdot t}{2}=\\frac{2t^2}{2}=t^2$$",
+    "From the condition: $$t^2=64\\ \\Rightarrow\\ t=8\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$v(t)$ grafigining qiyaligi — tezlanish: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "ru": "Наклон графика $v(t)$ — ускорение: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$",
+    "en": "The slope of the $v(t)$ graph is the acceleration: $a=\\frac{\\Delta v}{\\Delta t}=\\frac{v_2-v_1}{t_2-t_1}$"
+   },
+   {
+    "uz": "Bir joydan chiqqan jismlar orasidagi masofa — $v(t)$ grafiklari orasidagi yuza",
+    "ru": "Расстояние между телами, вышедшими из одного места, — площадь между графиками $v(t)$",
+    "en": "The distance between bodies that started from one place is the area between their $v(t)$ graphs"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Grafiklar orasidagi yuza — masofa",
+   "ru": "Площадь между графиками — расстояние",
+   "en": "Area between the graphs is the distance"
+  },
+  "answer": "t=8\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 63-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Jism tezligi grafigi: $0$–$4\\ \\mathrm{s}$ da tinch holatdan tekis tezlanib $v_m$ tezlikka erishadi, $4$–$8\\ \\mathrm{s}$ da shu tezlik bilan tekis harakatlanadi. $0$–$8\\ \\mathrm{s}$ dagi o'rtacha tezlik $15\\ \\mathrm{m/s}$. $v_m$ ni va $0$–$4\\ \\mathrm{s}$ dagi o'rtacha tezlikni toping.",
+   "ru": "График скорости тела: на $0$–$4\\ \\mathrm{s}$ тело равноускоренно разгоняется из покоя до скорости $v_m$, на $4$–$8\\ \\mathrm{s}$ движется с этой скоростью равномерно. Средняя скорость за $0$–$8\\ \\mathrm{s}$ равна $15\\ \\mathrm{m/s}$. Найдите $v_m$ и среднюю скорость за $0$–$4\\ \\mathrm{s}$.",
+   "en": "A body's velocity graph: during $0$–$4\\ \\mathrm{s}$ it speeds up uniformly from rest to $v_m$, and during $4$–$8\\ \\mathrm{s}$ it moves uniformly at that speed. The average speed over $0$–$8\\ \\mathrm{s}$ is $15\\ \\mathrm{m/s}$. Find $v_m$ and the average speed over $0$–$4\\ \\mathrm{s}$."
+  },
+  "figure": "figures/B1-L04-S13.png",
+  "solution": {
+   "uz": [
+    "Yo'l — uchburchak va to'g'ri to'rtburchak yuzalari: $$s=\\frac{4v_m}{2}+4v_m=6v_m$$",
+    "O'rtacha tezlik ta'rifidan: $$\\frac{6v_m}{8}=15\\ \\Rightarrow\\ v_m=20\\ \\mathrm{m/s}$$",
+    "$0$–$4\\ \\mathrm{s}$ da (tekis tezlanuvchan bo'lak): $$\\bar v_1=\\frac{0+20}{2}=10\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Путь — площади треугольника и прямоугольника: $$s=\\frac{4v_m}{2}+4v_m=6v_m$$",
+    "Из определения средней скорости: $$\\frac{6v_m}{8}=15\\ \\Rightarrow\\ v_m=20\\ \\mathrm{m/s}$$",
+    "За $0$–$4\\ \\mathrm{s}$ (равноускоренный участок): $$\\bar v_1=\\frac{0+20}{2}=10\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "The distance is the area of the triangle plus the rectangle: $$s=\\frac{4v_m}{2}+4v_m=6v_m$$",
+    "From the definition of average speed: $$\\frac{6v_m}{8}=15\\ \\Rightarrow\\ v_m=20\\ \\mathrm{m/s}$$",
+    "Over $0$–$4\\ \\mathrm{s}$ (the uniformly accelerated part): $$\\bar v_1=\\frac{0+20}{2}=10\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uchburchak: $s=\\frac{v\\,\\Delta t}{2}$; to'g'ri to'rtburchak: $s=v\\,\\Delta t$",
+    "ru": "Треугольник: $s=\\frac{v\\,\\Delta t}{2}$; прямоугольник: $s=v\\,\\Delta t$",
+    "en": "Triangle: $s=\\frac{v\\,\\Delta t}{2}$; rectangle: $s=v\\,\\Delta t$"
+   },
+   {
+    "uz": "O'rtacha tezlik: $\\bar v=\\frac{s}{t}$ (butun yo'l / butun vaqt)",
+    "ru": "Средняя скорость: $\\bar v=\\frac{s}{t}$ (весь путь / всё время)",
+    "en": "Average speed: $\\bar v=\\frac{s}{t}$ (total distance / total time)"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Yuza — yo'l; o'rtacha tezlik",
+   "ru": "Площадь — путь; средняя скорость",
+   "en": "Area is distance; average speed"
+  },
+  "answer": "v_m=20\\ \\mathrm{m/s};\\quad 10\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 64, 66-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Jism tezligi grafigi: $0$–$t$ da tinch holatdan tekis tezlanadi, $t$–$2t$ da tekis harakatlanadi, $2t$–$4t$ da tekis sekinlanib to'xtaydi. $0$–$t$ oralig'idagi yo'l $x$ ga teng. $0$–$4t$ oralig'idagi yo'lni toping.",
+   "ru": "График скорости тела: на $0$–$t$ тело равноускоренно разгоняется из покоя, на $t$–$2t$ движется равномерно, на $2t$–$4t$ равнозамедленно тормозит до остановки. Путь за $0$–$t$ равен $x$. Найдите путь за $0$–$4t$.",
+   "en": "A body's velocity graph: during $0$–$t$ it speeds up uniformly from rest, during $t$–$2t$ it moves uniformly, and during $2t$–$4t$ it slows down uniformly to a stop. The distance over $0$–$t$ is $x$. Find the distance over $0$–$4t$."
+  },
+  "figure": "figures/B1-L04-S14.png",
+  "solution": {
+   "uz": [
+    "Eng katta tezlik $v_m$. Birinchi bo'lak — uchburchak: $$x=\\frac{v_mt}{2}\\ \\Rightarrow\\ v_mt=2x$$",
+    "Ikkinchi bo'lak — to'g'ri to'rtburchak, uchinchisi — asosi $2t$ bo'lgan uchburchak: $$s_2=v_mt=2x,\\qquad s_3=\\frac{v_m\\cdot2t}{2}=2x$$",
+    "Umumiy yo'l: $$L=x+2x+2x=5x$$"
+   ],
+   "ru": [
+    "Наибольшая скорость $v_m$. Первый участок — треугольник: $$x=\\frac{v_mt}{2}\\ \\Rightarrow\\ v_mt=2x$$",
+    "Второй участок — прямоугольник, третий — треугольник с основанием $2t$: $$s_2=v_mt=2x,\\qquad s_3=\\frac{v_m\\cdot2t}{2}=2x$$",
+    "Общий путь: $$L=x+2x+2x=5x$$"
+   ],
+   "en": [
+    "Let the greatest speed be $v_m$. The first part is a triangle: $$x=\\frac{v_mt}{2}\\ \\Rightarrow\\ v_mt=2x$$",
+    "The second part is a rectangle, the third a triangle with base $2t$: $$s_2=v_mt=2x,\\qquad s_3=\\frac{v_m\\cdot2t}{2}=2x$$",
+    "Total distance: $$L=x+2x+2x=5x$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uchburchak: $s=\\frac{v\\,\\Delta t}{2}$; to'g'ri to'rtburchak: $s=v\\,\\Delta t$",
+    "ru": "Треугольник: $s=\\frac{v\\,\\Delta t}{2}$; прямоугольник: $s=v\\,\\Delta t$",
+    "en": "Triangle: $s=\\frac{v\\,\\Delta t}{2}$; rectangle: $s=v\\,\\Delta t$"
+   },
+   {
+    "uz": "$v(t)$ grafigi ostidagi yuza — ko'chish",
+    "ru": "Площадь под графиком $v(t)$ — перемещение",
+    "en": "The area under the $v(t)$ graph is the displacement"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Yuzalar nisbati",
+   "ru": "Отношение площадей",
+   "en": "Ratio of areas"
+  },
+  "answer": "5x",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 61-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L04-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Boshlang'ich tezligi $5\\ \\mathrm{m/s}$ bo'lgan jism tezlanishining grafigi: $0$–$10\\ \\mathrm{s}$ da $a=\\mathrm{const}$, $10$–$20\\ \\mathrm{s}$ da $a=0$. Jism $20\\ \\mathrm{s}$ da $400\\ \\mathrm{m}$ yo'l bosgan bo'lsa, $a$ nimaga teng?",
+   "ru": "График ускорения тела с начальной скоростью $5\\ \\mathrm{m/s}$: на $0$–$10\\ \\mathrm{s}$ $a=\\mathrm{const}$, на $10$–$20\\ \\mathrm{s}$ $a=0$. Тело за $20\\ \\mathrm{s}$ прошло $400\\ \\mathrm{m}$. Чему равно $a$?",
+   "en": "The acceleration graph of a body with initial speed $5\\ \\mathrm{m/s}$: $a=\\mathrm{const}$ for $0$–$10\\ \\mathrm{s}$ and $a=0$ for $10$–$20\\ \\mathrm{s}$. The body covers $400\\ \\mathrm{m}$ in $20\\ \\mathrm{s}$. What is $a$?"
+  },
+  "figure": "figures/B1-L04-S15.png",
+  "solution": {
+   "uz": [
+    "$a(t)$ yuzasidan $t=10\\ \\mathrm{s}$ dagi tezlik: $$v_1=5+10a$$",
+    "$v(t)$ grafigi: birinchi bo'lak — trapetsiya, ikkinchisi — to'g'ri to'rtburchak: $$s=\\frac{5+(5+10a)}{2}\\cdot10+(5+10a)\\cdot10=100+150a$$",
+    "Shartdan: $$100+150a=400\\ \\Rightarrow\\ a=2\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Скорость при $t=10\\ \\mathrm{s}$ из площади $a(t)$: $$v_1=5+10a$$",
+    "График $v(t)$: первый участок — трапеция, второй — прямоугольник: $$s=\\frac{5+(5+10a)}{2}\\cdot10+(5+10a)\\cdot10=100+150a$$",
+    "По условию: $$100+150a=400\\ \\Rightarrow\\ a=2\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "The velocity at $t=10\\ \\mathrm{s}$ from the $a(t)$ area: $$v_1=5+10a$$",
+    "The $v(t)$ graph: the first part is a trapezoid, the second a rectangle: $$s=\\frac{5+(5+10a)}{2}\\cdot10+(5+10a)\\cdot10=100+150a$$",
+    "From the condition: $$100+150a=400\\ \\Rightarrow\\ a=2\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$a(t)$ grafigi ostidagi yuza — tezlik o'zgarishi: $\\Delta v=a\\,\\Delta t$",
+    "ru": "Площадь под графиком $a(t)$ — изменение скорости: $\\Delta v=a\\,\\Delta t$",
+    "en": "The area under the $a(t)$ graph is the change in velocity: $\\Delta v=a\\,\\Delta t$"
+   },
+   {
+    "uz": "Trapetsiya yuzasi: $s=\\frac{v_1+v_2}{2}\\,\\Delta t$",
+    "ru": "Площадь трапеции: $s=\\frac{v_1+v_2}{2}\\,\\Delta t$",
+    "en": "Area of a trapezoid: $s=\\frac{v_1+v_2}{2}\\,\\Delta t$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "$a(t)$ dan $v(t)$ ga, so'ng yuza",
+   "ru": "От $a(t)$ к $v(t)$, затем площадь",
+   "en": "From $a(t)$ to $v(t)$, then the area"
+  },
+  "answer": "a=2\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 9-mavzu, 68–70-masalalar asosida; sharti o'zgartirilgan"
+ }
+]
