@@ -1,0 +1,488 @@
+[
+ {
+  "id": "B0-L03-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Jism koordinatasi $x(t)=3t^2-2t+1$ (metrda, $t$ — sekundda). Tezlik va tezlanishning vaqtga bog'liqligini hamda $t=2\\ \\mathrm{s}$ dagi tezlikni toping.",
+   "ru": "Координата тела $x(t)=3t^2-2t+1$ (в метрах, $t$ — в секундах). Найдите зависимость скорости и ускорения от времени и скорость при $t=2\\ \\mathrm{с}$.",
+   "en": "The position of a body is $x(t)=3t^2-2t+1$ (in meters, $t$ in seconds). Find the velocity and acceleration as functions of time and the velocity at $t=2\\ \\mathrm{s}$."
+  },
+  "figure": "figures/B0-L03-S01.png",
+  "solution": {
+   "uz": [
+    "Tezlik — koordinatadan hosila: $$v=\\frac{dx}{dt}=6t-2\\quad(\\mathrm{m/s})$$",
+    "Tezlanish — tezlikdan hosila (o'zgarmas): $$a=\\frac{dv}{dt}=6\\ \\mathrm{m/s^2}$$",
+    "$t=2\\ \\mathrm{s}$ da: $$v(2)=6\\cdot2-2=10\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Скорость — производная координаты: $$v=\\frac{dx}{dt}=6t-2\\quad(\\mathrm{m/s})$$",
+    "Ускорение — производная скорости (постоянно): $$a=\\frac{dv}{dt}=6\\ \\mathrm{m/s^2}$$",
+    "При $t=2\\ \\mathrm{с}$: $$v(2)=6\\cdot2-2=10\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Velocity is the derivative of position: $$v=\\frac{dx}{dt}=6t-2\\quad(\\mathrm{m/s})$$",
+    "Acceleration is the derivative of velocity (constant): $$a=\\frac{dv}{dt}=6\\ \\mathrm{m/s^2}$$",
+    "At $t=2\\ \\mathrm{s}$: $$v(2)=6\\cdot2-2=10\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$v=dx/dt$, $a=dv/dt$; $(x^n)'=nx^{n-1}$",
+   "ru": "$v=dx/dt$, $a=dv/dt$; $(x^n)'=nx^{n-1}$",
+   "en": "$v=dx/dt$, $a=dv/dt$; $(x^n)'=nx^{n-1}$"
+  },
+  "answer": "v=6t-2,\\quad a=6\\ \\mathrm{m/s^2},\\quad v(2)=10\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original"
+ },
+ {
+  "id": "B0-L03-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Ta'rif bo'yicha (limit orqali) $f(x)=x^2$ funksiyaning hosilasini toping va $x=3$ nuqtadagi urinma og'masini hisoblang.",
+   "ru": "По определению (через предел) найдите производную функции $f(x)=x^2$ и вычислите наклон касательной в точке $x=3$.",
+   "en": "Using the definition (a limit), find the derivative of $f(x)=x^2$ and compute the slope of the tangent line at $x=3$."
+  },
+  "figure": "figures/B0-L03-S02.png",
+  "solution": {
+   "uz": [
+    "Funksiya orttirmasi: $$f(x+h)-f(x)=(x+h)^2-x^2=2xh+h^2$$",
+    "Nisbatni tuzamiz: $$\\frac{f(x+h)-f(x)}{h}=2x+h$$",
+    "$h\\to0$ da limit: $$f'(x)=\\lim_{h\\to0}(2x+h)=2x$$",
+    "$x=3$ da urinma og'masi: $$f'(3)=6$$"
+   ],
+   "ru": [
+    "Приращение функции: $$f(x+h)-f(x)=(x+h)^2-x^2=2xh+h^2$$",
+    "Составляем отношение: $$\\frac{f(x+h)-f(x)}{h}=2x+h$$",
+    "Предел при $h\\to0$: $$f'(x)=\\lim_{h\\to0}(2x+h)=2x$$",
+    "Наклон касательной при $x=3$: $$f'(3)=6$$"
+   ],
+   "en": [
+    "Increment of the function: $$f(x+h)-f(x)=(x+h)^2-x^2=2xh+h^2$$",
+    "Form the ratio: $$\\frac{f(x+h)-f(x)}{h}=2x+h$$",
+    "Take the limit $h\\to0$: $$f'(x)=\\lim_{h\\to0}(2x+h)=2x$$",
+    "Slope of the tangent at $x=3$: $$f'(3)=6$$"
+   ]
+  },
+  "basis": {
+   "uz": "Hosila ta'rifi: $f'(x)=\\lim_{h\\to0}\\dfrac{f(x+h)-f(x)}{h}$",
+   "ru": "Определение производной: $f'(x)=\\lim_{h\\to0}\\dfrac{f(x+h)-f(x)}{h}$",
+   "en": "Definition of the derivative: $f'(x)=\\lim_{h\\to0}\\dfrac{f(x+h)-f(x)}{h}$"
+  },
+  "answer": "f'(x)=2x,\\quad f'(3)=6",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original"
+ },
+ {
+  "id": "B0-L03-S03",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$f(t)=t\\,e^{-2t}$ funksiyaning hosilasini toping. $t\\ge0$ da funksiya qaysi paytda eng katta qiymatga erishadi va bu qiymat qancha?",
+   "ru": "Найдите производную функции $f(t)=t\\,e^{-2t}$. В какой момент при $t\\ge0$ функция достигает наибольшего значения и чему оно равно?",
+   "en": "Find the derivative of $f(t)=t\\,e^{-2t}$. At what time $t\\ge0$ does the function reach its maximum, and what is the maximum value?"
+  },
+  "figure": "figures/B0-L03-S03.png",
+  "solution": {
+   "uz": [
+    "Ko'paytma va zanjir qoidasi: $$f'(t)=1\\cdot e^{-2t}+t\\cdot(-2)e^{-2t}=(1-2t)\\,e^{-2t}$$",
+    "Kritik nuqta ($e^{-2t}\\ne0$): $$1-2t=0\\ \\Rightarrow\\ t=\\frac12$$",
+    "$t<\\tfrac12$ da $f'>0$, $t>\\tfrac12$ da $f'<0$ — demak, maksimum: $$f\\left(\\tfrac12\\right)=\\frac12e^{-1}=\\frac{1}{2e}\\approx0.184$$"
+   ],
+   "ru": [
+    "Правило произведения и цепное правило: $$f'(t)=1\\cdot e^{-2t}+t\\cdot(-2)e^{-2t}=(1-2t)\\,e^{-2t}$$",
+    "Критическая точка ($e^{-2t}\\ne0$): $$1-2t=0\\ \\Rightarrow\\ t=\\frac12$$",
+    "При $t<\\tfrac12$ $f'>0$, при $t>\\tfrac12$ $f'<0$ — значит, максимум: $$f\\left(\\tfrac12\\right)=\\frac12e^{-1}=\\frac{1}{2e}\\approx0.184$$"
+   ],
+   "en": [
+    "Product rule and chain rule: $$f'(t)=1\\cdot e^{-2t}+t\\cdot(-2)e^{-2t}=(1-2t)\\,e^{-2t}$$",
+    "Critical point ($e^{-2t}\\ne0$): $$1-2t=0\\ \\Rightarrow\\ t=\\frac12$$",
+    "For $t<\\tfrac12$, $f'>0$; for $t>\\tfrac12$, $f'<0$ — so it is a maximum: $$f\\left(\\tfrac12\\right)=\\frac12e^{-1}=\\frac{1}{2e}\\approx0.184$$"
+   ]
+  },
+  "basis": {
+   "uz": "$(uv)'=u'v+uv'$, $(e^{kt})'=ke^{kt}$, ekstremum sharti $f'=0$",
+   "ru": "$(uv)'=u'v+uv'$, $(e^{kt})'=ke^{kt}$, условие экстремума $f'=0$",
+   "en": "$(uv)'=u'v+uv'$, $(e^{kt})'=ke^{kt}$, extremum condition $f'=0$"
+  },
+  "answer": "f'(t)=(1-2t)e^{-2t},\\quad t=\\tfrac12,\\quad f_{\\max}=\\frac{1}{2e}\\approx0.184",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original"
+ },
+ {
+  "id": "B0-L03-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jism $x(t)=0.10\\sin5t$ (metr, sekund) qonun bo'yicha tebranadi. Tezlik va tezlanishni toping. Maksimal tezlik va maksimal tezlanish qancha? Tezlanish va koordinata orasidagi bog'lanishni yozing.",
+   "ru": "Тело колеблется по закону $x(t)=0.10\\sin5t$ (метры, секунды). Найдите скорость и ускорение. Чему равны максимальная скорость и максимальное ускорение? Запишите связь между ускорением и координатой.",
+   "en": "A body oscillates as $x(t)=0.10\\sin5t$ (meters, seconds). Find the velocity and acceleration. What are the maximum speed and maximum acceleration? Write the relation between acceleration and position."
+  },
+  "figure": "figures/B0-L03-S04.png",
+  "solution": {
+   "uz": [
+    "Zanjir qoidasi: $$v=\\dot x=0.10\\cdot5\\cos5t=0.50\\cos5t\\quad(\\mathrm{m/s})$$",
+    "Yana bir marta differensiallaymiz: $$a=\\dot v=-2.5\\sin5t\\quad(\\mathrm{m/s^2})$$",
+    "Maksimal qiymatlar ($|\\cos|,\\ |\\sin|\\le1$): $$v_{\\max}=A\\omega=0.50\\ \\mathrm{m/s},\\qquad a_{\\max}=A\\omega^2=2.5\\ \\mathrm{m/s^2}$$",
+    "Bog'lanish: $$a=-25x=-\\omega^2x$$"
+   ],
+   "ru": [
+    "Цепное правило: $$v=\\dot x=0.10\\cdot5\\cos5t=0.50\\cos5t\\quad(\\mathrm{m/s})$$",
+    "Дифференцируем ещё раз: $$a=\\dot v=-2.5\\sin5t\\quad(\\mathrm{m/s^2})$$",
+    "Максимальные значения ($|\\cos|,\\ |\\sin|\\le1$): $$v_{\\max}=A\\omega=0.50\\ \\mathrm{m/s},\\qquad a_{\\max}=A\\omega^2=2.5\\ \\mathrm{m/s^2}$$",
+    "Связь: $$a=-25x=-\\omega^2x$$"
+   ],
+   "en": [
+    "Chain rule: $$v=\\dot x=0.10\\cdot5\\cos5t=0.50\\cos5t\\quad(\\mathrm{m/s})$$",
+    "Differentiate once more: $$a=\\dot v=-2.5\\sin5t\\quad(\\mathrm{m/s^2})$$",
+    "Maximum values ($|\\cos|,\\ |\\sin|\\le1$): $$v_{\\max}=A\\omega=0.50\\ \\mathrm{m/s},\\qquad a_{\\max}=A\\omega^2=2.5\\ \\mathrm{m/s^2}$$",
+    "Relation: $$a=-25x=-\\omega^2x$$"
+   ]
+  },
+  "basis": {
+   "uz": "$(\\sin\\omega t)'=\\omega\\cos\\omega t$; garmonik tebranish: $a=-\\omega^2x$",
+   "ru": "$(\\sin\\omega t)'=\\omega\\cos\\omega t$; гармонические колебания: $a=-\\omega^2x$",
+   "en": "$(\\sin\\omega t)'=\\omega\\cos\\omega t$; harmonic motion: $a=-\\omega^2x$"
+  },
+  "answer": "v_{\\max}=0.50\\ \\mathrm{m/s},\\quad a_{\\max}=2.5\\ \\mathrm{m/s^2},\\quad a=-25x",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original"
+ },
+ {
+  "id": "B0-L03-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$y=\\sqrt{x}$ grafigiga $x=4$ nuqtada o'tkazilgan urinma tenglamasini yozing va uning yordamida $\\sqrt{4.1}$ ni taqribiy hisoblang.",
+   "ru": "Запишите уравнение касательной к графику $y=\\sqrt{x}$ в точке $x=4$ и с её помощью приближённо вычислите $\\sqrt{4.1}$.",
+   "en": "Write the equation of the tangent line to $y=\\sqrt{x}$ at $x=4$ and use it to approximate $\\sqrt{4.1}$."
+  },
+  "figure": "figures/B0-L03-S05.png",
+  "solution": {
+   "uz": [
+    "Hosila va og'ma: $$y'=\\frac{1}{2\\sqrt{x}},\\qquad y'(4)=\\frac14$$",
+    "Urinma tenglamasi ($y(4)=2$): $$y=2+\\frac14(x-4)=\\frac{x}{4}+1$$",
+    "Chiziqli yaqinlashuv: $$\\sqrt{4.1}\\approx2+\\frac14\\cdot0.1=2.025$$",
+    "Aniq qiymat $2.0248\\ldots$ — xato $0.001\\%$ chamasida."
+   ],
+   "ru": [
+    "Производная и наклон: $$y'=\\frac{1}{2\\sqrt{x}},\\qquad y'(4)=\\frac14$$",
+    "Уравнение касательной ($y(4)=2$): $$y=2+\\frac14(x-4)=\\frac{x}{4}+1$$",
+    "Линейное приближение: $$\\sqrt{4.1}\\approx2+\\frac14\\cdot0.1=2.025$$",
+    "Точное значение $2.0248\\ldots$ — погрешность порядка $0.001\\%$."
+   ],
+   "en": [
+    "Derivative and slope: $$y'=\\frac{1}{2\\sqrt{x}},\\qquad y'(4)=\\frac14$$",
+    "Tangent line ($y(4)=2$): $$y=2+\\frac14(x-4)=\\frac{x}{4}+1$$",
+    "Linear approximation: $$\\sqrt{4.1}\\approx2+\\frac14\\cdot0.1=2.025$$",
+    "The exact value is $2.0248\\ldots$ — the error is about $0.001\\%$."
+   ]
+  },
+  "basis": {
+   "uz": "Urinma tenglamasi $y=f(x_0)+f'(x_0)(x-x_0)$, chiziqli yaqinlashuv",
+   "ru": "Уравнение касательной $y=f(x_0)+f'(x_0)(x-x_0)$, линейное приближение",
+   "en": "Tangent line $y=f(x_0)+f'(x_0)(x-x_0)$, linear approximation"
+  },
+  "answer": "y=\\frac{x}{4}+1,\\quad \\sqrt{4.1}\\approx2.025",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original"
+ },
+ {
+  "id": "B0-L03-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Kondensator razryadlanayotganda zaryad $q(t)=q_0e^{-t/\\tau}$ qonun bo'yicha kamayadi, $q_0=6.0\\ \\mu\\mathrm{C}$, $\\tau=2.0\\ \\mathrm{ms}$. Tok kuchining vaqtga bog'liqligini va $t=0$ dagi tok kuchi modulini toping.",
+   "ru": "При разрядке конденсатора заряд убывает по закону $q(t)=q_0e^{-t/\\tau}$, $q_0=6.0\\ \\mu\\mathrm{Кл}$, $\\tau=2.0\\ \\mathrm{мс}$. Найдите зависимость силы тока от времени и модуль силы тока при $t=0$.",
+   "en": "While a capacitor discharges, its charge decreases as $q(t)=q_0e^{-t/\\tau}$, with $q_0=6.0\\ \\mu\\mathrm{C}$ and $\\tau=2.0\\ \\mathrm{ms}$. Find the current as a function of time and the magnitude of the current at $t=0$."
+  },
+  "figure": "figures/B0-L03-S06.png",
+  "solution": {
+   "uz": [
+    "Tok kuchi — zaryaddan vaqt bo'yicha hosila: $$I=\\frac{dq}{dt}=-\\frac{q_0}{\\tau}e^{-t/\\tau}$$",
+    "Manfiy ishora — kondensator zaryadi kamayadi. $t=0$ da: $$|I(0)|=\\frac{q_0}{\\tau}=\\frac{6.0\\times10^{-6}}{2.0\\times10^{-3}}=3.0\\times10^{-3}\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "Сила тока — производная заряда по времени: $$I=\\frac{dq}{dt}=-\\frac{q_0}{\\tau}e^{-t/\\tau}$$",
+    "Знак минус — заряд конденсатора уменьшается. При $t=0$: $$|I(0)|=\\frac{q_0}{\\tau}=\\frac{6.0\\times10^{-6}}{2.0\\times10^{-3}}=3.0\\times10^{-3}\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "Current is the time derivative of charge: $$I=\\frac{dq}{dt}=-\\frac{q_0}{\\tau}e^{-t/\\tau}$$",
+    "The minus sign means the capacitor's charge decreases. At $t=0$: $$|I(0)|=\\frac{q_0}{\\tau}=\\frac{6.0\\times10^{-6}}{2.0\\times10^{-3}}=3.0\\times10^{-3}\\ \\mathrm{A}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$I=dq/dt$, $(e^{-t/\\tau})'=-\\frac{1}{\\tau}e^{-t/\\tau}$",
+   "ru": "$I=dq/dt$, $(e^{-t/\\tau})'=-\\frac{1}{\\tau}e^{-t/\\tau}$",
+   "en": "$I=dq/dt$, $(e^{-t/\\tau})'=-\\frac{1}{\\tau}e^{-t/\\tau}$"
+  },
+  "answer": "I=-\\frac{q_0}{\\tau}e^{-t/\\tau},\\quad |I(0)|=3.0\\ \\mathrm{mA}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original"
+ },
+ {
+  "id": "B0-L03-S07",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Gorizontal sirtdan $v_0=20\\ \\mathrm{m/s}$ tezlik bilan $\\theta$ burchak ostida otilgan jismning uchish uzoqligi $R(\\theta)=\\dfrac{v_0^2\\sin2\\theta}{g}$ ($g=10\\ \\mathrm{m/s^2}$). Qaysi burchakda uzoqlik eng katta bo'ladi va u nechaga teng?",
+   "ru": "Дальность полёта тела, брошенного с горизонтальной поверхности со скоростью $v_0=20\\ \\mathrm{м/с}$ под углом $\\theta$, равна $R(\\theta)=\\dfrac{v_0^2\\sin2\\theta}{g}$ ($g=10\\ \\mathrm{м/с^2}$). При каком угле дальность наибольшая и чему она равна?",
+   "en": "The range of a body launched from level ground at $v_0=20\\ \\mathrm{m/s}$ at an angle $\\theta$ is $R(\\theta)=\\dfrac{v_0^2\\sin2\\theta}{g}$ ($g=10\\ \\mathrm{m/s^2}$). At what angle is the range greatest, and what is it?"
+  },
+  "figure": "figures/B0-L03-S07.png",
+  "solution": {
+   "uz": [
+    "Burchak bo'yicha hosila: $$\\frac{dR}{d\\theta}=\\frac{2v_0^2\\cos2\\theta}{g}$$",
+    "Nolga tenglaymiz ($0<\\theta<90^\\circ$): $$\\cos2\\theta=0\\ \\Rightarrow\\ 2\\theta=90^\\circ\\ \\Rightarrow\\ \\theta=45^\\circ$$",
+    "Ikkinchi hosila manfiy — maksimum: $$\\frac{d^2R}{d\\theta^2}=-\\frac{4v_0^2\\sin2\\theta}{g}<0$$",
+    "Eng katta uzoqlik: $$R_{\\max}=\\frac{v_0^2}{g}=\\frac{400}{10}=40\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Производная по углу: $$\\frac{dR}{d\\theta}=\\frac{2v_0^2\\cos2\\theta}{g}$$",
+    "Приравниваем к нулю ($0<\\theta<90^\\circ$): $$\\cos2\\theta=0\\ \\Rightarrow\\ 2\\theta=90^\\circ\\ \\Rightarrow\\ \\theta=45^\\circ$$",
+    "Вторая производная отрицательна — максимум: $$\\frac{d^2R}{d\\theta^2}=-\\frac{4v_0^2\\sin2\\theta}{g}<0$$",
+    "Наибольшая дальность: $$R_{\\max}=\\frac{v_0^2}{g}=\\frac{400}{10}=40\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Derivative with respect to the angle: $$\\frac{dR}{d\\theta}=\\frac{2v_0^2\\cos2\\theta}{g}$$",
+    "Set it to zero ($0<\\theta<90^\\circ$): $$\\cos2\\theta=0\\ \\Rightarrow\\ 2\\theta=90^\\circ\\ \\Rightarrow\\ \\theta=45^\\circ$$",
+    "The second derivative is negative — a maximum: $$\\frac{d^2R}{d\\theta^2}=-\\frac{4v_0^2\\sin2\\theta}{g}<0$$",
+    "Maximum range: $$R_{\\max}=\\frac{v_0^2}{g}=\\frac{400}{10}=40\\ \\mathrm{m}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Optimallashtirish: $dR/d\\theta=0$, $R''<0$; $(\\sin2\\theta)'=2\\cos2\\theta$",
+   "ru": "Оптимизация: $dR/d\\theta=0$, $R''<0$; $(\\sin2\\theta)'=2\\cos2\\theta$",
+   "en": "Optimization: $dR/d\\theta=0$, $R''<0$; $(\\sin2\\theta)'=2\\cos2\\theta$"
+  },
+  "answer": "\\theta=45^\\circ,\\quad R_{\\max}=40\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original"
+ },
+ {
+  "id": "B0-L03-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Zarraning potensial energiyasi $U(x)=x^3-3x$ (joulda, $x$ — metrda). Zarraga ta'sir qiluvchi kuchni toping. Muvozanat holatlarini aniqlang va ularning barqarorligini tekshiring.",
+   "ru": "Потенциальная энергия частицы $U(x)=x^3-3x$ (в джоулях, $x$ — в метрах). Найдите силу, действующую на частицу. Определите положения равновесия и проверьте их устойчивость.",
+   "en": "The potential energy of a particle is $U(x)=x^3-3x$ (in joules, $x$ in meters). Find the force on the particle. Determine the equilibrium positions and check their stability."
+  },
+  "figure": "figures/B0-L03-S08.png",
+  "solution": {
+   "uz": [
+    "Kuch: $$F=-\\frac{dU}{dx}=3-3x^2\\quad(\\mathrm{N})$$",
+    "Muvozanat: $F=0$. $$3-3x^2=0\\ \\Rightarrow\\ x=\\pm1\\ \\mathrm{m}$$",
+    "Ikkinchi hosila: $$U''(x)=6x$$",
+    "$x=1$ da $U''=6>0$ — barqaror (minimum); $x=-1$ da $U''=-6<0$ — beqaror (maksimum). $$U(1)=-2\\ \\mathrm{J},\\qquad U(-1)=2\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Сила: $$F=-\\frac{dU}{dx}=3-3x^2\\quad(\\mathrm{N})$$",
+    "Равновесие: $F=0$. $$3-3x^2=0\\ \\Rightarrow\\ x=\\pm1\\ \\mathrm{m}$$",
+    "Вторая производная: $$U''(x)=6x$$",
+    "При $x=1$ $U''=6>0$ — устойчивое (минимум); при $x=-1$ $U''=-6<0$ — неустойчивое (максимум). $$U(1)=-2\\ \\mathrm{J},\\qquad U(-1)=2\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "Force: $$F=-\\frac{dU}{dx}=3-3x^2\\quad(\\mathrm{N})$$",
+    "Equilibrium: $F=0$. $$3-3x^2=0\\ \\Rightarrow\\ x=\\pm1\\ \\mathrm{m}$$",
+    "Second derivative: $$U''(x)=6x$$",
+    "At $x=1$, $U''=6>0$ — stable (minimum); at $x=-1$, $U''=-6<0$ — unstable (maximum). $$U(1)=-2\\ \\mathrm{J},\\qquad U(-1)=2\\ \\mathrm{J}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$F=-dU/dx$; muvozanat $U'=0$; barqarorlik $U''>0$",
+   "ru": "$F=-dU/dx$; равновесие $U'=0$; устойчивость $U''>0$",
+   "en": "$F=-dU/dx$; equilibrium $U'=0$; stability $U''>0$"
+  },
+  "answer": "F=3-3x^2;\\quad x=1\\ \\mathrm{m}\\ (U''>0),\\quad x=-1\\ \\mathrm{m}\\ (U''<0)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original"
+ },
+ {
+  "id": "B0-L03-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "EYuK $\\mathcal{E}=12\\ \\mathrm{V}$ va ichki qarshiligi $r=2.0\\ \\Omega$ bo'lgan manbaga tashqi qarshilik $R$ ulangan. Tashqi qarshilikdagi quvvat $P(R)=\\dfrac{\\mathcal{E}^2R}{(R+r)^2}$. Qanday $R$ da quvvat eng katta bo'ladi va u nechaga teng?",
+   "ru": "К источнику с ЭДС $\\mathcal{E}=12\\ \\mathrm{В}$ и внутренним сопротивлением $r=2.0\\ \\Omega$ подключено внешнее сопротивление $R$. Мощность на внешнем сопротивлении $P(R)=\\dfrac{\\mathcal{E}^2R}{(R+r)^2}$. При каком $R$ мощность наибольшая и чему она равна?",
+   "en": "An external resistance $R$ is connected to a source of emf $\\mathcal{E}=12\\ \\mathrm{V}$ and internal resistance $r=2.0\\ \\Omega$. The power in the external resistance is $P(R)=\\dfrac{\\mathcal{E}^2R}{(R+r)^2}$. For what $R$ is the power greatest, and what is it?"
+  },
+  "figure": "figures/B0-L03-S09.png",
+  "solution": {
+   "uz": [
+    "Bo'linma qoidasi: $$\\frac{dP}{dR}=\\mathcal{E}^2\\,\\frac{(R+r)^2-2R(R+r)}{(R+r)^4}=\\mathcal{E}^2\\,\\frac{r-R}{(R+r)^3}$$",
+    "Nolga tenglaymiz: $$R=r=2.0\\ \\Omega$$",
+    "$R<r$ da $P'>0$, $R>r$ da $P'<0$ — maksimum: $$P_{\\max}=\\frac{\\mathcal{E}^2}{4r}=\\frac{144}{8}=18\\ \\mathrm{W}$$"
+   ],
+   "ru": [
+    "Правило частного: $$\\frac{dP}{dR}=\\mathcal{E}^2\\,\\frac{(R+r)^2-2R(R+r)}{(R+r)^4}=\\mathcal{E}^2\\,\\frac{r-R}{(R+r)^3}$$",
+    "Приравниваем к нулю: $$R=r=2.0\\ \\Omega$$",
+    "При $R<r$ $P'>0$, при $R>r$ $P'<0$ — максимум: $$P_{\\max}=\\frac{\\mathcal{E}^2}{4r}=\\frac{144}{8}=18\\ \\mathrm{W}$$"
+   ],
+   "en": [
+    "Quotient rule: $$\\frac{dP}{dR}=\\mathcal{E}^2\\,\\frac{(R+r)^2-2R(R+r)}{(R+r)^4}=\\mathcal{E}^2\\,\\frac{r-R}{(R+r)^3}$$",
+    "Set it to zero: $$R=r=2.0\\ \\Omega$$",
+    "For $R<r$, $P'>0$; for $R>r$, $P'<0$ — a maximum: $$P_{\\max}=\\frac{\\mathcal{E}^2}{4r}=\\frac{144}{8}=18\\ \\mathrm{W}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Bo'linma qoidasi va ekstremum sharti $P'(R)=0$ (quvvat moslashuvi sharti $R=r$)",
+   "ru": "Правило частного и условие экстремума $P'(R)=0$ (условие согласования $R=r$)",
+   "en": "Quotient rule and extremum condition $P'(R)=0$ (matching condition $R=r$)"
+  },
+  "answer": "R=r=2.0\\ \\Omega,\\quad P_{\\max}=18\\ \\mathrm{W}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original"
+ },
+ {
+  "id": "B0-L03-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Matematik mayatnik davri $T=2\\pi\\sqrt{L/g}$. Mayatnik uzunligi $2\\%$ ga orttirilsa, davr taxminan necha foizga o'zgaradi? Agar $L$ ni o'lchash nisbiy xatosi $1\\%$, $g$ ni esa $0.4\\%$ bo'lsa, $T$ ning eng katta nisbiy xatosi qancha?",
+   "ru": "Период математического маятника $T=2\\pi\\sqrt{L/g}$. На сколько процентов примерно изменится период, если длину маятника увеличить на $2\\%$? Если относительная погрешность измерения $L$ равна $1\\%$, а $g$ — $0.4\\%$, какова наибольшая относительная погрешность $T$?",
+   "en": "The period of a simple pendulum is $T=2\\pi\\sqrt{L/g}$. By about what percentage does the period change if the length increases by $2\\%$? If the relative error in $L$ is $1\\%$ and in $g$ is $0.4\\%$, what is the largest relative error in $T$?"
+  },
+  "figure": "figures/B0-L03-S10.png",
+  "solution": {
+   "uz": [
+    "$T\\propto L^{1/2}$, shuning uchun: $$\\frac{\\Delta T}{T}\\approx\\frac12\\cdot\\frac{\\Delta L}{L}=\\frac12\\cdot2\\%=1\\%$$",
+    "$T\\propto L^{1/2}g^{-1/2}$ — nisbiy xatolar daraja ko'rsatkichlari modullari bilan qo'shiladi: $$\\frac{\\Delta T}{T}\\le\\frac12\\cdot1\\%+\\frac12\\cdot0.4\\%=0.7\\%$$"
+   ],
+   "ru": [
+    "$T\\propto L^{1/2}$, поэтому: $$\\frac{\\Delta T}{T}\\approx\\frac12\\cdot\\frac{\\Delta L}{L}=\\frac12\\cdot2\\%=1\\%$$",
+    "$T\\propto L^{1/2}g^{-1/2}$ — относительные погрешности складываются с модулями показателей: $$\\frac{\\Delta T}{T}\\le\\frac12\\cdot1\\%+\\frac12\\cdot0.4\\%=0.7\\%$$"
+   ],
+   "en": [
+    "$T\\propto L^{1/2}$, therefore: $$\\frac{\\Delta T}{T}\\approx\\frac12\\cdot\\frac{\\Delta L}{L}=\\frac12\\cdot2\\%=1\\%$$",
+    "$T\\propto L^{1/2}g^{-1/2}$ — the relative errors add with the absolute values of the exponents: $$\\frac{\\Delta T}{T}\\le\\frac12\\cdot1\\%+\\frac12\\cdot0.4\\%=0.7\\%$$"
+   ]
+  },
+  "basis": {
+   "uz": "Nisbiy xato: $y=Cx^{n}\\Rightarrow\\Delta y/y\\approx n\\,\\Delta x/x$",
+   "ru": "Относительная погрешность: $y=Cx^{n}\\Rightarrow\\Delta y/y\\approx n\\,\\Delta x/x$",
+   "en": "Relative error: $y=Cx^{n}\\Rightarrow\\Delta y/y\\approx n\\,\\Delta x/x$"
+  },
+  "answer": "\\Delta T/T\\approx1\\%;\\quad (\\Delta T/T)_{\\max}=0.7\\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original"
+ },
+ {
+  "id": "B0-L03-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jism koordinatasi $x(t)=t^3-6t^2+9t$ (metr, sekund), $t\\ge0$. Jism qaysi paytlarda to'xtaydi? Qaysi oraliqlarda $+x$, qaysilarida $-x$ yo'nalishda harakatlanadi? Tezlanish qachon nolga teng?",
+   "ru": "Координата тела $x(t)=t^3-6t^2+9t$ (метры, секунды), $t\\ge0$. В какие моменты тело останавливается? На каких промежутках оно движется в направлении $+x$, а на каких — $-x$? Когда ускорение равно нулю?",
+   "en": "The position of a body is $x(t)=t^3-6t^2+9t$ (meters, seconds), $t\\ge0$. When does the body stop? On which intervals does it move in the $+x$ direction and on which in the $-x$ direction? When is the acceleration zero?"
+  },
+  "figure": "figures/B0-L03-S11.png",
+  "solution": {
+   "uz": [
+    "Tezlik: $$v=3t^2-12t+9=3(t-1)(t-3)$$",
+    "To'xtash paytlari $v=0$: $$t_1=1\\ \\mathrm{s},\\qquad t_2=3\\ \\mathrm{s}$$",
+    "Ishoralar: $0\\le t<1$ va $t>3$ da $v>0$ ($+x$); $1<t<3$ da $v<0$ ($-x$). $$x(1)=4\\ \\mathrm{m},\\qquad x(3)=0$$",
+    "Tezlanish: $$a=6t-12=0\\ \\Rightarrow\\ t=2\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Скорость: $$v=3t^2-12t+9=3(t-1)(t-3)$$",
+    "Моменты остановки $v=0$: $$t_1=1\\ \\mathrm{s},\\qquad t_2=3\\ \\mathrm{s}$$",
+    "Знаки: при $0\\le t<1$ и $t>3$ $v>0$ ($+x$); при $1<t<3$ $v<0$ ($-x$). $$x(1)=4\\ \\mathrm{m},\\qquad x(3)=0$$",
+    "Ускорение: $$a=6t-12=0\\ \\Rightarrow\\ t=2\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "Velocity: $$v=3t^2-12t+9=3(t-1)(t-3)$$",
+    "Stops at $v=0$: $$t_1=1\\ \\mathrm{s},\\qquad t_2=3\\ \\mathrm{s}$$",
+    "Signs: for $0\\le t<1$ and $t>3$, $v>0$ ($+x$); for $1<t<3$, $v<0$ ($-x$). $$x(1)=4\\ \\mathrm{m},\\qquad x(3)=0$$",
+    "Acceleration: $$a=6t-12=0\\ \\Rightarrow\\ t=2\\ \\mathrm{s}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Hosila ishorasi harakat yo'nalishini beradi; $v=dx/dt$, $a=dv/dt$",
+   "ru": "Знак производной даёт направление движения; $v=dx/dt$, $a=dv/dt$",
+   "en": "The sign of the derivative gives the direction of motion; $v=dx/dt$, $a=dv/dt$"
+  },
+  "answer": "t=1\\ \\mathrm{s},\\ 3\\ \\mathrm{s};\\quad a(2\\ \\mathrm{s})=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original"
+ },
+ {
+  "id": "B0-L03-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Sferik shar radiusi $\\dfrac{dr}{dt}=2\\ \\mathrm{cm/s}$ tezlik bilan ortmoqda. Radius $r=10\\ \\mathrm{cm}$ bo'lgan paytda shar hajmi va sirti qanday tezlik bilan ortadi?",
+   "ru": "Радиус сферического шара растёт со скоростью $\\dfrac{dr}{dt}=2\\ \\mathrm{см/с}$. С какой скоростью растут объём и площадь поверхности шара в момент, когда радиус $r=10\\ \\mathrm{см}$?",
+   "en": "The radius of a spherical balloon increases at $\\dfrac{dr}{dt}=2\\ \\mathrm{cm/s}$. At what rates do the volume and the surface area increase when the radius is $r=10\\ \\mathrm{cm}$?"
+  },
+  "figure": "figures/B0-L03-S12.png",
+  "solution": {
+   "uz": [
+    "Zanjir qoidasi: $V=\\tfrac43\\pi r^3$, $r=r(t)$: $$\\frac{dV}{dt}=\\frac{dV}{dr}\\cdot\\frac{dr}{dt}=4\\pi r^2\\,\\frac{dr}{dt}$$",
+    "Hajm tezligi: $$\\frac{dV}{dt}=4\\pi\\cdot100\\cdot2=800\\pi\\approx2.5\\times10^3\\ \\mathrm{cm^3/s}$$",
+    "Sirt $A=4\\pi r^2$: $$\\frac{dA}{dt}=8\\pi r\\,\\frac{dr}{dt}=160\\pi\\approx503\\ \\mathrm{cm^2/s}$$"
+   ],
+   "ru": [
+    "Цепное правило: $V=\\tfrac43\\pi r^3$, $r=r(t)$: $$\\frac{dV}{dt}=\\frac{dV}{dr}\\cdot\\frac{dr}{dt}=4\\pi r^2\\,\\frac{dr}{dt}$$",
+    "Скорость роста объёма: $$\\frac{dV}{dt}=4\\pi\\cdot100\\cdot2=800\\pi\\approx2.5\\times10^3\\ \\mathrm{cm^3/s}$$",
+    "Поверхность $A=4\\pi r^2$: $$\\frac{dA}{dt}=8\\pi r\\,\\frac{dr}{dt}=160\\pi\\approx503\\ \\mathrm{cm^2/s}$$"
+   ],
+   "en": [
+    "Chain rule: $V=\\tfrac43\\pi r^3$, $r=r(t)$: $$\\frac{dV}{dt}=\\frac{dV}{dr}\\cdot\\frac{dr}{dt}=4\\pi r^2\\,\\frac{dr}{dt}$$",
+    "Rate of volume change: $$\\frac{dV}{dt}=4\\pi\\cdot100\\cdot2=800\\pi\\approx2.5\\times10^3\\ \\mathrm{cm^3/s}$$",
+    "Surface area $A=4\\pi r^2$: $$\\frac{dA}{dt}=8\\pi r\\,\\frac{dr}{dt}=160\\pi\\approx503\\ \\mathrm{cm^2/s}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Zanjir qoidasi (bog'langan o'zgarish tezliklari): $\\dfrac{dV}{dt}=\\dfrac{dV}{dr}\\dfrac{dr}{dt}$",
+   "ru": "Цепное правило (связанные скорости): $\\dfrac{dV}{dt}=\\dfrac{dV}{dr}\\dfrac{dr}{dt}$",
+   "en": "Chain rule (related rates): $\\dfrac{dV}{dt}=\\dfrac{dV}{dr}\\dfrac{dr}{dt}$"
+  },
+  "answer": "\\frac{dV}{dt}=800\\pi\\approx2.5\\times10^3\\ \\mathrm{cm^3/s},\\quad \\frac{dA}{dt}=160\\pi\\approx503\\ \\mathrm{cm^2/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original"
+ },
+ {
+  "id": "B0-L03-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "So'nuvchi tebranish $x(t)=A\\,e^{-\\gamma t}\\cos\\omega t$ qonun bilan beriladi. Boshlang'ich tezlik $v(0)$ va boshlang'ich tezlanish $a(0)$ ni toping.",
+   "ru": "Затухающее колебание задано законом $x(t)=A\\,e^{-\\gamma t}\\cos\\omega t$. Найдите начальную скорость $v(0)$ и начальное ускорение $a(0)$.",
+   "en": "A damped oscillation is given by $x(t)=A\\,e^{-\\gamma t}\\cos\\omega t$. Find the initial velocity $v(0)$ and the initial acceleration $a(0)$."
+  },
+  "figure": "figures/B0-L03-S13.png",
+  "solution": {
+   "uz": [
+    "Ko'paytma va zanjir qoidasi: $$v=\\dot x=-A\\,e^{-\\gamma t}\\left(\\gamma\\cos\\omega t+\\omega\\sin\\omega t\\right)$$",
+    "$t=0$ da: $$v(0)=-\\gamma A$$",
+    "Yana bir marta differensiallaymiz: $$a=\\ddot x=A\\,e^{-\\gamma t}\\left[(\\gamma^2-\\omega^2)\\cos\\omega t+2\\gamma\\omega\\sin\\omega t\\right]$$",
+    "$t=0$ da: $$a(0)=A(\\gamma^2-\\omega^2)$$",
+    "Tekshiruv: $\\gamma=0$ da so'nmaydigan tebranish uchun $v(0)=0$, $a(0)=-A\\omega^2$ — to'g'ri."
+   ],
+   "ru": [
+    "Правило произведения и цепное правило: $$v=\\dot x=-A\\,e^{-\\gamma t}\\left(\\gamma\\cos\\omega t+\\omega\\sin\\omega t\\right)$$",
+    "При $t=0$: $$v(0)=-\\gamma A$$",
+    "Дифференцируем ещё раз: $$a=\\ddot x=A\\,e^{-\\gamma t}\\left[(\\gamma^2-\\omega^2)\\cos\\omega t+2\\gamma\\omega\\sin\\omega t\\right]$$",
+    "При $t=0$: $$a(0)=A(\\gamma^2-\\omega^2)$$",
+    "Проверка: при $\\gamma=0$ для незатухающего колебания $v(0)=0$, $a(0)=-A\\omega^2$ — верно."
+   ],
+   "en": [
+    "Product rule and chain rule: $$v=\\dot x=-A\\,e^{-\\gamma t}\\left(\\gamma\\cos\\omega t+\\omega\\sin\\omega t\\right)$$",
+    "At $t=0$: $$v(0)=-\\gamma A$$",
+    "Differentiate once more: $$a=\\ddot x=A\\,e^{-\\gamma t}\\left[(\\gamma^2-\\omega^2)\\cos\\omega t+2\\gamma\\omega\\sin\\omega t\\right]$$",
+    "At $t=0$: $$a(0)=A(\\gamma^2-\\omega^2)$$",
+    "Check: for $\\gamma=0$ (no damping), $v(0)=0$ and $a(0)=-A\\omega^2$ — correct."
+   ]
+  },
+  "basis": {
+   "uz": "$(uv)'=u'v+uv'$, $(e^{-\\gamma t})'=-\\gamma e^{-\\gamma t}$, $(\\cos\\omega t)'=-\\omega\\sin\\omega t$",
+   "ru": "$(uv)'=u'v+uv'$, $(e^{-\\gamma t})'=-\\gamma e^{-\\gamma t}$, $(\\cos\\omega t)'=-\\omega\\sin\\omega t$",
+   "en": "$(uv)'=u'v+uv'$, $(e^{-\\gamma t})'=-\\gamma e^{-\\gamma t}$, $(\\cos\\omega t)'=-\\omega\\sin\\omega t$"
+  },
+  "answer": "v(0)=-\\gamma A,\\quad a(0)=A(\\gamma^2-\\omega^2)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original"
+ }
+]

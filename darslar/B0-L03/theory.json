@@ -1,0 +1,541 @@
+[
+ {
+  "t": "h1",
+  "uz": "Hosila va uning fizik ma'nosi (The derivative and its physical meaning)",
+  "ru": "Производная и её физический смысл",
+  "en": "The derivative and its physical meaning"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz hosilani o'zgarish tezligi va urinma og'masi sifatida tushunasiz, asosiy funksiyalar hosilalarini va differensiallash qoidalarini qo'llaysiz, tezlik, tezlanish, tok kuchi va kuchni hosila orqali topasiz, ekstremum masalalarini yechasiz hamda o'lchash xatolarini baholaysiz.",
+  "ru": "**Цель.** После урока вы будете понимать производную как скорость изменения и наклон касательной, применять производные основных функций и правила дифференцирования, находить через производную скорость, ускорение, силу тока и силу, решать задачи на экстремум и оценивать погрешности измерений.",
+  "en": "**Goal.** By the end of the lesson you will understand the derivative as a rate of change and as the slope of a tangent line, use the derivatives of the basic functions and the rules of differentiation, find velocity, acceleration, current and force through derivatives, solve extremum problems and estimate measurement errors."
+ },
+ {
+  "t": "p",
+  "uz": "**GRE'da o'rni.** Hosila grafik og'masini o'qish, maksimal tezlik va tezlanishni topish, muvozanat holatini aniqlash va xatolarni baholash savollarining asosi. Murakkab hosilalar kam so'raladi, lekin oddiy hosilalarni tez va xatosiz olish shart.",
+  "ru": "**Роль в GRE.** Производная лежит в основе вопросов о чтении наклона графика, нахождении максимальной скорости и ускорения, определении положения равновесия и оценке погрешностей. Сложные производные спрашивают редко, но простые нужно брать быстро и без ошибок.",
+  "en": "**Role on the GRE.** The derivative underlies questions about reading the slope of a graph, finding the maximum velocity and acceleration, locating equilibrium positions and estimating errors. Complicated derivatives are rarely asked, but simple ones must be taken quickly and without mistakes."
+ },
+ {
+  "t": "h2",
+  "uz": "1. O'rtacha va oniy o'zgarish tezligi (Average and instantaneous rate of change)",
+  "ru": "1. Средняя и мгновенная скорость изменения",
+  "en": "1. Average and instantaneous rate of change"
+ },
+ {
+  "t": "p",
+  "uz": "$[x,\\ x+\\Delta x]$ oraliqdagi **o'rtacha o'zgarish tezligi (average rate of change)** — grafikdagi ikki nuqtani tutashtiruvchi **kesuvchining (secant)** og'masi:",
+  "ru": "**Средняя скорость изменения** на промежутке $[x,\\ x+\\Delta x]$ — наклон **секущей**, соединяющей две точки графика:",
+  "en": "The **average rate of change** on the interval $[x,\\ x+\\Delta x]$ is the slope of the **secant** line joining two points of the graph:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\Delta y}{\\Delta x}=\\frac{f(x+\\Delta x)-f(x)}{\\Delta x}"
+ },
+ {
+  "t": "p",
+  "uz": "$\\Delta x\\to0$ da kesuvchi **urinmaga (tangent)** aylanadi, o'rtacha tezlik esa **oniy o'zgarish tezligiga (instantaneous rate of change)** — **hosilaga (derivative)** intiladi ([[F01]]):",
+  "ru": "При $\\Delta x\\to0$ секущая переходит в **касательную**, а средняя скорость стремится к **мгновенной скорости изменения** — **производной** ([[F01]]):",
+  "en": "As $\\Delta x\\to0$ the secant turns into the **tangent** line, and the average rate tends to the **instantaneous rate of change** — the **derivative** ([[F01]]):"
+ },
+ {
+  "t": "m",
+  "m": "f'(x)=\\frac{dy}{dx}=\\lim_{\\Delta x\\to0}\\frac{f(x+\\Delta x)-f(x)}{\\Delta x}"
+ },
+ {
+  "t": "li",
+  "uz": "**Geometrik ma'nosi:** $f'(x_0)$ — $x_0$ nuqtadagi urinmaning og'masi; urinma tenglamasi $y=f(x_0)+f'(x_0)(x-x_0)$.",
+  "ru": "**Геометрический смысл:** $f'(x_0)$ — наклон касательной в точке $x_0$; уравнение касательной $y=f(x_0)+f'(x_0)(x-x_0)$.",
+  "en": "**Geometric meaning:** $f'(x_0)$ is the slope of the tangent line at $x_0$; the tangent line is $y=f(x_0)+f'(x_0)(x-x_0)$."
+ },
+ {
+  "t": "li",
+  "uz": "**Belgilashlar:** $f'(x)$, $\\dfrac{df}{dx}$; vaqt bo'yicha hosila ko'pincha nuqta bilan yoziladi: $\\dot x=\\dfrac{dx}{dt}$, $\\ddot x=\\dfrac{d^2x}{dt^2}$.",
+  "ru": "**Обозначения:** $f'(x)$, $\\dfrac{df}{dx}$; производную по времени часто обозначают точкой: $\\dot x=\\dfrac{dx}{dt}$, $\\ddot x=\\dfrac{d^2x}{dt^2}$.",
+  "en": "**Notation:** $f'(x)$, $\\dfrac{df}{dx}$; a time derivative is often written with a dot: $\\dot x=\\dfrac{dx}{dt}$, $\\ddot x=\\dfrac{d^2x}{dt^2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Birligi:** hosilaning birligi funksiya birligining argument birligiga nisbatiga teng: $[dx/dt]=\\mathrm{m/s}$.",
+  "ru": "**Единица измерения:** единица производной равна отношению единицы функции к единице аргумента: $[dx/dt]=\\mathrm{m/s}$.",
+  "en": "**Units:** the unit of a derivative is the unit of the function divided by the unit of the argument: $[dx/dt]=\\mathrm{m/s}$."
+ },
+ {
+  "t": "li",
+  "uz": "Grafigi sinadigan nuqtada (masalan, $|x|$ uchun $x=0$ da) hosila mavjud emas.",
+  "ru": "В точке излома графика (например, для $|x|$ при $x=0$) производной не существует.",
+  "en": "At a corner of the graph (for example, $|x|$ at $x=0$) the derivative does not exist."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B0-L03-F01.png",
+   "ru": "figures/B0-L03-F01-ru.png",
+   "en": "figures/B0-L03-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Hosilalar jadvali (Table of derivatives)",
+  "ru": "2. Таблица производных",
+  "en": "2. Table of derivatives"
+ },
+ {
+  "t": "p",
+  "uz": "Asosiy funksiyalar hosilalari ($C$, $n$, $a$, $k$ — o'zgarmaslar):",
+  "ru": "Производные основных функций ($C$, $n$, $a$, $k$ — постоянные):",
+  "en": "Derivatives of the basic functions ($C$, $n$, $a$, $k$ are constants):"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "O'zgarmas",
+    "ru": "Постоянная",
+    "en": "Constant",
+    "m": "(C)'=0"
+   },
+   {
+    "uz": "Darajali funksiya",
+    "ru": "Степенная функция",
+    "en": "Power function",
+    "m": "(x^n)'=nx^{n-1}"
+   },
+   {
+    "uz": "Ildiz va teskari",
+    "ru": "Корень и обратная",
+    "en": "Root and reciprocal",
+    "m": "(\\sqrt{x})'=\\frac{1}{2\\sqrt{x}},\\quad \\left(\\frac1x\\right)'=-\\frac{1}{x^2}"
+   },
+   {
+    "uz": "Eksponenta",
+    "ru": "Экспонента",
+    "en": "Exponential",
+    "m": "(e^{x})'=e^{x},\\quad (e^{kx})'=ke^{kx},\\quad (a^{x})'=a^{x}\\ln a"
+   },
+   {
+    "uz": "Logarifm",
+    "ru": "Логарифм",
+    "en": "Logarithm",
+    "m": "(\\ln x)'=\\frac1x"
+   },
+   {
+    "uz": "Sinus va kosinus",
+    "ru": "Синус и косинус",
+    "en": "Sine and cosine",
+    "m": "(\\sin x)'=\\cos x,\\quad (\\cos x)'=-\\sin x"
+   },
+   {
+    "uz": "Tangens",
+    "ru": "Тангенс",
+    "en": "Tangent",
+    "m": "(\\tan x)'=\\frac{1}{\\cos^2x}"
+   }
+  ]
+ },
+ {
+  "t": "h2",
+  "uz": "3. Differensiallash qoidalari (Rules of differentiation)",
+  "ru": "3. Правила дифференцирования",
+  "en": "3. Rules of differentiation"
+ },
+ {
+  "t": "m",
+  "m": "(u\\pm v)'=u'\\pm v',\\qquad (Cu)'=Cu'"
+ },
+ {
+  "t": "m",
+  "m": "(uv)'=u'v+uv',\\qquad \\left(\\frac{u}{v}\\right)'=\\frac{u'v-uv'}{v^2}"
+ },
+ {
+  "t": "p",
+  "uz": "**Zanjir qoidasi (chain rule)** — murakkab funksiya hosilasi: tashqi funksiya hosilasi ichki funksiya hosilasiga ko'paytiriladi:",
+  "ru": "**Цепное правило** — производная сложной функции: производная внешней функции умножается на производную внутренней:",
+  "en": "The **chain rule** gives the derivative of a composite function: the derivative of the outer function is multiplied by the derivative of the inner one:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{d}{dx}f\\big(g(x)\\big)=f'\\big(g(x)\\big)\\,g'(x)"
+ },
+ {
+  "t": "p",
+  "uz": "Fizikada eng ko'p uchraydigan misollar:",
+  "ru": "Наиболее частые примеры в физике:",
+  "en": "The most common examples in physics:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{d}{dt}\\sin\\omega t=\\omega\\cos\\omega t,\\qquad \\frac{d}{dt}e^{-t/\\tau}=-\\frac{1}{\\tau}e^{-t/\\tau},\\qquad \\frac{d}{dr}\\frac{1}{r^{n}}=-\\frac{n}{r^{n+1}}"
+ },
+ {
+  "t": "h2",
+  "uz": "4. Hosilaning fizik ma'nosi (Physical meaning of the derivative)",
+  "ru": "4. Физический смысл производной",
+  "en": "4. Physical meaning of the derivative"
+ },
+ {
+  "t": "p",
+  "uz": "Fizik kattalikning boshqa kattalik bo'yicha o'zgarish tezligi hosila bilan ifodalanadi:",
+  "ru": "Скорость изменения физической величины по другой величине выражается производной:",
+  "en": "The rate of change of a physical quantity with respect to another quantity is expressed by a derivative:"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Tezlik (velocity)",
+    "ru": "Скорость",
+    "en": "Velocity",
+    "m": "v=\\frac{dx}{dt}"
+   },
+   {
+    "uz": "Tezlanish (acceleration)",
+    "ru": "Ускорение",
+    "en": "Acceleration",
+    "m": "a=\\frac{dv}{dt}=\\frac{d^2x}{dt^2}"
+   },
+   {
+    "uz": "Tok kuchi (current)",
+    "ru": "Сила тока",
+    "en": "Current",
+    "m": "I=\\frac{dq}{dt}"
+   },
+   {
+    "uz": "Quvvat (power)",
+    "ru": "Мощность",
+    "en": "Power",
+    "m": "P=\\frac{dW}{dt}"
+   },
+   {
+    "uz": "Kuch — impuls hosilasi",
+    "ru": "Сила — производная импульса",
+    "en": "Force as the derivative of momentum",
+    "m": "F=\\frac{dp}{dt}"
+   },
+   {
+    "uz": "Konservativ kuch",
+    "ru": "Консервативная сила",
+    "en": "Conservative force",
+    "m": "F=-\\frac{dU}{dx}"
+   }
+  ]
+ },
+ {
+  "t": "p",
+  "uz": "Koordinata grafigining og'masi tezlikni, tezlik grafigining og'masi tezlanishni beradi ([[F02]]). Tezlik nolga teng bo'lgan paytda koordinata grafigi gorizontal urinmaga ega.",
+  "ru": "Наклон графика координаты даёт скорость, наклон графика скорости — ускорение ([[F02]]). В момент, когда скорость равна нулю, касательная к графику координаты горизонтальна.",
+  "en": "The slope of the position graph gives the velocity, and the slope of the velocity graph gives the acceleration ([[F02]]). When the velocity is zero, the tangent to the position graph is horizontal."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B0-L03-F02.png",
+   "ru": "figures/B0-L03-F02-ru.png",
+   "en": "figures/B0-L03-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Funksiyani hosila yordamida tekshirish (Analyzing a function with derivatives)",
+  "ru": "5. Исследование функции с помощью производной",
+  "en": "5. Analyzing a function with derivatives"
+ },
+ {
+  "t": "li",
+  "uz": "$f'(x)>0$ — funksiya **o'sadi (increasing)**; $f'(x)<0$ — **kamayadi (decreasing)**.",
+  "ru": "$f'(x)>0$ — функция **возрастает**; $f'(x)<0$ — **убывает**.",
+  "en": "$f'(x)>0$ — the function is **increasing**; $f'(x)<0$ — it is **decreasing**."
+ },
+ {
+  "t": "li",
+  "uz": "**Kritik nuqta (critical point):** $f'(x_0)=0$. Agar $f''(x_0)<0$ bo'lsa — **lokal maksimum (local maximum)**, $f''(x_0)>0$ bo'lsa — **lokal minimum (local minimum)**.",
+  "ru": "**Критическая точка:** $f'(x_0)=0$. Если $f''(x_0)<0$ — **локальный максимум**, если $f''(x_0)>0$ — **локальный минимум**.",
+  "en": "**Critical point:** $f'(x_0)=0$. If $f''(x_0)<0$ it is a **local maximum**; if $f''(x_0)>0$ it is a **local minimum**."
+ },
+ {
+  "t": "li",
+  "uz": "$f''(x)>0$ — grafik pastga qavariq (concave up), $f''(x)<0$ — yuqoriga qavariq (concave down); $f''$ ishorasini o'zgartiradigan nuqta — **egilish nuqtasi (inflection point)**.",
+  "ru": "$f''(x)>0$ — график выпуклый вниз, $f''(x)<0$ — выпуклый вверх; точка, где $f''$ меняет знак, — **точка перегиба**.",
+  "en": "$f''(x)>0$ — the graph is concave up, $f''(x)<0$ — concave down; a point where $f''$ changes sign is an **inflection point**."
+ },
+ {
+  "t": "p",
+  "uz": "$f$ ning ekstremumlari $f'$ grafigining nollariga, $f$ ning egilish nuqtalari esa $f'$ ning ekstremumlariga mos keladi ([[F03]], [[F04]]).",
+  "ru": "Экстремумы $f$ соответствуют нулям графика $f'$, а точки перегиба $f$ — экстремумам $f'$ ([[F03]], [[F04]]).",
+  "en": "The extrema of $f$ correspond to the zeros of the graph of $f'$, and the inflection points of $f$ correspond to the extrema of $f'$ ([[F03]], [[F04]])."
+ },
+ {
+  "t": "p",
+  "uz": "**Optimallashtirish (optimization).** Kattalikning eng katta yoki eng kichik qiymatini topish uchun uni bitta o'zgaruvchining funksiyasi sifatida yozib, hosilani nolga tenglaymiz. Masalan, $v_0$ tezlik bilan otilgan jismning uchish uzoqligi $R=\\dfrac{v_0^2\\sin2\\theta}{g}$; $\\dfrac{dR}{d\\theta}=0$ dan $\\theta=45^\\circ$.",
+  "ru": "**Оптимизация.** Чтобы найти наибольшее или наименьшее значение величины, её записывают как функцию одной переменной и приравнивают производную к нулю. Например, дальность полёта тела, брошенного со скоростью $v_0$, $R=\\dfrac{v_0^2\\sin2\\theta}{g}$; из $\\dfrac{dR}{d\\theta}=0$ получаем $\\theta=45^\\circ$.",
+  "en": "**Optimization.** To find the largest or smallest value of a quantity, write it as a function of one variable and set the derivative to zero. For example, the range of a body launched at speed $v_0$ is $R=\\dfrac{v_0^2\\sin2\\theta}{g}$; from $\\dfrac{dR}{d\\theta}=0$ we get $\\theta=45^\\circ$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B0-L03-F03.png",
+   "ru": "figures/B0-L03-F03-ru.png",
+   "en": "figures/B0-L03-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B0-L03-F04.png",
+   "ru": "figures/B0-L03-F04-ru.png",
+   "en": "figures/B0-L03-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Chiziqli yaqinlashuv va xatolar (Linear approximation and errors)",
+  "ru": "6. Линейное приближение и погрешности",
+  "en": "6. Linear approximation and errors"
+ },
+ {
+  "t": "p",
+  "uz": "Kichik $\\Delta x$ uchun funksiya o'z urinmasi bilan almashtiriladi; **differensial (differential)** $dy=f'(x)\\,dx$ funksiya orttirmasining asosiy qismi ([[F05]]):",
+  "ru": "При малом $\\Delta x$ функцию заменяют её касательной; **дифференциал** $dy=f'(x)\\,dx$ — главная часть приращения функции ([[F05]]):",
+  "en": "For small $\\Delta x$ a function is replaced by its tangent line; the **differential** $dy=f'(x)\\,dx$ is the main part of the increment of the function ([[F05]]):"
+ },
+ {
+  "t": "m",
+  "m": "f(x+\\Delta x)\\approx f(x)+f'(x)\\,\\Delta x,\\qquad (1+x)^{n}\\approx1+nx\\quad(|x|\\ll1)"
+ },
+ {
+  "t": "p",
+  "uz": "**Nisbiy xato (relative error).** $y=Cx^{n}$ bo'lsa, nisbiy o'zgarishlar daraja ko'rsatkichi orqali bog'lanadi; ko'paytma va bo'linmada nisbiy xatolar qo'shiladi (eng katta baho):",
+  "ru": "**Относительная погрешность.** Если $y=Cx^{n}$, относительные изменения связаны через показатель степени; при умножении и делении относительные погрешности складываются (максимальная оценка):",
+  "en": "**Relative error.** If $y=Cx^{n}$, the relative changes are related through the exponent; for products and quotients the relative errors add (maximum estimate):"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\Delta y}{y}\\approx n\\,\\frac{\\Delta x}{x},\\qquad y=\\frac{a\\,b}{c}:\\ \\ \\frac{\\Delta y}{y}\\approx\\frac{\\Delta a}{a}+\\frac{\\Delta b}{b}+\\frac{\\Delta c}{c}"
+ },
+ {
+  "t": "p",
+  "uz": "Misol: mayatnik davri $T=2\\pi\\sqrt{L/g}$; uzunlik $2\\%$ ortsa, davr taxminan $1\\%$ ortadi.",
+  "ru": "Пример: период маятника $T=2\\pi\\sqrt{L/g}$; если длина увеличится на $2\\%$, период увеличится примерно на $1\\%$.",
+  "en": "Example: the period of a pendulum is $T=2\\pi\\sqrt{L/g}$; if the length increases by $2\\%$, the period increases by about $1\\%$."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B0-L03-F05.png",
+   "ru": "figures/B0-L03-F05-ru.png",
+   "en": "figures/B0-L03-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Garmonik tebranishda tezlik va tezlanish (Velocity and acceleration in harmonic motion)",
+  "ru": "7. Скорость и ускорение при гармонических колебаниях",
+  "en": "7. Velocity and acceleration in harmonic motion"
+ },
+ {
+  "t": "p",
+  "uz": "Koordinatani vaqt bo'yicha differensiallab, tezlik va tezlanishni topamiz ([[F06]]):",
+  "ru": "Дифференцируя координату по времени, находим скорость и ускорение ([[F06]]):",
+  "en": "Differentiating the position with respect to time gives the velocity and the acceleration ([[F06]]):"
+ },
+ {
+  "t": "m",
+  "m": "x=A\\cos\\omega t,\\qquad v=\\dot x=-A\\omega\\sin\\omega t,\\qquad a=\\ddot x=-A\\omega^{2}\\cos\\omega t=-\\omega^{2}x"
+ },
+ {
+  "t": "li",
+  "uz": "Maksimal tezlik $v_{\\max}=A\\omega$ — muvozanat holatida ($x=0$); maksimal tezlanish $a_{\\max}=A\\omega^2$ — chetki nuqtalarda ($x=\\pm A$).",
+  "ru": "Максимальная скорость $v_{\\max}=A\\omega$ — в положении равновесия ($x=0$); максимальное ускорение $a_{\\max}=A\\omega^2$ — в крайних точках ($x=\\pm A$).",
+  "en": "The maximum speed $v_{\\max}=A\\omega$ occurs at equilibrium ($x=0$); the maximum acceleration $a_{\\max}=A\\omega^2$ occurs at the turning points ($x=\\pm A$)."
+ },
+ {
+  "t": "li",
+  "uz": "Tezlik koordinatadan faza bo'yicha $\\pi/2$ ga, tezlanish esa $\\pi$ ga oldinda.",
+  "ru": "Скорость опережает координату по фазе на $\\pi/2$, а ускорение — на $\\pi$.",
+  "en": "The velocity leads the position in phase by $\\pi/2$, and the acceleration leads it by $\\pi$."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B0-L03-F06.png",
+   "ru": "figures/B0-L03-F06-ru.png",
+   "en": "figures/B0-L03-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Potensial energiya va muvozanat (Potential energy and equilibrium)",
+  "ru": "8. Потенциальная энергия и равновесие",
+  "en": "8. Potential energy and equilibrium"
+ },
+ {
+  "t": "p",
+  "uz": "Konservativ kuch potensial energiya hosilasining teskari ishorasiga teng: $F=-\\dfrac{dU}{dx}$. Kuch potensial energiya kamayadigan tomonga yo'nalgan ([[F07]]).",
+  "ru": "Консервативная сила равна производной потенциальной энергии с обратным знаком: $F=-\\dfrac{dU}{dx}$. Сила направлена в сторону убывания потенциальной энергии ([[F07]]).",
+  "en": "A conservative force equals the negative derivative of the potential energy: $F=-\\dfrac{dU}{dx}$. The force points toward decreasing potential energy ([[F07]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Muvozanat holati (equilibrium):** $\\dfrac{dU}{dx}=0$, ya'ni kuch nolga teng.",
+  "ru": "**Положение равновесия:** $\\dfrac{dU}{dx}=0$, то есть сила равна нулю.",
+  "en": "**Equilibrium:** $\\dfrac{dU}{dx}=0$, that is, the force is zero."
+ },
+ {
+  "t": "li",
+  "uz": "**Barqaror muvozanat (stable):** $U''>0$ — potensial energiya minimumi; **beqaror muvozanat (unstable):** $U''<0$ — maksimumi.",
+  "ru": "**Устойчивое равновесие:** $U''>0$ — минимум потенциальной энергии; **неустойчивое равновесие:** $U''<0$ — максимум.",
+  "en": "**Stable equilibrium:** $U''>0$ — a minimum of the potential energy; **unstable equilibrium:** $U''<0$ — a maximum."
+ },
+ {
+  "t": "li",
+  "uz": "Barqaror muvozanat atrofidagi kichik tebranishlar siklik chastotasi: $\\omega=\\sqrt{U''(x_0)/m}$.",
+  "ru": "Циклическая частота малых колебаний около устойчивого равновесия: $\\omega=\\sqrt{U''(x_0)/m}$.",
+  "en": "The angular frequency of small oscillations about a stable equilibrium is $\\omega=\\sqrt{U''(x_0)/m}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B0-L03-F07.png",
+   "ru": "figures/B0-L03-F07-ru.png",
+   "en": "figures/B0-L03-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. GRE uchun tez tekshiruvlar (Quick checks for the GRE)",
+  "ru": "9. Быстрые проверки для GRE",
+  "en": "9. Quick checks for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "Birlikni tekshiring: hosila birligi $[y]/[x]$; masalan, $[dU/dx]=\\mathrm{J/m}=\\mathrm{N}$.",
+  "ru": "Проверяйте единицы: единица производной $[y]/[x]$; например, $[dU/dx]=\\mathrm{J/m}=\\mathrm{N}$.",
+  "en": "Check units: the unit of a derivative is $[y]/[x]$; for example, $[dU/dx]=\\mathrm{J/m}=\\mathrm{N}$."
+ },
+ {
+  "t": "li",
+  "uz": "Grafikdan: og'ma nolga teng nuqtalar — ekstremumlar; og'ma eng katta nuqta — egilish nuqtasi.",
+  "ru": "По графику: точки с нулевым наклоном — экстремумы; точка наибольшего наклона — точка перегиба.",
+  "en": "From a graph: points of zero slope are extrema; the point of steepest slope is an inflection point."
+ },
+ {
+  "t": "li",
+  "uz": "Zanjir qoidasini unutmang: $\\dfrac{d}{dt}\\cos\\omega t=-\\omega\\sin\\omega t$ — $\\omega$ ko'paytuvchi ko'p xatolarga sabab bo'ladi.",
+  "ru": "Не забывайте цепное правило: $\\dfrac{d}{dt}\\cos\\omega t=-\\omega\\sin\\omega t$ — множитель $\\omega$ часто становится источником ошибок.",
+  "en": "Do not forget the chain rule: $\\dfrac{d}{dt}\\cos\\omega t=-\\omega\\sin\\omega t$ — the factor $\\omega$ is a frequent source of mistakes."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Hosila ta'rifi",
+    "ru": "Определение производной",
+    "en": "Definition of the derivative",
+    "m": "f'(x)=\\lim_{\\Delta x\\to0}\\frac{\\Delta y}{\\Delta x}"
+   },
+   {
+    "uz": "Urinma",
+    "ru": "Касательная",
+    "en": "Tangent line",
+    "m": "y=f(x_0)+f'(x_0)(x-x_0)"
+   },
+   {
+    "uz": "Ko'paytma",
+    "ru": "Произведение",
+    "en": "Product rule",
+    "m": "(uv)'=u'v+uv'"
+   },
+   {
+    "uz": "Zanjir qoidasi",
+    "ru": "Цепное правило",
+    "en": "Chain rule",
+    "m": "\\big(f(g)\\big)'=f'(g)\\,g'"
+   },
+   {
+    "uz": "Tezlik va tezlanish",
+    "ru": "Скорость и ускорение",
+    "en": "Velocity and acceleration",
+    "m": "v=\\dot x,\\quad a=\\ddot x"
+   },
+   {
+    "uz": "Kuch va potensial",
+    "ru": "Сила и потенциал",
+    "en": "Force and potential",
+    "m": "F=-\\frac{dU}{dx}"
+   },
+   {
+    "uz": "Ekstremum",
+    "ru": "Экстремум",
+    "en": "Extremum",
+    "m": "f'(x_0)=0"
+   },
+   {
+    "uz": "Chiziqli yaqinlashuv",
+    "ru": "Линейное приближение",
+    "en": "Linear approximation",
+    "m": "f(x+\\Delta x)\\approx f(x)+f'(x)\\Delta x"
+   },
+   {
+    "uz": "Nisbiy xato",
+    "ru": "Относительная погрешность",
+    "en": "Relative error",
+    "m": "\\frac{\\Delta y}{y}\\approx n\\frac{\\Delta x}{x}"
+   },
+   {
+    "uz": "Garmonik tebranish",
+    "ru": "Гармоническое колебание",
+    "en": "Harmonic motion",
+    "m": "v_{\\max}=A\\omega,\\quad a_{\\max}=A\\omega^2"
+   }
+  ]
+ }
+]
