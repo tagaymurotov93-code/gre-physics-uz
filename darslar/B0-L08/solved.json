@@ -1,0 +1,488 @@
+[
+ {
+  "id": "B0-L08-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$e^x$ funksiyaning Maklaren qatorini $x^3$ gacha yozing va uning yordamida $e^{0.2}$ ni hisoblang. Xatolikni baholang.",
+   "ru": "Запишите ряд Маклорена функции $e^x$ до $x^3$ и с его помощью вычислите $e^{0.2}$. Оцените погрешность.",
+   "en": "Write the Maclaurin series of $e^x$ up to $x^3$ and use it to compute $e^{0.2}$. Estimate the error."
+  },
+  "figure": "figures/B0-L08-S01.png",
+  "solution": {
+   "uz": [
+    "$e^x$ ning barcha hosilalari $e^x$ ga teng, $x_0=0$ da ular $1$ ga teng, shuning uchun $c_k=\\dfrac{1}{k!}$: $$e^x\\approx T_3(x)=1+x+\\frac{x^2}{2}+\\frac{x^3}{6}$$",
+    "$x=0.2$ ni qo'yamiz: $$e^{0.2}\\approx1+0.2+0.02+0.00133=1.22133$$",
+    "Xatolik tashlab yuborilgan birinchi had tartibida: $$\\frac{x^4}{24}=\\frac{0.0016}{24}\\approx7\\cdot10^{-5}$$",
+    "Aniq qiymat $e^{0.2}=1.22140$; farq $7\\cdot10^{-5}$ — baho to'g'ri."
+   ],
+   "ru": [
+    "Все производные $e^x$ равны $e^x$, при $x_0=0$ они равны $1$, поэтому $c_k=\\dfrac{1}{k!}$: $$e^x\\approx T_3(x)=1+x+\\frac{x^2}{2}+\\frac{x^3}{6}$$",
+    "Подставляем $x=0.2$: $$e^{0.2}\\approx1+0.2+0.02+0.00133=1.22133$$",
+    "Погрешность порядка первого отброшенного члена: $$\\frac{x^4}{24}=\\frac{0.0016}{24}\\approx7\\cdot10^{-5}$$",
+    "Точное значение $e^{0.2}=1.22140$; разность $7\\cdot10^{-5}$ — оценка верна."
+   ],
+   "en": [
+    "All derivatives of $e^x$ equal $e^x$, which is $1$ at $x_0=0$, so $c_k=\\dfrac{1}{k!}$: $$e^x\\approx T_3(x)=1+x+\\frac{x^2}{2}+\\frac{x^3}{6}$$",
+    "Substitute $x=0.2$: $$e^{0.2}\\approx1+0.2+0.02+0.00133=1.22133$$",
+    "The error is of the order of the first discarded term: $$\\frac{x^4}{24}=\\frac{0.0016}{24}\\approx7\\cdot10^{-5}$$",
+    "The exact value is $e^{0.2}=1.22140$; the difference is $7\\cdot10^{-5}$ — the estimate is correct."
+   ]
+  },
+  "basis": {
+   "uz": "Teylor qatori, $(e^x)'=e^x$, qoldiq hadning bahosi",
+   "ru": "Ряд Тейлора, $(e^x)'=e^x$, оценка остаточного члена",
+   "en": "Taylor series, $(e^x)'=e^x$, estimate of the remainder"
+  },
+  "answer": "e^{0.2}\\approx1.2213,\\quad \\Delta\\approx7\\cdot10^{-5}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original"
+ },
+ {
+  "id": "B0-L08-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Chiziqli yaqinlashish yordamida $\\sqrt[3]{27.54}$ ni hisoblang.",
+   "ru": "С помощью линейного приближения вычислите $\\sqrt[3]{27.54}$.",
+   "en": "Use the linear approximation to compute $\\sqrt[3]{27.54}$."
+  },
+  "figure": "figures/B0-L08-S02.png",
+  "solution": {
+   "uz": [
+    "$f(x)=x^{1/3}$; yaqin \"qulay\" nuqta $x_0=27$, $\\ \\Delta x=0.54$: $$f(27)=3,\\qquad f'(x)=\\frac{1}{3x^{2/3}},\\qquad f'(27)=\\frac{1}{3\\cdot9}=\\frac{1}{27}$$",
+    "Chiziqli yaqinlashish: $$\\sqrt[3]{27.54}\\approx3+\\frac{0.54}{27}=3+0.02=3.02$$",
+    "Aniq qiymat $3.01987$. $f''<0$ (botiq funksiya), shuning uchun urinma grafikdan yuqorida va yaqinlashish biroz katta chiqadi."
+   ],
+   "ru": [
+    "$f(x)=x^{1/3}$; ближайшая «удобная» точка $x_0=27$, $\\ \\Delta x=0.54$: $$f(27)=3,\\qquad f'(x)=\\frac{1}{3x^{2/3}},\\qquad f'(27)=\\frac{1}{3\\cdot9}=\\frac{1}{27}$$",
+    "Линейное приближение: $$\\sqrt[3]{27.54}\\approx3+\\frac{0.54}{27}=3+0.02=3.02$$",
+    "Точное значение $3.01987$. $f''<0$ (вогнутая функция), поэтому касательная лежит выше графика и приближение немного завышено."
+   ],
+   "en": [
+    "$f(x)=x^{1/3}$; the nearest \"convenient\" point is $x_0=27$, $\\ \\Delta x=0.54$: $$f(27)=3,\\qquad f'(x)=\\frac{1}{3x^{2/3}},\\qquad f'(27)=\\frac{1}{3\\cdot9}=\\frac{1}{27}$$",
+    "Linear approximation: $$\\sqrt[3]{27.54}\\approx3+\\frac{0.54}{27}=3+0.02=3.02$$",
+    "The exact value is $3.01987$. Since $f''<0$ (concave function), the tangent lies above the graph and the approximation is slightly too large."
+   ]
+  },
+  "basis": {
+   "uz": "Chiziqli yaqinlashish $f(x_0+\\Delta x)\\approx f(x_0)+f'(x_0)\\,\\Delta x$, darajali funksiya hosilasi",
+   "ru": "Линейное приближение $f(x_0+\\Delta x)\\approx f(x_0)+f'(x_0)\\,\\Delta x$, производная степенной функции",
+   "en": "Linear approximation $f(x_0+\\Delta x)\\approx f(x_0)+f'(x_0)\\,\\Delta x$, derivative of a power function"
+  },
+  "answer": "\\sqrt[3]{27.54}\\approx3.02",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original"
+ },
+ {
+  "id": "B0-L08-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$\\sin x$ qatorining ikkita nolmas hadi yordamida $\\sin0.3$ ni hisoblang va xatolik chegarasini ko'rsating.",
+   "ru": "С помощью двух ненулевых членов ряда для $\\sin x$ вычислите $\\sin0.3$ и укажите границу погрешности.",
+   "en": "Use two nonzero terms of the series for $\\sin x$ to compute $\\sin0.3$ and give a bound on the error."
+  },
+  "figure": "figures/B0-L08-S03.png",
+  "solution": {
+   "uz": [
+    "Ikki had: $$\\sin x\\approx x-\\frac{x^3}{6}:\\qquad \\sin0.3\\approx0.3-\\frac{0.027}{6}=0.3-0.0045=0.2955$$",
+    "Qator ishorasi almashinuvchi va hadlari kamayadi, shuning uchun xatolik tashlab yuborilgan birinchi haddan katta emas: $$|\\Delta|\\leq\\frac{x^5}{120}=\\frac{0.00243}{120}\\approx2\\cdot10^{-5}$$",
+    "Tashlab yuborilgan had musbat, demak aniq qiymat biroz katta: $\\sin0.3=0.29552$."
+   ],
+   "ru": [
+    "Два члена: $$\\sin x\\approx x-\\frac{x^3}{6}:\\qquad \\sin0.3\\approx0.3-\\frac{0.027}{6}=0.3-0.0045=0.2955$$",
+    "Ряд знакочередующийся, и его члены убывают, поэтому погрешность не больше первого отброшенного члена: $$|\\Delta|\\leq\\frac{x^5}{120}=\\frac{0.00243}{120}\\approx2\\cdot10^{-5}$$",
+    "Отброшенный член положителен, значит, точное значение немного больше: $\\sin0.3=0.29552$."
+   ],
+   "en": [
+    "Two terms: $$\\sin x\\approx x-\\frac{x^3}{6}:\\qquad \\sin0.3\\approx0.3-\\frac{0.027}{6}=0.3-0.0045=0.2955$$",
+    "The series is alternating with decreasing terms, so the error does not exceed the first discarded term: $$|\\Delta|\\leq\\frac{x^5}{120}=\\frac{0.00243}{120}\\approx2\\cdot10^{-5}$$",
+    "The discarded term is positive, so the exact value is slightly larger: $\\sin0.3=0.29552$."
+   ]
+  },
+  "basis": {
+   "uz": "$\\sin x$ ning Maklaren qatori, ishorasi almashinuvchi qator xatoligi",
+   "ru": "Ряд Маклорена для $\\sin x$, погрешность знакочередующегося ряда",
+   "en": "Maclaurin series of $\\sin x$, error of an alternating series"
+  },
+  "answer": "\\sin0.3\\approx0.2955,\\quad |\\Delta|\\leq2\\cdot10^{-5}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original"
+ },
+ {
+  "id": "B0-L08-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$\\ln x$ funksiyani $x_0=1$ nuqta atrofida uchinchi tartibgacha Teylor qatoriga yoying va $\\ln1.2$ ni hisoblang.",
+   "ru": "Разложите функцию $\\ln x$ в ряд Тейлора в окрестности точки $x_0=1$ до третьего порядка и вычислите $\\ln1.2$.",
+   "en": "Expand the function $\\ln x$ in a Taylor series about the point $x_0=1$ up to third order and compute $\\ln1.2$."
+  },
+  "figure": "figures/B0-L08-S04.png",
+  "solution": {
+   "uz": [
+    "Hosilalar va ularning $x_0=1$ dagi qiymatlari: $$f=\\ln x\\to0,\\quad f'=\\frac{1}{x}\\to1,\\quad f''=-\\frac{1}{x^2}\\to-1,\\quad f'''=\\frac{2}{x^3}\\to2$$",
+    "Koeffitsiyentlar $c_k=f^{(k)}(1)/k!$: $$\\ln x\\approx(x-1)-\\frac{(x-1)^2}{2}+\\frac{(x-1)^3}{3}$$",
+    "$x-1=0.2$: $$\\ln1.2\\approx0.2-0.02+0.00267=0.18267$$",
+    "Aniq qiymat $0.18232$. Farq $3.4\\cdot10^{-4}$ tashlab yuborilgan had $-\\dfrac{0.2^4}{4}=-4\\cdot10^{-4}$ bilan bir tartibda."
+   ],
+   "ru": [
+    "Производные и их значения при $x_0=1$: $$f=\\ln x\\to0,\\quad f'=\\frac{1}{x}\\to1,\\quad f''=-\\frac{1}{x^2}\\to-1,\\quad f'''=\\frac{2}{x^3}\\to2$$",
+    "Коэффициенты $c_k=f^{(k)}(1)/k!$: $$\\ln x\\approx(x-1)-\\frac{(x-1)^2}{2}+\\frac{(x-1)^3}{3}$$",
+    "$x-1=0.2$: $$\\ln1.2\\approx0.2-0.02+0.00267=0.18267$$",
+    "Точное значение $0.18232$. Разность $3.4\\cdot10^{-4}$ того же порядка, что и отброшенный член $-\\dfrac{0.2^4}{4}=-4\\cdot10^{-4}$."
+   ],
+   "en": [
+    "The derivatives and their values at $x_0=1$: $$f=\\ln x\\to0,\\quad f'=\\frac{1}{x}\\to1,\\quad f''=-\\frac{1}{x^2}\\to-1,\\quad f'''=\\frac{2}{x^3}\\to2$$",
+    "Coefficients $c_k=f^{(k)}(1)/k!$: $$\\ln x\\approx(x-1)-\\frac{(x-1)^2}{2}+\\frac{(x-1)^3}{3}$$",
+    "$x-1=0.2$: $$\\ln1.2\\approx0.2-0.02+0.00267=0.18267$$",
+    "The exact value is $0.18232$. The difference $3.4\\cdot10^{-4}$ is of the same order as the discarded term $-\\dfrac{0.2^4}{4}=-4\\cdot10^{-4}$."
+   ]
+  },
+  "basis": {
+   "uz": "Teylor qatori koeffitsiyentlari $c_k=f^{(k)}(x_0)/k!$; $(\\ln x)'=1/x$",
+   "ru": "Коэффициенты ряда Тейлора $c_k=f^{(k)}(x_0)/k!$; $(\\ln x)'=1/x$",
+   "en": "Taylor coefficients $c_k=f^{(k)}(x_0)/k!$; $(\\ln x)'=1/x$"
+  },
+  "answer": "\\ln x\\approx(x-1)-\\frac{(x-1)^2}{2}+\\frac{(x-1)^3}{3},\\quad \\ln1.2\\approx0.1827",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original"
+ },
+ {
+  "id": "B0-L08-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Binomial qator yordamida $\\dfrac{1}{\\sqrt{1-x}}$ ni $x^2$ gacha yoying va $\\dfrac{1}{\\sqrt{0.96}}$ ni hisoblang.",
+   "ru": "С помощью биномиального ряда разложите $\\dfrac{1}{\\sqrt{1-x}}$ до $x^2$ и вычислите $\\dfrac{1}{\\sqrt{0.96}}$.",
+   "en": "Using the binomial series, expand $\\dfrac{1}{\\sqrt{1-x}}$ up to $x^2$ and compute $\\dfrac{1}{\\sqrt{0.96}}$."
+  },
+  "figure": "figures/B0-L08-S05.png",
+  "solution": {
+   "uz": [
+    "Binomial qatorda $n=-\\dfrac{1}{2}$ va $x$ o'rniga $-x$: $$(1-x)^{-1/2}\\approx1+\\left(-\\frac{1}{2}\\right)(-x)+\\frac{\\left(-\\frac{1}{2}\\right)\\left(-\\frac{3}{2}\\right)}{2}\\,x^2=1+\\frac{x}{2}+\\frac{3x^2}{8}$$",
+    "$0.96=1-0.04$, ya'ni $x=0.04$: $$\\frac{1}{\\sqrt{0.96}}\\approx1+0.02+\\frac{3\\cdot0.0016}{8}=1+0.02+0.0006=1.0206$$",
+    "Aniq qiymat $1.020621$ — xatolik $2\\cdot10^{-5}$, ya'ni tashlab yuborilgan $\\dfrac{5}{16}x^3$ had tartibida."
+   ],
+   "ru": [
+    "В биномиальном ряду $n=-\\dfrac{1}{2}$, а вместо $x$ подставляем $-x$: $$(1-x)^{-1/2}\\approx1+\\left(-\\frac{1}{2}\\right)(-x)+\\frac{\\left(-\\frac{1}{2}\\right)\\left(-\\frac{3}{2}\\right)}{2}\\,x^2=1+\\frac{x}{2}+\\frac{3x^2}{8}$$",
+    "$0.96=1-0.04$, то есть $x=0.04$: $$\\frac{1}{\\sqrt{0.96}}\\approx1+0.02+\\frac{3\\cdot0.0016}{8}=1+0.02+0.0006=1.0206$$",
+    "Точное значение $1.020621$ — погрешность $2\\cdot10^{-5}$, то есть порядка отброшенного члена $\\dfrac{5}{16}x^3$."
+   ],
+   "en": [
+    "In the binomial series take $n=-\\dfrac{1}{2}$ and replace $x$ by $-x$: $$(1-x)^{-1/2}\\approx1+\\left(-\\frac{1}{2}\\right)(-x)+\\frac{\\left(-\\frac{1}{2}\\right)\\left(-\\frac{3}{2}\\right)}{2}\\,x^2=1+\\frac{x}{2}+\\frac{3x^2}{8}$$",
+    "$0.96=1-0.04$, i.e. $x=0.04$: $$\\frac{1}{\\sqrt{0.96}}\\approx1+0.02+\\frac{3\\cdot0.0016}{8}=1+0.02+0.0006=1.0206$$",
+    "The exact value is $1.020621$ — the error is $2\\cdot10^{-5}$, i.e. of the order of the discarded term $\\dfrac{5}{16}x^3$."
+   ]
+  },
+  "basis": {
+   "uz": "Binomial qator $(1+x)^n=1+nx+\\dfrac{n(n-1)}{2}x^2+\\ldots$",
+   "ru": "Биномиальный ряд $(1+x)^n=1+nx+\\dfrac{n(n-1)}{2}x^2+\\ldots$",
+   "en": "Binomial series $(1+x)^n=1+nx+\\dfrac{n(n-1)}{2}x^2+\\ldots$"
+  },
+  "answer": "\\frac{1}{\\sqrt{1-x}}\\approx1+\\frac{x}{2}+\\frac{3x^2}{8},\\quad \\frac{1}{\\sqrt{0.96}}\\approx1.0206",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original"
+ },
+ {
+  "id": "B0-L08-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Qatorlar yordamida limitlarni hisoblang: $\\ \\displaystyle\\lim_{x\\to0}\\frac{e^x-1-x}{x^2}$ va $\\ \\displaystyle\\lim_{x\\to0}\\frac{\\tan x-\\sin x}{x^3}$.",
+   "ru": "С помощью рядов вычислите пределы: $\\ \\displaystyle\\lim_{x\\to0}\\frac{e^x-1-x}{x^2}$ и $\\ \\displaystyle\\lim_{x\\to0}\\frac{\\tan x-\\sin x}{x^3}$.",
+   "en": "Use series to compute the limits $\\ \\displaystyle\\lim_{x\\to0}\\frac{e^x-1-x}{x^2}$ and $\\ \\displaystyle\\lim_{x\\to0}\\frac{\\tan x-\\sin x}{x^3}$."
+  },
+  "figure": "figures/B0-L08-S06.png",
+  "solution": {
+   "uz": [
+    "Birinchi limit: $e^x$ ni yoyamiz, $1+x$ qisqaradi: $$\\frac{e^x-1-x}{x^2}=\\frac{x^2/2+x^3/6+\\ldots}{x^2}=\\frac{1}{2}+\\frac{x}{6}+\\ldots\\to\\frac{1}{2}$$",
+    "Ikkinchi limit: maxraj $x^3$, shuning uchun suratni $x^3$ gacha yoyamiz ($\\tan x=x+\\dfrac{x^3}{3}+\\ldots$): $$\\tan x-\\sin x=\\left(x+\\frac{x^3}{3}\\right)-\\left(x-\\frac{x^3}{6}\\right)+\\ldots=\\frac{x^3}{2}+\\ldots$$",
+    "Demak: $$\\lim_{x\\to0}\\frac{\\tan x-\\sin x}{x^3}=\\frac{1}{2}$$"
+   ],
+   "ru": [
+    "Первый предел: раскладываем $e^x$, $1+x$ сокращается: $$\\frac{e^x-1-x}{x^2}=\\frac{x^2/2+x^3/6+\\ldots}{x^2}=\\frac{1}{2}+\\frac{x}{6}+\\ldots\\to\\frac{1}{2}$$",
+    "Второй предел: знаменатель $x^3$, поэтому числитель раскладываем до $x^3$ ($\\tan x=x+\\dfrac{x^3}{3}+\\ldots$): $$\\tan x-\\sin x=\\left(x+\\frac{x^3}{3}\\right)-\\left(x-\\frac{x^3}{6}\\right)+\\ldots=\\frac{x^3}{2}+\\ldots$$",
+    "Следовательно: $$\\lim_{x\\to0}\\frac{\\tan x-\\sin x}{x^3}=\\frac{1}{2}$$"
+   ],
+   "en": [
+    "First limit: expand $e^x$; $1+x$ cancels: $$\\frac{e^x-1-x}{x^2}=\\frac{x^2/2+x^3/6+\\ldots}{x^2}=\\frac{1}{2}+\\frac{x}{6}+\\ldots\\to\\frac{1}{2}$$",
+    "Second limit: the denominator is $x^3$, so expand the numerator up to $x^3$ ($\\tan x=x+\\dfrac{x^3}{3}+\\ldots$): $$\\tan x-\\sin x=\\left(x+\\frac{x^3}{3}\\right)-\\left(x-\\frac{x^3}{6}\\right)+\\ldots=\\frac{x^3}{2}+\\ldots$$",
+    "Therefore: $$\\lim_{x\\to0}\\frac{\\tan x-\\sin x}{x^3}=\\frac{1}{2}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Maklaren qatorlari; limitda eng past darajali hadlarni solishtirish",
+   "ru": "Ряды Маклорена; сравнение членов наименьшей степени в пределе",
+   "en": "Maclaurin series; comparing the lowest-order terms in a limit"
+  },
+  "answer": "\\frac{1}{2};\\quad \\frac{1}{2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original"
+ },
+ {
+  "id": "B0-L08-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$\\displaystyle\\int_0^{0.5}e^{-x^2}\\,dx$ integralni integral ostidagi funksiya qatorining uchta hadi yordamida hisoblang (bu integral elementar funksiyalarda ifodalanmaydi).",
+   "ru": "Вычислите интеграл $\\displaystyle\\int_0^{0.5}e^{-x^2}\\,dx$ с помощью трёх членов ряда подынтегральной функции (этот интеграл не выражается через элементарные функции).",
+   "en": "Compute the integral $\\displaystyle\\int_0^{0.5}e^{-x^2}\\,dx$ using three terms of the series for the integrand (this integral cannot be expressed in elementary functions)."
+  },
+  "figure": "figures/B0-L08-S07.png",
+  "solution": {
+   "uz": [
+    "$e^u$ qatoriga $u=-x^2$ ni qo'yamiz: $$e^{-x^2}\\approx1-x^2+\\frac{x^4}{2}$$",
+    "Hadma-had integrallaymiz: $$\\int_0^{0.5}\\left(1-x^2+\\frac{x^4}{2}\\right)dx=\\left[x-\\frac{x^3}{3}+\\frac{x^5}{10}\\right]_0^{0.5}$$",
+    "Hisoblaymiz: $$0.5-0.04167+0.00313=0.46146$$",
+    "Qator ishorasi almashinuvchi, shuning uchun xatolik keyingi haddan kichik. Aniq qiymat $0.46128$. $$|\\Delta|<\\frac{0.5^7}{42}\\approx1.9\\cdot10^{-4}$$"
+   ],
+   "ru": [
+    "Подставляем $u=-x^2$ в ряд для $e^u$: $$e^{-x^2}\\approx1-x^2+\\frac{x^4}{2}$$",
+    "Интегрируем почленно: $$\\int_0^{0.5}\\left(1-x^2+\\frac{x^4}{2}\\right)dx=\\left[x-\\frac{x^3}{3}+\\frac{x^5}{10}\\right]_0^{0.5}$$",
+    "Вычисляем: $$0.5-0.04167+0.00313=0.46146$$",
+    "Ряд знакочередующийся, поэтому погрешность меньше следующего члена. Точное значение $0.46128$. $$|\\Delta|<\\frac{0.5^7}{42}\\approx1.9\\cdot10^{-4}$$"
+   ],
+   "en": [
+    "Substitute $u=-x^2$ into the series for $e^u$: $$e^{-x^2}\\approx1-x^2+\\frac{x^4}{2}$$",
+    "Integrate term by term: $$\\int_0^{0.5}\\left(1-x^2+\\frac{x^4}{2}\\right)dx=\\left[x-\\frac{x^3}{3}+\\frac{x^5}{10}\\right]_0^{0.5}$$",
+    "Evaluate: $$0.5-0.04167+0.00313=0.46146$$",
+    "The series is alternating, so the error is less than the next term. The exact value is $0.46128$. $$|\\Delta|<\\frac{0.5^7}{42}\\approx1.9\\cdot10^{-4}$$"
+   ]
+  },
+  "basis": {
+   "uz": "O'rniga qo'yish orqali qator olish, qatorni hadma-had integrallash",
+   "ru": "Получение ряда подстановкой, почленное интегрирование ряда",
+   "en": "Obtaining a series by substitution, term-by-term integration of a series"
+  },
+  "answer": "\\int_0^{0.5}e^{-x^2}\\,dx\\approx0.4615",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original"
+ },
+ {
+  "id": "B0-L08-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yer sirtidan $h=64\\ \\mathrm{km}$ balandlikda erkin tushish tezlanishi necha foizga kamayadi? $R=6400\\ \\mathrm{km}$.",
+   "ru": "На сколько процентов уменьшается ускорение свободного падения на высоте $h=64\\ \\mathrm{km}$ над поверхностью Земли? $R=6400\\ \\mathrm{km}$.",
+   "en": "By what percentage does the free-fall acceleration decrease at a height $h=64\\ \\mathrm{km}$ above the Earth's surface? $R=6400\\ \\mathrm{km}$."
+  },
+  "figure": "figures/B0-L08-S08.png",
+  "solution": {
+   "uz": [
+    "Butun olam tortishish qonuni: $$g(h)=\\frac{GM}{(R+h)^2}=\\frac{GM}{R^2}\\left(1+\\frac{h}{R}\\right)^{-2}=g_0\\left(1+\\frac{h}{R}\\right)^{-2}$$",
+    "$\\varepsilon=h/R=0.01\\ll1$, binomial yaqinlashish $n=-2$: $$g(h)\\approx g_0\\left(1-\\frac{2h}{R}\\right),\\qquad \\frac{g_0-g}{g_0}\\approx\\frac{2h}{R}=0.02$$",
+    "Javob: taxminan $2\\%$ ga (aniq hisob $1.97\\%$)."
+   ],
+   "ru": [
+    "Закон всемирного тяготения: $$g(h)=\\frac{GM}{(R+h)^2}=\\frac{GM}{R^2}\\left(1+\\frac{h}{R}\\right)^{-2}=g_0\\left(1+\\frac{h}{R}\\right)^{-2}$$",
+    "$\\varepsilon=h/R=0.01\\ll1$, биномиальное приближение при $n=-2$: $$g(h)\\approx g_0\\left(1-\\frac{2h}{R}\\right),\\qquad \\frac{g_0-g}{g_0}\\approx\\frac{2h}{R}=0.02$$",
+    "Ответ: примерно на $2\\%$ (точный расчёт даёт $1.97\\%$)."
+   ],
+   "en": [
+    "Law of universal gravitation: $$g(h)=\\frac{GM}{(R+h)^2}=\\frac{GM}{R^2}\\left(1+\\frac{h}{R}\\right)^{-2}=g_0\\left(1+\\frac{h}{R}\\right)^{-2}$$",
+    "$\\varepsilon=h/R=0.01\\ll1$, binomial approximation with $n=-2$: $$g(h)\\approx g_0\\left(1-\\frac{2h}{R}\\right),\\qquad \\frac{g_0-g}{g_0}\\approx\\frac{2h}{R}=0.02$$",
+    "Answer: by about $2\\%$ (the exact calculation gives $1.97\\%$)."
+   ]
+  },
+  "basis": {
+   "uz": "Butun olam tortishish qonuni, binomial yaqinlashish $(1+\\varepsilon)^n\\approx1+n\\varepsilon$",
+   "ru": "Закон всемирного тяготения, биномиальное приближение $(1+\\varepsilon)^n\\approx1+n\\varepsilon$",
+   "en": "Law of universal gravitation, binomial approximation $(1+\\varepsilon)^n\\approx1+n\\varepsilon$"
+  },
+  "answer": "\\approx2\\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original"
+ },
+ {
+  "id": "B0-L08-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Zarra $v=0.2c$ tezlik bilan harakatlanmoqda. Klassik formula $K=\\dfrac{mv^2}{2}$ kinetik energiyani necha foizga kam beradi?",
+   "ru": "Частица движется со скоростью $v=0.2c$. На сколько процентов классическая формула $K=\\dfrac{mv^2}{2}$ занижает кинетическую энергию?",
+   "en": "A particle moves with speed $v=0.2c$. By what percentage does the classical formula $K=\\dfrac{mv^2}{2}$ underestimate the kinetic energy?"
+  },
+  "figure": "figures/B0-L08-S09.png",
+  "solution": {
+   "uz": [
+    "Relyativistik kinetik energiya: $$K=(\\gamma-1)\\,mc^2,\\qquad \\gamma=(1-\\beta^2)^{-1/2},\\qquad \\beta=\\frac{v}{c}=0.2$$",
+    "Binomial qator ($n=-\\tfrac{1}{2}$, $\\ x=-\\beta^2$) ikkinchi tartibgacha: $$\\gamma-1\\approx\\frac{\\beta^2}{2}+\\frac{3\\beta^4}{8}\\quad\\Rightarrow\\quad K\\approx\\frac{mv^2}{2}\\left(1+\\frac{3}{4}\\beta^2\\right)$$",
+    "Nisbiy tuzatma: $$\\frac{3}{4}\\beta^2=\\frac{3}{4}\\cdot0.04=0.03$$",
+    "Javob: taxminan $3\\%$ ga (aniq hisob $3.1\\%$)."
+   ],
+   "ru": [
+    "Релятивистская кинетическая энергия: $$K=(\\gamma-1)\\,mc^2,\\qquad \\gamma=(1-\\beta^2)^{-1/2},\\qquad \\beta=\\frac{v}{c}=0.2$$",
+    "Биномиальный ряд ($n=-\\tfrac{1}{2}$, $\\ x=-\\beta^2$) до второго порядка: $$\\gamma-1\\approx\\frac{\\beta^2}{2}+\\frac{3\\beta^4}{8}\\quad\\Rightarrow\\quad K\\approx\\frac{mv^2}{2}\\left(1+\\frac{3}{4}\\beta^2\\right)$$",
+    "Относительная поправка: $$\\frac{3}{4}\\beta^2=\\frac{3}{4}\\cdot0.04=0.03$$",
+    "Ответ: примерно на $3\\%$ (точный расчёт даёт $3.1\\%$)."
+   ],
+   "en": [
+    "Relativistic kinetic energy: $$K=(\\gamma-1)\\,mc^2,\\qquad \\gamma=(1-\\beta^2)^{-1/2},\\qquad \\beta=\\frac{v}{c}=0.2$$",
+    "Binomial series ($n=-\\tfrac{1}{2}$, $\\ x=-\\beta^2$) to second order: $$\\gamma-1\\approx\\frac{\\beta^2}{2}+\\frac{3\\beta^4}{8}\\quad\\Rightarrow\\quad K\\approx\\frac{mv^2}{2}\\left(1+\\frac{3}{4}\\beta^2\\right)$$",
+    "Relative correction: $$\\frac{3}{4}\\beta^2=\\frac{3}{4}\\cdot0.04=0.03$$",
+    "Answer: by about $3\\%$ (the exact calculation gives $3.1\\%$)."
+   ]
+  },
+  "basis": {
+   "uz": "Relyativistik kinetik energiya $K=(\\gamma-1)mc^2$, binomial qator",
+   "ru": "Релятивистская кинетическая энергия $K=(\\gamma-1)mc^2$, биномиальный ряд",
+   "en": "Relativistic kinetic energy $K=(\\gamma-1)mc^2$, binomial series"
+  },
+  "answer": "\\approx3\\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original"
+ },
+ {
+  "id": "B0-L08-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Dipol $+q$ va $-q$ zaryadlardan iborat, ular orasidagi masofa $d$. Dipol o'qida, markazdan $r\\gg d$ masofada maydon kuchlanganligi $E\\approx\\dfrac{2kqd}{r^3}$ ekanini ko'rsating. $r=10d$ da bu formula xatoligi qancha?",
+   "ru": "Диполь состоит из зарядов $+q$ и $-q$, расстояние между ними $d$. Покажите, что на оси диполя на расстоянии $r\\gg d$ от центра напряжённость поля $E\\approx\\dfrac{2kqd}{r^3}$. Какова погрешность этой формулы при $r=10d$?",
+   "en": "A dipole consists of charges $+q$ and $-q$ separated by a distance $d$. Show that on the dipole axis at a distance $r\\gg d$ from the centre the field strength is $E\\approx\\dfrac{2kqd}{r^3}$. What is the error of this formula at $r=10d$?"
+  },
+  "figure": "figures/B0-L08-S10.png",
+  "solution": {
+   "uz": [
+    "Ikki zaryad maydonlarining ayirmasi (yaqin zaryad $r-d/2$ masofada): $$E=\\frac{kq}{(r-d/2)^2}-\\frac{kq}{(r+d/2)^2}=\\frac{kq}{r^2}\\left[\\left(1-\\frac{d}{2r}\\right)^{-2}-\\left(1+\\frac{d}{2r}\\right)^{-2}\\right]$$",
+    "Nolinchi tartibli hadlar qisqaradi, shuning uchun birinchi tartibgacha yoyamiz: $$E\\approx\\frac{kq}{r^2}\\left[\\left(1+\\frac{d}{r}\\right)-\\left(1-\\frac{d}{r}\\right)\\right]=\\frac{2kqd}{r^3}=\\frac{2kp}{r^3}$$",
+    "Aniq ifoda: $E=\\dfrac{2kqd\\,r}{(r^2-d^2/4)^2}$, shuning uchun aniq va taqribiy qiymatlar nisbati: $$\\frac{E}{E_{\\approx}}=\\left(1-\\frac{d^2}{4r^2}\\right)^{-2}\\approx1+\\frac{d^2}{2r^2}=1+\\frac{1}{200}$$",
+    "Javob: $r=10d$ da xatolik taxminan $0.5\\%$."
+   ],
+   "ru": [
+    "Разность полей двух зарядов (ближний заряд на расстоянии $r-d/2$): $$E=\\frac{kq}{(r-d/2)^2}-\\frac{kq}{(r+d/2)^2}=\\frac{kq}{r^2}\\left[\\left(1-\\frac{d}{2r}\\right)^{-2}-\\left(1+\\frac{d}{2r}\\right)^{-2}\\right]$$",
+    "Члены нулевого порядка сокращаются, поэтому раскладываем до первого порядка: $$E\\approx\\frac{kq}{r^2}\\left[\\left(1+\\frac{d}{r}\\right)-\\left(1-\\frac{d}{r}\\right)\\right]=\\frac{2kqd}{r^3}=\\frac{2kp}{r^3}$$",
+    "Точное выражение: $E=\\dfrac{2kqd\\,r}{(r^2-d^2/4)^2}$, поэтому отношение точного и приближённого значений: $$\\frac{E}{E_{\\approx}}=\\left(1-\\frac{d^2}{4r^2}\\right)^{-2}\\approx1+\\frac{d^2}{2r^2}=1+\\frac{1}{200}$$",
+    "Ответ: при $r=10d$ погрешность около $0.5\\%$."
+   ],
+   "en": [
+    "Difference of the fields of the two charges (the nearer charge is at a distance $r-d/2$): $$E=\\frac{kq}{(r-d/2)^2}-\\frac{kq}{(r+d/2)^2}=\\frac{kq}{r^2}\\left[\\left(1-\\frac{d}{2r}\\right)^{-2}-\\left(1+\\frac{d}{2r}\\right)^{-2}\\right]$$",
+    "The zeroth-order terms cancel, so expand to first order: $$E\\approx\\frac{kq}{r^2}\\left[\\left(1+\\frac{d}{r}\\right)-\\left(1-\\frac{d}{r}\\right)\\right]=\\frac{2kqd}{r^3}=\\frac{2kp}{r^3}$$",
+    "The exact expression is $E=\\dfrac{2kqd\\,r}{(r^2-d^2/4)^2}$, so the ratio of the exact and approximate values is: $$\\frac{E}{E_{\\approx}}=\\left(1-\\frac{d^2}{4r^2}\\right)^{-2}\\approx1+\\frac{d^2}{2r^2}=1+\\frac{1}{200}$$",
+    "Answer: at $r=10d$ the error is about $0.5\\%$."
+   ]
+  },
+  "basis": {
+   "uz": "Nuqtaviy zaryad maydoni, superpozitsiya prinsipi, binomial yaqinlashish",
+   "ru": "Поле точечного заряда, принцип суперпозиции, биномиальное приближение",
+   "en": "Field of a point charge, superposition principle, binomial approximation"
+  },
+  "answer": "E\\approx\\frac{2kqd}{r^3},\\quad \\approx0.5\\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original"
+ },
+ {
+  "id": "B0-L08-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $m$ bo'lgan zarra $U(x)=U_0\\left(\\dfrac{x}{a}+\\dfrac{a}{x}\\right)$, $\\ x>0$ potensialda harakatlanmoqda. Muvozanat nuqtasini va kichik tebranishlar burchak chastotasini toping.",
+   "ru": "Частица массы $m$ движется в потенциале $U(x)=U_0\\left(\\dfrac{x}{a}+\\dfrac{a}{x}\\right)$, $\\ x>0$. Найдите точку равновесия и циклическую частоту малых колебаний.",
+   "en": "A particle of mass $m$ moves in the potential $U(x)=U_0\\left(\\dfrac{x}{a}+\\dfrac{a}{x}\\right)$, $\\ x>0$. Find the equilibrium point and the angular frequency of small oscillations."
+  },
+  "figure": "figures/B0-L08-S11.png",
+  "solution": {
+   "uz": [
+    "Muvozanat: $U'(x_0)=0$: $$U'(x)=U_0\\left(\\frac{1}{a}-\\frac{a}{x^2}\\right)=0\\quad\\Rightarrow\\quad x_0=a$$",
+    "Ikkinchi hosila — \"prujina bikrligi\": $$U''(x)=\\frac{2U_0a}{x^3},\\qquad k=U''(a)=\\frac{2U_0}{a^2}>0$$",
+    "$U''>0$ — muvozanat turg'un. Teylor qatori $U\\approx2U_0+\\dfrac{1}{2}k\\,(x-a)^2$ — garmonik ossillyator: $$\\omega=\\sqrt{\\frac{k}{m}}=\\sqrt{\\frac{2U_0}{ma^2}}$$"
+   ],
+   "ru": [
+    "Равновесие: $U'(x_0)=0$: $$U'(x)=U_0\\left(\\frac{1}{a}-\\frac{a}{x^2}\\right)=0\\quad\\Rightarrow\\quad x_0=a$$",
+    "Вторая производная — «жёсткость пружины»: $$U''(x)=\\frac{2U_0a}{x^3},\\qquad k=U''(a)=\\frac{2U_0}{a^2}>0$$",
+    "$U''>0$ — равновесие устойчивое. Ряд Тейлора $U\\approx2U_0+\\dfrac{1}{2}k\\,(x-a)^2$ — гармонический осциллятор: $$\\omega=\\sqrt{\\frac{k}{m}}=\\sqrt{\\frac{2U_0}{ma^2}}$$"
+   ],
+   "en": [
+    "Equilibrium: $U'(x_0)=0$: $$U'(x)=U_0\\left(\\frac{1}{a}-\\frac{a}{x^2}\\right)=0\\quad\\Rightarrow\\quad x_0=a$$",
+    "The second derivative is the \"spring constant\": $$U''(x)=\\frac{2U_0a}{x^3},\\qquad k=U''(a)=\\frac{2U_0}{a^2}>0$$",
+    "$U''>0$ — the equilibrium is stable. The Taylor series $U\\approx2U_0+\\dfrac{1}{2}k\\,(x-a)^2$ is a harmonic oscillator: $$\\omega=\\sqrt{\\frac{k}{m}}=\\sqrt{\\frac{2U_0}{ma^2}}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Muvozanat sharti $U'(x_0)=0$, potensialning kvadratik yaqinlashishi, $\\omega=\\sqrt{U''(x_0)/m}$",
+   "ru": "Условие равновесия $U'(x_0)=0$, квадратичное приближение потенциала, $\\omega=\\sqrt{U''(x_0)/m}$",
+   "en": "Equilibrium condition $U'(x_0)=0$, quadratic approximation of the potential, $\\omega=\\sqrt{U''(x_0)/m}$"
+  },
+  "answer": "x_0=a,\\quad \\omega=\\sqrt{\\frac{2U_0}{ma^2}}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original"
+ },
+ {
+  "id": "B0-L08-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ikki atomli molekulada atomlarning o'zaro ta'sir energiyasi Lennard-Jons potensiali bilan beriladi: $U(r)=4\\varepsilon\\left[\\left(\\dfrac{\\sigma}{r}\\right)^{12}-\\left(\\dfrac{\\sigma}{r}\\right)^{6}\\right]$. Muvozanat masofasini, bog'lanish energiyasini va keltirilgan massasi $\\mu$ bo'lgan molekulaning kichik tebranishlar chastotasini toping.",
+   "ru": "Энергия взаимодействия атомов в двухатомной молекуле задаётся потенциалом Леннард-Джонса: $U(r)=4\\varepsilon\\left[\\left(\\dfrac{\\sigma}{r}\\right)^{12}-\\left(\\dfrac{\\sigma}{r}\\right)^{6}\\right]$. Найдите равновесное расстояние, энергию связи и частоту малых колебаний молекулы с приведённой массой $\\mu$.",
+   "en": "The interaction energy of the atoms in a diatomic molecule is given by the Lennard-Jones potential $U(r)=4\\varepsilon\\left[\\left(\\dfrac{\\sigma}{r}\\right)^{12}-\\left(\\dfrac{\\sigma}{r}\\right)^{6}\\right]$. Find the equilibrium separation, the binding energy and the frequency of small oscillations of a molecule with reduced mass $\\mu$."
+  },
+  "figure": "figures/B0-L08-S12.png",
+  "solution": {
+   "uz": [
+    "$u=(\\sigma/r)^6$ belgilash bilan $U=4\\varepsilon(u^2-u)$. Muvozanat: $$U'(r)=\\frac{4\\varepsilon}{r}\\left(-12u^2+6u\\right)=0\\quad\\Rightarrow\\quad u=\\frac{1}{2},\\qquad r_0=2^{1/6}\\sigma\\approx1.12\\,\\sigma$$",
+    "Bog'lanish energiyasi: $$U(r_0)=4\\varepsilon\\left(\\frac{1}{4}-\\frac{1}{2}\\right)=-\\varepsilon$$",
+    "Ikkinchi hosila $r_0$ da ($u=1/2$): $$U''(r)=\\frac{4\\varepsilon}{r^2}\\left(156u^2-42u\\right),\\qquad k=U''(r_0)=\\frac{4\\varepsilon}{r_0^2}\\cdot18=\\frac{72\\varepsilon}{2^{1/3}\\sigma^2}\\approx57\\,\\frac{\\varepsilon}{\\sigma^2}$$",
+    "Kichik tebranishlar chastotasi: $$\\omega=\\sqrt{\\frac{k}{\\mu}}=\\sqrt{\\frac{72\\,\\varepsilon}{2^{1/3}\\mu\\sigma^2}}\\approx7.6\\,\\sqrt{\\frac{\\varepsilon}{\\mu\\sigma^2}}$$"
+   ],
+   "ru": [
+    "С обозначением $u=(\\sigma/r)^6$ имеем $U=4\\varepsilon(u^2-u)$. Равновесие: $$U'(r)=\\frac{4\\varepsilon}{r}\\left(-12u^2+6u\\right)=0\\quad\\Rightarrow\\quad u=\\frac{1}{2},\\qquad r_0=2^{1/6}\\sigma\\approx1.12\\,\\sigma$$",
+    "Энергия связи: $$U(r_0)=4\\varepsilon\\left(\\frac{1}{4}-\\frac{1}{2}\\right)=-\\varepsilon$$",
+    "Вторая производная при $r_0$ ($u=1/2$): $$U''(r)=\\frac{4\\varepsilon}{r^2}\\left(156u^2-42u\\right),\\qquad k=U''(r_0)=\\frac{4\\varepsilon}{r_0^2}\\cdot18=\\frac{72\\varepsilon}{2^{1/3}\\sigma^2}\\approx57\\,\\frac{\\varepsilon}{\\sigma^2}$$",
+    "Частота малых колебаний: $$\\omega=\\sqrt{\\frac{k}{\\mu}}=\\sqrt{\\frac{72\\,\\varepsilon}{2^{1/3}\\mu\\sigma^2}}\\approx7.6\\,\\sqrt{\\frac{\\varepsilon}{\\mu\\sigma^2}}$$"
+   ],
+   "en": [
+    "With the notation $u=(\\sigma/r)^6$ we have $U=4\\varepsilon(u^2-u)$. Equilibrium: $$U'(r)=\\frac{4\\varepsilon}{r}\\left(-12u^2+6u\\right)=0\\quad\\Rightarrow\\quad u=\\frac{1}{2},\\qquad r_0=2^{1/6}\\sigma\\approx1.12\\,\\sigma$$",
+    "Binding energy: $$U(r_0)=4\\varepsilon\\left(\\frac{1}{4}-\\frac{1}{2}\\right)=-\\varepsilon$$",
+    "The second derivative at $r_0$ ($u=1/2$): $$U''(r)=\\frac{4\\varepsilon}{r^2}\\left(156u^2-42u\\right),\\qquad k=U''(r_0)=\\frac{4\\varepsilon}{r_0^2}\\cdot18=\\frac{72\\varepsilon}{2^{1/3}\\sigma^2}\\approx57\\,\\frac{\\varepsilon}{\\sigma^2}$$",
+    "Frequency of small oscillations: $$\\omega=\\sqrt{\\frac{k}{\\mu}}=\\sqrt{\\frac{72\\,\\varepsilon}{2^{1/3}\\mu\\sigma^2}}\\approx7.6\\,\\sqrt{\\frac{\\varepsilon}{\\mu\\sigma^2}}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Muvozanat sharti, potensialning muvozanat atrofida Teylor qatori, $\\omega=\\sqrt{U''(r_0)/\\mu}$",
+   "ru": "Условие равновесия, ряд Тейлора потенциала вблизи равновесия, $\\omega=\\sqrt{U''(r_0)/\\mu}$",
+   "en": "Equilibrium condition, Taylor series of the potential about equilibrium, $\\omega=\\sqrt{U''(r_0)/\\mu}$"
+  },
+  "answer": "r_0=2^{1/6}\\sigma,\\quad U(r_0)=-\\varepsilon,\\quad \\omega=\\sqrt{\\frac{72\\,\\varepsilon}{2^{1/3}\\mu\\sigma^2}}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original"
+ },
+ {
+  "id": "B0-L08-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$e$ sonini $e^x$ ning Maklaren qatori yordamida $10^{-4}$ dan kichik xatolik bilan hisoblash uchun Teylor ko'phadining tartibi $n$ kamida qancha bo'lishi kerak? Lagranj qoldiq hadidan foydalaning ($e<3$).",
+   "ru": "Каков наименьший порядок $n$ многочлена Тейлора, при котором число $e$ вычисляется с помощью ряда Маклорена для $e^x$ с погрешностью меньше $10^{-4}$? Используйте остаточный член Лагранжа ($e<3$).",
+   "en": "What is the smallest order $n$ of the Taylor polynomial for which the number $e$ is computed from the Maclaurin series of $e^x$ with an error smaller than $10^{-4}$? Use the Lagrange remainder ($e<3$)."
+  },
+  "figure": "figures/B0-L08-S13.png",
+  "solution": {
+   "uz": [
+    "$x=1$ da Lagranj qoldiq hadi ($0<\\xi<1$): $$R_n=\\frac{e^{\\xi}}{(n+1)!}\\,1^{n+1}<\\frac{3}{(n+1)!}$$",
+    "Shart $\\dfrac{3}{(n+1)!}<10^{-4}$, ya'ni $(n+1)!>30000$: $$7!=5040<30000,\\qquad 8!=40320>30000\\quad\\Rightarrow\\quad n+1=8,\\quad n=7$$",
+    "Tekshiruv: $T_7(1)=1+1+\\dfrac{1}{2}+\\ldots+\\dfrac{1}{5040}=2.71825$, aniq $e=2.71828$, xatolik $2.8\\cdot10^{-5}<10^{-4}$."
+   ],
+   "ru": [
+    "Остаточный член Лагранжа при $x=1$ ($0<\\xi<1$): $$R_n=\\frac{e^{\\xi}}{(n+1)!}\\,1^{n+1}<\\frac{3}{(n+1)!}$$",
+    "Условие $\\dfrac{3}{(n+1)!}<10^{-4}$, то есть $(n+1)!>30000$: $$7!=5040<30000,\\qquad 8!=40320>30000\\quad\\Rightarrow\\quad n+1=8,\\quad n=7$$",
+    "Проверка: $T_7(1)=1+1+\\dfrac{1}{2}+\\ldots+\\dfrac{1}{5040}=2.71825$, точно $e=2.71828$, погрешность $2.8\\cdot10^{-5}<10^{-4}$."
+   ],
+   "en": [
+    "The Lagrange remainder at $x=1$ ($0<\\xi<1$): $$R_n=\\frac{e^{\\xi}}{(n+1)!}\\,1^{n+1}<\\frac{3}{(n+1)!}$$",
+    "The condition $\\dfrac{3}{(n+1)!}<10^{-4}$, i.e. $(n+1)!>30000$: $$7!=5040<30000,\\qquad 8!=40320>30000\\quad\\Rightarrow\\quad n+1=8,\\quad n=7$$",
+    "Check: $T_7(1)=1+1+\\dfrac{1}{2}+\\ldots+\\dfrac{1}{5040}=2.71825$, exactly $e=2.71828$, error $2.8\\cdot10^{-5}<10^{-4}$."
+   ]
+  },
+  "basis": {
+   "uz": "Lagranj shaklidagi qoldiq had $R_n=\\dfrac{f^{(n+1)}(\\xi)}{(n+1)!}(x-x_0)^{n+1}$",
+   "ru": "Остаточный член в форме Лагранжа $R_n=\\dfrac{f^{(n+1)}(\\xi)}{(n+1)!}(x-x_0)^{n+1}$",
+   "en": "Remainder in Lagrange form $R_n=\\dfrac{f^{(n+1)}(\\xi)}{(n+1)!}(x-x_0)^{n+1}$"
+  },
+  "answer": "n=7",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original"
+ }
+]

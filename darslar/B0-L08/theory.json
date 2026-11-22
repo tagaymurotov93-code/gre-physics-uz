@@ -1,0 +1,545 @@
+[
+ {
+  "t": "h1",
+  "uz": "Teylor qatori va taqribiy hisoblash (Taylor series and approximations)",
+  "ru": "Ряд Тейлора и приближённые вычисления",
+  "en": "Taylor series and approximations"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz funksiyani nuqta atrofida chiziqli va kvadratik yaqinlashtirasiz, Teylor ko'phadini tuzasiz, asosiy funksiyalarning Maklaren qatorlarini qo'llaysiz, qoldiq had yordamida xatolikni baholaysiz hamda kichik parametr bo'yicha yoyish orqali fizik formulalarni soddalashtirasiz.",
+  "ru": "**Цель.** После урока вы будете линейно и квадратично приближать функцию в окрестности точки, строить многочлен Тейлора, применять ряды Маклорена основных функций, оценивать погрешность с помощью остаточного члена и упрощать физические формулы разложением по малому параметру.",
+  "en": "**Goal.** By the end of the lesson you will make linear and quadratic approximations of a function near a point, build a Taylor polynomial, use the Maclaurin series of the basic functions, estimate the error with the remainder term, and simplify physical formulas by expanding in a small parameter."
+ },
+ {
+  "t": "p",
+  "uz": "**GRE'da o'rni.** GRE Physics'da kalkulyator yo'q, shuning uchun taqribiy hisoblash — asosiy qurol. Kichik burchak yaqinlashishi (mayatnik, optika), binomial yoyish (nisbiylik, gravitatsiya, dipol maydoni) va potensial minimumi atrofidagi kvadratik yaqinlashish (kichik tebranishlar) deyarli har bir testda uchraydi.",
+  "ru": "**Роль в GRE.** На GRE Physics нет калькулятора, поэтому приближённые вычисления — основной инструмент. Приближение малых углов (маятник, оптика), биномиальное разложение (относительность, гравитация, поле диполя) и квадратичное приближение вблизи минимума потенциала (малые колебания) встречаются почти в каждом тесте.",
+  "en": "**Role on the GRE.** There is no calculator on the GRE Physics test, so approximation is the main tool. The small-angle approximation (pendulum, optics), the binomial expansion (relativity, gravitation, dipole field) and the quadratic approximation near a potential minimum (small oscillations) appear in almost every test."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Chiziqli yaqinlashish (Linear approximation)",
+  "ru": "1. Линейное приближение",
+  "en": "1. Linear approximation"
+ },
+ {
+  "t": "p",
+  "uz": "$x_0$ nuqta yaqinida silliq funksiya grafigi o'sha nuqtadagi urinmadan deyarli farq qilmaydi ([[F01]]). Shuning uchun $x_0$ dan kichik $\\Delta x$ masofada:",
+  "ru": "Вблизи точки $x_0$ график гладкой функции почти не отличается от касательной в этой точке ([[F01]]). Поэтому на малом расстоянии $\\Delta x$ от $x_0$:",
+  "en": "Near the point $x_0$ the graph of a smooth function hardly differs from its tangent line at that point ([[F01]]). Therefore, at a small distance $\\Delta x$ from $x_0$:"
+ },
+ {
+  "t": "m",
+  "m": "f(x_0+\\Delta x)\\approx f(x_0)+f'(x_0)\\,\\Delta x"
+ },
+ {
+  "t": "li",
+  "uz": "$f'(x_0)\\,\\Delta x=df$ — funksiyaning **differensiali (differential)**; u funksiya orttirmasining $\\Delta x$ ga nisbatan chiziqli qismi.",
+  "ru": "$f'(x_0)\\,\\Delta x=df$ — **дифференциал** функции; это линейная по $\\Delta x$ часть приращения функции.",
+  "en": "$f'(x_0)\\,\\Delta x=df$ is the **differential** of the function; it is the part of the increment of the function that is linear in $\\Delta x$."
+ },
+ {
+  "t": "li",
+  "uz": "Xatolik taxminan $\\dfrac{1}{2}f''(x_0)\\,\\Delta x^2$: $\\Delta x$ ni ikki marta kamaytirsak, xatolik to'rt marta kamayadi.",
+  "ru": "Погрешность примерно равна $\\dfrac{1}{2}f''(x_0)\\,\\Delta x^2$: если уменьшить $\\Delta x$ в два раза, погрешность уменьшится в четыре раза.",
+  "en": "The error is approximately $\\dfrac{1}{2}f''(x_0)\\,\\Delta x^2$: halving $\\Delta x$ reduces the error by a factor of four."
+ },
+ {
+  "t": "li",
+  "uz": "Misol: $\\sqrt{x}$ uchun $x_0=100$, $\\ \\Delta x=2$: $\\ \\sqrt{102}\\approx10+\\dfrac{2}{2\\cdot10}=10.1$ (aniq qiymat $10.0995\\ldots$).",
+  "ru": "Пример: для $\\sqrt{x}$ при $x_0=100$, $\\ \\Delta x=2$: $\\ \\sqrt{102}\\approx10+\\dfrac{2}{2\\cdot10}=10.1$ (точное значение $10.0995\\ldots$).",
+  "en": "Example: for $\\sqrt{x}$ with $x_0=100$, $\\ \\Delta x=2$: $\\ \\sqrt{102}\\approx10+\\dfrac{2}{2\\cdot10}=10.1$ (exact value $10.0995\\ldots$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Nisbiy o'zgarish (relative change):** $f=Cx^n$ uchun $\\dfrac{\\Delta f}{f}\\approx n\\,\\dfrac{\\Delta x}{x}$. Masalan, radius $1\\%$ ga ortsa, shar hajmi taxminan $3\\%$ ga ortadi.",
+  "ru": "**Относительное изменение:** для $f=Cx^n$ $\\ \\dfrac{\\Delta f}{f}\\approx n\\,\\dfrac{\\Delta x}{x}$. Например, если радиус увеличить на $1\\%$, объём шара увеличится примерно на $3\\%$.",
+  "en": "**Relative change:** for $f=Cx^n$, $\\ \\dfrac{\\Delta f}{f}\\approx n\\,\\dfrac{\\Delta x}{x}$. For example, if the radius grows by $1\\%$, the volume of a sphere grows by about $3\\%$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B0-L08-F01.png",
+   "ru": "figures/B0-L08-F01-ru.png",
+   "en": "figures/B0-L08-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Teylor ko'phadi (Taylor polynomial)",
+  "ru": "2. Многочлен Тейлора",
+  "en": "2. Taylor polynomial"
+ },
+ {
+  "t": "p",
+  "uz": "Yaqinlashishni aniqroq qilish uchun funksiya bilan $x_0$ nuqtada qiymati va $n$-tartibgacha barcha hosilalari mos keladigan ko'phad tuziladi:",
+  "ru": "Чтобы сделать приближение точнее, строят многочлен, у которого в точке $x_0$ значение и все производные до порядка $n$ совпадают с функцией:",
+  "en": "To make the approximation more accurate, one builds a polynomial whose value and all derivatives up to order $n$ at the point $x_0$ coincide with those of the function:"
+ },
+ {
+  "t": "m",
+  "m": "T_n(x)=f(x_0)+f'(x_0)(x-x_0)+\\frac{f''(x_0)}{2!}(x-x_0)^2+\\ldots+\\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n"
+ },
+ {
+  "t": "m",
+  "m": "f(x)=\\sum_{k=0}^{\\infty}\\frac{f^{(k)}(x_0)}{k!}\\,(x-x_0)^k"
+ },
+ {
+  "t": "li",
+  "uz": "Cheksiz yig'indi — **Teylor qatori (Taylor series)**; $x_0=0$ bo'lsa — **Maklaren qatori (Maclaurin series)**.",
+  "ru": "Бесконечная сумма — **ряд Тейлора**; при $x_0=0$ — **ряд Маклорена**.",
+  "en": "The infinite sum is the **Taylor series**; for $x_0=0$ it is the **Maclaurin series**."
+ },
+ {
+  "t": "li",
+  "uz": "Koeffitsiyent formulasi: $c_k=\\dfrac{f^{(k)}(x_0)}{k!}$. Teskari foydalanish ham qulay: qator ma'lum bo'lsa, hosila $f^{(k)}(x_0)=k!\\,c_k$ dan topiladi.",
+  "ru": "Формула коэффициентов: $c_k=\\dfrac{f^{(k)}(x_0)}{k!}$. Удобно и обратное использование: если ряд известен, производная находится из $f^{(k)}(x_0)=k!\\,c_k$.",
+  "en": "Coefficient formula: $c_k=\\dfrac{f^{(k)}(x_0)}{k!}$. The reverse use is also handy: if the series is known, the derivative follows from $f^{(k)}(x_0)=k!\\,c_k$."
+ },
+ {
+  "t": "li",
+  "uz": "Juft funksiyaning Maklaren qatorida faqat juft darajalar, toq funksiyaning qatorida faqat toq darajalar bo'ladi.",
+  "ru": "В ряду Маклорена чётной функции есть только чётные степени, нечётной функции — только нечётные.",
+  "en": "The Maclaurin series of an even function contains only even powers; that of an odd function contains only odd powers."
+ },
+ {
+  "t": "li",
+  "uz": "Tartib ortishi bilan ko'phad funksiyaga tobora kengroq oraliqda yaqinlashadi ([[F02]]).",
+  "ru": "С ростом порядка многочлен приближает функцию на всё более широком промежутке ([[F02]]).",
+  "en": "As the order grows, the polynomial approximates the function on an ever wider interval ([[F02]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B0-L08-F02.png",
+   "ru": "figures/B0-L08-F02-ru.png",
+   "en": "figures/B0-L08-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Asosiy Maklaren qatorlari (Standard Maclaurin series)",
+  "ru": "3. Основные ряды Маклорена",
+  "en": "3. Standard Maclaurin series"
+ },
+ {
+  "t": "p",
+  "uz": "Quyidagi qatorlarni yoddan bilish kerak — qolganlari ulardan o'rniga qo'yish, ko'paytirish, hosila yoki integral olish orqali hosil qilinadi.",
+  "ru": "Следующие ряды нужно знать наизусть — остальные получаются из них подстановкой, умножением, дифференцированием или интегрированием.",
+  "en": "The following series must be known by heart — the others are obtained from them by substitution, multiplication, differentiation or integration."
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Eksponenta, barcha $x$ uchun",
+    "ru": "Экспонента, при всех $x$",
+    "en": "Exponential, for all $x$",
+    "m": "e^x=1+x+\\frac{x^2}{2!}+\\frac{x^3}{3!}+\\ldots"
+   },
+   {
+    "uz": "Sinus, barcha $x$ uchun",
+    "ru": "Синус, при всех $x$",
+    "en": "Sine, for all $x$",
+    "m": "\\sin x=x-\\frac{x^3}{3!}+\\frac{x^5}{5!}-\\ldots"
+   },
+   {
+    "uz": "Kosinus, barcha $x$ uchun",
+    "ru": "Косинус, при всех $x$",
+    "en": "Cosine, for all $x$",
+    "m": "\\cos x=1-\\frac{x^2}{2!}+\\frac{x^4}{4!}-\\ldots"
+   },
+   {
+    "uz": "Geometrik qator, $|x|<1$",
+    "ru": "Геометрический ряд, $|x|<1$",
+    "en": "Geometric series, $|x|<1$",
+    "m": "\\frac{1}{1-x}=1+x+x^2+x^3+\\ldots"
+   },
+   {
+    "uz": "Logarifm, $-1<x\\leq1$",
+    "ru": "Логарифм, $-1<x\\leq1$",
+    "en": "Logarithm, $-1<x\\leq1$",
+    "m": "\\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3}-\\ldots"
+   },
+   {
+    "uz": "Binomial qator, $|x|<1$",
+    "ru": "Биномиальный ряд, $|x|<1$",
+    "en": "Binomial series, $|x|<1$",
+    "m": "(1+x)^n=1+nx+\\frac{n(n-1)}{2!}x^2+\\ldots"
+   }
+  ]
+ },
+ {
+  "t": "li",
+  "uz": "Binomial qatorda $n$ — istalgan haqiqiy son (manfiy yoki kasr ham): $\\sqrt{1+x}\\approx1+\\dfrac{x}{2}-\\dfrac{x^2}{8}$, $\\ \\dfrac{1}{\\sqrt{1-x}}\\approx1+\\dfrac{x}{2}+\\dfrac{3x^2}{8}$. Butun musbat $n$ da qator chekli — Nyuton binomi.",
+  "ru": "В биномиальном ряду $n$ — любое действительное число (в том числе отрицательное или дробное): $\\sqrt{1+x}\\approx1+\\dfrac{x}{2}-\\dfrac{x^2}{8}$, $\\ \\dfrac{1}{\\sqrt{1-x}}\\approx1+\\dfrac{x}{2}+\\dfrac{3x^2}{8}$. При целом положительном $n$ ряд конечен — бином Ньютона.",
+  "en": "In the binomial series $n$ is any real number (negative or fractional too): $\\sqrt{1+x}\\approx1+\\dfrac{x}{2}-\\dfrac{x^2}{8}$, $\\ \\dfrac{1}{\\sqrt{1-x}}\\approx1+\\dfrac{x}{2}+\\dfrac{3x^2}{8}$. For a positive integer $n$ the series is finite — Newton's binomial."
+ },
+ {
+  "t": "li",
+  "uz": "O'rniga qo'yish: $e^{-x^2}=1-x^2+\\dfrac{x^4}{2!}-\\ldots$; $\\ \\dfrac{1}{1+x^2}=1-x^2+x^4-\\ldots$",
+  "ru": "Подстановка: $e^{-x^2}=1-x^2+\\dfrac{x^4}{2!}-\\ldots$; $\\ \\dfrac{1}{1+x^2}=1-x^2+x^4-\\ldots$",
+  "en": "Substitution: $e^{-x^2}=1-x^2+\\dfrac{x^4}{2!}-\\ldots$; $\\ \\dfrac{1}{1+x^2}=1-x^2+x^4-\\ldots$"
+ },
+ {
+  "t": "li",
+  "uz": "Hadma-had integrallash: $\\dfrac{1}{1+x^2}$ qatoridan $\\arctan x=x-\\dfrac{x^3}{3}+\\dfrac{x^5}{5}-\\ldots$ kelib chiqadi; hadma-had hosila: $(\\sin x)'$ qatori $\\cos x$ qatorini beradi.",
+  "ru": "Почленное интегрирование: из ряда для $\\dfrac{1}{1+x^2}$ следует $\\arctan x=x-\\dfrac{x^3}{3}+\\dfrac{x^5}{5}-\\ldots$; почленное дифференцирование: ряд для $(\\sin x)'$ даёт ряд для $\\cos x$.",
+  "en": "Term-by-term integration: the series for $\\dfrac{1}{1+x^2}$ gives $\\arctan x=x-\\dfrac{x^3}{3}+\\dfrac{x^5}{5}-\\ldots$; term-by-term differentiation: the series for $(\\sin x)'$ gives the series for $\\cos x$."
+ },
+ {
+  "t": "li",
+  "uz": "B0-L07 bilan bog'liqlik: $e^{ix}$ qatorini juft va toq hadlarga ajratsak, Eyler formulasi $e^{ix}=\\cos x+i\\sin x$ hosil bo'ladi.",
+  "ru": "Связь с B0-L07: если разделить ряд для $e^{ix}$ на чётные и нечётные члены, получается формула Эйлера $e^{ix}=\\cos x+i\\sin x$.",
+  "en": "Link to B0-L07: splitting the series for $e^{ix}$ into even and odd terms gives Euler's formula $e^{ix}=\\cos x+i\\sin x$."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Yaqinlashish sohasi va qoldiq had (Region of convergence and remainder)",
+  "ru": "4. Область сходимости и остаточный член",
+  "en": "4. Region of convergence and remainder"
+ },
+ {
+  "t": "li",
+  "uz": "Qator $|x-x_0|<R$ da yaqinlashadi; $R$ — **yaqinlashish radiusi (radius of convergence)**. Undan tashqarida qisman yig'indilar funksiyadan uzoqlashadi ([[F03]]).",
+  "ru": "Ряд сходится при $|x-x_0|<R$; $R$ — **радиус сходимости**. Вне этой области частичные суммы удаляются от функции ([[F03]]).",
+  "en": "The series converges for $|x-x_0|<R$; $R$ is the **radius of convergence**. Outside this region the partial sums move away from the function ([[F03]])."
+ },
+ {
+  "t": "li",
+  "uz": "$R$ funksiyaning eng yaqin maxsus nuqtasigacha bo'lgan masofaga teng: $\\dfrac{1}{1-x}$ va $\\ln(1+x)$ uchun $R=1$ (maxsus nuqtalar $x=1$ va $x=-1$). $e^x$, $\\sin x$, $\\cos x$ uchun $R=\\infty$.",
+  "ru": "$R$ равен расстоянию до ближайшей особой точки функции: для $\\dfrac{1}{1-x}$ и $\\ln(1+x)$ $\\ R=1$ (особые точки $x=1$ и $x=-1$). Для $e^x$, $\\sin x$, $\\cos x$ $\\ R=\\infty$.",
+  "en": "$R$ equals the distance to the nearest singular point of the function: for $\\dfrac{1}{1-x}$ and $\\ln(1+x)$, $R=1$ (singular points $x=1$ and $x=-1$). For $e^x$, $\\sin x$, $\\cos x$, $R=\\infty$."
+ },
+ {
+  "t": "li",
+  "uz": "**Diqqat:** maxsus nuqta kompleks bo'lishi ham mumkin: $\\dfrac{1}{1+x^2}$ haqiqiy o'qda silliq, lekin $x=\\pm i$ da maxraj nolga aylanadi, shuning uchun $R=1$.",
+  "ru": "**Внимание:** особая точка может быть и комплексной: $\\dfrac{1}{1+x^2}$ гладкая на действительной оси, но при $x=\\pm i$ знаменатель обращается в ноль, поэтому $R=1$.",
+  "en": "**Caution:** the singular point may be complex: $\\dfrac{1}{1+x^2}$ is smooth on the real axis, but its denominator vanishes at $x=\\pm i$, so $R=1$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B0-L08-F03.png",
+   "ru": "figures/B0-L08-F03-ru.png",
+   "en": "figures/B0-L08-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "p",
+  "uz": "Ko'phad bilan almashtirishdagi xatolik **qoldiq had (remainder)** bilan baholanadi (Lagranj shakli):",
+  "ru": "Погрешность замены многочленом оценивается **остаточным членом** (в форме Лагранжа):",
+  "en": "The error of replacing the function by a polynomial is estimated by the **remainder** (Lagrange form):"
+ },
+ {
+  "t": "m",
+  "m": "f(x)-T_n(x)=R_n(x)=\\frac{f^{(n+1)}(\\xi)}{(n+1)!}\\,(x-x_0)^{n+1},\\qquad \\xi\\in(x_0,\\,x)"
+ },
+ {
+  "t": "li",
+  "uz": "Amalda: xatolik tashlab yuborilgan birinchi nolmas had tartibida. Masalan, $\\sin x\\approx x$ ning xatoligi taxminan $\\dfrac{x^3}{6}$.",
+  "ru": "На практике: погрешность порядка первого отброшенного ненулевого члена. Например, погрешность $\\sin x\\approx x$ примерно равна $\\dfrac{x^3}{6}$.",
+  "en": "In practice: the error is of the order of the first discarded nonzero term. For example, the error of $\\sin x\\approx x$ is about $\\dfrac{x^3}{6}$."
+ },
+ {
+  "t": "li",
+  "uz": "Ishorasi almashinuvchi va hadlari kamayuvchi qatorda xatolik tashlab yuborilgan birinchi haddan katta emas va u bilan bir xil ishorali.",
+  "ru": "В знакочередующемся ряду с убывающими членами погрешность не больше первого отброшенного члена и имеет его знак.",
+  "en": "In an alternating series with decreasing terms, the error does not exceed the first discarded term and has the same sign."
+ },
+ {
+  "t": "li",
+  "uz": "**$O(x^n)$ belgisi (big-O notation):** $\\cos x=1-\\dfrac{x^2}{2}+O(x^4)$ — tashlab yuborilgan hadlar $x^4$ dan tez kamaymaydi.",
+  "ru": "**Обозначение $O(x^n)$:** $\\cos x=1-\\dfrac{x^2}{2}+O(x^4)$ — отброшенные члены убывают не медленнее $x^4$.",
+  "en": "**Big-O notation $O(x^n)$:** $\\cos x=1-\\dfrac{x^2}{2}+O(x^4)$ — the discarded terms decrease at least as fast as $x^4$."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Kichik parametr bo'yicha yoyish (Expansion in a small parameter)",
+  "ru": "5. Разложение по малому параметру",
+  "en": "5. Expansion in a small parameter"
+ },
+ {
+  "t": "p",
+  "uz": "Fizikada formula odatda **o'lchamsiz kichik parametr (small dimensionless parameter)** $\\varepsilon\\ll1$ ko'rinishiga keltiriladi ($v/c$, $\\ h/R$, $\\ d/r$, $\\ \\theta$), so'ng birinchi nolmas hadgacha yoyiladi.",
+  "ru": "В физике формулу обычно приводят к виду с **малым безразмерным параметром** $\\varepsilon\\ll1$ ($v/c$, $\\ h/R$, $\\ d/r$, $\\ \\theta$), а затем раскладывают до первого ненулевого члена.",
+  "en": "In physics a formula is usually brought to a form with a **small dimensionless parameter** $\\varepsilon\\ll1$ ($v/c$, $\\ h/R$, $\\ d/r$, $\\ \\theta$) and then expanded up to the first nonzero term."
+ },
+ {
+  "t": "m",
+  "m": "\\sin\\theta\\approx\\theta,\\qquad \\tan\\theta\\approx\\theta,\\qquad \\cos\\theta\\approx1-\\frac{\\theta^2}{2}\\qquad(\\theta\\ \\mathrm{rad})"
+ },
+ {
+  "t": "m",
+  "m": "(1+\\varepsilon)^n\\approx1+n\\varepsilon,\\qquad e^{\\varepsilon}\\approx1+\\varepsilon,\\qquad \\ln(1+\\varepsilon)\\approx\\varepsilon"
+ },
+ {
+  "t": "li",
+  "uz": "Burchak faqat **radianda** olinadi. $\\sin\\theta\\approx\\theta$ ning nisbiy xatoligi $\\dfrac{\\theta^2}{6}$: $\\theta=0.1$ da $0.17\\%$, $\\ \\theta=0.5$ da $4\\%$ ([[F04]]).",
+  "ru": "Угол берётся только **в радианах**. Относительная погрешность $\\sin\\theta\\approx\\theta$ равна $\\dfrac{\\theta^2}{6}$: при $\\theta=0.1$ — $0.17\\%$, при $\\theta=0.5$ — $4\\%$ ([[F04]]).",
+  "en": "The angle is taken only **in radians**. The relative error of $\\sin\\theta\\approx\\theta$ is $\\dfrac{\\theta^2}{6}$: $0.17\\%$ at $\\theta=0.1$ and $4\\%$ at $\\theta=0.5$ ([[F04]])."
+ },
+ {
+  "t": "li",
+  "uz": "Parametrni kichik qilish uchun avval katta hadni qavsdan chiqaring: $\\dfrac{1}{(R+h)^2}=\\dfrac{1}{R^2}\\left(1+\\dfrac{h}{R}\\right)^{-2}\\approx\\dfrac{1}{R^2}\\left(1-\\dfrac{2h}{R}\\right)$.",
+  "ru": "Чтобы параметр был малым, сначала вынесите большой член за скобки: $\\dfrac{1}{(R+h)^2}=\\dfrac{1}{R^2}\\left(1+\\dfrac{h}{R}\\right)^{-2}\\approx\\dfrac{1}{R^2}\\left(1-\\dfrac{2h}{R}\\right)$.",
+  "en": "To make the parameter small, first factor out the large term: $\\dfrac{1}{(R+h)^2}=\\dfrac{1}{R^2}\\left(1+\\dfrac{h}{R}\\right)^{-2}\\approx\\dfrac{1}{R^2}\\left(1-\\dfrac{2h}{R}\\right)$."
+ },
+ {
+  "t": "li",
+  "uz": "Agar birinchi tartibli hadlar qisqarib ketsa, keyingi tartibgacha yoyish kerak (masalan, dipol maydoni, $1-\\cos\\theta$).",
+  "ru": "Если члены первого порядка сокращаются, нужно разложить до следующего порядка (например, поле диполя, $1-\\cos\\theta$).",
+  "en": "If the first-order terms cancel, one must expand to the next order (for example, the dipole field, $1-\\cos\\theta$)."
+ },
+ {
+  "t": "li",
+  "uz": "Kichik nisbiy o'zgarishlar ko'paytmada qo'shiladi: $(1+\\varepsilon_1)(1+\\varepsilon_2)\\approx1+\\varepsilon_1+\\varepsilon_2$.",
+  "ru": "Малые относительные изменения в произведении складываются: $(1+\\varepsilon_1)(1+\\varepsilon_2)\\approx1+\\varepsilon_1+\\varepsilon_2$.",
+  "en": "Small relative changes add in a product: $(1+\\varepsilon_1)(1+\\varepsilon_2)\\approx1+\\varepsilon_1+\\varepsilon_2$."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B0-L08-F04.png",
+   "ru": "figures/B0-L08-F04-ru.png",
+   "en": "figures/B0-L08-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Fizikada Teylor qatori (Taylor series in physics)",
+  "ru": "6. Ряд Тейлора в физике",
+  "en": "6. Taylor series in physics"
+ },
+ {
+  "t": "p",
+  "uz": "**Kichik tebranishlar (small oscillations).** Potensial energiyani muvozanat nuqtasi $x_0$ ($U'(x_0)=0$) atrofida yoyamiz:",
+  "ru": "**Малые колебания.** Разложим потенциальную энергию в окрестности точки равновесия $x_0$ ($U'(x_0)=0$):",
+  "en": "**Small oscillations.** Expand the potential energy about the equilibrium point $x_0$ ($U'(x_0)=0$):"
+ },
+ {
+  "t": "m",
+  "m": "U(x)\\approx U(x_0)+\\frac{1}{2}\\,U''(x_0)\\,(x-x_0)^2,\\qquad k=U''(x_0),\\qquad \\omega=\\sqrt{\\frac{U''(x_0)}{m}}"
+ },
+ {
+  "t": "li",
+  "uz": "Chiziqli had yo'q, chunki muvozanatda kuch $F=-U'(x_0)=0$. $U''(x_0)>0$ bo'lsa muvozanat **turg'un (stable)**, jism garmonik tebranadi ([[F05]]).",
+  "ru": "Линейного члена нет, так как в равновесии сила $F=-U'(x_0)=0$. При $U''(x_0)>0$ равновесие **устойчивое**, тело совершает гармонические колебания ([[F05]]).",
+  "en": "There is no linear term because the force $F=-U'(x_0)=0$ at equilibrium. If $U''(x_0)>0$, the equilibrium is **stable** and the body oscillates harmonically ([[F05]])."
+ },
+ {
+  "t": "li",
+  "uz": "Mayatnik: $U=mgl\\,(1-\\cos\\theta)\\approx\\dfrac{1}{2}mgl\\,\\theta^2$, shuning uchun $\\omega=\\sqrt{g/l}$. Amplituda $\\theta_0$ hisobga olinsa, $T\\approx T_0\\left(1+\\dfrac{\\theta_0^2}{16}\\right)$.",
+  "ru": "Маятник: $U=mgl\\,(1-\\cos\\theta)\\approx\\dfrac{1}{2}mgl\\,\\theta^2$, поэтому $\\omega=\\sqrt{g/l}$. С учётом амплитуды $\\theta_0$: $T\\approx T_0\\left(1+\\dfrac{\\theta_0^2}{16}\\right)$.",
+  "en": "Pendulum: $U=mgl\\,(1-\\cos\\theta)\\approx\\dfrac{1}{2}mgl\\,\\theta^2$, hence $\\omega=\\sqrt{g/l}$. Taking the amplitude $\\theta_0$ into account, $T\\approx T_0\\left(1+\\dfrac{\\theta_0^2}{16}\\right)$."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B0-L08-F05.png",
+   "ru": "figures/B0-L08-F05-ru.png",
+   "en": "figures/B0-L08-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "p",
+  "uz": "**Nisbiylik nazariyasining klassik chegarasi (classical limit of relativity).** $\\beta=v/c\\ll1$ da:",
+  "ru": "**Классический предел теории относительности.** При $\\beta=v/c\\ll1$:",
+  "en": "**Classical limit of relativity.** For $\\beta=v/c\\ll1$:"
+ },
+ {
+  "t": "m",
+  "m": "\\gamma=\\frac{1}{\\sqrt{1-\\beta^2}}\\approx1+\\frac{\\beta^2}{2}+\\frac{3\\beta^4}{8},\\qquad K=(\\gamma-1)\\,mc^2\\approx\\frac{mv^2}{2}+\\frac{3}{8}\\,\\frac{mv^4}{c^2}"
+ },
+ {
+  "t": "li",
+  "uz": "Birinchi had — klassik kinetik energiya; ikkinchisi — nisbiylik tuzatmasi, uning nisbiy ulushi $\\dfrac{3}{4}\\beta^2$ ([[F06]]).",
+  "ru": "Первый член — классическая кинетическая энергия; второй — релятивистская поправка, её относительная доля $\\dfrac{3}{4}\\beta^2$ ([[F06]]).",
+  "en": "The first term is the classical kinetic energy; the second is the relativistic correction, whose relative size is $\\dfrac{3}{4}\\beta^2$ ([[F06]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B0-L08-F06.png",
+   "ru": "figures/B0-L08-F06-ru.png",
+   "en": "figures/B0-L08-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Yer sirtidan $h\\ll R$ balandlikda erkin tushish tezlanishi",
+    "ru": "Ускорение свободного падения на высоте $h\\ll R$",
+    "en": "Free-fall acceleration at a height $h\\ll R$",
+    "m": "g(h)=\\frac{g_0}{(1+h/R)^2}\\approx g_0\\left(1-\\frac{2h}{R}\\right)"
+   },
+   {
+    "uz": "Kichik balandlikdagi potensial energiya",
+    "ru": "Потенциальная энергия на малой высоте",
+    "en": "Potential energy at a small height",
+    "m": "-\\frac{GMm}{R+h}\\approx-\\frac{GMm}{R}+mg_0h"
+   },
+   {
+    "uz": "Dipolning o'qidagi maydon, $r\\gg d$",
+    "ru": "Поле на оси диполя, $r\\gg d$",
+    "en": "Field on the axis of a dipole, $r\\gg d$",
+    "m": "E\\approx\\frac{2kqd}{r^3}=\\frac{2kp}{r^3}"
+   },
+   {
+    "uz": "Doppler effekti, $v\\ll c$",
+    "ru": "Эффект Доплера, $v\\ll c$",
+    "en": "Doppler effect, $v\\ll c$",
+    "m": "\\frac{\\Delta f}{f}\\approx\\frac{v}{c}"
+   }
+  ]
+ },
+ {
+  "t": "h2",
+  "uz": "7. Qatorlar yordamida limit hisoblash (Limits with series)",
+  "ru": "7. Вычисление пределов с помощью рядов",
+  "en": "7. Limits with series"
+ },
+ {
+  "t": "p",
+  "uz": "$\\dfrac{0}{0}$ ko'rinishidagi limitda surat va maxrajni yoyib, eng past darajali hadlarni solishtirish kifoya:",
+  "ru": "В пределе вида $\\dfrac{0}{0}$ достаточно разложить числитель и знаменатель и сравнить члены наименьшей степени:",
+  "en": "For a limit of the form $\\dfrac{0}{0}$ it is enough to expand the numerator and the denominator and compare the lowest-order terms:"
+ },
+ {
+  "t": "m",
+  "m": "\\lim_{x\\to0}\\frac{\\sin x}{x}=1,\\qquad \\lim_{x\\to0}\\frac{1-\\cos x}{x^2}=\\frac{1}{2},\\qquad \\lim_{x\\to0}\\frac{e^x-1}{x}=1,\\qquad \\lim_{x\\to0}\\frac{x-\\sin x}{x^3}=\\frac{1}{6}"
+ },
+ {
+  "t": "li",
+  "uz": "Bu usul Lopital qoidasini (L'Hôpital's rule) bir necha marta qo'llashdan tezroq: masalan, $\\dfrac{x-\\sin x}{x^3}=\\dfrac{x^3/6-\\ldots}{x^3}\\to\\dfrac{1}{6}$.",
+  "ru": "Этот способ быстрее многократного применения правила Лопиталя: например, $\\dfrac{x-\\sin x}{x^3}=\\dfrac{x^3/6-\\ldots}{x^3}\\to\\dfrac{1}{6}$.",
+  "en": "This method is faster than applying L'Hôpital's rule several times: for example, $\\dfrac{x-\\sin x}{x^3}=\\dfrac{x^3/6-\\ldots}{x^3}\\to\\dfrac{1}{6}$."
+ },
+ {
+  "t": "li",
+  "uz": "Surat va maxrajni bir xil tartibgacha yoyish kerak; aks holda muhim had yo'qolib qolishi mumkin.",
+  "ru": "Числитель и знаменатель нужно раскладывать до одного и того же порядка, иначе может потеряться важный член.",
+  "en": "The numerator and the denominator must be expanded to the same order; otherwise an important term may be lost."
+ },
+ {
+  "t": "h2",
+  "uz": "8. GRE uchun tez tekshiruvlar (Quick checks for the GRE)",
+  "ru": "8. Быстрые проверки для GRE",
+  "en": "8. Quick checks for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "Har bir yaqinlashishdan oldin kichik parametrni o'lchamsiz ko'rinishga keltiring: $\\dfrac{v}{c}$, $\\ \\dfrac{h}{R}$, $\\ \\dfrac{d}{r}$.",
+  "ru": "Перед каждым приближением приведите малый параметр к безразмерному виду: $\\dfrac{v}{c}$, $\\ \\dfrac{h}{R}$, $\\ \\dfrac{d}{r}$.",
+  "en": "Before each approximation bring the small parameter to dimensionless form: $\\dfrac{v}{c}$, $\\ \\dfrac{h}{R}$, $\\ \\dfrac{d}{r}$."
+ },
+ {
+  "t": "li",
+  "uz": "Chegaraviy holatni tekshiring: $\\varepsilon\\to0$ da aniq formulaga qaytish kerak (masalan, $v\\to0$ da $K\\to\\dfrac{mv^2}{2}$).",
+  "ru": "Проверьте предельный случай: при $\\varepsilon\\to0$ должна получаться известная формула (например, при $v\\to0$ $\\ K\\to\\dfrac{mv^2}{2}$).",
+  "en": "Check the limiting case: as $\\varepsilon\\to0$ you must recover the known formula (for example, $K\\to\\dfrac{mv^2}{2}$ as $v\\to0$)."
+ },
+ {
+  "t": "li",
+  "uz": "Foydali sonlar: $\\sqrt{1.01}\\approx1.005$, $\\ e^{0.1}\\approx1.105$, $\\ \\ln1.1\\approx0.095$, $\\ 1^\\circ\\approx0.0175\\ \\mathrm{rad}$.",
+  "ru": "Полезные числа: $\\sqrt{1.01}\\approx1.005$, $\\ e^{0.1}\\approx1.105$, $\\ \\ln1.1\\approx0.095$, $\\ 1^\\circ\\approx0.0175\\ \\mathrm{rad}$.",
+  "en": "Useful numbers: $\\sqrt{1.01}\\approx1.005$, $\\ e^{0.1}\\approx1.105$, $\\ \\ln1.1\\approx0.095$, $\\ 1^\\circ\\approx0.0175\\ \\mathrm{rad}$."
+ },
+ {
+  "t": "li",
+  "uz": "Ishorani tekshiring: $\\sqrt{1+x}<1+\\dfrac{x}{2}$ (botiq funksiya), $\\ e^x>1+x$ (qavariq funksiya) — ikkinchi tartibli had ishorasi $f''$ ishorasi bilan bir xil.",
+  "ru": "Проверяйте знак: $\\sqrt{1+x}<1+\\dfrac{x}{2}$ (вогнутая функция), $\\ e^x>1+x$ (выпуклая функция) — знак члена второго порядка совпадает со знаком $f''$.",
+  "en": "Check the sign: $\\sqrt{1+x}<1+\\dfrac{x}{2}$ (concave function), $\\ e^x>1+x$ (convex function) — the sign of the second-order term is the sign of $f''$."
+ },
+ {
+  "t": "li",
+  "uz": "Yoyish $|x|<R$ dan tashqarida ishlamaydi: masalan, $(1+x)^n\\approx1+nx$ ni $x=2$ da qo'llab bo'lmaydi — avval katta hadni qavsdan chiqaring.",
+  "ru": "Разложение не работает вне $|x|<R$: например, $(1+x)^n\\approx1+nx$ нельзя применять при $x=2$ — сначала вынесите большой член за скобки.",
+  "en": "An expansion does not work outside $|x|<R$: for example, $(1+x)^n\\approx1+nx$ cannot be used at $x=2$ — first factor out the large term."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Chiziqli yaqinlashish",
+    "ru": "Линейное приближение",
+    "en": "Linear approximation",
+    "m": "f(x_0+\\Delta x)\\approx f(x_0)+f'(x_0)\\,\\Delta x"
+   },
+   {
+    "uz": "Teylor qatori",
+    "ru": "Ряд Тейлора",
+    "en": "Taylor series",
+    "m": "f(x)=\\sum_{k=0}^{\\infty}\\frac{f^{(k)}(x_0)}{k!}\\,(x-x_0)^k"
+   },
+   {
+    "uz": "Lagranj qoldiq hadi",
+    "ru": "Остаточный член Лагранжа",
+    "en": "Lagrange remainder",
+    "m": "R_n=\\frac{f^{(n+1)}(\\xi)}{(n+1)!}\\,(x-x_0)^{n+1}"
+   },
+   {
+    "uz": "Binomial yaqinlashish",
+    "ru": "Биномиальное приближение",
+    "en": "Binomial approximation",
+    "m": "(1+\\varepsilon)^n\\approx1+n\\varepsilon+\\frac{n(n-1)}{2}\\,\\varepsilon^2"
+   },
+   {
+    "uz": "Kichik burchaklar",
+    "ru": "Малые углы",
+    "en": "Small angles",
+    "m": "\\sin\\theta\\approx\\theta,\\quad \\cos\\theta\\approx1-\\frac{\\theta^2}{2}"
+   },
+   {
+    "uz": "Kichik tebranishlar chastotasi",
+    "ru": "Частота малых колебаний",
+    "en": "Frequency of small oscillations",
+    "m": "\\omega=\\sqrt{\\frac{U''(x_0)}{m}}"
+   }
+  ]
+ }
+]
