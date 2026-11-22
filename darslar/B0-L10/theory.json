@@ -1,0 +1,629 @@
+[
+ {
+  "t": "h1",
+  "uz": "O'lchov birliklari, o'lchamlar tahlili, ehtimollik asoslari (Units, dimensional analysis, basics of probability)",
+  "ru": "Единицы измерения, анализ размерностей, основы теории вероятностей",
+  "en": "Units, dimensional analysis, basics of probability"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz SI birliklari va prefikslar bilan ishlaysiz, birliklarni almashtirasiz, formulaning to'g'riligini o'lcham bo'yicha tekshirasiz, o'lchamlar tahlili bilan formulani topasiz, fundamental doimiylar yordamida tez baho berasiz, o'lchash xatoliklarini hisoblaysiz hamda ehtimollik va taqsimotlar (binomial, Puasson, Gauss) masalalarini yechasiz.",
+  "ru": "**Цель.** После урока вы будете работать с единицами СИ и приставками, переводить единицы, проверять правильность формулы по размерности, находить формулу методом анализа размерностей, быстро делать оценки с помощью фундаментальных постоянных, вычислять погрешности измерений и решать задачи на вероятность и распределения (биномиальное, Пуассона, Гаусса).",
+  "en": "**Goal.** After this lesson you will work with SI units and prefixes, convert units, check a formula by its dimensions, find a formula by dimensional analysis, make quick estimates with fundamental constants, calculate measurement uncertainties, and solve problems on probability and distributions (binomial, Poisson, Gaussian)."
+ },
+ {
+  "t": "p",
+  "uz": "**GRE'da o'rni.** GRE'da kalkulyator yo'q, shuning uchun javob variantlarini o'lchami bo'yicha saralash va $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$ kabi doimiylar bilan baho berish — eng tez usullar. «Laboratoriya metodlari» bo'limi (taxminan 6%) xatoliklar, sanash statistikasi ($\\sqrt{N}$ qoidasi) va o'rtachaning xatoligi haqida. Ehtimollik esa kvant mexanikasi ($|\\psi|^2$ — ehtimollik zichligi) va statistik fizikaning tilidir.",
+  "ru": "**Роль в GRE.** На GRE нет калькулятора, поэтому отбор вариантов ответа по размерности и оценки с постоянными вроде $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$ — самые быстрые приёмы. Раздел «Лабораторные методы» (около 6%) посвящён погрешностям, статистике счёта (правило $\\sqrt{N}$) и погрешности среднего. Вероятность — язык квантовой механики ($|\\psi|^2$ — плотность вероятности) и статистической физики.",
+  "en": "**Role in the GRE.** There is no calculator on the GRE, so sorting answer choices by dimensions and estimating with constants such as $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$ are the fastest methods. The “Laboratory methods” section (about 6%) is about uncertainties, counting statistics (the $\\sqrt{N}$ rule) and the error of the mean. Probability is the language of quantum mechanics ($|\\psi|^2$ is a probability density) and of statistical physics."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Fizik kattalik va SI birliklari (Physical quantity and SI units)",
+  "ru": "1. Физическая величина и единицы СИ",
+  "en": "1. Physical quantities and SI units"
+ },
+ {
+  "t": "p",
+  "uz": "**Fizik kattalik (physical quantity)** — son va **birlik (unit)** ko'paytmasi: $v=20\\ \\mathrm{m/s}$. Birliksiz son fizikada ma'nosiz. **SI (Xalqaro birliklar tizimi)** da 7 ta **asosiy birlik (base unit)** bor ([[F01]]):",
+  "ru": "**Физическая величина** — произведение числа на **единицу измерения**: $v=20\\ \\mathrm{m/s}$. Число без единицы в физике не имеет смысла. В **СИ (Международной системе единиц)** 7 **основных единиц** ([[F01]]):",
+  "en": "A **physical quantity** is a number times a **unit**: $v=20\\ \\mathrm{m/s}$. A number without a unit is meaningless in physics. The **SI (International System of Units)** has 7 **base units** ([[F01]]):"
+ },
+ {
+  "t": "m",
+  "m": "\\mathrm{m}\\ (\\mathrm{L}),\\quad \\mathrm{kg}\\ (\\mathrm{M}),\\quad \\mathrm{s}\\ (\\mathrm{T}),\\quad \\mathrm{A}\\ (\\mathrm{I})"
+ },
+ {
+  "t": "m",
+  "m": "\\mathrm{K}\\ (\\Theta),\\quad \\mathrm{mol}\\ (\\mathrm{N}),\\quad \\mathrm{cd}\\ (\\mathrm{J})"
+ },
+ {
+  "t": "li",
+  "uz": "Metr — uzunlik, kilogramm — massa, sekund — vaqt, amper — tok kuchi, kelvin — temperatura, mol — modda miqdori, kandela — yorug'lik kuchi. Qavs ichida — shu kattalikning **o'lchami (dimension)** belgisi.",
+  "ru": "Метр — длина, килограмм — масса, секунда — время, ампер — сила тока, кельвин — температура, моль — количество вещества, кандела — сила света. В скобках — обозначение **размерности** этой величины.",
+  "en": "The metre is length, the kilogram is mass, the second is time, the ampere is electric current, the kelvin is temperature, the mole is amount of substance, the candela is luminous intensity. In brackets is the symbol of the **dimension** of the quantity."
+ },
+ {
+  "t": "li",
+  "uz": "2019 yildan beri asosiy birliklar aniq qiymatli fundamental doimiylar orqali ta'riflanadi: $c=299\\,792\\,458\\ \\mathrm{m/s}$, $\\ h=6.626\\,070\\,15\\times10^{-34}\\ \\mathrm{J\\cdot s}$, $\\ e=1.602\\,176\\,634\\times10^{-19}\\ \\mathrm{C}$, $\\ k_B=1.380\\,649\\times10^{-23}\\ \\mathrm{J/K}$, $\\ N_A=6.022\\,140\\,76\\times10^{23}\\ \\mathrm{mol^{-1}}$.",
+  "ru": "С 2019 года основные единицы определяются через фундаментальные постоянные с точными значениями: $c=299\\,792\\,458\\ \\mathrm{m/s}$, $\\ h=6.626\\,070\\,15\\times10^{-34}\\ \\mathrm{J\\cdot s}$, $\\ e=1.602\\,176\\,634\\times10^{-19}\\ \\mathrm{C}$, $\\ k_B=1.380\\,649\\times10^{-23}\\ \\mathrm{J/K}$, $\\ N_A=6.022\\,140\\,76\\times10^{23}\\ \\mathrm{mol^{-1}}$.",
+  "en": "Since 2019 the base units have been defined through fundamental constants with exact values: $c=299\\,792\\,458\\ \\mathrm{m/s}$, $\\ h=6.626\\,070\\,15\\times10^{-34}\\ \\mathrm{J\\cdot s}$, $\\ e=1.602\\,176\\,634\\times10^{-19}\\ \\mathrm{C}$, $\\ k_B=1.380\\,649\\times10^{-23}\\ \\mathrm{J/K}$, $\\ N_A=6.022\\,140\\,76\\times10^{23}\\ \\mathrm{mol^{-1}}$."
+ },
+ {
+  "t": "p",
+  "uz": "**Hosilaviy birliklar (derived units)** asosiy birliklardan formulalar orqali tuziladi. Har birini asosiy birliklarda yoza olish kerak:",
+  "ru": "**Производные единицы** образуются из основных через формулы. Каждую нужно уметь записать в основных единицах:",
+  "en": "**Derived units** are built from the base units through formulas. You should be able to write each of them in base units:"
+ },
+ {
+  "t": "m",
+  "m": "\\mathrm{N}=\\mathrm{kg\\,m\\,s^{-2}},\\quad \\mathrm{J}=\\mathrm{N\\,m}=\\mathrm{kg\\,m^2s^{-2}},\\quad \\mathrm{W}=\\mathrm{J/s},\\quad \\mathrm{Pa}=\\mathrm{N/m^2}"
+ },
+ {
+  "t": "m",
+  "m": "\\mathrm{C}=\\mathrm{A\\,s},\\quad \\mathrm{V}=\\mathrm{W/A},\\quad \\Omega=\\mathrm{V/A},\\quad \\mathrm{T}=\\mathrm{N/(A\\,m)}"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B0-L10-F01.png",
+   "ru": "figures/B0-L10-F01-ru.png",
+   "en": "figures/B0-L10-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Prefikslar va birliklarni almashtirish (Prefixes and unit conversion)",
+  "ru": "2. Приставки и перевод единиц",
+  "en": "2. Prefixes and unit conversion"
+ },
+ {
+  "t": "p",
+  "uz": "Juda katta va juda kichik sonlar **ilmiy yozuvda (scientific notation)** yoziladi: $a\\times10^n$, $1\\le a<10$. **Prefikslar (prefixes)** 10 ning darajalarini almashtiradi ([[F02]]):",
+  "ru": "Очень большие и очень малые числа записывают в **стандартном виде**: $a\\times10^n$, $1\\le a<10$. **Приставки** заменяют степени 10 ([[F02]]):",
+  "en": "Very large and very small numbers are written in **scientific notation**: $a\\times10^n$, $1\\le a<10$. **Prefixes** replace powers of 10 ([[F02]]):"
+ },
+ {
+  "t": "m",
+  "m": "\\mathrm{f}=10^{-15},\\quad \\mathrm{p}=10^{-12},\\quad \\mathrm{n}=10^{-9},\\quad \\mu=10^{-6},\\quad \\mathrm{m}=10^{-3},\\quad \\mathrm{c}=10^{-2}"
+ },
+ {
+  "t": "m",
+  "m": "\\mathrm{k}=10^{3},\\quad \\mathrm{M}=10^{6},\\quad \\mathrm{G}=10^{9},\\quad \\mathrm{T}=10^{12}"
+ },
+ {
+  "t": "p",
+  "uz": "**Birliklarni almashtirish (unit conversion).** Birlikni qiymati $1$ ga teng kasrga ko'paytiramiz — son o'zgaradi, kattalik o'zgarmaydi:",
+  "ru": "**Перевод единиц.** Умножаем на дробь, равную $1$: число меняется, а сама величина — нет:",
+  "en": "**Unit conversion.** Multiply by a fraction equal to $1$: the number changes, the quantity does not:"
+ },
+ {
+  "t": "m",
+  "m": "72\\ \\frac{\\mathrm{km}}{\\mathrm{h}}=72\\cdot\\frac{1000\\ \\mathrm{m}}{3600\\ \\mathrm{s}}=20\\ \\frac{\\mathrm{m}}{\\mathrm{s}},\\qquad 1\\ \\frac{\\mathrm{g}}{\\mathrm{cm^3}}=\\frac{10^{-3}\\ \\mathrm{kg}}{10^{-6}\\ \\mathrm{m^3}}=10^{3}\\ \\frac{\\mathrm{kg}}{\\mathrm{m^3}}"
+ },
+ {
+  "t": "li",
+  "uz": "Darajali birlikda prefiks ham darajaga ko'tariladi: $1\\ \\mathrm{cm^3}=(10^{-2}\\ \\mathrm{m})^3=10^{-6}\\ \\mathrm{m^3}$.",
+  "ru": "В единице со степенью приставка тоже возводится в степень: $1\\ \\mathrm{cm^3}=(10^{-2}\\ \\mathrm{m})^3=10^{-6}\\ \\mathrm{m^3}$.",
+  "en": "In a unit with a power, the prefix is raised to the power too: $1\\ \\mathrm{cm^3}=(10^{-2}\\ \\mathrm{m})^3=10^{-6}\\ \\mathrm{m^3}$."
+ },
+ {
+  "t": "li",
+  "uz": "Fizikada SI dan tashqari birliklar ham ko'p uchraydi: $1\\ \\mathrm{eV}=1.602\\times10^{-19}\\ \\mathrm{J}$ (elektronvolt), $\\ 1\\ \\mathring{\\mathrm{A}}=10^{-10}\\ \\mathrm{m}$ (angstrem), $\\ 1\\ \\mathrm{atm}=1.013\\times10^{5}\\ \\mathrm{Pa}$, $\\ 1\\ \\mathrm{kWh}=3.6\\times10^{6}\\ \\mathrm{J}$.",
+  "ru": "В физике часто встречаются и внесистемные единицы: $1\\ \\mathrm{eV}=1.602\\times10^{-19}\\ \\mathrm{J}$ (электронвольт), $\\ 1\\ \\mathring{\\mathrm{A}}=10^{-10}\\ \\mathrm{m}$ (ангстрем), $\\ 1\\ \\mathrm{atm}=1.013\\times10^{5}\\ \\mathrm{Pa}$, $\\ 1\\ \\mathrm{kWh}=3.6\\times10^{6}\\ \\mathrm{J}$.",
+  "en": "Non-SI units are also common in physics: $1\\ \\mathrm{eV}=1.602\\times10^{-19}\\ \\mathrm{J}$ (electronvolt), $\\ 1\\ \\mathring{\\mathrm{A}}=10^{-10}\\ \\mathrm{m}$ (angstrom), $\\ 1\\ \\mathrm{atm}=1.013\\times10^{5}\\ \\mathrm{Pa}$, $\\ 1\\ \\mathrm{kWh}=3.6\\times10^{6}\\ \\mathrm{J}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tartib (order of magnitude)** — songa eng yaqin $10^n$. Tartib bahosi (Fermi bahosi) aniq javobni emas, uning $10$ marta aniqlikdagi qiymatini beradi — GRE variantlari ko'pincha shu darajada farq qiladi.",
+  "ru": "**Порядок величины** — ближайшая к числу степень $10^n$. Оценка по порядку величины (оценка Ферми) даёт не точный ответ, а его значение с точностью до множителя $10$ — варианты GRE часто различаются именно настолько.",
+  "en": "The **order of magnitude** is the power $10^n$ closest to a number. An order-of-magnitude (Fermi) estimate gives not the exact answer but its value to within a factor of $10$ — GRE choices often differ by exactly that much."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B0-L10-F02.png",
+   "ru": "figures/B0-L10-F02-ru.png",
+   "en": "figures/B0-L10-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. O'lcham va bir jinslilik qoidasi (Dimension and homogeneity)",
+  "ru": "3. Размерность и правило однородности",
+  "en": "3. Dimension and the homogeneity rule"
+ },
+ {
+  "t": "p",
+  "uz": "Kattalikning **o'lchami (dimension)** $[Q]$ — uning asosiy kattaliklardan qanday darajada tuzilganini ko'rsatadi:",
+  "ru": "**Размерность** величины $[Q]$ показывает, в каких степенях она составлена из основных величин:",
+  "en": "The **dimension** of a quantity $[Q]$ shows in what powers it is built from the base quantities:"
+ },
+ {
+  "t": "m",
+  "m": "[Q]=\\mathrm{L}^{a}\\,\\mathrm{M}^{b}\\,\\mathrm{T}^{c}\\,\\mathrm{I}^{d}\\,\\Theta^{e},\\qquad [v]=\\mathrm{L\\,T^{-1}},\\quad [F]=\\mathrm{M\\,L\\,T^{-2}},\\quad [E]=\\mathrm{M\\,L^2T^{-2}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Bir jinslilik qoidasi (dimensional homogeneity)**: tenglamaning ikkala tomoni va har bir qo'shiluvchi bir xil o'lchamda bo'ladi. Masalan, $x=x_0+v_0t+\\frac{1}{2}at^2$ — har bir had $\\mathrm{L}$.",
+  "ru": "**Правило однородности размерностей**: обе части уравнения и каждое слагаемое имеют одинаковую размерность. Например, $x=x_0+v_0t+\\frac{1}{2}at^2$ — каждое слагаемое имеет размерность $\\mathrm{L}$.",
+  "en": "**Dimensional homogeneity**: both sides of an equation and every term have the same dimension. For example, in $x=x_0+v_0t+\\frac{1}{2}at^2$ every term is $\\mathrm{L}$."
+ },
+ {
+  "t": "li",
+  "uz": "$\\sin$, $\\cos$, $e^{x}$, $\\ln$ argumentlari **o'lchamsiz (dimensionless)** bo'lishi shart: $\\cos(\\omega t)$ da $[\\omega]=\\mathrm{T^{-1}}$, $\\ e^{-t/\\tau}$ da $[\\tau]=\\mathrm{T}$, $\\ e^{-E/k_BT}$ da $E$ va $k_BT$ — energiya.",
+  "ru": "Аргументы $\\sin$, $\\cos$, $e^{x}$, $\\ln$ должны быть **безразмерными**: для $\\cos(\\omega t)$ $[\\omega]=\\mathrm{T^{-1}}$, для $e^{-t/\\tau}$ $[\\tau]=\\mathrm{T}$, для $e^{-E/k_BT}$ $E$ и $k_BT$ — энергии.",
+  "en": "The arguments of $\\sin$, $\\cos$, $e^{x}$, $\\ln$ must be **dimensionless**: in $\\cos(\\omega t)$, $[\\omega]=\\mathrm{T^{-1}}$; in $e^{-t/\\tau}$, $[\\tau]=\\mathrm{T}$; in $e^{-E/k_BT}$, $E$ and $k_BT$ are energies."
+ },
+ {
+  "t": "li",
+  "uz": "Sonli koeffitsiyentlar ($\\frac{1}{2}$, $2\\pi$), burchaklar (radian) va bir xil kattaliklar nisbati o'lchamsiz. Shuning uchun o'lchamlar tekshiruvi $2\\pi$ yoki $\\frac{1}{2}$ xatosini ushlay olmaydi.",
+  "ru": "Числовые коэффициенты ($\\frac{1}{2}$, $2\\pi$), углы (радианы) и отношения однородных величин безразмерны. Поэтому проверка размерностей не обнаружит ошибку в $2\\pi$ или $\\frac{1}{2}$.",
+  "en": "Numerical factors ($\\frac{1}{2}$, $2\\pi$), angles (radians) and ratios of like quantities are dimensionless. That is why a dimensional check cannot catch an error in $2\\pi$ or $\\frac{1}{2}$."
+ },
+ {
+  "t": "li",
+  "uz": "Faqat bir xil o'lchamdagi kattaliklarni qo'shish, ayirish va taqqoslash mumkin; ko'paytirish va bo'lishda o'lchamlar ham ko'paytiriladi va bo'linadi.",
+  "ru": "Складывать, вычитать и сравнивать можно только величины одной размерности; при умножении и делении размерности тоже перемножаются и делятся.",
+  "en": "Only quantities of the same dimension can be added, subtracted and compared; in multiplication and division the dimensions are multiplied and divided as well."
+ },
+ {
+  "t": "h2",
+  "uz": "4. O'lchamlar tahlili bilan formula topish (Finding a formula by dimensional analysis)",
+  "ru": "4. Нахождение формулы анализом размерностей",
+  "en": "4. Finding a formula by dimensional analysis"
+ },
+ {
+  "t": "p",
+  "uz": "Natija qaysi kattaliklarga bog'liqligini bilsak, uni darajali ko'paytma ko'rinishida izlaymiz va o'lchamlarni tenglashtiramiz (**Reley usuli**). Masalan, matematik mayatnik davri $T$ ip uzunligi $l$, massa $m$ va $g$ ga bog'liq bo'lsin ([[F03]]):",
+  "ru": "Если известно, от каких величин зависит результат, ищем его в виде произведения степеней и приравниваем размерности (**метод Рэлея**). Например, пусть период математического маятника $T$ зависит от длины нити $l$, массы $m$ и $g$ ([[F03]]):",
+  "en": "If we know which quantities the result depends on, we look for it as a product of powers and match the dimensions (**Rayleigh's method**). For example, let the period $T$ of a simple pendulum depend on the string length $l$, the mass $m$ and $g$ ([[F03]]):"
+ },
+ {
+  "t": "m",
+  "m": "T=C\\,l^{a}m^{b}g^{c}:\\qquad \\mathrm{T}^1=\\mathrm{L}^{a}\\,\\mathrm{M}^{b}\\,(\\mathrm{L\\,T^{-2}})^{c}\\ \\Rightarrow\\ a+c=0,\\quad b=0,\\quad -2c=1"
+ },
+ {
+  "t": "m",
+  "m": "a=\\frac{1}{2},\\quad b=0,\\quad c=-\\frac{1}{2}\\qquad\\Rightarrow\\qquad T=C\\sqrt{\\frac{l}{g}}\\qquad (C=2\\pi)"
+ },
+ {
+  "t": "li",
+  "uz": "Usul o'lchamsiz koeffitsiyentni ($C=2\\pi$) bermaydi, lekin bog'lanish ko'rinishini va «nimaga bog'liq emas»ligini (bu yerda — massaga) aniq ko'rsatadi.",
+  "ru": "Метод не даёт безразмерный коэффициент ($C=2\\pi$), но точно показывает вид зависимости и то, от чего результат «не зависит» (здесь — от массы).",
+  "en": "The method does not give the dimensionless factor ($C=2\\pi$), but it shows exactly the form of the dependence and what the result “does not depend on” (here, the mass)."
+ },
+ {
+  "t": "li",
+  "uz": "Noma'lumlar soni asosiy o'lchamlar sonidan ko'p bo'lsa, javob yagona emas: $n$ ta kattalik va $k$ ta asosiy o'lchamdan $n-k$ ta o'lchamsiz kombinatsiya tuziladi (**Bukingem $\\pi$-teoremasi**).",
+  "ru": "Если неизвестных больше, чем основных размерностей, ответ не единственен: из $n$ величин и $k$ основных размерностей составляется $n-k$ безразмерных комбинаций (**$\\pi$-теорема Бакингема**).",
+  "en": "If there are more unknowns than base dimensions, the answer is not unique: from $n$ quantities and $k$ base dimensions one forms $n-k$ dimensionless combinations (the **Buckingham $\\pi$ theorem**)."
+ },
+ {
+  "t": "li",
+  "uz": "GRE usuli: avval har bir variantning o'lchamini tekshiring — noto'g'rilarini tashlang, so'ng chegaraviy hollarni ($m\\to0$, $\\theta\\to0$, $R\\to\\infty$) qarang.",
+  "ru": "Приём для GRE: сначала проверьте размерность каждого варианта — отбросьте неверные, затем рассмотрите предельные случаи ($m\\to0$, $\\theta\\to0$, $R\\to\\infty$).",
+  "en": "GRE method: first check the dimension of each choice and discard the wrong ones, then look at limiting cases ($m\\to0$, $\\theta\\to0$, $R\\to\\infty$)."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B0-L10-F03.png",
+   "ru": "figures/B0-L10-F03-ru.png",
+   "en": "figures/B0-L10-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Fundamental doimiylar va tez baholash (Fundamental constants and quick estimates)",
+  "ru": "5. Фундаментальные постоянные и быстрые оценки",
+  "en": "5. Fundamental constants and quick estimates"
+ },
+ {
+  "t": "p",
+  "uz": "Atom va yadro fizikasida hisobni SI da emas, qulay kombinatsiyalar bilan bajarish ancha tez. Quyidagilarni yoddan biling:",
+  "ru": "В атомной и ядерной физике гораздо быстрее считать не в СИ, а с помощью удобных комбинаций. Их нужно знать наизусть:",
+  "en": "In atomic and nuclear physics it is much faster to calculate not in SI but with convenient combinations. Know these by heart:"
+ },
+ {
+  "t": "m",
+  "m": "hc\\approx1240\\ \\mathrm{eV\\cdot nm},\\qquad \\hbar c\\approx197\\ \\mathrm{eV\\cdot nm}=197\\ \\mathrm{MeV\\cdot fm},\\qquad \\frac{e^2}{4\\pi\\varepsilon_0}\\approx1.44\\ \\mathrm{eV\\cdot nm}"
+ },
+ {
+  "t": "m",
+  "m": "m_ec^2\\approx0.511\\ \\mathrm{MeV},\\qquad m_pc^2\\approx938\\ \\mathrm{MeV},\\qquad k_BT\\,(300\\ \\mathrm{K})\\approx\\frac{1}{40}\\ \\mathrm{eV},\\qquad \\alpha=\\frac{e^2}{4\\pi\\varepsilon_0\\hbar c}\\approx\\frac{1}{137}"
+ },
+ {
+  "t": "li",
+  "uz": "Foton energiyasi: $E=\\dfrac{hc}{\\lambda}$; $\\ \\lambda=500\\ \\mathrm{nm}$ uchun $E\\approx\\dfrac{1240}{500}\\approx2.5\\ \\mathrm{eV}$.",
+  "ru": "Энергия фотона: $E=\\dfrac{hc}{\\lambda}$; при $\\lambda=500\\ \\mathrm{nm}$: $E\\approx\\dfrac{1240}{500}\\approx2.5\\ \\mathrm{eV}$.",
+  "en": "Photon energy: $E=\\dfrac{hc}{\\lambda}$; for $\\lambda=500\\ \\mathrm{nm}$, $E\\approx\\dfrac{1240}{500}\\approx2.5\\ \\mathrm{eV}$."
+ },
+ {
+  "t": "li",
+  "uz": "Doimiylardan o'lchamlar tahlili bilan tabiiy masshtablar chiqadi: Bor radiusi $a_0=\\dfrac{\\hbar^2}{m_e}\\dfrac{4\\pi\\varepsilon_0}{e^2}\\approx0.053\\ \\mathrm{nm}$, Plank uzunligi $l_P=\\sqrt{\\hbar G/c^3}\\approx1.6\\times10^{-35}\\ \\mathrm{m}$.",
+  "ru": "Из постоянных анализом размерностей получаются естественные масштабы: радиус Бора $a_0=\\dfrac{\\hbar^2}{m_e}\\dfrac{4\\pi\\varepsilon_0}{e^2}\\approx0.053\\ \\mathrm{nm}$, планковская длина $l_P=\\sqrt{\\hbar G/c^3}\\approx1.6\\times10^{-35}\\ \\mathrm{m}$.",
+  "en": "Dimensional analysis of the constants gives natural scales: the Bohr radius $a_0=\\dfrac{\\hbar^2}{m_e}\\dfrac{4\\pi\\varepsilon_0}{e^2}\\approx0.053\\ \\mathrm{nm}$, the Planck length $l_P=\\sqrt{\\hbar G/c^3}\\approx1.6\\times10^{-35}\\ \\mathrm{m}$."
+ },
+ {
+  "t": "li",
+  "uz": "Taqqoslash uchun masshtablar: atom $\\sim10^{-10}\\ \\mathrm{m}$ va $\\sim\\mathrm{eV}$; yadro $\\sim10^{-15}\\ \\mathrm{m}$ va $\\sim\\mathrm{MeV}$; xona temperaturasida issiqlik energiyasi $\\sim0.025\\ \\mathrm{eV}$.",
+  "ru": "Масштабы для сравнения: атом $\\sim10^{-10}\\ \\mathrm{m}$ и $\\sim\\mathrm{eV}$; ядро $\\sim10^{-15}\\ \\mathrm{m}$ и $\\sim\\mathrm{MeV}$; тепловая энергия при комнатной температуре $\\sim0.025\\ \\mathrm{eV}$.",
+  "en": "Scales for comparison: an atom is $\\sim10^{-10}\\ \\mathrm{m}$ and $\\sim\\mathrm{eV}$; a nucleus is $\\sim10^{-15}\\ \\mathrm{m}$ and $\\sim\\mathrm{MeV}$; thermal energy at room temperature is $\\sim0.025\\ \\mathrm{eV}$."
+ },
+ {
+  "t": "h2",
+  "uz": "6. O'lchash xatoliklari (Measurement uncertainty)",
+  "ru": "6. Погрешности измерений",
+  "en": "6. Measurement uncertainty"
+ },
+ {
+  "t": "p",
+  "uz": "Har bir o'lchash natijasi $x\\pm\\delta x$ ko'rinishida yoziladi: $\\delta x$ — **absolyut xatolik (absolute uncertainty)**, $\\delta x/x$ — **nisbiy xatolik (relative uncertainty)**. **Sistematik xatolik (systematic error)** natijani bir tomonga suradi, **tasodifiy xatolik (random error)** esa uni o'rtacha atrofida tarqatadi ([[F04]]).",
+  "ru": "Каждый результат измерения записывается в виде $x\\pm\\delta x$: $\\delta x$ — **абсолютная погрешность**, $\\delta x/x$ — **относительная погрешность**. **Систематическая погрешность** сдвигает результат в одну сторону, а **случайная погрешность** разбрасывает его вокруг среднего ([[F04]]).",
+  "en": "Every measurement result is written as $x\\pm\\delta x$: $\\delta x$ is the **absolute uncertainty** and $\\delta x/x$ is the **relative uncertainty**. A **systematic error** shifts the result to one side, while a **random error** scatters it around the mean ([[F04]])."
+ },
+ {
+  "t": "p",
+  "uz": "$N$ ta takroriy o'lchash uchun **o'rtacha qiymat (mean)**, **standart chetlanish (standard deviation)** va **o'rtachaning xatoligi (standard error of the mean)**:",
+  "ru": "Для $N$ повторных измерений **среднее значение**, **стандартное отклонение** и **погрешность среднего**:",
+  "en": "For $N$ repeated measurements, the **mean**, the **standard deviation** and the **standard error of the mean** are:"
+ },
+ {
+  "t": "m",
+  "m": "\\bar x=\\frac{1}{N}\\sum_{i=1}^{N}x_i,\\qquad s=\\sqrt{\\frac{1}{N-1}\\sum_{i=1}^{N}(x_i-\\bar x)^2},\\qquad \\sigma_{\\bar x}=\\frac{s}{\\sqrt{N}}"
+ },
+ {
+  "t": "li",
+  "uz": "$s$ — bitta o'lchashning tarqoqligi; o'lchashlar soni ortsa ham u kamaymaydi. $\\sigma_{\\bar x}$ esa $\\dfrac{1}{\\sqrt{N}}$ kabi kamayadi: xatolikni $2$ marta kamaytirish uchun $4$ marta ko'p o'lchash kerak.",
+  "ru": "$s$ — разброс одного измерения; с ростом числа измерений он не уменьшается. А $\\sigma_{\\bar x}$ убывает как $\\dfrac{1}{\\sqrt{N}}$: чтобы уменьшить погрешность в $2$ раза, нужно в $4$ раза больше измерений.",
+  "en": "$s$ is the spread of a single measurement; it does not decrease as the number of measurements grows. But $\\sigma_{\\bar x}$ falls as $\\dfrac{1}{\\sqrt{N}}$: to halve the uncertainty you need $4$ times as many measurements."
+ },
+ {
+  "t": "p",
+  "uz": "**Xatolik tarqalishi (error propagation).** Bog'liq bo'lmagan xatoliklar kvadratik qo'shiladi:",
+  "ru": "**Распространение погрешностей.** Независимые погрешности складываются в квадратуре:",
+  "en": "**Error propagation.** Independent uncertainties add in quadrature:"
+ },
+ {
+  "t": "m",
+  "m": "q=x\\pm y:\\ \\ \\delta q=\\sqrt{(\\delta x)^2+(\\delta y)^2};\\qquad q=\\frac{x^ay^b}{z^c}:\\ \\ \\frac{\\delta q}{|q|}=\\sqrt{\\Big(a\\frac{\\delta x}{x}\\Big)^2+\\Big(b\\frac{\\delta y}{y}\\Big)^2+\\Big(c\\frac{\\delta z}{z}\\Big)^2}"
+ },
+ {
+  "t": "li",
+  "uz": "Yig'indi va ayirmada absolyut, ko'paytma va bo'linmada nisbiy xatoliklar qo'shiladi. Darajada nisbiy xatolik daraja ko'rsatkichiga ko'payadi: $q=x^n$ uchun $\\dfrac{\\delta q}{q}=|n|\\dfrac{\\delta x}{x}$.",
+  "ru": "При сумме и разности складываются абсолютные, при произведении и частном — относительные погрешности. При возведении в степень относительная погрешность умножается на показатель: для $q=x^n$ $\\dfrac{\\delta q}{q}=|n|\\dfrac{\\delta x}{x}$.",
+  "en": "For sums and differences the absolute uncertainties combine, for products and quotients the relative ones. For a power, the relative uncertainty is multiplied by the exponent: for $q=x^n$, $\\dfrac{\\delta q}{q}=|n|\\dfrac{\\delta x}{x}$."
+ },
+ {
+  "t": "li",
+  "uz": "Umumiy holda $q=f(x,\\ y)$ uchun $\\delta q=\\sqrt{\\Big(\\dfrac{\\partial f}{\\partial x}\\delta x\\Big)^2+\\Big(\\dfrac{\\partial f}{\\partial y}\\delta y\\Big)^2}$ (B0-L05, xususiy hosilalar).",
+  "ru": "В общем случае для $q=f(x,\\ y)$: $\\delta q=\\sqrt{\\Big(\\dfrac{\\partial f}{\\partial x}\\delta x\\Big)^2+\\Big(\\dfrac{\\partial f}{\\partial y}\\delta y\\Big)^2}$ (B0-L05, частные производные).",
+  "en": "In general, for $q=f(x,\\ y)$: $\\delta q=\\sqrt{\\Big(\\dfrac{\\partial f}{\\partial x}\\delta x\\Big)^2+\\Big(\\dfrac{\\partial f}{\\partial y}\\delta y\\Big)^2}$ (B0-L05, partial derivatives)."
+ },
+ {
+  "t": "li",
+  "uz": "**Sanash statistikasi (counting statistics):** $N$ ta hodisa (masalan, detektor impulslari) qayd etilsa, $\\delta N=\\sqrt{N}$, $\\ \\dfrac{\\delta N}{N}=\\dfrac{1}{\\sqrt{N}}$. $1\\%$ aniqlik uchun $N=10^4$ hodisa kerak.",
+  "ru": "**Статистика счёта:** если зарегистрировано $N$ событий (например, импульсов детектора), то $\\delta N=\\sqrt{N}$, $\\ \\dfrac{\\delta N}{N}=\\dfrac{1}{\\sqrt{N}}$. Для точности $1\\%$ нужно $N=10^4$ событий.",
+  "en": "**Counting statistics:** if $N$ events are recorded (for example, detector counts), then $\\delta N=\\sqrt{N}$, $\\ \\dfrac{\\delta N}{N}=\\dfrac{1}{\\sqrt{N}}$. For $1\\%$ precision you need $N=10^4$ events."
+ },
+ {
+  "t": "li",
+  "uz": "Javobdagi **qiymatli raqamlar (significant figures)** soni eng kam aniq berilgan ma'lumotnikidan ortiq bo'lmaydi; xatolik odatda $1$–$2$ ta qiymatli raqam bilan yoziladi.",
+  "ru": "Число **значащих цифр** в ответе не больше, чем у наименее точного исходного данного; погрешность обычно записывают $1$–$2$ значащими цифрами.",
+  "en": "The number of **significant figures** in an answer is no more than that of the least precise given value; the uncertainty is usually written with $1$–$2$ significant figures."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B0-L10-F04.png",
+   "ru": "figures/B0-L10-F04-ru.png",
+   "en": "figures/B0-L10-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Ehtimollik asoslari (Basics of probability)",
+  "ru": "7. Основы теории вероятностей",
+  "en": "7. Basics of probability"
+ },
+ {
+  "t": "p",
+  "uz": "Tajribaning barcha mumkin natijalari to'plami $\\Omega$ — **elementar hodisalar fazosi (sample space)**. Barcha natijalar teng imkoniyatli bo'lsa, $A$ hodisaning **ehtimolligi (probability)**:",
+  "ru": "Множество всех возможных исходов опыта $\\Omega$ — **пространство элементарных исходов**. Если все исходы равновозможны, **вероятность** события $A$:",
+  "en": "The set $\\Omega$ of all possible outcomes of an experiment is the **sample space**. If all outcomes are equally likely, the **probability** of an event $A$ is:"
+ },
+ {
+  "t": "m",
+  "m": "P(A)=\\frac{m}{n},\\qquad 0\\le P(A)\\le1,\\qquad P(\\bar A)=1-P(A)"
+ },
+ {
+  "t": "p",
+  "uz": "Bu yerda $m$ — $A$ ga qulay natijalar soni, $n$ — barcha natijalar soni, $\\bar A$ — **qarama-qarshi hodisa (complement)**. Asosiy qoidalar ([[F05]]):",
+  "ru": "Здесь $m$ — число исходов, благоприятных $A$, $n$ — число всех исходов, $\\bar A$ — **противоположное событие**. Основные правила ([[F05]]):",
+  "en": "Here $m$ is the number of outcomes favourable to $A$, $n$ is the number of all outcomes, and $\\bar A$ is the **complement**. The main rules ([[F05]]):"
+ },
+ {
+  "t": "m",
+  "m": "P(A\\cup B)=P(A)+P(B)-P(A\\cap B),\\qquad P(A\\cap B)=P(A)\\,P(B\\mid A)"
+ },
+ {
+  "t": "li",
+  "uz": "**Birgalikda bo'lmagan (mutually exclusive)** hodisalar uchun $P(A\\cap B)=0$ va ehtimolliklar oddiy qo'shiladi.",
+  "ru": "Для **несовместных** событий $P(A\\cap B)=0$, и вероятности просто складываются.",
+  "en": "For **mutually exclusive** events $P(A\\cap B)=0$, and the probabilities simply add."
+ },
+ {
+  "t": "li",
+  "uz": "**Bog'liq bo'lmagan (independent)** hodisalar uchun $P(B\\mid A)=P(B)$ va $P(A\\cap B)=P(A)\\,P(B)$. $P(B\\mid A)$ — **shartli ehtimollik (conditional probability)**: $A$ ro'y bergani ma'lum bo'lganda $B$ ning ehtimolligi.",
+  "ru": "Для **независимых** событий $P(B\\mid A)=P(B)$ и $P(A\\cap B)=P(A)\\,P(B)$. $P(B\\mid A)$ — **условная вероятность**: вероятность $B$ при условии, что $A$ произошло.",
+  "en": "For **independent** events $P(B\\mid A)=P(B)$ and $P(A\\cap B)=P(A)\\,P(B)$. $P(B\\mid A)$ is the **conditional probability**: the probability of $B$ given that $A$ has occurred."
+ },
+ {
+  "t": "li",
+  "uz": "«Kamida bitta» savollarini qarama-qarshi hodisa orqali yechish qulay: $P=1-P_0$, bu yerda $P_0$ — hech biri ro'y bermaslik ehtimolligi; $n$ ta bog'liq bo'lmagan sinovda $P=1-(1-p)^n$.",
+  "ru": "Вопросы «хотя бы один» удобно решать через противоположное событие: $P=1-P_0$, где $P_0$ — вероятность того, что не произойдёт ни одного; для $n$ независимых испытаний $P=1-(1-p)^n$.",
+  "en": "“At least one” questions are easiest through the complement: $P=1-P_0$, where $P_0$ is the probability that none occurs; for $n$ independent trials, $P=1-(1-p)^n$."
+ },
+ {
+  "t": "li",
+  "uz": "**Kombinatorika (combinatorics):** $n$ ta elementning o'rin almashtirishlari $n!$; $\\ n$ tadan $k$ tasini tanlash usullari soni $\\dbinom{n}{k}=\\dfrac{n!}{k!\\,(n-k)!}$ (**kombinatsiyalar**).",
+  "ru": "**Комбинаторика:** число перестановок $n$ элементов $n!$; число способов выбрать $k$ из $n$: $\\dbinom{n}{k}=\\dfrac{n!}{k!\\,(n-k)!}$ (**сочетания**).",
+  "en": "**Combinatorics:** the number of permutations of $n$ elements is $n!$; the number of ways to choose $k$ out of $n$ is $\\dbinom{n}{k}=\\dfrac{n!}{k!\\,(n-k)!}$ (**combinations**)."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B0-L10-F05.png",
+   "ru": "figures/B0-L10-F05-ru.png",
+   "en": "figures/B0-L10-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Diskret taqsimotlar: binomial va Puasson (Discrete distributions: binomial and Poisson)",
+  "ru": "8. Дискретные распределения: биномиальное и Пуассона",
+  "en": "8. Discrete distributions: binomial and Poisson"
+ },
+ {
+  "t": "p",
+  "uz": "**Tasodifiy miqdor (random variable)** $k$ qiymatlarni $P_k$ ehtimolliklar bilan qabul qiladi, $\\sum P_k=1$. Uning **o'rtacha qiymati (expected value)** va **dispersiyasi (variance)**:",
+  "ru": "**Случайная величина** $k$ принимает значения с вероятностями $P_k$, $\\sum P_k=1$. Её **среднее значение (математическое ожидание)** и **дисперсия**:",
+  "en": "A **random variable** $k$ takes values with probabilities $P_k$, $\\sum P_k=1$. Its **expected value** and **variance** are:"
+ },
+ {
+  "t": "m",
+  "m": "\\langle k\\rangle=\\sum_k k\\,P_k,\\qquad \\sigma^2=\\langle(k-\\langle k\\rangle)^2\\rangle=\\langle k^2\\rangle-\\langle k\\rangle^2"
+ },
+ {
+  "t": "p",
+  "uz": "**Binomial taqsimot (binomial distribution):** har birida muvaffaqiyat ehtimolligi $p$ bo'lgan $n$ ta bog'liq bo'lmagan sinovda roppa-rosa $k$ ta muvaffaqiyat (masalan, yarim yemirilish davrida $n$ ta yadrodan $k$ tasining yemirilishi, $p=\\frac{1}{2}$):",
+  "ru": "**Биномиальное распределение:** ровно $k$ успехов в $n$ независимых испытаниях, в каждом из которых вероятность успеха $p$ (например, распад $k$ из $n$ ядер за период полураспада, $p=\\frac{1}{2}$):",
+  "en": "**Binomial distribution:** exactly $k$ successes in $n$ independent trials, each with success probability $p$ (for example, $k$ out of $n$ nuclei decaying in one half-life, $p=\\frac{1}{2}$):"
+ },
+ {
+  "t": "m",
+  "m": "P_k=\\binom{n}{k}p^k(1-p)^{n-k},\\qquad \\langle k\\rangle=np,\\qquad \\sigma^2=np(1-p)"
+ },
+ {
+  "t": "p",
+  "uz": "**Puasson taqsimoti (Poisson distribution):** $n$ katta, $p$ kichik, $np=\\mu$ chekli bo'lganda — kam uchraydigan bog'liq bo'lmagan hodisalar soni (radioaktiv yemirilishlar, detektordagi impulslar) ([[F06]]):",
+  "ru": "**Распределение Пуассона:** при большом $n$, малом $p$ и конечном $np=\\mu$ — число редких независимых событий (радиоактивные распады, импульсы детектора) ([[F06]]):",
+  "en": "**Poisson distribution:** for large $n$, small $p$ and finite $np=\\mu$ — the number of rare independent events (radioactive decays, detector counts) ([[F06]]):"
+ },
+ {
+  "t": "m",
+  "m": "P_k=\\frac{\\mu^k e^{-\\mu}}{k!},\\qquad \\langle k\\rangle=\\mu,\\qquad \\sigma^2=\\mu,\\qquad \\sigma=\\sqrt{\\mu}"
+ },
+ {
+  "t": "li",
+  "uz": "Puasson taqsimotida dispersiya o'rtachaga teng — $\\sqrt{N}$ qoidasi shundan kelib chiqadi. Hech qanday hodisa bo'lmaslik ehtimolligi $P_0=e^{-\\mu}$.",
+  "ru": "У распределения Пуассона дисперсия равна среднему — отсюда и правило $\\sqrt{N}$. Вероятность того, что не произойдёт ни одного события, $P_0=e^{-\\mu}$.",
+  "en": "In the Poisson distribution the variance equals the mean — this is where the $\\sqrt{N}$ rule comes from. The probability of no events at all is $P_0=e^{-\\mu}$."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Uzluksiz taqsimotlar: zichlik, Gauss, eksponensial (Continuous distributions)",
+  "ru": "9. Непрерывные распределения: плотность, Гаусс, экспоненциальное",
+  "en": "9. Continuous distributions: density, Gaussian, exponential"
+ },
+ {
+  "t": "p",
+  "uz": "Uzluksiz kattalik uchun **ehtimollik zichligi (probability density)** $\\rho(x)$ beriladi: $x$ ning $[a,\\ b]$ oraliqqa tushish ehtimolligi — grafik ostidagi yuza ([[F06]]):",
+  "ru": "Для непрерывной величины задаётся **плотность вероятности** $\\rho(x)$: вероятность попадания $x$ в интервал $[a,\\ b]$ — площадь под графиком ([[F06]]):",
+  "en": "For a continuous quantity a **probability density** $\\rho(x)$ is given: the probability that $x$ falls in the interval $[a,\\ b]$ is the area under the graph ([[F06]]):"
+ },
+ {
+  "t": "m",
+  "m": "P(a\\le x\\le b)=\\int_a^b\\rho(x)\\,dx,\\qquad \\int_{-\\infty}^{\\infty}\\rho(x)\\,dx=1,\\qquad \\langle f(x)\\rangle=\\int f(x)\\,\\rho(x)\\,dx"
+ },
+ {
+  "t": "li",
+  "uz": "Oxirgi tenglik — **normallash sharti (normalization)**. Kvant mexanikasida $\\rho(x)=|\\psi(x)|^2$ va $\\langle x\\rangle=\\int x\\,|\\psi|^2dx$ — xuddi shu formulalar.",
+  "ru": "Последнее равенство — **условие нормировки**. В квантовой механике $\\rho(x)=|\\psi(x)|^2$ и $\\langle x\\rangle=\\int x\\,|\\psi|^2dx$ — те же самые формулы.",
+  "en": "The last equality is the **normalization condition**. In quantum mechanics $\\rho(x)=|\\psi(x)|^2$ and $\\langle x\\rangle=\\int x\\,|\\psi|^2dx$ — exactly the same formulas."
+ },
+ {
+  "t": "p",
+  "uz": "**Normal (Gauss) taqsimot (normal, Gaussian distribution)** — ko'p sonli kichik tasodifiy ta'sirlar yig'indisi shunday taqsimlanadi; o'lchash xatoliklari ham:",
+  "ru": "**Нормальное (гауссово) распределение** — так распределена сумма большого числа малых случайных воздействий; так же распределены и погрешности измерений:",
+  "en": "**Normal (Gaussian) distribution** — the sum of many small random effects is distributed this way; so are measurement errors:"
+ },
+ {
+  "t": "m",
+  "m": "\\rho(x)=\\frac{1}{\\sigma\\sqrt{2\\pi}}\\,e^{-(x-\\mu)^2/2\\sigma^2}"
+ },
+ {
+  "t": "m",
+  "m": "P(|x-\\mu|\\le\\sigma)\\approx68\\%,\\qquad P(|x-\\mu|\\le2\\sigma)\\approx95\\%,\\qquad P(|x-\\mu|\\le3\\sigma)\\approx99.7\\%"
+ },
+ {
+  "t": "li",
+  "uz": "Yarim balandlikdagi to'liq kenglik $\\mathrm{FWHM}=2\\sqrt{2\\ln2}\\,\\sigma\\approx2.35\\,\\sigma$. Katta $\\mu$ da binomial va Puasson taqsimotlari ham Gauss ko'rinishiga keladi.",
+  "ru": "Полная ширина на половине высоты $\\mathrm{FWHM}=2\\sqrt{2\\ln2}\\,\\sigma\\approx2.35\\,\\sigma$. При больших $\\mu$ биномиальное распределение и распределение Пуассона тоже принимают гауссов вид.",
+  "en": "The full width at half maximum is $\\mathrm{FWHM}=2\\sqrt{2\\ln2}\\,\\sigma\\approx2.35\\,\\sigma$. For large $\\mu$ the binomial and Poisson distributions also take a Gaussian shape."
+ },
+ {
+  "t": "li",
+  "uz": "**Eksponensial taqsimot (exponential distribution):** radioaktiv yadroning yashash vaqti $\\rho(t)=\\dfrac{1}{\\tau}e^{-t/\\tau}$, $\\ \\langle t\\rangle=\\tau$, $\\ P(t>t_0)=e^{-t_0/\\tau}$; yarim yemirilish davri $t_{1/2}=\\tau\\ln2$.",
+  "ru": "**Экспоненциальное распределение:** время жизни радиоактивного ядра $\\rho(t)=\\dfrac{1}{\\tau}e^{-t/\\tau}$, $\\ \\langle t\\rangle=\\tau$, $\\ P(t>t_0)=e^{-t_0/\\tau}$; период полураспада $t_{1/2}=\\tau\\ln2$.",
+  "en": "**Exponential distribution:** the lifetime of a radioactive nucleus, $\\rho(t)=\\dfrac{1}{\\tau}e^{-t/\\tau}$, $\\ \\langle t\\rangle=\\tau$, $\\ P(t>t_0)=e^{-t_0/\\tau}$; the half-life is $t_{1/2}=\\tau\\ln2$."
+ },
+ {
+  "t": "li",
+  "uz": "Statistik fizikada $E$ energiyali holatning ehtimolligi **Bolsman ko'paytuvchisi (Boltzmann factor)** ga proporsional: $P\\propto e^{-E/k_BT}$.",
+  "ru": "В статистической физике вероятность состояния с энергией $E$ пропорциональна **больцмановскому множителю**: $P\\propto e^{-E/k_BT}$.",
+  "en": "In statistical physics the probability of a state with energy $E$ is proportional to the **Boltzmann factor**: $P\\propto e^{-E/k_BT}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B0-L10-F06.png",
+   "ru": "figures/B0-L10-F06-ru.png",
+   "en": "figures/B0-L10-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE uchun tez tekshiruvlar (Quick checks for the GRE)",
+  "ru": "10. Быстрые проверки для GRE",
+  "en": "10. Quick checks for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "Variantlarni avval o'lcham bo'yicha saralang: kuch — $\\mathrm{M\\,L\\,T^{-2}}$, energiya — $\\mathrm{M\\,L^2T^{-2}}$, quvvat — $\\mathrm{M\\,L^2T^{-3}}$, impuls — $\\mathrm{M\\,L\\,T^{-1}}$, $\\hbar$ — $\\mathrm{M\\,L^2T^{-1}}$.",
+  "ru": "Сначала отберите варианты по размерности: сила — $\\mathrm{M\\,L\\,T^{-2}}$, энергия — $\\mathrm{M\\,L^2T^{-2}}$, мощность — $\\mathrm{M\\,L^2T^{-3}}$, импульс — $\\mathrm{M\\,L\\,T^{-1}}$, $\\hbar$ — $\\mathrm{M\\,L^2T^{-1}}$.",
+  "en": "First sort the choices by dimension: force is $\\mathrm{M\\,L\\,T^{-2}}$, energy $\\mathrm{M\\,L^2T^{-2}}$, power $\\mathrm{M\\,L^2T^{-3}}$, momentum $\\mathrm{M\\,L\\,T^{-1}}$, $\\hbar$ is $\\mathrm{M\\,L^2T^{-1}}$."
+ },
+ {
+  "t": "li",
+  "uz": "Tezlik o'lchamidagi kombinatsiyalar: $\\sqrt{gl}$, $\\sqrt{GM/R}$, $\\sqrt{T/\\mu}$ (ip), $\\sqrt{k/m}\\cdot A$; chastota: $\\sqrt{k/m}$, $\\sqrt{g/l}$, $qB/m$.",
+  "ru": "Комбинации с размерностью скорости: $\\sqrt{gl}$, $\\sqrt{GM/R}$, $\\sqrt{T/\\mu}$ (струна), $\\sqrt{k/m}\\cdot A$; частоты: $\\sqrt{k/m}$, $\\sqrt{g/l}$, $qB/m$.",
+  "en": "Combinations with the dimension of speed: $\\sqrt{gl}$, $\\sqrt{GM/R}$, $\\sqrt{T/\\mu}$ (string), $\\sqrt{k/m}\\cdot A$; frequencies: $\\sqrt{k/m}$, $\\sqrt{g/l}$, $qB/m$."
+ },
+ {
+  "t": "li",
+  "uz": "Foton: $E\\ [\\mathrm{eV}]\\approx\\dfrac{1240}{\\lambda\\ [\\mathrm{nm}]}$; ko'rinadigan yorug'lik $1.8$–$3.1\\ \\mathrm{eV}$.",
+  "ru": "Фотон: $E\\ [\\mathrm{eV}]\\approx\\dfrac{1240}{\\lambda\\ [\\mathrm{nm}]}$; видимый свет $1.8$–$3.1\\ \\mathrm{eV}$.",
+  "en": "Photon: $E\\ [\\mathrm{eV}]\\approx\\dfrac{1240}{\\lambda\\ [\\mathrm{nm}]}$; visible light is $1.8$–$3.1\\ \\mathrm{eV}$."
+ },
+ {
+  "t": "li",
+  "uz": "Sanash: $\\delta N=\\sqrt{N}$; aniqlikni $k$ marta oshirish uchun vaqtni $k^2$ marta oshiring. O'rtachaning xatoligi $s/\\sqrt{N}$.",
+  "ru": "Счёт: $\\delta N=\\sqrt{N}$; чтобы повысить точность в $k$ раз, увеличьте время в $k^2$ раз. Погрешность среднего $s/\\sqrt{N}$.",
+  "en": "Counting: $\\delta N=\\sqrt{N}$; to improve precision by a factor of $k$, increase the time by a factor of $k^2$. The error of the mean is $s/\\sqrt{N}$."
+ },
+ {
+  "t": "li",
+  "uz": "Ehtimollik har doim $0$ va $1$ oralig'ida; «kamida bitta» — $1-P_0$; ehtimollik zichligi normallanganini tekshiring.",
+  "ru": "Вероятность всегда от $0$ до $1$; «хотя бы один» — $1-P_0$; проверяйте нормировку плотности вероятности.",
+  "en": "A probability is always between $0$ and $1$; “at least one” is $1-P_0$; check that a probability density is normalized."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Kuch, energiya o'lchami",
+    "ru": "Размерность силы, энергии",
+    "en": "Dimensions of force, energy",
+    "m": "[F]=\\mathrm{MLT^{-2}},\\ [E]=\\mathrm{ML^2T^{-2}}"
+   },
+   {
+    "uz": "Mayatnik davri",
+    "ru": "Период маятника",
+    "en": "Pendulum period",
+    "m": "T=2\\pi\\sqrt{l/g}"
+   },
+   {
+    "uz": "Foton energiyasi",
+    "ru": "Энергия фотона",
+    "en": "Photon energy",
+    "m": "E=\\frac{hc}{\\lambda},\\ hc\\approx1240\\ \\mathrm{eV\\cdot nm}"
+   },
+   {
+    "uz": "O'rtachaning xatoligi",
+    "ru": "Погрешность среднего",
+    "en": "Error of the mean",
+    "m": "\\sigma_{\\bar x}=s/\\sqrt{N}"
+   },
+   {
+    "uz": "Darajaning xatoligi",
+    "ru": "Погрешность степени",
+    "en": "Uncertainty of a power",
+    "m": "\\frac{\\delta q}{q}=|n|\\frac{\\delta x}{x}"
+   },
+   {
+    "uz": "Sanash statistikasi",
+    "ru": "Статистика счёта",
+    "en": "Counting statistics",
+    "m": "\\delta N=\\sqrt{N}"
+   },
+   {
+    "uz": "Yig'indi qoidasi",
+    "ru": "Правило сложения",
+    "en": "Addition rule",
+    "m": "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)"
+   },
+   {
+    "uz": "Binomial taqsimot",
+    "ru": "Биномиальное распределение",
+    "en": "Binomial distribution",
+    "m": "P_k=\\binom{n}{k}p^k(1-p)^{n-k}"
+   },
+   {
+    "uz": "Puasson taqsimoti",
+    "ru": "Распределение Пуассона",
+    "en": "Poisson distribution",
+    "m": "P_k=\\frac{\\mu^ke^{-\\mu}}{k!},\\ \\sigma=\\sqrt{\\mu}"
+   },
+   {
+    "uz": "Normallash",
+    "ru": "Нормировка",
+    "en": "Normalization",
+    "m": "\\int\\rho\\,dx=1,\\ \\langle x\\rangle=\\int x\\rho\\,dx"
+   }
+  ]
+ }
+]
