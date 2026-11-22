@@ -1,0 +1,578 @@
+[
+ {
+  "id": "B0-L05-Q01",
+  "question_en": "If $f(x,\\,y)=x^2y$, then $\\dfrac{\\partial f}{\\partial x}=$",
+  "question_uz": "$f(x,\\,y)=x^2y$ bo'lsa, $\\dfrac{\\partial f}{\\partial x}$ nimaga teng?",
+  "question_ru": "Если $f(x,\\,y)=x^2y$, чему равно $\\dfrac{\\partial f}{\\partial x}$?",
+  "options": [
+   "(A) $2x$",
+   "(B) $x^2$",
+   "(C) $2xy$",
+   "(D) $2xy+x^2$",
+   "(E) $x^2y$"
+  ],
+  "correct": 2,
+  "explanation_200": "To'g'ri: C. y ni o'zgarmas deb: ∂(x²y)/∂x = 2xy.\nAsos: xususiy hosila ta'rifi.",
+  "full_solution": {
+   "uz": [
+    "$y$ — o'zgarmas: $$\\frac{\\partial}{\\partial x}(x^2y)=2xy$$"
+   ],
+   "ru": [
+    "$y$ — постоянная: $$\\frac{\\partial}{\\partial x}(x^2y)=2xy$$"
+   ],
+   "en": [
+    "$y$ is constant: $$\\frac{\\partial}{\\partial x}(x^2y)=2xy$$"
+   ]
+  },
+  "distractors": {
+   "A": "$y$ ko'paytuvchi tashlab yuborilgan",
+   "B": "bu $\\partial f/\\partial y$",
+   "D": "$y$ ham o'zgaruvchi deb, ko'paytma qoidasi qo'llangan",
+   "E": "bu funksiyaning o'zi"
+  },
+  "distractors_ru": {
+   "A": "отброшен множитель $y$",
+   "B": "это $\\partial f/\\partial y$",
+   "D": "$y$ тоже сочли переменной и применили правило произведения",
+   "E": "это сама функция"
+  },
+  "distractors_en": {
+   "A": "the factor $y$ was dropped",
+   "B": "this is $\\partial f/\\partial y$",
+   "D": "$y$ was treated as a variable and the product rule was applied",
+   "E": "this is the function itself"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q01",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-Q02",
+  "question_en": "If $f(x,\\,y)=e^{2x}\\sin y$, then $\\dfrac{\\partial f}{\\partial y}=$",
+  "question_uz": "$f(x,\\,y)=e^{2x}\\sin y$ bo'lsa, $\\dfrac{\\partial f}{\\partial y}$ nimaga teng?",
+  "question_ru": "Если $f(x,\\,y)=e^{2x}\\sin y$, чему равно $\\dfrac{\\partial f}{\\partial y}$?",
+  "options": [
+   "(A) $2e^{2x}\\sin y$",
+   "(B) $e^{2x}\\cos y$",
+   "(C) $2e^{2x}\\cos y$",
+   "(D) $-e^{2x}\\cos y$",
+   "(E) $e^{2x}\\sin y$"
+  ],
+  "correct": 1,
+  "explanation_200": "To'g'ri: B. e^(2x) o'zgarmas ko'paytuvchi, (sin y)' = cos y.\nAsos: xususiy hosila.",
+  "full_solution": {
+   "uz": [
+    "$e^{2x}$ — o'zgarmas ko'paytuvchi: $$\\frac{\\partial f}{\\partial y}=e^{2x}\\cos y$$"
+   ],
+   "ru": [
+    "$e^{2x}$ — постоянный множитель: $$\\frac{\\partial f}{\\partial y}=e^{2x}\\cos y$$"
+   ],
+   "en": [
+    "$e^{2x}$ is a constant factor: $$\\frac{\\partial f}{\\partial y}=e^{2x}\\cos y$$"
+   ]
+  },
+  "distractors": {
+   "A": "$x$ bo'yicha hosila olingan",
+   "C": "$2$ ko'paytuvchi ortiqcha — $x$ bo'yicha zanjir qoidasi",
+   "D": "ishora xato: $(\\sin)'$ bilan $(\\cos)'$ adashtirilgan",
+   "E": "hosila olinmagan"
+  },
+  "distractors_ru": {
+   "A": "взята производная по $x$",
+   "C": "лишний множитель $2$ — цепное правило по $x$",
+   "D": "ошибка знака: спутаны $(\\sin)'$ и $(\\cos)'$",
+   "E": "производная не взята"
+  },
+  "distractors_en": {
+   "A": "the derivative with respect to $x$ was taken",
+   "C": "the extra factor $2$ comes from differentiating in $x$",
+   "D": "sign error: $(\\sin)'$ confused with $(\\cos)'$",
+   "E": "no derivative was taken"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q02",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-Q03",
+  "question_en": "For $f=x^2+y^2+z^2$, the magnitude of $\\nabla f$ at $(1,\\,2,\\,2)$ is",
+  "question_uz": "$f=x^2+y^2+z^2$ uchun $(1,\\,2,\\,2)$ nuqtada $|\\nabla f|$ nimaga teng?",
+  "question_ru": "Для $f=x^2+y^2+z^2$ чему равен $|\\nabla f|$ в точке $(1,\\,2,\\,2)$?",
+  "options": [
+   "(A) $3$",
+   "(B) $6$",
+   "(C) $9$",
+   "(D) $12$",
+   "(E) $36$"
+  ],
+  "correct": 1,
+  "explanation_200": "To'g'ri: B. ∇f = (2x, 2y, 2z) = (2, 4, 4), |∇f| = √36 = 6.\nAsos: gradient moduli.",
+  "full_solution": {
+   "uz": [
+    "Gradient: $$\\nabla f=(2,\\ 4,\\ 4),\\qquad |\\nabla f|=\\sqrt{4+16+16}=6$$"
+   ],
+   "ru": [
+    "Градиент: $$\\nabla f=(2,\\ 4,\\ 4),\\qquad |\\nabla f|=\\sqrt{4+16+16}=6$$"
+   ],
+   "en": [
+    "Gradient: $$\\nabla f=(2,\\ 4,\\ 4),\\qquad |\\nabla f|=\\sqrt{4+16+16}=6$$"
+   ]
+  },
+  "distractors": {
+   "A": "bu $|\\vec r|$, gradient emas",
+   "C": "bu $f$ ning qiymati",
+   "D": "modul o'rniga koordinatalar yig'indisi olingan",
+   "E": "bu $|\\nabla f|^2$"
+  },
+  "distractors_ru": {
+   "A": "это $|\\vec r|$, а не градиент",
+   "C": "это значение $f$",
+   "D": "вместо модуля взята сумма компонент",
+   "E": "это $|\\nabla f|^2$"
+  },
+  "distractors_en": {
+   "A": "this is $|\\vec r|$, not the gradient",
+   "C": "this is the value of $f$",
+   "D": "the sum of the components was taken instead of the magnitude",
+   "E": "this is $|\\nabla f|^2$"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q03",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-Q04",
+  "question_en": "The directional derivative of $f=xy$ at $(2,\\,3)$ in the direction of $\\vec e=\\left(\\tfrac35,\\ \\tfrac45\\right)$ is",
+  "question_uz": "$f=xy$ funksiyaning $(2,\\,3)$ nuqtada $\\vec e=\\left(\\tfrac35,\\ \\tfrac45\\right)$ yo'nalishi bo'yicha hosilasi qancha?",
+  "question_ru": "Чему равна производная функции $f=xy$ в точке $(2,\\,3)$ по направлению $\\vec e=\\left(\\tfrac35,\\ \\tfrac45\\right)$?",
+  "options": [
+   "(A) $2.4$",
+   "(B) $3.0$",
+   "(C) $3.4$",
+   "(D) $3.6$",
+   "(E) $17$"
+  ],
+  "correct": 2,
+  "explanation_200": "To'g'ri: C. ∇f = (y, x) = (3, 2); ∇f·e = 9/5 + 8/5 = 17/5 = 3.4.\nAsos: ∂f/∂e = ∇f·e.",
+  "full_solution": {
+   "uz": [
+    "Gradient va skalyar ko'paytma: $$\\nabla f=(3,\\ 2),\\qquad \\nabla f\\cdot\\vec e=\\frac{9}{5}+\\frac{8}{5}=3.4$$"
+   ],
+   "ru": [
+    "Градиент и скалярное произведение: $$\\nabla f=(3,\\ 2),\\qquad \\nabla f\\cdot\\vec e=\\frac{9}{5}+\\frac{8}{5}=3.4$$"
+   ],
+   "en": [
+    "Gradient and dot product: $$\\nabla f=(3,\\ 2),\\qquad \\nabla f\\cdot\\vec e=\\frac{9}{5}+\\frac{8}{5}=3.4$$"
+   ]
+  },
+  "distractors": {
+   "A": "yo'nalish koordinatalari almashtirilgan",
+   "B": "$\\nabla f$ koordinatalari almashtirilgan",
+   "D": "bu $|\\nabla f|=\\sqrt{13}$",
+   "E": "$\\vec e$ birlik vektorga keltirilmagan ($(3,\\,4)$ olingan)"
+  },
+  "distractors_ru": {
+   "A": "перепутаны компоненты направления",
+   "B": "перепутаны компоненты $\\nabla f$",
+   "D": "это $|\\nabla f|=\\sqrt{13}$",
+   "E": "$\\vec e$ не нормирован (взято $(3,\\,4)$)"
+  },
+  "distractors_en": {
+   "A": "the direction components were swapped",
+   "B": "the components of $\\nabla f$ were swapped",
+   "D": "this is $|\\nabla f|=\\sqrt{13}$",
+   "E": "$\\vec e$ was not normalized ($(3,\\,4)$ was used)"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q04",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-Q05",
+  "question_en": "The electric potential in a region is $V=3x^2-2y$ (volts, meters). The electric field at $(1,\\,1)$ is",
+  "question_uz": "Sohada elektr potensial $V=3x^2-2y$ (volt, metr). $(1,\\,1)$ nuqtadagi elektr maydon kuchlanganligi qanday?",
+  "question_ru": "Электрический потенциал в области $V=3x^2-2y$ (вольты, метры). Какова напряжённость поля в точке $(1,\\,1)$?",
+  "options": [
+   "(A) $(-6,\\ 2)\\ \\mathrm{V/m}$",
+   "(B) $(6,\\ -2)\\ \\mathrm{V/m}$",
+   "(C) $(6,\\ 2)\\ \\mathrm{V/m}$",
+   "(D) $(-6,\\ -2)\\ \\mathrm{V/m}$",
+   "(E) $(3,\\ -2)\\ \\mathrm{V/m}$"
+  ],
+  "correct": 0,
+  "explanation_200": "To'g'ri: A. E = −∇V = −(6x, −2) = (−6, 2) V/m.\nAsos: E = −∇V.",
+  "full_solution": {
+   "uz": [
+    "$\\vec E=-\\nabla V$: $$\\nabla V=(6x,\\ -2)=(6,\\ -2)\\ \\Rightarrow\\ \\vec E=(-6,\\ 2)\\ \\mathrm{V/m}$$"
+   ],
+   "ru": [
+    "$\\vec E=-\\nabla V$: $$\\nabla V=(6x,\\ -2)=(6,\\ -2)\\ \\Rightarrow\\ \\vec E=(-6,\\ 2)\\ \\mathrm{V/m}$$"
+   ],
+   "en": [
+    "$\\vec E=-\\nabla V$: $$\\nabla V=(6x,\\ -2)=(6,\\ -2)\\ \\Rightarrow\\ \\vec E=(-6,\\ 2)\\ \\mathrm{V/m}$$"
+   ]
+  },
+  "distractors": {
+   "B": "bu $+\\nabla V$ — minus ishora unutilgan",
+   "C": "faqat $y$-tashkil etuvchi ishorasi o'zgartirilgan",
+   "D": "faqat $x$-tashkil etuvchi ishorasi to'g'ri",
+   "E": "hosila olinmagan, koeffitsiyentlar ko'chirilgan"
+  },
+  "distractors_ru": {
+   "B": "это $+\\nabla V$ — забыт минус",
+   "C": "знак изменён только у $y$-компоненты",
+   "D": "верен знак только $x$-компоненты",
+   "E": "производная не взята, переписаны коэффициенты"
+  },
+  "distractors_en": {
+   "B": "this is $+\\nabla V$ — the minus sign was forgotten",
+   "C": "only the $y$-component's sign was changed",
+   "D": "only the $x$-component's sign is right",
+   "E": "no derivative was taken; the coefficients were copied"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q05",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-Q06",
+  "question_en": "For $f(x,\\,y)=x^3y^2$, $\\dfrac{\\partial^2f}{\\partial x\\,\\partial y}=$",
+  "question_uz": "$f(x,\\,y)=x^3y^2$ uchun $\\dfrac{\\partial^2f}{\\partial x\\,\\partial y}$ nimaga teng?",
+  "question_ru": "Для $f(x,\\,y)=x^3y^2$ чему равно $\\dfrac{\\partial^2f}{\\partial x\\,\\partial y}$?",
+  "options": [
+   "(A) $6xy$",
+   "(B) $3x^2y^2$",
+   "(C) $2x^3y$",
+   "(D) $6x^2y$",
+   "(E) $6x^2y^2$"
+  ],
+  "correct": 3,
+  "explanation_200": "To'g'ri: D. f_x = 3x²y², so'ng y bo'yicha: 6x²y.\nAsos: aralash hosila (tartibga bog'liq emas).",
+  "full_solution": {
+   "uz": [
+    "Ketma-ket differensiallash: $$f_x=3x^2y^2,\\qquad f_{xy}=6x^2y$$"
+   ],
+   "ru": [
+    "Последовательное дифференцирование: $$f_x=3x^2y^2,\\qquad f_{xy}=6x^2y$$"
+   ],
+   "en": [
+    "Differentiate in turn: $$f_x=3x^2y^2,\\qquad f_{xy}=6x^2y$$"
+   ]
+  },
+  "distractors": {
+   "A": "daraja ko'rsatkichlari noto'g'ri kamaytirilgan",
+   "B": "faqat $x$ bo'yicha hosila olingan",
+   "C": "faqat $y$ bo'yicha hosila olingan",
+   "E": "ikkinchi differensiallashda $y$ darajasi kamaytirilmagan"
+  },
+  "distractors_ru": {
+   "A": "показатели уменьшены неверно",
+   "B": "взята производная только по $x$",
+   "C": "взята производная только по $y$",
+   "E": "при втором дифференцировании не уменьшена степень $y$"
+  },
+  "distractors_en": {
+   "A": "the exponents were reduced incorrectly",
+   "B": "only the $x$-derivative was taken",
+   "C": "only the $y$-derivative was taken",
+   "E": "the power of $y$ was not reduced in the second differentiation"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q06",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-Q07",
+  "question_en": "$A=ab$, where $a$ and $b$ have independent random relative errors of $2\\%$ and $3\\%$. The relative error of $A$ is about",
+  "question_uz": "$A=ab$, bunda $a$ va $b$ ning bog'liq bo'lmagan tasodifiy nisbiy xatolari $2\\%$ va $3\\%$. $A$ ning nisbiy xatosi taxminan qancha?",
+  "question_ru": "$A=ab$, где независимые случайные относительные погрешности $a$ и $b$ равны $2\\%$ и $3\\%$. Какова примерно относительная погрешность $A$?",
+  "options": [
+   "(A) $1\\%$",
+   "(B) $2.5\\%$",
+   "(C) $3.6\\%$",
+   "(D) $5\\%$",
+   "(E) $6\\%$"
+  ],
+  "correct": 2,
+  "explanation_200": "To'g'ri: C. Bog'liq bo'lmagan xatolar: √(2² + 3²) = √13 ≈ 3.6%.\nAsos: kvadratlar orqali qo'shish.",
+  "full_solution": {
+   "uz": [
+    "Kvadratlar orqali qo'shish: $$\\frac{\\sigma_A}{A}=\\sqrt{2^2+3^2}\\,\\%=\\sqrt{13}\\,\\%\\approx3.6\\%$$"
+   ],
+   "ru": [
+    "Сложение в квадратах: $$\\frac{\\sigma_A}{A}=\\sqrt{2^2+3^2}\\,\\%=\\sqrt{13}\\,\\%\\approx3.6\\%$$"
+   ],
+   "en": [
+    "Add in quadrature: $$\\frac{\\sigma_A}{A}=\\sqrt{2^2+3^2}\\,\\%=\\sqrt{13}\\,\\%\\approx3.6\\%$$"
+   ]
+  },
+  "distractors": {
+   "A": "xatolar ayirilgan",
+   "B": "o'rtacha arifmetik olingan",
+   "D": "eng katta xato (oddiy yig'indi) — bog'liq bo'lmagan xatolar uchun emas",
+   "E": "xatolar ko'paytirilgan"
+  },
+  "distractors_ru": {
+   "A": "погрешности вычтены",
+   "B": "взято среднее арифметическое",
+   "D": "наибольшая погрешность (простая сумма) — не для независимых ошибок",
+   "E": "погрешности перемножены"
+  },
+  "distractors_en": {
+   "A": "the errors were subtracted",
+   "B": "the arithmetic mean was taken",
+   "D": "the maximum error (simple sum) — not for independent errors",
+   "E": "the errors were multiplied"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q07",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-Q08",
+  "question_en": "The minimum of $f=x^2+y^2-2x+4y$ is located at",
+  "question_uz": "$f=x^2+y^2-2x+4y$ funksiyaning minimumi qaysi nuqtada?",
+  "question_ru": "В какой точке находится минимум функции $f=x^2+y^2-2x+4y$?",
+  "options": [
+   "(A) $(-1,\\ 2)$",
+   "(B) $(0,\\ 0)$",
+   "(C) $(2,\\ -4)$",
+   "(D) $(-2,\\ 4)$",
+   "(E) $(1,\\ -2)$"
+  ],
+  "correct": 4,
+  "explanation_200": "To'g'ri: E. ∇f = (2x−2, 2y+4) = 0 ⇒ (1, −2); f_xx = 2 > 0, D = 4 > 0.\nAsos: kritik nuqta ∇f = 0.",
+  "full_solution": {
+   "uz": [
+    "$\\nabla f=\\vec 0$: $$2x-2=0,\\quad 2y+4=0\\ \\Rightarrow\\ (1,\\ -2)$$"
+   ],
+   "ru": [
+    "$\\nabla f=\\vec 0$: $$2x-2=0,\\quad 2y+4=0\\ \\Rightarrow\\ (1,\\ -2)$$"
+   ],
+   "en": [
+    "$\\nabla f=\\vec 0$: $$2x-2=0,\\quad 2y+4=0\\ \\Rightarrow\\ (1,\\ -2)$$"
+   ]
+  },
+  "distractors": {
+   "A": "ikkala koordinata ishorasi xato",
+   "B": "chiziqli hadlar hisobga olinmagan",
+   "C": "$2$ ga bo'lish o'rniga koeffitsiyentlar olingan",
+   "D": "koeffitsiyentlar ishorasi bilan ko'chirilgan"
+  },
+  "distractors_ru": {
+   "A": "ошибка в знаках обеих координат",
+   "B": "не учтены линейные члены",
+   "C": "взяты коэффициенты вместо деления на $2$",
+   "D": "коэффициенты переписаны с их знаками"
+  },
+  "distractors_en": {
+   "A": "both coordinates have the wrong sign",
+   "B": "the linear terms were ignored",
+   "C": "the coefficients were used without dividing by $2$",
+   "D": "the coefficients were copied with their signs"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q08",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-Q09",
+  "question_en": "For the position vector $\\vec r=(x,\\,y,\\,z)$, $\\nabla\\cdot\\vec r=$",
+  "question_uz": "Radius-vektor $\\vec r=(x,\\,y,\\,z)$ uchun $\\nabla\\cdot\\vec r$ nimaga teng?",
+  "question_ru": "Для радиус-вектора $\\vec r=(x,\\,y,\\,z)$ чему равно $\\nabla\\cdot\\vec r$?",
+  "options": [
+   "(A) $0$",
+   "(B) $1$",
+   "(C) $2$",
+   "(D) $3$",
+   "(E) $r$"
+  ],
+  "correct": 3,
+  "explanation_200": "To'g'ri: D. ∂x/∂x + ∂y/∂y + ∂z/∂z = 1 + 1 + 1 = 3.\nAsos: divergensiya ta'rifi.",
+  "full_solution": {
+   "uz": [
+    "Divergensiya: $$\\nabla\\cdot\\vec r=1+1+1=3$$"
+   ],
+   "ru": [
+    "Дивергенция: $$\\nabla\\cdot\\vec r=1+1+1=3$$"
+   ],
+   "en": [
+    "Divergence: $$\\nabla\\cdot\\vec r=1+1+1=3$$"
+   ]
+  },
+  "distractors": {
+   "A": "bu $\\nabla\\times\\vec r$",
+   "B": "faqat bitta tashkil etuvchi hisobga olingan",
+   "C": "ikki o'lchovli holat bilan adashtirilgan",
+   "E": "divergensiya skalyar son, bu yerda o'zgarmas"
+  },
+  "distractors_ru": {
+   "A": "это $\\nabla\\times\\vec r$",
+   "B": "учтена только одна компонента",
+   "C": "спутано с двумерным случаем",
+   "E": "дивергенция — скаляр, здесь постоянный"
+  },
+  "distractors_en": {
+   "A": "this is $\\nabla\\times\\vec r$",
+   "B": "only one component was counted",
+   "C": "confused with the two-dimensional case",
+   "E": "the divergence is a scalar, constant here"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q09",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-Q10",
+  "question_en": "For $\\vec A=(-y,\\ x,\\ 0)$, $\\nabla\\times\\vec A=$",
+  "question_uz": "$\\vec A=(-y,\\ x,\\ 0)$ uchun $\\nabla\\times\\vec A$ nimaga teng?",
+  "question_ru": "Для $\\vec A=(-y,\\ x,\\ 0)$ чему равен $\\nabla\\times\\vec A$?",
+  "options": [
+   "(A) $(0,\\ 0,\\ 0)$",
+   "(B) $(0,\\ 0,\\ 1)$",
+   "(C) $(0,\\ 0,\\ -2)$",
+   "(D) $(2,\\ 2,\\ 0)$",
+   "(E) $(0,\\ 0,\\ 2)$"
+  ],
+  "correct": 4,
+  "explanation_200": "To'g'ri: E. z-tashkil etuvchi: ∂Ay/∂x − ∂Ax/∂y = 1 − (−1) = 2.\nAsos: rotor ta'rifi.",
+  "full_solution": {
+   "uz": [
+    "Faqat $z$-tashkil etuvchi: $$(\\nabla\\times\\vec A)_z=\\frac{\\partial x}{\\partial x}-\\frac{\\partial(-y)}{\\partial y}=1+1=2$$"
+   ],
+   "ru": [
+    "Только $z$-компонента: $$(\\nabla\\times\\vec A)_z=\\frac{\\partial x}{\\partial x}-\\frac{\\partial(-y)}{\\partial y}=1+1=2$$"
+   ],
+   "en": [
+    "Only the $z$-component: $$(\\nabla\\times\\vec A)_z=\\frac{\\partial x}{\\partial x}-\\frac{\\partial(-y)}{\\partial y}=1+1=2$$"
+   ]
+  },
+  "distractors": {
+   "A": "maydon aylanmali — rotor nol emas",
+   "B": "faqat bitta hosila hisobga olingan",
+   "C": "ayirma tartibi teskari olingan",
+   "D": "tashkil etuvchilar noto'g'ri joylashtirilgan"
+  },
+  "distractors_ru": {
+   "A": "поле вращательное — ротор не нуль",
+   "B": "учтена только одна производная",
+   "C": "порядок вычитания перепутан",
+   "D": "компоненты расставлены неверно"
+  },
+  "distractors_en": {
+   "A": "the field circulates — the curl is not zero",
+   "B": "only one derivative was counted",
+   "C": "the order of subtraction was reversed",
+   "D": "the components were placed incorrectly"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q10",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-Q11",
+  "question_en": "$f(x,\\,y)=x^2y$ with $x=t$, $y=t^2$. At $t=1$, $\\dfrac{df}{dt}=$",
+  "question_uz": "$f(x,\\,y)=x^2y$, bunda $x=t$, $y=t^2$. $t=1$ da $\\dfrac{df}{dt}$ nimaga teng?",
+  "question_ru": "$f(x,\\,y)=x^2y$, где $x=t$, $y=t^2$. Чему равно $\\dfrac{df}{dt}$ при $t=1$?",
+  "options": [
+   "(A) $1$",
+   "(B) $2$",
+   "(C) $3$",
+   "(D) $4$",
+   "(E) $6$"
+  ],
+  "correct": 3,
+  "explanation_200": "To'g'ri: D. df/dt = 2xy·1 + x²·2t = 2 + 2 = 4 (yoki f = t⁴ ⇒ 4t³).\nAsos: zanjir qoidasi.",
+  "full_solution": {
+   "uz": [
+    "Zanjir qoidasi: $$\\frac{df}{dt}=2xy\\cdot1+x^2\\cdot2t=2+2=4$$"
+   ],
+   "ru": [
+    "Цепное правило: $$\\frac{df}{dt}=2xy\\cdot1+x^2\\cdot2t=2+2=4$$"
+   ],
+   "en": [
+    "Chain rule: $$\\frac{df}{dt}=2xy\\cdot1+x^2\\cdot2t=2+2=4$$"
+   ]
+  },
+  "distractors": {
+   "A": "faqat $x$ orqali bog'lanish hisobga olingan, $y$ unutilgan va hisob xato",
+   "B": "faqat bitta had olingan",
+   "C": "ikkinchi hadda $2t$ ko'paytuvchi unutilgan",
+   "E": "ikkinchi had ikki marta hisoblangan"
+  },
+  "distractors_ru": {
+   "A": "учтена только связь через $x$ с ошибкой",
+   "B": "взято только одно слагаемое",
+   "C": "во втором слагаемом забыт множитель $2t$",
+   "E": "второе слагаемое учтено дважды"
+  },
+  "distractors_en": {
+   "A": "only the dependence through $x$ was counted, with a slip",
+   "B": "only one term was taken",
+   "C": "the factor $2t$ was forgotten in the second term",
+   "E": "the second term was counted twice"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q11",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-Q12",
+  "question_en": "The potential of a point charge is $V=kq/r$. The magnitude of its electric field is",
+  "question_uz": "Nuqtaviy zaryad potensiali $V=kq/r$. Uning elektr maydon kuchlanganligi moduli qanday?",
+  "question_ru": "Потенциал точечного заряда $V=kq/r$. Чему равен модуль напряжённости его поля?",
+  "options": [
+   "(A) $kq/r^2$",
+   "(B) $kq/r$",
+   "(C) $kq/r^3$",
+   "(D) $kq\\,r$",
+   "(E) $kq/(2r^2)$"
+  ],
+  "correct": 0,
+  "explanation_200": "To'g'ri: A. E = −dV/dr = kq/r² (radial).\nAsos: E = −∇V, sferik simmetriyada ∇V = (dV/dr)e_r.",
+  "full_solution": {
+   "uz": [
+    "Sferik simmetriya: $$E=-\\frac{dV}{dr}=\\frac{kq}{r^2}$$"
+   ],
+   "ru": [
+    "Сферическая симметрия: $$E=-\\frac{dV}{dr}=\\frac{kq}{r^2}$$"
+   ],
+   "en": [
+    "Spherical symmetry: $$E=-\\frac{dV}{dr}=\\frac{kq}{r^2}$$"
+   ]
+  },
+  "distractors": {
+   "B": "bu potensialning o'zi",
+   "C": "hosila olishda daraja ikki marta oshirilgan",
+   "D": "ko'paytirish va bo'lish adashtirilgan",
+   "E": "$\\tfrac12$ ko'paytuvchi ortiqcha"
+  },
+  "distractors_ru": {
+   "B": "это сам потенциал",
+   "C": "при дифференцировании степень увеличена дважды",
+   "D": "перепутаны умножение и деление",
+   "E": "лишний множитель $\\tfrac12$"
+  },
+  "distractors_en": {
+   "B": "this is the potential itself",
+   "C": "the power was raised twice when differentiating",
+   "D": "multiplication and division were confused",
+   "E": "an extra factor of $\\tfrac12$"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q12",
+  "source": "original"
+ }
+]

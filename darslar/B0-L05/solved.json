@@ -1,0 +1,473 @@
+[
+ {
+  "id": "B0-L05-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$f(x,\\,y)=x^2y+3xy^2$ funksiyaning xususiy hosilalarini toping va ularning $(1,\\,2)$ nuqtadagi qiymatlarini hisoblang.",
+   "ru": "Найдите частные производные функции $f(x,\\,y)=x^2y+3xy^2$ и вычислите их значения в точке $(1,\\,2)$.",
+   "en": "Find the partial derivatives of $f(x,\\,y)=x^2y+3xy^2$ and evaluate them at $(1,\\,2)$."
+  },
+  "figure": "figures/B0-L05-S01.png",
+  "solution": {
+   "uz": [
+    "$y$ ni o'zgarmas deb, $x$ bo'yicha: $$\\frac{\\partial f}{\\partial x}=2xy+3y^2$$",
+    "$x$ ni o'zgarmas deb, $y$ bo'yicha: $$\\frac{\\partial f}{\\partial y}=x^2+6xy$$",
+    "$(1,\\,2)$ nuqtada: $$f_x=4+12=16,\\qquad f_y=1+12=13$$"
+   ],
+   "ru": [
+    "Считая $y$ постоянным, по $x$: $$\\frac{\\partial f}{\\partial x}=2xy+3y^2$$",
+    "Считая $x$ постоянным, по $y$: $$\\frac{\\partial f}{\\partial y}=x^2+6xy$$",
+    "В точке $(1,\\,2)$: $$f_x=4+12=16,\\qquad f_y=1+12=13$$"
+   ],
+   "en": [
+    "Holding $y$ constant, with respect to $x$: $$\\frac{\\partial f}{\\partial x}=2xy+3y^2$$",
+    "Holding $x$ constant, with respect to $y$: $$\\frac{\\partial f}{\\partial y}=x^2+6xy$$",
+    "At $(1,\\,2)$: $$f_x=4+12=16,\\qquad f_y=1+12=13$$"
+   ]
+  },
+  "basis": {
+   "uz": "Xususiy hosila: qolgan o'zgaruvchilar o'zgarmas",
+   "ru": "Частная производная: остальные переменные постоянны",
+   "en": "Partial derivative: the other variables are held constant"
+  },
+  "answer": "f_x=2xy+3y^2=16,\\quad f_y=x^2+6xy=13",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$n=1.0\\ \\mathrm{mol}$ ideal gaz uchun $p(V,\\,T)=nRT/V$. $T=300\\ \\mathrm{K}$, $V=0.025\\ \\mathrm{m^3}$ da $\\partial p/\\partial T$ va $\\partial p/\\partial V$ ni toping ($R=8.31\\ \\mathrm{J/(mol\\cdot K)}$). Ularning fizik ma'nosini tushuntiring.",
+   "ru": "Для $n=1.0\\ \\mathrm{моль}$ идеального газа $p(V,\\,T)=nRT/V$. Найдите $\\partial p/\\partial T$ и $\\partial p/\\partial V$ при $T=300\\ \\mathrm{К}$, $V=0.025\\ \\mathrm{м^3}$ ($R=8.31\\ \\mathrm{Дж/(моль\\cdot К)}$). Объясните их физический смысл.",
+   "en": "For $n=1.0\\ \\mathrm{mol}$ of an ideal gas, $p(V,\\,T)=nRT/V$. Find $\\partial p/\\partial T$ and $\\partial p/\\partial V$ at $T=300\\ \\mathrm{K}$, $V=0.025\\ \\mathrm{m^3}$ ($R=8.31\\ \\mathrm{J/(mol\\cdot K)}$). Explain their physical meaning."
+  },
+  "figure": "figures/B0-L05-S02.png",
+  "solution": {
+   "uz": [
+    "Hajm o'zgarmas (izoxorik qizdirish): $$\\frac{\\partial p}{\\partial T}=\\frac{nR}{V}=\\frac{8.31}{0.025}\\approx332\\ \\mathrm{Pa/K}$$",
+    "Harorat o'zgarmas (izotermik siqish): $$\\frac{\\partial p}{\\partial V}=-\\frac{nRT}{V^2}=-\\frac{2493}{6.25\\times10^{-4}}\\approx-4.0\\times10^{6}\\ \\mathrm{Pa/m^3}$$",
+    "Birinchisi — 1 K qizdirganda bosim ortishi; ikkinchisi manfiy: hajm ortsa bosim kamayadi."
+   ],
+   "ru": [
+    "Объём постоянен (изохорный нагрев): $$\\frac{\\partial p}{\\partial T}=\\frac{nR}{V}=\\frac{8.31}{0.025}\\approx332\\ \\mathrm{Pa/K}$$",
+    "Температура постоянна (изотермическое сжатие): $$\\frac{\\partial p}{\\partial V}=-\\frac{nRT}{V^2}=-\\frac{2493}{6.25\\times10^{-4}}\\approx-4.0\\times10^{6}\\ \\mathrm{Pa/m^3}$$",
+    "Первая — рост давления при нагреве на 1 К; вторая отрицательна: при росте объёма давление падает."
+   ],
+   "en": [
+    "Constant volume (isochoric heating): $$\\frac{\\partial p}{\\partial T}=\\frac{nR}{V}=\\frac{8.31}{0.025}\\approx332\\ \\mathrm{Pa/K}$$",
+    "Constant temperature (isothermal compression): $$\\frac{\\partial p}{\\partial V}=-\\frac{nRT}{V^2}=-\\frac{2493}{6.25\\times10^{-4}}\\approx-4.0\\times10^{6}\\ \\mathrm{Pa/m^3}$$",
+    "The first is the pressure rise per kelvin of heating; the second is negative: pressure falls as volume grows."
+   ]
+  },
+  "basis": {
+   "uz": "Xususiy hosila va ideal gaz holat tenglamasi $pV=nRT$",
+   "ru": "Частная производная и уравнение состояния $pV=nRT$",
+   "en": "Partial derivative and the ideal gas law $pV=nRT$"
+  },
+  "answer": "\\frac{\\partial p}{\\partial T}\\approx332\\ \\mathrm{Pa/K},\\quad \\frac{\\partial p}{\\partial V}\\approx-4.0\\times10^6\\ \\mathrm{Pa/m^3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-S03",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$f(x,\\,y)=x^2e^{3y}$ funksiyaning barcha ikkinchi tartibli xususiy hosilalarini toping va $f_{xy}=f_{yx}$ ekanini tekshiring.",
+   "ru": "Найдите все частные производные второго порядка функции $f(x,\\,y)=x^2e^{3y}$ и проверьте, что $f_{xy}=f_{yx}$.",
+   "en": "Find all second-order partial derivatives of $f(x,\\,y)=x^2e^{3y}$ and check that $f_{xy}=f_{yx}$."
+  },
+  "figure": "figures/B0-L05-S03.png",
+  "solution": {
+   "uz": [
+    "Birinchi tartibli: $$f_x=2x\\,e^{3y},\\qquad f_y=3x^2e^{3y}$$",
+    "Ikkinchi tartibli \\\"toza\\\" hosilalar: $$f_{xx}=2e^{3y},\\qquad f_{yy}=9x^2e^{3y}$$",
+    "Aralash hosilalar: $$f_{xy}=\\frac{\\partial}{\\partial y}(2x\\,e^{3y})=6x\\,e^{3y},\\qquad f_{yx}=\\frac{\\partial}{\\partial x}(3x^2e^{3y})=6x\\,e^{3y}$$"
+   ],
+   "ru": [
+    "Первого порядка: $$f_x=2x\\,e^{3y},\\qquad f_y=3x^2e^{3y}$$",
+    "Вторые «чистые» производные: $$f_{xx}=2e^{3y},\\qquad f_{yy}=9x^2e^{3y}$$",
+    "Смешанные производные: $$f_{xy}=\\frac{\\partial}{\\partial y}(2x\\,e^{3y})=6x\\,e^{3y},\\qquad f_{yx}=\\frac{\\partial}{\\partial x}(3x^2e^{3y})=6x\\,e^{3y}$$"
+   ],
+   "en": [
+    "First order: $$f_x=2x\\,e^{3y},\\qquad f_y=3x^2e^{3y}$$",
+    "Pure second derivatives: $$f_{xx}=2e^{3y},\\qquad f_{yy}=9x^2e^{3y}$$",
+    "Mixed derivatives: $$f_{xy}=\\frac{\\partial}{\\partial y}(2x\\,e^{3y})=6x\\,e^{3y},\\qquad f_{yx}=\\frac{\\partial}{\\partial x}(3x^2e^{3y})=6x\\,e^{3y}$$"
+   ]
+  },
+  "basis": {
+   "uz": "Shvars teoremasi: $f_{xy}=f_{yx}$",
+   "ru": "Теорема Шварца: $f_{xy}=f_{yx}$",
+   "en": "Schwarz's theorem: $f_{xy}=f_{yx}$"
+  },
+  "answer": "f_{xx}=2e^{3y},\\ f_{yy}=9x^2e^{3y},\\ f_{xy}=f_{yx}=6x\\,e^{3y}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$f(x,\\,y)=x^2+2y^2$ uchun $(1,\\,1)$ nuqtada gradientni va uning modulini toping. Shu nuqtada $\\vec e=\\left(\\tfrac35,\\ \\tfrac45\\right)$ yo'nalishi bo'yicha hosilani hisoblang.",
+   "ru": "Для $f(x,\\,y)=x^2+2y^2$ найдите градиент и его модуль в точке $(1,\\,1)$. Вычислите в этой точке производную по направлению $\\vec e=\\left(\\tfrac35,\\ \\tfrac45\\right)$.",
+   "en": "For $f(x,\\,y)=x^2+2y^2$, find the gradient and its magnitude at $(1,\\,1)$. Compute the directional derivative there along $\\vec e=\\left(\\tfrac35,\\ \\tfrac45\\right)$."
+  },
+  "figure": "figures/B0-L05-S04.png",
+  "solution": {
+   "uz": [
+    "Gradient: $$\\nabla f=(2x,\\ 4y)=(2,\\ 4),\\qquad |\\nabla f|=\\sqrt{4+16}=2\\sqrt5\\approx4.47$$",
+    "Yo'nalish bo'yicha hosila — skalyar ko'paytma: $$\\frac{\\partial f}{\\partial e}=\\nabla f\\cdot\\vec e=2\\cdot\\frac35+4\\cdot\\frac45=\\frac{22}{5}=4.4$$",
+    "Tekshiruv: $4.4<|\\nabla f|\\approx4.47$ — eng katta o'sish faqat gradient yo'nalishida."
+   ],
+   "ru": [
+    "Градиент: $$\\nabla f=(2x,\\ 4y)=(2,\\ 4),\\qquad |\\nabla f|=\\sqrt{4+16}=2\\sqrt5\\approx4.47$$",
+    "Производная по направлению — скалярное произведение: $$\\frac{\\partial f}{\\partial e}=\\nabla f\\cdot\\vec e=2\\cdot\\frac35+4\\cdot\\frac45=\\frac{22}{5}=4.4$$",
+    "Проверка: $4.4<|\\nabla f|\\approx4.47$ — наибольший рост только вдоль градиента."
+   ],
+   "en": [
+    "Gradient: $$\\nabla f=(2x,\\ 4y)=(2,\\ 4),\\qquad |\\nabla f|=\\sqrt{4+16}=2\\sqrt5\\approx4.47$$",
+    "Directional derivative is a dot product: $$\\frac{\\partial f}{\\partial e}=\\nabla f\\cdot\\vec e=2\\cdot\\frac35+4\\cdot\\frac45=\\frac{22}{5}=4.4$$",
+    "Check: $4.4<|\\nabla f|\\approx4.47$ — the largest increase is only along the gradient."
+   ]
+  },
+  "basis": {
+   "uz": "$\\nabla f=(f_x,\\ f_y)$, $\\partial f/\\partial e=\\nabla f\\cdot\\vec e$",
+   "ru": "$\\nabla f=(f_x,\\ f_y)$, $\\partial f/\\partial e=\\nabla f\\cdot\\vec e$",
+   "en": "$\\nabla f=(f_x,\\ f_y)$, $\\partial f/\\partial e=\\nabla f\\cdot\\vec e$"
+  },
+  "answer": "\\nabla f=(2,\\ 4),\\quad |\\nabla f|=2\\sqrt5,\\quad \\partial f/\\partial e=4.4",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Plastinadagi harorat $T(x,\\,y)=100-x^2-2y^2$ ($^\\circ\\mathrm{C}$, $x$, $y$ — metrda). $(2,\\,1)$ nuqtada harorat eng tez qaysi yo'nalishda ortadi va bu o'sish tezligi qancha? Issiqlik qaysi yo'nalishda oqadi?",
+   "ru": "Температура пластины $T(x,\\,y)=100-x^2-2y^2$ ($^\\circ\\mathrm{C}$, $x$, $y$ — в метрах). В каком направлении в точке $(2,\\,1)$ температура растёт быстрее всего и какова эта скорость роста? В каком направлении течёт тепло?",
+   "en": "The temperature of a plate is $T(x,\\,y)=100-x^2-2y^2$ ($^\\circ\\mathrm{C}$, $x$, $y$ in meters). At $(2,\\,1)$, in which direction does the temperature increase fastest, and at what rate? In which direction does heat flow?"
+  },
+  "figure": "figures/B0-L05-S05.png",
+  "solution": {
+   "uz": [
+    "Gradient: $$\\nabla T=(-2x,\\ -4y)=(-4,\\ -4)\\ {}^\\circ\\mathrm{C/m}$$",
+    "Eng tez o'sish yo'nalishi va tezligi: $$\\vec e=\\frac{(-1,\\ -1)}{\\sqrt2},\\qquad |\\nabla T|=4\\sqrt2\\approx5.7\\ {}^\\circ\\mathrm{C/m}$$",
+    "Issiqlik oqimi $\\vec q=-\\kappa\\nabla T$ — gradientga teskari, ya'ni $(1,\\ 1)/\\sqrt2$ yo'nalishda (issiqdan sovuqqa)."
+   ],
+   "ru": [
+    "Градиент: $$\\nabla T=(-2x,\\ -4y)=(-4,\\ -4)\\ {}^\\circ\\mathrm{C/m}$$",
+    "Направление и скорость наибольшего роста: $$\\vec e=\\frac{(-1,\\ -1)}{\\sqrt2},\\qquad |\\nabla T|=4\\sqrt2\\approx5.7\\ {}^\\circ\\mathrm{C/m}$$",
+    "Тепловой поток $\\vec q=-\\kappa\\nabla T$ — против градиента, то есть в направлении $(1,\\ 1)/\\sqrt2$ (от горячего к холодному)."
+   ],
+   "en": [
+    "Gradient: $$\\nabla T=(-2x,\\ -4y)=(-4,\\ -4)\\ {}^\\circ\\mathrm{C/m}$$",
+    "Direction and rate of fastest increase: $$\\vec e=\\frac{(-1,\\ -1)}{\\sqrt2},\\qquad |\\nabla T|=4\\sqrt2\\approx5.7\\ {}^\\circ\\mathrm{C/m}$$",
+    "The heat flux $\\vec q=-\\kappa\\nabla T$ is opposite to the gradient, i.e. along $(1,\\ 1)/\\sqrt2$ (from hot to cold)."
+   ]
+  },
+  "basis": {
+   "uz": "Gradient — eng tez o'sish yo'nalishi; Furye qonuni $\\vec q=-\\kappa\\nabla T$",
+   "ru": "Градиент — направление наискорейшего роста; закон Фурье $\\vec q=-\\kappa\\nabla T$",
+   "en": "The gradient points in the direction of fastest increase; Fourier's law $\\vec q=-\\kappa\\nabla T$"
+  },
+  "answer": "\\vec e=\\frac{(-1,\\,-1)}{\\sqrt2},\\quad |\\nabla T|=4\\sqrt2\\approx5.7\\ {}^\\circ\\mathrm{C/m};\\quad \\vec q\\parallel(1,\\ 1)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Zarraning potensial energiyasi $U(x,\\,y)=3x^2y-y^3$ (joul, metr). $(1,\\,2)$ nuqtada zarraga ta'sir qiluvchi kuchni va uning modulini toping.",
+   "ru": "Потенциальная энергия частицы $U(x,\\,y)=3x^2y-y^3$ (джоули, метры). Найдите силу, действующую на частицу в точке $(1,\\,2)$, и её модуль.",
+   "en": "The potential energy of a particle is $U(x,\\,y)=3x^2y-y^3$ (joules, meters). Find the force on the particle at $(1,\\,2)$ and its magnitude."
+  },
+  "figure": "figures/B0-L05-S06.png",
+  "solution": {
+   "uz": [
+    "Kuch — gradientning teskari ishorasi: $$\\vec F=-\\nabla U=\\left(-6xy,\\ -3x^2+3y^2\\right)$$",
+    "$(1,\\,2)$ nuqtada: $$\\vec F=(-12,\\ 9)\\ \\mathrm{N},\\qquad |\\vec F|=\\sqrt{144+81}=15\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Сила — градиент с обратным знаком: $$\\vec F=-\\nabla U=\\left(-6xy,\\ -3x^2+3y^2\\right)$$",
+    "В точке $(1,\\,2)$: $$\\vec F=(-12,\\ 9)\\ \\mathrm{N},\\qquad |\\vec F|=\\sqrt{144+81}=15\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "The force is the negative gradient: $$\\vec F=-\\nabla U=\\left(-6xy,\\ -3x^2+3y^2\\right)$$",
+    "At $(1,\\,2)$: $$\\vec F=(-12,\\ 9)\\ \\mathrm{N},\\qquad |\\vec F|=\\sqrt{144+81}=15\\ \\mathrm{N}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$\\vec F=-\\nabla U$",
+   "ru": "$\\vec F=-\\nabla U$",
+   "en": "$\\vec F=-\\nabla U$"
+  },
+  "answer": "\\vec F=(-12,\\ 9)\\ \\mathrm{N},\\quad |\\vec F|=15\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Elektr potensial $V(x,\\,y,\\,z)=2x^2-3yz$ (volt, metr). $(1,\\,1,\\,2)$ nuqtadagi elektr maydon kuchlanganligini va uning modulini toping.",
+   "ru": "Электрический потенциал $V(x,\\,y,\\,z)=2x^2-3yz$ (вольты, метры). Найдите напряжённость электрического поля в точке $(1,\\,1,\\,2)$ и её модуль.",
+   "en": "The electric potential is $V(x,\\,y,\\,z)=2x^2-3yz$ (volts, meters). Find the electric field at $(1,\\,1,\\,2)$ and its magnitude."
+  },
+  "figure": "figures/B0-L05-S07.png",
+  "solution": {
+   "uz": [
+    "Maydon — potensial gradientining teskari ishorasi: $$\\vec E=-\\nabla V=\\left(-4x,\\ 3z,\\ 3y\\right)$$",
+    "$(1,\\,1,\\,2)$ nuqtada: $$\\vec E=(-4,\\ 6,\\ 3)\\ \\mathrm{V/m},\\qquad |\\vec E|=\\sqrt{16+36+9}=\\sqrt{61}\\approx7.8\\ \\mathrm{V/m}$$"
+   ],
+   "ru": [
+    "Поле — градиент потенциала с обратным знаком: $$\\vec E=-\\nabla V=\\left(-4x,\\ 3z,\\ 3y\\right)$$",
+    "В точке $(1,\\,1,\\,2)$: $$\\vec E=(-4,\\ 6,\\ 3)\\ \\mathrm{V/m},\\qquad |\\vec E|=\\sqrt{16+36+9}=\\sqrt{61}\\approx7.8\\ \\mathrm{V/m}$$"
+   ],
+   "en": [
+    "The field is the negative gradient of the potential: $$\\vec E=-\\nabla V=\\left(-4x,\\ 3z,\\ 3y\\right)$$",
+    "At $(1,\\,1,\\,2)$: $$\\vec E=(-4,\\ 6,\\ 3)\\ \\mathrm{V/m},\\qquad |\\vec E|=\\sqrt{16+36+9}=\\sqrt{61}\\approx7.8\\ \\mathrm{V/m}$$"
+   ]
+  },
+  "basis": {
+   "uz": "$\\vec E=-\\nabla V$",
+   "ru": "$\\vec E=-\\nabla V$",
+   "en": "$\\vec E=-\\nabla V$"
+  },
+  "answer": "\\vec E=(-4,\\ 6,\\ 3)\\ \\mathrm{V/m},\\quad |\\vec E|=\\sqrt{61}\\approx7.8\\ \\mathrm{V/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-S08",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$r=\\sqrt{x^2+y^2+z^2}$. Xususiy hosilalar yordamida $\\nabla\\dfrac1r=-\\dfrac{\\vec r}{r^3}$ ekanini ko'rsating va undan nuqtaviy zaryad maydoni $\\vec E=-\\nabla\\dfrac{kq}{r}$ ni toping.",
+   "ru": "$r=\\sqrt{x^2+y^2+z^2}$. С помощью частных производных покажите, что $\\nabla\\dfrac1r=-\\dfrac{\\vec r}{r^3}$, и найдите отсюда поле точечного заряда $\\vec E=-\\nabla\\dfrac{kq}{r}$.",
+   "en": "Let $r=\\sqrt{x^2+y^2+z^2}$. Using partial derivatives, show that $\\nabla\\dfrac1r=-\\dfrac{\\vec r}{r^3}$, and use it to find the field of a point charge $\\vec E=-\\nabla\\dfrac{kq}{r}$."
+  },
+  "figure": "figures/B0-L05-S08.png",
+  "solution": {
+   "uz": [
+    "Avval $r$ ning hosilasi: $$\\frac{\\partial r}{\\partial x}=\\frac{x}{r},\\qquad \\frac{\\partial r}{\\partial y}=\\frac{y}{r},\\qquad \\frac{\\partial r}{\\partial z}=\\frac{z}{r}$$",
+    "Zanjir qoidasi: $$\\frac{\\partial}{\\partial x}\\frac1r=-\\frac{1}{r^2}\\frac{x}{r}=-\\frac{x}{r^3}$$",
+    "Uchala tashkil etuvchi: $$\\nabla\\frac1r=-\\frac{(x,\\ y,\\ z)}{r^3}=-\\frac{\\vec r}{r^3}$$",
+    "Maydon: $$\\vec E=-kq\\,\\nabla\\frac1r=\\frac{kq\\,\\vec r}{r^3}=\\frac{kq}{r^2}\\,\\vec e_r$$"
+   ],
+   "ru": [
+    "Сначала производная $r$: $$\\frac{\\partial r}{\\partial x}=\\frac{x}{r},\\qquad \\frac{\\partial r}{\\partial y}=\\frac{y}{r},\\qquad \\frac{\\partial r}{\\partial z}=\\frac{z}{r}$$",
+    "Цепное правило: $$\\frac{\\partial}{\\partial x}\\frac1r=-\\frac{1}{r^2}\\frac{x}{r}=-\\frac{x}{r^3}$$",
+    "Все три компоненты: $$\\nabla\\frac1r=-\\frac{(x,\\ y,\\ z)}{r^3}=-\\frac{\\vec r}{r^3}$$",
+    "Поле: $$\\vec E=-kq\\,\\nabla\\frac1r=\\frac{kq\\,\\vec r}{r^3}=\\frac{kq}{r^2}\\,\\vec e_r$$"
+   ],
+   "en": [
+    "First, the derivative of $r$: $$\\frac{\\partial r}{\\partial x}=\\frac{x}{r},\\qquad \\frac{\\partial r}{\\partial y}=\\frac{y}{r},\\qquad \\frac{\\partial r}{\\partial z}=\\frac{z}{r}$$",
+    "Chain rule: $$\\frac{\\partial}{\\partial x}\\frac1r=-\\frac{1}{r^2}\\frac{x}{r}=-\\frac{x}{r^3}$$",
+    "All three components: $$\\nabla\\frac1r=-\\frac{(x,\\ y,\\ z)}{r^3}=-\\frac{\\vec r}{r^3}$$",
+    "Field: $$\\vec E=-kq\\,\\nabla\\frac1r=\\frac{kq\\,\\vec r}{r^3}=\\frac{kq}{r^2}\\,\\vec e_r$$"
+   ]
+  },
+  "basis": {
+   "uz": "Ko'p o'zgaruvchili zanjir qoidasi, $\\vec E=-\\nabla V$",
+   "ru": "Цепное правило для нескольких переменных, $\\vec E=-\\nabla V$",
+   "en": "Multivariable chain rule, $\\vec E=-\\nabla V$"
+  },
+  "answer": "\\nabla\\frac1r=-\\frac{\\vec r}{r^3},\\quad \\vec E=\\frac{kq}{r^2}\\,\\vec e_r",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Mayatnik yordamida $g=4\\pi^2L/T^2$ o'lchandi: $L=1.000\\pm0.002\\ \\mathrm{m}$, $T=2.007\\pm0.004\\ \\mathrm{s}$. $g$ ni, uning eng katta nisbiy xatosini va bog'liq bo'lmagan tasodifiy xatolar uchun nisbiy xatoni toping.",
+   "ru": "С помощью маятника измерено $g=4\\pi^2L/T^2$: $L=1.000\\pm0.002\\ \\mathrm{м}$, $T=2.007\\pm0.004\\ \\mathrm{с}$. Найдите $g$, его наибольшую относительную погрешность и относительную погрешность для независимых случайных ошибок.",
+   "en": "A pendulum is used to measure $g=4\\pi^2L/T^2$: $L=1.000\\pm0.002\\ \\mathrm{m}$, $T=2.007\\pm0.004\\ \\mathrm{s}$. Find $g$, its maximum relative error and its relative error for independent random errors."
+  },
+  "figure": "figures/B0-L05-S09.png",
+  "solution": {
+   "uz": [
+    "Qiymat: $$g=\\frac{4\\pi^2\\cdot1.000}{2.007^2}\\approx9.80\\ \\mathrm{m/s^2}$$",
+    "Nisbiy xatolar: $\\Delta L/L=0.2\\%$, $\\Delta T/T\\approx0.2\\%$; $g\\propto L^{1}T^{-2}$. $$\\left(\\frac{\\Delta g}{g}\\right)_{\\max}=0.2\\%+2\\cdot0.2\\%=0.6\\%$$",
+    "Bog'liq bo'lmagan tasodifiy xatolar — kvadratlar orqali: $$\\frac{\\sigma_g}{g}=\\sqrt{0.2^2+(2\\cdot0.2)^2}\\,\\%\\approx0.45\\%\\ \\Rightarrow\\ \\sigma_g\\approx0.04\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Значение: $$g=\\frac{4\\pi^2\\cdot1.000}{2.007^2}\\approx9.80\\ \\mathrm{m/s^2}$$",
+    "Относительные погрешности: $\\Delta L/L=0.2\\%$, $\\Delta T/T\\approx0.2\\%$; $g\\propto L^{1}T^{-2}$. $$\\left(\\frac{\\Delta g}{g}\\right)_{\\max}=0.2\\%+2\\cdot0.2\\%=0.6\\%$$",
+    "Независимые случайные погрешности — в квадратах: $$\\frac{\\sigma_g}{g}=\\sqrt{0.2^2+(2\\cdot0.2)^2}\\,\\%\\approx0.45\\%\\ \\Rightarrow\\ \\sigma_g\\approx0.04\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "Value: $$g=\\frac{4\\pi^2\\cdot1.000}{2.007^2}\\approx9.80\\ \\mathrm{m/s^2}$$",
+    "Relative errors: $\\Delta L/L=0.2\\%$, $\\Delta T/T\\approx0.2\\%$; $g\\propto L^{1}T^{-2}$. $$\\left(\\frac{\\Delta g}{g}\\right)_{\\max}=0.2\\%+2\\cdot0.2\\%=0.6\\%$$",
+    "Independent random errors — in quadrature: $$\\frac{\\sigma_g}{g}=\\sqrt{0.2^2+(2\\cdot0.2)^2}\\,\\%\\approx0.45\\%\\ \\Rightarrow\\ \\sigma_g\\approx0.04\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "basis": {
+   "uz": "To'liq differensial va xatolar tarqalishi; $f=x^ay^b$ uchun nisbiy xato",
+   "ru": "Полный дифференциал и распространение погрешностей; относительная погрешность для $f=x^ay^b$",
+   "en": "Total differential and error propagation; relative error for $f=x^ay^b$"
+  },
+  "answer": "g\\approx9.80\\ \\mathrm{m/s^2};\\quad 0.6\\%\\ (\\max);\\quad 0.45\\%\\ (\\sigma)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Harorat maydoni $T(x,\\,y)=x^2+y^2$. Zarra $x=\\cos t$, $y=2\\sin t$ trayektoriya bo'ylab harakatlanadi. Zarra sezadigan harorat o'zgarish tezligi $dT/dt$ ni toping va $t=\\pi/4$ da hisoblang.",
+   "ru": "Поле температуры $T(x,\\,y)=x^2+y^2$. Частица движется по траектории $x=\\cos t$, $y=2\\sin t$. Найдите скорость изменения температуры $dT/dt$, которую ощущает частица, и вычислите её при $t=\\pi/4$.",
+   "en": "A temperature field is $T(x,\\,y)=x^2+y^2$. A particle moves along $x=\\cos t$, $y=2\\sin t$. Find the rate of change $dT/dt$ felt by the particle and evaluate it at $t=\\pi/4$."
+  },
+  "figure": "figures/B0-L05-S10.png",
+  "solution": {
+   "uz": [
+    "Ko'p o'zgaruvchili zanjir qoidasi: $$\\frac{dT}{dt}=\\frac{\\partial T}{\\partial x}\\dot x+\\frac{\\partial T}{\\partial y}\\dot y=2x(-\\sin t)+2y(2\\cos t)$$",
+    "O'rniga qo'yamiz: $$\\frac{dT}{dt}=-2\\sin t\\cos t+8\\sin t\\cos t=3\\sin2t$$",
+    "$t=\\pi/4$ da: $$\\frac{dT}{dt}=3$$"
+   ],
+   "ru": [
+    "Цепное правило для нескольких переменных: $$\\frac{dT}{dt}=\\frac{\\partial T}{\\partial x}\\dot x+\\frac{\\partial T}{\\partial y}\\dot y=2x(-\\sin t)+2y(2\\cos t)$$",
+    "Подставляем: $$\\frac{dT}{dt}=-2\\sin t\\cos t+8\\sin t\\cos t=3\\sin2t$$",
+    "При $t=\\pi/4$: $$\\frac{dT}{dt}=3$$"
+   ],
+   "en": [
+    "Multivariable chain rule: $$\\frac{dT}{dt}=\\frac{\\partial T}{\\partial x}\\dot x+\\frac{\\partial T}{\\partial y}\\dot y=2x(-\\sin t)+2y(2\\cos t)$$",
+    "Substitute: $$\\frac{dT}{dt}=-2\\sin t\\cos t+8\\sin t\\cos t=3\\sin2t$$",
+    "At $t=\\pi/4$: $$\\frac{dT}{dt}=3$$"
+   ]
+  },
+  "basis": {
+   "uz": "$\\dfrac{df}{dt}=f_x\\dot x+f_y\\dot y$",
+   "ru": "$\\dfrac{df}{dt}=f_x\\dot x+f_y\\dot y$",
+   "en": "$\\dfrac{df}{dt}=f_x\\dot x+f_y\\dot y$"
+  },
+  "answer": "\\frac{dT}{dt}=3\\sin2t,\\quad \\frac{dT}{dt}\\Big|_{\\pi/4}=3",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-S11",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$f(x,\\,y)=x^2+xy+y^2-3x$ funksiyaning kritik nuqtasini toping va uning turini aniqlang.",
+   "ru": "Найдите критическую точку функции $f(x,\\,y)=x^2+xy+y^2-3x$ и определите её тип.",
+   "en": "Find the critical point of $f(x,\\,y)=x^2+xy+y^2-3x$ and determine its type."
+  },
+  "figure": "figures/B0-L05-S11.png",
+  "solution": {
+   "uz": [
+    "$\\nabla f=\\vec 0$: $$f_x=2x+y-3=0,\\qquad f_y=x+2y=0$$",
+    "Sistemani yechamiz: $$x=2,\\qquad y=-1$$",
+    "Ikkinchi hosila testi: $$f_{xx}=2,\\ f_{yy}=2,\\ f_{xy}=1:\\quad D=4-1=3>0,\\ f_{xx}>0$$",
+    "Demak, lokal minimum: $$f(2,\\,-1)=4-2+1-6=-3$$"
+   ],
+   "ru": [
+    "$\\nabla f=\\vec 0$: $$f_x=2x+y-3=0,\\qquad f_y=x+2y=0$$",
+    "Решаем систему: $$x=2,\\qquad y=-1$$",
+    "Признак по вторым производным: $$f_{xx}=2,\\ f_{yy}=2,\\ f_{xy}=1:\\quad D=4-1=3>0,\\ f_{xx}>0$$",
+    "Значит, локальный минимум: $$f(2,\\,-1)=4-2+1-6=-3$$"
+   ],
+   "en": [
+    "$\\nabla f=\\vec 0$: $$f_x=2x+y-3=0,\\qquad f_y=x+2y=0$$",
+    "Solve the system: $$x=2,\\qquad y=-1$$",
+    "Second-derivative test: $$f_{xx}=2,\\ f_{yy}=2,\\ f_{xy}=1:\\quad D=4-1=3>0,\\ f_{xx}>0$$",
+    "Hence a local minimum: $$f(2,\\,-1)=4-2+1-6=-3$$"
+   ]
+  },
+  "basis": {
+   "uz": "Kritik nuqta $\\nabla f=\\vec 0$; $D=f_{xx}f_{yy}-f_{xy}^2$",
+   "ru": "Критическая точка $\\nabla f=\\vec 0$; $D=f_{xx}f_{yy}-f_{xy}^2$",
+   "en": "Critical point $\\nabla f=\\vec 0$; $D=f_{xx}f_{yy}-f_{xy}^2$"
+  },
+  "answer": "(2,\\,-1),\\ D>0,\\ f_{xx}>0;\\quad f_{\\min}=-3",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$f(x,\\,y)=x^3-3x+y^2$ funksiyaning barcha kritik nuqtalarini toping va har birining turini aniqlang.",
+   "ru": "Найдите все критические точки функции $f(x,\\,y)=x^3-3x+y^2$ и определите тип каждой.",
+   "en": "Find all critical points of $f(x,\\,y)=x^3-3x+y^2$ and determine the type of each."
+  },
+  "figure": "figures/B0-L05-S12.png",
+  "solution": {
+   "uz": [
+    "$\\nabla f=\\vec 0$: $$f_x=3x^2-3=0,\\quad f_y=2y=0\\ \\Rightarrow\\ (1,\\,0),\\ (-1,\\,0)$$",
+    "Ikkinchi hosilalar: $$f_{xx}=6x,\\quad f_{yy}=2,\\quad f_{xy}=0,\\quad D=12x$$",
+    "$(1,\\,0)$: $D=12>0$, $f_{xx}=6>0$ — minimum; $(-1,\\,0)$: $D=-12<0$ — egar nuqta. $$f(1,\\,0)=-2,\\qquad f(-1,\\,0)=2$$"
+   ],
+   "ru": [
+    "$\\nabla f=\\vec 0$: $$f_x=3x^2-3=0,\\quad f_y=2y=0\\ \\Rightarrow\\ (1,\\,0),\\ (-1,\\,0)$$",
+    "Вторые производные: $$f_{xx}=6x,\\quad f_{yy}=2,\\quad f_{xy}=0,\\quad D=12x$$",
+    "$(1,\\,0)$: $D=12>0$, $f_{xx}=6>0$ — минимум; $(-1,\\,0)$: $D=-12<0$ — седловая точка. $$f(1,\\,0)=-2,\\qquad f(-1,\\,0)=2$$"
+   ],
+   "en": [
+    "$\\nabla f=\\vec 0$: $$f_x=3x^2-3=0,\\quad f_y=2y=0\\ \\Rightarrow\\ (1,\\,0),\\ (-1,\\,0)$$",
+    "Second derivatives: $$f_{xx}=6x,\\quad f_{yy}=2,\\quad f_{xy}=0,\\quad D=12x$$",
+    "$(1,\\,0)$: $D=12>0$, $f_{xx}=6>0$ — a minimum; $(-1,\\,0)$: $D=-12<0$ — a saddle point. $$f(1,\\,0)=-2,\\qquad f(-1,\\,0)=2$$"
+   ]
+  },
+  "basis": {
+   "uz": "Ikkinchi hosila testi; $D<0$ — egar nuqta",
+   "ru": "Признак по вторым производным; $D<0$ — седловая точка",
+   "en": "Second-derivative test; $D<0$ — saddle point"
+  },
+  "answer": "(1,\\,0):\\ D>0,\\ f_{xx}>0,\\ f=-2;\\quad (-1,\\,0):\\ D<0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original"
+ },
+ {
+  "id": "B0-L05-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Vektor maydon $\\vec A=(xy,\\ yz,\\ zx)$. $\\nabla\\cdot\\vec A$ va $\\nabla\\times\\vec A$ ni toping va ularni $(1,\\,2,\\,3)$ nuqtada hisoblang. Bu maydon potensial maydon bo'la oladimi?",
+   "ru": "Векторное поле $\\vec A=(xy,\\ yz,\\ zx)$. Найдите $\\nabla\\cdot\\vec A$ и $\\nabla\\times\\vec A$ и вычислите их в точке $(1,\\,2,\\,3)$. Может ли это поле быть потенциальным?",
+   "en": "A vector field is $\\vec A=(xy,\\ yz,\\ zx)$. Find $\\nabla\\cdot\\vec A$ and $\\nabla\\times\\vec A$ and evaluate them at $(1,\\,2,\\,3)$. Can this field be the gradient of a potential?"
+  },
+  "figure": "figures/B0-L05-S13.png",
+  "solution": {
+   "uz": [
+    "Divergensiya: $$\\nabla\\cdot\\vec A=\\frac{\\partial(xy)}{\\partial x}+\\frac{\\partial(yz)}{\\partial y}+\\frac{\\partial(zx)}{\\partial z}=y+z+x$$",
+    "Rotor: $$\\nabla\\times\\vec A=\\left(0-y,\\ 0-z,\\ 0-x\\right)=(-y,\\ -z,\\ -x)$$",
+    "$(1,\\,2,\\,3)$ nuqtada: $$\\nabla\\cdot\\vec A=6,\\qquad \\nabla\\times\\vec A=(-2,\\ -3,\\ -1)$$",
+    "Rotor noldan farqli, $\\nabla\\times(\\nabla f)=\\vec 0$ esa doim bajariladi — demak, potensial maydon emas."
+   ],
+   "ru": [
+    "Дивергенция: $$\\nabla\\cdot\\vec A=\\frac{\\partial(xy)}{\\partial x}+\\frac{\\partial(yz)}{\\partial y}+\\frac{\\partial(zx)}{\\partial z}=y+z+x$$",
+    "Ротор: $$\\nabla\\times\\vec A=\\left(0-y,\\ 0-z,\\ 0-x\\right)=(-y,\\ -z,\\ -x)$$",
+    "В точке $(1,\\,2,\\,3)$: $$\\nabla\\cdot\\vec A=6,\\qquad \\nabla\\times\\vec A=(-2,\\ -3,\\ -1)$$",
+    "Ротор отличен от нуля, а $\\nabla\\times(\\nabla f)=\\vec 0$ выполняется всегда — значит, поле не потенциальное."
+   ],
+   "en": [
+    "Divergence: $$\\nabla\\cdot\\vec A=\\frac{\\partial(xy)}{\\partial x}+\\frac{\\partial(yz)}{\\partial y}+\\frac{\\partial(zx)}{\\partial z}=y+z+x$$",
+    "Curl: $$\\nabla\\times\\vec A=\\left(0-y,\\ 0-z,\\ 0-x\\right)=(-y,\\ -z,\\ -x)$$",
+    "At $(1,\\,2,\\,3)$: $$\\nabla\\cdot\\vec A=6,\\qquad \\nabla\\times\\vec A=(-2,\\ -3,\\ -1)$$",
+    "The curl is nonzero, while $\\nabla\\times(\\nabla f)=\\vec 0$ always holds — so the field is not a gradient field."
+   ]
+  },
+  "basis": {
+   "uz": "$\\nabla\\cdot\\vec A$, $\\nabla\\times\\vec A$ ta'riflari; $\\nabla\\times\\nabla f=\\vec 0$",
+   "ru": "Определения $\\nabla\\cdot\\vec A$, $\\nabla\\times\\vec A$; $\\nabla\\times\\nabla f=\\vec 0$",
+   "en": "Definitions of $\\nabla\\cdot\\vec A$, $\\nabla\\times\\vec A$; $\\nabla\\times\\nabla f=\\vec 0$"
+  },
+  "answer": "\\nabla\\cdot\\vec A=x+y+z=6,\\quad \\nabla\\times\\vec A=(-y,\\,-z,\\,-x)=(-2,\\,-3,\\,-1);\\quad \\nabla\\times\\vec A\\ne\\vec 0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original"
+ }
+]

@@ -1,0 +1,482 @@
+[
+ {
+  "t": "h1",
+  "uz": "Ko'p o'zgaruvchili funksiyalar, xususiy hosila, gradient (Functions of several variables, partial derivatives, the gradient)",
+  "ru": "Функции нескольких переменных, частные производные, градиент",
+  "en": "Functions of several variables, partial derivatives, the gradient"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz ko'p o'zgaruvchili funksiyalarni sath chiziqlari orqali tasavvur qilasiz, xususiy hosila va to'liq differensialni hisoblaysiz, o'lchash xatolarining tarqalishini baholaysiz, gradientni topib, undan kuch va elektr maydonni aniqlaysiz, ekstremum va egar nuqtalarni ajratasiz hamda divergensiya va rotor tushunchalari bilan tanishasiz.",
+  "ru": "**Цель.** После урока вы будете представлять функции нескольких переменных с помощью линий уровня, вычислять частные производные и полный дифференциал, оценивать распространение погрешностей измерений, находить градиент и с его помощью силу и электрическое поле, различать экстремумы и седловые точки, а также познакомитесь с понятиями дивергенции и ротора.",
+  "en": "**Goal.** By the end of the lesson you will picture functions of several variables through level curves, compute partial derivatives and the total differential, estimate how measurement errors propagate, find the gradient and use it to obtain force and electric field, distinguish extrema from saddle points, and become acquainted with divergence and curl."
+ },
+ {
+  "t": "p",
+  "uz": "**GRE'da o'rni.** Elektr maydonni potensialdan ($\\vec E=-\\nabla V$), kuchni potensial energiyadan ($\\vec F=-\\nabla U$) topish, ekvipotensial sirtlar, laboratoriyadagi xatolar tarqalishi va Maksvell tenglamalaridagi $\\nabla\\cdot$, $\\nabla\\times$ amallari — bularning hammasi shu darsga tayanadi.",
+  "ru": "**Роль в GRE.** Нахождение электрического поля по потенциалу ($\\vec E=-\\nabla V$), силы по потенциальной энергии ($\\vec F=-\\nabla U$), эквипотенциальные поверхности, распространение погрешностей в лаборатории и операции $\\nabla\\cdot$, $\\nabla\\times$ в уравнениях Максвелла — всё это опирается на этот урок.",
+  "en": "**Role on the GRE.** Finding the electric field from the potential ($\\vec E=-\\nabla V$), the force from the potential energy ($\\vec F=-\\nabla U$), equipotential surfaces, error propagation in the laboratory and the operations $\\nabla\\cdot$, $\\nabla\\times$ in Maxwell's equations all rest on this lesson."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Ko'p o'zgaruvchili funksiya (Function of several variables)",
+  "ru": "1. Функция нескольких переменных",
+  "en": "1. Function of several variables"
+ },
+ {
+  "t": "p",
+  "uz": "$z=f(x,\\,y)$ — har bir $(x,\\,y)$ juftiga bitta $z$ qiymatini mos qo'yadi; uning grafigi — fazodagi sirt. Fizikadagi misollar: harorat $T(x,\\,y,\\,z)$, potensial $V(x,\\,y,\\,z)$, gaz bosimi $p(V,\\,T)=nRT/V$.",
+  "ru": "$z=f(x,\\,y)$ ставит в соответствие каждой паре $(x,\\,y)$ одно значение $z$; её график — поверхность в пространстве. Примеры из физики: температура $T(x,\\,y,\\,z)$, потенциал $V(x,\\,y,\\,z)$, давление газа $p(V,\\,T)=nRT/V$.",
+  "en": "$z=f(x,\\,y)$ assigns one value $z$ to each pair $(x,\\,y)$; its graph is a surface in space. Examples from physics: temperature $T(x,\\,y,\\,z)$, potential $V(x,\\,y,\\,z)$, gas pressure $p(V,\\,T)=nRT/V$."
+ },
+ {
+  "t": "p",
+  "uz": "**Sath chiziqlari (level curves)** — $f(x,\\,y)=c$ bo'lgan nuqtalar; xaritadagi gorizontallar kabi. Uch o'lchovda — **sath sirtlari (level surfaces)**; potensial uchun ular **ekvipotensial sirtlar (equipotential surfaces)** deyiladi ([[F01]]).",
+  "ru": "**Линии уровня** — точки, где $f(x,\\,y)=c$; как горизонтали на карте. В трёх измерениях — **поверхности уровня**; для потенциала их называют **эквипотенциальными поверхностями** ([[F01]]).",
+  "en": "**Level curves** are the points where $f(x,\\,y)=c$, like contour lines on a map. In three dimensions they are **level surfaces**; for a potential they are called **equipotential surfaces** ([[F01]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B0-L05-F01.png",
+   "ru": "figures/B0-L05-F01-ru.png",
+   "en": "figures/B0-L05-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Xususiy hosila (Partial derivative)",
+  "ru": "2. Частная производная",
+  "en": "2. Partial derivative"
+ },
+ {
+  "t": "p",
+  "uz": "**Xususiy hosila (partial derivative)** — boshqa o'zgaruvchilarni o'zgarmas deb, bitta o'zgaruvchi bo'yicha olingan hosila. Geometrik ma'nosi: sirtni $y=\\text{const}$ tekisligi bilan kesganda hosil bo'lgan egri chiziqning og'masi ([[F02]]):",
+  "ru": "**Частная производная** — производная по одной переменной, когда остальные переменные считаются постоянными. Геометрический смысл: наклон кривой, получающейся при сечении поверхности плоскостью $y=\\text{const}$ ([[F02]]):",
+  "en": "A **partial derivative** is the derivative with respect to one variable while the other variables are held constant. Geometrically it is the slope of the curve obtained by cutting the surface with the plane $y=\\text{const}$ ([[F02]]):"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\partial f}{\\partial x}=\\lim_{\\Delta x\\to0}\\frac{f(x+\\Delta x,\\,y)-f(x,\\,y)}{\\Delta x},\\qquad \\frac{\\partial f}{\\partial y}=\\lim_{\\Delta y\\to0}\\frac{f(x,\\,y+\\Delta y)-f(x,\\,y)}{\\Delta y}"
+ },
+ {
+  "t": "p",
+  "uz": "Misol: $f=x^2y+3y$ uchun $\\dfrac{\\partial f}{\\partial x}=2xy$, $\\ \\dfrac{\\partial f}{\\partial y}=x^2+3$. Boshqa belgilashlar: $f_x$, $\\ \\partial_xf$.",
+  "ru": "Пример: для $f=x^2y+3y$ имеем $\\dfrac{\\partial f}{\\partial x}=2xy$, $\\ \\dfrac{\\partial f}{\\partial y}=x^2+3$. Другие обозначения: $f_x$, $\\ \\partial_xf$.",
+  "en": "Example: for $f=x^2y+3y$ we have $\\dfrac{\\partial f}{\\partial x}=2xy$, $\\ \\dfrac{\\partial f}{\\partial y}=x^2+3$. Other notations: $f_x$, $\\ \\partial_xf$."
+ },
+ {
+  "t": "p",
+  "uz": "**Ikkinchi tartibli xususiy hosilalar.** Silliq funksiyalar uchun aralash hosilalar differensiallash tartibiga bog'liq emas (**Shvars teoremasi, Schwarz's theorem**):",
+  "ru": "**Частные производные второго порядка.** Для гладких функций смешанные производные не зависят от порядка дифференцирования (**теорема Шварца**):",
+  "en": "**Second-order partial derivatives.** For smooth functions the mixed derivatives do not depend on the order of differentiation (**Schwarz's theorem**):"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\partial^2f}{\\partial x\\,\\partial y}=\\frac{\\partial^2f}{\\partial y\\,\\partial x}"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B0-L05-F02.png",
+   "ru": "figures/B0-L05-F02-ru.png",
+   "en": "figures/B0-L05-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. To'liq differensial va xatolar tarqalishi (Total differential and error propagation)",
+  "ru": "3. Полный дифференциал и распространение погрешностей",
+  "en": "3. Total differential and error propagation"
+ },
+ {
+  "t": "p",
+  "uz": "Barcha o'zgaruvchilar kichik miqdorga o'zgarganda funksiya o'zgarishi **to'liq differensial (total differential)** bilan beriladi:",
+  "ru": "Когда все переменные немного меняются, изменение функции даётся **полным дифференциалом**:",
+  "en": "When all variables change slightly, the change of the function is given by the **total differential**:"
+ },
+ {
+  "t": "m",
+  "m": "df=\\frac{\\partial f}{\\partial x}\\,dx+\\frac{\\partial f}{\\partial y}\\,dy+\\frac{\\partial f}{\\partial z}\\,dz"
+ },
+ {
+  "t": "p",
+  "uz": "**Xatolar tarqalishi (error propagation).** O'lchangan kattaliklar xatolari $\\Delta x$, $\\Delta y$ bo'lsa, eng katta xato modullar yig'indisi bilan, bog'liq bo'lmagan tasodifiy xatolar esa kvadratlar yig'indisining ildizi bilan baholanadi:",
+  "ru": "**Распространение погрешностей.** Если погрешности измеренных величин $\\Delta x$, $\\Delta y$, то наибольшую погрешность оценивают суммой модулей, а независимые случайные погрешности — корнем из суммы квадратов:",
+  "en": "**Error propagation.** If the measured quantities have errors $\\Delta x$, $\\Delta y$, the maximum error is estimated by the sum of absolute values, and independent random errors by the square root of the sum of squares:"
+ },
+ {
+  "t": "m",
+  "m": "\\Delta f_{\\max}=\\left|\\frac{\\partial f}{\\partial x}\\right|\\Delta x+\\left|\\frac{\\partial f}{\\partial y}\\right|\\Delta y,\\qquad \\sigma_f=\\sqrt{\\left(\\frac{\\partial f}{\\partial x}\\sigma_x\\right)^2+\\left(\\frac{\\partial f}{\\partial y}\\sigma_y\\right)^2}"
+ },
+ {
+  "t": "p",
+  "uz": "Ko'paytma va bo'linma uchun nisbiy xatolar bilan ishlash qulay: $f=x^ay^b$ bo'lsa, $\\dfrac{\\sigma_f}{f}=\\sqrt{\\left(a\\dfrac{\\sigma_x}{x}\\right)^2+\\left(b\\dfrac{\\sigma_y}{y}\\right)^2}$.",
+  "ru": "Для произведения и частного удобно работать с относительными погрешностями: если $f=x^ay^b$, то $\\dfrac{\\sigma_f}{f}=\\sqrt{\\left(a\\dfrac{\\sigma_x}{x}\\right)^2+\\left(b\\dfrac{\\sigma_y}{y}\\right)^2}$.",
+  "en": "For products and quotients it is convenient to use relative errors: if $f=x^ay^b$, then $\\dfrac{\\sigma_f}{f}=\\sqrt{\\left(a\\dfrac{\\sigma_x}{x}\\right)^2+\\left(b\\dfrac{\\sigma_y}{y}\\right)^2}$."
+ },
+ {
+  "t": "p",
+  "uz": "**Zanjir qoidasi (chain rule).** Agar $x=x(t)$, $y=y(t)$ bo'lsa, $f$ ning vaqt bo'yicha o'zgarishi:",
+  "ru": "**Цепное правило.** Если $x=x(t)$, $y=y(t)$, то изменение $f$ во времени:",
+  "en": "**Chain rule.** If $x=x(t)$ and $y=y(t)$, the time rate of change of $f$ is:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{df}{dt}=\\frac{\\partial f}{\\partial x}\\frac{dx}{dt}+\\frac{\\partial f}{\\partial y}\\frac{dy}{dt}"
+ },
+ {
+  "t": "h2",
+  "uz": "4. Gradient va yo'nalish bo'yicha hosila (Gradient and directional derivative)",
+  "ru": "4. Градиент и производная по направлению",
+  "en": "4. Gradient and directional derivative"
+ },
+ {
+  "t": "p",
+  "uz": "**Nabla operatori (del operator)** va **gradient (gradient)** — xususiy hosilalardan tuzilgan vektor:",
+  "ru": "**Оператор набла** и **градиент** — вектор, составленный из частных производных:",
+  "en": "The **del operator** and the **gradient** — a vector made of partial derivatives:"
+ },
+ {
+  "t": "m",
+  "m": "\\nabla=\\vec i\\,\\frac{\\partial}{\\partial x}+\\vec j\\,\\frac{\\partial}{\\partial y}+\\vec k\\,\\frac{\\partial}{\\partial z},\\qquad \\nabla f=\\left(\\frac{\\partial f}{\\partial x},\\ \\frac{\\partial f}{\\partial y},\\ \\frac{\\partial f}{\\partial z}\\right)"
+ },
+ {
+  "t": "p",
+  "uz": "**Yo'nalish bo'yicha hosila (directional derivative)** — birlik vektor $\\vec e$ yo'nalishidagi o'zgarish tezligi:",
+  "ru": "**Производная по направлению** — скорость изменения в направлении единичного вектора $\\vec e$:",
+  "en": "The **directional derivative** is the rate of change in the direction of a unit vector $\\vec e$:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\partial f}{\\partial e}=\\nabla f\\cdot\\vec e=|\\nabla f|\\cos\\theta"
+ },
+ {
+  "t": "li",
+  "uz": "$\\nabla f$ — funksiya **eng tez o'sadigan** yo'nalish; $|\\nabla f|$ — shu eng katta o'sish tezligi; $-\\nabla f$ — eng tez kamayish yo'nalishi.",
+  "ru": "$\\nabla f$ — направление **наискорейшего возрастания** функции; $|\\nabla f|$ — эта наибольшая скорость роста; $-\\nabla f$ — направление наискорейшего убывания.",
+  "en": "$\\nabla f$ points in the direction of **fastest increase** of the function; $|\\nabla f|$ is that greatest rate of increase; $-\\nabla f$ is the direction of fastest decrease."
+ },
+ {
+  "t": "li",
+  "uz": "$\\nabla f$ sath chiziqlari (sirtlari)ga **perpendikulyar**: sath chizig'i bo'ylab funksiya o'zgarmaydi ([[F03]]).",
+  "ru": "$\\nabla f$ **перпендикулярен** линиям (поверхностям) уровня: вдоль линии уровня функция не меняется ([[F03]]).",
+  "en": "$\\nabla f$ is **perpendicular** to the level curves (surfaces): the function does not change along a level curve ([[F03]])."
+ },
+ {
+  "t": "li",
+  "uz": "Sath chiziqlari zich joyda gradient katta (sirt tik).",
+  "ru": "Где линии уровня густые, градиент большой (поверхность крутая).",
+  "en": "Where the level curves are close together, the gradient is large (the surface is steep)."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B0-L05-F03.png",
+   "ru": "figures/B0-L05-F03-ru.png",
+   "en": "figures/B0-L05-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Fizikada gradient: kuch, maydon, issiqlik oqimi (Gradient in physics)",
+  "ru": "5. Градиент в физике: сила, поле, тепловой поток",
+  "en": "5. Gradient in physics: force, field, heat flow"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Konservativ kuch",
+    "ru": "Консервативная сила",
+    "en": "Conservative force",
+    "m": "\\vec F=-\\nabla U"
+   },
+   {
+    "uz": "Elektr maydon kuchlanganligi",
+    "ru": "Напряжённость электрического поля",
+    "en": "Electric field",
+    "m": "\\vec E=-\\nabla V"
+   },
+   {
+    "uz": "Issiqlik oqimi zichligi (Furye qonuni)",
+    "ru": "Плотность теплового потока (закон Фурье)",
+    "en": "Heat flux (Fourier's law)",
+    "m": "\\vec q=-\\kappa\\,\\nabla T"
+   },
+   {
+    "uz": "Potensiallar ayirmasi",
+    "ru": "Разность потенциалов",
+    "en": "Potential difference",
+    "m": "V_B-V_A=-\\int_A^B\\vec E\\cdot d\\vec l"
+   }
+  ]
+ },
+ {
+  "t": "p",
+  "uz": "Elektr maydon chiziqlari ekvipotensial sirtlarga perpendikulyar va potensial kamayadigan tomonga yo'nalgan. Nuqtaviy zaryad uchun $V=kq/r$ va radial birlik vektor $\\vec e_r$ bilan ([[F04]]):",
+  "ru": "Линии электрического поля перпендикулярны эквипотенциальным поверхностям и направлены в сторону убывания потенциала. Для точечного заряда $V=kq/r$ и с радиальным единичным вектором $\\vec e_r$ ([[F04]]):",
+  "en": "Electric field lines are perpendicular to the equipotential surfaces and point toward decreasing potential. For a point charge, $V=kq/r$, and with the radial unit vector $\\vec e_r$ ([[F04]]):"
+ },
+ {
+  "t": "m",
+  "m": "\\vec E=-\\nabla\\frac{kq}{r}=\\frac{kq}{r^2}\\,\\vec e_r,\\qquad \\nabla f(r)=\\frac{df}{dr}\\,\\vec e_r,\\qquad \\nabla r=\\vec e_r=\\frac{\\vec r}{r}"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B0-L05-F04.png",
+   "ru": "figures/B0-L05-F04-ru.png",
+   "en": "figures/B0-L05-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Ekstremumlar va egar nuqta (Extrema and saddle points)",
+  "ru": "6. Экстремумы и седловая точка",
+  "en": "6. Extrema and saddle points"
+ },
+ {
+  "t": "p",
+  "uz": "**Kritik nuqta (critical point):** $\\nabla f=\\vec 0$. Uning turini ikkinchi hosilalar aniqlaydi; $D=f_{xx}f_{yy}-f_{xy}^2$ ([[F05]]):",
+  "ru": "**Критическая точка:** $\\nabla f=\\vec 0$. Её тип определяют вторые производные; $D=f_{xx}f_{yy}-f_{xy}^2$ ([[F05]]):",
+  "en": "**Critical point:** $\\nabla f=\\vec 0$. Its type is determined by the second derivatives; $D=f_{xx}f_{yy}-f_{xy}^2$ ([[F05]]):"
+ },
+ {
+  "t": "li",
+  "uz": "$D>0$, $f_{xx}>0$ — **lokal minimum**; $D>0$, $f_{xx}<0$ — **lokal maksimum**.",
+  "ru": "$D>0$, $f_{xx}>0$ — **локальный минимум**; $D>0$, $f_{xx}<0$ — **локальный максимум**.",
+  "en": "$D>0$, $f_{xx}>0$ — a **local minimum**; $D>0$, $f_{xx}<0$ — a **local maximum**."
+ },
+ {
+  "t": "li",
+  "uz": "$D<0$ — **egar nuqta (saddle point)**: bir yo'nalishda minimum, boshqasida maksimum (masalan, $f=x^2-y^2$ uchun $(0,\\,0)$).",
+  "ru": "$D<0$ — **седловая точка**: в одном направлении минимум, в другом максимум (например, $(0,\\,0)$ для $f=x^2-y^2$).",
+  "en": "$D<0$ — a **saddle point**: a minimum in one direction and a maximum in another (for example, $(0,\\,0)$ for $f=x^2-y^2$)."
+ },
+ {
+  "t": "li",
+  "uz": "Fizikada: barqaror muvozanat — potensial energiya minimumi; egar nuqtada muvozanat beqaror.",
+  "ru": "В физике: устойчивое равновесие — минимум потенциальной энергии; в седловой точке равновесие неустойчиво.",
+  "en": "In physics: stable equilibrium is a minimum of the potential energy; equilibrium at a saddle point is unstable."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B0-L05-F05.png",
+   "ru": "figures/B0-L05-F05-ru.png",
+   "en": "figures/B0-L05-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Divergensiya, rotor va laplasian (Divergence, curl and Laplacian)",
+  "ru": "7. Дивергенция, ротор и лапласиан",
+  "en": "7. Divergence, curl and Laplacian"
+ },
+ {
+  "t": "p",
+  "uz": "Vektor maydon $\\vec A=(A_x,\\,A_y,\\,A_z)$ uchun nabla operatori bilan yana ikki amal aniqlanadi. **Divergensiya (divergence)** — maydon manbalari zichligi; **rotor (curl)** — maydonning uyurmaliligi ([[F06]]):",
+  "ru": "Для векторного поля $\\vec A=(A_x,\\,A_y,\\,A_z)$ с помощью оператора набла определяют ещё две операции. **Дивергенция** — плотность источников поля; **ротор** — завихрённость поля ([[F06]]):",
+  "en": "For a vector field $\\vec A=(A_x,\\,A_y,\\,A_z)$, two more operations are defined with the del operator. The **divergence** is the density of the field's sources; the **curl** is the field's rotation ([[F06]]):"
+ },
+ {
+  "t": "m",
+  "m": "\\nabla\\cdot\\vec A=\\frac{\\partial A_x}{\\partial x}+\\frac{\\partial A_y}{\\partial y}+\\frac{\\partial A_z}{\\partial z}"
+ },
+ {
+  "t": "m",
+  "m": "\\nabla\\times\\vec A=\\left(\\frac{\\partial A_z}{\\partial y}-\\frac{\\partial A_y}{\\partial z},\\ \\frac{\\partial A_x}{\\partial z}-\\frac{\\partial A_z}{\\partial x},\\ \\frac{\\partial A_y}{\\partial x}-\\frac{\\partial A_x}{\\partial y}\\right)"
+ },
+ {
+  "t": "p",
+  "uz": "**Laplasian (Laplacian)** — gradientning divergensiyasi: $\\nabla^2f=\\dfrac{\\partial^2f}{\\partial x^2}+\\dfrac{\\partial^2f}{\\partial y^2}+\\dfrac{\\partial^2f}{\\partial z^2}$. Muhim ayniyatlar va misollar:",
+  "ru": "**Лапласиан** — дивергенция градиента: $\\nabla^2f=\\dfrac{\\partial^2f}{\\partial x^2}+\\dfrac{\\partial^2f}{\\partial y^2}+\\dfrac{\\partial^2f}{\\partial z^2}$. Важные тождества и примеры:",
+  "en": "The **Laplacian** is the divergence of the gradient: $\\nabla^2f=\\dfrac{\\partial^2f}{\\partial x^2}+\\dfrac{\\partial^2f}{\\partial y^2}+\\dfrac{\\partial^2f}{\\partial z^2}$. Important identities and examples:"
+ },
+ {
+  "t": "m",
+  "m": "\\nabla\\times(\\nabla f)=\\vec 0,\\qquad \\nabla\\cdot(\\nabla\\times\\vec A)=0,\\qquad \\nabla\\cdot\\vec r=3,\\qquad \\nabla^2\\frac1r=0\\ \\ (r\\ne0)"
+ },
+ {
+  "t": "p",
+  "uz": "Shuning uchun potensialdan olingan maydon ($\\vec E=-\\nabla V$) uyurmasiz: $\\nabla\\times\\vec E=\\vec 0$ (elektrostatikada). Gauss qonuni differensial ko'rinishda: $\\nabla\\cdot\\vec E=\\rho/\\varepsilon_0$.",
+  "ru": "Поэтому поле, полученное из потенциала ($\\vec E=-\\nabla V$), безвихревое: $\\nabla\\times\\vec E=\\vec 0$ (в электростатике). Закон Гаусса в дифференциальной форме: $\\nabla\\cdot\\vec E=\\rho/\\varepsilon_0$.",
+  "en": "Therefore a field obtained from a potential ($\\vec E=-\\nabla V$) is curl-free: $\\nabla\\times\\vec E=\\vec 0$ (in electrostatics). Gauss's law in differential form: $\\nabla\\cdot\\vec E=\\rho/\\varepsilon_0$."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B0-L05-F06.png",
+   "ru": "figures/B0-L05-F06-ru.png",
+   "en": "figures/B0-L05-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Silindrik va sferik koordinatalar (Cylindrical and spherical coordinates)",
+  "ru": "8. Цилиндрические и сферические координаты",
+  "en": "8. Cylindrical and spherical coordinates"
+ },
+ {
+  "t": "p",
+  "uz": "Simmetrik masalalarda dekart koordinatalari o'rniga **silindrik** $(\\rho,\\,\\varphi,\\,z)$ yoki **sferik** $(r,\\,\\theta,\\,\\varphi)$ koordinatalar qulay ([[F07]]):",
+  "ru": "В симметричных задачах вместо декартовых координат удобны **цилиндрические** $(\\rho,\\,\\varphi,\\,z)$ или **сферические** $(r,\\,\\theta,\\,\\varphi)$ координаты ([[F07]]):",
+  "en": "In symmetric problems, **cylindrical** $(\\rho,\\,\\varphi,\\,z)$ or **spherical** $(r,\\,\\theta,\\,\\varphi)$ coordinates are more convenient than Cartesian ones ([[F07]]):"
+ },
+ {
+  "t": "m",
+  "m": "x=r\\sin\\theta\\cos\\varphi,\\qquad y=r\\sin\\theta\\sin\\varphi,\\qquad z=r\\cos\\theta"
+ },
+ {
+  "t": "p",
+  "uz": "Funksiya faqat $r$ ga bog'liq bo'lsa (sferik simmetriya), gradient faqat radial: $\\nabla f=\\dfrac{df}{dr}\\,\\vec e_r$. Hajm elementi: $dV=r^2\\sin\\theta\\,dr\\,d\\theta\\,d\\varphi$.",
+  "ru": "Если функция зависит только от $r$ (сферическая симметрия), градиент только радиальный: $\\nabla f=\\dfrac{df}{dr}\\,\\vec e_r$. Элемент объёма: $dV=r^2\\sin\\theta\\,dr\\,d\\theta\\,d\\varphi$.",
+  "en": "If a function depends only on $r$ (spherical symmetry), the gradient is purely radial: $\\nabla f=\\dfrac{df}{dr}\\,\\vec e_r$. The volume element is $dV=r^2\\sin\\theta\\,dr\\,d\\theta\\,d\\varphi$."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B0-L05-F07.png",
+   "ru": "figures/B0-L05-F07-ru.png",
+   "en": "figures/B0-L05-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. GRE uchun tez tekshiruvlar (Quick checks for the GRE)",
+  "ru": "9. Быстрые проверки для GRE",
+  "en": "9. Quick checks for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "Ishorani tekshiring: $\\vec E=-\\nabla V$ — maydon potensial **kamayadigan** tomonga yo'nalgan.",
+  "ru": "Проверяйте знак: $\\vec E=-\\nabla V$ — поле направлено в сторону **убывания** потенциала.",
+  "en": "Check the sign: $\\vec E=-\\nabla V$ — the field points toward **decreasing** potential."
+ },
+ {
+  "t": "li",
+  "uz": "Birlikni tekshiring: $[\\nabla V]=\\mathrm{V/m}$, $\\ [\\nabla U]=\\mathrm{J/m}=\\mathrm{N}$.",
+  "ru": "Проверяйте единицы: $[\\nabla V]=\\mathrm{V/m}$, $\\ [\\nabla U]=\\mathrm{J/m}=\\mathrm{N}$.",
+  "en": "Check units: $[\\nabla V]=\\mathrm{V/m}$, $\\ [\\nabla U]=\\mathrm{J/m}=\\mathrm{N}$."
+ },
+ {
+  "t": "li",
+  "uz": "Xatolar: daraja ko'rsatkichi nisbiy xatoga ko'paytuvchi bo'ladi; bog'liq bo'lmagan xatolar kvadratlar orqali qo'shiladi.",
+  "ru": "Погрешности: показатель степени становится множителем при относительной погрешности; независимые погрешности складываются в квадратах.",
+  "en": "Errors: the exponent becomes a factor of the relative error; independent errors add in quadrature."
+ },
+ {
+  "t": "li",
+  "uz": "Maydon konservativmi? $\\nabla\\times\\vec F=\\vec 0$ bo'lsa, $\\vec F=-\\nabla U$ ko'rinishida yozish mumkin.",
+  "ru": "Консервативно ли поле? Если $\\nabla\\times\\vec F=\\vec 0$, его можно записать как $\\vec F=-\\nabla U$.",
+  "en": "Is a field conservative? If $\\nabla\\times\\vec F=\\vec 0$, it can be written as $\\vec F=-\\nabla U$."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Xususiy hosila",
+    "ru": "Частная производная",
+    "en": "Partial derivative",
+    "m": "\\frac{\\partial f}{\\partial x}\\Big|_{y=\\text{const}}"
+   },
+   {
+    "uz": "To'liq differensial",
+    "ru": "Полный дифференциал",
+    "en": "Total differential",
+    "m": "df=f_x\\,dx+f_y\\,dy"
+   },
+   {
+    "uz": "Tasodifiy xato",
+    "ru": "Случайная погрешность",
+    "en": "Random error",
+    "m": "\\sigma_f=\\sqrt{(f_x\\sigma_x)^2+(f_y\\sigma_y)^2}"
+   },
+   {
+    "uz": "Gradient",
+    "ru": "Градиент",
+    "en": "Gradient",
+    "m": "\\nabla f=(f_x,\\ f_y,\\ f_z)"
+   },
+   {
+    "uz": "Yo'nalish bo'yicha hosila",
+    "ru": "Производная по направлению",
+    "en": "Directional derivative",
+    "m": "\\nabla f\\cdot\\vec e"
+   },
+   {
+    "uz": "Kuch va maydon",
+    "ru": "Сила и поле",
+    "en": "Force and field",
+    "m": "\\vec F=-\\nabla U,\\quad \\vec E=-\\nabla V"
+   },
+   {
+    "uz": "Ekstremum testi",
+    "ru": "Признак экстремума",
+    "en": "Second-derivative test",
+    "m": "D=f_{xx}f_{yy}-f_{xy}^2"
+   },
+   {
+    "uz": "Divergensiya",
+    "ru": "Дивергенция",
+    "en": "Divergence",
+    "m": "\\nabla\\cdot\\vec A=\\partial_xA_x+\\partial_yA_y+\\partial_zA_z"
+   },
+   {
+    "uz": "Ayniyatlar",
+    "ru": "Тождества",
+    "en": "Identities",
+    "m": "\\nabla\\times\\nabla f=\\vec 0,\\quad \\nabla\\cdot(\\nabla\\times\\vec A)=0"
+   }
+  ]
+ }
+]
