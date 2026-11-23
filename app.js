@@ -4,6 +4,10 @@
  * Til qoidasi: UZ (yoki RU) tanlansa — har bir blok avval o'zbekcha (ruscha), ostida ko'k rangda inglizcha;
  *              EN tanlansa — faqat inglizcha.
  * Holat xotirada (URL "#" Telegram ma'lumotlari uchun band). Deep link: ?startapp=B0-L01 yoki ?dars=B0-L01&bolim=test
+ * Aniq joy (izoh tizimi): ?startapp=B1-L11__masalalar__S05q3  yoki  ?dars=B1-L11&bolim=masalalar&joy=S05q3;
+ *   izohni ochish: ?startapp=izoh__142. Har bir izohlanadigan blokda data-a="<joy>" (izoh.js ishlatadi):
+ *   nazariya n<i> (jadval qatori n<i>r<k>), lug'at g<i>, masala S01 / S01s (shart) / S01f (rasm) / S01q<n> (qadam) / S01a (javob),
+ *   test Q01 / Q01s / Q01o<A-E> (variant) / Q01q<n> / Q01d<A-E> (tahlil), mustaqil H01.
  */
 (() => {
   "use strict";
@@ -36,6 +40,7 @@
     results:  { uz: "Natijani ko'rish", ru: "Посмотреть результат", en: "See results" },
     correct:  { uz: "To'g'ri!", ru: "Верно!", en: "Correct!" },
     wrong:    { uz: "Noto'g'ri. To'g'ri javob:", ru: "Неверно. Правильный ответ:", en: "Wrong. Correct answer:" },
+    rightIs:  { uz: "To'g'ri javob:", ru: "Правильный ответ:", en: "Correct answer:" },
     restart:  { uz: "Qaytadan yechish", ru: "Решить заново", en: "Try again" },
     of:       { uz: "to'g'ri", ru: "верно", en: "correct" },
     review:   { uz: "Savolni bosib, yechimini qayta ko'ring.", ru: "Нажмите на вопрос, чтобы снова посмотреть решение.", en: "Tap a question to review its solution." },
@@ -72,12 +77,29 @@
   const view = $("#view");
   const t = (o) => (o && (o[lang] ?? o.uz)) || "";
   const locIn = (s, L) => LOCAL[L].reduce((a, [x, y]) => a.split(x).join(y), s);
+  // qo'shimcha modullar (izoh.js) uchun umumiy interfeys: GRE.on("render", f), GRE.emit(...)
+  const hooks = {};
+  window.GRE = {
+    on(ev, f) { (hooks[ev] = hooks[ev] || []).push(f); },
+    emit(ev, ...a) { (hooks[ev] || []).forEach((f) => { try { f(...a); } catch (e) { console.error(e); } }); },
+  };
+  // HTML qismining birinchi tegiga data-a="<joy>" qo'shadi
+  const A = (html, a) => html.replace(/^(\s*<[a-zA-Z0-9]+)/, `$1 data-a="${a}"`);
+  const sid = (id) => String(id).split("-").pop();     // "B1-L11-S05" -> "S05"
 
   // ------------------------------------------------------------------ marshrut holati
   const qs = new URLSearchParams(location.search);
   const state = qs.get("dars")
-    ? { view: "lesson", id: qs.get("dars").toUpperCase(), tab: qs.get("bolim") || "nazariya" }
+    ? { view: "lesson", id: qs.get("dars").toUpperCase(), tab: qs.get("bolim") || "nazariya", joy: qs.get("joy") || null }
     : { view: "home" };
+  // start_param: "B0-L01" | "B0_L01" | "B1-L11__masalalar__S05q3" | "izoh__142"
+  function parseStart(sp) {
+    if (!sp) return null;
+    const p = sp.split("__");
+    if (p[0] === "izoh") return { izoh: p[1] };
+    return { view: "lesson", id: p[0].toUpperCase().replace(/_/g, "-"), tab: p[1] || "nazariya", joy: p[2] || null };
+  }
+  if (qs.get("izoh")) state.izoh = qs.get("izoh");
 
   // ------------------------------------------------------------------ Telegram
   let tg = null;
@@ -88,8 +110,9 @@
     try {
       tg.ready(); tg.expand();
       tg.BackButton.onClick(() => goBack());
-      const sp = tg.initDataUnsafe && tg.initDataUnsafe.start_param;   // ?startapp=B0-L01
-      if (sp && state.view === "home") go({ view: "lesson", id: sp.toUpperCase().replace(/_/g, "-"), tab: "nazariya" });
+      const sp = parseStart(tg.initDataUnsafe && tg.initDataUnsafe.start_param);   // ?startapp=B0-L01
+      if (sp && sp.izoh) { window.GRE.pendingIzoh = sp.izoh; syncBack(); window.GRE.emit("izoh"); }
+      else if (sp && state.view === "home") go(sp);
       else syncBack();
     } catch (e) { /* Telegram'dan tashqarida — oddiy sahifa */ }
   }
@@ -183,8 +206,34 @@
       if (state.view === "home") return await home();
       if (state.view === "module") return await moduleView(state.mod);
       if (state.view === "about") return await about();
-      return await lesson(state.id, TAB_ORDER.includes(state.tab) ? state.tab : "nazariya");
+      await lesson(state.id, TAB_ORDER.includes(state.tab) ? state.tab : "nazariya");
+      if (state.view === "lesson") { focusJoy(); window.GRE.emit("render", state); }
     } catch (e) { console.error(e); fail(); }
+  }
+
+  // aniq joyga o'tish (deep link yoki "Joyini ko'rsatish"): yopiq yechimni ochadi, blokni yoritadi
+  function focusJoy() {
+    const a = state.joy;
+    state.joy = null;
+    if (!a) return;
+    const el = view.querySelector(`[data-a="${CSS.escape(a)}"]`);
+    if (!el) return;
+    const sol = el.closest(".sol[hidden]");
+    if (sol) {
+      sol.hidden = false;
+      const b = view.querySelector(`button[data-i="${sol.id.slice(3)}"]`);
+      if (b) b.textContent = t(T.hide);
+    }
+    requestAnimationFrame(() => {
+      el.scrollIntoView({ block: "center" });
+      el.classList.remove("joyflash"); void el.offsetWidth; el.classList.add("joyflash");
+    });
+    // yuqoridagi rasmlar keyin yuklanib sahifani surib yuborsa — blokni qayta markazga olib kelish
+    [300, 800, 1600, 2600].forEach((ms) => setTimeout(() => {
+      if (!el.isConnected) return;
+      const r = el.getBoundingClientRect();
+      if (r.top < 60 || r.bottom > innerHeight - 80) el.scrollIntoView({ block: "center" });
+    }, ms));
   }
 
   // ------------------------------------------------------------------ bosh sahifa: modullar
@@ -245,20 +294,21 @@
   function blocks(list, figBase) {
     let html = "", inList = false;
     const closeList = () => { if (inList) { html += "</ul>"; inList = false; } };
-    for (const b of list) {
+    list.forEach((b, i) => {
+      const a = "n" + i;
       if (b.t !== "li") closeList();
-      if (b.t === "h1") continue;
-      else if (b.t === "h2") html += bi(b, "h2");
-      else if (b.t === "p") html += bi(b, "p");
-      else if (b.t === "note") html += bi(b, "p", "note");
-      else if (b.t === "li") { if (!inList) { html += `<ul class="blist">`; inList = true; } html += `<li>${bi(b, "div")}</li>`; }
-      else if (b.t === "m") html += `<div class="fm">${tex(b.m, true)}</div>`;
-      else if (b.t === "fig") html += `<figure id="fig-${b.fig}"><img src="${figBase}${b.src[lang] || b.src.uz}?v=${VER}" alt="${esc(t(b.cap || {}) || b.fig)}">
+      if (b.t === "h1") return;
+      else if (b.t === "h2") html += A(bi(b, "h2"), a);
+      else if (b.t === "p") html += A(bi(b, "p"), a);
+      else if (b.t === "note") html += A(bi(b, "p", "note"), a);
+      else if (b.t === "li") { if (!inList) { html += `<ul class="blist">`; inList = true; } html += `<li data-a="${a}">${bi(b, "div")}</li>`; }
+      else if (b.t === "m") html += `<div class="fm" data-a="${a}">${tex(b.m, true)}</div>`;
+      else if (b.t === "fig") html += `<figure id="fig-${b.fig}" data-a="${a}" data-fig="${b.fig}"><img src="${figBase}${b.src[lang] || b.src.uz}?v=${VER}" alt="${esc(t(b.cap || {}) || b.fig)}">
           ${b.cap ? `<figcaption>${bi(b.cap, "span")}</figcaption>` : ""}</figure>`;
-      else if (b.t === "tbl") html += `<div class="tbl">${b.rows.map((r) => `<div class="trow"><div class="tn">${bi(r, "div")}</div>
+      else if (b.t === "tbl") html += `<div class="tbl">${b.rows.map((r, k) => `<div class="trow" data-a="${a}r${k}"><div class="tn">${bi(r, "div")}</div>
           <div class="tv">${r.m ? tex(r.m, false) : esc(r.v)}</div></div>`).join("")}</div>`;
       else if (b.t === "links") html += `<div class="links">${b.items.map((x) => `<a class="btn ghost wide" href="${x.url}" target="_blank" rel="noopener">${esc(t(x))} ↗</a>`).join("")}</div>`;
-    }
+    });
     closeList();
     return html;
   }
@@ -290,40 +340,40 @@
     view.innerHTML = `<input class="search" type="search" placeholder="${esc(t(T.search))}"><div class="card" id="gl"></div>`;
     const box = $("#gl");
     const paint = (q) => {
-      const rows = g.filter((x) => !q || [x.en, x[lang]].join(" ").toLowerCase().includes(q));
-      box.innerHTML = rows.map((x) => `<div class="term">
+      const rows = g.map((x, i) => ({ ...x, i })).filter((x) => !q || [x.en, x[lang]].join(" ").toLowerCase().includes(q));
+      box.innerHTML = rows.map((x) => `<div class="term" data-a="g${x.i}">
           <div class="tm">${esc(x[lang] || x.en)}</div>
           ${lang !== "en" ? `<div class="tr" lang="en">${esc(x.en)}</div>` : ""}
           ${x.formula ? `<div class="f">${tex(x.formula, false)}</div>` : ""}</div>`).join("") || `<div class="muted">—</div>`;
     };
     paint("");
-    $(".search").addEventListener("input", (e) => paint(e.target.value.trim().toLowerCase()));
+    $(".search").addEventListener("input", (e) => { paint(e.target.value.trim().toLowerCase()); window.GRE.emit("render", state); });
   }
 
   // yechim qadamlari: {uz:[...], ru:[...], en:[...]} parallel; har qadam: matn (+ $$formula$$)
   // B1+: rules[i] — shu qadamda ishlatilgan qoida/ta'rif/formula (yashil ramka; uz/ru + ko'k inglizcha)
-  function steps(sol, tag = "ol", rules = null) {
+  function steps(sol, tag = "ol", rules = null, pfx = "") {
     const split = (x) => { const k = x.indexOf("$$"); return k < 0 ? [x, ""] : [x.slice(0, k).trim(), x.slice(k)]; };
     const main = sol[lang] || sol.uz, en = sol.en || [];
     return `<${tag} class="steps">${main.map((s, i) => {
       const [txt, math] = split(s), [txtEn] = split(en[i] || "");
       const r = rules && rules[i];
-      return `<li>${txt ? bi({ [lang]: txt, en: txtEn }, "div") : ""}${math ? `<div class="fm">${rich(math)}</div>` : ""}${r ? `<div class="rule">${bi(r, "div")}</div>` : ""}</li>`;
+      return `<li${pfx ? ` data-a="${pfx}q${i + 1}"` : ""}>${txt ? bi({ [lang]: txt, en: txtEn }, "div") : ""}${math ? `<div class="fm">${rich(math)}</div>` : ""}${r ? `<div class="rule">${bi(r, "div")}</div>` : ""}</li>`;
     }).join("")}</${tag}>`;
   }
 
   async function solved(id) {
     const S = await getJSON(`${base(id)}solved.json`);
-    view.innerHTML = S.map((s, i) => `<section class="card">
-        <div class="row"><span class="code">${s.id.split("-").pop()}</span><span class="chip ${s.difficulty}">${esc(t(T.diff[s.difficulty]))}</span></div>
-        ${bi(s.statement, "p")}
-        ${s.figure ? `<img class="fig" src="${base(id)}${s.figure}?v=${VER}" alt="${s.id}">` : ""}
+    view.innerHTML = S.map((s, i) => { const a = sid(s.id); return `<section class="card" data-a="${a}">
+        <div class="row"><span class="code">${a}</span><span class="chip ${s.difficulty}">${esc(t(T.diff[s.difficulty]))}</span></div>
+        ${A(bi(s.statement, "p"), a + "s")}
+        ${s.figure ? `<img class="fig" data-a="${a}f" src="${base(id)}${s.figure}?v=${VER}" alt="${s.id}">` : ""}
         <button class="btn ghost wide" data-i="${i}">${esc(t(T.show))}</button>
         <div class="sol" id="sol${i}" hidden>
-          ${steps(s.solution, "ol", s.rules)}
-          <div class="answer"><b>${esc(t(T.answer))}:</b> ${tex(locIn(s.answer, lang), false)}
+          ${steps(s.solution, "ol", s.rules, a)}
+          <div class="answer" data-a="${a}a"><b>${esc(t(T.answer))}:</b> ${tex(locIn(s.answer, lang), false)}
             <div class="basis"><b>${esc(t(T.basis))}:</b> ${bi(s.basis, "span")}</div></div>
-        </div></section>`).join("");
+        </div></section>`; }).join("");
     zoomable(view);
     view.querySelectorAll("button[data-i]").forEach((b) => b.addEventListener("click", () => {
       const box = $(`#sol${b.dataset.i}`);
@@ -338,24 +388,30 @@
     const key = `${id}:quiz`;
     const st = store.get(key, { i: 0, a: {} });
     const qObj = (q) => ({ uz: q.question_uz, ru: q.question_ru, en: q.question_en });
+    // deep link test savoliga olib kelsa — o'sha savol yechimi bilan "ko'rib chiqish" rejimida ochiladi (javob yozilmaydi)
+    let peek = null;
+    const jm = state.joy && state.joy.match(/^Q\d+/);
+    if (jm) { const k = Q.findIndex((q) => sid(q.id) === jm[0]); if (k >= 0) { st.i = k; peek = Q[k].id; } }
 
     const paint = () => {
       if (st.i >= Q.length) return results();
       const q = Q[st.i];
+      const a = sid(q.id);
       const chosen = st.a[q.id];
-      const done = chosen !== undefined;
+      const done = chosen !== undefined || peek === q.id;
       const pct = Math.round(100 * st.i / Q.length);
-      const dist = q.distractors ? Object.keys(q.distractors).map((k) => `<li><b>(${k})</b> ${bi({ uz: q.distractors[k], ru: (q.distractors_ru || {})[k], en: (q.distractors_en || {})[k] }, "span")}</li>`).join("") : "";
+      const dist = q.distractors ? Object.keys(q.distractors).map((k) => `<li data-a="${a}d${k}"><b>(${k})</b> ${bi({ uz: q.distractors[k], ru: (q.distractors_ru || {})[k], en: (q.distractors_en || {})[k] }, "span")}</li>`).join("") : "";
       view.innerHTML = `<div class="muted">${esc(t(T.question))} ${st.i + 1} / ${Q.length}</div>
         <div class="progress"><i style="width:${pct}%"></i></div>
-        <section class="card">${bi(qObj(q), "p")}
+        <section class="card" data-a="${a}">${A(bi(qObj(q), "p"), a + "s")}
           <div class="opts">${q.options.map((o, k) => {
             const cls = done ? (k === q.correct ? "ok" : (k === chosen ? "bad" : "")) : "";
-            return `<button class="opt ${cls}" data-k="${k}" ${done ? "disabled" : ""}><span class="l">${LETTERS[k]}</span><span class="ot">${bi(biLoc(o.replace(/^\([A-E]\)\s*/, "")), "span")}</span></button>`;
+            return `<button class="opt ${cls}" data-k="${k}" data-a="${a}o${LETTERS[k]}" ${done ? "disabled" : ""}><span class="l">${LETTERS[k]}</span><span class="ot">${bi(biLoc(o.replace(/^\([A-E]\)\s*/, "")), "span")}</span></button>`;
           }).join("")}</div>
           ${done ? `<div class="sol">
-            <div class="verdict ${chosen === q.correct ? "ok" : "bad"}">${chosen === q.correct ? esc(t(T.correct)) : `${esc(t(T.wrong))} ${LETTERS[q.correct]}`}</div>
-            ${steps(q.full_solution, "ul", q.rules)}
+            ${chosen === undefined ? `<div class="verdict ok">${esc(t(T.rightIs))} ${LETTERS[q.correct]}</div>` :
+              `<div class="verdict ${chosen === q.correct ? "ok" : "bad"}">${chosen === q.correct ? esc(t(T.correct)) : `${esc(t(T.wrong))} ${LETTERS[q.correct]}`}</div>`}
+            ${steps(q.full_solution, "ul", q.rules, a)}
             ${dist ? `<div class="distr"><b>${esc(t(T.distr))}:</b><ul>${dist}</ul></div>` : ""}
             <p><button class="btn wide" id="nx">${esc(t(st.i === Q.length - 1 ? T.results : T.next))}</button></p></div>` : ""}
         </section>`;
@@ -366,6 +422,7 @@
       }));
       const nx = $("#nx");
       if (nx) nx.addEventListener("click", () => { st.i += 1; store.set(key, st); paint(); window.scrollTo(0, 0); });
+      if (drawn++) window.GRE.emit("render", state);
     };
 
     const results = () => {
@@ -377,17 +434,21 @@
           <p><button class="btn wide" id="rs">${esc(t(T.restart))}</button></p></section>`;
       view.querySelectorAll(".dots span").forEach((d) => d.addEventListener("click", () => { st.i = +d.dataset.k; paint(); }));
       $("#rs").addEventListener("click", () => { st.i = 0; st.a = {}; store.set(key, st); paint(); });
+      if (drawn++) window.GRE.emit("render", state);
     };
+    let drawn = 0;
     paint();
   }
 
   async function homework(id) {
     const H = await getJSON(`${base(id)}homework.json`);
     view.innerHTML = `<section class="card"><div class="muted" style="margin-bottom:6px">${esc(t(T.hwnote))}</div>
-      <ol class="hw">${H.map((h) => `<li>${bi(h.statement, "div")} <span class="chip ${h.difficulty}">${esc(t(T.diff[h.difficulty]))}</span></li>`).join("")}</ol></section>`;
+      <ol class="hw">${H.map((h) => `<li data-a="${sid(h.id)}">${bi(h.statement, "div")} <span class="chip ${h.difficulty}">${esc(t(T.diff[h.difficulty]))}</span></li>`).join("")}</ol></section>`;
   }
 
   // ------------------------------------------------------------------ start
+  Object.assign(window.GRE, { state, go, render, T, t, rich, bi, esc, tex, getJSON, base, store, haptic, view, VER, sid,
+    lang: () => lang, tg: () => tg });
   paintLang();
   render();
   syncBack();
