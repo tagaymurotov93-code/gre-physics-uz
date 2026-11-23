@@ -3,5 +3,5 @@
  *   window.IZOH_API = "https://gre-izoh.<sizning-nomingiz>.workers.dev";
  * Bo'sh qolsa — "Fikr" tugmasi ko'rinmaydi (tizim o'chiq).
  */
-window.IZOH_API = "";
+window.IZOH_API = "https://gre-izoh.tagaymurotov93.workers.dev";
 window.IZOH_BOT = "https://t.me/GREPhysicsUz_bot/darslar";
