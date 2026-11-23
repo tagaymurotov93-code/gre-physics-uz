@@ -404,6 +404,7 @@
       view.innerHTML = `<div class="muted">${esc(t(T.question))} ${st.i + 1} / ${Q.length}</div>
         <div class="progress"><i style="width:${pct}%"></i></div>
         <section class="card" data-a="${a}">${A(bi(qObj(q), "p"), a + "s")}
+          ${q.figure ? `<img class="fig" data-a="${a}f" src="${base(id)}${q.figure}?v=${VER}" alt="${q.id}">` : ""}
           <div class="opts">${q.options.map((o, k) => {
             const cls = done ? (k === q.correct ? "ok" : (k === chosen ? "bad" : "")) : "";
             return `<button class="opt ${cls}" data-k="${k}" data-a="${a}o${LETTERS[k]}" ${done ? "disabled" : ""}><span class="l">${LETTERS[k]}</span><span class="ot">${bi(biLoc(o.replace(/^\([A-E]\)\s*/, "")), "span")}</span></button>`;
@@ -415,6 +416,7 @@
             ${dist ? `<div class="distr"><b>${esc(t(T.distr))}:</b><ul>${dist}</ul></div>` : ""}
             <p><button class="btn wide" id="nx">${esc(t(st.i === Q.length - 1 ? T.results : T.next))}</button></p></div>` : ""}
         </section>`;
+      zoomable(view);
       view.querySelectorAll(".opt:not([disabled])").forEach((b) => b.addEventListener("click", () => {
         st.a[q.id] = +b.dataset.k; store.set(key, st);
         haptic(+b.dataset.k === q.correct ? "success" : "error");
@@ -443,7 +445,8 @@
   async function homework(id) {
     const H = await getJSON(`${base(id)}homework.json`);
     view.innerHTML = `<section class="card"><div class="muted" style="margin-bottom:6px">${esc(t(T.hwnote))}</div>
-      <ol class="hw">${H.map((h) => `<li data-a="${sid(h.id)}">${bi(h.statement, "div")} <span class="chip ${h.difficulty}">${esc(t(T.diff[h.difficulty]))}</span></li>`).join("")}</ol></section>`;
+      <ol class="hw">${H.map((h) => `<li data-a="${sid(h.id)}">${bi(h.statement, "div")}${h.figure ? `<img class="fig" data-a="${sid(h.id)}f" src="${base(id)}${h.figure}?v=${VER}" alt="${h.id}">` : ""} <span class="chip ${h.difficulty}">${esc(t(T.diff[h.difficulty]))}</span></li>`).join("")}</ol></section>`;
+    zoomable(view);
   }
 
   // ------------------------------------------------------------------ start

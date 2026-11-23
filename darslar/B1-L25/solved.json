@@ -1,0 +1,781 @@
+[
+ {
+  "id": "B1-L25-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) $150\\ \\mathrm{kPa}$ bosimdagi gaz $0.6\\ \\mathrm{m^3}$ hajmni egallaydi. Temperatura o'zgarmay hajmi $0.2\\ \\mathrm{m^3}$ gacha kamaytirilsa, bosim qanday bo'ladi? b) Gaz hajmi izotermik ravishda $9\\ \\mathrm{L}$ dan $6\\ \\mathrm{L}$ gacha kamaytirilganda bosimi $40\\ \\mathrm{kPa}$ ga ortdi. Gazning boshlang'ich bosimini toping.",
+   "ru": "а) Газ под давлением $150\\ \\mathrm{kPa}$ занимает объём $0.6\\ \\mathrm{m^3}$. Каким станет давление, если при неизменной температуре уменьшить объём до $0.2\\ \\mathrm{m^3}$? б) При изотермическом уменьшении объёма газа с $9\\ \\mathrm{L}$ до $6\\ \\mathrm{L}$ его давление увеличилось на $40\\ \\mathrm{kPa}$. Найдите начальное давление газа.",
+   "en": "a) A gas at a pressure of $150\\ \\mathrm{kPa}$ occupies a volume of $0.6\\ \\mathrm{m^3}$. What will the pressure be if the volume is reduced to $0.2\\ \\mathrm{m^3}$ at constant temperature? b) When the volume of a gas was reduced isothermally from $9\\ \\mathrm{L}$ to $6\\ \\mathrm{L}$, its pressure rose by $40\\ \\mathrm{kPa}$. Find the initial pressure of the gas."
+  },
+  "figure": "figures/B1-L25-S01.png",
+  "solution": {
+   "uz": [
+    "a) Temperatura o'zgarmas — Boyl–Mariott qonuni: $$p_2=\\frac{p_1V_1}{V_2}=\\frac{150\\cdot0.6}{0.2}=450\\ \\mathrm{kPa}$$",
+    "b) Oxirgi bosim $p_1+40$ ga teng: $$p_1\\cdot9=(p_1+40)\\cdot6$$",
+    "Tenglamani yechamiz: $$3p_1=240,\\qquad p_1=80\\ \\mathrm{kPa}$$"
+   ],
+   "ru": [
+    "а) Температура постоянна — закон Бойля–Мариотта: $$p_2=\\frac{p_1V_1}{V_2}=\\frac{150\\cdot0.6}{0.2}=450\\ \\mathrm{kPa}$$",
+    "б) Конечное давление равно $p_1+40$: $$p_1\\cdot9=(p_1+40)\\cdot6$$",
+    "Решаем уравнение: $$3p_1=240,\\qquad p_1=80\\ \\mathrm{kPa}$$"
+   ],
+   "en": [
+    "a) The temperature is constant — Boyle's law: $$p_2=\\frac{p_1V_1}{V_2}=\\frac{150\\cdot0.6}{0.2}=450\\ \\mathrm{kPa}$$",
+    "b) The final pressure equals $p_1+40$: $$p_1\\cdot9=(p_1+40)\\cdot6$$",
+    "Solve the equation: $$3p_1=240,\\qquad p_1=80\\ \\mathrm{kPa}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Boyl–Mariott qonuni: $p_1V_1=p_2V_2$",
+    "ru": "Закон Бойля–Мариотта: $p_1V_1=p_2V_2$",
+    "en": "Boyle's law: $p_1V_1=p_2V_2$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Boyl–Mariott qonuni",
+   "ru": "Закон Бойля–Мариотта",
+   "en": "Boyle's law"
+  },
+  "answer": "450\\ \\mathrm{kPa};\\ 80\\ \\mathrm{kPa}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 64-mavzu, 6–12, 21–23-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) $27\\ ^\\circ\\mathrm{C}$ temperaturada gaz $12\\ \\mathrm{L}$ hajmni egallaydi. Gaz o'zgarmas bosimda $127\\ ^\\circ\\mathrm{C}$ gacha isitilsa, hajmi qanday bo'ladi? b) Gaz o'zgarmas bosimda $20\\ \\mathrm{K}$ ga isitilganda hajmi $5$ foizga ortdi. Gazning boshlang'ich temperaturasini toping.",
+   "ru": "а) При температуре $27\\ ^\\circ\\mathrm{C}$ газ занимает объём $12\\ \\mathrm{L}$. Каким станет объём, если нагреть газ при постоянном давлении до $127\\ ^\\circ\\mathrm{C}$? б) При нагревании газа при постоянном давлении на $20\\ \\mathrm{K}$ его объём увеличился на $5$ процентов. Найдите начальную температуру газа.",
+   "en": "a) At $27\\ ^\\circ\\mathrm{C}$ a gas occupies a volume of $12\\ \\mathrm{L}$. What will its volume be if it is heated at constant pressure to $127\\ ^\\circ\\mathrm{C}$? b) When a gas was heated at constant pressure by $20\\ \\mathrm{K}$, its volume increased by $5$ percent. Find the initial temperature of the gas."
+  },
+  "figure": "figures/B1-L25-S02.png",
+  "solution": {
+   "uz": [
+    "a) Temperaturalarni Kelvinga o'tkazamiz: $$T_1=300\\ \\mathrm{K},\\qquad T_2=400\\ \\mathrm{K}$$",
+    "Bosim o'zgarmas — Gey-Lyussak qonuni: $$V_2=V_1\\frac{T_2}{T_1}=12\\cdot\\frac{400}{300}=16\\ \\mathrm{L}$$",
+    "b) $V_2=1.05V_1$, $T_2=T_1+20$: $$\\frac{V_1}{T_1}=\\frac{1.05V_1}{T_1+20}$$",
+    "Bundan: $$T_1+20=1.05T_1,\\qquad T_1=400\\ \\mathrm{K}$$"
+   ],
+   "ru": [
+    "а) Переводим температуры в кельвины: $$T_1=300\\ \\mathrm{K},\\qquad T_2=400\\ \\mathrm{K}$$",
+    "Давление постоянно — закон Гей-Люссака: $$V_2=V_1\\frac{T_2}{T_1}=12\\cdot\\frac{400}{300}=16\\ \\mathrm{L}$$",
+    "б) $V_2=1.05V_1$, $T_2=T_1+20$: $$\\frac{V_1}{T_1}=\\frac{1.05V_1}{T_1+20}$$",
+    "Отсюда: $$T_1+20=1.05T_1,\\qquad T_1=400\\ \\mathrm{K}$$"
+   ],
+   "en": [
+    "a) Convert the temperatures to kelvins: $$T_1=300\\ \\mathrm{K},\\qquad T_2=400\\ \\mathrm{K}$$",
+    "The pressure is constant — Charles's law: $$V_2=V_1\\frac{T_2}{T_1}=12\\cdot\\frac{400}{300}=16\\ \\mathrm{L}$$",
+    "b) $V_2=1.05V_1$, $T_2=T_1+20$: $$\\frac{V_1}{T_1}=\\frac{1.05V_1}{T_1+20}$$",
+    "Hence: $$T_1+20=1.05T_1,\\qquad T_1=400\\ \\mathrm{K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Absolyut temperatura: $T=t+273$",
+    "ru": "Абсолютная температура: $T=t+273$",
+    "en": "Absolute temperature: $T=t+273$"
+   },
+   {
+    "uz": "Gey-Lyussak qonuni: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$",
+    "ru": "Закон Гей-Люссака: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$",
+    "en": "Charles's law: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Gey-Lyussak qonuni",
+   "ru": "Закон Гей-Люссака",
+   "en": "Charles's law"
+  },
+  "answer": "16\\ \\mathrm{L};\\ 400\\ \\mathrm{K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 64-mavzu, 42–48-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) Ballondagi gaz $-23\\ ^\\circ\\mathrm{C}$ da $240\\ \\mathrm{kPa}$ bosimga ega. Gaz $77\\ ^\\circ\\mathrm{C}$ gacha isitilsa, bosimi qanday bo'ladi? Ballon hajmi o'zgarmaydi. b) Yopiq idishdagi gaz $120\\ \\mathrm{K}$ ga isitilganda bosimi $1.4$ marta ortdi. Gazning boshlang'ich temperaturasini toping.",
+   "ru": "а) Газ в баллоне при $-23\\ ^\\circ\\mathrm{C}$ имеет давление $240\\ \\mathrm{kPa}$. Каким станет давление, если нагреть газ до $77\\ ^\\circ\\mathrm{C}$? Объём баллона не меняется. б) При нагревании газа в закрытом сосуде на $120\\ \\mathrm{K}$ его давление увеличилось в $1.4$ раза. Найдите начальную температуру газа.",
+   "en": "a) A gas in a cylinder has a pressure of $240\\ \\mathrm{kPa}$ at $-23\\ ^\\circ\\mathrm{C}$. What will the pressure be if the gas is heated to $77\\ ^\\circ\\mathrm{C}$? The volume of the cylinder does not change. b) When a gas in a closed vessel was heated by $120\\ \\mathrm{K}$, its pressure increased $1.4$ times. Find the initial temperature of the gas."
+  },
+  "figure": "figures/B1-L25-S03.png",
+  "solution": {
+   "uz": [
+    "a) Temperaturalar: $$T_1=-23+273=250\\ \\mathrm{K},\\qquad T_2=350\\ \\mathrm{K}$$",
+    "Hajm o'zgarmas — Sharl qonuni: $$p_2=p_1\\frac{T_2}{T_1}=240\\cdot\\frac{350}{250}=336\\ \\mathrm{kPa}$$",
+    "b) $p_2=1.4p_1$, $T_2=T_1+120$: $$\\frac{p_1}{T_1}=\\frac{1.4p_1}{T_1+120}$$",
+    "Bundan: $$0.4T_1=120,\\qquad T_1=300\\ \\mathrm{K}$$"
+   ],
+   "ru": [
+    "а) Температуры: $$T_1=-23+273=250\\ \\mathrm{K},\\qquad T_2=350\\ \\mathrm{K}$$",
+    "Объём постоянен — закон Шарля: $$p_2=p_1\\frac{T_2}{T_1}=240\\cdot\\frac{350}{250}=336\\ \\mathrm{kPa}$$",
+    "б) $p_2=1.4p_1$, $T_2=T_1+120$: $$\\frac{p_1}{T_1}=\\frac{1.4p_1}{T_1+120}$$",
+    "Отсюда: $$0.4T_1=120,\\qquad T_1=300\\ \\mathrm{K}$$"
+   ],
+   "en": [
+    "a) Temperatures: $$T_1=-23+273=250\\ \\mathrm{K},\\qquad T_2=350\\ \\mathrm{K}$$",
+    "The volume is constant — pressure law: $$p_2=p_1\\frac{T_2}{T_1}=240\\cdot\\frac{350}{250}=336\\ \\mathrm{kPa}$$",
+    "b) $p_2=1.4p_1$, $T_2=T_1+120$: $$\\frac{p_1}{T_1}=\\frac{1.4p_1}{T_1+120}$$",
+    "Hence: $$0.4T_1=120,\\qquad T_1=300\\ \\mathrm{K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Absolyut temperatura: $T=t+273$",
+    "ru": "Абсолютная температура: $T=t+273$",
+    "en": "Absolute temperature: $T=t+273$"
+   },
+   {
+    "uz": "Sharl qonuni: $\\frac{p_1}{T_1}=\\frac{p_2}{T_2}$",
+    "ru": "Закон Шарля: $\\frac{p_1}{T_1}=\\frac{p_2}{T_2}$",
+    "en": "Pressure law: $\\frac{p_1}{T_1}=\\frac{p_2}{T_2}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Sharl qonuni",
+   "ru": "Закон Шарля",
+   "en": "Pressure law"
+  },
+  "answer": "336\\ \\mathrm{kPa};\\ 300\\ \\mathrm{K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 64-mavzu, 78–83, 92-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) $15\\ \\mathrm{m}$ chuqurlikdagi ko'l tubidan hajmi $4\\ \\mathrm{mm^3}$ bo'lgan havo pufakchasi ko'tarildi. Suv sirtida uning hajmi qanday bo'ladi? b) Boshqa ko'lda pufakcha tubdan suv sirtiga chiqqanda hajmi $3.5$ marta ortdi. Bu ko'lning chuqurligini toping. Suv temperaturasi hamma joyda bir xil, $p_0=100\\ \\mathrm{kPa}$, $\\rho=1000\\ \\mathrm{kg/m^3}$, $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "а) Со дна озера глубиной $15\\ \\mathrm{m}$ поднялся пузырёк воздуха объёмом $4\\ \\mathrm{mm^3}$. Каким будет его объём у поверхности воды? б) В другом озере пузырёк при всплытии со дна на поверхность увеличился в объёме в $3.5$ раза. Найдите глубину этого озера. Температура воды везде одинакова, $p_0=100\\ \\mathrm{kPa}$, $\\rho=1000\\ \\mathrm{kg/m^3}$, $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "a) An air bubble of volume $4\\ \\mathrm{mm^3}$ rose from the bottom of a lake $15\\ \\mathrm{m}$ deep. What will its volume be at the surface? b) In another lake a bubble rising from the bottom to the surface increased in volume $3.5$ times. Find the depth of this lake. The water temperature is the same everywhere, $p_0=100\\ \\mathrm{kPa}$, $\\rho=1000\\ \\mathrm{kg/m^3}$, $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B1-L25-S04.png",
+  "solution": {
+   "uz": [
+    "a) Ko'l tubidagi bosim: $$p_1=p_0+\\rho gh=10^5+1000\\cdot10\\cdot15=2.5\\cdot10^5\\ \\mathrm{Pa}$$",
+    "Temperatura bir xil — Boyl–Mariott qonuni: $$V_2=\\frac{p_1V_1}{p_0}=\\frac{250\\cdot4}{100}=10\\ \\mathrm{mm^3}$$",
+    "b) $\\frac{V_2}{V_1}=\\frac{p_0+\\rho gh}{p_0}=3.5$, demak: $$\\rho gh=2.5p_0,\\qquad h=\\frac{2.5\\cdot10^5}{1000\\cdot10}=25\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "а) Давление на дне озера: $$p_1=p_0+\\rho gh=10^5+1000\\cdot10\\cdot15=2.5\\cdot10^5\\ \\mathrm{Pa}$$",
+    "Температура одинакова — закон Бойля–Мариотта: $$V_2=\\frac{p_1V_1}{p_0}=\\frac{250\\cdot4}{100}=10\\ \\mathrm{mm^3}$$",
+    "б) $\\frac{V_2}{V_1}=\\frac{p_0+\\rho gh}{p_0}=3.5$, значит: $$\\rho gh=2.5p_0,\\qquad h=\\frac{2.5\\cdot10^5}{1000\\cdot10}=25\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "a) Pressure at the bottom of the lake: $$p_1=p_0+\\rho gh=10^5+1000\\cdot10\\cdot15=2.5\\cdot10^5\\ \\mathrm{Pa}$$",
+    "The temperature is the same — Boyle's law: $$V_2=\\frac{p_1V_1}{p_0}=\\frac{250\\cdot4}{100}=10\\ \\mathrm{mm^3}$$",
+    "b) $\\frac{V_2}{V_1}=\\frac{p_0+\\rho gh}{p_0}=3.5$, so: $$\\rho gh=2.5p_0,\\qquad h=\\frac{2.5\\cdot10^5}{1000\\cdot10}=25\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Suyuqlik ichidagi bosim: $p=p_0+\\rho gh$",
+    "ru": "Давление в жидкости: $p=p_0+\\rho gh$",
+    "en": "Pressure in a liquid: $p=p_0+\\rho gh$"
+   },
+   {
+    "uz": "Boyl–Mariott qonuni: $p_1V_1=p_2V_2$",
+    "ru": "Закон Бойля–Мариотта: $p_1V_1=p_2V_2$",
+    "en": "Boyle's law: $p_1V_1=p_2V_2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Boyl–Mariott qonuni, gidrostatik bosim",
+   "ru": "Закон Бойля–Мариотта, гидростатическое давление",
+   "en": "Boyle's law, hydrostatic pressure"
+  },
+  "answer": "10\\ \\mathrm{mm^3};\\ 25\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 64-mavzu, 25–28-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) Gaz o'zgarmas bosimda $546\\ ^\\circ\\mathrm{C}$ dan $0\\ ^\\circ\\mathrm{C}$ gacha sovitildi. Hajmi necha marta o'zgardi? b) $0\\ ^\\circ\\mathrm{C}$ dagi gaz o'zgarmas bosimda qanday temperaturagacha isitilsa, hajmi $1.5$ marta ortadi? c) Yopiq idishdagi $27\\ ^\\circ\\mathrm{C}$ temperaturali gaz bosimini $3$ marta orttirish uchun uni necha gradusga isitish kerak?",
+   "ru": "а) Газ охладили при постоянном давлении от $546\\ ^\\circ\\mathrm{C}$ до $0\\ ^\\circ\\mathrm{C}$. Во сколько раз изменился его объём? б) До какой температуры нужно нагреть при постоянном давлении газ, находящийся при $0\\ ^\\circ\\mathrm{C}$, чтобы его объём увеличился в $1.5$ раза? в) На сколько градусов нужно нагреть газ в закрытом сосуде при $27\\ ^\\circ\\mathrm{C}$, чтобы его давление увеличилось в $3$ раза?",
+   "en": "a) A gas was cooled at constant pressure from $546\\ ^\\circ\\mathrm{C}$ to $0\\ ^\\circ\\mathrm{C}$. By what factor did its volume change? b) To what temperature must a gas at $0\\ ^\\circ\\mathrm{C}$ be heated at constant pressure for its volume to increase $1.5$ times? c) By how many degrees must a gas in a closed vessel at $27\\ ^\\circ\\mathrm{C}$ be heated for its pressure to increase $3$ times?"
+  },
+  "figure": "figures/B1-L25-S05.png",
+  "solution": {
+   "uz": [
+    "a) Kelvinda: $T_1=819\\ \\mathrm{K}$, $T_2=273\\ \\mathrm{K}$: $$\\frac{V_1}{V_2}=\\frac{T_1}{T_2}=\\frac{819}{273}=3$$",
+    "b) $V\\sim T$, shuning uchun $T$ ham $1.5$ marta ortadi: $$T_2=1.5\\cdot273=409.5\\ \\mathrm{K},\\qquad t_2=136.5\\ ^\\circ\\mathrm{C}$$",
+    "c) $p\\sim T$: $T_1=300\\ \\mathrm{K}$ dan $T_2=900\\ \\mathrm{K}$ gacha: $$\\Delta t=\\Delta T=900-300=600\\ ^\\circ\\mathrm{C}$$"
+   ],
+   "ru": [
+    "а) В кельвинах: $T_1=819\\ \\mathrm{K}$, $T_2=273\\ \\mathrm{K}$: $$\\frac{V_1}{V_2}=\\frac{T_1}{T_2}=\\frac{819}{273}=3$$",
+    "б) $V\\sim T$, поэтому $T$ тоже увеличится в $1.5$ раза: $$T_2=1.5\\cdot273=409.5\\ \\mathrm{K},\\qquad t_2=136.5\\ ^\\circ\\mathrm{C}$$",
+    "в) $p\\sim T$: от $T_1=300\\ \\mathrm{K}$ до $T_2=900\\ \\mathrm{K}$: $$\\Delta t=\\Delta T=900-300=600\\ ^\\circ\\mathrm{C}$$"
+   ],
+   "en": [
+    "a) In kelvins: $T_1=819\\ \\mathrm{K}$, $T_2=273\\ \\mathrm{K}$: $$\\frac{V_1}{V_2}=\\frac{T_1}{T_2}=\\frac{819}{273}=3$$",
+    "b) $V\\sim T$, so $T$ also increases $1.5$ times: $$T_2=1.5\\cdot273=409.5\\ \\mathrm{K},\\qquad t_2=136.5\\ ^\\circ\\mathrm{C}$$",
+    "c) $p\\sim T$: from $T_1=300\\ \\mathrm{K}$ to $T_2=900\\ \\mathrm{K}$: $$\\Delta t=\\Delta T=900-300=600\\ ^\\circ\\mathrm{C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gey-Lyussak qonuni: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$",
+    "ru": "Закон Гей-Люссака: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$",
+    "en": "Charles's law: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$"
+   },
+   {
+    "uz": "Absolyut temperatura: $T=t+273$",
+    "ru": "Абсолютная температура: $T=t+273$",
+    "en": "Absolute temperature: $T=t+273$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Gey-Lyussak va Sharl qonunlari, Kelvin shkalasi",
+   "ru": "Законы Гей-Люссака и Шарля, шкала Кельвина",
+   "en": "Charles's law and the pressure law, the Kelvin scale"
+  },
+  "answer": "\\frac{V_1}{V_2}=3;\\ t_2=136.5\\ ^\\circ\\mathrm{C};\\ \\Delta t=600\\ ^\\circ\\mathrm{C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 64-mavzu, 51–56, 67, 91-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) Izotermik jarayonda gaz bosimi $2.5$ marta kamaydi. Molekulalar konsentratsiyasi va o'rtacha kvadratik tezligi qanday o'zgaradi? b) Izobarik jarayonda molekulalarning o'rtacha kinetik energiyasi $1.5$ marta ortdi. Konsentratsiya qanday o'zgaradi? c) Yopiq idishda molekulalarning o'rtacha kvadratik tezligi $10$ foizga ortdi. Gaz bosimi necha foizga ortdi?",
+   "ru": "а) В изотермическом процессе давление газа уменьшилось в $2.5$ раза. Как изменятся концентрация молекул и их средняя квадратичная скорость? б) В изобарном процессе средняя кинетическая энергия молекул увеличилась в $1.5$ раза. Как изменится концентрация? в) В закрытом сосуде средняя квадратичная скорость молекул увеличилась на $10$ процентов. На сколько процентов увеличилось давление газа?",
+   "en": "a) In an isothermal process the pressure of a gas decreased $2.5$ times. How do the number density of the molecules and their root-mean-square speed change? b) In an isobaric process the mean kinetic energy of the molecules increased $1.5$ times. How does the number density change? c) In a closed vessel the root-mean-square speed of the molecules increased by $10$ percent. By how many percent did the gas pressure increase?"
+  },
+  "figure": "figures/B1-L25-S06.png",
+  "solution": {
+   "uz": [
+    "a) $T$ o'zgarmas, $n=\\frac{p}{kT}\\sim p$: $$\\frac{n_2}{n_1}=\\frac{p_2}{p_1}=\\frac{1}{2.5}=0.4$$",
+    "Tezlik faqat $T$ ga bog'liq: $$\\frac{v_2}{v_1}=\\sqrt{\\frac{T_2}{T_1}}=1$$",
+    "b) $\\bar E\\sim T$, $p$ o'zgarmas: $$\\frac{T_2}{T_1}=1.5,\\qquad \\frac{n_2}{n_1}=\\frac{T_1}{T_2}=\\frac{2}{3}$$",
+    "c) $V$ o'zgarmas, $p\\sim T\\sim v^2$: $$\\frac{p_2}{p_1}=\\left(\\frac{v_2}{v_1}\\right)^2=1.1^2=1.21$$",
+    "Bosim $21$ foizga ortdi."
+   ],
+   "ru": [
+    "а) $T$ постоянна, $n=\\frac{p}{kT}\\sim p$: $$\\frac{n_2}{n_1}=\\frac{p_2}{p_1}=\\frac{1}{2.5}=0.4$$",
+    "Скорость зависит только от $T$: $$\\frac{v_2}{v_1}=\\sqrt{\\frac{T_2}{T_1}}=1$$",
+    "б) $\\bar E\\sim T$, $p$ постоянно: $$\\frac{T_2}{T_1}=1.5,\\qquad \\frac{n_2}{n_1}=\\frac{T_1}{T_2}=\\frac{2}{3}$$",
+    "в) $V$ постоянен, $p\\sim T\\sim v^2$: $$\\frac{p_2}{p_1}=\\left(\\frac{v_2}{v_1}\\right)^2=1.1^2=1.21$$",
+    "Давление увеличилось на $21$ процент."
+   ],
+   "en": [
+    "a) $T$ is constant, $n=\\frac{p}{kT}\\sim p$: $$\\frac{n_2}{n_1}=\\frac{p_2}{p_1}=\\frac{1}{2.5}=0.4$$",
+    "The speed depends only on $T$: $$\\frac{v_2}{v_1}=\\sqrt{\\frac{T_2}{T_1}}=1$$",
+    "b) $\\bar E\\sim T$, $p$ is constant: $$\\frac{T_2}{T_1}=1.5,\\qquad \\frac{n_2}{n_1}=\\frac{T_1}{T_2}=\\frac{2}{3}$$",
+    "c) $V$ is constant, $p\\sim T\\sim v^2$: $$\\frac{p_2}{p_1}=\\left(\\frac{v_2}{v_1}\\right)^2=1.1^2=1.21$$",
+    "The pressure increased by $21$ percent."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bosim: $p=nkT$",
+    "ru": "Давление: $p=nkT$",
+    "en": "Pressure: $p=nkT$"
+   },
+   {
+    "uz": "O'rtacha kvadratik tezlik: $v\\sim\\sqrt{T}$",
+    "ru": "Средняя квадратичная скорость: $v\\sim\\sqrt{T}$",
+    "en": "Root-mean-square speed: $v\\sim\\sqrt{T}$"
+   },
+   {
+    "uz": "Kinetik energiya: $\\bar E=\\frac{3}{2}kT$",
+    "ru": "Кинетическая энергия: $\\bar E=\\frac{3}{2}kT$",
+    "en": "Kinetic energy: $\\bar E=\\frac{3}{2}kT$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Izojarayonlarda molekulyar kattaliklar",
+   "ru": "Молекулярные величины в изопроцессах",
+   "en": "Molecular quantities in isoprocesses"
+  },
+  "answer": "\\frac{n_2}{n_1}=0.4,\\ \\frac{v_2}{v_1}=1;\\ \\frac{n_2}{n_1}=\\frac{2}{3};\\ \\frac{p_2}{p_1}=1.21",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 64-mavzu, 13, 20, 60–63, 100-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Hajmi $300\\ \\mathrm{cm^3}$ bo'lgan og'zi ochiq kolba $147\\ ^\\circ\\mathrm{C}$ gacha qizdirildi va og'zi pastga qaratilib suvga botirildi. Kolbadagi havo $7\\ ^\\circ\\mathrm{C}$ gacha sovidi. Kolbaga necha gramm suv kirdi? Havo bosimini o'zgarmas deb hisoblang, suv zichligi $1\\ \\mathrm{g/cm^3}$.",
+   "ru": "Открытую колбу объёмом $300\\ \\mathrm{cm^3}$ нагрели до $147\\ ^\\circ\\mathrm{C}$ и опустили горлышком вниз в воду. Воздух в колбе остыл до $7\\ ^\\circ\\mathrm{C}$. Сколько граммов воды вошло в колбу? Давление воздуха считайте постоянным, плотность воды $1\\ \\mathrm{g/cm^3}$.",
+   "en": "An open flask of volume $300\\ \\mathrm{cm^3}$ was heated to $147\\ ^\\circ\\mathrm{C}$ and lowered neck down into water. The air in the flask cooled to $7\\ ^\\circ\\mathrm{C}$. How many grams of water entered the flask? Assume the air pressure is constant; the density of water is $1\\ \\mathrm{g/cm^3}$."
+  },
+  "figure": "figures/B1-L25-S07.png",
+  "solution": {
+   "uz": [
+    "Temperaturalar: $$T_1=147+273=420\\ \\mathrm{K},\\qquad T_2=7+273=280\\ \\mathrm{K}$$",
+    "Bosim o'zgarmas — havo hajmi: $$V_2=V_1\\frac{T_2}{T_1}=300\\cdot\\frac{280}{420}=200\\ \\mathrm{cm^3}$$",
+    "Bo'shagan hajmni suv egallaydi: $$m=\\rho(V_1-V_2)=1\\cdot100=100\\ \\mathrm{g}$$"
+   ],
+   "ru": [
+    "Температуры: $$T_1=147+273=420\\ \\mathrm{K},\\qquad T_2=7+273=280\\ \\mathrm{K}$$",
+    "Давление постоянно — объём воздуха: $$V_2=V_1\\frac{T_2}{T_1}=300\\cdot\\frac{280}{420}=200\\ \\mathrm{cm^3}$$",
+    "Освободившийся объём занимает вода: $$m=\\rho(V_1-V_2)=1\\cdot100=100\\ \\mathrm{g}$$"
+   ],
+   "en": [
+    "Temperatures: $$T_1=147+273=420\\ \\mathrm{K},\\qquad T_2=7+273=280\\ \\mathrm{K}$$",
+    "The pressure is constant — the volume of the air: $$V_2=V_1\\frac{T_2}{T_1}=300\\cdot\\frac{280}{420}=200\\ \\mathrm{cm^3}$$",
+    "Water fills the freed volume: $$m=\\rho(V_1-V_2)=1\\cdot100=100\\ \\mathrm{g}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Absolyut temperatura: $T=t+273$",
+    "ru": "Абсолютная температура: $T=t+273$",
+    "en": "Absolute temperature: $T=t+273$"
+   },
+   {
+    "uz": "Gey-Lyussak qonuni: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$",
+    "ru": "Закон Гей-Люссака: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$",
+    "en": "Charles's law: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$"
+   },
+   {
+    "uz": "Massa: $m=\\rho V$",
+    "ru": "Масса: $m=\\rho V$",
+    "en": "Mass: $m=\\rho V$"
+   }
+  ],
+  "basis": {
+   "uz": "Gey-Lyussak qonuni (ochiq kolba)",
+   "ru": "Закон Гей-Люссака (открытая колба)",
+   "en": "Charles's law (open flask)"
+  },
+  "answer": "100\\ \\mathrm{g}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 64-mavzu, 70-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ideal gazning $1\\to2\\to3\\to1$ sikli $V$–$T$ diagrammada berilgan (rasm): $1\\to2$ qism davomi koordinata boshidan o'tadi, $2\\to3$ qism $V$ o'qiga parallel, $3\\to1$ qism $T$ o'qiga parallel. $p_1=100\\ \\mathrm{kPa}$, $V_1=2\\ \\mathrm{L}$, $T_1=300\\ \\mathrm{K}$, $V_2=5\\ \\mathrm{L}$. Har bir qism qanday jarayon? $T_2$ va $p_3$ ni toping.",
+   "ru": "Цикл $1\\to2\\to3\\to1$ идеального газа задан на диаграмме $V$–$T$ (рис.): продолжение участка $1\\to2$ проходит через начало координат, участок $2\\to3$ параллелен оси $V$, участок $3\\to1$ параллелен оси $T$. $p_1=100\\ \\mathrm{kPa}$, $V_1=2\\ \\mathrm{L}$, $T_1=300\\ \\mathrm{K}$, $V_2=5\\ \\mathrm{L}$. Какой процесс на каждом участке? Найдите $T_2$ и $p_3$.",
+   "en": "The cycle $1\\to2\\to3\\to1$ of an ideal gas is given on a $V$–$T$ diagram (figure): the extension of segment $1\\to2$ passes through the origin, segment $2\\to3$ is parallel to the $V$ axis, segment $3\\to1$ is parallel to the $T$ axis. $p_1=100\\ \\mathrm{kPa}$, $V_1=2\\ \\mathrm{L}$, $T_1=300\\ \\mathrm{K}$, $V_2=5\\ \\mathrm{L}$. What process is each segment? Find $T_2$ and $p_3$."
+  },
+  "figure": "figures/B1-L25-S08.png",
+  "solution": {
+   "uz": [
+    "$1\\to2$: $V\\sim T$ — izobarik, $p_2=p_1$: $$T_2=T_1\\frac{V_2}{V_1}=300\\cdot\\frac{5}{2}=750\\ \\mathrm{K}$$",
+    "$2\\to3$ — izotermik, $3\\to1$ — izoxorik: $$T_3=T_2,\\qquad V_3=V_1=2\\ \\mathrm{L}$$",
+    "$2\\to3$ uchun Boyl–Mariott qonuni: $$p_3=\\frac{p_2V_2}{V_3}=\\frac{100\\cdot5}{2}=250\\ \\mathrm{kPa}$$"
+   ],
+   "ru": [
+    "$1\\to2$: $V\\sim T$ — изобарный, $p_2=p_1$: $$T_2=T_1\\frac{V_2}{V_1}=300\\cdot\\frac{5}{2}=750\\ \\mathrm{K}$$",
+    "$2\\to3$ — изотермический, $3\\to1$ — изохорный: $$T_3=T_2,\\qquad V_3=V_1=2\\ \\mathrm{L}$$",
+    "Закон Бойля–Мариотта для $2\\to3$: $$p_3=\\frac{p_2V_2}{V_3}=\\frac{100\\cdot5}{2}=250\\ \\mathrm{kPa}$$"
+   ],
+   "en": [
+    "$1\\to2$: $V\\sim T$ — isobaric, $p_2=p_1$: $$T_2=T_1\\frac{V_2}{V_1}=300\\cdot\\frac{5}{2}=750\\ \\mathrm{K}$$",
+    "$2\\to3$ is isothermal, $3\\to1$ is isochoric: $$T_3=T_2,\\qquad V_3=V_1=2\\ \\mathrm{L}$$",
+    "Boyle's law for $2\\to3$: $$p_3=\\frac{p_2V_2}{V_3}=\\frac{100\\cdot5}{2}=250\\ \\mathrm{kPa}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$V$–$T$ da izobara: $V\\sim T$",
+    "ru": "Изобара на $V$–$T$: $V\\sim T$",
+    "en": "Isobar on $V$–$T$: $V\\sim T$"
+   },
+   null,
+   {
+    "uz": "Boyl–Mariott qonuni: $p_1V_1=p_2V_2$",
+    "ru": "Закон Бойля–Мариотта: $p_1V_1=p_2V_2$",
+    "en": "Boyle's law: $p_1V_1=p_2V_2$"
+   }
+  ],
+  "basis": {
+   "uz": "Izojarayonlarning $V$–$T$ grafiklari",
+   "ru": "Графики изопроцессов на $V$–$T$",
+   "en": "Graphs of isoprocesses on $V$–$T$"
+  },
+  "answer": "T_2=750\\ \\mathrm{K};\\ p_3=250\\ \\mathrm{kPa}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 65-mavzu, 34, 40-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Gaz $p$–$V$ diagrammada to'g'ri chiziq bo'ylab $1$-holatdan ($p_1=300\\ \\mathrm{kPa}$, $V_1=1\\ \\mathrm{L}$) $2$-holatga ($p_2=100\\ \\mathrm{kPa}$, $V_2=3\\ \\mathrm{L}$) o'tdi. a) $T_1$ va $T_2$ ni solishtiring. b) Jarayondagi eng katta temperatura $T_1$ dan necha marta katta?",
+   "ru": "Газ перешёл по прямой на диаграмме $p$–$V$ из состояния $1$ ($p_1=300\\ \\mathrm{kPa}$, $V_1=1\\ \\mathrm{L}$) в состояние $2$ ($p_2=100\\ \\mathrm{kPa}$, $V_2=3\\ \\mathrm{L}$). а) Сравните $T_1$ и $T_2$. б) Во сколько раз наибольшая температура в процессе больше $T_1$?",
+   "en": "A gas went along a straight line on a $p$–$V$ diagram from state $1$ ($p_1=300\\ \\mathrm{kPa}$, $V_1=1\\ \\mathrm{L}$) to state $2$ ($p_2=100\\ \\mathrm{kPa}$, $V_2=3\\ \\mathrm{L}$). a) Compare $T_1$ and $T_2$. b) How many times is the highest temperature in the process greater than $T_1$?"
+  },
+  "figure": "figures/B1-L25-S09.png",
+  "solution": {
+   "uz": [
+    "a) $T\\sim pV$: $$p_1V_1=300=p_2V_2\\ \\Rightarrow\\ T_1=T_2$$",
+    "b) Chiziq tenglamasi ($\\mathrm{kPa}$, $\\mathrm{L}$): $$p=400-100V,\\qquad pV=400V-100V^2$$",
+    "Parabola uchi: $$V^*=\\frac{400}{2\\cdot100}=2\\ \\mathrm{L},\\qquad p^*=200\\ \\mathrm{kPa}$$",
+    "Temperaturalar nisbati: $$\\frac{T_{max}}{T_1}=\\frac{200\\cdot2}{300\\cdot1}=\\frac{4}{3}$$"
+   ],
+   "ru": [
+    "а) $T\\sim pV$: $$p_1V_1=300=p_2V_2\\ \\Rightarrow\\ T_1=T_2$$",
+    "б) Уравнение прямой ($\\mathrm{kPa}$, $\\mathrm{L}$): $$p=400-100V,\\qquad pV=400V-100V^2$$",
+    "Вершина параболы: $$V^*=\\frac{400}{2\\cdot100}=2\\ \\mathrm{L},\\qquad p^*=200\\ \\mathrm{kPa}$$",
+    "Отношение температур: $$\\frac{T_{max}}{T_1}=\\frac{200\\cdot2}{300\\cdot1}=\\frac{4}{3}$$"
+   ],
+   "en": [
+    "a) $T\\sim pV$: $$p_1V_1=300=p_2V_2\\ \\Rightarrow\\ T_1=T_2$$",
+    "b) Equation of the line ($\\mathrm{kPa}$, $\\mathrm{L}$): $$p=400-100V,\\qquad pV=400V-100V^2$$",
+    "Vertex of the parabola: $$V^*=\\frac{400}{2\\cdot100}=2\\ \\mathrm{L},\\qquad p^*=200\\ \\mathrm{kPa}$$",
+    "Ratio of temperatures: $$\\frac{T_{max}}{T_1}=\\frac{200\\cdot2}{300\\cdot1}=\\frac{4}{3}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Massa o'zgarmasa: $T\\sim pV$",
+    "ru": "При постоянной массе: $T\\sim pV$",
+    "en": "At constant mass: $T\\sim pV$"
+   },
+   null,
+   {
+    "uz": "$p=a-bV$ da $T$ eng katta: $V^*=\\frac{a}{2b}$",
+    "ru": "При $p=a-bV$ $T$ наибольшая: $V^*=\\frac{a}{2b}$",
+    "en": "For $p=a-bV$, $T$ is largest at $V^*=\\frac{a}{2b}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "$p$–$V$ grafigida eng katta temperatura",
+   "ru": "Наибольшая температура на графике $p$–$V$",
+   "en": "Maximum temperature on a $p$–$V$ graph"
+  },
+  "answer": "T_1=T_2;\\ \\frac{T_{max}}{T_1}=\\frac{4}{3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 65-mavzu, 10, 11, 14-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$V$–$T$ diagrammada o'zgarmas massali gazning uchta holati berilgan (rasm): $1$ ($T=200\\ \\mathrm{K}$, $V=4\\ \\mathrm{L}$), $2$ ($T=300\\ \\mathrm{K}$, $V=3\\ \\mathrm{L}$), $3$ ($T=500\\ \\mathrm{K}$, $V=4\\ \\mathrm{L}$). Bosimlarni solishtiring. $p_1=80\\ \\mathrm{kPa}$ bo'lsa, $p_2$ va $p_3$ ni toping.",
+   "ru": "На диаграмме $V$–$T$ даны три состояния газа постоянной массы (рис.): $1$ ($T=200\\ \\mathrm{K}$, $V=4\\ \\mathrm{L}$), $2$ ($T=300\\ \\mathrm{K}$, $V=3\\ \\mathrm{L}$), $3$ ($T=500\\ \\mathrm{K}$, $V=4\\ \\mathrm{L}$). Сравните давления. Найдите $p_2$ и $p_3$, если $p_1=80\\ \\mathrm{kPa}$.",
+   "en": "Three states of a gas of constant mass are given on a $V$–$T$ diagram (figure): $1$ ($T=200\\ \\mathrm{K}$, $V=4\\ \\mathrm{L}$), $2$ ($T=300\\ \\mathrm{K}$, $V=3\\ \\mathrm{L}$), $3$ ($T=500\\ \\mathrm{K}$, $V=4\\ \\mathrm{L}$). Compare the pressures. Find $p_2$ and $p_3$ if $p_1=80\\ \\mathrm{kPa}$."
+  },
+  "figure": "figures/B1-L25-S10.png",
+  "solution": {
+   "uz": [
+    "Holat tenglamasidan: $$p=\\frac{\\nu RT}{V}\\sim\\frac{T}{V}$$",
+    "Nisbatlar ($\\mathrm{K/L}$): $$\\frac{T_1}{V_1}=50,\\quad \\frac{T_2}{V_2}=100,\\quad \\frac{T_3}{V_3}=125\\ \\Rightarrow\\ p_1<p_2<p_3$$",
+    "Bosimlar: $$p_2=80\\cdot\\frac{100}{50}=160\\ \\mathrm{kPa},\\qquad p_3=80\\cdot\\frac{125}{50}=200\\ \\mathrm{kPa}$$"
+   ],
+   "ru": [
+    "Из уравнения состояния: $$p=\\frac{\\nu RT}{V}\\sim\\frac{T}{V}$$",
+    "Отношения ($\\mathrm{K/L}$): $$\\frac{T_1}{V_1}=50,\\quad \\frac{T_2}{V_2}=100,\\quad \\frac{T_3}{V_3}=125\\ \\Rightarrow\\ p_1<p_2<p_3$$",
+    "Давления: $$p_2=80\\cdot\\frac{100}{50}=160\\ \\mathrm{kPa},\\qquad p_3=80\\cdot\\frac{125}{50}=200\\ \\mathrm{kPa}$$"
+   ],
+   "en": [
+    "From the equation of state: $$p=\\frac{\\nu RT}{V}\\sim\\frac{T}{V}$$",
+    "Ratios ($\\mathrm{K/L}$): $$\\frac{T_1}{V_1}=50,\\quad \\frac{T_2}{V_2}=100,\\quad \\frac{T_3}{V_3}=125\\ \\Rightarrow\\ p_1<p_2<p_3$$",
+    "Pressures: $$p_2=80\\cdot\\frac{100}{50}=160\\ \\mathrm{kPa},\\qquad p_3=80\\cdot\\frac{125}{50}=200\\ \\mathrm{kPa}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Massa o'zgarmasa: $p\\sim\\frac{T}{V}$",
+    "ru": "При постоянной массе: $p\\sim\\frac{T}{V}$",
+    "en": "At constant mass: $p\\sim\\frac{T}{V}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "$V$–$T$ grafigida bosimlarni solishtirish",
+   "ru": "Сравнение давлений на графике $V$–$T$",
+   "en": "Comparing pressures on a $V$–$T$ graph"
+  },
+  "answer": "p_1<p_2<p_3;\\ 160\\ \\mathrm{kPa};\\ 200\\ \\mathrm{kPa}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 65-mavzu, 25, 28-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$p$–$T$ diagrammada bir xil massali gaz uchun ikkita izoxora tasvirlangan (rasm). $T=300\\ \\mathrm{K}$ da $1$-izoxorada bosim $150\\ \\mathrm{kPa}$, $2$-izoxorada $60\\ \\mathrm{kPa}$. Qaysi izoxorada hajm katta? $V_1=4\\ \\mathrm{L}$ bo'lsa, $V_2$ ni va zichliklar nisbati $\\frac{\\rho_1}{\\rho_2}$ ni toping.",
+   "ru": "На диаграмме $p$–$T$ изображены две изохоры для газа одинаковой массы (рис.). При $T=300\\ \\mathrm{K}$ давление на изохоре $1$ равно $150\\ \\mathrm{kPa}$, на изохоре $2$ — $60\\ \\mathrm{kPa}$. На какой изохоре объём больше? Найдите $V_2$ и отношение плотностей $\\frac{\\rho_1}{\\rho_2}$, если $V_1=4\\ \\mathrm{L}$.",
+   "en": "Two isochores for gases of equal mass are shown on a $p$–$T$ diagram (figure). At $T=300\\ \\mathrm{K}$ the pressure on isochore $1$ is $150\\ \\mathrm{kPa}$, on isochore $2$ it is $60\\ \\mathrm{kPa}$. On which isochore is the volume larger? Find $V_2$ and the density ratio $\\frac{\\rho_1}{\\rho_2}$ if $V_1=4\\ \\mathrm{L}$."
+  },
+  "figure": "figures/B1-L25-S11.png",
+  "solution": {
+   "uz": [
+    "Bir xil $T$ da $V\\sim\\frac{1}{p}$: $$\\frac{V_2}{V_1}=\\frac{p_1}{p_2}=\\frac{150}{60}=2.5$$",
+    "$2$-izoxora yotiqroq — hajm katta: $$V_2=2.5\\cdot4=10\\ \\mathrm{L}$$",
+    "Massa bir xil: $$\\frac{\\rho_1}{\\rho_2}=\\frac{V_2}{V_1}=\\frac{5}{2}$$"
+   ],
+   "ru": [
+    "При одинаковой $T$ $V\\sim\\frac{1}{p}$: $$\\frac{V_2}{V_1}=\\frac{p_1}{p_2}=\\frac{150}{60}=2.5$$",
+    "Изохора $2$ положе — объём больше: $$V_2=2.5\\cdot4=10\\ \\mathrm{L}$$",
+    "Масса одинакова: $$\\frac{\\rho_1}{\\rho_2}=\\frac{V_2}{V_1}=\\frac{5}{2}$$"
+   ],
+   "en": [
+    "At the same $T$, $V\\sim\\frac{1}{p}$: $$\\frac{V_2}{V_1}=\\frac{p_1}{p_2}=\\frac{150}{60}=2.5$$",
+    "Isochore $2$ is flatter — the volume is larger: $$V_2=2.5\\cdot4=10\\ \\mathrm{L}$$",
+    "The mass is the same: $$\\frac{\\rho_1}{\\rho_2}=\\frac{V_2}{V_1}=\\frac{5}{2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Massa o'zgarmasa: $V\\sim\\frac{T}{p}$",
+    "ru": "При постоянной массе: $V\\sim\\frac{T}{p}$",
+    "en": "At constant mass: $V\\sim\\frac{T}{p}$"
+   },
+   null,
+   {
+    "uz": "Massa o'zgarmasa: $\\rho\\sim\\frac{1}{V}$",
+    "ru": "При постоянной массе: $\\rho\\sim\\frac{1}{V}$",
+    "en": "At constant mass: $\\rho\\sim\\frac{1}{V}$"
+   }
+  ],
+  "basis": {
+   "uz": "$p$–$T$ grafigida izoxoralar",
+   "ru": "Изохоры на графике $p$–$T$",
+   "en": "Isochores on a $p$–$T$ graph"
+  },
+  "answer": "V_2=10\\ \\mathrm{L};\\ \\frac{\\rho_1}{\\rho_2}=\\frac{5}{2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 65-mavzu, 37, 42-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Yopiq gorizontal silindr yengil, erkin siljiydigan porshen bilan uzunligi $25\\ \\mathrm{cm}$ dan bo'lgan ikki teng qismga ajratilgan. Ikkala qismda $27\\ ^\\circ\\mathrm{C}$ temperatura va $100\\ \\mathrm{kPa}$ bosimli gaz bor. Chap qismdagi gaz $177\\ ^\\circ\\mathrm{C}$ gacha isitildi, o'ng qism temperaturasi o'zgarmadi. Porshen qancha siljiydi va gaz bosimi qanday bo'ladi?",
+   "ru": "Закрытый горизонтальный цилиндр разделён лёгким свободно перемещающимся поршнем на две равные части длиной по $25\\ \\mathrm{cm}$. В обеих частях газ при температуре $27\\ ^\\circ\\mathrm{C}$ и давлении $100\\ \\mathrm{kPa}$. Газ в левой части нагрели до $177\\ ^\\circ\\mathrm{C}$, температура правой части не изменилась. На сколько сместится поршень и каким станет давление газа?",
+   "en": "A closed horizontal cylinder is divided by a light, freely moving piston into two equal parts, each $25\\ \\mathrm{cm}$ long. Both parts contain gas at $27\\ ^\\circ\\mathrm{C}$ and $100\\ \\mathrm{kPa}$. The gas in the left part is heated to $177\\ ^\\circ\\mathrm{C}$, while the temperature of the right part does not change. How far does the piston move, and what will the gas pressure be?"
+  },
+  "figure": "figures/B1-L25-S12.png",
+  "solution": {
+   "uz": [
+    "Temperaturalar: $T_0=300\\ \\mathrm{K}$, $T_1=450\\ \\mathrm{K}$; porshen erkin: $$p_1=p_2=p$$",
+    "Har bir qism uchun ($S$ qisqaradi): $$\\frac{p_0l}{T_0}=\\frac{pl_1}{T_1},\\qquad \\frac{p_0l}{T_0}=\\frac{pl_2}{T_0}$$",
+    "Bo'lamiz: $\\frac{l_1}{l_2}=\\frac{T_1}{T_0}=1.5$, $l_1+l_2=50\\ \\mathrm{cm}$: $$l_1=30\\ \\mathrm{cm},\\quad l_2=20\\ \\mathrm{cm},\\quad x=5\\ \\mathrm{cm}$$",
+    "O'ng qism uchun Boyl–Mariott qonuni: $$p=p_0\\frac{l}{l_2}=100\\cdot\\frac{25}{20}=125\\ \\mathrm{kPa}$$"
+   ],
+   "ru": [
+    "Температуры: $T_0=300\\ \\mathrm{K}$, $T_1=450\\ \\mathrm{K}$; поршень свободный: $$p_1=p_2=p$$",
+    "Для каждой части ($S$ сокращается): $$\\frac{p_0l}{T_0}=\\frac{pl_1}{T_1},\\qquad \\frac{p_0l}{T_0}=\\frac{pl_2}{T_0}$$",
+    "Делим: $\\frac{l_1}{l_2}=\\frac{T_1}{T_0}=1.5$, $l_1+l_2=50\\ \\mathrm{cm}$: $$l_1=30\\ \\mathrm{cm},\\quad l_2=20\\ \\mathrm{cm},\\quad x=5\\ \\mathrm{cm}$$",
+    "Закон Бойля–Мариотта для правой части: $$p=p_0\\frac{l}{l_2}=100\\cdot\\frac{25}{20}=125\\ \\mathrm{kPa}$$"
+   ],
+   "en": [
+    "Temperatures: $T_0=300\\ \\mathrm{K}$, $T_1=450\\ \\mathrm{K}$; the piston is free: $$p_1=p_2=p$$",
+    "For each part ($S$ cancels): $$\\frac{p_0l}{T_0}=\\frac{pl_1}{T_1},\\qquad \\frac{p_0l}{T_0}=\\frac{pl_2}{T_0}$$",
+    "Divide: $\\frac{l_1}{l_2}=\\frac{T_1}{T_0}=1.5$, $l_1+l_2=50\\ \\mathrm{cm}$: $$l_1=30\\ \\mathrm{cm},\\quad l_2=20\\ \\mathrm{cm},\\quad x=5\\ \\mathrm{cm}$$",
+    "Boyle's law for the right part: $$p=p_0\\frac{l}{l_2}=100\\cdot\\frac{25}{20}=125\\ \\mathrm{kPa}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Erkin to'siq: $p_1=p_2$",
+    "ru": "Свободная перегородка: $p_1=p_2$",
+    "en": "Free partition: $p_1=p_2$"
+   },
+   {
+    "uz": "Klapeyron tenglamasi: $\\frac{p_1V_1}{T_1}=\\frac{p_2V_2}{T_2}$",
+    "ru": "Уравнение Клапейрона: $\\frac{p_1V_1}{T_1}=\\frac{p_2V_2}{T_2}$",
+    "en": "Combined gas law: $\\frac{p_1V_1}{T_1}=\\frac{p_2V_2}{T_2}$"
+   },
+   null,
+   {
+    "uz": "Boyl–Mariott qonuni: $p_1V_1=p_2V_2$",
+    "ru": "Закон Бойля–Мариотта: $p_1V_1=p_2V_2$",
+    "en": "Boyle's law: $p_1V_1=p_2V_2$"
+   }
+  ],
+  "basis": {
+   "uz": "Klapeyron tenglamasi, porshen muvozanati",
+   "ru": "Уравнение Клапейрона, равновесие поршня",
+   "en": "Combined gas law, piston equilibrium"
+  },
+  "answer": "x=5\\ \\mathrm{cm};\\ p=125\\ \\mathrm{kPa}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 64-mavzu, 32-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Hajmi $1\\ \\mathrm{L}$ bo'lgan idishdan ishchi hajmi $0.25\\ \\mathrm{L}$ bo'lgan porshenli nasos bilan havo so'rib olinmoqda. Temperatura o'zgarmas. a) Bir siklda bosim necha marta kamayadi? b) $4$ ta sikldan keyin bosim necha marta kamayadi? c) Boshlang'ich bosim $100\\ \\mathrm{kPa}$ bo'lsa, $4$ ta sikldan keyin bosim qanday bo'ladi?",
+   "ru": "Из сосуда объёмом $1\\ \\mathrm{L}$ откачивают воздух поршневым насосом с рабочим объёмом $0.25\\ \\mathrm{L}$. Температура постоянна. а) Во сколько раз уменьшается давление за один цикл? б) Во сколько раз уменьшится давление после $4$ циклов? в) Каким станет давление после $4$ циклов, если начальное давление $100\\ \\mathrm{kPa}$?",
+   "en": "Air is pumped out of a vessel of volume $1\\ \\mathrm{L}$ by a piston pump with a working volume of $0.25\\ \\mathrm{L}$. The temperature is constant. a) By what factor does the pressure decrease in one cycle? b) By what factor does the pressure decrease after $4$ cycles? c) What will the pressure be after $4$ cycles if the initial pressure is $100\\ \\mathrm{kPa}$?"
+  },
+  "figure": "figures/B1-L25-S13.png",
+  "solution": {
+   "uz": [
+    "a) Bir siklda gaz $V+V_0$ hajmga kengayadi: $$pV=p'(V+V_0)\\ \\Rightarrow\\ \\frac{p}{p'}=\\frac{1.25}{1}=1.25$$",
+    "b) Har siklda bosim $0.8$ ga ko'paytiriladi: $$\\frac{p_4}{p}=0.8^4=0.4096,\\qquad \\frac{p}{p_4}\\approx2.44$$",
+    "c) Oxirgi bosim: $$p_4=100\\cdot0.4096\\approx41\\ \\mathrm{kPa}$$"
+   ],
+   "ru": [
+    "а) За один цикл газ расширяется до объёма $V+V_0$: $$pV=p'(V+V_0)\\ \\Rightarrow\\ \\frac{p}{p'}=\\frac{1.25}{1}=1.25$$",
+    "б) За каждый цикл давление умножается на $0.8$: $$\\frac{p_4}{p}=0.8^4=0.4096,\\qquad \\frac{p}{p_4}\\approx2.44$$",
+    "в) Конечное давление: $$p_4=100\\cdot0.4096\\approx41\\ \\mathrm{kPa}$$"
+   ],
+   "en": [
+    "a) In one cycle the gas expands to a volume $V+V_0$: $$pV=p'(V+V_0)\\ \\Rightarrow\\ \\frac{p}{p'}=\\frac{1.25}{1}=1.25$$",
+    "b) Each cycle multiplies the pressure by $0.8$: $$\\frac{p_4}{p}=0.8^4=0.4096,\\qquad \\frac{p}{p_4}\\approx2.44$$",
+    "c) Final pressure: $$p_4=100\\cdot0.4096\\approx41\\ \\mathrm{kPa}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Boyl–Mariott qonuni: $p_1V_1=p_2V_2$",
+    "ru": "Закон Бойля–Мариотта: $p_1V_1=p_2V_2$",
+    "en": "Boyle's law: $p_1V_1=p_2V_2$"
+   },
+   {
+    "uz": "So'rish: $p_N=p\\left(\\frac{V}{V+V_0}\\right)^N$",
+    "ru": "Откачивание: $p_N=p\\left(\\frac{V}{V+V_0}\\right)^N$",
+    "en": "Pumping out: $p_N=p\\left(\\frac{V}{V+V_0}\\right)^N$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Boyl–Mariott qonuni, nasos bilan so'rish",
+   "ru": "Закон Бойля–Мариотта, откачивание насосом",
+   "en": "Boyle's law, pumping out"
+  },
+  "answer": "1.25;\\ \\approx2.44;\\ \\approx41\\ \\mathrm{kPa}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 64-mavzu, 31-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ideal gaz $p$–$V$ diagrammada $1\\to2\\to3\\to1$ siklni bajaradi (rasm): $1$ ($100\\ \\mathrm{kPa}$, $2\\ \\mathrm{L}$) $\\to$ $2$ ($300\\ \\mathrm{kPa}$, $2\\ \\mathrm{L}$) $\\to$ $3$ ($300\\ \\mathrm{kPa}$, $6\\ \\mathrm{L}$) $\\to$ $1$; $3\\to1$ qism davomi koordinata boshidan o'tadi. $T_1=200\\ \\mathrm{K}$. a) Har bir qism qanday jarayon? b) $T_2$, $T_3$ va siklning eng katta temperaturasini toping. c) $3\\to1$ qismda $T$ hajmga qanday bog'liq?",
+   "ru": "Идеальный газ совершает на диаграмме $p$–$V$ цикл $1\\to2\\to3\\to1$ (рис.): $1$ ($100\\ \\mathrm{kPa}$, $2\\ \\mathrm{L}$) $\\to$ $2$ ($300\\ \\mathrm{kPa}$, $2\\ \\mathrm{L}$) $\\to$ $3$ ($300\\ \\mathrm{kPa}$, $6\\ \\mathrm{L}$) $\\to$ $1$; продолжение участка $3\\to1$ проходит через начало координат. $T_1=200\\ \\mathrm{K}$. а) Какой процесс на каждом участке? б) Найдите $T_2$, $T_3$ и наибольшую температуру цикла. в) Как $T$ зависит от объёма на участке $3\\to1$?",
+   "en": "An ideal gas performs the cycle $1\\to2\\to3\\to1$ on a $p$–$V$ diagram (figure): $1$ ($100\\ \\mathrm{kPa}$, $2\\ \\mathrm{L}$) $\\to$ $2$ ($300\\ \\mathrm{kPa}$, $2\\ \\mathrm{L}$) $\\to$ $3$ ($300\\ \\mathrm{kPa}$, $6\\ \\mathrm{L}$) $\\to$ $1$; the extension of segment $3\\to1$ passes through the origin. $T_1=200\\ \\mathrm{K}$. a) What process is each segment? b) Find $T_2$, $T_3$ and the highest temperature of the cycle. c) How does $T$ depend on the volume on segment $3\\to1$?"
+  },
+  "figure": "figures/B1-L25-S14.png",
+  "solution": {
+   "uz": [
+    "a) $1\\to2$ — izoxorik, $2\\to3$ — izobarik: $$1\\to2:\\ V=\\mathrm{const},\\qquad 2\\to3:\\ p=\\mathrm{const}$$",
+    "$3\\to1$ — izojarayon emas: $$3\\to1:\\ p=\\alpha V,\\quad \\alpha=50\\ \\mathrm{kPa/L}$$",
+    "b) $1\\to2$ uchun Sharl qonuni: $$T_2=T_1\\frac{p_2}{p_1}=200\\cdot3=600\\ \\mathrm{K}$$",
+    "$2\\to3$ uchun Gey-Lyussak qonuni: $$T_3=T_2\\frac{V_3}{V_2}=600\\cdot3=1800\\ \\mathrm{K}=T_{max}$$",
+    "c) $T\\sim pV$ ga $p=\\alpha V$ ni qo'yamiz: $$T\\sim\\alpha V^2\\ \\Rightarrow\\ T\\sim V^2,\\qquad \\frac{T_3}{T_1}=3^2=9$$"
+   ],
+   "ru": [
+    "а) $1\\to2$ — изохорный, $2\\to3$ — изобарный: $$1\\to2:\\ V=\\mathrm{const},\\qquad 2\\to3:\\ p=\\mathrm{const}$$",
+    "$3\\to1$ — не изопроцесс: $$3\\to1:\\ p=\\alpha V,\\quad \\alpha=50\\ \\mathrm{kPa/L}$$",
+    "б) Закон Шарля для $1\\to2$: $$T_2=T_1\\frac{p_2}{p_1}=200\\cdot3=600\\ \\mathrm{K}$$",
+    "Закон Гей-Люссака для $2\\to3$: $$T_3=T_2\\frac{V_3}{V_2}=600\\cdot3=1800\\ \\mathrm{K}=T_{max}$$",
+    "в) Подставляем $p=\\alpha V$ в $T\\sim pV$: $$T\\sim\\alpha V^2\\ \\Rightarrow\\ T\\sim V^2,\\qquad \\frac{T_3}{T_1}=3^2=9$$"
+   ],
+   "en": [
+    "a) $1\\to2$ is isochoric, $2\\to3$ is isobaric: $$1\\to2:\\ V=\\mathrm{const},\\qquad 2\\to3:\\ p=\\mathrm{const}$$",
+    "$3\\to1$ is not an isoprocess: $$3\\to1:\\ p=\\alpha V,\\quad \\alpha=50\\ \\mathrm{kPa/L}$$",
+    "b) Pressure law for $1\\to2$: $$T_2=T_1\\frac{p_2}{p_1}=200\\cdot3=600\\ \\mathrm{K}$$",
+    "Charles's law for $2\\to3$: $$T_3=T_2\\frac{V_3}{V_2}=600\\cdot3=1800\\ \\mathrm{K}=T_{max}$$",
+    "c) Substitute $p=\\alpha V$ into $T\\sim pV$: $$T\\sim\\alpha V^2\\ \\Rightarrow\\ T\\sim V^2,\\qquad \\frac{T_3}{T_1}=3^2=9$$"
+   ]
+  },
+  "rules": [
+   null,
+   null,
+   {
+    "uz": "Sharl qonuni: $\\frac{p_1}{T_1}=\\frac{p_2}{T_2}$",
+    "ru": "Закон Шарля: $\\frac{p_1}{T_1}=\\frac{p_2}{T_2}$",
+    "en": "Pressure law: $\\frac{p_1}{T_1}=\\frac{p_2}{T_2}$"
+   },
+   {
+    "uz": "Gey-Lyussak qonuni: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$",
+    "ru": "Закон Гей-Люссака: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$",
+    "en": "Charles's law: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$"
+   },
+   {
+    "uz": "Massa o'zgarmasa: $T\\sim pV$",
+    "ru": "При постоянной массе: $T\\sim pV$",
+    "en": "At constant mass: $T\\sim pV$"
+   }
+  ],
+  "basis": {
+   "uz": "Sikl tahlili, $p$–$V$ grafigi",
+   "ru": "Анализ цикла, график $p$–$V$",
+   "en": "Cycle analysis, $p$–$V$ graph"
+  },
+  "answer": "T_2=600\\ \\mathrm{K};\\ T_3=T_{max}=1800\\ \\mathrm{K};\\ T\\sim V^2",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 65-mavzu, 9, 24, 47-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L25-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Vertikal silindrdagi gaz massasi $10\\ \\mathrm{kg}$, yuzi $50\\ \\mathrm{cm^2}$ bo'lgan porshen bilan berkitilgan; ishqalanish yo'q. Atmosfera bosimi $100\\ \\mathrm{kPa}$, $g=10\\ \\mathrm{m/s^2}$. $300\\ \\mathrm{K}$ da gaz ustunining balandligi $40\\ \\mathrm{cm}$. a) Gaz bosimini toping. b) Gaz $375\\ \\mathrm{K}$ gacha isitilsa, porshen qanday balandlikda bo'ladi? c) So'ng porshen mahkamlanib, gaz yana $300\\ \\mathrm{K}$ gacha sovitildi. Gaz bosimi qanday bo'ladi?",
+   "ru": "Газ в вертикальном цилиндре закрыт поршнем массой $10\\ \\mathrm{kg}$ и площадью $50\\ \\mathrm{cm^2}$; трения нет. Атмосферное давление $100\\ \\mathrm{kPa}$, $g=10\\ \\mathrm{m/s^2}$. При $300\\ \\mathrm{K}$ высота столба газа $40\\ \\mathrm{cm}$. а) Найдите давление газа. б) На какой высоте окажется поршень, если газ нагреть до $375\\ \\mathrm{K}$? в) Затем поршень закрепили и газ снова охладили до $300\\ \\mathrm{K}$. Каким станет давление газа?",
+   "en": "A gas in a vertical cylinder is closed by a piston of mass $10\\ \\mathrm{kg}$ and area $50\\ \\mathrm{cm^2}$; there is no friction. Atmospheric pressure is $100\\ \\mathrm{kPa}$, $g=10\\ \\mathrm{m/s^2}$. At $300\\ \\mathrm{K}$ the height of the gas column is $40\\ \\mathrm{cm}$. a) Find the gas pressure. b) At what height will the piston be if the gas is heated to $375\\ \\mathrm{K}$? c) Then the piston is fixed and the gas is cooled back to $300\\ \\mathrm{K}$. What will the gas pressure be?"
+  },
+  "figure": "figures/B1-L25-S15.png",
+  "solution": {
+   "uz": [
+    "a) Porshen muvozanatda: $$p=p_0+\\frac{mg}{S}=10^5+\\frac{100}{0.005}=1.2\\cdot10^5\\ \\mathrm{Pa}$$",
+    "b) Bosim o'zgarmas, $V=Sh$, shuning uchun $h\\sim T$: $$h_2=h_1\\frac{T_2}{T_1}=40\\cdot\\frac{375}{300}=50\\ \\mathrm{cm}$$",
+    "c) Porshen mahkamlangan — hajm o'zgarmas: $$p_3=p\\frac{T_3}{T_2}=120\\cdot\\frac{300}{375}=96\\ \\mathrm{kPa}$$"
+   ],
+   "ru": [
+    "а) Поршень в равновесии: $$p=p_0+\\frac{mg}{S}=10^5+\\frac{100}{0.005}=1.2\\cdot10^5\\ \\mathrm{Pa}$$",
+    "б) Давление постоянно, $V=Sh$, поэтому $h\\sim T$: $$h_2=h_1\\frac{T_2}{T_1}=40\\cdot\\frac{375}{300}=50\\ \\mathrm{cm}$$",
+    "в) Поршень закреплён — объём постоянен: $$p_3=p\\frac{T_3}{T_2}=120\\cdot\\frac{300}{375}=96\\ \\mathrm{kPa}$$"
+   ],
+   "en": [
+    "a) The piston is in equilibrium: $$p=p_0+\\frac{mg}{S}=10^5+\\frac{100}{0.005}=1.2\\cdot10^5\\ \\mathrm{Pa}$$",
+    "b) The pressure is constant, $V=Sh$, so $h\\sim T$: $$h_2=h_1\\frac{T_2}{T_1}=40\\cdot\\frac{375}{300}=50\\ \\mathrm{cm}$$",
+    "c) The piston is fixed — the volume is constant: $$p_3=p\\frac{T_3}{T_2}=120\\cdot\\frac{300}{375}=96\\ \\mathrm{kPa}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Porshen muvozanati: $p=p_0+\\frac{mg}{S}$",
+    "ru": "Равновесие поршня: $p=p_0+\\frac{mg}{S}$",
+    "en": "Piston equilibrium: $p=p_0+\\frac{mg}{S}$"
+   },
+   {
+    "uz": "Gey-Lyussak qonuni: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$",
+    "ru": "Закон Гей-Люссака: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$",
+    "en": "Charles's law: $\\frac{V_1}{T_1}=\\frac{V_2}{T_2}$"
+   },
+   {
+    "uz": "Sharl qonuni: $\\frac{p_1}{T_1}=\\frac{p_2}{T_2}$",
+    "ru": "Закон Шарля: $\\frac{p_1}{T_1}=\\frac{p_2}{T_2}$",
+    "en": "Pressure law: $\\frac{p_1}{T_1}=\\frac{p_2}{T_2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Gey-Lyussak va Sharl qonunlari, porshen muvozanati",
+   "ru": "Законы Гей-Люссака и Шарля, равновесие поршня",
+   "en": "Charles's law and the pressure law, piston equilibrium"
+  },
+  "answer": "120\\ \\mathrm{kPa};\\ 50\\ \\mathrm{cm};\\ 96\\ \\mathrm{kPa}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 64-mavzu, 64, 65-masalalar asosida; sharti o'zgartirilgan"
+ }
+]
