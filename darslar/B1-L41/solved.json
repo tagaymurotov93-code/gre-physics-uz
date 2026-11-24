@@ -1,0 +1,857 @@
+[
+ {
+  "id": "B1-L41-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Tebranish konturidagi kondensator zaryadi $q=5\\cdot10^{-6}\\cos(4\\cdot10^4\\pi t)$ qonun bo'yicha o'zgaradi ($q$ — kulonda, $t$ — sekundda). Zaryad amplitudasini, siklik chastotani, chastotani, davrni va tok amplitudasini toping.",
+   "ru": "Заряд конденсатора в колебательном контуре меняется по закону $q=5\\cdot10^{-6}\\cos(4\\cdot10^4\\pi t)$ ($q$ — в кулонах, $t$ — в секундах). Найдите амплитуду заряда, циклическую частоту, частоту, период и амплитуду тока.",
+   "en": "The charge of the capacitor in an LC circuit changes as $q=5\\cdot10^{-6}\\cos(4\\cdot10^4\\pi t)$ ($q$ in coulombs, $t$ in seconds). Find the charge amplitude, the angular frequency, the frequency, the period and the current amplitude."
+  },
+  "figure": "figures/B1-L41-S01.png",
+  "solution": {
+   "uz": [
+    "Tenglama bilan solishtiramiz: $$q_m=5\\ \\mu\\mathrm{C},\\qquad \\omega_0=4\\cdot10^4\\pi\\ \\mathrm{rad/s}$$",
+    "Chastota: $$\\nu=\\frac{\\omega_0}{2\\pi}=\\frac{4\\cdot10^4\\pi}{2\\pi}=2\\cdot10^4\\ \\mathrm{Hz}=20\\ \\mathrm{kHz}$$",
+    "Davr: $$T=\\frac{1}{\\nu}=5\\cdot10^{-5}\\ \\mathrm{s}=50\\ \\mu\\mathrm{s}$$",
+    "Tok amplitudasi: $$I_m=q_m\\omega_0=5\\cdot10^{-6}\\cdot4\\cdot10^4\\pi=0.2\\pi\\approx0.628\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "Сравниваем с уравнением: $$q_m=5\\ \\mu\\mathrm{C},\\qquad \\omega_0=4\\cdot10^4\\pi\\ \\mathrm{rad/s}$$",
+    "Частота: $$\\nu=\\frac{\\omega_0}{2\\pi}=\\frac{4\\cdot10^4\\pi}{2\\pi}=2\\cdot10^4\\ \\mathrm{Hz}=20\\ \\mathrm{kHz}$$",
+    "Период: $$T=\\frac{1}{\\nu}=5\\cdot10^{-5}\\ \\mathrm{s}=50\\ \\mu\\mathrm{s}$$",
+    "Амплитуда тока: $$I_m=q_m\\omega_0=5\\cdot10^{-6}\\cdot4\\cdot10^4\\pi=0.2\\pi\\approx0.628\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "Compare with the equation: $$q_m=5\\ \\mu\\mathrm{C},\\qquad \\omega_0=4\\cdot10^4\\pi\\ \\mathrm{rad/s}$$",
+    "Frequency: $$\\nu=\\frac{\\omega_0}{2\\pi}=\\frac{4\\cdot10^4\\pi}{2\\pi}=2\\cdot10^4\\ \\mathrm{Hz}=20\\ \\mathrm{kHz}$$",
+    "Period: $$T=\\frac{1}{\\nu}=5\\cdot10^{-5}\\ \\mathrm{s}=50\\ \\mu\\mathrm{s}$$",
+    "Current amplitude: $$I_m=q_m\\omega_0=5\\cdot10^{-6}\\cdot4\\cdot10^4\\pi=0.2\\pi\\approx0.628\\ \\mathrm{A}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Zaryad tenglamasi: $q=q_m\\cos(\\omega_0t+\\varphi_0)$",
+    "ru": "Уравнение заряда: $q=q_m\\cos(\\omega_0t+\\varphi_0)$",
+    "en": "Charge equation: $q=q_m\\cos(\\omega_0t+\\varphi_0)$"
+   },
+   {
+    "uz": "Chastota va davr: $\\nu=\\frac{\\omega_0}{2\\pi},\\ T=\\frac{1}{\\nu}$",
+    "ru": "Частота и период: $\\nu=\\frac{\\omega_0}{2\\pi},\\ T=\\frac{1}{\\nu}$",
+    "en": "Frequency and period: $\\nu=\\frac{\\omega_0}{2\\pi},\\ T=\\frac{1}{\\nu}$"
+   },
+   null,
+   {
+    "uz": "Tok amplitudasi: $I_m=q_m\\omega_0$",
+    "ru": "Амплитуда тока: $I_m=q_m\\omega_0$",
+    "en": "Current amplitude: $I_m=q_m\\omega_0$"
+   }
+  ],
+  "basis": {
+   "uz": "Garmonik tebranish tenglamasi, chastota va davr",
+   "ru": "Уравнение гармонических колебаний, частота и период",
+   "en": "Equation of harmonic oscillations, frequency and period"
+  },
+  "answer": "q_m=5\\ \\mu\\mathrm{C};\\ \\omega_0=4\\cdot10^4\\pi\\ \\mathrm{rad/s};\\ \\nu=20\\ \\mathrm{kHz};\\ T=50\\ \\mu\\mathrm{s};\\ I_m\\approx0.628\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 112-mavzu, 9, 14, 16-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Sig'imi $2.5\\ \\mu\\mathrm{F}$ bo'lgan kondensatorli konturda zaryad $q=5\\cdot10^{-5}\\cos400t$ qonun bo'yicha o'zgaradi ($q$ — kulonda). a) Tok kuchining vaqtga bog'lanishini yozing. b) Kondensatordagi kuchlanish tenglamasini yozing. c) Tok va zaryad tebranishlari fazasi qanday farq qiladi? d) G'altak induktivligini toping.",
+   "ru": "В контуре с конденсатором ёмкостью $2.5\\ \\mu\\mathrm{F}$ заряд меняется по закону $q=5\\cdot10^{-5}\\cos400t$ ($q$ — в кулонах). а) Запишите зависимость силы тока от времени. б) Запишите уравнение напряжения на конденсаторе. в) Чем отличаются фазы колебаний тока и заряда? г) Найдите индуктивность катушки.",
+   "en": "In a circuit with a capacitor of capacitance $2.5\\ \\mu\\mathrm{F}$ the charge changes as $q=5\\cdot10^{-5}\\cos400t$ ($q$ in coulombs). a) Write the time dependence of the current. b) Write the equation of the voltage across the capacitor. c) How do the phases of the current and charge oscillations differ? d) Find the inductance of the coil."
+  },
+  "figure": "figures/B1-L41-S02.png",
+  "solution": {
+   "uz": [
+    "a) Zaryaddan hosila olamiz: $$i=q'=-5\\cdot10^{-5}\\cdot400\\sin400t=-0.02\\sin400t$$",
+    "b) Kuchlanish amplitudasi: $$U_m=\\frac{q_m}{C}=\\frac{5\\cdot10^{-5}}{2.5\\cdot10^{-6}}=20\\ \\mathrm{V},\\quad u=20\\cos400t$$",
+    "c) Sinusni kosinusga o'tkazamiz: $$i=0.02\\cos\\left(400t+\\frac{\\pi}{2}\\right)$$",
+    "d) $\\omega_0=\\frac{1}{\\sqrt{LC}}$ dan: $$L=\\frac{1}{\\omega_0^2C}=\\frac{1}{400^2\\cdot2.5\\cdot10^{-6}}=2.5\\ \\mathrm{H}$$"
+   ],
+   "ru": [
+    "а) Берём производную заряда: $$i=q'=-5\\cdot10^{-5}\\cdot400\\sin400t=-0.02\\sin400t$$",
+    "б) Амплитуда напряжения: $$U_m=\\frac{q_m}{C}=\\frac{5\\cdot10^{-5}}{2.5\\cdot10^{-6}}=20\\ \\mathrm{V},\\quad u=20\\cos400t$$",
+    "в) Переводим синус в косинус: $$i=0.02\\cos\\left(400t+\\frac{\\pi}{2}\\right)$$",
+    "г) Из $\\omega_0=\\frac{1}{\\sqrt{LC}}$: $$L=\\frac{1}{\\omega_0^2C}=\\frac{1}{400^2\\cdot2.5\\cdot10^{-6}}=2.5\\ \\mathrm{H}$$"
+   ],
+   "en": [
+    "a) Take the derivative of the charge: $$i=q'=-5\\cdot10^{-5}\\cdot400\\sin400t=-0.02\\sin400t$$",
+    "b) Voltage amplitude: $$U_m=\\frac{q_m}{C}=\\frac{5\\cdot10^{-5}}{2.5\\cdot10^{-6}}=20\\ \\mathrm{V},\\quad u=20\\cos400t$$",
+    "c) Convert the sine into a cosine: $$i=0.02\\cos\\left(400t+\\frac{\\pi}{2}\\right)$$",
+    "d) From $\\omega_0=\\frac{1}{\\sqrt{LC}}$: $$L=\\frac{1}{\\omega_0^2C}=\\frac{1}{400^2\\cdot2.5\\cdot10^{-6}}=2.5\\ \\mathrm{H}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tok — zaryadning hosilasi: $i=q'(t)$",
+    "ru": "Ток — производная заряда: $i=q'(t)$",
+    "en": "The current is the derivative of the charge: $i=q'(t)$"
+   },
+   {
+    "uz": "Kuchlanish: $u=\\frac{q}{C},\\ U_m=\\frac{q_m}{C}$",
+    "ru": "Напряжение: $u=\\frac{q}{C},\\ U_m=\\frac{q_m}{C}$",
+    "en": "Voltage: $u=\\frac{q}{C},\\ U_m=\\frac{q_m}{C}$"
+   },
+   {
+    "uz": "Tok zaryaddan faza bo'yicha $\\frac{\\pi}{2}$ ga oldinda",
+    "ru": "Ток опережает заряд по фазе на $\\frac{\\pi}{2}$",
+    "en": "The current leads the charge in phase by $\\frac{\\pi}{2}$"
+   },
+   {
+    "uz": "Siklik chastota: $\\omega_0=\\frac{1}{\\sqrt{LC}}$",
+    "ru": "Циклическая частота: $\\omega_0=\\frac{1}{\\sqrt{LC}}$",
+    "en": "Angular frequency: $\\omega_0=\\frac{1}{\\sqrt{LC}}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tok — zaryad hosilasi, fazalar farqi, siklik chastota",
+   "ru": "Ток — производная заряда, разность фаз, циклическая частота",
+   "en": "Current as the derivative of the charge, phase difference, angular frequency"
+  },
+  "answer": "i=-0.02\\sin400t;\\ u=20\\cos400t;\\ \\Delta\\varphi=\\frac{\\pi}{2};\\ L=2.5\\ \\mathrm{H}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 112-mavzu, 13, 18-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Konturdagi tok $i=0.06\\cos(3\\cdot10^5t)$ qonun bo'yicha o'zgaradi ($i$ — amperda). Kondensator zaryadining eng katta qiymatini, zaryad tenglamasini va tebranishlar davrini toping.",
+   "ru": "Ток в контуре меняется по закону $i=0.06\\cos(3\\cdot10^5t)$ ($i$ — в амперах). Найдите наибольшее значение заряда конденсатора, уравнение заряда и период колебаний.",
+   "en": "The current in a circuit changes as $i=0.06\\cos(3\\cdot10^5t)$ ($i$ in amperes). Find the largest value of the capacitor charge, the equation of the charge and the period of the oscillations."
+  },
+  "figure": "figures/B1-L41-S03.png",
+  "solution": {
+   "uz": [
+    "Tenglamadan: $$I_m=0.06\\ \\mathrm{A},\\qquad \\omega_0=3\\cdot10^5\\ \\mathrm{rad/s}$$",
+    "Zaryad amplitudasi: $$q_m=\\frac{I_m}{\\omega_0}=\\frac{0.06}{3\\cdot10^5}=2\\cdot10^{-7}\\ \\mathrm{C}=0.2\\ \\mu\\mathrm{C}$$",
+    "Zaryad tokdan chorak davr orqada: $$q=2\\cdot10^{-7}\\sin(3\\cdot10^5t),\\quad q'=i$$",
+    "Davr: $$T=\\frac{2\\pi}{\\omega_0}=\\frac{2\\pi}{3\\cdot10^5}\\approx2.09\\cdot10^{-5}\\ \\mathrm{s}\\approx20.9\\ \\mu\\mathrm{s}$$"
+   ],
+   "ru": [
+    "Из уравнения: $$I_m=0.06\\ \\mathrm{A},\\qquad \\omega_0=3\\cdot10^5\\ \\mathrm{rad/s}$$",
+    "Амплитуда заряда: $$q_m=\\frac{I_m}{\\omega_0}=\\frac{0.06}{3\\cdot10^5}=2\\cdot10^{-7}\\ \\mathrm{C}=0.2\\ \\mu\\mathrm{C}$$",
+    "Заряд отстаёт от тока на четверть периода: $$q=2\\cdot10^{-7}\\sin(3\\cdot10^5t),\\quad q'=i$$",
+    "Период: $$T=\\frac{2\\pi}{\\omega_0}=\\frac{2\\pi}{3\\cdot10^5}\\approx2.09\\cdot10^{-5}\\ \\mathrm{s}\\approx20.9\\ \\mu\\mathrm{s}$$"
+   ],
+   "en": [
+    "From the equation: $$I_m=0.06\\ \\mathrm{A},\\qquad \\omega_0=3\\cdot10^5\\ \\mathrm{rad/s}$$",
+    "Charge amplitude: $$q_m=\\frac{I_m}{\\omega_0}=\\frac{0.06}{3\\cdot10^5}=2\\cdot10^{-7}\\ \\mathrm{C}=0.2\\ \\mu\\mathrm{C}$$",
+    "The charge lags the current by a quarter period: $$q=2\\cdot10^{-7}\\sin(3\\cdot10^5t),\\quad q'=i$$",
+    "Period: $$T=\\frac{2\\pi}{\\omega_0}=\\frac{2\\pi}{3\\cdot10^5}\\approx2.09\\cdot10^{-5}\\ \\mathrm{s}\\approx20.9\\ \\mu\\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Zaryad amplitudasi: $q_m=\\frac{I_m}{\\omega_0}$",
+    "ru": "Амплитуда заряда: $q_m=\\frac{I_m}{\\omega_0}$",
+    "en": "Charge amplitude: $q_m=\\frac{I_m}{\\omega_0}$"
+   },
+   {
+    "uz": "Tok — zaryadning hosilasi: $i=q'(t)$",
+    "ru": "Ток — производная заряда: $i=q'(t)$",
+    "en": "The current is the derivative of the charge: $i=q'(t)$"
+   },
+   {
+    "uz": "Chastota va davr: $\\nu=\\frac{\\omega_0}{2\\pi},\\ T=\\frac{1}{\\nu}$",
+    "ru": "Частота и период: $\\nu=\\frac{\\omega_0}{2\\pi},\\ T=\\frac{1}{\\nu}$",
+    "en": "Frequency and period: $\\nu=\\frac{\\omega_0}{2\\pi},\\ T=\\frac{1}{\\nu}$"
+   }
+  ],
+  "basis": {
+   "uz": "Zaryad va tok amplitudalari orasidagi bog'lanish",
+   "ru": "Связь амплитуд заряда и тока",
+   "en": "Relation between the charge and current amplitudes"
+  },
+  "answer": "q_m=0.2\\ \\mu\\mathrm{C};\\ q=2\\cdot10^{-7}\\sin(3\\cdot10^5t);\\ T\\approx20.9\\ \\mu\\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 112-mavzu, 4, 22, 23-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S04",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Tebranish konturi induktivligi $0.4\\ \\mathrm{mH}$ bo'lgan g'altak va sig'imi $250\\ \\mathrm{nF}$ bo'lgan kondensatordan iborat. Erkin tebranishlarning siklik chastotasini, davrini va chastotasini toping.",
+   "ru": "Колебательный контур состоит из катушки индуктивностью $0.4\\ \\mathrm{mH}$ и конденсатора ёмкостью $250\\ \\mathrm{nF}$. Найдите циклическую частоту, период и частоту свободных колебаний.",
+   "en": "An LC circuit consists of a coil of inductance $0.4\\ \\mathrm{mH}$ and a capacitor of capacitance $250\\ \\mathrm{nF}$. Find the angular frequency, the period and the frequency of the free oscillations."
+  },
+  "figure": "figures/B1-L41-S04.png",
+  "solution": {
+   "uz": [
+    "$LC$ ko'paytma: $$LC=4\\cdot10^{-4}\\cdot2.5\\cdot10^{-7}=10^{-10}\\ \\mathrm{s^2}$$",
+    "Siklik chastota: $$\\omega_0=\\frac{1}{\\sqrt{LC}}=10^{5}\\ \\mathrm{rad/s}$$",
+    "Davr va chastota: $$T=2\\pi\\sqrt{LC}=2\\pi\\cdot10^{-5}\\approx62.8\\ \\mu\\mathrm{s},\\quad \\nu=\\frac{1}{T}\\approx15.9\\ \\mathrm{kHz}$$"
+   ],
+   "ru": [
+    "Произведение $LC$: $$LC=4\\cdot10^{-4}\\cdot2.5\\cdot10^{-7}=10^{-10}\\ \\mathrm{s^2}$$",
+    "Циклическая частота: $$\\omega_0=\\frac{1}{\\sqrt{LC}}=10^{5}\\ \\mathrm{rad/s}$$",
+    "Период и частота: $$T=2\\pi\\sqrt{LC}=2\\pi\\cdot10^{-5}\\approx62.8\\ \\mu\\mathrm{s},\\quad \\nu=\\frac{1}{T}\\approx15.9\\ \\mathrm{kHz}$$"
+   ],
+   "en": [
+    "The product $LC$: $$LC=4\\cdot10^{-4}\\cdot2.5\\cdot10^{-7}=10^{-10}\\ \\mathrm{s^2}$$",
+    "Angular frequency: $$\\omega_0=\\frac{1}{\\sqrt{LC}}=10^{5}\\ \\mathrm{rad/s}$$",
+    "Period and frequency: $$T=2\\pi\\sqrt{LC}=2\\pi\\cdot10^{-5}\\approx62.8\\ \\mu\\mathrm{s},\\quad \\nu=\\frac{1}{T}\\approx15.9\\ \\mathrm{kHz}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Siklik chastota: $\\omega_0=\\frac{1}{\\sqrt{LC}}$",
+    "ru": "Циклическая частота: $\\omega_0=\\frac{1}{\\sqrt{LC}}$",
+    "en": "Angular frequency: $\\omega_0=\\frac{1}{\\sqrt{LC}}$"
+   },
+   {
+    "uz": "Tomson formulasi: $T=2\\pi\\sqrt{LC}$",
+    "ru": "Формула Томсона: $T=2\\pi\\sqrt{LC}$",
+    "en": "Thomson's formula: $T=2\\pi\\sqrt{LC}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tomson formulasi",
+   "ru": "Формула Томсона",
+   "en": "Thomson's formula"
+  },
+  "answer": "\\omega_0=10^5\\ \\mathrm{rad/s};\\ T\\approx62.8\\ \\mu\\mathrm{s};\\ \\nu\\approx15.9\\ \\mathrm{kHz}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 113-mavzu, 3, 6, 7-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S05",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Tebranish konturidagi g'altak induktivligi $9$ marta oshirildi, kondensator sig'imi $4$ marta kamaytirildi. a) Davr necha marta o'zgaradi? b) Chastota-chi? c) Induktivlik $9$ marta oshirilgan holda davr avvalgidek qolishi uchun sig'imni dastlabkiga nisbatan qanday o'zgartirish kerak?",
+   "ru": "Индуктивность катушки колебательного контура увеличили в $9$ раз, ёмкость конденсатора уменьшили в $4$ раза. а) Во сколько раз изменится период? б) А частота? в) Как нужно изменить ёмкость по сравнению с начальной, чтобы при увеличенной в $9$ раз индуктивности период остался прежним?",
+   "en": "The inductance of the coil of an LC circuit was increased $9$ times and the capacitance of the capacitor was decreased $4$ times. a) By what factor does the period change? b) And the frequency? c) How must the capacitance be changed relative to the initial one so that, with the inductance increased $9$ times, the period stays the same?"
+  },
+  "figure": "figures/B1-L41-S05.png",
+  "solution": {
+   "uz": [
+    "a) Davr $\\sqrt{LC}$ ga proporsional: $$\\frac{T_2}{T_1}=\\sqrt{\\frac{L_2C_2}{L_1C_1}}=\\sqrt{9\\cdot\\frac{1}{4}}=\\frac{3}{2}$$",
+    "b) Chastota davrga teskari: $$\\frac{\\nu_2}{\\nu_1}=\\frac{T_1}{T_2}=\\frac{2}{3}$$",
+    "c) $LC$ ko'paytma o'zgarmasligi kerak: $$9L\\cdot C'=LC\\ \\Rightarrow\\ C'=\\frac{C}{9}$$",
+    "Demak, sig'im $9$ marta kamaytiriladi: $$\\frac{C'}{C}=\\frac{1}{9}$$"
+   ],
+   "ru": [
+    "а) Период пропорционален $\\sqrt{LC}$: $$\\frac{T_2}{T_1}=\\sqrt{\\frac{L_2C_2}{L_1C_1}}=\\sqrt{9\\cdot\\frac{1}{4}}=\\frac{3}{2}$$",
+    "б) Частота обратна периоду: $$\\frac{\\nu_2}{\\nu_1}=\\frac{T_1}{T_2}=\\frac{2}{3}$$",
+    "в) Произведение $LC$ не должно меняться: $$9L\\cdot C'=LC\\ \\Rightarrow\\ C'=\\frac{C}{9}$$",
+    "Значит, ёмкость уменьшают в $9$ раз: $$\\frac{C'}{C}=\\frac{1}{9}$$"
+   ],
+   "en": [
+    "a) The period is proportional to $\\sqrt{LC}$: $$\\frac{T_2}{T_1}=\\sqrt{\\frac{L_2C_2}{L_1C_1}}=\\sqrt{9\\cdot\\frac{1}{4}}=\\frac{3}{2}$$",
+    "b) The frequency is inverse to the period: $$\\frac{\\nu_2}{\\nu_1}=\\frac{T_1}{T_2}=\\frac{2}{3}$$",
+    "c) The product $LC$ must not change: $$9L\\cdot C'=LC\\ \\Rightarrow\\ C'=\\frac{C}{9}$$",
+    "So the capacitance is decreased $9$ times: $$\\frac{C'}{C}=\\frac{1}{9}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Masshtab: $T\\sim\\sqrt{LC},\\ \\nu\\sim\\frac{1}{\\sqrt{LC}}$",
+    "ru": "Масштаб: $T\\sim\\sqrt{LC},\\ \\nu\\sim\\frac{1}{\\sqrt{LC}}$",
+    "en": "Scaling: $T\\sim\\sqrt{LC},\\ \\nu\\sim\\frac{1}{\\sqrt{LC}}$"
+   },
+   {
+    "uz": "Chastota va davr: $\\nu=\\frac{\\omega_0}{2\\pi},\\ T=\\frac{1}{\\nu}$",
+    "ru": "Частота и период: $\\nu=\\frac{\\omega_0}{2\\pi},\\ T=\\frac{1}{\\nu}$",
+    "en": "Frequency and period: $\\nu=\\frac{\\omega_0}{2\\pi},\\ T=\\frac{1}{\\nu}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Davrning induktivlik va sig'imga bog'liqligi",
+   "ru": "Зависимость периода от индуктивности и ёмкости",
+   "en": "Dependence of the period on inductance and capacitance"
+  },
+  "answer": "\\frac{T_2}{T_1}=\\frac{3}{2};\\ \\frac{\\nu_2}{\\nu_1}=\\frac{2}{3};\\ C'=\\frac{C}{9}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 113-mavzu, 8, 9, 10, 11-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Konturdagi yassi havo kondensatori plastinalari orasidagi masofa $16$ marta orttirildi. a) Davr necha marta o'zgaradi? b) So'ngra plastinalar orasi dielektrik singdiruvchanligi $4$ bo'lgan dielektrik bilan to'liq to'ldirildi. Dastlabki holatga nisbatan davr va chastota necha marta o'zgaradi?",
+   "ru": "Расстояние между пластинами плоского воздушного конденсатора в контуре увеличили в $16$ раз. а) Во сколько раз изменится период? б) Затем пространство между пластинами полностью заполнили диэлектриком с диэлектрической проницаемостью $4$. Во сколько раз изменятся период и частота по сравнению с начальным состоянием?",
+   "en": "The distance between the plates of a parallel-plate air capacitor in a circuit was increased $16$ times. a) By what factor does the period change? b) Then the space between the plates was completely filled with a dielectric of relative permittivity $4$. By what factor do the period and the frequency change compared with the initial state?"
+  },
+  "figure": "figures/B1-L41-S06.png",
+  "solution": {
+   "uz": [
+    "a) $C\\sim\\frac{1}{d}$: $$C_1=\\frac{C}{16}\\ \\Rightarrow\\ \\frac{T_1}{T}=\\sqrt{\\frac{1}{16}}=\\frac{1}{4}$$",
+    "b) Dielektrik sig'imni $\\varepsilon$ marta oshiradi: $$C_2=4C_1=\\frac{C}{4}$$",
+    "Dastlabki davrga nisbatan: $$\\frac{T_2}{T}=\\sqrt{\\frac{C_2}{C}}=\\frac{1}{2}$$",
+    "Chastota: $$\\frac{\\nu_2}{\\nu}=\\frac{T}{T_2}=2$$"
+   ],
+   "ru": [
+    "а) $C\\sim\\frac{1}{d}$: $$C_1=\\frac{C}{16}\\ \\Rightarrow\\ \\frac{T_1}{T}=\\sqrt{\\frac{1}{16}}=\\frac{1}{4}$$",
+    "б) Диэлектрик увеличивает ёмкость в $\\varepsilon$ раз: $$C_2=4C_1=\\frac{C}{4}$$",
+    "По сравнению с начальным периодом: $$\\frac{T_2}{T}=\\sqrt{\\frac{C_2}{C}}=\\frac{1}{2}$$",
+    "Частота: $$\\frac{\\nu_2}{\\nu}=\\frac{T}{T_2}=2$$"
+   ],
+   "en": [
+    "a) $C\\sim\\frac{1}{d}$: $$C_1=\\frac{C}{16}\\ \\Rightarrow\\ \\frac{T_1}{T}=\\sqrt{\\frac{1}{16}}=\\frac{1}{4}$$",
+    "b) The dielectric increases the capacitance $\\varepsilon$ times: $$C_2=4C_1=\\frac{C}{4}$$",
+    "Compared with the initial period: $$\\frac{T_2}{T}=\\sqrt{\\frac{C_2}{C}}=\\frac{1}{2}$$",
+    "Frequency: $$\\frac{\\nu_2}{\\nu}=\\frac{T}{T_2}=2$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yassi kondensator: $C=\\frac{\\varepsilon\\varepsilon_0S}{d}$",
+    "ru": "Плоский конденсатор: $C=\\frac{\\varepsilon\\varepsilon_0S}{d}$",
+    "en": "Parallel-plate capacitor: $C=\\frac{\\varepsilon\\varepsilon_0S}{d}$"
+   },
+   null,
+   {
+    "uz": "Masshtab: $T\\sim\\sqrt{LC},\\ \\nu\\sim\\frac{1}{\\sqrt{LC}}$",
+    "ru": "Масштаб: $T\\sim\\sqrt{LC},\\ \\nu\\sim\\frac{1}{\\sqrt{LC}}$",
+    "en": "Scaling: $T\\sim\\sqrt{LC},\\ \\nu\\sim\\frac{1}{\\sqrt{LC}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Yassi kondensator sig'imi, Tomson formulasi",
+   "ru": "Ёмкость плоского конденсатора, формула Томсона",
+   "en": "Capacitance of a parallel-plate capacitor, Thomson's formula"
+  },
+  "answer": "\\frac{T_1}{T}=\\frac{1}{4};\\ \\frac{T_2}{T}=\\frac{1}{2};\\ \\frac{\\nu_2}{\\nu}=2",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 113-mavzu, 23, 24, 25, 26-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ideal konturdagi $C$ sig'imli kondensatorga: a) $8C$ sig'imli kondensator parallel ulandi; b) $\\frac{C}{8}$ sig'imli kondensator ketma-ket ulandi. Har bir holda erkin tebranishlar davri necha marta o'zgaradi? c) a) va b) holatlardagi davrlar nisbatini toping.",
+   "ru": "К конденсатору ёмкостью $C$ в идеальном контуре: а) параллельно подключили конденсатор ёмкостью $8C$; б) последовательно подключили конденсатор ёмкостью $\\frac{C}{8}$. Во сколько раз изменяется период свободных колебаний в каждом случае? в) Найдите отношение периодов в случаях а) и б).",
+   "en": "To the capacitor of capacitance $C$ in an ideal circuit: a) a capacitor of capacitance $8C$ was connected in parallel; b) a capacitor of capacitance $\\frac{C}{8}$ was connected in series. By what factor does the period of free oscillations change in each case? c) Find the ratio of the periods in cases a) and b)."
+  },
+  "figure": "figures/B1-L41-S07.png",
+  "solution": {
+   "uz": [
+    "a) Parallel ulash: $$C_a=C+8C=9C\\ \\Rightarrow\\ \\frac{T_a}{T}=\\sqrt{9}=3$$",
+    "b) Ketma-ket ulash: $$\\frac{1}{C_b}=\\frac{1}{C}+\\frac{8}{C}=\\frac{9}{C}\\ \\Rightarrow\\ C_b=\\frac{C}{9}$$",
+    "Davr: $$\\frac{T_b}{T}=\\sqrt{\\frac{1}{9}}=\\frac{1}{3}$$",
+    "c) Davrlar nisbati: $$\\frac{T_a}{T_b}=\\frac{3}{1/3}=9$$"
+   ],
+   "ru": [
+    "а) Параллельное соединение: $$C_a=C+8C=9C\\ \\Rightarrow\\ \\frac{T_a}{T}=\\sqrt{9}=3$$",
+    "б) Последовательное соединение: $$\\frac{1}{C_b}=\\frac{1}{C}+\\frac{8}{C}=\\frac{9}{C}\\ \\Rightarrow\\ C_b=\\frac{C}{9}$$",
+    "Период: $$\\frac{T_b}{T}=\\sqrt{\\frac{1}{9}}=\\frac{1}{3}$$",
+    "в) Отношение периодов: $$\\frac{T_a}{T_b}=\\frac{3}{1/3}=9$$"
+   ],
+   "en": [
+    "a) Parallel connection: $$C_a=C+8C=9C\\ \\Rightarrow\\ \\frac{T_a}{T}=\\sqrt{9}=3$$",
+    "b) Series connection: $$\\frac{1}{C_b}=\\frac{1}{C}+\\frac{8}{C}=\\frac{9}{C}\\ \\Rightarrow\\ C_b=\\frac{C}{9}$$",
+    "Period: $$\\frac{T_b}{T}=\\sqrt{\\frac{1}{9}}=\\frac{1}{3}$$",
+    "c) Ratio of the periods: $$\\frac{T_a}{T_b}=\\frac{3}{1/3}=9$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Parallel ulash: $C=C_1+C_2$",
+    "ru": "Параллельное соединение: $C=C_1+C_2$",
+    "en": "Parallel connection: $C=C_1+C_2$"
+   },
+   {
+    "uz": "Ketma-ket ulash: $\\frac{1}{C}=\\frac{1}{C_1}+\\frac{1}{C_2}$",
+    "ru": "Последовательное соединение: $\\frac{1}{C}=\\frac{1}{C_1}+\\frac{1}{C_2}$",
+    "en": "Series connection: $\\frac{1}{C}=\\frac{1}{C_1}+\\frac{1}{C_2}$"
+   },
+   {
+    "uz": "Masshtab: $T\\sim\\sqrt{LC},\\ \\nu\\sim\\frac{1}{\\sqrt{LC}}$",
+    "ru": "Масштаб: $T\\sim\\sqrt{LC},\\ \\nu\\sim\\frac{1}{\\sqrt{LC}}$",
+    "en": "Scaling: $T\\sim\\sqrt{LC},\\ \\nu\\sim\\frac{1}{\\sqrt{LC}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kondensatorlarni ulash, Tomson formulasi",
+   "ru": "Соединение конденсаторов, формула Томсона",
+   "en": "Connecting capacitors, Thomson's formula"
+  },
+  "answer": "\\frac{T_a}{T}=3;\\ \\frac{T_b}{T}=\\frac{1}{3};\\ \\frac{T_a}{T_b}=9",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 113-mavzu, 19, 20, 21, 22-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Induktivligi $25\\ \\mathrm{mH}$ bo'lgan g'altakli konturda $2\\ \\mathrm{kHz}$ chastotali tebranishlar olish uchun qanday sig'imli kondensator kerak? Chastotani $1\\ \\mathrm{kHz}$ ga tushirish uchun-chi? ($\\pi^2=10$)",
+   "ru": "Конденсатор какой ёмкости нужен, чтобы в контуре с катушкой индуктивностью $25\\ \\mathrm{mH}$ получить колебания частотой $2\\ \\mathrm{kHz}$? А чтобы понизить частоту до $1\\ \\mathrm{kHz}$? ($\\pi^2=10$)",
+   "en": "What capacitance is needed to obtain oscillations of frequency $2\\ \\mathrm{kHz}$ in a circuit with a coil of inductance $25\\ \\mathrm{mH}$? And to lower the frequency to $1\\ \\mathrm{kHz}$? ($\\pi^2=10$)"
+  },
+  "figure": "figures/B1-L41-S08.png",
+  "solution": {
+   "uz": [
+    "Tomson formulasidan $C$ ni ifodalaymiz: $$\\nu=\\frac{1}{2\\pi\\sqrt{LC}}\\ \\Rightarrow\\ C=\\frac{1}{4\\pi^2\\nu^2L}$$",
+    "Sonlarni qo'yamiz: $$C=\\frac{1}{40\\cdot4\\cdot10^{6}\\cdot0.025}=2.5\\cdot10^{-7}\\ \\mathrm{F}=0.25\\ \\mu\\mathrm{F}$$",
+    "$C\\sim\\frac{1}{\\nu^2}$: chastota $2$ marta kamaysa: $$C'=4C=1\\ \\mu\\mathrm{F}$$"
+   ],
+   "ru": [
+    "Выражаем $C$ из формулы Томсона: $$\\nu=\\frac{1}{2\\pi\\sqrt{LC}}\\ \\Rightarrow\\ C=\\frac{1}{4\\pi^2\\nu^2L}$$",
+    "Подставляем числа: $$C=\\frac{1}{40\\cdot4\\cdot10^{6}\\cdot0.025}=2.5\\cdot10^{-7}\\ \\mathrm{F}=0.25\\ \\mu\\mathrm{F}$$",
+    "$C\\sim\\frac{1}{\\nu^2}$: если частота уменьшается в $2$ раза: $$C'=4C=1\\ \\mu\\mathrm{F}$$"
+   ],
+   "en": [
+    "Express $C$ from Thomson's formula: $$\\nu=\\frac{1}{2\\pi\\sqrt{LC}}\\ \\Rightarrow\\ C=\\frac{1}{4\\pi^2\\nu^2L}$$",
+    "Substituting the numbers: $$C=\\frac{1}{40\\cdot4\\cdot10^{6}\\cdot0.025}=2.5\\cdot10^{-7}\\ \\mathrm{F}=0.25\\ \\mu\\mathrm{F}$$",
+    "$C\\sim\\frac{1}{\\nu^2}$: if the frequency decreases $2$ times: $$C'=4C=1\\ \\mu\\mathrm{F}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kerakli sig'im: $C=\\frac{1}{4\\pi^2\\nu^2L}$",
+    "ru": "Нужная ёмкость: $C=\\frac{1}{4\\pi^2\\nu^2L}$",
+    "en": "Required capacitance: $C=\\frac{1}{4\\pi^2\\nu^2L}$"
+   },
+   null,
+   {
+    "uz": "Masshtab: $T\\sim\\sqrt{LC},\\ \\nu\\sim\\frac{1}{\\sqrt{LC}}$",
+    "ru": "Масштаб: $T\\sim\\sqrt{LC},\\ \\nu\\sim\\frac{1}{\\sqrt{LC}}$",
+    "en": "Scaling: $T\\sim\\sqrt{LC},\\ \\nu\\sim\\frac{1}{\\sqrt{LC}}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tomson formulasi, konturni sozlash",
+   "ru": "Формула Томсона, настройка контура",
+   "en": "Thomson's formula, tuning a circuit"
+  },
+  "answer": "C=0.25\\ \\mu\\mathrm{F};\\ C'=1\\ \\mu\\mathrm{F}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 113-mavzu, 28, 29, 30-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Sig'imi $5\\ \\mu\\mathrm{F}$ bo'lgan kondensator $120\\ \\mu\\mathrm{C}$ gacha zaryadlanib, $t=0$ da induktivligi $0.2\\ \\mathrm{H}$ bo'lgan g'altakka ulandi. Zaryad va tok tenglamalarini yozing, tok va kuchlanish amplitudalarini hamda davrni toping.",
+   "ru": "Конденсатор ёмкостью $5\\ \\mu\\mathrm{F}$ зарядили до $120\\ \\mu\\mathrm{C}$ и при $t=0$ подключили к катушке индуктивностью $0.2\\ \\mathrm{H}$. Запишите уравнения заряда и тока, найдите амплитуды тока и напряжения и период.",
+   "en": "A capacitor of capacitance $5\\ \\mu\\mathrm{F}$ was charged to $120\\ \\mu\\mathrm{C}$ and at $t=0$ connected to a coil of inductance $0.2\\ \\mathrm{H}$. Write the equations of the charge and the current, and find the current and voltage amplitudes and the period."
+  },
+  "figure": "figures/B1-L41-S09.png",
+  "solution": {
+   "uz": [
+    "Siklik chastota: $$\\omega_0=\\frac{1}{\\sqrt{0.2\\cdot5\\cdot10^{-6}}}=\\frac{1}{10^{-3}}=1000\\ \\mathrm{rad/s}$$",
+    "$t=0$ da zaryad eng katta — kosinus: $$q=1.2\\cdot10^{-4}\\cos1000t,\\qquad i=q'=-0.12\\sin1000t$$",
+    "Amplitudalar: $$I_m=q_m\\omega_0=0.12\\ \\mathrm{A},\\qquad U_m=\\frac{q_m}{C}=\\frac{1.2\\cdot10^{-4}}{5\\cdot10^{-6}}=24\\ \\mathrm{V}$$",
+    "Davr: $$T=\\frac{2\\pi}{\\omega_0}=2\\pi\\cdot10^{-3}\\approx6.28\\ \\mathrm{ms}$$"
+   ],
+   "ru": [
+    "Циклическая частота: $$\\omega_0=\\frac{1}{\\sqrt{0.2\\cdot5\\cdot10^{-6}}}=\\frac{1}{10^{-3}}=1000\\ \\mathrm{rad/s}$$",
+    "При $t=0$ заряд максимален — косинус: $$q=1.2\\cdot10^{-4}\\cos1000t,\\qquad i=q'=-0.12\\sin1000t$$",
+    "Амплитуды: $$I_m=q_m\\omega_0=0.12\\ \\mathrm{A},\\qquad U_m=\\frac{q_m}{C}=\\frac{1.2\\cdot10^{-4}}{5\\cdot10^{-6}}=24\\ \\mathrm{V}$$",
+    "Период: $$T=\\frac{2\\pi}{\\omega_0}=2\\pi\\cdot10^{-3}\\approx6.28\\ \\mathrm{ms}$$"
+   ],
+   "en": [
+    "Angular frequency: $$\\omega_0=\\frac{1}{\\sqrt{0.2\\cdot5\\cdot10^{-6}}}=\\frac{1}{10^{-3}}=1000\\ \\mathrm{rad/s}$$",
+    "At $t=0$ the charge is maximal — a cosine: $$q=1.2\\cdot10^{-4}\\cos1000t,\\qquad i=q'=-0.12\\sin1000t$$",
+    "Amplitudes: $$I_m=q_m\\omega_0=0.12\\ \\mathrm{A},\\qquad U_m=\\frac{q_m}{C}=\\frac{1.2\\cdot10^{-4}}{5\\cdot10^{-6}}=24\\ \\mathrm{V}$$",
+    "Period: $$T=\\frac{2\\pi}{\\omega_0}=2\\pi\\cdot10^{-3}\\approx6.28\\ \\mathrm{ms}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Siklik chastota: $\\omega_0=\\frac{1}{\\sqrt{LC}}$",
+    "ru": "Циклическая частота: $\\omega_0=\\frac{1}{\\sqrt{LC}}$",
+    "en": "Angular frequency: $\\omega_0=\\frac{1}{\\sqrt{LC}}$"
+   },
+   {
+    "uz": "Tok — zaryadning hosilasi: $i=q'(t)$",
+    "ru": "Ток — производная заряда: $i=q'(t)$",
+    "en": "The current is the derivative of the charge: $i=q'(t)$"
+   },
+   {
+    "uz": "Tok amplitudasi: $I_m=q_m\\omega_0$",
+    "ru": "Амплитуда тока: $I_m=q_m\\omega_0$",
+    "en": "Current amplitude: $I_m=q_m\\omega_0$"
+   },
+   {
+    "uz": "Chastota va davr: $\\nu=\\frac{\\omega_0}{2\\pi},\\ T=\\frac{1}{\\nu}$",
+    "ru": "Частота и период: $\\nu=\\frac{\\omega_0}{2\\pi},\\ T=\\frac{1}{\\nu}$",
+    "en": "Frequency and period: $\\nu=\\frac{\\omega_0}{2\\pi},\\ T=\\frac{1}{\\nu}$"
+   }
+  ],
+  "basis": {
+   "uz": "Konturdagi erkin tebranishlar, boshlang'ich shartlar",
+   "ru": "Свободные колебания в контуре, начальные условия",
+   "en": "Free oscillations in a circuit, initial conditions"
+  },
+  "answer": "q=1.2\\cdot10^{-4}\\cos1000t;\\ i=-0.12\\sin1000t;\\ I_m=0.12\\ \\mathrm{A};\\ U_m=24\\ \\mathrm{V};\\ T\\approx6.28\\ \\mathrm{ms}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 113-mavzu, 33, 35-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ideal konturdagi $2\\ \\mu\\mathrm{F}$ sig'imli kondensatorning eng katta zaryadi $4\\cdot10^{-4}\\ \\mathrm{C}$, g'altak induktivligi $80\\ \\mathrm{mH}$. Konturning to'liq energiyasini, g'altak magnit maydon energiyasining eng katta qiymatini va tok amplitudasini toping. Javobni $I_m=q_m\\omega_0$ bilan tekshiring.",
+   "ru": "Наибольший заряд конденсатора ёмкостью $2\\ \\mu\\mathrm{F}$ в идеальном контуре равен $4\\cdot10^{-4}\\ \\mathrm{C}$, индуктивность катушки $80\\ \\mathrm{mH}$. Найдите полную энергию контура, наибольшее значение энергии магнитного поля катушки и амплитуду тока. Проверьте ответ по формуле $I_m=q_m\\omega_0$.",
+   "en": "The largest charge of a $2\\ \\mu\\mathrm{F}$ capacitor in an ideal circuit is $4\\cdot10^{-4}\\ \\mathrm{C}$, and the inductance of the coil is $80\\ \\mathrm{mH}$. Find the total energy of the circuit, the largest value of the magnetic field energy of the coil and the current amplitude. Check the answer with $I_m=q_m\\omega_0$."
+  },
+  "figure": "figures/B1-L41-S10.png",
+  "solution": {
+   "uz": [
+    "To'liq energiya: $$W=\\frac{q_m^2}{2C}=\\frac{16\\cdot10^{-8}}{4\\cdot10^{-6}}=0.04\\ \\mathrm{J}=40\\ \\mathrm{mJ}$$",
+    "Ideal kontur — energiya saqlanadi: $$W_{M,max}=W=40\\ \\mathrm{mJ}$$",
+    "Tok amplitudasi: $$\\frac{LI_m^2}{2}=W\\ \\Rightarrow\\ I_m=\\sqrt{\\frac{2\\cdot0.04}{0.08}}=1\\ \\mathrm{A}$$",
+    "Tekshiruv: $$\\omega_0=\\frac{1}{\\sqrt{0.08\\cdot2\\cdot10^{-6}}}=2500\\ \\mathrm{rad/s},\\quad q_m\\omega_0=1\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "Полная энергия: $$W=\\frac{q_m^2}{2C}=\\frac{16\\cdot10^{-8}}{4\\cdot10^{-6}}=0.04\\ \\mathrm{J}=40\\ \\mathrm{mJ}$$",
+    "Идеальный контур — энергия сохраняется: $$W_{M,max}=W=40\\ \\mathrm{mJ}$$",
+    "Амплитуда тока: $$\\frac{LI_m^2}{2}=W\\ \\Rightarrow\\ I_m=\\sqrt{\\frac{2\\cdot0.04}{0.08}}=1\\ \\mathrm{A}$$",
+    "Проверка: $$\\omega_0=\\frac{1}{\\sqrt{0.08\\cdot2\\cdot10^{-6}}}=2500\\ \\mathrm{rad/s},\\quad q_m\\omega_0=1\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "Total energy: $$W=\\frac{q_m^2}{2C}=\\frac{16\\cdot10^{-8}}{4\\cdot10^{-6}}=0.04\\ \\mathrm{J}=40\\ \\mathrm{mJ}$$",
+    "Ideal circuit — the energy is conserved: $$W_{M,max}=W=40\\ \\mathrm{mJ}$$",
+    "Current amplitude: $$\\frac{LI_m^2}{2}=W\\ \\Rightarrow\\ I_m=\\sqrt{\\frac{2\\cdot0.04}{0.08}}=1\\ \\mathrm{A}$$",
+    "Check: $$\\omega_0=\\frac{1}{\\sqrt{0.08\\cdot2\\cdot10^{-6}}}=2500\\ \\mathrm{rad/s},\\quad q_m\\omega_0=1\\ \\mathrm{A}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'liq energiya: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$",
+    "ru": "Полная энергия: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$",
+    "en": "Total energy: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$"
+   },
+   null,
+   {
+    "uz": "Energiyaning saqlanishi: $\\frac{q^2}{2C}+\\frac{Li^2}{2}=W$",
+    "ru": "Сохранение энергии: $\\frac{q^2}{2C}+\\frac{Li^2}{2}=W$",
+    "en": "Conservation of energy: $\\frac{q^2}{2C}+\\frac{Li^2}{2}=W$"
+   },
+   {
+    "uz": "Tok amplitudasi: $I_m=q_m\\omega_0$",
+    "ru": "Амплитуда тока: $I_m=q_m\\omega_0$",
+    "en": "Current amplitude: $I_m=q_m\\omega_0$"
+   }
+  ],
+  "basis": {
+   "uz": "Konturdagi energiyaning saqlanishi",
+   "ru": "Сохранение энергии в контуре",
+   "en": "Conservation of energy in a circuit"
+  },
+  "answer": "W=40\\ \\mathrm{mJ};\\ W_{M,max}=40\\ \\mathrm{mJ};\\ I_m=1\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 114-mavzu, 5, 6, 8, 15-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Konturda $C=0.5\\ \\mu\\mathrm{F}$, $L=0.5\\ \\mathrm{H}$. Biror paytda kondensator zaryadi $30\\ \\mu\\mathrm{C}$, g'altakdagi tok $80\\ \\mathrm{mA}$. Konturning to'liq energiyasini, zaryad, kuchlanish va tok amplitudalarini toping.",
+   "ru": "В контуре $C=0.5\\ \\mu\\mathrm{F}$, $L=0.5\\ \\mathrm{H}$. В некоторый момент заряд конденсатора $30\\ \\mu\\mathrm{C}$, ток в катушке $80\\ \\mathrm{mA}$. Найдите полную энергию контура и амплитуды заряда, напряжения и тока.",
+   "en": "In a circuit $C=0.5\\ \\mu\\mathrm{F}$ and $L=0.5\\ \\mathrm{H}$. At some moment the capacitor charge is $30\\ \\mu\\mathrm{C}$ and the current in the coil is $80\\ \\mathrm{mA}$. Find the total energy of the circuit and the amplitudes of the charge, the voltage and the current."
+  },
+  "figure": "figures/B1-L41-S11.png",
+  "solution": {
+   "uz": [
+    "Elektr energiya: $$W_E=\\frac{q^2}{2C}=\\frac{9\\cdot10^{-10}}{10^{-6}}=0.9\\ \\mathrm{mJ}$$",
+    "Magnit energiya: $$W_M=\\frac{Li^2}{2}=\\frac{0.5\\cdot6.4\\cdot10^{-3}}{2}=1.6\\ \\mathrm{mJ}$$",
+    "To'liq energiya: $$W=W_E+W_M=2.5\\ \\mathrm{mJ}$$",
+    "Zaryad va kuchlanish amplitudalari: $$q_m=\\sqrt{2CW}=50\\ \\mu\\mathrm{C},\\qquad U_m=\\frac{q_m}{C}=100\\ \\mathrm{V}$$",
+    "Tok amplitudasi: $$I_m=\\sqrt{\\frac{2W}{L}}=\\sqrt{10^{-2}}=0.1\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "Электрическая энергия: $$W_E=\\frac{q^2}{2C}=\\frac{9\\cdot10^{-10}}{10^{-6}}=0.9\\ \\mathrm{mJ}$$",
+    "Магнитная энергия: $$W_M=\\frac{Li^2}{2}=\\frac{0.5\\cdot6.4\\cdot10^{-3}}{2}=1.6\\ \\mathrm{mJ}$$",
+    "Полная энергия: $$W=W_E+W_M=2.5\\ \\mathrm{mJ}$$",
+    "Амплитуды заряда и напряжения: $$q_m=\\sqrt{2CW}=50\\ \\mu\\mathrm{C},\\qquad U_m=\\frac{q_m}{C}=100\\ \\mathrm{V}$$",
+    "Амплитуда тока: $$I_m=\\sqrt{\\frac{2W}{L}}=\\sqrt{10^{-2}}=0.1\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "Electric energy: $$W_E=\\frac{q^2}{2C}=\\frac{9\\cdot10^{-10}}{10^{-6}}=0.9\\ \\mathrm{mJ}$$",
+    "Magnetic energy: $$W_M=\\frac{Li^2}{2}=\\frac{0.5\\cdot6.4\\cdot10^{-3}}{2}=1.6\\ \\mathrm{mJ}$$",
+    "Total energy: $$W=W_E+W_M=2.5\\ \\mathrm{mJ}$$",
+    "Charge and voltage amplitudes: $$q_m=\\sqrt{2CW}=50\\ \\mu\\mathrm{C},\\qquad U_m=\\frac{q_m}{C}=100\\ \\mathrm{V}$$",
+    "Current amplitude: $$I_m=\\sqrt{\\frac{2W}{L}}=\\sqrt{10^{-2}}=0.1\\ \\mathrm{A}$$"
+   ]
+  },
+  "rules": [
+   null,
+   null,
+   {
+    "uz": "Energiyaning saqlanishi: $\\frac{q^2}{2C}+\\frac{Li^2}{2}=W$",
+    "ru": "Сохранение энергии: $\\frac{q^2}{2C}+\\frac{Li^2}{2}=W$",
+    "en": "Conservation of energy: $\\frac{q^2}{2C}+\\frac{Li^2}{2}=W$"
+   },
+   {
+    "uz": "To'liq energiya: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$",
+    "ru": "Полная энергия: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$",
+    "en": "Total energy: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Energiyaning saqlanishi, oniy va eng katta qiymatlar",
+   "ru": "Сохранение энергии, мгновенные и наибольшие значения",
+   "en": "Conservation of energy, instantaneous and largest values"
+  },
+  "answer": "W=2.5\\ \\mathrm{mJ};\\ q_m=50\\ \\mu\\mathrm{C};\\ U_m=100\\ \\mathrm{V};\\ I_m=0.1\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 114-mavzu, 3, 4-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Sig'imi $20\\ \\mu\\mathrm{F}$ bo'lgan kondensator $300\\ \\mathrm{V}$ kuchlanishgacha zaryadlanib, induktivligi $0.2\\ \\mathrm{H}$ bo'lgan g'altakka ulandi. Konturning energiyasini, tokning eng katta qiymatini, davrni va ulangandan keyin tok birinchi marta eng katta bo'ladigan paytni toping.",
+   "ru": "Конденсатор ёмкостью $20\\ \\mu\\mathrm{F}$ зарядили до напряжения $300\\ \\mathrm{V}$ и подключили к катушке индуктивностью $0.2\\ \\mathrm{H}$. Найдите энергию контура, наибольшее значение тока, период и момент, когда после подключения ток впервые станет наибольшим.",
+   "en": "A capacitor of capacitance $20\\ \\mu\\mathrm{F}$ was charged to a voltage of $300\\ \\mathrm{V}$ and connected to a coil of inductance $0.2\\ \\mathrm{H}$. Find the energy of the circuit, the largest value of the current, the period and the moment when, after the connection, the current first becomes largest."
+  },
+  "figure": "figures/B1-L41-S12.png",
+  "solution": {
+   "uz": [
+    "Kondensator energiyasi: $$W=\\frac{CU_m^2}{2}=\\frac{2\\cdot10^{-5}\\cdot9\\cdot10^{4}}{2}=0.9\\ \\mathrm{J}$$",
+    "Tokning eng katta qiymati: $$I_m=U_m\\sqrt{\\frac{C}{L}}=300\\sqrt{\\frac{2\\cdot10^{-5}}{0.2}}=300\\cdot10^{-2}=3\\ \\mathrm{A}$$",
+    "Davr: $$T=2\\pi\\sqrt{LC}=2\\pi\\sqrt{4\\cdot10^{-6}}=4\\pi\\cdot10^{-3}\\approx12.6\\ \\mathrm{ms}$$",
+    "Tok eng katta — kondensator razryadlangan: $$t=\\frac{T}{4}=\\pi\\cdot10^{-3}\\approx3.14\\ \\mathrm{ms}$$"
+   ],
+   "ru": [
+    "Энергия конденсатора: $$W=\\frac{CU_m^2}{2}=\\frac{2\\cdot10^{-5}\\cdot9\\cdot10^{4}}{2}=0.9\\ \\mathrm{J}$$",
+    "Наибольшее значение тока: $$I_m=U_m\\sqrt{\\frac{C}{L}}=300\\sqrt{\\frac{2\\cdot10^{-5}}{0.2}}=300\\cdot10^{-2}=3\\ \\mathrm{A}$$",
+    "Период: $$T=2\\pi\\sqrt{LC}=2\\pi\\sqrt{4\\cdot10^{-6}}=4\\pi\\cdot10^{-3}\\approx12.6\\ \\mathrm{ms}$$",
+    "Ток наибольший — конденсатор разряжен: $$t=\\frac{T}{4}=\\pi\\cdot10^{-3}\\approx3.14\\ \\mathrm{ms}$$"
+   ],
+   "en": [
+    "Energy of the capacitor: $$W=\\frac{CU_m^2}{2}=\\frac{2\\cdot10^{-5}\\cdot9\\cdot10^{4}}{2}=0.9\\ \\mathrm{J}$$",
+    "Largest value of the current: $$I_m=U_m\\sqrt{\\frac{C}{L}}=300\\sqrt{\\frac{2\\cdot10^{-5}}{0.2}}=300\\cdot10^{-2}=3\\ \\mathrm{A}$$",
+    "Period: $$T=2\\pi\\sqrt{LC}=2\\pi\\sqrt{4\\cdot10^{-6}}=4\\pi\\cdot10^{-3}\\approx12.6\\ \\mathrm{ms}$$",
+    "The current is largest — the capacitor is discharged: $$t=\\frac{T}{4}=\\pi\\cdot10^{-3}\\approx3.14\\ \\mathrm{ms}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'liq energiya: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$",
+    "ru": "Полная энергия: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$",
+    "en": "Total energy: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$"
+   },
+   {
+    "uz": "Amplitudalar: $I_m=U_m\\sqrt{\\frac{C}{L}}$",
+    "ru": "Амплитуды: $I_m=U_m\\sqrt{\\frac{C}{L}}$",
+    "en": "Amplitudes: $I_m=U_m\\sqrt{\\frac{C}{L}}$"
+   },
+   {
+    "uz": "Tomson formulasi: $T=2\\pi\\sqrt{LC}$",
+    "ru": "Формула Томсона: $T=2\\pi\\sqrt{LC}$",
+    "en": "Thomson's formula: $T=2\\pi\\sqrt{LC}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Energiyaning saqlanishi, Tomson formulasi",
+   "ru": "Сохранение энергии, формула Томсона",
+   "en": "Conservation of energy, Thomson's formula"
+  },
+  "answer": "W=0.9\\ \\mathrm{J};\\ I_m=3\\ \\mathrm{A};\\ T\\approx12.6\\ \\mathrm{ms};\\ t=\\frac{T}{4}\\approx3.14\\ \\mathrm{ms}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 114-mavzu, 17, 19, 22-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Zaryadlangan kondensator ($C=0.8\\ \\mu\\mathrm{F}$) $t=0$ da induktivligi $2\\ \\mathrm{mH}$ bo'lgan g'altakka ulandi. a) Tebranishlar davrini toping. b) Qancha vaqtdan keyin elektr va magnit energiyalar birinchi marta tenglashadi? c) Qancha vaqtdan keyin elektr energiya magnit energiyadan $3$ marta katta bo'ladi?",
+   "ru": "Заряженный конденсатор ($C=0.8\\ \\mu\\mathrm{F}$) при $t=0$ подключили к катушке индуктивностью $2\\ \\mathrm{mH}$. а) Найдите период колебаний. б) Через какое время электрическая и магнитная энергии впервые сравняются? в) Через какое время электрическая энергия будет в $3$ раза больше магнитной?",
+   "en": "A charged capacitor ($C=0.8\\ \\mu\\mathrm{F}$) was connected at $t=0$ to a coil of inductance $2\\ \\mathrm{mH}$. a) Find the period of the oscillations. b) After what time do the electric and magnetic energies become equal for the first time? c) After what time is the electric energy $3$ times the magnetic energy?"
+  },
+  "figure": "figures/B1-L41-S13.png",
+  "solution": {
+   "uz": [
+    "a) Tomson formulasi: $$T=2\\pi\\sqrt{2\\cdot10^{-3}\\cdot8\\cdot10^{-7}}=2\\pi\\cdot4\\cdot10^{-5}\\approx251\\ \\mu\\mathrm{s}$$",
+    "b) $W_E=W_M=\\frac{W}{2}$: $$\\cos^2\\omega_0t=\\frac{1}{2}\\ \\Rightarrow\\ \\omega_0t=\\frac{\\pi}{4}$$",
+    "Vaqtga o'tamiz: $$t=\\frac{\\pi/4}{2\\pi}T=\\frac{T}{8}\\approx31.4\\ \\mu\\mathrm{s}$$",
+    "c) $W_E=3W_M$, ya'ni $W_E=\\frac{3}{4}W$: $$\\cos^2\\omega_0t=\\frac{3}{4}\\ \\Rightarrow\\ \\omega_0t=\\frac{\\pi}{6}$$",
+    "Vaqt: $$t=\\frac{\\pi/6}{2\\pi}T=\\frac{T}{12}\\approx20.9\\ \\mu\\mathrm{s}$$"
+   ],
+   "ru": [
+    "а) Формула Томсона: $$T=2\\pi\\sqrt{2\\cdot10^{-3}\\cdot8\\cdot10^{-7}}=2\\pi\\cdot4\\cdot10^{-5}\\approx251\\ \\mu\\mathrm{s}$$",
+    "б) $W_E=W_M=\\frac{W}{2}$: $$\\cos^2\\omega_0t=\\frac{1}{2}\\ \\Rightarrow\\ \\omega_0t=\\frac{\\pi}{4}$$",
+    "Переходим ко времени: $$t=\\frac{\\pi/4}{2\\pi}T=\\frac{T}{8}\\approx31.4\\ \\mu\\mathrm{s}$$",
+    "в) $W_E=3W_M$, то есть $W_E=\\frac{3}{4}W$: $$\\cos^2\\omega_0t=\\frac{3}{4}\\ \\Rightarrow\\ \\omega_0t=\\frac{\\pi}{6}$$",
+    "Время: $$t=\\frac{\\pi/6}{2\\pi}T=\\frac{T}{12}\\approx20.9\\ \\mu\\mathrm{s}$$"
+   ],
+   "en": [
+    "a) Thomson's formula: $$T=2\\pi\\sqrt{2\\cdot10^{-3}\\cdot8\\cdot10^{-7}}=2\\pi\\cdot4\\cdot10^{-5}\\approx251\\ \\mu\\mathrm{s}$$",
+    "b) $W_E=W_M=\\frac{W}{2}$: $$\\cos^2\\omega_0t=\\frac{1}{2}\\ \\Rightarrow\\ \\omega_0t=\\frac{\\pi}{4}$$",
+    "Convert to time: $$t=\\frac{\\pi/4}{2\\pi}T=\\frac{T}{8}\\approx31.4\\ \\mu\\mathrm{s}$$",
+    "c) $W_E=3W_M$, i.e. $W_E=\\frac{3}{4}W$: $$\\cos^2\\omega_0t=\\frac{3}{4}\\ \\Rightarrow\\ \\omega_0t=\\frac{\\pi}{6}$$",
+    "Time: $$t=\\frac{\\pi/6}{2\\pi}T=\\frac{T}{12}\\approx20.9\\ \\mu\\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tomson formulasi: $T=2\\pi\\sqrt{LC}$",
+    "ru": "Формула Томсона: $T=2\\pi\\sqrt{LC}$",
+    "en": "Thomson's formula: $T=2\\pi\\sqrt{LC}$"
+   },
+   {
+    "uz": "Energiyalar: $W_E=W\\cos^2\\omega_0t,\\ W_M=W\\sin^2\\omega_0t$",
+    "ru": "Энергии: $W_E=W\\cos^2\\omega_0t,\\ W_M=W\\sin^2\\omega_0t$",
+    "en": "Energies: $W_E=W\\cos^2\\omega_0t,\\ W_M=W\\sin^2\\omega_0t$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Energiyalarning vaqtga bog'lanishi, Tomson formulasi",
+   "ru": "Зависимость энергий от времени, формула Томсона",
+   "en": "Time dependence of the energies, Thomson's formula"
+  },
+  "answer": "T\\approx251\\ \\mu\\mathrm{s};\\ t=\\frac{T}{8}\\approx31.4\\ \\mu\\mathrm{s};\\ t=\\frac{T}{12}\\approx20.9\\ \\mu\\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 114-mavzu, 24, 25, 26, 27-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Konturdagi $4\\ \\mu\\mathrm{F}$ sig'imli kondensator zaryadi $q=2\\cdot10^{-5}\\cos(10^4t)$ qonun bo'yicha o'zgaradi ($q$ — kulonda). Magnit maydon energiyasining eng katta qiymatini, g'altak induktivligini va tok amplitudasini toping. Energiya tebranishlari davri qanday?",
+   "ru": "Заряд конденсатора ёмкостью $4\\ \\mu\\mathrm{F}$ в контуре меняется по закону $q=2\\cdot10^{-5}\\cos(10^4t)$ ($q$ — в кулонах). Найдите наибольшее значение энергии магнитного поля, индуктивность катушки и амплитуду тока. Каков период колебаний энергии?",
+   "en": "The charge of a $4\\ \\mu\\mathrm{F}$ capacitor in a circuit changes as $q=2\\cdot10^{-5}\\cos(10^4t)$ ($q$ in coulombs). Find the largest value of the magnetic field energy, the inductance of the coil and the current amplitude. What is the period of the energy oscillations?"
+  },
+  "figure": "figures/B1-L41-S14.png",
+  "solution": {
+   "uz": [
+    "Magnit energiyaning eng katta qiymati — to'liq energiya: $$W_{M,max}=\\frac{q_m^2}{2C}=\\frac{4\\cdot10^{-10}}{8\\cdot10^{-6}}=5\\cdot10^{-5}\\ \\mathrm{J}=50\\ \\mu\\mathrm{J}$$",
+    "Induktivlik: $$L=\\frac{1}{\\omega_0^2C}=\\frac{1}{10^8\\cdot4\\cdot10^{-6}}=2.5\\cdot10^{-3}\\ \\mathrm{H}$$",
+    "Tok amplitudasi va tekshiruv: $$I_m=q_m\\omega_0=0.2\\ \\mathrm{A},\\quad \\frac{LI_m^2}{2}=50\\ \\mu\\mathrm{J}$$",
+    "Energiya $2\\omega_0$ bilan tebranadi: $$T_W=\\frac{T}{2}=\\frac{\\pi}{\\omega_0}=\\pi\\cdot10^{-4}\\ \\mathrm{s}\\approx0.314\\ \\mathrm{ms}$$"
+   ],
+   "ru": [
+    "Наибольшая магнитная энергия — полная энергия: $$W_{M,max}=\\frac{q_m^2}{2C}=\\frac{4\\cdot10^{-10}}{8\\cdot10^{-6}}=5\\cdot10^{-5}\\ \\mathrm{J}=50\\ \\mu\\mathrm{J}$$",
+    "Индуктивность: $$L=\\frac{1}{\\omega_0^2C}=\\frac{1}{10^8\\cdot4\\cdot10^{-6}}=2.5\\cdot10^{-3}\\ \\mathrm{H}$$",
+    "Амплитуда тока и проверка: $$I_m=q_m\\omega_0=0.2\\ \\mathrm{A},\\quad \\frac{LI_m^2}{2}=50\\ \\mu\\mathrm{J}$$",
+    "Энергия колеблется с $2\\omega_0$: $$T_W=\\frac{T}{2}=\\frac{\\pi}{\\omega_0}=\\pi\\cdot10^{-4}\\ \\mathrm{s}\\approx0.314\\ \\mathrm{ms}$$"
+   ],
+   "en": [
+    "The largest magnetic energy is the total energy: $$W_{M,max}=\\frac{q_m^2}{2C}=\\frac{4\\cdot10^{-10}}{8\\cdot10^{-6}}=5\\cdot10^{-5}\\ \\mathrm{J}=50\\ \\mu\\mathrm{J}$$",
+    "Inductance: $$L=\\frac{1}{\\omega_0^2C}=\\frac{1}{10^8\\cdot4\\cdot10^{-6}}=2.5\\cdot10^{-3}\\ \\mathrm{H}$$",
+    "Current amplitude and check: $$I_m=q_m\\omega_0=0.2\\ \\mathrm{A},\\quad \\frac{LI_m^2}{2}=50\\ \\mu\\mathrm{J}$$",
+    "The energy oscillates with $2\\omega_0$: $$T_W=\\frac{T}{2}=\\frac{\\pi}{\\omega_0}=\\pi\\cdot10^{-4}\\ \\mathrm{s}\\approx0.314\\ \\mathrm{ms}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'liq energiya: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$",
+    "ru": "Полная энергия: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$",
+    "en": "Total energy: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$"
+   },
+   {
+    "uz": "Siklik chastota: $\\omega_0=\\frac{1}{\\sqrt{LC}}$",
+    "ru": "Циклическая частота: $\\omega_0=\\frac{1}{\\sqrt{LC}}$",
+    "en": "Angular frequency: $\\omega_0=\\frac{1}{\\sqrt{LC}}$"
+   },
+   {
+    "uz": "Tok amplitudasi: $I_m=q_m\\omega_0$",
+    "ru": "Амплитуда тока: $I_m=q_m\\omega_0$",
+    "en": "Current amplitude: $I_m=q_m\\omega_0$"
+   },
+   {
+    "uz": "Energiyalar: $W_E=W\\cos^2\\omega_0t,\\ W_M=W\\sin^2\\omega_0t$",
+    "ru": "Энергии: $W_E=W\\cos^2\\omega_0t,\\ W_M=W\\sin^2\\omega_0t$",
+    "en": "Energies: $W_E=W\\cos^2\\omega_0t,\\ W_M=W\\sin^2\\omega_0t$"
+   }
+  ],
+  "basis": {
+   "uz": "Konturdagi energiya, siklik chastota",
+   "ru": "Энергия в контуре, циклическая частота",
+   "en": "Energy in a circuit, angular frequency"
+  },
+  "answer": "W_{M,max}=50\\ \\mu\\mathrm{J};\\ L=2.5\\ \\mathrm{mH};\\ I_m=0.2\\ \\mathrm{A};\\ T_W\\approx0.314\\ \\mathrm{ms}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 114-mavzu, 12, 13, 14-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L41-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Rasmda kontur kondensatori zaryadining vaqtga bog'lanish grafigi berilgan: zaryad $t=0$ da eng katta, $4\\ \\mu\\mathrm{C}$ ga teng, keyingi cho'qqi $0.5\\ \\mathrm{ms}$ da. Kondensator sig'imi $0.1\\ \\mu\\mathrm{F}$. Zaryad tenglamasini yozing, tok amplitudasini, g'altak induktivligini va konturning energiyasini toping ($\\pi^2=10$).",
+   "ru": "На рисунке дан график зависимости заряда конденсатора контура от времени: заряд при $t=0$ максимален и равен $4\\ \\mu\\mathrm{C}$, следующий максимум — при $0.5\\ \\mathrm{ms}$. Ёмкость конденсатора $0.1\\ \\mu\\mathrm{F}$. Запишите уравнение заряда, найдите амплитуду тока, индуктивность катушки и энергию контура ($\\pi^2=10$).",
+   "en": "The figure shows the graph of the charge of the circuit's capacitor versus time: the charge is maximal at $t=0$ and equals $4\\ \\mu\\mathrm{C}$, the next maximum is at $0.5\\ \\mathrm{ms}$. The capacitance is $0.1\\ \\mu\\mathrm{F}$. Write the equation of the charge and find the current amplitude, the inductance of the coil and the energy of the circuit ($\\pi^2=10$)."
+  },
+  "figure": "figures/B1-L41-S15.png",
+  "solution": {
+   "uz": [
+    "Grafikdan amplituda va davr: $$q_m=4\\ \\mu\\mathrm{C},\\quad T=0.5\\ \\mathrm{ms},\\quad \\omega_0=\\frac{2\\pi}{T}=4000\\pi\\ \\mathrm{rad/s}$$",
+    "$t=0$ da cho'qqi — kosinus: $$q=4\\cdot10^{-6}\\cos(4000\\pi t)$$",
+    "Tok amplitudasi: $$I_m=q_m\\omega_0=0.016\\pi\\approx50.3\\ \\mathrm{mA}$$",
+    "Induktivlik Tomson formulasidan: $$L=\\frac{T^2}{4\\pi^2C}=\\frac{2.5\\cdot10^{-7}}{40\\cdot10^{-7}}=0.0625\\ \\mathrm{H}$$",
+    "Energiya: $$W=\\frac{q_m^2}{2C}=\\frac{16\\cdot10^{-12}}{2\\cdot10^{-7}}=8\\cdot10^{-5}\\ \\mathrm{J}=80\\ \\mu\\mathrm{J}$$"
+   ],
+   "ru": [
+    "Амплитуда и период по графику: $$q_m=4\\ \\mu\\mathrm{C},\\quad T=0.5\\ \\mathrm{ms},\\quad \\omega_0=\\frac{2\\pi}{T}=4000\\pi\\ \\mathrm{rad/s}$$",
+    "При $t=0$ максимум — косинус: $$q=4\\cdot10^{-6}\\cos(4000\\pi t)$$",
+    "Амплитуда тока: $$I_m=q_m\\omega_0=0.016\\pi\\approx50.3\\ \\mathrm{mA}$$",
+    "Индуктивность из формулы Томсона: $$L=\\frac{T^2}{4\\pi^2C}=\\frac{2.5\\cdot10^{-7}}{40\\cdot10^{-7}}=0.0625\\ \\mathrm{H}$$",
+    "Энергия: $$W=\\frac{q_m^2}{2C}=\\frac{16\\cdot10^{-12}}{2\\cdot10^{-7}}=8\\cdot10^{-5}\\ \\mathrm{J}=80\\ \\mu\\mathrm{J}$$"
+   ],
+   "en": [
+    "Amplitude and period from the graph: $$q_m=4\\ \\mu\\mathrm{C},\\quad T=0.5\\ \\mathrm{ms},\\quad \\omega_0=\\frac{2\\pi}{T}=4000\\pi\\ \\mathrm{rad/s}$$",
+    "A maximum at $t=0$ — a cosine: $$q=4\\cdot10^{-6}\\cos(4000\\pi t)$$",
+    "Current amplitude: $$I_m=q_m\\omega_0=0.016\\pi\\approx50.3\\ \\mathrm{mA}$$",
+    "Inductance from Thomson's formula: $$L=\\frac{T^2}{4\\pi^2C}=\\frac{2.5\\cdot10^{-7}}{40\\cdot10^{-7}}=0.0625\\ \\mathrm{H}$$",
+    "Energy: $$W=\\frac{q_m^2}{2C}=\\frac{16\\cdot10^{-12}}{2\\cdot10^{-7}}=8\\cdot10^{-5}\\ \\mathrm{J}=80\\ \\mu\\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Grafikdan: $T$ — qo'shni cho'qqilar oralig'i, $\\omega_0=\\frac{2\\pi}{T}$",
+    "ru": "По графику: $T$ — время между соседними максимумами, $\\omega_0=\\frac{2\\pi}{T}$",
+    "en": "From the graph: $T$ is the time between neighbouring maxima, $\\omega_0=\\frac{2\\pi}{T}$"
+   },
+   {
+    "uz": "Zaryad tenglamasi: $q=q_m\\cos(\\omega_0t+\\varphi_0)$",
+    "ru": "Уравнение заряда: $q=q_m\\cos(\\omega_0t+\\varphi_0)$",
+    "en": "Charge equation: $q=q_m\\cos(\\omega_0t+\\varphi_0)$"
+   },
+   {
+    "uz": "Tok amplitudasi: $I_m=q_m\\omega_0$",
+    "ru": "Амплитуда тока: $I_m=q_m\\omega_0$",
+    "en": "Current amplitude: $I_m=q_m\\omega_0$"
+   },
+   {
+    "uz": "Tomson formulasi: $T=2\\pi\\sqrt{LC}$",
+    "ru": "Формула Томсона: $T=2\\pi\\sqrt{LC}$",
+    "en": "Thomson's formula: $T=2\\pi\\sqrt{LC}$"
+   },
+   {
+    "uz": "To'liq energiya: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$",
+    "ru": "Полная энергия: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$",
+    "en": "Total energy: $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Grafikdan tenglamaga, Tomson formulasi, energiya",
+   "ru": "От графика к уравнению, формула Томсона, энергия",
+   "en": "From a graph to an equation, Thomson's formula, energy"
+  },
+  "answer": "q=4\\cdot10^{-6}\\cos(4000\\pi t);\\ I_m\\approx50.3\\ \\mathrm{mA};\\ L=62.5\\ \\mathrm{mH};\\ W=80\\ \\mu\\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 112-mavzu, 12, 27-masalalar; 113-mavzu, 29-masala asosida; sharti o'zgartirilgan"
+ }
+]

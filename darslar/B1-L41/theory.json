@@ -1,0 +1,691 @@
+[
+ {
+  "t": "h1",
+  "uz": "Tebranish konturi, Tomson formulasi (LC circuit, Thomson's formula)",
+  "ru": "Колебательный контур, формула Томсона",
+  "en": "LC circuit, Thomson's formula"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz tebranish konturida erkin elektromagnit tebranishlar qanday paydo bo'lishini chorak davrlar bo'yicha tushuntirasiz, ularni prujinali mayatnik bilan solishtirasiz, zaryad, tok va kuchlanishning garmonik tenglamalarini yozasiz va ulardan amplituda, siklik chastota, davr va boshlang'ich fazani topasiz, Tomson formulasi bilan konturning davri va chastotasini hisoblaysiz, kondensator sig'imi, g'altak induktivligi, dielektrik, o'zak va ulashlar davrni qanday o'zgartirishini aniqlaysiz, konturdagi energiyaning saqlanishi va elektr hamda magnit energiyalarning bir-biriga aylanishini qo'llaysiz, real konturdagi so'nish va so'nmas tebranishlar olish usulini tushuntirasiz.",
+  "ru": "**Цель.** После урока вы будете объяснять по четвертям периода, как в колебательном контуре возникают свободные электромагнитные колебания, сравнивать их с пружинным маятником, записывать гармонические уравнения заряда, тока и напряжения и находить из них амплитуду, циклическую частоту, период и начальную фазу, вычислять период и частоту контура по формуле Томсона, определять, как период меняется при изменении ёмкости конденсатора, индуктивности катушки, при введении диэлектрика и сердечника и при соединении элементов, применять сохранение энергии в контуре и взаимное превращение электрической и магнитной энергий, объяснять затухание в реальном контуре и способ получения незатухающих колебаний.",
+  "en": "**Goal.** After this lesson you will explain, quarter period by quarter period, how free electromagnetic oscillations arise in an LC circuit, compare them with a spring pendulum, write the harmonic equations of the charge, the current and the voltage and find from them the amplitude, the angular frequency, the period and the initial phase, calculate the period and the frequency of a circuit with Thomson's formula, determine how the period changes with the capacitance of the capacitor, the inductance of the coil, a dielectric, a core and the connection of elements, apply energy conservation in the circuit and the mutual conversion of electric and magnetic energies, and explain damping in a real circuit and how undamped oscillations are obtained."
+ },
+ {
+  "t": "p",
+  "uz": "Mexanikada (L20–L21) prujinaga osilgan yuk tebranishini o'rgandik: potensial energiya kinetik energiyaga, kinetik energiya yana potensial energiyaga aylanadi. Elektr zanjirida ham xuddi shunday jarayon bor. Kondensator elektr maydonida energiya to'playdi (L32), g'altak esa magnit maydonida (L40). Ularni birlashtirsak, energiya kondensatordan g'altakka va qaytib o'tib turadi — zanjirda tok yo'nalishini davriy o'zgartiradi. Bu elektromagnit tebranishlar radio, televidenie, mobil aloqa va barcha generatorlarning asosidir; GRE da esa LC zanjir va uning mexanik o'xshashligi doimiy mavzu.",
+  "ru": "В механике (L20–L21) мы изучили колебания груза на пружине: потенциальная энергия переходит в кинетическую, кинетическая — снова в потенциальную. В электрической цепи происходит такой же процесс. Конденсатор запасает энергию в электрическом поле (L32), катушка — в магнитном (L40). Если соединить их, энергия переходит из конденсатора в катушку и обратно — ток в цепи периодически меняет направление. Эти электромагнитные колебания лежат в основе радио, телевидения, мобильной связи и всех генераторов, а в GRE LC-цепь и её механическая аналогия — постоянная тема.",
+  "en": "In mechanics (L20–L21) we studied the oscillations of a mass on a spring: potential energy turns into kinetic energy and kinetic energy back into potential energy. The same process takes place in an electric circuit. A capacitor stores energy in its electric field (L32), and a coil in its magnetic field (L40). If we connect them, the energy passes from the capacitor to the coil and back — the current in the circuit periodically changes direction. These electromagnetic oscillations are the basis of radio, television, mobile communication and all generators, and on the GRE the LC circuit and its mechanical analogy are a standard topic."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Elektromagnit tebranishlar va tebranish konturi (Electromagnetic oscillations and the LC circuit)",
+  "ru": "1. Электромагнитные колебания и колебательный контур",
+  "en": "1. Electromagnetic oscillations and the LC circuit"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Zaryad, tok kuchi va kuchlanishning (shu bilan birga elektr va magnit maydonlarning) davriy yoki deyarli davriy o'zgarishi elektromagnit tebranishlar (electromagnetic oscillations) deyiladi. Bunday tebranishlarni olishning eng sodda qurilmasi — sig'imi $C$ bo'lgan kondensator va induktivligi $L$ bo'lgan g'altakdan tuzilgan berk zanjir. U tebranish konturi (LC circuit) deyiladi.",
+  "ru": "**Определение.** Периодические или почти периодические изменения заряда, силы тока и напряжения (а вместе с ними электрического и магнитного полей) называются электромагнитными колебаниями (electromagnetic oscillations). Простейшее устройство для получения таких колебаний — замкнутая цепь из конденсатора ёмкостью $C$ и катушки индуктивностью $L$. Она называется колебательным контуром (LC circuit).",
+  "en": "**Definition.** Periodic or nearly periodic changes of the charge, the current and the voltage (and together with them of the electric and magnetic fields) are called electromagnetic oscillations. The simplest device for obtaining such oscillations is a closed circuit made of a capacitor of capacitance $C$ and a coil of inductance $L$. It is called an LC circuit (oscillating circuit)."
+ },
+ {
+  "t": "li",
+  "uz": "**Ideal kontur.** Simlar va g'altakning qarshiligi nolga teng ($R=0$) bo'lgan kontur ideal tebranish konturi deyiladi. Unda energiya issiqlikka aylanmaydi va bir marta qo'zg'atilgan tebranishlar cheksiz davom etadi — ular so'nmas (undamped) tebranishlar. Real konturda $R>0$ va tebranishlar so'nadi (9-bo'lim).",
+  "ru": "**Идеальный контур.** Контур, в котором сопротивление проводов и катушки равно нулю ($R=0$), называется идеальным колебательным контуром. В нём энергия не превращается в тепло, и однажды возбуждённые колебания продолжаются бесконечно — это незатухающие (undamped) колебания. В реальном контуре $R>0$, и колебания затухают (раздел 9).",
+  "en": "**Ideal circuit.** A circuit in which the resistance of the wires and of the coil is zero ($R=0$) is called an ideal LC circuit. In it, energy does not turn into heat, and oscillations excited once continue forever — they are undamped oscillations. In a real circuit $R>0$, and the oscillations decay (section 9)."
+ },
+ {
+  "t": "li",
+  "uz": "**Erkin tebranishlar.** Kondensatorni manbadan $q_m$ zaryadgacha zaryadlab, keyin kalit bilan g'altakka ulaymiz. Shundan so'ng konturga tashqaridan energiya berilmaydi — unda faqat dastlab berilgan energiya hisobiga erkin tebranishlar (free oscillations) sodir bo'ladi. Ularning chastotasi faqat konturning o'zi — $L$ va $C$ bilan aniqlanadi va xususiy chastota (natural frequency) deyiladi.",
+  "ru": "**Свободные колебания.** Зарядим конденсатор от источника до заряда $q_m$, а затем ключом подключим его к катушке. После этого энергия в контур извне не поступает — в нём происходят свободные колебания (free oscillations) только за счёт первоначально сообщённой энергии. Их частота определяется только самим контуром — $L$ и $C$ — и называется собственной частотой (natural frequency).",
+  "en": "**Free oscillations.** We charge the capacitor from a source to a charge $q_m$ and then connect it to the coil with a switch. After that, no energy is supplied to the circuit from outside — free oscillations take place in it only at the expense of the energy given initially. Their frequency is determined only by the circuit itself — by $L$ and $C$ — and is called the natural frequency."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Konturdagi jarayon chorak davrlar bo'yicha (The process in the circuit, quarter by quarter)",
+  "ru": "2. Процесс в контуре по четвертям периода",
+  "en": "2. The process in the circuit, quarter by quarter"
+ },
+ {
+  "t": "li",
+  "uz": "**$t=0$.** Kondensator to'liq zaryadlangan: zaryad $q_m$, kuchlanish $U_m=\\frac{q_m}{C}$, tok $i=0$. Butun energiya kondensatorning elektr maydonida: $W=\\frac{q_m^2}{2C}$ ([[F01]]).",
+  "ru": "**$t=0$.** Конденсатор полностью заряжен: заряд $q_m$, напряжение $U_m=\\frac{q_m}{C}$, ток $i=0$. Вся энергия — в электрическом поле конденсатора: $W=\\frac{q_m^2}{2C}$ ([[F01]]).",
+  "en": "**$t=0$.** The capacitor is fully charged: charge $q_m$, voltage $U_m=\\frac{q_m}{C}$, current $i=0$. All the energy is in the electric field of the capacitor: $W=\\frac{q_m^2}{2C}$ ([[F01]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B1-L41-F01.png",
+   "ru": "figures/B1-L41-F01-ru.png",
+   "en": "figures/B1-L41-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**$0<t<\\frac{T}{4}$ — razryadlanish.** Kondensator g'altak orqali razryadlana boshlaydi. Tok birdan katta bo'lolmaydi: g'altakdagi o'zinduksiya EYK (L40) tokning ortishiga qarshilik ko'rsatadi, shuning uchun tok asta-sekin ortadi. Zaryad kamayadi, elektr maydon energiyasi g'altakning magnit maydon energiyasiga aylanadi.",
+  "ru": "**$0<t<\\frac{T}{4}$ — разрядка.** Конденсатор начинает разряжаться через катушку. Ток не может сразу стать большим: ЭДС самоиндукции катушки (L40) противодействует росту тока, поэтому ток растёт постепенно. Заряд уменьшается, энергия электрического поля переходит в энергию магнитного поля катушки.",
+  "en": "**$0<t<\\frac{T}{4}$ — discharge.** The capacitor starts to discharge through the coil. The current cannot become large at once: the self-induced emf of the coil (L40) opposes the growth of the current, so the current grows gradually. The charge decreases, and the energy of the electric field turns into the energy of the magnetic field of the coil."
+ },
+ {
+  "t": "li",
+  "uz": "**$t=\\frac{T}{4}$.** Kondensator to'liq razryadlangan: $q=0$, $u=0$. Tok eng katta: $i=I_m$. Butun energiya g'altakning magnit maydonida: $W=\\frac{LI_m^2}{2}$. Tok shu zahoti to'xtamaydi — g'altak uni «inersiya» bilan davom ettiradi.",
+  "ru": "**$t=\\frac{T}{4}$.** Конденсатор полностью разряжен: $q=0$, $u=0$. Ток максимален: $i=I_m$. Вся энергия — в магнитном поле катушки: $W=\\frac{LI_m^2}{2}$. Ток не прекращается сразу — катушка «по инерции» поддерживает его.",
+  "en": "**$t=\\frac{T}{4}$.** The capacitor is fully discharged: $q=0$, $u=0$. The current is maximal: $i=I_m$. All the energy is in the magnetic field of the coil: $W=\\frac{LI_m^2}{2}$. The current does not stop immediately — the coil keeps it going «by inertia»."
+ },
+ {
+  "t": "li",
+  "uz": "**$\\frac{T}{4}<t<\\frac{T}{2}$ — qayta zaryadlanish.** Tok kamayadi, endi o'zinduksiya EYK tokni quvvatlaydi (Lens qoidasi). Tok o'sha yo'nalishda oqib, kondensatorni teskari ishorada zaryadlaydi. $t=\\frac{T}{2}$ da kondensator yana to'liq zaryadlangan, lekin qoplamalar ishorasi almashgan: $q=-q_m$, $i=0$.",
+  "ru": "**$\\frac{T}{4}<t<\\frac{T}{2}$ — перезарядка.** Ток уменьшается, теперь ЭДС самоиндукции поддерживает ток (правило Ленца). Ток течёт в том же направлении и заряжает конденсатор с противоположным знаком. При $t=\\frac{T}{2}$ конденсатор снова полностью заряжен, но знаки обкладок поменялись: $q=-q_m$, $i=0$.",
+  "en": "**$\\frac{T}{4}<t<\\frac{T}{2}$ — recharging.** The current decreases; now the self-induced emf supports the current (Lenz's law). The current flows in the same direction and charges the capacitor with the opposite sign. At $t=\\frac{T}{2}$ the capacitor is again fully charged, but the signs of the plates have swapped: $q=-q_m$, $i=0$."
+ },
+ {
+  "t": "li",
+  "uz": "**$\\frac{T}{2}<t<T$.** Jarayon teskari yo'nalishda takrorlanadi: kondensator razryadlanadi, $t=\\frac{3T}{4}$ da tok yana eng katta, lekin teskari yo'nalgan ($i=-I_m$), $t=T$ da kontur boshlang'ich holatga qaytadi. Bir davr davomida energiya ikki marta kondensatordan g'altakka va ikki marta qaytib o'tadi.",
+  "ru": "**$\\frac{T}{2}<t<T$.** Процесс повторяется в обратном направлении: конденсатор разряжается, при $t=\\frac{3T}{4}$ ток снова максимален, но направлен обратно ($i=-I_m$), при $t=T$ контур возвращается в начальное состояние. За один период энергия дважды переходит из конденсатора в катушку и дважды обратно.",
+  "en": "**$\\frac{T}{2}<t<T$.** The process repeats in the opposite direction: the capacitor discharges, at $t=\\frac{3T}{4}$ the current is again maximal but opposite ($i=-I_m$), and at $t=T$ the circuit returns to its initial state. During one period, the energy passes twice from the capacitor to the coil and twice back."
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy xulosa.** Zaryad eng katta bo'lganda tok nolga teng va aksincha, tok eng katta bo'lganda zaryad nolga teng. Tebranishlarni g'altakning o'zinduksiyasi «ushlab turadi»: o'zinduksiya bo'lmasa, kondensator bir marta razryadlanib, jarayon tugar edi.",
+  "ru": "**Главный вывод.** Когда заряд максимален, ток равен нулю, и наоборот: когда ток максимален, заряд равен нулю. Колебания «поддерживает» самоиндукция катушки: без самоиндукции конденсатор разрядился бы один раз, и процесс бы закончился.",
+  "en": "**Main conclusion.** When the charge is maximal the current is zero, and conversely, when the current is maximal the charge is zero. The oscillations are «sustained» by the self-induction of the coil: without self-induction the capacitor would discharge once and the process would end."
+ },
+ {
+  "t": "li",
+  "uz": "**Ossillografda kuzatish.** Kondensatordagi kuchlanishni ossillografga bersak, ekranda sinusoida ko'rinadi: kuchlanish $U_m$ va $-U_m$ orasida tebranadi. Kalitni ulagan paytdan boshlab birinchi cho'qqigacha vaqt — yarim davr emas, to'liq davr: $u$ boshlang'ich qiymatiga $t=T$ da qaytadi. Ossillograf ekranida bir necha davr sanab, $T$ ni o'lchash va Tomson formulasi bilan solishtirish — maktab laboratoriya ishlarining biri.",
+  "ru": "**Наблюдение на осциллографе.** Если подать напряжение конденсатора на осциллограф, на экране будет видна синусоида: напряжение колеблется между $U_m$ и $-U_m$. Время от замыкания ключа до первого повторения максимума — не полпериода, а полный период: $u$ возвращается к начальному значению при $t=T$. Измерить $T$, отсчитав несколько периодов на экране осциллографа, и сравнить с формулой Томсона — одна из школьных лабораторных работ.",
+  "en": "**Observation on an oscilloscope.** If the capacitor voltage is fed to an oscilloscope, a sinusoid appears on the screen: the voltage oscillates between $U_m$ and $-U_m$. The time from closing the switch to the first repetition of the maximum is not half a period but a full period: $u$ returns to its initial value at $t=T$. Measuring $T$ by counting several periods on the oscilloscope screen and comparing it with Thomson's formula is one of the school laboratory experiments."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Mexanik o'xshashlik (Mechanical analogy)",
+  "ru": "3. Механическая аналогия",
+  "en": "3. Mechanical analogy"
+ },
+ {
+  "t": "li",
+  "uz": "**Prujinali mayatnik bilan solishtirish.** Siljigan yuk ($x=A$) — zaryadlangan kondensator; muvozanat nuqtasidan eng katta tezlik bilan o'tayotgan yuk ($x=0$, $v=v_{max}$) — razryadlangan kondensator va eng katta tok ([[F02]]). Yukning inertligi (massa) g'altakning o'zinduksiyasiga, prujinaning qayishqoqligi kondensatorga mos keladi.",
+  "ru": "**Сравнение с пружинным маятником.** Отклонённый груз ($x=A$) — заряженный конденсатор; груз, проходящий положение равновесия с наибольшей скоростью ($x=0$, $v=v_{max}$), — разряженный конденсатор и наибольший ток ([[F02]]). Инертность груза (масса) соответствует самоиндукции катушки, упругость пружины — конденсатору.",
+  "en": "**Comparison with a spring pendulum.** A displaced mass ($x=A$) is a charged capacitor; a mass passing the equilibrium position with the largest speed ($x=0$, $v=v_{max}$) is a discharged capacitor and the largest current ([[F02]]). The inertia of the mass corresponds to the self-induction of the coil, and the elasticity of the spring to the capacitor."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B1-L41-F02.png",
+   "ru": "figures/B1-L41-F02-ru.png",
+   "en": "figures/B1-L41-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Moslik jadvali.** Siljish $x$ — zaryad $q$; tezlik $v=x'$ — tok $i=q'$; massa $m$ — induktivlik $L$; bikrlik $k$ — $\\frac{1}{C}$; potensial energiya $\\frac{kx^2}{2}$ — elektr energiya $\\frac{q^2}{2C}$; kinetik energiya $\\frac{mv^2}{2}$ — magnit energiya $\\frac{Li^2}{2}$. Shuning uchun mayatnik formulasi $\\omega_0=\\sqrt{\\frac{k}{m}}$ bevosita kontur formulasiga o'tadi:",
+  "ru": "**Таблица соответствия.** Смещение $x$ — заряд $q$; скорость $v=x'$ — ток $i=q'$; масса $m$ — индуктивность $L$; жёсткость $k$ — $\\frac{1}{C}$; потенциальная энергия $\\frac{kx^2}{2}$ — электрическая энергия $\\frac{q^2}{2C}$; кинетическая энергия $\\frac{mv^2}{2}$ — магнитная энергия $\\frac{Li^2}{2}$. Поэтому формула маятника $\\omega_0=\\sqrt{\\frac{k}{m}}$ прямо переходит в формулу контура:",
+  "en": "**Correspondence table.** Displacement $x$ — charge $q$; velocity $v=x'$ — current $i=q'$; mass $m$ — inductance $L$; stiffness $k$ — $\\frac{1}{C}$; potential energy $\\frac{kx^2}{2}$ — electric energy $\\frac{q^2}{2C}$; kinetic energy $\\frac{mv^2}{2}$ — magnetic energy $\\frac{Li^2}{2}$. Therefore the pendulum formula $\\omega_0=\\sqrt{\\frac{k}{m}}$ passes directly into the circuit formula:"
+ },
+ {
+  "t": "m",
+  "m": "\\omega_0=\\sqrt{\\frac{k}{m}}\\quad\\longrightarrow\\quad \\omega_0=\\sqrt{\\frac{1/C}{L}}=\\frac{1}{\\sqrt{LC}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Nima uchun $\\frac{1}{C}$ — bikrlik?** Prujinada kuch siljishga proporsional: $F=kx$. Kondensatorda kuchlanish zaryadga proporsional: $u=\\frac{q}{C}$. Sig'im qancha kichik bo'lsa, bir xil zaryad uchun kuchlanish shuncha katta — «qattiqroq prujina». Shuning uchun sig'im kamaysa, chastota ortadi.",
+  "ru": "**Почему $\\frac{1}{C}$ — жёсткость?** В пружине сила пропорциональна смещению: $F=kx$. В конденсаторе напряжение пропорционально заряду: $u=\\frac{q}{C}$. Чем меньше ёмкость, тем больше напряжение при том же заряде — «более жёсткая пружина». Поэтому при уменьшении ёмкости частота растёт.",
+  "en": "**Why is $\\frac{1}{C}$ the stiffness?** In a spring the force is proportional to the displacement: $F=kx$. In a capacitor the voltage is proportional to the charge: $u=\\frac{q}{C}$. The smaller the capacitance, the larger the voltage for the same charge — a «stiffer spring». Therefore, when the capacitance decreases, the frequency increases."
+ },
+ {
+  "t": "li",
+  "uz": "**Chastotalar diapazoni.** Mexanik mayatniklar bir necha gersgacha tebranadi, LC konturlar esa juda keng diapazonda ishlaydi: katta g'altak va kondensatorda $L\\sim1\\ \\mathrm{H}$, $C\\sim1\\ \\mu\\mathrm{F}$ bo'lsa, $\\nu\\sim160\\ \\mathrm{Hz}$ (tovush chastotasi); radiopriyomnikda $L\\sim0.1\\ \\mathrm{mH}$, $C\\sim100\\ \\mathrm{pF}$ bo'lsa, $\\nu\\sim1.6\\ \\mathrm{MHz}$; mobil aloqada gigagerslar. Chastotani oshirish uchun $L$ va $C$ ni kichraytirish kerak.",
+  "ru": "**Диапазон частот.** Механические маятники колеблются с частотами до нескольких герц, а LC-контуры работают в очень широком диапазоне: в большой катушке и конденсаторе при $L\\sim1\\ \\mathrm{H}$, $C\\sim1\\ \\mu\\mathrm{F}$ получаем $\\nu\\sim160\\ \\mathrm{Hz}$ (звуковая частота); в радиоприёмнике при $L\\sim0.1\\ \\mathrm{mH}$, $C\\sim100\\ \\mathrm{pF}$ — $\\nu\\sim1.6\\ \\mathrm{MHz}$; в мобильной связи — гигагерцы. Чтобы повысить частоту, нужно уменьшать $L$ и $C$.",
+  "en": "**Frequency range.** Mechanical pendulums oscillate at up to a few hertz, while LC circuits work over a very wide range: in a large coil and capacitor with $L\\sim1\\ \\mathrm{H}$, $C\\sim1\\ \\mu\\mathrm{F}$ we get $\\nu\\sim160\\ \\mathrm{Hz}$ (an audio frequency); in a radio receiver with $L\\sim0.1\\ \\mathrm{mH}$, $C\\sim100\\ \\mathrm{pF}$ — $\\nu\\sim1.6\\ \\mathrm{MHz}$; in mobile communication — gigahertz. To raise the frequency, $L$ and $C$ must be reduced."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Zaryad, tok va kuchlanish tenglamalari (Equations of charge, current and voltage)",
+  "ru": "4. Уравнения заряда, тока и напряжения",
+  "en": "4. Equations of charge, current and voltage"
+ },
+ {
+  "t": "li",
+  "uz": "**Kontur tenglamasi.** Ideal konturda kondensatordagi kuchlanish g'altakdagi o'zinduksiya EYK siga teng: $\\frac{q}{C}=-Li'$. Bu yerda $i=q'$, demak $i'=q''$:",
+  "ru": "**Уравнение контура.** В идеальном контуре напряжение на конденсаторе равно ЭДС самоиндукции катушки: $\\frac{q}{C}=-Li'$. Здесь $i=q'$, значит $i'=q''$:",
+  "en": "**Circuit equation.** In an ideal circuit the voltage across the capacitor equals the self-induced emf of the coil: $\\frac{q}{C}=-Li'$. Here $i=q'$, so $i'=q''$:"
+ },
+ {
+  "t": "m",
+  "m": "q''+\\frac{1}{LC}\\,q=0\\qquad\\Longleftrightarrow\\qquad x''+\\frac{k}{m}\\,x=0"
+ },
+ {
+  "t": "li",
+  "uz": "Bu garmonik tebranishlar tenglamasi (B0-L06, L21). Uning yechimi:",
+  "ru": "Это уравнение гармонических колебаний (B0-L06, L21). Его решение:",
+  "en": "This is the equation of harmonic oscillations (B0-L06, L21). Its solution is"
+ },
+ {
+  "t": "m",
+  "m": "q=q_m\\cos(\\omega_0t+\\varphi_0),\\qquad \\omega_0=\\frac{1}{\\sqrt{LC}}"
+ },
+ {
+  "t": "li",
+  "uz": "Bu yerda $q_m$ — zaryad amplitudasi, $\\omega_0$ — siklik chastota (angular frequency), $\\varphi_0$ — boshlang'ich faza (initial phase). $t=0$ da kondensator zaryadlangan bo'lsa (kalit endi ulangan), $\\varphi_0=0$ va $q=q_m\\cos\\omega_0t$.",
+  "ru": "Здесь $q_m$ — амплитуда заряда, $\\omega_0$ — циклическая частота (angular frequency), $\\varphi_0$ — начальная фаза (initial phase). Если при $t=0$ конденсатор заряжен (ключ только что замкнули), то $\\varphi_0=0$ и $q=q_m\\cos\\omega_0t$.",
+  "en": "Here $q_m$ is the charge amplitude, $\\omega_0$ is the angular frequency, and $\\varphi_0$ is the initial phase. If at $t=0$ the capacitor is charged (the switch has just been closed), then $\\varphi_0=0$ and $q=q_m\\cos\\omega_0t$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tok va kuchlanish.** Tok — zaryadning hosilasi, kuchlanish — zaryadning sig'imga nisbati ([[F03]]):",
+  "ru": "**Ток и напряжение.** Ток — производная заряда, напряжение — отношение заряда к ёмкости ([[F03]]):",
+  "en": "**Current and voltage.** The current is the derivative of the charge, and the voltage is the ratio of the charge to the capacitance ([[F03]]):"
+ },
+ {
+  "t": "m",
+  "m": "i=q'=-q_m\\omega_0\\sin\\omega_0t=I_m\\cos\\left(\\omega_0t+\\frac{\\pi}{2}\\right),\\qquad u=\\frac{q}{C}=U_m\\cos\\omega_0t"
+ },
+ {
+  "t": "m",
+  "m": "I_m=q_m\\omega_0=\\frac{q_m}{\\sqrt{LC}},\\qquad U_m=\\frac{q_m}{C}"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B1-L41-F03.png",
+   "ru": "figures/B1-L41-F03-ru.png",
+   "en": "figures/B1-L41-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Fazalar.** Kondensatordagi kuchlanish zaryad bilan bir xil fazada tebranadi, tok esa zaryaddan faza bo'yicha $\\frac{\\pi}{2}$ ga (chorak davrga) oldinda. Shuning uchun $q$ eng katta bo'lganda $i=0$, $i$ eng katta bo'lganda $q=0$ — 2-bo'limdagi xulosa tenglamadan ham chiqadi.",
+  "ru": "**Фазы.** Напряжение на конденсаторе колеблется в одной фазе с зарядом, а ток опережает заряд по фазе на $\\frac{\\pi}{2}$ (на четверть периода). Поэтому при максимальном $q$ имеем $i=0$, при максимальном $i$ имеем $q=0$ — вывод раздела 2 следует и из уравнений.",
+  "en": "**Phases.** The voltage across the capacitor oscillates in phase with the charge, and the current leads the charge in phase by $\\frac{\\pi}{2}$ (by a quarter period). Therefore, when $q$ is maximal $i=0$, and when $i$ is maximal $q=0$ — the conclusion of section 2 also follows from the equations."
+ },
+ {
+  "t": "li",
+  "uz": "**Boshlang'ich shartlar.** Agar $t=0$ da kondensator zaryadlangan bo'lsa ($q=q_m$, $i=0$), $q=q_m\\cos\\omega_0t$ va $i=-I_m\\sin\\omega_0t$. Agar $t=0$ da kondensator razryadlangan, tok esa eng katta bo'lsa ($q=0$, $i=I_m$), $i=I_m\\cos\\omega_0t$ va $q=\\frac{I_m}{\\omega_0}\\sin\\omega_0t$. Masalan, $i=0.04\\cos(2000t)$ (amperda) bo'lsa, $q_m=\\frac{0.04}{2000}=2\\cdot10^{-5}\\ \\mathrm{C}$ va $q=2\\cdot10^{-5}\\sin(2000t)$ — zaryad tenglamasini tokdan integrallab olish ham mumkin.",
+  "ru": "**Начальные условия.** Если при $t=0$ конденсатор заряжен ($q=q_m$, $i=0$), то $q=q_m\\cos\\omega_0t$ и $i=-I_m\\sin\\omega_0t$. Если при $t=0$ конденсатор разряжен, а ток максимален ($q=0$, $i=I_m$), то $i=I_m\\cos\\omega_0t$ и $q=\\frac{I_m}{\\omega_0}\\sin\\omega_0t$. Например, если $i=0.04\\cos(2000t)$ (в амперах), то $q_m=\\frac{0.04}{2000}=2\\cdot10^{-5}\\ \\mathrm{C}$ и $q=2\\cdot10^{-5}\\sin(2000t)$ — уравнение заряда можно получить и интегрированием тока.",
+  "en": "**Initial conditions.** If at $t=0$ the capacitor is charged ($q=q_m$, $i=0$), then $q=q_m\\cos\\omega_0t$ and $i=-I_m\\sin\\omega_0t$. If at $t=0$ the capacitor is discharged and the current is maximal ($q=0$, $i=I_m$), then $i=I_m\\cos\\omega_0t$ and $q=\\frac{I_m}{\\omega_0}\\sin\\omega_0t$. For example, if $i=0.04\\cos(2000t)$ (in amperes), then $q_m=\\frac{0.04}{2000}=2\\cdot10^{-5}\\ \\mathrm{C}$ and $q=2\\cdot10^{-5}\\sin(2000t)$ — the charge equation can also be obtained by integrating the current."
+ },
+ {
+  "t": "li",
+  "uz": "**Tenglamadan kattaliklarni o'qish.** Masalan, $q=3\\cdot10^{-6}\\cos(2\\cdot10^4\\pi t)$ (kulonda) bo'lsa: $q_m=3\\ \\mu\\mathrm{C}$, $\\omega_0=2\\cdot10^4\\pi\\ \\mathrm{rad/s}$, chastota $\\nu=\\frac{\\omega_0}{2\\pi}=10^4\\ \\mathrm{Hz}$, davr $T=\\frac{1}{\\nu}=0.1\\ \\mathrm{ms}$, tok amplitudasi:",
+  "ru": "**Чтение величин из уравнения.** Например, если $q=3\\cdot10^{-6}\\cos(2\\cdot10^4\\pi t)$ (в кулонах), то $q_m=3\\ \\mu\\mathrm{C}$, $\\omega_0=2\\cdot10^4\\pi\\ \\mathrm{rad/s}$, частота $\\nu=\\frac{\\omega_0}{2\\pi}=10^4\\ \\mathrm{Hz}$, период $T=\\frac{1}{\\nu}=0.1\\ \\mathrm{ms}$, амплитуда тока:",
+  "en": "**Reading the quantities from an equation.** For example, if $q=3\\cdot10^{-6}\\cos(2\\cdot10^4\\pi t)$ (in coulombs), then $q_m=3\\ \\mu\\mathrm{C}$, $\\omega_0=2\\cdot10^4\\pi\\ \\mathrm{rad/s}$, the frequency is $\\nu=\\frac{\\omega_0}{2\\pi}=10^4\\ \\mathrm{Hz}$, the period is $T=\\frac{1}{\\nu}=0.1\\ \\mathrm{ms}$, and the current amplitude is"
+ },
+ {
+  "t": "m",
+  "m": "I_m=q_m\\omega_0=3\\cdot10^{-6}\\cdot2\\cdot10^4\\pi=0.06\\pi\\approx0.19\\ \\mathrm{A}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tuzoqlar.** 1) Kosinus argumentidagi son — siklik chastota $\\omega$, oddiy chastota emas: $\\nu=\\frac{\\omega}{2\\pi}$. 2) Tok amplitudasini topishda $q_m$ ni $\\omega$ ga ko'paytirish kerak, $\\nu$ ga emas. 3) Tok sinus orqali yozilsa ham, amplitudasi baribir $q_m\\omega_0$: boshlang'ich faza amplitudaga ta'sir qilmaydi.",
+  "ru": "**Ловушки.** 1) Число в аргументе косинуса — циклическая частота $\\omega$, а не обычная частота: $\\nu=\\frac{\\omega}{2\\pi}$. 2) Для амплитуды тока $q_m$ умножают на $\\omega$, а не на $\\nu$. 3) Даже если ток записан через синус, его амплитуда всё равно $q_m\\omega_0$: начальная фаза на амплитуду не влияет.",
+  "en": "**Traps.** 1) The number in the argument of the cosine is the angular frequency $\\omega$, not the ordinary frequency: $\\nu=\\frac{\\omega}{2\\pi}$. 2) To find the current amplitude, $q_m$ is multiplied by $\\omega$, not by $\\nu$. 3) Even if the current is written with a sine, its amplitude is still $q_m\\omega_0$: the initial phase does not affect the amplitude."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Tomson formulasi (Thomson's formula)",
+  "ru": "5. Формула Томсона",
+  "en": "5. Thomson's formula"
+ },
+ {
+  "t": "li",
+  "uz": "**Formula.** $\\omega_0=\\frac{2\\pi}{T}$ va $\\omega_0=\\frac{1}{\\sqrt{LC}}$ dan ideal konturdagi erkin tebranishlar davri kelib chiqadi. Uni 1853-yilda ingliz fizigi Uilyam Tomson (lord Kelvin) topgan, shuning uchun Tomson formulasi (Thomson's formula) deyiladi:",
+  "ru": "**Формула.** Из $\\omega_0=\\frac{2\\pi}{T}$ и $\\omega_0=\\frac{1}{\\sqrt{LC}}$ следует период свободных колебаний в идеальном контуре. Его получил в 1853 году английский физик Уильям Томсон (лорд Кельвин), поэтому это формула Томсона (Thomson's formula):",
+  "en": "**Formula.** From $\\omega_0=\\frac{2\\pi}{T}$ and $\\omega_0=\\frac{1}{\\sqrt{LC}}$ follows the period of free oscillations in an ideal circuit. It was obtained in 1853 by the British physicist William Thomson (Lord Kelvin), so it is called Thomson's formula:"
+ },
+ {
+  "t": "m",
+  "m": "T=2\\pi\\sqrt{LC},\\qquad \\nu=\\frac{1}{T}=\\frac{1}{2\\pi\\sqrt{LC}},\\qquad \\omega_0=\\frac{1}{\\sqrt{LC}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Birlik tekshiruvi.** $\\mathrm{H}=\\Omega\\cdot\\mathrm{s}$ (L40), $\\mathrm{F}=\\frac{\\mathrm{s}}{\\Omega}$ ($RC$ — vaqt), demak $\\sqrt{\\mathrm{H\\cdot F}}=\\sqrt{\\mathrm{s^2}}=\\mathrm{s}$. Mexanik o'xshashi — prujinali mayatnik davri $T=2\\pi\\sqrt{\\frac{m}{k}}$ (L20): $m\\to L$, $\\frac{1}{k}\\to C$.",
+  "ru": "**Проверка единиц.** $\\mathrm{H}=\\Omega\\cdot\\mathrm{s}$ (L40), $\\mathrm{F}=\\frac{\\mathrm{s}}{\\Omega}$ ($RC$ — время), значит $\\sqrt{\\mathrm{H\\cdot F}}=\\sqrt{\\mathrm{s^2}}=\\mathrm{s}$. Механический аналог — период пружинного маятника $T=2\\pi\\sqrt{\\frac{m}{k}}$ (L20): $m\\to L$, $\\frac{1}{k}\\to C$.",
+  "en": "**Unit check.** $\\mathrm{H}=\\Omega\\cdot\\mathrm{s}$ (L40), $\\mathrm{F}=\\frac{\\mathrm{s}}{\\Omega}$ ($RC$ is a time), so $\\sqrt{\\mathrm{H\\cdot F}}=\\sqrt{\\mathrm{s^2}}=\\mathrm{s}$. The mechanical analogue is the period of a spring pendulum $T=2\\pi\\sqrt{\\frac{m}{k}}$ (L20): $m\\to L$, $\\frac{1}{k}\\to C$."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $L=1\\ \\mathrm{mH}$, $C=10\\ \\mu\\mathrm{F}$ bo'lsa, $LC=10^{-8}\\ \\mathrm{s^2}$ va",
+  "ru": "**Пример.** Если $L=1\\ \\mathrm{mH}$, $C=10\\ \\mu\\mathrm{F}$, то $LC=10^{-8}\\ \\mathrm{s^2}$ и",
+  "en": "**Example.** If $L=1\\ \\mathrm{mH}$ and $C=10\\ \\mu\\mathrm{F}$, then $LC=10^{-8}\\ \\mathrm{s^2}$ and"
+ },
+ {
+  "t": "m",
+  "m": "T=2\\pi\\cdot10^{-4}\\approx0.628\\ \\mathrm{ms},\\qquad \\nu=\\frac{1}{T}\\approx1.59\\ \\mathrm{kHz},\\qquad \\omega_0=10^4\\ \\mathrm{rad/s}"
+ },
+ {
+  "t": "li",
+  "uz": "**Davr qanday o'zgaradi ([[F04]]).** $T\\sim\\sqrt{L}$ va $T\\sim\\sqrt{C}$: induktivlik yoki sig'im $4$ marta oshirilsa, davr $2$ marta ortadi, chastota $2$ marta kamayadi; ikkalasi ham $4$ martadan oshirilsa, davr $4$ marta ortadi. Davr $LC$ ko'paytmaga bog'liq: $L$ ni $n$ marta oshirib, $C$ ni $n$ marta kamaytirsak, davr o'zgarmaydi.",
+  "ru": "**Как меняется период ([[F04]]).** $T\\sim\\sqrt{L}$ и $T\\sim\\sqrt{C}$: если индуктивность или ёмкость увеличить в $4$ раза, период увеличится в $2$ раза, частота уменьшится в $2$ раза; если увеличить обе в $4$ раза, период увеличится в $4$ раза. Период зависит от произведения $LC$: если $L$ увеличить в $n$ раз, а $C$ уменьшить в $n$ раз, период не изменится.",
+  "en": "**How the period changes ([[F04]]).** $T\\sim\\sqrt{L}$ and $T\\sim\\sqrt{C}$: if the inductance or the capacitance is increased $4$ times, the period increases $2$ times and the frequency decreases $2$ times; if both are increased $4$ times, the period increases $4$ times. The period depends on the product $LC$: if $L$ is increased $n$ times and $C$ is decreased $n$ times, the period does not change."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B1-L41-F04.png",
+   "ru": "figures/B1-L41-F04-ru.png",
+   "en": "figures/B1-L41-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Yassi kondensator.** $C=\\frac{\\varepsilon\\varepsilon_0S}{d}$ (L32). Plastinalar orasidagi masofa $d$ ni $n$ marta oshirsak, sig'im $n$ marta kamayadi va davr $\\sqrt{n}$ marta kamayadi, chastota $\\sqrt{n}$ marta ortadi. Qoplamalar orasini dielektrik singdiruvchanligi $\\varepsilon$ bo'lgan dielektrik bilan to'ldirsak, sig'im $\\varepsilon$ marta, davr $\\sqrt{\\varepsilon}$ marta ortadi.",
+  "ru": "**Плоский конденсатор.** $C=\\frac{\\varepsilon\\varepsilon_0S}{d}$ (L32). Если расстояние между пластинами $d$ увеличить в $n$ раз, ёмкость уменьшится в $n$ раз, а период уменьшится в $\\sqrt{n}$ раз, частота увеличится в $\\sqrt{n}$ раз. Если пространство между обкладками заполнить диэлектриком с диэлектрической проницаемостью $\\varepsilon$, ёмкость увеличится в $\\varepsilon$ раз, а период — в $\\sqrt{\\varepsilon}$ раз.",
+  "en": "**Parallel-plate capacitor.** $C=\\frac{\\varepsilon\\varepsilon_0S}{d}$ (L32). If the distance $d$ between the plates is increased $n$ times, the capacitance decreases $n$ times, the period decreases $\\sqrt{n}$ times and the frequency increases $\\sqrt{n}$ times. If the space between the plates is filled with a dielectric of relative permittivity $\\varepsilon$, the capacitance increases $\\varepsilon$ times and the period $\\sqrt{\\varepsilon}$ times."
+ },
+ {
+  "t": "li",
+  "uz": "**G'altak o'zagi.** G'altakka ferromagnit o'zak kiritilsa, induktivlik $\\mu$ marta ortadi (L40), demak davr ortadi va chastota kamayadi. Radiopriyomniklarda o'zakni g'altak ichiga kiritib-chiqarib yoki o'zgaruvchan sig'imli kondensator (havo kondensatori plastinalarini burab) konturni kerakli stansiya chastotasiga sozlashadi.",
+  "ru": "**Сердечник катушки.** Если в катушку ввести ферромагнитный сердечник, индуктивность увеличится в $\\mu$ раз (L40), значит период увеличится, а частота уменьшится. В радиоприёмниках контур настраивают на частоту нужной станции, вдвигая сердечник в катушку или поворачивая пластины конденсатора переменной ёмкости.",
+  "en": "**Coil core.** If a ferromagnetic core is inserted into the coil, the inductance increases $\\mu$ times (L40), so the period increases and the frequency decreases. In radio receivers the circuit is tuned to the frequency of the desired station by moving a core into the coil or by turning the plates of a variable capacitor."
+ },
+ {
+  "t": "li",
+  "uz": "**Konturni sozlash misoli.** Induktivligi $L$ bo'lgan g'altak bilan chastota $\\nu$ ni olish uchun kerakli sig'im: $C=\\frac{1}{4\\pi^2\\nu^2L}$. Masalan, $L=0.1\\ \\mathrm{mH}$ va $\\nu=1\\ \\mathrm{MHz}$ uchun ($\\pi^2\\approx10$) $C=\\frac{1}{40\\cdot10^{12}\\cdot10^{-4}}=250\\ \\mathrm{pF}$.",
+  "ru": "**Пример настройки контура.** Ёмкость, нужная для получения частоты $\\nu$ с катушкой индуктивностью $L$: $C=\\frac{1}{4\\pi^2\\nu^2L}$. Например, для $L=0.1\\ \\mathrm{mH}$ и $\\nu=1\\ \\mathrm{MHz}$ ($\\pi^2\\approx10$) $C=\\frac{1}{40\\cdot10^{12}\\cdot10^{-4}}=250\\ \\mathrm{pF}$.",
+  "en": "**Tuning example.** The capacitance needed to obtain the frequency $\\nu$ with a coil of inductance $L$ is $C=\\frac{1}{4\\pi^2\\nu^2L}$. For example, for $L=0.1\\ \\mathrm{mH}$ and $\\nu=1\\ \\mathrm{MHz}$ ($\\pi^2\\approx10$) $C=\\frac{1}{40\\cdot10^{12}\\cdot10^{-4}}=250\\ \\mathrm{pF}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Davrni o'lchab sig'imni topish.** Tomson formulasidan noma'lum sig'im yoki induktivlikni o'lchash mumkin: induktivligi ma'lum g'altakka noma'lum kondensator ulanadi, ossillografda davr o'lchanadi va $C=\\frac{T^2}{4\\pi^2L}$ hisoblanadi. Aynan shu prinsipda sig'im va induktivlik o'lchagichlari (LC-metrlar) ishlaydi.",
+  "ru": "**Нахождение ёмкости по измеренному периоду.** По формуле Томсона можно измерить неизвестную ёмкость или индуктивность: к катушке известной индуктивности подключают неизвестный конденсатор, измеряют период на осциллографе и вычисляют $C=\\frac{T^2}{4\\pi^2L}$. На этом принципе работают измерители ёмкости и индуктивности (LC-метры).",
+  "en": "**Finding a capacitance from a measured period.** Thomson's formula makes it possible to measure an unknown capacitance or inductance: an unknown capacitor is connected to a coil of known inductance, the period is measured on an oscilloscope, and $C=\\frac{T^2}{4\\pi^2L}$ is calculated. Capacitance and inductance meters (LC meters) work on this principle."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Kondensatorlar va g'altaklarni ulash (Connecting capacitors and coils)",
+  "ru": "6. Соединение конденсаторов и катушек",
+  "en": "6. Connecting capacitors and coils"
+ },
+ {
+  "t": "li",
+  "uz": "**Kondensatorlar (L32).** Parallel ulanganda sig'imlar qo'shiladi: $C=C_1+C_2$. Ketma-ket ulanganda teskari qiymatlar qo'shiladi: $\\frac{1}{C}=\\frac{1}{C_1}+\\frac{1}{C_2}$ — umumiy sig'im eng kichigidan ham kichik ([[F05]]).",
+  "ru": "**Конденсаторы (L32).** При параллельном соединении ёмкости складываются: $C=C_1+C_2$. При последовательном складываются обратные величины: $\\frac{1}{C}=\\frac{1}{C_1}+\\frac{1}{C_2}$ — общая ёмкость меньше наименьшей ([[F05]]).",
+  "en": "**Capacitors (L32).** In parallel the capacitances add: $C=C_1+C_2$. In series the reciprocals add: $\\frac{1}{C}=\\frac{1}{C_1}+\\frac{1}{C_2}$ — the total capacitance is smaller than the smallest one ([[F05]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B1-L41-F05.png",
+   "ru": "figures/B1-L41-F05-ru.png",
+   "en": "figures/B1-L41-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**G'altaklar.** Bir-biriga magnit ta'sir qilmaydigan g'altaklar ketma-ket ulansa, rezistorlar kabi qo'shiladi: $L=L_1+L_2$ (ikkalasidan bir xil tok o'tadi, EYK lar qo'shiladi). Parallel ulansa: $\\frac{1}{L}=\\frac{1}{L_1}+\\frac{1}{L_2}$ (kuchlanish bir xil, toklarning o'zgarish tezliklari qo'shiladi).",
+  "ru": "**Катушки.** Катушки, не влияющие друг на друга магнитно, при последовательном соединении складываются как резисторы: $L=L_1+L_2$ (через обе течёт один ток, ЭДС складываются). При параллельном: $\\frac{1}{L}=\\frac{1}{L_1}+\\frac{1}{L_2}$ (напряжение одинаково, скорости изменения токов складываются).",
+  "en": "**Coils.** Coils that do not influence each other magnetically add like resistors when connected in series: $L=L_1+L_2$ (the same current flows through both, and the emfs add). In parallel: $\\frac{1}{L}=\\frac{1}{L_1}+\\frac{1}{L_2}$ (the voltage is the same, and the rates of change of the currents add)."
+ },
+ {
+  "t": "li",
+  "uz": "**Misollar.** Konturdagi $C$ sig'imli kondensatorga $3C$ sig'imli kondensator parallel ulansa, umumiy sig'im $4C$, davr $2$ marta ortadi. $C$ ga $\\frac{C}{3}$ ketma-ket ulansa, $\\frac{1}{C'}=\\frac{1}{C}+\\frac{3}{C}=\\frac{4}{C}$, ya'ni $C'=\\frac{C}{4}$ va davr $2$ marta kamayadi. Kalit bilan bir sxemadan boshqasiga o'tiladigan masalalarda avval har bir holat uchun umumiy $L$ va $C$ ni topish kerak.",
+  "ru": "**Примеры.** Если к конденсатору ёмкостью $C$ в контуре параллельно подключить конденсатор ёмкостью $3C$, общая ёмкость станет $4C$, период увеличится в $2$ раза. Если к $C$ последовательно подключить $\\frac{C}{3}$, то $\\frac{1}{C'}=\\frac{1}{C}+\\frac{3}{C}=\\frac{4}{C}$, то есть $C'=\\frac{C}{4}$, и период уменьшится в $2$ раза. В задачах, где ключом переходят от одной схемы к другой, сначала находят общие $L$ и $C$ для каждого случая.",
+  "en": "**Examples.** If a capacitor of capacitance $3C$ is connected in parallel with the capacitor $C$ of a circuit, the total capacitance becomes $4C$ and the period increases $2$ times. If $\\frac{C}{3}$ is connected in series with $C$, then $\\frac{1}{C'}=\\frac{1}{C}+\\frac{3}{C}=\\frac{4}{C}$, i.e. $C'=\\frac{C}{4}$, and the period decreases $2$ times. In problems where a switch changes one circuit into another, first find the total $L$ and $C$ for each case."
+ },
+ {
+  "t": "li",
+  "uz": "**G'altaklar bilan misol.** Konturda $L_1$ va $L_2$ g'altaklar ketma-ket ulangan bo'lsa, $T=2\\pi\\sqrt{(L_1+L_2)C}$; parallel ulangan bo'lsa, $T=2\\pi\\sqrt{\\frac{L_1L_2}{L_1+L_2}C}$. Ikki bir xil g'altakni ketma-ket ulashdan parallel ulashga o'tilsa, induktivlik $2L$ dan $\\frac{L}{2}$ ga, ya'ni $4$ marta kamayadi va davr $2$ marta kamayadi.",
+  "ru": "**Пример с катушками.** Если в контуре катушки $L_1$ и $L_2$ соединены последовательно, то $T=2\\pi\\sqrt{(L_1+L_2)C}$; если параллельно, то $T=2\\pi\\sqrt{\\frac{L_1L_2}{L_1+L_2}C}$. При переходе от последовательного соединения двух одинаковых катушек к параллельному индуктивность уменьшается с $2L$ до $\\frac{L}{2}$, то есть в $4$ раза, и период уменьшается в $2$ раза.",
+  "en": "**Example with coils.** If coils $L_1$ and $L_2$ are connected in series in a circuit, then $T=2\\pi\\sqrt{(L_1+L_2)C}$; if in parallel, then $T=2\\pi\\sqrt{\\frac{L_1L_2}{L_1+L_2}C}$. When two identical coils are switched from series to parallel connection, the inductance decreases from $2L$ to $\\frac{L}{2}$, i.e. $4$ times, and the period decreases $2$ times."
+ },
+ {
+  "t": "h2",
+  "uz": "7. Konturdagi energiya (Energy in the circuit)",
+  "ru": "7. Энергия в контуре",
+  "en": "7. Energy in the circuit"
+ },
+ {
+  "t": "li",
+  "uz": "**Saqlanish qonuni.** Ideal konturda to'liq elektromagnit energiya — kondensatorning elektr maydon energiyasi va g'altakning magnit maydon energiyasi yig'indisi — o'zgarmaydi:",
+  "ru": "**Закон сохранения.** В идеальном контуре полная электромагнитная энергия — сумма энергии электрического поля конденсатора и энергии магнитного поля катушки — не меняется:",
+  "en": "**Conservation law.** In an ideal circuit the total electromagnetic energy — the sum of the electric field energy of the capacitor and the magnetic field energy of the coil — does not change:"
+ },
+ {
+  "t": "m",
+  "m": "W=\\frac{q^2}{2C}+\\frac{Li^2}{2}=\\frac{q_m^2}{2C}=\\frac{CU_m^2}{2}=\\frac{LI_m^2}{2}=\\mathrm{const}"
+ },
+ {
+  "t": "li",
+  "uz": "Bu mexanikadagi $\\frac{kx^2}{2}+\\frac{mv^2}{2}=\\mathrm{const}$ ning aynan o'xshashi. Elektr energiyaning eng katta qiymati magnit energiyaning eng katta qiymatiga teng va ikkalasi ham to'liq energiyaga teng.",
+  "ru": "Это точный аналог механического $\\frac{kx^2}{2}+\\frac{mv^2}{2}=\\mathrm{const}$. Наибольшее значение электрической энергии равно наибольшему значению магнитной энергии, и оба равны полной энергии.",
+  "en": "This is the exact analogue of the mechanical $\\frac{kx^2}{2}+\\frac{mv^2}{2}=\\mathrm{const}$. The largest value of the electric energy equals the largest value of the magnetic energy, and both equal the total energy."
+ },
+ {
+  "t": "li",
+  "uz": "**Amplitudalar orasidagi bog'lanish.** $\\frac{CU_m^2}{2}=\\frac{LI_m^2}{2}$ dan:",
+  "ru": "**Связь между амплитудами.** Из $\\frac{CU_m^2}{2}=\\frac{LI_m^2}{2}$:",
+  "en": "**Relation between the amplitudes.** From $\\frac{CU_m^2}{2}=\\frac{LI_m^2}{2}$:"
+ },
+ {
+  "t": "m",
+  "m": "I_m=U_m\\sqrt{\\frac{C}{L}},\\qquad U_m=I_m\\sqrt{\\frac{L}{C}},\\qquad I_m=\\frac{q_m}{\\sqrt{LC}}"
+ },
+ {
+  "t": "li",
+  "uz": "Misol: $C=10\\ \\mu\\mathrm{F}$ kondensator $50\\ \\mathrm{V}$ gacha zaryadlanib, $L=0.1\\ \\mathrm{H}$ g'altakka ulandi. To'liq energiya $W=\\frac{CU_m^2}{2}=12.5\\ \\mathrm{mJ}$, tok amplitudasi $I_m=50\\sqrt{10^{-4}}=0.5\\ \\mathrm{A}$.",
+  "ru": "Пример: конденсатор $C=10\\ \\mu\\mathrm{F}$ зарядили до $50\\ \\mathrm{V}$ и подключили к катушке $L=0.1\\ \\mathrm{H}$. Полная энергия $W=\\frac{CU_m^2}{2}=12.5\\ \\mathrm{mJ}$, амплитуда тока $I_m=50\\sqrt{10^{-4}}=0.5\\ \\mathrm{A}$.",
+  "en": "Example: a capacitor $C=10\\ \\mu\\mathrm{F}$ was charged to $50\\ \\mathrm{V}$ and connected to a coil $L=0.1\\ \\mathrm{H}$. The total energy is $W=\\frac{CU_m^2}{2}=12.5\\ \\mathrm{mJ}$, and the current amplitude is $I_m=50\\sqrt{10^{-4}}=0.5\\ \\mathrm{A}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Energiyalarning vaqtga bog'lanishi ([[F06]]).** $q=q_m\\cos\\omega_0t$ bo'lsa:",
+  "ru": "**Зависимость энергий от времени ([[F06]]).** Если $q=q_m\\cos\\omega_0t$, то",
+  "en": "**Time dependence of the energies ([[F06]]).** If $q=q_m\\cos\\omega_0t$, then"
+ },
+ {
+  "t": "m",
+  "m": "W_E=\\frac{q^2}{2C}=W\\cos^2\\omega_0t,\\qquad W_M=\\frac{Li^2}{2}=W\\sin^2\\omega_0t"
+ },
+ {
+  "t": "li",
+  "uz": "$\\cos^2\\omega_0t=\\frac{1+\\cos2\\omega_0t}{2}$ bo'lgani uchun har bir energiya $2\\omega_0$ siklik chastota bilan, ya'ni $\\frac{T}{2}$ davr bilan tebranadi va doim manfiy emas, o'rtacha qiymati $\\frac{W}{2}$. Energiya tebranishlari chastotasi zaryad tebranishlari chastotasidan $2$ marta katta — GRE da tez-tez so'raladigan nozik nuqta.",
+  "ru": "Так как $\\cos^2\\omega_0t=\\frac{1+\\cos2\\omega_0t}{2}$, каждая энергия колеблется с циклической частотой $2\\omega_0$, то есть с периодом $\\frac{T}{2}$, всегда неотрицательна, а её среднее значение равно $\\frac{W}{2}$. Частота колебаний энергии в $2$ раза больше частоты колебаний заряда — тонкий момент, о котором часто спрашивают в GRE.",
+  "en": "Since $\\cos^2\\omega_0t=\\frac{1+\\cos2\\omega_0t}{2}$, each energy oscillates with angular frequency $2\\omega_0$, i.e. with period $\\frac{T}{2}$, is never negative, and its average value is $\\frac{W}{2}$. The frequency of the energy oscillations is $2$ times the frequency of the charge oscillations — a subtle point often asked on the GRE."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B1-L41-F06.png",
+   "ru": "figures/B1-L41-F06-ru.png",
+   "en": "figures/B1-L41-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Xarakterli paytlar.** Kondensator zaryadlangan holatdan ($t=0$) hisoblaganda $\\frac{W_E}{W}=\\cos^2\\omega_0t$ va $\\frac{W_M}{W}=\\sin^2\\omega_0t$. Masalan, $W_E=W_M$ bo'ladi, qachonki $\\cos^2\\omega_0t=\\frac{1}{2}$, ya'ni $\\omega_0t=\\frac{\\pi}{4}$ — birinchi marta $t=\\frac{T}{8}$ da; $t=\\frac{T}{4}$ da butun energiya magnit energiyaga aylangan. Boshqa nisbatlar uchun ham shu tenglama yechiladi: avval $\\omega_0t$ burchak, keyin $t=\\frac{\\omega_0t}{2\\pi}T$.",
+  "ru": "**Характерные моменты.** Если отсчитывать от заряженного состояния ($t=0$), то $\\frac{W_E}{W}=\\cos^2\\omega_0t$ и $\\frac{W_M}{W}=\\sin^2\\omega_0t$. Например, $W_E=W_M$, когда $\\cos^2\\omega_0t=\\frac{1}{2}$, то есть $\\omega_0t=\\frac{\\pi}{4}$ — впервые при $t=\\frac{T}{8}$; при $t=\\frac{T}{4}$ вся энергия превратилась в магнитную. Для других отношений решают то же уравнение: сначала угол $\\omega_0t$, затем $t=\\frac{\\omega_0t}{2\\pi}T$.",
+  "en": "**Characteristic moments.** Counting from the charged state ($t=0$), $\\frac{W_E}{W}=\\cos^2\\omega_0t$ and $\\frac{W_M}{W}=\\sin^2\\omega_0t$. For example, $W_E=W_M$ when $\\cos^2\\omega_0t=\\frac{1}{2}$, i.e. $\\omega_0t=\\frac{\\pi}{4}$ — for the first time at $t=\\frac{T}{8}$; at $t=\\frac{T}{4}$ all the energy has turned into magnetic energy. For other ratios the same equation is solved: first the angle $\\omega_0t$, then $t=\\frac{\\omega_0t}{2\\pi}T$."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Oniy qiymatlar va energiya (Instantaneous values and energy)",
+  "ru": "8. Мгновенные значения и энергия",
+  "en": "8. Instantaneous values and energy"
+ },
+ {
+  "t": "li",
+  "uz": "**Tokni zaryad orqali topish.** Saqlanish qonuni $\\frac{q^2}{2C}+\\frac{Li^2}{2}=\\frac{q_m^2}{2C}$ dan vaqtni bilmasdan ham oniy tokni topish mumkin:",
+  "ru": "**Нахождение тока через заряд.** Из закона сохранения $\\frac{q^2}{2C}+\\frac{Li^2}{2}=\\frac{q_m^2}{2C}$ можно найти мгновенный ток, даже не зная времени:",
+  "en": "**Finding the current from the charge.** From the conservation law $\\frac{q^2}{2C}+\\frac{Li^2}{2}=\\frac{q_m^2}{2C}$ one can find the instantaneous current without knowing the time:"
+ },
+ {
+  "t": "m",
+  "m": "|i|=\\frac{1}{\\sqrt{LC}}\\sqrt{q_m^2-q^2}=\\omega_0\\sqrt{q_m^2-q^2}"
+ },
+ {
+  "t": "li",
+  "uz": "Bu mexanikadagi $v=\\omega\\sqrt{A^2-x^2}$ (L21) ning o'xshashi. Masalan, zaryad amplitudaning yarmiga teng bo'lganda ($q=\\frac{q_m}{2}$) $|i|=\\frac{\\sqrt{3}}{2}I_m\\approx0.87I_m$, energiyaning esa $\\frac{1}{4}$ qismi elektr, $\\frac{3}{4}$ qismi magnit energiya.",
+  "ru": "Это аналог механического $v=\\omega\\sqrt{A^2-x^2}$ (L21). Например, когда заряд равен половине амплитуды ($q=\\frac{q_m}{2}$), $|i|=\\frac{\\sqrt{3}}{2}I_m\\approx0.87I_m$, а из энергии $\\frac{1}{4}$ часть — электрическая, $\\frac{3}{4}$ — магнитная.",
+  "en": "This is the analogue of the mechanical $v=\\omega\\sqrt{A^2-x^2}$ (L21). For example, when the charge equals half the amplitude ($q=\\frac{q_m}{2}$), $|i|=\\frac{\\sqrt{3}}{2}I_m\\approx0.87I_m$, and of the energy, $\\frac{1}{4}$ is electric and $\\frac{3}{4}$ is magnetic."
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki oniy qiymatdan amplitudalar.** Biror paytda zaryad $q$ va tok $i$ ma'lum bo'lsa, to'liq energiya $W=\\frac{q^2}{2C}+\\frac{Li^2}{2}$, keyin $q_m=\\sqrt{2CW}$, $U_m=\\sqrt{\\frac{2W}{C}}$, $I_m=\\sqrt{\\frac{2W}{L}}$. Kuchlanish berilgan bo'lsa, elektr energiyani $\\frac{Cu^2}{2}$ ko'rinishida yozish qulay.",
+  "ru": "**Амплитуды по двум мгновенным значениям.** Если в некоторый момент известны заряд $q$ и ток $i$, то полная энергия $W=\\frac{q^2}{2C}+\\frac{Li^2}{2}$, а затем $q_m=\\sqrt{2CW}$, $U_m=\\sqrt{\\frac{2W}{C}}$, $I_m=\\sqrt{\\frac{2W}{L}}$. Если задано напряжение, электрическую энергию удобно записать как $\\frac{Cu^2}{2}$.",
+  "en": "**Amplitudes from two instantaneous values.** If the charge $q$ and the current $i$ are known at some moment, the total energy is $W=\\frac{q^2}{2C}+\\frac{Li^2}{2}$, and then $q_m=\\sqrt{2CW}$, $U_m=\\sqrt{\\frac{2W}{C}}$, $I_m=\\sqrt{\\frac{2W}{L}}$. If the voltage is given, it is convenient to write the electric energy as $\\frac{Cu^2}{2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Oniy qiymatlar misoli.** $C=2\\ \\mu\\mathrm{F}$, $L=0.5\\ \\mathrm{H}$ konturda biror paytda kondensator kuchlanishi $30\\ \\mathrm{V}$, tok $40\\ \\mathrm{mA}$. To'liq energiya $W=\\frac{2\\cdot10^{-6}\\cdot900}{2}+\\frac{0.5\\cdot1.6\\cdot10^{-3}}{2}=0.9+0.4=1.3\\ \\mathrm{mJ}$. Bundan $U_m=\\sqrt{\\frac{2W}{C}}=\\sqrt{1300}\\approx36\\ \\mathrm{V}$ va $I_m=\\sqrt{\\frac{2W}{L}}\\approx72\\ \\mathrm{mA}$.",
+  "ru": "**Пример с мгновенными значениями.** В контуре $C=2\\ \\mu\\mathrm{F}$, $L=0.5\\ \\mathrm{H}$ в некоторый момент напряжение на конденсаторе $30\\ \\mathrm{V}$, ток $40\\ \\mathrm{mA}$. Полная энергия $W=\\frac{2\\cdot10^{-6}\\cdot900}{2}+\\frac{0.5\\cdot1.6\\cdot10^{-3}}{2}=0.9+0.4=1.3\\ \\mathrm{mJ}$. Отсюда $U_m=\\sqrt{\\frac{2W}{C}}=\\sqrt{1300}\\approx36\\ \\mathrm{V}$ и $I_m=\\sqrt{\\frac{2W}{L}}\\approx72\\ \\mathrm{mA}$.",
+  "en": "**Example with instantaneous values.** In a circuit with $C=2\\ \\mu\\mathrm{F}$ and $L=0.5\\ \\mathrm{H}$, at some moment the capacitor voltage is $30\\ \\mathrm{V}$ and the current is $40\\ \\mathrm{mA}$. The total energy is $W=\\frac{2\\cdot10^{-6}\\cdot900}{2}+\\frac{0.5\\cdot1.6\\cdot10^{-3}}{2}=0.9+0.4=1.3\\ \\mathrm{mJ}$. Hence $U_m=\\sqrt{\\frac{2W}{C}}=\\sqrt{1300}\\approx36\\ \\mathrm{V}$ and $I_m=\\sqrt{\\frac{2W}{L}}\\approx72\\ \\mathrm{mA}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya tenglamadan.** Masalan, $C=5\\ \\mu\\mathrm{F}$ va $u=40\\cos(2000t)$ (voltda) bo'lsa, to'liq energiya $W=\\frac{CU_m^2}{2}=\\frac{5\\cdot10^{-6}\\cdot1600}{2}=4\\ \\mathrm{mJ}$; magnit energiyaning eng katta qiymati ham $4\\ \\mathrm{mJ}$. Bundan induktivlik ham chiqadi: $L=\\frac{1}{\\omega_0^2C}=\\frac{1}{4\\cdot10^6\\cdot5\\cdot10^{-6}}=0.05\\ \\mathrm{H}$.",
+  "ru": "**Энергия из уравнения.** Например, если $C=5\\ \\mu\\mathrm{F}$ и $u=40\\cos(2000t)$ (в вольтах), то полная энергия $W=\\frac{CU_m^2}{2}=\\frac{5\\cdot10^{-6}\\cdot1600}{2}=4\\ \\mathrm{mJ}$; наибольшая магнитная энергия тоже $4\\ \\mathrm{mJ}$. Отсюда находится и индуктивность: $L=\\frac{1}{\\omega_0^2C}=\\frac{1}{4\\cdot10^6\\cdot5\\cdot10^{-6}}=0.05\\ \\mathrm{H}$.",
+  "en": "**Energy from an equation.** For example, if $C=5\\ \\mu\\mathrm{F}$ and $u=40\\cos(2000t)$ (in volts), the total energy is $W=\\frac{CU_m^2}{2}=\\frac{5\\cdot10^{-6}\\cdot1600}{2}=4\\ \\mathrm{mJ}$; the largest magnetic energy is also $4\\ \\mathrm{mJ}$. From this the inductance also follows: $L=\\frac{1}{\\omega_0^2C}=\\frac{1}{4\\cdot10^6\\cdot5\\cdot10^{-6}}=0.05\\ \\mathrm{H}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Grafikdan tenglamaga.** $q(t)$ grafigidan amplituda (eng katta og'ish) va davr (ikki qo'shni cho'qqi orasidagi vaqt) o'qiladi, $\\omega_0=\\frac{2\\pi}{T}$ hisoblanadi; $t=0$ da grafik cho'qqidan boshlansa — kosinus, noldan o'sib boshlansa — sinus. Tok grafigi zaryad grafigidan chorak davr oldinda turadi.",
+  "ru": "**От графика к уравнению.** По графику $q(t)$ находят амплитуду (наибольшее отклонение) и период (время между двумя соседними максимумами), вычисляют $\\omega_0=\\frac{2\\pi}{T}$; если при $t=0$ график начинается с максимума — косинус, если растёт от нуля — синус. График тока опережает график заряда на четверть периода.",
+  "en": "**From a graph to an equation.** From the graph of $q(t)$ one reads the amplitude (the largest deviation) and the period (the time between two neighbouring maxima) and computes $\\omega_0=\\frac{2\\pi}{T}$; if at $t=0$ the graph starts at a maximum — a cosine, if it rises from zero — a sine. The current graph leads the charge graph by a quarter period."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Real kontur: so'nish va so'nmas tebranishlar (Real circuit: damping and undamped oscillations)",
+  "ru": "9. Реальный контур: затухание и незатухающие колебания",
+  "en": "9. Real circuit: damping and undamped oscillations"
+ },
+ {
+  "t": "li",
+  "uz": "**So'nish.** Real konturda simlar va g'altakning qarshiligi $R$ bor. Har bir davrda energiyaning bir qismi Joul issiqligi $I^2Rt$ (L35) sifatida ajraladi va tebranishlar amplitudasi asta-sekin kamayadi — so'nuvchi tebranishlar (damped oscillations) hosil bo'ladi ([[F07]]). Amplituda taxminan $e^{-\\beta t}$ qonun bo'yicha kamayadi, bu yerda $\\beta=\\frac{R}{2L}$ — so'nish koeffitsiyenti (B0-L06).",
+  "ru": "**Затухание.** В реальном контуре есть сопротивление проводов и катушки $R$. За каждый период часть энергии выделяется в виде джоулева тепла $I^2Rt$ (L35), и амплитуда колебаний постепенно уменьшается — возникают затухающие колебания (damped oscillations) ([[F07]]). Амплитуда убывает приблизительно по закону $e^{-\\beta t}$, где $\\beta=\\frac{R}{2L}$ — коэффициент затухания (B0-L06).",
+  "en": "**Damping.** A real circuit has a resistance $R$ of the wires and the coil. In each period part of the energy is released as Joule heat $I^2Rt$ (L35), and the amplitude of the oscillations gradually decreases — damped oscillations arise ([[F07]]). The amplitude decreases approximately as $e^{-\\beta t}$, where $\\beta=\\frac{R}{2L}$ is the damping coefficient (B0-L06)."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B1-L41-F07.png",
+   "ru": "figures/B1-L41-F07-ru.png",
+   "en": "figures/B1-L41-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Qachon tebranish bo'ladi?** Qarshilik kichik bo'lsa ($R\\ll2\\sqrt{\\frac{L}{C}}$), davr Tomson formulasidan deyarli farq qilmaydi. Qarshilik juda katta bo'lsa ($R\\geq2\\sqrt{\\frac{L}{C}}$), kondensator tebranishsiz, bir tomonga razryadlanadi — mexanikadagi kuchli so'nish (B0-L06) holati. Shuning uchun masalalarda «ideal kontur» yoki «aktiv qarshiliksiz kontur» degani $R=0$ ni bildiradi.",
+  "ru": "**Когда возникают колебания?** Если сопротивление мало ($R\\ll2\\sqrt{\\frac{L}{C}}$), период почти не отличается от формулы Томсона. Если сопротивление очень велико ($R\\geq2\\sqrt{\\frac{L}{C}}$), конденсатор разряжается без колебаний, в одну сторону — случай сильного затухания в механике (B0-L06). Поэтому в задачах «идеальный контур» или «контур без активного сопротивления» означает $R=0$.",
+  "en": "**When do oscillations occur?** If the resistance is small ($R\\ll2\\sqrt{\\frac{L}{C}}$), the period hardly differs from Thomson's formula. If the resistance is very large ($R\\geq2\\sqrt{\\frac{L}{C}}$), the capacitor discharges without oscillations, in one direction — the case of overdamping in mechanics (B0-L06). Therefore in problems «an ideal circuit» or «a circuit without active resistance» means $R=0$."
+ },
+ {
+  "t": "li",
+  "uz": "**So'nmas tebranishlar.** Tebranishlar so'nmasligi uchun konturga har bir davrda yo'qotilgan energiyani o'z vaqtida qaytarib turish kerak. Buni avtotebranish generatori (tranzistorli yoki lampali generator) bajaradi: manba energiyasi konturga tranzistor orqali konturning o'z tebranishlari bilan bir xil fazada beriladi (teskari aloqa). Mexanik o'xshashi — soat mayatnigi va prujina mexanizmi.",
+  "ru": "**Незатухающие колебания.** Чтобы колебания не затухали, контуру нужно в каждом периоде вовремя возвращать потерянную энергию. Это делает автоколебательный генератор (транзисторный или ламповый): энергия источника подаётся в контур через транзистор в фазе с собственными колебаниями контура (обратная связь). Механический аналог — маятник часов и пружинный завод.",
+  "en": "**Undamped oscillations.** To keep the oscillations from decaying, the energy lost in each period must be returned to the circuit at the right moment. This is done by a self-oscillating generator (transistor or vacuum-tube generator): the energy of the source is fed into the circuit through a transistor in phase with the circuit's own oscillations (feedback). The mechanical analogue is a clock pendulum with its spring drive."
+ },
+ {
+  "t": "li",
+  "uz": "**Rezonans va radioqabul.** Konturga tashqi o'zgaruvchan EYK ta'sir qilsa, u majburiy tebranishlar (forced oscillations) qiladi. Tashqi chastota konturning xususiy chastotasiga teng bo'lganda ($\\nu=\\frac{1}{2\\pi\\sqrt{LC}}$) tok amplitudasi keskin ortadi — elektr rezonans (L21 dagi mexanik rezonansning o'xshashi). Radiopriyomnik antennasida ko'plab stansiyalar signali bor; kontur sig'imini o'zgartirib, faqat chastotasi konturnikiga teng stansiya «tanlab olinadi».",
+  "ru": "**Резонанс и радиоприём.** Если на контур действует внешняя переменная ЭДС, он совершает вынужденные колебания (forced oscillations). Когда внешняя частота равна собственной частоте контура ($\\nu=\\frac{1}{2\\pi\\sqrt{LC}}$), амплитуда тока резко возрастает — электрический резонанс (аналог механического резонанса из L21). В антенне радиоприёмника есть сигналы многих станций; меняя ёмкость контура, «выбирают» только ту станцию, частота которой равна частоте контура.",
+  "en": "**Resonance and radio reception.** If an external alternating emf acts on the circuit, it performs forced oscillations. When the external frequency equals the natural frequency of the circuit ($\\nu=\\frac{1}{2\\pi\\sqrt{LC}}$), the current amplitude increases sharply — electrical resonance (the analogue of mechanical resonance from L21). The antenna of a radio receiver carries the signals of many stations; by changing the capacitance of the circuit, only the station whose frequency equals that of the circuit is «selected»."
+ },
+ {
+  "t": "li",
+  "uz": "**Elektr va mexanik rezonans farqi.** Mexanik rezonans ko'priklar va mashinalar uchun ko'pincha xavfli (L21), elektr rezonans esa radiotexnikada asosiy ish rejimi: aynan u kerakli signalni kuchaytirib, boshqalarini «so'ndiradi». Konturning qarshiligi qancha kichik bo'lsa, rezonans egri chizig'i shuncha o'tkir va priyomnik stansiyalarni shuncha yaxshi ajratadi.",
+  "ru": "**Отличие электрического резонанса от механического.** Механический резонанс часто опасен для мостов и машин (L21), а электрический — основной режим работы радиотехники: именно он усиливает нужный сигнал и «гасит» остальные. Чем меньше сопротивление контура, тем острее резонансная кривая и тем лучше приёмник разделяет станции.",
+  "en": "**Difference between electrical and mechanical resonance.** Mechanical resonance is often dangerous for bridges and machines (L21), while electrical resonance is the main operating mode of radio engineering: it is exactly what amplifies the desired signal and «suppresses» the others. The smaller the resistance of the circuit, the sharper the resonance curve and the better the receiver separates the stations."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Priyomnik konturi $L=0.25\\ \\mathrm{mH}$ g'altak va o'zgaruvchan kondensatordan iborat. Chastotasi $500\\ \\mathrm{kHz}$ bo'lgan stansiyani tinglash uchun ($\\pi^2\\approx10$):",
+  "ru": "**Пример.** Контур приёмника состоит из катушки $L=0.25\\ \\mathrm{mH}$ и конденсатора переменной ёмкости. Чтобы слушать станцию с частотой $500\\ \\mathrm{kHz}$ ($\\pi^2\\approx10$):",
+  "en": "**Example.** A receiver circuit consists of a coil $L=0.25\\ \\mathrm{mH}$ and a variable capacitor. To listen to a station with a frequency of $500\\ \\mathrm{kHz}$ ($\\pi^2\\approx10$):"
+ },
+ {
+  "t": "m",
+  "m": "C=\\frac{1}{4\\pi^2\\nu^2L}=\\frac{1}{40\\cdot25\\cdot10^{10}\\cdot2.5\\cdot10^{-4}}=4\\cdot10^{-10}\\ \\mathrm{F}=400\\ \\mathrm{pF}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ochiq tebranish konturi.** Yopiq konturda elektr maydon kondensator ichida, magnit maydon g'altak ichida jamlangan va tashqariga deyarli chiqmaydi. Agar kondensator plastinalarini bir-biridan uzoqlashtirib, g'altakni to'g'ri simga aylantirsak, ochiq kontur — antenna hosil bo'ladi. Unda maydonlar butun fazoni egallaydi va energiya elektromagnit to'lqinlar ko'rinishida tarqaladi (Gers tajribalari, 1888). Bu keyingi darslardagi elektromagnit to'lqinlar mavzusiga ko'prik.",
+  "ru": "**Открытый колебательный контур.** В закрытом контуре электрическое поле сосредоточено внутри конденсатора, магнитное — внутри катушки, и наружу они почти не выходят. Если раздвинуть пластины конденсатора и превратить катушку в прямой провод, получится открытый контур — антенна. В нём поля занимают всё пространство, и энергия уходит в виде электромагнитных волн (опыты Герца, 1888). Это мост к теме электромагнитных волн в следующих уроках.",
+  "en": "**Open oscillating circuit.** In a closed circuit the electric field is concentrated inside the capacitor and the magnetic field inside the coil, and they hardly extend outside. If the capacitor plates are moved apart and the coil is turned into a straight wire, an open circuit — an antenna — is obtained. In it the fields fill the whole space, and the energy leaves as electromagnetic waves (Hertz's experiments, 1888). This is a bridge to the topic of electromagnetic waves in the following lessons."
+ },
+ {
+  "t": "h2",
+  "uz": "10. Tez tekshiruv va GRE maslahatlari (Quick checks and GRE tips)",
+  "ru": "10. Быстрая проверка и советы для GRE",
+  "en": "10. Quick checks and GRE tips"
+ },
+ {
+  "t": "li",
+  "uz": "**O'xshashlik bilan yechish.** Ko'p GRE savollari LC zanjirni mayatnikka aylantirib yechiladi: $L\\leftrightarrow m$, $\\frac{1}{C}\\leftrightarrow k$, $q\\leftrightarrow x$, $i\\leftrightarrow v$. Masalan, «zaryad nolga teng paytda tok qanday?» — mayatnik muvozanat nuqtasidan o'tganda tezlik eng katta: $|i|=I_m$.",
+  "ru": "**Решение через аналогию.** Многие вопросы GRE решаются заменой LC-цепи маятником: $L\\leftrightarrow m$, $\\frac{1}{C}\\leftrightarrow k$, $q\\leftrightarrow x$, $i\\leftrightarrow v$. Например, «каков ток, когда заряд равен нулю?» — маятник проходит положение равновесия с наибольшей скоростью: $|i|=I_m$.",
+  "en": "**Solving by analogy.** Many GRE questions are solved by turning the LC circuit into a pendulum: $L\\leftrightarrow m$, $\\frac{1}{C}\\leftrightarrow k$, $q\\leftrightarrow x$, $i\\leftrightarrow v$. For example, «what is the current when the charge is zero?» — a pendulum passes the equilibrium position with the largest speed: $|i|=I_m$."
+ },
+ {
+  "t": "li",
+  "uz": "**Masshtablash.** $T\\sim\\sqrt{LC}$, $\\nu\\sim\\frac{1}{\\sqrt{LC}}$: savolda «necha marta» bo'lsa, ildizni unutmang. Plastinalar orasini kattalashtirish — $C$ kamayadi, chastota ortadi; dielektrik yoki o'zak kiritish — chastota kamayadi; parallel kondensator — chastota kamayadi; ketma-ket kondensator — chastota ortadi.",
+  "ru": "**Масштабирование.** $T\\sim\\sqrt{LC}$, $\\nu\\sim\\frac{1}{\\sqrt{LC}}$: если спрашивают «во сколько раз», не забудьте корень. Увеличение расстояния между пластинами — $C$ уменьшается, частота растёт; введение диэлектрика или сердечника — частота уменьшается; параллельный конденсатор — частота уменьшается; последовательный конденсатор — частота растёт.",
+  "en": "**Scaling.** $T\\sim\\sqrt{LC}$, $\\nu\\sim\\frac{1}{\\sqrt{LC}}$: when asked «by what factor», do not forget the square root. Increasing the distance between the plates — $C$ decreases, the frequency increases; inserting a dielectric or a core — the frequency decreases; a capacitor in parallel — the frequency decreases; a capacitor in series — the frequency increases."
+ },
+ {
+  "t": "li",
+  "uz": "**Amplitudalar.** $I_m=q_m\\omega_0$, $U_m=\\frac{q_m}{C}$, $I_m=U_m\\sqrt{\\frac{C}{L}}$. Javobni birlik bilan tekshiring: $\\sqrt{\\frac{C}{L}}$ — $\\frac{1}{\\Omega}$, demak $U_m\\sqrt{\\frac{C}{L}}$ — amper. Tok zaryaddan $\\frac{\\pi}{2}$ ga oldinda, kuchlanish zaryad bilan bir fazada.",
+  "ru": "**Амплитуды.** $I_m=q_m\\omega_0$, $U_m=\\frac{q_m}{C}$, $I_m=U_m\\sqrt{\\frac{C}{L}}$. Проверьте ответ по единицам: $\\sqrt{\\frac{C}{L}}$ — это $\\frac{1}{\\Omega}$, значит $U_m\\sqrt{\\frac{C}{L}}$ — амперы. Ток опережает заряд на $\\frac{\\pi}{2}$, напряжение в фазе с зарядом.",
+  "en": "**Amplitudes.** $I_m=q_m\\omega_0$, $U_m=\\frac{q_m}{C}$, $I_m=U_m\\sqrt{\\frac{C}{L}}$. Check the answer by units: $\\sqrt{\\frac{C}{L}}$ is $\\frac{1}{\\Omega}$, so $U_m\\sqrt{\\frac{C}{L}}$ is in amperes. The current leads the charge by $\\frac{\\pi}{2}$, and the voltage is in phase with the charge."
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya.** $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$ o'zgarmaydi; $W_E$ va $W_M$ alohida-alohida $\\frac{T}{2}$ davr bilan tebranadi; $W_E=W_M$ har chorak davrning o'rtasida — $\\frac{T}{8}$, $\\frac{3T}{8}$, … paytlarda. «Kondensator razryadlangandan keyin yarim davr o'tgach energiya qanday?» — yana butunlay magnit energiya.",
+  "ru": "**Энергия.** $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$ не меняется; $W_E$ и $W_M$ по отдельности колеблются с периодом $\\frac{T}{2}$; $W_E=W_M$ в середине каждой четверти периода — в моменты $\\frac{T}{8}$, $\\frac{3T}{8}$, … «Какая энергия через полпериода после разрядки конденсатора?» — снова вся магнитная.",
+  "en": "**Energy.** $W=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}$ does not change; $W_E$ and $W_M$ separately oscillate with period $\\frac{T}{2}$; $W_E=W_M$ in the middle of each quarter period — at the moments $\\frac{T}{8}$, $\\frac{3T}{8}$, … «What is the energy half a period after the capacitor has discharged?» — again entirely magnetic."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'p uchraydigan xatolar:** $\\omega$ va $\\nu$ ni adashtirish ($2\\pi$ ko'paytuvchi); $T=2\\pi\\sqrt{LC}$ o'rniga $T=\\frac{2\\pi}{\\sqrt{LC}}$ yozish (birlik tekshiruvi darhol ko'rsatadi); mikro-, nano- va pikofaradlarni o'tkazishda xato ($1\\ \\mathrm{pF}=10^{-12}\\ \\mathrm{F}$); energiya tebranishlari chastotasini zaryad chastotasi deb olish.",
+  "ru": "**Частые ошибки:** путают $\\omega$ и $\\nu$ (множитель $2\\pi$); пишут $T=\\frac{2\\pi}{\\sqrt{LC}}$ вместо $T=2\\pi\\sqrt{LC}$ (проверка единиц сразу это покажет); ошибаются при переводе микро-, нано- и пикофарад ($1\\ \\mathrm{pF}=10^{-12}\\ \\mathrm{F}$); принимают частоту колебаний энергии за частоту колебаний заряда.",
+  "en": "**Common mistakes:** confusing $\\omega$ and $\\nu$ (the factor $2\\pi$); writing $T=\\frac{2\\pi}{\\sqrt{LC}}$ instead of $T=2\\pi\\sqrt{LC}$ (a unit check shows this at once); errors in converting micro-, nano- and picofarads ($1\\ \\mathrm{pF}=10^{-12}\\ \\mathrm{F}$); taking the frequency of the energy oscillations for the frequency of the charge oscillations."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Kontur tenglamasi",
+    "ru": "Уравнение контура",
+    "en": "Circuit equation",
+    "m": "q''+\\frac{1}{LC}\\,q=0"
+   },
+   {
+    "uz": "Zaryad",
+    "ru": "Заряд",
+    "en": "Charge",
+    "m": "q=q_m\\cos(\\omega_0t+\\varphi_0)"
+   },
+   {
+    "uz": "Tok kuchi",
+    "ru": "Сила тока",
+    "en": "Current",
+    "m": "i=q'=-q_m\\omega_0\\sin\\omega_0t"
+   },
+   {
+    "uz": "Kuchlanish",
+    "ru": "Напряжение",
+    "en": "Voltage",
+    "m": "u=\\frac{q}{C}=U_m\\cos\\omega_0t"
+   },
+   {
+    "uz": "Amplitudalar",
+    "ru": "Амплитуды",
+    "en": "Amplitudes",
+    "m": "I_m=q_m\\omega_0,\\quad U_m=\\frac{q_m}{C}"
+   },
+   {
+    "uz": "Siklik chastota",
+    "ru": "Циклическая частота",
+    "en": "Angular frequency",
+    "m": "\\omega_0=\\frac{1}{\\sqrt{LC}}=2\\pi\\nu"
+   },
+   {
+    "uz": "Tomson formulasi",
+    "ru": "Формула Томсона",
+    "en": "Thomson's formula",
+    "m": "T=2\\pi\\sqrt{LC}"
+   },
+   {
+    "uz": "Chastota",
+    "ru": "Частота",
+    "en": "Frequency",
+    "m": "\\nu=\\frac{1}{2\\pi\\sqrt{LC}}"
+   },
+   {
+    "uz": "Kerakli sig'im",
+    "ru": "Нужная ёмкость",
+    "en": "Required capacitance",
+    "m": "C=\\frac{1}{4\\pi^2\\nu^2L}"
+   },
+   {
+    "uz": "Kondensatorlarni ulash",
+    "ru": "Соединение конденсаторов",
+    "en": "Connecting capacitors",
+    "m": "C=C_1+C_2,\\quad \\frac{1}{C}=\\frac{1}{C_1}+\\frac{1}{C_2}"
+   },
+   {
+    "uz": "G'altaklarni ulash",
+    "ru": "Соединение катушек",
+    "en": "Connecting coils",
+    "m": "L=L_1+L_2,\\quad \\frac{1}{L}=\\frac{1}{L_1}+\\frac{1}{L_2}"
+   },
+   {
+    "uz": "To'liq energiya",
+    "ru": "Полная энергия",
+    "en": "Total energy",
+    "m": "W=\\frac{q^2}{2C}+\\frac{Li^2}{2}=\\frac{q_m^2}{2C}=\\frac{LI_m^2}{2}"
+   },
+   {
+    "uz": "Tok va kuchlanish amplitudalari",
+    "ru": "Амплитуды тока и напряжения",
+    "en": "Current and voltage amplitudes",
+    "m": "I_m=U_m\\sqrt{\\frac{C}{L}}"
+   },
+   {
+    "uz": "Oniy tok",
+    "ru": "Мгновенный ток",
+    "en": "Instantaneous current",
+    "m": "|i|=\\omega_0\\sqrt{q_m^2-q^2}"
+   },
+   {
+    "uz": "Energiyalar",
+    "ru": "Энергии",
+    "en": "Energies",
+    "m": "W_E=W\\cos^2\\omega_0t,\\quad W_M=W\\sin^2\\omega_0t"
+   },
+   {
+    "uz": "So'nish koeffitsiyenti",
+    "ru": "Коэффициент затухания",
+    "en": "Damping coefficient",
+    "m": "\\beta=\\frac{R}{2L}"
+   }
+  ]
+ }
+]
