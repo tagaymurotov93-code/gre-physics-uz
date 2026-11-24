@@ -1,0 +1,941 @@
+[
+ {
+  "id": "B1-L36-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) EYK si $\\mathcal{E}=9\\ \\mathrm{V}$, ichki qarshiligi $r=1\\ \\Omega$ bo'lgan manbaga $R=8\\ \\Omega$ rezistor ulangan. Tok kuchini, qisqichlardagi kuchlanishni va ichki kuchlanish tushuvini toping. b) Shu manba orqali $q=30\\ \\mathrm{C}$ zaryad o'tganda chetki kuchlar qancha ish bajaradi?",
+   "ru": "а) К источнику с ЭДС $\\mathcal{E}=9\\ \\mathrm{V}$ и внутренним сопротивлением $r=1\\ \\Omega$ подключён резистор $R=8\\ \\Omega$. Найдите силу тока, напряжение на зажимах и падение напряжения внутри источника. б) Какую работу совершают сторонние силы, когда через этот источник проходит заряд $q=30\\ \\mathrm{C}$?",
+   "en": "a) A resistor $R=8\\ \\Omega$ is connected to a source with EMF $\\mathcal{E}=9\\ \\mathrm{V}$ and internal resistance $r=1\\ \\Omega$. Find the current, the terminal voltage and the internal voltage drop. b) What work do the non-electrostatic forces do when a charge $q=30\\ \\mathrm{C}$ passes through this source?"
+  },
+  "figure": "figures/B1-L36-S01.png",
+  "solution": {
+   "uz": [
+    "a) To'liq zanjir uchun Om qonuni: $$I=\\frac{\\mathcal{E}}{R+r}=\\frac{9}{8+1}=1\\ \\mathrm{A}$$",
+    "Qisqichlardagi kuchlanish: $$U=IR=1\\cdot8=8\\ \\mathrm{V}$$",
+    "Ichki tushuv va tekshiruv: $$Ir=1\\cdot1=1\\ \\mathrm{V},\\qquad U+Ir=9\\ \\mathrm{V}=\\mathcal{E}$$",
+    "b) Chetki kuchlar ishi: $$A^*=q\\mathcal{E}=30\\cdot9=270\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "а) Закон Ома для полной цепи: $$I=\\frac{\\mathcal{E}}{R+r}=\\frac{9}{8+1}=1\\ \\mathrm{A}$$",
+    "Напряжение на зажимах: $$U=IR=1\\cdot8=8\\ \\mathrm{V}$$",
+    "Внутреннее падение и проверка: $$Ir=1\\cdot1=1\\ \\mathrm{V},\\qquad U+Ir=9\\ \\mathrm{V}=\\mathcal{E}$$",
+    "б) Работа сторонних сил: $$A^*=q\\mathcal{E}=30\\cdot9=270\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "a) Ohm's law for a complete circuit: $$I=\\frac{\\mathcal{E}}{R+r}=\\frac{9}{8+1}=1\\ \\mathrm{A}$$",
+    "Terminal voltage: $$U=IR=1\\cdot8=8\\ \\mathrm{V}$$",
+    "Internal drop and check: $$Ir=1\\cdot1=1\\ \\mathrm{V},\\qquad U+Ir=9\\ \\mathrm{V}=\\mathcal{E}$$",
+    "b) Work of the non-electrostatic forces: $$A^*=q\\mathcal{E}=30\\cdot9=270\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'liq zanjir uchun Om qonuni: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "ru": "Закон Ома для полной цепи: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "en": "Ohm's law for a complete circuit: $I=\\frac{\\mathcal{E}}{R+r}$"
+   },
+   {
+    "uz": "Zanjir qismi uchun Om qonuni: $U=IR$",
+    "ru": "Закон Ома для участка цепи: $U=IR$",
+    "en": "Ohm's law for a part of a circuit: $U=IR$"
+   },
+   null,
+   {
+    "uz": "EYK ta'rifi: $\\mathcal{E}=\\frac{A^*}{q}$",
+    "ru": "Определение ЭДС: $\\mathcal{E}=\\frac{A^*}{q}$",
+    "en": "Definition of EMF: $\\mathcal{E}=\\frac{A^*}{q}$"
+   }
+  ],
+  "basis": {
+   "uz": "To'liq zanjir uchun Om qonuni, EYK ta'rifi",
+   "ru": "Закон Ома для полной цепи, определение ЭДС",
+   "en": "Ohm's law for a complete circuit, definition of EMF"
+  },
+  "answer": "I=1\\ \\mathrm{A};\\ U=8\\ \\mathrm{V};\\ Ir=1\\ \\mathrm{V};\\ A^*=270\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 96-mavzu, 5, 17-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Ochiq manba qisqichlariga ulangan ideal voltmetr $4.5\\ \\mathrm{V}$ ni ko'rsatadi. Manbaga $R=4\\ \\Omega$ rezistor ulanganda voltmetr $4\\ \\mathrm{V}$ ni ko'rsatdi. Zanjirdagi tok kuchini, manbaning ichki qarshiligini va qisqa tutashuv tokini toping.",
+   "ru": "Идеальный вольтметр, подключённый к зажимам разомкнутого источника, показывает $4.5\\ \\mathrm{V}$. Когда к источнику подключили резистор $R=4\\ \\Omega$, вольтметр показал $4\\ \\mathrm{V}$. Найдите силу тока в цепи, внутреннее сопротивление источника и ток короткого замыкания.",
+   "en": "An ideal voltmeter connected to the terminals of an open source reads $4.5\\ \\mathrm{V}$. When a resistor $R=4\\ \\Omega$ was connected to the source, the voltmeter read $4\\ \\mathrm{V}$. Find the current in the circuit, the internal resistance of the source and the short-circuit current."
+  },
+  "figure": "figures/B1-L36-S02.png",
+  "solution": {
+   "uz": [
+    "Zanjir ochiq — voltmetr EYK ni ko'rsatadi: $$\\mathcal{E}=4.5\\ \\mathrm{V}$$",
+    "Rezistordagi tok: $$I=\\frac{U}{R}=\\frac{4}{4}=1\\ \\mathrm{A}$$",
+    "Ichki qarshilik: $$r=\\frac{\\mathcal{E}-U}{I}=\\frac{4.5-4}{1}=0.5\\ \\Omega$$",
+    "Qisqa tutashuv toki: $$I_{max}=\\frac{\\mathcal{E}}{r}=\\frac{4.5}{0.5}=9\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "Цепь разомкнута — вольтметр показывает ЭДС: $$\\mathcal{E}=4.5\\ \\mathrm{V}$$",
+    "Ток через резистор: $$I=\\frac{U}{R}=\\frac{4}{4}=1\\ \\mathrm{A}$$",
+    "Внутреннее сопротивление: $$r=\\frac{\\mathcal{E}-U}{I}=\\frac{4.5-4}{1}=0.5\\ \\Omega$$",
+    "Ток короткого замыкания: $$I_{max}=\\frac{\\mathcal{E}}{r}=\\frac{4.5}{0.5}=9\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "Open circuit — the voltmeter shows the EMF: $$\\mathcal{E}=4.5\\ \\mathrm{V}$$",
+    "Current through the resistor: $$I=\\frac{U}{R}=\\frac{4}{4}=1\\ \\mathrm{A}$$",
+    "Internal resistance: $$r=\\frac{\\mathcal{E}-U}{I}=\\frac{4.5-4}{1}=0.5\\ \\Omega$$",
+    "Short-circuit current: $$I_{max}=\\frac{\\mathcal{E}}{r}=\\frac{4.5}{0.5}=9\\ \\mathrm{A}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Salt ishlash: $I=0,\\ U=\\mathcal{E}$",
+    "ru": "Холостой ход: $I=0,\\ U=\\mathcal{E}$",
+    "en": "No-load operation: $I=0,\\ U=\\mathcal{E}$"
+   },
+   {
+    "uz": "Zanjir qismi uchun Om qonuni: $U=IR$",
+    "ru": "Закон Ома для участка цепи: $U=IR$",
+    "en": "Ohm's law for a part of a circuit: $U=IR$"
+   },
+   {
+    "uz": "Qisqichlardagi kuchlanish: $U=\\mathcal{E}-Ir$",
+    "ru": "Напряжение на зажимах: $U=\\mathcal{E}-Ir$",
+    "en": "Terminal voltage: $U=\\mathcal{E}-Ir$"
+   },
+   {
+    "uz": "Qisqa tutashuv toki: $I_{max}=\\frac{\\mathcal{E}}{r}$",
+    "ru": "Ток короткого замыкания: $I_{max}=\\frac{\\mathcal{E}}{r}$",
+    "en": "Short-circuit current: $I_{max}=\\frac{\\mathcal{E}}{r}$"
+   }
+  ],
+  "basis": {
+   "uz": "Salt ishlash, qisqichlardagi kuchlanish",
+   "ru": "Холостой ход, напряжение на зажимах",
+   "en": "No-load operation, terminal voltage"
+  },
+  "answer": "I=1\\ \\mathrm{A};\\ r=0.5\\ \\Omega;\\ I_{max}=9\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 96-mavzu, 19, 73-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "EYK si $\\mathcal{E}=3\\ \\mathrm{V}$ bo'lgan manbaning qisqa tutashuv toki $6\\ \\mathrm{A}$. a) Ichki qarshilikni toping. b) Manbaga $R=2.5\\ \\Omega$ rezistor ulansa, tok kuchi va qisqichlardagi kuchlanish qancha bo'ladi? c) Bu holda manba ichida $1$ minutda qancha issiqlik ajraladi?",
+   "ru": "Ток короткого замыкания источника с ЭДС $\\mathcal{E}=3\\ \\mathrm{V}$ равен $6\\ \\mathrm{A}$. а) Найдите внутреннее сопротивление. б) Какими будут сила тока и напряжение на зажимах, если к источнику подключить резистор $R=2.5\\ \\Omega$? в) Сколько теплоты выделится в этом случае внутри источника за $1$ минуту?",
+   "en": "The short-circuit current of a source with EMF $\\mathcal{E}=3\\ \\mathrm{V}$ is $6\\ \\mathrm{A}$. a) Find the internal resistance. b) What will the current and the terminal voltage be if a resistor $R=2.5\\ \\Omega$ is connected to the source? c) How much heat is released inside the source in this case in $1$ minute?"
+  },
+  "figure": "figures/B1-L36-S03.png",
+  "solution": {
+   "uz": [
+    "a) Qisqa tutashuvda $R=0$: $$r=\\frac{\\mathcal{E}}{I_{max}}=\\frac{3}{6}=0.5\\ \\Omega$$",
+    "b) Om qonuni: $$I=\\frac{\\mathcal{E}}{R+r}=\\frac{3}{2.5+0.5}=1\\ \\mathrm{A}$$",
+    "Qisqichlardagi kuchlanish: $$U=\\mathcal{E}-Ir=3-1\\cdot0.5=2.5\\ \\mathrm{V}$$",
+    "c) Manba ichidagi issiqlik: $$Q=I^2rt=1^2\\cdot0.5\\cdot60=30\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "а) При коротком замыкании $R=0$: $$r=\\frac{\\mathcal{E}}{I_{max}}=\\frac{3}{6}=0.5\\ \\Omega$$",
+    "б) Закон Ома: $$I=\\frac{\\mathcal{E}}{R+r}=\\frac{3}{2.5+0.5}=1\\ \\mathrm{A}$$",
+    "Напряжение на зажимах: $$U=\\mathcal{E}-Ir=3-1\\cdot0.5=2.5\\ \\mathrm{V}$$",
+    "в) Теплота внутри источника: $$Q=I^2rt=1^2\\cdot0.5\\cdot60=30\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "a) In a short circuit $R=0$: $$r=\\frac{\\mathcal{E}}{I_{max}}=\\frac{3}{6}=0.5\\ \\Omega$$",
+    "b) Ohm's law: $$I=\\frac{\\mathcal{E}}{R+r}=\\frac{3}{2.5+0.5}=1\\ \\mathrm{A}$$",
+    "Terminal voltage: $$U=\\mathcal{E}-Ir=3-1\\cdot0.5=2.5\\ \\mathrm{V}$$",
+    "c) Heat inside the source: $$Q=I^2rt=1^2\\cdot0.5\\cdot60=30\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qisqa tutashuv toki: $I_{max}=\\frac{\\mathcal{E}}{r}$",
+    "ru": "Ток короткого замыкания: $I_{max}=\\frac{\\mathcal{E}}{r}$",
+    "en": "Short-circuit current: $I_{max}=\\frac{\\mathcal{E}}{r}$"
+   },
+   {
+    "uz": "To'liq zanjir uchun Om qonuni: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "ru": "Закон Ома для полной цепи: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "en": "Ohm's law for a complete circuit: $I=\\frac{\\mathcal{E}}{R+r}$"
+   },
+   {
+    "uz": "Qisqichlardagi kuchlanish: $U=\\mathcal{E}-Ir$",
+    "ru": "Напряжение на зажимах: $U=\\mathcal{E}-Ir$",
+    "en": "Terminal voltage: $U=\\mathcal{E}-Ir$"
+   },
+   {
+    "uz": "Joul–Lens qonuni: $Q=I^2rt$",
+    "ru": "Закон Джоуля–Ленца: $Q=I^2rt$",
+    "en": "Joule's law: $Q=I^2rt$"
+   }
+  ],
+  "basis": {
+   "uz": "Qisqa tutashuv toki, Om qonuni, Joul–Lens qonuni",
+   "ru": "Ток короткого замыкания, закон Ома, закон Джоуля–Ленца",
+   "en": "Short-circuit current, Ohm's law, Joule's law"
+  },
+  "answer": "r=0.5\\ \\Omega;\\ I=1\\ \\mathrm{A};\\ U=2.5\\ \\mathrm{V};\\ Q=30\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 96-mavzu, 46, 90-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Reostat surilgichini siljitib, ampermetr va voltmetr ko'rsatishlari yozib olindi: tok $0.5\\ \\mathrm{A}$ bo'lganda qisqichlardagi kuchlanish $5.6\\ \\mathrm{V}$, tok $1.5\\ \\mathrm{A}$ bo'lganda $4.8\\ \\mathrm{V}$. Manbaning EYK sini, ichki qarshiligini va qisqa tutashuv tokini toping.",
+   "ru": "Передвигая ползунок реостата, записали показания амперметра и вольтметра: при токе $0.5\\ \\mathrm{A}$ напряжение на зажимах $5.6\\ \\mathrm{V}$, при токе $1.5\\ \\mathrm{A}$ — $4.8\\ \\mathrm{V}$. Найдите ЭДС источника, его внутреннее сопротивление и ток короткого замыкания.",
+   "en": "By moving the slider of a rheostat, the ammeter and voltmeter readings were recorded: at a current of $0.5\\ \\mathrm{A}$ the terminal voltage is $5.6\\ \\mathrm{V}$, at a current of $1.5\\ \\mathrm{A}$ it is $4.8\\ \\mathrm{V}$. Find the EMF of the source, its internal resistance and the short-circuit current."
+  },
+  "figure": "figures/B1-L36-S04.png",
+  "solution": {
+   "uz": [
+    "Ikki holat uchun: $$5.6=\\mathcal{E}-0.5r,\\qquad 4.8=\\mathcal{E}-1.5r$$",
+    "Tenglamalarni ayiramiz: $$r=\\frac{5.6-4.8}{1.5-0.5}=0.8\\ \\Omega$$",
+    "EYK: $$\\mathcal{E}=5.6+0.5\\cdot0.8=6\\ \\mathrm{V}$$",
+    "Qisqa tutashuv toki: $$I_{max}=\\frac{\\mathcal{E}}{r}=\\frac{6}{0.8}=7.5\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "Для двух случаев: $$5.6=\\mathcal{E}-0.5r,\\qquad 4.8=\\mathcal{E}-1.5r$$",
+    "Вычитаем уравнения: $$r=\\frac{5.6-4.8}{1.5-0.5}=0.8\\ \\Omega$$",
+    "ЭДС: $$\\mathcal{E}=5.6+0.5\\cdot0.8=6\\ \\mathrm{V}$$",
+    "Ток короткого замыкания: $$I_{max}=\\frac{\\mathcal{E}}{r}=\\frac{6}{0.8}=7.5\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "For the two cases: $$5.6=\\mathcal{E}-0.5r,\\qquad 4.8=\\mathcal{E}-1.5r$$",
+    "Subtract the equations: $$r=\\frac{5.6-4.8}{1.5-0.5}=0.8\\ \\Omega$$",
+    "EMF: $$\\mathcal{E}=5.6+0.5\\cdot0.8=6\\ \\mathrm{V}$$",
+    "Short-circuit current: $$I_{max}=\\frac{\\mathcal{E}}{r}=\\frac{6}{0.8}=7.5\\ \\mathrm{A}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qisqichlardagi kuchlanish: $U=\\mathcal{E}-Ir$",
+    "ru": "Напряжение на зажимах: $U=\\mathcal{E}-Ir$",
+    "en": "Terminal voltage: $U=\\mathcal{E}-Ir$"
+   },
+   null,
+   null,
+   {
+    "uz": "Qisqa tutashuv toki: $I_{max}=\\frac{\\mathcal{E}}{r}$",
+    "ru": "Ток короткого замыкания: $I_{max}=\\frac{\\mathcal{E}}{r}$",
+    "en": "Short-circuit current: $I_{max}=\\frac{\\mathcal{E}}{r}$"
+   }
+  ],
+  "basis": {
+   "uz": "Qisqichlardagi kuchlanish, ikki o'lchash usuli",
+   "ru": "Напряжение на зажимах, метод двух измерений",
+   "en": "Terminal voltage, two-measurement method"
+  },
+  "answer": "\\mathcal{E}=6\\ \\mathrm{V};\\ r=0.8\\ \\Omega;\\ I_{max}=7.5\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 96-mavzu, 34-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Manbaga $R_1=3\\ \\Omega$ rezistor ulanganda zanjirda $I_1=1\\ \\mathrm{A}$ tok, $R_2=7.5\\ \\Omega$ rezistor ulanganda esa $I_2=0.5\\ \\mathrm{A}$ tok o'tadi. Manbaning EYK sini va ichki qarshiligini toping. Ikkinchi holatda qisqichlardagi kuchlanish qancha?",
+   "ru": "Когда к источнику подключают резистор $R_1=3\\ \\Omega$, в цепи идёт ток $I_1=1\\ \\mathrm{A}$, а когда резистор $R_2=7.5\\ \\Omega$ — ток $I_2=0.5\\ \\mathrm{A}$. Найдите ЭДС источника и его внутреннее сопротивление. Каково напряжение на зажимах во втором случае?",
+   "en": "When a resistor $R_1=3\\ \\Omega$ is connected to a source, a current $I_1=1\\ \\mathrm{A}$ flows in the circuit, and when a resistor $R_2=7.5\\ \\Omega$ is connected, the current is $I_2=0.5\\ \\mathrm{A}$. Find the EMF of the source and its internal resistance. What is the terminal voltage in the second case?"
+  },
+  "figure": "figures/B1-L36-S05.png",
+  "solution": {
+   "uz": [
+    "Har bir holat uchun Om qonuni: $$\\mathcal{E}=I_1(R_1+r)=I_2(R_2+r)$$",
+    "Sonlarni qo'yamiz: $$1\\cdot(3+r)=0.5\\cdot(7.5+r)$$",
+    "Ichki qarshilik: $$0.5r=0.75\\quad\\Rightarrow\\quad r=1.5\\ \\Omega$$",
+    "EYK: $$\\mathcal{E}=1\\cdot(3+1.5)=4.5\\ \\mathrm{V}$$",
+    "Ikkinchi holatda kuchlanish: $$U_2=I_2R_2=0.5\\cdot7.5=3.75\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "Закон Ома для каждого случая: $$\\mathcal{E}=I_1(R_1+r)=I_2(R_2+r)$$",
+    "Подставляем числа: $$1\\cdot(3+r)=0.5\\cdot(7.5+r)$$",
+    "Внутреннее сопротивление: $$0.5r=0.75\\quad\\Rightarrow\\quad r=1.5\\ \\Omega$$",
+    "ЭДС: $$\\mathcal{E}=1\\cdot(3+1.5)=4.5\\ \\mathrm{V}$$",
+    "Напряжение во втором случае: $$U_2=I_2R_2=0.5\\cdot7.5=3.75\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "Ohm's law for each case: $$\\mathcal{E}=I_1(R_1+r)=I_2(R_2+r)$$",
+    "Substitute the numbers: $$1\\cdot(3+r)=0.5\\cdot(7.5+r)$$",
+    "Internal resistance: $$0.5r=0.75\\quad\\Rightarrow\\quad r=1.5\\ \\Omega$$",
+    "EMF: $$\\mathcal{E}=1\\cdot(3+1.5)=4.5\\ \\mathrm{V}$$",
+    "Voltage in the second case: $$U_2=I_2R_2=0.5\\cdot7.5=3.75\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'liq zanjir uchun Om qonuni: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "ru": "Закон Ома для полной цепи: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "en": "Ohm's law for a complete circuit: $I=\\frac{\\mathcal{E}}{R+r}$"
+   },
+   null,
+   null,
+   null,
+   {
+    "uz": "Zanjir qismi uchun Om qonuni: $U=IR$",
+    "ru": "Закон Ома для участка цепи: $U=IR$",
+    "en": "Ohm's law for a part of a circuit: $U=IR$"
+   }
+  ],
+  "basis": {
+   "uz": "To'liq zanjir uchun Om qonuni, ikki tenglama",
+   "ru": "Закон Ома для полной цепи, два уравнения",
+   "en": "Ohm's law for a complete circuit, two equations"
+  },
+  "answer": "\\mathcal{E}=4.5\\ \\mathrm{V};\\ r=1.5\\ \\Omega;\\ U_2=3.75\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 96-mavzu, 13-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "EYK si $\\mathcal{E}=24\\ \\mathrm{V}$, ichki qarshiligi $r=2\\ \\Omega$ bo'lgan manbaga $R=6\\ \\Omega$ iste'molchi ulangan. Manbaning to'liq quvvatini, foydali quvvatni, manba ichidagi isrof quvvatini va FIK ni toping.",
+   "ru": "К источнику с ЭДС $\\mathcal{E}=24\\ \\mathrm{V}$ и внутренним сопротивлением $r=2\\ \\Omega$ подключён потребитель $R=6\\ \\Omega$. Найдите полную мощность источника, полезную мощность, мощность потерь внутри источника и КПД.",
+   "en": "A consumer $R=6\\ \\Omega$ is connected to a source with EMF $\\mathcal{E}=24\\ \\mathrm{V}$ and internal resistance $r=2\\ \\Omega$. Find the total power of the source, the useful power, the power lost inside the source and the efficiency."
+  },
+  "figure": "figures/B1-L36-S06.png",
+  "solution": {
+   "uz": [
+    "Tok kuchi: $$I=\\frac{24}{6+2}=3\\ \\mathrm{A}$$",
+    "To'liq quvvat: $$P=\\mathcal{E}I=24\\cdot3=72\\ \\mathrm{W}$$",
+    "Foydali quvvat: $$P_R=I^2R=3^2\\cdot6=54\\ \\mathrm{W}$$",
+    "Isrof quvvati: $$P_r=I^2r=3^2\\cdot2=18\\ \\mathrm{W}=P-P_R$$",
+    "FIK: $$\\eta=\\frac{P_R}{P}=\\frac{54}{72}=\\frac{R}{R+r}=0.75$$"
+   ],
+   "ru": [
+    "Сила тока: $$I=\\frac{24}{6+2}=3\\ \\mathrm{A}$$",
+    "Полная мощность: $$P=\\mathcal{E}I=24\\cdot3=72\\ \\mathrm{W}$$",
+    "Полезная мощность: $$P_R=I^2R=3^2\\cdot6=54\\ \\mathrm{W}$$",
+    "Мощность потерь: $$P_r=I^2r=3^2\\cdot2=18\\ \\mathrm{W}=P-P_R$$",
+    "КПД: $$\\eta=\\frac{P_R}{P}=\\frac{54}{72}=\\frac{R}{R+r}=0.75$$"
+   ],
+   "en": [
+    "Current: $$I=\\frac{24}{6+2}=3\\ \\mathrm{A}$$",
+    "Total power: $$P=\\mathcal{E}I=24\\cdot3=72\\ \\mathrm{W}$$",
+    "Useful power: $$P_R=I^2R=3^2\\cdot6=54\\ \\mathrm{W}$$",
+    "Power loss: $$P_r=I^2r=3^2\\cdot2=18\\ \\mathrm{W}=P-P_R$$",
+    "Efficiency: $$\\eta=\\frac{P_R}{P}=\\frac{54}{72}=\\frac{R}{R+r}=0.75$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'liq zanjir uchun Om qonuni: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "ru": "Закон Ома для полной цепи: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "en": "Ohm's law for a complete circuit: $I=\\frac{\\mathcal{E}}{R+r}$"
+   },
+   {
+    "uz": "Manbaning to'liq quvvati: $P=\\mathcal{E}I$",
+    "ru": "Полная мощность источника: $P=\\mathcal{E}I$",
+    "en": "Total power of a source: $P=\\mathcal{E}I$"
+   },
+   {
+    "uz": "Foydali quvvat: $P_R=I^2R$",
+    "ru": "Полезная мощность: $P_R=I^2R$",
+    "en": "Useful power: $P_R=I^2R$"
+   },
+   {
+    "uz": "Isrof quvvati: $P_r=I^2r$",
+    "ru": "Мощность потерь: $P_r=I^2r$",
+    "en": "Power loss: $P_r=I^2r$"
+   },
+   {
+    "uz": "Manba FIK: $\\eta=\\frac{R}{R+r}$",
+    "ru": "КПД источника: $\\eta=\\frac{R}{R+r}$",
+    "en": "Efficiency of a source: $\\eta=\\frac{R}{R+r}$"
+   }
+  ],
+  "basis": {
+   "uz": "Manbaning quvvatlari va FIK",
+   "ru": "Мощности источника и КПД",
+   "en": "Powers of a source and efficiency"
+  },
+  "answer": "P=72\\ \\mathrm{W};\\ P_R=54\\ \\mathrm{W};\\ P_r=18\\ \\mathrm{W};\\ \\eta=0.75",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 96-mavzu, 93, 108-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Manbaning EYK si $\\mathcal{E}=12\\ \\mathrm{V}$, ichki qarshiligi $r=1.5\\ \\Omega$. a) Tashqi qarshilik qanday bo'lganda unda eng katta quvvat ajraladi? Bu quvvatni va FIK ni toping. b) $R=6\\ \\Omega$ da foydali quvvat va FIK qancha?",
+   "ru": "ЭДС источника $\\mathcal{E}=12\\ \\mathrm{V}$, внутреннее сопротивление $r=1.5\\ \\Omega$. а) При каком внешнем сопротивлении в нём выделяется наибольшая мощность? Найдите эту мощность и КПД. б) Каковы полезная мощность и КПД при $R=6\\ \\Omega$?",
+   "en": "The EMF of a source is $\\mathcal{E}=12\\ \\mathrm{V}$, the internal resistance is $r=1.5\\ \\Omega$. a) At what external resistance is the largest power released in it? Find this power and the efficiency. b) What are the useful power and the efficiency at $R=6\\ \\Omega$?"
+  },
+  "figure": "figures/B1-L36-S07.png",
+  "solution": {
+   "uz": [
+    "a) Maksimum sharti: $$R=r=1.5\\ \\Omega$$",
+    "Eng katta quvvat: $$P_{max}=\\frac{\\mathcal{E}^2}{4r}=\\frac{144}{6}=24\\ \\mathrm{W},\\qquad \\eta=0.5$$",
+    "b) Tok kuchi: $$I=\\frac{12}{6+1.5}=1.6\\ \\mathrm{A}$$",
+    "Foydali quvvat: $$P_R=I^2R=1.6^2\\cdot6\\approx15.4\\ \\mathrm{W}$$",
+    "FIK: $$\\eta=\\frac{6}{7.5}=0.8$$"
+   ],
+   "ru": [
+    "а) Условие максимума: $$R=r=1.5\\ \\Omega$$",
+    "Наибольшая мощность: $$P_{max}=\\frac{\\mathcal{E}^2}{4r}=\\frac{144}{6}=24\\ \\mathrm{W},\\qquad \\eta=0.5$$",
+    "б) Сила тока: $$I=\\frac{12}{6+1.5}=1.6\\ \\mathrm{A}$$",
+    "Полезная мощность: $$P_R=I^2R=1.6^2\\cdot6\\approx15.4\\ \\mathrm{W}$$",
+    "КПД: $$\\eta=\\frac{6}{7.5}=0.8$$"
+   ],
+   "en": [
+    "a) Condition for the maximum: $$R=r=1.5\\ \\Omega$$",
+    "Largest power: $$P_{max}=\\frac{\\mathcal{E}^2}{4r}=\\frac{144}{6}=24\\ \\mathrm{W},\\qquad \\eta=0.5$$",
+    "b) Current: $$I=\\frac{12}{6+1.5}=1.6\\ \\mathrm{A}$$",
+    "Useful power: $$P_R=I^2R=1.6^2\\cdot6\\approx15.4\\ \\mathrm{W}$$",
+    "Efficiency: $$\\eta=\\frac{6}{7.5}=0.8$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Eng katta foydali quvvat: $R=r,\\ P_{max}=\\frac{\\mathcal{E}^2}{4r}$",
+    "ru": "Максимум полезной мощности: $R=r,\\ P_{max}=\\frac{\\mathcal{E}^2}{4r}$",
+    "en": "Maximum useful power: $R=r,\\ P_{max}=\\frac{\\mathcal{E}^2}{4r}$"
+   },
+   null,
+   {
+    "uz": "To'liq zanjir uchun Om qonuni: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "ru": "Закон Ома для полной цепи: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "en": "Ohm's law for a complete circuit: $I=\\frac{\\mathcal{E}}{R+r}$"
+   },
+   {
+    "uz": "Foydali quvvat: $P_R=I^2R$",
+    "ru": "Полезная мощность: $P_R=I^2R$",
+    "en": "Useful power: $P_R=I^2R$"
+   },
+   {
+    "uz": "Manba FIK: $\\eta=\\frac{R}{R+r}$",
+    "ru": "КПД источника: $\\eta=\\frac{R}{R+r}$",
+    "en": "Efficiency of a source: $\\eta=\\frac{R}{R+r}$"
+   }
+  ],
+  "basis": {
+   "uz": "Eng katta foydali quvvat sharti, manba FIK",
+   "ru": "Условие максимума полезной мощности, КПД источника",
+   "en": "Condition for maximum useful power, efficiency of a source"
+  },
+  "answer": "R=1.5\\ \\Omega;\\ P_{max}=24\\ \\mathrm{W};\\ \\eta=0.5;\\ P_R\\approx15.4\\ \\mathrm{W};\\ \\eta=0.8",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 96-mavzu, 97, 98-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Manbaga navbat bilan $R_1=1\\ \\Omega$ va $R_2=4\\ \\Omega$ rezistorlar ulanganda ularning har birida bir xil $P=16\\ \\mathrm{W}$ quvvat ajraladi. Manbaning ichki qarshiligini, EYK sini va olish mumkin bo'lgan eng katta foydali quvvatni toping.",
+   "ru": "Когда к источнику поочерёдно подключают резисторы $R_1=1\\ \\Omega$ и $R_2=4\\ \\Omega$, в каждом из них выделяется одинаковая мощность $P=16\\ \\mathrm{W}$. Найдите внутреннее сопротивление источника, его ЭДС и наибольшую полезную мощность, которую можно получить.",
+   "en": "When resistors $R_1=1\\ \\Omega$ and $R_2=4\\ \\Omega$ are connected to a source in turn, the same power $P=16\\ \\mathrm{W}$ is released in each of them. Find the internal resistance of the source, its EMF and the largest useful power that can be obtained."
+  },
+  "figure": "figures/B1-L36-S08.png",
+  "solution": {
+   "uz": [
+    "Quvvatlar tengligi: $$\\frac{\\mathcal{E}^2R_1}{(R_1+r)^2}=\\frac{\\mathcal{E}^2R_2}{(R_2+r)^2}$$",
+    "Soddalashtirsak: $$r^2=R_1R_2=1\\cdot4\\quad\\Rightarrow\\quad r=2\\ \\Omega$$",
+    "Birinchi rezistordagi tok: $$I_1=\\sqrt{\\frac{P}{R_1}}=\\sqrt{\\frac{16}{1}}=4\\ \\mathrm{A}$$",
+    "EYK: $$\\mathcal{E}=I_1(R_1+r)=4\\cdot3=12\\ \\mathrm{V}$$",
+    "Eng katta quvvat: $$P_{max}=\\frac{\\mathcal{E}^2}{4r}=\\frac{144}{8}=18\\ \\mathrm{W}$$"
+   ],
+   "ru": [
+    "Равенство мощностей: $$\\frac{\\mathcal{E}^2R_1}{(R_1+r)^2}=\\frac{\\mathcal{E}^2R_2}{(R_2+r)^2}$$",
+    "После упрощения: $$r^2=R_1R_2=1\\cdot4\\quad\\Rightarrow\\quad r=2\\ \\Omega$$",
+    "Ток через первый резистор: $$I_1=\\sqrt{\\frac{P}{R_1}}=\\sqrt{\\frac{16}{1}}=4\\ \\mathrm{A}$$",
+    "ЭДС: $$\\mathcal{E}=I_1(R_1+r)=4\\cdot3=12\\ \\mathrm{V}$$",
+    "Наибольшая мощность: $$P_{max}=\\frac{\\mathcal{E}^2}{4r}=\\frac{144}{8}=18\\ \\mathrm{W}$$"
+   ],
+   "en": [
+    "Equality of the powers: $$\\frac{\\mathcal{E}^2R_1}{(R_1+r)^2}=\\frac{\\mathcal{E}^2R_2}{(R_2+r)^2}$$",
+    "After simplifying: $$r^2=R_1R_2=1\\cdot4\\quad\\Rightarrow\\quad r=2\\ \\Omega$$",
+    "Current through the first resistor: $$I_1=\\sqrt{\\frac{P}{R_1}}=\\sqrt{\\frac{16}{1}}=4\\ \\mathrm{A}$$",
+    "EMF: $$\\mathcal{E}=I_1(R_1+r)=4\\cdot3=12\\ \\mathrm{V}$$",
+    "Largest power: $$P_{max}=\\frac{\\mathcal{E}^2}{4r}=\\frac{144}{8}=18\\ \\mathrm{W}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Foydali quvvat: $P_R=I^2R$",
+    "ru": "Полезная мощность: $P_R=I^2R$",
+    "en": "Useful power: $P_R=I^2R$"
+   },
+   {
+    "uz": "Teng quvvat sharti: $R_1R_2=r^2$",
+    "ru": "Условие равных мощностей: $R_1R_2=r^2$",
+    "en": "Equal-power condition: $R_1R_2=r^2$"
+   },
+   null,
+   {
+    "uz": "To'liq zanjir uchun Om qonuni: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "ru": "Закон Ома для полной цепи: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "en": "Ohm's law for a complete circuit: $I=\\frac{\\mathcal{E}}{R+r}$"
+   },
+   {
+    "uz": "Eng katta foydali quvvat: $R=r,\\ P_{max}=\\frac{\\mathcal{E}^2}{4r}$",
+    "ru": "Максимум полезной мощности: $R=r,\\ P_{max}=\\frac{\\mathcal{E}^2}{4r}$",
+    "en": "Maximum useful power: $R=r,\\ P_{max}=\\frac{\\mathcal{E}^2}{4r}$"
+   }
+  ],
+  "basis": {
+   "uz": "Teng quvvat sharti, eng katta foydali quvvat",
+   "ru": "Условие равных мощностей, максимум полезной мощности",
+   "en": "Equal-power condition, maximum useful power"
+  },
+  "answer": "r=2\\ \\Omega;\\ \\mathcal{E}=12\\ \\mathrm{V};\\ P_{max}=18\\ \\mathrm{W}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 96-mavzu, 99, 121-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Har birining EYK si $\\mathcal{E}_0=2\\ \\mathrm{V}$, ichki qarshiligi $r_0=0.25\\ \\Omega$ bo'lgan $6$ ta akkumulyator ketma-ket ulanib, $R=10.5\\ \\Omega$ iste'molchiga ulangan. Zanjirdagi tok kuchini, batareya qisqichlaridagi kuchlanishni va har bir akkumulyator qisqichlaridagi kuchlanishni toping. Bitta akkumulyator bilan tok qancha bo'lardi?",
+   "ru": "$6$ аккумуляторов, каждый с ЭДС $\\mathcal{E}_0=2\\ \\mathrm{V}$ и внутренним сопротивлением $r_0=0.25\\ \\Omega$, соединены последовательно и подключены к потребителю $R=10.5\\ \\Omega$. Найдите силу тока в цепи, напряжение на зажимах батареи и напряжение на зажимах каждого аккумулятора. Каким был бы ток с одним аккумулятором?",
+   "en": "$6$ storage cells, each with EMF $\\mathcal{E}_0=2\\ \\mathrm{V}$ and internal resistance $r_0=0.25\\ \\Omega$, are connected in series to a consumer $R=10.5\\ \\Omega$. Find the current in the circuit, the voltage across the terminals of the battery and the voltage across the terminals of each cell. What would the current be with one cell?"
+  },
+  "figure": "figures/B1-L36-S09.png",
+  "solution": {
+   "uz": [
+    "Batareya parametrlari: $$\\mathcal{E}=6\\cdot2=12\\ \\mathrm{V},\\qquad r=6\\cdot0.25=1.5\\ \\Omega$$",
+    "Tok kuchi: $$I=\\frac{12}{10.5+1.5}=1\\ \\mathrm{A}$$",
+    "Batareya qisqichlarida: $$U=IR=1\\cdot10.5=10.5\\ \\mathrm{V}$$",
+    "Bitta akkumulyator qisqichlarida: $$U_0=\\mathcal{E}_0-Ir_0=2-0.25=1.75\\ \\mathrm{V}$$",
+    "Bitta akkumulyator bilan: $$I'=\\frac{2}{10.5+0.25}\\approx0.19\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "Параметры батареи: $$\\mathcal{E}=6\\cdot2=12\\ \\mathrm{V},\\qquad r=6\\cdot0.25=1.5\\ \\Omega$$",
+    "Сила тока: $$I=\\frac{12}{10.5+1.5}=1\\ \\mathrm{A}$$",
+    "На зажимах батареи: $$U=IR=1\\cdot10.5=10.5\\ \\mathrm{V}$$",
+    "На зажимах одного аккумулятора: $$U_0=\\mathcal{E}_0-Ir_0=2-0.25=1.75\\ \\mathrm{V}$$",
+    "С одним аккумулятором: $$I'=\\frac{2}{10.5+0.25}\\approx0.19\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "Battery parameters: $$\\mathcal{E}=6\\cdot2=12\\ \\mathrm{V},\\qquad r=6\\cdot0.25=1.5\\ \\Omega$$",
+    "Current: $$I=\\frac{12}{10.5+1.5}=1\\ \\mathrm{A}$$",
+    "Across the battery terminals: $$U=IR=1\\cdot10.5=10.5\\ \\mathrm{V}$$",
+    "Across the terminals of one cell: $$U_0=\\mathcal{E}_0-Ir_0=2-0.25=1.75\\ \\mathrm{V}$$",
+    "With one cell: $$I'=\\frac{2}{10.5+0.25}\\approx0.19\\ \\mathrm{A}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ketma-ket ulash: $\\mathcal{E}=n\\mathcal{E}_0,\\ r=nr_0$",
+    "ru": "Последовательное соединение: $\\mathcal{E}=n\\mathcal{E}_0,\\ r=nr_0$",
+    "en": "Series connection: $\\mathcal{E}=n\\mathcal{E}_0,\\ r=nr_0$"
+   },
+   {
+    "uz": "To'liq zanjir uchun Om qonuni: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "ru": "Закон Ома для полной цепи: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "en": "Ohm's law for a complete circuit: $I=\\frac{\\mathcal{E}}{R+r}$"
+   },
+   {
+    "uz": "Zanjir qismi uchun Om qonuni: $U=IR$",
+    "ru": "Закон Ома для участка цепи: $U=IR$",
+    "en": "Ohm's law for a part of a circuit: $U=IR$"
+   },
+   {
+    "uz": "Qisqichlardagi kuchlanish: $U=\\mathcal{E}-Ir$",
+    "ru": "Напряжение на зажимах: $U=\\mathcal{E}-Ir$",
+    "en": "Terminal voltage: $U=\\mathcal{E}-Ir$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Manbalarni ketma-ket ulash",
+   "ru": "Последовательное соединение источников",
+   "en": "Sources in series"
+  },
+  "answer": "I=1\\ \\mathrm{A};\\ U=10.5\\ \\mathrm{V};\\ U_0=1.75\\ \\mathrm{V};\\ I'\\approx0.19\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 97-mavzu, 2, 3-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "EYK lari $\\mathcal{E}_1=9\\ \\mathrm{V}$ ($r_1=1\\ \\Omega$) va $\\mathcal{E}_2=3\\ \\mathrm{V}$ ($r_2=0.5\\ \\Omega$) bo'lgan ikki manba bir xil nomli qutblari bilan ketma-ket ulanib, $R=4.5\\ \\Omega$ rezistorga ulangan. Tok kuchini va har bir manba qisqichlaridagi kuchlanishni toping.",
+   "ru": "Два источника с ЭДС $\\mathcal{E}_1=9\\ \\mathrm{V}$ ($r_1=1\\ \\Omega$) и $\\mathcal{E}_2=3\\ \\mathrm{V}$ ($r_2=0.5\\ \\Omega$) соединены последовательно одноимёнными полюсами и подключены к резистору $R=4.5\\ \\Omega$. Найдите силу тока и напряжение на зажимах каждого источника.",
+   "en": "Two sources with EMFs $\\mathcal{E}_1=9\\ \\mathrm{V}$ ($r_1=1\\ \\Omega$) and $\\mathcal{E}_2=3\\ \\mathrm{V}$ ($r_2=0.5\\ \\Omega$) are connected in series with like terminals together and connected to a resistor $R=4.5\\ \\Omega$. Find the current and the voltage across the terminals of each source."
+  },
+  "figure": "figures/B1-L36-S10.png",
+  "solution": {
+   "uz": [
+    "Qarama-qarshi ulash: $$\\mathcal{E}=9-3=6\\ \\mathrm{V},\\qquad r=1+0.5=1.5\\ \\Omega$$",
+    "Tok kuchi: $$I=\\frac{6}{4.5+1.5}=1\\ \\mathrm{A}$$",
+    "Birinchi manba razryadlanadi: $$U_1=\\mathcal{E}_1-Ir_1=9-1=8\\ \\mathrm{V}$$",
+    "Ikkinchisi zaryadlanadi: $$U_2=\\mathcal{E}_2+Ir_2=3+0.5=3.5\\ \\mathrm{V}$$",
+    "Tekshiruv: $$U_1-U_2=4.5\\ \\mathrm{V}=IR$$"
+   ],
+   "ru": [
+    "Встречное включение: $$\\mathcal{E}=9-3=6\\ \\mathrm{V},\\qquad r=1+0.5=1.5\\ \\Omega$$",
+    "Сила тока: $$I=\\frac{6}{4.5+1.5}=1\\ \\mathrm{A}$$",
+    "Первый источник разряжается: $$U_1=\\mathcal{E}_1-Ir_1=9-1=8\\ \\mathrm{V}$$",
+    "Второй заряжается: $$U_2=\\mathcal{E}_2+Ir_2=3+0.5=3.5\\ \\mathrm{V}$$",
+    "Проверка: $$U_1-U_2=4.5\\ \\mathrm{V}=IR$$"
+   ],
+   "en": [
+    "Opposing connection: $$\\mathcal{E}=9-3=6\\ \\mathrm{V},\\qquad r=1+0.5=1.5\\ \\Omega$$",
+    "Current: $$I=\\frac{6}{4.5+1.5}=1\\ \\mathrm{A}$$",
+    "The first source discharges: $$U_1=\\mathcal{E}_1-Ir_1=9-1=8\\ \\mathrm{V}$$",
+    "The second is being charged: $$U_2=\\mathcal{E}_2+Ir_2=3+0.5=3.5\\ \\mathrm{V}$$",
+    "Check: $$U_1-U_2=4.5\\ \\mathrm{V}=IR$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qarama-qarshi ulash: $\\mathcal{E}=|\\mathcal{E}_1-\\mathcal{E}_2|,\\ r=r_1+r_2$",
+    "ru": "Встречное включение: $\\mathcal{E}=|\\mathcal{E}_1-\\mathcal{E}_2|,\\ r=r_1+r_2$",
+    "en": "Opposing connection: $\\mathcal{E}=|\\mathcal{E}_1-\\mathcal{E}_2|,\\ r=r_1+r_2$"
+   },
+   {
+    "uz": "To'liq zanjir uchun Om qonuni: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "ru": "Закон Ома для полной цепи: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "en": "Ohm's law for a complete circuit: $I=\\frac{\\mathcal{E}}{R+r}$"
+   },
+   {
+    "uz": "Qisqichlardagi kuchlanish: $U=\\mathcal{E}-Ir$",
+    "ru": "Напряжение на зажимах: $U=\\mathcal{E}-Ir$",
+    "en": "Terminal voltage: $U=\\mathcal{E}-Ir$"
+   },
+   {
+    "uz": "Zaryadlashda: $U=\\mathcal{E}+Ir$",
+    "ru": "При зарядке: $U=\\mathcal{E}+Ir$",
+    "en": "When charging: $U=\\mathcal{E}+Ir$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Qarama-qarshi ulash, zaryadlanayotgan manba",
+   "ru": "Встречное включение, заряжаемый источник",
+   "en": "Opposing connection, source being charged"
+  },
+  "answer": "I=1\\ \\mathrm{A};\\ U_1=8\\ \\mathrm{V};\\ U_2=3.5\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 97-mavzu, 13, 27-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Har birining EYK si $\\mathcal{E}_0=1.5\\ \\mathrm{V}$, ichki qarshiligi $r_0=3\\ \\Omega$ bo'lgan elementlardan $R=0.5\\ \\Omega$ qarshilikli asbob orqali $I=1.2\\ \\mathrm{A}$ tok o'tkazish kerak. a) Bitta element qancha tok beradi? b) Nechta elementni parallel ulash kerak? Har bir elementdan qancha tok o'tadi?",
+   "ru": "Через прибор сопротивлением $R=0.5\\ \\Omega$ нужно пропустить ток $I=1.2\\ \\mathrm{A}$ от элементов, каждый с ЭДС $\\mathcal{E}_0=1.5\\ \\mathrm{V}$ и внутренним сопротивлением $r_0=3\\ \\Omega$. а) Какой ток даёт один элемент? б) Сколько элементов нужно соединить параллельно? Какой ток идёт через каждый элемент?",
+   "en": "A current $I=1.2\\ \\mathrm{A}$ must be passed through a device of resistance $R=0.5\\ \\Omega$ using cells, each with EMF $\\mathcal{E}_0=1.5\\ \\mathrm{V}$ and internal resistance $r_0=3\\ \\Omega$. a) What current does one cell give? b) How many cells must be connected in parallel? What current flows through each cell?"
+  },
+  "figure": "figures/B1-L36-S11.png",
+  "solution": {
+   "uz": [
+    "a) Bitta element: $$I_1=\\frac{1.5}{0.5+3}\\approx0.43\\ \\mathrm{A}$$",
+    "b) $n$ ta parallel element: $$\\mathcal{E}=1.5\\ \\mathrm{V},\\qquad r=\\frac{r_0}{n}=\\frac{3}{n}$$",
+    "Om qonuni: $$1.2=\\frac{1.5}{0.5+\\frac{3}{n}}$$",
+    "Elementlar soni: $$0.5+\\frac{3}{n}=1.25\\quad\\Rightarrow\\quad n=4$$",
+    "Har bir elementdagi tok: $$I_0=\\frac{I}{n}=\\frac{1.2}{4}=0.3\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "а) Один элемент: $$I_1=\\frac{1.5}{0.5+3}\\approx0.43\\ \\mathrm{A}$$",
+    "б) $n$ параллельных элементов: $$\\mathcal{E}=1.5\\ \\mathrm{V},\\qquad r=\\frac{r_0}{n}=\\frac{3}{n}$$",
+    "Закон Ома: $$1.2=\\frac{1.5}{0.5+\\frac{3}{n}}$$",
+    "Число элементов: $$0.5+\\frac{3}{n}=1.25\\quad\\Rightarrow\\quad n=4$$",
+    "Ток через каждый элемент: $$I_0=\\frac{I}{n}=\\frac{1.2}{4}=0.3\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "a) One cell: $$I_1=\\frac{1.5}{0.5+3}\\approx0.43\\ \\mathrm{A}$$",
+    "b) $n$ cells in parallel: $$\\mathcal{E}=1.5\\ \\mathrm{V},\\qquad r=\\frac{r_0}{n}=\\frac{3}{n}$$",
+    "Ohm's law: $$1.2=\\frac{1.5}{0.5+\\frac{3}{n}}$$",
+    "Number of cells: $$0.5+\\frac{3}{n}=1.25\\quad\\Rightarrow\\quad n=4$$",
+    "Current through each cell: $$I_0=\\frac{I}{n}=\\frac{1.2}{4}=0.3\\ \\mathrm{A}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'liq zanjir uchun Om qonuni: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "ru": "Закон Ома для полной цепи: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "en": "Ohm's law for a complete circuit: $I=\\frac{\\mathcal{E}}{R+r}$"
+   },
+   {
+    "uz": "Parallel ulash: $\\mathcal{E}=\\mathcal{E}_0,\\ r=\\frac{r_0}{n}$",
+    "ru": "Параллельное соединение: $\\mathcal{E}=\\mathcal{E}_0,\\ r=\\frac{r_0}{n}$",
+    "en": "Parallel connection: $\\mathcal{E}=\\mathcal{E}_0,\\ r=\\frac{r_0}{n}$"
+   },
+   {
+    "uz": "To'liq zanjir uchun Om qonuni: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "ru": "Закон Ома для полной цепи: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "en": "Ohm's law for a complete circuit: $I=\\frac{\\mathcal{E}}{R+r}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Manbalarni parallel ulash",
+   "ru": "Параллельное соединение источников",
+   "en": "Sources in parallel"
+  },
+  "answer": "I_1\\approx0.43\\ \\mathrm{A};\\ n=4;\\ I_0=0.3\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 97-mavzu, 17, 18-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Har birining EYK si $\\mathcal{E}_0=2\\ \\mathrm{V}$, ichki qarshiligi $r_0=1.5\\ \\Omega$ bo'lgan $12$ ta element bor. Ular $R=2\\ \\Omega$ rezistorga ulanadi. Elementlarni qanday guruhlaganda rezistordagi tok eng katta bo'ladi? Bu tokni toping va barcha elementlar ketma-ket hamda parallel ulangan holatlar bilan solishtiring.",
+   "ru": "Имеется $12$ элементов, каждый с ЭДС $\\mathcal{E}_0=2\\ \\mathrm{V}$ и внутренним сопротивлением $r_0=1.5\\ \\Omega$. Их подключают к резистору $R=2\\ \\Omega$. Как сгруппировать элементы, чтобы ток через резистор был наибольшим? Найдите этот ток и сравните со случаями, когда все элементы соединены последовательно и параллельно.",
+   "en": "There are $12$ cells, each with EMF $\\mathcal{E}_0=2\\ \\mathrm{V}$ and internal resistance $r_0=1.5\\ \\Omega$. They are connected to a resistor $R=2\\ \\Omega$. How should the cells be grouped so that the current through the resistor is the largest? Find this current and compare it with the cases where all the cells are connected in series and in parallel."
+  },
+  "figure": "figures/B1-L36-S12.png",
+  "solution": {
+   "uz": [
+    "$m$ guruh, har birida $n$ ta element: $$N=nm=12,\\qquad I=\\frac{n\\mathcal{E}_0}{R+\\frac{nr_0}{m}}$$",
+    "Eng katta tok sharti: $$\\frac{nr_0}{m}=R\\quad\\Rightarrow\\quad\\frac{1.5n^2}{12}=2$$",
+    "Guruhlash: $$n^2=16\\quad\\Rightarrow\\quad n=4,\\qquad m=3$$",
+    "Eng katta tok: $$I=\\frac{4\\cdot2}{2+\\frac{4\\cdot1.5}{3}}=\\frac{8}{4}=2\\ \\mathrm{A}$$",
+    "Hammasi ketma-ket: $$I=\\frac{24}{2+18}=1.2\\ \\mathrm{A}$$",
+    "Hammasi parallel: $$I=\\frac{2}{2+0.125}\\approx0.94\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "$m$ групп по $n$ элементов: $$N=nm=12,\\qquad I=\\frac{n\\mathcal{E}_0}{R+\\frac{nr_0}{m}}$$",
+    "Условие наибольшего тока: $$\\frac{nr_0}{m}=R\\quad\\Rightarrow\\quad\\frac{1.5n^2}{12}=2$$",
+    "Группировка: $$n^2=16\\quad\\Rightarrow\\quad n=4,\\qquad m=3$$",
+    "Наибольший ток: $$I=\\frac{4\\cdot2}{2+\\frac{4\\cdot1.5}{3}}=\\frac{8}{4}=2\\ \\mathrm{A}$$",
+    "Все последовательно: $$I=\\frac{24}{2+18}=1.2\\ \\mathrm{A}$$",
+    "Все параллельно: $$I=\\frac{2}{2+0.125}\\approx0.94\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "$m$ groups of $n$ cells: $$N=nm=12,\\qquad I=\\frac{n\\mathcal{E}_0}{R+\\frac{nr_0}{m}}$$",
+    "Condition for the largest current: $$\\frac{nr_0}{m}=R\\quad\\Rightarrow\\quad\\frac{1.5n^2}{12}=2$$",
+    "Grouping: $$n^2=16\\quad\\Rightarrow\\quad n=4,\\qquad m=3$$",
+    "Largest current: $$I=\\frac{4\\cdot2}{2+\\frac{4\\cdot1.5}{3}}=\\frac{8}{4}=2\\ \\mathrm{A}$$",
+    "All in series: $$I=\\frac{24}{2+18}=1.2\\ \\mathrm{A}$$",
+    "All in parallel: $$I=\\frac{2}{2+0.125}\\approx0.94\\ \\mathrm{A}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Aralash ulash: $\\mathcal{E}=n\\mathcal{E}_0,\\ r=\\frac{nr_0}{m}$",
+    "ru": "Смешанное соединение: $\\mathcal{E}=n\\mathcal{E}_0,\\ r=\\frac{nr_0}{m}$",
+    "en": "Mixed connection: $\\mathcal{E}=n\\mathcal{E}_0,\\ r=\\frac{nr_0}{m}$"
+   },
+   {
+    "uz": "Eng katta foydali quvvat: $R=r,\\ P_{max}=\\frac{\\mathcal{E}^2}{4r}$",
+    "ru": "Максимум полезной мощности: $R=r,\\ P_{max}=\\frac{\\mathcal{E}^2}{4r}$",
+    "en": "Maximum useful power: $R=r,\\ P_{max}=\\frac{\\mathcal{E}^2}{4r}$"
+   },
+   null,
+   null,
+   {
+    "uz": "Ketma-ket ulash: $\\mathcal{E}=n\\mathcal{E}_0,\\ r=nr_0$",
+    "ru": "Последовательное соединение: $\\mathcal{E}=n\\mathcal{E}_0,\\ r=nr_0$",
+    "en": "Series connection: $\\mathcal{E}=n\\mathcal{E}_0,\\ r=nr_0$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Aralash ulash, ichki va tashqi qarshilik tengligi",
+   "ru": "Смешанное соединение, равенство внутреннего и внешнего сопротивлений",
+   "en": "Mixed connection, equality of internal and external resistances"
+  },
+  "answer": "n=4,\\ m=3;\\ I=2\\ \\mathrm{A};\\ 1.2\\ \\mathrm{A};\\ 0.94\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 97-mavzu, 21–23-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "EYK lari $\\mathcal{E}_1=9\\ \\mathrm{V}$ va $\\mathcal{E}_2=6\\ \\mathrm{V}$, ichki qarshiliklari $r_1=r_2=1\\ \\Omega$ bo'lgan ikki manba va $R=1\\ \\Omega$ rezistor parallel ulangan (musbat qutblar bir tugunda). Har bir manbadan va rezistordan o'tuvchi toklarni hamda rezistordagi quvvatni toping.",
+   "ru": "Два источника с ЭДС $\\mathcal{E}_1=9\\ \\mathrm{V}$ и $\\mathcal{E}_2=6\\ \\mathrm{V}$ и внутренними сопротивлениями $r_1=r_2=1\\ \\Omega$ и резистор $R=1\\ \\Omega$ соединены параллельно (положительные полюсы в одном узле). Найдите токи через каждый источник и через резистор, а также мощность в резисторе.",
+   "en": "Two sources with EMFs $\\mathcal{E}_1=9\\ \\mathrm{V}$ and $\\mathcal{E}_2=6\\ \\mathrm{V}$ and internal resistances $r_1=r_2=1\\ \\Omega$ and a resistor $R=1\\ \\Omega$ are connected in parallel (the positive terminals at one junction). Find the currents through each source and through the resistor, and the power in the resistor."
+  },
+  "figure": "figures/B1-L36-S13.png",
+  "solution": {
+   "uz": [
+    "Yuqori tugun uchun: $$I=I_1+I_2$$",
+    "1-manba va $R$ konturi: $$\\mathcal{E}_1=I_1r_1+IR:\\qquad 9=I_1+I$$",
+    "2-manba va $R$ konturi: $$\\mathcal{E}_2=I_2r_2+IR:\\qquad 6=I_2+I$$",
+    "Qo'shib, tugun qoidasini qo'llaymiz: $$15=I_1+I_2+2I=3I\\quad\\Rightarrow\\quad I=5\\ \\mathrm{A}$$",
+    "Manbalardagi toklar: $$I_1=9-5=4\\ \\mathrm{A},\\qquad I_2=6-5=1\\ \\mathrm{A}$$",
+    "Rezistordagi quvvat: $$P_R=I^2R=5^2\\cdot1=25\\ \\mathrm{W}$$"
+   ],
+   "ru": [
+    "Для верхнего узла: $$I=I_1+I_2$$",
+    "Контур: источник 1 и $R$: $$\\mathcal{E}_1=I_1r_1+IR:\\qquad 9=I_1+I$$",
+    "Контур: источник 2 и $R$: $$\\mathcal{E}_2=I_2r_2+IR:\\qquad 6=I_2+I$$",
+    "Складываем и применяем правило узлов: $$15=I_1+I_2+2I=3I\\quad\\Rightarrow\\quad I=5\\ \\mathrm{A}$$",
+    "Токи в источниках: $$I_1=9-5=4\\ \\mathrm{A},\\qquad I_2=6-5=1\\ \\mathrm{A}$$",
+    "Мощность в резисторе: $$P_R=I^2R=5^2\\cdot1=25\\ \\mathrm{W}$$"
+   ],
+   "en": [
+    "For the upper junction: $$I=I_1+I_2$$",
+    "Loop: source 1 and $R$: $$\\mathcal{E}_1=I_1r_1+IR:\\qquad 9=I_1+I$$",
+    "Loop: source 2 and $R$: $$\\mathcal{E}_2=I_2r_2+IR:\\qquad 6=I_2+I$$",
+    "Add and apply the junction rule: $$15=I_1+I_2+2I=3I\\quad\\Rightarrow\\quad I=5\\ \\mathrm{A}$$",
+    "Currents in the sources: $$I_1=9-5=4\\ \\mathrm{A},\\qquad I_2=6-5=1\\ \\mathrm{A}$$",
+    "Power in the resistor: $$P_R=I^2R=5^2\\cdot1=25\\ \\mathrm{W}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tugun qoidasi: $\\sum I_k=0$",
+    "ru": "Правило узлов: $\\sum I_k=0$",
+    "en": "Junction rule: $\\sum I_k=0$"
+   },
+   {
+    "uz": "Kontur qoidasi: $\\sum\\mathcal{E}_k=\\sum I_kR_k$",
+    "ru": "Правило контуров: $\\sum\\mathcal{E}_k=\\sum I_kR_k$",
+    "en": "Loop rule: $\\sum\\mathcal{E}_k=\\sum I_kR_k$"
+   },
+   null,
+   null,
+   null,
+   {
+    "uz": "Foydali quvvat: $P_R=I^2R$",
+    "ru": "Полезная мощность: $P_R=I^2R$",
+    "en": "Useful power: $P_R=I^2R$"
+   }
+  ],
+  "basis": {
+   "uz": "Kirxgof qoidalari",
+   "ru": "Правила Кирхгофа",
+   "en": "Kirchhoff's rules"
+  },
+  "answer": "I_1=4\\ \\mathrm{A};\\ I_2=1\\ \\mathrm{A};\\ I=5\\ \\mathrm{A};\\ P_R=25\\ \\mathrm{W}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 97-mavzu, 26, 28-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "EYK si $\\mathcal{E}=12\\ \\mathrm{V}$, ichki qarshiligi $r=0.4\\ \\Omega$ bo'lgan akkumulyator qisqichlaridagi kuchlanishi $U=14.4\\ \\mathrm{V}$ bo'lgan zaryadlovchi qurilmaga ulangan. Zaryadlash tokini, akkumulyatorda to'planayotgan quvvatni, issiqlikka ketayotgan quvvatni va zaryadlash FIK ni toping. Sig'imi $48\\ \\mathrm{A\\cdot h}$ bo'lgan akkumulyator qancha vaqtda to'liq zaryadlanadi va unda qancha energiya to'planadi?",
+   "ru": "Аккумулятор с ЭДС $\\mathcal{E}=12\\ \\mathrm{V}$ и внутренним сопротивлением $r=0.4\\ \\Omega$ подключён к зарядному устройству, напряжение на его зажимах $U=14.4\\ \\mathrm{V}$. Найдите ток зарядки, мощность, запасаемую в аккумуляторе, мощность, уходящую в теплоту, и КПД зарядки. За какое время полностью зарядится аккумулятор ёмкостью $48\\ \\mathrm{A\\cdot h}$ и сколько энергии в нём запасётся?",
+   "en": "A battery with EMF $\\mathcal{E}=12\\ \\mathrm{V}$ and internal resistance $r=0.4\\ \\Omega$ is connected to a charger, and the voltage across its terminals is $U=14.4\\ \\mathrm{V}$. Find the charging current, the power being stored in the battery, the power going into heat and the charging efficiency. How long will it take to fully charge a battery of capacity $48\\ \\mathrm{A\\cdot h}$, and how much energy will be stored in it?"
+  },
+  "figure": "figures/B1-L36-S14.png",
+  "solution": {
+   "uz": [
+    "Zaryadlashda tok EYK ga qarshi: $$U=\\mathcal{E}+Ir\\quad\\Rightarrow\\quad I=\\frac{14.4-12}{0.4}=6\\ \\mathrm{A}$$",
+    "To'planayotgan quvvat: $$P_{\\mathcal{E}}=\\mathcal{E}I=12\\cdot6=72\\ \\mathrm{W}$$",
+    "Issiqlikka ketayotgan quvvat: $$P_r=I^2r=36\\cdot0.4=14.4\\ \\mathrm{W}$$",
+    "Zaryadlash FIK: $$\\eta=\\frac{\\mathcal{E}I}{UI}=\\frac{12}{14.4}\\approx0.83$$",
+    "Zaryadlash vaqti: $$t=\\frac{q}{I}=\\frac{48\\ \\mathrm{A\\cdot h}}{6\\ \\mathrm{A}}=8\\ \\mathrm{h}$$",
+    "To'plangan energiya: $$W=\\mathcal{E}It=72\\cdot8\\cdot3600\\approx2.07\\cdot10^6\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "При зарядке ток идёт против ЭДС: $$U=\\mathcal{E}+Ir\\quad\\Rightarrow\\quad I=\\frac{14.4-12}{0.4}=6\\ \\mathrm{A}$$",
+    "Запасаемая мощность: $$P_{\\mathcal{E}}=\\mathcal{E}I=12\\cdot6=72\\ \\mathrm{W}$$",
+    "Мощность, уходящая в теплоту: $$P_r=I^2r=36\\cdot0.4=14.4\\ \\mathrm{W}$$",
+    "КПД зарядки: $$\\eta=\\frac{\\mathcal{E}I}{UI}=\\frac{12}{14.4}\\approx0.83$$",
+    "Время зарядки: $$t=\\frac{q}{I}=\\frac{48\\ \\mathrm{A\\cdot h}}{6\\ \\mathrm{A}}=8\\ \\mathrm{h}$$",
+    "Запасённая энергия: $$W=\\mathcal{E}It=72\\cdot8\\cdot3600\\approx2.07\\cdot10^6\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "When charging, the current opposes the EMF: $$U=\\mathcal{E}+Ir\\quad\\Rightarrow\\quad I=\\frac{14.4-12}{0.4}=6\\ \\mathrm{A}$$",
+    "Power being stored: $$P_{\\mathcal{E}}=\\mathcal{E}I=12\\cdot6=72\\ \\mathrm{W}$$",
+    "Power going into heat: $$P_r=I^2r=36\\cdot0.4=14.4\\ \\mathrm{W}$$",
+    "Charging efficiency: $$\\eta=\\frac{\\mathcal{E}I}{UI}=\\frac{12}{14.4}\\approx0.83$$",
+    "Charging time: $$t=\\frac{q}{I}=\\frac{48\\ \\mathrm{A\\cdot h}}{6\\ \\mathrm{A}}=8\\ \\mathrm{h}$$",
+    "Stored energy: $$W=\\mathcal{E}It=72\\cdot8\\cdot3600\\approx2.07\\cdot10^6\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Zaryadlashda: $U=\\mathcal{E}+Ir$",
+    "ru": "При зарядке: $U=\\mathcal{E}+Ir$",
+    "en": "When charging: $U=\\mathcal{E}+Ir$"
+   },
+   null,
+   {
+    "uz": "Isrof quvvati: $P_r=I^2r$",
+    "ru": "Мощность потерь: $P_r=I^2r$",
+    "en": "Power loss: $P_r=I^2r$"
+   },
+   null,
+   {
+    "uz": "Zaryad: $q=It$",
+    "ru": "Заряд: $q=It$",
+    "en": "Charge: $q=It$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Akkumulyatorni zaryadlash, energiya balansi",
+   "ru": "Зарядка аккумулятора, баланс энергии",
+   "en": "Charging a battery, energy balance"
+  },
+  "answer": "I=6\\ \\mathrm{A};\\ 72\\ \\mathrm{W};\\ 14.4\\ \\mathrm{W};\\ \\eta\\approx0.83;\\ t=8\\ \\mathrm{h};\\ W\\approx2.07\\ \\mathrm{MJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 96-mavzu, 124–126-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L36-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$R_1=3\\ \\Omega$ va $R_2=12\\ \\Omega$ rezistorlar manbaga avval ketma-ket, keyin parallel ulandi. Ikkala holatda tashqi zanjirda bir xil quvvat ajraldi. Manbaning ichki qarshiligini toping. Agar $\\mathcal{E}=21\\ \\mathrm{V}$ bo'lsa, shu quvvatni va har ikki holatdagi FIK ni toping.",
+   "ru": "Резисторы $R_1=3\\ \\Omega$ и $R_2=12\\ \\Omega$ подключили к источнику сначала последовательно, затем параллельно. В обоих случаях во внешней цепи выделилась одинаковая мощность. Найдите внутреннее сопротивление источника. Если $\\mathcal{E}=21\\ \\mathrm{V}$, найдите эту мощность и КПД в обоих случаях.",
+   "en": "Resistors $R_1=3\\ \\Omega$ and $R_2=12\\ \\Omega$ were connected to a source first in series and then in parallel. In both cases the same power was released in the external circuit. Find the internal resistance of the source. If $\\mathcal{E}=21\\ \\mathrm{V}$, find this power and the efficiency in both cases."
+  },
+  "figure": "figures/B1-L36-S15.png",
+  "solution": {
+   "uz": [
+    "Ketma-ket ulashda: $$R'=3+12=15\\ \\Omega$$",
+    "Parallel ulashda: $$R''=\\frac{3\\cdot12}{3+12}=2.4\\ \\Omega$$",
+    "Quvvatlar teng — ichki qarshilik: $$r=\\sqrt{R'R''}=\\sqrt{15\\cdot2.4}=6\\ \\Omega$$",
+    "Ketma-ket holatda quvvat: $$P=\\frac{\\mathcal{E}^2R'}{(R'+r)^2}=\\frac{441\\cdot15}{21^2}=15\\ \\mathrm{W}$$",
+    "Parallel holatda tekshiruv: $$P=\\frac{441\\cdot2.4}{8.4^2}=15\\ \\mathrm{W}$$",
+    "FIK lar: $$\\eta'=\\frac{15}{21}\\approx0.71,\\qquad \\eta''=\\frac{2.4}{8.4}\\approx0.29$$"
+   ],
+   "ru": [
+    "При последовательном соединении: $$R'=3+12=15\\ \\Omega$$",
+    "При параллельном соединении: $$R''=\\frac{3\\cdot12}{3+12}=2.4\\ \\Omega$$",
+    "Мощности равны — внутреннее сопротивление: $$r=\\sqrt{R'R''}=\\sqrt{15\\cdot2.4}=6\\ \\Omega$$",
+    "Мощность в первом случае: $$P=\\frac{\\mathcal{E}^2R'}{(R'+r)^2}=\\frac{441\\cdot15}{21^2}=15\\ \\mathrm{W}$$",
+    "Проверка во втором случае: $$P=\\frac{441\\cdot2.4}{8.4^2}=15\\ \\mathrm{W}$$",
+    "КПД: $$\\eta'=\\frac{15}{21}\\approx0.71,\\qquad \\eta''=\\frac{2.4}{8.4}\\approx0.29$$"
+   ],
+   "en": [
+    "In series: $$R'=3+12=15\\ \\Omega$$",
+    "In parallel: $$R''=\\frac{3\\cdot12}{3+12}=2.4\\ \\Omega$$",
+    "Equal powers — internal resistance: $$r=\\sqrt{R'R''}=\\sqrt{15\\cdot2.4}=6\\ \\Omega$$",
+    "Power in the first case: $$P=\\frac{\\mathcal{E}^2R'}{(R'+r)^2}=\\frac{441\\cdot15}{21^2}=15\\ \\mathrm{W}$$",
+    "Check in the second case: $$P=\\frac{441\\cdot2.4}{8.4^2}=15\\ \\mathrm{W}$$",
+    "Efficiencies: $$\\eta'=\\frac{15}{21}\\approx0.71,\\qquad \\eta''=\\frac{2.4}{8.4}\\approx0.29$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Parallel rezistorlar: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "ru": "Параллельные резисторы: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "en": "Resistors in parallel: $R=\\frac{R_1R_2}{R_1+R_2}$"
+   },
+   {
+    "uz": "Teng quvvat sharti: $R_1R_2=r^2$",
+    "ru": "Условие равных мощностей: $R_1R_2=r^2$",
+    "en": "Equal-power condition: $R_1R_2=r^2$"
+   },
+   null,
+   null,
+   {
+    "uz": "Manba FIK: $\\eta=\\frac{R}{R+r}$",
+    "ru": "КПД источника: $\\eta=\\frac{R}{R+r}$",
+    "en": "Efficiency of a source: $\\eta=\\frac{R}{R+r}$"
+   }
+  ],
+  "basis": {
+   "uz": "Teng quvvat sharti, ketma-ket va parallel ulash",
+   "ru": "Условие равных мощностей, последовательное и параллельное соединение",
+   "en": "Equal-power condition, series and parallel connection"
+  },
+  "answer": "r=6\\ \\Omega;\\ P=15\\ \\mathrm{W};\\ \\eta'\\approx0.71;\\ \\eta''\\approx0.29",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 96-mavzu, 99, 105, 121-masalalar asosida; sharti o'zgartirilgan"
+ }
+]

@@ -1,0 +1,607 @@
+[
+ {
+  "t": "h1",
+  "uz": "To'liq zanjir uchun Om qonuni, manbalarni ulash (Ohm's law for a complete circuit, connecting sources)",
+  "ru": "Закон Ома для полной цепи, соединение источников",
+  "en": "Ohm's law for a complete circuit, connecting sources"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz elektr yurituvchi kuch va ichki qarshilikning fizik ma'nosini tushuntirasiz, to'liq zanjir uchun Om qonuni bo'yicha tok kuchini va manba qisqichlaridagi kuchlanishni hisoblaysiz, salt ishlash va qisqa tutashuv rejimlarini tahlil qilasiz, ikki o'lchash natijasidan manbaning EYK va ichki qarshiligini topasiz, manbaning to'liq va foydali quvvatini hamda FIK ni hisoblaysiz, foydali quvvat eng katta bo'lish shartini qo'llaysiz, manbalarni ketma-ket, qarama-qarshi, parallel va aralash ulashda ekvivalent EYK va ichki qarshilikni topasiz, Kirxgof qoidalari yordamida tarmoqlangan zanjirlarni yechasiz.",
+  "ru": "**Цель.** После урока вы будете объяснять физический смысл электродвижущей силы и внутреннего сопротивления, рассчитывать по закону Ома для полной цепи силу тока и напряжение на зажимах источника, анализировать режимы холостого хода и короткого замыкания, находить ЭДС и внутреннее сопротивление источника по результатам двух измерений, рассчитывать полную и полезную мощность источника и его КПД, применять условие максимума полезной мощности, находить эквивалентные ЭДС и внутреннее сопротивление при последовательном, встречном, параллельном и смешанном соединении источников, решать разветвлённые цепи с помощью правил Кирхгофа.",
+  "en": "**Goal.** After this lesson you will explain the physical meaning of the electromotive force and of the internal resistance, calculate the current and the terminal voltage of a source using Ohm's law for a complete circuit, analyse the no-load and short-circuit modes, find the EMF and the internal resistance of a source from two measurements, calculate the total and useful power of a source and its efficiency, apply the condition for maximum useful power, find the equivalent EMF and internal resistance for series, opposing, parallel and mixed connections of sources, and solve branched circuits with Kirchhoff's rules."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Tok manbai va chetki kuchlar (Current source and non-electrostatic forces)",
+  "ru": "1. Источник тока и сторонние силы",
+  "en": "1. Current source and non-electrostatic forces"
+ },
+ {
+  "t": "p",
+  "uz": "Elektrostatik maydon musbat zaryadni faqat potensiali yuqori nuqtadan potensiali past nuqtaga ko'chiradi. Agar zanjirda faqat shu kuchlar ta'sir qilganda, zaryadlar tez orada potensiallarni tenglashtirib qo'yar va tok to'xtardi (kondensator razryadini eslang). Berk zanjirda tok uzoq vaqt oqishi uchun zaryadlarni maydonga **qarshi** — manfiy qutbdan musbat qutbga — olib o'tadigan elektrostatik bo'lmagan kuchlar kerak. Ular **chetki kuchlar (non-electrostatic forces)** deyiladi, ularni ta'minlaydigan qurilma esa **tok manbai (current source)**.",
+  "ru": "Электростатическое поле перемещает положительный заряд только из точки с более высоким потенциалом в точку с более низким потенциалом. Если бы в цепи действовали только эти силы, заряды быстро выровняли бы потенциалы и ток прекратился бы (вспомните разрядку конденсатора). Чтобы ток в замкнутой цепи шёл длительное время, нужны неэлектростатические силы, которые переносят заряды **против** поля — от отрицательного полюса к положительному. Они называются **сторонними силами**, а устройство, которое их создаёт, — **источником тока**.",
+  "en": "An electrostatic field moves a positive charge only from a point of higher potential to a point of lower potential. If only these forces acted in a circuit, the charges would quickly equalise the potentials and the current would stop (recall the discharge of a capacitor). For a current to flow in a closed circuit for a long time, non-electrostatic forces are needed that carry the charges **against** the field — from the negative terminal to the positive one. They are called **non-electrostatic forces**, and the device that provides them is called a **current source**."
+ },
+ {
+  "t": "li",
+  "uz": "Chetki kuchlarning tabiati turlicha: galvanik element (galvanic cell) va akkumulyatorda (storage battery) — kimyoviy reaksiyalar, generatorda — magnit maydonning harakatlanayotgan zaryadlarga ta'siri, quyosh batareyasida — yorug'likning yutilishi, termoelementda — kontaktlarning qizdirilishi. Har qanday manbada boshqa turdagi energiya elektr energiyaga aylanadi.",
+  "ru": "Природа сторонних сил различна: в гальваническом элементе и аккумуляторе — химические реакции, в генераторе — действие магнитного поля на движущиеся заряды, в солнечной батарее — поглощение света, в термоэлементе — нагревание контактов. В любом источнике энергия другого вида превращается в электрическую.",
+  "en": "The nature of non-electrostatic forces varies: in a galvanic cell and a storage battery they are chemical reactions, in a generator — the action of a magnetic field on moving charges, in a solar cell — the absorption of light, in a thermocouple — the heating of junctions. In any source, energy of another kind is converted into electrical energy."
+ },
+ {
+  "t": "li",
+  "uz": "Tashqi zanjirda musbat zaryadlar (tokning shartli yo'nalishi) musbat qutbdan manfiy qutbga oqadi, manba ichida esa chetki kuchlar ularni manfiy qutbdan musbat qutbga ko'taradi. Shuning uchun manba ichida tok «$-$» dan «$+$» ga yo'nalgan — bu Kirxgof qoidalarida ishoralarni to'g'ri qo'yish uchun muhim.",
+  "ru": "Во внешней цепи положительные заряды (условное направление тока) текут от положительного полюса к отрицательному, а внутри источника сторонние силы поднимают их от отрицательного полюса к положительному. Поэтому внутри источника ток направлен от «$-$» к «$+$» — это важно для правильной расстановки знаков в правилах Кирхгофа.",
+  "en": "In the external circuit positive charges (the conventional direction of current) flow from the positive terminal to the negative one, while inside the source the non-electrostatic forces lift them from the negative terminal to the positive one. Therefore, inside the source the current is directed from «$-$» to «$+$» — this is important for choosing the signs correctly in Kirchhoff's rules."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Elektr yurituvchi kuch va ichki qarshilik (Electromotive force and internal resistance)",
+  "ru": "2. Электродвижущая сила и внутреннее сопротивление",
+  "en": "2. Electromotive force and internal resistance"
+ },
+ {
+  "t": "p",
+  "uz": "Manbaning asosiy tavsifi — **elektr yurituvchi kuch (electromotive force, EMF)**, qisqacha EYK. U chetki kuchlarning musbat zaryadni manba ichida manfiy qutbdan musbat qutbga ko'chirishda bajargan ishi $A^*$ ning shu zaryad $q$ ga nisbatiga teng. Nomida «kuch» so'zi bo'lsa ham, EYK kuch emas: u birlik zaryadga beriladigan energiya, ya'ni energetik tavsif. Birligi kuchlanish birligi bilan bir xil — volt: $1\\ \\mathrm{V}=1\\ \\mathrm{J/C}$.",
+  "ru": "Основная характеристика источника — **электродвижущая сила**, сокращённо ЭДС. Она равна отношению работы $A^*$, которую совершают сторонние силы при перемещении положительного заряда внутри источника от отрицательного полюса к положительному, к этому заряду $q$. Хотя в названии есть слово «сила», ЭДС — не сила: это энергия, сообщаемая единичному заряду, то есть энергетическая характеристика. Её единица совпадает с единицей напряжения — вольт: $1\\ \\mathrm{V}=1\\ \\mathrm{J/C}$.",
+  "en": "The main characteristic of a source is the **electromotive force**, abbreviated EMF. It equals the ratio of the work $A^*$ done by the non-electrostatic forces in moving a positive charge inside the source from the negative terminal to the positive one to this charge $q$. Although its name contains the word «force», the EMF is not a force: it is the energy given to a unit charge, that is, an energy characteristic. Its unit is the same as the unit of voltage — the volt: $1\\ \\mathrm{V}=1\\ \\mathrm{J/C}$."
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal{E}=\\frac{A^*}{q}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** EYK si $\\mathcal{E}=1.5\\ \\mathrm{V}$ bo'lgan batareya orqali $q=40\\ \\mathrm{C}$ zaryad o'tganda chetki kuchlar $A^*=q\\mathcal{E}=60\\ \\mathrm{J}$ ish bajaradi — shuncha kimyoviy energiya elektr energiyaga aylanadi.",
+  "ru": "**Пример.** Когда через батарейку с ЭДС $\\mathcal{E}=1.5\\ \\mathrm{V}$ проходит заряд $q=40\\ \\mathrm{C}$, сторонние силы совершают работу $A^*=q\\mathcal{E}=60\\ \\mathrm{J}$ — столько химической энергии превращается в электрическую.",
+  "en": "**Example.** When a charge $q=40\\ \\mathrm{C}$ passes through a battery with EMF $\\mathcal{E}=1.5\\ \\mathrm{V}$, the non-electrostatic forces do work $A^*=q\\mathcal{E}=60\\ \\mathrm{J}$ — this much chemical energy is converted into electrical energy."
+ },
+ {
+  "t": "li",
+  "uz": "Haqiqiy manbaning ichki qismi (elektrolit, generator chulg'ami) ham tokka qarshilik ko'rsatadi — bu **ichki qarshilik (internal resistance)** $r$. Sxemada manba EYK $\\mathcal{E}$ bo'lgan ideal manba va unga ketma-ket ulangan $r$ qarshilik ko'rinishida tasvirlanadi ([[F01]], chap qism). Ichki qarshiligi nolga teng manba **ideal manba (ideal source)** deyiladi.",
+  "ru": "Внутренняя часть реального источника (электролит, обмотка генератора) тоже оказывает сопротивление току — это **внутреннее сопротивление** $r$. На схеме источник изображают как идеальный источник с ЭДС $\\mathcal{E}$ и последовательно соединённое с ним сопротивление $r$ ([[F01]], левая часть). Источник с нулевым внутренним сопротивлением называется **идеальным источником**.",
+  "en": "The interior of a real source (the electrolyte, the generator winding) also resists the current — this is the **internal resistance** $r$. In a diagram a source is drawn as an ideal source with EMF $\\mathcal{E}$ and a resistance $r$ connected in series with it ([[F01]], left part). A source with zero internal resistance is called an **ideal source**."
+ },
+ {
+  "t": "li",
+  "uz": "Manbadan tashqaridagi barcha iste'molchilar va simlar **tashqi zanjir (external circuit)** ni tashkil etadi, ularning umumiy qarshiligi — **tashqi qarshilik (external resistance)** $R$. Manba bilan birga ular **to'liq zanjir (complete circuit)** ni hosil qiladi.",
+  "ru": "Все потребители и провода вне источника образуют **внешнюю цепь**, их общее сопротивление — **внешнее сопротивление** $R$. Вместе с источником они образуют **полную цепь**.",
+  "en": "All the consumers and wires outside the source form the **external circuit**, and their total resistance is the **external resistance** $R$. Together with the source they form a **complete circuit**."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B1-L36-F01.png",
+   "ru": "figures/B1-L36-F01-ru.png",
+   "en": "figures/B1-L36-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. To'liq zanjir uchun Om qonuni (Ohm's law for a complete circuit)",
+  "ru": "3. Закон Ома для полной цепи",
+  "en": "3. Ohm's law for a complete circuit"
+ },
+ {
+  "t": "p",
+  "uz": "Qonunni energiyaning saqlanish qonunidan keltirib chiqaramiz. $t$ vaqtda zanjirdan $q=It$ zaryad o'tadi va chetki kuchlar $A^*=\\mathcal{E}It$ ish bajaradi. Agar tashqi zanjirda faqat rezistorlar bo'lsa, bu energiya to'liq issiqlikka aylanadi: tashqi qismda $I^2Rt$, manba ichida $I^2rt$ (Joul–Lens qonuni). Demak, $\\mathcal{E}It=I^2Rt+I^2rt$, bundan $\\mathcal{E}=IR+Ir$.",
+  "ru": "Выведем закон из закона сохранения энергии. За время $t$ через цепь проходит заряд $q=It$, и сторонние силы совершают работу $A^*=\\mathcal{E}It$. Если во внешней цепи только резисторы, эта энергия целиком превращается в теплоту: во внешнем участке $I^2Rt$, внутри источника $I^2rt$ (закон Джоуля–Ленца). Значит, $\\mathcal{E}It=I^2Rt+I^2rt$, откуда $\\mathcal{E}=IR+Ir$.",
+  "en": "Let us derive the law from the law of conservation of energy. In time $t$ a charge $q=It$ passes through the circuit, and the non-electrostatic forces do work $A^*=\\mathcal{E}It$. If the external circuit contains only resistors, this energy is entirely converted into heat: $I^2Rt$ in the external part and $I^2rt$ inside the source (Joule's law). Hence $\\mathcal{E}It=I^2Rt+I^2rt$, and therefore $\\mathcal{E}=IR+Ir$."
+ },
+ {
+  "t": "m",
+  "m": "I=\\frac{\\mathcal{E}}{R+r}"
+ },
+ {
+  "t": "li",
+  "uz": "**To'liq zanjir uchun Om qonuni (Ohm's law for a complete circuit):** zanjirdagi tok kuchi manbaning EYK siga to'g'ri proporsional va zanjirning to'liq qarshiligi $R+r$ ga teskari proporsional. **Misol.** $\\mathcal{E}=6\\ \\mathrm{V}$, $r=0.5\\ \\Omega$, $R=2.5\\ \\Omega$ bo'lsa, $I=\\frac{6}{3}=2\\ \\mathrm{A}$.",
+  "ru": "**Закон Ома для полной цепи:** сила тока в цепи прямо пропорциональна ЭДС источника и обратно пропорциональна полному сопротивлению цепи $R+r$. **Пример.** Если $\\mathcal{E}=6\\ \\mathrm{V}$, $r=0.5\\ \\Omega$, $R=2.5\\ \\Omega$, то $I=\\frac{6}{3}=2\\ \\mathrm{A}$.",
+  "en": "**Ohm's law for a complete circuit:** the current in a circuit is directly proportional to the EMF of the source and inversely proportional to the total resistance of the circuit $R+r$. **Example.** If $\\mathcal{E}=6\\ \\mathrm{V}$, $r=0.5\\ \\Omega$, $R=2.5\\ \\Omega$, then $I=\\frac{6}{3}=2\\ \\mathrm{A}$."
+ },
+ {
+  "t": "li",
+  "uz": "$IR$ — tashqi zanjirdagi **kuchlanish tushuvi (voltage drop)**, ya'ni manba **qisqichlaridagi kuchlanish (terminal voltage)** $U$; $Ir$ — **ichki kuchlanish tushuvi (internal voltage drop)**. EYK ularning yig'indisiga teng: $\\mathcal{E}=U+Ir$. Shuning uchun tok o'tayotganda qisqichlardagi kuchlanish EYK dan kichik.",
+  "ru": "$IR$ — **падение напряжения** во внешней цепи, то есть **напряжение на зажимах** источника $U$; $Ir$ — **падение напряжения внутри источника**. ЭДС равна их сумме: $\\mathcal{E}=U+Ir$. Поэтому, когда идёт ток, напряжение на зажимах меньше ЭДС.",
+  "en": "$IR$ is the **voltage drop** in the external circuit, that is, the **terminal voltage** $U$ of the source; $Ir$ is the **internal voltage drop**. The EMF equals their sum: $\\mathcal{E}=U+Ir$. Therefore, when a current flows, the terminal voltage is less than the EMF."
+ },
+ {
+  "t": "m",
+  "m": "U=IR=\\mathcal{E}-Ir=\\frac{\\mathcal{E}R}{R+r}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol (davomi).** Yuqoridagi zanjirda $U=2\\cdot2.5=5\\ \\mathrm{V}$, $Ir=1\\ \\mathrm{V}$, yig'indisi $6\\ \\mathrm{V}=\\mathcal{E}$. Qisqichlarga ulangan ideal voltmetr (ideal voltmeter) EYK ni emas, $U$ ni ko'rsatadi.",
+  "ru": "**Пример (продолжение).** В цепи выше $U=2\\cdot2.5=5\\ \\mathrm{V}$, $Ir=1\\ \\mathrm{V}$, их сумма $6\\ \\mathrm{V}=\\mathcal{E}$. Идеальный вольтметр, подключённый к зажимам, показывает не ЭДС, а $U$.",
+  "en": "**Example (continued).** In the circuit above $U=2\\cdot2.5=5\\ \\mathrm{V}$, $Ir=1\\ \\mathrm{V}$, and their sum is $6\\ \\mathrm{V}=\\mathcal{E}$. An ideal voltmeter connected to the terminals shows $U$, not the EMF."
+ },
+ {
+  "t": "li",
+  "uz": "Potensial diagrammasi ([[F01]], o'ng qism): tashqi zanjirda tok yo'nalishi bo'yicha potensial $R$ da $IR$ ga kamayadi; manba ichida chetki kuchlar zaryadni $\\mathcal{E}$ ga «ko'taradi», ichki qarshilikda esa potensial yana $Ir$ ga tushadi. Berk kontur bo'ylab aylanib chiqqanda potensial o'zgarishlari yig'indisi nolga teng — bu Kirxgof kontur qoidasining (loop rule) mohiyati.",
+  "ru": "Потенциальная диаграмма ([[F01]], правая часть): во внешней цепи по направлению тока потенциал на $R$ уменьшается на $IR$; внутри источника сторонние силы «поднимают» заряд на $\\mathcal{E}$, а на внутреннем сопротивлении потенциал снова падает на $Ir$. При обходе замкнутого контура сумма изменений потенциала равна нулю — в этом суть правила контуров Кирхгофа.",
+  "en": "Potential diagram ([[F01]], right part): in the external circuit, along the current, the potential decreases by $IR$ across $R$; inside the source the non-electrostatic forces «lift» the charge by $\\mathcal{E}$, and across the internal resistance the potential drops again by $Ir$. Going around a closed loop, the sum of the potential changes is zero — this is the essence of Kirchhoff's loop rule."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Salt ishlash, qisqa tutashuv va manba xarakteristikasi (No-load, short circuit and source characteristic)",
+  "ru": "4. Холостой ход, короткое замыкание и характеристика источника",
+  "en": "4. No-load, short circuit and source characteristic"
+ },
+ {
+  "t": "p",
+  "uz": "Tashqi qarshilik $R$ ortganda tok kuchi $I$ kamayadi, qisqichlardagi kuchlanish $U=\\mathcal{E}-Ir$ esa ortadi. Ikki chegaraviy holat alohida ahamiyatga ega.",
+  "ru": "При увеличении внешнего сопротивления $R$ сила тока $I$ уменьшается, а напряжение на зажимах $U=\\mathcal{E}-Ir$ увеличивается. Особое значение имеют два предельных случая.",
+  "en": "As the external resistance $R$ increases, the current $I$ decreases, while the terminal voltage $U=\\mathcal{E}-Ir$ increases. Two limiting cases are of special importance."
+ },
+ {
+  "t": "li",
+  "uz": "**Salt ishlash (no-load operation)** — zanjir ochiq, $R\\to\\infty$: $I=0$ va $U=\\mathcal{E}$. Ichki qarshiligi juda katta voltmetr ochiq manba qisqichlariga ulansa, EYK ni deyarli aniq ko'rsatadi. Shuning uchun EYK ni **salt ishlash kuchlanishi (open-circuit voltage)** deb ham ta'riflash mumkin.",
+  "ru": "**Холостой ход** — цепь разомкнута, $R\\to\\infty$: $I=0$ и $U=\\mathcal{E}$. Вольтметр с очень большим сопротивлением, подключённый к зажимам разомкнутого источника, показывает практически точно ЭДС. Поэтому ЭДС можно определить и как **напряжение холостого хода**.",
+  "en": "**No-load operation** — the circuit is open, $R\\to\\infty$: $I=0$ and $U=\\mathcal{E}$. A voltmeter with a very large resistance connected to the terminals of an open source shows the EMF almost exactly. Therefore the EMF can also be defined as the **open-circuit voltage**."
+ },
+ {
+  "t": "li",
+  "uz": "**Qisqa tutashuv (short circuit)** — qisqichlar qarshiligi juda kichik sim bilan tutashtirilgan, $R\\to0$: $U=0$, tok esa eng katta qiymatga erishadi — **qisqa tutashuv toki (short-circuit current)**. Bunda chetki kuchlarning butun ishi manba ichida issiqlikka aylanadi.",
+  "ru": "**Короткое замыкание** — зажимы соединены проводом очень малого сопротивления, $R\\to0$: $U=0$, а ток достигает наибольшего значения — **ток короткого замыкания**. При этом вся работа сторонних сил превращается в теплоту внутри источника.",
+  "en": "**Short circuit** — the terminals are connected by a wire of very small resistance, $R\\to0$: $U=0$, and the current reaches its largest value — the **short-circuit current**. In this case all the work of the non-electrostatic forces is converted into heat inside the source."
+ },
+ {
+  "t": "m",
+  "m": "I_{max}=\\frac{\\mathcal{E}}{r}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Avtomobil akkumulyatori uchun $\\mathcal{E}=12\\ \\mathrm{V}$, $r=0.01\\ \\Omega$: $I_{max}=1200\\ \\mathrm{A}$. Bunday tok simlarni eritib, yong'in chiqarishi mumkin — shuning uchun zanjirlarga saqlagich (fuse) va avtomatik o'chirgichlar qo'yiladi. Ichki qarshiligi katta manbada (masalan, $\\mathcal{E}=1.5\\ \\mathrm{V}$, $r=1\\ \\Omega$ li batareyada) qisqa tutashuv toki atigi $1.5\\ \\mathrm{A}$.",
+  "ru": "**Пример.** Для автомобильного аккумулятора $\\mathcal{E}=12\\ \\mathrm{V}$, $r=0.01\\ \\Omega$: $I_{max}=1200\\ \\mathrm{A}$. Такой ток может расплавить провода и вызвать пожар — поэтому в цепи ставят предохранители и автоматические выключатели. У источника с большим внутренним сопротивлением (например, у батарейки с $\\mathcal{E}=1.5\\ \\mathrm{V}$, $r=1\\ \\Omega$) ток короткого замыкания всего $1.5\\ \\mathrm{A}$.",
+  "en": "**Example.** For a car battery $\\mathcal{E}=12\\ \\mathrm{V}$, $r=0.01\\ \\Omega$: $I_{max}=1200\\ \\mathrm{A}$. Such a current can melt the wires and cause a fire — that is why fuses and circuit breakers are installed in circuits. For a source with a large internal resistance (for example, a battery with $\\mathcal{E}=1.5\\ \\mathrm{V}$, $r=1\\ \\Omega$) the short-circuit current is only $1.5\\ \\mathrm{A}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Manba xarakteristikasi (source characteristic)** — qisqichlardagi kuchlanishning tok kuchiga bog'liqligi $U=\\mathcal{E}-Ir$ — to'g'ri chiziq ([[F02]]). U kuchlanish o'qini $\\mathcal{E}$ nuqtada, tok o'qini $I_{max}=\\frac{\\mathcal{E}}{r}$ nuqtada kesadi; chiziq qiyaligining moduli ichki qarshilikka teng. Ichki qarshilik qancha kichik bo'lsa, chiziq shuncha yotiq — ideal manbada gorizontal.",
+  "ru": "**Характеристика источника** — зависимость напряжения на зажимах от силы тока $U=\\mathcal{E}-Ir$ — прямая линия ([[F02]]). Она пересекает ось напряжения в точке $\\mathcal{E}$, а ось тока — в точке $I_{max}=\\frac{\\mathcal{E}}{r}$; модуль наклона прямой равен внутреннему сопротивлению. Чем меньше внутреннее сопротивление, тем положе прямая — у идеального источника она горизонтальна.",
+  "en": "The **source characteristic** — the dependence of the terminal voltage on the current, $U=\\mathcal{E}-Ir$ — is a straight line ([[F02]]). It crosses the voltage axis at $\\mathcal{E}$ and the current axis at $I_{max}=\\frac{\\mathcal{E}}{r}$; the magnitude of the slope of the line equals the internal resistance. The smaller the internal resistance, the flatter the line — for an ideal source it is horizontal."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B1-L36-F02.png",
+   "ru": "figures/B1-L36-F02-ru.png",
+   "en": "figures/B1-L36-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**EYK va ichki qarshilikni ikki o'lchashdan topish.** Tashqi qarshilik o'zgartirilib, ikki holatda tok va kuchlanish o'lchangan bo'lsin: $(I_1,\\ U_1)$ va $(I_2,\\ U_2)$. $U_1=\\mathcal{E}-I_1r$ va $U_2=\\mathcal{E}-I_2r$ tenglamalarini ayirib, $r$ ni, so'ng $\\mathcal{E}$ ni topamiz.",
+  "ru": "**Определение ЭДС и внутреннего сопротивления по двум измерениям.** Пусть при изменении внешнего сопротивления в двух случаях измерены ток и напряжение: $(I_1,\\ U_1)$ и $(I_2,\\ U_2)$. Вычитая уравнения $U_1=\\mathcal{E}-I_1r$ и $U_2=\\mathcal{E}-I_2r$, находим $r$, а затем $\\mathcal{E}$.",
+  "en": "**Finding the EMF and the internal resistance from two measurements.** Suppose that, as the external resistance is changed, the current and the voltage are measured in two cases: $(I_1,\\ U_1)$ and $(I_2,\\ U_2)$. Subtracting the equations $U_1=\\mathcal{E}-I_1r$ and $U_2=\\mathcal{E}-I_2r$, we find $r$ and then $\\mathcal{E}$."
+ },
+ {
+  "t": "m",
+  "m": "r=\\frac{U_1-U_2}{I_2-I_1},\\qquad \\mathcal{E}=U_1+I_1r"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $I_1=1\\ \\mathrm{A}$ da $U_1=11\\ \\mathrm{V}$, $I_2=3\\ \\mathrm{A}$ da $U_2=9\\ \\mathrm{V}$. U holda $r=\\frac{11-9}{3-1}=1\\ \\Omega$, $\\mathcal{E}=11+1\\cdot1=12\\ \\mathrm{V}$, $I_{max}=12\\ \\mathrm{A}$. Agar faqat tashqi qarshiliklar va toklar ma'lum bo'lsa ($R_1$ da $I_1$, $R_2$ da $I_2$), $I_1(R_1+r)=I_2(R_2+r)$ tenglamasidan foydalaniladi.",
+  "ru": "**Пример.** При $I_1=1\\ \\mathrm{A}$ напряжение $U_1=11\\ \\mathrm{V}$, при $I_2=3\\ \\mathrm{A}$ — $U_2=9\\ \\mathrm{V}$. Тогда $r=\\frac{11-9}{3-1}=1\\ \\Omega$, $\\mathcal{E}=11+1\\cdot1=12\\ \\mathrm{V}$, $I_{max}=12\\ \\mathrm{A}$. Если известны только внешние сопротивления и токи ($I_1$ при $R_1$, $I_2$ при $R_2$), используют уравнение $I_1(R_1+r)=I_2(R_2+r)$.",
+  "en": "**Example.** At $I_1=1\\ \\mathrm{A}$ the voltage is $U_1=11\\ \\mathrm{V}$, at $I_2=3\\ \\mathrm{A}$ it is $U_2=9\\ \\mathrm{V}$. Then $r=\\frac{11-9}{3-1}=1\\ \\Omega$, $\\mathcal{E}=11+1\\cdot1=12\\ \\mathrm{V}$, $I_{max}=12\\ \\mathrm{A}$. If only the external resistances and the currents are known ($I_1$ at $R_1$, $I_2$ at $R_2$), the equation $I_1(R_1+r)=I_2(R_2+r)$ is used."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Manbaning quvvati va FIK (Power and efficiency of a source)",
+  "ru": "5. Мощность и КПД источника",
+  "en": "5. Power and efficiency of a source"
+ },
+ {
+  "t": "p",
+  "uz": "Chetki kuchlar vaqt birligida bajaradigan ish — manbaning **to'liq quvvati (total power)** $P=\\mathcal{E}I$. Uning bir qismi tashqi zanjirga beriladi — bu **foydali quvvat (useful power)** $P_R=I^2R=UI$, qolgani manba ichida issiqlikka aylanadi — **isrof quvvati (power loss)** $P_r=I^2r$. Foydali quvvatning to'liq quvvatga nisbati — manbaning **FIK (efficiency)**.",
+  "ru": "Работа сторонних сил в единицу времени — **полная мощность** источника $P=\\mathcal{E}I$. Часть её передаётся во внешнюю цепь — это **полезная мощность** $P_R=I^2R=UI$, остальное превращается в теплоту внутри источника — **мощность потерь** $P_r=I^2r$. Отношение полезной мощности к полной — **КПД** источника.",
+  "en": "The work done by the non-electrostatic forces per unit time is the **total power** of the source, $P=\\mathcal{E}I$. Part of it is delivered to the external circuit — this is the **useful power** $P_R=I^2R=UI$; the rest is converted into heat inside the source — the **power loss** $P_r=I^2r$. The ratio of the useful power to the total power is the **efficiency** of the source."
+ },
+ {
+  "t": "m",
+  "m": "P=\\mathcal{E}I=P_R+P_r,\\qquad P_R=I^2R=\\frac{\\mathcal{E}^2R}{(R+r)^2}"
+ },
+ {
+  "t": "m",
+  "m": "\\eta=\\frac{P_R}{P}=\\frac{U}{\\mathcal{E}}=\\frac{R}{R+r}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $\\mathcal{E}=12\\ \\mathrm{V}$, $r=2\\ \\Omega$, $R=4\\ \\Omega$: $I=2\\ \\mathrm{A}$, $P=24\\ \\mathrm{W}$, $P_R=16\\ \\mathrm{W}$, $P_r=8\\ \\mathrm{W}$, $\\eta=\\frac{4}{6}\\approx0.67$, ya'ni $67$ foiz.",
+  "ru": "**Пример.** $\\mathcal{E}=12\\ \\mathrm{V}$, $r=2\\ \\Omega$, $R=4\\ \\Omega$: $I=2\\ \\mathrm{A}$, $P=24\\ \\mathrm{W}$, $P_R=16\\ \\mathrm{W}$, $P_r=8\\ \\mathrm{W}$, $\\eta=\\frac{4}{6}\\approx0.67$, то есть $67$ процентов.",
+  "en": "**Example.** $\\mathcal{E}=12\\ \\mathrm{V}$, $r=2\\ \\Omega$, $R=4\\ \\Omega$: $I=2\\ \\mathrm{A}$, $P=24\\ \\mathrm{W}$, $P_R=16\\ \\mathrm{W}$, $P_r=8\\ \\mathrm{W}$, $\\eta=\\frac{4}{6}\\approx0.67$, that is, $67$ percent."
+ },
+ {
+  "t": "li",
+  "uz": "**Eng katta foydali quvvat (maximum useful power).** $P_R=\\frac{\\mathcal{E}^2}{R+2r+\\frac{r^2}{R}}$ ko'rinishida yozamiz. Maxraj $R+\\frac{r^2}{R}\\ge2r$ (o'rta arifmetik va o'rta geometrik orasidagi tengsizlik) bo'lgani uchun eng kichik qiymatiga $R=r$ da erishadi. Demak, tashqi qarshilik ichki qarshilikka teng bo'lganda (**yukni moslash — load matching**) foydali quvvat eng katta, FIK esa atigi $50$ foiz.",
+  "ru": "**Максимальная полезная мощность.** Запишем $P_R=\\frac{\\mathcal{E}^2}{R+2r+\\frac{r^2}{R}}$. Так как $R+\\frac{r^2}{R}\\ge2r$ (неравенство между средним арифметическим и средним геометрическим), знаменатель минимален при $R=r$. Значит, когда внешнее сопротивление равно внутреннему (**согласование нагрузки**), полезная мощность максимальна, а КПД равен всего $50$ процентам.",
+  "en": "**Maximum useful power.** Let us write $P_R=\\frac{\\mathcal{E}^2}{R+2r+\\frac{r^2}{R}}$. Since $R+\\frac{r^2}{R}\\ge2r$ (the inequality between the arithmetic and geometric means), the denominator is smallest at $R=r$. Hence, when the external resistance equals the internal one (**load matching**), the useful power is maximal, while the efficiency is only $50$ percent."
+ },
+ {
+  "t": "m",
+  "m": "R=r:\\qquad P_{max}=\\frac{\\mathcal{E}^2}{4r},\\qquad \\eta=\\frac{1}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "$P_R(R)$ va $\\eta(R)$ grafiklari ([[F03]]): $R$ ortganda FIK $1$ ga intiladi, foydali quvvat esa avval ortib, $R=r$ da maksimumga erishadi, so'ng kamayadi. $P_{max}$ dan kichik har bir quvvat qiymatiga ikki xil tashqi qarshilik mos keladi va ular uchun $R_1R_2=r^2$. **Misol.** $R_1=2\\ \\Omega$ va $R_2=8\\ \\Omega$ da foydali quvvat bir xil bo'lsa, $r=\\sqrt{2\\cdot8}=4\\ \\Omega$.",
+  "ru": "Графики $P_R(R)$ и $\\eta(R)$ ([[F03]]): при увеличении $R$ КПД стремится к $1$, а полезная мощность сначала растёт, при $R=r$ достигает максимума, затем убывает. Каждому значению мощности, меньшему $P_{max}$, соответствуют два разных внешних сопротивления, и для них $R_1R_2=r^2$. **Пример.** Если при $R_1=2\\ \\Omega$ и $R_2=8\\ \\Omega$ полезная мощность одинакова, то $r=\\sqrt{2\\cdot8}=4\\ \\Omega$.",
+  "en": "The graphs of $P_R(R)$ and $\\eta(R)$ ([[F03]]): as $R$ increases, the efficiency tends to $1$, while the useful power first increases, reaches a maximum at $R=r$ and then decreases. Each value of power smaller than $P_{max}$ corresponds to two different external resistances, and for them $R_1R_2=r^2$. **Example.** If the useful power is the same at $R_1=2\\ \\Omega$ and $R_2=8\\ \\Omega$, then $r=\\sqrt{2\\cdot8}=4\\ \\Omega$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B1-L36-F03.png",
+   "ru": "figures/B1-L36-F03-ru.png",
+   "en": "figures/B1-L36-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "Energetikada FIK muhim, shuning uchun tarmoqlar $R\\gg r$ rejimida ishlaydi. Moslash ($R=r$) esa signal kuchsiz bo'lib, undan eng ko'p quvvat olish zarur bo'lgan joyda — radiotexnikada, kuchaytirgichlarda qo'llaniladi.",
+  "ru": "В энергетике важен КПД, поэтому сети работают в режиме $R\\gg r$. Согласование ($R=r$) применяют там, где сигнал слабый и от него нужно получить наибольшую мощность, — в радиотехнике, в усилителях.",
+  "en": "In power engineering the efficiency is what matters, so networks operate in the regime $R\\gg r$. Matching ($R=r$) is used where the signal is weak and the largest possible power must be extracted from it — in radio engineering and in amplifiers."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Manbalarni ketma-ket va qarama-qarshi ulash (Sources in series and in opposition)",
+  "ru": "6. Последовательное и встречное включение источников",
+  "en": "6. Sources in series and in opposition"
+ },
+ {
+  "t": "p",
+  "uz": "Bitta manbaning EYK si yoki ruxsat etilgan toki yetarli bo'lmasa, bir nechta manba **batareya (battery)** qilib ulanadi. **Ketma-ket ulashda (series connection)** bir manbaning musbat qutbi keyingisining manfiy qutbiga ulanadi ([[F04]], a). Bunda EYK lar ham, ichki qarshiliklar ham qo'shiladi; $n$ ta bir xil element uchun:",
+  "ru": "Если ЭДС или допустимого тока одного источника недостаточно, несколько источников соединяют в **батарею**. При **последовательном соединении** положительный полюс одного источника соединяют с отрицательным полюсом следующего ([[F04]], a). При этом складываются и ЭДС, и внутренние сопротивления; для $n$ одинаковых элементов:",
+  "en": "If the EMF or the permissible current of one source is not enough, several sources are connected into a **battery**. In a **series connection** the positive terminal of one source is connected to the negative terminal of the next ([[F04]], a). Then both the EMFs and the internal resistances add up; for $n$ identical cells:"
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal{E}=n\\mathcal{E}_0,\\qquad r=nr_0,\\qquad I=\\frac{n\\mathcal{E}_0}{R+nr_0}"
+ },
+ {
+  "t": "li",
+  "uz": "Bu yerda $\\mathcal{E}_0$, $r_0$ — bitta elementning EYK si va ichki qarshiligi. Turli manbalar ketma-ket ulansa: $\\mathcal{E}=\\mathcal{E}_1+\\mathcal{E}_2+\\ldots$, $r=r_1+r_2+\\ldots$. Ketma-ket ulash tashqi qarshilik katta ($R\\gg nr_0$) bo'lganda foydali: tok deyarli $n$ marta ortadi.",
+  "ru": "Здесь $\\mathcal{E}_0$, $r_0$ — ЭДС и внутреннее сопротивление одного элемента. Если последовательно соединены разные источники: $\\mathcal{E}=\\mathcal{E}_1+\\mathcal{E}_2+\\ldots$, $r=r_1+r_2+\\ldots$. Последовательное соединение выгодно, когда внешнее сопротивление велико ($R\\gg nr_0$): ток возрастает почти в $n$ раз.",
+  "en": "Here $\\mathcal{E}_0$, $r_0$ are the EMF and the internal resistance of one cell. If different sources are connected in series: $\\mathcal{E}=\\mathcal{E}_1+\\mathcal{E}_2+\\ldots$, $r=r_1+r_2+\\ldots$. A series connection is advantageous when the external resistance is large ($R\\gg nr_0$): the current increases almost $n$ times."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Har biri $\\mathcal{E}_0=1.5\\ \\mathrm{V}$, $r_0=0.5\\ \\Omega$ bo'lgan $4$ ta element ketma-ket ulanib, $R=10\\ \\Omega$ ga ulangan: $\\mathcal{E}=6\\ \\mathrm{V}$, $r=2\\ \\Omega$, $I=\\frac{6}{12}=0.5\\ \\mathrm{A}$. Bitta element bilan tok $\\frac{1.5}{10.5}\\approx0.14\\ \\mathrm{A}$ bo'lardi.",
+  "ru": "**Пример.** $4$ элемента, каждый с $\\mathcal{E}_0=1.5\\ \\mathrm{V}$, $r_0=0.5\\ \\Omega$, соединены последовательно и подключены к $R=10\\ \\Omega$: $\\mathcal{E}=6\\ \\mathrm{V}$, $r=2\\ \\Omega$, $I=\\frac{6}{12}=0.5\\ \\mathrm{A}$. С одним элементом ток был бы $\\frac{1.5}{10.5}\\approx0.14\\ \\mathrm{A}$.",
+  "en": "**Example.** $4$ cells, each with $\\mathcal{E}_0=1.5\\ \\mathrm{V}$, $r_0=0.5\\ \\Omega$, are connected in series to $R=10\\ \\Omega$: $\\mathcal{E}=6\\ \\mathrm{V}$, $r=2\\ \\Omega$, $I=\\frac{6}{12}=0.5\\ \\mathrm{A}$. With one cell the current would be $\\frac{1.5}{10.5}\\approx0.14\\ \\mathrm{A}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Qarama-qarshi ulash (opposing connection)** — ikki manba bir xil nomli qutblari bilan ulangan ([[F04]], b). Natijaviy EYK $\\mathcal{E}=|\\mathcal{E}_1-\\mathcal{E}_2|$, ichki qarshiliklar esa baribir **qo'shiladi**: $r=r_1+r_2$. EYK si kattaroq manba razryadlanadi, kichigi esa zaryadlanadi.",
+  "ru": "**Встречное включение** — два источника соединены одноимёнными полюсами ([[F04]], b). Результирующая ЭДС $\\mathcal{E}=|\\mathcal{E}_1-\\mathcal{E}_2|$, а внутренние сопротивления всё равно **складываются**: $r=r_1+r_2$. Источник с большей ЭДС разряжается, а с меньшей — заряжается.",
+  "en": "**Opposing connection** — two sources are connected with like terminals together ([[F04]], b). The resulting EMF is $\\mathcal{E}=|\\mathcal{E}_1-\\mathcal{E}_2|$, while the internal resistances still **add up**: $r=r_1+r_2$. The source with the larger EMF discharges, and the one with the smaller EMF is charged."
+ },
+ {
+  "t": "m",
+  "m": "I=\\frac{|\\mathcal{E}_1-\\mathcal{E}_2|}{R+r_1+r_2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $\\mathcal{E}_1=12\\ \\mathrm{V}$ va $\\mathcal{E}_2=9\\ \\mathrm{V}$ ($r_1=r_2=0.5\\ \\Omega$) qarama-qarshi ulanib, $R=2\\ \\Omega$ ga ulangan: $I=\\frac{3}{3}=1\\ \\mathrm{A}$. Agar ular to'g'ri (ketma-ket) ulanganda edi, $I=\\frac{21}{3}=7\\ \\mathrm{A}$ bo'lardi.",
+  "ru": "**Пример.** $\\mathcal{E}_1=12\\ \\mathrm{V}$ и $\\mathcal{E}_2=9\\ \\mathrm{V}$ ($r_1=r_2=0.5\\ \\Omega$) включены встречно и подключены к $R=2\\ \\Omega$: $I=\\frac{3}{3}=1\\ \\mathrm{A}$. Если бы их включили согласно (последовательно), было бы $I=\\frac{21}{3}=7\\ \\mathrm{A}$.",
+  "en": "**Example.** $\\mathcal{E}_1=12\\ \\mathrm{V}$ and $\\mathcal{E}_2=9\\ \\mathrm{V}$ ($r_1=r_2=0.5\\ \\Omega$) are connected in opposition to $R=2\\ \\Omega$: $I=\\frac{3}{3}=1\\ \\mathrm{A}$. If they were connected in series aiding, the current would be $I=\\frac{21}{3}=7\\ \\mathrm{A}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B1-L36-F04.png",
+   "ru": "figures/B1-L36-F04-ru.png",
+   "en": "figures/B1-L36-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Manbalarni parallel va aralash ulash (Sources in parallel and mixed connection)",
+  "ru": "7. Параллельное и смешанное соединение источников",
+  "en": "7. Sources in parallel and mixed connection"
+ },
+ {
+  "t": "p",
+  "uz": "**Parallel ulashda (parallel connection)** barcha musbat qutblar bir nuqtaga, barcha manfiy qutblar boshqa nuqtaga ulanadi ([[F05]], a). $n$ ta bir xil element uchun EYK o'zgarmaydi, ichki qarshilik esa $n$ marta kamayadi — xuddi $n$ ta bir xil rezistor parallel ulangandek:",
+  "ru": "При **параллельном соединении** все положительные полюсы соединяют в одной точке, а все отрицательные — в другой ([[F05]], a). Для $n$ одинаковых элементов ЭДС не меняется, а внутреннее сопротивление уменьшается в $n$ раз — как у $n$ одинаковых резисторов, соединённых параллельно:",
+  "en": "In a **parallel connection** all the positive terminals are joined at one point and all the negative terminals at another ([[F05]], a). For $n$ identical cells the EMF does not change, while the internal resistance decreases $n$ times — just as for $n$ identical resistors connected in parallel:"
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal{E}=\\mathcal{E}_0,\\qquad r=\\frac{r_0}{n},\\qquad I=\\frac{\\mathcal{E}_0}{R+\\frac{r_0}{n}}"
+ },
+ {
+  "t": "li",
+  "uz": "Parallel ulash tashqi qarshilik kichik ($R\\ll r_0$) bo'lganda foydali: tok deyarli $n$ marta ortadi, har bir elementdan esa umumiy tokning $\\frac{1}{n}$ qismi o'tadi — elementlar sekinroq razryadlanadi.",
+  "ru": "Параллельное соединение выгодно, когда внешнее сопротивление мало ($R\\ll r_0$): ток возрастает почти в $n$ раз, а через каждый элемент проходит лишь $\\frac{1}{n}$ часть общего тока — элементы разряжаются медленнее.",
+  "en": "A parallel connection is advantageous when the external resistance is small ($R\\ll r_0$): the current increases almost $n$ times, and each cell carries only $\\frac{1}{n}$ of the total current — the cells discharge more slowly."
+ },
+ {
+  "t": "li",
+  "uz": "**Aralash ulash (mixed connection)** — $N$ ta element $m$ ta parallel guruhga bo'linib, har bir guruhda $n$ ta element ketma-ket ulangan ($N=nm$; [[F05]], b). Har bir guruhning EYK si $n\\mathcal{E}_0$, ichki qarshiligi $nr_0$; $m$ ta guruh parallel bo'lgani uchun:",
+  "ru": "**Смешанное соединение** — $N$ элементов разбиты на $m$ параллельных групп, в каждой из которых $n$ элементов соединены последовательно ($N=nm$; [[F05]], b). ЭДС каждой группы $n\\mathcal{E}_0$, внутреннее сопротивление $nr_0$; так как $m$ групп соединены параллельно:",
+  "en": "**Mixed connection** — $N$ cells are divided into $m$ parallel groups, each containing $n$ cells in series ($N=nm$; [[F05]], b). Each group has EMF $n\\mathcal{E}_0$ and internal resistance $nr_0$; since the $m$ groups are in parallel:"
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal{E}=n\\mathcal{E}_0,\\qquad r=\\frac{nr_0}{m},\\qquad I=\\frac{n\\mathcal{E}_0}{R+\\frac{nr_0}{m}}"
+ },
+ {
+  "t": "li",
+  "uz": "Berilgan $N$ ta elementdan eng katta tok batareyaning ichki qarshiligi tashqi qarshilikka teng bo'lganda olinadi: $\\frac{nr_0}{m}=R$ (yoki unga eng yaqin butun sonli variantda). **Misol.** $N=8$ ta element ($\\mathcal{E}_0=1.5\\ \\mathrm{V}$, $r_0=2\\ \\Omega$), $R=1\\ \\Omega$. Barchasi ketma-ket: $I=\\frac{12}{17}\\approx0.71\\ \\mathrm{A}$; barchasi parallel: $I=\\frac{1.5}{1.25}=1.2\\ \\mathrm{A}$; $n=2$, $m=4$ da $r=1\\ \\Omega=R$ va $I=\\frac{3}{2}=1.5\\ \\mathrm{A}$ — eng katta.",
+  "ru": "Из заданных $N$ элементов наибольший ток получается, когда внутреннее сопротивление батареи равно внешнему сопротивлению: $\\frac{nr_0}{m}=R$ (или в ближайшем к этому целочисленном варианте). **Пример.** $N=8$ элементов ($\\mathcal{E}_0=1.5\\ \\mathrm{V}$, $r_0=2\\ \\Omega$), $R=1\\ \\Omega$. Все последовательно: $I=\\frac{12}{17}\\approx0.71\\ \\mathrm{A}$; все параллельно: $I=\\frac{1.5}{1.25}=1.2\\ \\mathrm{A}$; при $n=2$, $m=4$ получаем $r=1\\ \\Omega=R$ и $I=\\frac{3}{2}=1.5\\ \\mathrm{A}$ — наибольший.",
+  "en": "From the given $N$ cells the largest current is obtained when the internal resistance of the battery equals the external resistance: $\\frac{nr_0}{m}=R$ (or in the integer variant closest to it). **Example.** $N=8$ cells ($\\mathcal{E}_0=1.5\\ \\mathrm{V}$, $r_0=2\\ \\Omega$), $R=1\\ \\Omega$. All in series: $I=\\frac{12}{17}\\approx0.71\\ \\mathrm{A}$; all in parallel: $I=\\frac{1.5}{1.25}=1.2\\ \\mathrm{A}$; with $n=2$, $m=4$ we get $r=1\\ \\Omega=R$ and $I=\\frac{3}{2}=1.5\\ \\mathrm{A}$ — the largest."
+ },
+ {
+  "t": "li",
+  "uz": "**Turli manbalarni parallel ulash.** EYK lari $\\mathcal{E}_1$, $\\mathcal{E}_2$ va ichki qarshiliklari $r_1$, $r_2$ bo'lgan ikki manba parallel ulansa, ularni bitta **ekvivalent manba (equivalent source)** bilan almashtirish mumkin:",
+  "ru": "**Параллельное соединение разных источников.** Если параллельно соединены два источника с ЭДС $\\mathcal{E}_1$, $\\mathcal{E}_2$ и внутренними сопротивлениями $r_1$, $r_2$, их можно заменить одним **эквивалентным источником**:",
+  "en": "**Parallel connection of different sources.** If two sources with EMFs $\\mathcal{E}_1$, $\\mathcal{E}_2$ and internal resistances $r_1$, $r_2$ are connected in parallel, they can be replaced by one **equivalent source**:"
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal{E}=\\frac{\\mathcal{E}_1r_2+\\mathcal{E}_2r_1}{r_1+r_2},\\qquad r=\\frac{r_1r_2}{r_1+r_2}"
+ },
+ {
+  "t": "li",
+  "uz": "Tashqi zanjir ulanmagan bo'lsa ham, EYK lari har xil manbalar orqali $I=\\frac{\\mathcal{E}_1-\\mathcal{E}_2}{r_1+r_2}$ aylanma tok o'tadi va energiya behuda issiqlikka sarflanadi. Shuning uchun parallel faqat EYK lari bir xil manbalar ulanadi.",
+  "ru": "Даже без внешней цепи через источники с разными ЭДС идёт уравнительный ток $I=\\frac{\\mathcal{E}_1-\\mathcal{E}_2}{r_1+r_2}$, и энергия бесполезно тратится на нагрев. Поэтому параллельно соединяют только источники с одинаковыми ЭДС.",
+  "en": "Even with no external circuit, a circulating current $I=\\frac{\\mathcal{E}_1-\\mathcal{E}_2}{r_1+r_2}$ flows through sources with different EMFs, and energy is wasted as heat. That is why only sources with equal EMFs are connected in parallel."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B1-L36-F05.png",
+   "ru": "figures/B1-L36-F05-ru.png",
+   "en": "figures/B1-L36-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Kirxgof qoidalari va akkumulyatorni zaryadlash (Kirchhoff's rules and charging a battery)",
+  "ru": "8. Правила Кирхгофа и зарядка аккумулятора",
+  "en": "8. Kirchhoff's rules and charging a battery"
+ },
+ {
+  "t": "p",
+  "uz": "Ketma-ket va parallel bo'laklarga ajralmaydigan tarmoqlangan zanjirlar **Kirxgof qoidalari (Kirchhoff's rules)** bilan yechiladi. GRE testlarida bu usul juda ko'p uchraydi.",
+  "ru": "Разветвлённые цепи, которые не сводятся к последовательным и параллельным участкам, рассчитывают с помощью **правил Кирхгофа**. В тестах GRE этот метод встречается очень часто.",
+  "en": "Branched circuits that cannot be reduced to series and parallel parts are solved with **Kirchhoff's rules**. This method appears very often in GRE tests."
+ },
+ {
+  "t": "li",
+  "uz": "**Tugun qoidasi (junction rule):** tugunga (uch va undan ortiq o'tkazgich tutashgan nuqtaga) kiruvchi toklar yig'indisi chiquvchi toklar yig'indisiga teng. Bu — zaryadning saqlanish qonuni.",
+  "ru": "**Правило узлов:** сумма токов, входящих в узел (точку, где соединяются три и более проводника), равна сумме выходящих токов. Это закон сохранения заряда.",
+  "en": "**Junction rule:** the sum of the currents entering a junction (a point where three or more conductors meet) equals the sum of the currents leaving it. This is the law of conservation of charge."
+ },
+ {
+  "t": "li",
+  "uz": "**Kontur qoidasi (loop rule):** har qanday berk kontur bo'ylab EYK larning algebraik yig'indisi kuchlanish tushuvlarining algebraik yig'indisiga teng. Bu — energiyaning saqlanish qonuni. Ishoralar: konturni aylanish yo'nalishi tanlanadi; manba ichida «$-$» dan «$+$» ga o'tilsa $\\mathcal{E}$ musbat; qarshilikdagi tok aylanish yo'nalishi bilan bir xil bo'lsa $IR$ musbat.",
+  "ru": "**Правило контуров:** вдоль любого замкнутого контура алгебраическая сумма ЭДС равна алгебраической сумме падений напряжения. Это закон сохранения энергии. Знаки: выбирают направление обхода контура; если внутри источника переходим от «$-$» к «$+$», $\\mathcal{E}$ положительна; если ток в сопротивлении совпадает с направлением обхода, $IR$ положительно.",
+  "en": "**Loop rule:** around any closed loop the algebraic sum of the EMFs equals the algebraic sum of the voltage drops. This is the law of conservation of energy. Signs: a direction of traversal is chosen; if we pass inside a source from «$-$» to «$+$», $\\mathcal{E}$ is positive; if the current in a resistance has the same direction as the traversal, $IR$ is positive."
+ },
+ {
+  "t": "m",
+  "m": "\\sum I_{k}=0,\\qquad \\sum\\mathcal{E}_k=\\sum I_kR_k"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol ([[F06]], a).** $\\mathcal{E}_1=12\\ \\mathrm{V}$ ($r_1=1\\ \\Omega$) va $\\mathcal{E}_2=4\\ \\mathrm{V}$ ($r_2=2\\ \\Omega$) manbalar va $R=4\\ \\Omega$ rezistor parallel ulangan. Tugunlar orasidagi kuchlanishni $U$ deb belgilaymiz: $I_1=\\frac{12-U}{1}$, $I_2=\\frac{4-U}{2}$, $I=\\frac{U}{4}$. Tugun qoidasi $I_1+I_2=I$ dan $U=8\\ \\mathrm{V}$; $I_1=4\\ \\mathrm{A}$, $I=2\\ \\mathrm{A}$, $I_2=-2\\ \\mathrm{A}$. Minus ishora ikkinchi manbadan tok teskari yo'nalishda o'tishini, ya'ni u **zaryadlanayotganini** bildiradi.",
+  "ru": "**Пример ([[F06]], a).** Источники $\\mathcal{E}_1=12\\ \\mathrm{V}$ ($r_1=1\\ \\Omega$) и $\\mathcal{E}_2=4\\ \\mathrm{V}$ ($r_2=2\\ \\Omega$) и резистор $R=4\\ \\Omega$ соединены параллельно. Обозначим напряжение между узлами $U$: $I_1=\\frac{12-U}{1}$, $I_2=\\frac{4-U}{2}$, $I=\\frac{U}{4}$. Из правила узлов $I_1+I_2=I$ получаем $U=8\\ \\mathrm{V}$; $I_1=4\\ \\mathrm{A}$, $I=2\\ \\mathrm{A}$, $I_2=-2\\ \\mathrm{A}$. Знак минус означает, что ток через второй источник идёт в обратном направлении, то есть он **заряжается**.",
+  "en": "**Example ([[F06]], a).** Sources $\\mathcal{E}_1=12\\ \\mathrm{V}$ ($r_1=1\\ \\Omega$) and $\\mathcal{E}_2=4\\ \\mathrm{V}$ ($r_2=2\\ \\Omega$) and a resistor $R=4\\ \\Omega$ are connected in parallel. Denote the voltage between the junctions by $U$: $I_1=\\frac{12-U}{1}$, $I_2=\\frac{4-U}{2}$, $I=\\frac{U}{4}$. From the junction rule $I_1+I_2=I$ we get $U=8\\ \\mathrm{V}$; $I_1=4\\ \\mathrm{A}$, $I=2\\ \\mathrm{A}$, $I_2=-2\\ \\mathrm{A}$. The minus sign means that the current through the second source flows in the opposite direction, that is, it is **being charged**."
+ },
+ {
+  "t": "li",
+  "uz": "**Akkumulyatorni zaryadlash (charging a battery).** Zaryadlovchi qurilma tokni akkumulyator orqali EYK ga **qarshi** yo'nalishda o'tkazadi ([[F06]], b). Bunda qisqichlardagi kuchlanish EYK dan katta: $U=\\mathcal{E}+Ir$. Berilgan quvvat $UI$ ning $\\mathcal{E}I$ qismi kimyoviy energiya sifatida to'planadi, $I^2r$ qismi issiqlikka aylanadi.",
+  "ru": "**Зарядка аккумулятора.** Зарядное устройство пропускает ток через аккумулятор **против** его ЭДС ([[F06]], b). При этом напряжение на зажимах больше ЭДС: $U=\\mathcal{E}+Ir$. Из подводимой мощности $UI$ часть $\\mathcal{E}I$ запасается в виде химической энергии, а часть $I^2r$ превращается в теплоту.",
+  "en": "**Charging a battery.** A charger drives a current through the battery **against** its EMF ([[F06]], b). Then the terminal voltage is greater than the EMF: $U=\\mathcal{E}+Ir$. Of the supplied power $UI$, the part $\\mathcal{E}I$ is stored as chemical energy and the part $I^2r$ is converted into heat."
+ },
+ {
+  "t": "m",
+  "m": "U=\\mathcal{E}+Ir,\\qquad UI=\\mathcal{E}I+I^2r"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $\\mathcal{E}=12\\ \\mathrm{V}$, $r=0.5\\ \\Omega$ akkumulyator $I=4\\ \\mathrm{A}$ tok bilan zaryadlanmoqda: $U=12+4\\cdot0.5=14\\ \\mathrm{V}$; $56\\ \\mathrm{W}$ quvvatdan $48\\ \\mathrm{W}$ to'planadi, $8\\ \\mathrm{W}$ issiqlikka ketadi. **Akkumulyator sig'imi (battery capacity)** amper-soatda o'lchanadi: $1\\ \\mathrm{A\\cdot h}=3600\\ \\mathrm{C}$; $60\\ \\mathrm{A\\cdot h}$ akkumulyator $3\\ \\mathrm{A}$ tok bilan $20$ soat ishlaydi.",
+  "ru": "**Пример.** Аккумулятор с $\\mathcal{E}=12\\ \\mathrm{V}$, $r=0.5\\ \\Omega$ заряжается током $I=4\\ \\mathrm{A}$: $U=12+4\\cdot0.5=14\\ \\mathrm{V}$; из мощности $56\\ \\mathrm{W}$ запасается $48\\ \\mathrm{W}$, $8\\ \\mathrm{W}$ уходит в теплоту. **Ёмкость аккумулятора** измеряют в ампер-часах: $1\\ \\mathrm{A\\cdot h}=3600\\ \\mathrm{C}$; аккумулятор на $60\\ \\mathrm{A\\cdot h}$ при токе $3\\ \\mathrm{A}$ работает $20$ часов.",
+  "en": "**Example.** A battery with $\\mathcal{E}=12\\ \\mathrm{V}$, $r=0.5\\ \\Omega$ is charged with a current $I=4\\ \\mathrm{A}$: $U=12+4\\cdot0.5=14\\ \\mathrm{V}$; of the power $56\\ \\mathrm{W}$, $48\\ \\mathrm{W}$ is stored and $8\\ \\mathrm{W}$ goes into heat. **Battery capacity** is measured in ampere-hours: $1\\ \\mathrm{A\\cdot h}=3600\\ \\mathrm{C}$; a $60\\ \\mathrm{A\\cdot h}$ battery works for $20$ hours at a current of $3\\ \\mathrm{A}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki nuqta orasidagi potensiallar farqi (potential difference).** Zanjir bo'lagi bo'ylab $A$ dan $B$ ga borganda: tok yo'nalishida qarshilikdan o'tilsa potensial $IR$ ga kamayadi, manba ichida «$-$» dan «$+$» ga o'tilsa $\\mathcal{E}$ ga ortadi. Masalan, zaryadlanayotgan akkumulyator uchun $\\varphi_+-\\varphi_-=\\mathcal{E}+Ir$, razryadlanayotgan uchun $\\varphi_+-\\varphi_-=\\mathcal{E}-Ir$.",
+  "ru": "**Разность потенциалов между двумя точками.** При движении по участку цепи от $A$ к $B$: при прохождении сопротивления по току потенциал уменьшается на $IR$, при переходе внутри источника от «$-$» к «$+$» увеличивается на $\\mathcal{E}$. Например, для заряжаемого аккумулятора $\\varphi_+-\\varphi_-=\\mathcal{E}+Ir$, для разряжающегося $\\varphi_+-\\varphi_-=\\mathcal{E}-Ir$.",
+  "en": "**Potential difference between two points.** Moving along a part of a circuit from $A$ to $B$: when a resistance is crossed in the direction of the current, the potential decreases by $IR$; when we pass inside a source from «$-$» to «$+$», it increases by $\\mathcal{E}$. For example, for a battery being charged $\\varphi_+-\\varphi_-=\\mathcal{E}+Ir$, and for a discharging one $\\varphi_+-\\varphi_-=\\mathcal{E}-Ir$."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B1-L36-F06.png",
+   "ru": "figures/B1-L36-F06-ru.png",
+   "en": "figures/B1-L36-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. Tez tekshiruv va GRE maslahatlari (Quick checks and GRE tips)",
+  "ru": "9. Быстрая проверка и советы для GRE",
+  "en": "9. Quick checks and GRE tips"
+ },
+ {
+  "t": "li",
+  "uz": "Voltmetr manba qisqichlarida EYK ni faqat zanjir ochiq bo'lganda ko'rsatadi; tok o'tganda $U=\\mathcal{E}-Ir<\\mathcal{E}$. «Kalit ulanganda voltmetr ko'rsatishi kamaydi» — ichki qarshilik bor degani.",
+  "ru": "Вольтметр на зажимах источника показывает ЭДС только при разомкнутой цепи; когда идёт ток, $U=\\mathcal{E}-Ir<\\mathcal{E}$. «При замыкании ключа показание вольтметра уменьшилось» — значит, есть внутреннее сопротивление.",
+  "en": "A voltmeter across the terminals of a source shows the EMF only when the circuit is open; when a current flows, $U=\\mathcal{E}-Ir<\\mathcal{E}$. «When the switch was closed, the voltmeter reading decreased» means that there is an internal resistance."
+ },
+ {
+  "t": "li",
+  "uz": "Tashqi qarshilik ortsa: $I$ kamayadi, $U$ ortadi, FIK ortadi; foydali quvvat esa $R=r$ gacha ortib, keyin kamayadi. Bunday «nima bo'ladi?» savollarida avval $I$ ni, keyin $U=\\mathcal{E}-Ir$ ni tahlil qiling.",
+  "ru": "При увеличении внешнего сопротивления: $I$ уменьшается, $U$ растёт, КПД растёт; полезная мощность растёт до $R=r$, затем убывает. В таких вопросах «что произойдёт?» сначала анализируйте $I$, затем $U=\\mathcal{E}-Ir$.",
+  "en": "If the external resistance increases: $I$ decreases, $U$ increases, the efficiency increases; the useful power increases up to $R=r$ and then decreases. In such «what happens?» questions, analyse $I$ first and then $U=\\mathcal{E}-Ir$."
+ },
+ {
+  "t": "li",
+  "uz": "Grafik berilsa: $U(I)$ to'g'ri chizig'ining $U$ o'qi bilan kesishishi — $\\mathcal{E}$, $I$ o'qi bilan kesishishi — $I_{max}$, $r=\\frac{\\mathcal{E}}{I_{max}}$.",
+  "ru": "Если дан график: точка пересечения прямой $U(I)$ с осью $U$ — это $\\mathcal{E}$, с осью $I$ — $I_{max}$, $r=\\frac{\\mathcal{E}}{I_{max}}$.",
+  "en": "If a graph is given: the intersection of the line $U(I)$ with the $U$ axis is $\\mathcal{E}$, with the $I$ axis it is $I_{max}$, and $r=\\frac{\\mathcal{E}}{I_{max}}$."
+ },
+ {
+  "t": "li",
+  "uz": "Ketma-ket: $\\mathcal{E}$ va $r$ qo'shiladi; qarama-qarshi ulashda $\\mathcal{E}$ ayiriladi, $r$ esa baribir qo'shiladi; parallel bir xil elementlarda $\\mathcal{E}$ o'zgarmaydi, $r$ kamayadi.",
+  "ru": "Последовательно: $\\mathcal{E}$ и $r$ складываются; при встречном включении $\\mathcal{E}$ вычитаются, а $r$ всё равно складываются; у одинаковых элементов параллельно $\\mathcal{E}$ не меняется, $r$ уменьшается.",
+  "en": "In series: $\\mathcal{E}$ and $r$ add; in an opposing connection the $\\mathcal{E}$ subtract, but the $r$ still add; for identical cells in parallel $\\mathcal{E}$ does not change and $r$ decreases."
+ },
+ {
+  "t": "li",
+  "uz": "Birliklarni tekshiring: $\\mathcal{E}$, $U$, $Ir$ — voltlarda; $P=\\mathcal{E}I$ — vattlarda; $\\eta$ — birliksiz va har doim $1$ dan kichik. Kirxgof qoidalarida manfiy tok xato emas — faqat yo'nalish teskari tanlangan.",
+  "ru": "Проверяйте единицы: $\\mathcal{E}$, $U$, $Ir$ — в вольтах; $P=\\mathcal{E}I$ — в ваттах; $\\eta$ — безразмерна и всегда меньше $1$. В правилах Кирхгофа отрицательный ток — не ошибка: просто направление выбрано наоборот.",
+  "en": "Check the units: $\\mathcal{E}$, $U$, $Ir$ are in volts; $P=\\mathcal{E}I$ is in watts; $\\eta$ is dimensionless and always less than $1$. In Kirchhoff's rules a negative current is not a mistake — the direction was simply chosen the other way."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "EYK",
+    "ru": "ЭДС",
+    "en": "EMF",
+    "m": "\\mathcal{E}=\\frac{A^*}{q}"
+   },
+   {
+    "uz": "To'liq zanjir uchun Om qonuni",
+    "ru": "Закон Ома для полной цепи",
+    "en": "Ohm's law for a complete circuit",
+    "m": "I=\\frac{\\mathcal{E}}{R+r}"
+   },
+   {
+    "uz": "Qisqichlardagi kuchlanish",
+    "ru": "Напряжение на зажимах",
+    "en": "Terminal voltage",
+    "m": "U=IR=\\mathcal{E}-Ir"
+   },
+   {
+    "uz": "Salt ishlash",
+    "ru": "Холостой ход",
+    "en": "No-load operation",
+    "m": "I=0,\\quad U=\\mathcal{E}"
+   },
+   {
+    "uz": "Qisqa tutashuv toki",
+    "ru": "Ток короткого замыкания",
+    "en": "Short-circuit current",
+    "m": "I_{max}=\\frac{\\mathcal{E}}{r}"
+   },
+   {
+    "uz": "Ikki o'lchash",
+    "ru": "Два измерения",
+    "en": "Two measurements",
+    "m": "r=\\frac{U_1-U_2}{I_2-I_1}"
+   },
+   {
+    "uz": "Manba quvvatlari",
+    "ru": "Мощности источника",
+    "en": "Powers of a source",
+    "m": "P=\\mathcal{E}I,\\quad P_R=I^2R,\\quad P_r=I^2r"
+   },
+   {
+    "uz": "Manba FIK",
+    "ru": "КПД источника",
+    "en": "Efficiency of a source",
+    "m": "\\eta=\\frac{U}{\\mathcal{E}}=\\frac{R}{R+r}"
+   },
+   {
+    "uz": "Eng katta foydali quvvat",
+    "ru": "Максимальная полезная мощность",
+    "en": "Maximum useful power",
+    "m": "R=r,\\quad P_{max}=\\frac{\\mathcal{E}^2}{4r}"
+   },
+   {
+    "uz": "Teng quvvatli yuklar",
+    "ru": "Нагрузки равной мощности",
+    "en": "Equal-power loads",
+    "m": "R_1R_2=r^2"
+   },
+   {
+    "uz": "Ketma-ket ulash",
+    "ru": "Последовательное соединение",
+    "en": "Series connection",
+    "m": "\\mathcal{E}=n\\mathcal{E}_0,\\quad r=nr_0"
+   },
+   {
+    "uz": "Qarama-qarshi ulash",
+    "ru": "Встречное включение",
+    "en": "Opposing connection",
+    "m": "\\mathcal{E}=|\\mathcal{E}_1-\\mathcal{E}_2|,\\quad r=r_1+r_2"
+   },
+   {
+    "uz": "Parallel ulash",
+    "ru": "Параллельное соединение",
+    "en": "Parallel connection",
+    "m": "\\mathcal{E}=\\mathcal{E}_0,\\quad r=\\frac{r_0}{n}"
+   },
+   {
+    "uz": "Aralash ulash",
+    "ru": "Смешанное соединение",
+    "en": "Mixed connection",
+    "m": "I=\\frac{n\\mathcal{E}_0}{R+\\frac{nr_0}{m}}"
+   },
+   {
+    "uz": "Turli manbalar parallel",
+    "ru": "Разные источники параллельно",
+    "en": "Different sources in parallel",
+    "m": "\\mathcal{E}=\\frac{\\mathcal{E}_1r_2+\\mathcal{E}_2r_1}{r_1+r_2}"
+   },
+   {
+    "uz": "Kirxgof qoidalari",
+    "ru": "Правила Кирхгофа",
+    "en": "Kirchhoff's rules",
+    "m": "\\sum I_k=0,\\quad \\sum\\mathcal{E}_k=\\sum I_kR_k"
+   },
+   {
+    "uz": "Akkumulyatorni zaryadlash",
+    "ru": "Зарядка аккумулятора",
+    "en": "Charging a battery",
+    "m": "U=\\mathcal{E}+Ir"
+   }
+  ]
+ }
+]
