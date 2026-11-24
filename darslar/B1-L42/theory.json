@@ -1,0 +1,785 @@
+[
+ {
+  "t": "h1",
+  "uz": "O'zgaruvchan tok, transformator (Alternating current, transformer)",
+  "ru": "Переменный ток, трансформатор",
+  "en": "Alternating current, transformer"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz o'zgaruvchan tok generatorida EYK qanday hosil bo'lishini tushuntirasiz va uning amplitudasini hisoblaysiz, oniy, amplituda va ta'sir etuvchi qiymatlarni farqlaysiz, aktiv qarshilik, kondensator va g'altakli zanjirlarda tok bilan kuchlanish orasidagi faza munosabatlarini va sig'im hamda induktiv qarshiliklarni topasiz, ketma-ket ulangan zanjir uchun vektor diagramma chizib, to'la qarshilik, faza farqi va quvvat koeffitsiyentini hisoblaysiz, kuchlanishlar rezonansi shartini qo'llaysiz, o'zgaruvchan tokning o'rtacha quvvatini topasiz, transformatorning ishlash prinsipini tushuntirib, transformatsiya koeffitsiyenti, toklar va FIK bilan bog'liq masalalarni yechasiz hamda elektr energiyani uzatishda nima uchun yuqori kuchlanish ishlatilishini asoslaysiz.",
+  "ru": "**Цель.** После урока вы будете объяснять, как возникает ЭДС в генераторе переменного тока, и вычислять её амплитуду, различать мгновенные, амплитудные и действующие значения, находить фазовые соотношения между током и напряжением и ёмкостное и индуктивное сопротивления в цепях с активным сопротивлением, конденсатором и катушкой, строить векторную диаграмму последовательной цепи и вычислять полное сопротивление, разность фаз и коэффициент мощности, применять условие резонанса напряжений, находить среднюю мощность переменного тока, объяснять принцип работы трансформатора и решать задачи на коэффициент трансформации, токи и КПД, а также обосновывать, почему при передаче электроэнергии используют высокое напряжение.",
+  "en": "**Goal.** After this lesson you will explain how the emf arises in an AC generator and calculate its amplitude, distinguish instantaneous, amplitude and effective values, find the phase relations between current and voltage and the capacitive and inductive reactances in circuits with a resistance, a capacitor and a coil, draw the phasor diagram of a series circuit and calculate the impedance, the phase difference and the power factor, apply the condition of voltage resonance, find the average power of an alternating current, explain how a transformer works and solve problems on the turns ratio, the currents and the efficiency, and justify why high voltage is used for transmitting electric energy."
+ },
+ {
+  "t": "p",
+  "uz": "L40 darsida aylanayotgan ramkada induksiya EYK hosil bo'lishini, L41 darsida esa tebranish konturida zaryad va tokning garmonik tebranishlarini o'rgandik. Bu dars ularni birlashtiradi: uy va zavodlardagi elektr tarmog'ida tok yo'nalishi sekundiga $100$ marta o'zgaradi, chunki uni elektr stansiyalaridagi generatorlar hosil qiladi. Bunday tok rezistor, kondensator va g'altakdan turlicha o'tadi, uning kuchlanishini transformator bilan oson oshirish yoki pasaytirish mumkin — shu sababli butun dunyo energetikasi o'zgaruvchan tokka asoslangan. GRE da ta'sir etuvchi qiymat, reaktiv qarshilik, RLC zanjir, rezonans va transformator — doimiy mavzular.",
+  "ru": "На уроке L40 мы изучили возникновение ЭДС индукции во вращающейся рамке, а на уроке L41 — гармонические колебания заряда и тока в колебательном контуре. Этот урок объединяет их: в электросети домов и заводов направление тока меняется $100$ раз в секунду, потому что его создают генераторы электростанций. Такой ток по-разному проходит через резистор, конденсатор и катушку, его напряжение легко повысить или понизить трансформатором — поэтому энергетика всего мира основана на переменном токе. В GRE действующее значение, реактивное сопротивление, RLC-цепь, резонанс и трансформатор — постоянные темы.",
+  "en": "In lesson L40 we studied how an induced emf arises in a rotating frame, and in lesson L41 the harmonic oscillations of the charge and the current in an LC circuit. This lesson combines them: in the electric network of homes and factories the direction of the current changes $100$ times per second, because it is produced by the generators of power stations. Such a current passes differently through a resistor, a capacitor and a coil, and its voltage is easily raised or lowered by a transformer — this is why the energy systems of the whole world are based on alternating current. On the GRE, the effective value, reactance, the RLC circuit, resonance and the transformer are standard topics."
+ },
+ {
+  "t": "h2",
+  "uz": "1. O'zgaruvchan tok va uning generatori (Alternating current and the AC generator)",
+  "ru": "1. Переменный ток и генератор переменного тока",
+  "en": "1. Alternating current and the AC generator"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Kattaligi va yo'nalishi vaqt bo'yicha davriy o'zgaradigan tok o'zgaruvchan tok (alternating current) deyiladi. Texnikada asosan garmonik, ya'ni sinus yoki kosinus qonuni bo'yicha o'zgaradigan tok ishlatiladi. Bunday tokni majburiy elektromagnit tebranishlar deb qarash mumkin: L41 dagi erkin tebranishlardan farqli ravishda, ularning chastotasini zanjir emas, tashqi manba — generator belgilaydi.",
+  "ru": "**Определение.** Ток, величина и направление которого периодически меняются со временем, называется переменным током (alternating current). В технике в основном используется гармонический ток, то есть меняющийся по закону синуса или косинуса. Такой ток можно рассматривать как вынужденные электромагнитные колебания: в отличие от свободных колебаний из L41, их частоту задаёт не цепь, а внешний источник — генератор.",
+  "en": "**Definition.** A current whose magnitude and direction change periodically with time is called an alternating current (AC). In engineering one mainly uses a harmonic current, that is, one that changes according to a sine or cosine law. Such a current can be regarded as forced electromagnetic oscillations: unlike the free oscillations of L41, their frequency is set not by the circuit but by an external source — the generator."
+ },
+ {
+  "t": "li",
+  "uz": "**Generatorning ishlash prinsipi.** Yuzi $S$ bo'lgan, $N$ ta o'ramli ramka induksiyasi $B$ bo'lgan bir jinsli magnit maydonda induksiya chiziqlariga tik o'q atrofida $\\omega$ burchak tezlik bilan tekis aylanayotgan bo'lsin ([[F01]]). $t=0$ da ramka tekisligi $\\vec B$ ga tik bo'lsa, ramka normali bilan $\\vec B$ orasidagi burchak $\\omega t$ ga teng va bitta o'ram orqali o'tuvchi magnit oqimi kosinus qonuni bo'yicha o'zgaradi. Faradey qonuni (L40) bo'yicha ramkada sinus qonuni bo'yicha o'zgaradigan induksiya EYK hosil bo'ladi:",
+  "ru": "**Принцип работы генератора.** Пусть рамка площадью $S$ из $N$ витков равномерно вращается с угловой скоростью $\\omega$ в однородном магнитном поле с индукцией $B$ вокруг оси, перпендикулярной линиям индукции ([[F01]]). Если при $t=0$ плоскость рамки перпендикулярна $\\vec B$, угол между нормалью рамки и $\\vec B$ равен $\\omega t$, и магнитный поток через один виток меняется по закону косинуса. По закону Фарадея (L40) в рамке возникает ЭДС индукции, меняющаяся по закону синуса:",
+  "en": "**How a generator works.** Let a frame of area $S$ with $N$ turns rotate uniformly with angular velocity $\\omega$ in a uniform magnetic field of induction $B$ about an axis perpendicular to the field lines ([[F01]]). If at $t=0$ the plane of the frame is perpendicular to $\\vec B$, the angle between the normal of the frame and $\\vec B$ is $\\omega t$, and the magnetic flux through one turn changes according to a cosine law. By Faraday's law (L40) an induced emf that changes according to a sine law arises in the frame:"
+ },
+ {
+  "t": "m",
+  "m": "\\Phi=BS\\cos\\omega t,\\qquad \\mathcal{E}=-N\\Phi'(t)=NBS\\omega\\sin\\omega t=\\mathcal{E}_m\\sin\\omega t"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B1-L42-F01.png",
+   "ru": "figures/B1-L42-F01-ru.png",
+   "en": "figures/B1-L42-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**EYK amplitudasi** $\\mathcal{E}_m=NBS\\omega$ o'ramlar soniga, induksiyaga, ramka yuziga va aylanish tezligiga to'g'ri proporsional. Ramka tekisligi $\\vec B$ ga tik bo'lgan paytda oqim eng katta, lekin uning o'zgarish tezligi nolga teng — $\\mathcal{E}=0$; ramka tekisligi $\\vec B$ ga parallel bo'lgan paytda oqim nolga teng, lekin u eng tez o'zgaradi — $|\\mathcal{E}|=\\mathcal{E}_m$. Bitta to'liq aylanishda EYK bir marta to'liq tebranadi, shuning uchun EYK chastotasi ramkaning aylanish chastotasiga teng.",
+  "ru": "**Амплитуда ЭДС** $\\mathcal{E}_m=NBS\\omega$ прямо пропорциональна числу витков, индукции, площади рамки и скорости вращения. В момент, когда плоскость рамки перпендикулярна $\\vec B$, поток наибольший, но скорость его изменения равна нулю — $\\mathcal{E}=0$; когда плоскость рамки параллельна $\\vec B$, поток равен нулю, но меняется быстрее всего — $|\\mathcal{E}|=\\mathcal{E}_m$. За один полный оборот ЭДС совершает одно полное колебание, поэтому частота ЭДС равна частоте вращения рамки.",
+  "en": "**The emf amplitude** $\\mathcal{E}_m=NBS\\omega$ is directly proportional to the number of turns, the induction, the frame area and the rotation rate. When the plane of the frame is perpendicular to $\\vec B$, the flux is largest but its rate of change is zero — $\\mathcal{E}=0$; when the plane of the frame is parallel to $\\vec B$, the flux is zero but it changes fastest — $|\\mathcal{E}|=\\mathcal{E}_m$. In one full revolution the emf makes one full oscillation, so the frequency of the emf equals the rotation frequency of the frame."
+ },
+ {
+  "t": "li",
+  "uz": "**Sanoat generatori.** Katta generatorlarda magnit maydonni aylanadigan elektromagnit — rotor hosil qiladi, EYK esa qo'zg'almas chulg'amlarda — statorda hosil bo'ladi (aylanuvchi kontaktlar orqali katta tok olish shart bo'lmaydi). Rotorda $p$ juft qutb bo'lsa, bir aylanishda stator chulg'ami yonidan $p$ marta shimoliy va $p$ marta janubiy qutb o'tadi, ya'ni EYK $p$ marta tebranadi. Rotor sekundiga $n$ marta aylansa:",
+  "ru": "**Промышленный генератор.** В больших генераторах магнитное поле создаёт вращающийся электромагнит — ротор, а ЭДС возникает в неподвижных обмотках — статоре (не нужно снимать большой ток через вращающиеся контакты). Если у ротора $p$ пар полюсов, за один оборот мимо обмотки статора проходят $p$ раз северный и $p$ раз южный полюс, то есть ЭДС совершает $p$ колебаний. Если ротор делает $n$ оборотов в секунду:",
+  "en": "**Industrial generator.** In large generators the magnetic field is produced by a rotating electromagnet — the rotor — and the emf arises in stationary windings — the stator (there is no need to take a large current through rotating contacts). If the rotor has $p$ pairs of poles, in one revolution a north pole passes the stator winding $p$ times and a south pole $p$ times, that is, the emf makes $p$ oscillations. If the rotor makes $n$ revolutions per second:"
+ },
+ {
+  "t": "m",
+  "m": "\\nu=pn,\\qquad \\omega=2\\pi\\nu,\\qquad T=\\frac{1}{\\nu}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol 1.** $N=50$ o'ramli, yuzi $S=0.02\\ \\mathrm{m^2}$ bo'lgan ramka $B=0.2\\ \\mathrm{T}$ maydonda $\\nu=50\\ \\mathrm{Hz}$ chastota bilan aylanadi. Siklik chastota $\\omega=2\\pi\\nu=100\\pi\\ \\mathrm{rad/s}$, EYK amplitudasi va tenglamasi:",
+  "ru": "**Пример 1.** Рамка из $N=50$ витков площадью $S=0.02\\ \\mathrm{m^2}$ вращается в поле $B=0.2\\ \\mathrm{T}$ с частотой $\\nu=50\\ \\mathrm{Hz}$. Циклическая частота $\\omega=2\\pi\\nu=100\\pi\\ \\mathrm{rad/s}$, амплитуда и уравнение ЭДС:",
+  "en": "**Example 1.** A frame of $N=50$ turns and area $S=0.02\\ \\mathrm{m^2}$ rotates in a field $B=0.2\\ \\mathrm{T}$ with frequency $\\nu=50\\ \\mathrm{Hz}$. The angular frequency is $\\omega=2\\pi\\nu=100\\pi\\ \\mathrm{rad/s}$, the amplitude and the equation of the emf are:"
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal{E}_m=NBS\\omega=50\\cdot0.2\\cdot0.02\\cdot100\\pi=20\\pi\\approx62.8\\ \\mathrm{V},\\qquad \\mathcal{E}=62.8\\sin100\\pi t"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol 2.** Gidroelektrostansiya generatorining rotori minutiga $1500$ marta, ya'ni sekundiga $n=25$ marta aylanadi va $p=2$ juft qutbga ega. Tok chastotasi $\\nu=pn=2\\cdot25=50\\ \\mathrm{Hz}$. Sekin aylanadigan suv turbinalarida qutblar soni ko'p bo'ladi, tez aylanadigan bug' turbinalarida esa $p=1$ yoki $p=2$.",
+  "ru": "**Пример 2.** Ротор генератора гидроэлектростанции делает $1500$ оборотов в минуту, то есть $n=25$ оборотов в секунду, и имеет $p=2$ пары полюсов. Частота тока $\\nu=pn=2\\cdot25=50\\ \\mathrm{Hz}$. У медленно вращающихся гидротурбин число полюсов велико, а у быстро вращающихся паровых турбин $p=1$ или $p=2$.",
+  "en": "**Example 2.** The rotor of a hydroelectric generator makes $1500$ revolutions per minute, that is, $n=25$ revolutions per second, and has $p=2$ pairs of poles. The frequency of the current is $\\nu=pn=2\\cdot25=50\\ \\mathrm{Hz}$. Slowly rotating hydro turbines have many poles, while fast steam turbines have $p=1$ or $p=2$."
+ },
+ {
+  "t": "li",
+  "uz": "**Standart chastota.** O'zbekiston, MDH va Yevropa tarmoqlarida $\\nu=50\\ \\mathrm{Hz}$ ($T=0.02\\ \\mathrm{s}$, $\\omega=100\\pi\\approx314\\ \\mathrm{rad/s}$), AQSh da $\\nu=60\\ \\mathrm{Hz}$. Bir davrda tok yo'nalishini ikki marta o'zgartiradi, shuning uchun $50\\ \\mathrm{Hz}$ li tok yo'nalishini sekundiga $100$ marta o'zgartiradi. Umumiy holda tarmoqdagi kuchlanish va tok $u=U_m\\sin\\omega t$, $i=I_m\\sin(\\omega t-\\varphi)$ ko'rinishda yoziladi; bunda $\\varphi$ — zanjir turiga bog'liq faza farqi (3–6-bo'limlar). Generator ichki qarshiligi hisobga olinmasa va unga $R$ qarshilikli iste'molchi ulansa, $I_m=\\frac{\\mathcal{E}_m}{R}$.",
+  "ru": "**Стандартная частота.** В сетях Узбекистана, СНГ и Европы $\\nu=50\\ \\mathrm{Hz}$ ($T=0.02\\ \\mathrm{s}$, $\\omega=100\\pi\\approx314\\ \\mathrm{rad/s}$), в США $\\nu=60\\ \\mathrm{Hz}$. За период ток дважды меняет направление, поэтому ток частотой $50\\ \\mathrm{Hz}$ меняет направление $100$ раз в секунду. В общем случае напряжение и ток в сети записываются как $u=U_m\\sin\\omega t$, $i=I_m\\sin(\\omega t-\\varphi)$, где $\\varphi$ — разность фаз, зависящая от вида цепи (разделы 3–6). Если внутренним сопротивлением генератора пренебречь и подключить потребитель сопротивлением $R$, то $I_m=\\frac{\\mathcal{E}_m}{R}$.",
+  "en": "**Standard frequency.** In the networks of Uzbekistan, the CIS and Europe $\\nu=50\\ \\mathrm{Hz}$ ($T=0.02\\ \\mathrm{s}$, $\\omega=100\\pi\\approx314\\ \\mathrm{rad/s}$), in the USA $\\nu=60\\ \\mathrm{Hz}$. In one period the current changes direction twice, so a $50\\ \\mathrm{Hz}$ current changes direction $100$ times per second. In general the voltage and the current in a network are written as $u=U_m\\sin\\omega t$, $i=I_m\\sin(\\omega t-\\varphi)$, where $\\varphi$ is a phase difference that depends on the type of circuit (sections 3–6). If the internal resistance of the generator is neglected and a load of resistance $R$ is connected, $I_m=\\frac{\\mathcal{E}_m}{R}$."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Oniy, amplituda va ta'sir etuvchi qiymatlar (Instantaneous, amplitude and effective values)",
+  "ru": "2. Мгновенные, амплитудные и действующие значения",
+  "en": "2. Instantaneous, amplitude and effective values"
+ },
+ {
+  "t": "li",
+  "uz": "**Oniy va amplituda qiymatlar.** $i=I_m\\sin(\\omega t+\\varphi_0)$ tenglamada $i$ — tokning oniy qiymati (berilgan paytdagi qiymati), $I_m$ — amplituda (eng katta) qiymati, $\\omega t+\\varphi_0$ — faza. Oniy qiymat davr davomida $-I_m$ dan $I_m$ gacha o'zgaradi va uning bir davrdagi o'rtacha qiymati nolga teng. Lekin rezistorda ajraladigan issiqlik tok yo'nalishiga bog'liq emas ($Q\\sim i^2$), shuning uchun o'zgaruvchan tokning issiqlik ta'sirini o'rtacha qiymat emas, boshqa kattalik tavsiflaydi.",
+  "ru": "**Мгновенные и амплитудные значения.** В уравнении $i=I_m\\sin(\\omega t+\\varphi_0)$ $i$ — мгновенное значение тока (значение в данный момент), $I_m$ — амплитудное (наибольшее) значение, $\\omega t+\\varphi_0$ — фаза. Мгновенное значение за период меняется от $-I_m$ до $I_m$, и его среднее значение за период равно нулю. Но тепло, выделяющееся в резисторе, не зависит от направления тока ($Q\\sim i^2$), поэтому тепловое действие переменного тока характеризует не среднее значение, а другая величина.",
+  "en": "**Instantaneous and amplitude values.** In the equation $i=I_m\\sin(\\omega t+\\varphi_0)$, $i$ is the instantaneous value of the current (its value at a given moment), $I_m$ is the amplitude (largest) value and $\\omega t+\\varphi_0$ is the phase. The instantaneous value changes from $-I_m$ to $I_m$ during a period, and its average over a period is zero. But the heat released in a resistor does not depend on the direction of the current ($Q\\sim i^2$), so the heating effect of an alternating current is described not by the average value but by another quantity."
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** O'zgaruvchan tokning ta'sir etuvchi (effektiv, samarador) qiymati (effective value) — xuddi shu rezistorda bir xil vaqtda (butun davrlar soni davomida) shuncha issiqlik ajratadigan o'zgarmas tok kuchi. Oniy quvvat $p=i^2R=I_m^2R\\sin^2\\omega t=\\frac{I_m^2R}{2}(1-\\cos2\\omega t)$; qavs ichidagi kosinusning davr bo'yicha o'rtachasi nolga teng, demak o'rtacha quvvat $\\frac{I_m^2R}{2}$. Uni o'zgarmas tok quvvati $I^2R$ ga tenglab, quyidagini olamiz ([[F02]]):",
+  "ru": "**Определение.** Действующее (эффективное) значение переменного тока (effective value) — сила постоянного тока, который в том же резисторе за то же время (целое число периодов) выделяет столько же тепла. Мгновенная мощность $p=i^2R=I_m^2R\\sin^2\\omega t=\\frac{I_m^2R}{2}(1-\\cos2\\omega t)$; среднее за период значение косинуса в скобках равно нулю, значит, средняя мощность $\\frac{I_m^2R}{2}$. Приравнивая её мощности постоянного тока $I^2R$, получаем ([[F02]]):",
+  "en": "**Definition.** The effective (rms) value of an alternating current is the steady current that releases the same amount of heat in the same resistor in the same time (a whole number of periods). The instantaneous power is $p=i^2R=I_m^2R\\sin^2\\omega t=\\frac{I_m^2R}{2}(1-\\cos2\\omega t)$; the average of the cosine in the brackets over a period is zero, so the average power is $\\frac{I_m^2R}{2}$. Equating it to the power of a steady current $I^2R$, we obtain ([[F02]]):"
+ },
+ {
+  "t": "m",
+  "m": "\\overline{\\sin^2\\omega t}=\\frac{1}{2},\\qquad I=\\frac{I_m}{\\sqrt{2}}\\approx0.707I_m,\\qquad U=\\frac{U_m}{\\sqrt{2}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B1-L42-F02.png",
+   "ru": "figures/B1-L42-F02-ru.png",
+   "en": "figures/B1-L42-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**O'lchov asboblari ta'sir etuvchi qiymatni ko'rsatadi.** O'zgaruvchan tok voltmetri va ampermetri, shuningdek asboblar pasportidagi «$220\\ \\mathrm{V}$» ham ta'sir etuvchi qiymatdir. Demak, uy tarmog'ida kuchlanish amplitudasi $U_m=220\\sqrt{2}\\approx311\\ \\mathrm{V}$. Kondensator va izolyatsiya esa oniy kuchlanishning eng katta qiymatiga — amplitudaga bardosh berishi kerak: $250\\ \\mathrm{V}$ ga mo'ljallangan kondensatorni $220\\ \\mathrm{V}$ li o'zgaruvchan tok tarmog'iga ulab bo'lmaydi.",
+  "ru": "**Измерительные приборы показывают действующее значение.** Вольтметр и амперметр переменного тока, а также «$220\\ \\mathrm{V}$» в паспорте приборов — это действующее значение. Значит, в домашней сети амплитуда напряжения $U_m=220\\sqrt{2}\\approx311\\ \\mathrm{V}$. А конденсатор и изоляция должны выдерживать наибольшее мгновенное напряжение — амплитуду: конденсатор, рассчитанный на $250\\ \\mathrm{V}$, нельзя включать в сеть переменного тока $220\\ \\mathrm{V}$.",
+  "en": "**Meters show the effective value.** AC voltmeters and ammeters, as well as the «$220\\ \\mathrm{V}$» on the rating plate of appliances, give the effective value. Hence in a home network the voltage amplitude is $U_m=220\\sqrt{2}\\approx311\\ \\mathrm{V}$. A capacitor and insulation, however, must withstand the largest instantaneous voltage — the amplitude: a capacitor rated for $250\\ \\mathrm{V}$ cannot be connected to a $220\\ \\mathrm{V}$ AC network."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Tok amplitudasi $I_m=10\\ \\mathrm{A}$ bo'lsa, ta'sir etuvchi qiymat $I=\\frac{10}{\\sqrt{2}}=5\\sqrt{2}\\approx7.07\\ \\mathrm{A}$. Bu tok rezistorda $7.07\\ \\mathrm{A}$ li o'zgarmas tok bilan bir xil issiqlik ajratadi. Amplitudasi xuddi shunday $10\\ \\mathrm{A}$ bo'lgan o'zgarmas tokka nisbatan esa issiqlik $2$ marta kam ajraladi: $\\frac{I_m^2R}{2}$ va $I_m^2R$.",
+  "ru": "**Пример.** Если амплитуда тока $I_m=10\\ \\mathrm{A}$, действующее значение $I=\\frac{10}{\\sqrt{2}}=5\\sqrt{2}\\approx7.07\\ \\mathrm{A}$. Этот ток выделяет в резисторе столько же тепла, сколько постоянный ток $7.07\\ \\mathrm{A}$. А по сравнению с постоянным током той же величины $10\\ \\mathrm{A}$ тепла выделяется в $2$ раза меньше: $\\frac{I_m^2R}{2}$ и $I_m^2R$.",
+  "en": "**Example.** If the current amplitude is $I_m=10\\ \\mathrm{A}$, the effective value is $I=\\frac{10}{\\sqrt{2}}=5\\sqrt{2}\\approx7.07\\ \\mathrm{A}$. This current releases in a resistor the same heat as a steady current of $7.07\\ \\mathrm{A}$. Compared with a steady current of the same value $10\\ \\mathrm{A}$, the heat released is $2$ times smaller: $\\frac{I_m^2R}{2}$ versus $I_m^2R$."
+ },
+ {
+  "t": "li",
+  "uz": "**Oniy qiymat qachon ta'sir etuvchi qiymatga teng?** $i=I_m\\sin\\omega t$ bo'lsa, $I_m\\sin\\omega t=\\frac{I_m}{\\sqrt{2}}$ shartidan $\\sin\\omega t=\\frac{\\sqrt{2}}{2}$, ya'ni faza $\\frac{\\pi}{4}$ ga teng. Bu tebranish boshlangandan $t=\\frac{T}{8}$ vaqt o'tgach birinchi marta yuz beradi. Faza berilgan masalalarda oniy qiymatdan amplitudani topib, keyin $\\sqrt{2}$ ga bo'lish kerak.",
+  "ru": "**Когда мгновенное значение равно действующему?** Если $i=I_m\\sin\\omega t$, из условия $I_m\\sin\\omega t=\\frac{I_m}{\\sqrt{2}}$ получаем $\\sin\\omega t=\\frac{\\sqrt{2}}{2}$, то есть фаза равна $\\frac{\\pi}{4}$. Впервые это происходит через $t=\\frac{T}{8}$ после начала колебаний. В задачах с заданной фазой нужно по мгновенному значению найти амплитуду, а затем разделить на $\\sqrt{2}$.",
+  "en": "**When is the instantaneous value equal to the effective value?** If $i=I_m\\sin\\omega t$, the condition $I_m\\sin\\omega t=\\frac{I_m}{\\sqrt{2}}$ gives $\\sin\\omega t=\\frac{\\sqrt{2}}{2}$, that is, the phase equals $\\frac{\\pi}{4}$. This happens for the first time $t=\\frac{T}{8}$ after the oscillations begin. In problems with a given phase, find the amplitude from the instantaneous value and then divide by $\\sqrt{2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'sir etuvchi va o'rtacha qiymat bir xil emas.** Yarim davr davomidagi o'rtacha qiymat $\\frac{2I_m}{\\pi}\\approx0.637I_m$ ga teng, ta'sir etuvchi qiymat esa $0.707I_m$. $I=\\frac{I_m}{\\sqrt{2}}$ formulasi faqat garmonik tok uchun to'g'ri; masalan, kattaligi $I_0$ bo'lib, faqat yo'nalishini o'zgartiradigan «to'g'ri burchakli» tokning ta'sir etuvchi qiymati $I_0$ ga teng.",
+  "ru": "**Действующее и среднее значения не совпадают.** Среднее значение за полпериода равно $\\frac{2I_m}{\\pi}\\approx0.637I_m$, а действующее — $0.707I_m$. Формула $I=\\frac{I_m}{\\sqrt{2}}$ верна только для гармонического тока; например, у «прямоугольного» тока величиной $I_0$, меняющего только направление, действующее значение равно $I_0$.",
+  "en": "**The effective and average values are not the same.** The average over half a period is $\\frac{2I_m}{\\pi}\\approx0.637I_m$, while the effective value is $0.707I_m$. The formula $I=\\frac{I_m}{\\sqrt{2}}$ is valid only for a harmonic current; for example, a «square-wave» current of magnitude $I_0$ that only changes direction has an effective value equal to $I_0$."
+ },
+ {
+  "t": "h2",
+  "uz": "3. O'zgaruvchan tok zanjirida aktiv qarshilik (Resistance in an AC circuit)",
+  "ru": "3. Активное сопротивление в цепи переменного тока",
+  "en": "3. Resistance in an AC circuit"
+ },
+ {
+  "t": "li",
+  "uz": "**Aktiv qarshilik.** Elektr energiyasi qaytmas ravishda issiqlikka (yoki boshqa foydali energiyaga) aylanadigan zanjir elementi aktiv qarshilik (active resistance) deyiladi — rezistor, cho'g'lanma lampa, elektr plita. Rezistorga $u=U_m\\sin\\omega t$ kuchlanish berilsa, har bir paytda Om qonuni bajariladi, shuning uchun tok kuchlanish bilan bir xil fazada (in phase) o'zgaradi: ular bir vaqtda nolga va bir vaqtda eng katta qiymatga erishadi ([[F03]]).",
+  "ru": "**Активное сопротивление.** Элемент цепи, в котором электрическая энергия необратимо превращается в тепло (или другую полезную энергию), называется активным сопротивлением (active resistance) — резистор, лампа накаливания, электроплита. Если на резистор подать напряжение $u=U_m\\sin\\omega t$, в каждый момент выполняется закон Ома, поэтому ток меняется в одной фазе (in phase) с напряжением: они одновременно обращаются в ноль и одновременно достигают наибольшего значения ([[F03]]).",
+  "en": "**Resistance.** A circuit element in which electric energy is irreversibly converted into heat (or another useful form of energy) is called an active resistance — a resistor, an incandescent lamp, an electric stove. If a voltage $u=U_m\\sin\\omega t$ is applied to a resistor, Ohm's law holds at every moment, so the current changes in phase with the voltage: they reach zero at the same time and reach their largest values at the same time ([[F03]])."
+ },
+ {
+  "t": "m",
+  "m": "i=\\frac{u}{R}=I_m\\sin\\omega t,\\qquad I_m=\\frac{U_m}{R},\\qquad I=\\frac{U}{R},\\qquad \\varphi=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Chastotaga bog'liq emas.** Maktab fizikasi doirasida aktiv qarshilik tok chastotasiga bog'liq emas: chastota $2$ marta ortsa ham $R$ o'zgarmaydi. Om qonuni amplitudalar uchun ham, ta'sir etuvchi qiymatlar uchun ham bir xil ko'rinishga ega. (Juda yuqori chastotalarda tok o'tkazgich sirtiga siqiladi va qarshilik biroz ortadi — bu skin-effekt GRE dan tashqari mavzu.)",
+  "ru": "**Не зависит от частоты.** В рамках школьной физики активное сопротивление не зависит от частоты тока: даже при увеличении частоты в $2$ раза $R$ не меняется. Закон Ома имеет одинаковый вид и для амплитуд, и для действующих значений. (При очень высоких частотах ток вытесняется к поверхности проводника и сопротивление немного растёт — этот скин-эффект выходит за рамки GRE.)",
+  "en": "**Independent of frequency.** Within school physics the resistance does not depend on the frequency of the current: even if the frequency increases $2$ times, $R$ does not change. Ohm's law has the same form both for amplitudes and for effective values. (At very high frequencies the current is pushed to the surface of the conductor and the resistance increases slightly — this skin effect is beyond the GRE.)"
+ },
+ {
+  "t": "li",
+  "uz": "**Quvvat.** Oniy quvvat $p=ui=U_mI_m\\sin^2\\omega t$ hech qachon manfiy emas — rezistor energiyani faqat oladi. Uning davr bo'yicha o'rtachasi ($\\overline{\\sin^2\\omega t}=\\frac{1}{2}$):",
+  "ru": "**Мощность.** Мгновенная мощность $p=ui=U_mI_m\\sin^2\\omega t$ никогда не бывает отрицательной — резистор только получает энергию. Её среднее за период ($\\overline{\\sin^2\\omega t}=\\frac{1}{2}$):",
+  "en": "**Power.** The instantaneous power $p=ui=U_mI_m\\sin^2\\omega t$ is never negative — a resistor only receives energy. Its average over a period ($\\overline{\\sin^2\\omega t}=\\frac{1}{2}$) is:"
+ },
+ {
+  "t": "m",
+  "m": "P=\\frac{U_mI_m}{2}=UI=I^2R=\\frac{U^2}{R},\\qquad Q=I^2Rt=Pt"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Kuchlanishi $u=311\\sin100\\pi t$ bo'lgan tarmoqqa $R=100\\ \\Omega$ li isitgich ulangan. $U=\\frac{311}{\\sqrt{2}}\\approx220\\ \\mathrm{V}$, $I=\\frac{U}{R}=2.2\\ \\mathrm{A}$, $P=UI\\approx484\\ \\mathrm{W}$. Lampa pasportida «$220\\ \\mathrm{V}$, $P$» yozilgan bo'lsa, ish holatidagi qarshiligi $R=\\frac{U^2}{P}$ formula bilan topiladi.",
+  "ru": "**Пример.** Нагреватель сопротивлением $R=100\\ \\Omega$ включён в сеть с напряжением $u=311\\sin100\\pi t$. $U=\\frac{311}{\\sqrt{2}}\\approx220\\ \\mathrm{V}$, $I=\\frac{U}{R}=2.2\\ \\mathrm{A}$, $P=UI\\approx484\\ \\mathrm{W}$. Если на лампе написано «$220\\ \\mathrm{V}$, $P$», её рабочее сопротивление находят по формуле $R=\\frac{U^2}{P}$.",
+  "en": "**Example.** A heater of resistance $R=100\\ \\Omega$ is connected to a network with voltage $u=311\\sin100\\pi t$. $U=\\frac{311}{\\sqrt{2}}\\approx220\\ \\mathrm{V}$, $I=\\frac{U}{R}=2.2\\ \\mathrm{A}$, $P=UI\\approx484\\ \\mathrm{W}$. If a lamp is marked «$220\\ \\mathrm{V}$, $P$», its working resistance is found from $R=\\frac{U^2}{P}$."
+ },
+ {
+  "t": "li",
+  "uz": "**O'zgarmas va o'zgaruvchan tok.** Voltmetr ikkala holda bir xil kuchlanishni ko'rsatsa, plitada bir xil issiqlik ajraladi (voltmetr ta'sir etuvchi qiymatni ko'rsatadi). Agar o'zgarmas kuchlanish o'zgaruvchan kuchlanish amplitudasiga teng bo'lsa, o'zgarmas tok $2$ marta ko'p issiqlik beradi. Choynakdagi suvning isish tezligi ham faqat ta'sir etuvchi qiymatga bog'liq, chastotaga emas.",
+  "ru": "**Постоянный и переменный ток.** Если вольтметр в обоих случаях показывает одно и то же напряжение, в плитке выделяется одинаковое тепло (вольтметр показывает действующее значение). Если постоянное напряжение равно амплитуде переменного, постоянный ток даёт в $2$ раза больше тепла. Скорость нагревания воды в чайнике тоже зависит только от действующего значения, а не от частоты.",
+  "en": "**Steady and alternating current.** If a voltmeter shows the same voltage in both cases, the same heat is released in a stove (the voltmeter shows the effective value). If a steady voltage equals the amplitude of an alternating one, the steady current gives $2$ times more heat. The rate at which water in a kettle heats up also depends only on the effective value, not on the frequency."
+ },
+ {
+  "t": "h2",
+  "uz": "4. O'zgaruvchan tok zanjirida kondensator (Capacitor in an AC circuit)",
+  "ru": "4. Конденсатор в цепи переменного тока",
+  "en": "4. Capacitor in an AC circuit"
+ },
+ {
+  "t": "li",
+  "uz": "**Kondensator o'zgaruvchan tokni o'tkazadi.** Kondensator qoplamalari orasida dielektrik bo'lgani uchun o'zgarmas tok undan o'tmaydi: zaryadlanib bo'lgach tok to'xtaydi. O'zgaruvchan kuchlanishda esa kondensator davriy ravishda zaryadlanib, razryadlanib va qayta zaryadlanib turadi, shuning uchun ulovchi simlarda va manbada uzluksiz o'zgaruvchan tok oqadi. Zanjirga kondensator bilan ketma-ket ulangan lampa yonadi.",
+  "ru": "**Конденсатор пропускает переменный ток.** Поскольку между обкладками конденсатора диэлектрик, постоянный ток через него не идёт: после зарядки ток прекращается. При переменном же напряжении конденсатор периодически заряжается, разряжается и перезаряжается, поэтому в соединительных проводах и источнике непрерывно течёт переменный ток. Лампа, включённая последовательно с конденсатором, горит.",
+  "en": "**A capacitor passes alternating current.** Since there is a dielectric between the plates of a capacitor, a steady current does not pass through it: once it is charged the current stops. With an alternating voltage, however, the capacitor is periodically charged, discharged and recharged, so an alternating current flows continuously in the connecting wires and in the source. A lamp connected in series with a capacitor glows."
+ },
+ {
+  "t": "li",
+  "uz": "**Faza munosabati.** Kondensatorga $u=U_m\\sin\\omega t$ kuchlanish berilsa, uning zaryadi $q=Cu$, tok esa zaryadning hosilasi (L41):",
+  "ru": "**Фазовое соотношение.** Если на конденсатор подано напряжение $u=U_m\\sin\\omega t$, его заряд $q=Cu$, а ток — производная заряда (L41):",
+  "en": "**Phase relation.** If a voltage $u=U_m\\sin\\omega t$ is applied to a capacitor, its charge is $q=Cu$ and the current is the derivative of the charge (L41):"
+ },
+ {
+  "t": "m",
+  "m": "i=q'=C\\omega U_m\\cos\\omega t=I_m\\sin\\left(\\omega t+\\frac{\\pi}{2}\\right),\\qquad I_m=\\omega CU_m"
+ },
+ {
+  "t": "li",
+  "uz": "Demak, kondensatorli zanjirda **tok kuchlanishdan faza bo'yicha $\\frac{\\pi}{2}$ ga (chorak davrga) oldinda** ([[F03]]). Fizik ma'nosi: kuchlanish nolga teng paytda kondensator eng tez zaryadlanadi — tok eng katta; kuchlanish eng katta bo'lganda kondensator to'liq zaryadlangan va tok bir lahzaga to'xtaydi.",
+  "ru": "Значит, в цепи с конденсатором **ток опережает напряжение по фазе на $\\frac{\\pi}{2}$ (на четверть периода)** ([[F03]]). Физический смысл: в момент, когда напряжение равно нулю, конденсатор заряжается быстрее всего — ток наибольший; при наибольшем напряжении конденсатор полностью заряжен и ток на мгновение прекращается.",
+  "en": "Hence, in a circuit with a capacitor **the current leads the voltage in phase by $\\frac{\\pi}{2}$ (by a quarter period)** ([[F03]]). Physical meaning: at the moment the voltage is zero the capacitor is charging fastest — the current is largest; when the voltage is largest the capacitor is fully charged and the current momentarily stops."
+ },
+ {
+  "t": "li",
+  "uz": "**Sig'im qarshilik.** Kuchlanish va tok amplitudalari nisbati sig'im qarshilik (capacitive reactance) deyiladi. Om qonuni amplitudalar va ta'sir etuvchi qiymatlar uchun bajariladi (oniy qiymatlar uchun emas, chunki $u$ va $i$ turli fazada):",
+  "ru": "**Ёмкостное сопротивление.** Отношение амплитуд напряжения и тока называется ёмкостным сопротивлением (capacitive reactance). Закон Ома выполняется для амплитуд и действующих значений (но не для мгновенных, так как $u$ и $i$ в разных фазах):",
+  "en": "**Capacitive reactance.** The ratio of the amplitudes of the voltage and the current is called the capacitive reactance. Ohm's law holds for the amplitudes and the effective values (but not for the instantaneous values, since $u$ and $i$ are in different phases):"
+ },
+ {
+  "t": "m",
+  "m": "X_C=\\frac{U_m}{I_m}=\\frac{1}{\\omega C}=\\frac{1}{2\\pi\\nu C},\\qquad I=\\frac{U}{X_C}=\\omega CU"
+ },
+ {
+  "t": "li",
+  "uz": "**Chastota va sig'imga bog'liqlik.** $X_C\\sim\\frac{1}{\\nu}$: chastota ortsa, kondensator tez-tez qayta zaryadlanadi, tok ortadi va sig'im qarshilik kamayadi; $\\nu\\to0$ da $X_C\\to\\infty$ — o'zgarmas tok o'tmaydi. $X_C\\sim\\frac{1}{C}$: sig'im katta bo'lsa, bir xil kuchlanishda ko'proq zaryad to'planadi va tok katta bo'ladi. Parallel ulangan kondensatorlar sig'imlari qo'shiladi ($C=C_1+C_2$, L32), demak $X_C$ kamayadi; ketma-ket ulanganda umumiy sig'im kamayadi va $X_C$ ortadi.",
+  "ru": "**Зависимость от частоты и ёмкости.** $X_C\\sim\\frac{1}{\\nu}$: при росте частоты конденсатор чаще перезаряжается, ток растёт, а ёмкостное сопротивление уменьшается; при $\\nu\\to0$ $X_C\\to\\infty$ — постоянный ток не проходит. $X_C\\sim\\frac{1}{C}$: при большой ёмкости при том же напряжении накапливается больше заряда и ток больше. Ёмкости параллельно соединённых конденсаторов складываются ($C=C_1+C_2$, L32), значит, $X_C$ уменьшается; при последовательном соединении общая ёмкость уменьшается и $X_C$ растёт.",
+  "en": "**Dependence on frequency and capacitance.** $X_C\\sim\\frac{1}{\\nu}$: as the frequency increases, the capacitor is recharged more often, the current increases and the capacitive reactance decreases; as $\\nu\\to0$, $X_C\\to\\infty$ — a steady current does not pass. $X_C\\sim\\frac{1}{C}$: with a large capacitance more charge accumulates at the same voltage and the current is larger. The capacitances of capacitors in parallel add up ($C=C_1+C_2$, L32), so $X_C$ decreases; in series the total capacitance decreases and $X_C$ increases."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Sig'imi $C=10\\ \\mu\\mathrm{F}$ bo'lgan kondensatorning $50\\ \\mathrm{Hz}$ dagi qarshiligi $X_C=\\frac{1}{2\\pi\\cdot50\\cdot10^{-5}}\\approx318\\ \\Omega$, $5\\ \\mathrm{kHz}$ da esa $100$ marta kichik — $3.18\\ \\Omega$. Shuning uchun kondensatorlar radiosxemalarda yuqori chastotali signallarni o'tkazib, past chastotalilarni to'sish uchun ishlatiladi.",
+  "ru": "**Пример.** Сопротивление конденсатора ёмкостью $C=10\\ \\mu\\mathrm{F}$ на частоте $50\\ \\mathrm{Hz}$ равно $X_C=\\frac{1}{2\\pi\\cdot50\\cdot10^{-5}}\\approx318\\ \\Omega$, а на $5\\ \\mathrm{kHz}$ — в $100$ раз меньше, $3.18\\ \\Omega$. Поэтому конденсаторы применяют в радиосхемах, чтобы пропускать высокочастотные сигналы и задерживать низкочастотные.",
+  "en": "**Example.** The reactance of a capacitor of capacitance $C=10\\ \\mu\\mathrm{F}$ at $50\\ \\mathrm{Hz}$ is $X_C=\\frac{1}{2\\pi\\cdot50\\cdot10^{-5}}\\approx318\\ \\Omega$, and at $5\\ \\mathrm{kHz}$ it is $100$ times smaller — $3.18\\ \\Omega$. This is why capacitors are used in radio circuits to pass high-frequency signals and block low-frequency ones."
+ },
+ {
+  "t": "li",
+  "uz": "**O'rtacha quvvat nolga teng.** Oniy quvvat $p=ui=\\frac{U_mI_m}{2}\\sin2\\omega t$ chorak davrda musbat (kondensator elektr maydonida energiya to'playdi), keyingi chorak davrda manfiy (energiyani manbaga qaytaradi). Shuning uchun ideal kondensatorda energiya issiqlikka aylanmaydi va sig'im qarshilik reaktiv qarshilik (reactance) deyiladi — aktiv qarshilikdan farqi shu.",
+  "ru": "**Средняя мощность равна нулю.** Мгновенная мощность $p=ui=\\frac{U_mI_m}{2}\\sin2\\omega t$ в течение четверти периода положительна (конденсатор запасает энергию в электрическом поле), в следующую четверть — отрицательна (возвращает энергию источнику). Поэтому в идеальном конденсаторе энергия не превращается в тепло, и ёмкостное сопротивление называют реактивным (reactance) — в этом его отличие от активного.",
+  "en": "**The average power is zero.** The instantaneous power $p=ui=\\frac{U_mI_m}{2}\\sin2\\omega t$ is positive during a quarter period (the capacitor stores energy in its electric field) and negative during the next quarter (it returns the energy to the source). Therefore in an ideal capacitor energy is not converted into heat, and the capacitive reactance is called a reactance — this is how it differs from a resistance."
+ },
+ {
+  "t": "h2",
+  "uz": "5. O'zgaruvchan tok zanjirida induktiv g'altak (Inductor in an AC circuit)",
+  "ru": "5. Катушка индуктивности в цепи переменного тока",
+  "en": "5. Inductor in an AC circuit"
+ },
+ {
+  "t": "li",
+  "uz": "**O'zinduksiya tokka qarshilik ko'rsatadi.** Aktiv qarshiligi juda kichik ($R\\approx0$) bo'lgan, induktivligi $L$ bo'lgan g'altakdan o'zgaruvchan tok o'tsa, unda o'zinduksiya EYK $\\mathcal{E}_{is}=-Li'$ hosil bo'ladi (L40). Lens qoidasiga ko'ra u tokning o'zgarishiga qarshilik qiladi. $R=0$ bo'lgani uchun tashqi kuchlanish har bir paytda shu EYK ni muvozanatlaydi: $u=Li'$. Tok $i=I_m\\sin\\omega t$ bo'lsa:",
+  "ru": "**Самоиндукция препятствует току.** Если через катушку индуктивностью $L$ с очень малым активным сопротивлением ($R\\approx0$) идёт переменный ток, в ней возникает ЭДС самоиндукции $\\mathcal{E}_{is}=-Li'$ (L40). По правилу Ленца она препятствует изменению тока. Так как $R=0$, внешнее напряжение в каждый момент уравновешивает эту ЭДС: $u=Li'$. Если ток $i=I_m\\sin\\omega t$:",
+  "en": "**Self-induction opposes the current.** If an alternating current passes through a coil of inductance $L$ with a very small resistance ($R\\approx0$), a self-induced emf $\\mathcal{E}_{is}=-Li'$ arises in it (L40). By Lenz's law it opposes the change of the current. Since $R=0$, the external voltage balances this emf at every moment: $u=Li'$. If the current is $i=I_m\\sin\\omega t$:"
+ },
+ {
+  "t": "m",
+  "m": "u=Li'=\\omega LI_m\\cos\\omega t=U_m\\sin\\left(\\omega t+\\frac{\\pi}{2}\\right),\\qquad U_m=\\omega LI_m"
+ },
+ {
+  "t": "li",
+  "uz": "Demak, g'altakli zanjirda **kuchlanish tokdan $\\frac{\\pi}{2}$ ga oldinda, ya'ni tok kuchlanishdan $\\frac{\\pi}{2}$ ga (chorak davrga) orqada qoladi** ([[F03]]). Tok eng katta bo'lgan paytda u o'zgarmaydi ($i'=0$) — kuchlanish nolga teng; tok nol orqali o'tayotganda u eng tez o'zgaradi — kuchlanish eng katta. Eslab qolish uchun inglizcha «ELI the ICE man» iborasi: $L$ da $E$ (kuchlanish) $I$ dan oldin, $C$ da $I$ $E$ dan oldin.",
+  "ru": "Значит, в цепи с катушкой **напряжение опережает ток на $\\frac{\\pi}{2}$, то есть ток отстаёт от напряжения на $\\frac{\\pi}{2}$ (на четверть периода)** ([[F03]]). В момент, когда ток наибольший, он не меняется ($i'=0$) — напряжение равно нулю; когда ток проходит через ноль, он меняется быстрее всего — напряжение наибольшее. Для запоминания — английская фраза «ELI the ICE man»: в $L$ $E$ (напряжение) идёт раньше $I$, в $C$ $I$ раньше $E$.",
+  "en": "Hence, in a circuit with a coil **the voltage leads the current by $\\frac{\\pi}{2}$, that is, the current lags behind the voltage by $\\frac{\\pi}{2}$ (by a quarter period)** ([[F03]]). At the moment the current is largest, it is not changing ($i'=0$) — the voltage is zero; when the current passes through zero, it changes fastest — the voltage is largest. A mnemonic is the phrase «ELI the ICE man»: in $L$, $E$ (the voltage) comes before $I$; in $C$, $I$ comes before $E$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B1-L42-F03.png",
+   "ru": "figures/B1-L42-F03-ru.png",
+   "en": "figures/B1-L42-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Induktiv qarshilik.** Kuchlanish va tok amplitudalari nisbati induktiv qarshilik (inductive reactance) deyiladi:",
+  "ru": "**Индуктивное сопротивление.** Отношение амплитуд напряжения и тока называется индуктивным сопротивлением (inductive reactance):",
+  "en": "**Inductive reactance.** The ratio of the amplitudes of the voltage and the current is called the inductive reactance:"
+ },
+ {
+  "t": "m",
+  "m": "X_L=\\frac{U_m}{I_m}=\\omega L=2\\pi\\nu L,\\qquad I=\\frac{U}{X_L}=\\frac{U}{\\omega L}"
+ },
+ {
+  "t": "li",
+  "uz": "**Chastota va induktivlikka bog'liqlik.** $X_L\\sim\\nu$ va $X_L\\sim L$: chastota yoki induktivlik ortsa, tok tezroq o'zgarishga majbur bo'ladi, o'zinduksiya EYK ortadi va tok kamayadi. O'zgarmas tokda ($\\nu=0$) $X_L=0$ — g'altak faqat simning aktiv qarshiligini ko'rsatadi. G'altakka po'lat o'zak kiritilsa, $L$ va $X_L$ keskin ortadi; shu sababli o'zakli g'altak (drossel) o'zgaruvchan tokni cheklash uchun ishlatiladi va bunda rezistordagidek energiya isrof bo'lmaydi.",
+  "ru": "**Зависимость от частоты и индуктивности.** $X_L\\sim\\nu$ и $X_L\\sim L$: при росте частоты или индуктивности ток вынужден меняться быстрее, ЭДС самоиндукции растёт, и ток уменьшается. На постоянном токе ($\\nu=0$) $X_L=0$ — катушка оказывает только активное сопротивление провода. При введении в катушку стального сердечника $L$ и $X_L$ резко растут; поэтому катушку с сердечником (дроссель) используют для ограничения переменного тока, причём без потерь энергии, как в резисторе.",
+  "en": "**Dependence on frequency and inductance.** $X_L\\sim\\nu$ and $X_L\\sim L$: as the frequency or the inductance increases, the current is forced to change faster, the self-induced emf grows and the current decreases. For a steady current ($\\nu=0$) $X_L=0$ — the coil offers only the resistance of its wire. When a steel core is inserted into the coil, $L$ and $X_L$ increase sharply; therefore a coil with a core (a choke) is used to limit an alternating current, and without the energy loss of a resistor."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Induktivligi $L=1\\ \\mathrm{H}$ bo'lgan g'altakning $50\\ \\mathrm{Hz}$ dagi qarshiligi $X_L=2\\pi\\cdot50\\cdot1\\approx314\\ \\Omega$. Ideal g'altakda ham, kondensatordagidek, o'rtacha quvvat nolga teng: chorak davrda energiya magnit maydonda to'planadi, keyingi chorak davrda manbaga qaytariladi. Shuning uchun $X_L$ ham reaktiv qarshilikdir.",
+  "ru": "**Пример.** Сопротивление катушки индуктивностью $L=1\\ \\mathrm{H}$ на частоте $50\\ \\mathrm{Hz}$ равно $X_L=2\\pi\\cdot50\\cdot1\\approx314\\ \\Omega$. В идеальной катушке, как и в конденсаторе, средняя мощность равна нулю: в течение четверти периода энергия запасается в магнитном поле, в следующую четверть возвращается источнику. Поэтому $X_L$ тоже реактивное сопротивление.",
+  "en": "**Example.** The reactance of a coil of inductance $L=1\\ \\mathrm{H}$ at $50\\ \\mathrm{Hz}$ is $X_L=2\\pi\\cdot50\\cdot1\\approx314\\ \\Omega$. In an ideal coil, as in a capacitor, the average power is zero: during a quarter period energy is stored in the magnetic field, and during the next quarter it is returned to the source. Therefore $X_L$ is also a reactance."
+ },
+ {
+  "t": "li",
+  "uz": "**Uchta element — qisqacha** ([[F04]]): aktiv qarshilik — tok va kuchlanish bir fazada, $R$ chastotaga bog'liq emas; kondensator — tok $\\frac{\\pi}{2}$ ga oldinda, $X_C=\\frac{1}{\\omega C}$ chastota ortishi bilan kamayadi; g'altak — tok $\\frac{\\pi}{2}$ ga orqada, $X_L=\\omega L$ chastotaga proporsional ortadi. Lampa kondensator bilan ketma-ket ulangan bo'lsa, chastota yoki sig'im ortganda u yorqinroq yonadi; g'altak bilan ketma-ket ulangan bo'lsa — chastota yoki induktivlik kamayganda.",
+  "ru": "**Три элемента — кратко** ([[F04]]): активное сопротивление — ток и напряжение в фазе, $R$ не зависит от частоты; конденсатор — ток опережает на $\\frac{\\pi}{2}$, $X_C=\\frac{1}{\\omega C}$ уменьшается с ростом частоты; катушка — ток отстаёт на $\\frac{\\pi}{2}$, $X_L=\\omega L$ растёт пропорционально частоте. Лампа, включённая последовательно с конденсатором, горит ярче при увеличении частоты или ёмкости; последовательно с катушкой — при уменьшении частоты или индуктивности.",
+  "en": "**The three elements in brief** ([[F04]]): resistance — current and voltage in phase, $R$ does not depend on frequency; capacitor — the current leads by $\\frac{\\pi}{2}$, $X_C=\\frac{1}{\\omega C}$ decreases as the frequency increases; coil — the current lags by $\\frac{\\pi}{2}$, $X_L=\\omega L$ grows in proportion to the frequency. A lamp in series with a capacitor glows brighter when the frequency or the capacitance increases; in series with a coil — when the frequency or the inductance decreases."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B1-L42-F04.png",
+   "ru": "figures/B1-L42-F04-ru.png",
+   "en": "figures/B1-L42-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Ketma-ket RLC zanjir va vektor diagramma (Series RLC circuit and the phasor diagram)",
+  "ru": "6. Последовательная RLC-цепь и векторная диаграмма",
+  "en": "6. Series RLC circuit and the phasor diagram"
+ },
+ {
+  "t": "li",
+  "uz": "**Tok umumiy, kuchlanishlar turli fazada.** Rezistor, g'altak va kondensator ketma-ket ulangan zanjirda har bir paytda hamma elementlardan bir xil tok $i=I_m\\sin\\omega t$ o'tadi. Oniy kuchlanishlar qo'shiladi: $u=u_R+u_L+u_C$. Lekin $u_R$ tok bilan bir fazada, $u_L$ tokdan $\\frac{\\pi}{2}$ ga oldinda, $u_C$ esa tokdan $\\frac{\\pi}{2}$ ga orqada bo'lgani uchun ularning eng katta qiymatlari turli paytlarga to'g'ri keladi va **amplitudalar (hamda voltmetr ko'rsatishlari) arifmetik qo'shilmaydi**.",
+  "ru": "**Ток общий, напряжения в разных фазах.** В цепи из последовательно соединённых резистора, катушки и конденсатора в каждый момент через все элементы идёт один и тот же ток $i=I_m\\sin\\omega t$. Мгновенные напряжения складываются: $u=u_R+u_L+u_C$. Но $u_R$ в фазе с током, $u_L$ опережает ток на $\\frac{\\pi}{2}$, а $u_C$ отстаёт от тока на $\\frac{\\pi}{2}$, поэтому их наибольшие значения приходятся на разные моменты, и **амплитуды (и показания вольтметров) арифметически не складываются**.",
+  "en": "**The current is common, the voltages are in different phases.** In a circuit of a resistor, a coil and a capacitor connected in series, at every moment the same current $i=I_m\\sin\\omega t$ passes through all the elements. The instantaneous voltages add up: $u=u_R+u_L+u_C$. But $u_R$ is in phase with the current, $u_L$ leads the current by $\\frac{\\pi}{2}$, and $u_C$ lags behind the current by $\\frac{\\pi}{2}$, so their largest values occur at different moments, and **the amplitudes (and voltmeter readings) do not add arithmetically**."
+ },
+ {
+  "t": "li",
+  "uz": "**Vektor diagramma.** Har bir garmonik tebranishni uzunligi amplitudaga teng, burchagi fazaga teng bo'lgan aylanuvchi vektor bilan tasvirlash mumkin. Tok vektorini gorizontal yo'naltiramiz; u holda $\\vec U_R$ unga parallel, $\\vec U_L$ yuqoriga, $\\vec U_C$ pastga yo'nalgan ([[F05]]). $\\vec U_L$ va $\\vec U_C$ qarama-qarshi bo'lgani uchun ularning ayirmasi olinadi, keyin Pifagor teoremasi qo'llaniladi:",
+  "ru": "**Векторная диаграмма.** Каждое гармоническое колебание можно изобразить вращающимся вектором, длина которого равна амплитуде, а угол — фазе. Направим вектор тока горизонтально; тогда $\\vec U_R$ параллелен ему, $\\vec U_L$ направлен вверх, $\\vec U_C$ — вниз ([[F05]]). Так как $\\vec U_L$ и $\\vec U_C$ противоположны, берётся их разность, а затем применяется теорема Пифагора:",
+  "en": "**Phasor diagram.** Each harmonic oscillation can be represented by a rotating vector whose length equals the amplitude and whose angle equals the phase. Let the current vector point horizontally; then $\\vec U_R$ is parallel to it, $\\vec U_L$ points up and $\\vec U_C$ points down ([[F05]]). Since $\\vec U_L$ and $\\vec U_C$ are opposite, their difference is taken, and then the Pythagorean theorem is applied:"
+ },
+ {
+  "t": "m",
+  "m": "U=\\sqrt{U_R^2+(U_L-U_C)^2},\\qquad U_R=IR,\\quad U_L=IX_L,\\quad U_C=IX_C"
+ },
+ {
+  "t": "li",
+  "uz": "**To'la qarshilik (impedans).** Har bir kuchlanishni umumiy tok $I$ ga bo'lsak, qarshiliklar uchburchagi hosil bo'ladi. Uning gipotenuzasi — zanjirning to'la qarshiligi (impedance) $Z$. Om qonuni o'zgaruvchan tok zanjiri uchun:",
+  "ru": "**Полное сопротивление (импеданс).** Разделив каждое напряжение на общий ток $I$, получаем треугольник сопротивлений. Его гипотенуза — полное сопротивление цепи (impedance) $Z$. Закон Ома для цепи переменного тока:",
+  "en": "**Impedance.** Dividing each voltage by the common current $I$, we obtain the impedance triangle. Its hypotenuse is the impedance $Z$ of the circuit. Ohm's law for an AC circuit is:"
+ },
+ {
+  "t": "m",
+  "m": "Z=\\sqrt{R^2+(X_L-X_C)^2},\\qquad I_m=\\frac{U_m}{Z},\\qquad I=\\frac{U}{Z}"
+ },
+ {
+  "t": "li",
+  "uz": "**Faza farqi.** Umumiy kuchlanish vektori bilan tok vektori orasidagi burchak $\\varphi$ — kuchlanish va tok orasidagi faza farqi. $X_L>X_C$ bo'lsa, $\\varphi>0$: kuchlanish tokdan oldinda, zanjir induktiv xarakterga ega; $X_L<X_C$ bo'lsa, $\\varphi<0$: tok oldinda, zanjir sig'im xarakterga ega. $\\cos\\varphi$ ning ahamiyati 8-bo'limda.",
+  "ru": "**Разность фаз.** Угол $\\varphi$ между вектором общего напряжения и вектором тока — разность фаз между напряжением и током. Если $X_L>X_C$, $\\varphi>0$: напряжение опережает ток, цепь имеет индуктивный характер; если $X_L<X_C$, $\\varphi<0$: ток опережает, цепь имеет ёмкостный характер. Значение $\\cos\\varphi$ — в разделе 8.",
+  "en": "**Phase difference.** The angle $\\varphi$ between the total voltage vector and the current vector is the phase difference between the voltage and the current. If $X_L>X_C$, $\\varphi>0$: the voltage leads the current and the circuit is inductive; if $X_L<X_C$, $\\varphi<0$: the current leads and the circuit is capacitive. The meaning of $\\cos\\varphi$ is in section 8."
+ },
+ {
+  "t": "m",
+  "m": "\\mathrm{tg}\\,\\varphi=\\frac{X_L-X_C}{R}=\\frac{U_L-U_C}{U_R},\\qquad \\cos\\varphi=\\frac{R}{Z}=\\frac{U_R}{U}"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B1-L42-F05.png",
+   "ru": "figures/B1-L42-F05-ru.png",
+   "en": "figures/B1-L42-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Xususiy hollar.** Faqat $R$ va $L$: $Z=\\sqrt{R^2+X_L^2}$; faqat $R$ va $C$: $Z=\\sqrt{R^2+X_C^2}$; faqat $L$ va $C$ (ideal elementlar): $Z=|X_L-X_C|$, $\\varphi=\\pm\\frac{\\pi}{2}$. Aktiv va reaktiv qarshiliklar ham arifmetik qo'shilmaydi: $R=30\\ \\Omega$ va $X_L=40\\ \\Omega$ bo'lsa, $Z=50\\ \\Omega$, $70\\ \\Omega$ emas.",
+  "ru": "**Частные случаи.** Только $R$ и $L$: $Z=\\sqrt{R^2+X_L^2}$; только $R$ и $C$: $Z=\\sqrt{R^2+X_C^2}$; только $L$ и $C$ (идеальные элементы): $Z=|X_L-X_C|$, $\\varphi=\\pm\\frac{\\pi}{2}$. Активное и реактивное сопротивления тоже не складываются арифметически: при $R=30\\ \\Omega$ и $X_L=40\\ \\Omega$ $Z=50\\ \\Omega$, а не $70\\ \\Omega$.",
+  "en": "**Special cases.** Only $R$ and $L$: $Z=\\sqrt{R^2+X_L^2}$; only $R$ and $C$: $Z=\\sqrt{R^2+X_C^2}$; only $L$ and $C$ (ideal elements): $Z=|X_L-X_C|$, $\\varphi=\\pm\\frac{\\pi}{2}$. The resistance and the reactance do not add arithmetically either: for $R=30\\ \\Omega$ and $X_L=40\\ \\Omega$, $Z=50\\ \\Omega$, not $70\\ \\Omega$."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $R=60\\ \\Omega$, $X_L=100\\ \\Omega$, $X_C=20\\ \\Omega$ ketma-ket ulangan va zanjirga $U=200\\ \\mathrm{V}$ ta'sir etuvchi kuchlanish berilgan. $Z=\\sqrt{60^2+80^2}=100\\ \\Omega$, $I=2\\ \\mathrm{A}$, $\\cos\\varphi=0.6$. Voltmetrlar $U_R=120\\ \\mathrm{V}$, $U_L=200\\ \\mathrm{V}$, $U_C=40\\ \\mathrm{V}$ ni ko'rsatadi: ularning yig'indisi $360\\ \\mathrm{V}$, umumiy kuchlanishdan katta, g'altakdagi kuchlanish esa umumiy kuchlanishga teng. Tekshiruv: $\\sqrt{120^2+160^2}=200\\ \\mathrm{V}$.",
+  "ru": "**Пример.** Последовательно соединены $R=60\\ \\Omega$, $X_L=100\\ \\Omega$, $X_C=20\\ \\Omega$, и на цепь подано действующее напряжение $U=200\\ \\mathrm{V}$. $Z=\\sqrt{60^2+80^2}=100\\ \\Omega$, $I=2\\ \\mathrm{A}$, $\\cos\\varphi=0.6$. Вольтметры показывают $U_R=120\\ \\mathrm{V}$, $U_L=200\\ \\mathrm{V}$, $U_C=40\\ \\mathrm{V}$: их сумма $360\\ \\mathrm{V}$ больше общего напряжения, а напряжение на катушке равно общему. Проверка: $\\sqrt{120^2+160^2}=200\\ \\mathrm{V}$.",
+  "en": "**Example.** $R=60\\ \\Omega$, $X_L=100\\ \\Omega$ and $X_C=20\\ \\Omega$ are connected in series, and an effective voltage $U=200\\ \\mathrm{V}$ is applied to the circuit. $Z=\\sqrt{60^2+80^2}=100\\ \\Omega$, $I=2\\ \\mathrm{A}$, $\\cos\\varphi=0.6$. The voltmeters read $U_R=120\\ \\mathrm{V}$, $U_L=200\\ \\mathrm{V}$, $U_C=40\\ \\mathrm{V}$: their sum, $360\\ \\mathrm{V}$, is larger than the total voltage, and the voltage across the coil equals the total voltage. Check: $\\sqrt{120^2+160^2}=200\\ \\mathrm{V}$."
+ },
+ {
+  "t": "h2",
+  "uz": "7. Kuchlanishlar rezonansi (Voltage resonance)",
+  "ru": "7. Резонанс напряжений",
+  "en": "7. Voltage resonance"
+ },
+ {
+  "t": "li",
+  "uz": "**Rezonans sharti.** Ketma-ket RLC zanjirda tashqi kuchlanish chastotasi o'zgartirilsa, $X_L$ ortadi, $X_C$ kamayadi va ma'lum chastotada ular tenglashadi. Bu chastotada zanjirning to'la qarshiligi eng kichik, tok esa eng katta bo'ladi — bu hodisa kuchlanishlar rezonansi (resonance) deyiladi:",
+  "ru": "**Условие резонанса.** Если в последовательной RLC-цепи менять частоту внешнего напряжения, $X_L$ растёт, $X_C$ уменьшается, и при определённой частоте они становятся равными. На этой частоте полное сопротивление цепи наименьшее, а ток наибольший — это явление называется резонансом напряжений (resonance):",
+  "en": "**Resonance condition.** If the frequency of the external voltage in a series RLC circuit is changed, $X_L$ increases, $X_C$ decreases, and at a certain frequency they become equal. At this frequency the impedance of the circuit is smallest and the current is largest — this phenomenon is called voltage resonance:"
+ },
+ {
+  "t": "m",
+  "m": "\\omega L=\\frac{1}{\\omega C}\\ \\Rightarrow\\ \\omega_0=\\frac{1}{\\sqrt{LC}},\\qquad \\nu_0=\\frac{1}{2\\pi\\sqrt{LC}}"
+ },
+ {
+  "t": "li",
+  "uz": "Rezonans chastotasi L41 dagi tebranish konturining xususiy chastotasiga (Tomson formulasi) teng: tashqi kuchlanish konturni o'zining xususiy chastotasida «tebratganda» tebranishlar eng kuchli bo'ladi — xuddi mexanik rezonans kabi (L21).",
+  "ru": "Резонансная частота равна собственной частоте колебательного контура из L41 (формула Томсона): когда внешнее напряжение «раскачивает» контур на его собственной частоте, колебания максимальны — как при механическом резонансе (L21).",
+  "en": "The resonance frequency equals the natural frequency of the LC circuit of L41 (Thomson's formula): when the external voltage «drives» the circuit at its natural frequency, the oscillations are strongest — just as in mechanical resonance (L21)."
+ },
+ {
+  "t": "li",
+  "uz": "**Rezonansdagi xossalar.** $X_L=X_C$ bo'lgani uchun $Z=R$ (eng kichik), tok $I=\\frac{U}{R}$ (eng katta), $\\varphi=0$, $\\cos\\varphi=1$ — zanjir sof aktiv qarshilik kabi ishlaydi. G'altak va kondensatordagi kuchlanishlar teng va qarama-qarshi fazada bo'lib, bir-birini kompensatsiyalaydi; $R$ kichik bo'lsa, ular umumiy kuchlanishdan ko'p marta katta bo'lishi mumkin:",
+  "ru": "**Свойства при резонансе.** Так как $X_L=X_C$, $Z=R$ (наименьшее), ток $I=\\frac{U}{R}$ (наибольший), $\\varphi=0$, $\\cos\\varphi=1$ — цепь ведёт себя как чисто активное сопротивление. Напряжения на катушке и конденсаторе равны и противоположны по фазе, они компенсируют друг друга; при малом $R$ они могут во много раз превышать общее напряжение:",
+  "en": "**Properties at resonance.** Since $X_L=X_C$, $Z=R$ (smallest), the current $I=\\frac{U}{R}$ (largest), $\\varphi=0$, $\\cos\\varphi=1$ — the circuit behaves as a pure resistance. The voltages across the coil and the capacitor are equal and opposite in phase and cancel each other; for small $R$ they can be many times larger than the total voltage:"
+ },
+ {
+  "t": "m",
+  "m": "Z=R,\\qquad I_{max}=\\frac{U}{R},\\qquad U_L=U_C=\\frac{X_L}{R}\\,U"
+ },
+ {
+  "t": "li",
+  "uz": "**Rezonans egri chiziqlari** ([[F06]]). Tokning chastotaga bog'lanishi $\\omega_0$ da cho'qqiga ega; aktiv qarshilik qancha kichik bo'lsa, cho'qqi shuncha baland va o'tkir. Radiopriyomnikda kondensator sig'imini o'zgartirib, kontur kerakli stansiya chastotasiga sozlanadi: faqat shu chastotadagi signal kuchli tok hosil qiladi. Kuch zanjirlarida esa rezonans xavfli: kondensatordagi kuchlanish nominaldan oshib, uni teshib yuborishi mumkin.",
+  "ru": "**Резонансные кривые** ([[F06]]). Зависимость тока от частоты имеет пик при $\\omega_0$; чем меньше активное сопротивление, тем пик выше и острее. В радиоприёмнике, меняя ёмкость конденсатора, контур настраивают на частоту нужной станции: сильный ток создаёт только сигнал этой частоты. В силовых же цепях резонанс опасен: напряжение на конденсаторе может превысить номинальное и пробить его.",
+  "en": "**Resonance curves** ([[F06]]). The dependence of the current on frequency has a peak at $\\omega_0$; the smaller the resistance, the higher and sharper the peak. In a radio receiver the circuit is tuned to the frequency of the desired station by changing the capacitance: only the signal at this frequency produces a strong current. In power circuits, however, resonance is dangerous: the voltage across a capacitor may exceed its rating and break it down."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B1-L42-F06.png",
+   "ru": "figures/B1-L42-F06-ru.png",
+   "en": "figures/B1-L42-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $L=4\\ \\mathrm{mH}$ va $C=25\\ \\mathrm{nF}$ ketma-ket ulangan. $LC=10^{-10}\\ \\mathrm{s^2}$, $\\omega_0=10^5\\ \\mathrm{rad/s}$, $\\nu_0=\\frac{10^5}{2\\pi}\\approx15.9\\ \\mathrm{kHz}$. Bu chastotada $X_L=X_C=\\omega_0L=400\\ \\Omega$. Agar $R=8\\ \\Omega$ bo'lsa, rezonansda g'altakdagi kuchlanish umumiy kuchlanishdan $\\frac{400}{8}=50$ marta katta bo'ladi.",
+  "ru": "**Пример.** Последовательно соединены $L=4\\ \\mathrm{mH}$ и $C=25\\ \\mathrm{nF}$. $LC=10^{-10}\\ \\mathrm{s^2}$, $\\omega_0=10^5\\ \\mathrm{rad/s}$, $\\nu_0=\\frac{10^5}{2\\pi}\\approx15.9\\ \\mathrm{kHz}$. На этой частоте $X_L=X_C=\\omega_0L=400\\ \\Omega$. Если $R=8\\ \\Omega$, при резонансе напряжение на катушке в $\\frac{400}{8}=50$ раз больше общего напряжения.",
+  "en": "**Example.** $L=4\\ \\mathrm{mH}$ and $C=25\\ \\mathrm{nF}$ are connected in series. $LC=10^{-10}\\ \\mathrm{s^2}$, $\\omega_0=10^5\\ \\mathrm{rad/s}$, $\\nu_0=\\frac{10^5}{2\\pi}\\approx15.9\\ \\mathrm{kHz}$. At this frequency $X_L=X_C=\\omega_0L=400\\ \\Omega$. If $R=8\\ \\Omega$, at resonance the voltage across the coil is $\\frac{400}{8}=50$ times larger than the total voltage."
+ },
+ {
+  "t": "h2",
+  "uz": "8. O'zgaruvchan tok quvvati va quvvat koeffitsiyenti (AC power and the power factor)",
+  "ru": "8. Мощность переменного тока и коэффициент мощности",
+  "en": "8. AC power and the power factor"
+ },
+ {
+  "t": "li",
+  "uz": "**O'rtacha quvvat.** Kuchlanish $u=U_m\\sin\\omega t$, tok $i=I_m\\sin(\\omega t-\\varphi)$ bo'lsa, oniy quvvat $p=ui$ davr davomida ishorasini o'zgartirishi mumkin. Trigonometrik ayniyat bo'yicha $\\sin\\omega t\\sin(\\omega t-\\varphi)=\\frac{1}{2}\\left[\\cos\\varphi-\\cos(2\\omega t-\\varphi)\\right]$; ikkinchi hadning o'rtachasi nolga teng. Demak, o'rtacha (aktiv) quvvat:",
+  "ru": "**Средняя мощность.** Если напряжение $u=U_m\\sin\\omega t$, а ток $i=I_m\\sin(\\omega t-\\varphi)$, мгновенная мощность $p=ui$ может менять знак в течение периода. По тригонометрическому тождеству $\\sin\\omega t\\sin(\\omega t-\\varphi)=\\frac{1}{2}\\left[\\cos\\varphi-\\cos(2\\omega t-\\varphi)\\right]$; среднее второго слагаемого равно нулю. Значит, средняя (активная) мощность:",
+  "en": "**Average power.** If the voltage is $u=U_m\\sin\\omega t$ and the current $i=I_m\\sin(\\omega t-\\varphi)$, the instantaneous power $p=ui$ may change sign during a period. By the trigonometric identity $\\sin\\omega t\\sin(\\omega t-\\varphi)=\\frac{1}{2}\\left[\\cos\\varphi-\\cos(2\\omega t-\\varphi)\\right]$; the average of the second term is zero. Hence the average (active) power is:"
+ },
+ {
+  "t": "m",
+  "m": "P=\\frac{U_mI_m}{2}\\cos\\varphi=UI\\cos\\varphi=I^2R"
+ },
+ {
+  "t": "li",
+  "uz": "**Quvvat koeffitsiyenti.** $\\cos\\varphi$ — quvvat koeffitsiyenti (power factor). Energiyani faqat aktiv qarshilik iste'mol qiladi, shuning uchun $P=I^2R$; g'altak va kondensator energiyani manba bilan almashib turadi, xolos. Sof aktiv yukda $\\cos\\varphi=1$ va $P=UI$; ideal g'altak yoki kondensatorda $\\cos\\varphi=0$ va $P=0$, garchi zanjirda tok bo'lsa ham. $UI$ ko'paytma to'la quvvat deyiladi va volt-amperda ($\\mathrm{V\\cdot A}$) o'lchanadi.",
+  "ru": "**Коэффициент мощности.** $\\cos\\varphi$ — коэффициент мощности (power factor). Энергию потребляет только активное сопротивление, поэтому $P=I^2R$; катушка и конденсатор лишь обмениваются энергией с источником. При чисто активной нагрузке $\\cos\\varphi=1$ и $P=UI$; в идеальной катушке или конденсаторе $\\cos\\varphi=0$ и $P=0$, хотя ток в цепи есть. Произведение $UI$ называют полной мощностью и измеряют в вольт-амперах ($\\mathrm{V\\cdot A}$).",
+  "en": "**Power factor.** $\\cos\\varphi$ is the power factor. Only the resistance consumes energy, so $P=I^2R$; the coil and the capacitor merely exchange energy with the source. For a purely resistive load $\\cos\\varphi=1$ and $P=UI$; in an ideal coil or capacitor $\\cos\\varphi=0$ and $P=0$, even though there is a current in the circuit. The product $UI$ is called the apparent power and is measured in volt-amperes ($\\mathrm{V\\cdot A}$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Nima uchun $\\cos\\varphi$ katta bo'lishi kerak?** Bir xil foydali quvvatni olish uchun $\\cos\\varphi$ kichik bo'lsa, katta tok $I=\\frac{P}{U\\cos\\varphi}$ kerak bo'ladi, bu esa simlarda va generatorda ortiqcha issiqlik isrofiga olib keladi. Elektr dvigatellari induktiv yuk bo'lgani uchun korxonalarda $\\cos\\varphi$ ni oshirish (masalan, $0.9$ dan katta qilish) maqsadida parallel kondensatorlar ulanadi.",
+  "ru": "**Почему $\\cos\\varphi$ должен быть большим?** Для получения той же полезной мощности при малом $\\cos\\varphi$ нужен большой ток $I=\\frac{P}{U\\cos\\varphi}$, а это ведёт к лишним тепловым потерям в проводах и генераторе. Электродвигатели — индуктивная нагрузка, поэтому на предприятиях для повышения $\\cos\\varphi$ (например, больше $0.9$) подключают параллельные конденсаторы.",
+  "en": "**Why should $\\cos\\varphi$ be large?** To obtain the same useful power with a small $\\cos\\varphi$, a large current $I=\\frac{P}{U\\cos\\varphi}$ is needed, which leads to extra heat losses in the wires and the generator. Electric motors are an inductive load, so factories connect capacitors in parallel to raise $\\cos\\varphi$ (for example, above $0.9$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Dvigatel $U=380\\ \\mathrm{V}$ tarmoqdan $I=10\\ \\mathrm{A}$ tok oladi, $\\cos\\varphi=0.85$. Aktiv quvvat $P=UI\\cos\\varphi=380\\cdot10\\cdot0.85=3230\\ \\mathrm{W}$, to'la quvvat esa $3800\\ \\mathrm{V\\cdot A}$. Vattmetr $P$ ni, voltmetr va ampermetr esa $U$ va $I$ ni ko'rsatadi, shuning uchun ularning ko'rsatishlaridan $\\cos\\varphi=\\frac{P}{UI}$ topiladi.",
+  "ru": "**Пример.** Двигатель потребляет из сети $U=380\\ \\mathrm{V}$ ток $I=10\\ \\mathrm{A}$, $\\cos\\varphi=0.85$. Активная мощность $P=UI\\cos\\varphi=380\\cdot10\\cdot0.85=3230\\ \\mathrm{W}$, а полная — $3800\\ \\mathrm{V\\cdot A}$. Ваттметр показывает $P$, а вольтметр и амперметр — $U$ и $I$, поэтому по их показаниям находят $\\cos\\varphi=\\frac{P}{UI}$.",
+  "en": "**Example.** A motor draws a current $I=10\\ \\mathrm{A}$ from a network $U=380\\ \\mathrm{V}$, $\\cos\\varphi=0.85$. The active power is $P=UI\\cos\\varphi=380\\cdot10\\cdot0.85=3230\\ \\mathrm{W}$, and the apparent power is $3800\\ \\mathrm{V\\cdot A}$. A wattmeter shows $P$, while a voltmeter and an ammeter show $U$ and $I$, so $\\cos\\varphi=\\frac{P}{UI}$ is found from their readings."
+ },
+ {
+  "t": "li",
+  "uz": "**Issiqlik miqdori.** Zanjirda $t$ vaqtda ajralgan issiqlik faqat aktiv qarshilikka bog'liq: $Q=I^2Rt=Pt$. Masalan, reaktiv qarshiliklar qanchalik katta bo'lmasin, ular faqat tok kuchini kamaytirish orqali $Q$ ga ta'sir qiladi.",
+  "ru": "**Количество теплоты.** Тепло, выделившееся в цепи за время $t$, зависит только от активного сопротивления: $Q=I^2Rt=Pt$. Например, реактивные сопротивления, какими бы большими они ни были, влияют на $Q$ только через уменьшение силы тока.",
+  "en": "**Quantity of heat.** The heat released in a circuit in time $t$ depends only on the resistance: $Q=I^2Rt=Pt$. For example, however large the reactances are, they affect $Q$ only by reducing the current."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Transformator (Transformer)",
+  "ru": "9. Трансформатор",
+  "en": "9. Transformer"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** O'zgaruvchan tok kuchlanishini chastotasini o'zgartirmagan holda oshiradigan yoki pasaytiradigan qurilma transformator (transformer) deyiladi. U yopiq po'lat o'zak va unga o'ralgan ikki chulg'amdan iborat ([[F07]]). Manbaga ulanadigan chulg'am birlamchi (primary), iste'molchi ulanadigan chulg'am ikkilamchi (secondary) chulg'am deyiladi; ularning o'ramlar soni $N_1$ va $N_2$. Uyurmali (Fuko) toklarni kamaytirish uchun o'zak bir-biridan izolyatsiyalangan yupqa plastinalardan yig'iladi (L40).",
+  "ru": "**Определение.** Устройство, повышающее или понижающее напряжение переменного тока без изменения его частоты, называется трансформатором (transformer). Он состоит из замкнутого стального сердечника и двух обмоток на нём ([[F07]]). Обмотка, подключаемая к источнику, называется первичной (primary), обмотка, к которой подключается потребитель, — вторичной (secondary); числа их витков $N_1$ и $N_2$. Для уменьшения вихревых токов (токов Фуко) сердечник собирают из тонких изолированных друг от друга пластин (L40).",
+  "en": "**Definition.** A device that raises or lowers an AC voltage without changing its frequency is called a transformer. It consists of a closed steel core and two windings on it ([[F07]]). The winding connected to the source is called the primary winding, and the winding to which the load is connected is the secondary winding; their numbers of turns are $N_1$ and $N_2$. To reduce eddy (Foucault) currents the core is assembled from thin plates insulated from each other (L40)."
+ },
+ {
+  "t": "li",
+  "uz": "**Ishlash prinsipi — elektromagnit induksiya.** Birlamchi chulg'amdagi o'zgaruvchan tok o'zakda o'zgaruvchan magnit oqimi $\\Phi$ hosil qiladi. O'zak oqimni deyarli to'liq ushlab turgani uchun ikkala chulg'amning har bir o'rami orqali bir xil oqim o'tadi va har bir o'ramda bir xil EYK $-\\Phi'$ induksiyalanadi. Shuning uchun chulg'amlardagi EYK lar o'ramlar soniga proporsional:",
+  "ru": "**Принцип работы — электромагнитная индукция.** Переменный ток в первичной обмотке создаёт в сердечнике переменный магнитный поток $\\Phi$. Поскольку сердечник почти полностью удерживает поток, через каждый виток обеих обмоток проходит один и тот же поток, и в каждом витке индуцируется одна и та же ЭДС $-\\Phi'$. Поэтому ЭДС в обмотках пропорциональны числам витков:",
+  "en": "**Principle — electromagnetic induction.** The alternating current in the primary winding produces an alternating magnetic flux $\\Phi$ in the core. Since the core keeps almost all of the flux, the same flux passes through every turn of both windings, and the same emf $-\\Phi'$ is induced in each turn. Therefore the emfs in the windings are proportional to the numbers of turns:"
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal{E}_1=-N_1\\Phi',\\qquad \\mathcal{E}_2=-N_2\\Phi',\\qquad \\frac{\\mathcal{E}_1}{\\mathcal{E}_2}=\\frac{N_1}{N_2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Transformatsiya koeffitsiyenti.** Chulg'amlarning aktiv qarshiligi kichik bo'lsa, birlamchi chulg'amda $U_1\\approx\\mathcal{E}_1$; salt ishlash rejimida (ikkilamchi zanjir uzilgan) $U_2=\\mathcal{E}_2$. Bu darsda (Berdiyev kitobidagidek) transformatsiya koeffitsiyenti (turns ratio) birlamchi kattalikning ikkilamchi kattalikka nisbati sifatida olinadi:",
+  "ru": "**Коэффициент трансформации.** Если активное сопротивление обмоток мало, в первичной обмотке $U_1\\approx\\mathcal{E}_1$; в режиме холостого хода (вторичная цепь разомкнута) $U_2=\\mathcal{E}_2$. В этом уроке (как в книге Бердиева) коэффициент трансформации (turns ratio) берётся как отношение первичной величины к вторичной:",
+  "en": "**Turns ratio.** If the resistance of the windings is small, in the primary winding $U_1\\approx\\mathcal{E}_1$; in the no-load mode (the secondary circuit is open) $U_2=\\mathcal{E}_2$. In this lesson (as in Berdiyev's book) the transformation coefficient (turns ratio) is taken as the ratio of the primary quantity to the secondary one:"
+ },
+ {
+  "t": "m",
+  "m": "k=\\frac{U_1}{U_2}=\\frac{N_1}{N_2}"
+ },
+ {
+  "t": "li",
+  "uz": "$k>1$ ($N_2<N_1$) bo'lsa, transformator pasaytiruvchi (step-down), $k<1$ ($N_2>N_1$) bo'lsa, kuchaytiruvchi (step-up) transformator deyiladi. Ba'zi darsliklar va GRE masalalari $\\frac{N_2}{N_1}$ nisbatni ishlatadi — shuning uchun javob yozishda doim qaysi nisbat nazarda tutilganini tekshiring. Transformator o'zgarmas tokda ishlamaydi: o'zgarmas tok o'zgarmas oqim hosil qiladi va ikkilamchi chulg'amda EYK induksiyalanmaydi.",
+  "ru": "При $k>1$ ($N_2<N_1$) трансформатор называется понижающим (step-down), при $k<1$ ($N_2>N_1$) — повышающим (step-up). Некоторые учебники и задачи GRE используют отношение $\\frac{N_2}{N_1}$ — поэтому, записывая ответ, всегда проверяйте, какое отношение имеется в виду. Трансформатор не работает на постоянном токе: постоянный ток создаёт постоянный поток, и во вторичной обмотке ЭДС не индуцируется.",
+  "en": "For $k>1$ ($N_2<N_1$) the transformer is called step-down, for $k<1$ ($N_2>N_1$) — step-up. Some textbooks and GRE problems use the ratio $\\frac{N_2}{N_1}$ — so when writing an answer always check which ratio is meant. A transformer does not work on a steady current: a steady current produces a constant flux, and no emf is induced in the secondary winding."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B1-L42-F07.png",
+   "ru": "figures/B1-L42-F07-ru.png",
+   "en": "figures/B1-L42-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Ideal transformator.** Isroflar hisobga olinmasa, birlamchi zanjirdan olingan quvvat to'liq ikkilamchi zanjirga uzatiladi: $U_1I_1=U_2I_2$. Demak, kuchlanish necha marta oshsa, tok shuncha marta kamayadi. Pasaytiruvchi transformatorning ikkilamchi chulg'amida tok katta, shuning uchun u kam o'ramli, lekin yo'g'on simdan o'raladi; kuchaytiruvchi transformatorda esa birlamchi chulg'am simining kesimi katta bo'ladi.",
+  "ru": "**Идеальный трансформатор.** Если пренебречь потерями, мощность, получаемая первичной цепью, полностью передаётся во вторичную: $U_1I_1=U_2I_2$. Значит, во сколько раз повышается напряжение, во столько же раз уменьшается ток. Во вторичной обмотке понижающего трансформатора ток большой, поэтому её наматывают из небольшого числа витков толстого провода; а у повышающего трансформатора большое сечение имеет провод первичной обмотки.",
+  "en": "**Ideal transformer.** If losses are neglected, the power received by the primary circuit is fully transferred to the secondary one: $U_1I_1=U_2I_2$. Hence, the voltage is raised by the same factor by which the current is reduced. In the secondary winding of a step-down transformer the current is large, so it is wound with a small number of turns of thick wire; in a step-up transformer it is the primary winding wire that has a large cross-section."
+ },
+ {
+  "t": "m",
+  "m": "U_1I_1=U_2I_2,\\qquad \\frac{I_1}{I_2}=\\frac{U_2}{U_1}=\\frac{N_2}{N_1}=\\frac{1}{k}"
+ },
+ {
+  "t": "li",
+  "uz": "**Real transformator va FIK.** Haqiqiy transformatorda energiyaning bir qismi chulg'amlarda Joul issiqligiga va o'zakda uyurmali toklar hamda qayta magnitlanishga sarflanadi. Foydali ish koeffitsiyenti ikkilamchi zanjirga berilgan quvvatning birlamchi zanjir olgan quvvatga nisbati; katta transformatorlarda u $98$–$99$ foizga yetadi:",
+  "ru": "**Реальный трансформатор и КПД.** В реальном трансформаторе часть энергии расходуется на джоулево тепло в обмотках, а также на вихревые токи и перемагничивание в сердечнике. Коэффициент полезного действия — отношение мощности, отданной во вторичную цепь, к мощности, потреблённой первичной цепью; у больших трансформаторов он достигает $98$–$99$ процентов:",
+  "en": "**Real transformer and efficiency.** In a real transformer part of the energy is spent on Joule heat in the windings and on eddy currents and remagnetization in the core. The efficiency is the ratio of the power delivered to the secondary circuit to the power taken by the primary circuit; for large transformers it reaches $98$–$99$ percent:"
+ },
+ {
+  "t": "m",
+  "m": "\\eta=\\frac{P_2}{P_1}=\\frac{U_2I_2}{U_1I_1}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikkilamchi chulg'am qarshiligi.** Yuk ulanganda ikkilamchi chulg'am tok manbai kabi ishlaydi (L36): uning EYK si $\\mathcal{E}_2=\\frac{U_1}{k}$, ichki qarshiligi — chulg'am qarshiligi $r$. Shuning uchun qisqichlardagi kuchlanish $U_2=\\mathcal{E}_2-I_2r$ salt ishlashdagidan kichik. Bunday masalalarda transformatsiya koeffitsiyenti qisqichlardagi kuchlanish bilan emas, EYK bilan hisoblanadi: $k=\\frac{U_1}{\\mathcal{E}_2}$.",
+  "ru": "**Сопротивление вторичной обмотки.** При подключении нагрузки вторичная обмотка работает как источник тока (L36): её ЭДС $\\mathcal{E}_2=\\frac{U_1}{k}$, внутреннее сопротивление — сопротивление обмотки $r$. Поэтому напряжение на зажимах $U_2=\\mathcal{E}_2-I_2r$ меньше, чем на холостом ходу. В таких задачах коэффициент трансформации вычисляют не по напряжению на зажимах, а по ЭДС: $k=\\frac{U_1}{\\mathcal{E}_2}$.",
+  "en": "**Resistance of the secondary winding.** When a load is connected, the secondary winding acts as a current source (L36): its emf is $\\mathcal{E}_2=\\frac{U_1}{k}$, and its internal resistance is the winding resistance $r$. Therefore the terminal voltage $U_2=\\mathcal{E}_2-I_2r$ is smaller than at no load. In such problems the turns ratio is calculated not from the terminal voltage but from the emf: $k=\\frac{U_1}{\\mathcal{E}_2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Podstansiya transformatori $6600\\ \\mathrm{V}$ ni $220\\ \\mathrm{V}$ ga pasaytiradi. $k=\\frac{6600}{220}=30$; birlamchi chulg'amda $N_1=3000$ o'ram bo'lsa, $N_2=\\frac{N_1}{k}=100$. Ikkilamchi zanjirdagi tok birlamchidagidan $30$ marta katta.",
+  "ru": "**Пример.** Трансформатор подстанции понижает $6600\\ \\mathrm{V}$ до $220\\ \\mathrm{V}$. $k=\\frac{6600}{220}=30$; если в первичной обмотке $N_1=3000$ витков, то $N_2=\\frac{N_1}{k}=100$. Ток во вторичной цепи в $30$ раз больше, чем в первичной.",
+  "en": "**Example.** A substation transformer lowers $6600\\ \\mathrm{V}$ to $220\\ \\mathrm{V}$. $k=\\frac{6600}{220}=30$; if the primary winding has $N_1=3000$ turns, then $N_2=\\frac{N_1}{k}=100$. The current in the secondary circuit is $30$ times larger than in the primary one."
+ },
+ {
+  "t": "h2",
+  "uz": "10. Elektr energiyani uzatish (Transmission of electric energy)",
+  "ru": "10. Передача электроэнергии",
+  "en": "10. Transmission of electric energy"
+ },
+ {
+  "t": "li",
+  "uz": "**Isrof qayerdan keladi?** Elektr stansiyalari iste'molchilardan yuzlab kilometr uzoqda joylashadi. Uzatish liniyasi simlarining umumiy qarshiligi $R$ bo'lsa, $P$ quvvatni $U$ kuchlanishda uzatganda liniyadagi tok $I=\\frac{P}{U}$ va simlarda issiqlikka aylanadigan quvvat (L35):",
+  "ru": "**Откуда берутся потери?** Электростанции находятся за сотни километров от потребителей. Если общее сопротивление проводов линии передачи $R$, то при передаче мощности $P$ при напряжении $U$ ток в линии $I=\\frac{P}{U}$, а мощность, превращающаяся в тепло в проводах (L35):",
+  "en": "**Where do the losses come from?** Power stations are located hundreds of kilometres from consumers. If the total resistance of the wires of a transmission line is $R$, then when a power $P$ is transmitted at a voltage $U$, the current in the line is $I=\\frac{P}{U}$, and the power converted into heat in the wires is (L35):"
+ },
+ {
+  "t": "m",
+  "m": "\\Delta P=I^2R=\\frac{P^2R}{U^2},\\qquad \\frac{\\Delta P}{P}=\\frac{PR}{U^2},\\qquad \\Delta U=IR"
+ },
+ {
+  "t": "li",
+  "uz": "**Yuqori kuchlanish.** Isrof kuchlanish kvadratiga teskari proporsional: bir xil quvvatda kuchlanish $n$ marta oshirilsa, tok $n$ marta, isrof esa $n^2$ marta kamayadi. Masalan, kuchlanishni $10$ marta oshirish isrofni $100$ marta kamaytiradi. Simlarni yo'g'onlashtirish (qarshilikni kamaytirish) ancha qimmat va og'ir yechim bo'lardi. Liniyadagi kuchlanish tushuvi $\\Delta U=IR$ ham kuchlanish oshirilganda kamayadi.",
+  "ru": "**Высокое напряжение.** Потери обратно пропорциональны квадрату напряжения: если при той же мощности напряжение повысить в $n$ раз, ток уменьшится в $n$ раз, а потери — в $n^2$ раз. Например, повышение напряжения в $10$ раз уменьшает потери в $100$ раз. Утолщение проводов (уменьшение сопротивления) было бы гораздо более дорогим и тяжёлым решением. Падение напряжения в линии $\\Delta U=IR$ при повышении напряжения тоже уменьшается.",
+  "en": "**High voltage.** The losses are inversely proportional to the square of the voltage: if at the same power the voltage is raised $n$ times, the current decreases $n$ times and the losses $n^2$ times. For example, raising the voltage $10$ times reduces the losses $100$ times. Making the wires thicker (reducing the resistance) would be a much more expensive and heavier solution. The voltage drop in the line $\\Delta U=IR$ also decreases when the voltage is raised."
+ },
+ {
+  "t": "li",
+  "uz": "**Uzatish zanjiri** ([[F08]]). Generator taxminan $10$–$20\\ \\mathrm{kV}$ kuchlanish beradi; stansiyadagi kuchaytiruvchi transformator uni $110$–$500\\ \\mathrm{kV}$ gacha oshiradi; yuqori kuchlanishli liniya energiyani uzoqqa uzatadi; iste'molchi yaqinidagi pasaytiruvchi podstansiyalar kuchlanishni bosqichma-bosqich $10\\ \\mathrm{kV}$ ga, so'ngra uy tarmog'i uchun $220/380\\ \\mathrm{V}$ ga tushiradi. Transformator faqat o'zgaruvchan tokda ishlagani uchun energetika o'zgaruvchan tokka asoslangan.",
+  "ru": "**Цепочка передачи** ([[F08]]). Генератор даёт напряжение порядка $10$–$20\\ \\mathrm{kV}$; повышающий трансформатор на станции повышает его до $110$–$500\\ \\mathrm{kV}$; высоковольтная линия передаёт энергию на большое расстояние; понижающие подстанции вблизи потребителя ступенчато снижают напряжение до $10\\ \\mathrm{kV}$, а затем до $220/380\\ \\mathrm{V}$ для домашней сети. Так как трансформатор работает только на переменном токе, энергетика основана на переменном токе.",
+  "en": "**The transmission chain** ([[F08]]). A generator gives a voltage of about $10$–$20\\ \\mathrm{kV}$; a step-up transformer at the station raises it to $110$–$500\\ \\mathrm{kV}$; a high-voltage line carries the energy over a long distance; step-down substations near the consumers lower the voltage in stages to $10\\ \\mathrm{kV}$ and then to $220/380\\ \\mathrm{V}$ for the home network. Since a transformer works only on alternating current, the energy system is based on alternating current."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B1-L42-F08.png",
+   "ru": "figures/B1-L42-F08-ru.png",
+   "en": "figures/B1-L42-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Liniyada isrof $9$ foiz bo'lsa va uzatilayotgan quvvat o'zgarmagan holda kuchlanish $3$ marta oshirilsa, isrof $9$ marta kamayib, $1$ foizga tushadi. Masalalarda $R$ simlarning umumiy qarshiligi ekanini (ikki sim — $2l$ uzunlik, L33) unutmang.",
+  "ru": "**Пример.** Если потери в линии составляют $9$ процентов и при неизменной передаваемой мощности напряжение повышают в $3$ раза, потери уменьшаются в $9$ раз и падают до $1$ процента. В задачах не забывайте, что $R$ — общее сопротивление проводов (два провода — длина $2l$, L33).",
+  "en": "**Example.** If the losses in a line are $9$ percent and the voltage is raised $3$ times at the same transmitted power, the losses decrease $9$ times and drop to $1$ percent. In problems remember that $R$ is the total resistance of the wires (two wires — length $2l$, L33)."
+ },
+ {
+  "t": "h2",
+  "uz": "11. GRE va test maslahatlari (GRE and test tips)",
+  "ru": "11. Советы для GRE и тестов",
+  "en": "11. GRE and test tips"
+ },
+ {
+  "t": "li",
+  "uz": "**Qiymatlar.** «Kuchlanish $220\\ \\mathrm{V}$», voltmetr va ampermetr ko'rsatishi — ta'sir etuvchi qiymat; tenglamadagi koeffitsiyent — amplituda. $I=\\frac{I_m}{\\sqrt{2}}$, $P=\\frac{U_mI_m}{2}\\cos\\varphi=UI\\cos\\varphi$. Ingliz tilidagi masalalarda «rms value» deyiladi.",
+  "ru": "**Значения.** «Напряжение $220\\ \\mathrm{V}$», показания вольтметра и амперметра — действующее значение; коэффициент в уравнении — амплитуда. $I=\\frac{I_m}{\\sqrt{2}}$, $P=\\frac{U_mI_m}{2}\\cos\\varphi=UI\\cos\\varphi$. В англоязычных задачах говорят «rms value».",
+  "en": "**Values.** «A voltage of $220\\ \\mathrm{V}$» and the readings of a voltmeter and an ammeter are effective values; the coefficient in an equation is the amplitude. $I=\\frac{I_m}{\\sqrt{2}}$, $P=\\frac{U_mI_m}{2}\\cos\\varphi=UI\\cos\\varphi$. In English problems it is called the «rms value»."
+ },
+ {
+  "t": "li",
+  "uz": "**Fazalar va chastota.** $R$: $\\varphi=0$; $C$: tok $\\frac{\\pi}{2}$ ga oldinda, $X_C=\\frac{1}{\\omega C}$; $L$: tok $\\frac{\\pi}{2}$ ga orqada, $X_L=\\omega L$. Chegaraviy hollar: past chastotada kondensator — uzilish, g'altak — oddiy sim; yuqori chastotada aksincha. Grafiklar bo'yicha: $X_L(\\nu)$ — koordinata boshidan o'tuvchi to'g'ri chiziq, $X_C(\\nu)$ — giperbola, $R(\\nu)$ — gorizontal chiziq.",
+  "ru": "**Фазы и частота.** $R$: $\\varphi=0$; $C$: ток опережает на $\\frac{\\pi}{2}$, $X_C=\\frac{1}{\\omega C}$; $L$: ток отстаёт на $\\frac{\\pi}{2}$, $X_L=\\omega L$. Предельные случаи: на низкой частоте конденсатор — разрыв, катушка — простой провод; на высокой — наоборот. По графикам: $X_L(\\nu)$ — прямая через начало координат, $X_C(\\nu)$ — гипербола, $R(\\nu)$ — горизонтальная линия.",
+  "en": "**Phases and frequency.** $R$: $\\varphi=0$; $C$: the current leads by $\\frac{\\pi}{2}$, $X_C=\\frac{1}{\\omega C}$; $L$: the current lags by $\\frac{\\pi}{2}$, $X_L=\\omega L$. Limiting cases: at low frequency a capacitor is an open circuit and a coil is a plain wire; at high frequency it is the other way round. On graphs: $X_L(\\nu)$ is a straight line through the origin, $X_C(\\nu)$ is a hyperbola, $R(\\nu)$ is a horizontal line."
+ },
+ {
+  "t": "li",
+  "uz": "**RLC va rezonans.** Kuchlanishlar va qarshiliklar Pifagor bo'yicha qo'shiladi: $U=\\sqrt{U_R^2+(U_L-U_C)^2}$, $Z=\\sqrt{R^2+(X_L-X_C)^2}$. Ko'p uchraydigan sonlar: $3$–$4$–$5$, $6$–$8$–$10$, $5$–$12$–$13$, $7$–$24$–$25$. Rezonansda $Z=R$, $\\cos\\varphi=1$, $\\omega_0=\\frac{1}{\\sqrt{LC}}$; «rezonansda to'la qarshilik nolga teng» degan variant — tuzoq.",
+  "ru": "**RLC и резонанс.** Напряжения и сопротивления складываются по Пифагору: $U=\\sqrt{U_R^2+(U_L-U_C)^2}$, $Z=\\sqrt{R^2+(X_L-X_C)^2}$. Часто встречающиеся числа: $3$–$4$–$5$, $6$–$8$–$10$, $5$–$12$–$13$, $7$–$24$–$25$. При резонансе $Z=R$, $\\cos\\varphi=1$, $\\omega_0=\\frac{1}{\\sqrt{LC}}$; вариант «при резонансе полное сопротивление равно нулю» — ловушка.",
+  "en": "**RLC and resonance.** Voltages and impedances add by Pythagoras: $U=\\sqrt{U_R^2+(U_L-U_C)^2}$, $Z=\\sqrt{R^2+(X_L-X_C)^2}$. Frequent numbers: $3$–$4$–$5$, $6$–$8$–$10$, $5$–$12$–$13$, $7$–$24$–$25$. At resonance $Z=R$, $\\cos\\varphi=1$, $\\omega_0=\\frac{1}{\\sqrt{LC}}$; the option «at resonance the impedance is zero» is a trap."
+ },
+ {
+  "t": "li",
+  "uz": "**Transformator va uzatish.** $\\frac{U_1}{U_2}=\\frac{N_1}{N_2}$, ideal holda $\\frac{I_1}{I_2}=\\frac{N_2}{N_1}$; quvvat transformatorda oshmaydi. Bir-biriga ulangan transformatorlarda koeffitsiyentlar ko'paytiriladi. Uzatishda $\\Delta P\\sim\\frac{1}{U^2}$.",
+  "ru": "**Трансформатор и передача.** $\\frac{U_1}{U_2}=\\frac{N_1}{N_2}$, в идеальном случае $\\frac{I_1}{I_2}=\\frac{N_2}{N_1}$; мощность в трансформаторе не растёт. Для соединённых друг с другом трансформаторов коэффициенты перемножаются. При передаче $\\Delta P\\sim\\frac{1}{U^2}$.",
+  "en": "**Transformer and transmission.** $\\frac{U_1}{U_2}=\\frac{N_1}{N_2}$, and in the ideal case $\\frac{I_1}{I_2}=\\frac{N_2}{N_1}$; the power does not increase in a transformer. For transformers connected one after another the ratios are multiplied. In transmission $\\Delta P\\sim\\frac{1}{U^2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'p uchraydigan xatolar:** amplituda va ta'sir etuvchi qiymatni adashtirish; $\\omega$ va $\\nu$ ni adashtirish ($2\\pi$ ko'paytuvchi); $X_C=\\omega C$ deb yozish; RLC zanjirda kuchlanishlarni arifmetik qo'shish; quvvatda $\\cos\\varphi$ yoki $\\frac{1}{2}$ ni unutish; transformator toklar nisbatini kuchlanishlar nisbati bilan bir xil deb olish.",
+  "ru": "**Частые ошибки:** путают амплитудное и действующее значения; путают $\\omega$ и $\\nu$ (множитель $2\\pi$); пишут $X_C=\\omega C$; складывают напряжения в RLC-цепи арифметически; забывают $\\cos\\varphi$ или $\\frac{1}{2}$ в мощности; считают отношение токов трансформатора таким же, как отношение напряжений.",
+  "en": "**Common mistakes:** confusing the amplitude and effective values; confusing $\\omega$ and $\\nu$ (the factor $2\\pi$); writing $X_C=\\omega C$; adding voltages in an RLC circuit arithmetically; forgetting $\\cos\\varphi$ or $\\frac{1}{2}$ in the power; taking the current ratio of a transformer to be the same as the voltage ratio."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Generator EYK si",
+    "ru": "ЭДС генератора",
+    "en": "Generator emf",
+    "m": "\\mathcal{E}=NBS\\omega\\sin\\omega t"
+   },
+   {
+    "uz": "EYK amplitudasi",
+    "ru": "Амплитуда ЭДС",
+    "en": "Emf amplitude",
+    "m": "\\mathcal{E}_m=NBS\\omega"
+   },
+   {
+    "uz": "Juft qutbli generator chastotasi",
+    "ru": "Частота генератора с парами полюсов",
+    "en": "Frequency of a generator with pole pairs",
+    "m": "\\nu=pn"
+   },
+   {
+    "uz": "Ta'sir etuvchi qiymatlar",
+    "ru": "Действующие значения",
+    "en": "Effective values",
+    "m": "I=\\frac{I_m}{\\sqrt{2}},\\quad U=\\frac{U_m}{\\sqrt{2}}"
+   },
+   {
+    "uz": "Aktiv qarshilikdagi quvvat",
+    "ru": "Мощность на активном сопротивлении",
+    "en": "Power in a resistance",
+    "m": "P=UI=I^2R=\\frac{U^2}{R}"
+   },
+   {
+    "uz": "Sig'im qarshilik",
+    "ru": "Ёмкостное сопротивление",
+    "en": "Capacitive reactance",
+    "m": "X_C=\\frac{1}{\\omega C}=\\frac{1}{2\\pi\\nu C}"
+   },
+   {
+    "uz": "Induktiv qarshilik",
+    "ru": "Индуктивное сопротивление",
+    "en": "Inductive reactance",
+    "m": "X_L=\\omega L=2\\pi\\nu L"
+   },
+   {
+    "uz": "Tok fazasining kuchlanishdan farqi",
+    "ru": "Сдвиг фазы тока относительно напряжения",
+    "en": "Phase of the current relative to the voltage",
+    "m": "R:\\ 0;\\quad C:\\ +\\frac{\\pi}{2};\\quad L:\\ -\\frac{\\pi}{2}"
+   },
+   {
+    "uz": "Umumiy kuchlanish",
+    "ru": "Общее напряжение",
+    "en": "Total voltage",
+    "m": "U=\\sqrt{U_R^2+(U_L-U_C)^2}"
+   },
+   {
+    "uz": "To'la qarshilik",
+    "ru": "Полное сопротивление",
+    "en": "Impedance",
+    "m": "Z=\\sqrt{R^2+(X_L-X_C)^2}"
+   },
+   {
+    "uz": "Om qonuni",
+    "ru": "Закон Ома",
+    "en": "Ohm's law",
+    "m": "I=\\frac{U}{Z},\\quad I_m=\\frac{U_m}{Z}"
+   },
+   {
+    "uz": "Faza farqi",
+    "ru": "Разность фаз",
+    "en": "Phase difference",
+    "m": "\\mathrm{tg}\\,\\varphi=\\frac{X_L-X_C}{R},\\quad \\cos\\varphi=\\frac{R}{Z}"
+   },
+   {
+    "uz": "Rezonans",
+    "ru": "Резонанс",
+    "en": "Resonance",
+    "m": "\\omega_0=\\frac{1}{\\sqrt{LC}},\\quad Z=R"
+   },
+   {
+    "uz": "O'rtacha quvvat",
+    "ru": "Средняя мощность",
+    "en": "Average power",
+    "m": "P=UI\\cos\\varphi=\\frac{U_mI_m}{2}\\cos\\varphi"
+   },
+   {
+    "uz": "Transformatsiya koeffitsiyenti",
+    "ru": "Коэффициент трансформации",
+    "en": "Turns ratio",
+    "m": "k=\\frac{U_1}{U_2}=\\frac{N_1}{N_2}"
+   },
+   {
+    "uz": "Ideal transformator",
+    "ru": "Идеальный трансформатор",
+    "en": "Ideal transformer",
+    "m": "U_1I_1=U_2I_2"
+   },
+   {
+    "uz": "Transformator FIK",
+    "ru": "КПД трансформатора",
+    "en": "Transformer efficiency",
+    "m": "\\eta=\\frac{U_2I_2}{U_1I_1}"
+   },
+   {
+    "uz": "Uzatishdagi isrof",
+    "ru": "Потери при передаче",
+    "en": "Transmission loss",
+    "m": "\\Delta P=\\frac{P^2R}{U^2}"
+   }
+  ]
+ }
+]
