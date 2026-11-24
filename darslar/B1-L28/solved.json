@@ -1,0 +1,789 @@
+[
+ {
+  "id": "B1-L28-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) Gazga $900\\ \\mathrm{J}$ issiqlik berildi, u kengayib $350\\ \\mathrm{J}$ ish bajardi. Ichki energiya qanchaga o'zgardi? b) Tashqi kuchlar gaz ustida $500\\ \\mathrm{J}$ ish bajardi, gaz atrofga $200\\ \\mathrm{J}$ issiqlik berdi. Ichki energiya qanchaga o'zgardi?",
+   "ru": "а) Газу сообщили $900\\ \\mathrm{J}$ теплоты, он расширился и совершил работу $350\\ \\mathrm{J}$. На сколько изменилась внутренняя энергия? б) Внешние силы совершили над газом работу $500\\ \\mathrm{J}$, газ отдал окружающей среде $200\\ \\mathrm{J}$ теплоты. На сколько изменилась внутренняя энергия?",
+   "en": "a) A gas receives $900\\ \\mathrm{J}$ of heat, expands and does $350\\ \\mathrm{J}$ of work. By how much does the internal energy change? b) External forces do $500\\ \\mathrm{J}$ of work on a gas, and the gas gives $200\\ \\mathrm{J}$ of heat to the surroundings. By how much does the internal energy change?"
+  },
+  "figure": "figures/B1-L28-S01.png",
+  "solution": {
+   "uz": [
+    "a) $Q=900\\ \\mathrm{J}$, $A=350\\ \\mathrm{J}$: $$\\Delta U=Q-A=900-350=550\\ \\mathrm{J}$$",
+    "b) $A'=500\\ \\mathrm{J}$, gaz issiqlik berdi: $Q=-200\\ \\mathrm{J}$: $$\\Delta U=Q+A'=-200+500=300\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "а) $Q=900\\ \\mathrm{J}$, $A=350\\ \\mathrm{J}$: $$\\Delta U=Q-A=900-350=550\\ \\mathrm{J}$$",
+    "б) $A'=500\\ \\mathrm{J}$, газ отдал теплоту: $Q=-200\\ \\mathrm{J}$: $$\\Delta U=Q+A'=-200+500=300\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "a) $Q=900\\ \\mathrm{J}$, $A=350\\ \\mathrm{J}$: $$\\Delta U=Q-A=900-350=550\\ \\mathrm{J}$$",
+    "b) $A'=500\\ \\mathrm{J}$, the gas gave off heat: $Q=-200\\ \\mathrm{J}$: $$\\Delta U=Q+A'=-200+500=300\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Birinchi qonun: $Q=\\Delta U+A$",
+    "ru": "Первый закон: $Q=\\Delta U+A$",
+    "en": "First law: $Q=\\Delta U+A$"
+   },
+   {
+    "uz": "Birinchi qonun: $\\Delta U=Q+A'$",
+    "ru": "Первый закон: $\\Delta U=Q+A'$",
+    "en": "First law: $\\Delta U=Q+A'$"
+   }
+  ],
+  "basis": {
+   "uz": "Termodinamikaning birinchi qonuni, ishoralar",
+   "ru": "Первый закон термодинамики, знаки",
+   "en": "First law of thermodynamics, signs"
+  },
+  "answer": "\\Delta U=550\\ \\mathrm{J};\\ \\Delta U=300\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 74-mavzu, 2–14-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) Ballondagi $3\\ \\mathrm{mol}$ bir atomli gaz $40\\ \\mathrm{K}$ ga isitildi. Gazga qancha issiqlik berilgan va u qancha ish bajargan? b) $0.3\\ \\mathrm{m^3}$ hajmli ballondagi bir atomli gazning bosimi $100\\ \\mathrm{kPa}$ dan $160\\ \\mathrm{kPa}$ gacha ortdi. Gazga qancha issiqlik berilgan? $R=8.31\\ \\mathrm{J/(mol\\cdot K)}$.",
+   "ru": "а) $3\\ \\mathrm{mol}$ одноатомного газа в баллоне нагрели на $40\\ \\mathrm{K}$. Какое количество теплоты сообщили газу и какую работу он совершил? б) Давление одноатомного газа в баллоне объёмом $0.3\\ \\mathrm{m^3}$ выросло от $100\\ \\mathrm{kPa}$ до $160\\ \\mathrm{kPa}$. Какое количество теплоты сообщили газу? $R=8.31\\ \\mathrm{J/(mol\\cdot K)}$.",
+   "en": "a) $3\\ \\mathrm{mol}$ of a monatomic gas in a cylinder is heated by $40\\ \\mathrm{K}$. How much heat is given to the gas and how much work does it do? b) The pressure of a monatomic gas in a $0.3\\ \\mathrm{m^3}$ cylinder rises from $100\\ \\mathrm{kPa}$ to $160\\ \\mathrm{kPa}$. How much heat is given to the gas? $R=8.31\\ \\mathrm{J/(mol\\cdot K)}$."
+  },
+  "figure": "figures/B1-L28-S02.png",
+  "solution": {
+   "uz": [
+    "a) Ballon — $V=\\mathrm{const}$, $A=0$: $$Q=\\Delta U=\\frac{3}{2}\\nu R\\Delta T=\\frac{3}{2}\\cdot3\\cdot8.31\\cdot40=1495.8\\ \\mathrm{J}$$",
+    "b) $\\nu R\\Delta T=V\\Delta p$: $$Q=\\frac{3}{2}V\\Delta p=\\frac{3}{2}\\cdot0.3\\cdot6\\cdot10^4=27000\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "а) Баллон — $V=\\mathrm{const}$, $A=0$: $$Q=\\Delta U=\\frac{3}{2}\\nu R\\Delta T=\\frac{3}{2}\\cdot3\\cdot8.31\\cdot40=1495.8\\ \\mathrm{J}$$",
+    "б) $\\nu R\\Delta T=V\\Delta p$: $$Q=\\frac{3}{2}V\\Delta p=\\frac{3}{2}\\cdot0.3\\cdot6\\cdot10^4=27000\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "a) A cylinder means $V=\\mathrm{const}$, $A=0$: $$Q=\\Delta U=\\frac{3}{2}\\nu R\\Delta T=\\frac{3}{2}\\cdot3\\cdot8.31\\cdot40=1495.8\\ \\mathrm{J}$$",
+    "b) $\\nu R\\Delta T=V\\Delta p$: $$Q=\\frac{3}{2}V\\Delta p=\\frac{3}{2}\\cdot0.3\\cdot6\\cdot10^4=27000\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Izoxorik: $Q=\\Delta U=\\frac{3}{2}\\nu R\\Delta T$",
+    "ru": "Изохорный: $Q=\\Delta U=\\frac{3}{2}\\nu R\\Delta T$",
+    "en": "Isochoric: $Q=\\Delta U=\\frac{3}{2}\\nu R\\Delta T$"
+   },
+   {
+    "uz": "Izoxorik: $Q=\\frac{3}{2}V\\Delta p$",
+    "ru": "Изохорный: $Q=\\frac{3}{2}V\\Delta p$",
+    "en": "Isochoric: $Q=\\frac{3}{2}V\\Delta p$"
+   }
+  ],
+  "basis": {
+   "uz": "Birinchi qonunning izoxorik jarayonga tatbiqi",
+   "ru": "Первый закон для изохорного процесса",
+   "en": "First law for an isochoric process"
+  },
+  "answer": "Q=1495.8\\ \\mathrm{J},\\ A=0;\\ Q=27\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 74-mavzu, 20–31-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) Ideal gazga izotermik jarayonda $750\\ \\mathrm{J}$ issiqlik berildi. Gaz bajargan ish va ichki energiya o'zgarishini toping. b) Gaz izotermik siqilganda tashqi kuchlar $1.2\\ \\mathrm{kJ}$ ish bajardi. Gaz qancha issiqlik bergan?",
+   "ru": "а) Идеальному газу в изотермическом процессе сообщили $750\\ \\mathrm{J}$ теплоты. Найдите работу газа и изменение внутренней энергии. б) При изотермическом сжатии газа внешние силы совершили работу $1.2\\ \\mathrm{kJ}$. Какое количество теплоты отдал газ?",
+   "en": "a) In an isothermal process an ideal gas receives $750\\ \\mathrm{J}$ of heat. Find the work done by the gas and the change in internal energy. b) When a gas is compressed isothermally, external forces do $1.2\\ \\mathrm{kJ}$ of work. How much heat does the gas give off?"
+  },
+  "figure": "figures/B1-L28-S03.png",
+  "solution": {
+   "uz": [
+    "a) $T=\\mathrm{const}$ — $U$ o'zgarmaydi: $$\\Delta U=0,\\qquad A=Q=750\\ \\mathrm{J}$$",
+    "b) $A=-A'=-1.2\\ \\mathrm{kJ}$: $$Q=A=-1.2\\ \\mathrm{kJ}$$",
+    "Manfiy $Q$ — gaz issiqlik beradi: $$|Q|=1.2\\ \\mathrm{kJ}$$"
+   ],
+   "ru": [
+    "а) $T=\\mathrm{const}$ — $U$ не меняется: $$\\Delta U=0,\\qquad A=Q=750\\ \\mathrm{J}$$",
+    "б) $A=-A'=-1.2\\ \\mathrm{kJ}$: $$Q=A=-1.2\\ \\mathrm{kJ}$$",
+    "Отрицательное $Q$ — газ отдаёт теплоту: $$|Q|=1.2\\ \\mathrm{kJ}$$"
+   ],
+   "en": [
+    "a) $T=\\mathrm{const}$ — $U$ does not change: $$\\Delta U=0,\\qquad A=Q=750\\ \\mathrm{J}$$",
+    "b) $A=-A'=-1.2\\ \\mathrm{kJ}$: $$Q=A=-1.2\\ \\mathrm{kJ}$$",
+    "A negative $Q$ means the gas gives off heat: $$|Q|=1.2\\ \\mathrm{kJ}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Izotermik: $\\Delta U=0,\\ Q=A$",
+    "ru": "Изотермический: $\\Delta U=0,\\ Q=A$",
+    "en": "Isothermal: $\\Delta U=0,\\ Q=A$"
+   },
+   {
+    "uz": "Izotermik: $\\Delta U=0,\\ Q=A$",
+    "ru": "Изотермический: $\\Delta U=0,\\ Q=A$",
+    "en": "Isothermal: $\\Delta U=0,\\ Q=A$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Birinchi qonunning izotermik jarayonga tatbiqi",
+   "ru": "Первый закон для изотермического процесса",
+   "en": "First law for an isothermal process"
+  },
+  "answer": "A=750\\ \\mathrm{J},\\ \\Delta U=0;\\ |Q|=1.2\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 74-mavzu, 35–44-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) $2\\ \\mathrm{mol}$ bir atomli gaz o'zgarmas bosimda $50\\ \\mathrm{K}$ ga isitildi. Gaz ishi, ichki energiya o'zgarishi va berilgan issiqlikni toping. b) $200\\ \\mathrm{kPa}$ bosimdagi bir atomli gaz izobarik kengayib, hajmi $6\\ \\mathrm{L}$ ga ortdi. Gazga qancha issiqlik berilgan? $R=8.31\\ \\mathrm{J/(mol\\cdot K)}$.",
+   "ru": "а) $2\\ \\mathrm{mol}$ одноатомного газа нагрели при постоянном давлении на $50\\ \\mathrm{K}$. Найдите работу газа, изменение внутренней энергии и сообщённую теплоту. б) Одноатомный газ при давлении $200\\ \\mathrm{kPa}$ изобарно расширился, объём увеличился на $6\\ \\mathrm{L}$. Какое количество теплоты сообщили газу? $R=8.31\\ \\mathrm{J/(mol\\cdot K)}$.",
+   "en": "a) $2\\ \\mathrm{mol}$ of a monatomic gas is heated at constant pressure by $50\\ \\mathrm{K}$. Find the work of the gas, the change in internal energy and the heat supplied. b) A monatomic gas at $200\\ \\mathrm{kPa}$ expands isobarically and its volume increases by $6\\ \\mathrm{L}$. How much heat is given to the gas? $R=8.31\\ \\mathrm{J/(mol\\cdot K)}$."
+  },
+  "figure": "figures/B1-L28-S04.png",
+  "solution": {
+   "uz": [
+    "a) Gaz ishi: $$A=\\nu R\\Delta T=2\\cdot8.31\\cdot50=831\\ \\mathrm{J}$$",
+    "Ichki energiya o'zgarishi: $$\\Delta U=\\frac{3}{2}\\nu R\\Delta T=1246.5\\ \\mathrm{J}$$",
+    "Birinchi qonun: $$Q=\\Delta U+A=2077.5\\ \\mathrm{J}$$",
+    "b) $p\\Delta V=2\\cdot10^5\\cdot6\\cdot10^{-3}=1200\\ \\mathrm{J}$: $$Q=\\frac{5}{2}p\\Delta V=3000\\ \\mathrm{J},\\qquad \\Delta U=1800\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "а) Работа газа: $$A=\\nu R\\Delta T=2\\cdot8.31\\cdot50=831\\ \\mathrm{J}$$",
+    "Изменение внутренней энергии: $$\\Delta U=\\frac{3}{2}\\nu R\\Delta T=1246.5\\ \\mathrm{J}$$",
+    "Первый закон: $$Q=\\Delta U+A=2077.5\\ \\mathrm{J}$$",
+    "б) $p\\Delta V=2\\cdot10^5\\cdot6\\cdot10^{-3}=1200\\ \\mathrm{J}$: $$Q=\\frac{5}{2}p\\Delta V=3000\\ \\mathrm{J},\\qquad \\Delta U=1800\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "a) Work of the gas: $$A=\\nu R\\Delta T=2\\cdot8.31\\cdot50=831\\ \\mathrm{J}$$",
+    "Change in internal energy: $$\\Delta U=\\frac{3}{2}\\nu R\\Delta T=1246.5\\ \\mathrm{J}$$",
+    "First law: $$Q=\\Delta U+A=2077.5\\ \\mathrm{J}$$",
+    "b) $p\\Delta V=2\\cdot10^5\\cdot6\\cdot10^{-3}=1200\\ \\mathrm{J}$: $$Q=\\frac{5}{2}p\\Delta V=3000\\ \\mathrm{J},\\qquad \\Delta U=1800\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Izobarik ish: $A=\\nu R\\Delta T$",
+    "ru": "Изобарная работа: $A=\\nu R\\Delta T$",
+    "en": "Isobaric work: $A=\\nu R\\Delta T$"
+   },
+   {
+    "uz": "Ichki energiya: $\\Delta U=\\frac{3}{2}\\nu R\\Delta T$",
+    "ru": "Внутренняя энергия: $\\Delta U=\\frac{3}{2}\\nu R\\Delta T$",
+    "en": "Internal energy: $\\Delta U=\\frac{3}{2}\\nu R\\Delta T$"
+   },
+   {
+    "uz": "Birinchi qonun: $Q=\\Delta U+A$",
+    "ru": "Первый закон: $Q=\\Delta U+A$",
+    "en": "First law: $Q=\\Delta U+A$"
+   },
+   {
+    "uz": "Izobarik: $Q=\\frac{5}{2}p\\Delta V$",
+    "ru": "Изобарный: $Q=\\frac{5}{2}p\\Delta V$",
+    "en": "Isobaric: $Q=\\frac{5}{2}p\\Delta V$"
+   }
+  ],
+  "basis": {
+   "uz": "Birinchi qonunning izobarik jarayonga tatbiqi",
+   "ru": "Первый закон для изобарного процесса",
+   "en": "First law for an isobaric process"
+  },
+  "answer": "A=831\\ \\mathrm{J},\\ \\Delta U=1246.5\\ \\mathrm{J},\\ Q=2077.5\\ \\mathrm{J};\\ Q=3\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 74-mavzu, 51–66-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) Bir atomli ideal gazga izobarik ravishda $400\\ \\mathrm{J}$ issiqlik berildi. Gaz ishi va ichki energiya o'zgarishini toping. b) Bir atomli gaz izobarik kengayib $900\\ \\mathrm{J}$ ish bajardi. Gazga qancha issiqlik berilgan?",
+   "ru": "а) Одноатомному идеальному газу изобарно сообщили $400\\ \\mathrm{J}$ теплоты. Найдите работу газа и изменение внутренней энергии. б) Одноатомный газ изобарно расширился и совершил работу $900\\ \\mathrm{J}$. Какое количество теплоты ему сообщили?",
+   "en": "a) A monatomic ideal gas receives $400\\ \\mathrm{J}$ of heat isobarically. Find the work of the gas and the change in internal energy. b) A monatomic gas expands isobarically and does $900\\ \\mathrm{J}$ of work. How much heat was given to it?"
+  },
+  "figure": "figures/B1-L28-S05.png",
+  "solution": {
+   "uz": [
+    "$Q=\\frac{5}{2}p\\Delta V$, $\\Delta U=\\frac{3}{2}p\\Delta V$, $A=p\\Delta V$: $$Q:\\Delta U:A=5:3:2$$",
+    "a) Ulushlar: $$A=\\frac{2}{5}Q=160\\ \\mathrm{J},\\qquad \\Delta U=\\frac{3}{5}Q=240\\ \\mathrm{J}$$",
+    "b) Ishdan issiqlik: $$Q=\\frac{5}{2}A=\\frac{5}{2}\\cdot900=2250\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "$Q=\\frac{5}{2}p\\Delta V$, $\\Delta U=\\frac{3}{2}p\\Delta V$, $A=p\\Delta V$: $$Q:\\Delta U:A=5:3:2$$",
+    "а) Доли: $$A=\\frac{2}{5}Q=160\\ \\mathrm{J},\\qquad \\Delta U=\\frac{3}{5}Q=240\\ \\mathrm{J}$$",
+    "б) Теплота по работе: $$Q=\\frac{5}{2}A=\\frac{5}{2}\\cdot900=2250\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "$Q=\\frac{5}{2}p\\Delta V$, $\\Delta U=\\frac{3}{2}p\\Delta V$, $A=p\\Delta V$: $$Q:\\Delta U:A=5:3:2$$",
+    "a) The fractions: $$A=\\frac{2}{5}Q=160\\ \\mathrm{J},\\qquad \\Delta U=\\frac{3}{5}Q=240\\ \\mathrm{J}$$",
+    "b) Heat from the work: $$Q=\\frac{5}{2}A=\\frac{5}{2}\\cdot900=2250\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Izobarik: $Q:\\Delta U:A=5:3:2$",
+    "ru": "Изобарный: $Q:\\Delta U:A=5:3:2$",
+    "en": "Isobaric: $Q:\\Delta U:A=5:3:2$"
+   },
+   null,
+   {
+    "uz": "Izobarik: $Q=\\frac{5}{2}p\\Delta V$",
+    "ru": "Изобарный: $Q=\\frac{5}{2}p\\Delta V$",
+    "en": "Isobaric: $Q=\\frac{5}{2}p\\Delta V$"
+   }
+  ],
+  "basis": {
+   "uz": "Izobarik jarayonda $Q:\\Delta U:A=5:3:2$",
+   "ru": "В изобарном процессе $Q:\\Delta U:A=5:3:2$",
+   "en": "In an isobaric process $Q:\\Delta U:A=5:3:2$"
+  },
+  "answer": "A=160\\ \\mathrm{J},\\ \\Delta U=240\\ \\mathrm{J};\\ Q=2250\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 74-mavzu, 68–79-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) $2\\ \\mathrm{mol}$ bir atomli ideal gaz adiabatik siqildi, tashqi kuchlar $997.2\\ \\mathrm{J}$ ish bajardi. Gaz temperaturasi qanchaga o'zgardi? b) Gaz adiabatik kengayib $3\\ \\mathrm{kJ}$ ish bajardi. Ichki energiya va temperatura qanday o'zgardi? $R=8.31\\ \\mathrm{J/(mol\\cdot K)}$.",
+   "ru": "а) $2\\ \\mathrm{mol}$ одноатомного идеального газа адиабатно сжали, внешние силы совершили работу $997.2\\ \\mathrm{J}$. На сколько изменилась температура газа? б) Газ адиабатно расширился и совершил работу $3\\ \\mathrm{kJ}$. Как изменились внутренняя энергия и температура? $R=8.31\\ \\mathrm{J/(mol\\cdot K)}$.",
+   "en": "a) $2\\ \\mathrm{mol}$ of a monatomic ideal gas is compressed adiabatically, and external forces do $997.2\\ \\mathrm{J}$ of work. By how much does the temperature of the gas change? b) A gas expands adiabatically and does $3\\ \\mathrm{kJ}$ of work. How do the internal energy and the temperature change? $R=8.31\\ \\mathrm{J/(mol\\cdot K)}$."
+  },
+  "figure": "figures/B1-L28-S06.png",
+  "solution": {
+   "uz": [
+    "a) $Q=0$, ish $U$ ga o'tadi: $$\\Delta U=A'=997.2\\ \\mathrm{J}$$",
+    "Temperatura o'zgarishi: $$\\Delta T=\\frac{2\\Delta U}{3\\nu R}=\\frac{2\\cdot997.2}{3\\cdot2\\cdot8.31}=40\\ \\mathrm{K}$$",
+    "b) $Q=0$, $A=3\\ \\mathrm{kJ}$: $$\\Delta U=-A=-3\\ \\mathrm{kJ},\\qquad \\Delta T<0$$"
+   ],
+   "ru": [
+    "а) $Q=0$, работа идёт в $U$: $$\\Delta U=A'=997.2\\ \\mathrm{J}$$",
+    "Изменение температуры: $$\\Delta T=\\frac{2\\Delta U}{3\\nu R}=\\frac{2\\cdot997.2}{3\\cdot2\\cdot8.31}=40\\ \\mathrm{K}$$",
+    "б) $Q=0$, $A=3\\ \\mathrm{kJ}$: $$\\Delta U=-A=-3\\ \\mathrm{kJ},\\qquad \\Delta T<0$$"
+   ],
+   "en": [
+    "a) $Q=0$, the work goes into $U$: $$\\Delta U=A'=997.2\\ \\mathrm{J}$$",
+    "Change in temperature: $$\\Delta T=\\frac{2\\Delta U}{3\\nu R}=\\frac{2\\cdot997.2}{3\\cdot2\\cdot8.31}=40\\ \\mathrm{K}$$",
+    "b) $Q=0$, $A=3\\ \\mathrm{kJ}$: $$\\Delta U=-A=-3\\ \\mathrm{kJ},\\qquad \\Delta T<0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Adiabatik: $Q=0,\\ A'=\\Delta U$",
+    "ru": "Адиабатный: $Q=0,\\ A'=\\Delta U$",
+    "en": "Adiabatic: $Q=0,\\ A'=\\Delta U$"
+   },
+   {
+    "uz": "Ichki energiya: $\\Delta U=\\frac{3}{2}\\nu R\\Delta T$",
+    "ru": "Внутренняя энергия: $\\Delta U=\\frac{3}{2}\\nu R\\Delta T$",
+    "en": "Internal energy: $\\Delta U=\\frac{3}{2}\\nu R\\Delta T$"
+   },
+   {
+    "uz": "Birinchi qonun: $Q=\\Delta U+A$",
+    "ru": "Первый закон: $Q=\\Delta U+A$",
+    "en": "First law: $Q=\\Delta U+A$"
+   }
+  ],
+  "basis": {
+   "uz": "Adiabatik jarayon: $Q=0$",
+   "ru": "Адиабатный процесс: $Q=0$",
+   "en": "Adiabatic process: $Q=0$"
+  },
+  "answer": "\\Delta T=+40\\ \\mathrm{K};\\ \\Delta U=-3\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 75-mavzu, 3–18-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Bir atomli ideal gaz $p$–$V$ diagrammada to'g'ri chiziq bo'ylab $1$-holatdan ($V_1=2\\ \\mathrm{L}$, $p_1=100\\ \\mathrm{kPa}$) $2$-holatga ($V_2=4\\ \\mathrm{L}$, $p_2=300\\ \\mathrm{kPa}$) o'tdi. Gazga qancha issiqlik berilgan?",
+   "ru": "Одноатомный идеальный газ перешёл по прямой на диаграмме $p$–$V$ из состояния $1$ ($V_1=2\\ \\mathrm{L}$, $p_1=100\\ \\mathrm{kPa}$) в состояние $2$ ($V_2=4\\ \\mathrm{L}$, $p_2=300\\ \\mathrm{kPa}$). Какое количество теплоты сообщили газу?",
+   "en": "A monatomic ideal gas goes along a straight line on a $p$–$V$ diagram from state $1$ ($V_1=2\\ \\mathrm{L}$, $p_1=100\\ \\mathrm{kPa}$) to state $2$ ($V_2=4\\ \\mathrm{L}$, $p_2=300\\ \\mathrm{kPa}$). How much heat is given to the gas?"
+  },
+  "figure": "figures/B1-L28-S07.png",
+  "solution": {
+   "uz": [
+    "Ish — trapetsiya yuzasi ($\\mathrm{kPa}\\cdot\\mathrm{L}=\\mathrm{J}$): $$A=\\frac{100+300}{2}\\cdot2=400\\ \\mathrm{J}$$",
+    "Ichki energiya o'zgarishi: $$\\Delta U=\\frac{3}{2}(1200-200)=1500\\ \\mathrm{J}$$",
+    "Birinchi qonun: $$Q=\\Delta U+A=1900\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Работа — площадь трапеции ($\\mathrm{kPa}\\cdot\\mathrm{L}=\\mathrm{J}$): $$A=\\frac{100+300}{2}\\cdot2=400\\ \\mathrm{J}$$",
+    "Изменение внутренней энергии: $$\\Delta U=\\frac{3}{2}(1200-200)=1500\\ \\mathrm{J}$$",
+    "Первый закон: $$Q=\\Delta U+A=1900\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "Work is the trapezoid area ($\\mathrm{kPa}\\cdot\\mathrm{L}=\\mathrm{J}$): $$A=\\frac{100+300}{2}\\cdot2=400\\ \\mathrm{J}$$",
+    "Change in internal energy: $$\\Delta U=\\frac{3}{2}(1200-200)=1500\\ \\mathrm{J}$$",
+    "First law: $$Q=\\Delta U+A=1900\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ish — yuza: $A=\\frac{p_1+p_2}{2}(V_2-V_1)$",
+    "ru": "Работа — площадь: $A=\\frac{p_1+p_2}{2}(V_2-V_1)$",
+    "en": "Work is the area: $A=\\frac{p_1+p_2}{2}(V_2-V_1)$"
+   },
+   {
+    "uz": "Ichki energiya: $\\Delta U=\\frac{3}{2}(p_2V_2-p_1V_1)$",
+    "ru": "Внутренняя энергия: $\\Delta U=\\frac{3}{2}(p_2V_2-p_1V_1)$",
+    "en": "Internal energy: $\\Delta U=\\frac{3}{2}(p_2V_2-p_1V_1)$"
+   },
+   {
+    "uz": "Birinchi qonun: $Q=\\Delta U+A$",
+    "ru": "Первый закон: $Q=\\Delta U+A$",
+    "en": "First law: $Q=\\Delta U+A$"
+   }
+  ],
+  "basis": {
+   "uz": "Birinchi qonun va $p$–$V$ diagramma",
+   "ru": "Первый закон и диаграмма $p$–$V$",
+   "en": "First law and the $p$–$V$ diagram"
+  },
+  "answer": "Q=1900\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 74-mavzu, 32, 34, 67-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ballondagi geliyga izoxorik ravishda $120\\ \\mathrm{J}$ issiqlik berildi. So'ngra gaz o'zgarmas bosimda dastlabki temperaturagacha sovitildi. Ikkinchi jarayonda gaz qancha issiqlik bergan va tashqi kuchlar qancha ish bajargan?",
+   "ru": "Гелию в баллоне изохорно сообщили $120\\ \\mathrm{J}$ теплоты. Затем газ охладили при постоянном давлении до начальной температуры. Какое количество теплоты отдал газ во втором процессе и какую работу совершили внешние силы?",
+   "en": "Helium in a cylinder receives $120\\ \\mathrm{J}$ of heat isochorically. Then the gas is cooled at constant pressure back to its initial temperature. How much heat does the gas give off in the second process and how much work do external forces do?"
+  },
+  "figure": "figures/B1-L28-S08.png",
+  "solution": {
+   "uz": [
+    "Izoxorik: $Q_V=\\frac{3}{2}\\nu R\\Delta T$: $$\\nu R\\Delta T=\\frac{2}{3}Q_V=80\\ \\mathrm{J}$$",
+    "Izobarik sovishda $|\\Delta T|$ shu: $$|Q_p|=\\frac{5}{2}\\nu R|\\Delta T|=200\\ \\mathrm{J}$$",
+    "Tashqi kuchlar ishi: $$A'=\\nu R|\\Delta T|=80\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Изохорный: $Q_V=\\frac{3}{2}\\nu R\\Delta T$: $$\\nu R\\Delta T=\\frac{2}{3}Q_V=80\\ \\mathrm{J}$$",
+    "При изобарном охлаждении $|\\Delta T|$ тот же: $$|Q_p|=\\frac{5}{2}\\nu R|\\Delta T|=200\\ \\mathrm{J}$$",
+    "Работа внешних сил: $$A'=\\nu R|\\Delta T|=80\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "Isochoric: $Q_V=\\frac{3}{2}\\nu R\\Delta T$: $$\\nu R\\Delta T=\\frac{2}{3}Q_V=80\\ \\mathrm{J}$$",
+    "In isobaric cooling $|\\Delta T|$ is the same: $$|Q_p|=\\frac{5}{2}\\nu R|\\Delta T|=200\\ \\mathrm{J}$$",
+    "Work of external forces: $$A'=\\nu R|\\Delta T|=80\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Izoxorik: $Q=\\Delta U=\\frac{3}{2}\\nu R\\Delta T$",
+    "ru": "Изохорный: $Q=\\Delta U=\\frac{3}{2}\\nu R\\Delta T$",
+    "en": "Isochoric: $Q=\\Delta U=\\frac{3}{2}\\nu R\\Delta T$"
+   },
+   {
+    "uz": "Izobarik: $Q=\\frac{5}{2}\\nu R\\Delta T$",
+    "ru": "Изобарный: $Q=\\frac{5}{2}\\nu R\\Delta T$",
+    "en": "Isobaric: $Q=\\frac{5}{2}\\nu R\\Delta T$"
+   },
+   {
+    "uz": "Izobarik ish: $A=\\nu R\\Delta T$",
+    "ru": "Изобарная работа: $A=\\nu R\\Delta T$",
+    "en": "Isobaric work: $A=\\nu R\\Delta T$"
+   }
+  ],
+  "basis": {
+   "uz": "Izoxorik va izobarik jarayonlarda issiqlik",
+   "ru": "Теплота в изохорном и изобарном процессах",
+   "en": "Heat in isochoric and isobaric processes"
+  },
+  "answer": "|Q_p|=200\\ \\mathrm{J},\\ A'=80\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 74-mavzu, 62, 80, 81-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S09",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) Issiqlik mashinasi bir siklda isitkichdan $2.5\\ \\mathrm{kJ}$ issiqlik olib, sovitkichga $1.6\\ \\mathrm{kJ}$ beradi. Ish va FIK ni toping. b) FIK i $35$ foiz bo'lgan dvigatel bir siklda $700\\ \\mathrm{J}$ ish bajaradi. U isitkichdan qancha issiqlik oladi va sovitkichga qancha beradi?",
+   "ru": "а) Тепловая машина за цикл получает от нагревателя $2.5\\ \\mathrm{kJ}$ теплоты и отдаёт холодильнику $1.6\\ \\mathrm{kJ}$. Найдите работу и КПД. б) Двигатель с КПД $35$ процентов совершает за цикл работу $700\\ \\mathrm{J}$. Сколько теплоты он получает от нагревателя и сколько отдаёт холодильнику?",
+   "en": "a) In one cycle a heat engine takes $2.5\\ \\mathrm{kJ}$ of heat from the heater and gives $1.6\\ \\mathrm{kJ}$ to the cooler. Find the work and the efficiency. b) An engine with an efficiency of $35$ percent does $700\\ \\mathrm{J}$ of work per cycle. How much heat does it take from the heater and how much does it give to the cooler?"
+  },
+  "figure": "figures/B1-L28-S09.png",
+  "solution": {
+   "uz": [
+    "a) Bir siklda $\\Delta U=0$: $$A=Q_1-Q_2=2.5-1.6=0.9\\ \\mathrm{kJ}$$",
+    "FIK: $$\\eta=\\frac{A}{Q_1}=\\frac{0.9}{2.5}=0.36$$",
+    "b) $A=\\eta Q_1$: $$Q_1=\\frac{A}{\\eta}=\\frac{700}{0.35}=2000\\ \\mathrm{J}$$",
+    "Sovitkichga: $$Q_2=Q_1-A=1300\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "а) За цикл $\\Delta U=0$: $$A=Q_1-Q_2=2.5-1.6=0.9\\ \\mathrm{kJ}$$",
+    "КПД: $$\\eta=\\frac{A}{Q_1}=\\frac{0.9}{2.5}=0.36$$",
+    "б) $A=\\eta Q_1$: $$Q_1=\\frac{A}{\\eta}=\\frac{700}{0.35}=2000\\ \\mathrm{J}$$",
+    "Холодильнику: $$Q_2=Q_1-A=1300\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "a) Per cycle $\\Delta U=0$: $$A=Q_1-Q_2=2.5-1.6=0.9\\ \\mathrm{kJ}$$",
+    "Efficiency: $$\\eta=\\frac{A}{Q_1}=\\frac{0.9}{2.5}=0.36$$",
+    "b) $A=\\eta Q_1$: $$Q_1=\\frac{A}{\\eta}=\\frac{700}{0.35}=2000\\ \\mathrm{J}$$",
+    "To the cooler: $$Q_2=Q_1-A=1300\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Dvigatel: $Q_1=A+Q_2$",
+    "ru": "Двигатель: $Q_1=A+Q_2$",
+    "en": "Engine: $Q_1=A+Q_2$"
+   },
+   {
+    "uz": "FIK: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$",
+    "ru": "КПД: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$",
+    "en": "Efficiency: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$"
+   },
+   {
+    "uz": "FIK: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$",
+    "ru": "КПД: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$",
+    "en": "Efficiency: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$"
+   },
+   {
+    "uz": "Dvigatel: $Q_1=A+Q_2$",
+    "ru": "Двигатель: $Q_1=A+Q_2$",
+    "en": "Engine: $Q_1=A+Q_2$"
+   }
+  ],
+  "basis": {
+   "uz": "Issiqlik dvigatelining FIK i",
+   "ru": "КПД теплового двигателя",
+   "en": "Efficiency of a heat engine"
+  },
+  "answer": "A=0.9\\ \\mathrm{kJ},\\ \\eta=0.36;\\ Q_1=2\\ \\mathrm{kJ},\\ Q_2=1.3\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 76-mavzu, 6–21-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S10",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Ideal issiqlik mashinasi isitkichining temperaturasi $427\\ ^\\circ\\mathrm{C}$, sovitkichniki $27\\ ^\\circ\\mathrm{C}$. Mashinaning FIK ini toping. Agar mashina bir siklda isitkichdan $3.5\\ \\mathrm{kJ}$ issiqlik olsa, qancha ish bajaradi?",
+   "ru": "Температура нагревателя идеальной тепловой машины $427\\ ^\\circ\\mathrm{C}$, холодильника $27\\ ^\\circ\\mathrm{C}$. Найдите КПД машины. Какую работу она совершает, если за цикл получает от нагревателя $3.5\\ \\mathrm{kJ}$ теплоты?",
+   "en": "The heater of an ideal heat engine is at $427\\ ^\\circ\\mathrm{C}$ and the cooler at $27\\ ^\\circ\\mathrm{C}$. Find the efficiency of the engine. How much work does it do if it takes $3.5\\ \\mathrm{kJ}$ of heat from the heater per cycle?"
+  },
+  "figure": "figures/B1-L28-S10.png",
+  "solution": {
+   "uz": [
+    "Kelvinda: $$T_1=700\\ \\mathrm{K},\\qquad T_2=300\\ \\mathrm{K}$$",
+    "Ideal mashina FIK i: $$\\eta_{max}=\\frac{700-300}{700}=\\frac{4}{7}\\approx0.571$$",
+    "Ish: $$A=\\eta Q_1=\\frac{4}{7}\\cdot3.5=2\\ \\mathrm{kJ}$$"
+   ],
+   "ru": [
+    "В кельвинах: $$T_1=700\\ \\mathrm{K},\\qquad T_2=300\\ \\mathrm{K}$$",
+    "КПД идеальной машины: $$\\eta_{max}=\\frac{700-300}{700}=\\frac{4}{7}\\approx0.571$$",
+    "Работа: $$A=\\eta Q_1=\\frac{4}{7}\\cdot3.5=2\\ \\mathrm{kJ}$$"
+   ],
+   "en": [
+    "In kelvins: $$T_1=700\\ \\mathrm{K},\\qquad T_2=300\\ \\mathrm{K}$$",
+    "Efficiency of the ideal engine: $$\\eta_{max}=\\frac{700-300}{700}=\\frac{4}{7}\\approx0.571$$",
+    "Work: $$A=\\eta Q_1=\\frac{4}{7}\\cdot3.5=2\\ \\mathrm{kJ}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Absolyut temperatura: $T=t+273$",
+    "ru": "Абсолютная температура: $T=t+273$",
+    "en": "Absolute temperature: $T=t+273$"
+   },
+   {
+    "uz": "Karno: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$",
+    "ru": "Карно: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$",
+    "en": "Carnot: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$"
+   },
+   {
+    "uz": "FIK: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$",
+    "ru": "КПД: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$",
+    "en": "Efficiency: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Karno sikli FIK i",
+   "ru": "КПД цикла Карно",
+   "en": "Efficiency of the Carnot cycle"
+  },
+  "answer": "\\eta_{max}=\\frac{4}{7}\\approx0.571;\\ A=2\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 76-mavzu, 25–29, 35-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) Ideal issiqlik mashinasi sovitkichining temperaturasi $27\\ ^\\circ\\mathrm{C}$. FIK $40$ foiz bo'lishi uchun isitkich temperaturasi qanday bo'lishi kerak? b) Ideal mashina isitkichining absolyut temperaturasi sovitkichnikidan $2.5$ marta katta. Uning FIK ini toping.",
+   "ru": "а) Температура холодильника идеальной тепловой машины $27\\ ^\\circ\\mathrm{C}$. Какой должна быть температура нагревателя, чтобы КПД был $40$ процентов? б) Абсолютная температура нагревателя идеальной машины в $2.5$ раза больше, чем холодильника. Найдите её КПД.",
+   "en": "a) The cooler of an ideal heat engine is at $27\\ ^\\circ\\mathrm{C}$. What must the temperature of the heater be for the efficiency to be $40$ percent? b) The absolute temperature of the heater of an ideal engine is $2.5$ times that of the cooler. Find its efficiency."
+  },
+  "figure": "figures/B1-L28-S11.png",
+  "solution": {
+   "uz": [
+    "a) $\\eta=1-\\frac{T_2}{T_1}$, $T_2=300\\ \\mathrm{K}$: $$T_1=\\frac{T_2}{1-\\eta}=\\frac{300}{0.6}=500\\ \\mathrm{K}$$",
+    "Selsiyda: $$t_1=500-273=227\\ ^\\circ\\mathrm{C}$$",
+    "b) $\\frac{T_1}{T_2}=2.5$: $$\\eta_{max}=1-\\frac{T_2}{T_1}=1-\\frac{1}{2.5}=0.6$$"
+   ],
+   "ru": [
+    "а) $\\eta=1-\\frac{T_2}{T_1}$, $T_2=300\\ \\mathrm{K}$: $$T_1=\\frac{T_2}{1-\\eta}=\\frac{300}{0.6}=500\\ \\mathrm{K}$$",
+    "В градусах Цельсия: $$t_1=500-273=227\\ ^\\circ\\mathrm{C}$$",
+    "б) $\\frac{T_1}{T_2}=2.5$: $$\\eta_{max}=1-\\frac{T_2}{T_1}=1-\\frac{1}{2.5}=0.6$$"
+   ],
+   "en": [
+    "a) $\\eta=1-\\frac{T_2}{T_1}$, $T_2=300\\ \\mathrm{K}$: $$T_1=\\frac{T_2}{1-\\eta}=\\frac{300}{0.6}=500\\ \\mathrm{K}$$",
+    "In degrees Celsius: $$t_1=500-273=227\\ ^\\circ\\mathrm{C}$$",
+    "b) $\\frac{T_1}{T_2}=2.5$: $$\\eta_{max}=1-\\frac{T_2}{T_1}=1-\\frac{1}{2.5}=0.6$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Karno: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$",
+    "ru": "Карно: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$",
+    "en": "Carnot: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$"
+   },
+   {
+    "uz": "Absolyut temperatura: $T=t+273$",
+    "ru": "Абсолютная температура: $T=t+273$",
+    "en": "Absolute temperature: $T=t+273$"
+   },
+   {
+    "uz": "Karno: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$",
+    "ru": "Карно: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$",
+    "en": "Carnot: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Karno formulasidan temperaturani topish",
+   "ru": "Нахождение температуры по формуле Карно",
+   "en": "Finding a temperature from the Carnot formula"
+  },
+  "answer": "t_1=227\\ ^\\circ\\mathrm{C}\\ (500\\ \\mathrm{K});\\ \\eta=0.6",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 76-mavzu, 30–34, 38–41-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ideal issiqlik mashinasi isitkichining temperaturasi $600\\ \\mathrm{K}$, sovitkichniki $360\\ \\mathrm{K}$. Mashina bir siklda sovitkichga $1.8\\ \\mathrm{kJ}$ issiqlik beradi. U isitkichdan qancha issiqlik oladi va qancha ish bajaradi?",
+   "ru": "Температура нагревателя идеальной тепловой машины $600\\ \\mathrm{K}$, холодильника $360\\ \\mathrm{K}$. За цикл машина отдаёт холодильнику $1.8\\ \\mathrm{kJ}$ теплоты. Сколько теплоты она получает от нагревателя и какую работу совершает?",
+   "en": "The heater of an ideal heat engine is at $600\\ \\mathrm{K}$ and the cooler at $360\\ \\mathrm{K}$. Per cycle the engine gives $1.8\\ \\mathrm{kJ}$ of heat to the cooler. How much heat does it take from the heater and how much work does it do?"
+  },
+  "figure": "figures/B1-L28-S12.png",
+  "solution": {
+   "uz": [
+    "Ideal mashinada: $$\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}=\\frac{360}{600}=0.6$$",
+    "Isitkichdan olingan issiqlik: $$Q_1=\\frac{Q_2}{0.6}=\\frac{1.8}{0.6}=3\\ \\mathrm{kJ}$$",
+    "Ish: $$A=Q_1-Q_2=1.2\\ \\mathrm{kJ}$$"
+   ],
+   "ru": [
+    "В идеальной машине: $$\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}=\\frac{360}{600}=0.6$$",
+    "Теплота от нагревателя: $$Q_1=\\frac{Q_2}{0.6}=\\frac{1.8}{0.6}=3\\ \\mathrm{kJ}$$",
+    "Работа: $$A=Q_1-Q_2=1.2\\ \\mathrm{kJ}$$"
+   ],
+   "en": [
+    "In an ideal engine: $$\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}=\\frac{360}{600}=0.6$$",
+    "Heat from the heater: $$Q_1=\\frac{Q_2}{0.6}=\\frac{1.8}{0.6}=3\\ \\mathrm{kJ}$$",
+    "Work: $$A=Q_1-Q_2=1.2\\ \\mathrm{kJ}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ideal mashina: $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$",
+    "ru": "Идеальная машина: $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$",
+    "en": "Ideal engine: $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$"
+   },
+   null,
+   {
+    "uz": "Dvigatel: $Q_1=A+Q_2$",
+    "ru": "Двигатель: $Q_1=A+Q_2$",
+    "en": "Engine: $Q_1=A+Q_2$"
+   }
+  ],
+  "basis": {
+   "uz": "Ideal mashinada issiqliklar nisbati",
+   "ru": "Отношение теплот в идеальной машине",
+   "en": "Ratio of heats in an ideal engine"
+  },
+  "answer": "Q_1=3\\ \\mathrm{kJ},\\ A=1.2\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 76-mavzu, 44–48, 54-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Issiqlik mashinasi isitkichining temperaturasi $527\\ ^\\circ\\mathrm{C}$, sovitkichniki $127\\ ^\\circ\\mathrm{C}$. Mashina bir siklda isitkichdan $800\\ \\mathrm{J}$ olib, sovitkichga $520\\ \\mathrm{J}$ beradi. Real mashina FIK i ideal mashina FIK ining qancha qismini tashkil etadi?",
+   "ru": "Температура нагревателя тепловой машины $527\\ ^\\circ\\mathrm{C}$, холодильника $127\\ ^\\circ\\mathrm{C}$. За цикл машина получает от нагревателя $800\\ \\mathrm{J}$ и отдаёт холодильнику $520\\ \\mathrm{J}$. Какую долю КПД идеальной машины составляет КПД реальной машины?",
+   "en": "The heater of a heat engine is at $527\\ ^\\circ\\mathrm{C}$ and the cooler at $127\\ ^\\circ\\mathrm{C}$. Per cycle the engine takes $800\\ \\mathrm{J}$ from the heater and gives $520\\ \\mathrm{J}$ to the cooler. What fraction of the ideal efficiency is the efficiency of the real engine?"
+  },
+  "figure": "figures/B1-L28-S13.png",
+  "solution": {
+   "uz": [
+    "Ideal: $T_1=800\\ \\mathrm{K}$, $T_2=400\\ \\mathrm{K}$: $$\\eta_{max}=\\frac{800-400}{800}=0.5$$",
+    "Real mashina: $$\\eta=\\frac{Q_1-Q_2}{Q_1}=\\frac{800-520}{800}=0.35$$",
+    "Nisbat: $$\\frac{\\eta}{\\eta_{max}}=\\frac{0.35}{0.5}=0.7$$"
+   ],
+   "ru": [
+    "Идеальная: $T_1=800\\ \\mathrm{K}$, $T_2=400\\ \\mathrm{K}$: $$\\eta_{max}=\\frac{800-400}{800}=0.5$$",
+    "Реальная машина: $$\\eta=\\frac{Q_1-Q_2}{Q_1}=\\frac{800-520}{800}=0.35$$",
+    "Отношение: $$\\frac{\\eta}{\\eta_{max}}=\\frac{0.35}{0.5}=0.7$$"
+   ],
+   "en": [
+    "Ideal: $T_1=800\\ \\mathrm{K}$, $T_2=400\\ \\mathrm{K}$: $$\\eta_{max}=\\frac{800-400}{800}=0.5$$",
+    "Real engine: $$\\eta=\\frac{Q_1-Q_2}{Q_1}=\\frac{800-520}{800}=0.35$$",
+    "Ratio: $$\\frac{\\eta}{\\eta_{max}}=\\frac{0.35}{0.5}=0.7$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Karno: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$",
+    "ru": "Карно: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$",
+    "en": "Carnot: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$"
+   },
+   {
+    "uz": "FIK: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$",
+    "ru": "КПД: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$",
+    "en": "Efficiency: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Real va ideal mashinalar FIK i",
+   "ru": "КПД реальной и идеальной машин",
+   "en": "Efficiency of real and ideal engines"
+  },
+  "answer": "\\frac{\\eta}{\\eta_{max}}=0.7",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 76-mavzu, 52-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ideal mashina isitkichining temperaturasi $400\\ \\mathrm{K}$, sovitkichniki $300\\ \\mathrm{K}$. FIK ni $2$ marta oshirish uchun: a) sovitkich temperaturasi o'zgarmasa, isitkichni qanday temperaturagacha qizdirish kerak? b) isitkich temperaturasi o'zgarmasa, sovitkichni qanday temperaturagacha sovitish kerak?",
+   "ru": "Температура нагревателя идеальной машины $400\\ \\mathrm{K}$, холодильника $300\\ \\mathrm{K}$. Чтобы увеличить КПД в $2$ раза: а) до какой температуры нужно нагреть нагреватель, если температура холодильника не меняется? б) до какой температуры нужно охладить холодильник, если температура нагревателя не меняется?",
+   "en": "The heater of an ideal engine is at $400\\ \\mathrm{K}$ and the cooler at $300\\ \\mathrm{K}$. To double the efficiency: a) to what temperature must the heater be raised if the cooler temperature is unchanged? b) to what temperature must the cooler be lowered if the heater temperature is unchanged?"
+  },
+  "figure": "figures/B1-L28-S14.png",
+  "solution": {
+   "uz": [
+    "Dastlabki FIK: $$\\eta=\\frac{400-300}{400}=0.25,\\qquad \\eta'=0.5$$",
+    "a) $T_2=300\\ \\mathrm{K}$: $$T_1'=\\frac{T_2}{1-\\eta'}=\\frac{300}{0.5}=600\\ \\mathrm{K}$$",
+    "b) $T_1=400\\ \\mathrm{K}$: $$T_2'=T_1(1-\\eta')=400\\cdot0.5=200\\ \\mathrm{K}$$"
+   ],
+   "ru": [
+    "Начальный КПД: $$\\eta=\\frac{400-300}{400}=0.25,\\qquad \\eta'=0.5$$",
+    "а) $T_2=300\\ \\mathrm{K}$: $$T_1'=\\frac{T_2}{1-\\eta'}=\\frac{300}{0.5}=600\\ \\mathrm{K}$$",
+    "б) $T_1=400\\ \\mathrm{K}$: $$T_2'=T_1(1-\\eta')=400\\cdot0.5=200\\ \\mathrm{K}$$"
+   ],
+   "en": [
+    "Initial efficiency: $$\\eta=\\frac{400-300}{400}=0.25,\\qquad \\eta'=0.5$$",
+    "a) $T_2=300\\ \\mathrm{K}$: $$T_1'=\\frac{T_2}{1-\\eta'}=\\frac{300}{0.5}=600\\ \\mathrm{K}$$",
+    "b) $T_1=400\\ \\mathrm{K}$: $$T_2'=T_1(1-\\eta')=400\\cdot0.5=200\\ \\mathrm{K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Karno: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$",
+    "ru": "Карно: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$",
+    "en": "Carnot: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Ideal mashina FIK ini oshirish",
+   "ru": "Повышение КПД идеальной машины",
+   "en": "Raising the efficiency of an ideal engine"
+  },
+  "answer": "T_1'=600\\ \\mathrm{K};\\ T_2'=200\\ \\mathrm{K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 76-mavzu, 49–51-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L28-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Bir atomli ideal gaz to'rtburchak sikl bajaradi: $1$ ($1\\ \\mathrm{L}$, $100\\ \\mathrm{kPa}$) $\\to$ $2$ ($1\\ \\mathrm{L}$, $300\\ \\mathrm{kPa}$) $\\to$ $3$ ($3\\ \\mathrm{L}$, $300\\ \\mathrm{kPa}$) $\\to$ $4$ ($3\\ \\mathrm{L}$, $100\\ \\mathrm{kPa}$) $\\to$ $1$. Sikl FIK ini toping va uni shu siklning eng yuqori va eng past temperaturalari orasida ishlaydigan Karno sikli FIK i bilan solishtiring.",
+   "ru": "Одноатомный идеальный газ совершает прямоугольный цикл: $1$ ($1\\ \\mathrm{L}$, $100\\ \\mathrm{kPa}$) $\\to$ $2$ ($1\\ \\mathrm{L}$, $300\\ \\mathrm{kPa}$) $\\to$ $3$ ($3\\ \\mathrm{L}$, $300\\ \\mathrm{kPa}$) $\\to$ $4$ ($3\\ \\mathrm{L}$, $100\\ \\mathrm{kPa}$) $\\to$ $1$. Найдите КПД цикла и сравните его с КПД цикла Карно между наибольшей и наименьшей температурами этого цикла.",
+   "en": "A monatomic ideal gas goes through a rectangular cycle: $1$ ($1\\ \\mathrm{L}$, $100\\ \\mathrm{kPa}$) $\\to$ $2$ ($1\\ \\mathrm{L}$, $300\\ \\mathrm{kPa}$) $\\to$ $3$ ($3\\ \\mathrm{L}$, $300\\ \\mathrm{kPa}$) $\\to$ $4$ ($3\\ \\mathrm{L}$, $100\\ \\mathrm{kPa}$) $\\to$ $1$. Find the efficiency of the cycle and compare it with the efficiency of a Carnot cycle between the highest and lowest temperatures of this cycle."
+  },
+  "figure": "figures/B1-L28-S15.png",
+  "solution": {
+   "uz": [
+    "Ish — sikl yuzasi ($\\mathrm{kPa}\\cdot\\mathrm{L}=\\mathrm{J}$): $$A=(300-100)(3-1)=400\\ \\mathrm{J}$$",
+    "$1\\to2$ izoxorik isish: $$Q_{12}=\\frac{3}{2}V\\Delta p=\\frac{3}{2}\\cdot1\\cdot200=300\\ \\mathrm{J}$$",
+    "$2\\to3$ izobarik kengayish: $$Q_{23}=\\frac{5}{2}p\\Delta V=\\frac{5}{2}\\cdot300\\cdot2=1500\\ \\mathrm{J}$$",
+    "$3\\to4$, $4\\to1$ da gaz issiqlik beradi: $$Q_1=Q_{12}+Q_{23}=1800\\ \\mathrm{J},\\qquad \\eta=\\frac{400}{1800}\\approx0.22$$",
+    "$T\\sim pV$: $T_3=9T_1$: $$\\eta_{max}=1-\\frac{T_1}{T_3}=\\frac{8}{9}\\approx0.89$$"
+   ],
+   "ru": [
+    "Работа — площадь цикла ($\\mathrm{kPa}\\cdot\\mathrm{L}=\\mathrm{J}$): $$A=(300-100)(3-1)=400\\ \\mathrm{J}$$",
+    "$1\\to2$ изохорное нагревание: $$Q_{12}=\\frac{3}{2}V\\Delta p=\\frac{3}{2}\\cdot1\\cdot200=300\\ \\mathrm{J}$$",
+    "$2\\to3$ изобарное расширение: $$Q_{23}=\\frac{5}{2}p\\Delta V=\\frac{5}{2}\\cdot300\\cdot2=1500\\ \\mathrm{J}$$",
+    "На $3\\to4$, $4\\to1$ газ отдаёт теплоту: $$Q_1=Q_{12}+Q_{23}=1800\\ \\mathrm{J},\\qquad \\eta=\\frac{400}{1800}\\approx0.22$$",
+    "$T\\sim pV$: $T_3=9T_1$: $$\\eta_{max}=1-\\frac{T_1}{T_3}=\\frac{8}{9}\\approx0.89$$"
+   ],
+   "en": [
+    "Work is the area of the cycle ($\\mathrm{kPa}\\cdot\\mathrm{L}=\\mathrm{J}$): $$A=(300-100)(3-1)=400\\ \\mathrm{J}$$",
+    "$1\\to2$ isochoric heating: $$Q_{12}=\\frac{3}{2}V\\Delta p=\\frac{3}{2}\\cdot1\\cdot200=300\\ \\mathrm{J}$$",
+    "$2\\to3$ isobaric expansion: $$Q_{23}=\\frac{5}{2}p\\Delta V=\\frac{5}{2}\\cdot300\\cdot2=1500\\ \\mathrm{J}$$",
+    "On $3\\to4$, $4\\to1$ the gas gives off heat: $$Q_1=Q_{12}+Q_{23}=1800\\ \\mathrm{J},\\qquad \\eta=\\frac{400}{1800}\\approx0.22$$",
+    "$T\\sim pV$: $T_3=9T_1$: $$\\eta_{max}=1-\\frac{T_1}{T_3}=\\frac{8}{9}\\approx0.89$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sikl ishi — sikl yuzasi",
+    "ru": "Работа цикла — площадь цикла",
+    "en": "Work of a cycle is its area"
+   },
+   {
+    "uz": "Izoxorik: $Q=\\frac{3}{2}V\\Delta p$",
+    "ru": "Изохорный: $Q=\\frac{3}{2}V\\Delta p$",
+    "en": "Isochoric: $Q=\\frac{3}{2}V\\Delta p$"
+   },
+   {
+    "uz": "Izobarik: $Q=\\frac{5}{2}p\\Delta V$",
+    "ru": "Изобарный: $Q=\\frac{5}{2}p\\Delta V$",
+    "en": "Isobaric: $Q=\\frac{5}{2}p\\Delta V$"
+   },
+   {
+    "uz": "FIK: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$",
+    "ru": "КПД: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$",
+    "en": "Efficiency: $\\eta=\\frac{A}{Q_1}=\\frac{Q_1-Q_2}{Q_1}$"
+   },
+   {
+    "uz": "Karno: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$",
+    "ru": "Карно: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$",
+    "en": "Carnot: $\\eta_{max}=\\frac{T_1-T_2}{T_1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Sikl FIK i va Karno sikli",
+   "ru": "КПД цикла и цикл Карно",
+   "en": "Efficiency of a cycle and the Carnot cycle"
+  },
+  "answer": "\\eta=\\frac{2}{9}\\approx0.22;\\ \\eta_{max}=\\frac{8}{9}\\approx0.89",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 76-mavzu, 57–61-masalalar; 74-mavzu, 32, 34-masalalar asosida; sharti o'zgartirilgan"
+ }
+]
