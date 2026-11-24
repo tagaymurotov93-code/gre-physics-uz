@@ -1,0 +1,773 @@
+[
+ {
+  "id": "B1-L47-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Tinch holatdagi uzunligi $15\\ \\mathrm{m}$ bo'lgan sterjen o'z uzunligi bo'ylab $2.4\\cdot10^8\\ \\mathrm{m/s}$ tezlik bilan harakatlanmoqda. Qo'zg'almas kuzatuvchi uchun uning uzunligini toping. Uzunlik necha foizga qisqargan?",
+   "ru": "Стержень длиной в покое $15\\ \\mathrm{m}$ движется вдоль своей длины со скоростью $2.4\\cdot10^8\\ \\mathrm{m/s}$. Найдите его длину для неподвижного наблюдателя. На сколько процентов сократилась длина?",
+   "en": "A rod with a rest length of $15\\ \\mathrm{m}$ moves along its length at $2.4\\cdot10^8\\ \\mathrm{m/s}$. Find its length for a stationary observer. By what percentage has the length decreased?"
+  },
+  "figure": "figures/B1-L47-S01.png",
+  "solution": {
+   "uz": [
+    "Tezlik $c$ birligida: $$\\frac{v}{c}=\\frac{2.4\\cdot10^8}{3\\cdot10^8}=0.8$$",
+    "Lorents ko'paytuvchisi: $$\\gamma=\\frac{1}{\\sqrt{1-0.64}}=\\frac{1}{0.6}=\\frac{5}{3}$$",
+    "Harakatdagi uzunlik: $$l=\\frac{l_0}{\\gamma}=15\\cdot0.6=9\\ \\mathrm{m}$$",
+    "Nisbiy qisqarish: $$\\frac{l_0-l}{l_0}=\\frac{6}{15}=0.4$$"
+   ],
+   "ru": [
+    "Скорость в единицах $c$: $$\\frac{v}{c}=\\frac{2.4\\cdot10^8}{3\\cdot10^8}=0.8$$",
+    "Лоренц-фактор: $$\\gamma=\\frac{1}{\\sqrt{1-0.64}}=\\frac{1}{0.6}=\\frac{5}{3}$$",
+    "Длина в движении: $$l=\\frac{l_0}{\\gamma}=15\\cdot0.6=9\\ \\mathrm{m}$$",
+    "Относительное сокращение: $$\\frac{l_0-l}{l_0}=\\frac{6}{15}=0.4$$"
+   ],
+   "en": [
+    "Speed in units of $c$: $$\\frac{v}{c}=\\frac{2.4\\cdot10^8}{3\\cdot10^8}=0.8$$",
+    "Lorentz factor: $$\\gamma=\\frac{1}{\\sqrt{1-0.64}}=\\frac{1}{0.6}=\\frac{5}{3}$$",
+    "Length in motion: $$l=\\frac{l_0}{\\gamma}=15\\cdot0.6=9\\ \\mathrm{m}$$",
+    "Relative contraction: $$\\frac{l_0-l}{l_0}=\\frac{6}{15}=0.4$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Lorents ko'paytuvchisi: $\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$",
+    "ru": "Лоренц-фактор: $\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$",
+    "en": "Lorentz factor: $\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$"
+   },
+   {
+    "uz": "Uzunlik qisqarishi: $l=\\frac{l_0}{\\gamma}$, ko'ndalang o'lcham o'zgarmaydi",
+    "ru": "Сокращение длины: $l=\\frac{l_0}{\\gamma}$, поперечный размер не меняется",
+    "en": "Length contraction: $l=\\frac{l_0}{\\gamma}$, the transverse size is unchanged"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Uzunlik qisqarishi",
+   "ru": "Сокращение длины",
+   "en": "Length contraction"
+  },
+  "answer": "l=9\\ \\mathrm{m};\\ 40\\ \\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 135-mavzu, 4, 5, 9, 12-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) Yerga nisbatan $0.6c$ tezlik bilan uchayotgan kemadagi soat bo'yicha $12$ soat o'tdi. Yerdagi soat bo'yicha qancha vaqt o'tgan? b) Yerda $40$ yil o'tganda, Yerga nisbatan $0.8c$ tezlikda uchgan kemada necha yil o'tgan bo'ladi?",
+   "ru": "а) По часам корабля, летящего относительно Земли со скоростью $0.6c$, прошло $12$ часов. Сколько времени прошло по земным часам? б) Сколько лет пройдёт на корабле, летящем относительно Земли со скоростью $0.8c$, если на Земле прошло $40$ лет?",
+   "en": "a) $12$ hours passed by the clock of a ship flying at $0.6c$ relative to the Earth. How much time passed by the Earth's clocks? b) If $40$ years pass on the Earth, how many years pass on a ship flying at $0.8c$ relative to the Earth?"
+  },
+  "figure": "figures/B1-L47-S02.png",
+  "solution": {
+   "uz": [
+    "a) Kemadagi vaqt — xususiy vaqt: $$\\Delta t_0=12\\ \\mathrm{h},\\qquad \\gamma=\\frac{1}{\\sqrt{1-0.36}}=1.25$$",
+    "Yerda: $$\\Delta t=\\gamma\\Delta t_0=1.25\\cdot12=15\\ \\mathrm{h}$$",
+    "b) Endi xususiy vaqt kemada, $\\gamma=\\frac{5}{3}$: $$\\Delta t_0=\\frac{\\Delta t}{\\gamma}=40\\cdot0.6=24$$"
+   ],
+   "ru": [
+    "а) Время на корабле — собственное: $$\\Delta t_0=12\\ \\mathrm{h},\\qquad \\gamma=\\frac{1}{\\sqrt{1-0.36}}=1.25$$",
+    "На Земле: $$\\Delta t=\\gamma\\Delta t_0=1.25\\cdot12=15\\ \\mathrm{h}$$",
+    "б) Теперь собственное время на корабле, $\\gamma=\\frac{5}{3}$: $$\\Delta t_0=\\frac{\\Delta t}{\\gamma}=40\\cdot0.6=24$$"
+   ],
+   "en": [
+    "a) The time on the ship is the proper time: $$\\Delta t_0=12\\ \\mathrm{h},\\qquad \\gamma=\\frac{1}{\\sqrt{1-0.36}}=1.25$$",
+    "On the Earth: $$\\Delta t=\\gamma\\Delta t_0=1.25\\cdot12=15\\ \\mathrm{h}$$",
+    "b) Now the proper time is on the ship, $\\gamma=\\frac{5}{3}$: $$\\Delta t_0=\\frac{\\Delta t}{\\gamma}=40\\cdot0.6=24$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lorents ko'paytuvchisi: $\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$",
+    "ru": "Лоренц-фактор: $\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$",
+    "en": "Lorentz factor: $\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$"
+   },
+   {
+    "uz": "Vaqt sekinlashishi: $\\Delta t=\\gamma\\Delta t_0$ ($\\Delta t_0$ — xususiy vaqt)",
+    "ru": "Замедление времени: $\\Delta t=\\gamma\\Delta t_0$ ($\\Delta t_0$ — собственное время)",
+    "en": "Time dilation: $\\Delta t=\\gamma\\Delta t_0$ ($\\Delta t_0$ — proper time)"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Vaqt sekinlashishi",
+   "ru": "Замедление времени",
+   "en": "Time dilation"
+  },
+  "answer": "a)\\ 15\\ \\mathrm{h};\\ b)\\ 24",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 135-mavzu, 17–21-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Kosmik kema Yerdagi kuzatuvchiga o'z uzunligidan $2.6$ marta qisqa ko'rinadi. Kemaning tezligini toping. Kemadagi mayatnikning xususiy tebranish davri $2\\ \\mathrm{s}$ bo'lsa, Yerdagi kuzatuvchi uchun davr qancha?",
+   "ru": "Космический корабль кажется наблюдателю на Земле в $2.6$ раза короче своей собственной длины. Найдите скорость корабля. Если собственный период колебаний маятника на корабле $2\\ \\mathrm{s}$, каков период для наблюдателя на Земле?",
+   "en": "A spaceship looks $2.6$ times shorter than its own length to an observer on the Earth. Find the speed of the ship. If the proper period of a pendulum on the ship is $2\\ \\mathrm{s}$, what is the period for the observer on the Earth?"
+  },
+  "figure": "figures/B1-L47-S03.png",
+  "solution": {
+   "uz": [
+    "Qisqarish $\\gamma$ ga teng: $$\\gamma=\\frac{l_0}{l}=2.6=\\frac{13}{5}$$",
+    "Tezlik: $$\\frac{v}{c}=\\sqrt{1-\\frac{25}{169}}=\\frac{12}{13}\\approx0.923$$",
+    "Mayatnik davri ham $\\gamma$ marta uzayadi: $$T=\\gamma T_0=2.6\\cdot2=5.2\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Сокращение равно $\\gamma$: $$\\gamma=\\frac{l_0}{l}=2.6=\\frac{13}{5}$$",
+    "Скорость: $$\\frac{v}{c}=\\sqrt{1-\\frac{25}{169}}=\\frac{12}{13}\\approx0.923$$",
+    "Период маятника тоже увеличивается в $\\gamma$ раз: $$T=\\gamma T_0=2.6\\cdot2=5.2\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The contraction equals $\\gamma$: $$\\gamma=\\frac{l_0}{l}=2.6=\\frac{13}{5}$$",
+    "Speed: $$\\frac{v}{c}=\\sqrt{1-\\frac{25}{169}}=\\frac{12}{13}\\approx0.923$$",
+    "The pendulum period also grows $\\gamma$ times: $$T=\\gamma T_0=2.6\\cdot2=5.2\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uzunlik qisqarishi: $l=\\frac{l_0}{\\gamma}$, ko'ndalang o'lcham o'zgarmaydi",
+    "ru": "Сокращение длины: $l=\\frac{l_0}{\\gamma}$, поперечный размер не меняется",
+    "en": "Length contraction: $l=\\frac{l_0}{\\gamma}$, the transverse size is unchanged"
+   },
+   {
+    "uz": "Teskari formula: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$",
+    "ru": "Обратная формула: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$",
+    "en": "Inverse formula: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$"
+   },
+   {
+    "uz": "Vaqt sekinlashishi: $\\Delta t=\\gamma\\Delta t_0$ ($\\Delta t_0$ — xususiy vaqt)",
+    "ru": "Замедление времени: $\\Delta t=\\gamma\\Delta t_0$ ($\\Delta t_0$ — собственное время)",
+    "en": "Time dilation: $\\Delta t=\\gamma\\Delta t_0$ ($\\Delta t_0$ — proper time)"
+   }
+  ],
+  "basis": {
+   "uz": "Lorents ko'paytuvchisidan tezlik",
+   "ru": "Скорость по лоренц-фактору",
+   "en": "Speed from the Lorentz factor"
+  },
+  "answer": "v=\\frac{12}{13}c\\approx0.923c;\\ T=5.2\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 135-mavzu, 6, 8, 10, 23-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Myuonning xususiy o'rtacha yashash vaqti $2.2\\ \\mu\\mathrm{s}$. Kosmik nurlarda hosil bo'lgan myuon atmosferada Lorents ko'paytuvchisi $\\gamma=10$ bo'lgan tezlikda harakatlanmoqda. Uning tezligini, Yerdagi kuzatuvchi uchun yashash vaqtini va shu vaqtda bosib o'tadigan masofasini toping. Klassik hisob qanday masofa berardi?",
+   "ru": "Собственное среднее время жизни мюона $2.2\\ \\mu\\mathrm{s}$. Мюон, рождённый в космических лучах, движется в атмосфере со скоростью, при которой лоренц-фактор $\\gamma=10$. Найдите его скорость, время жизни для наблюдателя на Земле и расстояние, которое он пролетит за это время. Какое расстояние дал бы классический расчёт?",
+   "en": "The proper mean lifetime of a muon is $2.2\\ \\mu\\mathrm{s}$. A muon produced by cosmic rays moves through the atmosphere at a speed for which the Lorentz factor is $\\gamma=10$. Find its speed, its lifetime for an observer on the Earth and the distance it travels in that time. What distance would a classical calculation give?"
+  },
+  "figure": "figures/B1-L47-S04.png",
+  "solution": {
+   "uz": [
+    "Tezlik: $$\\frac{v}{c}=\\sqrt{1-\\frac{1}{100}}=\\sqrt{0.99}\\approx0.995$$",
+    "Yerdagi kuzatuvchi uchun yashash vaqti: $$\\Delta t=\\gamma\\Delta t_0=22\\ \\mu\\mathrm{s}$$",
+    "Bosib o'tilgan masofa: $$s=v\\Delta t\\approx0.995\\cdot3\\cdot10^8\\cdot22\\cdot10^{-6}\\approx6.6\\ \\mathrm{km}$$",
+    "Klassik hisob ($\\gamma=1$): $$s_0\\approx c\\Delta t_0=660\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Скорость: $$\\frac{v}{c}=\\sqrt{1-\\frac{1}{100}}=\\sqrt{0.99}\\approx0.995$$",
+    "Время жизни для наблюдателя на Земле: $$\\Delta t=\\gamma\\Delta t_0=22\\ \\mu\\mathrm{s}$$",
+    "Пройденное расстояние: $$s=v\\Delta t\\approx0.995\\cdot3\\cdot10^8\\cdot22\\cdot10^{-6}\\approx6.6\\ \\mathrm{km}$$",
+    "Классический расчёт ($\\gamma=1$): $$s_0\\approx c\\Delta t_0=660\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Speed: $$\\frac{v}{c}=\\sqrt{1-\\frac{1}{100}}=\\sqrt{0.99}\\approx0.995$$",
+    "Lifetime for an observer on the Earth: $$\\Delta t=\\gamma\\Delta t_0=22\\ \\mu\\mathrm{s}$$",
+    "Distance travelled: $$s=v\\Delta t\\approx0.995\\cdot3\\cdot10^8\\cdot22\\cdot10^{-6}\\approx6.6\\ \\mathrm{km}$$",
+    "Classical calculation ($\\gamma=1$): $$s_0\\approx c\\Delta t_0=660\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Teskari formula: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$",
+    "ru": "Обратная формула: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$",
+    "en": "Inverse formula: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$"
+   },
+   {
+    "uz": "Vaqt sekinlashishi: $\\Delta t=\\gamma\\Delta t_0$ ($\\Delta t_0$ — xususiy vaqt)",
+    "ru": "Замедление времени: $\\Delta t=\\gamma\\Delta t_0$ ($\\Delta t_0$ — собственное время)",
+    "en": "Time dilation: $\\Delta t=\\gamma\\Delta t_0$ ($\\Delta t_0$ — proper time)"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Vaqt sekinlashishi (myuonlar)",
+   "ru": "Замедление времени (мюоны)",
+   "en": "Time dilation (muons)"
+  },
+  "answer": "v\\approx0.995c;\\ 22\\ \\mu\\mathrm{s};\\ s\\approx6.6\\ \\mathrm{km};\\ s_0\\approx660\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 135-mavzu, 17–21-masalalar; GRE: myuonlar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Egizaklar $25$ yoshda. Ulardan biri kosmik kemada yulduzga borib qaytdi (tezlik doimiy deb olinsin). Qaytganida u $31$ yoshda, Yerda qolgan egizak esa $35$ yoshda edi. Kema tezligini toping. Yulduz Yerdan necha yorug'lik yili uzoqlikda? Kemadagi kuzatuvchi uchun bu masofa qancha?",
+   "ru": "Близнецам по $25$ лет. Один из них слетал на космическом корабле к звезде и вернулся (скорость считать постоянной). По возвращении ему было $31$ год, а оставшемуся на Земле близнецу — $35$ лет. Найдите скорость корабля. Сколько световых лет от Земли до звезды? Каково это расстояние для наблюдателя на корабле?",
+   "en": "Twins are $25$ years old. One of them flew in a spaceship to a star and back (take the speed to be constant). On return he was $31$ years old and the twin who stayed on the Earth was $35$. Find the speed of the ship. How many light-years from the Earth is the star? What is this distance for an observer on the ship?"
+  },
+  "figure": "figures/B1-L47-S05.png",
+  "solution": {
+   "uz": [
+    "Kemada $6$ yil, Yerda $10$ yil: $$\\gamma=\\frac{\\Delta t}{\\Delta t_0}=\\frac{10}{6}=\\frac{5}{3}$$",
+    "Tezlik: $$\\frac{v}{c}=\\sqrt{1-\\frac{9}{25}}=0.8$$",
+    "Bir tomonga Yerda $5$ yil: $$L_0=0.8\\cdot5=4$$",
+    "Kemadagi kuzatuvchi uchun masofa qisqaradi: $$L=\\frac{L_0}{\\gamma}=4\\cdot0.6=2.4$$"
+   ],
+   "ru": [
+    "На корабле $6$ лет, на Земле $10$ лет: $$\\gamma=\\frac{\\Delta t}{\\Delta t_0}=\\frac{10}{6}=\\frac{5}{3}$$",
+    "Скорость: $$\\frac{v}{c}=\\sqrt{1-\\frac{9}{25}}=0.8$$",
+    "В одну сторону по земным часам $5$ лет: $$L_0=0.8\\cdot5=4$$",
+    "Для наблюдателя на корабле расстояние сокращается: $$L=\\frac{L_0}{\\gamma}=4\\cdot0.6=2.4$$"
+   ],
+   "en": [
+    "$6$ years on the ship, $10$ years on the Earth: $$\\gamma=\\frac{\\Delta t}{\\Delta t_0}=\\frac{10}{6}=\\frac{5}{3}$$",
+    "Speed: $$\\frac{v}{c}=\\sqrt{1-\\frac{9}{25}}=0.8$$",
+    "One way by the Earth's clocks $5$ years: $$L_0=0.8\\cdot5=4$$",
+    "For an observer on the ship the distance contracts: $$L=\\frac{L_0}{\\gamma}=4\\cdot0.6=2.4$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Vaqt sekinlashishi: $\\Delta t=\\gamma\\Delta t_0$ ($\\Delta t_0$ — xususiy vaqt)",
+    "ru": "Замедление времени: $\\Delta t=\\gamma\\Delta t_0$ ($\\Delta t_0$ — собственное время)",
+    "en": "Time dilation: $\\Delta t=\\gamma\\Delta t_0$ ($\\Delta t_0$ — proper time)"
+   },
+   {
+    "uz": "Teskari formula: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$",
+    "ru": "Обратная формула: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$",
+    "en": "Inverse formula: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$"
+   },
+   null,
+   {
+    "uz": "Uzunlik qisqarishi: $l=\\frac{l_0}{\\gamma}$, ko'ndalang o'lcham o'zgarmaydi",
+    "ru": "Сокращение длины: $l=\\frac{l_0}{\\gamma}$, поперечный размер не меняется",
+    "en": "Length contraction: $l=\\frac{l_0}{\\gamma}$, the transverse size is unchanged"
+   }
+  ],
+  "basis": {
+   "uz": "Egizaklar paradoksi",
+   "ru": "Парадокс близнецов",
+   "en": "Twin paradox"
+  },
+  "answer": "v=0.8c;\\ L_0=4;\\ L=2.4",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 135-mavzu, 24-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Tinch holatdagi uzunligi $1\\ \\mathrm{m}$ bo'lgan sterjen harakat yo'nalishiga $60^\\circ$ burchak ostida joylashgan va $0.6c$ tezlik bilan harakatlanmoqda. Qo'zg'almas kuzatuvchi uchun sterjen uzunligi va uning harakat yo'nalishi bilan hosil qilgan burchagini toping.",
+   "ru": "Стержень длиной в покое $1\\ \\mathrm{m}$ расположен под углом $60^\\circ$ к направлению движения и движется со скоростью $0.6c$. Найдите для неподвижного наблюдателя длину стержня и угол, который он образует с направлением движения.",
+   "en": "A rod with a rest length of $1\\ \\mathrm{m}$ is at $60^\\circ$ to the direction of motion and moves at $0.6c$. Find, for a stationary observer, the length of the rod and the angle it makes with the direction of motion."
+  },
+  "figure": "figures/B1-L47-S06.png",
+  "solution": {
+   "uz": [
+    "Proyeksiyalar (tinch holatda): $$l_{0x}=1\\cdot\\cos60^\\circ=0.5\\ \\mathrm{m},\\qquad l_{0y}=\\sin60^\\circ\\approx0.866\\ \\mathrm{m}$$",
+    "Faqat bo'ylama proyeksiya qisqaradi ($\\gamma=1.25$): $$l_x=\\frac{0.5}{1.25}=0.4\\ \\mathrm{m},\\qquad l_y=0.866\\ \\mathrm{m}$$",
+    "Uzunlik: $$l=\\sqrt{0.4^2+0.75}=\\sqrt{0.91}\\approx0.954\\ \\mathrm{m}$$",
+    "Burchak: $$\\mathrm{tg}\\,\\theta=\\frac{0.866}{0.4}\\approx2.17\\ \\Rightarrow\\ \\theta\\approx65.2^\\circ$$"
+   ],
+   "ru": [
+    "Проекции (в покое): $$l_{0x}=1\\cdot\\cos60^\\circ=0.5\\ \\mathrm{m},\\qquad l_{0y}=\\sin60^\\circ\\approx0.866\\ \\mathrm{m}$$",
+    "Сокращается только продольная проекция ($\\gamma=1.25$): $$l_x=\\frac{0.5}{1.25}=0.4\\ \\mathrm{m},\\qquad l_y=0.866\\ \\mathrm{m}$$",
+    "Длина: $$l=\\sqrt{0.4^2+0.75}=\\sqrt{0.91}\\approx0.954\\ \\mathrm{m}$$",
+    "Угол: $$\\mathrm{tg}\\,\\theta=\\frac{0.866}{0.4}\\approx2.17\\ \\Rightarrow\\ \\theta\\approx65.2^\\circ$$"
+   ],
+   "en": [
+    "Projections (at rest): $$l_{0x}=1\\cdot\\cos60^\\circ=0.5\\ \\mathrm{m},\\qquad l_{0y}=\\sin60^\\circ\\approx0.866\\ \\mathrm{m}$$",
+    "Only the longitudinal projection contracts ($\\gamma=1.25$): $$l_x=\\frac{0.5}{1.25}=0.4\\ \\mathrm{m},\\qquad l_y=0.866\\ \\mathrm{m}$$",
+    "Length: $$l=\\sqrt{0.4^2+0.75}=\\sqrt{0.91}\\approx0.954\\ \\mathrm{m}$$",
+    "Angle: $$\\mathrm{tg}\\,\\theta=\\frac{0.866}{0.4}\\approx2.17\\ \\Rightarrow\\ \\theta\\approx65.2^\\circ$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Uzunlik qisqarishi: $l=\\frac{l_0}{\\gamma}$, ko'ndalang o'lcham o'zgarmaydi",
+    "ru": "Сокращение длины: $l=\\frac{l_0}{\\gamma}$, поперечный размер не меняется",
+    "en": "Length contraction: $l=\\frac{l_0}{\\gamma}$, the transverse size is unchanged"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Qiya sterjen uzunligining qisqarishi",
+   "ru": "Сокращение наклонного стержня",
+   "en": "Contraction of a tilted rod"
+  },
+  "answer": "l\\approx0.954\\ \\mathrm{m};\\ \\theta\\approx65.2^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 135-mavzu, 15-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Qirrasi $2\\ \\mathrm{m}$ bo'lgan kub shaklidagi jism tinch holatda $900\\ \\mathrm{kg/m^3}$ zichlikka ega. U qirralaridan biri bo'ylab $0.8c$ tezlik bilan harakatlanmoqda. Qo'zg'almas kuzatuvchi uchun jism hajmi, relyativistik massasi va zichligini toping.",
+   "ru": "Тело в форме куба с ребром $2\\ \\mathrm{m}$ имеет в покое плотность $900\\ \\mathrm{kg/m^3}$. Оно движется вдоль одного из рёбер со скоростью $0.8c$. Найдите для неподвижного наблюдателя объём, релятивистскую массу и плотность тела.",
+   "en": "A cube-shaped body with an edge of $2\\ \\mathrm{m}$ has a rest density of $900\\ \\mathrm{kg/m^3}$. It moves along one of its edges at $0.8c$. Find, for a stationary observer, the volume, the relativistic mass and the density of the body."
+  },
+  "figure": "figures/B1-L47-S07.png",
+  "solution": {
+   "uz": [
+    "Faqat bitta qirra qisqaradi ($\\gamma=\\frac{5}{3}$): $$V=\\frac{V_0}{\\gamma}=8\\cdot0.6=4.8\\ \\mathrm{m^3}$$",
+    "Massa: $$m_0=900\\cdot8=7200\\ \\mathrm{kg},\\qquad m=\\gamma m_0=12000\\ \\mathrm{kg}$$",
+    "Zichlik: $$\\rho=\\frac{m}{V}=\\frac{12000}{4.8}=2500\\ \\mathrm{kg/m^3}=\\gamma^2\\rho_0$$"
+   ],
+   "ru": [
+    "Сокращается только одно ребро ($\\gamma=\\frac{5}{3}$): $$V=\\frac{V_0}{\\gamma}=8\\cdot0.6=4.8\\ \\mathrm{m^3}$$",
+    "Масса: $$m_0=900\\cdot8=7200\\ \\mathrm{kg},\\qquad m=\\gamma m_0=12000\\ \\mathrm{kg}$$",
+    "Плотность: $$\\rho=\\frac{m}{V}=\\frac{12000}{4.8}=2500\\ \\mathrm{kg/m^3}=\\gamma^2\\rho_0$$"
+   ],
+   "en": [
+    "Only one edge contracts ($\\gamma=\\frac{5}{3}$): $$V=\\frac{V_0}{\\gamma}=8\\cdot0.6=4.8\\ \\mathrm{m^3}$$",
+    "Mass: $$m_0=900\\cdot8=7200\\ \\mathrm{kg},\\qquad m=\\gamma m_0=12000\\ \\mathrm{kg}$$",
+    "Density: $$\\rho=\\frac{m}{V}=\\frac{12000}{4.8}=2500\\ \\mathrm{kg/m^3}=\\gamma^2\\rho_0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uzunlik qisqarishi: $l=\\frac{l_0}{\\gamma}$, ko'ndalang o'lcham o'zgarmaydi",
+    "ru": "Сокращение длины: $l=\\frac{l_0}{\\gamma}$, поперечный размер не меняется",
+    "en": "Length contraction: $l=\\frac{l_0}{\\gamma}$, the transverse size is unchanged"
+   },
+   {
+    "uz": "Relyativistik massa: $m=\\gamma m_0$",
+    "ru": "Релятивистская масса: $m=\\gamma m_0$",
+    "en": "Relativistic mass: $m=\\gamma m_0$"
+   },
+   {
+    "uz": "$V=\\frac{V_0}{\\gamma}$, $m=\\gamma m_0$ $\\Rightarrow$ $\\rho=\\gamma^2\\rho_0$",
+    "ru": "$V=\\frac{V_0}{\\gamma}$, $m=\\gamma m_0$ $\\Rightarrow$ $\\rho=\\gamma^2\\rho_0$",
+    "en": "$V=\\frac{V_0}{\\gamma}$, $m=\\gamma m_0$ $\\Rightarrow$ $\\rho=\\gamma^2\\rho_0$"
+   }
+  ],
+  "basis": {
+   "uz": "Hajm, massa va zichlik",
+   "ru": "Объём, масса и плотность",
+   "en": "Volume, mass and density"
+  },
+  "answer": "V=4.8\\ \\mathrm{m^3};\\ m=12000\\ \\mathrm{kg};\\ \\rho=2500\\ \\mathrm{kg/m^3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 135-mavzu, 13, 14, 57–62-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) Yerdan ikki kema qarama-qarshi tomonlarga har biri Yerga nisbatan $0.6c$ tezlik bilan uchirildi. Birinchi kemaning ikkinchisiga nisbatan tezligini toping. b) Bir yo'nalishda uchayotgan raketalarning Yerga nisbatan tezliklari $0.9c$ va $0.6c$. Birinchi raketaning ikkinchisiga nisbatan tezligi qancha? c) Ikkinchi raketa oldinga yorug'lik yuborsa, uning Yerga nisbatan tezligi qanday?",
+   "ru": "а) С Земли в противоположные стороны запустили два корабля, каждый со скоростью $0.6c$ относительно Земли. Найдите скорость первого корабля относительно второго. б) Скорости ракет, летящих в одном направлении, относительно Земли $0.9c$ и $0.6c$. Какова скорость первой ракеты относительно второй? в) Если вторая ракета посылает вперёд свет, какова его скорость относительно Земли?",
+   "en": "a) Two ships were launched from the Earth in opposite directions, each at $0.6c$ relative to the Earth. Find the velocity of the first ship relative to the second. b) Rockets flying in the same direction have speeds $0.9c$ and $0.6c$ relative to the Earth. What is the speed of the first rocket relative to the second? c) If the second rocket sends light forwards, what is its speed relative to the Earth?"
+  },
+  "figure": "figures/B1-L47-S08.png",
+  "solution": {
+   "uz": [
+    "a) Ikkinchi kema sistemasida Yer $0.6c$, birinchi kema yana $0.6c$: $$u=\\frac{0.6c+0.6c}{1+0.36}=\\frac{15}{17}c\\approx0.882c$$",
+    "b) Nisbiy tezlik (ayirish formulasi): $$u'=\\frac{0.9c-0.6c}{1-0.54}=\\frac{15}{23}c\\approx0.652c$$",
+    "Galiley bo'yicha $1.2c$ va $0.3c$ chiqardi — bu noto'g'ri.",
+    "c) Ikkinchi postulat: $$\\frac{c+0.6c}{1+0.6}=c$$"
+   ],
+   "ru": [
+    "а) В системе второго корабля Земля движется со скоростью $0.6c$, первый корабль ещё $0.6c$: $$u=\\frac{0.6c+0.6c}{1+0.36}=\\frac{15}{17}c\\approx0.882c$$",
+    "б) Относительная скорость (формула вычитания): $$u'=\\frac{0.9c-0.6c}{1-0.54}=\\frac{15}{23}c\\approx0.652c$$",
+    "По Галилею получилось бы $1.2c$ и $0.3c$ — это неверно.",
+    "в) Второй постулат: $$\\frac{c+0.6c}{1+0.6}=c$$"
+   ],
+   "en": [
+    "a) In the second ship's frame the Earth moves at $0.6c$ and the first ship a further $0.6c$: $$u=\\frac{0.6c+0.6c}{1+0.36}=\\frac{15}{17}c\\approx0.882c$$",
+    "b) Relative speed (subtraction formula): $$u'=\\frac{0.9c-0.6c}{1-0.54}=\\frac{15}{23}c\\approx0.652c$$",
+    "Galileo would give $1.2c$ and $0.3c$ — this is wrong.",
+    "c) Second postulate: $$\\frac{c+0.6c}{1+0.6}=c$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tezliklarni qo'shish: $u=\\frac{u'+v}{1+\\frac{u'v}{c^2}}$",
+    "ru": "Сложение скоростей: $u=\\frac{u'+v}{1+\\frac{u'v}{c^2}}$",
+    "en": "Velocity addition: $u=\\frac{u'+v}{1+\\frac{u'v}{c^2}}$"
+   },
+   null,
+   null,
+   {
+    "uz": "Postulatlar: fizika qonunlari va $c$ barcha inersial sistemalarda bir xil",
+    "ru": "Постулаты: законы физики и $c$ одинаковы во всех инерциальных системах",
+    "en": "Postulates: the laws of physics and $c$ are the same in all inertial frames"
+   }
+  ],
+  "basis": {
+   "uz": "Tezliklarni qo'shishning relyativistik qonuni",
+   "ru": "Релятивистский закон сложения скоростей",
+   "en": "Relativistic velocity addition"
+  },
+  "answer": "a)\\ \\frac{15}{17}c\\approx0.882c;\\ b)\\ \\frac{15}{23}c\\approx0.652c;\\ c)\\ c",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 135-mavzu, 26–36-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) Zarra $0.28c$ tezlik bilan harakatlanmoqda. Uning massasi tinchlikdagi massasidan necha marta (necha foizga) katta? b) Tinchlikdagi massasi $12\\ \\mathrm{kg}$ bo'lgan jismning harakatdagi massasi $13\\ \\mathrm{kg}$. Jism tezligini toping.",
+   "ru": "а) Частица движется со скоростью $0.28c$. Во сколько раз (на сколько процентов) её масса больше массы покоя? б) Масса покоя тела $12\\ \\mathrm{kg}$, масса в движении $13\\ \\mathrm{kg}$. Найдите скорость тела.",
+   "en": "a) A particle moves at $0.28c$. How many times (by what percentage) is its mass greater than its rest mass? b) A body with a rest mass of $12\\ \\mathrm{kg}$ has a mass in motion of $13\\ \\mathrm{kg}$. Find the speed of the body."
+  },
+  "figure": "figures/B1-L47-S09.png",
+  "solution": {
+   "uz": [
+    "a) Pifagor uchligi $(7,\\ 24,\\ 25)$: $$\\sqrt{1-0.28^2}=\\sqrt{1-0.0784}=0.96$$",
+    "Massa: $$\\frac{m}{m_0}=\\gamma=\\frac{1}{0.96}=\\frac{25}{24}\\approx1.042$$",
+    "b) $\\gamma=\\frac{m}{m_0}=\\frac{13}{12}$: $$\\frac{v}{c}=\\sqrt{1-\\frac{144}{169}}=\\frac{5}{13}\\approx0.385$$"
+   ],
+   "ru": [
+    "а) Пифагорова тройка $(7,\\ 24,\\ 25)$: $$\\sqrt{1-0.28^2}=\\sqrt{1-0.0784}=0.96$$",
+    "Масса: $$\\frac{m}{m_0}=\\gamma=\\frac{1}{0.96}=\\frac{25}{24}\\approx1.042$$",
+    "б) $\\gamma=\\frac{m}{m_0}=\\frac{13}{12}$: $$\\frac{v}{c}=\\sqrt{1-\\frac{144}{169}}=\\frac{5}{13}\\approx0.385$$"
+   ],
+   "en": [
+    "a) Pythagorean triple $(7,\\ 24,\\ 25)$: $$\\sqrt{1-0.28^2}=\\sqrt{1-0.0784}=0.96$$",
+    "Mass: $$\\frac{m}{m_0}=\\gamma=\\frac{1}{0.96}=\\frac{25}{24}\\approx1.042$$",
+    "b) $\\gamma=\\frac{m}{m_0}=\\frac{13}{12}$: $$\\frac{v}{c}=\\sqrt{1-\\frac{144}{169}}=\\frac{5}{13}\\approx0.385$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Relyativistik massa: $m=\\gamma m_0$",
+    "ru": "Релятивистская масса: $m=\\gamma m_0$",
+    "en": "Relativistic mass: $m=\\gamma m_0$"
+   },
+   {
+    "uz": "Teskari formula: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$",
+    "ru": "Обратная формула: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$",
+    "en": "Inverse formula: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$"
+   }
+  ],
+  "basis": {
+   "uz": "Relyativistik massa",
+   "ru": "Релятивистская масса",
+   "en": "Relativistic mass"
+  },
+  "answer": "a)\\ \\frac{m}{m_0}=\\frac{25}{24}\\approx1.042;\\ b)\\ v=\\frac{5}{13}c\\approx0.385c",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 135-mavzu, 37–55-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S10",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$5\\ \\mathrm{g}$ moddaning tinchlikdagi energiyasini toping. Shuncha energiya olish uchun solishtirma yonish issiqligi $3\\cdot10^7\\ \\mathrm{J/kg}$ bo'lgan ko'mirdan qancha yoqish kerak?",
+   "ru": "Найдите энергию покоя $5\\ \\mathrm{g}$ вещества. Сколько угля с удельной теплотой сгорания $3\\cdot10^7\\ \\mathrm{J/kg}$ нужно сжечь, чтобы получить такую энергию?",
+   "en": "Find the rest energy of $5\\ \\mathrm{g}$ of matter. How much coal with a specific heat of combustion of $3\\cdot10^7\\ \\mathrm{J/kg}$ must be burned to obtain this energy?"
+  },
+  "figure": "figures/B1-L47-S10.png",
+  "solution": {
+   "uz": [
+    "Tinchlikdagi energiya: $$E_0=m_0c^2=5\\cdot10^{-3}\\cdot9\\cdot10^{16}=4.5\\cdot10^{14}\\ \\mathrm{J}$$",
+    "Ko'mir massasi: $$M=\\frac{E_0}{q}=\\frac{4.5\\cdot10^{14}}{3\\cdot10^7}=1.5\\cdot10^7\\ \\mathrm{kg}$$",
+    "Ya'ni $15$ ming tonna ko'mir — massaning juda oz qismi ham ulkan energiya."
+   ],
+   "ru": [
+    "Энергия покоя: $$E_0=m_0c^2=5\\cdot10^{-3}\\cdot9\\cdot10^{16}=4.5\\cdot10^{14}\\ \\mathrm{J}$$",
+    "Масса угля: $$M=\\frac{E_0}{q}=\\frac{4.5\\cdot10^{14}}{3\\cdot10^7}=1.5\\cdot10^7\\ \\mathrm{kg}$$",
+    "То есть $15$ тысяч тонн угля — даже малая масса даёт огромную энергию."
+   ],
+   "en": [
+    "Rest energy: $$E_0=m_0c^2=5\\cdot10^{-3}\\cdot9\\cdot10^{16}=4.5\\cdot10^{14}\\ \\mathrm{J}$$",
+    "Mass of coal: $$M=\\frac{E_0}{q}=\\frac{4.5\\cdot10^{14}}{3\\cdot10^7}=1.5\\cdot10^7\\ \\mathrm{kg}$$",
+    "That is $15$ thousand tonnes of coal — even a small mass gives enormous energy."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tinchlikdagi energiya: $E_0=m_0c^2$",
+    "ru": "Энергия покоя: $E_0=m_0c^2$",
+    "en": "Rest energy: $E_0=m_0c^2$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Tinchlikdagi energiya",
+   "ru": "Энергия покоя",
+   "en": "Rest energy"
+  },
+  "answer": "E_0=4.5\\cdot10^{14}\\ \\mathrm{J};\\ M=1.5\\cdot10^7\\ \\mathrm{kg}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 136-mavzu, 1–5-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) $5\\ \\mathrm{kg}$ suv $80\\ \\mathrm{K}$ ga isitildi ($c_s=4200\\ \\mathrm{J/(kg\\cdot K)}$). Suv massasi qanchaga ortdi? b) Bikrligi $5\\ \\mathrm{kN/m}$ bo'lgan prujina $4\\ \\mathrm{cm}$ ga cho'zilsa, uning massasi qanchaga ortadi?",
+   "ru": "а) $5\\ \\mathrm{kg}$ воды нагрели на $80\\ \\mathrm{K}$ ($c_s=4200\\ \\mathrm{J/(kg\\cdot K)}$). На сколько увеличилась масса воды? б) На сколько увеличится масса пружины жёсткостью $5\\ \\mathrm{kN/m}$, если её растянуть на $4\\ \\mathrm{cm}$?",
+   "en": "a) $5\\ \\mathrm{kg}$ of water was heated by $80\\ \\mathrm{K}$ ($c_s=4200\\ \\mathrm{J/(kg\\cdot K)}$). By how much did the mass of the water increase? b) By how much does the mass of a spring of stiffness $5\\ \\mathrm{kN/m}$ increase if it is stretched by $4\\ \\mathrm{cm}$?"
+  },
+  "figure": "figures/B1-L47-S11.png",
+  "solution": {
+   "uz": [
+    "a) Olingan issiqlik miqdori: $$Q=c_sm\\Delta T=4200\\cdot5\\cdot80=1.68\\cdot10^6\\ \\mathrm{J}$$",
+    "Massa ortishi: $$\\Delta m=\\frac{Q}{c^2}=\\frac{1.68\\cdot10^6}{9\\cdot10^{16}}\\approx1.87\\cdot10^{-11}\\ \\mathrm{kg}$$",
+    "b) Prujinaning potensial energiyasi: $$E_p=\\frac{kx^2}{2}=\\frac{5000\\cdot0.04^2}{2}=4\\ \\mathrm{J}$$",
+    "Massa ortishi: $$\\Delta m=\\frac{4}{9\\cdot10^{16}}\\approx4.44\\cdot10^{-17}\\ \\mathrm{kg}$$"
+   ],
+   "ru": [
+    "а) Полученное количество теплоты: $$Q=c_sm\\Delta T=4200\\cdot5\\cdot80=1.68\\cdot10^6\\ \\mathrm{J}$$",
+    "Увеличение массы: $$\\Delta m=\\frac{Q}{c^2}=\\frac{1.68\\cdot10^6}{9\\cdot10^{16}}\\approx1.87\\cdot10^{-11}\\ \\mathrm{kg}$$",
+    "б) Потенциальная энергия пружины: $$E_p=\\frac{kx^2}{2}=\\frac{5000\\cdot0.04^2}{2}=4\\ \\mathrm{J}$$",
+    "Увеличение массы: $$\\Delta m=\\frac{4}{9\\cdot10^{16}}\\approx4.44\\cdot10^{-17}\\ \\mathrm{kg}$$"
+   ],
+   "en": [
+    "a) Heat received: $$Q=c_sm\\Delta T=4200\\cdot5\\cdot80=1.68\\cdot10^6\\ \\mathrm{J}$$",
+    "Increase in mass: $$\\Delta m=\\frac{Q}{c^2}=\\frac{1.68\\cdot10^6}{9\\cdot10^{16}}\\approx1.87\\cdot10^{-11}\\ \\mathrm{kg}$$",
+    "b) Potential energy of the spring: $$E_p=\\frac{kx^2}{2}=\\frac{5000\\cdot0.04^2}{2}=4\\ \\mathrm{J}$$",
+    "Increase in mass: $$\\Delta m=\\frac{4}{9\\cdot10^{16}}\\approx4.44\\cdot10^{-17}\\ \\mathrm{kg}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Massa va energiya o'zgarishi: $\\Delta E=\\Delta m\\,c^2$",
+    "ru": "Изменение массы и энергии: $\\Delta E=\\Delta m\\,c^2$",
+    "en": "Change of mass and energy: $\\Delta E=\\Delta m\\,c^2$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Energiya o'zgarishi va massa",
+   "ru": "Изменение энергии и масса",
+   "en": "Change of energy and mass"
+  },
+  "answer": "a)\\ \\Delta m\\approx1.87\\cdot10^{-11}\\ \\mathrm{kg};\\ b)\\ \\Delta m\\approx4.44\\cdot10^{-17}\\ \\mathrm{kg}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 136-mavzu, 28–33-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Quyoshning nurlanish quvvati $3.8\\cdot10^{26}\\ \\mathrm{W}$, massasi $2\\cdot10^{30}\\ \\mathrm{kg}$. Quyosh har sekundda qancha massa yo'qotadi? Bir yilda-chi ($1$ yil $\\approx3.15\\cdot10^7\\ \\mathrm{s}$)? $10$ milliard yilda massasining qancha ulushini yo'qotadi?",
+   "ru": "Мощность излучения Солнца $3.8\\cdot10^{26}\\ \\mathrm{W}$, масса $2\\cdot10^{30}\\ \\mathrm{kg}$. Какую массу теряет Солнце каждую секунду? А за год ($1$ год $\\approx3.15\\cdot10^7\\ \\mathrm{s}$)? Какую долю своей массы оно потеряет за $10$ миллиардов лет?",
+   "en": "The radiated power of the Sun is $3.8\\cdot10^{26}\\ \\mathrm{W}$ and its mass is $2\\cdot10^{30}\\ \\mathrm{kg}$. What mass does the Sun lose every second? And in a year ($1$ year $\\approx3.15\\cdot10^7\\ \\mathrm{s}$)? What fraction of its mass will it lose in $10$ billion years?"
+  },
+  "figure": "figures/B1-L47-S12.png",
+  "solution": {
+   "uz": [
+    "Har sekundda: $$\\frac{\\Delta m}{\\Delta t}=\\frac{P}{c^2}=\\frac{3.8\\cdot10^{26}}{9\\cdot10^{16}}\\approx4.2\\cdot10^9\\ \\mathrm{kg/s}$$",
+    "Bir yilda: $$\\Delta m\\approx4.22\\cdot10^9\\cdot3.15\\cdot10^7\\approx1.33\\cdot10^{17}\\ \\mathrm{kg}$$",
+    "$10^{10}$ yilda nisbiy ulush: $$\\frac{1.33\\cdot10^{27}}{2\\cdot10^{30}}\\approx6.7\\cdot10^{-4}$$"
+   ],
+   "ru": [
+    "Каждую секунду: $$\\frac{\\Delta m}{\\Delta t}=\\frac{P}{c^2}=\\frac{3.8\\cdot10^{26}}{9\\cdot10^{16}}\\approx4.2\\cdot10^9\\ \\mathrm{kg/s}$$",
+    "За год: $$\\Delta m\\approx4.22\\cdot10^9\\cdot3.15\\cdot10^7\\approx1.33\\cdot10^{17}\\ \\mathrm{kg}$$",
+    "Доля за $10^{10}$ лет: $$\\frac{1.33\\cdot10^{27}}{2\\cdot10^{30}}\\approx6.7\\cdot10^{-4}$$"
+   ],
+   "en": [
+    "Every second: $$\\frac{\\Delta m}{\\Delta t}=\\frac{P}{c^2}=\\frac{3.8\\cdot10^{26}}{9\\cdot10^{16}}\\approx4.2\\cdot10^9\\ \\mathrm{kg/s}$$",
+    "In a year: $$\\Delta m\\approx4.22\\cdot10^9\\cdot3.15\\cdot10^7\\approx1.33\\cdot10^{17}\\ \\mathrm{kg}$$",
+    "Fraction in $10^{10}$ years: $$\\frac{1.33\\cdot10^{27}}{2\\cdot10^{30}}\\approx6.7\\cdot10^{-4}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Massa va energiya o'zgarishi: $\\Delta E=\\Delta m\\,c^2$",
+    "ru": "Изменение массы и энергии: $\\Delta E=\\Delta m\\,c^2$",
+    "en": "Change of mass and energy: $\\Delta E=\\Delta m\\,c^2$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Nurlanish va massa yo'qotilishi",
+   "ru": "Излучение и потеря массы",
+   "en": "Radiation and loss of mass"
+  },
+  "answer": "4.2\\cdot10^9\\ \\mathrm{kg/s};\\ 1.33\\cdot10^{17}\\ \\mathrm{kg};\\ 6.7\\cdot10^{-4}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 136-mavzu, 6, 7-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Elektronning tinchlikdagi energiyasi $0.511\\ \\mathrm{MeV}$, tezligi $\\frac{\\sqrt{5}}{3}c\\approx0.745c$. Elektronning to'liq va kinetik energiyalarini toping. Klassik formula qanday kinetik energiya berardi?",
+   "ru": "Энергия покоя электрона $0.511\\ \\mathrm{MeV}$, скорость $\\frac{\\sqrt{5}}{3}c\\approx0.745c$. Найдите полную и кинетическую энергии электрона. Какую кинетическую энергию дала бы классическая формула?",
+   "en": "The rest energy of an electron is $0.511\\ \\mathrm{MeV}$ and its speed is $\\frac{\\sqrt{5}}{3}c\\approx0.745c$. Find the total and kinetic energies of the electron. What kinetic energy would the classical formula give?"
+  },
+  "figure": "figures/B1-L47-S13.png",
+  "solution": {
+   "uz": [
+    "Lorents ko'paytuvchisi: $$\\gamma=\\frac{1}{\\sqrt{1-\\frac{5}{9}}}=\\frac{3}{2}$$",
+    "To'liq energiya: $$E=\\gamma E_0=1.5\\cdot0.511\\approx0.767\\ \\mathrm{MeV}$$",
+    "Kinetik energiya: $$E_k=E-E_0=0.5\\cdot0.511\\approx0.256\\ \\mathrm{MeV}$$",
+    "Klassik formula — $1.8$ marta kam: $$\\frac{m_0v^2}{2}=\\frac{1}{2}\\cdot\\frac{5}{9}E_0\\approx0.142\\ \\mathrm{MeV}$$"
+   ],
+   "ru": [
+    "Лоренц-фактор: $$\\gamma=\\frac{1}{\\sqrt{1-\\frac{5}{9}}}=\\frac{3}{2}$$",
+    "Полная энергия: $$E=\\gamma E_0=1.5\\cdot0.511\\approx0.767\\ \\mathrm{MeV}$$",
+    "Кинетическая энергия: $$E_k=E-E_0=0.5\\cdot0.511\\approx0.256\\ \\mathrm{MeV}$$",
+    "Классическая формула — в $1.8$ раза меньше: $$\\frac{m_0v^2}{2}=\\frac{1}{2}\\cdot\\frac{5}{9}E_0\\approx0.142\\ \\mathrm{MeV}$$"
+   ],
+   "en": [
+    "Lorentz factor: $$\\gamma=\\frac{1}{\\sqrt{1-\\frac{5}{9}}}=\\frac{3}{2}$$",
+    "Total energy: $$E=\\gamma E_0=1.5\\cdot0.511\\approx0.767\\ \\mathrm{MeV}$$",
+    "Kinetic energy: $$E_k=E-E_0=0.5\\cdot0.511\\approx0.256\\ \\mathrm{MeV}$$",
+    "The classical formula gives $1.8$ times less: $$\\frac{m_0v^2}{2}=\\frac{1}{2}\\cdot\\frac{5}{9}E_0\\approx0.142\\ \\mathrm{MeV}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lorents ko'paytuvchisi: $\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$",
+    "ru": "Лоренц-фактор: $\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$",
+    "en": "Lorentz factor: $\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$"
+   },
+   {
+    "uz": "$E=\\gamma m_0c^2$, $E_k=(\\gamma-1)m_0c^2$",
+    "ru": "$E=\\gamma m_0c^2$, $E_k=(\\gamma-1)m_0c^2$",
+    "en": "$E=\\gamma m_0c^2$, $E_k=(\\gamma-1)m_0c^2$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "To'liq va kinetik energiya",
+   "ru": "Полная и кинетическая энергия",
+   "en": "Total and kinetic energy"
+  },
+  "answer": "E\\approx0.767\\ \\mathrm{MeV};\\ E_k\\approx0.256\\ \\mathrm{MeV};\\ 0.142\\ \\mathrm{MeV}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 136-mavzu, 8, 12, 16-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Zarraning kinetik energiyasi tinchlikdagi energiyasidan $1.5$ marta katta. Uning tezligini, relyativistik massasini va impulsini ($m_0c$ birligida) toping.",
+   "ru": "Кинетическая энергия частицы в $1.5$ раза больше её энергии покоя. Найдите её скорость, релятивистскую массу и импульс (в единицах $m_0c$).",
+   "en": "The kinetic energy of a particle is $1.5$ times its rest energy. Find its speed, relativistic mass and momentum (in units of $m_0c$)."
+  },
+  "figure": "figures/B1-L47-S14.png",
+  "solution": {
+   "uz": [
+    "To'liq energiya: $$E=E_0+E_k=2.5E_0\\ \\Rightarrow\\ \\gamma=2.5$$",
+    "Tezlik: $$\\frac{v}{c}=\\sqrt{1-\\frac{1}{6.25}}=\\frac{\\sqrt{21}}{5}\\approx0.917$$",
+    "Massa: $$m=\\gamma m_0=2.5m_0$$",
+    "Impuls: $$p=\\gamma m_0v=2.5\\cdot0.917m_0c\\approx2.29m_0c$$"
+   ],
+   "ru": [
+    "Полная энергия: $$E=E_0+E_k=2.5E_0\\ \\Rightarrow\\ \\gamma=2.5$$",
+    "Скорость: $$\\frac{v}{c}=\\sqrt{1-\\frac{1}{6.25}}=\\frac{\\sqrt{21}}{5}\\approx0.917$$",
+    "Масса: $$m=\\gamma m_0=2.5m_0$$",
+    "Импульс: $$p=\\gamma m_0v=2.5\\cdot0.917m_0c\\approx2.29m_0c$$"
+   ],
+   "en": [
+    "Total energy: $$E=E_0+E_k=2.5E_0\\ \\Rightarrow\\ \\gamma=2.5$$",
+    "Speed: $$\\frac{v}{c}=\\sqrt{1-\\frac{1}{6.25}}=\\frac{\\sqrt{21}}{5}\\approx0.917$$",
+    "Mass: $$m=\\gamma m_0=2.5m_0$$",
+    "Momentum: $$p=\\gamma m_0v=2.5\\cdot0.917m_0c\\approx2.29m_0c$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$E=\\gamma m_0c^2$, $E_k=(\\gamma-1)m_0c^2$",
+    "ru": "$E=\\gamma m_0c^2$, $E_k=(\\gamma-1)m_0c^2$",
+    "en": "$E=\\gamma m_0c^2$, $E_k=(\\gamma-1)m_0c^2$"
+   },
+   {
+    "uz": "Teskari formula: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$",
+    "ru": "Обратная формула: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$",
+    "en": "Inverse formula: $\\frac{v}{c}=\\sqrt{1-\\frac{1}{\\gamma^2}}$"
+   },
+   null,
+   {
+    "uz": "Relyativistik impuls: $p=\\gamma m_0v$",
+    "ru": "Релятивистский импульс: $p=\\gamma m_0v$",
+    "en": "Relativistic momentum: $p=\\gamma m_0v$"
+   }
+  ],
+  "basis": {
+   "uz": "Kinetik energiya, massa va impuls",
+   "ru": "Кинетическая энергия, масса и импульс",
+   "en": "Kinetic energy, mass and momentum"
+  },
+  "answer": "v\\approx0.917c;\\ m=2.5m_0;\\ p\\approx2.29m_0c",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 136-mavzu, 10, 14, 18, 19-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L47-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Zarraning impulsi $\\frac{8}{15}m_0c$ ga teng. Uning to'liq energiyasini, tezligini va kinetik energiyasini ($E_0$ birligida) toping. Xuddi shu impulsli foton energiyasi qancha bo'lardi?",
+   "ru": "Импульс частицы равен $\\frac{8}{15}m_0c$. Найдите её полную энергию, скорость и кинетическую энергию (в единицах $E_0$). Какой была бы энергия фотона с тем же импульсом?",
+   "en": "The momentum of a particle is $\\frac{8}{15}m_0c$. Find its total energy, speed and kinetic energy (in units of $E_0$). What would be the energy of a photon with the same momentum?"
+  },
+  "figure": "figures/B1-L47-S15.png",
+  "solution": {
+   "uz": [
+    "Energiya va impuls bog'lanishi: $$E=\\sqrt{(pc)^2+E_0^2}=E_0\\sqrt{\\frac{64}{225}+1}=\\frac{17}{15}E_0$$",
+    "Tezlik: $$v=\\frac{pc^2}{E}=\\frac{8/15}{17/15}c=\\frac{8}{17}c\\approx0.471c$$",
+    "Kinetik energiya: $$E_k=E-E_0=\\frac{2}{15}E_0\\approx0.133E_0$$",
+    "Foton ($m_0=0$): $$E=pc=\\frac{8}{15}E_0$$"
+   ],
+   "ru": [
+    "Связь энергии и импульса: $$E=\\sqrt{(pc)^2+E_0^2}=E_0\\sqrt{\\frac{64}{225}+1}=\\frac{17}{15}E_0$$",
+    "Скорость: $$v=\\frac{pc^2}{E}=\\frac{8/15}{17/15}c=\\frac{8}{17}c\\approx0.471c$$",
+    "Кинетическая энергия: $$E_k=E-E_0=\\frac{2}{15}E_0\\approx0.133E_0$$",
+    "Фотон ($m_0=0$): $$E=pc=\\frac{8}{15}E_0$$"
+   ],
+   "en": [
+    "Energy–momentum relation: $$E=\\sqrt{(pc)^2+E_0^2}=E_0\\sqrt{\\frac{64}{225}+1}=\\frac{17}{15}E_0$$",
+    "Speed: $$v=\\frac{pc^2}{E}=\\frac{8/15}{17/15}c=\\frac{8}{17}c\\approx0.471c$$",
+    "Kinetic energy: $$E_k=E-E_0=\\frac{2}{15}E_0\\approx0.133E_0$$",
+    "Photon ($m_0=0$): $$E=pc=\\frac{8}{15}E_0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$E^2=(pc)^2+E_0^2$, $v=\\frac{pc^2}{E}$",
+    "ru": "$E^2=(pc)^2+E_0^2$, $v=\\frac{pc^2}{E}$",
+    "en": "$E^2=(pc)^2+E_0^2$, $v=\\frac{pc^2}{E}$"
+   },
+   null,
+   {
+    "uz": "$E=\\gamma m_0c^2$, $E_k=(\\gamma-1)m_0c^2$",
+    "ru": "$E=\\gamma m_0c^2$, $E_k=(\\gamma-1)m_0c^2$",
+    "en": "$E=\\gamma m_0c^2$, $E_k=(\\gamma-1)m_0c^2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Energiya va impuls bog'lanishi",
+   "ru": "Связь энергии и импульса",
+   "en": "Energy–momentum relation"
+  },
+  "answer": "E=\\frac{17}{15}E_0;\\ v=\\frac{8}{17}c;\\ E_k=\\frac{2}{15}E_0;\\ \\frac{8}{15}E_0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 136-mavzu, 23–26-masalalar asosida; sharti o'zgartirilgan"
+ }
+]
