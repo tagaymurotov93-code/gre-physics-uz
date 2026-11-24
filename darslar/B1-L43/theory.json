@@ -1,0 +1,685 @@
+[
+ {
+  "t": "h1",
+  "uz": "Elektromagnit to'lqinlar, radioaloqa (Electromagnetic waves, radio communication)",
+  "ru": "Электромагнитные волны, радиосвязь",
+  "en": "Electromagnetic waves, radio communication"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz o'zgaruvchan elektr va magnit maydonlar bir-birini qanday hosil qilib, fazoda tarqalishini Maksvell nazariyasi asosida tushuntirasiz, elektromagnit to'lqinning ko'ndalangligini va $\\vec E$, $\\vec B$, $\\vec v$ vektorlarining o'zaro joylashuvini parma qoidasi bilan aniqlaysiz, qaysi zaryadlar to'lqin nurlashini va nurlanish quvvati chastotaga qanday bog'liqligini bilasiz, to'lqin uzunligi, chastota, davr va tezlik orasidagi bog'lanishlarni vakuum va muhit uchun qo'llaysiz, to'lqin energiyasi va intensivligini, nuqtaviy manba intensivligining masofaga bog'liqligini hisoblaysiz, elektromagnit to'lqinlar shkalasini tushuntirasiz, radioaloqa va radiolokatsiya prinsiplarini, priyomnikni sozlash va radiolokator masofasini hisoblashni o'rganasiz.",
+  "ru": "**Цель.** После урока вы будете объяснять на основе теории Максвелла, как переменные электрическое и магнитное поля порождают друг друга и распространяются в пространстве, определять поперечность электромагнитной волны и взаимное расположение векторов $\\vec E$, $\\vec B$, $\\vec v$ по правилу буравчика, знать, какие заряды излучают волны и как мощность излучения зависит от частоты, применять связи между длиной волны, частотой, периодом и скоростью для вакуума и среды, вычислять энергию и интенсивность волны и зависимость интенсивности точечного источника от расстояния, объяснять шкалу электромагнитных волн, изучите принципы радиосвязи и радиолокации, настройку приёмника и расчёт дальности радиолокатора.",
+  "en": "**Goal.** After this lesson you will explain, on the basis of Maxwell's theory, how alternating electric and magnetic fields generate each other and propagate through space, determine the transverse nature of an electromagnetic wave and the mutual orientation of the vectors $\\vec E$, $\\vec B$, $\\vec v$ by the corkscrew rule, know which charges radiate waves and how the radiated power depends on frequency, apply the relations between wavelength, frequency, period and speed in vacuum and in a medium, calculate the energy and intensity of a wave and the dependence of the intensity of a point source on distance, explain the electromagnetic spectrum, and learn the principles of radio communication and radar, the tuning of a receiver and the calculation of radar range."
+ },
+ {
+  "t": "p",
+  "uz": "L22 darsida mexanik to'lqinlarni o'rgandik — ular faqat muhitda tarqaladi. L40 da o'zgaruvchan magnit maydon uyurmali elektr maydon hosil qilishini, L41 da tebranish konturida elektromagnit tebranishlar paydo bo'lishini ko'rdik. Endi bu tebranishlar konturdan ajralib, bo'shliqda yorug'lik tezligida tarqalishini o'rganamiz. Radio, televidenie, mobil aloqa, Wi-Fi, GPS, radiolokatsiya, mikroto'lqinli pech, rentgen apparati va yorug'likning o'zi — hammasi elektromagnit to'lqinlar. GRE da $c=\\lambda\\nu$, $E=cB$, $\\vec E\\times\\vec B$ yo'nalishi, intensivlik va spektr — doimiy mavzular.",
+  "ru": "На уроке L22 мы изучили механические волны — они распространяются только в среде. В L40 мы увидели, что переменное магнитное поле порождает вихревое электрическое поле, а в L41 — что в колебательном контуре возникают электромагнитные колебания. Теперь мы изучим, как эти колебания отрываются от контура и распространяются в пустоте со скоростью света. Радио, телевидение, мобильная связь, Wi-Fi, GPS, радиолокация, микроволновая печь, рентгеновский аппарат и сам свет — всё это электромагнитные волны. В GRE $c=\\lambda\\nu$, $E=cB$, направление $\\vec E\\times\\vec B$, интенсивность и спектр — постоянные темы.",
+  "en": "In lesson L22 we studied mechanical waves — they propagate only in a medium. In L40 we saw that an alternating magnetic field produces an induced (vortex) electric field, and in L41 that electromagnetic oscillations arise in an LC circuit. Now we will study how these oscillations detach from the circuit and propagate through empty space at the speed of light. Radio, television, mobile communication, Wi-Fi, GPS, radar, a microwave oven, an X-ray machine and light itself are all electromagnetic waves. On the GRE, $c=\\lambda\\nu$, $E=cB$, the direction of $\\vec E\\times\\vec B$, intensity and the spectrum are standard topics."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Maksvell nazariyasi: elektromagnit maydon (Maxwell's theory: the electromagnetic field)",
+  "ru": "1. Теория Максвелла: электромагнитное поле",
+  "en": "1. Maxwell's theory: the electromagnetic field"
+ },
+ {
+  "t": "li",
+  "uz": "**Birinchi g'oya (Faradey).** Vaqt bo'yicha o'zgaruvchi magnit maydon fazoda uyurmali elektr maydon hosil qiladi (L40). Bu maydonning kuch chiziqlari yopiq va ular uchun o'tkazgich bo'lishi shart emas: o'tkazgich bo'lsa, unda induksion tok oqadi, bo'lmasa ham maydon mavjud.",
+  "ru": "**Первая идея (Фарадей).** Меняющееся во времени магнитное поле порождает в пространстве вихревое электрическое поле (L40). Его силовые линии замкнуты, и для его существования не нужен проводник: если проводник есть, в нём течёт индукционный ток, а если нет — поле всё равно существует.",
+  "en": "**First idea (Faraday).** A time-varying magnetic field produces an induced (vortex) electric field in space (L40). Its field lines are closed, and no conductor is needed for it: if there is a conductor, an induced current flows in it; if there is not, the field still exists."
+ },
+ {
+  "t": "li",
+  "uz": "**Ikkinchi g'oya (Maksvell, 1864).** Simmetriya bo'yicha, vaqt bo'yicha o'zgaruvchi elektr maydon ham fazoda uyurmali magnit maydon hosil qiladi. Masalan, zaryadlanayotgan kondensator qoplamalari orasida zaryad oqmaydi, lekin u yerdagi o'zgaruvchan elektr maydon tok kabi atrofida magnit maydon hosil qiladi. Maksvell buni siljish toki (displacement current) deb atadi.",
+  "ru": "**Вторая идея (Максвелл, 1864).** По симметрии, меняющееся во времени электрическое поле тоже порождает в пространстве вихревое магнитное поле. Например, между обкладками заряжающегося конденсатора заряды не текут, но переменное электрическое поле там, как и ток, создаёт вокруг себя магнитное поле. Максвелл назвал это током смещения (displacement current).",
+  "en": "**Second idea (Maxwell, 1864).** By symmetry, a time-varying electric field also produces a vortex magnetic field in space. For example, no charges flow between the plates of a capacitor that is being charged, but the alternating electric field there, like a current, creates a magnetic field around itself. Maxwell called this the displacement current."
+ },
+ {
+  "t": "li",
+  "uz": "**Elektromagnit maydon.** Bu ikki g'oyadan muhim xulosa kelib chiqadi: o'zgaruvchan elektr va magnit maydonlar bir-birini uzluksiz hosil qilib, bitta elektromagnit maydon (electromagnetic field) sifatida mavjud bo'ladi. Fazoning biror nuqtasida maydon o'zgarsa, u qo'shni nuqtalarda yangi maydon hosil qiladi — maydon manbadan uzilib, chekli tezlik bilan tarqaladi. Maksvell bu tezlikni hisobladi va u yorug'lik tezligiga teng chiqdi: yorug'lik — elektromagnit to'lqin.",
+  "ru": "**Электромагнитное поле.** Из этих двух идей следует важный вывод: переменные электрическое и магнитное поля непрерывно порождают друг друга и существуют как единое электромагнитное поле (electromagnetic field). Если поле меняется в какой-то точке пространства, оно создаёт новое поле в соседних точках — поле отрывается от источника и распространяется с конечной скоростью. Максвелл вычислил эту скорость, и она оказалась равной скорости света: свет — электромагнитная волна.",
+  "en": "**Electromagnetic field.** An important conclusion follows from these two ideas: alternating electric and magnetic fields continuously generate each other and exist as a single electromagnetic field. If the field changes at some point in space, it creates a new field at neighbouring points — the field detaches from its source and propagates with a finite speed. Maxwell calculated this speed and found it equal to the speed of light: light is an electromagnetic wave."
+ },
+ {
+  "t": "li",
+  "uz": "**Tajribaviy tasdiq.** Genrix Gerts 1887–1888 yillarda vibrator (uchqunli ochiq kontur) yordamida elektromagnit to'lqinlarni hosil qildi va qabul qildi, ularning qaytishi, sinishi, interferensiyasi va qutblanishini kuzatdi hamda tezligi yorug'lik tezligiga teng ekanini ko'rsatdi. Chastota birligi gers ($\\mathrm{Hz}$) uning sharafiga nomlangan.",
+  "ru": "**Экспериментальное подтверждение.** Генрих Герц в 1887–1888 годах с помощью вибратора (искрового открытого контура) получил и принял электромагнитные волны, наблюдал их отражение, преломление, интерференцию и поляризацию и показал, что их скорость равна скорости света. Единица частоты герц ($\\mathrm{Hz}$) названа в его честь.",
+  "en": "**Experimental confirmation.** In 1887–1888 Heinrich Hertz produced and detected electromagnetic waves with a vibrator (a spark open circuit), observed their reflection, refraction, interference and polarization, and showed that their speed equals the speed of light. The unit of frequency, the hertz ($\\mathrm{Hz}$), is named after him."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Elektromagnit to'lqin va uning tuzilishi (The electromagnetic wave and its structure)",
+  "ru": "2. Электромагнитная волна и её структура",
+  "en": "2. The electromagnetic wave and its structure"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Fazoda chekli tezlik bilan tarqaladigan o'zgaruvchan elektromagnit maydon elektromagnit to'lqin (electromagnetic wave) deyiladi. Mexanik to'lqinlardan farqli ravishda u tarqalishi uchun muhit talab qilmaydi — vakuumda ham tarqaladi (Quyosh nuri Yerga bo'shliq orqali keladi).",
+  "ru": "**Определение.** Переменное электромагнитное поле, распространяющееся в пространстве с конечной скоростью, называется электромагнитной волной (electromagnetic wave). В отличие от механических волн, ей не нужна среда — она распространяется и в вакууме (свет Солнца приходит на Землю через пустоту).",
+  "en": "**Definition.** An alternating electromagnetic field that propagates through space with a finite speed is called an electromagnetic wave. Unlike mechanical waves, it needs no medium — it also propagates in vacuum (sunlight reaches the Earth through empty space)."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'ndalang to'lqin.** Elektromagnit to'lqinda $\\vec E$ va $\\vec B$ vektorlari bir-biriga tik va ikkalasi ham tarqalish yo'nalishiga tik: $\\vec E\\perp\\vec B$, $\\vec E\\perp\\vec v$, $\\vec B\\perp\\vec v$ ([[F01]]). Demak, elektromagnit to'lqin — ko'ndalang (transverse) to'lqin; bo'ylama elektromagnit to'lqin bo'lmaydi. Ko'ndalanglik qutblanish hodisasining sababidir (L46).",
+  "ru": "**Поперечная волна.** В электромагнитной волне векторы $\\vec E$ и $\\vec B$ перпендикулярны друг другу и оба перпендикулярны направлению распространения: $\\vec E\\perp\\vec B$, $\\vec E\\perp\\vec v$, $\\vec B\\perp\\vec v$ ([[F01]]). Значит, электромагнитная волна — поперечная (transverse) волна; продольных электромагнитных волн не бывает. Поперечность — причина явления поляризации (L46).",
+  "en": "**A transverse wave.** In an electromagnetic wave the vectors $\\vec E$ and $\\vec B$ are perpendicular to each other and both are perpendicular to the direction of propagation: $\\vec E\\perp\\vec B$, $\\vec E\\perp\\vec v$, $\\vec B\\perp\\vec v$ ([[F01]]). Hence an electromagnetic wave is a transverse wave; there are no longitudinal electromagnetic waves. Transversality is the reason for polarization (in L46)."
+ },
+ {
+  "t": "li",
+  "uz": "**Bir fazada.** Vakuumdagi yassi to'lqinda $\\vec E$ va $\\vec B$ bir xil chastota bilan va bir xil fazada tebranadi: ular bir vaqtda nolga va bir vaqtda eng katta qiymatga erishadi. Shu sababli elektr maydon tebranish chastotasi (davri) magnit maydon tebranish chastotasiga (davriga) teng. $x$ o'qi bo'ylab tarqalayotgan to'lqin uchun:",
+  "ru": "**В одной фазе.** В плоской волне в вакууме $\\vec E$ и $\\vec B$ колеблются с одинаковой частотой и в одной фазе: они одновременно обращаются в ноль и одновременно достигают наибольших значений. Поэтому частота (период) колебаний электрического поля равна частоте (периоду) колебаний магнитного поля. Для волны, бегущей вдоль оси $x$:",
+  "en": "**In phase.** In a plane wave in vacuum $\\vec E$ and $\\vec B$ oscillate with the same frequency and in phase: they reach zero at the same time and their largest values at the same time. Therefore the frequency (period) of the electric field oscillations equals the frequency (period) of the magnetic field oscillations. For a wave travelling along the $x$ axis:"
+ },
+ {
+  "t": "m",
+  "m": "E=E_m\\cos\\left(\\omega t-\\frac{2\\pi x}{\\lambda}\\right),\\qquad B=B_m\\cos\\left(\\omega t-\\frac{2\\pi x}{\\lambda}\\right),\\qquad E_m=cB_m"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B1-L43-F01.png",
+   "ru": "figures/B1-L43-F01-ru.png",
+   "en": "figures/B1-L43-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Tarqalish yo'nalishi — parma qoidasi.** Parma dastasi $\\vec E$ dan $\\vec B$ ga tomon eng qisqa yo'l bilan aylantirilsa, parmaning ilgarilanma harakati to'lqinning tarqalish yo'nalishini ko'rsatadi ([[F02]]). Matematik ko'rinishda: $\\vec v$ vektor ko'paytma $\\vec E\\times\\vec B$ bilan bir yo'nalishda (B0-L01). Masalan, $\\vec E$ — $x$ o'qi, $\\vec B$ — $y$ o'qi bo'ylab yo'nalgan bo'lsa, to'lqin $z$ o'qining musbat yo'nalishida tarqaladi.",
+  "ru": "**Направление распространения — правило буравчика.** Если рукоятку буравчика поворачивать от $\\vec E$ к $\\vec B$ по кратчайшему пути, поступательное движение буравчика укажет направление распространения волны ([[F02]]). В математической форме: $\\vec v$ сонаправлен с векторным произведением $\\vec E\\times\\vec B$ (B0-L01). Например, если $\\vec E$ направлен вдоль оси $x$, а $\\vec B$ — вдоль оси $y$, волна распространяется в положительном направлении оси $z$.",
+  "en": "**Direction of propagation — the corkscrew rule.** If the handle of a corkscrew is turned from $\\vec E$ towards $\\vec B$ by the shortest way, the forward motion of the corkscrew shows the direction of propagation of the wave ([[F02]]). Mathematically, $\\vec v$ points in the same direction as the cross product $\\vec E\\times\\vec B$ (B0-L01). For example, if $\\vec E$ points along the $x$ axis and $\\vec B$ along the $y$ axis, the wave propagates in the positive direction of the $z$ axis."
+ },
+ {
+  "t": "m",
+  "m": "\\vec v\\uparrow\\uparrow\\vec E\\times\\vec B,\\qquad \\vec i\\times\\vec j=\\vec k,\\quad \\vec j\\times\\vec k=\\vec i,\\quad \\vec k\\times\\vec i=\\vec j"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B1-L43-F02.png",
+   "ru": "figures/B1-L43-F02-ru.png",
+   "en": "figures/B1-L43-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Chizmada.** Agar $\\vec E$ chizma tekisligida yuqoriga, $\\vec B$ esa chizmadan bizga tomon yo'nalgan bo'lsa, $\\vec j\\times\\vec k=\\vec i$ — to'lqin o'ngga tarqaladi. $\\vec E$ yoki $\\vec B$ dan birining yo'nalishi teskariga o'zgarsa, tarqalish yo'nalishi ham teskariga o'zgaradi; ikkalasi birga o'zgarsa — o'zgarmaydi.",
+  "ru": "**На рисунке.** Если $\\vec E$ направлен в плоскости рисунка вверх, а $\\vec B$ — из рисунка к нам, то $\\vec j\\times\\vec k=\\vec i$ — волна распространяется вправо. Если изменить на противоположное направление одного из векторов $\\vec E$ или $\\vec B$, направление распространения тоже изменится на противоположное; если обоих вместе — не изменится.",
+  "en": "**On a drawing.** If $\\vec E$ points up in the plane of the drawing and $\\vec B$ points out of the drawing towards us, then $\\vec j\\times\\vec k=\\vec i$ — the wave travels to the right. If the direction of one of the vectors $\\vec E$ or $\\vec B$ is reversed, the direction of propagation is also reversed; if both are reversed together, it does not change."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Elektromagnit to'lqinlarning nurlanishi (Radiation of electromagnetic waves)",
+  "ru": "3. Излучение электромагнитных волн",
+  "en": "3. Radiation of electromagnetic waves"
+ },
+ {
+  "t": "li",
+  "uz": "**Qaysi zaryad nurlaydi?** Tinch turgan zaryad faqat elektrostatik maydon hosil qiladi; tekis va to'g'ri chiziqli harakatlanayotgan zaryad (o'zgarmas tok) o'zgarmas magnit maydon ham hosil qiladi, lekin ikkalasi ham to'lqin nurlamaydi. **Elektromagnit to'lqinni faqat tezlanish bilan harakatlanayotgan zaryad nurlaydi**: tezlanuvchan to'g'ri chiziqli harakat, garmonik tebranish, aylana bo'ylab tekis harakat (markazga intilma tezlanish bor) — hammasida nurlanish bor.",
+  "ru": "**Какой заряд излучает?** Покоящийся заряд создаёт только электростатическое поле; заряд, движущийся равномерно и прямолинейно (постоянный ток), создаёт ещё и постоянное магнитное поле, но ни тот, ни другой не излучает волн. **Электромагнитную волну излучает только заряд, движущийся с ускорением**: ускоренное прямолинейное движение, гармонические колебания, равномерное движение по окружности (есть центростремительное ускорение) — во всех случаях есть излучение.",
+  "en": "**Which charge radiates?** A charge at rest produces only an electrostatic field; a charge moving uniformly in a straight line (a steady current) also produces a constant magnetic field, but neither radiates waves. **Only a charge moving with acceleration radiates an electromagnetic wave**: accelerated straight-line motion, harmonic oscillation, uniform motion in a circle (there is centripetal acceleration) — in all these cases there is radiation."
+ },
+ {
+  "t": "li",
+  "uz": "**Yopiq konturdan ochiq konturga.** L41 dagi yopiq tebranish konturida elektr maydon deyarli butunlay kondensator ichida, magnit maydon esa g'altak ichida jamlangan, shuning uchun u juda kam nurlaydi. Kondensator qoplamalarini bir-biridan uzoqlashtirib, g'altakni to'g'ri simga aylantirsak, ochiq tebranish konturi — vibrator (Gerts dipoli) hosil bo'ladi ([[F03]]). Unda maydon butun atrof fazoga tarqaladi va kontur samarali nurlaydi. Antenna — ochiq kontur.",
+  "ru": "**От закрытого контура к открытому.** В закрытом колебательном контуре из L41 электрическое поле почти целиком сосредоточено внутри конденсатора, а магнитное — внутри катушки, поэтому он излучает очень слабо. Если раздвинуть обкладки конденсатора и превратить катушку в прямой провод, получится открытый колебательный контур — вибратор (диполь Герца) ([[F03]]). В нём поле распространяется во всё окружающее пространство, и контур эффективно излучает. Антенна — открытый контур.",
+  "en": "**From a closed circuit to an open one.** In the closed LC circuit of L41 the electric field is concentrated almost entirely inside the capacitor and the magnetic field inside the coil, so it radiates very weakly. If we move the capacitor plates apart and turn the coil into a straight wire, we get an open oscillating circuit — a vibrator (a Hertzian dipole) ([[F03]]). In it the field spreads into all the surrounding space and the circuit radiates efficiently. An antenna is an open circuit."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B1-L43-F03.png",
+   "ru": "figures/B1-L43-F03-ru.png",
+   "en": "figures/B1-L43-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Yo'nalganlik.** Vibrator (dipol) barcha yo'nalishlarda bir xil nurlamaydi: nurlanish dipol o'qiga tik yo'nalishda eng kuchli, o'q bo'ylab esa nolga teng. Shuning uchun vertikal antenna gorizontal yo'nalishlarda yaxshi nurlaydi. Tezlanish bilan harakatlanayotgan zaryadning nurlanishiga misollar: sinxrotronda aylana bo'ylab harakatlanayotgan elektronlarning sinxrotron nurlanishi, rentgen trubkasida tormozlanayotgan elektronlarning tormozlanish nurlanishi.",
+  "ru": "**Направленность.** Вибратор (диполь) излучает неодинаково во всех направлениях: излучение сильнее всего в направлении, перпендикулярном оси диполя, а вдоль оси равно нулю. Поэтому вертикальная антенна хорошо излучает в горизонтальных направлениях. Примеры излучения заряда, движущегося с ускорением: синхротронное излучение электронов, движущихся по окружности в синхротроне, тормозное излучение тормозящихся электронов в рентгеновской трубке.",
+  "en": "**Directionality.** A vibrator (dipole) does not radiate equally in all directions: the radiation is strongest in the direction perpendicular to the dipole axis and zero along the axis. Therefore a vertical antenna radiates well in horizontal directions. Examples of radiation by an accelerated charge: the synchrotron radiation of electrons moving in a circle in a synchrotron, and the bremsstrahlung of electrons being decelerated in an X-ray tube."
+ },
+ {
+  "t": "li",
+  "uz": "**Nurlanish quvvati chastotaga kuchli bog'liq.** Tebranayotgan zaryadning tezlanishi $a=\\omega^2x$ ga proporsional, nurlanayotgan quvvat esa tezlanish kvadratiga proporsional. Shuning uchun tebranishlar amplitudasi o'zgarmasa, vibratorning nurlanish quvvati chastotaning to'rtinchi darajasiga proporsional:",
+  "ru": "**Мощность излучения сильно зависит от частоты.** Ускорение колеблющегося заряда пропорционально $a=\\omega^2x$, а излучаемая мощность — квадрату ускорения. Поэтому при неизменной амплитуде колебаний мощность излучения вибратора пропорциональна четвёртой степени частоты:",
+  "en": "**The radiated power depends strongly on frequency.** The acceleration of an oscillating charge is proportional to $a=\\omega^2x$, and the radiated power to the square of the acceleration. Therefore, at constant oscillation amplitude, the radiated power of a vibrator is proportional to the fourth power of the frequency:"
+ },
+ {
+  "t": "m",
+  "m": "P\\sim a^2\\sim\\omega^4\\sim\\nu^4,\\qquad \\frac{P_2}{P_1}=\\left(\\frac{\\nu_2}{\\nu_1}\\right)^4"
+ },
+ {
+  "t": "li",
+  "uz": "Masalan, chastota $3$ marta oshirilsa, nurlanish quvvati $3^4=81$ marta ortadi. Shu sababli radioaloqada past chastotali tovush tebranishlari to'g'ridan-to'g'ri nurlantirilmaydi — ular yuqori chastotali to'lqinga «yuklanadi» (8-bo'lim).",
+  "ru": "Например, при увеличении частоты в $3$ раза мощность излучения возрастает в $3^4=81$ раз. Поэтому в радиосвязи низкочастотные звуковые колебания не излучают напрямую — их «нагружают» на высокочастотную волну (раздел 8).",
+  "en": "For example, if the frequency is increased $3$ times, the radiated power increases $3^4=81$ times. This is why in radio communication low-frequency sound oscillations are not radiated directly — they are «loaded» onto a high-frequency wave (section 8)."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Elektromagnit to'lqinlarning tezligi (Speed of electromagnetic waves)",
+  "ru": "4. Скорость электромагнитных волн",
+  "en": "4. Speed of electromagnetic waves"
+ },
+ {
+  "t": "li",
+  "uz": "**Vakuumda.** Maksvell nazariyasidan vakuumdagi tezlik elektr va magnit doimiylar orqali ifodalanadi. Bu fizikaning eng muhim doimiylaridan biri — yorug'likning vakuumdagi tezligi $c$:",
+  "ru": "**В вакууме.** Из теории Максвелла скорость в вакууме выражается через электрическую и магнитную постоянные. Это одна из важнейших постоянных физики — скорость света в вакууме $c$:",
+  "en": "**In vacuum.** From Maxwell's theory the speed in vacuum is expressed through the electric and magnetic constants. It is one of the most important constants of physics — the speed of light in vacuum $c$:"
+ },
+ {
+  "t": "m",
+  "m": "c=\\frac{1}{\\sqrt{\\varepsilon_0\\mu_0}}=\\frac{1}{\\sqrt{8.85\\cdot10^{-12}\\cdot4\\pi\\cdot10^{-7}}}\\approx3\\cdot10^8\\ \\mathrm{m/s}"
+ },
+ {
+  "t": "li",
+  "uz": "Barcha chastotadagi elektromagnit to'lqinlar — radioto'lqinlar ham, yorug'lik ham, rentgen nurlari ham — vakuumda bir xil $c$ tezlik bilan tarqaladi. Masalalarda $c=3\\cdot10^8\\ \\mathrm{m/s}$ olinadi (aniq qiymati $299\\,792\\,458\\ \\mathrm{m/s}$).",
+  "ru": "Электромагнитные волны всех частот — и радиоволны, и свет, и рентгеновские лучи — распространяются в вакууме с одной и той же скоростью $c$. В задачах берут $c=3\\cdot10^8\\ \\mathrm{m/s}$ (точное значение $299\\,792\\,458\\ \\mathrm{m/s}$).",
+  "en": "Electromagnetic waves of all frequencies — radio waves, light and X-rays — travel in vacuum with the same speed $c$. In problems one takes $c=3\\cdot10^8\\ \\mathrm{m/s}$ (the exact value is $299\\,792\\,458\\ \\mathrm{m/s}$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Muhitda.** Dielektrik singdiruvchanligi $\\varepsilon$, magnit kiruvchanligi $\\mu$ bo'lgan muhitda elektromagnit to'lqin sekinroq tarqaladi. Vakuumdagi va muhitdagi tezliklar nisbati muhitning (absolyut) sindirish ko'rsatkichi $n$ deyiladi; shaffof dielektriklarda $\\mu\\approx1$ bo'lgani uchun $n=\\sqrt{\\varepsilon}$:",
+  "ru": "**В среде.** В среде с диэлектрической проницаемостью $\\varepsilon$ и магнитной проницаемостью $\\mu$ электромагнитная волна распространяется медленнее. Отношение скоростей в вакууме и в среде называется (абсолютным) показателем преломления среды $n$; у прозрачных диэлектриков $\\mu\\approx1$, поэтому $n=\\sqrt{\\varepsilon}$:",
+  "en": "**In a medium.** In a medium with relative permittivity $\\varepsilon$ and relative permeability $\\mu$ an electromagnetic wave travels more slowly. The ratio of the speeds in vacuum and in the medium is called the (absolute) refractive index $n$ of the medium; for transparent dielectrics $\\mu\\approx1$, so $n=\\sqrt{\\varepsilon}$:"
+ },
+ {
+  "t": "m",
+  "m": "v=\\frac{c}{\\sqrt{\\varepsilon\\mu}}=\\frac{c}{n},\\qquad n=\\frac{c}{v}=\\sqrt{\\varepsilon\\mu}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Suv uchun yorug'lik chastotalarida $n\\approx1.33$, demak suvda yorug'lik tezligi $v=\\frac{3\\cdot10^8}{1.33}\\approx2.26\\cdot10^8\\ \\mathrm{m/s}$. (Statik maydonda suvning $\\varepsilon\\approx81$, lekin yorug'lik chastotalarida molekulalar burilib ulgurmaydi va $\\varepsilon$ ancha kichik — $n=\\sqrt{\\varepsilon}$ formulasi to'lqin chastotasidagi $\\varepsilon$ uchun to'g'ri.)",
+  "ru": "**Пример.** Для воды на частотах света $n\\approx1.33$, значит, скорость света в воде $v=\\frac{3\\cdot10^8}{1.33}\\approx2.26\\cdot10^8\\ \\mathrm{m/s}$. (В статическом поле у воды $\\varepsilon\\approx81$, но на частотах света молекулы не успевают поворачиваться, и $\\varepsilon$ гораздо меньше — формула $n=\\sqrt{\\varepsilon}$ верна для $\\varepsilon$ на частоте волны.)",
+  "en": "**Example.** For water at optical frequencies $n\\approx1.33$, so the speed of light in water is $v=\\frac{3\\cdot10^8}{1.33}\\approx2.26\\cdot10^8\\ \\mathrm{m/s}$. (In a static field water has $\\varepsilon\\approx81$, but at optical frequencies the molecules cannot turn fast enough and $\\varepsilon$ is much smaller — the formula $n=\\sqrt{\\varepsilon}$ holds for $\\varepsilon$ at the frequency of the wave.)"
+ },
+ {
+  "t": "h2",
+  "uz": "5. To'lqin uzunligi, chastota va davr (Wavelength, frequency and period)",
+  "ru": "5. Длина волны, частота и период",
+  "en": "5. Wavelength, frequency and period"
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy bog'lanish.** To'lqin uzunligi $\\lambda$ — bir davr davomida to'lqin bosib o'tadigan masofa, ya'ni bir xil fazada tebranayotgan eng yaqin ikki nuqta orasidagi masofa (L22). Vakuumda:",
+  "ru": "**Основная связь.** Длина волны $\\lambda$ — расстояние, которое волна проходит за один период, то есть расстояние между двумя ближайшими точками, колеблющимися в одной фазе (L22). В вакууме:",
+  "en": "**The basic relation.** The wavelength $\\lambda$ is the distance the wave travels in one period, that is, the distance between the two nearest points oscillating in the same phase (L22). In vacuum:"
+ },
+ {
+  "t": "m",
+  "m": "\\lambda=cT=\\frac{c}{\\nu},\\qquad c=\\lambda\\nu,\\qquad \\nu=\\frac{1}{T}=\\frac{\\omega}{2\\pi}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misollar.** Chastotasi $1\\ \\mathrm{MHz}$ bo'lgan radioto'lqin uchun $\\lambda=\\frac{3\\cdot10^8}{10^6}=300\\ \\mathrm{m}$; sanoat chastotasi $50\\ \\mathrm{Hz}$ uchun $\\lambda=6000\\ \\mathrm{km}$ — shuning uchun elektr tarmog'i amalda nurlamaydi. Yashil yorug'lik uchun $\\lambda\\approx550\\ \\mathrm{nm}$, $\\nu\\approx5.5\\cdot10^{14}\\ \\mathrm{Hz}$. Prefikslarni diqqat bilan o'tkazing: $1\\ \\mathrm{nm}=10^{-9}\\ \\mathrm{m}$, $1\\ \\mathrm{THz}=10^{12}\\ \\mathrm{Hz}$.",
+  "ru": "**Примеры.** Для радиоволны частотой $1\\ \\mathrm{MHz}$ $\\lambda=\\frac{3\\cdot10^8}{10^6}=300\\ \\mathrm{m}$; для промышленной частоты $50\\ \\mathrm{Hz}$ $\\lambda=6000\\ \\mathrm{km}$ — поэтому электросеть практически не излучает. Для зелёного света $\\lambda\\approx550\\ \\mathrm{nm}$, $\\nu\\approx5.5\\cdot10^{14}\\ \\mathrm{Hz}$. Внимательно переводите приставки: $1\\ \\mathrm{nm}=10^{-9}\\ \\mathrm{m}$, $1\\ \\mathrm{THz}=10^{12}\\ \\mathrm{Hz}$.",
+  "en": "**Examples.** For a radio wave of frequency $1\\ \\mathrm{MHz}$, $\\lambda=\\frac{3\\cdot10^8}{10^6}=300\\ \\mathrm{m}$; for the industrial frequency $50\\ \\mathrm{Hz}$, $\\lambda=6000\\ \\mathrm{km}$ — which is why a power network practically does not radiate. For green light $\\lambda\\approx550\\ \\mathrm{nm}$, $\\nu\\approx5.5\\cdot10^{14}\\ \\mathrm{Hz}$. Convert prefixes carefully: $1\\ \\mathrm{nm}=10^{-9}\\ \\mathrm{m}$, $1\\ \\mathrm{THz}=10^{12}\\ \\mathrm{Hz}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Maksimumlar orasidagi masofa va to'lqinlar soni.** Qo'shni maksimumlar orasidagi masofa $\\lambda$, maksimum va eng yaqin minimum orasidagi masofa $\\frac{\\lambda}{2}$. 1- va $k$-maksimumlar orasida $(k-1)$ ta to'lqin uzunligi joylashadi. $L$ uzunlikdagi kesmaga joylashadigan to'lqinlar soni $N=\\frac{L}{\\lambda}=\\frac{L\\nu}{c}$.",
+  "ru": "**Расстояние между максимумами и число волн.** Расстояние между соседними максимумами равно $\\lambda$, между максимумом и ближайшим минимумом — $\\frac{\\lambda}{2}$. Между 1-м и $k$-м максимумами укладывается $(k-1)$ длин волн. Число волн на отрезке длиной $L$ равно $N=\\frac{L}{\\lambda}=\\frac{L\\nu}{c}$.",
+  "en": "**Distance between maxima and number of waves.** The distance between neighbouring maxima is $\\lambda$, between a maximum and the nearest minimum $\\frac{\\lambda}{2}$. Between the 1st and the $k$-th maxima there are $(k-1)$ wavelengths. The number of waves on a segment of length $L$ is $N=\\frac{L}{\\lambda}=\\frac{L\\nu}{c}$."
+ },
+ {
+  "t": "m",
+  "m": "d=(k-1)\\lambda,\\qquad N=\\frac{L}{\\lambda}=\\frac{L\\nu}{c}"
+ },
+ {
+  "t": "li",
+  "uz": "**Muhitga o'tganda.** To'lqin bir muhitdan ikkinchisiga o'tganda uning chastotasi (manba belgilaydi) o'zgarmaydi, tezligi va to'lqin uzunligi esa $n$ marta kamayadi. Shu sababli bir davrga teng vaqtda to'lqinning ko'chish masofasi (ya'ni $\\lambda$) zich muhitda qisqaroq:",
+  "ru": "**При переходе в среду.** При переходе волны из одной среды в другую её частота (её задаёт источник) не меняется, а скорость и длина волны уменьшаются в $n$ раз. Поэтому расстояние, на которое волна смещается за время одного периода (то есть $\\lambda$), в плотной среде короче:",
+  "en": "**On entering a medium.** When a wave passes from one medium into another, its frequency (set by the source) does not change, while its speed and wavelength decrease $n$ times. Therefore the distance the wave travels in one period (that is, $\\lambda$) is shorter in a denser medium:"
+ },
+ {
+  "t": "m",
+  "m": "\\nu=\\mathrm{const},\\qquad v=\\frac{c}{n},\\qquad \\lambda=\\frac{v}{\\nu}=\\frac{\\lambda_0}{n}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Chastotasi $5\\cdot10^{14}\\ \\mathrm{Hz}$ bo'lgan yorug'likning vakuumdagi to'lqin uzunligi $\\lambda_0=600\\ \\mathrm{nm}$ (to'q sariq). Olmosda ($n=2.4$) uning tezligi $v=1.25\\cdot10^8\\ \\mathrm{m/s}$, to'lqin uzunligi $\\lambda=250\\ \\mathrm{nm}$, lekin rangi o'zgarmaydi: ko'z rangni chastota bo'yicha sezadi, chastota esa muhitda saqlanadi.",
+  "ru": "**Пример.** Длина волны в вакууме света частотой $5\\cdot10^{14}\\ \\mathrm{Hz}$ $\\lambda_0=600\\ \\mathrm{nm}$ (оранжевый). В алмазе ($n=2.4$) его скорость $v=1.25\\cdot10^8\\ \\mathrm{m/s}$, длина волны $\\lambda=250\\ \\mathrm{nm}$, но цвет не меняется: глаз воспринимает цвет по частоте, а частота в среде сохраняется.",
+  "en": "**Example.** Light of frequency $5\\cdot10^{14}\\ \\mathrm{Hz}$ has the vacuum wavelength $\\lambda_0=600\\ \\mathrm{nm}$ (orange). In diamond ($n=2.4$) its speed is $v=1.25\\cdot10^8\\ \\mathrm{m/s}$ and its wavelength $\\lambda=250\\ \\mathrm{nm}$, but its colour does not change: the eye perceives colour by frequency, and the frequency is preserved in the medium."
+ },
+ {
+  "t": "li",
+  "uz": "**Tebranish konturi bilan bog'lanish.** Antenna yoki priyomnik konturining xususiy chastotasi Tomson formulasidan (L41) topiladi, shuning uchun kontur nurlaydigan yoki qabul qiladigan to'lqin uzunligi $L$ va $C$ orqali ifodalanadi. $\\lambda\\sim\\sqrt{LC}$: sig'im yoki induktivlik $4$ marta ortsa, to'lqin uzunligi $2$ marta ortadi:",
+  "ru": "**Связь с колебательным контуром.** Собственная частота контура антенны или приёмника находится по формуле Томсона (L41), поэтому длина волны, которую контур излучает или принимает, выражается через $L$ и $C$. $\\lambda\\sim\\sqrt{LC}$: при увеличении ёмкости или индуктивности в $4$ раза длина волны увеличивается в $2$ раза:",
+  "en": "**Link with the LC circuit.** The natural frequency of the circuit of an antenna or a receiver is found from Thomson's formula (L41), so the wavelength the circuit radiates or receives is expressed through $L$ and $C$. $\\lambda\\sim\\sqrt{LC}$: if the capacitance or the inductance increases $4$ times, the wavelength increases $2$ times:"
+ },
+ {
+  "t": "m",
+  "m": "\\lambda=cT=2\\pi c\\sqrt{LC}"
+ },
+ {
+  "t": "h2",
+  "uz": "6. To'lqin energiyasi va intensivligi (Energy and intensity of the wave)",
+  "ru": "6. Энергия и интенсивность волны",
+  "en": "6. Energy and intensity of the wave"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya zichligi.** Elektromagnit to'lqin energiya tashiydi. Hajm birligidagi energiya elektr va magnit maydon energiyalari yig'indisi (L32, L40). $E=cB$ (vakuumda) bo'lgani uchun to'lqinda bu ikki qism teng, ya'ni energiya elektr va magnit maydon orasida teng taqsimlangan:",
+  "ru": "**Плотность энергии.** Электромагнитная волна переносит энергию. Энергия в единице объёма — сумма энергий электрического и магнитного полей (L32, L40). Так как $E=cB$ (в вакууме), в волне эти две части равны, то есть энергия поровну распределена между электрическим и магнитным полями:",
+  "en": "**Energy density.** An electromagnetic wave carries energy. The energy per unit volume is the sum of the electric and magnetic field energies (L32, L40). Since $E=cB$ (in vacuum), these two parts are equal in the wave, that is, the energy is shared equally between the electric and magnetic fields:"
+ },
+ {
+  "t": "m",
+  "m": "w_E=\\frac{\\varepsilon_0E^2}{2},\\qquad w_B=\\frac{B^2}{2\\mu_0},\\qquad w_E=w_B,\\qquad w=\\varepsilon_0E^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Intensivlik.** To'lqin tarqalish yo'nalishiga tik $\\Delta S$ yuzadan $\\Delta t$ vaqtda o'tgan energiya $W$ ning $\\Delta S\\Delta t$ ko'paytmaga nisbati to'lqin intensivligi (intensity) deyiladi; birligi $\\mathrm{W/m^2}$. Energiya $c$ tezlik bilan ko'chgani uchun $I=wc$. Garmonik to'lqinda davr bo'yicha o'rtacha intensivlik amplituda kvadratiga proporsional:",
+  "ru": "**Интенсивность.** Отношение энергии $W$, прошедшей за время $\\Delta t$ через площадку $\\Delta S$, перпендикулярную направлению распространения, к произведению $\\Delta S\\Delta t$ называется интенсивностью волны (intensity); единица — $\\mathrm{W/m^2}$. Так как энергия переносится со скоростью $c$, $I=wc$. В гармонической волне средняя за период интенсивность пропорциональна квадрату амплитуды:",
+  "en": "**Intensity.** The ratio of the energy $W$ that passes in time $\\Delta t$ through an area $\\Delta S$ perpendicular to the direction of propagation to the product $\\Delta S\\Delta t$ is called the intensity of the wave; its unit is $\\mathrm{W/m^2}$. Since the energy is carried with speed $c$, $I=wc$. In a harmonic wave the average intensity over a period is proportional to the square of the amplitude:"
+ },
+ {
+  "t": "m",
+  "m": "I=\\frac{W}{\\Delta S\\Delta t}=wc,\\qquad I=\\frac{c\\varepsilon_0E_m^2}{2}\\sim E_m^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol: amplitudalar intensivlik orqali.** Intensivligi $1\\ \\mathrm{kW/m^2}$ bo'lgan yorug'likda $E_m=\\sqrt{\\frac{2I}{c\\varepsilon_0}}=\\sqrt{\\frac{2000}{3\\cdot10^8\\cdot8.85\\cdot10^{-12}}}\\approx870\\ \\mathrm{V/m}$, $B_m=\\frac{E_m}{c}\\approx2.9\\ \\mu\\mathrm{T}$ — Yer magnit maydonidan ($\\sim50\\ \\mu\\mathrm{T}$) ancha kichik. Intensivlik $4$ marta ortsa, amplitudalar $2$ marta ortadi.",
+  "ru": "**Пример: амплитуды через интенсивность.** В свете интенсивностью $1\\ \\mathrm{kW/m^2}$ $E_m=\\sqrt{\\frac{2I}{c\\varepsilon_0}}=\\sqrt{\\frac{2000}{3\\cdot10^8\\cdot8.85\\cdot10^{-12}}}\\approx870\\ \\mathrm{V/m}$, $B_m=\\frac{E_m}{c}\\approx2.9\\ \\mu\\mathrm{T}$ — гораздо меньше магнитного поля Земли ($\\sim50\\ \\mu\\mathrm{T}$). Если интенсивность увеличится в $4$ раза, амплитуды увеличатся в $2$ раза.",
+  "en": "**Example: amplitudes from intensity.** In light of intensity $1\\ \\mathrm{kW/m^2}$, $E_m=\\sqrt{\\frac{2I}{c\\varepsilon_0}}=\\sqrt{\\frac{2000}{3\\cdot10^8\\cdot8.85\\cdot10^{-12}}}\\approx870\\ \\mathrm{V/m}$, $B_m=\\frac{E_m}{c}\\approx2.9\\ \\mu\\mathrm{T}$ — much smaller than the Earth's magnetic field ($\\sim50\\ \\mu\\mathrm{T}$). If the intensity increases $4$ times, the amplitudes increase $2$ times."
+ },
+ {
+  "t": "li",
+  "uz": "**Nuqtaviy manba.** Barcha yo'nalishlarda bir xil nurlaydigan $P$ quvvatli manbadan $r$ masofada energiya radiusi $r$ bo'lgan sfera sirti $4\\pi r^2$ bo'ylab taqsimlanadi ([[F04]]). Demak, intensivlik masofa kvadratiga teskari proporsional: masofa $2$ marta ortsa, intensivlik $4$ marta kamayadi.",
+  "ru": "**Точечный источник.** На расстоянии $r$ от источника мощностью $P$, излучающего одинаково во всех направлениях, энергия распределяется по поверхности сферы радиусом $r$ площадью $4\\pi r^2$ ([[F04]]). Значит, интенсивность обратно пропорциональна квадрату расстояния: при увеличении расстояния в $2$ раза интенсивность уменьшается в $4$ раза.",
+  "en": "**Point source.** At a distance $r$ from a source of power $P$ that radiates equally in all directions, the energy is spread over the surface of a sphere of radius $r$ and area $4\\pi r^2$ ([[F04]]). Hence the intensity is inversely proportional to the square of the distance: if the distance increases $2$ times, the intensity decreases $4$ times."
+ },
+ {
+  "t": "m",
+  "m": "I=\\frac{P}{4\\pi r^2},\\qquad \\frac{I_1}{I_2}=\\frac{r_2^2}{r_1^2}"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B1-L43-F04.png",
+   "ru": "figures/B1-L43-F04-ru.png",
+   "en": "figures/B1-L43-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $100\\ \\mathrm{W}$ quvvatni barcha yo'nalishlarda bir xil nurlaydigan antennadan $10\\ \\mathrm{m}$ masofada $I=\\frac{100}{4\\pi\\cdot100}\\approx0.08\\ \\mathrm{W/m^2}$. Yer atmosferasi tashqarisida Quyosh nurlanishining intensivligi taxminan $1.4\\ \\mathrm{kW/m^2}$ (Quyosh doimiysi).",
+  "ru": "**Пример.** На расстоянии $10\\ \\mathrm{m}$ от антенны, излучающей мощность $100\\ \\mathrm{W}$ одинаково во всех направлениях, $I=\\frac{100}{4\\pi\\cdot100}\\approx0.08\\ \\mathrm{W/m^2}$. За пределами атмосферы Земли интенсивность излучения Солнца примерно $1.4\\ \\mathrm{kW/m^2}$ (солнечная постоянная).",
+  "en": "**Example.** At a distance of $10\\ \\mathrm{m}$ from an antenna radiating $100\\ \\mathrm{W}$ equally in all directions, $I=\\frac{100}{4\\pi\\cdot100}\\approx0.08\\ \\mathrm{W/m^2}$. Outside the Earth's atmosphere the intensity of solar radiation is about $1.4\\ \\mathrm{kW/m^2}$ (the solar constant)."
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls va bosim.** Elektromagnit to'lqin energiya bilan birga impuls ham tashiydi, shuning uchun u to'siqqa bosim beradi (P. N. Lebedev, 1900). Normal tushgan to'lqin to'liq yutilsa, bosim $p=\\frac{I}{c}$, to'liq qaytsa — $p=\\frac{2I}{c}$. Bu bosim juda kichik (Quyosh nuri uchun $\\sim5\\ \\mu\\mathrm{Pa}$), lekin kometa dumlari va «quyosh yelkani» shu bilan tushuntiriladi.",
+  "ru": "**Импульс и давление.** Вместе с энергией электромагнитная волна переносит и импульс, поэтому она оказывает давление на преграду (П. Н. Лебедев, 1900). Если нормально падающая волна полностью поглощается, давление $p=\\frac{I}{c}$, если полностью отражается — $p=\\frac{2I}{c}$. Это давление очень мало (для солнечного света $\\sim5\\ \\mu\\mathrm{Pa}$), но им объясняются хвосты комет и «солнечный парус».",
+  "en": "**Momentum and pressure.** Together with energy an electromagnetic wave carries momentum, so it exerts pressure on an obstacle (P. N. Lebedev, 1900). If a normally incident wave is fully absorbed, the pressure is $p=\\frac{I}{c}$; if it is fully reflected, $p=\\frac{2I}{c}$. This pressure is very small ($\\sim5\\ \\mu\\mathrm{Pa}$ for sunlight), but it explains comet tails and the «solar sail»."
+ },
+ {
+  "t": "h2",
+  "uz": "7. Elektromagnit to'lqinlar shkalasi (The electromagnetic spectrum)",
+  "ru": "7. Шкала электромагнитных волн",
+  "en": "7. The electromagnetic spectrum"
+ },
+ {
+  "t": "li",
+  "uz": "**Bir tabiat — turli xossalar.** Barcha elektromagnit to'lqinlar bir xil tabiatga ega va vakuumda bir xil tezlikda tarqaladi; ular faqat chastotasi (to'lqin uzunligi) bilan farqlanadi, lekin hosil bo'lish usuli, moddaga ta'siri va qo'llanilishi juda turlicha ([[F05]]). To'lqin uzunligi kamaygan sari to'lqin xossalari (difraksiya) kuchsizlanib, zarracha (foton) xossalari kuchayadi.",
+  "ru": "**Одна природа — разные свойства.** Все электромагнитные волны имеют одну природу и в вакууме распространяются с одной скоростью; они отличаются только частотой (длиной волны), но способы получения, действие на вещество и применение у них очень разные ([[F05]]). С уменьшением длины волны волновые свойства (дифракция) ослабевают, а свойства частиц (фотонов) усиливаются.",
+  "en": "**One nature — different properties.** All electromagnetic waves have the same nature and travel at the same speed in vacuum; they differ only in frequency (wavelength), but the ways they are produced, their effect on matter and their applications are very different ([[F05]]). As the wavelength decreases, wave properties (diffraction) weaken and particle (photon) properties strengthen."
+ },
+ {
+  "t": "li",
+  "uz": "**Radioto'lqinlar** ($\\lambda>1\\ \\mathrm{mm}$): tebranish konturlari va antennalar hosil qiladi; radio, televidenie, mobil aloqa. Ularning ichida **mikroto'lqinlar** ($1\\ \\mathrm{mm}$ dan $1\\ \\mathrm{m}$ gacha): radiolokatsiya, sun'iy yo'ldosh aloqasi, Wi-Fi, mikroto'lqinli pech ($2.45\\ \\mathrm{GHz}$, $\\lambda\\approx12\\ \\mathrm{cm}$).",
+  "ru": "**Радиоволны** ($\\lambda>1\\ \\mathrm{mm}$): создаются колебательными контурами и антеннами; радио, телевидение, мобильная связь. Среди них **микроволны** (от $1\\ \\mathrm{mm}$ до $1\\ \\mathrm{m}$): радиолокация, спутниковая связь, Wi-Fi, микроволновая печь ($2.45\\ \\mathrm{GHz}$, $\\lambda\\approx12\\ \\mathrm{cm}$).",
+  "en": "**Radio waves** ($\\lambda>1\\ \\mathrm{mm}$): produced by oscillating circuits and antennas; radio, television, mobile communication. Among them are **microwaves** (from $1\\ \\mathrm{mm}$ to $1\\ \\mathrm{m}$): radar, satellite communication, Wi-Fi, the microwave oven ($2.45\\ \\mathrm{GHz}$, $\\lambda\\approx12\\ \\mathrm{cm}$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Infraqizil nurlar** ($760\\ \\mathrm{nm}$ dan $1\\ \\mathrm{mm}$ gacha): qizigan jismlar nurlaydi; issiqlik ta'siri, teplovizor, masofadan boshqarish pulti. **Ko'rinadigan yorug'lik** ($380$–$760\\ \\mathrm{nm}$, qizildan binafshagacha): ko'z sezadigan yagona tor oraliq. **Ultrabinafsha nurlar** ($10$–$380\\ \\mathrm{nm}$): Quyosh, kvars lampa; kimyoviy va biologik ta'sir, zararsizlantirish, quyoshda qorayish.",
+  "ru": "**Инфракрасные лучи** (от $760\\ \\mathrm{nm}$ до $1\\ \\mathrm{mm}$): излучаются нагретыми телами; тепловое действие, тепловизор, пульт дистанционного управления. **Видимый свет** ($380$–$760\\ \\mathrm{nm}$, от красного до фиолетового): единственный узкий диапазон, воспринимаемый глазом. **Ультрафиолетовые лучи** ($10$–$380\\ \\mathrm{nm}$): Солнце, кварцевая лампа; химическое и биологическое действие, обеззараживание, загар.",
+  "en": "**Infrared rays** (from $760\\ \\mathrm{nm}$ to $1\\ \\mathrm{mm}$): emitted by hot bodies; heating effect, thermal imager, remote control. **Visible light** ($380$–$760\\ \\mathrm{nm}$, from red to violet): the only narrow range the eye can sense. **Ultraviolet rays** ($10$–$380\\ \\mathrm{nm}$): the Sun, a quartz lamp; chemical and biological action, disinfection, suntan."
+ },
+ {
+  "t": "li",
+  "uz": "**Rentgen nurlari** ($\\sim10^{-2}$–$10\\ \\mathrm{nm}$): tez elektronlar to'siqda keskin tormozlanganda hosil bo'ladi; moddadan o'tish qobiliyati yuqori — tibbiyot, kristall tuzilishini o'rganish. **Gamma nurlar** ($\\lambda<10^{-2}\\ \\mathrm{nm}$): atom yadrolari nurlaydi; eng katta energiya, nur terapiyasi, sterilizatsiya. Oraliqlar chegaralari shartli va qisman ustma-ust tushadi.",
+  "ru": "**Рентгеновские лучи** ($\\sim10^{-2}$–$10\\ \\mathrm{nm}$): возникают при резком торможении быстрых электронов на мишени; высокая проникающая способность — медицина, изучение строения кристаллов. **Гамма-лучи** ($\\lambda<10^{-2}\\ \\mathrm{nm}$): испускаются атомными ядрами; наибольшая энергия, лучевая терапия, стерилизация. Границы диапазонов условны и частично перекрываются.",
+  "en": "**X-rays** ($\\sim10^{-2}$–$10\\ \\mathrm{nm}$): produced when fast electrons are sharply decelerated in a target; high penetrating power — medicine, study of crystal structure. **Gamma rays** ($\\lambda<10^{-2}\\ \\mathrm{nm}$): emitted by atomic nuclei; the highest energy, radiation therapy, sterilization. The boundaries of the ranges are conventional and partly overlap."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B1-L43-F05.png",
+   "ru": "figures/B1-L43-F05-ru.png",
+   "en": "figures/B1-L43-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Radioaloqa prinsipi (The principle of radio communication)",
+  "ru": "8. Принцип радиосвязи",
+  "en": "8. The principle of radio communication"
+ },
+ {
+  "t": "li",
+  "uz": "**Tarix.** Elektromagnit to'lqinlar yordamida axborotni simsiz uzatish radioaloqa deyiladi. 1895 yilda A. S. Popov chaqmoqni qayd qiluvchi priyomnikni namoyish etdi, G. Markoni esa 1901 yilda Atlantika okeani orqali signal uzatdi.",
+  "ru": "**История.** Беспроводная передача информации с помощью электромагнитных волн называется радиосвязью. В 1895 году А. С. Попов продемонстрировал приёмник, регистрирующий грозовые разряды, а Г. Маркони в 1901 году передал сигнал через Атлантический океан.",
+  "en": "**History.** Wireless transmission of information by means of electromagnetic waves is called radio communication. In 1895 A. S. Popov demonstrated a receiver that registered lightning discharges, and in 1901 G. Marconi transmitted a signal across the Atlantic Ocean."
+ },
+ {
+  "t": "li",
+  "uz": "**Nima uchun eltuvchi to'lqin kerak?** Tovush chastotalari ($\\sim20\\ \\mathrm{Hz}$–$20\\ \\mathrm{kHz}$) juda past: nurlanish quvvati $\\sim\\nu^4$ bo'lgani uchun ular deyarli nurlanmaydi, samarali antenna uzunligi esa $\\frac{\\lambda}{2}$ tartibida — $1\\ \\mathrm{kHz}$ uchun $150\\ \\mathrm{km}$ bo'lardi. Shuning uchun uzatgich yuqori chastotali (yuzlab kilogers va undan yuqori) eltuvchi to'lqin (carrier wave) hosil qiladi va tovush axborotini unga «yuklaydi».",
+  "ru": "**Зачем нужна несущая волна?** Звуковые частоты ($\\sim20\\ \\mathrm{Hz}$–$20\\ \\mathrm{kHz}$) очень низкие: поскольку мощность излучения $\\sim\\nu^4$, они почти не излучаются, а эффективная длина антенны порядка $\\frac{\\lambda}{2}$ — для $1\\ \\mathrm{kHz}$ это было бы $150\\ \\mathrm{km}$. Поэтому передатчик создаёт высокочастотную (сотни килогерц и выше) несущую волну (carrier wave) и «нагружает» на неё звуковую информацию.",
+  "en": "**Why is a carrier wave needed?** Audio frequencies ($\\sim20\\ \\mathrm{Hz}$–$20\\ \\mathrm{kHz}$) are very low: since the radiated power is $\\sim\\nu^4$, they are hardly radiated, and the effective antenna length is of the order of $\\frac{\\lambda}{2}$ — for $1\\ \\mathrm{kHz}$ this would be $150\\ \\mathrm{km}$. Therefore the transmitter produces a high-frequency (hundreds of kilohertz and higher) carrier wave and «loads» the audio information onto it."
+ },
+ {
+  "t": "li",
+  "uz": "**Uzatgich.** Yuqori chastotali generator eltuvchi tebranishlarni hosil qiladi; mikrofon tovushni past chastotali elektr signalga aylantiradi; modulyator eltuvchi tebranishlar amplitudasini signalga mos ravishda o'zgartiradi — bu amplituda modulyatsiyasi (amplitude modulation); modulyatsiyalangan tebranishlar antennaga beriladi va nurlanadi ([[F06]]). Chastota modulyatsiyasida (FM) esa eltuvchining chastotasi o'zgartiriladi.",
+  "ru": "**Передатчик.** Генератор высокой частоты создаёт несущие колебания; микрофон превращает звук в низкочастотный электрический сигнал; модулятор изменяет амплитуду несущих колебаний в соответствии с сигналом — это амплитудная модуляция (amplitude modulation); модулированные колебания подаются в антенну и излучаются ([[F06]]). При частотной модуляции (FM) меняют частоту несущей.",
+  "en": "**Transmitter.** A high-frequency generator produces the carrier oscillations; a microphone converts sound into a low-frequency electric signal; a modulator changes the amplitude of the carrier oscillations according to the signal — this is amplitude modulation (AM); the modulated oscillations are fed to the antenna and radiated ([[F06]]). In frequency modulation (FM) the frequency of the carrier is changed."
+ },
+ {
+  "t": "li",
+  "uz": "**Priyomnik.** Priyomnik antennasida barcha stansiyalarning to'lqinlari kuchsiz tebranishlar hosil qiladi. Tebranish konturi rezonans hodisasi orqali faqat xususiy chastotasiga teng chastotadagi signalni ajratadi (L42); signal kuchaytiriladi; detektor (diod) yuqori chastotali tebranishlarning bir yo'nalishdagi yarmini o'tkazadi va kondensator bilan birga past chastotali tovush signalini — o'ramani ajratib oladi (detektorlash); signal kuchaytirilib, karnayga beriladi.",
+  "ru": "**Приёмник.** В антенне приёмника волны всех станций создают слабые колебания. Колебательный контур благодаря резонансу выделяет только сигнал с частотой, равной его собственной частоте (L42); сигнал усиливается; детектор (диод) пропускает половину высокочастотных колебаний одного направления и вместе с конденсатором выделяет низкочастотный звуковой сигнал — огибающую (детектирование); сигнал усиливается и подаётся на громкоговоритель.",
+  "en": "**Receiver.** In the receiver antenna the waves of all stations produce weak oscillations. Thanks to resonance, the oscillating circuit selects only the signal whose frequency equals its natural frequency (L42); the signal is amplified; a detector (a diode) passes the half of the high-frequency oscillations of one direction and, together with a capacitor, extracts the low-frequency audio signal — the envelope (detection); the signal is amplified and fed to a loudspeaker."
+ },
+ {
+  "t": "li",
+  "uz": "**Raqamli aloqa.** Zamonaviy mobil aloqa, Wi-Fi ($2.4$ va $5\\ \\mathrm{GHz}$) va raqamli televidenieda axborot ikkilik kodga aylantiriladi va eltuvchi to'lqinning amplitudasi, chastotasi yoki fazasi kodga mos ravishda o'zgartiriladi. Eltuvchi chastota qancha yuqori bo'lsa, vaqt birligida shuncha ko'p axborot uzatish mumkin — shuning uchun aloqa tobora yuqori chastotalarga o'tmoqda.",
+  "ru": "**Цифровая связь.** В современной мобильной связи, Wi-Fi ($2.4$ и $5\\ \\mathrm{GHz}$) и цифровом телевидении информация превращается в двоичный код, а амплитуда, частота или фаза несущей волны меняются в соответствии с кодом. Чем выше несущая частота, тем больше информации можно передать в единицу времени — поэтому связь переходит на всё более высокие частоты.",
+  "en": "**Digital communication.** In modern mobile communication, Wi-Fi ($2.4$ and $5\\ \\mathrm{GHz}$) and digital television, information is converted into binary code, and the amplitude, frequency or phase of the carrier wave is changed according to the code. The higher the carrier frequency, the more information can be transmitted per unit time — which is why communication keeps moving to higher frequencies."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B1-L43-F06.png",
+   "ru": "figures/B1-L43-F06-ru.png",
+   "en": "figures/B1-L43-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. Priyomnikni sozlash (Tuning a receiver)",
+  "ru": "9. Настройка приёмника",
+  "en": "9. Tuning a receiver"
+ },
+ {
+  "t": "li",
+  "uz": "**Rezonans sharti.** Priyomnik konturi stansiya to'lqiniga sozlangan bo'lsa, konturning xususiy chastotasi to'lqin chastotasiga teng. Shuning uchun priyomnik «moslangan» to'lqin uzunligi konturning $L$ va $C$ si bilan aniqlanadi; aksincha, berilgan to'lqinni qabul qilish uchun kerakli sig'im yoki induktivlik shu formuladan topiladi:",
+  "ru": "**Условие резонанса.** Если контур приёмника настроен на волну станции, собственная частота контура равна частоте волны. Поэтому длина волны, на которую «настроен» приёмник, определяется $L$ и $C$ контура; наоборот, нужная для приёма данной волны ёмкость или индуктивность находится из этой формулы:",
+  "en": "**Resonance condition.** If the receiver circuit is tuned to the wave of a station, the natural frequency of the circuit equals the frequency of the wave. Therefore the wavelength to which the receiver is «tuned» is determined by $L$ and $C$ of the circuit; conversely, the capacitance or inductance needed to receive a given wave is found from this formula:"
+ },
+ {
+  "t": "m",
+  "m": "\\nu=\\frac{1}{2\\pi\\sqrt{LC}},\\qquad \\lambda=2\\pi c\\sqrt{LC},\\qquad C=\\frac{\\lambda^2}{4\\pi^2c^2L},\\qquad L=\\frac{\\lambda^2}{4\\pi^2c^2C}"
+ },
+ {
+  "t": "li",
+  "uz": "**Diapazon.** Odatda konturda o'zgaruvchan sig'imli kondensator bo'ladi. Sig'im $C_{min}$ dan $C_{max}$ gacha o'zgarsa, priyomnik qabul qiladigan to'lqin uzunliklari oralig'i (diapazoni):",
+  "ru": "**Диапазон.** Обычно в контуре стоит конденсатор переменной ёмкости. Если ёмкость меняется от $C_{min}$ до $C_{max}$, диапазон принимаемых длин волн:",
+  "en": "**Range.** Usually the circuit contains a variable capacitor. If the capacitance changes from $C_{min}$ to $C_{max}$, the range of received wavelengths is:"
+ },
+ {
+  "t": "m",
+  "m": "\\lambda_{min}=2\\pi c\\sqrt{LC_{min}},\\qquad \\lambda_{max}=2\\pi c\\sqrt{LC_{max}},\\qquad \\frac{\\lambda_{max}}{\\lambda_{min}}=\\sqrt{\\frac{C_{max}}{C_{min}}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Masshtab qoidalari.** $\\lambda\\sim\\sqrt{LC}$, $\\nu\\sim\\frac{1}{\\sqrt{LC}}$. Qabul qilinadigan to'lqin uzunligini $k$ marta kamaytirish (chastotani $k$ marta oshirish) uchun sig'im yoki induktivlikni $k^2$ marta kamaytirish kerak. Agar konturdagi tok yoki zaryad tenglamasi berilsa ($i=I_m\\sin\\omega t$), avval $\\nu=\\frac{\\omega}{2\\pi}$, keyin $\\lambda=\\frac{c}{\\nu}=\\frac{2\\pi c}{\\omega}$ topiladi.",
+  "ru": "**Правила масштабирования.** $\\lambda\\sim\\sqrt{LC}$, $\\nu\\sim\\frac{1}{\\sqrt{LC}}$. Чтобы уменьшить принимаемую длину волны в $k$ раз (увеличить частоту в $k$ раз), ёмкость или индуктивность нужно уменьшить в $k^2$ раз. Если задано уравнение тока или заряда в контуре ($i=I_m\\sin\\omega t$), сначала находят $\\nu=\\frac{\\omega}{2\\pi}$, затем $\\lambda=\\frac{c}{\\nu}=\\frac{2\\pi c}{\\omega}$.",
+  "en": "**Scaling rules.** $\\lambda\\sim\\sqrt{LC}$, $\\nu\\sim\\frac{1}{\\sqrt{LC}}$. To decrease the received wavelength $k$ times (increase the frequency $k$ times), the capacitance or the inductance must be decreased $k^2$ times. If the equation of the current or the charge in the circuit is given ($i=I_m\\sin\\omega t$), first find $\\nu=\\frac{\\omega}{2\\pi}$, then $\\lambda=\\frac{c}{\\nu}=\\frac{2\\pi c}{\\omega}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Kontur $L=1\\ \\mathrm{mH}$, $C=100\\ \\mathrm{pF}$ dan iborat: $LC=10^{-13}\\ \\mathrm{s^2}$, $\\nu=\\frac{1}{2\\pi\\sqrt{10^{-13}}}\\approx503\\ \\mathrm{kHz}$, $\\lambda=\\frac{c}{\\nu}\\approx596\\ \\mathrm{m}$ — o'rta to'lqinlar diapazoni.",
+  "ru": "**Пример.** Контур состоит из $L=1\\ \\mathrm{mH}$ и $C=100\\ \\mathrm{pF}$: $LC=10^{-13}\\ \\mathrm{s^2}$, $\\nu=\\frac{1}{2\\pi\\sqrt{10^{-13}}}\\approx503\\ \\mathrm{kHz}$, $\\lambda=\\frac{c}{\\nu}\\approx596\\ \\mathrm{m}$ — диапазон средних волн.",
+  "en": "**Example.** A circuit consists of $L=1\\ \\mathrm{mH}$ and $C=100\\ \\mathrm{pF}$: $LC=10^{-13}\\ \\mathrm{s^2}$, $\\nu=\\frac{1}{2\\pi\\sqrt{10^{-13}}}\\approx503\\ \\mathrm{kHz}$, $\\lambda=\\frac{c}{\\nu}\\approx596\\ \\mathrm{m}$ — the medium-wave band."
+ },
+ {
+  "t": "h2",
+  "uz": "10. Radiolokatsiya (Radar)",
+  "ru": "10. Радиолокация",
+  "en": "10. Radar"
+ },
+ {
+  "t": "li",
+  "uz": "**Prinsip.** Radiolokatsiya — radioto'lqinlar yordamida obyektlarni aniqlash va ularning joylashuvini o'lchash. Radiolokator antennasi tor dasta ko'rinishida qisqa radioimpuls yuboradi, nishondan qaytgan impulsni qabul qiladi va impuls yuborilgandan qaytguncha o'tgan vaqt $t$ ni o'lchaydi ([[F07]]). Signal nishongacha va orqaga yo'l bosgani uchun:",
+  "ru": "**Принцип.** Радиолокация — обнаружение объектов и измерение их положения с помощью радиоволн. Антенна радиолокатора посылает короткий радиоимпульс узким пучком, принимает импульс, отражённый от цели, и измеряет время $t$ от посылки импульса до его возвращения ([[F07]]). Поскольку сигнал проходит путь до цели и обратно:",
+  "en": "**Principle.** Radar is the detection of objects and the measurement of their position by means of radio waves. A radar antenna sends a short radio pulse in a narrow beam, receives the pulse reflected from the target and measures the time $t$ from sending the pulse to its return ([[F07]]). Since the signal travels to the target and back:"
+ },
+ {
+  "t": "m",
+  "m": "2d=ct,\\qquad d=\\frac{ct}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Signal $1\\ \\mathrm{ms}$ dan keyin qaytsa, $d=\\frac{3\\cdot10^8\\cdot10^{-3}}{2}=150\\ \\mathrm{km}$. Masofa bilan birga antenna yo'nalishidan nishonning burchak koordinatalari, qaytgan signal chastotasining o'zgarishidan (Dopler effekti, L22) esa uning tezligi aniqlanadi.",
+  "ru": "**Пример.** Если сигнал вернулся через $1\\ \\mathrm{ms}$, $d=\\frac{3\\cdot10^8\\cdot10^{-3}}{2}=150\\ \\mathrm{km}$. Кроме расстояния, по направлению антенны определяют угловые координаты цели, а по изменению частоты отражённого сигнала (эффект Доплера, L22) — её скорость.",
+  "en": "**Example.** If the signal returns after $1\\ \\mathrm{ms}$, $d=\\frac{3\\cdot10^8\\cdot10^{-3}}{2}=150\\ \\mathrm{km}$. Besides the distance, the angular coordinates of the target are found from the direction of the antenna, and its speed from the change in frequency of the reflected signal (the Doppler effect, L22)."
+ },
+ {
+  "t": "li",
+  "uz": "**Eng katta va eng kichik masofa.** Radiolokator impulslarni $f$ chastota bilan (sekundiga $f$ ta) yuboradi. Navbatdagi impuls yuborilishidan oldin oldingisi qaytib kelishi kerak, aks holda qaysi aks-sado qaysi impulsga tegishli ekanini ajratib bo'lmaydi. Impuls davomiyligi $\\tau$ bo'lsa, impuls yuborilayotgan paytda priyomnik o'chiq, shuning uchun juda yaqin nishon ko'rinmaydi:",
+  "ru": "**Наибольшая и наименьшая дальность.** Радиолокатор посылает импульсы с частотой $f$ ($f$ импульсов в секунду). Предыдущий импульс должен вернуться до посылки следующего, иначе нельзя различить, какому импульсу принадлежит эхо. Если длительность импульса $\\tau$, во время посылки импульса приёмник выключен, поэтому очень близкая цель не видна:",
+  "en": "**Largest and smallest range.** The radar sends pulses with a repetition frequency $f$ ($f$ pulses per second). The previous pulse must return before the next one is sent, otherwise it is impossible to tell which pulse an echo belongs to. If the pulse duration is $\\tau$, the receiver is off while the pulse is being sent, so a very close target is not seen:"
+ },
+ {
+  "t": "m",
+  "m": "d_{max}=\\frac{c}{2f},\\qquad d_{min}=\\frac{c\\tau}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Impulslar takrorlanish chastotasi $f=500\\ \\mathrm{Hz}$ bo'lsa, impulslar orasidagi vaqt $2\\ \\mathrm{ms}$, demak $d_{max}=\\frac{3\\cdot10^8}{2\\cdot500}=300\\ \\mathrm{km}$. Uzoqroq nishonni kuzatish uchun impulslarni siyrakroq yuborish kerak, lekin bunda nishon holati kamroq yangilanadi.",
+  "ru": "**Пример.** Если частота повторения импульсов $f=500\\ \\mathrm{Hz}$, время между импульсами $2\\ \\mathrm{ms}$, значит, $d_{max}=\\frac{3\\cdot10^8}{2\\cdot500}=300\\ \\mathrm{km}$. Чтобы наблюдать более далёкую цель, импульсы нужно посылать реже, но тогда положение цели обновляется реже.",
+  "en": "**Example.** If the pulse repetition frequency is $f=500\\ \\mathrm{Hz}$, the time between pulses is $2\\ \\mathrm{ms}$, so $d_{max}=\\frac{3\\cdot10^8}{2\\cdot500}=300\\ \\mathrm{km}$. To observe a more distant target the pulses must be sent less often, but then the target position is updated less often."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B1-L43-F07.png",
+   "ru": "figures/B1-L43-F07-ru.png",
+   "en": "figures/B1-L43-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Qo'llanilishi.** Aviatsiya va dengizchilikda harakatni boshqarish, ob-havo radarlari (bulut va yomg'ir), avtomobil tezligini o'lchash, sun'iy yo'ldoshlar va sayyoralargacha masofani o'lchash (Oy va Venera radiolokatsiyasi). Radiolokatsiyada qisqa to'lqinlar — santimetr va desimetr to'lqinlar ishlatiladi: ular to'g'ri chiziq bo'ylab tarqaladi va kichik obyektlardan yaxshi qaytadi.",
+  "ru": "**Применение.** Управление движением в авиации и мореплавании, метеорадары (облака и дождь), измерение скорости автомобилей, измерение расстояний до спутников и планет (радиолокация Луны и Венеры). В радиолокации используют короткие волны — сантиметровые и дециметровые: они распространяются прямолинейно и хорошо отражаются от небольших объектов.",
+  "en": "**Applications.** Traffic control in aviation and shipping, weather radars (clouds and rain), measuring the speed of cars, measuring distances to satellites and planets (radar ranging of the Moon and Venus). Radar uses short waves — centimetre and decimetre waves: they travel in straight lines and reflect well from small objects."
+ },
+ {
+  "t": "h2",
+  "uz": "11. Radioto'lqinlarning tarqalishi va aloqa turlari (Propagation of radio waves and kinds of communication)",
+  "ru": "11. Распространение радиоволн и виды связи",
+  "en": "11. Propagation of radio waves and kinds of communication"
+ },
+ {
+  "t": "li",
+  "uz": "**Uzun va o'rta to'lqinlar** ($\\lambda>100\\ \\mathrm{m}$) difraksiya tufayli Yer sirtini aylanib o'tadi va bir necha ming kilometrgacha yetib boradi (yer to'lqini). **Qisqa to'lqinlar** ($10$–$100\\ \\mathrm{m}$) atmosferaning ionlashgan qatlami — ionosferadan va Yer sirtidan ko'p marta qaytib, butun Yer bo'ylab tarqala oladi.",
+  "ru": "**Длинные и средние волны** ($\\lambda>100\\ \\mathrm{m}$) благодаря дифракции огибают поверхность Земли и распространяются на несколько тысяч километров (земная волна). **Короткие волны** ($10$–$100\\ \\mathrm{m}$), многократно отражаясь от ионизированного слоя атмосферы — ионосферы — и от поверхности Земли, могут распространяться по всей Земле.",
+  "en": "**Long and medium waves** ($\\lambda>100\\ \\mathrm{m}$) bend around the Earth's surface due to diffraction and travel up to several thousand kilometres (the ground wave). **Short waves** ($10$–$100\\ \\mathrm{m}$), reflecting many times from the ionized layer of the atmosphere — the ionosphere — and from the Earth's surface, can travel around the whole Earth."
+ },
+ {
+  "t": "li",
+  "uz": "**Ultraqisqa to'lqinlar** ($\\lambda<10\\ \\mathrm{m}$, televidenie, FM radio, mobil aloqa) ionosferadan o'tib ketadi va to'g'ri ko'rinish chegarasida tarqaladi; shuning uchun teleminoralar baland quriladi, uzoq masofaga esa retranslyatorlar va sun'iy yo'ldoshlar orqali uzatiladi. Geostatsionar yo'ldoshgacha (taxminan $36\\ 000\\ \\mathrm{km}$) signal $0.12\\ \\mathrm{s}$ da yetib boradi — sun'iy yo'ldosh orqali suhbatdagi kechikish shundan.",
+  "ru": "**Ультракороткие волны** ($\\lambda<10\\ \\mathrm{m}$; телевидение, FM-радио, мобильная связь) проходят сквозь ионосферу и распространяются в пределах прямой видимости; поэтому телебашни строят высокими, а на большие расстояния передают через ретрансляторы и спутники. До геостационарного спутника (примерно $36\\ 000\\ \\mathrm{km}$) сигнал идёт $0.12\\ \\mathrm{s}$ — отсюда задержка при разговоре через спутник.",
+  "en": "**Ultrashort waves** ($\\lambda<10\\ \\mathrm{m}$; television, FM radio, mobile communication) pass through the ionosphere and travel within the line of sight; therefore TV towers are built tall, and over long distances signals are sent via relays and satellites. To a geostationary satellite (about $36\\ 000\\ \\mathrm{km}$) a signal takes $0.12\\ \\mathrm{s}$ — hence the delay in a conversation via satellite."
+ },
+ {
+  "t": "li",
+  "uz": "**Televidenie va mobil aloqa.** Televizion uzatishda tasvir signali ham, tovush signali ham eltuvchi to'lqinlarni modulyatsiyalaydi; tasvir uchun katta axborot hajmi kerak, shuning uchun eltuvchi chastota yuqori — metr va desimetr to'lqinlar. Mobil aloqada hudud kichik «uyalarga» bo'linadi va har birida baza stansiyasi bo'ladi — «uyali» aloqa nomi shundan.",
+  "ru": "**Телевидение и мобильная связь.** При телевизионной передаче и сигнал изображения, и звуковой сигнал модулируют несущие волны; для изображения нужен большой объём информации, поэтому несущая частота высокая — метровые и дециметровые волны. В мобильной связи территория делится на небольшие «соты», и в каждой есть базовая станция — отсюда название «сотовая» связь.",
+  "en": "**Television and mobile communication.** In television broadcasting both the picture signal and the sound signal modulate carrier waves; a picture requires a large amount of information, so the carrier frequency is high — metre and decimetre waves. In mobile communication the area is divided into small «cells», each with a base station — hence the name «cellular» communication."
+ },
+ {
+  "t": "h2",
+  "uz": "12. GRE va test maslahatlari (GRE and test tips)",
+  "ru": "12. Советы для GRE и тестов",
+  "en": "12. GRE and test tips"
+ },
+ {
+  "t": "li",
+  "uz": "**Tuzilish.** Elektromagnit to'lqin ko'ndalang; $\\vec E\\perp\\vec B\\perp\\vec v$; $\\vec v$ — $\\vec E\\times\\vec B$ yo'nalishida; vakuumda $E=cB$ va $\\vec E$, $\\vec B$ bir fazada. Testlarda «bo'ylama» yoki «$\\vec E\\parallel\\vec v$» — tuzoq.",
+  "ru": "**Структура.** Электромагнитная волна поперечна; $\\vec E\\perp\\vec B\\perp\\vec v$; $\\vec v$ направлен по $\\vec E\\times\\vec B$; в вакууме $E=cB$, $\\vec E$ и $\\vec B$ в одной фазе. В тестах «продольная» или «$\\vec E\\parallel\\vec v$» — ловушка.",
+  "en": "**Structure.** An electromagnetic wave is transverse; $\\vec E\\perp\\vec B\\perp\\vec v$; $\\vec v$ points along $\\vec E\\times\\vec B$; in vacuum $E=cB$ and $\\vec E$, $\\vec B$ are in phase. In tests, «longitudinal» or «$\\vec E\\parallel\\vec v$» is a trap."
+ },
+ {
+  "t": "li",
+  "uz": "**Hisob.** $c=\\lambda\\nu=\\frac{1}{\\sqrt{\\varepsilon_0\\mu_0}}$; muhitda $v=\\frac{c}{n}$, $n=\\sqrt{\\varepsilon}$, chastota o'zgarmaydi; $I\\sim E_m^2$, nuqtaviy manba uchun $I\\sim\\frac{1}{r^2}$; vibrator nurlanishi $P\\sim\\nu^4$; kontur $\\lambda=2\\pi c\\sqrt{LC}$; radiolokator $d=\\frac{ct}{2}$.",
+  "ru": "**Расчёт.** $c=\\lambda\\nu=\\frac{1}{\\sqrt{\\varepsilon_0\\mu_0}}$; в среде $v=\\frac{c}{n}$, $n=\\sqrt{\\varepsilon}$, частота не меняется; $I\\sim E_m^2$, для точечного источника $I\\sim\\frac{1}{r^2}$; излучение вибратора $P\\sim\\nu^4$; контур $\\lambda=2\\pi c\\sqrt{LC}$; радиолокатор $d=\\frac{ct}{2}$.",
+  "en": "**Calculation.** $c=\\lambda\\nu=\\frac{1}{\\sqrt{\\varepsilon_0\\mu_0}}$; in a medium $v=\\frac{c}{n}$, $n=\\sqrt{\\varepsilon}$, the frequency does not change; $I\\sim E_m^2$, for a point source $I\\sim\\frac{1}{r^2}$; vibrator radiation $P\\sim\\nu^4$; circuit $\\lambda=2\\pi c\\sqrt{LC}$; radar $d=\\frac{ct}{2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'p uchraydigan xatolar:** radiolokatorda $2$ ga bo'lishni unutish; muhitda chastota o'zgaradi deb olish; $v=\\frac{c}{\\varepsilon}$ deb yozish ($\\sqrt{\\varepsilon}$ o'rniga); $\\omega$ ni $\\nu$ deb olish; $\\mathrm{MHz}$, $\\mathrm{nm}$, $\\mathrm{pF}$ prefikslarida daraja xatosi; $I\\sim\\frac{1}{r}$ deb olish; tezlanishsiz harakatlanayotgan zaryad ham nurlaydi deb hisoblash.",
+  "ru": "**Частые ошибки:** забывают делить на $2$ в радиолокаторе; считают, что в среде меняется частота; пишут $v=\\frac{c}{\\varepsilon}$ (вместо $\\sqrt{\\varepsilon}$); принимают $\\omega$ за $\\nu$; ошибаются в степенях приставок $\\mathrm{MHz}$, $\\mathrm{nm}$, $\\mathrm{pF}$; считают $I\\sim\\frac{1}{r}$; полагают, что излучает и заряд, движущийся без ускорения.",
+  "en": "**Common mistakes:** forgetting to divide by $2$ for radar; assuming the frequency changes in a medium; writing $v=\\frac{c}{\\varepsilon}$ (instead of $\\sqrt{\\varepsilon}$); taking $\\omega$ for $\\nu$; power-of-ten errors with the prefixes $\\mathrm{MHz}$, $\\mathrm{nm}$, $\\mathrm{pF}$; taking $I\\sim\\frac{1}{r}$; thinking that a charge moving without acceleration also radiates."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Yorug'lik tezligi",
+    "ru": "Скорость света",
+    "en": "Speed of light",
+    "m": "c=\\frac{1}{\\sqrt{\\varepsilon_0\\mu_0}}\\approx3\\cdot10^8\\ \\mathrm{m/s}"
+   },
+   {
+    "uz": "To'lqin uzunligi",
+    "ru": "Длина волны",
+    "en": "Wavelength",
+    "m": "\\lambda=cT=\\frac{c}{\\nu}"
+   },
+   {
+    "uz": "To'lqin tuzilishi",
+    "ru": "Структура волны",
+    "en": "Wave structure",
+    "m": "\\vec E\\perp\\vec B\\perp\\vec v,\\quad \\vec v\\uparrow\\uparrow\\vec E\\times\\vec B"
+   },
+   {
+    "uz": "Amplitudalar",
+    "ru": "Амплитуды",
+    "en": "Amplitudes",
+    "m": "E_m=cB_m"
+   },
+   {
+    "uz": "Muhitdagi tezlik",
+    "ru": "Скорость в среде",
+    "en": "Speed in a medium",
+    "m": "v=\\frac{c}{\\sqrt{\\varepsilon\\mu}}=\\frac{c}{n}"
+   },
+   {
+    "uz": "Muhitdagi to'lqin uzunligi",
+    "ru": "Длина волны в среде",
+    "en": "Wavelength in a medium",
+    "m": "\\lambda=\\frac{\\lambda_0}{n},\\quad \\nu=\\mathrm{const}"
+   },
+   {
+    "uz": "Maksimumlar va to'lqinlar soni",
+    "ru": "Максимумы и число волн",
+    "en": "Maxima and number of waves",
+    "m": "d=(k-1)\\lambda,\\quad N=\\frac{L}{\\lambda}"
+   },
+   {
+    "uz": "Energiya zichligi",
+    "ru": "Плотность энергии",
+    "en": "Energy density",
+    "m": "w=\\frac{\\varepsilon_0E^2}{2}+\\frac{B^2}{2\\mu_0}=\\varepsilon_0E^2"
+   },
+   {
+    "uz": "Intensivlik",
+    "ru": "Интенсивность",
+    "en": "Intensity",
+    "m": "I=\\frac{W}{\\Delta S\\Delta t}=wc,\\quad I=\\frac{c\\varepsilon_0E_m^2}{2}"
+   },
+   {
+    "uz": "Nuqtaviy manba",
+    "ru": "Точечный источник",
+    "en": "Point source",
+    "m": "I=\\frac{P}{4\\pi r^2}"
+   },
+   {
+    "uz": "Nurlanish quvvati",
+    "ru": "Мощность излучения",
+    "en": "Radiated power",
+    "m": "P\\sim\\nu^4"
+   },
+   {
+    "uz": "Yorug'lik bosimi",
+    "ru": "Давление света",
+    "en": "Radiation pressure",
+    "m": "p=\\frac{I}{c},\\quad p=\\frac{2I}{c}"
+   },
+   {
+    "uz": "Kontur to'lqin uzunligi",
+    "ru": "Длина волны контура",
+    "en": "Wavelength of a circuit",
+    "m": "\\lambda=2\\pi c\\sqrt{LC}"
+   },
+   {
+    "uz": "Diapazon",
+    "ru": "Диапазон",
+    "en": "Range",
+    "m": "\\frac{\\lambda_{max}}{\\lambda_{min}}=\\sqrt{\\frac{C_{max}}{C_{min}}}"
+   },
+   {
+    "uz": "Radiolokator",
+    "ru": "Радиолокатор",
+    "en": "Radar",
+    "m": "d=\\frac{ct}{2}"
+   },
+   {
+    "uz": "Radiolokator uzoqligi",
+    "ru": "Дальность радиолокатора",
+    "en": "Radar range",
+    "m": "d_{max}=\\frac{c}{2f},\\quad d_{min}=\\frac{c\\tau}{2}"
+   }
+  ]
+ }
+]
