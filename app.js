@@ -183,6 +183,7 @@
   function go(s) { Object.assign(state, s); render(); syncBack(); window.scrollTo(0, 0); }
   function goBack() {
     if (state.view === "lesson") go({ view: "module", mod: state.mod || "M1" });
+    else if (extViews[state.view] && extViews[state.view].back) go(extViews[state.view].back());
     else go({ view: "home" });
   }
   function syncBack() {
@@ -201,13 +202,19 @@
   function header(kicker, title) { $("#kicker").textContent = kicker; $("#title").textContent = title; }
   function fail() { view.innerHTML = `<div class="card err">${esc(t(T.loadErr))}</div>`; }
 
+  // qo'shimcha modullar o'z sahifasini qo'shishi mumkin: GRE.addView("profil", async () => {...}) (progress.js)
+  const extViews = {};
   async function render() {
     try {
-      if (state.view === "home") return await home();
-      if (state.view === "module") return await moduleView(state.mod);
-      if (state.view === "about") return await about();
-      await lesson(state.id, TAB_ORDER.includes(state.tab) ? state.tab : "nazariya");
-      if (state.view === "lesson") { focusJoy(); window.GRE.emit("render", state); }
+      if (extViews[state.view]) { $("#tabs").hidden = true; await extViews[state.view](); }
+      else if (state.view === "home") await home();
+      else if (state.view === "module") await moduleView(state.mod);
+      else if (state.view === "about") await about();
+      else {
+        await lesson(state.id, TAB_ORDER.includes(state.tab) ? state.tab : "nazariya");
+        if (state.view === "lesson") { focusJoy(); window.GRE.emit("render", state); }
+      }
+      window.GRE.emit("view", state);     // har qanday sahifa chizilgandan keyin (progress.js)
     } catch (e) { console.error(e); fail(); }
   }
 
@@ -379,6 +386,7 @@
       const box = $(`#sol${b.dataset.i}`);
       box.hidden = !box.hidden;
       b.textContent = t(box.hidden ? T.show : T.hide);
+      if (!box.hidden) window.GRE.emit("solution", id, +b.dataset.i, S.length);
     }));
   }
 
@@ -392,6 +400,7 @@
     let peek = null;
     const jm = state.joy && state.joy.match(/^Q\d+/);
     if (jm) { const k = Q.findIndex((q) => sid(q.id) === jm[0]); if (k >= 0) { st.i = k; peek = Q[k].id; } }
+    window.GRE.emit("quizload", id, Q, st);
 
     const paint = () => {
       if (st.i >= Q.length) return results();
@@ -400,6 +409,7 @@
       const chosen = st.a[q.id];
       const done = chosen !== undefined || peek === q.id;
       const pct = Math.round(100 * st.i / Q.length);
+      if (peek === q.id && chosen === undefined) window.GRE.emit("peek", id, st.i, Q.length);
       const dist = q.distractors ? Object.keys(q.distractors).map((k) => `<li data-a="${a}d${k}"><b>(${k})</b> ${bi({ uz: q.distractors[k], ru: (q.distractors_ru || {})[k], en: (q.distractors_en || {})[k] }, "span")}</li>`).join("") : "";
       view.innerHTML = `<div class="muted">${esc(t(T.question))} ${st.i + 1} / ${Q.length}</div>
         <div class="progress"><i style="width:${pct}%"></i></div>
@@ -419,6 +429,7 @@
       zoomable(view);
       view.querySelectorAll(".opt:not([disabled])").forEach((b) => b.addEventListener("click", () => {
         st.a[q.id] = +b.dataset.k; store.set(key, st);
+        window.GRE.emit("answer", id, st.i, +b.dataset.k, +b.dataset.k === q.correct, Q.length);
         haptic(+b.dataset.k === q.correct ? "success" : "error");
         paint();
       }));
@@ -451,6 +462,8 @@
 
   // ------------------------------------------------------------------ start
   Object.assign(window.GRE, { state, go, render, T, t, rich, bi, esc, tex, getJSON, base, store, haptic, view, VER, sid,
+    steps, biLoc, zoomable, header, LETTERS, TAB_ORDER,
+    addView(name, fn, back) { extViews[name] = fn; if (back) fn.back = back; },
     lang: () => lang, tg: () => tg });
   paintLang();
   render();

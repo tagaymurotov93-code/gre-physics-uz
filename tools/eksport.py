@@ -89,6 +89,14 @@ def main():
     json.dump(idx, open(idx_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"✓ {lid}: nazariya (theory.json, 3 til), {len(solved)} masala, {len(quiz)} test, {len(hw)} mustaqil, "
           f"{len(gloss)} atama, {figs} rasm → miniapp/darslar/{lid}/")
+    # kurs bo'yicha umumiy lug'at (darslar/lugat.json) — Mini App "Lug'at" sahifasi uchun
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import lugat_yig
+        n, _ = lugat_yig.build(APP)
+        print(f"✓ darslar/lugat.json: {n} ta atama")
+    except Exception as e:
+        print("! lugat.json yangilanmadi:", e)
     stamp_version()
 
 
