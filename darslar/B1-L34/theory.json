@@ -1,0 +1,601 @@
+[
+ {
+  "t": "h1",
+  "uz": "Ketma-ket va parallel ulash, o'lchov asboblari (Series and parallel connections, meters)",
+  "ru": "Последовательное и параллельное соединение, измерительные приборы",
+  "en": "Series and parallel connections, meters"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz ketma-ket, parallel va aralash ulangan o'tkazgichlarning umumiy qarshiligini hisoblaysiz, zanjirning har bir qismidagi tok kuchi va kuchlanishni topasiz, simmetrik sxemalar va muvozanatlashgan ko'prikni soddalashtirasiz, ampermetr va voltmetrni to'g'ri ulaysiz, ularning ko'rsatishini aniqlaysiz, shunt va qo'shimcha qarshilikni hisoblaysiz hamda reostat va kalit zanjirni qanday o'zgartirishini tushuntirasiz.",
+  "ru": "**Цель.** После урока вы будете рассчитывать общее сопротивление последовательно, параллельно и смешанно соединённых проводников, находить силу тока и напряжение на каждом участке цепи, упрощать симметричные схемы и уравновешенный мост, правильно включать амперметр и вольтметр, определять их показания, рассчитывать шунт и добавочное сопротивление, а также объяснять, как реостат и ключ изменяют цепь.",
+  "en": "**Goal.** After this lesson you will calculate the total resistance of conductors connected in series, in parallel and in mixed circuits, find the current and the voltage in every part of a circuit, simplify symmetric circuits and a balanced bridge, connect an ammeter and a voltmeter correctly, determine their readings, calculate a shunt and an additional resistance, and explain how a rheostat and a switch change a circuit."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Elektr zanjir va uning sxemasi (Electric circuit and its diagram)",
+  "ru": "1. Электрическая цепь и её схема",
+  "en": "1. Electric circuit and its diagram"
+ },
+ {
+  "t": "p",
+  "uz": "**Elektr zanjir (electric circuit)** tok manbai, iste'molchilar (rezistor, lampa, isitkich), ulovchi simlar va kalitdan iborat. Zanjirning shartli belgilar bilan chizilgan tasviri **sxema (circuit diagram)** deyiladi. Hisob-kitobda ulovchi simlarning qarshiligi nolga teng deb olinadi, shuning uchun bitta sim bilan tutashgan barcha nuqtalarning potensiali bir xil — sxemada ularni bitta nuqta deb qarash mumkin.",
+  "ru": "**Электрическая цепь** состоит из источника тока, потребителей (резистор, лампа, нагреватель), соединительных проводов и ключа. Изображение цепи условными знаками называют **схемой**. В расчётах сопротивление соединительных проводов считают равным нулю, поэтому потенциал всех точек, соединённых одним проводом, одинаков — на схеме их можно считать одной точкой.",
+  "en": "An **electric circuit** consists of a current source, consumers (a resistor, a lamp, a heater), connecting wires and a switch. A drawing of the circuit made with conventional symbols is called a **circuit diagram**. In calculations the resistance of the connecting wires is taken to be zero, so all points joined by one wire have the same potential — in a diagram they can be treated as a single point."
+ },
+ {
+  "t": "li",
+  "uz": "**Tugun (node)** — uch yoki undan ko'p sim tutashgan nuqta; **tarmoq (branch)** — ikki tugun orasidagi qism. Bitta tarmoqning hamma joyida tok kuchi bir xil.",
+  "ru": "**Узел** — точка, в которой сходятся три или более проводов; **ветвь** — участок между двумя узлами. Во всех точках одной ветви сила тока одинакова.",
+  "en": "A **node** is a point where three or more wires meet; a **branch** is the part between two nodes. The current is the same everywhere in one branch."
+ },
+ {
+  "t": "li",
+  "uz": "**Tugun qoidasi (junction rule):** tugunda zaryad to'planmaydi, shuning uchun tugunga kirayotgan toklar yig'indisi undan chiqayotgan toklar yig'indisiga teng. **Misol.** Tugunga $5\\ \\mathrm{A}$ va $2\\ \\mathrm{A}$ tok kiradi, undan $4\\ \\mathrm{A}$ va $I$ chiqadi: $I=5+2-4=3\\ \\mathrm{A}$.",
+  "ru": "**Правило узла:** заряд в узле не накапливается, поэтому сумма токов, входящих в узел, равна сумме токов, выходящих из него. **Пример.** В узел входят токи $5\\ \\mathrm{A}$ и $2\\ \\mathrm{A}$, выходят $4\\ \\mathrm{A}$ и $I$: $I=5+2-4=3\\ \\mathrm{A}$.",
+  "en": "**Junction rule:** charge does not accumulate at a node, so the sum of the currents entering a node equals the sum of the currents leaving it. **Example.** Currents of $5\\ \\mathrm{A}$ and $2\\ \\mathrm{A}$ enter a node, $4\\ \\mathrm{A}$ and $I$ leave it: $I=5+2-4=3\\ \\mathrm{A}$."
+ },
+ {
+  "t": "m",
+  "m": "I_1+I_2+\\dots=I_1'+I_2'+\\dots"
+ },
+ {
+  "t": "li",
+  "uz": "Zanjirning ikki nuqtasi orasidagi **umumiy (ekvivalent) qarshilik** deb shunday bitta rezistor qarshiligiga aytiladiki, uni shu nuqtalar orasiga qo'yganda zanjirning qolgan qismidagi tok va kuchlanishlar o'zgarmaydi: $R=\\frac{U}{I}$, bunda $U$ — nuqtalar orasidagi kuchlanish, $I$ — tarmoqlanmagan qismdagi tok kuchi.",
+  "ru": "**Общим (эквивалентным) сопротивлением** между двумя точками цепи называют сопротивление такого одного резистора, при включении которого между этими точками токи и напряжения в остальной части цепи не изменяются: $R=\\frac{U}{I}$, где $U$ — напряжение между точками, $I$ — сила тока в неразветвлённой части.",
+  "en": "The **total (equivalent) resistance** between two points of a circuit is the resistance of a single resistor which, placed between these points, leaves the currents and voltages in the rest of the circuit unchanged: $R=\\frac{U}{I}$, where $U$ is the voltage between the points and $I$ is the current in the unbranched part."
+ },
+ {
+  "t": "li",
+  "uz": "Har qanday murakkab zanjir uchun ikkita asosiy ulanish turi yetarli: **ketma-ket (series)** va **parallel (parallel)**. Qolgan sxemalar shu ikkalasining birikmasiga keltiriladi yoki simmetriyadan foydalanib soddalashtiriladi.",
+  "ru": "Для любой сложной цепи достаточно двух основных видов соединения: **последовательного** и **параллельного**. Остальные схемы сводятся к их комбинации или упрощаются с помощью симметрии.",
+  "en": "Two basic kinds of connection are enough for any complex circuit: **series** and **parallel**. All other circuits are reduced to their combination or simplified by using symmetry."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Ketma-ket ulash (Series connection)",
+  "ru": "2. Последовательное соединение",
+  "en": "2. Series connection"
+ },
+ {
+  "t": "p",
+  "uz": "O'tkazgichlar **ketma-ket** ulanganda birining oxiri ikkinchisining boshiga tutashadi va ular orasida tarmoqlanish bo'lmaydi ([[F01]]). Zaryad hech qayerda to'planmagani uchun hamma o'tkazgichlardan bir xil tok o'tadi, manba kuchlanishi esa ular orasida taqsimlanadi:",
+  "ru": "При **последовательном** соединении конец одного проводника соединён с началом другого и между ними нет разветвлений ([[F01]]). Так как заряд нигде не накапливается, через все проводники идёт одинаковый ток, а напряжение источника распределяется между ними:",
+  "en": "In a **series** connection the end of one conductor is joined to the beginning of the next and there are no junctions between them ([[F01]]). Since charge accumulates nowhere, the same current flows through all the conductors, and the source voltage is shared among them:"
+ },
+ {
+  "t": "m",
+  "m": "I=I_1=I_2,\\qquad U=U_1+U_2,\\qquad R=R_1+R_2"
+ },
+ {
+  "t": "li",
+  "uz": "Isbot: $U=U_1+U_2=IR_1+IR_2=I(R_1+R_2)$, demak $R=\\frac{U}{I}=R_1+R_2$. Istalgan sondagi o'tkazgichlar uchun $R=R_1+R_2+\\dots+R_n$; umumiy qarshilik eng katta qarshilikdan ham katta.",
+  "ru": "Доказательство: $U=U_1+U_2=IR_1+IR_2=I(R_1+R_2)$, значит $R=\\frac{U}{I}=R_1+R_2$. Для любого числа проводников $R=R_1+R_2+\\dots+R_n$; общее сопротивление больше самого большого из сопротивлений.",
+  "en": "Proof: $U=U_1+U_2=IR_1+IR_2=I(R_1+R_2)$, hence $R=\\frac{U}{I}=R_1+R_2$. For any number of conductors $R=R_1+R_2+\\dots+R_n$; the total resistance is greater than the largest of the resistances."
+ },
+ {
+  "t": "li",
+  "uz": "Kuchlanish qarshiliklarga to'g'ri proporsional taqsimlanadi: $\\frac{U_1}{U_2}=\\frac{R_1}{R_2}$, ya'ni katta qarshilikda katta kuchlanish tushadi. Bitta rezistordagi kuchlanish: $U_1=U\\frac{R_1}{R_1+R_2}$ — bu **kuchlanish bo'lgichi (voltage divider)** formulasi.",
+  "ru": "Напряжение распределяется прямо пропорционально сопротивлениям: $\\frac{U_1}{U_2}=\\frac{R_1}{R_2}$, то есть на большем сопротивлении падает большее напряжение. Напряжение на одном резисторе: $U_1=U\\frac{R_1}{R_1+R_2}$ — это формула **делителя напряжения**.",
+  "en": "The voltage is shared in direct proportion to the resistances: $\\frac{U_1}{U_2}=\\frac{R_1}{R_2}$, that is, the larger resistance takes the larger voltage. The voltage across one resistor is $U_1=U\\frac{R_1}{R_1+R_2}$ — this is the **voltage divider** formula."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $R_1=4\\ \\Omega$ va $R_2=6\\ \\Omega$ rezistorlar ketma-ket ulanib, $20\\ \\mathrm{V}$ kuchlanishga ulangan. $R=10\\ \\Omega$, $I=\\frac{20}{10}=2\\ \\mathrm{A}$, $U_1=2\\cdot4=8\\ \\mathrm{V}$, $U_2=2\\cdot6=12\\ \\mathrm{V}$; tekshirish: $8+12=20\\ \\mathrm{V}$.",
+  "ru": "**Пример.** Резисторы $R_1=4\\ \\Omega$ и $R_2=6\\ \\Omega$ соединены последовательно и подключены к напряжению $20\\ \\mathrm{V}$. $R=10\\ \\Omega$, $I=\\frac{20}{10}=2\\ \\mathrm{A}$, $U_1=2\\cdot4=8\\ \\mathrm{V}$, $U_2=2\\cdot6=12\\ \\mathrm{V}$; проверка: $8+12=20\\ \\mathrm{V}$.",
+  "en": "**Example.** Resistors $R_1=4\\ \\Omega$ and $R_2=6\\ \\Omega$ are connected in series to a voltage of $20\\ \\mathrm{V}$. $R=10\\ \\Omega$, $I=\\frac{20}{10}=2\\ \\mathrm{A}$, $U_1=2\\cdot4=8\\ \\mathrm{V}$, $U_2=2\\cdot6=12\\ \\mathrm{V}$; check: $8+12=20\\ \\mathrm{V}$."
+ },
+ {
+  "t": "li",
+  "uz": "$n$ ta bir xil $R_1$ qarshilikli o'tkazgich ketma-ket ulansa, $R=nR_1$ va har biriga $\\frac{U}{n}$ kuchlanish to'g'ri keladi. Archa girlyandasi shunday tuzilgan: $220\\ \\mathrm{V}$ tarmoqqa har biri $5.5\\ \\mathrm{V}$ ga mo'ljallangan $\\frac{220}{5.5}=40$ ta lampochka ketma-ket ulanadi.",
+  "ru": "Если $n$ одинаковых проводников сопротивлением $R_1$ соединить последовательно, то $R=nR_1$ и на каждый приходится напряжение $\\frac{U}{n}$. Так устроена ёлочная гирлянда: в сеть $220\\ \\mathrm{V}$ включают последовательно $\\frac{220}{5.5}=40$ лампочек, рассчитанных на $5.5\\ \\mathrm{V}$ каждая.",
+  "en": "If $n$ identical conductors of resistance $R_1$ are connected in series, then $R=nR_1$ and each takes a voltage $\\frac{U}{n}$. A Christmas garland is built this way: $\\frac{220}{5.5}=40$ bulbs, each rated for $5.5\\ \\mathrm{V}$, are connected in series to a $220\\ \\mathrm{V}$ supply."
+ },
+ {
+  "t": "li",
+  "uz": "Ketma-ket zanjirning kamchiligi: bitta element uzilsa (lampochka kuysa), butun zanjirda tok to'xtaydi. Afzalligi: qo'shimcha rezistor ulab, tok kuchini kamaytirish va kuchlanishning bir qismini «o'ziga olish» mumkin. Kalit, saqlagich va ampermetr ham iste'molchiga ketma-ket ulanadi.",
+  "ru": "Недостаток последовательной цепи: при разрыве одного элемента (перегорела лампочка) ток прекращается во всей цепи. Преимущество: включив дополнительный резистор, можно уменьшить силу тока и «взять на себя» часть напряжения. Ключ, предохранитель и амперметр тоже включают последовательно с потребителем.",
+  "en": "A drawback of a series circuit: if one element breaks (a bulb burns out), the current stops in the whole circuit. An advantage: by adding a resistor one can reduce the current and «take over» part of the voltage. A switch, a fuse and an ammeter are also connected in series with the consumer."
+ },
+ {
+  "t": "li",
+  "uz": "Ketma-ket ulangan o'tkazgichlar bo'ylab potensial pasayib boradi. Bir xil uzunlikdagi uchta sim uchun potensialning masofaga bog'lanish grafigida siniq chiziq hosil bo'ladi: qaysi qismda chiziq tikroq bo'lsa, o'sha simning qarshiligi katta, chunki $U_k=IR_k$.",
+  "ru": "Вдоль последовательно соединённых проводников потенциал убывает. Для трёх проводов одинаковой длины график зависимости потенциала от расстояния — ломаная: на каком участке она круче, у того провода сопротивление больше, так как $U_k=IR_k$.",
+  "en": "The potential decreases along conductors connected in series. For three wires of equal length the graph of potential against distance is a broken line: the wire on whose section the line is steeper has the larger resistance, because $U_k=IR_k$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B1-L34-F01.png",
+   "ru": "figures/B1-L34-F01-ru.png",
+   "en": "figures/B1-L34-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Parallel ulash (Parallel connection)",
+  "ru": "3. Параллельное соединение",
+  "en": "3. Parallel connection"
+ },
+ {
+  "t": "p",
+  "uz": "O'tkazgichlar **parallel** ulanganda ularning boshlari bitta tugunga, oxirlari ikkinchi tugunga tutashadi ([[F02]]). Ikkala tugun orasidagi potensiallar farqi yagona, shuning uchun hamma tarmoqlarda kuchlanish bir xil, umumiy tok esa tarmoqlarga bo'linadi:",
+  "ru": "При **параллельном** соединении начала проводников соединены в одном узле, а концы — в другом ([[F02]]). Разность потенциалов между двумя узлами одна, поэтому напряжение на всех ветвях одинаково, а общий ток делится между ветвями:",
+  "en": "In a **parallel** connection the beginnings of the conductors are joined at one node and their ends at another ([[F02]]). There is a single potential difference between the two nodes, so the voltage across all branches is the same, while the total current divides among the branches:"
+ },
+ {
+  "t": "m",
+  "m": "U=U_1=U_2,\\qquad I=I_1+I_2,\\qquad \\frac{1}{R}=\\frac{1}{R_1}+\\frac{1}{R_2}"
+ },
+ {
+  "t": "li",
+  "uz": "Isbot: $I=I_1+I_2=\\frac{U}{R_1}+\\frac{U}{R_2}$, ikkala tomonni $U$ ga bo'lsak, $\\frac{1}{R}=\\frac{1}{R_1}+\\frac{1}{R_2}$. Ya'ni parallel ulashda o'tkazuvchanliklar $G=\\frac{1}{R}$ qo'shiladi.",
+  "ru": "Доказательство: $I=I_1+I_2=\\frac{U}{R_1}+\\frac{U}{R_2}$; разделив обе части на $U$, получим $\\frac{1}{R}=\\frac{1}{R_1}+\\frac{1}{R_2}$. То есть при параллельном соединении складываются проводимости $G=\\frac{1}{R}$.",
+  "en": "Proof: $I=I_1+I_2=\\frac{U}{R_1}+\\frac{U}{R_2}$; dividing both sides by $U$ gives $\\frac{1}{R}=\\frac{1}{R_1}+\\frac{1}{R_2}$. That is, in a parallel connection the conductances $G=\\frac{1}{R}$ add."
+ },
+ {
+  "t": "li",
+  "uz": "Ikkita o'tkazgich uchun qulay ko'rinish: $R=\\frac{R_1R_2}{R_1+R_2}$ («ko'paytma bo'lingan yig'indi»). Bu formula faqat ikkita rezistor uchun; uchta va undan ko'p bo'lsa, teskari qiymatlar qo'shiladi yoki rezistorlar juftlab birlashtiriladi.",
+  "ru": "Удобный вид для двух проводников: $R=\\frac{R_1R_2}{R_1+R_2}$ («произведение, делённое на сумму»). Эта формула только для двух резисторов; если их три и более, складывают обратные величины или объединяют резисторы попарно.",
+  "en": "A convenient form for two conductors: $R=\\frac{R_1R_2}{R_1+R_2}$ («product over sum»). This formula is for two resistors only; for three or more, add the reciprocals or combine the resistors in pairs."
+ },
+ {
+  "t": "li",
+  "uz": "Umumiy qarshilik har doim eng kichik qarshilikdan ham kichik: har bir yangi tarmoq tok uchun qo'shimcha yo'l ochadi. **Misol.** $R_1=4\\ \\Omega$, $R_2=6\\ \\Omega$: $R=\\frac{4\\cdot6}{4+6}=2.4\\ \\Omega$. $12\\ \\mathrm{V}$ kuchlanishda $I_1=3\\ \\mathrm{A}$, $I_2=2\\ \\mathrm{A}$, $I=5\\ \\mathrm{A}$; tekshirish: $\\frac{12}{2.4}=5\\ \\mathrm{A}$.",
+  "ru": "Общее сопротивление всегда меньше самого малого из сопротивлений: каждая новая ветвь открывает току дополнительный путь. **Пример.** $R_1=4\\ \\Omega$, $R_2=6\\ \\Omega$: $R=\\frac{4\\cdot6}{4+6}=2.4\\ \\Omega$. При напряжении $12\\ \\mathrm{V}$ $I_1=3\\ \\mathrm{A}$, $I_2=2\\ \\mathrm{A}$, $I=5\\ \\mathrm{A}$; проверка: $\\frac{12}{2.4}=5\\ \\mathrm{A}$.",
+  "en": "The total resistance is always smaller than the smallest of the resistances: every new branch opens an additional path for the current. **Example.** $R_1=4\\ \\Omega$, $R_2=6\\ \\Omega$: $R=\\frac{4\\cdot6}{4+6}=2.4\\ \\Omega$. At a voltage of $12\\ \\mathrm{V}$, $I_1=3\\ \\mathrm{A}$, $I_2=2\\ \\mathrm{A}$, $I=5\\ \\mathrm{A}$; check: $\\frac{12}{2.4}=5\\ \\mathrm{A}$."
+ },
+ {
+  "t": "li",
+  "uz": "Tok qarshiliklarga teskari proporsional bo'linadi: $\\frac{I_1}{I_2}=\\frac{R_2}{R_1}$ — kichik qarshilikli tarmoqdan katta tok o'tadi. Bitta tarmoqdagi tok: $I_1=I\\frac{R_2}{R_1+R_2}$ — suratda **qo'shni** tarmoqning qarshiligi turadi (**tok bo'lgichi**, current divider).",
+  "ru": "Ток делится обратно пропорционально сопротивлениям: $\\frac{I_1}{I_2}=\\frac{R_2}{R_1}$ — через ветвь с меньшим сопротивлением идёт больший ток. Ток в одной ветви: $I_1=I\\frac{R_2}{R_1+R_2}$ — в числителе стоит сопротивление **соседней** ветви (**делитель тока**).",
+  "en": "The current divides in inverse proportion to the resistances: $\\frac{I_1}{I_2}=\\frac{R_2}{R_1}$ — the branch with the smaller resistance carries the larger current. The current in one branch is $I_1=I\\frac{R_2}{R_1+R_2}$ — the numerator contains the resistance of the **other** branch (**current divider**)."
+ },
+ {
+  "t": "li",
+  "uz": "$n$ ta bir xil $R_1$ qarshilikli o'tkazgich parallel ulansa, $R=\\frac{R_1}{n}$ va har biridan $\\frac{I}{n}$ tok o'tadi. Shu $n$ ta o'tkazgichni ketma-ket ulashdan parallel ulashga o'tkazilsa, umumiy qarshilik $n^2$ marta kamayadi: $\\frac{nR_1}{R_1/n}=n^2$.",
+  "ru": "Если $n$ одинаковых проводников сопротивлением $R_1$ соединить параллельно, то $R=\\frac{R_1}{n}$ и через каждый идёт ток $\\frac{I}{n}$. При переходе этих $n$ проводников от последовательного соединения к параллельному общее сопротивление уменьшается в $n^2$ раз: $\\frac{nR_1}{R_1/n}=n^2$.",
+  "en": "If $n$ identical conductors of resistance $R_1$ are connected in parallel, then $R=\\frac{R_1}{n}$ and each carries a current $\\frac{I}{n}$. When these $n$ conductors are switched from series to parallel, the total resistance decreases $n^2$ times: $\\frac{nR_1}{R_1/n}=n^2$."
+ },
+ {
+  "t": "li",
+  "uz": "Uydagi barcha iste'molchilar tarmoqqa parallel ulanadi: har biri bir xil $220\\ \\mathrm{V}$ kuchlanish oladi va boshqalaridan mustaqil yoqib-o'chiriladi. Yangi asbob ulanganda umumiy qarshilik kamayadi, umumiy tok ortadi — shuning uchun juda ko'p asbob bir vaqtda ulansa, saqlagich zanjirni uzadi.",
+  "ru": "Все потребители в доме включены в сеть параллельно: каждый получает одно и то же напряжение $220\\ \\mathrm{V}$ и включается независимо от других. При включении нового прибора общее сопротивление уменьшается, общий ток растёт — поэтому при одновременном включении слишком многих приборов предохранитель размыкает цепь.",
+  "en": "All consumers in a house are connected to the mains in parallel: each receives the same voltage of $220\\ \\mathrm{V}$ and is switched independently of the others. When a new appliance is connected, the total resistance decreases and the total current grows — so if too many appliances are on at once, the fuse breaks the circuit."
+ },
+ {
+  "t": "li",
+  "uz": "O'zgarmas kuchlanish manbaiga ulangan rezistorga parallel qilib ikkinchi rezistor ulansa, birinchisidagi tok o'zgarmaydi ($I_1=\\frac{U}{R_1}$), faqat umumiy tok ortadi. Ketma-ket qo'shilganda esa, aksincha, birinchi rezistordagi tok va kuchlanish kamayadi.",
+  "ru": "Если к резистору, подключённому к источнику постоянного напряжения, параллельно подключить второй резистор, ток в первом не изменится ($I_1=\\frac{U}{R_1}$), возрастёт только общий ток. При последовательном добавлении, наоборот, ток и напряжение на первом резисторе уменьшаются.",
+  "en": "If a second resistor is connected in parallel with a resistor fed by a constant-voltage source, the current in the first one does not change ($I_1=\\frac{U}{R_1}$); only the total current grows. When it is added in series, on the contrary, the current and the voltage of the first resistor decrease."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B1-L34-F02.png",
+   "ru": "figures/B1-L34-F02-ru.png",
+   "en": "figures/B1-L34-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Aralash ulash va ekvivalent sxemalar (Mixed circuits)",
+  "ru": "4. Смешанное соединение и эквивалентные схемы",
+  "en": "4. Mixed circuits and equivalent diagrams"
+ },
+ {
+  "t": "p",
+  "uz": "**Aralash ulash (mixed connection)** — ketma-ket va parallel qismlardan tuzilgan zanjir. U bosqichma-bosqich soddalashtiriladi: avval aniq ketma-ket yoki aniq parallel bo'lgan guruh bitta ekvivalent rezistor bilan almashtiriladi, so'ng sxema qayta chiziladi va jarayon bitta rezistor qolguncha takrorlanadi ([[F03]]).",
+  "ru": "**Смешанное соединение** — цепь, составленная из последовательных и параллельных участков. Её упрощают шаг за шагом: сначала группу, которая явно последовательна или явно параллельна, заменяют одним эквивалентным резистором, затем схему перерисовывают и повторяют процесс, пока не останется один резистор ([[F03]]).",
+  "en": "A **mixed connection** is a circuit made of series and parallel parts. It is simplified step by step: first a group that is clearly in series or clearly in parallel is replaced by one equivalent resistor, then the diagram is redrawn and the process is repeated until a single resistor remains ([[F03]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $R_1=2\\ \\Omega$ rezistorga $R_2=3\\ \\Omega$ va $R_3=6\\ \\Omega$ dan iborat parallel guruh ketma-ket ulangan. $R_{23}=\\frac{3\\cdot6}{3+6}=2\\ \\Omega$, $R=R_1+R_{23}=4\\ \\Omega$.",
+  "ru": "**Пример.** К резистору $R_1=2\\ \\Omega$ последовательно подключена параллельная группа из $R_2=3\\ \\Omega$ и $R_3=6\\ \\Omega$. $R_{23}=\\frac{3\\cdot6}{3+6}=2\\ \\Omega$, $R=R_1+R_{23}=4\\ \\Omega$.",
+  "en": "**Example.** A parallel group of $R_2=3\\ \\Omega$ and $R_3=6\\ \\Omega$ is connected in series with a resistor $R_1=2\\ \\Omega$. $R_{23}=\\frac{3\\cdot6}{3+6}=2\\ \\Omega$, $R=R_1+R_{23}=4\\ \\Omega$."
+ },
+ {
+  "t": "li",
+  "uz": "Tok va kuchlanishlarni topish teskari tartibda boradi: umumiy tok $I=\\frac{U}{R}$ → ketma-ket qismlardagi kuchlanishlar ($U_1=IR_1$, $U_{23}=IR_{23}$) → parallel tarmoqlardagi toklar ($I_2=\\frac{U_{23}}{R_2}$, $I_3=\\frac{U_{23}}{R_3}$). Har bosqichda $U=U_1+U_{23}$ va $I=I_2+I_3$ bilan tekshiring.",
+  "ru": "Токи и напряжения находят в обратном порядке: общий ток $I=\\frac{U}{R}$ → напряжения на последовательных участках ($U_1=IR_1$, $U_{23}=IR_{23}$) → токи в параллельных ветвях ($I_2=\\frac{U_{23}}{R_2}$, $I_3=\\frac{U_{23}}{R_3}$). На каждом шаге проверяйте $U=U_1+U_{23}$ и $I=I_2+I_3$.",
+  "en": "Currents and voltages are found in the reverse order: the total current $I=\\frac{U}{R}$ → the voltages across the series parts ($U_1=IR_1$, $U_{23}=IR_{23}$) → the currents in the parallel branches ($I_2=\\frac{U_{23}}{R_2}$, $I_3=\\frac{U_{23}}{R_3}$). At each step check $U=U_1+U_{23}$ and $I=I_2+I_3$."
+ },
+ {
+  "t": "li",
+  "uz": "Ikki o'tkazgichning ketma-ket ($R'$) va parallel ($R''$) ulangandagi qarshiliklari berilsa, $R_1+R_2=R'$ va $R_1R_2=R'R''$ bo'ladi, ya'ni $R_1$, $R_2$ — $x^2-R'x+R'R''=0$ tenglamaning ildizlari. **Misol.** $R'=9\\ \\Omega$, $R''=2\\ \\Omega$: $x^2-9x+18=0$, qarshiliklar $3\\ \\Omega$ va $6\\ \\Omega$.",
+  "ru": "Если заданы сопротивления двух проводников при последовательном ($R'$) и параллельном ($R''$) соединении, то $R_1+R_2=R'$ и $R_1R_2=R'R''$, то есть $R_1$, $R_2$ — корни уравнения $x^2-R'x+R'R''=0$. **Пример.** $R'=9\\ \\Omega$, $R''=2\\ \\Omega$: $x^2-9x+18=0$, сопротивления $3\\ \\Omega$ и $6\\ \\Omega$.",
+  "en": "If the resistances of two conductors in series ($R'$) and in parallel ($R''$) are given, then $R_1+R_2=R'$ and $R_1R_2=R'R''$, that is, $R_1$, $R_2$ are the roots of $x^2-R'x+R'R''=0$. **Example.** $R'=9\\ \\Omega$, $R''=2\\ \\Omega$: $x^2-9x+18=0$, the resistances are $3\\ \\Omega$ and $6\\ \\Omega$."
+ },
+ {
+  "t": "li",
+  "uz": "**Qisqa tutashuv.** Rezistorga parallel qilib qarshiliksiz sim (yoki ulangan kalit) qo'yilsa, uning ikki uchi potensiali tenglashadi, rezistordan tok o'tmaydi va uni sxemadan olib tashlash mumkin. Uzilgan kalit tarmog'idan tok o'tmaydi — bu tarmoq ham olib tashlanadi.",
+  "ru": "**Короткое замыкание.** Если параллельно резистору включить провод без сопротивления (или замкнутый ключ), потенциалы его концов выравниваются, ток через резистор не идёт и его можно убрать из схемы. Через ветвь с разомкнутым ключом ток не идёт — эту ветвь тоже убирают.",
+  "en": "**Short circuit.** If a wire without resistance (or a closed switch) is placed in parallel with a resistor, the potentials of its ends become equal, no current flows through the resistor and it can be removed from the diagram. No current flows through a branch with an open switch — that branch is removed too."
+ },
+ {
+  "t": "li",
+  "uz": "**Halqa va ko'pburchaklar.** Ikki nuqta orasidagi qarshilikni topishda shu nuqtalarni tutashtiruvchi ikki yo'l parallel ulangan bo'ladi. Qarshiligi $R$ bo'lgan bir jinsli sim halqaning diametral qarama-qarshi nuqtalari orasida $\\frac{R}{2}$ va $\\frac{R}{2}$ parallel: $\\frac{R}{4}$. Tomonlari $R$ dan bo'lgan uchburchakning ikki uchi orasida $R$ va $2R$ parallel: $\\frac{2R}{3}$.",
+  "ru": "**Кольцо и многоугольники.** При нахождении сопротивления между двумя точками два пути, соединяющие эти точки, оказываются включёнными параллельно. Между диаметрально противоположными точками однородного проволочного кольца сопротивлением $R$ параллельно включены $\\frac{R}{2}$ и $\\frac{R}{2}$: $\\frac{R}{4}$. Между двумя вершинами треугольника со сторонами по $R$ параллельно включены $R$ и $2R$: $\\frac{2R}{3}$.",
+  "en": "**Ring and polygons.** When finding the resistance between two points, the two paths joining these points are connected in parallel. Between diametrically opposite points of a uniform wire ring of resistance $R$ there are $\\frac{R}{2}$ and $\\frac{R}{2}$ in parallel: $\\frac{R}{4}$. Between two vertices of a triangle with sides $R$ each there are $R$ and $2R$ in parallel: $\\frac{2R}{3}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B1-L34-F03.png",
+   "ru": "figures/B1-L34-F03-ru.png",
+   "en": "figures/B1-L34-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Teng potensialli nuqtalar.** Agar sxemaning ikki nuqtasi potensiali teng bo'lsa, ular orasidagi rezistordan tok o'tmaydi: uni olib tashlash yoki nuqtalarni sim bilan tutashtirish mumkin — umumiy qarshilik o'zgarmaydi. Bunday nuqtalar simmetriyadan topiladi.",
+  "ru": "**Точки равного потенциала.** Если потенциалы двух точек схемы равны, ток через резистор между ними не идёт: его можно убрать или соединить точки проводом — общее сопротивление не изменится. Такие точки находят из симметрии.",
+  "en": "**Points of equal potential.** If two points of a circuit have equal potentials, no current flows through a resistor between them: it can be removed or the points can be joined by a wire — the total resistance does not change. Such points are found from symmetry."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'prik sxemasi (bridge circuit)** ([[F04]]): $R_1$, $R_2$ yuqori tarmoqni, $R_3$, $R_4$ pastki tarmoqni tashkil qiladi, $R_5$ ularning o'rta nuqtalarini tutashtiradi. Agar $\\frac{R_1}{R_2}=\\frac{R_3}{R_4}$ bo'lsa, o'rta nuqtalar potensiali teng, $R_5$ dan tok o'tmaydi — ko'prik **muvozanatlashgan**. U holda $R=\\frac{(R_1+R_2)(R_3+R_4)}{R_1+R_2+R_3+R_4}$ va natija $R_5$ ga bog'liq emas.",
+  "ru": "**Мостовая схема** ([[F04]]): $R_1$, $R_2$ образуют верхнюю ветвь, $R_3$, $R_4$ — нижнюю, $R_5$ соединяет их средние точки. Если $\\frac{R_1}{R_2}=\\frac{R_3}{R_4}$, потенциалы средних точек равны, ток через $R_5$ не идёт — мост **уравновешен**. Тогда $R=\\frac{(R_1+R_2)(R_3+R_4)}{R_1+R_2+R_3+R_4}$ и результат не зависит от $R_5$.",
+  "en": "**Bridge circuit** ([[F04]]): $R_1$, $R_2$ form the upper branch, $R_3$, $R_4$ the lower one, and $R_5$ joins their midpoints. If $\\frac{R_1}{R_2}=\\frac{R_3}{R_4}$, the midpoints have equal potentials and no current flows through $R_5$ — the bridge is **balanced**. Then $R=\\frac{(R_1+R_2)(R_3+R_4)}{R_1+R_2+R_3+R_4}$ and the result does not depend on $R_5$."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{R_1}{R_2}=\\frac{R_3}{R_4}\\ \\Rightarrow\\ I_5=0"
+ },
+ {
+  "t": "li",
+  "uz": "Muvozanatlashgan ko'prik noma'lum qarshilikni aniq o'lchashda ishlatiladi (**Uitston ko'prigi**, Wheatstone bridge): o'rtadagi galvanometr nolni ko'rsatguncha ma'lum qarshiliklar tanlanadi, so'ng $R_x=R_3\\frac{R_2}{R_1}$. Natija manba kuchlanishiga bog'liq emas.",
+  "ru": "Уравновешенный мост применяют для точного измерения неизвестного сопротивления (**мост Уитстона**): известные сопротивления подбирают, пока гальванометр в середине не покажет нуль, тогда $R_x=R_3\\frac{R_2}{R_1}$. Результат не зависит от напряжения источника.",
+  "en": "A balanced bridge is used to measure an unknown resistance accurately (**Wheatstone bridge**): the known resistances are adjusted until the galvanometer in the middle reads zero, then $R_x=R_3\\frac{R_2}{R_1}$. The result does not depend on the source voltage."
+ },
+ {
+  "t": "li",
+  "uz": "**O'zgarmas tok zanjiridagi kondensator.** Zaryadlanib bo'lgan kondensator orqali tok o'tmaydi, shuning uchun u ulangan tarmoq uzilgan deb olinadi. Kondensatordagi kuchlanish u parallel ulangan qism kuchlanishiga teng, zaryadi $q=CU_C$.",
+  "ru": "**Конденсатор в цепи постоянного тока.** Через заряженный конденсатор ток не идёт, поэтому ветвь с ним считают разомкнутой. Напряжение на конденсаторе равно напряжению участка, параллельно которому он включён, заряд $q=CU_C$.",
+  "en": "**A capacitor in a direct-current circuit.** No current flows through a charged capacitor, so its branch is treated as open. The voltage across the capacitor equals the voltage of the part it is connected in parallel with, and its charge is $q=CU_C$."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B1-L34-F04.png",
+   "ru": "figures/B1-L34-F04-ru.png",
+   "en": "figures/B1-L34-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Ampermetr va voltmetr (Ammeter and voltmeter)",
+  "ru": "5. Амперметр и вольтметр",
+  "en": "5. Ammeter and voltmeter"
+ },
+ {
+  "t": "p",
+  "uz": "**Ampermetr (ammeter)** tok kuchini o'lchaydi va zanjirga o'lchanayotgan element bilan **ketma-ket** ulanadi; **voltmetr (voltmeter)** kuchlanishni o'lchaydi va elementga **parallel** ulanadi ([[F05]]). Asbob zanjirni o'zgartirmasligi uchun ampermetrning qarshiligi $R_A$ iloji boricha kichik, voltmetrning qarshiligi $R_V$ iloji boricha katta bo'lishi kerak. **Ideal** ampermetrda $R_A=0$, ideal voltmetrda $R_V\\to\\infty$.",
+  "ru": "**Амперметр** измеряет силу тока и включается в цепь **последовательно** с измеряемым элементом; **вольтметр** измеряет напряжение и включается **параллельно** элементу ([[F05]]). Чтобы прибор не изменял цепь, сопротивление амперметра $R_A$ должно быть как можно меньше, а сопротивление вольтметра $R_V$ — как можно больше. У **идеального** амперметра $R_A=0$, у идеального вольтметра $R_V\\to\\infty$.",
+  "en": "An **ammeter** measures current and is connected in **series** with the element being measured; a **voltmeter** measures voltage and is connected in **parallel** with the element ([[F05]]). So that the instrument does not change the circuit, the ammeter resistance $R_A$ must be as small as possible and the voltmeter resistance $R_V$ as large as possible. For an **ideal** ammeter $R_A=0$, for an ideal voltmeter $R_V\\to\\infty$."
+ },
+ {
+  "t": "li",
+  "uz": "Sxemani hisoblashda ideal ampermetr oddiy sim bilan, ideal voltmetr esa uzilish bilan almashtiriladi. Asbobning «+» qisqichi manbaning musbat qutbi tomoniga ulanadi.",
+  "ru": "При расчёте схемы идеальный амперметр заменяют обычным проводом, а идеальный вольтметр — разрывом. Клемму «+» прибора подключают со стороны положительного полюса источника.",
+  "en": "When a circuit is calculated, an ideal ammeter is replaced by a plain wire and an ideal voltmeter by a break. The «+» terminal of the instrument is connected on the side of the positive pole of the source."
+ },
+ {
+  "t": "li",
+  "uz": "Real asbob o'zi ulangan joydagi kattalikni ko'rsatadi: ampermetr — o'zidan o'tayotgan tokni, voltmetr — o'z qisqichlari orasidagi kuchlanishni, ya'ni $U_V=I_VR_V$. Voltmetrning o'zi ham $R_V$ qarshilikli rezistor: u $R$ ga parallel ulanganda bu qismning qarshiligi $\\frac{RR_V}{R+R_V}$ gacha kamayadi va ko'rsatish haqiqiy qiymatdan kichik chiqadi.",
+  "ru": "Реальный прибор показывает величину в месте своего включения: амперметр — ток, идущий через него, вольтметр — напряжение между своими клеммами, то есть $U_V=I_VR_V$. Вольтметр сам является резистором сопротивлением $R_V$: при подключении параллельно $R$ сопротивление этого участка уменьшается до $\\frac{RR_V}{R+R_V}$ и показание получается меньше истинного значения.",
+  "en": "A real instrument shows the quantity at the place where it is connected: an ammeter shows the current through itself, a voltmeter the voltage between its own terminals, that is, $U_V=I_VR_V$. A voltmeter is itself a resistor of resistance $R_V$: connected in parallel with $R$ it lowers the resistance of that part to $\\frac{RR_V}{R+R_V}$, and the reading comes out smaller than the true value."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $R=3\\ \\Omega$ rezistor $6\\ \\mathrm{V}$ manbaga ulangan, haqiqiy tok $2\\ \\mathrm{A}$. Qarshiligi $R_A=0.03\\ \\Omega$ bo'lgan ampermetr ulansa, $I=\\frac{6}{3.03}\\approx1.98\\ \\mathrm{A}$ — tok $1$ foizga kamaydi. $R_A\\ll R$ bo'lsa, xato sezilmaydi.",
+  "ru": "**Пример.** Резистор $R=3\\ \\Omega$ подключён к источнику $6\\ \\mathrm{V}$, истинный ток $2\\ \\mathrm{A}$. При включении амперметра сопротивлением $R_A=0.03\\ \\Omega$ $I=\\frac{6}{3.03}\\approx1.98\\ \\mathrm{A}$ — ток уменьшился на $1$ процент. При $R_A\\ll R$ ошибка незаметна.",
+  "en": "**Example.** A resistor $R=3\\ \\Omega$ is connected to a $6\\ \\mathrm{V}$ source, the true current is $2\\ \\mathrm{A}$. With an ammeter of resistance $R_A=0.03\\ \\Omega$ in the circuit, $I=\\frac{6}{3.03}\\approx1.98\\ \\mathrm{A}$ — the current has dropped by $1$ percent. If $R_A\\ll R$ the error is unnoticeable."
+ },
+ {
+  "t": "li",
+  "uz": "**Xato ulashlar.** Ampermetr iste'molchisiz to'g'ridan-to'g'ri manbaga (yoki rezistorga parallel) ulansa, qarshiligi kichik bo'lgani uchun undan juda katta tok o'tadi va asbob kuyadi. Voltmetr zanjirga ketma-ket ulansa, katta qarshiligi tufayli tok deyarli to'xtaydi va voltmetr deyarli manba kuchlanishini ko'rsatadi.",
+  "ru": "**Ошибочные включения.** Если амперметр подключить без потребителя прямо к источнику (или параллельно резистору), из-за малого сопротивления через него пойдёт очень большой ток и прибор сгорит. Если вольтметр включить в цепь последовательно, из-за большого сопротивления ток почти прекратится и вольтметр покажет почти напряжение источника.",
+  "en": "**Wrong connections.** If an ammeter is connected directly to the source without a consumer (or in parallel with a resistor), a very large current flows through its small resistance and the instrument burns out. If a voltmeter is connected in series, its large resistance almost stops the current and the voltmeter shows almost the source voltage."
+ },
+ {
+  "t": "li",
+  "uz": "**Qarshilikni ampermetr va voltmetr bilan o'lchash** $R=\\frac{U}{I}$ ikki xil sxemada bajariladi. Voltmetr faqat rezistorga parallel ulansa, ampermetr rezistor va voltmetr toklari yig'indisini ko'rsatadi — bu sxema $R\\ll R_V$ (kichik qarshiliklar) uchun aniq. Voltmetr rezistor va ampermetrga birga parallel ulansa, u ikkalasidagi kuchlanishlar yig'indisini ko'rsatadi — bu sxema $R\\gg R_A$ (katta qarshiliklar) uchun aniq.",
+  "ru": "**Измерение сопротивления амперметром и вольтметром** $R=\\frac{U}{I}$ выполняют по двум схемам. Если вольтметр включён параллельно только резистору, амперметр показывает сумму токов резистора и вольтметра — эта схема точна при $R\\ll R_V$ (малые сопротивления). Если вольтметр включён параллельно резистору вместе с амперметром, он показывает сумму напряжений на них — эта схема точна при $R\\gg R_A$ (большие сопротивления).",
+  "en": "**Measuring a resistance with an ammeter and a voltmeter**, $R=\\frac{U}{I}$, is done with two circuits. If the voltmeter is in parallel with the resistor only, the ammeter shows the sum of the resistor and voltmeter currents — this circuit is accurate for $R\\ll R_V$ (small resistances). If the voltmeter is in parallel with the resistor together with the ammeter, it shows the sum of their voltages — this circuit is accurate for $R\\gg R_A$ (large resistances)."
+ },
+ {
+  "t": "li",
+  "uz": "Ketma-ket ulangan ikki voltmetr umumiy kuchlanishni qarshiliklariga proporsional bo'lib oladi: $\\frac{U_1}{U_2}=\\frac{R_{V1}}{R_{V2}}$, ko'rsatishlari yig'indisi umumiy kuchlanishga teng. Shu usulda har biri $150\\ \\mathrm{V}$ ga mo'ljallangan ikkita bir xil voltmetr bilan $220\\ \\mathrm{V}$ ni o'lchash mumkin: har biri $110\\ \\mathrm{V}$ ni ko'rsatadi.",
+  "ru": "Два последовательно соединённых вольтметра делят общее напряжение пропорционально своим сопротивлениям: $\\frac{U_1}{U_2}=\\frac{R_{V1}}{R_{V2}}$, сумма показаний равна общему напряжению. Так двумя одинаковыми вольтметрами, рассчитанными на $150\\ \\mathrm{V}$ каждый, можно измерить $220\\ \\mathrm{V}$: каждый покажет $110\\ \\mathrm{V}$.",
+  "en": "Two voltmeters connected in series share the total voltage in proportion to their resistances: $\\frac{U_1}{U_2}=\\frac{R_{V1}}{R_{V2}}$, and the sum of the readings equals the total voltage. In this way two identical voltmeters, each rated for $150\\ \\mathrm{V}$, can measure $220\\ \\mathrm{V}$: each will show $110\\ \\mathrm{V}$."
+ },
+ {
+  "t": "li",
+  "uz": "Asbob shkalasining **bo'lim qiymati (scale division)** — ikki qo'shni chiziq orasiga to'g'ri keladigan kattalik: o'lchash chegarasi bo'limlar soniga bo'linadi. Chegarasi $3\\ \\mathrm{A}$ va $30$ bo'limli ampermetrda bo'lim qiymati $0.1\\ \\mathrm{A}$.",
+  "ru": "**Цена деления** шкалы прибора — величина, приходящаяся на промежуток между двумя соседними штрихами: предел измерения делят на число делений. У амперметра с пределом $3\\ \\mathrm{A}$ и $30$ делениями цена деления $0.1\\ \\mathrm{A}$.",
+  "en": "The **scale division** of an instrument is the quantity corresponding to the gap between two neighbouring marks: the measuring limit is divided by the number of divisions. For an ammeter with a limit of $3\\ \\mathrm{A}$ and $30$ divisions the scale division is $0.1\\ \\mathrm{A}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B1-L34-F05.png",
+   "ru": "figures/B1-L34-F05-ru.png",
+   "en": "figures/B1-L34-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Shunt va qo'shimcha qarshilik (Shunt and additional resistance)",
+  "ru": "6. Шунт и добавочное сопротивление",
+  "en": "6. Shunt and additional resistance"
+ },
+ {
+  "t": "p",
+  "uz": "Har bir asbob strelkasi to'la og'adigan eng katta tok $I_A$ (yoki kuchlanish $U_V$) ga — **o'lchash chegarasiga (measuring limit)** ega. Chegarani $n$ marta oshirish uchun ortiqcha tok yoki kuchlanish qo'shimcha rezistorga yo'naltiriladi ([[F06]]).",
+  "ru": "Каждый прибор имеет **предел измерения** — наибольший ток $I_A$ (или напряжение $U_V$), при котором стрелка отклоняется на всю шкалу. Чтобы увеличить предел в $n$ раз, излишек тока или напряжения направляют на дополнительный резистор ([[F06]]).",
+  "en": "Every instrument has a **measuring limit** — the largest current $I_A$ (or voltage $U_V$) at which the pointer deflects over the whole scale. To increase the limit $n$ times, the excess current or voltage is directed to an additional resistor ([[F06]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Shunt (shunt)** — ampermetrga **parallel** ulanadigan kichik qarshilikli rezistor. Ampermetr va shuntdagi kuchlanish bir xil: $I_AR_A=I_sR_s$. Zanjirdagi tok $I=nI_A$ bo'lishi uchun shuntdan $I_s=(n-1)I_A$ tok o'tishi kerak, bundan:",
+  "ru": "**Шунт** — резистор малого сопротивления, включаемый **параллельно** амперметру. Напряжения на амперметре и шунте одинаковы: $I_AR_A=I_sR_s$. Чтобы ток в цепи был $I=nI_A$, через шунт должен идти ток $I_s=(n-1)I_A$, откуда:",
+  "en": "A **shunt** is a resistor of small resistance connected in **parallel** with the ammeter. The voltages across the ammeter and the shunt are equal: $I_AR_A=I_sR_s$. For the circuit current to be $I=nI_A$, the shunt must carry $I_s=(n-1)I_A$, hence:"
+ },
+ {
+  "t": "m",
+  "m": "R_s=\\frac{R_A}{n-1},\\qquad n=\\frac{I}{I_A}=1+\\frac{R_A}{R_s}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Qarshiligi $R_A=1.8\\ \\Omega$ bo'lgan ampermetr chegarasini $10$ marta oshirish uchun $R_s=\\frac{1.8}{10-1}=0.2\\ \\Omega$ shunt kerak. Shuntli ampermetrning umumiy qarshiligi $\\frac{R_A}{n}=0.18\\ \\Omega$ — yanada kichik, ya'ni asbob zanjirga kamroq ta'sir qiladi.",
+  "ru": "**Пример.** Чтобы увеличить предел амперметра сопротивлением $R_A=1.8\\ \\Omega$ в $10$ раз, нужен шунт $R_s=\\frac{1.8}{10-1}=0.2\\ \\Omega$. Общее сопротивление амперметра с шунтом $\\frac{R_A}{n}=0.18\\ \\Omega$ — ещё меньше, то есть прибор меньше влияет на цепь.",
+  "en": "**Example.** To increase $10$ times the limit of an ammeter of resistance $R_A=1.8\\ \\Omega$, a shunt $R_s=\\frac{1.8}{10-1}=0.2\\ \\Omega$ is needed. The total resistance of the ammeter with the shunt is $\\frac{R_A}{n}=0.18\\ \\Omega$ — even smaller, so the instrument affects the circuit less."
+ },
+ {
+  "t": "li",
+  "uz": "Shunt ulangach, asbob ko'rsatishini $n$ ga ko'paytirish kerak: shkalaning bo'lim qiymati $n$ marta ortadi. Agar shuntning qarshiligi ampermetrnikidan $k$ marta kichik bo'lsa, $n=k+1$: ampermetr $I_A$ ni ko'rsatganda zanjirdagi tok $(k+1)I_A$.",
+  "ru": "После включения шунта показание прибора нужно умножать на $n$: цена деления шкалы возрастает в $n$ раз. Если сопротивление шунта в $k$ раз меньше сопротивления амперметра, то $n=k+1$: когда амперметр показывает $I_A$, ток в цепи равен $(k+1)I_A$.",
+  "en": "With a shunt connected, the reading of the instrument must be multiplied by $n$: the scale division increases $n$ times. If the shunt resistance is $k$ times smaller than that of the ammeter, then $n=k+1$: when the ammeter shows $I_A$, the circuit current is $(k+1)I_A$."
+ },
+ {
+  "t": "li",
+  "uz": "**Qo'shimcha qarshilik (additional resistance)** voltmetrga **ketma-ket** ulanadi. Ikkalasidan bir xil tok o'tadi: $\\frac{U_V}{R_V}=\\frac{U_d}{R_d}$. O'lchanadigan kuchlanish $U=nU_V$ bo'lishi uchun qo'shimcha rezistorga $U_d=(n-1)U_V$ tushishi kerak, bundan:",
+  "ru": "**Добавочное сопротивление** включают **последовательно** с вольтметром. Через оба идёт одинаковый ток: $\\frac{U_V}{R_V}=\\frac{U_d}{R_d}$. Чтобы измеряемое напряжение было $U=nU_V$, на добавочный резистор должно приходиться $U_d=(n-1)U_V$, откуда:",
+  "en": "An **additional resistance** is connected in **series** with the voltmeter. The same current flows through both: $\\frac{U_V}{R_V}=\\frac{U_d}{R_d}$. For the measured voltage to be $U=nU_V$, the additional resistor must take $U_d=(n-1)U_V$, hence:"
+ },
+ {
+  "t": "m",
+  "m": "R_d=(n-1)R_V,\\qquad n=\\frac{U}{U_V}=1+\\frac{R_d}{R_V}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Qarshiligi $R_V=1\\ \\mathrm{k}\\Omega$ bo'lgan voltmetr chegarasini $4$ marta oshirish uchun $R_d=(4-1)\\cdot1=3\\ \\mathrm{k}\\Omega$ kerak. Asbobning umumiy qarshiligi $nR_V=4\\ \\mathrm{k}\\Omega$ gacha ortadi — voltmetr zanjirga yanada kam ta'sir qiladi.",
+  "ru": "**Пример.** Чтобы увеличить предел вольтметра сопротивлением $R_V=1\\ \\mathrm{k}\\Omega$ в $4$ раза, нужно $R_d=(4-1)\\cdot1=3\\ \\mathrm{k}\\Omega$. Общее сопротивление прибора возрастает до $nR_V=4\\ \\mathrm{k}\\Omega$ — вольтметр ещё меньше влияет на цепь.",
+  "en": "**Example.** To increase $4$ times the limit of a voltmeter of resistance $R_V=1\\ \\mathrm{k}\\Omega$, $R_d=(4-1)\\cdot1=3\\ \\mathrm{k}\\Omega$ is needed. The total resistance of the instrument rises to $nR_V=4\\ \\mathrm{k}\\Omega$ — the voltmeter affects the circuit even less."
+ },
+ {
+  "t": "li",
+  "uz": "Ampermetr ham, voltmetr ham bitta sezgir asbob — **galvanometr (galvanometer)** asosida yasaladi: unga shunt ulansa ampermetr, katta qo'shimcha qarshilik ulansa voltmetr hosil bo'ladi. Ko'p chegarali asboblarda (multimetr) bir nechta shunt va qo'shimcha qarshilik almashlab ulagich bilan tanlanadi.",
+  "ru": "И амперметр, и вольтметр изготавливают на основе одного чувствительного прибора — **гальванометра**: с шунтом получается амперметр, с большим добавочным сопротивлением — вольтметр. В многопредельных приборах (мультиметр) несколько шунтов и добавочных сопротивлений выбирают переключателем.",
+  "en": "Both an ammeter and a voltmeter are built on one sensitive instrument — a **galvanometer**: with a shunt it becomes an ammeter, with a large additional resistance a voltmeter. In multi-range instruments (a multimeter) several shunts and additional resistances are selected with a switch."
+ },
+ {
+  "t": "li",
+  "uz": "Ikkita bir xil shunt: bittasi chegarani $n_1=1+\\frac{R_A}{R_s}$ marta oshirsa, ikkalasi parallel ulanganda shunt qarshiligi $\\frac{R_s}{2}$ bo'ladi va $n_2=1+\\frac{2R_A}{R_s}=2n_1-1$. Masalan, $n_1=4$ bo'lsa, $n_2=7$.",
+  "ru": "Два одинаковых шунта: если один увеличивает предел в $n_1=1+\\frac{R_A}{R_s}$ раз, то при параллельном включении обоих сопротивление шунта равно $\\frac{R_s}{2}$ и $n_2=1+\\frac{2R_A}{R_s}=2n_1-1$. Например, при $n_1=4$ получаем $n_2=7$.",
+  "en": "Two identical shunts: if one increases the limit $n_1=1+\\frac{R_A}{R_s}$ times, then with both in parallel the shunt resistance is $\\frac{R_s}{2}$ and $n_2=1+\\frac{2R_A}{R_s}=2n_1-1$. For example, for $n_1=4$ we get $n_2=7$."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B1-L34-F06.png",
+   "ru": "figures/B1-L34-F06-ru.png",
+   "en": "figures/B1-L34-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Reostat, potensiometr va kalit (Rheostat, potentiometer and switch)",
+  "ru": "7. Реостат, потенциометр и ключ",
+  "en": "7. Rheostat, potentiometer and switch"
+ },
+ {
+  "t": "p",
+  "uz": "**Reostat (rheostat)** — qarshiligini o'zgartirish mumkin bo'lgan rezistor: surgich sim o'ramlari bo'ylab siljiganda tok o'tadigan qism uzunligi, demak $R=\\rho\\frac{l}{S}$ qarshilik o'zgaradi. Reostat iste'molchiga ketma-ket ulanib, zanjirdagi tok kuchini boshqaradi.",
+  "ru": "**Реостат** — резистор, сопротивление которого можно изменять: при перемещении ползунка по виткам провода меняется длина участка, по которому идёт ток, а значит, и сопротивление $R=\\rho\\frac{l}{S}$. Реостат включают последовательно с потребителем и управляют силой тока в цепи.",
+  "en": "A **rheostat** is a resistor whose resistance can be changed: as the slider moves along the turns of wire, the length of the current-carrying part and hence the resistance $R=\\rho\\frac{l}{S}$ change. A rheostat is connected in series with the consumer and controls the current in the circuit."
+ },
+ {
+  "t": "li",
+  "uz": "To'la qarshiligi $R_0$ bo'lgan reostat $R$ rezistorga ketma-ket ulangan va kuchlanish $U$ o'zgarmas bo'lsin. Reostatning kiritilgan qismi $R_x$ ($0\\le R_x\\le R_0$) bo'lsa, $I=\\frac{U}{R+R_x}$. Tok kuchi $\\frac{U}{R+R_0}$ dan $\\frac{U}{R}$ gacha o'zgaradi.",
+  "ru": "Пусть реостат с полным сопротивлением $R_0$ включён последовательно с резистором $R$, а напряжение $U$ постоянно. Если введённая часть реостата равна $R_x$ ($0\\le R_x\\le R_0$), то $I=\\frac{U}{R+R_x}$. Сила тока меняется от $\\frac{U}{R+R_0}$ до $\\frac{U}{R}$.",
+  "en": "Let a rheostat of full resistance $R_0$ be connected in series with a resistor $R$ at a constant voltage $U$. If the part of the rheostat in the circuit is $R_x$ ($0\\le R_x\\le R_0$), then $I=\\frac{U}{R+R_x}$. The current varies from $\\frac{U}{R+R_0}$ to $\\frac{U}{R}$."
+ },
+ {
+  "t": "li",
+  "uz": "Savolda «surgich chapga surildi» deyilsa, avval tok reostatning qaysi qismidan o'tishini sxemadan aniqlang: kiritilgan qism uzaysa — qarshilik ortadi, tok kamayadi, lampa xiralashadi; qisqarsa — aksincha. Rezistordagi kuchlanish $U_R=IR$ tok bilan birga o'zgaradi, reostatdagi kuchlanish esa $U-U_R$.",
+  "ru": "Если в вопросе сказано «ползунок сдвинули влево», сначала определите по схеме, через какую часть реостата идёт ток: если введённая часть удлиняется — сопротивление растёт, ток уменьшается, лампа тускнеет; если укорачивается — наоборот. Напряжение на резисторе $U_R=IR$ меняется вместе с током, а напряжение на реостате равно $U-U_R$.",
+  "en": "If a question says «the slider is moved to the left», first find from the diagram which part of the rheostat carries the current: if that part gets longer, the resistance grows, the current decreases and the lamp dims; if it gets shorter — the opposite. The resistor voltage $U_R=IR$ changes together with the current, and the rheostat voltage is $U-U_R$."
+ },
+ {
+  "t": "li",
+  "uz": "**Potensiometr (potentiometer)** — uchta qisqichli reostat, kuchlanish bo'lgichi sifatida ulanadi: manba butun o'ramga ulanadi, chiqish kuchlanishi esa surgich va bir uch orasidan olinadi. Yuklamasiz holda $U'=U\\frac{R_x}{R_0}$. **Misol.** $U=12\\ \\mathrm{V}$, surgich o'ramning uchdan bir qismida: $U'=4\\ \\mathrm{V}$.",
+  "ru": "**Потенциометр** — реостат с тремя клеммами, включаемый как делитель напряжения: источник подключают ко всей обмотке, а выходное напряжение снимают между ползунком и одним концом. Без нагрузки $U'=U\\frac{R_x}{R_0}$. **Пример.** $U=12\\ \\mathrm{V}$, ползунок на трети обмотки: $U'=4\\ \\mathrm{V}$.",
+  "en": "A **potentiometer** is a rheostat with three terminals connected as a voltage divider: the source is connected to the whole winding, and the output voltage is taken between the slider and one end. Without a load $U'=U\\frac{R_x}{R_0}$. **Example.** $U=12\\ \\mathrm{V}$, the slider at one third of the winding: $U'=4\\ \\mathrm{V}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Kalit (switch)** ulanganda yoki uzilganda sxema o'zgaradi — har ikki holat uchun alohida ekvivalent sxema chizing. Rezistorga parallel ulangan kalit yopilsa, rezistor qisqa tutashadi va umumiy qarshilik kamayadi; yangi parallel tarmoqni ulovchi kalit yopilsa ham umumiy qarshilik kamayadi, o'zgarmas kuchlanishda umumiy tok ortadi.",
+  "ru": "При замыкании или размыкании **ключа** схема меняется — для каждого состояния рисуйте отдельную эквивалентную схему. Если замкнуть ключ, включённый параллельно резистору, резистор закорачивается и общее сопротивление уменьшается; при замыкании ключа, подключающего новую параллельную ветвь, общее сопротивление тоже уменьшается, а общий ток при постоянном напряжении растёт.",
+  "en": "When a **switch** is closed or opened the circuit changes — draw a separate equivalent diagram for each state. If a switch in parallel with a resistor is closed, the resistor is short-circuited and the total resistance decreases; closing a switch that connects a new parallel branch also lowers the total resistance, and at constant voltage the total current grows."
+ },
+ {
+  "t": "li",
+  "uz": "**Termistor (thermistor)** qarshiligi qizdirilganda keskin kamayadigan, **fotorezistor (photoresistor)** esa yoritilganda kamayadigan yarimo'tkazgichli rezistor. Ular oddiy rezistor bilan ketma-ket yoki parallel ulanganda zanjirdagi tok o'zgarishidan temperatura yoki yoritilganlik aniqlanadi — datchiklar shunday ishlaydi.",
+  "ru": "**Термистор** — полупроводниковый резистор, сопротивление которого резко уменьшается при нагревании, а **фоторезистор** — при освещении. Когда они включены последовательно или параллельно с обычным резистором, по изменению тока в цепи определяют температуру или освещённость — так работают датчики.",
+  "en": "A **thermistor** is a semiconductor resistor whose resistance drops sharply on heating, and a **photoresistor** one whose resistance drops on illumination. When they are connected in series or in parallel with an ordinary resistor, the temperature or the illumination is found from the change of the current — this is how sensors work."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Test uchun tez tekshiruvlar (Quick checks for tests)",
+  "ru": "8. Быстрые проверки для тестов",
+  "en": "8. Quick checks for tests"
+ },
+ {
+  "t": "li",
+  "uz": "Ketma-ket: umumiy qarshilik eng kattasidan katta. Parallel: eng kichigidan kichik. Javob bu chegaradan chiqsa — xato bor.",
+  "ru": "Последовательно: общее сопротивление больше наибольшего. Параллельно: меньше наименьшего. Если ответ выходит за эти границы — есть ошибка.",
+  "en": "Series: the total resistance is greater than the largest one. Parallel: smaller than the smallest one. If the answer is outside these bounds, there is a mistake."
+ },
+ {
+  "t": "li",
+  "uz": "Ikki bir xil rezistor parallel — yarmi; $R$ va $2R$ parallel — $\\frac{2R}{3}$; $R$ va $3R$ parallel — $\\frac{3R}{4}$. Butun karrali juftlarni yodda tuting: $3\\ \\Omega$ va $6\\ \\Omega$ — $2\\ \\Omega$; $4\\ \\Omega$ va $12\\ \\Omega$ — $3\\ \\Omega$; $6\\ \\Omega$ va $12\\ \\Omega$ — $4\\ \\Omega$.",
+  "ru": "Два одинаковых резистора параллельно — половина; $R$ и $2R$ параллельно — $\\frac{2R}{3}$; $R$ и $3R$ параллельно — $\\frac{3R}{4}$. Запомните «целые» пары: $3\\ \\Omega$ и $6\\ \\Omega$ — $2\\ \\Omega$; $4\\ \\Omega$ и $12\\ \\Omega$ — $3\\ \\Omega$; $6\\ \\Omega$ и $12\\ \\Omega$ — $4\\ \\Omega$.",
+  "en": "Two identical resistors in parallel give half; $R$ and $2R$ in parallel give $\\frac{2R}{3}$; $R$ and $3R$ in parallel give $\\frac{3R}{4}$. Remember the «integer» pairs: $3\\ \\Omega$ and $6\\ \\Omega$ give $2\\ \\Omega$; $4\\ \\Omega$ and $12\\ \\Omega$ give $3\\ \\Omega$; $6\\ \\Omega$ and $12\\ \\Omega$ give $4\\ \\Omega$."
+ },
+ {
+  "t": "li",
+  "uz": "Murakkab sxemada tugunlarni harflar bilan belgilang va sim bilan tutashgan nuqtalarga bir xil harf qo'ying; so'ng har bir rezistor qaysi ikki harf orasida turganini yozib chiqing — bir xil juftlik orasidagilar parallel.",
+  "ru": "В сложной схеме обозначьте узлы буквами и точкам, соединённым проводом, дайте одну букву; затем выпишите, между какими двумя буквами стоит каждый резистор — стоящие между одной и той же парой параллельны.",
+  "en": "In a complex circuit label the nodes with letters and give the same letter to points joined by a wire; then write down between which two letters each resistor stands — those between the same pair are in parallel."
+ },
+ {
+  "t": "li",
+  "uz": "Ketma-ket qismda $U\\sim R$, parallel qismda $I\\sim\\frac{1}{R}$. Nisbat so'ralsa, tok yoki kuchlanishning o'zini hisoblash shart emas.",
+  "ru": "На последовательном участке $U\\sim R$, на параллельном $I\\sim\\frac{1}{R}$. Если спрашивают отношение, сами ток или напряжение вычислять не обязательно.",
+  "en": "In a series part $U\\sim R$, in a parallel part $I\\sim\\frac{1}{R}$. If a ratio is asked, there is no need to calculate the current or the voltage itself."
+ },
+ {
+  "t": "li",
+  "uz": "Ampermetr — ketma-ket, shunt — parallel, $R_s=\\frac{R_A}{n-1}$; voltmetr — parallel, qo'shimcha qarshilik — ketma-ket, $R_d=(n-1)R_V$. Ikkala formulada ham $n$ emas, $n-1$ turadi.",
+  "ru": "Амперметр — последовательно, шунт — параллельно, $R_s=\\frac{R_A}{n-1}$; вольтметр — параллельно, добавочное сопротивление — последовательно, $R_d=(n-1)R_V$. В обеих формулах стоит не $n$, а $n-1$.",
+  "en": "Ammeter — in series, shunt — in parallel, $R_s=\\frac{R_A}{n-1}$; voltmeter — in parallel, additional resistance — in series, $R_d=(n-1)R_V$. Both formulas contain $n-1$, not $n$."
+ },
+ {
+  "t": "li",
+  "uz": "«Ideal» so'zi bo'lmasa va asbob qarshiligi berilgan bo'lsa, asbobni oddiy rezistor sifatida sxemaga kiriting. Ko'prik sxemasida avval $\\frac{R_1}{R_2}=\\frac{R_3}{R_4}$ shartini tekshiring.",
+  "ru": "Если нет слова «идеальный» и задано сопротивление прибора, включите прибор в схему как обычный резистор. В мостовой схеме сначала проверьте условие $\\frac{R_1}{R_2}=\\frac{R_3}{R_4}$.",
+  "en": "If the word «ideal» is absent and the resistance of the instrument is given, include the instrument in the circuit as an ordinary resistor. In a bridge circuit first check the condition $\\frac{R_1}{R_2}=\\frac{R_3}{R_4}$."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Tugun qoidasi",
+    "ru": "Правило узла",
+    "en": "Junction rule",
+    "m": "I=I_1+I_2"
+   },
+   {
+    "uz": "Ketma-ket ulash",
+    "ru": "Последовательное соединение",
+    "en": "Series connection",
+    "m": "R=R_1+R_2"
+   },
+   {
+    "uz": "Kuchlanish taqsimoti",
+    "ru": "Распределение напряжения",
+    "en": "Voltage sharing",
+    "m": "\\frac{U_1}{U_2}=\\frac{R_1}{R_2}"
+   },
+   {
+    "uz": "Parallel ulash",
+    "ru": "Параллельное соединение",
+    "en": "Parallel connection",
+    "m": "\\frac{1}{R}=\\frac{1}{R_1}+\\frac{1}{R_2}"
+   },
+   {
+    "uz": "Ikki rezistor parallel",
+    "ru": "Два резистора параллельно",
+    "en": "Two resistors in parallel",
+    "m": "R=\\frac{R_1R_2}{R_1+R_2}"
+   },
+   {
+    "uz": "Tok taqsimoti",
+    "ru": "Распределение тока",
+    "en": "Current sharing",
+    "m": "\\frac{I_1}{I_2}=\\frac{R_2}{R_1}"
+   },
+   {
+    "uz": "Bir xil rezistorlar ketma-ket",
+    "ru": "Одинаковые последовательно",
+    "en": "Identical in series",
+    "m": "R=nR_1"
+   },
+   {
+    "uz": "Bir xil rezistorlar parallel",
+    "ru": "Одинаковые параллельно",
+    "en": "Identical in parallel",
+    "m": "R=\\frac{R_1}{n}"
+   },
+   {
+    "uz": "Muvozanatlashgan ko'prik",
+    "ru": "Уравновешенный мост",
+    "en": "Balanced bridge",
+    "m": "\\frac{R_1}{R_2}=\\frac{R_3}{R_4}"
+   },
+   {
+    "uz": "Shunt",
+    "ru": "Шунт",
+    "en": "Shunt",
+    "m": "R_s=\\frac{R_A}{n-1}"
+   },
+   {
+    "uz": "Qo'shimcha qarshilik",
+    "ru": "Добавочное сопротивление",
+    "en": "Additional resistance",
+    "m": "R_d=(n-1)R_V"
+   },
+   {
+    "uz": "Reostatli zanjir",
+    "ru": "Цепь с реостатом",
+    "en": "Circuit with a rheostat",
+    "m": "I=\\frac{U}{R+R_x}"
+   }
+  ]
+ }
+]

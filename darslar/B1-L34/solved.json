@@ -1,0 +1,925 @@
+[
+ {
+  "id": "B1-L34-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) Qarshiliklari $8\\ \\Omega$, $15\\ \\Omega$ va $27\\ \\Omega$ bo'lgan rezistorlar ketma-ket ulangan. Umumiy qarshilikni toping. b) Ketma-ket ulangan $12\\ \\Omega$, $30\\ \\Omega$ va $R_3$ rezistorlarning umumiy qarshiligi $60\\ \\Omega$. $R_3$ ni toping. c) Har biri $6\\ \\Omega$ bo'lgan $9$ ta rezistor ketma-ket ulangan. Umumiy qarshilikni toping.",
+   "ru": "а) Резисторы сопротивлениями $8\\ \\Omega$, $15\\ \\Omega$ и $27\\ \\Omega$ соединены последовательно. Найдите общее сопротивление. б) Общее сопротивление последовательно соединённых резисторов $12\\ \\Omega$, $30\\ \\Omega$ и $R_3$ равно $60\\ \\Omega$. Найдите $R_3$. в) Последовательно соединены $9$ резисторов по $6\\ \\Omega$. Найдите общее сопротивление.",
+   "en": "a) Resistors of $8\\ \\Omega$, $15\\ \\Omega$ and $27\\ \\Omega$ are connected in series. Find the total resistance. b) The total resistance of resistors $12\\ \\Omega$, $30\\ \\Omega$ and $R_3$ connected in series is $60\\ \\Omega$. Find $R_3$. c) $9$ resistors of $6\\ \\Omega$ each are connected in series. Find the total resistance."
+  },
+  "figure": "figures/B1-L34-S01.png",
+  "solution": {
+   "uz": [
+    "a) Qarshiliklar qo'shiladi: $$R=R_1+R_2+R_3=8+15+27=50\\ \\Omega$$",
+    "b) Yig'indidan ma'lumlarini ayiramiz: $$R_3=R-R_1-R_2=60-12-30=18\\ \\Omega$$",
+    "c) Bir xil rezistorlar: $$R=nR_1=9\\cdot6=54\\ \\Omega$$"
+   ],
+   "ru": [
+    "а) Сопротивления складываются: $$R=R_1+R_2+R_3=8+15+27=50\\ \\Omega$$",
+    "б) Вычитаем известные из суммы: $$R_3=R-R_1-R_2=60-12-30=18\\ \\Omega$$",
+    "в) Одинаковые резисторы: $$R=nR_1=9\\cdot6=54\\ \\Omega$$"
+   ],
+   "en": [
+    "a) The resistances add: $$R=R_1+R_2+R_3=8+15+27=50\\ \\Omega$$",
+    "b) Subtract the known ones from the sum: $$R_3=R-R_1-R_2=60-12-30=18\\ \\Omega$$",
+    "c) Identical resistors: $$R=nR_1=9\\cdot6=54\\ \\Omega$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ketma-ket ulash: $R=R_1+R_2$",
+    "ru": "Последовательно: $R=R_1+R_2$",
+    "en": "Series: $R=R_1+R_2$"
+   },
+   null,
+   {
+    "uz": "Bir xil $n$ ta ketma-ket: $R=nR_1$",
+    "ru": "$n$ одинаковых последовательно: $R=nR_1$",
+    "en": "$n$ identical in series: $R=nR_1$"
+   }
+  ],
+  "basis": {
+   "uz": "Ketma-ket ulashda umumiy qarshilik",
+   "ru": "Общее сопротивление при последовательном соединении",
+   "en": "Total resistance in series"
+  },
+  "answer": "50\\ \\Omega;\\ R_3=18\\ \\Omega;\\ 54\\ \\Omega",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 1–4-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) $6\\ \\Omega$ va $30\\ \\Omega$ rezistorlar parallel ulangan. Umumiy qarshilikni toping. b) $12\\ \\Omega$, $20\\ \\Omega$ va $30\\ \\Omega$ rezistorlar parallel ulangan. Umumiy qarshilikni toping. c) Har biri $45\\ \\Omega$ bo'lgan $6$ ta rezistor parallel ulangan. Umumiy qarshilikni toping.",
+   "ru": "а) Резисторы $6\\ \\Omega$ и $30\\ \\Omega$ соединены параллельно. Найдите общее сопротивление. б) Резисторы $12\\ \\Omega$, $20\\ \\Omega$ и $30\\ \\Omega$ соединены параллельно. Найдите общее сопротивление. в) Параллельно соединены $6$ резисторов по $45\\ \\Omega$. Найдите общее сопротивление.",
+   "en": "a) Resistors of $6\\ \\Omega$ and $30\\ \\Omega$ are connected in parallel. Find the total resistance. b) Resistors of $12\\ \\Omega$, $20\\ \\Omega$ and $30\\ \\Omega$ are connected in parallel. Find the total resistance. c) $6$ resistors of $45\\ \\Omega$ each are connected in parallel. Find the total resistance."
+  },
+  "figure": "figures/B1-L34-S02.png",
+  "solution": {
+   "uz": [
+    "a) Ikki rezistor uchun: $$R=\\frac{R_1R_2}{R_1+R_2}=\\frac{6\\cdot30}{6+30}=5\\ \\Omega$$",
+    "b) Teskari qiymatlarni qo'shamiz: $$\\frac{1}{R}=\\frac{1}{12}+\\frac{1}{20}+\\frac{1}{30}=\\frac{5+3+2}{60}=\\frac{1}{6}$$",
+    "Umumiy qarshilik: $$R=6\\ \\Omega$$",
+    "c) Bir xil rezistorlar: $$R=\\frac{R_1}{n}=\\frac{45}{6}=7.5\\ \\Omega$$"
+   ],
+   "ru": [
+    "а) Для двух резисторов: $$R=\\frac{R_1R_2}{R_1+R_2}=\\frac{6\\cdot30}{6+30}=5\\ \\Omega$$",
+    "б) Складываем обратные величины: $$\\frac{1}{R}=\\frac{1}{12}+\\frac{1}{20}+\\frac{1}{30}=\\frac{5+3+2}{60}=\\frac{1}{6}$$",
+    "Общее сопротивление: $$R=6\\ \\Omega$$",
+    "в) Одинаковые резисторы: $$R=\\frac{R_1}{n}=\\frac{45}{6}=7.5\\ \\Omega$$"
+   ],
+   "en": [
+    "a) For two resistors: $$R=\\frac{R_1R_2}{R_1+R_2}=\\frac{6\\cdot30}{6+30}=5\\ \\Omega$$",
+    "b) Add the reciprocals: $$\\frac{1}{R}=\\frac{1}{12}+\\frac{1}{20}+\\frac{1}{30}=\\frac{5+3+2}{60}=\\frac{1}{6}$$",
+    "Total resistance: $$R=6\\ \\Omega$$",
+    "c) Identical resistors: $$R=\\frac{R_1}{n}=\\frac{45}{6}=7.5\\ \\Omega$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ikki rezistor parallel: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "ru": "Два резистора параллельно: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "en": "Two resistors in parallel: $R=\\frac{R_1R_2}{R_1+R_2}$"
+   },
+   {
+    "uz": "Parallel ulash: $\\frac{1}{R}=\\frac{1}{R_1}+\\frac{1}{R_2}$",
+    "ru": "Параллельно: $\\frac{1}{R}=\\frac{1}{R_1}+\\frac{1}{R_2}$",
+    "en": "Parallel: $\\frac{1}{R}=\\frac{1}{R_1}+\\frac{1}{R_2}$"
+   },
+   null,
+   {
+    "uz": "Bir xil $n$ ta parallel: $R=\\frac{R_1}{n}$",
+    "ru": "$n$ одинаковых параллельно: $R=\\frac{R_1}{n}$",
+    "en": "$n$ identical in parallel: $R=\\frac{R_1}{n}$"
+   }
+  ],
+  "basis": {
+   "uz": "Parallel ulashda umumiy qarshilik",
+   "ru": "Общее сопротивление при параллельном соединении",
+   "en": "Total resistance in parallel"
+  },
+  "answer": "5\\ \\Omega;\\ 6\\ \\Omega;\\ 7.5\\ \\Omega",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 5, 7, 9-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "a) $R_1$ va $24\\ \\Omega$ rezistorlar parallel ulanganda umumiy qarshilik $8\\ \\Omega$ bo'ldi. $R_1$ ni toping. b) Umumiy qarshilik $15\\ \\Omega$ bo'lishi uchun $60\\ \\Omega$ li rezistorga parallel qilib qanday $R_x$ rezistor ulash kerak?",
+   "ru": "а) При параллельном соединении резисторов $R_1$ и $24\\ \\Omega$ общее сопротивление равно $8\\ \\Omega$. Найдите $R_1$. б) Какой резистор $R_x$ нужно подключить параллельно резистору $60\\ \\Omega$, чтобы общее сопротивление стало $15\\ \\Omega$?",
+   "en": "a) When resistors $R_1$ and $24\\ \\Omega$ are connected in parallel, the total resistance is $8\\ \\Omega$. Find $R_1$. b) What resistor $R_x$ must be connected in parallel with a $60\\ \\Omega$ resistor for the total resistance to be $15\\ \\Omega$?"
+  },
+  "figure": "figures/B1-L34-S03.png",
+  "solution": {
+   "uz": [
+    "a) Parallel ulash formulasidan: $$\\frac{1}{R_1}=\\frac{1}{R}-\\frac{1}{R_2}=\\frac{1}{8}-\\frac{1}{24}=\\frac{1}{12}$$",
+    "Demak: $$R_1=12\\ \\Omega$$",
+    "b) Xuddi shunday: $$\\frac{1}{R_x}=\\frac{1}{15}-\\frac{1}{60}=\\frac{4-1}{60}=\\frac{1}{20}$$",
+    "Demak: $$R_x=20\\ \\Omega$$",
+    "Tekshirish: $$\\frac{60\\cdot20}{60+20}=\\frac{1200}{80}=15\\ \\Omega$$"
+   ],
+   "ru": [
+    "а) Из формулы параллельного соединения: $$\\frac{1}{R_1}=\\frac{1}{R}-\\frac{1}{R_2}=\\frac{1}{8}-\\frac{1}{24}=\\frac{1}{12}$$",
+    "Значит: $$R_1=12\\ \\Omega$$",
+    "б) Аналогично: $$\\frac{1}{R_x}=\\frac{1}{15}-\\frac{1}{60}=\\frac{4-1}{60}=\\frac{1}{20}$$",
+    "Значит: $$R_x=20\\ \\Omega$$",
+    "Проверка: $$\\frac{60\\cdot20}{60+20}=\\frac{1200}{80}=15\\ \\Omega$$"
+   ],
+   "en": [
+    "a) From the parallel formula: $$\\frac{1}{R_1}=\\frac{1}{R}-\\frac{1}{R_2}=\\frac{1}{8}-\\frac{1}{24}=\\frac{1}{12}$$",
+    "Hence: $$R_1=12\\ \\Omega$$",
+    "b) Similarly: $$\\frac{1}{R_x}=\\frac{1}{15}-\\frac{1}{60}=\\frac{4-1}{60}=\\frac{1}{20}$$",
+    "Hence: $$R_x=20\\ \\Omega$$",
+    "Check: $$\\frac{60\\cdot20}{60+20}=\\frac{1200}{80}=15\\ \\Omega$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Parallel ulash: $\\frac{1}{R}=\\frac{1}{R_1}+\\frac{1}{R_2}$",
+    "ru": "Параллельно: $\\frac{1}{R}=\\frac{1}{R_1}+\\frac{1}{R_2}$",
+    "en": "Parallel: $\\frac{1}{R}=\\frac{1}{R_1}+\\frac{1}{R_2}$"
+   },
+   null,
+   null,
+   null,
+   {
+    "uz": "Ikki rezistor parallel: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "ru": "Два резистора параллельно: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "en": "Two resistors in parallel: $R=\\frac{R_1R_2}{R_1+R_2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Parallel ulashda noma'lum qarshilik",
+   "ru": "Неизвестное сопротивление при параллельном соединении",
+   "en": "Unknown resistance in parallel"
+  },
+  "answer": "R_1=12\\ \\Omega;\\ R_x=20\\ \\Omega",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 6, 8, 10-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki o'tkazgich ketma-ket ulanganda umumiy qarshilik $25\\ \\Omega$, parallel ulanganda esa $4\\ \\Omega$ bo'ladi. O'tkazgichlarning qarshiliklarini va ularning nisbatini toping.",
+   "ru": "При последовательном соединении двух проводников общее сопротивление равно $25\\ \\Omega$, а при параллельном — $4\\ \\Omega$. Найдите сопротивления проводников и их отношение.",
+   "en": "Two conductors have a total resistance of $25\\ \\Omega$ when connected in series and $4\\ \\Omega$ when connected in parallel. Find the resistances of the conductors and their ratio."
+  },
+  "figure": "figures/B1-L34-S04.png",
+  "solution": {
+   "uz": [
+    "Ketma-ket ulash: $$R_1+R_2=25$$",
+    "Parallel ulash: $$\\frac{R_1R_2}{R_1+R_2}=4\\ \\Rightarrow\\ R_1R_2=4\\cdot25=100$$",
+    "Yig'indi va ko'paytma ma'lum: $$x^2-25x+100=0$$",
+    "Ildizlar: $$x=\\frac{25\\pm\\sqrt{625-400}}{2}=\\frac{25\\pm15}{2}$$",
+    "Qarshiliklar: $$R_1=5\\ \\Omega,\\qquad R_2=20\\ \\Omega$$",
+    "Nisbat: $$\\frac{R_2}{R_1}=\\frac{20}{5}=4$$"
+   ],
+   "ru": [
+    "Последовательное соединение: $$R_1+R_2=25$$",
+    "Параллельное соединение: $$\\frac{R_1R_2}{R_1+R_2}=4\\ \\Rightarrow\\ R_1R_2=4\\cdot25=100$$",
+    "Известны сумма и произведение: $$x^2-25x+100=0$$",
+    "Корни: $$x=\\frac{25\\pm\\sqrt{625-400}}{2}=\\frac{25\\pm15}{2}$$",
+    "Сопротивления: $$R_1=5\\ \\Omega,\\qquad R_2=20\\ \\Omega$$",
+    "Отношение: $$\\frac{R_2}{R_1}=\\frac{20}{5}=4$$"
+   ],
+   "en": [
+    "Series connection: $$R_1+R_2=25$$",
+    "Parallel connection: $$\\frac{R_1R_2}{R_1+R_2}=4\\ \\Rightarrow\\ R_1R_2=4\\cdot25=100$$",
+    "The sum and the product are known: $$x^2-25x+100=0$$",
+    "Roots: $$x=\\frac{25\\pm\\sqrt{625-400}}{2}=\\frac{25\\pm15}{2}$$",
+    "The resistances: $$R_1=5\\ \\Omega,\\qquad R_2=20\\ \\Omega$$",
+    "Ratio: $$\\frac{R_2}{R_1}=\\frac{20}{5}=4$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ketma-ket ulash: $R=R_1+R_2$",
+    "ru": "Последовательно: $R=R_1+R_2$",
+    "en": "Series: $R=R_1+R_2$"
+   },
+   {
+    "uz": "Ikki rezistor parallel: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "ru": "Два резистора параллельно: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "en": "Two resistors in parallel: $R=\\frac{R_1R_2}{R_1+R_2}$"
+   },
+   {
+    "uz": "Viyet teoremasi: $x_1+x_2=p,\\ x_1x_2=q$",
+    "ru": "Теорема Виета: $x_1+x_2=p,\\ x_1x_2=q$",
+    "en": "Vieta's theorem: $x_1+x_2=p,\\ x_1x_2=q$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Yig'indi va ko'paytma orqali qarshiliklar",
+   "ru": "Сопротивления через сумму и произведение",
+   "en": "Resistances from the sum and the product"
+  },
+  "answer": "R_1=5\\ \\Omega;\\ R_2=20\\ \\Omega;\\ \\frac{R_2}{R_1}=4",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 11, 13-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) Ketma-ket ulangan ikkita bir xil o'tkazgich parallel ulansa, umumiy qarshilik necha marta kamayadi? b) Parallel ulangan $5$ ta bir xil rezistor ketma-ket ulansa, umumiy qarshilik necha marta ortadi? c) Qarshiligi $48\\ \\Omega$ bo'lgan sim $4$ ta teng bo'lakka qirqilib, bo'laklar parallel ulandi. Hosil bo'lgan qarshilikni toping.",
+   "ru": "а) Во сколько раз уменьшится общее сопротивление, если два одинаковых проводника, соединённых последовательно, соединить параллельно? б) Во сколько раз возрастёт общее сопротивление, если $5$ одинаковых резисторов, соединённых параллельно, соединить последовательно? в) Провод сопротивлением $48\\ \\Omega$ разрезали на $4$ равные части и соединили их параллельно. Найдите полученное сопротивление.",
+   "en": "a) How many times does the total resistance decrease if two identical conductors connected in series are reconnected in parallel? b) How many times does the total resistance increase if $5$ identical resistors connected in parallel are reconnected in series? c) A wire of resistance $48\\ \\Omega$ is cut into $4$ equal pieces, which are connected in parallel. Find the resulting resistance."
+  },
+  "figure": "figures/B1-L34-S05.png",
+  "solution": {
+   "uz": [
+    "a) Ketma-ket va parallel: $$R'=2R_1,\\qquad R''=\\frac{R_1}{2}$$",
+    "Nisbat: $$\\frac{R'}{R''}=\\frac{2R_1}{R_1/2}=4$$",
+    "b) Umumiy holda nisbat $n^2$: $$\\frac{nR_1}{R_1/n}=n^2=5^2=25$$",
+    "c) Bitta bo'lak qarshiligi: $$R_1=\\frac{48}{4}=12\\ \\Omega$$",
+    "To'rtta bo'lak parallel: $$R=\\frac{R_1}{4}=\\frac{12}{4}=3\\ \\Omega$$"
+   ],
+   "ru": [
+    "а) Последовательно и параллельно: $$R'=2R_1,\\qquad R''=\\frac{R_1}{2}$$",
+    "Отношение: $$\\frac{R'}{R''}=\\frac{2R_1}{R_1/2}=4$$",
+    "б) В общем случае отношение $n^2$: $$\\frac{nR_1}{R_1/n}=n^2=5^2=25$$",
+    "в) Сопротивление одной части: $$R_1=\\frac{48}{4}=12\\ \\Omega$$",
+    "Четыре части параллельно: $$R=\\frac{R_1}{4}=\\frac{12}{4}=3\\ \\Omega$$"
+   ],
+   "en": [
+    "a) In series and in parallel: $$R'=2R_1,\\qquad R''=\\frac{R_1}{2}$$",
+    "Ratio: $$\\frac{R'}{R''}=\\frac{2R_1}{R_1/2}=4$$",
+    "b) In general the ratio is $n^2$: $$\\frac{nR_1}{R_1/n}=n^2=5^2=25$$",
+    "c) Resistance of one piece: $$R_1=\\frac{48}{4}=12\\ \\Omega$$",
+    "Four pieces in parallel: $$R=\\frac{R_1}{4}=\\frac{12}{4}=3\\ \\Omega$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bir xil $n$ ta ketma-ket: $R=nR_1$",
+    "ru": "$n$ одинаковых последовательно: $R=nR_1$",
+    "en": "$n$ identical in series: $R=nR_1$"
+   },
+   null,
+   {
+    "uz": "Bir xil $n$ ta parallel: $R=\\frac{R_1}{n}$",
+    "ru": "$n$ одинаковых параллельно: $R=\\frac{R_1}{n}$",
+    "en": "$n$ identical in parallel: $R=\\frac{R_1}{n}$"
+   },
+   {
+    "uz": "Sim qarshiligi uzunlikka proporsional: $R\\sim l$",
+    "ru": "Сопротивление провода: $R\\sim l$",
+    "en": "Resistance of a wire: $R\\sim l$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Bir xil o'tkazgichlarni qayta ulash",
+   "ru": "Переключение одинаковых проводников",
+   "en": "Reconnecting identical conductors"
+  },
+  "answer": "4;\\ 25;\\ 3\\ \\Omega",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 12, 14-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$R_1=4\\ \\Omega$ rezistorga $R_2=6\\ \\Omega$ va $R_3=12\\ \\Omega$ rezistorlarning parallel guruhi ketma-ket ulangan. Zanjir uchlaridagi kuchlanish $24\\ \\mathrm{V}$. Umumiy qarshilikni va har bir rezistordagi tok kuchini toping.",
+   "ru": "К резистору $R_1=4\\ \\Omega$ последовательно подключена параллельная группа резисторов $R_2=6\\ \\Omega$ и $R_3=12\\ \\Omega$. Напряжение на концах цепи $24\\ \\mathrm{V}$. Найдите общее сопротивление и силу тока в каждом резисторе.",
+   "en": "A parallel group of resistors $R_2=6\\ \\Omega$ and $R_3=12\\ \\Omega$ is connected in series with a resistor $R_1=4\\ \\Omega$. The voltage across the circuit is $24\\ \\mathrm{V}$. Find the total resistance and the current in each resistor."
+  },
+  "figure": "figures/B1-L34-S06.png",
+  "solution": {
+   "uz": [
+    "Parallel guruh: $$R_{23}=\\frac{R_2R_3}{R_2+R_3}=\\frac{6\\cdot12}{6+12}=4\\ \\Omega$$",
+    "Umumiy qarshilik: $$R=R_1+R_{23}=4+4=8\\ \\Omega$$",
+    "Umumiy tok $R_1$ dan o'tadi: $$I_1=I=\\frac{U}{R}=\\frac{24}{8}=3\\ \\mathrm{A}$$",
+    "$R_1$ dagi kuchlanish: $$U_1=IR_1=3\\cdot4=12\\ \\mathrm{V}$$",
+    "Parallel guruhdagi kuchlanish: $$U_{23}=U-U_1=24-12=12\\ \\mathrm{V}$$",
+    "Tarmoqlardagi toklar: $$I_2=\\frac{12}{6}=2\\ \\mathrm{A},\\qquad I_3=\\frac{12}{12}=1\\ \\mathrm{A}$$",
+    "Tekshirish: $$I_2+I_3=2+1=3\\ \\mathrm{A}=I$$"
+   ],
+   "ru": [
+    "Параллельная группа: $$R_{23}=\\frac{R_2R_3}{R_2+R_3}=\\frac{6\\cdot12}{6+12}=4\\ \\Omega$$",
+    "Общее сопротивление: $$R=R_1+R_{23}=4+4=8\\ \\Omega$$",
+    "Общий ток идёт через $R_1$: $$I_1=I=\\frac{U}{R}=\\frac{24}{8}=3\\ \\mathrm{A}$$",
+    "Напряжение на $R_1$: $$U_1=IR_1=3\\cdot4=12\\ \\mathrm{V}$$",
+    "Напряжение на параллельной группе: $$U_{23}=U-U_1=24-12=12\\ \\mathrm{V}$$",
+    "Токи в ветвях: $$I_2=\\frac{12}{6}=2\\ \\mathrm{A},\\qquad I_3=\\frac{12}{12}=1\\ \\mathrm{A}$$",
+    "Проверка: $$I_2+I_3=2+1=3\\ \\mathrm{A}=I$$"
+   ],
+   "en": [
+    "The parallel group: $$R_{23}=\\frac{R_2R_3}{R_2+R_3}=\\frac{6\\cdot12}{6+12}=4\\ \\Omega$$",
+    "Total resistance: $$R=R_1+R_{23}=4+4=8\\ \\Omega$$",
+    "The total current flows through $R_1$: $$I_1=I=\\frac{U}{R}=\\frac{24}{8}=3\\ \\mathrm{A}$$",
+    "Voltage across $R_1$: $$U_1=IR_1=3\\cdot4=12\\ \\mathrm{V}$$",
+    "Voltage across the parallel group: $$U_{23}=U-U_1=24-12=12\\ \\mathrm{V}$$",
+    "Currents in the branches: $$I_2=\\frac{12}{6}=2\\ \\mathrm{A},\\qquad I_3=\\frac{12}{12}=1\\ \\mathrm{A}$$",
+    "Check: $$I_2+I_3=2+1=3\\ \\mathrm{A}=I$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ikki rezistor parallel: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "ru": "Два резистора параллельно: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "en": "Two resistors in parallel: $R=\\frac{R_1R_2}{R_1+R_2}$"
+   },
+   null,
+   {
+    "uz": "Om qonuni: $I=\\frac{U}{R}$",
+    "ru": "Закон Ома: $I=\\frac{U}{R}$",
+    "en": "Ohm's law: $I=\\frac{U}{R}$"
+   },
+   null,
+   null,
+   null,
+   {
+    "uz": "Parallel ulash: $I=I_1+I_2$",
+    "ru": "Параллельно: $I=I_1+I_2$",
+    "en": "Parallel: $I=I_1+I_2$"
+   }
+  ],
+  "basis": {
+   "uz": "Aralash ulash: toklar va kuchlanishlar",
+   "ru": "Смешанное соединение: токи и напряжения",
+   "en": "Mixed circuit: currents and voltages"
+  },
+  "answer": "R=8\\ \\Omega;\\ I_1=3\\ \\mathrm{A};\\ I_2=2\\ \\mathrm{A};\\ I_3=1\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 15, 97, 107-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Qarshiliklari $R_1=180\\ \\Omega$ va $R_2=260\\ \\Omega$ bo'lgan ikkita lampa $110\\ \\mathrm{V}$ kuchlanishli tarmoqqa ketma-ket ulangan. Lampalardan o'tayotgan tok kuchini va har bir lampadagi kuchlanishni toping.",
+   "ru": "Две лампы сопротивлениями $R_1=180\\ \\Omega$ и $R_2=260\\ \\Omega$ включены последовательно в сеть напряжением $110\\ \\mathrm{V}$. Найдите силу тока в лампах и напряжение на каждой лампе.",
+   "en": "Two lamps of resistances $R_1=180\\ \\Omega$ and $R_2=260\\ \\Omega$ are connected in series to a $110\\ \\mathrm{V}$ supply. Find the current through the lamps and the voltage across each lamp."
+  },
+  "figure": "figures/B1-L34-S07.png",
+  "solution": {
+   "uz": [
+    "Umumiy qarshilik: $$R=R_1+R_2=180+260=440\\ \\Omega$$",
+    "Tok kuchi ikkala lampada bir xil: $$I=\\frac{U}{R}=\\frac{110}{440}=0.25\\ \\mathrm{A}$$",
+    "Birinchi lampadagi kuchlanish: $$U_1=IR_1=0.25\\cdot180=45\\ \\mathrm{V}$$",
+    "Ikkinchi lampadagi kuchlanish: $$U_2=IR_2=0.25\\cdot260=65\\ \\mathrm{V}$$",
+    "Tekshirish: $$U_1+U_2=45+65=110\\ \\mathrm{V},\\qquad \\frac{U_1}{U_2}=\\frac{9}{13}=\\frac{R_1}{R_2}$$"
+   ],
+   "ru": [
+    "Общее сопротивление: $$R=R_1+R_2=180+260=440\\ \\Omega$$",
+    "Сила тока в обеих лампах одинакова: $$I=\\frac{U}{R}=\\frac{110}{440}=0.25\\ \\mathrm{A}$$",
+    "Напряжение на первой лампе: $$U_1=IR_1=0.25\\cdot180=45\\ \\mathrm{V}$$",
+    "Напряжение на второй лампе: $$U_2=IR_2=0.25\\cdot260=65\\ \\mathrm{V}$$",
+    "Проверка: $$U_1+U_2=45+65=110\\ \\mathrm{V},\\qquad \\frac{U_1}{U_2}=\\frac{9}{13}=\\frac{R_1}{R_2}$$"
+   ],
+   "en": [
+    "Total resistance: $$R=R_1+R_2=180+260=440\\ \\Omega$$",
+    "The current is the same in both lamps: $$I=\\frac{U}{R}=\\frac{110}{440}=0.25\\ \\mathrm{A}$$",
+    "Voltage across the first lamp: $$U_1=IR_1=0.25\\cdot180=45\\ \\mathrm{V}$$",
+    "Voltage across the second lamp: $$U_2=IR_2=0.25\\cdot260=65\\ \\mathrm{V}$$",
+    "Check: $$U_1+U_2=45+65=110\\ \\mathrm{V},\\qquad \\frac{U_1}{U_2}=\\frac{9}{13}=\\frac{R_1}{R_2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ketma-ket ulash: $R=R_1+R_2$",
+    "ru": "Последовательно: $R=R_1+R_2$",
+    "en": "Series: $R=R_1+R_2$"
+   },
+   {
+    "uz": "Ketma-ket ulashda tok bir xil: $I_1=I_2$",
+    "ru": "При последоват. соединении: $I_1=I_2$",
+    "en": "In series the current is the same: $I_1=I_2$"
+   },
+   {
+    "uz": "Kuchlanish: $U=IR$",
+    "ru": "Напряжение: $U=IR$",
+    "en": "Voltage: $U=IR$"
+   },
+   null,
+   {
+    "uz": "Kuchlanish taqsimoti: $\\frac{U_1}{U_2}=\\frac{R_1}{R_2}$",
+    "ru": "Распределение напряжения: $\\frac{U_1}{U_2}=\\frac{R_1}{R_2}$",
+    "en": "Voltage sharing: $\\frac{U_1}{U_2}=\\frac{R_1}{R_2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ketma-ket ulangan lampalar",
+   "ru": "Последовательно включённые лампы",
+   "en": "Lamps connected in series"
+  },
+  "answer": "I=0.25\\ \\mathrm{A};\\ U_1=45\\ \\mathrm{V};\\ U_2=65\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 63–68-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$30\\ \\mathrm{A}$ tok qarshiliklari $R_1=6\\ \\Omega$ va $R_2=9\\ \\Omega$ bo'lgan ikkita parallel tarmoqqa bo'linadi. Tarmoqlardagi kuchlanishni va har bir tarmoqdagi tok kuchini toping.",
+   "ru": "Ток $30\\ \\mathrm{A}$ разветвляется на две параллельные ветви сопротивлениями $R_1=6\\ \\Omega$ и $R_2=9\\ \\Omega$. Найдите напряжение на ветвях и силу тока в каждой ветви.",
+   "en": "A current of $30\\ \\mathrm{A}$ divides between two parallel branches of resistances $R_1=6\\ \\Omega$ and $R_2=9\\ \\Omega$. Find the voltage across the branches and the current in each branch."
+  },
+  "figure": "figures/B1-L34-S08.png",
+  "solution": {
+   "uz": [
+    "Umumiy qarshilik: $$R=\\frac{R_1R_2}{R_1+R_2}=\\frac{6\\cdot9}{6+9}=3.6\\ \\Omega$$",
+    "Tarmoqlardagi umumiy kuchlanish: $$U=IR=30\\cdot3.6=108\\ \\mathrm{V}$$",
+    "Birinchi tarmoqdagi tok: $$I_1=\\frac{U}{R_1}=\\frac{108}{6}=18\\ \\mathrm{A}$$",
+    "Ikkinchi tarmoqdagi tok: $$I_2=\\frac{U}{R_2}=\\frac{108}{9}=12\\ \\mathrm{A}$$",
+    "Tekshirish: $$\\frac{I_1}{I_2}=\\frac{18}{12}=\\frac{9}{6}=\\frac{R_2}{R_1}$$"
+   ],
+   "ru": [
+    "Общее сопротивление: $$R=\\frac{R_1R_2}{R_1+R_2}=\\frac{6\\cdot9}{6+9}=3.6\\ \\Omega$$",
+    "Общее напряжение на ветвях: $$U=IR=30\\cdot3.6=108\\ \\mathrm{V}$$",
+    "Ток в первой ветви: $$I_1=\\frac{U}{R_1}=\\frac{108}{6}=18\\ \\mathrm{A}$$",
+    "Ток во второй ветви: $$I_2=\\frac{U}{R_2}=\\frac{108}{9}=12\\ \\mathrm{A}$$",
+    "Проверка: $$\\frac{I_1}{I_2}=\\frac{18}{12}=\\frac{9}{6}=\\frac{R_2}{R_1}$$"
+   ],
+   "en": [
+    "Total resistance: $$R=\\frac{R_1R_2}{R_1+R_2}=\\frac{6\\cdot9}{6+9}=3.6\\ \\Omega$$",
+    "The common voltage of the branches: $$U=IR=30\\cdot3.6=108\\ \\mathrm{V}$$",
+    "Current in the first branch: $$I_1=\\frac{U}{R_1}=\\frac{108}{6}=18\\ \\mathrm{A}$$",
+    "Current in the second branch: $$I_2=\\frac{U}{R_2}=\\frac{108}{9}=12\\ \\mathrm{A}$$",
+    "Check: $$\\frac{I_1}{I_2}=\\frac{18}{12}=\\frac{9}{6}=\\frac{R_2}{R_1}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ikki rezistor parallel: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "ru": "Два резистора параллельно: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "en": "Two resistors in parallel: $R=\\frac{R_1R_2}{R_1+R_2}$"
+   },
+   {
+    "uz": "Kuchlanish: $U=IR$",
+    "ru": "Напряжение: $U=IR$",
+    "en": "Voltage: $U=IR$"
+   },
+   {
+    "uz": "Parallel ulash: $U_1=U_2$",
+    "ru": "Параллельно: $U_1=U_2$",
+    "en": "Parallel: $U_1=U_2$"
+   },
+   null,
+   {
+    "uz": "Tok taqsimoti: $\\frac{I_1}{I_2}=\\frac{R_2}{R_1}$",
+    "ru": "Распределение тока: $\\frac{I_1}{I_2}=\\frac{R_2}{R_1}$",
+    "en": "Current sharing: $\\frac{I_1}{I_2}=\\frac{R_2}{R_1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tokning parallel tarmoqlarga bo'linishi",
+   "ru": "Деление тока между параллельными ветвями",
+   "en": "Division of a current between parallel branches"
+  },
+  "answer": "U=108\\ \\mathrm{V};\\ I_1=18\\ \\mathrm{A};\\ I_2=12\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 86–88, 95-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) Qarshiliklari teng bo'lgan ikkita termistor o'zgarmas kuchlanish manbaiga ketma-ket ulangan. Ulardan biri qizdirilganda zanjirdagi tok kuchi $1.5$ marta ortdi. Shu termistorning qarshiligi necha marta kamaygan? b) Qarshiliklari teng bo'lgan ikkita fotorezistor shu manbaga parallel ulangan. Ulardan biri yoritilganda uning qarshiligi $5$ marta kamaydi. Umumiy tok necha marta ortadi?",
+   "ru": "а) Два термистора с равными сопротивлениями включены последовательно в цепь источника постоянного напряжения. При нагревании одного из них сила тока в цепи возросла в $1.5$ раза. Во сколько раз уменьшилось сопротивление этого термистора? б) Два фоторезистора с равными сопротивлениями подключены к этому источнику параллельно. При освещении одного из них его сопротивление уменьшилось в $5$ раз. Во сколько раз возрастёт общий ток?",
+   "en": "a) Two thermistors of equal resistance are connected in series to a constant-voltage source. When one of them is heated, the current in the circuit increases $1.5$ times. How many times has the resistance of this thermistor decreased? b) Two photoresistors of equal resistance are connected in parallel to the same source. When one of them is illuminated, its resistance decreases $5$ times. How many times does the total current increase?"
+  },
+  "figure": "figures/B1-L34-S09.png",
+  "solution": {
+   "uz": [
+    "a) Tok kuchi qizdirishdan oldin va keyin: $$I_1=\\frac{U}{2R},\\qquad I_2=\\frac{U}{R+R'}$$",
+    "Shartga ko'ra $I_2=1.5I_1$: $$\\frac{2R}{R+R'}=1.5\\ \\Rightarrow\\ R+R'=\\frac{4R}{3}$$",
+    "Qizigan termistor qarshiligi: $$R'=\\frac{R}{3}\\ \\Rightarrow\\ \\frac{R}{R'}=3$$",
+    "b) Umumiy tok oldin va keyin: $$I_1=\\frac{2U}{R},\\qquad I_2=\\frac{U}{R}+\\frac{5U}{R}=\\frac{6U}{R}$$",
+    "Nisbat: $$\\frac{I_2}{I_1}=\\frac{6}{2}=3$$"
+   ],
+   "ru": [
+    "а) Сила тока до и после нагревания: $$I_1=\\frac{U}{2R},\\qquad I_2=\\frac{U}{R+R'}$$",
+    "По условию $I_2=1.5I_1$: $$\\frac{2R}{R+R'}=1.5\\ \\Rightarrow\\ R+R'=\\frac{4R}{3}$$",
+    "Сопротивление нагретого термистора: $$R'=\\frac{R}{3}\\ \\Rightarrow\\ \\frac{R}{R'}=3$$",
+    "б) Общий ток до и после: $$I_1=\\frac{2U}{R},\\qquad I_2=\\frac{U}{R}+\\frac{5U}{R}=\\frac{6U}{R}$$",
+    "Отношение: $$\\frac{I_2}{I_1}=\\frac{6}{2}=3$$"
+   ],
+   "en": [
+    "a) The current before and after heating: $$I_1=\\frac{U}{2R},\\qquad I_2=\\frac{U}{R+R'}$$",
+    "By the condition $I_2=1.5I_1$: $$\\frac{2R}{R+R'}=1.5\\ \\Rightarrow\\ R+R'=\\frac{4R}{3}$$",
+    "Resistance of the heated thermistor: $$R'=\\frac{R}{3}\\ \\Rightarrow\\ \\frac{R}{R'}=3$$",
+    "b) The total current before and after: $$I_1=\\frac{2U}{R},\\qquad I_2=\\frac{U}{R}+\\frac{5U}{R}=\\frac{6U}{R}$$",
+    "Ratio: $$\\frac{I_2}{I_1}=\\frac{6}{2}=3$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Om qonuni: $I=\\frac{U}{R}$",
+    "ru": "Закон Ома: $I=\\frac{U}{R}$",
+    "en": "Ohm's law: $I=\\frac{U}{R}$"
+   },
+   null,
+   null,
+   {
+    "uz": "Parallel ulash: $I=I_1+I_2$",
+    "ru": "Параллельно: $I=I_1+I_2$",
+    "en": "Parallel: $I=I_1+I_2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Termistor va fotorezistorli zanjirlar",
+   "ru": "Цепи с термистором и фоторезистором",
+   "en": "Circuits with a thermistor and a photoresistor"
+  },
+  "answer": "\\frac{R}{R'}=3;\\ \\frac{I_2}{I_1}=3",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 72–76, 92–94-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Har birining qarshiligi $12\\ \\Omega$ bo'lgan to'rtta rezistor kvadrat tomonlari bo'ylab ulangan. a) Kvadratning qo'shni uchlari $A$ va $B$ orasidagi; b) qarama-qarshi uchlari $A$ va $C$ orasidagi qarshilikni toping.",
+   "ru": "Четыре резистора сопротивлением $12\\ \\Omega$ каждый соединены по сторонам квадрата. Найдите сопротивление: а) между соседними вершинами $A$ и $B$; б) между противоположными вершинами $A$ и $C$.",
+   "en": "Four resistors of $12\\ \\Omega$ each are connected along the sides of a square. Find the resistance a) between adjacent vertices $A$ and $B$; b) between opposite vertices $A$ and $C$."
+  },
+  "figure": "figures/B1-L34-S10.png",
+  "solution": {
+   "uz": [
+    "a) $A$ dan $B$ ga ikki yo'l bor: $$R'=12\\ \\Omega,\\qquad R''=12+12+12=36\\ \\Omega$$",
+    "Bu yo'llar parallel: $$R_{AB}=\\frac{12\\cdot36}{12+36}=\\frac{432}{48}=9\\ \\Omega$$",
+    "b) $A$ dan $C$ ga ikkita bir xil yo'l: $$R'=R''=12+12=24\\ \\Omega$$",
+    "Ikki bir xil tarmoq parallel: $$R_{AC}=\\frac{24}{2}=12\\ \\Omega$$"
+   ],
+   "ru": [
+    "а) Из $A$ в $B$ ведут два пути: $$R'=12\\ \\Omega,\\qquad R''=12+12+12=36\\ \\Omega$$",
+    "Эти пути параллельны: $$R_{AB}=\\frac{12\\cdot36}{12+36}=\\frac{432}{48}=9\\ \\Omega$$",
+    "б) Из $A$ в $C$ два одинаковых пути: $$R'=R''=12+12=24\\ \\Omega$$",
+    "Две одинаковые ветви параллельно: $$R_{AC}=\\frac{24}{2}=12\\ \\Omega$$"
+   ],
+   "en": [
+    "a) There are two paths from $A$ to $B$: $$R'=12\\ \\Omega,\\qquad R''=12+12+12=36\\ \\Omega$$",
+    "These paths are in parallel: $$R_{AB}=\\frac{12\\cdot36}{12+36}=\\frac{432}{48}=9\\ \\Omega$$",
+    "b) Two identical paths from $A$ to $C$: $$R'=R''=12+12=24\\ \\Omega$$",
+    "Two identical branches in parallel: $$R_{AC}=\\frac{24}{2}=12\\ \\Omega$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ketma-ket ulash: $R=R_1+R_2$",
+    "ru": "Последовательно: $R=R_1+R_2$",
+    "en": "Series: $R=R_1+R_2$"
+   },
+   {
+    "uz": "Ikki rezistor parallel: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "ru": "Два резистора параллельно: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "en": "Two resistors in parallel: $R=\\frac{R_1R_2}{R_1+R_2}$"
+   },
+   {
+    "uz": "Ikki yo'l parallel ulangan",
+    "ru": "Два пути соединены параллельно",
+    "en": "The two paths are in parallel"
+   },
+   {
+    "uz": "Bir xil $n$ ta parallel: $R=\\frac{R_1}{n}$",
+    "ru": "$n$ одинаковых параллельно: $R=\\frac{R_1}{n}$",
+    "en": "$n$ identical in parallel: $R=\\frac{R_1}{n}$"
+   }
+  ],
+  "basis": {
+   "uz": "Kvadrat shaklida ulangan rezistorlar",
+   "ru": "Резисторы, соединённые квадратом",
+   "en": "Resistors connected in a square"
+  },
+  "answer": "R_{AB}=9\\ \\Omega;\\ R_{AC}=12\\ \\Omega",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 22, 23, 25-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S11",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ko'prik sxemasida yuqori tarmoq $R_1=4\\ \\Omega$ va $R_2=8\\ \\Omega$, pastki tarmoq $R_3=6\\ \\Omega$ va $R_4=12\\ \\Omega$ rezistorlardan iborat; tarmoqlarning o'rta nuqtalari $R_5=5\\ \\Omega$ rezistor bilan tutashtirilgan. Zanjirga $36\\ \\mathrm{V}$ kuchlanish berilgan. Umumiy qarshilikni va umumiy tokni toping.",
+   "ru": "В мостовой схеме верхняя ветвь состоит из резисторов $R_1=4\\ \\Omega$ и $R_2=8\\ \\Omega$, нижняя — из $R_3=6\\ \\Omega$ и $R_4=12\\ \\Omega$; средние точки ветвей соединены резистором $R_5=5\\ \\Omega$. К цепи приложено напряжение $36\\ \\mathrm{V}$. Найдите общее сопротивление и общий ток.",
+   "en": "In a bridge circuit the upper branch consists of resistors $R_1=4\\ \\Omega$ and $R_2=8\\ \\Omega$, the lower one of $R_3=6\\ \\Omega$ and $R_4=12\\ \\Omega$; the midpoints of the branches are joined by a resistor $R_5=5\\ \\Omega$. A voltage of $36\\ \\mathrm{V}$ is applied to the circuit. Find the total resistance and the total current."
+  },
+  "figure": "figures/B1-L34-S11.png",
+  "solution": {
+   "uz": [
+    "Muvozanat shartini tekshiramiz: $$\\frac{R_1}{R_2}=\\frac{4}{8}=\\frac{1}{2}=\\frac{6}{12}=\\frac{R_3}{R_4}$$",
+    "O'rta nuqtalar potensiali teng: $$I_5=0$$",
+    "$R_5$ ni olib tashlaymiz. Tarmoqlar: $$R_{12}=4+8=12\\ \\Omega,\\qquad R_{34}=6+12=18\\ \\Omega$$",
+    "Tarmoqlar parallel: $$R=\\frac{12\\cdot18}{12+18}=\\frac{216}{30}=7.2\\ \\Omega$$",
+    "Umumiy tok: $$I=\\frac{U}{R}=\\frac{36}{7.2}=5\\ \\mathrm{A}$$",
+    "Tarmoqlardagi toklar: $$I_{12}=\\frac{36}{12}=3\\ \\mathrm{A},\\qquad I_{34}=\\frac{36}{18}=2\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "Проверяем условие равновесия: $$\\frac{R_1}{R_2}=\\frac{4}{8}=\\frac{1}{2}=\\frac{6}{12}=\\frac{R_3}{R_4}$$",
+    "Потенциалы средних точек равны: $$I_5=0$$",
+    "Убираем $R_5$. Ветви: $$R_{12}=4+8=12\\ \\Omega,\\qquad R_{34}=6+12=18\\ \\Omega$$",
+    "Ветви параллельны: $$R=\\frac{12\\cdot18}{12+18}=\\frac{216}{30}=7.2\\ \\Omega$$",
+    "Общий ток: $$I=\\frac{U}{R}=\\frac{36}{7.2}=5\\ \\mathrm{A}$$",
+    "Токи в ветвях: $$I_{12}=\\frac{36}{12}=3\\ \\mathrm{A},\\qquad I_{34}=\\frac{36}{18}=2\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "Check the balance condition: $$\\frac{R_1}{R_2}=\\frac{4}{8}=\\frac{1}{2}=\\frac{6}{12}=\\frac{R_3}{R_4}$$",
+    "The midpoints have equal potentials: $$I_5=0$$",
+    "Remove $R_5$. The branches: $$R_{12}=4+8=12\\ \\Omega,\\qquad R_{34}=6+12=18\\ \\Omega$$",
+    "The branches are in parallel: $$R=\\frac{12\\cdot18}{12+18}=\\frac{216}{30}=7.2\\ \\Omega$$",
+    "Total current: $$I=\\frac{U}{R}=\\frac{36}{7.2}=5\\ \\mathrm{A}$$",
+    "Currents in the branches: $$I_{12}=\\frac{36}{12}=3\\ \\mathrm{A},\\qquad I_{34}=\\frac{36}{18}=2\\ \\mathrm{A}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ko'prik muvozanati: $\\frac{R_1}{R_2}=\\frac{R_3}{R_4}$",
+    "ru": "Равновесие моста: $\\frac{R_1}{R_2}=\\frac{R_3}{R_4}$",
+    "en": "Bridge balance: $\\frac{R_1}{R_2}=\\frac{R_3}{R_4}$"
+   },
+   {
+    "uz": "Teng potensialli nuqtalar orasida tok yo'q",
+    "ru": "Между точками равного потенциала тока нет",
+    "en": "No current between equipotential points"
+   },
+   null,
+   {
+    "uz": "Ikki rezistor parallel: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "ru": "Два резистора параллельно: $R=\\frac{R_1R_2}{R_1+R_2}$",
+    "en": "Two resistors in parallel: $R=\\frac{R_1R_2}{R_1+R_2}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Muvozanatlashgan ko'prik",
+   "ru": "Уравновешенный мост",
+   "en": "Balanced bridge"
+  },
+  "answer": "R=7.2\\ \\Omega;\\ I=5\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 40, 41-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$R_1=5\\ \\Omega$ rezistorga $R_2=20\\ \\Omega$ va $R_3=30\\ \\Omega$ rezistorlarning parallel guruhi ketma-ket ulangan. $R_2$ tarmog'iga ulangan ideal ampermetr $1.5\\ \\mathrm{A}$ ni ko'rsatmoqda. Butun zanjir uchlariga ulangan ideal voltmetrning ko'rsatishini toping.",
+   "ru": "К резистору $R_1=5\\ \\Omega$ последовательно подключена параллельная группа резисторов $R_2=20\\ \\Omega$ и $R_3=30\\ \\Omega$. Идеальный амперметр в ветви $R_2$ показывает $1.5\\ \\mathrm{A}$. Найдите показание идеального вольтметра, подключённого к концам всей цепи.",
+   "en": "A parallel group of resistors $R_2=20\\ \\Omega$ and $R_3=30\\ \\Omega$ is connected in series with a resistor $R_1=5\\ \\Omega$. An ideal ammeter in the $R_2$ branch reads $1.5\\ \\mathrm{A}$. Find the reading of an ideal voltmeter connected across the whole circuit."
+  },
+  "figure": "figures/B1-L34-S12.png",
+  "solution": {
+   "uz": [
+    "Parallel guruhdagi kuchlanish: $$U_{23}=I_2R_2=1.5\\cdot20=30\\ \\mathrm{V}$$",
+    "$R_3$ dagi tok: $$I_3=\\frac{U_{23}}{R_3}=\\frac{30}{30}=1\\ \\mathrm{A}$$",
+    "Umumiy tok: $$I=I_2+I_3=1.5+1=2.5\\ \\mathrm{A}$$",
+    "$R_1$ dagi kuchlanish: $$U_1=IR_1=2.5\\cdot5=12.5\\ \\mathrm{V}$$",
+    "Voltmetrning ko'rsatishi: $$U=U_1+U_{23}=12.5+30=42.5\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "Напряжение на параллельной группе: $$U_{23}=I_2R_2=1.5\\cdot20=30\\ \\mathrm{V}$$",
+    "Ток в $R_3$: $$I_3=\\frac{U_{23}}{R_3}=\\frac{30}{30}=1\\ \\mathrm{A}$$",
+    "Общий ток: $$I=I_2+I_3=1.5+1=2.5\\ \\mathrm{A}$$",
+    "Напряжение на $R_1$: $$U_1=IR_1=2.5\\cdot5=12.5\\ \\mathrm{V}$$",
+    "Показание вольтметра: $$U=U_1+U_{23}=12.5+30=42.5\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "Voltage across the parallel group: $$U_{23}=I_2R_2=1.5\\cdot20=30\\ \\mathrm{V}$$",
+    "Current in $R_3$: $$I_3=\\frac{U_{23}}{R_3}=\\frac{30}{30}=1\\ \\mathrm{A}$$",
+    "Total current: $$I=I_2+I_3=1.5+1=2.5\\ \\mathrm{A}$$",
+    "Voltage across $R_1$: $$U_1=IR_1=2.5\\cdot5=12.5\\ \\mathrm{V}$$",
+    "The voltmeter reading: $$U=U_1+U_{23}=12.5+30=42.5\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kuchlanish: $U=IR$",
+    "ru": "Напряжение: $U=IR$",
+    "en": "Voltage: $U=IR$"
+   },
+   {
+    "uz": "Parallel ulash: $U_1=U_2$",
+    "ru": "Параллельно: $U_1=U_2$",
+    "en": "Parallel: $U_1=U_2$"
+   },
+   {
+    "uz": "Tugun qoidasi: $I=I_1+I_2$",
+    "ru": "Правило узла: $I=I_1+I_2$",
+    "en": "Junction rule: $I=I_1+I_2$"
+   },
+   null,
+   {
+    "uz": "Ketma-ket ulash: $U=U_1+U_2$",
+    "ru": "Последовательно: $U=U_1+U_2$",
+    "en": "Series: $U=U_1+U_2$"
+   }
+  ],
+  "basis": {
+   "uz": "Ampermetr va voltmetr ko'rsatishi",
+   "ru": "Показания амперметра и вольтметра",
+   "en": "Ammeter and voltmeter readings"
+  },
+  "answer": "U=42.5\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 111, 116–118-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Qarshiligi $R=30\\ \\Omega$ bo'lgan lampa to'la qarshiligi $R_0=90\\ \\Omega$ bo'lgan reostat bilan ketma-ket ulanib, $60\\ \\mathrm{V}$ o'zgarmas kuchlanishga ulangan. a) Reostat to'la kiritilganda; b) surgich o'rtada turganda; c) reostat to'la chiqarilganda ampermetr nimani ko'rsatadi? Surgich o'rtada turganda lampadagi kuchlanishni toping.",
+   "ru": "Лампа сопротивлением $R=30\\ \\Omega$ соединена последовательно с реостатом полного сопротивления $R_0=90\\ \\Omega$ и подключена к постоянному напряжению $60\\ \\mathrm{V}$. Что показывает амперметр: а) когда реостат введён полностью; б) когда ползунок стоит посередине; в) когда реостат полностью выведен? Найдите напряжение на лампе, когда ползунок стоит посередине.",
+   "en": "A lamp of resistance $R=30\\ \\Omega$ is connected in series with a rheostat of full resistance $R_0=90\\ \\Omega$ to a constant voltage of $60\\ \\mathrm{V}$. What does the ammeter read a) when the rheostat is fully in; b) when the slider is in the middle; c) when the rheostat is fully out? Find the voltage across the lamp when the slider is in the middle."
+  },
+  "figure": "figures/B1-L34-S13.png",
+  "solution": {
+   "uz": [
+    "a) Reostat to'la kiritilgan, $R_x=R_0$: $$I=\\frac{U}{R+R_0}=\\frac{60}{30+90}=0.5\\ \\mathrm{A}$$",
+    "b) Surgich o'rtada, $R_x=\\frac{R_0}{2}$: $$I=\\frac{60}{30+45}=0.8\\ \\mathrm{A}$$",
+    "c) Reostat chiqarilgan, $R_x=0$: $$I=\\frac{U}{R}=\\frac{60}{30}=2\\ \\mathrm{A}$$",
+    "Surgich o'rtada — lampadagi kuchlanish: $$U_R=IR=0.8\\cdot30=24\\ \\mathrm{V}$$",
+    "Reostatdagi kuchlanish: $$U_x=U-U_R=60-24=36\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "а) Реостат введён полностью, $R_x=R_0$: $$I=\\frac{U}{R+R_0}=\\frac{60}{30+90}=0.5\\ \\mathrm{A}$$",
+    "б) Ползунок посередине, $R_x=\\frac{R_0}{2}$: $$I=\\frac{60}{30+45}=0.8\\ \\mathrm{A}$$",
+    "в) Реостат выведен, $R_x=0$: $$I=\\frac{U}{R}=\\frac{60}{30}=2\\ \\mathrm{A}$$",
+    "Ползунок посередине — напряжение на лампе: $$U_R=IR=0.8\\cdot30=24\\ \\mathrm{V}$$",
+    "Напряжение на реостате: $$U_x=U-U_R=60-24=36\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "a) The rheostat is fully in, $R_x=R_0$: $$I=\\frac{U}{R+R_0}=\\frac{60}{30+90}=0.5\\ \\mathrm{A}$$",
+    "b) The slider is in the middle, $R_x=\\frac{R_0}{2}$: $$I=\\frac{60}{30+45}=0.8\\ \\mathrm{A}$$",
+    "c) The rheostat is out, $R_x=0$: $$I=\\frac{U}{R}=\\frac{60}{30}=2\\ \\mathrm{A}$$",
+    "Slider in the middle — the lamp voltage: $$U_R=IR=0.8\\cdot30=24\\ \\mathrm{V}$$",
+    "Voltage across the rheostat: $$U_x=U-U_R=60-24=36\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Reostatli zanjir: $I=\\frac{U}{R+R_x}$",
+    "ru": "Цепь с реостатом: $I=\\frac{U}{R+R_x}$",
+    "en": "Circuit with a rheostat: $I=\\frac{U}{R+R_x}$"
+   },
+   null,
+   {
+    "uz": "Om qonuni: $I=\\frac{U}{R}$",
+    "ru": "Закон Ома: $I=\\frac{U}{R}$",
+    "en": "Ohm's law: $I=\\frac{U}{R}$"
+   },
+   {
+    "uz": "Kuchlanish: $U=IR$",
+    "ru": "Напряжение: $U=IR$",
+    "en": "Voltage: $U=IR$"
+   },
+   {
+    "uz": "Ketma-ket ulash: $U=U_1+U_2$",
+    "ru": "Последовательно: $U=U_1+U_2$",
+    "en": "Series: $U=U_1+U_2$"
+   }
+  ],
+  "basis": {
+   "uz": "Reostatli zanjir",
+   "ru": "Цепь с реостатом",
+   "en": "Circuit with a rheostat"
+  },
+  "answer": "0.5\\ \\mathrm{A};\\ 0.8\\ \\mathrm{A};\\ 2\\ \\mathrm{A};\\ U_R=24\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 135–137-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) Qarshiligi $R_A=0.9\\ \\Omega$ bo'lgan ampermetr $2\\ \\mathrm{A}$ gacha tokni o'lchaydi. U bilan $20\\ \\mathrm{A}$ gacha tokni o'lchash uchun qanday shunt kerak? Shuntli ampermetr $1.4\\ \\mathrm{A}$ ni ko'rsatsa, zanjirdagi tok qancha? b) Qarshiligi $R_V=2.5\\ \\mathrm{k}\\Omega$ bo'lgan voltmetr $10\\ \\mathrm{V}$ gacha kuchlanishni o'lchaydi. U bilan $150\\ \\mathrm{V}$ gacha o'lchash uchun qanday qo'shimcha qarshilik kerak? Strelka $6\\ \\mathrm{V}$ ni ko'rsatsa, haqiqiy kuchlanish qancha?",
+   "ru": "а) Амперметр сопротивлением $R_A=0.9\\ \\Omega$ измеряет ток до $2\\ \\mathrm{A}$. Какой шунт нужен, чтобы измерять им ток до $20\\ \\mathrm{A}$? Каков ток в цепи, если амперметр с шунтом показывает $1.4\\ \\mathrm{A}$? б) Вольтметр сопротивлением $R_V=2.5\\ \\mathrm{k}\\Omega$ измеряет напряжение до $10\\ \\mathrm{V}$. Какое добавочное сопротивление нужно, чтобы измерять им до $150\\ \\mathrm{V}$? Каково истинное напряжение, если стрелка показывает $6\\ \\mathrm{V}$?",
+   "en": "a) An ammeter of resistance $R_A=0.9\\ \\Omega$ measures currents up to $2\\ \\mathrm{A}$. What shunt is needed to measure currents up to $20\\ \\mathrm{A}$ with it? What is the circuit current if the ammeter with the shunt reads $1.4\\ \\mathrm{A}$? b) A voltmeter of resistance $R_V=2.5\\ \\mathrm{k}\\Omega$ measures voltages up to $10\\ \\mathrm{V}$. What additional resistance is needed to measure up to $150\\ \\mathrm{V}$ with it? What is the true voltage if the pointer shows $6\\ \\mathrm{V}$?"
+  },
+  "figure": "figures/B1-L34-S14.png",
+  "solution": {
+   "uz": [
+    "a) Chegara necha marta ortadi: $$n=\\frac{I}{I_A}=\\frac{20}{2}=10$$",
+    "Shunt qarshiligi: $$R_s=\\frac{R_A}{n-1}=\\frac{0.9}{9}=0.1\\ \\Omega$$",
+    "Zanjirdagi tok: $$I=nI_A=10\\cdot1.4=14\\ \\mathrm{A}$$",
+    "b) Chegara necha marta ortadi: $$n=\\frac{U}{U_V}=\\frac{150}{10}=15$$",
+    "Qo'shimcha qarshilik: $$R_d=(n-1)R_V=14\\cdot2.5=35\\ \\mathrm{k}\\Omega$$",
+    "Haqiqiy kuchlanish: $$U=nU_V=15\\cdot6=90\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "а) Во сколько раз возрастает предел: $$n=\\frac{I}{I_A}=\\frac{20}{2}=10$$",
+    "Сопротивление шунта: $$R_s=\\frac{R_A}{n-1}=\\frac{0.9}{9}=0.1\\ \\Omega$$",
+    "Ток в цепи: $$I=nI_A=10\\cdot1.4=14\\ \\mathrm{A}$$",
+    "б) Во сколько раз возрастает предел: $$n=\\frac{U}{U_V}=\\frac{150}{10}=15$$",
+    "Добавочное сопротивление: $$R_d=(n-1)R_V=14\\cdot2.5=35\\ \\mathrm{k}\\Omega$$",
+    "Истинное напряжение: $$U=nU_V=15\\cdot6=90\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "a) How many times the limit increases: $$n=\\frac{I}{I_A}=\\frac{20}{2}=10$$",
+    "Shunt resistance: $$R_s=\\frac{R_A}{n-1}=\\frac{0.9}{9}=0.1\\ \\Omega$$",
+    "Circuit current: $$I=nI_A=10\\cdot1.4=14\\ \\mathrm{A}$$",
+    "b) How many times the limit increases: $$n=\\frac{U}{U_V}=\\frac{150}{10}=15$$",
+    "Additional resistance: $$R_d=(n-1)R_V=14\\cdot2.5=35\\ \\mathrm{k}\\Omega$$",
+    "True voltage: $$U=nU_V=15\\cdot6=90\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Shunt: $R_s=\\frac{R_A}{n-1}$",
+    "ru": "Шунт: $R_s=\\frac{R_A}{n-1}$",
+    "en": "Shunt: $R_s=\\frac{R_A}{n-1}$"
+   },
+   null,
+   null,
+   {
+    "uz": "Qo'shimcha qarshilik: $R_d=(n-1)R_V$",
+    "ru": "Добавочное сопротивление: $R_d=(n-1)R_V$",
+    "en": "Additional resistance: $R_d=(n-1)R_V$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Shunt va qo'shimcha qarshilik",
+   "ru": "Шунт и добавочное сопротивление",
+   "en": "Shunt and additional resistance"
+  },
+  "answer": "R_s=0.1\\ \\Omega;\\ 14\\ \\mathrm{A};\\ R_d=35\\ \\mathrm{k}\\Omega;\\ 90\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 92-mavzu, 1, 5, 6, 11–14-masalalar asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B1-L34-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$R_1=4\\ \\mathrm{k}\\Omega$ va $R_2=6\\ \\mathrm{k}\\Omega$ rezistorlar ketma-ket ulanib, $120\\ \\mathrm{V}$ o'zgarmas kuchlanishga ulangan. a) $R_2$ dagi haqiqiy kuchlanishni toping. b) $R_2$ ga qarshiligi $R_V=12\\ \\mathrm{k}\\Omega$ bo'lgan voltmetr parallel ulansa, u nimani ko'rsatadi?",
+   "ru": "Резисторы $R_1=4\\ \\mathrm{k}\\Omega$ и $R_2=6\\ \\mathrm{k}\\Omega$ соединены последовательно и подключены к постоянному напряжению $120\\ \\mathrm{V}$. а) Найдите истинное напряжение на $R_2$. б) Что покажет вольтметр сопротивлением $R_V=12\\ \\mathrm{k}\\Omega$, подключённый параллельно $R_2$?",
+   "en": "Resistors $R_1=4\\ \\mathrm{k}\\Omega$ and $R_2=6\\ \\mathrm{k}\\Omega$ are connected in series to a constant voltage of $120\\ \\mathrm{V}$. a) Find the true voltage across $R_2$. b) What will a voltmeter of resistance $R_V=12\\ \\mathrm{k}\\Omega$ read when connected in parallel with $R_2$?"
+  },
+  "figure": "figures/B1-L34-S15.png",
+  "solution": {
+   "uz": [
+    "a) Voltmetrsiz — kuchlanish bo'lgichi: $$U_2=U\\frac{R_2}{R_1+R_2}=120\\cdot\\frac{6}{10}=72\\ \\mathrm{V}$$",
+    "b) Voltmetr $R_2$ ga parallel: $$R_{2V}=\\frac{R_2R_V}{R_2+R_V}=\\frac{6\\cdot12}{18}=4\\ \\mathrm{k}\\Omega$$",
+    "Yangi umumiy qarshilik: $$R=R_1+R_{2V}=4+4=8\\ \\mathrm{k}\\Omega$$",
+    "Umumiy tok: $$I=\\frac{U}{R}=\\frac{120}{8\\cdot10^{3}}=15\\ \\mathrm{mA}$$",
+    "Voltmetrning ko'rsatishi: $$U_V=IR_{2V}=15\\cdot10^{-3}\\cdot4\\cdot10^{3}=60\\ \\mathrm{V}$$",
+    "Haqiqiy qiymatdan farqi: $$U_2-U_V=72-60=12\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "а) Без вольтметра — делитель напряжения: $$U_2=U\\frac{R_2}{R_1+R_2}=120\\cdot\\frac{6}{10}=72\\ \\mathrm{V}$$",
+    "б) Вольтметр параллелен $R_2$: $$R_{2V}=\\frac{R_2R_V}{R_2+R_V}=\\frac{6\\cdot12}{18}=4\\ \\mathrm{k}\\Omega$$",
+    "Новое общее сопротивление: $$R=R_1+R_{2V}=4+4=8\\ \\mathrm{k}\\Omega$$",
+    "Общий ток: $$I=\\frac{U}{R}=\\frac{120}{8\\cdot10^{3}}=15\\ \\mathrm{mA}$$",
+    "Показание вольтметра: $$U_V=IR_{2V}=15\\cdot10^{-3}\\cdot4\\cdot10^{3}=60\\ \\mathrm{V}$$",
+    "Отличие от истинного значения: $$U_2-U_V=72-60=12\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "a) Without the voltmeter — a voltage divider: $$U_2=U\\frac{R_2}{R_1+R_2}=120\\cdot\\frac{6}{10}=72\\ \\mathrm{V}$$",
+    "b) The voltmeter is in parallel with $R_2$: $$R_{2V}=\\frac{R_2R_V}{R_2+R_V}=\\frac{6\\cdot12}{18}=4\\ \\mathrm{k}\\Omega$$",
+    "The new total resistance: $$R=R_1+R_{2V}=4+4=8\\ \\mathrm{k}\\Omega$$",
+    "Total current: $$I=\\frac{U}{R}=\\frac{120}{8\\cdot10^{3}}=15\\ \\mathrm{mA}$$",
+    "The voltmeter reading: $$U_V=IR_{2V}=15\\cdot10^{-3}\\cdot4\\cdot10^{3}=60\\ \\mathrm{V}$$",
+    "Difference from the true value: $$U_2-U_V=72-60=12\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kuchlanish taqsimoti: $\\frac{U_1}{U_2}=\\frac{R_1}{R_2}$",
+    "ru": "Распределение напряжения: $\\frac{U_1}{U_2}=\\frac{R_1}{R_2}$",
+    "en": "Voltage sharing: $\\frac{U_1}{U_2}=\\frac{R_1}{R_2}$"
+   },
+   {
+    "uz": "Voltmetr — $R_V$ qarshilikli rezistor",
+    "ru": "Вольтметр — резистор сопротивлением $R_V$",
+    "en": "A voltmeter is a resistor of resistance $R_V$"
+   },
+   null,
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Real voltmetrning ko'rsatishi",
+   "ru": "Показание реального вольтметра",
+   "en": "Reading of a real voltmeter"
+  },
+  "answer": "U_2=72\\ \\mathrm{V};\\ U_V=60\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "maktab-fizikasi-masalalar.pdf (S. Berdiyev), 91-mavzu, 113, 114-masalalar asosida; sharti o'zgartirilgan"
+ }
+]
