@@ -196,6 +196,7 @@
     unread = n; store.set("izoh:unread", n);
     const b = $("#izBtn .iz-badge"); if (b) { b.textContent = n; b.hidden = !n; }
     const m = $("#izMineBtn .iz-badge"); if (m) { m.textContent = n; m.hidden = !n; }
+    G.emit("izohUnread", n);   // progress.js: profil ikonkasidagi belgi va profil bo'limi
   }
 
   // o'quvchining izohlari bor joylarga belgi
@@ -445,8 +446,13 @@
       const r = await api("/api/holat");
       setBadge(r.unread || 0);
       store.set("izoh:open", (r.unread || 0) + (r.open || 0) > 0);
-    } catch { /* jim: keyingi safar */ }
+      store.set("izoh:holat", { unread: r.unread || 0, open: r.open || 0 });
+      return r;
+    } catch { return null; /* jim: keyingi safar */ }
   }
+  // boshqa modullar uchun (progress.js profil sahifasi)
+  G.izoh = { open: (id) => openMine(id), unread: () => unread, holat: () => store.get("izoh:holat", null),
+    refresh: () => refresh(true), inTg: () => !!initData() };
 
   // ------------------------------------------------------------------ ulash
   G.on("render", () => { navButton(); markers(); checkPlace(); refresh(false); });

@@ -111,7 +111,12 @@
       tg.ready(); tg.expand();
       tg.BackButton.onClick(() => goBack());
       const sp = parseStart(tg.initDataUnsafe && tg.initDataUnsafe.start_param);   // ?startapp=B0-L01
-      if (sp && sp.izoh) { window.GRE.pendingIzoh = sp.izoh; syncBack(); window.GRE.emit("izoh"); }
+      if (sp && sp.izoh) {
+        // bot xabaridagi "javobni ochish" — profil sahifasi ochiladi, ustida o'sha izoh (izoh.js)
+        window.GRE.pendingIzoh = sp.izoh;
+        if (extViews.profil && state.view === "home") go({ view: "profil" }); else syncBack();
+        window.GRE.emit("izoh");
+      }
       else if (sp && state.view === "home") go(sp);
       else syncBack();
     } catch (e) { /* Telegram'dan tashqarida — oddiy sahifa */ }

@@ -85,6 +85,12 @@
     local:     { uz: "Progress shu qurilmada saqlanadi.", ru: "Прогресс хранится на этом устройстве.", en: "Progress is stored on this device." },
     reset:     { uz: "Progressni tozalash", ru: "Сбросить прогресс", en: "Reset progress" },
     resetAsk:  { uz: "Yana bir marta bosing — hammasi o'chadi", ru: "Нажмите ещё раз — всё будет удалено", en: "Tap again — everything will be erased" },
+    qa:        { uz: "Savollarim va javoblar", ru: "Мои вопросы и ответы", en: "My questions and replies" },
+    qaTxt:     { uz: "Darslar bo'yicha yozgan savol va fikrlaringiz hamda ularga berilgan javoblar.",
+                 ru: "Ваши вопросы и замечания по урокам и ответы на них.", en: "Your questions and comments on lessons, and the replies to them." },
+    qaNew:     { uz: (n) => `${n} ta yangi javob`, ru: (n) => `Новых ответов: ${n}`, en: (n) => `${n} new ${n === 1 ? "reply" : "replies"}` },
+    qaWait:    { uz: (n) => `${n} tasi javob kutmoqda`, ru: (n) => `Ожидают ответа: ${n}`, en: (n) => `${n} awaiting a reply` },
+    qaBtn:     { uz: "📂 Mening izohlarim", ru: "📂 Мои комментарии", en: "📂 My comments" },
     nothing:   { uz: "Hali boshlangan dars yo'q.", ru: "Пока нет начатых уроков.", en: "No lessons started yet." },
     wd:        { uz: ["Du", "Se", "Ch", "Pa", "Ju", "Sh", "Ya"], ru: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], en: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"] },
   };
@@ -490,12 +496,35 @@
       if (!langs) return;
       langs.insertAdjacentHTML("beforebegin", `<button class="pg-hbtn" id="pgBtn" type="button">
         <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
-        <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>`);
+        <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><b class="pg-dot" hidden></b></button>`);
       b = $("#pgBtn");
       b.addEventListener("click", () => { if (G.state.view !== "profil") G.go({ view: "profil" }); });
     }
     b.setAttribute("aria-label", t(T.open));
     b.classList.toggle("on", G.state.view === "profil" || G.state.view === "xatolar");
+    setDot(G.izoh ? G.izoh.unread() : G.store.get("izoh:unread", 0));
+  }
+  // izoh tizimidan yangi javob kelsa — profil ikonkasida qizil belgi va profil bo'limi yangilanadi
+  function setDot(n) {
+    const d = $("#pgBtn .pg-dot"); if (d) { d.hidden = !n; d.textContent = n > 9 ? "9+" : n || ""; }
+    const q = $("#pgQa"); if (q) paintQa(q);
+  }
+  G.on("izohUnread", setDot);
+  function qaHtml() {
+    const hol = (G.izoh && G.izoh.holat()) || { unread: G.store.get("izoh:unread", 0), open: 0 };
+    const n = G.izoh ? G.izoh.unread() : hol.unread;
+    return `<h2>💬 ${esc(t(T.qa))}</h2>
+      ${n ? `<div class="pg-qanew">${esc(tf(T.qaNew, n))}</div>` : `<div class="muted">${esc(t(T.qaTxt))}</div>`}
+      ${hol.open ? `<div class="muted pg-sub">${esc(tf(T.qaWait, hol.open))}</div>` : ""}
+      <button class="btn wide ${n ? "" : "ghost"} pg-go" id="pgQaBtn">${esc(t(T.qaBtn))}</button>`;
+  }
+  function paintQa(box) {
+    box.innerHTML = qaHtml();
+    const hot = !!(G.izoh && G.izoh.unread());
+    box.classList.toggle("pg-qa-hot", hot);
+    const tiles = $(".pg-tiles", G.view);
+    if (hot && tiles && tiles.compareDocumentPosition(box) & Node.DOCUMENT_POSITION_FOLLOWING) tiles.before(box);   // yangi javob — tepaga
+    $("#pgQaBtn", box).addEventListener("click", () => G.izoh && G.izoh.open());
   }
   function redraw() {
     const v = G.state.view;
@@ -545,6 +574,7 @@
         <div class="card"><b>${tt.acc == null ? "—" : pct(tt.acc) + "%"}</b><span>${esc(t(T.accL))}${anyQuiz ? ` · ${tt.ok + tt.bad} ${esc(t(T.answers))}` : ""}</span></div>
         <div class="card"><b>${tt.d30}</b><span>${esc(t(T.days30))}</span></div>
       </div>
+      ${G.izoh && G.izoh.inTg() ? `<section class="card pg-qa" id="pgQa"></section>` : ""}
       <section class="card"><h2>${esc(t(T.mist))}</h2><div class="muted">${esc(t(T.mistTxt))}</div>
         ${mist.length ? `<button class="btn wide pg-go" id="pgMist">${esc(tf(T.mistGo, mist.length))}</button>`
           : `<div class="pg-none">${esc(anyQuiz ? t(T.mistNone) : "—")}</div>`}</section>
@@ -560,6 +590,11 @@
       G.go({ view: "lesson", id, tab, joy: tab === "test" ? null : (doc.L[id].j || {})[tab] || null, mod: info(id).module });
     }));
     v.querySelectorAll("[data-test]").forEach((b) => b.addEventListener("click", () => G.go({ view: "lesson", id: b.dataset.test, tab: "test", mod: info(b.dataset.test).module })));
+    const qa = $("#pgQa");
+    if (qa) {
+      paintQa(qa);
+      G.izoh.refresh().then(() => { const q = $("#pgQa"); if (q) paintQa(q); });
+    }
     const mb = $("#pgMist"); if (mb) mb.addEventListener("click", () => { review = null; G.go({ view: "xatolar" }); });
     let armed = false;
     $("#pgReset").addEventListener("click", async (ev) => {
