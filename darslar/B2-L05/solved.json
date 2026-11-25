@@ -1,0 +1,928 @@
+[
+ {
+  "id": "B2-L05-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Ventilyator parragi minutiga $600$ aylanish bilan aylanayotgan edi; o'chirilgach, $10\\ \\mathrm{s}$ da tekis sekinlashib, minutiga $300$ aylanishga tushdi. Burchak tezlanishni, shu vaqtdagi aylanishlar sonini va parrak yana qancha vaqtdan keyin to'xtashini toping.",
+   "ru": "Лопасть вентилятора вращалась с частотой $600$ оборотов в минуту; после выключения она за $10\\ \\mathrm{s}$ равнозамедленно снизила частоту до $300$ оборотов в минуту. Найдите угловое ускорение, число оборотов за это время и через сколько ещё времени лопасть остановится.",
+   "en": "A fan blade was turning at $600$ revolutions per minute; after being switched off it slowed uniformly to $300$ revolutions per minute in $10\\ \\mathrm{s}$. Find the angular acceleration, the number of revolutions in that time and how much longer the blade takes to stop."
+  },
+  "figure": "figures/B2-L05-S01.png",
+  "solution": {
+   "uz": [
+    "Chastotalarni $\\mathrm{rad/s}$ ga o'tkazamiz ($n$ — sekundiga aylanishlar): $$\\omega_0=2\\pi\\cdot10=20\\pi\\ \\mathrm{rad/s},\\qquad \\omega=2\\pi\\cdot5=10\\pi\\ \\mathrm{rad/s}$$",
+    "Burchak tezlanish va burilish burchagi: $$\\varepsilon=\\frac{\\omega-\\omega_0}{t}=-\\pi\\approx-3.14\\ \\mathrm{rad/s^2},\\qquad \\varphi=\\frac{\\omega_0+\\omega}{2}t=150\\pi\\ \\mathrm{rad}$$",
+    "Aylanishlar soni va to'xtashgacha qolgan vaqt: $$N=\\frac{\\varphi}{2\\pi}=75,\\qquad t'=\\frac{\\omega}{|\\varepsilon|}=\\frac{10\\pi}{\\pi}=10\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Переводим частоты в $\\mathrm{rad/s}$ ($n$ — обороты в секунду): $$\\omega_0=2\\pi\\cdot10=20\\pi\\ \\mathrm{rad/s},\\qquad \\omega=2\\pi\\cdot5=10\\pi\\ \\mathrm{rad/s}$$",
+    "Угловое ускорение и угол поворота: $$\\varepsilon=\\frac{\\omega-\\omega_0}{t}=-\\pi\\approx-3.14\\ \\mathrm{rad/s^2},\\qquad \\varphi=\\frac{\\omega_0+\\omega}{2}t=150\\pi\\ \\mathrm{rad}$$",
+    "Число оборотов и время до остановки: $$N=\\frac{\\varphi}{2\\pi}=75,\\qquad t'=\\frac{\\omega}{|\\varepsilon|}=\\frac{10\\pi}{\\pi}=10\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "Convert the rates to $\\mathrm{rad/s}$ ($n$ — revolutions per second): $$\\omega_0=2\\pi\\cdot10=20\\pi\\ \\mathrm{rad/s},\\qquad \\omega=2\\pi\\cdot5=10\\pi\\ \\mathrm{rad/s}$$",
+    "Angular acceleration and angle turned: $$\\varepsilon=\\frac{\\omega-\\omega_0}{t}=-\\pi\\approx-3.14\\ \\mathrm{rad/s^2},\\qquad \\varphi=\\frac{\\omega_0+\\omega}{2}t=150\\pi\\ \\mathrm{rad}$$",
+    "Number of revolutions and the time left until it stops: $$N=\\frac{\\varphi}{2\\pi}=75,\\qquad t'=\\frac{\\omega}{|\\varepsilon|}=\\frac{10\\pi}{\\pi}=10\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Burchak tezlik va aylanish chastotasi: $\\omega=2\\pi n$",
+    "ru": "Угловая скорость и частота вращения: $\\omega=2\\pi n$",
+    "en": "Angular velocity and rotation rate: $\\omega=2\\pi n$"
+   },
+   {
+    "uz": "Tekis o'zgaruvchan aylanish: $\\omega=\\omega_0+\\varepsilon t$, $\\varphi=\\frac{\\omega_0+\\omega}{2}t$",
+    "ru": "Равнопеременное вращение: $\\omega=\\omega_0+\\varepsilon t$, $\\varphi=\\frac{\\omega_0+\\omega}{2}t$",
+    "en": "Uniformly accelerated rotation: $\\omega=\\omega_0+\\varepsilon t$, $\\varphi=\\frac{\\omega_0+\\omega}{2}t$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Tekis sekinlanuvchan aylanish",
+   "ru": "Равнозамедленное вращение",
+   "en": "Uniformly decelerated rotation"
+  },
+  "answer": "\\varepsilon=-\\pi\\ \\mathrm{rad/s^2};\\ N=75;\\ t'=10\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 10.40-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Radiusi $0.5\\ \\mathrm{m}$ bo'lgan g'ildirak tinch holatdan $2\\ \\mathrm{rad/s^2}$ o'zgarmas burchak tezlanish bilan aylana boshladi. $2\\ \\mathrm{s}$ dan keyin gardishdagi nuqtaning tezligini, urinma, normal va to'liq tezlanishini toping.",
+   "ru": "Колесо радиуса $0.5\\ \\mathrm{m}$ начало вращаться из покоя с постоянным угловым ускорением $2\\ \\mathrm{rad/s^2}$. Найдите через $2\\ \\mathrm{s}$ скорость точки обода, её касательное, нормальное и полное ускорения.",
+   "en": "A wheel of radius $0.5\\ \\mathrm{m}$ starts rotating from rest with a constant angular acceleration of $2\\ \\mathrm{rad/s^2}$. After $2\\ \\mathrm{s}$ find the speed of a point on the rim and its tangential, normal and total accelerations."
+  },
+  "figure": "figures/B2-L05-S02.png",
+  "solution": {
+   "uz": [
+    "Burchak tezlik va chiziqli tezlik: $$\\omega=\\varepsilon t=4\\ \\mathrm{rad/s},\\qquad v=\\omega R=2\\ \\mathrm{m/s}$$",
+    "Tezlanish tashkil etuvchilari: $$a_\\tau=\\varepsilon R=1\\ \\mathrm{m/s^2},\\qquad a_n=\\omega^2R=8\\ \\mathrm{m/s^2}$$",
+    "To'liq tezlanish — ular perpendikulyar; tezlik bilan burchagi: $$a=\\sqrt{a_\\tau^2+a_n^2}=\\sqrt{65}\\approx8.06\\ \\mathrm{m/s^2},\\qquad \\tan\\theta=\\frac{a_n}{a_\\tau}=8,\\ \\theta\\approx82.9^\\circ$$"
+   ],
+   "ru": [
+    "Угловая и линейная скорости: $$\\omega=\\varepsilon t=4\\ \\mathrm{rad/s},\\qquad v=\\omega R=2\\ \\mathrm{m/s}$$",
+    "Составляющие ускорения: $$a_\\tau=\\varepsilon R=1\\ \\mathrm{m/s^2},\\qquad a_n=\\omega^2R=8\\ \\mathrm{m/s^2}$$",
+    "Полное ускорение — они перпендикулярны; угол со скоростью: $$a=\\sqrt{a_\\tau^2+a_n^2}=\\sqrt{65}\\approx8.06\\ \\mathrm{m/s^2},\\qquad \\tan\\theta=\\frac{a_n}{a_\\tau}=8,\\ \\theta\\approx82.9^\\circ$$"
+   ],
+   "en": [
+    "Angular and linear speed: $$\\omega=\\varepsilon t=4\\ \\mathrm{rad/s},\\qquad v=\\omega R=2\\ \\mathrm{m/s}$$",
+    "Components of the acceleration: $$a_\\tau=\\varepsilon R=1\\ \\mathrm{m/s^2},\\qquad a_n=\\omega^2R=8\\ \\mathrm{m/s^2}$$",
+    "The total acceleration — they are perpendicular; its angle to the velocity: $$a=\\sqrt{a_\\tau^2+a_n^2}=\\sqrt{65}\\approx8.06\\ \\mathrm{m/s^2},\\qquad \\tan\\theta=\\frac{a_n}{a_\\tau}=8,\\ \\theta\\approx82.9^\\circ$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Chiziqli kattaliklar: $v=\\omega r$, $a_\\tau=\\varepsilon r$, $a_n=\\omega^2r$",
+    "ru": "Линейные величины: $v=\\omega r$, $a_\\tau=\\varepsilon r$, $a_n=\\omega^2r$",
+    "en": "Linear quantities: $v=\\omega r$, $a_\\tau=\\varepsilon r$, $a_n=\\omega^2r$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Burchak va chiziqli kattaliklar bog'lanishi",
+   "ru": "Связь угловых и линейных величин",
+   "en": "Relation between angular and linear quantities"
+  },
+  "answer": "v=2\\ \\mathrm{m/s};\\ a_\\tau=1,\\ a_n=8,\\ a\\approx8.06\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 10.41-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Massasi $10\\ \\mathrm{kg}$, radiusi $20\\ \\mathrm{cm}$ bo'lgan yaxlit disk shaklidagi charx toshi o'z o'qi atrofida minutiga $300$ aylanish bilan aylanmoqda. Uning inersiya momentini va kinetik energiyasini toping. Aylanish chastotasi ikki marta oshsa, energiya necha marta ortadi?",
+   "ru": "Точильный камень в форме сплошного диска массы $10\\ \\mathrm{kg}$ и радиуса $20\\ \\mathrm{cm}$ вращается вокруг своей оси с частотой $300$ оборотов в минуту. Найдите его момент инерции и кинетическую энергию. Во сколько раз возрастёт энергия, если частота вращения удвоится?",
+   "en": "A grindstone shaped as a solid disc of mass $10\\ \\mathrm{kg}$ and radius $20\\ \\mathrm{cm}$ turns about its axis at $300$ revolutions per minute. Find its moment of inertia and kinetic energy. By what factor does the energy grow if the rotation rate doubles?"
+  },
+  "figure": "figures/B2-L05-S03.png",
+  "solution": {
+   "uz": [
+    "Yaxlit disk inersiya momenti: $$I=\\frac{MR^2}{2}=\\frac{10\\cdot0.2^2}{2}=0.2\\ \\mathrm{kg\\cdot m^2}$$",
+    "Burchak tezlik va energiya: $$\\omega=2\\pi\\cdot5=10\\pi\\ \\mathrm{rad/s},\\qquad E_k=\\frac{I\\omega^2}{2}=10\\pi^2\\approx98.7\\ \\mathrm{J}$$",
+    "Energiya $\\omega^2$ ga proporsional: $$\\frac{E_k'}{E_k}=\\left(\\frac{\\omega'}{\\omega}\\right)^2=4$$"
+   ],
+   "ru": [
+    "Момент инерции сплошного диска: $$I=\\frac{MR^2}{2}=\\frac{10\\cdot0.2^2}{2}=0.2\\ \\mathrm{kg\\cdot m^2}$$",
+    "Угловая скорость и энергия: $$\\omega=2\\pi\\cdot5=10\\pi\\ \\mathrm{rad/s},\\qquad E_k=\\frac{I\\omega^2}{2}=10\\pi^2\\approx98.7\\ \\mathrm{J}$$",
+    "Энергия пропорциональна $\\omega^2$: $$\\frac{E_k'}{E_k}=\\left(\\frac{\\omega'}{\\omega}\\right)^2=4$$"
+   ],
+   "en": [
+    "Moment of inertia of a solid disc: $$I=\\frac{MR^2}{2}=\\frac{10\\cdot0.2^2}{2}=0.2\\ \\mathrm{kg\\cdot m^2}$$",
+    "Angular velocity and energy: $$\\omega=2\\pi\\cdot5=10\\pi\\ \\mathrm{rad/s},\\qquad E_k=\\frac{I\\omega^2}{2}=10\\pi^2\\approx98.7\\ \\mathrm{J}$$",
+    "The energy is proportional to $\\omega^2$: $$\\frac{E_k'}{E_k}=\\left(\\frac{\\omega'}{\\omega}\\right)^2=4$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Jadval: halqa $MR^2$, disk $\\frac{MR^2}{2}$, sterjen $\\frac{ML^2}{12}$, shar $\\frac{2}{5}MR^2$",
+    "ru": "Таблица: кольцо $MR^2$, диск $\\frac{MR^2}{2}$, стержень $\\frac{ML^2}{12}$, шар $\\frac{2}{5}MR^2$",
+    "en": "Table: ring $MR^2$, disc $\\frac{MR^2}{2}$, rod $\\frac{ML^2}{12}$, sphere $\\frac{2}{5}MR^2$"
+   },
+   {
+    "uz": "Aylanish kinetik energiyasi: $E_k=\\frac{I\\omega^2}{2}$",
+    "ru": "Кинетическая энергия вращения: $E_k=\\frac{I\\omega^2}{2}$",
+    "en": "Rotational kinetic energy: $E_k=\\frac{I\\omega^2}{2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Aylanish kinetik energiyasi",
+   "ru": "Кинетическая энергия вращения",
+   "en": "Rotational kinetic energy"
+  },
+  "answer": "I=0.2\\ \\mathrm{kg\\cdot m^2};\\ E_k\\approx98.7\\ \\mathrm{J};\\ 4",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 10.99-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $1\\ \\mathrm{m}$ bo'lgan vaznsiz sterjenga uning chap uchidan $0$, $0.5$ va $1\\ \\mathrm{m}$ masofalarda $1$, $2$ va $3\\ \\mathrm{kg}$ massali kichik yuklar mahkamlangan (chizmada). Sterjenga perpendikulyar, chap uchidan o'tuvchi o'qqa nisbatan inersiya momentini toping. Massa markazini toping va shu nuqtadan o'tuvchi parallel o'qqa nisbatan momentni hisoblab, Shteyner teoremasi bilan tekshiring.",
+   "ru": "На невесомом стержне длиной $1\\ \\mathrm{m}$ закреплены малые грузы массами $1$, $2$ и $3\\ \\mathrm{kg}$ на расстояниях $0$, $0.5$ и $1\\ \\mathrm{m}$ от левого конца (см. рисунок). Найдите момент инерции относительно оси, перпендикулярной стержню и проходящей через левый конец. Найдите центр масс, вычислите момент относительно параллельной оси через него и проверьте теорему Штейнера.",
+   "en": "Small masses of $1$, $2$ and $3\\ \\mathrm{kg}$ are fixed on a massless rod of length $1\\ \\mathrm{m}$ at $0$, $0.5$ and $1\\ \\mathrm{m}$ from its left end (see the figure). Find the moment of inertia about an axis perpendicular to the rod through its left end. Find the center of mass, compute the moment about the parallel axis through it, and check the parallel-axis theorem."
+  },
+  "figure": "figures/B2-L05-S04.png",
+  "solution": {
+   "uz": [
+    "Chap uchga nisbatan — nuqtaviy massalar yig'indisi: $$I_0=1\\cdot0^2+2\\cdot0.5^2+3\\cdot1^2=3.5\\ \\mathrm{kg\\cdot m^2}$$",
+    "Massa markazi: $$x_C=\\frac{0+2\\cdot0.5+3\\cdot1}{6}=\\frac{2}{3}\\ \\mathrm{m}$$",
+    "Massa markazi orqali o'tuvchi o'qqa nisbatan: $$I_C=1\\cdot\\frac{4}{9}+2\\cdot\\frac{1}{36}+3\\cdot\\frac{1}{9}=\\frac{5}{6}\\approx0.833\\ \\mathrm{kg\\cdot m^2}$$",
+    "Tekshiruv — Shteyner teoremasi: $$I_C+Md^2=\\frac{5}{6}+6\\cdot\\frac{4}{9}=\\frac{5}{6}+\\frac{8}{3}=3.5\\ \\mathrm{kg\\cdot m^2}=I_0$$"
+   ],
+   "ru": [
+    "Относительно левого конца — сумма по точечным массам: $$I_0=1\\cdot0^2+2\\cdot0.5^2+3\\cdot1^2=3.5\\ \\mathrm{kg\\cdot m^2}$$",
+    "Центр масс: $$x_C=\\frac{0+2\\cdot0.5+3\\cdot1}{6}=\\frac{2}{3}\\ \\mathrm{m}$$",
+    "Относительно оси через центр масс: $$I_C=1\\cdot\\frac{4}{9}+2\\cdot\\frac{1}{36}+3\\cdot\\frac{1}{9}=\\frac{5}{6}\\approx0.833\\ \\mathrm{kg\\cdot m^2}$$",
+    "Проверка — теорема Штейнера: $$I_C+Md^2=\\frac{5}{6}+6\\cdot\\frac{4}{9}=\\frac{5}{6}+\\frac{8}{3}=3.5\\ \\mathrm{kg\\cdot m^2}=I_0$$"
+   ],
+   "en": [
+    "About the left end — a sum over point masses: $$I_0=1\\cdot0^2+2\\cdot0.5^2+3\\cdot1^2=3.5\\ \\mathrm{kg\\cdot m^2}$$",
+    "Center of mass: $$x_C=\\frac{0+2\\cdot0.5+3\\cdot1}{6}=\\frac{2}{3}\\ \\mathrm{m}$$",
+    "About the axis through the center of mass: $$I_C=1\\cdot\\frac{4}{9}+2\\cdot\\frac{1}{36}+3\\cdot\\frac{1}{9}=\\frac{5}{6}\\approx0.833\\ \\mathrm{kg\\cdot m^2}$$",
+    "Check — the parallel-axis theorem: $$I_C+Md^2=\\frac{5}{6}+6\\cdot\\frac{4}{9}=\\frac{5}{6}+\\frac{8}{3}=3.5\\ \\mathrm{kg\\cdot m^2}=I_0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Inersiya momenti: $I=\\sum m_ir_i^2$",
+    "ru": "Момент инерции: $I=\\sum m_ir_i^2$",
+    "en": "Moment of inertia: $I=\\sum m_ir_i^2$"
+   },
+   {
+    "uz": "Massa markazi: $x_C=\\frac{\\sum m_ix_i}{M}$",
+    "ru": "Центр масс: $x_C=\\frac{\\sum m_ix_i}{M}$",
+    "en": "Center of mass: $x_C=\\frac{\\sum m_ix_i}{M}$"
+   },
+   null,
+   {
+    "uz": "Shteyner teoremasi: $I=I_C+Md^2$",
+    "ru": "Теорема Штейнера: $I=I_C+Md^2$",
+    "en": "Parallel-axis theorem: $I=I_C+Md^2$"
+   }
+  ],
+  "basis": {
+   "uz": "Nuqtalar sistemasining inersiya momenti, Shteyner teoremasi",
+   "ru": "Момент инерции системы точек, теорема Штейнера",
+   "en": "Moment of inertia of point masses, parallel-axis theorem"
+  },
+  "answer": "I_0=3.5\\ \\mathrm{kg\\cdot m^2};\\ x_C=\\frac{2}{3}\\ \\mathrm{m};\\ I_C=\\frac{5}{6}\\ \\mathrm{kg\\cdot m^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 10.54-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $M=0.9\\ \\mathrm{kg}$, uzunligi $L=1.2\\ \\mathrm{m}$ bo'lgan bir jinsli yupqa sterjen unga perpendikulyar va bir uchidan $\\frac{L}{3}$ masofadan o'tuvchi o'q atrofida aylanadi. Inersiya momentini integrallash orqali toping va Shteyner teoremasi bilan tekshiring.",
+   "ru": "Однородный тонкий стержень массы $M=0.9\\ \\mathrm{kg}$ и длины $L=1.2\\ \\mathrm{m}$ вращается вокруг оси, перпендикулярной ему и проходящей на расстоянии $\\frac{L}{3}$ от одного конца. Найдите момент инерции интегрированием и проверьте по теореме Штейнера.",
+   "en": "A uniform thin rod of mass $M=0.9\\ \\mathrm{kg}$ and length $L=1.2\\ \\mathrm{m}$ rotates about an axis perpendicular to it at a distance $\\frac{L}{3}$ from one end. Find the moment of inertia by integration and check it with the parallel-axis theorem."
+  },
+  "figure": "figures/B2-L05-S05.png",
+  "solution": {
+   "uz": [
+    "O'qdan $x$ masofadagi $dx$ bo'lakning massasi $dm=\\frac{M}{L}dx$; $x$ chegaralari $-\\frac{L}{3}$ dan $\\frac{2L}{3}$ gacha: $$I=\\frac{M}{L}\\int_{-L/3}^{2L/3}x^2\\,dx=\\frac{M}{L}\\cdot\\frac{1}{3}\\left(\\frac{8L^3}{27}+\\frac{L^3}{27}\\right)=\\frac{ML^2}{9}$$",
+    "Tekshiruv: o'q massa markazidan $d=\\frac{L}{2}-\\frac{L}{3}=\\frac{L}{6}$ masofada: $$I=\\frac{ML^2}{12}+M\\left(\\frac{L}{6}\\right)^2=\\frac{3ML^2+ML^2}{36}=\\frac{ML^2}{9}$$",
+    "Son qiymati: $$I=\\frac{0.9\\cdot1.2^2}{9}=0.144\\ \\mathrm{kg\\cdot m^2}$$"
+   ],
+   "ru": [
+    "Масса элемента $dx$ на расстоянии $x$ от оси $dm=\\frac{M}{L}dx$; $x$ меняется от $-\\frac{L}{3}$ до $\\frac{2L}{3}$: $$I=\\frac{M}{L}\\int_{-L/3}^{2L/3}x^2\\,dx=\\frac{M}{L}\\cdot\\frac{1}{3}\\left(\\frac{8L^3}{27}+\\frac{L^3}{27}\\right)=\\frac{ML^2}{9}$$",
+    "Проверка: ось находится на расстоянии $d=\\frac{L}{2}-\\frac{L}{3}=\\frac{L}{6}$ от центра масс: $$I=\\frac{ML^2}{12}+M\\left(\\frac{L}{6}\\right)^2=\\frac{3ML^2+ML^2}{36}=\\frac{ML^2}{9}$$",
+    "Численное значение: $$I=\\frac{0.9\\cdot1.2^2}{9}=0.144\\ \\mathrm{kg\\cdot m^2}$$"
+   ],
+   "en": [
+    "An element $dx$ at distance $x$ from the axis has $dm=\\frac{M}{L}dx$; $x$ runs from $-\\frac{L}{3}$ to $\\frac{2L}{3}$: $$I=\\frac{M}{L}\\int_{-L/3}^{2L/3}x^2\\,dx=\\frac{M}{L}\\cdot\\frac{1}{3}\\left(\\frac{8L^3}{27}+\\frac{L^3}{27}\\right)=\\frac{ML^2}{9}$$",
+    "Check: the axis is $d=\\frac{L}{2}-\\frac{L}{3}=\\frac{L}{6}$ from the center of mass: $$I=\\frac{ML^2}{12}+M\\left(\\frac{L}{6}\\right)^2=\\frac{3ML^2+ML^2}{36}=\\frac{ML^2}{9}$$",
+    "Numerical value: $$I=\\frac{0.9\\cdot1.2^2}{9}=0.144\\ \\mathrm{kg\\cdot m^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yaxlit jism: $I=\\int r^2\\,dm$",
+    "ru": "Сплошное тело: $I=\\int r^2\\,dm$",
+    "en": "Extended body: $I=\\int r^2\\,dm$"
+   },
+   {
+    "uz": "Shteyner teoremasi: $I=I_C+Md^2$",
+    "ru": "Теорема Штейнера: $I=I_C+Md^2$",
+    "en": "Parallel-axis theorem: $I=I_C+Md^2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Integrallash va Shteyner teoremasi",
+   "ru": "Интегрирование и теорема Штейнера",
+   "en": "Integration and the parallel-axis theorem"
+  },
+  "answer": "I=\\frac{ML^2}{9}=0.144\\ \\mathrm{kg\\cdot m^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 10.70-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $R=20\\ \\mathrm{cm}$ bo'lgan bir jinsli yupqa diskdan radiusi $r=10\\ \\mathrm{cm}$ bo'lgan doiraviy teshik qirqilgan; teshik markazi disk markazidan $10\\ \\mathrm{cm}$ masofada (chizmada). Teshiksiz diskning massasi $4\\ \\mathrm{kg}$ bo'lardi. Disk tekisligiga perpendikulyar va uning geometrik markazidan o'tuvchi o'qqa nisbatan inersiya momentini toping.",
+   "ru": "Из однородного тонкого диска радиуса $R=20\\ \\mathrm{cm}$ вырезано круглое отверстие радиуса $r=10\\ \\mathrm{cm}$; центр отверстия находится на расстоянии $10\\ \\mathrm{cm}$ от центра диска (см. рисунок). Масса диска без отверстия была бы $4\\ \\mathrm{kg}$. Найдите момент инерции относительно оси, перпендикулярной плоскости диска и проходящей через его геометрический центр.",
+   "en": "A circular hole of radius $r=10\\ \\mathrm{cm}$ is cut from a uniform thin disc of radius $R=20\\ \\mathrm{cm}$; the center of the hole is $10\\ \\mathrm{cm}$ from the center of the disc (see the figure). Without the hole the disc would have a mass of $4\\ \\mathrm{kg}$. Find the moment of inertia about the axis perpendicular to the disc through its geometric center."
+  },
+  "figure": "figures/B2-L05-S06.png",
+  "solution": {
+   "uz": [
+    "Qirqilgan bo'lak massasi yuzaga proporsional: $$m=M\\frac{r^2}{R^2}=4\\cdot\\frac{1}{4}=1\\ \\mathrm{kg}$$",
+    "Butun disk va qirqilgan bo'lak momentlari (bo'lak uchun Shteyner, $d=0.1\\ \\mathrm{m}$): $$I_1=\\frac{4\\cdot0.2^2}{2}=0.08,\\qquad I_2=\\frac{1\\cdot0.1^2}{2}+1\\cdot0.1^2=0.015\\ \\mathrm{kg\\cdot m^2}$$",
+    "Teshik momentini ayiramiz: $$I=I_1-I_2=0.08-0.015=0.065\\ \\mathrm{kg\\cdot m^2}$$"
+   ],
+   "ru": [
+    "Масса вырезанной части пропорциональна площади: $$m=M\\frac{r^2}{R^2}=4\\cdot\\frac{1}{4}=1\\ \\mathrm{kg}$$",
+    "Моменты целого диска и вырезанной части (для части — Штейнер, $d=0.1\\ \\mathrm{m}$): $$I_1=\\frac{4\\cdot0.2^2}{2}=0.08,\\qquad I_2=\\frac{1\\cdot0.1^2}{2}+1\\cdot0.1^2=0.015\\ \\mathrm{kg\\cdot m^2}$$",
+    "Вычитаем момент отверстия: $$I=I_1-I_2=0.08-0.015=0.065\\ \\mathrm{kg\\cdot m^2}$$"
+   ],
+   "en": [
+    "The mass of the cut-out piece is proportional to its area: $$m=M\\frac{r^2}{R^2}=4\\cdot\\frac{1}{4}=1\\ \\mathrm{kg}$$",
+    "Moments of the full disc and of the cut-out piece (parallel axes for the piece, $d=0.1\\ \\mathrm{m}$): $$I_1=\\frac{4\\cdot0.2^2}{2}=0.08,\\qquad I_2=\\frac{1\\cdot0.1^2}{2}+1\\cdot0.1^2=0.015\\ \\mathrm{kg\\cdot m^2}$$",
+    "Subtract the moment of the hole: $$I=I_1-I_2=0.08-0.015=0.065\\ \\mathrm{kg\\cdot m^2}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Shteyner teoremasi: $I=I_C+Md^2$",
+    "ru": "Теорема Штейнера: $I=I_C+Md^2$",
+    "en": "Parallel-axis theorem: $I=I_C+Md^2$"
+   },
+   {
+    "uz": "Qo'shiluvchanlik: teshik momenti ayiriladi, $I=I_1-I_2$",
+    "ru": "Аддитивность: момент отверстия вычитается, $I=I_1-I_2$",
+    "en": "Additivity: the hole's moment is subtracted, $I=I_1-I_2$"
+   }
+  ],
+  "basis": {
+   "uz": "Inersiya momentining qo'shiluvchanligi, teshik",
+   "ru": "Аддитивность момента инерции, отверстие",
+   "en": "Additivity of the moment of inertia, a hole"
+  },
+  "answer": "I=0.065\\ \\mathrm{kg\\cdot m^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "Irodov, «Problems in General Physics», 1.241-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Tomoni $a=0.4\\ \\mathrm{m}$, massasi $M=3\\ \\mathrm{kg}$ bo'lgan bir jinsli kvadrat plastinka uchun inersiya momentini toping: a) plastinkaga perpendikulyar va markazidan o'tuvchi o'qqa nisbatan; b) plastinkaga perpendikulyar va uchidan (burchagidan) o'tuvchi o'qqa nisbatan.",
+   "ru": "Найдите момент инерции однородной квадратной пластинки со стороной $a=0.4\\ \\mathrm{m}$ и массой $M=3\\ \\mathrm{kg}$: а) относительно оси, перпендикулярной пластинке и проходящей через её центр; б) относительно оси, перпендикулярной пластинке и проходящей через её вершину (угол).",
+   "en": "Find the moment of inertia of a uniform square plate of side $a=0.4\\ \\mathrm{m}$ and mass $M=3\\ \\mathrm{kg}$: a) about the axis perpendicular to the plate through its center; b) about the axis perpendicular to the plate through a corner."
+  },
+  "figure": "figures/B2-L05-S07.png",
+  "solution": {
+   "uz": [
+    "Tomonga parallel, markazdan o'tuvchi o'q: plastinka uzunligi $a$ bo'lgan sterjenlar to'plamidek: $$I_x=I_y=\\frac{Ma^2}{12}$$",
+    "Perpendikulyar o'qlar teoremasi: $$I_z=I_x+I_y=\\frac{Ma^2}{6}=\\frac{3\\cdot0.16}{6}=0.08\\ \\mathrm{kg\\cdot m^2}$$",
+    "Uchgacha masofa — diagonalning yarmi, $d^2=\\frac{a^2}{2}$: $$I=\\frac{Ma^2}{6}+\\frac{Ma^2}{2}=\\frac{2Ma^2}{3}=0.32\\ \\mathrm{kg\\cdot m^2}$$"
+   ],
+   "ru": [
+    "Ось через центр параллельно стороне: пластинка — как набор стержней длины $a$: $$I_x=I_y=\\frac{Ma^2}{12}$$",
+    "Теорема о перпендикулярных осях: $$I_z=I_x+I_y=\\frac{Ma^2}{6}=\\frac{3\\cdot0.16}{6}=0.08\\ \\mathrm{kg\\cdot m^2}$$",
+    "Расстояние до вершины — половина диагонали, $d^2=\\frac{a^2}{2}$: $$I=\\frac{Ma^2}{6}+\\frac{Ma^2}{2}=\\frac{2Ma^2}{3}=0.32\\ \\mathrm{kg\\cdot m^2}$$"
+   ],
+   "en": [
+    "Axis through the center parallel to a side: the plate is like a set of rods of length $a$: $$I_x=I_y=\\frac{Ma^2}{12}$$",
+    "Perpendicular-axis theorem: $$I_z=I_x+I_y=\\frac{Ma^2}{6}=\\frac{3\\cdot0.16}{6}=0.08\\ \\mathrm{kg\\cdot m^2}$$",
+    "The distance to a corner is half the diagonal, $d^2=\\frac{a^2}{2}$: $$I=\\frac{Ma^2}{6}+\\frac{Ma^2}{2}=\\frac{2Ma^2}{3}=0.32\\ \\mathrm{kg\\cdot m^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Jadval: halqa $MR^2$, disk $\\frac{MR^2}{2}$, sterjen $\\frac{ML^2}{12}$, shar $\\frac{2}{5}MR^2$",
+    "ru": "Таблица: кольцо $MR^2$, диск $\\frac{MR^2}{2}$, стержень $\\frac{ML^2}{12}$, шар $\\frac{2}{5}MR^2$",
+    "en": "Table: ring $MR^2$, disc $\\frac{MR^2}{2}$, rod $\\frac{ML^2}{12}$, sphere $\\frac{2}{5}MR^2$"
+   },
+   {
+    "uz": "Perpendikulyar o'qlar (yassi jism): $I_z=I_x+I_y$",
+    "ru": "Перпендикулярные оси (плоское тело): $I_z=I_x+I_y$",
+    "en": "Perpendicular axes (flat body): $I_z=I_x+I_y$"
+   },
+   {
+    "uz": "Shteyner teoremasi: $I=I_C+Md^2$",
+    "ru": "Теорема Штейнера: $I=I_C+Md^2$",
+    "en": "Parallel-axis theorem: $I=I_C+Md^2$"
+   }
+  ],
+  "basis": {
+   "uz": "Perpendikulyar o'qlar va Shteyner teoremalari",
+   "ru": "Теоремы о перпендикулярных осях и Штейнера",
+   "en": "Perpendicular- and parallel-axis theorems"
+  },
+  "answer": "I_z=\\frac{Ma^2}{6}=0.08;\\ I=\\frac{2Ma^2}{3}=0.32\\ \\mathrm{kg\\cdot m^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original (B2-L05, kvadrat plastinka)"
+ },
+ {
+  "id": "B2-L05-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Koordinatalari $(2;\\,1)\\ \\mathrm{m}$ bo'lgan nuqtaga $\\vec F=(3;\\,-4)\\ \\mathrm{N}$ kuch qo'yilgan (chizmada). Koordinata boshiga nisbatan kuch momentini (modul va yo'nalish) va kuch yelkasini toping.",
+   "ru": "К точке с координатами $(2;\\,1)\\ \\mathrm{m}$ приложена сила $\\vec F=(3;\\,-4)\\ \\mathrm{N}$ (см. рисунок). Найдите момент силы относительно начала координат (модуль и направление) и плечо силы.",
+   "en": "A force $\\vec F=(3;\\,-4)\\ \\mathrm{N}$ acts at the point $(2;\\,1)\\ \\mathrm{m}$ (see the figure). Find the torque about the origin (magnitude and direction) and the lever arm."
+  },
+  "figure": "figures/B2-L05-S08.png",
+  "solution": {
+   "uz": [
+    "Tekislikdagi vektor ko'paytma — faqat $z$ tashkil etuvchi: $$\\tau_z=xF_y-yF_x=2\\cdot(-4)-1\\cdot3=-11\\ \\mathrm{N\\cdot m}$$",
+    "Ishora manfiy — moment $-z$ yo'nalishda, kuch jismni soat strelkasi bo'yicha buradi. Kuch yelkasi: $$F=\\sqrt{3^2+4^2}=5\\ \\mathrm{N},\\qquad d=\\frac{|\\tau|}{F}=\\frac{11}{5}=2.2\\ \\mathrm{m}$$",
+    "Tekshiruv: $\\vec r$ va $\\vec F$ orasidagi burchak orqali: $$\\cos\\alpha=\\frac{\\vec r\\cdot\\vec F}{rF}=\\frac{2}{5\\sqrt{5}},\\qquad rF\\sin\\alpha=\\sqrt{5}\\cdot5\\cdot\\frac{11}{5\\sqrt{5}}=11\\ \\mathrm{N\\cdot m}$$"
+   ],
+   "ru": [
+    "Векторное произведение в плоскости — только $z$-компонента: $$\\tau_z=xF_y-yF_x=2\\cdot(-4)-1\\cdot3=-11\\ \\mathrm{N\\cdot m}$$",
+    "Знак минус — момент направлен по $-z$, сила поворачивает тело по часовой стрелке. Плечо силы: $$F=\\sqrt{3^2+4^2}=5\\ \\mathrm{N},\\qquad d=\\frac{|\\tau|}{F}=\\frac{11}{5}=2.2\\ \\mathrm{m}$$",
+    "Проверка через угол между $\\vec r$ и $\\vec F$: $$\\cos\\alpha=\\frac{\\vec r\\cdot\\vec F}{rF}=\\frac{2}{5\\sqrt{5}},\\qquad rF\\sin\\alpha=\\sqrt{5}\\cdot5\\cdot\\frac{11}{5\\sqrt{5}}=11\\ \\mathrm{N\\cdot m}$$"
+   ],
+   "en": [
+    "The cross product in the plane has only a $z$ component: $$\\tau_z=xF_y-yF_x=2\\cdot(-4)-1\\cdot3=-11\\ \\mathrm{N\\cdot m}$$",
+    "The sign is negative — the torque points along $-z$ and the force turns the body clockwise. The lever arm: $$F=\\sqrt{3^2+4^2}=5\\ \\mathrm{N},\\qquad d=\\frac{|\\tau|}{F}=\\frac{11}{5}=2.2\\ \\mathrm{m}$$",
+    "Check using the angle between $\\vec r$ and $\\vec F$: $$\\cos\\alpha=\\frac{\\vec r\\cdot\\vec F}{rF}=\\frac{2}{5\\sqrt{5}},\\qquad rF\\sin\\alpha=\\sqrt{5}\\cdot5\\cdot\\frac{11}{5\\sqrt{5}}=11\\ \\mathrm{N\\cdot m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kuch momenti: $\\tau_z=xF_y-yF_x$",
+    "ru": "Момент силы: $\\tau_z=xF_y-yF_x$",
+    "en": "Torque: $\\tau_z=xF_y-yF_x$"
+   },
+   {
+    "uz": "Kuch momenti moduli: $\\tau=Fd=rF\\sin\\alpha$",
+    "ru": "Модуль момента силы: $\\tau=Fd=rF\\sin\\alpha$",
+    "en": "Magnitude of torque: $\\tau=Fd=rF\\sin\\alpha$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kuch momenti — vektor ko'paytma",
+   "ru": "Момент силы — векторное произведение",
+   "en": "Torque as a cross product"
+  },
+  "answer": "\\tau_z=-11\\ \\mathrm{N\\cdot m};\\ d=2.2\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Irodov, «Problems in General Physics», 1.235-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Gorizontal o'q atrofida erkin aylanadigan, massasi $4\\ \\mathrm{kg}$, radiusi $10\\ \\mathrm{cm}$ bo'lgan yaxlit silindrga ip o'ralgan; ipning uchiga $2\\ \\mathrm{kg}$ yuk osilgan (chizmada). Yukning tezlanishini, ip tarangligini va silindrning burchak tezlanishini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "На сплошной цилиндр массы $4\\ \\mathrm{kg}$ и радиуса $10\\ \\mathrm{cm}$, свободно вращающийся вокруг горизонтальной оси, намотана нить; на её конце висит груз $2\\ \\mathrm{kg}$ (см. рисунок). Найдите ускорение груза, натяжение нити и угловое ускорение цилиндра. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A string is wound around a solid cylinder of mass $4\\ \\mathrm{kg}$ and radius $10\\ \\mathrm{cm}$ that turns freely about a horizontal axis; a $2\\ \\mathrm{kg}$ mass hangs from its end (see the figure). Find the acceleration of the mass, the tension and the cylinder's angular acceleration. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L05-S09.png",
+  "solution": {
+   "uz": [
+    "Yuk uchun Nyutonning 2-qonuni: $$ma=mg-T$$",
+    "Silindr uchun aylanma harakat tenglamasi, $a=\\varepsilon R$: $$\\frac{MR^2}{2}\\cdot\\frac{a}{R}=TR\\ \\Rightarrow\\ T=\\frac{Ma}{2}$$",
+    "Tenglamalarni qo'shamiz: $$a=\\frac{mg}{m+\\frac{M}{2}}=\\frac{20}{4}=5\\ \\mathrm{m/s^2},\\qquad T=\\frac{4\\cdot5}{2}=10\\ \\mathrm{N},\\qquad \\varepsilon=\\frac{a}{R}=50\\ \\mathrm{rad/s^2}$$"
+   ],
+   "ru": [
+    "Второй закон Ньютона для груза: $$ma=mg-T$$",
+    "Уравнение вращения цилиндра, $a=\\varepsilon R$: $$\\frac{MR^2}{2}\\cdot\\frac{a}{R}=TR\\ \\Rightarrow\\ T=\\frac{Ma}{2}$$",
+    "Складываем уравнения: $$a=\\frac{mg}{m+\\frac{M}{2}}=\\frac{20}{4}=5\\ \\mathrm{m/s^2},\\qquad T=\\frac{4\\cdot5}{2}=10\\ \\mathrm{N},\\qquad \\varepsilon=\\frac{a}{R}=50\\ \\mathrm{rad/s^2}$$"
+   ],
+   "en": [
+    "Newton's second law for the mass: $$ma=mg-T$$",
+    "Rotational equation for the cylinder, $a=\\varepsilon R$: $$\\frac{MR^2}{2}\\cdot\\frac{a}{R}=TR\\ \\Rightarrow\\ T=\\frac{Ma}{2}$$",
+    "Add the equations: $$a=\\frac{mg}{m+\\frac{M}{2}}=\\frac{20}{4}=5\\ \\mathrm{m/s^2},\\qquad T=\\frac{4\\cdot5}{2}=10\\ \\mathrm{N},\\qquad \\varepsilon=\\frac{a}{R}=50\\ \\mathrm{rad/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nyutonning 2-qonuni: $ma=\\sum F$",
+    "ru": "Второй закон Ньютона: $ma=\\sum F$",
+    "en": "Newton's second law: $ma=\\sum F$"
+   },
+   {
+    "uz": "Aylanma harakat tenglamasi: $I\\varepsilon=\\sum\\tau$",
+    "ru": "Уравнение вращательного движения: $I\\varepsilon=\\sum\\tau$",
+    "en": "Rotational equation of motion: $I\\varepsilon=\\sum\\tau$"
+   },
+   {
+    "uz": "Massali baraban: $a=\\frac{mg}{m+\\frac{I}{R^2}}$",
+    "ru": "Массивный барабан: $a=\\frac{mg}{m+\\frac{I}{R^2}}$",
+    "en": "Massive drum: $a=\\frac{mg}{m+\\frac{I}{R^2}}$"
+   }
+  ],
+  "basis": {
+   "uz": "Aylanma harakat dinamikasi — massali baraban",
+   "ru": "Динамика вращения — массивный барабан",
+   "en": "Rotational dynamics — a massive drum"
+  },
+  "answer": "a=5\\ \\mathrm{m/s^2};\\ T=10\\ \\mathrm{N};\\ \\varepsilon=50\\ \\mathrm{rad/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 1.243-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Atvud mashinasida $3\\ \\mathrm{kg}$ va $1\\ \\mathrm{kg}$ yuklar massasi $2\\ \\mathrm{kg}$ bo'lgan yaxlit disk shaklidagi blok orqali o'tgan ipga osilgan (chizmada). Ip blokda sirpanmaydi, o'qdagi ishqalanish yo'q. Yuklar tezlanishini va ipning ikki tarmog'idagi tarangliklarni toping. Blok massasiz bo'lsa, tezlanish qancha bo'lardi? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "В машине Атвуда грузы $3\\ \\mathrm{kg}$ и $1\\ \\mathrm{kg}$ висят на нити, перекинутой через блок в форме сплошного диска массы $2\\ \\mathrm{kg}$ (см. рисунок). Нить не скользит по блоку, трения в оси нет. Найдите ускорение грузов и натяжения обеих ветвей нити. Каким было бы ускорение при невесомом блоке? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "In an Atwood machine masses of $3\\ \\mathrm{kg}$ and $1\\ \\mathrm{kg}$ hang from a string over a pulley shaped as a solid disc of mass $2\\ \\mathrm{kg}$ (see the figure). The string does not slip and the axle is frictionless. Find the acceleration of the masses and the tensions in the two segments. What would the acceleration be with a massless pulley? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L05-S10.png",
+  "solution": {
+   "uz": [
+    "Yuklar va blok uchun tenglamalar: $$m_1a=m_1g-T_1,\\qquad m_2a=T_2-m_2g,\\qquad \\frac{MR^2}{2}\\cdot\\frac{a}{R}=(T_1-T_2)R$$",
+    "Uchala tenglamani qo'shamiz: $$a=\\frac{(m_1-m_2)g}{m_1+m_2+\\frac{M}{2}}=\\frac{20}{5}=4\\ \\mathrm{m/s^2}$$",
+    "Tarangliklar — ular teng emas: $$T_1=3\\cdot(10-4)=18\\ \\mathrm{N},\\qquad T_2=1\\cdot(10+4)=14\\ \\mathrm{N}$$",
+    "Massasiz blokda $M=0$: $$a_0=\\frac{(m_1-m_2)g}{m_1+m_2}=5\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Уравнения для грузов и блока: $$m_1a=m_1g-T_1,\\qquad m_2a=T_2-m_2g,\\qquad \\frac{MR^2}{2}\\cdot\\frac{a}{R}=(T_1-T_2)R$$",
+    "Складываем три уравнения: $$a=\\frac{(m_1-m_2)g}{m_1+m_2+\\frac{M}{2}}=\\frac{20}{5}=4\\ \\mathrm{m/s^2}$$",
+    "Натяжения — они не равны: $$T_1=3\\cdot(10-4)=18\\ \\mathrm{N},\\qquad T_2=1\\cdot(10+4)=14\\ \\mathrm{N}$$",
+    "Для невесомого блока $M=0$: $$a_0=\\frac{(m_1-m_2)g}{m_1+m_2}=5\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "Equations for the masses and the pulley: $$m_1a=m_1g-T_1,\\qquad m_2a=T_2-m_2g,\\qquad \\frac{MR^2}{2}\\cdot\\frac{a}{R}=(T_1-T_2)R$$",
+    "Add the three equations: $$a=\\frac{(m_1-m_2)g}{m_1+m_2+\\frac{M}{2}}=\\frac{20}{5}=4\\ \\mathrm{m/s^2}$$",
+    "The tensions — they are not equal: $$T_1=3\\cdot(10-4)=18\\ \\mathrm{N},\\qquad T_2=1\\cdot(10+4)=14\\ \\mathrm{N}$$",
+    "For a massless pulley $M=0$: $$a_0=\\frac{(m_1-m_2)g}{m_1+m_2}=5\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Aylanma harakat tenglamasi: $I\\varepsilon=\\sum\\tau$",
+    "ru": "Уравнение вращательного движения: $I\\varepsilon=\\sum\\tau$",
+    "en": "Rotational equation of motion: $I\\varepsilon=\\sum\\tau$"
+   },
+   {
+    "uz": "Massali blokli Atvud mashinasi: $a=\\frac{(m_1-m_2)g}{m_1+m_2+\\frac{I}{R^2}}$",
+    "ru": "Машина Атвуда с массивным блоком: $a=\\frac{(m_1-m_2)g}{m_1+m_2+\\frac{I}{R^2}}$",
+    "en": "Atwood machine with a massive pulley: $a=\\frac{(m_1-m_2)g}{m_1+m_2+\\frac{I}{R^2}}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Massali blokli Atvud mashinasi",
+   "ru": "Машина Атвуда с массивным блоком",
+   "en": "Atwood machine with a massive pulley"
+  },
+  "answer": "a=4\\ \\mathrm{m/s^2};\\ T_1=18\\ \\mathrm{N},\\ T_2=14\\ \\mathrm{N};\\ a_0=5\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Volkenshteyn, «Problems in General Physics», 3.10-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Inersiya momenti $50\\ \\mathrm{kg\\cdot m^2}$ bo'lgan maxovik minutiga $600$ aylanish bilan aylanmoqda. O'zgarmas tormozlovchi kuch momenti ta'sirida u $20\\ \\mathrm{s}$ da to'xtadi. Tormozlovchi momentni, to'xtaguncha aylanishlar sonini va tormozlash ishini toping.",
+   "ru": "Маховик с моментом инерции $50\\ \\mathrm{kg\\cdot m^2}$ вращается с частотой $600$ оборотов в минуту. Под действием постоянного тормозящего момента он остановился за $20\\ \\mathrm{s}$. Найдите тормозящий момент, число оборотов до остановки и работу торможения.",
+   "en": "A flywheel with moment of inertia $50\\ \\mathrm{kg\\cdot m^2}$ turns at $600$ revolutions per minute. A constant braking torque stops it in $20\\ \\mathrm{s}$. Find the braking torque, the number of revolutions before it stops and the work done by braking."
+  },
+  "figure": "figures/B2-L05-S11.png",
+  "solution": {
+   "uz": [
+    "Boshlang'ich burchak tezlik va sekinlanish: $$\\omega_0=20\\pi\\ \\mathrm{rad/s},\\qquad |\\varepsilon|=\\frac{\\omega_0}{t}=\\pi\\ \\mathrm{rad/s^2}$$",
+    "Tormozlovchi kuch momenti: $$\\tau=I|\\varepsilon|=50\\pi\\approx157\\ \\mathrm{N\\cdot m}$$",
+    "Burilish burchagi va aylanishlar soni: $$\\varphi=\\frac{\\omega_0t}{2}=200\\pi\\ \\mathrm{rad},\\qquad N=\\frac{\\varphi}{2\\pi}=100$$",
+    "Tormozlash ishi — momentning ishi va energiya kamayishi bir xil: $$A=-\\tau\\varphi=-\\frac{I\\omega_0^2}{2}=-10^4\\pi^2\\approx-98.7\\ \\mathrm{kJ}$$"
+   ],
+   "ru": [
+    "Начальная угловая скорость и замедление: $$\\omega_0=20\\pi\\ \\mathrm{rad/s},\\qquad |\\varepsilon|=\\frac{\\omega_0}{t}=\\pi\\ \\mathrm{rad/s^2}$$",
+    "Тормозящий момент: $$\\tau=I|\\varepsilon|=50\\pi\\approx157\\ \\mathrm{N\\cdot m}$$",
+    "Угол поворота и число оборотов: $$\\varphi=\\frac{\\omega_0t}{2}=200\\pi\\ \\mathrm{rad},\\qquad N=\\frac{\\varphi}{2\\pi}=100$$",
+    "Работа торможения — работа момента равна убыли энергии: $$A=-\\tau\\varphi=-\\frac{I\\omega_0^2}{2}=-10^4\\pi^2\\approx-98.7\\ \\mathrm{kJ}$$"
+   ],
+   "en": [
+    "Initial angular velocity and deceleration: $$\\omega_0=20\\pi\\ \\mathrm{rad/s},\\qquad |\\varepsilon|=\\frac{\\omega_0}{t}=\\pi\\ \\mathrm{rad/s^2}$$",
+    "The braking torque: $$\\tau=I|\\varepsilon|=50\\pi\\approx157\\ \\mathrm{N\\cdot m}$$",
+    "Angle turned and number of revolutions: $$\\varphi=\\frac{\\omega_0t}{2}=200\\pi\\ \\mathrm{rad},\\qquad N=\\frac{\\varphi}{2\\pi}=100$$",
+    "Work of braking — the torque's work equals the loss of energy: $$A=-\\tau\\varphi=-\\frac{I\\omega_0^2}{2}=-10^4\\pi^2\\approx-98.7\\ \\mathrm{kJ}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tekis o'zgaruvchan aylanish: $\\omega=\\omega_0+\\varepsilon t$, $\\varphi=\\frac{\\omega_0+\\omega}{2}t$",
+    "ru": "Равнопеременное вращение: $\\omega=\\omega_0+\\varepsilon t$, $\\varphi=\\frac{\\omega_0+\\omega}{2}t$",
+    "en": "Uniformly accelerated rotation: $\\omega=\\omega_0+\\varepsilon t$, $\\varphi=\\frac{\\omega_0+\\omega}{2}t$"
+   },
+   {
+    "uz": "Aylanma harakat tenglamasi: $I\\varepsilon=\\sum\\tau$",
+    "ru": "Уравнение вращательного движения: $I\\varepsilon=\\sum\\tau$",
+    "en": "Rotational equation of motion: $I\\varepsilon=\\sum\\tau$"
+   },
+   null,
+   {
+    "uz": "Ish–energiya teoremasi: $A=\\frac{I\\omega_2^2}{2}-\\frac{I\\omega_1^2}{2}$",
+    "ru": "Теорема о кинетической энергии: $A=\\frac{I\\omega_2^2}{2}-\\frac{I\\omega_1^2}{2}$",
+    "en": "Work–energy theorem: $A=\\frac{I\\omega_2^2}{2}-\\frac{I\\omega_1^2}{2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Kuch momentining ishi, ish–energiya teoremasi",
+   "ru": "Работа момента силы, теорема о кинетической энергии",
+   "en": "Work of a torque, work–energy theorem"
+  },
+  "answer": "\\tau=50\\pi\\approx157\\ \\mathrm{N\\cdot m};\\ N=100;\\ A\\approx-98.7\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "Volkenshteyn, «Problems in General Physics», 3.32-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Elektr dvigatel minutiga $1200$ aylanishda $4\\ \\mathrm{kW}$ foydali quvvat beradi. Val kuch momentini toping. Dvigatel valiga mahkamlangan radiusi $10\\ \\mathrm{cm}$ bo'lgan baraban yukni o'zgarmas tezlik bilan ko'taradi: yuk massasi va ko'tarilish tezligi qancha? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Электродвигатель при $1200$ оборотах в минуту развивает полезную мощность $4\\ \\mathrm{kW}$. Найдите момент силы на валу. Барабан радиуса $10\\ \\mathrm{cm}$, закреплённый на валу, равномерно поднимает груз: какова масса груза и скорость подъёма? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "An electric motor delivers $4\\ \\mathrm{kW}$ of useful power at $1200$ revolutions per minute. Find the torque on the shaft. A drum of radius $10\\ \\mathrm{cm}$ on the shaft lifts a load at constant speed: what is the mass of the load and the lifting speed? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L05-S12.png",
+  "solution": {
+   "uz": [
+    "Burchak tezlik va moment: $$\\omega=40\\pi\\approx126\\ \\mathrm{rad/s},\\qquad \\tau=\\frac{P}{\\omega}=\\frac{100}{\\pi}\\approx31.8\\ \\mathrm{N\\cdot m}$$",
+    "Yuk tekis ko'tariladi — ip tarangligi og'irlikka teng va momenti dvigatel momentini muvozanatlaydi: $$mgR=\\tau\\ \\Rightarrow\\ m=\\frac{\\tau}{gR}\\approx31.8\\ \\mathrm{kg}$$",
+    "Ko'tarilish tezligi va tekshiruv: $$v=\\omega R=4\\pi\\approx12.6\\ \\mathrm{m/s},\\qquad mgv=\\frac{1000}{\\pi}\\cdot4\\pi=4000\\ \\mathrm{W}$$"
+   ],
+   "ru": [
+    "Угловая скорость и момент: $$\\omega=40\\pi\\approx126\\ \\mathrm{rad/s},\\qquad \\tau=\\frac{P}{\\omega}=\\frac{100}{\\pi}\\approx31.8\\ \\mathrm{N\\cdot m}$$",
+    "Груз поднимается равномерно — натяжение равно весу, и его момент уравновешивает момент двигателя: $$mgR=\\tau\\ \\Rightarrow\\ m=\\frac{\\tau}{gR}\\approx31.8\\ \\mathrm{kg}$$",
+    "Скорость подъёма и проверка: $$v=\\omega R=4\\pi\\approx12.6\\ \\mathrm{m/s},\\qquad mgv=\\frac{1000}{\\pi}\\cdot4\\pi=4000\\ \\mathrm{W}$$"
+   ],
+   "en": [
+    "Angular velocity and torque: $$\\omega=40\\pi\\approx126\\ \\mathrm{rad/s},\\qquad \\tau=\\frac{P}{\\omega}=\\frac{100}{\\pi}\\approx31.8\\ \\mathrm{N\\cdot m}$$",
+    "The load rises uniformly — the tension equals its weight, and its torque balances the motor torque: $$mgR=\\tau\\ \\Rightarrow\\ m=\\frac{\\tau}{gR}\\approx31.8\\ \\mathrm{kg}$$",
+    "Lifting speed and a check: $$v=\\omega R=4\\pi\\approx12.6\\ \\mathrm{m/s},\\qquad mgv=\\frac{1000}{\\pi}\\cdot4\\pi=4000\\ \\mathrm{W}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Aylanishdagi quvvat: $P=\\tau\\omega$",
+    "ru": "Мощность при вращении: $P=\\tau\\omega$",
+    "en": "Power in rotation: $P=\\tau\\omega$"
+   },
+   {
+    "uz": "Muvozanat: $\\sum\\vec F=0$, $\\sum\\vec\\tau=0$",
+    "ru": "Равновесие: $\\sum\\vec F=0$, $\\sum\\vec\\tau=0$",
+    "en": "Equilibrium: $\\sum\\vec F=0$, $\\sum\\vec\\tau=0$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Aylanishdagi quvvat",
+   "ru": "Мощность при вращении",
+   "en": "Power in rotation"
+  },
+  "answer": "\\tau\\approx31.8\\ \\mathrm{N\\cdot m};\\ m\\approx31.8\\ \\mathrm{kg};\\ v\\approx12.6\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 10.97-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S13",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Massasi $2\\ \\mathrm{kg}$ bo'lgan yaxlit disk gorizontal sirtda sirpanmasdan $4\\ \\mathrm{m/s}$ tezlik bilan dumalamoqda. Uning kinetik energiyasini va energiyaning qanday qismi aylanishga to'g'ri kelishini toping. Xuddi shunday massa va tezlikdagi yupqa halqa va yaxlit shar energiyalari qancha?",
+   "ru": "Сплошной диск массы $2\\ \\mathrm{kg}$ катится без скольжения по горизонтальной поверхности со скоростью $4\\ \\mathrm{m/s}$. Найдите его кинетическую энергию и какая её часть приходится на вращение. Какова энергия тонкого кольца и сплошного шара той же массы и скорости?",
+   "en": "A solid disc of mass $2\\ \\mathrm{kg}$ rolls without slipping on a horizontal surface at $4\\ \\mathrm{m/s}$. Find its kinetic energy and what fraction of it is rotational. What are the energies of a thin ring and a solid sphere of the same mass and speed?"
+  },
+  "figure": "figures/B2-L05-S13.png",
+  "solution": {
+   "uz": [
+    "Dumalashda $\\omega=\\frac{v_C}{R}$, energiya ikki qismdan iborat: $$E_k=\\frac{mv^2}{2}+\\frac{1}{2}\\cdot\\frac{mR^2}{2}\\cdot\\frac{v^2}{R^2}=\\frac{3}{4}mv^2=\\frac{3}{4}\\cdot2\\cdot16=24\\ \\mathrm{J}$$",
+    "Aylanish ulushi: $$\\frac{\\beta}{1+\\beta}=\\frac{1/2}{3/2}=\\frac{1}{3}\\qquad(8\\ \\mathrm{J})$$",
+    "Halqa ($\\beta=1$) va shar ($\\beta=\\frac{2}{5}$): $$E'=mv^2=32\\ \\mathrm{J},\\qquad E''=\\frac{7}{10}mv^2=22.4\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "При качении $\\omega=\\frac{v_C}{R}$, энергия состоит из двух частей: $$E_k=\\frac{mv^2}{2}+\\frac{1}{2}\\cdot\\frac{mR^2}{2}\\cdot\\frac{v^2}{R^2}=\\frac{3}{4}mv^2=\\frac{3}{4}\\cdot2\\cdot16=24\\ \\mathrm{J}$$",
+    "Доля вращения: $$\\frac{\\beta}{1+\\beta}=\\frac{1/2}{3/2}=\\frac{1}{3}\\qquad(8\\ \\mathrm{J})$$",
+    "Кольцо ($\\beta=1$) и шар ($\\beta=\\frac{2}{5}$): $$E'=mv^2=32\\ \\mathrm{J},\\qquad E''=\\frac{7}{10}mv^2=22.4\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "In rolling $\\omega=\\frac{v_C}{R}$, and the energy has two parts: $$E_k=\\frac{mv^2}{2}+\\frac{1}{2}\\cdot\\frac{mR^2}{2}\\cdot\\frac{v^2}{R^2}=\\frac{3}{4}mv^2=\\frac{3}{4}\\cdot2\\cdot16=24\\ \\mathrm{J}$$",
+    "The rotational fraction: $$\\frac{\\beta}{1+\\beta}=\\frac{1/2}{3/2}=\\frac{1}{3}\\qquad(8\\ \\mathrm{J})$$",
+    "Ring ($\\beta=1$) and sphere ($\\beta=\\frac{2}{5}$): $$E'=mv^2=32\\ \\mathrm{J},\\qquad E''=\\frac{7}{10}mv^2=22.4\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Dumalash energiyasi: $E_k=\\frac{Mv_C^2}{2}+\\frac{I_C\\omega^2}{2}=\\frac{(1+\\beta)Mv_C^2}{2}$",
+    "ru": "Энергия качения: $E_k=\\frac{Mv_C^2}{2}+\\frac{I_C\\omega^2}{2}=\\frac{(1+\\beta)Mv_C^2}{2}$",
+    "en": "Rolling energy: $E_k=\\frac{Mv_C^2}{2}+\\frac{I_C\\omega^2}{2}=\\frac{(1+\\beta)Mv_C^2}{2}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Dumalayotgan jism kinetik energiyasi",
+   "ru": "Кинетическая энергия катящегося тела",
+   "en": "Kinetic energy of a rolling body"
+  },
+  "answer": "24\\ \\mathrm{J},\\ \\frac{1}{3};\\ 32\\ \\mathrm{J};\\ 22.4\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "Volkenshteyn, «Problems in General Physics», 3.16-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yaxlit shar $30^\\circ$ li qiya tekislikda tinch holatdan sirpanmasdan dumalab, $1.4\\ \\mathrm{m}$ balandlikka tushdi. Pastdagi tezligini va tezlanishini toping. Xuddi shu balandlikdan tushgan yupqa halqa tezligi qancha? Shar sirpanmasligi uchun eng kichik ishqalanish koeffitsiyenti qancha? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Сплошной шар скатывается без скольжения из покоя по наклонной плоскости с углом $30^\\circ$, опускаясь на высоту $1.4\\ \\mathrm{m}$. Найдите его скорость внизу и ускорение. Какова скорость тонкого кольца, скатившегося с той же высоты? Каков наименьший коэффициент трения, при котором шар не проскальзывает? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A solid sphere rolls without slipping from rest down a $30^\\circ$ incline, descending a height of $1.4\\ \\mathrm{m}$. Find its speed at the bottom and its acceleration. What is the speed of a thin ring rolling from the same height? What is the minimum coefficient of friction for the sphere not to slip? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L05-S14.png",
+  "solution": {
+   "uz": [
+    "Ishqalanish ish bajarmaydi — energiya saqlanadi ($\\beta=\\frac{2}{5}$): $$Mgh=\\frac{(1+\\beta)Mv^2}{2}\\ \\Rightarrow\\ v=\\sqrt{\\frac{2gh}{1+\\beta}}=\\sqrt{\\frac{10gh}{7}}=\\sqrt{20}\\approx4.47\\ \\mathrm{m/s}$$",
+    "Halqa uchun $\\beta=1$: $$v'=\\sqrt{gh}=\\sqrt{14}\\approx3.74\\ \\mathrm{m/s}$$",
+    "Shar tezlanishi: $$a_C=\\frac{g\\sin\\alpha}{1+\\beta}=\\frac{5}{7}\\cdot10\\cdot\\frac{1}{2}=\\frac{25}{7}\\approx3.57\\ \\mathrm{m/s^2}$$",
+    "Kerakli ishqalanish va sirpanmaslik sharti: $$\\mu_s\\geq\\frac{\\beta\\tan\\alpha}{1+\\beta}=\\frac{2}{7}\\tan30^\\circ\\approx0.165$$"
+   ],
+   "ru": [
+    "Трение не совершает работы — энергия сохраняется ($\\beta=\\frac{2}{5}$): $$Mgh=\\frac{(1+\\beta)Mv^2}{2}\\ \\Rightarrow\\ v=\\sqrt{\\frac{2gh}{1+\\beta}}=\\sqrt{\\frac{10gh}{7}}=\\sqrt{20}\\approx4.47\\ \\mathrm{m/s}$$",
+    "Для кольца $\\beta=1$: $$v'=\\sqrt{gh}=\\sqrt{14}\\approx3.74\\ \\mathrm{m/s}$$",
+    "Ускорение шара: $$a_C=\\frac{g\\sin\\alpha}{1+\\beta}=\\frac{5}{7}\\cdot10\\cdot\\frac{1}{2}=\\frac{25}{7}\\approx3.57\\ \\mathrm{m/s^2}$$",
+    "Нужное трение и условие отсутствия скольжения: $$\\mu_s\\geq\\frac{\\beta\\tan\\alpha}{1+\\beta}=\\frac{2}{7}\\tan30^\\circ\\approx0.165$$"
+   ],
+   "en": [
+    "Friction does no work — energy is conserved ($\\beta=\\frac{2}{5}$): $$Mgh=\\frac{(1+\\beta)Mv^2}{2}\\ \\Rightarrow\\ v=\\sqrt{\\frac{2gh}{1+\\beta}}=\\sqrt{\\frac{10gh}{7}}=\\sqrt{20}\\approx4.47\\ \\mathrm{m/s}$$",
+    "For a ring $\\beta=1$: $$v'=\\sqrt{gh}=\\sqrt{14}\\approx3.74\\ \\mathrm{m/s}$$",
+    "The sphere's acceleration: $$a_C=\\frac{g\\sin\\alpha}{1+\\beta}=\\frac{5}{7}\\cdot10\\cdot\\frac{1}{2}=\\frac{25}{7}\\approx3.57\\ \\mathrm{m/s^2}$$",
+    "Required friction and the no-slip condition: $$\\mu_s\\geq\\frac{\\beta\\tan\\alpha}{1+\\beta}=\\frac{2}{7}\\tan30^\\circ\\approx0.165$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Mexanik energiyaning saqlanishi: $E_{k1}+U_1=E_{k2}+U_2$",
+    "ru": "Сохранение механической энергии: $E_{k1}+U_1=E_{k2}+U_2$",
+    "en": "Conservation of mechanical energy: $E_{k1}+U_1=E_{k2}+U_2$"
+   },
+   null,
+   {
+    "uz": "Qiya tekislikda dumalash: $a_C=\\frac{g\\sin\\alpha}{1+\\beta}$",
+    "ru": "Качение по наклонной: $a_C=\\frac{g\\sin\\alpha}{1+\\beta}$",
+    "en": "Rolling down an incline: $a_C=\\frac{g\\sin\\alpha}{1+\\beta}$"
+   },
+   {
+    "uz": "Sirpanmaslik sharti: $\\mu_s\\geq\\frac{\\beta\\tan\\alpha}{1+\\beta}$",
+    "ru": "Условие отсутствия скольжения: $\\mu_s\\geq\\frac{\\beta\\tan\\alpha}{1+\\beta}$",
+    "en": "No-slip condition: $\\mu_s\\geq\\frac{\\beta\\tan\\alpha}{1+\\beta}$"
+   }
+  ],
+  "basis": {
+   "uz": "Qiya tekislikda dumalash",
+   "ru": "Качение по наклонной плоскости",
+   "en": "Rolling down an incline"
+  },
+  "answer": "v=\\sqrt{20}\\approx4.47\\ \\mathrm{m/s};\\ a\\approx3.57\\ \\mathrm{m/s^2};\\ v'\\approx3.74\\ \\mathrm{m/s};\\ \\mu_s\\geq0.165",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "Volkenshteyn, «Problems in General Physics», 3.27-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S15",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $0.6\\ \\mathrm{kg}$ bo'lgan yaxlit silindrga ip o'ralgan; ipning yuqori uchi shiftga mahkamlangan (chizmada). Silindr qo'yib yuborilgach, ip yechilib, silindr pastga tushadi; ip vertikal. Silindr massa markazining tezlanishini va ip tarangligini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "На сплошной цилиндр массы $0.6\\ \\mathrm{kg}$ намотана нить, верхний конец которой закреплён на потолке (см. рисунок). Отпущенный цилиндр опускается, разматывая нить; нить вертикальна. Найдите ускорение центра масс цилиндра и натяжение нити. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A string is wound around a solid cylinder of mass $0.6\\ \\mathrm{kg}$; its upper end is fixed to the ceiling (see the figure). When released, the cylinder falls as the string unwinds; the string stays vertical. Find the acceleration of the cylinder's center of mass and the tension. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L05-S15.png",
+  "solution": {
+   "uz": [
+    "Massa markazi harakati va massa markazi atrofidagi aylanish: $$ma=mg-T,\\qquad \\frac{mR^2}{2}\\varepsilon=TR$$",
+    "Ip yechiladi, sirpanmaydi: $a=\\varepsilon R$, demak $T=\\frac{ma}{2}$: $$mg=\\frac{3}{2}ma\\ \\Rightarrow\\ a=\\frac{2g}{3}\\approx6.67\\ \\mathrm{m/s^2}$$",
+    "Taranglik — og'irlikning uchdan biri: $$T=\\frac{mg}{3}=\\frac{0.6\\cdot10}{3}=2\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Движение центра масс и вращение вокруг центра масс: $$ma=mg-T,\\qquad \\frac{mR^2}{2}\\varepsilon=TR$$",
+    "Нить разматывается без проскальзывания: $a=\\varepsilon R$, значит $T=\\frac{ma}{2}$: $$mg=\\frac{3}{2}ma\\ \\Rightarrow\\ a=\\frac{2g}{3}\\approx6.67\\ \\mathrm{m/s^2}$$",
+    "Натяжение — треть веса: $$T=\\frac{mg}{3}=\\frac{0.6\\cdot10}{3}=2\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "Motion of the center of mass and rotation about it: $$ma=mg-T,\\qquad \\frac{mR^2}{2}\\varepsilon=TR$$",
+    "The string unwinds without slipping: $a=\\varepsilon R$, so $T=\\frac{ma}{2}$: $$mg=\\frac{3}{2}ma\\ \\Rightarrow\\ a=\\frac{2g}{3}\\approx6.67\\ \\mathrm{m/s^2}$$",
+    "The tension is one third of the weight: $$T=\\frac{mg}{3}=\\frac{0.6\\cdot10}{3}=2\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qattiq jism: $M\\vec a_C=\\sum\\vec F$ va $I\\varepsilon=\\sum\\tau$",
+    "ru": "Твёрдое тело: $M\\vec a_C=\\sum\\vec F$ и $I\\varepsilon=\\sum\\tau$",
+    "en": "Rigid body: $M\\vec a_C=\\sum\\vec F$ and $I\\varepsilon=\\sum\\tau$"
+   },
+   {
+    "uz": "Ip sirpanmaydi: $a=\\varepsilon R$",
+    "ru": "Нить не проскальзывает: $a=\\varepsilon R$",
+    "en": "The string does not slip: $a=\\varepsilon R$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Qattiq jismning tekis-parallel harakati",
+   "ru": "Плоскопараллельное движение твёрдого тела",
+   "en": "Plane motion of a rigid body"
+  },
+  "answer": "a=\\frac{2g}{3}\\approx6.67\\ \\mathrm{m/s^2};\\ T=2\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "Irodov, «Problems in General Physics», 1.253-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Uzunligi $1.2\\ \\mathrm{m}$ bo'lgan bir jinsli sterjen bir uchidagi gorizontal o'q atrofida erkin aylana oladi. U gorizontal holatda tinch ushlab turilib, qo'yib yuborildi (chizmada). Boshlang'ich burchak tezlanishni va erkin uchning tezlanishini toping. Sterjen vertikal holatdan o'tayotganda burchak tezligi va erkin uchining tezligi qancha? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Однородный стержень длиной $1.2\\ \\mathrm{m}$ может свободно вращаться вокруг горизонтальной оси у одного конца. Его удерживали горизонтально и отпустили (см. рисунок). Найдите начальное угловое ускорение и ускорение свободного конца. Каковы угловая скорость и скорость свободного конца, когда стержень проходит вертикальное положение? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A uniform rod of length $1.2\\ \\mathrm{m}$ can turn freely about a horizontal axis at one end. It is held horizontal and released (see the figure). Find the initial angular acceleration and the acceleration of the free end. What are the angular velocity and the speed of the free end as the rod passes the vertical? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L05-S16.png",
+  "solution": {
+   "uz": [
+    "O'qqa nisbatan $I=\\frac{ML^2}{3}$, og'irlik kuchi momenti $Mg\\frac{L}{2}$: $$\\varepsilon=\\frac{MgL/2}{ML^2/3}=\\frac{3g}{2L}=12.5\\ \\mathrm{rad/s^2}$$",
+    "Erkin uchning (urinma) tezlanishi $g$ dan katta: $$a=\\varepsilon L=\\frac{3g}{2}=15\\ \\mathrm{m/s^2}$$",
+    "Vertikalda massa markazi $\\frac{L}{2}$ ga tushgan — energiya saqlanishi: $$Mg\\frac{L}{2}=\\frac{1}{2}\\cdot\\frac{ML^2}{3}\\omega^2\\ \\Rightarrow\\ \\omega=\\sqrt{\\frac{3g}{L}}=5\\ \\mathrm{rad/s}$$",
+    "Erkin uch tezligi: $$v=\\omega L=6\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Относительно оси $I=\\frac{ML^2}{3}$, момент силы тяжести $Mg\\frac{L}{2}$: $$\\varepsilon=\\frac{MgL/2}{ML^2/3}=\\frac{3g}{2L}=12.5\\ \\mathrm{rad/s^2}$$",
+    "(Касательное) ускорение свободного конца больше $g$: $$a=\\varepsilon L=\\frac{3g}{2}=15\\ \\mathrm{m/s^2}$$",
+    "В вертикальном положении центр масс опустился на $\\frac{L}{2}$ — сохранение энергии: $$Mg\\frac{L}{2}=\\frac{1}{2}\\cdot\\frac{ML^2}{3}\\omega^2\\ \\Rightarrow\\ \\omega=\\sqrt{\\frac{3g}{L}}=5\\ \\mathrm{rad/s}$$",
+    "Скорость свободного конца: $$v=\\omega L=6\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "About the axle $I=\\frac{ML^2}{3}$, and the torque of gravity is $Mg\\frac{L}{2}$: $$\\varepsilon=\\frac{MgL/2}{ML^2/3}=\\frac{3g}{2L}=12.5\\ \\mathrm{rad/s^2}$$",
+    "The (tangential) acceleration of the free end exceeds $g$: $$a=\\varepsilon L=\\frac{3g}{2}=15\\ \\mathrm{m/s^2}$$",
+    "At the vertical the center of mass has dropped by $\\frac{L}{2}$ — energy conservation: $$Mg\\frac{L}{2}=\\frac{1}{2}\\cdot\\frac{ML^2}{3}\\omega^2\\ \\Rightarrow\\ \\omega=\\sqrt{\\frac{3g}{L}}=5\\ \\mathrm{rad/s}$$",
+    "Speed of the free end: $$v=\\omega L=6\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Aylanma harakat tenglamasi: $I\\varepsilon=\\sum\\tau$",
+    "ru": "Уравнение вращательного движения: $I\\varepsilon=\\sum\\tau$",
+    "en": "Rotational equation of motion: $I\\varepsilon=\\sum\\tau$"
+   },
+   {
+    "uz": "Chiziqli kattaliklar: $v=\\omega r$, $a_\\tau=\\varepsilon r$, $a_n=\\omega^2r$",
+    "ru": "Линейные величины: $v=\\omega r$, $a_\\tau=\\varepsilon r$, $a_n=\\omega^2r$",
+    "en": "Linear quantities: $v=\\omega r$, $a_\\tau=\\varepsilon r$, $a_n=\\omega^2r$"
+   },
+   {
+    "uz": "Mexanik energiyaning saqlanishi: $E_{k1}+U_1=E_{k2}+U_2$",
+    "ru": "Сохранение механической энергии: $E_{k1}+U_1=E_{k2}+U_2$",
+    "en": "Conservation of mechanical energy: $E_{k1}+U_1=E_{k2}+U_2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Qo'zg'almas o'q atrofida aylanish dinamikasi va energiya",
+   "ru": "Динамика вращения вокруг неподвижной оси и энергия",
+   "en": "Rotation about a fixed axis: dynamics and energy"
+  },
+  "answer": "\\varepsilon=12.5\\ \\mathrm{rad/s^2};\\ a=15\\ \\mathrm{m/s^2};\\ \\omega=5\\ \\mathrm{rad/s};\\ v=6\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 10.67-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Bouling shari yo'lakka aylanmasdan $7\\ \\mathrm{m/s}$ tezlik bilan tushdi; shar va yo'lak orasidagi sirpanish ishqalanish koeffitsiyenti $0.2$. Shar qancha vaqtdan keyin sirpanishsiz dumalay boshlaydi, shu paytdagi tezligi va bosib o'tgan yo'li qancha? Boshlang'ich energiyaning qanday qismi saqlanib qoladi? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Шар для боулинга попадает на дорожку без вращения со скоростью $7\\ \\mathrm{m/s}$; коэффициент трения скольжения между шаром и дорожкой $0.2$. Через какое время шар начнёт катиться без скольжения, какова в этот момент его скорость и пройденный путь? Какая доля начальной энергии сохранится? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A bowling ball lands on the lane at $7\\ \\mathrm{m/s}$ without spinning; the coefficient of kinetic friction between ball and lane is $0.2$. After what time does it start rolling without slipping, and what are its speed and the distance travelled at that moment? What fraction of the initial energy remains? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L05-S17.png",
+  "solution": {
+   "uz": [
+    "Sirpanish ishqalanishi massa markazini sekinlatadi: $$Ma_C=-\\mu Mg\\ \\Rightarrow\\ v=v_0-\\mu gt$$",
+    "Xuddi shu kuch momenti sharni aylantiradi ($I_C=\\frac{2}{5}MR^2$): $$\\frac{2}{5}MR^2\\varepsilon=\\mu MgR\\ \\Rightarrow\\ \\omega R=\\frac{5}{2}\\mu gt$$",
+    "Sirpanish $v=\\omega R$ da to'xtaydi: $$v_0-\\mu gt=\\frac{5}{2}\\mu gt\\ \\Rightarrow\\ t=\\frac{2v_0}{7\\mu g}=1\\ \\mathrm{s},\\qquad v=\\frac{5}{7}v_0=5\\ \\mathrm{m/s}$$",
+    "Yo'l va energiya ulushi: $$s=v_0t-\\frac{\\mu gt^2}{2}=6\\ \\mathrm{m},\\qquad \\frac{E_2}{E_1}=\\frac{\\frac{7}{10}Mv^2}{\\frac{1}{2}Mv_0^2}=\\frac{5}{7}$$"
+   ],
+   "ru": [
+    "Трение скольжения тормозит центр масс: $$Ma_C=-\\mu Mg\\ \\Rightarrow\\ v=v_0-\\mu gt$$",
+    "Момент той же силы раскручивает шар ($I_C=\\frac{2}{5}MR^2$): $$\\frac{2}{5}MR^2\\varepsilon=\\mu MgR\\ \\Rightarrow\\ \\omega R=\\frac{5}{2}\\mu gt$$",
+    "Проскальзывание прекращается при $v=\\omega R$: $$v_0-\\mu gt=\\frac{5}{2}\\mu gt\\ \\Rightarrow\\ t=\\frac{2v_0}{7\\mu g}=1\\ \\mathrm{s},\\qquad v=\\frac{5}{7}v_0=5\\ \\mathrm{m/s}$$",
+    "Путь и доля энергии: $$s=v_0t-\\frac{\\mu gt^2}{2}=6\\ \\mathrm{m},\\qquad \\frac{E_2}{E_1}=\\frac{\\frac{7}{10}Mv^2}{\\frac{1}{2}Mv_0^2}=\\frac{5}{7}$$"
+   ],
+   "en": [
+    "Kinetic friction slows the center of mass: $$Ma_C=-\\mu Mg\\ \\Rightarrow\\ v=v_0-\\mu gt$$",
+    "The torque of the same force spins the ball up ($I_C=\\frac{2}{5}MR^2$): $$\\frac{2}{5}MR^2\\varepsilon=\\mu MgR\\ \\Rightarrow\\ \\omega R=\\frac{5}{2}\\mu gt$$",
+    "Sliding stops when $v=\\omega R$: $$v_0-\\mu gt=\\frac{5}{2}\\mu gt\\ \\Rightarrow\\ t=\\frac{2v_0}{7\\mu g}=1\\ \\mathrm{s},\\qquad v=\\frac{5}{7}v_0=5\\ \\mathrm{m/s}$$",
+    "Distance and energy fraction: $$s=v_0t-\\frac{\\mu gt^2}{2}=6\\ \\mathrm{m},\\qquad \\frac{E_2}{E_1}=\\frac{\\frac{7}{10}Mv^2}{\\frac{1}{2}Mv_0^2}=\\frac{5}{7}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sirpanish ishqalanishi: $F_{\\mu}=\\mu N$",
+    "ru": "Трение скольжения: $F_{\\mu}=\\mu N$",
+    "en": "Kinetic friction: $F_{\\mu}=\\mu N$"
+   },
+   {
+    "uz": "Aylanma harakat tenglamasi: $I\\varepsilon=\\sum\\tau$",
+    "ru": "Уравнение вращательного движения: $I\\varepsilon=\\sum\\tau$",
+    "en": "Rotational equation of motion: $I\\varepsilon=\\sum\\tau$"
+   },
+   {
+    "uz": "Sirpanishsiz dumalash: $v_C=\\omega R$",
+    "ru": "Качение без скольжения: $v_C=\\omega R$",
+    "en": "Rolling without slipping: $v_C=\\omega R$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Sirpanishdan dumalashga o'tish",
+   "ru": "Переход от скольжения к качению",
+   "en": "Transition from sliding to rolling"
+  },
+  "answer": "t=1\\ \\mathrm{s};\\ v=5\\ \\mathrm{m/s};\\ s=6\\ \\mathrm{m};\\ \\frac{5}{7}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "Irodov, «Problems in General Physics», 1.262-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L05-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Uzunligi $5\\ \\mathrm{m}$, massasi $20\\ \\mathrm{kg}$ bo'lgan bir jinsli narvon silliq vertikal devorga suyalib, pol bilan $\\theta$ burchak hosil qiladi, $\\sin\\theta=0.8$ (chizmada). Narvonga poldan va devordan ta'sir qiluvchi kuchlarni toping. Narvon sirpanmasligi uchun pol bilan ishqalanish koeffitsiyenti kamida qancha bo'lishi kerak? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Однородная лестница длиной $5\\ \\mathrm{m}$ и массой $20\\ \\mathrm{kg}$ опирается на гладкую вертикальную стену и образует с полом угол $\\theta$, $\\sin\\theta=0.8$ (см. рисунок). Найдите силы, действующие на лестницу со стороны пола и стены. Каким должен быть коэффициент трения о пол как минимум, чтобы лестница не скользила? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A uniform ladder of length $5\\ \\mathrm{m}$ and mass $20\\ \\mathrm{kg}$ leans on a smooth vertical wall at angle $\\theta$ to the floor, $\\sin\\theta=0.8$ (see the figure). Find the forces exerted on the ladder by the floor and by the wall. What is the minimum coefficient of friction with the floor for the ladder not to slip? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L05-S18.png",
+  "solution": {
+   "uz": [
+    "Kuchlar yig'indisi nol (devor silliq — faqat gorizontal $N_2$): $$N_1=Mg=200\\ \\mathrm{N},\\qquad F_{\\mu}=N_2$$",
+    "Pastki uchga nisbatan momentlar ($\\cos\\theta=0.6$): $$N_2L\\sin\\theta=Mg\\frac{L}{2}\\cos\\theta\\ \\Rightarrow\\ N_2=\\frac{200\\cdot0.6}{2\\cdot0.8}=75\\ \\mathrm{N}$$",
+    "Ishqalanish $F_{\\mu}=75\\ \\mathrm{N}$ tinchlikdagi ishqalanishning chegarasidan oshmasligi kerak: $$\\mu_s\\geq\\frac{F_{\\mu}}{N_1}=\\frac{75}{200}=\\frac{3}{8}=0.375$$"
+   ],
+   "ru": [
+    "Сумма сил равна нулю (стена гладкая — только горизонтальная $N_2$): $$N_1=Mg=200\\ \\mathrm{N},\\qquad F_{\\mu}=N_2$$",
+    "Моменты относительно нижнего конца ($\\cos\\theta=0.6$): $$N_2L\\sin\\theta=Mg\\frac{L}{2}\\cos\\theta\\ \\Rightarrow\\ N_2=\\frac{200\\cdot0.6}{2\\cdot0.8}=75\\ \\mathrm{N}$$",
+    "Трение $F_{\\mu}=75\\ \\mathrm{N}$ не должно превышать предел трения покоя: $$\\mu_s\\geq\\frac{F_{\\mu}}{N_1}=\\frac{75}{200}=\\frac{3}{8}=0.375$$"
+   ],
+   "en": [
+    "The forces add to zero (the wall is smooth — only a horizontal $N_2$): $$N_1=Mg=200\\ \\mathrm{N},\\qquad F_{\\mu}=N_2$$",
+    "Torques about the lower end ($\\cos\\theta=0.6$): $$N_2L\\sin\\theta=Mg\\frac{L}{2}\\cos\\theta\\ \\Rightarrow\\ N_2=\\frac{200\\cdot0.6}{2\\cdot0.8}=75\\ \\mathrm{N}$$",
+    "The friction $F_{\\mu}=75\\ \\mathrm{N}$ must not exceed the limit of static friction: $$\\mu_s\\geq\\frac{F_{\\mu}}{N_1}=\\frac{75}{200}=\\frac{3}{8}=0.375$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Muvozanat: $\\sum\\vec F=0$, $\\sum\\vec\\tau=0$",
+    "ru": "Равновесие: $\\sum\\vec F=0$, $\\sum\\vec\\tau=0$",
+    "en": "Equilibrium: $\\sum\\vec F=0$, $\\sum\\vec\\tau=0$"
+   },
+   {
+    "uz": "Kuch momenti moduli: $\\tau=Fd=rF\\sin\\alpha$",
+    "ru": "Модуль момента силы: $\\tau=Fd=rF\\sin\\alpha$",
+    "en": "Magnitude of torque: $\\tau=Fd=rF\\sin\\alpha$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Qattiq jism muvozanati",
+   "ru": "Равновесие твёрдого тела",
+   "en": "Equilibrium of a rigid body"
+  },
+  "answer": "N_1=200\\ \\mathrm{N};\\ N_2=F_{\\mu}=75\\ \\mathrm{N};\\ \\mu_s\\geq0.375",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L05, narvon)"
+ }
+]

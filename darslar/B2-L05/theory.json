@@ -1,0 +1,501 @@
+[
+ {
+  "t": "h1",
+  "uz": "Qattiq jism aylanishi, inersiya momenti (Rigid-body rotation, moment of inertia)",
+  "ru": "Вращение твёрдого тела, момент инерции",
+  "en": "Rigid-body rotation, moment of inertia"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz qo'zg'almas o'q atrofida aylanayotgan qattiq jism kinematikasini burchak kattaliklari orqali tasvirlaysiz; nuqtalar sistemasi va yaxlit jismlarning inersiya momentini integrallab, Shteyner va perpendikulyar o'qlar teoremalari bilan hisoblaysiz; kuch momentini vektor ko'paytma va kuch yelkasi orqali topasiz; aylanma harakat dinamikasining asosiy tenglamasi $\\tau=I\\varepsilon$ ni bloklar, barabanlar va sterjenlar uchun qo'llaysiz; aylanishdagi ish, quvvat va kinetik energiyani hisoblaysiz; sirpanishsiz dumalashni energiya va dinamika usullari bilan tahlil qilasiz; sirpanishdan dumalashga o'tishni va qattiq jism muvozanatini o'rganasiz.",
+  "ru": "**Цель.** После урока вы будете описывать кинематику твёрдого тела, вращающегося вокруг неподвижной оси, через угловые величины; вычислять момент инерции системы точек и сплошных тел интегрированием и с помощью теорем Штейнера и о перпендикулярных осях; находить момент силы через векторное произведение и плечо силы; применять основное уравнение динамики вращательного движения $\\tau=I\\varepsilon$ для блоков, барабанов и стержней; вычислять работу, мощность и кинетическую энергию при вращении; анализировать качение без скольжения энергетическим и динамическим методами; изучать переход от скольжения к качению и равновесие твёрдого тела.",
+  "en": "**Goal.** After this lesson you will describe the kinematics of a rigid body rotating about a fixed axis with angular quantities; compute the moment of inertia of systems of points and of extended bodies by integration and with the parallel-axis and perpendicular-axis theorems; find torque through the vector product and the lever arm; apply the basic equation of rotational dynamics $\\tau=I\\varepsilon$ to pulleys, drums and rods; calculate work, power and kinetic energy in rotation; analyse rolling without slipping by the energy and dynamics methods; and study the transition from sliding to rolling and the equilibrium of a rigid body."
+ },
+ {
+  "t": "p",
+  "uz": "Shu paytgacha (B2-L01–L04) jismlarni moddiy nuqta deb oldik yoki faqat massa markazining harakatini qaradik. Lekin g'ildirak, maxovik, blok, dumalayotgan shar uchun jismning o'z o'qi atrofida aylanishi muhim. Qattiq jism (rigid body) — nuqtalari orasidagi masofalar o'zgarmaydigan jism; uning har qanday harakati massa markazining ilgarilanma harakati va massa markazi atrofidagi aylanishdan iborat. Aylanma harakat qonunlari ilgarilanma harakat qonunlariga to'liq o'xshash: massa o'rnida inersiya momenti, kuch o'rnida kuch momenti, tezlik o'rnida burchak tezlik turadi. Impuls momenti va uning saqlanishi keyingi darsda (B2-L06). GRE formulalar sahifasida asosiy inersiya momentlari beriladi, lekin Shteyner teoremasi va dumalash masalalarini tez yechish — odatiy savollar.",
+  "ru": "До сих пор (B2-L01–L04) мы считали тела материальными точками или рассматривали лишь движение центра масс. Но для колеса, маховика, блока, катящегося шара важно вращение тела вокруг собственной оси. Твёрдое тело (rigid body) — тело, расстояния между точками которого не меняются; любое его движение складывается из поступательного движения центра масс и вращения вокруг центра масс. Законы вращательного движения полностью аналогичны законам поступательного: вместо массы — момент инерции, вместо силы — момент силы, вместо скорости — угловая скорость. Момент импульса и его сохранение — на следующем уроке (B2-L06). На странице формул GRE даны основные моменты инерции, но быстрое применение теоремы Штейнера и задачи о качении — типичные вопросы.",
+  "en": "So far (B2-L01–L04) we treated bodies as point particles or looked only at the motion of the center of mass. But for a wheel, a flywheel, a pulley or a rolling ball the body's rotation about its own axis matters. A rigid body is one whose inter-point distances do not change; any motion of it consists of the translation of the center of mass and a rotation about the center of mass. The laws of rotation are fully analogous to those of translation: moment of inertia replaces mass, torque replaces force, angular velocity replaces velocity. Angular momentum and its conservation come in the next lesson (B2-L06). The GRE formula sheet gives the basic moments of inertia, but quick use of the parallel-axis theorem and rolling problems are typical questions."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Aylanma harakat kinematikasi (Rotational kinematics)",
+  "ru": "1. Кинематика вращательного движения",
+  "en": "1. Rotational kinematics"
+ },
+ {
+  "t": "li",
+  "uz": "**Burchak kattaliklari.** Qo'zg'almas o'q atrofida aylanayotgan qattiq jismning barcha nuqtalari bir xil burchakka buriladi, shuning uchun uning holati bitta burilish burchagi $\\varphi(t)$ bilan aniqlanadi. Burchak tezlik (angular velocity) $\\omega=\\frac{d\\varphi}{dt}$, burchak tezlanish (angular acceleration) $\\varepsilon=\\frac{d\\omega}{dt}$ (GRE da $\\alpha$ belgisi). Burchak radianlarda o'lchanadi: bir aylanish $2\\pi\\ \\mathrm{rad}$ ga teng, shuning uchun aylanish chastotasi $n$ (sekundiga aylanishlar) bilan $\\omega=2\\pi n$; minutiga $N$ aylanish uchun $\\omega=\\frac{2\\pi N}{60}$ — masalalarda eng ko'p uchraydigan xato manbai.",
+  "ru": "**Угловые величины.** Все точки твёрдого тела, вращающегося вокруг неподвижной оси, поворачиваются на один и тот же угол, поэтому его положение задаётся одним углом поворота $\\varphi(t)$. Угловая скорость (angular velocity) $\\omega=\\frac{d\\varphi}{dt}$, угловое ускорение (angular acceleration) $\\varepsilon=\\frac{d\\omega}{dt}$ (в GRE обозначается $\\alpha$). Угол измеряется в радианах: один оборот равен $2\\pi\\ \\mathrm{rad}$, поэтому при частоте вращения $n$ (оборотов в секунду) $\\omega=2\\pi n$; для $N$ оборотов в минуту $\\omega=\\frac{2\\pi N}{60}$ — самый частый источник ошибок в задачах.",
+  "en": "**Angular quantities.** All points of a rigid body rotating about a fixed axis turn through the same angle, so its position is given by a single rotation angle $\\varphi(t)$. The angular velocity is $\\omega=\\frac{d\\varphi}{dt}$ and the angular acceleration is $\\varepsilon=\\frac{d\\omega}{dt}$ (denoted $\\alpha$ on the GRE). Angles are measured in radians: one revolution equals $2\\pi\\ \\mathrm{rad}$, so for a rotation frequency $n$ (revolutions per second) $\\omega=2\\pi n$; for $N$ revolutions per minute $\\omega=\\frac{2\\pi N}{60}$ — the most common source of errors in problems."
+ },
+ {
+  "t": "li",
+  "uz": "**Chiziqli kattaliklar bilan bog'lanish.** O'qdan $r$ masofadagi nuqta radiusi $r$ bo'lgan aylana chizadi: tezligi $v=\\omega r$, urinma tezlanishi $a_\\tau=\\varepsilon r$, normal (markazga intilma) tezlanishi $a_n=\\omega^2r$, to'liq tezlanishi $a=r\\sqrt{\\varepsilon^2+\\omega^4}$ ([[F01]]). Vektor ko'rinishda burchak tezlik o'q bo'ylab o'ng parma qoidasi bo'yicha yo'nalgan va $\\vec v=\\vec\\omega\\times\\vec r$. Demak, jismning barcha nuqtalari bir xil $\\omega$ ga ega, lekin chiziqli tezliklari o'qdan masofaga proporsional.",
+  "ru": "**Связь с линейными величинами.** Точка на расстоянии $r$ от оси описывает окружность радиуса $r$: её скорость $v=\\omega r$, касательное ускорение $a_\\tau=\\varepsilon r$, нормальное (центростремительное) ускорение $a_n=\\omega^2r$, полное ускорение $a=r\\sqrt{\\varepsilon^2+\\omega^4}$ ([[F01]]). В векторной форме угловая скорость направлена вдоль оси по правилу правого винта и $\\vec v=\\vec\\omega\\times\\vec r$. Значит, все точки тела имеют одну и ту же $\\omega$, но линейные скорости пропорциональны расстоянию от оси.",
+  "en": "**Relation to linear quantities.** A point at distance $r$ from the axis moves on a circle of radius $r$: its speed is $v=\\omega r$, its tangential acceleration $a_\\tau=\\varepsilon r$, its normal (centripetal) acceleration $a_n=\\omega^2r$, and its total acceleration $a=r\\sqrt{\\varepsilon^2+\\omega^4}$ ([[F01]]). In vector form the angular velocity points along the axis by the right-hand rule and $\\vec v=\\vec\\omega\\times\\vec r$. So all points of the body share the same $\\omega$, but their linear speeds are proportional to the distance from the axis."
+ },
+ {
+  "t": "m",
+  "m": "\\omega=\\frac{d\\varphi}{dt},\\qquad \\varepsilon=\\frac{d\\omega}{dt},\\qquad v=\\omega r,\\qquad a_\\tau=\\varepsilon r,\\qquad a_n=\\omega^2r"
+ },
+ {
+  "t": "li",
+  "uz": "**Tekis o'zgaruvchan aylanish.** $\\varepsilon=\\mathrm{const}$ bo'lsa, formulalar tekis o'zgaruvchan harakatnikiga o'xshaydi: $\\omega=\\omega_0+\\varepsilon t$, $\\varphi=\\omega_0t+\\frac{\\varepsilon t^2}{2}$, $\\omega^2-\\omega_0^2=2\\varepsilon\\varphi$, $\\varphi=\\frac{\\omega_0+\\omega}{2}t$. Masalan, minutiga $300$ aylanish tezlikda aylanayotgan va $10\\ \\mathrm{s}$ da tekis sekinlashib to'xtagan g'ildirak $\\varphi=\\frac{\\omega_0t}{2}=50\\pi\\ \\mathrm{rad}$, ya'ni $25$ aylanish qiladi. Aylanishlar soni $N=\\frac{\\varphi}{2\\pi}$.",
+  "ru": "**Равнопеременное вращение.** При $\\varepsilon=\\mathrm{const}$ формулы аналогичны равнопеременному движению: $\\omega=\\omega_0+\\varepsilon t$, $\\varphi=\\omega_0t+\\frac{\\varepsilon t^2}{2}$, $\\omega^2-\\omega_0^2=2\\varepsilon\\varphi$, $\\varphi=\\frac{\\omega_0+\\omega}{2}t$. Например, колесо, вращавшееся со скоростью $300$ оборотов в минуту и равнозамедленно остановившееся за $10\\ \\mathrm{s}$, поворачивается на $\\varphi=\\frac{\\omega_0t}{2}=50\\pi\\ \\mathrm{rad}$, то есть делает $25$ оборотов. Число оборотов $N=\\frac{\\varphi}{2\\pi}$.",
+  "en": "**Uniformly accelerated rotation.** For $\\varepsilon=\\mathrm{const}$ the formulas mirror uniformly accelerated motion: $\\omega=\\omega_0+\\varepsilon t$, $\\varphi=\\omega_0t+\\frac{\\varepsilon t^2}{2}$, $\\omega^2-\\omega_0^2=2\\varepsilon\\varphi$, $\\varphi=\\frac{\\omega_0+\\omega}{2}t$. For example, a wheel turning at $300$ revolutions per minute that slows uniformly to rest in $10\\ \\mathrm{s}$ turns through $\\varphi=\\frac{\\omega_0t}{2}=50\\pi\\ \\mathrm{rad}$, i.e. makes $25$ revolutions. The number of revolutions is $N=\\frac{\\varphi}{2\\pi}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L05-F01.png",
+   "ru": "figures/B2-L05-F01-ru.png",
+   "en": "figures/B2-L05-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Aylanish kinetik energiyasi va inersiya momenti (Rotational kinetic energy and moment of inertia)",
+  "ru": "2. Кинетическая энергия вращения и момент инерции",
+  "en": "2. Rotational kinetic energy and moment of inertia"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Aylanayotgan jismning kinetik energiyasi uning nuqtalari energiyalari yig'indisi: $E_k=\\sum\\frac{m_iv_i^2}{2}=\\frac{\\omega^2}{2}\\sum m_ir_i^2$. Qavs ichidagi kattalik inersiya momenti (moment of inertia) deyiladi: $I=\\sum m_ir_i^2$, yaxlit jism uchun $I=\\int r^2\\,dm$, bu yerda $r$ — o'qdan masofa. Demak, $E_k=\\frac{I\\omega^2}{2}$ — $\\frac{mv^2}{2}$ ning aylanma o'xshashi. Inersiya momenti birligi $\\mathrm{kg\\cdot m^2}$; u faqat massaga emas, massaning o'qqa nisbatan taqsimlanishiga bog'liq va **o'qni tanlashga bog'liq**: bir jism turli o'qlarga nisbatan turli inersiya momentiga ega.",
+  "ru": "**Определение.** Кинетическая энергия вращающегося тела — сумма энергий его точек: $E_k=\\sum\\frac{m_iv_i^2}{2}=\\frac{\\omega^2}{2}\\sum m_ir_i^2$. Величина в скобках называется моментом инерции (moment of inertia): $I=\\sum m_ir_i^2$, для сплошного тела $I=\\int r^2\\,dm$, где $r$ — расстояние до оси. Значит, $E_k=\\frac{I\\omega^2}{2}$ — вращательный аналог $\\frac{mv^2}{2}$. Единица момента инерции $\\mathrm{kg\\cdot m^2}$; он зависит не только от массы, но и от её распределения относительно оси и **от выбора оси**: одно тело относительно разных осей имеет разные моменты инерции.",
+  "en": "**Definition.** The kinetic energy of a rotating body is the sum of the energies of its points: $E_k=\\sum\\frac{m_iv_i^2}{2}=\\frac{\\omega^2}{2}\\sum m_ir_i^2$. The quantity in brackets is called the moment of inertia: $I=\\sum m_ir_i^2$, and for an extended body $I=\\int r^2\\,dm$, where $r$ is the distance from the axis. Hence $E_k=\\frac{I\\omega^2}{2}$ — the rotational analogue of $\\frac{mv^2}{2}$. The unit of moment of inertia is $\\mathrm{kg\\cdot m^2}$; it depends not only on the mass but on how the mass is distributed relative to the axis, and **on the choice of axis**: one body has different moments of inertia about different axes."
+ },
+ {
+  "t": "m",
+  "m": "I=\\sum m_ir_i^2=\\int r^2\\,dm,\\qquad E_k=\\frac{I\\omega^2}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy jismlar (simmetriya o'qiga nisbatan).** Yupqa halqa yoki yupqa devorli silindr — $MR^2$ (butun massa o'qdan $R$ masofada); yaxlit disk yoki silindr — $\\frac{1}{2}MR^2$; ingichka sterjen o'rtasidan perpendikulyar o'qqa nisbatan — $\\frac{1}{12}ML^2$, uchidan — $\\frac{1}{3}ML^2$; yaxlit shar — $\\frac{2}{5}MR^2$; yupqa sfera — $\\frac{2}{3}MR^2$ ([[F02]]). Inersiya momentini $I=Mk^2$ ko'rinishida yozish mumkin, $k$ — inersiya radiusi (radius of gyration): massani bitta halqaga «yig'ganda» uning radiusi. Massa o'qdan qancha uzoq bo'lsa, $k$ shuncha katta: halqada $k=R$, diskda $\\frac{R}{\\sqrt{2}}$, sharda $\\sqrt{\\frac{2}{5}}R$.",
+  "ru": "**Основные тела (относительно оси симметрии).** Тонкое кольцо или тонкостенный цилиндр — $MR^2$ (вся масса на расстоянии $R$ от оси); сплошной диск или цилиндр — $\\frac{1}{2}MR^2$; тонкий стержень относительно перпендикулярной оси через середину — $\\frac{1}{12}ML^2$, через конец — $\\frac{1}{3}ML^2$; сплошной шар — $\\frac{2}{5}MR^2$; тонкая сфера — $\\frac{2}{3}MR^2$ ([[F02]]). Момент инерции можно записать как $I=Mk^2$, где $k$ — радиус инерции (radius of gyration): радиус кольца, в которое «собрана» вся масса. Чем дальше масса от оси, тем больше $k$: у кольца $k=R$, у диска $\\frac{R}{\\sqrt{2}}$, у шара $\\sqrt{\\frac{2}{5}}R$.",
+  "en": "**Basic bodies (about the symmetry axis).** A thin ring or thin-walled cylinder — $MR^2$ (all the mass at distance $R$ from the axis); a solid disc or cylinder — $\\frac{1}{2}MR^2$; a thin rod about a perpendicular axis through its middle — $\\frac{1}{12}ML^2$, through its end — $\\frac{1}{3}ML^2$; a solid sphere — $\\frac{2}{5}MR^2$; a thin spherical shell — $\\frac{2}{3}MR^2$ ([[F02]]). The moment of inertia can be written as $I=Mk^2$, where $k$ is the radius of gyration: the radius of a ring into which all the mass is «gathered». The farther the mass from the axis, the larger $k$: for a ring $k=R$, for a disc $\\frac{R}{\\sqrt{2}}$, for a sphere $\\sqrt{\\frac{2}{5}}R$."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L05-F02.png",
+   "ru": "figures/B2-L05-F02-ru.png",
+   "en": "figures/B2-L05-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Inersiya momentini hisoblash (Calculating moments of inertia)",
+  "ru": "3. Вычисление моментов инерции",
+  "en": "3. Calculating moments of inertia"
+ },
+ {
+  "t": "li",
+  "uz": "**Integrallash.** Sterjen uchun $dm=\\frac{M}{L}dx$: o'rtasidan $I=\\int_{-L/2}^{L/2}\\frac{M}{L}x^2dx=\\frac{ML^2}{12}$. Disk uchun uni $r$ radiusli, $dr$ qalinlikdagi halqalarga ajratamiz: $dm=\\frac{M}{\\pi R^2}2\\pi r\\,dr$, $I=\\int_0^R r^2\\frac{2Mr\\,dr}{R^2}=\\frac{MR^2}{2}$. Shar uchun uni o'qqa perpendikulyar yupqa disklarga ajratib, disk formulasini integrallaymiz va $\\frac{2}{5}MR^2$ ni olamiz. Zichlik bir jinsli bo'lmasa (masalan, $\\rho\\sim r$), avval $\\int dm=M$ shartidan doimiyni topish, keyin $I$ ni hisoblash kerak — GRE da ikki integralli bunday savollar uchraydi.",
+  "ru": "**Интегрирование.** Для стержня $dm=\\frac{M}{L}dx$: относительно середины $I=\\int_{-L/2}^{L/2}\\frac{M}{L}x^2dx=\\frac{ML^2}{12}$. Диск разбиваем на кольца радиуса $r$ толщиной $dr$: $dm=\\frac{M}{\\pi R^2}2\\pi r\\,dr$, $I=\\int_0^R r^2\\frac{2Mr\\,dr}{R^2}=\\frac{MR^2}{2}$. Шар разбиваем на тонкие диски, перпендикулярные оси, интегрируем формулу диска и получаем $\\frac{2}{5}MR^2$. Если плотность неоднородна (например, $\\rho\\sim r$), сначала из условия $\\int dm=M$ находят постоянную, затем вычисляют $I$ — в GRE встречаются такие вопросы с двумя интегралами.",
+  "en": "**Integration.** For a rod $dm=\\frac{M}{L}dx$: about the middle $I=\\int_{-L/2}^{L/2}\\frac{M}{L}x^2dx=\\frac{ML^2}{12}$. A disc is split into rings of radius $r$ and width $dr$: $dm=\\frac{M}{\\pi R^2}2\\pi r\\,dr$, $I=\\int_0^R r^2\\frac{2Mr\\,dr}{R^2}=\\frac{MR^2}{2}$. A sphere is split into thin discs perpendicular to the axis; integrating the disc formula gives $\\frac{2}{5}MR^2$. If the density is non-uniform (for example $\\rho\\sim r$), first find the constant from $\\int dm=M$, then compute $I$ — GRE questions with such two integrals do appear."
+ },
+ {
+  "t": "li",
+  "uz": "**Shteyner teoremasi.** Agar $I_C$ — massa markazidan o'tgan o'qqa nisbatan inersiya momenti bo'lsa, unga parallel va $d$ masofadagi o'qqa nisbatan $I=I_C+Md^2$ (parallel axis theorem, [[F03]]). Isbot: $r^2=(\\vec r_C'+\\vec d)^2$ yoyilganda o'rta had $2\\vec d\\cdot\\sum m_i\\vec r_i\\,'=0$, chunki massa markazi sistemasida $\\sum m_i\\vec r_i\\,'=0$. Natija: massa markazi orqali o'tgan o'qqa nisbatan inersiya momenti parallel o'qlar ichida eng kichik. Misol: sterjen uchidan — $\\frac{ML^2}{12}+M\\left(\\frac{L}{2}\\right)^2=\\frac{ML^2}{3}$.",
+  "ru": "**Теорема Штейнера.** Если $I_C$ — момент инерции относительно оси через центр масс, то относительно параллельной оси на расстоянии $d$ имеем $I=I_C+Md^2$ (parallel axis theorem, [[F03]]). Доказательство: при раскрытии $r^2=(\\vec r_C'+\\vec d)^2$ средний член $2\\vec d\\cdot\\sum m_i\\vec r_i\\,'=0$, так как в системе центра масс $\\sum m_i\\vec r_i\\,'=0$. Следствие: из всех параллельных осей наименьший момент инерции — относительно оси через центр масс. Пример: стержень относительно конца — $\\frac{ML^2}{12}+M\\left(\\frac{L}{2}\\right)^2=\\frac{ML^2}{3}$.",
+  "en": "**The parallel-axis theorem.** If $I_C$ is the moment of inertia about an axis through the center of mass, then about a parallel axis at distance $d$ we have $I=I_C+Md^2$ ([[F03]]). Proof: expanding $r^2=(\\vec r_C'+\\vec d)^2$, the middle term $2\\vec d\\cdot\\sum m_i\\vec r_i\\,'=0$, because in the center-of-mass frame $\\sum m_i\\vec r_i\\,'=0$. Consequence: of all parallel axes, the one through the center of mass gives the smallest moment of inertia. Example: a rod about its end — $\\frac{ML^2}{12}+M\\left(\\frac{L}{2}\\right)^2=\\frac{ML^2}{3}$."
+ },
+ {
+  "t": "m",
+  "m": "I=I_C+Md^2,\\qquad I_z=I_x+I_y"
+ },
+ {
+  "t": "li",
+  "uz": "**Perpendikulyar o'qlar teoremasi va qo'shiluvchanlik.** Yupqa yassi plastinka uchun uning tekisligida yotgan ikki perpendikulyar o'qqa nisbatan inersiya momentlari yig'indisi tekislikka perpendikulyar o'qqa nisbatan momentga teng: $I_z=I_x+I_y$, chunki $x^2+y^2=r^2$. Masalan, diskning diametrga nisbatan inersiya momenti $\\frac{1}{2}\\cdot\\frac{MR^2}{2}=\\frac{MR^2}{4}$. Inersiya momenti qo'shiluvchan: murakkab jism bo'laklari momentlari (hammasi bitta o'qqa nisbatan) qo'shiladi, kesilgan teshik esa «manfiy» moment sifatida ayiriladi.",
+  "ru": "**Теорема о перпендикулярных осях и аддитивность.** Для тонкой плоской пластинки сумма моментов инерции относительно двух перпендикулярных осей, лежащих в её плоскости, равна моменту относительно оси, перпендикулярной плоскости: $I_z=I_x+I_y$, поскольку $x^2+y^2=r^2$. Например, момент инерции диска относительно диаметра $\\frac{1}{2}\\cdot\\frac{MR^2}{2}=\\frac{MR^2}{4}$. Момент инерции аддитивен: моменты частей сложного тела (все относительно одной оси) складываются, а вырезанное отверстие вычитается как «отрицательный» момент.",
+  "en": "**The perpendicular-axis theorem and additivity.** For a thin flat plate, the sum of the moments of inertia about two perpendicular axes lying in its plane equals the moment about the axis perpendicular to the plane: $I_z=I_x+I_y$, because $x^2+y^2=r^2$. For example, the moment of inertia of a disc about a diameter is $\\frac{1}{2}\\cdot\\frac{MR^2}{2}=\\frac{MR^2}{4}$. Moment of inertia is additive: the moments of the parts of a composite body (all about the same axis) add, and a cut-out hole is subtracted as a «negative» moment."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L05-F03.png",
+   "ru": "figures/B2-L05-F03-ru.png",
+   "en": "figures/B2-L05-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Kuch momenti (Torque)",
+  "ru": "4. Момент силы",
+  "en": "4. Torque"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** $\\vec r$ radius-vektorli nuqtaga qo'yilgan $\\vec F$ kuchning $O$ nuqtaga nisbatan kuch momenti (torque) — vektor ko'paytma: $\\vec\\tau=\\vec r\\times\\vec F$. Uning moduli $\\tau=rF\\sin\\alpha=Fd$, bu yerda $d=r\\sin\\alpha$ — kuch yelkasi (lever arm): $O$ dan kuch ta'sir chizig'igacha bo'lgan eng qisqa masofa ([[F04]]). Kuch momenti birligi $\\mathrm{N\\cdot m}$ (joul bilan adashtirmaslik uchun $\\mathrm{J}$ yozilmaydi). Yo'nalishi o'ng parma qoidasi bo'yicha: tekislikdagi masalada soat strelkasiga qarshi aylantiruvchi moment musbat, bo'yicha — manfiy. B1 da kuch momenti $M$ bilan belgilangan edi; universitet kursida va GRE da $\\tau$.",
+  "ru": "**Определение.** Момент силы (torque) $\\vec F$, приложенной к точке с радиус-вектором $\\vec r$, относительно точки $O$ — векторное произведение: $\\vec\\tau=\\vec r\\times\\vec F$. Его модуль $\\tau=rF\\sin\\alpha=Fd$, где $d=r\\sin\\alpha$ — плечо силы (lever arm): кратчайшее расстояние от $O$ до линии действия силы ([[F04]]). Единица момента силы $\\mathrm{N\\cdot m}$ (чтобы не путать с джоулем, $\\mathrm{J}$ не пишут). Направление — по правилу правого винта: в плоской задаче момент, вращающий против часовой стрелки, положителен, по часовой — отрицателен. На этапе B1 момент силы обозначался $M$; в университетском курсе и в GRE — $\\tau$.",
+  "en": "**Definition.** The torque of a force $\\vec F$ applied at a point with radius vector $\\vec r$ about a point $O$ is the vector product $\\vec\\tau=\\vec r\\times\\vec F$. Its magnitude is $\\tau=rF\\sin\\alpha=Fd$, where $d=r\\sin\\alpha$ is the lever arm: the shortest distance from $O$ to the line of action of the force ([[F04]]). The unit of torque is $\\mathrm{N\\cdot m}$ ($\\mathrm{J}$ is not written, to avoid confusion with the joule). Its direction follows the right-hand rule: in a plane problem a counterclockwise torque is positive and a clockwise one negative. In stage B1 torque was denoted $M$; in the university course and on the GRE it is $\\tau$."
+ },
+ {
+  "t": "m",
+  "m": "\\vec\\tau=\\vec r\\times\\vec F,\\qquad \\tau=rF\\sin\\alpha=Fd,\\qquad \\tau_z=xF_y-yF_x"
+ },
+ {
+  "t": "li",
+  "uz": "**Hisoblash usullari.** Tekislikda $\\tau_z=xF_y-yF_x$ — determinant formulasi; uchta usul bir xil javob beradi: $rF\\sin\\alpha$, kuch yelkasi $Fd$, yoki faqat kuchning $\\vec r$ ga perpendikulyar tashkil etuvchisi $F_\\perp r$. Kuchni ta'sir chizig'i bo'ylab siljitish momentni o'zgartirmaydi; o'qdan o'tuvchi yoki unga parallel kuch o'q atrofida moment bermaydi. Og'irlik kuchining momenti xuddi butun massa massa markazida joylashgandek hisoblanadi: $\\tau=Mgd_C$.",
+  "ru": "**Способы вычисления.** На плоскости $\\tau_z=xF_y-yF_x$ — формула определителя; три способа дают один ответ: $rF\\sin\\alpha$, через плечо $Fd$, или только перпендикулярная к $\\vec r$ составляющая силы $F_\\perp r$. Перенос силы вдоль линии действия не меняет момент; сила, проходящая через ось или параллельная ей, момента относительно оси не создаёт. Момент силы тяжести вычисляется так, будто вся масса сосредоточена в центре масс: $\\tau=Mgd_C$.",
+  "en": "**Ways to compute it.** In the plane $\\tau_z=xF_y-yF_x$ — the determinant formula; three methods give the same answer: $rF\\sin\\alpha$, the lever arm $Fd$, or only the component of the force perpendicular to $\\vec r$, $F_\\perp r$. Sliding a force along its line of action does not change its torque; a force through the axis or parallel to it gives no torque about the axis. The torque of gravity is computed as if all the mass were at the center of mass: $\\tau=Mgd_C$."
+ },
+ {
+  "t": "li",
+  "uz": "**Juft kuch.** Moduli teng, yo'nalishi qarama-qarshi va bir chiziqda yotmaydigan ikki kuch juft kuch (couple) deyiladi. Uning teng ta'sir etuvchisi nol, lekin momenti $Fd$ ($d$ — kuchlar orasidagi masofa) va istalgan nuqtaga nisbatan bir xil. Juft kuch jismni ilgarilanma harakatga keltirmaydi, faqat aylantiradi — rul g'ildiragi, vint burovchi, kompas strelkasi maydonda.",
+  "ru": "**Пара сил.** Две силы, равные по модулю, противоположные по направлению и не лежащие на одной прямой, называются парой сил (couple). Их равнодействующая равна нулю, но момент $Fd$ ($d$ — расстояние между силами) одинаков относительно любой точки. Пара сил не вызывает поступательного движения, а только вращает тело — руль, отвёртка, стрелка компаса в поле.",
+  "en": "**Couple.** Two forces equal in magnitude, opposite in direction and not on one line form a couple. Their resultant is zero, but their torque $Fd$ ($d$ is the distance between the forces) is the same about any point. A couple does not cause translation, it only rotates the body — a steering wheel, a screwdriver, a compass needle in a field."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L05-F04.png",
+   "ru": "figures/B2-L05-F04-ru.png",
+   "en": "figures/B2-L05-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Aylanma harakat dinamikasining asosiy tenglamasi (Newton's second law for rotation)",
+  "ru": "5. Основное уравнение динамики вращательного движения",
+  "en": "5. Newton's second law for rotation"
+ },
+ {
+  "t": "li",
+  "uz": "**Tenglama.** Jismning har bir bo'lagi uchun urinma yo'nalishda $\\Delta m_ia_{\\tau i}=F_{\\tau i}$; ikkala tomonni $r_i$ ga ko'paytirib, $a_{\\tau i}=\\varepsilon r_i$ ni qo'yib qo'shsak, $\\left(\\sum\\Delta m_ir_i^2\\right)\\varepsilon=\\sum F_{\\tau i}r_i$. Ichki kuchlar momentlari juft-jufti bilan qisqaradi, demak qo'zg'almas o'q atrofida aylanish uchun $I\\varepsilon=\\sum\\tau$ — faqat tashqi kuchlar momentlari. Bu $ma=\\sum F$ ning aylanma o'xshashi: bir xil kuch momenti katta inersiya momentli jismga kichik burchak tezlanish beradi. Tenglama qo'zg'almas o'qqa yoki (o'q tezlanish bilan harakatlansa ham) massa markazidan o'tgan o'qqa nisbatan to'g'ri.",
+  "ru": "**Уравнение.** Для каждого элемента тела в касательном направлении $\\Delta m_ia_{\\tau i}=F_{\\tau i}$; умножая обе части на $r_i$, подставляя $a_{\\tau i}=\\varepsilon r_i$ и складывая, получаем $\\left(\\sum\\Delta m_ir_i^2\\right)\\varepsilon=\\sum F_{\\tau i}r_i$. Моменты внутренних сил попарно сокращаются, значит, для вращения вокруг неподвижной оси $I\\varepsilon=\\sum\\tau$ — только моменты внешних сил. Это вращательный аналог $ma=\\sum F$: одинаковый момент силы сообщает телу с большим моментом инерции меньшее угловое ускорение. Уравнение верно относительно неподвижной оси или (даже если ось движется с ускорением) относительно оси через центр масс.",
+  "en": "**The equation.** For each element of the body in the tangential direction $\\Delta m_ia_{\\tau i}=F_{\\tau i}$; multiplying both sides by $r_i$, substituting $a_{\\tau i}=\\varepsilon r_i$ and adding, we get $\\left(\\sum\\Delta m_ir_i^2\\right)\\varepsilon=\\sum F_{\\tau i}r_i$. The torques of internal forces cancel in pairs, so for rotation about a fixed axis $I\\varepsilon=\\sum\\tau$ — external torques only. This is the rotational analogue of $ma=\\sum F$: the same torque gives a body with a larger moment of inertia a smaller angular acceleration. The equation holds about a fixed axis or (even if the axis accelerates) about an axis through the center of mass."
+ },
+ {
+  "t": "m",
+  "m": "I\\varepsilon=\\sum\\tau,\\qquad ma=\\sum F"
+ },
+ {
+  "t": "li",
+  "uz": "**Massali blok va baraban.** Radiusi $R$, inersiya momenti $I$ bo'lgan barabanga o'ralgan ipga $m$ yuk osilgan ([[F05]]). Yuk uchun $ma=mg-T$, baraban uchun $I\\varepsilon=TR$, ip sirpanmaydi: $a=\\varepsilon R$. Bundan $a=\\frac{mg}{m+\\frac{I}{R^2}}$ — baraban yukka «qo'shimcha massa» $\\frac{I}{R^2}$ qo'shgandek. Massali blokli Atvud mashinasida ipning ikki tarmog'idagi tarangliklar endi turlicha ($T_1\\neq T_2$): ularning farqi blokni aylantiradi, va $a=\\frac{(m_1-m_2)g}{m_1+m_2+\\frac{I}{R^2}}$. Blok disk bo'lsa, $\\frac{I}{R^2}=\\frac{M}{2}$.",
+  "ru": "**Массивный блок и барабан.** На нити, намотанной на барабан радиуса $R$ с моментом инерции $I$, висит груз $m$ ([[F05]]). Для груза $ma=mg-T$, для барабана $I\\varepsilon=TR$, нить не проскальзывает: $a=\\varepsilon R$. Отсюда $a=\\frac{mg}{m+\\frac{I}{R^2}}$ — барабан будто добавляет грузу «дополнительную массу» $\\frac{I}{R^2}$. В машине Атвуда с массивным блоком натяжения двух ветвей нити теперь различны ($T_1\\neq T_2$): их разность вращает блок, и $a=\\frac{(m_1-m_2)g}{m_1+m_2+\\frac{I}{R^2}}$. Если блок — диск, то $\\frac{I}{R^2}=\\frac{M}{2}$.",
+  "en": "**Massive pulley and drum.** A mass $m$ hangs on a string wound around a drum of radius $R$ and moment of inertia $I$ ([[F05]]). For the mass $ma=mg-T$, for the drum $I\\varepsilon=TR$, and the string does not slip: $a=\\varepsilon R$. Hence $a=\\frac{mg}{m+\\frac{I}{R^2}}$ — the drum acts like an «extra mass» $\\frac{I}{R^2}$ added to the load. In an Atwood machine with a massive pulley the tensions in the two segments now differ ($T_1\\neq T_2$): their difference turns the pulley, and $a=\\frac{(m_1-m_2)g}{m_1+m_2+\\frac{I}{R^2}}$. If the pulley is a disc, $\\frac{I}{R^2}=\\frac{M}{2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Aylanuvchi sterjen.** Bir uchidagi gorizontal o'q atrofida erkin aylana oladigan sterjen gorizontal holatda qo'yib yuborilsa, og'irlik momenti $Mg\\frac{L}{2}$ va $I=\\frac{ML^2}{3}$: boshlang'ich burchak tezlanish $\\varepsilon=\\frac{3g}{2L}$. Erkin uchining tezlanishi $\\varepsilon L=\\frac{3g}{2}>g$ — sterjen uchi erkin tushayotgan jismdan tezroq tushadi (uchiga qo'yilgan tanga undan ajralib qoladi). Massa markazi tezlanishi $\\frac{3g}{4}$, demak o'q sterjenni $\\frac{Mg}{4}$ kuch bilan ushlab turadi. Qattiq jism dinamikasida har doim ikki tenglama ishlaydi: $M\\vec a_C=\\sum\\vec F$ va $I\\varepsilon=\\sum\\tau$.",
+  "ru": "**Вращающийся стержень.** Если стержень, который может свободно вращаться вокруг горизонтальной оси у одного конца, отпустить из горизонтального положения, момент силы тяжести $Mg\\frac{L}{2}$ и $I=\\frac{ML^2}{3}$: начальное угловое ускорение $\\varepsilon=\\frac{3g}{2L}$. Ускорение свободного конца $\\varepsilon L=\\frac{3g}{2}>g$ — конец стержня падает быстрее свободно падающего тела (положенная на конец монета отрывается). Ускорение центра масс $\\frac{3g}{4}$, значит, ось удерживает стержень силой $\\frac{Mg}{4}$. В динамике твёрдого тела всегда работают два уравнения: $M\\vec a_C=\\sum\\vec F$ и $I\\varepsilon=\\sum\\tau$.",
+  "en": "**A pivoted rod.** If a rod that can turn freely about a horizontal axis at one end is released from the horizontal, the torque of gravity is $Mg\\frac{L}{2}$ and $I=\\frac{ML^2}{3}$: the initial angular acceleration is $\\varepsilon=\\frac{3g}{2L}$. The acceleration of the free end is $\\varepsilon L=\\frac{3g}{2}>g$ — the end of the rod falls faster than a freely falling body (a coin placed on the end separates from it). The acceleration of the center of mass is $\\frac{3g}{4}$, so the axle holds the rod with a force $\\frac{Mg}{4}$. In rigid-body dynamics two equations always work: $M\\vec a_C=\\sum\\vec F$ and $I\\varepsilon=\\sum\\tau$."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L05-F05.png",
+   "ru": "figures/B2-L05-F05-ru.png",
+   "en": "figures/B2-L05-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Aylanishda ish, quvvat va energiya (Work, power and energy in rotation)",
+  "ru": "6. Работа, мощность и энергия при вращении",
+  "en": "6. Work, power and energy in rotation"
+ },
+ {
+  "t": "li",
+  "uz": "**Ish va quvvat.** Urinma kuch $F_\\tau$ nuqtani $ds=r\\,d\\varphi$ ga siljitganda ish $dA=F_\\tau r\\,d\\varphi=\\tau\\,d\\varphi$. Demak, kuch momentining ishi $A=\\int\\tau\\,d\\varphi$ (o'zgarmas momentda $A=\\tau\\varphi$), quvvat $P=\\tau\\omega$ — $P=Fv$ ning o'xshashi. Dvigatel valining momenti va aylanish chastotasi berilsa, quvvat shu formula bilan topiladi; chastotani albatta $\\mathrm{rad/s}$ ga o'tkazish kerak. Masalan, minutiga $3000$ aylanishda $200\\ \\mathrm{N\\cdot m}$ moment $P=200\\cdot100\\pi\\approx63\\ \\mathrm{kW}$ quvvat beradi.",
+  "ru": "**Работа и мощность.** Когда касательная сила $F_\\tau$ смещает точку на $ds=r\\,d\\varphi$, работа $dA=F_\\tau r\\,d\\varphi=\\tau\\,d\\varphi$. Значит, работа момента силы $A=\\int\\tau\\,d\\varphi$ (при постоянном моменте $A=\\tau\\varphi$), мощность $P=\\tau\\omega$ — аналог $P=Fv$. Если заданы момент на валу двигателя и частота вращения, мощность находится по этой формуле; частоту обязательно нужно перевести в $\\mathrm{rad/s}$. Например, при $3000$ оборотах в минуту момент $200\\ \\mathrm{N\\cdot m}$ даёт мощность $P=200\\cdot100\\pi\\approx63\\ \\mathrm{kW}$.",
+  "en": "**Work and power.** When a tangential force $F_\\tau$ moves a point through $ds=r\\,d\\varphi$, the work is $dA=F_\\tau r\\,d\\varphi=\\tau\\,d\\varphi$. Hence the work of a torque is $A=\\int\\tau\\,d\\varphi$ ($A=\\tau\\varphi$ for a constant torque) and the power is $P=\\tau\\omega$ — the analogue of $P=Fv$. Given the torque on an engine shaft and its rotation rate, the power follows from this formula; the rate must be converted to $\\mathrm{rad/s}$. For example, at $3000$ revolutions per minute a torque of $200\\ \\mathrm{N\\cdot m}$ gives $P=200\\cdot100\\pi\\approx63\\ \\mathrm{kW}$."
+ },
+ {
+  "t": "m",
+  "m": "A=\\int\\tau\\,d\\varphi,\\qquad P=\\tau\\omega,\\qquad A=\\frac{I\\omega_2^2}{2}-\\frac{I\\omega_1^2}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya usuli.** Ish–energiya teoremasi aylanish uchun ham to'g'ri: tashqi momentlar ishi aylanish kinetik energiyasining o'zgarishiga teng. Sistema bir necha jismdan iborat bo'lsa (yuklar, bloklar, g'ildiraklar), mexanik energiya saqlanishi tenglamasiga har bir aylanayotgan jismning $\\frac{I\\omega^2}{2}$ hadi qo'shiladi va bog'lanish shartlari ($v=\\omega R$) bilan bitta tezlikka keltiriladi. Masalan, barabanga o'ralgan ipdagi yuk $h$ ga tushganda: $mgh=\\frac{mv^2}{2}+\\frac{I\\omega^2}{2}$, $\\omega=\\frac{v}{R}$, bundan $v^2=\\frac{2mgh}{m+\\frac{I}{R^2}}$ — 5-bo'lim tezlanishi bilan mos.",
+  "ru": "**Энергетический метод.** Теорема о кинетической энергии верна и для вращения: работа внешних моментов равна изменению кинетической энергии вращения. Если система состоит из нескольких тел (грузы, блоки, колёса), в уравнение сохранения механической энергии добавляется член $\\frac{I\\omega^2}{2}$ каждого вращающегося тела, и с помощью условий связи ($v=\\omega R$) всё выражается через одну скорость. Например, когда груз на нити, намотанной на барабан, опускается на $h$: $mgh=\\frac{mv^2}{2}+\\frac{I\\omega^2}{2}$, $\\omega=\\frac{v}{R}$, откуда $v^2=\\frac{2mgh}{m+\\frac{I}{R^2}}$ — согласуется с ускорением из раздела 5.",
+  "en": "**The energy method.** The work–energy theorem also holds for rotation: the work of external torques equals the change in rotational kinetic energy. If a system contains several bodies (masses, pulleys, wheels), a term $\\frac{I\\omega^2}{2}$ for each rotating body is added to the energy conservation equation, and the constraints ($v=\\omega R$) reduce everything to one speed. For example, when a mass on a string wound around a drum descends by $h$: $mgh=\\frac{mv^2}{2}+\\frac{I\\omega^2}{2}$, $\\omega=\\frac{v}{R}$, hence $v^2=\\frac{2mgh}{m+\\frac{I}{R^2}}$ — consistent with the acceleration of section 5."
+ },
+ {
+  "t": "li",
+  "uz": "**O'xshashliklar jadvali.** Ilgarilanma va aylanma harakat kattaliklari bir-biriga mos keladi: $x\\leftrightarrow\\varphi$, $v\\leftrightarrow\\omega$, $a\\leftrightarrow\\varepsilon$, $m\\leftrightarrow I$, $F\\leftrightarrow\\tau$, $p=mv\\leftrightarrow L=I\\omega$, $\\frac{mv^2}{2}\\leftrightarrow\\frac{I\\omega^2}{2}$, $Fv\\leftrightarrow\\tau\\omega$. Shu jadvalni bilsangiz, aylanma masala formulalarini ilgarilanma masaladan «tarjima» qilib yozish mumkin. Impuls momenti $L=I\\omega$ va uning saqlanishi keyingi darsda batafsil.",
+  "ru": "**Таблица аналогий.** Величины поступательного и вращательного движения соответствуют друг другу: $x\\leftrightarrow\\varphi$, $v\\leftrightarrow\\omega$, $a\\leftrightarrow\\varepsilon$, $m\\leftrightarrow I$, $F\\leftrightarrow\\tau$, $p=mv\\leftrightarrow L=I\\omega$, $\\frac{mv^2}{2}\\leftrightarrow\\frac{I\\omega^2}{2}$, $Fv\\leftrightarrow\\tau\\omega$. Зная эту таблицу, формулы вращательной задачи можно «перевести» с поступательной. Момент импульса $L=I\\omega$ и его сохранение — подробно на следующем уроке.",
+  "en": "**The table of analogies.** Quantities of translation and rotation correspond: $x\\leftrightarrow\\varphi$, $v\\leftrightarrow\\omega$, $a\\leftrightarrow\\varepsilon$, $m\\leftrightarrow I$, $F\\leftrightarrow\\tau$, $p=mv\\leftrightarrow L=I\\omega$, $\\frac{mv^2}{2}\\leftrightarrow\\frac{I\\omega^2}{2}$, $Fv\\leftrightarrow\\tau\\omega$. Knowing this table, the formulas of a rotational problem can be «translated» from the translational one. Angular momentum $L=I\\omega$ and its conservation are covered in detail in the next lesson."
+ },
+ {
+  "t": "h2",
+  "uz": "7. Sirpanishsiz dumalash (Rolling without slipping)",
+  "ru": "7. Качение без скольжения",
+  "en": "7. Rolling without slipping"
+ },
+ {
+  "t": "li",
+  "uz": "**Kinematika.** Dumalash — massa markazining ilgarilanma harakati va massa markazi atrofidagi aylanish yig'indisi. Sirpanishsiz dumalashda (rolling without slipping) jismning sirtga tegib turgan nuqtasi bir lahzada tinch turadi, shuning uchun $v_C=\\omega R$, $a_C=\\varepsilon R$. Eng yuqori nuqta tezligi $2v_C$, gorizontal diametr uchlariniki $\\sqrt{2}v_C$ ([[F06]]). Boshqacha qaraganda, har lahzada jism tegish nuqtasidan o'tuvchi oniy o'q (instantaneous axis) atrofida $\\omega$ burchak tezlik bilan aylanadi — har bir nuqta tezligi oniy o'qgacha masofaga proporsional va unga perpendikulyar.",
+  "ru": "**Кинематика.** Качение — сумма поступательного движения центра масс и вращения вокруг центра масс. При качении без скольжения (rolling without slipping) точка тела, касающаяся поверхности, мгновенно покоится, поэтому $v_C=\\omega R$, $a_C=\\varepsilon R$. Скорость верхней точки $2v_C$, концов горизонтального диаметра — $\\sqrt{2}v_C$ ([[F06]]). Иначе говоря, в каждый момент тело вращается с угловой скоростью $\\omega$ вокруг мгновенной оси (instantaneous axis), проходящей через точку касания, — скорость каждой точки пропорциональна расстоянию до мгновенной оси и перпендикулярна ему.",
+  "en": "**Kinematics.** Rolling is the sum of the translation of the center of mass and the rotation about the center of mass. In rolling without slipping the point of the body touching the surface is momentarily at rest, so $v_C=\\omega R$ and $a_C=\\varepsilon R$. The top point moves at $2v_C$ and the ends of the horizontal diameter at $\\sqrt{2}v_C$ ([[F06]]). Put differently, at each instant the body rotates with angular velocity $\\omega$ about the instantaneous axis through the contact point — every point's velocity is proportional to its distance from the instantaneous axis and perpendicular to it."
+ },
+ {
+  "t": "m",
+  "m": "v_C=\\omega R,\\qquad E_k=\\frac{Mv_C^2}{2}+\\frac{I_C\\omega^2}{2}=\\frac{Mv_C^2}{2}\\left(1+\\frac{I_C}{MR^2}\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya.** Dumalayotgan jism kinetik energiyasi ikki qismdan iborat: $E_k=\\frac{Mv_C^2}{2}+\\frac{I_C\\omega^2}{2}$. $I_C=\\beta MR^2$ deb yozsak ($\\beta$: halqada $1$, diskda $\\frac{1}{2}$, sharda $\\frac{2}{5}$, sferada $\\frac{2}{3}$), $E_k=\\frac{(1+\\beta)Mv_C^2}{2}$. Qiya tekislikdan $h$ balandlikdan dumalab tushgan jism tezligi $v_C=\\sqrt{\\frac{2gh}{1+\\beta}}$ — massa va radiusga bog'liq emas, faqat shaklga bog'liq. Sirpanishsiz dumalashda tinchlikdagi ishqalanish ish bajarmaydi (tegish nuqtasi qo'zg'almaydi), shuning uchun mexanik energiya saqlanadi.",
+  "ru": "**Энергия.** Кинетическая энергия катящегося тела состоит из двух частей: $E_k=\\frac{Mv_C^2}{2}+\\frac{I_C\\omega^2}{2}$. Записав $I_C=\\beta MR^2$ ($\\beta$: у кольца $1$, у диска $\\frac{1}{2}$, у шара $\\frac{2}{5}$, у сферы $\\frac{2}{3}$), получаем $E_k=\\frac{(1+\\beta)Mv_C^2}{2}$. Скорость тела, скатившегося с высоты $h$ по наклонной плоскости, $v_C=\\sqrt{\\frac{2gh}{1+\\beta}}$ — не зависит от массы и радиуса, только от формы. При качении без скольжения трение покоя не совершает работы (точка касания неподвижна), поэтому механическая энергия сохраняется.",
+  "en": "**Energy.** The kinetic energy of a rolling body has two parts: $E_k=\\frac{Mv_C^2}{2}+\\frac{I_C\\omega^2}{2}$. Writing $I_C=\\beta MR^2$ ($\\beta$: $1$ for a ring, $\\frac{1}{2}$ for a disc, $\\frac{2}{5}$ for a sphere, $\\frac{2}{3}$ for a shell), we get $E_k=\\frac{(1+\\beta)Mv_C^2}{2}$. A body rolling down from height $h$ has $v_C=\\sqrt{\\frac{2gh}{1+\\beta}}$ — independent of mass and radius, depending only on shape. In rolling without slipping static friction does no work (the contact point does not move), so mechanical energy is conserved."
+ },
+ {
+  "t": "li",
+  "uz": "**Dinamika va ishqalanish.** Qiya tekislikda: $Ma_C=Mg\\sin\\alpha-F_{\\mu}$, $I_C\\varepsilon=F_{\\mu}R$, $a_C=\\varepsilon R$. Bundan $a_C=\\frac{g\\sin\\alpha}{1+\\beta}$ va kerakli ishqalanish $F_{\\mu}=\\frac{\\beta}{1+\\beta}Mg\\sin\\alpha$. Sirpanmaslik sharti $F_{\\mu}\\leq\\mu_sMg\\cos\\alpha$: $\\mu_s\\geq\\frac{\\beta}{1+\\beta}\\tan\\alpha$. Musobaqada (bir xil balandlikdan) birinchi bo'lib $\\beta$ si eng kichik jism — yaxlit shar, keyin disk, sfera va oxirida halqa tushadi; ishqalanishsiz sirpanayotgan jism ($\\beta=0$) hammasidan tez ([[F07]]).",
+  "ru": "**Динамика и трение.** На наклонной плоскости: $Ma_C=Mg\\sin\\alpha-F_{\\mu}$, $I_C\\varepsilon=F_{\\mu}R$, $a_C=\\varepsilon R$. Отсюда $a_C=\\frac{g\\sin\\alpha}{1+\\beta}$ и нужное трение $F_{\\mu}=\\frac{\\beta}{1+\\beta}Mg\\sin\\alpha$. Условие отсутствия проскальзывания $F_{\\mu}\\leq\\mu_sMg\\cos\\alpha$: $\\mu_s\\geq\\frac{\\beta}{1+\\beta}\\tan\\alpha$. В «гонке» (с одной высоты) первым скатывается тело с наименьшим $\\beta$ — сплошной шар, затем диск, сфера и последним кольцо; тело, скользящее без трения ($\\beta=0$), быстрее всех ([[F07]]).",
+  "en": "**Dynamics and friction.** On an incline: $Ma_C=Mg\\sin\\alpha-F_{\\mu}$, $I_C\\varepsilon=F_{\\mu}R$, $a_C=\\varepsilon R$. Hence $a_C=\\frac{g\\sin\\alpha}{1+\\beta}$ and the required friction is $F_{\\mu}=\\frac{\\beta}{1+\\beta}Mg\\sin\\alpha$. The no-slip condition $F_{\\mu}\\leq\\mu_sMg\\cos\\alpha$ gives $\\mu_s\\geq\\frac{\\beta}{1+\\beta}\\tan\\alpha$. In a «race» (from the same height) the body with the smallest $\\beta$ arrives first — the solid sphere, then the disc, the shell and last the ring; a body sliding without friction ($\\beta=0$) beats them all ([[F07]])."
+ },
+ {
+  "t": "m",
+  "m": "a_C=\\frac{g\\sin\\alpha}{1+\\beta},\\qquad v_C=\\sqrt{\\frac{2gh}{1+\\beta}},\\qquad \\mu_s\\geq\\frac{\\beta\\tan\\alpha}{1+\\beta}"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L05-F06.png",
+   "ru": "figures/B2-L05-F06-ru.png",
+   "en": "figures/B2-L05-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L05-F07.png",
+   "ru": "figures/B2-L05-F07-ru.png",
+   "en": "figures/B2-L05-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Sirpanishdan dumalashga o'tish (From sliding to rolling)",
+  "ru": "8. Переход от скольжения к качению",
+  "en": "8. From sliding to rolling"
+ },
+ {
+  "t": "li",
+  "uz": "**Ishqalanish ikki ishni bajaradi.** Agar shar aylanmasdan $v_0$ tezlik bilan g'adir-budir sirtga tushsa (bouling shari), tegish nuqtasi sirpanadi va sirpanish ishqalanishi $F_{\\mu}=\\mu Mg$ bir vaqtda massa markazini sekinlatadi va sharni aylantiradi: $Ma_C=-\\mu Mg$, $I_C\\varepsilon=\\mu MgR$. Sirpanish $v_C=\\omega R$ bo'lgan paytda to'xtaydi, keyin shar sirpanishsiz dumalaydi va ishqalanish yo'qoladi. Tegish nuqtasiga nisbatan impuls momenti saqlanishidan (ishqalanish shu nuqtadan o'tadi) oxirgi tezlik $v=\\frac{v_0}{1+\\beta}$, shar uchun $\\frac{5}{7}v_0$; vaqt $t=\\frac{\\beta v_0}{(1+\\beta)\\mu g}$.",
+  "ru": "**Трение делает две работы.** Если шар без вращения попадает на шероховатую поверхность со скоростью $v_0$ (шар для боулинга), точка касания проскальзывает, и трение скольжения $F_{\\mu}=\\mu Mg$ одновременно тормозит центр масс и раскручивает шар: $Ma_C=-\\mu Mg$, $I_C\\varepsilon=\\mu MgR$. Проскальзывание прекращается, когда $v_C=\\omega R$, затем шар катится без скольжения, и трение исчезает. Из сохранения момента импульса относительно точки касания (трение проходит через эту точку) конечная скорость $v=\\frac{v_0}{1+\\beta}$, для шара $\\frac{5}{7}v_0$; время $t=\\frac{\\beta v_0}{(1+\\beta)\\mu g}$.",
+  "en": "**Friction does two jobs.** If a ball lands on a rough surface at speed $v_0$ without spinning (a bowling ball), the contact point slides, and kinetic friction $F_{\\mu}=\\mu Mg$ simultaneously slows the center of mass and spins the ball up: $Ma_C=-\\mu Mg$, $I_C\\varepsilon=\\mu MgR$. Sliding stops when $v_C=\\omega R$; after that the ball rolls without slipping and the friction vanishes. Conservation of angular momentum about the contact point (the friction passes through that point) gives the final speed $v=\\frac{v_0}{1+\\beta}$, $\\frac{5}{7}v_0$ for a ball; the time is $t=\\frac{\\beta v_0}{(1+\\beta)\\mu g}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Teskari hol va energiya isrofi.** Agar silindr $\\omega_0$ burchak tezlik bilan aylantirib, ilgarilanma tezliksiz sirtga qo'yilsa, ishqalanish uni oldinga tezlatadi va aylanishini sekinlatadi; oxirida $v=\\frac{\\omega_0R}{3}$ (yaxlit silindr). Har ikki holda sirpanish davomida ishqalanish energiyani issiqlikka aylantiradi, shuning uchun mexanik energiya saqlanmaydi — bu bosqichda energiya tenglamasini yozib bo'lmaydi, kuch va moment tenglamalari yoki impuls momenti ishlatiladi. Bilyardda shar markazidan $\\frac{7}{5}R$ balandlikda urilsa, darhol sirpanishsiz dumalaydi.",
+  "ru": "**Обратный случай и потери энергии.** Если цилиндр раскрутить до угловой скорости $\\omega_0$ и поставить на поверхность без поступательной скорости, трение будет разгонять его вперёд и тормозить вращение; в конце $v=\\frac{\\omega_0R}{3}$ (сплошной цилиндр). В обоих случаях во время проскальзывания трение переводит энергию в теплоту, поэтому механическая энергия не сохраняется — на этом этапе нельзя писать уравнение энергии, используют уравнения сил и моментов или момент импульса. В бильярде шар, ударенный на высоте $\\frac{7}{5}R$ над столом, сразу катится без скольжения.",
+  "en": "**The reverse case and energy loss.** If a cylinder is spun up to angular velocity $\\omega_0$ and set down on a surface with no translational velocity, friction accelerates it forwards and slows its spin; finally $v=\\frac{\\omega_0R}{3}$ (solid cylinder). In both cases friction turns energy into heat while sliding, so mechanical energy is not conserved — the energy equation cannot be used at this stage; force and torque equations or angular momentum are used instead. In billiards a ball struck at a height $\\frac{7}{5}R$ above the table rolls without slipping at once."
+ },
+ {
+  "t": "m",
+  "m": "v=\\frac{v_0}{1+\\beta},\\qquad v=\\frac{\\omega_0R}{3},\\qquad t=\\frac{\\beta v_0}{(1+\\beta)\\mu g}"
+ },
+ {
+  "t": "h2",
+  "uz": "9. Qattiq jismning muvozanati (Equilibrium of a rigid body)",
+  "ru": "9. Равновесие твёрдого тела",
+  "en": "9. Equilibrium of a rigid body"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki shart.** Qattiq jism tinch turishi uchun ham massa markazi tezlanmasligi, ham aylanma tezlanish nol bo'lishi kerak: $\\sum\\vec F=0$ va $\\sum\\vec\\tau=0$. Kuchlar yig'indisi nol bo'lsa, momentlar yig'indisi istalgan nuqtaga nisbatan bir xil — shuning uchun momentlar tenglamasini noma'lum kuchlar qo'yilgan nuqtaga nisbatan yozish qulay: ular tenglamadan tushib qoladi. Tekislikdagi masalada bu uchta tenglama: $\\sum F_x=0$, $\\sum F_y=0$, $\\sum\\tau=0$. B1 da (L13) bu shartlarni richag va osilgan jismlar uchun ko'rgan edik.",
+  "ru": "**Два условия.** Чтобы твёрдое тело покоилось, не должен ускоряться центр масс и должно равняться нулю угловое ускорение: $\\sum\\vec F=0$ и $\\sum\\vec\\tau=0$. Если сумма сил равна нулю, сумма моментов одинакова относительно любой точки — поэтому уравнение моментов удобно писать относительно точки приложения неизвестных сил: они выпадают из уравнения. В плоской задаче это три уравнения: $\\sum F_x=0$, $\\sum F_y=0$, $\\sum\\tau=0$. На этапе B1 (L13) мы рассматривали эти условия для рычагов и подвешенных тел.",
+  "en": "**Two conditions.** For a rigid body to stay at rest, its center of mass must not accelerate and its angular acceleration must vanish: $\\sum\\vec F=0$ and $\\sum\\vec\\tau=0$. If the forces add to zero, the sum of torques is the same about any point — so it is convenient to take torques about the point where unknown forces act: they drop out of the equation. In a plane problem these are three equations: $\\sum F_x=0$, $\\sum F_y=0$, $\\sum\\tau=0$. In stage B1 (L13) we met these conditions for levers and suspended bodies."
+ },
+ {
+  "t": "m",
+  "m": "\\sum\\vec F=0,\\qquad \\sum\\vec\\tau=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Devorga suyalgan narvon.** Silliq devorga suyalgan, pol bilan $\\theta$ burchak hosil qilgan bir jinsli narvonga og'irlik $Mg$ (o'rtasida), poldan $N_1$ va ishqalanish $F_{\\mu}$, devordan gorizontal $N_2$ ta'sir qiladi ([[F08]]). Vertikal: $N_1=Mg$; gorizontal: $F_{\\mu}=N_2$; pastki uchga nisbatan momentlar: $N_2L\\sin\\theta=Mg\\frac{L}{2}\\cos\\theta$. Bundan $F_{\\mu}=\\frac{Mg}{2\\tan\\theta}$ va sirpanmaslik sharti $\\mu_s\\geq\\frac{1}{2\\tan\\theta}$ — narvon qanchalik yotiq bo'lsa, shunchalik katta ishqalanish kerak. Narvonda odam yuqoriga chiqqan sari kerakli ishqalanish ortadi.",
+  "ru": "**Лестница у стены.** На однородную лестницу, опирающуюся на гладкую стену и образующую с полом угол $\\theta$, действуют сила тяжести $Mg$ (в середине), со стороны пола $N_1$ и трение $F_{\\mu}$, со стороны стены горизонтальная $N_2$ ([[F08]]). По вертикали: $N_1=Mg$; по горизонтали: $F_{\\mu}=N_2$; моменты относительно нижнего конца: $N_2L\\sin\\theta=Mg\\frac{L}{2}\\cos\\theta$. Отсюда $F_{\\mu}=\\frac{Mg}{2\\tan\\theta}$ и условие отсутствия скольжения $\\mu_s\\geq\\frac{1}{2\\tan\\theta}$ — чем положе лестница, тем большее трение нужно. Когда человек поднимается по лестнице, нужное трение растёт.",
+  "en": "**A ladder against a wall.** A uniform ladder leaning on a smooth wall at angle $\\theta$ to the floor is acted on by gravity $Mg$ (at its middle), the floor's $N_1$ and friction $F_{\\mu}$, and the wall's horizontal $N_2$ ([[F08]]). Vertically: $N_1=Mg$; horizontally: $F_{\\mu}=N_2$; torques about the lower end: $N_2L\\sin\\theta=Mg\\frac{L}{2}\\cos\\theta$. Hence $F_{\\mu}=\\frac{Mg}{2\\tan\\theta}$ and the no-slip condition $\\mu_s\\geq\\frac{1}{2\\tan\\theta}$ — the flatter the ladder, the more friction it needs. As a person climbs the ladder, the required friction grows."
+ },
+ {
+  "t": "li",
+  "uz": "**Muvozanat turg'unligi.** Tayanch ustida turgan jism, og'irlik markazining vertikali tayanch yuzasidan chiqmagan ekan, turg'un: og'dirilganda og'irlik momenti uni qaytaradi. Osilgan jismda og'irlik markazi osish nuqtasidan pastda bo'lsa — turg'un, yuqorida bo'lsa — turg'unmas, ustma-ust tushsa — farqsiz muvozanat (B2-L03 dagi $U(x)$ tahlili bilan bir xil: og'irlik markazi eng past bo'lgan holat turg'un).",
+  "ru": "**Устойчивость равновесия.** Тело, стоящее на опоре, устойчиво, пока вертикаль через центр тяжести не выходит за площадь опоры: при наклоне момент силы тяжести возвращает его. Подвешенное тело устойчиво, если центр тяжести ниже точки подвеса, неустойчиво — если выше, безразлично — если совпадает с ней (то же, что анализ $U(x)$ в B2-L03: устойчиво положение с наинизшим центром тяжести).",
+  "en": "**Stability of equilibrium.** A body standing on a support is stable as long as the vertical through its center of gravity stays within the base: when tilted, the torque of gravity restores it. A suspended body is stable if its center of gravity is below the pivot, unstable if above, and neutral if they coincide (the same as the $U(x)$ analysis of B2-L03: the position with the lowest center of gravity is stable)."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L05-F08.png",
+   "ru": "figures/B2-L05-F08-ru.png",
+   "en": "figures/B2-L05-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE uchun tez usullar (Fast techniques for the GRE)",
+  "ru": "10. Быстрые приёмы для GRE",
+  "en": "10. Fast techniques for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "**Inersiya momentlari.** Formulalar sahifasidagi qiymatlardan foydalaning va Shteyner teoremasi bilan o'qni ko'chiring; o'q massa markazidan o'tmasa — doim $+Md^2$. Bir xil massa va radiusda $I$ ning tartibi: shar $<$ disk $<$ sfera $<$ halqa. Murakkab jism — bo'laklar momentlari yig'indisi; teshik — ayiriladi. Yassi jism uchun perpendikulyar o'qlar teoremasi diametr yoki diagonalga nisbatan momentni bir qatorda beradi.",
+  "ru": "**Моменты инерции.** Пользуйтесь значениями со страницы формул и переносите ось по теореме Штейнера; если ось не проходит через центр масс — всегда $+Md^2$. При одинаковых массе и радиусе порядок $I$: шар $<$ диск $<$ сфера $<$ кольцо. Сложное тело — сумма моментов частей; отверстие — вычитается. Для плоского тела теорема о перпендикулярных осях даёт момент относительно диаметра или диагонали в одну строку.",
+  "en": "**Moments of inertia.** Use the values from the formula sheet and shift the axis with the parallel-axis theorem; if the axis does not pass through the center of mass — always $+Md^2$. For equal mass and radius the order of $I$ is: sphere $<$ disc $<$ shell $<$ ring. A composite body is the sum of the parts' moments; a hole is subtracted. For a flat body the perpendicular-axis theorem gives the moment about a diameter or a diagonal in one line."
+ },
+ {
+  "t": "li",
+  "uz": "**Dumalash va bloklar.** Dumalash masalalarida $\\beta=\\frac{I_C}{MR^2}$ ni toping — tezlik, tezlanish, energiya ulushlari va kerakli ishqalanish shu son orqali yoziladi: aylanish energiyasi ulushi $\\frac{\\beta}{1+\\beta}$. Massali blokda ipning ikki tarmog'i tarangligi teng emas; blok «qo'shimcha massa» $\\frac{I}{R^2}$ beradi. Chegaraviy hollar: $I\\to0$ da ishqalanishsiz sirpanish yoki massasiz blok natijasi chiqishi kerak.",
+  "ru": "**Качение и блоки.** В задачах о качении найдите $\\beta=\\frac{I_C}{MR^2}$ — скорость, ускорение, доли энергии и нужное трение выражаются через это число: доля энергии вращения $\\frac{\\beta}{1+\\beta}$. В массивном блоке натяжения двух ветвей нити не равны; блок даёт «дополнительную массу» $\\frac{I}{R^2}$. Предельные случаи: при $I\\to0$ должен получаться результат для скольжения без трения или невесомого блока.",
+  "en": "**Rolling and pulleys.** In rolling problems find $\\beta=\\frac{I_C}{MR^2}$ — the speed, acceleration, energy fractions and required friction are all expressed through this number: the fraction of energy in rotation is $\\frac{\\beta}{1+\\beta}$. With a massive pulley the tensions in the two segments are not equal; the pulley adds an «extra mass» $\\frac{I}{R^2}$. Limiting cases: for $I\\to0$ you must recover frictionless sliding or a massless pulley."
+ },
+ {
+  "t": "li",
+  "uz": "**Tez-tez uchraydigan xatolar.** Minutiga aylanishlarni $\\mathrm{rad/s}$ ga o'tkazmaslik ($2\\pi$ va $60$); Shteyner teoremasini massa markazidan o'tmagan o'qdan boshlab qo'llash; dumalayotgan jism energiyasida aylanish hadini unutish; sirpanishsiz dumalashda ishqalanish ishini hisoblash (u nol); sirpanish bosqichida mexanik energiyani saqlanadi deb olish; massali blokda tarangliklarni teng deb olish; kuch yelkasi o'rniga o'qgacha bo'lgan masofani olish.",
+  "ru": "**Частые ошибки.** Не переводить обороты в минуту в $\\mathrm{rad/s}$ ($2\\pi$ и $60$); применять теорему Штейнера, начиная с оси, не проходящей через центр масс; забывать вращательный член в энергии катящегося тела; вычислять работу трения при качении без скольжения (она равна нулю); считать механическую энергию сохраняющейся на этапе проскальзывания; считать натяжения равными в массивном блоке; брать расстояние до оси вместо плеча силы.",
+  "en": "**Common mistakes.** Not converting revolutions per minute to $\\mathrm{rad/s}$ ($2\\pi$ and $60$); applying the parallel-axis theorem from an axis that does not pass through the center of mass; forgetting the rotational term in the energy of a rolling body; computing the work of friction in rolling without slipping (it is zero); assuming mechanical energy is conserved during sliding; taking the tensions as equal with a massive pulley; using the distance to the axis instead of the lever arm."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Burchak kattaliklari",
+    "ru": "Угловые величины",
+    "en": "Angular quantities",
+    "m": "\\omega=\\frac{d\\varphi}{dt},\\quad \\varepsilon=\\frac{d\\omega}{dt},\\quad \\omega=2\\pi n"
+   },
+   {
+    "uz": "Chiziqli kattaliklar",
+    "ru": "Линейные величины",
+    "en": "Linear quantities",
+    "m": "v=\\omega r,\\quad a_\\tau=\\varepsilon r,\\quad a_n=\\omega^2r"
+   },
+   {
+    "uz": "Tekis o'zgaruvchan aylanish",
+    "ru": "Равнопеременное вращение",
+    "en": "Uniformly accelerated rotation",
+    "m": "\\varphi=\\omega_0t+\\frac{\\varepsilon t^2}{2},\\quad \\omega^2-\\omega_0^2=2\\varepsilon\\varphi"
+   },
+   {
+    "uz": "Inersiya momenti",
+    "ru": "Момент инерции",
+    "en": "Moment of inertia",
+    "m": "I=\\sum m_ir_i^2=\\int r^2\\,dm"
+   },
+   {
+    "uz": "Halqa, disk, sterjen",
+    "ru": "Кольцо, диск, стержень",
+    "en": "Ring, disc, rod",
+    "m": "MR^2,\\quad \\frac{MR^2}{2},\\quad \\frac{ML^2}{12},\\quad \\frac{ML^2}{3}"
+   },
+   {
+    "uz": "Shar, sfera",
+    "ru": "Шар, сфера",
+    "en": "Sphere, shell",
+    "m": "\\frac{2}{5}MR^2,\\quad \\frac{2}{3}MR^2"
+   },
+   {
+    "uz": "Shteyner, perpendikulyar o'qlar",
+    "ru": "Штейнер, перпендикулярные оси",
+    "en": "Parallel and perpendicular axes",
+    "m": "I=I_C+Md^2,\\quad I_z=I_x+I_y"
+   },
+   {
+    "uz": "Kuch momenti",
+    "ru": "Момент силы",
+    "en": "Torque",
+    "m": "\\vec\\tau=\\vec r\\times\\vec F,\\quad \\tau=Fd"
+   },
+   {
+    "uz": "Aylanma harakat tenglamasi",
+    "ru": "Уравнение вращательного движения",
+    "en": "Rotational equation of motion",
+    "m": "I\\varepsilon=\\sum\\tau"
+   },
+   {
+    "uz": "Massali baraban",
+    "ru": "Массивный барабан",
+    "en": "Massive drum",
+    "m": "a=\\frac{mg}{m+\\frac{I}{R^2}}"
+   },
+   {
+    "uz": "Ish, quvvat, energiya",
+    "ru": "Работа, мощность, энергия",
+    "en": "Work, power, energy",
+    "m": "A=\\int\\tau\\,d\\varphi,\\quad P=\\tau\\omega,\\quad E_k=\\frac{I\\omega^2}{2}"
+   },
+   {
+    "uz": "Dumalash",
+    "ru": "Качение",
+    "en": "Rolling",
+    "m": "v_C=\\omega R,\\quad E_k=\\frac{(1+\\beta)Mv_C^2}{2}"
+   },
+   {
+    "uz": "Qiya tekislikda dumalash",
+    "ru": "Качение по наклонной",
+    "en": "Rolling down an incline",
+    "m": "a_C=\\frac{g\\sin\\alpha}{1+\\beta},\\quad \\mu_s\\geq\\frac{\\beta\\tan\\alpha}{1+\\beta}"
+   },
+   {
+    "uz": "Sirpanishdan dumalashga",
+    "ru": "От скольжения к качению",
+    "en": "From sliding to rolling",
+    "m": "v=\\frac{v_0}{1+\\beta}"
+   },
+   {
+    "uz": "Muvozanat",
+    "ru": "Равновесие",
+    "en": "Equilibrium",
+    "m": "\\sum\\vec F=0,\\quad \\sum\\vec\\tau=0"
+   }
+  ]
+ }
+]
