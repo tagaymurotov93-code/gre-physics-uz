@@ -1,0 +1,499 @@
+[
+ {
+  "t": "h1",
+  "uz": "Impuls momenti va uning saqlanishi (Angular momentum and its conservation)",
+  "ru": "Момент импульса и его сохранение",
+  "en": "Angular momentum and its conservation"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz moddiy nuqta, nuqtalar sistemasi va qattiq jismning impuls momentini istalgan nuqta yoki o'qqa nisbatan hisoblaysiz; impuls momenti tenglamasi $\\frac{d\\vec L}{dt}=\\vec\\tau$ ni qo'llaysiz; impuls momentining saqlanish qonuni bilan konkichi, aylanuvchi platforma, aylanma to'qnashuv va orbitadagi harakat masalalarini yechasiz; qaysi to'qnashuvda impuls, qaysisida impuls momenti, qaysisida energiya saqlanishini ajratasiz; zarba markazi, effektiv potensial va giroskop presessiyasini tushuntirasiz.",
+  "ru": "**Цель.** После урока вы будете вычислять момент импульса материальной точки, системы точек и твёрдого тела относительно любой точки или оси; применять уравнение моментов $\\frac{d\\vec L}{dt}=\\vec\\tau$; решать с помощью закона сохранения момента импульса задачи о фигуристе, вращающейся платформе, вращательном ударе и движении по орбите; различать, в каком ударе сохраняется импульс, в каком — момент импульса, а в каком — энергия; объяснять центр удара, эффективный потенциал и прецессию гироскопа.",
+  "en": "**Goal.** After this lesson you will compute the angular momentum of a particle, a system of particles and a rigid body about any point or axis; apply the equation $\\frac{d\\vec L}{dt}=\\vec\\tau$; solve skater, rotating-platform, rotational-collision and orbital problems with conservation of angular momentum; tell in which collision momentum, angular momentum or energy is conserved; and explain the center of percussion, the effective potential and gyroscopic precession."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L04 da impuls $\\vec p=m\\vec v$ va uning saqlanishini, B2-L05 da esa qattiq jism aylanishini $I\\varepsilon=\\sum\\tau$ tenglamasi orqali o'rgandik. Ilgarilanma harakatda impulsga mos keladigan aylanma kattalik — impuls momenti (angular momentum). U tashqi kuchlar momenti bo'lmaganda saqlanadi va shu qonun konkichining aylanishidan tortib sayyoralar orbitasi va elektronning atomdagi holatigacha tushuntiradi. GRE da impuls momenti mexanikada (aylanma to'qnashuv, orbitalar) ham, kvant mexanikasida ham (kvantlangan $L$) uchraydi.",
+  "ru": "В B2-L04 мы изучили импульс $\\vec p=m\\vec v$ и его сохранение, а в B2-L05 — вращение твёрдого тела с помощью уравнения $I\\varepsilon=\\sum\\tau$. Вращательная величина, соответствующая импульсу поступательного движения, — момент импульса (angular momentum). Он сохраняется при отсутствии моментов внешних сил, и этот закон объясняет всё — от вращения фигуриста до орбит планет и состояния электрона в атоме. В GRE момент импульса встречается и в механике (вращательный удар, орбиты), и в квантовой механике (квантованный $L$).",
+  "en": "In B2-L04 we studied momentum $\\vec p=m\\vec v$ and its conservation, and in B2-L05 the rotation of a rigid body through the equation $I\\varepsilon=\\sum\\tau$. The rotational quantity corresponding to the momentum of translation is angular momentum. It is conserved when there are no external torques, and this law explains everything from a skater's spin to planetary orbits and the state of an electron in an atom. On the GRE angular momentum appears both in mechanics (rotational collisions, orbits) and in quantum mechanics (quantized $L$)."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Moddiy nuqtaning impuls momenti (Angular momentum of a particle)",
+  "ru": "1. Момент импульса материальной точки",
+  "en": "1. Angular momentum of a particle"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** $O$ nuqtaga nisbatan radius-vektori $\\vec r$, impulsi $\\vec p=m\\vec v$ bo'lgan moddiy nuqtaning impuls momenti (angular momentum) — vektor ko'paytma $\\vec L=\\vec r\\times\\vec p$. Uning moduli $L=rp\\sin\\alpha=pd$, bu yerda $\\alpha$ — $\\vec r$ va $\\vec p$ orasidagi burchak, $d=r\\sin\\alpha$ — $O$ dan impuls yo'nalishidagi to'g'ri chiziqqacha masofa (impuls yelkasi). Yo'nalishi o'ng qo'l qoidasi bilan aniqlanadi: $\\vec r$ dan $\\vec p$ tomon buriluvchi parma ilgarilanadigan tomon. Birligi $\\mathrm{kg\\cdot m^2/s}=\\mathrm{J\\cdot s}$. Impuls momenti kuch momenti kabi tanlangan nuqtaga bog'liq: bitta harakat turli nuqtalarga nisbatan turli $\\vec L$ ga ega.",
+  "ru": "**Определение.** Момент импульса (angular momentum) материальной точки с радиус-вектором $\\vec r$ относительно точки $O$ и импульсом $\\vec p=m\\vec v$ — векторное произведение $\\vec L=\\vec r\\times\\vec p$. Его модуль $L=rp\\sin\\alpha=pd$, где $\\alpha$ — угол между $\\vec r$ и $\\vec p$, $d=r\\sin\\alpha$ — расстояние от $O$ до прямой, вдоль которой направлен импульс (плечо импульса). Направление определяется правилом правой руки: туда, куда движется буравчик, поворачиваемый от $\\vec r$ к $\\vec p$. Единица $\\mathrm{kg\\cdot m^2/s}=\\mathrm{J\\cdot s}$. Момент импульса, как и момент силы, зависит от выбранной точки: одно и то же движение имеет разный $\\vec L$ относительно разных точек.",
+  "en": "**Definition.** The angular momentum of a particle with position vector $\\vec r$ relative to a point $O$ and momentum $\\vec p=m\\vec v$ is the cross product $\\vec L=\\vec r\\times\\vec p$. Its magnitude is $L=rp\\sin\\alpha=pd$, where $\\alpha$ is the angle between $\\vec r$ and $\\vec p$ and $d=r\\sin\\alpha$ is the distance from $O$ to the line along which the momentum points (the moment arm). Its direction follows the right-hand rule: the way a screw advances when turned from $\\vec r$ towards $\\vec p$. The unit is $\\mathrm{kg\\cdot m^2/s}=\\mathrm{J\\cdot s}$. Like torque, angular momentum depends on the chosen point: one and the same motion has different $\\vec L$ about different points."
+ },
+ {
+  "t": "m",
+  "m": "\\vec L=\\vec r\\times\\vec p,\\qquad L=rp\\sin\\alpha=pd,\\qquad L_z=xp_y-yp_x"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki muhim hol.** To'g'ri chiziq bo'ylab tekis harakatlanayotgan zarra uchun yelka $d$ o'zgarmaydi, demak istalgan qo'zg'almas nuqtaga nisbatan $L=mvd$ ham o'zgarmaydi — aylanmasdan ham impuls momentiga ega bo'lish mumkin ([[F01]]). Agar $O$ nuqta trayektoriya chizig'ida yotsa, $d=0$ va $L=0$. Radiusi $r$ bo'lgan aylana bo'ylab harakatda markazga nisbatan $\\vec r\\perp\\vec v$, shuning uchun $L=mvr=mr^2\\omega$ — bu $I\\omega$ ning bitta nuqta uchun ko'rinishi. Koordinatalarda $L_z=xp_y-yp_x$ — tekislikdagi harakat uchun qulay formula.",
+  "ru": "**Два важных случая.** Для частицы, равномерно движущейся по прямой, плечо $d$ не меняется, значит, относительно любой неподвижной точки не меняется и $L=mvd$ — моментом импульса можно обладать и без вращения ([[F01]]). Если точка $O$ лежит на прямой траектории, то $d=0$ и $L=0$. При движении по окружности радиуса $r$ относительно центра $\\vec r\\perp\\vec v$, поэтому $L=mvr=mr^2\\omega$ — это $I\\omega$ для одной точки. В координатах $L_z=xp_y-yp_x$ — удобная формула для движения в плоскости.",
+  "en": "**Two important cases.** For a particle moving uniformly along a straight line the moment arm $d$ does not change, so $L=mvd$ about any fixed point does not change either — a particle can have angular momentum without rotating ([[F01]]). If the point $O$ lies on the line of motion, $d=0$ and $L=0$. For motion on a circle of radius $r$, about the center $\\vec r\\perp\\vec v$, so $L=mvr=mr^2\\omega$ — this is $I\\omega$ for a single point. In coordinates $L_z=xp_y-yp_x$ is a convenient formula for motion in a plane."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L06-F01.png",
+   "ru": "figures/B2-L06-F01-ru.png",
+   "en": "figures/B2-L06-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Impuls momenti tenglamasi (The angular momentum equation)",
+  "ru": "2. Уравнение моментов",
+  "en": "2. The angular momentum equation"
+ },
+ {
+  "t": "li",
+  "uz": "**Bitta nuqta.** $\\vec L=\\vec r\\times\\vec p$ ni vaqt bo'yicha differensiallaymiz: $\\frac{d\\vec L}{dt}=\\vec v\\times m\\vec v+\\vec r\\times\\frac{d\\vec p}{dt}$. Birinchi had nol (parallel vektorlar ko'paytmasi), ikkinchisida $\\frac{d\\vec p}{dt}=\\vec F$. Demak, qo'zg'almas nuqtaga nisbatan $\\frac{d\\vec L}{dt}=\\vec\\tau$ — impuls momentining o'zgarish tezligi kuch momentiga teng. Bu $\\frac{d\\vec p}{dt}=\\vec F$ ning aylanma o'xshashi. Integrallab olsak, kuch momenti impulsi (angular impulse) impuls momenti o'zgarishiga teng: $\\int\\vec\\tau\\,dt=\\Delta\\vec L$.",
+  "ru": "**Одна точка.** Продифференцируем $\\vec L=\\vec r\\times\\vec p$ по времени: $\\frac{d\\vec L}{dt}=\\vec v\\times m\\vec v+\\vec r\\times\\frac{d\\vec p}{dt}$. Первое слагаемое равно нулю (произведение параллельных векторов), во втором $\\frac{d\\vec p}{dt}=\\vec F$. Значит, относительно неподвижной точки $\\frac{d\\vec L}{dt}=\\vec\\tau$ — скорость изменения момента импульса равна моменту силы. Это вращательный аналог $\\frac{d\\vec p}{dt}=\\vec F$. Интегрируя, получаем: импульс момента силы (angular impulse) равен изменению момента импульса: $\\int\\vec\\tau\\,dt=\\Delta\\vec L$.",
+  "en": "**A single particle.** Differentiate $\\vec L=\\vec r\\times\\vec p$ with respect to time: $\\frac{d\\vec L}{dt}=\\vec v\\times m\\vec v+\\vec r\\times\\frac{d\\vec p}{dt}$. The first term is zero (a product of parallel vectors), and in the second $\\frac{d\\vec p}{dt}=\\vec F$. Hence about a fixed point $\\frac{d\\vec L}{dt}=\\vec\\tau$ — the rate of change of angular momentum equals the torque. This is the rotational analogue of $\\frac{d\\vec p}{dt}=\\vec F$. Integrating, the angular impulse equals the change in angular momentum: $\\int\\vec\\tau\\,dt=\\Delta\\vec L$."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{d\\vec L}{dt}=\\vec\\tau,\\qquad \\int\\vec\\tau\\,dt=\\Delta\\vec L,\\qquad \\frac{d\\vec p}{dt}=\\vec F"
+ },
+ {
+  "t": "li",
+  "uz": "**Sistema.** Nuqtalar sistemasining impuls momenti $\\vec L=\\sum\\vec r_i\\times\\vec p_i$. Har bir nuqta uchun tenglamani qo'shganda ichki kuchlar momentlari juft-jufti bilan qisqaradi: Nyutonning 3-qonuniga ko'ra ikki nuqtaning o'zaro ta'sir kuchlari teng, qarama-qarshi va ularni tutashtiruvchi chiziq bo'ylab yo'nalgan, shuning uchun ularning yelkasi bir xil. Natijada $\\frac{d\\vec L}{dt}=\\sum\\vec\\tau_{i}$, bu yerda faqat tashqi kuchlar momentlari qatnashadi. Tenglama qo'zg'almas nuqtaga yoki (tezlanish bilan harakatlansa ham) massa markaziga nisbatan to'g'ri.",
+  "ru": "**Система.** Момент импульса системы точек $\\vec L=\\sum\\vec r_i\\times\\vec p_i$. При сложении уравнений для всех точек моменты внутренних сил сокращаются попарно: по третьему закону Ньютона силы взаимодействия двух точек равны, противоположны и направлены вдоль соединяющей их прямой, поэтому у них одинаковое плечо. В итоге $\\frac{d\\vec L}{dt}=\\sum\\vec\\tau_{i}$, где участвуют только моменты внешних сил. Уравнение верно относительно неподвижной точки или (даже при её ускоренном движении) относительно центра масс.",
+  "en": "**A system.** The angular momentum of a system of particles is $\\vec L=\\sum\\vec r_i\\times\\vec p_i$. When the equations for all particles are added, the torques of internal forces cancel in pairs: by Newton's third law the forces between two particles are equal, opposite and directed along the line joining them, so they have the same moment arm. As a result $\\frac{d\\vec L}{dt}=\\sum\\vec\\tau_{i}$, where only external torques appear. The equation holds about a fixed point or (even if it accelerates) about the center of mass."
+ },
+ {
+  "t": "li",
+  "uz": "**Saqlanish qonuni.** Tashqi kuchlarning biror nuqtaga nisbatan momentlari yig'indisi nol bo'lsa, shu nuqtaga nisbatan sistemaning impuls momenti saqlanadi: $\\vec L=\\mathrm{const}$. Ko'pincha faqat bitta o'qqa nisbatan moment nol bo'ladi (masalan, vertikal o'q atrofida erkin aylanayotgan platformada og'irlik va tayanch kuchlari momenti shu o'qqa parallel emas) — u holda faqat $L_z$ saqlanadi. Impuls saqlanishi uchun $\\sum\\vec F=0$ kerak, impuls momenti uchun esa $\\sum\\vec\\tau=0$ — bular har xil shartlar: masalan, qo'zg'almas o'qdagi jismga o'q tomonidan kuch ta'sir qiladi (impuls saqlanmaydi), lekin bu kuchning o'qqa nisbatan momenti nol ($L_z$ saqlanadi).",
+  "ru": "**Закон сохранения.** Если сумма моментов внешних сил относительно некоторой точки равна нулю, то момент импульса системы относительно этой точки сохраняется: $\\vec L=\\mathrm{const}$. Часто нулю равен момент лишь относительно одной оси (например, у свободно вращающейся вокруг вертикальной оси платформы моменты силы тяжести и реакции опоры не имеют составляющей вдоль этой оси) — тогда сохраняется только $L_z$. Для сохранения импульса нужно $\\sum\\vec F=0$, а для момента импульса — $\\sum\\vec\\tau=0$; это разные условия: например, на тело на неподвижной оси действует сила со стороны оси (импульс не сохраняется), но момент этой силы относительно оси равен нулю ($L_z$ сохраняется).",
+  "en": "**The conservation law.** If the external torques about some point add up to zero, the system's angular momentum about that point is conserved: $\\vec L=\\mathrm{const}$. Often the torque vanishes only about one axis (for example, for a platform turning freely about a vertical axis, the torques of gravity and of the support have no component along that axis) — then only $L_z$ is conserved. Momentum conservation needs $\\sum\\vec F=0$, angular momentum conservation needs $\\sum\\vec\\tau=0$; these are different conditions: for example, an axle exerts a force on a body mounted on it (momentum is not conserved), but the torque of that force about the axle is zero ($L_z$ is conserved)."
+ },
+ {
+  "t": "m",
+  "m": "\\sum\\vec\\tau=0\\ \\Rightarrow\\ \\vec L=\\sum\\vec r_i\\times\\vec p_i=\\mathrm{const}"
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls va impuls momenti — o'xshashlik.** Ikki kattalik bir-biriga to'liq mos keladi: $\\vec p\\leftrightarrow\\vec L$, $\\vec F\\leftrightarrow\\vec\\tau$, $m\\leftrightarrow I$, $\\frac{d\\vec p}{dt}=\\vec F\\leftrightarrow\\frac{d\\vec L}{dt}=\\vec\\tau$, $\\frac{p^2}{2m}\\leftrightarrow\\frac{L^2}{2I}$, $\\int\\vec F\\,dt=\\Delta\\vec p\\leftrightarrow\\int\\vec\\tau\\,dt=\\Delta\\vec L$. Saqlanish shartlari ham mos: $\\sum\\vec F=0$ bo'lsa $\\vec p$, $\\sum\\vec\\tau=0$ bo'lsa $\\vec L$ saqlanadi. Farqi shundaki, $\\vec L$ va $\\vec\\tau$ nuqta tanlashga bog'liq, shuning uchun masalada birinchi qadam — nuqtani (o'qni) tanlash va hamma momentlarni shu nuqtaga nisbatan yozish. Ikkala saqlanish qonuni ham tabiatning simmetriyasidan kelib chiqadi: impuls — fazoning bir jinsliligidan, impuls momenti — fazoning izotropligidan (yo'nalishlar teng huquqliligidan).",
+  "ru": "**Импульс и момент импульса — аналогия.** Две величины полностью соответствуют друг другу: $\\vec p\\leftrightarrow\\vec L$, $\\vec F\\leftrightarrow\\vec\\tau$, $m\\leftrightarrow I$, $\\frac{d\\vec p}{dt}=\\vec F\\leftrightarrow\\frac{d\\vec L}{dt}=\\vec\\tau$, $\\frac{p^2}{2m}\\leftrightarrow\\frac{L^2}{2I}$, $\\int\\vec F\\,dt=\\Delta\\vec p\\leftrightarrow\\int\\vec\\tau\\,dt=\\Delta\\vec L$. Условия сохранения тоже соответствуют: при $\\sum\\vec F=0$ сохраняется $\\vec p$, при $\\sum\\vec\\tau=0$ — $\\vec L$. Разница в том, что $\\vec L$ и $\\vec\\tau$ зависят от выбора точки, поэтому первый шаг в задаче — выбрать точку (ось) и писать все моменты относительно неё. Оба закона сохранения следуют из симметрии природы: импульс — из однородности пространства, момент импульса — из изотропности пространства (равноправия направлений).",
+  "en": "**Momentum and angular momentum — the analogy.** The two quantities correspond completely: $\\vec p\\leftrightarrow\\vec L$, $\\vec F\\leftrightarrow\\vec\\tau$, $m\\leftrightarrow I$, $\\frac{d\\vec p}{dt}=\\vec F\\leftrightarrow\\frac{d\\vec L}{dt}=\\vec\\tau$, $\\frac{p^2}{2m}\\leftrightarrow\\frac{L^2}{2I}$, $\\int\\vec F\\,dt=\\Delta\\vec p\\leftrightarrow\\int\\vec\\tau\\,dt=\\Delta\\vec L$. The conservation conditions correspond too: $\\vec p$ is conserved when $\\sum\\vec F=0$, $\\vec L$ when $\\sum\\vec\\tau=0$. The difference is that $\\vec L$ and $\\vec\\tau$ depend on the choice of point, so the first step in a problem is to choose the point (axis) and write all the moments about it. Both conservation laws follow from symmetries of nature: momentum from the homogeneity of space, angular momentum from the isotropy of space (all directions being equivalent)."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Markaziy kuch va Keplerning ikkinchi qonuni (Central forces and Kepler's second law)",
+  "ru": "3. Центральная сила и второй закон Кеплера",
+  "en": "3. Central forces and Kepler's second law"
+ },
+ {
+  "t": "li",
+  "uz": "**Markaziy kuch.** Doim bitta qo'zg'almas markazga (yoki undan) yo'nalgan kuch markaziy kuch (central force) deyiladi: tortishish, Kulon kuchi, ipning markazga tortuvchi tarangligi. Bunday kuch markazga nisbatan moment hosil qilmaydi ($\\vec r\\parallel\\vec F$), shuning uchun markazga nisbatan $\\vec L$ saqlanadi. Ikki natija: 1) $\\vec L$ yo'nalishi o'zgarmaydi — harakat $\\vec L$ ga perpendikulyar bitta tekislikda bo'ladi; 2) $L=mr^2\\dot\\varphi$ moduli o'zgarmaydi. Markazga yaqinlashganda zarra tezroq aylanadi — konkichi qo'llarini yig'gandagi kabi.",
+  "ru": "**Центральная сила.** Сила, всегда направленная к одному неподвижному центру (или от него), называется центральной (central force): тяготение, кулоновская сила, натяжение нити, тянущей к центру. Такая сила не создаёт момента относительно центра ($\\vec r\\parallel\\vec F$), поэтому относительно центра $\\vec L$ сохраняется. Два следствия: 1) направление $\\vec L$ не меняется — движение происходит в одной плоскости, перпендикулярной $\\vec L$; 2) модуль $L=mr^2\\dot\\varphi$ постоянен. Приближаясь к центру, частица вращается быстрее — как фигурист, прижимающий руки.",
+  "en": "**Central force.** A force that always points towards (or away from) one fixed center is called a central force: gravity, the Coulomb force, the tension of a string pulling towards a center. Such a force produces no torque about the center ($\\vec r\\parallel\\vec F$), so $\\vec L$ about the center is conserved. Two consequences: 1) the direction of $\\vec L$ does not change — the motion stays in one plane perpendicular to $\\vec L$; 2) the magnitude $L=mr^2\\dot\\varphi$ is constant. Approaching the center, the particle turns faster — like a skater pulling in the arms."
+ },
+ {
+  "t": "li",
+  "uz": "**Teng yuzalar qonuni.** $dt$ vaqtda radius-vektor $dS=\\frac{1}{2}r^2\\,d\\varphi$ yuzani chizadi, demak sektor tezlik $\\frac{dS}{dt}=\\frac{r^2\\dot\\varphi}{2}=\\frac{L}{2m}$ o'zgarmas — sayyora teng vaqtlarda teng yuzalar chizadi (Keplerning ikkinchi qonuni, [[F02]]). Perigeliy va afeliyda tezlik radius-vektorga perpendikulyar, shuning uchun $mv_1r_1=mv_2r_2$: Quyoshga yaqin nuqtada sayyora tezroq. Ellips bo'ylab bir aylanish uchun $T\\frac{dS}{dt}=\\pi ab$ — bu orbita davrini yarim o'qlar bilan bog'laydi.",
+  "ru": "**Закон равных площадей.** За время $dt$ радиус-вектор заметает площадь $dS=\\frac{1}{2}r^2\\,d\\varphi$, значит, секторная скорость $\\frac{dS}{dt}=\\frac{r^2\\dot\\varphi}{2}=\\frac{L}{2m}$ постоянна — планета за равные времена заметает равные площади (второй закон Кеплера, [[F02]]). В перигелии и афелии скорость перпендикулярна радиус-вектору, поэтому $mv_1r_1=mv_2r_2$: вблизи Солнца планета движется быстрее. За один оборот по эллипсу $T\\frac{dS}{dt}=\\pi ab$ — это связывает период с полуосями орбиты.",
+  "en": "**The law of equal areas.** In time $dt$ the position vector sweeps an area $dS=\\frac{1}{2}r^2\\,d\\varphi$, so the areal velocity $\\frac{dS}{dt}=\\frac{r^2\\dot\\varphi}{2}=\\frac{L}{2m}$ is constant — a planet sweeps equal areas in equal times (Kepler's second law, [[F02]]). At perihelion and aphelion the velocity is perpendicular to the position vector, so $mv_1r_1=mv_2r_2$: near the Sun the planet moves faster. For one revolution along an ellipse $T\\frac{dS}{dt}=\\pi ab$ — this links the period to the semi-axes."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{dS}{dt}=\\frac{L}{2m}=\\mathrm{const},\\qquad v_1r_1=v_2r_2"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L06-F02.png",
+   "ru": "figures/B2-L06-F02-ru.png",
+   "en": "figures/B2-L06-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Qattiq jismning impuls momenti (Angular momentum of a rigid body)",
+  "ru": "4. Момент импульса твёрдого тела",
+  "en": "4. Angular momentum of a rigid body"
+ },
+ {
+  "t": "li",
+  "uz": "**Qo'zg'almas o'q atrofida.** O'qdan $r_i$ masofadagi har bir bo'lak $v_i=\\omega r_i$ tezlik bilan aylanadi va o'qqa nisbatan $\\Delta m_iv_ir_i=\\Delta m_ir_i^2\\omega$ impuls momentiga ega. Qo'shib, $L_z=\\left(\\sum\\Delta m_ir_i^2\\right)\\omega=I\\omega$. Vaqt bo'yicha differensiallasak ($I=\\mathrm{const}$), $\\frac{dL_z}{dt}=I\\varepsilon=\\tau_z$ — B2-L05 dagi aylanma harakat tenglamasi impuls momenti tenglamasining xususiy holi ekan. Kinetik energiyani ham $L$ orqali yozish mumkin: $E_k=\\frac{I\\omega^2}{2}=\\frac{L^2}{2I}$ — xuddi $E_k=\\frac{p^2}{2m}$ kabi.",
+  "ru": "**Вокруг неподвижной оси.** Каждый элемент на расстоянии $r_i$ от оси движется со скоростью $v_i=\\omega r_i$ и имеет относительно оси момент импульса $\\Delta m_iv_ir_i=\\Delta m_ir_i^2\\omega$. Суммируя, $L_z=\\left(\\sum\\Delta m_ir_i^2\\right)\\omega=I\\omega$. Дифференцируя по времени ($I=\\mathrm{const}$), получаем $\\frac{dL_z}{dt}=I\\varepsilon=\\tau_z$ — уравнение вращательного движения из B2-L05 оказывается частным случаем уравнения моментов. Кинетическую энергию тоже можно выразить через $L$: $E_k=\\frac{I\\omega^2}{2}=\\frac{L^2}{2I}$ — как $E_k=\\frac{p^2}{2m}$.",
+  "en": "**About a fixed axis.** Each element at distance $r_i$ from the axis moves at $v_i=\\omega r_i$ and has angular momentum $\\Delta m_iv_ir_i=\\Delta m_ir_i^2\\omega$ about the axis. Adding up, $L_z=\\left(\\sum\\Delta m_ir_i^2\\right)\\omega=I\\omega$. Differentiating with respect to time ($I=\\mathrm{const}$) gives $\\frac{dL_z}{dt}=I\\varepsilon=\\tau_z$ — the rotational equation of B2-L05 turns out to be a special case of the angular momentum equation. The kinetic energy can also be written through $L$: $E_k=\\frac{I\\omega^2}{2}=\\frac{L^2}{2I}$ — just like $E_k=\\frac{p^2}{2m}$."
+ },
+ {
+  "t": "m",
+  "m": "L_z=I\\omega,\\qquad \\frac{dL_z}{dt}=I\\varepsilon=\\tau_z,\\qquad E_k=\\frac{L^2}{2I}"
+ },
+ {
+  "t": "li",
+  "uz": "**$\\vec L$ va $\\vec\\omega$ yo'nalishi.** Jism simmetriya o'qi atrofida aylansa, simmetrik bo'laklarning o'qqa perpendikulyar tashkil etuvchilari qisqaradi va $\\vec L=I\\vec\\omega$ — vektorlar parallel. Nosimmetrik jismda (masalan, o'qqa qiya mahkamlangan gantel, [[F03]]) $\\vec L$ va $\\vec\\omega$ parallel emas: $\\vec L$ o'q atrofida jism bilan birga aylanadi, uni burish uchun podshipniklar doim moment berishi kerak — muvozanatlanmagan g'ildirak shuning uchun titraydi. Shu sababli avtomobil g'ildiraklari muvozanatlanadi (balansirovka).",
+  "ru": "**Направления $\\vec L$ и $\\vec\\omega$.** Если тело вращается вокруг оси симметрии, перпендикулярные оси составляющие симметричных элементов сокращаются и $\\vec L=I\\vec\\omega$ — векторы параллельны. У несимметричного тела (например, гантели, закреплённой наклонно к оси, [[F03]]) $\\vec L$ и $\\vec\\omega$ не параллельны: $\\vec L$ вращается вокруг оси вместе с телом, и, чтобы поворачивать его, подшипники должны всё время создавать момент — поэтому неуравновешенное колесо вибрирует. По этой причине колёса автомобиля балансируют.",
+  "en": "**Directions of $\\vec L$ and $\\vec\\omega$.** If a body rotates about a symmetry axis, the components of symmetric elements perpendicular to the axis cancel and $\\vec L=I\\vec\\omega$ — the vectors are parallel. For an asymmetric body (for example, a dumbbell mounted at an angle to the axle, [[F03]]) $\\vec L$ and $\\vec\\omega$ are not parallel: $\\vec L$ rotates about the axle together with the body, and to turn it the bearings must apply a torque all the time — this is why an unbalanced wheel vibrates. That is why car wheels are balanced."
+ },
+ {
+  "t": "li",
+  "uz": "**Orbital va xususiy impuls momenti.** Istalgan jism uchun $\\vec L=\\vec r_C\\times M\\vec v_C+\\vec L_C$: massa markazining harakati bilan bog'liq orbital qism va massa markazi atrofidagi aylanish bilan bog'liq xususiy qism (spin). Bu B2-L04 dagi Kyonig teoremasining aylanma o'xshashi. Masalan, Yerning Quyosh atrofidagi orbital impuls momenti o'z o'qi atrofidagi xususiy impuls momentidan millionlab marta katta. Dumalayotgan g'ildirak uchun tegish nuqtasiga nisbatan $L=MRv_C+I_C\\omega=(I_C+MR^2)\\omega$.",
+  "ru": "**Орбитальный и собственный момент импульса.** Для любого тела $\\vec L=\\vec r_C\\times M\\vec v_C+\\vec L_C$: орбитальная часть, связанная с движением центра масс, и собственная часть (спин), связанная с вращением вокруг центра масс. Это вращательный аналог теоремы Кёнига из B2-L04. Например, орбитальный момент импульса Земли вокруг Солнца в миллионы раз больше её собственного момента импульса относительно оси. Для катящегося колеса относительно точки касания $L=MRv_C+I_C\\omega=(I_C+MR^2)\\omega$.",
+  "en": "**Orbital and spin angular momentum.** For any body $\\vec L=\\vec r_C\\times M\\vec v_C+\\vec L_C$: an orbital part due to the motion of the center of mass and a spin part due to rotation about the center of mass. This is the rotational analogue of König's theorem from B2-L04. For example, the Earth's orbital angular momentum about the Sun is millions of times larger than its spin angular momentum about its axis. For a rolling wheel, about the contact point $L=MRv_C+I_C\\omega=(I_C+MR^2)\\omega$."
+ },
+ {
+  "t": "m",
+  "m": "\\vec L=\\vec r_C\\times M\\vec v_C+\\vec L_C"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L06-F03.png",
+   "ru": "figures/B2-L06-F03-ru.png",
+   "en": "figures/B2-L06-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Impuls momentining saqlanishi (Conservation of angular momentum)",
+  "ru": "5. Сохранение момента импульса",
+  "en": "5. Conservation of angular momentum"
+ },
+ {
+  "t": "li",
+  "uz": "**Inersiya momenti o'zgaruvchan sistema.** Tashqi moment bo'lmasa, $I_1\\omega_1=I_2\\omega_2$: inersiya momenti kamaysa, burchak tezlik ortadi. Konkichi qo'llarini ko'kragiga yig'adi — tezroq aylanadi; sakrovchi havoda tizzalarini quchoqlab, salto aylanishlarini tezlashtiradi; Jukovskiy kursisidagi odam gantellarni o'ziga tortsa, kursi tezlashadi ([[F04]]). Qo'zg'almas o'qqa nisbatan bu tenglik o'z-o'zidan, hech qanday kuch yoki vaqtni bilmasdan yoziladi — bu saqlanish qonunining kuchi.",
+  "ru": "**Система с переменным моментом инерции.** При отсутствии внешнего момента $I_1\\omega_1=I_2\\omega_2$: если момент инерции уменьшается, угловая скорость растёт. Фигурист прижимает руки к груди — вращается быстрее; прыгун в воду в воздухе обхватывает колени и ускоряет сальто; человек на скамье Жуковского, притягивая гантели, ускоряет вращение скамьи ([[F04]]). Относительно неподвижной оси это равенство записывается сразу, без знания сил и времени, — в этом сила закона сохранения.",
+  "en": "**A system with variable moment of inertia.** With no external torque $I_1\\omega_1=I_2\\omega_2$: if the moment of inertia decreases, the angular velocity increases. A skater pulls the arms to the chest and spins faster; a diver tucks the knees in the air and speeds up the somersaults; a person on a rotating stool who pulls in dumbbells spins faster ([[F04]]). About a fixed axis this equality is written at once, without knowing any forces or times — that is the power of a conservation law."
+ },
+ {
+  "t": "m",
+  "m": "I_1\\omega_1=I_2\\omega_2,\\qquad \\frac{E_2}{E_1}=\\frac{I_1}{I_2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya saqlanmaydi.** $L$ o'zgarmas bo'lganda $E_k=\\frac{L^2}{2I}$, demak $\\frac{E_2}{E_1}=\\frac{I_1}{I_2}$: konkichi qo'llarini yig'ganda kinetik energiya ortadi. Qo'shimcha energiyani konkichining mushaklari beradi — u aylanish tufayli «tashqariga tortilayotgan» qo'llarini markazga tortib, ish bajaradi (ichki kuchlar impuls momentini o'zgartirmaydi, lekin ish bajarishi mumkin). Teskari jarayonda, qo'llar yoyilganda, energiya kamayadi. Shuning uchun bunday masalalarda impuls momenti tenglamasi yoziladi, energiya esa faqat ishni hisoblash uchun ishlatiladi.",
+  "ru": "**Энергия не сохраняется.** При постоянном $L$ энергия $E_k=\\frac{L^2}{2I}$, значит, $\\frac{E_2}{E_1}=\\frac{I_1}{I_2}$: когда фигурист прижимает руки, кинетическая энергия растёт. Добавочную энергию дают мышцы фигуриста — он совершает работу, притягивая к центру руки, которые вращение «тянет наружу» (внутренние силы не меняют момент импульса, но могут совершать работу). В обратном процессе, при разведении рук, энергия уменьшается. Поэтому в таких задачах пишут уравнение для момента импульса, а энергию используют только для вычисления работы.",
+  "en": "**Energy is not conserved.** At constant $L$ the energy is $E_k=\\frac{L^2}{2I}$, so $\\frac{E_2}{E_1}=\\frac{I_1}{I_2}$: when a skater pulls the arms in, the kinetic energy increases. The extra energy comes from the skater's muscles — the skater does work pulling towards the center the arms that the rotation «pulls outwards» (internal forces do not change angular momentum but can do work). In the reverse process, spreading the arms, the energy decreases. So in such problems one writes the angular momentum equation and uses energy only to find the work."
+ },
+ {
+  "t": "li",
+  "uz": "**Harakatlanuvchi qismlar.** Platformaning chetida turgan odam platformaga nisbatan yura boshlasa, sistemaning yerga nisbatan impuls momenti nolligicha qoladi: odam bir tomonga aylansa, platforma qarama-qarshi tomonga aylanadi. Bunday masalalarda tezliklarni albatta qo'zg'almas (yer) sanoq sistemasida yozish kerak. Xuddi shunday, vertolyot asosiy parragini aylantirganda korpus teskari aylanishga intiladi — buni dum parragi muvozanatlaydi; Jukovskiy kursisida aylanayotgan g'ildirakni ag'darish kursini aylantiradi.",
+  "ru": "**Движущиеся части.** Если человек, стоящий на краю платформы, начинает идти относительно неё, момент импульса системы относительно земли остаётся нулевым: человек поворачивается в одну сторону, платформа — в противоположную. В таких задачах скорости обязательно записывают в неподвижной (земной) системе отсчёта. Точно так же, когда вертолёт раскручивает несущий винт, корпус стремится вращаться в обратную сторону — это компенсирует хвостовой винт; переворот вращающегося колеса на скамье Жуковского приводит скамью во вращение.",
+  "en": "**Moving parts.** If a person standing at the edge of a platform starts walking relative to it, the system's angular momentum relative to the ground stays zero: the person turns one way and the platform the other. In such problems the velocities must be written in the fixed (ground) frame. Likewise, when a helicopter spins up its main rotor the body tends to turn the other way — the tail rotor compensates for this; flipping a spinning wheel on a rotating stool sets the stool turning."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L06-F04.png",
+   "ru": "figures/B2-L06-F04-ru.png",
+   "en": "figures/B2-L06-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Aylanma to'qnashuvlar (Rotational collisions)",
+  "ru": "6. Вращательные столкновения",
+  "en": "6. Rotational collisions"
+ },
+ {
+  "t": "li",
+  "uz": "**O'qqa mahkamlangan jism.** Qo'zg'almas o'q atrofida aylana oladigan sterjenga o'q (snaryad) urilib qolsa, zarba paytida o'q tomonidan katta impulsiv kuch ta'sir qiladi — sistema impulsi saqlanmaydi. Lekin bu kuch o'qdan o'tadi, momenti nol, shuning uchun o'qqa nisbatan impuls momenti saqlanadi: $mvd=(I+md^2)\\omega$, bu yerda $d$ — snaryad trayektoriyasining yelkasi ([[F05]]). Kinetik energiya saqlanmaydi (noelastik zarba), lekin zarbadan keyingi tebranishda energiya saqlanadi — B2-L04 dagi ballistik mayatnik kabi ikki bosqichli yechim.",
+  "ru": "**Тело на оси.** Если в стержень, способный вращаться вокруг неподвижной оси, попадает и застревает пуля, во время удара со стороны оси действует большая импульсная сила — импульс системы не сохраняется. Но эта сила проходит через ось, её момент равен нулю, поэтому сохраняется момент импульса относительно оси: $mvd=(I+md^2)\\omega$, где $d$ — плечо траектории пули ([[F05]]). Кинетическая энергия не сохраняется (неупругий удар), но при последующем качании энергия сохраняется — двухэтапное решение, как у баллистического маятника в B2-L04.",
+  "en": "**A body on an axle.** If a bullet hits and sticks in a rod that can turn about a fixed axle, a large impulsive force acts from the axle during the impact — the system's momentum is not conserved. But this force passes through the axle, its torque is zero, so the angular momentum about the axle is conserved: $mvd=(I+md^2)\\omega$, where $d$ is the moment arm of the bullet's path ([[F05]]). Kinetic energy is not conserved (an inelastic impact), but in the swing after the impact energy is conserved — a two-stage solution, as for the ballistic pendulum of B2-L04."
+ },
+ {
+  "t": "m",
+  "m": "mvd=(I+md^2)\\omega,\\qquad I_1\\omega_1+I_2\\omega_2=(I_1+I_2)\\omega"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki diskning ulanishi.** Bir o'qda aylanayotgan ikki disk ishqalanish orqali ulanib, birga aylana boshlasa, impuls momenti saqlanadi: $I_1\\omega_1+I_2\\omega_2=(I_1+I_2)\\omega$ (burchak tezliklar ishorasi bilan). Bu mutlaq noelastik to'qnashuvning aylanma o'xshashi, va yo'qotilgan energiya $\\Delta E=\\frac{I_1I_2(\\omega_1-\\omega_2)^2}{2(I_1+I_2)}$ — keltirilgan massa formulasining aynan nusxasi ($m\\to I$, $v\\to\\omega$). Ishqalanish ichki kuch: u $L$ ni o'zgartirmaydi, lekin energiyani issiqlikka aylantiradi.",
+  "ru": "**Сцепление двух дисков.** Если два диска, вращающиеся на одной оси, сцепляются за счёт трения и начинают вращаться вместе, момент импульса сохраняется: $I_1\\omega_1+I_2\\omega_2=(I_1+I_2)\\omega$ (угловые скорости со знаками). Это вращательный аналог абсолютно неупругого удара, и потерянная энергия $\\Delta E=\\frac{I_1I_2(\\omega_1-\\omega_2)^2}{2(I_1+I_2)}$ — точная копия формулы с приведённой массой ($m\\to I$, $v\\to\\omega$). Трение — внутренняя сила: оно не меняет $L$, но переводит энергию в теплоту.",
+  "en": "**Coupling two discs.** If two discs turning on one axle are coupled by friction and start turning together, angular momentum is conserved: $I_1\\omega_1+I_2\\omega_2=(I_1+I_2)\\omega$ (angular velocities with signs). This is the rotational analogue of a perfectly inelastic collision, and the energy lost $\\Delta E=\\frac{I_1I_2(\\omega_1-\\omega_2)^2}{2(I_1+I_2)}$ is an exact copy of the reduced-mass formula ($m\\to I$, $v\\to\\omega$). Friction is an internal force: it does not change $L$ but turns energy into heat."
+ },
+ {
+  "t": "li",
+  "uz": "**Erkin jism.** Silliq stol ustidagi erkin sterjenga zarba berilganda o'q yo'q — impuls ham, massa markaziga nisbatan impuls momenti ham saqlanadi. Ikki tenglama ikki noma'lumni beradi: massa markazi tezligi $v_C$ va burchak tezlik $\\omega$. Elastik to'qnashuvda uchinchi tenglama — kinetik energiyaning saqlanishi. Qaysi qonun ishlashini aniqlash qoidasi: impulsiv tashqi kuch bormi (impuls saqlanmaydi), uning momenti tanlangan nuqtaga nisbatan nolmi ($L$ saqlanadi), issiqlik ajraladimi (energiya saqlanmaydi).",
+  "ru": "**Свободное тело.** При ударе по свободному стержню на гладком столе оси нет — сохраняются и импульс, и момент импульса относительно центра масс. Два уравнения дают два неизвестных: скорость центра масс $v_C$ и угловую скорость $\\omega$. При упругом ударе третье уравнение — сохранение кинетической энергии. Правило выбора закона: есть ли внешняя импульсная сила (импульс не сохраняется), равен ли нулю её момент относительно выбранной точки ($L$ сохраняется), выделяется ли теплота (энергия не сохраняется).",
+  "en": "**A free body.** When a free rod on a smooth table is struck there is no axle — both the momentum and the angular momentum about the center of mass are conserved. Two equations give two unknowns: the center-of-mass velocity $v_C$ and the angular velocity $\\omega$. In an elastic collision the third equation is conservation of kinetic energy. The rule for choosing the law: is there an external impulsive force (momentum is not conserved), is its torque about the chosen point zero ($L$ is conserved), is heat produced (energy is not conserved)."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L06-F05.png",
+   "ru": "figures/B2-L06-F05-ru.png",
+   "en": "figures/B2-L06-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Kuch momenti impulsi va zarba markazi (Angular impulse and the center of percussion)",
+  "ru": "7. Импульс момента силы и центр удара",
+  "en": "7. Angular impulse and the center of percussion"
+ },
+ {
+  "t": "li",
+  "uz": "**Qisqa zarba.** O'qdan $x$ masofada sterjenga qisqa zarba bilan $J$ impuls berilsa, $I\\omega=Jx$ (kuch momenti impulsi) va massa markazi uchun $Mv_C=J+J'$, bu yerda $J'$ — o'q bergan impuls. $v_C=\\omega a$ ($a$ — o'qdan massa markazigacha masofa) ni qo'yib, $J'=J\\left(\\frac{Max}{I}-1\\right)$. Agar $x=\\frac{I}{Ma}$ bo'lsa, $J'=0$ — o'q zarbani «sezmaydi». Bu nuqta zarba markazi (center of percussion) deyiladi; uchidan osilgan bir jinsli sterjen uchun $x=\\frac{2l}{3}$ ([[F06]]). Beysbol yoki tennis raketkasining «shirin nuqtasi» shu: u yerdan urilganda qo'lga turtki berilmaydi.",
+  "ru": "**Короткий удар.** Если стержню коротким ударом на расстоянии $x$ от оси сообщён импульс $J$, то $I\\omega=Jx$ (импульс момента силы), а для центра масс $Mv_C=J+J'$, где $J'$ — импульс, данный осью. Подставляя $v_C=\\omega a$ ($a$ — расстояние от оси до центра масс), получаем $J'=J\\left(\\frac{Max}{I}-1\\right)$. Если $x=\\frac{I}{Ma}$, то $J'=0$ — ось «не чувствует» удара. Эта точка называется центром удара (center of percussion); для однородного стержня, подвешенного за конец, $x=\\frac{2l}{3}$ ([[F06]]). Это «сладкая точка» бейсбольной биты или ракетки: при ударе в неё рука не получает толчка.",
+  "en": "**A short blow.** If a short blow gives a rod an impulse $J$ at distance $x$ from the axle, then $I\\omega=Jx$ (angular impulse), and for the center of mass $Mv_C=J+J'$, where $J'$ is the impulse from the axle. Substituting $v_C=\\omega a$ ($a$ is the distance from the axle to the center of mass) gives $J'=J\\left(\\frac{Max}{I}-1\\right)$. If $x=\\frac{I}{Ma}$, then $J'=0$ — the axle «does not feel» the blow. This point is called the center of percussion; for a uniform rod hung from one end $x=\\frac{2l}{3}$ ([[F06]]). It is the «sweet spot» of a baseball bat or a racket: hitting there sends no jolt to the hand."
+ },
+ {
+  "t": "m",
+  "m": "I\\omega=Jx,\\qquad J'=J\\left(\\frac{Max}{I}-1\\right),\\qquad x=\\frac{I}{Ma}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tegish nuqtasiga nisbatan.** Sirpanib ketayotgan shar yoki silindrga ishqalanish kuchi ta'sir qiladi, lekin u tegish nuqtasidan o'tadi — shu nuqtaga nisbatan (sirt bo'ylab siljiyotgan nuqta, lekin harakat to'g'ri chiziqli) og'irlik va tayanch kuchlari momentlari ham qisqaradi. Shuning uchun tegish nuqtasiga nisbatan impuls momenti saqlanadi: $Mv_0R+I_C\\omega_0=(I_C+MR^2)\\omega$. Bu B2-L05 dagi «sirpanishdan dumalashga» natijasini bir qatorda beradi: aylanmasdan tashlangan jism uchun $v=\\frac{v_0}{1+\\beta}$, teskari aylantirilgan (backspin) jism uchun esa $L$ kichrayadi va jism sekinroq yoki hatto orqaga dumalaydi.",
+  "ru": "**Относительно точки касания.** На скользящий шар или цилиндр действует сила трения, но она проходит через точку касания — относительно этой точки (она смещается вдоль поверхности, но по прямой) моменты силы тяжести и реакции опоры тоже взаимно сокращаются. Поэтому относительно точки касания сохраняется момент импульса: $Mv_0R+I_C\\omega_0=(I_C+MR^2)\\omega$. Это в одну строку даёт результат B2-L05 «от скольжения к качению»: для тела, брошенного без вращения, $v=\\frac{v_0}{1+\\beta}$, а для тела с обратным вращением (backspin) $L$ уменьшается, и тело катится медленнее или даже назад.",
+  "en": "**About the contact point.** Friction acts on a sliding ball or cylinder, but it passes through the contact point — about this point (which moves along the surface, but in a straight line) the torques of gravity and of the normal force also cancel. So the angular momentum about the contact point is conserved: $Mv_0R+I_C\\omega_0=(I_C+MR^2)\\omega$. This gives the B2-L05 «sliding to rolling» result in one line: for a body thrown without spin $v=\\frac{v_0}{1+\\beta}$, while for a body with backspin $L$ is smaller and the body rolls more slowly or even backwards."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L06-F06.png",
+   "ru": "figures/B2-L06-F06-ru.png",
+   "en": "figures/B2-L06-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Markaziy maydondagi harakat va effektiv potensial (Motion in a central field and the effective potential)",
+  "ru": "8. Движение в центральном поле и эффективный потенциал",
+  "en": "8. Motion in a central field and the effective potential"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki saqlanish qonuni.** Markaziy maydonda energiya ham, impuls momenti ham saqlanadi. Tezlikni radial $\\dot r$ va urinma $r\\dot\\varphi$ tashkil etuvchilarga ajratib, $L=mr^2\\dot\\varphi$ ni qo'ysak: $E=\\frac{m\\dot r^2}{2}+\\frac{L^2}{2mr^2}+U(r)$. Bu bir o'lchamli harakat tenglamasiga o'xshaydi, faqat potensial energiya o'rnida effektiv potensial $\\tilde U(r)=U(r)+\\frac{L^2}{2mr^2}$ turadi. Qo'shimcha had — «markazdan qochma to'siq»: $L\\neq0$ bo'lsa, zarra markazga tusha olmaydi, chunki kichik $r$ da bu had cheksiz ortadi.",
+  "ru": "**Два закона сохранения.** В центральном поле сохраняются и энергия, и момент импульса. Разложив скорость на радиальную $\\dot r$ и поперечную $r\\dot\\varphi$ составляющие и подставив $L=mr^2\\dot\\varphi$, получим $E=\\frac{m\\dot r^2}{2}+\\frac{L^2}{2mr^2}+U(r)$. Это похоже на уравнение одномерного движения, только вместо потенциальной энергии стоит эффективный потенциал $\\tilde U(r)=U(r)+\\frac{L^2}{2mr^2}$. Добавочный член — «центробежный барьер»: при $L\\neq0$ частица не может упасть на центр, так как при малых $r$ этот член неограниченно растёт.",
+  "en": "**Two conservation laws.** In a central field both energy and angular momentum are conserved. Splitting the velocity into a radial part $\\dot r$ and a transverse part $r\\dot\\varphi$ and substituting $L=mr^2\\dot\\varphi$ gives $E=\\frac{m\\dot r^2}{2}+\\frac{L^2}{2mr^2}+U(r)$. This looks like the equation of one-dimensional motion, except that the potential energy is replaced by the effective potential $\\tilde U(r)=U(r)+\\frac{L^2}{2mr^2}$. The extra term is the «centrifugal barrier»: for $L\\neq0$ the particle cannot fall onto the center, since at small $r$ this term grows without bound."
+ },
+ {
+  "t": "m",
+  "m": "E=\\frac{m\\dot r^2}{2}+\\tilde U(r),\\qquad \\tilde U(r)=U(r)+\\frac{L^2}{2mr^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Orbitalar turi.** Gravitatsion maydonda $U=-\\frac{GMm}{r}$ va $\\tilde U(r)$ grafigi chuqurcha shaklida ([[F07]]). $E$ chuqurcha tubiga teng bo'lsa, $r$ o'zgarmaydi — aylana orbita; $\\tilde U_{min}<E<0$ da $r$ ikki qaytish nuqtasi $r_1$ va $r_2$ orasida tebranadi — ellips (perigeliy va afeliy); $E\\geq0$ da zarra cheksizlikka ketadi — parabola yoki giperbola. Qaytish nuqtalarida $\\dot r=0$, shuning uchun ular $E=\\tilde U(r)$ tenglamaning ildizlari. $r_1$ va $r_2$ ma'lum bo'lsa, ikki saqlanish qonunidan $v_1=\\sqrt{\\frac{2GMr_2}{r_1(r_1+r_2)}}$.",
+  "ru": "**Типы орбит.** В гравитационном поле $U=-\\frac{GMm}{r}$, и график $\\tilde U(r)$ имеет вид ямы ([[F07]]). Если $E$ равна дну ямы, $r$ не меняется — круговая орбита; при $\\tilde U_{min}<E<0$ расстояние $r$ колеблется между двумя точками поворота $r_1$ и $r_2$ — эллипс (перигелий и афелий); при $E\\geq0$ частица уходит на бесконечность — парабола или гипербола. В точках поворота $\\dot r=0$, поэтому они — корни уравнения $E=\\tilde U(r)$. Если $r_1$ и $r_2$ известны, из двух законов сохранения $v_1=\\sqrt{\\frac{2GMr_2}{r_1(r_1+r_2)}}$.",
+  "en": "**Kinds of orbit.** In a gravitational field $U=-\\frac{GMm}{r}$ and the graph of $\\tilde U(r)$ is a well ([[F07]]). If $E$ equals the bottom of the well, $r$ does not change — a circular orbit; for $\\tilde U_{min}<E<0$ the distance $r$ oscillates between two turning points $r_1$ and $r_2$ — an ellipse (perihelion and aphelion); for $E\\geq0$ the particle escapes to infinity — a parabola or a hyperbola. At the turning points $\\dot r=0$, so they are the roots of $E=\\tilde U(r)$. If $r_1$ and $r_2$ are known, the two conservation laws give $v_1=\\sqrt{\\frac{2GMr_2}{r_1(r_1+r_2)}}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Ipdagi jism.** Silliq stol ustida teshikdan o'tkazilgan ipga bog'langan jism aylanayotgan bo'lsa, ipni tortish markaziy kuch beradi: $L=mvr$ saqlanadi, $v\\propto\\frac{1}{r}$, taranglik $T=\\frac{mv^2}{r}=\\frac{L^2}{mr^3}$. Ipni tortgan qo'l ish bajaradi va u $\\int T\\,dr$ ga, ya'ni kinetik energiya orttirmasiga teng — bu effektiv potensialning $\\frac{L^2}{2mr^2}$ hadining ma'nosi.",
+  "ru": "**Тело на нити.** Если тело, привязанное к нити, пропущенной через отверстие в гладком столе, вращается, то натяжение нити — центральная сила: $L=mvr$ сохраняется, $v\\propto\\frac{1}{r}$, натяжение $T=\\frac{mv^2}{r}=\\frac{L^2}{mr^3}$. Рука, тянущая нить, совершает работу, равную $\\int T\\,dr$, то есть приросту кинетической энергии, — в этом смысл члена $\\frac{L^2}{2mr^2}$ эффективного потенциала.",
+  "en": "**A mass on a string.** If a mass tied to a string that passes through a hole in a smooth table is circling, the tension is a central force: $L=mvr$ is conserved, $v\\propto\\frac{1}{r}$, and the tension is $T=\\frac{mv^2}{r}=\\frac{L^2}{mr^3}$. The hand pulling the string does work equal to $\\int T\\,dr$, i.e. to the increase in kinetic energy — this is the meaning of the term $\\frac{L^2}{2mr^2}$ in the effective potential."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L06-F07.png",
+   "ru": "figures/B2-L06-F07-ru.png",
+   "en": "figures/B2-L06-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. Giroskop va presessiya (The gyroscope and precession)",
+  "ru": "9. Гироскоп и прецессия",
+  "en": "9. The gyroscope and precession"
+ },
+ {
+  "t": "li",
+  "uz": "**Presessiya.** Tez aylanayotgan pildiroq yoki giroskopning o'qi gorizontal bo'lib, bir uchi tayanchda tursa, u yiqilmaydi — o'qi gorizontal tekislikda sekin aylanadi. Sabab: og'irlik kuchining tayanchga nisbatan momenti $\\tau=mgd$ gorizontal va $\\vec L$ ga perpendikulyar, shuning uchun $d\\vec L=\\vec\\tau\\,dt$ ham $\\vec L$ ga perpendikulyar — $\\vec L$ uzunligini o'zgartirmay, yo'nalishini buradi ([[F08]]). $dt$ vaqtda burilish burchagi $d\\phi=\\frac{\\tau\\,dt}{L}$, demak presessiya (precession) burchak tezligi $\\Omega=\\frac{mgd}{I\\omega}$.",
+  "ru": "**Прецессия.** Если ось быстро вращающегося волчка или гироскопа горизонтальна, а один её конец опирается на опору, гироскоп не падает — его ось медленно поворачивается в горизонтальной плоскости. Причина: момент силы тяжести относительно опоры $\\tau=mgd$ горизонтален и перпендикулярен $\\vec L$, поэтому $d\\vec L=\\vec\\tau\\,dt$ тоже перпендикулярно $\\vec L$ — он меняет не длину $\\vec L$, а его направление ([[F08]]). За время $dt$ угол поворота $d\\phi=\\frac{\\tau\\,dt}{L}$, значит, угловая скорость прецессии (precession) $\\Omega=\\frac{mgd}{I\\omega}$.",
+  "en": "**Precession.** If the axis of a fast-spinning top or gyroscope is horizontal and one end rests on a pivot, it does not fall — its axis slowly turns in the horizontal plane. The reason: the torque of gravity about the pivot, $\\tau=mgd$, is horizontal and perpendicular to $\\vec L$, so $d\\vec L=\\vec\\tau\\,dt$ is also perpendicular to $\\vec L$ — it changes the direction of $\\vec L$, not its length ([[F08]]). In time $dt$ the axis turns by $d\\phi=\\frac{\\tau\\,dt}{L}$, so the precession angular velocity is $\\Omega=\\frac{mgd}{I\\omega}$."
+ },
+ {
+  "t": "m",
+  "m": "\\Omega=\\frac{d\\phi}{dt}=\\frac{\\tau}{L}=\\frac{mgd}{I\\omega}"
+ },
+ {
+  "t": "li",
+  "uz": "**Xossalar.** $\\Omega$ o'qning gorizontga og'ish burchagiga bog'liq emas (qiya o'qda moment ham, $\\vec L$ ning gorizontal tashkil etuvchisi ham $\\sin\\theta$ ga ko'payadi). Spin qanchalik tez bo'lsa, presessiya shunchalik sekin; formula $\\Omega\\ll\\omega$ da to'g'ri. Yer ham giroskop: Quyosh va Oyning ekvatorial bo'rtiqqa ta'siri o'qni taxminan $26\\,000$ yilda bir marta presessiyalantiradi. Giroskopik barqarorlik velosiped, aylantirib otilgan o'q va navigatsiya giroskoplarida ishlatiladi: katta $L$ ni burish uchun katta moment kerak.",
+  "ru": "**Свойства.** $\\Omega$ не зависит от наклона оси к горизонту (при наклонной оси и момент, и горизонтальная составляющая $\\vec L$ умножаются на $\\sin\\theta$). Чем быстрее собственное вращение, тем медленнее прецессия; формула верна при $\\Omega\\ll\\omega$. Земля — тоже гироскоп: действие Солнца и Луны на экваториальное вздутие вызывает прецессию оси примерно с периодом $26\\,000$ лет. Гироскопическая устойчивость используется в велосипеде, вращающейся пуле и навигационных гироскопах: чтобы повернуть большой $L$, нужен большой момент.",
+  "en": "**Properties.** $\\Omega$ does not depend on the tilt of the axis (for a tilted axis both the torque and the horizontal component of $\\vec L$ are multiplied by $\\sin\\theta$). The faster the spin, the slower the precession; the formula holds for $\\Omega\\ll\\omega$. The Earth is a gyroscope too: the pull of the Sun and the Moon on its equatorial bulge makes its axis precess about once every $26\\,000$ years. Gyroscopic stability is used in bicycles, spinning bullets and navigation gyroscopes: turning a large $L$ needs a large torque."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L06-F08.png",
+   "ru": "figures/B2-L06-F08-ru.png",
+   "en": "figures/B2-L06-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE uchun tez usullar (Fast techniques for the GRE)",
+  "ru": "10. Быстрые приёмы для GRE",
+  "en": "10. Fast techniques for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "**Qaysi qonun?** To'qnashuv masalasida avval savol bering: o'q (tayanch) bormi? Bo'lsa — impuls saqlanmaydi, o'qqa nisbatan $L$ saqlanadi. Erkin jismda — ham $\\vec p$, ham massa markaziga nisbatan $L$. Issiqlik ajraladimi, jismlar yopishadimi — energiya saqlanmaydi. Momentlar tenglamasini noma'lum impulsiv kuchlar o'tadigan nuqtaga (o'q, tegish nuqtasi) nisbatan yozing — ular tenglamadan tushib qoladi. Aylanish to'qnashuvdan keyin davom etsa (tebranish, ko'tarilish), ikkinchi bosqichda energiya saqlanadi.",
+  "ru": "**Какой закон?** В задаче о столкновении сначала спросите: есть ли ось (опора)? Если есть — импульс не сохраняется, сохраняется $L$ относительно оси. Для свободного тела — и $\\vec p$, и $L$ относительно центра масс. Выделяется ли теплота, слипаются ли тела — энергия не сохраняется. Уравнение моментов пишите относительно точки, через которую проходят неизвестные импульсные силы (ось, точка касания), — они выпадут из уравнения. Если после удара вращение продолжается (качание, подъём), на втором этапе сохраняется энергия.",
+  "en": "**Which law?** In a collision problem first ask: is there an axle (a pivot)? If so, momentum is not conserved and $L$ about the axle is. For a free body, both $\\vec p$ and $L$ about the center of mass are conserved. Is heat produced, do the bodies stick — then energy is not conserved. Write the torque equation about the point through which the unknown impulsive forces pass (axle, contact point) — they drop out. If rotation continues after the impact (a swing, a climb), energy is conserved in the second stage."
+ },
+ {
+  "t": "li",
+  "uz": "**Tez formulalar.** $L$ saqlanganda energiya nisbati $\\frac{E_2}{E_1}=\\frac{I_1}{I_2}$; markaziy maydonda $v\\propto\\frac{1}{r}$ (apsidal nuqtalarda), sektor tezlik $\\frac{L}{2m}$; ipdagi jismda $T\\propto\\frac{1}{r^3}$; presessiya $\\Omega=\\frac{mgd}{I\\omega}$. Kvant fizikasida impuls momenti kvantlangan: Bor modelida $L=n\\hbar$, aniq nazariyada $L^2=l(l+1)\\hbar^2$, $L_z=m_l\\hbar$ — birligi ham $\\mathrm{J\\cdot s}$; Plank doimiysi $\\hbar\\approx1.05\\cdot10^{-34}\\ \\mathrm{J\\cdot s}$ impuls momenti birligi ekanini eslang.",
+  "ru": "**Быстрые формулы.** При сохранении $L$ отношение энергий $\\frac{E_2}{E_1}=\\frac{I_1}{I_2}$; в центральном поле $v\\propto\\frac{1}{r}$ (в апсидальных точках), секторная скорость $\\frac{L}{2m}$; для тела на нити $T\\propto\\frac{1}{r^3}$; прецессия $\\Omega=\\frac{mgd}{I\\omega}$. В квантовой физике момент импульса квантуется: в модели Бора $L=n\\hbar$, в точной теории $L^2=l(l+1)\\hbar^2$, $L_z=m_l\\hbar$ — единица тоже $\\mathrm{J\\cdot s}$; помните, что постоянная Планка $\\hbar\\approx1.05\\cdot10^{-34}\\ \\mathrm{J\\cdot s}$ — единица момента импульса.",
+  "en": "**Fast formulas.** When $L$ is conserved the energy ratio is $\\frac{E_2}{E_1}=\\frac{I_1}{I_2}$; in a central field $v\\propto\\frac{1}{r}$ (at the apsides) and the areal velocity is $\\frac{L}{2m}$; for a mass on a string $T\\propto\\frac{1}{r^3}$; precession $\\Omega=\\frac{mgd}{I\\omega}$. In quantum physics angular momentum is quantized: in the Bohr model $L=n\\hbar$, in the exact theory $L^2=l(l+1)\\hbar^2$, $L_z=m_l\\hbar$ — the unit is again $\\mathrm{J\\cdot s}$; remember that Planck's constant $\\hbar\\approx1.05\\cdot10^{-34}\\ \\mathrm{J\\cdot s}$ is a unit of angular momentum."
+ },
+ {
+  "t": "li",
+  "uz": "**Tez-tez uchraydigan xatolar.** O'qli to'qnashuvda impulsni saqlanadi deb olish; impuls momentini bir nuqtaga, kuch momentini boshqasiga nisbatan yozish; to'g'ri chiziq bo'ylab harakatlanayotgan zarraning impuls momentini nol deb hisoblash; $L$ saqlanganda energiyani ham saqlanadi deb olish; platformadagi odam tezligini platformaga nisbatan qoldirish (yerga nisbatan yozish kerak); burchak tezliklar ishorasini (qarama-qarshi aylanishda) e'tiborsiz qoldirish; $\\vec L=I\\vec\\omega$ ni nosimmetrik jismga qo'llash.",
+  "ru": "**Частые ошибки.** Считать, что импульс сохраняется при ударе тела на оси; писать момент импульса относительно одной точки, а момент силы — относительно другой; считать равным нулю момент импульса частицы, движущейся по прямой; считать, что при сохранении $L$ сохраняется и энергия; оставлять скорость человека на платформе относительно платформы (нужно относительно земли); забывать знаки угловых скоростей (при встречном вращении); применять $\\vec L=I\\vec\\omega$ к несимметричному телу.",
+  "en": "**Common mistakes.** Assuming momentum is conserved when a body on an axle is struck; writing angular momentum about one point and torque about another; taking the angular momentum of a particle moving in a straight line as zero; assuming energy is conserved whenever $L$ is; leaving the velocity of a person on a platform relative to the platform (it must be relative to the ground); ignoring the signs of angular velocities (counter-rotation); applying $\\vec L=I\\vec\\omega$ to an asymmetric body."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Moddiy nuqta impuls momenti",
+    "ru": "Момент импульса точки",
+    "en": "Angular momentum of a particle",
+    "m": "\\vec L=\\vec r\\times\\vec p,\\quad L=pd"
+   },
+   {
+    "uz": "Koordinatalarda",
+    "ru": "В координатах",
+    "en": "In coordinates",
+    "m": "L_z=xp_y-yp_x"
+   },
+   {
+    "uz": "Aylana bo'ylab harakat",
+    "ru": "Движение по окружности",
+    "en": "Circular motion",
+    "m": "L=mvr=mr^2\\omega"
+   },
+   {
+    "uz": "Impuls momenti tenglamasi",
+    "ru": "Уравнение моментов",
+    "en": "Angular momentum equation",
+    "m": "\\frac{d\\vec L}{dt}=\\vec\\tau,\\quad \\int\\vec\\tau\\,dt=\\Delta\\vec L"
+   },
+   {
+    "uz": "Saqlanish qonuni",
+    "ru": "Закон сохранения",
+    "en": "Conservation law",
+    "m": "\\sum\\vec\\tau=0\\ \\Rightarrow\\ \\vec L=\\mathrm{const}"
+   },
+   {
+    "uz": "Qattiq jism",
+    "ru": "Твёрдое тело",
+    "en": "Rigid body",
+    "m": "L_z=I\\omega,\\quad E_k=\\frac{L^2}{2I}"
+   },
+   {
+    "uz": "Orbital va xususiy qism",
+    "ru": "Орбитальная и собственная части",
+    "en": "Orbital and spin parts",
+    "m": "\\vec L=\\vec r_C\\times M\\vec v_C+\\vec L_C"
+   },
+   {
+    "uz": "Inersiya momenti o'zgarsa",
+    "ru": "При изменении момента инерции",
+    "en": "Changing moment of inertia",
+    "m": "I_1\\omega_1=I_2\\omega_2,\\quad \\frac{E_2}{E_1}=\\frac{I_1}{I_2}"
+   },
+   {
+    "uz": "O'qli jismga zarba",
+    "ru": "Удар по телу на оси",
+    "en": "Impact on a body on an axle",
+    "m": "mvd=(I+md^2)\\omega"
+   },
+   {
+    "uz": "Disklar ulanishi",
+    "ru": "Сцепление дисков",
+    "en": "Coupling discs",
+    "m": "\\Delta E=\\frac{I_1I_2(\\omega_1-\\omega_2)^2}{2(I_1+I_2)}"
+   },
+   {
+    "uz": "Zarba markazi",
+    "ru": "Центр удара",
+    "en": "Center of percussion",
+    "m": "x=\\frac{I}{Ma},\\quad x=\\frac{2l}{3}"
+   },
+   {
+    "uz": "Keplerning ikkinchi qonuni",
+    "ru": "Второй закон Кеплера",
+    "en": "Kepler's second law",
+    "m": "\\frac{dS}{dt}=\\frac{L}{2m},\\quad v_1r_1=v_2r_2"
+   },
+   {
+    "uz": "Effektiv potensial",
+    "ru": "Эффективный потенциал",
+    "en": "Effective potential",
+    "m": "\\tilde U(r)=U(r)+\\frac{L^2}{2mr^2}"
+   },
+   {
+    "uz": "Presessiya",
+    "ru": "Прецессия",
+    "en": "Precession",
+    "m": "\\Omega=\\frac{mgd}{I\\omega}"
+   },
+   {
+    "uz": "Kvantlanish",
+    "ru": "Квантование",
+    "en": "Quantization",
+    "m": "L=n\\hbar,\\quad L_z=m_l\\hbar"
+   }
+  ]
+ }
+]

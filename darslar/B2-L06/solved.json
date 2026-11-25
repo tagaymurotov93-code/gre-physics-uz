@@ -1,0 +1,912 @@
+[
+ {
+  "id": "B2-L06-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Massasi $2\\ \\mathrm{kg}$ bo'lgan zarra $y=4\\ \\mathrm{m}$ to'g'ri chizig'i bo'ylab $x$ o'qi yo'nalishida $3\\ \\mathrm{m/s}$ tezlik bilan tekis harakatlanmoqda (chizmada). Uning impuls momentini koordinata boshiga, $(0;\\,1)\\ \\mathrm{m}$ nuqtaga va o'zi harakatlanayotgan chiziqdagi $(5;\\,4)\\ \\mathrm{m}$ nuqtaga nisbatan toping. Vaqt o'tishi bilan bu qiymatlar o'zgaradimi?",
+   "ru": "Частица массой $2\\ \\mathrm{kg}$ равномерно движется вдоль прямой $y=4\\ \\mathrm{m}$ в направлении оси $x$ со скоростью $3\\ \\mathrm{m/s}$ (см. рисунок). Найдите её момент импульса относительно начала координат, точки $(0;\\,1)\\ \\mathrm{m}$ и точки $(5;\\,4)\\ \\mathrm{m}$ на прямой её движения. Меняются ли эти значения со временем?",
+   "en": "A particle of mass $2\\ \\mathrm{kg}$ moves uniformly along the line $y=4\\ \\mathrm{m}$ in the $x$ direction at $3\\ \\mathrm{m/s}$ (see the figure). Find its angular momentum about the origin, about the point $(0;\\,1)\\ \\mathrm{m}$ and about the point $(5;\\,4)\\ \\mathrm{m}$ on its line of motion. Do these values change with time?"
+  },
+  "figure": "figures/B2-L06-S01.png",
+  "solution": {
+   "uz": [
+    "Impuls $p_x=mv=6\\ \\mathrm{kg\\cdot m/s}$, $p_y=0$; koordinata boshiga nisbatan: $$L_z=xp_y-yp_x=-4\\cdot6=-24\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Ishora manfiy — $\\vec L$ $-z$ yo'nalishda (soat strelkasi bo'yicha). $(0;\\,1)$ nuqtaga nisbatan yelka $d=3\\ \\mathrm{m}$, chiziqdagi nuqtaga nisbatan $d=0$: $$L'=6\\cdot3=18\\ \\mathrm{kg\\cdot m^2/s},\\qquad L''=0$$",
+    "Yelka harakat davomida o'zgarmaydi — impuls momenti ham o'zgarmaydi (kuch yo'q, moment yo'q)."
+   ],
+   "ru": [
+    "Импульс $p_x=mv=6\\ \\mathrm{kg\\cdot m/s}$, $p_y=0$; относительно начала координат: $$L_z=xp_y-yp_x=-4\\cdot6=-24\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Знак минус — $\\vec L$ направлен по $-z$ (по часовой стрелке). Относительно точки $(0;\\,1)$ плечо $d=3\\ \\mathrm{m}$, относительно точки на прямой $d=0$: $$L'=6\\cdot3=18\\ \\mathrm{kg\\cdot m^2/s},\\qquad L''=0$$",
+    "Плечо при движении не меняется — момент импульса тоже не меняется (нет силы — нет момента)."
+   ],
+   "en": [
+    "Momentum $p_x=mv=6\\ \\mathrm{kg\\cdot m/s}$, $p_y=0$; about the origin: $$L_z=xp_y-yp_x=-4\\cdot6=-24\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "The sign is negative — $\\vec L$ points along $-z$ (clockwise). About $(0;\\,1)$ the moment arm is $d=3\\ \\mathrm{m}$, about a point on the line $d=0$: $$L'=6\\cdot3=18\\ \\mathrm{kg\\cdot m^2/s},\\qquad L''=0$$",
+    "The moment arm does not change during the motion — neither does the angular momentum (no force, no torque)."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tekislikda: $L_z=xp_y-yp_x$",
+    "ru": "В плоскости: $L_z=xp_y-yp_x$",
+    "en": "In a plane: $L_z=xp_y-yp_x$"
+   },
+   {
+    "uz": "Impuls momenti moduli: $L=pd$",
+    "ru": "Модуль момента импульса: $L=pd$",
+    "en": "Magnitude of angular momentum: $L=pd$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Moddiy nuqtaning impuls momenti",
+   "ru": "Момент импульса материальной точки",
+   "en": "Angular momentum of a particle"
+  },
+  "answer": "L_z=-24;\\ -18;\\ 0\\ \\mathrm{kg\\cdot m^2/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 11.34-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Massasi $2\\ \\mathrm{kg}$, radiusi $30\\ \\mathrm{cm}$ bo'lgan yaxlit disk o'z o'qi atrofida minutiga $600$ aylanish bilan aylanmoqda. Uning impuls momentini va kinetik energiyasini toping. Diskni $3\\ \\mathrm{s}$ da to'xtatish uchun qanday o'zgarmas kuch momenti kerak?",
+   "ru": "Сплошной диск массой $2\\ \\mathrm{kg}$ и радиусом $30\\ \\mathrm{cm}$ вращается вокруг своей оси с частотой $600$ оборотов в минуту. Найдите его момент импульса и кинетическую энергию. Какой постоянный момент силы нужен, чтобы остановить диск за $3\\ \\mathrm{s}$?",
+   "en": "A solid disc of mass $2\\ \\mathrm{kg}$ and radius $30\\ \\mathrm{cm}$ spins about its axis at $600$ revolutions per minute. Find its angular momentum and kinetic energy. What constant torque is needed to stop the disc in $3\\ \\mathrm{s}$?"
+  },
+  "figure": "figures/B2-L06-S02.png",
+  "solution": {
+   "uz": [
+    "Inersiya momenti va burchak tezlik: $$I=\\frac{MR^2}{2}=0.09\\ \\mathrm{kg\\cdot m^2},\\qquad \\omega=2\\pi\\cdot10=20\\pi\\ \\mathrm{rad/s}$$",
+    "Impuls momenti va energiya: $$L=I\\omega=1.8\\pi\\approx5.65\\ \\mathrm{kg\\cdot m^2/s},\\qquad E_k=\\frac{L\\omega}{2}=18\\pi^2\\approx178\\ \\mathrm{J}$$",
+    "To'xtatish — impuls momentining butun o'zgarishi moment impulsidan: $$\\tau t=L\\ \\Rightarrow\\ \\tau=\\frac{1.8\\pi}{3}=0.6\\pi\\approx1.88\\ \\mathrm{N\\cdot m}$$"
+   ],
+   "ru": [
+    "Момент инерции и угловая скорость: $$I=\\frac{MR^2}{2}=0.09\\ \\mathrm{kg\\cdot m^2},\\qquad \\omega=2\\pi\\cdot10=20\\pi\\ \\mathrm{rad/s}$$",
+    "Момент импульса и энергия: $$L=I\\omega=1.8\\pi\\approx5.65\\ \\mathrm{kg\\cdot m^2/s},\\qquad E_k=\\frac{L\\omega}{2}=18\\pi^2\\approx178\\ \\mathrm{J}$$",
+    "Остановка — всё изменение момента импульса даёт импульс момента: $$\\tau t=L\\ \\Rightarrow\\ \\tau=\\frac{1.8\\pi}{3}=0.6\\pi\\approx1.88\\ \\mathrm{N\\cdot m}$$"
+   ],
+   "en": [
+    "Moment of inertia and angular velocity: $$I=\\frac{MR^2}{2}=0.09\\ \\mathrm{kg\\cdot m^2},\\qquad \\omega=2\\pi\\cdot10=20\\pi\\ \\mathrm{rad/s}$$",
+    "Angular momentum and energy: $$L=I\\omega=1.8\\pi\\approx5.65\\ \\mathrm{kg\\cdot m^2/s},\\qquad E_k=\\frac{L\\omega}{2}=18\\pi^2\\approx178\\ \\mathrm{J}$$",
+    "Stopping — the whole change in angular momentum comes from the angular impulse: $$\\tau t=L\\ \\Rightarrow\\ \\tau=\\frac{1.8\\pi}{3}=0.6\\pi\\approx1.88\\ \\mathrm{N\\cdot m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Burchak tezlik: $\\omega=2\\pi n$",
+    "ru": "Угловая скорость: $\\omega=2\\pi n$",
+    "en": "Angular velocity: $\\omega=2\\pi n$"
+   },
+   {
+    "uz": "Qattiq jism: $L_z=I\\omega$",
+    "ru": "Твёрдое тело: $L_z=I\\omega$",
+    "en": "Rigid body: $L_z=I\\omega$"
+   },
+   {
+    "uz": "Kuch momenti impulsi: $\\int\\tau\\,dt=\\Delta L$",
+    "ru": "Импульс момента силы: $\\int\\tau\\,dt=\\Delta L$",
+    "en": "Angular impulse: $\\int\\tau\\,dt=\\Delta L$"
+   }
+  ],
+  "basis": {
+   "uz": "Qattiq jism impuls momenti, kuch momenti impulsi",
+   "ru": "Момент импульса твёрдого тела, импульс момента силы",
+   "en": "Angular momentum of a rigid body, angular impulse"
+  },
+  "answer": "L\\approx5.65\\ \\mathrm{kg\\cdot m^2/s};\\ E_k\\approx178\\ \\mathrm{J};\\ \\tau\\approx1.88\\ \\mathrm{N\\cdot m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 11.87-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Yerni bir jinsli shar deb olib ($M=6\\cdot10^{24}\\ \\mathrm{kg}$, $R=6.4\\cdot10^6\\ \\mathrm{m}$), uning o'z o'qi atrofidagi (sutka) va Quyosh atrofidagi (orbita radiusi $1.5\\cdot10^{11}\\ \\mathrm{m}$, yil $3.16\\cdot10^7\\ \\mathrm{s}$) impuls momentlarini toping va solishtiring.",
+   "ru": "Считая Землю однородным шаром ($M=6\\cdot10^{24}\\ \\mathrm{kg}$, $R=6.4\\cdot10^6\\ \\mathrm{m}$), найдите её момент импульса относительно собственной оси (сутки) и относительно Солнца (радиус орбиты $1.5\\cdot10^{11}\\ \\mathrm{m}$, год $3.16\\cdot10^7\\ \\mathrm{s}$) и сравните их.",
+   "en": "Treating the Earth as a uniform sphere ($M=6\\cdot10^{24}\\ \\mathrm{kg}$, $R=6.4\\cdot10^6\\ \\mathrm{m}$), find its angular momentum about its own axis (one day) and about the Sun (orbital radius $1.5\\cdot10^{11}\\ \\mathrm{m}$, year $3.16\\cdot10^7\\ \\mathrm{s}$), and compare them."
+  },
+  "figure": "figures/B2-L06-S03.png",
+  "solution": {
+   "uz": [
+    "Orbital impuls momenti — Yer Quyosh atrofida nuqtadek aylanadi: $$L_1=Mr^2\\frac{2\\pi}{T_1}=6\\cdot10^{24}\\cdot2.25\\cdot10^{22}\\cdot\\frac{2\\pi}{3.16\\cdot10^7}\\approx2.7\\cdot10^{40}\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Xususiy impuls momenti — shar uchun $I=\\frac{2}{5}MR^2$: $$L_2=\\frac{2}{5}MR^2\\cdot\\frac{2\\pi}{86400}\\approx7.2\\cdot10^{33}\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Nisbat: $$\\frac{L_1}{L_2}=\\frac{5}{2}\\cdot\\frac{r^2}{R^2}\\cdot\\frac{T_2}{T_1}\\approx3.8\\cdot10^6$$"
+   ],
+   "ru": [
+    "Орбитальный момент импульса — Земля обращается вокруг Солнца как точка: $$L_1=Mr^2\\frac{2\\pi}{T_1}=6\\cdot10^{24}\\cdot2.25\\cdot10^{22}\\cdot\\frac{2\\pi}{3.16\\cdot10^7}\\approx2.7\\cdot10^{40}\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Собственный момент импульса — для шара $I=\\frac{2}{5}MR^2$: $$L_2=\\frac{2}{5}MR^2\\cdot\\frac{2\\pi}{86400}\\approx7.2\\cdot10^{33}\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Отношение: $$\\frac{L_1}{L_2}=\\frac{5}{2}\\cdot\\frac{r^2}{R^2}\\cdot\\frac{T_2}{T_1}\\approx3.8\\cdot10^6$$"
+   ],
+   "en": [
+    "Orbital angular momentum — the Earth orbits the Sun like a point: $$L_1=Mr^2\\frac{2\\pi}{T_1}=6\\cdot10^{24}\\cdot2.25\\cdot10^{22}\\cdot\\frac{2\\pi}{3.16\\cdot10^7}\\approx2.7\\cdot10^{40}\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Spin angular momentum — for a sphere $I=\\frac{2}{5}MR^2$: $$L_2=\\frac{2}{5}MR^2\\cdot\\frac{2\\pi}{86400}\\approx7.2\\cdot10^{33}\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "The ratio: $$\\frac{L_1}{L_2}=\\frac{5}{2}\\cdot\\frac{r^2}{R^2}\\cdot\\frac{T_2}{T_1}\\approx3.8\\cdot10^6$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Aylana bo'ylab: $L=mvr=mr^2\\omega$",
+    "ru": "По окружности: $L=mvr=mr^2\\omega$",
+    "en": "On a circle: $L=mvr=mr^2\\omega$"
+   },
+   {
+    "uz": "Qattiq jism: $L_z=I\\omega$",
+    "ru": "Твёрдое тело: $L_z=I\\omega$",
+    "en": "Rigid body: $L_z=I\\omega$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Orbital va xususiy impuls momenti",
+   "ru": "Орбитальный и собственный момент импульса",
+   "en": "Orbital and spin angular momentum"
+  },
+  "answer": "L_1\\approx2.7\\cdot10^{40};\\ L_2\\approx7.2\\cdot10^{33}\\ \\mathrm{kg\\cdot m^2/s};\\ \\frac{L_1}{L_2}\\approx3.8\\cdot10^6",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 11.44-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $2\\ \\mathrm{kg}$ bo'lgan zarra biror paytda $\\vec r=(1;\\,-2;\\,0)\\ \\mathrm{m}$ nuqtada $\\vec v=(3;\\,1;\\,2)\\ \\mathrm{m/s}$ tezlik bilan harakatlanmoqda, unga $\\vec F=(0;\\,0;\\,-20)\\ \\mathrm{N}$ kuch ta'sir qiladi. Koordinata boshiga nisbatan impuls momentini (vektor va modul), kuch momentini va shu paytdagi impuls momentining o'zgarish tezligini toping.",
+   "ru": "Частица массой $2\\ \\mathrm{kg}$ в некоторый момент находится в точке $\\vec r=(1;\\,-2;\\,0)\\ \\mathrm{m}$, имеет скорость $\\vec v=(3;\\,1;\\,2)\\ \\mathrm{m/s}$, и на неё действует сила $\\vec F=(0;\\,0;\\,-20)\\ \\mathrm{N}$. Найдите относительно начала координат момент импульса (вектор и модуль), момент силы и скорость изменения момента импульса в этот момент.",
+   "en": "At some instant a particle of mass $2\\ \\mathrm{kg}$ is at $\\vec r=(1;\\,-2;\\,0)\\ \\mathrm{m}$ with velocity $\\vec v=(3;\\,1;\\,2)\\ \\mathrm{m/s}$, and a force $\\vec F=(0;\\,0;\\,-20)\\ \\mathrm{N}$ acts on it. About the origin find the angular momentum (vector and magnitude), the torque and the rate of change of the angular momentum at that instant."
+  },
+  "figure": "figures/B2-L06-S04.png",
+  "solution": {
+   "uz": [
+    "Vektor ko'paytma determinant orqali: $$\\vec r\\times\\vec v=\\left((-2)\\cdot2-0;\\ 0-1\\cdot2;\\ 1\\cdot1-(-2)\\cdot3\\right)=(-4;\\,-2;\\,7)$$",
+    "Massaga ko'paytiramiz: $$\\vec L=(-8;\\,-4;\\,14)\\ \\mathrm{kg\\cdot m^2/s},\\qquad L=\\sqrt{64+16+196}=\\sqrt{276}\\approx16.6\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Kuch momenti va impuls momenti tenglamasi: $$\\vec\\tau=\\vec r\\times\\vec F=\\left((-2)(-20)-0;\\ 0-1\\cdot(-20);\\ 0\\right)=(40;\\,20;\\,0)\\ \\mathrm{N\\cdot m}=\\frac{d\\vec L}{dt}$$"
+   ],
+   "ru": [
+    "Векторное произведение через определитель: $$\\vec r\\times\\vec v=\\left((-2)\\cdot2-0;\\ 0-1\\cdot2;\\ 1\\cdot1-(-2)\\cdot3\\right)=(-4;\\,-2;\\,7)$$",
+    "Умножаем на массу: $$\\vec L=(-8;\\,-4;\\,14)\\ \\mathrm{kg\\cdot m^2/s},\\qquad L=\\sqrt{64+16+196}=\\sqrt{276}\\approx16.6\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Момент силы и уравнение моментов: $$\\vec\\tau=\\vec r\\times\\vec F=\\left((-2)(-20)-0;\\ 0-1\\cdot(-20);\\ 0\\right)=(40;\\,20;\\,0)\\ \\mathrm{N\\cdot m}=\\frac{d\\vec L}{dt}$$"
+   ],
+   "en": [
+    "The cross product via the determinant: $$\\vec r\\times\\vec v=\\left((-2)\\cdot2-0;\\ 0-1\\cdot2;\\ 1\\cdot1-(-2)\\cdot3\\right)=(-4;\\,-2;\\,7)$$",
+    "Multiply by the mass: $$\\vec L=(-8;\\,-4;\\,14)\\ \\mathrm{kg\\cdot m^2/s},\\qquad L=\\sqrt{64+16+196}=\\sqrt{276}\\approx16.6\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Torque and the angular momentum equation: $$\\vec\\tau=\\vec r\\times\\vec F=\\left((-2)(-20)-0;\\ 0-1\\cdot(-20);\\ 0\\right)=(40;\\,20;\\,0)\\ \\mathrm{N\\cdot m}=\\frac{d\\vec L}{dt}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Impuls momenti: $\\vec L=\\vec r\\times\\vec p$",
+    "ru": "Момент импульса: $\\vec L=\\vec r\\times\\vec p$",
+    "en": "Angular momentum: $\\vec L=\\vec r\\times\\vec p$"
+   },
+   null,
+   {
+    "uz": "Impuls momenti tenglamasi: $\\frac{d\\vec L}{dt}=\\vec\\tau$",
+    "ru": "Уравнение моментов: $\\frac{d\\vec L}{dt}=\\vec\\tau$",
+    "en": "Angular momentum equation: $\\frac{d\\vec L}{dt}=\\vec\\tau$"
+   }
+  ],
+  "basis": {
+   "uz": "Impuls momenti va kuch momenti — vektor ko'paytma",
+   "ru": "Момент импульса и момент силы — векторное произведение",
+   "en": "Angular momentum and torque as cross products"
+  },
+  "answer": "\\vec L=(-8;\\,-4;\\,14),\\ L\\approx16.6\\ \\mathrm{kg\\cdot m^2/s};\\ \\frac{d\\vec L}{dt}=\\vec\\tau=(40;\\,20;\\,0)\\ \\mathrm{N\\cdot m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 11.42-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $0.5\\ \\mathrm{kg}$ bo'lgan jism $(2;\\,5)\\ \\mathrm{m}$ nuqtadan tinch holatda qo'yib yuborildi va vertikal pastga erkin tushmoqda ($y$ o'qi yuqoriga). Koordinata boshiga nisbatan uning impuls momentining vaqtga bog'liqligini toping va $\\frac{dL_z}{dt}=\\tau_z$ ekanini tekshiring. $1\\ \\mathrm{s}$ dan keyin $L_z$ qancha? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Тело массой $0.5\\ \\mathrm{kg}$ отпущено из покоя в точке $(2;\\,5)\\ \\mathrm{m}$ и свободно падает вертикально вниз (ось $y$ вверх). Найдите зависимость его момента импульса относительно начала координат от времени и проверьте, что $\\frac{dL_z}{dt}=\\tau_z$. Чему равен $L_z$ через $1\\ \\mathrm{s}$? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A body of mass $0.5\\ \\mathrm{kg}$ is released from rest at the point $(2;\\,5)\\ \\mathrm{m}$ and falls freely straight down ($y$ axis up). Find how its angular momentum about the origin depends on time and check that $\\frac{dL_z}{dt}=\\tau_z$. What is $L_z$ after $1\\ \\mathrm{s}$? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L06-S05.png",
+  "solution": {
+   "uz": [
+    "Tezlik $\\vec v=(0;\\,-gt)$, $x=2\\ \\mathrm{m}$ o'zgarmaydi: $$L_z=xp_y-yp_x=2\\cdot0.5\\cdot(-10t)=-10t\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Og'irlik kuchi momenti: $$\\tau_z=xF_y-yF_x=2\\cdot(-5)=-10\\ \\mathrm{N\\cdot m}=\\frac{dL_z}{dt}$$",
+    "Bir sekunddan keyin: $$L_z=-10\\ \\mathrm{kg\\cdot m^2/s}$$"
+   ],
+   "ru": [
+    "Скорость $\\vec v=(0;\\,-gt)$, $x=2\\ \\mathrm{m}$ не меняется: $$L_z=xp_y-yp_x=2\\cdot0.5\\cdot(-10t)=-10t\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Момент силы тяжести: $$\\tau_z=xF_y-yF_x=2\\cdot(-5)=-10\\ \\mathrm{N\\cdot m}=\\frac{dL_z}{dt}$$",
+    "Через одну секунду: $$L_z=-10\\ \\mathrm{kg\\cdot m^2/s}$$"
+   ],
+   "en": [
+    "The velocity is $\\vec v=(0;\\,-gt)$, and $x=2\\ \\mathrm{m}$ stays constant: $$L_z=xp_y-yp_x=2\\cdot0.5\\cdot(-10t)=-10t\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Torque of gravity: $$\\tau_z=xF_y-yF_x=2\\cdot(-5)=-10\\ \\mathrm{N\\cdot m}=\\frac{dL_z}{dt}$$",
+    "After one second: $$L_z=-10\\ \\mathrm{kg\\cdot m^2/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tekislikda: $L_z=xp_y-yp_x$",
+    "ru": "В плоскости: $L_z=xp_y-yp_x$",
+    "en": "In a plane: $L_z=xp_y-yp_x$"
+   },
+   {
+    "uz": "Impuls momenti tenglamasi: $\\frac{d\\vec L}{dt}=\\vec\\tau$",
+    "ru": "Уравнение моментов: $\\frac{d\\vec L}{dt}=\\vec\\tau$",
+    "en": "Angular momentum equation: $\\frac{d\\vec L}{dt}=\\vec\\tau$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Impuls momenti tenglamasi",
+   "ru": "Уравнение моментов",
+   "en": "The angular momentum equation"
+  },
+  "answer": "L_z=-10t;\\ \\tau_z=-10\\ \\mathrm{N\\cdot m};\\ L_z(1)=-10\\ \\mathrm{kg\\cdot m^2/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 11.43-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yerning sun'iy yo'ldoshi elliptik orbitada harakatlanmoqda: perigey Yer sirtidan $400\\ \\mathrm{km}$, apogey $3000\\ \\mathrm{km}$ balandlikda (chizmada). Yer radiusi $6400\\ \\mathrm{km}$, $GM=gR^2$. Yo'ldoshning perigey va apogeydagi tezliklarini hamda sektor tezligini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Искусственный спутник Земли движется по эллиптической орбите: перигей на высоте $400\\ \\mathrm{km}$, апогей — $3000\\ \\mathrm{km}$ над поверхностью Земли (см. рисунок). Радиус Земли $6400\\ \\mathrm{km}$, $GM=gR^2$. Найдите скорости спутника в перигее и апогее и его секторную скорость. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "An Earth satellite moves in an elliptic orbit: perigee $400\\ \\mathrm{km}$ and apogee $3000\\ \\mathrm{km}$ above the Earth's surface (see the figure). The Earth's radius is $6400\\ \\mathrm{km}$ and $GM=gR^2$. Find the satellite's speeds at perigee and apogee and its areal velocity. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L06-S06.png",
+  "solution": {
+   "uz": [
+    "Markazdan masofalar $r_1=6.8\\cdot10^6\\ \\mathrm{m}$, $r_2=9.4\\cdot10^6\\ \\mathrm{m}$; tortishish markaziy — impuls momenti saqlanadi: $$v_1r_1=v_2r_2$$",
+    "Energiya ham saqlanadi; $v_2=\\frac{v_1r_1}{r_2}$ ni qo'yamiz: $$\\frac{v_1^2}{2}-\\frac{GM}{r_1}=\\frac{v_2^2}{2}-\\frac{GM}{r_2}\\ \\Rightarrow\\ v_1=\\sqrt{\\frac{2GMr_2}{r_1(r_1+r_2)}}$$",
+    "Son qiymatlar ($GM=4.096\\cdot10^{14}\\ \\mathrm{m^3/s^2}$): $$v_1\\approx8.36\\ \\mathrm{km/s},\\qquad v_2=v_1\\frac{r_1}{r_2}\\approx6.05\\ \\mathrm{km/s}$$",
+    "Sektor tezlik: $$\\frac{dS}{dt}=\\frac{v_1r_1}{2}\\approx2.84\\cdot10^{10}\\ \\mathrm{m^2/s}$$"
+   ],
+   "ru": [
+    "Расстояния от центра $r_1=6.8\\cdot10^6\\ \\mathrm{m}$, $r_2=9.4\\cdot10^6\\ \\mathrm{m}$; тяготение — центральная сила, момент импульса сохраняется: $$v_1r_1=v_2r_2$$",
+    "Энергия тоже сохраняется; подставляем $v_2=\\frac{v_1r_1}{r_2}$: $$\\frac{v_1^2}{2}-\\frac{GM}{r_1}=\\frac{v_2^2}{2}-\\frac{GM}{r_2}\\ \\Rightarrow\\ v_1=\\sqrt{\\frac{2GMr_2}{r_1(r_1+r_2)}}$$",
+    "Численные значения ($GM=4.096\\cdot10^{14}\\ \\mathrm{m^3/s^2}$): $$v_1\\approx8.36\\ \\mathrm{km/s},\\qquad v_2=v_1\\frac{r_1}{r_2}\\approx6.05\\ \\mathrm{km/s}$$",
+    "Секторная скорость: $$\\frac{dS}{dt}=\\frac{v_1r_1}{2}\\approx2.84\\cdot10^{10}\\ \\mathrm{m^2/s}$$"
+   ],
+   "en": [
+    "Distances from the center $r_1=6.8\\cdot10^6\\ \\mathrm{m}$, $r_2=9.4\\cdot10^6\\ \\mathrm{m}$; gravity is central, so angular momentum is conserved: $$v_1r_1=v_2r_2$$",
+    "Energy is conserved too; substitute $v_2=\\frac{v_1r_1}{r_2}$: $$\\frac{v_1^2}{2}-\\frac{GM}{r_1}=\\frac{v_2^2}{2}-\\frac{GM}{r_2}\\ \\Rightarrow\\ v_1=\\sqrt{\\frac{2GMr_2}{r_1(r_1+r_2)}}$$",
+    "Numerical values ($GM=4.096\\cdot10^{14}\\ \\mathrm{m^3/s^2}$): $$v_1\\approx8.36\\ \\mathrm{km/s},\\qquad v_2=v_1\\frac{r_1}{r_2}\\approx6.05\\ \\mathrm{km/s}$$",
+    "Areal velocity: $$\\frac{dS}{dt}=\\frac{v_1r_1}{2}\\approx2.84\\cdot10^{10}\\ \\mathrm{m^2/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Apsidal nuqtalarda: $v_1r_1=v_2r_2$",
+    "ru": "В апсидальных точках: $v_1r_1=v_2r_2$",
+    "en": "At the apsides: $v_1r_1=v_2r_2$"
+   },
+   {
+    "uz": "Gravitatsiyada energiya: $\\frac{mv^2}{2}-\\frac{GMm}{r}=\\mathrm{const}$",
+    "ru": "Энергия в поле тяготения: $\\frac{mv^2}{2}-\\frac{GMm}{r}=\\mathrm{const}$",
+    "en": "Energy in gravity: $\\frac{mv^2}{2}-\\frac{GMm}{r}=\\mathrm{const}$"
+   },
+   null,
+   {
+    "uz": "Sektor tezlik: $\\frac{dS}{dt}=\\frac{L}{2m}$",
+    "ru": "Секторная скорость: $\\frac{dS}{dt}=\\frac{L}{2m}$",
+    "en": "Areal velocity: $\\frac{dS}{dt}=\\frac{L}{2m}$"
+   }
+  ],
+  "basis": {
+   "uz": "Markaziy maydonda energiya va impuls momentining saqlanishi",
+   "ru": "Сохранение энергии и момента импульса в центральном поле",
+   "en": "Conservation of energy and angular momentum in a central field"
+  },
+  "answer": "v_1\\approx8.36\\ \\mathrm{km/s};\\ v_2\\approx6.05\\ \\mathrm{km/s};\\ \\frac{dS}{dt}\\approx2.84\\cdot10^{10}\\ \\mathrm{m^2/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 11.56-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Konkichi qo'llarini yoyib, sekundiga $1$ aylanish bilan aylanmoqda; bu holda inersiya momenti $4\\ \\mathrm{kg\\cdot m^2}$. U qo'llarini ko'kragiga yig'ib, inersiya momentini $1.6\\ \\mathrm{kg\\cdot m^2}$ ga kamaytirdi. Yangi aylanish chastotasini, kinetik energiyaning o'zgarishini va konkichi bajargan ishni toping. Muz ishqalanishi yo'q.",
+   "ru": "Фигурист, разведя руки, вращается с частотой $1$ оборот в секунду; его момент инерции при этом $4\\ \\mathrm{kg\\cdot m^2}$. Прижав руки к груди, он уменьшил момент инерции до $1.6\\ \\mathrm{kg\\cdot m^2}$. Найдите новую частоту вращения, изменение кинетической энергии и работу, совершённую фигуристом. Трения о лёд нет.",
+   "en": "A skater with outstretched arms spins at $1$ revolution per second; the moment of inertia is then $4\\ \\mathrm{kg\\cdot m^2}$. Pulling the arms to the chest, the skater reduces it to $1.6\\ \\mathrm{kg\\cdot m^2}$. Find the new rotation rate, the change in kinetic energy and the work done by the skater. There is no friction with the ice."
+  },
+  "figure": "figures/B2-L06-S07.png",
+  "solution": {
+   "uz": [
+    "Vertikal o'qqa nisbatan tashqi moment yo'q — impuls momenti saqlanadi: $$I_1n_1=I_2n_2\\ \\Rightarrow\\ n_2=\\frac{4\\cdot1}{1.6}=2.5\\ \\mathrm{s^{-1}}$$",
+    "Kinetik energiyalar: $$E_1=\\frac{4\\cdot(2\\pi)^2}{2}=8\\pi^2\\approx79\\ \\mathrm{J},\\qquad E_2=\\frac{1.6\\cdot(5\\pi)^2}{2}=20\\pi^2\\approx197\\ \\mathrm{J}$$",
+    "Energiya ortishi — konkichi mushaklarining ishi: $$A=E_2-E_1=12\\pi^2\\approx118\\ \\mathrm{J},\\qquad \\frac{E_2}{E_1}=\\frac{I_1}{I_2}=2.5$$"
+   ],
+   "ru": [
+    "Внешнего момента относительно вертикальной оси нет — момент импульса сохраняется: $$I_1n_1=I_2n_2\\ \\Rightarrow\\ n_2=\\frac{4\\cdot1}{1.6}=2.5\\ \\mathrm{s^{-1}}$$",
+    "Кинетические энергии: $$E_1=\\frac{4\\cdot(2\\pi)^2}{2}=8\\pi^2\\approx79\\ \\mathrm{J},\\qquad E_2=\\frac{1.6\\cdot(5\\pi)^2}{2}=20\\pi^2\\approx197\\ \\mathrm{J}$$",
+    "Прирост энергии — работа мышц фигуриста: $$A=E_2-E_1=12\\pi^2\\approx118\\ \\mathrm{J},\\qquad \\frac{E_2}{E_1}=\\frac{I_1}{I_2}=2.5$$"
+   ],
+   "en": [
+    "There is no external torque about the vertical axis — angular momentum is conserved: $$I_1n_1=I_2n_2\\ \\Rightarrow\\ n_2=\\frac{4\\cdot1}{1.6}=2.5\\ \\mathrm{s^{-1}}$$",
+    "Kinetic energies: $$E_1=\\frac{4\\cdot(2\\pi)^2}{2}=8\\pi^2\\approx79\\ \\mathrm{J},\\qquad E_2=\\frac{1.6\\cdot(5\\pi)^2}{2}=20\\pi^2\\approx197\\ \\mathrm{J}$$",
+    "The energy increase is the work of the skater's muscles: $$A=E_2-E_1=12\\pi^2\\approx118\\ \\mathrm{J},\\qquad \\frac{E_2}{E_1}=\\frac{I_1}{I_2}=2.5$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Inersiya momenti o'zgarsa: $I_1\\omega_1=I_2\\omega_2$",
+    "ru": "При изменении момента инерции: $I_1\\omega_1=I_2\\omega_2$",
+    "en": "Changing moment of inertia: $I_1\\omega_1=I_2\\omega_2$"
+   },
+   {
+    "uz": "Energiya va impuls momenti: $E_k=\\frac{L^2}{2I}$",
+    "ru": "Энергия и момент импульса: $E_k=\\frac{L^2}{2I}$",
+    "en": "Energy and angular momentum: $E_k=\\frac{L^2}{2I}$"
+   },
+   {
+    "uz": "Ichki kuchlar ishi: $A=E_{k2}-E_{k1}$",
+    "ru": "Работа внутренних сил: $A=E_{k2}-E_{k1}$",
+    "en": "Work of internal forces: $A=E_{k2}-E_{k1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Impuls momentining saqlanishi, ichki kuchlar ishi",
+   "ru": "Сохранение момента импульса, работа внутренних сил",
+   "en": "Conservation of angular momentum, work of internal forces"
+  },
+  "answer": "n_2=2.5\\ \\mathrm{s^{-1}};\\ \\Delta E=A=12\\pi^2\\approx118\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 11.64-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $120\\ \\mathrm{kg}$, radiusi $2\\ \\mathrm{m}$ bo'lgan disk shaklidagi gorizontal platforma vertikal o'q atrofida minutiga $6$ aylanish bilan erkin aylanmoqda; uning chetida $70\\ \\mathrm{kg}$ odam turibdi (odamni moddiy nuqta deb oling). Odam platforma markaziga o'tdi. Platforma minutiga necha marta aylanadi va odam qancha ish bajardi?",
+   "ru": "Горизонтальная платформа в форме диска массой $120\\ \\mathrm{kg}$ и радиусом $2\\ \\mathrm{m}$ свободно вращается вокруг вертикальной оси с частотой $6$ оборотов в минуту; на её краю стоит человек массой $70\\ \\mathrm{kg}$ (считать его материальной точкой). Человек перешёл в центр платформы. Сколько оборотов в минуту будет делать платформа и какую работу совершил человек?",
+   "en": "A horizontal disc-shaped platform of mass $120\\ \\mathrm{kg}$ and radius $2\\ \\mathrm{m}$ turns freely about a vertical axis at $6$ revolutions per minute; a $70\\ \\mathrm{kg}$ person stands at its edge (treat the person as a point mass). The person walks to the center. How many revolutions per minute does the platform make now, and how much work did the person do?"
+  },
+  "figure": "figures/B2-L06-S08.png",
+  "solution": {
+   "uz": [
+    "Inersiya momentlari — boshida odam chetda, keyin markazda: $$I_1=\\frac{120\\cdot4}{2}+70\\cdot4=520\\ \\mathrm{kg\\cdot m^2},\\qquad I_2=240\\ \\mathrm{kg\\cdot m^2}$$",
+    "Vertikal o'qqa nisbatan impuls momenti saqlanadi: $$n_2=n_1\\frac{I_1}{I_2}=6\\cdot\\frac{520}{240}=13\\ \\mathrm{min^{-1}}$$",
+    "Energiyalar ($\\omega_1=\\frac{\\pi}{5}\\ \\mathrm{rad/s}$) va ish: $$E_1=\\frac{520}{2}\\cdot\\frac{\\pi^2}{25}\\approx103\\ \\mathrm{J},\\qquad E_2=E_1\\frac{I_1}{I_2}\\approx222\\ \\mathrm{J},\\qquad A=E_2-E_1\\approx120\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Моменты инерции — сначала человек на краю, затем в центре: $$I_1=\\frac{120\\cdot4}{2}+70\\cdot4=520\\ \\mathrm{kg\\cdot m^2},\\qquad I_2=240\\ \\mathrm{kg\\cdot m^2}$$",
+    "Сохраняется момент импульса относительно вертикальной оси: $$n_2=n_1\\frac{I_1}{I_2}=6\\cdot\\frac{520}{240}=13\\ \\mathrm{min^{-1}}$$",
+    "Энергии ($\\omega_1=\\frac{\\pi}{5}\\ \\mathrm{rad/s}$) и работа: $$E_1=\\frac{520}{2}\\cdot\\frac{\\pi^2}{25}\\approx103\\ \\mathrm{J},\\qquad E_2=E_1\\frac{I_1}{I_2}\\approx222\\ \\mathrm{J},\\qquad A=E_2-E_1\\approx120\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "Moments of inertia — first the person is at the edge, then at the center: $$I_1=\\frac{120\\cdot4}{2}+70\\cdot4=520\\ \\mathrm{kg\\cdot m^2},\\qquad I_2=240\\ \\mathrm{kg\\cdot m^2}$$",
+    "Angular momentum about the vertical axis is conserved: $$n_2=n_1\\frac{I_1}{I_2}=6\\cdot\\frac{520}{240}=13\\ \\mathrm{min^{-1}}$$",
+    "Energies ($\\omega_1=\\frac{\\pi}{5}\\ \\mathrm{rad/s}$) and work: $$E_1=\\frac{520}{2}\\cdot\\frac{\\pi^2}{25}\\approx103\\ \\mathrm{J},\\qquad E_2=E_1\\frac{I_1}{I_2}\\approx222\\ \\mathrm{J},\\qquad A=E_2-E_1\\approx120\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Jadval: disk $\\frac{MR^2}{2}$, sterjen uchidan $\\frac{Ml^2}{3}$, shar $\\frac{2}{5}MR^2$",
+    "ru": "Таблица: диск $\\frac{MR^2}{2}$, стержень у конца $\\frac{Ml^2}{3}$, шар $\\frac{2}{5}MR^2$",
+    "en": "Table: disc $\\frac{MR^2}{2}$, rod about an end $\\frac{Ml^2}{3}$, sphere $\\frac{2}{5}MR^2$"
+   },
+   {
+    "uz": "Inersiya momenti o'zgarsa: $I_1\\omega_1=I_2\\omega_2$",
+    "ru": "При изменении момента инерции: $I_1\\omega_1=I_2\\omega_2$",
+    "en": "Changing moment of inertia: $I_1\\omega_1=I_2\\omega_2$"
+   },
+   {
+    "uz": "Ichki kuchlar ishi: $A=E_{k2}-E_{k1}$",
+    "ru": "Работа внутренних сил: $A=E_{k2}-E_{k1}$",
+    "en": "Work of internal forces: $A=E_{k2}-E_{k1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Impuls momentining saqlanishi — platforma va odam",
+   "ru": "Сохранение момента импульса — платформа и человек",
+   "en": "Conservation of angular momentum — platform and person"
+  },
+  "answer": "n_2=13\\ \\mathrm{min^{-1}};\\ A\\approx120\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Volkenshteyn, «Problems in General Physics», 3.40-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S09",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Massasi $1.2\\ \\mathrm{kg}$, uzunligi $1\\ \\mathrm{m}$ bo'lgan bir jinsli sterjen yuqori uchidagi gorizontal o'q atrofida erkin aylana oladi va vertikal osilib turibdi. Uning pastki uchiga gorizontal uchayotgan $20\\ \\mathrm{g}$ o'q $100\\ \\mathrm{m/s}$ tezlik bilan urilib, qadalib qoldi (chizmada). Sterjenning burchak tezligini, u og'adigan eng katta burchakni va zarba paytida o'q (aylanish o'qi) bergan impulsni toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Однородный стержень массой $1.2\\ \\mathrm{kg}$ и длиной $1\\ \\mathrm{m}$ может свободно вращаться вокруг горизонтальной оси у верхнего конца и висит вертикально. В его нижний конец попадает и застревает горизонтально летящая пуля массой $20\\ \\mathrm{g}$ со скоростью $100\\ \\mathrm{m/s}$ (см. рисунок). Найдите угловую скорость стержня, наибольший угол отклонения и импульс, который сообщила ось во время удара. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A uniform rod of mass $1.2\\ \\mathrm{kg}$ and length $1\\ \\mathrm{m}$ can turn freely about a horizontal axle at its upper end and hangs vertically. A $20\\ \\mathrm{g}$ bullet flying horizontally at $100\\ \\mathrm{m/s}$ hits its lower end and sticks (see the figure). Find the rod's angular velocity, its maximum angle of swing and the impulse given by the axle during the impact. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L06-S09.png",
+  "solution": {
+   "uz": [
+    "O'qning kuchi o'qdan o'tadi — o'qqa nisbatan impuls momenti saqlanadi: $$mvl=\\left(\\frac{Ml^2}{3}+ml^2\\right)\\omega\\ \\Rightarrow\\ \\omega=\\frac{0.02\\cdot100}{0.42}\\approx4.76\\ \\mathrm{rad/s}$$",
+    "Zarbadan keyin energiya saqlanadi; massa markazi $\\frac{l}{2}$ da, o'q (snaryad) $l$ da ko'tariladi: $$\\frac{I\\omega^2}{2}=\\left(Mg\\frac{l}{2}+mgl\\right)(1-\\cos\\theta)\\ \\Rightarrow\\ 4.76=6.2(1-\\cos\\theta)$$",
+    "Burchak: $$\\cos\\theta\\approx0.232,\\qquad \\theta\\approx76.6^\\circ$$",
+    "Impuls saqlanmaydi: zarbadan keyingi impuls va o'q bergan impuls: $$p'=\\left(M\\frac{l}{2}+ml\\right)\\omega\\approx2.95\\ \\mathrm{kg\\cdot m/s},\\qquad J'=p'-mv\\approx0.95\\ \\mathrm{N\\cdot s}$$"
+   ],
+   "ru": [
+    "Сила оси проходит через ось — сохраняется момент импульса относительно оси: $$mvl=\\left(\\frac{Ml^2}{3}+ml^2\\right)\\omega\\ \\Rightarrow\\ \\omega=\\frac{0.02\\cdot100}{0.42}\\approx4.76\\ \\mathrm{rad/s}$$",
+    "После удара энергия сохраняется; центр масс поднимается как точка на $\\frac{l}{2}$, пуля — на $l$: $$\\frac{I\\omega^2}{2}=\\left(Mg\\frac{l}{2}+mgl\\right)(1-\\cos\\theta)\\ \\Rightarrow\\ 4.76=6.2(1-\\cos\\theta)$$",
+    "Угол: $$\\cos\\theta\\approx0.232,\\qquad \\theta\\approx76.6^\\circ$$",
+    "Импульс не сохраняется: импульс после удара и импульс оси: $$p'=\\left(M\\frac{l}{2}+ml\\right)\\omega\\approx2.95\\ \\mathrm{kg\\cdot m/s},\\qquad J'=p'-mv\\approx0.95\\ \\mathrm{N\\cdot s}$$"
+   ],
+   "en": [
+    "The axle's force passes through the axle — angular momentum about the axle is conserved: $$mvl=\\left(\\frac{Ml^2}{3}+ml^2\\right)\\omega\\ \\Rightarrow\\ \\omega=\\frac{0.02\\cdot100}{0.42}\\approx4.76\\ \\mathrm{rad/s}$$",
+    "After the impact energy is conserved; the center of mass rises as a point at $\\frac{l}{2}$, the bullet as a point at $l$: $$\\frac{I\\omega^2}{2}=\\left(Mg\\frac{l}{2}+mgl\\right)(1-\\cos\\theta)\\ \\Rightarrow\\ 4.76=6.2(1-\\cos\\theta)$$",
+    "The angle: $$\\cos\\theta\\approx0.232,\\qquad \\theta\\approx76.6^\\circ$$",
+    "Momentum is not conserved: the momentum after the impact and the axle's impulse: $$p'=\\left(M\\frac{l}{2}+ml\\right)\\omega\\approx2.95\\ \\mathrm{kg\\cdot m/s},\\qquad J'=p'-mv\\approx0.95\\ \\mathrm{N\\cdot s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "O'qli jismga zarba: $mvd=(I+md^2)\\omega$",
+    "ru": "Удар по телу на оси: $mvd=(I+md^2)\\omega$",
+    "en": "Impact on a body on an axle: $mvd=(I+md^2)\\omega$"
+   },
+   {
+    "uz": "Mexanik energiyaning saqlanishi: $E_{k1}+U_1=E_{k2}+U_2$",
+    "ru": "Сохранение механической энергии: $E_{k1}+U_1=E_{k2}+U_2$",
+    "en": "Conservation of mechanical energy: $E_{k1}+U_1=E_{k2}+U_2$"
+   },
+   null,
+   {
+    "uz": "Impuls teoremasi: $Mv_C=\\sum J$",
+    "ru": "Теорема об импульсе: $Mv_C=\\sum J$",
+    "en": "Impulse–momentum theorem: $Mv_C=\\sum J$"
+   }
+  ],
+  "basis": {
+   "uz": "O'qli jismga zarba: impuls momenti, so'ng energiya",
+   "ru": "Удар по телу на оси: момент импульса, затем энергия",
+   "en": "Impact on a body on an axle: angular momentum, then energy"
+  },
+  "answer": "\\omega\\approx4.76\\ \\mathrm{rad/s};\\ \\theta\\approx76.6^\\circ;\\ J'\\approx0.95\\ \\mathrm{N\\cdot s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 1.275-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Inersiya momenti $0.2\\ \\mathrm{kg\\cdot m^2}$ bo'lgan disk vertikal o'q atrofida $30\\ \\mathrm{rad/s}$ bilan soat strelkasiga qarshi aylanmoqda. Unga shu o'qda soat strelkasi bo'yicha $10\\ \\mathrm{rad/s}$ bilan aylanayotgan inersiya momenti $0.3\\ \\mathrm{kg\\cdot m^2}$ bo'lgan ikkinchi disk tushirildi va ular ishqalanish tufayli birga aylana boshladi. Umumiy burchak tezlikni va issiqlikka aylangan energiyani toping.",
+   "ru": "Диск с моментом инерции $0.2\\ \\mathrm{kg\\cdot m^2}$ вращается вокруг вертикальной оси против часовой стрелки с угловой скоростью $30\\ \\mathrm{rad/s}$. На него на ту же ось опускают второй диск с моментом инерции $0.3\\ \\mathrm{kg\\cdot m^2}$, вращающийся по часовой стрелке с $10\\ \\mathrm{rad/s}$, и из-за трения они начинают вращаться вместе. Найдите общую угловую скорость и энергию, перешедшую в теплоту.",
+   "en": "A disc with moment of inertia $0.2\\ \\mathrm{kg\\cdot m^2}$ spins counterclockwise about a vertical axle at $30\\ \\mathrm{rad/s}$. A second disc with moment of inertia $0.3\\ \\mathrm{kg\\cdot m^2}$, spinning clockwise at $10\\ \\mathrm{rad/s}$, is dropped onto it on the same axle, and friction makes them turn together. Find the common angular velocity and the energy turned into heat."
+  },
+  "figure": "figures/B2-L06-S10.png",
+  "solution": {
+   "uz": [
+    "Soat strelkasiga qarshi yo'nalishni musbat olamiz; impuls momenti saqlanadi: $$\\omega=\\frac{I_1\\omega_1+I_2\\omega_2}{I_1+I_2}=\\frac{0.2\\cdot30-0.3\\cdot10}{0.5}=6\\ \\mathrm{rad/s}$$",
+    "Energiyalar: $$E_1=\\frac{0.2\\cdot900}{2}+\\frac{0.3\\cdot100}{2}=105\\ \\mathrm{J},\\qquad E_2=\\frac{0.5\\cdot36}{2}=9\\ \\mathrm{J}$$",
+    "Issiqlik va tekshiruv: $$Q=96\\ \\mathrm{J}=\\frac{0.2\\cdot0.3\\cdot40^2}{2\\cdot0.5}$$"
+   ],
+   "ru": [
+    "Направление против часовой стрелки считаем положительным; момент импульса сохраняется: $$\\omega=\\frac{I_1\\omega_1+I_2\\omega_2}{I_1+I_2}=\\frac{0.2\\cdot30-0.3\\cdot10}{0.5}=6\\ \\mathrm{rad/s}$$",
+    "Энергии: $$E_1=\\frac{0.2\\cdot900}{2}+\\frac{0.3\\cdot100}{2}=105\\ \\mathrm{J},\\qquad E_2=\\frac{0.5\\cdot36}{2}=9\\ \\mathrm{J}$$",
+    "Теплота и проверка: $$Q=96\\ \\mathrm{J}=\\frac{0.2\\cdot0.3\\cdot40^2}{2\\cdot0.5}$$"
+   ],
+   "en": [
+    "Take counterclockwise as positive; angular momentum is conserved: $$\\omega=\\frac{I_1\\omega_1+I_2\\omega_2}{I_1+I_2}=\\frac{0.2\\cdot30-0.3\\cdot10}{0.5}=6\\ \\mathrm{rad/s}$$",
+    "Energies: $$E_1=\\frac{0.2\\cdot900}{2}+\\frac{0.3\\cdot100}{2}=105\\ \\mathrm{J},\\qquad E_2=\\frac{0.5\\cdot36}{2}=9\\ \\mathrm{J}$$",
+    "Heat and a check: $$Q=96\\ \\mathrm{J}=\\frac{0.2\\cdot0.3\\cdot40^2}{2\\cdot0.5}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ulanish: $I_1\\omega_1+I_2\\omega_2=(I_1+I_2)\\omega$",
+    "ru": "Сцепление: $I_1\\omega_1+I_2\\omega_2=(I_1+I_2)\\omega$",
+    "en": "Coupling: $I_1\\omega_1+I_2\\omega_2=(I_1+I_2)\\omega$"
+   },
+   null,
+   {
+    "uz": "Yo'qotilgan energiya: $\\Delta E=\\frac{I_1I_2(\\omega_1-\\omega_2)^2}{2(I_1+I_2)}$",
+    "ru": "Потерянная энергия: $\\Delta E=\\frac{I_1I_2(\\omega_1-\\omega_2)^2}{2(I_1+I_2)}$",
+    "en": "Energy lost: $\\Delta E=\\frac{I_1I_2(\\omega_1-\\omega_2)^2}{2(I_1+I_2)}$"
+   }
+  ],
+  "basis": {
+   "uz": "Disklar ulanishi — aylanma noelastik zarba",
+   "ru": "Сцепление дисков — вращательный неупругий удар",
+   "en": "Coupling discs — a rotational inelastic collision"
+  },
+  "answer": "\\omega=6\\ \\mathrm{rad/s};\\ Q=96\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Irodov, «Problems in General Physics», 1.278-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S11",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Massasi $200\\ \\mathrm{kg}$, radiusi $2\\ \\mathrm{m}$ bo'lgan disk shaklidagi platforma vertikal o'q atrofida erkin aylana oladi va tinch turibdi. Uning chetida $80\\ \\mathrm{kg}$ odam turibdi. Odam platforma cheti bo'ylab platformaga nisbatan $1\\ \\mathrm{m/s}$ tezlik bilan yura boshladi (chizmada). Platformaning burchak tezligini, odamning yerga nisbatan tezligini va odam platforma bo'ylab bir marta aylanib chiqquncha platforma qanday burchakka burilishini toping.",
+   "ru": "Платформа в форме диска массой $200\\ \\mathrm{kg}$ и радиусом $2\\ \\mathrm{m}$ может свободно вращаться вокруг вертикальной оси и покоится. На её краю стоит человек массой $80\\ \\mathrm{kg}$. Человек пошёл по краю платформы со скоростью $1\\ \\mathrm{m/s}$ относительно неё (см. рисунок). Найдите угловую скорость платформы, скорость человека относительно земли и угол, на который повернётся платформа, пока человек один раз обойдёт её.",
+   "en": "A disc-shaped platform of mass $200\\ \\mathrm{kg}$ and radius $2\\ \\mathrm{m}$ can turn freely about a vertical axis and is at rest. An $80\\ \\mathrm{kg}$ person stands at its edge. The person starts walking along the edge at $1\\ \\mathrm{m/s}$ relative to the platform (see the figure). Find the platform's angular velocity, the person's speed relative to the ground and the angle through which the platform turns while the person walks once around it."
+  },
+  "figure": "figures/B2-L06-S11.png",
+  "solution": {
+   "uz": [
+    "Boshida $L=0$, tashqi moment yo'q. Odamning yerga nisbatan burchak tezligi $\\frac{u}{R}+\\omega$ ($\\omega$ — platformaniki): $$mR^2\\left(\\frac{u}{R}+\\omega\\right)+I\\omega=0,\\qquad I=\\frac{MR^2}{2}=400\\ \\mathrm{kg\\cdot m^2}$$",
+    "Platforma burchak tezligi (minus — teskari yo'nalishda): $$\\omega=-\\frac{muR}{I+mR^2}=-\\frac{160}{720}=-\\frac{2}{9}\\ \\mathrm{rad/s}$$",
+    "Odamning yerga nisbatan tezligi: $$v=u+\\omega R=1-\\frac{4}{9}=\\frac{5}{9}\\approx0.56\\ \\mathrm{m/s}$$",
+    "Platformaga nisbatan bir aylanish vaqti $t=\\frac{2\\pi R}{u}=4\\pi\\ \\mathrm{s}$; platforma burilishi: $$\\varphi=\\omega t=-\\frac{8\\pi}{9}\\ \\mathrm{rad}=-160^\\circ$$"
+   ],
+   "ru": [
+    "Вначале $L=0$, внешнего момента нет. Угловая скорость человека относительно земли $\\frac{u}{R}+\\omega$ ($\\omega$ — платформы): $$mR^2\\left(\\frac{u}{R}+\\omega\\right)+I\\omega=0,\\qquad I=\\frac{MR^2}{2}=400\\ \\mathrm{kg\\cdot m^2}$$",
+    "Угловая скорость платформы (минус — в обратную сторону): $$\\omega=-\\frac{muR}{I+mR^2}=-\\frac{160}{720}=-\\frac{2}{9}\\ \\mathrm{rad/s}$$",
+    "Скорость человека относительно земли: $$v=u+\\omega R=1-\\frac{4}{9}=\\frac{5}{9}\\approx0.56\\ \\mathrm{m/s}$$",
+    "Время одного обхода относительно платформы $t=\\frac{2\\pi R}{u}=4\\pi\\ \\mathrm{s}$; поворот платформы: $$\\varphi=\\omega t=-\\frac{8\\pi}{9}\\ \\mathrm{rad}=-160^\\circ$$"
+   ],
+   "en": [
+    "Initially $L=0$ and there is no external torque. The person's angular velocity relative to the ground is $\\frac{u}{R}+\\omega$ ($\\omega$ is the platform's): $$mR^2\\left(\\frac{u}{R}+\\omega\\right)+I\\omega=0,\\qquad I=\\frac{MR^2}{2}=400\\ \\mathrm{kg\\cdot m^2}$$",
+    "The platform's angular velocity (minus means the opposite way): $$\\omega=-\\frac{muR}{I+mR^2}=-\\frac{160}{720}=-\\frac{2}{9}\\ \\mathrm{rad/s}$$",
+    "The person's speed relative to the ground: $$v=u+\\omega R=1-\\frac{4}{9}=\\frac{5}{9}\\approx0.56\\ \\mathrm{m/s}$$",
+    "Time for one lap relative to the platform $t=\\frac{2\\pi R}{u}=4\\pi\\ \\mathrm{s}$; the platform's rotation: $$\\varphi=\\omega t=-\\frac{8\\pi}{9}\\ \\mathrm{rad}=-160^\\circ$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Saqlanish: $\\sum\\tau=0\\ \\Rightarrow\\ L=\\mathrm{const}$",
+    "ru": "Сохранение: $\\sum\\tau=0\\ \\Rightarrow\\ L=\\mathrm{const}$",
+    "en": "Conservation: $\\sum\\tau=0\\ \\Rightarrow\\ L=\\mathrm{const}$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Impuls momentining saqlanishi — harakatlanuvchi qism",
+   "ru": "Сохранение момента импульса — движущаяся часть",
+   "en": "Conservation of angular momentum — a moving part"
+  },
+  "answer": "\\omega=-\\frac{2}{9}\\ \\mathrm{rad/s};\\ v\\approx0.56\\ \\mathrm{m/s};\\ \\varphi=-160^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "Irodov, «Problems in General Physics», 1.277-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Massasi $2\\ \\mathrm{kg}$, uzunligi $1.2\\ \\mathrm{m}$ bo'lgan bir jinsli sterjen silliq gorizontal stolda yotibdi. Uning bir uchiga sterjenga perpendikulyar gorizontal qisqa zarba bilan $3\\ \\mathrm{N\\cdot s}$ impuls berildi (chizmada). Massa markazi tezligini, burchak tezlikni, zarbadan keyin bir lahzada tinch turgan nuqtani va sterjenning kinetik energiyasini toping.",
+   "ru": "Однородный стержень массой $2\\ \\mathrm{kg}$ и длиной $1.2\\ \\mathrm{m}$ лежит на гладком горизонтальном столе. Одному его концу коротким горизонтальным ударом перпендикулярно стержню сообщили импульс $3\\ \\mathrm{N\\cdot s}$ (см. рисунок). Найдите скорость центра масс, угловую скорость, точку, мгновенно покоящуюся сразу после удара, и кинетическую энергию стержня.",
+   "en": "A uniform rod of mass $2\\ \\mathrm{kg}$ and length $1.2\\ \\mathrm{m}$ lies on a smooth horizontal table. A short horizontal blow perpendicular to the rod gives one end an impulse of $3\\ \\mathrm{N\\cdot s}$ (see the figure). Find the center-of-mass velocity, the angular velocity, the point momentarily at rest just after the blow, and the rod's kinetic energy."
+  },
+  "figure": "figures/B2-L06-S12.png",
+  "solution": {
+   "uz": [
+    "O'q yo'q — impuls teoremasi va massa markaziga nisbatan moment impulsi ($b=\\frac{l}{2}$): $$v_C=\\frac{J}{M}=1.5\\ \\mathrm{m/s},\\qquad \\frac{Ml^2}{12}\\omega=J\\frac{l}{2}\\ \\Rightarrow\\ \\omega=\\frac{6J}{Ml}=7.5\\ \\mathrm{rad/s}$$",
+    "Tinch nuqta massa markazidan zarba tomoniga teskari, $\\frac{v_C}{\\omega}$ masofada: $$\\frac{v_C}{\\omega}=0.2\\ \\mathrm{m},\\qquad 0.6+0.2=0.8\\ \\mathrm{m}=\\frac{2l}{3}$$",
+    "Kinetik energiya — ilgarilanma va aylanma qism: $$E_k=\\frac{2\\cdot1.5^2}{2}+\\frac{0.24\\cdot7.5^2}{2}=2.25+6.75=9\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Оси нет — теорема об импульсе и импульс момента относительно центра масс ($b=\\frac{l}{2}$): $$v_C=\\frac{J}{M}=1.5\\ \\mathrm{m/s},\\qquad \\frac{Ml^2}{12}\\omega=J\\frac{l}{2}\\ \\Rightarrow\\ \\omega=\\frac{6J}{Ml}=7.5\\ \\mathrm{rad/s}$$",
+    "Покоящаяся точка находится по другую сторону от центра масс на расстоянии $\\frac{v_C}{\\omega}$: $$\\frac{v_C}{\\omega}=0.2\\ \\mathrm{m},\\qquad 0.6+0.2=0.8\\ \\mathrm{m}=\\frac{2l}{3}$$",
+    "Кинетическая энергия — поступательная и вращательная части: $$E_k=\\frac{2\\cdot1.5^2}{2}+\\frac{0.24\\cdot7.5^2}{2}=2.25+6.75=9\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "There is no axle — the impulse theorem and the angular impulse about the center of mass ($b=\\frac{l}{2}$): $$v_C=\\frac{J}{M}=1.5\\ \\mathrm{m/s},\\qquad \\frac{Ml^2}{12}\\omega=J\\frac{l}{2}\\ \\Rightarrow\\ \\omega=\\frac{6J}{Ml}=7.5\\ \\mathrm{rad/s}$$",
+    "The point at rest is on the far side of the center of mass at distance $\\frac{v_C}{\\omega}$: $$\\frac{v_C}{\\omega}=0.2\\ \\mathrm{m},\\qquad 0.6+0.2=0.8\\ \\mathrm{m}=\\frac{2l}{3}$$",
+    "Kinetic energy — translational and rotational parts: $$E_k=\\frac{2\\cdot1.5^2}{2}+\\frac{0.24\\cdot7.5^2}{2}=2.25+6.75=9\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Erkin jism: $\\Delta\\vec p=\\vec J$, $I_C\\omega=Jb$",
+    "ru": "Свободное тело: $\\Delta\\vec p=\\vec J$, $I_C\\omega=Jb$",
+    "en": "Free body: $\\Delta\\vec p=\\vec J$, $I_C\\omega=Jb$"
+   },
+   null,
+   {
+    "uz": "Energiya va impuls momenti: $E_k=\\frac{L^2}{2I}$",
+    "ru": "Энергия и момент импульса: $E_k=\\frac{L^2}{2I}$",
+    "en": "Energy and angular momentum: $E_k=\\frac{L^2}{2I}$"
+   }
+  ],
+  "basis": {
+   "uz": "Erkin jismga zarba: impuls va impuls momenti",
+   "ru": "Удар по свободному телу: импульс и момент импульса",
+   "en": "A blow on a free body: momentum and angular momentum"
+  },
+  "answer": "v_C=1.5\\ \\mathrm{m/s};\\ \\omega=7.5\\ \\mathrm{rad/s};\\ \\frac{2l}{3}=0.8\\ \\mathrm{m};\\ E_k=9\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Irodov, «Problems in General Physics», 1.273-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Massasi $1.5\\ \\mathrm{kg}$, uzunligi $0.9\\ \\mathrm{m}$ bo'lgan bir jinsli sterjen (beysbol tayoqchasi modeli) yuqori uchidagi o'q atrofida aylana oladi va vertikal osilgan. Unga gorizontal qisqa zarba bilan $6\\ \\mathrm{N\\cdot s}$ impuls berildi. a) Zarba pastki uchga berilsa, burchak tezlik va o'q bergan impuls qancha? b) Qayerga urilsa, o'q hech qanday impuls bermaydi?",
+   "ru": "Однородный стержень массой $1.5\\ \\mathrm{kg}$ и длиной $0.9\\ \\mathrm{m}$ (модель бейсбольной биты) может вращаться вокруг оси у верхнего конца и висит вертикально. Ему коротким горизонтальным ударом сообщают импульс $6\\ \\mathrm{N\\cdot s}$. а) Каковы угловая скорость и импульс оси, если удар нанесён по нижнему концу? б) Куда нужно ударить, чтобы ось не дала никакого импульса?",
+   "en": "A uniform rod of mass $1.5\\ \\mathrm{kg}$ and length $0.9\\ \\mathrm{m}$ (a model of a baseball bat) can turn about an axle at its upper end and hangs vertically. A short horizontal blow gives it an impulse of $6\\ \\mathrm{N\\cdot s}$. a) If the blow is at the lower end, what are the angular velocity and the axle's impulse? b) Where must it be struck so that the axle gives no impulse at all?"
+  },
+  "figure": "figures/B2-L06-S13.png",
+  "solution": {
+   "uz": [
+    "O'qqa nisbatan kuch momenti impulsi ($I=\\frac{Ml^2}{3}=0.405\\ \\mathrm{kg\\cdot m^2}$): $$I\\omega=Jl\\ \\Rightarrow\\ \\omega=\\frac{6\\cdot0.9}{0.405}\\approx13.3\\ \\mathrm{rad/s}$$",
+    "Massa markazi tezligi $v_C=\\omega\\frac{l}{2}=6\\ \\mathrm{m/s}$; impuls teoremasidan o'q impulsi: $$Mv_C=J+J'\\ \\Rightarrow\\ J'=9-6=3\\ \\mathrm{N\\cdot s}$$",
+    "$J'>0$ — o'q zarba yo'nalishida turtadi. $J'=0$ shartidan ($a=\\frac{l}{2}$): $$x=\\frac{I}{Ma}=\\frac{2l}{3}=0.6\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Импульс момента относительно оси ($I=\\frac{Ml^2}{3}=0.405\\ \\mathrm{kg\\cdot m^2}$): $$I\\omega=Jl\\ \\Rightarrow\\ \\omega=\\frac{6\\cdot0.9}{0.405}\\approx13.3\\ \\mathrm{rad/s}$$",
+    "Скорость центра масс $v_C=\\omega\\frac{l}{2}=6\\ \\mathrm{m/s}$; из теоремы об импульсе — импульс оси: $$Mv_C=J+J'\\ \\Rightarrow\\ J'=9-6=3\\ \\mathrm{N\\cdot s}$$",
+    "$J'>0$ — ось толкает в направлении удара. Из условия $J'=0$ ($a=\\frac{l}{2}$): $$x=\\frac{I}{Ma}=\\frac{2l}{3}=0.6\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Angular impulse about the axle ($I=\\frac{Ml^2}{3}=0.405\\ \\mathrm{kg\\cdot m^2}$): $$I\\omega=Jl\\ \\Rightarrow\\ \\omega=\\frac{6\\cdot0.9}{0.405}\\approx13.3\\ \\mathrm{rad/s}$$",
+    "Center-of-mass speed $v_C=\\omega\\frac{l}{2}=6\\ \\mathrm{m/s}$; the axle's impulse from the impulse theorem: $$Mv_C=J+J'\\ \\Rightarrow\\ J'=9-6=3\\ \\mathrm{N\\cdot s}$$",
+    "$J'>0$ — the axle pushes in the direction of the blow. From the condition $J'=0$ ($a=\\frac{l}{2}$): $$x=\\frac{I}{Ma}=\\frac{2l}{3}=0.6\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kuch momenti impulsi: $\\int\\tau\\,dt=\\Delta L$",
+    "ru": "Импульс момента силы: $\\int\\tau\\,dt=\\Delta L$",
+    "en": "Angular impulse: $\\int\\tau\\,dt=\\Delta L$"
+   },
+   {
+    "uz": "Impuls teoremasi: $Mv_C=\\sum J$",
+    "ru": "Теорема об импульсе: $Mv_C=\\sum J$",
+    "en": "Impulse–momentum theorem: $Mv_C=\\sum J$"
+   },
+   {
+    "uz": "Zarba markazi: $x=\\frac{I}{Ma}$",
+    "ru": "Центр удара: $x=\\frac{I}{Ma}$",
+    "en": "Center of percussion: $x=\\frac{I}{Ma}$"
+   }
+  ],
+  "basis": {
+   "uz": "Kuch momenti impulsi, zarba markazi",
+   "ru": "Импульс момента силы, центр удара",
+   "en": "Angular impulse, the center of percussion"
+  },
+  "answer": "\\omega\\approx13.3\\ \\mathrm{rad/s},\\ J'=3\\ \\mathrm{N\\cdot s};\\ x=0.6\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B2-L06, zarba markazi)"
+ },
+ {
+  "id": "B2-L06-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $3\\ \\mathrm{kg}$ bo'lgan yaxlit silindr aylanmasdan $6\\ \\mathrm{m/s}$ tezlik bilan g'adir-budir gorizontal sirtga sirpanib tushdi; sirpanish ishqalanish koeffitsiyenti $0.2$. Tegish nuqtasiga nisbatan impuls momentining saqlanishidan foydalanib, sirpanishsiz dumalash boshlangandagi tezlikni toping. Qancha energiya issiqlikka aylandi va bu qancha vaqt davom etdi? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Сплошной цилиндр массой $3\\ \\mathrm{kg}$ без вращения скользит со скоростью $6\\ \\mathrm{m/s}$ на шероховатую горизонтальную поверхность; коэффициент трения скольжения $0.2$. Используя сохранение момента импульса относительно точки касания, найдите скорость в момент начала качения без скольжения. Сколько энергии перешло в теплоту и сколько времени это длилось? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A solid cylinder of mass $3\\ \\mathrm{kg}$ slides onto a rough horizontal surface at $6\\ \\mathrm{m/s}$ without spinning; the coefficient of kinetic friction is $0.2$. Using conservation of angular momentum about the contact point, find the speed when rolling without slipping begins. How much energy became heat, and how long did this take? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L06-S14.png",
+  "solution": {
+   "uz": [
+    "Ishqalanish, og'irlik va tayanch kuchlari tegish nuqtasiga nisbatan moment bermaydi: $$Mv_0R=\\left(\\frac{MR^2}{2}+MR^2\\right)\\frac{v}{R}\\ \\Rightarrow\\ v=\\frac{2v_0}{3}=4\\ \\mathrm{m/s}$$",
+    "Issiqlik: $$Q=\\frac{3\\cdot36}{2}-\\frac{3}{4}\\cdot3\\cdot16=54-36=18\\ \\mathrm{J}$$",
+    "Vaqt — massa markazi sekinlanishi $\\mu g$: $$t=\\frac{v_0-v}{\\mu g}=\\frac{2}{2}=1\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Трение, сила тяжести и реакция опоры не дают момента относительно точки касания: $$Mv_0R=\\left(\\frac{MR^2}{2}+MR^2\\right)\\frac{v}{R}\\ \\Rightarrow\\ v=\\frac{2v_0}{3}=4\\ \\mathrm{m/s}$$",
+    "Теплота: $$Q=\\frac{3\\cdot36}{2}-\\frac{3}{4}\\cdot3\\cdot16=54-36=18\\ \\mathrm{J}$$",
+    "Время — замедление центра масс $\\mu g$: $$t=\\frac{v_0-v}{\\mu g}=\\frac{2}{2}=1\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "Friction, gravity and the normal force give no torque about the contact point: $$Mv_0R=\\left(\\frac{MR^2}{2}+MR^2\\right)\\frac{v}{R}\\ \\Rightarrow\\ v=\\frac{2v_0}{3}=4\\ \\mathrm{m/s}$$",
+    "Heat: $$Q=\\frac{3\\cdot36}{2}-\\frac{3}{4}\\cdot3\\cdot16=54-36=18\\ \\mathrm{J}$$",
+    "Time — the center of mass decelerates at $\\mu g$: $$t=\\frac{v_0-v}{\\mu g}=\\frac{2}{2}=1\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tegish nuqtasiga nisbatan: $Mv_0R=(I_C+MR^2)\\omega$",
+    "ru": "Относительно точки касания: $Mv_0R=(I_C+MR^2)\\omega$",
+    "en": "About the contact point: $Mv_0R=(I_C+MR^2)\\omega$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Tegish nuqtasiga nisbatan impuls momentining saqlanishi",
+   "ru": "Сохранение момента импульса относительно точки касания",
+   "en": "Conservation of angular momentum about the contact point"
+  },
+  "answer": "v=4\\ \\mathrm{m/s};\\ Q=18\\ \\mathrm{J};\\ t=1\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "Irodov, «Problems in General Physics», 1.262-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S15",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Bor modelida vodorod atomidagi elektron $n=2$ orbitada aylanmoqda; orbita radiusi $r=n^2a_0$, $a_0=0.529\\cdot10^{-10}\\ \\mathrm{m}$. Elektronning impuls momentini va tezligini toping. $\\hbar=1.055\\cdot10^{-34}\\ \\mathrm{J\\cdot s}$, $m_e=9.11\\cdot10^{-31}\\ \\mathrm{kg}$.",
+   "ru": "В модели Бора электрон в атоме водорода вращается на орбите $n=2$; радиус орбиты $r=n^2a_0$, $a_0=0.529\\cdot10^{-10}\\ \\mathrm{m}$. Найдите момент импульса и скорость электрона. $\\hbar=1.055\\cdot10^{-34}\\ \\mathrm{J\\cdot s}$, $m_e=9.11\\cdot10^{-31}\\ \\mathrm{kg}$.",
+   "en": "In the Bohr model the electron of a hydrogen atom moves in the $n=2$ orbit; the orbital radius is $r=n^2a_0$, $a_0=0.529\\cdot10^{-10}\\ \\mathrm{m}$. Find the electron's angular momentum and speed. $\\hbar=1.055\\cdot10^{-34}\\ \\mathrm{J\\cdot s}$, $m_e=9.11\\cdot10^{-31}\\ \\mathrm{kg}$."
+  },
+  "figure": "figures/B2-L06-S15.png",
+  "solution": {
+   "uz": [
+    "Bor sharti: $$L=n\\hbar=2\\cdot1.055\\cdot10^{-34}=2.11\\cdot10^{-34}\\ \\mathrm{J\\cdot s}$$",
+    "Orbita radiusi va aylana bo'ylab harakat uchun $L=m_evr$: $$r=4a_0=2.12\\cdot10^{-10}\\ \\mathrm{m},\\qquad v=\\frac{L}{m_er}\\approx1.09\\cdot10^6\\ \\mathrm{m/s}$$",
+    "Tekshiruv: Bor modelida $v=\\frac{\\alpha c}{n}$, $\\alpha\\approx\\frac{1}{137}$: $$v=\\frac{3\\cdot10^8}{137\\cdot2}\\approx1.09\\cdot10^6\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Условие Бора: $$L=n\\hbar=2\\cdot1.055\\cdot10^{-34}=2.11\\cdot10^{-34}\\ \\mathrm{J\\cdot s}$$",
+    "Радиус орбиты и для движения по окружности $L=m_evr$: $$r=4a_0=2.12\\cdot10^{-10}\\ \\mathrm{m},\\qquad v=\\frac{L}{m_er}\\approx1.09\\cdot10^6\\ \\mathrm{m/s}$$",
+    "Проверка: в модели Бора $v=\\frac{\\alpha c}{n}$, $\\alpha\\approx\\frac{1}{137}$: $$v=\\frac{3\\cdot10^8}{137\\cdot2}\\approx1.09\\cdot10^6\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "The Bohr condition: $$L=n\\hbar=2\\cdot1.055\\cdot10^{-34}=2.11\\cdot10^{-34}\\ \\mathrm{J\\cdot s}$$",
+    "The orbital radius, and for circular motion $L=m_evr$: $$r=4a_0=2.12\\cdot10^{-10}\\ \\mathrm{m},\\qquad v=\\frac{L}{m_er}\\approx1.09\\cdot10^6\\ \\mathrm{m/s}$$",
+    "Check: in the Bohr model $v=\\frac{\\alpha c}{n}$, $\\alpha\\approx\\frac{1}{137}$: $$v=\\frac{3\\cdot10^8}{137\\cdot2}\\approx1.09\\cdot10^6\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bor sharti: $L=n\\hbar$",
+    "ru": "Условие Бора: $L=n\\hbar$",
+    "en": "Bohr condition: $L=n\\hbar$"
+   },
+   {
+    "uz": "Aylana bo'ylab: $L=mvr=mr^2\\omega$",
+    "ru": "По окружности: $L=mvr=mr^2\\omega$",
+    "en": "On a circle: $L=mvr=mr^2\\omega$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Impuls momentining kvantlanishi (Bor modeli)",
+   "ru": "Квантование момента импульса (модель Бора)",
+   "en": "Quantization of angular momentum (Bohr model)"
+  },
+  "answer": "L=2\\hbar\\approx2.11\\cdot10^{-34}\\ \\mathrm{J\\cdot s};\\ v\\approx1.09\\cdot10^6\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L06, Bor modeli)"
+ },
+ {
+  "id": "B2-L06-S16",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Giroskop massasi $0.4\\ \\mathrm{kg}$, radiusi $8\\ \\mathrm{cm}$ bo'lgan yaxlit diskdan iborat va sekundiga $50$ aylanish bilan aylanmoqda. Disk o'qi gorizontal, uning massa markazi tayanchdan $12\\ \\mathrm{cm}$ masofada (chizmada). Presessiya burchak tezligini va presessiya davrini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Гироскоп состоит из сплошного диска массой $0.4\\ \\mathrm{kg}$ и радиусом $8\\ \\mathrm{cm}$, вращающегося с частотой $50$ оборотов в секунду. Ось диска горизонтальна, его центр масс находится на расстоянии $12\\ \\mathrm{cm}$ от опоры (см. рисунок). Найдите угловую скорость и период прецессии. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A gyroscope is a solid disc of mass $0.4\\ \\mathrm{kg}$ and radius $8\\ \\mathrm{cm}$ spinning at $50$ revolutions per second. The disc's axle is horizontal and its center of mass is $12\\ \\mathrm{cm}$ from the pivot (see the figure). Find the precession angular velocity and the precession period. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L06-S16.png",
+  "solution": {
+   "uz": [
+    "Diskning xususiy impuls momenti: $$I=\\frac{mR^2}{2}=1.28\\cdot10^{-3}\\ \\mathrm{kg\\cdot m^2},\\qquad L=I\\cdot2\\pi n=0.128\\pi\\approx0.402\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Og'irlik kuchining tayanchga nisbatan momenti va presessiya: $$\\tau=mgd=0.48\\ \\mathrm{N\\cdot m},\\qquad \\Omega=\\frac{\\tau}{L}\\approx1.19\\ \\mathrm{rad/s}$$",
+    "Presessiya davri; $\\Omega\\ll\\omega$ — formula qo'llanadi: $$T=\\frac{2\\pi}{\\Omega}\\approx5.3\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Собственный момент импульса диска: $$I=\\frac{mR^2}{2}=1.28\\cdot10^{-3}\\ \\mathrm{kg\\cdot m^2},\\qquad L=I\\cdot2\\pi n=0.128\\pi\\approx0.402\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Момент силы тяжести относительно опоры и прецессия: $$\\tau=mgd=0.48\\ \\mathrm{N\\cdot m},\\qquad \\Omega=\\frac{\\tau}{L}\\approx1.19\\ \\mathrm{rad/s}$$",
+    "Период прецессии; $\\Omega\\ll\\omega$ — формула применима: $$T=\\frac{2\\pi}{\\Omega}\\approx5.3\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The disc's spin angular momentum: $$I=\\frac{mR^2}{2}=1.28\\cdot10^{-3}\\ \\mathrm{kg\\cdot m^2},\\qquad L=I\\cdot2\\pi n=0.128\\pi\\approx0.402\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "The torque of gravity about the pivot and the precession: $$\\tau=mgd=0.48\\ \\mathrm{N\\cdot m},\\qquad \\Omega=\\frac{\\tau}{L}\\approx1.19\\ \\mathrm{rad/s}$$",
+    "The precession period; $\\Omega\\ll\\omega$ — the formula applies: $$T=\\frac{2\\pi}{\\Omega}\\approx5.3\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qattiq jism: $L_z=I\\omega$",
+    "ru": "Твёрдое тело: $L_z=I\\omega$",
+    "en": "Rigid body: $L_z=I\\omega$"
+   },
+   {
+    "uz": "Presessiya: $\\Omega=\\frac{mgd}{I\\omega}$",
+    "ru": "Прецессия: $\\Omega=\\frac{mgd}{I\\omega}$",
+    "en": "Precession: $\\Omega=\\frac{mgd}{I\\omega}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Giroskop presessiyasi",
+   "ru": "Прецессия гироскопа",
+   "en": "Gyroscopic precession"
+  },
+  "answer": "\\Omega\\approx1.19\\ \\mathrm{rad/s};\\ T\\approx5.3\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 11.75-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S17",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Silliq gorizontal stolda $0.2\\ \\mathrm{kg}$ shayba stoldagi teshikdan o'tkazilgan ipga bog'langan va radiusi $0.5\\ \\mathrm{m}$ aylana bo'ylab $2\\ \\mathrm{m/s}$ tezlik bilan aylanmoqda (chizmada). Ipni pastdan sekin tortib, radius $0.25\\ \\mathrm{m}$ ga kamaytirildi. Yangi tezlikni, ip tarangligining o'zgarishini va tortuvchi bajargan ishni toping.",
+   "ru": "На гладком горизонтальном столе шайба массой $0.2\\ \\mathrm{kg}$, привязанная к нити, пропущенной через отверстие в столе, движется по окружности радиусом $0.5\\ \\mathrm{m}$ со скоростью $2\\ \\mathrm{m/s}$ (см. рисунок). Медленно потянув нить снизу, радиус уменьшили до $0.25\\ \\mathrm{m}$. Найдите новую скорость, изменение натяжения нити и работу тянущего.",
+   "en": "On a smooth horizontal table a $0.2\\ \\mathrm{kg}$ puck tied to a string that passes through a hole in the table moves on a circle of radius $0.5\\ \\mathrm{m}$ at $2\\ \\mathrm{m/s}$ (see the figure). By slowly pulling the string from below, the radius is reduced to $0.25\\ \\mathrm{m}$. Find the new speed, the change in the tension and the work done by the puller."
+  },
+  "figure": "figures/B2-L06-S17.png",
+  "solution": {
+   "uz": [
+    "Ip tarangligi — markaziy kuch, teshikka nisbatan $L=mvr$ saqlanadi: $$v_2=v_1\\frac{r_1}{r_2}=4\\ \\mathrm{m/s}$$",
+    "Tarangliklar — $T\\propto\\frac{1}{r^3}$: $$T_1=\\frac{0.2\\cdot4}{0.5}=1.6\\ \\mathrm{N},\\qquad T_2=\\frac{0.2\\cdot16}{0.25}=12.8\\ \\mathrm{N}=8T_1$$",
+    "Ish — kinetik energiya orttirmasi (tekshiruv: $\\int T\\,dr$): $$A=\\frac{0.2\\cdot(16-4)}{2}=1.2\\ \\mathrm{J}=\\int_{0.25}^{0.5}\\frac{L^2}{mr^3}\\,dr$$"
+   ],
+   "ru": [
+    "Натяжение нити — центральная сила, относительно отверстия $L=mvr$ сохраняется: $$v_2=v_1\\frac{r_1}{r_2}=4\\ \\mathrm{m/s}$$",
+    "Натяжения — $T\\propto\\frac{1}{r^3}$: $$T_1=\\frac{0.2\\cdot4}{0.5}=1.6\\ \\mathrm{N},\\qquad T_2=\\frac{0.2\\cdot16}{0.25}=12.8\\ \\mathrm{N}=8T_1$$",
+    "Работа — прирост кинетической энергии (проверка: $\\int T\\,dr$): $$A=\\frac{0.2\\cdot(16-4)}{2}=1.2\\ \\mathrm{J}=\\int_{0.25}^{0.5}\\frac{L^2}{mr^3}\\,dr$$"
+   ],
+   "en": [
+    "The tension is a central force; about the hole $L=mvr$ is conserved: $$v_2=v_1\\frac{r_1}{r_2}=4\\ \\mathrm{m/s}$$",
+    "Tensions — $T\\propto\\frac{1}{r^3}$: $$T_1=\\frac{0.2\\cdot4}{0.5}=1.6\\ \\mathrm{N},\\qquad T_2=\\frac{0.2\\cdot16}{0.25}=12.8\\ \\mathrm{N}=8T_1$$",
+    "The work is the increase in kinetic energy (check: $\\int T\\,dr$): $$A=\\frac{0.2\\cdot(16-4)}{2}=1.2\\ \\mathrm{J}=\\int_{0.25}^{0.5}\\frac{L^2}{mr^3}\\,dr$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Aylana bo'ylab: $L=mvr=mr^2\\omega$",
+    "ru": "По окружности: $L=mvr=mr^2\\omega$",
+    "en": "On a circle: $L=mvr=mr^2\\omega$"
+   },
+   {
+    "uz": "Markazga intilma kuch: $T=\\frac{mv^2}{r}$",
+    "ru": "Центростремительная сила: $T=\\frac{mv^2}{r}$",
+    "en": "Centripetal force: $T=\\frac{mv^2}{r}$"
+   },
+   {
+    "uz": "Ichki kuchlar ishi: $A=E_{k2}-E_{k1}$",
+    "ru": "Работа внутренних сил: $A=E_{k2}-E_{k1}$",
+    "en": "Work of internal forces: $A=E_{k2}-E_{k1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Markaziy kuch — ipdagi jism",
+   "ru": "Центральная сила — тело на нити",
+   "en": "A central force — a mass on a string"
+  },
+  "answer": "v_2=4\\ \\mathrm{m/s};\\ T:\\ 1.6\\to12.8\\ \\mathrm{N};\\ A=1.2\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "Irodov, «Problems in General Physics», 1.276-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L06-S18",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Erkin aylana oladigan kursida (Jukovskiy kursisi) tinch o'tirgan odam qo'lida o'qi vertikal bo'lgan g'ildirakni ushlab turibdi; g'ildirakning inersiya momenti $0.125\\ \\mathrm{kg\\cdot m^2}$, u yuqoridan qaraganda soat strelkasiga qarshi $40\\ \\mathrm{rad/s}$ bilan aylanmoqda. Odam g'ildirakni $180^\\circ$ ga ag'dardi. Odam va kursining inersiya momenti (g'ildiraksiz) $5\\ \\mathrm{kg\\cdot m^2}$. Kursi qanday burchak tezlik bilan va qaysi tomonga aylanadi? Odam qancha ish bajardi?",
+   "ru": "Человек, неподвижно сидящий на свободно вращающейся скамье (скамья Жуковского), держит колесо с вертикальной осью; момент инерции колеса $0.125\\ \\mathrm{kg\\cdot m^2}$, оно вращается против часовой стрелки (вид сверху) с $40\\ \\mathrm{rad/s}$. Человек переворачивает колесо на $180^\\circ$. Момент инерции человека со скамьёй (без колеса) $5\\ \\mathrm{kg\\cdot m^2}$. С какой угловой скоростью и в какую сторону закрутится скамья? Какую работу совершил человек?",
+   "en": "A person sitting at rest on a freely rotating stool holds a wheel with a vertical axle; the wheel's moment of inertia is $0.125\\ \\mathrm{kg\\cdot m^2}$ and it spins counterclockwise (seen from above) at $40\\ \\mathrm{rad/s}$. The person flips the wheel through $180^\\circ$. The moment of inertia of person and stool (without the wheel) is $5\\ \\mathrm{kg\\cdot m^2}$. With what angular velocity, and which way, does the stool turn? How much work did the person do?"
+  },
+  "figure": "figures/B2-L06-S18.png",
+  "solution": {
+   "uz": [
+    "Vertikal o'qqa nisbatan tashqi moment yo'q; boshlang'ich $L_z=I_w\\omega_w=5\\ \\mathrm{kg\\cdot m^2/s}$, ag'darilgandan keyin g'ildirakniki $-5$: $$I_w\\omega_w=-I_w\\omega_w+I\\omega\\ \\Rightarrow\\ \\omega=\\frac{2I_w\\omega_w}{I}=\\frac{2\\cdot5}{5}=2\\ \\mathrm{rad/s}$$",
+    "$\\omega>0$ — kursi g'ildirakning boshlang'ich aylanishi tomoniga (soat strelkasiga qarshi) aylanadi. G'ildirak energiyasi o'zgarmadi, ish kursining energiyasiga ketdi: $$A=\\frac{I\\omega^2}{2}=\\frac{5\\cdot4}{2}=10\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Внешнего момента относительно вертикальной оси нет; начальный $L_z=I_w\\omega_w=5\\ \\mathrm{kg\\cdot m^2/s}$, после переворота у колеса $-5$: $$I_w\\omega_w=-I_w\\omega_w+I\\omega\\ \\Rightarrow\\ \\omega=\\frac{2I_w\\omega_w}{I}=\\frac{2\\cdot5}{5}=2\\ \\mathrm{rad/s}$$",
+    "$\\omega>0$ — скамья вращается в сторону начального вращения колеса (против часовой стрелки). Энергия колеса не изменилась, работа пошла на энергию скамьи: $$A=\\frac{I\\omega^2}{2}=\\frac{5\\cdot4}{2}=10\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "There is no external torque about the vertical axis; initially $L_z=I_w\\omega_w=5\\ \\mathrm{kg\\cdot m^2/s}$, after the flip the wheel has $-5$: $$I_w\\omega_w=-I_w\\omega_w+I\\omega\\ \\Rightarrow\\ \\omega=\\frac{2I_w\\omega_w}{I}=\\frac{2\\cdot5}{5}=2\\ \\mathrm{rad/s}$$",
+    "$\\omega>0$ — the stool turns the way the wheel originally spun (counterclockwise). The wheel's energy is unchanged, so the work went into the stool's energy: $$A=\\frac{I\\omega^2}{2}=\\frac{5\\cdot4}{2}=10\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Saqlanish: $\\sum\\tau=0\\ \\Rightarrow\\ L=\\mathrm{const}$",
+    "ru": "Сохранение: $\\sum\\tau=0\\ \\Rightarrow\\ L=\\mathrm{const}$",
+    "en": "Conservation: $\\sum\\tau=0\\ \\Rightarrow\\ L=\\mathrm{const}$"
+   },
+   {
+    "uz": "Ichki kuchlar ishi: $A=E_{k2}-E_{k1}$",
+    "ru": "Работа внутренних сил: $A=E_{k2}-E_{k1}$",
+    "en": "Work of internal forces: $A=E_{k2}-E_{k1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Impuls momentining vektor saqlanishi",
+   "ru": "Векторное сохранение момента импульса",
+   "en": "Vector conservation of angular momentum"
+  },
+  "answer": "\\omega=2\\ \\mathrm{rad/s};\\ A=10\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L06, Jukovskiy kursisi)"
+ }
+]
