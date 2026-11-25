@@ -1,0 +1,912 @@
+[
+ {
+  "id": "B2-L04-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$60\\ \\mathrm{g}$ tennis to'pi devorga perpendikulyar $30\\ \\mathrm{m/s}$ tezlik bilan urilib, $20\\ \\mathrm{m/s}$ tezlik bilan qaytdi; to'qnashuv $0.01\\ \\mathrm{s}$ davom etdi. To'p impulsining o'zgarishini va devorning to'pga o'rtacha ta'sir kuchini toping. To'p devorga yopishib qolganda o'rtacha kuch qancha bo'lardi (vaqt o'sha)?",
+   "ru": "Теннисный мяч массы $60\\ \\mathrm{g}$ ударился о стену перпендикулярно со скоростью $30\\ \\mathrm{m/s}$ и отскочил со скоростью $20\\ \\mathrm{m/s}$; удар длился $0.01\\ \\mathrm{s}$. Найдите изменение импульса мяча и среднюю силу действия стены на мяч. Какой была бы средняя сила, если бы мяч прилип к стене (время то же)?",
+   "en": "A $60\\ \\mathrm{g}$ tennis ball hits a wall perpendicularly at $30\\ \\mathrm{m/s}$ and bounces back at $20\\ \\mathrm{m/s}$; the impact lasts $0.01\\ \\mathrm{s}$. Find the change in the ball's momentum and the average force of the wall on the ball. What would the average force be if the ball stuck to the wall (same time)?"
+  },
+  "figure": "figures/B2-L04-S01.png",
+  "solution": {
+   "uz": [
+    "Devordan qaytuvchi yo'nalishni musbat deb olamiz; impuls o'zgarishi: $$\\Delta p=m(v_2-(-v_1))=0.06\\cdot(20+30)=3\\ \\mathrm{kg\\cdot m/s}$$",
+    "O'rtacha kuch: $$\\bar F=\\frac{\\Delta p}{\\Delta t}=\\frac{3}{0.01}=300\\ \\mathrm{N}$$",
+    "To'p yopishib qolsa, impuls faqat $mv_1$ ga o'zgaradi: $$\\bar F'=\\frac{0.06\\cdot30}{0.01}=180\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Примем направление от стены положительным; изменение импульса: $$\\Delta p=m(v_2-(-v_1))=0.06\\cdot(20+30)=3\\ \\mathrm{kg\\cdot m/s}$$",
+    "Средняя сила: $$\\bar F=\\frac{\\Delta p}{\\Delta t}=\\frac{3}{0.01}=300\\ \\mathrm{N}$$",
+    "Если мяч прилипнет, импульс изменится лишь на $mv_1$: $$\\bar F'=\\frac{0.06\\cdot30}{0.01}=180\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "Take the direction away from the wall as positive; the change in momentum: $$\\Delta p=m(v_2-(-v_1))=0.06\\cdot(20+30)=3\\ \\mathrm{kg\\cdot m/s}$$",
+    "Average force: $$\\bar F=\\frac{\\Delta p}{\\Delta t}=\\frac{3}{0.01}=300\\ \\mathrm{N}$$",
+    "If the ball sticks, the momentum changes only by $mv_1$: $$\\bar F'=\\frac{0.06\\cdot30}{0.01}=180\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Impuls: $\\vec p=m\\vec v$",
+    "ru": "Импульс: $\\vec p=m\\vec v$",
+    "en": "Momentum: $\\vec p=m\\vec v$"
+   },
+   {
+    "uz": "O'rtacha kuch: $\\bar F=\\frac{\\Delta p}{\\Delta t}$",
+    "ru": "Средняя сила: $\\bar F=\\frac{\\Delta p}{\\Delta t}$",
+    "en": "Average force: $\\bar F=\\frac{\\Delta p}{\\Delta t}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Impuls o'zgarishi va o'rtacha kuch",
+   "ru": "Изменение импульса и средняя сила",
+   "en": "Change in momentum and average force"
+  },
+  "answer": "\\Delta p=3\\ \\mathrm{kg\\cdot m/s};\\ \\bar F=300\\ \\mathrm{N};\\ \\bar F'=180\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.39-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Massasi $4\\ \\mathrm{kg}$ bo'lgan erkin osilgan miltiqdan $10\\ \\mathrm{g}$ o'q gorizontal $800\\ \\mathrm{m/s}$ tezlik bilan otildi. Miltiqning tepki tezligini toping. O'q va miltiq kinetik energiyalarini solishtiring.",
+   "ru": "Из свободно подвешенного ружья массы $4\\ \\mathrm{kg}$ горизонтально вылетела пуля массы $10\\ \\mathrm{g}$ со скоростью $800\\ \\mathrm{m/s}$. Найдите скорость отдачи ружья. Сравните кинетические энергии пули и ружья.",
+   "en": "A bullet of mass $10\\ \\mathrm{g}$ is fired horizontally at $800\\ \\mathrm{m/s}$ from a freely suspended rifle of mass $4\\ \\mathrm{kg}$. Find the recoil speed of the rifle. Compare the kinetic energies of the bullet and the rifle."
+  },
+  "figure": "figures/B2-L04-S02.png",
+  "solution": {
+   "uz": [
+    "O'q otilguncha impuls nol — keyin ham nol: $$0=mv-MV\\ \\Rightarrow\\ V=\\frac{mv}{M}=\\frac{0.01\\cdot800}{4}=2\\ \\mathrm{m/s}$$",
+    "Kinetik energiyalar: $$E_1=\\frac{0.01\\cdot800^2}{2}=3200\\ \\mathrm{J},\\qquad E_2=\\frac{4\\cdot2^2}{2}=8\\ \\mathrm{J}$$",
+    "Impulslar teng bo'lgani uchun energiyalar massalarga teskari proporsional: $$\\frac{E_1}{E_2}=\\frac{M}{m}=400$$"
+   ],
+   "ru": [
+    "До выстрела импульс равен нулю — после тоже: $$0=mv-MV\\ \\Rightarrow\\ V=\\frac{mv}{M}=\\frac{0.01\\cdot800}{4}=2\\ \\mathrm{m/s}$$",
+    "Кинетические энергии: $$E_1=\\frac{0.01\\cdot800^2}{2}=3200\\ \\mathrm{J},\\qquad E_2=\\frac{4\\cdot2^2}{2}=8\\ \\mathrm{J}$$",
+    "Поскольку импульсы равны, энергии обратно пропорциональны массам: $$\\frac{E_1}{E_2}=\\frac{M}{m}=400$$"
+   ],
+   "en": [
+    "Before the shot the momentum is zero — and so it stays: $$0=mv-MV\\ \\Rightarrow\\ V=\\frac{mv}{M}=\\frac{0.01\\cdot800}{4}=2\\ \\mathrm{m/s}$$",
+    "Kinetic energies: $$E_1=\\frac{0.01\\cdot800^2}{2}=3200\\ \\mathrm{J},\\qquad E_2=\\frac{4\\cdot2^2}{2}=8\\ \\mathrm{J}$$",
+    "Since the momenta are equal, the energies are inversely proportional to the masses: $$\\frac{E_1}{E_2}=\\frac{M}{m}=400$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Impulsning saqlanishi: $\\sum m_i\\vec v_i=\\mathrm{const}$ (yopiq sistema)",
+    "ru": "Сохранение импульса: $\\sum m_i\\vec v_i=\\mathrm{const}$ (замкнутая система)",
+    "en": "Conservation of momentum: $\\sum m_i\\vec v_i=\\mathrm{const}$ (closed system)"
+   },
+   null,
+   {
+    "uz": "Impuls va energiya: $E_k=\\frac{p^2}{2m}$",
+    "ru": "Импульс и энергия: $E_k=\\frac{p^2}{2m}$",
+    "en": "Momentum and energy: $E_k=\\frac{p^2}{2m}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tepki, impulsning saqlanishi",
+   "ru": "Отдача, сохранение импульса",
+   "en": "Recoil, conservation of momentum"
+  },
+  "answer": "V=2\\ \\mathrm{m/s};\\ \\frac{E_1}{E_2}=400",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.62-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$20\\ \\mathrm{m/s}$ tezlik bilan harakatlanayotgan $1200\\ \\mathrm{kg}$ avtomobil tinch turgan $800\\ \\mathrm{kg}$ avtomobilga orqadan urilib, ikkalasi birga harakatlana boshladi. To'qnashuvdan keyingi tezlikni va issiqlik hamda deformatsiyaga aylangan energiyani toping.",
+   "ru": "Автомобиль массы $1200\\ \\mathrm{kg}$, движущийся со скоростью $20\\ \\mathrm{m/s}$, ударил сзади стоящий автомобиль массы $800\\ \\mathrm{kg}$, после чего они движутся вместе. Найдите скорость после удара и энергию, перешедшую в теплоту и деформацию.",
+   "en": "A $1200\\ \\mathrm{kg}$ car moving at $20\\ \\mathrm{m/s}$ rear-ends a stationary $800\\ \\mathrm{kg}$ car, and the two move off together. Find the speed after the collision and the energy turned into heat and deformation."
+  },
+  "figure": "figures/B2-L04-S03.png",
+  "solution": {
+   "uz": [
+    "Mutlaq noelastik to'qnashuv — impuls saqlanadi: $$v=\\frac{m_1v_1}{m_1+m_2}=\\frac{1200\\cdot20}{2000}=12\\ \\mathrm{m/s}$$",
+    "Kinetik energiyalar: $$E_1=\\frac{1200\\cdot20^2}{2}=240\\ \\mathrm{kJ},\\qquad E_2=\\frac{2000\\cdot12^2}{2}=144\\ \\mathrm{kJ}$$",
+    "Yo'qotilgan energiya va tekshiruv — ulush $\\frac{m_2}{m_1+m_2}$: $$\\Delta E=96\\ \\mathrm{kJ},\\qquad \\frac{\\Delta E}{E_1}=\\frac{800}{2000}=0.4$$"
+   ],
+   "ru": [
+    "Абсолютно неупругий удар — импульс сохраняется: $$v=\\frac{m_1v_1}{m_1+m_2}=\\frac{1200\\cdot20}{2000}=12\\ \\mathrm{m/s}$$",
+    "Кинетические энергии: $$E_1=\\frac{1200\\cdot20^2}{2}=240\\ \\mathrm{kJ},\\qquad E_2=\\frac{2000\\cdot12^2}{2}=144\\ \\mathrm{kJ}$$",
+    "Потерянная энергия и проверка — доля $\\frac{m_2}{m_1+m_2}$: $$\\Delta E=96\\ \\mathrm{kJ},\\qquad \\frac{\\Delta E}{E_1}=\\frac{800}{2000}=0.4$$"
+   ],
+   "en": [
+    "Perfectly inelastic collision — momentum is conserved: $$v=\\frac{m_1v_1}{m_1+m_2}=\\frac{1200\\cdot20}{2000}=12\\ \\mathrm{m/s}$$",
+    "Kinetic energies: $$E_1=\\frac{1200\\cdot20^2}{2}=240\\ \\mathrm{kJ},\\qquad E_2=\\frac{2000\\cdot12^2}{2}=144\\ \\mathrm{kJ}$$",
+    "The energy lost and a check — the fraction $\\frac{m_2}{m_1+m_2}$: $$\\Delta E=96\\ \\mathrm{kJ},\\qquad \\frac{\\Delta E}{E_1}=\\frac{800}{2000}=0.4$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Mutlaq noelastik: $\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}$",
+    "ru": "Абсолютно неупругий: $\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}$",
+    "en": "Perfectly inelastic: $\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}$"
+   },
+   null,
+   {
+    "uz": "Yo'qotilgan energiya: $\\Delta E=\\frac{\\mu v_{12}^2}{2}$, $\\mu=\\frac{m_1m_2}{m_1+m_2}$",
+    "ru": "Потерянная энергия: $\\Delta E=\\frac{\\mu v_{12}^2}{2}$, $\\mu=\\frac{m_1m_2}{m_1+m_2}$",
+    "en": "Energy lost: $\\Delta E=\\frac{\\mu v_{12}^2}{2}$, $\\mu=\\frac{m_1m_2}{m_1+m_2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Mutlaq noelastik to'qnashuv",
+   "ru": "Абсолютно неупругий удар",
+   "en": "Perfectly inelastic collision"
+  },
+  "answer": "v=12\\ \\mathrm{m/s};\\ \\Delta E=96\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.75-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Tinch turgan $160\\ \\mathrm{g}$ to'pga zarba berildi; kuchning vaqtga bog'liqligi chizmada: $0$ dan $2\\ \\mathrm{ms}$ gacha $0$ dan $400\\ \\mathrm{N}$ gacha chiziqli o'sadi, $2$ dan $6\\ \\mathrm{ms}$ gacha $400\\ \\mathrm{N}$, $6$ dan $8\\ \\mathrm{ms}$ gacha chiziqli nolgacha kamayadi. Kuch impulsini, to'pning tezligini va zarba davomidagi o'rtacha kuchni toping.",
+   "ru": "По покоящемуся мячу массы $160\\ \\mathrm{g}$ нанесён удар; зависимость силы от времени показана на рисунке: от $0$ до $2\\ \\mathrm{ms}$ линейно растёт от $0$ до $400\\ \\mathrm{N}$, от $2$ до $6\\ \\mathrm{ms}$ равна $400\\ \\mathrm{N}$, от $6$ до $8\\ \\mathrm{ms}$ линейно убывает до нуля. Найдите импульс силы, скорость мяча и среднюю силу за время удара.",
+   "en": "A $160\\ \\mathrm{g}$ ball at rest is struck; the force versus time is shown in the figure: from $0$ to $2\\ \\mathrm{ms}$ it rises linearly from $0$ to $400\\ \\mathrm{N}$, from $2$ to $6\\ \\mathrm{ms}$ it equals $400\\ \\mathrm{N}$, and from $6$ to $8\\ \\mathrm{ms}$ it falls linearly to zero. Find the impulse, the speed of the ball and the average force during the impact."
+  },
+  "figure": "figures/B2-L04-S04.png",
+  "solution": {
+   "uz": [
+    "Impuls — trapetsiya yuzasi (ikki uchburchak va to'rtburchak): $$J=\\frac{0.002\\cdot400}{2}\\cdot2+400\\cdot0.004=0.8+1.6=2.4\\ \\mathrm{N\\cdot s}$$",
+    "To'p tinch turgan edi: $$v=\\frac{J}{m}=\\frac{2.4}{0.16}=15\\ \\mathrm{m/s}$$",
+    "O'rtacha kuch — impulsni butun vaqtga bo'lamiz: $$\\bar F=\\frac{2.4}{0.008}=300\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Импульс — площадь трапеции (два треугольника и прямоугольник): $$J=\\frac{0.002\\cdot400}{2}\\cdot2+400\\cdot0.004=0.8+1.6=2.4\\ \\mathrm{N\\cdot s}$$",
+    "Мяч покоился: $$v=\\frac{J}{m}=\\frac{2.4}{0.16}=15\\ \\mathrm{m/s}$$",
+    "Средняя сила — делим импульс на всё время: $$\\bar F=\\frac{2.4}{0.008}=300\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "The impulse is the area of the trapezoid (two triangles and a rectangle): $$J=\\frac{0.002\\cdot400}{2}\\cdot2+400\\cdot0.004=0.8+1.6=2.4\\ \\mathrm{N\\cdot s}$$",
+    "The ball was at rest: $$v=\\frac{J}{m}=\\frac{2.4}{0.16}=15\\ \\mathrm{m/s}$$",
+    "The average force — divide the impulse by the whole time: $$\\bar F=\\frac{2.4}{0.008}=300\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kuch impulsi — $F(t)$ grafigi ostidagi yuza",
+    "ru": "Импульс силы — площадь под графиком $F(t)$",
+    "en": "Impulse is the area under the $F(t)$ graph"
+   },
+   {
+    "uz": "Impuls teoremasi: $\\vec J=\\int\\vec F\\,dt=\\Delta\\vec p$",
+    "ru": "Теорема об импульсе: $\\vec J=\\int\\vec F\\,dt=\\Delta\\vec p$",
+    "en": "Impulse–momentum theorem: $\\vec J=\\int\\vec F\\,dt=\\Delta\\vec p$"
+   },
+   {
+    "uz": "O'rtacha kuch: $\\bar F=\\frac{\\Delta p}{\\Delta t}$",
+    "ru": "Средняя сила: $\\bar F=\\frac{\\Delta p}{\\Delta t}$",
+    "en": "Average force: $\\bar F=\\frac{\\Delta p}{\\Delta t}$"
+   }
+  ],
+  "basis": {
+   "uz": "Kuch impulsi — $F(t)$ grafigi ostidagi yuza",
+   "ru": "Импульс силы — площадь под графиком $F(t)$",
+   "en": "Impulse as the area under the $F(t)$ graph"
+  },
+  "answer": "J=2.4\\ \\mathrm{N\\cdot s};\\ v=15\\ \\mathrm{m/s};\\ \\bar F=300\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 9.32-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S05",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Tekislikda uchta moddiy nuqta joylashgan: $1\\ \\mathrm{kg}$ — $(0,\\ 0)$ da, $2\\ \\mathrm{kg}$ — $(4,\\ 0)$ da, $3\\ \\mathrm{kg}$ — $(2,\\ 3)$ da (koordinatalar metrlarda). Sistemaning massa markazini toping.",
+   "ru": "На плоскости расположены три материальные точки: $1\\ \\mathrm{kg}$ — в $(0,\\ 0)$, $2\\ \\mathrm{kg}$ — в $(4,\\ 0)$, $3\\ \\mathrm{kg}$ — в $(2,\\ 3)$ (координаты в метрах). Найдите центр масс системы.",
+   "en": "Three point masses lie in a plane: $1\\ \\mathrm{kg}$ at $(0,\\ 0)$, $2\\ \\mathrm{kg}$ at $(4,\\ 0)$ and $3\\ \\mathrm{kg}$ at $(2,\\ 3)$ (coordinates in metres). Find the center of mass of the system."
+  },
+  "figure": "figures/B2-L04-S05.png",
+  "solution": {
+   "uz": [
+    "Umumiy massa va $x$ koordinata: $$M=6\\ \\mathrm{kg},\\qquad x_C=\\frac{1\\cdot0+2\\cdot4+3\\cdot2}{6}=\\frac{7}{3}\\approx2.33\\ \\mathrm{m}$$",
+    "$y$ koordinata: $$y_C=\\frac{1\\cdot0+2\\cdot0+3\\cdot3}{6}=1.5\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Общая масса и координата $x$: $$M=6\\ \\mathrm{kg},\\qquad x_C=\\frac{1\\cdot0+2\\cdot4+3\\cdot2}{6}=\\frac{7}{3}\\approx2.33\\ \\mathrm{m}$$",
+    "Координата $y$: $$y_C=\\frac{1\\cdot0+2\\cdot0+3\\cdot3}{6}=1.5\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Total mass and the $x$ coordinate: $$M=6\\ \\mathrm{kg},\\qquad x_C=\\frac{1\\cdot0+2\\cdot4+3\\cdot2}{6}=\\frac{7}{3}\\approx2.33\\ \\mathrm{m}$$",
+    "The $y$ coordinate: $$y_C=\\frac{1\\cdot0+2\\cdot0+3\\cdot3}{6}=1.5\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Massa markazi: $x_C=\\frac{\\sum m_ix_i}{M}$",
+    "ru": "Центр масс: $x_C=\\frac{\\sum m_ix_i}{M}$",
+    "en": "Center of mass: $x_C=\\frac{\\sum m_ix_i}{M}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Nuqtalar sistemasining massa markazi",
+   "ru": "Центр масс системы точек",
+   "en": "Center of mass of a system of points"
+  },
+  "answer": "x_C=\\frac{7}{3}\\approx2.33\\ \\mathrm{m};\\ y_C=1.5\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 9.63-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $30\\ \\mathrm{cm}$ bo'lgan bir jinsli yupqa diskdan radiusi $10\\ \\mathrm{cm}$ bo'lgan doiraviy teshik kesib olindi; teshik markazi disk markazidan $15\\ \\mathrm{cm}$ uzoqlikda. Qolgan qismning massa markazini toping.",
+   "ru": "Из однородного тонкого диска радиуса $30\\ \\mathrm{cm}$ вырезано круглое отверстие радиуса $10\\ \\mathrm{cm}$; центр отверстия находится на расстоянии $15\\ \\mathrm{cm}$ от центра диска. Найдите центр масс оставшейся части.",
+   "en": "A circular hole of radius $10\\ \\mathrm{cm}$ is cut from a thin uniform disc of radius $30\\ \\mathrm{cm}$; the center of the hole is $15\\ \\mathrm{cm}$ from the center of the disc. Find the center of mass of the remaining part."
+  },
+  "figure": "figures/B2-L04-S06.png",
+  "solution": {
+   "uz": [
+    "Massalar yuzalarga proporsional: teshik butun diskning $\\frac{1}{9}$ qismi: $$\\frac{M_2}{M_1}=\\frac{10^2}{30^2}=\\frac{1}{9}$$",
+    "Disk markazini koordinata boshi, teshik markazini $x=15\\ \\mathrm{cm}$ deb olamiz; teshik — manfiy massa: $$x_C=\\frac{1\\cdot0-\\frac{1}{9}\\cdot15}{1-\\frac{1}{9}}$$",
+    "Massa markazi teshikka qarama-qarshi tomonga siljiydi: $$x_C=-\\frac{15}{8}\\approx-1.88\\ \\mathrm{cm}$$"
+   ],
+   "ru": [
+    "Массы пропорциональны площадям: отверстие составляет $\\frac{1}{9}$ всего диска: $$\\frac{M_2}{M_1}=\\frac{10^2}{30^2}=\\frac{1}{9}$$",
+    "Центр диска — начало координат, центр отверстия при $x=15\\ \\mathrm{cm}$; отверстие — отрицательная масса: $$x_C=\\frac{1\\cdot0-\\frac{1}{9}\\cdot15}{1-\\frac{1}{9}}$$",
+    "Центр масс смещается в сторону, противоположную отверстию: $$x_C=-\\frac{15}{8}\\approx-1.88\\ \\mathrm{cm}$$"
+   ],
+   "en": [
+    "Masses are proportional to areas: the hole is $\\frac{1}{9}$ of the whole disc: $$\\frac{M_2}{M_1}=\\frac{10^2}{30^2}=\\frac{1}{9}$$",
+    "Put the disc's center at the origin and the hole's center at $x=15\\ \\mathrm{cm}$; the hole is a negative mass: $$x_C=\\frac{1\\cdot0-\\frac{1}{9}\\cdot15}{1-\\frac{1}{9}}$$",
+    "The center of mass shifts away from the hole: $$x_C=-\\frac{15}{8}\\approx-1.88\\ \\mathrm{cm}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Kesilgan bo'lak — «manfiy massa»: $x_C=\\frac{M_1x_1-M_2x_2}{M_1-M_2}$",
+    "ru": "Вырезанная часть — «отрицательная масса»: $x_C=\\frac{M_1x_1-M_2x_2}{M_1-M_2}$",
+    "en": "Cut-out piece — «negative mass»: $x_C=\\frac{M_1x_1-M_2x_2}{M_1-M_2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kesilgan bo'lak — manfiy massa usuli",
+   "ru": "Вырезанная часть — метод отрицательной массы",
+   "en": "Cut-out piece — the negative-mass method"
+  },
+  "answer": "x_C=-\\frac{15}{8}\\approx-1.88\\ \\mathrm{cm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 9.72-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $L=2\\ \\mathrm{m}$ bo'lgan ingichka sterjenning chiziqli zichligi bir uchidan masofaga qarab $\\lambda=\\lambda_0\\left(1+\\frac{x}{L}\\right)$ qonun bo'yicha o'zgaradi. Sterjen massasini va massa markazi koordinatasini toping.",
+   "ru": "Линейная плотность тонкого стержня длиной $L=2\\ \\mathrm{m}$ меняется с расстоянием от одного конца по закону $\\lambda=\\lambda_0\\left(1+\\frac{x}{L}\\right)$. Найдите массу стержня и координату его центра масс.",
+   "en": "The linear density of a thin rod of length $L=2\\ \\mathrm{m}$ varies with the distance from one end as $\\lambda=\\lambda_0\\left(1+\\frac{x}{L}\\right)$. Find the mass of the rod and the coordinate of its center of mass."
+  },
+  "figure": "figures/B2-L04-S07.png",
+  "solution": {
+   "uz": [
+    "Massa — zichlik integrali: $$M=\\int_0^L\\lambda_0\\left(1+\\frac{x}{L}\\right)dx=\\frac{3}{2}\\lambda_0L$$",
+    "Massa markazi ta'rifi bo'yicha: $$x_C=\\frac{1}{M}\\int_0^Lx\\lambda_0\\left(1+\\frac{x}{L}\\right)dx=\\frac{\\frac{L^2}{2}+\\frac{L^2}{3}}{\\frac{3}{2}L}$$",
+    "Soddalashtiramiz: $$x_C=\\frac{5}{9}L=\\frac{10}{9}\\approx1.11\\ \\mathrm{m}$$",
+    "Tekshiruv: bir jinsli sterjenda $\\frac{L}{2}$; zich uchiga siljish to'g'ri: $$\\frac{5L}{9}>\\frac{L}{2}$$"
+   ],
+   "ru": [
+    "Масса — интеграл плотности: $$M=\\int_0^L\\lambda_0\\left(1+\\frac{x}{L}\\right)dx=\\frac{3}{2}\\lambda_0L$$",
+    "По определению центра масс: $$x_C=\\frac{1}{M}\\int_0^Lx\\lambda_0\\left(1+\\frac{x}{L}\\right)dx=\\frac{\\frac{L^2}{2}+\\frac{L^2}{3}}{\\frac{3}{2}L}$$",
+    "Упрощаем: $$x_C=\\frac{5}{9}L=\\frac{10}{9}\\approx1.11\\ \\mathrm{m}$$",
+    "Проверка: у однородного стержня $\\frac{L}{2}$; смещение к плотному концу верно: $$\\frac{5L}{9}>\\frac{L}{2}$$"
+   ],
+   "en": [
+    "The mass is the integral of the density: $$M=\\int_0^L\\lambda_0\\left(1+\\frac{x}{L}\\right)dx=\\frac{3}{2}\\lambda_0L$$",
+    "By the definition of the center of mass: $$x_C=\\frac{1}{M}\\int_0^Lx\\lambda_0\\left(1+\\frac{x}{L}\\right)dx=\\frac{\\frac{L^2}{2}+\\frac{L^2}{3}}{\\frac{3}{2}L}$$",
+    "Simplify: $$x_C=\\frac{5}{9}L=\\frac{10}{9}\\approx1.11\\ \\mathrm{m}$$",
+    "Check: a uniform rod gives $\\frac{L}{2}$; the shift towards the dense end is right: $$\\frac{5L}{9}>\\frac{L}{2}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Yaxlit jism: $x_C=\\frac{1}{M}\\int x\\,dm$",
+    "ru": "Сплошное тело: $x_C=\\frac{1}{M}\\int x\\,dm$",
+    "en": "Extended body: $x_C=\\frac{1}{M}\\int x\\,dm$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Bir jinsli bo'lmagan sterjenning massa markazi",
+   "ru": "Центр масс неоднородного стержня",
+   "en": "Center of mass of a non-uniform rod"
+  },
+  "answer": "M=\\frac{3}{2}\\lambda_0L;\\ x_C=\\frac{5L}{9}\\approx1.11\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 9.69-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ko'lda tinch turgan uzunligi $4\\ \\mathrm{m}$, massasi $120\\ \\mathrm{kg}$ bo'lgan qayiqning orqa uchida $60\\ \\mathrm{kg}$ odam turibdi. Odam qayiqning old uchiga o'tdi. Suv qarshiligini hisobga olmay, qayiq va odamning qirg'oqqa nisbatan siljishini toping.",
+   "ru": "На корме покоящейся на озере лодки длиной $4\\ \\mathrm{m}$ и массой $120\\ \\mathrm{kg}$ стоит человек массы $60\\ \\mathrm{kg}$. Человек перешёл на нос лодки. Пренебрегая сопротивлением воды, найдите перемещения лодки и человека относительно берега.",
+   "en": "A $60\\ \\mathrm{kg}$ person stands at the stern of a $120\\ \\mathrm{kg}$ boat $4\\ \\mathrm{m}$ long resting on a lake. The person walks to the bow. Neglecting water resistance, find the displacements of the boat and the person relative to the shore."
+  },
+  "figure": "figures/B2-L04-S08.png",
+  "solution": {
+   "uz": [
+    "Gorizontal tashqi kuch yo'q — massa markazi joyida qoladi: $$\\Delta x_C=0\\ \\Rightarrow\\ m\\Delta x_1+M\\Delta x_2=0$$",
+    "Odam qayiqqa nisbatan $L$ ga, qirg'oqqa nisbatan $L-s$ ga siljiydi, qayiq esa teskari tomonga $s$ ga: $$m(L-s)=Ms\\ \\Rightarrow\\ s=\\frac{mL}{m+M}$$",
+    "Sonlar: $$s=\\frac{60\\cdot4}{180}=\\frac{4}{3}\\approx1.33\\ \\mathrm{m},\\qquad L-s=\\frac{8}{3}\\approx2.67\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Внешних горизонтальных сил нет — центр масс остаётся на месте: $$\\Delta x_C=0\\ \\Rightarrow\\ m\\Delta x_1+M\\Delta x_2=0$$",
+    "Человек смещается на $L$ относительно лодки и на $L-s$ относительно берега, а лодка — в обратную сторону на $s$: $$m(L-s)=Ms\\ \\Rightarrow\\ s=\\frac{mL}{m+M}$$",
+    "Числа: $$s=\\frac{60\\cdot4}{180}=\\frac{4}{3}\\approx1.33\\ \\mathrm{m},\\qquad L-s=\\frac{8}{3}\\approx2.67\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "There are no external horizontal forces — the center of mass stays put: $$\\Delta x_C=0\\ \\Rightarrow\\ m\\Delta x_1+M\\Delta x_2=0$$",
+    "The person moves $L$ relative to the boat and $L-s$ relative to the shore, while the boat moves $s$ the other way: $$m(L-s)=Ms\\ \\Rightarrow\\ s=\\frac{mL}{m+M}$$",
+    "Numbers: $$s=\\frac{60\\cdot4}{180}=\\frac{4}{3}\\approx1.33\\ \\mathrm{m},\\qquad L-s=\\frac{8}{3}\\approx2.67\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Massa markazi harakati: $M\\vec a_C=\\sum\\vec F$, $\\vec P=M\\vec v_C$",
+    "ru": "Движение центра масс: $M\\vec a_C=\\sum\\vec F$, $\\vec P=M\\vec v_C$",
+    "en": "Motion of the center of mass: $M\\vec a_C=\\sum\\vec F$, $\\vec P=M\\vec v_C$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Massa markazining saqlanishi: odam va qayiq",
+   "ru": "Неподвижность центра масс: человек и лодка",
+   "en": "Fixed center of mass: person and boat"
+  },
+  "answer": "s\\approx1.33\\ \\mathrm{m};\\ L-s\\approx2.67\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Irodov, «Problems in General Physics», 1.159-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Snaryad gorizontga $45^\\circ$ burchak ostida $20\\sqrt{2}\\ \\mathrm{m/s}$ tezlik bilan otildi. Traektoriyaning eng yuqori nuqtasida u ikkita teng bo'lakka ajraldi; bo'laklardan biri shu nuqtadan tinch holatdan vertikal tusha boshladi. Ikkinchi bo'lak otilish joyidan qanday masofaga tushadi? Havo qarshiligi hisobga olinmasin, $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Снаряд выпущен под углом $45^\\circ$ к горизонту со скоростью $20\\sqrt{2}\\ \\mathrm{m/s}$. В верхней точке траектории он разорвался на два равных осколка; один из них начал падать вертикально из состояния покоя. На каком расстоянии от места выстрела упадёт второй осколок? Сопротивление воздуха не учитывать, $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A shell is fired at $45^\\circ$ to the horizontal at $20\\sqrt{2}\\ \\mathrm{m/s}$. At the top of its trajectory it splits into two equal fragments; one of them starts falling vertically from rest. How far from the launch point does the second fragment land? Neglect air resistance, $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L04-S09.png",
+  "solution": {
+   "uz": [
+    "Tezlik tashkil etuvchilari $20\\ \\mathrm{m/s}$; eng yuqori nuqta va tushish vaqti: $$x_1=\\frac{v_xv_y}{g}=40\\ \\mathrm{m},\\qquad H=20\\ \\mathrm{m},\\qquad t=\\frac{v_y}{g}=2\\ \\mathrm{s}$$",
+    "Portlashda gorizontal impuls saqlanadi; birinchi bo'lak to'xtadi: $$mv_x=\\frac{m}{2}\\cdot0+\\frac{m}{2}u\\ \\Rightarrow\\ u=2v_x=40\\ \\mathrm{m/s}$$",
+    "Ikkinchi bo'lak ham $2\\ \\mathrm{s}$ da tushadi: $$x_2=40+40\\cdot2=120\\ \\mathrm{m}$$",
+    "Tekshiruv: massa markazi portlashsiz uchish uzoqligiga tushadi: $$x_C=\\frac{40+120}{2}=80\\ \\mathrm{m}=\\frac{v_0^2\\sin90^\\circ}{g}$$"
+   ],
+   "ru": [
+    "Составляющие скорости $20\\ \\mathrm{m/s}$; верхняя точка и время падения: $$x_1=\\frac{v_xv_y}{g}=40\\ \\mathrm{m},\\qquad H=20\\ \\mathrm{m},\\qquad t=\\frac{v_y}{g}=2\\ \\mathrm{s}$$",
+    "При разрыве горизонтальный импульс сохраняется; первый осколок остановился: $$mv_x=\\frac{m}{2}\\cdot0+\\frac{m}{2}u\\ \\Rightarrow\\ u=2v_x=40\\ \\mathrm{m/s}$$",
+    "Второй осколок тоже падает за $2\\ \\mathrm{s}$: $$x_2=40+40\\cdot2=120\\ \\mathrm{m}$$",
+    "Проверка: центр масс падает на дальности полёта без взрыва: $$x_C=\\frac{40+120}{2}=80\\ \\mathrm{m}=\\frac{v_0^2\\sin90^\\circ}{g}$$"
+   ],
+   "en": [
+    "The velocity components are $20\\ \\mathrm{m/s}$; the top point and the fall time: $$x_1=\\frac{v_xv_y}{g}=40\\ \\mathrm{m},\\qquad H=20\\ \\mathrm{m},\\qquad t=\\frac{v_y}{g}=2\\ \\mathrm{s}$$",
+    "In the explosion the horizontal momentum is conserved; the first fragment stopped: $$mv_x=\\frac{m}{2}\\cdot0+\\frac{m}{2}u\\ \\Rightarrow\\ u=2v_x=40\\ \\mathrm{m/s}$$",
+    "The second fragment also falls in $2\\ \\mathrm{s}$: $$x_2=40+40\\cdot2=120\\ \\mathrm{m}$$",
+    "Check: the center of mass lands at the range without the explosion: $$x_C=\\frac{40+120}{2}=80\\ \\mathrm{m}=\\frac{v_0^2\\sin90^\\circ}{g}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Impuls proyeksiyasi saqlanadi: $\\sum F_x=0\\ \\Rightarrow\\ P_x=\\mathrm{const}$",
+    "ru": "Сохраняется проекция импульса: $\\sum F_x=0\\ \\Rightarrow\\ P_x=\\mathrm{const}$",
+    "en": "The momentum component is conserved: $\\sum F_x=0\\ \\Rightarrow\\ P_x=\\mathrm{const}$"
+   },
+   null,
+   {
+    "uz": "Massa markazi harakati: $M\\vec a_C=\\sum\\vec F$, $\\vec P=M\\vec v_C$",
+    "ru": "Движение центра масс: $M\\vec a_C=\\sum\\vec F$, $\\vec P=M\\vec v_C$",
+    "en": "Motion of the center of mass: $M\\vec a_C=\\sum\\vec F$, $\\vec P=M\\vec v_C$"
+   }
+  ],
+  "basis": {
+   "uz": "Portlash: massa markazi harakati",
+   "ru": "Взрыв: движение центра масс",
+   "en": "Explosion: motion of the center of mass"
+  },
+  "answer": "x_2=120\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.65-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ipga osilgan $1.99\\ \\mathrm{kg}$ yog'och blokka $10\\ \\mathrm{g}$ o'q gorizontal uchib kelib, tiqilib qoldi; blok $5\\ \\mathrm{cm}$ balandlikka ko'tarildi. O'qning tezligini va to'qnashuvda issiqlikka aylangan energiya ulushini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "В деревянный брусок массы $1.99\\ \\mathrm{kg}$, подвешенный на нити, горизонтально попала и застряла пуля массы $10\\ \\mathrm{g}$; брусок поднялся на высоту $5\\ \\mathrm{cm}$. Найдите скорость пули и долю энергии, перешедшей при ударе в теплоту. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A $10\\ \\mathrm{g}$ bullet flying horizontally lodges in a $1.99\\ \\mathrm{kg}$ wooden block hanging on a string; the block rises $5\\ \\mathrm{cm}$. Find the bullet's speed and the fraction of energy turned into heat in the impact. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L04-S10.png",
+  "solution": {
+   "uz": [
+    "Ko'tarilish bosqichi — mexanik energiya saqlanadi: $$V=\\sqrt{2gh}=\\sqrt{2\\cdot10\\cdot0.05}=1\\ \\mathrm{m/s}$$",
+    "To'qnashuv bosqichi — impuls saqlanadi: $$mv=(m+M)V\\ \\Rightarrow\\ v=\\frac{2}{0.01}\\cdot1=200\\ \\mathrm{m/s}$$",
+    "Energiyalar: o'qda $200\\ \\mathrm{J}$, to'qnashuvdan keyin $1\\ \\mathrm{J}$: $$\\frac{\\Delta E}{E}=\\frac{M}{m+M}=\\frac{1.99}{2}=0.995$$"
+   ],
+   "ru": [
+    "Этап подъёма — механическая энергия сохраняется: $$V=\\sqrt{2gh}=\\sqrt{2\\cdot10\\cdot0.05}=1\\ \\mathrm{m/s}$$",
+    "Этап удара — сохраняется импульс: $$mv=(m+M)V\\ \\Rightarrow\\ v=\\frac{2}{0.01}\\cdot1=200\\ \\mathrm{m/s}$$",
+    "Энергии: у пули $200\\ \\mathrm{J}$, после удара $1\\ \\mathrm{J}$: $$\\frac{\\Delta E}{E}=\\frac{M}{m+M}=\\frac{1.99}{2}=0.995$$"
+   ],
+   "en": [
+    "The swing stage — mechanical energy is conserved: $$V=\\sqrt{2gh}=\\sqrt{2\\cdot10\\cdot0.05}=1\\ \\mathrm{m/s}$$",
+    "The impact stage — momentum is conserved: $$mv=(m+M)V\\ \\Rightarrow\\ v=\\frac{2}{0.01}\\cdot1=200\\ \\mathrm{m/s}$$",
+    "Energies: the bullet has $200\\ \\mathrm{J}$, after the impact $1\\ \\mathrm{J}$: $$\\frac{\\Delta E}{E}=\\frac{M}{m+M}=\\frac{1.99}{2}=0.995$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Energiya saqlanishi: $E_{k1}+U_1=E_{k2}+U_2$",
+    "ru": "Сохранение энергии: $E_{k1}+U_1=E_{k2}+U_2$",
+    "en": "Energy conservation: $E_{k1}+U_1=E_{k2}+U_2$"
+   },
+   {
+    "uz": "Mutlaq noelastik: $\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}$",
+    "ru": "Абсолютно неупругий: $\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}$",
+    "en": "Perfectly inelastic: $\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}$"
+   },
+   {
+    "uz": "Yo'qotilgan energiya: $\\Delta E=\\frac{\\mu v_{12}^2}{2}$, $\\mu=\\frac{m_1m_2}{m_1+m_2}$",
+    "ru": "Потерянная энергия: $\\Delta E=\\frac{\\mu v_{12}^2}{2}$, $\\mu=\\frac{m_1m_2}{m_1+m_2}$",
+    "en": "Energy lost: $\\Delta E=\\frac{\\mu v_{12}^2}{2}$, $\\mu=\\frac{m_1m_2}{m_1+m_2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ballistik mayatnik: ikki bosqich",
+   "ru": "Баллистический маятник: два этапа",
+   "en": "Ballistic pendulum: two stages"
+  },
+  "answer": "v=200\\ \\mathrm{m/s};\\ \\frac{\\Delta E}{E}=0.995",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Irodov, «Problems in General Physics», 1.162-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$2\\ \\mathrm{kg}$ shar $5\\ \\mathrm{m/s}$ tezlik bilan unga qarab $3\\ \\mathrm{m/s}$ tezlik bilan harakatlanayotgan $3\\ \\mathrm{kg}$ sharga markaziy elastik urildi. To'qnashuvdan keyingi tezliklarni toping.",
+   "ru": "Шар массы $2\\ \\mathrm{kg}$, движущийся со скоростью $5\\ \\mathrm{m/s}$, испытывает центральный упругий удар с шаром массы $3\\ \\mathrm{kg}$, движущимся навстречу со скоростью $3\\ \\mathrm{m/s}$. Найдите скорости после удара.",
+   "en": "A $2\\ \\mathrm{kg}$ ball moving at $5\\ \\mathrm{m/s}$ collides head-on and elastically with a $3\\ \\mathrm{kg}$ ball moving towards it at $3\\ \\mathrm{m/s}$. Find the velocities after the collision."
+  },
+  "figure": "figures/B2-L04-S11.png",
+  "solution": {
+   "uz": [
+    "Birinchi shar yo'nalishini musbat deb olamiz; massa markazi tezligi: $$v_C=\\frac{2\\cdot5+3\\cdot(-3)}{5}=0.2\\ \\mathrm{m/s}$$",
+    "Elastik to'qnashuvda massa markazi sistemasida tezliklar teskarisiga almashadi: $$v_1'=2v_C-v_1=0.4-5=-4.6\\ \\mathrm{m/s}$$",
+    "Ikkinchi shar: $$v_2'=2v_C-v_2=0.4+3=3.4\\ \\mathrm{m/s}$$",
+    "Tekshiruv — impuls va energiya: $$2(-4.6)+3\\cdot3.4=1,\\qquad \\frac{2\\cdot4.6^2+3\\cdot3.4^2}{2}=38.5\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Направление первого шара — положительное; скорость центра масс: $$v_C=\\frac{2\\cdot5+3\\cdot(-3)}{5}=0.2\\ \\mathrm{m/s}$$",
+    "При упругом ударе в системе центра масс скорости меняют знак: $$v_1'=2v_C-v_1=0.4-5=-4.6\\ \\mathrm{m/s}$$",
+    "Второй шар: $$v_2'=2v_C-v_2=0.4+3=3.4\\ \\mathrm{m/s}$$",
+    "Проверка — импульс и энергия: $$2(-4.6)+3\\cdot3.4=1,\\qquad \\frac{2\\cdot4.6^2+3\\cdot3.4^2}{2}=38.5\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "Take the first ball's direction as positive; the velocity of the center of mass: $$v_C=\\frac{2\\cdot5+3\\cdot(-3)}{5}=0.2\\ \\mathrm{m/s}$$",
+    "In an elastic collision the velocities reverse in the center-of-mass frame: $$v_1'=2v_C-v_1=0.4-5=-4.6\\ \\mathrm{m/s}$$",
+    "Second ball: $$v_2'=2v_C-v_2=0.4+3=3.4\\ \\mathrm{m/s}$$",
+    "Check — momentum and energy: $$2(-4.6)+3\\cdot3.4=1,\\qquad \\frac{2\\cdot4.6^2+3\\cdot3.4^2}{2}=38.5\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Massa markazi harakati: $M\\vec a_C=\\sum\\vec F$, $\\vec P=M\\vec v_C$",
+    "ru": "Движение центра масс: $M\\vec a_C=\\sum\\vec F$, $\\vec P=M\\vec v_C$",
+    "en": "Motion of the center of mass: $M\\vec a_C=\\sum\\vec F$, $\\vec P=M\\vec v_C$"
+   },
+   {
+    "uz": "Elastik markaziy to'qnashuv: $v'=2v_C-v$",
+    "ru": "Упругий центральный удар: $v'=2v_C-v$",
+    "en": "Head-on elastic collision: $v'=2v_C-v$"
+   },
+   null,
+   {
+    "uz": "Elastik to'qnashuv: $\\sum\\frac{m_iv_i^2}{2}=\\mathrm{const}$",
+    "ru": "Упругий удар: $\\sum\\frac{m_iv_i^2}{2}=\\mathrm{const}$",
+    "en": "Elastic collision: $\\sum\\frac{m_iv_i^2}{2}=\\mathrm{const}$"
+   }
+  ],
+  "basis": {
+   "uz": "Elastik markaziy to'qnashuv: massa markazi usuli",
+   "ru": "Упругий центральный удар: метод центра масс",
+   "en": "Head-on elastic collision: the center-of-mass method"
+  },
+  "answer": "v_1'=-4.6\\ \\mathrm{m/s};\\ v_2'=3.4\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.73-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Neytron tinch turgan uglerod yadrosiga ($m=12m_n$) markaziy elastik urildi. Neytron kinetik energiyasining qancha qismini saqlab qoladi? Har bir to'qnashuv markaziy deb olinsa, neytron energiyasi $100$ marta kamayishi uchun kamida nechta to'qnashuv kerak?",
+   "ru": "Нейтрон испытывает центральный упругий удар с покоящимся ядром углерода ($m=12m_n$). Какую долю кинетической энергии сохраняет нейтрон? Сколько нужно столкновений, чтобы энергия нейтрона уменьшилась в $100$ раз, если каждое столкновение центральное?",
+   "en": "A neutron collides head-on and elastically with a carbon nucleus ($m=12m_n$) at rest. What fraction of its kinetic energy does the neutron keep? If every collision is head-on, at least how many collisions are needed to reduce the neutron's energy $100$ times?"
+  },
+  "figure": "figures/B2-L04-S12.png",
+  "solution": {
+   "uz": [
+    "Elastik markaziy to'qnashuv formulasi ($v_2=0$, $m_2=12m_1$): $$v_1'=\\frac{m_1-m_2}{m_1+m_2}v_1=-\\frac{11}{13}v_1$$",
+    "Saqlanib qolgan energiya ulushi: $$\\frac{E'}{E}=\\left(\\frac{11}{13}\\right)^2=\\frac{121}{169}\\approx0.716$$",
+    "$n$ ta to'qnashuvdan keyin energiya $\\left(\\frac{121}{169}\\right)^n$ marta kamayadi: $$\\left(\\frac{121}{169}\\right)^n\\leq\\frac{1}{100}\\ \\Rightarrow\\ n\\geq\\frac{\\ln100}{\\ln\\frac{169}{121}}\\approx13.8$$",
+    "Demak: $$n=14$$"
+   ],
+   "ru": [
+    "Формула упругого центрального удара ($v_2=0$, $m_2=12m_1$): $$v_1'=\\frac{m_1-m_2}{m_1+m_2}v_1=-\\frac{11}{13}v_1$$",
+    "Сохранённая доля энергии: $$\\frac{E'}{E}=\\left(\\frac{11}{13}\\right)^2=\\frac{121}{169}\\approx0.716$$",
+    "После $n$ столкновений энергия уменьшается в $\\left(\\frac{121}{169}\\right)^n$ раз: $$\\left(\\frac{121}{169}\\right)^n\\leq\\frac{1}{100}\\ \\Rightarrow\\ n\\geq\\frac{\\ln100}{\\ln\\frac{169}{121}}\\approx13.8$$",
+    "Значит: $$n=14$$"
+   ],
+   "en": [
+    "The head-on elastic formula ($v_2=0$, $m_2=12m_1$): $$v_1'=\\frac{m_1-m_2}{m_1+m_2}v_1=-\\frac{11}{13}v_1$$",
+    "The fraction of energy kept: $$\\frac{E'}{E}=\\left(\\frac{11}{13}\\right)^2=\\frac{121}{169}\\approx0.716$$",
+    "After $n$ collisions the energy is multiplied by $\\left(\\frac{121}{169}\\right)^n$: $$\\left(\\frac{121}{169}\\right)^n\\leq\\frac{1}{100}\\ \\Rightarrow\\ n\\geq\\frac{\\ln100}{\\ln\\frac{169}{121}}\\approx13.8$$",
+    "Hence: $$n=14$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Elastik markaziy to'qnashuv: $v'=2v_C-v$",
+    "ru": "Упругий центральный удар: $v'=2v_C-v$",
+    "en": "Head-on elastic collision: $v'=2v_C-v$"
+   },
+   {
+    "uz": "Impuls va energiya: $E_k=\\frac{p^2}{2m}$",
+    "ru": "Импульс и энергия: $E_k=\\frac{p^2}{2m}$",
+    "en": "Momentum and energy: $E_k=\\frac{p^2}{2m}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Elastik to'qnashuvda energiya uzatilishi",
+   "ru": "Передача энергии при упругом ударе",
+   "en": "Energy transfer in an elastic collision"
+  },
+  "answer": "\\frac{E'}{E}=\\frac{121}{169}\\approx0.716;\\ n=14",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.93-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$1.25\\ \\mathrm{m}$ balandlikdan tinch holatdan tushgan to'p poldan qaytib, $0.8\\ \\mathrm{m}$ balandlikka ko'tarildi. Tiklanish koeffitsiyentini toping. Har bir urilishda $e$ o'zgarmas bo'lsa, to'p to'xtaguncha qancha yo'l bosadi va qancha vaqt sakraydi? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Мяч, упавший без начальной скорости с высоты $1.25\\ \\mathrm{m}$, отскочил от пола на высоту $0.8\\ \\mathrm{m}$. Найдите коэффициент восстановления. Какой путь пройдёт мяч и сколько времени будет прыгать до остановки, если $e$ при каждом ударе одинаков? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A ball dropped from rest from $1.25\\ \\mathrm{m}$ bounces off the floor to a height of $0.8\\ \\mathrm{m}$. Find the coefficient of restitution. If $e$ is the same for every bounce, what total distance does the ball travel and how long does it bounce before stopping? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L04-S13.png",
+  "solution": {
+   "uz": [
+    "Balandliklar tezlik kvadratiga proporsional: $$e=\\frac{v'}{v}=\\sqrt{\\frac{0.8}{1.25}}=0.8$$",
+    "Har sakrashda balandlik $e^2$ marta kamayadi; yo'l (birinchi tushish + har sakrashda ikki marta): $$S=H+2H\\left(e^2+e^4+\\ldots\\right)=H\\frac{1+e^2}{1-e^2}$$",
+    "Sonlarni qo'yamiz: $$S=1.25\\cdot\\frac{1.64}{0.36}\\approx5.69\\ \\mathrm{m}$$",
+    "Vaqt: birinchi tushish $t_0=\\sqrt{\\frac{2H}{g}}=0.5\\ \\mathrm{s}$, har sakrash vaqti $e$ marta kamayadi: $$T=t_0+2t_0\\left(e+e^2+\\ldots\\right)=t_0\\frac{1+e}{1-e}=0.5\\cdot9=4.5\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Высоты пропорциональны квадрату скорости: $$e=\\frac{v'}{v}=\\sqrt{\\frac{0.8}{1.25}}=0.8$$",
+    "При каждом отскоке высота уменьшается в $e^2$ раз; путь (первое падение + дважды за отскок): $$S=H+2H\\left(e^2+e^4+\\ldots\\right)=H\\frac{1+e^2}{1-e^2}$$",
+    "Подставляем числа: $$S=1.25\\cdot\\frac{1.64}{0.36}\\approx5.69\\ \\mathrm{m}$$",
+    "Время: первое падение $t_0=\\sqrt{\\frac{2H}{g}}=0.5\\ \\mathrm{s}$, время каждого отскока уменьшается в $e$ раз: $$T=t_0+2t_0\\left(e+e^2+\\ldots\\right)=t_0\\frac{1+e}{1-e}=0.5\\cdot9=4.5\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "Heights are proportional to the speed squared: $$e=\\frac{v'}{v}=\\sqrt{\\frac{0.8}{1.25}}=0.8$$",
+    "Each bounce reduces the height by $e^2$; the distance (first drop + twice per bounce): $$S=H+2H\\left(e^2+e^4+\\ldots\\right)=H\\frac{1+e^2}{1-e^2}$$",
+    "Substitute: $$S=1.25\\cdot\\frac{1.64}{0.36}\\approx5.69\\ \\mathrm{m}$$",
+    "Time: the first drop takes $t_0=\\sqrt{\\frac{2H}{g}}=0.5\\ \\mathrm{s}$, each bounce lasts $e$ times less: $$T=t_0+2t_0\\left(e+e^2+\\ldots\\right)=t_0\\frac{1+e}{1-e}=0.5\\cdot9=4.5\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tiklanish koeffitsiyenti: $e=\\frac{v'}{v}=\\sqrt{\\frac{h'}{h}}$",
+    "ru": "Коэффициент восстановления: $e=\\frac{v'}{v}=\\sqrt{\\frac{h'}{h}}$",
+    "en": "Coefficient of restitution: $e=\\frac{v'}{v}=\\sqrt{\\frac{h'}{h}}$"
+   },
+   {
+    "uz": "Cheksiz kamayuvchi geometrik progressiya: $\\sum_{n=0}^{\\infty}q^n=\\frac{1}{1-q}$",
+    "ru": "Бесконечно убывающая геометрическая прогрессия: $\\sum_{n=0}^{\\infty}q^n=\\frac{1}{1-q}$",
+    "en": "Infinite geometric series: $\\sum_{n=0}^{\\infty}q^n=\\frac{1}{1-q}$"
+   },
+   null,
+   {
+    "uz": "Erkin tushish: $v=\\sqrt{2gh}$, $t=\\sqrt{\\frac{2h}{g}}$",
+    "ru": "Свободное падение: $v=\\sqrt{2gh}$, $t=\\sqrt{\\frac{2h}{g}}$",
+    "en": "Free fall: $v=\\sqrt{2gh}$, $t=\\sqrt{\\frac{2h}{g}}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tiklanish koeffitsiyenti, geometrik progressiya",
+   "ru": "Коэффициент восстановления, геометрическая прогрессия",
+   "en": "Coefficient of restitution, geometric series"
+  },
+  "answer": "e=0.8;\\ S\\approx5.69\\ \\mathrm{m};\\ T=4.5\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.84-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Havo xokkeyi stolida $5\\ \\mathrm{m/s}$ tezlikda harakatlanayotgan shayba xuddi shunday tinch turgan shaybaga elastik nomarkaziy urildi va dastlabki yo'nalishidan $37^\\circ$ ga og'di ($\\sin37^\\circ=0.6$). Ikkala shaybaning to'qnashuvdan keyingi tezliklarini va ikkinchi shaybaning harakat yo'nalishini toping.",
+   "ru": "Шайба на столе для аэрохоккея, движущаяся со скоростью $5\\ \\mathrm{m/s}$, испытывает упругий нецентральный удар с такой же покоящейся шайбой и отклоняется от первоначального направления на $37^\\circ$ ($\\sin37^\\circ=0.6$). Найдите скорости обеих шайб после удара и направление движения второй шайбы.",
+   "en": "An air-hockey puck moving at $5\\ \\mathrm{m/s}$ strikes an identical puck at rest elastically and off-center and is deflected by $37^\\circ$ from its original direction ($\\sin37^\\circ=0.6$). Find the speeds of both pucks after the collision and the direction of motion of the second puck."
+  },
+  "figure": "figures/B2-L04-S14.png",
+  "solution": {
+   "uz": [
+    "Teng massalarning elastik to'qnashuvi — tezliklar perpendikulyar, $\\vec v=\\vec v_1\\,'+\\vec v_2\\,'$ to'g'ri burchakli uchburchak: $$\\theta_1+\\theta_2=90^\\circ\\ \\Rightarrow\\ \\theta_2=53^\\circ$$",
+    "Gipotenuza $v$, katetlar: $$v_1'=v\\cos37^\\circ=4\\ \\mathrm{m/s},\\qquad v_2'=v\\sin37^\\circ=3\\ \\mathrm{m/s}$$",
+    "Tekshiruv — impuls proyeksiyalari: $$4\\cdot0.8+3\\cdot0.6=5,\\qquad 4\\cdot0.6-3\\cdot0.8=0$$"
+   ],
+   "ru": [
+    "Упругий удар равных масс — скорости перпендикулярны, $\\vec v=\\vec v_1\\,'+\\vec v_2\\,'$ — прямоугольный треугольник: $$\\theta_1+\\theta_2=90^\\circ\\ \\Rightarrow\\ \\theta_2=53^\\circ$$",
+    "Гипотенуза $v$, катеты: $$v_1'=v\\cos37^\\circ=4\\ \\mathrm{m/s},\\qquad v_2'=v\\sin37^\\circ=3\\ \\mathrm{m/s}$$",
+    "Проверка — проекции импульса: $$4\\cdot0.8+3\\cdot0.6=5,\\qquad 4\\cdot0.6-3\\cdot0.8=0$$"
+   ],
+   "en": [
+    "Elastic collision of equal masses — the velocities are perpendicular, $\\vec v=\\vec v_1\\,'+\\vec v_2\\,'$ is a right triangle: $$\\theta_1+\\theta_2=90^\\circ\\ \\Rightarrow\\ \\theta_2=53^\\circ$$",
+    "Hypotenuse $v$, legs: $$v_1'=v\\cos37^\\circ=4\\ \\mathrm{m/s},\\qquad v_2'=v\\sin37^\\circ=3\\ \\mathrm{m/s}$$",
+    "Check — momentum components: $$4\\cdot0.8+3\\cdot0.6=5,\\qquad 4\\cdot0.6-3\\cdot0.8=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Elastik to'qnashuv: $\\sum\\frac{m_iv_i^2}{2}=\\mathrm{const}$",
+    "ru": "Упругий удар: $\\sum\\frac{m_iv_i^2}{2}=\\mathrm{const}$",
+    "en": "Elastic collision: $\\sum\\frac{m_iv_i^2}{2}=\\mathrm{const}$"
+   },
+   null,
+   {
+    "uz": "Impulsning saqlanishi: $\\sum m_i\\vec v_i=\\mathrm{const}$ (yopiq sistema)",
+    "ru": "Сохранение импульса: $\\sum m_i\\vec v_i=\\mathrm{const}$ (замкнутая система)",
+    "en": "Conservation of momentum: $\\sum m_i\\vec v_i=\\mathrm{const}$ (closed system)"
+   }
+  ],
+  "basis": {
+   "uz": "Ikki o'lchamli elastik to'qnashuv",
+   "ru": "Двумерный упругий удар",
+   "en": "Two-dimensional elastic collision"
+  },
+  "answer": "v_1'=4\\ \\mathrm{m/s};\\ v_2'=3\\ \\mathrm{m/s},\\ 53^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 9.36-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S15",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Muzlagan chorrahada shimolga $20\\ \\mathrm{m/s}$ tezlikda harakatlanayotgan $1500\\ \\mathrm{kg}$ avtomobil sharqqa $30\\ \\mathrm{m/s}$ tezlikda harakatlanayotgan $1000\\ \\mathrm{kg}$ avtomobil bilan to'qnashib, ular birga harakatlana boshladi. To'qnashuvdan keyingi tezlikni, yo'nalishni va yo'qotilgan kinetik energiyani toping.",
+   "ru": "На обледенелом перекрёстке автомобиль массы $1500\\ \\mathrm{kg}$, едущий на север со скоростью $20\\ \\mathrm{m/s}$, сталкивается с автомобилем массы $1000\\ \\mathrm{kg}$, едущим на восток со скоростью $30\\ \\mathrm{m/s}$, после чего они движутся вместе. Найдите скорость и направление после удара и потерянную кинетическую энергию.",
+   "en": "At an icy intersection a $1500\\ \\mathrm{kg}$ car heading north at $20\\ \\mathrm{m/s}$ collides with a $1000\\ \\mathrm{kg}$ car heading east at $30\\ \\mathrm{m/s}$, and they move off together. Find the speed and direction after the collision and the kinetic energy lost."
+  },
+  "figure": "figures/B2-L04-S15.png",
+  "solution": {
+   "uz": [
+    "Impuls proyeksiyalari ($x$ — sharq, $y$ — shimol): $$P_x=1000\\cdot30=3\\cdot10^4,\\qquad P_y=1500\\cdot20=3\\cdot10^4\\ \\mathrm{kg\\cdot m/s}$$",
+    "Umumiy tezlik va yo'nalish (proyeksiyalar teng — shimoli-sharqqa $45^\\circ$): $$v=\\frac{\\sqrt{P_x^2+P_y^2}}{m_A+m_B}=\\frac{3\\sqrt{2}\\cdot10^4}{2500}=12\\sqrt{2}\\approx17\\ \\mathrm{m/s}$$",
+    "Energiyalar: $$E_1=\\frac{1500\\cdot400+1000\\cdot900}{2}=750\\ \\mathrm{kJ},\\qquad E_2=\\frac{2500\\cdot288}{2}=360\\ \\mathrm{kJ}$$",
+    "Yo'qotilgan energiya: $$\\Delta E=390\\ \\mathrm{kJ}$$"
+   ],
+   "ru": [
+    "Проекции импульса ($x$ — восток, $y$ — север): $$P_x=1000\\cdot30=3\\cdot10^4,\\qquad P_y=1500\\cdot20=3\\cdot10^4\\ \\mathrm{kg\\cdot m/s}$$",
+    "Общая скорость и направление (проекции равны — на северо-восток под $45^\\circ$): $$v=\\frac{\\sqrt{P_x^2+P_y^2}}{m_A+m_B}=\\frac{3\\sqrt{2}\\cdot10^4}{2500}=12\\sqrt{2}\\approx17\\ \\mathrm{m/s}$$",
+    "Энергии: $$E_1=\\frac{1500\\cdot400+1000\\cdot900}{2}=750\\ \\mathrm{kJ},\\qquad E_2=\\frac{2500\\cdot288}{2}=360\\ \\mathrm{kJ}$$",
+    "Потерянная энергия: $$\\Delta E=390\\ \\mathrm{kJ}$$"
+   ],
+   "en": [
+    "Momentum components ($x$ — east, $y$ — north): $$P_x=1000\\cdot30=3\\cdot10^4,\\qquad P_y=1500\\cdot20=3\\cdot10^4\\ \\mathrm{kg\\cdot m/s}$$",
+    "The common velocity and direction (equal components — north-east at $45^\\circ$): $$v=\\frac{\\sqrt{P_x^2+P_y^2}}{m_A+m_B}=\\frac{3\\sqrt{2}\\cdot10^4}{2500}=12\\sqrt{2}\\approx17\\ \\mathrm{m/s}$$",
+    "Energies: $$E_1=\\frac{1500\\cdot400+1000\\cdot900}{2}=750\\ \\mathrm{kJ},\\qquad E_2=\\frac{2500\\cdot288}{2}=360\\ \\mathrm{kJ}$$",
+    "Energy lost: $$\\Delta E=390\\ \\mathrm{kJ}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Impulsning saqlanishi: $\\sum m_i\\vec v_i=\\mathrm{const}$ (yopiq sistema)",
+    "ru": "Сохранение импульса: $\\sum m_i\\vec v_i=\\mathrm{const}$ (замкнутая система)",
+    "en": "Conservation of momentum: $\\sum m_i\\vec v_i=\\mathrm{const}$ (closed system)"
+   },
+   {
+    "uz": "Mutlaq noelastik: $\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}$",
+    "ru": "Абсолютно неупругий: $\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}$",
+    "en": "Perfectly inelastic: $\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Ikki o'lchamli mutlaq noelastik to'qnashuv",
+   "ru": "Двумерный абсолютно неупругий удар",
+   "en": "Two-dimensional perfectly inelastic collision"
+  },
+  "answer": "v\\approx17\\ \\mathrm{m/s},\\ 45^\\circ;\\ \\Delta E=390\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 9.62-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Tinch turgan $4\\ \\mathrm{kg}$ granata uch bo'lakka ajraldi: $2\\ \\mathrm{kg}$ bo'lak $6\\ \\mathrm{m/s}$ tezlik bilan sharqqa, $1\\ \\mathrm{kg}$ bo'lak $8\\ \\mathrm{m/s}$ tezlik bilan shimolga uchdi. Uchinchi $1\\ \\mathrm{kg}$ bo'lakning tezligini va portlashda ajralgan energiyani toping.",
+   "ru": "Покоящаяся граната массы $4\\ \\mathrm{kg}$ разорвалась на три осколка: осколок $2\\ \\mathrm{kg}$ полетел на восток со скоростью $6\\ \\mathrm{m/s}$, осколок $1\\ \\mathrm{kg}$ — на север со скоростью $8\\ \\mathrm{m/s}$. Найдите скорость третьего осколка массы $1\\ \\mathrm{kg}$ и энергию, выделившуюся при взрыве.",
+   "en": "A $4\\ \\mathrm{kg}$ grenade at rest explodes into three fragments: a $2\\ \\mathrm{kg}$ fragment flies east at $6\\ \\mathrm{m/s}$ and a $1\\ \\mathrm{kg}$ fragment flies north at $8\\ \\mathrm{m/s}$. Find the velocity of the third, $1\\ \\mathrm{kg}$, fragment and the energy released in the explosion."
+  },
+  "figure": "figures/B2-L04-S16.png",
+  "solution": {
+   "uz": [
+    "Boshlang'ich impuls nol — uchinchi bo'lak impulsi qolgan ikkitasi yig'indisiga qarama-qarshi: $$\\vec p_3=-(\\vec p_1+\\vec p_2)=(-12,\\ -8)\\ \\mathrm{kg\\cdot m/s}$$",
+    "Tezlik moduli (janubi-g'arbga): $$v_3=\\frac{\\sqrt{12^2+8^2}}{1}=4\\sqrt{13}\\approx14.4\\ \\mathrm{m/s}$$",
+    "Ajralgan energiya — bo'laklar kinetik energiyalari yig'indisi: $$E=\\frac{2\\cdot36}{2}+\\frac{64}{2}+\\frac{208}{2}=36+32+104=172\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Начальный импульс равен нулю — импульс третьего осколка противоположен сумме двух других: $$\\vec p_3=-(\\vec p_1+\\vec p_2)=(-12,\\ -8)\\ \\mathrm{kg\\cdot m/s}$$",
+    "Модуль скорости (на юго-запад): $$v_3=\\frac{\\sqrt{12^2+8^2}}{1}=4\\sqrt{13}\\approx14.4\\ \\mathrm{m/s}$$",
+    "Выделившаяся энергия — сумма кинетических энергий осколков: $$E=\\frac{2\\cdot36}{2}+\\frac{64}{2}+\\frac{208}{2}=36+32+104=172\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "The initial momentum is zero — the third fragment's momentum is opposite to the sum of the other two: $$\\vec p_3=-(\\vec p_1+\\vec p_2)=(-12,\\ -8)\\ \\mathrm{kg\\cdot m/s}$$",
+    "Speed (towards the south-west): $$v_3=\\frac{\\sqrt{12^2+8^2}}{1}=4\\sqrt{13}\\approx14.4\\ \\mathrm{m/s}$$",
+    "The energy released is the sum of the fragments' kinetic energies: $$E=\\frac{2\\cdot36}{2}+\\frac{64}{2}+\\frac{208}{2}=36+32+104=172\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Impulsning saqlanishi: $\\sum m_i\\vec v_i=\\mathrm{const}$ (yopiq sistema)",
+    "ru": "Сохранение импульса: $\\sum m_i\\vec v_i=\\mathrm{const}$ (замкнутая система)",
+    "en": "Conservation of momentum: $\\sum m_i\\vec v_i=\\mathrm{const}$ (closed system)"
+   },
+   null,
+   {
+    "uz": "Impuls va energiya: $E_k=\\frac{p^2}{2m}$",
+    "ru": "Импульс и энергия: $E_k=\\frac{p^2}{2m}$",
+    "en": "Momentum and energy: $E_k=\\frac{p^2}{2m}$"
+   }
+  ],
+  "basis": {
+   "uz": "Uch bo'lakli portlash",
+   "ru": "Взрыв на три осколка",
+   "en": "Explosion into three fragments"
+  },
+  "answer": "v_3=4\\sqrt{13}\\approx14.4\\ \\mathrm{m/s};\\ E=172\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 9.57-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Raketadan chiqayotgan gaz tezligi raketaga nisbatan $2.5\\ \\mathrm{km/s}$. Ochiq kosmosda tinch turgan raketaning boshlang'ich massasi oxirgi massasidan $4$ marta katta bo'lsa, u qanday tezlikka erishadi? Yerdan vertikal ko'tarilayotgan $20\\ \\mathrm{t}$ raketa sekundiga $100\\ \\mathrm{kg}$ yoqilg'i sarflasa, tortish kuchi va boshlang'ich tezlanishi qancha? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Скорость истечения газа из ракеты относительно неё $2.5\\ \\mathrm{km/s}$. Какую скорость наберёт покоившаяся в открытом космосе ракета, если её начальная масса в $4$ раза больше конечной? Если ракета массы $20\\ \\mathrm{t}$, взлетающая вертикально с Земли, расходует $100\\ \\mathrm{kg}$ топлива в секунду, каковы сила тяги и начальное ускорение? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "The exhaust speed of a rocket relative to it is $2.5\\ \\mathrm{km/s}$. What speed does a rocket initially at rest in deep space reach if its initial mass is $4$ times its final mass? If a $20\\ \\mathrm{t}$ rocket lifting off vertically from the Earth burns $100\\ \\mathrm{kg}$ of fuel per second, what are the thrust and the initial acceleration? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L04-S17.png",
+  "solution": {
+   "uz": [
+    "Tashqi kuchlarsiz — Siolkovskiy formulasi: $$v=u\\ln\\frac{m_0}{m}=2.5\\ln4\\approx3.47\\ \\mathrm{km/s}$$",
+    "Tortish kuchi: $$F=u\\left|\\frac{dm}{dt}\\right|=2500\\cdot100=2.5\\cdot10^5\\ \\mathrm{N}$$",
+    "Startda og'irlik kuchi ham ta'sir qiladi: $$a=\\frac{F}{m_0}-g=\\frac{2.5\\cdot10^5}{2\\cdot10^4}-10=2.5\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Без внешних сил — формула Циолковского: $$v=u\\ln\\frac{m_0}{m}=2.5\\ln4\\approx3.47\\ \\mathrm{km/s}$$",
+    "Сила тяги: $$F=u\\left|\\frac{dm}{dt}\\right|=2500\\cdot100=2.5\\cdot10^5\\ \\mathrm{N}$$",
+    "При старте действует и сила тяжести: $$a=\\frac{F}{m_0}-g=\\frac{2.5\\cdot10^5}{2\\cdot10^4}-10=2.5\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "Without external forces — Tsiolkovsky's formula: $$v=u\\ln\\frac{m_0}{m}=2.5\\ln4\\approx3.47\\ \\mathrm{km/s}$$",
+    "Thrust: $$F=u\\left|\\frac{dm}{dt}\\right|=2500\\cdot100=2.5\\cdot10^5\\ \\mathrm{N}$$",
+    "At lift-off gravity also acts: $$a=\\frac{F}{m_0}-g=\\frac{2.5\\cdot10^5}{2\\cdot10^4}-10=2.5\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Siolkovskiy formulasi: $v=v_0+u\\ln\\frac{m_0}{m}$",
+    "ru": "Формула Циолковского: $v=v_0+u\\ln\\frac{m_0}{m}$",
+    "en": "Tsiolkovsky's formula: $v=v_0+u\\ln\\frac{m_0}{m}$"
+   },
+   {
+    "uz": "Tortish kuchi: $F=u\\left|\\frac{dm}{dt}\\right|$",
+    "ru": "Сила тяги: $F=u\\left|\\frac{dm}{dt}\\right|$",
+    "en": "Thrust: $F=u\\left|\\frac{dm}{dt}\\right|$"
+   },
+   {
+    "uz": "Nyutonning 2-qonuni: $m\\vec a=\\sum\\vec F$",
+    "ru": "Второй закон Ньютона: $m\\vec a=\\sum\\vec F$",
+    "en": "Newton's second law: $m\\vec a=\\sum\\vec F$"
+   }
+  ],
+  "basis": {
+   "uz": "Raketa: Siolkovskiy formulasi va tortish kuchi",
+   "ru": "Ракета: формула Циолковского и сила тяги",
+   "en": "The rocket: Tsiolkovsky's formula and thrust"
+  },
+  "answer": "v\\approx3.47\\ \\mathrm{km/s};\\ F=250\\ \\mathrm{kN};\\ a=2.5\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 9.80-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L04-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Gorizontal relsda $2\\ \\mathrm{m/s}$ o'zgarmas tezlik bilan harakatlanayotgan platformaga bunkerdan sekundiga $50\\ \\mathrm{kg}$ qum vertikal tushmoqda. Tezlikni o'zgartirmaslik uchun platformaga qanday gorizontal kuch qo'yish kerak? Bu kuchning quvvati qancha va u qayerga sarflanadi? Ishqalanish yo'q.",
+   "ru": "На платформу, движущуюся по горизонтальным рельсам с постоянной скоростью $2\\ \\mathrm{m/s}$, из бункера вертикально сыплется песок по $50\\ \\mathrm{kg}$ в секунду. Какую горизонтальную силу надо приложить к платформе, чтобы её скорость не менялась? Какова мощность этой силы и на что она расходуется? Трения нет.",
+   "en": "Sand falls vertically from a hopper at $50\\ \\mathrm{kg}$ per second onto a flatcar moving along horizontal rails at a constant $2\\ \\mathrm{m/s}$. What horizontal force must be applied to the flatcar to keep its speed constant? What is the power of this force and where does it go? There is no friction."
+  },
+  "figure": "figures/B2-L04-S18.png",
+  "solution": {
+   "uz": [
+    "Har sekundda $50\\ \\mathrm{kg}$ qumni $0$ dan $2\\ \\mathrm{m/s}$ gacha tezlatish kerak: $$F=v\\frac{dm}{dt}=2\\cdot50=100\\ \\mathrm{N}$$",
+    "Kuch quvvati: $$P=Fv=v^2\\frac{dm}{dt}=200\\ \\mathrm{W}$$",
+    "Qumning kinetik energiyasi faqat yarmi qadar ortadi: $$\\frac{dE_k}{dt}=\\frac{v^2}{2}\\frac{dm}{dt}=100\\ \\mathrm{W}$$",
+    "Qolgan $100\\ \\mathrm{W}$ — qum va platforma orasidagi noelastik «to'qnashuv»da issiqlik: $$Q'=P-\\frac{dE_k}{dt}=100\\ \\mathrm{W}$$"
+   ],
+   "ru": [
+    "Каждую секунду нужно разогнать $50\\ \\mathrm{kg}$ песка от $0$ до $2\\ \\mathrm{m/s}$: $$F=v\\frac{dm}{dt}=2\\cdot50=100\\ \\mathrm{N}$$",
+    "Мощность силы: $$P=Fv=v^2\\frac{dm}{dt}=200\\ \\mathrm{W}$$",
+    "Кинетическая энергия песка растёт лишь на половину: $$\\frac{dE_k}{dt}=\\frac{v^2}{2}\\frac{dm}{dt}=100\\ \\mathrm{W}$$",
+    "Остальные $100\\ \\mathrm{W}$ — теплота при неупругом «столкновении» песка с платформой: $$Q'=P-\\frac{dE_k}{dt}=100\\ \\mathrm{W}$$"
+   ],
+   "en": [
+    "Every second $50\\ \\mathrm{kg}$ of sand must be accelerated from $0$ to $2\\ \\mathrm{m/s}$: $$F=v\\frac{dm}{dt}=2\\cdot50=100\\ \\mathrm{N}$$",
+    "Power of the force: $$P=Fv=v^2\\frac{dm}{dt}=200\\ \\mathrm{W}$$",
+    "The sand's kinetic energy grows by only half of it: $$\\frac{dE_k}{dt}=\\frac{v^2}{2}\\frac{dm}{dt}=100\\ \\mathrm{W}$$",
+    "The remaining $100\\ \\mathrm{W}$ is heat in the inelastic «collision» of the sand with the flatcar: $$Q'=P-\\frac{dE_k}{dt}=100\\ \\mathrm{W}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Massa qo'shilishi: $F=v\\frac{dm}{dt}$",
+    "ru": "Присоединение массы: $F=v\\frac{dm}{dt}$",
+    "en": "Mass accretion: $F=v\\frac{dm}{dt}$"
+   },
+   null,
+   {
+    "uz": "Impuls va energiya: $E_k=\\frac{p^2}{2m}$",
+    "ru": "Импульс и энергия: $E_k=\\frac{p^2}{2m}$",
+    "en": "Momentum and energy: $E_k=\\frac{p^2}{2m}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "O'zgaruvchan massa: massa qo'shilishi",
+   "ru": "Переменная масса: присоединение массы",
+   "en": "Variable mass: mass accretion"
+  },
+  "answer": "F=100\\ \\mathrm{N};\\ P=200\\ \\mathrm{W}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "Irodov, «Problems in General Physics», 1.183-masala asosida; sharti o'zgartirilgan"
+ }
+]

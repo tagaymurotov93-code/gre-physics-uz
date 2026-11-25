@@ -1,0 +1,497 @@
+[
+ {
+  "t": "h1",
+  "uz": "Massa markazi, impuls, to'qnashuvlar (Center of mass, momentum, collisions)",
+  "ru": "Центр масс, импульс, столкновения",
+  "en": "Center of mass, momentum, collisions"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz impuls va kuch impulsini vektor ko'rinishda qo'llaysiz, $F(t)$ grafigidan impulsni yuza sifatida topasiz; sistema impulsining saqlanishini va uning shartlarini (tashqi kuchlar, qisqa ta'sir, proyeksiya) to'g'ri ishlatasiz; nuqtalar sistemasi va yaxlit jismlarning massa markazini hisoblaysiz; massa markazining harakat qonunidan foydalanasiz; massa markazi sanoq sistemasiga o'tib, kinetik energiyani ikki qismga ajratasiz va keltirilgan massani qo'llaysiz; elastik, noelastik va mutlaq noelastik to'qnashuvlarni bir va ikki o'lchamda tahlil qilasiz; o'zgaruvchan massali jismlar (raketa, ustiga qum tushayotgan aravacha) masalalarini yechasiz.",
+  "ru": "**Цель.** После урока вы будете применять импульс и импульс силы в векторной форме, находить импульс как площадь под графиком $F(t)$; правильно использовать сохранение импульса системы и его условия (внешние силы, кратковременное действие, проекция); вычислять центр масс системы точек и сплошных тел; пользоваться законом движения центра масс; переходить в систему центра масс, разделять кинетическую энергию на две части и применять приведённую массу; анализировать упругие, неупругие и абсолютно неупругие столкновения в одном и двух измерениях; решать задачи о телах переменной массы (ракета, тележка, на которую сыплется песок).",
+  "en": "**Goal.** After this lesson you will apply momentum and impulse in vector form and find the impulse as the area under an $F(t)$ graph; use the conservation of a system's momentum and its conditions (external forces, short interactions, projections) correctly; compute the center of mass of systems of points and of extended bodies; use the law of motion of the center of mass; switch to the center-of-mass frame, split the kinetic energy into two parts and apply the reduced mass; analyse elastic, inelastic and perfectly inelastic collisions in one and two dimensions; and solve problems on bodies of variable mass (a rocket, a cart onto which sand is falling)."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L03 da kuchni yo'l bo'ylab yig'ib (ish), energiyaga keldik. Endi kuchni vaqt bo'yicha yig'amiz — natija impuls. Energiya va impuls bir-birini to'ldiradi: to'qnashuvda kuchlar juda murakkab va noma'lum bo'lsa ham, impulsning saqlanishi har doim ishlaydi, energiya esa faqat elastik to'qnashuvda saqlanadi. B1 da (L14) impuls va uning saqlanishini maktab darajasida ko'rgan edik; bu darsda massa markazi, massa markazi sanoq sistemasi va ikki o'lchamli to'qnashuvlar bilan umumlashtiramiz. GRE da to'qnashuv va portlash masalalari klassik mexanikaning eng tez yechiladigan savollaridan: to'g'ri saqlanish qonunini tanlash va chegaraviy hollarni tekshirish ko'pincha bir daqiqada javob beradi.",
+  "ru": "На уроке B2-L03 мы, суммируя силу вдоль пути (работа), пришли к энергии. Теперь будем суммировать силу по времени — результатом будет импульс. Энергия и импульс дополняют друг друга: даже если силы при столкновении очень сложны и неизвестны, сохранение импульса работает всегда, а энергия сохраняется лишь при упругом столкновении. На этапе B1 (L14) мы рассматривали импульс и его сохранение на школьном уровне; на этом уроке обобщаем их с помощью центра масс, системы центра масс и двумерных столкновений. В GRE задачи о столкновениях и взрывах — одни из самых быстро решаемых в классической механике: правильный выбор закона сохранения и проверка предельных случаев часто дают ответ за минуту.",
+  "en": "In lesson B2-L03 we summed the force along the path (work) and arrived at energy. Now we sum the force over time — the result is momentum. Energy and momentum complement each other: even if the forces in a collision are very complicated and unknown, conservation of momentum always works, while energy is conserved only in an elastic collision. In stage B1 (L14) we met momentum and its conservation at school level; in this lesson we generalise them with the center of mass, the center-of-mass frame and two-dimensional collisions. On the GRE, collision and explosion problems are among the fastest classical mechanics questions: choosing the right conservation law and checking limiting cases often gives the answer in a minute."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Impuls va kuch impulsi (Momentum and impulse)",
+  "ru": "1. Импульс и импульс силы",
+  "en": "1. Momentum and impulse"
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls.** Jismning impulsi (momentum) — massasining tezligiga ko'paytmasi: $\\vec p=m\\vec v$; vektor kattalik, tezlik bilan bir yo'nalishda, birligi $\\mathrm{kg\\cdot m/s}$. Nyutonning 2-qonuni umumiy ko'rinishda impuls orqali yoziladi: $\\vec F=\\frac{d\\vec p}{dt}$ — kuch impulsning o'zgarish tezligiga teng. Bu shakl massa o'zgaradigan holatlarda ham to'g'ri (9-bo'lim). Impuls va kinetik energiya bog'liq: $E_k=\\frac{p^2}{2m}$; bir xil impulsli jismlardan yengilining kinetik energiyasi katta, bir xil energiyalilardan esa og'irining impulsi katta: $p=\\sqrt{2mE_k}$.",
+  "ru": "**Импульс.** Импульс (momentum) тела — произведение его массы на скорость: $\\vec p=m\\vec v$; векторная величина, направлена как скорость, единица $\\mathrm{kg\\cdot m/s}$. Второй закон Ньютона в общем виде записывается через импульс: $\\vec F=\\frac{d\\vec p}{dt}$ — сила равна скорости изменения импульса. Эта форма верна и тогда, когда масса меняется (раздел 9). Импульс связан с кинетической энергией: $E_k=\\frac{p^2}{2m}$; из тел с одинаковым импульсом у более лёгкого кинетическая энергия больше, а из тел с одинаковой энергией у более тяжёлого больше импульс: $p=\\sqrt{2mE_k}$.",
+  "en": "**Momentum.** The momentum of a body is its mass times its velocity: $\\vec p=m\\vec v$; a vector along the velocity, with unit $\\mathrm{kg\\cdot m/s}$. Newton's second law is written in general form through momentum: $\\vec F=\\frac{d\\vec p}{dt}$ — the force equals the rate of change of momentum. This form is also correct when the mass changes (section 9). Momentum is related to kinetic energy: $E_k=\\frac{p^2}{2m}$; of bodies with equal momenta the lighter one has more kinetic energy, and of bodies with equal energies the heavier one has more momentum: $p=\\sqrt{2mE_k}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Kuch impulsi.** $\\vec F=\\frac{d\\vec p}{dt}$ ni vaqt bo'yicha integrallasak, kuch impulsi (impulse) jism impulsining o'zgarishiga teng: $\\vec J=\\int_{t_1}^{t_2}\\vec F\\,dt=\\Delta\\vec p$ — impuls teoremasi. Bir o'lchamda $J$ — $F(t)$ grafigi ostidagi yuza ([[F01]]). O'rtacha kuch $\\bar F=\\frac{\\Delta p}{\\Delta t}$: bir xil impuls o'zgarishida ta'sir vaqti qancha uzun bo'lsa, kuch shuncha kichik — xavfsizlik yostiqchasi, egilgan tizzalar bilan qo'nish, bokschi qo'lqopi shunga asoslangan. Diqqat: impuls o'zgarishi vektor — devordan $v$ tezlik bilan elastik qaytgan to'p uchun $\\Delta p=2mv$, to'xtagan to'p uchun esa $\\Delta p=mv$.",
+  "ru": "**Импульс силы.** Интегрируя $\\vec F=\\frac{d\\vec p}{dt}$ по времени, получаем, что импульс силы (impulse) равен изменению импульса тела: $\\vec J=\\int_{t_1}^{t_2}\\vec F\\,dt=\\Delta\\vec p$ — теорема об импульсе. В одном измерении $J$ — площадь под графиком $F(t)$ ([[F01]]). Средняя сила $\\bar F=\\frac{\\Delta p}{\\Delta t}$: при одинаковом изменении импульса чем дольше действие, тем меньше сила — на этом основаны подушка безопасности, приземление на согнутые колени, боксёрская перчатка. Внимание: изменение импульса — вектор: для мяча, упруго отскочившего от стены со скоростью $v$, $\\Delta p=2mv$, а для остановившегося мяча — $\\Delta p=mv$.",
+  "en": "**Impulse.** Integrating $\\vec F=\\frac{d\\vec p}{dt}$ over time, the impulse equals the change in the body's momentum: $\\vec J=\\int_{t_1}^{t_2}\\vec F\\,dt=\\Delta\\vec p$ — the impulse–momentum theorem. In one dimension $J$ is the area under the $F(t)$ graph ([[F01]]). The average force is $\\bar F=\\frac{\\Delta p}{\\Delta t}$: for the same change in momentum, the longer the interaction, the smaller the force — this is the basis of airbags, landing with bent knees and boxing gloves. Note: the change in momentum is a vector — for a ball bouncing elastically off a wall at speed $v$, $\\Delta p=2mv$, while for a ball that stops, $\\Delta p=mv$."
+ },
+ {
+  "t": "m",
+  "m": "\\vec p=m\\vec v,\\qquad \\vec F=\\frac{d\\vec p}{dt},\\qquad \\vec J=\\int_{t_1}^{t_2}\\vec F\\,dt=\\Delta\\vec p,\\qquad E_k=\\frac{p^2}{2m}"
+ },
+ {
+  "t": "li",
+  "uz": "**Uzluksiz oqim kuchi.** Jismga sekundiga $\\frac{dm}{dt}$ massali oqim $v$ tezlik bilan urilib to'xtasa, u har sekundda $v\\frac{dm}{dt}$ impuls oladi, demak kuch $F=v\\frac{dm}{dt}$; agar oqim elastik qaytsa, kuch ikki marta katta. Bu formula suv oqimining devorga bosimi, avtomat qurolning o'rtacha tepkisi va raketa tortish kuchi uchun ishlatiladi. Masalan, sekundiga $20\\ \\mathrm{kg}$ suv $15\\ \\mathrm{m/s}$ tezlik bilan devorga urilib, oqib tushsa, devorga $300\\ \\mathrm{N}$ kuch ta'sir qiladi.",
+  "ru": "**Сила непрерывного потока.** Если на тело каждую секунду налетает и останавливается поток массы $\\frac{dm}{dt}$ со скоростью $v$, тело каждую секунду получает импульс $v\\frac{dm}{dt}$, значит, сила $F=v\\frac{dm}{dt}$; если поток отражается упруго, сила вдвое больше. Эта формула применяется для давления струи воды на стену, средней отдачи автоматического оружия и силы тяги ракеты. Например, если каждую секунду $20\\ \\mathrm{kg}$ воды ударяются о стену со скоростью $15\\ \\mathrm{m/s}$ и стекают, на стену действует сила $300\\ \\mathrm{N}$.",
+  "en": "**Force of a continuous stream.** If a stream of mass $\\frac{dm}{dt}$ per second strikes a body at speed $v$ and stops, the body receives momentum $v\\frac{dm}{dt}$ every second, so the force is $F=v\\frac{dm}{dt}$; if the stream bounces back elastically, the force is twice as large. This formula is used for the pressure of a water jet on a wall, the average recoil of an automatic weapon and the thrust of a rocket. For example, if $20\\ \\mathrm{kg}$ of water hit a wall every second at $15\\ \\mathrm{m/s}$ and run down it, the force on the wall is $300\\ \\mathrm{N}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L04-F01.png",
+   "ru": "figures/B2-L04-F01-ru.png",
+   "en": "figures/B2-L04-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Sistema impulsining saqlanishi (Conservation of momentum of a system)",
+  "ru": "2. Сохранение импульса системы",
+  "en": "2. Conservation of momentum of a system"
+ },
+ {
+  "t": "li",
+  "uz": "**Ichki va tashqi kuchlar.** Sistema impulsi — barcha jismlar impulslarining vektor yig'indisi: $\\vec P=\\sum m_i\\vec v_i$. Har bir jism uchun 2-qonunni yozib qo'shsak, ichki kuchlar (internal forces) uchinchi qonun bo'yicha juft-jufti bilan qisqaradi va faqat tashqi kuchlar (external forces) qoladi: $\\frac{d\\vec P}{dt}=\\sum\\vec F$ (yig'indi faqat tashqi kuchlar bo'yicha). Demak, ichki kuchlar sistema impulsini o'zgartira olmaydi — ular faqat impulsni jismlar orasida qayta taqsimlaydi.",
+  "ru": "**Внутренние и внешние силы.** Импульс системы — векторная сумма импульсов всех тел: $\\vec P=\\sum m_i\\vec v_i$. Записав второй закон для каждого тела и сложив, получаем, что внутренние силы (internal forces) по третьему закону попарно сокращаются, и остаются только внешние силы (external forces): $\\frac{d\\vec P}{dt}=\\sum\\vec F$ (сумма только по внешним силам). Значит, внутренние силы не могут изменить импульс системы — они лишь перераспределяют импульс между телами.",
+  "en": "**Internal and external forces.** The momentum of a system is the vector sum of the momenta of all its bodies: $\\vec P=\\sum m_i\\vec v_i$. Writing the second law for each body and adding, the internal forces cancel in pairs by the third law and only the external forces remain: $\\frac{d\\vec P}{dt}=\\sum\\vec F$ (the sum runs over external forces only). Hence internal forces cannot change the momentum of the system — they only redistribute momentum among the bodies."
+ },
+ {
+  "t": "li",
+  "uz": "**Saqlanish qonuni va uning shartlari.** Tashqi kuchlar yig'indisi nol bo'lsa (yopiq sistema), sistema impulsi saqlanadi: $\\vec P=\\mathrm{const}$. Amalda qonun uch holatda ishlatiladi: 1) tashqi kuchlar haqiqatan muvozanatlashgan; 2) tashqi kuchlar bor, lekin ta'sir vaqti juda qisqa (to'qnashuv, portlash, o'q otish) — bu vaqtda ular impulsni sezilarli o'zgartirmaydi, ichki kuchlar esa juda katta; 3) tashqi kuchlarning biror o'qqa proyeksiyasi nol — shu o'q bo'yicha impuls proyeksiyasi saqlanadi (masalan, qiya otilgan snaryad portlaganda gorizontal impuls). Ishqalanishli sirtdagi to'qnashuvda ham to'qnashuv paytida impuls saqlanadi, keyingi sirpanishda esa saqlanmaydi.",
+  "ru": "**Закон сохранения и его условия.** Если сумма внешних сил равна нулю (замкнутая система), импульс системы сохраняется: $\\vec P=\\mathrm{const}$. На практике закон применяют в трёх случаях: 1) внешние силы действительно уравновешены; 2) внешние силы есть, но время взаимодействия очень мало (столкновение, взрыв, выстрел) — за это время они не меняют импульс заметно, а внутренние силы очень велики; 3) проекция внешних сил на какую-либо ось равна нулю — сохраняется проекция импульса на эту ось (например, горизонтальный импульс при взрыве снаряда, брошенного под углом). Даже при столкновении на шероховатой поверхности импульс сохраняется в момент удара, но не при последующем скольжении.",
+  "en": "**The conservation law and its conditions.** If the sum of external forces is zero (a closed system), the momentum of the system is conserved: $\\vec P=\\mathrm{const}$. In practice the law is used in three cases: 1) the external forces really balance; 2) external forces act but the interaction time is very short (a collision, an explosion, a shot) — during it they do not change the momentum noticeably, while the internal forces are very large; 3) the projection of the external forces on some axis is zero — the projection of momentum on that axis is conserved (for example, the horizontal momentum when a shell fired at an angle explodes). Even in a collision on a rough surface momentum is conserved during the impact, but not during the subsequent sliding."
+ },
+ {
+  "t": "m",
+  "m": "\\vec P=\\sum m_i\\vec v_i,\\qquad \\frac{d\\vec P}{dt}=\\sum\\vec F,\\qquad \\sum\\vec F=0\\ \\Rightarrow\\ \\vec P=\\mathrm{const}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tepki va reaktiv harakat.** Tinch turgan sistema ikki qismga ajralsa, impulslar teng va qarama-qarshi: $m_1\\vec v_1=-m_2\\vec v_2$. Miltiq tepkisi, qayiqdan sakragan odam, konkida tosh otgan sportchi — shu qonun. Kinetik energiyalar esa massalarga teskari proporsional taqsimlanadi: $\\frac{E_1}{E_2}=\\frac{m_2}{m_1}$, ya'ni portlash energiyasining katta qismini yengil bo'lak oladi (o'q, snaryad). Portlash yoki ajralishda energiya ichki zaxiradan (kimyoviy, prujina) olinadi, impuls esa baribir saqlanadi.",
+  "ru": "**Отдача и реактивное движение.** Если покоящаяся система распадается на две части, их импульсы равны и противоположны: $m_1\\vec v_1=-m_2\\vec v_2$. Отдача ружья, прыжок человека с лодки, спортсмен на коньках, бросающий камень, — этот закон. Кинетические энергии при этом распределяются обратно пропорционально массам: $\\frac{E_1}{E_2}=\\frac{m_2}{m_1}$, то есть большую часть энергии взрыва получает лёгкая часть (пуля, снаряд). При взрыве или разделении энергия берётся из внутреннего запаса (химического, пружины), а импульс всё равно сохраняется.",
+  "en": "**Recoil and jet propulsion.** If a system at rest breaks into two parts, their momenta are equal and opposite: $m_1\\vec v_1=-m_2\\vec v_2$. The recoil of a rifle, a person jumping off a boat, a skater throwing a stone — all follow this law. The kinetic energies are shared in inverse proportion to the masses: $\\frac{E_1}{E_2}=\\frac{m_2}{m_1}$, i.e. the light part (the bullet, the shell) takes most of the explosion energy. In an explosion or separation the energy comes from an internal store (chemical, a spring), while momentum is still conserved."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Massa markazi (Center of mass)",
+  "ru": "3. Центр масс",
+  "en": "3. Center of mass"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Moddiy nuqtalar sistemasining massa markazi (center of mass) — radius-vektori massalar bilan o'rtachalangan nuqta: $\\vec r_C=\\frac{\\sum m_i\\vec r_i}{M}$, $M=\\sum m_i$; koordinatalarda $x_C=\\frac{\\sum m_ix_i}{M}$ va hokazo. Ikki nuqta uchun massa markazi ularni tutashtiruvchi kesmada yotadi va masofani massalarga teskari proporsional bo'ladi: $m_1d_1=m_2d_2$. Yaxlit jism uchun yig'indi integralga aylanadi: $\\vec r_C=\\frac{1}{M}\\int\\vec r\\,dm$, bu yerda $dm=\\lambda\\,dx$ (sterjen), $\\sigma\\,dS$ (plastinka) yoki $\\rho\\,dV$ (hajm). Bir jinsli jismning simmetriya markazi, o'qi yoki tekisligi bo'lsa, massa markazi shu yerda yotadi.",
+  "ru": "**Определение.** Центр масс (center of mass) системы материальных точек — точка, радиус-вектор которой усреднён по массам: $\\vec r_C=\\frac{\\sum m_i\\vec r_i}{M}$, $M=\\sum m_i$; в координатах $x_C=\\frac{\\sum m_ix_i}{M}$ и т. д. Для двух точек центр масс лежит на соединяющем их отрезке и делит расстояние обратно пропорционально массам: $m_1d_1=m_2d_2$. Для сплошного тела сумма переходит в интеграл: $\\vec r_C=\\frac{1}{M}\\int\\vec r\\,dm$, где $dm=\\lambda\\,dx$ (стержень), $\\sigma\\,dS$ (пластинка) или $\\rho\\,dV$ (объём). Если у однородного тела есть центр, ось или плоскость симметрии, центр масс лежит на них.",
+  "en": "**Definition.** The center of mass of a system of point masses is the point whose radius vector is the mass-weighted average: $\\vec r_C=\\frac{\\sum m_i\\vec r_i}{M}$, $M=\\sum m_i$; in coordinates $x_C=\\frac{\\sum m_ix_i}{M}$ and so on. For two points the center of mass lies on the segment joining them and divides the distance in inverse proportion to the masses: $m_1d_1=m_2d_2$. For an extended body the sum becomes an integral: $\\vec r_C=\\frac{1}{M}\\int\\vec r\\,dm$, where $dm=\\lambda\\,dx$ (a rod), $\\sigma\\,dS$ (a plate) or $\\rho\\,dV$ (a volume). If a uniform body has a center, an axis or a plane of symmetry, the center of mass lies on it."
+ },
+ {
+  "t": "m",
+  "m": "\\vec r_C=\\frac{\\sum m_i\\vec r_i}{M},\\qquad \\vec r_C=\\frac{1}{M}\\int\\vec r\\,dm,\\qquad m_1d_1=m_2d_2"
+ },
+ {
+  "t": "li",
+  "uz": "**Muhim natijalar.** Integrallash bilan topiladigan, GRE da tez-tez kerak bo'ladigan natijalar (markazdan yoki asosdan hisoblanganda): yarim aylana shaklidagi ingichka sim — $\\frac{2R}{\\pi}$; yarim doira plastinka — $\\frac{4R}{3\\pi}$; yarim shar (yaxlit) — $\\frac{3R}{8}$; konus (yaxlit) — asosdan $\\frac{h}{4}$; uchburchak plastinka — medianalar kesishgan nuqta, ya'ni har bir medianani uchidan hisoblaganda $2:1$ nisbatda bo'ladi ([[F02]]). Bir jinsli bo'lmagan sterjen uchun, masalan $\\lambda=\\lambda_0\\frac{x^2}{L^2}$, $x_C=\\frac{3L}{4}$ — massa og'ir uchiga siljiydi.",
+  "ru": "**Важные результаты.** Результаты, получаемые интегрированием и часто нужные в GRE (считая от центра или основания): тонкая проволока в форме полуокружности — $\\frac{2R}{\\pi}$; полукруглая пластинка — $\\frac{4R}{3\\pi}$; сплошная полусфера — $\\frac{3R}{8}$; сплошной конус — $\\frac{h}{4}$ от основания; треугольная пластинка — точка пересечения медиан, то есть делит каждую медиану в отношении $2:1$, считая от вершины ([[F02]]). Для неоднородного стержня, например $\\lambda=\\lambda_0\\frac{x^2}{L^2}$, $x_C=\\frac{3L}{4}$ — центр масс смещается к тяжёлому концу.",
+  "en": "**Important results.** Results obtained by integration and often needed on the GRE (measured from the center or the base): a thin semicircular wire — $\\frac{2R}{\\pi}$; a semicircular plate — $\\frac{4R}{3\\pi}$; a solid hemisphere — $\\frac{3R}{8}$; a solid cone — $\\frac{h}{4}$ from the base; a triangular plate — the intersection of the medians, which divides each median in the ratio $2:1$ from the vertex ([[F02]]). For a non-uniform rod, for example $\\lambda=\\lambda_0\\frac{x^2}{L^2}$, $x_C=\\frac{3L}{4}$ — the center of mass shifts towards the heavy end."
+ },
+ {
+  "t": "li",
+  "uz": "**Kesib olingan bo'laklar.** Jismdan bo'lak kesib olinsa, qolgan qismning massa markazini «manfiy massa» usuli bilan topamiz: butun jism minus kesilgan bo'lak. Masalan, radiusi $R$ bo'lgan bir jinsli diskdan markazi $\\frac{R}{2}$ masofada joylashgan $\\frac{R}{2}$ radiusli teshik kesilsa, teshik massasi $\\frac{M}{4}$ va $x_C=\\frac{M\\cdot0-\\frac{M}{4}\\cdot\\frac{R}{2}}{M-\\frac{M}{4}}=-\\frac{R}{6}$ — massa markazi teshikka qarama-qarshi tomonga siljiydi. Murakkab shakllar ham shunday — oddiy bo'laklarga ajratib, har birini massa markazidagi nuqta deb olamiz.",
+  "ru": "**Вырезанные части.** Если из тела вырезана часть, центр масс оставшейся части находим методом «отрицательной массы»: всё тело минус вырезанная часть. Например, если из однородного диска радиуса $R$ вырезано отверстие радиуса $\\frac{R}{2}$ с центром на расстоянии $\\frac{R}{2}$, масса отверстия $\\frac{M}{4}$ и $x_C=\\frac{M\\cdot0-\\frac{M}{4}\\cdot\\frac{R}{2}}{M-\\frac{M}{4}}=-\\frac{R}{6}$ — центр масс смещается в сторону, противоположную отверстию. Сложные фигуры — так же: разбиваем на простые части и каждую заменяем точкой в её центре масс.",
+  "en": "**Cut-out parts.** If a piece is cut out of a body, we find the center of mass of the rest by the «negative mass» method: the whole body minus the removed piece. For example, if a hole of radius $\\frac{R}{2}$ centered $\\frac{R}{2}$ from the center is cut from a uniform disc of radius $R$, the hole's mass is $\\frac{M}{4}$ and $x_C=\\frac{M\\cdot0-\\frac{M}{4}\\cdot\\frac{R}{2}}{M-\\frac{M}{4}}=-\\frac{R}{6}$ — the center of mass shifts away from the hole. Complicated shapes are handled the same way: split into simple pieces and replace each by a point at its center of mass."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L04-F02.png",
+   "ru": "figures/B2-L04-F02-ru.png",
+   "en": "figures/B2-L04-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Massa markazining harakati (Motion of the center of mass)",
+  "ru": "4. Движение центра масс",
+  "en": "4. Motion of the center of mass"
+ },
+ {
+  "t": "li",
+  "uz": "**Massa markazi haqidagi teorema.** $\\vec r_C$ ni vaqt bo'yicha differensiallasak, $M\\vec v_C=\\sum m_i\\vec v_i=\\vec P$ — sistema impulsi uning butun massasi massa markazi tezligiga ko'paytmasiga teng. Yana bir marta differensiallasak, $M\\vec a_C=\\sum\\vec F$ (tashqi kuchlar): massa markazi butun massa unda to'plangan va unga barcha tashqi kuchlar qo'yilgan moddiy nuqta kabi harakatlanadi. Ichki kuchlar qanchalik murakkab bo'lmasin (portlash, aylanish, deformatsiya), ular massa markazining harakatiga ta'sir qilmaydi.",
+  "ru": "**Теорема о движении центра масс.** Дифференцируя $\\vec r_C$ по времени, получаем $M\\vec v_C=\\sum m_i\\vec v_i=\\vec P$ — импульс системы равен произведению её полной массы на скорость центра масс. Ещё раз дифференцируя, получаем $M\\vec a_C=\\sum\\vec F$ (внешние силы): центр масс движется как материальная точка, в которой сосредоточена вся масса и к которой приложены все внешние силы. Как бы сложны ни были внутренние силы (взрыв, вращение, деформация), на движение центра масс они не влияют.",
+  "en": "**The center-of-mass theorem.** Differentiating $\\vec r_C$ with respect to time gives $M\\vec v_C=\\sum m_i\\vec v_i=\\vec P$ — the momentum of a system equals its total mass times the velocity of the center of mass. Differentiating again, $M\\vec a_C=\\sum\\vec F$ (external forces): the center of mass moves like a point particle carrying the whole mass and acted on by all the external forces. However complicated the internal forces are (an explosion, rotation, deformation), they do not affect the motion of the center of mass."
+ },
+ {
+  "t": "m",
+  "m": "\\vec P=M\\vec v_C,\\qquad M\\vec a_C=\\sum\\vec F"
+ },
+ {
+  "t": "li",
+  "uz": "**Qo'llash.** 1) Havoda portlagan snaryad bo'laklarining massa markazi portlash bo'lmagandagi parabola bo'ylab harakatini davom ettiradi (bo'laklar bir vaqtda yerga tushguncha) — [[F03]]. 2) Tashqi gorizontal kuchlar bo'lmasa, tinch turgan sistemaning massa markazi gorizontal siljimaydi: suvdagi qayiqda $m$ massali odam $L$ uzunlik bo'ylab yursa, $M$ massali qayiq teskari tomonga $s=\\frac{mL}{m+M}$ ga siljiydi. 3) Atvud mashinasida yuklar tezlanish bilan harakatlansa, massa markazi ham tezlanadi — demak, osma ipdagi taranglik yuklarning og'irligidan farq qiladi.",
+  "ru": "**Применения.** 1) Центр масс осколков снаряда, взорвавшегося в воздухе, продолжает двигаться по той же параболе, что и без взрыва (пока осколки не упадут на землю одновременно) — [[F03]]. 2) Если внешних горизонтальных сил нет, центр масс покоящейся системы не смещается по горизонтали: если человек массы $m$ проходит длину $L$ лодки массы $M$, лодка сдвигается в обратную сторону на $s=\\frac{mL}{m+M}$. 3) Если грузы машины Атвуда движутся с ускорением, ускоряется и центр масс — значит, натяжение подвеса отличается от веса грузов.",
+  "en": "**Applications.** 1) The center of mass of the fragments of a shell that explodes in the air continues along the same parabola as without the explosion (until the fragments land at the same time) — [[F03]]. 2) If there are no external horizontal forces, the center of mass of a system at rest does not move horizontally: if a person of mass $m$ walks the length $L$ of a boat of mass $M$, the boat moves the opposite way by $s=\\frac{mL}{m+M}$. 3) If the masses of an Atwood machine accelerate, the center of mass accelerates too — so the tension in the suspension differs from the weight of the masses."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L04-F03.png",
+   "ru": "figures/B2-L04-F03-ru.png",
+   "en": "figures/B2-L04-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Massa markazi sanoq sistemasi va keltirilgan massa (Center-of-mass frame and reduced mass)",
+  "ru": "5. Система центра масс и приведённая масса",
+  "en": "5. Center-of-mass frame and reduced mass"
+ },
+ {
+  "t": "li",
+  "uz": "**Massa markazi sistemasi.** Massa markazi bilan birga $\\vec v_C$ tezlikda harakatlanadigan sanoq sistemasida sistemaning to'liq impulsi nolga teng: $\\sum m_i\\vec v_i\\,'=0$. Ikki jism uchun bu sistemada impulslar teng va qarama-qarshi: $m_1\\vec v_1\\,'=-m_2\\vec v_2\\,'$, tezliklar $\\vec v_1\\,'=\\frac{m_2}{m_1+m_2}\\vec v_{12}$, $\\vec v_2\\,'=-\\frac{m_1}{m_1+m_2}\\vec v_{12}$, bu yerda $\\vec v_{12}=\\vec v_1-\\vec v_2$ — nisbiy tezlik ([[F04]]). To'qnashuvni bu sistemada tahlil qilish eng oson: elastik to'qnashuvda har bir tezlik modulini saqlab faqat yo'nalishini o'zgartiradi, mutlaq noelastikda esa ikkalasi to'xtaydi.",
+  "ru": "**Система центра масс.** В системе отсчёта, движущейся вместе с центром масс со скоростью $\\vec v_C$, полный импульс системы равен нулю: $\\sum m_i\\vec v_i\\,'=0$. Для двух тел импульсы в этой системе равны и противоположны: $m_1\\vec v_1\\,'=-m_2\\vec v_2\\,'$, скорости $\\vec v_1\\,'=\\frac{m_2}{m_1+m_2}\\vec v_{12}$, $\\vec v_2\\,'=-\\frac{m_1}{m_1+m_2}\\vec v_{12}$, где $\\vec v_{12}=\\vec v_1-\\vec v_2$ — относительная скорость ([[F04]]). Столкновение проще всего анализировать в этой системе: при упругом столкновении каждая скорость сохраняет модуль и меняет лишь направление, а при абсолютно неупругом обе обращаются в ноль.",
+  "en": "**The center-of-mass frame.** In the frame moving with the center of mass at velocity $\\vec v_C$ the total momentum of the system is zero: $\\sum m_i\\vec v_i\\,'=0$. For two bodies the momenta in this frame are equal and opposite: $m_1\\vec v_1\\,'=-m_2\\vec v_2\\,'$, with velocities $\\vec v_1\\,'=\\frac{m_2}{m_1+m_2}\\vec v_{12}$, $\\vec v_2\\,'=-\\frac{m_1}{m_1+m_2}\\vec v_{12}$, where $\\vec v_{12}=\\vec v_1-\\vec v_2$ is the relative velocity ([[F04]]). A collision is easiest to analyse in this frame: in an elastic collision each velocity keeps its magnitude and only changes direction, while in a perfectly inelastic one both vanish."
+ },
+ {
+  "t": "li",
+  "uz": "**Kinetik energiyaning ikki qismi (Kyonig teoremasi).** Laboratoriya sistemasidagi kinetik energiya massa markazi harakati energiyasi va massa markaziga nisbatan harakat energiyasining yig'indisiga teng: $E_k=\\frac{Mv_C^2}{2}+E_k\\,'$. Ikki jism uchun ichki qism keltirilgan massa (reduced mass) orqali yoziladi: $E_k\\,'=\\frac{\\mu v_{12}^2}{2}$, $\\mu=\\frac{m_1m_2}{m_1+m_2}$. Birinchi qism impuls bilan bog'langan va to'qnashuvda o'zgarmaydi; faqat ikkinchi qism issiqlikka, deformatsiyaga yoki boshqa energiyaga aylanishi mumkin. Demak, to'qnashuvda yo'qotilishi mumkin bo'lgan eng katta energiya $\\frac{\\mu v_{12}^2}{2}$ — bu mutlaq noelastik to'qnashuvda yo'qoladi.",
+  "ru": "**Две части кинетической энергии (теорема Кёнига).** Кинетическая энергия в лабораторной системе равна сумме энергии движения центра масс и энергии движения относительно центра масс: $E_k=\\frac{Mv_C^2}{2}+E_k\\,'$. Для двух тел внутренняя часть выражается через приведённую массу (reduced mass): $E_k\\,'=\\frac{\\mu v_{12}^2}{2}$, $\\mu=\\frac{m_1m_2}{m_1+m_2}$. Первая часть связана с импульсом и при столкновении не меняется; только вторая часть может перейти в теплоту, деформацию или другую энергию. Значит, наибольшая энергия, которая может быть потеряна при столкновении, равна $\\frac{\\mu v_{12}^2}{2}$ — она теряется при абсолютно неупругом столкновении.",
+  "en": "**Two parts of the kinetic energy (König's theorem).** The kinetic energy in the lab frame equals the energy of the motion of the center of mass plus the energy of the motion relative to the center of mass: $E_k=\\frac{Mv_C^2}{2}+E_k\\,'$. For two bodies the internal part is written through the reduced mass: $E_k\\,'=\\frac{\\mu v_{12}^2}{2}$, $\\mu=\\frac{m_1m_2}{m_1+m_2}$. The first part is tied to the momentum and does not change in a collision; only the second part can turn into heat, deformation or another form of energy. Hence the largest energy that can be lost in a collision is $\\frac{\\mu v_{12}^2}{2}$ — it is lost in a perfectly inelastic collision."
+ },
+ {
+  "t": "m",
+  "m": "E_k=\\frac{Mv_C^2}{2}+\\frac{\\mu v_{12}^2}{2},\\qquad \\mu=\\frac{m_1m_2}{m_1+m_2},\\qquad \\vec v_C=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki jism masalasi.** Faqat o'zaro ta'sirlashayotgan ikki jismning harakati massa markazining tekis harakati va massasi $\\mu$ bo'lgan bitta «effektiv» jismning nisbiy harakatiga ajraladi: $\\mu\\ddot{\\vec r}=\\vec F_{12}$, $\\vec r=\\vec r_1-\\vec r_2$. Masalan, $m_1$ va $m_2$ yuklarni bog'lagan prujinaning tebranish chastotasi $\\omega=\\sqrt{\\frac{k}{\\mu}}$; ikki atomli molekula tebranishlari va vodorod atomida yadro harakatini hisobga olish ham shu usul bilan. Agar $m_2\\gg m_1$ bo'lsa, $\\mu\\approx m_1$ — og'ir jism qo'zg'almas deb olinadi.",
+  "ru": "**Задача двух тел.** Движение двух тел, взаимодействующих только друг с другом, разделяется на равномерное движение центра масс и относительное движение одного «эффективного» тела массы $\\mu$: $\\mu\\ddot{\\vec r}=\\vec F_{12}$, $\\vec r=\\vec r_1-\\vec r_2$. Например, частота колебаний грузов $m_1$ и $m_2$, связанных пружиной, $\\omega=\\sqrt{\\frac{k}{\\mu}}$; колебания двухатомной молекулы и учёт движения ядра в атоме водорода — тем же методом. Если $m_2\\gg m_1$, то $\\mu\\approx m_1$ — тяжёлое тело считается неподвижным.",
+  "en": "**The two-body problem.** The motion of two bodies interacting only with each other separates into the uniform motion of the center of mass and the relative motion of a single «effective» body of mass $\\mu$: $\\mu\\ddot{\\vec r}=\\vec F_{12}$, $\\vec r=\\vec r_1-\\vec r_2$. For example, the oscillation frequency of masses $m_1$ and $m_2$ joined by a spring is $\\omega=\\sqrt{\\frac{k}{\\mu}}$; the vibrations of a diatomic molecule and the correction for nuclear motion in the hydrogen atom use the same method. If $m_2\\gg m_1$, then $\\mu\\approx m_1$ — the heavy body can be treated as fixed."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L04-F04.png",
+   "ru": "figures/B2-L04-F04-ru.png",
+   "en": "figures/B2-L04-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. To'qnashuv turlari (Types of collisions)",
+  "ru": "6. Виды столкновений",
+  "en": "6. Types of collisions"
+ },
+ {
+  "t": "li",
+  "uz": "**Tasnif.** Har qanday to'qnashuvda (collision) impuls saqlanadi; kinetik energiyaga qarab to'qnashuvlar uch turga bo'linadi. Elastik to'qnashuvda (elastic collision) kinetik energiya ham saqlanadi (bilyard sharlari, atom va molekulalar, zarralar). Noelastik to'qnashuvda kinetik energiyaning bir qismi issiqlik va deformatsiyaga aylanadi. Mutlaq noelastik to'qnashuvda (perfectly inelastic) jismlar birlashib, bitta tezlik bilan harakatlanadi — bunda yo'qotilgan energiya eng katta. Masala shartida «elastik» deyilmagan bo'lsa, energiya saqlanadi deb olish mumkin emas — GRE da bu tipik tuzoq.",
+  "ru": "**Классификация.** При любом столкновении (collision) импульс сохраняется; по кинетической энергии столкновения делятся на три вида. При упругом столкновении (elastic collision) сохраняется и кинетическая энергия (бильярдные шары, атомы и молекулы, частицы). При неупругом столкновении часть кинетической энергии переходит в теплоту и деформацию. При абсолютно неупругом столкновении (perfectly inelastic) тела соединяются и движутся с одной скоростью — потеря энергии при этом наибольшая. Если в условии не сказано «упругое», нельзя считать, что энергия сохраняется, — типичная ловушка GRE.",
+  "en": "**Classification.** Momentum is conserved in every collision; by kinetic energy collisions fall into three types. In an elastic collision the kinetic energy is also conserved (billiard balls, atoms and molecules, particles). In an inelastic collision part of the kinetic energy turns into heat and deformation. In a perfectly inelastic collision the bodies stick together and move with one velocity — the energy loss is then the largest. If the problem does not say «elastic», energy cannot be assumed conserved — a typical GRE trap."
+ },
+ {
+  "t": "li",
+  "uz": "**Mutlaq noelastik to'qnashuv.** Impuls saqlanishidan umumiy tezlik $\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}=\\vec v_C$ — massa markazi tezligi. Yo'qotilgan energiya — massa markaziga nisbatan to'liq energiya: $\\Delta E=\\frac{\\mu v_{12}^2}{2}$. $m_1$ tinch turgan $m_2$ ga urilganda yo'qotilgan ulush $\\frac{\\Delta E}{E_k}=\\frac{m_2}{m_1+m_2}$: og'ir nishonga urilgan yengil o'q deyarli butun energiyasini yo'qotadi. Ballistik mayatnikda (ballistic pendulum) o'q bloka tiqilib qoladi: avval impuls saqlanadi (to'qnashuv), keyin mexanik energiya saqlanadi (ko'tarilish), $v=\\frac{m+M}{m}\\sqrt{2gh}$ — ikki bosqichni aralashtirib bo'lmaydi.",
+  "ru": "**Абсолютно неупругое столкновение.** Из сохранения импульса общая скорость $\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}=\\vec v_C$ — скорость центра масс. Потерянная энергия — вся энергия относительно центра масс: $\\Delta E=\\frac{\\mu v_{12}^2}{2}$. При ударе $m_1$ о покоящееся тело $m_2$ теряется доля $\\frac{\\Delta E}{E_k}=\\frac{m_2}{m_1+m_2}$: лёгкая пуля, попавшая в тяжёлую мишень, теряет почти всю энергию. В баллистическом маятнике (ballistic pendulum) пуля застревает в бруске: сначала сохраняется импульс (удар), затем механическая энергия (подъём), $v=\\frac{m+M}{m}\\sqrt{2gh}$ — два этапа смешивать нельзя.",
+  "en": "**Perfectly inelastic collision.** Conservation of momentum gives the common velocity $\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2}=\\vec v_C$ — the velocity of the center of mass. The energy lost is all the energy relative to the center of mass: $\\Delta E=\\frac{\\mu v_{12}^2}{2}$. When $m_1$ hits $m_2$ at rest, the fraction lost is $\\frac{\\Delta E}{E_k}=\\frac{m_2}{m_1+m_2}$: a light bullet hitting a heavy target loses almost all its energy. In a ballistic pendulum the bullet lodges in a block: first momentum is conserved (the impact), then mechanical energy (the swing up), $v=\\frac{m+M}{m}\\sqrt{2gh}$ — the two stages must not be mixed."
+ },
+ {
+  "t": "m",
+  "m": "\\vec v=\\frac{m_1\\vec v_1+m_2\\vec v_2}{m_1+m_2},\\qquad \\Delta E=\\frac{\\mu v_{12}^2}{2},\\qquad v=\\frac{m+M}{m}\\sqrt{2gh}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tiklanish koeffitsiyenti.** Markaziy to'qnashuvda (head-on collision) uzoqlashish tezligining yaqinlashish tezligiga nisbati tiklanish koeffitsiyenti deyiladi: $e=\\frac{v_2'-v_1'}{v_1-v_2}$; $e=1$ — elastik, $e=0$ — mutlaq noelastik, oraliq qiymatlar — noelastik to'qnashuv. Qo'zg'almas pol yoki devorga urilishda $e=\\frac{v'}{v}$, $h$ balandlikdan tushgan to'p $e^2h$ balandlikka ko'tariladi, $n$-urilishdan keyin $e^{2n}h$ ga. Yo'qotilgan energiya ulushi $1-e^2$ (massa markazi sistemasida).",
+  "ru": "**Коэффициент восстановления.** При центральном ударе (head-on collision) отношение скорости удаления к скорости сближения называется коэффициентом восстановления: $e=\\frac{v_2'-v_1'}{v_1-v_2}$; $e=1$ — упругий, $e=0$ — абсолютно неупругий, промежуточные значения — неупругий удар. При ударе о неподвижный пол или стену $e=\\frac{v'}{v}$, мяч, упавший с высоты $h$, поднимается на $e^2h$, после $n$-го удара — на $e^{2n}h$. Доля потерянной энергии $1-e^2$ (в системе центра масс).",
+  "en": "**Coefficient of restitution.** In a head-on collision the ratio of the speed of separation to the speed of approach is called the coefficient of restitution: $e=\\frac{v_2'-v_1'}{v_1-v_2}$; $e=1$ — elastic, $e=0$ — perfectly inelastic, intermediate values — inelastic. For an impact with a fixed floor or wall $e=\\frac{v'}{v}$; a ball dropped from height $h$ rises to $e^2h$, and after the $n$-th bounce to $e^{2n}h$. The fraction of energy lost is $1-e^2$ (in the center-of-mass frame)."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L04-F05.png",
+   "ru": "figures/B2-L04-F05-ru.png",
+   "en": "figures/B2-L04-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Bir o'lchamli elastik to'qnashuv (One-dimensional elastic collision)",
+  "ru": "7. Одномерное упругое столкновение",
+  "en": "7. One-dimensional elastic collision"
+ },
+ {
+  "t": "li",
+  "uz": "**Formulalar.** Markaziy elastik to'qnashuvda impuls va energiya saqlanishidan (yoki massa markazi sistemasida tezlikni teskarisiga almashtirib) chiqadi: $v_1'=\\frac{(m_1-m_2)v_1+2m_2v_2}{m_1+m_2}$, $v_2'=\\frac{(m_2-m_1)v_2+2m_1v_1}{m_1+m_2}$. Eng qisqa yo'l: $v'=2v_C-v$ — har bir jismning yangi tezligi massa markazi tezligiga nisbatan simmetrik aks. Bundan tashqari, elastik markaziy to'qnashuvda nisbiy tezlik faqat ishorasini o'zgartiradi: $v_2'-v_1'=v_1-v_2$ — bu energiya tenglamasi o'rnida ishlatiladigan chiziqli tenglama.",
+  "ru": "**Формулы.** При центральном упругом ударе из сохранения импульса и энергии (или обращением скорости в системе центра масс) получаем: $v_1'=\\frac{(m_1-m_2)v_1+2m_2v_2}{m_1+m_2}$, $v_2'=\\frac{(m_2-m_1)v_2+2m_1v_1}{m_1+m_2}$. Самый короткий путь: $v'=2v_C-v$ — новая скорость каждого тела симметрична старой относительно скорости центра масс. Кроме того, при упругом центральном ударе относительная скорость лишь меняет знак: $v_2'-v_1'=v_1-v_2$ — линейное уравнение, используемое вместо уравнения энергии.",
+  "en": "**Formulas.** For a head-on elastic collision, conservation of momentum and energy (or reversing the velocity in the center-of-mass frame) give: $v_1'=\\frac{(m_1-m_2)v_1+2m_2v_2}{m_1+m_2}$, $v_2'=\\frac{(m_2-m_1)v_2+2m_1v_1}{m_1+m_2}$. The shortest route: $v'=2v_C-v$ — each body's new velocity is the reflection of the old one about the center-of-mass velocity. Moreover, in a head-on elastic collision the relative velocity only changes sign: $v_2'-v_1'=v_1-v_2$ — a linear equation used in place of the energy equation."
+ },
+ {
+  "t": "m",
+  "m": "v_1'=\\frac{(m_1-m_2)v_1+2m_2v_2}{m_1+m_2},\\qquad v_2'=\\frac{(m_2-m_1)v_2+2m_1v_1}{m_1+m_2},\\qquad v'=2v_C-v"
+ },
+ {
+  "t": "li",
+  "uz": "**Xususiy hollar ($v_2=0$).** 1) Teng massalar: jismlar tezliklarini almashadi — urilgan jism to'xtaydi, ikkinchisi $v_1$ bilan ketadi (Nyuton beshigi). 2) $m_1\\gg m_2$: og'ir jism deyarli to'xtamay davom etadi, yengili $2v_1$ tezlik oladi. 3) $m_1\\ll m_2$: yengil jism deyarli $-v_1$ bilan qaytadi (devordan qaytish). Nishonga uzatilgan energiya ulushi $\\frac{4m_1m_2}{(m_1+m_2)^2}$ — teng massalarda $1$ ga teng va bundan uzoqlashgan sari kamayadi ([[F06]]). Shu sababli neytronlarni sekinlashtirish uchun massasi neytronnikiga yaqin yadrolar (vodorod, deyteriy, uglerod) ishlatiladi.",
+  "ru": "**Частные случаи ($v_2=0$).** 1) Равные массы: тела обмениваются скоростями — налетающее тело останавливается, второе уходит со скоростью $v_1$ (колыбель Ньютона). 2) $m_1\\gg m_2$: тяжёлое тело продолжает движение почти не замедляясь, лёгкое получает скорость $2v_1$. 3) $m_1\\ll m_2$: лёгкое тело отскакивает почти со скоростью $-v_1$ (отражение от стены). Доля энергии, переданной мишени, равна $\\frac{4m_1m_2}{(m_1+m_2)^2}$ — при равных массах она равна $1$ и уменьшается при удалении от этого случая ([[F06]]). Поэтому для замедления нейтронов используют ядра с массой, близкой к массе нейтрона (водород, дейтерий, углерод).",
+  "en": "**Special cases ($v_2=0$).** 1) Equal masses: the bodies exchange velocities — the incoming body stops and the other moves off at $v_1$ (Newton's cradle). 2) $m_1\\gg m_2$: the heavy body carries on almost without slowing, and the light one acquires $2v_1$. 3) $m_1\\ll m_2$: the light body bounces back with almost $-v_1$ (reflection from a wall). The fraction of energy transferred to the target is $\\frac{4m_1m_2}{(m_1+m_2)^2}$ — it equals $1$ for equal masses and decreases away from that case ([[F06]]). That is why nuclei with masses close to the neutron's (hydrogen, deuterium, carbon) are used to slow neutrons down."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L04-F06.png",
+   "ru": "figures/B2-L04-F06-ru.png",
+   "en": "figures/B2-L04-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Ikki o'lchamli to'qnashuvlar va portlashlar (Two-dimensional collisions and explosions)",
+  "ru": "8. Двумерные столкновения и взрывы",
+  "en": "8. Two-dimensional collisions and explosions"
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls proyeksiyalari.** Nomarkaziy to'qnashuvda impuls vektor sifatida saqlanadi — har bir o'q bo'yicha alohida tenglama: $m_1v_1=m_1v_1'\\cos\\theta_1+m_2v_2'\\cos\\theta_2$, $0=m_1v_1'\\sin\\theta_1-m_2v_2'\\sin\\theta_2$ (nishon tinch, $x$ o'qi boshlang'ich tezlik bo'ylab). Noma'lumlar odatda to'rtta ($v_1',\\ v_2',\\ \\theta_1,\\ \\theta_2$), tenglamalar esa ikkita (yoki elastik bo'lsa uchta) — shuning uchun masalada biror kattalik (burchak yoki tezlik) beriladi. Geometrik usul: impulslar uchburchagi $\\vec p_1=\\vec p_1\\,'+\\vec p_2\\,'$ — ko'pincha hisobni bir qatorga qisqartiradi ([[F07]]).",
+  "ru": "**Проекции импульса.** При нецентральном столкновении импульс сохраняется как вектор — отдельное уравнение по каждой оси: $m_1v_1=m_1v_1'\\cos\\theta_1+m_2v_2'\\cos\\theta_2$, $0=m_1v_1'\\sin\\theta_1-m_2v_2'\\sin\\theta_2$ (мишень покоится, ось $x$ вдоль начальной скорости). Неизвестных обычно четыре ($v_1',\\ v_2',\\ \\theta_1,\\ \\theta_2$), а уравнений два (или три для упругого удара) — поэтому в задаче задаётся какая-то величина (угол или скорость). Геометрический способ: треугольник импульсов $\\vec p_1=\\vec p_1\\,'+\\vec p_2\\,'$ — часто сокращает расчёт до одной строки ([[F07]]).",
+  "en": "**Momentum components.** In an off-center collision momentum is conserved as a vector — a separate equation along each axis: $m_1v_1=m_1v_1'\\cos\\theta_1+m_2v_2'\\cos\\theta_2$, $0=m_1v_1'\\sin\\theta_1-m_2v_2'\\sin\\theta_2$ (target at rest, $x$ axis along the initial velocity). There are usually four unknowns ($v_1',\\ v_2',\\ \\theta_1,\\ \\theta_2$) but only two equations (three if elastic) — so the problem must give some quantity (an angle or a speed). The geometric method: the momentum triangle $\\vec p_1=\\vec p_1\\,'+\\vec p_2\\,'$ often reduces the calculation to one line ([[F07]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Teng massalarning elastik to'qnashuvi.** Agar teng massali jism tinch turgan jismga elastik nomarkaziy urilsa, $\\vec v_1=\\vec v_1\\,'+\\vec v_2\\,'$ va $v_1^2=v_1'^2+v_2'^2$ — Pifagor teoremasi, demak $\\vec v_1\\,'\\perp\\vec v_2\\,'$: jismlar to'g'ri burchak ostida tarqaladi. Bu bilyard va proton–proton sochilishida kuzatiladi va massalar tengligini tekshirishning qulay belgisi. Agar urilayotgan jism og'irroq bo'lsa ($m_1>m_2$), u $\\sin\\theta_{max}=\\frac{m_2}{m_1}$ dan katta burchakka og'a olmaydi; yengilroq bo'lsa, istalgan burchakka, hatto orqaga ham qaytishi mumkin (Rezerford tajribasida alfa-zarralarning orqaga qaytishi og'ir yadroni ko'rsatdi).",
+  "ru": "**Упругое столкновение равных масс.** Если тело налетает упруго и нецентрально на покоящееся тело равной массы, то $\\vec v_1=\\vec v_1\\,'+\\vec v_2\\,'$ и $v_1^2=v_1'^2+v_2'^2$ — теорема Пифагора, значит $\\vec v_1\\,'\\perp\\vec v_2\\,'$: тела разлетаются под прямым углом. Это наблюдается в бильярде и при протон-протонном рассеянии и является удобным признаком равенства масс. Если налетающее тело тяжелее ($m_1>m_2$), оно не может отклониться на угол больше, чем $\\sin\\theta_{max}=\\frac{m_2}{m_1}$; если легче — может отклониться на любой угол, даже отскочить назад (отражение альфа-частиц назад в опыте Резерфорда указало на тяжёлое ядро).",
+  "en": "**Elastic collision of equal masses.** If a body strikes an equal-mass body at rest elastically and off-center, then $\\vec v_1=\\vec v_1\\,'+\\vec v_2\\,'$ and $v_1^2=v_1'^2+v_2'^2$ — Pythagoras' theorem, so $\\vec v_1\\,'\\perp\\vec v_2\\,'$: the bodies fly apart at a right angle. This is seen in billiards and in proton–proton scattering and is a handy sign of equal masses. If the incoming body is heavier ($m_1>m_2$), it cannot be deflected by more than the angle given by $\\sin\\theta_{max}=\\frac{m_2}{m_1}$; if lighter, it can be deflected by any angle, even backwards (the backscattering of alpha particles in Rutherford's experiment revealed a heavy nucleus)."
+ },
+ {
+  "t": "m",
+  "m": "\\vec p_1=\\vec p_1\\,'+\\vec p_2\\,',\\qquad m_1=m_2:\\ \\vec v_1\\,'\\perp\\vec v_2\\,',\\qquad \\sin\\theta_{max}=\\frac{m_2}{m_1}"
+ },
+ {
+  "t": "li",
+  "uz": "**Portlash.** Tinch turgan jism bo'laklarga ajralsa, bo'laklar impulslarining yig'indisi nol: uch bo'lak uchun impulslar yopiq uchburchak hosil qiladi, demak ular bir tekislikda yotadi. Harakatlanayotgan jism portlasa, massa markazi tezligi o'zgarmaydi: $\\sum m_i\\vec v_i=M\\vec v_C$. Portlashda ajralgan energiya bo'laklar kinetik energiyalari yig'indisidan boshlang'ich energiyani ayirib topiladi; massa markazi sistemasida u ichki energiyaga teng. Masalan, tinch turgan jism massalari $2m$ va $m$ bo'lgan ikki bo'lakka ajralsa, yengil bo'lak og'ir bo'lakdan ikki marta tez va energiyaning $\\frac{2}{3}$ qismini oladi.",
+  "ru": "**Взрыв.** Если покоящееся тело распадается на осколки, сумма импульсов осколков равна нулю: для трёх осколков импульсы образуют замкнутый треугольник, значит, лежат в одной плоскости. Если взрывается движущееся тело, скорость центра масс не меняется: $\\sum m_i\\vec v_i=M\\vec v_C$. Энергия, выделившаяся при взрыве, равна сумме кинетических энергий осколков минус начальная энергия; в системе центра масс она равна внутренней энергии. Например, если покоящееся тело распадается на два осколка массами $2m$ и $m$, лёгкий осколок вдвое быстрее тяжёлого и получает $\\frac{2}{3}$ энергии.",
+  "en": "**Explosion.** If a body at rest breaks into fragments, the momenta of the fragments add up to zero: for three fragments the momenta form a closed triangle and therefore lie in one plane. If a moving body explodes, the velocity of the center of mass does not change: $\\sum m_i\\vec v_i=M\\vec v_C$. The energy released in the explosion is the sum of the fragments' kinetic energies minus the initial energy; in the center-of-mass frame it equals the internal energy. For example, if a body at rest splits into fragments of masses $2m$ and $m$, the light fragment is twice as fast as the heavy one and takes $\\frac{2}{3}$ of the energy."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L04-F07.png",
+   "ru": "figures/B2-L04-F07-ru.png",
+   "en": "figures/B2-L04-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. O'zgaruvchan massali jismlar va raketa (Variable-mass bodies and the rocket)",
+  "ru": "9. Тела переменной массы и ракета",
+  "en": "9. Variable-mass bodies and the rocket"
+ },
+ {
+  "t": "li",
+  "uz": "**Meshcherskiy tenglamasi.** $dt$ vaqtda raketadan $|dm|$ massali gaz unga nisbatan $\\vec u$ tezlik bilan chiqsa, impuls saqlanishidan raketaning harakat tenglamasi kelib chiqadi: $m\\frac{d\\vec v}{dt}=\\sum\\vec F+\\vec u\\frac{dm}{dt}$ ($dm<0$, shuning uchun reaktiv kuch $\\vec u$ ga qarama-qarshi yo'nalgan). Reaktiv (tortish) kuchi moduli $F=u\\left|\\frac{dm}{dt}\\right|$ — chiqayotgan gaz tezligi va sarf tezligi ko'paytmasi. Masalan, gaz $3\\ \\mathrm{km/s}$ tezlik bilan sekundiga $100\\ \\mathrm{kg}$ chiqsa, tortish kuchi $300\\ \\mathrm{kN}$.",
+  "ru": "**Уравнение Мещерского.** Если за время $dt$ из ракеты вылетает газ массы $|dm|$ со скоростью $\\vec u$ относительно неё, из сохранения импульса следует уравнение движения ракеты: $m\\frac{d\\vec v}{dt}=\\sum\\vec F+\\vec u\\frac{dm}{dt}$ ($dm<0$, поэтому реактивная сила направлена против $\\vec u$). Модуль реактивной силы (силы тяги) $F=u\\left|\\frac{dm}{dt}\\right|$ — произведение скорости истечения на расход. Например, если газ вылетает со скоростью $3\\ \\mathrm{km/s}$ по $100\\ \\mathrm{kg}$ в секунду, сила тяги $300\\ \\mathrm{kN}$.",
+  "en": "**Meshchersky's equation.** If in time $dt$ gas of mass $|dm|$ leaves a rocket with velocity $\\vec u$ relative to it, conservation of momentum gives the rocket's equation of motion: $m\\frac{d\\vec v}{dt}=\\sum\\vec F+\\vec u\\frac{dm}{dt}$ ($dm<0$, so the reactive force points opposite to $\\vec u$). The magnitude of the reactive force (thrust) is $F=u\\left|\\frac{dm}{dt}\\right|$ — the exhaust speed times the burn rate. For example, if gas leaves at $3\\ \\mathrm{km/s}$ at $100\\ \\mathrm{kg}$ per second, the thrust is $300\\ \\mathrm{kN}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Siolkovskiy formulasi.** Tashqi kuchlar bo'lmasa, $m\\,dv=-u\\,dm$ ni integrallab, $v=v_0+u\\ln\\frac{m_0}{m}$ — raketa tezligining orttirmasi faqat gaz tezligi va massalar nisbatiga bog'liq, yonish tezligiga bog'liq emas ([[F08]]). Tezlik orttirmasini ikki marta oshirish uchun massalar nisbati kvadratga oshishi kerak — shuning uchun ko'p bosqichli raketalar ishlatiladi. Yer yaqinida vertikal ko'tarilishda og'irlik kuchi qo'shiladi: boshlang'ich tezlanish $a=\\frac{u\\left|\\frac{dm}{dt}\\right|}{m_0}-g$, raketa faqat tortish kuchi og'irlikdan katta bo'lganda ko'tariladi.",
+  "ru": "**Формула Циолковского.** При отсутствии внешних сил, интегрируя $m\\,dv=-u\\,dm$, получаем $v=v_0+u\\ln\\frac{m_0}{m}$ — прирост скорости ракеты зависит только от скорости истечения и отношения масс, но не от скорости сгорания ([[F08]]). Чтобы удвоить прирост скорости, отношение масс нужно возвести в квадрат — поэтому используют многоступенчатые ракеты. При вертикальном подъёме у Земли добавляется сила тяжести: начальное ускорение $a=\\frac{u\\left|\\frac{dm}{dt}\\right|}{m_0}-g$, ракета взлетает лишь тогда, когда сила тяги больше веса.",
+  "en": "**Tsiolkovsky's formula.** With no external forces, integrating $m\\,dv=-u\\,dm$ gives $v=v_0+u\\ln\\frac{m_0}{m}$ — the rocket's gain in speed depends only on the exhaust speed and the mass ratio, not on the burn rate ([[F08]]). To double the gain in speed the mass ratio must be squared — that is why multistage rockets are used. In a vertical ascent near the Earth gravity is added: the initial acceleration is $a=\\frac{u\\left|\\frac{dm}{dt}\\right|}{m_0}-g$, and the rocket lifts off only if the thrust exceeds its weight."
+ },
+ {
+  "t": "m",
+  "m": "m\\frac{d\\vec v}{dt}=\\sum\\vec F+\\vec u\\frac{dm}{dt},\\qquad F=u\\left|\\frac{dm}{dt}\\right|,\\qquad v=v_0+u\\ln\\frac{m_0}{m}"
+ },
+ {
+  "t": "li",
+  "uz": "**Massa qo'shilishi.** Tekis $v$ tezlik bilan harakatlanayotgan aravachaga yuqoridan vertikal qum tushsa, qumni ham shu tezlikgacha tezlatish kerak: kuch $F=v\\frac{dm}{dt}$, quvvat $P=Fv=v^2\\frac{dm}{dt}$. Shundan qumning kinetik energiyasiga faqat yarmi ($\\frac{v^2}{2}\\frac{dm}{dt}$) ketadi, qolgan yarmi qum va aravacha orasidagi noelastik «to'qnashuvda» issiqlikka aylanadi. Xuddi shunday, stolga tushayotgan zanjirning stolga bosimi stoldagi qism og'irligidan uch marta katta: og'irlik $\\lambda gx$ ga zarbalar kuchi $\\lambda v^2=2\\lambda gx$ qo'shiladi.",
+  "ru": "**Присоединение массы.** Если на тележку, движущуюся равномерно со скоростью $v$, сверху вертикально сыплется песок, песок нужно разогнать до той же скорости: сила $F=v\\frac{dm}{dt}$, мощность $P=Fv=v^2\\frac{dm}{dt}$. Из неё на кинетическую энергию песка идёт лишь половина ($\\frac{v^2}{2}\\frac{dm}{dt}$), а вторая половина переходит в теплоту при неупругом «столкновении» песка с тележкой. Аналогично, давление падающей на стол цепочки на стол втрое больше веса лежащей части: к весу $\\lambda gx$ добавляется сила ударов $\\lambda v^2=2\\lambda gx$.",
+  "en": "**Mass accretion.** If sand falls vertically onto a cart moving uniformly at speed $v$, the sand must be accelerated to the same speed: the force is $F=v\\frac{dm}{dt}$ and the power $P=Fv=v^2\\frac{dm}{dt}$. Only half of it ($\\frac{v^2}{2}\\frac{dm}{dt}$) goes into the sand's kinetic energy; the other half turns into heat in the inelastic «collision» of the sand with the cart. Similarly, the force of a chain falling onto a table is three times the weight of the part lying on it: the impact force $\\lambda v^2=2\\lambda gx$ is added to the weight $\\lambda gx$."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L04-F08.png",
+   "ru": "figures/B2-L04-F08-ru.png",
+   "en": "figures/B2-L04-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE uchun tez usullar (Fast techniques for the GRE)",
+  "ru": "10. Быстрые приёмы для GRE",
+  "en": "10. Fast techniques for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "**Qaysi qonun?** To'qnashuv va portlashda avval impulsni saqlang; energiyani faqat «elastik» deyilgan bo'lsa ishlating. To'qnashuvdan keyingi harakat (ko'tarilish, sirpanish, prujinaning siqilishi) uchun esa energiya yoki dinamika kerak — bosqichlarni ajrating. Ikki jism masalasida massa markazi sistemasiga o'ting: unda elastik to'qnashuv — tezliklarning aksi, mutlaq noelastik — to'xtash, yo'qotilgan energiya $\\frac{\\mu v_{12}^2}{2}$.",
+  "ru": "**Какой закон?** При столкновении и взрыве сначала сохраняйте импульс; энергию используйте лишь если сказано «упругий». Для движения после удара (подъём, скольжение, сжатие пружины) нужны энергия или динамика — разделяйте этапы. В задаче двух тел переходите в систему центра масс: в ней упругий удар — отражение скоростей, абсолютно неупругий — остановка, потерянная энергия $\\frac{\\mu v_{12}^2}{2}$.",
+  "en": "**Which law?** In collisions and explosions conserve momentum first; use energy only if the collision is called «elastic». For the motion after the impact (rising, sliding, compressing a spring) energy or dynamics is needed — separate the stages. In a two-body problem switch to the center-of-mass frame: there an elastic collision reverses the velocities, a perfectly inelastic one stops them, and the energy lost is $\\frac{\\mu v_{12}^2}{2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaraviy hollar va masshtablash.** Javob formulasini tekshiring: teng massalarda elastik to'qnashuv tezliklarni almashtirishi, $m_2\\to\\infty$ da devordan qaytish, $m_2\\to0$ da urilgan jism o'zgarmasligi kerak. Ballistik mayatnikda $v\\sim\\frac{M}{m}\\sqrt{h}$; raketa tezligi $\\sim\\ln\\frac{m_0}{m}$; tepki energiyalari massaga teskari. Massa markazi masalalarida simmetriya va «manfiy massa» integralsiz javob beradi.",
+  "ru": "**Предельные случаи и масштабирование.** Проверяйте формулу ответа: при равных массах упругий удар должен обменивать скорости, при $m_2\\to\\infty$ — давать отражение от стены, при $m_2\\to0$ — не менять налетающее тело. В баллистическом маятнике $v\\sim\\frac{M}{m}\\sqrt{h}$; скорость ракеты $\\sim\\ln\\frac{m_0}{m}$; энергии отдачи обратно пропорциональны массам. В задачах на центр масс симметрия и «отрицательная масса» дают ответ без интегралов.",
+  "en": "**Limiting cases and scaling.** Check the answer formula: for equal masses an elastic collision must exchange the velocities, for $m_2\\to\\infty$ give reflection from a wall, and for $m_2\\to0$ leave the incoming body unchanged. In a ballistic pendulum $v\\sim\\frac{M}{m}\\sqrt{h}$; a rocket's speed $\\sim\\ln\\frac{m_0}{m}$; recoil energies are inversely proportional to the masses. In center-of-mass problems symmetry and «negative mass» give the answer without integrals."
+ },
+ {
+  "t": "li",
+  "uz": "**Tez-tez uchraydigan xatolar.** Noelastik to'qnashuvda energiya saqlanadi deb olish; impulsni skalyar qo'shish (yo'nalishlarni unutish); ballistik mayatnikda to'qnashuv va ko'tarilishni bitta energiya tenglamasiga birlashtirish; devordan qaytishda $\\Delta p=2mv$ o'rniga $mv$ yozish; tashqi kuch (og'irlik, ishqalanish) uzoq vaqt ta'sir qilganda ham impulsni saqlanadi deb olish; raketa tenglamasida gazning yerga nisbatan emas, raketaga nisbatan tezligi turishini unutish.",
+  "ru": "**Частые ошибки.** Считать, что при неупругом ударе сохраняется энергия; складывать импульсы как скаляры (забывая направления); объединять удар и подъём в баллистическом маятнике в одно уравнение энергии; писать $mv$ вместо $\\Delta p=2mv$ при отражении от стены; считать импульс сохраняющимся, когда внешняя сила (тяжесть, трение) действует долго; забывать, что в уравнении ракеты стоит скорость газа относительно ракеты, а не относительно Земли.",
+  "en": "**Common mistakes.** Assuming energy is conserved in an inelastic collision; adding momenta as scalars (forgetting directions); combining the impact and the swing of a ballistic pendulum into one energy equation; writing $mv$ instead of $\\Delta p=2mv$ for a bounce off a wall; treating momentum as conserved while an external force (gravity, friction) acts for a long time; forgetting that the rocket equation contains the gas velocity relative to the rocket, not relative to the Earth."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Impuls, 2-qonun",
+    "ru": "Импульс, второй закон",
+    "en": "Momentum, second law",
+    "m": "\\vec p=m\\vec v,\\quad \\vec F=\\frac{d\\vec p}{dt}"
+   },
+   {
+    "uz": "Impuls teoremasi",
+    "ru": "Теорема об импульсе",
+    "en": "Impulse–momentum theorem",
+    "m": "\\vec J=\\int\\vec F\\,dt=\\Delta\\vec p"
+   },
+   {
+    "uz": "Impuls va energiya",
+    "ru": "Импульс и энергия",
+    "en": "Momentum and energy",
+    "m": "E_k=\\frac{p^2}{2m}"
+   },
+   {
+    "uz": "Oqim kuchi",
+    "ru": "Сила потока",
+    "en": "Force of a stream",
+    "m": "F=v\\frac{dm}{dt}"
+   },
+   {
+    "uz": "Impulsning saqlanishi",
+    "ru": "Сохранение импульса",
+    "en": "Conservation of momentum",
+    "m": "\\sum\\vec F=0\\ \\Rightarrow\\ \\sum m_i\\vec v_i=\\mathrm{const}"
+   },
+   {
+    "uz": "Massa markazi",
+    "ru": "Центр масс",
+    "en": "Center of mass",
+    "m": "\\vec r_C=\\frac{\\sum m_i\\vec r_i}{M}=\\frac{1}{M}\\int\\vec r\\,dm"
+   },
+   {
+    "uz": "Massa markazi harakati",
+    "ru": "Движение центра масс",
+    "en": "Motion of the center of mass",
+    "m": "\\vec P=M\\vec v_C,\\quad M\\vec a_C=\\sum\\vec F"
+   },
+   {
+    "uz": "Odam va qayiq",
+    "ru": "Человек и лодка",
+    "en": "Person and boat",
+    "m": "s=\\frac{mL}{m+M}"
+   },
+   {
+    "uz": "Kyonig teoremasi",
+    "ru": "Теорема Кёнига",
+    "en": "König's theorem",
+    "m": "E_k=\\frac{Mv_C^2}{2}+\\frac{\\mu v_{12}^2}{2},\\quad \\mu=\\frac{m_1m_2}{m_1+m_2}"
+   },
+   {
+    "uz": "Mutlaq noelastik to'qnashuv",
+    "ru": "Абсолютно неупругий удар",
+    "en": "Perfectly inelastic collision",
+    "m": "\\vec v=\\vec v_C,\\quad \\Delta E=\\frac{\\mu v_{12}^2}{2}"
+   },
+   {
+    "uz": "Tiklanish koeffitsiyenti",
+    "ru": "Коэффициент восстановления",
+    "en": "Coefficient of restitution",
+    "m": "e=\\frac{v_2'-v_1'}{v_1-v_2},\\quad h_n=e^{2n}h"
+   },
+   {
+    "uz": "Elastik markaziy to'qnashuv",
+    "ru": "Упругий центральный удар",
+    "en": "Head-on elastic collision",
+    "m": "v'=2v_C-v"
+   },
+   {
+    "uz": "Energiya uzatilishi",
+    "ru": "Передача энергии",
+    "en": "Energy transfer",
+    "m": "\\frac{4m_1m_2}{(m_1+m_2)^2}"
+   },
+   {
+    "uz": "Ikki o'lchamli elastik",
+    "ru": "Двумерный упругий удар",
+    "en": "Two-dimensional elastic",
+    "m": "m_1=m_2:\\ \\vec v_1\\,'\\perp\\vec v_2\\,',\\quad \\sin\\theta_{max}=\\frac{m_2}{m_1}"
+   },
+   {
+    "uz": "Raketa",
+    "ru": "Ракета",
+    "en": "Rocket",
+    "m": "F=u\\left|\\frac{dm}{dt}\\right|,\\quad v=v_0+u\\ln\\frac{m_0}{m}"
+   }
+  ]
+ }
+]
