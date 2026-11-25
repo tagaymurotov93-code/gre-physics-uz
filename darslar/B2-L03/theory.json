@@ -1,0 +1,529 @@
+[
+ {
+  "t": "h1",
+  "uz": "Ish, potensial energiya, konservativ kuchlar (Work, potential energy, conservative forces)",
+  "ru": "Работа, потенциальная энергия, консервативные силы",
+  "en": "Work, potential energy, conservative forces"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz o'zgarmas va o'zgaruvchan kuchning ishini skalyar ko'paytma va integral orqali hisoblaysiz, $F_x(x)$ grafigidan ishni yuza sifatida topasiz; ish–energiya teoremasini va quvvat formulasini qo'llaysiz; kuchning konservativ yoki nokonservativ ekanini yopiq kontur bo'yicha ish va rotor yordamida aniqlaysiz; potensial energiyadan kuchni ($\\vec F=-\\nabla U$) va kuchdan potensial energiyani topasiz; nokonservativ kuchlar bor holda energiya balansini yozasiz; $U(x)$ grafigidan muvozanat nuqtalari, ularning turg'unligi, qaytish nuqtalari va kichik tebranishlar chastotasini aniqlaysiz; molekulyar (Lennard-Jons) va gravitatsion potensial energiya bilan ishlaysiz.",
+  "ru": "**Цель.** После урока вы будете вычислять работу постоянной и переменной силы через скалярное произведение и интеграл, находить работу как площадь под графиком $F_x(x)$; применять теорему о кинетической энергии и формулу мощности; определять, консервативна ли сила, по работе на замкнутом контуре и с помощью ротора; находить силу по потенциальной энергии ($\\vec F=-\\nabla U$) и потенциальную энергию по силе; записывать баланс энергии при наличии неконсервативных сил; определять по графику $U(x)$ точки равновесия, их устойчивость, точки поворота и частоту малых колебаний; работать с молекулярной (Леннард-Джонса) и гравитационной потенциальной энергией.",
+  "en": "**Goal.** After this lesson you will compute the work of a constant and a variable force using the scalar product and an integral, and find work as the area under an $F_x(x)$ graph; apply the work–energy theorem and the power formula; decide whether a force is conservative from the work around a closed path and from the curl; find the force from the potential energy ($\\vec F=-\\nabla U$) and the potential energy from the force; write the energy balance when non-conservative forces act; read off from a $U(x)$ graph the equilibrium points, their stability, the turning points and the frequency of small oscillations; and work with molecular (Lennard-Jones) and gravitational potential energy."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L02 da harakatni Nyuton qonunlari bilan, ya'ni kuch va tezlanish orqali tahlil qildik. Ko'p masalalarda esa jismning har bir momentdagi tezlanishi emas, faqat boshlang'ich va oxirgi holatdagi tezligi kerak bo'ladi. Bunday hollarda energiya usuli ancha qisqa: kuchni yo'l bo'ylab «yig'ib» (ish), harakat tenglamasini integrallamasdan natijaga kelamiz. B1 da (L15–L17) ish, kinetik va potensial energiya hamda energiyaning saqlanish qonunini maktab darajasida ko'rgan edik; bu darsda ularni vektor va integral ko'rinishda umumlashtiramiz. GRE da energiya usuli klassik mexanika savollarining katta qismini — sirpanish, prujinalar, mayatniklar, halqa, $U(x)$ grafiklari, qochish tezligi — bir-ikki qatorda yechish imkonini beradi.",
+  "ru": "На уроке B2-L02 мы анализировали движение законами Ньютона, то есть через силу и ускорение. Однако во многих задачах нужно не ускорение в каждый момент, а лишь скорость в начальном и конечном положениях. Тогда энергетический метод намного короче: «суммируя» силу вдоль пути (работа), мы приходим к результату, не интегрируя уравнение движения. На этапе B1 (L15–L17) мы рассматривали работу, кинетическую и потенциальную энергию и закон сохранения энергии на школьном уровне; на этом уроке обобщаем их в векторной и интегральной форме. В GRE энергетический метод позволяет решать в одну-две строки большую часть вопросов классической механики — скольжение, пружины, маятники, петля, графики $U(x)$, скорость убегания.",
+  "en": "In lesson B2-L02 we analysed motion with Newton's laws, that is, through force and acceleration. In many problems, however, we need not the acceleration at every instant but only the speed in the initial and final positions. Then the energy method is much shorter: by «summing» the force along the path (work) we reach the result without integrating the equation of motion. In stage B1 (L15–L17) we met work, kinetic and potential energy and the law of conservation of energy at school level; in this lesson we generalise them to vector and integral form. On the GRE the energy method solves a large share of classical mechanics questions — sliding, springs, pendulums, the loop, $U(x)$ graphs, escape speed — in one or two lines."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Kuch ishi (Work of a force)",
+  "ru": "1. Работа силы",
+  "en": "1. Work of a force"
+ },
+ {
+  "t": "li",
+  "uz": "**O'zgarmas kuchning ishi.** Jism to'g'ri chiziq bo'ylab $\\Delta\\vec r$ ko'chganda unga ta'sir qilayotgan o'zgarmas $\\vec F$ kuchning ishi (work) skalyar ko'paytma bilan aniqlanadi: $A=\\vec F\\cdot\\Delta\\vec r=F\\,\\Delta r\\cos\\alpha$, bu yerda $\\alpha$ — kuch va ko'chish orasidagi burchak. Ish — skalyar kattalik, birligi joul: $1\\ \\mathrm{J}=1\\ \\mathrm{N\\cdot m}$. Ishni faqat ko'chish yo'nalishidagi tashkil etuvchi bajaradi: $\\alpha<90^\\circ$ da ish musbat, $\\alpha>90^\\circ$ da manfiy, $\\alpha=90^\\circ$ da nol. Koordinatalarda $A=F_x\\Delta x+F_y\\Delta y+F_z\\Delta z$.",
+  "ru": "**Работа постоянной силы.** Когда тело перемещается по прямой на $\\Delta\\vec r$, работа (work) действующей на него постоянной силы $\\vec F$ определяется скалярным произведением: $A=\\vec F\\cdot\\Delta\\vec r=F\\,\\Delta r\\cos\\alpha$, где $\\alpha$ — угол между силой и перемещением. Работа — скалярная величина, единица — джоуль: $1\\ \\mathrm{J}=1\\ \\mathrm{N\\cdot m}$. Работу совершает только составляющая вдоль перемещения: при $\\alpha<90^\\circ$ работа положительна, при $\\alpha>90^\\circ$ отрицательна, при $\\alpha=90^\\circ$ равна нулю. В координатах $A=F_x\\Delta x+F_y\\Delta y+F_z\\Delta z$.",
+  "en": "**Work of a constant force.** When a body moves along a straight line through $\\Delta\\vec r$, the work of a constant force $\\vec F$ acting on it is defined by the scalar product: $A=\\vec F\\cdot\\Delta\\vec r=F\\,\\Delta r\\cos\\alpha$, where $\\alpha$ is the angle between the force and the displacement. Work is a scalar; its unit is the joule: $1\\ \\mathrm{J}=1\\ \\mathrm{N\\cdot m}$. Only the component along the displacement does work: for $\\alpha<90^\\circ$ the work is positive, for $\\alpha>90^\\circ$ negative, for $\\alpha=90^\\circ$ zero. In coordinates $A=F_x\\Delta x+F_y\\Delta y+F_z\\Delta z$."
+ },
+ {
+  "t": "li",
+  "uz": "**O'zgaruvchan kuch va egri chiziqli yo'l.** Agar kuch yo'l bo'ylab o'zgarsa yoki trayektoriya egri bo'lsa, yo'lni kichik $d\\vec r$ bo'laklarga ajratamiz; har birida kuchni o'zgarmas deb olib, elementar ishlarni qo'shamiz. Natija — chiziqli integral (line integral): $A=\\int_1^2\\vec F\\cdot d\\vec r=\\int_1^2\\left(F_x\\,dx+F_y\\,dy+F_z\\,dz\\right)$ ([[F01]]). Integral umumiy holda yo'lga bog'liq: bir xil boshlang'ich va oxirgi nuqtalar uchun turli trayektoriyalarda ish turlicha chiqishi mumkin (5-bo'lim). Hisoblashda trayektoriyani parametr orqali yozamiz, masalan $y=y(x)$ bo'lsa $dy=y'(x)\\,dx$ va integral bitta o'zgaruvchiga keladi.",
+  "ru": "**Переменная сила и криволинейный путь.** Если сила меняется вдоль пути или траектория криволинейна, разбиваем путь на малые участки $d\\vec r$; на каждом считаем силу постоянной и складываем элементарные работы. Результат — криволинейный интеграл (line integral): $A=\\int_1^2\\vec F\\cdot d\\vec r=\\int_1^2\\left(F_x\\,dx+F_y\\,dy+F_z\\,dz\\right)$ ([[F01]]). В общем случае интеграл зависит от пути: при одинаковых начальной и конечной точках работа на разных траекториях может быть разной (раздел 5). При вычислении записываем траекторию через параметр, например при $y=y(x)$ имеем $dy=y'(x)\\,dx$, и интеграл сводится к одной переменной.",
+  "en": "**Variable force and curved path.** If the force changes along the path or the trajectory is curved, we split the path into small pieces $d\\vec r$; on each we treat the force as constant and add the elementary works. The result is a line integral: $A=\\int_1^2\\vec F\\cdot d\\vec r=\\int_1^2\\left(F_x\\,dx+F_y\\,dy+F_z\\,dz\\right)$ ([[F01]]). In general the integral depends on the path: for the same initial and final points the work along different trajectories can differ (section 5). To compute it we write the trajectory through a parameter, for example for $y=y(x)$ we have $dy=y'(x)\\,dx$, and the integral reduces to one variable."
+ },
+ {
+  "t": "m",
+  "m": "A=\\vec F\\cdot\\Delta\\vec r=F\\,\\Delta r\\cos\\alpha,\\qquad A=\\int_1^2\\vec F\\cdot d\\vec r"
+ },
+ {
+  "t": "li",
+  "uz": "**Ish — grafik ostidagi yuza.** Bir o'lchamli harakatda $A=\\int_{x_1}^{x_2}F_x\\,dx$ — bu $F_x(x)$ grafigi ostidagi yuza ([[F01]]): o'q ustidagi qism musbat, o'q ostidagi qism manfiy ish beradi. GRE da kuch grafigi berilgan masalalarda integral hisoblanmaydi — uchburchak va trapetsiyalar yuzasi qo'shiladi. Masalan, kuch $0$ dan $F_0$ gacha chiziqli o'ssa, $x_0$ masofadagi ish $\\frac{1}{2}F_0x_0$. Xuddi shunday, $F(t)$ grafigi ostidagi yuza ish emas, impuls; $P(t)$ grafigi ostidagi yuza esa ish — bu uch grafikni adashtirmaslik kerak.",
+  "ru": "**Работа — площадь под графиком.** При одномерном движении $A=\\int_{x_1}^{x_2}F_x\\,dx$ — площадь под графиком $F_x(x)$ ([[F01]]): часть над осью даёт положительную работу, часть под осью — отрицательную. В задачах GRE с графиком силы интеграл не вычисляют — складывают площади треугольников и трапеций. Например, если сила линейно растёт от $0$ до $F_0$, работа на расстоянии $x_0$ равна $\\frac{1}{2}F_0x_0$. Аналогично площадь под графиком $F(t)$ — не работа, а импульс; а площадь под графиком $P(t)$ — работа; эти три графика нельзя путать.",
+  "en": "**Work as the area under a graph.** In one-dimensional motion $A=\\int_{x_1}^{x_2}F_x\\,dx$ is the area under the $F_x(x)$ graph ([[F01]]): the part above the axis gives positive work, the part below the axis negative work. In GRE problems with a force graph the integral is not computed — the areas of triangles and trapezoids are added. For example, if the force grows linearly from $0$ to $F_0$, the work over the distance $x_0$ is $\\frac{1}{2}F_0x_0$. Likewise, the area under an $F(t)$ graph is not work but impulse; the area under a $P(t)$ graph is work — these three graphs must not be confused."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L03-F01.png",
+   "ru": "figures/B2-L03-F01-ru.png",
+   "en": "figures/B2-L03-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Turli kuchlarning ishi (Work done by various forces)",
+  "ru": "2. Работа различных сил",
+  "en": "2. Work done by various forces"
+ },
+ {
+  "t": "li",
+  "uz": "**Og'irlik kuchining ishi.** $y$ o'qi yuqoriga yo'nalgan bo'lsa, $\\vec F=-mg\\vec j$ va $\\vec F\\cdot d\\vec r=-mg\\,dy$. Demak, istalgan trayektoriya bo'ylab $A=-mg(y_2-y_1)=mg(h_1-h_2)$: ish faqat balandliklar farqiga bog'liq, yo'lning shakli va uzunligiga bog'liq emas ([[F02]]). Jism pastga tushganda og'irlik kuchi musbat ish bajaradi, ko'tarilganda — manfiy. Gorizontal ko'chishda og'irlik kuchi ish bajarmaydi.",
+  "ru": "**Работа силы тяжести.** Если ось $y$ направлена вверх, то $\\vec F=-mg\\vec j$ и $\\vec F\\cdot d\\vec r=-mg\\,dy$. Значит, по любой траектории $A=-mg(y_2-y_1)=mg(h_1-h_2)$: работа зависит только от разности высот и не зависит от формы и длины пути ([[F02]]). При опускании тела сила тяжести совершает положительную работу, при подъёме — отрицательную. При горизонтальном перемещении сила тяжести работы не совершает.",
+  "en": "**Work of gravity.** With the $y$ axis pointing up, $\\vec F=-mg\\vec j$ and $\\vec F\\cdot d\\vec r=-mg\\,dy$. Hence along any trajectory $A=-mg(y_2-y_1)=mg(h_1-h_2)$: the work depends only on the difference in height, not on the shape or length of the path ([[F02]]). When the body goes down gravity does positive work, when it goes up — negative work. In a horizontal displacement gravity does no work."
+ },
+ {
+  "t": "li",
+  "uz": "**Prujina kuchining ishi.** Guk qonuni $F_x=-kx$ ($x$ — deformatsiya) bo'yicha $A=\\int_{x_1}^{x_2}(-kx)\\,dx=\\frac{kx_1^2}{2}-\\frac{kx_2^2}{2}$. Prujina muvozanat holatiga qaytayotganda uning kuchi musbat ish bajaradi, cho'zilayotganda yoki siqilayotganda — manfiy. Muhim natija: prujinani $0$ dan $x$ gacha cho'zish ishi $\\frac{kx^2}{2}$, $x$ dan $2x$ gacha esa $\\frac{3kx^2}{2}$ — ya'ni uch marta ko'p, chunki kuch deformatsiya bilan o'sadi ([[F02]] dagi uchburchak va trapetsiya).",
+  "ru": "**Работа силы пружины.** По закону Гука $F_x=-kx$ ($x$ — деформация) $A=\\int_{x_1}^{x_2}(-kx)\\,dx=\\frac{kx_1^2}{2}-\\frac{kx_2^2}{2}$. Когда пружина возвращается к положению равновесия, её сила совершает положительную работу, при растяжении или сжатии — отрицательную. Важный результат: работа растяжения пружины от $0$ до $x$ равна $\\frac{kx^2}{2}$, а от $x$ до $2x$ равна $\\frac{3kx^2}{2}$ — то есть втрое больше, потому что сила растёт с деформацией (треугольник и трапеция на [[F02]]).",
+  "en": "**Work of a spring force.** By Hooke's law $F_x=-kx$ ($x$ is the deformation) $A=\\int_{x_1}^{x_2}(-kx)\\,dx=\\frac{kx_1^2}{2}-\\frac{kx_2^2}{2}$. When the spring returns towards equilibrium its force does positive work; when it is stretched or compressed — negative work. An important result: the work to stretch a spring from $0$ to $x$ is $\\frac{kx^2}{2}$, while from $x$ to $2x$ it is $\\frac{3kx^2}{2}$ — three times more, because the force grows with the deformation (the triangle and trapezoid in [[F02]])."
+ },
+ {
+  "t": "m",
+  "m": "A=mg(h_1-h_2),\\qquad A=\\frac{kx_1^2}{2}-\\frac{kx_2^2}{2},\\qquad A=-\\mu mgs"
+ },
+ {
+  "t": "li",
+  "uz": "**Ishqalanish kuchining ishi.** Sirpanish ishqalanishi doim nisbiy tezlikka qarama-qarshi, shuning uchun qo'zg'almas sirtda uning ishi doim manfiy va yo'l uzunligiga proporsional: gorizontal sirtda $A=-\\mu mgs$, bu yerda $s$ — bosib o'tilgan yo'l (ko'chish moduli emas!). Jism borib-qaytsa, ko'chish nol bo'lsa ham ishqalanish ishi $-2\\mu mgs$. Shu sababli ishqalanish ishini «balandliklar farqi» kabi holat funksiyasi orqali yozib bo'lmaydi — u yo'lga bog'liq.",
+  "ru": "**Работа силы трения.** Трение скольжения всегда направлено против относительной скорости, поэтому на неподвижной поверхности его работа всегда отрицательна и пропорциональна длине пути: на горизонтальной поверхности $A=-\\mu mgs$, где $s$ — пройденный путь (а не модуль перемещения!). Если тело прошло туда и обратно, работа трения равна $-2\\mu mgs$, хотя перемещение равно нулю. Поэтому работу трения нельзя записать через функцию состояния, подобно «разности высот», — она зависит от пути.",
+  "en": "**Work of friction.** Kinetic friction always opposes the relative velocity, so on a fixed surface its work is always negative and proportional to the path length: on a horizontal surface $A=-\\mu mgs$, where $s$ is the distance travelled (not the magnitude of the displacement!). If the body goes there and back, the work of friction is $-2\\mu mgs$ even though the displacement is zero. Hence the work of friction cannot be written through a function of state like the «difference in heights» — it depends on the path."
+ },
+ {
+  "t": "li",
+  "uz": "**Ish bajarmaydigan kuchlar.** Har doim tezlikka perpendikulyar kuch ish bajarmaydi: $\\vec F\\cdot\\vec v=0$. Bunga qo'zg'almas sirtdagi tayanch reaksiya kuchi $N$, aylana bo'ylab tekis harakatdagi markazga intilma kuch (masalan, ip tarangligi yoki gravitatsiya aylana orbitada) va magnit maydonda zaryadga ta'sir qiluvchi Lorents kuchi $q\\vec v\\times\\vec B$ kiradi. Shuning uchun magnit maydon zaryadning tezlik modulini o'zgartirmaydi, faqat yo'nalishini buradi. Diqqat: harakatlanayotgan sirtning (masalan, liftning) $N$ kuchi ish bajara oladi.",
+  "ru": "**Силы, не совершающие работы.** Сила, всегда перпендикулярная скорости, работы не совершает: $\\vec F\\cdot\\vec v=0$. Сюда относятся сила реакции $N$ неподвижной поверхности, центростремительная сила при равномерном движении по окружности (например, натяжение нити или тяготение на круговой орбите) и сила Лоренца $q\\vec v\\times\\vec B$, действующая на заряд в магнитном поле. Поэтому магнитное поле не меняет модуль скорости заряда, а лишь поворачивает её. Внимание: сила $N$ движущейся поверхности (например, лифта) может совершать работу.",
+  "en": "**Forces that do no work.** A force that is always perpendicular to the velocity does no work: $\\vec F\\cdot\\vec v=0$. This includes the normal force $N$ of a fixed surface, the centripetal force in uniform circular motion (for example, string tension or gravity on a circular orbit) and the Lorentz force $q\\vec v\\times\\vec B$ on a charge in a magnetic field. That is why a magnetic field does not change the magnitude of a charge's velocity but only turns it. Note: the force $N$ of a moving surface (for example, an elevator floor) can do work."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L03-F02.png",
+   "ru": "figures/B2-L03-F02-ru.png",
+   "en": "figures/B2-L03-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Kinetik energiya va ish–energiya teoremasi (Kinetic energy and the work–energy theorem)",
+  "ru": "3. Кинетическая энергия и теорема о кинетической энергии",
+  "en": "3. Kinetic energy and the work–energy theorem"
+ },
+ {
+  "t": "li",
+  "uz": "**Teoremaning keltirib chiqarilishi.** Nyutonning 2-qonunini $d\\vec r=\\vec v\\,dt$ ga skalyar ko'paytiramiz: $\\vec F\\cdot d\\vec r=m\\frac{d\\vec v}{dt}\\cdot\\vec v\\,dt=m\\vec v\\cdot d\\vec v=d\\left(\\frac{mv^2}{2}\\right)$. Integrallasak, jismga ta'sir qiluvchi **barcha** kuchlarning ishi uning kinetik energiyasi (kinetic energy) $E_k=\\frac{mv^2}{2}$ ning o'zgarishiga teng: $A=\\Delta E_k$. Bu kinetik energiya teoremasi (work–energy theorem) deyiladi. U Nyuton qonunining natijasi, lekin vektor tenglama o'rniga bitta skalyar tenglama beradi.",
+  "ru": "**Вывод теоремы.** Умножим второй закон Ньютона скалярно на $d\\vec r=\\vec v\\,dt$: $\\vec F\\cdot d\\vec r=m\\frac{d\\vec v}{dt}\\cdot\\vec v\\,dt=m\\vec v\\cdot d\\vec v=d\\left(\\frac{mv^2}{2}\\right)$. Интегрируя, получаем, что работа **всех** сил, действующих на тело, равна изменению его кинетической энергии (kinetic energy) $E_k=\\frac{mv^2}{2}$: $A=\\Delta E_k$. Это теорема о кинетической энергии (work–energy theorem). Она следует из закона Ньютона, но вместо векторного уравнения даёт одно скалярное.",
+  "en": "**Derivation of the theorem.** Take the scalar product of Newton's second law with $d\\vec r=\\vec v\\,dt$: $\\vec F\\cdot d\\vec r=m\\frac{d\\vec v}{dt}\\cdot\\vec v\\,dt=m\\vec v\\cdot d\\vec v=d\\left(\\frac{mv^2}{2}\\right)$. Integrating, we find that the work of **all** the forces acting on a body equals the change in its kinetic energy $E_k=\\frac{mv^2}{2}$: $A=\\Delta E_k$. This is the work–energy theorem. It follows from Newton's law but gives one scalar equation instead of a vector one."
+ },
+ {
+  "t": "m",
+  "m": "E_k=\\frac{mv^2}{2}=\\frac{p^2}{2m},\\qquad A=\\sum A_i=E_{k2}-E_{k1}"
+ },
+ {
+  "t": "li",
+  "uz": "**Qo'llash.** Teoremani ishlatishda: 1) jismga ta'sir qiluvchi barcha kuchlarni sanaymiz; 2) har birining ishini alohida topamiz (ish bajarmaydiganlarini tashlab yuboramiz); 3) yig'indini $\\Delta E_k$ ga tenglaymiz. Masalan, $v_0$ tezlikda gorizontal sirtda sirpanayotgan jism to'xtaguncha bosib o'tgan yo'l $-\\mu mgs=0-\\frac{mv_0^2}{2}$ dan $s=\\frac{v_0^2}{2\\mu g}$ — massaga bog'liq emas, tezlik ikki marta oshsa, yo'l to'rt marta oshadi. Kinetik energiya impuls orqali $E_k=\\frac{p^2}{2m}$; bir xil impulsli jismlardan yengilining energiyasi katta.",
+  "ru": "**Применение.** При использовании теоремы: 1) перечисляем все силы, действующие на тело; 2) находим работу каждой отдельно (не совершающие работы отбрасываем); 3) приравниваем сумму к $\\Delta E_k$. Например, путь тела, скользящего со скоростью $v_0$ по горизонтальной поверхности до остановки, из $-\\mu mgs=0-\\frac{mv_0^2}{2}$ равен $s=\\frac{v_0^2}{2\\mu g}$ — не зависит от массы, при удвоении скорости путь растёт в четыре раза. Кинетическая энергия через импульс $E_k=\\frac{p^2}{2m}$; из тел с одинаковым импульсом энергия больше у более лёгкого.",
+  "en": "**Using it.** When applying the theorem: 1) list all forces acting on the body; 2) find the work of each separately (dropping those that do no work); 3) set the sum equal to $\\Delta E_k$. For example, for a body sliding at $v_0$ on a horizontal surface until it stops, $-\\mu mgs=0-\\frac{mv_0^2}{2}$ gives the distance $s=\\frac{v_0^2}{2\\mu g}$ — independent of the mass; doubling the speed multiplies the distance by four. In terms of momentum $E_k=\\frac{p^2}{2m}$; of bodies with equal momenta the lighter one has more energy."
+ },
+ {
+  "t": "li",
+  "uz": "**Ichki kuchlar va sistema.** Sistema uchun teorema ham o'rinli, lekin unda ichki kuchlarning ishi ham hisobga olinadi: ichki kuchlar yig'indisi nol bo'lsa ham, ularning ishi nolga teng bo'lmasligi mumkin (masalan, siqilgan prujina ikki aravachani itarsa, ichki kuch ikkalasini tezlatadi va kinetik energiya ortadi). Bu impulsdan muhim farq: impulsni faqat tashqi kuchlar o'zgartiradi, kinetik energiyani esa ichki kuchlar ham o'zgartiradi (B2-L04).",
+  "ru": "**Внутренние силы и система.** Для системы теорема тоже справедлива, но в ней учитывается и работа внутренних сил: даже если сумма внутренних сил равна нулю, их работа может быть ненулевой (например, сжатая пружина расталкивает две тележки — внутренняя сила ускоряет обе, и кинетическая энергия растёт). Это важное отличие от импульса: импульс меняют только внешние силы, а кинетическую энергию — и внутренние (B2-L04).",
+  "en": "**Internal forces and the system.** The theorem also holds for a system, but then the work of the internal forces is included: even if the internal forces add up to zero, their work may be non-zero (for example, a compressed spring pushes two carts apart — the internal force accelerates both and the kinetic energy grows). This is an important difference from momentum: momentum is changed only by external forces, whereas kinetic energy is changed by internal forces too (B2-L04)."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Quvvat (Power)",
+  "ru": "4. Мощность",
+  "en": "4. Power"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Quvvat (power) — ish bajarilish tezligi: oniy quvvat $P=\\frac{dA}{dt}$, o'rtacha quvvat $\\bar P=\\frac{A}{t}$; birligi vatt, $1\\ \\mathrm{W}=1\\ \\mathrm{J/s}$. $dA=\\vec F\\cdot d\\vec r$ bo'lgani uchun $P=\\vec F\\cdot\\vec v=Fv\\cos\\alpha$. Teskari: $P(t)$ grafigi ostidagi yuza bajarilgan ishga teng, $A=\\int P\\,dt$. Ish–energiya teoremasini vaqt bo'yicha differensiallasak, $\\frac{dE_k}{dt}=\\sum\\vec F\\cdot\\vec v$ — kinetik energiya o'zgarish tezligi teng ta'sir etuvchi kuch quvvatiga teng.",
+  "ru": "**Определение.** Мощность (power) — скорость совершения работы: мгновенная мощность $P=\\frac{dA}{dt}$, средняя мощность $\\bar P=\\frac{A}{t}$; единица — ватт, $1\\ \\mathrm{W}=1\\ \\mathrm{J/s}$. Поскольку $dA=\\vec F\\cdot d\\vec r$, то $P=\\vec F\\cdot\\vec v=Fv\\cos\\alpha$. Обратно: площадь под графиком $P(t)$ равна совершённой работе, $A=\\int P\\,dt$. Дифференцируя теорему о кинетической энергии по времени, получаем $\\frac{dE_k}{dt}=\\sum\\vec F\\cdot\\vec v$ — скорость изменения кинетической энергии равна мощности равнодействующей.",
+  "en": "**Definition.** Power is the rate of doing work: instantaneous power $P=\\frac{dA}{dt}$, average power $\\bar P=\\frac{A}{t}$; the unit is the watt, $1\\ \\mathrm{W}=1\\ \\mathrm{J/s}$. Since $dA=\\vec F\\cdot d\\vec r$, we get $P=\\vec F\\cdot\\vec v=Fv\\cos\\alpha$. Conversely, the area under a $P(t)$ graph equals the work done, $A=\\int P\\,dt$. Differentiating the work–energy theorem with respect to time gives $\\frac{dE_k}{dt}=\\sum\\vec F\\cdot\\vec v$ — the rate of change of kinetic energy equals the power of the net force."
+ },
+ {
+  "t": "m",
+  "m": "P=\\frac{dA}{dt}=\\vec F\\cdot\\vec v,\\qquad v_{max}=\\frac{P}{mg\\sin\\alpha+f}"
+ },
+ {
+  "t": "li",
+  "uz": "**Eng katta tezlik.** Dvigatel quvvati $P$ o'zgarmas bo'lsa, tortish kuchi $F=\\frac{P}{v}$ — tezlik oshgan sari kamayadi. Tezlik qarshilik kuchlari tortish kuchini muvozanatlaganda eng katta bo'ladi: qiyalikka ko'tarilayotgan avtomobil uchun $\\frac{P}{v_{max}}=mg\\sin\\alpha+f$. Agar qarshilik tezlik kvadratiga proporsional bo'lsa ($f=cv^2$, gorizontal yo'l), $P=cv_{max}^3$ va $v_{max}=\\sqrt[3]{\\frac{P}{c}}$: tezlikni ikki marta oshirish uchun sakkiz marta katta quvvat kerak. Boshlanishda (kichik $v$) $F=\\frac{P}{v}$ cheklanmaydi deb bo'lmaydi — u ishqalanish bilan cheklangan.",
+  "ru": "**Максимальная скорость.** Если мощность двигателя $P$ постоянна, сила тяги $F=\\frac{P}{v}$ уменьшается с ростом скорости. Скорость максимальна, когда силы сопротивления уравновешивают силу тяги: для автомобиля, поднимающегося в гору, $\\frac{P}{v_{max}}=mg\\sin\\alpha+f$. Если сопротивление пропорционально квадрату скорости ($f=cv^2$, горизонтальная дорога), то $P=cv_{max}^3$ и $v_{max}=\\sqrt[3]{\\frac{P}{c}}$: чтобы удвоить скорость, нужна в восемь раз большая мощность. В начале движения (малая $v$) нельзя считать $F=\\frac{P}{v}$ неограниченной — она ограничена трением.",
+  "en": "**Maximum speed.** If the engine power $P$ is constant, the traction force $F=\\frac{P}{v}$ decreases as the speed grows. The speed is maximal when the resistive forces balance the traction: for a car climbing a slope $\\frac{P}{v_{max}}=mg\\sin\\alpha+f$. If the resistance is proportional to the square of the speed ($f=cv^2$, level road), then $P=cv_{max}^3$ and $v_{max}=\\sqrt[3]{\\frac{P}{c}}$: doubling the speed needs eight times the power. At the start (small $v$) $F=\\frac{P}{v}$ cannot be taken as unlimited — it is limited by friction."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Konservativ va nokonservativ kuchlar (Conservative and non-conservative forces)",
+  "ru": "5. Консервативные и неконсервативные силы",
+  "en": "5. Conservative and non-conservative forces"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Agar kuchning ikki nuqta orasidagi ishi faqat shu nuqtalarga bog'liq bo'lib, trayektoriyaga bog'liq bo'lmasa, kuch konservativ (conservative force) deyiladi. Teng kuchli ta'rif: konservativ kuchning istalgan yopiq trayektoriya bo'ylab ishi nolga teng, $\\oint\\vec F\\cdot d\\vec r=0$. Haqiqatan ham, yopiq yo'lni $1\\to2$ (1-yo'l) va $2\\to1$ (2-yo'l) bo'laklarga ajratsak, $A_{12}^{(1)}+A_{21}^{(2)}=A_{12}^{(1)}-A_{12}^{(2)}$; bu nol bo'lishi uchun ishlar barcha yo'llarda bir xil bo'lishi kerak. Konservativ kuchlar: og'irlik va gravitatsiya kuchi, prujinaning elastiklik kuchi, elektrostatik (Kulon) kuch, umuman istalgan markaziy kuch $\\vec F=f(r)\\vec e_r$.",
+  "ru": "**Определение.** Если работа силы между двумя точками зависит только от этих точек и не зависит от траектории, сила называется консервативной (conservative force). Равносильное определение: работа консервативной силы по любой замкнутой траектории равна нулю, $\\oint\\vec F\\cdot d\\vec r=0$. Действительно, разбив замкнутый путь на участки $1\\to2$ (путь 1) и $2\\to1$ (путь 2), получим $A_{12}^{(1)}+A_{21}^{(2)}=A_{12}^{(1)}-A_{12}^{(2)}$; чтобы это было нулём, работы на всех путях должны совпадать. Консервативные силы: сила тяжести и тяготения, сила упругости пружины, электростатическая (кулоновская) сила, вообще любая центральная сила $\\vec F=f(r)\\vec e_r$.",
+  "en": "**Definition.** If the work of a force between two points depends only on those points and not on the trajectory, the force is called conservative. An equivalent definition: the work of a conservative force around any closed path is zero, $\\oint\\vec F\\cdot d\\vec r=0$. Indeed, splitting a closed path into the pieces $1\\to2$ (path 1) and $2\\to1$ (path 2) gives $A_{12}^{(1)}+A_{21}^{(2)}=A_{12}^{(1)}-A_{12}^{(2)}$; for this to vanish the work must be the same along all paths. Conservative forces: gravity and gravitation, the elastic force of a spring, the electrostatic (Coulomb) force, and in general any central force $\\vec F=f(r)\\vec e_r$."
+ },
+ {
+  "t": "li",
+  "uz": "**Nokonservativ kuchlar.** Ishi yo'lga bog'liq bo'lgan kuchlar nokonservativ (non-conservative force) deyiladi. Ularning eng muhimlari — sirpanish ishqalanishi va muhitning qarshilik kuchi: ular yopiq yo'lda ham manfiy ish bajaradi va mexanik energiyani ichki (issiqlik) energiyaga aylantiradi — bunday kuchlar dissipativ deyiladi. Tezlikka bog'liq kuch, umuman, konservativ bo'lmaydi; istisno — tezlikka perpendikulyar kuchlar (Lorents kuchi), ular umuman ish bajarmaydi. Odam mushaklari yoki dvigatel kuchi ham nokonservativ: ular mexanik energiyani oshirishi mumkin.",
+  "ru": "**Неконсервативные силы.** Силы, работа которых зависит от пути, называются неконсервативными (non-conservative force). Важнейшие из них — трение скольжения и сила сопротивления среды: они совершают отрицательную работу и на замкнутом пути и превращают механическую энергию во внутреннюю (тепловую) — такие силы называются диссипативными. Сила, зависящая от скорости, в общем случае неконсервативна; исключение — силы, перпендикулярные скорости (сила Лоренца), они вообще не совершают работы. Сила мышц человека или двигателя тоже неконсервативна: она может увеличивать механическую энергию.",
+  "en": "**Non-conservative forces.** Forces whose work depends on the path are called non-conservative. The most important are kinetic friction and drag: they do negative work even around a closed path and turn mechanical energy into internal (thermal) energy — such forces are called dissipative. A velocity-dependent force is in general not conservative; the exception is forces perpendicular to the velocity (the Lorentz force), which do no work at all. The force of human muscles or of an engine is also non-conservative: it can increase the mechanical energy."
+ },
+ {
+  "t": "li",
+  "uz": "**Rotor bo'yicha tekshirish.** Butun fazoda (yoki teshiksiz sohada) aniqlangan silliq kuch konservativ bo'lishi uchun uning rotori (curl) nol bo'lishi zarur va yetarli: $\\nabla\\times\\vec F=0$. Tekislikdagi $\\vec F=(F_x,F_y)$ uchun bu bitta shart: $\\frac{\\partial F_y}{\\partial x}=\\frac{\\partial F_x}{\\partial y}$. Masalan, $\\vec F=(2xy,\\,x^2)$ uchun $\\frac{\\partial F_y}{\\partial x}=2x=\\frac{\\partial F_x}{\\partial y}$ — konservativ; $\\vec F=(-y,\\,x)$ «uyurma» uchun $1\\neq-1$ — konservativ emas, uning radiusi $R$ bo'lgan aylana bo'ylab ishi $2\\pi R^2$ ([[F03]]). GRE da bu test bir necha soniyada variantlarni saralashga yordam beradi.",
+  "ru": "**Проверка по ротору.** Для того чтобы гладкая сила, определённая во всём пространстве (или в области без «дыр»), была консервативной, необходимо и достаточно, чтобы её ротор (curl) равнялся нулю: $\\nabla\\times\\vec F=0$. Для плоской силы $\\vec F=(F_x,F_y)$ это одно условие: $\\frac{\\partial F_y}{\\partial x}=\\frac{\\partial F_x}{\\partial y}$. Например, для $\\vec F=(2xy,\\,x^2)$ имеем $\\frac{\\partial F_y}{\\partial x}=2x=\\frac{\\partial F_x}{\\partial y}$ — консервативна; для «вихря» $\\vec F=(-y,\\,x)$ получаем $1\\neq-1$ — неконсервативна, её работа по окружности радиуса $R$ равна $2\\pi R^2$ ([[F03]]). В GRE этот тест помогает за несколько секунд отсеять варианты.",
+  "en": "**The curl test.** For a smooth force defined in all space (or in a region without «holes») to be conservative it is necessary and sufficient that its curl vanish: $\\nabla\\times\\vec F=0$. For a plane force $\\vec F=(F_x,F_y)$ this is one condition: $\\frac{\\partial F_y}{\\partial x}=\\frac{\\partial F_x}{\\partial y}$. For example, for $\\vec F=(2xy,\\,x^2)$ we have $\\frac{\\partial F_y}{\\partial x}=2x=\\frac{\\partial F_x}{\\partial y}$ — conservative; for the «vortex» $\\vec F=(-y,\\,x)$ we get $1\\neq-1$ — not conservative, and its work around a circle of radius $R$ is $2\\pi R^2$ ([[F03]]). On the GRE this test sorts the options in a few seconds."
+ },
+ {
+  "t": "m",
+  "m": "\\oint\\vec F\\cdot d\\vec r=0\\quad\\Longleftrightarrow\\quad\\nabla\\times\\vec F=0\\quad\\Longleftrightarrow\\quad\\vec F=-\\nabla U"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L03-F03.png",
+   "ru": "figures/B2-L03-F03-ru.png",
+   "en": "figures/B2-L03-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Potensial energiya va kuch (Potential energy and force)",
+  "ru": "6. Потенциальная энергия и сила",
+  "en": "6. Potential energy and force"
+ },
+ {
+  "t": "li",
+  "uz": "**Potensial energiyaning ta'rifi.** Konservativ kuchning ishi yo'lga bog'liq bo'lmagani uchun har bir nuqtaga son — potensial energiya (potential energy) $U(\\vec r)$ ni mos qo'yish mumkin: kuchning $1\\to2$ ishi potensial energiyaning kamayishiga teng, $A_{12}=U_1-U_2=-\\Delta U$. Tanlangan nol nuqtasi $\\vec r_0$ ga nisbatan $U(\\vec r)=-\\int_{\\vec r_0}^{\\vec r}\\vec F\\cdot d\\vec r$. Potensial energiya doimiy son aniqligida aniqlanadi — fizik ma'noga faqat uning farqlari ega, shuning uchun nol sathini masalaga qulay qilib tanlaymiz. Nokonservativ kuch uchun potensial energiya kiritib bo'lmaydi. B1 da potensial energiya $E_p$ deb belgilangan edi; universitet kursida va GRE da $U$ belgisi qabul qilingan.",
+  "ru": "**Определение потенциальной энергии.** Поскольку работа консервативной силы не зависит от пути, каждой точке можно сопоставить число — потенциальную энергию (potential energy) $U(\\vec r)$: работа силы на участке $1\\to2$ равна убыли потенциальной энергии, $A_{12}=U_1-U_2=-\\Delta U$. Относительно выбранной нулевой точки $\\vec r_0$ имеем $U(\\vec r)=-\\int_{\\vec r_0}^{\\vec r}\\vec F\\cdot d\\vec r$. Потенциальная энергия определена с точностью до постоянной — физический смысл имеют лишь её разности, поэтому нулевой уровень выбирают удобным для задачи. Для неконсервативной силы потенциальную энергию ввести нельзя. На этапе B1 потенциальная энергия обозначалась $E_p$; в университетском курсе и в GRE принято обозначение $U$.",
+  "en": "**Definition of potential energy.** Since the work of a conservative force does not depend on the path, every point can be assigned a number — the potential energy $U(\\vec r)$: the work of the force from $1\\to2$ equals the decrease in potential energy, $A_{12}=U_1-U_2=-\\Delta U$. Relative to a chosen zero point $\\vec r_0$ we have $U(\\vec r)=-\\int_{\\vec r_0}^{\\vec r}\\vec F\\cdot d\\vec r$. The potential energy is defined up to a constant — only its differences have physical meaning, so the zero level is chosen to suit the problem. No potential energy can be introduced for a non-conservative force. In stage B1 the potential energy was denoted $E_p$; in the university course and on the GRE the symbol $U$ is used."
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy misollar.** Yer sirti yaqinida $U=mgh$ ($h$ — tanlangan sathdan balandlik); prujina uchun $U=\\frac{kx^2}{2}$ (nol — deformatsiyalanmagan holat); gravitatsiya uchun $U=-\\frac{GMm}{r}$ (nol — cheksizlikda, 9-bo'lim); Kulon kuchi uchun $U=\\frac{kq_1q_2}{r}$. Tekshirish oson: $-\\frac{d}{dx}\\left(\\frac{kx^2}{2}\\right)=-kx$, $-\\frac{d}{dr}\\left(-\\frac{GMm}{r}\\right)=-\\frac{GMm}{r^2}$ — tortishish kuchi markazga yo'nalgan. Vertikal prujinadagi yuk uchun ikki energiya yig'indisi muvozanat nuqtasidan hisoblangan siljish $y$ orqali yana $\\frac{ky^2}{2}$ ko'rinishiga keladi (doimiy son aniqligida) — og'irlik faqat muvozanat nuqtasini siljitadi.",
+  "ru": "**Основные примеры.** Вблизи поверхности Земли $U=mgh$ ($h$ — высота над выбранным уровнем); для пружины $U=\\frac{kx^2}{2}$ (ноль — недеформированное состояние); для тяготения $U=-\\frac{GMm}{r}$ (ноль — на бесконечности, раздел 9); для кулоновской силы $U=\\frac{kq_1q_2}{r}$. Проверить легко: $-\\frac{d}{dx}\\left(\\frac{kx^2}{2}\\right)=-kx$, $-\\frac{d}{dr}\\left(-\\frac{GMm}{r}\\right)=-\\frac{GMm}{r^2}$ — сила притяжения направлена к центру. Для груза на вертикальной пружине сумма двух энергий через смещение $y$ от положения равновесия снова принимает вид $\\frac{ky^2}{2}$ (с точностью до постоянной) — тяжесть лишь сдвигает положение равновесия.",
+  "en": "**Key examples.** Near the Earth's surface $U=mgh$ ($h$ is the height above a chosen level); for a spring $U=\\frac{kx^2}{2}$ (zero at the undeformed state); for gravitation $U=-\\frac{GMm}{r}$ (zero at infinity, section 9); for the Coulomb force $U=\\frac{kq_1q_2}{r}$. The check is easy: $-\\frac{d}{dx}\\left(\\frac{kx^2}{2}\\right)=-kx$, $-\\frac{d}{dr}\\left(-\\frac{GMm}{r}\\right)=-\\frac{GMm}{r^2}$ — the attraction points towards the centre. For a mass on a vertical spring the sum of the two energies, written through the displacement $y$ from equilibrium, again takes the form $\\frac{ky^2}{2}$ (up to a constant) — gravity only shifts the equilibrium point."
+ },
+ {
+  "t": "m",
+  "m": "U=mgh,\\qquad U=\\frac{kx^2}{2},\\qquad U=-\\frac{GMm}{r},\\qquad U(\\vec r)=-\\int_{\\vec r_0}^{\\vec r}\\vec F\\cdot d\\vec r"
+ },
+ {
+  "t": "li",
+  "uz": "**Kuch — potensial energiya gradiyentining teskarisi.** Elementar ko'chishda $dU=-\\vec F\\cdot d\\vec r$. Bir o'lchamda $F_x=-\\frac{dU}{dx}$, uch o'lchamda $\\vec F=-\\nabla U=-\\left(\\frac{\\partial U}{\\partial x},\\frac{\\partial U}{\\partial y},\\frac{\\partial U}{\\partial z}\\right)$. Demak, kuch potensial energiya eng tez kamayadigan tomonga yo'nalgan va ekvipotensial sirtlarga ($U=\\mathrm{const}$) perpendikulyar ([[F04]]). $U(x)$ grafigida kuch qiyalikning teskari ishorasi: grafik o'sayotgan joyda kuch chapga, kamayayotgan joyda o'ngga, ekstremumlarda esa $F=0$. Gradiyentning rotori har doim nol, $\\nabla\\times\\nabla U=0$ — shuning uchun $\\vec F=-\\nabla U$ ko'rinishidagi kuch avtomatik konservativ.",
+  "ru": "**Сила — минус градиент потенциальной энергии.** При элементарном перемещении $dU=-\\vec F\\cdot d\\vec r$. В одном измерении $F_x=-\\frac{dU}{dx}$, в трёх $\\vec F=-\\nabla U=-\\left(\\frac{\\partial U}{\\partial x},\\frac{\\partial U}{\\partial y},\\frac{\\partial U}{\\partial z}\\right)$. Значит, сила направлена в сторону наискорейшего убывания потенциальной энергии и перпендикулярна эквипотенциальным поверхностям ($U=\\mathrm{const}$) ([[F04]]). На графике $U(x)$ сила — это наклон с обратным знаком: где график растёт, сила направлена влево, где убывает — вправо, а в экстремумах $F=0$. Ротор градиента всегда равен нулю, $\\nabla\\times\\nabla U=0$ — поэтому сила вида $\\vec F=-\\nabla U$ автоматически консервативна.",
+  "en": "**Force as minus the gradient of the potential energy.** For an elementary displacement $dU=-\\vec F\\cdot d\\vec r$. In one dimension $F_x=-\\frac{dU}{dx}$, in three $\\vec F=-\\nabla U=-\\left(\\frac{\\partial U}{\\partial x},\\frac{\\partial U}{\\partial y},\\frac{\\partial U}{\\partial z}\\right)$. Hence the force points in the direction of fastest decrease of the potential energy and is perpendicular to the equipotential surfaces ($U=\\mathrm{const}$) ([[F04]]). On a $U(x)$ graph the force is the slope with the opposite sign: where the graph rises the force points left, where it falls — right, and at the extrema $F=0$. The curl of a gradient is always zero, $\\nabla\\times\\nabla U=0$ — so a force of the form $\\vec F=-\\nabla U$ is automatically conservative."
+ },
+ {
+  "t": "m",
+  "m": "F_x=-\\frac{dU}{dx},\\qquad \\vec F=-\\nabla U,\\qquad A_{12}=U_1-U_2"
+ },
+ {
+  "t": "li",
+  "uz": "**Kuchdan potensial energiyani topish.** Kuch berilsa, avval $\\nabla\\times\\vec F=0$ ekanini tekshiramiz, keyin $U$ ni tiklaymiz: $\\frac{\\partial U}{\\partial x}=-F_x$ ni $x$ bo'yicha integrallaymiz, «doimiy» $y$ ning funksiyasi bo'ladi, uni $\\frac{\\partial U}{\\partial y}=-F_y$ dan topamiz. Masalan, $\\vec F=(2xy,\\,x^2)$ uchun $U=-x^2y+C$. Shundan keyin istalgan yo'l bo'ylab ish $A_{12}=U_1-U_2$ — integral hisoblash shart emas. Bir o'lchamli $F=-\\alpha x^3$ uchun $U=\\frac{\\alpha x^4}{4}$.",
+  "ru": "**Нахождение потенциальной энергии по силе.** Если дана сила, сначала проверяем, что $\\nabla\\times\\vec F=0$, затем восстанавливаем $U$: интегрируем $\\frac{\\partial U}{\\partial x}=-F_x$ по $x$, «постоянная» оказывается функцией $y$, её находим из $\\frac{\\partial U}{\\partial y}=-F_y$. Например, для $\\vec F=(2xy,\\,x^2)$ получаем $U=-x^2y+C$. После этого работа по любому пути $A_{12}=U_1-U_2$ — интеграл вычислять не нужно. Для одномерной силы $F=-\\alpha x^3$ имеем $U=\\frac{\\alpha x^4}{4}$.",
+  "en": "**Finding the potential energy from the force.** Given a force, first check that $\\nabla\\times\\vec F=0$, then reconstruct $U$: integrate $\\frac{\\partial U}{\\partial x}=-F_x$ with respect to $x$; the «constant» turns out to be a function of $y$, which is found from $\\frac{\\partial U}{\\partial y}=-F_y$. For example, for $\\vec F=(2xy,\\,x^2)$ we get $U=-x^2y+C$. After that the work along any path is $A_{12}=U_1-U_2$ — no integral is needed. For the one-dimensional force $F=-\\alpha x^3$ we have $U=\\frac{\\alpha x^4}{4}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L03-F04.png",
+   "ru": "figures/B2-L03-F04-ru.png",
+   "en": "figures/B2-L03-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Mexanik energiyaning saqlanishi (Conservation of mechanical energy)",
+  "ru": "7. Сохранение механической энергии",
+  "en": "7. Conservation of mechanical energy"
+ },
+ {
+  "t": "li",
+  "uz": "**Saqlanish qonuni.** Barcha kuchlar ishini konservativ va nokonservativ qismlarga ajratamiz: konservativ kuchlar ishini $-\\Delta U$ ko'rinishida yozamiz, nokonservativ kuchlar ishini $A'$ deb belgilaymiz: $-\\Delta U+A'=\\Delta E_k$. Bundan $\\Delta(E_k+U)=A'$. Mexanik energiya (mechanical energy) $E=E_k+U$ nokonservativ kuchlar ishi qadar o'zgaradi. Agar nokonservativ kuchlar ish bajarmasa ($A'=0$), mexanik energiya saqlanadi: $E_k+U=\\mathrm{const}$ — mexanik energiyaning saqlanish qonuni.",
+  "ru": "**Закон сохранения.** Разделим работу всех сил на консервативную и неконсервативную части: работу консервативных сил запишем как $-\\Delta U$, работу неконсервативных обозначим $A'$: $-\\Delta U+A'=\\Delta E_k$. Отсюда $\\Delta(E_k+U)=A'$. Механическая энергия (mechanical energy) $E=E_k+U$ меняется на величину работы неконсервативных сил. Если неконсервативные силы работы не совершают ($A'=0$), механическая энергия сохраняется: $E_k+U=\\mathrm{const}$ — закон сохранения механической энергии.",
+  "en": "**The conservation law.** Split the work of all forces into conservative and non-conservative parts: write the work of the conservative forces as $-\\Delta U$ and denote the work of the non-conservative ones by $A'$: $-\\Delta U+A'=\\Delta E_k$. Hence $\\Delta(E_k+U)=A'$. The mechanical energy $E=E_k+U$ changes by the work of the non-conservative forces. If the non-conservative forces do no work ($A'=0$), the mechanical energy is conserved: $E_k+U=\\mathrm{const}$ — the law of conservation of mechanical energy."
+ },
+ {
+  "t": "m",
+  "m": "E=E_k+U,\\qquad \\Delta E=A',\\qquad A'=0\\ \\Rightarrow\\ \\frac{mv_1^2}{2}+U_1=\\frac{mv_2^2}{2}+U_2"
+ },
+ {
+  "t": "li",
+  "uz": "**Ishqalanish bilan energiya balansi.** Qo'zg'almas sirtda sirpanish ishqalanishi uchun $A'=-F_{\\mu}s$, va bu energiya issiqlikka aylanadi: $Q=F_{\\mu}s$. To'liq energiya saqlanadi: $E_1=E_2+Q$ ([[F05]]). Masalan, $h$ balandlikdan qiyaligi $\\alpha$ bo'lgan g'adir-budir qiya tekislikdan sirpangan jism uchun $mgh-\\mu mg\\cos\\alpha\\cdot\\frac{h}{\\sin\\alpha}=\\frac{mv^2}{2}$. Energiya usulida yo'nalishlar emas, faqat boshlang'ich va oxirgi holatlar va nokonservativ kuchlar ishi kerak — bu uning asosiy afzalligi.",
+  "ru": "**Баланс энергии с трением.** Для трения скольжения на неподвижной поверхности $A'=-F_{\\mu}s$, и эта энергия переходит в теплоту: $Q=F_{\\mu}s$. Полная энергия сохраняется: $E_1=E_2+Q$ ([[F05]]). Например, для тела, соскользнувшего с высоты $h$ по шероховатой наклонной плоскости с углом $\\alpha$, имеем $mgh-\\mu mg\\cos\\alpha\\cdot\\frac{h}{\\sin\\alpha}=\\frac{mv^2}{2}$. В энергетическом методе нужны не направления, а только начальное и конечное состояния и работа неконсервативных сил — в этом его главное преимущество.",
+  "en": "**Energy balance with friction.** For kinetic friction on a fixed surface $A'=-F_{\\mu}s$, and this energy turns into heat: $Q=F_{\\mu}s$. The total energy is conserved: $E_1=E_2+Q$ ([[F05]]). For example, for a body sliding from height $h$ down a rough incline of angle $\\alpha$ we have $mgh-\\mu mg\\cos\\alpha\\cdot\\frac{h}{\\sin\\alpha}=\\frac{mv^2}{2}$. The energy method needs not directions but only the initial and final states and the work of the non-conservative forces — this is its main advantage."
+ },
+ {
+  "t": "li",
+  "uz": "**Klassik natijalar.** 1) Silliq sirtdan $h$ balandlikdan sirpangan jism tezligi $v=\\sqrt{2gh}$ — sirt shakliga bog'liq emas. 2) Radiusi $R$ bo'lgan vertikal halqani (loop) to'liq aylanib chiqish uchun eng yuqori nuqtada $v^2\\geq gR$, bundan $h_{min}=\\frac{5R}{2}$. 3) Silliq yarim shar cho'qqisidan tinch holatdan sirpangan jism $N=0$ bo'lganda sirtdan ajraladi: $mg\\cos\\theta=\\frac{mv^2}{R}$ va $v^2=2gR(1-\\cos\\theta)$ dan $\\cos\\theta=\\frac{2}{3}$. 4) Gorizontal holatdan qo'yib yuborilgan mayatnik ipining pastki nuqtadagi tarangligi $T=3mg$. 5) Deformatsiyalanmagan vertikal prujinaga osib, qo'yib yuborilgan yukning eng katta cho'zilishi $\\frac{2mg}{k}$ — muvozanatdagi cho'zilishdan ikki marta katta.",
+  "ru": "**Классические результаты.** 1) Скорость тела, соскользнувшего с высоты $h$ по гладкой поверхности, $v=\\sqrt{2gh}$ — не зависит от формы поверхности. 2) Чтобы пройти вертикальную петлю радиуса $R$, в верхней точке нужно $v^2\\geq gR$, откуда $h_{min}=\\frac{5R}{2}$. 3) Тело, соскальзывающее без начальной скорости с вершины гладкой полусферы, отрывается при $N=0$: из $mg\\cos\\theta=\\frac{mv^2}{R}$ и $v^2=2gR(1-\\cos\\theta)$ получаем $\\cos\\theta=\\frac{2}{3}$. 4) Натяжение нити маятника, отпущенного из горизонтального положения, в нижней точке $T=3mg$. 5) Наибольшее растяжение недеформированной вертикальной пружины, к которой подвесили и отпустили груз, равно $\\frac{2mg}{k}$ — вдвое больше растяжения в равновесии.",
+  "en": "**Classic results.** 1) The speed of a body sliding from height $h$ on a smooth surface is $v=\\sqrt{2gh}$ — independent of the shape of the surface. 2) To go round a vertical loop of radius $R$ we need $v^2\\geq gR$ at the top, hence $h_{min}=\\frac{5R}{2}$. 3) A body sliding from rest off the top of a smooth hemisphere leaves it when $N=0$: from $mg\\cos\\theta=\\frac{mv^2}{R}$ and $v^2=2gR(1-\\cos\\theta)$ we get $\\cos\\theta=\\frac{2}{3}$. 4) The string tension of a pendulum released from the horizontal is $T=3mg$ at the bottom. 5) The maximum extension of an unstretched vertical spring from which a mass is hung and released is $\\frac{2mg}{k}$ — twice the equilibrium extension."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L03-F05.png",
+   "ru": "figures/B2-L03-F05-ru.png",
+   "en": "figures/B2-L03-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Potensial energiya grafiklari: muvozanat va harakat sohalari (Potential energy diagrams: equilibrium and allowed regions)",
+  "ru": "8. Графики потенциальной энергии: равновесие и области движения",
+  "en": "8. Potential energy diagrams: equilibrium and allowed regions"
+ },
+ {
+  "t": "li",
+  "uz": "**Muvozanat nuqtalari.** Bir o'lchamli harakatda kuch $F_x=-\\frac{dU}{dx}$, shuning uchun muvozanat nuqtasida (equilibrium point) $U'(x_0)=0$. Agar $x_0$ — minimum ($U''(x_0)>0$) bo'lsa, siljiganda kuch jismni orqaga qaytaradi — turg'un muvozanat (stable equilibrium); agar maksimum ($U''(x_0)<0$) bo'lsa, kuch jismni yanada uzoqlashtiradi — turg'unmas muvozanat (unstable equilibrium); $U$ o'zgarmas bo'lgan sohada esa farqsiz muvozanat (neutral equilibrium). Tasavvur uchun: $U(x)$ grafigi — «tepalik va chuqurliklar», jism esa shu sirt bo'ylab dumalayotgan sharcha ([[F06]]).",
+  "ru": "**Точки равновесия.** При одномерном движении сила $F_x=-\\frac{dU}{dx}$, поэтому в точке равновесия (equilibrium point) $U'(x_0)=0$. Если $x_0$ — минимум ($U''(x_0)>0$), при смещении сила возвращает тело назад — устойчивое равновесие (stable equilibrium); если максимум ($U''(x_0)<0$), сила уводит тело ещё дальше — неустойчивое равновесие (unstable equilibrium); в области, где $U$ постоянна, — безразличное равновесие (neutral equilibrium). Наглядно: график $U(x)$ — «холмы и ямы», а тело — шарик, катящийся по этой поверхности ([[F06]]).",
+  "en": "**Equilibrium points.** In one-dimensional motion the force is $F_x=-\\frac{dU}{dx}$, so at an equilibrium point $U'(x_0)=0$. If $x_0$ is a minimum ($U''(x_0)>0$), a displacement produces a force that pushes the body back — stable equilibrium; if it is a maximum ($U''(x_0)<0$), the force pushes the body further away — unstable equilibrium; in a region where $U$ is constant — neutral equilibrium. Picture it: the $U(x)$ graph is «hills and valleys», and the body is a small ball rolling on that surface ([[F06]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Ruxsat etilgan sohalar va qaytish nuqtalari.** Mexanik energiya saqlansa, $E_k=E-U(x)\\geq0$, demak jism faqat $U(x)\\leq E$ bo'lgan sohalarda bo'la oladi. $U(x)=E$ nuqtalar — qaytish nuqtalari (turning point): u yerda tezlik nol, lekin kuch nol emas, shuning uchun jism orqaga qaytadi. Ikki qaytish nuqtasi orasidagi harakat chegaralangan va davriy (jism potensial o'rada); bitta qaytish nuqtasi bo'lsa, jism cheksizlikka ketadi. Klassik jism $E<U_{max}$ bo'lsa potensial to'siqdan o'ta olmaydi (kvant mexanikasida esa tunnel effekti bor). Grafikdan tezlik ham o'qiladi: $v=\\sqrt{\\frac{2(E-U)}{m}}$ — chuqurlik qancha katta bo'lsa, tezlik shuncha katta.",
+  "ru": "**Разрешённые области и точки поворота.** Если механическая энергия сохраняется, то $E_k=E-U(x)\\geq0$, значит, тело может находиться лишь в областях, где $U(x)\\leq E$. Точки $U(x)=E$ — точки поворота (turning point): в них скорость равна нулю, но сила не равна нулю, поэтому тело поворачивает назад. Движение между двумя точками поворота финитно и периодично (тело в потенциальной яме); при одной точке поворота тело уходит на бесконечность. Классическое тело при $E<U_{max}$ не может преодолеть потенциальный барьер (в квантовой механике возможен туннельный эффект). По графику читается и скорость: $v=\\sqrt{\\frac{2(E-U)}{m}}$ — чем глубже яма, тем больше скорость.",
+  "en": "**Allowed regions and turning points.** If mechanical energy is conserved, $E_k=E-U(x)\\geq0$, so the body can only be in regions where $U(x)\\leq E$. The points with $U(x)=E$ are turning points: there the speed is zero but the force is not, so the body turns back. Motion between two turning points is bounded and periodic (the body is in a potential well); with only one turning point the body escapes to infinity. A classical body with $E<U_{max}$ cannot cross a potential barrier (in quantum mechanics there is tunnelling). The speed can also be read off the graph: $v=\\sqrt{\\frac{2(E-U)}{m}}$ — the deeper the well, the higher the speed."
+ },
+ {
+  "t": "m",
+  "m": "U'(x_0)=0,\\qquad U''(x_0)>0,\\qquad U(x)\\leq E,\\qquad v=\\sqrt{\\frac{2(E-U)}{m}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L03-F06.png",
+   "ru": "figures/B2-L03-F06-ru.png",
+   "en": "figures/B2-L03-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Kichik tebranishlar.** Turg'un muvozanat yaqinida $U(x)$ ni Teylor qatoriga yoyamiz: $U(x)\\approx U(x_0)+\\frac{1}{2}U''(x_0)(x-x_0)^2$ (birinchi hosila nol). Bu — bikrligi $k=U''(x_0)$ bo'lgan prujinaning potensial energiyasi, demak har qanday potensial o'ra tubida kichik tebranishlar garmonik va chastotasi $\\omega=\\sqrt{\\frac{U''(x_0)}{m}}$. Masalan, $U=U_0\\left(1-\\cos\\frac{x}{a}\\right)$ uchun $U''(0)=\\frac{U_0}{a^2}$ va $\\omega=\\sqrt{\\frac{U_0}{ma^2}}$; mayatnik uchun $U=mgl(1-\\cos\\theta)$ dan ma'lum $\\omega=\\sqrt{\\frac{g}{l}}$ chiqadi. So'nuvchi va majburiy tebranishlar — B2-L07 da.",
+  "ru": "**Малые колебания.** Вблизи устойчивого равновесия разложим $U(x)$ в ряд Тейлора: $U(x)\\approx U(x_0)+\\frac{1}{2}U''(x_0)(x-x_0)^2$ (первая производная равна нулю). Это потенциальная энергия пружины жёсткостью $k=U''(x_0)$, значит, малые колебания на дне любой потенциальной ямы гармонические, с частотой $\\omega=\\sqrt{\\frac{U''(x_0)}{m}}$. Например, для $U=U_0\\left(1-\\cos\\frac{x}{a}\\right)$ имеем $U''(0)=\\frac{U_0}{a^2}$ и $\\omega=\\sqrt{\\frac{U_0}{ma^2}}$; для маятника из $U=mgl(1-\\cos\\theta)$ получается известное $\\omega=\\sqrt{\\frac{g}{l}}$. Затухающие и вынужденные колебания — в B2-L07.",
+  "en": "**Small oscillations.** Near a stable equilibrium expand $U(x)$ in a Taylor series: $U(x)\\approx U(x_0)+\\frac{1}{2}U''(x_0)(x-x_0)^2$ (the first derivative vanishes). This is the potential energy of a spring of stiffness $k=U''(x_0)$, so small oscillations at the bottom of any potential well are harmonic with frequency $\\omega=\\sqrt{\\frac{U''(x_0)}{m}}$. For example, for $U=U_0\\left(1-\\cos\\frac{x}{a}\\right)$ we have $U''(0)=\\frac{U_0}{a^2}$ and $\\omega=\\sqrt{\\frac{U_0}{ma^2}}$; for a pendulum $U=mgl(1-\\cos\\theta)$ gives the familiar $\\omega=\\sqrt{\\frac{g}{l}}$. Damped and driven oscillations are in B2-L07."
+ },
+ {
+  "t": "li",
+  "uz": "**Harakat vaqti.** Energiya saqlanishidan $\\frac{dx}{dt}=\\pm\\sqrt{\\frac{2(E-U)}{m}}$, bundan ikki nuqta orasidagi harakat vaqti $t=\\int\\frac{dx}{\\sqrt{2(E-U)/m}}$; ikki qaytish nuqtasi $x_1$ va $x_2$ orasidagi davriy harakatning davri $T=\\sqrt{2m}\\int_{x_1}^{x_2}\\frac{dx}{\\sqrt{E-U(x)}}$. Kichik tebranishlarda bu integral $\\frac{2\\pi}{\\omega}$ ga keladi, katta amplitudada esa davr energiyaga bog'liq bo'ladi (masalan, katta burchakli mayatnikda davr ortadi).",
+  "ru": "**Время движения.** Из сохранения энергии $\\frac{dx}{dt}=\\pm\\sqrt{\\frac{2(E-U)}{m}}$, откуда время движения между двумя точками $t=\\int\\frac{dx}{\\sqrt{2(E-U)/m}}$; период движения между точками поворота $x_1$ и $x_2$ равен $T=\\sqrt{2m}\\int_{x_1}^{x_2}\\frac{dx}{\\sqrt{E-U(x)}}$. Для малых колебаний этот интеграл сводится к $\\frac{2\\pi}{\\omega}$, а при большой амплитуде период зависит от энергии (например, у маятника с большим углом период растёт).",
+  "en": "**Time of motion.** Energy conservation gives $\\frac{dx}{dt}=\\pm\\sqrt{\\frac{2(E-U)}{m}}$, so the time to move between two points is $t=\\int\\frac{dx}{\\sqrt{2(E-U)/m}}$; the period of motion between the turning points $x_1$ and $x_2$ is $T=\\sqrt{2m}\\int_{x_1}^{x_2}\\frac{dx}{\\sqrt{E-U(x)}}$. For small oscillations this integral reduces to $\\frac{2\\pi}{\\omega}$, while at large amplitude the period depends on the energy (for example, for a pendulum at large angles the period grows)."
+ },
+ {
+  "t": "m",
+  "m": "k=U''(x_0),\\qquad \\omega=\\sqrt{\\frac{U''(x_0)}{m}},\\qquad T=\\sqrt{2m}\\int_{x_1}^{x_2}\\frac{dx}{\\sqrt{E-U(x)}}"
+ },
+ {
+  "t": "h2",
+  "uz": "9. Molekulyar va gravitatsion potensial energiya (Molecular and gravitational potential energy)",
+  "ru": "9. Молекулярная и гравитационная потенциальная энергия",
+  "en": "9. Molecular and gravitational potential energy"
+ },
+ {
+  "t": "li",
+  "uz": "**Lennard-Jons potensiali.** Ikki neytral atom yoki molekula orasidagi o'zaro ta'sir energiyasi ko'pincha $U(r)=4\\varepsilon\\left[\\left(\\frac{\\sigma}{r}\\right)^{12}-\\left(\\frac{\\sigma}{r}\\right)^6\\right]$ bilan tasvirlanadi: birinchi had kichik masofalardagi kuchli itarishni, ikkinchisi katta masofalardagi tortishishni beradi ([[F07]]). $U(\\sigma)=0$; minimum $U'(r_0)=0$ dan $r_0=2^{1/6}\\sigma$ da, chuqurligi $U(r_0)=-\\varepsilon$ — bu molekulaning dissotsiatsiya energiyasi. $r<r_0$ da kuch itaruvchi, $r>r_0$ da tortuvchi. Minimum yaqinida $U''(r_0)=\\frac{72\\varepsilon}{r_0^2}$ — ikki atomli molekula tebranishlarining effektiv bikrligi. O'ra nosimmetrik (o'ng tomoni yotiqroq), shuning uchun energiya oshganda o'rtacha masofa ortadi — bu issiqlikdan kengayishning mikroskopik sababi.",
+  "ru": "**Потенциал Леннард-Джонса.** Энергию взаимодействия двух нейтральных атомов или молекул часто описывают формулой $U(r)=4\\varepsilon\\left[\\left(\\frac{\\sigma}{r}\\right)^{12}-\\left(\\frac{\\sigma}{r}\\right)^6\\right]$: первый член даёт сильное отталкивание на малых расстояниях, второй — притяжение на больших ([[F07]]). $U(\\sigma)=0$; минимум из $U'(r_0)=0$ при $r_0=2^{1/6}\\sigma$, его глубина $U(r_0)=-\\varepsilon$ — энергия диссоциации молекулы. При $r<r_0$ сила отталкивающая, при $r>r_0$ — притягивающая. Вблизи минимума $U''(r_0)=\\frac{72\\varepsilon}{r_0^2}$ — эффективная жёсткость колебаний двухатомной молекулы. Яма несимметрична (правая сторона положе), поэтому с ростом энергии среднее расстояние растёт — это микроскопическая причина теплового расширения.",
+  "en": "**The Lennard-Jones potential.** The interaction energy of two neutral atoms or molecules is often described by $U(r)=4\\varepsilon\\left[\\left(\\frac{\\sigma}{r}\\right)^{12}-\\left(\\frac{\\sigma}{r}\\right)^6\\right]$: the first term gives strong repulsion at small distances, the second attraction at large distances ([[F07]]). $U(\\sigma)=0$; the minimum, from $U'(r_0)=0$, lies at $r_0=2^{1/6}\\sigma$, and its depth $U(r_0)=-\\varepsilon$ is the dissociation energy of the molecule. For $r<r_0$ the force is repulsive, for $r>r_0$ attractive. Near the minimum $U''(r_0)=\\frac{72\\varepsilon}{r_0^2}$ — the effective stiffness for vibrations of a diatomic molecule. The well is asymmetric (its right side is flatter), so as the energy grows the mean separation increases — the microscopic reason for thermal expansion."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L03-F07.png",
+   "ru": "figures/B2-L03-F07-ru.png",
+   "en": "figures/B2-L03-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Gravitatsion potensial energiya.** Butun olam tortishish kuchi $F=\\frac{GMm}{r^2}$ markaziy, demak konservativ. Nol sathini cheksizlikda olsak, $U(r)=-\\frac{GMm}{r}$ — doim manfiy va $r$ ortgan sari nolgacha o'sadi ([[F08]]). Yer sirti yaqinida ($h\\ll R$): $U(R+h)-U(R)=GMm\\left(\\frac{1}{R}-\\frac{1}{R+h}\\right)\\approx\\frac{GMm}{R^2}h=mgh$, chunki $g=\\frac{GM}{R^2}$. Demak, $mgh$ — faqat kichik balandliklar uchun to'g'ri taqribiy formula; balandlik Yer radiusi bilan solishtiriladigan bo'lsa, $-\\frac{GMm}{r}$ ni ishlatish shart.",
+  "ru": "**Гравитационная потенциальная энергия.** Сила всемирного тяготения $F=\\frac{GMm}{r^2}$ центральная, значит, консервативная. Если нулевой уровень взять на бесконечности, $U(r)=-\\frac{GMm}{r}$ — всегда отрицательна и растёт до нуля с увеличением $r$ ([[F08]]). Вблизи поверхности Земли ($h\\ll R$): $U(R+h)-U(R)=GMm\\left(\\frac{1}{R}-\\frac{1}{R+h}\\right)\\approx\\frac{GMm}{R^2}h=mgh$, поскольку $g=\\frac{GM}{R^2}$. Значит, $mgh$ — приближённая формула, верная лишь для малых высот; если высота сравнима с радиусом Земли, нужно использовать $-\\frac{GMm}{r}$.",
+  "en": "**Gravitational potential energy.** The universal gravitational force $F=\\frac{GMm}{r^2}$ is central and therefore conservative. With the zero level at infinity, $U(r)=-\\frac{GMm}{r}$ — always negative and rising towards zero as $r$ grows ([[F08]]). Near the Earth's surface ($h\\ll R$): $U(R+h)-U(R)=GMm\\left(\\frac{1}{R}-\\frac{1}{R+h}\\right)\\approx\\frac{GMm}{R^2}h=mgh$, because $g=\\frac{GM}{R^2}$. So $mgh$ is an approximate formula valid only for small heights; if the height is comparable to the Earth's radius, $-\\frac{GMm}{r}$ must be used."
+ },
+ {
+  "t": "li",
+  "uz": "**Qochish tezligi.** Jism sayyoradan cheksiz uzoqlashishi uchun uning to'liq energiyasi $E=\\frac{mv^2}{2}-\\frac{GMm}{R}\\geq0$ bo'lishi kerak; bundan ikkinchi kosmik tezlik yoki qochish tezligi (escape velocity) $v_2=\\sqrt{\\frac{2GM}{R}}=\\sqrt{2gR}$; Yer uchun $\\approx11.2\\ \\mathrm{km/s}$. Bir xil zichlikdagi sayyoralar uchun $M\\sim R^3$, demak $v_2\\sim R$. Agar $E<0$ bo'lsa, harakat chegaralangan: vertikal otilgan jism $r_{max}$ ga ko'tariladi, $\\frac{mv_0^2}{2}-\\frac{GMm}{R}=-\\frac{GMm}{r_{max}}$, bundan $h=\\frac{Rv_0^2}{2gR-v_0^2}$. Masalan, $v_0=\\sqrt{gR}$ da $h=R$, $mgh$ formulasi esa xato $\\frac{R}{2}$ ni beradi. Orbitalar va Kepler qonunlari — B2-L08 da.",
+  "ru": "**Скорость убегания.** Чтобы тело удалилось от планеты на бесконечность, его полная энергия должна быть $E=\\frac{mv^2}{2}-\\frac{GMm}{R}\\geq0$; отсюда вторая космическая скорость, или скорость убегания (escape velocity), $v_2=\\sqrt{\\frac{2GM}{R}}=\\sqrt{2gR}$; для Земли $\\approx11.2\\ \\mathrm{km/s}$. Для планет одинаковой плотности $M\\sim R^3$, значит, $v_2\\sim R$. Если $E<0$, движение финитно: тело, брошенное вертикально, поднимается до $r_{max}$, $\\frac{mv_0^2}{2}-\\frac{GMm}{R}=-\\frac{GMm}{r_{max}}$, откуда $h=\\frac{Rv_0^2}{2gR-v_0^2}$. Например, при $v_0=\\sqrt{gR}$ имеем $h=R$, а формула $mgh$ даёт ошибочное $\\frac{R}{2}$. Орбиты и законы Кеплера — в B2-L08.",
+  "en": "**Escape velocity.** For a body to recede from a planet to infinity its total energy must satisfy $E=\\frac{mv^2}{2}-\\frac{GMm}{R}\\geq0$; hence the second cosmic velocity, or escape velocity, $v_2=\\sqrt{\\frac{2GM}{R}}=\\sqrt{2gR}$; for the Earth $\\approx11.2\\ \\mathrm{km/s}$. For planets of equal density $M\\sim R^3$, so $v_2\\sim R$. If $E<0$ the motion is bounded: a body thrown vertically rises to $r_{max}$, $\\frac{mv_0^2}{2}-\\frac{GMm}{R}=-\\frac{GMm}{r_{max}}$, hence $h=\\frac{Rv_0^2}{2gR-v_0^2}$. For example, for $v_0=\\sqrt{gR}$ we get $h=R$, whereas the $mgh$ formula gives the wrong $\\frac{R}{2}$. Orbits and Kepler's laws are in B2-L08."
+ },
+ {
+  "t": "m",
+  "m": "U(r)=4\\varepsilon\\left[\\left(\\frac{\\sigma}{r}\\right)^{12}-\\left(\\frac{\\sigma}{r}\\right)^6\\right],\\qquad U=-\\frac{GMm}{r},\\qquad v_2=\\sqrt{\\frac{2GM}{R}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L03-F08.png",
+   "ru": "figures/B2-L03-F08-ru.png",
+   "en": "figures/B2-L03-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE uchun tez usullar (Fast techniques for the GRE)",
+  "ru": "10. Быстрые приёмы для GRE",
+  "en": "10. Fast techniques for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya yoki kuch?** Savol ikki holatdagi tezlik, balandlik yoki deformatsiya haqida bo'lsa — energiya usuli; tayanch reaksiya, ip tarangligi yoki ajralish sharti so'ralsa — energiya bilan birga Nyutonning 2-qonuni (normal yo'nalishda $\\frac{mv^2}{R}$) kerak. Halqa, yarim shar va mayatnik masalalarining hammasi shu sxema bilan yechiladi: energiyadan $v^2$, keyin radial tenglamadan kuch. Vaqt so'ralsa, energiya usuli yetarli emas — kinematika yoki harakat tenglamasi kerak.",
+  "ru": "**Энергия или силы?** Если вопрос о скорости, высоте или деформации в двух положениях — энергетический метод; если спрашивают силу реакции, натяжение нити или условие отрыва — нужен второй закон Ньютона (в нормальном направлении $\\frac{mv^2}{R}$) вместе с энергией. Все задачи о петле, полусфере и маятнике решаются по этой схеме: из энергии $v^2$, затем из радиального уравнения — сила. Если спрашивают время, энергетического метода недостаточно — нужна кинематика или уравнение движения.",
+  "en": "**Energy or forces?** If the question is about the speed, height or deformation in two positions — use energy; if it asks for a normal force, a string tension or a condition for leaving a surface — Newton's second law (in the normal direction $\\frac{mv^2}{R}$) is needed together with energy. All loop, hemisphere and pendulum problems follow this scheme: $v^2$ from energy, then the force from the radial equation. If a time is asked, the energy method is not enough — kinematics or the equation of motion is needed."
+ },
+ {
+  "t": "li",
+  "uz": "**Grafiklar va masshtablash.** $F_x(x)$ grafigi — ishni yuza sifatida oling; $U(x)$ grafigi — kuchni qiyalikning teskari ishorasi, ruxsat etilgan sohani $E$ chizig'i ostidagi qism sifatida o'qing. Javobni ko'pincha masshtablash beradi: sirpanish yo'li $s\\sim v_0^2$, tushish tezligi $v\\sim\\sqrt{h}$, prujina ishi $\\sim x^2$, qochish tezligi bir xil zichlikda $\\sim R$, kvadratik qarshilikda quvvat $\\sim v^3$. O'lchamlar va chegaraviy holatlar ($\\mu\\to0$, $h\\ll R$, $m\\to\\infty$) noto'g'ri variantlarni tez chiqarib tashlaydi.",
+  "ru": "**Графики и масштабирование.** График $F_x(x)$ — берите работу как площадь; график $U(x)$ — читайте силу как наклон с обратным знаком, а разрешённую область — как часть под линией $E$. Ответ часто даёт масштабирование: путь скольжения $s\\sim v_0^2$, скорость падения $v\\sim\\sqrt{h}$, работа пружины $\\sim x^2$, скорость убегания при одинаковой плотности $\\sim R$, мощность при квадратичном сопротивлении $\\sim v^3$. Размерности и предельные случаи ($\\mu\\to0$, $h\\ll R$, $m\\to\\infty$) быстро отсекают неверные варианты.",
+  "en": "**Graphs and scaling.** For an $F_x(x)$ graph take the work as the area; for a $U(x)$ graph read the force as the slope with the opposite sign and the allowed region as the part below the $E$ line. Scaling often gives the answer: sliding distance $s\\sim v_0^2$, fall speed $v\\sim\\sqrt{h}$, spring work $\\sim x^2$, escape speed at equal density $\\sim R$, power with quadratic drag $\\sim v^3$. Dimensions and limiting cases ($\\mu\\to0$, $h\\ll R$, $m\\to\\infty$) quickly eliminate wrong options."
+ },
+ {
+  "t": "li",
+  "uz": "**Tez-tez uchraydigan xatolar.** Ishqalanish ishida ko'chish o'rniga yo'lni olmaslik (yoki aksincha); harakatlanayotgan sirtning $N$ kuchi ish bajarmaydi deb o'ylash; halqa cho'qqisida tezlikni nol deb olish (aslida $v^2\\geq gR$); prujinani $x$ dan $2x$ gacha cho'zish ishini $\\frac{kx^2}{2}$ deb olish; katta balandliklarda $mgh$ ni ishlatish; gravitatsion potensial energiya ishorasini unutish ($U<0$); qaytish nuqtasida kuchni ham nol deb o'ylash.",
+  "ru": "**Частые ошибки.** Брать в работе трения перемещение вместо пути (или наоборот); считать, что сила $N$ движущейся поверхности не совершает работы; принимать скорость в верхней точке петли равной нулю (на самом деле $v^2\\geq gR$); считать работу растяжения пружины от $x$ до $2x$ равной $\\frac{kx^2}{2}$; использовать $mgh$ на больших высотах; забывать знак гравитационной потенциальной энергии ($U<0$); думать, что в точке поворота равна нулю и сила.",
+  "en": "**Common mistakes.** Using the displacement instead of the path length in the work of friction (or vice versa); thinking that the force $N$ of a moving surface does no work; taking the speed at the top of a loop as zero (in fact $v^2\\geq gR$); taking the work to stretch a spring from $x$ to $2x$ as $\\frac{kx^2}{2}$; using $mgh$ at large heights; forgetting the sign of the gravitational potential energy ($U<0$); thinking that the force is also zero at a turning point."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Ish",
+    "ru": "Работа",
+    "en": "Work",
+    "m": "A=\\vec F\\cdot\\Delta\\vec r,\\quad A=\\int_1^2\\vec F\\cdot d\\vec r"
+   },
+   {
+    "uz": "Og'irlik, prujina, ishqalanish ishi",
+    "ru": "Работа тяжести, пружины, трения",
+    "en": "Work of gravity, spring, friction",
+    "m": "mg(h_1-h_2),\\quad \\frac{kx_1^2}{2}-\\frac{kx_2^2}{2},\\quad -\\mu mgs"
+   },
+   {
+    "uz": "Kinetik energiya teoremasi",
+    "ru": "Теорема о кинетической энергии",
+    "en": "Work–energy theorem",
+    "m": "A=\\Delta E_k,\\quad E_k=\\frac{mv^2}{2}=\\frac{p^2}{2m}"
+   },
+   {
+    "uz": "Quvvat",
+    "ru": "Мощность",
+    "en": "Power",
+    "m": "P=\\frac{dA}{dt}=\\vec F\\cdot\\vec v"
+   },
+   {
+    "uz": "Eng katta tezlik",
+    "ru": "Максимальная скорость",
+    "en": "Maximum speed",
+    "m": "v_{max}=\\frac{P}{mg\\sin\\alpha+f}"
+   },
+   {
+    "uz": "Konservativlik sharti",
+    "ru": "Условие консервативности",
+    "en": "Condition for conservativeness",
+    "m": "\\oint\\vec F\\cdot d\\vec r=0,\\quad \\nabla\\times\\vec F=0"
+   },
+   {
+    "uz": "Potensial energiya",
+    "ru": "Потенциальная энергия",
+    "en": "Potential energy",
+    "m": "U(\\vec r)=-\\int_{\\vec r_0}^{\\vec r}\\vec F\\cdot d\\vec r,\\quad A_{12}=U_1-U_2"
+   },
+   {
+    "uz": "Kuch va potensial energiya",
+    "ru": "Сила и потенциальная энергия",
+    "en": "Force and potential energy",
+    "m": "\\vec F=-\\nabla U,\\quad F_x=-\\frac{dU}{dx}"
+   },
+   {
+    "uz": "Asosiy potensial energiyalar",
+    "ru": "Основные потенциальные энергии",
+    "en": "Basic potential energies",
+    "m": "mgh,\\quad \\frac{kx^2}{2},\\quad -\\frac{GMm}{r}"
+   },
+   {
+    "uz": "Energiya balansi",
+    "ru": "Баланс энергии",
+    "en": "Energy balance",
+    "m": "\\Delta(E_k+U)=A',\\quad E_1=E_2+Q"
+   },
+   {
+    "uz": "Halqa, yarim shar, mayatnik",
+    "ru": "Петля, полусфера, маятник",
+    "en": "Loop, hemisphere, pendulum",
+    "m": "h_{min}=\\frac{5R}{2},\\quad \\cos\\theta=\\frac{2}{3},\\quad T=3mg"
+   },
+   {
+    "uz": "Muvozanat va turg'unlik",
+    "ru": "Равновесие и устойчивость",
+    "en": "Equilibrium and stability",
+    "m": "U'(x_0)=0,\\quad U''(x_0)>0"
+   },
+   {
+    "uz": "Kichik tebranishlar",
+    "ru": "Малые колебания",
+    "en": "Small oscillations",
+    "m": "\\omega=\\sqrt{\\frac{U''(x_0)}{m}}"
+   },
+   {
+    "uz": "Lennard-Jons potensiali",
+    "ru": "Потенциал Леннард-Джонса",
+    "en": "Lennard-Jones potential",
+    "m": "r_0=2^{1/6}\\sigma,\\quad U(r_0)=-\\varepsilon"
+   },
+   {
+    "uz": "Qochish tezligi",
+    "ru": "Скорость убегания",
+    "en": "Escape velocity",
+    "m": "v_2=\\sqrt{\\frac{2GM}{R}}=\\sqrt{2gR}"
+   }
+  ]
+ }
+]
