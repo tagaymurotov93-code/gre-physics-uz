@@ -1,0 +1,920 @@
+[
+ {
+  "id": "B2-L02-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Silliq gorizontal stolda tutashib turgan $m_1=4\\ \\mathrm{kg}$ va $m_2=2\\ \\mathrm{kg}$ brusoklar bor. $m_1$ brusokka gorizontal $F=30\\ \\mathrm{N}$ kuch qo'yib, ikkalasi itarilmoqda. Tezlanishni va brusoklarning o'zaro ta'sir kuchini toping. Xuddi shu kuch $m_2$ tomondan qo'yilsa, o'zaro ta'sir kuchi qancha bo'ladi?",
+   "ru": "На гладком горизонтальном столе соприкасаются бруски $m_1=4\\ \\mathrm{kg}$ и $m_2=2\\ \\mathrm{kg}$. К бруску $m_1$ приложена горизонтальная сила $F=30\\ \\mathrm{N}$, толкающая оба. Найдите ускорение и силу взаимодействия брусков. Какой будет сила взаимодействия, если ту же силу приложить со стороны $m_2$?",
+   "en": "Blocks $m_1=4\\ \\mathrm{kg}$ and $m_2=2\\ \\mathrm{kg}$ touch each other on a smooth horizontal table. A horizontal force $F=30\\ \\mathrm{N}$ is applied to $m_1$, pushing both. Find the acceleration and the force of interaction between the blocks. What is the interaction force if the same force is applied from the side of $m_2$?"
+  },
+  "figure": "figures/B2-L02-S01.png",
+  "solution": {
+   "uz": [
+    "Ikkala brusokni bitta sistema deb qaraymiz: $$a=\\frac{F}{m_1+m_2}=\\frac{30}{6}=5\\ \\mathrm{m/s^2}$$",
+    "Oldingi $m_2$ ni faqat o'zaro ta'sir kuchi tezlatadi: $$F_{12}=m_2a=2\\cdot5=10\\ \\mathrm{N}$$",
+    "Kuch $m_2$ ga qo'yilsa, endi oldinda $m_1$: $$F_{21}=m_1a=4\\cdot5=20\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Рассматриваем оба бруска как одну систему: $$a=\\frac{F}{m_1+m_2}=\\frac{30}{6}=5\\ \\mathrm{m/s^2}$$",
+    "Передний $m_2$ ускоряет только сила взаимодействия: $$F_{12}=m_2a=2\\cdot5=10\\ \\mathrm{N}$$",
+    "Если сила приложена к $m_2$, впереди теперь $m_1$: $$F_{21}=m_1a=4\\cdot5=20\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "Treat both blocks as one system: $$a=\\frac{F}{m_1+m_2}=\\frac{30}{6}=5\\ \\mathrm{m/s^2}$$",
+    "The front block $m_2$ is accelerated only by the interaction force: $$F_{12}=m_2a=2\\cdot5=10\\ \\mathrm{N}$$",
+    "If the force is applied to $m_2$, $m_1$ is now in front: $$F_{21}=m_1a=4\\cdot5=20\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sistema usuli: $(m_1+m_2)a=\\sum F$ (faqat tashqi kuchlar)",
+    "ru": "Метод системы: $(m_1+m_2)a=\\sum F$ (только внешние силы)",
+    "en": "System method: $(m_1+m_2)a=\\sum F$ (external forces only)"
+   },
+   {
+    "uz": "Nyutonning 2-qonuni: $m\\vec a=\\sum\\vec F$",
+    "ru": "Второй закон Ньютона: $m\\vec a=\\sum\\vec F$",
+    "en": "Newton's second law: $m\\vec a=\\sum\\vec F$"
+   },
+   {
+    "uz": "Nyutonning 3-qonuni: $\\vec F_{12}=-\\vec F_{21}$ — turli jismlarga qo'yilgan",
+    "ru": "Третий закон Ньютона: $\\vec F_{12}=-\\vec F_{21}$ — приложены к разным телам",
+    "en": "Newton's third law: $\\vec F_{12}=-\\vec F_{21}$ — applied to different bodies"
+   }
+  ],
+  "basis": {
+   "uz": "Tutashgan jismlar",
+   "ru": "Соприкасающиеся тела",
+   "en": "Bodies in contact"
+  },
+  "answer": "a=5\\ \\mathrm{m/s^2};\\ 10\\ \\mathrm{N};\\ 20\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original (B2-L02, ko'prik masala)"
+ },
+ {
+  "id": "B2-L02-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Brusok qiyaligi $30^\\circ$ bo'lgan qiya tekislikda tinch holatdan sirpana boshladi, ishqalanish koeffitsiyenti $\\mu=0.2$. Uning tezlanishini, qiyalik bo'ylab $4\\ \\mathrm{m}$ yo'lni bosib o'tish vaqtini va oxirgi tezligini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Брусок начинает скользить из покоя по наклонной плоскости с углом $30^\\circ$, коэффициент трения $\\mu=0.2$. Найдите его ускорение, время прохождения $4\\ \\mathrm{m}$ вдоль плоскости и конечную скорость. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A block starts sliding from rest down an incline of $30^\\circ$; the coefficient of friction is $\\mu=0.2$. Find its acceleration, the time to cover $4\\ \\mathrm{m}$ along the incline and its final speed. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S02.png",
+  "solution": {
+   "uz": [
+    "Kuchlarni tekislik bo'ylab va perpendikulyar ajratamiz: $$N=mg\\cos30^\\circ,\\qquad F_{\\mu}=\\mu mg\\cos30^\\circ$$",
+    "Tezlanish: $$a=g\\left(\\sin30^\\circ-\\mu\\cos30^\\circ\\right)=5-\\sqrt{3}\\approx3.27\\ \\mathrm{m/s^2}$$",
+    "Vaqt va tezlik: $$t=\\sqrt{\\frac{2s}{a}}=\\sqrt{\\frac{8}{3.27}}\\approx1.56\\ \\mathrm{s},\\qquad v=at\\approx5.11\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Раскладываем силы вдоль плоскости и перпендикулярно: $$N=mg\\cos30^\\circ,\\qquad F_{\\mu}=\\mu mg\\cos30^\\circ$$",
+    "Ускорение: $$a=g\\left(\\sin30^\\circ-\\mu\\cos30^\\circ\\right)=5-\\sqrt{3}\\approx3.27\\ \\mathrm{m/s^2}$$",
+    "Время и скорость: $$t=\\sqrt{\\frac{2s}{a}}=\\sqrt{\\frac{8}{3.27}}\\approx1.56\\ \\mathrm{s},\\qquad v=at\\approx5.11\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Resolve the forces along and perpendicular to the plane: $$N=mg\\cos30^\\circ,\\qquad F_{\\mu}=\\mu mg\\cos30^\\circ$$",
+    "Acceleration: $$a=g\\left(\\sin30^\\circ-\\mu\\cos30^\\circ\\right)=5-\\sqrt{3}\\approx3.27\\ \\mathrm{m/s^2}$$",
+    "Time and speed: $$t=\\sqrt{\\frac{2s}{a}}=\\sqrt{\\frac{8}{3.27}}\\approx1.56\\ \\mathrm{s},\\qquad v=at\\approx5.11\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sirpanish ishqalanishi: $F_{\\mu}=\\mu N$",
+    "ru": "Трение скольжения: $F_{\\mu}=\\mu N$",
+    "en": "Kinetic friction: $F_{\\mu}=\\mu N$"
+   },
+   {
+    "uz": "Qiya tekislik: $N=mg\\cos\\alpha$, $a=g\\left(\\sin\\alpha-\\mu\\cos\\alpha\\right)$",
+    "ru": "Наклонная плоскость: $N=mg\\cos\\alpha$, $a=g\\left(\\sin\\alpha-\\mu\\cos\\alpha\\right)$",
+    "en": "Incline: $N=mg\\cos\\alpha$, $a=g\\left(\\sin\\alpha-\\mu\\cos\\alpha\\right)$"
+   },
+   {
+    "uz": "Tekis tezlanuvchan harakat: $s=\\frac{at^2}{2}$, $v=at$",
+    "ru": "Равноускоренное движение: $s=\\frac{at^2}{2}$, $v=at$",
+    "en": "Uniform acceleration: $s=\\frac{at^2}{2}$, $v=at$"
+   }
+  ],
+  "basis": {
+   "uz": "Ishqalanishli qiya tekislik",
+   "ru": "Наклонная плоскость с трением",
+   "en": "Incline with friction"
+  },
+  "answer": "a\\approx3.27\\ \\mathrm{m/s^2};\\ t\\approx1.56\\ \\mathrm{s};\\ v\\approx5.11\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.28-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L02-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Liftdagi tarozi ustida $70\\ \\mathrm{kg}$ massali odam turibdi. Tarozi ko'rsatishini toping: a) lift yuqoriga $2\\ \\mathrm{m/s^2}$ tezlanish bilan ketayotganda; b) pastga $2\\ \\mathrm{m/s^2}$ tezlanish bilan ketayotganda; c) lift o'zgarmas tezlik bilan harakatlanayotganda; d) lift arqoni uzilib, erkin tushayotganda. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Человек массы $70\\ \\mathrm{kg}$ стоит на весах в лифте. Найдите показания весов: а) лифт движется вверх с ускорением $2\\ \\mathrm{m/s^2}$; б) вниз с ускорением $2\\ \\mathrm{m/s^2}$; в) лифт движется с постоянной скоростью; г) трос оборвался, и лифт свободно падает. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A person of mass $70\\ \\mathrm{kg}$ stands on a scale in an elevator. Find the scale reading when: a) the elevator accelerates upwards at $2\\ \\mathrm{m/s^2}$; b) it accelerates downwards at $2\\ \\mathrm{m/s^2}$; c) it moves at constant velocity; d) the cable breaks and the elevator falls freely. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S03.png",
+  "solution": {
+   "uz": [
+    "Odamga $mg$ va $N$ ta'sir qiladi; tarozi ko'rsatishi — vazn $P=N$: $$N-mg=ma\\ \\Rightarrow\\ N=m(g+a)$$",
+    "a) va b): $$N=70\\cdot12=840\\ \\mathrm{N},\\qquad N=70\\cdot8=560\\ \\mathrm{N}$$",
+    "c) $a=0$; d) $a=-g$ — vaznsizlik: $$N=700\\ \\mathrm{N},\\qquad N=m(g-g)=0$$"
+   ],
+   "ru": [
+    "На человека действуют $mg$ и $N$; показания весов — вес $P=N$: $$N-mg=ma\\ \\Rightarrow\\ N=m(g+a)$$",
+    "а) и б): $$N=70\\cdot12=840\\ \\mathrm{N},\\qquad N=70\\cdot8=560\\ \\mathrm{N}$$",
+    "в) $a=0$; г) $a=-g$ — невесомость: $$N=700\\ \\mathrm{N},\\qquad N=m(g-g)=0$$"
+   ],
+   "en": [
+    "The person is acted on by $mg$ and $N$; the scale reads the weight $P=N$: $$N-mg=ma\\ \\Rightarrow\\ N=m(g+a)$$",
+    "a) and b): $$N=70\\cdot12=840\\ \\mathrm{N},\\qquad N=70\\cdot8=560\\ \\mathrm{N}$$",
+    "c) $a=0$; d) $a=-g$ — weightlessness: $$N=700\\ \\mathrm{N},\\qquad N=m(g-g)=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nyutonning 2-qonuni: $m\\vec a=\\sum\\vec F$",
+    "ru": "Второй закон Ньютона: $m\\vec a=\\sum\\vec F$",
+    "en": "Newton's second law: $m\\vec a=\\sum\\vec F$"
+   },
+   {
+    "uz": "Vazn: $P=N=m(g\\pm a)$",
+    "ru": "Вес: $P=N=m(g\\pm a)$",
+    "en": "Weight: $P=N=m(g\\pm a)$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Liftdagi vazn",
+   "ru": "Вес в лифте",
+   "en": "Weight in an elevator"
+  },
+  "answer": "840\\ \\mathrm{N};\\ 560\\ \\mathrm{N};\\ 700\\ \\mathrm{N};\\ 0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.2-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L02-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasiz blok orqali o'tkazilgan ipga $m_1=3\\ \\mathrm{kg}$ va $m_2=2\\ \\mathrm{kg}$ yuklar osilgan (Atvud mashinasi). Yuklar tezlanishini, ip tarangligini, harakat boshlangandan $1.5\\ \\mathrm{s}$ o'tgach tezlikni va blok o'qiga ta'sir qiluvchi kuchni toping.",
+   "ru": "На нити, перекинутой через невесомый блок, висят грузы $m_1=3\\ \\mathrm{kg}$ и $m_2=2\\ \\mathrm{kg}$ (машина Атвуда). Найдите ускорение грузов, натяжение нити, скорость через $1.5\\ \\mathrm{s}$ после начала движения и силу, действующую на ось блока.",
+   "en": "Masses $m_1=3\\ \\mathrm{kg}$ and $m_2=2\\ \\mathrm{kg}$ hang from a string over a massless pulley (an Atwood machine). Find the acceleration of the masses, the string tension, the speed $1.5\\ \\mathrm{s}$ after the start and the force on the pulley axle."
+  },
+  "figure": "figures/B2-L02-S04.png",
+  "solution": {
+   "uz": [
+    "Har bir yuk uchun ikkinchi qonun ($m_1$ pastga, $m_2$ yuqoriga): $$m_1g-T=m_1a,\\qquad T-m_2g=m_2a$$",
+    "Yechim: $$a=\\frac{3-2}{5}\\cdot10=2\\ \\mathrm{m/s^2},\\qquad T=\\frac{2\\cdot3\\cdot2}{5}\\cdot10=24\\ \\mathrm{N}$$",
+    "Tezlik va o'qqa kuch (ikki ip tarmog'i): $$v=at=3\\ \\mathrm{m/s},\\qquad F=2T=48\\ \\mathrm{N}<(m_1+m_2)g=50\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Второй закон для каждого груза ($m_1$ вниз, $m_2$ вверх): $$m_1g-T=m_1a,\\qquad T-m_2g=m_2a$$",
+    "Решение: $$a=\\frac{3-2}{5}\\cdot10=2\\ \\mathrm{m/s^2},\\qquad T=\\frac{2\\cdot3\\cdot2}{5}\\cdot10=24\\ \\mathrm{N}$$",
+    "Скорость и сила на ось (две ветви нити): $$v=at=3\\ \\mathrm{m/s},\\qquad F=2T=48\\ \\mathrm{N}<(m_1+m_2)g=50\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "Second law for each mass ($m_1$ down, $m_2$ up): $$m_1g-T=m_1a,\\qquad T-m_2g=m_2a$$",
+    "Solution: $$a=\\frac{3-2}{5}\\cdot10=2\\ \\mathrm{m/s^2},\\qquad T=\\frac{2\\cdot3\\cdot2}{5}\\cdot10=24\\ \\mathrm{N}$$",
+    "Speed and axle force (two string segments): $$v=at=3\\ \\mathrm{m/s},\\qquad F=2T=48\\ \\mathrm{N}<(m_1+m_2)g=50\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nyutonning 2-qonuni: $m\\vec a=\\sum\\vec F$",
+    "ru": "Второй закон Ньютона: $m\\vec a=\\sum\\vec F$",
+    "en": "Newton's second law: $m\\vec a=\\sum\\vec F$"
+   },
+   {
+    "uz": "Atvud mashinasi: $a=\\frac{m_1-m_2}{m_1+m_2}g$, $T=\\frac{2m_1m_2}{m_1+m_2}g$",
+    "ru": "Машина Атвуда: $a=\\frac{m_1-m_2}{m_1+m_2}g$, $T=\\frac{2m_1m_2}{m_1+m_2}g$",
+    "en": "Atwood machine: $a=\\frac{m_1-m_2}{m_1+m_2}g$, $T=\\frac{2m_1m_2}{m_1+m_2}g$"
+   },
+   {
+    "uz": "Massasiz ip: taranglik butun ip bo'ylab bir xil",
+    "ru": "Невесомая нить: натяжение одинаково по всей нити",
+    "en": "Massless string: the tension is the same along the whole string"
+   }
+  ],
+  "basis": {
+   "uz": "Atvud mashinasi",
+   "ru": "Машина Атвуда",
+   "en": "Atwood machine"
+  },
+  "answer": "a=2\\ \\mathrm{m/s^2};\\ T=24\\ \\mathrm{N};\\ v=3\\ \\mathrm{m/s};\\ F=48\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.30-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L02-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Stoldagi $m_1=2\\ \\mathrm{kg}$ brusok stol chetidagi blok orqali o'tkazilgan ip bilan osilib turgan $m_2=3\\ \\mathrm{kg}$ yukka bog'langan. Brusok va stol orasidagi ishqalanish koeffitsiyenti $0.25$. Sistema tezlanishini va ip tarangligini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Брусок $m_1=2\\ \\mathrm{kg}$ на столе связан нитью, перекинутой через блок на краю стола, с висящим грузом $m_2=3\\ \\mathrm{kg}$. Коэффициент трения между бруском и столом $0.25$. Найдите ускорение системы и натяжение нити. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A block $m_1=2\\ \\mathrm{kg}$ on a table is connected by a string over a pulley at the table's edge to a hanging mass $m_2=3\\ \\mathrm{kg}$. The coefficient of friction between the block and the table is $0.25$. Find the acceleration of the system and the string tension. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S05.png",
+  "solution": {
+   "uz": [
+    "Brusok va yuk uchun: $$T-\\mu m_1g=m_1a,\\qquad m_2g-T=m_2a$$",
+    "Qo'shib, $T$ ni yo'qotamiz: $$a=\\frac{m_2g-\\mu m_1g}{m_1+m_2}=\\frac{30-5}{5}=5\\ \\mathrm{m/s^2}$$",
+    "Taranglik: $$T=m_2(g-a)=3\\cdot5=15\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Для бруска и груза: $$T-\\mu m_1g=m_1a,\\qquad m_2g-T=m_2a$$",
+    "Складываем, исключая $T$: $$a=\\frac{m_2g-\\mu m_1g}{m_1+m_2}=\\frac{30-5}{5}=5\\ \\mathrm{m/s^2}$$",
+    "Натяжение: $$T=m_2(g-a)=3\\cdot5=15\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "For the block and the hanging mass: $$T-\\mu m_1g=m_1a,\\qquad m_2g-T=m_2a$$",
+    "Add them to eliminate $T$: $$a=\\frac{m_2g-\\mu m_1g}{m_1+m_2}=\\frac{30-5}{5}=5\\ \\mathrm{m/s^2}$$",
+    "Tension: $$T=m_2(g-a)=3\\cdot5=15\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nyutonning 2-qonuni: $m\\vec a=\\sum\\vec F$",
+    "ru": "Второй закон Ньютона: $m\\vec a=\\sum\\vec F$",
+    "en": "Newton's second law: $m\\vec a=\\sum\\vec F$"
+   },
+   {
+    "uz": "Sirpanish ishqalanishi: $F_{\\mu}=\\mu N$",
+    "ru": "Трение скольжения: $F_{\\mu}=\\mu N$",
+    "en": "Kinetic friction: $F_{\\mu}=\\mu N$"
+   },
+   {
+    "uz": "Massasiz ip: taranglik butun ip bo'ylab bir xil",
+    "ru": "Невесомая нить: натяжение одинаково по всей нити",
+    "en": "Massless string: the tension is the same along the whole string"
+   }
+  ],
+  "basis": {
+   "uz": "Stol va osilgan yuk",
+   "ru": "Стол и висящий груз",
+   "en": "Table and hanging mass"
+  },
+  "answer": "a=5\\ \\mathrm{m/s^2};\\ T=15\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.31-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L02-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Qiyaligi $37^\\circ$ bo'lgan qiya tekislikdagi $4\\ \\mathrm{kg}$ brusokka gorizontal $F=60\\ \\mathrm{N}$ kuch qo'yilgan va u yuqoriga sirpanmoqda; sirpanish ishqalanish koeffitsiyenti $0.25$ ($\\sin37^\\circ=0.6$). Tayanch reaksiya kuchini va brusok tezlanishini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "К бруску массы $4\\ \\mathrm{kg}$ на наклонной плоскости с углом $37^\\circ$ приложена горизонтальная сила $F=60\\ \\mathrm{N}$, и он скользит вверх; коэффициент трения скольжения $0.25$ ($\\sin37^\\circ=0.6$). Найдите силу реакции опоры и ускорение бруска. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A horizontal force $F=60\\ \\mathrm{N}$ is applied to a $4\\ \\mathrm{kg}$ block on an incline of $37^\\circ$, and the block slides upwards; the coefficient of kinetic friction is $0.25$ ($\\sin37^\\circ=0.6$). Find the normal force and the acceleration of the block. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S06.png",
+  "solution": {
+   "uz": [
+    "Gorizontal kuch tekislikka ham bosadi: $$N=mg\\cos37^\\circ+F\\sin37^\\circ=32+36=68\\ \\mathrm{N}$$",
+    "Ishqalanish (pastga, harakatga qarshi): $$F_{\\mu}=0.25\\cdot68=17\\ \\mathrm{N}$$",
+    "Tekislik bo'ylab: $$ma=F\\cos37^\\circ-mg\\sin37^\\circ-F_{\\mu}=48-24-17=7\\ \\mathrm{N}$$",
+    "Tezlanish (yuqoriga): $$a=\\frac{7}{4}=1.75\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Горизонтальная сила также прижимает к плоскости: $$N=mg\\cos37^\\circ+F\\sin37^\\circ=32+36=68\\ \\mathrm{N}$$",
+    "Трение (вниз, против движения): $$F_{\\mu}=0.25\\cdot68=17\\ \\mathrm{N}$$",
+    "Вдоль плоскости: $$ma=F\\cos37^\\circ-mg\\sin37^\\circ-F_{\\mu}=48-24-17=7\\ \\mathrm{N}$$",
+    "Ускорение (вверх): $$a=\\frac{7}{4}=1.75\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "The horizontal force also presses into the plane: $$N=mg\\cos37^\\circ+F\\sin37^\\circ=32+36=68\\ \\mathrm{N}$$",
+    "Friction (down, opposing the motion): $$F_{\\mu}=0.25\\cdot68=17\\ \\mathrm{N}$$",
+    "Along the plane: $$ma=F\\cos37^\\circ-mg\\sin37^\\circ-F_{\\mu}=48-24-17=7\\ \\mathrm{N}$$",
+    "Acceleration (up the plane): $$a=\\frac{7}{4}=1.75\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nyutonning 2-qonuni: $m\\vec a=\\sum\\vec F$",
+    "ru": "Второй закон Ньютона: $m\\vec a=\\sum\\vec F$",
+    "en": "Newton's second law: $m\\vec a=\\sum\\vec F$"
+   },
+   {
+    "uz": "Sirpanish ishqalanishi: $F_{\\mu}=\\mu N$",
+    "ru": "Трение скольжения: $F_{\\mu}=\\mu N$",
+    "en": "Kinetic friction: $F_{\\mu}=\\mu N$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Qiya tekislik va gorizontal kuch",
+   "ru": "Наклонная плоскость и горизонтальная сила",
+   "en": "Incline with a horizontal force"
+  },
+  "answer": "N=68\\ \\mathrm{N};\\ a=1.75\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.1.4 (1) g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L02-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Silliq polda yotgan $M=7\\ \\mathrm{kg}$ taxtacha ustida $m=3\\ \\mathrm{kg}$ brusok turibdi. Taxtachaga gorizontal $F=40\\ \\mathrm{N}$ kuch qo'yildi. Jismlar birga harakatlanishi uchun ular orasidagi tinchlikdagi ishqalanish koeffitsiyenti kamida qancha bo'lishi kerak? Xuddi shu kuch ustki brusokka qo'yilsa-chi?",
+   "ru": "На доске массы $M=7\\ \\mathrm{kg}$, лежащей на гладком полу, находится брусок $m=3\\ \\mathrm{kg}$. К доске приложена горизонтальная сила $F=40\\ \\mathrm{N}$. Каким должен быть наименьший коэффициент трения покоя между телами, чтобы они двигались вместе? А если ту же силу приложить к верхнему бруску?",
+   "en": "A block $m=3\\ \\mathrm{kg}$ rests on a board $M=7\\ \\mathrm{kg}$ lying on a smooth floor. A horizontal force $F=40\\ \\mathrm{N}$ is applied to the board. What is the minimum coefficient of static friction between the bodies for them to move together? What if the same force is applied to the upper block?"
+  },
+  "figure": "figures/B2-L02-S07.png",
+  "solution": {
+   "uz": [
+    "Birga harakatlansa — sistema usuli: $$a=\\frac{F}{M+m}=\\frac{40}{10}=4\\ \\mathrm{m/s^2}$$",
+    "Ustki brusokni faqat ishqalanish tezlatadi: $$ma\\leq\\mu_smg\\ \\Rightarrow\\ \\mu_s\\geq\\frac{a}{g}=0.4$$",
+    "Kuch ustki brusokda — endi taxtachani ishqalanish tezlatadi: $$Ma\\leq\\mu_smg\\ \\Rightarrow\\ \\mu_s\\geq\\frac{MF}{(M+m)mg}=\\frac{280}{300}\\approx0.93$$"
+   ],
+   "ru": [
+    "Если движутся вместе — метод системы: $$a=\\frac{F}{M+m}=\\frac{40}{10}=4\\ \\mathrm{m/s^2}$$",
+    "Верхний брусок ускоряет только трение: $$ma\\leq\\mu_smg\\ \\Rightarrow\\ \\mu_s\\geq\\frac{a}{g}=0.4$$",
+    "Сила на верхнем бруске — теперь доску ускоряет трение: $$Ma\\leq\\mu_smg\\ \\Rightarrow\\ \\mu_s\\geq\\frac{MF}{(M+m)mg}=\\frac{280}{300}\\approx0.93$$"
+   ],
+   "en": [
+    "If they move together — the system method: $$a=\\frac{F}{M+m}=\\frac{40}{10}=4\\ \\mathrm{m/s^2}$$",
+    "Only friction accelerates the upper block: $$ma\\leq\\mu_smg\\ \\Rightarrow\\ \\mu_s\\geq\\frac{a}{g}=0.4$$",
+    "Force on the upper block — now friction accelerates the board: $$Ma\\leq\\mu_smg\\ \\Rightarrow\\ \\mu_s\\geq\\frac{MF}{(M+m)mg}=\\frac{280}{300}\\approx0.93$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sistema usuli: $(m_1+m_2)a=\\sum F$ (faqat tashqi kuchlar)",
+    "ru": "Метод системы: $(m_1+m_2)a=\\sum F$ (только внешние силы)",
+    "en": "System method: $(m_1+m_2)a=\\sum F$ (external forces only)"
+   },
+   {
+    "uz": "Tinchlikdagi ishqalanish: $F_{\\mu}\\leq\\mu_sN$",
+    "ru": "Трение покоя: $F_{\\mu}\\leq\\mu_sN$",
+    "en": "Static friction: $F_{\\mu}\\leq\\mu_sN$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Ustma-ust jismlar",
+   "ru": "Тела друг на друге",
+   "en": "Stacked bodies"
+  },
+  "answer": "\\mu_s\\geq0.4;\\ \\mu_s\\geq0.93",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.1.3, 1.2-misol g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L02-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Silliq polda turgan $M=10\\ \\mathrm{kg}$ aravachaning oldingi vertikal yuziga $m=2\\ \\mathrm{kg}$ brusok tegizib qo'yilgan; ular orasidagi tinchlikdagi ishqalanish koeffitsiyenti $0.5$. Brusok sirpanib tushmasligi uchun aravachani orqa tomondan qanday eng kichik gorizontal kuch bilan itarish kerak? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "К передней вертикальной стенке тележки массы $M=10\\ \\mathrm{kg}$ на гладком полу приложен брусок $m=2\\ \\mathrm{kg}$; коэффициент трения покоя между ними $0.5$. С какой наименьшей горизонтальной силой нужно толкать тележку сзади, чтобы брусок не соскользнул вниз? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A block $m=2\\ \\mathrm{kg}$ is held against the front vertical face of a cart $M=10\\ \\mathrm{kg}$ on a smooth floor; the coefficient of static friction between them is $0.5$. With what minimum horizontal force must the cart be pushed from behind so that the block does not slide down? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S08.png",
+  "solution": {
+   "uz": [
+    "Aravacha brusokni gorizontal itaradi, ishqalanish og'irlikni ushlaydi: $$N=ma,\\qquad mg\\leq\\mu_sN=\\mu_sma$$",
+    "Eng kichik tezlanish (brusok massasiga bog'liq emas): $$a_{min}=\\frac{g}{\\mu_s}=\\frac{10}{0.5}=20\\ \\mathrm{m/s^2}$$",
+    "Butun sistema uchun: $$F_{min}=(M+m)a_{min}=12\\cdot20=240\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Тележка толкает брусок горизонтально, трение удерживает вес: $$N=ma,\\qquad mg\\leq\\mu_sN=\\mu_sma$$",
+    "Наименьшее ускорение (не зависит от массы бруска): $$a_{min}=\\frac{g}{\\mu_s}=\\frac{10}{0.5}=20\\ \\mathrm{m/s^2}$$",
+    "Для всей системы: $$F_{min}=(M+m)a_{min}=12\\cdot20=240\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "The cart pushes the block horizontally; friction supports its weight: $$N=ma,\\qquad mg\\leq\\mu_sN=\\mu_sma$$",
+    "Minimum acceleration (independent of the block's mass): $$a_{min}=\\frac{g}{\\mu_s}=\\frac{10}{0.5}=20\\ \\mathrm{m/s^2}$$",
+    "For the whole system: $$F_{min}=(M+m)a_{min}=12\\cdot20=240\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tinchlikdagi ishqalanish: $F_{\\mu}\\leq\\mu_sN$",
+    "ru": "Трение покоя: $F_{\\mu}\\leq\\mu_sN$",
+    "en": "Static friction: $F_{\\mu}\\leq\\mu_sN$"
+   },
+   null,
+   {
+    "uz": "Sistema usuli: $(m_1+m_2)a=\\sum F$ (faqat tashqi kuchlar)",
+    "ru": "Метод системы: $(m_1+m_2)a=\\sum F$ (только внешние силы)",
+    "en": "System method: $(m_1+m_2)a=\\sum F$ (external forces only)"
+   }
+  ],
+  "basis": {
+   "uz": "Vertikal sirtga bosilgan brusok",
+   "ru": "Брусок, прижатый к вертикальной стенке",
+   "en": "Block pressed against a vertical face"
+  },
+  "answer": "F_{min}=240\\ \\mathrm{N}\\ (a_{min}=20\\ \\mathrm{m/s^2})",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.1.4 (3) g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L02-S09",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Silliq stoldagi $m_1=2\\ \\mathrm{kg}$ brusokka bog'langan ip stol chetidagi qo'zg'almas blok orqali pastga tushib, $m_2=4\\ \\mathrm{kg}$ yuk osilgan qo'zg'aluvchan blokni aylanib o'tadi va uchi shiftga mahkamlangan. Bloklar va ip massasiz. Har bir jism tezlanishini va ip tarangligini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Нить, привязанная к бруску $m_1=2\\ \\mathrm{kg}$ на гладком столе, перекинута через неподвижный блок на краю стола, огибает снизу подвижный блок с грузом $m_2=4\\ \\mathrm{kg}$ и закреплена концом за потолок. Блоки и нить невесомы. Найдите ускорение каждого тела и натяжение нити. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A string tied to a block $m_1=2\\ \\mathrm{kg}$ on a smooth table passes over a fixed pulley at the table's edge, goes down around a movable pulley carrying a mass $m_2=4\\ \\mathrm{kg}$, and its end is fixed to the ceiling. The pulleys and string are massless. Find the acceleration of each body and the string tension. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S09.png",
+  "solution": {
+   "uz": [
+    "Bog'lanish: brusok $x$ ga siljisa, qo'zg'aluvchan blok $\\frac{x}{2}$ ga tushadi: $$a_1=2a_2$$",
+    "Tenglamalar (blokka ikki ip tarmog'i — $2T$): $$T=m_1a_1,\\qquad m_2g-2T=m_2a_2$$",
+    "Qo'yamiz: $m_2g-4m_1a_2=m_2a_2$: $$a_2=\\frac{m_2g}{m_2+4m_1}=\\frac{40}{12}\\approx3.33\\ \\mathrm{m/s^2}$$",
+    "Qolganlari: $$a_1=2a_2\\approx6.67\\ \\mathrm{m/s^2},\\qquad T=m_1a_1=\\frac{40}{3}\\approx13.3\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Связь: если брусок сместится на $x$, подвижный блок опустится на $\\frac{x}{2}$: $$a_1=2a_2$$",
+    "Уравнения (на блок две ветви нити — $2T$): $$T=m_1a_1,\\qquad m_2g-2T=m_2a_2$$",
+    "Подставляем: $m_2g-4m_1a_2=m_2a_2$: $$a_2=\\frac{m_2g}{m_2+4m_1}=\\frac{40}{12}\\approx3.33\\ \\mathrm{m/s^2}$$",
+    "Остальное: $$a_1=2a_2\\approx6.67\\ \\mathrm{m/s^2},\\qquad T=m_1a_1=\\frac{40}{3}\\approx13.3\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "Constraint: if the block moves by $x$, the movable pulley descends by $\\frac{x}{2}$: $$a_1=2a_2$$",
+    "Equations (two string segments on the pulley — $2T$): $$T=m_1a_1,\\qquad m_2g-2T=m_2a_2$$",
+    "Substitute: $m_2g-4m_1a_2=m_2a_2$: $$a_2=\\frac{m_2g}{m_2+4m_1}=\\frac{40}{12}\\approx3.33\\ \\mathrm{m/s^2}$$",
+    "The rest: $$a_1=2a_2\\approx6.67\\ \\mathrm{m/s^2},\\qquad T=m_1a_1=\\frac{40}{3}\\approx13.3\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bog'lanish: ip uzunligi saqlanadi, $a_1=2a_2$ (qo'zg'aluvchan blok)",
+    "ru": "Связь: длина нити сохраняется, $a_1=2a_2$ (подвижный блок)",
+    "en": "Constraint: string length is conserved, $a_1=2a_2$ (movable pulley)"
+   },
+   {
+    "uz": "Nyutonning 2-qonuni: $m\\vec a=\\sum\\vec F$",
+    "ru": "Второй закон Ньютона: $m\\vec a=\\sum\\vec F$",
+    "en": "Newton's second law: $m\\vec a=\\sum\\vec F$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Qo'zg'aluvchan blok",
+   "ru": "Подвижный блок",
+   "en": "Movable pulley"
+  },
+  "answer": "a_1\\approx6.67\\ \\mathrm{m/s^2};\\ a_2\\approx3.33\\ \\mathrm{m/s^2};\\ T\\approx13.3\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 1.73-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L02-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$0.5\\ \\mathrm{kg}$ sharcha $1\\ \\mathrm{m}$ uzunlikdagi ipga osilib, gorizontal aylanada shunday aylanmoqdaki, ip vertikal bilan $60^\\circ$ burchak hosil qiladi (konik mayatnik). Ip tarangligini, burchak tezlikni, aylanish davrini va sharcha tezligini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Шарик массы $0.5\\ \\mathrm{kg}$ на нити длины $1\\ \\mathrm{m}$ вращается по горизонтальной окружности так, что нить образует с вертикалью угол $60^\\circ$ (конический маятник). Найдите натяжение нити, угловую скорость, период обращения и скорость шарика. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A $0.5\\ \\mathrm{kg}$ ball on a $1\\ \\mathrm{m}$ string moves in a horizontal circle so that the string makes $60^\\circ$ with the vertical (a conical pendulum). Find the string tension, the angular velocity, the period and the speed of the ball. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S10.png",
+  "solution": {
+   "uz": [
+    "Vertikal bo'yicha muvozanat: $$T\\cos60^\\circ=mg\\ \\Rightarrow\\ T=\\frac{5}{0.5}=10\\ \\mathrm{N}$$",
+    "Gorizontal bo'yicha, $\\rho=l\\sin\\theta$: $$T\\sin\\theta=m\\omega^2l\\sin\\theta\\ \\Rightarrow\\ \\omega^2=\\frac{T}{ml}=20,\\quad \\omega\\approx4.47\\ \\mathrm{rad/s}$$",
+    "Davr va tezlik: $$T_0=\\frac{2\\pi}{\\omega}\\approx1.40\\ \\mathrm{s},\\qquad v=\\omega l\\sin60^\\circ\\approx3.87\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Равновесие по вертикали: $$T\\cos60^\\circ=mg\\ \\Rightarrow\\ T=\\frac{5}{0.5}=10\\ \\mathrm{N}$$",
+    "По горизонтали, $\\rho=l\\sin\\theta$: $$T\\sin\\theta=m\\omega^2l\\sin\\theta\\ \\Rightarrow\\ \\omega^2=\\frac{T}{ml}=20,\\quad \\omega\\approx4.47\\ \\mathrm{rad/s}$$",
+    "Период и скорость: $$T_0=\\frac{2\\pi}{\\omega}\\approx1.40\\ \\mathrm{s},\\qquad v=\\omega l\\sin60^\\circ\\approx3.87\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Vertical balance: $$T\\cos60^\\circ=mg\\ \\Rightarrow\\ T=\\frac{5}{0.5}=10\\ \\mathrm{N}$$",
+    "Horizontally, $\\rho=l\\sin\\theta$: $$T\\sin\\theta=m\\omega^2l\\sin\\theta\\ \\Rightarrow\\ \\omega^2=\\frac{T}{ml}=20,\\quad \\omega\\approx4.47\\ \\mathrm{rad/s}$$",
+    "Period and speed: $$T_0=\\frac{2\\pi}{\\omega}\\approx1.40\\ \\mathrm{s},\\qquad v=\\omega l\\sin60^\\circ\\approx3.87\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Konik mayatnik: $T\\cos\\theta=mg$, $\\cos\\theta=\\frac{g}{\\omega^2l}$",
+    "ru": "Конический маятник: $T\\cos\\theta=mg$, $\\cos\\theta=\\frac{g}{\\omega^2l}$",
+    "en": "Conical pendulum: $T\\cos\\theta=mg$, $\\cos\\theta=\\frac{g}{\\omega^2l}$"
+   },
+   {
+    "uz": "Markazga intilma: $\\sum F_n=\\frac{mv^2}{R}=m\\omega^2R$",
+    "ru": "Центростремительное: $\\sum F_n=\\frac{mv^2}{R}=m\\omega^2R$",
+    "en": "Centripetal: $\\sum F_n=\\frac{mv^2}{R}=m\\omega^2R$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Konik mayatnik",
+   "ru": "Конический маятник",
+   "en": "Conical pendulum"
+  },
+  "answer": "T=10\\ \\mathrm{N};\\ \\omega\\approx4.47\\ \\mathrm{rad/s};\\ T_0\\approx1.40\\ \\mathrm{s};\\ v\\approx3.87\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.100-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L02-S11",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radiusi $100\\ \\mathrm{m}$ bo'lgan burilish shunday qiyalatilganki, $20\\ \\mathrm{m/s}$ tezlikda avtomobil ishqalanishsiz buriladi. Yo'lning qiyalik burchagini toping. Tinchlikdagi ishqalanish koeffitsiyenti $0.3$ bo'lsa, bu burilishdan qanday eng katta va eng kichik tezlik bilan o'tish mumkin? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Поворот радиуса $100\\ \\mathrm{m}$ наклонён так, что при $20\\ \\mathrm{m/s}$ автомобиль проходит его без трения. Найдите угол наклона дороги. С какой наибольшей и наименьшей скоростью можно пройти поворот, если коэффициент трения покоя $0.3$? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A bend of radius $100\\ \\mathrm{m}$ is banked so that a car can take it at $20\\ \\mathrm{m/s}$ without friction. Find the banking angle. If the coefficient of static friction is $0.3$, what are the maximum and minimum speeds for taking the bend? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S11.png",
+  "solution": {
+   "uz": [
+    "Ishqalanishsiz: $N\\cos\\theta=mg$, $N\\sin\\theta=\\frac{mv^2}{R}$: $$\\tan\\theta=\\frac{v^2}{gR}=\\frac{400}{1000}=0.4,\\qquad \\theta\\approx21.8^\\circ$$",
+    "Eng katta tezlik — ishqalanish qiyalik bo'ylab pastga: $$v_{max}^2=gR\\frac{\\tan\\theta+\\mu}{1-\\mu\\tan\\theta}=1000\\cdot\\frac{0.7}{0.88},\\qquad v_{max}\\approx28.2\\ \\mathrm{m/s}$$",
+    "Eng kichik tezlik — ishqalanish yuqoriga: $$v_{min}^2=gR\\frac{\\tan\\theta-\\mu}{1+\\mu\\tan\\theta}=1000\\cdot\\frac{0.1}{1.12},\\qquad v_{min}\\approx9.45\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Без трения: $N\\cos\\theta=mg$, $N\\sin\\theta=\\frac{mv^2}{R}$: $$\\tan\\theta=\\frac{v^2}{gR}=\\frac{400}{1000}=0.4,\\qquad \\theta\\approx21.8^\\circ$$",
+    "Наибольшая скорость — трение направлено вниз по склону: $$v_{max}^2=gR\\frac{\\tan\\theta+\\mu}{1-\\mu\\tan\\theta}=1000\\cdot\\frac{0.7}{0.88},\\qquad v_{max}\\approx28.2\\ \\mathrm{m/s}$$",
+    "Наименьшая скорость — трение вверх: $$v_{min}^2=gR\\frac{\\tan\\theta-\\mu}{1+\\mu\\tan\\theta}=1000\\cdot\\frac{0.1}{1.12},\\qquad v_{min}\\approx9.45\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Without friction: $N\\cos\\theta=mg$, $N\\sin\\theta=\\frac{mv^2}{R}$: $$\\tan\\theta=\\frac{v^2}{gR}=\\frac{400}{1000}=0.4,\\qquad \\theta\\approx21.8^\\circ$$",
+    "Maximum speed — friction points down the slope: $$v_{max}^2=gR\\frac{\\tan\\theta+\\mu}{1-\\mu\\tan\\theta}=1000\\cdot\\frac{0.7}{0.88},\\qquad v_{max}\\approx28.2\\ \\mathrm{m/s}$$",
+    "Minimum speed — friction points up the slope: $$v_{min}^2=gR\\frac{\\tan\\theta-\\mu}{1+\\mu\\tan\\theta}=1000\\cdot\\frac{0.1}{1.12},\\qquad v_{min}\\approx9.45\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qiyalatilgan burilish: $v=\\sqrt{gR\\tan\\theta}$",
+    "ru": "Вираж: $v=\\sqrt{gR\\tan\\theta}$",
+    "en": "Banked curve: $v=\\sqrt{gR\\tan\\theta}$"
+   },
+   {
+    "uz": "Markazga intilma: $\\sum F_n=\\frac{mv^2}{R}=m\\omega^2R$",
+    "ru": "Центростремительное: $\\sum F_n=\\frac{mv^2}{R}=m\\omega^2R$",
+    "en": "Centripetal: $\\sum F_n=\\frac{mv^2}{R}=m\\omega^2R$"
+   },
+   {
+    "uz": "Tinchlikdagi ishqalanish: $F_{\\mu}\\leq\\mu_sN$",
+    "ru": "Трение покоя: $F_{\\mu}\\leq\\mu_sN$",
+    "en": "Static friction: $F_{\\mu}\\leq\\mu_sN$"
+   }
+  ],
+  "basis": {
+   "uz": "Qiyalatilgan burilish",
+   "ru": "Вираж",
+   "en": "Banked curve"
+  },
+  "answer": "\\theta\\approx21.8^\\circ;\\ v_{max}\\approx28.2\\ \\mathrm{m/s};\\ v_{min}\\approx9.45\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L02, GRE uslubida, burilish)"
+ },
+ {
+  "id": "B2-L02-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$0.2\\ \\mathrm{kg}$ sharcha $0.8\\ \\mathrm{m}$ uzunlikdagi ipga bog'lanib vertikal aylanada aylanmoqda. Yuqori nuqtada ip bo'shamasligi uchun eng kichik tezlik qancha? Yuqori nuqtadagi tezlik $4\\ \\mathrm{m/s}$ bo'lsa, yuqori va pastki nuqtalarda ip tarangligi qancha? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Шарик массы $0.2\\ \\mathrm{kg}$ на нити длины $0.8\\ \\mathrm{m}$ вращается в вертикальной плоскости. Какова наименьшая скорость в верхней точке, при которой нить не провисает? Каково натяжение нити в верхней и нижней точках, если скорость вверху $4\\ \\mathrm{m/s}$? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A $0.2\\ \\mathrm{kg}$ ball on a $0.8\\ \\mathrm{m}$ string moves in a vertical circle. What is the minimum speed at the top for the string to stay taut? If the speed at the top is $4\\ \\mathrm{m/s}$, what is the tension at the top and at the bottom? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S12.png",
+  "solution": {
+   "uz": [
+    "Yuqorida $T_1\\geq0$: $$mg\\leq\\frac{mv_1^2}{R}\\ \\Rightarrow\\ v_1\\geq\\sqrt{gR}=\\sqrt{8}\\approx2.83\\ \\mathrm{m/s}$$",
+    "$v_1=4\\ \\mathrm{m/s}$ da: $$T_1=m\\left(\\frac{v_1^2}{R}-g\\right)=0.2\\cdot(20-10)=2\\ \\mathrm{N}$$",
+    "Pastki nuqtadagi tezlik: $$v_2^2=16+4\\cdot10\\cdot0.8=48\\ \\mathrm{m^2/s^2}$$",
+    "Pastda taranglik; tekshiruv $T_2-T_1=6mg$: $$T_2=m\\left(\\frac{v_2^2}{R}+g\\right)=0.2\\cdot70=14\\ \\mathrm{N},\\qquad 14-2=12=6\\cdot0.2\\cdot10$$"
+   ],
+   "ru": [
+    "Вверху $T_1\\geq0$: $$mg\\leq\\frac{mv_1^2}{R}\\ \\Rightarrow\\ v_1\\geq\\sqrt{gR}=\\sqrt{8}\\approx2.83\\ \\mathrm{m/s}$$",
+    "При $v_1=4\\ \\mathrm{m/s}$: $$T_1=m\\left(\\frac{v_1^2}{R}-g\\right)=0.2\\cdot(20-10)=2\\ \\mathrm{N}$$",
+    "Скорость в нижней точке: $$v_2^2=16+4\\cdot10\\cdot0.8=48\\ \\mathrm{m^2/s^2}$$",
+    "Натяжение внизу; проверка $T_2-T_1=6mg$: $$T_2=m\\left(\\frac{v_2^2}{R}+g\\right)=0.2\\cdot70=14\\ \\mathrm{N},\\qquad 14-2=12=6\\cdot0.2\\cdot10$$"
+   ],
+   "en": [
+    "At the top $T_1\\geq0$: $$mg\\leq\\frac{mv_1^2}{R}\\ \\Rightarrow\\ v_1\\geq\\sqrt{gR}=\\sqrt{8}\\approx2.83\\ \\mathrm{m/s}$$",
+    "At $v_1=4\\ \\mathrm{m/s}$: $$T_1=m\\left(\\frac{v_1^2}{R}-g\\right)=0.2\\cdot(20-10)=2\\ \\mathrm{N}$$",
+    "Speed at the bottom: $$v_2^2=16+4\\cdot10\\cdot0.8=48\\ \\mathrm{m^2/s^2}$$",
+    "Tension at the bottom; check $T_2-T_1=6mg$: $$T_2=m\\left(\\frac{v_2^2}{R}+g\\right)=0.2\\cdot70=14\\ \\mathrm{N},\\qquad 14-2=12=6\\cdot0.2\\cdot10$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Vertikal aylana: yuqorida $T_1+mg=\\frac{mv_1^2}{R}$, pastda $T_2-mg=\\frac{mv_2^2}{R}$",
+    "ru": "Вертикальная окружность: вверху $T_1+mg=\\frac{mv_1^2}{R}$, внизу $T_2-mg=\\frac{mv_2^2}{R}$",
+    "en": "Vertical circle: top $T_1+mg=\\frac{mv_1^2}{R}$, bottom $T_2-mg=\\frac{mv_2^2}{R}$"
+   },
+   null,
+   {
+    "uz": "Energiya saqlanishi: $v_2^2=v_1^2+4gR$",
+    "ru": "Сохранение энергии: $v_2^2=v_1^2+4gR$",
+    "en": "Energy conservation: $v_2^2=v_1^2+4gR$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Vertikal aylana",
+   "ru": "Вертикальная окружность",
+   "en": "Vertical circle"
+  },
+  "answer": "v_1\\geq2.83\\ \\mathrm{m/s};\\ T_1=2\\ \\mathrm{N};\\ T_2=14\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.99-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L02-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$30\\ \\mathrm{g}$ massali sharcha qovushoq suyuqlikda tinch holatdan tushmoqda; qarshilik kuchi $F=-bv$, $b=0.06\\ \\mathrm{kg/s}$ (Arximed kuchini hisobga olmang). Chegaraviy tezlikni, $v(t)$ ni, relaksatsiya vaqtini va tezlik chegaraviy tezlikning $90$ foiziga yetish vaqtini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Шарик массы $30\\ \\mathrm{g}$ падает из покоя в вязкой жидкости; сила сопротивления $F=-bv$, $b=0.06\\ \\mathrm{kg/s}$ (силу Архимеда не учитывать). Найдите предельную скорость, $v(t)$, время релаксации и время, за которое скорость достигнет $90$ процентов предельной. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A $30\\ \\mathrm{g}$ ball falls from rest in a viscous liquid; the drag force is $F=-bv$, $b=0.06\\ \\mathrm{kg/s}$ (neglect buoyancy). Find the terminal velocity, $v(t)$, the relaxation time and the time for the speed to reach $90$ percent of the terminal velocity. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S13.png",
+  "solution": {
+   "uz": [
+    "Harakat tenglamasi; chegarada $\\frac{dv}{dt}=0$: $$m\\frac{dv}{dt}=mg-bv,\\qquad v_\\infty=\\frac{mg}{b}=\\frac{0.3}{0.06}=5\\ \\mathrm{m/s}$$",
+    "Yechim: $$v=v_\\infty\\left(1-e^{-t/\\tau}\\right),\\qquad \\tau=\\frac{m}{b}=0.5\\ \\mathrm{s}$$",
+    "$v=0.9v_\\infty$ shart: $$e^{-t/\\tau}=0.1\\ \\Rightarrow\\ t=\\tau\\ln10\\approx1.15\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Уравнение движения; в пределе $\\frac{dv}{dt}=0$: $$m\\frac{dv}{dt}=mg-bv,\\qquad v_\\infty=\\frac{mg}{b}=\\frac{0.3}{0.06}=5\\ \\mathrm{m/s}$$",
+    "Решение: $$v=v_\\infty\\left(1-e^{-t/\\tau}\\right),\\qquad \\tau=\\frac{m}{b}=0.5\\ \\mathrm{s}$$",
+    "Условие $v=0.9v_\\infty$: $$e^{-t/\\tau}=0.1\\ \\Rightarrow\\ t=\\tau\\ln10\\approx1.15\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "Equation of motion; in the limit $\\frac{dv}{dt}=0$: $$m\\frac{dv}{dt}=mg-bv,\\qquad v_\\infty=\\frac{mg}{b}=\\frac{0.3}{0.06}=5\\ \\mathrm{m/s}$$",
+    "Solution: $$v=v_\\infty\\left(1-e^{-t/\\tau}\\right),\\qquad \\tau=\\frac{m}{b}=0.5\\ \\mathrm{s}$$",
+    "Condition $v=0.9v_\\infty$: $$e^{-t/\\tau}=0.1\\ \\Rightarrow\\ t=\\tau\\ln10\\approx1.15\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nyutonning 2-qonuni: $m\\vec a=\\sum\\vec F$",
+    "ru": "Второй закон Ньютона: $m\\vec a=\\sum\\vec F$",
+    "en": "Newton's second law: $m\\vec a=\\sum\\vec F$"
+   },
+   {
+    "uz": "Chegaraviy tezlik: $v_\\infty=\\frac{mg}{b}$, $v=v_\\infty\\left(1-e^{-t/\\tau}\\right)$, $\\tau=\\frac{m}{b}$",
+    "ru": "Предельная скорость: $v_\\infty=\\frac{mg}{b}$, $v=v_\\infty\\left(1-e^{-t/\\tau}\\right)$, $\\tau=\\frac{m}{b}$",
+    "en": "Terminal velocity: $v_\\infty=\\frac{mg}{b}$, $v=v_\\infty\\left(1-e^{-t/\\tau}\\right)$, $\\tau=\\frac{m}{b}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Chiziqli qarshilik va chegaraviy tezlik",
+   "ru": "Линейное сопротивление и предельная скорость",
+   "en": "Linear drag and terminal velocity"
+  },
+  "answer": "v_\\infty=5\\ \\mathrm{m/s};\\ v=5\\left(1-e^{-2t}\\right);\\ \\tau=0.5\\ \\mathrm{s};\\ t\\approx1.15\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B2-L02, OpenStax 6.4 uslubida)"
+ },
+ {
+  "id": "B2-L02-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$80\\ \\mathrm{kg}$ massali parashyutchiga havo qarshiligi $F=cv^2$ ta'sir qiladi: parashyut ochilmaganda $c=0.25\\ \\mathrm{kg/m}$, ochilganda $c=20\\ \\mathrm{kg/m}$. Har ikki holatdagi chegaraviy tezlikni toping. Parashyut ochilmagan holda tezlik chegaraviy tezlikning yarmiga teng bo'lganda tezlanish qancha? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "На парашютиста массы $80\\ \\mathrm{kg}$ действует сопротивление воздуха $F=cv^2$: при нераскрытом парашюте $c=0.25\\ \\mathrm{kg/m}$, при раскрытом $c=20\\ \\mathrm{kg/m}$. Найдите предельную скорость в обоих случаях. Каково ускорение при нераскрытом парашюте, когда скорость равна половине предельной? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "An $80\\ \\mathrm{kg}$ skydiver experiences air drag $F=cv^2$: with the parachute closed $c=0.25\\ \\mathrm{kg/m}$, with it open $c=20\\ \\mathrm{kg/m}$. Find the terminal velocity in both cases. What is the acceleration with the parachute closed when the speed is half the terminal velocity? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S14.png",
+  "solution": {
+   "uz": [
+    "Chegarada $mg=cv_\\infty^2$: $$v_\\infty=\\sqrt{\\frac{800}{0.25}}=\\sqrt{3200}\\approx56.6\\ \\mathrm{m/s}$$",
+    "Parashyut ochilganda: $$v_\\infty=\\sqrt{\\frac{800}{20}}=\\sqrt{40}\\approx6.32\\ \\mathrm{m/s}$$",
+    "$v=\\frac{v_\\infty}{2}$ da: $$a=\\frac{mg-cv^2}{m}=g\\left(1-\\frac{1}{4}\\right)=7.5\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "В пределе $mg=cv_\\infty^2$: $$v_\\infty=\\sqrt{\\frac{800}{0.25}}=\\sqrt{3200}\\approx56.6\\ \\mathrm{m/s}$$",
+    "При раскрытом парашюте: $$v_\\infty=\\sqrt{\\frac{800}{20}}=\\sqrt{40}\\approx6.32\\ \\mathrm{m/s}$$",
+    "При $v=\\frac{v_\\infty}{2}$: $$a=\\frac{mg-cv^2}{m}=g\\left(1-\\frac{1}{4}\\right)=7.5\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "In the limit $mg=cv_\\infty^2$: $$v_\\infty=\\sqrt{\\frac{800}{0.25}}=\\sqrt{3200}\\approx56.6\\ \\mathrm{m/s}$$",
+    "With the parachute open: $$v_\\infty=\\sqrt{\\frac{800}{20}}=\\sqrt{40}\\approx6.32\\ \\mathrm{m/s}$$",
+    "At $v=\\frac{v_\\infty}{2}$: $$a=\\frac{mg-cv^2}{m}=g\\left(1-\\frac{1}{4}\\right)=7.5\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kvadratik qarshilik: $v_\\infty=\\sqrt{\\frac{mg}{c}}$, $a=g\\left(1-\\frac{v^2}{v_\\infty^2}\\right)$",
+    "ru": "Квадратичное сопротивление: $v_\\infty=\\sqrt{\\frac{mg}{c}}$, $a=g\\left(1-\\frac{v^2}{v_\\infty^2}\\right)$",
+    "en": "Quadratic drag: $v_\\infty=\\sqrt{\\frac{mg}{c}}$, $a=g\\left(1-\\frac{v^2}{v_\\infty^2}\\right)$"
+   },
+   null,
+   {
+    "uz": "Nyutonning 2-qonuni: $m\\vec a=\\sum\\vec F$",
+    "ru": "Второй закон Ньютона: $m\\vec a=\\sum\\vec F$",
+    "en": "Newton's second law: $m\\vec a=\\sum\\vec F$"
+   }
+  ],
+  "basis": {
+   "uz": "Kvadratik qarshilik",
+   "ru": "Квадратичное сопротивление",
+   "en": "Quadratic drag"
+  },
+  "answer": "v_\\infty\\approx56.6\\ \\mathrm{m/s};\\ v_\\infty\\approx6.32\\ \\mathrm{m/s};\\ a=7.5\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "Chertov–Vorobyov, «Fizikadan masalalar to'plami», 2.32-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L02-S15",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Avtomobil gorizontal yo'lda $A=5\\ \\mathrm{m/s^2}$ tezlanish bilan ketmoqda. Shiftga $1\\ \\mathrm{m}$ uzunlikdagi ipda $100\\ \\mathrm{g}$ sharcha osilgan. Avtomobilga nisbatan muvozanatda ip vertikal bilan qanday burchak hosil qiladi, uning tarangligi qancha? Sharchaning kichik tebranishlari davri qancha? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Автомобиль движется по горизонтальной дороге с ускорением $A=5\\ \\mathrm{m/s^2}$. К потолку на нити длины $1\\ \\mathrm{m}$ подвешен шарик массы $100\\ \\mathrm{g}$. Какой угол с вертикалью образует нить в равновесии относительно автомобиля, каково её натяжение? Каков период малых колебаний шарика? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A car moves on a level road with acceleration $A=5\\ \\mathrm{m/s^2}$. A $100\\ \\mathrm{g}$ ball hangs from the ceiling on a $1\\ \\mathrm{m}$ string. What angle does the string make with the vertical in equilibrium relative to the car, and what is its tension? What is the period of small oscillations of the ball? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S15.png",
+  "solution": {
+   "uz": [
+    "Avtomobil sistemasida inersiya kuchi $-m\\vec A$ — orqaga; effektiv og'irlik: $$\\vec g\\,'=\\vec g-\\vec A,\\qquad g'=\\sqrt{g^2+A^2}=\\sqrt{125}\\approx11.2\\ \\mathrm{m/s^2}$$",
+    "Ip $\\vec g\\,'$ bo'ylab — orqaga og'adi: $$\\tan\\theta=\\frac{A}{g}=0.5\\ \\Rightarrow\\ \\theta\\approx26.6^\\circ,\\qquad T=mg'\\approx1.12\\ \\mathrm{N}$$",
+    "Tebranish davri $g'$ bilan: $$T_0=2\\pi\\sqrt{\\frac{l}{g'}}=2\\pi\\sqrt{\\frac{1}{11.2}}\\approx1.88\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "В системе автомобиля сила инерции $-m\\vec A$ — назад; эффективная тяжесть: $$\\vec g\\,'=\\vec g-\\vec A,\\qquad g'=\\sqrt{g^2+A^2}=\\sqrt{125}\\approx11.2\\ \\mathrm{m/s^2}$$",
+    "Нить направлена вдоль $\\vec g\\,'$ — отклоняется назад: $$\\tan\\theta=\\frac{A}{g}=0.5\\ \\Rightarrow\\ \\theta\\approx26.6^\\circ,\\qquad T=mg'\\approx1.12\\ \\mathrm{N}$$",
+    "Период колебаний с $g'$: $$T_0=2\\pi\\sqrt{\\frac{l}{g'}}=2\\pi\\sqrt{\\frac{1}{11.2}}\\approx1.88\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "In the car's frame the inertial force $-m\\vec A$ points backwards; effective gravity: $$\\vec g\\,'=\\vec g-\\vec A,\\qquad g'=\\sqrt{g^2+A^2}=\\sqrt{125}\\approx11.2\\ \\mathrm{m/s^2}$$",
+    "The string lies along $\\vec g\\,'$ — tilted backwards: $$\\tan\\theta=\\frac{A}{g}=0.5\\ \\Rightarrow\\ \\theta\\approx26.6^\\circ,\\qquad T=mg'\\approx1.12\\ \\mathrm{N}$$",
+    "Oscillation period with $g'$: $$T_0=2\\pi\\sqrt{\\frac{l}{g'}}=2\\pi\\sqrt{\\frac{1}{11.2}}\\approx1.88\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Noinersial sistema: $m\\vec a\\,'=\\sum\\vec F-m\\vec A$, $\\vec g\\,'=\\vec g-\\vec A$",
+    "ru": "Неинерциальная система: $m\\vec a\\,'=\\sum\\vec F-m\\vec A$, $\\vec g\\,'=\\vec g-\\vec A$",
+    "en": "Non-inertial frame: $m\\vec a\\,'=\\sum\\vec F-m\\vec A$, $\\vec g\\,'=\\vec g-\\vec A$"
+   },
+   null,
+   {
+    "uz": "Mayatnik davri: $T=2\\pi\\sqrt{\\frac{l}{g'}}$",
+    "ru": "Период маятника: $T=2\\pi\\sqrt{\\frac{l}{g'}}$",
+    "en": "Pendulum period: $T=2\\pi\\sqrt{\\frac{l}{g'}}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tezlanuvchi avtomobildagi mayatnik",
+   "ru": "Маятник в ускоряющемся автомобиле",
+   "en": "Pendulum in an accelerating car"
+  },
+  "answer": "\\theta\\approx26.6^\\circ;\\ T\\approx1.12\\ \\mathrm{N};\\ T_0\\approx1.88\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L02, noinersial sistema)"
+ },
+ {
+  "id": "B2-L02-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Qiyaligi $30^\\circ$ bo'lgan silliq pona gorizontal yo'nalishda tezlanish bilan harakatlanmoqda. Pona ustidagi $1\\ \\mathrm{kg}$ brusok ponaga nisbatan tinch turishi uchun pona qanday tezlanish bilan harakatlanishi kerak? Bunda brusok ponani qanday kuch bilan bosadi? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Гладкий клин с углом наклона $30^\\circ$ движется с горизонтальным ускорением. С каким ускорением должен двигаться клин, чтобы брусок массы $1\\ \\mathrm{kg}$ на нём покоился относительно клина? С какой силой брусок давит при этом на клин? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A smooth wedge inclined at $30^\\circ$ moves with a horizontal acceleration. With what acceleration must the wedge move for a $1\\ \\mathrm{kg}$ block on it to stay at rest relative to the wedge? With what force does the block then press on the wedge? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S16.png",
+  "solution": {
+   "uz": [
+    "Pona sistemasida brusokka $mg$, $N$ va inersiya kuchi $-m\\vec A$ ta'sir qiladi: $$\\vec g\\,'=\\vec g-\\vec A$$",
+    "Tinch turish: $\\vec g\\,'$ qiya sirtga perpendikulyar: $$\\tan30^\\circ=\\frac{A}{g}\\ \\Rightarrow\\ A=g\\tan30^\\circ\\approx5.77\\ \\mathrm{m/s^2}$$",
+    "Bosim kuchi: $$N=mg'=\\frac{mg}{\\cos30^\\circ}\\approx11.5\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "В системе клина на брусок действуют $mg$, $N$ и сила инерции $-m\\vec A$: $$\\vec g\\,'=\\vec g-\\vec A$$",
+    "Покой: $\\vec g\\,'$ перпендикулярно наклонной поверхности: $$\\tan30^\\circ=\\frac{A}{g}\\ \\Rightarrow\\ A=g\\tan30^\\circ\\approx5.77\\ \\mathrm{m/s^2}$$",
+    "Сила давления: $$N=mg'=\\frac{mg}{\\cos30^\\circ}\\approx11.5\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "In the wedge's frame the block is acted on by $mg$, $N$ and the inertial force $-m\\vec A$: $$\\vec g\\,'=\\vec g-\\vec A$$",
+    "At rest: $\\vec g\\,'$ is perpendicular to the inclined surface: $$\\tan30^\\circ=\\frac{A}{g}\\ \\Rightarrow\\ A=g\\tan30^\\circ\\approx5.77\\ \\mathrm{m/s^2}$$",
+    "Pressing force: $$N=mg'=\\frac{mg}{\\cos30^\\circ}\\approx11.5\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Noinersial sistema: $m\\vec a\\,'=\\sum\\vec F-m\\vec A$, $\\vec g\\,'=\\vec g-\\vec A$",
+    "ru": "Неинерциальная система: $m\\vec a\\,'=\\sum\\vec F-m\\vec A$, $\\vec g\\,'=\\vec g-\\vec A$",
+    "en": "Non-inertial frame: $m\\vec a\\,'=\\sum\\vec F-m\\vec A$, $\\vec g\\,'=\\vec g-\\vec A$"
+   },
+   null,
+   {
+    "uz": "Nyutonning 3-qonuni: $\\vec F_{12}=-\\vec F_{21}$ — turli jismlarga qo'yilgan",
+    "ru": "Третий закон Ньютона: $\\vec F_{12}=-\\vec F_{21}$ — приложены к разным телам",
+    "en": "Newton's third law: $\\vec F_{12}=-\\vec F_{21}$ — applied to different bodies"
+   }
+  ],
+  "basis": {
+   "uz": "Tezlanuvchi ponadagi brusok",
+   "ru": "Брусок на ускоряющемся клине",
+   "en": "Block on an accelerating wedge"
+  },
+  "answer": "A\\approx5.77\\ \\mathrm{m/s^2};\\ N\\approx11.5\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "Irodov, «Problems in General Physics», 1.79-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L02-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "a) Gorizontal aylanuvchi disk ustida o'qdan $0.2\\ \\mathrm{m}$ masofada tanga yotibdi, tinchlikdagi ishqalanish koeffitsiyenti $0.4$. Tanga sirpanmasligi uchun diskning eng katta burchak tezligi qancha? b) $\\omega=2\\ \\mathrm{rad/s}$ bilan aylanayotgan silliq disk ustida o'qdan $0.2\\ \\mathrm{m}$ va $0.6\\ \\mathrm{m}$ masofada ikki sharcha diskka nisbatan tinch holatda qo'yib yuborildi. Disk sistemasida ularning boshlang'ich tezlanishlari nisbati qancha? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "а) На горизонтальном вращающемся диске на расстоянии $0.2\\ \\mathrm{m}$ от оси лежит монета, коэффициент трения покоя $0.4$. Какова наибольшая угловая скорость диска, при которой монета не скользит? б) На гладком диске, вращающемся с $\\omega=2\\ \\mathrm{rad/s}$, на расстояниях $0.2\\ \\mathrm{m}$ и $0.6\\ \\mathrm{m}$ от оси отпущены из покоя относительно диска два шарика. Каково отношение их начальных ускорений в системе диска? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "a) A coin lies on a horizontal rotating disc $0.2\\ \\mathrm{m}$ from the axis; the coefficient of static friction is $0.4$. What is the maximum angular velocity of the disc for which the coin does not slide? b) On a smooth disc rotating at $\\omega=2\\ \\mathrm{rad/s}$ two balls are released from rest relative to the disc at $0.2\\ \\mathrm{m}$ and $0.6\\ \\mathrm{m}$ from the axis. What is the ratio of their initial accelerations in the disc's frame? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L02-S17.png",
+  "solution": {
+   "uz": [
+    "a) Disk sistemasida markazdan qochma kuchni ishqalanish muvozanatlaydi: $$m\\omega^2r\\leq\\mu_smg\\ \\Rightarrow\\ \\omega_{max}=\\sqrt{\\frac{0.4\\cdot10}{0.2}}=\\sqrt{20}\\approx4.47\\ \\mathrm{rad/s}$$",
+    "b) Boshlang'ich paytda $v'=0$ — Koriolis kuchi yo'q, faqat markazdan qochma kuch: $$a'=\\omega^2\\rho:\\qquad a_1'=0.8\\ \\mathrm{m/s^2},\\quad a_2'=2.4\\ \\mathrm{m/s^2}$$",
+    "Nisbat: $$\\frac{a_1'}{a_2'}=\\frac{0.2}{0.6}=\\frac{1}{3}$$"
+   ],
+   "ru": [
+    "а) В системе диска центробежную силу уравновешивает трение: $$m\\omega^2r\\leq\\mu_smg\\ \\Rightarrow\\ \\omega_{max}=\\sqrt{\\frac{0.4\\cdot10}{0.2}}=\\sqrt{20}\\approx4.47\\ \\mathrm{rad/s}$$",
+    "б) В начальный момент $v'=0$ — силы Кориолиса нет, только центробежная: $$a'=\\omega^2\\rho:\\qquad a_1'=0.8\\ \\mathrm{m/s^2},\\quad a_2'=2.4\\ \\mathrm{m/s^2}$$",
+    "Отношение: $$\\frac{a_1'}{a_2'}=\\frac{0.2}{0.6}=\\frac{1}{3}$$"
+   ],
+   "en": [
+    "a) In the disc's frame friction balances the centrifugal force: $$m\\omega^2r\\leq\\mu_smg\\ \\Rightarrow\\ \\omega_{max}=\\sqrt{\\frac{0.4\\cdot10}{0.2}}=\\sqrt{20}\\approx4.47\\ \\mathrm{rad/s}$$",
+    "b) Initially $v'=0$ — no Coriolis force, only the centrifugal force: $$a'=\\omega^2\\rho:\\qquad a_1'=0.8\\ \\mathrm{m/s^2},\\quad a_2'=2.4\\ \\mathrm{m/s^2}$$",
+    "Ratio: $$\\frac{a_1'}{a_2'}=\\frac{0.2}{0.6}=\\frac{1}{3}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Markazdan qochma kuch: $m\\omega^2\\rho$ (o'qdan tashqariga)",
+    "ru": "Центробежная сила: $m\\omega^2\\rho$ (от оси)",
+    "en": "Centrifugal force: $m\\omega^2\\rho$ (away from the axis)"
+   },
+   {
+    "uz": "Koriolis kuchi: $-2m\\vec\\omega\\times\\vec v\\,'$; Yerda gorizontal: $2m\\Omega v\\sin\\varphi$",
+    "ru": "Сила Кориолиса: $-2m\\vec\\omega\\times\\vec v\\,'$; на Земле горизонтально: $2m\\Omega v\\sin\\varphi$",
+    "en": "Coriolis force: $-2m\\vec\\omega\\times\\vec v\\,'$; on Earth horizontally: $2m\\Omega v\\sin\\varphi$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Aylanuvchi disk sistemasi",
+   "ru": "Система вращающегося диска",
+   "en": "The rotating-disc frame"
+  },
+  "answer": "\\omega_{max}\\approx4.47\\ \\mathrm{rad/s};\\ \\frac{a_1'}{a_2'}=\\frac{1}{3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.4.2 g'oyasi asosida; sharti o'zgartirilgan; Irodov 1.112 g'oyasi"
+ },
+ {
+  "id": "B2-L02-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Toshkent kengligida ($\\varphi\\approx41^\\circ$, $\\sin41^\\circ\\approx0.656$) samolyot shimolga $250\\ \\mathrm{m/s}$ tezlik bilan gorizontal uchmoqda. Koriolis tezlanishining gorizontal tashkil etuvchisi va yo'nalishini toping. Uchuvchi tuzatmasa, $10\\ \\mathrm{min}$ da samolyot qancha og'adi? Shu kenglikda markazdan qochma tezlanish qancha? $\\Omega=7.29\\cdot10^{-5}\\ \\mathrm{rad/s}$, $R=6.37\\cdot10^6\\ \\mathrm{m}$.",
+   "ru": "На широте Ташкента ($\\varphi\\approx41^\\circ$, $\\sin41^\\circ\\approx0.656$) самолёт летит горизонтально на север со скоростью $250\\ \\mathrm{m/s}$. Найдите горизонтальную составляющую кориолисова ускорения и её направление. На сколько отклонится самолёт за $10\\ \\mathrm{min}$, если пилот не корректирует курс? Каково центробежное ускорение на этой широте? $\\Omega=7.29\\cdot10^{-5}\\ \\mathrm{rad/s}$, $R=6.37\\cdot10^6\\ \\mathrm{m}$.",
+   "en": "At the latitude of Tashkent ($\\varphi\\approx41^\\circ$, $\\sin41^\\circ\\approx0.656$) a plane flies horizontally north at $250\\ \\mathrm{m/s}$. Find the horizontal component of the Coriolis acceleration and its direction. How far will the plane drift in $10\\ \\mathrm{min}$ if the pilot does not correct? What is the centrifugal acceleration at this latitude? $\\Omega=7.29\\cdot10^{-5}\\ \\mathrm{rad/s}$, $R=6.37\\cdot10^6\\ \\mathrm{m}$."
+  },
+  "figure": "figures/B2-L02-S18.png",
+  "solution": {
+   "uz": [
+    "Gorizontal tashkil etuvchi — shimoliy yarimsharda o'ngga, ya'ni sharqqa: $$a_C=2\\Omega v\\sin\\varphi=2\\cdot7.29\\cdot10^{-5}\\cdot250\\cdot0.656\\approx0.0239\\ \\mathrm{m/s^2}$$",
+    "Og'ish (taxminan o'zgarmas tezlanish): $$x=\\frac{a_Ct^2}{2}=\\frac{0.0239\\cdot600^2}{2}\\approx4.3\\ \\mathrm{km}$$",
+    "Markazdan qochma tezlanish ($\\rho=R\\cos\\varphi$): $$\\Omega^2R\\cos\\varphi\\approx(7.29\\cdot10^{-5})^2\\cdot6.37\\cdot10^6\\cdot0.755\\approx0.026\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Горизонтальная составляющая — в северном полушарии вправо, то есть на восток: $$a_C=2\\Omega v\\sin\\varphi=2\\cdot7.29\\cdot10^{-5}\\cdot250\\cdot0.656\\approx0.0239\\ \\mathrm{m/s^2}$$",
+    "Отклонение (ускорение примерно постоянно): $$x=\\frac{a_Ct^2}{2}=\\frac{0.0239\\cdot600^2}{2}\\approx4.3\\ \\mathrm{km}$$",
+    "Центробежное ускорение ($\\rho=R\\cos\\varphi$): $$\\Omega^2R\\cos\\varphi\\approx(7.29\\cdot10^{-5})^2\\cdot6.37\\cdot10^6\\cdot0.755\\approx0.026\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "Horizontal component — to the right in the northern hemisphere, i.e. east: $$a_C=2\\Omega v\\sin\\varphi=2\\cdot7.29\\cdot10^{-5}\\cdot250\\cdot0.656\\approx0.0239\\ \\mathrm{m/s^2}$$",
+    "Drift (approximately constant acceleration): $$x=\\frac{a_Ct^2}{2}=\\frac{0.0239\\cdot600^2}{2}\\approx4.3\\ \\mathrm{km}$$",
+    "Centrifugal acceleration ($\\rho=R\\cos\\varphi$): $$\\Omega^2R\\cos\\varphi\\approx(7.29\\cdot10^{-5})^2\\cdot6.37\\cdot10^6\\cdot0.755\\approx0.026\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Koriolis kuchi: $-2m\\vec\\omega\\times\\vec v\\,'$; Yerda gorizontal: $2m\\Omega v\\sin\\varphi$",
+    "ru": "Сила Кориолиса: $-2m\\vec\\omega\\times\\vec v\\,'$; на Земле горизонтально: $2m\\Omega v\\sin\\varphi$",
+    "en": "Coriolis force: $-2m\\vec\\omega\\times\\vec v\\,'$; on Earth horizontally: $2m\\Omega v\\sin\\varphi$"
+   },
+   {
+    "uz": "Tekis tezlanuvchan harakat: $s=\\frac{at^2}{2}$, $v=at$",
+    "ru": "Равноускоренное движение: $s=\\frac{at^2}{2}$, $v=at$",
+    "en": "Uniform acceleration: $s=\\frac{at^2}{2}$, $v=at$"
+   },
+   {
+    "uz": "Markazdan qochma kuch: $m\\omega^2\\rho$ (o'qdan tashqariga)",
+    "ru": "Центробежная сила: $m\\omega^2\\rho$ (от оси)",
+    "en": "Centrifugal force: $m\\omega^2\\rho$ (away from the axis)"
+   }
+  ],
+  "basis": {
+   "uz": "Aylanayotgan Yerdagi inersiya kuchlari",
+   "ru": "Силы инерции на вращающейся Земле",
+   "en": "Inertial forces on the rotating Earth"
+  },
+  "answer": "a_C\\approx0.024\\ \\mathrm{m/s^2};\\ x\\approx4.3\\ \\mathrm{km};\\ \\Omega^2R\\cos\\varphi\\approx0.026\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L02, Toshkent misoli)"
+ }
+]
