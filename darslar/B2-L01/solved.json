@@ -1,0 +1,992 @@
+[
+ {
+  "id": "B2-L01-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Tosh $h=20\\ \\mathrm{m}$ balandlikdan gorizontal $v_0=15\\ \\mathrm{m/s}$ tezlik bilan otildi. Uning harakat qonunini vektor ko'rinishda yozing, uchish vaqtini, uchish uzoqligini, yerga tushishdagi tezlik moduli va yo'nalishini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Камень брошен горизонтально с высоты $h=20\\ \\mathrm{m}$ со скоростью $v_0=15\\ \\mathrm{m/s}$. Запишите закон его движения в векторной форме, найдите время полёта, дальность полёта, модуль и направление скорости при падении на землю. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A stone is thrown horizontally from a height $h=20\\ \\mathrm{m}$ with speed $v_0=15\\ \\mathrm{m/s}$. Write its equation of motion in vector form and find the time of flight, the range, and the magnitude and direction of the velocity when it hits the ground. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L01-S01.png",
+  "solution": {
+   "uz": [
+    "Boshni yer sathida, $y$ ni yuqoriga olamiz; $\\vec a=\\vec g=(0,\\ -10)$: $$\\vec r=(0,\\ 20)+(15,\\ 0)t+\\frac{(0,\\ -10)t^2}{2}=\\left(15t,\\ 20-5t^2\\right)$$",
+    "Yerga tushish: $y=0$: $$20-5t^2=0\\ \\Rightarrow\\ t=2\\ \\mathrm{s},\\qquad L=15\\cdot2=30\\ \\mathrm{m}$$",
+    "Tezlik: $\\vec v=\\frac{d\\vec r}{dt}$: $$\\vec v=(15,\\ -10t)=(15,\\ -20)\\ \\mathrm{m/s}$$",
+    "Modul va gorizont bilan burchak: $$v=\\sqrt{15^2+20^2}=25\\ \\mathrm{m/s},\\qquad \\tan\\varphi=\\frac{20}{15}\\ \\Rightarrow\\ \\varphi\\approx53^\\circ$$"
+   ],
+   "ru": [
+    "Начало — на уровне земли, $y$ вверх; $\\vec a=\\vec g=(0,\\ -10)$: $$\\vec r=(0,\\ 20)+(15,\\ 0)t+\\frac{(0,\\ -10)t^2}{2}=\\left(15t,\\ 20-5t^2\\right)$$",
+    "Падение на землю: $y=0$: $$20-5t^2=0\\ \\Rightarrow\\ t=2\\ \\mathrm{s},\\qquad L=15\\cdot2=30\\ \\mathrm{m}$$",
+    "Скорость: $\\vec v=\\frac{d\\vec r}{dt}$: $$\\vec v=(15,\\ -10t)=(15,\\ -20)\\ \\mathrm{m/s}$$",
+    "Модуль и угол с горизонтом: $$v=\\sqrt{15^2+20^2}=25\\ \\mathrm{m/s},\\qquad \\tan\\varphi=\\frac{20}{15}\\ \\Rightarrow\\ \\varphi\\approx53^\\circ$$"
+   ],
+   "en": [
+    "Origin at ground level, $y$ up; $\\vec a=\\vec g=(0,\\ -10)$: $$\\vec r=(0,\\ 20)+(15,\\ 0)t+\\frac{(0,\\ -10)t^2}{2}=\\left(15t,\\ 20-5t^2\\right)$$",
+    "Landing: $y=0$: $$20-5t^2=0\\ \\Rightarrow\\ t=2\\ \\mathrm{s},\\qquad L=15\\cdot2=30\\ \\mathrm{m}$$",
+    "Velocity: $\\vec v=\\frac{d\\vec r}{dt}$: $$\\vec v=(15,\\ -10t)=(15,\\ -20)\\ \\mathrm{m/s}$$",
+    "Magnitude and angle with the horizontal: $$v=\\sqrt{15^2+20^2}=25\\ \\mathrm{m/s},\\qquad \\tan\\varphi=\\frac{20}{15}\\ \\Rightarrow\\ \\varphi\\approx53^\\circ$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "O'zgarmas tezlanish: $\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}$",
+    "ru": "Постоянное ускорение: $\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}$",
+    "en": "Constant acceleration: $\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}$"
+   },
+   null,
+   {
+    "uz": "Tezlik — radius-vektor hosilasi: $\\vec v=\\frac{d\\vec r}{dt}$",
+    "ru": "Скорость — производная радиус-вектора: $\\vec v=\\frac{d\\vec r}{dt}$",
+    "en": "Velocity is the derivative of the position vector: $\\vec v=\\frac{d\\vec r}{dt}$"
+   },
+   {
+    "uz": "Vektor moduli: $v=\\sqrt{v_x^2+v_y^2}$",
+    "ru": "Модуль вектора: $v=\\sqrt{v_x^2+v_y^2}$",
+    "en": "Magnitude of a vector: $v=\\sqrt{v_x^2+v_y^2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Gorizontal otilgan jism",
+   "ru": "Тело, брошенное горизонтально",
+   "en": "Horizontal launch"
+  },
+  "answer": "t=2\\ \\mathrm{s};\\ L=30\\ \\mathrm{m};\\ v=25\\ \\mathrm{m/s},\\ \\varphi\\approx53^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "Volkenshteyn, «Problems in General Physics», 1.26-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Daryo kengligi $d=120\\ \\mathrm{m}$, oqim tezligi $u=3\\ \\mathrm{m/s}$, qayiqning suvga nisbatan tezligi $v=5\\ \\mathrm{m/s}$. a) Qayiq tumshug'i qirg'oqqa perpendikulyar yo'naltirilsa, u qancha vaqtda o'tadi va qancha suriladi? b) Qayiq to'g'ri qarshi nuqtaga yetishi uchun uni qanday yo'naltirish kerak va o'tish qancha davom etadi?",
+   "ru": "Ширина реки $d=120\\ \\mathrm{m}$, скорость течения $u=3\\ \\mathrm{m/s}$, скорость лодки относительно воды $v=5\\ \\mathrm{m/s}$. а) Если нос лодки направлен перпендикулярно берегу, за какое время она переправится и на сколько её снесёт? б) Как направить лодку, чтобы она попала в точку точно напротив, и сколько продлится переправа?",
+   "en": "A river is $d=120\\ \\mathrm{m}$ wide, the current speed is $u=3\\ \\mathrm{m/s}$ and the boat's speed relative to the water is $v=5\\ \\mathrm{m/s}$. a) If the bow points perpendicular to the bank, how long does the crossing take and how far downstream is the boat carried? b) How should the boat be pointed to reach the point directly opposite, and how long does the crossing take then?"
+  },
+  "figure": "figures/B2-L01-S02.png",
+  "solution": {
+   "uz": [
+    "Qirg'oqqa nisbatan tezlik $\\vec w$ — ikki tezlik yig'indisi: $$\\vec w=\\vec u+\\vec v$$",
+    "a) Ko'ndalang tashkil etuvchi $v$, bo'ylama $u$: $$t_1=\\frac{d}{v}=\\frac{120}{5}=24\\ \\mathrm{s},\\qquad x=ut_1=3\\cdot24=72\\ \\mathrm{m}$$",
+    "b) Natijaviy tezlik qirg'oqqa perpendikulyar bo'lishi kerak: $$v\\cos\\beta=u\\ \\Rightarrow\\ \\cos\\beta=\\frac{3}{5},\\qquad \\beta\\approx53^\\circ$$",
+    "Ko'ndalang tezlik va vaqt: $$v_\\perp=\\sqrt{v^2-u^2}=4\\ \\mathrm{m/s},\\qquad t_2=\\frac{120}{4}=30\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Скорость относительно берега $\\vec w$ — сумма двух скоростей: $$\\vec w=\\vec u+\\vec v$$",
+    "а) Поперечная составляющая $v$, продольная $u$: $$t_1=\\frac{d}{v}=\\frac{120}{5}=24\\ \\mathrm{s},\\qquad x=ut_1=3\\cdot24=72\\ \\mathrm{m}$$",
+    "б) Результирующая скорость должна быть перпендикулярна берегу: $$v\\cos\\beta=u\\ \\Rightarrow\\ \\cos\\beta=\\frac{3}{5},\\qquad \\beta\\approx53^\\circ$$",
+    "Поперечная скорость и время: $$v_\\perp=\\sqrt{v^2-u^2}=4\\ \\mathrm{m/s},\\qquad t_2=\\frac{120}{4}=30\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The velocity relative to the bank, $\\vec w$, is the sum of two velocities: $$\\vec w=\\vec u+\\vec v$$",
+    "a) The transverse component is $v$, the longitudinal one $u$: $$t_1=\\frac{d}{v}=\\frac{120}{5}=24\\ \\mathrm{s},\\qquad x=ut_1=3\\cdot24=72\\ \\mathrm{m}$$",
+    "b) The resultant velocity must be perpendicular to the bank: $$v\\cos\\beta=u\\ \\Rightarrow\\ \\cos\\beta=\\frac{3}{5},\\qquad \\beta\\approx53^\\circ$$",
+    "Transverse speed and time: $$v_\\perp=\\sqrt{v^2-u^2}=4\\ \\mathrm{m/s},\\qquad t_2=\\frac{120}{4}=30\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tezliklarni qo'shish: $\\vec v=\\vec V+\\vec v\\,'$",
+    "ru": "Сложение скоростей: $\\vec v=\\vec V+\\vec v\\,'$",
+    "en": "Velocity addition: $\\vec v=\\vec V+\\vec v\\,'$"
+   },
+   null,
+   null,
+   {
+    "uz": "Vektor moduli: $v=\\sqrt{v_x^2+v_y^2}$",
+    "ru": "Модуль вектора: $v=\\sqrt{v_x^2+v_y^2}$",
+    "en": "Magnitude of a vector: $v=\\sqrt{v_x^2+v_y^2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Daryodan o'tish: eng qisqa vaqt va eng qisqa yo'l",
+   "ru": "Переправа: наименьшее время и кратчайший путь",
+   "en": "River crossing: minimum time and shortest path"
+  },
+  "answer": "t_1=24\\ \\mathrm{s},\\ x=72\\ \\mathrm{m};\\ \\beta\\approx53^\\circ,\\ t_2=30\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "Volkenshteyn, «Problems in General Physics», 1.7-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Avtomobil $V=20\\ \\mathrm{m/s}$ tezlik bilan ketmoqda, g'ildiragining radiusi $R=0.32\\ \\mathrm{m}$, g'ildirak sirpanmaydi. G'ildirakning burchak tezligini, gardishdagi nuqtaning o'qqa nisbatan tezlanishini, yerga nisbatan eng yuqori va eng pastki nuqtalar tezligini toping.",
+   "ru": "Автомобиль едет со скоростью $V=20\\ \\mathrm{m/s}$, радиус колеса $R=0.32\\ \\mathrm{m}$, колесо не проскальзывает. Найдите угловую скорость колеса, ускорение точки обода относительно оси, скорости верхней и нижней точек относительно земли.",
+   "en": "A car travels at $V=20\\ \\mathrm{m/s}$; its wheel radius is $R=0.32\\ \\mathrm{m}$ and the wheel does not slip. Find the angular velocity of the wheel, the acceleration of a point on the rim relative to the axle, and the velocities of the top and bottom points relative to the ground."
+  },
+  "figure": "figures/B2-L01-S03.png",
+  "solution": {
+   "uz": [
+    "Sirpanmaslik sharti: $$\\omega=\\frac{V}{R}=\\frac{20}{0.32}=62.5\\ \\mathrm{rad/s}$$",
+    "O'qqa nisbatan nuqta tekis aylanadi: $$a_n=\\omega^2R=62.5^2\\cdot0.32=1250\\ \\mathrm{m/s^2}$$",
+    "Yerga nisbatan $\\vec v=\\vec V+\\vec v\\,'$, $v'=\\omega R=V$; yuqorida $v_1$, pastda $v_2$: $$v_1=V+V=40\\ \\mathrm{m/s},\\qquad v_2=V-V=0$$"
+   ],
+   "ru": [
+    "Условие отсутствия проскальзывания: $$\\omega=\\frac{V}{R}=\\frac{20}{0.32}=62.5\\ \\mathrm{rad/s}$$",
+    "Относительно оси точка вращается равномерно: $$a_n=\\omega^2R=62.5^2\\cdot0.32=1250\\ \\mathrm{m/s^2}$$",
+    "Относительно земли $\\vec v=\\vec V+\\vec v\\,'$, $v'=\\omega R=V$; вверху $v_1$, внизу $v_2$: $$v_1=V+V=40\\ \\mathrm{m/s},\\qquad v_2=V-V=0$$"
+   ],
+   "en": [
+    "No-slip condition: $$\\omega=\\frac{V}{R}=\\frac{20}{0.32}=62.5\\ \\mathrm{rad/s}$$",
+    "Relative to the axle the point rotates uniformly: $$a_n=\\omega^2R=62.5^2\\cdot0.32=1250\\ \\mathrm{m/s^2}$$",
+    "Relative to the ground $\\vec v=\\vec V+\\vec v\\,'$, $v'=\\omega R=V$; $v_1$ at the top, $v_2$ at the bottom: $$v_1=V+V=40\\ \\mathrm{m/s},\\qquad v_2=V-V=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sirpanmasdan dumalash: $V=\\omega R$, $\\vec v=\\vec V+\\vec\\omega\\times\\vec r$",
+    "ru": "Качение без проскальзывания: $V=\\omega R$, $\\vec v=\\vec V+\\vec\\omega\\times\\vec r$",
+    "en": "Rolling without slipping: $V=\\omega R$, $\\vec v=\\vec V+\\vec\\omega\\times\\vec r$"
+   },
+   {
+    "uz": "Aylana: $v=\\omega R$, $a_\\tau=\\varepsilon R$, $a_n=\\omega^2R=\\frac{v^2}{R}$",
+    "ru": "Окружность: $v=\\omega R$, $a_\\tau=\\varepsilon R$, $a_n=\\omega^2R=\\frac{v^2}{R}$",
+    "en": "Circle: $v=\\omega R$, $a_\\tau=\\varepsilon R$, $a_n=\\omega^2R=\\frac{v^2}{R}$"
+   },
+   {
+    "uz": "Tezliklarni qo'shish: $\\vec v=\\vec V+\\vec v\\,'$",
+    "ru": "Сложение скоростей: $\\vec v=\\vec V+\\vec v\\,'$",
+    "en": "Velocity addition: $\\vec v=\\vec V+\\vec v\\,'$"
+   }
+  ],
+  "basis": {
+   "uz": "Dumalayotgan g'ildirak",
+   "ru": "Катящееся колесо",
+   "en": "Rolling wheel"
+  },
+  "answer": "\\omega=62.5\\ \\mathrm{rad/s};\\ a_n=1250\\ \\mathrm{m/s^2};\\ 40\\ \\mathrm{m/s},\\ 0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original (B2-L01, ko'prik masala)"
+ },
+ {
+  "id": "B2-L01-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Nuqtaning radius-vektori $\\vec r=3t\\,\\vec i+\\left(8t-2t^2\\right)\\vec j$ (metrda, $t$ sekundda). Tezlik va tezlanish vektorlarini, trayektoriya tenglamasini toping. Qaysi paytda tezlik tezlanishga perpendikulyar bo'ladi? Shu paytdagi nuqta koordinatalarini va tezlik modulini toping.",
+   "ru": "Радиус-вектор точки $\\vec r=3t\\,\\vec i+\\left(8t-2t^2\\right)\\vec j$ (в метрах, $t$ в секундах). Найдите векторы скорости и ускорения, уравнение траектории. В какой момент скорость перпендикулярна ускорению? Найдите координаты точки и модуль скорости в этот момент.",
+   "en": "The position vector of a point is $\\vec r=3t\\,\\vec i+\\left(8t-2t^2\\right)\\vec j$ (in metres, $t$ in seconds). Find the velocity and acceleration vectors and the trajectory equation. At what moment is the velocity perpendicular to the acceleration? Find the coordinates of the point and its speed at that moment."
+  },
+  "figure": "figures/B2-L01-S04.png",
+  "solution": {
+   "uz": [
+    "Differensiallaymiz: $$\\vec v=3\\vec i+(8-4t)\\vec j,\\qquad \\vec a=-4\\vec j=\\mathrm{const}$$",
+    "$x=3t$ dan $t=\\frac{x}{3}$, buni $y$ ga qo'yamiz — parabola: $$y=\\frac{8x}{3}-\\frac{2x^2}{9}$$",
+    "Perpendikulyarlik sharti: $$\\vec v\\cdot\\vec a=-4(8-4t)=0\\ \\Rightarrow\\ t=2\\ \\mathrm{s}$$",
+    "Shu paytda — trayektoriya cho'qqisi: $$\\vec r(2)=(6,\\ 8)\\ \\mathrm{m},\\qquad \\vec v(2)=(3,\\ 0),\\quad v=3\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Дифференцируем: $$\\vec v=3\\vec i+(8-4t)\\vec j,\\qquad \\vec a=-4\\vec j=\\mathrm{const}$$",
+    "Из $x=3t$ получаем $t=\\frac{x}{3}$, подставляем в $y$ — парабола: $$y=\\frac{8x}{3}-\\frac{2x^2}{9}$$",
+    "Условие перпендикулярности: $$\\vec v\\cdot\\vec a=-4(8-4t)=0\\ \\Rightarrow\\ t=2\\ \\mathrm{s}$$",
+    "В этот момент — вершина траектории: $$\\vec r(2)=(6,\\ 8)\\ \\mathrm{m},\\qquad \\vec v(2)=(3,\\ 0),\\quad v=3\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Differentiate: $$\\vec v=3\\vec i+(8-4t)\\vec j,\\qquad \\vec a=-4\\vec j=\\mathrm{const}$$",
+    "From $x=3t$ we get $t=\\frac{x}{3}$; substitute into $y$ — a parabola: $$y=\\frac{8x}{3}-\\frac{2x^2}{9}$$",
+    "Perpendicularity condition: $$\\vec v\\cdot\\vec a=-4(8-4t)=0\\ \\Rightarrow\\ t=2\\ \\mathrm{s}$$",
+    "At this moment — the top of the trajectory: $$\\vec r(2)=(6,\\ 8)\\ \\mathrm{m},\\qquad \\vec v(2)=(3,\\ 0),\\quad v=3\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tezlik — radius-vektor hosilasi: $\\vec v=\\frac{d\\vec r}{dt}$",
+    "ru": "Скорость — производная радиус-вектора: $\\vec v=\\frac{d\\vec r}{dt}$",
+    "en": "Velocity is the derivative of the position vector: $\\vec v=\\frac{d\\vec r}{dt}$"
+   },
+   {
+    "uz": "Trayektoriya: $x(t),\\ y(t)$ dan $t$ ni yo'qotish",
+    "ru": "Траектория: исключить $t$ из $x(t),\\ y(t)$",
+    "en": "Trajectory: eliminate $t$ from $x(t),\\ y(t)$"
+   },
+   {
+    "uz": "$\\vec v\\perp\\vec a\\Leftrightarrow\\vec v\\cdot\\vec a=0$",
+    "ru": "$\\vec v\\perp\\vec a\\Leftrightarrow\\vec v\\cdot\\vec a=0$",
+    "en": "$\\vec v\\perp\\vec a\\Leftrightarrow\\vec v\\cdot\\vec a=0$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Harakat qonunidan tezlik, tezlanish va trayektoriya",
+   "ru": "Скорость, ускорение и траектория по закону движения",
+   "en": "Velocity, acceleration and trajectory from the equation of motion"
+  },
+  "answer": "\\vec v=(3,\\ 8-4t);\\ \\vec a=(0,\\ -4);\\ y=\\frac{8x}{3}-\\frac{2x^2}{9};\\ t=2\\ \\mathrm{s},\\ (6,\\ 8),\\ v=3\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Irodov, «Problems in General Physics», 1.24-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Nuqta radiusi $R=2\\ \\mathrm{m}$ bo'lgan aylananing yarmini $\\Delta t=4\\ \\mathrm{s}$ da o'zgarmas tezlik moduli bilan bosib o'tdi. Shu vaqt uchun: a) o'rtacha yo'l tezligini; b) o'rtacha tezlik vektorining modulini; c) o'rtacha tezlanish vektorining modulini toping.",
+   "ru": "Точка прошла половину окружности радиуса $R=2\\ \\mathrm{m}$ за $\\Delta t=4\\ \\mathrm{s}$ с постоянным модулем скорости. За это время найдите: а) среднюю путевую скорость; б) модуль вектора средней скорости; в) модуль вектора среднего ускорения.",
+   "en": "A point covered half of a circle of radius $R=2\\ \\mathrm{m}$ in $\\Delta t=4\\ \\mathrm{s}$ with constant speed. For this time interval find: a) the average speed; b) the magnitude of the average velocity; c) the magnitude of the average acceleration."
+  },
+  "figure": "figures/B2-L01-S05.png",
+  "solution": {
+   "uz": [
+    "Yo'l — yarim aylana uzunligi: $$\\bar v=\\frac{\\pi R}{\\Delta t}=\\frac{2\\pi}{4}=\\frac{\\pi}{2}\\approx1.57\\ \\mathrm{m/s}$$",
+    "Ko'chish — diametr: $$|\\langle\\vec v\\rangle|=\\frac{2R}{\\Delta t}=\\frac{4}{4}=1\\ \\mathrm{m/s}$$",
+    "Oxirgi tezlik boshlang'ichiga qarama-qarshi: $\\Delta\\vec v=-2\\vec v_0$: $$|\\langle\\vec a\\rangle|=\\frac{2v}{\\Delta t}=\\frac{2\\cdot\\frac{\\pi}{2}}{4}=\\frac{\\pi}{4}\\approx0.785\\ \\mathrm{m/s^2}$$",
+    "Taqqoslash: o'rtacha tezlanish oniy $a_n$ dan kichik: $$a_n=\\frac{v^2}{R}=\\frac{\\pi^2}{8}\\approx1.23\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Путь — длина полуокружности: $$\\bar v=\\frac{\\pi R}{\\Delta t}=\\frac{2\\pi}{4}=\\frac{\\pi}{2}\\approx1.57\\ \\mathrm{m/s}$$",
+    "Перемещение — диаметр: $$|\\langle\\vec v\\rangle|=\\frac{2R}{\\Delta t}=\\frac{4}{4}=1\\ \\mathrm{m/s}$$",
+    "Конечная скорость противоположна начальной: $\\Delta\\vec v=-2\\vec v_0$: $$|\\langle\\vec a\\rangle|=\\frac{2v}{\\Delta t}=\\frac{2\\cdot\\frac{\\pi}{2}}{4}=\\frac{\\pi}{4}\\approx0.785\\ \\mathrm{m/s^2}$$",
+    "Сравнение: среднее ускорение меньше мгновенного $a_n$: $$a_n=\\frac{v^2}{R}=\\frac{\\pi^2}{8}\\approx1.23\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "The path length is half the circumference: $$\\bar v=\\frac{\\pi R}{\\Delta t}=\\frac{2\\pi}{4}=\\frac{\\pi}{2}\\approx1.57\\ \\mathrm{m/s}$$",
+    "The displacement is a diameter: $$|\\langle\\vec v\\rangle|=\\frac{2R}{\\Delta t}=\\frac{4}{4}=1\\ \\mathrm{m/s}$$",
+    "The final velocity is opposite to the initial one: $\\Delta\\vec v=-2\\vec v_0$: $$|\\langle\\vec a\\rangle|=\\frac{2v}{\\Delta t}=\\frac{2\\cdot\\frac{\\pi}{2}}{4}=\\frac{\\pi}{4}\\approx0.785\\ \\mathrm{m/s^2}$$",
+    "Comparison: the average acceleration is less than the instantaneous $a_n$: $$a_n=\\frac{v^2}{R}=\\frac{\\pi^2}{8}\\approx1.23\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "O'rtacha yo'l tezligi: $\\bar v=\\frac{s}{\\Delta t}$",
+    "ru": "Средняя путевая скорость: $\\bar v=\\frac{s}{\\Delta t}$",
+    "en": "Average speed: $\\bar v=\\frac{s}{\\Delta t}$"
+   },
+   {
+    "uz": "O'rtacha tezlik vektori: $\\langle\\vec v\\rangle=\\frac{\\Delta\\vec r}{\\Delta t}$",
+    "ru": "Вектор средней скорости: $\\langle\\vec v\\rangle=\\frac{\\Delta\\vec r}{\\Delta t}$",
+    "en": "Average velocity: $\\langle\\vec v\\rangle=\\frac{\\Delta\\vec r}{\\Delta t}$"
+   },
+   {
+    "uz": "O'rtacha tezlanish: $\\langle\\vec a\\rangle=\\frac{\\Delta\\vec v}{\\Delta t}$",
+    "ru": "Среднее ускорение: $\\langle\\vec a\\rangle=\\frac{\\Delta\\vec v}{\\Delta t}$",
+    "en": "Average acceleration: $\\langle\\vec a\\rangle=\\frac{\\Delta\\vec v}{\\Delta t}$"
+   },
+   {
+    "uz": "Normal tezlanish: $a_n=\\frac{|\\vec v\\times\\vec a|}{v}=\\frac{v^2}{R}$",
+    "ru": "Нормальное ускорение: $a_n=\\frac{|\\vec v\\times\\vec a|}{v}=\\frac{v^2}{R}$",
+    "en": "Normal acceleration: $a_n=\\frac{|\\vec v\\times\\vec a|}{v}=\\frac{v^2}{R}$"
+   }
+  ],
+  "basis": {
+   "uz": "O'rtacha tezlik va o'rtacha tezlanish vektorlari",
+   "ru": "Векторы средней скорости и среднего ускорения",
+   "en": "Average velocity and average acceleration vectors"
+  },
+  "answer": "\\bar v\\approx1.57\\ \\mathrm{m/s};\\ |\\langle\\vec v\\rangle|=1\\ \\mathrm{m/s};\\ |\\langle\\vec a\\rangle|\\approx0.785\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "Irodov, «Problems in General Physics», 1.19-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Nuqta $\\vec r=t^2\\,\\vec i+2t\\,\\vec j$ (SI) qonun bo'yicha harakatlanmoqda. $t=2\\ \\mathrm{s}$ paytda tangensial va normal tezlanishlarni hamda trayektoriyaning egrilik radiusini toping.",
+   "ru": "Точка движется по закону $\\vec r=t^2\\,\\vec i+2t\\,\\vec j$ (СИ). Найдите тангенциальное и нормальное ускорения и радиус кривизны траектории в момент $t=2\\ \\mathrm{s}$.",
+   "en": "A point moves according to $\\vec r=t^2\\,\\vec i+2t\\,\\vec j$ (SI). Find the tangential and normal accelerations and the radius of curvature of the trajectory at $t=2\\ \\mathrm{s}$."
+  },
+  "figure": "figures/B2-L01-S06.png",
+  "solution": {
+   "uz": [
+    "Tezlik va tezlanish $t=2\\ \\mathrm{s}$ da: $$\\vec v=(2t,\\ 2)=(4,\\ 2),\\qquad \\vec a=(2,\\ 0),\\qquad v=\\sqrt{20}=2\\sqrt{5}$$",
+    "Tangensial tezlanish — $\\vec a$ ning $\\vec v$ ga proyeksiyasi: $$a_\\tau=\\frac{4\\cdot2+2\\cdot0}{2\\sqrt{5}}=\\frac{4}{\\sqrt{5}}\\approx1.79\\ \\mathrm{m/s^2}$$",
+    "Normal tezlanish — vektor ko'paytma orqali: $$a_n=\\frac{|4\\cdot0-2\\cdot2|}{2\\sqrt{5}}=\\frac{2}{\\sqrt{5}}\\approx0.894\\ \\mathrm{m/s^2}$$",
+    "Tekshiruv va egrilik radiusi: $$a_\\tau^2+a_n^2=\\frac{16}{5}+\\frac{4}{5}=4=a^2,\\qquad R=\\frac{v^2}{a_n}=\\frac{20\\sqrt{5}}{2}=10\\sqrt{5}\\approx22.4\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Скорость и ускорение при $t=2\\ \\mathrm{s}$: $$\\vec v=(2t,\\ 2)=(4,\\ 2),\\qquad \\vec a=(2,\\ 0),\\qquad v=\\sqrt{20}=2\\sqrt{5}$$",
+    "Тангенциальное ускорение — проекция $\\vec a$ на $\\vec v$: $$a_\\tau=\\frac{4\\cdot2+2\\cdot0}{2\\sqrt{5}}=\\frac{4}{\\sqrt{5}}\\approx1.79\\ \\mathrm{m/s^2}$$",
+    "Нормальное ускорение — через векторное произведение: $$a_n=\\frac{|4\\cdot0-2\\cdot2|}{2\\sqrt{5}}=\\frac{2}{\\sqrt{5}}\\approx0.894\\ \\mathrm{m/s^2}$$",
+    "Проверка и радиус кривизны: $$a_\\tau^2+a_n^2=\\frac{16}{5}+\\frac{4}{5}=4=a^2,\\qquad R=\\frac{v^2}{a_n}=\\frac{20\\sqrt{5}}{2}=10\\sqrt{5}\\approx22.4\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Velocity and acceleration at $t=2\\ \\mathrm{s}$: $$\\vec v=(2t,\\ 2)=(4,\\ 2),\\qquad \\vec a=(2,\\ 0),\\qquad v=\\sqrt{20}=2\\sqrt{5}$$",
+    "The tangential acceleration is the projection of $\\vec a$ on $\\vec v$: $$a_\\tau=\\frac{4\\cdot2+2\\cdot0}{2\\sqrt{5}}=\\frac{4}{\\sqrt{5}}\\approx1.79\\ \\mathrm{m/s^2}$$",
+    "The normal acceleration via the cross product: $$a_n=\\frac{|4\\cdot0-2\\cdot2|}{2\\sqrt{5}}=\\frac{2}{\\sqrt{5}}\\approx0.894\\ \\mathrm{m/s^2}$$",
+    "Check and radius of curvature: $$a_\\tau^2+a_n^2=\\frac{16}{5}+\\frac{4}{5}=4=a^2,\\qquad R=\\frac{v^2}{a_n}=\\frac{20\\sqrt{5}}{2}=10\\sqrt{5}\\approx22.4\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tezlanish — tezlik hosilasi: $\\vec a=\\frac{d\\vec v}{dt}$",
+    "ru": "Ускорение — производная скорости: $\\vec a=\\frac{d\\vec v}{dt}$",
+    "en": "Acceleration is the derivative of velocity: $\\vec a=\\frac{d\\vec v}{dt}$"
+   },
+   {
+    "uz": "Tangensial tezlanish: $a_\\tau=\\frac{\\vec v\\cdot\\vec a}{v}$",
+    "ru": "Тангенциальное ускорение: $a_\\tau=\\frac{\\vec v\\cdot\\vec a}{v}$",
+    "en": "Tangential acceleration: $a_\\tau=\\frac{\\vec v\\cdot\\vec a}{v}$"
+   },
+   {
+    "uz": "Normal tezlanish: $a_n=\\frac{|\\vec v\\times\\vec a|}{v}=\\frac{v^2}{R}$",
+    "ru": "Нормальное ускорение: $a_n=\\frac{|\\vec v\\times\\vec a|}{v}=\\frac{v^2}{R}$",
+    "en": "Normal acceleration: $a_n=\\frac{|\\vec v\\times\\vec a|}{v}=\\frac{v^2}{R}$"
+   },
+   {
+    "uz": "To'liq tezlanish: $a=\\sqrt{a_\\tau^2+a_n^2}$",
+    "ru": "Полное ускорение: $a=\\sqrt{a_\\tau^2+a_n^2}$",
+    "en": "Total acceleration: $a=\\sqrt{a_\\tau^2+a_n^2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tangensial va normal tezlanish, egrilik radiusi",
+   "ru": "Тангенциальное и нормальное ускорения, радиус кривизны",
+   "en": "Tangential and normal acceleration, radius of curvature"
+  },
+  "answer": "a_\\tau\\approx1.79\\ \\mathrm{m/s^2};\\ a_n\\approx0.894\\ \\mathrm{m/s^2};\\ R\\approx22.4\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "Irodov, «Problems in General Physics», 1.35-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Zarra koordinata boshidan $\\vec v_0=-4\\vec j\\ \\mathrm{m/s}$ tezlik bilan harakatni boshladi, tezlanishi $\\vec a=6t\\,\\vec i+2\\vec j$ ($\\mathrm{m/s^2}$). Tezlik va radius-vektorni vaqtning funksiyasi sifatida toping. Zarra qachon yana $x$ o'qini kesib o'tadi? Shu paytdagi $x$ koordinatasi va tezlik moduli qancha?",
+   "ru": "Частица начала движение из начала координат со скоростью $\\vec v_0=-4\\vec j\\ \\mathrm{m/s}$, её ускорение $\\vec a=6t\\,\\vec i+2\\vec j$ ($\\mathrm{m/s^2}$). Найдите скорость и радиус-вектор как функции времени. Когда частица снова пересечёт ось $x$? Чему равны в этот момент координата $x$ и модуль скорости?",
+   "en": "A particle starts from the origin with velocity $\\vec v_0=-4\\vec j\\ \\mathrm{m/s}$; its acceleration is $\\vec a=6t\\,\\vec i+2\\vec j$ ($\\mathrm{m/s^2}$). Find the velocity and the position vector as functions of time. When does the particle cross the $x$ axis again? What are its $x$ coordinate and speed at that moment?"
+  },
+  "figure": "figures/B2-L01-S07.png",
+  "solution": {
+   "uz": [
+    "Tezlikni integrallaymiz, $\\vec v(0)=(0,\\ -4)$: $$\\vec v=\\left(3t^2,\\ 2t-4\\right)$$",
+    "Radius-vektor, $\\vec r(0)=0$: $$\\vec r=\\left(t^3,\\ t^2-4t\\right)$$",
+    "$x$ o'qini kesish: $y=0$, $t>0$: $$t^2-4t=0\\ \\Rightarrow\\ t=4\\ \\mathrm{s},\\qquad x=4^3=64\\ \\mathrm{m}$$",
+    "Shu paytdagi tezlik: $$\\vec v(4)=(48,\\ 4),\\qquad v=\\sqrt{48^2+4^2}=\\sqrt{2320}\\approx48.2\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Интегрируем скорость, $\\vec v(0)=(0,\\ -4)$: $$\\vec v=\\left(3t^2,\\ 2t-4\\right)$$",
+    "Радиус-вектор, $\\vec r(0)=0$: $$\\vec r=\\left(t^3,\\ t^2-4t\\right)$$",
+    "Пересечение оси $x$: $y=0$, $t>0$: $$t^2-4t=0\\ \\Rightarrow\\ t=4\\ \\mathrm{s},\\qquad x=4^3=64\\ \\mathrm{m}$$",
+    "Скорость в этот момент: $$\\vec v(4)=(48,\\ 4),\\qquad v=\\sqrt{48^2+4^2}=\\sqrt{2320}\\approx48.2\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Integrate for the velocity, $\\vec v(0)=(0,\\ -4)$: $$\\vec v=\\left(3t^2,\\ 2t-4\\right)$$",
+    "Position vector, $\\vec r(0)=0$: $$\\vec r=\\left(t^3,\\ t^2-4t\\right)$$",
+    "Crossing the $x$ axis: $y=0$, $t>0$: $$t^2-4t=0\\ \\Rightarrow\\ t=4\\ \\mathrm{s},\\qquad x=4^3=64\\ \\mathrm{m}$$",
+    "Velocity at that moment: $$\\vec v(4)=(48,\\ 4),\\qquad v=\\sqrt{48^2+4^2}=\\sqrt{2320}\\approx48.2\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Integrallash: $\\vec v=\\vec v_0+\\int_0^t\\vec a\\,dt$, $\\vec r=\\vec r_0+\\int_0^t\\vec v\\,dt$",
+    "ru": "Интегрирование: $\\vec v=\\vec v_0+\\int_0^t\\vec a\\,dt$, $\\vec r=\\vec r_0+\\int_0^t\\vec v\\,dt$",
+    "en": "Integration: $\\vec v=\\vec v_0+\\int_0^t\\vec a\\,dt$, $\\vec r=\\vec r_0+\\int_0^t\\vec v\\,dt$"
+   },
+   null,
+   null,
+   {
+    "uz": "Vektor moduli: $v=\\sqrt{v_x^2+v_y^2}$",
+    "ru": "Модуль вектора: $v=\\sqrt{v_x^2+v_y^2}$",
+    "en": "Magnitude of a vector: $v=\\sqrt{v_x^2+v_y^2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tezlanish bo'yicha harakat qonunini topish",
+   "ru": "Нахождение закона движения по ускорению",
+   "en": "Finding the equation of motion from the acceleration"
+  },
+  "answer": "\\vec v=\\left(3t^2,\\ 2t-4\\right);\\ \\vec r=\\left(t^3,\\ t^2-4t\\right);\\ t=4\\ \\mathrm{s},\\ x=64\\ \\mathrm{m},\\ v\\approx48.2\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "Irodov, «Problems in General Physics», 1.20-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Motori o'chirilgan qayiqning tezlanishi tezlikka proporsional: $a=-kv$, $k=0.5\\ \\mathrm{s^{-1}}$. Boshlang'ich tezlik $v_0=10\\ \\mathrm{m/s}$. $v(t)$ ni toping. Qancha vaqtda tezlik ikki marta kamayadi va shu vaqtda qayiq qancha yo'l bosadi? To'xtaguncha jami qancha yo'l bosadi?",
+   "ru": "Ускорение лодки с выключенным мотором пропорционально скорости: $a=-kv$, $k=0.5\\ \\mathrm{s^{-1}}$. Начальная скорость $v_0=10\\ \\mathrm{m/s}$. Найдите $v(t)$. За какое время скорость уменьшится вдвое и какой путь пройдёт лодка за это время? Какой путь она пройдёт до остановки?",
+   "en": "The acceleration of a boat with its engine off is proportional to its velocity: $a=-kv$, $k=0.5\\ \\mathrm{s^{-1}}$. The initial speed is $v_0=10\\ \\mathrm{m/s}$. Find $v(t)$. How long does it take for the speed to halve, and how far does the boat travel in that time? How far does it travel before stopping?"
+  },
+  "figure": "figures/B2-L01-S08.png",
+  "solution": {
+   "uz": [
+    "O'zgaruvchilarni ajratamiz: $$\\frac{dv}{v}=-k\\,dt\\ \\Rightarrow\\ v=v_0e^{-kt}=10e^{-0.5t}$$",
+    "Yarimga tushish vaqti: $$e^{-kt}=\\frac{1}{2}\\ \\Rightarrow\\ t=\\frac{\\ln2}{k}\\approx1.39\\ \\mathrm{s}$$",
+    "Yo'l: $x=\\int v\\,dt$ yoki $dx=-\\frac{dv}{k}$: $$x=\\frac{v_0-v}{k}=\\frac{10-5}{0.5}=10\\ \\mathrm{m}$$",
+    "To'xtaguncha ($v\\to0$, $t\\to\\infty$): $$x_{max}=\\frac{v_0}{k}=\\frac{10}{0.5}=20\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Разделяем переменные: $$\\frac{dv}{v}=-k\\,dt\\ \\Rightarrow\\ v=v_0e^{-kt}=10e^{-0.5t}$$",
+    "Время уменьшения вдвое: $$e^{-kt}=\\frac{1}{2}\\ \\Rightarrow\\ t=\\frac{\\ln2}{k}\\approx1.39\\ \\mathrm{s}$$",
+    "Путь: $x=\\int v\\,dt$ или $dx=-\\frac{dv}{k}$: $$x=\\frac{v_0-v}{k}=\\frac{10-5}{0.5}=10\\ \\mathrm{m}$$",
+    "До остановки ($v\\to0$, $t\\to\\infty$): $$x_{max}=\\frac{v_0}{k}=\\frac{10}{0.5}=20\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Separate the variables: $$\\frac{dv}{v}=-k\\,dt\\ \\Rightarrow\\ v=v_0e^{-kt}=10e^{-0.5t}$$",
+    "Halving time: $$e^{-kt}=\\frac{1}{2}\\ \\Rightarrow\\ t=\\frac{\\ln2}{k}\\approx1.39\\ \\mathrm{s}$$",
+    "Distance: $x=\\int v\\,dt$ or $dx=-\\frac{dv}{k}$: $$x=\\frac{v_0-v}{k}=\\frac{10-5}{0.5}=10\\ \\mathrm{m}$$",
+    "Until stopping ($v\\to0$, $t\\to\\infty$): $$x_{max}=\\frac{v_0}{k}=\\frac{10}{0.5}=20\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "$a=a(v)$: $t=\\int_{v_0}^{v}\\frac{dv}{a(v)}$",
+    "ru": "$a=a(v)$: $t=\\int_{v_0}^{v}\\frac{dv}{a(v)}$",
+    "en": "$a=a(v)$: $t=\\int_{v_0}^{v}\\frac{dv}{a(v)}$"
+   },
+   null,
+   {
+    "uz": "Chiziqli qarshilik: $v=v_0e^{-kt}$, $x=\\frac{v_0-v}{k}$",
+    "ru": "Линейное сопротивление: $v=v_0e^{-kt}$, $x=\\frac{v_0-v}{k}$",
+    "en": "Linear drag: $v=v_0e^{-kt}$, $x=\\frac{v_0-v}{k}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Tezlikka proporsional qarshilik",
+   "ru": "Сопротивление, пропорциональное скорости",
+   "en": "Drag proportional to velocity"
+  },
+  "answer": "v=10e^{-0.5t};\\ t\\approx1.39\\ \\mathrm{s},\\ x=10\\ \\mathrm{m};\\ x_{max}=20\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Irodov, «Problems in General Physics», 1.23-masala asosida; sharti o'zgartirilgan; Chertov–Vorobyov 2.32 g'oyasi"
+ },
+ {
+  "id": "B2-L01-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Zarra $x$ o'qi bo'ylab harakatlanmoqda, tezligi koordinataga $v=\\alpha\\sqrt{x}$ ko'rinishda bog'liq, $\\alpha=2\\ \\mathrm{m^{1/2}/s}$; $t=0$ da $x=0$. Zarraning tezlanishini, $x(t)$ ni, birinchi $9\\ \\mathrm{m}$ ni bosib o'tish vaqtini va shu yo'ldagi o'rtacha tezlikni toping.",
+   "ru": "Частица движется вдоль оси $x$, её скорость зависит от координаты как $v=\\alpha\\sqrt{x}$, $\\alpha=2\\ \\mathrm{m^{1/2}/s}$; при $t=0$ $x=0$. Найдите ускорение частицы, $x(t)$, время прохождения первых $9\\ \\mathrm{m}$ и среднюю скорость на этом пути.",
+   "en": "A particle moves along the $x$ axis with a velocity that depends on position as $v=\\alpha\\sqrt{x}$, $\\alpha=2\\ \\mathrm{m^{1/2}/s}$; at $t=0$, $x=0$. Find the particle's acceleration, $x(t)$, the time to cover the first $9\\ \\mathrm{m}$ and the average speed over that distance."
+  },
+  "figure": "figures/B2-L01-S09.png",
+  "solution": {
+   "uz": [
+    "Tezlanish — vaqtni yo'qotib: $$a=v\\frac{dv}{dx}=\\alpha\\sqrt{x}\\cdot\\frac{\\alpha}{2\\sqrt{x}}=\\frac{\\alpha^2}{2}=2\\ \\mathrm{m/s^2}$$",
+    "Tezlanish o'zgarmas, $v_0=0$: $$x=\\frac{at^2}{2}=t^2$$",
+    "Vaqt va o'rtacha tezlik: $$t^2=9\\ \\Rightarrow\\ t=3\\ \\mathrm{s},\\qquad \\bar v=\\frac{9}{3}=3\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Ускорение — исключив время: $$a=v\\frac{dv}{dx}=\\alpha\\sqrt{x}\\cdot\\frac{\\alpha}{2\\sqrt{x}}=\\frac{\\alpha^2}{2}=2\\ \\mathrm{m/s^2}$$",
+    "Ускорение постоянно, $v_0=0$: $$x=\\frac{at^2}{2}=t^2$$",
+    "Время и средняя скорость: $$t^2=9\\ \\Rightarrow\\ t=3\\ \\mathrm{s},\\qquad \\bar v=\\frac{9}{3}=3\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Acceleration — eliminating time: $$a=v\\frac{dv}{dx}=\\alpha\\sqrt{x}\\cdot\\frac{\\alpha}{2\\sqrt{x}}=\\frac{\\alpha^2}{2}=2\\ \\mathrm{m/s^2}$$",
+    "The acceleration is constant, $v_0=0$: $$x=\\frac{at^2}{2}=t^2$$",
+    "Time and average speed: $$t^2=9\\ \\Rightarrow\\ t=3\\ \\mathrm{s},\\qquad \\bar v=\\frac{9}{3}=3\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Vaqtni yo'qotish: $a=v\\frac{dv}{dx}$",
+    "ru": "Исключение времени: $a=v\\frac{dv}{dx}$",
+    "en": "Eliminating time: $a=v\\frac{dv}{dx}$"
+   },
+   {
+    "uz": "O'zgarmas tezlanish: $\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}$",
+    "ru": "Постоянное ускорение: $\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}$",
+    "en": "Constant acceleration: $\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}$"
+   },
+   {
+    "uz": "O'rtacha yo'l tezligi: $\\bar v=\\frac{s}{\\Delta t}$",
+    "ru": "Средняя путевая скорость: $\\bar v=\\frac{s}{\\Delta t}$",
+    "en": "Average speed: $\\bar v=\\frac{s}{\\Delta t}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tezlik koordinata orqali berilgan",
+   "ru": "Скорость задана через координату",
+   "en": "Velocity given in terms of position"
+  },
+  "answer": "a=2\\ \\mathrm{m/s^2};\\ x=t^2;\\ t=3\\ \\mathrm{s};\\ \\bar v=3\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 1.22-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jism yerdan $v_0=20\\ \\mathrm{m/s}$ tezlik bilan gorizontga $\\alpha=30^\\circ$ burchak ostida otildi. Uchish vaqti, eng katta balandlik, uchish uzoqligi va trayektoriya cho'qqisidagi egrilik radiusini toping. Xuddi shu tezlikda qaysi boshqa burchakda uchish uzoqligi bir xil bo'ladi? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Тело брошено с земли со скоростью $v_0=20\\ \\mathrm{m/s}$ под углом $\\alpha=30^\\circ$ к горизонту. Найдите время полёта, наибольшую высоту, дальность полёта и радиус кривизны в вершине траектории. При каком другом угле при той же скорости дальность будет такой же? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A body is launched from the ground with speed $v_0=20\\ \\mathrm{m/s}$ at $\\alpha=30^\\circ$ to the horizontal. Find the time of flight, the maximum height, the range and the radius of curvature at the top of the trajectory. At what other angle does the same speed give the same range? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L01-S10.png",
+  "solution": {
+   "uz": [
+    "Tashkil etuvchilar: $$v_x=20\\cos30^\\circ=10\\sqrt{3}\\ \\mathrm{m/s},\\qquad v_{0y}=20\\sin30^\\circ=10\\ \\mathrm{m/s}$$",
+    "Vaqt va balandlik: $$T=\\frac{2\\cdot10}{10}=2\\ \\mathrm{s},\\qquad H=\\frac{10^2}{2\\cdot10}=5\\ \\mathrm{m}$$",
+    "Uchish uzoqligi: $$L=v_xT=20\\sqrt{3}\\approx34.6\\ \\mathrm{m}$$",
+    "Cho'qqida tezlik gorizontal, $\\vec g$ — normal: $$R=\\frac{v_x^2}{g}=\\frac{300}{10}=30\\ \\mathrm{m}$$",
+    "$\\sin2\\alpha$ bir xil bo'lishi uchun: $$\\alpha'=90^\\circ-30^\\circ=60^\\circ$$"
+   ],
+   "ru": [
+    "Составляющие: $$v_x=20\\cos30^\\circ=10\\sqrt{3}\\ \\mathrm{m/s},\\qquad v_{0y}=20\\sin30^\\circ=10\\ \\mathrm{m/s}$$",
+    "Время и высота: $$T=\\frac{2\\cdot10}{10}=2\\ \\mathrm{s},\\qquad H=\\frac{10^2}{2\\cdot10}=5\\ \\mathrm{m}$$",
+    "Дальность: $$L=v_xT=20\\sqrt{3}\\approx34.6\\ \\mathrm{m}$$",
+    "В вершине скорость горизонтальна, $\\vec g$ — нормально: $$R=\\frac{v_x^2}{g}=\\frac{300}{10}=30\\ \\mathrm{m}$$",
+    "Чтобы $\\sin2\\alpha$ было тем же: $$\\alpha'=90^\\circ-30^\\circ=60^\\circ$$"
+   ],
+   "en": [
+    "Components: $$v_x=20\\cos30^\\circ=10\\sqrt{3}\\ \\mathrm{m/s},\\qquad v_{0y}=20\\sin30^\\circ=10\\ \\mathrm{m/s}$$",
+    "Time and height: $$T=\\frac{2\\cdot10}{10}=2\\ \\mathrm{s},\\qquad H=\\frac{10^2}{2\\cdot10}=5\\ \\mathrm{m}$$",
+    "Range: $$L=v_xT=20\\sqrt{3}\\approx34.6\\ \\mathrm{m}$$",
+    "At the top the velocity is horizontal and $\\vec g$ is normal: $$R=\\frac{v_x^2}{g}=\\frac{300}{10}=30\\ \\mathrm{m}$$",
+    "For the same $\\sin2\\alpha$: $$\\alpha'=90^\\circ-30^\\circ=60^\\circ$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Otilgan jism: $x=v_0\\cos\\alpha\\cdot t$, $y=v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2}$",
+    "ru": "Брошенное тело: $x=v_0\\cos\\alpha\\cdot t$, $y=v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2}$",
+    "en": "Projectile: $x=v_0\\cos\\alpha\\cdot t$, $y=v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2}$"
+   },
+   {
+    "uz": "$T=\\frac{2v_0\\sin\\alpha}{g}$, $H=\\frac{v_0^2\\sin^2\\alpha}{2g}$, $L=\\frac{v_0^2\\sin2\\alpha}{g}$",
+    "ru": "$T=\\frac{2v_0\\sin\\alpha}{g}$, $H=\\frac{v_0^2\\sin^2\\alpha}{2g}$, $L=\\frac{v_0^2\\sin2\\alpha}{g}$",
+    "en": "$T=\\frac{2v_0\\sin\\alpha}{g}$, $H=\\frac{v_0^2\\sin^2\\alpha}{2g}$, $L=\\frac{v_0^2\\sin2\\alpha}{g}$"
+   },
+   null,
+   {
+    "uz": "Yuqori nuqtada $a_n=g$: $R=\\frac{v_x^2}{g}$",
+    "ru": "В верхней точке $a_n=g$: $R=\\frac{v_x^2}{g}$",
+    "en": "At the top $a_n=g$: $R=\\frac{v_x^2}{g}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Gorizontga burchak ostida otilgan jism",
+   "ru": "Тело, брошенное под углом к горизонту",
+   "en": "Projectile launched at an angle"
+  },
+  "answer": "T=2\\ \\mathrm{s};\\ H=5\\ \\mathrm{m};\\ L\\approx34.6\\ \\mathrm{m};\\ R=30\\ \\mathrm{m};\\ 60^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Volkenshteyn, «Problems in General Physics», 1.38-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jarlik chetidan, $h=20\\ \\mathrm{m}$ balandlikdan tosh $v_0=25\\ \\mathrm{m/s}$ tezlik bilan gorizontdan yuqoriga $37^\\circ$ burchak ostida otildi ($\\sin37^\\circ=0.6$). Tosh qancha vaqtdan keyin va jarlik tagidan qancha masofada yerga tushadi? Tushishdagi tezlik moduli va yo'nalishi qanday? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "С края обрыва высотой $h=20\\ \\mathrm{m}$ камень брошен со скоростью $v_0=25\\ \\mathrm{m/s}$ под углом $37^\\circ$ выше горизонта ($\\sin37^\\circ=0.6$). Через какое время и на каком расстоянии от основания обрыва камень упадёт? Каковы модуль и направление скорости при падении? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "From the edge of a cliff of height $h=20\\ \\mathrm{m}$ a stone is thrown with speed $v_0=25\\ \\mathrm{m/s}$ at $37^\\circ$ above the horizontal ($\\sin37^\\circ=0.6$). After what time and at what distance from the foot of the cliff does the stone land? What are the magnitude and direction of its velocity at impact? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L01-S11.png",
+  "solution": {
+   "uz": [
+    "Tashkil etuvchilar va $y(t)$ (bosh — jarlik tagida): $$v_x=20\\ \\mathrm{m/s},\\quad v_{0y}=15\\ \\mathrm{m/s},\\qquad y=20+15t-5t^2$$",
+    "Tushish sharti $y=0$: $$t^2-3t-4=0\\ \\Rightarrow\\ t=4\\ \\mathrm{s},\\qquad x=20\\cdot4=80\\ \\mathrm{m}$$",
+    "Tezlik tashkil etuvchilari: $$v_y=15-10\\cdot4=-25\\ \\mathrm{m/s},\\qquad v=\\sqrt{20^2+25^2}\\approx32.0\\ \\mathrm{m/s}$$",
+    "Tekshiruv: $v^2=v_0^2+2gh$ — yo'nalishga bog'liq emas: $$25^2+2\\cdot10\\cdot20=1025=v^2$$",
+    "Gorizontdan pastga burchak: $$\\tan\\varphi=\\frac{25}{20}\\ \\Rightarrow\\ \\varphi\\approx51^\\circ$$"
+   ],
+   "ru": [
+    "Составляющие и $y(t)$ (начало — у основания обрыва): $$v_x=20\\ \\mathrm{m/s},\\quad v_{0y}=15\\ \\mathrm{m/s},\\qquad y=20+15t-5t^2$$",
+    "Условие падения $y=0$: $$t^2-3t-4=0\\ \\Rightarrow\\ t=4\\ \\mathrm{s},\\qquad x=20\\cdot4=80\\ \\mathrm{m}$$",
+    "Составляющие скорости: $$v_y=15-10\\cdot4=-25\\ \\mathrm{m/s},\\qquad v=\\sqrt{20^2+25^2}\\approx32.0\\ \\mathrm{m/s}$$",
+    "Проверка: $v^2=v_0^2+2gh$ — не зависит от направления: $$25^2+2\\cdot10\\cdot20=1025=v^2$$",
+    "Угол ниже горизонта: $$\\tan\\varphi=\\frac{25}{20}\\ \\Rightarrow\\ \\varphi\\approx51^\\circ$$"
+   ],
+   "en": [
+    "Components and $y(t)$ (origin at the foot of the cliff): $$v_x=20\\ \\mathrm{m/s},\\quad v_{0y}=15\\ \\mathrm{m/s},\\qquad y=20+15t-5t^2$$",
+    "Landing condition $y=0$: $$t^2-3t-4=0\\ \\Rightarrow\\ t=4\\ \\mathrm{s},\\qquad x=20\\cdot4=80\\ \\mathrm{m}$$",
+    "Velocity components: $$v_y=15-10\\cdot4=-25\\ \\mathrm{m/s},\\qquad v=\\sqrt{20^2+25^2}\\approx32.0\\ \\mathrm{m/s}$$",
+    "Check: $v^2=v_0^2+2gh$ — independent of direction: $$25^2+2\\cdot10\\cdot20=1025=v^2$$",
+    "Angle below the horizontal: $$\\tan\\varphi=\\frac{25}{20}\\ \\Rightarrow\\ \\varphi\\approx51^\\circ$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Otilgan jism: $x=v_0\\cos\\alpha\\cdot t$, $y=v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2}$",
+    "ru": "Брошенное тело: $x=v_0\\cos\\alpha\\cdot t$, $y=v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2}$",
+    "en": "Projectile: $x=v_0\\cos\\alpha\\cdot t$, $y=v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2}$"
+   },
+   null,
+   {
+    "uz": "Vektor moduli: $v=\\sqrt{v_x^2+v_y^2}$",
+    "ru": "Модуль вектора: $v=\\sqrt{v_x^2+v_y^2}$",
+    "en": "Magnitude of a vector: $v=\\sqrt{v_x^2+v_y^2}$"
+   },
+   {
+    "uz": "O'zgarmas tezlanish: $\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}$",
+    "ru": "Постоянное ускорение: $\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}$",
+    "en": "Constant acceleration: $\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Balandlikdan burchak ostida otish",
+   "ru": "Бросок под углом с высоты",
+   "en": "Launch at an angle from a height"
+  },
+  "answer": "t=4\\ \\mathrm{s};\\ x=80\\ \\mathrm{m};\\ v\\approx32.0\\ \\mathrm{m/s},\\ \\varphi\\approx51^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "Volkenshteyn, «Problems in General Physics», 1.39-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jism qanday burchak ostida otilganda uning eng katta balandligi uchish uzoqligiga teng bo'ladi? $v_0=30\\ \\mathrm{m/s}$ bo'lsa, bu balandlik qancha? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Под каким углом нужно бросить тело, чтобы его наибольшая высота была равна дальности полёта? Чему равна эта высота при $v_0=30\\ \\mathrm{m/s}$? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "At what angle must a body be launched for its maximum height to equal its range? What is this height for $v_0=30\\ \\mathrm{m/s}$? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L01-S12.png",
+  "solution": {
+   "uz": [
+    "Balandlik va uzoqlik nisbati: $$\\frac{H}{L}=\\frac{\\tan\\alpha}{4}=1\\ \\Rightarrow\\ \\tan\\alpha=4,\\qquad \\alpha\\approx76^\\circ$$",
+    "$\\tan\\alpha=4$ dan: $$\\sin^2\\alpha=\\frac{\\tan^2\\alpha}{1+\\tan^2\\alpha}=\\frac{16}{17}$$",
+    "Balandlik: $$H=\\frac{v_0^2\\sin^2\\alpha}{2g}=\\frac{900\\cdot16}{17\\cdot20}=\\frac{720}{17}\\approx42.4\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Отношение высоты и дальности: $$\\frac{H}{L}=\\frac{\\tan\\alpha}{4}=1\\ \\Rightarrow\\ \\tan\\alpha=4,\\qquad \\alpha\\approx76^\\circ$$",
+    "Из $\\tan\\alpha=4$: $$\\sin^2\\alpha=\\frac{\\tan^2\\alpha}{1+\\tan^2\\alpha}=\\frac{16}{17}$$",
+    "Высота: $$H=\\frac{v_0^2\\sin^2\\alpha}{2g}=\\frac{900\\cdot16}{17\\cdot20}=\\frac{720}{17}\\approx42.4\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Ratio of height to range: $$\\frac{H}{L}=\\frac{\\tan\\alpha}{4}=1\\ \\Rightarrow\\ \\tan\\alpha=4,\\qquad \\alpha\\approx76^\\circ$$",
+    "From $\\tan\\alpha=4$: $$\\sin^2\\alpha=\\frac{\\tan^2\\alpha}{1+\\tan^2\\alpha}=\\frac{16}{17}$$",
+    "Height: $$H=\\frac{v_0^2\\sin^2\\alpha}{2g}=\\frac{900\\cdot16}{17\\cdot20}=\\frac{720}{17}\\approx42.4\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Balandlik va uzoqlik: $\\frac{H}{L}=\\frac{\\tan\\alpha}{4}$",
+    "ru": "Высота и дальность: $\\frac{H}{L}=\\frac{\\tan\\alpha}{4}$",
+    "en": "Height and range: $\\frac{H}{L}=\\frac{\\tan\\alpha}{4}$"
+   },
+   null,
+   {
+    "uz": "$T=\\frac{2v_0\\sin\\alpha}{g}$, $H=\\frac{v_0^2\\sin^2\\alpha}{2g}$, $L=\\frac{v_0^2\\sin2\\alpha}{g}$",
+    "ru": "$T=\\frac{2v_0\\sin\\alpha}{g}$, $H=\\frac{v_0^2\\sin^2\\alpha}{2g}$, $L=\\frac{v_0^2\\sin2\\alpha}{g}$",
+    "en": "$T=\\frac{2v_0\\sin\\alpha}{g}$, $H=\\frac{v_0^2\\sin^2\\alpha}{2g}$, $L=\\frac{v_0^2\\sin2\\alpha}{g}$"
+   }
+  ],
+  "basis": {
+   "uz": "Balandlik va uchish uzoqligi orasidagi bog'lanish",
+   "ru": "Связь высоты и дальности",
+   "en": "Relation between height and range"
+  },
+  "answer": "\\tan\\alpha=4,\\ \\alpha\\approx76^\\circ;\\ H=L\\approx42.4\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Irodov, «Problems in General Physics», 1.29-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Qiyaligi $\\beta=30^\\circ$ bo'lgan tepalikning cho'qqisidan tosh gorizontal $v_0=10\\ \\mathrm{m/s}$ tezlik bilan otildi va qiyalikka tushdi. Uchish vaqti, otilish nuqtasidan qiyalik bo'ylab masofa va tushish paytida tezlikning gorizont bilan burchagini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "С вершины склона с углом наклона $\\beta=30^\\circ$ камень брошен горизонтально со скоростью $v_0=10\\ \\mathrm{m/s}$ и упал на склон. Найдите время полёта, расстояние вдоль склона от точки бросания и угол скорости с горизонтом в момент падения. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "From the top of a slope inclined at $\\beta=30^\\circ$ a stone is thrown horizontally with speed $v_0=10\\ \\mathrm{m/s}$ and lands on the slope. Find the time of flight, the distance along the slope from the launch point and the angle of the velocity with the horizontal at landing. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L01-S13.png",
+  "solution": {
+   "uz": [
+    "$y$ ni pastga olamiz: $x=v_0t$, $y=\\frac{gt^2}{2}$; qiyalikka tushish sharti: $$\\frac{y}{x}=\\frac{gt}{2v_0}=\\tan\\beta\\ \\Rightarrow\\ t=\\frac{2v_0\\tan\\beta}{g}=\\frac{2}{\\sqrt{3}}\\approx1.15\\ \\mathrm{s}$$",
+    "Qiyalik bo'ylab masofa: $$x=v_0t=\\frac{20}{\\sqrt{3}}\\ \\mathrm{m},\\qquad s=\\frac{x}{\\cos\\beta}=\\frac{40}{3}\\approx13.3\\ \\mathrm{m}$$",
+    "Tushishdagi tezlik yo'nalishi: $$\\tan\\varphi=\\frac{gt}{v_0}=2\\tan\\beta=\\frac{2}{\\sqrt{3}}\\ \\Rightarrow\\ \\varphi\\approx49^\\circ$$",
+    "Chegaraviy holat: $\\beta\\to0$ da $t\\to0$, $s\\to0$ — to'g'ri: $$s=\\frac{2v_0^2\\tan\\beta}{g\\cos\\beta}$$"
+   ],
+   "ru": [
+    "Ось $y$ вниз: $x=v_0t$, $y=\\frac{gt^2}{2}$; условие падения на склон: $$\\frac{y}{x}=\\frac{gt}{2v_0}=\\tan\\beta\\ \\Rightarrow\\ t=\\frac{2v_0\\tan\\beta}{g}=\\frac{2}{\\sqrt{3}}\\approx1.15\\ \\mathrm{s}$$",
+    "Расстояние вдоль склона: $$x=v_0t=\\frac{20}{\\sqrt{3}}\\ \\mathrm{m},\\qquad s=\\frac{x}{\\cos\\beta}=\\frac{40}{3}\\approx13.3\\ \\mathrm{m}$$",
+    "Направление скорости при падении: $$\\tan\\varphi=\\frac{gt}{v_0}=2\\tan\\beta=\\frac{2}{\\sqrt{3}}\\ \\Rightarrow\\ \\varphi\\approx49^\\circ$$",
+    "Предельный случай: при $\\beta\\to0$ $t\\to0$, $s\\to0$ — верно: $$s=\\frac{2v_0^2\\tan\\beta}{g\\cos\\beta}$$"
+   ],
+   "en": [
+    "Take $y$ downwards: $x=v_0t$, $y=\\frac{gt^2}{2}$; landing on the slope: $$\\frac{y}{x}=\\frac{gt}{2v_0}=\\tan\\beta\\ \\Rightarrow\\ t=\\frac{2v_0\\tan\\beta}{g}=\\frac{2}{\\sqrt{3}}\\approx1.15\\ \\mathrm{s}$$",
+    "Distance along the slope: $$x=v_0t=\\frac{20}{\\sqrt{3}}\\ \\mathrm{m},\\qquad s=\\frac{x}{\\cos\\beta}=\\frac{40}{3}\\approx13.3\\ \\mathrm{m}$$",
+    "Direction of the velocity at landing: $$\\tan\\varphi=\\frac{gt}{v_0}=2\\tan\\beta=\\frac{2}{\\sqrt{3}}\\ \\Rightarrow\\ \\varphi\\approx49^\\circ$$",
+    "Limiting case: as $\\beta\\to0$, $t\\to0$ and $s\\to0$ — correct: $$s=\\frac{2v_0^2\\tan\\beta}{g\\cos\\beta}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Otilgan jism: $x=v_0\\cos\\alpha\\cdot t$, $y=v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2}$",
+    "ru": "Брошенное тело: $x=v_0\\cos\\alpha\\cdot t$, $y=v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2}$",
+    "en": "Projectile: $x=v_0\\cos\\alpha\\cdot t$, $y=v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2}$"
+   },
+   null,
+   {
+    "uz": "Tezlik — radius-vektor hosilasi: $\\vec v=\\frac{d\\vec r}{dt}$",
+    "ru": "Скорость — производная радиус-вектора: $\\vec v=\\frac{d\\vec r}{dt}$",
+    "en": "Velocity is the derivative of the position vector: $\\vec v=\\frac{d\\vec r}{dt}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Qiyalikka otish",
+   "ru": "Бросок на склон",
+   "en": "Launch onto a slope"
+  },
+  "answer": "t\\approx1.15\\ \\mathrm{s};\\ s=\\frac{40}{3}\\approx13.3\\ \\mathrm{m};\\ \\varphi\\approx49^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "Irodov, «Problems in General Physics», 1.31-masala asosida; sharti o'zgartirilgan; Chertov–Vorobyov 1-bob g'oyasi"
+ },
+ {
+  "id": "B2-L01-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Avtomobil radiusi $R=100\\ \\mathrm{m}$ bo'lgan aylana yo'lda tinch holatdan $a_\\tau=2\\ \\mathrm{m/s^2}$ o'zgarmas tangensial tezlanish bilan harakatni boshladi. Qancha vaqtdan keyin normal tezlanish tangensial tezlanishga tenglashadi? Shu paytdagi tezlik, bosib o'tilgan yo'l va to'liq tezlanishni toping.",
+   "ru": "Автомобиль начинает движение из покоя по круговой дороге радиуса $R=100\\ \\mathrm{m}$ с постоянным тангенциальным ускорением $a_\\tau=2\\ \\mathrm{m/s^2}$. Через какое время нормальное ускорение сравняется с тангенциальным? Найдите скорость, пройденный путь и полное ускорение в этот момент.",
+   "en": "A car starts from rest on a circular road of radius $R=100\\ \\mathrm{m}$ with constant tangential acceleration $a_\\tau=2\\ \\mathrm{m/s^2}$. After what time does the normal acceleration equal the tangential one? Find the speed, the distance travelled and the total acceleration at that moment."
+  },
+  "figure": "figures/B2-L01-S14.png",
+  "solution": {
+   "uz": [
+    "Tenglik sharti: $$\\frac{v^2}{R}=a_\\tau\\ \\Rightarrow\\ v=\\sqrt{a_\\tau R}=\\sqrt{200}\\approx14.1\\ \\mathrm{m/s}$$",
+    "Vaqt va yo'l ($v=a_\\tau t$): $$t=\\frac{v}{a_\\tau}\\approx7.07\\ \\mathrm{s},\\qquad s=\\frac{v^2}{2a_\\tau}=\\frac{R}{2}=50\\ \\mathrm{m}$$",
+    "To'liq tezlanish — tashkil etuvchilar teng: $$a=\\sqrt{a_\\tau^2+a_n^2}=2\\sqrt{2}\\approx2.83\\ \\mathrm{m/s^2},\\qquad \\angle\\left(\\vec a,\\ \\vec v\\right)=45^\\circ$$",
+    "Diqqat: burilish burchagi $R$ ga ham, $a_\\tau$ ga ham bog'liq emas: $$\\varphi=\\frac{s}{R}=\\frac{1}{2}\\ \\mathrm{rad}$$"
+   ],
+   "ru": [
+    "Условие равенства: $$\\frac{v^2}{R}=a_\\tau\\ \\Rightarrow\\ v=\\sqrt{a_\\tau R}=\\sqrt{200}\\approx14.1\\ \\mathrm{m/s}$$",
+    "Время и путь ($v=a_\\tau t$): $$t=\\frac{v}{a_\\tau}\\approx7.07\\ \\mathrm{s},\\qquad s=\\frac{v^2}{2a_\\tau}=\\frac{R}{2}=50\\ \\mathrm{m}$$",
+    "Полное ускорение — составляющие равны: $$a=\\sqrt{a_\\tau^2+a_n^2}=2\\sqrt{2}\\approx2.83\\ \\mathrm{m/s^2},\\qquad \\angle\\left(\\vec a,\\ \\vec v\\right)=45^\\circ$$",
+    "Заметьте: угол поворота не зависит ни от $R$, ни от $a_\\tau$: $$\\varphi=\\frac{s}{R}=\\frac{1}{2}\\ \\mathrm{rad}$$"
+   ],
+   "en": [
+    "Equality condition: $$\\frac{v^2}{R}=a_\\tau\\ \\Rightarrow\\ v=\\sqrt{a_\\tau R}=\\sqrt{200}\\approx14.1\\ \\mathrm{m/s}$$",
+    "Time and distance ($v=a_\\tau t$): $$t=\\frac{v}{a_\\tau}\\approx7.07\\ \\mathrm{s},\\qquad s=\\frac{v^2}{2a_\\tau}=\\frac{R}{2}=50\\ \\mathrm{m}$$",
+    "Total acceleration — the components are equal: $$a=\\sqrt{a_\\tau^2+a_n^2}=2\\sqrt{2}\\approx2.83\\ \\mathrm{m/s^2},\\qquad \\angle\\left(\\vec a,\\ \\vec v\\right)=45^\\circ$$",
+    "Note: the rotation angle depends on neither $R$ nor $a_\\tau$: $$\\varphi=\\frac{s}{R}=\\frac{1}{2}\\ \\mathrm{rad}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Normal tezlanish: $a_n=\\frac{|\\vec v\\times\\vec a|}{v}=\\frac{v^2}{R}$",
+    "ru": "Нормальное ускорение: $a_n=\\frac{|\\vec v\\times\\vec a|}{v}=\\frac{v^2}{R}$",
+    "en": "Normal acceleration: $a_n=\\frac{|\\vec v\\times\\vec a|}{v}=\\frac{v^2}{R}$"
+   },
+   null,
+   {
+    "uz": "To'liq tezlanish: $a=\\sqrt{a_\\tau^2+a_n^2}$",
+    "ru": "Полное ускорение: $a=\\sqrt{a_\\tau^2+a_n^2}$",
+    "en": "Total acceleration: $a=\\sqrt{a_\\tau^2+a_n^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Aylanada tekis tezlanuvchan harakat",
+   "ru": "Равноускоренное движение по окружности",
+   "en": "Uniformly accelerated circular motion"
+  },
+  "answer": "t\\approx7.07\\ \\mathrm{s};\\ v\\approx14.1\\ \\mathrm{m/s};\\ s=50\\ \\mathrm{m};\\ a\\approx2.83\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "Volkenshteyn, «Problems in General Physics», 1.51-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Disk qo'zg'almas o'q atrofida $\\varphi=12t-t^3$ (rad, $t$ sekundda) qonun bo'yicha aylanmoqda. a) Disk qachon to'xtaydi va shu vaqtgacha qancha burchakka buriladi? Shu oraliqdagi o'rtacha burchak tezlik qancha? To'xtash paytidagi burchak tezlanish qancha? b) O'qdan $r=0.5\\ \\mathrm{m}$ masofadagi nuqtaning $t=1\\ \\mathrm{s}$ dagi to'liq tezlanishini toping.",
+   "ru": "Диск вращается вокруг неподвижной оси по закону $\\varphi=12t-t^3$ (рад, $t$ в секундах). а) Когда диск остановится и на какой угол он повернётся до этого? Какова средняя угловая скорость за этот промежуток? Каково угловое ускорение в момент остановки? б) Найдите полное ускорение точки на расстоянии $r=0.5\\ \\mathrm{m}$ от оси при $t=1\\ \\mathrm{s}$.",
+   "en": "A disc rotates about a fixed axis according to $\\varphi=12t-t^3$ (rad, $t$ in seconds). a) When does the disc stop and through what angle has it turned by then? What is the average angular velocity over this interval? What is the angular acceleration at the moment of stopping? b) Find the total acceleration of a point at distance $r=0.5\\ \\mathrm{m}$ from the axis at $t=1\\ \\mathrm{s}$."
+  },
+  "figure": "figures/B2-L01-S15.png",
+  "solution": {
+   "uz": [
+    "Burchak tezlik va burchak tezlanish: $$\\omega=12-3t^2,\\qquad \\varepsilon=-6t$$",
+    "To'xtash: $\\omega=0$: $$t=2\\ \\mathrm{s},\\qquad \\varphi(2)=24-8=16\\ \\mathrm{rad},\\qquad \\langle\\omega\\rangle=\\frac{16}{2}=8\\ \\mathrm{rad/s}$$",
+    "To'xtash paytida: $$\\varepsilon(2)=-12\\ \\mathrm{rad/s^2}$$",
+    "b) $t=1\\ \\mathrm{s}$ da $\\omega=9$, $\\varepsilon=-6$: $$a_n=\\omega^2r=40.5\\ \\mathrm{m/s^2},\\qquad a_\\tau=\\varepsilon r=-3\\ \\mathrm{m/s^2}$$",
+    "To'liq tezlanish: $$a=\\sqrt{40.5^2+3^2}\\approx40.6\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Угловая скорость и угловое ускорение: $$\\omega=12-3t^2,\\qquad \\varepsilon=-6t$$",
+    "Остановка: $\\omega=0$: $$t=2\\ \\mathrm{s},\\qquad \\varphi(2)=24-8=16\\ \\mathrm{rad},\\qquad \\langle\\omega\\rangle=\\frac{16}{2}=8\\ \\mathrm{rad/s}$$",
+    "В момент остановки: $$\\varepsilon(2)=-12\\ \\mathrm{rad/s^2}$$",
+    "б) При $t=1\\ \\mathrm{s}$ $\\omega=9$, $\\varepsilon=-6$: $$a_n=\\omega^2r=40.5\\ \\mathrm{m/s^2},\\qquad a_\\tau=\\varepsilon r=-3\\ \\mathrm{m/s^2}$$",
+    "Полное ускорение: $$a=\\sqrt{40.5^2+3^2}\\approx40.6\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "Angular velocity and angular acceleration: $$\\omega=12-3t^2,\\qquad \\varepsilon=-6t$$",
+    "Stopping: $\\omega=0$: $$t=2\\ \\mathrm{s},\\qquad \\varphi(2)=24-8=16\\ \\mathrm{rad},\\qquad \\langle\\omega\\rangle=\\frac{16}{2}=8\\ \\mathrm{rad/s}$$",
+    "At the moment of stopping: $$\\varepsilon(2)=-12\\ \\mathrm{rad/s^2}$$",
+    "b) At $t=1\\ \\mathrm{s}$, $\\omega=9$, $\\varepsilon=-6$: $$a_n=\\omega^2r=40.5\\ \\mathrm{m/s^2},\\qquad a_\\tau=\\varepsilon r=-3\\ \\mathrm{m/s^2}$$",
+    "Total acceleration: $$a=\\sqrt{40.5^2+3^2}\\approx40.6\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Burchak tezlik va tezlanish: $\\omega=\\frac{d\\varphi}{dt}$, $\\varepsilon=\\frac{d\\omega}{dt}$",
+    "ru": "Угловая скорость и ускорение: $\\omega=\\frac{d\\varphi}{dt}$, $\\varepsilon=\\frac{d\\omega}{dt}$",
+    "en": "Angular velocity and acceleration: $\\omega=\\frac{d\\varphi}{dt}$, $\\varepsilon=\\frac{d\\omega}{dt}$"
+   },
+   null,
+   null,
+   {
+    "uz": "Aylana: $v=\\omega R$, $a_\\tau=\\varepsilon R$, $a_n=\\omega^2R=\\frac{v^2}{R}$",
+    "ru": "Окружность: $v=\\omega R$, $a_\\tau=\\varepsilon R$, $a_n=\\omega^2R=\\frac{v^2}{R}$",
+    "en": "Circle: $v=\\omega R$, $a_\\tau=\\varepsilon R$, $a_n=\\omega^2R=\\frac{v^2}{R}$"
+   },
+   {
+    "uz": "To'liq tezlanish: $a=\\sqrt{a_\\tau^2+a_n^2}$",
+    "ru": "Полное ускорение: $a=\\sqrt{a_\\tau^2+a_n^2}$",
+    "en": "Total acceleration: $a=\\sqrt{a_\\tau^2+a_n^2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Burilish qonuni bo'yicha aylanma harakat",
+   "ru": "Вращение по заданному закону",
+   "en": "Rotation with a given law"
+  },
+  "answer": "t=2\\ \\mathrm{s};\\ \\varphi=16\\ \\mathrm{rad};\\ \\langle\\omega\\rangle=8\\ \\mathrm{rad/s};\\ \\varepsilon=-12\\ \\mathrm{rad/s^2};\\ a\\approx40.6\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "Irodov, «Problems in General Physics», 1.46-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Gorizontal sterjen vertikal o'q atrofida $\\omega=2\\ \\mathrm{rad/s}$ burchak tezlik bilan tekis aylanmoqda. Munchoq sterjen bo'ylab shunday siljiydiki, uning o'qdan masofasi $r=0.5+0.3t$ (m). $t=1\\ \\mathrm{s}$ da munchoqning tezligi va tezlanishining radial va ko'ndalang tashkil etuvchilarini hamda modullarini toping.",
+   "ru": "Горизонтальный стержень равномерно вращается вокруг вертикальной оси с угловой скоростью $\\omega=2\\ \\mathrm{rad/s}$. Бусинка движется вдоль стержня так, что её расстояние до оси $r=0.5+0.3t$ (м). Найдите при $t=1\\ \\mathrm{s}$ радиальные и поперечные составляющие скорости и ускорения бусинки, а также их модули.",
+   "en": "A horizontal rod rotates uniformly about a vertical axis with angular velocity $\\omega=2\\ \\mathrm{rad/s}$. A bead moves along the rod so that its distance from the axis is $r=0.5+0.3t$ (m). At $t=1\\ \\mathrm{s}$ find the radial and transverse components of the bead's velocity and acceleration, and their magnitudes."
+  },
+  "figure": "figures/B2-L01-S16.png",
+  "solution": {
+   "uz": [
+    "Hosilalar: $\\dot r=0.3$, $\\ddot r=0$, $\\dot\\theta=2$, $\\ddot\\theta=0$; $t=1\\ \\mathrm{s}$ da $r=0.8\\ \\mathrm{m}$: $$v_r=\\dot r=0.3\\ \\mathrm{m/s},\\qquad v_\\theta=r\\dot\\theta=1.6\\ \\mathrm{m/s}$$",
+    "Tezlik moduli: $$v=\\sqrt{0.3^2+1.6^2}\\approx1.63\\ \\mathrm{m/s}$$",
+    "Tezlanish tashkil etuvchilari: $$a_r=0-0.8\\cdot2^2=-3.2\\ \\mathrm{m/s^2},\\qquad a_\\theta=0+2\\cdot0.3\\cdot2=1.2\\ \\mathrm{m/s^2}$$",
+    "Tezlanish moduli; $a_\\theta$ — Koriolis hadi: $$a=\\sqrt{3.2^2+1.2^2}\\approx3.42\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Производные: $\\dot r=0.3$, $\\ddot r=0$, $\\dot\\theta=2$, $\\ddot\\theta=0$; при $t=1\\ \\mathrm{s}$ $r=0.8\\ \\mathrm{m}$: $$v_r=\\dot r=0.3\\ \\mathrm{m/s},\\qquad v_\\theta=r\\dot\\theta=1.6\\ \\mathrm{m/s}$$",
+    "Модуль скорости: $$v=\\sqrt{0.3^2+1.6^2}\\approx1.63\\ \\mathrm{m/s}$$",
+    "Составляющие ускорения: $$a_r=0-0.8\\cdot2^2=-3.2\\ \\mathrm{m/s^2},\\qquad a_\\theta=0+2\\cdot0.3\\cdot2=1.2\\ \\mathrm{m/s^2}$$",
+    "Модуль ускорения; $a_\\theta$ — кориолисово слагаемое: $$a=\\sqrt{3.2^2+1.2^2}\\approx3.42\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "Derivatives: $\\dot r=0.3$, $\\ddot r=0$, $\\dot\\theta=2$, $\\ddot\\theta=0$; at $t=1\\ \\mathrm{s}$, $r=0.8\\ \\mathrm{m}$: $$v_r=\\dot r=0.3\\ \\mathrm{m/s},\\qquad v_\\theta=r\\dot\\theta=1.6\\ \\mathrm{m/s}$$",
+    "Speed: $$v=\\sqrt{0.3^2+1.6^2}\\approx1.63\\ \\mathrm{m/s}$$",
+    "Acceleration components: $$a_r=0-0.8\\cdot2^2=-3.2\\ \\mathrm{m/s^2},\\qquad a_\\theta=0+2\\cdot0.3\\cdot2=1.2\\ \\mathrm{m/s^2}$$",
+    "Magnitude of acceleration; $a_\\theta$ is the Coriolis term: $$a=\\sqrt{3.2^2+1.2^2}\\approx3.42\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qutb koordinatalari: $\\vec v=\\dot r\\,\\vec e_r+r\\dot\\theta\\,\\vec e_\\theta$",
+    "ru": "Полярные координаты: $\\vec v=\\dot r\\,\\vec e_r+r\\dot\\theta\\,\\vec e_\\theta$",
+    "en": "Polar coordinates: $\\vec v=\\dot r\\,\\vec e_r+r\\dot\\theta\\,\\vec e_\\theta$"
+   },
+   {
+    "uz": "Vektor moduli: $v=\\sqrt{v_x^2+v_y^2}$",
+    "ru": "Модуль вектора: $v=\\sqrt{v_x^2+v_y^2}$",
+    "en": "Magnitude of a vector: $v=\\sqrt{v_x^2+v_y^2}$"
+   },
+   {
+    "uz": "$a_r=\\ddot r-r\\dot\\theta^2$, $a_\\theta=r\\ddot\\theta+2\\dot r\\dot\\theta$",
+    "ru": "$a_r=\\ddot r-r\\dot\\theta^2$, $a_\\theta=r\\ddot\\theta+2\\dot r\\dot\\theta$",
+    "en": "$a_r=\\ddot r-r\\dot\\theta^2$, $a_\\theta=r\\ddot\\theta+2\\dot r\\dot\\theta$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Qutb koordinatalarida tezlik va tezlanish",
+   "ru": "Скорость и ускорение в полярных координатах",
+   "en": "Velocity and acceleration in polar coordinates"
+  },
+  "answer": "v_r=0.3,\\ v_\\theta=1.6,\\ v\\approx1.63\\ \\mathrm{m/s};\\ a_r=-3.2,\\ a_\\theta=1.2,\\ a\\approx3.42\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B2-L01, Irodov 1.43 g'oyasi)"
+ },
+ {
+  "id": "B2-L01-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Bir nuqtadan bir vaqtda ikki tosh bir xil $20\\ \\mathrm{m/s}$ tezlik bilan otildi: biri vertikal yuqoriga, ikkinchisi gorizontga $30^\\circ$ burchak ostida. $1.5\\ \\mathrm{s}$ dan keyin ular orasidagi masofa qancha bo'ladi (ikkalasi hali havoda)? Havo qarshiligi hisobga olinmasin.",
+   "ru": "Из одной точки одновременно брошены два камня с одинаковой скоростью $20\\ \\mathrm{m/s}$: один вертикально вверх, другой под углом $30^\\circ$ к горизонту. Каким будет расстояние между ними через $1.5\\ \\mathrm{s}$ (оба ещё в воздухе)? Сопротивление воздуха не учитывать.",
+   "en": "Two stones are thrown at the same time from the same point with the same speed of $20\\ \\mathrm{m/s}$: one vertically upwards, the other at $30^\\circ$ to the horizontal. What is the distance between them after $1.5\\ \\mathrm{s}$ (both still in the air)? Neglect air resistance."
+  },
+  "figure": "figures/B2-L01-S17.png",
+  "solution": {
+   "uz": [
+    "Ikkalasining tezlanishi $\\vec g$ — nisbiy tezlanish nol: $$\\vec r_{12}=\\left(\\vec v_1-\\vec v_2\\right)t$$",
+    "Tezliklar orasidagi burchak $90^\\circ-30^\\circ=60^\\circ$: $$|\\vec v_1-\\vec v_2|=2v_0\\sin\\frac{60^\\circ}{2}=2\\cdot20\\cdot\\frac{1}{2}=20\\ \\mathrm{m/s}$$",
+    "Masofa: $$d=20\\cdot1.5=30\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Ускорение обоих $\\vec g$ — относительное ускорение равно нулю: $$\\vec r_{12}=\\left(\\vec v_1-\\vec v_2\\right)t$$",
+    "Угол между скоростями $90^\\circ-30^\\circ=60^\\circ$: $$|\\vec v_1-\\vec v_2|=2v_0\\sin\\frac{60^\\circ}{2}=2\\cdot20\\cdot\\frac{1}{2}=20\\ \\mathrm{m/s}$$",
+    "Расстояние: $$d=20\\cdot1.5=30\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Both accelerate at $\\vec g$, so the relative acceleration is zero: $$\\vec r_{12}=\\left(\\vec v_1-\\vec v_2\\right)t$$",
+    "The angle between the velocities is $90^\\circ-30^\\circ=60^\\circ$: $$|\\vec v_1-\\vec v_2|=2v_0\\sin\\frac{60^\\circ}{2}=2\\cdot20\\cdot\\frac{1}{2}=20\\ \\mathrm{m/s}$$",
+    "Distance: $$d=20\\cdot1.5=30\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bir xil tezlanishda nisbiy harakat tekis: $\\vec r_{12}=\\vec r_{12}(0)+\\vec v_{12}t$",
+    "ru": "При одинаковом ускорении относительное движение равномерно: $\\vec r_{12}=\\vec r_{12}(0)+\\vec v_{12}t$",
+    "en": "With equal accelerations relative motion is uniform: $\\vec r_{12}=\\vec r_{12}(0)+\\vec v_{12}t$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Ikki otilgan jismning nisbiy harakati",
+   "ru": "Относительное движение двух брошенных тел",
+   "en": "Relative motion of two projectiles"
+  },
+  "answer": "d=30\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "Irodov, «Problems in General Physics», 1.10-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L01-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$A$ kema koordinata boshidan sharqqa $12\\ \\mathrm{km/h}$ tezlik bilan, $B$ kema esa undan $20\\ \\mathrm{km}$ shimoldagi nuqtadan janubga $16\\ \\mathrm{km/h}$ tezlik bilan bir vaqtda yo'lga chiqdi. Kemalar orasidagi eng kichik masofani va unga erishish vaqtini toping.",
+   "ru": "Корабль $A$ выходит из начала координат на восток со скоростью $12\\ \\mathrm{km/h}$, а корабль $B$ одновременно выходит из точки в $20\\ \\mathrm{km}$ севернее на юг со скоростью $16\\ \\mathrm{km/h}$. Найдите наименьшее расстояние между кораблями и время его достижения.",
+   "en": "Ship $A$ leaves the origin heading east at $12\\ \\mathrm{km/h}$, and at the same time ship $B$ leaves a point $20\\ \\mathrm{km}$ to the north heading south at $16\\ \\mathrm{km/h}$. Find the smallest distance between the ships and the time at which it is reached."
+  },
+  "figure": "figures/B2-L01-S18.png",
+  "solution": {
+   "uz": [
+    "$A$ ga bog'langan sistemaga o'tamiz ($x$ — sharq, $y$ — shimol): $$\\vec r_{12}(0)=(0,\\ 20),\\qquad \\vec v_{12}=(0,\\ -16)-(12,\\ 0)=(-12,\\ -16),\\quad v_{12}=20$$",
+    "$B$ bu sistemada to'g'ri chiziq bo'ylab tekis harakatlanadi: $$d_{min}=\\frac{|0\\cdot(-16)-20\\cdot(-12)|}{20}=\\frac{240}{20}=12\\ \\mathrm{km}$$",
+    "Vaqt: $$t^*=-\\frac{0\\cdot(-12)+20\\cdot(-16)}{400}=0.8\\ \\mathrm{h}=48\\ \\mathrm{min}$$"
+   ],
+   "ru": [
+    "Переходим в систему, связанную с $A$ ($x$ — восток, $y$ — север): $$\\vec r_{12}(0)=(0,\\ 20),\\qquad \\vec v_{12}=(0,\\ -16)-(12,\\ 0)=(-12,\\ -16),\\quad v_{12}=20$$",
+    "В этой системе $B$ движется равномерно по прямой: $$d_{min}=\\frac{|0\\cdot(-16)-20\\cdot(-12)|}{20}=\\frac{240}{20}=12\\ \\mathrm{km}$$",
+    "Время: $$t^*=-\\frac{0\\cdot(-12)+20\\cdot(-16)}{400}=0.8\\ \\mathrm{h}=48\\ \\mathrm{min}$$"
+   ],
+   "en": [
+    "Switch to the frame of $A$ ($x$ — east, $y$ — north): $$\\vec r_{12}(0)=(0,\\ 20),\\qquad \\vec v_{12}=(0,\\ -16)-(12,\\ 0)=(-12,\\ -16),\\quad v_{12}=20$$",
+    "In this frame $B$ moves uniformly in a straight line: $$d_{min}=\\frac{|0\\cdot(-16)-20\\cdot(-12)|}{20}=\\frac{240}{20}=12\\ \\mathrm{km}$$",
+    "Time: $$t^*=-\\frac{0\\cdot(-12)+20\\cdot(-16)}{400}=0.8\\ \\mathrm{h}=48\\ \\mathrm{min}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tezliklarni qo'shish: $\\vec v=\\vec V+\\vec v\\,'$",
+    "ru": "Сложение скоростей: $\\vec v=\\vec V+\\vec v\\,'$",
+    "en": "Velocity addition: $\\vec v=\\vec V+\\vec v\\,'$"
+   },
+   {
+    "uz": "Eng kichik masofa: $d_{min}=\\frac{|\\vec r_{12}\\times\\vec v_{12}|}{v_{12}}$, $t^*=-\\frac{\\vec r_{12}\\cdot\\vec v_{12}}{v_{12}^2}$",
+    "ru": "Наименьшее расстояние: $d_{min}=\\frac{|\\vec r_{12}\\times\\vec v_{12}|}{v_{12}}$, $t^*=-\\frac{\\vec r_{12}\\cdot\\vec v_{12}}{v_{12}^2}$",
+    "en": "Closest approach: $d_{min}=\\frac{|\\vec r_{12}\\times\\vec v_{12}|}{v_{12}}$, $t^*=-\\frac{\\vec r_{12}\\cdot\\vec v_{12}}{v_{12}^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Eng kichik masofa (closest approach)",
+   "ru": "Наименьшее расстояние",
+   "en": "Closest approach"
+  },
+  "answer": "d_{min}=12\\ \\mathrm{km};\\ t^*=0.8\\ \\mathrm{h}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "Irodov, «Problems in General Physics», 1.16-masala asosida; sharti o'zgartirilgan"
+ }
+]

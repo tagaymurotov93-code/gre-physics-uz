@@ -1,0 +1,557 @@
+[
+ {
+  "t": "h1",
+  "uz": "Vektor ko'rinishdagi kinematika (Kinematics in vector form)",
+  "ru": "Кинематика в векторной форме",
+  "en": "Kinematics in vector form"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz moddiy nuqta harakatini radius-vektor $\\vec r(t)$ orqali yozasiz; tezlik va tezlanish vektorlarini hosila sifatida topasiz; tezlanishni tangensial va normal tashkil etuvchilarga ajratib, trayektoriyaning egrilik radiusini hisoblaysiz; tezlanish vaqtga, tezlikka yoki koordinataga bog'liq berilganda integrallash orqali harakat qonunini tiklaysiz; otilgan jism, aylana bo'ylab harakat va qutb koordinatalaridagi harakat masalalarini yechasiz; nisbiy harakat (Galiley almashtirishi) yordamida murakkab masalalarni soddalashtirasiz va GRE testlarida tez ishlaydigan usullarni (o'lchamlar, chegaraviy holatlar, sanoq sistemasini almashtirish) qo'llaysiz.",
+  "ru": "**Цель.** После урока вы будете описывать движение материальной точки радиус-вектором $\\vec r(t)$; находить векторы скорости и ускорения как производные; раскладывать ускорение на тангенциальную и нормальную составляющие и вычислять радиус кривизны траектории; восстанавливать закон движения интегрированием, когда ускорение задано как функция времени, скорости или координаты; решать задачи о брошенном теле, движении по окружности и движении в полярных координатах; упрощать сложные задачи с помощью относительного движения (преобразования Галилея) и применять быстрые приёмы для тестов GRE (размерности, предельные случаи, смена системы отсчёта).",
+  "en": "**Goal.** After this lesson you will describe the motion of a point particle by the radius vector $\\vec r(t)$; find the velocity and acceleration vectors as derivatives; decompose the acceleration into tangential and normal components and calculate the radius of curvature of the trajectory; reconstruct the law of motion by integration when the acceleration is given as a function of time, velocity or position; solve problems on projectiles, circular motion and motion in polar coordinates; simplify complicated problems using relative motion (the Galilean transformation); and apply fast techniques for GRE tests (dimensions, limiting cases, change of reference frame)."
+ },
+ {
+  "t": "p",
+  "uz": "Bu — 2-bosqichning (B2, universitet umumiy fizikasi) birinchi darsi. B1 da (L01–L05, L10) harakatni asosan bitta o'q bo'yicha yoki tayyor formulalar bilan o'rgandik. Endi B0 dagi vektorlar (L01), hosila (L03) va integral (L04) apparatini fizikaga to'liq qo'llaymiz: barcha formulalar bitta vektor tenglamadan kelib chiqadi. GRE Physics testida klassik mexanika — eng katta bo'lim (20 foiz), kinematika esa uning poydevori: otilgan jism, nisbiy tezlik, $v(t)$ grafiklari va aylana bo'ylab harakat bo'yicha savollar deyarli har bir testda uchraydi. Masalalar avval maktab darajasidagi 2–3 ta «ko'prik» masaladan boshlanib, keyin GRE darajasiga ko'tariladi.",
+  "ru": "Это первый урок этапа 2 (B2, университетская общая физика). На этапе B1 (L01–L05, L10) мы изучали движение в основном вдоль одной оси или по готовым формулам. Теперь полностью применим к физике аппарат векторов (L01), производной (L03) и интеграла (L04) из B0: все формулы вытекают из одного векторного уравнения. В тесте GRE Physics классическая механика — самый большой раздел (20 процентов), а кинематика — её фундамент: вопросы о брошенном теле, относительной скорости, графиках $v(t)$ и движении по окружности встречаются почти в каждом тесте. Задачи начинаются с 2–3 «мостиковых» задач школьного уровня, а затем поднимаются до уровня GRE.",
+  "en": "This is the first lesson of stage 2 (B2, university general physics). In stage B1 (L01–L05, L10) we studied motion mostly along one axis or with ready-made formulas. Now we fully apply to physics the machinery of vectors (L01), derivatives (L03) and integrals (L04) from B0: all formulas follow from one vector equation. On the GRE Physics test classical mechanics is the largest section (20 percent), and kinematics is its foundation: questions on projectiles, relative velocity, $v(t)$ graphs and circular motion appear on almost every test. The problems start with 2–3 school-level «bridge» problems and then rise to GRE level."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Radius-vektor, ko'chish va yo'l (Position vector, displacement and path length)",
+  "ru": "1. Радиус-вектор, перемещение и путь",
+  "en": "1. Position vector, displacement and path length"
+ },
+ {
+  "t": "li",
+  "uz": "**Sanoq sistemasi va moddiy nuqta.** Harakatni tasvirlash uchun sanoq sistemasi (reference frame) kerak: sanoq jismi, unga bog'langan koordinatalar sistemasi $Oxyz$ va soat. O'lchamlari masalada ahamiyatsiz bo'lgan jism moddiy nuqta (point particle) deb olinadi. Kinematika harakatni uning sabablarini (kuchlarni) qaramasdan tasvirlaydi: «qanday harakatlanadi?» degan savolga javob beradi, «nima uchun?» — dinamikaga (B2-L02) qoldiriladi.",
+  "ru": "**Система отсчёта и материальная точка.** Чтобы описать движение, нужна система отсчёта (reference frame): тело отсчёта, связанная с ним система координат $Oxyz$ и часы. Тело, размеры которого в задаче несущественны, принимают за материальную точку (point particle). Кинематика описывает движение, не рассматривая его причин (сил): она отвечает на вопрос «как движется?», а вопрос «почему?» оставлен динамике (B2-L02).",
+  "en": "**Reference frame and point particle.** To describe motion we need a reference frame: a reference body, a coordinate system $Oxyz$ attached to it and a clock. A body whose size is unimportant in a problem is treated as a point particle. Kinematics describes motion without considering its causes (forces): it answers the question «how does it move?», while «why?» is left to dynamics (B2-L02)."
+ },
+ {
+  "t": "li",
+  "uz": "**Radius-vektor.** Nuqtaning holati koordinata boshidan unga o'tkazilgan radius-vektor (position vector) bilan beriladi: $\\vec r=x\\vec i+y\\vec j+z\\vec k$, bunda $x,\\ y,\\ z$ — uning koordinatalari, $\\vec i,\\ \\vec j,\\ \\vec k$ — bazis vektorlar. Harakat davomida radius-vektor vaqtning funksiyasi bo'ladi: $\\vec r(t)$. Bitta vektor tenglama $\\vec r=\\vec r(t)$ uchta skalyar tenglamaga teng: $x=x(t),\\ y=y(t),\\ z=z(t)$ — bu harakat qonuni yoki harakat tenglamasi (equation of motion). Uning uchi chizgan chiziq — trayektoriya (trajectory) ([[F01]]).",
+  "ru": "**Радиус-вектор.** Положение точки задаётся радиус-вектором (position vector), проведённым к ней из начала координат: $\\vec r=x\\vec i+y\\vec j+z\\vec k$, где $x,\\ y,\\ z$ — её координаты, $\\vec i,\\ \\vec j,\\ \\vec k$ — базисные векторы. При движении радиус-вектор становится функцией времени: $\\vec r(t)$. Одно векторное уравнение $\\vec r=\\vec r(t)$ равносильно трём скалярным: $x=x(t),\\ y=y(t),\\ z=z(t)$ — это закон движения, или уравнение движения (equation of motion). Линия, которую описывает его конец, — траектория (trajectory) ([[F01]]).",
+  "en": "**The position vector.** The position of a point is given by the position vector drawn to it from the origin: $\\vec r=x\\vec i+y\\vec j+z\\vec k$, where $x,\\ y,\\ z$ are its coordinates and $\\vec i,\\ \\vec j,\\ \\vec k$ are the basis vectors. During motion the position vector becomes a function of time: $\\vec r(t)$. One vector equation $\\vec r=\\vec r(t)$ is equivalent to three scalar ones: $x=x(t),\\ y=y(t),\\ z=z(t)$ — this is the equation of motion. The curve traced by its tip is the trajectory ([[F01]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Trayektoriya tenglamasi.** Tekislikdagi harakatda $x(t)$ va $y(t)$ dan vaqtni yo'qotsak, trayektoriya tenglamasi $y(x)$ hosil bo'ladi. Masalan, $\\vec r=2t\\,\\vec i+\\left(t^2-1\\right)\\vec j$ (metrda, $t$ sekundda) bo'lsa, $t=\\frac{x}{2}$ va $y=\\frac{x^2}{4}-1$ — parabola. Bitta trayektoriya bo'ylab turlicha harakatlanish mumkin: trayektoriya «qayerdan o'tadi?» degan savolga, harakat qonuni esa «qachon qayerda?» degan savolga javob beradi.",
+  "ru": "**Уравнение траектории.** При движении на плоскости, исключив время из $x(t)$ и $y(t)$, получим уравнение траектории $y(x)$. Например, если $\\vec r=2t\\,\\vec i+\\left(t^2-1\\right)\\vec j$ (в метрах, $t$ в секундах), то $t=\\frac{x}{2}$ и $y=\\frac{x^2}{4}-1$ — парабола. По одной траектории можно двигаться по-разному: траектория отвечает на вопрос «где проходит?», а закон движения — «где и когда?».",
+  "en": "**The trajectory equation.** For motion in a plane, eliminating time from $x(t)$ and $y(t)$ gives the trajectory equation $y(x)$. For example, if $\\vec r=2t\\,\\vec i+\\left(t^2-1\\right)\\vec j$ (in metres, $t$ in seconds), then $t=\\frac{x}{2}$ and $y=\\frac{x^2}{4}-1$ — a parabola. One can move along the same trajectory in different ways: the trajectory answers «where does it pass?», while the equation of motion answers «where and when?»."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'chish va yo'l.** $t_1$ dan $t_2$ gacha bo'lgan ko'chish (displacement) — boshlang'ich holatdan oxirgi holatga o'tkazilgan vektor: $\\Delta\\vec r=\\vec r(t_2)-\\vec r(t_1)$. Yo'l (path length) $s$ — trayektoriya bo'ylab bosib o'tilgan masofa, skalyar va doim manfiymas. Har doim $s\\geq|\\Delta\\vec r|$; tenglik faqat bir yo'nalishdagi to'g'ri chiziqli harakatda bajariladi. Masalan, aylanani to'liq aylanib chiqqan nuqtaning ko'chishi nolga teng, yo'li esa $2\\pi R$.",
+  "ru": "**Перемещение и путь.** Перемещение (displacement) от $t_1$ до $t_2$ — вектор, проведённый из начального положения в конечное: $\\Delta\\vec r=\\vec r(t_2)-\\vec r(t_1)$. Путь (path length) $s$ — расстояние, пройденное вдоль траектории, скаляр и всегда неотрицателен. Всегда $s\\geq|\\Delta\\vec r|$; равенство выполняется только при прямолинейном движении в одном направлении. Например, у точки, обошедшей окружность полностью, перемещение равно нулю, а путь — $2\\pi R$.",
+  "en": "**Displacement and path length.** The displacement from $t_1$ to $t_2$ is the vector drawn from the initial position to the final one: $\\Delta\\vec r=\\vec r(t_2)-\\vec r(t_1)$. The path length $s$ is the distance travelled along the trajectory; it is a scalar and always non-negative. Always $s\\geq|\\Delta\\vec r|$; equality holds only for straight-line motion in one direction. For example, a point that has gone once around a circle has zero displacement, but its path length is $2\\pi R$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L01-F01.png",
+   "ru": "figures/B2-L01-F01-ru.png",
+   "en": "figures/B2-L01-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Tezlik vektori (The velocity vector)",
+  "ru": "2. Вектор скорости",
+  "en": "2. The velocity vector"
+ },
+ {
+  "t": "li",
+  "uz": "**O'rtacha tezlik.** O'rtacha tezlik vektori (average velocity) — ko'chishning vaqt oralig'iga nisbati: $\\langle\\vec v\\rangle=\\frac{\\Delta\\vec r}{\\Delta t}$. U ko'chish bilan bir yo'nalishda — trayektoriyaning ikki nuqtasini tutashtiruvchi vatar bo'ylab yo'nalgan. O'rtacha yo'l tezligi (average speed) esa skalyar: $\\bar v=\\frac{s}{\\Delta t}$. $s\\geq|\\Delta\\vec r|$ bo'lgani uchun $\\bar v\\geq|\\langle\\vec v\\rangle|$. GRE da bu ikkisini adashtirish — eng ko'p uchraydigan tuzoqlardan biri.",
+  "ru": "**Средняя скорость.** Вектор средней скорости (average velocity) — отношение перемещения к промежутку времени: $\\langle\\vec v\\rangle=\\frac{\\Delta\\vec r}{\\Delta t}$. Он направлен так же, как перемещение, — вдоль хорды, соединяющей две точки траектории. Средняя путевая скорость (average speed) — скаляр: $\\bar v=\\frac{s}{\\Delta t}$. Поскольку $s\\geq|\\Delta\\vec r|$, то $\\bar v\\geq|\\langle\\vec v\\rangle|$. В GRE путаница между ними — одна из самых частых ловушек.",
+  "en": "**Average velocity.** The average velocity vector is the ratio of the displacement to the time interval: $\\langle\\vec v\\rangle=\\frac{\\Delta\\vec r}{\\Delta t}$. It points in the same direction as the displacement — along the chord joining two points of the trajectory. The average speed is a scalar: $\\bar v=\\frac{s}{\\Delta t}$. Since $s\\geq|\\Delta\\vec r|$, we have $\\bar v\\geq|\\langle\\vec v\\rangle|$. On the GRE, confusing the two is one of the most common traps."
+ },
+ {
+  "t": "li",
+  "uz": "**Oniy tezlik.** $\\Delta t\\to0$ da vatar urinmaga aylanadi ([[F02]]), o'rtacha tezlik esa oniy tezlikka (instantaneous velocity) intiladi: $\\vec v=\\lim\\limits_{\\Delta t\\to0}\\frac{\\Delta\\vec r}{\\Delta t}=\\frac{d\\vec r}{dt}$. Demak tezlik vektori har doim trayektoriyaga urinma bo'ylab, harakat yo'nalishida yo'nalgan. Koordinatalarda: $\\vec v=\\frac{dx}{dt}\\vec i+\\frac{dy}{dt}\\vec j+\\frac{dz}{dt}\\vec k$, ya'ni $v_x=\\frac{dx}{dt},\\ v_y=\\frac{dy}{dt},\\ v_z=\\frac{dz}{dt}$. Tezlik moduli (speed) $v=|\\vec v|=\\sqrt{v_x^2+v_y^2+v_z^2}$, shu bilan birga $v=\\frac{ds}{dt}$ — kichik vaqtda ko'chish moduli va yo'l teng bo'ladi.",
+  "ru": "**Мгновенная скорость.** При $\\Delta t\\to0$ хорда переходит в касательную ([[F02]]), а средняя скорость стремится к мгновенной скорости (instantaneous velocity): $\\vec v=\\lim\\limits_{\\Delta t\\to0}\\frac{\\Delta\\vec r}{\\Delta t}=\\frac{d\\vec r}{dt}$. Значит, вектор скорости всегда направлен по касательной к траектории в сторону движения. В координатах: $\\vec v=\\frac{dx}{dt}\\vec i+\\frac{dy}{dt}\\vec j+\\frac{dz}{dt}\\vec k$, то есть $v_x=\\frac{dx}{dt},\\ v_y=\\frac{dy}{dt},\\ v_z=\\frac{dz}{dt}$. Модуль скорости (speed) $v=|\\vec v|=\\sqrt{v_x^2+v_y^2+v_z^2}$, причём $v=\\frac{ds}{dt}$ — за малое время модуль перемещения и путь совпадают.",
+  "en": "**Instantaneous velocity.** As $\\Delta t\\to0$ the chord turns into the tangent ([[F02]]), and the average velocity tends to the instantaneous velocity: $\\vec v=\\lim\\limits_{\\Delta t\\to0}\\frac{\\Delta\\vec r}{\\Delta t}=\\frac{d\\vec r}{dt}$. Hence the velocity vector always points along the tangent to the trajectory in the direction of motion. In coordinates: $\\vec v=\\frac{dx}{dt}\\vec i+\\frac{dy}{dt}\\vec j+\\frac{dz}{dt}\\vec k$, i.e. $v_x=\\frac{dx}{dt},\\ v_y=\\frac{dy}{dt},\\ v_z=\\frac{dz}{dt}$. The speed is $v=|\\vec v|=\\sqrt{v_x^2+v_y^2+v_z^2}$, and also $v=\\frac{ds}{dt}$ — over a short time the magnitude of the displacement and the path length coincide."
+ },
+ {
+  "t": "m",
+  "m": "\\vec v=\\frac{d\\vec r}{dt},\\qquad v=\\sqrt{v_x^2+v_y^2+v_z^2}=\\frac{ds}{dt},\\qquad s=\\int_{t_1}^{t_2}v\\,dt"
+ },
+ {
+  "t": "li",
+  "uz": "**Yo'lni topish.** Ko'chish $\\Delta\\vec r=\\int_{t_1}^{t_2}\\vec v\\,dt$ — tezlik vektorining integrali, yo'l esa tezlik modulining integrali: $s=\\int_{t_1}^{t_2}v\\,dt$. Bir o'lchovli harakatda $v_x$ ishorasini o'zgartirsa, yo'lni bo'laklarga bo'lib hisoblash kerak: $v_x(t)$ grafigi ostidagi yuzalar o'q ustida «+», ostida «−» bilan qo'shilsa — ko'chish, hammasi «+» bilan qo'shilsa — yo'l chiqadi.",
+  "ru": "**Нахождение пути.** Перемещение $\\Delta\\vec r=\\int_{t_1}^{t_2}\\vec v\\,dt$ — интеграл вектора скорости, а путь — интеграл модуля скорости: $s=\\int_{t_1}^{t_2}v\\,dt$. Если при одномерном движении $v_x$ меняет знак, путь нужно считать по частям: если площади под графиком $v_x(t)$ сложить со знаком «+» над осью и «−» под осью, получится перемещение, а если все со знаком «+» — путь.",
+  "en": "**Finding the path length.** The displacement $\\Delta\\vec r=\\int_{t_1}^{t_2}\\vec v\\,dt$ is the integral of the velocity vector, while the path length is the integral of the speed: $s=\\int_{t_1}^{t_2}v\\,dt$. If $v_x$ changes sign in one-dimensional motion, the path length must be computed piece by piece: adding the areas under the $v_x(t)$ graph with «+» above the axis and «−» below gives the displacement, while adding all of them with «+» gives the path length."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L01-F02.png",
+   "ru": "figures/B2-L01-F02-ru.png",
+   "en": "figures/B2-L01-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Tezlanish vektori, tangensial va normal tezlanish (Acceleration, tangential and normal components)",
+  "ru": "3. Вектор ускорения, тангенциальное и нормальное ускорения",
+  "en": "3. The acceleration vector, tangential and normal components"
+ },
+ {
+  "t": "li",
+  "uz": "**Tezlanish.** Tezlanish (acceleration) — tezlik vektorining o'zgarish tezligi: $\\vec a=\\frac{d\\vec v}{dt}=\\frac{d^2\\vec r}{dt^2}$, koordinatalarda $a_x=\\frac{dv_x}{dt}=\\ddot x$ va hokazo (nuqta — vaqt bo'yicha hosila). Muhim: tezlik vektori moduli o'zgarmasa ham, yo'nalishi o'zgarsa, tezlanish noldan farqli. Shuning uchun tekis aylanma harakat — tezlanishli harakat. Tezlanish trayektoriyaning botiq tomoniga qarab yo'nalgan.",
+  "ru": "**Ускорение.** Ускорение (acceleration) — скорость изменения вектора скорости: $\\vec a=\\frac{d\\vec v}{dt}=\\frac{d^2\\vec r}{dt^2}$, в координатах $a_x=\\frac{dv_x}{dt}=\\ddot x$ и т. д. (точка — производная по времени). Важно: даже если модуль вектора скорости не меняется, но меняется направление, ускорение отлично от нуля. Поэтому равномерное движение по окружности — движение с ускорением. Ускорение направлено в сторону вогнутости траектории.",
+  "en": "**Acceleration.** Acceleration is the rate of change of the velocity vector: $\\vec a=\\frac{d\\vec v}{dt}=\\frac{d^2\\vec r}{dt^2}$, in coordinates $a_x=\\frac{dv_x}{dt}=\\ddot x$ and so on (a dot denotes a time derivative). Important: even if the magnitude of the velocity does not change but its direction does, the acceleration is non-zero. That is why uniform circular motion is accelerated motion. The acceleration points towards the concave side of the trajectory."
+ },
+ {
+  "t": "li",
+  "uz": "**Tezlanishni ajratish.** Tezlikni $\\vec v=v\\vec e_\\tau$ deb yozamiz, bunda $\\vec e_\\tau$ — urinma bo'ylab birlik vektor. Hosila olsak, ikki had chiqadi: $\\vec a=\\frac{dv}{dt}\\vec e_\\tau+v\\frac{d\\vec e_\\tau}{dt}$. Birinchisi — tangensial tezlanish (tangential acceleration) $a_\\tau=\\frac{dv}{dt}$: tezlik modulini o'zgartiradi. Ikkinchisi — normal (markazga intilma) tezlanish (normal acceleration) $a_n=\\frac{v^2}{R}$: tezlik yo'nalishini o'zgartiradi va trayektoriyaning egrilik markaziga qarab yo'nalgan; $R$ — egrilik radiusi (radius of curvature), ya'ni shu nuqtada trayektoriyaga eng yaxshi yopishadigan aylana radiusi ([[F03]]). Ular o'zaro perpendikulyar: $a=\\sqrt{a_\\tau^2+a_n^2}$.",
+  "ru": "**Разложение ускорения.** Запишем скорость как $\\vec v=v\\vec e_\\tau$, где $\\vec e_\\tau$ — единичный вектор касательной. При дифференцировании получаются два слагаемых: $\\vec a=\\frac{dv}{dt}\\vec e_\\tau+v\\frac{d\\vec e_\\tau}{dt}$. Первое — тангенциальное ускорение (tangential acceleration) $a_\\tau=\\frac{dv}{dt}$: оно меняет модуль скорости. Второе — нормальное (центростремительное) ускорение (normal acceleration) $a_n=\\frac{v^2}{R}$: оно меняет направление скорости и направлено к центру кривизны траектории; $R$ — радиус кривизны (radius of curvature), то есть радиус окружности, лучше всего прилегающей к траектории в данной точке ([[F03]]). Они взаимно перпендикулярны: $a=\\sqrt{a_\\tau^2+a_n^2}$.",
+  "en": "**Decomposing the acceleration.** Write the velocity as $\\vec v=v\\vec e_\\tau$, where $\\vec e_\\tau$ is the unit tangent vector. Differentiating gives two terms: $\\vec a=\\frac{dv}{dt}\\vec e_\\tau+v\\frac{d\\vec e_\\tau}{dt}$. The first is the tangential acceleration $a_\\tau=\\frac{dv}{dt}$: it changes the speed. The second is the normal (centripetal) acceleration $a_n=\\frac{v^2}{R}$: it changes the direction of the velocity and points towards the centre of curvature of the trajectory; $R$ is the radius of curvature, i.e. the radius of the circle that best fits the trajectory at that point ([[F03]]). They are mutually perpendicular: $a=\\sqrt{a_\\tau^2+a_n^2}$."
+ },
+ {
+  "t": "m",
+  "m": "\\vec a=\\frac{dv}{dt}\\vec e_\\tau+\\frac{v^2}{R}\\vec e_n,\\qquad a_\\tau=\\frac{\\vec v\\cdot\\vec a}{v},\\qquad a_n=\\frac{|\\vec v\\times\\vec a|}{v},\\qquad R=\\frac{v^3}{|\\vec v\\times\\vec a|}"
+ },
+ {
+  "t": "li",
+  "uz": "**Koordinatalardan hisoblash.** Harakat qonuni berilgan bo'lsa, $\\vec v$ va $\\vec a$ ni topib, tashkil etuvchilarni skalyar va vektor ko'paytma orqali olamiz: $a_\\tau$ — $\\vec a$ ning $\\vec v$ yo'nalishiga proyeksiyasi, $a_n$ — perpendikulyar qismi. Tekislikda $|\\vec v\\times\\vec a|=|v_xa_y-v_ya_x|$. Belgilar: $a_\\tau>0$ — tezlik ortmoqda ($\\vec a$ va $\\vec v$ orasidagi burchak o'tkir), $a_\\tau<0$ — kamaymoqda (burchak o'tmas), $a_\\tau=0$ — tezlik moduli o'zgarmas, ya'ni $\\vec a\\perp\\vec v$.",
+  "ru": "**Вычисление по координатам.** Если задан закон движения, находим $\\vec v$ и $\\vec a$, а составляющие получаем через скалярное и векторное произведения: $a_\\tau$ — проекция $\\vec a$ на направление $\\vec v$, $a_n$ — перпендикулярная часть. На плоскости $|\\vec v\\times\\vec a|=|v_xa_y-v_ya_x|$. Знаки: $a_\\tau>0$ — скорость растёт (угол между $\\vec a$ и $\\vec v$ острый), $a_\\tau<0$ — убывает (угол тупой), $a_\\tau=0$ — модуль скорости постоянен, то есть $\\vec a\\perp\\vec v$.",
+  "en": "**Computing from coordinates.** If the equation of motion is given, we find $\\vec v$ and $\\vec a$ and obtain the components through the dot and cross products: $a_\\tau$ is the projection of $\\vec a$ on the direction of $\\vec v$, and $a_n$ is the perpendicular part. In a plane $|\\vec v\\times\\vec a|=|v_xa_y-v_ya_x|$. Signs: $a_\\tau>0$ — the speed is increasing (the angle between $\\vec a$ and $\\vec v$ is acute), $a_\\tau<0$ — decreasing (obtuse angle), $a_\\tau=0$ — the speed is constant, i.e. $\\vec a\\perp\\vec v$."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $\\vec r=t\\,\\vec i+\\frac{t^3}{3}\\vec j$ (SI) harakatida $t=1\\ \\mathrm{s}$ da: $\\vec v=\\vec i+t^2\\vec j=(1,\\ 1)$, $\\vec a=2t\\,\\vec j=(0,\\ 2)$. Unda $v=\\sqrt{2}$, $a_\\tau=\\frac{\\vec v\\cdot\\vec a}{v}=\\frac{2}{\\sqrt{2}}=\\sqrt{2}\\ \\mathrm{m/s^2}$, $a_n=\\frac{|1\\cdot2-1\\cdot0|}{\\sqrt{2}}=\\sqrt{2}\\ \\mathrm{m/s^2}$, $R=\\frac{v^2}{a_n}=\\frac{2}{\\sqrt{2}}=\\sqrt{2}\\ \\mathrm{m}$. Tekshiruv: $a_\\tau^2+a_n^2=4=a^2$.",
+  "ru": "**Пример.** При движении $\\vec r=t\\,\\vec i+\\frac{t^3}{3}\\vec j$ (СИ) в момент $t=1\\ \\mathrm{s}$: $\\vec v=\\vec i+t^2\\vec j=(1,\\ 1)$, $\\vec a=2t\\,\\vec j=(0,\\ 2)$. Тогда $v=\\sqrt{2}$, $a_\\tau=\\frac{\\vec v\\cdot\\vec a}{v}=\\frac{2}{\\sqrt{2}}=\\sqrt{2}\\ \\mathrm{m/s^2}$, $a_n=\\frac{|1\\cdot2-1\\cdot0|}{\\sqrt{2}}=\\sqrt{2}\\ \\mathrm{m/s^2}$, $R=\\frac{v^2}{a_n}=\\frac{2}{\\sqrt{2}}=\\sqrt{2}\\ \\mathrm{m}$. Проверка: $a_\\tau^2+a_n^2=4=a^2$.",
+  "en": "**Example.** For the motion $\\vec r=t\\,\\vec i+\\frac{t^3}{3}\\vec j$ (SI) at $t=1\\ \\mathrm{s}$: $\\vec v=\\vec i+t^2\\vec j=(1,\\ 1)$, $\\vec a=2t\\,\\vec j=(0,\\ 2)$. Then $v=\\sqrt{2}$, $a_\\tau=\\frac{\\vec v\\cdot\\vec a}{v}=\\frac{2}{\\sqrt{2}}=\\sqrt{2}\\ \\mathrm{m/s^2}$, $a_n=\\frac{|1\\cdot2-1\\cdot0|}{\\sqrt{2}}=\\sqrt{2}\\ \\mathrm{m/s^2}$, $R=\\frac{v^2}{a_n}=\\frac{2}{\\sqrt{2}}=\\sqrt{2}\\ \\mathrm{m}$. Check: $a_\\tau^2+a_n^2=4=a^2$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L01-F03.png",
+   "ru": "figures/B2-L01-F03-ru.png",
+   "en": "figures/B2-L01-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Teskari masala: tezlanishdan harakat qonuniga (The inverse problem: from acceleration to motion)",
+  "ru": "4. Обратная задача: от ускорения к закону движения",
+  "en": "4. The inverse problem: from acceleration to motion"
+ },
+ {
+  "t": "li",
+  "uz": "**Integrallash.** Dinamikada (B2-L02) Nyuton qonunidan odatda tezlanish topiladi, harakat qonunini esa integrallab tiklash kerak. Agar $\\vec a(t)$ ma'lum bo'lsa: $\\vec v(t)=\\vec v_0+\\int_0^t\\vec a\\,dt$, $\\vec r(t)=\\vec r_0+\\int_0^t\\vec v\\,dt$. Har bir integrallashda bitta boshlang'ich shart (initial condition) kerak: $\\vec v_0=\\vec v(0)$ va $\\vec r_0=\\vec r(0)$. Shuning uchun harakatni bir qiymatli aniqlash uchun tezlanishdan tashqari boshlang'ich holat va boshlang'ich tezlik berilishi shart.",
+  "ru": "**Интегрирование.** В динамике (B2-L02) из закона Ньютона обычно находят ускорение, а закон движения нужно восстановить интегрированием. Если известно $\\vec a(t)$: $\\vec v(t)=\\vec v_0+\\int_0^t\\vec a\\,dt$, $\\vec r(t)=\\vec r_0+\\int_0^t\\vec v\\,dt$. Для каждого интегрирования нужно одно начальное условие (initial condition): $\\vec v_0=\\vec v(0)$ и $\\vec r_0=\\vec r(0)$. Поэтому, чтобы движение было определено однозначно, кроме ускорения должны быть заданы начальное положение и начальная скорость.",
+  "en": "**Integration.** In dynamics (B2-L02) Newton's law usually gives the acceleration, and the equation of motion must be reconstructed by integration. If $\\vec a(t)$ is known: $\\vec v(t)=\\vec v_0+\\int_0^t\\vec a\\,dt$, $\\vec r(t)=\\vec r_0+\\int_0^t\\vec v\\,dt$. Each integration needs one initial condition: $\\vec v_0=\\vec v(0)$ and $\\vec r_0=\\vec r(0)$. Therefore, to determine the motion uniquely, the initial position and the initial velocity must be given in addition to the acceleration."
+ },
+ {
+  "t": "li",
+  "uz": "**Tezlanish tezlikka bog'liq: $a=a(v)$.** Bir o'lchovli harakatda $\\frac{dv}{dt}=a(v)$ tenglamada o'zgaruvchilarni ajratamiz: $t=\\int_{v_0}^{v}\\frac{dv}{a(v)}$. Muhim misol — tezlikka proporsional qarshilik (masalan, suyuqlikdagi sekin harakat): $a=-kv$. Unda $\\frac{dv}{v}=-k\\,dt$, $v=v_0e^{-kt}$ — tezlik eksponensial kamayadi ([[F04]]). Koordinata: $x=\\frac{v_0}{k}\\left(1-e^{-kt}\\right)$, ya'ni jism to'xtaguncha cheksiz vaqt o'tadi, lekin chekli masofani bosib o'tadi: $x_{max}=\\frac{v_0}{k}$. $\\tau=\\frac{1}{k}$ — relaksatsiya vaqti: shu vaqtda tezlik $e$ marta kamayadi, yarimga esa $t=\\frac{\\ln2}{k}$ da tushadi.",
+  "ru": "**Ускорение зависит от скорости: $a=a(v)$.** При одномерном движении в уравнении $\\frac{dv}{dt}=a(v)$ разделяем переменные: $t=\\int_{v_0}^{v}\\frac{dv}{a(v)}$. Важный пример — сопротивление, пропорциональное скорости (например, медленное движение в жидкости): $a=-kv$. Тогда $\\frac{dv}{v}=-k\\,dt$, $v=v_0e^{-kt}$ — скорость убывает экспоненциально ([[F04]]). Координата: $x=\\frac{v_0}{k}\\left(1-e^{-kt}\\right)$, то есть до остановки проходит бесконечное время, но тело проходит конечное расстояние: $x_{max}=\\frac{v_0}{k}$. $\\tau=\\frac{1}{k}$ — время релаксации: за него скорость уменьшается в $e$ раз, а вдвое — за $t=\\frac{\\ln2}{k}$.",
+  "en": "**Acceleration depending on velocity: $a=a(v)$.** In one-dimensional motion we separate variables in $\\frac{dv}{dt}=a(v)$: $t=\\int_{v_0}^{v}\\frac{dv}{a(v)}$. An important example is a resistance proportional to velocity (for instance, slow motion in a liquid): $a=-kv$. Then $\\frac{dv}{v}=-k\\,dt$, $v=v_0e^{-kt}$ — the velocity decays exponentially ([[F04]]). The coordinate is $x=\\frac{v_0}{k}\\left(1-e^{-kt}\\right)$, i.e. it takes infinite time to stop, but the body covers a finite distance: $x_{max}=\\frac{v_0}{k}$. $\\tau=\\frac{1}{k}$ is the relaxation time: during it the velocity decreases $e$ times, and it halves at $t=\\frac{\\ln2}{k}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Kvadratik qarshilik.** Tez harakatda qarshilik tezlik kvadratiga proporsional: $a=-kv^2$. Unda $-\\frac{dv}{v^2}=k\\,dt$ va $\\frac{1}{v}-\\frac{1}{v_0}=kt$, ya'ni $v=\\frac{v_0}{1+kv_0t}$ — tezlik eksponensial emas, $\\frac{1}{t}$ kabi sekin kamayadi va jism cheksiz masofani bosib o'tadi ($x=\\frac{1}{k}\\ln\\left(1+kv_0t\\right)$).",
+  "ru": "**Квадратичное сопротивление.** При быстром движении сопротивление пропорционально квадрату скорости: $a=-kv^2$. Тогда $-\\frac{dv}{v^2}=k\\,dt$ и $\\frac{1}{v}-\\frac{1}{v_0}=kt$, то есть $v=\\frac{v_0}{1+kv_0t}$ — скорость убывает не экспоненциально, а медленно, как $\\frac{1}{t}$, и тело проходит бесконечное расстояние ($x=\\frac{1}{k}\\ln\\left(1+kv_0t\\right)$).",
+  "en": "**Quadratic drag.** In fast motion the resistance is proportional to the square of the velocity: $a=-kv^2$. Then $-\\frac{dv}{v^2}=k\\,dt$ and $\\frac{1}{v}-\\frac{1}{v_0}=kt$, i.e. $v=\\frac{v_0}{1+kv_0t}$ — the velocity decreases not exponentially but slowly, like $\\frac{1}{t}$, and the body covers an infinite distance ($x=\\frac{1}{k}\\ln\\left(1+kv_0t\\right)$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Tezlanish koordinataga bog'liq: $a=a(x)$.** Bu holda vaqtni yo'qotish qulay: $a=\\frac{dv}{dt}=\\frac{dv}{dx}\\frac{dx}{dt}=v\\frac{dv}{dx}$. Demak $v\\,dv=a(x)\\,dx$ va $\\frac{v^2-v_0^2}{2}=\\int_{x_0}^{x}a(x)\\,dx$. Bu — keyingi darslardagi ish va kinetik energiya teoremasining kinematik shakli. Xuddi shu usul tezlik koordinata orqali berilganda ham ishlaydi: masalan, $v=\\alpha\\sqrt{x}$ bo'lsa, $a=v\\frac{dv}{dx}=\\frac{\\alpha^2}{2}$ — o'zgarmas.",
+  "ru": "**Ускорение зависит от координаты: $a=a(x)$.** В этом случае удобно исключить время: $a=\\frac{dv}{dt}=\\frac{dv}{dx}\\frac{dx}{dt}=v\\frac{dv}{dx}$. Значит, $v\\,dv=a(x)\\,dx$ и $\\frac{v^2-v_0^2}{2}=\\int_{x_0}^{x}a(x)\\,dx$. Это кинематическая форма теоремы о работе и кинетической энергии из следующих уроков. Тот же приём работает, когда скорость задана через координату: например, если $v=\\alpha\\sqrt{x}$, то $a=v\\frac{dv}{dx}=\\frac{\\alpha^2}{2}$ — постоянно.",
+  "en": "**Acceleration depending on position: $a=a(x)$.** In this case it is convenient to eliminate time: $a=\\frac{dv}{dt}=\\frac{dv}{dx}\\frac{dx}{dt}=v\\frac{dv}{dx}$. Hence $v\\,dv=a(x)\\,dx$ and $\\frac{v^2-v_0^2}{2}=\\int_{x_0}^{x}a(x)\\,dx$. This is the kinematic form of the work–kinetic energy theorem of later lessons. The same trick works when the velocity is given in terms of position: for example, if $v=\\alpha\\sqrt{x}$, then $a=v\\frac{dv}{dx}=\\frac{\\alpha^2}{2}$ — constant."
+ },
+ {
+  "t": "m",
+  "m": "t=\\int_{v_0}^{v}\\frac{dv}{a(v)},\\qquad a=v\\frac{dv}{dx},\\qquad a=-kv\\ \\Rightarrow\\ v=v_0e^{-kt},\\quad x_{max}=\\frac{v_0}{k}"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L01-F04.png",
+   "ru": "figures/B2-L01-F04-ru.png",
+   "en": "figures/B2-L01-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. O'zgarmas tezlanishli harakat (Motion with constant acceleration)",
+  "ru": "5. Движение с постоянным ускорением",
+  "en": "5. Motion with constant acceleration"
+ },
+ {
+  "t": "li",
+  "uz": "**Vektor formulalar.** $\\vec a=\\mathrm{const}$ bo'lsa, 4-bo'limdagi integrallar oson olinadi: $\\vec v=\\vec v_0+\\vec at$, $\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}$. Bu ikki vektor tenglama B1 dagi barcha tekis o'zgaruvchan harakat formulalarini o'z ichiga oladi: har bir o'q bo'yicha proyeksiyalasak, $x=x_0+v_{0x}t+\\frac{a_xt^2}{2}$ kabi tanish ifodalar chiqadi. Vaqtni yo'qotsak: $v^2-v_0^2=2\\vec a\\cdot\\Delta\\vec r$ — skalyar ko'paytma ishtirok etadi.",
+  "ru": "**Векторные формулы.** Если $\\vec a=\\mathrm{const}$, интегралы из раздела 4 берутся легко: $\\vec v=\\vec v_0+\\vec at$, $\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}$. Эти два векторных уравнения содержат все формулы равнопеременного движения из B1: проецируя на каждую ось, получаем знакомые выражения вида $x=x_0+v_{0x}t+\\frac{a_xt^2}{2}$. Исключив время: $v^2-v_0^2=2\\vec a\\cdot\\Delta\\vec r$ — входит скалярное произведение.",
+  "en": "**Vector formulas.** If $\\vec a=\\mathrm{const}$, the integrals of section 4 are easy: $\\vec v=\\vec v_0+\\vec at$, $\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}$. These two vector equations contain all the formulas of uniformly accelerated motion from B1: projecting on each axis gives the familiar expressions of the form $x=x_0+v_{0x}t+\\frac{a_xt^2}{2}$. Eliminating time: $v^2-v_0^2=2\\vec a\\cdot\\Delta\\vec r$ — a dot product appears."
+ },
+ {
+  "t": "m",
+  "m": "\\vec v=\\vec v_0+\\vec at,\\qquad \\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2},\\qquad v^2-v_0^2=2\\vec a\\cdot\\Delta\\vec r"
+ },
+ {
+  "t": "li",
+  "uz": "**Trayektoriya — tekis egri chiziq.** $\\vec r-\\vec r_0$ vektori har doim $\\vec v_0$ va $\\vec a$ vektorlari tekisligida yotadi. Demak o'zgarmas tezlanishli harakat doim tekislikda bo'ladi; $\\vec v_0\\parallel\\vec a$ (yoki $\\vec v_0=0$) bo'lsa — to'g'ri chiziqda, aks holda trayektoriya parabola. Grafik ma'nosi: $v_x(t)$ — to'g'ri chiziq, uning qiyaligi $a_x$, ostidagi yuza — $\\Delta x$; $x(t)$ — parabola, urinmasining qiyaligi $v_x$.",
+  "ru": "**Траектория — плоская кривая.** Вектор $\\vec r-\\vec r_0$ всегда лежит в плоскости векторов $\\vec v_0$ и $\\vec a$. Значит, движение с постоянным ускорением всегда плоское; если $\\vec v_0\\parallel\\vec a$ (или $\\vec v_0=0$) — прямолинейное, иначе траектория — парабола. Графический смысл: $v_x(t)$ — прямая, её наклон $a_x$, площадь под ней — $\\Delta x$; $x(t)$ — парабола, наклон её касательной — $v_x$.",
+  "en": "**The trajectory is a plane curve.** The vector $\\vec r-\\vec r_0$ always lies in the plane of the vectors $\\vec v_0$ and $\\vec a$. Hence motion with constant acceleration is always planar; if $\\vec v_0\\parallel\\vec a$ (or $\\vec v_0=0$) it is a straight line, otherwise the trajectory is a parabola. Graphical meaning: $v_x(t)$ is a straight line whose slope is $a_x$ and the area under it is $\\Delta x$; $x(t)$ is a parabola whose tangent slope is $v_x$."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Otilgan jism harakati (Projectile motion)",
+  "ru": "6. Движение брошенного тела",
+  "en": "6. Projectile motion"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki mustaqil harakat.** Havo qarshiligi hisobga olinmasa, otilgan jism (projectile) tezlanishi $\\vec a=\\vec g$ — vertikal pastga, $g\\approx9.8\\ \\mathrm{m/s^2}$ (masalalarda ko'pincha $10\\ \\mathrm{m/s^2}$). $x$ o'qini gorizontal, $y$ ni vertikal yuqoriga yo'naltirib, jismni koordinata boshidan gorizontga $\\alpha$ burchak ostida $v_0$ tezlik bilan otsak: $a_x=0,\\ a_y=-g$. Gorizontal bo'yicha harakat tekis, vertikal bo'yicha — tekis o'zgaruvchan, va ular bir-biriga ta'sir qilmaydi.",
+  "ru": "**Два независимых движения.** Если не учитывать сопротивление воздуха, ускорение брошенного тела (projectile) $\\vec a=\\vec g$ — вертикально вниз, $g\\approx9.8\\ \\mathrm{m/s^2}$ (в задачах часто $10\\ \\mathrm{m/s^2}$). Направим ось $x$ горизонтально, $y$ — вертикально вверх и бросим тело из начала координат со скоростью $v_0$ под углом $\\alpha$ к горизонту: $a_x=0,\\ a_y=-g$. По горизонтали движение равномерное, по вертикали — равнопеременное, и они не влияют друг на друга.",
+  "en": "**Two independent motions.** Neglecting air resistance, the acceleration of a projectile is $\\vec a=\\vec g$ — vertically down, $g\\approx9.8\\ \\mathrm{m/s^2}$ (often $10\\ \\mathrm{m/s^2}$ in problems). Let the $x$ axis be horizontal and $y$ vertically up, and launch the body from the origin with speed $v_0$ at an angle $\\alpha$ to the horizontal: $a_x=0,\\ a_y=-g$. The horizontal motion is uniform, the vertical motion is uniformly accelerated, and they do not affect each other."
+ },
+ {
+  "t": "m",
+  "m": "x=v_0\\cos\\alpha\\cdot t,\\qquad y=v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2},\\qquad v_x=v_0\\cos\\alpha,\\qquad v_y=v_0\\sin\\alpha-gt"
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy kattaliklar.** Eng yuqori nuqtada $v_y=0$: ko'tarilish vaqti $t_1=\\frac{v_0\\sin\\alpha}{g}$, uchish vaqti (time of flight) $T=2t_1=\\frac{2v_0\\sin\\alpha}{g}$, eng katta balandlik (maximum height) $H=\\frac{v_0^2\\sin^2\\alpha}{2g}$, uchish uzoqligi (range) $L=v_xT=\\frac{v_0^2\\sin2\\alpha}{g}$. Trayektoriya tenglamasi: $y=x\\tan\\alpha-\\frac{gx^2}{2v_0^2\\cos^2\\alpha}$ — pastga qaragan parabola.",
+  "ru": "**Основные величины.** В наивысшей точке $v_y=0$: время подъёма $t_1=\\frac{v_0\\sin\\alpha}{g}$, время полёта (time of flight) $T=2t_1=\\frac{2v_0\\sin\\alpha}{g}$, наибольшая высота (maximum height) $H=\\frac{v_0^2\\sin^2\\alpha}{2g}$, дальность полёта (range) $L=v_xT=\\frac{v_0^2\\sin2\\alpha}{g}$. Уравнение траектории: $y=x\\tan\\alpha-\\frac{gx^2}{2v_0^2\\cos^2\\alpha}$ — парабола ветвями вниз.",
+  "en": "**Key quantities.** At the highest point $v_y=0$: the rise time is $t_1=\\frac{v_0\\sin\\alpha}{g}$, the time of flight is $T=2t_1=\\frac{2v_0\\sin\\alpha}{g}$, the maximum height is $H=\\frac{v_0^2\\sin^2\\alpha}{2g}$, and the range is $L=v_xT=\\frac{v_0^2\\sin2\\alpha}{g}$. The trajectory equation is $y=x\\tan\\alpha-\\frac{gx^2}{2v_0^2\\cos^2\\alpha}$ — a downward-opening parabola."
+ },
+ {
+  "t": "m",
+  "m": "T=\\frac{2v_0\\sin\\alpha}{g},\\qquad H=\\frac{v_0^2\\sin^2\\alpha}{2g},\\qquad L=\\frac{v_0^2\\sin2\\alpha}{g},\\qquad \\frac{H}{L}=\\frac{\\tan\\alpha}{4}"
+ },
+ {
+  "t": "li",
+  "uz": "**GRE uchun foydali xulosalar ([[F05]]).** 1) Berilgan $v_0$ da uchish uzoqligi $\\alpha=45^\\circ$ da eng katta: $L_{max}=\\frac{v_0^2}{g}$, bunda $H=\\frac{L_{max}}{4}$. 2) $\\sin2\\alpha=\\sin\\left(180^\\circ-2\\alpha\\right)$, shuning uchun $\\alpha$ va $90^\\circ-\\alpha$ burchaklarda uzoqlik bir xil, lekin balandliklar nisbati $\\frac{H_1}{H_2}=\\tan^2\\alpha$. 3) Uchish vaqti faqat $v_y$ ga bog'liq: bir xil balandlikka ko'tarilgan jismlar bir xil vaqt uchadi. 4) Trayektoriya simmetrik: bir xil balandlikdagi ikki nuqtada tezlik moduli teng. 5) Eng yuqori nuqtada tezlik eng kichik ($v_0\\cos\\alpha$), tezlanish esa butun harakat davomida bir xil — $\\vec g$.",
+  "ru": "**Полезные для GRE выводы ([[F05]]).** 1) При заданной $v_0$ дальность максимальна при $\\alpha=45^\\circ$: $L_{max}=\\frac{v_0^2}{g}$, при этом $H=\\frac{L_{max}}{4}$. 2) $\\sin2\\alpha=\\sin\\left(180^\\circ-2\\alpha\\right)$, поэтому при углах $\\alpha$ и $90^\\circ-\\alpha$ дальность одинакова, а отношение высот $\\frac{H_1}{H_2}=\\tan^2\\alpha$. 3) Время полёта зависит только от $v_y$: тела, поднявшиеся на одинаковую высоту, летят одинаковое время. 4) Траектория симметрична: в двух точках на одной высоте модуль скорости одинаков. 5) В наивысшей точке скорость наименьшая ($v_0\\cos\\alpha$), а ускорение во всём движении одно и то же — $\\vec g$.",
+  "en": "**Useful conclusions for the GRE ([[F05]]).** 1) For a given $v_0$ the range is maximal at $\\alpha=45^\\circ$: $L_{max}=\\frac{v_0^2}{g}$, and then $H=\\frac{L_{max}}{4}$. 2) $\\sin2\\alpha=\\sin\\left(180^\\circ-2\\alpha\\right)$, so the angles $\\alpha$ and $90^\\circ-\\alpha$ give the same range, while the heights are in the ratio $\\frac{H_1}{H_2}=\\tan^2\\alpha$. 3) The time of flight depends only on $v_y$: bodies that rise to the same height fly for the same time. 4) The trajectory is symmetric: at two points at the same height the speed is the same. 5) At the highest point the speed is smallest ($v_0\\cos\\alpha$), while the acceleration is the same throughout the motion — $\\vec g$."
+ },
+ {
+  "t": "li",
+  "uz": "**Egrilik radiusi.** Otilgan jism trayektoriyasining egriligi har xil nuqtada turlicha. Eng yuqori nuqtada $\\vec g$ butunlay normal: $a_n=g$, demak $R_1=\\frac{v_0^2\\cos^2\\alpha}{g}$. Otilish nuqtasida $a_n=g\\cos\\alpha$, $R_0=\\frac{v_0^2}{g\\cos\\alpha}$. Umumiy holda $R=\\frac{v^3}{|\\vec v\\times\\vec g|}=\\frac{v^3}{gv_x}$ — eng kichik qiymat yuqori nuqtada.",
+  "ru": "**Радиус кривизны.** Кривизна траектории брошенного тела в разных точках разная. В наивысшей точке $\\vec g$ целиком нормально: $a_n=g$, значит $R_1=\\frac{v_0^2\\cos^2\\alpha}{g}$. В точке бросания $a_n=g\\cos\\alpha$, $R_0=\\frac{v_0^2}{g\\cos\\alpha}$. В общем случае $R=\\frac{v^3}{|\\vec v\\times\\vec g|}=\\frac{v^3}{gv_x}$ — наименьшее значение в верхней точке.",
+  "en": "**Radius of curvature.** The curvature of a projectile's trajectory differs from point to point. At the highest point $\\vec g$ is entirely normal: $a_n=g$, so $R_1=\\frac{v_0^2\\cos^2\\alpha}{g}$. At the launch point $a_n=g\\cos\\alpha$ and $R_0=\\frac{v_0^2}{g\\cos\\alpha}$. In general $R=\\frac{v^3}{|\\vec v\\times\\vec g|}=\\frac{v^3}{gv_x}$ — the smallest value is at the top."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Jism $v_0=50\\ \\mathrm{m/s}$ tezlik bilan gorizontga $37^\\circ$ burchak ostida otildi ($\\sin37^\\circ=0.6$, $g=10\\ \\mathrm{m/s^2}$). $v_x=40\\ \\mathrm{m/s}$, $v_{0y}=30\\ \\mathrm{m/s}$; $T=\\frac{2\\cdot30}{10}=6\\ \\mathrm{s}$, $H=\\frac{30^2}{20}=45\\ \\mathrm{m}$, $L=40\\cdot6=240\\ \\mathrm{m}$. Tekshiruv: $\\frac{H}{L}=\\frac{45}{240}=\\frac{0.75}{4}=\\frac{\\tan37^\\circ}{4}$. Eng yuqori nuqtada egrilik radiusi $R_1=\\frac{40^2}{10}=160\\ \\mathrm{m}$.",
+  "ru": "**Пример.** Тело бросили со скоростью $v_0=50\\ \\mathrm{m/s}$ под углом $37^\\circ$ к горизонту ($\\sin37^\\circ=0.6$, $g=10\\ \\mathrm{m/s^2}$). $v_x=40\\ \\mathrm{m/s}$, $v_{0y}=30\\ \\mathrm{m/s}$; $T=\\frac{2\\cdot30}{10}=6\\ \\mathrm{s}$, $H=\\frac{30^2}{20}=45\\ \\mathrm{m}$, $L=40\\cdot6=240\\ \\mathrm{m}$. Проверка: $\\frac{H}{L}=\\frac{45}{240}=\\frac{0.75}{4}=\\frac{\\tan37^\\circ}{4}$. Радиус кривизны в наивысшей точке $R_1=\\frac{40^2}{10}=160\\ \\mathrm{m}$.",
+  "en": "**Example.** A body is launched with speed $v_0=50\\ \\mathrm{m/s}$ at $37^\\circ$ to the horizontal ($\\sin37^\\circ=0.6$, $g=10\\ \\mathrm{m/s^2}$). $v_x=40\\ \\mathrm{m/s}$, $v_{0y}=30\\ \\mathrm{m/s}$; $T=\\frac{2\\cdot30}{10}=6\\ \\mathrm{s}$, $H=\\frac{30^2}{20}=45\\ \\mathrm{m}$, $L=40\\cdot6=240\\ \\mathrm{m}$. Check: $\\frac{H}{L}=\\frac{45}{240}=\\frac{0.75}{4}=\\frac{\\tan37^\\circ}{4}$. The radius of curvature at the top is $R_1=\\frac{40^2}{10}=160\\ \\mathrm{m}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Balandlikdan va qiya tekislikka otish.** Jism $h$ balandlikdan otilsa, uchish vaqtini $y=0$ shartidan kvadrat tenglama orqali topamiz: $h+v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2}=0$; yerga tushishdagi tezlik esa yo'nalishga bog'liq emas: $v=\\sqrt{v_0^2+2gh}$. Qiya tekislikka (og'ish burchagi $\\beta$) gorizontal otilgan jism uchun tushish sharti $\\frac{y}{x}=\\tan\\beta$: $t=\\frac{2v_0\\tan\\beta}{g}$, tushish nuqtasida tezlik gorizont bilan $\\varphi$ burchak hosil qiladi va $\\tan\\varphi=2\\tan\\beta$ — $v_0$ ga bog'liq emas.",
+  "ru": "**Бросок с высоты и на наклонную плоскость.** Если тело брошено с высоты $h$, время полёта находим из условия $y=0$ через квадратное уравнение: $h+v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2}=0$; скорость же при падении на землю не зависит от направления: $v=\\sqrt{v_0^2+2gh}$. Для тела, брошенного горизонтально на наклонную плоскость (угол наклона $\\beta$), условие падения $\\frac{y}{x}=\\tan\\beta$: $t=\\frac{2v_0\\tan\\beta}{g}$, а в точке падения скорость образует с горизонтом угол $\\varphi$, причём $\\tan\\varphi=2\\tan\\beta$ — не зависит от $v_0$.",
+  "en": "**Launching from a height and onto an incline.** If a body is launched from a height $h$, the time of flight follows from the condition $y=0$ via a quadratic equation: $h+v_0\\sin\\alpha\\cdot t-\\frac{gt^2}{2}=0$; the impact speed, however, does not depend on the direction: $v=\\sqrt{v_0^2+2gh}$. For a body thrown horizontally onto an incline (inclination angle $\\beta$), the landing condition is $\\frac{y}{x}=\\tan\\beta$: $t=\\frac{2v_0\\tan\\beta}{g}$, and at the landing point the velocity makes an angle $\\varphi$ with the horizontal such that $\\tan\\varphi=2\\tan\\beta$ — independent of $v_0$."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L01-F05.png",
+   "ru": "figures/B2-L01-F05-ru.png",
+   "en": "figures/B2-L01-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Aylana bo'ylab harakat (Circular motion)",
+  "ru": "7. Движение по окружности",
+  "en": "7. Circular motion"
+ },
+ {
+  "t": "li",
+  "uz": "**Burchak kattaliklar.** $R$ radiusli aylana bo'ylab harakatda nuqtaning holatini burilish burchagi (rotation angle) $\\varphi(t)$ belgilaydi, yoy uzunligi $s=R\\varphi$. Burchak tezlik (angular velocity) $\\omega=\\frac{d\\varphi}{dt}$, burchak tezlanish (angular acceleration) $\\varepsilon=\\frac{d\\omega}{dt}=\\ddot\\varphi$. Chiziqli kattaliklar bilan bog'lanish: $v=\\omega R$, $a_\\tau=\\varepsilon R$, $a_n=\\frac{v^2}{R}=\\omega^2R$ ([[F06]]). Tekis aylanishda $\\omega=\\mathrm{const}$: davr (period) $T=\\frac{2\\pi}{\\omega}$, chastota (frequency) $\\nu=\\frac{1}{T}$.",
+  "ru": "**Угловые величины.** При движении по окружности радиуса $R$ положение точки задаёт угол поворота (rotation angle) $\\varphi(t)$, длина дуги $s=R\\varphi$. Угловая скорость (angular velocity) $\\omega=\\frac{d\\varphi}{dt}$, угловое ускорение (angular acceleration) $\\varepsilon=\\frac{d\\omega}{dt}=\\ddot\\varphi$. Связь с линейными величинами: $v=\\omega R$, $a_\\tau=\\varepsilon R$, $a_n=\\frac{v^2}{R}=\\omega^2R$ ([[F06]]). При равномерном вращении $\\omega=\\mathrm{const}$: период (period) $T=\\frac{2\\pi}{\\omega}$, частота (frequency) $\\nu=\\frac{1}{T}$.",
+  "en": "**Angular quantities.** For motion on a circle of radius $R$ the position of the point is given by the rotation angle $\\varphi(t)$, and the arc length is $s=R\\varphi$. The angular velocity is $\\omega=\\frac{d\\varphi}{dt}$ and the angular acceleration is $\\varepsilon=\\frac{d\\omega}{dt}=\\ddot\\varphi$. Relations with linear quantities: $v=\\omega R$, $a_\\tau=\\varepsilon R$, $a_n=\\frac{v^2}{R}=\\omega^2R$ ([[F06]]). For uniform rotation $\\omega=\\mathrm{const}$: the period is $T=\\frac{2\\pi}{\\omega}$ and the frequency is $\\nu=\\frac{1}{T}$."
+ },
+ {
+  "t": "m",
+  "m": "v=\\omega R,\\qquad a_\\tau=\\varepsilon R,\\qquad a_n=\\omega^2R=\\frac{v^2}{R},\\qquad a=R\\sqrt{\\varepsilon^2+\\omega^4}"
+ },
+ {
+  "t": "li",
+  "uz": "**Vektor ko'rinish.** Burchak tezlik — aylanish o'qi bo'ylab yo'nalgan vektor $\\vec\\omega$ (o'ng vint qoidasi). Agar koordinata boshi o'qda bo'lsa, $\\vec v=\\vec\\omega\\times\\vec r$. Tekis aylanishda $\\vec r=R\\left(\\cos\\omega t\\,\\vec i+\\sin\\omega t\\,\\vec j\\right)$ ni ikki marta differensiallasak, $\\vec a=-\\omega^2\\vec r$ — tezlanish markazga qarab yo'nalgan va moduli $\\omega^2R$. Bu natija koordinatalar orqali «yodlamasdan» olinadi.",
+  "ru": "**Векторная форма.** Угловая скорость — вектор $\\vec\\omega$, направленный вдоль оси вращения (правило правого винта). Если начало координат на оси, то $\\vec v=\\vec\\omega\\times\\vec r$. При равномерном вращении, дважды продифференцировав $\\vec r=R\\left(\\cos\\omega t\\,\\vec i+\\sin\\omega t\\,\\vec j\\right)$, получаем $\\vec a=-\\omega^2\\vec r$ — ускорение направлено к центру, его модуль $\\omega^2R$. Этот результат получается через координаты «без запоминания».",
+  "en": "**Vector form.** The angular velocity is a vector $\\vec\\omega$ directed along the rotation axis (right-hand rule). If the origin is on the axis, then $\\vec v=\\vec\\omega\\times\\vec r$. For uniform rotation, differentiating $\\vec r=R\\left(\\cos\\omega t\\,\\vec i+\\sin\\omega t\\,\\vec j\\right)$ twice gives $\\vec a=-\\omega^2\\vec r$ — the acceleration points towards the centre and has magnitude $\\omega^2R$. This result is obtained from coordinates «without memorising»."
+ },
+ {
+  "t": "li",
+  "uz": "**Tekis tezlanuvchan aylanish.** $\\varepsilon=\\mathrm{const}$ bo'lsa, formulalar to'g'ri chiziqli harakatnikiga o'xshaydi: $\\omega=\\omega_0+\\varepsilon t$, $\\varphi=\\omega_0t+\\frac{\\varepsilon t^2}{2}$, $\\omega^2-\\omega_0^2=2\\varepsilon\\varphi$. Tinch holatdan tezlanayotgan nuqtada $a_n=\\omega^2R$ vaqt o'tishi bilan ortadi, $a_\\tau=\\varepsilon R$ esa o'zgarmaydi, shuning uchun to'liq tezlanish vektori vaqt o'tishi bilan markazga qarab buriladi: $\\tan\\theta=\\frac{a_n}{a_\\tau}=\\frac{\\omega^2}{\\varepsilon}$, bunda $\\theta$ — $\\vec a$ va $\\vec v$ orasidagi burchak.",
+  "ru": "**Равноускоренное вращение.** Если $\\varepsilon=\\mathrm{const}$, формулы похожи на формулы прямолинейного движения: $\\omega=\\omega_0+\\varepsilon t$, $\\varphi=\\omega_0t+\\frac{\\varepsilon t^2}{2}$, $\\omega^2-\\omega_0^2=2\\varepsilon\\varphi$. У точки, разгоняющейся из покоя, $a_n=\\omega^2R$ со временем растёт, а $a_\\tau=\\varepsilon R$ не меняется, поэтому вектор полного ускорения со временем поворачивается к центру: $\\tan\\theta=\\frac{a_n}{a_\\tau}=\\frac{\\omega^2}{\\varepsilon}$, где $\\theta$ — угол между $\\vec a$ и $\\vec v$.",
+  "en": "**Uniformly accelerated rotation.** If $\\varepsilon=\\mathrm{const}$, the formulas resemble those of straight-line motion: $\\omega=\\omega_0+\\varepsilon t$, $\\varphi=\\omega_0t+\\frac{\\varepsilon t^2}{2}$, $\\omega^2-\\omega_0^2=2\\varepsilon\\varphi$. For a point speeding up from rest, $a_n=\\omega^2R$ grows with time while $a_\\tau=\\varepsilon R$ stays constant, so the total acceleration vector turns towards the centre with time: $\\tan\\theta=\\frac{a_n}{a_\\tau}=\\frac{\\omega^2}{\\varepsilon}$, where $\\theta$ is the angle between $\\vec a$ and $\\vec v$."
+ },
+ {
+  "t": "li",
+  "uz": "**Sirpanmasdan dumalayotgan g'ildirak.** G'ildirak markazi $V$ tezlik bilan harakatlansa va sirpanmasa, $V=\\omega R$. Gardishdagi nuqta tezligi markaz tezligi va aylanish tezligining vektor yig'indisi: pastki (tegish) nuqtada $0$, eng yuqorida $2V$, markaz balandligidagi nuqtalarda $V\\sqrt{2}$. Yerga nisbatan har bir nuqta oniy ravishda tegish nuqtasi atrofida aylanadi, shuning uchun $v=\\omega d$, bunda $d$ — tegish nuqtasigacha masofa.",
+  "ru": "**Колесо, катящееся без проскальзывания.** Если центр колеса движется со скоростью $V$ и колесо не проскальзывает, то $V=\\omega R$. Скорость точки обода — векторная сумма скорости центра и скорости вращения: в нижней (точке касания) $0$, в верхней $2V$, в точках на высоте центра $V\\sqrt{2}$. Относительно земли каждая точка мгновенно вращается вокруг точки касания, поэтому $v=\\omega d$, где $d$ — расстояние до точки касания.",
+  "en": "**A wheel rolling without slipping.** If the centre of the wheel moves with speed $V$ and the wheel does not slip, then $V=\\omega R$. The velocity of a point on the rim is the vector sum of the velocity of the centre and the rotational velocity: $0$ at the bottom (contact point), $2V$ at the top, and $V\\sqrt{2}$ at the points level with the centre. Relative to the ground each point instantaneously rotates about the contact point, so $v=\\omega d$, where $d$ is the distance to the contact point."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L01-F06.png",
+   "ru": "figures/B2-L01-F06-ru.png",
+   "en": "figures/B2-L01-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Qutb koordinatalarida harakat (Motion in polar coordinates)",
+  "ru": "8. Движение в полярных координатах",
+  "en": "8. Motion in polar coordinates"
+ },
+ {
+  "t": "li",
+  "uz": "**Nima uchun kerak?** Markaz atrofidagi harakatlarda (aylanayotgan sterjen bo'ylab sirpanish, sayyoralar orbitasi, markaziy kuchlar — B2-L08) Dekart koordinatalari noqulay. Qutb koordinatalarida (polar coordinates) nuqta holati markazgacha masofa $r$ va burchak $\\theta$ bilan beriladi: $x=r\\cos\\theta$, $y=r\\sin\\theta$. Har bir nuqtada ikkita birlik vektor olinadi: radial $\\vec e_r=\\cos\\theta\\,\\vec i+\\sin\\theta\\,\\vec j$ (markazdan tashqariga) va burchak bo'yicha $\\vec e_\\theta=-\\sin\\theta\\,\\vec i+\\cos\\theta\\,\\vec j$ ($\\theta$ o'sish tomonga) ([[F07]]). Ular nuqta bilan birga buriladi.",
+  "ru": "**Зачем это нужно?** В движениях вокруг центра (скольжение вдоль вращающегося стержня, орбиты планет, центральные силы — B2-L08) декартовы координаты неудобны. В полярных координатах (polar coordinates) положение точки задаётся расстоянием до центра $r$ и углом $\\theta$: $x=r\\cos\\theta$, $y=r\\sin\\theta$. В каждой точке берут два единичных вектора: радиальный $\\vec e_r=\\cos\\theta\\,\\vec i+\\sin\\theta\\,\\vec j$ (от центра) и азимутальный $\\vec e_\\theta=-\\sin\\theta\\,\\vec i+\\cos\\theta\\,\\vec j$ (в сторону роста $\\theta$) ([[F07]]). Они поворачиваются вместе с точкой.",
+  "en": "**Why do we need them?** For motions about a centre (sliding along a rotating rod, planetary orbits, central forces — B2-L08) Cartesian coordinates are inconvenient. In polar coordinates the position of a point is given by its distance $r$ from the centre and the angle $\\theta$: $x=r\\cos\\theta$, $y=r\\sin\\theta$. At each point two unit vectors are used: the radial one $\\vec e_r=\\cos\\theta\\,\\vec i+\\sin\\theta\\,\\vec j$ (away from the centre) and the azimuthal one $\\vec e_\\theta=-\\sin\\theta\\,\\vec i+\\cos\\theta\\,\\vec j$ (towards increasing $\\theta$) ([[F07]]). They rotate together with the point."
+ },
+ {
+  "t": "li",
+  "uz": "**Birlik vektorlar hosilasi.** $\\vec i,\\ \\vec j$ dan farqli, $\\vec e_r$ va $\\vec e_\\theta$ vaqtga bog'liq. Differensiallasak: $\\frac{d\\vec e_r}{dt}=\\dot\\theta\\,\\vec e_\\theta$, $\\frac{d\\vec e_\\theta}{dt}=-\\dot\\theta\\,\\vec e_r$. Radius-vektor $\\vec r=r\\vec e_r$; uni bir marta va ikki marta differensiallab, tezlik va tezlanishni olamiz.",
+  "ru": "**Производные единичных векторов.** В отличие от $\\vec i,\\ \\vec j$, векторы $\\vec e_r$ и $\\vec e_\\theta$ зависят от времени. Дифференцируя: $\\frac{d\\vec e_r}{dt}=\\dot\\theta\\,\\vec e_\\theta$, $\\frac{d\\vec e_\\theta}{dt}=-\\dot\\theta\\,\\vec e_r$. Радиус-вектор $\\vec r=r\\vec e_r$; дифференцируя его один и два раза, получаем скорость и ускорение.",
+  "en": "**Derivatives of the unit vectors.** Unlike $\\vec i,\\ \\vec j$, the vectors $\\vec e_r$ and $\\vec e_\\theta$ depend on time. Differentiating: $\\frac{d\\vec e_r}{dt}=\\dot\\theta\\,\\vec e_\\theta$, $\\frac{d\\vec e_\\theta}{dt}=-\\dot\\theta\\,\\vec e_r$. The position vector is $\\vec r=r\\vec e_r$; differentiating it once and twice gives the velocity and acceleration."
+ },
+ {
+  "t": "m",
+  "m": "\\vec v=\\dot r\\,\\vec e_r+r\\dot\\theta\\,\\vec e_\\theta,\\qquad \\vec a=\\left(\\ddot r-r\\dot\\theta^2\\right)\\vec e_r+\\left(r\\ddot\\theta+2\\dot r\\dot\\theta\\right)\\vec e_\\theta"
+ },
+ {
+  "t": "li",
+  "uz": "**Hadlar ma'nosi.** Radial tezlanishda $\\ddot r$ — masofa o'zgarishining tezlanishi, $-r\\dot\\theta^2$ — markazga intilma tezlanish (aylanada $r=R$ bo'lsa, $a_r=-R\\omega^2$ — 7-bo'lim bilan mos). Burchak tashkil etuvchisida $r\\ddot\\theta$ — burchak tezlanishdan, $2\\dot r\\dot\\theta$ — Koriolis hadi: nuqta aylanayotgan sterjen bo'ylab tashqariga sirpansa, $\\dot\\theta$ o'zgarmas bo'lsa ham, uning ko'ndalang tezligi $r\\dot\\theta$ ortadi va bu tezlanish talab qiladi. Foydali tenglik: $r\\ddot\\theta+2\\dot r\\dot\\theta=\\frac{1}{r}\\frac{d}{dt}\\left(r^2\\dot\\theta\\right)$ — markaziy kuchda $a_\\theta=0$, demak $r^2\\dot\\theta=\\mathrm{const}$ (Keplerning ikkinchi qonuni, B2-L08).",
+  "ru": "**Смысл слагаемых.** В радиальном ускорении $\\ddot r$ — ускорение изменения расстояния, $-r\\dot\\theta^2$ — центростремительное ускорение (при движении по окружности $r=R$ получаем $a_r=-R\\omega^2$ — согласуется с разделом 7). В азимутальной составляющей $r\\ddot\\theta$ — от углового ускорения, $2\\dot r\\dot\\theta$ — кориолисово слагаемое: если точка скользит наружу вдоль вращающегося стержня, то даже при постоянном $\\dot\\theta$ её поперечная скорость $r\\dot\\theta$ растёт, и для этого нужно ускорение. Полезное тождество: $r\\ddot\\theta+2\\dot r\\dot\\theta=\\frac{1}{r}\\frac{d}{dt}\\left(r^2\\dot\\theta\\right)$ — при центральной силе $a_\\theta=0$, значит $r^2\\dot\\theta=\\mathrm{const}$ (второй закон Кеплера, B2-L08).",
+  "en": "**Meaning of the terms.** In the radial acceleration, $\\ddot r$ is the acceleration of the distance and $-r\\dot\\theta^2$ is the centripetal acceleration (for a circle $r=R$ we get $a_r=-R\\omega^2$ — consistent with section 7). In the azimuthal component, $r\\ddot\\theta$ comes from the angular acceleration and $2\\dot r\\dot\\theta$ is the Coriolis term: if a point slides outwards along a rotating rod, its transverse velocity $r\\dot\\theta$ grows even at constant $\\dot\\theta$, and this requires an acceleration. A useful identity: $r\\ddot\\theta+2\\dot r\\dot\\theta=\\frac{1}{r}\\frac{d}{dt}\\left(r^2\\dot\\theta\\right)$ — for a central force $a_\\theta=0$, so $r^2\\dot\\theta=\\mathrm{const}$ (Kepler's second law, B2-L08)."
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Gorizontal sterjen $\\omega=3\\ \\mathrm{rad/s}$ bilan tekis aylanmoqda, munchoq u bo'ylab markazdan $u=0.2\\ \\mathrm{m/s}$ o'zgarmas nisbiy tezlik bilan siljimoqda. $r=0.4\\ \\mathrm{m}$ bo'lganda: $v_r=0.2$, $v_\\theta=r\\omega=1.2\\ \\mathrm{m/s}$; $a_r=-r\\omega^2=-3.6\\ \\mathrm{m/s^2}$, $a_\\theta=2u\\omega=1.2\\ \\mathrm{m/s^2}$. Munchoq trayektoriyasi — Arximed spirali $r=\\frac{u}{\\omega}\\theta$.",
+  "ru": "**Пример.** Горизонтальный стержень равномерно вращается с $\\omega=3\\ \\mathrm{rad/s}$, бусинка движется вдоль него от центра с постоянной относительной скоростью $u=0.2\\ \\mathrm{m/s}$. При $r=0.4\\ \\mathrm{m}$: $v_r=0.2$, $v_\\theta=r\\omega=1.2\\ \\mathrm{m/s}$; $a_r=-r\\omega^2=-3.6\\ \\mathrm{m/s^2}$, $a_\\theta=2u\\omega=1.2\\ \\mathrm{m/s^2}$. Траектория бусинки — спираль Архимеда $r=\\frac{u}{\\omega}\\theta$.",
+  "en": "**Example.** A horizontal rod rotates uniformly with $\\omega=3\\ \\mathrm{rad/s}$, and a bead moves along it away from the centre with constant relative speed $u=0.2\\ \\mathrm{m/s}$. At $r=0.4\\ \\mathrm{m}$: $v_r=0.2$, $v_\\theta=r\\omega=1.2\\ \\mathrm{m/s}$; $a_r=-r\\omega^2=-3.6\\ \\mathrm{m/s^2}$, $a_\\theta=2u\\omega=1.2\\ \\mathrm{m/s^2}$. The bead's trajectory is an Archimedean spiral $r=\\frac{u}{\\omega}\\theta$."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L01-F07.png",
+   "ru": "figures/B2-L01-F07-ru.png",
+   "en": "figures/B2-L01-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. Nisbiy harakat va Galiley almashtirishi (Relative motion and the Galilean transformation)",
+  "ru": "9. Относительное движение и преобразование Галилея",
+  "en": "9. Relative motion and the Galilean transformation"
+ },
+ {
+  "t": "li",
+  "uz": "**Tezliklarni qo'shish.** $K'$ sanoq sistemasi $K$ ga nisbatan ilgarilanma, $\\vec V$ tezlik bilan harakatlansin, $\\vec R$ — $K'$ boshining $K$ dagi radius-vektori. Klassik mexanikada vaqt hamma sistemada bir xil ($t'=t$), shuning uchun $\\vec r=\\vec R+\\vec r\\,'$. Differensiallasak: $\\vec v=\\vec V+\\vec v\\,'$ — tezliklarni qo'shish qonuni, $\\vec a=\\vec A+\\vec a\\,'$. Agar $K'$ tekis harakatlansa ($\\vec A=0$), tezlanish barcha bunday sistemalarda bir xil: $\\vec a\\,'=\\vec a$. Bu — Galiley almashtirishi (Galilean transformation); yorug'lik tezligiga yaqin tezliklarda u Lorens almashtirishiga (B3-L19) o'rin bo'shatadi.",
+  "ru": "**Сложение скоростей.** Пусть система отсчёта $K'$ движется относительно $K$ поступательно со скоростью $\\vec V$, $\\vec R$ — радиус-вектор начала $K'$ в $K$. В классической механике время во всех системах одно ($t'=t$), поэтому $\\vec r=\\vec R+\\vec r\\,'$. Дифференцируя: $\\vec v=\\vec V+\\vec v\\,'$ — закон сложения скоростей, $\\vec a=\\vec A+\\vec a\\,'$. Если $K'$ движется равномерно ($\\vec A=0$), ускорение одинаково во всех таких системах: $\\vec a\\,'=\\vec a$. Это преобразование Галилея (Galilean transformation); при скоростях, близких к скорости света, оно уступает место преобразованию Лоренца (B3-L19).",
+  "en": "**Adding velocities.** Let the reference frame $K'$ move relative to $K$ in translation with velocity $\\vec V$, and let $\\vec R$ be the position vector of the origin of $K'$ in $K$. In classical mechanics time is the same in all frames ($t'=t$), so $\\vec r=\\vec R+\\vec r\\,'$. Differentiating: $\\vec v=\\vec V+\\vec v\\,'$ — the law of velocity addition, and $\\vec a=\\vec A+\\vec a\\,'$. If $K'$ moves uniformly ($\\vec A=0$), the acceleration is the same in all such frames: $\\vec a\\,'=\\vec a$. This is the Galilean transformation; at speeds close to the speed of light it gives way to the Lorentz transformation (B3-L19)."
+ },
+ {
+  "t": "m",
+  "m": "\\vec r=\\vec R+\\vec r\\,',\\qquad \\vec v=\\vec V+\\vec v\\,',\\qquad \\vec v_{12}=\\vec v_1-\\vec v_2,\\qquad \\vec a\\,'=\\vec a\\ \\ \\left(\\vec V=\\mathrm{const}\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Daryodan o'tish ([[F08]]).** Daryo kengligi $d$, oqim tezligi $u$, qayiqning suvga nisbatan tezligi $v$. 1) Eng qisqa vaqt: qayiq tumshug'ini qirg'oqqa perpendikulyar yo'naltirish kerak, $t_{min}=\\frac{d}{v}$, bu vaqtda oqim uni $ut_{min}$ ga suradi. 2) Eng qisqa yo'l ($v>u$ bo'lsa): qayiqni oqimga qarshi $\\cos\\beta=\\frac{u}{v}$ burchak ostida yo'naltirsak, natijaviy tezlik qirg'oqqa perpendikulyar, $t=\\frac{d}{\\sqrt{v^2-u^2}}$. 3) $v<u$ bo'lsa, qayiq to'g'ri qarshi nuqtaga yeta olmaydi; eng kam surilish uchun $\\vec v$ natijaviy tezlikka perpendikulyar bo'lishi kerak: surilish $x_{min}=d\\frac{\\sqrt{u^2-v^2}}{v}$.",
+  "ru": "**Переправа через реку ([[F08]]).** Ширина реки $d$, скорость течения $u$, скорость лодки относительно воды $v$. 1) Наименьшее время: нос лодки нужно направить перпендикулярно берегу, $t_{min}=\\frac{d}{v}$, за это время течение снесёт её на $ut_{min}$. 2) Кратчайший путь (при $v>u$): если направить лодку против течения под углом $\\cos\\beta=\\frac{u}{v}$, результирующая скорость перпендикулярна берегу, $t=\\frac{d}{\\sqrt{v^2-u^2}}$. 3) Если $v<u$, лодка не может попасть в точку напротив; для наименьшего сноса $\\vec v$ должна быть перпендикулярна результирующей скорости: снос $x_{min}=d\\frac{\\sqrt{u^2-v^2}}{v}$.",
+  "en": "**Crossing a river ([[F08]]).** The river width is $d$, the current speed $u$, and the boat speed relative to the water $v$. 1) Minimum time: point the bow perpendicular to the bank, $t_{min}=\\frac{d}{v}$; during this time the current carries the boat a distance $ut_{min}$ downstream. 2) Shortest path (if $v>u$): pointing the boat upstream at the angle $\\cos\\beta=\\frac{u}{v}$ makes the resultant velocity perpendicular to the bank, $t=\\frac{d}{\\sqrt{v^2-u^2}}$. 3) If $v<u$, the boat cannot reach the point directly opposite; for minimum drift $\\vec v$ must be perpendicular to the resultant velocity: the drift is $x_{min}=d\\frac{\\sqrt{u^2-v^2}}{v}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki jism masalalarida sistema almashtirish.** Ikki jism bir xil tezlanish bilan harakatlansa (masalan, ikkalasi ham faqat og'irlik kuchi ta'sirida), ularning nisbiy tezlanishi $\\vec a_1-\\vec a_2=0$. Demak bir jismga nisbatan ikkinchisi to'g'ri chiziq bo'ylab tekis harakatlanadi: $\\vec r_{12}(t)=\\vec r_{12}(0)+\\left(\\vec v_1-\\vec v_2\\right)t$. Bir nuqtadan bir vaqtda otilgan ikki tosh orasidagi masofa vaqtga proporsional o'sadi. Eng kichik masofa (closest approach): nisbiy radius-vektorning nisbiy tezlikka perpendikulyar tashkil etuvchisi $d_{min}=\\frac{|\\vec r_{12}\\times\\vec v_{12}|}{v_{12}}$, unga erishish vaqti $t^*=-\\frac{\\vec r_{12}\\cdot\\vec v_{12}}{v_{12}^2}$.",
+  "ru": "**Смена системы отсчёта в задачах о двух телах.** Если два тела движутся с одинаковым ускорением (например, оба только под действием силы тяжести), их относительное ускорение $\\vec a_1-\\vec a_2=0$. Значит, относительно одного тела второе движется равномерно по прямой: $\\vec r_{12}(t)=\\vec r_{12}(0)+\\left(\\vec v_1-\\vec v_2\\right)t$. Расстояние между двумя камнями, брошенными одновременно из одной точки, растёт пропорционально времени. Наименьшее расстояние (closest approach): составляющая относительного радиус-вектора, перпендикулярная относительной скорости, $d_{min}=\\frac{|\\vec r_{12}\\times\\vec v_{12}|}{v_{12}}$, время его достижения $t^*=-\\frac{\\vec r_{12}\\cdot\\vec v_{12}}{v_{12}^2}$.",
+  "en": "**Changing frames in two-body problems.** If two bodies move with the same acceleration (for example, both under gravity only), their relative acceleration is $\\vec a_1-\\vec a_2=0$. Hence, relative to one body, the other moves uniformly in a straight line: $\\vec r_{12}(t)=\\vec r_{12}(0)+\\left(\\vec v_1-\\vec v_2\\right)t$. The distance between two stones thrown at the same time from one point grows in proportion to time. The closest approach is the component of the relative position vector perpendicular to the relative velocity, $d_{min}=\\frac{|\\vec r_{12}\\times\\vec v_{12}|}{v_{12}}$, reached at the time $t^*=-\\frac{\\vec r_{12}\\cdot\\vec v_{12}}{v_{12}^2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Yomg'ir va shamol.** Harakatlanayotgan kuzatuvchi ko'radigan tezlik — nisbiy tezlik: $\\vec u\\,'=\\vec u-\\vec v$, bunda $\\vec u$ — yomg'irning yerga nisbatan tezligi, $\\vec v$ — kuzatuvchi tezligi. Vertikal $8\\ \\mathrm{m/s}$ tezlik bilan tushayotgan yomg'ir $6\\ \\mathrm{m/s}$ tezlikdagi velosipedchiga $10\\ \\mathrm{m/s}$ tezlik bilan, vertikaldan $\\arctan\\frac{6}{8}\\approx37^\\circ$ burchak ostida, oldindan kelayotgandek ko'rinadi.",
+  "ru": "**Дождь и ветер.** Скорость, которую видит движущийся наблюдатель, — относительная: $\\vec u\\,'=\\vec u-\\vec v$, где $\\vec u$ — скорость дождя относительно земли, $\\vec v$ — скорость наблюдателя. Дождь, падающий вертикально со скоростью $8\\ \\mathrm{m/s}$, велосипедисту, едущему со скоростью $6\\ \\mathrm{m/s}$, кажется летящим спереди со скоростью $10\\ \\mathrm{m/s}$ под углом $\\arctan\\frac{6}{8}\\approx37^\\circ$ к вертикали.",
+  "en": "**Rain and wind.** The velocity seen by a moving observer is the relative velocity: $\\vec u\\,'=\\vec u-\\vec v$, where $\\vec u$ is the velocity of the rain relative to the ground and $\\vec v$ is the observer's velocity. Rain falling vertically at $8\\ \\mathrm{m/s}$ appears to a cyclist riding at $6\\ \\mathrm{m/s}$ to come from the front at $10\\ \\mathrm{m/s}$, at an angle $\\arctan\\frac{6}{8}\\approx37^\\circ$ to the vertical."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L01-F08.png",
+   "ru": "figures/B2-L01-F08-ru.png",
+   "en": "figures/B2-L01-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE uchun tez usullar (Fast techniques for the GRE)",
+  "ru": "10. Быстрые приёмы для GRE",
+  "en": "10. Fast techniques for the GRE"
+ },
+ {
+  "t": "li",
+  "uz": "**O'lchamlar tahlili.** Har bir variantning birligini tekshiring: masalan, uchish uzoqligi $\\frac{v_0^2}{g}$ kabi bo'lishi kerak ($\\mathrm{m^2/s^2}$ ni $\\mathrm{m/s^2}$ ga bo'lsak, $\\mathrm{m}$), vaqt esa $\\frac{v_0}{g}$ kabi. $a=-kv$ da $k$ ning birligi $\\mathrm{s^{-1}}$, demak masofa $\\frac{v_0}{k}$, vaqt $\\frac{1}{k}$; $a=-kv^2$ da $k$ — $\\mathrm{m^{-1}}$, demak vaqt $\\frac{1}{kv_0}$. Bu ko'pincha 5 variantdan 2–3 tasini darhol chiqarib tashlaydi.",
+  "ru": "**Анализ размерностей.** Проверяйте единицы каждого варианта: например, дальность должна быть вида $\\frac{v_0^2}{g}$ (разделив $\\mathrm{m^2/s^2}$ на $\\mathrm{m/s^2}$, получим $\\mathrm{m}$), а время — вида $\\frac{v_0}{g}$. При $a=-kv$ единица $k$ — $\\mathrm{s^{-1}}$, значит расстояние $\\frac{v_0}{k}$, время $\\frac{1}{k}$; при $a=-kv^2$ $k$ — в $\\mathrm{m^{-1}}$, значит время $\\frac{1}{kv_0}$. Часто это сразу отбрасывает 2–3 варианта из 5.",
+  "en": "**Dimensional analysis.** Check the units of every option: for example, a range must look like $\\frac{v_0^2}{g}$ (dividing $\\mathrm{m^2/s^2}$ by $\\mathrm{m/s^2}$ gives $\\mathrm{m}$), and a time like $\\frac{v_0}{g}$. For $a=-kv$ the unit of $k$ is $\\mathrm{s^{-1}}$, so a distance is $\\frac{v_0}{k}$ and a time is $\\frac{1}{k}$; for $a=-kv^2$ $k$ is in $\\mathrm{m^{-1}}$, so a time is $\\frac{1}{kv_0}$. This often eliminates 2–3 of the 5 options at once."
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaraviy holatlar.** Javob maxsus holatlarda to'g'ri natija berishi kerak: $\\alpha=0$ da (yerdan gorizontal otish) uzoqlik nol, $\\alpha=90^\\circ$ da ham nol; qiya tekislik uchun $\\beta=0$ qo'yilsa, oddiy formula chiqishi kerak; $k\\to0$ da qarshilikli formulalar qarshiliksiz formulalarga o'tishi kerak (masalan, $\\frac{v_0}{k}\\left(1-e^{-kt}\\right)\\to v_0t$).",
+  "ru": "**Предельные случаи.** Ответ должен давать верный результат в особых случаях: при $\\alpha=0$ (горизонтальный бросок с земли) дальность нулевая, при $\\alpha=90^\\circ$ тоже ноль; для наклонной плоскости подстановка $\\beta=0$ должна давать обычную формулу; при $k\\to0$ формулы с сопротивлением должны переходить в формулы без сопротивления (например, $\\frac{v_0}{k}\\left(1-e^{-kt}\\right)\\to v_0t$).",
+  "en": "**Limiting cases.** The answer must give the correct result in special cases: at $\\alpha=0$ (a horizontal launch from the ground) the range is zero, and at $\\alpha=90^\\circ$ it is also zero; for an incline, setting $\\beta=0$ must give the ordinary formula; as $k\\to0$ formulas with drag must reduce to those without drag (for example, $\\frac{v_0}{k}\\left(1-e^{-kt}\\right)\\to v_0t$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Qulay sanoq sistemasi va simmetriya.** Ikki jism bir xil tezlanish bilan harakatlansa — ulardan biriga bog'langan sistemaga o'ting (9-bo'lim). Otilgan jismda trayektoriya simmetriyasidan foydalaning: ko'tarilish va tushish vaqtlari teng. Grafikli savollarda: $x(t)$ ning qiyaligi — $v_x$, $v_x(t)$ ning qiyaligi — $a_x$, $v_x(t)$ ostidagi yuza — $\\Delta x$; yo'lni ko'chishdan farqlang. Kalkulyator yo'q: $g=10\\ \\mathrm{m/s^2}$ deb hisoblang va javobni eng yaqin variantga yaxlitlang.",
+  "ru": "**Удобная система отсчёта и симметрия.** Если два тела движутся с одинаковым ускорением — перейдите в систему, связанную с одним из них (раздел 9). У брошенного тела используйте симметрию траектории: время подъёма и время спуска равны. В вопросах с графиками: наклон $x(t)$ — $v_x$, наклон $v_x(t)$ — $a_x$, площадь под $v_x(t)$ — $\\Delta x$; отличайте путь от перемещения. Калькулятора нет: считайте $g=10\\ \\mathrm{m/s^2}$ и округляйте ответ к ближайшему варианту.",
+  "en": "**A convenient frame and symmetry.** If two bodies move with the same acceleration, switch to the frame of one of them (section 9). For a projectile use the symmetry of the trajectory: the rise and fall times are equal. In graph questions: the slope of $x(t)$ is $v_x$, the slope of $v_x(t)$ is $a_x$, and the area under $v_x(t)$ is $\\Delta x$; distinguish path length from displacement. There is no calculator: take $g=10\\ \\mathrm{m/s^2}$ and round your answer to the nearest option."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Tezlik va tezlanish",
+    "ru": "Скорость и ускорение",
+    "en": "Velocity and acceleration",
+    "m": "\\vec v=\\frac{d\\vec r}{dt},\\quad \\vec a=\\frac{d\\vec v}{dt}"
+   },
+   {
+    "uz": "Tezlik moduli va yo'l",
+    "ru": "Модуль скорости и путь",
+    "en": "Speed and path length",
+    "m": "v=\\frac{ds}{dt},\\quad s=\\int v\\,dt\\geq|\\Delta\\vec r|"
+   },
+   {
+    "uz": "O'rtacha tezlik vektori",
+    "ru": "Вектор средней скорости",
+    "en": "Average velocity",
+    "m": "\\langle\\vec v\\rangle=\\frac{\\Delta\\vec r}{\\Delta t}"
+   },
+   {
+    "uz": "Tangensial va normal tezlanish",
+    "ru": "Тангенциальное и нормальное ускорения",
+    "en": "Tangential and normal acceleration",
+    "m": "a_\\tau=\\frac{dv}{dt}=\\frac{\\vec v\\cdot\\vec a}{v},\\quad a_n=\\frac{v^2}{R}"
+   },
+   {
+    "uz": "Egrilik radiusi",
+    "ru": "Радиус кривизны",
+    "en": "Radius of curvature",
+    "m": "R=\\frac{v^3}{|\\vec v\\times\\vec a|}"
+   },
+   {
+    "uz": "Teskari masala",
+    "ru": "Обратная задача",
+    "en": "The inverse problem",
+    "m": "\\vec v=\\vec v_0+\\int\\vec a\\,dt,\\quad a=v\\frac{dv}{dx}"
+   },
+   {
+    "uz": "Chiziqli qarshilik",
+    "ru": "Линейное сопротивление",
+    "en": "Linear drag",
+    "m": "v=v_0e^{-kt},\\quad x_{max}=\\frac{v_0}{k}"
+   },
+   {
+    "uz": "O'zgarmas tezlanish",
+    "ru": "Постоянное ускорение",
+    "en": "Constant acceleration",
+    "m": "\\vec r=\\vec r_0+\\vec v_0t+\\frac{\\vec at^2}{2}"
+   },
+   {
+    "uz": "Otilgan jism",
+    "ru": "Брошенное тело",
+    "en": "Projectile",
+    "m": "T=\\frac{2v_0\\sin\\alpha}{g},\\quad H=\\frac{v_0^2\\sin^2\\alpha}{2g},\\quad L=\\frac{v_0^2\\sin2\\alpha}{g}"
+   },
+   {
+    "uz": "Trayektoriya",
+    "ru": "Траектория",
+    "en": "Trajectory",
+    "m": "y=x\\tan\\alpha-\\frac{gx^2}{2v_0^2\\cos^2\\alpha}"
+   },
+   {
+    "uz": "Aylana bo'ylab harakat",
+    "ru": "Движение по окружности",
+    "en": "Circular motion",
+    "m": "v=\\omega R,\\quad a_\\tau=\\varepsilon R,\\quad a_n=\\omega^2R"
+   },
+   {
+    "uz": "Qutb koordinatalari",
+    "ru": "Полярные координаты",
+    "en": "Polar coordinates",
+    "m": "\\vec v=\\dot r\\,\\vec e_r+r\\dot\\theta\\,\\vec e_\\theta"
+   },
+   {
+    "uz": "Qutb koordinatalarida tezlanish",
+    "ru": "Ускорение в полярных координатах",
+    "en": "Acceleration in polar coordinates",
+    "m": "a_r=\\ddot r-r\\dot\\theta^2,\\quad a_\\theta=r\\ddot\\theta+2\\dot r\\dot\\theta"
+   },
+   {
+    "uz": "Tezliklarni qo'shish",
+    "ru": "Сложение скоростей",
+    "en": "Velocity addition",
+    "m": "\\vec v=\\vec V+\\vec v\\,'"
+   },
+   {
+    "uz": "Eng kichik masofa",
+    "ru": "Наименьшее расстояние",
+    "en": "Closest approach",
+    "m": "d_{min}=\\frac{|\\vec r_{12}\\times\\vec v_{12}|}{v_{12}}"
+   }
+  ]
+ }
+]
