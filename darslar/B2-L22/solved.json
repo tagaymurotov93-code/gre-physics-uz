@@ -1,0 +1,880 @@
+[
+ {
+  "id": "B2-L22-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Yerga ulangan cheksiz o'tkazgich tekislikdan $3\\ \\mathrm{cm}$ masofada $4\\ \\mathrm{nC}$ zaryad turibdi. Zaryadga ta'sir qiluvchi kuchni, tekislikning zaryad ostidagi nuqtasida maydon va sirt zaryad zichligini hamda radiusi $4\\ \\mathrm{cm}$ bo'lgan doira ichidagi induksiyalangan zaryadni toping.",
+   "ru": "На расстоянии $3\\ \\mathrm{cm}$ от заземлённой бесконечной проводящей плоскости находится заряд $4\\ \\mathrm{nC}$. Найдите силу, действующую на заряд, поле и поверхностную плотность заряда в точке плоскости под зарядом и индуцированный заряд внутри круга радиуса $4\\ \\mathrm{cm}$.",
+   "en": "A charge of $4\\ \\mathrm{nC}$ is $3\\ \\mathrm{cm}$ from a grounded infinite conducting plane. Find the force on the charge, the field and the surface charge density at the point of the plane beneath the charge, and the induced charge within a circle of radius $4\\ \\mathrm{cm}$."
+  },
+  "figure": "figures/B2-L22-S01.png",
+  "solution": {
+   "uz": [
+    "Tasvir $-q$ masofasi $2d$: $$F=\\frac{kq^2}{\\left(2d\\right)^2}=\\frac{9\\cdot10^9\\cdot16\\cdot10^{-18}}{0.0036}=4\\cdot10^{-5}\\ \\mathrm{N}$$",
+    "Zaryad ostida ikkala zaryadning maydoni normal bo'ylab qo'shiladi: $$E=\\frac{2kq}{d^2}=8\\cdot10^4\\ \\mathrm{V/m},\\qquad \\sigma=-\\frac{q}{2\\pi d^2}\\approx-7.1\\cdot10^{-7}\\ \\mathrm{C/m^2}$$",
+    "Doiradagi zaryad: $$Q=-q\\left(1-\\frac{3}{5}\\right)=-1.6\\ \\mathrm{nC}$$"
+   ],
+   "ru": [
+    "Изображение $-q$ на расстоянии $2d$: $$F=\\frac{kq^2}{\\left(2d\\right)^2}=\\frac{9\\cdot10^9\\cdot16\\cdot10^{-18}}{0.0036}=4\\cdot10^{-5}\\ \\mathrm{N}$$",
+    "Под зарядом поля обоих зарядов складываются по нормали: $$E=\\frac{2kq}{d^2}=8\\cdot10^4\\ \\mathrm{V/m},\\qquad \\sigma=-\\frac{q}{2\\pi d^2}\\approx-7.1\\cdot10^{-7}\\ \\mathrm{C/m^2}$$",
+    "Заряд в круге: $$Q=-q\\left(1-\\frac{3}{5}\\right)=-1.6\\ \\mathrm{nC}$$"
+   ],
+   "en": [
+    "The image $-q$ is a distance $2d$ away: $$F=\\frac{kq^2}{\\left(2d\\right)^2}=\\frac{9\\cdot10^9\\cdot16\\cdot10^{-18}}{0.0036}=4\\cdot10^{-5}\\ \\mathrm{N}$$",
+    "Beneath the charge the fields of both charges add along the normal: $$E=\\frac{2kq}{d^2}=8\\cdot10^4\\ \\mathrm{V/m},\\qquad \\sigma=-\\frac{q}{2\\pi d^2}\\approx-7.1\\cdot10^{-7}\\ \\mathrm{C/m^2}$$",
+    "Charge in the circle: $$Q=-q\\left(1-\\frac{3}{5}\\right)=-1.6\\ \\mathrm{nC}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tekislik uchun tasvir: ko'zgu nuqtada $q'=-q$",
+    "ru": "Изображение для плоскости: $q'=-q$ в зеркальной точке",
+    "en": "Image for a plane: $q'=-q$ at the mirror point"
+   },
+   {
+    "uz": "Tekislikdagi zichlik: $\\sigma=-\\frac{qd}{2\\pi\\left(d^2+s^2\\right)^{\\frac{3}{2}}}$",
+    "ru": "Плотность на плоскости: $\\sigma=-\\frac{qd}{2\\pi\\left(d^2+s^2\\right)^{\\frac{3}{2}}}$",
+    "en": "Density on the plane: $\\sigma=-\\frac{qd}{2\\pi\\left(d^2+s^2\\right)^{\\frac{3}{2}}}$"
+   },
+   {
+    "uz": "Doiradagi induksiyalangan zaryad: $Q\\left(s\\right)=-q\\left(1-\\frac{d}{\\sqrt{d^2+s^2}}\\right)$",
+    "ru": "Индуцированный заряд в круге: $Q\\left(s\\right)=-q\\left(1-\\frac{d}{\\sqrt{d^2+s^2}}\\right)$",
+    "en": "Induced charge within a circle: $Q\\left(s\\right)=-q\\left(1-\\frac{d}{\\sqrt{d^2+s^2}}\\right)$"
+   }
+  ],
+  "basis": {
+   "uz": "Tekislikdagi induksiyalangan zaryad",
+   "ru": "Индуцированный заряд на плоскости",
+   "en": "Induced charge on a plane"
+  },
+  "answer": "F=4\\cdot10^{-5}\\ \\mathrm{N};\\ E=8\\cdot10^4\\ \\mathrm{V/m};\\ \\sigma\\approx-7.1\\cdot10^{-7}\\ \\mathrm{C/m^2};\\ Q=-1.6\\ \\mathrm{nC}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "Irodov, «Problems in General Physics», 3.59-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L22-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Kvadrat kesimli uzun metall quvurning to'rt devori bir-biridan izolyatsiyalangan va $10$, $20$, $30$, $40\\ \\mathrm{V}$ potensiallarda. Quvur o'qidagi potensialni toping. Boshqa kvadrat quvur kesimida $4\\times4$ tugunli to'r olindi: yuqori devor tugunlari $100\\ \\mathrm{V}$, qolgan devorlar $0$. To'rtta ichki tugundagi potensialni relaksatsiya tenglamalaridan toping.",
+   "ru": "Четыре стенки длинной металлической трубы квадратного сечения изолированы друг от друга и находятся под потенциалами $10$, $20$, $30$, $40\\ \\mathrm{V}$. Найдите потенциал на оси трубы. В сечении другой квадратной трубы взята сетка $4\\times4$ узла: узлы верхней стенки при $100\\ \\mathrm{V}$, остальные стенки при $0$. Найдите потенциал в четырёх внутренних узлах из уравнений релаксации.",
+   "en": "The four walls of a long metal tube of square cross-section are insulated from one another and held at $10$, $20$, $30$, $40\\ \\mathrm{V}$. Find the potential on the tube's axis. In the cross-section of another square tube a $4\\times4$ grid of nodes is taken: the nodes of the top wall are at $100\\ \\mathrm{V}$ and the other walls at $0$. Find the potential at the four interior nodes from the relaxation equations."
+  },
+  "figure": "figures/B2-L22-S02.png",
+  "solution": {
+   "uz": [
+    "Bitta devor $V$ da, qolganlari $0$ da bo'lsa, simmetriya bo'yicha markazda $\\frac{V}{4}$; superpozitsiya: $$\\varphi_0=\\frac{10+20+30+40}{4}=25\\ \\mathrm{V}$$",
+    "To'rda yuqori ichki tugunlar $a$, pastkilari $b$ (chap–o'ng simmetriya): $$a=\\frac{100+0+a+b}{4},\\qquad b=\\frac{a+0+0+b}{4}$$",
+    "Sistemani yechamiz: $$3b=a,\\quad 3a=100+b\\ \\Rightarrow\\ a=37.5\\ \\mathrm{V},\\quad b=12.5\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "Если одна стенка при $V$, остальные при $0$, по симметрии в центре $\\frac{V}{4}$; суперпозиция: $$\\varphi_0=\\frac{10+20+30+40}{4}=25\\ \\mathrm{V}$$",
+    "На сетке верхние внутренние узлы $a$, нижние $b$ (симметрия лево–право): $$a=\\frac{100+0+a+b}{4},\\qquad b=\\frac{a+0+0+b}{4}$$",
+    "Решаем систему: $$3b=a,\\quad 3a=100+b\\ \\Rightarrow\\ a=37.5\\ \\mathrm{V},\\quad b=12.5\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "With one wall at $V$ and the others at $0$, symmetry gives $\\frac{V}{4}$ at the centre; superposition: $$\\varphi_0=\\frac{10+20+30+40}{4}=25\\ \\mathrm{V}$$",
+    "On the grid the upper interior nodes are $a$ and the lower ones $b$ (left–right symmetry): $$a=\\frac{100+0+a+b}{4},\\qquad b=\\frac{a+0+0+b}{4}$$",
+    "Solve the system: $$3b=a,\\quad 3a=100+b\\ \\Rightarrow\\ a=37.5\\ \\mathrm{V},\\quad b=12.5\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Superpozitsiya: $\\varphi=\\varphi_1+\\varphi_2+\\dots$",
+    "ru": "Суперпозиция: $\\varphi=\\varphi_1+\\varphi_2+\\dots$",
+    "en": "Superposition: $\\varphi=\\varphi_1+\\varphi_2+\\dots$"
+   },
+   {
+    "uz": "Relaksatsiya: $\\varphi_{i,j}=\\frac{1}{4}\\left(\\varphi_{i\\pm1,j}+\\varphi_{i,j\\pm1}\\right)$",
+    "ru": "Релаксация: $\\varphi_{i,j}=\\frac{1}{4}\\left(\\varphi_{i\\pm1,j}+\\varphi_{i,j\\pm1}\\right)$",
+    "en": "Relaxation: $\\varphi_{i,j}=\\frac{1}{4}\\left(\\varphi_{i\\pm1,j}+\\varphi_{i,j\\pm1}\\right)$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Superpozitsiya va relaksatsiya",
+   "ru": "Суперпозиция и релаксация",
+   "en": "Superposition and relaxation"
+  },
+  "answer": "\\varphi_0=25\\ \\mathrm{V};\\ a=37.5\\ \\mathrm{V};\\ b=12.5\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original (B2-L22, relaksatsiya)"
+ },
+ {
+  "id": "B2-L22-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Yerga ulangan o'tkazgich tekislikdan $2\\ \\mathrm{cm}$ balandlikda unga parallel cheksiz ip tortilgan, chiziqli zaryad zichligi $10\\ \\mathrm{nC/m}$. Ipning har metriga ta'sir qiluvchi kuchni, ip ostida va ip proyeksiyasidan $2\\ \\mathrm{cm}$ masofada sirt zaryad zichligini toping.",
+   "ru": "На высоте $2\\ \\mathrm{cm}$ над заземлённой проводящей плоскостью параллельно ей натянута бесконечная нить с линейной плотностью заряда $10\\ \\mathrm{nC/m}$. Найдите силу на каждый метр нити и поверхностную плотность заряда под нитью и на расстоянии $2\\ \\mathrm{cm}$ от проекции нити.",
+   "en": "An infinite thread with linear charge density $10\\ \\mathrm{nC/m}$ is stretched parallel to a grounded conducting plane at a height of $2\\ \\mathrm{cm}$. Find the force per metre on the thread and the surface charge density beneath the thread and $2\\ \\mathrm{cm}$ from its projection."
+  },
+  "figure": "figures/B2-L22-S03.png",
+  "solution": {
+   "uz": [
+    "Tasvir ip $-\\lambda$ masofasi $2h$: $$F'=\\lambda\\frac{\\lambda}{2\\pi\\varepsilon_0\\cdot2h}=\\frac{10^{-16}}{2\\pi\\cdot8.85\\cdot10^{-12}\\cdot0.04}\\approx4.5\\cdot10^{-5}\\ \\mathrm{N/m}$$",
+    "Sirt zichligi: $$\\sigma\\left(0\\right)=-\\frac{\\lambda}{\\pi h}\\approx-1.59\\cdot10^{-7}\\ \\mathrm{C/m^2},\\qquad \\sigma\\left(h\\right)=\\frac{\\sigma\\left(0\\right)}{2}\\approx-8.0\\cdot10^{-8}\\ \\mathrm{C/m^2}$$"
+   ],
+   "ru": [
+    "Нить-изображение $-\\lambda$ на расстоянии $2h$: $$F'=\\lambda\\frac{\\lambda}{2\\pi\\varepsilon_0\\cdot2h}=\\frac{10^{-16}}{2\\pi\\cdot8.85\\cdot10^{-12}\\cdot0.04}\\approx4.5\\cdot10^{-5}\\ \\mathrm{N/m}$$",
+    "Поверхностная плотность: $$\\sigma\\left(0\\right)=-\\frac{\\lambda}{\\pi h}\\approx-1.59\\cdot10^{-7}\\ \\mathrm{C/m^2},\\qquad \\sigma\\left(h\\right)=\\frac{\\sigma\\left(0\\right)}{2}\\approx-8.0\\cdot10^{-8}\\ \\mathrm{C/m^2}$$"
+   ],
+   "en": [
+    "The image thread $-\\lambda$ is $2h$ away: $$F'=\\lambda\\frac{\\lambda}{2\\pi\\varepsilon_0\\cdot2h}=\\frac{10^{-16}}{2\\pi\\cdot8.85\\cdot10^{-12}\\cdot0.04}\\approx4.5\\cdot10^{-5}\\ \\mathrm{N/m}$$",
+    "Surface density: $$\\sigma\\left(0\\right)=-\\frac{\\lambda}{\\pi h}\\approx-1.59\\cdot10^{-7}\\ \\mathrm{C/m^2},\\qquad \\sigma\\left(h\\right)=\\frac{\\sigma\\left(0\\right)}{2}\\approx-8.0\\cdot10^{-8}\\ \\mathrm{C/m^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ip maydoni: $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$",
+    "ru": "Поле нити: $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$",
+    "en": "Field of a line charge: $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$"
+   },
+   {
+    "uz": "Ip ostidagi zichlik: $\\sigma=-\\frac{\\lambda h}{\\pi\\left(h^2+x^2\\right)}$",
+    "ru": "Плотность под нитью: $\\sigma=-\\frac{\\lambda h}{\\pi\\left(h^2+x^2\\right)}$",
+    "en": "Density beneath the line: $\\sigma=-\\frac{\\lambda h}{\\pi\\left(h^2+x^2\\right)}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ip va tekislik",
+   "ru": "Нить и плоскость",
+   "en": "A thread and a plane"
+  },
+  "answer": "F'\\approx4.5\\cdot10^{-5}\\ \\mathrm{N/m};\\ \\sigma\\left(0\\right)\\approx-1.59\\cdot10^{-7}\\ \\mathrm{C/m^2};\\ \\sigma\\left(h\\right)\\approx-8.0\\cdot10^{-8}\\ \\mathrm{C/m^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "Irodov, «Problems in General Physics», 3.60-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L22-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki yerga ulangan o'tkazgich yarim tekislik o'zaro perpendikulyar. Ular orasida $1\\ \\mathrm{nC}$ zaryad birinchi tekislikdan $3\\ \\mathrm{cm}$, ikkinchisidan $4\\ \\mathrm{cm}$ masofada turibdi. Tasvir zaryadlarni va zaryadga ta'sir qiluvchi kuchni toping.",
+   "ru": "Две заземлённые проводящие полуплоскости взаимно перпендикулярны. Между ними находится заряд $1\\ \\mathrm{nC}$ на расстоянии $3\\ \\mathrm{cm}$ от первой плоскости и $4\\ \\mathrm{cm}$ от второй. Найдите заряды-изображения и силу, действующую на заряд.",
+   "en": "Two grounded conducting half-planes are perpendicular to each other. Between them a $1\\ \\mathrm{nC}$ charge sits $3\\ \\mathrm{cm}$ from the first plane and $4\\ \\mathrm{cm}$ from the second. Find the image charges and the force on the charge."
+  },
+  "figure": "figures/B2-L22-S04.png",
+  "solution": {
+   "uz": [
+    "Zaryad $\\left(a,b\\right)$ da, tasvirlar: $$-q\\ \\left(-a,b\\right),\\qquad -q\\ \\left(a,-b\\right),\\qquad +q\\ \\left(-a,-b\\right)$$",
+    "Har bir tasvirning kuchi: $$F_1=\\frac{kq^2}{\\left(2a\\right)^2}=2.5\\cdot10^{-6}\\ \\mathrm{N},\\quad F_2=\\frac{kq^2}{\\left(2b\\right)^2}\\approx1.41\\cdot10^{-6}\\ \\mathrm{N},\\quad F_3=\\frac{kq^2}{\\left(0.1\\right)^2}=9\\cdot10^{-7}\\ \\mathrm{N}$$",
+    "$F_3$ diagonal bo'ylab itaradi ($\\cos=0.6$, $\\sin=0.8$): $$F_x=-2.5+0.54=-1.96\\ \\mu\\mathrm{N},\\quad F_y=-1.41+0.72\\approx-0.69\\ \\mu\\mathrm{N},\\quad F\\approx2.08\\ \\mu\\mathrm{N}$$"
+   ],
+   "ru": [
+    "Заряд в точке $\\left(a,b\\right)$, изображения: $$-q\\ \\left(-a,b\\right),\\qquad -q\\ \\left(a,-b\\right),\\qquad +q\\ \\left(-a,-b\\right)$$",
+    "Сила от каждого изображения: $$F_1=\\frac{kq^2}{\\left(2a\\right)^2}=2.5\\cdot10^{-6}\\ \\mathrm{N},\\quad F_2=\\frac{kq^2}{\\left(2b\\right)^2}\\approx1.41\\cdot10^{-6}\\ \\mathrm{N},\\quad F_3=\\frac{kq^2}{\\left(0.1\\right)^2}=9\\cdot10^{-7}\\ \\mathrm{N}$$",
+    "$F_3$ отталкивает по диагонали ($\\cos=0.6$, $\\sin=0.8$): $$F_x=-2.5+0.54=-1.96\\ \\mu\\mathrm{N},\\quad F_y=-1.41+0.72\\approx-0.69\\ \\mu\\mathrm{N},\\quad F\\approx2.08\\ \\mu\\mathrm{N}$$"
+   ],
+   "en": [
+    "With the charge at $\\left(a,b\\right)$, the images are: $$-q\\ \\left(-a,b\\right),\\qquad -q\\ \\left(a,-b\\right),\\qquad +q\\ \\left(-a,-b\\right)$$",
+    "Force from each image: $$F_1=\\frac{kq^2}{\\left(2a\\right)^2}=2.5\\cdot10^{-6}\\ \\mathrm{N},\\quad F_2=\\frac{kq^2}{\\left(2b\\right)^2}\\approx1.41\\cdot10^{-6}\\ \\mathrm{N},\\quad F_3=\\frac{kq^2}{\\left(0.1\\right)^2}=9\\cdot10^{-7}\\ \\mathrm{N}$$",
+    "$F_3$ repels along the diagonal ($\\cos=0.6$, $\\sin=0.8$): $$F_x=-2.5+0.54=-1.96\\ \\mu\\mathrm{N},\\quad F_y=-1.41+0.72\\approx-0.69\\ \\mu\\mathrm{N},\\quad F\\approx2.08\\ \\mu\\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'g'ri burchak: uchta tasvir $-q,\\ -q,\\ +q$",
+    "ru": "Прямой угол: три изображения $-q,\\ -q,\\ +q$",
+    "en": "Right-angle corner: three images $-q,\\ -q,\\ +q$"
+   },
+   {
+    "uz": "Kulon qonuni: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$",
+    "ru": "Закон Кулона: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$",
+    "en": "Coulomb's law: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "To'g'ri burchak ichidagi zaryad",
+   "ru": "Заряд внутри прямого угла",
+   "en": "A charge inside a right-angle corner"
+  },
+  "answer": "F_x\\approx-1.96\\ \\mu\\mathrm{N};\\ F_y\\approx-0.69\\ \\mu\\mathrm{N};\\ F\\approx2.08\\ \\mu\\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Irodov, «Problems in General Physics», 3.57-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L22-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Suv molekulasining dipol momenti $6.2\\cdot10^{-30}\\ \\mathrm{C\\cdot m}$. Molekula metall sirtidan $1\\ \\mathrm{nm}$ masofada, dipol sirtga perpendikulyar. Sirt va molekula orasidagi kuchni toping (sirtni yerga ulangan tekislik deb hisoblang).",
+   "ru": "Дипольный момент молекулы воды $6.2\\cdot10^{-30}\\ \\mathrm{C\\cdot m}$. Молекула находится на расстоянии $1\\ \\mathrm{nm}$ от поверхности металла, диполь перпендикулярен поверхности. Найдите силу между поверхностью и молекулой (поверхность считайте заземлённой плоскостью).",
+   "en": "A water molecule has a dipole moment of $6.2\\cdot10^{-30}\\ \\mathrm{C\\cdot m}$. It sits $1\\ \\mathrm{nm}$ from a metal surface with the dipole perpendicular to the surface. Find the force between the surface and the molecule (treat the surface as a grounded plane)."
+  },
+  "figure": "figures/B2-L22-S05.png",
+  "solution": {
+   "uz": [
+    "Tasvir dipol xuddi shu yo'nalishda, masofa $2z$: $$\\vec p\\,'=\\vec p,\\qquad r=2z=2\\ \\mathrm{nm}$$",
+    "Dipol o'qidagi maydon $E=\\frac{2kp}{r^3}$, kuch $p\\frac{dE}{dr}$: $$F=\\frac{6kp^2}{r^4}=\\frac{3kp^2}{8z^4}$$",
+    "Hisoblaymiz (tortishish): $$F=\\frac{3\\cdot9\\cdot10^9\\cdot\\left(6.2\\cdot10^{-30}\\right)^2}{8\\cdot10^{-36}}\\approx1.3\\cdot10^{-13}\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Диполь-изображение того же направления, расстояние $2z$: $$\\vec p\\,'=\\vec p,\\qquad r=2z=2\\ \\mathrm{nm}$$",
+    "Поле на оси диполя $E=\\frac{2kp}{r^3}$, сила $p\\frac{dE}{dr}$: $$F=\\frac{6kp^2}{r^4}=\\frac{3kp^2}{8z^4}$$",
+    "Вычисляем (притяжение): $$F=\\frac{3\\cdot9\\cdot10^9\\cdot\\left(6.2\\cdot10^{-30}\\right)^2}{8\\cdot10^{-36}}\\approx1.3\\cdot10^{-13}\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "The image dipole points the same way, at distance $2z$: $$\\vec p\\,'=\\vec p,\\qquad r=2z=2\\ \\mathrm{nm}$$",
+    "The field on a dipole's axis is $E=\\frac{2kp}{r^3}$ and the force is $p\\frac{dE}{dr}$: $$F=\\frac{6kp^2}{r^4}=\\frac{3kp^2}{8z^4}$$",
+    "Compute (attraction): $$F=\\frac{3\\cdot9\\cdot10^9\\cdot\\left(6.2\\cdot10^{-30}\\right)^2}{8\\cdot10^{-36}}\\approx1.3\\cdot10^{-13}\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Dipol tasviri: $p'_n=p_n,\\ p'_\\tau=-p_\\tau$",
+    "ru": "Изображение диполя: $p'_n=p_n,\\ p'_\\tau=-p_\\tau$",
+    "en": "Image dipole: $p'_n=p_n,\\ p'_\\tau=-p_\\tau$"
+   },
+   {
+    "uz": "O'qdosh dipollar: $F=\\frac{6kp_1p_2}{r^4}$",
+    "ru": "Соосные диполи: $F=\\frac{6kp_1p_2}{r^4}$",
+    "en": "Coaxial dipoles: $F=\\frac{6kp_1p_2}{r^4}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Metall sirti yonidagi dipol",
+   "ru": "Диполь у поверхности металла",
+   "en": "A dipole near a metal surface"
+  },
+  "answer": "F=\\frac{3kp^2}{8z^4}\\approx1.3\\cdot10^{-13}\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "Irodov, «Problems in General Physics», 3.58-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L22-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $10\\ \\mathrm{cm}$ bo'lgan yerga ulangan metall shar markazidan $20\\ \\mathrm{cm}$ masofada $5\\ \\mathrm{nC}$ zaryad turibdi. Tasvir zaryadni, zaryadga ta'sir qiluvchi kuchni, sharda induksiyalangan to'liq zaryadni hamda sferaning zaryadga eng yaqin va eng uzoq nuqtalarida sirt zaryad zichligini toping.",
+   "ru": "На расстоянии $20\\ \\mathrm{cm}$ от центра заземлённого металлического шара радиуса $10\\ \\mathrm{cm}$ находится заряд $5\\ \\mathrm{nC}$. Найдите заряд-изображение, силу, действующую на заряд, полный индуцированный заряд шара и поверхностную плотность в ближайшей и самой далёкой от заряда точках сферы.",
+   "en": "A $5\\ \\mathrm{nC}$ charge is $20\\ \\mathrm{cm}$ from the centre of a grounded metal sphere of radius $10\\ \\mathrm{cm}$. Find the image charge, the force on the charge, the total induced charge on the sphere, and the surface charge density at the points of the sphere nearest to and farthest from the charge."
+  },
+  "figure": "figures/B2-L22-S06.png",
+  "solution": {
+   "uz": [
+    "Tasvir: $$q'=-\\frac{qR}{a}=-2.5\\ \\mathrm{nC},\\qquad b=\\frac{R^2}{a}=5\\ \\mathrm{cm}$$",
+    "Kuch (masofa $a-b=15\\ \\mathrm{cm}$); induksiyalangan zaryad $q'$ ga teng: $$F=\\frac{9\\cdot10^9\\cdot5\\cdot10^{-9}\\cdot2.5\\cdot10^{-9}}{0.15^2}=5\\cdot10^{-6}\\ \\mathrm{N},\\qquad Q=-2.5\\ \\mathrm{nC}$$",
+    "Zichlik $\\theta=0$ va $\\theta=\\pi$ da: $$\\sigma_1=-\\frac{q\\left(a+R\\right)}{4\\pi R\\left(a-R\\right)^2}\\approx-1.19\\cdot10^{-7}\\ \\mathrm{C/m^2},\\quad \\sigma_2=-\\frac{q\\left(a-R\\right)}{4\\pi R\\left(a+R\\right)^2}\\approx-4.4\\cdot10^{-9}\\ \\mathrm{C/m^2}$$"
+   ],
+   "ru": [
+    "Изображение: $$q'=-\\frac{qR}{a}=-2.5\\ \\mathrm{nC},\\qquad b=\\frac{R^2}{a}=5\\ \\mathrm{cm}$$",
+    "Сила (расстояние $a-b=15\\ \\mathrm{cm}$); индуцированный заряд равен $q'$: $$F=\\frac{9\\cdot10^9\\cdot5\\cdot10^{-9}\\cdot2.5\\cdot10^{-9}}{0.15^2}=5\\cdot10^{-6}\\ \\mathrm{N},\\qquad Q=-2.5\\ \\mathrm{nC}$$",
+    "Плотность при $\\theta=0$ и $\\theta=\\pi$: $$\\sigma_1=-\\frac{q\\left(a+R\\right)}{4\\pi R\\left(a-R\\right)^2}\\approx-1.19\\cdot10^{-7}\\ \\mathrm{C/m^2},\\quad \\sigma_2=-\\frac{q\\left(a-R\\right)}{4\\pi R\\left(a+R\\right)^2}\\approx-4.4\\cdot10^{-9}\\ \\mathrm{C/m^2}$$"
+   ],
+   "en": [
+    "Image: $$q'=-\\frac{qR}{a}=-2.5\\ \\mathrm{nC},\\qquad b=\\frac{R^2}{a}=5\\ \\mathrm{cm}$$",
+    "Force (distance $a-b=15\\ \\mathrm{cm}$); the induced charge equals $q'$: $$F=\\frac{9\\cdot10^9\\cdot5\\cdot10^{-9}\\cdot2.5\\cdot10^{-9}}{0.15^2}=5\\cdot10^{-6}\\ \\mathrm{N},\\qquad Q=-2.5\\ \\mathrm{nC}$$",
+    "Density at $\\theta=0$ and $\\theta=\\pi$: $$\\sigma_1=-\\frac{q\\left(a+R\\right)}{4\\pi R\\left(a-R\\right)^2}\\approx-1.19\\cdot10^{-7}\\ \\mathrm{C/m^2},\\quad \\sigma_2=-\\frac{q\\left(a-R\\right)}{4\\pi R\\left(a+R\\right)^2}\\approx-4.4\\cdot10^{-9}\\ \\mathrm{C/m^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yerga ulangan shar: $q'=-\\frac{qR}{a}$, $b=\\frac{R^2}{a}$",
+    "ru": "Заземлённая сфера: $q'=-\\frac{qR}{a}$, $b=\\frac{R^2}{a}$",
+    "en": "Grounded sphere: $q'=-\\frac{qR}{a}$, $b=\\frac{R^2}{a}$"
+   },
+   {
+    "uz": "Kulon qonuni: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$",
+    "ru": "Закон Кулона: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$",
+    "en": "Coulomb's law: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$"
+   },
+   {
+    "uz": "Shardagi zichlik: $\\sigma=-\\frac{q\\left(a^2-R^2\\right)}{4\\pi R\\left(R^2+a^2-2aR\\cos\\theta\\right)^{\\frac{3}{2}}}$",
+    "ru": "Плотность на сфере: $\\sigma=-\\frac{q\\left(a^2-R^2\\right)}{4\\pi R\\left(R^2+a^2-2aR\\cos\\theta\\right)^{\\frac{3}{2}}}$",
+    "en": "Density on the sphere: $\\sigma=-\\frac{q\\left(a^2-R^2\\right)}{4\\pi R\\left(R^2+a^2-2aR\\cos\\theta\\right)^{\\frac{3}{2}}}$"
+   }
+  ],
+  "basis": {
+   "uz": "Yerga ulangan shar",
+   "ru": "Заземлённая сфера",
+   "en": "A grounded sphere"
+  },
+  "answer": "q'=-2.5\\ \\mathrm{nC};\\ b=5\\ \\mathrm{cm};\\ F=5\\ \\mu\\mathrm{N};\\ \\sigma_1\\approx-1.19\\cdot10^{-7}\\ \\mathrm{C/m^2};\\ \\sigma_2\\approx-4.4\\cdot10^{-9}\\ \\mathrm{C/m^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original (B2-L22, yerga ulangan shar)"
+ },
+ {
+  "id": "B2-L22-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $10\\ \\mathrm{cm}$ bo'lgan izolyatsiyalangan metall sharning zaryadi $1\\ \\mathrm{nC}$. Unga markazdan $30\\ \\mathrm{cm}$ va $11\\ \\mathrm{cm}$ masofaga $1\\ \\mathrm{nC}$ nuqtaviy zaryad keltirildi. Har ikki holda kuchni va uning yo'nalishini toping.",
+   "ru": "Изолированный металлический шар радиуса $10\\ \\mathrm{cm}$ имеет заряд $1\\ \\mathrm{nC}$. К нему поднесли точечный заряд $1\\ \\mathrm{nC}$ на расстояния $30\\ \\mathrm{cm}$ и $11\\ \\mathrm{cm}$ от центра. Найдите в обоих случаях силу и её направление.",
+   "en": "An isolated metal sphere of radius $10\\ \\mathrm{cm}$ carries $1\\ \\mathrm{nC}$. A $1\\ \\mathrm{nC}$ point charge is brought to $30\\ \\mathrm{cm}$ and then $11\\ \\mathrm{cm}$ from the centre. In both cases find the force and its direction."
+  },
+  "figure": "figures/B2-L22-S07.png",
+  "solution": {
+   "uz": [
+    "Tasvirlar: $q'$ va markazdagi zaryad: $$q'=-\\frac{qR}{a},\\quad b=\\frac{R^2}{a};\\qquad Q_0=Q+\\frac{qR}{a}$$",
+    "$a=30\\ \\mathrm{cm}$: $q'\\approx-0.33\\ \\mathrm{nC}$ ($b\\approx3.3\\ \\mathrm{cm}$), $Q_0\\approx1.33\\ \\mathrm{nC}$: $$F=kq\\left(\\frac{1.33\\cdot10^{-9}}{0.09}-\\frac{0.33\\cdot10^{-9}}{0.267^2}\\right)\\approx+9.1\\cdot10^{-8}\\ \\mathrm{N}$$",
+    "$a=11\\ \\mathrm{cm}$: $q'\\approx-0.91\\ \\mathrm{nC}$ ($a-b\\approx1.9\\ \\mathrm{cm}$), $Q_0\\approx1.91\\ \\mathrm{nC}$ — tortishish: $$F=kq\\left(\\frac{1.91\\cdot10^{-9}}{0.0121}-\\frac{0.91\\cdot10^{-9}}{0.0191^2}\\right)\\approx-2.1\\cdot10^{-5}\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Изображения: $q'$ и заряд в центре: $$q'=-\\frac{qR}{a},\\quad b=\\frac{R^2}{a};\\qquad Q_0=Q+\\frac{qR}{a}$$",
+    "$a=30\\ \\mathrm{cm}$: $q'\\approx-0.33\\ \\mathrm{nC}$ ($b\\approx3.3\\ \\mathrm{cm}$), $Q_0\\approx1.33\\ \\mathrm{nC}$: $$F=kq\\left(\\frac{1.33\\cdot10^{-9}}{0.09}-\\frac{0.33\\cdot10^{-9}}{0.267^2}\\right)\\approx+9.1\\cdot10^{-8}\\ \\mathrm{N}$$",
+    "$a=11\\ \\mathrm{cm}$: $q'\\approx-0.91\\ \\mathrm{nC}$ ($a-b\\approx1.9\\ \\mathrm{cm}$), $Q_0\\approx1.91\\ \\mathrm{nC}$ — притяжение: $$F=kq\\left(\\frac{1.91\\cdot10^{-9}}{0.0121}-\\frac{0.91\\cdot10^{-9}}{0.0191^2}\\right)\\approx-2.1\\cdot10^{-5}\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "Images: $q'$ and the central charge: $$q'=-\\frac{qR}{a},\\quad b=\\frac{R^2}{a};\\qquad Q_0=Q+\\frac{qR}{a}$$",
+    "$a=30\\ \\mathrm{cm}$: $q'\\approx-0.33\\ \\mathrm{nC}$ ($b\\approx3.3\\ \\mathrm{cm}$), $Q_0\\approx1.33\\ \\mathrm{nC}$: $$F=kq\\left(\\frac{1.33\\cdot10^{-9}}{0.09}-\\frac{0.33\\cdot10^{-9}}{0.267^2}\\right)\\approx+9.1\\cdot10^{-8}\\ \\mathrm{N}$$",
+    "$a=11\\ \\mathrm{cm}$: $q'\\approx-0.91\\ \\mathrm{nC}$ ($a-b\\approx1.9\\ \\mathrm{cm}$), $Q_0\\approx1.91\\ \\mathrm{nC}$ — attraction: $$F=kq\\left(\\frac{1.91\\cdot10^{-9}}{0.0121}-\\frac{0.91\\cdot10^{-9}}{0.0191^2}\\right)\\approx-2.1\\cdot10^{-5}\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Zaryadlangan shar: $q'=-\\frac{qR}{a}$ va markazda $Q+\\frac{qR}{a}$",
+    "ru": "Заряженная сфера: $q'=-\\frac{qR}{a}$ и в центре $Q+\\frac{qR}{a}$",
+    "en": "Charged sphere: $q'=-\\frac{qR}{a}$ and $Q+\\frac{qR}{a}$ at the centre"
+   },
+   {
+    "uz": "Kulon qonuni: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$",
+    "ru": "Закон Кулона: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$",
+    "en": "Coulomb's law: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Bir xil ishorali zaryadlarning tortishishi",
+   "ru": "Притяжение одноимённых зарядов",
+   "en": "Attraction of like charges"
+  },
+  "answer": "F\\left(30\\ \\mathrm{cm}\\right)\\approx+9.1\\cdot10^{-8}\\ \\mathrm{N};\\ F\\left(11\\ \\mathrm{cm}\\right)\\approx-2.1\\cdot10^{-5}\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "Irodov, «Problems in General Physics», 3.63-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L22-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yerga ulangan katta metall jismdagi radiusi $10\\ \\mathrm{cm}$ bo'lgan sferik bo'shliq ichida markazdan $5\\ \\mathrm{cm}$ masofada $2\\ \\mathrm{nC}$ zaryad turibdi. Tasvir zaryadni, zaryadga ta'sir qiluvchi kuchni va bo'shliq devoridagi to'liq induksiyalangan zaryadni toping.",
+   "ru": "Внутри сферической полости радиуса $10\\ \\mathrm{cm}$ в большом заземлённом металлическом теле на расстоянии $5\\ \\mathrm{cm}$ от центра находится заряд $2\\ \\mathrm{nC}$. Найдите заряд-изображение, силу, действующую на заряд, и полный индуцированный заряд на стенке полости.",
+   "en": "A $2\\ \\mathrm{nC}$ charge sits $5\\ \\mathrm{cm}$ from the centre of a spherical cavity of radius $10\\ \\mathrm{cm}$ inside a large grounded metal body. Find the image charge, the force on the charge, and the total induced charge on the cavity wall."
+  },
+  "figure": "figures/B2-L22-S08.png",
+  "solution": {
+   "uz": [
+    "Tasvir bo'shliqdan tashqarida: $$q'=-\\frac{qR}{a}=-4\\ \\mathrm{nC},\\qquad b=\\frac{R^2}{a}=20\\ \\mathrm{cm}$$",
+    "Kuch eng yaqin devorga qarab: $$F=\\frac{9\\cdot10^9\\cdot2\\cdot10^{-9}\\cdot4\\cdot10^{-9}}{0.15^2}=3.2\\cdot10^{-6}\\ \\mathrm{N}$$",
+    "Metall ichidagi Gauss sirti zaryad yig'indisi nol ekanini beradi: $$Q=-q=-2\\ \\mathrm{nC}\\neq q'$$"
+   ],
+   "ru": [
+    "Изображение вне полости: $$q'=-\\frac{qR}{a}=-4\\ \\mathrm{nC},\\qquad b=\\frac{R^2}{a}=20\\ \\mathrm{cm}$$",
+    "Сила направлена к ближайшей стенке: $$F=\\frac{9\\cdot10^9\\cdot2\\cdot10^{-9}\\cdot4\\cdot10^{-9}}{0.15^2}=3.2\\cdot10^{-6}\\ \\mathrm{N}$$",
+    "Гауссова поверхность в металле даёт нулевой суммарный заряд: $$Q=-q=-2\\ \\mathrm{nC}\\neq q'$$"
+   ],
+   "en": [
+    "The image is outside the cavity: $$q'=-\\frac{qR}{a}=-4\\ \\mathrm{nC},\\qquad b=\\frac{R^2}{a}=20\\ \\mathrm{cm}$$",
+    "The force points towards the nearest wall: $$F=\\frac{9\\cdot10^9\\cdot2\\cdot10^{-9}\\cdot4\\cdot10^{-9}}{0.15^2}=3.2\\cdot10^{-6}\\ \\mathrm{N}$$",
+    "A Gaussian surface inside the metal gives zero total charge: $$Q=-q=-2\\ \\mathrm{nC}\\neq q'$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bo'shliqdagi zaryad: $q'=-\\frac{qR}{a}$, $b=\\frac{R^2}{a}>R$",
+    "ru": "Заряд в полости: $q'=-\\frac{qR}{a}$, $b=\\frac{R^2}{a}>R$",
+    "en": "Charge in a cavity: $q'=-\\frac{qR}{a}$, $b=\\frac{R^2}{a}>R$"
+   },
+   {
+    "uz": "Kulon qonuni: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$",
+    "ru": "Закон Кулона: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$",
+    "en": "Coulomb's law: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$"
+   },
+   {
+    "uz": "Gauss teoremasi: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q}{\\varepsilon_0}$",
+    "ru": "Теорема Гаусса: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q}{\\varepsilon_0}$",
+    "en": "Gauss's law: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q}{\\varepsilon_0}$"
+   }
+  ],
+  "basis": {
+   "uz": "Bo'shliq ichidagi zaryad",
+   "ru": "Заряд в полости",
+   "en": "A charge in a cavity"
+  },
+  "answer": "q'=-4\\ \\mathrm{nC};\\ b=20\\ \\mathrm{cm};\\ F=3.2\\ \\mu\\mathrm{N};\\ Q=-2\\ \\mathrm{nC}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Irodov, «Problems in General Physics», 3.64-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L22-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $1\\ \\mathrm{cm}$ bo'lgan yerga ulangan uzun metall silindr o'qidan $3\\ \\mathrm{cm}$ masofada unga parallel $5\\ \\mathrm{nC/m}$ zaryadli ip tortilgan. Tasvir ipni va ipning har metriga ta'sir qiluvchi kuchni toping.",
+   "ru": "Параллельно длинному заземлённому металлическому цилиндру радиуса $1\\ \\mathrm{cm}$ на расстоянии $3\\ \\mathrm{cm}$ от его оси натянута нить с зарядом $5\\ \\mathrm{nC/m}$. Найдите нить-изображение и силу на каждый метр нити.",
+   "en": "A thread carrying $5\\ \\mathrm{nC/m}$ runs parallel to a long grounded metal cylinder of radius $1\\ \\mathrm{cm}$, $3\\ \\mathrm{cm}$ from its axis. Find the image thread and the force per metre on the thread."
+  },
+  "figure": "figures/B2-L22-S09.png",
+  "solution": {
+   "uz": [
+    "Tasvir ip va Apolloniy sharti $\\frac{r_2}{r_1}=\\frac{R}{a}$: $$\\lambda'=-\\lambda,\\qquad b=\\frac{R^2}{a}=\\frac{1}{3}\\ \\mathrm{cm}$$",
+    "Iplar orasi $a-b\\approx2.67\\ \\mathrm{cm}$: $$F'=\\frac{\\lambda^2}{2\\pi\\varepsilon_0\\left(a-b\\right)}=\\frac{25\\cdot10^{-18}}{2\\pi\\cdot8.85\\cdot10^{-12}\\cdot0.0267}\\approx1.7\\cdot10^{-5}\\ \\mathrm{N/m}$$"
+   ],
+   "ru": [
+    "Нить-изображение и условие Аполлония $\\frac{r_2}{r_1}=\\frac{R}{a}$: $$\\lambda'=-\\lambda,\\qquad b=\\frac{R^2}{a}=\\frac{1}{3}\\ \\mathrm{cm}$$",
+    "Расстояние между нитями $a-b\\approx2.67\\ \\mathrm{cm}$: $$F'=\\frac{\\lambda^2}{2\\pi\\varepsilon_0\\left(a-b\\right)}=\\frac{25\\cdot10^{-18}}{2\\pi\\cdot8.85\\cdot10^{-12}\\cdot0.0267}\\approx1.7\\cdot10^{-5}\\ \\mathrm{N/m}$$"
+   ],
+   "en": [
+    "The image thread and the Apollonius condition $\\frac{r_2}{r_1}=\\frac{R}{a}$: $$\\lambda'=-\\lambda,\\qquad b=\\frac{R^2}{a}=\\frac{1}{3}\\ \\mathrm{cm}$$",
+    "The threads are $a-b\\approx2.67\\ \\mathrm{cm}$ apart: $$F'=\\frac{\\lambda^2}{2\\pi\\varepsilon_0\\left(a-b\\right)}=\\frac{25\\cdot10^{-18}}{2\\pi\\cdot8.85\\cdot10^{-12}\\cdot0.0267}\\approx1.7\\cdot10^{-5}\\ \\mathrm{N/m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ip va silindr: $\\lambda'=-\\lambda$, $b=\\frac{R^2}{a}$",
+    "ru": "Нить и цилиндр: $\\lambda'=-\\lambda$, $b=\\frac{R^2}{a}$",
+    "en": "Line and cylinder: $\\lambda'=-\\lambda$, $b=\\frac{R^2}{a}$"
+   },
+   {
+    "uz": "Ip maydoni: $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$",
+    "ru": "Поле нити: $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$",
+    "en": "Field of a line charge: $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ip va silindr",
+   "ru": "Нить и цилиндр",
+   "en": "A thread and a cylinder"
+  },
+  "answer": "\\lambda'=-5\\ \\mathrm{nC/m};\\ b=\\frac{1}{3}\\ \\mathrm{cm};\\ F'\\approx1.7\\cdot10^{-5}\\ \\mathrm{N/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original (B2-L22, ip va silindr)"
+ },
+ {
+  "id": "B2-L22-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki simli liniya simlarining radiusi $1\\ \\mathrm{mm}$, o'qlari orasi $10\\ \\mathrm{cm}$. Birlik uzunlikdagi sig'imni aniq va taqribiy formulada toping. Simlar orasidagi kuchlanish $200\\ \\mathrm{V}$ bo'lsa, har metrdagi zaryad qancha? Radiusi $2\\ \\mathrm{mm}$ bo'lgan bitta sim yerdan $5\\ \\mathrm{m}$ balandlikda bo'lsa, uning yerga nisbatan birlik uzunlikdagi sig'imi qancha?",
+   "ru": "Радиус проводов двухпроводной линии $1\\ \\mathrm{mm}$, расстояние между осями $10\\ \\mathrm{cm}$. Найдите ёмкость на единицу длины по точной и приближённой формулам. Какой заряд приходится на каждый метр при напряжении между проводами $200\\ \\mathrm{V}$? Какова ёмкость на единицу длины относительно земли одного провода радиуса $2\\ \\mathrm{mm}$ на высоте $5\\ \\mathrm{m}$?",
+   "en": "The wires of a two-wire line have radius $1\\ \\mathrm{mm}$ and their axes are $10\\ \\mathrm{cm}$ apart. Find the capacitance per unit length with the exact and approximate formulas. What is the charge per metre for a voltage of $200\\ \\mathrm{V}$ between the wires? What is the capacitance per unit length relative to the ground of a single wire of radius $2\\ \\mathrm{mm}$ at a height of $5\\ \\mathrm{m}$?"
+  },
+  "figure": "figures/B2-L22-S10.png",
+  "solution": {
+   "uz": [
+    "Ikki simli liniya ($\\frac{d}{2R}=50$): $$C'=\\frac{\\pi\\varepsilon_0}{\\mathrm{arccosh}\\,50}=\\frac{2.78\\cdot10^{-11}}{4.605}\\approx6.04\\ \\mathrm{pF/m}\\approx\\frac{\\pi\\varepsilon_0}{\\ln100}$$",
+    "Zaryad: $$\\lambda=C'U\\approx1.21\\ \\mathrm{nC/m}$$",
+    "Yer ustidagi sim ($\\frac{h}{R}=2500$): $$C'=\\frac{2\\pi\\varepsilon_0}{\\mathrm{arccosh}\\,2500}=\\frac{5.56\\cdot10^{-11}}{8.52}\\approx6.53\\ \\mathrm{pF/m}$$"
+   ],
+   "ru": [
+    "Двухпроводная линия ($\\frac{d}{2R}=50$): $$C'=\\frac{\\pi\\varepsilon_0}{\\mathrm{arccosh}\\,50}=\\frac{2.78\\cdot10^{-11}}{4.605}\\approx6.04\\ \\mathrm{pF/m}\\approx\\frac{\\pi\\varepsilon_0}{\\ln100}$$",
+    "Заряд: $$\\lambda=C'U\\approx1.21\\ \\mathrm{nC/m}$$",
+    "Провод над землёй ($\\frac{h}{R}=2500$): $$C'=\\frac{2\\pi\\varepsilon_0}{\\mathrm{arccosh}\\,2500}=\\frac{5.56\\cdot10^{-11}}{8.52}\\approx6.53\\ \\mathrm{pF/m}$$"
+   ],
+   "en": [
+    "Two-wire line ($\\frac{d}{2R}=50$): $$C'=\\frac{\\pi\\varepsilon_0}{\\mathrm{arccosh}\\,50}=\\frac{2.78\\cdot10^{-11}}{4.605}\\approx6.04\\ \\mathrm{pF/m}\\approx\\frac{\\pi\\varepsilon_0}{\\ln100}$$",
+    "Charge: $$\\lambda=C'U\\approx1.21\\ \\mathrm{nC/m}$$",
+    "Wire above ground ($\\frac{h}{R}=2500$): $$C'=\\frac{2\\pi\\varepsilon_0}{\\mathrm{arccosh}\\,2500}=\\frac{5.56\\cdot10^{-11}}{8.52}\\approx6.53\\ \\mathrm{pF/m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ikki simli liniya: $C'=\\frac{\\pi\\varepsilon_0}{\\mathrm{arccosh}\\frac{d}{2R}}$",
+    "ru": "Двухпроводная линия: $C'=\\frac{\\pi\\varepsilon_0}{\\mathrm{arccosh}\\frac{d}{2R}}$",
+    "en": "Two-wire line: $C'=\\frac{\\pi\\varepsilon_0}{\\mathrm{arccosh}\\frac{d}{2R}}$"
+   },
+   null,
+   {
+    "uz": "Yer ustidagi sim: $C'=\\frac{2\\pi\\varepsilon_0}{\\mathrm{arccosh}\\frac{h}{R}}$",
+    "ru": "Провод над землёй: $C'=\\frac{2\\pi\\varepsilon_0}{\\mathrm{arccosh}\\frac{h}{R}}$",
+    "en": "Wire above ground: $C'=\\frac{2\\pi\\varepsilon_0}{\\mathrm{arccosh}\\frac{h}{R}}$"
+   }
+  ],
+  "basis": {
+   "uz": "Liniyalar sig'imi",
+   "ru": "Ёмкость линий",
+   "en": "Capacitance of lines"
+  },
+  "answer": "C'\\approx6.04\\ \\mathrm{pF/m};\\ \\lambda\\approx1.21\\ \\mathrm{nC/m};\\ C''\\approx6.53\\ \\mathrm{pF/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Irodov, «Problems in General Physics», 3.108, 3.109-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L22-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Havoda suv sirtidan ($\\varepsilon=81$) $2\\ \\mathrm{cm}$ balandlikda $1\\ \\mathrm{nC}$ zaryad turibdi. Tasvir zaryadni va zaryadni suvga tortuvchi kuchni toping. Kuchni o'tkazgich tekislik holati bilan solishtiring. Suv ichidagi maydon qaysi zaryad maydoniga teng?",
+   "ru": "В воздухе на высоте $2\\ \\mathrm{cm}$ над поверхностью воды ($\\varepsilon=81$) находится заряд $1\\ \\mathrm{nC}$. Найдите заряд-изображение и силу, притягивающую заряд к воде. Сравните силу со случаем проводящей плоскости. Полю какого заряда равно поле внутри воды?",
+   "en": "A $1\\ \\mathrm{nC}$ charge is in air $2\\ \\mathrm{cm}$ above a water surface ($\\varepsilon=81$). Find the image charge and the force pulling the charge towards the water. Compare the force with the case of a conducting plane. The field inside the water equals the field of which charge?"
+  },
+  "figure": "figures/B2-L22-S11.png",
+  "solution": {
+   "uz": [
+    "Tasvir ($\\varepsilon_1=1$, $\\varepsilon_2=81$): $$q'=-\\frac{81-1}{81+1}q\\approx-0.976\\ \\mathrm{nC}$$",
+    "Kuch va o'tkazgich bilan solishtirish: $$F=\\frac{kq\\left|q'\\right|}{\\left(2d\\right)^2}\\approx5.49\\cdot10^{-6}\\ \\mathrm{N}=0.976\\,F_0,\\qquad F_0=\\frac{kq^2}{\\left(2d\\right)^2}\\approx5.63\\cdot10^{-6}\\ \\mathrm{N}$$",
+    "Suv ichida maydon $q$ o'rnidagi $q''$ maydoni ($\\varepsilon=81$ da): $$q''=\\frac{2\\cdot81}{82}q\\approx1.98\\ \\mathrm{nC},\\qquad \\varphi=\\frac{q''}{4\\pi\\varepsilon_0\\cdot81r}$$"
+   ],
+   "ru": [
+    "Изображение ($\\varepsilon_1=1$, $\\varepsilon_2=81$): $$q'=-\\frac{81-1}{81+1}q\\approx-0.976\\ \\mathrm{nC}$$",
+    "Сила и сравнение с проводником: $$F=\\frac{kq\\left|q'\\right|}{\\left(2d\\right)^2}\\approx5.49\\cdot10^{-6}\\ \\mathrm{N}=0.976\\,F_0,\\qquad F_0=\\frac{kq^2}{\\left(2d\\right)^2}\\approx5.63\\cdot10^{-6}\\ \\mathrm{N}$$",
+    "Внутри воды поле заряда $q''$ на месте $q$ (при $\\varepsilon=81$): $$q''=\\frac{2\\cdot81}{82}q\\approx1.98\\ \\mathrm{nC},\\qquad \\varphi=\\frac{q''}{4\\pi\\varepsilon_0\\cdot81r}$$"
+   ],
+   "en": [
+    "Image ($\\varepsilon_1=1$, $\\varepsilon_2=81$): $$q'=-\\frac{81-1}{81+1}q\\approx-0.976\\ \\mathrm{nC}$$",
+    "Force and comparison with a conductor: $$F=\\frac{kq\\left|q'\\right|}{\\left(2d\\right)^2}\\approx5.49\\cdot10^{-6}\\ \\mathrm{N}=0.976\\,F_0,\\qquad F_0=\\frac{kq^2}{\\left(2d\\right)^2}\\approx5.63\\cdot10^{-6}\\ \\mathrm{N}$$",
+    "Inside the water the field is that of $q''$ at the position of $q$ (with $\\varepsilon=81$): $$q''=\\frac{2\\cdot81}{82}q\\approx1.98\\ \\mathrm{nC},\\qquad \\varphi=\\frac{q''}{4\\pi\\varepsilon_0\\cdot81r}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Dielektrik chegara: $q'=-\\frac{\\varepsilon_2-\\varepsilon_1}{\\varepsilon_2+\\varepsilon_1}q$",
+    "ru": "Граница диэлектрика: $q'=-\\frac{\\varepsilon_2-\\varepsilon_1}{\\varepsilon_2+\\varepsilon_1}q$",
+    "en": "Dielectric boundary: $q'=-\\frac{\\varepsilon_2-\\varepsilon_1}{\\varepsilon_2+\\varepsilon_1}q$"
+   },
+   {
+    "uz": "Kulon qonuni: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$",
+    "ru": "Закон Кулона: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$",
+    "en": "Coulomb's law: $F=\\frac{k\\left|q_1q_2\\right|}{r^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Zaryad va suv sirti",
+   "ru": "Заряд и поверхность воды",
+   "en": "A charge and a water surface"
+  },
+  "answer": "q'\\approx-0.976\\ \\mathrm{nC};\\ F\\approx5.5\\ \\mu\\mathrm{N}\\approx0.98F_0;\\ q''\\approx1.98\\ \\mathrm{nC}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L22, dielektrik tasvir)"
+ },
+ {
+  "id": "B2-L22-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ariqcha: $y=0$ va $y=10\\ \\mathrm{cm}$ dagi yarim tekisliklar yerga ulangan, ularni $x=0$ da tutashtiruvchi izolyatsiyalangan tasma $100\\ \\mathrm{V}$ da. Ariqcha markaziy chizig'ida $x=5\\ \\mathrm{cm}$ nuqtadagi potensialni qatorning bir hadi, ikki hadi va yopiq formula bo'yicha toping.",
+   "ru": "Желоб: полуплоскости при $y=0$ и $y=10\\ \\mathrm{cm}$ заземлены, соединяющая их при $x=0$ изолированная полоса находится под $100\\ \\mathrm{V}$. Найдите потенциал на средней линии желоба в точке $x=5\\ \\mathrm{cm}$ по одному члену ряда, по двум членам и по замкнутой формуле.",
+   "en": "A slot: the half-planes at $y=0$ and $y=10\\ \\mathrm{cm}$ are grounded, and the insulated strip joining them at $x=0$ is at $100\\ \\mathrm{V}$. Find the potential on the centre line of the slot at $x=5\\ \\mathrm{cm}$ using one term of the series, two terms, and the closed formula."
+  },
+  "figure": "figures/B2-L22-S12.png",
+  "solution": {
+   "uz": [
+    "Birinchi had ($n=1$, $\\frac{\\pi x}{a}=\\frac{\\pi}{2}$): $$\\varphi_1=\\frac{400}{\\pi}e^{-\\frac{\\pi}{2}}\\sin\\frac{\\pi}{2}\\approx127.3\\cdot0.208\\approx26.5\\ \\mathrm{V}$$",
+    "Ikkinchi had ($n=3$, $\\sin\\frac{3\\pi}{2}=-1$): $$\\varphi_3=-\\frac{400}{3\\pi}e^{-\\frac{3\\pi}{2}}\\approx-0.38\\ \\mathrm{V}\\ \\Rightarrow\\ \\varphi\\approx26.1\\ \\mathrm{V}$$",
+    "Yopiq formula: $$\\varphi=\\frac{200}{\\pi}\\mathrm{arctg}\\frac{1}{\\sinh\\frac{\\pi}{2}}=63.7\\cdot\\mathrm{arctg}\\,0.435\\approx26.1\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "Первый член ($n=1$, $\\frac{\\pi x}{a}=\\frac{\\pi}{2}$): $$\\varphi_1=\\frac{400}{\\pi}e^{-\\frac{\\pi}{2}}\\sin\\frac{\\pi}{2}\\approx127.3\\cdot0.208\\approx26.5\\ \\mathrm{V}$$",
+    "Второй член ($n=3$, $\\sin\\frac{3\\pi}{2}=-1$): $$\\varphi_3=-\\frac{400}{3\\pi}e^{-\\frac{3\\pi}{2}}\\approx-0.38\\ \\mathrm{V}\\ \\Rightarrow\\ \\varphi\\approx26.1\\ \\mathrm{V}$$",
+    "Замкнутая формула: $$\\varphi=\\frac{200}{\\pi}\\mathrm{arctg}\\frac{1}{\\sinh\\frac{\\pi}{2}}=63.7\\cdot\\mathrm{arctg}\\,0.435\\approx26.1\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "First term ($n=1$, $\\frac{\\pi x}{a}=\\frac{\\pi}{2}$): $$\\varphi_1=\\frac{400}{\\pi}e^{-\\frac{\\pi}{2}}\\sin\\frac{\\pi}{2}\\approx127.3\\cdot0.208\\approx26.5\\ \\mathrm{V}$$",
+    "Second term ($n=3$, $\\sin\\frac{3\\pi}{2}=-1$): $$\\varphi_3=-\\frac{400}{3\\pi}e^{-\\frac{3\\pi}{2}}\\approx-0.38\\ \\mathrm{V}\\ \\Rightarrow\\ \\varphi\\approx26.1\\ \\mathrm{V}$$",
+    "Closed formula: $$\\varphi=\\frac{200}{\\pi}\\mathrm{arctg}\\frac{1}{\\sinh\\frac{\\pi}{2}}=63.7\\cdot\\mathrm{arctg}\\,0.435\\approx26.1\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ariqcha: $\\varphi=\\frac{4V_0}{\\pi}\\sum\\frac{1}{n}e^{-\\frac{n\\pi x}{a}}\\sin\\frac{n\\pi y}{a}$",
+    "ru": "Желоб: $\\varphi=\\frac{4V_0}{\\pi}\\sum\\frac{1}{n}e^{-\\frac{n\\pi x}{a}}\\sin\\frac{n\\pi y}{a}$",
+    "en": "Slot: $\\varphi=\\frac{4V_0}{\\pi}\\sum\\frac{1}{n}e^{-\\frac{n\\pi x}{a}}\\sin\\frac{n\\pi y}{a}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Ariqchadagi potensial",
+   "ru": "Потенциал в желобе",
+   "en": "The potential in a slot"
+  },
+  "answer": "\\varphi_1\\approx26.5\\ \\mathrm{V};\\ \\varphi_1+\\varphi_3\\approx26.1\\ \\mathrm{V};\\ \\varphi=26.1\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original (B2-L22, ariqcha)"
+ },
+ {
+  "id": "B2-L22-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radiusi $5\\ \\mathrm{cm}$ bo'lgan neytral metall shar $1\\ \\mathrm{kV/m}$ bir jinsli maydonga kiritildi. Sirt zaryad zichligining eng katta qiymatini, bitta yarim sferadagi induksiyalangan zaryadni, sharning dipol momentini va sirtdagi eng katta maydonni toping.",
+   "ru": "Нейтральный металлический шар радиуса $5\\ \\mathrm{cm}$ внесён в однородное поле $1\\ \\mathrm{kV/m}$. Найдите наибольшую поверхностную плотность заряда, индуцированный заряд на одной полусфере, дипольный момент шара и наибольшее поле у поверхности.",
+   "en": "A neutral metal sphere of radius $5\\ \\mathrm{cm}$ is placed in a uniform field of $1\\ \\mathrm{kV/m}$. Find the largest surface charge density, the induced charge on one hemisphere, the dipole moment of the sphere and the largest field at its surface."
+  },
+  "figure": "figures/B2-L22-S13.png",
+  "solution": {
+   "uz": [
+    "Sirt zichligi: $$\\sigma=3\\varepsilon_0E_0\\cos\\theta,\\qquad \\sigma_{max}=3\\cdot8.85\\cdot10^{-12}\\cdot10^3\\approx2.66\\cdot10^{-8}\\ \\mathrm{C/m^2}$$",
+    "Yarim sfera bo'yicha integral: $$Q=\\int_0^{\\frac{\\pi}{2}}3\\varepsilon_0E_0\\cos\\theta\\cdot2\\pi R^2\\sin\\theta\\,d\\theta=3\\pi\\varepsilon_0E_0R^2\\approx2.1\\cdot10^{-10}\\ \\mathrm{C}$$",
+    "Dipol momenti va qutbdagi maydon: $$p=4\\pi\\varepsilon_0R^3E_0\\approx1.39\\cdot10^{-11}\\ \\mathrm{C\\cdot m},\\qquad E_{max}=\\frac{\\sigma_{max}}{\\varepsilon_0}=3E_0=3\\ \\mathrm{kV/m}$$"
+   ],
+   "ru": [
+    "Поверхностная плотность: $$\\sigma=3\\varepsilon_0E_0\\cos\\theta,\\qquad \\sigma_{max}=3\\cdot8.85\\cdot10^{-12}\\cdot10^3\\approx2.66\\cdot10^{-8}\\ \\mathrm{C/m^2}$$",
+    "Интеграл по полусфере: $$Q=\\int_0^{\\frac{\\pi}{2}}3\\varepsilon_0E_0\\cos\\theta\\cdot2\\pi R^2\\sin\\theta\\,d\\theta=3\\pi\\varepsilon_0E_0R^2\\approx2.1\\cdot10^{-10}\\ \\mathrm{C}$$",
+    "Дипольный момент и поле на полюсе: $$p=4\\pi\\varepsilon_0R^3E_0\\approx1.39\\cdot10^{-11}\\ \\mathrm{C\\cdot m},\\qquad E_{max}=\\frac{\\sigma_{max}}{\\varepsilon_0}=3E_0=3\\ \\mathrm{kV/m}$$"
+   ],
+   "en": [
+    "Surface density: $$\\sigma=3\\varepsilon_0E_0\\cos\\theta,\\qquad \\sigma_{max}=3\\cdot8.85\\cdot10^{-12}\\cdot10^3\\approx2.66\\cdot10^{-8}\\ \\mathrm{C/m^2}$$",
+    "Integral over a hemisphere: $$Q=\\int_0^{\\frac{\\pi}{2}}3\\varepsilon_0E_0\\cos\\theta\\cdot2\\pi R^2\\sin\\theta\\,d\\theta=3\\pi\\varepsilon_0E_0R^2\\approx2.1\\cdot10^{-10}\\ \\mathrm{C}$$",
+    "Dipole moment and field at the pole: $$p=4\\pi\\varepsilon_0R^3E_0\\approx1.39\\cdot10^{-11}\\ \\mathrm{C\\cdot m},\\qquad E_{max}=\\frac{\\sigma_{max}}{\\varepsilon_0}=3E_0=3\\ \\mathrm{kV/m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Maydondagi shar: $\\sigma=3\\varepsilon_0E_0\\cos\\theta$, $p=4\\pi\\varepsilon_0R^3E_0$",
+    "ru": "Шар в поле: $\\sigma=3\\varepsilon_0E_0\\cos\\theta$, $p=4\\pi\\varepsilon_0R^3E_0$",
+    "en": "Sphere in a field: $\\sigma=3\\varepsilon_0E_0\\cos\\theta$, $p=4\\pi\\varepsilon_0R^3E_0$"
+   },
+   null,
+   {
+    "uz": "Sirtdagi maydon: $E=\\frac{\\sigma}{\\varepsilon_0}$",
+    "ru": "Поле у поверхности: $E=\\frac{\\sigma}{\\varepsilon_0}$",
+    "en": "Field at the surface: $E=\\frac{\\sigma}{\\varepsilon_0}$"
+   }
+  ],
+  "basis": {
+   "uz": "Bir jinsli maydondagi o'tkazgich shar",
+   "ru": "Проводящий шар в однородном поле",
+   "en": "A conducting sphere in a uniform field"
+  },
+  "answer": "\\sigma_{max}\\approx2.66\\cdot10^{-8}\\ \\mathrm{C/m^2};\\ Q\\approx2.1\\cdot10^{-10}\\ \\mathrm{C};\\ p\\approx1.39\\cdot10^{-11}\\ \\mathrm{C\\cdot m};\\ E_{max}=3\\ \\mathrm{kV/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "Irodov, «Problems in General Physics», 3.70-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L22-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radiusi $10\\ \\mathrm{cm}$ bo'lgan yupqa sfera sirtida potensial $V\\left(\\theta\\right)=V_0\\cos\\theta$, $V_0=10\\ \\mathrm{V}$ qilib ushlab turiladi; boshqa zaryadlar yo'q. Sfera ichida va tashqarisida potensialni, ichkaridagi maydonni, sirt zaryad zichligi va dipol momentini toping.",
+   "ru": "На поверхности тонкой сферы радиуса $10\\ \\mathrm{cm}$ поддерживается потенциал $V\\left(\\theta\\right)=V_0\\cos\\theta$, $V_0=10\\ \\mathrm{V}$; других зарядов нет. Найдите потенциал внутри и вне сферы, поле внутри, поверхностную плотность заряда и дипольный момент.",
+   "en": "The potential on the surface of a thin sphere of radius $10\\ \\mathrm{cm}$ is held at $V\\left(\\theta\\right)=V_0\\cos\\theta$, $V_0=10\\ \\mathrm{V}$; there are no other charges. Find the potential inside and outside the sphere, the field inside, the surface charge density and the dipole moment."
+  },
+  "figure": "figures/B2-L22-S14.png",
+  "solution": {
+   "uz": [
+    "$V\\propto P_1$, shuning uchun faqat $l=1$ hadlar: $$\\varphi_1=A_1r\\cos\\theta,\\qquad \\varphi_2=\\frac{B_1}{r^2}\\cos\\theta$$",
+    "$r=R$ da tenglaymiz — ichkarida bir jinsli maydon: $$A_1=\\frac{V_0}{R},\\quad B_1=V_0R^2;\\qquad E=\\frac{V_0}{R}=100\\ \\mathrm{V/m}\\ \\left(-z\\right)$$",
+    "$E_r$ ning sakrashi va dipol momenti: $$\\sigma=\\frac{3\\varepsilon_0V_0}{R}\\cos\\theta,\\quad \\sigma_{max}\\approx2.66\\cdot10^{-9}\\ \\mathrm{C/m^2};\\qquad p=4\\pi\\varepsilon_0R^2V_0\\approx1.11\\cdot10^{-11}\\ \\mathrm{C\\cdot m}$$"
+   ],
+   "ru": [
+    "$V\\propto P_1$, поэтому только члены с $l=1$: $$\\varphi_1=A_1r\\cos\\theta,\\qquad \\varphi_2=\\frac{B_1}{r^2}\\cos\\theta$$",
+    "Приравниваем при $r=R$ — внутри однородное поле: $$A_1=\\frac{V_0}{R},\\quad B_1=V_0R^2;\\qquad E=\\frac{V_0}{R}=100\\ \\mathrm{V/m}\\ \\left(-z\\right)$$",
+    "Скачок $E_r$ и дипольный момент: $$\\sigma=\\frac{3\\varepsilon_0V_0}{R}\\cos\\theta,\\quad \\sigma_{max}\\approx2.66\\cdot10^{-9}\\ \\mathrm{C/m^2};\\qquad p=4\\pi\\varepsilon_0R^2V_0\\approx1.11\\cdot10^{-11}\\ \\mathrm{C\\cdot m}$$"
+   ],
+   "en": [
+    "$V\\propto P_1$, so only the $l=1$ terms: $$\\varphi_1=A_1r\\cos\\theta,\\qquad \\varphi_2=\\frac{B_1}{r^2}\\cos\\theta$$",
+    "Match at $r=R$ — a uniform field inside: $$A_1=\\frac{V_0}{R},\\quad B_1=V_0R^2;\\qquad E=\\frac{V_0}{R}=100\\ \\mathrm{V/m}\\ \\left(-z\\right)$$",
+    "The jump in $E_r$ and the dipole moment: $$\\sigma=\\frac{3\\varepsilon_0V_0}{R}\\cos\\theta,\\quad \\sigma_{max}\\approx2.66\\cdot10^{-9}\\ \\mathrm{C/m^2};\\qquad p=4\\pi\\varepsilon_0R^2V_0\\approx1.11\\cdot10^{-11}\\ \\mathrm{C\\cdot m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sferada berilgan potensial: $A_lr^lP_l$, $\\frac{B_l}{r^{l+1}}P_l$",
+    "ru": "Потенциал на сфере: $A_lr^lP_l$, $\\frac{B_l}{r^{l+1}}P_l$",
+    "en": "Potential on a sphere: $A_lr^lP_l$, $\\frac{B_l}{r^{l+1}}P_l$"
+   },
+   null,
+   {
+    "uz": "Sirtdagi maydon: $E=\\frac{\\sigma}{\\varepsilon_0}$",
+    "ru": "Поле у поверхности: $E=\\frac{\\sigma}{\\varepsilon_0}$",
+    "en": "Field at the surface: $E=\\frac{\\sigma}{\\varepsilon_0}$"
+   }
+  ],
+  "basis": {
+   "uz": "Sferada berilgan potensial",
+   "ru": "Потенциал, заданный на сфере",
+   "en": "A potential prescribed on a sphere"
+  },
+  "answer": "\\varphi_1=\\frac{V_0r}{R}\\cos\\theta;\\ \\varphi_2=\\frac{V_0R^2}{r^2}\\cos\\theta;\\ E=100\\ \\mathrm{V/m};\\ \\sigma_{max}\\approx2.66\\cdot10^{-9}\\ \\mathrm{C/m^2};\\ p\\approx1.11\\cdot10^{-11}\\ \\mathrm{C\\cdot m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "original (B2-L22, Lejandr ko'phadlari)"
+ },
+ {
+  "id": "B2-L22-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radiusi $1\\ \\mathrm{cm}$ bo'lgan uzun neytral metall silindr o'qiga perpendikulyar $2\\ \\mathrm{kV/m}$ bir jinsli maydonga kiritildi. Sirt zaryad zichligining eng katta qiymatini va sirtdagi eng katta maydonni toping, ularni xuddi shu maydondagi shar bilan solishtiring. Silindrning maydon tomonga qaragan yarmida birlik uzunlikdagi zaryad qancha?",
+   "ru": "Длинный нейтральный металлический цилиндр радиуса $1\\ \\mathrm{cm}$ внесён в однородное поле $2\\ \\mathrm{kV/m}$, перпендикулярное его оси. Найдите наибольшую поверхностную плотность заряда и наибольшее поле у поверхности и сравните их с шаром в том же поле. Каков заряд на единицу длины на половине цилиндра, обращённой по полю?",
+   "en": "A long neutral metal cylinder of radius $1\\ \\mathrm{cm}$ is placed in a uniform field of $2\\ \\mathrm{kV/m}$ perpendicular to its axis. Find the largest surface charge density and the largest field at the surface, and compare them with a sphere in the same field. What is the charge per unit length on the half of the cylinder facing along the field?"
+  },
+  "figure": "figures/B2-L22-S15.png",
+  "solution": {
+   "uz": [
+    "Silindr uchun $n=1$ yechim: $$\\sigma=2\\varepsilon_0E_0\\cos\\phi,\\qquad \\sigma_{max}\\approx3.54\\cdot10^{-8}\\ \\mathrm{C/m^2},\\qquad E_{max}=2E_0=4\\ \\mathrm{kV/m}$$",
+    "Shar bilan solishtirish: $$\\sigma_{max}=3\\varepsilon_0E_0\\approx5.31\\cdot10^{-8}\\ \\mathrm{C/m^2},\\qquad E_{max}=3E_0=6\\ \\mathrm{kV/m}$$",
+    "Yarim silindr bo'yicha integral: $$\\lambda=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}2\\varepsilon_0E_0\\cos\\phi\\,R\\,d\\phi=4\\varepsilon_0E_0R\\approx7.1\\cdot10^{-10}\\ \\mathrm{C/m}$$"
+   ],
+   "ru": [
+    "Решение $n=1$ для цилиндра: $$\\sigma=2\\varepsilon_0E_0\\cos\\phi,\\qquad \\sigma_{max}\\approx3.54\\cdot10^{-8}\\ \\mathrm{C/m^2},\\qquad E_{max}=2E_0=4\\ \\mathrm{kV/m}$$",
+    "Сравнение с шаром: $$\\sigma_{max}=3\\varepsilon_0E_0\\approx5.31\\cdot10^{-8}\\ \\mathrm{C/m^2},\\qquad E_{max}=3E_0=6\\ \\mathrm{kV/m}$$",
+    "Интеграл по полуцилиндру: $$\\lambda=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}2\\varepsilon_0E_0\\cos\\phi\\,R\\,d\\phi=4\\varepsilon_0E_0R\\approx7.1\\cdot10^{-10}\\ \\mathrm{C/m}$$"
+   ],
+   "en": [
+    "The $n=1$ solution for a cylinder: $$\\sigma=2\\varepsilon_0E_0\\cos\\phi,\\qquad \\sigma_{max}\\approx3.54\\cdot10^{-8}\\ \\mathrm{C/m^2},\\qquad E_{max}=2E_0=4\\ \\mathrm{kV/m}$$",
+    "Comparison with a sphere: $$\\sigma_{max}=3\\varepsilon_0E_0\\approx5.31\\cdot10^{-8}\\ \\mathrm{C/m^2},\\qquad E_{max}=3E_0=6\\ \\mathrm{kV/m}$$",
+    "Integral over the half-cylinder: $$\\lambda=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}2\\varepsilon_0E_0\\cos\\phi\\,R\\,d\\phi=4\\varepsilon_0E_0R\\approx7.1\\cdot10^{-10}\\ \\mathrm{C/m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Maydondagi silindr: $\\sigma=2\\varepsilon_0E_0\\cos\\phi$",
+    "ru": "Цилиндр в поле: $\\sigma=2\\varepsilon_0E_0\\cos\\phi$",
+    "en": "Cylinder in a field: $\\sigma=2\\varepsilon_0E_0\\cos\\phi$"
+   },
+   {
+    "uz": "Maydondagi shar: $\\sigma=3\\varepsilon_0E_0\\cos\\theta$, $p=4\\pi\\varepsilon_0R^3E_0$",
+    "ru": "Шар в поле: $\\sigma=3\\varepsilon_0E_0\\cos\\theta$, $p=4\\pi\\varepsilon_0R^3E_0$",
+    "en": "Sphere in a field: $\\sigma=3\\varepsilon_0E_0\\cos\\theta$, $p=4\\pi\\varepsilon_0R^3E_0$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Maydondagi silindr",
+   "ru": "Цилиндр в поле",
+   "en": "A cylinder in a field"
+  },
+  "answer": "\\sigma_{max}\\approx3.54\\cdot10^{-8}\\ \\mathrm{C/m^2};\\ E_{max}=4\\ \\mathrm{kV/m};\\ \\lambda\\approx7.1\\cdot10^{-10}\\ \\mathrm{C/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L22, silindr)"
+ },
+ {
+  "id": "B2-L22-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Oralig'i $6\\ \\mathrm{cm}$ bo'lgan ikki katta yerga ulangan parallel plastinka orasida birinchi plastinkadan $2\\ \\mathrm{cm}$ masofada $3\\ \\mathrm{nC}$ zaryad turibdi. Grin o'zaro teoremasidan foydalanib, har bir plastinkadagi induksiyalangan zaryadni toping.",
+   "ru": "Между двумя большими заземлёнными параллельными пластинами на расстоянии $6\\ \\mathrm{cm}$ друг от друга на расстоянии $2\\ \\mathrm{cm}$ от первой пластины находится заряд $3\\ \\mathrm{nC}$. С помощью теоремы взаимности Грина найдите индуцированный заряд на каждой пластине.",
+   "en": "A $3\\ \\mathrm{nC}$ charge sits between two large grounded parallel plates $6\\ \\mathrm{cm}$ apart, $2\\ \\mathrm{cm}$ from the first plate. Using Green's reciprocity theorem, find the induced charge on each plate."
+  },
+  "figure": "figures/B2-L22-S16.png",
+  "solution": {
+   "uz": [
+    "Yordamchi holat: zaryad yo'q, 1-plastinka $V$ da, 2-si yerga ulangan — potensial chiziqli: $$\\varphi'\\left(x\\right)=V\\left(1-\\frac{x}{L}\\right)$$",
+    "O'zaro teorema ($Q_2$ ning ko'paytuvchisi $\\varphi'_2=0$): $$qV\\left(1-\\frac{x}{L}\\right)+Q_1V=0\\ \\Rightarrow\\ Q_1=-q\\left(1-\\frac{x}{L}\\right)=-2\\ \\mathrm{nC}$$",
+    "Xuddi shunday 2-plastinka uchun; yig'indi $-q$: $$Q_2=-\\frac{qx}{L}=-1\\ \\mathrm{nC},\\qquad Q_1+Q_2=-3\\ \\mathrm{nC}$$"
+   ],
+   "ru": [
+    "Вспомогательное состояние: заряда нет, 1-я пластина при $V$, 2-я заземлена — потенциал линеен: $$\\varphi'\\left(x\\right)=V\\left(1-\\frac{x}{L}\\right)$$",
+    "Теорема взаимности (множитель при $Q_2$: $\\varphi'_2=0$): $$qV\\left(1-\\frac{x}{L}\\right)+Q_1V=0\\ \\Rightarrow\\ Q_1=-q\\left(1-\\frac{x}{L}\\right)=-2\\ \\mathrm{nC}$$",
+    "Аналогично для 2-й пластины; сумма $-q$: $$Q_2=-\\frac{qx}{L}=-1\\ \\mathrm{nC},\\qquad Q_1+Q_2=-3\\ \\mathrm{nC}$$"
+   ],
+   "en": [
+    "Auxiliary state: no charge, plate 1 at $V$, plate 2 grounded — the potential is linear: $$\\varphi'\\left(x\\right)=V\\left(1-\\frac{x}{L}\\right)$$",
+    "Reciprocity (the factor multiplying $Q_2$ is $\\varphi'_2=0$): $$qV\\left(1-\\frac{x}{L}\\right)+Q_1V=0\\ \\Rightarrow\\ Q_1=-q\\left(1-\\frac{x}{L}\\right)=-2\\ \\mathrm{nC}$$",
+    "Likewise for plate 2; the sum is $-q$: $$Q_2=-\\frac{qx}{L}=-1\\ \\mathrm{nC},\\qquad Q_1+Q_2=-3\\ \\mathrm{nC}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Grin o'zaro teoremasi: $\\sum q_i\\varphi'_i=\\sum q'_i\\varphi_i$",
+    "ru": "Теорема взаимности Грина: $\\sum q_i\\varphi'_i=\\sum q'_i\\varphi_i$",
+    "en": "Green's reciprocity theorem: $\\sum q_i\\varphi'_i=\\sum q'_i\\varphi_i$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Grin o'zaro teoremasi",
+   "ru": "Теорема взаимности Грина",
+   "en": "Green's reciprocity theorem"
+  },
+  "answer": "Q_1=-2\\ \\mathrm{nC};\\ Q_2=-1\\ \\mathrm{nC}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "Irodov, «Problems in General Physics», 3.67-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L22-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Har metrining massasi $1\\ \\mathrm{g}$ bo'lgan ingichka to'g'ri simdan $50\\ \\mathrm{A}$ tok o'tmoqda. Sim gorizontal o'ta o'tkazgich tekislik ustida. Qanday balandlikda sim muallaq turadi? Bu muvozanat vertikal siljishlarga nisbatan turg'unmi ($g=10\\ \\mathrm{m/s^2}$)?",
+   "ru": "По тонкому прямому проводу, каждый метр которого имеет массу $1\\ \\mathrm{g}$, течёт ток $50\\ \\mathrm{A}$. Провод находится над горизонтальной сверхпроводящей плоскостью. На какой высоте провод парит? Устойчиво ли это равновесие по отношению к вертикальным смещениям ($g=10\\ \\mathrm{m/s^2}$)?",
+   "en": "A thin straight wire with a mass of $1\\ \\mathrm{g}$ per metre carries a current of $50\\ \\mathrm{A}$. The wire is above a horizontal superconducting plane. At what height does the wire float? Is this equilibrium stable against vertical displacements ($g=10\\ \\mathrm{m/s^2}$)?"
+  },
+  "figure": "figures/B2-L22-S17.png",
+  "solution": {
+   "uz": [
+    "$B_n=0$ shartini teskari tasvir tok beradi, masofa $2h$: $$I'=-I,\\qquad F'=\\frac{\\mu_0I^2}{2\\pi\\cdot2h}=\\frac{\\mu_0I^2}{4\\pi h}$$",
+    "Itarish og'irlikni muvozanatlaydi: $$\\frac{\\mu_0I^2}{4\\pi h}=\\lambda_mg\\ \\Rightarrow\\ h=\\frac{10^{-7}\\cdot2500}{10^{-3}\\cdot10}=2.5\\ \\mathrm{cm}$$",
+    "$h$ ortsa itarish kamayadi, kamaysa ortadi — turg'un: $$\\frac{dF'}{dh}=-\\frac{\\mu_0I^2}{4\\pi h^2}<0$$"
+   ],
+   "ru": [
+    "Условие $B_n=0$ даёт обращённый ток-изображение, расстояние $2h$: $$I'=-I,\\qquad F'=\\frac{\\mu_0I^2}{2\\pi\\cdot2h}=\\frac{\\mu_0I^2}{4\\pi h}$$",
+    "Отталкивание уравновешивает вес: $$\\frac{\\mu_0I^2}{4\\pi h}=\\lambda_mg\\ \\Rightarrow\\ h=\\frac{10^{-7}\\cdot2500}{10^{-3}\\cdot10}=2.5\\ \\mathrm{cm}$$",
+    "При росте $h$ отталкивание уменьшается, при уменьшении растёт — устойчиво: $$\\frac{dF'}{dh}=-\\frac{\\mu_0I^2}{4\\pi h^2}<0$$"
+   ],
+   "en": [
+    "The condition $B_n=0$ gives a reversed image current, distance $2h$: $$I'=-I,\\qquad F'=\\frac{\\mu_0I^2}{2\\pi\\cdot2h}=\\frac{\\mu_0I^2}{4\\pi h}$$",
+    "The repulsion balances the weight: $$\\frac{\\mu_0I^2}{4\\pi h}=\\lambda_mg\\ \\Rightarrow\\ h=\\frac{10^{-7}\\cdot2500}{10^{-3}\\cdot10}=2.5\\ \\mathrm{cm}$$",
+    "If $h$ increases the repulsion falls, if it decreases the repulsion grows — stable: $$\\frac{dF'}{dh}=-\\frac{\\mu_0I^2}{4\\pi h^2}<0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Magnit tasvir (o'ta o'tkazgich): $I'=-I$",
+    "ru": "Магнитное изображение (сверхпроводник): $I'=-I$",
+    "en": "Magnetic image (superconductor): $I'=-I$"
+   },
+   {
+    "uz": "Parallel toklar: $F'=\\frac{\\mu_0I_1I_2}{2\\pi r}$",
+    "ru": "Параллельные токи: $F'=\\frac{\\mu_0I_1I_2}{2\\pi r}$",
+    "en": "Parallel currents: $F'=\\frac{\\mu_0I_1I_2}{2\\pi r}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "O'ta o'tkazgich ustidagi sim",
+   "ru": "Провод над сверхпроводником",
+   "en": "A wire above a superconductor"
+  },
+  "answer": "h=2.5\\ \\mathrm{cm};\\ \\frac{dF'}{dh}<0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L22, magnit tasvir)"
+ },
+ {
+  "id": "B2-L22-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radiusi $10\\ \\mathrm{cm}$ bo'lgan yerga ulangan metall shar markazidan $20\\ \\mathrm{cm}$ masofadagi $1\\ \\mathrm{nC}$ zaryadni cheksizlikka sekin olib ketish uchun qancha ish bajarish kerak?",
+   "ru": "Какую работу нужно совершить, чтобы медленно удалить на бесконечность заряд $1\\ \\mathrm{nC}$, находящийся на расстоянии $20\\ \\mathrm{cm}$ от центра заземлённого металлического шара радиуса $10\\ \\mathrm{cm}$?",
+   "en": "How much work must be done to slowly remove to infinity a $1\\ \\mathrm{nC}$ charge that is $20\\ \\mathrm{cm}$ from the centre of a grounded metal sphere of radius $10\\ \\mathrm{cm}$?"
+  },
+  "figure": "figures/B2-L22-S18.png",
+  "solution": {
+   "uz": [
+    "$r$ masofadagi tortishish kuchi (tasvir $r$ bilan birga siljiydi): $$F\\left(r\\right)=\\frac{kq^2Rr}{\\left(r^2-R^2\\right)^2}$$",
+    "Tashqi kuch ishi — integral: $$A=\\int_a^\\infty\\frac{kq^2Rr\\,dr}{\\left(r^2-R^2\\right)^2}=\\frac{kq^2R}{2\\left(a^2-R^2\\right)}$$",
+    "Sonlar: $$A=\\frac{9\\cdot10^9\\cdot10^{-18}\\cdot0.1}{2\\cdot0.03}=1.5\\cdot10^{-8}\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Сила притяжения на расстоянии $r$ (изображение смещается вместе с $r$): $$F\\left(r\\right)=\\frac{kq^2Rr}{\\left(r^2-R^2\\right)^2}$$",
+    "Работа внешней силы — интеграл: $$A=\\int_a^\\infty\\frac{kq^2Rr\\,dr}{\\left(r^2-R^2\\right)^2}=\\frac{kq^2R}{2\\left(a^2-R^2\\right)}$$",
+    "Числа: $$A=\\frac{9\\cdot10^9\\cdot10^{-18}\\cdot0.1}{2\\cdot0.03}=1.5\\cdot10^{-8}\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "The attractive force at distance $r$ (the image moves with $r$): $$F\\left(r\\right)=\\frac{kq^2Rr}{\\left(r^2-R^2\\right)^2}$$",
+    "Work of the external force — an integral: $$A=\\int_a^\\infty\\frac{kq^2Rr\\,dr}{\\left(r^2-R^2\\right)^2}=\\frac{kq^2R}{2\\left(a^2-R^2\\right)}$$",
+    "Numbers: $$A=\\frac{9\\cdot10^9\\cdot10^{-18}\\cdot0.1}{2\\cdot0.03}=1.5\\cdot10^{-8}\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yerga ulangan shar: $q'=-\\frac{qR}{a}$, $b=\\frac{R^2}{a}$",
+    "ru": "Заземлённая сфера: $q'=-\\frac{qR}{a}$, $b=\\frac{R^2}{a}$",
+    "en": "Grounded sphere: $q'=-\\frac{qR}{a}$, $b=\\frac{R^2}{a}$"
+   },
+   {
+    "uz": "Ish: $A=\\int_a^\\infty F\\,dr$",
+    "ru": "Работа: $A=\\int_a^\\infty F\\,dr$",
+    "en": "Work: $A=\\int_a^\\infty F\\,dr$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Shardan zaryadni olib ketish ishi",
+   "ru": "Работа удаления заряда от сферы",
+   "en": "Work to remove a charge from a sphere"
+  },
+  "answer": "A=\\frac{kq^2R}{2\\left(a^2-R^2\\right)}=1.5\\cdot10^{-8}\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "Irodov, «Problems in General Physics», 3.55-masala asosida; sharti o'zgartirilgan"
+ }
+]

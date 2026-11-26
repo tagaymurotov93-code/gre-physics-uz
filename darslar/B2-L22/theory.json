@@ -1,0 +1,623 @@
+[
+ {
+  "t": "h1",
+  "uz": "Tasvirlar usuli va chegaraviy shartlar (Method of images and boundary conditions)",
+  "ru": "Метод изображений и граничные условия",
+  "en": "Method of images and boundary conditions"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz elektrostatik chegaraviy masalani qo'yasiz va yagonalik teoremalari nima uchun «taxmin qilingan» yechimni to'g'ri qilishini tushuntirasiz; Laplas tenglamasining o'rta qiymat xossasidan va relaksatsiya usulidan foydalanasiz; tekislik, ikki tekislik, shar, sferik bo'shliq, silindr va dielektrik chegara uchun tasvir zaryadlarni topib, kuch, induksiyalangan zaryad, energiya va sig'imni hisoblaysiz; Grin o'zaro teoremasi bilan induksiyalangan zaryadlarni topasiz; Dekart va sferik koordinatalarda o'zgaruvchilarni ajratib, ariqcha, bir jinsli maydondagi shar va silindr masalalarini yechasiz; magnit tasvirlardan foydalanasiz.",
+  "ru": "**Цель.** После урока вы будете ставить электростатическую краевую задачу и объяснять, почему теоремы единственности делают «угаданное» решение верным; использовать свойство среднего значения уравнения Лапласа и метод релаксации; находить заряды-изображения для плоскости, двух плоскостей, сферы, сферической полости, цилиндра и границы диэлектрика и вычислять силу, индуцированный заряд, энергию и ёмкость; находить индуцированные заряды по теореме взаимности Грина; разделять переменные в декартовых и сферических координатах и решать задачи о желобе, о шаре и цилиндре в однородном поле; использовать магнитные изображения.",
+  "en": "**Goal.** After this lesson you will set up an electrostatic boundary-value problem and explain why the uniqueness theorems make a \"guessed\" solution correct; use the mean-value property of Laplace's equation and the relaxation method; find image charges for a plane, two planes, a sphere, a spherical cavity, a cylinder and a dielectric boundary, and compute the force, induced charge, energy and capacitance; find induced charges with Green's reciprocity theorem; separate variables in Cartesian and spherical coordinates and solve the slot problem and the sphere and cylinder in a uniform field; and use magnetic images."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L13 da Puasson va Laplas tenglamalarini yozdik va tasvirlar usulining eng oddiy ikki holini — yerga ulangan tekislik va sharni ko'rdik; B2-L14 da ikki dielektrik chegarasidagi shartlarni, B2-L20 da umumiy chegaraviy shartlarni oldik. Bu darsda shu g'oyalarni tizimli usulga aylantiramiz: avval nega «to'g'ri javobni topib, uni tekshirish» mumkinligini isbotlaymiz, so'ngra tasvirlar va o'zgaruvchilarni ajratish usullarini o'rganamiz. GRE da bu mavzudan odatda 1–2 savol bo'ladi: tasvir zaryadi va kuch, induksiyalangan zaryad, bir jinsli maydondagi o'tkazgich shar, Laplas tenglamasi xossalari.",
+  "ru": "В B2-L13 мы записали уравнения Пуассона и Лапласа и рассмотрели два простейших случая метода изображений — заземлённые плоскость и сферу; в B2-L14 получили условия на границе двух диэлектриков, в B2-L20 — общие граничные условия. На этом уроке мы превратим эти идеи в систематический метод: сначала докажем, почему можно «угадать ответ и проверить его», затем изучим методы изображений и разделения переменных. В GRE по этой теме обычно 1–2 вопроса: заряд-изображение и сила, индуцированный заряд, проводящий шар в однородном поле, свойства уравнения Лапласа.",
+  "en": "In B2-L13 we wrote down Poisson's and Laplace's equations and looked at the two simplest cases of the method of images — a grounded plane and sphere; in B2-L14 we obtained the conditions at the boundary between two dielectrics, and in B2-L20 the general boundary conditions. In this lesson we turn these ideas into a systematic method: first we prove why one may \"guess the answer and check it\", then we study the methods of images and of separation of variables. The GRE usually has 1–2 questions on this topic: an image charge and the force, the induced charge, a conducting sphere in a uniform field, and properties of Laplace's equation."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Chegaraviy masala va yagonalik teoremalari",
+  "ru": "1. Краевая задача и теоремы единственности",
+  "en": "1. The boundary-value problem and uniqueness theorems"
+ },
+ {
+  "t": "li",
+  "uz": "**Masalaning qo'yilishi.** Elektrostatikada potensial $V$ hajmda Puasson tenglamasini, zaryadsiz joyda esa Laplas tenglamasini qanoatlantiradi. Lekin tenglamaning o'zi yechimni aniqlamaydi — chegarada nima berilgani muhim. Ikki tur shart bor: **Dirixle sharti (Dirichlet condition)** — chegarada potensial berilgan (masalan, yerga ulangan o'tkazgichda $\\varphi=0$); **Neyman sharti (Neumann condition)** — chegarada $\\frac{\\partial\\varphi}{\\partial n}=-E_n$, ya'ni sirt zaryadi berilgan. O'tkazgichlar uchun yana bir variant: har bir o'tkazgichning to'liq zaryadi berilgan.",
+  "ru": "**Постановка задачи.** В электростатике потенциал в объёме $V$ удовлетворяет уравнению Пуассона, а там, где нет заряда, — уравнению Лапласа. Но само уравнение решения не определяет — важно, что задано на границе. Бывают условия двух типов: **условие Дирихле (Dirichlet condition)** — на границе задан потенциал (например, на заземлённом проводнике $\\varphi=0$); **условие Неймана (Neumann condition)** — на границе задано $\\frac{\\partial\\varphi}{\\partial n}=-E_n$, то есть поверхностный заряд. Для проводников есть ещё вариант: задан полный заряд каждого проводника.",
+  "en": "**Setting up the problem.** In electrostatics the potential in a volume $V$ satisfies Poisson's equation, and where there is no charge it satisfies Laplace's equation. But the equation alone does not fix the solution — what is given on the boundary matters. There are two types of condition: the **Dirichlet condition** — the potential is given on the boundary (for example, $\\varphi=0$ on a grounded conductor); the **Neumann condition** — $\\frac{\\partial\\varphi}{\\partial n}=-E_n$ is given on the boundary, i.e. the surface charge. For conductors there is one more option: the total charge on each conductor is given."
+ },
+ {
+  "t": "m",
+  "m": "\\nabla^2\\varphi=-\\frac{\\rho}{\\varepsilon_0},\\qquad \\varphi\\big|_S=f,\\qquad \\frac{\\partial\\varphi}{\\partial n}\\Big|_S=g"
+ },
+ {
+  "t": "li",
+  "uz": "**Birinchi yagonalik teoremasi.** Hajmdagi zaryad taqsimoti va chegaradagi potensial berilsa, yechim yagona. Isbot: ikki yechim $\\varphi_1$ va $\\varphi_2$ bo'lsa, ayirma $\\psi=\\varphi_1-\\varphi_2$ butun hajmda Laplas tenglamasini qanoatlantiradi va chegarada nolga teng. Laplas tenglamasi yechimi hajm ichida maksimum va minimumga ega emas (2-bo'lim), demak $\\psi$ ning eng katta va eng kichik qiymati chegarada — nol. Shunday qilib $\\psi\\equiv0$.",
+  "ru": "**Первая теорема единственности.** Если заданы распределение заряда в объёме и потенциал на границе, решение единственно. Доказательство: если есть два решения $\\varphi_1$ и $\\varphi_2$, их разность $\\psi=\\varphi_1-\\varphi_2$ удовлетворяет во всём объёме уравнению Лапласа и равна нулю на границе. Решение уравнения Лапласа не имеет максимумов и минимумов внутри объёма (раздел 2), значит наибольшее и наименьшее значения $\\psi$ — на границе, то есть нуль. Таким образом $\\psi\\equiv0$.",
+  "en": "**The first uniqueness theorem.** If the charge distribution in the volume and the potential on the boundary are given, the solution is unique. Proof: if there are two solutions $\\varphi_1$ and $\\varphi_2$, their difference $\\psi=\\varphi_1-\\varphi_2$ satisfies Laplace's equation throughout the volume and vanishes on the boundary. A solution of Laplace's equation has no maxima or minima inside the volume (Section 2), so the largest and smallest values of $\\psi$ are on the boundary, i.e. zero. Hence $\\psi\\equiv0$."
+ },
+ {
+  "t": "li",
+  "uz": "**Ikkinchi yagonalik teoremasi.** O'tkazgichlar bilan o'ralgan hajmda zaryad zichligi va har bir o'tkazgichning to'liq zaryadi berilsa, maydon $\\vec E$ yagona. Isbot $\\nabla\\cdot\\left(\\psi\\nabla\\psi\\right)=\\left(\\nabla\\psi\\right)^2$ ayniyatiga asoslanadi: Gauss–Ostrogradskiy teoremasi bilan uni integrallaymiz. Har bir o'tkazgichda $\\psi$ o'zgarmas, $\\oint\\nabla\\psi\\cdot d\\vec A$ esa zaryadlar ayirmasiga proporsional — nol. Demak $\\int\\left(\\nabla\\psi\\right)^2dV=0$ va ikki maydon bir xil.",
+  "ru": "**Вторая теорема единственности.** Если в объёме, ограниченном проводниками, заданы плотность заряда и полный заряд каждого проводника, поле $\\vec E$ единственно. Доказательство основано на тождестве $\\nabla\\cdot\\left(\\psi\\nabla\\psi\\right)=\\left(\\nabla\\psi\\right)^2$: проинтегрируем его по теореме Остроградского. На каждом проводнике $\\psi$ постоянна, а $\\oint\\nabla\\psi\\cdot d\\vec A$ пропорционален разности зарядов — нулю. Значит $\\int\\left(\\nabla\\psi\\right)^2dV=0$, и два поля совпадают.",
+  "en": "**The second uniqueness theorem.** If, in a volume bounded by conductors, the charge density and the total charge on each conductor are given, the field $\\vec E$ is unique. The proof rests on the identity $\\nabla\\cdot\\left(\\psi\\nabla\\psi\\right)=\\left(\\nabla\\psi\\right)^2$: integrate it with the divergence theorem. On each conductor $\\psi$ is constant, and $\\oint\\nabla\\psi\\cdot d\\vec A$ is proportional to the difference of the charges — zero. So $\\int\\left(\\nabla\\psi\\right)^2dV=0$ and the two fields coincide."
+ },
+ {
+  "t": "m",
+  "m": "\\int_V\\left(\\nabla\\psi\\right)^2dV=\\oint_S\\psi\\,\\nabla\\psi\\cdot d\\vec A=0\\ \\Rightarrow\\ \\nabla\\psi=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Amaliy ma'nosi.** Yagonalik teoremalari tufayli yechimni qanday topganingiz muhim emas: agar u tenglamani va chegaraviy shartlarni qanoatlantirsa, u — yagona to'g'ri yechim. Tasvirlar usuli aynan shunga asoslangan: o'tkazgichni o'rganilayotgan sohadan **tashqarida** joylashgan soxta zaryadlar bilan almashtiramiz, ular chegarada kerakli potensialni beradi. Teoremalardan Faradey qafasi ham kelib chiqadi: zaryadsiz bo'shliqda $\\varphi=\\mathrm{const}$ yechim chegaraviy shartni qanoatlantiradi, demak u yagona va $\\vec E=0$.",
+  "ru": "**Практический смысл.** Благодаря теоремам единственности неважно, как вы нашли решение: если оно удовлетворяет уравнению и граничным условиям, это — единственное верное решение. Метод изображений основан именно на этом: заменяем проводник фиктивными зарядами, расположенными **вне** исследуемой области, которые дают на границе нужный потенциал. Из теорем следует и клетка Фарадея: в полости без зарядов решение $\\varphi=\\mathrm{const}$ удовлетворяет граничному условию, значит оно единственно и $\\vec E=0$.",
+  "en": "**Practical meaning.** Thanks to the uniqueness theorems it does not matter how you found a solution: if it satisfies the equation and the boundary conditions, it is the one correct solution. The method of images rests on exactly this: we replace a conductor by fictitious charges placed **outside** the region of interest, which produce the required potential on the boundary. The Faraday cage also follows from the theorems: in a charge-free cavity the solution $\\varphi=\\mathrm{const}$ satisfies the boundary condition, so it is the unique one and $\\vec E=0$."
+ },
+ {
+  "t": "h2",
+  "uz": "2. O'rta qiymat xossasi va relaksatsiya usuli",
+  "ru": "2. Свойство среднего значения и метод релаксации",
+  "en": "2. The mean-value property and the relaxation method"
+ },
+ {
+  "t": "li",
+  "uz": "**O'rta qiymat teoremasi.** Laplas tenglamasining yechimi uchun ichida zaryad bo'lmagan istalgan sfera sirti bo'yicha potensialning o'rtacha qiymati sfera markazidagi potensialga teng. Ikki o'lchovli (masalan, uzun quvurdagi) masalada xuddi shunday aylana bo'yicha o'rtacha. Bundan darhol: zaryadsiz sohada $\\varphi$ maksimum yoki minimumga ega bo'la olmaydi — markazdagi qiymat atrofidagi barcha qiymatlardan katta bo'lsa, o'rtacha unga teng bo'lolmasdi. Bu Irnshou teoremasining (B2-L12) yana bir ko'rinishi: zaryad elektrostatik maydonda turg'un muvozanatda tura olmaydi.",
+  "ru": "**Теорема о среднем.** Для решения уравнения Лапласа среднее значение потенциала по поверхности любой сферы, внутри которой нет заряда, равно потенциалу в центре сферы. В двумерной задаче (например, в длинной трубе) — так же для среднего по окружности. Отсюда сразу: в области без зарядов $\\varphi$ не может иметь максимума или минимума — если бы значение в центре было больше всех соседних, среднее не могло бы ему равняться. Это ещё одна форма теоремы Ирншоу (B2-L12): заряд не может находиться в устойчивом равновесии в электростатическом поле.",
+  "en": "**The mean-value theorem.** For a solution of Laplace's equation, the average of the potential over the surface of any sphere containing no charge equals the potential at the centre of the sphere. In a two-dimensional problem (for example, in a long tube) the same holds for the average over a circle. It follows at once that in a charge-free region $\\varphi$ cannot have a maximum or a minimum — if the value at the centre exceeded all neighbouring values, the average could not equal it. This is another form of Earnshaw's theorem (B2-L12): a charge cannot be in stable equilibrium in an electrostatic field."
+ },
+ {
+  "t": "m",
+  "m": "\\varphi\\left(\\vec r_0\\right)=\\frac{1}{4\\pi R^2}\\oint_{\\left|\\vec r-\\vec r_0\\right|=R}\\varphi\\,dA,\\qquad \\varphi_{i,j}=\\frac{1}{4}\\left(\\varphi_{i+1,j}+\\varphi_{i-1,j}+\\varphi_{i,j+1}+\\varphi_{i,j-1}\\right)"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L22-F01.png",
+   "ru": "figures/B2-L22-F01-ru.png",
+   "en": "figures/B2-L22-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Relaksatsiya usuli ([[F01]]).** O'rta qiymat xossasining diskret ko'rinishi: kvadrat to'rning har bir ichki tugunida potensial to'rtta qo'shni tugundagi qiymatlarning o'rtachasiga teng. Chegaradagi qiymatlarni tayinlab, ichki tugunlarga ixtiyoriy boshlang'ich qiymat beramiz va har bir tugunni qo'shnilarining o'rtachasi bilan qayta-qayta almashtiramiz (Yakobi yoki Gauss–Zeydel iteratsiyasi). Jarayon yagona yechimga yaqinlashadi. Kichik to'rda tenglamalar sistemasini qo'lda ham yechish mumkin, katta to'rda — kompyuterda; bu usul kondensator, elektron lampa va ion tuzoqlarini loyihalashda ishlatiladi.",
+  "ru": "**Метод релаксации ([[F01]]).** Дискретная форма свойства среднего: в каждом внутреннем узле квадратной сетки потенциал равен среднему значений в четырёх соседних узлах. Задав значения на границе, присваиваем внутренним узлам произвольные начальные значения и многократно заменяем каждый узел средним его соседей (итерация Якоби или Гаусса–Зейделя). Процесс сходится к единственному решению. На маленькой сетке систему уравнений можно решить и вручную, на большой — на компьютере; этим методом проектируют конденсаторы, электронные лампы и ионные ловушки.",
+  "en": "**The relaxation method ([[F01]]).** The discrete form of the mean-value property: at each interior node of a square grid the potential equals the average of the values at its four neighbours. Fixing the boundary values, we give the interior nodes arbitrary starting values and repeatedly replace each node by the average of its neighbours (Jacobi or Gauss–Seidel iteration). The process converges to the unique solution. On a small grid the system of equations can be solved by hand, on a large one by computer; this method is used to design capacitors, vacuum tubes and ion traps."
+ },
+ {
+  "t": "li",
+  "uz": "**Superpozitsiya.** Laplas tenglamasi chiziqli, shuning uchun chegaraviy shartlarni bo'laklarga ajratish mumkin: har bir bo'lak uchun alohida yechim topib, ularni qo'shamiz. Masalan, to'g'ri burchakli quvurning har bir devori o'z potensialida bo'lsa, masalani bitta devori potensialda, qolganlari nolda bo'lgan to'rtta masalaga ajratamiz; simmetriya ko'pincha javobni hisoblashsiz beradi.",
+  "ru": "**Суперпозиция.** Уравнение Лапласа линейно, поэтому граничные условия можно разбивать на части: для каждой части найти отдельное решение и сложить их. Например, если каждая стенка прямоугольной трубы находится под своим потенциалом, разбиваем задачу на четыре задачи, где под потенциалом одна стенка, а остальные — под нулём; симметрия часто даёт ответ без вычислений.",
+  "en": "**Superposition.** Laplace's equation is linear, so the boundary conditions can be split into parts: find a separate solution for each part and add them. For example, if each wall of a rectangular tube is at its own potential, we split the problem into four problems with one wall at its potential and the others at zero; symmetry often gives the answer without calculation."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Tekislik: induksiyalangan zaryad, chiziqli zaryad va dipol",
+  "ru": "3. Плоскость: индуцированный заряд, нить и диполь",
+  "en": "3. The plane: induced charge, line charge and dipole"
+ },
+ {
+  "t": "li",
+  "uz": "**Eslatma.** Yerga ulangan cheksiz o'tkazgich tekislikdan $d$ masofadagi $q$ zaryad uchun tasvir — ko'zgu nuqtadagi $-q$ (B2-L13). Tekislik ustidagi maydon $q$ va $-q$ maydoniga teng, tekislik ostida esa maydon yo'q. Sirtdagi maydon tekislikka perpendikulyar, uning moduli ikkala zaryadning normal tashkil etuvchilari yig'indisi; undan $\\sigma=\\varepsilon_0E_n$ topiladi.",
+  "ru": "**Напоминание.** Для заряда $q$ на расстоянии $d$ от заземлённой бесконечной проводящей плоскости изображение — заряд $-q$ в зеркальной точке (B2-L13). Поле над плоскостью равно полю зарядов $q$ и $-q$, под плоскостью поля нет. Поле у поверхности перпендикулярно плоскости, его модуль — сумма нормальных составляющих обоих зарядов; из него находится $\\sigma=\\varepsilon_0E_n$.",
+  "en": "**Reminder.** For a charge $q$ a distance $d$ from a grounded infinite conducting plane, the image is $-q$ at the mirror point (B2-L13). The field above the plane equals that of $q$ and $-q$; below the plane there is no field. The field at the surface is perpendicular to the plane, its magnitude being the sum of the normal components of both charges; from it one finds $\\sigma=\\varepsilon_0E_n$."
+ },
+ {
+  "t": "m",
+  "m": "\\sigma\\left(s\\right)=-\\frac{qd}{2\\pi\\left(d^2+s^2\\right)^{\\frac{3}{2}}},\\qquad Q\\left(s\\right)=\\int_0^s\\sigma\\,2\\pi s'\\,ds'=-q\\left(1-\\frac{d}{\\sqrt{d^2+s^2}}\\right)"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L22-F02.png",
+   "ru": "figures/B2-L22-F02-ru.png",
+   "en": "figures/B2-L22-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Zaryad qayerda to'planadi ([[F02]]).** Induksiyalangan zaryad zaryad ostida eng zich va $s\\gg d$ da $\\frac{1}{s^3}$ kabi kamayadi. Radiusi $s$ bo'lgan doira ichidagi zaryad $Q\\left(s\\right)$ formula bilan beriladi: $s\\to\\infty$ da u $-q$ ga intiladi — $q$ dan chiqqan barcha maydon chiziqlari tekislikda tugaydi. Masalan, induksiyalangan zaryadning yarmi radiusi $\\sqrt{3}d$ bo'lgan doirada joylashgan. Elektrostatik energiya va zaryadni olib ketish ishi uchun tasvir juftligi energiyasining yarmi olinadi (B2-L13) — maydon faqat yarim fazoda.",
+  "ru": "**Где собирается заряд ([[F02]]).** Индуцированный заряд плотнее всего под зарядом и при $s\\gg d$ убывает как $\\frac{1}{s^3}$. Заряд внутри круга радиуса $s$ даётся формулой $Q\\left(s\\right)$: при $s\\to\\infty$ он стремится к $-q$ — все линии поля, вышедшие из $q$, заканчиваются на плоскости. Например, половина индуцированного заряда находится в круге радиуса $\\sqrt{3}d$. Для электростатической энергии и работы удаления заряда берут половину энергии пары с изображением (B2-L13) — поле есть только в полупространстве.",
+  "en": "**Where the charge collects ([[F02]]).** The induced charge is densest beneath the charge and falls off as $\\frac{1}{s^3}$ for $s\\gg d$. The charge inside a circle of radius $s$ is given by $Q\\left(s\\right)$: as $s\\to\\infty$ it tends to $-q$ — all the field lines leaving $q$ end on the plane. For example, half of the induced charge lies within a circle of radius $\\sqrt{3}d$. For the electrostatic energy and the work to remove the charge one takes half the energy of the charge–image pair (B2-L13) — the field exists only in a half-space."
+ },
+ {
+  "t": "li",
+  "uz": "**Chiziqli zaryad.** Tekislikdan $h$ balandlikda unga parallel joylashgan cheksiz ip ($\\lambda$) uchun tasvir — ko'zgu holatdagi $-\\lambda$ ip. Potensial ikki ipning logarifmik potensiallari yig'indisi, tekislikda u nolga teng. Ipga birlik uzunlikka ta'sir qiluvchi kuch tasvir ipning $2h$ masofadagi maydonidan topiladi; induksiyalangan zichlik $\\frac{1}{h^2+x^2}$ kabi kamayadi, bu yerda $x$ — ip proyeksiyasidan masofa.",
+  "ru": "**Заряженная нить.** Для бесконечной нити ($\\lambda$), параллельной плоскости на высоте $h$, изображение — нить $-\\lambda$ в зеркальном положении. Потенциал — сумма логарифмических потенциалов двух нитей, на плоскости он равен нулю. Сила на единицу длины нити находится из поля нити-изображения на расстоянии $2h$; индуцированная плотность убывает как $\\frac{1}{h^2+x^2}$, где $x$ — расстояние от проекции нити.",
+  "en": "**A line charge.** For an infinite thread ($\\lambda$) parallel to the plane at height $h$, the image is a thread $-\\lambda$ at the mirror position. The potential is the sum of the logarithmic potentials of the two threads, and it vanishes on the plane. The force per unit length on the thread is found from the field of the image thread at distance $2h$; the induced density falls off as $\\frac{1}{h^2+x^2}$, where $x$ is the distance from the thread's projection."
+ },
+ {
+  "t": "m",
+  "m": "\\varphi=\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{r_2}{r_1},\\qquad \\sigma\\left(x\\right)=-\\frac{\\lambda h}{\\pi\\left(h^2+x^2\\right)}"
+ },
+ {
+  "t": "li",
+  "uz": "**Dipol.** Dipolni ikki zaryad deb, har biriga tasvir quramiz. Natija: tasvir dipolning tekislikka normal tashkil etuvchisi saqlanadi, urinma tashkil etuvchisi esa teskari bo'ladi — ko'zgudagi aksga o'xshash, faqat zaryad ishorasi almashgani uchun «normal» qism yo'nalishini saqlaydi. Tekislikka perpendikulyar dipol o'zining tasviri bilan bir o'qda va bir yo'nalishda — ular tortishadi; parallel dipol teskari yo'nalgan tasviri bilan ham tortishadi. Shuning uchun qutbli molekulalar metall sirtiga yopishadi.",
+  "ru": "**Диполь.** Считаем диполь двумя зарядами и строим изображение каждого. Результат: нормальная к плоскости составляющая диполя-изображения сохраняется, а касательная обращается — как отражение в зеркале, только из-за смены знака зарядов «нормальная» часть сохраняет направление. Диполь, перпендикулярный плоскости, находится на одной оси со своим изображением и сонаправлен с ним — они притягиваются; параллельный диполь тоже притягивается к противоположно направленному изображению. Поэтому полярные молекулы прилипают к металлической поверхности.",
+  "en": "**A dipole.** Treat the dipole as two charges and image each one. The result: the component of the image dipole normal to the plane is preserved, while the tangential component is reversed — like a mirror reflection, except that because the charges change sign the \"normal\" part keeps its direction. A dipole perpendicular to the plane lies on the same axis as its image and points the same way — they attract; a parallel dipole is also attracted to its oppositely directed image. That is why polar molecules stick to a metal surface."
+ },
+ {
+  "t": "m",
+  "m": "p'_n=p_n,\\qquad p'_\\tau=-p_\\tau"
+ },
+ {
+  "t": "h2",
+  "uz": "4. Burchak va parallel tekisliklar",
+  "ru": "4. Угол и параллельные плоскости",
+  "en": "4. A corner and parallel planes"
+ },
+ {
+  "t": "li",
+  "uz": "**To'g'ri burchak.** Ikki yerga ulangan yarim tekislik $90^\\circ$ burchak hosil qilsa, ichidagi $q$ zaryad uchun **uchta** tasvir kerak: har bir tekislikka nisbatan ko'zgu nuqtalarda $-q$ va $-q$, burchak uchiga nisbatan simmetrik nuqtada $+q$. To'rt zaryad (biri haqiqiy) to'g'ri to'rtburchak uchlarida turadi va ikkala tekislikda $\\varphi=0$ bo'ladi. Haqiqiy zaryadga uchala tasvir ta'sir qiladi: ikkitasi tortadi, uchinchisi itaradi, natijaviy kuch burchak uchiga qarab yo'nalgan (agar zaryad bissektrisada bo'lsa).",
+  "ru": "**Прямой угол.** Если две заземлённые полуплоскости образуют угол $90^\\circ$, для заряда $q$ внутри нужны **три** изображения: $-q$ и $-q$ в точках, зеркальных относительно каждой плоскости, и $+q$ в точке, симметричной относительно вершины угла. Четыре заряда (один настоящий) стоят в вершинах прямоугольника, и на обеих плоскостях $\\varphi=0$. На настоящий заряд действуют все три изображения: два притягивают, третье отталкивает; результирующая сила направлена к вершине угла (если заряд на биссектрисе).",
+  "en": "**A right angle.** If two grounded half-planes form a $90^\\circ$ angle, a charge $q$ inside needs **three** images: $-q$ and $-q$ at the mirror points with respect to each plane, and $+q$ at the point symmetric with respect to the corner. The four charges (one real) sit at the corners of a rectangle, and $\\varphi=0$ on both planes. All three images act on the real charge: two attract and the third repels; the net force points towards the corner (if the charge is on the bisector)."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L22-F03.png",
+   "ru": "figures/B2-L22-F03-ru.png",
+   "en": "figures/B2-L22-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy burchak ([[F03]]).** Burchak $\\frac{\\pi}{n}$ ($n$ — butun) bo'lsa, tasvirlar soni $2n-1$: ular burchak uchidan bir xil masofada, aylana bo'ylab ishoralari almashinib joylashadi. Masalan, $60^\\circ$ uchun beshta tasvir. Agar $\\frac{\\pi}{\\alpha}$ butun bo'lmasa, tasvirlar zanjiri yopilmaydi va oddiy tasvirlar usuli ishlamaydi — bunday masala qutb koordinatalarida o'zgaruvchilarni ajratish bilan yechiladi.",
+  "ru": "**Произвольный угол ([[F03]]).** Если угол равен $\\frac{\\pi}{n}$ ($n$ — целое), число изображений $2n-1$: они расположены на окружности на одинаковом расстоянии от вершины с чередующимися знаками. Например, для $60^\\circ$ — пять изображений. Если $\\frac{\\pi}{\\alpha}$ не целое, цепочка изображений не замыкается и простой метод изображений не работает — такая задача решается разделением переменных в полярных координатах.",
+  "en": "**A general angle ([[F03]]).** If the angle is $\\frac{\\pi}{n}$ ($n$ an integer), there are $2n-1$ images: they lie on a circle at the same distance from the corner, with alternating signs. For example, a $60^\\circ$ corner needs five images. If $\\frac{\\pi}{\\alpha}$ is not an integer, the chain of images does not close and the simple method of images fails — such a problem is solved by separating variables in polar coordinates."
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki parallel tekislik.** Oralig'i $L$ bo'lgan ikki yerga ulangan tekislik orasidagi zaryad uchun tasvirlar cheksiz zanjir hosil qiladi: har bir tasvir ikkinchi tekislikda yana aks etadi. Zaryadlar $\\pm q$ ishorali, $2L$ davr bilan takrorlanadi; kuch qatorning yig'indisi sifatida topiladi va zaryad o'rtada bo'lganda nolga teng (ammo bu muvozanat turg'unmas). Plastinkalardagi induksiyalangan zaryadlarni topish uchun qatorni yig'ish shart emas — 6-bo'limdagi Grin o'zaro teoremasi javobni bir qatorda beradi.",
+  "ru": "**Две параллельные плоскости.** Для заряда между двумя заземлёнными плоскостями на расстоянии $L$ изображения образуют бесконечную цепочку: каждое изображение снова отражается во второй плоскости. Заряды знаков $\\pm q$ повторяются с периодом $2L$; сила находится как сумма ряда и равна нулю, когда заряд посередине (но это равновесие неустойчиво). Чтобы найти индуцированные заряды на пластинах, суммировать ряд не нужно — теорема взаимности Грина из раздела 6 даёт ответ в одну строку.",
+  "en": "**Two parallel planes.** For a charge between two grounded planes a distance $L$ apart the images form an infinite chain: each image is reflected again in the other plane. Charges of signs $\\pm q$ repeat with period $2L$; the force is found as the sum of a series and vanishes when the charge is midway (but this equilibrium is unstable). To find the induced charges on the plates one need not sum the series — Green's reciprocity theorem in Section 6 gives the answer in one line."
+ },
+ {
+  "t": "m",
+  "m": "x_m=2mL+x_0\\ \\left(+q\\right),\\qquad x_m=2mL-x_0\\ \\left(-q\\right),\\qquad m=0,\\pm1,\\pm2,\\dots"
+ },
+ {
+  "t": "h2",
+  "uz": "5. Shar: yerga ulangan, neytral va zaryadlangan",
+  "ru": "5. Сфера: заземлённая, нейтральная и заряженная",
+  "en": "5. The sphere: grounded, neutral and charged"
+ },
+ {
+  "t": "li",
+  "uz": "**Yerga ulangan shar.** Markazdan $a$ masofadagi $q$ zaryad uchun radiusi $R$ bo'lgan yerga ulangan sharning tasviri — markazdan $b=\\frac{R^2}{a}$ masofada, zaryad tomonda joylashgan $q'=-\\frac{qR}{a}$ (B2-L13). Uni tekshirish oson: sfera nuqtasidan $q$ va $q'$ gacha masofalar nisbati o'zgarmas va $\\frac{a}{R}$ ga teng, shuning uchun potensiallar sfera bo'ylab aynan yo'qoladi. Induksiyalangan zichlik sferaning zaryadga yaqin qutbida eng katta; to'liq induksiyalangan zaryad $-q$ emas, $q'=-\\frac{qR}{a}$ — maydon chiziqlarining bir qismi cheksizlikka ketadi.",
+  "ru": "**Заземлённая сфера.** Для заряда $q$ на расстоянии $a$ от центра изображение заземлённой сферы радиуса $R$ — заряд $q'=-\\frac{qR}{a}$ на расстоянии $b=\\frac{R^2}{a}$ от центра со стороны заряда (B2-L13). Это легко проверить: отношение расстояний от точки сферы до $q$ и до $q'$ постоянно и равно $\\frac{a}{R}$, поэтому потенциалы на сфере в точности гасятся. Индуцированная плотность наибольшая у полюса сферы, ближайшего к заряду; полный индуцированный заряд не $-q$, а $q'=-\\frac{qR}{a}$ — часть линий поля уходит на бесконечность.",
+  "en": "**A grounded sphere.** For a charge $q$ at distance $a$ from the centre, the image of a grounded sphere of radius $R$ is $q'=-\\frac{qR}{a}$ at distance $b=\\frac{R^2}{a}$ from the centre on the side of the charge (B2-L13). It is easy to check: the ratio of the distances from a point of the sphere to $q$ and to $q'$ is constant and equal to $\\frac{a}{R}$, so the potentials cancel exactly on the sphere. The induced density is largest at the pole of the sphere nearest the charge; the total induced charge is not $-q$ but $q'=-\\frac{qR}{a}$ — some of the field lines go off to infinity."
+ },
+ {
+  "t": "m",
+  "m": "q'=-\\frac{qR}{a},\\qquad b=\\frac{R^2}{a},\\qquad \\sigma\\left(\\theta\\right)=-\\frac{q\\left(a^2-R^2\\right)}{4\\pi R\\left(R^2+a^2-2aR\\cos\\theta\\right)^{\\frac{3}{2}}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L22-F04.png",
+   "ru": "figures/B2-L22-F04-ru.png",
+   "en": "figures/B2-L22-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Ekvipotensial sfera ([[F04]]).** Rasmda $q$ va $q'$ maydon chiziqlari hamda $\\varphi=0$ chizig'i ko'rsatilgan: u aynan sfera bilan ustma-ust tushadi. Sfera ichidagi maydon — soxta, haqiqatda o'tkazgich ichida $\\vec E=0$. Tasvir zaryad faqat sferaning ichida (o'rganilayotgan sohadan tashqarida) turishi shart; aks holda biz boshqa Puasson masalasini yechgan bo'lamiz.",
+  "ru": "**Эквипотенциальная сфера ([[F04]]).** На рисунке показаны линии поля зарядов $q$ и $q'$ и линия $\\varphi=0$: она точно совпадает со сферой. Поле внутри сферы фиктивное — на самом деле внутри проводника $\\vec E=0$. Заряд-изображение обязан находиться только внутри сферы (вне исследуемой области); иначе мы решили бы другую задачу Пуассона.",
+  "en": "**The equipotential sphere ([[F04]]).** The figure shows the field lines of $q$ and $q'$ and the line $\\varphi=0$: it coincides exactly with the sphere. The field inside the sphere is fictitious — in reality $\\vec E=0$ inside the conductor. The image charge must lie only inside the sphere (outside the region of interest); otherwise we would be solving a different Poisson problem."
+ },
+ {
+  "t": "li",
+  "uz": "**Izolyatsiyalangan shar.** Agar shar yerga ulanmagan va zaryadi $Q$ bo'lsa, ikkinchi yagonalik teoremasi bo'yicha yana bitta tasvir — markazga $Q-q'=Q+\\frac{qR}{a}$ zaryad qo'yish kifoya: sfera ekvipotensial qoladi va to'liq zaryad $Q$ ga teng. Neytral shar uchun ($Q=0$) markazdagi zaryad $+\\frac{qR}{a}$, shar potensiali esa $\\varphi=\\frac{kq}{a}$ — xuddi shar yo'qdek, zaryadning markazdagi potensiali.",
+  "ru": "**Изолированная сфера.** Если сфера не заземлена и имеет заряд $Q$, по второй теореме единственности достаточно ещё одного изображения — заряда $Q-q'=Q+\\frac{qR}{a}$ в центре: сфера остаётся эквипотенциальной, а полный заряд равен $Q$. Для нейтральной сферы ($Q=0$) заряд в центре $+\\frac{qR}{a}$, а потенциал сферы $\\varphi=\\frac{kq}{a}$ — как будто сферы нет, потенциал заряда в центре.",
+  "en": "**An isolated sphere.** If the sphere is not grounded and carries charge $Q$, the second uniqueness theorem says one more image suffices — a charge $Q-q'=Q+\\frac{qR}{a}$ at the centre: the sphere stays equipotential and its total charge equals $Q$. For a neutral sphere ($Q=0$) the central charge is $+\\frac{qR}{a}$, and the potential of the sphere is $\\varphi=\\frac{kq}{a}$ — as if the sphere were absent, the potential of the charge at the centre."
+ },
+ {
+  "t": "m",
+  "m": "F=kq\\left[\\frac{Q+\\frac{qR}{a}}{a^2}-\\frac{qRa}{\\left(a^2-R^2\\right)^2}\\right],\\qquad \\varphi_R=\\frac{kQ}{R}+\\frac{kq}{a}"
+ },
+ {
+  "t": "li",
+  "uz": "**Bir xil ishorali zaryadlar ham tortishadi.** Formulada birinchi had (markazdagi zaryad) itarish, ikkinchisi (tasvir) tortishishni beradi. Uzoqda ikkinchi had $\\frac{1}{a^5}$ kabi tez kamayadi va $Q$ va $q$ bir ishorali bo'lsa, zaryad itariladi. Lekin $a\\to R$ da ikkinchi had cheksiz o'sadi — sirtga yetarlicha yaqinlashtirilgan zaryad har qanday zaryadlangan sharga tortiladi. Shuning uchun elektronlar metalldan o'z-o'zidan uchib chiqmaydi: chiqish ishining bir qismi tasvir kuchini yengishga ketadi (Shottki effekti).",
+  "ru": "**Одноимённые заряды тоже притягиваются.** В формуле первое слагаемое (заряд в центре) даёт отталкивание, второе (изображение) — притяжение. Вдали второе слагаемое быстро убывает как $\\frac{1}{a^5}$, и если $Q$ и $q$ одного знака, заряд отталкивается. Но при $a\\to R$ второе слагаемое неограниченно растёт — заряд, поднесённый достаточно близко к поверхности, притягивается к любой заряженной сфере. Поэтому электроны сами не вылетают из металла: часть работы выхода идёт на преодоление силы изображения (эффект Шоттки).",
+  "en": "**Like charges can attract.** In the formula the first term (the central charge) gives repulsion and the second (the image) gives attraction. Far away the second term falls off quickly, as $\\frac{1}{a^5}$, and if $Q$ and $q$ have the same sign the charge is repelled. But as $a\\to R$ the second term grows without bound — a charge brought close enough to the surface is attracted to any charged sphere. That is why electrons do not fly out of a metal by themselves: part of the work function goes into overcoming the image force (the Schottky effect)."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Sferik bo'shliq va Grin o'zaro teoremasi",
+  "ru": "6. Сферическая полость и теорема взаимности Грина",
+  "en": "6. A spherical cavity and Green's reciprocity theorem"
+ },
+ {
+  "t": "li",
+  "uz": "**Bo'shliq ichidagi zaryad.** Yerga ulangan o'tkazgichdagi radiusi $R$ bo'lgan sferik bo'shliq ichida markazdan $a<R$ masofada $q$ zaryad tursin. Xuddi o'sha formulalar ishlaydi, faqat endi tasvir bo'shliqdan tashqarida: $b=\\frac{R^2}{a}>R$ va $\\left|q'\\right|=\\frac{qR}{a}>q$. Bo'shliq devoridagi to'liq induksiyalangan zaryad esa Gauss teoremasi bo'yicha aynan $-q$ — tasvir zaryadining kattaligi induksiyalangan zaryadga teng bo'lishi shart emas. Zaryad eng yaqin devorga tortiladi; markazda kuch nolga teng.",
+  "ru": "**Заряд внутри полости.** Пусть в сферической полости радиуса $R$ внутри заземлённого проводника на расстоянии $a<R$ от центра находится заряд $q$. Работают те же формулы, только теперь изображение вне полости: $b=\\frac{R^2}{a}>R$ и $\\left|q'\\right|=\\frac{qR}{a}>q$. А полный индуцированный заряд на стенке полости по теореме Гаусса равен ровно $-q$ — величина заряда-изображения не обязана совпадать с индуцированным зарядом. Заряд притягивается к ближайшей стенке; в центре сила равна нулю.",
+  "en": "**A charge inside a cavity.** Let a charge $q$ sit at distance $a<R$ from the centre of a spherical cavity of radius $R$ inside a grounded conductor. The same formulas work, except that now the image is outside the cavity: $b=\\frac{R^2}{a}>R$ and $\\left|q'\\right|=\\frac{qR}{a}>q$. Yet the total induced charge on the cavity wall is exactly $-q$ by Gauss's law — the size of the image charge need not equal the induced charge. The charge is attracted to the nearest wall; at the centre the force is zero."
+ },
+ {
+  "t": "li",
+  "uz": "**Grin o'zaro teoremasi (Green's reciprocity theorem).** Bir xil o'tkazgichlar sistemasida ikki xil holatni qaraylik: 1-holatda zaryadlar $q_i$ va potensiallar $\\varphi_i$, 2-holatda — $q'_i$ va $\\varphi'_i$ (o'tkazgichlar va nuqtaviy zaryadlar hammasi hisobga olinadi). U holda quyidagi tenglik o'rinli. Isbot: $\\int\\rho_1\\varphi_2\\,dV=\\varepsilon_0\\int\\vec E_1\\cdot\\vec E_2\\,dV$ ifoda 1 va 2 ga nisbatan simmetrik. Teorema bitta qiyin masalani ikkinchi, oson masala orqali yechishga imkon beradi.",
+  "ru": "**Теорема взаимности Грина (Green's reciprocity theorem).** Рассмотрим для одной и той же системы проводников два разных состояния: в 1-м заряды $q_i$ и потенциалы $\\varphi_i$, во 2-м — $q'_i$ и $\\varphi'_i$ (учитываются все проводники и точечные заряды). Тогда справедливо равенство ниже. Доказательство: выражение $\\int\\rho_1\\varphi_2\\,dV=\\varepsilon_0\\int\\vec E_1\\cdot\\vec E_2\\,dV$ симметрично относительно 1 и 2. Теорема позволяет решить одну трудную задачу через другую, лёгкую.",
+  "en": "**Green's reciprocity theorem.** For one and the same system of conductors consider two different states: in state 1 the charges are $q_i$ and the potentials $\\varphi_i$, in state 2 they are $q'_i$ and $\\varphi'_i$ (all conductors and point charges are included). Then the equality below holds. Proof: the expression $\\int\\rho_1\\varphi_2\\,dV=\\varepsilon_0\\int\\vec E_1\\cdot\\vec E_2\\,dV$ is symmetric in 1 and 2. The theorem lets one solve a hard problem through a second, easy one."
+ },
+ {
+  "t": "m",
+  "m": "\\sum_iq_i\\varphi'_i=\\sum_iq'_i\\varphi_i"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol: induksiyalangan zaryad.** Yerga ulangan sharga $q$ qanday zaryad induksiyalaydi? 1-holat: shar yerga ulangan ($\\varphi=0$), unda $Q$ zaryad, $a$ nuqtada $q$. 2-holat: nuqtaviy zaryad yo'q, sharning potensiali $V$, u holda $a$ nuqtadagi potensial $\\frac{VR}{a}$. Teoremadan $q\\frac{VR}{a}+QV=0$, ya'ni $Q=-\\frac{qR}{a}$ — tasvirlar usuli natijasi bilan bir xil, lekin tasvirlarsiz. Xuddi shu yo'l bilan parallel plastinkalar, koaksial silindrlar va boshqa geometriyalarda induksiyalangan zaryadlar oson topiladi.",
+  "ru": "**Пример: индуцированный заряд.** Какой заряд индуцирует $q$ на заземлённой сфере? Состояние 1: сфера заземлена ($\\varphi=0$), на ней заряд $Q$, в точке $a$ — заряд $q$. Состояние 2: точечного заряда нет, потенциал сферы $V$, тогда потенциал в точке $a$ равен $\\frac{VR}{a}$. Из теоремы $q\\frac{VR}{a}+QV=0$, то есть $Q=-\\frac{qR}{a}$ — тот же результат, что и методом изображений, но без изображений. Так же легко находятся индуцированные заряды для параллельных пластин, коаксиальных цилиндров и других геометрий.",
+  "en": "**Example: the induced charge.** What charge does $q$ induce on a grounded sphere? State 1: the sphere is grounded ($\\varphi=0$), it carries charge $Q$, and $q$ sits at point $a$. State 2: there is no point charge and the sphere is at potential $V$, so the potential at point $a$ is $\\frac{VR}{a}$. The theorem gives $q\\frac{VR}{a}+QV=0$, i.e. $Q=-\\frac{qR}{a}$ — the same result as the method of images, but without images. In the same way the induced charges are easily found for parallel plates, coaxial cylinders and other geometries."
+ },
+ {
+  "t": "h2",
+  "uz": "7. Silindr, chiziqli zaryad va ikki simli liniya",
+  "ru": "7. Цилиндр, заряженная нить и двухпроводная линия",
+  "en": "7. A cylinder, a line charge and a two-wire line"
+ },
+ {
+  "t": "li",
+  "uz": "**Ip va silindr.** Radiusi $R$ bo'lgan o'tkazgich silindr o'qidan $a$ masofada unga parallel $\\lambda$ ip bo'lsin. Tasvir — o'qdan $b=\\frac{R^2}{a}$ masofadagi $-\\lambda$ ip (sferadagi kabi $b$, lekin zaryad miqdori o'zgarmaydi). Ikki ipning potensiali $\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{r_2}{r_1}$, uning ekvipotensial chiziqlari — $\\frac{r_2}{r_1}=\\mathrm{const}$ shartini qanoatlantiruvchi **Apolloniy aylanalari (Apollonian circles)**. Silindr sirti ulardan biri, shuning uchun u avtomatik ekvipotensial bo'ladi.",
+  "ru": "**Нить и цилиндр.** Пусть параллельно проводящему цилиндру радиуса $R$ на расстоянии $a$ от его оси находится нить $\\lambda$. Изображение — нить $-\\lambda$ на расстоянии $b=\\frac{R^2}{a}$ от оси (то же $b$, что для сферы, но величина заряда не меняется). Потенциал двух нитей $\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{r_2}{r_1}$, его эквипотенциали — **окружности Аполлония (Apollonian circles)**, удовлетворяющие условию $\\frac{r_2}{r_1}=\\mathrm{const}$. Поверхность цилиндра — одна из них, поэтому она автоматически эквипотенциальна.",
+  "en": "**A thread and a cylinder.** Let a thread $\\lambda$ run parallel to a conducting cylinder of radius $R$ at distance $a$ from its axis. The image is a thread $-\\lambda$ at distance $b=\\frac{R^2}{a}$ from the axis (the same $b$ as for a sphere, but the size of the charge does not change). The potential of two threads is $\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{r_2}{r_1}$, and its equipotentials are the **Apollonian circles** satisfying $\\frac{r_2}{r_1}=\\mathrm{const}$. The surface of the cylinder is one of them, so it is automatically equipotential."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L22-F05.png",
+   "ru": "figures/B2-L22-F05-ru.png",
+   "en": "figures/B2-L22-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki simli liniya ([[F05]]).** Ikki parallel silindr (radiusi $R$, o'qlar orasi $d$) qarama-qarshi zaryadlansa, ularning maydoni ikki ipning maydoni bilan bir xil, faqat iplar o'qlardan biroz siljigan (Apolloniy aylanalari markazi iplar bilan ustma-ust tushmaydi). Natijada birlik uzunlikdagi sig'im aniq formula bilan topiladi; $d\\gg R$ da arkkosinus logarifmga aylanadi. Yerdan $h$ balandlikdagi bitta sim uchun yer tekisligi tasvir simni beradi va sig'im ikki baravar ortadi (masofa $2h$, lekin kuchlanish yarim).",
+  "ru": "**Двухпроводная линия ([[F05]]).** Если два параллельных цилиндра (радиус $R$, расстояние между осями $d$) заряжены противоположно, их поле совпадает с полем двух нитей, только нити немного смещены от осей (центры окружностей Аполлония не совпадают с нитями). В результате ёмкость на единицу длины находится точной формулой; при $d\\gg R$ арккосинус переходит в логарифм. Для одного провода на высоте $h$ над землёй плоскость земли даёт провод-изображение, и ёмкость удваивается (расстояние $2h$, но напряжение вдвое меньше).",
+  "en": "**A two-wire line ([[F05]]).** If two parallel cylinders (radius $R$, axis separation $d$) are oppositely charged, their field is the same as that of two threads, except that the threads are slightly displaced from the axes (the centres of the Apollonian circles do not coincide with the threads). As a result the capacitance per unit length is given by an exact formula; for $d\\gg R$ the inverse cosh becomes a logarithm. For a single wire at height $h$ above the ground, the ground plane supplies an image wire and the capacitance doubles (separation $2h$, but half the voltage)."
+ },
+ {
+  "t": "m",
+  "m": "C'=\\frac{\\pi\\varepsilon_0}{\\mathrm{arccosh}\\frac{d}{2R}}\\approx\\frac{\\pi\\varepsilon_0}{\\ln\\frac{d}{R}},\\qquad C'=\\frac{2\\pi\\varepsilon_0}{\\mathrm{arccosh}\\frac{h}{R}}\\approx\\frac{2\\pi\\varepsilon_0}{\\ln\\frac{2h}{R}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Qo'llanishi.** Elektr uzatish liniyalari, telefon simlari va yuqori chastotali «lenta» kabellarning sig'imi va to'lqin qarshiligi shu formulalar bilan hisoblanadi. Sig'im simlar orasidagi masofaga logarifmik bog'liq — masofani 10 marta oshirish sig'imni bir necha marta emas, atigi bir necha o'n foizga kamaytiradi. Yer ustidagi simning yerga nisbatan sig'imi chaqmoq, statik zaryad va radioantennalar masalalarida kerak bo'ladi.",
+  "ru": "**Применение.** Ёмкость и волновое сопротивление линий электропередачи, телефонных проводов и высокочастотных «ленточных» кабелей рассчитываются по этим формулам. Ёмкость зависит от расстояния между проводами логарифмически — увеличение расстояния в 10 раз уменьшает ёмкость не в несколько раз, а лишь на несколько десятков процентов. Ёмкость провода относительно земли нужна в задачах о молнии, статическом заряде и радиоантеннах.",
+  "en": "**Applications.** The capacitance and wave impedance of power lines, telephone wires and high-frequency \"ribbon\" cables are computed with these formulas. The capacitance depends logarithmically on the wire separation — increasing the separation 10 times reduces the capacitance not several-fold but only by a few tens of percent. The capacitance of a wire relative to the ground is needed in problems about lightning, static charge and radio antennas."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Dielektrik chegara uchun tasvirlar",
+  "ru": "8. Изображения для границы диэлектрика",
+  "en": "8. Images for a dielectric boundary"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki yarim fazo.** Dielektrik singdiruvchanligi $\\varepsilon_1$ bo'lgan muhitda chegaradan $d$ masofada $q$ zaryad, chegaraning narigi tomonida $\\varepsilon_2$ muhit. Chegarada $E_\\tau$ va $D_n$ uzluksiz bo'lishi kerak (B2-L14). Yechimni ikki qismda izlaymiz: 1-muhitda maydon $q$ va ko'zgu nuqtadagi $q'$ tasvirdan, 2-muhitda esa $q$ o'rnidagi $q''$ zaryaddan hosil bo'lgandek. Ikki shart ikki noma'lumni beradi.",
+  "ru": "**Два полупространства.** В среде с диэлектрической проницаемостью $\\varepsilon_1$ на расстоянии $d$ от границы находится заряд $q$, по другую сторону границы — среда $\\varepsilon_2$. На границе должны быть непрерывны $E_\\tau$ и $D_n$ (B2-L14). Ищем решение из двух частей: в 1-й среде поле как будто создано зарядом $q$ и изображением $q'$ в зеркальной точке, во 2-й — зарядом $q''$ на месте $q$. Два условия дают два неизвестных.",
+  "en": "**Two half-spaces.** A charge $q$ sits in a medium of permittivity $\\varepsilon_1$ at distance $d$ from the boundary, with a medium $\\varepsilon_2$ on the other side. At the boundary $E_\\tau$ and $D_n$ must be continuous (B2-L14). We look for a solution in two parts: in medium 1 the field is as if produced by $q$ and an image $q'$ at the mirror point, in medium 2 as if by a charge $q''$ at the position of $q$. The two conditions give the two unknowns."
+ },
+ {
+  "t": "m",
+  "m": "q'=-\\frac{\\varepsilon_2-\\varepsilon_1}{\\varepsilon_2+\\varepsilon_1}q,\\qquad q''=\\frac{2\\varepsilon_2}{\\varepsilon_2+\\varepsilon_1}q,\\qquad F=\\frac{qq'}{4\\pi\\varepsilon_0\\varepsilon_1\\left(2d\\right)^2}"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L22-F06.png",
+   "ru": "figures/B2-L22-F06-ru.png",
+   "en": "figures/B2-L22-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Ma'nosi ([[F06]]).** 1-muhitdagi potensial $\\frac{1}{4\\pi\\varepsilon_0\\varepsilon_1}\\left(\\frac{q}{r_1}+\\frac{q'}{r_2}\\right)$, 2-muhitdagi — $\\frac{1}{4\\pi\\varepsilon_0\\varepsilon_2}\\frac{q''}{r_1}$. Agar $\\varepsilon_2>\\varepsilon_1$ bo'lsa, $q'$ ishorasi $q$ ga qarama-qarshi va zaryad chegaraga tortiladi: maydon chiziqlari singdiruvchanligi katta muhitga «so'riladi». Agar $\\varepsilon_2<\\varepsilon_1$ bo'lsa, zaryad chegaradan itariladi. $\\varepsilon_2\\to\\infty$ limitida $q'=-q$ — o'tkazgich holati qaytadi; $\\varepsilon_1=\\varepsilon_2$ da tasvir yo'qoladi.",
+  "ru": "**Смысл ([[F06]]).** Потенциал в 1-й среде $\\frac{1}{4\\pi\\varepsilon_0\\varepsilon_1}\\left(\\frac{q}{r_1}+\\frac{q'}{r_2}\\right)$, во 2-й — $\\frac{1}{4\\pi\\varepsilon_0\\varepsilon_2}\\frac{q''}{r_1}$. Если $\\varepsilon_2>\\varepsilon_1$, знак $q'$ противоположен $q$ и заряд притягивается к границе: линии поля «втягиваются» в среду с большей проницаемостью. Если $\\varepsilon_2<\\varepsilon_1$, заряд отталкивается от границы. В пределе $\\varepsilon_2\\to\\infty$ получаем $q'=-q$ — возвращается случай проводника; при $\\varepsilon_1=\\varepsilon_2$ изображение исчезает.",
+  "en": "**Meaning ([[F06]]).** The potential in medium 1 is $\\frac{1}{4\\pi\\varepsilon_0\\varepsilon_1}\\left(\\frac{q}{r_1}+\\frac{q'}{r_2}\\right)$, and in medium 2 it is $\\frac{1}{4\\pi\\varepsilon_0\\varepsilon_2}\\frac{q''}{r_1}$. If $\\varepsilon_2>\\varepsilon_1$, the sign of $q'$ is opposite to that of $q$ and the charge is attracted to the boundary: the field lines are \"drawn into\" the medium with the larger permittivity. If $\\varepsilon_2<\\varepsilon_1$, the charge is repelled from the boundary. In the limit $\\varepsilon_2\\to\\infty$ we get $q'=-q$ — the conductor case returns; for $\\varepsilon_1=\\varepsilon_2$ the image disappears."
+ },
+ {
+  "t": "li",
+  "uz": "**Misollar.** Havodagi zaryadlangan chang zarrasi suv yoki shisha sirtiga tortiladi — hatto ular neytral bo'lsa ham. Suvdagi ionlar esa suv–havo chegarasidan itariladi, shuning uchun sirt qatlamida ionlar kamroq va tuzli suvning sirt tarangligi biroz ortadi. Biologik membranalarda (kichik $\\varepsilon$) ionlar uchun tasvir kuchi energiya to'sig'ini hosil qiladi — ionlar membranadan faqat maxsus kanallar orqali o'tadi.",
+  "ru": "**Примеры.** Заряженная пылинка в воздухе притягивается к поверхности воды или стекла — даже если они нейтральны. А ионы в воде отталкиваются от границы вода–воздух, поэтому в поверхностном слое ионов меньше и поверхностное натяжение солёной воды немного выше. В биологических мембранах (малое $\\varepsilon$) сила изображения создаёт для ионов энергетический барьер — ионы проходят через мембрану только по специальным каналам.",
+  "en": "**Examples.** A charged dust grain in air is attracted to the surface of water or glass — even if they are neutral. Ions in water, on the other hand, are repelled from the water–air boundary, so there are fewer ions in the surface layer and the surface tension of salt water is slightly higher. In biological membranes (small $\\varepsilon$) the image force creates an energy barrier for ions — ions cross the membrane only through special channels."
+ },
+ {
+  "t": "h2",
+  "uz": "9. O'zgaruvchilarni ajratish: Dekart koordinatalari",
+  "ru": "9. Разделение переменных: декартовы координаты",
+  "en": "9. Separation of variables: Cartesian coordinates"
+ },
+ {
+  "t": "li",
+  "uz": "**G'oya.** Chegaralar koordinata sirtlari bilan ustma-ust tushsa, yechimni ko'paytma ko'rinishida izlaymiz: $\\varphi=X\\left(x\\right)Y\\left(y\\right)$. Laplas tenglamasiga qo'yib, $X$ ga bo'lsak, $\\frac{X''}{X}=-\\frac{Y''}{Y}$ — chap tomoni faqat $x$ ga, o'ng tomoni faqat $y$ ga bog'liq, demak ikkalasi bir xil o'zgarmas $k^2$ ga teng. Natijada bir tomon bo'ylab tebranuvchi ($\\sin ky$, $\\cos ky$), ikkinchi tomon bo'ylab eksponensial ($e^{\\pm kx}$ yoki $\\sinh kx$) funksiyalar hosil bo'ladi. Chegaraviy shartlar ruxsat etilgan $k$ larni tanlaydi, umumiy yechim esa ularning superpozitsiyasi.",
+  "ru": "**Идея.** Если границы совпадают с координатными поверхностями, решение ищем в виде произведения: $\\varphi=X\\left(x\\right)Y\\left(y\\right)$. Подставив в уравнение Лапласа и поделив на $X$, получаем $\\frac{X''}{X}=-\\frac{Y''}{Y}$ — левая часть зависит только от $x$, правая только от $y$, значит обе равны одной постоянной $k^2$. В результате по одному направлению получаются колеблющиеся функции ($\\sin ky$, $\\cos ky$), по другому — экспоненциальные ($e^{\\pm kx}$ или $\\sinh kx$). Граничные условия отбирают допустимые $k$, а общее решение — их суперпозиция.",
+  "en": "**The idea.** If the boundaries coincide with coordinate surfaces, we look for a solution as a product: $\\varphi=X\\left(x\\right)Y\\left(y\\right)$. Substituting into Laplace's equation and dividing by $X$ gives $\\frac{X''}{X}=-\\frac{Y''}{Y}$ — the left side depends only on $x$ and the right side only on $y$, so both equal the same constant $k^2$. The result is oscillating functions ($\\sin ky$, $\\cos ky$) in one direction and exponential ones ($e^{\\pm kx}$ or $\\sinh kx$) in the other. The boundary conditions select the allowed values of $k$, and the general solution is their superposition."
+ },
+ {
+  "t": "li",
+  "uz": "**Ariqcha masalasi.** Ikki yerga ulangan parallel yarim tekislik ($y=0$ va $y=a$) va ularni $x=0$ da tutashtiruvchi, ulardan izolyatsiyalangan $V_0$ potensialdagi tasma. $x\\to\\infty$ da $\\varphi\\to0$. $y=0$ va $y=a$ da nol bo'lish uchun $Y=\\sin\\frac{n\\pi y}{a}$, kamayuvchi yechim uchun $X=e^{-\\frac{n\\pi x}{a}}$. Koeffitsiyentlar $x=0$ dagi shartni Furye qatoriga yoyib topiladi: $c_n=\\frac{2}{a}\\int_0^aV_0\\sin\\frac{n\\pi y}{a}dy$, o'zgarmas $V_0$ uchun faqat toq $n$ qoladi. Qatorni yopiq ko'rinishda ham yig'ish mumkin.",
+  "ru": "**Задача о желобе.** Две заземлённые параллельные полуплоскости ($y=0$ и $y=a$) и изолированная от них полоса при $x=0$ под потенциалом $V_0$. При $x\\to\\infty$ $\\varphi\\to0$. Чтобы быть нулём при $y=0$ и $y=a$, $Y=\\sin\\frac{n\\pi y}{a}$; для убывающего решения $X=e^{-\\frac{n\\pi x}{a}}$. Коэффициенты находим, разлагая условие при $x=0$ в ряд Фурье: $c_n=\\frac{2}{a}\\int_0^aV_0\\sin\\frac{n\\pi y}{a}dy$, для постоянного $V_0$ остаются только нечётные $n$. Ряд можно просуммировать и в замкнутом виде.",
+  "en": "**The slot problem.** Two grounded parallel half-planes ($y=0$ and $y=a$) are joined at $x=0$ by a strip, insulated from them, at potential $V_0$. As $x\\to\\infty$, $\\varphi\\to0$. To vanish at $y=0$ and $y=a$ we need $Y=\\sin\\frac{n\\pi y}{a}$; for a decaying solution $X=e^{-\\frac{n\\pi x}{a}}$. The coefficients are found by expanding the condition at $x=0$ in a Fourier series: $c_n=\\frac{2}{a}\\int_0^aV_0\\sin\\frac{n\\pi y}{a}dy$, and for constant $V_0$ only odd $n$ survive. The series can also be summed in closed form."
+ },
+ {
+  "t": "m",
+  "m": "\\varphi=\\frac{4V_0}{\\pi}\\sum_{n=1,3,5,\\dots}\\frac{1}{n}e^{-\\frac{n\\pi x}{a}}\\sin\\frac{n\\pi y}{a}=\\frac{2V_0}{\\pi}\\mathrm{arctg}\\frac{\\sin\\frac{\\pi y}{a}}{\\sinh\\frac{\\pi x}{a}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L22-F07.png",
+   "ru": "figures/B2-L22-F07-ru.png",
+   "en": "figures/B2-L22-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Yaqinlashish ([[F07]]).** Uzoqroqda yuqori garmonikalar tez so'nadi: $n$-had $e^{-\\frac{n\\pi x}{a}}$ ko'paytuvchiga ega, shuning uchun bir-ikki had ko'pincha yetarli. $x=0$ yaqinida esa qator sekin yaqinlashadi va burchaklarda (bu yerda potensial $0$ dan $V_0$ ga sakraydi) qisman yig'indilar «tebranadi» — Gibbs hodisasi. Agar ariqcha $x=b$ da yana yerga ulangan devor bilan yopilsa, $e^{-\\frac{n\\pi x}{a}}$ o'rniga $\\frac{\\sinh\\frac{n\\pi\\left(b-x\\right)}{a}}{\\sinh\\frac{n\\pi b}{a}}$ olinadi; uch o'lchovli qutida ikki indeksli qator hosil bo'ladi.",
+  "ru": "**Сходимость ([[F07]]).** Вдали высшие гармоники быстро затухают: $n$-й член содержит множитель $e^{-\\frac{n\\pi x}{a}}$, поэтому часто достаточно одного-двух членов. А вблизи $x=0$ ряд сходится медленно, и у углов (здесь потенциал скачком меняется от $0$ до $V_0$) частичные суммы «колеблются» — явление Гиббса. Если желоб закрыт при $x=b$ ещё одной заземлённой стенкой, вместо $e^{-\\frac{n\\pi x}{a}}$ берут $\\frac{\\sinh\\frac{n\\pi\\left(b-x\\right)}{a}}{\\sinh\\frac{n\\pi b}{a}}$; в трёхмерном ящике получается ряд с двумя индексами.",
+  "en": "**Convergence ([[F07]]).** Farther away the higher harmonics die out quickly: the $n$-th term carries the factor $e^{-\\frac{n\\pi x}{a}}$, so one or two terms are often enough. Near $x=0$, however, the series converges slowly, and at the corners (where the potential jumps from $0$ to $V_0$) the partial sums \"oscillate\" — the Gibbs phenomenon. If the slot is closed at $x=b$ by another grounded wall, $e^{-\\frac{n\\pi x}{a}}$ is replaced by $\\frac{\\sinh\\frac{n\\pi\\left(b-x\\right)}{a}}{\\sinh\\frac{n\\pi b}{a}}$; in a three-dimensional box one gets a series with two indices."
+ },
+ {
+  "t": "h2",
+  "uz": "10. Sferik va silindrik koordinatalar: maydondagi shar va silindr",
+  "ru": "10. Сферические и цилиндрические координаты: шар и цилиндр в поле",
+  "en": "10. Spherical and cylindrical coordinates: a sphere and a cylinder in a field"
+ },
+ {
+  "t": "li",
+  "uz": "**Lejandr ko'phadlari.** Masala $z$ o'qiga nisbatan simmetrik bo'lsa, sferik koordinatalarda Laplas tenglamasining ajralgan yechimlari $r^lP_l\\left(\\cos\\theta\\right)$ va $\\frac{P_l\\left(\\cos\\theta\\right)}{r^{l+1}}$ ko'rinishida bo'ladi; $P_l$ — **Lejandr ko'phadlari (Legendre polynomials)**. Shar ichida $r=0$ da chekli bo'lishi uchun faqat $r^l$, tashqarida cheksizlikda kamayishi uchun faqat $r^{-\\left(l+1\\right)}$ qoladi. $l=0$ — nuqtaviy zaryad, $l=1$ — dipol, $l=2$ — kvadrupol (B2-L13 dagi multipol yoyilmasi).",
+  "ru": "**Полиномы Лежандра.** Если задача симметрична относительно оси $z$, разделённые решения уравнения Лапласа в сферических координатах имеют вид $r^lP_l\\left(\\cos\\theta\\right)$ и $\\frac{P_l\\left(\\cos\\theta\\right)}{r^{l+1}}$; $P_l$ — **полиномы Лежандра (Legendre polynomials)**. Внутри шара, чтобы решение было конечным при $r=0$, остаются только $r^l$, снаружи, чтобы оно убывало на бесконечности, — только $r^{-\\left(l+1\\right)}$. $l=0$ — точечный заряд, $l=1$ — диполь, $l=2$ — квадруполь (мультипольное разложение из B2-L13).",
+  "en": "**Legendre polynomials.** If the problem is symmetric about the $z$ axis, the separated solutions of Laplace's equation in spherical coordinates have the form $r^lP_l\\left(\\cos\\theta\\right)$ and $\\frac{P_l\\left(\\cos\\theta\\right)}{r^{l+1}}$; the $P_l$ are the **Legendre polynomials**. Inside a sphere, for the solution to be finite at $r=0$, only $r^l$ remain; outside, for it to decay at infinity, only $r^{-\\left(l+1\\right)}$. $l=0$ is a point charge, $l=1$ a dipole, $l=2$ a quadrupole (the multipole expansion of B2-L13)."
+ },
+ {
+  "t": "m",
+  "m": "\\varphi=\\sum_l\\left(A_lr^l+\\frac{B_l}{r^{l+1}}\\right)P_l\\left(\\cos\\theta\\right),\\qquad P_0=1,\\quad P_1=\\cos\\theta,\\quad P_2=\\frac{3\\cos^2\\theta-1}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Bir jinsli maydondagi o'tkazgich shar.** Neytral sharni $E_0$ maydonga qo'yamiz. Uzoqda $\\varphi\\to-E_0r\\cos\\theta$ ($l=1$), sferada $\\varphi=0$. Shu ikki shartni faqat $l=1$ hadlar qanoatlantiradi va yagonalik teoremasiga ko'ra bu javob. Tashqi maydon — bir jinsli maydon va markazdagi dipol maydoni yig'indisi; sirt zaryadi $\\cos\\theta$ kabi taqsimlangan, maydon qutblarda eng kuchli va ekvatorda nolga teng.",
+  "ru": "**Проводящий шар в однородном поле.** Помещаем нейтральный шар в поле $E_0$. Вдали $\\varphi\\to-E_0r\\cos\\theta$ ($l=1$), на сфере $\\varphi=0$. Этим двум условиям удовлетворяют только члены с $l=1$, и по теореме единственности это ответ. Внешнее поле — сумма однородного поля и поля диполя в центре; поверхностный заряд распределён как $\\cos\\theta$, поле сильнее всего на полюсах и равно нулю на экваторе.",
+  "en": "**A conducting sphere in a uniform field.** Place a neutral sphere in a field $E_0$. Far away $\\varphi\\to-E_0r\\cos\\theta$ ($l=1$), and on the sphere $\\varphi=0$. Only the $l=1$ terms satisfy these two conditions, and by the uniqueness theorem this is the answer. The outside field is the sum of the uniform field and the field of a dipole at the centre; the surface charge is distributed as $\\cos\\theta$, and the field is strongest at the poles and zero at the equator."
+ },
+ {
+  "t": "m",
+  "m": "\\varphi=-E_0\\left(r-\\frac{R^3}{r^2}\\right)\\cos\\theta,\\qquad \\sigma=3\\varepsilon_0E_0\\cos\\theta,\\qquad p=4\\pi\\varepsilon_0R^3E_0,\\qquad E_{max}=3E_0"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L22-F08.png",
+   "ru": "figures/B2-L22-F08-ru.png",
+   "en": "figures/B2-L22-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Maydon chiziqlari ([[F08]]).** Shar yaqinida chiziqlar sirtga perpendikulyar bo'lib egiladi va qutblarda zichlashadi: u yerda maydon tashqi maydondan 3 marta katta. Shuning uchun sharsimon elektrodlarda razryad qutblardan boshlanadi, bulutlardagi suv tomchilari esa tashqi maydonni mahalliy kuchaytiradi. Dielektrik shar uchun (B2-L14) xuddi shu $l=1$ yechim ichki maydonni $\\frac{3E_0}{\\varepsilon+2}$ beradi.",
+  "ru": "**Линии поля ([[F08]]).** Вблизи шара линии изгибаются, подходя к поверхности перпендикулярно, и сгущаются на полюсах: там поле в 3 раза больше внешнего. Поэтому на шаровых электродах разряд начинается с полюсов, а капли воды в облаках локально усиливают внешнее поле. Для диэлектрического шара (B2-L14) такое же решение с $l=1$ даёт внутреннее поле $\\frac{3E_0}{\\varepsilon+2}$.",
+  "en": "**Field lines ([[F08]]).** Near the sphere the lines bend so as to meet the surface perpendicularly and crowd together at the poles: there the field is 3 times the external field. That is why a discharge on spherical electrodes starts at the poles, and water drops in clouds locally enhance the external field. For a dielectric sphere (B2-L14) the same $l=1$ solution gives the inside field $\\frac{3E_0}{\\varepsilon+2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Sferada berilgan potensial.** Agar sfera sirtida $\\varphi=V\\left(\\theta\\right)$ berilgan bo'lsa (masalan, alohida izolyatsiyalangan bo'laklar), $V\\left(\\theta\\right)$ ni Lejandr ko'phadlariga yoyamiz: ichkarida $A_lR^l$, tashqarida $\\frac{B_l}{R^{l+1}}$ koeffitsiyentlar $r=R$ da bir xil bo'lishi kerak. Sirt zaryadi $E_r$ ning sakrashidan topiladi. Har bir $P_l$ uchun masala alohida yechiladi — bu ortogonallik tufayli.",
+  "ru": "**Потенциал, заданный на сфере.** Если на поверхности сферы задано $\\varphi=V\\left(\\theta\\right)$ (например, отдельные изолированные части), раскладываем $V\\left(\\theta\\right)$ по полиномам Лежандра: коэффициенты $A_lR^l$ внутри и $\\frac{B_l}{R^{l+1}}$ снаружи должны совпадать при $r=R$. Поверхностный заряд находится из скачка $E_r$. Для каждого $P_l$ задача решается отдельно — благодаря ортогональности.",
+  "en": "**A potential prescribed on a sphere.** If $\\varphi=V\\left(\\theta\\right)$ is given on the surface of a sphere (for example, separate insulated pieces), expand $V\\left(\\theta\\right)$ in Legendre polynomials: the coefficients $A_lR^l$ inside and $\\frac{B_l}{R^{l+1}}$ outside must agree at $r=R$. The surface charge follows from the jump in $E_r$. For each $P_l$ the problem is solved separately — thanks to orthogonality."
+ },
+ {
+  "t": "m",
+  "m": "\\sigma=\\varepsilon_0\\sum_l\\left(2l+1\\right)A_lR^{l-1}P_l\\left(\\cos\\theta\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Silindr.** Uzun silindr o'qiga perpendikulyar maydonda masala ikki o'lchovli; qutb koordinatalarida ajralgan yechimlar $r^n\\cos n\\phi$ va $r^{-n}\\cos n\\phi$, shuningdek $\\ln r$ (zaryadlangan ip). O'tkazgich silindr uchun xuddi shardagi kabi faqat $n=1$ qoladi; sirt zaryadi $\\cos\\phi$ kabi, lekin ko'paytuvchi 3 emas, 2. Bu farq o'lchamdan kelib chiqadi: ikki o'lchovli dipol maydoni $\\frac{1}{r^2}$ kabi, uch o'lchovlisi $\\frac{1}{r^3}$ kabi kamayadi.",
+  "ru": "**Цилиндр.** В поле, перпендикулярном оси длинного цилиндра, задача двумерна; в полярных координатах разделённые решения $r^n\\cos n\\phi$ и $r^{-n}\\cos n\\phi$, а также $\\ln r$ (заряженная нить). Для проводящего цилиндра, как и для шара, остаётся только $n=1$; поверхностный заряд распределён как $\\cos\\phi$, но множитель не 3, а 2. Это различие связано с размерностью: поле двумерного диполя убывает как $\\frac{1}{r^2}$, трёхмерного — как $\\frac{1}{r^3}$.",
+  "en": "**A cylinder.** In a field perpendicular to the axis of a long cylinder the problem is two-dimensional; in polar coordinates the separated solutions are $r^n\\cos n\\phi$ and $r^{-n}\\cos n\\phi$, together with $\\ln r$ (a charged thread). For a conducting cylinder, as for the sphere, only $n=1$ survives; the surface charge goes as $\\cos\\phi$, but the factor is 2 rather than 3. The difference comes from the dimension: the field of a two-dimensional dipole falls off as $\\frac{1}{r^2}$, that of a three-dimensional one as $\\frac{1}{r^3}$."
+ },
+ {
+  "t": "m",
+  "m": "\\varphi=-E_0\\left(r-\\frac{R^2}{r}\\right)\\cos\\phi,\\qquad \\sigma=2\\varepsilon_0E_0\\cos\\phi"
+ },
+ {
+  "t": "h2",
+  "uz": "11. Magnit tasvirlar",
+  "ru": "11. Магнитные изображения",
+  "en": "11. Magnetic images"
+ },
+ {
+  "t": "li",
+  "uz": "**O'ta o'tkazgich.** O'ta o'tkazgich ichida $\\vec B=0$ (Meyssner effekti), demak sirtda $B_n=0$ — magnit maydon chiziqlari sirtga kira olmaydi va uning bo'ylab o'tadi. Sirtdan $h$ balandlikdagi $I$ tokli to'g'ri sim uchun bu shartni ko'zgu nuqtadagi **teskari** yo'nalgan $-I$ tasvir tok qanoatlantiradi. Qarama-qarshi toklar itarishadi — sim sirtdan itariladi. Xuddi shunday, o'ta o'tkazgich ustidagi doimiy magnit o'zining teskari tasviridan itarilib, havoda muallaq turadi (magnit levitatsiyasi).",
+  "ru": "**Сверхпроводник.** Внутри сверхпроводника $\\vec B=0$ (эффект Мейснера), значит на поверхности $B_n=0$ — линии магнитного поля не могут войти в поверхность и идут вдоль неё. Для прямого провода с током $I$ на высоте $h$ над поверхностью это условие выполняет ток-изображение $-I$ **противоположного** направления в зеркальной точке. Противоположные токи отталкиваются — провод отталкивается от поверхности. Так же постоянный магнит над сверхпроводником отталкивается от своего обращённого изображения и парит в воздухе (магнитная левитация).",
+  "en": "**A superconductor.** Inside a superconductor $\\vec B=0$ (the Meissner effect), so $B_n=0$ at the surface — magnetic field lines cannot enter the surface and run along it. For a straight wire carrying current $I$ at height $h$ above the surface, this condition is satisfied by an image current $-I$ in the **opposite** direction at the mirror point. Opposite currents repel — the wire is pushed away from the surface. Likewise a permanent magnet above a superconductor is repelled by its reversed image and floats in the air (magnetic levitation)."
+ },
+ {
+  "t": "m",
+  "m": "I'=-I,\\qquad F'=\\frac{\\mu_0I^2}{2\\pi\\left(2h\\right)}=\\frac{\\mu_0I^2}{4\\pi h}"
+ },
+ {
+  "t": "li",
+  "uz": "**Magnit singdiruvchanligi katta modda.** $\\mu\\gg1$ bo'lgan temir yuzasida aksincha $H_\\tau\\approx0$: maydon chiziqlari sirtga perpendikulyar kiradi. Bu shartni **bir xil** yo'nalgan $+I$ tasvir beradi — sim temirga tortiladi. Umumiy $\\mu$ uchun tasvir toki $I'=\\frac{\\mu-1}{\\mu+1}I$ — dielektrik formulasiga o'xshash. Yuqori chastotada yaxshi o'tkazgich (skin-qatlam o'lchamdan ancha yupqa, B2-L20) o'ta o'tkazgichdek ishlaydi: induksion levitatsiya, sakrovchi halqa tajribasi va elektrodinamik maglev poyezdlari shunga asoslangan.",
+  "ru": "**Вещество с большой магнитной проницаемостью.** На поверхности железа с $\\mu\\gg1$, наоборот, $H_\\tau\\approx0$: линии поля входят в поверхность перпендикулярно. Это условие даёт изображение $+I$ **того же** направления — провод притягивается к железу. Для произвольного $\\mu$ ток-изображение $I'=\\frac{\\mu-1}{\\mu+1}I$ — похоже на формулу для диэлектрика. На высокой частоте хороший проводник (скин-слой намного тоньше размеров, B2-L20) ведёт себя как сверхпроводник: на этом основаны индукционная левитация, опыт с прыгающим кольцом и электродинамические поезда на магнитной подушке.",
+  "en": "**A material of high permeability.** At the surface of iron with $\\mu\\gg1$, on the contrary, $H_\\tau\\approx0$: the field lines enter the surface perpendicularly. This condition is provided by an image $+I$ in the **same** direction — the wire is attracted to the iron. For general $\\mu$ the image current is $I'=\\frac{\\mu-1}{\\mu+1}I$ — similar to the formula for a dielectric. At high frequency a good conductor (skin depth much thinner than its size, B2-L20) behaves like a superconductor: induction levitation, the jumping-ring experiment and electrodynamic maglev trains rely on this."
+ },
+ {
+  "t": "h2",
+  "uz": "12. GRE uchun usullar va tipik xatolar",
+  "ru": "12. Приёмы для GRE и типичные ошибки",
+  "en": "12. GRE techniques and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**Tasvir qayerga.** Tasvirlar faqat o'rganilayotgan sohadan tashqarida turadi (o'tkazgich ichida yoki tekislik ortida). Har doim tekshiring: chegarada shart bajariladimi va soha ichidagi zaryadlar o'zgarmadimi? Tasvir soxta — maydon faqat haqiqiy soha ichida ma'noga ega.",
+  "ru": "**Куда ставить изображение.** Изображения ставятся только вне исследуемой области (внутри проводника или за плоскостью). Всегда проверяйте: выполнено ли условие на границе и не изменились ли заряды внутри области? Изображение фиктивно — поле имеет смысл только внутри реальной области.",
+  "en": "**Where the image goes.** Images are placed only outside the region of interest (inside the conductor or behind the plane). Always check: is the boundary condition satisfied, and are the charges inside the region unchanged? The image is fictitious — the field is meaningful only inside the real region."
+ },
+ {
+  "t": "li",
+  "uz": "**Kuch va energiya.** Kuchni tasvir maydonidan hisoblang (masofa — haqiqiy zaryad va tasvir orasidagi masofa, ya'ni tekislik uchun $2d$). Energiya va ishda ehtiyot bo'ling: tasvirni ko'chirishga ish sarflanmaydi, shuning uchun tekislik uchun energiya juftlik energiyasining yarmi. Eng ishonchli yo'l — kuchni masofa bo'yicha integrallash.",
+  "ru": "**Сила и энергия.** Силу считайте по полю изображения (расстояние — между настоящим зарядом и изображением, то есть для плоскости $2d$). С энергией и работой осторожно: на перемещение изображения работа не тратится, поэтому для плоскости энергия — половина энергии пары. Самый надёжный путь — проинтегрировать силу по расстоянию.",
+  "en": "**Force and energy.** Compute the force from the image field (the distance is between the real charge and the image, i.e. $2d$ for a plane). Be careful with energy and work: no work is spent moving the image, so for a plane the energy is half that of the pair. The most reliable route is to integrate the force over distance."
+ },
+ {
+  "t": "li",
+  "uz": "**Induksiyalangan zaryad.** Cheksiz tekislik — $-q$; yerga ulangan shar — $-\\frac{qR}{a}$; yopiq bo'shliq devori — $-q$; neytral izolyatsiyalangan o'tkazgich — nol. Murakkab geometriyada Grin o'zaro teoremasidan foydalaning. Maydondagi shar: $3E_0$, $\\sigma\\propto\\cos\\theta$; silindr: $2E_0$.",
+  "ru": "**Индуцированный заряд.** Бесконечная плоскость — $-q$; заземлённая сфера — $-\\frac{qR}{a}$; стенка замкнутой полости — $-q$; нейтральный изолированный проводник — нуль. В сложной геометрии используйте теорему взаимности Грина. Шар в поле: $3E_0$, $\\sigma\\propto\\cos\\theta$; цилиндр: $2E_0$.",
+  "en": "**Induced charge.** Infinite plane — $-q$; grounded sphere — $-\\frac{qR}{a}$; wall of a closed cavity — $-q$; neutral isolated conductor — zero. In complicated geometries use Green's reciprocity theorem. Sphere in a field: $3E_0$, $\\sigma\\propto\\cos\\theta$; cylinder: $2E_0$."
+ },
+ {
+  "t": "li",
+  "uz": "**Laplas tenglamasi.** Funksiya garmonik ekanini $\\nabla^2\\varphi$ ni hisoblab tekshiring (masalan, $x^2-y^2$ garmonik, $x^2+y^2$ emas). Zaryadsiz sohada ekstremum yo'q, potensial — qo'shnilar o'rtachasi. Burchak $\\frac{\\pi}{n}$ bo'lsa — $2n-1$ tasvir.",
+  "ru": "**Уравнение Лапласа.** Гармоничность функции проверяйте вычислением $\\nabla^2\\varphi$ (например, $x^2-y^2$ гармонична, $x^2+y^2$ — нет). В области без зарядов нет экстремумов, потенциал — среднее соседей. Угол $\\frac{\\pi}{n}$ — $2n-1$ изображений.",
+  "en": "**Laplace's equation.** Check that a function is harmonic by computing $\\nabla^2\\varphi$ (for example, $x^2-y^2$ is harmonic and $x^2+y^2$ is not). In a charge-free region there are no extrema, and the potential is the average of its neighbours. A $\\frac{\\pi}{n}$ corner needs $2n-1$ images."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Chegaraviy masala",
+    "ru": "Краевая задача",
+    "en": "Boundary-value problem",
+    "m": "\\nabla^2\\varphi=-\\frac{\\rho}{\\varepsilon_0},\\quad \\varphi\\big|_S=f,\\quad \\frac{\\partial\\varphi}{\\partial n}\\Big|_S=g"
+   },
+   {
+    "uz": "O'rta qiymat",
+    "ru": "Среднее значение",
+    "en": "Mean value",
+    "m": "\\varphi_{i,j}=\\frac{1}{4}\\left(\\varphi_{i\\pm1,j}+\\varphi_{i,j\\pm1}\\right)"
+   },
+   {
+    "uz": "Tekislik",
+    "ru": "Плоскость",
+    "en": "Plane",
+    "m": "q'=-q,\\quad \\sigma=-\\frac{qd}{2\\pi\\left(d^2+s^2\\right)^{\\frac{3}{2}}}"
+   },
+   {
+    "uz": "Ip va tekislik",
+    "ru": "Нить и плоскость",
+    "en": "Line and plane",
+    "m": "\\lambda'=-\\lambda,\\quad \\sigma=-\\frac{\\lambda h}{\\pi\\left(h^2+x^2\\right)}"
+   },
+   {
+    "uz": "Dipol tasviri",
+    "ru": "Изображение диполя",
+    "en": "Image dipole",
+    "m": "p'_n=p_n,\\quad p'_\\tau=-p_\\tau"
+   },
+   {
+    "uz": "Burchak",
+    "ru": "Угол",
+    "en": "Corner",
+    "m": "\\alpha=\\frac{\\pi}{n}\\ \\Rightarrow\\ 2n-1"
+   },
+   {
+    "uz": "Yerga ulangan shar",
+    "ru": "Заземлённая сфера",
+    "en": "Grounded sphere",
+    "m": "q'=-\\frac{qR}{a},\\quad b=\\frac{R^2}{a}"
+   },
+   {
+    "uz": "Zaryadlangan shar",
+    "ru": "Заряженная сфера",
+    "en": "Charged sphere",
+    "m": "Q+\\frac{qR}{a}\\ \\left(r=0\\right)"
+   },
+   {
+    "uz": "Grin o'zaro teoremasi",
+    "ru": "Теорема взаимности",
+    "en": "Reciprocity theorem",
+    "m": "\\sum q_i\\varphi'_i=\\sum q'_i\\varphi_i"
+   },
+   {
+    "uz": "Ikki simli liniya",
+    "ru": "Двухпроводная линия",
+    "en": "Two-wire line",
+    "m": "C'=\\frac{\\pi\\varepsilon_0}{\\mathrm{arccosh}\\frac{d}{2R}}"
+   },
+   {
+    "uz": "Dielektrik chegara",
+    "ru": "Граница диэлектрика",
+    "en": "Dielectric boundary",
+    "m": "q'=-\\frac{\\varepsilon_2-\\varepsilon_1}{\\varepsilon_2+\\varepsilon_1}q"
+   },
+   {
+    "uz": "Ariqcha",
+    "ru": "Желоб",
+    "en": "Slot",
+    "m": "\\varphi=\\frac{4V_0}{\\pi}\\sum_{n=1,3,\\dots}\\frac{1}{n}e^{-\\frac{n\\pi x}{a}}\\sin\\frac{n\\pi y}{a}"
+   },
+   {
+    "uz": "Maydondagi shar",
+    "ru": "Шар в поле",
+    "en": "Sphere in a field",
+    "m": "\\sigma=3\\varepsilon_0E_0\\cos\\theta,\\quad p=4\\pi\\varepsilon_0R^3E_0"
+   },
+   {
+    "uz": "Maydondagi silindr",
+    "ru": "Цилиндр в поле",
+    "en": "Cylinder in a field",
+    "m": "\\sigma=2\\varepsilon_0E_0\\cos\\phi"
+   },
+   {
+    "uz": "Magnit tasvir",
+    "ru": "Магнитное изображение",
+    "en": "Magnetic image",
+    "m": "I'=\\frac{\\mu-1}{\\mu+1}I,\\quad I'=-I"
+   }
+  ]
+ }
+]
