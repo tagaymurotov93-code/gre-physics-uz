@@ -1,0 +1,836 @@
+[
+ {
+  "id": "B2-L32-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$2\\ \\mathrm{mol}$ ideal gaz $300\\ \\mathrm{K}$ da izotermik kengayib, hajmini $3$ marta oshirdi. Ichki energiya, entalpiya, erkin energiya va Gibbs energiyasining o'zgarishini hamda gaz bajargan eng katta ishni toping.",
+   "ru": "$2\\ \\mathrm{mol}$ идеального газа изотермически расширились при $300\\ \\mathrm{K}$, увеличив объём в $3$ раза. Найдите изменения внутренней энергии, энтальпии, свободной энергии и энергии Гиббса, а также наибольшую работу газа.",
+   "en": "$2\\ \\mathrm{mol}$ of an ideal gas expands isothermally at $300\\ \\mathrm{K}$, increasing its volume by a factor of $3$. Find the changes in internal energy, enthalpy, free energy and Gibbs energy, and the greatest work done by the gas."
+  },
+  "figure": "figures/B2-L32-S01.png",
+  "solution": {
+   "uz": [
+    "Ideal gazda $U$ va $H$ faqat $T$ ga bog'liq: $$\\Delta U=0,\\qquad \\Delta H=0$$",
+    "$T=\\mathrm{const}$ da $dF=-p\\,dV$: $$\\Delta F=-\\nu RT\\ln\\frac{V_2}{V_1}=-2\\cdot8.31\\cdot300\\cdot\\ln3\\approx-5.48\\ \\mathrm{kJ}$$",
+    "$dG=V\\,dp$, $\\frac{p_2}{p_1}=\\frac{1}{3}$: $$\\Delta G=\\nu RT\\ln\\frac{p_2}{p_1}=\\Delta F,\\qquad A_{max}=-\\Delta F\\approx5.48\\ \\mathrm{kJ}$$"
+   ],
+   "ru": [
+    "У идеального газа $U$ и $H$ зависят только от $T$: $$\\Delta U=0,\\qquad \\Delta H=0$$",
+    "При $T=\\mathrm{const}$ $dF=-p\\,dV$: $$\\Delta F=-\\nu RT\\ln\\frac{V_2}{V_1}=-2\\cdot8.31\\cdot300\\cdot\\ln3\\approx-5.48\\ \\mathrm{kJ}$$",
+    "$dG=V\\,dp$, $\\frac{p_2}{p_1}=\\frac{1}{3}$: $$\\Delta G=\\nu RT\\ln\\frac{p_2}{p_1}=\\Delta F,\\qquad A_{max}=-\\Delta F\\approx5.48\\ \\mathrm{kJ}$$"
+   ],
+   "en": [
+    "For an ideal gas $U$ and $H$ depend only on $T$: $$\\Delta U=0,\\qquad \\Delta H=0$$",
+    "At $T=\\mathrm{const}$, $dF=-p\\,dV$: $$\\Delta F=-\\nu RT\\ln\\frac{V_2}{V_1}=-2\\cdot8.31\\cdot300\\cdot\\ln3\\approx-5.48\\ \\mathrm{kJ}$$",
+    "$dG=V\\,dp$, $\\frac{p_2}{p_1}=\\frac{1}{3}$: $$\\Delta G=\\nu RT\\ln\\frac{p_2}{p_1}=\\Delta F,\\qquad A_{max}=-\\Delta F\\approx5.48\\ \\mathrm{kJ}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Erkin energiya: $dF=-S\\,dT-p\\,dV$, $A\\leq-\\Delta F$",
+    "ru": "Свободная энергия: $dF=-S\\,dT-p\\,dV$, $A\\leq-\\Delta F$",
+    "en": "Free energy: $dF=-S\\,dT-p\\,dV$, $A\\leq-\\Delta F$"
+   },
+   {
+    "uz": "Gibbs energiyasi: $dG=-S\\,dT+V\\,dp$",
+    "ru": "Энергия Гиббса: $dG=-S\\,dT+V\\,dp$",
+    "en": "Gibbs energy: $dG=-S\\,dT+V\\,dp$"
+   }
+  ],
+  "basis": {
+   "uz": "Potensiallarning o'zgarishi",
+   "ru": "Изменение потенциалов",
+   "en": "Change of potentials"
+  },
+  "answer": "\\Delta U=\\Delta H=0;\\ \\Delta F=\\Delta G\\approx-5.48\\ \\mathrm{kJ};\\ A_{max}\\approx5.48\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original (B2-L32, potensiallar)"
+ },
+ {
+  "id": "B2-L32-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$1\\ \\mathrm{mol}$ azot o'zgarmas bosimda $300\\ \\mathrm{K}$ dan $400\\ \\mathrm{K}$ gacha isitildi. Olingan issiqlikni entalpiya orqali toping va uni ichki energiya o'zgarishi bilan solishtiring.",
+   "ru": "$1\\ \\mathrm{mol}$ азота нагрели при постоянном давлении от $300\\ \\mathrm{K}$ до $400\\ \\mathrm{K}$. Найдите полученную теплоту через энтальпию и сравните её с изменением внутренней энергии.",
+   "en": "$1\\ \\mathrm{mol}$ of nitrogen is heated at constant pressure from $300\\ \\mathrm{K}$ to $400\\ \\mathrm{K}$. Find the heat received via the enthalpy and compare it with the change in internal energy."
+  },
+  "figure": "figures/B2-L32-S02.png",
+  "solution": {
+   "uz": [
+    "O'zgarmas bosimda $Q_p=\\Delta H$: $$Q_p=\\Delta H=\\nu C_p\\Delta T=3.5\\cdot8.31\\cdot100\\approx2.91\\ \\mathrm{kJ}$$",
+    "Ichki energiya: $$\\Delta U=\\nu C_V\\Delta T\\approx2.08\\ \\mathrm{kJ}$$",
+    "Farq — kengayish ishi: $$\\Delta H-\\Delta U=p\\Delta V=\\nu R\\Delta T=831\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "При постоянном давлении $Q_p=\\Delta H$: $$Q_p=\\Delta H=\\nu C_p\\Delta T=3.5\\cdot8.31\\cdot100\\approx2.91\\ \\mathrm{kJ}$$",
+    "Внутренняя энергия: $$\\Delta U=\\nu C_V\\Delta T\\approx2.08\\ \\mathrm{kJ}$$",
+    "Разность — работа расширения: $$\\Delta H-\\Delta U=p\\Delta V=\\nu R\\Delta T=831\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "At constant pressure $Q_p=\\Delta H$: $$Q_p=\\Delta H=\\nu C_p\\Delta T=3.5\\cdot8.31\\cdot100\\approx2.91\\ \\mathrm{kJ}$$",
+    "The internal energy: $$\\Delta U=\\nu C_V\\Delta T\\approx2.08\\ \\mathrm{kJ}$$",
+    "The difference is the work of expansion: $$\\Delta H-\\Delta U=p\\Delta V=\\nu R\\Delta T=831\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Entalpiya: $dH=T\\,dS+V\\,dp$, $Q_p=\\Delta H$",
+    "ru": "Энтальпия: $dH=T\\,dS+V\\,dp$, $Q_p=\\Delta H$",
+    "en": "Enthalpy: $dH=T\\,dS+V\\,dp$, $Q_p=\\Delta H$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Entalpiya",
+   "ru": "Энтальпия",
+   "en": "Enthalpy"
+  },
+  "answer": "Q_p=\\Delta H\\approx2.91\\ \\mathrm{kJ};\\ \\Delta U\\approx2.08\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original (B2-L32, entalpiya)"
+ },
+ {
+  "id": "B2-L32-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$1\\ \\mathrm{mol}$ ideal gaz uchun $\\left(\\frac{\\partial S}{\\partial V}\\right)_T$ ni ikki usulda — Maksvell munosabati va entropiya formulasi orqali — toping va $V=24.9\\ \\mathrm{L}$ da hisoblang.",
+   "ru": "Найдите $\\left(\\frac{\\partial S}{\\partial V}\\right)_T$ для $1\\ \\mathrm{mol}$ идеального газа двумя способами — через соотношение Максвелла и через формулу энтропии — и вычислите при $V=24.9\\ \\mathrm{L}$.",
+   "en": "Find $\\left(\\frac{\\partial S}{\\partial V}\\right)_T$ for $1\\ \\mathrm{mol}$ of an ideal gas in two ways — through a Maxwell relation and through the entropy formula — and evaluate it at $V=24.9\\ \\mathrm{L}$."
+  },
+  "figure": "figures/B2-L32-S03.png",
+  "solution": {
+   "uz": [
+    "Maksvell munosabati va $p=\\frac{\\nu RT}{V}$: $$\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V=\\frac{\\nu R}{V}$$",
+    "Tekshiruv: $S=\\nu C_V\\ln T+\\nu R\\ln V+\\mathrm{const}$: $$\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\frac{\\nu R}{V}$$",
+    "Son qiymati: $$\\frac{8.31}{0.0249}\\approx334\\ \\mathrm{J/(K\\cdot m^3)}$$"
+   ],
+   "ru": [
+    "Соотношение Максвелла и $p=\\frac{\\nu RT}{V}$: $$\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V=\\frac{\\nu R}{V}$$",
+    "Проверка: $S=\\nu C_V\\ln T+\\nu R\\ln V+\\mathrm{const}$: $$\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\frac{\\nu R}{V}$$",
+    "Численное значение: $$\\frac{8.31}{0.0249}\\approx334\\ \\mathrm{J/(K\\cdot m^3)}$$"
+   ],
+   "en": [
+    "A Maxwell relation and $p=\\frac{\\nu RT}{V}$: $$\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V=\\frac{\\nu R}{V}$$",
+    "Check: $S=\\nu C_V\\ln T+\\nu R\\ln V+\\mathrm{const}$: $$\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\frac{\\nu R}{V}$$",
+    "The numerical value: $$\\frac{8.31}{0.0249}\\approx334\\ \\mathrm{J/(K\\cdot m^3)}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Maksvell munosabati: $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V$",
+    "ru": "Соотношение Максвелла: $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V$",
+    "en": "Maxwell relation: $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Maksvell munosabatlari",
+   "ru": "Соотношения Максвелла",
+   "en": "Maxwell relations"
+  },
+  "answer": "\\frac{\\nu R}{V}\\approx334\\ \\mathrm{J/(K\\cdot m^3)}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original (B2-L32, Maksvell munosabati)"
+ },
+ {
+  "id": "B2-L32-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki sathli sistemada sathlar oralig'i $0.05\\ \\mathrm{eV}$, temperatura $300\\ \\mathrm{K}$. Sathlar bandliklari nisbatini, yuqori sathdagi zarralar ulushini va bitta zarraga to'g'ri keladigan o'rtacha energiyani toping.",
+   "ru": "В двухуровневой системе расстояние между уровнями $0.05\\ \\mathrm{eV}$, температура $300\\ \\mathrm{K}$. Найдите отношение заселённостей уровней, долю частиц на верхнем уровне и среднюю энергию на одну частицу.",
+   "en": "In a two-level system the level spacing is $0.05\\ \\mathrm{eV}$ and the temperature $300\\ \\mathrm{K}$. Find the ratio of the level occupations, the fraction of particles in the upper level and the mean energy per particle."
+  },
+  "figure": "figures/B2-L32-S04.png",
+  "solution": {
+   "uz": [
+    "$kT=0.0259\\ \\mathrm{eV}$, Bolsman faktori: $$\\frac{N_2}{N_1}=e^{-\\frac{0.05}{0.0259}}=e^{-1.93}\\approx0.144$$",
+    "Yuqori sath ulushi: $$\\frac{N_2}{N}=\\frac{1}{e^{1.93}+1}\\approx0.126$$",
+    "O'rtacha energiya: $$\\langle E_1\\rangle=\\varepsilon\\frac{N_2}{N}\\approx6.3\\cdot10^{-3}\\ \\mathrm{eV}$$"
+   ],
+   "ru": [
+    "$kT=0.0259\\ \\mathrm{eV}$, множитель Больцмана: $$\\frac{N_2}{N_1}=e^{-\\frac{0.05}{0.0259}}=e^{-1.93}\\approx0.144$$",
+    "Доля верхнего уровня: $$\\frac{N_2}{N}=\\frac{1}{e^{1.93}+1}\\approx0.126$$",
+    "Средняя энергия: $$\\langle E_1\\rangle=\\varepsilon\\frac{N_2}{N}\\approx6.3\\cdot10^{-3}\\ \\mathrm{eV}$$"
+   ],
+   "en": [
+    "$kT=0.0259\\ \\mathrm{eV}$, the Boltzmann factor: $$\\frac{N_2}{N_1}=e^{-\\frac{0.05}{0.0259}}=e^{-1.93}\\approx0.144$$",
+    "The fraction in the upper level: $$\\frac{N_2}{N}=\\frac{1}{e^{1.93}+1}\\approx0.126$$",
+    "The mean energy: $$\\langle E_1\\rangle=\\varepsilon\\frac{N_2}{N}\\approx6.3\\cdot10^{-3}\\ \\mathrm{eV}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bolsman taqsimoti: $\\frac{N_2}{N_1}=\\frac{g_2}{g_1}e^{-\\frac{\\varepsilon}{kT}}$",
+    "ru": "Распределение Больцмана: $\\frac{N_2}{N_1}=\\frac{g_2}{g_1}e^{-\\frac{\\varepsilon}{kT}}$",
+    "en": "Boltzmann distribution: $\\frac{N_2}{N_1}=\\frac{g_2}{g_1}e^{-\\frac{\\varepsilon}{kT}}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Ikki sathli sistema",
+   "ru": "Двухуровневая система",
+   "en": "Two-level system"
+  },
+  "answer": "\\frac{N_2}{N_1}\\approx0.144;\\ 0.126;\\ \\approx6.3\\ \\mathrm{meV}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 4.1.1 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L32-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Atomning asosiy sathi aynimagan, birinchi uyg'ongan sathi $3$ marta aynigan va $0.1\\ \\mathrm{eV}$ yuqorida joylashgan. $500\\ \\mathrm{K}$ da faqat shu ikki sathni hisobga olib, uyg'ongan sathdagi atomlar ulushini toping.",
+   "ru": "Основной уровень атома невырожден, первый возбуждённый уровень вырожден $3$ раза и расположен на $0.1\\ \\mathrm{eV}$ выше. Учитывая только эти два уровня, найдите долю атомов на возбуждённом уровне при $500\\ \\mathrm{K}$.",
+   "en": "The ground level of an atom is non-degenerate; the first excited level is $3$-fold degenerate and lies $0.1\\ \\mathrm{eV}$ higher. Taking only these two levels into account, find the fraction of atoms in the excited level at $500\\ \\mathrm{K}$."
+  },
+  "figure": "figures/B2-L32-S05.png",
+  "solution": {
+   "uz": [
+    "$kT=0.0431\\ \\mathrm{eV}$, $x=\\frac{\\varepsilon}{kT}\\approx2.32$: $$Z=1+3e^{-x}=1+3\\cdot0.0982\\approx1.295$$",
+    "Uyg'ongan sath ehtimolligi: $$P_2=\\frac{3e^{-x}}{Z}=\\frac{0.295}{1.295}$$",
+    "Natija: $$P_2\\approx0.23$$"
+   ],
+   "ru": [
+    "$kT=0.0431\\ \\mathrm{eV}$, $x=\\frac{\\varepsilon}{kT}\\approx2.32$: $$Z=1+3e^{-x}=1+3\\cdot0.0982\\approx1.295$$",
+    "Вероятность возбуждённого уровня: $$P_2=\\frac{3e^{-x}}{Z}=\\frac{0.295}{1.295}$$",
+    "Результат: $$P_2\\approx0.23$$"
+   ],
+   "en": [
+    "$kT=0.0431\\ \\mathrm{eV}$, $x=\\frac{\\varepsilon}{kT}\\approx2.32$: $$Z=1+3e^{-x}=1+3\\cdot0.0982\\approx1.295$$",
+    "The probability of the excited level: $$P_2=\\frac{3e^{-x}}{Z}=\\frac{0.295}{1.295}$$",
+    "The result: $$P_2\\approx0.23$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Statistik yig'indi: $Z=\\sum_jg_je^{-\\beta E_j}$, $F=-kT\\ln Z$",
+    "ru": "Статистическая сумма: $Z=\\sum_jg_je^{-\\beta E_j}$, $F=-kT\\ln Z$",
+    "en": "Partition function: $Z=\\sum_jg_je^{-\\beta E_j}$, $F=-kT\\ln Z$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Aynigan sathlar",
+   "ru": "Вырожденные уровни",
+   "en": "Degenerate levels"
+  },
+  "answer": "P_2\\approx0.23",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B2-L32, aynigan sathlar)"
+ },
+ {
+  "id": "B2-L32-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Mis uchun $300\\ \\mathrm{K}$ da: molyar hajm $7.1\\ \\mathrm{cm^3/mol}$, hajmiy kengayish koeffitsiyenti $5.0\\cdot10^{-5}\\ \\mathrm{K^{-1}}$, izotermik siqiluvchanlik $7.3\\cdot10^{-12}\\ \\mathrm{Pa^{-1}}$, $C_p=24.4\\ \\mathrm{J/(mol\\cdot K)}$. $C_p-C_V$ ni toping va ideal gaz uchun formula Mayer tenglamasini berishini tekshiring.",
+   "ru": "Для меди при $300\\ \\mathrm{K}$: молярный объём $7.1\\ \\mathrm{cm^3/mol}$, коэффициент объёмного расширения $5.0\\cdot10^{-5}\\ \\mathrm{K^{-1}}$, изотермическая сжимаемость $7.3\\cdot10^{-12}\\ \\mathrm{Pa^{-1}}$, $C_p=24.4\\ \\mathrm{J/(mol\\cdot K)}$. Найдите $C_p-C_V$ и проверьте, что для идеального газа формула даёт уравнение Майера.",
+   "en": "For copper at $300\\ \\mathrm{K}$: molar volume $7.1\\ \\mathrm{cm^3/mol}$, volume expansion coefficient $5.0\\cdot10^{-5}\\ \\mathrm{K^{-1}}$, isothermal compressibility $7.3\\cdot10^{-12}\\ \\mathrm{Pa^{-1}}$, $C_p=24.4\\ \\mathrm{J/(mol\\cdot K)}$. Find $C_p-C_V$ and check that for an ideal gas the formula gives Mayer's relation."
+  },
+  "figure": "figures/B2-L32-S06.png",
+  "solution": {
+   "uz": [
+    "Umumiy formula: $$C_p-C_V=\\frac{TV\\alpha^2}{\\kappa_T}=\\frac{300\\cdot7.1\\cdot10^{-6}\\cdot\\left(5\\cdot10^{-5}\\right)^2}{7.3\\cdot10^{-12}}\\approx0.73\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "Nisbiy farq: $$\\frac{0.73}{24.4}\\approx3\\%$$",
+    "Ideal gaz: $\\alpha=\\frac{1}{T}$, $\\kappa_T=\\frac{1}{p}$: $$C_p-C_V=T\\cdot\\frac{RT}{p}\\cdot\\frac{1}{T^2}\\cdot p=R$$"
+   ],
+   "ru": [
+    "Общая формула: $$C_p-C_V=\\frac{TV\\alpha^2}{\\kappa_T}=\\frac{300\\cdot7.1\\cdot10^{-6}\\cdot\\left(5\\cdot10^{-5}\\right)^2}{7.3\\cdot10^{-12}}\\approx0.73\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "Относительная разность: $$\\frac{0.73}{24.4}\\approx3\\%$$",
+    "Идеальный газ: $\\alpha=\\frac{1}{T}$, $\\kappa_T=\\frac{1}{p}$: $$C_p-C_V=T\\cdot\\frac{RT}{p}\\cdot\\frac{1}{T^2}\\cdot p=R$$"
+   ],
+   "en": [
+    "The general formula: $$C_p-C_V=\\frac{TV\\alpha^2}{\\kappa_T}=\\frac{300\\cdot7.1\\cdot10^{-6}\\cdot\\left(5\\cdot10^{-5}\\right)^2}{7.3\\cdot10^{-12}}\\approx0.73\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "The relative difference: $$\\frac{0.73}{24.4}\\approx3\\%$$",
+    "Ideal gas: $\\alpha=\\frac{1}{T}$, $\\kappa_T=\\frac{1}{p}$: $$C_p-C_V=T\\cdot\\frac{RT}{p}\\cdot\\frac{1}{T^2}\\cdot p=R$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Issiqlik sig'imlari farqi: $C_p-C_V=\\frac{TV\\alpha^2}{\\kappa_T}$",
+    "ru": "Разность теплоёмкостей: $C_p-C_V=\\frac{TV\\alpha^2}{\\kappa_T}$",
+    "en": "Difference of heat capacities: $C_p-C_V=\\frac{TV\\alpha^2}{\\kappa_T}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Issiqlik sig'imlari farqi",
+   "ru": "Разность теплоёмкостей",
+   "en": "Difference of heat capacities"
+  },
+  "answer": "C_p-C_V\\approx0.73\\ \\mathrm{J/(mol\\cdot K)}\\approx3\\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original (B2-L32, C(p) − C(V))"
+ },
+ {
+  "id": "B2-L32-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$1\\ \\mathrm{mol}$ karbonat angidrid (Van-der-Vaals gazi, $a=0.364\\ \\mathrm{Pa\\cdot m^6/mol^2}$) izotermik ravishda $1\\ \\mathrm{L}$ dan $10\\ \\mathrm{L}$ gacha kengaydi. Energiya tenglamasidan foydalanib, ichki energiya o'zgarishini toping.",
+   "ru": "$1\\ \\mathrm{mol}$ углекислого газа (газ Ван-дер-Ваальса, $a=0.364\\ \\mathrm{Pa\\cdot m^6/mol^2}$) изотермически расширился от $1\\ \\mathrm{L}$ до $10\\ \\mathrm{L}$. Пользуясь уравнением энергии, найдите изменение внутренней энергии.",
+   "en": "$1\\ \\mathrm{mol}$ of carbon dioxide (a van der Waals gas, $a=0.364\\ \\mathrm{Pa\\cdot m^6/mol^2}$) expands isothermally from $1\\ \\mathrm{L}$ to $10\\ \\mathrm{L}$. Using the energy equation, find the change in internal energy."
+  },
+  "figure": "figures/B2-L32-S07.png",
+  "solution": {
+   "uz": [
+    "Energiya tenglamasi: $$\\left(\\frac{\\partial U}{\\partial V}\\right)_T=T\\left(\\frac{\\partial p}{\\partial T}\\right)_V-p=\\frac{a}{V^2}$$",
+    "Integrallaymiz: $$\\Delta U=a\\left(\\frac{1}{V_1}-\\frac{1}{V_2}\\right)$$",
+    "Sonlar: $$\\Delta U=0.364\\cdot\\left(1000-100\\right)\\approx328\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Уравнение энергии: $$\\left(\\frac{\\partial U}{\\partial V}\\right)_T=T\\left(\\frac{\\partial p}{\\partial T}\\right)_V-p=\\frac{a}{V^2}$$",
+    "Интегрируем: $$\\Delta U=a\\left(\\frac{1}{V_1}-\\frac{1}{V_2}\\right)$$",
+    "Числа: $$\\Delta U=0.364\\cdot\\left(1000-100\\right)\\approx328\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "The energy equation: $$\\left(\\frac{\\partial U}{\\partial V}\\right)_T=T\\left(\\frac{\\partial p}{\\partial T}\\right)_V-p=\\frac{a}{V^2}$$",
+    "Integrating: $$\\Delta U=a\\left(\\frac{1}{V_1}-\\frac{1}{V_2}\\right)$$",
+    "The numbers: $$\\Delta U=0.364\\cdot\\left(1000-100\\right)\\approx328\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Energiya tenglamasi: $\\left(\\frac{\\partial U}{\\partial V}\\right)_T=T\\left(\\frac{\\partial p}{\\partial T}\\right)_V-p$",
+    "ru": "Уравнение энергии: $\\left(\\frac{\\partial U}{\\partial V}\\right)_T=T\\left(\\frac{\\partial p}{\\partial T}\\right)_V-p$",
+    "en": "Energy equation: $\\left(\\frac{\\partial U}{\\partial V}\\right)_T=T\\left(\\frac{\\partial p}{\\partial T}\\right)_V-p$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Energiya tenglamasi",
+   "ru": "Уравнение энергии",
+   "en": "Energy equation"
+  },
+  "answer": "\\Delta U\\approx328\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "Irodov, «Problems in General Physics», 2.140-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L32-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Oldingi masaladagi karbonat angidrid ($C_V=3R$) issiqlik izolyatsiyalangan idishda $1\\ \\mathrm{L}$ dan bo'sh $10\\ \\mathrm{L}$ li hajmga erkin kengaydi. Gaz temperaturasi qanchaga o'zgaradi?",
+   "ru": "Углекислый газ из предыдущей задачи ($C_V=3R$) в теплоизолированном сосуде свободно расширяется из $1\\ \\mathrm{L}$ в пустой объём $10\\ \\mathrm{L}$. На сколько изменится температура газа?",
+   "en": "The carbon dioxide of the previous problem ($C_V=3R$) expands freely in a thermally insulated vessel from $1\\ \\mathrm{L}$ into an empty volume of $10\\ \\mathrm{L}$. By how much does the gas temperature change?"
+  },
+  "figure": "figures/B2-L32-S08.png",
+  "solution": {
+   "uz": [
+    "Erkin kengayishda $U=\\mathrm{const}$: $$\\nu C_VT_1-\\frac{a\\nu^2}{V_1}=\\nu C_VT_2-\\frac{a\\nu^2}{V_2}$$",
+    "Temperatura o'zgarishi: $$\\Delta T=-\\frac{a\\nu}{C_V}\\left(\\frac{1}{V_1}-\\frac{1}{V_2}\\right)=-\\frac{328}{24.9}$$",
+    "Natija: $$\\Delta T\\approx-13\\ \\mathrm{K}$$"
+   ],
+   "ru": [
+    "При свободном расширении $U=\\mathrm{const}$: $$\\nu C_VT_1-\\frac{a\\nu^2}{V_1}=\\nu C_VT_2-\\frac{a\\nu^2}{V_2}$$",
+    "Изменение температуры: $$\\Delta T=-\\frac{a\\nu}{C_V}\\left(\\frac{1}{V_1}-\\frac{1}{V_2}\\right)=-\\frac{328}{24.9}$$",
+    "Результат: $$\\Delta T\\approx-13\\ \\mathrm{K}$$"
+   ],
+   "en": [
+    "In free expansion $U=\\mathrm{const}$: $$\\nu C_VT_1-\\frac{a\\nu^2}{V_1}=\\nu C_VT_2-\\frac{a\\nu^2}{V_2}$$",
+    "The change in temperature: $$\\Delta T=-\\frac{a\\nu}{C_V}\\left(\\frac{1}{V_1}-\\frac{1}{V_2}\\right)=-\\frac{328}{24.9}$$",
+    "The result: $$\\Delta T\\approx-13\\ \\mathrm{K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Van-der-Vaals gazi energiyasi: $U=\\nu C_VT-\\frac{a\\nu^2}{V}$",
+    "ru": "Энергия газа Ван-дер-Ваальса: $U=\\nu C_VT-\\frac{a\\nu^2}{V}$",
+    "en": "Van der Waals energy: $U=\\nu C_VT-\\frac{a\\nu^2}{V}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Real gazning erkin kengayishi",
+   "ru": "Свободное расширение реального газа",
+   "en": "Free expansion of a real gas"
+  },
+  "answer": "\\Delta T\\approx-13\\ \\mathrm{K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original (B2-L32, Van-der-Vaals)"
+ },
+ {
+  "id": "B2-L32-S09",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Azot uchun Van-der-Vaals doimiylari $a=0.137\\ \\mathrm{Pa\\cdot m^6/mol^2}$, $b=3.87\\cdot10^{-5}\\ \\mathrm{m^3/mol}$. Past bosimdagi inversiya temperaturasini, $300\\ \\mathrm{K}$ dagi Joul–Tomson koeffitsiyentini va bosim $50\\ \\mathrm{atm}$ ga kamayganda temperatura o'zgarishini baholang ($C_p=\\frac{7}{2}R$).",
+   "ru": "Для азота постоянные Ван-дер-Ваальса $a=0.137\\ \\mathrm{Pa\\cdot m^6/mol^2}$, $b=3.87\\cdot10^{-5}\\ \\mathrm{m^3/mol}$. Оцените температуру инверсии при низком давлении, коэффициент Джоуля–Томсона при $300\\ \\mathrm{K}$ и изменение температуры при падении давления на $50\\ \\mathrm{atm}$ ($C_p=\\frac{7}{2}R$).",
+   "en": "For nitrogen the van der Waals constants are $a=0.137\\ \\mathrm{Pa\\cdot m^6/mol^2}$, $b=3.87\\cdot10^{-5}\\ \\mathrm{m^3/mol}$. Estimate the low-pressure inversion temperature, the Joule–Thomson coefficient at $300\\ \\mathrm{K}$ and the change in temperature when the pressure drops by $50\\ \\mathrm{atm}$ ($C_p=\\frac{7}{2}R$)."
+  },
+  "figure": "figures/B2-L32-S09.png",
+  "solution": {
+   "uz": [
+    "Inversiya temperaturasi: $$T^*=\\frac{2a}{Rb}=\\frac{0.274}{8.31\\cdot3.87\\cdot10^{-5}}\\approx852\\ \\mathrm{K}$$",
+    "Siyrak gaz uchun koeffitsiyent (bir mol): $$\\left(\\frac{\\partial T}{\\partial p}\\right)_H\\approx\\frac{1}{C_p}\\left(\\frac{2a}{RT}-b\\right)=\\frac{1.10\\cdot10^{-4}-3.87\\cdot10^{-5}}{29.1}$$",
+    "Natija: $$\\left(\\frac{\\partial T}{\\partial p}\\right)_H\\approx2.45\\cdot10^{-6}\\ \\mathrm{K/Pa}\\approx0.25\\ \\mathrm{K/atm}$$",
+    "$\\Delta p=-50\\ \\mathrm{atm}$: $$\\Delta T\\approx-12\\ \\mathrm{K}$$"
+   ],
+   "ru": [
+    "Температура инверсии: $$T^*=\\frac{2a}{Rb}=\\frac{0.274}{8.31\\cdot3.87\\cdot10^{-5}}\\approx852\\ \\mathrm{K}$$",
+    "Коэффициент для разреженного газа (на моль): $$\\left(\\frac{\\partial T}{\\partial p}\\right)_H\\approx\\frac{1}{C_p}\\left(\\frac{2a}{RT}-b\\right)=\\frac{1.10\\cdot10^{-4}-3.87\\cdot10^{-5}}{29.1}$$",
+    "Результат: $$\\left(\\frac{\\partial T}{\\partial p}\\right)_H\\approx2.45\\cdot10^{-6}\\ \\mathrm{K/Pa}\\approx0.25\\ \\mathrm{K/atm}$$",
+    "$\\Delta p=-50\\ \\mathrm{atm}$: $$\\Delta T\\approx-12\\ \\mathrm{K}$$"
+   ],
+   "en": [
+    "The inversion temperature: $$T^*=\\frac{2a}{Rb}=\\frac{0.274}{8.31\\cdot3.87\\cdot10^{-5}}\\approx852\\ \\mathrm{K}$$",
+    "The coefficient for a dilute gas (per mole): $$\\left(\\frac{\\partial T}{\\partial p}\\right)_H\\approx\\frac{1}{C_p}\\left(\\frac{2a}{RT}-b\\right)=\\frac{1.10\\cdot10^{-4}-3.87\\cdot10^{-5}}{29.1}$$",
+    "The result: $$\\left(\\frac{\\partial T}{\\partial p}\\right)_H\\approx2.45\\cdot10^{-6}\\ \\mathrm{K/Pa}\\approx0.25\\ \\mathrm{K/atm}$$",
+    "$\\Delta p=-50\\ \\mathrm{atm}$: $$\\Delta T\\approx-12\\ \\mathrm{K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Inversiya temperaturasi: $T^*=\\frac{2a}{Rb}$",
+    "ru": "Температура инверсии: $T^*=\\frac{2a}{Rb}$",
+    "en": "Inversion temperature: $T^*=\\frac{2a}{Rb}$"
+   },
+   {
+    "uz": "Joul–Tomson effekti: $\\left(\\frac{\\partial T}{\\partial p}\\right)_H\\approx\\frac{\\nu}{C_p}\\left(\\frac{2a}{RT}-b\\right)$",
+    "ru": "Эффект Джоуля–Томсона: $\\left(\\frac{\\partial T}{\\partial p}\\right)_H\\approx\\frac{\\nu}{C_p}\\left(\\frac{2a}{RT}-b\\right)$",
+    "en": "Joule–Thomson effect: $\\left(\\frac{\\partial T}{\\partial p}\\right)_H\\approx\\frac{\\nu}{C_p}\\left(\\frac{2a}{RT}-b\\right)$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Joul–Tomson effekti",
+   "ru": "Эффект Джоуля–Томсона",
+   "en": "Joule–Thomson effect"
+  },
+  "answer": "T^*\\approx852\\ \\mathrm{K};\\ 0.25\\ \\mathrm{K/atm};\\ \\Delta T\\approx-12\\ \\mathrm{K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original (B2-L32, Joul–Tomson)"
+ },
+ {
+  "id": "B2-L32-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki idishda $300\\ \\mathrm{K}$ da bir xil ideal gaz bor: birida bosim $2\\ \\mathrm{atm}$, ikkinchisida $1\\ \\mathrm{atm}$. Kimyoviy potensiallar farqini bitta molekulaga va bir molga hisoblang. Idishlar tutashtirilsa, molekulalar qaysi tomonga oqadi?",
+   "ru": "В двух сосудах при $300\\ \\mathrm{K}$ находится один и тот же идеальный газ: в одном давление $2\\ \\mathrm{atm}$, в другом $1\\ \\mathrm{atm}$. Вычислите разность химических потенциалов на одну молекулу и на моль. Куда потекут молекулы, если сосуды соединить?",
+   "en": "Two vessels at $300\\ \\mathrm{K}$ contain the same ideal gas: in one the pressure is $2\\ \\mathrm{atm}$, in the other $1\\ \\mathrm{atm}$. Calculate the difference in chemical potential per molecule and per mole. Which way do molecules flow if the vessels are connected?"
+  },
+  "figure": "figures/B2-L32-S10.png",
+  "solution": {
+   "uz": [
+    "Ideal gaz kimyoviy potensiali: $$\\Delta\\mu=kT\\ln\\frac{p_1}{p_2}=1.38\\cdot10^{-23}\\cdot300\\cdot\\ln2\\approx2.87\\cdot10^{-21}\\ \\mathrm{J}$$",
+    "Elektronvoltda va bir molga: $$\\Delta\\mu\\approx0.018\\ \\mathrm{eV},\\qquad N_A\\Delta\\mu=RT\\ln2\\approx1.73\\ \\mathrm{kJ/mol}$$",
+    "Zarralar $\\mu$ kamayadigan tomonga oqadi: $$\\mu_1>\\mu_2\\ \\Rightarrow\\ 1\\to2$$"
+   ],
+   "ru": [
+    "Химический потенциал идеального газа: $$\\Delta\\mu=kT\\ln\\frac{p_1}{p_2}=1.38\\cdot10^{-23}\\cdot300\\cdot\\ln2\\approx2.87\\cdot10^{-21}\\ \\mathrm{J}$$",
+    "В электронвольтах и на моль: $$\\Delta\\mu\\approx0.018\\ \\mathrm{eV},\\qquad N_A\\Delta\\mu=RT\\ln2\\approx1.73\\ \\mathrm{kJ/mol}$$",
+    "Частицы текут в сторону меньшего $\\mu$: $$\\mu_1>\\mu_2\\ \\Rightarrow\\ 1\\to2$$"
+   ],
+   "en": [
+    "The chemical potential of an ideal gas: $$\\Delta\\mu=kT\\ln\\frac{p_1}{p_2}=1.38\\cdot10^{-23}\\cdot300\\cdot\\ln2\\approx2.87\\cdot10^{-21}\\ \\mathrm{J}$$",
+    "In electronvolts and per mole: $$\\Delta\\mu\\approx0.018\\ \\mathrm{eV},\\qquad N_A\\Delta\\mu=RT\\ln2\\approx1.73\\ \\mathrm{kJ/mol}$$",
+    "Particles flow towards lower $\\mu$: $$\\mu_1>\\mu_2\\ \\Rightarrow\\ 1\\to2$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kimyoviy potensial: $\\mu=\\mu_0+kT\\ln\\frac{p}{p_0}$",
+    "ru": "Химический потенциал: $\\mu=\\mu_0+kT\\ln\\frac{p}{p_0}$",
+    "en": "Chemical potential: $\\mu=\\mu_0+kT\\ln\\frac{p}{p_0}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Kimyoviy potensial",
+   "ru": "Химический потенциал",
+   "en": "Chemical potential"
+  },
+  "answer": "\\Delta\\mu\\approx0.018\\ \\mathrm{eV};\\ 1.73\\ \\mathrm{kJ/mol};\\ 1\\to2",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original (B2-L32, kimyoviy potensial)"
+ },
+ {
+  "id": "B2-L32-S11",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Sathlar oralig'i $0.01\\ \\mathrm{eV}$ bo'lgan ikki sathli sistemalardan iborat namunaning issiqlik sig'imi qaysi temperaturada maksimal bo'ladi? Maksimal qiymat bir zarraga necha $k$ ga teng?",
+   "ru": "При какой температуре максимальна теплоёмкость образца из двухуровневых систем с расстоянием между уровнями $0.01\\ \\mathrm{eV}$? Чему равно максимальное значение на одну частицу (в единицах $k$)?",
+   "en": "At what temperature is the heat capacity of a sample of two-level systems with level spacing $0.01\\ \\mathrm{eV}$ greatest? What is the maximum value per particle (in units of $k$)?"
+  },
+  "figure": "figures/B2-L32-S11.png",
+  "solution": {
+   "uz": [
+    "Issiqlik sig'imi, $x=\\frac{\\varepsilon}{kT}$: $$\\frac{C}{Nk}=\\frac{x^2e^x}{\\left(e^x+1\\right)^2}$$",
+    "Maksimum sharti $\\frac{d}{dx}=0$, ya'ni $\\frac{x}{2}\\tanh\\frac{x}{2}=1$: $$x\\approx2.40,\\qquad kT\\approx0.417\\varepsilon,\\qquad \\frac{C}{Nk}\\approx0.44$$",
+    "Temperatura: $$T\\approx\\frac{0.417\\cdot0.01\\cdot1.602\\cdot10^{-19}}{1.38\\cdot10^{-23}}\\approx48\\ \\mathrm{K}$$"
+   ],
+   "ru": [
+    "Теплоёмкость, $x=\\frac{\\varepsilon}{kT}$: $$\\frac{C}{Nk}=\\frac{x^2e^x}{\\left(e^x+1\\right)^2}$$",
+    "Условие максимума $\\frac{d}{dx}=0$, то есть $\\frac{x}{2}\\tanh\\frac{x}{2}=1$: $$x\\approx2.40,\\qquad kT\\approx0.417\\varepsilon,\\qquad \\frac{C}{Nk}\\approx0.44$$",
+    "Температура: $$T\\approx\\frac{0.417\\cdot0.01\\cdot1.602\\cdot10^{-19}}{1.38\\cdot10^{-23}}\\approx48\\ \\mathrm{K}$$"
+   ],
+   "en": [
+    "The heat capacity, $x=\\frac{\\varepsilon}{kT}$: $$\\frac{C}{Nk}=\\frac{x^2e^x}{\\left(e^x+1\\right)^2}$$",
+    "The maximum condition $\\frac{d}{dx}=0$, that is $\\frac{x}{2}\\tanh\\frac{x}{2}=1$: $$x\\approx2.40,\\qquad kT\\approx0.417\\varepsilon,\\qquad \\frac{C}{Nk}\\approx0.44$$",
+    "The temperature: $$T\\approx\\frac{0.417\\cdot0.01\\cdot1.602\\cdot10^{-19}}{1.38\\cdot10^{-23}}\\approx48\\ \\mathrm{K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ikki sathli sistema: $C=Nk\\frac{x^2e^x}{\\left(e^x+1\\right)^2}$, $x=\\frac{\\varepsilon}{kT}$",
+    "ru": "Двухуровневая система: $C=Nk\\frac{x^2e^x}{\\left(e^x+1\\right)^2}$, $x=\\frac{\\varepsilon}{kT}$",
+    "en": "Two-level system: $C=Nk\\frac{x^2e^x}{\\left(e^x+1\\right)^2}$, $x=\\frac{\\varepsilon}{kT}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Shottki anomaliyasi",
+   "ru": "Аномалия Шоттки",
+   "en": "Schottky anomaly"
+  },
+  "answer": "T\\approx48\\ \\mathrm{K};\\ \\frac{C}{Nk}\\approx0.44",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L32, Shottki anomaliyasi)"
+ },
+ {
+  "id": "B2-L32-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$1\\ \\mathrm{mol}$ ikki sathli zarradan iborat tizim entropiyasini $kT=\\frac{\\varepsilon}{2}$ da va $T\\to\\infty$ da toping.",
+   "ru": "Найдите энтропию системы из $1\\ \\mathrm{mol}$ двухуровневых частиц при $kT=\\frac{\\varepsilon}{2}$ и при $T\\to\\infty$.",
+   "en": "Find the entropy of a system of $1\\ \\mathrm{mol}$ of two-level particles at $kT=\\frac{\\varepsilon}{2}$ and as $T\\to\\infty$."
+  },
+  "figure": "figures/B2-L32-S12.png",
+  "solution": {
+   "uz": [
+    "$Z_1=1+e^{-x}$, $S=\\frac{\\langle E\\rangle-F}{T}$: $$\\frac{S}{Nk}=\\ln\\left(1+e^{-x}\\right)+\\frac{xe^{-x}}{1+e^{-x}}$$",
+    "$x=2$: $$\\frac{S}{Nk}=0.127+0.238\\approx0.365,\\qquad S\\approx3.04\\ \\mathrm{J/K}$$",
+    "$x\\to0$ — ikkala holat teng ehtimolli: $$S\\to R\\ln2\\approx5.76\\ \\mathrm{J/K}$$"
+   ],
+   "ru": [
+    "$Z_1=1+e^{-x}$, $S=\\frac{\\langle E\\rangle-F}{T}$: $$\\frac{S}{Nk}=\\ln\\left(1+e^{-x}\\right)+\\frac{xe^{-x}}{1+e^{-x}}$$",
+    "$x=2$: $$\\frac{S}{Nk}=0.127+0.238\\approx0.365,\\qquad S\\approx3.04\\ \\mathrm{J/K}$$",
+    "$x\\to0$ — оба состояния равновероятны: $$S\\to R\\ln2\\approx5.76\\ \\mathrm{J/K}$$"
+   ],
+   "en": [
+    "$Z_1=1+e^{-x}$, $S=\\frac{\\langle E\\rangle-F}{T}$: $$\\frac{S}{Nk}=\\ln\\left(1+e^{-x}\\right)+\\frac{xe^{-x}}{1+e^{-x}}$$",
+    "$x=2$: $$\\frac{S}{Nk}=0.127+0.238\\approx0.365,\\qquad S\\approx3.04\\ \\mathrm{J/K}$$",
+    "$x\\to0$ — both states equally probable: $$S\\to R\\ln2\\approx5.76\\ \\mathrm{J/K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Entropiya: $S=\\frac{\\langle E\\rangle-F}{T}$",
+    "ru": "Энтропия: $S=\\frac{\\langle E\\rangle-F}{T}$",
+    "en": "Entropy: $S=\\frac{\\langle E\\rangle-F}{T}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Ikki sathli sistema entropiyasi",
+   "ru": "Энтропия двухуровневой системы",
+   "en": "Entropy of a two-level system"
+  },
+  "answer": "S\\approx3.04\\ \\mathrm{J/K};\\ S\\to5.76\\ \\mathrm{J/K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original (B2-L32, ikki sathli sistema)"
+ },
+ {
+  "id": "B2-L32-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ikki atomli molekulaning tebranish kvanti $\\hbar\\omega=0.1\\ \\mathrm{eV}$. $300\\ \\mathrm{K}$ da o'rtacha tebranish kvantlari sonini va bitta molekulaga to'g'ri keladigan tebranma issiqlik sig'imini toping. Klassik qiymat bilan solishtiring.",
+   "ru": "Колебательный квант двухатомной молекулы $\\hbar\\omega=0.1\\ \\mathrm{eV}$. Найдите среднее число колебательных квантов и колебательную теплоёмкость на одну молекулу при $300\\ \\mathrm{K}$. Сравните с классическим значением.",
+   "en": "The vibrational quantum of a diatomic molecule is $\\hbar\\omega=0.1\\ \\mathrm{eV}$. Find the mean number of vibrational quanta and the vibrational heat capacity per molecule at $300\\ \\mathrm{K}$. Compare with the classical value."
+  },
+  "figure": "figures/B2-L32-S13.png",
+  "solution": {
+   "uz": [
+    "$x=\\frac{\\hbar\\omega}{kT}=\\frac{0.1}{0.0259}\\approx3.87$: $$\\langle n\\rangle=\\frac{1}{e^{3.87}-1}\\approx0.021$$",
+    "Bitta ossilyator issiqlik sig'imi: $$\\frac{C}{k}=\\frac{x^2e^x}{\\left(e^x-1\\right)^2}\\approx0.33$$",
+    "Klassik qiymat $C=k$ — tebranish qisman muzlagan: $$\\frac{C}{k}\\approx0.33\\ll1$$"
+   ],
+   "ru": [
+    "$x=\\frac{\\hbar\\omega}{kT}=\\frac{0.1}{0.0259}\\approx3.87$: $$\\langle n\\rangle=\\frac{1}{e^{3.87}-1}\\approx0.021$$",
+    "Теплоёмкость одного осциллятора: $$\\frac{C}{k}=\\frac{x^2e^x}{\\left(e^x-1\\right)^2}\\approx0.33$$",
+    "Классическое значение $C=k$ — колебания частично заморожены: $$\\frac{C}{k}\\approx0.33\\ll1$$"
+   ],
+   "en": [
+    "$x=\\frac{\\hbar\\omega}{kT}=\\frac{0.1}{0.0259}\\approx3.87$: $$\\langle n\\rangle=\\frac{1}{e^{3.87}-1}\\approx0.021$$",
+    "The heat capacity of one oscillator: $$\\frac{C}{k}=\\frac{x^2e^x}{\\left(e^x-1\\right)^2}\\approx0.33$$",
+    "The classical value is $C=k$ — the vibration is partly frozen: $$\\frac{C}{k}\\approx0.33\\ll1$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kvant ossilyator: $\\langle n\\rangle=\\frac{1}{e^{\\beta\\hbar\\omega}-1}$",
+    "ru": "Квантовый осциллятор: $\\langle n\\rangle=\\frac{1}{e^{\\beta\\hbar\\omega}-1}$",
+    "en": "Quantum oscillator: $\\langle n\\rangle=\\frac{1}{e^{\\beta\\hbar\\omega}-1}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Kvant ossilyator",
+   "ru": "Квантовый осциллятор",
+   "en": "Quantum oscillator"
+  },
+  "answer": "\\langle n\\rangle\\approx0.021;\\ \\frac{C}{k}\\approx0.33",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B2-L32, kvant ossilyator)"
+ },
+ {
+  "id": "B2-L32-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Kristallning Eynshteyn temperaturasi $240\\ \\mathrm{K}$. $60\\ \\mathrm{K}$ da molyar issiqlik sig'imini Eynshteyn modeli bo'yicha toping va uni Dyulong–Pti qiymati bilan solishtiring.",
+   "ru": "Температура Эйнштейна кристалла $240\\ \\mathrm{K}$. Найдите молярную теплоёмкость при $60\\ \\mathrm{K}$ по модели Эйнштейна и сравните со значением Дюлонга–Пти.",
+   "en": "The Einstein temperature of a crystal is $240\\ \\mathrm{K}$. Find the molar heat capacity at $60\\ \\mathrm{K}$ in the Einstein model and compare it with the Dulong–Petit value."
+  },
+  "figure": "figures/B2-L32-S14.png",
+  "solution": {
+   "uz": [
+    "$x=\\frac{\\theta}{T}=4$: $$\\frac{C}{3R}=\\frac{16e^4}{\\left(e^4-1\\right)^2}=\\frac{873.6}{2873}\\approx0.304$$",
+    "Molyar issiqlik sig'imi: $$C\\approx0.304\\cdot24.9\\approx7.6\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "Dyulong–Pti qiymati: $$3R\\approx24.9\\ \\mathrm{J/(mol\\cdot K)}$$"
+   ],
+   "ru": [
+    "$x=\\frac{\\theta}{T}=4$: $$\\frac{C}{3R}=\\frac{16e^4}{\\left(e^4-1\\right)^2}=\\frac{873.6}{2873}\\approx0.304$$",
+    "Молярная теплоёмкость: $$C\\approx0.304\\cdot24.9\\approx7.6\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "Значение Дюлонга–Пти: $$3R\\approx24.9\\ \\mathrm{J/(mol\\cdot K)}$$"
+   ],
+   "en": [
+    "$x=\\frac{\\theta}{T}=4$: $$\\frac{C}{3R}=\\frac{16e^4}{\\left(e^4-1\\right)^2}=\\frac{873.6}{2873}\\approx0.304$$",
+    "The molar heat capacity: $$C\\approx0.304\\cdot24.9\\approx7.6\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "The Dulong–Petit value: $$3R\\approx24.9\\ \\mathrm{J/(mol\\cdot K)}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Eynshteyn modeli: $C=3R\\frac{x^2e^x}{\\left(e^x-1\\right)^2}$, $x=\\frac{\\theta}{T}$",
+    "ru": "Модель Эйнштейна: $C=3R\\frac{x^2e^x}{\\left(e^x-1\\right)^2}$, $x=\\frac{\\theta}{T}$",
+    "en": "Einstein model: $C=3R\\frac{x^2e^x}{\\left(e^x-1\\right)^2}$, $x=\\frac{\\theta}{T}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Eynshteyn modeli",
+   "ru": "Модель Эйнштейна",
+   "en": "Einstein model"
+  },
+  "answer": "C\\approx7.6\\ \\mathrm{J/(mol\\cdot K)}\\approx0.30\\cdot3R",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "original (B2-L32, Eynshteyn modeli)"
+ },
+ {
+  "id": "B2-L32-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Spin $\\frac{1}{2}$ ionlaridan iborat paramagnetik tuz ($\\mu_B=9.27\\cdot10^{-24}\\ \\mathrm{J/T}$) $2\\ \\mathrm{T}$ maydonga joylashtirilgan. $1\\ \\mathrm{K}$ va $300\\ \\mathrm{K}$ da magnitlanishning to'yinish qiymatiga nisbatini toping.",
+   "ru": "Парамагнитная соль из ионов со спином $\\frac{1}{2}$ ($\\mu_B=9.27\\cdot10^{-24}\\ \\mathrm{J/T}$) помещена в поле $2\\ \\mathrm{T}$. Найдите отношение намагниченности к её значению насыщения при $1\\ \\mathrm{K}$ и при $300\\ \\mathrm{K}$.",
+   "en": "A paramagnetic salt of spin-$\\frac{1}{2}$ ions ($\\mu_B=9.27\\cdot10^{-24}\\ \\mathrm{J/T}$) is placed in a $2\\ \\mathrm{T}$ field. Find the ratio of the magnetisation to its saturation value at $1\\ \\mathrm{K}$ and at $300\\ \\mathrm{K}$."
+  },
+  "figure": "figures/B2-L32-S15.png",
+  "solution": {
+   "uz": [
+    "Magnitlanish: $$\\frac{M}{N\\mu_B}=\\tanh\\frac{\\mu_BB}{kT}$$",
+    "$1\\ \\mathrm{K}$ da: $$\\frac{\\mu_BB}{kT}=\\frac{1.854\\cdot10^{-23}}{1.38\\cdot10^{-23}}\\approx1.34,\\qquad \\tanh1.34\\approx0.87$$",
+    "$300\\ \\mathrm{K}$ da — Kyuri qonuni sohasi: $$\\frac{M}{N\\mu_B}\\approx\\frac{\\mu_BB}{kT}\\approx4.5\\cdot10^{-3}$$"
+   ],
+   "ru": [
+    "Намагниченность: $$\\frac{M}{N\\mu_B}=\\tanh\\frac{\\mu_BB}{kT}$$",
+    "При $1\\ \\mathrm{K}$: $$\\frac{\\mu_BB}{kT}=\\frac{1.854\\cdot10^{-23}}{1.38\\cdot10^{-23}}\\approx1.34,\\qquad \\tanh1.34\\approx0.87$$",
+    "При $300\\ \\mathrm{K}$ — область закона Кюри: $$\\frac{M}{N\\mu_B}\\approx\\frac{\\mu_BB}{kT}\\approx4.5\\cdot10^{-3}$$"
+   ],
+   "en": [
+    "The magnetisation: $$\\frac{M}{N\\mu_B}=\\tanh\\frac{\\mu_BB}{kT}$$",
+    "At $1\\ \\mathrm{K}$: $$\\frac{\\mu_BB}{kT}=\\frac{1.854\\cdot10^{-23}}{1.38\\cdot10^{-23}}\\approx1.34,\\qquad \\tanh1.34\\approx0.87$$",
+    "At $300\\ \\mathrm{K}$ — the Curie-law region: $$\\frac{M}{N\\mu_B}\\approx\\frac{\\mu_BB}{kT}\\approx4.5\\cdot10^{-3}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Paramagnetik: $M=N\\mu_B\\tanh\\frac{\\mu_BB}{kT}$",
+    "ru": "Парамагнетик: $M=N\\mu_B\\tanh\\frac{\\mu_BB}{kT}$",
+    "en": "Paramagnet: $M=N\\mu_B\\tanh\\frac{\\mu_BB}{kT}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Paramagnetik",
+   "ru": "Парамагнетик",
+   "en": "Paramagnet"
+  },
+  "answer": "0.87;\\ 4.5\\cdot10^{-3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L32, paramagnetik)"
+ },
+ {
+  "id": "B2-L32-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Zarra energiyalari $0$, $\\varepsilon$ va $2\\varepsilon$ bo'lgan uchta aynimagan holatda bo'la oladi. $kT=\\varepsilon$ da statistik yig'indini, asosiy holat ehtimolligini, o'rtacha energiyani, erkin energiyani va entropiyani toping.",
+   "ru": "Частица может находиться в трёх невырожденных состояниях с энергиями $0$, $\\varepsilon$ и $2\\varepsilon$. При $kT=\\varepsilon$ найдите статистическую сумму, вероятность основного состояния, среднюю энергию, свободную энергию и энтропию.",
+   "en": "A particle can be in three non-degenerate states with energies $0$, $\\varepsilon$ and $2\\varepsilon$. At $kT=\\varepsilon$ find the partition function, the probability of the ground state, the mean energy, the free energy and the entropy."
+  },
+  "figure": "figures/B2-L32-S16.png",
+  "solution": {
+   "uz": [
+    "Statistik yig'indi: $$Z=1+e^{-1}+e^{-2}\\approx1.503,\\qquad P_0=\\frac{1}{Z}\\approx0.665$$",
+    "O'rtacha energiya: $$\\langle E\\rangle=\\varepsilon\\frac{e^{-1}+2e^{-2}}{Z}\\approx0.425\\varepsilon$$",
+    "Erkin energiya: $$F=-kT\\ln Z=-\\varepsilon\\ln1.503\\approx-0.408\\varepsilon$$",
+    "Entropiya: $$S=\\frac{\\langle E\\rangle-F}{T}\\approx0.832k$$"
+   ],
+   "ru": [
+    "Статистическая сумма: $$Z=1+e^{-1}+e^{-2}\\approx1.503,\\qquad P_0=\\frac{1}{Z}\\approx0.665$$",
+    "Средняя энергия: $$\\langle E\\rangle=\\varepsilon\\frac{e^{-1}+2e^{-2}}{Z}\\approx0.425\\varepsilon$$",
+    "Свободная энергия: $$F=-kT\\ln Z=-\\varepsilon\\ln1.503\\approx-0.408\\varepsilon$$",
+    "Энтропия: $$S=\\frac{\\langle E\\rangle-F}{T}\\approx0.832k$$"
+   ],
+   "en": [
+    "The partition function: $$Z=1+e^{-1}+e^{-2}\\approx1.503,\\qquad P_0=\\frac{1}{Z}\\approx0.665$$",
+    "The mean energy: $$\\langle E\\rangle=\\varepsilon\\frac{e^{-1}+2e^{-2}}{Z}\\approx0.425\\varepsilon$$",
+    "The free energy: $$F=-kT\\ln Z=-\\varepsilon\\ln1.503\\approx-0.408\\varepsilon$$",
+    "The entropy: $$S=\\frac{\\langle E\\rangle-F}{T}\\approx0.832k$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Statistik yig'indi: $Z=\\sum_jg_je^{-\\beta E_j}$, $F=-kT\\ln Z$",
+    "ru": "Статистическая сумма: $Z=\\sum_jg_je^{-\\beta E_j}$, $F=-kT\\ln Z$",
+    "en": "Partition function: $Z=\\sum_jg_je^{-\\beta E_j}$, $F=-kT\\ln Z$"
+   },
+   null,
+   null,
+   {
+    "uz": "Entropiya: $S=\\frac{\\langle E\\rangle-F}{T}$",
+    "ru": "Энтропия: $S=\\frac{\\langle E\\rangle-F}{T}$",
+    "en": "Entropy: $S=\\frac{\\langle E\\rangle-F}{T}$"
+   }
+  ],
+  "basis": {
+   "uz": "Statistik yig'indi",
+   "ru": "Статистическая сумма",
+   "en": "Partition function"
+  },
+  "answer": "Z\\approx1.503;\\ P_0\\approx0.665;\\ \\langle E\\rangle\\approx0.425\\varepsilon;\\ F\\approx-0.408\\varepsilon;\\ S\\approx0.832k",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 4.1.1 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L32-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ideal gaz uchun $Z=\\frac{1}{N!}\\left(\\frac{V}{\\Lambda^3}\\right)^N$. Erkin energiyadan holat tenglamasini keltirib chiqaring va $300\\ \\mathrm{K}$, $1\\ \\mathrm{atm}$ dagi geliy uchun ($m_0=6.64\\cdot10^{-27}\\ \\mathrm{kg}$) kimyoviy potensialni toping.",
+   "ru": "Для идеального газа $Z=\\frac{1}{N!}\\left(\\frac{V}{\\Lambda^3}\\right)^N$. Выведите из свободной энергии уравнение состояния и найдите химический потенциал гелия ($m_0=6.64\\cdot10^{-27}\\ \\mathrm{kg}$) при $300\\ \\mathrm{K}$ и $1\\ \\mathrm{atm}$.",
+   "en": "For an ideal gas $Z=\\frac{1}{N!}\\left(\\frac{V}{\\Lambda^3}\\right)^N$. Derive the equation of state from the free energy and find the chemical potential of helium ($m_0=6.64\\cdot10^{-27}\\ \\mathrm{kg}$) at $300\\ \\mathrm{K}$ and $1\\ \\mathrm{atm}$."
+  },
+  "figure": "figures/B2-L32-S17.png",
+  "solution": {
+   "uz": [
+    "Stirling formulasi $\\ln N!\\approx N\\ln N-N$ bilan: $$F=-kT\\ln Z=-NkT\\left[\\ln\\frac{V}{N\\Lambda^3}+1\\right]$$",
+    "Bosim: $$p=-\\left(\\frac{\\partial F}{\\partial V}\\right)_T=\\frac{NkT}{V}$$",
+    "Kimyoviy potensial $\\mu=\\left(\\frac{\\partial F}{\\partial N}\\right)_{T,V}$: $$\\mu=kT\\ln\\left(n\\Lambda^3\\right),\\qquad \\Lambda\\approx5.0\\cdot10^{-11}\\ \\mathrm{m},\\qquad n\\Lambda^3\\approx3.1\\cdot10^{-6}$$",
+    "Natija: $$\\mu\\approx-12.7kT\\approx-0.33\\ \\mathrm{eV}$$"
+   ],
+   "ru": [
+    "С формулой Стирлинга $\\ln N!\\approx N\\ln N-N$: $$F=-kT\\ln Z=-NkT\\left[\\ln\\frac{V}{N\\Lambda^3}+1\\right]$$",
+    "Давление: $$p=-\\left(\\frac{\\partial F}{\\partial V}\\right)_T=\\frac{NkT}{V}$$",
+    "Химический потенциал $\\mu=\\left(\\frac{\\partial F}{\\partial N}\\right)_{T,V}$: $$\\mu=kT\\ln\\left(n\\Lambda^3\\right),\\qquad \\Lambda\\approx5.0\\cdot10^{-11}\\ \\mathrm{m},\\qquad n\\Lambda^3\\approx3.1\\cdot10^{-6}$$",
+    "Результат: $$\\mu\\approx-12.7kT\\approx-0.33\\ \\mathrm{eV}$$"
+   ],
+   "en": [
+    "With Stirling's formula $\\ln N!\\approx N\\ln N-N$: $$F=-kT\\ln Z=-NkT\\left[\\ln\\frac{V}{N\\Lambda^3}+1\\right]$$",
+    "The pressure: $$p=-\\left(\\frac{\\partial F}{\\partial V}\\right)_T=\\frac{NkT}{V}$$",
+    "The chemical potential $\\mu=\\left(\\frac{\\partial F}{\\partial N}\\right)_{T,V}$: $$\\mu=kT\\ln\\left(n\\Lambda^3\\right),\\qquad \\Lambda\\approx5.0\\cdot10^{-11}\\ \\mathrm{m},\\qquad n\\Lambda^3\\approx3.1\\cdot10^{-6}$$",
+    "The result: $$\\mu\\approx-12.7kT\\approx-0.33\\ \\mathrm{eV}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Statistik yig'indi: $Z=\\sum_jg_je^{-\\beta E_j}$, $F=-kT\\ln Z$",
+    "ru": "Статистическая сумма: $Z=\\sum_jg_je^{-\\beta E_j}$, $F=-kT\\ln Z$",
+    "en": "Partition function: $Z=\\sum_jg_je^{-\\beta E_j}$, $F=-kT\\ln Z$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Ideal gazning statistik yig'indisi",
+   "ru": "Статистическая сумма идеального газа",
+   "en": "Partition function of an ideal gas"
+  },
+  "answer": "p=\\frac{NkT}{V};\\ \\mu\\approx-0.33\\ \\mathrm{eV}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L32, ideal gaz Z)"
+ },
+ {
+  "id": "B2-L32-S18",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $40\\ \\mathrm{cm}$ bo'lgan izotermik silindrni erkin porshen ikki qismga ajratadi: bir tomonda $1\\ \\mathrm{mol}$, ikkinchisida $3\\ \\mathrm{mol}$ ideal gaz. Erkin energiya minimumi shartidan porshenning muvozanat holatini toping va muvozanat turg'unligini tekshiring.",
+   "ru": "Изотермический цилиндр длиной $40\\ \\mathrm{cm}$ разделён свободным поршнем на две части: с одной стороны $1\\ \\mathrm{mol}$, с другой $3\\ \\mathrm{mol}$ идеального газа. Из условия минимума свободной энергии найдите равновесное положение поршня и проверьте устойчивость равновесия.",
+   "en": "An isothermal cylinder $40\\ \\mathrm{cm}$ long is divided by a free piston into two parts: $1\\ \\mathrm{mol}$ of ideal gas on one side and $3\\ \\mathrm{mol}$ on the other. From the condition of minimum free energy find the equilibrium position of the piston and check the stability of the equilibrium."
+  },
+  "figure": "figures/B2-L32-S18.png",
+  "solution": {
+   "uz": [
+    "Porshen holati $x$ ($\\mathrm{cm}$): $$F\\left(x\\right)=-RT\\left[\\ln x+3\\ln\\left(40-x\\right)\\right]+\\mathrm{const}$$",
+    "$\\frac{dF}{dx}=0$ — bosimlar tengligi: $$\\frac{1}{x}=\\frac{3}{40-x}\\ \\Rightarrow\\ x=10\\ \\mathrm{cm}$$",
+    "Ikkinchi hosila musbat — turg'un: $$\\frac{d^2F}{dx^2}=RT\\left[\\frac{1}{x^2}+\\frac{3}{\\left(40-x\\right)^2}\\right]>0$$"
+   ],
+   "ru": [
+    "Положение поршня $x$ ($\\mathrm{cm}$): $$F\\left(x\\right)=-RT\\left[\\ln x+3\\ln\\left(40-x\\right)\\right]+\\mathrm{const}$$",
+    "$\\frac{dF}{dx}=0$ — равенство давлений: $$\\frac{1}{x}=\\frac{3}{40-x}\\ \\Rightarrow\\ x=10\\ \\mathrm{cm}$$",
+    "Вторая производная положительна — устойчиво: $$\\frac{d^2F}{dx^2}=RT\\left[\\frac{1}{x^2}+\\frac{3}{\\left(40-x\\right)^2}\\right]>0$$"
+   ],
+   "en": [
+    "The piston position $x$ ($\\mathrm{cm}$): $$F\\left(x\\right)=-RT\\left[\\ln x+3\\ln\\left(40-x\\right)\\right]+\\mathrm{const}$$",
+    "$\\frac{dF}{dx}=0$ — equal pressures: $$\\frac{1}{x}=\\frac{3}{40-x}\\ \\Rightarrow\\ x=10\\ \\mathrm{cm}$$",
+    "The second derivative is positive — stable: $$\\frac{d^2F}{dx^2}=RT\\left[\\frac{1}{x^2}+\\frac{3}{\\left(40-x\\right)^2}\\right]>0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Muvozanat sharti: $T=\\mathrm{const}:\\ F\\to\\min$",
+    "ru": "Условие равновесия: $T=\\mathrm{const}:\\ F\\to\\min$",
+    "en": "Equilibrium condition: $T=\\mathrm{const}:\\ F\\to\\min$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Erkin energiya minimumi",
+   "ru": "Минимум свободной энергии",
+   "en": "Minimum of free energy"
+  },
+  "answer": "x=10\\ \\mathrm{cm};\\ \\frac{d^2F}{dx^2}>0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L32, muvozanat)"
+ }
+]

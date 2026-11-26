@@ -1,0 +1,627 @@
+[
+ {
+  "t": "h1",
+  "uz": "Termodinamik potensiallar (Thermodynamic potentials)",
+  "ru": "Термодинамические потенциалы",
+  "en": "Thermodynamic potentials"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz ichki energiya, entalpiya, erkin energiya va Gibbs energiyasining tabiiy o'zgaruvchilarini va differensiallarini yozasiz; ularni Lejandr almashtirishi bilan bir-biridan hosil qilasiz va har birining fizik ma'nosini (eng katta ish, o'zgarmas bosimdagi issiqlik) tushuntirasiz; Maksvell munosabatlarini keltirib chiqarib, o'lchab bo'lmaydigan hosilalarni o'lchanadiganlari orqali ifodalaysiz; $C_p-C_V$, energiya tenglamasi va Joul–Tomson effektini real moddalar uchun hisoblaysiz; o'zgarmas sharoitlarda muvozanat qaysi potensial minimumi ekanini va kimyoviy potensialni ishlatasiz; statistik yig'indidan barcha termodinamik kattaliklarni topasiz va uni ikki sathli sistema, kvant ossilyator, Eynshteyn qattiq jismi va paramagnetikka qo'llaysiz.",
+  "ru": "**Цель.** После урока вы будете записывать естественные переменные и дифференциалы внутренней энергии, энтальпии, свободной энергии и энергии Гиббса; получать их друг из друга преобразованием Лежандра и объяснять физический смысл каждого (наибольшая работа, теплота при постоянном давлении); выводить соотношения Максвелла и выражать неизмеряемые производные через измеряемые; вычислять $C_p-C_V$, уравнение энергии и эффект Джоуля–Томсона для реальных веществ; использовать, минимум какого потенциала даёт равновесие при заданных условиях, и химический потенциал; находить все термодинамические величины из статистической суммы и применять её к двухуровневой системе, квантовому осциллятору, твёрдому телу Эйнштейна и парамагнетику.",
+  "en": "**Goal.** After this lesson you will write the natural variables and the differentials of the internal energy, enthalpy, free energy and Gibbs energy; obtain them from one another by Legendre transformation and explain the physical meaning of each (maximum work, heat at constant pressure); derive the Maxwell relations and express unmeasurable derivatives through measurable ones; calculate $C_p-C_V$, the energy equation and the Joule–Thomson effect for real substances; use the fact that equilibrium under given conditions is a minimum of a particular potential, and use the chemical potential; find all thermodynamic quantities from the partition function and apply it to a two-level system, a quantum oscillator, the Einstein solid and a paramagnet."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L30 da asosiy tenglama $T\\,dS=dU+p\\,dV$ ni oldik, B2-L31 da Bolsman taqsimoti va mikroskopik tavsifni ko'rdik. Bu darsda ikkalasini «texnik apparat»ga aylantiramiz. Termodinamik potensiallar — tajribada qulay o'zgaruvchilar ($T$, $p$) da ishlash uchun energiyaning qayta yozilgan shakllari; ulardan kelib chiqadigan munosabatlar tajribada o'lchash qiyin kattaliklarni (masalan, entropiyaning hajmga bog'liqligini) oson o'lchanadiganlar orqali ifodalaydi. Statistik yig'indi esa mikroskopik modeldan to'g'ridan-to'g'ri erkin energiyani beradi. Fazaviy o'tishlar va Klapeyron–Klauzius tenglamasi — B2-L33 da. GRE da statistik yig'indi, ikki sathli sistema va issiqlik sig'imining past temperaturadagi xulqi tez-tez so'raladi.",
+  "ru": "В B2-L30 мы получили основное уравнение $T\\,dS=dU+p\\,dV$, в B2-L31 увидели распределение Больцмана и микроскопическое описание. В этом уроке превратим оба в «технический аппарат». Термодинамические потенциалы — переписанные формы энергии для работы в удобных для опыта переменных ($T$, $p$); вытекающие из них соотношения выражают трудноизмеримые величины (например, зависимость энтропии от объёма) через легко измеримые. А статистическая сумма прямо из микроскопической модели даёт свободную энергию. Фазовые переходы и уравнение Клапейрона–Клаузиуса — в B2-L33. На GRE часто спрашивают статистическую сумму, двухуровневую систему и поведение теплоёмкости при низких температурах.",
+  "en": "In B2-L30 we obtained the fundamental equation $T\\,dS=dU+p\\,dV$, and in B2-L31 we saw the Boltzmann distribution and the microscopic description. In this lesson we turn both into a \"technical toolkit\". Thermodynamic potentials are rewritten forms of the energy for working in experimentally convenient variables ($T$, $p$); the relations that follow from them express quantities that are hard to measure (such as the volume dependence of entropy) through easily measured ones. The partition function, in turn, gives the free energy directly from a microscopic model. Phase transitions and the Clausius–Clapeyron equation come in B2-L33. On the GRE the partition function, the two-level system and the low-temperature behaviour of heat capacity are asked about often."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Tabiiy o'zgaruvchilar va Lejandr almashtirishi",
+  "ru": "1. Естественные переменные и преобразование Лежандра",
+  "en": "1. Natural variables and the Legendre transformation"
+ },
+ {
+  "t": "li",
+  "uz": "**Ichki energiya.** Asosiy tenglama $dU=T\\,dS-p\\,dV$ shuni ko'rsatadiki, $U$ ning «tabiiy» o'zgaruvchilari $S$ va $V$: agar $U\\left(S,V\\right)$ funksiya ma'lum bo'lsa, temperatura va bosim oddiy hosila bilan topiladi va tizim haqida termodinamik ma'lumotning hammasi shu funksiyada. Bunday funksiya **termodinamik potensial** deyiladi — xuddi mexanikada potensial energiyadan kuch hosila bilan olinganidek:",
+  "ru": "**Внутренняя энергия.** Основное уравнение $dU=T\\,dS-p\\,dV$ показывает, что «естественные» переменные $U$ — это $S$ и $V$: если функция $U\\left(S,V\\right)$ известна, температура и давление находятся простым дифференцированием, и вся термодинамическая информация о системе содержится в этой функции. Такая функция называется **термодинамическим потенциалом** — так же, как в механике сила получается дифференцированием потенциальной энергии:",
+  "en": "**Internal energy.** The fundamental equation $dU=T\\,dS-p\\,dV$ shows that the \"natural\" variables of $U$ are $S$ and $V$: if the function $U\\left(S,V\\right)$ is known, temperature and pressure follow by simple differentiation, and all the thermodynamic information about the system is contained in this function. Such a function is called a **thermodynamic potential** — just as in mechanics a force is obtained by differentiating the potential energy:"
+ },
+ {
+  "t": "m",
+  "m": "T=\\left(\\frac{\\partial U}{\\partial S}\\right)_V,\\qquad p=-\\left(\\frac{\\partial U}{\\partial V}\\right)_S"
+ },
+ {
+  "t": "li",
+  "uz": "**Muammo.** Entropiyani to'g'ridan-to'g'ri o'lchab yoki boshqarib bo'lmaydi; tajribada esa odatda temperatura (termostat) va bosim (atmosfera) o'zgarmas tutiladi. Agar $U$ ni oddiygina $T$ orqali yozsak, $U\\left(T,V\\right)$ — masalan, ideal gaz uchun $\\nu C_VT$ — dan entropiyani va holat tenglamasini tiklab bo'lmaydi: ma'lumot yo'qoladi. Ma'lumotni saqlagan holda o'zgaruvchini almashtirishning to'g'ri usuli — **Lejandr almashtirishi**.",
+  "ru": "**Проблема.** Энтропию нельзя непосредственно измерить или регулировать; в опыте же обычно поддерживают постоянными температуру (термостат) и давление (атмосфера). Если просто записать $U$ через $T$, то из $U\\left(T,V\\right)$ — например, $\\nu C_VT$ для идеального газа — нельзя восстановить энтропию и уравнение состояния: информация теряется. Правильный способ сменить переменную, сохранив информацию, — **преобразование Лежандра**.",
+  "en": "**The problem.** Entropy cannot be measured or controlled directly; in experiments one usually holds the temperature (a thermostat) and the pressure (the atmosphere) constant. If we simply rewrite $U$ in terms of $T$, then from $U\\left(T,V\\right)$ — for example, $\\nu C_VT$ for an ideal gas — the entropy and the equation of state cannot be recovered: information is lost. The correct way to change the variable while keeping the information is the **Legendre transformation**."
+ },
+ {
+  "t": "li",
+  "uz": "**Geometrik ma'no ([[F01]]).** $U\\left(S\\right)$ egri chizig'ini (o'zgarmas $V$ da) nuqtalar to'plami emas, urinmalar to'plami sifatida tasvirlash mumkin: har bir urinma qiyaligi $T$ va $U$ o'qini kesib o'tish nuqtasi $U-TS$ bilan beriladi. Qavariq egri chiziq uchun bu ikki tavsif teng kuchli. Kesishish nuqtasi $T$ ning funksiyasi — bu **erkin energiya** $F=U-TS$; uning differensialida $dS$ o'rniga $dT$ turadi:",
+  "ru": "**Геометрический смысл ([[F01]]).** Кривую $U\\left(S\\right)$ (при постоянном $V$) можно описывать не как множество точек, а как множество касательных: каждая касательная задаётся наклоном $T$ и точкой пересечения с осью $U$, равной $U-TS$. Для выпуклой кривой эти два описания равноценны. Точка пересечения как функция $T$ — это **свободная энергия** $F=U-TS$; в её дифференциале вместо $dS$ стоит $dT$:",
+  "en": "**Geometric meaning ([[F01]]).** The curve $U\\left(S\\right)$ (at constant $V$) can be described not as a set of points but as a set of tangents: each tangent is given by its slope $T$ and its intercept on the $U$ axis, $U-TS$. For a convex curve the two descriptions are equivalent. The intercept as a function of $T$ is the **free energy** $F=U-TS$; in its differential $dT$ appears instead of $dS$:"
+ },
+ {
+  "t": "m",
+  "m": "F=U-TS,\\qquad dF=dU-T\\,dS-S\\,dT=-S\\,dT-p\\,dV"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L32-F01.png",
+   "ru": "figures/B2-L32-F01-ru.png",
+   "en": "figures/B2-L32-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy qoida.** Juft $\\left(x,\\ y\\right)$ — «kuch–koordinata» ($T$ va $S$ yoki $-p$ va $V$). $x\\,dy$ hadni $-y\\,dx$ ga almashtirish uchun potensialdan $xy$ ko'paytma ayiriladi. $U$ dan boshlab bitta yoki ikkala juftni almashtirsak, to'rtta potensial hosil bo'ladi; har biri o'z tabiiy o'zgaruvchilarida to'liq ma'lumotni saqlaydi. Klassik mexanikada xuddi shu almashtirish Lagranj funksiyasidan Gamilton funksiyasiga o'tishda ishlatiladi (B2-L10).",
+  "ru": "**Общее правило.** Пара $\\left(x,\\ y\\right)$ — «сила–координата» ($T$ и $S$ или $-p$ и $V$). Чтобы заменить член $x\\,dy$ на $-y\\,dx$, из потенциала вычитают произведение $xy$. Начав с $U$ и заменив одну или обе пары, получим четыре потенциала; каждый в своих естественных переменных содержит полную информацию. В классической механике то же преобразование используется при переходе от функции Лагранжа к функции Гамильтона (B2-L10).",
+  "en": "**The general rule.** A pair $\\left(x,\\ y\\right)$ is a \"force–coordinate\" pair ($T$ and $S$, or $-p$ and $V$). To replace the term $x\\,dy$ by $-y\\,dx$, the product $xy$ is subtracted from the potential. Starting from $U$ and exchanging one or both pairs gives four potentials; each contains the full information in its own natural variables. In classical mechanics the same transformation is used to go from the Lagrangian to the Hamiltonian (B2-L10)."
+ },
+ {
+  "t": "h2",
+  "uz": "2. To'rtta potensial va ularning ma'nosi",
+  "ru": "2. Четыре потенциала и их смысл",
+  "en": "2. The four potentials and their meaning"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'riflar va differensiallar.** Entalpiya $H$ (B2-L29 da drossellashda uchragan) — $V$ ni $p$ ga almashtirish; erkin energiya (Gelmgols energiyasi) $F$ — $S$ ni $T$ ga; Gibbs energiyasi $G$ — ikkalasi. Differensiallardan har bir potensialning tabiiy o'zgaruvchilari va birinchi hosilalari darhol o'qiladi:",
+  "ru": "**Определения и дифференциалы.** Энтальпия $H$ (встречалась в B2-L29 при дросселировании) — замена $V$ на $p$; свободная энергия (энергия Гельмгольца) $F$ — замена $S$ на $T$; энергия Гиббса $G$ — обе замены. Из дифференциалов сразу читаются естественные переменные каждого потенциала и его первые производные:",
+  "en": "**Definitions and differentials.** The enthalpy $H$ (met in B2-L29 in throttling) exchanges $V$ for $p$; the free energy (Helmholtz energy) $F$ exchanges $S$ for $T$; the Gibbs energy $G$ does both. From the differentials one reads off at once the natural variables of each potential and its first derivatives:"
+ },
+ {
+  "t": "m",
+  "m": "dU=T\\,dS-p\\,dV,\\qquad dH=T\\,dS+V\\,dp,\\qquad dF=-S\\,dT-p\\,dV,\\qquad dG=-S\\,dT+V\\,dp"
+ },
+ {
+  "t": "li",
+  "uz": "**Birinchi hosilalar.** Masalan, $S=-\\left(\\frac{\\partial F}{\\partial T}\\right)_V=-\\left(\\frac{\\partial G}{\\partial T}\\right)_p$, $p=-\\left(\\frac{\\partial F}{\\partial V}\\right)_T$, $V=\\left(\\frac{\\partial G}{\\partial p}\\right)_T$. Bulardan **Gibbs–Gelmgols tenglamalari** kelib chiqadi: $U=F+TS=F-T\\left(\\frac{\\partial F}{\\partial T}\\right)_V$ va $H=G-T\\left(\\frac{\\partial G}{\\partial T}\\right)_p$ — ya'ni erkin energiyaning temperaturaga bog'liqligi ma'lum bo'lsa, ichki energiya ham ma'lum. Statistik fizikada aynan $F\\left(T,V\\right)$ eng oson hisoblanadi (8-bo'lim).",
+  "ru": "**Первые производные.** Например, $S=-\\left(\\frac{\\partial F}{\\partial T}\\right)_V=-\\left(\\frac{\\partial G}{\\partial T}\\right)_p$, $p=-\\left(\\frac{\\partial F}{\\partial V}\\right)_T$, $V=\\left(\\frac{\\partial G}{\\partial p}\\right)_T$. Отсюда следуют **уравнения Гиббса–Гельмгольца**: $U=F+TS=F-T\\left(\\frac{\\partial F}{\\partial T}\\right)_V$ и $H=G-T\\left(\\frac{\\partial G}{\\partial T}\\right)_p$ — то есть если известна зависимость свободной энергии от температуры, известна и внутренняя энергия. В статистической физике легче всего вычисляется именно $F\\left(T,V\\right)$ (раздел 8).",
+  "en": "**First derivatives.** For example, $S=-\\left(\\frac{\\partial F}{\\partial T}\\right)_V=-\\left(\\frac{\\partial G}{\\partial T}\\right)_p$, $p=-\\left(\\frac{\\partial F}{\\partial V}\\right)_T$, $V=\\left(\\frac{\\partial G}{\\partial p}\\right)_T$. From these follow the **Gibbs–Helmholtz equations**: $U=F+TS=F-T\\left(\\frac{\\partial F}{\\partial T}\\right)_V$ and $H=G-T\\left(\\frac{\\partial G}{\\partial T}\\right)_p$ — that is, if the temperature dependence of the free energy is known, so is the internal energy. In statistical physics it is precisely $F\\left(T,V\\right)$ that is easiest to calculate (Section 8)."
+ },
+ {
+  "t": "li",
+  "uz": "**Fizik ma'nosi.** $H$: o'zgarmas bosimda $dH=\\delta Q$ — kimyo va texnikada reaksiya yoki isitish issiqligi entalpiya o'zgarishiga teng. $F$: o'zgarmas temperaturada tizim bajaradigan ish $A\\leq-\\Delta F$, tenglik qaytar jarayonda — «erkin» deyilishi shundan, energiyaning $TS$ qismi ishga aylanmaydi. $G$: o'zgarmas $T$ va $p$ da kengayish ishidan tashqari foydali ish (elektr, kimyoviy) $A'\\leq-\\Delta G$ — yoqilg'i elementi yoki batareya beradigan eng katta elektr energiyasi shu. Ideal gazning izotermik jarayonida $\\Delta U=0$, ammo $\\Delta F=-T\\Delta S\\neq0$ — bajarilgan ish aynan erkin energiyaning kamayishi.",
+  "ru": "**Физический смысл.** $H$: при постоянном давлении $dH=\\delta Q$ — в химии и технике теплота реакции или нагрева равна изменению энтальпии. $F$: при постоянной температуре работа системы $A\\leq-\\Delta F$, равенство — в обратимом процессе; отсюда название «свободная»: часть энергии $TS$ в работу не превращается. $G$: при постоянных $T$ и $p$ полезная работа помимо работы расширения (электрическая, химическая) $A'\\leq-\\Delta G$ — это наибольшая электрическая энергия, которую даёт топливный элемент или батарея. В изотермическом процессе с идеальным газом $\\Delta U=0$, но $\\Delta F=-T\\Delta S\\neq0$ — совершённая работа равна именно убыли свободной энергии.",
+  "en": "**Physical meaning.** $H$: at constant pressure $dH=\\delta Q$ — in chemistry and engineering the heat of a reaction or of heating equals the change in enthalpy. $F$: at constant temperature the work done by the system is $A\\leq-\\Delta F$, with equality in a reversible process; hence the name \"free\": the $TS$ part of the energy does not turn into work. $G$: at constant $T$ and $p$ the useful work other than expansion work (electrical, chemical) is $A'\\leq-\\Delta G$ — the greatest electrical energy a fuel cell or battery can deliver. In an isothermal process with an ideal gas $\\Delta U=0$ but $\\Delta F=-T\\Delta S\\neq0$ — the work done is exactly the decrease in free energy."
+ },
+ {
+  "t": "m",
+  "m": "Q_p=\\Delta H,\\qquad A\\leq-\\Delta F\\ \\left(T=\\mathrm{const}\\right),\\qquad A'\\leq-\\Delta G\\ \\left(T,\\ p=\\mathrm{const}\\right)"
+ },
+ {
+  "t": "h2",
+  "uz": "3. Maksvell munosabatlari",
+  "ru": "3. Соотношения Максвелла",
+  "en": "3. The Maxwell relations"
+ },
+ {
+  "t": "li",
+  "uz": "**Keltirib chiqarish.** Har bir potensial — holat funksiyasi, uning differensiali to'liq differensial; shuning uchun aralash ikkinchi hosilalar differensiallash tartibiga bog'liq emas. Masalan, $dF=-S\\,dT-p\\,dV$ dan $\\frac{\\partial^2F}{\\partial V\\partial T}=\\frac{\\partial^2F}{\\partial T\\partial V}$, ya'ni $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V$. To'rtta potensialdan to'rtta munosabat:",
+  "ru": "**Вывод.** Каждый потенциал — функция состояния, его дифференциал полный; поэтому смешанные вторые производные не зависят от порядка дифференцирования. Например, из $dF=-S\\,dT-p\\,dV$ $\\frac{\\partial^2F}{\\partial V\\partial T}=\\frac{\\partial^2F}{\\partial T\\partial V}$, то есть $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V$. Из четырёх потенциалов — четыре соотношения:",
+  "en": "**Derivation.** Each potential is a state function, and its differential is exact; so the mixed second derivatives do not depend on the order of differentiation. For example, from $dF=-S\\,dT-p\\,dV$, $\\frac{\\partial^2F}{\\partial V\\partial T}=\\frac{\\partial^2F}{\\partial T\\partial V}$, that is, $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V$. The four potentials give four relations:"
+ },
+ {
+  "t": "m",
+  "m": "\\left(\\frac{\\partial T}{\\partial V}\\right)_S=-\\left(\\frac{\\partial p}{\\partial S}\\right)_V,\\qquad \\left(\\frac{\\partial T}{\\partial p}\\right)_S=\\left(\\frac{\\partial V}{\\partial S}\\right)_p,\\qquad \\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V,\\qquad \\left(\\frac{\\partial S}{\\partial p}\\right)_T=-\\left(\\frac{\\partial V}{\\partial T}\\right)_p"
+ },
+ {
+  "t": "li",
+  "uz": "**Termodinamik kvadrat ([[F02]]).** Munosabatlarni yodlash uchun kvadrat chiziladi: tomonlarida potensiallar $U$, $H$, $G$, $F$ (soat mili bo'yicha), burchaklarida o'zgaruvchilar $S$, $p$, $T$, $V$; har bir potensial qo'shni burchaklardagi o'zgaruvchilarning funksiyasi. Strelkalar ishorani beradi. Kvadratning bir tomonidagi uch burchakdan hosila yoziladi va qo'shni tomondagi mos hosilaga tenglashtiriladi. Lekin eng ishonchli usul — doim tegishli differensialdan boshlash: kerakli juftlarni o'z ichiga olgan potensialni tanlang.",
+  "ru": "**Термодинамический квадрат ([[F02]]).** Для запоминания соотношений рисуют квадрат: на сторонах — потенциалы $U$, $H$, $G$, $F$ (по часовой стрелке), в вершинах — переменные $S$, $p$, $T$, $V$; каждый потенциал — функция переменных в соседних вершинах. Стрелки дают знак. Производная записывается по трём вершинам одной стороны и приравнивается соответствующей производной соседней стороны. Но самый надёжный способ — всегда начинать с соответствующего дифференциала: выберите потенциал, содержащий нужные пары.",
+  "en": "**The thermodynamic square ([[F02]]).** To remember the relations one draws a square: on its sides the potentials $U$, $H$, $G$, $F$ (clockwise), at its corners the variables $S$, $p$, $T$, $V$; each potential is a function of the variables at the neighbouring corners. Arrows give the sign. A derivative is written from three corners along one side and equated to the corresponding derivative on the neighbouring side. But the most reliable method is always to start from the relevant differential: choose the potential that contains the pairs you need."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L32-F02.png",
+   "ru": "figures/B2-L32-F02-ru.png",
+   "en": "figures/B2-L32-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Nima uchun foydali.** Entropiya hajm yoki bosim bilan qanday o'zgarishini bevosita o'lchab bo'lmaydi, ammo o'ng tomondagi hosilalar — holat tenglamasidan yoki issiqlikdan kengayish tajribasidan. Masalan, $\\left(\\frac{\\partial S}{\\partial p}\\right)_T=-\\left(\\frac{\\partial V}{\\partial T}\\right)_p=-\\alpha V$: qizdirilganda kengayadigan moddani izotermik siqsak, uning entropiyasi kamayadi va u issiqlik beradi; $4^\\circ\\mathrm{C}$ dan past haroratdagi suv ($\\alpha<0$) siqilganda aksincha issiqlik yutadi. Ideal gaz uchun $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\frac{\\nu R}{V}$ — B2-L30 dagi $\\nu R\\ln\\frac{V_2}{V_1}$ hadning aynan o'zi.",
+  "ru": "**Чем полезно.** Как энтропия меняется с объёмом или давлением, непосредственно не измерить, но производные справа — из уравнения состояния или опыта по тепловому расширению. Например, $\\left(\\frac{\\partial S}{\\partial p}\\right)_T=-\\left(\\frac{\\partial V}{\\partial T}\\right)_p=-\\alpha V$: если изотермически сжимать вещество, расширяющееся при нагреве, его энтропия уменьшается и оно отдаёт теплоту; вода ниже $4^\\circ\\mathrm{C}$ ($\\alpha<0$) при сжатии, наоборот, поглощает теплоту. Для идеального газа $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\frac{\\nu R}{V}$ — это в точности член $\\nu R\\ln\\frac{V_2}{V_1}$ из B2-L30.",
+  "en": "**Why it is useful.** How entropy changes with volume or pressure cannot be measured directly, but the derivatives on the right come from the equation of state or from a thermal-expansion experiment. For example, $\\left(\\frac{\\partial S}{\\partial p}\\right)_T=-\\left(\\frac{\\partial V}{\\partial T}\\right)_p=-\\alpha V$: if a substance that expands on heating is compressed isothermally, its entropy decreases and it gives off heat; water below $4^\\circ\\mathrm{C}$ ($\\alpha<0$), on the contrary, absorbs heat when compressed. For an ideal gas $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\frac{\\nu R}{V}$ — exactly the term $\\nu R\\ln\\frac{V_2}{V_1}$ of B2-L30."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Javob funksiyalari va energiya tenglamasi",
+  "ru": "4. Функции отклика и уравнение энергии",
+  "en": "4. Response functions and the energy equation"
+ },
+ {
+  "t": "li",
+  "uz": "**O'lchanadigan kattaliklar.** Tajribada asosan quyidagilar o'lchanadi: issiqlik sig'imlari $C_V=T\\left(\\frac{\\partial S}{\\partial T}\\right)_V$ va $C_p=T\\left(\\frac{\\partial S}{\\partial T}\\right)_p$, hajmiy kengayish koeffitsiyenti $\\alpha$ va izotermik siqiluvchanlik $\\kappa_T$. Termodinamikaning kuchi shundaki, boshqa barcha ikkinchi hosilalar shular orqali ifodalanadi:",
+  "ru": "**Измеряемые величины.** В опыте в основном измеряют: теплоёмкости $C_V=T\\left(\\frac{\\partial S}{\\partial T}\\right)_V$ и $C_p=T\\left(\\frac{\\partial S}{\\partial T}\\right)_p$, коэффициент объёмного расширения $\\alpha$ и изотермическую сжимаемость $\\kappa_T$. Сила термодинамики в том, что все остальные вторые производные выражаются через них:",
+  "en": "**Measurable quantities.** Experiments mainly measure the heat capacities $C_V=T\\left(\\frac{\\partial S}{\\partial T}\\right)_V$ and $C_p=T\\left(\\frac{\\partial S}{\\partial T}\\right)_p$, the volume expansion coefficient $\\alpha$ and the isothermal compressibility $\\kappa_T$. The power of thermodynamics is that all other second derivatives are expressed through these:"
+ },
+ {
+  "t": "m",
+  "m": "\\alpha=\\frac{1}{V}\\left(\\frac{\\partial V}{\\partial T}\\right)_p,\\qquad \\kappa_T=-\\frac{1}{V}\\left(\\frac{\\partial V}{\\partial p}\\right)_T,\\qquad \\kappa_S=-\\frac{1}{V}\\left(\\frac{\\partial V}{\\partial p}\\right)_S"
+ },
+ {
+  "t": "li",
+  "uz": "**$C_p-C_V$ ning umumiy formulasi.** $S\\left(T,p\\right)$ ni $S\\left(T,V\\left(T,p\\right)\\right)$ deb yozib, $T$ bo'yicha differensiallasak, $C_p-C_V=T\\left(\\frac{\\partial S}{\\partial V}\\right)_T\\left(\\frac{\\partial V}{\\partial T}\\right)_p$. Maksvell munosabati va $\\left(\\frac{\\partial p}{\\partial T}\\right)_V=\\frac{\\alpha}{\\kappa_T}$ (siklik qoida) yordamida faqat o'lchanadigan kattaliklar qoladi. Ideal gazda $\\alpha=\\frac{1}{T}$, $\\kappa_T=\\frac{1}{p}$ va formula Mayer tenglamasi $C_p-C_V=\\nu R$ ni beradi. Qattiq jism va suyuqliklarda $\\alpha$ kichik, farq bir necha foiz — shuning uchun ular uchun ko'pincha bitta «issiqlik sig'imi» deyiladi. Turg'unlikdan $\\kappa_T>0$, demak doim $C_p\\geq C_V$. Siqiluvchanliklar nisbati issiqlik sig'imlari nisbatiga teng:",
+  "ru": "**Общая формула $C_p-C_V$.** Записав $S\\left(T,p\\right)$ как $S\\left(T,V\\left(T,p\\right)\\right)$ и продифференцировав по $T$, получим $C_p-C_V=T\\left(\\frac{\\partial S}{\\partial V}\\right)_T\\left(\\frac{\\partial V}{\\partial T}\\right)_p$. С помощью соотношения Максвелла и $\\left(\\frac{\\partial p}{\\partial T}\\right)_V=\\frac{\\alpha}{\\kappa_T}$ (циклическое правило) остаются только измеряемые величины. Для идеального газа $\\alpha=\\frac{1}{T}$, $\\kappa_T=\\frac{1}{p}$, и формула даёт уравнение Майера $C_p-C_V=\\nu R$. У твёрдых тел и жидкостей $\\alpha$ мало, разность — несколько процентов, поэтому для них часто говорят просто «теплоёмкость». Из устойчивости $\\kappa_T>0$, значит, всегда $C_p\\geq C_V$. Отношение сжимаемостей равно отношению теплоёмкостей:",
+  "en": "**The general formula for $C_p-C_V$.** Writing $S\\left(T,p\\right)$ as $S\\left(T,V\\left(T,p\\right)\\right)$ and differentiating with respect to $T$ gives $C_p-C_V=T\\left(\\frac{\\partial S}{\\partial V}\\right)_T\\left(\\frac{\\partial V}{\\partial T}\\right)_p$. Using a Maxwell relation and $\\left(\\frac{\\partial p}{\\partial T}\\right)_V=\\frac{\\alpha}{\\kappa_T}$ (the cyclic rule), only measurable quantities remain. For an ideal gas $\\alpha=\\frac{1}{T}$, $\\kappa_T=\\frac{1}{p}$, and the formula gives Mayer's relation $C_p-C_V=\\nu R$. In solids and liquids $\\alpha$ is small and the difference is a few per cent, which is why one often speaks of just \"the heat capacity\" for them. Stability requires $\\kappa_T>0$, so always $C_p\\geq C_V$. The ratio of the compressibilities equals the ratio of the heat capacities:"
+ },
+ {
+  "t": "m",
+  "m": "C_p-C_V=\\frac{TV\\alpha^2}{\\kappa_T},\\qquad \\frac{\\kappa_T}{\\kappa_S}=\\frac{C_p}{C_V}=\\gamma"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya tenglamasi.** $dU=T\\,dS-p\\,dV$ ni o'zgarmas $T$ da $dV$ ga bo'lib, Maksvell munosabatini qo'llasak, ichki energiyaning hajmga bog'liqligi faqat holat tenglamasidan topiladi. Ideal gazda $T\\left(\\frac{\\partial p}{\\partial T}\\right)_V=p$ va $\\left(\\frac{\\partial U}{\\partial V}\\right)_T=0$ — ichki energiya faqat temperaturaga bog'liqligi isbotlandi (B2-L29 da tajribaviy fakt sifatida olingan edi). Van-der-Vaals gazida $p=\\frac{\\nu RT}{V-\\nu b}-\\frac{a\\nu^2}{V^2}$ va:",
+  "ru": "**Уравнение энергии.** Разделив $dU=T\\,dS-p\\,dV$ на $dV$ при постоянной $T$ и применив соотношение Максвелла, получим, что зависимость внутренней энергии от объёма находится только из уравнения состояния. Для идеального газа $T\\left(\\frac{\\partial p}{\\partial T}\\right)_V=p$ и $\\left(\\frac{\\partial U}{\\partial V}\\right)_T=0$ — доказано, что внутренняя энергия зависит только от температуры (в B2-L29 это было принято как опытный факт). Для газа Ван-дер-Ваальса $p=\\frac{\\nu RT}{V-\\nu b}-\\frac{a\\nu^2}{V^2}$ и:",
+  "en": "**The energy equation.** Dividing $dU=T\\,dS-p\\,dV$ by $dV$ at constant $T$ and using a Maxwell relation shows that the volume dependence of the internal energy follows from the equation of state alone. For an ideal gas $T\\left(\\frac{\\partial p}{\\partial T}\\right)_V=p$ and $\\left(\\frac{\\partial U}{\\partial V}\\right)_T=0$ — proving that the internal energy depends only on temperature (taken as an experimental fact in B2-L29). For a van der Waals gas $p=\\frac{\\nu RT}{V-\\nu b}-\\frac{a\\nu^2}{V^2}$ and:"
+ },
+ {
+  "t": "m",
+  "m": "\\left(\\frac{\\partial U}{\\partial V}\\right)_T=T\\left(\\frac{\\partial p}{\\partial T}\\right)_V-p,\\qquad U=\\nu C_VT-\\frac{a\\nu^2}{V}"
+ },
+ {
+  "t": "li",
+  "uz": "**Real gazning erkin kengayishi.** Molekulalar orasidagi tortishish ($a>0$) tufayli kengayishda potensial energiya ortadi. Izolyatsiyalangan idishda vakuumga kengayishda $U$ o'zgarmaydi, demak kinetik qism — temperatura — kamayadi: $\\Delta T=-\\frac{a\\nu}{C_V}\\left(\\frac{1}{V_1}-\\frac{1}{V_2}\\right)$. Ideal gazda bu effekt yo'q edi (B2-L29). Tajribada sovish kichik, shuning uchun Joul o'zining dastlabki tajribasida uni sezmagan.",
+  "ru": "**Свободное расширение реального газа.** Из-за притяжения молекул ($a>0$) при расширении растёт потенциальная энергия. При расширении в вакуум в изолированном сосуде $U$ не меняется, значит, кинетическая часть — температура — уменьшается: $\\Delta T=-\\frac{a\\nu}{C_V}\\left(\\frac{1}{V_1}-\\frac{1}{V_2}\\right)$. У идеального газа этого эффекта не было (B2-L29). На опыте охлаждение мало, поэтому Джоуль в своём первом опыте его не заметил.",
+  "en": "**Free expansion of a real gas.** Because of the attraction between molecules ($a>0$), the potential energy grows on expansion. In expansion into a vacuum in an insulated vessel $U$ stays constant, so the kinetic part — the temperature — decreases: $\\Delta T=-\\frac{a\\nu}{C_V}\\left(\\frac{1}{V_1}-\\frac{1}{V_2}\\right)$. An ideal gas showed no such effect (B2-L29). The cooling is small in practice, which is why Joule did not notice it in his first experiment."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Joul–Tomson effekti",
+  "ru": "5. Эффект Джоуля–Томсона",
+  "en": "5. The Joule–Thomson effect"
+ },
+ {
+  "t": "li",
+  "uz": "**Entalpiya saqlanadi.** Gaz g'ovak to'siq yoki ventil orqali yuqori bosimdan past bosimga sekin oqib o'tganda (B2-L29, drossellash) entalpiya saqlanadi: $H_1=H_2$. Temperaturaning bosim bilan o'zgarishi — Joul–Tomson koeffitsiyenti — $dH=T\\,dS+V\\,dp=0$, Maksvell munosabati va $C_p$ orqali ifodalanadi:",
+  "ru": "**Сохраняется энтальпия.** При медленном протекании газа через пористую перегородку или вентиль с высокого давления на низкое (B2-L29, дросселирование) сохраняется энтальпия: $H_1=H_2$. Изменение температуры с давлением — коэффициент Джоуля–Томсона — выражается через $dH=T\\,dS+V\\,dp=0$, соотношение Максвелла и $C_p$:",
+  "en": "**Enthalpy is conserved.** When a gas flows slowly through a porous plug or a valve from high to low pressure (B2-L29, throttling), the enthalpy is conserved: $H_1=H_2$. The change of temperature with pressure — the Joule–Thomson coefficient — is expressed through $dH=T\\,dS+V\\,dp=0$, a Maxwell relation and $C_p$:"
+ },
+ {
+  "t": "m",
+  "m": "\\left(\\frac{\\partial T}{\\partial p}\\right)_H=\\frac{V}{C_p}\\left(T\\alpha-1\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Ishora.** Ideal gazda $T\\alpha=1$ va effekt nolga teng. Real gazda $T\\alpha>1$ bo'lsa, bosim kamayganda gaz soviydi (musbat effekt), $T\\alpha<1$ bo'lsa — isiydi. Siyrak Van-der-Vaals gazi uchun $\\left(\\frac{\\partial T}{\\partial p}\\right)_H\\approx\\frac{\\nu}{C_p}\\left(\\frac{2a}{RT}-b\\right)$: tortishish ($a$) sovitadi, molekulalar hajmi ($b$) isitadi. Ular tenglashadigan temperatura — **inversiya temperaturasi**:",
+  "ru": "**Знак.** У идеального газа $T\\alpha=1$ и эффект равен нулю. У реального газа при $T\\alpha>1$ газ при понижении давления охлаждается (положительный эффект), при $T\\alpha<1$ — нагревается. Для разреженного газа Ван-дер-Ваальса $\\left(\\frac{\\partial T}{\\partial p}\\right)_H\\approx\\frac{\\nu}{C_p}\\left(\\frac{2a}{RT}-b\\right)$: притяжение ($a$) охлаждает, объём молекул ($b$) нагревает. Температура, при которой они уравниваются, — **температура инверсии**:",
+  "en": "**Sign.** For an ideal gas $T\\alpha=1$ and the effect is zero. For a real gas, if $T\\alpha>1$ the gas cools as the pressure drops (positive effect), and if $T\\alpha<1$ it warms. For a dilute van der Waals gas, $\\left(\\frac{\\partial T}{\\partial p}\\right)_H\\approx\\frac{\\nu}{C_p}\\left(\\frac{2a}{RT}-b\\right)$: the attraction ($a$) cools and the molecular volume ($b$) heats. The temperature at which they balance is the **inversion temperature**:"
+ },
+ {
+  "t": "m",
+  "m": "T^*=\\frac{2a}{Rb}"
+ },
+ {
+  "t": "li",
+  "uz": "**Inversiya egri chizig'i ([[F03]]).** Katta bosimlarda $b$ hadi muhimroq va inversiya temperaturasi bosimga bog'liq bo'ladi; $\\left(p,\\ T\\right)$ tekisligida egri chiziq ichida gaz drossellashda soviydi, tashqarida isiydi. Van-der-Vaals modelida, kritik nuqta kattaliklari ($T_c=\\frac{8a}{27Rb}$, $p_c=\\frac{a}{27b^2}$, B2-L33) birligida, egri chiziq universal: $\\frac{p}{p_c}=24\\sqrt{\\frac{3T}{T_c}}-\\frac{12T}{T_c}-27$. Havo va azot uchun xona temperaturasi egri chiziq ichida — Linde usulida drossellash bilan havo suyultiriladi; vodorod va geliyda inversiya temperaturasi past, ularni avval boshqa usul bilan sovitish kerak.",
+  "ru": "**Кривая инверсии ([[F03]]).** При больших давлениях важнее член $b$, и температура инверсии зависит от давления; в плоскости $\\left(p,\\ T\\right)$ внутри кривой газ при дросселировании охлаждается, снаружи — нагревается. В модели Ван-дер-Ваальса в единицах критических величин ($T_c=\\frac{8a}{27Rb}$, $p_c=\\frac{a}{27b^2}$, B2-L33) кривая универсальна: $\\frac{p}{p_c}=24\\sqrt{\\frac{3T}{T_c}}-\\frac{12T}{T_c}-27$. Для воздуха и азота комнатная температура лежит внутри кривой — в методе Линде воздух сжижают дросселированием; у водорода и гелия температура инверсии низкая, их надо сначала охладить другим способом.",
+  "en": "**The inversion curve ([[F03]]).** At high pressures the $b$ term matters more, and the inversion temperature depends on pressure; in the $\\left(p,\\ T\\right)$ plane the gas cools on throttling inside the curve and warms outside it. In the van der Waals model, in units of the critical quantities ($T_c=\\frac{8a}{27Rb}$, $p_c=\\frac{a}{27b^2}$, B2-L33), the curve is universal: $\\frac{p}{p_c}=24\\sqrt{\\frac{3T}{T_c}}-\\frac{12T}{T_c}-27$. For air and nitrogen room temperature lies inside the curve — in the Linde process air is liquefied by throttling; hydrogen and helium have low inversion temperatures and must first be cooled by another method."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L32-F03.png",
+   "ru": "figures/B2-L32-F03-ru.png",
+   "en": "figures/B2-L32-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Muvozanat va turg'unlik shartlari",
+  "ru": "6. Условия равновесия и устойчивости",
+  "en": "6. Conditions of equilibrium and stability"
+ },
+ {
+  "t": "li",
+  "uz": "**Qaysi potensial minimal.** Izolyatsiyalangan tizimda muvozanat — entropiya maksimumi (B2-L30). Termostatdagi tizim uchun tizim va termostat birgalikda izolyatsiyalangan; termostat entropiyasining o'zgarishini $-\\frac{\\delta Q}{T}$ deb yozsak, umumiy entropiyaning ortishi tizimning $F$ i kamayishiga teng bo'ladi. Shunday qilib, berilgan sharoitlarda o'z-o'zidan boradigan jarayonlarda mos potensial kamayadi va muvozanatda minimumga yetadi:",
+  "ru": "**Какой потенциал минимален.** В изолированной системе равновесие — максимум энтропии (B2-L30). Для системы в термостате система и термостат вместе изолированы; записав изменение энтропии термостата как $-\\frac{\\delta Q}{T}$, получим, что рост общей энтропии равен убыли $F$ системы. Таким образом, при заданных условиях в самопроизвольных процессах соответствующий потенциал убывает и в равновесии достигает минимума:",
+  "en": "**Which potential is minimal.** In an isolated system equilibrium is a maximum of entropy (B2-L30). For a system in a heat bath, the system and the bath together are isolated; writing the change in the bath's entropy as $-\\frac{\\delta Q}{T}$, the growth of the total entropy equals the decrease of the system's $F$. Thus under given conditions the corresponding potential decreases in spontaneous processes and reaches a minimum in equilibrium:"
+ },
+ {
+  "t": "m",
+  "m": "U,V:\\ S\\to\\max,\\qquad T,V:\\ F\\to\\min,\\qquad T,p:\\ G\\to\\min,\\qquad S,p:\\ H\\to\\min"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol ([[F04]]).** Izotermik silindr ichida erkin harakatlanuvchi porshen ikki gazni ajratadi. Porshen holati $x$ — ichki parametr; $F\\left(x\\right)=-\\nu_1RT\\ln V_1-\\nu_2RT\\ln V_2+\\mathrm{const}$. Minimum sharti $\\frac{dF}{dx}=0$ aynan bosimlar tengligini ($p_1=p_2$) beradi, ya'ni mexanik muvozanat — erkin energiya minimumining xususiy holi. Xuddi shunday, issiqlik almashinuvidagi muvozanat temperaturalar tengligini, zarralar almashinuvidagisi kimyoviy potensiallar tengligini beradi (7-bo'lim). Energiya va entropiya o'rtasidagi «kurash» ham shu yerda ko'rinadi: past temperaturada $F\\approx U$ — energiya minimumi, yuqori temperaturada $F\\approx-TS$ — entropiya maksimumi g'olib.",
+  "ru": "**Пример ([[F04]]).** Свободно движущийся поршень в изотермическом цилиндре разделяет два газа. Положение поршня $x$ — внутренний параметр; $F\\left(x\\right)=-\\nu_1RT\\ln V_1-\\nu_2RT\\ln V_2+\\mathrm{const}$. Условие минимума $\\frac{dF}{dx}=0$ даёт как раз равенство давлений ($p_1=p_2$), то есть механическое равновесие — частный случай минимума свободной энергии. Аналогично равновесие по теплообмену даёт равенство температур, по обмену частицами — равенство химических потенциалов (раздел 7). Здесь же видна «борьба» энергии и энтропии: при низкой температуре $F\\approx U$ — побеждает минимум энергии, при высокой $F\\approx-TS$ — максимум энтропии.",
+  "en": "**Example ([[F04]]).** A freely moving piston in an isothermal cylinder separates two gases. The piston position $x$ is an internal parameter; $F\\left(x\\right)=-\\nu_1RT\\ln V_1-\\nu_2RT\\ln V_2+\\mathrm{const}$. The minimum condition $\\frac{dF}{dx}=0$ gives exactly the equality of pressures ($p_1=p_2$), so mechanical equilibrium is a special case of the free-energy minimum. In the same way, equilibrium under heat exchange gives equal temperatures, and under particle exchange equal chemical potentials (Section 7). The \"contest\" between energy and entropy is also visible here: at low temperature $F\\approx U$ — the energy minimum wins; at high temperature $F\\approx-TS$ — the entropy maximum wins."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L32-F04.png",
+   "ru": "figures/B2-L32-F04-ru.png",
+   "en": "figures/B2-L32-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Turg'unlik.** Minimum bo'lishi uchun ikkinchi hosilalar musbat bo'lishi kerak. Bundan $C_V>0$ (issiqlik berilganda isiydi — aks holda kichik temperatura farqi o'z-o'zidan kuchayardi) va $\\kappa_T>0$ (siqilganda bosim ortadi — aks holda zichlik tebranishlari o'sardi) kelib chiqadi. Van-der-Vaals izotermalarida $\\left(\\frac{\\partial p}{\\partial V}\\right)_T>0$ bo'lgan qism — turg'unmas holatlar; tizim u yerda ikki fazaga ajraladi (B2-L33). Le Shatelye prinsipi ham shu: tashqi ta'sir uni kamaytiradigan jarayonni yuzaga keltiradi.",
+  "ru": "**Устойчивость.** Для минимума вторые производные должны быть положительны. Отсюда $C_V>0$ (тело при подводе теплоты нагревается — иначе малая разность температур самопроизвольно усиливалась бы) и $\\kappa_T>0$ (при сжатии давление растёт — иначе флуктуации плотности нарастали бы). Участок изотерм Ван-дер-Ваальса с $\\left(\\frac{\\partial p}{\\partial V}\\right)_T>0$ — неустойчивые состояния; там система распадается на две фазы (B2-L33). Принцип Ле Шателье — о том же: внешнее воздействие вызывает процесс, ослабляющий его.",
+  "en": "**Stability.** For a minimum the second derivatives must be positive. Hence $C_V>0$ (a body heats up when heat is supplied — otherwise a small temperature difference would grow by itself) and $\\kappa_T>0$ (pressure rises on compression — otherwise density fluctuations would grow). The part of the van der Waals isotherms where $\\left(\\frac{\\partial p}{\\partial V}\\right)_T>0$ consists of unstable states; there the system splits into two phases (B2-L33). Le Chatelier's principle says the same: an external action induces a process that weakens it."
+ },
+ {
+  "t": "h2",
+  "uz": "7. Kimyoviy potensial",
+  "ru": "7. Химический потенциал",
+  "en": "7. The chemical potential"
+ },
+ {
+  "t": "li",
+  "uz": "**Zarralar soni o'zgaruvchi.** Ochiq tizimda zarralar soni $N$ ham o'zgarishi mumkin, va har bir potensial differensialiga $\\mu\\,dN$ had qo'shiladi; $\\mu$ — **kimyoviy potensial**, bitta zarra qo'shishning energetik «narxi». Gibbs energiyasining tabiiy o'zgaruvchilari orasida faqat $N$ ekstensiv, shuning uchun $G=\\mu N$ — kimyoviy potensial bitta zarraga to'g'ri keladigan Gibbs energiyasi:",
+  "ru": "**Переменное число частиц.** В открытой системе может меняться и число частиц $N$, и к дифференциалу каждого потенциала добавляется член $\\mu\\,dN$; $\\mu$ — **химический потенциал**, энергетическая «цена» добавления одной частицы. Среди естественных переменных энергии Гиббса экстенсивно только $N$, поэтому $G=\\mu N$ — химический потенциал есть энергия Гиббса в расчёте на одну частицу:",
+  "en": "**Variable particle number.** In an open system the number of particles $N$ can also change, and a term $\\mu\\,dN$ is added to the differential of each potential; $\\mu$ is the **chemical potential**, the energetic \"price\" of adding one particle. Among the natural variables of the Gibbs energy only $N$ is extensive, so $G=\\mu N$ — the chemical potential is the Gibbs energy per particle:"
+ },
+ {
+  "t": "m",
+  "m": "dU=T\\,dS-p\\,dV+\\mu\\,dN,\\qquad \\mu=\\left(\\frac{\\partial G}{\\partial N}\\right)_{T,p}=\\frac{G}{N}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ideal gaz.** $\\left(\\frac{\\partial\\mu}{\\partial p}\\right)_T=\\frac{V}{N}=\\frac{kT}{p}$ ni integrallasak, $\\mu=\\mu_0\\left(T\\right)+kT\\ln\\frac{p}{p_0}$: bosim $10$ marta oshsa, kimyoviy potensial $kT\\ln10\\approx2.3kT$ ga ortadi. Statistik fizikadan (8-bo'lim) aniq ifoda $\\mu=kT\\ln\\left(n\\Lambda^3\\right)$ (B2-L31 dagi $\\Lambda$ bilan) — klassik gazda $n\\Lambda^3\\ll1$, shuning uchun $\\mu$ manfiy va katta. Bitta molga hisoblanganda $kT$ o'rniga $RT$ turadi.",
+  "ru": "**Идеальный газ.** Интегрируя $\\left(\\frac{\\partial\\mu}{\\partial p}\\right)_T=\\frac{V}{N}=\\frac{kT}{p}$, получим $\\mu=\\mu_0\\left(T\\right)+kT\\ln\\frac{p}{p_0}$: при увеличении давления в $10$ раз химический потенциал растёт на $kT\\ln10\\approx2.3kT$. Из статистической физики (раздел 8) точное выражение $\\mu=kT\\ln\\left(n\\Lambda^3\\right)$ (с $\\Lambda$ из B2-L31) — в классическом газе $n\\Lambda^3\\ll1$, поэтому $\\mu$ отрицателен и велик по модулю. В расчёте на моль вместо $kT$ стоит $RT$.",
+  "en": "**Ideal gas.** Integrating $\\left(\\frac{\\partial\\mu}{\\partial p}\\right)_T=\\frac{V}{N}=\\frac{kT}{p}$ gives $\\mu=\\mu_0\\left(T\\right)+kT\\ln\\frac{p}{p_0}$: if the pressure increases by a factor of $10$, the chemical potential rises by $kT\\ln10\\approx2.3kT$. Statistical physics (Section 8) gives the exact expression $\\mu=kT\\ln\\left(n\\Lambda^3\\right)$ (with $\\Lambda$ from B2-L31) — in a classical gas $n\\Lambda^3\\ll1$, so $\\mu$ is negative and large in magnitude. Per mole, $RT$ stands in place of $kT$."
+ },
+ {
+  "t": "m",
+  "m": "\\mu=\\mu_0+kT\\ln\\frac{p}{p_0},\\qquad \\mu=kT\\ln\\left(n\\Lambda^3\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Zarralar almashinuvidagi muvozanat.** Zarralar almasha oladigan ikki tizim (ikki idish, ikki faza, reaksiya komponentlari) muvozanatda bo'lishi uchun kimyoviy potensiallar teng bo'lishi kerak; zarralar $\\mu$ katta joydan kichik joyga oqadi — xuddi issiqlik $T$ katta joydan kichikka oqqanidek. Bu shart fazaviy muvozanatni (suyuqlik va bug', B2-L33), osmotik bosimni, yarimo'tkazgichlardagi Fermi sathini va kimyoviy reaksiyalardagi massalar ta'siri qonunini beradi. Gibbs–Dyugem munosabati $N\\,d\\mu=-S\\,dT+V\\,dp$ intensiv kattaliklar mustaqil emasligini ko'rsatadi.",
+  "ru": "**Равновесие при обмене частицами.** Чтобы две системы, обменивающиеся частицами (два сосуда, две фазы, компоненты реакции), были в равновесии, химические потенциалы должны быть равны; частицы перетекают оттуда, где $\\mu$ больше, туда, где меньше, — как теплота течёт от большей $T$ к меньшей. Это условие даёт фазовое равновесие (жидкость и пар, B2-L33), осмотическое давление, уровень Ферми в полупроводниках и закон действующих масс в химических реакциях. Соотношение Гиббса–Дюгема $N\\,d\\mu=-S\\,dT+V\\,dp$ показывает, что интенсивные величины не независимы.",
+  "en": "**Equilibrium under particle exchange.** For two systems that exchange particles (two vessels, two phases, the components of a reaction) to be in equilibrium, their chemical potentials must be equal; particles flow from where $\\mu$ is larger to where it is smaller — just as heat flows from higher $T$ to lower. This condition gives phase equilibrium (liquid and vapour, B2-L33), osmotic pressure, the Fermi level in semiconductors and the law of mass action in chemical reactions. The Gibbs–Duhem relation $N\\,d\\mu=-S\\,dT+V\\,dp$ shows that the intensive quantities are not independent."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Kanonik taqsimot va statistik yig'indi",
+  "ru": "8. Каноническое распределение и статистическая сумма",
+  "en": "8. The canonical distribution and the partition function"
+ },
+ {
+  "t": "li",
+  "uz": "**Kanonik ansambl.** Termostat bilan issiqlik almashadigan (lekin zarralar almashmaydigan) tizimning energiyasi $E_j$ bo'lgan holatda bo'lish ehtimolligi Bolsman faktoriga proporsional (B2-L31). Normallash ko'paytuvchisi — **statistik yig'indi** $Z$ (nemischa Zustandssumme — «holatlar yig'indisi»); agar sath $g_j$ marta aynigan bo'lsa, yig'indida u $g_j$ marta qatnashadi:",
+  "ru": "**Канонический ансамбль.** Вероятность того, что система, обменивающаяся с термостатом теплотой (но не частицами), находится в состоянии с энергией $E_j$, пропорциональна больцмановскому множителю (B2-L31). Нормировочный множитель — **статистическая сумма** $Z$ (от немецкого Zustandssumme — «сумма по состояниям»); если уровень вырожден $g_j$ раз, он входит в сумму $g_j$ раз:",
+  "en": "**The canonical ensemble.** The probability that a system exchanging heat (but not particles) with a heat bath is in a state of energy $E_j$ is proportional to the Boltzmann factor (B2-L31). The normalising factor is the **partition function** $Z$ (from the German Zustandssumme — \"sum over states\"); if a level is $g_j$-fold degenerate, it enters the sum $g_j$ times:"
+ },
+ {
+  "t": "m",
+  "m": "P_j=\\frac{g_je^{-\\beta E_j}}{Z},\\qquad Z=\\sum_jg_je^{-\\beta E_j},\\qquad \\beta=\\frac{1}{kT}"
+ },
+ {
+  "t": "li",
+  "uz": "**Hamma narsa $Z$ dan.** O'rtacha energiya $\\langle E\\rangle=\\sum_jE_jP_j=-\\frac{\\partial\\ln Z}{\\partial\\beta}$ — yig'indini qo'lda hisoblamasdan, faqat logarifm hosilasi bilan. Gibbs–Gelmgols tenglamasi bilan solishtirsak, erkin energiya to'g'ridan-to'g'ri $Z$ orqali ifodalanadi; undan entropiya, bosim va issiqlik sig'imi hosila bilan topiladi. Entropiya uchun natija B2-L30 dagi Gibbs formulasi $S=-k\\sum P_j\\ln P_j$ bilan bir xil:",
+  "ru": "**Всё — из $Z$.** Средняя энергия $\\langle E\\rangle=\\sum_jE_jP_j=-\\frac{\\partial\\ln Z}{\\partial\\beta}$ — без ручного суммирования, лишь производной логарифма. Сравнив с уравнением Гиббса–Гельмгольца, получим, что свободная энергия прямо выражается через $Z$; из неё дифференцированием находятся энтропия, давление и теплоёмкость. Результат для энтропии совпадает с формулой Гиббса $S=-k\\sum P_j\\ln P_j$ из B2-L30:",
+  "en": "**Everything from $Z$.** The mean energy is $\\langle E\\rangle=\\sum_jE_jP_j=-\\frac{\\partial\\ln Z}{\\partial\\beta}$ — with no summation by hand, just the derivative of a logarithm. Comparing with the Gibbs–Helmholtz equation, the free energy is expressed directly through $Z$; entropy, pressure and heat capacity then follow by differentiation. The result for the entropy coincides with the Gibbs formula $S=-k\\sum P_j\\ln P_j$ of B2-L30:"
+ },
+ {
+  "t": "m",
+  "m": "\\langle E\\rangle=-\\frac{\\partial\\ln Z}{\\partial\\beta},\\qquad F=-kT\\ln Z,\\qquad S=\\frac{\\langle E\\rangle-F}{T},\\qquad C=\\frac{\\partial\\langle E\\rangle}{\\partial T}"
+ },
+ {
+  "t": "li",
+  "uz": "**Sath bandliklari ([[F05]]).** Past temperaturada ($kT\\ll$ sathlar oralig'i) deyarli barcha ehtimollik asosiy holatda; temperatura ortishi bilan yuqori sathlar to'la boshlaydi va $kT$ sathlar oralig'idan ancha katta bo'lganda barcha holatlar teng ehtimolli bo'ladi — $Z$ esa holatlar soniga intiladi. Shuning uchun $Z$ ni «issiqlik ta'sirida amalda erishsa bo'ladigan holatlar soni» deb tushunish mumkin. Energiya fluktuatsiyasi issiqlik sig'imi bilan bog'langan: $\\langle E^2\\rangle-\\langle E\\rangle^2=kT^2C$.",
+  "ru": "**Заселённости уровней ([[F05]]).** При низкой температуре ($kT\\ll$ расстояния между уровнями) почти вся вероятность — в основном состоянии; с ростом температуры начинают заполняться верхние уровни, а когда $kT$ много больше расстояния между уровнями, все состояния равновероятны — $Z$ стремится к числу состояний. Поэтому $Z$ можно понимать как «число состояний, реально доступных при тепловом возбуждении». Флуктуация энергии связана с теплоёмкостью: $\\langle E^2\\rangle-\\langle E\\rangle^2=kT^2C$.",
+  "en": "**Level occupations ([[F05]]).** At low temperature ($kT\\ll$ the level spacing) almost all the probability is in the ground state; as the temperature rises the upper levels begin to fill, and when $kT$ greatly exceeds the level spacing all states are equally probable — $Z$ tends to the number of states. So $Z$ can be understood as \"the number of states actually accessible by thermal excitation\". The energy fluctuation is linked to the heat capacity: $\\langle E^2\\rangle-\\langle E\\rangle^2=kT^2C$."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L32-F05.png",
+   "ru": "figures/B2-L32-F05-ru.png",
+   "en": "figures/B2-L32-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Mustaqil zarralar va ideal gaz.** $N$ ta mustaqil farqlanadigan zarra uchun $Z=Z_1^N$ — logarifmlar va erkin energiyalar qo'shiladi. Bir xil (farqlanmaydigan) gaz molekulalari uchun $Z=\\frac{Z_1^N}{N!}$ (B2-L31 dagi Gibbs tuzatmasi), bitta ilgarilanma harakatdagi zarra uchun $Z_1=\\frac{V}{\\Lambda^3}$. Bundan $F=-NkT\\left[\\ln\\frac{V}{N\\Lambda^3}+1\\right]$, $p=-\\left(\\frac{\\partial F}{\\partial V}\\right)_T=\\frac{NkT}{V}$ — holat tenglamasi mikroskopik modeldan keltirib chiqarildi; $\\langle E\\rangle=\\frac{3}{2}NkT$ va Saker–Tetrod entropiyasi ham shu $Z$ dan.",
+  "ru": "**Независимые частицы и идеальный газ.** Для $N$ независимых различимых частиц $Z=Z_1^N$ — логарифмы и свободные энергии складываются. Для одинаковых (неразличимых) молекул газа $Z=\\frac{Z_1^N}{N!}$ (поправка Гиббса из B2-L31), для одной частицы в поступательном движении $Z_1=\\frac{V}{\\Lambda^3}$. Отсюда $F=-NkT\\left[\\ln\\frac{V}{N\\Lambda^3}+1\\right]$, $p=-\\left(\\frac{\\partial F}{\\partial V}\\right)_T=\\frac{NkT}{V}$ — уравнение состояния выведено из микроскопической модели; $\\langle E\\rangle=\\frac{3}{2}NkT$ и энтропия Саккура–Тетроде — из того же $Z$.",
+  "en": "**Independent particles and the ideal gas.** For $N$ independent distinguishable particles $Z=Z_1^N$ — logarithms and free energies add. For identical (indistinguishable) gas molecules $Z=\\frac{Z_1^N}{N!}$ (the Gibbs correction of B2-L31), and for one particle in translational motion $Z_1=\\frac{V}{\\Lambda^3}$. Hence $F=-NkT\\left[\\ln\\frac{V}{N\\Lambda^3}+1\\right]$ and $p=-\\left(\\frac{\\partial F}{\\partial V}\\right)_T=\\frac{NkT}{V}$ — the equation of state is derived from the microscopic model; $\\langle E\\rangle=\\frac{3}{2}NkT$ and the Sackur–Tetrode entropy come from the same $Z$."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Ikki sathli sistema",
+  "ru": "9. Двухуровневая система",
+  "en": "9. The two-level system"
+ },
+ {
+  "t": "li",
+  "uz": "**Model.** Har bir zarra faqat ikki holatda bo'la oladi: energiyasi $0$ va $\\varepsilon$ (magnit maydondagi spin, ikki konfiguratsiyali defekt, molekula aylanishining ikki pastki sathi). $Z_1=1+e^{-\\beta\\varepsilon}$, yuqori sath bandligi va $N$ ta zarra energiyasi:",
+  "ru": "**Модель.** Каждая частица может находиться лишь в двух состояниях: с энергией $0$ и $\\varepsilon$ (спин в магнитном поле, дефект с двумя конфигурациями, два нижних уровня вращения молекулы). $Z_1=1+e^{-\\beta\\varepsilon}$, заселённость верхнего уровня и энергия $N$ частиц:",
+  "en": "**The model.** Each particle can be in only two states, with energies $0$ and $\\varepsilon$ (a spin in a magnetic field, a defect with two configurations, the two lowest rotational levels of a molecule). $Z_1=1+e^{-\\beta\\varepsilon}$, and the occupation of the upper level and the energy of $N$ particles are:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{N_2}{N}=\\frac{1}{e^{\\beta\\varepsilon}+1},\\qquad \\langle E\\rangle=\\frac{N\\varepsilon}{e^{\\beta\\varepsilon}+1},\\qquad C=Nk\\frac{\\left(\\beta\\varepsilon\\right)^2e^{\\beta\\varepsilon}}{\\left(e^{\\beta\\varepsilon}+1\\right)^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Shottki anomaliyasi ([[F06]]).** Past temperaturada yuqori sath bo'sh va $C\\propto\\left(\\frac{\\varepsilon}{kT}\\right)^2e^{-\\frac{\\varepsilon}{kT}}$ — eksponensial kichik (energiya tirqishi bor). Yuqori temperaturada bandliklar tenglashadi, energiya $\\frac{N\\varepsilon}{2}$ ga to'yinadi va $C\\propto\\frac{1}{T^2}$ bo'lib kamayadi. Natijada issiqlik sig'imi $kT\\approx0.42\\varepsilon$ da maksimumga ($\\approx0.44Nk$) ega bo'lgan cho'qqi — **Shottki anomaliyasi**; uni o'lchab sathlar oralig'ini topish mumkin. Entropiya $0$ dan $Nk\\ln2$ gacha o'sadi — B2-L30 dagi statistik natija bilan mos. Ideal gazdan farqli o'laroq, energiyasi chegaralangan tizimda issiqlik sig'imi doimiy bo'la olmaydi.",
+  "ru": "**Аномалия Шоттки ([[F06]]).** При низкой температуре верхний уровень пуст и $C\\propto\\left(\\frac{\\varepsilon}{kT}\\right)^2e^{-\\frac{\\varepsilon}{kT}}$ — экспоненциально мала (есть энергетическая щель). При высокой температуре заселённости выравниваются, энергия насыщается на $\\frac{N\\varepsilon}{2}$, и $C\\propto\\frac{1}{T^2}$ убывает. В итоге теплоёмкость имеет пик с максимумом ($\\approx0.44Nk$) при $kT\\approx0.42\\varepsilon$ — **аномалия Шоттки**; измерив его, можно найти расстояние между уровнями. Энтропия растёт от $0$ до $Nk\\ln2$ — в согласии со статистическим результатом B2-L30. В отличие от идеального газа, у системы с ограниченной энергией теплоёмкость не может быть постоянной.",
+  "en": "**The Schottky anomaly ([[F06]]).** At low temperature the upper level is empty and $C\\propto\\left(\\frac{\\varepsilon}{kT}\\right)^2e^{-\\frac{\\varepsilon}{kT}}$ — exponentially small (there is an energy gap). At high temperature the occupations even out, the energy saturates at $\\frac{N\\varepsilon}{2}$, and $C\\propto\\frac{1}{T^2}$ decreases. As a result the heat capacity has a peak, with maximum ($\\approx0.44Nk$) at $kT\\approx0.42\\varepsilon$ — the **Schottky anomaly**; measuring it gives the level spacing. The entropy grows from $0$ to $Nk\\ln2$ — in agreement with the statistical result of B2-L30. Unlike an ideal gas, a system with bounded energy cannot have a constant heat capacity."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L32-F06.png",
+   "ru": "figures/B2-L32-F06-ru.png",
+   "en": "figures/B2-L32-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Manfiy temperatura.** Agar biror usul bilan (masalan, lazer yoki spin sistemalarida maydonni keskin teskari qilib) yuqori sathda pastkisidan ko'proq zarra yig'ilsa, $\\frac{N_2}{N_1}=e^{-\\frac{\\varepsilon}{kT}}>1$ formal ravishda $T<0$ ni beradi. Bu «absolyut noldan sovuq» emas, aksincha «cheksizdan ham issiq» holat: bunday tizim istalgan musbat temperaturali jismga issiqlik beradi. Bu faqat energiyasi yuqoridan chegaralangan tizimlarda mumkin (B2-L30 dagi izoh).",
+  "ru": "**Отрицательная температура.** Если каким-либо способом (например, в лазере или в спиновых системах резким обращением поля) на верхнем уровне собрать больше частиц, чем на нижнем, $\\frac{N_2}{N_1}=e^{-\\frac{\\varepsilon}{kT}}>1$ формально даёт $T<0$. Это не «холоднее абсолютного нуля», а, наоборот, «горячее бесконечности»: такая система отдаёт теплоту любому телу с положительной температурой. Это возможно только в системах с ограниченной сверху энергией (замечание в B2-L30).",
+  "en": "**Negative temperature.** If by some means (in a laser, or in spin systems by suddenly reversing the field) more particles are gathered in the upper level than in the lower, $\\frac{N_2}{N_1}=e^{-\\frac{\\varepsilon}{kT}}>1$ formally gives $T<0$. This is not \"colder than absolute zero\" but rather \"hotter than infinity\": such a system gives heat to any body at positive temperature. It is possible only for systems whose energy is bounded from above (the remark in B2-L30)."
+ },
+ {
+  "t": "h2",
+  "uz": "10. Kvant ossilyator va Eynshteyn qattiq jismi",
+  "ru": "10. Квантовый осциллятор и твёрдое тело Эйнштейна",
+  "en": "10. The quantum oscillator and the Einstein solid"
+ },
+ {
+  "t": "li",
+  "uz": "**Ossilyator sathlari.** Kvant ossilyator energiyalari $E_n=\\hbar\\omega\\left(n+\\frac{1}{2}\\right)$, $n=0,1,2,\\dots$ (B3). Statistik yig'indi geometrik progressiya, $Z_1=\\frac{e^{-\\beta\\hbar\\omega/2}}{1-e^{-\\beta\\hbar\\omega}}$, va o'rtacha energiya — nol tebranishlar energiyasi ustiga o'rtacha kvantlar soni $\\langle n\\rangle$ (Plank taqsimoti) ko'paytirilgan $\\hbar\\omega$:",
+  "ru": "**Уровни осциллятора.** Энергии квантового осциллятора $E_n=\\hbar\\omega\\left(n+\\frac{1}{2}\\right)$, $n=0,1,2,\\dots$ (B3). Статистическая сумма — геометрическая прогрессия, $Z_1=\\frac{e^{-\\beta\\hbar\\omega/2}}{1-e^{-\\beta\\hbar\\omega}}$, а средняя энергия — энергия нулевых колебаний плюс $\\hbar\\omega$, умноженное на среднее число квантов $\\langle n\\rangle$ (распределение Планка):",
+  "en": "**Oscillator levels.** The energies of a quantum oscillator are $E_n=\\hbar\\omega\\left(n+\\frac{1}{2}\\right)$, $n=0,1,2,\\dots$ (B3). The partition function is a geometric series, $Z_1=\\frac{e^{-\\beta\\hbar\\omega/2}}{1-e^{-\\beta\\hbar\\omega}}$, and the mean energy is the zero-point energy plus $\\hbar\\omega$ times the mean number of quanta $\\langle n\\rangle$ (the Planck distribution):"
+ },
+ {
+  "t": "m",
+  "m": "\\langle E\\rangle=\\frac{\\hbar\\omega}{2}+\\hbar\\omega\\langle n\\rangle,\\qquad \\langle n\\rangle=\\frac{1}{e^{\\beta\\hbar\\omega}-1}"
+ },
+ {
+  "t": "li",
+  "uz": "**Klassik chegara va muzlash.** $kT\\gg\\hbar\\omega$ da $\\langle n\\rangle\\approx\\frac{kT}{\\hbar\\omega}$ va $\\langle E\\rangle\\to kT$ — klassik teng taqsimlanish (ikki kvadratik had). $kT\\ll\\hbar\\omega$ da $\\langle n\\rangle\\approx e^{-\\frac{\\hbar\\omega}{kT}}$ — ossilyator asosiy holatda «muzlab» qoladi. B2-L29 da ko'rgan erkinlik darajalarining muzlashi aynan shu: molekula tebranish kvanti $\\hbar\\omega$ odatda $0.1$–$0.3\\ \\mathrm{eV}$, xona temperaturasida esa $kT\\approx0.026\\ \\mathrm{eV}$ — shuning uchun ikki atomli gazda $i=5$, $7$ emas.",
+  "ru": "**Классический предел и вымораживание.** При $kT\\gg\\hbar\\omega$ $\\langle n\\rangle\\approx\\frac{kT}{\\hbar\\omega}$ и $\\langle E\\rangle\\to kT$ — классическое равнораспределение (два квадратичных члена). При $kT\\ll\\hbar\\omega$ $\\langle n\\rangle\\approx e^{-\\frac{\\hbar\\omega}{kT}}$ — осциллятор «вымораживается» в основном состоянии. Вымораживание степеней свободы из B2-L29 — именно это: колебательный квант молекулы $\\hbar\\omega$ обычно $0.1$–$0.3\\ \\mathrm{eV}$, а при комнатной температуре $kT\\approx0.026\\ \\mathrm{eV}$ — поэтому у двухатомного газа $i=5$, а не $7$.",
+  "en": "**Classical limit and freezing out.** For $kT\\gg\\hbar\\omega$, $\\langle n\\rangle\\approx\\frac{kT}{\\hbar\\omega}$ and $\\langle E\\rangle\\to kT$ — classical equipartition (two quadratic terms). For $kT\\ll\\hbar\\omega$, $\\langle n\\rangle\\approx e^{-\\frac{\\hbar\\omega}{kT}}$ — the oscillator is \"frozen\" in its ground state. The freezing out of degrees of freedom seen in B2-L29 is exactly this: a molecular vibration quantum $\\hbar\\omega$ is usually $0.1$–$0.3\\ \\mathrm{eV}$, while at room temperature $kT\\approx0.026\\ \\mathrm{eV}$ — which is why a diatomic gas has $i=5$, not $7$."
+ },
+ {
+  "t": "li",
+  "uz": "**Eynshteyn modeli ([[F07]]).** Eynshteyn (1907) kristallni bir xil chastotali $3N$ ta mustaqil kvant ossilyator deb oldi. Eynshteyn temperaturasi $\\theta=\\frac{\\hbar\\omega}{k}$ kiritilsa, issiqlik sig'imi universal funksiya bo'ladi. $T\\gg\\theta$ da u Dyulong–Pti qiymati $3R$ ga intiladi, $T\\ll\\theta$ da eksponensial kamayadi — klassik fizika tushuntira olmagan past temperaturadagi kamayish birinchi marta kvant nazariyasi bilan izohlandi. Tajribada esa past temperaturada $C\\propto T^3$ (Debay qonuni): real kristalda turli chastotali tebranishlar (fononlar) bor va eng past chastotalilari har qanday temperaturada uyg'onadi (B4).",
+  "ru": "**Модель Эйнштейна ([[F07]]).** Эйнштейн (1907) рассматривал кристалл как $3N$ независимых квантовых осцилляторов одной частоты. Введя температуру Эйнштейна $\\theta=\\frac{\\hbar\\omega}{k}$, получим универсальную функцию для теплоёмкости. При $T\\gg\\theta$ она стремится к значению Дюлонга–Пти $3R$, при $T\\ll\\theta$ экспоненциально убывает — уменьшение при низких температурах, которое классическая физика объяснить не могла, впервые было объяснено квантовой теорией. Опыт же при низких температурах даёт $C\\propto T^3$ (закон Дебая): в реальном кристалле есть колебания разных частот (фононы), и самые низкочастотные возбуждаются при любой температуре (B4).",
+  "en": "**The Einstein model ([[F07]]).** Einstein (1907) treated a crystal as $3N$ independent quantum oscillators of one frequency. Introducing the Einstein temperature $\\theta=\\frac{\\hbar\\omega}{k}$, the heat capacity becomes a universal function. For $T\\gg\\theta$ it tends to the Dulong–Petit value $3R$, and for $T\\ll\\theta$ it decreases exponentially — the drop at low temperature that classical physics could not explain was first accounted for by quantum theory. Experiment, however, gives $C\\propto T^3$ at low temperature (the Debye law): a real crystal has vibrations of many frequencies (phonons), and the lowest-frequency ones are excited at any temperature (B4)."
+ },
+ {
+  "t": "m",
+  "m": "C=3R\\frac{x^2e^x}{\\left(e^x-1\\right)^2},\\qquad x=\\frac{\\theta}{T}"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L32-F07.png",
+   "ru": "figures/B2-L32-F07-ru.png",
+   "en": "figures/B2-L32-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "11. Paramagnetik",
+  "ru": "11. Парамагнетик",
+  "en": "11. The paramagnet"
+ },
+ {
+  "t": "li",
+  "uz": "**Spin $\\frac{1}{2}$ maydonda.** Magnit momenti $\\mu_B$ bo'lgan zarra $B$ maydonda maydon bo'yicha ($E=-\\mu_BB$) yoki qarshi ($E=+\\mu_BB$) yo'naladi — bu sathlar oralig'i $2\\mu_BB$ bo'lgan ikki sathli sistema. $Z_1=2\\cosh\\left(\\beta\\mu_BB\\right)$, o'rtacha moment va $N$ ta zarra magnitlanishi:",
+  "ru": "**Спин $\\frac{1}{2}$ в поле.** Частица с магнитным моментом $\\mu_B$ в поле $B$ ориентируется по полю ($E=-\\mu_BB$) или против ($E=+\\mu_BB$) — это двухуровневая система с расстоянием между уровнями $2\\mu_BB$. $Z_1=2\\cosh\\left(\\beta\\mu_BB\\right)$, средний момент и намагниченность $N$ частиц:",
+  "en": "**Spin $\\frac{1}{2}$ in a field.** A particle of magnetic moment $\\mu_B$ in a field $B$ points along the field ($E=-\\mu_BB$) or against it ($E=+\\mu_BB$) — a two-level system with level spacing $2\\mu_BB$. $Z_1=2\\cosh\\left(\\beta\\mu_BB\\right)$, and the mean moment and the magnetisation of $N$ particles are:"
+ },
+ {
+  "t": "m",
+  "m": "M=N\\mu_B\\tanh\\frac{\\mu_BB}{kT}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kyuri qonuni va to'yinish ([[F08]]).** Kuchsiz maydon yoki yuqori temperaturada ($\\mu_BB\\ll kT$) $\\tanh x\\approx x$ va $M\\approx\\frac{N\\mu_B^2B}{kT}$ — magnit qabul qiluvchanlik temperaturaga teskari proporsional (**Kyuri qonuni**, B2-L19). Kuchli maydon yoki past temperaturada barcha momentlar maydon bo'ylab tizilib, $M\\to N\\mu_B$ — to'yinish. Xona temperaturasida $1\\ \\mathrm{T}$ maydonda $\\frac{\\mu_BB}{kT}\\sim10^{-3}$ — paramagnetiklar juda kuchsiz magnitlanadi; to'yinish uchun bir necha kelvin va bir necha tesla kerak.",
+  "ru": "**Закон Кюри и насыщение ([[F08]]).** В слабом поле или при высокой температуре ($\\mu_BB\\ll kT$) $\\tanh x\\approx x$ и $M\\approx\\frac{N\\mu_B^2B}{kT}$ — магнитная восприимчивость обратно пропорциональна температуре (**закон Кюри**, B2-L19). В сильном поле или при низкой температуре все моменты выстраиваются по полю, $M\\to N\\mu_B$ — насыщение. При комнатной температуре в поле $1\\ \\mathrm{T}$ $\\frac{\\mu_BB}{kT}\\sim10^{-3}$ — парамагнетики намагничиваются очень слабо; для насыщения нужны несколько кельвинов и несколько тесла.",
+  "en": "**Curie's law and saturation ([[F08]]).** In a weak field or at high temperature ($\\mu_BB\\ll kT$), $\\tanh x\\approx x$ and $M\\approx\\frac{N\\mu_B^2B}{kT}$ — the magnetic susceptibility is inversely proportional to temperature (**Curie's law**, B2-L19). In a strong field or at low temperature all moments line up with the field, $M\\to N\\mu_B$ — saturation. At room temperature in a $1\\ \\mathrm{T}$ field $\\frac{\\mu_BB}{kT}\\sim10^{-3}$ — paramagnets are magnetised very weakly; saturation needs a few kelvins and a few teslas."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L32-F08.png",
+   "ru": "figures/B2-L32-F08-ru.png",
+   "en": "figures/B2-L32-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Adiabatik magnitsizlantirish.** Paramagnetik entropiyasi faqat $\\frac{B}{T}$ nisbatga bog'liq (ikki sathli sistemada $S$ faqat $\\frac{\\varepsilon}{kT}$ ga bog'liq). Namuna izotermik magnitlantirilib (issiqlik termostatga beriladi, entropiya kamayadi), so'ng izolyatsiyalanib maydon sekin kamaytirilsa, $S=\\mathrm{const}$ bo'lishi uchun $\\frac{B}{T}$ o'zgarmasligi kerak — maydon bilan birga temperatura ham kamayadi. Bu usul bilan millikelvin va undan past temperaturalarga erishiladi — uchinchi qonunga ko'ra har bir sikl tobora kichik qadam beradi.",
+  "ru": "**Адиабатическое размагничивание.** Энтропия парамагнетика зависит только от отношения $\\frac{B}{T}$ (у двухуровневой системы $S$ зависит только от $\\frac{\\varepsilon}{kT}$). Если образец изотермически намагнитить (теплота уходит в термостат, энтропия уменьшается), а затем изолировать и медленно уменьшать поле, то для $S=\\mathrm{const}$ отношение $\\frac{B}{T}$ должно сохраняться — вместе с полем уменьшается и температура. Этим методом достигают милликельвинов и ниже — по третьему закону каждый цикл даёт всё меньший шаг.",
+  "en": "**Adiabatic demagnetisation.** The entropy of a paramagnet depends only on the ratio $\\frac{B}{T}$ (for a two-level system $S$ depends only on $\\frac{\\varepsilon}{kT}$). If the sample is magnetised isothermally (heat goes to the bath and the entropy decreases), then isolated and the field slowly reduced, the ratio $\\frac{B}{T}$ must stay constant for $S=\\mathrm{const}$ — the temperature falls together with the field. This method reaches millikelvins and below — by the third law each cycle gives an ever smaller step."
+ },
+ {
+  "t": "h2",
+  "uz": "12. GRE usullari",
+  "ru": "12. Приёмы для GRE",
+  "en": "12. GRE techniques"
+ },
+ {
+  "t": "li",
+  "uz": "**Differensialdan boshlang.** Hosila so'ralsa, qaysi o'zgaruvchilar o'zgarmas ekaniga qarab potensialni tanlang: $T$ va $V$ — $F$, $T$ va $p$ — $G$. Ishorani differensialdan o'qing: $dF=-S\\,dT-p\\,dV$ — demak $\\left(\\frac{\\partial F}{\\partial T}\\right)_V=-S$.",
+  "ru": "**Начинайте с дифференциала.** Если спрашивают производную, выберите потенциал по тому, какие переменные постоянны: $T$ и $V$ — $F$, $T$ и $p$ — $G$. Знак читайте из дифференциала: $dF=-S\\,dT-p\\,dV$ — значит, $\\left(\\frac{\\partial F}{\\partial T}\\right)_V=-S$.",
+  "en": "**Start from the differential.** When a derivative is asked for, choose the potential by which variables are held constant: $T$ and $V$ — $F$; $T$ and $p$ — $G$. Read the sign from the differential: $dF=-S\\,dT-p\\,dV$, so $\\left(\\frac{\\partial F}{\\partial T}\\right)_V=-S$."
+ },
+ {
+  "t": "li",
+  "uz": "**Statistik yig'indi — uch qadam.** (1) Barcha holatlarni aynishi bilan sanab $Z$ ni yozing; (2) $\\langle E\\rangle=-\\frac{\\partial\\ln Z}{\\partial\\beta}$ yoki $F=-kT\\ln Z$; (3) chegaralarni tekshiring: $T\\to0$ da asosiy holat, $T\\to\\infty$ da barcha holatlar teng ehtimolli. Variantlar orasida chegaralari noto'g'ri bo'lganlarini darhol tashlang.",
+  "ru": "**Статистическая сумма — три шага.** (1) Перечислите все состояния с вырождением и запишите $Z$; (2) $\\langle E\\rangle=-\\frac{\\partial\\ln Z}{\\partial\\beta}$ или $F=-kT\\ln Z$; (3) проверьте пределы: при $T\\to0$ — основное состояние, при $T\\to\\infty$ — все состояния равновероятны. Варианты с неправильными пределами сразу отбрасывайте.",
+  "en": "**The partition function in three steps.** (1) List all the states with their degeneracies and write $Z$; (2) $\\langle E\\rangle=-\\frac{\\partial\\ln Z}{\\partial\\beta}$ or $F=-kT\\ln Z$; (3) check the limits: as $T\\to0$ the ground state, as $T\\to\\infty$ all states equally probable. Discard at once any option with wrong limits."
+ },
+ {
+  "t": "li",
+  "uz": "**Issiqlik sig'imi — tirqish yoki tirqishsiz.** Energiya tirqishi bor (ikki sathli sistema, Eynshteyn modeli) — past temperaturada $C$ eksponensial kichik; tirqishsiz spektr (fononlar, Debay) — darajali ($T^3$); klassik chegara — har bir kvadratik hadga $\\frac{1}{2}k$. Energiyasi chegaralangan tizimda yuqori temperaturada $C\\to0$.",
+  "ru": "**Теплоёмкость — со щелью или без.** Есть энергетическая щель (двухуровневая система, модель Эйнштейна) — при низкой температуре $C$ экспоненциально мала; спектр без щели (фононы, Дебай) — степенная ($T^3$); классический предел — по $\\frac{1}{2}k$ на каждый квадратичный член. У системы с ограниченной энергией при высокой температуре $C\\to0$.",
+  "en": "**Heat capacity — gap or no gap.** With an energy gap (two-level system, Einstein model) $C$ is exponentially small at low temperature; with a gapless spectrum (phonons, Debye) it is a power law ($T^3$); the classical limit gives $\\frac{1}{2}k$ per quadratic term. For a system with bounded energy, $C\\to0$ at high temperature."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Entalpiya",
+    "ru": "Энтальпия",
+    "en": "Enthalpy",
+    "m": "H=U+pV,\\quad dH=T\\,dS+V\\,dp"
+   },
+   {
+    "uz": "Erkin energiya",
+    "ru": "Свободная энергия",
+    "en": "Free energy",
+    "m": "F=U-TS,\\quad dF=-S\\,dT-p\\,dV"
+   },
+   {
+    "uz": "Gibbs energiyasi",
+    "ru": "Энергия Гиббса",
+    "en": "Gibbs energy",
+    "m": "G=H-TS,\\quad dG=-S\\,dT+V\\,dp"
+   },
+   {
+    "uz": "Eng katta ish",
+    "ru": "Наибольшая работа",
+    "en": "Maximum work",
+    "m": "A\\leq-\\Delta F,\\quad A'\\leq-\\Delta G"
+   },
+   {
+    "uz": "Maksvell munosabati",
+    "ru": "Соотношение Максвелла",
+    "en": "Maxwell relation",
+    "m": "\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V"
+   },
+   {
+    "uz": "Maksvell munosabati",
+    "ru": "Соотношение Максвелла",
+    "en": "Maxwell relation",
+    "m": "\\left(\\frac{\\partial S}{\\partial p}\\right)_T=-\\left(\\frac{\\partial V}{\\partial T}\\right)_p"
+   },
+   {
+    "uz": "Issiqlik sig'imlari farqi",
+    "ru": "Разность теплоёмкостей",
+    "en": "Difference of heat capacities",
+    "m": "C_p-C_V=\\frac{TV\\alpha^2}{\\kappa_T}"
+   },
+   {
+    "uz": "Energiya tenglamasi",
+    "ru": "Уравнение энергии",
+    "en": "Energy equation",
+    "m": "\\left(\\frac{\\partial U}{\\partial V}\\right)_T=T\\left(\\frac{\\partial p}{\\partial T}\\right)_V-p"
+   },
+   {
+    "uz": "Joul–Tomson koeffitsiyenti",
+    "ru": "Коэффициент Джоуля–Томсона",
+    "en": "Joule–Thomson coefficient",
+    "m": "\\left(\\frac{\\partial T}{\\partial p}\\right)_H=\\frac{V}{C_p}\\left(T\\alpha-1\\right)"
+   },
+   {
+    "uz": "Inversiya temperaturasi",
+    "ru": "Температура инверсии",
+    "en": "Inversion temperature",
+    "m": "T^*=\\frac{2a}{Rb}"
+   },
+   {
+    "uz": "Kimyoviy potensial",
+    "ru": "Химический потенциал",
+    "en": "Chemical potential",
+    "m": "\\mu=\\frac{G}{N}=\\mu_0+kT\\ln\\frac{p}{p_0}"
+   },
+   {
+    "uz": "Statistik yig'indi",
+    "ru": "Статистическая сумма",
+    "en": "Partition function",
+    "m": "Z=\\sum_jg_je^{-\\beta E_j}"
+   },
+   {
+    "uz": "Energiya va erkin energiya",
+    "ru": "Энергия и свободная энергия",
+    "en": "Energy and free energy",
+    "m": "\\langle E\\rangle=-\\frac{\\partial\\ln Z}{\\partial\\beta},\\quad F=-kT\\ln Z"
+   },
+   {
+    "uz": "Ikki sathli sistema",
+    "ru": "Двухуровневая система",
+    "en": "Two-level system",
+    "m": "\\langle E\\rangle=\\frac{N\\varepsilon}{e^{\\beta\\varepsilon}+1}"
+   },
+   {
+    "uz": "Kvant ossilyator",
+    "ru": "Квантовый осциллятор",
+    "en": "Quantum oscillator",
+    "m": "\\langle n\\rangle=\\frac{1}{e^{\\beta\\hbar\\omega}-1}"
+   },
+   {
+    "uz": "Eynshteyn modeli",
+    "ru": "Модель Эйнштейна",
+    "en": "Einstein model",
+    "m": "C=3R\\frac{x^2e^x}{\\left(e^x-1\\right)^2}"
+   },
+   {
+    "uz": "Paramagnetik",
+    "ru": "Парамагнетик",
+    "en": "Paramagnet",
+    "m": "M=N\\mu_B\\tanh\\frac{\\mu_BB}{kT}"
+   }
+  ]
+ }
+]
