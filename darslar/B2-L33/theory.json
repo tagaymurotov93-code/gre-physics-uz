@@ -1,0 +1,645 @@
+[
+ {
+  "t": "h1",
+  "uz": "Fazaviy o'tishlar (Phase transitions)",
+  "ru": "Фазовые переходы",
+  "en": "Phase transitions"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz faza va fazaviy o'tish tushunchalarini aniq ta'riflaysiz; fazalar muvozanati shartini kimyoviy potensiallar tengligidan keltirib chiqarasiz; fazaviy diagrammani o'qiysiz va Gibbs fazalar qoidasini qo'llaysiz; Klapeyron–Klauzius tenglamasi bilan erish va qaynash temperaturasining bosimga bog'liqligini, to'yingan bug' bosimini va yashirin issiqlikni hisoblaysiz; ikki fazali sohada richag qoidasini ishlatasiz; Van-der-Vaals tenglamasidan kritik parametrlarni, keltirilgan tenglamani va Maksvell qoidasini olasiz; metastabil holatlar, sirt tarangligi va kurtaklanishning rolini tushuntirasiz; birinchi va ikkinchi tur o'tishlarni ajratasiz va Landau nazariyasi hamda o'rtacha maydon yaqinlashishida tartib parametrini topasiz.",
+  "ru": "**Цель.** После урока вы будете точно определять понятия фазы и фазового перехода; выводить условие равновесия фаз из равенства химических потенциалов; читать фазовую диаграмму и применять правило фаз Гиббса; с помощью уравнения Клапейрона–Клаузиуса вычислять зависимость температур плавления и кипения от давления, давление насыщенного пара и скрытую теплоту; использовать правило рычага в двухфазной области; получать из уравнения Ван-дер-Ваальса критические параметры, приведённое уравнение и правило Максвелла; объяснять роль метастабильных состояний, поверхностного натяжения и зародышеобразования; различать переходы первого и второго рода и находить параметр порядка в теории Ландау и в приближении среднего поля.",
+  "en": "**Goal.** After this lesson you will define precisely the notions of a phase and a phase transition; derive the condition of phase equilibrium from the equality of chemical potentials; read a phase diagram and apply the Gibbs phase rule; use the Clausius–Clapeyron equation to calculate how melting and boiling temperatures depend on pressure, the saturated vapour pressure and the latent heat; use the lever rule in the two-phase region; obtain from the van der Waals equation the critical parameters, the reduced equation and the Maxwell rule; explain the role of metastable states, surface tension and nucleation; distinguish first- and second-order transitions and find the order parameter in Landau theory and in the mean-field approximation."
+ },
+ {
+  "t": "p",
+  "uz": "B1 da erish, qaynash, namlik va yashirin issiqlikni maktab darajasida ko'rgan edik; B2-L32 da Gibbs energiyasi, kimyoviy potensial va Van-der-Vaals gazi energiyasini o'rgandik. Bu darsda ularni birlashtiramiz: nima uchun suv $100\\ ^\\circ\\mathrm{C}$ da qaynaydi, tog'da esa pastroqda; nima uchun muzning erish temperaturasi bosim oshganda kamayadi; nima uchun bug'ni siqqanda bosim o'zgarmaydi; nima uchun bulut tomchilari changsiz havoda hosil bo'lmaydi; temir Kyuri nuqtasida qanday qilib «sakrashsiz» magnitlanishini yo'qotadi. Fazaviy o'tishlar — ko'p zarrali tizimning eng yorqin jamoaviy hodisasi: alohida molekula «qaynamaydi», qaynash faqat ko'p zarralar birgalikda ishtirok etganda yuz beradi.",
+  "ru": "В B1 мы видели плавление, кипение, влажность и скрытую теплоту на школьном уровне; в B2-L32 изучили энергию Гиббса, химический потенциал и энергию газа Ван-дер-Ваальса. В этом уроке объединим их: почему вода кипит при $100\\ ^\\circ\\mathrm{C}$, а в горах — ниже; почему температура плавления льда понижается с ростом давления; почему при сжатии пара давление не меняется; почему в чистом воздухе без пыли не образуются капли облаков; как железо в точке Кюри «без скачка» теряет намагниченность. Фазовые переходы — самое яркое коллективное явление многочастичной системы: отдельная молекула «не кипит», кипение возникает только при совместном участии множества частиц.",
+  "en": "In B1 we met melting, boiling, humidity and latent heat at school level; in B2-L32 we studied the Gibbs energy, the chemical potential and the energy of a van der Waals gas. In this lesson we bring them together: why water boils at $100\\ ^\\circ\\mathrm{C}$ but lower in the mountains; why the melting point of ice falls as the pressure rises; why compressing a vapour does not change its pressure; why cloud droplets do not form in clean, dust-free air; how iron loses its magnetisation at the Curie point \"without a jump\". Phase transitions are the most striking collective phenomenon of a many-particle system: a single molecule does not \"boil\" — boiling happens only when many particles take part together."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Fazalar va birinchi tur o'tishlar",
+  "ru": "1. Фазы и переходы первого рода",
+  "en": "1. Phases and first-order transitions"
+ },
+ {
+  "t": "li",
+  "uz": "**Faza (phase).** Moddaning fizik xossalari bir jinsli bo'lgan va boshqa qismlardan aniq chegara sirti bilan ajralgan qismi — faza. Bir moddaning qattiq, suyuq va gaz holatlari — turli fazalar; lekin muzning bir nechta kristall shakllari ham alohida fazalar, suyuq geliyning ikki holati ham. Bir fazadan ikkinchisiga o'tish — **fazaviy o'tish**: erish va qotish, bug'lanish va kondensatsiya, sublimatsiya va desublimatsiya, kristall panjaraning o'zgarishi, ferromagnit holatning paydo bo'lishi.",
+  "ru": "**Фаза.** Часть вещества с однородными физическими свойствами, отделённая от других частей чёткой границей раздела, — фаза. Твёрдое, жидкое и газообразное состояния одного вещества — разные фазы; но и несколько кристаллических модификаций льда — отдельные фазы, и два состояния жидкого гелия тоже. Переход из одной фазы в другую — **фазовый переход**: плавление и кристаллизация, испарение и конденсация, сублимация и десублимация, перестройка кристаллической решётки, возникновение ферромагнитного состояния.",
+  "en": "**Phase.** A part of a substance with uniform physical properties, separated from other parts by a sharp interface, is a phase. The solid, liquid and gaseous states of one substance are different phases; but so are the several crystalline forms of ice, and the two states of liquid helium. A transition from one phase to another is a **phase transition**: melting and freezing, evaporation and condensation, sublimation and deposition, a change of the crystal lattice, the appearance of the ferromagnetic state."
+ },
+ {
+  "t": "li",
+  "uz": "**Birinchi tur o'tish belgilari.** Erish va qaynashda o'tish o'zgarmas temperatura va bosimda yuz beradi, lekin unga issiqlik kerak — **yashirin issiqlik** (latent heat) $L$: modda isimaydi, energiya molekulalararo bog'lanishlarni uzishga sarflanadi. Shu bilan birga solishtirma hajm sakrab o'zgaradi (suv qaynaganda hajm ~$1600$ marta ortadi). O'zgarmas $T$ da qaytar yutilgan issiqlik entropiya sakrashini beradi:",
+  "ru": "**Признаки перехода первого рода.** При плавлении и кипении переход идёт при постоянных температуре и давлении, но требует теплоты — **скрытой теплоты** $L$: вещество не нагревается, энергия идёт на разрыв межмолекулярных связей. При этом удельный объём меняется скачком (при кипении воды объём растёт примерно в $1600$ раз). Обратимо поглощённая при постоянной $T$ теплота даёт скачок энтропии:",
+  "en": "**Signs of a first-order transition.** In melting and boiling the transition proceeds at constant temperature and pressure, but it requires heat — the **latent heat** $L$: the substance does not warm up; the energy goes into breaking intermolecular bonds. At the same time the specific volume changes by a jump (when water boils, the volume grows about $1600$-fold). Heat absorbed reversibly at constant $T$ gives a jump in entropy:"
+ },
+ {
+  "t": "m",
+  "m": "\\Delta S=\\frac{L}{T},\\qquad L=\\Delta H=T\\Delta S"
+ },
+ {
+  "t": "li",
+  "uz": "**Gibbs energiyasi tilida ([[F01]]).** O'zgarmas $T$ va $p$ da tizim Gibbs energiyasi kichik bo'lgan fazada bo'ladi (B2-L32). Har bir faza uchun bir mol Gibbs energiyasi — kimyoviy potensial $\\mu\\left(T,p\\right)$ — temperatura ortishi bilan kamayadi, chunki $\\left(\\frac{\\partial\\mu}{\\partial T}\\right)_p=-s<0$ ($s$ — molyar entropiya). Suyuqlik entropiyasi kattaroq — uning $\\mu\\left(T\\right)$ chizig'i tikroq tushadi va o'tish temperaturasida qattiq faza chizig'ini kesib o'tadi. Kesishish nuqtasida $G$ uzluksiz, lekin uning birinchi hosilalari $S=-\\frac{\\partial G}{\\partial T}$ va $V=\\frac{\\partial G}{\\partial p}$ sakraydi — **birinchi tur** (first-order) o'tish nomi shundan (Erenfest tasnifi).",
+  "ru": "**На языке энергии Гиббса ([[F01]]).** При постоянных $T$ и $p$ система находится в фазе с меньшей энергией Гиббса (B2-L32). Энергия Гиббса на моль каждой фазы — химический потенциал $\\mu\\left(T,p\\right)$ — убывает с ростом температуры, так как $\\left(\\frac{\\partial\\mu}{\\partial T}\\right)_p=-s<0$ ($s$ — молярная энтропия). Энтропия жидкости больше — её линия $\\mu\\left(T\\right)$ спадает круче и в точке перехода пересекает линию твёрдой фазы. В точке пересечения $G$ непрерывна, но её первые производные $S=-\\frac{\\partial G}{\\partial T}$ и $V=\\frac{\\partial G}{\\partial p}$ испытывают скачок — отсюда название переход **первого рода** (классификация Эренфеста).",
+  "en": "**In the language of the Gibbs energy ([[F01]]).** At constant $T$ and $p$ a system is found in the phase of lower Gibbs energy (B2-L32). The Gibbs energy per mole of each phase — the chemical potential $\\mu\\left(T,p\\right)$ — decreases as the temperature rises, since $\\left(\\frac{\\partial\\mu}{\\partial T}\\right)_p=-s<0$ ($s$ is the molar entropy). The liquid has the larger entropy, so its line $\\mu\\left(T\\right)$ falls more steeply and crosses the line of the solid at the transition temperature. At the crossing $G$ is continuous, but its first derivatives $S=-\\frac{\\partial G}{\\partial T}$ and $V=\\frac{\\partial G}{\\partial p}$ jump — hence the name **first-order** transition (the Ehrenfest classification)."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L33-F01.png",
+   "ru": "figures/B2-L33-F01-ru.png",
+   "en": "figures/B2-L33-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Metastabillik haqida birinchi ishora.** [[F01]] dagi chiziqlar kesishish nuqtasidan keyin ham davom etadi: o'tish temperaturasidan yuqorida qattiq faza, pastda esa suyuq faza mavjud bo'lishi mumkin, faqat ularning $\\mu$ si kattaroq. Bunday holatlar **metastabil** — kichik turtki (kristall kurtagi, chang zarrasi) bo'lmaguncha saqlanadi. Toza suvni $-20\\ ^\\circ\\mathrm{C}$ gacha suyuq holda sovitish mumkin (o'ta sovitilgan suyuqlik); bu hodisaga 8- va 10-bo'limlarda qaytamiz.",
+  "ru": "**Первый намёк на метастабильность.** Линии на [[F01]] продолжаются и за точкой пересечения: выше температуры перехода может существовать твёрдая фаза, ниже — жидкая, только их $\\mu$ больше. Такие состояния **метастабильны** — сохраняются, пока нет малого толчка (зародыша кристалла, пылинки). Чистую воду можно охладить в жидком состоянии до $-20\\ ^\\circ\\mathrm{C}$ (переохлаждённая жидкость); к этому явлению вернёмся в разделах 8 и 10.",
+  "en": "**A first hint of metastability.** The lines in [[F01]] continue past the crossing point: above the transition temperature a solid can exist, and below it a liquid, only with a larger $\\mu$. Such states are **metastable** — they persist until a small push (a crystal seed, a dust particle) arrives. Pure water can be cooled as a liquid down to $-20\\ ^\\circ\\mathrm{C}$ (a supercooled liquid); we return to this in sections 8 and 10."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Fazalar muvozanati sharti",
+  "ru": "2. Условие равновесия фаз",
+  "en": "2. The condition of phase equilibrium"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchta shart.** Ikki faza bir-biriga tegib turgan yopiq tizimni qaraymiz. Issiqlik almashinuvi to'xtashi uchun temperaturalar teng bo'lishi kerak, chegara siljimasligi uchun — bosimlar teng (B2-L32 dagi porshen misoli). Zarralar almashinuvi to'xtashi uchun esa uchinchi shart kerak: $N_1$ va $N_2=N-N_1$ zarralar o'rtasida $G=N_1\\mu_1+N_2\\mu_2$ minimal bo'lishi uchun $\\frac{dG}{dN_1}=\\mu_1-\\mu_2=0$:",
+  "ru": "**Три условия.** Рассмотрим замкнутую систему из двух соприкасающихся фаз. Чтобы прекратился теплообмен, температуры должны быть равны; чтобы граница не смещалась — давления равны (пример с поршнем из B2-L32). Чтобы прекратился обмен частицами, нужно третье условие: чтобы при распределении частиц $N_1$ и $N_2=N-N_1$ энергия $G=N_1\\mu_1+N_2\\mu_2$ была минимальна, $\\frac{dG}{dN_1}=\\mu_1-\\mu_2=0$:",
+  "en": "**Three conditions.** Consider a closed system of two phases in contact. For heat exchange to stop, the temperatures must be equal; for the interface not to move, the pressures must be equal (the piston example of B2-L32). For the exchange of particles to stop, a third condition is needed: for $G=N_1\\mu_1+N_2\\mu_2$ to be a minimum over the split $N_1$ and $N_2=N-N_1$, $\\frac{dG}{dN_1}=\\mu_1-\\mu_2=0$:"
+ },
+ {
+  "t": "m",
+  "m": "T_1=T_2,\\qquad p_1=p_2,\\qquad \\mu_1\\left(T,p\\right)=\\mu_2\\left(T,p\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Ma'nosi.** Agar $\\mu_1>\\mu_2$ bo'lsa, zarralar 1-fazadan 2-fazaga o'tadi (B2-L32 dagi kimyoviy potensial qoidasi) — modda «kimyoviy potensiali past» fazaga oqadi. Muvozanatda ikki noma'lum $T$ va $p$ uchun bitta tenglama $\\mu_1=\\mu_2$ bor — demak ikki faza faqat $p\\left(T\\right)$ **egri chiziq** bo'ylab birga yashay oladi. Suv va bug' $1\\ \\mathrm{atm}$ da faqat bitta temperaturada muvozanatda bo'ladi; boshqa temperaturada bu bosim muvozanat emas — yoki hamma suv bug'lanadi, yoki hamma bug' kondensatsiyalanadi.",
+  "ru": "**Смысл.** Если $\\mu_1>\\mu_2$, частицы переходят из фазы 1 в фазу 2 (правило химического потенциала из B2-L32) — вещество «перетекает» в фазу с меньшим химическим потенциалом. В равновесии для двух неизвестных $T$ и $p$ есть одно уравнение $\\mu_1=\\mu_2$ — значит, две фазы могут сосуществовать только вдоль **кривой** $p\\left(T\\right)$. Вода и пар при $1\\ \\mathrm{atm}$ находятся в равновесии лишь при одной температуре; при другой температуре это давление не равновесное — либо вся вода испарится, либо весь пар сконденсируется.",
+  "en": "**Meaning.** If $\\mu_1>\\mu_2$, particles go from phase 1 to phase 2 (the chemical-potential rule of B2-L32) — matter \"flows\" into the phase of lower chemical potential. At equilibrium there is one equation $\\mu_1=\\mu_2$ for the two unknowns $T$ and $p$ — so two phases can coexist only along a **curve** $p\\left(T\\right)$. Water and steam at $1\\ \\mathrm{atm}$ are in equilibrium at only one temperature; at any other temperature this pressure is not an equilibrium one — either all the water evaporates or all the steam condenses."
+ },
+ {
+  "t": "li",
+  "uz": "**Gibbs fazalar qoidasi (Gibbs phase rule).** Umumlashtiramiz: $c$ ta komponentli va $\\Phi$ ta fazali tizimda har bir fazaning holatini $T$, $p$ va $c-1$ ta konsentratsiya belgilaydi; har bir komponent uchun fazalar orasida $\\Phi-1$ ta tenglik $\\mu$ shartlari bor. Mustaqil o'zgartirsa bo'ladigan kattaliklar soni (erkinlik darajalari):",
+  "ru": "**Правило фаз Гиббса.** Обобщим: в системе из $c$ компонентов и $\\Phi$ фаз состояние каждой фазы задают $T$, $p$ и $c-1$ концентраций; для каждого компонента между фазами есть $\\Phi-1$ условий равенства $\\mu$. Число величин, которые можно менять независимо (число степеней свободы):",
+  "en": "**The Gibbs phase rule.** To generalise: in a system of $c$ components and $\\Phi$ phases, the state of each phase is fixed by $T$, $p$ and $c-1$ concentrations; for each component there are $\\Phi-1$ equalities of $\\mu$ between the phases. The number of quantities that can be varied independently (the number of degrees of freedom) is:"
+ },
+ {
+  "t": "m",
+  "m": "f=c-\\Phi+2"
+ },
+ {
+  "t": "li",
+  "uz": "Bir komponentli modda ($c=1$) uchun: bitta faza — $f=2$ ($T$ va $p$ ni erkin tanlaymiz, diagrammadagi soha); ikki faza — $f=1$ (egri chiziq); uch faza — $f=0$ (nuqta). Shuning uchun bir moddaning to'rtta fazasi muvozanatda bo'la olmaydi, uchta fazasi esa faqat bitta **uchlik nuqtada** (triple point) birga yashaydi. Suvning uchlik nuqtasi ($273.16\\ \\mathrm{K}$, $611\\ \\mathrm{Pa}$) aynan shu sababli temperatura shkalasining tayanch nuqtasi sifatida tanlangan (B2-L30): uni hech qanday sozlashsiz qayta hosil qilish mumkin.",
+  "ru": "Для однокомпонентного вещества ($c=1$): одна фаза — $f=2$ ($T$ и $p$ выбираем свободно, область диаграммы); две фазы — $f=1$ (кривая); три фазы — $f=0$ (точка). Поэтому четыре фазы одного вещества не могут находиться в равновесии, а три сосуществуют лишь в одной **тройной точке**. Тройная точка воды ($273.16\\ \\mathrm{K}$, $611\\ \\mathrm{Pa}$) именно поэтому выбрана опорной точкой температурной шкалы (B2-L30): её можно воспроизвести без какой-либо настройки.",
+  "en": "For a one-component substance ($c=1$): one phase — $f=2$ ($T$ and $p$ are chosen freely, a region of the diagram); two phases — $f=1$ (a curve); three phases — $f=0$ (a point). So four phases of one substance cannot be in equilibrium, and three coexist only at a single **triple point**. That is exactly why the triple point of water ($273.16\\ \\mathrm{K}$, $611\\ \\mathrm{Pa}$) was chosen as the reference point of the temperature scale (B2-L30): it can be reproduced without any adjustment."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Fazaviy diagramma",
+  "ru": "3. Фазовая диаграмма",
+  "en": "3. The phase diagram"
+ },
+ {
+  "t": "li",
+  "uz": "**Tuzilishi ([[F02]]).** $p$–$T$ tekisligida uchta egri chiziq — **erish** (qattiq–suyuq), **bug'lanish** (suyuq–bug') va **sublimatsiya** (qattiq–bug') chiziqlari — uchlik nuqtada uchrashadi va tekislikni uchta sohaga bo'ladi. Uchlik nuqtadan past bosimda suyuqlik umuman bo'lmaydi: qattiq jism isitilganda to'g'ridan-to'g'ri bug'ga aylanadi. Karbonat angidridning uchlik nuqtasi bosimi atmosfera bosimidan ancha katta — shuning uchun «quruq muz» oddiy sharoitda erimay, bug'lanib ketadi.",
+  "ru": "**Строение ([[F02]]).** На плоскости $p$–$T$ три кривые — линии **плавления** (твёрдое–жидкость), **испарения** (жидкость–пар) и **сублимации** (твёрдое–пар) — сходятся в тройной точке и делят плоскость на три области. При давлении ниже тройной точки жидкости нет вообще: при нагревании твёрдое тело сразу превращается в пар. Давление тройной точки углекислого газа намного выше атмосферного — поэтому «сухой лёд» при обычных условиях не плавится, а испаряется.",
+  "en": "**Structure ([[F02]]).** In the $p$–$T$ plane three curves — the **melting** (solid–liquid), **vaporisation** (liquid–vapour) and **sublimation** (solid–vapour) lines — meet at the triple point and divide the plane into three regions. Below the triple-point pressure there is no liquid at all: a heated solid turns directly into vapour. The triple-point pressure of carbon dioxide is far above atmospheric — which is why \"dry ice\" does not melt under ordinary conditions but evaporates."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L33-F02.png",
+   "ru": "figures/B2-L33-F02-ru.png",
+   "en": "figures/B2-L33-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Kritik nuqta (critical point).** Bug'lanish chizig'i cheksiz davom etmaydi — u **kritik nuqtada** ($T_c$, $p_c$) tugaydi. Unga yaqinlashganda suyuqlik va bug' zichliklari, hamda yashirin issiqlik kamayib boradi va kritik nuqtada nolga teng bo'ladi: ikki faza farqlanmay qoladi. $T>T_c$ da modda qancha siqilmasin, chegara sirti paydo bo'lmaydi — bu **o'ta kritik flyuid**. Demak suyuqlikdan gazga kritik nuqtani aylanib o'tib, hech qanday fazaviy o'tishsiz uzluksiz o'tish mumkin: suyuqlik va gaz o'rtasidagi farq miqdoriy, qattiq jism va suyuqlik o'rtasidagi farq esa sifat (simmetriya) farqi — erish chizig'ida kritik nuqta yo'q.",
+  "ru": "**Критическая точка.** Линия испарения не продолжается бесконечно — она заканчивается в **критической точке** ($T_c$, $p_c$). При приближении к ней плотности жидкости и пара сближаются, скрытая теплота уменьшается и в критической точке обращается в нуль: две фазы становятся неразличимы. При $T>T_c$ как ни сжимай вещество, граница раздела не появляется — это **сверхкритический флюид**. Значит, из жидкости в газ можно перейти непрерывно, обойдя критическую точку, без всякого фазового перехода: различие жидкости и газа количественное, а различие твёрдого тела и жидкости — качественное (по симметрии), у линии плавления критической точки нет.",
+  "en": "**The critical point.** The vaporisation line does not continue indefinitely — it ends at the **critical point** ($T_c$, $p_c$). Approaching it, the densities of liquid and vapour draw together and the latent heat decreases, vanishing at the critical point: the two phases become indistinguishable. For $T>T_c$, no matter how the substance is compressed, no interface appears — this is a **supercritical fluid**. So one can go from liquid to gas continuously, around the critical point, with no phase transition at all: the difference between liquid and gas is quantitative, whereas that between solid and liquid is qualitative (one of symmetry) — the melting line has no critical point."
+ },
+ {
+  "t": "li",
+  "uz": "**Suvning anomaliyasi.** Ko'pchilik moddalarda qattiq faza suyuqlikdan zichroq va erish chizig'i o'ngga og'gan: bosim oshsa, erish temperaturasi ortadi. Suvda esa muz suvdan yengil (muz suzadi) va erish chizig'i chapga og'gan — bosim oshsa, muz pastroq temperaturada eriydi. Bu Le Shatelye prinsipi bilan mos: bosim hajmi kichik fazani — suvni — afzal qiladi. Effekt juda kichik: oddiy sharoitdagi bosim o'zgarishlari erish temperaturasini sezilarli siljita olmaydi (konki ostidagi muzning erishi, asosan, ishqalanish isitishi bilan bog'liq). Xuddi shunday anomaliya vismut, galliy va kremniyda ham bor.",
+  "ru": "**Аномалия воды.** У большинства веществ твёрдая фаза плотнее жидкой и линия плавления наклонена вправо: с ростом давления температура плавления растёт. У воды же лёд легче воды (лёд плавает), и линия плавления наклонена влево — при повышении давления лёд плавится при более низкой температуре. Это согласуется с принципом Ле Шателье: давление благоприятствует фазе меньшего объёма — воде. Эффект очень мал: обычные изменения давления не сдвигают температуру плавления заметно (таяние льда под коньком связано в основном с нагревом трением). Такая же аномалия есть у висмута, галлия и кремния.",
+  "en": "**The anomaly of water.** For most substances the solid is denser than the liquid and the melting line slopes to the right: as pressure rises, the melting point rises. For water, however, ice is lighter than water (ice floats) and the melting line slopes to the left — under higher pressure ice melts at a lower temperature. This agrees with Le Chatelier's principle: pressure favours the phase of smaller volume — water. The effect is very small: ordinary pressure changes do not shift the melting point noticeably (the melting of ice under a skate is mainly due to frictional heating). Bismuth, gallium and silicon show the same anomaly."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Klapeyron–Klauzius tenglamasi",
+  "ru": "4. Уравнение Клапейрона–Клаузиуса",
+  "en": "4. The Clausius–Clapeyron equation"
+ },
+ {
+  "t": "li",
+  "uz": "**Keltirib chiqarish.** Muvozanat chizig'i bo'ylab ikki yaqin nuqtada $\\mu_1=\\mu_2$ bajariladi, demak $d\\mu_1=d\\mu_2$. Gibbs–Dyugem munosabati (B2-L32) bo'yicha bir mol uchun $d\\mu=-s\\,dT+v\\,dp$, bunda $s$ va $v$ — molyar entropiya va hajm:",
+  "ru": "**Вывод.** В двух близких точках линии равновесия выполняется $\\mu_1=\\mu_2$, значит, $d\\mu_1=d\\mu_2$. По соотношению Гиббса–Дюгема (B2-L32) на моль $d\\mu=-s\\,dT+v\\,dp$, где $s$ и $v$ — молярные энтропия и объём:",
+  "en": "**Derivation.** At two neighbouring points of the equilibrium line $\\mu_1=\\mu_2$ holds, so $d\\mu_1=d\\mu_2$. By the Gibbs–Duhem relation (B2-L32), per mole $d\\mu=-s\\,dT+v\\,dp$, where $s$ and $v$ are the molar entropy and volume:"
+ },
+ {
+  "t": "m",
+  "m": "-s_1\\,dT+v_1\\,dp=-s_2\\,dT+v_2\\,dp\\ \\Rightarrow\\ \\frac{dp}{dT}=\\frac{s_2-s_1}{v_2-v_1}=\\frac{L}{T\\left(v_2-v_1\\right)}"
+ },
+ {
+  "t": "li",
+  "uz": "**Talqini.** Bu — **Klapeyron–Klauzius tenglamasi**: muvozanat chizig'ining qiyaligi yashirin issiqlik va hajm sakrashi bilan aniqlanadi. $L$ va $v$ ni bir xil miqdorga (bir mol yoki bir kilogramm) nisbatan olish kifoya. Issiqlik yutib o'tishda ($L>0$) qiyalik ishorasi hajm o'zgarishi ishorasi bilan bir xil: bug'lanish va sublimatsiyada $v_2\\gg v_1$ — chiziqlar doim o'ngga ko'tariladi; erishda odatda $v_2>v_1$, suvda esa $v_2<v_1$ — qiyalik manfiy. Tenglama B2-L32 dagi Maksvell munosabati $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V$ ning ikki fazali sohaga qo'llanishi deb ham qaralishi mumkin.",
+  "ru": "**Толкование.** Это — **уравнение Клапейрона–Клаузиуса**: наклон линии равновесия определяется скрытой теплотой и скачком объёма. $L$ и $v$ достаточно брать на одно и то же количество (моль или килограмм). При переходе с поглощением теплоты ($L>0$) знак наклона совпадает со знаком изменения объёма: при испарении и сублимации $v_2\\gg v_1$ — линии всегда поднимаются вправо; при плавлении обычно $v_2>v_1$, а у воды $v_2<v_1$ — наклон отрицателен. Уравнение можно рассматривать и как применение соотношения Максвелла $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V$ из B2-L32 к двухфазной области.",
+  "en": "**Interpretation.** This is the **Clausius–Clapeyron equation**: the slope of the equilibrium line is fixed by the latent heat and the volume jump. It is enough to refer $L$ and $v$ to the same amount (a mole or a kilogram). For a transition that absorbs heat ($L>0$) the sign of the slope is the sign of the volume change: in vaporisation and sublimation $v_2\\gg v_1$ — the lines always rise to the right; in melting usually $v_2>v_1$, but for water $v_2<v_1$ — the slope is negative. The equation can also be seen as the Maxwell relation $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\left(\\frac{\\partial p}{\\partial T}\\right)_V$ of B2-L32 applied to the two-phase region."
+ },
+ {
+  "t": "li",
+  "uz": "**Nima uchun Maksvell munosabati bilan bog'liq.** Ikki fazali sohada bosim faqat $T$ ga bog'liq, hajm esa fazalar nisbatini o'zgartiradi. Izotermik ravishda $dV$ hajm qo'shilsa, $\\frac{dV}{v_2-v_1}$ miqdor modda 1-fazadan 2-fazaga o'tadi va entropiya $\\frac{L}{T}\\cdot\\frac{dV}{v_2-v_1}$ ga ortadi. Demak $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\frac{L}{T\\left(v_2-v_1\\right)}$; o'ng tomon esa $\\frac{dp}{dT}$ — Klapeyron–Klauzius tenglamasi yana chiqdi.",
+  "ru": "**Почему это связано с соотношением Максвелла.** В двухфазной области давление зависит только от $T$, а объём меняет соотношение фаз. Если изотермически добавить объём $dV$, то количество $\\frac{dV}{v_2-v_1}$ вещества переходит из фазы 1 в фазу 2, и энтропия растёт на $\\frac{L}{T}\\cdot\\frac{dV}{v_2-v_1}$. Значит, $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\frac{L}{T\\left(v_2-v_1\\right)}$; а правая часть — это $\\frac{dp}{dT}$ — снова уравнение Клапейрона–Клаузиуса.",
+  "en": "**Why it is connected with a Maxwell relation.** In the two-phase region the pressure depends only on $T$, while the volume changes the proportion of the phases. If a volume $dV$ is added isothermally, an amount $\\frac{dV}{v_2-v_1}$ of substance passes from phase 1 to phase 2, and the entropy grows by $\\frac{L}{T}\\cdot\\frac{dV}{v_2-v_1}$. So $\\left(\\frac{\\partial S}{\\partial V}\\right)_T=\\frac{L}{T\\left(v_2-v_1\\right)}$; and the right-hand side is $\\frac{dp}{dT}$ — the Clausius–Clapeyron equation once again."
+ },
+ {
+  "t": "li",
+  "uz": "**Bosimli qozon.** Qaynash chizig'i o'ngga ko'tarilgani uchun tashqi bosim oshsa, qaynash temperaturasi ortadi. Bosimli qozonda (taxminan $2\\ \\mathrm{atm}$) suv $120\\ ^\\circ\\mathrm{C}$ atrofida qaynaydi va ovqat tezroq pishadi; Everest cho'qqisida (bosim ~$0.33\\ \\mathrm{atm}$) esa suv $70\\ ^\\circ\\mathrm{C}$ atrofida qaynaydi. Bug' turbinalari va issiqlik elektr stansiyalari qozonlari yuqori bosimda ishlaydi — bug' temperaturasi va demak Karno FIK i ortadi (B2-L30).",
+  "ru": "**Скороварка.** Поскольку линия кипения поднимается вправо, при росте внешнего давления температура кипения растёт. В скороварке (примерно $2\\ \\mathrm{atm}$) вода кипит около $120\\ ^\\circ\\mathrm{C}$, и пища готовится быстрее; на вершине Эвереста (давление ~$0.33\\ \\mathrm{atm}$) вода кипит около $70\\ ^\\circ\\mathrm{C}$. Котлы паровых турбин и ТЭС работают при высоком давлении — растёт температура пара, а значит, и КПД Карно (B2-L30).",
+  "en": "**The pressure cooker.** Because the boiling line rises to the right, increasing the external pressure raises the boiling point. In a pressure cooker (about $2\\ \\mathrm{atm}$) water boils near $120\\ ^\\circ\\mathrm{C}$ and food cooks faster; on the summit of Everest (pressure ~$0.33\\ \\mathrm{atm}$) water boils near $70\\ ^\\circ\\mathrm{C}$. The boilers of steam turbines and power stations work at high pressure — the steam temperature, and hence the Carnot efficiency, increases (B2-L30)."
+ },
+ {
+  "t": "h2",
+  "uz": "5. To'yingan bug' bosimi",
+  "ru": "5. Давление насыщенного пара",
+  "en": "5. Saturated vapour pressure"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchta yaqinlashish.** Kritik nuqtadan uzoqda bug'lanish uchun Klapeyron–Klauzius tenglamasini integrallash mumkin: (1) suyuqlik hajmi bug' hajmiga nisbatan kichik, $v_2-v_1\\approx v_2$; (2) bug' ideal gaz, $v_2=\\frac{RT}{p}$ (bir mol uchun); (3) molyar yashirin issiqlik $L$ temperaturaga deyarli bog'liq emas. U holda:",
+  "ru": "**Три приближения.** Вдали от критической точки уравнение Клапейрона–Клаузиуса для испарения можно проинтегрировать: (1) объём жидкости мал по сравнению с объёмом пара, $v_2-v_1\\approx v_2$; (2) пар — идеальный газ, $v_2=\\frac{RT}{p}$ (на моль); (3) молярная скрытая теплота $L$ почти не зависит от температуры. Тогда:",
+  "en": "**Three approximations.** Far from the critical point the Clausius–Clapeyron equation for vaporisation can be integrated: (1) the volume of the liquid is small compared with that of the vapour, $v_2-v_1\\approx v_2$; (2) the vapour is an ideal gas, $v_2=\\frac{RT}{p}$ (per mole); (3) the molar latent heat $L$ hardly depends on temperature. Then:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{d\\ln p_s}{dT}=\\frac{L}{RT^2}\\ \\Rightarrow\\ p_s=p_0\\exp\\left[-\\frac{L}{R}\\left(\\frac{1}{T}-\\frac{1}{T_0}\\right)\\right]"
+ },
+ {
+  "t": "li",
+  "uz": "**To'g'ri chiziq grafigi ([[F03]]).** Natijani $\\ln p_s=\\mathrm{const}-\\frac{L}{R}\\cdot\\frac{1}{T}$ ko'rinishida yozsak, $\\ln p_s$ ning $\\frac{1}{T}$ ga bog'liqligi to'g'ri chiziq bo'ladi va uning qiyaligi $-\\frac{L}{R}$ ga teng. Tajriba ma'lumotlarini aynan shu koordinatalarda chizish — yashirin issiqlikni o'lchashning standart usuli; to'g'ri chiziqdan chetlanish $L$ ning temperaturaga bog'liqligini ko'rsatadi. Eksponensial bog'lanish juda kuchli: xona temperaturasi atrofida suvning to'yingan bug' bosimi har $10$–$12\\ \\mathrm{K}$ da taxminan ikki marta ortadi.",
+  "ru": "**Прямая на графике ([[F03]]).** Записав результат в виде $\\ln p_s=\\mathrm{const}-\\frac{L}{R}\\cdot\\frac{1}{T}$, видим, что зависимость $\\ln p_s$ от $\\frac{1}{T}$ — прямая с наклоном $-\\frac{L}{R}$. Построение опытных данных именно в этих координатах — стандартный способ измерить скрытую теплоту; отклонение от прямой показывает зависимость $L$ от температуры. Экспоненциальная зависимость очень сильная: около комнатной температуры давление насыщенного пара воды примерно удваивается каждые $10$–$12\\ \\mathrm{K}$.",
+  "en": "**A straight-line plot ([[F03]]).** Writing the result as $\\ln p_s=\\mathrm{const}-\\frac{L}{R}\\cdot\\frac{1}{T}$, we see that $\\ln p_s$ plotted against $\\frac{1}{T}$ is a straight line of slope $-\\frac{L}{R}$. Plotting experimental data in exactly these coordinates is the standard way to measure a latent heat; a departure from the line reveals the temperature dependence of $L$. The exponential dependence is very strong: near room temperature the saturated vapour pressure of water roughly doubles every $10$–$12\\ \\mathrm{K}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L33-F03.png",
+   "ru": "figures/B2-L33-F03-ru.png",
+   "en": "figures/B2-L33-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Mikroskopik ma'no.** Formuladagi $e^{-\\frac{L}{RT}}=e^{-\\frac{\\ell}{kT}}$ — Bolsman faktori (B2-L31): $\\ell=\\frac{L}{N_A}$ — bitta molekulani suyuqlikdan uzib olish uchun kerak bo'lgan energiya. Bug'dagi molekulalar konsentratsiyasi suyuqlikdagiga nisbatan shu faktor marta kichik. Suv uchun $\\ell\\approx0.42\\ \\mathrm{eV}$, xona temperaturasida $kT\\approx0.026\\ \\mathrm{eV}$ — nisbat ~$16$, shuning uchun bug' juda siyrak.",
+  "ru": "**Микроскопический смысл.** $e^{-\\frac{L}{RT}}=e^{-\\frac{\\ell}{kT}}$ в формуле — больцмановский множитель (B2-L31): $\\ell=\\frac{L}{N_A}$ — энергия, нужная, чтобы оторвать одну молекулу от жидкости. Концентрация молекул в паре во столько раз меньше, чем в жидкости. Для воды $\\ell\\approx0.42\\ \\mathrm{eV}$, при комнатной температуре $kT\\approx0.026\\ \\mathrm{eV}$ — отношение ~$16$, поэтому пар очень разрежен.",
+  "en": "**Microscopic meaning.** The factor $e^{-\\frac{L}{RT}}=e^{-\\frac{\\ell}{kT}}$ in the formula is a Boltzmann factor (B2-L31): $\\ell=\\frac{L}{N_A}$ is the energy needed to tear one molecule away from the liquid. The concentration of molecules in the vapour is smaller than in the liquid by this factor. For water $\\ell\\approx0.42\\ \\mathrm{eV}$, while at room temperature $kT\\approx0.026\\ \\mathrm{eV}$ — a ratio of ~$16$, which is why the vapour is very dilute."
+ },
+ {
+  "t": "li",
+  "uz": "**Qaynash.** Bug'lanish suyuqlik sirtidan har qanday temperaturada bo'ladi. **Qaynash** esa suyuqlik ichida pufakchalar o'sishi; pufakcha ichidagi to'yingan bug' bosimi tashqi bosimga teng bo'lganda u siqilib yo'qolmaydi. Demak qaynash temperaturasi $p_s\\left(T_b\\right)=p$ shartidan ($p$ — tashqi bosim) topiladi va tashqi bosimga Klapeyron–Klauzius tenglamasi bo'yicha bog'liq. Normal qaynash temperaturasi — $1\\ \\mathrm{atm}$ dagi qiymat.",
+  "ru": "**Кипение.** Испарение с поверхности жидкости идёт при любой температуре. **Кипение** же — рост пузырьков внутри жидкости; пузырёк не схлопывается, когда давление насыщенного пара в нём равно внешнему. Значит, температура кипения находится из условия $p_s\\left(T_b\\right)=p$ ($p$ — внешнее давление) и зависит от внешнего давления по уравнению Клапейрона–Клаузиуса. Нормальная температура кипения — значение при $1\\ \\mathrm{atm}$.",
+  "en": "**Boiling.** Evaporation from the surface of a liquid occurs at any temperature. **Boiling**, by contrast, is the growth of bubbles inside the liquid; a bubble does not collapse when the saturated vapour pressure inside it equals the external pressure. So the boiling point follows from $p_s\\left(T_b\\right)=p$ ($p$ is the external pressure) and depends on the external pressure through the Clausius–Clapeyron equation. The normal boiling point is the value at $1\\ \\mathrm{atm}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Namlik va shudring nuqtasi.** Havodagi suv bug'ining parsial bosimi $p$ odatda to'yingan bug' bosimidan kichik. **Nisbiy namlik** $\\varphi=\\frac{p}{p_s\\left(T\\right)}$. Havo sovitilganda $p$ o'zgarmaydi, $p_s\\left(T\\right)$ esa kamayadi; $p_s\\left(T_d\\right)=p$ bo'lgan temperatura — **shudring nuqtasi**: undan pastda bug' kondensatsiyalanadi (shudring, tuman, deraza oynasidagi tomchilar). Shudring nuqtasini Klapeyron–Klauzius tenglamasidan topish mumkin: $\\frac{1}{T_d}=\\frac{1}{T}-\\frac{R}{L}\\ln\\varphi$.",
+  "ru": "**Влажность и точка росы.** Парциальное давление водяного пара в воздухе $p$ обычно меньше давления насыщенного пара. **Относительная влажность** $\\varphi=\\frac{p}{p_s\\left(T\\right)}$. При охлаждении воздуха $p$ не меняется, а $p_s\\left(T\\right)$ уменьшается; температура, при которой $p_s\\left(T_d\\right)=p$, — **точка росы**: ниже неё пар конденсируется (роса, туман, капли на оконном стекле). Точку росы можно найти из уравнения Клапейрона–Клаузиуса: $\\frac{1}{T_d}=\\frac{1}{T}-\\frac{R}{L}\\ln\\varphi$.",
+  "en": "**Humidity and the dew point.** The partial pressure $p$ of water vapour in air is usually below the saturated vapour pressure. The **relative humidity** is $\\varphi=\\frac{p}{p_s\\left(T\\right)}$. As air cools, $p$ stays the same while $p_s\\left(T\\right)$ falls; the temperature at which $p_s\\left(T_d\\right)=p$ is the **dew point**: below it the vapour condenses (dew, fog, droplets on a window pane). The dew point follows from the Clausius–Clapeyron equation: $\\frac{1}{T_d}=\\frac{1}{T}-\\frac{R}{L}\\ln\\varphi$."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Ikki fazali soha va richag qoidasi",
+  "ru": "6. Двухфазная область и правило рычага",
+  "en": "6. The two-phase region and the lever rule"
+ },
+ {
+  "t": "li",
+  "uz": "**$p$–$V$ diagrammada ([[F04]]).** Bug'ni o'zgarmas temperaturada siqamiz. Avval u ideal gazga o'xshab siqiladi ($p$ ortadi). Bosim $p_s\\left(T\\right)$ ga yetganda bug' **to'yingan** bo'ladi va kondensatsiya boshlanadi: hajm kamayadi, bosim esa o'zgarmaydi — izoterma gorizontal; bug' suyuqlikka aylanib, yashirin issiqlik termostatga beriladi. Hamma bug' suyuqlikka aylangach, bosim keskin ortadi — suyuqlik deyarli siqilmaydi. Gorizontal kesmalarning chetlari gumbazsimon egri chiziqni hosil qiladi; uning ichi — ikki fazali soha, cho'qqisi — kritik nuqta.",
+  "ru": "**На диаграмме $p$–$V$ ([[F04]]).** Сжимаем пар при постоянной температуре. Сначала он сжимается подобно идеальному газу ($p$ растёт). Когда давление достигает $p_s\\left(T\\right)$, пар становится **насыщенным** и начинается конденсация: объём уменьшается, а давление не меняется — изотерма горизонтальна; пар превращается в жидкость, скрытая теплота отдаётся термостату. Когда весь пар сконденсировался, давление резко растёт — жидкость почти несжимаема. Концы горизонтальных участков образуют куполообразную кривую; внутри неё — двухфазная область, вершина — критическая точка.",
+  "en": "**On the $p$–$V$ diagram ([[F04]]).** Compress a vapour at constant temperature. At first it compresses like an ideal gas ($p$ rises). When the pressure reaches $p_s\\left(T\\right)$ the vapour becomes **saturated** and condensation begins: the volume decreases while the pressure stays the same — the isotherm is horizontal; vapour turns into liquid, and the latent heat goes to the heat bath. Once all the vapour has condensed, the pressure rises steeply — the liquid is almost incompressible. The ends of the horizontal segments form a dome-shaped curve; inside it lies the two-phase region, and its top is the critical point."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L33-F04.png",
+   "ru": "figures/B2-L33-F04-ru.png",
+   "en": "figures/B2-L33-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Richag qoidasi (lever rule).** Ikki fazali sohadagi nuqtada umumiy solishtirma hajm $v$ (bir kilogramm yoki bir mol uchun), chegaralarda esa suyuqlik $v_1$ va bug' $v_2$. Massa va hajm balansidan $m_1v_1+m_2v_2=\\left(m_1+m_2\\right)v$, ya'ni $m_1\\left(v-v_1\\right)=m_2\\left(v_2-v\\right)$ — xuddi richagdagi kuch momentlari tengligi. Bug' ulushi (quruqlik darajasi):",
+  "ru": "**Правило рычага.** В точке двухфазной области общий удельный объём $v$ (на килограмм или моль), а на границах — жидкость $v_1$ и пар $v_2$. Из баланса массы и объёма $m_1v_1+m_2v_2=\\left(m_1+m_2\\right)v$, то есть $m_1\\left(v-v_1\\right)=m_2\\left(v_2-v\\right)$ — как равенство моментов сил на рычаге. Доля пара (степень сухости):",
+  "en": "**The lever rule.** At a point in the two-phase region the overall specific volume is $v$ (per kilogram or per mole), while at the boundaries it is $v_1$ for the liquid and $v_2$ for the vapour. From the mass and volume balance $m_1v_1+m_2v_2=\\left(m_1+m_2\\right)v$, that is $m_1\\left(v-v_1\\right)=m_2\\left(v_2-v\\right)$ — just like the balance of moments on a lever. The vapour fraction (dryness fraction) is:"
+ },
+ {
+  "t": "m",
+  "m": "x=\\frac{m_2}{m_1+m_2}=\\frac{v-v_1}{v_2-v_1}"
+ },
+ {
+  "t": "li",
+  "uz": "**Energetika.** Ikki fazali sohada izobarik-izotermik jarayonda olingan issiqlik bug'langan massaga proporsional: $Q=L\\,\\Delta m_2$; gaz ustida bajarilgan ish $p\\,\\Delta V$, bunda $\\Delta V=\\Delta m_2\\left(v_2-v_1\\right)$. Bug'lanishda ichki energiya o'zgarishi $\\Delta U=L\\,\\Delta m-p\\left(v_2-v_1\\right)\\Delta m$ — yashirin issiqlikning kichik qismi tashqi bosimni yengishga ketadi, qolgani molekulalararo bog'lanishlarni uzishga.",
+  "ru": "**Энергетика.** В изобарно-изотермическом процессе в двухфазной области полученная теплота пропорциональна испарившейся массе: $Q=L\\,\\Delta m_2$; работа газа $p\\,\\Delta V$, где $\\Delta V=\\Delta m_2\\left(v_2-v_1\\right)$. При испарении изменение внутренней энергии $\\Delta U=L\\,\\Delta m-p\\left(v_2-v_1\\right)\\Delta m$ — малая часть скрытой теплоты уходит на преодоление внешнего давления, остальное — на разрыв межмолекулярных связей.",
+  "en": "**Energetics.** In an isobaric-isothermal process in the two-phase region the heat received is proportional to the mass evaporated: $Q=L\\,\\Delta m_2$; the work done by the gas is $p\\,\\Delta V$ with $\\Delta V=\\Delta m_2\\left(v_2-v_1\\right)$. On evaporation the change in internal energy is $\\Delta U=L\\,\\Delta m-p\\left(v_2-v_1\\right)\\Delta m$ — a small part of the latent heat goes to pushing back the external pressure, the rest to breaking intermolecular bonds."
+ },
+ {
+  "t": "h2",
+  "uz": "7. Van-der-Vaals izotermalari va kritik nuqta",
+  "ru": "7. Изотермы Ван-дер-Ваальса и критическая точка",
+  "en": "7. Van der Waals isotherms and the critical point"
+ },
+ {
+  "t": "li",
+  "uz": "**Kubik tenglama.** Van-der-Vaals tenglamasi bir mol uchun $\\left(p+\\frac{a}{V^2}\\right)\\left(V-b\\right)=RT$ (B2-L29, B2-L32) $V$ ga nisbatan kubik: berilgan $p$ va $T$ da bitta yoki uchta haqiqiy ildiz bor. Yuqori temperaturada izotermalar monoton (gazga o'xshash), past temperaturada esa ularda «to'lqin» — maksimum va minimum paydo bo'ladi ([[F05]]). Uchta ildizdan kichigi — suyuqlik, kattasi — bug' hajmi: Van-der-Vaals tenglamasi bitta formulada suyuqlik va gazni tasvirlaydi.",
+  "ru": "**Кубическое уравнение.** Записанное для одного моля уравнение Ван-дер-Ваальса (B2-L29, B2-L32), $\\left(p+\\frac{a}{V^2}\\right)\\left(V-b\\right)=RT$, кубическое относительно $V$: при заданных $p$ и $T$ один или три вещественных корня. При высокой температуре изотермы монотонны (как у газа), а при низкой на них появляется «волна» — максимум и минимум ([[F05]]). Меньший из трёх корней — объём жидкости, больший — пара: уравнение Ван-дер-Ваальса одной формулой описывает и жидкость, и газ.",
+  "en": "**A cubic equation.** The van der Waals equation per mole, $\\left(p+\\frac{a}{V^2}\\right)\\left(V-b\\right)=RT$ (B2-L29, B2-L32), is cubic in $V$: at given $p$ and $T$ there are one or three real roots. At high temperature the isotherms are monotonic (gas-like), while at low temperature a \"wave\" — a maximum and a minimum — appears on them ([[F05]]). The smallest of the three roots is the liquid volume and the largest the vapour volume: the van der Waals equation describes liquid and gas in one formula."
+ },
+ {
+  "t": "li",
+  "uz": "**Kritik nuqta — burilish nuqtasi.** Maksimum va minimum bir-biriga yaqinlashib, kritik izotermada gorizontal burilish nuqtasiga birlashadi: u yerda birinchi va ikkinchi hosila nolga teng, $\\left(\\frac{\\partial p}{\\partial V}\\right)_T=0$, $\\left(\\frac{\\partial^2p}{\\partial V^2}\\right)_T=0$. Bu shartlarni tenglama bilan birga yechsak, kritik parametrlar chiqadi:",
+  "ru": "**Критическая точка — точка перегиба.** Максимум и минимум сближаются и на критической изотерме сливаются в горизонтальную точку перегиба: там первая и вторая производные равны нулю, $\\left(\\frac{\\partial p}{\\partial V}\\right)_T=0$, $\\left(\\frac{\\partial^2p}{\\partial V^2}\\right)_T=0$. Решив эти условия вместе с уравнением, получим критические параметры:",
+  "en": "**The critical point is an inflection point.** The maximum and minimum approach each other and on the critical isotherm merge into a horizontal inflection point: there the first and second derivatives vanish, $\\left(\\frac{\\partial p}{\\partial V}\\right)_T=0$, $\\left(\\frac{\\partial^2p}{\\partial V^2}\\right)_T=0$. Solving these conditions together with the equation gives the critical parameters:"
+ },
+ {
+  "t": "m",
+  "m": "V_c=3b,\\qquad p_c=\\frac{a}{27b^2},\\qquad T_c=\\frac{8a}{27Rb},\\qquad \\frac{p_cV_c}{RT_c}=\\frac{3}{8}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tajriba bilan solishtirish.** Kritik nuqtada siqiluvchanlik koeffitsiyenti $\\frac{p_cV_c}{RT_c}$ Van-der-Vaals modelida barcha moddalar uchun bir xil — $\\frac{3}{8}=0.375$; tajribada esa ko'pchilik moddalar uchun $0.23$–$0.31$. Model sifat jihatdan to'g'ri, miqdoriy jihatdan taxminiy. Amalda $a$ va $b$ o'lchangan $T_c$ va $p_c$ dan topiladi: $a=\\frac{27R^2T_c^2}{64p_c}$, $b=\\frac{RT_c}{8p_c}$ (o'lchash qiyin bo'lgan $V_c$ ishlatilmaydi).",
+  "ru": "**Сравнение с опытом.** Коэффициент сжимаемости в критической точке $\\frac{p_cV_c}{RT_c}$ в модели Ван-дер-Ваальса одинаков для всех веществ — $\\frac{3}{8}=0.375$; на опыте же для большинства веществ $0.23$–$0.31$. Модель качественно верна, количественно приближённа. На практике $a$ и $b$ находят из измеренных $T_c$ и $p_c$: $a=\\frac{27R^2T_c^2}{64p_c}$, $b=\\frac{RT_c}{8p_c}$ (трудноизмеряемый $V_c$ не используют).",
+  "en": "**Comparison with experiment.** The compressibility factor at the critical point, $\\frac{p_cV_c}{RT_c}$, is the same for all substances in the van der Waals model — $\\frac{3}{8}=0.375$; experimentally it is $0.23$–$0.31$ for most substances. The model is qualitatively right and quantitatively approximate. In practice $a$ and $b$ are found from measured $T_c$ and $p_c$: $a=\\frac{27R^2T_c^2}{64p_c}$, $b=\\frac{RT_c}{8p_c}$ (the hard-to-measure $V_c$ is not used)."
+ },
+ {
+  "t": "li",
+  "uz": "**Keltirilgan tenglama ([[F05]]).** Keltirilgan o'zgaruvchilar $\\tau=\\frac{T}{T_c}$, $\\pi=\\frac{p}{p_c}$, $\\omega=\\frac{V}{V_c}$ kiritilsa, $a$ va $b$ tenglamadan butunlay yo'qoladi. Natija — **mos holatlar qonuni**: keltirilgan o'zgaruvchilarda turli moddalar bir xil holat tenglamasiga bo'ysunadi. Real moddalar uchun bu qonun Van-der-Vaals tenglamasining o'zidan ancha aniqroq bajariladi — masalan, argon, kripton, azot va metanning ikki fazali sohasi keltirilgan o'qlarda deyarli ustma-ust tushadi.",
+  "ru": "**Приведённое уравнение ([[F05]]).** Если ввести приведённые переменные $\\tau=\\frac{T}{T_c}$, $\\pi=\\frac{p}{p_c}$, $\\omega=\\frac{V}{V_c}$, то $a$ и $b$ полностью исчезают из уравнения. Результат — **закон соответственных состояний**: в приведённых переменных разные вещества подчиняются одному уравнению состояния. Для реальных веществ этот закон выполняется гораздо точнее, чем само уравнение Ван-дер-Ваальса — например, двухфазные области аргона, криптона, азота и метана в приведённых осях почти совпадают.",
+  "en": "**The reduced equation ([[F05]]).** Introducing the reduced variables $\\tau=\\frac{T}{T_c}$, $\\pi=\\frac{p}{p_c}$, $\\omega=\\frac{V}{V_c}$, the constants $a$ and $b$ disappear from the equation completely. The result is the **law of corresponding states**: in reduced variables different substances obey the same equation of state. For real substances this law holds far more accurately than the van der Waals equation itself — for example, the two-phase regions of argon, krypton, nitrogen and methane almost coincide in reduced axes."
+ },
+ {
+  "t": "m",
+  "m": "\\left(\\pi+\\frac{3}{\\omega^2}\\right)\\left(3\\omega-1\\right)=8\\tau"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L33-F05.png",
+   "ru": "figures/B2-L33-F05-ru.png",
+   "en": "figures/B2-L33-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Maksvell qoidasi va metastabil holatlar",
+  "ru": "8. Правило Максвелла и метастабильные состояния",
+  "en": "8. The Maxwell rule and metastable states"
+ },
+ {
+  "t": "li",
+  "uz": "**Teng yuzalar qoidasi ([[F06]]).** Van-der-Vaals izotermasidagi «to'lqin» tajribada kuzatilmaydi — uning o'rnida gorizontal kesma bo'ladi. Kesma qaysi balandlikda o'tishini kimyoviy potensiallar tengligi belgilaydi. Izoterma bo'ylab $d\\mu=v\\,dp$, shuning uchun suyuqlik nuqtasidan bug' nuqtasigacha to'lqinli egri chiziq bo'ylab integral nolga teng bo'lishi kerak. Bu shart geometrik jihatdan gorizontal chiziq to'lqindan ajratgan ikki yuzaning tengligini bildiradi — **Maksvell qoidasi**:",
+  "ru": "**Правило равных площадей ([[F06]]).** «Волна» на изотерме Ван-дер-Ваальса на опыте не наблюдается — вместо неё горизонтальный участок. На какой высоте он проходит, определяет равенство химических потенциалов. Вдоль изотермы $d\\mu=v\\,dp$, поэтому интеграл по волнистой кривой от точки жидкости до точки пара должен быть равен нулю. Геометрически это условие означает равенство двух площадей, отсекаемых горизонталью от волны, — **правило Максвелла**:",
+  "en": "**The equal-area rule ([[F06]]).** The \"wave\" on a van der Waals isotherm is not observed experimentally — a horizontal segment appears in its place. The height at which the segment runs is fixed by the equality of chemical potentials. Along an isotherm $d\\mu=v\\,dp$, so the integral along the wavy curve from the liquid point to the vapour point must vanish. Geometrically this condition means that the two areas cut from the wave by the horizontal line are equal — the **Maxwell rule**:"
+ },
+ {
+  "t": "m",
+  "m": "\\mu_2-\\mu_1=\\int_1^2v\\,dp=0\\ \\Leftrightarrow\\ \\int_{v_1}^{v_2}p\\left(v\\right)dv=p_s\\left(v_2-v_1\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Metastabil tarmoqlar.** Suyuqlik nuqtasidan minimumgacha bo'lgan qism — **o'ta qizdirilgan suyuqlik** (bosim $p_s$ dan past, lekin qaynash boshlanmagan), bug' nuqtasidan maksimumgacha — **o'ta to'yingan** (o'ta sovitilgan) **bug'**. Bu holatlarda $\\left(\\frac{\\partial p}{\\partial V}\\right)_T<0$ — mahalliy turg'unlik sharti bajariladi (B2-L32), lekin $\\mu$ boshqa fazanikidan katta: kichik buzilishlarga chidamli, katta buzilishda esa yangi fazaga sakraydi. Maksimum va minimum orasidagi qismda $\\left(\\frac{\\partial p}{\\partial V}\\right)_T>0$, ya'ni $\\kappa_T<0$ — bu holatlar mutlaqo turg'unmas va hech qachon kuzatilmaydi. Ekstremum nuqtalari to'plami — **spinodal**, ikki fazali soha chegarasi — **binodal**.",
+  "ru": "**Метастабильные ветви.** Участок от точки жидкости до минимума — **перегретая жидкость** (давление ниже $p_s$, но кипение не началось), от точки пара до максимума — **пересыщенный** (переохлаждённый) **пар**. В этих состояниях $\\left(\\frac{\\partial p}{\\partial V}\\right)_T<0$ — условие локальной устойчивости выполнено (B2-L32), но $\\mu$ больше, чем у другой фазы: к малым возмущениям они устойчивы, а при большом возмущении скачком переходят в новую фазу. На участке между максимумом и минимумом $\\left(\\frac{\\partial p}{\\partial V}\\right)_T>0$, то есть $\\kappa_T<0$ — эти состояния абсолютно неустойчивы и никогда не наблюдаются. Множество точек экстремумов — **спинодаль**, граница двухфазной области — **бинодаль**.",
+  "en": "**Metastable branches.** The part from the liquid point to the minimum is a **superheated liquid** (pressure below $p_s$, but boiling has not started); from the vapour point to the maximum it is a **supersaturated** (supercooled) **vapour**. In these states $\\left(\\frac{\\partial p}{\\partial V}\\right)_T<0$ — the local stability condition holds (B2-L32), but $\\mu$ is larger than for the other phase: they withstand small disturbances, but a large one makes them jump to the new phase. Between the maximum and the minimum $\\left(\\frac{\\partial p}{\\partial V}\\right)_T>0$, i.e. $\\kappa_T<0$ — these states are absolutely unstable and are never observed. The locus of the extremum points is the **spinodal**; the boundary of the two-phase region is the **binodal**."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L33-F06.png",
+   "ru": "figures/B2-L33-F06-ru.png",
+   "en": "figures/B2-L33-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Detektorlar.** Metastabil holatlar zarrachalar fizikasida ishlatilgan. **Vilson kamerasida** o'ta to'yingan bug'da zaryadli zarra hosil qilgan ionlar kondensatsiya markazi bo'ladi — zarra izi tomchilar qatori sifatida ko'rinadi. **Pufakli kamerada** (Gleyzer) o'ta qizdirilgan suyuqlikda (masalan, suyuq vodorodda) zarra izi bo'ylab pufakchalar paydo bo'ladi. Ikkala holatda ham tashqi «turtki» metastabil fazani yemiradi va iz ko'zga ko'rinadigan bo'ladi. Oshxonadagi misol — mikroto'lqinli pechda isitilgan toza suvning idish silkitilganda «portlab» qaynashi.",
+  "ru": "**Детекторы.** Метастабильные состояния использовались в физике частиц. В **камере Вильсона** ионы, созданные заряженной частицей в пересыщенном паре, становятся центрами конденсации — след частицы виден как цепочка капель. В **пузырьковой камере** (Глейзер) в перегретой жидкости (например, жидком водороде) вдоль следа частицы возникают пузырьки. В обоих случаях внешний «толчок» разрушает метастабильную фазу, и след становится видимым. Кухонный пример — «взрывное» вскипание чистой воды, нагретой в микроволновке, при встряхивании сосуда.",
+  "en": "**Detectors.** Metastable states have been used in particle physics. In a **Wilson cloud chamber** the ions produced by a charged particle in a supersaturated vapour act as condensation centres — the particle's track appears as a line of droplets. In a **bubble chamber** (Glaser), bubbles form along the track in a superheated liquid (for example liquid hydrogen). In both cases an external \"push\" destroys the metastable phase and the track becomes visible. A kitchen example is the \"explosive\" boiling of clean water heated in a microwave oven when the container is jolted."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Yashirin issiqlik: mikroskopik qarash va Truton qoidasi",
+  "ru": "9. Скрытая теплота: микроскопический взгляд и правило Трутона",
+  "en": "9. Latent heat: a microscopic view and Trouton's rule"
+ },
+ {
+  "t": "li",
+  "uz": "**Truton qoidasi (Trouton's rule).** Ko'plab oddiy suyuqliklar uchun normal qaynash temperaturasidagi bug'lanish entropiyasi deyarli bir xil: $\\frac{L}{T_b}\\approx85$–$88\\ \\mathrm{J/(mol\\cdot K)}\\approx10.5R$. Sababi: entropiya sakrashi asosan bir molekulaga to'g'ri keladigan hajmning keskin ortishi bilan bog'liq ($\\Delta s\\approx R\\ln\\frac{v_2}{v_1}$ ko'rinishida, B2-L30), $1\\ \\mathrm{atm}$ dagi qaynashda bu nisbat turli moddalar uchun o'xshash. Qoida yashirin issiqlikni bir qarashda baholashga imkon beradi: masalan, $T_b\\approx350\\ \\mathrm{K}$ da qaynaydigan uglerod tetraxlorid uchun $L\\approx10.5\\cdot8.31\\cdot350\\approx31\\ \\mathrm{kJ/mol}$ (tajribada $30\\ \\mathrm{kJ/mol}$).",
+  "ru": "**Правило Трутона.** Для многих простых жидкостей энтропия испарения при нормальной температуре кипения почти одинакова: $\\frac{L}{T_b}\\approx85$–$88\\ \\mathrm{J/(mol\\cdot K)}\\approx10.5R$. Причина: скачок энтропии связан в основном с резким ростом объёма на молекулу (в виде $\\Delta s\\approx R\\ln\\frac{v_2}{v_1}$, B2-L30), а при кипении при $1\\ \\mathrm{atm}$ это отношение у разных веществ близко. Правило позволяет с первого взгляда оценить скрытую теплоту: например, для четырёххлористого углерода, кипящего при $T_b\\approx350\\ \\mathrm{K}$, $L\\approx10.5\\cdot8.31\\cdot350\\approx31\\ \\mathrm{kJ/mol}$ (на опыте $30\\ \\mathrm{kJ/mol}$).",
+  "en": "**Trouton's rule.** For many simple liquids the entropy of vaporisation at the normal boiling point is nearly the same: $\\frac{L}{T_b}\\approx85$–$88\\ \\mathrm{J/(mol\\cdot K)}\\approx10.5R$. The reason: the entropy jump comes mainly from the sharp growth of the volume per molecule (in the form $\\Delta s\\approx R\\ln\\frac{v_2}{v_1}$, B2-L30), and for boiling at $1\\ \\mathrm{atm}$ this ratio is similar for different substances. The rule lets one estimate a latent heat at a glance: for example, for carbon tetrachloride, boiling at $T_b\\approx350\\ \\mathrm{K}$, $L\\approx10.5\\cdot8.31\\cdot350\\approx31\\ \\mathrm{kJ/mol}$ (experimentally $30\\ \\mathrm{kJ/mol}$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Istisnolar.** Vodorod bog'lanishli suyuqliklarda (suv, spirtlar) suyuqlik tartibliroq, bug'lanish entropiyasi kattaroq — suv uchun ~$109\\ \\mathrm{J/(mol\\cdot K)}$. Juda past temperaturada qaynaydigan geliy va vodorodda kvant effektlari tufayli kichikroq. Erish entropiyasi esa ancha kichik: oddiy metallar uchun ~$R$ atrofida (Richards qoidasi) — erishda hajm kam o'zgaradi, faqat uzoq tartib yo'qoladi. Shuning uchun erish issiqligi bug'lanish issiqligidan bir necha marta kichik.",
+  "ru": "**Исключения.** В жидкостях с водородными связями (вода, спирты) жидкость упорядоченнее, энтропия испарения больше — для воды ~$109\\ \\mathrm{J/(mol\\cdot K)}$. У гелия и водорода, кипящих при очень низких температурах, она меньше из-за квантовых эффектов. Энтропия плавления намного меньше: для простых металлов около $R$ (правило Ричардса) — при плавлении объём меняется мало, теряется лишь дальний порядок. Поэтому теплота плавления в несколько раз меньше теплоты испарения.",
+  "en": "**Exceptions.** In hydrogen-bonded liquids (water, alcohols) the liquid is more ordered and the entropy of vaporisation is larger — ~$109\\ \\mathrm{J/(mol\\cdot K)}$ for water. For helium and hydrogen, boiling at very low temperatures, it is smaller because of quantum effects. The entropy of melting is much smaller: about $R$ for simple metals (Richards' rule) — on melting the volume changes little and only long-range order is lost. That is why the heat of fusion is several times smaller than the heat of vaporisation."
+ },
+ {
+  "t": "li",
+  "uz": "**Bug'lanish sovitadi.** Suyuqlik sirtidan potensial to'siqni yengib o'ta oladigan, ya'ni Maksvell taqsimotining (B2-L31) tez «dumi»dagi molekulalar uchib chiqadi. Qolgan molekulalarning o'rtacha energiyasi kamayadi — suyuqlik soviydi. Ter bilan tana sovishi, sopol ko'zadagi suvning salqin turishi, kriostatlarda bug'ni so'rib olib suyuq geliyni $1\\ \\mathrm{K}$ gacha sovitish — hammasi shu effekt. Muvozanatda esa uchib chiqayotgan va qaytib tushayotgan molekulalar oqimlari teng; ikkinchisi $\\frac{1}{4}n\\langle v\\rangle$ ko'rinishida (B2-L31), bu esa bug'lanish tezligini to'yingan bug' bosimi bilan bog'laydi.",
+  "ru": "**Испарение охлаждает.** С поверхности жидкости вылетают молекулы, способные преодолеть потенциальный барьер, то есть из быстрого «хвоста» распределения Максвелла (B2-L31). Средняя энергия оставшихся уменьшается — жидкость охлаждается. Охлаждение тела потом, прохлада воды в глиняном кувшине, охлаждение жидкого гелия до $1\\ \\mathrm{K}$ откачкой пара в криостатах — всё это один эффект. В равновесии же потоки вылетающих и возвращающихся молекул равны; второй имеет вид $\\frac{1}{4}n\\langle v\\rangle$ (B2-L31), что связывает скорость испарения с давлением насыщенного пара.",
+  "en": "**Evaporation cools.** The molecules that leave the surface of a liquid are those able to overcome the potential barrier, i.e. those in the fast \"tail\" of the Maxwell distribution (B2-L31). The mean energy of those left behind decreases — the liquid cools. Cooling by sweat, the coolness of water in a clay jug, the cooling of liquid helium to $1\\ \\mathrm{K}$ by pumping away its vapour in cryostats — all are the same effect. At equilibrium the outgoing and returning molecular fluxes are equal; the latter has the form $\\frac{1}{4}n\\langle v\\rangle$ (B2-L31), which links the evaporation rate to the saturated vapour pressure."
+ },
+ {
+  "t": "h2",
+  "uz": "10. Sirt tarangligi, tomchilar va kurtaklanish",
+  "ru": "10. Поверхностное натяжение, капли и зародышеобразование",
+  "en": "10. Surface tension, droplets and nucleation"
+ },
+ {
+  "t": "li",
+  "uz": "**Laplas bosimi.** Chegara sirti energiyaga ega: sirt birligiga to'g'ri keladigan energiya — sirt taranglik koeffitsiyenti $\\sigma$ (suv uchun xona temperaturasida ~$0.072\\ \\mathrm{N/m}$). Sirt egri bo'lsa, botiq tomondagi bosim katta: radiusi $r$ bo'lgan sferik tomchi ichida ortiqcha bosim $\\Delta p=\\frac{2\\sigma}{r}$. Sovun pufagida ikkita sirt bor, shuning uchun $\\Delta p=\\frac{4\\sigma}{r}$. Kichik tomchi ichidagi bosim katta bo'lishi mumkin: radiusi $0.1\\ \\mu\\mathrm{m}$ bo'lgan suv tomchisida ~$14\\ \\mathrm{atm}$.",
+  "ru": "**Давление Лапласа.** Граница раздела обладает энергией: энергия на единицу площади — коэффициент поверхностного натяжения $\\sigma$ (для воды при комнатной температуре ~$0.072\\ \\mathrm{N/m}$). Если поверхность искривлена, давление с вогнутой стороны больше: внутри сферической капли радиуса $r$ избыточное давление $\\Delta p=\\frac{2\\sigma}{r}$. У мыльного пузыря две поверхности, поэтому $\\Delta p=\\frac{4\\sigma}{r}$. Давление внутри малой капли может быть большим: в капле воды радиуса $0.1\\ \\mu\\mathrm{m}$ ~$14\\ \\mathrm{atm}$.",
+  "en": "**Laplace pressure.** An interface carries energy: the energy per unit area is the surface tension coefficient $\\sigma$ (~$0.072\\ \\mathrm{N/m}$ for water at room temperature). If the surface is curved, the pressure on the concave side is larger: inside a spherical droplet of radius $r$ the excess pressure is $\\Delta p=\\frac{2\\sigma}{r}$. A soap bubble has two surfaces, so $\\Delta p=\\frac{4\\sigma}{r}$. The pressure inside a small droplet can be large: ~$14\\ \\mathrm{atm}$ in a water droplet of radius $0.1\\ \\mu\\mathrm{m}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Kelvin formulasi.** Tomchi ichidagi qo'shimcha bosim suyuqlik molekulalarining kimyoviy potensialini $v_l\\,\\Delta p$ ga oshiradi ($v_l$ — suyuqlikning molyar hajmi). Muvozanatda bug'ning kimyoviy potensiali ham shuncha katta bo'lishi kerak, ya'ni $RT\\ln\\frac{p_r}{p_s}=\\frac{2\\sigma v_l}{r}$. Demak kichik tomchi ustidagi to'yingan bug' bosimi tekis sirtnikidan katta: mayda tomchilar tezroq bug'lanadi, yiriklari ularning hisobiga o'sadi (Ostvald pishishi). Botiq sirt (kapillyardagi ho'llovchi suyuqlik menisku) ustida esa bug' bosimi kichik — g'ovak jismlarda bug' $p_s$ dan past bosimda kondensatsiyalanadi.",
+  "ru": "**Формула Кельвина.** Добавочное давление внутри капли увеличивает химический потенциал молекул жидкости на $v_l\\,\\Delta p$ ($v_l$ — молярный объём жидкости). В равновесии химический потенциал пара должен быть настолько же больше, то есть $RT\\ln\\frac{p_r}{p_s}=\\frac{2\\sigma v_l}{r}$. Значит, давление насыщенного пара над малой каплей больше, чем над плоской поверхностью: мелкие капли испаряются быстрее, а крупные растут за их счёт (оствальдово созревание). Над вогнутой поверхностью (мениск смачивающей жидкости в капилляре) давление пара меньше — в пористых телах пар конденсируется при давлении ниже $p_s$.",
+  "en": "**The Kelvin formula.** The extra pressure inside a droplet raises the chemical potential of the liquid molecules by $v_l\\,\\Delta p$ ($v_l$ is the molar volume of the liquid). At equilibrium the chemical potential of the vapour must be larger by the same amount, i.e. $RT\\ln\\frac{p_r}{p_s}=\\frac{2\\sigma v_l}{r}$. So the saturated vapour pressure above a small droplet exceeds that above a flat surface: small droplets evaporate faster and large ones grow at their expense (Ostwald ripening). Above a concave surface (the meniscus of a wetting liquid in a capillary) the vapour pressure is lower — in porous bodies vapour condenses at pressures below $p_s$."
+ },
+ {
+  "t": "m",
+  "m": "\\Delta p=\\frac{2\\sigma}{r},\\qquad \\ln\\frac{p_r}{p_s}=\\frac{2\\sigma v_l}{rRT}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kurtaklanish to'sig'i ([[F07]]).** O'ta to'yingan bug'da (to'yinish darajasi $S=\\frac{p}{p_s}>1$) bitta molekula suyuqlikka o'tganda kimyoviy potensial $\\Delta\\mu=kT\\ln S$ ga kamayadi. Radiusi $r$ bo'lgan tomchi kurtagi hosil bo'lishida esa sirt energiyasi sarflanadi. $n_l$ — suyuqlikdagi molekulalar konsentratsiyasi bo'lsa, Gibbs energiyasi o'zgarishi:",
+  "ru": "**Барьер зародышеобразования ([[F07]]).** В пересыщенном паре (степень пересыщения $S=\\frac{p}{p_s}>1$) при переходе одной молекулы в жидкость химический потенциал уменьшается на $\\Delta\\mu=kT\\ln S$. При образовании зародыша-капли радиуса $r$ затрачивается энергия поверхности. Если $n_l$ — концентрация молекул в жидкости, изменение энергии Гиббса:",
+  "en": "**The nucleation barrier ([[F07]]).** In a supersaturated vapour (supersaturation $S=\\frac{p}{p_s}>1$) the chemical potential drops by $\\Delta\\mu=kT\\ln S$ when one molecule passes into the liquid. Forming a droplet nucleus of radius $r$, however, costs surface energy. With $n_l$ the concentration of molecules in the liquid, the change in Gibbs energy is:"
+ },
+ {
+  "t": "m",
+  "m": "\\Delta G\\left(r\\right)=-\\frac{4}{3}\\pi r^3n_l\\Delta\\mu+4\\pi r^2\\sigma,\\qquad r^*=\\frac{2\\sigma}{n_l\\Delta\\mu},\\qquad \\Delta G^*=\\frac{16\\pi\\sigma^3}{3\\left(n_l\\Delta\\mu\\right)^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Talqini.** Kichik $r$ da sirt hadi ustun — kurtak o'z-o'zidan bug'lanib yo'qoladi; $r>r^*$ da hajmiy had ustun — kurtak o'sadi. Kritik radiusda $\\Delta G$ maksimal — bu **kurtaklanish to'sig'i**, kurtaklarning paydo bo'lish tezligi $e^{-\\frac{\\Delta G^*}{kT}}$ ga proporsional. Toza bug'da to'siq juda baland, shuning uchun bir jinsli kurtaklanish faqat katta o'ta to'yinishda boshlanadi. Real atmosferada esa tomchilar chang, tuz zarralari, ionlar ustida (bir jinsli bo'lmagan kurtaklanish) ancha kichik o'ta to'yinishda hosil bo'ladi; bulutlarni kumush yodid bilan «ekish» shunga asoslangan. Kritik radius formulasi Kelvin formulasining o'zi: $r^*$ — shu to'yinishda muvozanatda bo'la oladigan tomchi radiusi.",
+  "ru": "**Толкование.** При малых $r$ доминирует поверхностный член — зародыш сам испаряется; при $r>r^*$ доминирует объёмный член — зародыш растёт. На критическом радиусе $\\Delta G$ максимальна — это **барьер зародышеобразования**, скорость появления зародышей пропорциональна $e^{-\\frac{\\Delta G^*}{kT}}$. В чистом паре барьер очень высок, поэтому гомогенное зародышеобразование начинается лишь при большом пересыщении. В реальной атмосфере капли образуются на пылинках, частицах соли, ионах (гетерогенное зародышеобразование) при гораздо меньшем пересыщении; на этом основан «засев» облаков иодидом серебра. Формула критического радиуса — это сама формула Кельвина: $r^*$ — радиус капли, находящейся в равновесии при данном пересыщении.",
+  "en": "**Interpretation.** For small $r$ the surface term dominates — the nucleus evaporates by itself; for $r>r^*$ the volume term dominates — the nucleus grows. At the critical radius $\\Delta G$ is a maximum — the **nucleation barrier** — and the rate at which nuclei appear is proportional to $e^{-\\frac{\\Delta G^*}{kT}}$. In clean vapour the barrier is very high, so homogeneous nucleation starts only at large supersaturation. In the real atmosphere droplets form on dust, salt particles and ions (heterogeneous nucleation) at much smaller supersaturation; \"seeding\" clouds with silver iodide is based on this. The critical-radius formula is the Kelvin formula itself: $r^*$ is the radius of a droplet in equilibrium at the given supersaturation."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L33-F07.png",
+   "ru": "figures/B2-L33-F07-ru.png",
+   "en": "figures/B2-L33-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "11. Ikkinchi tur fazaviy o'tishlar",
+  "ru": "11. Фазовые переходы второго рода",
+  "en": "11. Second-order phase transitions"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif va misollar.** Ba'zi o'tishlarda yashirin issiqlik ham, hajm sakrashi ham yo'q: $G$ va uning birinchi hosilalari ($S$, $V$) uzluksiz, ikkinchi hosilalari — issiqlik sig'imi, siqiluvchanlik, kengayish koeffitsiyenti, magnit qabul qiluvchanlik — sakraydi yoki cheksizlikka intiladi. Bular **ikkinchi tur** (uzluksiz) o'tishlar: ferromagnetikning Kyuri nuqtasi (B2-L19), maydonsiz o'ta o'tkazuvchanlikka o'tish, suyuq geliy-4 ning $2.17\\ \\mathrm{K}$ dagi $\\lambda$-o'tishi (o'ta oquvchanlik), qotishmalardagi «tartib–tartibsizlik» o'tishi. Suyuqlik–gazning kritik nuqtasi ham uzluksiz o'tish nuqtasi.",
+  "ru": "**Определение и примеры.** В некоторых переходах нет ни скрытой теплоты, ни скачка объёма: $G$ и её первые производные ($S$, $V$) непрерывны, а вторые производные — теплоёмкость, сжимаемость, коэффициент расширения, магнитная восприимчивость — испытывают скачок или стремятся к бесконечности. Это переходы **второго рода** (непрерывные): точка Кюри ферромагнетика (B2-L19), переход в сверхпроводящее состояние без поля, $\\lambda$-переход жидкого гелия-4 при $2.17\\ \\mathrm{K}$ (сверхтекучесть), переход «порядок–беспорядок» в сплавах. Критическая точка жидкость–газ — тоже точка непрерывного перехода.",
+  "en": "**Definition and examples.** In some transitions there is neither a latent heat nor a volume jump: $G$ and its first derivatives ($S$, $V$) are continuous, while the second derivatives — heat capacity, compressibility, expansion coefficient, magnetic susceptibility — jump or diverge. These are **second-order** (continuous) transitions: the Curie point of a ferromagnet (B2-L19), the transition to superconductivity in zero field, the $\\lambda$-transition of liquid helium-4 at $2.17\\ \\mathrm{K}$ (superfluidity), the order–disorder transition in alloys. The liquid–gas critical point is also a point of continuous transition."
+ },
+ {
+  "t": "li",
+  "uz": "**Tartib parametri (order parameter).** Uzluksiz o'tishda past temperaturali faza kamroq simmetriyaga ega. Buni **tartib parametri** bilan tavsiflaymiz: $T>T_c$ da u nolga teng, $T<T_c$ da noldan farqli va $T_c$ ga yaqinlashganda uzluksiz nolga intiladi. Ferromagnetikda — magnitlanish $M$ (yuqori temperaturada barcha yo'nalishlar teng, pastda bitta yo'nalish tanlanadi — **simmetriyaning o'z-o'zidan buzilishi**); suyuqlik–gazda — zichliklar farqi $\\rho_l-\\rho_g$; o'ta o'tkazgichda — elektron juftlar to'lqin funksiyasi.",
+  "ru": "**Параметр порядка.** При непрерывном переходе низкотемпературная фаза менее симметрична. Это описывают **параметром порядка**: при $T>T_c$ он равен нулю, при $T<T_c$ отличен от нуля и при приближении к $T_c$ непрерывно стремится к нулю. В ферромагнетике — намагниченность $M$ (при высокой температуре все направления равноправны, при низкой выбирается одно — **спонтанное нарушение симметрии**); в системе жидкость–газ — разность плотностей $\\rho_l-\\rho_g$; в сверхпроводнике — волновая функция электронных пар.",
+  "en": "**The order parameter.** In a continuous transition the low-temperature phase has lower symmetry. This is described by an **order parameter**: for $T>T_c$ it is zero, for $T<T_c$ it is non-zero, and it goes continuously to zero as $T_c$ is approached. In a ferromagnet it is the magnetisation $M$ (at high temperature all directions are equivalent, at low temperature one is chosen — **spontaneous symmetry breaking**); for liquid–gas it is the density difference $\\rho_l-\\rho_g$; in a superconductor it is the wave function of the electron pairs."
+ },
+ {
+  "t": "li",
+  "uz": "**Landau nazariyasi ([[F08]]).** $T_c$ yaqinida tartib parametri kichik, shuning uchun Gibbs energiyasini $M$ bo'yicha qatorga yoyish mumkin; simmetriya ($M\\to-M$) faqat juft darajalarni qoldiradi. Asosiy g'oya: $M^2$ oldidagi koeffitsiyent $T_c$ da ishorasini o'zgartiradi ($a>0$, $b>0$):",
+  "ru": "**Теория Ландау ([[F08]]).** Вблизи $T_c$ параметр порядка мал, поэтому энергию Гиббса можно разложить в ряд по $M$; симметрия ($M\\to-M$) оставляет только чётные степени. Основная идея: коэффициент при $M^2$ меняет знак в $T_c$ ($a>0$, $b>0$):",
+  "en": "**Landau theory ([[F08]]).** Near $T_c$ the order parameter is small, so the Gibbs energy can be expanded in powers of $M$; the symmetry ($M\\to-M$) leaves only even powers. The key idea is that the coefficient of $M^2$ changes sign at $T_c$ ($a>0$, $b>0$):"
+ },
+ {
+  "t": "m",
+  "m": "G\\left(M\\right)=G_0+a\\left(T-T_c\\right)M^2+bM^4,\\qquad M_0^2=\\frac{a\\left(T_c-T\\right)}{2b}\\quad\\left(T<T_c\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Natijalar.** $T>T_c$ da $G\\left(M\\right)$ ning yagona minimumi $M=0$ da; $T<T_c$ da u «meksikacha shlyapa» shakliga keladi va ikkita simmetrik minimum $\\pm M_0$ paydo bo'ladi — tizim ulardan birini tanlaydi. Tartib parametri $M_0\\propto\\left(T_c-T\\right)^{\\frac{1}{2}}$ qonun bo'yicha o'sadi, $G$ ning o'zi uzluksiz, entropiya uzluksiz, issiqlik sig'imi esa $T_c$ da chekli sakrash qiladi. Maydon $B$ qo'shilsa, $G$ ga $-MB$ had qo'shiladi va $T_c$ ga yaqinlashganda magnit qabul qiluvchanlik cheksiz ortadi (Kyuri–Veys qonuni, B2-L19).",
+  "ru": "**Результаты.** При $T>T_c$ единственный минимум $G\\left(M\\right)$ — в $M=0$; при $T<T_c$ функция принимает форму «мексиканской шляпы», и появляются два симметричных минимума $\\pm M_0$ — система выбирает один из них. Параметр порядка растёт по закону $M_0\\propto\\left(T_c-T\\right)^{\\frac{1}{2}}$, сама $G$ непрерывна, энтропия непрерывна, а теплоёмкость в $T_c$ испытывает конечный скачок. Если добавить поле $B$, к $G$ добавляется член $-MB$, и при приближении к $T_c$ магнитная восприимчивость неограниченно растёт (закон Кюри–Вейса, B2-L19).",
+  "en": "**Results.** For $T>T_c$ the only minimum of $G\\left(M\\right)$ is at $M=0$; for $T<T_c$ the function takes the shape of a \"Mexican hat\" and two symmetric minima $\\pm M_0$ appear — the system picks one of them. The order parameter grows as $M_0\\propto\\left(T_c-T\\right)^{\\frac{1}{2}}$; $G$ itself is continuous, the entropy is continuous, and the heat capacity makes a finite jump at $T_c$. Adding a field $B$ adds a term $-MB$ to $G$, and as $T_c$ is approached the magnetic susceptibility grows without bound (the Curie–Weiss law, B2-L19)."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L33-F08.png",
+   "ru": "figures/B2-L33-F08-ru.png",
+   "en": "figures/B2-L33-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**O'rtacha maydon (Veys modeli).** Ferromagnetikda har bir spin (B2-L32 dagi paramagnetik) tashqi maydondan tashqari qo'shnilarining ta'sirini his qiladi; uni magnitlanishga proporsional «o'rtacha maydon» bilan almashtiramiz. Paramagnetik formulasi $M=N\\mu_B\\tanh\\frac{\\mu_BB}{kT}$ ga shu maydonni qo'ysak, $m=\\frac{M}{N\\mu_B}$ uchun o'z-o'zini kelishtiruvchi tenglama chiqadi. Uni grafik usulda yechamiz: $y=m$ to'g'ri chiziq va $y=\\tanh\\frac{T_cm}{T}$ egri chizig'i. $T>T_c$ da yagona kesishish $m=0$; $T<T_c$ da egri chiziqning boshlang'ich qiyaligi $\\frac{T_c}{T}>1$ va noldan farqli yechim paydo bo'ladi. $T_c$ yaqinida $\\tanh$ ni qatorga yoysak, $m\\approx\\sqrt3\\left(1-\\frac{T}{T_c}\\right)^{\\frac{1}{2}}$ — Landau natijasi bilan bir xil.",
+  "ru": "**Среднее поле (модель Вейса).** В ферромагнетике каждый спин (парамагнетик из B2-L32) кроме внешнего поля ощущает действие соседей; заменим его «средним полем», пропорциональным намагниченности. Подставив это поле в формулу парамагнетика $M=N\\mu_B\\tanh\\frac{\\mu_BB}{kT}$, получим самосогласованное уравнение для $m=\\frac{M}{N\\mu_B}$. Решим его графически: прямая $y=m$ и кривая $y=\\tanh\\frac{T_cm}{T}$. При $T>T_c$ единственное пересечение $m=0$; при $T<T_c$ начальный наклон кривой $\\frac{T_c}{T}>1$, и появляется ненулевое решение. Разложив $\\tanh$ вблизи $T_c$, получим $m\\approx\\sqrt3\\left(1-\\frac{T}{T_c}\\right)^{\\frac{1}{2}}$ — то же, что у Ландау.",
+  "en": "**Mean field (the Weiss model).** In a ferromagnet each spin (the paramagnet of B2-L32) feels, besides the external field, the influence of its neighbours; we replace it by a \"mean field\" proportional to the magnetisation. Putting this field into the paramagnet formula $M=N\\mu_B\\tanh\\frac{\\mu_BB}{kT}$ gives a self-consistent equation for $m=\\frac{M}{N\\mu_B}$. We solve it graphically: the line $y=m$ and the curve $y=\\tanh\\frac{T_cm}{T}$. For $T>T_c$ the only intersection is $m=0$; for $T<T_c$ the initial slope of the curve is $\\frac{T_c}{T}>1$ and a non-zero solution appears. Expanding $\\tanh$ near $T_c$ gives $m\\approx\\sqrt3\\left(1-\\frac{T}{T_c}\\right)^{\\frac{1}{2}}$ — the same as Landau's result."
+ },
+ {
+  "t": "m",
+  "m": "m=\\tanh\\frac{T_cm}{T}"
+ },
+ {
+  "t": "li",
+  "uz": "**Fluktuatsiyalar va haqiqiy ko'rsatkichlar.** O'rtacha maydon nazariyasi fluktuatsiyalarni hisobga olmaydi, kritik nuqta yaqinida esa ular juda katta: kritik nuqtadagi modda zichlik fluktuatsiyalari yorug'likni kuchli sochadi va xira ko'rinadi (**kritik opalestsensiya**). Tajribada uch o'lchamli tizimlar uchun $M_0\\propto\\left(T_c-T\\right)^{\\beta}$ da $\\beta\\approx0.33$ (Landau bo'yicha $\\frac{1}{2}$), va bu ko'rsatkich suyuqlik–gaz va ferromagnetik uchun bir xil — **universallik**. Bu qonuniyatni renormalizatsiya guruhi (Vilson, 1982 yil Nobel mukofoti) tushuntiradi.",
+  "ru": "**Флуктуации и истинные показатели.** Теория среднего поля не учитывает флуктуаций, а вблизи критической точки они очень велики: вещество в критической точке сильно рассеивает свет на флуктуациях плотности и выглядит мутным (**критическая опалесценция**). На опыте для трёхмерных систем $M_0\\propto\\left(T_c-T\\right)^{\\beta}$ с $\\beta\\approx0.33$ (у Ландау $\\frac{1}{2}$), и этот показатель одинаков для жидкости–газа и ферромагнетика — **универсальность**. Эту закономерность объясняет ренормализационная группа (Вильсон, Нобелевская премия 1982 года).",
+  "en": "**Fluctuations and the true exponents.** Mean-field theory ignores fluctuations, and near the critical point they are very large: a substance at its critical point scatters light strongly from density fluctuations and looks cloudy (**critical opalescence**). Experimentally, for three-dimensional systems $M_0\\propto\\left(T_c-T\\right)^{\\beta}$ with $\\beta\\approx0.33$ (Landau gives $\\frac{1}{2}$), and this exponent is the same for liquid–gas and for a ferromagnet — **universality**. The renormalisation group (Wilson, Nobel Prize 1982) explains this regularity."
+ },
+ {
+  "t": "h2",
+  "uz": "12. GRE usullari",
+  "ru": "12. Приёмы для GRE",
+  "en": "12. GRE techniques"
+ },
+ {
+  "t": "li",
+  "uz": "**Klapeyron–Klauzius — ishora va kattalik.** Avval ishorani hajm o'zgarishidan aniqlang ($L>0$ da $\\frac{dp}{dT}$ ning ishorasi $\\Delta v$ niki bilan bir xil). Bug'lanish uchun $v_1$ ni tashlab, $v_2=\\frac{RT}{p}$ deb oling. Birliklarni kuzating: $L$ va $\\Delta v$ bir xil miqdorga (kg yoki mol) tegishli bo'lsin.",
+  "ru": "**Клапейрон–Клаузиус — знак и величина.** Сначала определите знак по изменению объёма (при $L>0$ знак $\\frac{dp}{dT}$ совпадает со знаком $\\Delta v$). Для испарения отбросьте $v_1$ и возьмите $v_2=\\frac{RT}{p}$. Следите за единицами: $L$ и $\\Delta v$ должны относиться к одному количеству (кг или моль).",
+  "en": "**Clausius–Clapeyron — sign and size.** First fix the sign from the volume change (for $L>0$ the sign of $\\frac{dp}{dT}$ is that of $\\Delta v$). For vaporisation drop $v_1$ and take $v_2=\\frac{RT}{p}$. Watch the units: $L$ and $\\Delta v$ must refer to the same amount (kg or mol)."
+ },
+ {
+  "t": "li",
+  "uz": "**Issiqlik balansi fazaviy o'tishlar bilan.** Kalorimetrik masalada avval «hamma muz eriy oladimi?» deb tekshiring: eritish uchun kerakli issiqlikni boshqa jism sovib $0\\ ^\\circ\\mathrm{C}$ gacha bera oladigan issiqlik bilan solishtiring. Javob $0\\ ^\\circ\\mathrm{C}$ da qolishi va aralashma muz–suv bo'lishi mumkin. Isitish grafigidagi gorizontal kesmalar — fazaviy o'tishlar, ularning uzunligi $mL$, qiya kesmalar qiyaligi esa $\\frac{1}{mc}$.",
+  "ru": "**Тепловой баланс с фазовыми переходами.** В калориметрической задаче сначала проверьте: «весь ли лёд может растаять?» — сравните теплоту, нужную для плавления, с теплотой, которую может отдать другое тело, остывая до $0\\ ^\\circ\\mathrm{C}$. Ответ может остаться при $0\\ ^\\circ\\mathrm{C}$ со смесью лёд–вода. Горизонтальные участки на графике нагревания — фазовые переходы, их длина $mL$, а наклон наклонных участков — $\\frac{1}{mc}$.",
+  "en": "**Heat balance with phase changes.** In a calorimetry problem first check \"can all the ice melt?\": compare the heat needed for melting with the heat the other body can give while cooling to $0\\ ^\\circ\\mathrm{C}$. The answer may stay at $0\\ ^\\circ\\mathrm{C}$ with an ice–water mixture. The horizontal segments of a heating curve are phase transitions, of length $mL$; the slopes of the inclined segments are $\\frac{1}{mc}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tasnif va hisoblash qoidalari.** Yashirin issiqlik yoki hajm sakrashi bor — birinchi tur; tartib parametri uzluksiz nolga intiladi, issiqlik sig'imi sakraydi — ikkinchi tur. Gibbs qoidasi $f=c-\\Phi+2$ bilan fazalar sonini sanang; richag qoidasi bilan fazalar ulushini toping; Van-der-Vaals uchun kritik parametrlarni ($V_c=3b$, $T_c=\\frac{8a}{27Rb}$) yod biling.",
+  "ru": "**Классификация и правила подсчёта.** Есть скрытая теплота или скачок объёма — первый род; параметр порядка непрерывно стремится к нулю, теплоёмкость скачет — второй род. Считайте число фаз по правилу Гиббса $f=c-\\Phi+2$; находите доли фаз по правилу рычага; критические параметры Ван-дер-Ваальса ($V_c=3b$, $T_c=\\frac{8a}{27Rb}$) знайте наизусть.",
+  "en": "**Classification and counting rules.** A latent heat or volume jump means first order; an order parameter that goes continuously to zero with a heat-capacity jump means second order. Count phases with the Gibbs rule $f=c-\\Phi+2$; find phase fractions with the lever rule; know the van der Waals critical parameters ($V_c=3b$, $T_c=\\frac{8a}{27Rb}$) by heart."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Fazalar muvozanati",
+    "ru": "Равновесие фаз",
+    "en": "Phase equilibrium",
+    "m": "T_1=T_2,\\quad p_1=p_2,\\quad \\mu_1=\\mu_2"
+   },
+   {
+    "uz": "Gibbs fazalar qoidasi",
+    "ru": "Правило фаз Гиббса",
+    "en": "Gibbs phase rule",
+    "m": "f=c-\\Phi+2"
+   },
+   {
+    "uz": "Entropiya sakrashi",
+    "ru": "Скачок энтропии",
+    "en": "Entropy jump",
+    "m": "\\Delta S=\\frac{L}{T}"
+   },
+   {
+    "uz": "Klapeyron–Klauzius tenglamasi",
+    "ru": "Уравнение Клапейрона–Клаузиуса",
+    "en": "Clausius–Clapeyron equation",
+    "m": "\\frac{dp}{dT}=\\frac{L}{T\\left(v_2-v_1\\right)}"
+   },
+   {
+    "uz": "To'yingan bug' bosimi",
+    "ru": "Давление насыщенного пара",
+    "en": "Saturated vapour pressure",
+    "m": "p_s=p_0\\exp\\left[-\\frac{L}{R}\\left(\\frac{1}{T}-\\frac{1}{T_0}\\right)\\right]"
+   },
+   {
+    "uz": "Nisbiy namlik",
+    "ru": "Относительная влажность",
+    "en": "Relative humidity",
+    "m": "\\varphi=\\frac{p}{p_s\\left(T\\right)}"
+   },
+   {
+    "uz": "Richag qoidasi",
+    "ru": "Правило рычага",
+    "en": "Lever rule",
+    "m": "x=\\frac{v-v_1}{v_2-v_1}"
+   },
+   {
+    "uz": "Kritik parametrlar",
+    "ru": "Критические параметры",
+    "en": "Critical parameters",
+    "m": "V_c=3b,\\quad p_c=\\frac{a}{27b^2},\\quad T_c=\\frac{8a}{27Rb}"
+   },
+   {
+    "uz": "Doimiylar kritik parametrlardan",
+    "ru": "Постоянные через критические",
+    "en": "Constants from critical data",
+    "m": "a=\\frac{27R^2T_c^2}{64p_c},\\quad b=\\frac{RT_c}{8p_c}"
+   },
+   {
+    "uz": "Keltirilgan tenglama",
+    "ru": "Приведённое уравнение",
+    "en": "Reduced equation",
+    "m": "\\left(\\pi+\\frac{3}{\\omega^2}\\right)\\left(3\\omega-1\\right)=8\\tau"
+   },
+   {
+    "uz": "Maksvell qoidasi",
+    "ru": "Правило Максвелла",
+    "en": "Maxwell rule",
+    "m": "\\int_{v_1}^{v_2}p\\,dv=p_s\\left(v_2-v_1\\right)"
+   },
+   {
+    "uz": "Truton qoidasi",
+    "ru": "Правило Трутона",
+    "en": "Trouton's rule",
+    "m": "\\frac{L}{T_b}\\approx10.5R"
+   },
+   {
+    "uz": "Laplas bosimi",
+    "ru": "Давление Лапласа",
+    "en": "Laplace pressure",
+    "m": "\\Delta p=\\frac{2\\sigma}{r}"
+   },
+   {
+    "uz": "Kelvin formulasi",
+    "ru": "Формула Кельвина",
+    "en": "Kelvin formula",
+    "m": "\\ln\\frac{p_r}{p_s}=\\frac{2\\sigma v_l}{rRT}"
+   },
+   {
+    "uz": "Kritik kurtak",
+    "ru": "Критический зародыш",
+    "en": "Critical nucleus",
+    "m": "r^*=\\frac{2\\sigma}{n_l\\Delta\\mu},\\quad \\Delta\\mu=kT\\ln S"
+   },
+   {
+    "uz": "Landau nazariyasi",
+    "ru": "Теория Ландау",
+    "en": "Landau theory",
+    "m": "G=G_0+a\\left(T-T_c\\right)M^2+bM^4"
+   },
+   {
+    "uz": "O'rtacha maydon",
+    "ru": "Среднее поле",
+    "en": "Mean field",
+    "m": "m=\\tanh\\frac{T_cm}{T}"
+   }
+  ]
+ }
+]

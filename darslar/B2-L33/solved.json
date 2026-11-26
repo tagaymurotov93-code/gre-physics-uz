@@ -1,0 +1,848 @@
+[
+ {
+  "id": "B2-L33-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$1\\ \\mathrm{kg}$ suv normal atmosfera bosimida qaynab, to'liq to'yingan bug'ga aylandi ($L=2.26\\ \\mathrm{MJ/kg}$). Bug'ni ideal gaz deb, entropiya va ichki energiya o'zgarishini toping.",
+   "ru": "$1\\ \\mathrm{kg}$ воды, кипящей при нормальном атмосферном давлении, полностью превратился в насыщенный пар ($L=2.26\\ \\mathrm{MJ/kg}$). Считая пар идеальным газом, найдите изменения энтропии и внутренней энергии.",
+   "en": "$1\\ \\mathrm{kg}$ of water boiling at standard atmospheric pressure turns completely into saturated vapour ($L=2.26\\ \\mathrm{MJ/kg}$). Treating the vapour as an ideal gas, find the changes in entropy and internal energy."
+  },
+  "figure": "figures/B2-L33-S01.png",
+  "solution": {
+   "uz": [
+    "O'tish o'zgarmas $T=373\\ \\mathrm{K}$ da: $$\\Delta S=\\frac{mL}{T}=\\frac{2.26\\cdot10^6}{373}\\approx6.06\\ \\mathrm{kJ/K}$$",
+    "Kengayish ishi (suyuqlik hajmi hisobga olinmaydi): $$p\\Delta V\\approx\\frac{m}{M}RT=\\frac{1}{0.018}\\cdot8.31\\cdot373\\approx0.17\\ \\mathrm{MJ}$$",
+    "Birinchi qonun: $$\\Delta U=mL-p\\Delta V\\approx2.26-0.17\\approx2.09\\ \\mathrm{MJ}$$"
+   ],
+   "ru": [
+    "Переход при постоянной $T=373\\ \\mathrm{K}$: $$\\Delta S=\\frac{mL}{T}=\\frac{2.26\\cdot10^6}{373}\\approx6.06\\ \\mathrm{kJ/K}$$",
+    "Работа расширения (объём жидкости не учитываем): $$p\\Delta V\\approx\\frac{m}{M}RT=\\frac{1}{0.018}\\cdot8.31\\cdot373\\approx0.17\\ \\mathrm{MJ}$$",
+    "Первый закон: $$\\Delta U=mL-p\\Delta V\\approx2.26-0.17\\approx2.09\\ \\mathrm{MJ}$$"
+   ],
+   "en": [
+    "The transition is at constant $T=373\\ \\mathrm{K}$: $$\\Delta S=\\frac{mL}{T}=\\frac{2.26\\cdot10^6}{373}\\approx6.06\\ \\mathrm{kJ/K}$$",
+    "The work of expansion (liquid volume neglected): $$p\\Delta V\\approx\\frac{m}{M}RT=\\frac{1}{0.018}\\cdot8.31\\cdot373\\approx0.17\\ \\mathrm{MJ}$$",
+    "The first law: $$\\Delta U=mL-p\\Delta V\\approx2.26-0.17\\approx2.09\\ \\mathrm{MJ}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Entropiya sakrashi: $\\Delta S=\\frac{L}{T}$",
+    "ru": "Скачок энтропии: $\\Delta S=\\frac{L}{T}$",
+    "en": "Entropy jump: $\\Delta S=\\frac{L}{T}$"
+   },
+   null,
+   {
+    "uz": "Bug'lanishda ichki energiya: $\\Delta U=L-p\\Delta V$",
+    "ru": "Внутренняя энергия при испарении: $\\Delta U=L-p\\Delta V$",
+    "en": "Internal energy on vaporisation: $\\Delta U=L-p\\Delta V$"
+   }
+  ],
+  "basis": {
+   "uz": "Bug'lanish entropiyasi va energiyasi",
+   "ru": "Энтропия и энергия испарения",
+   "en": "Entropy and energy of vaporisation"
+  },
+  "answer": "\\Delta S\\approx6.06\\ \\mathrm{kJ/K};\\ \\Delta U\\approx2.09\\ \\mathrm{MJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "Irodov, «Problems in General Physics», 2.189-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L33-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Hajmi $10\\ \\mathrm{L}$ bo'lgan idishda $250\\ ^\\circ\\mathrm{C}$ da jami massasi $4\\ \\mathrm{kg}$ bo'lgan suv va uning to'yingan bug'i bor. Bu temperaturada suvning solishtirma hajmi $1.25\\ \\mathrm{L/kg}$, bug'niki $50\\ \\mathrm{L/kg}$. Bug'ning massasi va hajmini toping.",
+   "ru": "В сосуде объёмом $10\\ \\mathrm{L}$ при $250\\ ^\\circ\\mathrm{C}$ находятся вода и её насыщенный пар общей массой $4\\ \\mathrm{kg}$. При этой температуре удельный объём воды $1.25\\ \\mathrm{L/kg}$, пара — $50\\ \\mathrm{L/kg}$. Найдите массу и объём пара.",
+   "en": "A vessel of volume $10\\ \\mathrm{L}$ at $250\\ ^\\circ\\mathrm{C}$ contains water and its saturated vapour of total mass $4\\ \\mathrm{kg}$. At this temperature the specific volume of water is $1.25\\ \\mathrm{L/kg}$ and of vapour $50\\ \\mathrm{L/kg}$. Find the mass and volume of the vapour."
+  },
+  "figure": "figures/B2-L33-S02.png",
+  "solution": {
+   "uz": [
+    "Hajm balansi: $$m_2v_2+\\left(m-m_2\\right)v_1=V$$",
+    "Bug' massasi: $$m_2=\\frac{V-mv_1}{v_2-v_1}=\\frac{10-5}{48.75}\\approx0.103\\ \\mathrm{kg}$$",
+    "Bug' hajmi: $$V_2=m_2v_2\\approx5.1\\ \\mathrm{L}$$"
+   ],
+   "ru": [
+    "Баланс объёма: $$m_2v_2+\\left(m-m_2\\right)v_1=V$$",
+    "Масса пара: $$m_2=\\frac{V-mv_1}{v_2-v_1}=\\frac{10-5}{48.75}\\approx0.103\\ \\mathrm{kg}$$",
+    "Объём пара: $$V_2=m_2v_2\\approx5.1\\ \\mathrm{L}$$"
+   ],
+   "en": [
+    "The volume balance: $$m_2v_2+\\left(m-m_2\\right)v_1=V$$",
+    "The mass of vapour: $$m_2=\\frac{V-mv_1}{v_2-v_1}=\\frac{10-5}{48.75}\\approx0.103\\ \\mathrm{kg}$$",
+    "The volume of vapour: $$V_2=m_2v_2\\approx5.1\\ \\mathrm{L}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Richag qoidasi: $m_1\\left(v-v_1\\right)=m_2\\left(v_2-v\\right)$",
+    "ru": "Правило рычага: $m_1\\left(v-v_1\\right)=m_2\\left(v_2-v\\right)$",
+    "en": "Lever rule: $m_1\\left(v-v_1\\right)=m_2\\left(v_2-v\\right)$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Richag qoidasi",
+   "ru": "Правило рычага",
+   "en": "Lever rule"
+  },
+  "answer": "m_2\\approx0.103\\ \\mathrm{kg};\\ V_2\\approx5.1\\ \\mathrm{L}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "Irodov, «Problems in General Physics», 2.186-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L33-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Porshen ostidagi silindrda $100\\ ^\\circ\\mathrm{C}$ da hajmi $8\\ \\mathrm{L}$ bo'lgan to'yingan suv bug'i bor. Porshen sekin itarilib, hajm izotermik ravishda $2\\ \\mathrm{L}$ gacha kamaytirildi. Qancha suv kondensatsiyalanadi va bug' ustida qancha ish bajariladi? Bug' ideal gaz, suyuqlik hajmi e'tiborsiz.",
+   "ru": "В цилиндре под поршнем при $100\\ ^\\circ\\mathrm{C}$ находится насыщенный водяной пар объёмом $8\\ \\mathrm{L}$. Медленно вдвигая поршень, объём изотермически уменьшили до $2\\ \\mathrm{L}$. Сколько воды сконденсируется и какая работа совершена над паром? Пар — идеальный газ, объёмом жидкости пренебречь.",
+   "en": "A cylinder under a piston contains saturated water vapour of volume $8\\ \\mathrm{L}$ at $100\\ ^\\circ\\mathrm{C}$. The piston is pushed in slowly and the volume reduced isothermally to $2\\ \\mathrm{L}$. How much water condenses, and how much work is done on the vapour? The vapour is an ideal gas; neglect the volume of the liquid."
+  },
+  "figure": "figures/B2-L33-S03.png",
+  "solution": {
+   "uz": [
+    "To'yingan bug' bosimi o'zgarmaydi, $p_s=1\\ \\mathrm{atm}$; kondensatsiyalangan massa: $$\\Delta m=\\frac{p_sM\\Delta V}{RT}=\\frac{101325\\cdot0.018\\cdot0.006}{8.31\\cdot373}\\approx3.5\\ \\mathrm{g}$$",
+    "Ish (bosim o'zgarmas): $$A=p_s\\Delta V=101325\\cdot0.006\\approx608\\ \\mathrm{J}$$",
+    "Ajralgan issiqlik solishtirish uchun: $$Q=\\Delta m\\,L\\approx8.0\\ \\mathrm{kJ}\\gg A$$"
+   ],
+   "ru": [
+    "Давление насыщенного пара не меняется, $p_s=1\\ \\mathrm{atm}$; сконденсированная масса: $$\\Delta m=\\frac{p_sM\\Delta V}{RT}=\\frac{101325\\cdot0.018\\cdot0.006}{8.31\\cdot373}\\approx3.5\\ \\mathrm{g}$$",
+    "Работа (давление постоянно): $$A=p_s\\Delta V=101325\\cdot0.006\\approx608\\ \\mathrm{J}$$",
+    "Выделившаяся теплота для сравнения: $$Q=\\Delta m\\,L\\approx8.0\\ \\mathrm{kJ}\\gg A$$"
+   ],
+   "en": [
+    "The saturated vapour pressure stays $p_s=1\\ \\mathrm{atm}$; the condensed mass is: $$\\Delta m=\\frac{p_sM\\Delta V}{RT}=\\frac{101325\\cdot0.018\\cdot0.006}{8.31\\cdot373}\\approx3.5\\ \\mathrm{g}$$",
+    "The work (constant pressure): $$A=p_s\\Delta V=101325\\cdot0.006\\approx608\\ \\mathrm{J}$$",
+    "The heat released, for comparison: $$Q=\\Delta m\\,L\\approx8.0\\ \\mathrm{kJ}\\gg A$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'yingan bug': $T=\\mathrm{const}:\\ p=p_s,\\ \\Delta m=\\frac{p_sM\\Delta V}{RT}$",
+    "ru": "Насыщенный пар: $T=\\mathrm{const}:\\ p=p_s,\\ \\Delta m=\\frac{p_sM\\Delta V}{RT}$",
+    "en": "Saturated vapour: $T=\\mathrm{const}:\\ p=p_s,\\ \\Delta m=\\frac{p_sM\\Delta V}{RT}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "To'yingan bug'ni siqish",
+   "ru": "Сжатие насыщенного пара",
+   "en": "Compressing a saturated vapour"
+  },
+  "answer": "\\Delta m\\approx3.5\\ \\mathrm{g};\\ A\\approx608\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "Irodov, «Problems in General Physics», 2.185, 2.187-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L33-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Muzning solishtirma hajmi suvnikidan $0.091\\ \\mathrm{cm^3/g}$ ga katta, erish issiqligi $334\\ \\mathrm{kJ/kg}$. Bosim $100\\ \\mathrm{atm}$ ga oshirilganda muzning erish temperaturasi qanchaga o'zgaradi?",
+   "ru": "Удельный объём льда больше, чем у воды, на $0.091\\ \\mathrm{cm^3/g}$, теплота плавления $334\\ \\mathrm{kJ/kg}$. На сколько изменится температура плавления льда при увеличении давления на $100\\ \\mathrm{atm}$?",
+   "en": "The specific volume of ice exceeds that of water by $0.091\\ \\mathrm{cm^3/g}$, and the heat of fusion is $334\\ \\mathrm{kJ/kg}$. By how much does the melting point of ice change when the pressure is raised by $100\\ \\mathrm{atm}$?"
+  },
+  "figure": "figures/B2-L33-S04.png",
+  "solution": {
+   "uz": [
+    "Klapeyron–Klauzius tenglamasini teskari yozamiz: $$\\frac{dT}{dp}=\\frac{T\\left(v_2-v_1\\right)}{L}$$",
+    "Suyuqlikka o'tish: $v_2-v_1=-9.1\\cdot10^{-5}\\ \\mathrm{m^3/kg}$: $$\\frac{dT}{dp}=\\frac{273\\cdot\\left(-9.1\\cdot10^{-5}\\right)}{3.34\\cdot10^5}\\approx-7.4\\cdot10^{-8}\\ \\mathrm{K/Pa}$$",
+    "$\\Delta p=100\\ \\mathrm{atm}\\approx1.01\\cdot10^7\\ \\mathrm{Pa}$: $$\\Delta T\\approx-0.75\\ \\mathrm{K}$$"
+   ],
+   "ru": [
+    "Запишем уравнение Клапейрона–Клаузиуса в обратном виде: $$\\frac{dT}{dp}=\\frac{T\\left(v_2-v_1\\right)}{L}$$",
+    "Переход в жидкость: $v_2-v_1=-9.1\\cdot10^{-5}\\ \\mathrm{m^3/kg}$: $$\\frac{dT}{dp}=\\frac{273\\cdot\\left(-9.1\\cdot10^{-5}\\right)}{3.34\\cdot10^5}\\approx-7.4\\cdot10^{-8}\\ \\mathrm{K/Pa}$$",
+    "$\\Delta p=100\\ \\mathrm{atm}\\approx1.01\\cdot10^7\\ \\mathrm{Pa}$: $$\\Delta T\\approx-0.75\\ \\mathrm{K}$$"
+   ],
+   "en": [
+    "Write the Clausius–Clapeyron equation inverted: $$\\frac{dT}{dp}=\\frac{T\\left(v_2-v_1\\right)}{L}$$",
+    "Passing to liquid: $v_2-v_1=-9.1\\cdot10^{-5}\\ \\mathrm{m^3/kg}$: $$\\frac{dT}{dp}=\\frac{273\\cdot\\left(-9.1\\cdot10^{-5}\\right)}{3.34\\cdot10^5}\\approx-7.4\\cdot10^{-8}\\ \\mathrm{K/Pa}$$",
+    "$\\Delta p=100\\ \\mathrm{atm}\\approx1.01\\cdot10^7\\ \\mathrm{Pa}$: $$\\Delta T\\approx-0.75\\ \\mathrm{K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Klapeyron–Klauzius tenglamasi: $\\frac{dp}{dT}=\\frac{L}{T\\left(v_2-v_1\\right)}$",
+    "ru": "Уравнение Клапейрона–Клаузиуса: $\\frac{dp}{dT}=\\frac{L}{T\\left(v_2-v_1\\right)}$",
+    "en": "Clausius–Clapeyron equation: $\\frac{dp}{dT}=\\frac{L}{T\\left(v_2-v_1\\right)}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Erish temperaturasining bosimga bog'liqligi",
+   "ru": "Зависимость температуры плавления от давления",
+   "en": "Pressure dependence of the melting point"
+  },
+  "answer": "\\Delta T\\approx-0.75\\ \\mathrm{K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Irodov, «Problems in General Physics», 2.206-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L33-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Tog'da atmosfera bosimi $0.7\\ \\mathrm{atm}$. Suvning molyar bug'lanish issiqligini o'zgarmas, $L=40.7\\ \\mathrm{kJ/mol}$ deb, suv qaysi temperaturada qaynashini toping.",
+   "ru": "В горах атмосферное давление $0.7\\ \\mathrm{atm}$. Считая молярную теплоту испарения воды постоянной, $L=40.7\\ \\mathrm{kJ/mol}$, найдите температуру кипения воды.",
+   "en": "In the mountains the atmospheric pressure is $0.7\\ \\mathrm{atm}$. Taking the molar heat of vaporisation of water as constant, $L=40.7\\ \\mathrm{kJ/mol}$, find the temperature at which water boils."
+  },
+  "figure": "figures/B2-L33-S05.png",
+  "solution": {
+   "uz": [
+    "Qaynash sharti $p_s\\left(T_b\\right)=p$ va integrallangan tenglama: $$\\ln\\frac{p}{p_0}=-\\frac{L}{R}\\left(\\frac{1}{T_b}-\\frac{1}{T_0}\\right)$$",
+    "Teskari temperatura: $$\\frac{1}{T_b}=\\frac{1}{373.15}-\\frac{8.31\\cdot\\ln0.7}{40680}\\approx2.753\\cdot10^{-3}\\ \\mathrm{K^{-1}}$$",
+    "Natija: $$T_b\\approx363\\ \\mathrm{K}\\approx90\\ ^\\circ\\mathrm{C}$$"
+   ],
+   "ru": [
+    "Условие кипения $p_s\\left(T_b\\right)=p$ и проинтегрированное уравнение: $$\\ln\\frac{p}{p_0}=-\\frac{L}{R}\\left(\\frac{1}{T_b}-\\frac{1}{T_0}\\right)$$",
+    "Обратная температура: $$\\frac{1}{T_b}=\\frac{1}{373.15}-\\frac{8.31\\cdot\\ln0.7}{40680}\\approx2.753\\cdot10^{-3}\\ \\mathrm{K^{-1}}$$",
+    "Результат: $$T_b\\approx363\\ \\mathrm{K}\\approx90\\ ^\\circ\\mathrm{C}$$"
+   ],
+   "en": [
+    "The boiling condition $p_s\\left(T_b\\right)=p$ and the integrated equation: $$\\ln\\frac{p}{p_0}=-\\frac{L}{R}\\left(\\frac{1}{T_b}-\\frac{1}{T_0}\\right)$$",
+    "The inverse temperature: $$\\frac{1}{T_b}=\\frac{1}{373.15}-\\frac{8.31\\cdot\\ln0.7}{40680}\\approx2.753\\cdot10^{-3}\\ \\mathrm{K^{-1}}$$",
+    "The result: $$T_b\\approx363\\ \\mathrm{K}\\approx90\\ ^\\circ\\mathrm{C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'yingan bug' bosimi: $\\ln\\frac{p_2}{p_1}=-\\frac{L}{R}\\left(\\frac{1}{T_2}-\\frac{1}{T_1}\\right)$",
+    "ru": "Давление насыщенного пара: $\\ln\\frac{p_2}{p_1}=-\\frac{L}{R}\\left(\\frac{1}{T_2}-\\frac{1}{T_1}\\right)$",
+    "en": "Saturated vapour pressure: $\\ln\\frac{p_2}{p_1}=-\\frac{L}{R}\\left(\\frac{1}{T_2}-\\frac{1}{T_1}\\right)$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Qaynash temperaturasi va bosim",
+   "ru": "Температура кипения и давление",
+   "en": "Boiling point and pressure"
+  },
+  "answer": "T_b\\approx90\\ ^\\circ\\mathrm{C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B2-L33, qaynash)"
+ },
+ {
+  "id": "B2-L33-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Bug'ni ideal gaz deb, $100\\ ^\\circ\\mathrm{C}$ dagi to'yingan suv bug'ining solishtirma hajmini, $\\frac{dp_s}{dT}$ ni va $101\\ ^\\circ\\mathrm{C}$ dagi to'yingan bug' bosimini toping ($L=40.7\\ \\mathrm{kJ/mol}$).",
+   "ru": "Считая пар идеальным газом, найдите удельный объём насыщенного водяного пара при $100\\ ^\\circ\\mathrm{C}$, $\\frac{dp_s}{dT}$ и давление насыщенного пара при $101\\ ^\\circ\\mathrm{C}$ ($L=40.7\\ \\mathrm{kJ/mol}$).",
+   "en": "Treating the vapour as an ideal gas, find the specific volume of saturated water vapour at $100\\ ^\\circ\\mathrm{C}$, $\\frac{dp_s}{dT}$, and the saturated vapour pressure at $101\\ ^\\circ\\mathrm{C}$ ($L=40.7\\ \\mathrm{kJ/mol}$)."
+  },
+  "figure": "figures/B2-L33-S06.png",
+  "solution": {
+   "uz": [
+    "Solishtirma hajm: $$v_2=\\frac{RT}{pM}=\\frac{8.31\\cdot373}{101325\\cdot0.018}\\approx1.70\\ \\mathrm{m^3/kg}$$",
+    "Klapeyron–Klauzius, $v_1\\ll v_2$: $$\\frac{dp_s}{dT}=\\frac{Lp}{RT^2}=\\frac{40680\\cdot101325}{8.31\\cdot373^2}\\approx3.56\\ \\mathrm{kPa/K}$$",
+    "$101\\ ^\\circ\\mathrm{C}$ da: $$p_s\\approx101.3+3.6\\approx104.9\\ \\mathrm{kPa}$$"
+   ],
+   "ru": [
+    "Удельный объём: $$v_2=\\frac{RT}{pM}=\\frac{8.31\\cdot373}{101325\\cdot0.018}\\approx1.70\\ \\mathrm{m^3/kg}$$",
+    "Клапейрон–Клаузиус, $v_1\\ll v_2$: $$\\frac{dp_s}{dT}=\\frac{Lp}{RT^2}=\\frac{40680\\cdot101325}{8.31\\cdot373^2}\\approx3.56\\ \\mathrm{kPa/K}$$",
+    "При $101\\ ^\\circ\\mathrm{C}$: $$p_s\\approx101.3+3.6\\approx104.9\\ \\mathrm{kPa}$$"
+   ],
+   "en": [
+    "The specific volume: $$v_2=\\frac{RT}{pM}=\\frac{8.31\\cdot373}{101325\\cdot0.018}\\approx1.70\\ \\mathrm{m^3/kg}$$",
+    "Clausius–Clapeyron, $v_1\\ll v_2$: $$\\frac{dp_s}{dT}=\\frac{Lp}{RT^2}=\\frac{40680\\cdot101325}{8.31\\cdot373^2}\\approx3.56\\ \\mathrm{kPa/K}$$",
+    "At $101\\ ^\\circ\\mathrm{C}$: $$p_s\\approx101.3+3.6\\approx104.9\\ \\mathrm{kPa}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Klapeyron–Klauzius tenglamasi: $\\frac{dp}{dT}=\\frac{L}{T\\left(v_2-v_1\\right)}$",
+    "ru": "Уравнение Клапейрона–Клаузиуса: $\\frac{dp}{dT}=\\frac{L}{T\\left(v_2-v_1\\right)}$",
+    "en": "Clausius–Clapeyron equation: $\\frac{dp}{dT}=\\frac{L}{T\\left(v_2-v_1\\right)}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "To'yingan bug' bosimining o'sishi",
+   "ru": "Рост давления насыщенного пара",
+   "en": "Growth of saturated vapour pressure"
+  },
+  "answer": "v_2\\approx1.70\\ \\mathrm{m^3/kg};\\ 3.56\\ \\mathrm{kPa/K};\\ 104.9\\ \\mathrm{kPa}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "Irodov, «Problems in General Physics», 2.207, 2.208-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L33-S07",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Van-der-Vaals izotermasining burilish nuqtasi shartidan kritik parametrlarni keltirib chiqaring va karbonat angidrid uchun ($a=0.364\\ \\mathrm{Pa\\cdot m^6/mol^2}$, $b=4.27\\cdot10^{-5}\\ \\mathrm{m^3/mol}$) hisoblang.",
+   "ru": "Из условия точки перегиба изотермы Ван-дер-Ваальса выведите критические параметры и вычислите их для углекислого газа ($a=0.364\\ \\mathrm{Pa\\cdot m^6/mol^2}$, $b=4.27\\cdot10^{-5}\\ \\mathrm{m^3/mol}$).",
+   "en": "From the inflection-point condition on a van der Waals isotherm derive the critical parameters and evaluate them for carbon dioxide ($a=0.364\\ \\mathrm{Pa\\cdot m^6/mol^2}$, $b=4.27\\cdot10^{-5}\\ \\mathrm{m^3/mol}$)."
+  },
+  "figure": "figures/B2-L33-S07.png",
+  "solution": {
+   "uz": [
+    "Burilish nuqtasi shartlari: $$-\\frac{RT}{\\left(V-b\\right)^2}+\\frac{2a}{V^3}=0,\\qquad \\frac{2RT}{\\left(V-b\\right)^3}-\\frac{6a}{V^4}=0$$",
+    "Birinchisini ikkinchisiga bo'lsak, $\\frac{V-b}{2}=\\frac{V}{3}$: $$V_c=3b,\\qquad T_c=\\frac{8a}{27Rb},\\qquad p_c=\\frac{a}{27b^2}$$",
+    "Karbonat angidrid uchun: $$T_c=\\frac{8\\cdot0.364}{27\\cdot8.31\\cdot4.27\\cdot10^{-5}}\\approx304\\ \\mathrm{K}$$",
+    "Bosim va hajm: $$p_c\\approx7.39\\ \\mathrm{MPa}\\approx73\\ \\mathrm{atm},\\qquad V_c\\approx128\\ \\mathrm{cm^3/mol}$$"
+   ],
+   "ru": [
+    "Условия точки перегиба: $$-\\frac{RT}{\\left(V-b\\right)^2}+\\frac{2a}{V^3}=0,\\qquad \\frac{2RT}{\\left(V-b\\right)^3}-\\frac{6a}{V^4}=0$$",
+    "Поделив первое на второе, $\\frac{V-b}{2}=\\frac{V}{3}$: $$V_c=3b,\\qquad T_c=\\frac{8a}{27Rb},\\qquad p_c=\\frac{a}{27b^2}$$",
+    "Для углекислого газа: $$T_c=\\frac{8\\cdot0.364}{27\\cdot8.31\\cdot4.27\\cdot10^{-5}}\\approx304\\ \\mathrm{K}$$",
+    "Давление и объём: $$p_c\\approx7.39\\ \\mathrm{MPa}\\approx73\\ \\mathrm{atm},\\qquad V_c\\approx128\\ \\mathrm{cm^3/mol}$$"
+   ],
+   "en": [
+    "The inflection-point conditions: $$-\\frac{RT}{\\left(V-b\\right)^2}+\\frac{2a}{V^3}=0,\\qquad \\frac{2RT}{\\left(V-b\\right)^3}-\\frac{6a}{V^4}=0$$",
+    "Dividing the first by the second, $\\frac{V-b}{2}=\\frac{V}{3}$: $$V_c=3b,\\qquad T_c=\\frac{8a}{27Rb},\\qquad p_c=\\frac{a}{27b^2}$$",
+    "For carbon dioxide: $$T_c=\\frac{8\\cdot0.364}{27\\cdot8.31\\cdot4.27\\cdot10^{-5}}\\approx304\\ \\mathrm{K}$$",
+    "Pressure and volume: $$p_c\\approx7.39\\ \\mathrm{MPa}\\approx73\\ \\mathrm{atm},\\qquad V_c\\approx128\\ \\mathrm{cm^3/mol}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Kritik parametrlar: $V_c=3b$, $p_c=\\frac{a}{27b^2}$, $T_c=\\frac{8a}{27Rb}$",
+    "ru": "Критические параметры: $V_c=3b$, $p_c=\\frac{a}{27b^2}$, $T_c=\\frac{8a}{27Rb}$",
+    "en": "Critical parameters: $V_c=3b$, $p_c=\\frac{a}{27b^2}$, $T_c=\\frac{8a}{27Rb}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Kritik parametrlar",
+   "ru": "Критические параметры",
+   "en": "Critical parameters"
+  },
+  "answer": "T_c\\approx304\\ \\mathrm{K};\\ p_c\\approx73\\ \\mathrm{atm};\\ V_c\\approx128\\ \\mathrm{cm^3/mol}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "Irodov, «Problems in General Physics», 2.197, 2.202-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L33-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Argonning kritik temperaturasi $150.7\\ \\mathrm{K}$, kritik bosimi $48.6\\ \\mathrm{atm}$. Van-der-Vaals doimiylarini toping.",
+   "ru": "Критическая температура аргона $150.7\\ \\mathrm{K}$, критическое давление $48.6\\ \\mathrm{atm}$. Найдите постоянные Ван-дер-Ваальса.",
+   "en": "The critical temperature of argon is $150.7\\ \\mathrm{K}$ and its critical pressure $48.6\\ \\mathrm{atm}$. Find the van der Waals constants."
+  },
+  "figure": "figures/B2-L33-S08.png",
+  "solution": {
+   "uz": [
+    "Kritik parametrlar formulalaridan $V_c$ ni chiqarib tashlaymiz: $$b=\\frac{RT_c}{8p_c},\\qquad a=\\frac{27R^2T_c^2}{64p_c}$$",
+    "$p_c=48.6\\cdot101325\\approx4.92\\cdot10^6\\ \\mathrm{Pa}$: $$b=\\frac{8.31\\cdot150.7}{8\\cdot4.92\\cdot10^6}\\approx3.18\\cdot10^{-5}\\ \\mathrm{m^3/mol}$$",
+    "Ikkinchi doimiy: $$a=\\frac{27\\cdot8.31^2\\cdot150.7^2}{64\\cdot4.92\\cdot10^6}\\approx0.134\\ \\mathrm{Pa\\cdot m^6/mol^2}$$"
+   ],
+   "ru": [
+    "Исключим $V_c$ из формул критических параметров: $$b=\\frac{RT_c}{8p_c},\\qquad a=\\frac{27R^2T_c^2}{64p_c}$$",
+    "$p_c=48.6\\cdot101325\\approx4.92\\cdot10^6\\ \\mathrm{Pa}$: $$b=\\frac{8.31\\cdot150.7}{8\\cdot4.92\\cdot10^6}\\approx3.18\\cdot10^{-5}\\ \\mathrm{m^3/mol}$$",
+    "Вторая постоянная: $$a=\\frac{27\\cdot8.31^2\\cdot150.7^2}{64\\cdot4.92\\cdot10^6}\\approx0.134\\ \\mathrm{Pa\\cdot m^6/mol^2}$$"
+   ],
+   "en": [
+    "Eliminate $V_c$ from the critical-parameter formulas: $$b=\\frac{RT_c}{8p_c},\\qquad a=\\frac{27R^2T_c^2}{64p_c}$$",
+    "$p_c=48.6\\cdot101325\\approx4.92\\cdot10^6\\ \\mathrm{Pa}$: $$b=\\frac{8.31\\cdot150.7}{8\\cdot4.92\\cdot10^6}\\approx3.18\\cdot10^{-5}\\ \\mathrm{m^3/mol}$$",
+    "The second constant: $$a=\\frac{27\\cdot8.31^2\\cdot150.7^2}{64\\cdot4.92\\cdot10^6}\\approx0.134\\ \\mathrm{Pa\\cdot m^6/mol^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Doimiylar kritik parametrlardan: $a=\\frac{27R^2T_c^2}{64p_c}$, $b=\\frac{RT_c}{8p_c}$",
+    "ru": "Постоянные через критические: $a=\\frac{27R^2T_c^2}{64p_c}$, $b=\\frac{RT_c}{8p_c}$",
+    "en": "Constants from critical data: $a=\\frac{27R^2T_c^2}{64p_c}$, $b=\\frac{RT_c}{8p_c}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Van-der-Vaals doimiylari",
+   "ru": "Постоянные Ван-дер-Ваальса",
+   "en": "Van der Waals constants"
+  },
+  "answer": "a\\approx0.134\\ \\mathrm{Pa\\cdot m^6/mol^2};\\ b\\approx3.18\\cdot10^{-5}\\ \\mathrm{m^3/mol}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Irodov, «Problems in General Physics», 2.198-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L33-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Van-der-Vaals gazining bosimi kritik bosimdan $9$ marta katta, hajmi esa kritik hajmning $\\frac{2}{3}$ qismiga teng. Uning temperaturasi kritik temperaturadan necha marta katta?",
+   "ru": "Давление газа Ван-дер-Ваальса в $9$ раз больше критического, а объём равен $\\frac{2}{3}$ критического. Во сколько раз его температура больше критической?",
+   "en": "The pressure of a van der Waals gas is $9$ times the critical pressure and its volume is $\\frac{2}{3}$ of the critical volume. By what factor does its temperature exceed the critical temperature?"
+  },
+  "figure": "figures/B2-L33-S09.png",
+  "solution": {
+   "uz": [
+    "Keltirilgan tenglama: $$\\tau=\\frac{1}{8}\\left(\\pi+\\frac{3}{\\omega^2}\\right)\\left(3\\omega-1\\right)$$",
+    "$\\pi=9$, $\\omega=\\frac{2}{3}$: $$\\tau=\\frac{1}{8}\\left(9+\\frac{27}{4}\\right)\\cdot1=\\frac{63}{32}$$",
+    "Natija — o'ta kritik soha: $$\\frac{T}{T_c}\\approx1.97$$"
+   ],
+   "ru": [
+    "Приведённое уравнение: $$\\tau=\\frac{1}{8}\\left(\\pi+\\frac{3}{\\omega^2}\\right)\\left(3\\omega-1\\right)$$",
+    "$\\pi=9$, $\\omega=\\frac{2}{3}$: $$\\tau=\\frac{1}{8}\\left(9+\\frac{27}{4}\\right)\\cdot1=\\frac{63}{32}$$",
+    "Результат — сверхкритическая область: $$\\frac{T}{T_c}\\approx1.97$$"
+   ],
+   "en": [
+    "The reduced equation: $$\\tau=\\frac{1}{8}\\left(\\pi+\\frac{3}{\\omega^2}\\right)\\left(3\\omega-1\\right)$$",
+    "$\\pi=9$, $\\omega=\\frac{2}{3}$: $$\\tau=\\frac{1}{8}\\left(9+\\frac{27}{4}\\right)\\cdot1=\\frac{63}{32}$$",
+    "The result — the supercritical region: $$\\frac{T}{T_c}\\approx1.97$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Keltirilgan tenglama: $\\left(\\pi+\\frac{3}{\\omega^2}\\right)\\left(3\\omega-1\\right)=8\\tau$",
+    "ru": "Приведённое уравнение: $\\left(\\pi+\\frac{3}{\\omega^2}\\right)\\left(3\\omega-1\\right)=8\\tau$",
+    "en": "Reduced equation: $\\left(\\pi+\\frac{3}{\\omega^2}\\right)\\left(3\\omega-1\\right)=8\\tau$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Keltirilgan tenglama",
+   "ru": "Приведённое уравнение",
+   "en": "Reduced equation"
+  },
+  "answer": "\\frac{T}{T_c}=\\frac{63}{32}\\approx1.97",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 2.200-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L33-S10",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Keltirilgan Van-der-Vaals izotermasi $\\tau=0.9$ uchun Maksvell qoidasidan to'yingan bug' bosimini ($p_c$ birligida) hamda suyuqlik va bug'ning keltirilgan hajmlarini toping.",
+   "ru": "Для приведённой изотермы Ван-дер-Ваальса $\\tau=0.9$ по правилу Максвелла найдите давление насыщенного пара (в единицах $p_c$) и приведённые объёмы жидкости и пара.",
+   "en": "For the reduced van der Waals isotherm $\\tau=0.9$, use the Maxwell rule to find the saturated vapour pressure (in units of $p_c$) and the reduced volumes of liquid and vapour."
+  },
+  "figure": "figures/B2-L33-S10.png",
+  "solution": {
+   "uz": [
+    "Izoterma: $$\\pi\\left(\\omega\\right)=\\frac{7.2}{3\\omega-1}-\\frac{3}{\\omega^2}$$",
+    "Shartlar: ikki nuqtada bosim bir xil va yuzalar teng: $$\\pi\\left(\\omega_1\\right)=\\pi\\left(\\omega_2\\right)=\\pi_s,\\qquad \\int_{\\omega_1}^{\\omega_2}\\pi\\,d\\omega=\\pi_s\\left(\\omega_2-\\omega_1\\right)$$",
+    "Integral analitik: $$\\int\\pi\\,d\\omega=2.4\\ln\\left(3\\omega-1\\right)+\\frac{3}{\\omega}$$",
+    "Tenglamalar tizimining sonli yechimi: $$\\pi_s\\approx0.647,\\qquad \\omega_1\\approx0.603,\\qquad \\omega_2\\approx2.35$$"
+   ],
+   "ru": [
+    "Изотерма: $$\\pi\\left(\\omega\\right)=\\frac{7.2}{3\\omega-1}-\\frac{3}{\\omega^2}$$",
+    "Условия: давления в двух точках равны и площади равны: $$\\pi\\left(\\omega_1\\right)=\\pi\\left(\\omega_2\\right)=\\pi_s,\\qquad \\int_{\\omega_1}^{\\omega_2}\\pi\\,d\\omega=\\pi_s\\left(\\omega_2-\\omega_1\\right)$$",
+    "Интеграл аналитически: $$\\int\\pi\\,d\\omega=2.4\\ln\\left(3\\omega-1\\right)+\\frac{3}{\\omega}$$",
+    "Численное решение системы: $$\\pi_s\\approx0.647,\\qquad \\omega_1\\approx0.603,\\qquad \\omega_2\\approx2.35$$"
+   ],
+   "en": [
+    "The isotherm: $$\\pi\\left(\\omega\\right)=\\frac{7.2}{3\\omega-1}-\\frac{3}{\\omega^2}$$",
+    "Conditions: equal pressures at two points and equal areas: $$\\pi\\left(\\omega_1\\right)=\\pi\\left(\\omega_2\\right)=\\pi_s,\\qquad \\int_{\\omega_1}^{\\omega_2}\\pi\\,d\\omega=\\pi_s\\left(\\omega_2-\\omega_1\\right)$$",
+    "The integral analytically: $$\\int\\pi\\,d\\omega=2.4\\ln\\left(3\\omega-1\\right)+\\frac{3}{\\omega}$$",
+    "The numerical solution of the system: $$\\pi_s\\approx0.647,\\qquad \\omega_1\\approx0.603,\\qquad \\omega_2\\approx2.35$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Maksvell qoidasi: $\\int_{v_1}^{v_2}p\\,dv=p_s\\left(v_2-v_1\\right)$",
+    "ru": "Правило Максвелла: $\\int_{v_1}^{v_2}p\\,dv=p_s\\left(v_2-v_1\\right)$",
+    "en": "Maxwell rule: $\\int_{v_1}^{v_2}p\\,dv=p_s\\left(v_2-v_1\\right)$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Maksvell qoidasi",
+   "ru": "Правило Максвелла",
+   "en": "Maxwell rule"
+  },
+  "answer": "\\pi_s\\approx0.647;\\ \\omega_1\\approx0.60;\\ \\omega_2\\approx2.35",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Irodov, «Problems in General Physics», 2.204-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L33-S11",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "To'yingan bug' egallagan hajm izotermik ravishda $n$ marta kamaytirildi. Bug' va suyuqlik solishtirma hajmlari $N$ marta farq qiladi ($N>n$). Oxirgi hajmning qanday qismini suyuqlik egallaydi? $n=10$, $N=1000$ uchun hisoblang.",
+   "ru": "Объём, занятый насыщенным паром, изотермически уменьшили в $n$ раз. Удельные объёмы пара и жидкости различаются в $N$ раз ($N>n$). Какую часть конечного объёма занимает жидкость? Вычислите для $n=10$, $N=1000$.",
+   "en": "The volume occupied by a saturated vapour is reduced isothermally by a factor of $n$. The specific volumes of vapour and liquid differ by a factor of $N$ ($N>n$). What fraction of the final volume does the liquid occupy? Evaluate for $n=10$, $N=1000$."
+  },
+  "figure": "figures/B2-L33-S11.png",
+  "solution": {
+   "uz": [
+    "Boshida hamma modda bug': $m=\\frac{V_0}{v_2}$; oxirida: $$\\frac{V_0}{n}=\\left(m-m_1\\right)v_2+m_1v_1$$",
+    "Suyuqlik massasi: $$m_1=\\frac{V_0\\left(1-\\frac{1}{n}\\right)}{v_2-v_1}$$",
+    "Suyuqlik hajmi ulushi, $v_2=Nv_1$: $$\\eta=\\frac{m_1v_1}{\\frac{V_0}{n}}=\\frac{n-1}{N-1}$$",
+    "Sonlar: $$\\eta=\\frac{9}{999}\\approx0.009$$"
+   ],
+   "ru": [
+    "Вначале всё вещество — пар: $m=\\frac{V_0}{v_2}$; в конце: $$\\frac{V_0}{n}=\\left(m-m_1\\right)v_2+m_1v_1$$",
+    "Масса жидкости: $$m_1=\\frac{V_0\\left(1-\\frac{1}{n}\\right)}{v_2-v_1}$$",
+    "Доля объёма жидкости, $v_2=Nv_1$: $$\\eta=\\frac{m_1v_1}{\\frac{V_0}{n}}=\\frac{n-1}{N-1}$$",
+    "Числа: $$\\eta=\\frac{9}{999}\\approx0.009$$"
+   ],
+   "en": [
+    "Initially everything is vapour: $m=\\frac{V_0}{v_2}$; finally: $$\\frac{V_0}{n}=\\left(m-m_1\\right)v_2+m_1v_1$$",
+    "The mass of liquid: $$m_1=\\frac{V_0\\left(1-\\frac{1}{n}\\right)}{v_2-v_1}$$",
+    "The volume fraction of liquid, $v_2=Nv_1$: $$\\eta=\\frac{m_1v_1}{\\frac{V_0}{n}}=\\frac{n-1}{N-1}$$",
+    "The numbers: $$\\eta=\\frac{9}{999}\\approx0.009$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Richag qoidasi: $m_1\\left(v-v_1\\right)=m_2\\left(v_2-v\\right)$",
+    "ru": "Правило рычага: $m_1\\left(v-v_1\\right)=m_2\\left(v_2-v\\right)$",
+    "en": "Lever rule: $m_1\\left(v-v_1\\right)=m_2\\left(v_2-v\\right)$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Ikki fazali soha",
+   "ru": "Двухфазная область",
+   "en": "Two-phase region"
+  },
+  "answer": "\\eta=\\frac{n-1}{N-1}\\approx0.009",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "Irodov, «Problems in General Physics», 2.188-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L33-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Simob $630\\ \\mathrm{K}$ da qaynaydi. Truton qoidasi bo'yicha uning molyar bug'lanish issiqligini baholang. Simobning erish issiqligi $2.29\\ \\mathrm{kJ/mol}$, erish temperaturasi $234.3\\ \\mathrm{K}$ — erish entropiyasini toping va bug'lanish entropiyasi bilan solishtiring.",
+   "ru": "Ртуть кипит при $630\\ \\mathrm{K}$. Оцените по правилу Трутона её молярную теплоту испарения. Теплота плавления ртути $2.29\\ \\mathrm{kJ/mol}$, температура плавления $234.3\\ \\mathrm{K}$ — найдите энтропию плавления и сравните с энтропией испарения.",
+   "en": "Mercury boils at $630\\ \\mathrm{K}$. Estimate its molar heat of vaporisation by Trouton's rule. The heat of fusion of mercury is $2.29\\ \\mathrm{kJ/mol}$ and its melting point $234.3\\ \\mathrm{K}$ — find the entropy of melting and compare it with the entropy of vaporisation."
+  },
+  "figure": "figures/B2-L33-S12.png",
+  "solution": {
+   "uz": [
+    "Truton qoidasi: $$L\\approx10.5RT_b=10.5\\cdot8.31\\cdot630\\approx55\\ \\mathrm{kJ/mol}$$",
+    "Erish entropiyasi: $$\\Delta s=\\frac{2290}{234.3}\\approx9.8\\ \\mathrm{J/(mol\\cdot K)}\\approx1.2R$$",
+    "Solishtirish: $$\\frac{87}{9.8}\\approx9$$"
+   ],
+   "ru": [
+    "Правило Трутона: $$L\\approx10.5RT_b=10.5\\cdot8.31\\cdot630\\approx55\\ \\mathrm{kJ/mol}$$",
+    "Энтропия плавления: $$\\Delta s=\\frac{2290}{234.3}\\approx9.8\\ \\mathrm{J/(mol\\cdot K)}\\approx1.2R$$",
+    "Сравнение: $$\\frac{87}{9.8}\\approx9$$"
+   ],
+   "en": [
+    "Trouton's rule: $$L\\approx10.5RT_b=10.5\\cdot8.31\\cdot630\\approx55\\ \\mathrm{kJ/mol}$$",
+    "The entropy of melting: $$\\Delta s=\\frac{2290}{234.3}\\approx9.8\\ \\mathrm{J/(mol\\cdot K)}\\approx1.2R$$",
+    "Comparison: $$\\frac{87}{9.8}\\approx9$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Truton qoidasi: $\\frac{L}{T_b}\\approx10.5R$",
+    "ru": "Правило Трутона: $\\frac{L}{T_b}\\approx10.5R$",
+    "en": "Trouton's rule: $\\frac{L}{T_b}\\approx10.5R$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Truton qoidasi",
+   "ru": "Правило Трутона",
+   "en": "Trouton's rule"
+  },
+  "answer": "L\\approx55\\ \\mathrm{kJ/mol};\\ \\Delta s\\approx9.8\\ \\mathrm{J/(mol\\cdot K)}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original (B2-L33, Truton)"
+ },
+ {
+  "id": "B2-L33-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Xonada temperatura $25\\ ^\\circ\\mathrm{C}$, nisbiy namlik $60\\%$. Shu temperaturada to'yingan bug' bosimi $3.17\\ \\mathrm{kPa}$, bug'lanish issiqligi $44\\ \\mathrm{kJ/mol}$. Havodagi bug' bosimini va shudring nuqtasini toping.",
+   "ru": "В комнате температура $25\\ ^\\circ\\mathrm{C}$, относительная влажность $60\\%$. При этой температуре давление насыщенного пара $3.17\\ \\mathrm{kPa}$, теплота испарения $44\\ \\mathrm{kJ/mol}$. Найдите давление пара в воздухе и точку росы.",
+   "en": "A room is at $25\\ ^\\circ\\mathrm{C}$ with relative humidity $60\\%$. At this temperature the saturated vapour pressure is $3.17\\ \\mathrm{kPa}$ and the heat of vaporisation $44\\ \\mathrm{kJ/mol}$. Find the vapour pressure in the air and the dew point."
+  },
+  "figure": "figures/B2-L33-S13.png",
+  "solution": {
+   "uz": [
+    "Bug' bosimi: $$p=\\varphi p_s=0.6\\cdot3.17\\approx1.90\\ \\mathrm{kPa}$$",
+    "Shudring nuqtasi sharti: $$p_s\\left(T_d\\right)=p\\ \\Rightarrow\\ \\frac{1}{T_d}=\\frac{1}{T}-\\frac{R}{L}\\ln\\varphi$$",
+    "Sonlar: $$\\frac{1}{T_d}=\\frac{1}{298.15}+\\frac{8.31\\cdot0.511}{44000}\\approx3.450\\cdot10^{-3}\\ \\mathrm{K^{-1}}$$",
+    "Natija: $$T_d\\approx290\\ \\mathrm{K}\\approx17\\ ^\\circ\\mathrm{C}$$"
+   ],
+   "ru": [
+    "Давление пара: $$p=\\varphi p_s=0.6\\cdot3.17\\approx1.90\\ \\mathrm{kPa}$$",
+    "Условие точки росы: $$p_s\\left(T_d\\right)=p\\ \\Rightarrow\\ \\frac{1}{T_d}=\\frac{1}{T}-\\frac{R}{L}\\ln\\varphi$$",
+    "Числа: $$\\frac{1}{T_d}=\\frac{1}{298.15}+\\frac{8.31\\cdot0.511}{44000}\\approx3.450\\cdot10^{-3}\\ \\mathrm{K^{-1}}$$",
+    "Результат: $$T_d\\approx290\\ \\mathrm{K}\\approx17\\ ^\\circ\\mathrm{C}$$"
+   ],
+   "en": [
+    "The vapour pressure: $$p=\\varphi p_s=0.6\\cdot3.17\\approx1.90\\ \\mathrm{kPa}$$",
+    "The dew-point condition: $$p_s\\left(T_d\\right)=p\\ \\Rightarrow\\ \\frac{1}{T_d}=\\frac{1}{T}-\\frac{R}{L}\\ln\\varphi$$",
+    "The numbers: $$\\frac{1}{T_d}=\\frac{1}{298.15}+\\frac{8.31\\cdot0.511}{44000}\\approx3.450\\cdot10^{-3}\\ \\mathrm{K^{-1}}$$",
+    "The result: $$T_d\\approx290\\ \\mathrm{K}\\approx17\\ ^\\circ\\mathrm{C}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Shudring nuqtasi: $p_s\\left(T_d\\right)=\\varphi\\,p_s\\left(T\\right)$",
+    "ru": "Точка росы: $p_s\\left(T_d\\right)=\\varphi\\,p_s\\left(T\\right)$",
+    "en": "Dew point: $p_s\\left(T_d\\right)=\\varphi\\,p_s\\left(T\\right)$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Namlik va shudring nuqtasi",
+   "ru": "Влажность и точка росы",
+   "en": "Humidity and dew point"
+  },
+  "answer": "p\\approx1.90\\ \\mathrm{kPa};\\ T_d\\approx17\\ ^\\circ\\mathrm{C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B2-L33, namlik)"
+ },
+ {
+  "id": "B2-L33-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$20\\ ^\\circ\\mathrm{C}$ da ($\\sigma=0.073\\ \\mathrm{N/m}$) diametri qancha bo'lgan suv tomchilari ustida to'yingan bug' bosimi tekis sirtnikidan $0.5\\%$ ga katta bo'ladi?",
+   "ru": "При каком диаметре капель воды при $20\\ ^\\circ\\mathrm{C}$ ($\\sigma=0.073\\ \\mathrm{N/m}$) давление насыщенного пара над ними на $0.5\\%$ больше, чем над плоской поверхностью?",
+   "en": "At $20\\ ^\\circ\\mathrm{C}$ ($\\sigma=0.073\\ \\mathrm{N/m}$), for what diameter of water droplets is the saturated vapour pressure above them $0.5\\%$ higher than above a flat surface?"
+  },
+  "figure": "figures/B2-L33-S14.png",
+  "solution": {
+   "uz": [
+    "Kelvin formulasi, $v_l=\\frac{M}{\\rho}$: $$\\ln\\frac{p_r}{p_s}=\\frac{2\\sigma M}{\\rho rRT}$$",
+    "Radius: $$r=\\frac{2\\cdot0.073\\cdot0.018}{1000\\cdot8.31\\cdot293\\cdot\\ln1.005}\\approx2.2\\cdot10^{-7}\\ \\mathrm{m}$$",
+    "Diametr: $$d=2r\\approx0.43\\ \\mu\\mathrm{m}$$"
+   ],
+   "ru": [
+    "Формула Кельвина, $v_l=\\frac{M}{\\rho}$: $$\\ln\\frac{p_r}{p_s}=\\frac{2\\sigma M}{\\rho rRT}$$",
+    "Радиус: $$r=\\frac{2\\cdot0.073\\cdot0.018}{1000\\cdot8.31\\cdot293\\cdot\\ln1.005}\\approx2.2\\cdot10^{-7}\\ \\mathrm{m}$$",
+    "Диаметр: $$d=2r\\approx0.43\\ \\mu\\mathrm{m}$$"
+   ],
+   "en": [
+    "The Kelvin formula, $v_l=\\frac{M}{\\rho}$: $$\\ln\\frac{p_r}{p_s}=\\frac{2\\sigma M}{\\rho rRT}$$",
+    "The radius: $$r=\\frac{2\\cdot0.073\\cdot0.018}{1000\\cdot8.31\\cdot293\\cdot\\ln1.005}\\approx2.2\\cdot10^{-7}\\ \\mathrm{m}$$",
+    "The diameter: $$d=2r\\approx0.43\\ \\mu\\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kelvin formulasi: $\\ln\\frac{p_r}{p_s}=\\frac{2\\sigma v_l}{rRT}$",
+    "ru": "Формула Кельвина: $\\ln\\frac{p_r}{p_s}=\\frac{2\\sigma v_l}{rRT}$",
+    "en": "Kelvin formula: $\\ln\\frac{p_r}{p_s}=\\frac{2\\sigma v_l}{rRT}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Kelvin formulasi",
+   "ru": "Формула Кельвина",
+   "en": "Kelvin formula"
+  },
+  "answer": "d\\approx0.43\\ \\mu\\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "Irodov, «Problems in General Physics», 2.192-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L33-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$300\\ \\mathrm{K}$ da suv bug'ining to'yinish darajasi $S=4$. Bir jinsli kurtaklanishda kritik tomchi radiusini va kurtaklanish to'sig'ini ($kT$ birligida) toping ($\\sigma=0.072\\ \\mathrm{N/m}$).",
+   "ru": "При $300\\ \\mathrm{K}$ степень пересыщения водяного пара $S=4$. Найдите радиус критической капли и барьер зародышеобразования (в единицах $kT$) при гомогенном зародышеобразовании ($\\sigma=0.072\\ \\mathrm{N/m}$).",
+   "en": "At $300\\ \\mathrm{K}$ the supersaturation of water vapour is $S=4$. For homogeneous nucleation find the critical droplet radius and the nucleation barrier (in units of $kT$) ($\\sigma=0.072\\ \\mathrm{N/m}$)."
+  },
+  "figure": "figures/B2-L33-S15.png",
+  "solution": {
+   "uz": [
+    "Hajm birligiga Gibbs energiyasi yutug'i: $$n_l\\Delta\\mu=\\frac{\\rho}{M}RT\\ln S=\\frac{1000}{0.018}\\cdot8.31\\cdot300\\cdot\\ln4\\approx1.92\\cdot10^8\\ \\mathrm{J/m^3}$$",
+    "Kritik radius: $$r^*=\\frac{2\\sigma}{n_l\\Delta\\mu}=\\frac{0.144}{1.92\\cdot10^8}\\approx0.75\\ \\mathrm{nm}$$",
+    "To'siq: $$\\Delta G^*=\\frac{16\\pi\\sigma^3}{3\\left(n_l\\Delta\\mu\\right)^2}\\approx1.7\\cdot10^{-19}\\ \\mathrm{J}\\approx41kT$$"
+   ],
+   "ru": [
+    "Выигрыш энергии Гиббса на единицу объёма: $$n_l\\Delta\\mu=\\frac{\\rho}{M}RT\\ln S=\\frac{1000}{0.018}\\cdot8.31\\cdot300\\cdot\\ln4\\approx1.92\\cdot10^8\\ \\mathrm{J/m^3}$$",
+    "Критический радиус: $$r^*=\\frac{2\\sigma}{n_l\\Delta\\mu}=\\frac{0.144}{1.92\\cdot10^8}\\approx0.75\\ \\mathrm{nm}$$",
+    "Барьер: $$\\Delta G^*=\\frac{16\\pi\\sigma^3}{3\\left(n_l\\Delta\\mu\\right)^2}\\approx1.7\\cdot10^{-19}\\ \\mathrm{J}\\approx41kT$$"
+   ],
+   "en": [
+    "The Gibbs-energy gain per unit volume: $$n_l\\Delta\\mu=\\frac{\\rho}{M}RT\\ln S=\\frac{1000}{0.018}\\cdot8.31\\cdot300\\cdot\\ln4\\approx1.92\\cdot10^8\\ \\mathrm{J/m^3}$$",
+    "The critical radius: $$r^*=\\frac{2\\sigma}{n_l\\Delta\\mu}=\\frac{0.144}{1.92\\cdot10^8}\\approx0.75\\ \\mathrm{nm}$$",
+    "The barrier: $$\\Delta G^*=\\frac{16\\pi\\sigma^3}{3\\left(n_l\\Delta\\mu\\right)^2}\\approx1.7\\cdot10^{-19}\\ \\mathrm{J}\\approx41kT$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Kritik kurtak: $r^*=\\frac{2\\sigma}{n_l\\Delta\\mu}$, $\\Delta G^*=\\frac{16\\pi\\sigma^3}{3\\left(n_l\\Delta\\mu\\right)^2}$",
+    "ru": "Критический зародыш: $r^*=\\frac{2\\sigma}{n_l\\Delta\\mu}$, $\\Delta G^*=\\frac{16\\pi\\sigma^3}{3\\left(n_l\\Delta\\mu\\right)^2}$",
+    "en": "Critical nucleus: $r^*=\\frac{2\\sigma}{n_l\\Delta\\mu}$, $\\Delta G^*=\\frac{16\\pi\\sigma^3}{3\\left(n_l\\Delta\\mu\\right)^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kurtaklanish",
+   "ru": "Зародышеобразование",
+   "en": "Nucleation"
+  },
+  "answer": "r^*\\approx0.75\\ \\mathrm{nm};\\ \\Delta G^*\\approx41kT",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L33, kurtaklanish)"
+ },
+ {
+  "id": "B2-L33-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Uchlik nuqta yaqinida karbonat angidridning to'yingan bug' bosimi ($\\mathrm{atm}$ da) sublimatsiya uchun $\\ln p=20.84-\\frac{4145}{T}$, bug'lanish uchun $\\ln p=15.61-\\frac{3016}{T}$. Uchlik nuqtani va sublimatsiya, bug'lanish hamda erishning molyar issiqliklarini toping.",
+   "ru": "Вблизи тройной точки давление насыщенного пара углекислого газа (в $\\mathrm{atm}$) для сублимации $\\ln p=20.84-\\frac{4145}{T}$, для испарения $\\ln p=15.61-\\frac{3016}{T}$. Найдите тройную точку и молярные теплоты сублимации, испарения и плавления.",
+   "en": "Near the triple point the saturated vapour pressure of carbon dioxide (in $\\mathrm{atm}$) is $\\ln p=20.84-\\frac{4145}{T}$ for sublimation and $\\ln p=15.61-\\frac{3016}{T}$ for vaporisation. Find the triple point and the molar heats of sublimation, vaporisation and melting."
+  },
+  "figure": "figures/B2-L33-S16.png",
+  "solution": {
+   "uz": [
+    "Uchlik nuqtada ikki chiziq kesishadi: $$T_3=\\frac{4145-3016}{20.84-15.61}\\approx216\\ \\mathrm{K}$$",
+    "Bosim: $$\\ln p_3=15.61-\\frac{3016}{216}\\approx1.64,\\qquad p_3\\approx5.1\\ \\mathrm{atm}$$",
+    "Qiyalik $-\\frac{L}{R}$: $$L_{12}=8.31\\cdot4145\\approx34.4\\ \\mathrm{kJ/mol},\\qquad L_{23}=8.31\\cdot3016\\approx25.1\\ \\mathrm{kJ/mol}$$",
+    "Erish issiqligi — ayirma: $$L_{13}=L_{12}-L_{23}\\approx9.4\\ \\mathrm{kJ/mol}$$"
+   ],
+   "ru": [
+    "В тройной точке две линии пересекаются: $$T_3=\\frac{4145-3016}{20.84-15.61}\\approx216\\ \\mathrm{K}$$",
+    "Давление: $$\\ln p_3=15.61-\\frac{3016}{216}\\approx1.64,\\qquad p_3\\approx5.1\\ \\mathrm{atm}$$",
+    "Наклон $-\\frac{L}{R}$: $$L_{12}=8.31\\cdot4145\\approx34.4\\ \\mathrm{kJ/mol},\\qquad L_{23}=8.31\\cdot3016\\approx25.1\\ \\mathrm{kJ/mol}$$",
+    "Теплота плавления — разность: $$L_{13}=L_{12}-L_{23}\\approx9.4\\ \\mathrm{kJ/mol}$$"
+   ],
+   "en": [
+    "At the triple point the two lines intersect: $$T_3=\\frac{4145-3016}{20.84-15.61}\\approx216\\ \\mathrm{K}$$",
+    "The pressure: $$\\ln p_3=15.61-\\frac{3016}{216}\\approx1.64,\\qquad p_3\\approx5.1\\ \\mathrm{atm}$$",
+    "The slope is $-\\frac{L}{R}$: $$L_{12}=8.31\\cdot4145\\approx34.4\\ \\mathrm{kJ/mol},\\qquad L_{23}=8.31\\cdot3016\\approx25.1\\ \\mathrm{kJ/mol}$$",
+    "The heat of melting is the difference: $$L_{13}=L_{12}-L_{23}\\approx9.4\\ \\mathrm{kJ/mol}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gibbs fazalar qoidasi: $f=c-\\Phi+2$",
+    "ru": "Правило фаз Гиббса: $f=c-\\Phi+2$",
+    "en": "Gibbs phase rule: $f=c-\\Phi+2$"
+   },
+   null,
+   {
+    "uz": "To'yingan bug' bosimi: $\\ln\\frac{p_2}{p_1}=-\\frac{L}{R}\\left(\\frac{1}{T_2}-\\frac{1}{T_1}\\right)$",
+    "ru": "Давление насыщенного пара: $\\ln\\frac{p_2}{p_1}=-\\frac{L}{R}\\left(\\frac{1}{T_2}-\\frac{1}{T_1}\\right)$",
+    "en": "Saturated vapour pressure: $\\ln\\frac{p_2}{p_1}=-\\frac{L}{R}\\left(\\frac{1}{T_2}-\\frac{1}{T_1}\\right)$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Uchlik nuqta",
+   "ru": "Тройная точка",
+   "en": "Triple point"
+  },
+  "answer": "T_3\\approx216\\ \\mathrm{K};\\ p_3\\approx5.1\\ \\mathrm{atm};\\ 34.4,\\ 25.1,\\ 9.4\\ \\mathrm{kJ/mol}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "Irodov, «Problems in General Physics», 2.212-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L33-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Landau nazariyasida $G=G_0+a\\left(T-T_c\\right)M^2+bM^4$ ($a>0$, $b>0$, $G_0$ va uning issiqlik sig'imi silliq). $T<T_c$ da muvozanat tartib parametrini va $T_c$ dagi issiqlik sig'imi sakrashini toping.",
+   "ru": "В теории Ландау $G=G_0+a\\left(T-T_c\\right)M^2+bM^4$ ($a>0$, $b>0$, $G_0$ и её теплоёмкость гладкие). Найдите равновесный параметр порядка при $T<T_c$ и скачок теплоёмкости в $T_c$.",
+   "en": "In Landau theory $G=G_0+a\\left(T-T_c\\right)M^2+bM^4$ ($a>0$, $b>0$; $G_0$ and its heat capacity are smooth). Find the equilibrium order parameter for $T<T_c$ and the jump in heat capacity at $T_c$."
+  },
+  "figure": "figures/B2-L33-S17.png",
+  "solution": {
+   "uz": [
+    "Minimum sharti: $$\\frac{\\partial G}{\\partial M}=2a\\left(T-T_c\\right)M+4bM^3=0\\ \\Rightarrow\\ M_0^2=\\frac{a\\left(T_c-T\\right)}{2b}$$",
+    "Minimumdagi energiya: $$G_{min}=G_0-\\frac{a^2\\left(T_c-T\\right)^2}{4b}$$",
+    "Issiqlik sig'imi $C=-T\\frac{\\partial^2G}{\\partial T^2}$ ga qo'shimcha: $$\\Delta C=\\frac{a^2T}{2b}$$",
+    "$T_c$ da (yuqorida $M=0$, qo'shimcha yo'q): $$\\Delta C=\\frac{a^2T_c}{2b}$$"
+   ],
+   "ru": [
+    "Условие минимума: $$\\frac{\\partial G}{\\partial M}=2a\\left(T-T_c\\right)M+4bM^3=0\\ \\Rightarrow\\ M_0^2=\\frac{a\\left(T_c-T\\right)}{2b}$$",
+    "Энергия в минимуме: $$G_{min}=G_0-\\frac{a^2\\left(T_c-T\\right)^2}{4b}$$",
+    "Добавка к теплоёмкости $C=-T\\frac{\\partial^2G}{\\partial T^2}$: $$\\Delta C=\\frac{a^2T}{2b}$$",
+    "В $T_c$ (выше $M=0$, добавки нет): $$\\Delta C=\\frac{a^2T_c}{2b}$$"
+   ],
+   "en": [
+    "The minimum condition: $$\\frac{\\partial G}{\\partial M}=2a\\left(T-T_c\\right)M+4bM^3=0\\ \\Rightarrow\\ M_0^2=\\frac{a\\left(T_c-T\\right)}{2b}$$",
+    "The energy at the minimum: $$G_{min}=G_0-\\frac{a^2\\left(T_c-T\\right)^2}{4b}$$",
+    "The extra heat capacity $C=-T\\frac{\\partial^2G}{\\partial T^2}$: $$\\Delta C=\\frac{a^2T}{2b}$$",
+    "At $T_c$ (above it $M=0$, no extra term): $$\\Delta C=\\frac{a^2T_c}{2b}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Landau nazariyasi: $G=G_0+a\\left(T-T_c\\right)M^2+bM^4$",
+    "ru": "Теория Ландау: $G=G_0+a\\left(T-T_c\\right)M^2+bM^4$",
+    "en": "Landau theory: $G=G_0+a\\left(T-T_c\\right)M^2+bM^4$"
+   },
+   null,
+   null,
+   {
+    "uz": "Ikkinchi tur o'tish: $\\Delta S=0,\\ \\Delta V=0,\\ \\Delta C\\neq0$",
+    "ru": "Переход второго рода: $\\Delta S=0,\\ \\Delta V=0,\\ \\Delta C\\neq0$",
+    "en": "Second-order transition: $\\Delta S=0,\\ \\Delta V=0,\\ \\Delta C\\neq0$"
+   }
+  ],
+  "basis": {
+   "uz": "Landau nazariyasi",
+   "ru": "Теория Ландау",
+   "en": "Landau theory"
+  },
+  "answer": "M_0=\\sqrt{\\frac{a\\left(T_c-T\\right)}{2b}};\\ \\Delta C=\\frac{a^2T_c}{2b}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L33, Landau)"
+ },
+ {
+  "id": "B2-L33-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "O'rtacha maydon modelida ferromagnetikning $T=0.9T_c$ dagi nisbiy magnitlanishini $m=\\tanh\\frac{T_cm}{T}$ tenglamasidan toping va $T_c$ yaqinidagi $m\\approx\\sqrt3\\left(1-\\frac{T}{T_c}\\right)^{\\frac{1}{2}}$ yaqinlashish bilan solishtiring.",
+   "ru": "В модели среднего поля найдите относительную намагниченность ферромагнетика при $T=0.9T_c$ из уравнения $m=\\tanh\\frac{T_cm}{T}$ и сравните с приближением $m\\approx\\sqrt3\\left(1-\\frac{T}{T_c}\\right)^{\\frac{1}{2}}$ вблизи $T_c$.",
+   "en": "In the mean-field model find the relative magnetisation of a ferromagnet at $T=0.9T_c$ from the equation $m=\\tanh\\frac{T_cm}{T}$, and compare with the approximation $m\\approx\\sqrt3\\left(1-\\frac{T}{T_c}\\right)^{\\frac{1}{2}}$ near $T_c$."
+  },
+  "figure": "figures/B2-L33-S18.png",
+  "solution": {
+   "uz": [
+    "Tenglama: $$m=\\tanh\\frac{m}{0.9}$$",
+    "Iteratsiya (masalan, $m=0.5$ dan): $$0.5\\to0.505\\to0.509\\to\\dots\\to0.525$$",
+    "Yaqinlashish: $$\\sqrt3\\cdot\\sqrt{0.1}\\approx0.548$$"
+   ],
+   "ru": [
+    "Уравнение: $$m=\\tanh\\frac{m}{0.9}$$",
+    "Итерации (например, от $m=0.5$): $$0.5\\to0.505\\to0.509\\to\\dots\\to0.525$$",
+    "Приближение: $$\\sqrt3\\cdot\\sqrt{0.1}\\approx0.548$$"
+   ],
+   "en": [
+    "The equation: $$m=\\tanh\\frac{m}{0.9}$$",
+    "Iteration (for example from $m=0.5$): $$0.5\\to0.505\\to0.509\\to\\dots\\to0.525$$",
+    "The approximation: $$\\sqrt3\\cdot\\sqrt{0.1}\\approx0.548$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "O'rtacha maydon: $m=\\tanh\\frac{T_cm}{T}$",
+    "ru": "Среднее поле: $m=\\tanh\\frac{T_cm}{T}$",
+    "en": "Mean field: $m=\\tanh\\frac{T_cm}{T}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "O'rtacha maydon",
+   "ru": "Среднее поле",
+   "en": "Mean field"
+  },
+  "answer": "m\\approx0.525;\\ \\approx0.548",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L33, o'rtacha maydon)"
+ }
+]
