@@ -1,0 +1,567 @@
+[
+ {
+  "t": "h1",
+  "uz": "Grafiklar va ma'lumotlar tahlili (Graphs and data analysis)",
+  "ru": "Графики и анализ данных",
+  "en": "Graphs and data analysis"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz tajriba grafigini qoidalarga muvofiq qurasiz va undan qiyalik, kesma, yuza va urinma qiyaligini birliklari bilan o'qiysiz; darajali va eksponensial bog'lanishlarni chiziqlashtirib, log-log va yarim logarifmik grafiklardan ko'rsatkich, yarim yemirilish davri va doimiylarni topasiz; eng kichik kvadratlar usuli bilan to'g'ri chiziq o'tkazib, qiyalik va kesma xatoliklarini hisoblaysiz; $\\chi^2$ mezoni va qoldiqlar grafigi bilan modelning yaroqliligini tekshirasiz; korrelyatsiya koeffitsiyentini talqin qilasiz; interpolatsiya va ekstrapolatsiya chegaralarini bilasiz; o'lchamlar tahlili bilan formulani tiklaysiz va javob variantlarini saralaysiz; kattalik tartibini tez baholaysiz.",
+  "ru": "**Цель.** После урока вы будете строить график опыта по правилам и считывать с него наклон, отрезок, площадь и наклон касательной вместе с единицами; линеаризовать степенные и экспоненциальные зависимости и находить по графикам в двойном логарифмическом и полулогарифмическом масштабе показатель степени, период полураспада и постоянные; проводить прямую методом наименьших квадратов и вычислять погрешности наклона и отрезка; проверять пригодность модели критерием $\\chi^2$ и графиком остатков; толковать коэффициент корреляции; знать пределы интерполяции и экстраполяции; восстанавливать формулу и отсеивать варианты ответа анализом размерностей; быстро оценивать порядок величины.",
+  "en": "**Goal.** After this lesson you will draw an experimental graph by the rules and read from it the slope, intercept, area and tangent slope together with their units; linearise power-law and exponential relations and find exponents, half-lives and constants from log-log and semi-log plots; fit a straight line by least squares and compute the errors of slope and intercept; test a model with the $\\chi^2$ criterion and a residual plot; interpret the correlation coefficient; know the limits of interpolation and extrapolation; reconstruct a formula and sift answer options by dimensional analysis; and quickly estimate orders of magnitude."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L34 da bitta kattalikning xatoligini o'rgandik. Tajribada esa ko'pincha bog'lanish o'lchanadi: davr — uzunlikka, faollik — vaqtga, tok — kuchlanishga qarab. Grafik — bunday ma'lumotlarning eng ixcham va ishonchli tahlil vositasi: bir qarashda qonuniyat, chetlashgan nuqta, model qo'llanish chegarasi ko'rinadi. GRE da grafik o'qish, log-log grafikdan daraja topish va o'lchamlar tahlili har yili uchraydi; o'lchamlar tahlili esa umuman har qanday masalada javobni tekshirishning eng tez usuli.",
+  "ru": "В B2-L34 мы изучили погрешность одной величины. В опыте же чаще измеряют зависимость: период — от длины, активность — от времени, ток — от напряжения. График — самое компактное и надёжное средство анализа таких данных: с одного взгляда видны закономерность, выпадающая точка, граница применимости модели. На GRE ежегодно встречаются чтение графиков, нахождение степени по двойному логарифмическому графику и анализ размерностей; а анализ размерностей вообще — самый быстрый способ проверить ответ в любой задаче.",
+  "en": "In B2-L34 we studied the error of a single quantity. Experiments, however, usually measure a relationship: period against length, activity against time, current against voltage. A graph is the most compact and reliable tool for analysing such data: at a glance one sees the regularity, an outlying point, the limit of validity of a model. Graph reading, finding a power from a log-log plot and dimensional analysis appear on the GRE every year; and dimensional analysis is in general the fastest way to check an answer to any problem."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Grafik qurish va o'qish",
+  "ru": "1. Построение и чтение графиков",
+  "en": "1. Drawing and reading graphs"
+ },
+ {
+  "t": "li",
+  "uz": "**Qoidalar.** Gorizontal o'qqa erkin o'zgartirilgan (mustaqil) kattalik, vertikal o'qqa o'lchangan kattalik qo'yiladi. Har bir o'q yonida kattalik belgisi va birligi yoziladi; masshtab nuqtalar grafikning katta qismini egallaydigan qilib tanlanadi — nol nuqta shart emas. Nuqtalar xatolik chiziqlari (error bars) bilan ko'rsatiladi; nazariy egri chiziq yoki moslashtirilgan to'g'ri chiziq nuqtalarni tutashtirmaydi, balki ular orasidan o'tadi. Yaxshi grafikda nuqtalarning taxminan uchdan ikki qismi chiziqqa bitta xatolik masofasida yaqinlashadi (B2-L34, $68\\%$ qoidasi).",
+  "ru": "**Правила.** По горизонтальной оси откладывают свободно изменяемую (независимую) величину, по вертикальной — измеряемую. У каждой оси пишут обозначение величины и единицы; масштаб выбирают так, чтобы точки занимали большую часть графика — нуль не обязателен. Точки показывают с планками погрешностей; теоретическая кривая или подогнанная прямая не соединяет точки, а проходит между ними. На хорошем графике примерно две трети точек подходят к линии ближе одной погрешности (B2-L34, правило $68\\%$).",
+  "en": "**Rules.** The freely varied (independent) quantity goes on the horizontal axis and the measured quantity on the vertical one. Each axis carries the symbol of the quantity and its unit; the scale is chosen so that the points fill most of the graph — zero need not be included. Points are shown with error bars; a theoretical curve or fitted line does not join the points but passes among them. On a good graph about two thirds of the points come within one error bar of the line (B2-L34, the $68\\%$ rule)."
+ },
+ {
+  "t": "li",
+  "uz": "**Qiyalik va kesma — birliklar bilan.** To'g'ri chiziq $y=kx+b$ ning **burchak koeffitsiyenti** (slope) $k=\\frac{\\Delta y}{\\Delta x}$ ni chiziqdagi bir-biridan uzoq ikki nuqtadan (o'lchangan nuqtalardan emas!) topamiz. Uning birligi — vertikal o'q birligining gorizontal o'q birligiga nisbati: $x$–$t$ grafikda tezlik, $U$–$I$ grafikda qarshilik. **Kesma** $b$ — chiziqning vertikal o'qni kesish nuqtasi, birligi $y$ niki. GRE da ko'pincha «qiyalik nimaga teng?» so'raladi va javob variantlarini o'qlar birliklaridan kelib chiqqan o'lcham bilan saralash mumkin.",
+  "ru": "**Наклон и отрезок — с единицами.** **Угловой коэффициент** (наклон) прямой $y=kx+b$, $k=\\frac{\\Delta y}{\\Delta x}$, находят по двум далёким друг от друга точкам на прямой (а не по измеренным точкам!). Его единица — отношение единицы вертикальной оси к единице горизонтальной: на графике $x$–$t$ это скорость, на графике $U$–$I$ — сопротивление. **Отрезок** $b$ — точка пересечения прямой с вертикальной осью, в единицах $y$. На GRE часто спрашивают «чему равен наклон?», и варианты ответа можно отсеять по размерности, вытекающей из единиц осей.",
+  "en": "**Slope and intercept — with units.** The **slope** of a straight line $y=kx+b$, $k=\\frac{\\Delta y}{\\Delta x}$, is found from two widely separated points on the line (not from the measured points!). Its unit is the ratio of the vertical-axis unit to the horizontal-axis unit: on an $x$–$t$ graph it is a velocity, on a $U$–$I$ graph a resistance. The **intercept** $b$ is where the line crosses the vertical axis, in the units of $y$. The GRE often asks \"what does the slope equal?\", and the options can be sifted by the dimension that follows from the units of the axes."
+ },
+ {
+  "t": "m",
+  "m": "k=\\frac{\\Delta y}{\\Delta x},\\qquad \\left[k\\right]=\\frac{\\left[y\\right]}{\\left[x\\right]},\\qquad b=y\\left(0\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Egri chiziq uchun.** Egri chiziqning berilgan nuqtadagi qiyaligi — urinmaning qiyaligi, ya'ni hosila: $x\\left(t\\right)$ grafikda oniy tezlik, $v\\left(t\\right)$ grafikda tezlanish. Grafik ostidagi yuza esa integral: $v\\left(t\\right)$ ostida — ko'chish, $F\\left(x\\right)$ ostida — ish, $P\\left(t\\right)$ ostida — energiya, $I\\left(t\\right)$ ostida — zaryad. Yuzaning birligi ikki o'q birliklarining ko'paytmasi. Bu ikki amalni o'lchangan ma'lumotlar bilan qanday bajarish — 8-bo'limda.",
+  "ru": "**Для кривой.** Наклон кривой в данной точке — наклон касательной, то есть производная: на графике $x\\left(t\\right)$ — мгновенная скорость, на $v\\left(t\\right)$ — ускорение. Площадь под графиком — интеграл: под $v\\left(t\\right)$ — перемещение, под $F\\left(x\\right)$ — работа, под $P\\left(t\\right)$ — энергия, под $I\\left(t\\right)$ — заряд. Единица площади — произведение единиц двух осей. Как выполнять эти действия с измеренными данными — в разделе 8.",
+  "en": "**For a curve.** The slope of a curve at a given point is the slope of the tangent, i.e. the derivative: on an $x\\left(t\\right)$ graph the instantaneous velocity, on a $v\\left(t\\right)$ graph the acceleration. The area under a graph is an integral: under $v\\left(t\\right)$ the displacement, under $F\\left(x\\right)$ the work, under $P\\left(t\\right)$ the energy, under $I\\left(t\\right)$ the charge. The unit of the area is the product of the units of the two axes. How to do these operations with measured data is the subject of section 8."
+ },
+ {
+  "t": "li",
+  "uz": "**Eng katta va eng kichik qiyalik usuli.** Kompyutersiz qiyalik xatoligini baholashning qo'lda usuli: xatolik chiziqlari ichidan o'tadigan eng tik va eng yotiq to'g'ri chiziqlar chiziladi (odatda birinchi va oxirgi nuqtalarning xatolik chiziqlari uchlari orqali). Ularning qiyaliklari $k_1$ va $k_2$ bo'lsa, $k\\approx\\frac{k_1+k_2}{2}$, $\\delta k\\approx\\frac{\\left|k_1-k_2\\right|}{2}$. Bu baho eng kichik kvadratlar xatoligidan biroz katta chiqadi (chegaraviy xatolik kabi), lekin grafikka qarab tezda ma'nosini tushunish imkonini beradi.",
+  "ru": "**Метод наибольшего и наименьшего наклона.** Ручной способ оценить погрешность наклона без компьютера: проводят самую крутую и самую пологую прямые, проходящие внутри планок погрешностей (обычно через концы планок первой и последней точек). Если их наклоны $k_1$ и $k_2$, то $k\\approx\\frac{k_1+k_2}{2}$, $\\delta k\\approx\\frac{\\left|k_1-k_2\\right|}{2}$. Эта оценка получается немного больше погрешности наименьших квадратов (как предельная погрешность), но позволяет быстро понять её смысл по графику.",
+  "en": "**The steepest-and-shallowest-line method.** A manual way to estimate the slope error without a computer: draw the steepest and the shallowest straight lines that pass within the error bars (usually through the ends of the bars of the first and last points). If their slopes are $k_1$ and $k_2$, then $k\\approx\\frac{k_1+k_2}{2}$ and $\\delta k\\approx\\frac{\\left|k_1-k_2\\right|}{2}$. This estimate comes out somewhat larger than the least-squares error (like a maximum error), but it shows its meaning on the graph at a glance."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Chiziqlashtirish",
+  "ru": "2. Линеаризация",
+  "en": "2. Linearisation"
+ },
+ {
+  "t": "li",
+  "uz": "**Nima uchun to'g'ri chiziq.** Ko'z to'g'ri chiziqdan chetlanishni juda yaxshi sezadi, egri chiziqlarni esa bir-biridan ajratish qiyin: parabola, kub va eksponenta kichik oraliqda o'xshash ko'rinadi. To'g'ri chiziqning ikki parametri (qiyalik va kesma) oson va aniq topiladi. Shuning uchun nazariy bog'lanish o'zgaruvchilarni almashtirib to'g'ri chiziqqa keltiriladi — bu **chiziqlashtirish** (linearization).",
+  "ru": "**Почему прямая.** Глаз прекрасно замечает отклонение от прямой, а кривые различить трудно: парабола, кубика и экспонента на малом интервале похожи. Два параметра прямой (наклон и отрезок) находятся легко и точно. Поэтому теоретическую зависимость сводят к прямой заменой переменных — это **линеаризация**.",
+  "en": "**Why a straight line.** The eye is very good at spotting a departure from a straight line, but curves are hard to tell apart: a parabola, a cubic and an exponential look alike over a short range. The two parameters of a line (slope and intercept) are found easily and accurately. So a theoretical relationship is reduced to a straight line by a change of variables — this is **linearisation**."
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy almashtirishlar.** (1) Mayatnik $T=2\\pi\\sqrt{\\frac{l}{g}}$: $T^2$ ni $l$ ga qarab chizsak, qiyaligi $\\frac{4\\pi^2}{g}$ bo'lgan to'g'ri chiziq; (2) Boyl qonuni $p=\\frac{C}{V}$: $p$ ni $\\frac{1}{V}$ ga qarab; (3) darajali funksiya $y=ax^n$: $\\ln y=\\ln a+n\\ln x$ — $\\ln y$ ni $\\ln x$ ga qarab, qiyaligi $n$; (4) eksponenta $y=Ce^{-\\lambda x}$: $\\ln y=\\ln C-\\lambda x$ — $\\ln y$ ni $x$ ga qarab, qiyaligi $-\\lambda$. Model noma'lum bo'lsa, bir nechta almashtirish sinab ko'riladi — qaysi biri to'g'ri chiziq bersa, o'sha model to'g'ri ([[F01]]).",
+  "ru": "**Основные замены.** (1) Маятник $T=2\\pi\\sqrt{\\frac{l}{g}}$: строя $T^2$ от $l$, получаем прямую с наклоном $\\frac{4\\pi^2}{g}$; (2) закон Бойля $p=\\frac{C}{V}$: $p$ от $\\frac{1}{V}$; (3) степенная функция $y=ax^n$: $\\ln y=\\ln a+n\\ln x$ — $\\ln y$ от $\\ln x$, наклон $n$; (4) экспонента $y=Ce^{-\\lambda x}$: $\\ln y=\\ln C-\\lambda x$ — $\\ln y$ от $x$, наклон $-\\lambda$. Если модель неизвестна, пробуют несколько замен — какая даёт прямую, та модель и верна ([[F01]]).",
+  "en": "**The main substitutions.** (1) A pendulum $T=2\\pi\\sqrt{\\frac{l}{g}}$: plotting $T^2$ against $l$ gives a straight line of slope $\\frac{4\\pi^2}{g}$; (2) Boyle's law $p=\\frac{C}{V}$: $p$ against $\\frac{1}{V}$; (3) a power law $y=ax^n$: $\\ln y=\\ln a+n\\ln x$ — $\\ln y$ against $\\ln x$, slope $n$; (4) an exponential $y=Ce^{-\\lambda x}$: $\\ln y=\\ln C-\\lambda x$ — $\\ln y$ against $x$, slope $-\\lambda$. If the model is unknown, several substitutions are tried — whichever gives a straight line identifies the model ([[F01]])."
+ },
+ {
+  "t": "m",
+  "m": "y=ax^n:\\ \\ln y=\\ln a+n\\ln x;\\qquad y=Ce^{-\\lambda x}:\\ \\ln y=\\ln C-\\lambda x"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L35-F01.png",
+   "ru": "figures/B2-L35-F01-ru.png",
+   "en": "figures/B2-L35-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Xatoliklar o'zgaradi.** Chiziqlashtirishda xatolik chiziqlari ham almashtiriladi (B2-L34): $\\delta\\left(T^2\\right)=2T\\,\\delta T$, $\\delta\\left(\\ln y\\right)=\\frac{\\delta y}{y}$. Shuning uchun logarifmik o'qda bir xil absolyut xatolikli nuqtalarning kichik qiymatlilari uzunroq xatolik chizig'iga ega bo'ladi — moslashtirishda bu hisobga olinadi (5-bo'lim). Faqat oraliq hisoblar uchun emas, xulosalar uchun ham shuni unutmaslik kerak: logarifmlash kichik qiymatlardagi shovqinni kattalashtiradi.",
+  "ru": "**Погрешности меняются.** При линеаризации преобразуются и планки погрешностей (B2-L34): $\\delta\\left(T^2\\right)=2T\\,\\delta T$, $\\delta\\left(\\ln y\\right)=\\frac{\\delta y}{y}$. Поэтому на логарифмической оси у точек с одинаковой абсолютной погрешностью малые значения имеют более длинные планки — это учитывают при подгонке (раздел 5). Не только для промежуточных расчётов, но и для выводов важно помнить: логарифмирование усиливает шум при малых значениях.",
+  "en": "**The errors change.** Linearisation transforms the error bars as well (B2-L34): $\\delta\\left(T^2\\right)=2T\\,\\delta T$, $\\delta\\left(\\ln y\\right)=\\frac{\\delta y}{y}$. So on a logarithmic axis, among points with the same absolute error, the small values have longer bars — this is taken into account in fitting (section 5). It matters not only for intermediate steps but for conclusions too: taking logarithms magnifies the noise at small values."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Log-log va yarim logarifmik grafiklar",
+  "ru": "3. Двойные логарифмические и полулогарифмические графики",
+  "en": "3. Log-log and semi-log plots"
+ },
+ {
+  "t": "li",
+  "uz": "**Logarifmik o'q.** Logarifmik o'qda teng oraliqlar teng **nisbatlarga** mos keladi: $1$, $10$, $100$, $1000$ — teng qadamlar; har bir shunday qadam — bir **dekada**. O'qda nol yo'q (u $-\\infty$ da), manfiy qiymatlar ham chizilmaydi. **Log-log grafik**da ikkala o'q logarifmik, **yarim logarifmik** (semi-log) grafikda faqat bittasi. Bunday grafiklar bir necha tartibga cho'zilgan ma'lumotlar uchun zarur: chiziqli o'qda kichik qiymatlar nolga «yopishib» ko'rinmay qoladi.",
+  "ru": "**Логарифмическая ось.** На логарифмической оси равные промежутки соответствуют равным **отношениям**: $1$, $10$, $100$, $1000$ — равные шаги; каждый такой шаг — одна **декада**. Нуля на оси нет (он в $-\\infty$), отрицательные значения тоже не изображаются. На **двойном логарифмическом** графике логарифмичны обе оси, на **полулогарифмическом** — одна. Такие графики необходимы для данных, растянутых на несколько порядков: на линейной оси малые значения «прилипают» к нулю и не видны.",
+  "en": "**The logarithmic axis.** On a logarithmic axis equal intervals correspond to equal **ratios**: $1$, $10$, $100$, $1000$ are equal steps; each such step is one **decade**. There is no zero on the axis (it lies at $-\\infty$), and negative values cannot be shown. On a **log-log plot** both axes are logarithmic; on a **semi-log plot** only one is. Such plots are essential for data spanning several orders of magnitude: on a linear axis the small values \"stick\" to zero and cannot be seen."
+ },
+ {
+  "t": "li",
+  "uz": "**Log-log grafikdan daraja ([[F02]]).** Darajali bog'lanish $y=ax^n$ log-log grafikda to'g'ri chiziq. Uning qiyaligi — daraja ko'rsatkichi: $n=\\frac{\\Delta\\lg y}{\\Delta\\lg x}$, ya'ni $y$ o'qidagi dekadalar soni $x$ o'qidagi dekadalar soniga bo'linadi. Qiyalikni chizg'ich bilan sm larda o'lchash xato beradi, agar ikki o'qdagi dekada uzunliklari har xil bo'lsa — har doim dekadalarni sanang. Koeffitsiyent $a$ — chiziqning $x=1$ dagi qiymati. Masalan, $1/r^2$ qonunlari qiyaligi $-2$ bo'lgan chiziq beradi, Kepler uchinchi qonuni — $\\frac{3}{2}$.",
+  "ru": "**Степень по двойному логарифмическому графику ([[F02]]).** Степенная зависимость $y=ax^n$ на двойном логарифмическом графике — прямая. Её наклон — показатель степени: $n=\\frac{\\Delta\\lg y}{\\Delta\\lg x}$, то есть число декад по оси $y$, делённое на число декад по оси $x$. Мерить наклон линейкой в сантиметрах ошибочно, если длины декад на осях различны — всегда считайте декады. Коэффициент $a$ — значение прямой при $x=1$. Например, законы $1/r^2$ дают прямую с наклоном $-2$, третий закон Кеплера — $\\frac{3}{2}$.",
+  "en": "**A power from a log-log plot ([[F02]]).** A power law $y=ax^n$ is a straight line on a log-log plot. Its slope is the exponent: $n=\\frac{\\Delta\\lg y}{\\Delta\\lg x}$, i.e. the number of decades on the $y$ axis divided by the number of decades on the $x$ axis. Measuring the slope with a ruler in centimetres is wrong if the decades on the two axes have different lengths — always count decades. The coefficient $a$ is the value of the line at $x=1$. For example, $1/r^2$ laws give a line of slope $-2$, and Kepler's third law gives $\\frac{3}{2}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L35-F02.png",
+   "ru": "figures/B2-L35-F02-ru.png",
+   "en": "figures/B2-L35-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Log-log grafikdan koeffitsiyentni o'qish.** Agar grafikda $x=1$ nuqta ko'rinmasa, koeffitsiyent chiziqdagi istalgan nuqtadan topiladi: $a=\\frac{y_0}{x_0^n}$. Ba'zan bog'lanish bir sohada bitta daraja, boshqa sohada boshqa daraja bilan beriladi — log-log grafikda bu chiziqning «sinishi» kabi ko'rinadi (masalan, qora jism nurlanishining Reley–Jins va Vin sohalari, yarim o'tkazgich qarshiligining temperaturaga bog'liqligi). Sinish nuqtasi ikki rejim almashinadigan xarakterli kattalikni beradi.",
+  "ru": "**Чтение коэффициента по двойному логарифмическому графику.** Если точка $x=1$ на графике не видна, коэффициент находят по любой точке прямой: $a=\\frac{y_0}{x_0^n}$. Иногда зависимость в одной области подчиняется одной степени, в другой — другой; на двойном логарифмическом графике это выглядит как «излом» прямой (например, области Рэлея–Джинса и Вина в излучении чёрного тела, температурная зависимость сопротивления полупроводника). Точка излома даёт характерную величину смены двух режимов.",
+  "en": "**Reading the coefficient from a log-log plot.** If the point $x=1$ is not visible on the graph, the coefficient is found from any point on the line: $a=\\frac{y_0}{x_0^n}$. Sometimes a relationship obeys one power in one region and another power elsewhere; on a log-log plot this looks like a \"kink\" in the line (for example the Rayleigh–Jeans and Wien regions of black-body radiation, or the temperature dependence of a semiconductor's resistance). The kink gives the characteristic value at which the two regimes exchange."
+ },
+ {
+  "t": "li",
+  "uz": "**Yarim logarifmik grafik.** Eksponensial bog'lanish $y=Ce^{-\\lambda x}$ (radioaktiv yemirilish, kondensator razryadi, so'nuvchi amplituda, yutilish) vertikal o'q logarifmik bo'lgan grafikda to'g'ri chiziq. Yarim yemirilish davri $T_{1/2}=\\frac{\\ln2}{\\lambda}$ — $y$ ikki marta kamayadigan gorizontal masofa; bu masofa chiziqning qaysi joyida o'lchanmasin bir xil. Agar o'q o'nli logarifmlarda bo'lsa, qiyalik $-\\lambda\\lg e\\approx-0.434\\lambda$ ga teng — $e$ va $10$ asoslarni chalkashtirmaslik kerak. Teskari hol — vertikal o'q chiziqli, gorizontal logarifmik — $y=C\\ln\\left(bx\\right)$ ko'rinishidagi logarifmik o'sishni to'g'ri chiziqqa aylantiradi.",
+  "ru": "**Полулогарифмический график.** Экспоненциальная зависимость $y=Ce^{-\\lambda x}$ (радиоактивный распад, разряд конденсатора, затухающая амплитуда, поглощение) — прямая на графике с логарифмической вертикальной осью. Период полураспада $T_{1/2}=\\frac{\\ln2}{\\lambda}$ — горизонтальное расстояние, на котором $y$ уменьшается вдвое; оно одинаково, где бы на прямой его ни мерили. Если ось в десятичных логарифмах, наклон равен $-\\lambda\\lg e\\approx-0.434\\lambda$ — нельзя путать основания $e$ и $10$. Обратный случай — вертикальная ось линейна, горизонтальная логарифмична — превращает в прямую логарифмический рост вида $y=C\\ln\\left(bx\\right)$.",
+  "en": "**The semi-log plot.** An exponential relationship $y=Ce^{-\\lambda x}$ (radioactive decay, capacitor discharge, a damped amplitude, absorption) is a straight line on a graph with a logarithmic vertical axis. The half-life $T_{1/2}=\\frac{\\ln2}{\\lambda}$ is the horizontal distance over which $y$ halves; it is the same wherever on the line it is measured. If the axis is in base-10 logarithms, the slope is $-\\lambda\\lg e\\approx-0.434\\lambda$ — the bases $e$ and $10$ must not be confused. The opposite case — linear vertical, logarithmic horizontal axis — turns logarithmic growth of the form $y=C\\ln\\left(bx\\right)$ into a straight line."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Eng kichik kvadratlar usuli",
+  "ru": "4. Метод наименьших квадратов",
+  "en": "4. The method of least squares"
+ },
+ {
+  "t": "li",
+  "uz": "**G'oya.** $N$ ta nuqta $\\left(x_i,\\ y_i\\right)$ orqali «eng yaxshi» to'g'ri chiziq qanday o'tkaziladi? $x_i$ aniq, $y_i$ bir xil $\\sigma$ xatolikka ega deb hisoblaymiz. Har bir nuqtaning chiziqdan vertikal chetlanishi — **qoldiq** (residual) $d_i=y_i-\\left(kx_i+b\\right)$. **Eng kichik kvadratlar usuli** qoldiqlar kvadratlari yig'indisini minimallashtiradigan $k$ va $b$ ni tanlaydi. Normal taqsimlangan xatoliklar uchun bu eng ehtimolli parametrlarni beradi (Gauss): ehtimollik $e^{-\\frac{d^2}{2\\sigma^2}}$ ko'paytmasi maksimal bo'lishi uchun $\\sum d_i^2$ minimal bo'lishi kerak.",
+  "ru": "**Идея.** Как провести «наилучшую» прямую через $N$ точек $\\left(x_i,\\ y_i\\right)$? Считаем $x_i$ точными, а $y_i$ — с одинаковой погрешностью $\\sigma$. Вертикальное отклонение каждой точки от прямой — **остаток** $d_i=y_i-\\left(kx_i+b\\right)$. **Метод наименьших квадратов** выбирает $k$ и $b$, минимизирующие сумму квадратов остатков. Для нормально распределённых погрешностей это даёт наиболее вероятные параметры (Гаусс): чтобы произведение вероятностей $e^{-\\frac{d^2}{2\\sigma^2}}$ было максимальным, $\\sum d_i^2$ должна быть минимальной.",
+  "en": "**The idea.** How is the \"best\" straight line drawn through $N$ points $\\left(x_i,\\ y_i\\right)$? Take the $x_i$ as exact and the $y_i$ as having the same error $\\sigma$. The vertical deviation of each point from the line is the **residual** $d_i=y_i-\\left(kx_i+b\\right)$. The **method of least squares** chooses $k$ and $b$ to minimise the sum of the squared residuals. For normally distributed errors this gives the most probable parameters (Gauss): for the product of the probabilities $e^{-\\frac{d^2}{2\\sigma^2}}$ to be a maximum, $\\sum d_i^2$ must be a minimum."
+ },
+ {
+  "t": "li",
+  "uz": "**Formulalar.** $\\frac{\\partial}{\\partial k}\\sum d_i^2=0$ va $\\frac{\\partial}{\\partial b}\\sum d_i^2=0$ shartlari ikki chiziqli tenglama beradi. Ularning yechimi o'rtachalar orqali ixcham yoziladi; xususan, chiziq har doim «og'irlik markazi» $\\left(\\bar x,\\ \\bar y\\right)$ orqali o'tadi. Agar nazariya chiziq koordinata boshidan o'tishini talab qilsa ($b=0$, masalan, Om va Guk qonunlari), bitta parametr qoladi: $k=\\frac{\\sum x_iy_i}{\\sum x_i^2}$.",
+  "ru": "**Формулы.** Условия $\\frac{\\partial}{\\partial k}\\sum d_i^2=0$ и $\\frac{\\partial}{\\partial b}\\sum d_i^2=0$ дают два линейных уравнения. Их решение компактно записывается через средние; в частности, прямая всегда проходит через «центр тяжести» $\\left(\\bar x,\\ \\bar y\\right)$. Если теория требует, чтобы прямая проходила через начало координат ($b=0$, например законы Ома и Гука), остаётся один параметр: $k=\\frac{\\sum x_iy_i}{\\sum x_i^2}$.",
+  "en": "**Formulas.** The conditions $\\frac{\\partial}{\\partial k}\\sum d_i^2=0$ and $\\frac{\\partial}{\\partial b}\\sum d_i^2=0$ give two linear equations. Their solution is written compactly in terms of averages; in particular, the line always passes through the \"centre of mass\" $\\left(\\bar x,\\ \\bar y\\right)$. If theory requires the line to pass through the origin ($b=0$, for instance Ohm's and Hooke's laws), one parameter remains: $k=\\frac{\\sum x_iy_i}{\\sum x_i^2}$."
+ },
+ {
+  "t": "m",
+  "m": "k=\\frac{\\sum\\left(x_i-\\bar x\\right)\\left(y_i-\\bar y\\right)}{\\sum\\left(x_i-\\bar x\\right)^2}=\\frac{N\\sum x_iy_i-\\sum x_i\\sum y_i}{N\\sum x_i^2-\\left(\\sum x_i\\right)^2},\\qquad b=\\bar y-k\\bar x"
+ },
+ {
+  "t": "li",
+  "uz": "**Parametrlar xatoliklari ([[F03]]).** $y_i$ xatoligi B2-L34 dagi umumiy formula orqali $k$ va $b$ ga o'tadi. Agar $\\sigma$ oldindan ma'lum bo'lmasa, u qoldiqlardan baholanadi; maxrajdagi $N-2$ — ikki parametr ma'lumotlardan topilgani uchun ikkita erkinlik darajasi sarflangan (B2-L34 dagi $N-1$ ning umumlashmasi). Qiyalik xatoligi $x$ lar qancha keng tarqalgan bo'lsa, shuncha kichik: nuqtalarni o'lchash oralig'ining chetlariga joylashtirish qiyalikni aniqroq beradi.",
+  "ru": "**Погрешности параметров ([[F03]]).** Погрешность $y_i$ переходит в $k$ и $b$ по общей формуле B2-L34. Если $\\sigma$ заранее неизвестна, её оценивают по остаткам; $N-2$ в знаменателе — потому что два параметра найдены из данных и израсходованы две степени свободы (обобщение $N-1$ из B2-L34). Погрешность наклона тем меньше, чем шире разброс $x$: размещение точек у краёв диапазона измерений даёт наклон точнее.",
+  "en": "**Errors of the parameters ([[F03]]).** The error of the $y_i$ passes into $k$ and $b$ via the general formula of B2-L34. If $\\sigma$ is not known in advance, it is estimated from the residuals; the $N-2$ in the denominator is there because two parameters were found from the data and two degrees of freedom are used up (a generalisation of the $N-1$ of B2-L34). The slope error is smaller the more widely the $x$ values are spread: placing points at the ends of the measurement range determines the slope more precisely."
+ },
+ {
+  "t": "m",
+  "m": "\\sigma\\approx\\sqrt{\\frac{\\sum d_i^2}{N-2}},\\qquad \\sigma_k=\\frac{\\sigma}{\\sqrt{\\sum\\left(x_i-\\bar x\\right)^2}},\\qquad \\sigma_b=\\sigma_k\\sqrt{\\frac{\\sum x_i^2}{N}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L35-F03.png",
+   "ru": "figures/B2-L35-F03-ru.png",
+   "en": "figures/B2-L35-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Vaznli moslashtirish va chi-kvadrat mezoni",
+  "ru": "5. Взвешенная подгонка и критерий хи-квадрат",
+  "en": "5. Weighted fitting and the chi-squared criterion"
+ },
+ {
+  "t": "li",
+  "uz": "**Har xil xatoliklar.** Agar nuqtalar xatoligi $\\sigma_i$ har xil bo'lsa (masalan, sanash tajribasida $\\sigma_i=\\sqrt{N_i}$ yoki chiziqlashtirilgan logarifmik ma'lumotlar), har bir qoldiq o'z xatoligiga bo'linadi — aniqroq nuqta chiziqni o'ziga kuchliroq tortadi. Minimallashtiriladigan kattalik — **chi-kvadrat**: bu B2-L34 dagi vaznli o'rtachaning to'g'ri chiziq uchun umumlashmasi ($w_i=\\frac{1}{\\sigma_i^2}$).",
+  "ru": "**Разные погрешности.** Если погрешности точек $\\sigma_i$ различны (например, в счётном опыте $\\sigma_i=\\sqrt{N_i}$ или в линеаризованных логарифмических данных), каждый остаток делят на свою погрешность — более точная точка сильнее притягивает прямую. Минимизируемая величина — **хи-квадрат**: это обобщение взвешенного среднего из B2-L34 на прямую ($w_i=\\frac{1}{\\sigma_i^2}$).",
+  "en": "**Different errors.** If the points have different errors $\\sigma_i$ (for example $\\sigma_i=\\sqrt{N_i}$ in a counting experiment, or linearised logarithmic data), each residual is divided by its own error — a more precise point pulls the line more strongly. The quantity minimised is **chi-squared**: the generalisation of the weighted average of B2-L34 to a straight line ($w_i=\\frac{1}{\\sigma_i^2}$)."
+ },
+ {
+  "t": "m",
+  "m": "\\chi^2=\\sum_{i=1}^N\\left(\\frac{y_i-f\\left(x_i\\right)}{\\sigma_i}\\right)^2,\\qquad \\nu=N-m"
+ },
+ {
+  "t": "li",
+  "uz": "**$\\chi^2$ — moslik o'lchovi ([[F04]]).** Agar model to'g'ri va xatoliklar to'g'ri baholangan bo'lsa, har bir had o'rtacha $1$ ga yaqin, minimum qiymat esa **erkinlik darajalari soni** $\\nu=N-m$ atrofida ($m$ — moslashtirilgan parametrlar soni, to'g'ri chiziq uchun $2$). Shuning uchun **keltirilgan chi-kvadrat** $\\frac{\\chi^2}{\\nu}$ qaraladi: $\\approx1$ — model va xatoliklar mos; $\\gg1$ — model noto'g'ri yoki xatoliklar kam baholangan; $\\ll1$ — xatoliklar oshirib baholangan (yoki ma'lumotlar «juda yaxshi», bu ham shubhali).",
+  "ru": "**$\\chi^2$ — мера согласия ([[F04]]).** Если модель верна и погрешности оценены правильно, каждый член в среднем около $1$, а минимальное значение — около **числа степеней свободы** $\\nu=N-m$ ($m$ — число подгоняемых параметров, для прямой $2$). Поэтому рассматривают **приведённый хи-квадрат** $\\frac{\\chi^2}{\\nu}$: $\\approx1$ — модель и погрешности согласованы; $\\gg1$ — модель неверна или погрешности занижены; $\\ll1$ — погрешности завышены (или данные «слишком хороши», что тоже подозрительно).",
+  "en": "**$\\chi^2$ as a measure of agreement ([[F04]]).** If the model is right and the errors are correctly estimated, each term is about $1$ on average and the minimum value is about the **number of degrees of freedom** $\\nu=N-m$ ($m$ is the number of fitted parameters, $2$ for a straight line). So one looks at the **reduced chi-squared** $\\frac{\\chi^2}{\\nu}$: $\\approx1$ — model and errors agree; $\\gg1$ — the model is wrong or the errors are underestimated; $\\ll1$ — the errors are overestimated (or the data are \"too good\", which is also suspicious)."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L35-F04.png",
+   "ru": "figures/B2-L35-F04-ru.png",
+   "en": "figures/B2-L35-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Qancha katta — juda katta?** $\\chi^2$ ning taqsimoti $\\nu$ ga bog'liq: o'rtachasi $\\nu$, standart chetlanishi $\\sqrt{2\\nu}$. Masalan, $\\nu=50$ da $\\chi^2=60$ normal, $\\chi^2=100$ esa ~$5\\sigma$ chetlanish — model rad etiladi. Kichik $\\nu$ da tebranish nisbatan katta, shuning uchun $\\frac{\\chi^2}{\\nu}=1.5$ ni $\\nu=3$ da rad etish uchun asos yo'q. Agar xatoliklar o'zi qoldiqlardan baholangan bo'lsa (4-bo'lim), $\\chi^2$ avtomatik ravishda $\\nu$ ga teng bo'lib qoladi va modelni tekshirish uchun ishlatilmaydi.",
+  "ru": "**Насколько большое — слишком большое?** Распределение $\\chi^2$ зависит от $\\nu$: среднее $\\nu$, стандартное отклонение $\\sqrt{2\\nu}$. Например, при $\\nu=50$ значение $\\chi^2=60$ нормально, а $\\chi^2=100$ — отклонение ~$5\\sigma$, модель отвергается. При малых $\\nu$ флуктуации относительно велики, поэтому $\\frac{\\chi^2}{\\nu}=1.5$ при $\\nu=3$ не повод отвергать. Если сами погрешности оценены по остаткам (раздел 4), $\\chi^2$ автоматически равен $\\nu$ и для проверки модели не используется.",
+  "en": "**How large is too large?** The distribution of $\\chi^2$ depends on $\\nu$: its mean is $\\nu$ and its standard deviation $\\sqrt{2\\nu}$. For example, with $\\nu=50$, $\\chi^2=60$ is normal, while $\\chi^2=100$ is a deviation of ~$5\\sigma$ — the model is rejected. For small $\\nu$ the fluctuations are relatively large, so $\\frac{\\chi^2}{\\nu}=1.5$ with $\\nu=3$ is no reason for rejection. If the errors themselves were estimated from the residuals (section 4), $\\chi^2$ automatically equals $\\nu$ and cannot be used to test the model."
+ },
+ {
+  "t": "li",
+  "uz": "**Parametrlar korrelyatsiyasi.** Qiyalik va kesma xatoliklari odatda bog'liq: agar barcha $x_i$ musbat bo'lsa, chiziqni og'irlik markazi atrofida biroz burish qiyalikni oshirib, kesmani kamaytiradi — ular qarama-qarshi ishorada tebranadi. Shuning uchun $k$ va $b$ dan hisoblangan kattalik xatoligini topishda (masalan, chiziqning $x$ o'qini kesish nuqtasi $-\\frac{b}{k}$) ularni mustaqil deb hisoblash xatoni oshirib ko'rsatadi (B2-L34, 6-bo'lim). Bu bog'liqlikni yo'qotishning oddiy yo'li — $x$ ni o'rtachadan hisoblash: $y=k\\left(x-\\bar x\\right)+\\bar y$ ko'rinishida $k$ va $\\bar y$ mustaqil.",
+  "ru": "**Корреляция параметров.** Погрешности наклона и отрезка обычно связаны: если все $x_i$ положительны, небольшой поворот прямой вокруг центра тяжести увеличивает наклон и уменьшает отрезок — они колеблются с противоположными знаками. Поэтому при нахождении погрешности величины, вычисленной из $k$ и $b$ (например, точки пересечения прямой с осью $x$, $-\\frac{b}{k}$), считать их независимыми — значит завысить ошибку (B2-L34, раздел 6). Простой способ убрать эту связь — отсчитывать $x$ от среднего: в виде $y=k\\left(x-\\bar x\\right)+\\bar y$ величины $k$ и $\\bar y$ независимы.",
+  "en": "**Correlation of the parameters.** The errors of slope and intercept are usually correlated: if all the $x_i$ are positive, a slight rotation of the line about its centre of mass increases the slope and decreases the intercept — they fluctuate with opposite signs. So when finding the error of a quantity computed from $k$ and $b$ (for example the $x$-axis crossing $-\\frac{b}{k}$), treating them as independent overestimates the error (B2-L34, section 6). A simple way to remove the correlation is to measure $x$ from its mean: in the form $y=k\\left(x-\\bar x\\right)+\\bar y$, $k$ and $\\bar y$ are independent."
+ },
+ {
+  "t": "li",
+  "uz": "**Nochiziqli modellar.** Hamma model ham chiziqlashtirilmaydi: masalan, fon ustidagi eksponenta $y=Ce^{-\\lambda x}+B$ yoki rezonans egri chizig'i. Bunday hollarda $\\chi^2$ ning o'zi kompyuterda parametrlar bo'yicha iteratsion minimallashtiriladi; parametr xatoligi $\\chi^2$ minimumdan $1$ ga ortadigan masofa bilan baholanadi. Chiziqlashtirish ham mumkin bo'lgan hollarda to'g'ridan-to'g'ri nochiziqli moslashtirish ko'pincha afzal: logarifmlash xatoliklarni buzadi va vaznlarni qo'lda hisobga olishni talab qiladi.",
+  "ru": "**Нелинейные модели.** Не всякую модель можно линеаризовать: например, экспоненту на фоне $y=Ce^{-\\lambda x}+B$ или резонансную кривую. Тогда сам $\\chi^2$ минимизируют на компьютере итерационно по параметрам; погрешность параметра оценивают по расстоянию, на котором $\\chi^2$ возрастает на $1$ от минимума. Даже когда линеаризация возможна, прямая нелинейная подгонка часто предпочтительнее: логарифмирование искажает погрешности и требует ручного учёта весов.",
+  "en": "**Non-linear models.** Not every model can be linearised: for example an exponential on a background, $y=Ce^{-\\lambda x}+B$, or a resonance curve. Then $\\chi^2$ itself is minimised iteratively over the parameters on a computer; the error of a parameter is estimated by how far it must move for $\\chi^2$ to rise by $1$ above its minimum. Even when linearisation is possible, a direct non-linear fit is often preferable: taking logarithms distorts the errors and requires weights to be handled by hand."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Korrelyatsiya koeffitsiyenti",
+  "ru": "6. Коэффициент корреляции",
+  "en": "6. The correlation coefficient"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif ([[F05]]).** Ikki kattalik orasidagi chiziqli bog'lanish kuchini **korrelyatsiya koeffitsiyenti** $r$ tavsiflaydi: $r=\\pm1$ — barcha nuqtalar aniq bitta to'g'ri chiziqda (ishora qiyalik ishorasi), $r=0$ — chiziqli bog'lanish yo'q. $r^2$ — $y$ ning tarqoqligidan chiziqli model «tushuntirgan» ulush: $r=-0.8$ bo'lsa, dispersiyaning $64\\%$ i chiziq bilan tushuntiriladi.",
+  "ru": "**Определение ([[F05]]).** Силу линейной связи между двумя величинами характеризует **коэффициент корреляции** $r$: $r=\\pm1$ — все точки точно на одной прямой (знак — знак наклона), $r=0$ — линейной связи нет. $r^2$ — доля разброса $y$, «объяснённая» линейной моделью: при $r=-0.8$ прямой объясняется $64\\%$ дисперсии.",
+  "en": "**Definition ([[F05]]).** The strength of the linear relationship between two quantities is described by the **correlation coefficient** $r$: $r=\\pm1$ means all points lie exactly on one straight line (the sign is that of the slope), $r=0$ means no linear relationship. $r^2$ is the fraction of the scatter of $y$ \"explained\" by the linear model: for $r=-0.8$ the line explains $64\\%$ of the variance."
+ },
+ {
+  "t": "m",
+  "m": "r=\\frac{\\sum\\left(x_i-\\bar x\\right)\\left(y_i-\\bar y\\right)}{\\sqrt{\\sum\\left(x_i-\\bar x\\right)^2\\sum\\left(y_i-\\bar y\\right)^2}},\\qquad -1\\leq r\\leq1"
+ },
+ {
+  "t": "li",
+  "uz": "**Ehtiyot bo'ling.** (1) $r=0$ bog'lanish yo'q degani emas: $y=x^2$ ni simmetrik oraliqda olsak, kuchli bog'lanishga qaramay $r=0$ — koeffitsiyent faqat **chiziqli** bog'lanishni sezadi. (2) Korrelyatsiya sababiyat emas: ikki kattalik uchinchisiga bog'liq bo'lishi mumkin. (3) Bitta chetlashgan nuqta $r$ ni ham, qiyalikni ham keskin o'zgartiradi — eng kichik kvadratlar katta qoldiqlarga juda sezgir, chunki ular kvadratga ko'tariladi. Shuning uchun har doim avval grafikka qarang, keyin son hisoblang. Fizikada $r$ dan ko'ra $\\chi^2$ va parametrlar xatoliklari muhimroq: «$r=0.99$» yomon modelda ham bo'lishi mumkin.",
+  "ru": "**Осторожно.** (1) $r=0$ не означает отсутствия связи: если взять $y=x^2$ на симметричном интервале, $r=0$ при сильной связи — коэффициент чувствует только **линейную** связь. (2) Корреляция — не причинность: две величины могут зависеть от третьей. (3) Одна выпадающая точка резко меняет и $r$, и наклон — наименьшие квадраты очень чувствительны к большим остаткам, ведь они возводятся в квадрат. Поэтому всегда сначала смотрите на график, потом считайте числа. В физике $\\chi^2$ и погрешности параметров важнее $r$: «$r=0.99$» бывает и у плохой модели.",
+  "en": "**Beware.** (1) $r=0$ does not mean there is no relationship: taking $y=x^2$ on a symmetric interval gives $r=0$ despite a strong dependence — the coefficient detects only a **linear** relationship. (2) Correlation is not causation: both quantities may depend on a third. (3) A single outlying point changes both $r$ and the slope sharply — least squares is very sensitive to large residuals because they are squared. So always look at the graph first and compute numbers afterwards. In physics $\\chi^2$ and the parameter errors matter more than $r$: \"$r=0.99$\" can occur with a bad model too."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L35-F05.png",
+   "ru": "figures/B2-L35-F05-ru.png",
+   "en": "figures/B2-L35-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Qoldiqlar tahlili",
+  "ru": "7. Анализ остатков",
+  "en": "7. Residual analysis"
+ },
+ {
+  "t": "li",
+  "uz": "**Qoldiqlar grafigi.** Moslashtirishdan keyin $d_i$ ni $x_i$ ga qarab chizamiz ([[F03]] ning pastki qismi). Yaxshi modelda qoldiqlar nol atrofida tasodifiy sochilgan, ishoralar aralash, kattaligi xatolik chiziqlari bilan solishtirsa bo'ladigan darajada. Agar qoldiqlarda **muntazam naqsh** bo'lsa — masalan, chetlarda musbat, o'rtada manfiy («tabassum») — to'g'ri chiziq modeli noto'g'ri: ma'lumotlarda egrilik bor. Qoldiqlar $x$ bilan kengayib borsa, xatoliklar bir xil emas va vaznli moslashtirish kerak.",
+  "ru": "**График остатков.** После подгонки строят $d_i$ от $x_i$ (нижняя часть [[F03]]). При хорошей модели остатки случайно разбросаны около нуля, знаки перемешаны, величина сравнима с планками погрешностей. Если в остатках есть **регулярный узор** — например, на краях положительные, в середине отрицательные («улыбка»), — модель прямой неверна: в данных есть кривизна. Если остатки расширяются с $x$, погрешности неодинаковы и нужна взвешенная подгонка.",
+  "en": "**The residual plot.** After fitting, plot $d_i$ against $x_i$ (the lower part of [[F03]]). For a good model the residuals are scattered randomly about zero with mixed signs and a size comparable to the error bars. If the residuals show a **systematic pattern** — for example positive at the ends and negative in the middle (a \"smile\") — the straight-line model is wrong: the data have curvature. If the residuals fan out with $x$, the errors are not equal and a weighted fit is needed."
+ },
+ {
+  "t": "li",
+  "uz": "**Ishoralar seriyasi.** Oddiy tekshiruv: tasodifiy qoldiqlarda ishoralar tez-tez almashadi; uzun bir xil ishorali seriyalar (masalan, $+++---+++$) modelning egriligini yoki yo'qotilgan hadni ko'rsatadi. Bunday holda kvadratik had qo'shib qayta moslashtiriladi va $\\chi^2$ ning kamayishi bir parametrga arziydimi, tekshiriladi: yangi parametr $\\chi^2$ ni kamida bir necha birlikka kamaytirishi kerak.",
+  "ru": "**Серии знаков.** Простая проверка: у случайных остатков знаки часто меняются; длинные серии одного знака (например, $+++---+++$) указывают на кривизну модели или потерянный член. В таком случае добавляют квадратичный член, подгоняют заново и проверяют, стоит ли уменьшение $\\chi^2$ лишнего параметра: новый параметр должен уменьшить $\\chi^2$ хотя бы на несколько единиц.",
+  "en": "**Runs of signs.** A simple test: random residuals change sign often; long runs of the same sign (for example $+++---+++$) point to curvature in the model or a missing term. In that case a quadratic term is added, the fit is redone, and one checks whether the decrease in $\\chi^2$ is worth the extra parameter: a new parameter should reduce $\\chi^2$ by at least a few units."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Interpolatsiya, ekstrapolatsiya, grafik bo'yicha hisoblash",
+  "ru": "8. Интерполяция, экстраполяция, вычисления по графику",
+  "en": "8. Interpolation, extrapolation, computing from a graph"
+ },
+ {
+  "t": "li",
+  "uz": "**Interpolatsiya va ekstrapolatsiya.** O'lchangan nuqtalar orasidagi qiymatni topish — **interpolatsiya**; u ishonchli, chunki bog'lanish ikki tomondan cheklangan. Chiziqli interpolatsiya: $y=y_1+\\frac{y_2-y_1}{x_2-x_1}\\left(x-x_1\\right)$. O'lchash oralig'idan tashqariga chiqish — **ekstrapolatsiya**; u xavfli: model faqat o'lchangan sohada tekshirilgan, tashqarida yangi fizika boshlanishi mumkin (metall qarshiligining chiziqli bog'lanishi past temperaturada buziladi, prujina katta cho'zilishda Guk qonunidan chiqadi). Shunga qaramay, mashhur ekstrapolatsiyalar bor: gaz termometri ma'lumotlarini $p=0$ gacha davom ettirib absolyut nol topilgan.",
+  "ru": "**Интерполяция и экстраполяция.** Нахождение значения между измеренными точками — **интерполяция**; она надёжна, так как зависимость ограничена с двух сторон. Линейная интерполяция: $y=y_1+\\frac{y_2-y_1}{x_2-x_1}\\left(x-x_1\\right)$. Выход за пределы диапазона измерений — **экстраполяция**; она опасна: модель проверена только в измеренной области, за её пределами может начаться новая физика (линейная зависимость сопротивления металла нарушается при низких температурах, пружина при больших растяжениях выходит из закона Гука). Тем не менее есть знаменитые экстраполяции: продолжив данные газового термометра до $p=0$, нашли абсолютный нуль.",
+  "en": "**Interpolation and extrapolation.** Finding a value between measured points is **interpolation**; it is reliable because the relationship is pinned down on both sides. Linear interpolation: $y=y_1+\\frac{y_2-y_1}{x_2-x_1}\\left(x-x_1\\right)$. Going beyond the measured range is **extrapolation**; it is dangerous: the model has been tested only in the measured region, and new physics may begin outside it (the linear resistance of a metal fails at low temperature; a spring leaves Hooke's law at large extensions). Even so, there are famous extrapolations: extending gas-thermometer data to $p=0$ located absolute zero."
+ },
+ {
+  "t": "li",
+  "uz": "**Sonli differensiallash ([[F06]]).** O'lchangan $y_i$ dan hosilani eng yaxshi **markaziy ayirma** beradi: $y'\\left(x_i\\right)\\approx\\frac{y_{i+1}-y_{i-1}}{2h}$ ($h$ — qadam); uning xatoligi $h^2$ tartibida, bir tomonlama ayirmaniki esa $h$ tartibida. Ammo qadamni haddan tashqari kichraytirish ham yomon: ayirma kichik bo'lib qoladi va o'lchash xatoligi kuchayadi (B2-L34 dagi yaqin sonlarni ayirish). Shuning uchun shovqinli ma'lumotlarda avval silliq egri chiziq o'tkazib, keyin uning hosilasini olish ma'qul.",
+  "ru": "**Численное дифференцирование ([[F06]]).** Производную по измеренным $y_i$ лучше всего даёт **центральная разность**: $y'\\left(x_i\\right)\\approx\\frac{y_{i+1}-y_{i-1}}{2h}$ ($h$ — шаг); её погрешность порядка $h^2$, а у односторонней разности — порядка $h$. Но слишком уменьшать шаг тоже плохо: разность становится малой и погрешность измерения усиливается (вычитание близких чисел из B2-L34). Поэтому для шумных данных лучше сначала провести гладкую кривую, а потом брать её производную.",
+  "en": "**Numerical differentiation ([[F06]]).** The derivative from measured $y_i$ is best given by the **central difference** $y'\\left(x_i\\right)\\approx\\frac{y_{i+1}-y_{i-1}}{2h}$ ($h$ is the step); its error is of order $h^2$, whereas that of a one-sided difference is of order $h$. But shrinking the step too far is also bad: the difference becomes small and the measurement error is amplified (subtracting close numbers, B2-L34). So for noisy data it is better first to draw a smooth curve and then take its derivative."
+ },
+ {
+  "t": "li",
+  "uz": "**Sonli integrallash.** Grafik ostidagi yuzani **trapetsiyalar usuli** beradi: qo'shni nuqtalarni to'g'ri chiziq bilan tutashtirib, trapetsiyalar yuzalari qo'shiladi. Integrallashda tasodifiy xatoliklar qisman bir-birini yo'qotadi, shuning uchun integral hosiladan ancha barqaror. GRE da yuza ko'pincha geometrik shakllarga (uchburchak, to'g'ri to'rtburchak, trapetsiya) bo'lib hisoblanadi — masalan, $v\\left(t\\right)$ grafigidan yo'l yoki $F\\left(x\\right)$ dan ish.",
+  "ru": "**Численное интегрирование.** Площадь под графиком даёт **метод трапеций**: соседние точки соединяют отрезками и складывают площади трапеций. При интегрировании случайные погрешности частично компенсируются, поэтому интеграл гораздо устойчивее производной. На GRE площадь часто считают, разбивая на геометрические фигуры (треугольник, прямоугольник, трапеция) — например, путь по графику $v\\left(t\\right)$ или работу по $F\\left(x\\right)$.",
+  "en": "**Numerical integration.** The area under a graph is given by the **trapezoid rule**: neighbouring points are joined by straight segments and the areas of the trapezoids are added. In integration the random errors partly cancel, so an integral is much more stable than a derivative. On the GRE the area is often found by splitting it into geometric shapes (triangle, rectangle, trapezoid) — for example the distance from a $v\\left(t\\right)$ graph or the work from $F\\left(x\\right)$."
+ },
+ {
+  "t": "m",
+  "m": "y'\\left(x_i\\right)\\approx\\frac{y_{i+1}-y_{i-1}}{2h},\\qquad \\int y\\,dx\\approx h\\left(\\frac{y_0}{2}+y_1+\\dots+y_{N-1}+\\frac{y_N}{2}\\right)"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L35-F06.png",
+   "ru": "figures/B2-L35-F06-ru.png",
+   "en": "figures/B2-L35-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. O'lchamlar tahlili",
+  "ru": "9. Анализ размерностей",
+  "en": "9. Dimensional analysis"
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy o'lchamlar.** Mexanikada har qanday kattalikning o'lchami massa $\\left[M\\right]$, uzunlik $\\left[L\\right]$ va vaqt $\\left[T\\right]$ darajalari ko'paytmasi; elektromagnetizmda tok $\\left[I\\right]$, termodinamikada temperatura $\\left[\\Theta\\right]$ qo'shiladi. Masalan, kuch $\\left[MLT^{-2}\\right]$, energiya $\\left[ML^2T^{-2}\\right]$, Plank doimiysi $\\left[ML^2T^{-1}\\right]$. **Bir jinslilik qoidasi**: tenglamaning har ikki tomoni va har bir qo'shiluvchi bir xil o'lchamga ega bo'lishi kerak; ko'rsatkichli funksiya, logarifm va sinusning argumenti o'lchamsiz.",
+  "ru": "**Основные размерности.** В механике размерность любой величины — произведение степеней массы $\\left[M\\right]$, длины $\\left[L\\right]$ и времени $\\left[T\\right]$; в электромагнетизме добавляется ток $\\left[I\\right]$, в термодинамике — температура $\\left[\\Theta\\right]$. Например, сила $\\left[MLT^{-2}\\right]$, энергия $\\left[ML^2T^{-2}\\right]$, постоянная Планка $\\left[ML^2T^{-1}\\right]$. **Правило однородности**: обе части уравнения и каждое слагаемое должны иметь одинаковую размерность; аргумент экспоненты, логарифма и синуса безразмерен.",
+  "en": "**Base dimensions.** In mechanics the dimension of any quantity is a product of powers of mass $\\left[M\\right]$, length $\\left[L\\right]$ and time $\\left[T\\right]$; electromagnetism adds current $\\left[I\\right]$ and thermodynamics temperature $\\left[\\Theta\\right]$. For example, force is $\\left[MLT^{-2}\\right]$, energy $\\left[ML^2T^{-2}\\right]$, Planck's constant $\\left[ML^2T^{-1}\\right]$. **The rule of homogeneity**: both sides of an equation and every term must have the same dimension; the argument of an exponential, a logarithm or a sine is dimensionless."
+ },
+ {
+  "t": "li",
+  "uz": "**Formulani tiklash (Reley usuli, [[F07]]).** Agar kattalik qaysi parametrlarga bog'liqligi ma'lum bo'lsa, ko'rsatkichlarni o'lchamlardan topish mumkin. Mayatnik davri $T$ ip uzunligi $l$, massa $m$ va $g$ ga bog'liq deylik: $T=Cl^{\\alpha}m^{\\beta}g^{\\gamma}$. O'lchamlar tengligi $\\left[T\\right]=\\left[L\\right]^{\\alpha}\\left[M\\right]^{\\beta}\\left[LT^{-2}\\right]^{\\gamma}$ uchta tenglama beradi: $\\beta=0$, $\\alpha+\\gamma=0$, $-2\\gamma=1$. Demak $T=C\\sqrt{\\frac{l}{g}}$ — massa kirmaydi, $l$ to'rt marta oshsa davr ikki marta oshadi. O'lchamsiz koeffitsiyent $C=2\\pi$ ni esa o'lchamlar tahlili bermaydi.",
+  "ru": "**Восстановление формулы (метод Рэлея, [[F07]]).** Если известно, от каких параметров зависит величина, показатели можно найти из размерностей. Пусть период маятника $T$ зависит от длины нити $l$, массы $m$ и $g$: $T=Cl^{\\alpha}m^{\\beta}g^{\\gamma}$. Равенство размерностей $\\left[T\\right]=\\left[L\\right]^{\\alpha}\\left[M\\right]^{\\beta}\\left[LT^{-2}\\right]^{\\gamma}$ даёт три уравнения: $\\beta=0$, $\\alpha+\\gamma=0$, $-2\\gamma=1$. Значит, $T=C\\sqrt{\\frac{l}{g}}$ — масса не входит, при увеличении $l$ в четыре раза период удваивается. Безразмерный коэффициент $C=2\\pi$ анализ размерностей не даёт.",
+  "en": "**Reconstructing a formula (Rayleigh's method, [[F07]]).** If it is known which parameters a quantity depends on, the exponents can be found from the dimensions. Suppose the period $T$ of a pendulum depends on the string length $l$, the mass $m$ and $g$: $T=Cl^{\\alpha}m^{\\beta}g^{\\gamma}$. Equating dimensions, $\\left[T\\right]=\\left[L\\right]^{\\alpha}\\left[M\\right]^{\\beta}\\left[LT^{-2}\\right]^{\\gamma}$, gives three equations: $\\beta=0$, $\\alpha+\\gamma=0$, $-2\\gamma=1$. So $T=C\\sqrt{\\frac{l}{g}}$ — the mass does not enter, and quadrupling $l$ doubles the period. The dimensionless coefficient $C=2\\pi$ is not given by dimensional analysis."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L35-F07.png",
+   "ru": "figures/B2-L35-F07-ru.png",
+   "en": "figures/B2-L35-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Cheklovlar.** O'lchamlar tahlili o'lchamsiz ko'paytuvchilarni ($2\\pi$, $\\frac{1}{2}$) va o'lchamsiz kombinatsiyalarga bog'liq funksiyalarni aniqlay olmaydi: agar parametrlardan o'lchamsiz kombinatsiya tuzish mumkin bo'lsa (masalan, tebranish amplitudasining burchagi), javob shu kombinatsiyaning noma'lum funksiyasini o'z ichiga oladi (**Bukingem $\\Pi$ teoremasi**). Shuningdek, muhim parametrni unutish noto'g'ri natija beradi. Lekin javob variantlarini tekshirishda bu usul beqiyos: noto'g'ri o'lchamli variant hisobsiz tashlab yuboriladi.",
+  "ru": "**Ограничения.** Анализ размерностей не определяет безразмерные множители ($2\\pi$, $\\frac{1}{2}$) и функции безразмерных комбинаций: если из параметров можно составить безразмерную комбинацию (например, угловую амплитуду колебаний), ответ содержит неизвестную функцию этой комбинации (**$\\Pi$-теорема Бакингема**). Кроме того, забытый важный параметр даёт неверный результат. Но для проверки вариантов ответа метод незаменим: вариант с неверной размерностью отбрасывается без вычислений.",
+  "en": "**Limitations.** Dimensional analysis cannot fix dimensionless factors ($2\\pi$, $\\frac{1}{2}$) or functions of dimensionless combinations: if a dimensionless combination can be formed from the parameters (for example, the angular amplitude of oscillation), the answer contains an unknown function of it (**the Buckingham $\\Pi$ theorem**). Also, forgetting an important parameter gives a wrong result. But for checking answer options the method is unrivalled: an option with the wrong dimension is discarded without any calculation."
+ },
+ {
+  "t": "li",
+  "uz": "**Elektr kattaliklari o'lchamlari.** SI da $\\left[I\\right]$ asosiy o'lcham: zaryad $\\left[IT\\right]$, kuchlanish $\\left[ML^2T^{-3}I^{-1}\\right]$, qarshilik $\\left[ML^2T^{-3}I^{-2}\\right]$, sig'im $\\left[M^{-1}L^{-2}T^4I^2\\right]$, induktivlik $\\left[ML^2T^{-2}I^{-2}\\right]$, magnit induksiya $\\left[MT^{-2}I^{-1}\\right]$. Bunday uzun formulalardan ko'ra fizik munosabatlardan foydalanish qulay: $\\left[RC\\right]=\\left[T\\right]$ chunki $q=CU$ va $U=IR$ dan $RC=\\frac{q}{I}$; $\\left[qvB\\right]$ — kuch; $\\left[\\frac{\\Phi}{t}\\right]$ — kuchlanish. Gauss birliklar tizimida esa formulalardagi $4\\pi\\varepsilon_0$ yo'q — boshqa manbalardagi formulalarni solishtirishda buni unutmaslik kerak.",
+  "ru": "**Размерности электрических величин.** В СИ $\\left[I\\right]$ — основная размерность: заряд $\\left[IT\\right]$, напряжение $\\left[ML^2T^{-3}I^{-1}\\right]$, сопротивление $\\left[ML^2T^{-3}I^{-2}\\right]$, ёмкость $\\left[M^{-1}L^{-2}T^4I^2\\right]$, индуктивность $\\left[ML^2T^{-2}I^{-2}\\right]$, магнитная индукция $\\left[MT^{-2}I^{-1}\\right]$. Вместо таких длинных формул удобнее пользоваться физическими соотношениями: $\\left[RC\\right]=\\left[T\\right]$, поскольку из $q=CU$ и $U=IR$ следует $RC=\\frac{q}{I}$; $\\left[qvB\\right]$ — сила; $\\left[\\frac{\\Phi}{t}\\right]$ — напряжение. В гауссовой системе в формулах нет $4\\pi\\varepsilon_0$ — это важно помнить, сравнивая формулы из разных источников.",
+  "en": "**Dimensions of electrical quantities.** In SI, $\\left[I\\right]$ is a base dimension: charge is $\\left[IT\\right]$, voltage $\\left[ML^2T^{-3}I^{-1}\\right]$, resistance $\\left[ML^2T^{-3}I^{-2}\\right]$, capacitance $\\left[M^{-1}L^{-2}T^4I^2\\right]$, inductance $\\left[ML^2T^{-2}I^{-2}\\right]$, magnetic field $\\left[MT^{-2}I^{-1}\\right]$. Rather than these long formulas it is easier to use physical relations: $\\left[RC\\right]=\\left[T\\right]$ because $q=CU$ and $U=IR$ give $RC=\\frac{q}{I}$; $\\left[qvB\\right]$ is a force; $\\left[\\frac{\\Phi}{t}\\right]$ is a voltage. In Gaussian units the formulas contain no $4\\pi\\varepsilon_0$ — worth remembering when comparing formulas from different sources."
+ },
+ {
+  "t": "li",
+  "uz": "**Foydali kombinatsiyalar.** O'lchamlarni tez tekshirish uchun yodda tuting: $\\hbar\\omega$, $kT$, $qU$, $mc^2$, $\\frac{e^2}{4\\pi\\varepsilon_0r}$ — energiya; $\\frac{\\hbar}{mc}$ (Kompton to'lqin uzunligi), $\\frac{\\hbar}{p}$ — uzunlik; $RC$, $\\frac{L}{R}$, $\\sqrt{LC}$ — vaqt; $\\frac{e^2}{4\\pi\\varepsilon_0\\hbar c}$ (nozik struktura doimiysi) — o'lchamsiz; $\\frac{1}{\\sqrt{\\varepsilon_0\\mu_0}}$ — tezlik. Elektr kattaliklarini mexanik o'lchamlarga keltirgandan ko'ra shu kombinatsiyalardan foydalanish tezroq.",
+  "ru": "**Полезные комбинации.** Для быстрой проверки размерностей помните: $\\hbar\\omega$, $kT$, $qU$, $mc^2$, $\\frac{e^2}{4\\pi\\varepsilon_0r}$ — энергия; $\\frac{\\hbar}{mc}$ (комптоновская длина волны), $\\frac{\\hbar}{p}$ — длина; $RC$, $\\frac{L}{R}$, $\\sqrt{LC}$ — время; $\\frac{e^2}{4\\pi\\varepsilon_0\\hbar c}$ (постоянная тонкой структуры) — безразмерна; $\\frac{1}{\\sqrt{\\varepsilon_0\\mu_0}}$ — скорость. Пользоваться этими комбинациями быстрее, чем сводить электрические величины к механическим размерностям.",
+  "en": "**Useful combinations.** For quick dimension checks remember: $\\hbar\\omega$, $kT$, $qU$, $mc^2$ and $\\frac{e^2}{4\\pi\\varepsilon_0r}$ are energies; $\\frac{\\hbar}{mc}$ (the Compton wavelength) and $\\frac{\\hbar}{p}$ are lengths; $RC$, $\\frac{L}{R}$ and $\\sqrt{LC}$ are times; $\\frac{e^2}{4\\pi\\varepsilon_0\\hbar c}$ (the fine-structure constant) is dimensionless; $\\frac{1}{\\sqrt{\\varepsilon_0\\mu_0}}$ is a speed. Using these combinations is faster than reducing electrical quantities to mechanical dimensions."
+ },
+ {
+  "t": "h2",
+  "uz": "10. Kattalik tartibini baholash va chegaraviy hollar",
+  "ru": "10. Оценка порядка величины и предельные случаи",
+  "en": "10. Order-of-magnitude estimates and limiting cases"
+ },
+ {
+  "t": "li",
+  "uz": "**Kattalik tartibi.** Ko'pincha aniq son emas, uning **kattalik tartibi** — eng yaqin o'nning darajasi — kerak. Fermi usuli: noma'lum kattalikni taxminan biladigan omillar ko'paytmasiga ajratish; har bir omildagi xatoliklar qisman bir-birini yo'qotadi va natija odatda $2$–$3$ marta aniqlikda chiqadi. Masalan, xonadagi havo massasi: hajm ~$50\\ \\mathrm{m^3}$, zichlik ~$1.2\\ \\mathrm{kg/m^3}$ — taxminan $60\\ \\mathrm{kg}$, ya'ni ~$10^2\\ \\mathrm{kg}$.",
+  "ru": "**Порядок величины.** Часто нужно не точное число, а его **порядок** — ближайшая степень десяти. Метод Ферми: разложить неизвестную величину на произведение примерно известных множителей; погрешности множителей частично компенсируются, и результат обычно верен с точностью в $2$–$3$ раза. Например, масса воздуха в комнате: объём ~$50\\ \\mathrm{m^3}$, плотность ~$1.2\\ \\mathrm{kg/m^3}$ — около $60\\ \\mathrm{kg}$, то есть ~$10^2\\ \\mathrm{kg}$.",
+  "en": "**Order of magnitude.** Often what is needed is not an exact number but its **order of magnitude** — the nearest power of ten. Fermi's method: break the unknown quantity into a product of roughly known factors; the errors of the factors partly cancel, and the result is usually right to within a factor of $2$–$3$. For example, the mass of air in a room: volume ~$50\\ \\mathrm{m^3}$, density ~$1.2\\ \\mathrm{kg/m^3}$ — about $60\\ \\mathrm{kg}$, i.e. ~$10^2\\ \\mathrm{kg}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Fermi baholashining misollari.** Qanday katta sonlar odatiy? Bir mol moddada $6\\cdot10^{23}$ molekula; $1\\ \\mathrm{cm^3}$ havoda ~$2.5\\cdot10^{19}$, suvda ~$3\\cdot10^{22}$; inson yuragi umr davomida ~$10^9$ marta uradi; Quyosh nuri Yerga ~$8$ minutda yetadi; Yer atmosferasining massasi $\\frac{p_0\\cdot4\\pi R^2}{g}$ dan baholanadi. Baholashda sonlarni $1$, $3$, $10$ gacha yaxlitlash va darajalarni alohida qo'shish qulay: $3\\cdot3\\approx10$. Natijani doim sog'lom fikr bilan tekshiring: kattalik tartibi xatosi (masalan, $\\mathrm{cm}$ va $\\mathrm{m}$ ni chalkashtirish) javobni $10^2$–$10^6$ marta buzadi.",
+  "ru": "**Примеры оценок Ферми.** Какие большие числа типичны? В моле вещества $6\\cdot10^{23}$ молекул; в $1\\ \\mathrm{cm^3}$ воздуха ~$2.5\\cdot10^{19}$, воды ~$3\\cdot10^{22}$; сердце человека за жизнь сокращается ~$10^9$ раз; свет Солнца доходит до Земли за ~$8$ минут; массу атмосферы Земли оценивают из $\\frac{p_0\\cdot4\\pi R^2}{g}$. При оценке удобно округлять числа до $1$, $3$, $10$ и отдельно складывать порядки: $3\\cdot3\\approx10$. Всегда проверяйте результат здравым смыслом: ошибка в порядке (например, путаница $\\mathrm{cm}$ и $\\mathrm{m}$) портит ответ в $10^2$–$10^6$ раз.",
+  "en": "**Examples of Fermi estimates.** Which large numbers are typical? A mole of substance has $6\\cdot10^{23}$ molecules; $1\\ \\mathrm{cm^3}$ of air has ~$2.5\\cdot10^{19}$, of water ~$3\\cdot10^{22}$; a human heart beats ~$10^9$ times in a lifetime; sunlight reaches the Earth in ~$8$ minutes; the mass of the Earth's atmosphere is estimated from $\\frac{p_0\\cdot4\\pi R^2}{g}$. When estimating, it is convenient to round numbers to $1$, $3$, $10$ and add the powers separately: $3\\cdot3\\approx10$. Always check the result with common sense: an order-of-magnitude slip (for example mixing up $\\mathrm{cm}$ and $\\mathrm{m}$) spoils the answer by a factor of $10^2$–$10^6$."
+ },
+ {
+  "t": "li",
+  "uz": "**Yodda tutiladigan sonlar ([[F08]]).** Energiyalar shkalasi: xona temperaturasida $kT$ ~$\\frac{1}{40}\\ \\mathrm{eV}$; ko'rinadigan foton $1.8$–$3.1\\ \\mathrm{eV}$; vodorod atomining ionlanish energiyasi $13.6\\ \\mathrm{eV}$; rentgen — keV; elektron tinchlik energiyasi $0.511\\ \\mathrm{MeV}$; nuklonning yadrodagi bog'lanish energiyasi ~$8\\ \\mathrm{MeV}$; proton tinchlik energiyasi $938\\ \\mathrm{MeV}$. Qulay kombinatsiyalar: $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$, $\\hbar c\\approx197\\ \\mathrm{MeV\\cdot fm}$. O'lchamlar: atom ~$10^{-10}\\ \\mathrm{m}$, yadro ~$10^{-15}\\ \\mathrm{m}$.",
+  "ru": "**Числа, которые надо помнить ([[F08]]).** Шкала энергий: $kT$ при комнатной температуре ~$\\frac{1}{40}\\ \\mathrm{eV}$; видимый фотон $1.8$–$3.1\\ \\mathrm{eV}$; энергия ионизации атома водорода $13.6\\ \\mathrm{eV}$; рентген — кэВ; энергия покоя электрона $0.511\\ \\mathrm{MeV}$; энергия связи нуклона в ядре ~$8\\ \\mathrm{MeV}$; энергия покоя протона $938\\ \\mathrm{MeV}$. Удобные комбинации: $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$, $\\hbar c\\approx197\\ \\mathrm{MeV\\cdot fm}$. Размеры: атом ~$10^{-10}\\ \\mathrm{m}$, ядро ~$10^{-15}\\ \\mathrm{m}$.",
+  "en": "**Numbers to remember ([[F08]]).** The energy scale: $kT$ at room temperature ~$\\frac{1}{40}\\ \\mathrm{eV}$; a visible photon $1.8$–$3.1\\ \\mathrm{eV}$; the ionisation energy of hydrogen $13.6\\ \\mathrm{eV}$; X-rays — keV; the electron rest energy $0.511\\ \\mathrm{MeV}$; the binding energy per nucleon ~$8\\ \\mathrm{MeV}$; the proton rest energy $938\\ \\mathrm{MeV}$. Handy combinations: $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$, $\\hbar c\\approx197\\ \\mathrm{MeV\\cdot fm}$. Sizes: an atom ~$10^{-10}\\ \\mathrm{m}$, a nucleus ~$10^{-15}\\ \\mathrm{m}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L35-F08.png",
+   "ru": "figures/B2-L35-F08-ru.png",
+   "en": "figures/B2-L35-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaraviy hollar.** Javobni tekshirishning ikkinchi tez usuli — parametrlarni chegaraga olib borish: massa yoki burchak nolga, temperatura cheksizlikka, ishqalanish koeffitsiyenti nolga. Masalan, qiya tekislikda kuch $mg\\sin\\theta$ mi yoki $mg\\cos\\theta$ mi? $\\theta=0$ da (gorizontal sirt) kuch nol bo'lishi kerak — demak $\\sin\\theta$. Ko'p variantli testda o'lchamlar tahlili va chegaraviy hollar ko'pincha hisobsiz bitta to'g'ri javobni qoldiradi.",
+  "ru": "**Предельные случаи.** Второй быстрый способ проверки ответа — устремить параметры к пределам: массу или угол к нулю, температуру к бесконечности, коэффициент трения к нулю. Например, сила на наклонной плоскости $mg\\sin\\theta$ или $mg\\cos\\theta$? При $\\theta=0$ (горизонтальная поверхность) сила должна быть нулём — значит, $\\sin\\theta$. В тесте с выбором ответа анализ размерностей и предельные случаи часто без вычислений оставляют один верный вариант.",
+  "en": "**Limiting cases.** The second quick way to check an answer is to push parameters to their limits: a mass or angle to zero, a temperature to infinity, a friction coefficient to zero. For example, is the force along an incline $mg\\sin\\theta$ or $mg\\cos\\theta$? At $\\theta=0$ (a horizontal surface) the force must vanish — so it is $\\sin\\theta$. In a multiple-choice test, dimensional analysis and limiting cases often leave a single correct option without any calculation."
+ },
+ {
+  "t": "h2",
+  "uz": "11. GRE usullari",
+  "ru": "11. Приёмы для GRE",
+  "en": "11. GRE techniques"
+ },
+ {
+  "t": "li",
+  "uz": "**Grafik savollar.** Avval o'qlarni o'qing: kattalik, birlik, chiziqli yoki logarifmik masshtab. Qiyalik so'ralsa, uning o'lchamini o'q birliklaridan toping va variantlarni saralang. Log-log grafikda qiyalik — daraja, dekadalarni sanang; yarim logarifmik grafikda ikki marta kamayish masofasi — yarim yemirilish davri.",
+  "ru": "**Вопросы по графикам.** Сначала прочитайте оси: величина, единица, линейный или логарифмический масштаб. Если спрашивают наклон, найдите его размерность по единицам осей и отсейте варианты. На двойном логарифмическом графике наклон — показатель степени, считайте декады; на полулогарифмическом расстояние уменьшения вдвое — период полураспада.",
+  "en": "**Graph questions.** Read the axes first: quantity, unit, linear or logarithmic scale. If the slope is asked for, find its dimension from the axis units and sift the options. On a log-log plot the slope is the exponent — count decades; on a semi-log plot the halving distance is the half-life."
+ },
+ {
+  "t": "li",
+  "uz": "**Moslashtirish savollari.** Eng kichik kvadratlar $\\sum d_i^2$ ni minimallashtiradi; to'g'ri chiziq $\\left(\\bar x,\\ \\bar y\\right)$ orqali o'tadi; $\\nu=N-m$; yaxshi moslashtirishda $\\frac{\\chi^2}{\\nu}\\approx1$. Parametr xatoligi $\\frac{1}{\\sqrt N}$ kabi kamayadi va $x$ oralig'i kengayishi bilan kamayadi.",
+  "ru": "**Вопросы о подгонке.** Наименьшие квадраты минимизируют $\\sum d_i^2$; прямая проходит через $\\left(\\bar x,\\ \\bar y\\right)$; $\\nu=N-m$; при хорошей подгонке $\\frac{\\chi^2}{\\nu}\\approx1$. Погрешность параметра убывает как $\\frac{1}{\\sqrt N}$ и уменьшается с расширением диапазона $x$.",
+  "en": "**Fitting questions.** Least squares minimises $\\sum d_i^2$; the line passes through $\\left(\\bar x,\\ \\bar y\\right)$; $\\nu=N-m$; for a good fit $\\frac{\\chi^2}{\\nu}\\approx1$. A parameter error falls as $\\frac{1}{\\sqrt N}$ and decreases as the range of $x$ widens."
+ },
+ {
+  "t": "li",
+  "uz": "**Har qanday masala uchun.** Hisobni boshlashdan oldin variantlarning o'lchamlarini solishtiring — ko'pincha bir-ikki variant darhol tushib qoladi. Hisobdan keyin chegaraviy hol va kattalik tartibi bilan tekshiring: atomdagi energiya eV, yadrodagi MeV; xona temperaturasidagi gaz molekulasi tezligi yuzlab m/s.",
+  "ru": "**Для любой задачи.** Прежде чем считать, сравните размерности вариантов — часто один-два варианта сразу отпадают. После расчёта проверьте предельным случаем и порядком величины: энергия в атоме — эВ, в ядре — МэВ; скорость молекулы газа при комнатной температуре — сотни м/с.",
+  "en": "**For any problem.** Before calculating, compare the dimensions of the options — often one or two drop out at once. After calculating, check with a limiting case and an order of magnitude: energies in an atom are eV, in a nucleus MeV; a gas molecule at room temperature moves at hundreds of m/s."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Qiyalik va uning birligi",
+    "ru": "Наклон и его единица",
+    "en": "Slope and its unit",
+    "m": "k=\\frac{\\Delta y}{\\Delta x},\\quad \\left[k\\right]=\\frac{\\left[y\\right]}{\\left[x\\right]}"
+   },
+   {
+    "uz": "Darajali bog'lanish",
+    "ru": "Степенная зависимость",
+    "en": "Power law",
+    "m": "\\lg y=\\lg a+n\\lg x"
+   },
+   {
+    "uz": "Eksponensial bog'lanish",
+    "ru": "Экспоненциальная зависимость",
+    "en": "Exponential law",
+    "m": "\\ln y=\\ln C-\\lambda x,\\quad T_{1/2}=\\frac{\\ln2}{\\lambda}"
+   },
+   {
+    "uz": "O'nli logarifmda qiyalik",
+    "ru": "Наклон в десятичных логарифмах",
+    "en": "Slope in base-10 logarithms",
+    "m": "-\\lambda\\lg e\\approx-0.434\\lambda"
+   },
+   {
+    "uz": "Eng kichik kvadratlar",
+    "ru": "Наименьшие квадраты",
+    "en": "Least squares",
+    "m": "k=\\frac{\\sum\\left(x_i-\\bar x\\right)\\left(y_i-\\bar y\\right)}{\\sum\\left(x_i-\\bar x\\right)^2},\\quad b=\\bar y-k\\bar x"
+   },
+   {
+    "uz": "Koordinata boshidan o'tuvchi chiziq",
+    "ru": "Прямая через начало координат",
+    "en": "Line through the origin",
+    "m": "k=\\frac{\\sum x_iy_i}{\\sum x_i^2}"
+   },
+   {
+    "uz": "Qiyalik xatoligi",
+    "ru": "Погрешность наклона",
+    "en": "Slope error",
+    "m": "\\sigma_k=\\frac{\\sigma}{\\sqrt{\\sum\\left(x_i-\\bar x\\right)^2}}"
+   },
+   {
+    "uz": "Kesma xatoligi",
+    "ru": "Погрешность отрезка",
+    "en": "Intercept error",
+    "m": "\\sigma_b=\\sigma_k\\sqrt{\\frac{\\sum x_i^2}{N}}"
+   },
+   {
+    "uz": "Qoldiqlardan $\\sigma$",
+    "ru": "$\\sigma$ по остаткам",
+    "en": "$\\sigma$ from residuals",
+    "m": "\\sigma\\approx\\sqrt{\\frac{\\sum d_i^2}{N-2}}"
+   },
+   {
+    "uz": "Chi-kvadrat",
+    "ru": "Хи-квадрат",
+    "en": "Chi-squared",
+    "m": "\\chi^2=\\sum\\left(\\frac{y_i-f\\left(x_i\\right)}{\\sigma_i}\\right)^2,\\quad \\frac{\\chi^2}{\\nu}\\approx1"
+   },
+   {
+    "uz": "Erkinlik darajalari soni",
+    "ru": "Число степеней свободы",
+    "en": "Degrees of freedom",
+    "m": "\\nu=N-m"
+   },
+   {
+    "uz": "Korrelyatsiya koeffitsiyenti",
+    "ru": "Коэффициент корреляции",
+    "en": "Correlation coefficient",
+    "m": "r=\\frac{\\sum\\left(x_i-\\bar x\\right)\\left(y_i-\\bar y\\right)}{\\sqrt{\\sum\\left(x_i-\\bar x\\right)^2\\sum\\left(y_i-\\bar y\\right)^2}}"
+   },
+   {
+    "uz": "Chiziqli interpolatsiya",
+    "ru": "Линейная интерполяция",
+    "en": "Linear interpolation",
+    "m": "y=y_1+\\frac{y_2-y_1}{x_2-x_1}\\left(x-x_1\\right)"
+   },
+   {
+    "uz": "Markaziy ayirma",
+    "ru": "Центральная разность",
+    "en": "Central difference",
+    "m": "y'\\approx\\frac{y_{i+1}-y_{i-1}}{2h}"
+   },
+   {
+    "uz": "Trapetsiyalar usuli",
+    "ru": "Метод трапеций",
+    "en": "Trapezoid rule",
+    "m": "\\int y\\,dx\\approx h\\left(\\frac{y_0}{2}+y_1+\\dots+\\frac{y_N}{2}\\right)"
+   },
+   {
+    "uz": "O'lchamlar tahlili",
+    "ru": "Анализ размерностей",
+    "en": "Dimensional analysis",
+    "m": "T=Cl^{\\alpha}m^{\\beta}g^{\\gamma}\\ \\Rightarrow\\ T=C\\sqrt{\\frac{l}{g}}"
+   },
+   {
+    "uz": "Foydali sonlar",
+    "ru": "Полезные числа",
+    "en": "Useful numbers",
+    "m": "hc\\approx1240\\ \\mathrm{eV\\cdot nm},\\quad kT\\approx\\frac{1}{40}\\ \\mathrm{eV}"
+   }
+  ]
+ }
+]
