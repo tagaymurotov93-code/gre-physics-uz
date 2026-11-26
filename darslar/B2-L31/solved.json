@@ -1,0 +1,856 @@
+[
+ {
+  "id": "B2-L31-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$27^\\circ\\mathrm{C}$ temperaturadagi kislorod ($M=32\\ \\mathrm{g/mol}$) molekulasining ilgarilanma harakati o'rtacha kinetik energiyasini va o'rtacha kvadratik tezligini toping.",
+   "ru": "Найдите среднюю кинетическую энергию поступательного движения и среднюю квадратичную скорость молекулы кислорода ($M=32\\ \\mathrm{g/mol}$) при $27^\\circ\\mathrm{C}$.",
+   "en": "Find the mean translational kinetic energy and the root-mean-square speed of an oxygen molecule ($M=32\\ \\mathrm{g/mol}$) at $27^\\circ\\mathrm{C}$."
+  },
+  "figure": "figures/B2-L31-S01.png",
+  "solution": {
+   "uz": [
+    "$T=300\\ \\mathrm{K}$: $$\\langle\\varepsilon\\rangle=\\frac{3}{2}kT=1.5\\cdot1.38\\cdot10^{-23}\\cdot300\\approx6.21\\cdot10^{-21}\\ \\mathrm{J}$$",
+    "O'rtacha kvadratik tezlik: $$\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3\\cdot8.31\\cdot300}{0.032}}\\approx483\\ \\mathrm{m/s}$$",
+    "Tekshiruv: $m_0=\\frac{M}{N_A}$ bilan $\\frac{1}{2}m_0\\langle v^2\\rangle$: $$\\frac{1}{2}\\cdot5.32\\cdot10^{-26}\\cdot483^2\\approx6.2\\cdot10^{-21}\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "$T=300\\ \\mathrm{K}$: $$\\langle\\varepsilon\\rangle=\\frac{3}{2}kT=1.5\\cdot1.38\\cdot10^{-23}\\cdot300\\approx6.21\\cdot10^{-21}\\ \\mathrm{J}$$",
+    "Средняя квадратичная скорость: $$\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3\\cdot8.31\\cdot300}{0.032}}\\approx483\\ \\mathrm{m/s}$$",
+    "Проверка: $\\frac{1}{2}m_0\\langle v^2\\rangle$ с $m_0=\\frac{M}{N_A}$: $$\\frac{1}{2}\\cdot5.32\\cdot10^{-26}\\cdot483^2\\approx6.2\\cdot10^{-21}\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "$T=300\\ \\mathrm{K}$: $$\\langle\\varepsilon\\rangle=\\frac{3}{2}kT=1.5\\cdot1.38\\cdot10^{-23}\\cdot300\\approx6.21\\cdot10^{-21}\\ \\mathrm{J}$$",
+    "The rms speed: $$\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3\\cdot8.31\\cdot300}{0.032}}\\approx483\\ \\mathrm{m/s}$$",
+    "Check: $\\frac{1}{2}m_0\\langle v^2\\rangle$ with $m_0=\\frac{M}{N_A}$: $$\\frac{1}{2}\\cdot5.32\\cdot10^{-26}\\cdot483^2\\approx6.2\\cdot10^{-21}\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "O'rtacha kinetik energiya: $\\langle\\varepsilon\\rangle=\\frac{3}{2}kT$",
+    "ru": "Средняя кинетическая энергия: $\\langle\\varepsilon\\rangle=\\frac{3}{2}kT$",
+    "en": "Mean kinetic energy: $\\langle\\varepsilon\\rangle=\\frac{3}{2}kT$"
+   },
+   {
+    "uz": "O'rtacha kvadratik tezlik: $\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3RT}{M}}$",
+    "ru": "Средняя квадратичная скорость: $\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3RT}{M}}$",
+    "en": "Root-mean-square speed: $\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3RT}{M}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Temperaturaning kinetik ma'nosi",
+   "ru": "Кинетический смысл температуры",
+   "en": "Kinetic meaning of temperature"
+  },
+  "answer": "\\langle\\varepsilon\\rangle\\approx6.21\\cdot10^{-21}\\ \\mathrm{J};\\ \\sqrt{\\langle v^2\\rangle}\\approx483\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "Irodov, «Problems in General Physics», 2.75-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Yuqori vakuumli kamerada $300\\ \\mathrm{K}$ da bosim $10^{-9}\\ \\mathrm{Pa}$. Molekulalar konsentratsiyasini va ular orasidagi o'rtacha masofani toping.",
+   "ru": "В высоковакуумной камере при $300\\ \\mathrm{K}$ давление $10^{-9}\\ \\mathrm{Pa}$. Найдите концентрацию молекул и среднее расстояние между ними.",
+   "en": "In a high-vacuum chamber at $300\\ \\mathrm{K}$ the pressure is $10^{-9}\\ \\mathrm{Pa}$. Find the concentration of molecules and the mean distance between them."
+  },
+  "figure": "figures/B2-L31-S02.png",
+  "solution": {
+   "uz": [
+    "Holat tenglamasidan: $$n=\\frac{p}{kT}=\\frac{10^{-9}}{1.38\\cdot10^{-23}\\cdot300}\\approx2.4\\cdot10^{11}\\ \\mathrm{m^{-3}}$$",
+    "Har bir molekulaga to'g'ri keladigan hajm $\\frac{1}{n}$: $$l=n^{-1/3}\\approx1.6\\cdot10^{-4}\\ \\mathrm{m}$$",
+    "Normal sharoit bilan solishtirish: $$\\frac{l}{3.3\\cdot10^{-9}\\ \\mathrm{m}}\\approx5\\cdot10^4$$"
+   ],
+   "ru": [
+    "Из уравнения состояния: $$n=\\frac{p}{kT}=\\frac{10^{-9}}{1.38\\cdot10^{-23}\\cdot300}\\approx2.4\\cdot10^{11}\\ \\mathrm{m^{-3}}$$",
+    "Объём на одну молекулу $\\frac{1}{n}$: $$l=n^{-1/3}\\approx1.6\\cdot10^{-4}\\ \\mathrm{m}$$",
+    "Сравнение с нормальными условиями: $$\\frac{l}{3.3\\cdot10^{-9}\\ \\mathrm{m}}\\approx5\\cdot10^4$$"
+   ],
+   "en": [
+    "From the equation of state: $$n=\\frac{p}{kT}=\\frac{10^{-9}}{1.38\\cdot10^{-23}\\cdot300}\\approx2.4\\cdot10^{11}\\ \\mathrm{m^{-3}}$$",
+    "The volume per molecule is $\\frac{1}{n}$: $$l=n^{-1/3}\\approx1.6\\cdot10^{-4}\\ \\mathrm{m}$$",
+    "Comparison with standard conditions: $$\\frac{l}{3.3\\cdot10^{-9}\\ \\mathrm{m}}\\approx5\\cdot10^4$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Holat tenglamasi: $p=nkT$",
+    "ru": "Уравнение состояния: $p=nkT$",
+    "en": "Equation of state: $p=nkT$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Holat tenglamasi",
+   "ru": "Уравнение состояния",
+   "en": "Equation of state"
+  },
+  "answer": "n\\approx2.4\\cdot10^{11}\\ \\mathrm{m^{-3}};\\ l\\approx0.16\\ \\mathrm{mm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "Irodov, «Problems in General Physics», 2.62-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Bosimi $100\\ \\mathrm{kPa}$, zichligi $1.2\\ \\mathrm{kg/m^3}$ bo'lgan gaz molekulalarining o'rtacha kvadratik tezligini toping. Molekulalar massasi kerakmi?",
+   "ru": "Найдите среднюю квадратичную скорость молекул газа с давлением $100\\ \\mathrm{kPa}$ и плотностью $1.2\\ \\mathrm{kg/m^3}$. Нужна ли масса молекул?",
+   "en": "Find the rms speed of the molecules of a gas with pressure $100\\ \\mathrm{kPa}$ and density $1.2\\ \\mathrm{kg/m^3}$. Is the molecular mass needed?"
+  },
+  "figure": "figures/B2-L31-S03.png",
+  "solution": {
+   "uz": [
+    "Bosimning kinetik ifodasi: $$p=\\frac{1}{3}\\rho\\langle v^2\\rangle$$",
+    "Tezlik (massa kerak emas): $$\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3p}{\\rho}}=\\sqrt{\\frac{3\\cdot10^5}{1.2}}=500\\ \\mathrm{m/s}$$",
+    "Tekshiruv: $300\\ \\mathrm{K}$ dagi havo uchun: $$\\sqrt{\\frac{3RT}{M}}=\\sqrt{\\frac{3\\cdot8.31\\cdot300}{0.029}}\\approx508\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Кинетическое выражение давления: $$p=\\frac{1}{3}\\rho\\langle v^2\\rangle$$",
+    "Скорость (масса не нужна): $$\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3p}{\\rho}}=\\sqrt{\\frac{3\\cdot10^5}{1.2}}=500\\ \\mathrm{m/s}$$",
+    "Проверка: для воздуха при $300\\ \\mathrm{K}$: $$\\sqrt{\\frac{3RT}{M}}=\\sqrt{\\frac{3\\cdot8.31\\cdot300}{0.029}}\\approx508\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "The kinetic expression for pressure: $$p=\\frac{1}{3}\\rho\\langle v^2\\rangle$$",
+    "The speed (no mass needed): $$\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3p}{\\rho}}=\\sqrt{\\frac{3\\cdot10^5}{1.2}}=500\\ \\mathrm{m/s}$$",
+    "Check: for air at $300\\ \\mathrm{K}$: $$\\sqrt{\\frac{3RT}{M}}=\\sqrt{\\frac{3\\cdot8.31\\cdot300}{0.029}}\\approx508\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bosimning kinetik ifodasi: $p=\\frac{1}{3}\\rho\\langle v^2\\rangle$",
+    "ru": "Кинетическое выражение давления: $p=\\frac{1}{3}\\rho\\langle v^2\\rangle$",
+    "en": "Kinetic expression for pressure: $p=\\frac{1}{3}\\rho\\langle v^2\\rangle$"
+   },
+   null,
+   {
+    "uz": "O'rtacha kvadratik tezlik: $\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3RT}{M}}$",
+    "ru": "Средняя квадратичная скорость: $\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3RT}{M}}$",
+    "en": "Root-mean-square speed: $\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3RT}{M}}$"
+   }
+  ],
+  "basis": {
+   "uz": "Bosimning kinetik ifodasi",
+   "ru": "Кинетическое выражение давления",
+   "en": "Kinetic expression for pressure"
+  },
+  "answer": "\\sqrt{\\langle v^2\\rangle}=500\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original (B2-L31, bosim va tezlik)"
+ },
+ {
+  "id": "B2-L31-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$300\\ \\mathrm{K}$ dagi azot ($M=28\\ \\mathrm{g/mol}$) uchun eng ehtimolli, o'rtacha va o'rtacha kvadratik tezliklarni toping.",
+   "ru": "Найдите наиболее вероятную, среднюю и среднюю квадратичную скорости для азота ($M=28\\ \\mathrm{g/mol}$) при $300\\ \\mathrm{K}$.",
+   "en": "Find the most probable, mean and rms speeds for nitrogen ($M=28\\ \\mathrm{g/mol}$) at $300\\ \\mathrm{K}$."
+  },
+  "figure": "figures/B2-L31-S04.png",
+  "solution": {
+   "uz": [
+    "Eng ehtimolli tezlik: $$\\tilde v=\\sqrt{\\frac{2\\cdot8.31\\cdot300}{0.028}}\\approx422\\ \\mathrm{m/s}$$",
+    "O'rtacha tezlik: $$\\langle v\\rangle=\\sqrt{\\frac{8}{\\pi}}\\sqrt{\\frac{RT}{M}}\\approx476\\ \\mathrm{m/s}$$",
+    "O'rtacha kvadratik tezlik va nisbatlar: $$\\sqrt{\\langle v^2\\rangle}\\approx517\\ \\mathrm{m/s},\\qquad 1:1.128:1.225$$"
+   ],
+   "ru": [
+    "Наиболее вероятная скорость: $$\\tilde v=\\sqrt{\\frac{2\\cdot8.31\\cdot300}{0.028}}\\approx422\\ \\mathrm{m/s}$$",
+    "Средняя скорость: $$\\langle v\\rangle=\\sqrt{\\frac{8}{\\pi}}\\sqrt{\\frac{RT}{M}}\\approx476\\ \\mathrm{m/s}$$",
+    "Средняя квадратичная скорость и отношения: $$\\sqrt{\\langle v^2\\rangle}\\approx517\\ \\mathrm{m/s},\\qquad 1:1.128:1.225$$"
+   ],
+   "en": [
+    "The most probable speed: $$\\tilde v=\\sqrt{\\frac{2\\cdot8.31\\cdot300}{0.028}}\\approx422\\ \\mathrm{m/s}$$",
+    "The mean speed: $$\\langle v\\rangle=\\sqrt{\\frac{8}{\\pi}}\\sqrt{\\frac{RT}{M}}\\approx476\\ \\mathrm{m/s}$$",
+    "The rms speed and the ratios: $$\\sqrt{\\langle v^2\\rangle}\\approx517\\ \\mathrm{m/s},\\qquad 1:1.128:1.225$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Xarakterli tezliklar: $\\tilde v=\\sqrt{\\frac{2RT}{M}}$, $\\langle v\\rangle=\\sqrt{\\frac{8RT}{\\pi M}}$",
+    "ru": "Характерные скорости: $\\tilde v=\\sqrt{\\frac{2RT}{M}}$, $\\langle v\\rangle=\\sqrt{\\frac{8RT}{\\pi M}}$",
+    "en": "Characteristic speeds: $\\tilde v=\\sqrt{\\frac{2RT}{M}}$, $\\langle v\\rangle=\\sqrt{\\frac{8RT}{\\pi M}}$"
+   },
+   null,
+   {
+    "uz": "O'rtacha kvadratik tezlik: $\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3RT}{M}}$",
+    "ru": "Средняя квадратичная скорость: $\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3RT}{M}}$",
+    "en": "Root-mean-square speed: $\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3RT}{M}}$"
+   }
+  ],
+  "basis": {
+   "uz": "Xarakterli tezliklar",
+   "ru": "Характерные скорости",
+   "en": "Characteristic speeds"
+  },
+  "answer": "\\tilde v\\approx422;\\ \\langle v\\rangle\\approx476;\\ \\sqrt{\\langle v^2\\rangle}\\approx517\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Irodov, «Problems in General Physics», 2.83-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$300\\ \\mathrm{K}$ da: a) inersiya momenti $1.4\\cdot10^{-46}\\ \\mathrm{kg\\cdot m^2}$ bo'lgan azot molekulasining o'rtacha kvadratik burchak tezligini; b) havoda muallaq turgan diametri $0.1\\ \\mu\\mathrm{m}$ li suv tomchisining o'rtacha kvadratik tezligini toping.",
+   "ru": "При $300\\ \\mathrm{K}$ найдите: а) среднюю квадратичную угловую скорость молекулы азота с моментом инерции $1.4\\cdot10^{-46}\\ \\mathrm{kg\\cdot m^2}$; б) среднюю квадратичную скорость взвешенной в воздухе капли воды диаметром $0.1\\ \\mu\\mathrm{m}$.",
+   "en": "At $300\\ \\mathrm{K}$ find: a) the rms angular velocity of a nitrogen molecule with moment of inertia $1.4\\cdot10^{-46}\\ \\mathrm{kg\\cdot m^2}$; b) the rms speed of a water droplet of diameter $0.1\\ \\mu\\mathrm{m}$ suspended in air."
+  },
+  "figure": "figures/B2-L31-S05.png",
+  "solution": {
+   "uz": [
+    "a) Ikki aylanma daraja, har biriga $\\frac{1}{2}kT$: $$\\frac{1}{2}I\\langle\\omega^2\\rangle=kT\\ \\Rightarrow\\ \\sqrt{\\langle\\omega^2\\rangle}=\\sqrt{\\frac{2kT}{I}}\\approx7.7\\cdot10^{12}\\ \\mathrm{rad/s}$$",
+    "b) Tomchi massasi: $$m=\\rho\\frac{\\pi d^3}{6}\\approx5.2\\cdot10^{-19}\\ \\mathrm{kg}$$",
+    "Teng taqsimlanish massaga bog'liq emas: $$\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3kT}{m}}\\approx0.15\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "а) Две вращательные степени, на каждую $\\frac{1}{2}kT$: $$\\frac{1}{2}I\\langle\\omega^2\\rangle=kT\\ \\Rightarrow\\ \\sqrt{\\langle\\omega^2\\rangle}=\\sqrt{\\frac{2kT}{I}}\\approx7.7\\cdot10^{12}\\ \\mathrm{rad/s}$$",
+    "б) Масса капли: $$m=\\rho\\frac{\\pi d^3}{6}\\approx5.2\\cdot10^{-19}\\ \\mathrm{kg}$$",
+    "Равнораспределение не зависит от массы: $$\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3kT}{m}}\\approx0.15\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "a) Two rotational degrees, $\\frac{1}{2}kT$ each: $$\\frac{1}{2}I\\langle\\omega^2\\rangle=kT\\ \\Rightarrow\\ \\sqrt{\\langle\\omega^2\\rangle}=\\sqrt{\\frac{2kT}{I}}\\approx7.7\\cdot10^{12}\\ \\mathrm{rad/s}$$",
+    "b) The mass of the droplet: $$m=\\rho\\frac{\\pi d^3}{6}\\approx5.2\\cdot10^{-19}\\ \\mathrm{kg}$$",
+    "Equipartition does not depend on mass: $$\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3kT}{m}}\\approx0.15\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Teng taqsimlanish: $\\left\\langle\\frac{1}{2}I\\omega_x^2\\right\\rangle=\\frac{1}{2}kT$",
+    "ru": "Равнораспределение: $\\left\\langle\\frac{1}{2}I\\omega_x^2\\right\\rangle=\\frac{1}{2}kT$",
+    "en": "Equipartition: $\\left\\langle\\frac{1}{2}I\\omega_x^2\\right\\rangle=\\frac{1}{2}kT$"
+   },
+   null,
+   {
+    "uz": "O'rtacha kinetik energiya: $\\langle\\varepsilon\\rangle=\\frac{3}{2}kT$",
+    "ru": "Средняя кинетическая энергия: $\\langle\\varepsilon\\rangle=\\frac{3}{2}kT$",
+    "en": "Mean kinetic energy: $\\langle\\varepsilon\\rangle=\\frac{3}{2}kT$"
+   }
+  ],
+  "basis": {
+   "uz": "Teng taqsimlanish qonuni",
+   "ru": "Закон равнораспределения",
+   "en": "Equipartition theorem"
+  },
+  "answer": "\\sqrt{\\langle\\omega^2\\rangle}\\approx7.7\\cdot10^{12}\\ \\mathrm{rad/s};\\ \\sqrt{\\langle v^2\\rangle}\\approx0.15\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "Irodov, «Problems in General Physics», 2.75, 2.78-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Temperatura $280\\ \\mathrm{K}$ bo'lgan izotermik atmosferada kislorod konsentratsiyasi qanday balandlikda yer sirtidagidan $2$ marta kam bo'ladi ($g=9.8\\ \\mathrm{m/s^2}$)? Kislorod uchun balandlik shkalasini ham toping.",
+   "ru": "На какой высоте в изотермической атмосфере с температурой $280\\ \\mathrm{K}$ концентрация кислорода в $2$ раза меньше, чем у поверхности Земли ($g=9.8\\ \\mathrm{m/s^2}$)? Найдите также шкалу высот для кислорода.",
+   "en": "At what height in an isothermal atmosphere at $280\\ \\mathrm{K}$ is the concentration of oxygen $2$ times smaller than at the Earth's surface ($g=9.8\\ \\mathrm{m/s^2}$)? Also find the scale height for oxygen."
+  },
+  "figure": "figures/B2-L31-S06.png",
+  "solution": {
+   "uz": [
+    "Barometrik formula: $$\\frac{n}{n_0}=e^{-\\frac{Mgh}{RT}}=\\frac{1}{2}$$",
+    "Logarifmlaymiz: $$h=\\frac{RT\\ln2}{Mg}=\\frac{8.31\\cdot280\\cdot0.693}{0.032\\cdot9.8}\\approx5.1\\ \\mathrm{km}$$",
+    "Balandlik shkalasi: $$H=\\frac{RT}{Mg}\\approx7.4\\ \\mathrm{km},\\qquad h=H\\ln2$$"
+   ],
+   "ru": [
+    "Барометрическая формула: $$\\frac{n}{n_0}=e^{-\\frac{Mgh}{RT}}=\\frac{1}{2}$$",
+    "Логарифмируем: $$h=\\frac{RT\\ln2}{Mg}=\\frac{8.31\\cdot280\\cdot0.693}{0.032\\cdot9.8}\\approx5.1\\ \\mathrm{km}$$",
+    "Шкала высот: $$H=\\frac{RT}{Mg}\\approx7.4\\ \\mathrm{km},\\qquad h=H\\ln2$$"
+   ],
+   "en": [
+    "The barometric formula: $$\\frac{n}{n_0}=e^{-\\frac{Mgh}{RT}}=\\frac{1}{2}$$",
+    "Taking logarithms: $$h=\\frac{RT\\ln2}{Mg}=\\frac{8.31\\cdot280\\cdot0.693}{0.032\\cdot9.8}\\approx5.1\\ \\mathrm{km}$$",
+    "The scale height: $$H=\\frac{RT}{Mg}\\approx7.4\\ \\mathrm{km},\\qquad h=H\\ln2$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Barometrik formula: $n=n_0e^{-\\frac{Mgh}{RT}}$",
+    "ru": "Барометрическая формула: $n=n_0e^{-\\frac{Mgh}{RT}}$",
+    "en": "Barometric formula: $n=n_0e^{-\\frac{Mgh}{RT}}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Barometrik formula",
+   "ru": "Барометрическая формула",
+   "en": "Barometric formula"
+  },
+  "answer": "h\\approx5.1\\ \\mathrm{km};\\ H\\approx7.4\\ \\mathrm{km}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "Irodov, «Problems in General Physics», 2.104-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $1\\ \\mathrm{m}$, ikki uchi berk gorizontal quvurda $300\\ \\mathrm{K}$ da argon ($M=40\\ \\mathrm{g/mol}$) bor. Quvur o'z o'qi bo'ylab qanday tezlanish bilan harakatlansa, uchlaridagi konsentratsiyalar $1\\%$ ga farq qiladi?",
+   "ru": "В горизонтальной трубке длиной $1\\ \\mathrm{m}$, закрытой с обоих концов, находится аргон ($M=40\\ \\mathrm{g/mol}$) при $300\\ \\mathrm{K}$. С каким ускорением должна двигаться трубка вдоль своей оси, чтобы концентрации на концах отличались на $1\\%$?",
+   "en": "A horizontal tube of length $1\\ \\mathrm{m}$, closed at both ends, contains argon ($M=40\\ \\mathrm{g/mol}$) at $300\\ \\mathrm{K}$. With what acceleration must the tube move along its axis for the concentrations at the ends to differ by $1\\%$?"
+  },
+  "figure": "figures/B2-L31-S07.png",
+  "solution": {
+   "uz": [
+    "Tezlanuvchi sanoq sistemasida inersiya kuchi — potensial $U=m_0ax$: $$\\frac{n_1}{n_2}=e^{\\frac{Mal}{RT}}=1.01$$",
+    "Logarifmlaymiz: $$a=\\frac{RT\\ln1.01}{Ml}=\\frac{8.31\\cdot300\\cdot0.00995}{0.04\\cdot1}$$",
+    "Natija: $$a\\approx620\\ \\mathrm{m/s^2}\\approx63g$$"
+   ],
+   "ru": [
+    "В ускоренной системе отсчёта сила инерции — потенциал $U=m_0ax$: $$\\frac{n_1}{n_2}=e^{\\frac{Mal}{RT}}=1.01$$",
+    "Логарифмируем: $$a=\\frac{RT\\ln1.01}{Ml}=\\frac{8.31\\cdot300\\cdot0.00995}{0.04\\cdot1}$$",
+    "Результат: $$a\\approx620\\ \\mathrm{m/s^2}\\approx63g$$"
+   ],
+   "en": [
+    "In the accelerating frame the inertial force gives the potential $U=m_0ax$: $$\\frac{n_1}{n_2}=e^{\\frac{Mal}{RT}}=1.01$$",
+    "Taking logarithms: $$a=\\frac{RT\\ln1.01}{Ml}=\\frac{8.31\\cdot300\\cdot0.00995}{0.04\\cdot1}$$",
+    "The result: $$a\\approx620\\ \\mathrm{m/s^2}\\approx63g$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bolsman taqsimoti: $n=n_0e^{-\\frac{U}{kT}}$",
+    "ru": "Распределение Больцмана: $n=n_0e^{-\\frac{U}{kT}}$",
+    "en": "Boltzmann distribution: $n=n_0e^{-\\frac{U}{kT}}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Bolsman taqsimoti",
+   "ru": "Распределение Больцмана",
+   "en": "Boltzmann distribution"
+  },
+  "answer": "a\\approx620\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "Irodov, «Problems in General Physics», 2.108-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Gaz molekulalarining qancha qismi tezligi o'rtacha tezlikdan $1\\%$ dan kam farq qiladi?",
+   "ru": "Какая доля молекул газа имеет скорость, отличающуюся от средней скорости менее чем на $1\\%$?",
+   "en": "What fraction of gas molecules have speeds differing from the mean speed by less than $1\\%$?"
+  },
+  "figure": "figures/B2-L31-S08.png",
+  "solution": {
+   "uz": [
+    "O'lchovsiz tezlik: $$u=\\frac{\\langle v\\rangle}{\\tilde v}=\\frac{2}{\\sqrt\\pi}\\approx1.128,\\qquad \\Delta u=0.02u$$",
+    "Universal taqsimot: $$\\frac{\\Delta N}{N}=\\frac{4}{\\sqrt\\pi}u^2e^{-u^2}\\Delta u$$",
+    "Hisoblaymiz: $$\\frac{\\Delta N}{N}=2.257\\cdot1.273\\cdot0.280\\cdot0.0226\\approx0.018$$"
+   ],
+   "ru": [
+    "Безразмерная скорость: $$u=\\frac{\\langle v\\rangle}{\\tilde v}=\\frac{2}{\\sqrt\\pi}\\approx1.128,\\qquad \\Delta u=0.02u$$",
+    "Универсальное распределение: $$\\frac{\\Delta N}{N}=\\frac{4}{\\sqrt\\pi}u^2e^{-u^2}\\Delta u$$",
+    "Вычисляем: $$\\frac{\\Delta N}{N}=2.257\\cdot1.273\\cdot0.280\\cdot0.0226\\approx0.018$$"
+   ],
+   "en": [
+    "The dimensionless speed: $$u=\\frac{\\langle v\\rangle}{\\tilde v}=\\frac{2}{\\sqrt\\pi}\\approx1.128,\\qquad \\Delta u=0.02u$$",
+    "The universal distribution: $$\\frac{\\Delta N}{N}=\\frac{4}{\\sqrt\\pi}u^2e^{-u^2}\\Delta u$$",
+    "Calculating: $$\\frac{\\Delta N}{N}=2.257\\cdot1.273\\cdot0.280\\cdot0.0226\\approx0.018$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Maksvell taqsimoti: $F\\,dv=\\frac{4}{\\sqrt\\pi}u^2e^{-u^2}du$, $u=\\frac{v}{\\tilde v}$",
+    "ru": "Распределение Максвелла: $F\\,dv=\\frac{4}{\\sqrt\\pi}u^2e^{-u^2}du$, $u=\\frac{v}{\\tilde v}$",
+    "en": "Maxwell distribution: $F\\,dv=\\frac{4}{\\sqrt\\pi}u^2e^{-u^2}du$, $u=\\frac{v}{\\tilde v}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Maksvell taqsimoti",
+   "ru": "Распределение Максвелла",
+   "en": "Maxwell distribution"
+  },
+  "answer": "\\frac{\\Delta N}{N}\\approx1.8\\cdot10^{-2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Irodov, «Problems in General Physics», 2.84-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Qanday temperaturada geliy ($M=4\\ \\mathrm{g/mol}$) molekulalarining o'rtacha kvadratik tezligi eng ehtimolli tezligidan $200\\ \\mathrm{m/s}$ ga katta bo'ladi?",
+   "ru": "При какой температуре средняя квадратичная скорость молекул гелия ($M=4\\ \\mathrm{g/mol}$) больше наиболее вероятной на $200\\ \\mathrm{m/s}$?",
+   "en": "At what temperature does the rms speed of helium ($M=4\\ \\mathrm{g/mol}$) molecules exceed the most probable speed by $200\\ \\mathrm{m/s}$?"
+  },
+  "figure": "figures/B2-L31-S09.png",
+  "solution": {
+   "uz": [
+    "Ikkala tezlik $\\sqrt{\\frac{RT}{M}}$ ga proporsional: $$\\sqrt{\\langle v^2\\rangle}-\\tilde v=\\left(\\sqrt3-\\sqrt2\\right)\\sqrt{\\frac{RT}{M}}=200\\ \\mathrm{m/s}$$",
+    "Bundan: $$\\sqrt{\\frac{RT}{M}}=\\frac{200}{0.318}\\approx629\\ \\mathrm{m/s}$$",
+    "Temperatura: $$T=\\frac{629^2\\cdot0.004}{8.31}\\approx191\\ \\mathrm{K}$$"
+   ],
+   "ru": [
+    "Обе скорости пропорциональны $\\sqrt{\\frac{RT}{M}}$: $$\\sqrt{\\langle v^2\\rangle}-\\tilde v=\\left(\\sqrt3-\\sqrt2\\right)\\sqrt{\\frac{RT}{M}}=200\\ \\mathrm{m/s}$$",
+    "Отсюда: $$\\sqrt{\\frac{RT}{M}}=\\frac{200}{0.318}\\approx629\\ \\mathrm{m/s}$$",
+    "Температура: $$T=\\frac{629^2\\cdot0.004}{8.31}\\approx191\\ \\mathrm{K}$$"
+   ],
+   "en": [
+    "Both speeds are proportional to $\\sqrt{\\frac{RT}{M}}$: $$\\sqrt{\\langle v^2\\rangle}-\\tilde v=\\left(\\sqrt3-\\sqrt2\\right)\\sqrt{\\frac{RT}{M}}=200\\ \\mathrm{m/s}$$",
+    "Hence: $$\\sqrt{\\frac{RT}{M}}=\\frac{200}{0.318}\\approx629\\ \\mathrm{m/s}$$",
+    "The temperature: $$T=\\frac{629^2\\cdot0.004}{8.31}\\approx191\\ \\mathrm{K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Xarakterli tezliklar: $\\tilde v=\\sqrt{\\frac{2RT}{M}}$, $\\langle v\\rangle=\\sqrt{\\frac{8RT}{\\pi M}}$",
+    "ru": "Характерные скорости: $\\tilde v=\\sqrt{\\frac{2RT}{M}}$, $\\langle v\\rangle=\\sqrt{\\frac{8RT}{\\pi M}}$",
+    "en": "Characteristic speeds: $\\tilde v=\\sqrt{\\frac{2RT}{M}}$, $\\langle v\\rangle=\\sqrt{\\frac{8RT}{\\pi M}}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Xarakterli tezliklar",
+   "ru": "Характерные скорости",
+   "en": "Characteristic speeds"
+  },
+  "answer": "T\\approx191\\ \\mathrm{K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 2.85-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Normal sharoitda ($273\\ \\mathrm{K}$, $101.3\\ \\mathrm{kPa}$) azot molekulalari idish devorining $1\\ \\mathrm{cm^2}$ yuzasiga sekundiga necha marta uriladi?",
+   "ru": "Сколько раз в секунду ударяются молекулы азота о площадку стенки сосуда $1\\ \\mathrm{cm^2}$ при нормальных условиях ($273\\ \\mathrm{K}$, $101.3\\ \\mathrm{kPa}$)?",
+   "en": "How many times per second do nitrogen molecules strike a $1\\ \\mathrm{cm^2}$ area of the vessel wall under standard conditions ($273\\ \\mathrm{K}$, $101.3\\ \\mathrm{kPa}$)?"
+  },
+  "figure": "figures/B2-L31-S10.png",
+  "solution": {
+   "uz": [
+    "Konsentratsiya: $$n=\\frac{p}{kT}\\approx2.69\\cdot10^{25}\\ \\mathrm{m^{-3}}$$",
+    "O'rtacha tezlik: $$\\langle v\\rangle=\\sqrt{\\frac{8RT}{\\pi M}}\\approx454\\ \\mathrm{m/s}$$",
+    "Urilishlar oqimi: $$j=\\frac{1}{4}n\\langle v\\rangle\\approx3.05\\cdot10^{27}\\ \\mathrm{m^{-2}s^{-1}}=3.05\\cdot10^{23}\\ \\mathrm{cm^{-2}s^{-1}}$$"
+   ],
+   "ru": [
+    "Концентрация: $$n=\\frac{p}{kT}\\approx2.69\\cdot10^{25}\\ \\mathrm{m^{-3}}$$",
+    "Средняя скорость: $$\\langle v\\rangle=\\sqrt{\\frac{8RT}{\\pi M}}\\approx454\\ \\mathrm{m/s}$$",
+    "Поток ударов: $$j=\\frac{1}{4}n\\langle v\\rangle\\approx3.05\\cdot10^{27}\\ \\mathrm{m^{-2}s^{-1}}=3.05\\cdot10^{23}\\ \\mathrm{cm^{-2}s^{-1}}$$"
+   ],
+   "en": [
+    "The concentration: $$n=\\frac{p}{kT}\\approx2.69\\cdot10^{25}\\ \\mathrm{m^{-3}}$$",
+    "The mean speed: $$\\langle v\\rangle=\\sqrt{\\frac{8RT}{\\pi M}}\\approx454\\ \\mathrm{m/s}$$",
+    "The flux of impacts: $$j=\\frac{1}{4}n\\langle v\\rangle\\approx3.05\\cdot10^{27}\\ \\mathrm{m^{-2}s^{-1}}=3.05\\cdot10^{23}\\ \\mathrm{cm^{-2}s^{-1}}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Holat tenglamasi: $p=nkT$",
+    "ru": "Уравнение состояния: $p=nkT$",
+    "en": "Equation of state: $p=nkT$"
+   },
+   null,
+   {
+    "uz": "Devorga urilishlar: $j=\\frac{1}{4}n\\langle v\\rangle$",
+    "ru": "Удары о стенку: $j=\\frac{1}{4}n\\langle v\\rangle$",
+    "en": "Wall impacts: $j=\\frac{1}{4}n\\langle v\\rangle$"
+   }
+  ],
+  "basis": {
+   "uz": "Devorga urilishlar soni",
+   "ru": "Число ударов о стенку",
+   "en": "Number of wall impacts"
+  },
+  "answer": "j\\approx3.05\\cdot10^{23}\\ \\mathrm{cm^{-2}s^{-1}}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Irodov, «Problems in General Physics», 2.93-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S11",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Hajmi $1\\ \\mathrm{L}$ bo'lgan idishda $300\\ \\mathrm{K}$ da siyrak geliy bor. Devordagi yuzasi $0.01\\ \\mathrm{mm^2}$ li teshikdan gaz vakuumga effuziya orqali chiqmoqda (temperatura o'zgarmaydi). Bosim qanday qonun bo'yicha kamayadi va qancha vaqtda $2$ marta kamayadi?",
+   "ru": "В сосуде объёмом $1\\ \\mathrm{L}$ находится разреженный гелий при $300\\ \\mathrm{K}$. Через отверстие площадью $0.01\\ \\mathrm{mm^2}$ в стенке газ эффузионно вытекает в вакуум (температура постоянна). По какому закону убывает давление и за какое время оно уменьшится в $2$ раза?",
+   "en": "A $1\\ \\mathrm{L}$ vessel contains rarefied helium at $300\\ \\mathrm{K}$. The gas effuses into a vacuum through a $0.01\\ \\mathrm{mm^2}$ hole in the wall (the temperature stays constant). By what law does the pressure decrease, and in what time does it fall by a factor of $2$?"
+  },
+  "figure": "figures/B2-L31-S11.png",
+  "solution": {
+   "uz": [
+    "Chiqish tezligi urilishlar oqimiga teng: $$\\frac{dN}{dt}=-\\frac{1}{4}\\frac{N}{V}\\langle v\\rangle S\\ \\Rightarrow\\ p=p_0e^{-\\frac{t}{\\tau}}$$",
+    "O'rtacha tezlik: $$\\langle v\\rangle=\\sqrt{\\frac{8\\cdot8.31\\cdot300}{\\pi\\cdot0.004}}\\approx1260\\ \\mathrm{m/s}$$",
+    "Vaqt doimiysi: $$\\tau=\\frac{4V}{S\\langle v\\rangle}=\\frac{4\\cdot10^{-3}}{10^{-8}\\cdot1260}\\approx317\\ \\mathrm{s}$$",
+    "Yarim kamayish vaqti: $$t=\\tau\\ln2\\approx220\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Скорость истечения равна потоку ударов: $$\\frac{dN}{dt}=-\\frac{1}{4}\\frac{N}{V}\\langle v\\rangle S\\ \\Rightarrow\\ p=p_0e^{-\\frac{t}{\\tau}}$$",
+    "Средняя скорость: $$\\langle v\\rangle=\\sqrt{\\frac{8\\cdot8.31\\cdot300}{\\pi\\cdot0.004}}\\approx1260\\ \\mathrm{m/s}$$",
+    "Постоянная времени: $$\\tau=\\frac{4V}{S\\langle v\\rangle}=\\frac{4\\cdot10^{-3}}{10^{-8}\\cdot1260}\\approx317\\ \\mathrm{s}$$",
+    "Время уменьшения вдвое: $$t=\\tau\\ln2\\approx220\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The outflow rate equals the impact flux: $$\\frac{dN}{dt}=-\\frac{1}{4}\\frac{N}{V}\\langle v\\rangle S\\ \\Rightarrow\\ p=p_0e^{-\\frac{t}{\\tau}}$$",
+    "The mean speed: $$\\langle v\\rangle=\\sqrt{\\frac{8\\cdot8.31\\cdot300}{\\pi\\cdot0.004}}\\approx1260\\ \\mathrm{m/s}$$",
+    "The time constant: $$\\tau=\\frac{4V}{S\\langle v\\rangle}=\\frac{4\\cdot10^{-3}}{10^{-8}\\cdot1260}\\approx317\\ \\mathrm{s}$$",
+    "The halving time: $$t=\\tau\\ln2\\approx220\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Effuziya: $N=N_0e^{-\\frac{t}{\\tau}}$, $\\tau=\\frac{4V}{S\\langle v\\rangle}$",
+    "ru": "Эффузия: $N=N_0e^{-\\frac{t}{\\tau}}$, $\\tau=\\frac{4V}{S\\langle v\\rangle}$",
+    "en": "Effusion: $N=N_0e^{-\\frac{t}{\\tau}}$, $\\tau=\\frac{4V}{S\\langle v\\rangle}$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Effuziya",
+   "ru": "Эффузия",
+   "en": "Effusion"
+  },
+  "answer": "p=p_0e^{-\\frac{t}{\\tau}};\\ \\tau\\approx317\\ \\mathrm{s};\\ t\\approx220\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L31, effuziya)"
+ },
+ {
+  "id": "B2-L31-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Uranni boyitishda $\\mathrm{UF_6}$ gazi ($M=349$ va $352\\ \\mathrm{g/mol}$ izotop shakllari) g'ovak to'siqlar orqali effuziya bilan ajratiladi. Bitta bosqichning ideal ajratish koeffitsiyentini va $^{235}\\mathrm{U}$ ulushini $0.72\\%$ dan $3\\%$ gacha oshirish uchun kerak bo'ladigan bosqichlar sonini baholang.",
+   "ru": "При обогащении урана газ $\\mathrm{UF_6}$ (изотопные формы с $M=349$ и $352\\ \\mathrm{g/mol}$) разделяют эффузией через пористые перегородки. Оцените идеальный коэффициент разделения одной ступени и число ступеней, нужное для повышения доли $^{235}\\mathrm{U}$ с $0.72\\%$ до $3\\%$.",
+   "en": "In uranium enrichment, $\\mathrm{UF_6}$ gas (isotopic forms with $M=349$ and $352\\ \\mathrm{g/mol}$) is separated by effusion through porous barriers. Estimate the ideal separation factor of one stage and the number of stages needed to raise the fraction of $^{235}\\mathrm{U}$ from $0.72\\%$ to $3\\%$."
+  },
+  "figure": "figures/B2-L31-S12.png",
+  "solution": {
+   "uz": [
+    "Bir bosqich — Grem qonuni: $$\\alpha=\\sqrt{\\frac{352}{349}}\\approx1.0043$$",
+    "Konsentratsiyalar nisbati har bosqichda $\\alpha$ marta ortadi: $$\\frac{0.03/0.97}{0.0072/0.9928}=\\alpha^N\\approx4.26$$",
+    "Logarifmlaymiz: $$N=\\frac{\\ln4.26}{\\ln1.0043}$$",
+    "Natija: $$N\\approx339$$"
+   ],
+   "ru": [
+    "Одна ступень — закон Грэма: $$\\alpha=\\sqrt{\\frac{352}{349}}\\approx1.0043$$",
+    "Отношение концентраций растёт в $\\alpha$ раз на каждой ступени: $$\\frac{0.03/0.97}{0.0072/0.9928}=\\alpha^N\\approx4.26$$",
+    "Логарифмируем: $$N=\\frac{\\ln4.26}{\\ln1.0043}$$",
+    "Результат: $$N\\approx339$$"
+   ],
+   "en": [
+    "One stage — Graham's law: $$\\alpha=\\sqrt{\\frac{352}{349}}\\approx1.0043$$",
+    "The concentration ratio grows by $\\alpha$ at each stage: $$\\frac{0.03/0.97}{0.0072/0.9928}=\\alpha^N\\approx4.26$$",
+    "Taking logarithms: $$N=\\frac{\\ln4.26}{\\ln1.0043}$$",
+    "The result: $$N\\approx339$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Grem qonuni: $\\frac{j_1}{j_2}=\\sqrt{\\frac{M_2}{M_1}}$",
+    "ru": "Закон Грэма: $\\frac{j_1}{j_2}=\\sqrt{\\frac{M_2}{M_1}}$",
+    "en": "Graham's law: $\\frac{j_1}{j_2}=\\sqrt{\\frac{M_2}{M_1}}$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Grem qonuni, izotoplarni ajratish",
+   "ru": "Закон Грэма, разделение изотопов",
+   "en": "Graham's law, isotope separation"
+  },
+  "answer": "\\alpha\\approx1.0043;\\ N\\approx339",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original (B2-L31, Grem qonuni)"
+ },
+ {
+  "id": "B2-L31-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Normal sharoitda ($273\\ \\mathrm{K}$, $101.3\\ \\mathrm{kPa}$) azot molekulalarining ($d=0.37\\ \\mathrm{nm}$) erkin yugurish yo'lini va to'qnashuvlar chastotasini toping. Erkin yugurish yo'li molekulalar orasidagi o'rtacha masofadan necha marta katta?",
+   "ru": "Найдите длину свободного пробега и частоту столкновений молекул азота ($d=0.37\\ \\mathrm{nm}$) при нормальных условиях ($273\\ \\mathrm{K}$, $101.3\\ \\mathrm{kPa}$). Во сколько раз длина свободного пробега больше среднего расстояния между молекулами?",
+   "en": "Find the mean free path and the collision frequency of nitrogen molecules ($d=0.37\\ \\mathrm{nm}$) under standard conditions ($273\\ \\mathrm{K}$, $101.3\\ \\mathrm{kPa}$). By what factor does the mean free path exceed the mean distance between molecules?"
+  },
+  "figure": "figures/B2-L31-S13.png",
+  "solution": {
+   "uz": [
+    "Erkin yugurish yo'li: $$\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}=\\frac{1.38\\cdot10^{-23}\\cdot273}{1.414\\cdot3.14\\cdot\\left(3.7\\cdot10^{-10}\\right)^2\\cdot101325}\\approx61\\ \\mathrm{nm}$$",
+    "To'qnashuvlar chastotasi ($\\langle v\\rangle\\approx454\\ \\mathrm{m/s}$): $$z=\\frac{\\langle v\\rangle}{\\lambda}\\approx7.4\\cdot10^9\\ \\mathrm{s^{-1}}$$",
+    "O'rtacha masofa $n^{-1/3}$: $$\\frac{\\lambda}{n^{-1/3}}=\\frac{6.1\\cdot10^{-8}}{3.34\\cdot10^{-9}}\\approx18$$"
+   ],
+   "ru": [
+    "Длина свободного пробега: $$\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}=\\frac{1.38\\cdot10^{-23}\\cdot273}{1.414\\cdot3.14\\cdot\\left(3.7\\cdot10^{-10}\\right)^2\\cdot101325}\\approx61\\ \\mathrm{nm}$$",
+    "Частота столкновений ($\\langle v\\rangle\\approx454\\ \\mathrm{m/s}$): $$z=\\frac{\\langle v\\rangle}{\\lambda}\\approx7.4\\cdot10^9\\ \\mathrm{s^{-1}}$$",
+    "Среднее расстояние $n^{-1/3}$: $$\\frac{\\lambda}{n^{-1/3}}=\\frac{6.1\\cdot10^{-8}}{3.34\\cdot10^{-9}}\\approx18$$"
+   ],
+   "en": [
+    "The mean free path: $$\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}=\\frac{1.38\\cdot10^{-23}\\cdot273}{1.414\\cdot3.14\\cdot\\left(3.7\\cdot10^{-10}\\right)^2\\cdot101325}\\approx61\\ \\mathrm{nm}$$",
+    "The collision frequency ($\\langle v\\rangle\\approx454\\ \\mathrm{m/s}$): $$z=\\frac{\\langle v\\rangle}{\\lambda}\\approx7.4\\cdot10^9\\ \\mathrm{s^{-1}}$$",
+    "The mean distance $n^{-1/3}$: $$\\frac{\\lambda}{n^{-1/3}}=\\frac{6.1\\cdot10^{-8}}{3.34\\cdot10^{-9}}\\approx18$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Erkin yugurish yo'li: $\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}$, $z=\\frac{\\langle v\\rangle}{\\lambda}$",
+    "ru": "Длина свободного пробега: $\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}$, $z=\\frac{\\langle v\\rangle}{\\lambda}$",
+    "en": "Mean free path: $\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}$, $z=\\frac{\\langle v\\rangle}{\\lambda}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Erkin yugurish yo'li",
+   "ru": "Длина свободного пробега",
+   "en": "Mean free path"
+  },
+  "answer": "\\lambda\\approx61\\ \\mathrm{nm};\\ z\\approx7.4\\cdot10^9\\ \\mathrm{s^{-1}};\\ \\approx18",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "Irodov, «Problems in General Physics», 2.223, 2.224-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "a) Gaz molekulalarining qancha qismi to'qnashuvsiz $2\\lambda$ dan uzun yo'lni bosib o'tadi? b) Siyrak gazli idishga kirgan ingichka molekulyar dastaning intensivligi $10\\ \\mathrm{cm}$ yo'lda $3$ marta kamaydi. Erkin yugurish yo'lini toping.",
+   "ru": "а) Какая доля молекул газа проходит без столкновений путь длиннее $2\\lambda$? б) Интенсивность узкого молекулярного пучка, вошедшего в сосуд с разреженным газом, уменьшилась в $3$ раза на пути $10\\ \\mathrm{cm}$. Найдите длину свободного пробега.",
+   "en": "a) What fraction of gas molecules travel farther than $2\\lambda$ without a collision? b) A narrow molecular beam entering a vessel with rarefied gas has its intensity reduced by a factor of $3$ over $10\\ \\mathrm{cm}$. Find the mean free path."
+  },
+  "figure": "figures/B2-L31-S14.png",
+  "solution": {
+   "uz": [
+    "a) Erkin yugurishlar eksponensial taqsimlangan: $$\\frac{N}{N_0}=e^{-2}\\approx0.135$$",
+    "b) Dastadan to'qnashgan molekula chiqib ketadi: $$\\frac{I}{I_0}=e^{-\\frac{l}{\\lambda}}=\\frac{1}{3}$$",
+    "Bundan: $$\\lambda=\\frac{l}{\\ln3}=\\frac{10\\ \\mathrm{cm}}{1.099}\\approx9.1\\ \\mathrm{cm}$$"
+   ],
+   "ru": [
+    "а) Свободные пробеги распределены экспоненциально: $$\\frac{N}{N_0}=e^{-2}\\approx0.135$$",
+    "б) Столкнувшаяся молекула выбывает из пучка: $$\\frac{I}{I_0}=e^{-\\frac{l}{\\lambda}}=\\frac{1}{3}$$",
+    "Отсюда: $$\\lambda=\\frac{l}{\\ln3}=\\frac{10\\ \\mathrm{cm}}{1.099}\\approx9.1\\ \\mathrm{cm}$$"
+   ],
+   "en": [
+    "a) Free paths are exponentially distributed: $$\\frac{N}{N_0}=e^{-2}\\approx0.135$$",
+    "b) A molecule that collides leaves the beam: $$\\frac{I}{I_0}=e^{-\\frac{l}{\\lambda}}=\\frac{1}{3}$$",
+    "Hence: $$\\lambda=\\frac{l}{\\ln3}=\\frac{10\\ \\mathrm{cm}}{1.099}\\approx9.1\\ \\mathrm{cm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Erkin yugurishlar taqsimoti: $\\frac{N}{N_0}=e^{-\\frac{s}{\\lambda}}$",
+    "ru": "Распределение пробегов: $\\frac{N}{N_0}=e^{-\\frac{s}{\\lambda}}$",
+    "en": "Distribution of free paths: $\\frac{N}{N_0}=e^{-\\frac{s}{\\lambda}}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Erkin yugurishlar taqsimoti",
+   "ru": "Распределение свободных пробегов",
+   "en": "Distribution of free paths"
+  },
+  "answer": "0.135;\\ \\lambda\\approx9.1\\ \\mathrm{cm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "Irodov, «Problems in General Physics», 2.220, 2.221-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ideal gazning erkin yugurish yo'li $\\lambda$ va to'qnashuvlar chastotasi $z$ qanday o'zgaradi: a) izotermik ravishda bosim $3$ marta oshirilsa; b) izoxorik ravishda absolyut temperatura $4$ marta oshirilsa?",
+   "ru": "Как изменятся длина свободного пробега $\\lambda$ и частота столкновений $z$ молекул идеального газа: а) при изотермическом увеличении давления в $3$ раза; б) при изохорном увеличении абсолютной температуры в $4$ раза?",
+   "en": "How do the mean free path $\\lambda$ and the collision frequency $z$ of an ideal gas change: a) if the pressure is increased isothermally by a factor of $3$; b) if the absolute temperature is increased isochorically by a factor of $4$?"
+  },
+  "figure": "figures/B2-L31-S15.png",
+  "solution": {
+   "uz": [
+    "Proporsionalliklar ($d$ o'zgarmas): $$\\lambda\\propto\\frac{1}{n},\\qquad z=\\frac{\\langle v\\rangle}{\\lambda}\\propto n\\sqrt T$$",
+    "a) $T=\\mathrm{const}$, $n$ $3$ marta ortadi: $$\\frac{\\lambda_2}{\\lambda_1}=\\frac{1}{3},\\qquad \\frac{z_2}{z_1}=3$$",
+    "b) $n=\\mathrm{const}$, $\\langle v\\rangle$ $2$ marta ortadi: $$\\frac{\\lambda_2}{\\lambda_1}=1,\\qquad \\frac{z_2}{z_1}=2$$"
+   ],
+   "ru": [
+    "Пропорциональности ($d$ постоянен): $$\\lambda\\propto\\frac{1}{n},\\qquad z=\\frac{\\langle v\\rangle}{\\lambda}\\propto n\\sqrt T$$",
+    "а) $T=\\mathrm{const}$, $n$ растёт в $3$ раза: $$\\frac{\\lambda_2}{\\lambda_1}=\\frac{1}{3},\\qquad \\frac{z_2}{z_1}=3$$",
+    "б) $n=\\mathrm{const}$, $\\langle v\\rangle$ растёт в $2$ раза: $$\\frac{\\lambda_2}{\\lambda_1}=1,\\qquad \\frac{z_2}{z_1}=2$$"
+   ],
+   "en": [
+    "The proportionalities ($d$ constant): $$\\lambda\\propto\\frac{1}{n},\\qquad z=\\frac{\\langle v\\rangle}{\\lambda}\\propto n\\sqrt T$$",
+    "a) $T=\\mathrm{const}$, $n$ grows by a factor of $3$: $$\\frac{\\lambda_2}{\\lambda_1}=\\frac{1}{3},\\qquad \\frac{z_2}{z_1}=3$$",
+    "b) $n=\\mathrm{const}$, $\\langle v\\rangle$ grows by a factor of $2$: $$\\frac{\\lambda_2}{\\lambda_1}=1,\\qquad \\frac{z_2}{z_1}=2$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Proporsionallik: $\\lambda\\propto\\frac{1}{n}$, $z\\propto n\\sqrt T$",
+    "ru": "Пропорциональность: $\\lambda\\propto\\frac{1}{n}$, $z\\propto n\\sqrt T$",
+    "en": "Proportionality: $\\lambda\\propto\\frac{1}{n}$, $z\\propto n\\sqrt T$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Erkin yugurish yo'li va to'qnashuvlar",
+   "ru": "Длина пробега и столкновения",
+   "en": "Mean free path and collisions"
+  },
+  "answer": "\\frac{\\lambda_2}{\\lambda_1}=\\frac{1}{3},\\ \\frac{z_2}{z_1}=3;\\ \\frac{\\lambda_2}{\\lambda_1}=1,\\ \\frac{z_2}{z_1}=2",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "Irodov, «Problems in General Physics», 2.229, 2.230-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Normal sharoitdagi geliy uchun ($d=0.22\\ \\mathrm{nm}$, $273\\ \\mathrm{K}$, $101.3\\ \\mathrm{kPa}$) diffuziya koeffitsiyentini, qovushoqlik va issiqlik o'tkazuvchanlik koeffitsiyentlarini elementar kinetik nazariya bo'yicha baholang.",
+   "ru": "Оцените по элементарной кинетической теории коэффициенты диффузии, вязкости и теплопроводности гелия при нормальных условиях ($d=0.22\\ \\mathrm{nm}$, $273\\ \\mathrm{K}$, $101.3\\ \\mathrm{kPa}$).",
+   "en": "Estimate, using elementary kinetic theory, the diffusion coefficient and the viscosity and thermal conductivity coefficients of helium under standard conditions ($d=0.22\\ \\mathrm{nm}$, $273\\ \\mathrm{K}$, $101.3\\ \\mathrm{kPa}$)."
+  },
+  "figure": "figures/B2-L31-S16.png",
+  "solution": {
+   "uz": [
+    "Zichlik va o'rtacha tezlik: $$\\rho=\\frac{pM}{RT}\\approx0.179\\ \\mathrm{kg/m^3},\\qquad \\langle v\\rangle\\approx1202\\ \\mathrm{m/s}$$",
+    "Erkin yugurish yo'li: $$\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}\\approx1.73\\cdot10^{-7}\\ \\mathrm{m}$$",
+    "Diffuziya va qovushoqlik: $$D=\\frac{1}{3}\\lambda\\langle v\\rangle\\approx6.9\\cdot10^{-5}\\ \\mathrm{m^2/s},\\qquad \\eta=\\rho D\\approx1.24\\cdot10^{-5}\\ \\mathrm{Pa\\cdot s}$$",
+    "Issiqlik o'tkazuvchanlik, $c_V=\\frac{3R}{2M}$: $$\\kappa=\\eta c_V\\approx1.24\\cdot10^{-5}\\cdot3116\\approx0.039\\ \\mathrm{W/(m\\cdot K)}$$"
+   ],
+   "ru": [
+    "Плотность и средняя скорость: $$\\rho=\\frac{pM}{RT}\\approx0.179\\ \\mathrm{kg/m^3},\\qquad \\langle v\\rangle\\approx1202\\ \\mathrm{m/s}$$",
+    "Длина свободного пробега: $$\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}\\approx1.73\\cdot10^{-7}\\ \\mathrm{m}$$",
+    "Диффузия и вязкость: $$D=\\frac{1}{3}\\lambda\\langle v\\rangle\\approx6.9\\cdot10^{-5}\\ \\mathrm{m^2/s},\\qquad \\eta=\\rho D\\approx1.24\\cdot10^{-5}\\ \\mathrm{Pa\\cdot s}$$",
+    "Теплопроводность, $c_V=\\frac{3R}{2M}$: $$\\kappa=\\eta c_V\\approx1.24\\cdot10^{-5}\\cdot3116\\approx0.039\\ \\mathrm{W/(m\\cdot K)}$$"
+   ],
+   "en": [
+    "The density and the mean speed: $$\\rho=\\frac{pM}{RT}\\approx0.179\\ \\mathrm{kg/m^3},\\qquad \\langle v\\rangle\\approx1202\\ \\mathrm{m/s}$$",
+    "The mean free path: $$\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}\\approx1.73\\cdot10^{-7}\\ \\mathrm{m}$$",
+    "Diffusion and viscosity: $$D=\\frac{1}{3}\\lambda\\langle v\\rangle\\approx6.9\\cdot10^{-5}\\ \\mathrm{m^2/s},\\qquad \\eta=\\rho D\\approx1.24\\cdot10^{-5}\\ \\mathrm{Pa\\cdot s}$$",
+    "Thermal conductivity, $c_V=\\frac{3R}{2M}$: $$\\kappa=\\eta c_V\\approx1.24\\cdot10^{-5}\\cdot3116\\approx0.039\\ \\mathrm{W/(m\\cdot K)}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Erkin yugurish yo'li: $\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}$, $z=\\frac{\\langle v\\rangle}{\\lambda}$",
+    "ru": "Длина свободного пробега: $\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}$, $z=\\frac{\\langle v\\rangle}{\\lambda}$",
+    "en": "Mean free path: $\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}$, $z=\\frac{\\langle v\\rangle}{\\lambda}$"
+   },
+   {
+    "uz": "Ko'chish koeffitsiyentlari: $D=\\frac{1}{3}\\lambda\\langle v\\rangle$, $\\eta=\\rho D$, $\\kappa=\\eta c_V$",
+    "ru": "Коэффициенты переноса: $D=\\frac{1}{3}\\lambda\\langle v\\rangle$, $\\eta=\\rho D$, $\\kappa=\\eta c_V$",
+    "en": "Transport coefficients: $D=\\frac{1}{3}\\lambda\\langle v\\rangle$, $\\eta=\\rho D$, $\\kappa=\\eta c_V$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Ko'chish koeffitsiyentlari",
+   "ru": "Коэффициенты переноса",
+   "en": "Transport coefficients"
+  },
+  "answer": "D\\approx6.9\\cdot10^{-5}\\ \\mathrm{m^2/s};\\ \\eta\\approx1.24\\cdot10^{-5}\\ \\mathrm{Pa\\cdot s};\\ \\kappa\\approx0.039\\ \\mathrm{W/(m\\cdot K)}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "Irodov, «Problems in General Physics», 2.240-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ideal gazda biror jarayon natijasida qovushoqlik koeffitsiyenti $2$ marta, diffuziya koeffitsiyenti $4$ marta ortdi. Gaz bosimi va temperaturasi necha marta o'zgardi?",
+   "ru": "В результате некоторого процесса коэффициент вязкости идеального газа увеличился в $2$ раза, а коэффициент диффузии — в $4$ раза. Во сколько раз изменились давление и температура газа?",
+   "en": "As a result of some process the viscosity coefficient of an ideal gas increased by a factor of $2$ and its diffusion coefficient by a factor of $4$. By what factors did the pressure and the temperature of the gas change?"
+  },
+  "figure": "figures/B2-L31-S17.png",
+  "solution": {
+   "uz": [
+    "Proporsionalliklar: $$\\eta\\propto\\sqrt T,\\qquad D\\propto\\frac{T^{3/2}}{p}$$",
+    "Qovushoqlikdan: $$\\sqrt{\\frac{T_2}{T_1}}=2\\ \\Rightarrow\\ \\frac{T_2}{T_1}=4$$",
+    "Diffuziyadan: $$4=\\frac{4^{3/2}}{p_2/p_1}\\ \\Rightarrow\\ \\frac{p_2}{p_1}=2$$"
+   ],
+   "ru": [
+    "Пропорциональности: $$\\eta\\propto\\sqrt T,\\qquad D\\propto\\frac{T^{3/2}}{p}$$",
+    "Из вязкости: $$\\sqrt{\\frac{T_2}{T_1}}=2\\ \\Rightarrow\\ \\frac{T_2}{T_1}=4$$",
+    "Из диффузии: $$4=\\frac{4^{3/2}}{p_2/p_1}\\ \\Rightarrow\\ \\frac{p_2}{p_1}=2$$"
+   ],
+   "en": [
+    "The proportionalities: $$\\eta\\propto\\sqrt T,\\qquad D\\propto\\frac{T^{3/2}}{p}$$",
+    "From the viscosity: $$\\sqrt{\\frac{T_2}{T_1}}=2\\ \\Rightarrow\\ \\frac{T_2}{T_1}=4$$",
+    "From the diffusion: $$4=\\frac{4^{3/2}}{p_2/p_1}\\ \\Rightarrow\\ \\frac{p_2}{p_1}=2$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ko'chish proporsionalligi: $\\eta\\propto\\sqrt T$, $D\\propto\\frac{T^{3/2}}{p}$",
+    "ru": "Пропорциональность переноса: $\\eta\\propto\\sqrt T$, $D\\propto\\frac{T^{3/2}}{p}$",
+    "en": "Transport scaling: $\\eta\\propto\\sqrt T$, $D\\propto\\frac{T^{3/2}}{p}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Ko'chish koeffitsiyentlari proporsionalligi",
+   "ru": "Пропорциональности переноса",
+   "en": "Transport scaling"
+  },
+  "answer": "\\frac{T_2}{T_1}=4;\\ \\frac{p_2}{p_1}=2",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "Irodov, «Problems in General Physics», 2.236-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L31-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radiusi $0.5\\ \\mu\\mathrm{m}$ bo'lgan shar zarra $300\\ \\mathrm{K}$ dagi suvda ($\\eta=1.0\\cdot10^{-3}\\ \\mathrm{Pa\\cdot s}$) Broun harakati qilmoqda. Diffuziya koeffitsiyentini, $1\\ \\mathrm{min}$ dagi bitta o'q bo'yicha va fazodagi o'rtacha kvadratik siljishlarni toping.",
+   "ru": "Шарообразная частица радиусом $0.5\\ \\mu\\mathrm{m}$ совершает броуновское движение в воде ($\\eta=1.0\\cdot10^{-3}\\ \\mathrm{Pa\\cdot s}$) при $300\\ \\mathrm{K}$. Найдите коэффициент диффузии и средние квадратичные смещения за $1\\ \\mathrm{min}$ вдоль одной оси и в пространстве.",
+   "en": "A spherical particle of radius $0.5\\ \\mu\\mathrm{m}$ undergoes Brownian motion in water ($\\eta=1.0\\cdot10^{-3}\\ \\mathrm{Pa\\cdot s}$) at $300\\ \\mathrm{K}$. Find the diffusion coefficient and the rms displacements in $1\\ \\mathrm{min}$ along one axis and in space."
+  },
+  "figure": "figures/B2-L31-S18.png",
+  "solution": {
+   "uz": [
+    "Eynshteyn–Stoks formulasi: $$D=\\frac{kT}{6\\pi\\eta r}=\\frac{4.14\\cdot10^{-21}}{6\\pi\\cdot10^{-3}\\cdot5\\cdot10^{-7}}\\approx4.4\\cdot10^{-13}\\ \\mathrm{m^2/s}$$",
+    "Bitta o'q bo'yicha: $$\\sqrt{\\langle x^2\\rangle}=\\sqrt{2Dt}=\\sqrt{2\\cdot4.4\\cdot10^{-13}\\cdot60}\\approx7.3\\ \\mu\\mathrm{m}$$",
+    "Fazoda — uch o'q: $$\\sqrt{\\langle r^2\\rangle}=\\sqrt{6Dt}\\approx12.6\\ \\mu\\mathrm{m}$$",
+    "Taqqoslash: zarra o'lchami bilan bir tartibda: $$\\frac{\\sqrt{\\langle x^2\\rangle}}{2r}\\approx7$$"
+   ],
+   "ru": [
+    "Формула Эйнштейна–Стокса: $$D=\\frac{kT}{6\\pi\\eta r}=\\frac{4.14\\cdot10^{-21}}{6\\pi\\cdot10^{-3}\\cdot5\\cdot10^{-7}}\\approx4.4\\cdot10^{-13}\\ \\mathrm{m^2/s}$$",
+    "Вдоль одной оси: $$\\sqrt{\\langle x^2\\rangle}=\\sqrt{2Dt}=\\sqrt{2\\cdot4.4\\cdot10^{-13}\\cdot60}\\approx7.3\\ \\mu\\mathrm{m}$$",
+    "В пространстве — три оси: $$\\sqrt{\\langle r^2\\rangle}=\\sqrt{6Dt}\\approx12.6\\ \\mu\\mathrm{m}$$",
+    "Сравнение: того же порядка, что размер частицы: $$\\frac{\\sqrt{\\langle x^2\\rangle}}{2r}\\approx7$$"
+   ],
+   "en": [
+    "The Stokes–Einstein formula: $$D=\\frac{kT}{6\\pi\\eta r}=\\frac{4.14\\cdot10^{-21}}{6\\pi\\cdot10^{-3}\\cdot5\\cdot10^{-7}}\\approx4.4\\cdot10^{-13}\\ \\mathrm{m^2/s}$$",
+    "Along one axis: $$\\sqrt{\\langle x^2\\rangle}=\\sqrt{2Dt}=\\sqrt{2\\cdot4.4\\cdot10^{-13}\\cdot60}\\approx7.3\\ \\mu\\mathrm{m}$$",
+    "In space — three axes: $$\\sqrt{\\langle r^2\\rangle}=\\sqrt{6Dt}\\approx12.6\\ \\mu\\mathrm{m}$$",
+    "Comparison: of the same order as the particle size: $$\\frac{\\sqrt{\\langle x^2\\rangle}}{2r}\\approx7$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Eynshteyn–Stoks: $D=\\frac{kT}{6\\pi\\eta r}$",
+    "ru": "Эйнштейн–Стокс: $D=\\frac{kT}{6\\pi\\eta r}$",
+    "en": "Stokes–Einstein: $D=\\frac{kT}{6\\pi\\eta r}$"
+   },
+   {
+    "uz": "Broun harakati: $\\langle x^2\\rangle=2Dt$",
+    "ru": "Броуновское движение: $\\langle x^2\\rangle=2Dt$",
+    "en": "Brownian motion: $\\langle x^2\\rangle=2Dt$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Broun harakati",
+   "ru": "Броуновское движение",
+   "en": "Brownian motion"
+  },
+  "answer": "D\\approx4.4\\cdot10^{-13}\\ \\mathrm{m^2/s};\\ 7.3\\ \\mu\\mathrm{m};\\ 12.6\\ \\mu\\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L31, Broun harakati)"
+ }
+]

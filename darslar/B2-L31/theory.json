@@ -1,0 +1,621 @@
+[
+ {
+  "t": "h1",
+  "uz": "Gazlarning kinetik nazariyasi (Kinetic theory of gases)",
+  "ru": "Кинетическая теория газов",
+  "en": "Kinetic theory of gases"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz ideal gaz bosimini molekulalarning devorga urilishidan keltirib chiqarasiz va temperaturaning mikroskopik ma'nosini tushuntirasiz; teng taqsimlanish qonunini ilgarilanma, aylanma va tebranma harakatlarga qo'llaysiz; Bolsman taqsimoti va barometrik formulani ishlatasiz; Maksvell tezliklar taqsimotini yozib, eng ehtimolli, o'rtacha va o'rtacha kvadratik tezliklarni topasiz; devorga urilishlar sonini va teshikdan oqib chiqish (effuziya) tezligini hisoblaysiz; erkin yugurish yo'li va to'qnashuvlar chastotasini baholaysiz; diffuziya, qovushoqlik va issiqlik o'tkazuvchanlikni bitta kinetik formula bilan tushuntirasiz; Broun harakatida siljishni Eynshteyn formulasi bilan topasiz; klassik kinetik nazariya qachon yaroqsiz bo'lishini baholaysiz.",
+  "ru": "**Цель.** После урока вы будете выводить давление идеального газа из ударов молекул о стенку и объяснять микроскопический смысл температуры; применять закон равнораспределения к поступательному, вращательному и колебательному движениям; пользоваться распределением Больцмана и барометрической формулой; записывать распределение Максвелла по скоростям и находить наиболее вероятную, среднюю и среднюю квадратичную скорости; вычислять число ударов о стенку и скорость истечения через отверстие (эффузии); оценивать длину свободного пробега и частоту столкновений; объяснять диффузию, вязкость и теплопроводность одной кинетической формулой; находить смещение при броуновском движении по формуле Эйнштейна; оценивать, когда классическая кинетическая теория неприменима.",
+  "en": "**Goal.** After this lesson you will derive the pressure of an ideal gas from molecular impacts on a wall and explain the microscopic meaning of temperature; apply the equipartition theorem to translational, rotational and vibrational motion; use the Boltzmann distribution and the barometric formula; write the Maxwell speed distribution and find the most probable, mean and root-mean-square speeds; calculate the number of impacts on a wall and the rate of outflow through a hole (effusion); estimate the mean free path and the collision frequency; explain diffusion, viscosity and heat conduction with a single kinetic formula; find the displacement in Brownian motion with Einstein's formula; and judge when classical kinetic theory fails."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L23 da molekular-kinetik nazariya asoslari bilan maktab darajasida tanishdik, B2-L29 va B2-L30 da termodinamikani molekulalarga murojaat qilmasdan qurdik. Bu darsda ikkala yondashuvni birlashtiramiz: makroskopik kattaliklar — bosim, temperatura, issiqlik sig'imi, qovushoqlik — ko'p sonli molekulalar harakatining o'rtacha qiymatlari sifatida chiqadi. Asosiy vosita — ehtimollik taqsimotlari (Bolsman va Maksvell). B2-L30 da va'da qilingan Gibbs paradoksining yechimi va klassik tavsifning chegarasi 10-bo'limda. Termodinamik potensiallar — B2-L32 da. GRE da kinetik nazariya savollari odatda tezliklar, erkin yugurish yo'li va proporsionallik bo'yicha bo'ladi.",
+  "ru": "В B1-L23 мы на школьном уровне познакомились с основами молекулярно-кинетической теории, а в B2-L29 и B2-L30 построили термодинамику, не обращаясь к молекулам. В этом уроке объединим оба подхода: макроскопические величины — давление, температура, теплоёмкость, вязкость — получаются как средние значения движения огромного числа молекул. Главный инструмент — распределения вероятностей (Больцмана и Максвелла). Обещанное в B2-L30 разрешение парадокса Гиббса и граница классического описания — в разделе 10. Термодинамические потенциалы — в B2-L32. На GRE вопросы по кинетической теории обычно касаются скоростей, длины свободного пробега и пропорциональностей.",
+  "en": "In B1-L23 we met the basics of molecular-kinetic theory at school level, and in B2-L29 and B2-L30 we built thermodynamics without referring to molecules. In this lesson we join the two approaches: macroscopic quantities — pressure, temperature, heat capacity, viscosity — emerge as average values of the motion of a huge number of molecules. The main tool is probability distributions (Boltzmann and Maxwell). The resolution of Gibbs's paradox promised in B2-L30 and the limit of the classical description are in Section 10. Thermodynamic potentials come in B2-L32. On the GRE, kinetic-theory questions are usually about speeds, the mean free path and proportionalities."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Ideal gaz modeli va bosimning kinetik ifodasi",
+  "ru": "1. Модель идеального газа и кинетическое выражение давления",
+  "en": "1. The ideal-gas model and the kinetic expression for pressure"
+ },
+ {
+  "t": "li",
+  "uz": "**Model.** Ideal gaz — o'lchami molekulalar orasidagi masofadan ancha kichik, faqat qisqa to'qnashuvlarda o'zaro ta'sirlashadigan va devor bilan elastik urilishadigan juda ko'p molekulalar. Normal sharoitda bitta molekulaga $\\frac{1}{n}\\approx3.7\\cdot10^{-26}\\ \\mathrm{m^3}$ hajm to'g'ri keladi, ya'ni o'rtacha masofa $n^{-1/3}\\approx3.3\\ \\mathrm{nm}$ — molekula diametridan taxminan o'n marta katta. Muvozanatda barcha yo'nalishlar teng huquqli (izotropiya), shuning uchun $\\langle v_x^2\\rangle=\\langle v_y^2\\rangle=\\langle v_z^2\\rangle=\\frac{1}{3}\\langle v^2\\rangle$.",
+  "ru": "**Модель.** Идеальный газ — очень много молекул, размер которых много меньше расстояния между ними, взаимодействующих только при кратких столкновениях и упруго ударяющихся о стенку. При нормальных условиях на одну молекулу приходится объём $\\frac{1}{n}\\approx3.7\\cdot10^{-26}\\ \\mathrm{m^3}$, то есть среднее расстояние $n^{-1/3}\\approx3.3\\ \\mathrm{nm}$ — примерно в десять раз больше диаметра молекулы. В равновесии все направления равноправны (изотропия), поэтому $\\langle v_x^2\\rangle=\\langle v_y^2\\rangle=\\langle v_z^2\\rangle=\\frac{1}{3}\\langle v^2\\rangle$.",
+  "en": "**The model.** An ideal gas is a very large number of molecules whose size is much smaller than the distance between them, which interact only in brief collisions and collide elastically with the wall. Under standard conditions there is a volume $\\frac{1}{n}\\approx3.7\\cdot10^{-26}\\ \\mathrm{m^3}$ per molecule, so the mean distance is $n^{-1/3}\\approx3.3\\ \\mathrm{nm}$ — about ten times the molecular diameter. In equilibrium all directions are equivalent (isotropy), so $\\langle v_x^2\\rangle=\\langle v_y^2\\rangle=\\langle v_z^2\\rangle=\\frac{1}{3}\\langle v^2\\rangle$."
+ },
+ {
+  "t": "li",
+  "uz": "**Devorga beriladigan impuls ([[F01]]).** $x$ o'qiga tik devorga $v_x>0$ tezlik bilan urilgan molekula elastik qaytadi va devorga $2m_0v_x$ impuls beradi. $dt$ vaqtda $S$ yuzaga asosi $S$, balandligi $v_x\\,dt$ bo'lgan silindr ichidagi shunday molekulalarning hammasi yetib keladi; ularning soni $n_{v_x}Sv_x\\,dt$, bunda $n_{v_x}$ — shu tezlikdagi molekulalar konsentratsiyasi. Barcha $v_x>0$ bo'yicha yig'ib, $F=\\frac{dp}{dt}$ ni $S$ ga bo'lsak, $p=nm_0\\langle v_x^2\\rangle$ (devorga yaqinlashayotganlar yarmi, lekin har biri $2m_0v_x$ beradi — ikkilik qisqaradi). Izotropiyadan:",
+  "ru": "**Импульс, передаваемый стенке ([[F01]]).** Молекула, налетающая на стенку, перпендикулярную оси $x$, со скоростью $v_x>0$, упруго отражается и передаёт стенке импульс $2m_0v_x$. За время $dt$ площадки $S$ достигают все такие молекулы внутри цилиндра с основанием $S$ и высотой $v_x\\,dt$; их число $n_{v_x}Sv_x\\,dt$, где $n_{v_x}$ — концентрация молекул с этой скоростью. Суммируя по всем $v_x>0$ и деля $F=\\frac{dp}{dt}$ на $S$, получим $p=nm_0\\langle v_x^2\\rangle$ (к стенке летит половина молекул, но каждая передаёт $2m_0v_x$ — двойки сокращаются). Из изотропии:",
+  "en": "**Momentum given to the wall ([[F01]]).** A molecule striking a wall perpendicular to the $x$ axis with velocity $v_x>0$ rebounds elastically and gives the wall momentum $2m_0v_x$. In a time $dt$ the area $S$ is reached by all such molecules inside a cylinder of base $S$ and height $v_x\\,dt$; their number is $n_{v_x}Sv_x\\,dt$, where $n_{v_x}$ is the concentration of molecules with this velocity. Summing over all $v_x>0$ and dividing $F=\\frac{dp}{dt}$ by $S$ gives $p=nm_0\\langle v_x^2\\rangle$ (half of the molecules move towards the wall, but each gives $2m_0v_x$ — the factors of two cancel). From isotropy:"
+ },
+ {
+  "t": "m",
+  "m": "p=\\frac{1}{3}nm_0\\langle v^2\\rangle=\\frac{2}{3}n\\langle\\varepsilon\\rangle=\\frac{1}{3}\\rho\\langle v^2\\rangle"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L31-F01.png",
+   "ru": "figures/B2-L31-F01-ru.png",
+   "en": "figures/B2-L31-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Temperaturaning ma'nosi.** Tajribadan $p=nkT$ (B1-L23); kinetik ifoda bilan solishtirsak, molekula ilgarilanma harakatining o'rtacha kinetik energiyasi faqat temperaturaga bog'liq ekani kelib chiqadi. Absolyut temperatura — molekulalar tartibsiz ilgarilanma harakati o'rtacha energiyasining o'lchovi. U gaz turiga bog'liq emas: bir xil $T$ da vodorod molekulasi va og'ir ksenon atomining o'rtacha kinetik energiyasi bir xil, faqat tezliklari $\\sqrt{\\frac{m_{0}}{m_0'}}$ nisbatda farq qiladi:",
+  "ru": "**Смысл температуры.** Из опыта $p=nkT$ (B1-L23); сравнив с кинетическим выражением, получим, что средняя кинетическая энергия поступательного движения молекулы зависит только от температуры. Абсолютная температура — мера средней энергии хаотического поступательного движения молекул. Она не зависит от рода газа: при одинаковой $T$ средние кинетические энергии молекулы водорода и тяжёлого атома ксенона одинаковы, отличаются лишь скорости — в отношении $\\sqrt{\\frac{m_{0}}{m_0'}}$:",
+  "en": "**The meaning of temperature.** Experiment gives $p=nkT$ (B1-L23); comparing with the kinetic expression shows that the mean kinetic energy of translational motion of a molecule depends only on temperature. Absolute temperature is a measure of the mean energy of the random translational motion of molecules. It does not depend on the kind of gas: at the same $T$ a hydrogen molecule and a heavy xenon atom have the same mean kinetic energy; only their speeds differ, in the ratio $\\sqrt{\\frac{m_{0}}{m_0'}}$:"
+ },
+ {
+  "t": "m",
+  "m": "\\langle\\varepsilon\\rangle=\\frac{1}{2}m_0\\langle v^2\\rangle=\\frac{3}{2}kT,\\qquad \\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3kT}{m_0}}=\\sqrt{\\frac{3RT}{M}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Dalton qonuni va aralashmalar.** Har xil gazlar molekulalari devorga mustaqil uriladi, shuning uchun aralashma bosimi parsial bosimlar yig'indisi: $p=\\sum_jn_jkT$. Bu bosimning faqat umumiy konsentratsiyaga bog'liqligini bildiradi — bir xil $p$ va $T$ da istalgan gazning bir litrida molekulalar soni bir xil (Avogadro qonuni). Bosimning yana bir ko'rinishi $p=\\frac{1}{3}\\rho\\langle v^2\\rangle$ zichlik va tezlikni bog'laydi: $\\rho$ va $p$ ma'lum bo'lsa, molekulalar massasini bilmasdan ham $\\sqrt{\\langle v^2\\rangle}$ ni topish mumkin.",
+  "ru": "**Закон Дальтона и смеси.** Молекулы разных газов ударяют о стенку независимо, поэтому давление смеси равно сумме парциальных давлений: $p=\\sum_jn_jkT$. Это означает, что давление зависит только от полной концентрации — при одинаковых $p$ и $T$ в литре любого газа одинаковое число молекул (закон Авогадро). Ещё одна форма давления $p=\\frac{1}{3}\\rho\\langle v^2\\rangle$ связывает плотность и скорость: зная $\\rho$ и $p$, можно найти $\\sqrt{\\langle v^2\\rangle}$, даже не зная массы молекул.",
+  "en": "**Dalton's law and mixtures.** Molecules of different gases strike the wall independently, so the pressure of a mixture is the sum of the partial pressures: $p=\\sum_jn_jkT$. This means the pressure depends only on the total concentration — at the same $p$ and $T$ a litre of any gas contains the same number of molecules (Avogadro's law). Another form of the pressure, $p=\\frac{1}{3}\\rho\\langle v^2\\rangle$, links density and speed: knowing $\\rho$ and $p$ one can find $\\sqrt{\\langle v^2\\rangle}$ without knowing the molecular mass."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Teng taqsimlanish qonuni",
+  "ru": "2. Закон равнораспределения",
+  "en": "2. The equipartition theorem"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Klassik muvozanatdagi tizimda energiya ifodasidagi har bir kvadratik had (koordinata yoki impulsning kvadrati) o'rtacha $\\frac{1}{2}kT$ energiyaga ega. Isboti Bolsman taqsimotiga asoslanadi (3-bo'lim): agar energiyada $aq^2$ had bo'lsa, $q$ ning ehtimolligi $e^{-\\frac{aq^2}{kT}}$ ga proporsional va Gauss integrali $\\langle aq^2\\rangle=\\frac{1}{2}kT$ ni beradi, $a$ ga bog'liq bo'lmagan holda. Shuning uchun kvadratik hadlar soni $i$ bo'lsa, molekula o'rtacha energiyasi:",
+  "ru": "**Формулировка.** В классической равновесной системе каждый квадратичный член в выражении энергии (квадрат координаты или импульса) имеет в среднем энергию $\\frac{1}{2}kT$. Доказательство основано на распределении Больцмана (раздел 3): если в энергии есть член $aq^2$, вероятность значения $q$ пропорциональна $e^{-\\frac{aq^2}{kT}}$, и гауссов интеграл даёт $\\langle aq^2\\rangle=\\frac{1}{2}kT$ независимо от $a$. Поэтому при числе квадратичных членов $i$ средняя энергия молекулы:",
+  "en": "**Statement.** In a classical system in equilibrium, every quadratic term in the energy (the square of a coordinate or a momentum) has on average the energy $\\frac{1}{2}kT$. The proof rests on the Boltzmann distribution (Section 3): if the energy contains a term $aq^2$, the probability of a value $q$ is proportional to $e^{-\\frac{aq^2}{kT}}$, and the Gaussian integral gives $\\langle aq^2\\rangle=\\frac{1}{2}kT$ whatever $a$ is. Hence, with $i$ quadratic terms, the mean energy of a molecule is:"
+ },
+ {
+  "t": "m",
+  "m": "\\langle\\varepsilon\\rangle=\\frac{i}{2}kT,\\qquad \\left\\langle\\frac{1}{2}I\\omega_x^2\\right\\rangle=\\frac{1}{2}kT,\\qquad \\left\\langle\\frac{1}{2}\\kappa_0x^2\\right\\rangle=\\frac{1}{2}kT"
+ },
+ {
+  "t": "li",
+  "uz": "**Erkinlik darajalarini sanash.** Bir atomli molekula: $3$ ilgarilanma had, $i=3$. Qattiq ikki atomli molekula: $3$ ilgarilanma va $2$ aylanma had (molekula o'qi atrofidagi aylanish inersiya momenti juda kichik va kvant jihatdan «muzlagan»), $i=5$. Tebranayotgan ikki atomli molekula har bir tebranma daraja uchun ikki had qo'shadi — kinetik va potensial — shuning uchun $i=7$. Kristall panjaradagi atom — uch o'lchamli ossilyator: $6$ had, $\\langle\\varepsilon\\rangle=3kT$, bu Dyulong–Pti qonuni $C=3R$ ni beradi (B2-L29). Qaysi darajalar haqiqatda «yoqilganini» temperatura va kvant sathlari oralig'i belgilaydi: $kT$ sathlar oralig'idan ancha kichik bo'lsa, daraja muzlagan.",
+  "ru": "**Подсчёт степеней свободы.** Одноатомная молекула: $3$ поступательных члена, $i=3$. Жёсткая двухатомная молекула: $3$ поступательных и $2$ вращательных члена (вращение вокруг оси молекулы имеет очень малый момент инерции и квантово «заморожено»), $i=5$. Колеблющаяся двухатомная молекула на каждую колебательную степень добавляет два члена — кинетический и потенциальный, поэтому $i=7$. Атом в кристаллической решётке — трёхмерный осциллятор: $6$ членов, $\\langle\\varepsilon\\rangle=3kT$, что даёт закон Дюлонга–Пти $C=3R$ (B2-L29). Какие степени действительно «включены», определяют температура и расстояние между квантовыми уровнями: если $kT$ много меньше этого расстояния, степень заморожена.",
+  "en": "**Counting degrees of freedom.** A monatomic molecule: $3$ translational terms, $i=3$. A rigid diatomic molecule: $3$ translational and $2$ rotational terms (rotation about the molecular axis has a very small moment of inertia and is quantum-mechanically \"frozen\"), $i=5$. A vibrating diatomic molecule adds two terms for each vibrational degree — kinetic and potential — so $i=7$. An atom in a crystal lattice is a three-dimensional oscillator: $6$ terms, $\\langle\\varepsilon\\rangle=3kT$, which gives the Dulong–Petit law $C=3R$ (B2-L29). Which degrees are actually \"switched on\" is set by the temperature and the spacing of the quantum levels: if $kT$ is much smaller than this spacing, the degree is frozen."
+ },
+ {
+  "t": "li",
+  "uz": "**Aylanish va Broun zarrasi.** Teng taqsimlanish massaga bog'liq emas, shuning uchun u istalgan o'lchamdagi zarraga qo'llanadi. Inersiya momenti $I$ bo'lgan molekula har bir aylanish o'qi atrofida $\\langle\\omega_x^2\\rangle=\\frac{kT}{I}$ burchak tezlik kvadratiga ega — xona temperaturasida $10^{12}$–$10^{13}\\ \\mathrm{rad/s}$ tartibida. Suyuqlikdagi mikron o'lchamli zarra ham xuddi shunday $\\frac{3}{2}kT$ energiyaga ega; massasi katta bo'lgani uchun tezligi millimetrlar/sekund tartibida, lekin u har lahzada yo'nalishini o'zgartiradi (9-bo'lim). Elastik prujinadagi jism (bikirligi $\\kappa_0$) ham issiqlik tufayli $\\langle x^2\\rangle=\\frac{kT}{\\kappa_0}$ tebranadi — sezgir o'lchov asboblari shovqinining tabiiy chegarasi.",
+  "ru": "**Вращение и броуновская частица.** Равнораспределение не зависит от массы, поэтому применимо к частице любого размера. Молекула с моментом инерции $I$ имеет относительно каждой оси вращения квадрат угловой скорости $\\langle\\omega_x^2\\rangle=\\frac{kT}{I}$ — при комнатной температуре порядка $10^{12}$–$10^{13}\\ \\mathrm{rad/s}$. Частица микронного размера в жидкости имеет ту же энергию $\\frac{3}{2}kT$; из-за большой массы её скорость порядка миллиметров в секунду, но направление меняется каждое мгновение (раздел 9). Тело на упругой пружине (жёсткость $\\kappa_0$) тоже колеблется из-за теплоты: $\\langle x^2\\rangle=\\frac{kT}{\\kappa_0}$ — естественный предел шума чувствительных приборов.",
+  "en": "**Rotation and a Brownian particle.** Equipartition does not depend on mass, so it applies to a particle of any size. A molecule with moment of inertia $I$ has, about each axis of rotation, the mean square angular velocity $\\langle\\omega_x^2\\rangle=\\frac{kT}{I}$ — of order $10^{12}$–$10^{13}\\ \\mathrm{rad/s}$ at room temperature. A micron-sized particle in a liquid has the same energy $\\frac{3}{2}kT$; because its mass is large its speed is of order millimetres per second, but its direction changes at every instant (Section 9). A body on an elastic spring (stiffness $\\kappa_0$) also vibrates because of heat: $\\langle x^2\\rangle=\\frac{kT}{\\kappa_0}$ — a natural limit to the noise of sensitive instruments."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Bolsman taqsimoti va barometrik formula",
+  "ru": "3. Распределение Больцмана и барометрическая формула",
+  "en": "3. The Boltzmann distribution and the barometric formula"
+ },
+ {
+  "t": "li",
+  "uz": "**Izotermik atmosfera.** Balandligi $dh$ bo'lgan gorizontal qatlamning muvozanati: pastdan va yuqoridan bosimlar farqi uning og'irligini tutib turadi, $dp=-nm_0g\\,dh$. $p=nkT$ va $T=\\mathrm{const}$ bo'lsa, $\\frac{dn}{n}=-\\frac{m_0g}{kT}dh$, ya'ni konsentratsiya va bosim balandlik bilan eksponensial kamayadi. $e$ marta kamayish masofasi — **balandlik shkalasi** $H$ — yengil gazlar va yuqori temperaturada katta ([[F02]]):",
+  "ru": "**Изотермическая атмосфера.** Равновесие горизонтального слоя толщиной $dh$: разность давлений снизу и сверху удерживает его вес, $dp=-nm_0g\\,dh$. При $p=nkT$ и $T=\\mathrm{const}$ $\\frac{dn}{n}=-\\frac{m_0g}{kT}dh$, то есть концентрация и давление экспоненциально убывают с высотой. Расстояние, на котором происходит уменьшение в $e$ раз, — **шкала высот** $H$ — велико для лёгких газов и при высокой температуре ([[F02]]):",
+  "en": "**An isothermal atmosphere.** Equilibrium of a horizontal layer of thickness $dh$: the pressure difference below and above supports its weight, $dp=-nm_0g\\,dh$. With $p=nkT$ and $T=\\mathrm{const}$, $\\frac{dn}{n}=-\\frac{m_0g}{kT}dh$, that is, the concentration and the pressure fall exponentially with height. The distance over which they fall by a factor of $e$ — the **scale height** $H$ — is large for light gases and at high temperature ([[F02]]):"
+ },
+ {
+  "t": "m",
+  "m": "n=n_0e^{-\\frac{m_0gh}{kT}},\\qquad p=p_0e^{-\\frac{Mgh}{RT}},\\qquad H=\\frac{kT}{m_0g}=\\frac{RT}{Mg}"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L31-F02.png",
+   "ru": "figures/B2-L31-F02-ru.png",
+   "en": "figures/B2-L31-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy Bolsman taqsimoti.** Barometrik formuladagi $m_0gh$ — molekulaning potensial energiyasi. Istalgan potensial maydonda muvozanatdagi zarralar konsentratsiyasi Bolsman faktori $e^{-\\frac{U}{kT}}$ ga proporsional; umuman, energiyasi $E_j$ bo'lgan holatning ehtimolligi $P_j\\propto e^{-\\frac{E_j}{kT}}$. Ikki holat ehtimolliklari nisbati $\\frac{P_2}{P_1}=e^{-\\frac{E_2-E_1}{kT}}$ faqat energiyalar farqiga bog'liq — bu GRE dagi eng ko'p ishlatiladigan formulalardan biri. Aylanayotgan idishda markazdan qochma potensial $U=-\\frac{1}{2}m_0\\omega^2r^2$, tezlanish bilan harakatlanayotgan quvurda $U=m_0ax$ — bu ultratsentrifugada izotoplar va makromolekulalarni ajratishning asosi.",
+  "ru": "**Общее распределение Больцмана.** В барометрической формуле $m_0gh$ — потенциальная энергия молекулы. В любом потенциальном поле концентрация равновесных частиц пропорциональна больцмановскому множителю $e^{-\\frac{U}{kT}}$; вообще вероятность состояния с энергией $E_j$ $P_j\\propto e^{-\\frac{E_j}{kT}}$. Отношение вероятностей двух состояний $\\frac{P_2}{P_1}=e^{-\\frac{E_2-E_1}{kT}}$ зависит только от разности энергий — одна из самых используемых формул на GRE. Во вращающемся сосуде центробежный потенциал $U=-\\frac{1}{2}m_0\\omega^2r^2$, в трубке, движущейся с ускорением, $U=m_0ax$ — на этом основано разделение изотопов и макромолекул в ультрацентрифуге.",
+  "en": "**The general Boltzmann distribution.** In the barometric formula $m_0gh$ is the potential energy of a molecule. In any potential field the concentration of particles in equilibrium is proportional to the Boltzmann factor $e^{-\\frac{U}{kT}}$; in general, the probability of a state of energy $E_j$ is $P_j\\propto e^{-\\frac{E_j}{kT}}$. The ratio of the probabilities of two states, $\\frac{P_2}{P_1}=e^{-\\frac{E_2-E_1}{kT}}$, depends only on the energy difference — one of the most used formulas on the GRE. In a rotating vessel the centrifugal potential is $U=-\\frac{1}{2}m_0\\omega^2r^2$, in a tube moving with acceleration $U=m_0ax$ — the basis for separating isotopes and macromolecules in an ultracentrifuge."
+ },
+ {
+  "t": "m",
+  "m": "n=n_0e^{-\\frac{U}{kT}},\\qquad \\frac{P_2}{P_1}=e^{-\\frac{E_2-E_1}{kT}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Perren tajribasi.** Suyuqlikdagi mayda zarralar ham Bolsman taqsimotiga bo'ysunadi, faqat og'irlik o'rniga Arximed kuchi ayirilgan og'irlik olinadi: $U=\\left(\\rho-\\rho_0\\right)Vgh$. Perren (1908) mikroskopda turli balandlikdagi zarralarni sanab, $\\frac{n_1}{n_2}=e^{\\frac{\\left(\\rho-\\rho_0\\right)Vg\\Delta h}{kT}}$ dan $k$ ni, demak $N_A=\\frac{R}{k}$ ni topdi — atomlarning real mavjudligining eng ishonchli dalillaridan biri. Zarralar uchun balandlik shkalasi mikrometrlar, havo molekulalari uchun kilometrlar tartibida: farq massalar nisbatidan.",
+  "ru": "**Опыт Перрена.** Мелкие частицы в жидкости тоже подчиняются распределению Больцмана, только вместо веса берётся вес за вычетом архимедовой силы: $U=\\left(\\rho-\\rho_0\\right)Vgh$. Перрен (1908), подсчитывая под микроскопом частицы на разных высотах, из $\\frac{n_1}{n_2}=e^{\\frac{\\left(\\rho-\\rho_0\\right)Vg\\Delta h}{kT}}$ нашёл $k$, а значит, и $N_A=\\frac{R}{k}$ — одно из самых убедительных доказательств реального существования атомов. Для частиц шкала высот порядка микрометров, для молекул воздуха — километров: разница — из отношения масс.",
+  "en": "**Perrin's experiment.** Small particles in a liquid also obey the Boltzmann distribution, only the weight is replaced by the weight minus the buoyant force: $U=\\left(\\rho-\\rho_0\\right)Vgh$. Perrin (1908), counting particles at different heights under a microscope, found $k$ from $\\frac{n_1}{n_2}=e^{\\frac{\\left(\\rho-\\rho_0\\right)Vg\\Delta h}{kT}}$, and hence $N_A=\\frac{R}{k}$ — one of the most convincing proofs of the real existence of atoms. For the particles the scale height is of order micrometres, for air molecules kilometres: the difference comes from the ratio of the masses."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Maksvell tezliklar taqsimoti",
+  "ru": "4. Распределение Максвелла по скоростям",
+  "en": "4. The Maxwell speed distribution"
+ },
+ {
+  "t": "li",
+  "uz": "**Tezlik proyeksiyalari.** Molekula energiyasi $\\frac{1}{2}m_0\\left(v_x^2+v_y^2+v_z^2\\right)$; Bolsman faktoriga ko'ra har bir proyeksiya mustaqil ravishda Gauss taqsimotiga ega. Normallash sharti $\\int f\\,dv_x=1$ koeffitsiyentni beradi; o'rtacha proyeksiya $\\langle v_x\\rangle=0$, dispersiya esa $\\langle v_x^2\\rangle=\\frac{kT}{m_0}$ — teng taqsimlanish bilan mos:",
+  "ru": "**Проекции скорости.** Энергия молекулы $\\frac{1}{2}m_0\\left(v_x^2+v_y^2+v_z^2\\right)$; по больцмановскому множителю каждая проекция независимо распределена по Гауссу. Условие нормировки $\\int f\\,dv_x=1$ даёт коэффициент; средняя проекция $\\langle v_x\\rangle=0$, а дисперсия $\\langle v_x^2\\rangle=\\frac{kT}{m_0}$ — в согласии с равнораспределением:",
+  "en": "**Velocity components.** The energy of a molecule is $\\frac{1}{2}m_0\\left(v_x^2+v_y^2+v_z^2\\right)$; by the Boltzmann factor each component is independently Gaussian-distributed. The normalisation condition $\\int f\\,dv_x=1$ gives the coefficient; the mean component is $\\langle v_x\\rangle=0$ and the variance $\\langle v_x^2\\rangle=\\frac{kT}{m_0}$ — in agreement with equipartition:"
+ },
+ {
+  "t": "m",
+  "m": "f\\left(v_x\\right)=\\sqrt{\\frac{m_0}{2\\pi kT}}\\,e^{-\\frac{m_0v_x^2}{2kT}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tezlik moduli bo'yicha taqsimot.** Uch proyeksiya ehtimolliklari ko'paytiriladi va tezliklar fazosida faqat modulga bog'liq funksiya hosil bo'ladi. Moduli $v$ va $v+dv$ orasidagi tezliklar radiusi $v$, qalinligi $dv$ bo'lgan sferik qatlamda yotadi, uning hajmi $4\\pi v^2dv$. Shuning uchun Maksvell taqsimotida ikki raqobatlashuvchi omil bor: $v^2$ (katta tezliklarga «joy» ko'proq) va $e^{-\\frac{m_0v^2}{2kT}}$ (katta energiya kam ehtimolli). Natijada $F\\left(v\\right)$ noldan boshlanadi, maksimumga yetadi va tez kamayadi ([[F03]]):",
+  "ru": "**Распределение по модулю скорости.** Вероятности трёх проекций перемножаются, и в пространстве скоростей получается функция, зависящая только от модуля. Скорости с модулем между $v$ и $v+dv$ лежат в сферическом слое радиуса $v$ и толщины $dv$, его объём $4\\pi v^2dv$. Поэтому в распределении Максвелла два конкурирующих множителя: $v^2$ (большим скоростям больше «места») и $e^{-\\frac{m_0v^2}{2kT}}$ (большая энергия маловероятна). В итоге $F\\left(v\\right)$ начинается с нуля, достигает максимума и быстро убывает ([[F03]]):",
+  "en": "**Distribution of the speed.** The probabilities of the three components multiply, giving in velocity space a function of the magnitude alone. Speeds between $v$ and $v+dv$ lie in a spherical shell of radius $v$ and thickness $dv$, whose volume is $4\\pi v^2dv$. So the Maxwell distribution has two competing factors: $v^2$ (there is more \"room\" for large speeds) and $e^{-\\frac{m_0v^2}{2kT}}$ (large energy is improbable). As a result $F\\left(v\\right)$ starts at zero, reaches a maximum and falls off rapidly ([[F03]]):"
+ },
+ {
+  "t": "m",
+  "m": "F\\left(v\\right)=4\\pi\\left(\\frac{m_0}{2\\pi kT}\\right)^{3/2}v^2e^{-\\frac{m_0v^2}{2kT}},\\qquad \\int_0^\\infty F\\left(v\\right)dv=1"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L31-F03.png",
+   "ru": "figures/B2-L31-F03-ru.png",
+   "en": "figures/B2-L31-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Temperatura va massaning ta'siri.** Taqsimot faqat $\\frac{m_0}{kT}$ kombinatsiyaga bog'liq. $T$ ortsa yoki massa kamaysa, egri chiziq o'ngga siljiydi va yoyiladi; ostidagi yuza $1$ ga teng qolgani uchun cho'qqi pasayadi — temperatura $9$ marta ortsa, cho'qqi tezligi $3$ marta ortadi, balandligi $3$ marta kamayadi. Taqsimotning «dumi» juda sezgir: $v$ katta bo'lganda $e^{-\\frac{m_0v^2}{2kT}}$ temperaturaga kuchli bog'liq. Shuning uchun kimyoviy reaksiyalar va bug'lanish tezligi temperatura bilan keskin o'sadi, sayyoralar atmosferasidan esa faqat dumdagi eng tez molekulalar qochadi (yengil vodorod va geliy Yerda saqlanmagan).",
+  "ru": "**Влияние температуры и массы.** Распределение зависит только от комбинации $\\frac{m_0}{kT}$. При росте $T$ или уменьшении массы кривая сдвигается вправо и расплывается; поскольку площадь под ней остаётся равной $1$, пик понижается — при увеличении температуры в $9$ раз скорость пика растёт в $3$ раза, а высота уменьшается в $3$ раза. «Хвост» распределения очень чувствителен: при больших $v$ множитель $e^{-\\frac{m_0v^2}{2kT}}$ сильно зависит от температуры. Поэтому скорости химических реакций и испарения резко растут с температурой, а из атмосферы планет уходят только самые быстрые молекулы хвоста (лёгкие водород и гелий на Земле не удержались).",
+  "en": "**Effect of temperature and mass.** The distribution depends only on the combination $\\frac{m_0}{kT}$. When $T$ rises or the mass falls, the curve shifts to the right and spreads out; since the area under it stays equal to $1$, the peak drops — when the temperature increases by a factor of $9$, the peak speed increases by a factor of $3$ and the peak height decreases by a factor of $3$. The \"tail\" of the distribution is very sensitive: at large $v$ the factor $e^{-\\frac{m_0v^2}{2kT}}$ depends strongly on temperature. This is why reaction and evaporation rates rise sharply with temperature, and why only the fastest molecules of the tail escape from planetary atmospheres (light hydrogen and helium were not retained on Earth)."
+ },
+ {
+  "t": "li",
+  "uz": "**Tajribaviy tekshiruv.** Shtern (1920) va Lammert (1929) tajribalarida tirqishdan chiqqan molekulyar dasta aylanayotgan disklar yoki silindr orqali o'tkazildi: faqat ma'lum tezlikdagi molekulalar teshiklardan o'ta oldi. O'lchangan taqsimot Maksvell formulasi bilan aniq mos keldi. Taqsimot faqat muvozanatdagi gaz uchun to'g'ri; to'qnashuvlar istalgan boshlang'ich taqsimotni bir necha erkin yugurish vaqtida Maksvell taqsimotiga keltiradi.",
+  "ru": "**Экспериментальная проверка.** В опытах Штерна (1920) и Ламмерта (1929) молекулярный пучок из щели пропускался через вращающиеся диски или цилиндр: через отверстия проходили только молекулы с определённой скоростью. Измеренное распределение точно совпало с формулой Максвелла. Распределение верно только для равновесного газа; столкновения приводят любое начальное распределение к максвелловскому за несколько времён свободного пробега.",
+  "en": "**Experimental check.** In the experiments of Stern (1920) and Lammert (1929), a molecular beam from a slit was passed through rotating discs or a cylinder: only molecules of a definite speed got through the holes. The measured distribution agreed exactly with Maxwell's formula. The distribution holds only for a gas in equilibrium; collisions bring any initial distribution to the Maxwell one within a few mean free times."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Xarakterli tezliklar va energiyalar taqsimoti",
+  "ru": "5. Характерные скорости и распределение по энергиям",
+  "en": "5. Characteristic speeds and the energy distribution"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchta tezlik ([[F04]]).** Eng ehtimolli tezlik $\\tilde v$ — $F\\left(v\\right)$ ning maksimumi ($\\frac{dF}{dv}=0$); o'rtacha tezlik $\\langle v\\rangle=\\int_0^\\infty vF\\,dv$; o'rtacha kvadratik tezlik $\\sqrt{\\langle v^2\\rangle}$ teng taqsimlanishdan. Uchalasi ham $\\sqrt{\\frac{kT}{m_0}}$ ga proporsional, faqat koeffitsiyentlari har xil:",
+  "ru": "**Три скорости ([[F04]]).** Наиболее вероятная скорость $\\tilde v$ — максимум $F\\left(v\\right)$ ($\\frac{dF}{dv}=0$); средняя скорость $\\langle v\\rangle=\\int_0^\\infty vF\\,dv$; средняя квадратичная скорость $\\sqrt{\\langle v^2\\rangle}$ — из равнораспределения. Все три пропорциональны $\\sqrt{\\frac{kT}{m_0}}$, различаются лишь коэффициенты:",
+  "en": "**Three speeds ([[F04]]).** The most probable speed $\\tilde v$ is the maximum of $F\\left(v\\right)$ ($\\frac{dF}{dv}=0$); the mean speed is $\\langle v\\rangle=\\int_0^\\infty vF\\,dv$; the root-mean-square speed $\\sqrt{\\langle v^2\\rangle}$ comes from equipartition. All three are proportional to $\\sqrt{\\frac{kT}{m_0}}$; only the coefficients differ:"
+ },
+ {
+  "t": "m",
+  "m": "\\tilde v=\\sqrt{\\frac{2kT}{m_0}},\\qquad \\langle v\\rangle=\\sqrt{\\frac{8kT}{\\pi m_0}},\\qquad \\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3kT}{m_0}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Nisbatlar.** $\\tilde v:\\langle v\\rangle:\\sqrt{\\langle v^2\\rangle}=1:1.128:1.225$ — doim shu tartibda, chunki taqsimot o'ngga cho'zilgan (asimmetrik). $m_0$ o'rniga $\\frac{M}{N_A}$, $k$ o'rniga $\\frac{R}{N_A}$ qo'yilsa, $\\frac{kT}{m_0}=\\frac{RT}{M}$. Xona temperaturasida havo molekulalarining tezligi tovush tezligi tartibida — bu tasodif emas: tovush ham molekulalar harakati bilan uzatiladi, $\\sqrt{\\frac{\\gamma RT}{M}}$ va $\\sqrt{\\frac{3RT}{M}}$ nisbati $\\sqrt{\\frac{\\gamma}{3}}$. Bitta yo'nalish bo'yicha moduli o'rtachasi $\\langle\\left|v_x\\right|\\rangle=\\frac{1}{2}\\langle v\\rangle$ — bu 6-bo'limda kerak bo'ladi.",
+  "ru": "**Отношения.** $\\tilde v:\\langle v\\rangle:\\sqrt{\\langle v^2\\rangle}=1:1.128:1.225$ — всегда в этом порядке, так как распределение вытянуто вправо (асимметрично). Подставив $\\frac{M}{N_A}$ вместо $m_0$ и $\\frac{R}{N_A}$ вместо $k$, получим $\\frac{kT}{m_0}=\\frac{RT}{M}$. При комнатной температуре скорость молекул воздуха порядка скорости звука — это не случайно: звук тоже передаётся движением молекул, отношение $\\sqrt{\\frac{\\gamma RT}{M}}$ к $\\sqrt{\\frac{3RT}{M}}$ равно $\\sqrt{\\frac{\\gamma}{3}}$. Среднее модуля проекции на одно направление $\\langle\\left|v_x\\right|\\rangle=\\frac{1}{2}\\langle v\\rangle$ — понадобится в разделе 6.",
+  "en": "**Ratios.** $\\tilde v:\\langle v\\rangle:\\sqrt{\\langle v^2\\rangle}=1:1.128:1.225$ — always in this order, because the distribution is stretched to the right (asymmetric). Substituting $\\frac{M}{N_A}$ for $m_0$ and $\\frac{R}{N_A}$ for $k$ gives $\\frac{kT}{m_0}=\\frac{RT}{M}$. At room temperature the speed of air molecules is of the order of the speed of sound — no coincidence: sound is also carried by molecular motion, and the ratio of $\\sqrt{\\frac{\\gamma RT}{M}}$ to $\\sqrt{\\frac{3RT}{M}}$ is $\\sqrt{\\frac{\\gamma}{3}}$. The mean magnitude of the component along one direction is $\\langle\\left|v_x\\right|\\rangle=\\frac{1}{2}\\langle v\\rangle$ — needed in Section 6."
+ },
+ {
+  "t": "li",
+  "uz": "**Energiyalar taqsimoti.** $\\varepsilon=\\frac{1}{2}m_0v^2$ almashtirishi bilan $F\\left(v\\right)dv$ energiya bo'yicha taqsimotga o'tadi. U massaga bog'liq emas — faqat $kT$ ga. Eng ehtimolli energiya $\\frac{1}{2}kT$, eng ehtimolli tezlikka mos energiya esa $\\frac{1}{2}m_0\\tilde v^2=kT$ — bular teng emas, chunki o'zgaruvchi almashganda zichlik $\\frac{dv}{d\\varepsilon}$ ga ko'payadi. O'rtacha energiya $\\frac{3}{2}kT$. Katta energiyalar dumi Arrenius qonunining asosi: $\\varepsilon_0\\gg kT$ dan katta energiyali molekulalar ulushi taxminan $2\\sqrt{\\frac{\\varepsilon_0}{\\pi kT}}e^{-\\frac{\\varepsilon_0}{kT}}$.",
+  "ru": "**Распределение по энергиям.** Заменой $\\varepsilon=\\frac{1}{2}m_0v^2$ $F\\left(v\\right)dv$ переходит в распределение по энергии. Оно не зависит от массы — только от $kT$. Наиболее вероятная энергия $\\frac{1}{2}kT$, а энергия, соответствующая наиболее вероятной скорости, $\\frac{1}{2}m_0\\tilde v^2=kT$ — они не равны, потому что при замене переменной плотность умножается на $\\frac{dv}{d\\varepsilon}$. Средняя энергия $\\frac{3}{2}kT$. Хвост больших энергий — основа закона Аррениуса: доля молекул с энергией больше $\\varepsilon_0\\gg kT$ примерно $2\\sqrt{\\frac{\\varepsilon_0}{\\pi kT}}e^{-\\frac{\\varepsilon_0}{kT}}$.",
+  "en": "**The energy distribution.** With the substitution $\\varepsilon=\\frac{1}{2}m_0v^2$, $F\\left(v\\right)dv$ becomes a distribution over energy. It does not depend on the mass — only on $kT$. The most probable energy is $\\frac{1}{2}kT$, whereas the energy of the most probable speed is $\\frac{1}{2}m_0\\tilde v^2=kT$ — they differ because on changing the variable the density is multiplied by $\\frac{dv}{d\\varepsilon}$. The mean energy is $\\frac{3}{2}kT$. The high-energy tail underlies the Arrhenius law: the fraction of molecules with energy above $\\varepsilon_0\\gg kT$ is about $2\\sqrt{\\frac{\\varepsilon_0}{\\pi kT}}e^{-\\frac{\\varepsilon_0}{kT}}$."
+ },
+ {
+  "t": "m",
+  "m": "G\\left(\\varepsilon\\right)=\\frac{2}{\\sqrt\\pi}\\left(kT\\right)^{-3/2}\\sqrt\\varepsilon\\,e^{-\\frac{\\varepsilon}{kT}},\\qquad \\tilde\\varepsilon=\\frac{1}{2}kT,\\qquad \\langle\\varepsilon\\rangle=\\frac{3}{2}kT"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L31-F04.png",
+   "ru": "figures/B2-L31-F04-ru.png",
+   "en": "figures/B2-L31-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Tor oraliqdagi ulush.** $v$ atrofidagi kichik $\\Delta v$ oraliqdagi molekulalar ulushi $F\\left(v\\right)\\Delta v$. O'lchovsiz $u=\\frac{v}{\\tilde v}$ kiritsak, $F\\,dv=\\frac{4}{\\sqrt\\pi}u^2e^{-u^2}du$ — barcha gazlar va temperaturalar uchun bitta universal egri chiziq. Masalan, $\\tilde v$ atrofida $\\pm0.5\\%$ oraliqdagi ulush $\\frac{4}{\\sqrt\\pi}e^{-1}\\cdot0.01\\approx0.83\\%$; bunday hisoblarda faqat $u$ ni bilish kifoya.",
+  "ru": "**Доля в узком интервале.** Доля молекул в малом интервале $\\Delta v$ около $v$ равна $F\\left(v\\right)\\Delta v$. Введя безразмерную $u=\\frac{v}{\\tilde v}$, получим $F\\,dv=\\frac{4}{\\sqrt\\pi}u^2e^{-u^2}du$ — одна универсальная кривая для всех газов и температур. Например, доля в интервале $\\pm0.5\\%$ около $\\tilde v$ равна $\\frac{4}{\\sqrt\\pi}e^{-1}\\cdot0.01\\approx0.83\\%$; в таких расчётах достаточно знать $u$.",
+  "en": "**The fraction in a narrow interval.** The fraction of molecules in a small interval $\\Delta v$ around $v$ is $F\\left(v\\right)\\Delta v$. Introducing the dimensionless $u=\\frac{v}{\\tilde v}$ gives $F\\,dv=\\frac{4}{\\sqrt\\pi}u^2e^{-u^2}du$ — a single universal curve for all gases and temperatures. For example, the fraction within $\\pm0.5\\%$ of $\\tilde v$ is $\\frac{4}{\\sqrt\\pi}e^{-1}\\cdot0.01\\approx0.83\\%$; in such calculations it is enough to know $u$."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Devorga urilishlar va effuziya",
+  "ru": "6. Удары о стенку и эффузия",
+  "en": "6. Wall collisions and effusion"
+ },
+ {
+  "t": "li",
+  "uz": "**Urilishlar oqimi.** $dt$ vaqtda $S$ yuzaga $v_x>0$ molekulalarning $n\\langle v_x\\rangle_+S\\,dt$ tasi uriladi, bunda $\\langle v_x\\rangle_+=\\int_0^\\infty v_xf\\,dv_x=\\frac{1}{4}\\langle v\\rangle$ (yarmi devorga qarab harakatlanadi, ularning o'rtacha $\\left|v_x\\right|$ i $\\frac{1}{2}\\langle v\\rangle$). Natijada birlik yuzaga birlik vaqtda urilishlar soni:",
+  "ru": "**Поток ударов.** За время $dt$ о площадку $S$ ударяется $n\\langle v_x\\rangle_+S\\,dt$ молекул с $v_x>0$, где $\\langle v_x\\rangle_+=\\int_0^\\infty v_xf\\,dv_x=\\frac{1}{4}\\langle v\\rangle$ (половина движется к стенке, их средний $\\left|v_x\\right|$ равен $\\frac{1}{2}\\langle v\\rangle$). В итоге число ударов о единицу площади в единицу времени:",
+  "en": "**The flux of impacts.** In a time $dt$ the area $S$ is struck by $n\\langle v_x\\rangle_+S\\,dt$ molecules with $v_x>0$, where $\\langle v_x\\rangle_+=\\int_0^\\infty v_xf\\,dv_x=\\frac{1}{4}\\langle v\\rangle$ (half move towards the wall, and their mean $\\left|v_x\\right|$ is $\\frac{1}{2}\\langle v\\rangle$). As a result the number of impacts per unit area per unit time is:"
+ },
+ {
+  "t": "m",
+  "m": "j=\\frac{1}{4}n\\langle v\\rangle=\\frac{p}{\\sqrt{2\\pi m_0kT}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Effuziya ([[F05]]).** Agar devordagi teshik erkin yugurish yo'lidan kichik bo'lsa, molekulalar undan bir-biriga xalaqit bermasdan, alohida-alohida uchib chiqadi — bu **effuziya**. Teshikdan chiqish tezligi $jS$; o'zgarmas temperaturada idishdagi molekulalar soni eksponensial kamayadi, $\\frac{dN}{dt}=-\\frac{1}{4}\\frac{N}{V}\\langle v\\rangle S$, ya'ni vaqt doimiysi $\\tau=\\frac{4V}{S\\langle v\\rangle}$. Bir xil $p$ va $T$ da effuziya tezligi $\\frac{1}{\\sqrt M}$ ga proporsional (Grem qonuni) — yengil gaz tezroq chiqadi; bu g'ovak to'siqlar orqali izotoplarni ajratishning asosi. Effuziyalangan dastada tezroq molekulalar ko'proq ($vF\\left(v\\right)$ taqsimot), shuning uchun dasta molekulalarining o'rtacha kinetik energiyasi $2kT$, idishdagidek $\\frac{3}{2}kT$ emas.",
+  "ru": "**Эффузия ([[F05]]).** Если отверстие в стенке меньше длины свободного пробега, молекулы вылетают через него поодиночке, не мешая друг другу, — это **эффузия**. Скорость истечения $jS$; при постоянной температуре число молекул в сосуде убывает экспоненциально, $\\frac{dN}{dt}=-\\frac{1}{4}\\frac{N}{V}\\langle v\\rangle S$, то есть постоянная времени $\\tau=\\frac{4V}{S\\langle v\\rangle}$. При одинаковых $p$ и $T$ скорость эффузии пропорциональна $\\frac{1}{\\sqrt M}$ (закон Грэма) — лёгкий газ выходит быстрее; на этом основано разделение изотопов через пористые перегородки. В эффузионном пучке больше быстрых молекул (распределение $vF\\left(v\\right)$), поэтому средняя кинетическая энергия молекул пучка $2kT$, а не $\\frac{3}{2}kT$, как в сосуде.",
+  "en": "**Effusion ([[F05]]).** If a hole in the wall is smaller than the mean free path, molecules fly out through it one by one without hindering each other — this is **effusion**. The outflow rate is $jS$; at constant temperature the number of molecules in the vessel decreases exponentially, $\\frac{dN}{dt}=-\\frac{1}{4}\\frac{N}{V}\\langle v\\rangle S$, that is, with time constant $\\tau=\\frac{4V}{S\\langle v\\rangle}$. At the same $p$ and $T$ the effusion rate is proportional to $\\frac{1}{\\sqrt M}$ (Graham's law) — a light gas escapes faster; this is the basis of isotope separation through porous barriers. The effusing beam contains more fast molecules (distribution $vF\\left(v\\right)$), so the mean kinetic energy of the molecules in the beam is $2kT$, not $\\frac{3}{2}kT$ as in the vessel."
+ },
+ {
+  "t": "m",
+  "m": "N=N_0e^{-\\frac{t}{\\tau}},\\qquad \\tau=\\frac{4V}{S\\langle v\\rangle},\\qquad \\frac{j_1}{j_2}=\\sqrt{\\frac{M_2}{M_1}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L31-F05.png",
+   "ru": "figures/B2-L31-F05-ru.png",
+   "en": "figures/B2-L31-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Izotoplarni ajratish va Knudsen muvozanati.** Effuziyaning bitta bosqichida ajratish koeffitsiyenti $\\sqrt{\\frac{M_2}{M_1}}$ — massalari yaqin izotoplar uchun birdan juda kam farq qiladi, shuning uchun sanoat qurilmalari yuzlab va minglab bosqichdan iborat kaskad bo'ladi. Ikki idish temperaturalari har xil bo'lib, kichik teshik bilan tutashsa, muvozanatda bosimlar emas, oqimlar tenglashadi: $\\frac{p_1}{\\sqrt{T_1}}=\\frac{p_2}{\\sqrt{T_2}}$ (Knudsen effekti) — teshik katta bo'lsa esa bosimlar tenglashardi.",
+  "ru": "**Разделение изотопов и равновесие Кнудсена.** На одной ступени эффузии коэффициент разделения $\\sqrt{\\frac{M_2}{M_1}}$ — для изотопов с близкими массами он очень мало отличается от единицы, поэтому промышленные установки — каскады из сотен и тысяч ступеней. Если два сосуда с разными температурами соединены малым отверстием, в равновесии выравниваются не давления, а потоки: $\\frac{p_1}{\\sqrt{T_1}}=\\frac{p_2}{\\sqrt{T_2}}$ (эффект Кнудсена) — при большом отверстии выровнялись бы давления.",
+  "en": "**Isotope separation and Knudsen equilibrium.** In one stage of effusion the separation factor is $\\sqrt{\\frac{M_2}{M_1}}$ — for isotopes of close masses it differs very little from one, so industrial plants are cascades of hundreds and thousands of stages. If two vessels at different temperatures are joined by a small hole, in equilibrium it is not the pressures but the fluxes that become equal: $\\frac{p_1}{\\sqrt{T_1}}=\\frac{p_2}{\\sqrt{T_2}}$ (the Knudsen effect) — with a large hole the pressures would become equal."
+ },
+ {
+  "t": "h2",
+  "uz": "7. To'qnashuvlar va erkin yugurish yo'li",
+  "ru": "7. Столкновения и длина свободного пробега",
+  "en": "7. Collisions and the mean free path"
+ },
+ {
+  "t": "li",
+  "uz": "**To'qnashuv kesimi ([[F06]]).** Molekulalarni diametri $d$ bo'lgan qattiq sharlar deb olamiz. Ikki molekula markazlari orasidagi masofa $d$ dan kichik bo'lsa, ular to'qnashadi, ya'ni harakatlanayotgan molekula atrofida yuzasi $\\sigma=\\pi d^2$ bo'lgan «nishon» bor. $t$ vaqtda u hajmi $\\sigma\\langle v\\rangle t$ bo'lgan singan silindrni «supurib» o'tadi va ichidagi barcha molekulalar bilan to'qnashadi. Boshqa molekulalar ham harakatlanayotgani hisobga olinsa, nisbiy tezlik $\\sqrt2\\langle v\\rangle$ ga teng bo'ladi:",
+  "ru": "**Сечение столкновения ([[F06]]).** Будем считать молекулы твёрдыми шарами диаметра $d$. Если расстояние между центрами двух молекул меньше $d$, они сталкиваются, то есть вокруг движущейся молекулы есть «мишень» площадью $\\sigma=\\pi d^2$. За время $t$ она «заметает» ломаный цилиндр объёмом $\\sigma\\langle v\\rangle t$ и сталкивается со всеми молекулами внутри него. С учётом движения других молекул относительная скорость равна $\\sqrt2\\langle v\\rangle$:",
+  "en": "**Collision cross-section ([[F06]]).** Treat the molecules as hard spheres of diameter $d$. If the distance between the centres of two molecules is less than $d$, they collide, so around a moving molecule there is a \"target\" of area $\\sigma=\\pi d^2$. In a time $t$ it \"sweeps out\" a broken cylinder of volume $\\sigma\\langle v\\rangle t$ and collides with all the molecules inside it. Taking the motion of the other molecules into account, the relative speed is $\\sqrt2\\langle v\\rangle$:"
+ },
+ {
+  "t": "m",
+  "m": "z=\\sqrt2\\,\\sigma n\\langle v\\rangle,\\qquad \\lambda=\\frac{\\langle v\\rangle}{z}=\\frac{1}{\\sqrt2\\,\\sigma n}=\\frac{kT}{\\sqrt2\\,\\pi d^2p}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kattaliklar tartibi.** Effektiv diametr $d\\approx0.2$–$0.4\\ \\mathrm{nm}$. Normal sharoitdagi havoda erkin yugurish yo'li $10^{-7}\\ \\mathrm{m}$ tartibida — molekulalar orasidagi masofadan o'nlab marta katta, to'qnashuvlar chastotasi esa sekundiga milliardlab. $\\lambda$ bosimga teskari proporsional: yuqori vakuumda ($10^{-6}\\ \\mathrm{Pa}$ va undan past) u kilometrlarga yetadi. Bir xil konsentratsiyada $\\lambda$ temperaturaga bog'liq emas (qattiq sharlar modelida), $z$ esa $\\langle v\\rangle\\propto\\sqrt T$ bilan ortadi. Agar $\\lambda$ idish o'lchamidan katta bo'lsa, gaz **o'ta siyraklangan** — molekulalar asosan devorlar bilan to'qnashadi va bu bo'limdagi formulalar o'rnini Knudsen rejimi egallaydi.",
+  "ru": "**Порядки величин.** Эффективный диаметр $d\\approx0.2$–$0.4\\ \\mathrm{nm}$. В воздухе при нормальных условиях длина свободного пробега порядка $10^{-7}\\ \\mathrm{m}$ — в десятки раз больше расстояния между молекулами, а частота столкновений — миллиарды в секунду. $\\lambda$ обратно пропорциональна давлению: в высоком вакууме ($10^{-6}\\ \\mathrm{Pa}$ и ниже) она достигает километров. При одинаковой концентрации $\\lambda$ не зависит от температуры (в модели твёрдых шаров), а $z$ растёт как $\\langle v\\rangle\\propto\\sqrt T$. Если $\\lambda$ больше размера сосуда, газ **ультраразреженный** — молекулы сталкиваются в основном со стенками, и формулы этого раздела заменяет кнудсеновский режим.",
+  "en": "**Orders of magnitude.** The effective diameter is $d\\approx0.2$–$0.4\\ \\mathrm{nm}$. In air under standard conditions the mean free path is of order $10^{-7}\\ \\mathrm{m}$ — tens of times the distance between molecules — and the collision frequency is billions per second. $\\lambda$ is inversely proportional to pressure: in high vacuum ($10^{-6}\\ \\mathrm{Pa}$ and below) it reaches kilometres. At a fixed concentration $\\lambda$ does not depend on temperature (in the hard-sphere model), while $z$ grows as $\\langle v\\rangle\\propto\\sqrt T$. If $\\lambda$ exceeds the size of the vessel the gas is **ultra-rarefied** — molecules collide mostly with the walls, and the formulas of this section give way to the Knudsen regime."
+ },
+ {
+  "t": "li",
+  "uz": "**Erkin yugurishlar taqsimoti.** Har bir $ds$ yo'lda to'qnashuv ehtimolligi $\\frac{ds}{\\lambda}$, shuning uchun $s$ yo'lni to'qnashuvsiz o'tadigan molekulalar ulushi eksponensial kamayadi — radioaktiv yemirilish yoki yorug'likning yutilishi bilan bir xil matematika. O'rtacha yugurish aynan $\\lambda$; $\\lambda$ dan uzun yo'lni molekulalarning $e^{-1}\\approx37\\%$ i o'tadi. Siyrak gazda dasta intensivligining kamayishini o'lchab, $\\lambda$ ni va demak molekula diametrini topish mumkin:",
+  "ru": "**Распределение свободных пробегов.** Вероятность столкновения на каждом пути $ds$ равна $\\frac{ds}{\\lambda}$, поэтому доля молекул, проходящих путь $s$ без столкновений, убывает экспоненциально — та же математика, что у радиоактивного распада или поглощения света. Средний пробег равен именно $\\lambda$; путь длиннее $\\lambda$ проходят $e^{-1}\\approx37\\%$ молекул. Измеряя ослабление пучка в разреженном газе, можно найти $\\lambda$, а значит, и диаметр молекулы:",
+  "en": "**Distribution of free paths.** The probability of a collision on each path element $ds$ is $\\frac{ds}{\\lambda}$, so the fraction of molecules travelling a distance $s$ without collision falls off exponentially — the same mathematics as radioactive decay or the absorption of light. The mean path is exactly $\\lambda$; $e^{-1}\\approx37\\%$ of molecules travel farther than $\\lambda$. By measuring the attenuation of a beam in a rarefied gas one can find $\\lambda$, and hence the molecular diameter:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{N}{N_0}=e^{-\\frac{s}{\\lambda}},\\qquad \\langle s\\rangle=\\lambda"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L31-F06.png",
+   "ru": "figures/B2-L31-F06-ru.png",
+   "en": "figures/B2-L31-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Ko'chish hodisalari",
+  "ru": "8. Явления переноса",
+  "en": "8. Transport phenomena"
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy sxema.** Gaz muvozanatda bo'lmasa — konsentratsiya, oqim tezligi yoki temperatura $x$ bo'yicha o'zgarsa — molekulalar tartibsiz harakati tufayli biror kattalikni ko'chiradi: modda massasini (**diffuziya**), impulsni (**qovushoqlik**) yoki energiyani (**issiqlik o'tkazuvchanlik**). Elementar hisob: $x$ tekisligini kesib o'tayotgan molekula o'zining oxirgi to'qnashuvi joyidagi — taxminan $\\lambda$ masofadagi — qiymatni olib keladi. Pastdan va yuqoridan kelayotgan oqimlar farqi gradientga proporsional ([[F07]]):",
+  "ru": "**Общая схема.** Если газ неравновесен — концентрация, скорость течения или температура меняются вдоль $x$, — молекулы своим хаотическим движением переносят некоторую величину: массу вещества (**диффузия**), импульс (**вязкость**) или энергию (**теплопроводность**). Элементарный расчёт: молекула, пересекающая плоскость $x$, приносит значение из места своего последнего столкновения — примерно на расстоянии $\\lambda$. Разность потоков снизу и сверху пропорциональна градиенту ([[F07]]):",
+  "en": "**General scheme.** If a gas is not in equilibrium — the concentration, the flow velocity or the temperature varies along $x$ — the molecules, by their random motion, carry some quantity: mass (**diffusion**), momentum (**viscosity**) or energy (**heat conduction**). The elementary calculation: a molecule crossing the plane $x$ brings the value from the place of its last collision — about a distance $\\lambda$ away. The difference between the fluxes from below and from above is proportional to the gradient ([[F07]]):"
+ },
+ {
+  "t": "m",
+  "m": "J=-\\frac{1}{3}\\lambda\\langle v\\rangle\\frac{dQ}{dx}"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchta qonun.** $Q$ — bitta hajm birligidagi ko'chiriluvchi kattalik: konsentratsiya bo'lsa — Fik qonuni, impuls zichligi $\\rho u$ bo'lsa — Nyutonning ichki ishqalanish qonuni (kuchlanish $\\frac{F}{S}$), energiya zichligi bo'lsa — Furye qonuni. Koeffitsiyentlar bitta umumiy kinetik ko'paytma $\\frac{1}{3}\\lambda\\langle v\\rangle$ orqali ifodalanadi ($c_V$ — solishtirma issiqlik sig'imi, $\\rho$ — zichlik):",
+  "ru": "**Три закона.** $Q$ — переносимая величина в единице объёма: если это концентрация — закон Фика, если плотность импульса $\\rho u$ — закон внутреннего трения Ньютона (напряжение $\\frac{F}{S}$), если плотность энергии — закон Фурье. Коэффициенты выражаются через одно общее кинетическое произведение $\\frac{1}{3}\\lambda\\langle v\\rangle$ ($c_V$ — удельная теплоёмкость, $\\rho$ — плотность):",
+  "en": "**Three laws.** $Q$ is the transported quantity per unit volume: if it is the concentration — Fick's law; if the momentum density $\\rho u$ — Newton's law of internal friction (stress $\\frac{F}{S}$); if the energy density — Fourier's law. The coefficients are expressed through one common kinetic product $\\frac{1}{3}\\lambda\\langle v\\rangle$ ($c_V$ is the specific heat capacity, $\\rho$ the density):"
+ },
+ {
+  "t": "m",
+  "m": "D=\\frac{1}{3}\\lambda\\langle v\\rangle,\\qquad \\eta=\\frac{1}{3}\\rho\\lambda\\langle v\\rangle=\\rho D,\\qquad \\kappa=\\frac{1}{3}\\rho c_V\\lambda\\langle v\\rangle=\\eta c_V"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L31-F07.png",
+   "ru": "figures/B2-L31-F07-ru.png",
+   "en": "figures/B2-L31-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Maksvellning kutilmagan natijasi.** $\\rho\\propto n$, $\\lambda\\propto\\frac{1}{n}$, shuning uchun $\\eta$ va $\\kappa$ gaz bosimiga bog'liq emas — ikki baravar ko'p molekula ikki baravar qisqa masofaga ko'chiradi. Maksvell buni 1860 yilda bashorat qildi va tajribada tasdiqladi; bu kinetik nazariyaning birinchi katta g'alabasi bo'ldi. Diffuziya koeffitsiyenti esa $D\\propto\\frac{1}{p}$. Temperaturaga bog'liqlik: $\\eta,\\ \\kappa\\propto\\sqrt T$ (qattiq sharlarda), $D\\propto\\frac{T^{3/2}}{p}$. Bir xil $T$ va $d$ da $\\eta\\propto\\sqrt M$, $D\\propto\\frac{1}{\\sqrt M}$, monoatom gazlarda $\\kappa\\propto\\frac{1}{\\sqrt M}$. Suyuqliklarda aksincha, qovushoqlik temperatura ortishi bilan kamayadi — u yerda impuls boshqa mexanizm bilan ko'chiriladi.",
+  "ru": "**Неожиданный результат Максвелла.** $\\rho\\propto n$, $\\lambda\\propto\\frac{1}{n}$, поэтому $\\eta$ и $\\kappa$ не зависят от давления газа — вдвое больше молекул переносят на вдвое меньшее расстояние. Максвелл предсказал это в 1860 году и подтвердил на опыте; это стало первой большой победой кинетической теории. Коэффициент диффузии же $D\\propto\\frac{1}{p}$. Зависимость от температуры: $\\eta,\\ \\kappa\\propto\\sqrt T$ (для твёрдых шаров), $D\\propto\\frac{T^{3/2}}{p}$. При одинаковых $T$ и $d$ $\\eta\\propto\\sqrt M$, $D\\propto\\frac{1}{\\sqrt M}$, для одноатомных газов $\\kappa\\propto\\frac{1}{\\sqrt M}$. В жидкостях наоборот: вязкость уменьшается с ростом температуры — там импульс переносится другим механизмом.",
+  "en": "**Maxwell's surprising result.** $\\rho\\propto n$ and $\\lambda\\propto\\frac{1}{n}$, so $\\eta$ and $\\kappa$ do not depend on the gas pressure — twice as many molecules carry over half the distance. Maxwell predicted this in 1860 and confirmed it experimentally; it was the first great triumph of kinetic theory. The diffusion coefficient, however, goes as $D\\propto\\frac{1}{p}$. Temperature dependence: $\\eta,\\ \\kappa\\propto\\sqrt T$ (for hard spheres), $D\\propto\\frac{T^{3/2}}{p}$. At the same $T$ and $d$, $\\eta\\propto\\sqrt M$, $D\\propto\\frac{1}{\\sqrt M}$, and for monatomic gases $\\kappa\\propto\\frac{1}{\\sqrt M}$. In liquids it is the opposite: viscosity decreases as temperature rises — there momentum is carried by another mechanism."
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaralar.** Bosimga bog'liq emaslik $\\lambda$ idish o'lchami $L$ dan kichik bo'lgandagina to'g'ri. O'ta siyrak gazda ($\\lambda>L$) molekulalar plastinadan plastinaga to'qnashmay uchadi, ko'chirilgan kattalik urilishlar soniga, ya'ni bosimga proporsional bo'ladi — Dyuar idishi va vakuumli oynalarning ishlash prinsipi shu. Elementar hisobdagi $\\frac{1}{3}$ koeffitsiyent taxminiy: aniq nazariyada qattiq sharlar uchun $\\eta$ dagi son biroz farq qiladi va $\\frac{\\kappa}{\\eta c_V}$ nisbati monoatom gazlarda $2.5$ ga yaqin. GRE da odatda faqat proporsionalliklar so'raladi.",
+  "ru": "**Границы.** Независимость от давления верна лишь при $\\lambda$, меньшей размера сосуда $L$. В ультраразреженном газе ($\\lambda>L$) молекулы летят от пластины к пластине без столкновений, и переносимая величина пропорциональна числу ударов, то есть давлению, — на этом основаны сосуд Дьюара и вакуумные стеклопакеты. Коэффициент $\\frac{1}{3}$ элементарного расчёта приближённый: в точной теории для твёрдых шаров число в $\\eta$ несколько иное, а отношение $\\frac{\\kappa}{\\eta c_V}$ для одноатомных газов близко к $2.5$. На GRE обычно спрашивают только пропорциональности.",
+  "en": "**Limits.** The independence of pressure holds only when $\\lambda$ is smaller than the vessel size $L$. In an ultra-rarefied gas ($\\lambda>L$) molecules fly from plate to plate without collisions, and the transported quantity is proportional to the number of impacts, that is, to the pressure — the principle of the Dewar flask and vacuum glazing. The coefficient $\\frac{1}{3}$ of the elementary calculation is approximate: in the exact theory for hard spheres the number in $\\eta$ is somewhat different, and the ratio $\\frac{\\kappa}{\\eta c_V}$ for monatomic gases is close to $2.5$. On the GRE usually only proportionalities are asked."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Broun harakati va diffuziya",
+  "ru": "9. Броуновское движение и диффузия",
+  "en": "9. Brownian motion and diffusion"
+ },
+ {
+  "t": "li",
+  "uz": "**Tasodifiy yurish ([[F08]]).** Suyuqlikdagi mayda zarraga molekulalar har tomondan uriladi; zarba kuchlari muvozanatlashmaydi va zarra tartibsiz siniq chiziq bo'ylab harakatlanadi (Broun, 1827). Bitta yo'nalishdagi har bir qadam $\\pm l$ mustaqil bo'lsa, $N$ qadamdan keyin o'rtacha siljish $\\langle x\\rangle=0$, lekin $\\langle x^2\\rangle=Nl^2$ — vaqtga proporsional, ya'ni siljish $\\sqrt t$ kabi o'sadi. Bu diffuziyaning umumiy qonuni: siyoh tomchisining kengayishi va gaz molekulasining siljishi ham shunday. Diffuziya koeffitsiyenti orqali:",
+  "ru": "**Случайное блуждание ([[F08]]).** О мелкую частицу в жидкости со всех сторон ударяются молекулы; силы ударов не уравновешиваются, и частица движется по хаотической ломаной (Броун, 1827). Если каждый шаг $\\pm l$ вдоль одного направления независим, то после $N$ шагов среднее смещение $\\langle x\\rangle=0$, но $\\langle x^2\\rangle=Nl^2$ — пропорционально времени, то есть смещение растёт как $\\sqrt t$. Это общий закон диффузии: так же расплывается капля чернил и смещается молекула газа. Через коэффициент диффузии:",
+  "en": "**Random walk ([[F08]]).** A small particle in a liquid is struck by molecules from all sides; the impact forces do not balance, and the particle moves along a random broken line (Brown, 1827). If each step $\\pm l$ along one direction is independent, then after $N$ steps the mean displacement is $\\langle x\\rangle=0$, but $\\langle x^2\\rangle=Nl^2$ — proportional to time, so the displacement grows as $\\sqrt t$. This is the general law of diffusion: an ink drop spreads and a gas molecule wanders in the same way. In terms of the diffusion coefficient:"
+ },
+ {
+  "t": "m",
+  "m": "\\langle x^2\\rangle=2Dt,\\qquad \\langle r^2\\rangle=6Dt"
+ },
+ {
+  "t": "li",
+  "uz": "**Eynshteyn munosabati.** Zarraga tashqi kuch $F$ ta'sir qilsa, u o'rtacha $u=bF$ tezlik bilan siljiydi ($b$ — harakatchanlik). Bolsman taqsimotida diffuziya oqimi va kuch ta'siridagi oqim muvozanatlashishi sharti $D=bkT$ ni beradi (Eynshteyn, 1905). Radiusi $r$ bo'lgan shar uchun Stoks qonuni $F=6\\pi\\eta ru$, demak $b=\\frac{1}{6\\pi\\eta r}$ va:",
+  "ru": "**Соотношение Эйнштейна.** Если на частицу действует внешняя сила $F$, она дрейфует со средней скоростью $u=bF$ ($b$ — подвижность). В распределении Больцмана условие равновесия диффузионного потока и потока под действием силы даёт $D=bkT$ (Эйнштейн, 1905). Для шара радиуса $r$ закон Стокса $F=6\\pi\\eta ru$, значит, $b=\\frac{1}{6\\pi\\eta r}$ и:",
+  "en": "**The Einstein relation.** If an external force $F$ acts on a particle, it drifts with mean velocity $u=bF$ ($b$ is the mobility). In the Boltzmann distribution, the condition that the diffusion flux balance the force-driven flux gives $D=bkT$ (Einstein, 1905). For a sphere of radius $r$, Stokes's law is $F=6\\pi\\eta ru$, so $b=\\frac{1}{6\\pi\\eta r}$ and:"
+ },
+ {
+  "t": "m",
+  "m": "D=bkT=\\frac{kT}{6\\pi\\eta r}"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L31-F08.png",
+   "ru": "figures/B2-L31-F08-ru.png",
+   "en": "figures/B2-L31-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Ahamiyati.** Bu formulada makroskopik kattaliklar ($\\eta$, $r$, $T$, o'lchangan $\\langle x^2\\rangle$) va $k=\\frac{R}{N_A}$ qatnashadi. Perren zarralar siljishini mikroskopda kuzatib, $N_A$ ni yana bir mustaqil usulda topdi va barometrik usul bilan bir xil natija oldi — atomlar haqidagi bahs shu bilan yakunlandi. Bir sekunddagi Broun siljishi mikron o'lchamli zarra uchun mikrometrlar tartibida; oniy tezlik $\\sqrt{\\frac{3kT}{m}}$ esa ancha katta, lekin uni ko'rib bo'lmaydi, chunki yo'nalish juda tez o'zgaradi. Diffuziya kichik masofalarda tez, katta masofalarda sekin: xonada hid asosan konveksiya bilan tarqaladi.",
+  "ru": "**Значение.** В этой формуле участвуют макроскопические величины ($\\eta$, $r$, $T$, измеренное $\\langle x^2\\rangle$) и $k=\\frac{R}{N_A}$. Перрен, наблюдая смещения частиц под микроскопом, нашёл $N_A$ ещё одним независимым способом и получил тот же результат, что и барометрическим, — на этом спор об атомах завершился. Броуновское смещение за секунду для частицы микронного размера порядка микрометров; мгновенная скорость $\\sqrt{\\frac{3kT}{m}}$ гораздо больше, но её не увидеть, так как направление меняется очень быстро. Диффузия быстра на малых расстояниях и медленна на больших: в комнате запах распространяется в основном конвекцией.",
+  "en": "**Significance.** This formula contains macroscopic quantities ($\\eta$, $r$, $T$, the measured $\\langle x^2\\rangle$) and $k=\\frac{R}{N_A}$. Perrin, observing the displacements of particles under a microscope, found $N_A$ by yet another independent method and got the same result as with the barometric method — this ended the debate about atoms. The Brownian displacement in one second for a micron-sized particle is of order micrometres; the instantaneous speed $\\sqrt{\\frac{3kT}{m}}$ is much larger, but it cannot be seen because the direction changes very quickly. Diffusion is fast over small distances and slow over large ones: in a room a smell spreads mainly by convection."
+ },
+ {
+  "t": "h2",
+  "uz": "10. Klassik tavsif chegarasi",
+  "ru": "10. Граница классического описания",
+  "en": "10. The limit of the classical description"
+ },
+ {
+  "t": "li",
+  "uz": "**Issiqlik to'lqin uzunligi.** Kvant mexanikasiga ko'ra impulsi $p_0$ bo'lgan zarra $\\frac{h}{p_0}$ to'lqin uzunligiga ega (B3). Issiqlik harakatidagi tipik impuls uchun **issiqlik de Broyl to'lqin uzunligi** kiritiladi. Gaz klassik bo'lishi uchun u molekulalar orasidagi masofadan ancha kichik bo'lishi kerak; aks holda to'lqin paketlari ustma-ust tushadi va zarralarning aynanligi muhim bo'lib qoladi (Boze yoki Fermi statistikasi, B4):",
+  "ru": "**Тепловая длина волны.** По квантовой механике частице с импульсом $p_0$ соответствует длина волны $\\frac{h}{p_0}$ (B3). Для типичного импульса теплового движения вводят **тепловую длину волны де Бройля**. Чтобы газ был классическим, она должна быть много меньше расстояния между молекулами; иначе волновые пакеты перекрываются и становится важной тождественность частиц (статистики Бозе или Ферми, B4):",
+  "en": "**Thermal wavelength.** In quantum mechanics a particle of momentum $p_0$ has the wavelength $\\frac{h}{p_0}$ (B3). For a typical momentum of thermal motion one introduces the **thermal de Broglie wavelength**. For a gas to be classical it must be much smaller than the distance between molecules; otherwise the wave packets overlap and the identity of the particles becomes important (Bose or Fermi statistics, B4):"
+ },
+ {
+  "t": "m",
+  "m": "\\Lambda=\\frac{h}{\\sqrt{2\\pi m_0kT}},\\qquad n\\Lambda^3\\ll1"
+ },
+ {
+  "t": "li",
+  "uz": "**Qachon buziladi.** $\\Lambda\\propto\\frac{1}{\\sqrt{m_0T}}$, shuning uchun klassik tavsif yengil zarralar, past temperatura va katta zichlikda buziladi. Xona sharoitidagi havoda $n\\Lambda^3\\sim10^{-7}$ — bemalol klassik. Suyuq geliy (bir necha kelvin), metallardagi elektronlar (massasi juda kichik, zichligi juda katta) va o'ta sovitilgan atomlar bulutlari — kvant gazlar; ularda o'ta oquvchanlik, Fermi bosimi va Boze–Eynshteyn kondensatsiyasi kabi klassik nazariyada yo'q hodisalar kuzatiladi.",
+  "ru": "**Когда нарушается.** $\\Lambda\\propto\\frac{1}{\\sqrt{m_0T}}$, поэтому классическое описание нарушается для лёгких частиц, при низких температурах и больших плотностях. Для воздуха при комнатных условиях $n\\Lambda^3\\sim10^{-7}$ — заведомо классический газ. Жидкий гелий (несколько кельвинов), электроны в металлах (очень малая масса, очень большая плотность) и облака ультрахолодных атомов — квантовые газы; в них наблюдаются сверхтекучесть, давление Ферми и бозе-эйнштейновская конденсация — явления, которых нет в классической теории.",
+  "en": "**When it fails.** $\\Lambda\\propto\\frac{1}{\\sqrt{m_0T}}$, so the classical description fails for light particles, at low temperatures and at high densities. For air at room conditions $n\\Lambda^3\\sim10^{-7}$ — comfortably classical. Liquid helium (a few kelvins), electrons in metals (very small mass, very high density) and clouds of ultracold atoms are quantum gases; they show superfluidity, Fermi pressure and Bose–Einstein condensation — phenomena absent from classical theory."
+ },
+ {
+  "t": "li",
+  "uz": "**Gibbs paradoksining yechimi.** B2-L30 da bir xil gazlar aralashganda entropiya o'zgarmasligini, har xil gazlar uchun esa sakrash borligini ko'rdik. Kvant mexanikasida bir xil zarralar prinsipial farqlanmaydi: ularning o'rnini almashtirish yangi mikroholat bermaydi, shuning uchun $N$ ta zarra uchun klassik statistik vazn $N!$ ga bo'linadi. Shu bilan entropiya ekstensiv bo'ladi va ideal gazning mutlaq entropiyasi uchun Saker–Tetrod formulasi chiqadi — unda Plank doimiysi $\\Lambda$ orqali qatnashadi va bir xil gazlarni aralashtirish entropiyani o'zgartirmaydi:",
+  "ru": "**Разрешение парадокса Гиббса.** В B2-L30 мы видели, что при смешении одинаковых газов энтропия не меняется, а для разных газов есть скачок. В квантовой механике одинаковые частицы принципиально неразличимы: перестановка не даёт нового микросостояния, поэтому классический статистический вес для $N$ частиц делится на $N!$. Тогда энтропия становится экстенсивной, и для абсолютной энтропии идеального газа получается формула Саккура–Тетроде — в неё через $\\Lambda$ входит постоянная Планка, а смешение одинаковых газов энтропию не меняет:",
+  "en": "**Resolution of Gibbs's paradox.** In B2-L30 we saw that mixing identical gases leaves the entropy unchanged while for different gases there is a jump. In quantum mechanics identical particles are fundamentally indistinguishable: exchanging them gives no new microstate, so the classical statistical weight for $N$ particles is divided by $N!$. The entropy then becomes extensive, and the Sackur–Tetrode formula for the absolute entropy of an ideal gas follows — Planck's constant enters it through $\\Lambda$, and mixing identical gases does not change the entropy:"
+ },
+ {
+  "t": "m",
+  "m": "S=Nk\\left(\\ln\\frac{V}{N\\Lambda^3}+\\frac{5}{2}\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchinchi qonun bilan munosabati.** Saker–Tetrod formulasi $T\\to0$ da $-\\infty$ ga intiladi — bu formula qo'llanish sohasidan chiqqanini bildiradi: past temperaturada $n\\Lambda^3$ birdan katta bo'ladi va gaz kvant bo'lib qoladi, haqiqiy entropiya esa uchinchi qonunga ko'ra nolga intiladi. Xuddi shunday, erkinlik darajalarining muzlashi (B2-L29) ham klassik teng taqsimlanishning kvant chegarasi: $kT$ energiya sathlari oralig'idan kichik bo'lsa, daraja issiqlik harakatida qatnashmaydi.",
+  "ru": "**Связь с третьим законом.** Формула Саккура–Тетроде при $T\\to0$ стремится к $-\\infty$ — это означает выход за пределы её применимости: при низкой температуре $n\\Lambda^3$ становится больше единицы и газ делается квантовым, а истинная энтропия по третьему закону стремится к нулю. Точно так же вымораживание степеней свободы (B2-L29) — квантовая граница классического равнораспределения: если $kT$ меньше расстояния между уровнями энергии, степень не участвует в тепловом движении.",
+  "en": "**Relation to the third law.** The Sackur–Tetrode formula tends to $-\\infty$ as $T\\to0$ — a sign that it has been used outside its range: at low temperature $n\\Lambda^3$ exceeds one and the gas becomes quantum, while the true entropy tends to zero by the third law. In the same way, the freezing out of degrees of freedom (B2-L29) is the quantum limit of classical equipartition: if $kT$ is smaller than the spacing of the energy levels, the degree takes no part in thermal motion."
+ },
+ {
+  "t": "h2",
+  "uz": "11. GRE usullari",
+  "ru": "11. Приёмы для GRE",
+  "en": "11. GRE techniques"
+ },
+ {
+  "t": "li",
+  "uz": "**Tezliklarni nisbat orqali.** Barcha xarakterli tezliklar $\\sqrt{\\frac{T}{M}}$ ga proporsional: $T$ $9$ marta — tezlik $3$ marta; vodorod va azot bir xil $T$ da — tezliklar nisbati $\\sqrt{14}\\approx3.7$. Koeffitsiyentlarni chalkashtirmaslik uchun tartibni eslang: $\\tilde v<\\langle v\\rangle<\\sqrt{\\langle v^2\\rangle}$, koeffitsiyentlar $\\sqrt2$, $\\sqrt{\\frac{8}{\\pi}}$, $\\sqrt3$.",
+  "ru": "**Скорости через отношения.** Все характерные скорости пропорциональны $\\sqrt{\\frac{T}{M}}$: $T$ в $9$ раз — скорость в $3$ раза; водород и азот при одной $T$ — отношение скоростей $\\sqrt{14}\\approx3.7$. Чтобы не путать коэффициенты, помните порядок: $\\tilde v<\\langle v\\rangle<\\sqrt{\\langle v^2\\rangle}$, коэффициенты $\\sqrt2$, $\\sqrt{\\frac{8}{\\pi}}$, $\\sqrt3$.",
+  "en": "**Speeds via ratios.** All characteristic speeds are proportional to $\\sqrt{\\frac{T}{M}}$: $T$ increased by a factor of $9$ gives a speed $3$ times larger; hydrogen and nitrogen at the same $T$ have a speed ratio of $\\sqrt{14}\\approx3.7$. To avoid mixing up the coefficients, remember the order: $\\tilde v<\\langle v\\rangle<\\sqrt{\\langle v^2\\rangle}$, with coefficients $\\sqrt2$, $\\sqrt{\\frac{8}{\\pi}}$, $\\sqrt3$."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'chish — o'lchamlar va proporsionallik.** $\\lambda\\propto\\frac{T}{p}$, $z\\propto\\frac{p}{\\sqrt T}$, $D\\propto\\frac{T^{3/2}}{p}$, $\\eta$ va $\\kappa$ esa bosimga bog'liq emas va $\\propto\\sqrt T$. Jarayon berilsa (izoxorik, izotermik, adiabatik), avval $n$ va $T$ qanday o'zgarishini toping, so'ng shu proporsionalliklarga qo'ying.",
+  "ru": "**Перенос — размерности и пропорциональности.** $\\lambda\\propto\\frac{T}{p}$, $z\\propto\\frac{p}{\\sqrt T}$, $D\\propto\\frac{T^{3/2}}{p}$, а $\\eta$ и $\\kappa$ не зависят от давления и $\\propto\\sqrt T$. Если задан процесс (изохорный, изотермический, адиабатный), сначала найдите, как меняются $n$ и $T$, затем подставьте в эти пропорциональности.",
+  "en": "**Transport — dimensions and proportionality.** $\\lambda\\propto\\frac{T}{p}$, $z\\propto\\frac{p}{\\sqrt T}$, $D\\propto\\frac{T^{3/2}}{p}$, while $\\eta$ and $\\kappa$ do not depend on pressure and go as $\\propto\\sqrt T$. If a process is given (isochoric, isothermal, adiabatic), first find how $n$ and $T$ change, then substitute into these proportionalities."
+ },
+ {
+  "t": "li",
+  "uz": "**Bolsman faktori — har joyda.** Ikki sath bandligi, atmosferada konsentratsiya, reaksiya tezligi — hammasi $e^{-\\frac{\\Delta E}{kT}}$. Xona temperaturasida $kT\\approx\\frac{1}{40}\\ \\mathrm{eV}$ ni yodda tuting: $1\\ \\mathrm{eV}$ farq $e^{-40}$ — amalda nol.",
+  "ru": "**Множитель Больцмана — везде.** Заселённость двух уровней, концентрация в атмосфере, скорость реакции — всё это $e^{-\\frac{\\Delta E}{kT}}$. Помните, что при комнатной температуре $kT\\approx\\frac{1}{40}\\ \\mathrm{eV}$: разность $1\\ \\mathrm{eV}$ даёт $e^{-40}$ — практически ноль.",
+  "en": "**The Boltzmann factor is everywhere.** The occupation of two levels, the concentration in the atmosphere, a reaction rate — all are $e^{-\\frac{\\Delta E}{kT}}$. Remember that at room temperature $kT\\approx\\frac{1}{40}\\ \\mathrm{eV}$: a difference of $1\\ \\mathrm{eV}$ gives $e^{-40}$ — practically zero."
+ },
+ {
+  "t": "li",
+  "uz": "**Teng taqsimlanish — hadlarni sanang.** Energiyadagi har bir kvadratik had $\\frac{1}{2}kT$: erkin zarra $\\frac{3}{2}kT$, ossilyator har bir o'lchovda $kT$, chiziqli bo'lmagan qattiq molekula $3kT$. Broun harakatida esa siljish $\\sqrt t$ kabi, uch marta uzoqqa borish uchun to'qqiz marta ko'p vaqt kerak.",
+  "ru": "**Равнораспределение — считайте члены.** Каждый квадратичный член энергии — $\\frac{1}{2}kT$: свободная частица $\\frac{3}{2}kT$, осциллятор — $kT$ на каждое измерение, нелинейная жёсткая молекула — $3kT$. При броуновском движении смещение растёт как $\\sqrt t$: чтобы уйти втрое дальше, нужно в девять раз больше времени.",
+  "en": "**Equipartition — count the terms.** Each quadratic term in the energy gives $\\frac{1}{2}kT$: a free particle $\\frac{3}{2}kT$, an oscillator $kT$ per dimension, a non-linear rigid molecule $3kT$. In Brownian motion the displacement grows as $\\sqrt t$: to get three times as far you need nine times as long."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Bosim",
+    "ru": "Давление",
+    "en": "Pressure",
+    "m": "p=\\frac{1}{3}nm_0\\langle v^2\\rangle=nkT"
+   },
+   {
+    "uz": "O'rtacha kinetik energiya",
+    "ru": "Средняя кинетическая энергия",
+    "en": "Mean kinetic energy",
+    "m": "\\langle\\varepsilon\\rangle=\\frac{3}{2}kT"
+   },
+   {
+    "uz": "Teng taqsimlanish",
+    "ru": "Равнораспределение",
+    "en": "Equipartition",
+    "m": "\\langle\\varepsilon\\rangle=\\frac{i}{2}kT"
+   },
+   {
+    "uz": "Bolsman taqsimoti",
+    "ru": "Распределение Больцмана",
+    "en": "Boltzmann distribution",
+    "m": "n=n_0e^{-\\frac{U}{kT}}"
+   },
+   {
+    "uz": "Barometrik formula",
+    "ru": "Барометрическая формула",
+    "en": "Barometric formula",
+    "m": "p=p_0e^{-\\frac{Mgh}{RT}}"
+   },
+   {
+    "uz": "Maksvell taqsimoti",
+    "ru": "Распределение Максвелла",
+    "en": "Maxwell distribution",
+    "m": "F\\propto v^2e^{-\\frac{m_0v^2}{2kT}}"
+   },
+   {
+    "uz": "Eng ehtimolli tezlik",
+    "ru": "Наиболее вероятная скорость",
+    "en": "Most probable speed",
+    "m": "\\tilde v=\\sqrt{\\frac{2kT}{m_0}}"
+   },
+   {
+    "uz": "O'rtacha tezlik",
+    "ru": "Средняя скорость",
+    "en": "Mean speed",
+    "m": "\\langle v\\rangle=\\sqrt{\\frac{8kT}{\\pi m_0}}"
+   },
+   {
+    "uz": "O'rtacha kvadratik tezlik",
+    "ru": "Средняя квадратичная скорость",
+    "en": "Root-mean-square speed",
+    "m": "\\sqrt{\\langle v^2\\rangle}=\\sqrt{\\frac{3kT}{m_0}}"
+   },
+   {
+    "uz": "Devorga urilishlar",
+    "ru": "Удары о стенку",
+    "en": "Wall impacts",
+    "m": "j=\\frac{1}{4}n\\langle v\\rangle"
+   },
+   {
+    "uz": "Effuziya",
+    "ru": "Эффузия",
+    "en": "Effusion",
+    "m": "\\tau=\\frac{4V}{S\\langle v\\rangle}"
+   },
+   {
+    "uz": "Erkin yugurish yo'li",
+    "ru": "Длина свободного пробега",
+    "en": "Mean free path",
+    "m": "\\lambda=\\frac{kT}{\\sqrt2\\,\\pi d^2p}"
+   },
+   {
+    "uz": "To'qnashuvlar chastotasi",
+    "ru": "Частота столкновений",
+    "en": "Collision frequency",
+    "m": "z=\\frac{\\langle v\\rangle}{\\lambda}"
+   },
+   {
+    "uz": "Ko'chish koeffitsiyentlari",
+    "ru": "Коэффициенты переноса",
+    "en": "Transport coefficients",
+    "m": "D=\\frac{1}{3}\\lambda\\langle v\\rangle,\\quad \\eta=\\rho D,\\quad \\kappa=\\eta c_V"
+   },
+   {
+    "uz": "Broun harakati",
+    "ru": "Броуновское движение",
+    "en": "Brownian motion",
+    "m": "\\langle x^2\\rangle=2Dt"
+   },
+   {
+    "uz": "Eynshteyn–Stoks",
+    "ru": "Эйнштейн–Стокс",
+    "en": "Stokes–Einstein",
+    "m": "D=\\frac{kT}{6\\pi\\eta r}"
+   },
+   {
+    "uz": "Issiqlik to'lqin uzunligi",
+    "ru": "Тепловая длина волны",
+    "en": "Thermal wavelength",
+    "m": "\\Lambda=\\frac{h}{\\sqrt{2\\pi m_0kT}}"
+   }
+  ]
+ }
+]
