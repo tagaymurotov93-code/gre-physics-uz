@@ -1,0 +1,812 @@
+[
+ {
+  "id": "B2-L25-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Yung tajribasida tirqishlar orasi $0.5\\ \\mathrm{mm}$, ekrangacha masofa $2\\ \\mathrm{m}$, to'lqin uzunligi $600\\ \\mathrm{nm}$. Yo'l kengligini, uchinchi yorug' yo'l va ikkinchi qorong'i yo'lning markazdan masofasini toping.",
+   "ru": "В опыте Юнга расстояние между щелями $0.5\\ \\mathrm{mm}$, расстояние до экрана $2\\ \\mathrm{m}$, длина волны $600\\ \\mathrm{nm}$. Найдите ширину полосы, расстояние от центра до третьей светлой и второй тёмной полос.",
+   "en": "In Young's experiment the slit separation is $0.5\\ \\mathrm{mm}$, the distance to the screen $2\\ \\mathrm{m}$ and the wavelength $600\\ \\mathrm{nm}$. Find the fringe width and the distances from the centre of the third bright and the second dark fringes."
+  },
+  "figure": "figures/B2-L25-S01.png",
+  "solution": {
+   "uz": [
+    "Yo'l kengligi: $$\\Delta y=\\frac{\\lambda L}{d}=\\frac{6\\cdot10^{-7}\\cdot2}{5\\cdot10^{-4}}=2.4\\ \\mathrm{mm}$$",
+    "Uchinchi yorug' yo'l ($m=3$): $$y_3=3\\Delta y=7.2\\ \\mathrm{mm}$$",
+    "Ikkinchi qorong'i yo'l ($m=1$): $$y=\\left(1+\\frac{1}{2}\\right)\\Delta y=3.6\\ \\mathrm{mm}$$"
+   ],
+   "ru": [
+    "Ширина полосы: $$\\Delta y=\\frac{\\lambda L}{d}=\\frac{6\\cdot10^{-7}\\cdot2}{5\\cdot10^{-4}}=2.4\\ \\mathrm{mm}$$",
+    "Третья светлая полоса ($m=3$): $$y_3=3\\Delta y=7.2\\ \\mathrm{mm}$$",
+    "Вторая тёмная полоса ($m=1$): $$y=\\left(1+\\frac{1}{2}\\right)\\Delta y=3.6\\ \\mathrm{mm}$$"
+   ],
+   "en": [
+    "The fringe width: $$\\Delta y=\\frac{\\lambda L}{d}=\\frac{6\\cdot10^{-7}\\cdot2}{5\\cdot10^{-4}}=2.4\\ \\mathrm{mm}$$",
+    "The third bright fringe ($m=3$): $$y_3=3\\Delta y=7.2\\ \\mathrm{mm}$$",
+    "The second dark fringe ($m=1$): $$y=\\left(1+\\frac{1}{2}\\right)\\Delta y=3.6\\ \\mathrm{mm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yung tajribasi: $y_m=m\\frac{\\lambda L}{d}$, $\\Delta y=\\frac{\\lambda L}{d}$",
+    "ru": "Опыт Юнга: $y_m=m\\frac{\\lambda L}{d}$, $\\Delta y=\\frac{\\lambda L}{d}$",
+    "en": "Young's experiment: $y_m=m\\frac{\\lambda L}{d}$, $\\Delta y=\\frac{\\lambda L}{d}$"
+   },
+   null,
+   {
+    "uz": "Minimum sharti: $\\Delta=\\left(m+\\frac{1}{2}\\right)\\lambda$",
+    "ru": "Условие минимума: $\\Delta=\\left(m+\\frac{1}{2}\\right)\\lambda$",
+    "en": "Condition for a minimum: $\\Delta=\\left(m+\\frac{1}{2}\\right)\\lambda$"
+   }
+  ],
+  "basis": {
+   "uz": "Yung tajribasi",
+   "ru": "Опыт Юнга",
+   "en": "Young's experiment"
+  },
+  "answer": "\\Delta y=2.4\\ \\mathrm{mm};\\ y_3=7.2\\ \\mathrm{mm};\\ 3.6\\ \\mathrm{mm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 3.2.1 (Double-Slit Interference) g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L25-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Ikki kogerent nurdan biri yo'lida qalinligi $2\\ \\mu\\mathrm{m}$, sindirish ko'rsatkichi $1.5$ bo'lgan shisha plastinka bor, ikkinchisi xuddi shunday masofani havoda bosib o'tadi. Optik yo'llar farqini, $500\\ \\mathrm{nm}$ va $600\\ \\mathrm{nm}$ uchun fazalar farqini toping. Qaysi holda nurlar bir-birini kuchaytiradi?",
+   "ru": "На пути одного из двух когерентных лучей стоит стеклянная пластинка толщиной $2\\ \\mu\\mathrm{m}$ с показателем преломления $1.5$, второй проходит такое же расстояние в воздухе. Найдите оптическую разность хода и разность фаз для $500\\ \\mathrm{nm}$ и $600\\ \\mathrm{nm}$. В каком случае лучи усиливают друг друга?",
+   "en": "One of two coherent rays passes through a glass plate $2\\ \\mu\\mathrm{m}$ thick with refractive index $1.5$, while the other travels the same distance in air. Find the optical path difference and the phase difference for $500\\ \\mathrm{nm}$ and $600\\ \\mathrm{nm}$. In which case do the rays reinforce each other?"
+  },
+  "figure": "figures/B2-L25-S02.png",
+  "solution": {
+   "uz": [
+    "Optik yo'llar farqi: $$\\Delta=\\left(n-1\\right)h=0.5\\cdot2=1\\ \\mu\\mathrm{m}$$",
+    "Fazalar farqi: $$\\delta=\\frac{2\\pi\\Delta}{\\lambda}:\\ \\frac{2\\pi\\cdot1000}{500}=4\\pi,\\qquad \\frac{2\\pi\\cdot1000}{600}=\\frac{10\\pi}{3}$$",
+    "$4\\pi$ — butun son davr, kuchayish; $\\frac{10\\pi}{3}$ — oraliq holat: $$\\lambda=500\\ \\mathrm{nm}$$"
+   ],
+   "ru": [
+    "Оптическая разность хода: $$\\Delta=\\left(n-1\\right)h=0.5\\cdot2=1\\ \\mu\\mathrm{m}$$",
+    "Разность фаз: $$\\delta=\\frac{2\\pi\\Delta}{\\lambda}:\\ \\frac{2\\pi\\cdot1000}{500}=4\\pi,\\qquad \\frac{2\\pi\\cdot1000}{600}=\\frac{10\\pi}{3}$$",
+    "$4\\pi$ — целое число периодов, усиление; $\\frac{10\\pi}{3}$ — промежуточный случай: $$\\lambda=500\\ \\mathrm{nm}$$"
+   ],
+   "en": [
+    "The optical path difference: $$\\Delta=\\left(n-1\\right)h=0.5\\cdot2=1\\ \\mu\\mathrm{m}$$",
+    "The phase difference: $$\\delta=\\frac{2\\pi\\Delta}{\\lambda}:\\ \\frac{2\\pi\\cdot1000}{500}=4\\pi,\\qquad \\frac{2\\pi\\cdot1000}{600}=\\frac{10\\pi}{3}$$",
+    "$4\\pi$ is a whole number of periods — reinforcement; $\\frac{10\\pi}{3}$ is intermediate: $$\\lambda=500\\ \\mathrm{nm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Optik yo'l: $\\Delta=n_2l_2-n_1l_1$",
+    "ru": "Оптический путь: $\\Delta=n_2l_2-n_1l_1$",
+    "en": "Optical path: $\\Delta=n_2l_2-n_1l_1$"
+   },
+   {
+    "uz": "Faza va yo'l farqi: $\\delta=\\frac{2\\pi}{\\lambda}\\Delta$",
+    "ru": "Фаза и разность хода: $\\delta=\\frac{2\\pi}{\\lambda}\\Delta$",
+    "en": "Phase and path difference: $\\delta=\\frac{2\\pi}{\\lambda}\\Delta$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Optik yo'llar farqi",
+   "ru": "Оптическая разность хода",
+   "en": "Optical path difference"
+  },
+  "answer": "\\Delta=1\\ \\mu\\mathrm{m};\\ 4\\pi;\\ \\frac{10\\pi}{3};\\ 500\\ \\mathrm{nm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original (B2-L25, optik yo'l)"
+ },
+ {
+  "id": "B2-L25-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Bir nuqtada intensivliklari $I_0$ va $4I_0$ bo'lgan ikki kogerent to'lqin qo'shiladi. Eng katta va eng kichik intensivlikni, manzara ko'rinuvchanligini va manzara bo'yicha o'rtacha intensivlikni toping.",
+   "ru": "В точке складываются две когерентные волны с интенсивностями $I_0$ и $4I_0$. Найдите наибольшую и наименьшую интенсивность, видность картины и среднюю по картине интенсивность.",
+   "en": "Two coherent waves of intensities $I_0$ and $4I_0$ add at a point. Find the maximum and minimum intensity, the visibility of the pattern and the intensity averaged over the pattern."
+  },
+  "figure": "figures/B2-L25-S03.png",
+  "solution": {
+   "uz": [
+    "$\\cos\\delta=\\pm1$: $$I_{max}=\\left(1+2\\right)^2I_0=9I_0,\\qquad I_{min}=\\left(2-1\\right)^2I_0=I_0$$",
+    "Ko'rinuvchanlik: $$V=\\frac{9-1}{9+1}=0.8$$",
+    "O'rtacha (energiya saqlanadi): $$\\left\\langle I\\right\\rangle=I_1+I_2=5I_0$$"
+   ],
+   "ru": [
+    "$\\cos\\delta=\\pm1$: $$I_{max}=\\left(1+2\\right)^2I_0=9I_0,\\qquad I_{min}=\\left(2-1\\right)^2I_0=I_0$$",
+    "Видность: $$V=\\frac{9-1}{9+1}=0.8$$",
+    "Среднее (энергия сохраняется): $$\\left\\langle I\\right\\rangle=I_1+I_2=5I_0$$"
+   ],
+   "en": [
+    "$\\cos\\delta=\\pm1$: $$I_{max}=\\left(1+2\\right)^2I_0=9I_0,\\qquad I_{min}=\\left(2-1\\right)^2I_0=I_0$$",
+    "The visibility: $$V=\\frac{9-1}{9+1}=0.8$$",
+    "The average (energy is conserved): $$\\left\\langle I\\right\\rangle=I_1+I_2=5I_0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ikki to'lqin intensivligi: $I=I_1+I_2+2\\sqrt{I_1I_2}\\cos\\delta$",
+    "ru": "Интенсивность двух волн: $I=I_1+I_2+2\\sqrt{I_1I_2}\\cos\\delta$",
+    "en": "Intensity of two waves: $I=I_1+I_2+2\\sqrt{I_1I_2}\\cos\\delta$"
+   },
+   {
+    "uz": "Ko'rinuvchanlik: $V=\\frac{I_{max}-I_{min}}{I_{max}+I_{min}}$",
+    "ru": "Видность: $V=\\frac{I_{max}-I_{min}}{I_{max}+I_{min}}$",
+    "en": "Visibility: $V=\\frac{I_{max}-I_{min}}{I_{max}+I_{min}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Ikki to'lqin intensivligi",
+   "ru": "Интенсивность двух волн",
+   "en": "Intensity of two waves"
+  },
+  "answer": "I_{max}=9I_0;\\ I_{min}=I_0;\\ V=0.8;\\ \\left\\langle I\\right\\rangle=5I_0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "Irodov, «Problems in General Physics», 5.66-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L25-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yung tajribasida tirqishlardan biri sindirish ko'rsatkichi $1.58$ bo'lgan yupqa slyuda plastinka bilan yopilganda manzara 7 ta yo'lga siljidi ($\\lambda=550\\ \\mathrm{nm}$). Plastinka qalinligini toping. Manzara qaysi tomonga siljiydi?",
+   "ru": "Когда в опыте Юнга одну из щелей закрыли тонкой пластинкой слюды с показателем преломления $1.58$, картина сместилась на 7 полос ($\\lambda=550\\ \\mathrm{nm}$). Найдите толщину пластинки. В какую сторону смещается картина?",
+   "en": "In Young's experiment, when one of the slits is covered with a thin mica plate of refractive index $1.58$, the pattern shifts by 7 fringes ($\\lambda=550\\ \\mathrm{nm}$). Find the thickness of the plate. Which way does the pattern shift?"
+  },
+  "figure": "figures/B2-L25-S04.png",
+  "solution": {
+   "uz": [
+    "Plastinka optik yo'lni $\\left(n-1\\right)h$ ga uzaytiradi: $$\\left(n-1\\right)h=N\\lambda$$",
+    "Qalinlik: $$h=\\frac{7\\cdot550\\ \\mathrm{nm}}{0.58}\\approx6.6\\ \\mu\\mathrm{m}$$",
+    "Markaziy yo'l ($\\Delta=0$) yo'li uzaygan nur tomonga, ya'ni yopilgan tirqish tomonga siljiydi: $$N=7$$"
+   ],
+   "ru": [
+    "Пластинка удлиняет оптический путь на $\\left(n-1\\right)h$: $$\\left(n-1\\right)h=N\\lambda$$",
+    "Толщина: $$h=\\frac{7\\cdot550\\ \\mathrm{nm}}{0.58}\\approx6.6\\ \\mu\\mathrm{m}$$",
+    "Центральная полоса ($\\Delta=0$) смещается к лучу с удлинённым путём, то есть к закрытой щели: $$N=7$$"
+   ],
+   "en": [
+    "The plate lengthens the optical path by $\\left(n-1\\right)h$: $$\\left(n-1\\right)h=N\\lambda$$",
+    "The thickness: $$h=\\frac{7\\cdot550\\ \\mathrm{nm}}{0.58}\\approx6.6\\ \\mu\\mathrm{m}$$",
+    "The central fringe ($\\Delta=0$) moves towards the ray with the longer path, that is, towards the covered slit: $$N=7$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Plastinka siljitishi: $N=\\frac{\\left(n-1\\right)h}{\\lambda}$",
+    "ru": "Сдвиг пластинкой: $N=\\frac{\\left(n-1\\right)h}{\\lambda}$",
+    "en": "Shift by a plate: $N=\\frac{\\left(n-1\\right)h}{\\lambda}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Plastinka bilan siljish",
+   "ru": "Сдвиг пластинкой",
+   "en": "Shift by a plate"
+  },
+  "answer": "h\\approx6.6\\ \\mu\\mathrm{m};\\ N=7",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Irodov, «Problems in General Physics», 5.75-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L25-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Lloyd ko'zgusi tajribasida manba ko'zgu tekisligidan $1\\ \\mathrm{mm}$ balandlikda, ekran $1.5\\ \\mathrm{m}$ masofada, $\\lambda=500\\ \\mathrm{nm}$. Yo'l kengligini toping. Ko'zgu tekisligi ekranni kesgan joyda yorug' yo'lmi yoki qorong'imi?",
+   "ru": "В опыте с зеркалом Ллойда источник находится на высоте $1\\ \\mathrm{mm}$ над плоскостью зеркала, экран на расстоянии $1.5\\ \\mathrm{m}$, $\\lambda=500\\ \\mathrm{nm}$. Найдите ширину полосы. Светлая или тёмная полоса там, где плоскость зеркала пересекает экран?",
+   "en": "In a Lloyd's mirror experiment the source is $1\\ \\mathrm{mm}$ above the plane of the mirror, the screen is $1.5\\ \\mathrm{m}$ away and $\\lambda=500\\ \\mathrm{nm}$. Find the fringe width. Is there a bright or a dark fringe where the plane of the mirror meets the screen?"
+  },
+  "figure": "figures/B2-L25-S05.png",
+  "solution": {
+   "uz": [
+    "Mavhum manba ko'zgu ostida, manbalar orasi: $$d=2h=2\\ \\mathrm{mm}$$",
+    "Yo'l kengligi: $$\\Delta y=\\frac{\\lambda L}{d}=\\frac{5\\cdot10^{-7}\\cdot1.5}{2\\cdot10^{-3}}=0.375\\ \\mathrm{mm}$$",
+    "Ko'zgu tekisligida geometrik yo'llar teng, lekin qaytgan nur $\\frac{\\lambda}{2}$ yo'qotgan: $$\\Delta=\\frac{\\lambda}{2}\\ \\Rightarrow\\ I=0$$"
+   ],
+   "ru": [
+    "Мнимый источник под зеркалом, расстояние между источниками: $$d=2h=2\\ \\mathrm{mm}$$",
+    "Ширина полосы: $$\\Delta y=\\frac{\\lambda L}{d}=\\frac{5\\cdot10^{-7}\\cdot1.5}{2\\cdot10^{-3}}=0.375\\ \\mathrm{mm}$$",
+    "В плоскости зеркала геометрические пути равны, но отражённый луч потерял $\\frac{\\lambda}{2}$: $$\\Delta=\\frac{\\lambda}{2}\\ \\Rightarrow\\ I=0$$"
+   ],
+   "en": [
+    "The virtual source is below the mirror; the source separation is: $$d=2h=2\\ \\mathrm{mm}$$",
+    "The fringe width: $$\\Delta y=\\frac{\\lambda L}{d}=\\frac{5\\cdot10^{-7}\\cdot1.5}{2\\cdot10^{-3}}=0.375\\ \\mathrm{mm}$$",
+    "In the plane of the mirror the geometric paths are equal, but the reflected ray has lost $\\frac{\\lambda}{2}$: $$\\Delta=\\frac{\\lambda}{2}\\ \\Rightarrow\\ I=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lloyd ko'zgusi: manbalar orasi $2h$, qaytishda $\\frac{\\lambda}{2}$ yo'qoladi",
+    "ru": "Зеркало Ллойда: расстояние между источниками $2h$, при отражении теряется $\\frac{\\lambda}{2}$",
+    "en": "Lloyd's mirror: source separation $2h$, $\\frac{\\lambda}{2}$ lost on reflection"
+   },
+   {
+    "uz": "Yung tajribasi: $y_m=m\\frac{\\lambda L}{d}$, $\\Delta y=\\frac{\\lambda L}{d}$",
+    "ru": "Опыт Юнга: $y_m=m\\frac{\\lambda L}{d}$, $\\Delta y=\\frac{\\lambda L}{d}$",
+    "en": "Young's experiment: $y_m=m\\frac{\\lambda L}{d}$, $\\Delta y=\\frac{\\lambda L}{d}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Lloyd ko'zgusi",
+   "ru": "Зеркало Ллойда",
+   "en": "Lloyd's mirror"
+  },
+  "answer": "\\Delta y=0.375\\ \\mathrm{mm};\\ I=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "Irodov, «Problems in General Physics», 5.69-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L25-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yung tajribasida manba tirqishdan $1\\ \\mathrm{m}$ masofada, tirqishlar orasi $1\\ \\mathrm{mm}$, $\\lambda=550\\ \\mathrm{nm}$. Yo'llar ko'rinishi uchun manba kengligi taxminan qanchadan kichik bo'lishi kerak? To'g'ridan-to'g'ri Quyosh nuri (burchak diametri $0.0093\\ \\mathrm{rad}$) bilan ishlansa, tirqishlar orasi qanchadan oshmasligi kerak?",
+   "ru": "В опыте Юнга источник находится на расстоянии $1\\ \\mathrm{m}$ от щелей, расстояние между щелями $1\\ \\mathrm{mm}$, $\\lambda=550\\ \\mathrm{nm}$. Примерно меньше какой величины должна быть ширина источника, чтобы полосы были видны? Каким не должно превышать расстояние между щелями при работе прямо с солнечным светом (угловой диаметр $0.0093\\ \\mathrm{rad}$)?",
+   "en": "In Young's experiment the source is $1\\ \\mathrm{m}$ from the slits, the slit separation is $1\\ \\mathrm{mm}$ and $\\lambda=550\\ \\mathrm{nm}$. Roughly below what width must the source be for the fringes to be visible? With direct sunlight (angular diameter $0.0093\\ \\mathrm{rad}$), what must the slit separation not exceed?"
+  },
+  "figure": "figures/B2-L25-S06.png",
+  "solution": {
+   "uz": [
+    "Shart $d\\lesssim\\frac{\\lambda}{\\psi}$, $\\psi=\\frac{b}{R}$, ya'ni manba kengligi: $$b\\lesssim\\frac{\\lambda R}{d}=\\frac{5.5\\cdot10^{-7}\\cdot1}{10^{-3}}=0.55\\ \\mathrm{mm}$$",
+    "Quyosh uchun kogerentlik kengligi: $$\\rho=\\frac{\\lambda}{\\psi}=\\frac{5.5\\cdot10^{-7}}{0.0093}\\approx59\\ \\mu\\mathrm{m}$$"
+   ],
+   "ru": [
+    "Условие $d\\lesssim\\frac{\\lambda}{\\psi}$, $\\psi=\\frac{b}{R}$, то есть ширина источника: $$b\\lesssim\\frac{\\lambda R}{d}=\\frac{5.5\\cdot10^{-7}\\cdot1}{10^{-3}}=0.55\\ \\mathrm{mm}$$",
+    "Ширина когерентности для Солнца: $$\\rho=\\frac{\\lambda}{\\psi}=\\frac{5.5\\cdot10^{-7}}{0.0093}\\approx59\\ \\mu\\mathrm{m}$$"
+   ],
+   "en": [
+    "The condition $d\\lesssim\\frac{\\lambda}{\\psi}$, $\\psi=\\frac{b}{R}$, so the source width: $$b\\lesssim\\frac{\\lambda R}{d}=\\frac{5.5\\cdot10^{-7}\\cdot1}{10^{-3}}=0.55\\ \\mathrm{mm}$$",
+    "The coherence width for the Sun: $$\\rho=\\frac{\\lambda}{\\psi}=\\frac{5.5\\cdot10^{-7}}{0.0093}\\approx59\\ \\mu\\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Fazoviy kogerentlik: $\\rho=\\frac{\\lambda}{\\psi}$",
+    "ru": "Пространственная когерентность: $\\rho=\\frac{\\lambda}{\\psi}$",
+    "en": "Spatial coherence: $\\rho=\\frac{\\lambda}{\\psi}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Fazoviy kogerentlik",
+   "ru": "Пространственная когерентность",
+   "en": "Spatial coherence"
+  },
+  "answer": "b\\lesssim0.55\\ \\mathrm{mm};\\ d\\lesssim59\\ \\mu\\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original (B2-L25, fazoviy kogerentlik)"
+ },
+ {
+  "id": "B2-L25-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Qizil yorug'lik diodi $\\lambda=630\\ \\mathrm{nm}$ da spektral kengligi $\\Delta\\lambda=20\\ \\mathrm{nm}$ bo'lgan yorug'lik chiqaradi. Kogerentlik uzunligini va interferension manzarada ko'rinadigan tartiblar sonini baholang. Chastota kengligi $1\\ \\mathrm{MHz}$ bo'lgan lazer uchun kogerentlik uzunligi qancha?",
+   "ru": "Красный светодиод излучает при $\\lambda=630\\ \\mathrm{nm}$ свет со спектральной шириной $\\Delta\\lambda=20\\ \\mathrm{nm}$. Оцените длину когерентности и число видимых порядков интерференционной картины. Какова длина когерентности лазера с шириной линии $1\\ \\mathrm{MHz}$?",
+   "en": "A red LED emits light at $\\lambda=630\\ \\mathrm{nm}$ with spectral width $\\Delta\\lambda=20\\ \\mathrm{nm}$. Estimate the coherence length and the number of visible orders of the interference pattern. What is the coherence length of a laser with a linewidth of $1\\ \\mathrm{MHz}$?"
+  },
+  "figure": "figures/B2-L25-S07.png",
+  "solution": {
+   "uz": [
+    "Kogerentlik uzunligi: $$\\ell=\\frac{\\lambda^2}{\\Delta\\lambda}=\\frac{630^2}{20}\\ \\mathrm{nm}\\approx20\\ \\mu\\mathrm{m}$$",
+    "Ko'rinadigan tartiblar: $$m_{max}\\approx\\frac{\\lambda}{\\Delta\\lambda}=\\frac{630}{20}\\approx30$$",
+    "Lazer: $$\\ell=\\frac{c}{\\Delta\\nu}=\\frac{3\\cdot10^8}{10^6}=300\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Длина когерентности: $$\\ell=\\frac{\\lambda^2}{\\Delta\\lambda}=\\frac{630^2}{20}\\ \\mathrm{nm}\\approx20\\ \\mu\\mathrm{m}$$",
+    "Видимые порядки: $$m_{max}\\approx\\frac{\\lambda}{\\Delta\\lambda}=\\frac{630}{20}\\approx30$$",
+    "Лазер: $$\\ell=\\frac{c}{\\Delta\\nu}=\\frac{3\\cdot10^8}{10^6}=300\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "The coherence length: $$\\ell=\\frac{\\lambda^2}{\\Delta\\lambda}=\\frac{630^2}{20}\\ \\mathrm{nm}\\approx20\\ \\mu\\mathrm{m}$$",
+    "Visible orders: $$m_{max}\\approx\\frac{\\lambda}{\\Delta\\lambda}=\\frac{630}{20}\\approx30$$",
+    "The laser: $$\\ell=\\frac{c}{\\Delta\\nu}=\\frac{3\\cdot10^8}{10^6}=300\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kogerentlik uzunligi: $\\ell=\\frac{\\lambda^2}{\\Delta\\lambda}=\\frac{c}{\\Delta\\nu}$",
+    "ru": "Длина когерентности: $\\ell=\\frac{\\lambda^2}{\\Delta\\lambda}=\\frac{c}{\\Delta\\nu}$",
+    "en": "Coherence length: $\\ell=\\frac{\\lambda^2}{\\Delta\\lambda}=\\frac{c}{\\Delta\\nu}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Vaqtiy kogerentlik",
+   "ru": "Временная когерентность",
+   "en": "Temporal coherence"
+  },
+  "answer": "\\ell\\approx20\\ \\mu\\mathrm{m};\\ m_{max}\\approx30;\\ 300\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original (B2-L25, kogerentlik uzunligi)"
+ },
+ {
+  "id": "B2-L25-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Havodagi sovun pardasining ($n=1.33$) qalinligi $400\\ \\mathrm{nm}$, oq yorug'lik normal tushmoqda. Qaytgan nurda ko'rinadigan diapazondagi ($380$–$750\\ \\mathrm{nm}$) qaysi to'lqin uzunliklari kuchayadi va qaysilari so'nadi? Parda qanday rangda ko'rinadi?",
+   "ru": "Толщина мыльной плёнки ($n=1.33$) в воздухе $400\\ \\mathrm{nm}$, белый свет падает нормально. Какие длины волн видимого диапазона ($380$–$750\\ \\mathrm{nm}$) усиливаются и какие гасятся в отражённом свете? Какого цвета кажется плёнка?",
+   "en": "A soap film ($n=1.33$) in air is $400\\ \\mathrm{nm}$ thick, and white light falls on it normally. Which wavelengths of the visible range ($380$–$750\\ \\mathrm{nm}$) are reinforced and which cancelled in reflected light? What colour does the film appear?"
+  },
+  "figure": "figures/B2-L25-S08.png",
+  "solution": {
+   "uz": [
+    "Yuqori sirtda yo'qotish bor, pastkida yo'q — yorug' shart: $$\\lambda=\\frac{2nh}{m+\\frac{1}{2}}=\\frac{1064}{m+\\frac{1}{2}}:\\ 709\\ \\mathrm{nm},\\ 426\\ \\mathrm{nm}$$",
+    "Qorong'i shart: $$\\lambda=\\frac{2nh}{m}=\\frac{1064}{m}:\\ 532\\ \\mathrm{nm}$$",
+    "Yashil so'nadi, qizil va binafsha-ko'k kuchayadi — parda qizg'ish-binafsha (magenta): $$532\\ \\mathrm{nm}\\ \\to\\ 0$$"
+   ],
+   "ru": [
+    "На верхней поверхности потеря есть, на нижней нет — условие светлых: $$\\lambda=\\frac{2nh}{m+\\frac{1}{2}}=\\frac{1064}{m+\\frac{1}{2}}:\\ 709\\ \\mathrm{nm},\\ 426\\ \\mathrm{nm}$$",
+    "Тёмное условие: $$\\lambda=\\frac{2nh}{m}=\\frac{1064}{m}:\\ 532\\ \\mathrm{nm}$$",
+    "Зелёный гасится, красный и сине-фиолетовый усиливаются — плёнка пурпурная: $$532\\ \\mathrm{nm}\\ \\to\\ 0$$"
+   ],
+   "en": [
+    "There is a loss at the top surface but not at the bottom — the bright condition: $$\\lambda=\\frac{2nh}{m+\\frac{1}{2}}=\\frac{1064}{m+\\frac{1}{2}}:\\ 709\\ \\mathrm{nm},\\ 426\\ \\mathrm{nm}$$",
+    "The dark condition: $$\\lambda=\\frac{2nh}{m}=\\frac{1064}{m}:\\ 532\\ \\mathrm{nm}$$",
+    "Green is cancelled while red and blue-violet are reinforced — the film looks magenta: $$532\\ \\mathrm{nm}\\ \\to\\ 0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Havodagi parda: $2nh=\\left(m+\\frac{1}{2}\\right)\\lambda$ $\\left(\\max\\right)$, $2nh=m\\lambda$ $\\left(\\min\\right)$",
+    "ru": "Плёнка в воздухе: $2nh=\\left(m+\\frac{1}{2}\\right)\\lambda$ $\\left(\\max\\right)$, $2nh=m\\lambda$ $\\left(\\min\\right)$",
+    "en": "Film in air: $2nh=\\left(m+\\frac{1}{2}\\right)\\lambda$ $\\left(\\max\\right)$, $2nh=m\\lambda$ $\\left(\\min\\right)$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Sovun pardasi",
+   "ru": "Мыльная плёнка",
+   "en": "A soap film"
+  },
+  "answer": "709,\\ 426\\ \\mathrm{nm};\\ 532\\ \\mathrm{nm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Irodov, «Problems in General Physics», 5.79-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L25-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Shisha ($n=1.5$) sirtiga $\\lambda=550\\ \\mathrm{nm}$ uchun $\\mathrm{MgF_2}$ ($n=1.38$) yoritish qoplamasi surtiladi. Qoplamaning eng kichik qalinligini toping. Qoplamasiz va qoplamali sirtdan normal tushishda qaytish ulushini hisoblang. Ideal qoplamaning sindirish ko'rsatkichi qancha bo'lishi kerak edi?",
+   "ru": "На поверхность стекла ($n=1.5$) наносится просветляющее покрытие $\\mathrm{MgF_2}$ ($n=1.38$) для $\\lambda=550\\ \\mathrm{nm}$. Найдите наименьшую толщину покрытия. Вычислите долю отражения при нормальном падении от поверхности без покрытия и с покрытием. Каким должен был бы быть показатель преломления идеального покрытия?",
+   "en": "An anti-reflection coating of $\\mathrm{MgF_2}$ ($n=1.38$) is applied to glass ($n=1.5$) for $\\lambda=550\\ \\mathrm{nm}$. Find the minimum thickness of the coating. Calculate the reflectance at normal incidence from the surface without and with the coating. What should the refractive index of an ideal coating have been?"
+  },
+  "figure": "figures/B2-L25-S09.png",
+  "solution": {
+   "uz": [
+    "Ikkala qaytishda yo'qotish bor, shuning uchun $2n_1h=\\frac{\\lambda}{2}$: $$h=\\frac{\\lambda}{4n_1}=\\frac{550}{4\\cdot1.38}\\approx100\\ \\mathrm{nm}$$",
+    "Qoplamasiz: $$R=\\left(\\frac{1.5-1}{1.5+1}\\right)^2=0.04$$",
+    "Qoplama bilan (chorak to'lqinli qatlam): $$R=\\left(\\frac{n_2-n_1^2}{n_2+n_1^2}\\right)^2=\\left(\\frac{1.5-1.904}{1.5+1.904}\\right)^2\\approx0.014,\\qquad n_1=\\sqrt{1.5}\\approx1.22$$"
+   ],
+   "ru": [
+    "Потеря при обоих отражениях, поэтому $2n_1h=\\frac{\\lambda}{2}$: $$h=\\frac{\\lambda}{4n_1}=\\frac{550}{4\\cdot1.38}\\approx100\\ \\mathrm{nm}$$",
+    "Без покрытия: $$R=\\left(\\frac{1.5-1}{1.5+1}\\right)^2=0.04$$",
+    "С покрытием (четвертьволновой слой): $$R=\\left(\\frac{n_2-n_1^2}{n_2+n_1^2}\\right)^2=\\left(\\frac{1.5-1.904}{1.5+1.904}\\right)^2\\approx0.014,\\qquad n_1=\\sqrt{1.5}\\approx1.22$$"
+   ],
+   "en": [
+    "Both reflections involve a loss, so $2n_1h=\\frac{\\lambda}{2}$: $$h=\\frac{\\lambda}{4n_1}=\\frac{550}{4\\cdot1.38}\\approx100\\ \\mathrm{nm}$$",
+    "Without the coating: $$R=\\left(\\frac{1.5-1}{1.5+1}\\right)^2=0.04$$",
+    "With the coating (a quarter-wave layer): $$R=\\left(\\frac{n_2-n_1^2}{n_2+n_1^2}\\right)^2=\\left(\\frac{1.5-1.904}{1.5+1.904}\\right)^2\\approx0.014,\\qquad n_1=\\sqrt{1.5}\\approx1.22$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yoritilgan optika: $h=\\frac{\\lambda}{4n_1}$, $n_1=\\sqrt{n_2}$",
+    "ru": "Просветление: $h=\\frac{\\lambda}{4n_1}$, $n_1=\\sqrt{n_2}$",
+    "en": "Anti-reflection coating: $h=\\frac{\\lambda}{4n_1}$, $n_1=\\sqrt{n_2}$"
+   },
+   {
+    "uz": "Normal tushishda qaytish: $R=\\left(\\frac{n_2-n_1}{n_2+n_1}\\right)^2$",
+    "ru": "Отражение при нормальном падении: $R=\\left(\\frac{n_2-n_1}{n_2+n_1}\\right)^2$",
+    "en": "Reflection at normal incidence: $R=\\left(\\frac{n_2-n_1}{n_2+n_1}\\right)^2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Yoritilgan optika",
+   "ru": "Просветление оптики",
+   "en": "Anti-reflection coating"
+  },
+  "answer": "h\\approx100\\ \\mathrm{nm};\\ 4\\%;\\ 1.4\\%;\\ n_1\\approx1.22",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 5.81-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L25-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki shisha plastinka bir uchida tegib turibdi, tegish chizig'idan $10\\ \\mathrm{cm}$ masofada ular orasiga diametri $0.06\\ \\mathrm{mm}$ bo'lgan sim qo'yilgan. $\\lambda=600\\ \\mathrm{nm}$ li yorug'lik yuqoridan normal tushmoqda. Qaytgan nurdagi qorong'i yo'llar orasidagi masofani va ularning sonini toping.",
+   "ru": "Две стеклянные пластинки соприкасаются одним краем, на расстоянии $10\\ \\mathrm{cm}$ от линии касания между ними проложена проволока диаметром $0.06\\ \\mathrm{mm}$. Сверху нормально падает свет с $\\lambda=600\\ \\mathrm{nm}$. Найдите расстояние между тёмными полосами в отражённом свете и их число.",
+   "en": "Two glass plates touch along one edge, and a wire of diameter $0.06\\ \\mathrm{mm}$ is placed between them $10\\ \\mathrm{cm}$ from the line of contact. Light with $\\lambda=600\\ \\mathrm{nm}$ falls normally from above. Find the spacing of the dark fringes in reflected light and their number."
+  },
+  "figure": "figures/B2-L25-S10.png",
+  "solution": {
+   "uz": [
+    "Pona burchagi: $$\\alpha=\\frac{0.06}{100}=6\\cdot10^{-4}\\ \\mathrm{rad}$$",
+    "Yo'llar orasi: $$\\Delta x=\\frac{\\lambda}{2\\alpha}=\\frac{6\\cdot10^{-7}}{1.2\\cdot10^{-3}}=0.5\\ \\mathrm{mm}$$",
+    "Qorong'i yo'llar $2h=m\\lambda$, $m=0\\dots\\frac{2D}{\\lambda}$: $$\\frac{2D}{\\lambda}=\\frac{1.2\\cdot10^{-4}}{6\\cdot10^{-7}}=200\\ \\Rightarrow\\ 201$$"
+   ],
+   "ru": [
+    "Угол клина: $$\\alpha=\\frac{0.06}{100}=6\\cdot10^{-4}\\ \\mathrm{rad}$$",
+    "Расстояние между полосами: $$\\Delta x=\\frac{\\lambda}{2\\alpha}=\\frac{6\\cdot10^{-7}}{1.2\\cdot10^{-3}}=0.5\\ \\mathrm{mm}$$",
+    "Тёмные полосы $2h=m\\lambda$, $m=0\\dots\\frac{2D}{\\lambda}$: $$\\frac{2D}{\\lambda}=\\frac{1.2\\cdot10^{-4}}{6\\cdot10^{-7}}=200\\ \\Rightarrow\\ 201$$"
+   ],
+   "en": [
+    "The wedge angle: $$\\alpha=\\frac{0.06}{100}=6\\cdot10^{-4}\\ \\mathrm{rad}$$",
+    "The fringe spacing: $$\\Delta x=\\frac{\\lambda}{2\\alpha}=\\frac{6\\cdot10^{-7}}{1.2\\cdot10^{-3}}=0.5\\ \\mathrm{mm}$$",
+    "Dark fringes at $2h=m\\lambda$, $m=0\\dots\\frac{2D}{\\lambda}$: $$\\frac{2D}{\\lambda}=\\frac{1.2\\cdot10^{-4}}{6\\cdot10^{-7}}=200\\ \\Rightarrow\\ 201$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Havo ponasi: $2\\alpha x_m=m\\lambda$, $\\Delta x=\\frac{\\lambda}{2\\alpha}$",
+    "ru": "Воздушный клин: $2\\alpha x_m=m\\lambda$, $\\Delta x=\\frac{\\lambda}{2\\alpha}$",
+    "en": "Air wedge: $2\\alpha x_m=m\\lambda$, $\\Delta x=\\frac{\\lambda}{2\\alpha}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Havo ponasi",
+   "ru": "Воздушный клин",
+   "en": "The air wedge"
+  },
+  "answer": "\\Delta x=0.5\\ \\mathrm{mm};\\ 201",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original (B2-L25, pona)"
+ },
+ {
+  "id": "B2-L25-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Sferik sirtining radiusi $1\\ \\mathrm{m}$ bo'lgan yassi-qavariq linza yassi shishaga qo'yilgan, $\\lambda=589\\ \\mathrm{nm}$ li yorug'lik normal tushmoqda. Qaytgan nurda beshinchi qorong'i halqaning radiusini toping (markazdagi qorong'i dog' $m=0$). Linza va shisha orasi suv ($n=1.33$) bilan to'ldirilsa, bu radius qanday bo'ladi?",
+   "ru": "Плоско-выпуклая линза с радиусом сферической поверхности $1\\ \\mathrm{m}$ лежит на плоском стекле, нормально падает свет с $\\lambda=589\\ \\mathrm{nm}$. Найдите радиус пятого тёмного кольца в отражённом свете (центральное тёмное пятно $m=0$). Каким станет этот радиус, если пространство между линзой и стеклом заполнить водой ($n=1.33$)?",
+   "en": "A plano-convex lens whose spherical surface has radius $1\\ \\mathrm{m}$ rests on flat glass, and light with $\\lambda=589\\ \\mathrm{nm}$ falls normally. Find the radius of the fifth dark ring in reflected light (the central dark spot is $m=0$). What does this radius become if the space between the lens and the glass is filled with water ($n=1.33$)?"
+  },
+  "figure": "figures/B2-L25-S11.png",
+  "solution": {
+   "uz": [
+    "Havo qatlami qalinligi $h=\\frac{r^2}{2R}$, qorong'i shart $2h=m\\lambda$: $$r_5=\\sqrt{5\\lambda R}=\\sqrt{5\\cdot5.89\\cdot10^{-7}\\cdot1}\\approx1.72\\ \\mathrm{mm}$$",
+    "Suvda to'lqin uzunligi $n$ marta qisqa: $$r_5'=\\frac{r_5}{\\sqrt{1.33}}\\approx1.49\\ \\mathrm{mm}$$"
+   ],
+   "ru": [
+    "Толщина воздушного слоя $h=\\frac{r^2}{2R}$, условие тёмных $2h=m\\lambda$: $$r_5=\\sqrt{5\\lambda R}=\\sqrt{5\\cdot5.89\\cdot10^{-7}\\cdot1}\\approx1.72\\ \\mathrm{mm}$$",
+    "В воде длина волны в $n$ раз короче: $$r_5'=\\frac{r_5}{\\sqrt{1.33}}\\approx1.49\\ \\mathrm{mm}$$"
+   ],
+   "en": [
+    "The air-layer thickness is $h=\\frac{r^2}{2R}$; dark condition $2h=m\\lambda$: $$r_5=\\sqrt{5\\lambda R}=\\sqrt{5\\cdot5.89\\cdot10^{-7}\\cdot1}\\approx1.72\\ \\mathrm{mm}$$",
+    "In water the wavelength is $n$ times shorter: $$r_5'=\\frac{r_5}{\\sqrt{1.33}}\\approx1.49\\ \\mathrm{mm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nyuton halqalari: $r_m=\\sqrt{\\frac{m\\lambda R}{n}}$",
+    "ru": "Кольца Ньютона: $r_m=\\sqrt{\\frac{m\\lambda R}{n}}$",
+    "en": "Newton's rings: $r_m=\\sqrt{\\frac{m\\lambda R}{n}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Nyuton halqalari",
+   "ru": "Кольца Ньютона",
+   "en": "Newton's rings"
+  },
+  "answer": "r_5\\approx1.72\\ \\mathrm{mm};\\ r_5'\\approx1.49\\ \\mathrm{mm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "Irodov, «Problems in General Physics», 5.86-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L25-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Maykelson interferometrining ko'zgularidan biri $0.1\\ \\mathrm{mm}$ ga siljitilganda manzara markazidan 316 ta yo'l o'tdi. Yorug'lik to'lqin uzunligini toping.",
+   "ru": "При смещении одного из зеркал интерферометра Майкельсона на $0.1\\ \\mathrm{mm}$ через центр картины прошло 316 полос. Найдите длину волны света.",
+   "en": "When one of the mirrors of a Michelson interferometer is moved by $0.1\\ \\mathrm{mm}$, 316 fringes pass the centre of the pattern. Find the wavelength of the light."
+  },
+  "figure": "figures/B2-L25-S12.png",
+  "solution": {
+   "uz": [
+    "Yorug'lik yelkani ikki marta bosadi: $$2\\Delta l=N\\lambda$$",
+    "To'lqin uzunligi: $$\\lambda=\\frac{2\\cdot10^{-4}}{316}\\approx633\\ \\mathrm{nm}$$"
+   ],
+   "ru": [
+    "Свет проходит плечо дважды: $$2\\Delta l=N\\lambda$$",
+    "Длина волны: $$\\lambda=\\frac{2\\cdot10^{-4}}{316}\\approx633\\ \\mathrm{nm}$$"
+   ],
+   "en": [
+    "The light travels the arm twice: $$2\\Delta l=N\\lambda$$",
+    "The wavelength: $$\\lambda=\\frac{2\\cdot10^{-4}}{316}\\approx633\\ \\mathrm{nm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Maykelson interferometri: $N=\\frac{2\\Delta l}{\\lambda}$",
+    "ru": "Интерферометр Майкельсона: $N=\\frac{2\\Delta l}{\\lambda}$",
+    "en": "Michelson interferometer: $N=\\frac{2\\Delta l}{\\lambda}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Maykelson interferometri",
+   "ru": "Интерферометр Майкельсона",
+   "en": "The Michelson interferometer"
+  },
+  "answer": "\\lambda\\approx633\\ \\mathrm{nm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Irodov, «Problems in General Physics», 5.93-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L25-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Maykelson interferometrining bir yelkasiga uzunligi $5\\ \\mathrm{cm}$ bo'lgan vakuumlangan kamera qo'yilgan. Kamera asta-sekin havo bilan to'ldirilganda markazdan 43 ta yo'l o'tdi ($\\lambda=633\\ \\mathrm{nm}$). Havoning sindirish ko'rsatkichini toping.",
+   "ru": "В одно плечо интерферометра Майкельсона поставлена вакуумированная камера длиной $5\\ \\mathrm{cm}$. При медленном заполнении камеры воздухом через центр прошло 43 полосы ($\\lambda=633\\ \\mathrm{nm}$). Найдите показатель преломления воздуха.",
+   "en": "An evacuated cell $5\\ \\mathrm{cm}$ long is placed in one arm of a Michelson interferometer. As the cell is slowly filled with air, 43 fringes pass the centre ($\\lambda=633\\ \\mathrm{nm}$). Find the refractive index of air."
+  },
+  "figure": "figures/B2-L25-S13.png",
+  "solution": {
+   "uz": [
+    "Kamera ikki marta o'tiladi, optik yo'l $2L\\left(n-1\\right)$ ga ortadi: $$2L\\left(n-1\\right)=N\\lambda$$",
+    "Sindirish ko'rsatkichi: $$n-1=\\frac{43\\cdot6.33\\cdot10^{-7}}{0.1}\\approx2.72\\cdot10^{-4},\\qquad n\\approx1.00027$$"
+   ],
+   "ru": [
+    "Камера проходится дважды, оптический путь растёт на $2L\\left(n-1\\right)$: $$2L\\left(n-1\\right)=N\\lambda$$",
+    "Показатель преломления: $$n-1=\\frac{43\\cdot6.33\\cdot10^{-7}}{0.1}\\approx2.72\\cdot10^{-4},\\qquad n\\approx1.00027$$"
+   ],
+   "en": [
+    "The cell is traversed twice, so the optical path grows by $2L\\left(n-1\\right)$: $$2L\\left(n-1\\right)=N\\lambda$$",
+    "The refractive index: $$n-1=\\frac{43\\cdot6.33\\cdot10^{-7}}{0.1}\\approx2.72\\cdot10^{-4},\\qquad n\\approx1.00027$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gaz kamerasi: $N=\\frac{2L\\left(n-1\\right)}{\\lambda}$",
+    "ru": "Газовая камера: $N=\\frac{2L\\left(n-1\\right)}{\\lambda}$",
+    "en": "Gas cell: $N=\\frac{2L\\left(n-1\\right)}{\\lambda}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Gazning sindirish ko'rsatkichi",
+   "ru": "Показатель преломления газа",
+   "en": "Refractive index of a gas"
+  },
+  "answer": "n\\approx1.00027",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "Irodov, «Problems in General Physics», 5.77-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L25-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Bir-biridan $10\\ \\mu\\mathrm{m}$ masofada joylashgan 5 ta bir xil tirqishga $\\lambda=500\\ \\mathrm{nm}$ li yorug'lik normal tushmoqda. Bosh maksimum intensivligini bitta tirqish intensivligi $I_0$ orqali, qo'shni bosh maksimumlar orasidagi nollar va qo'shimcha maksimumlar sonini, birinchi tartibli bosh maksimum burchagini toping.",
+   "ru": "На 5 одинаковых щелей, расположенных на расстоянии $10\\ \\mu\\mathrm{m}$ друг от друга, нормально падает свет с $\\lambda=500\\ \\mathrm{nm}$. Найдите интенсивность главного максимума через интенсивность одной щели $I_0$, число нулей и побочных максимумов между соседними главными максимумами, угол главного максимума первого порядка.",
+   "en": "Light with $\\lambda=500\\ \\mathrm{nm}$ falls normally on 5 identical slits spaced $10\\ \\mu\\mathrm{m}$ apart. Find the intensity of a principal maximum in terms of the intensity of one slit $I_0$, the number of zeros and secondary maxima between neighbouring principal maxima, and the angle of the first-order principal maximum."
+  },
+  "figure": "figures/B2-L25-S14.png",
+  "solution": {
+   "uz": [
+    "$\\delta\\to0$ da barcha fazorlar bir yo'nalishda: $$I_{max}=N^2I_0=25I_0$$",
+    "Nollar $\\delta=\\frac{2\\pi k}{N}$ da, $k=1\\dots N-1$: $$N-1=4,\\qquad N-2=3$$",
+    "Birinchi tartib: $$\\sin\\theta=\\frac{\\lambda}{d}=0.05\\ \\Rightarrow\\ \\theta\\approx2.87^\\circ$$"
+   ],
+   "ru": [
+    "При $\\delta\\to0$ все фазоры направлены одинаково: $$I_{max}=N^2I_0=25I_0$$",
+    "Нули при $\\delta=\\frac{2\\pi k}{N}$, $k=1\\dots N-1$: $$N-1=4,\\qquad N-2=3$$",
+    "Первый порядок: $$\\sin\\theta=\\frac{\\lambda}{d}=0.05\\ \\Rightarrow\\ \\theta\\approx2.87^\\circ$$"
+   ],
+   "en": [
+    "As $\\delta\\to0$ all phasors point the same way: $$I_{max}=N^2I_0=25I_0$$",
+    "Zeros at $\\delta=\\frac{2\\pi k}{N}$, $k=1\\dots N-1$: $$N-1=4,\\qquad N-2=3$$",
+    "First order: $$\\sin\\theta=\\frac{\\lambda}{d}=0.05\\ \\Rightarrow\\ \\theta\\approx2.87^\\circ$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "N ta tirqish: $I=I_0\\frac{\\sin^2\\frac{N\\delta}{2}}{\\sin^2\\frac{\\delta}{2}}$",
+    "ru": "N щелей: $I=I_0\\frac{\\sin^2\\frac{N\\delta}{2}}{\\sin^2\\frac{\\delta}{2}}$",
+    "en": "N slits: $I=I_0\\frac{\\sin^2\\frac{N\\delta}{2}}{\\sin^2\\frac{\\delta}{2}}$"
+   },
+   null,
+   {
+    "uz": "Bosh maksimumlar: $d\\sin\\theta=m\\lambda$",
+    "ru": "Главные максимумы: $d\\sin\\theta=m\\lambda$",
+    "en": "Principal maxima: $d\\sin\\theta=m\\lambda$"
+   }
+  ],
+  "basis": {
+   "uz": "Ko'p nurli interferensiya",
+   "ru": "Многолучевая интерференция",
+   "en": "Multiple-beam interference"
+  },
+  "answer": "25I_0;\\ 4;\\ 3;\\ \\theta\\approx2.87^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "original (B2-L25, N tirqish)"
+ },
+ {
+  "id": "B2-L25-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Bir xil fazada tebranuvchi ikki karnaydan tinglovchigacha masofalar $4\\ \\mathrm{m}$ va $4.85\\ \\mathrm{m}$. Tovush tezligi $340\\ \\mathrm{m/s}$. Eshitiladigan diapazonning qaysi uchta eng past chastotasida tinglovchi tovushni deyarli eshitmaydi va qaysi ikki eng past chastotada eng kuchli eshitadi?",
+   "ru": "Расстояния от двух громкоговорителей, колеблющихся в одной фазе, до слушателя равны $4\\ \\mathrm{m}$ и $4.85\\ \\mathrm{m}$. Скорость звука $340\\ \\mathrm{m/s}$. На каких трёх самых низких частотах слушатель почти не слышит звук и на каких двух самых низких слышит его сильнее всего?",
+   "en": "The distances from two loudspeakers oscillating in phase to a listener are $4\\ \\mathrm{m}$ and $4.85\\ \\mathrm{m}$. The speed of sound is $340\\ \\mathrm{m/s}$. At which three lowest frequencies does the listener hardly hear the sound, and at which two lowest frequencies is it loudest?"
+  },
+  "figure": "figures/B2-L25-S15.png",
+  "solution": {
+   "uz": [
+    "Yo'llar farqi $\\Delta=0.85\\ \\mathrm{m}$; so'nish sharti: $$f=\\left(m+\\frac{1}{2}\\right)\\frac{v}{\\Delta}=200,\\ 600,\\ 1000\\ \\mathrm{Hz}$$",
+    "Kuchayish sharti $\\Delta=m\\frac{v}{f}$: $$f=m\\frac{v}{\\Delta}=400,\\ 800\\ \\mathrm{Hz}$$"
+   ],
+   "ru": [
+    "Разность хода $\\Delta=0.85\\ \\mathrm{m}$; условие гашения: $$f=\\left(m+\\frac{1}{2}\\right)\\frac{v}{\\Delta}=200,\\ 600,\\ 1000\\ \\mathrm{Hz}$$",
+    "Условие усиления $\\Delta=m\\frac{v}{f}$: $$f=m\\frac{v}{\\Delta}=400,\\ 800\\ \\mathrm{Hz}$$"
+   ],
+   "en": [
+    "The path difference is $\\Delta=0.85\\ \\mathrm{m}$; the condition for cancellation: $$f=\\left(m+\\frac{1}{2}\\right)\\frac{v}{\\Delta}=200,\\ 600,\\ 1000\\ \\mathrm{Hz}$$",
+    "The condition for reinforcement $\\Delta=m\\frac{v}{f}$: $$f=m\\frac{v}{\\Delta}=400,\\ 800\\ \\mathrm{Hz}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tovush interferensiyasi: $\\Delta=\\left(m+\\frac{1}{2}\\right)\\frac{v}{f}$",
+    "ru": "Интерференция звука: $\\Delta=\\left(m+\\frac{1}{2}\\right)\\frac{v}{f}$",
+    "en": "Interference of sound: $\\Delta=\\left(m+\\frac{1}{2}\\right)\\frac{v}{f}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Tovush interferensiyasi",
+   "ru": "Интерференция звука",
+   "en": "Interference of sound"
+  },
+  "answer": "200,\\ 600,\\ 1000\\ \\mathrm{Hz};\\ 400,\\ 800\\ \\mathrm{Hz}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L25, karnaylar)"
+ },
+ {
+  "id": "B2-L25-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$50\\ \\mathrm{V}$ kuchlanish bilan tezlatilgan elektronlar bir-biridan $1\\ \\mu\\mathrm{m}$ masofadagi ikki tirqishdan o'tib, $1\\ \\mathrm{m}$ masofadagi detektorga tushadi. Elektronlarning de Broyl to'lqin uzunligini va interferension yo'l kengligini toping.",
+   "ru": "Электроны, ускоренные напряжением $50\\ \\mathrm{V}$, проходят через две щели на расстоянии $1\\ \\mu\\mathrm{m}$ друг от друга и попадают на детектор на расстоянии $1\\ \\mathrm{m}$. Найдите длину волны де Бройля электронов и ширину интерференционной полосы.",
+   "en": "Electrons accelerated through $50\\ \\mathrm{V}$ pass through two slits $1\\ \\mu\\mathrm{m}$ apart and strike a detector $1\\ \\mathrm{m}$ away. Find the de Broglie wavelength of the electrons and the interference fringe width."
+  },
+  "figure": "figures/B2-L25-S16.png",
+  "solution": {
+   "uz": [
+    "De Broyl to'lqin uzunligi, $p=\\sqrt{2meU}$: $$\\lambda=\\frac{6.63\\cdot10^{-34}}{\\sqrt{2\\cdot9.1\\cdot10^{-31}\\cdot1.6\\cdot10^{-19}\\cdot50}}\\approx0.174\\ \\mathrm{nm}$$",
+    "Yo'l kengligi: $$\\Delta y=\\frac{\\lambda L}{d}=\\frac{1.74\\cdot10^{-10}\\cdot1}{10^{-6}}\\approx0.17\\ \\mathrm{mm}$$"
+   ],
+   "ru": [
+    "Длина волны де Бройля, $p=\\sqrt{2meU}$: $$\\lambda=\\frac{6.63\\cdot10^{-34}}{\\sqrt{2\\cdot9.1\\cdot10^{-31}\\cdot1.6\\cdot10^{-19}\\cdot50}}\\approx0.174\\ \\mathrm{nm}$$",
+    "Ширина полосы: $$\\Delta y=\\frac{\\lambda L}{d}=\\frac{1.74\\cdot10^{-10}\\cdot1}{10^{-6}}\\approx0.17\\ \\mathrm{mm}$$"
+   ],
+   "en": [
+    "The de Broglie wavelength, $p=\\sqrt{2meU}$: $$\\lambda=\\frac{6.63\\cdot10^{-34}}{\\sqrt{2\\cdot9.1\\cdot10^{-31}\\cdot1.6\\cdot10^{-19}\\cdot50}}\\approx0.174\\ \\mathrm{nm}$$",
+    "The fringe width: $$\\Delta y=\\frac{\\lambda L}{d}=\\frac{1.74\\cdot10^{-10}\\cdot1}{10^{-6}}\\approx0.17\\ \\mathrm{mm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "De Broyl to'lqin uzunligi: $\\lambda=\\frac{h}{\\sqrt{2meU}}$",
+    "ru": "Длина волны де Бройля: $\\lambda=\\frac{h}{\\sqrt{2meU}}$",
+    "en": "De Broglie wavelength: $\\lambda=\\frac{h}{\\sqrt{2meU}}$"
+   },
+   {
+    "uz": "Yung tajribasi: $y_m=m\\frac{\\lambda L}{d}$, $\\Delta y=\\frac{\\lambda L}{d}$",
+    "ru": "Опыт Юнга: $y_m=m\\frac{\\lambda L}{d}$, $\\Delta y=\\frac{\\lambda L}{d}$",
+    "en": "Young's experiment: $y_m=m\\frac{\\lambda L}{d}$, $\\Delta y=\\frac{\\lambda L}{d}$"
+   }
+  ],
+  "basis": {
+   "uz": "Elektronlar interferensiyasi",
+   "ru": "Интерференция электронов",
+   "en": "Interference of electrons"
+  },
+  "answer": "\\lambda\\approx0.174\\ \\mathrm{nm};\\ \\Delta y\\approx0.17\\ \\mathrm{mm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B2-L25, elektronlar)"
+ },
+ {
+  "id": "B2-L25-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$\\lambda=532\\ \\mathrm{nm}$ li lazerning ikki kogerent dastasi orasidagi burchak $1^\\circ$ bo'lib kesishadi. Kesishish sohasida hosil bo'lgan interferension yo'llar davrini toping. Davr $1\\ \\mu\\mathrm{m}$ bo'lishi uchun burchak qancha bo'lishi kerak?",
+   "ru": "Два когерентных пучка лазера с $\\lambda=532\\ \\mathrm{nm}$ пересекаются под углом $1^\\circ$. Найдите период интерференционных полос в области пересечения. Каким должен быть угол, чтобы период был $1\\ \\mu\\mathrm{m}$?",
+   "en": "Two coherent beams from a $\\lambda=532\\ \\mathrm{nm}$ laser cross at an angle of $1^\\circ$. Find the period of the interference fringes in the crossing region. What angle gives a period of $1\\ \\mu\\mathrm{m}$?"
+  },
+  "figure": "figures/B2-L25-S17.png",
+  "solution": {
+   "uz": [
+    "Har bir dasta simmetriya o'qiga $\\alpha=0.5^\\circ$ burchakda; yo'llar davri: $$\\Lambda=\\frac{\\lambda}{2\\sin\\alpha}=\\frac{532\\ \\mathrm{nm}}{2\\sin0.5^\\circ}\\approx30.5\\ \\mu\\mathrm{m}$$",
+    "$\\Lambda=1\\ \\mu\\mathrm{m}$ uchun: $$\\sin\\alpha=\\frac{0.532}{2}=0.266\\ \\Rightarrow\\ 2\\alpha\\approx30.8^\\circ$$"
+   ],
+   "ru": [
+    "Каждый пучок под углом $\\alpha=0.5^\\circ$ к оси симметрии; период полос: $$\\Lambda=\\frac{\\lambda}{2\\sin\\alpha}=\\frac{532\\ \\mathrm{nm}}{2\\sin0.5^\\circ}\\approx30.5\\ \\mu\\mathrm{m}$$",
+    "Для $\\Lambda=1\\ \\mu\\mathrm{m}$: $$\\sin\\alpha=\\frac{0.532}{2}=0.266\\ \\Rightarrow\\ 2\\alpha\\approx30.8^\\circ$$"
+   ],
+   "en": [
+    "Each beam is at $\\alpha=0.5^\\circ$ to the symmetry axis; the fringe period: $$\\Lambda=\\frac{\\lambda}{2\\sin\\alpha}=\\frac{532\\ \\mathrm{nm}}{2\\sin0.5^\\circ}\\approx30.5\\ \\mu\\mathrm{m}$$",
+    "For $\\Lambda=1\\ \\mu\\mathrm{m}$: $$\\sin\\alpha=\\frac{0.532}{2}=0.266\\ \\Rightarrow\\ 2\\alpha\\approx30.8^\\circ$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kesishuvchi dastalar: $\\Lambda=\\frac{\\lambda}{2\\sin\\alpha}$",
+    "ru": "Пересекающиеся пучки: $\\Lambda=\\frac{\\lambda}{2\\sin\\alpha}$",
+    "en": "Crossing beams: $\\Lambda=\\frac{\\lambda}{2\\sin\\alpha}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kesishuvchi dastalar",
+   "ru": "Пересекающиеся пучки",
+   "en": "Crossing beams"
+  },
+  "answer": "\\Lambda\\approx30.5\\ \\mu\\mathrm{m};\\ 2\\alpha\\approx30.8^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "Irodov, «Problems in General Physics», 5.70-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L25-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Yung tajribasida ($d=0.4\\ \\mathrm{mm}$, $L=1.2\\ \\mathrm{m}$) bir vaqtda $600\\ \\mathrm{nm}$ va $450\\ \\mathrm{nm}$ li yorug'lik ishlatiladi. Markazdan eng yaqin qayerda ikkala to'lqinning yorug' yo'llari ustma-ust tushadi? Qayerda $600\\ \\mathrm{nm}$ ning qorong'i yo'li $450\\ \\mathrm{nm}$ ning yorug' yo'liga to'g'ri keladi?",
+   "ru": "В опыте Юнга ($d=0.4\\ \\mathrm{mm}$, $L=1.2\\ \\mathrm{m}$) одновременно используется свет $600\\ \\mathrm{nm}$ и $450\\ \\mathrm{nm}$. Где ближе всего к центру совпадают светлые полосы обеих волн? Где тёмная полоса для $600\\ \\mathrm{nm}$ приходится на светлую полосу для $450\\ \\mathrm{nm}$?",
+   "en": "In Young's experiment ($d=0.4\\ \\mathrm{mm}$, $L=1.2\\ \\mathrm{m}$) light of $600\\ \\mathrm{nm}$ and $450\\ \\mathrm{nm}$ is used simultaneously. Where, nearest the centre, do the bright fringes of both wavelengths coincide? Where does a dark fringe of $600\\ \\mathrm{nm}$ fall on a bright fringe of $450\\ \\mathrm{nm}$?"
+  },
+  "figure": "figures/B2-L25-S18.png",
+  "solution": {
+   "uz": [
+    "Yorug' yo'llar ustma-ust: $m_1\\cdot600=m_2\\cdot450$, eng kichik butun sonlar: $$m_1=3,\\ m_2=4:\\ y=\\frac{3\\cdot600\\ \\mathrm{nm}\\cdot1.2}{4\\cdot10^{-4}}=5.4\\ \\mathrm{mm}$$",
+    "Qorong'i $\\left(m+\\frac{1}{2}\\right)600=m'\\cdot450$: $$\\frac{3}{2}\\cdot600=2\\cdot450=900\\ \\mathrm{nm}:\\ y=\\frac{900\\ \\mathrm{nm}\\cdot1.2}{4\\cdot10^{-4}}=2.7\\ \\mathrm{mm}$$"
+   ],
+   "ru": [
+    "Совпадение светлых: $m_1\\cdot600=m_2\\cdot450$, наименьшие целые: $$m_1=3,\\ m_2=4:\\ y=\\frac{3\\cdot600\\ \\mathrm{nm}\\cdot1.2}{4\\cdot10^{-4}}=5.4\\ \\mathrm{mm}$$",
+    "Тёмная $\\left(m+\\frac{1}{2}\\right)600=m'\\cdot450$: $$\\frac{3}{2}\\cdot600=2\\cdot450=900\\ \\mathrm{nm}:\\ y=\\frac{900\\ \\mathrm{nm}\\cdot1.2}{4\\cdot10^{-4}}=2.7\\ \\mathrm{mm}$$"
+   ],
+   "en": [
+    "Bright fringes coincide: $m_1\\cdot600=m_2\\cdot450$, smallest integers: $$m_1=3,\\ m_2=4:\\ y=\\frac{3\\cdot600\\ \\mathrm{nm}\\cdot1.2}{4\\cdot10^{-4}}=5.4\\ \\mathrm{mm}$$",
+    "Dark $\\left(m+\\frac{1}{2}\\right)600=m'\\cdot450$: $$\\frac{3}{2}\\cdot600=2\\cdot450=900\\ \\mathrm{nm}:\\ y=\\frac{900\\ \\mathrm{nm}\\cdot1.2}{4\\cdot10^{-4}}=2.7\\ \\mathrm{mm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yo'llar ustma-ust tushishi: $m_1\\lambda_1=m_2\\lambda_2$",
+    "ru": "Совпадение полос: $m_1\\lambda_1=m_2\\lambda_2$",
+    "en": "Coincidence of fringes: $m_1\\lambda_1=m_2\\lambda_2$"
+   },
+   {
+    "uz": "Yung tajribasi: $y_m=m\\frac{\\lambda L}{d}$, $\\Delta y=\\frac{\\lambda L}{d}$",
+    "ru": "Опыт Юнга: $y_m=m\\frac{\\lambda L}{d}$, $\\Delta y=\\frac{\\lambda L}{d}$",
+    "en": "Young's experiment: $y_m=m\\frac{\\lambda L}{d}$, $\\Delta y=\\frac{\\lambda L}{d}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ikki to'lqin uzunligi",
+   "ru": "Две длины волны",
+   "en": "Two wavelengths"
+  },
+  "answer": "5.4\\ \\mathrm{mm};\\ 2.7\\ \\mathrm{mm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L25, ikki rang)"
+ }
+]
