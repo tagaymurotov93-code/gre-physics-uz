@@ -1,0 +1,804 @@
+[
+ {
+  "id": "B2-L12-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$x=0$ nuqtada $q_1=+2\\ \\mu\\mathrm{C}$, $x=0.3\\ \\mathrm{m}$ nuqtada $q_2=-4\\ \\mu\\mathrm{C}$ zaryad turibdi. Ularning o'zaro ta'sir kuchini va ular orasidagi o'rta nuqtadagi maydon kuchlanganligini (kattaligi va yo'nalishi) toping.",
+   "ru": "В точке $x=0$ находится заряд $q_1=+2\\ \\mu\\mathrm{C}$, в точке $x=0.3\\ \\mathrm{m}$ — заряд $q_2=-4\\ \\mu\\mathrm{C}$. Найдите силу их взаимодействия и напряжённость поля (величину и направление) в середине между ними.",
+   "en": "A charge $q_1=+2\\ \\mu\\mathrm{C}$ is at $x=0$ and $q_2=-4\\ \\mu\\mathrm{C}$ at $x=0.3\\ \\mathrm{m}$. Find the force between them and the electric field (magnitude and direction) at the midpoint between them."
+  },
+  "figure": "figures/B2-L12-S01.png",
+  "solution": {
+   "uz": [
+    "Kulon qonuni (har xil ishorali — tortishadi): $$F=\\frac{k|q_1q_2|}{r^2}=\\frac{9\\cdot10^9\\cdot8\\cdot10^{-12}}{0.09}=0.8\\ \\mathrm{N}$$",
+    "O'rtada ikkala maydon ham $q_2$ tomonga ($+x$) yo'nalgan — qo'shiladi: $$E=\\frac{k(|q_1|+|q_2|)}{(0.15)^2}=\\frac{9\\cdot10^9\\cdot6\\cdot10^{-6}}{0.0225}=2.4\\cdot10^6\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "Закон Кулона (разноимённые — притягиваются): $$F=\\frac{k|q_1q_2|}{r^2}=\\frac{9\\cdot10^9\\cdot8\\cdot10^{-12}}{0.09}=0.8\\ \\mathrm{N}$$",
+    "В середине оба поля направлены к $q_2$ ($+x$) — складываются: $$E=\\frac{k(|q_1|+|q_2|)}{(0.15)^2}=\\frac{9\\cdot10^9\\cdot6\\cdot10^{-6}}{0.0225}=2.4\\cdot10^6\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "Coulomb's law (unlike charges attract): $$F=\\frac{k|q_1q_2|}{r^2}=\\frac{9\\cdot10^9\\cdot8\\cdot10^{-12}}{0.09}=0.8\\ \\mathrm{N}$$",
+    "At the midpoint both fields point towards $q_2$ ($+x$) — they add: $$E=\\frac{k(|q_1|+|q_2|)}{(0.15)^2}=\\frac{9\\cdot10^9\\cdot6\\cdot10^{-6}}{0.0225}=2.4\\cdot10^6\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kulon qonuni: $F=\\frac{k|q_1q_2|}{r^2}$, $k=\\frac{1}{4\\pi\\varepsilon_0}$",
+    "ru": "Закон Кулона: $F=\\frac{k|q_1q_2|}{r^2}$, $k=\\frac{1}{4\\pi\\varepsilon_0}$",
+    "en": "Coulomb's law: $F=\\frac{k|q_1q_2|}{r^2}$, $k=\\frac{1}{4\\pi\\varepsilon_0}$"
+   },
+   {
+    "uz": "Superpozitsiya: $\\vec E=\\sum\\vec E_i$",
+    "ru": "Суперпозиция: $\\vec E=\\sum\\vec E_i$",
+    "en": "Superposition: $\\vec E=\\sum\\vec E_i$"
+   }
+  ],
+  "basis": {
+   "uz": "Kulon qonuni va superpozitsiya",
+   "ru": "Закон Кулона и суперпозиция",
+   "en": "Coulomb's law and superposition"
+  },
+  "answer": "F=0.8\\ \\mathrm{N};\\ E=2.4\\cdot10^6\\ \\mathrm{N/C}\\ (+x)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 5.27-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$x=0$ da $+4\\ \\mu\\mathrm{C}$, $x=0.6\\ \\mathrm{m}$ da $+1\\ \\mu\\mathrm{C}$ zaryad turibdi. $x$ o'qining qaysi nuqtasida maydon nolga teng?",
+   "ru": "В точке $x=0$ находится заряд $+4\\ \\mu\\mathrm{C}$, в точке $x=0.6\\ \\mathrm{m}$ — заряд $+1\\ \\mu\\mathrm{C}$. В какой точке оси $x$ поле равно нулю?",
+   "en": "A charge $+4\\ \\mu\\mathrm{C}$ is at $x=0$ and $+1\\ \\mu\\mathrm{C}$ at $x=0.6\\ \\mathrm{m}$. At what point on the $x$ axis is the field zero?"
+  },
+  "figure": "figures/B2-L12-S02.png",
+  "solution": {
+   "uz": [
+    "Bir xil ishorali — nol nuqta ular orasida, kichik zaryadga yaqin: $$\\frac{k\\cdot4}{x^2}=\\frac{k\\cdot1}{(0.6-x)^2}$$",
+    "Ildiz olamiz: $$2(0.6-x)=x\\ \\Rightarrow\\ x=0.4\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Одноимённые — точка нуля между ними, ближе к меньшему заряду: $$\\frac{k\\cdot4}{x^2}=\\frac{k\\cdot1}{(0.6-x)^2}$$",
+    "Извлекаем корень: $$2(0.6-x)=x\\ \\Rightarrow\\ x=0.4\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Like charges — the zero lies between them, closer to the smaller charge: $$\\frac{k\\cdot4}{x^2}=\\frac{k\\cdot1}{(0.6-x)^2}$$",
+    "Take the square root: $$2(0.6-x)=x\\ \\Rightarrow\\ x=0.4\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Superpozitsiya: $\\vec E=\\sum\\vec E_i$",
+    "ru": "Суперпозиция: $\\vec E=\\sum\\vec E_i$",
+    "en": "Superposition: $\\vec E=\\sum\\vec E_i$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Maydon nol nuqtasi",
+   "ru": "Точка нулевого поля",
+   "en": "Point of zero field"
+  },
+  "answer": "x=0.4\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 5.33-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Tomoni $0.1\\ \\mathrm{m}$ bo'lgan kvadratning uchta uchida $+1\\ \\mathrm{nC}$, to'rtinchisida $-1\\ \\mathrm{nC}$ zaryad turibdi. Kvadrat markazidagi maydonni toping.",
+   "ru": "В трёх вершинах квадрата со стороной $0.1\\ \\mathrm{m}$ находятся заряды $+1\\ \\mathrm{nC}$, в четвёртой — $-1\\ \\mathrm{nC}$. Найдите поле в центре квадрата.",
+   "en": "Three corners of a square of side $0.1\\ \\mathrm{m}$ carry $+1\\ \\mathrm{nC}$ and the fourth carries $-1\\ \\mathrm{nC}$. Find the field at the centre of the square."
+  },
+  "figure": "figures/B2-L12-S03.png",
+  "solution": {
+   "uz": [
+    "Markazgacha masofa $\\frac{a}{\\sqrt2}$; bitta zaryad maydoni: $$E_0=\\frac{kq}{a^2/2}=\\frac{9\\cdot10^9\\cdot10^{-9}}{0.005}=1800\\ \\mathrm{N/C}$$",
+    "Qarama-qarshi uchlardagi ikki $+q$ qisqaradi; qolgan $+q$ va $-q$ maydonlari bir tomonga ($-q$ ga): $$E=2E_0=3600\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "Расстояние до центра $\\frac{a}{\\sqrt2}$; поле одного заряда: $$E_0=\\frac{kq}{a^2/2}=\\frac{9\\cdot10^9\\cdot10^{-9}}{0.005}=1800\\ \\mathrm{N/C}$$",
+    "Два $+q$ в противоположных вершинах компенсируются; поля оставшихся $+q$ и $-q$ направлены в одну сторону (к $-q$): $$E=2E_0=3600\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "The distance to the centre is $\\frac{a}{\\sqrt2}$; one charge's field: $$E_0=\\frac{kq}{a^2/2}=\\frac{9\\cdot10^9\\cdot10^{-9}}{0.005}=1800\\ \\mathrm{N/C}$$",
+    "The two $+q$ at opposite corners cancel; the remaining $+q$ and $-q$ fields point the same way (towards $-q$): $$E=2E_0=3600\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nuqtaviy zaryad maydoni: $E=\\frac{k|q|}{r^2}$",
+    "ru": "Поле точечного заряда: $E=\\frac{k|q|}{r^2}$",
+    "en": "Point-charge field: $E=\\frac{k|q|}{r^2}$"
+   },
+   {
+    "uz": "Superpozitsiya: $\\vec E=\\sum\\vec E_i$",
+    "ru": "Суперпозиция: $\\vec E=\\sum\\vec E_i$",
+    "en": "Superposition: $\\vec E=\\sum\\vec E_i$"
+   }
+  ],
+  "basis": {
+   "uz": "Simmetriya va superpozitsiya",
+   "ru": "Симметрия и суперпозиция",
+   "en": "Symmetry and superposition"
+  },
+  "answer": "E=3600\\ \\mathrm{N/C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original (B2-L12, kvadrat)"
+ },
+ {
+  "id": "B2-L12-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.3\\ \\mathrm{m}$ bo'lgan ingichka halqa $10\\ \\mathrm{nC}$ zaryad bilan bir tekis zaryadlangan. Halqa o'qida markazdan $0.4\\ \\mathrm{m}$ masofadagi maydonni toping. O'qning qaysi nuqtasida maydon eng katta?",
+   "ru": "Тонкое кольцо радиусом $0.3\\ \\mathrm{m}$ равномерно заряжено зарядом $10\\ \\mathrm{nC}$. Найдите поле на оси кольца на расстоянии $0.4\\ \\mathrm{m}$ от центра. В какой точке оси поле наибольшее?",
+   "en": "A thin ring of radius $0.3\\ \\mathrm{m}$ carries a uniform charge of $10\\ \\mathrm{nC}$. Find the field on the ring's axis $0.4\\ \\mathrm{m}$ from the centre. At which point on the axis is the field largest?"
+  },
+  "figure": "figures/B2-L12-S04.png",
+  "solution": {
+   "uz": [
+    "Har bir $dq$ dan masofa $\\sqrt{z^2+R^2}$; ko'ndalang tashkil etuvchilar qisqaradi, o'q bo'ylabgilar $\\cos\\alpha=\\frac{z}{\\sqrt{z^2+R^2}}$ bilan qo'shiladi: $$E=\\frac{kQz}{(z^2+R^2)^{3/2}}=\\frac{90\\cdot0.4}{0.125}=288\\ \\mathrm{N/C}$$",
+    "Maksimum $\\frac{dE}{dz}=0$ dan: $$z^*=\\frac{R}{\\sqrt2}\\approx0.21\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Расстояние от каждого $dq$ $\\sqrt{z^2+R^2}$; поперечные составляющие сокращаются, осевые складываются с $\\cos\\alpha=\\frac{z}{\\sqrt{z^2+R^2}}$: $$E=\\frac{kQz}{(z^2+R^2)^{3/2}}=\\frac{90\\cdot0.4}{0.125}=288\\ \\mathrm{N/C}$$",
+    "Максимум из $\\frac{dE}{dz}=0$: $$z^*=\\frac{R}{\\sqrt2}\\approx0.21\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Each $dq$ is $\\sqrt{z^2+R^2}$ away; the transverse components cancel and the axial ones add with $\\cos\\alpha=\\frac{z}{\\sqrt{z^2+R^2}}$: $$E=\\frac{kQz}{(z^2+R^2)^{3/2}}=\\frac{90\\cdot0.4}{0.125}=288\\ \\mathrm{N/C}$$",
+    "The maximum from $\\frac{dE}{dz}=0$: $$z^*=\\frac{R}{\\sqrt2}\\approx0.21\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uzluksiz taqsimot: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$",
+    "ru": "Непрерывное распределение: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$",
+    "en": "Continuous distribution: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Halqa o'qidagi maydon",
+   "ru": "Поле на оси кольца",
+   "en": "Field on the axis of a ring"
+  },
+  "answer": "E=288\\ \\mathrm{N/C};\\ z^*\\approx0.21\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 5.45-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $0.6\\ \\mathrm{m}$ bo'lgan ingichka sterjen $\\lambda=10^{-8}\\ \\mathrm{C/m}$ zichlik bilan bir tekis zaryadlangan. Sterjen o'rtasidan unga perpendikulyar ravishda $0.4\\ \\mathrm{m}$ masofadagi maydonni toping. Cheksiz uzun chiziq uchun natija qanday bo'lardi?",
+   "ru": "Тонкий стержень длиной $0.6\\ \\mathrm{m}$ равномерно заряжен с плотностью $\\lambda=10^{-8}\\ \\mathrm{C/m}$. Найдите поле на расстоянии $0.4\\ \\mathrm{m}$ от середины стержня по перпендикуляру. Каким был бы результат для бесконечной линии?",
+   "en": "A thin rod $0.6\\ \\mathrm{m}$ long is uniformly charged with $\\lambda=10^{-8}\\ \\mathrm{C/m}$. Find the field $0.4\\ \\mathrm{m}$ from the rod's midpoint along the perpendicular. What would the result be for an infinite line?"
+  },
+  "figure": "figures/B2-L12-S05.png",
+  "solution": {
+   "uz": [
+    "Faqat perpendikulyar tashkil etuvchi qoladi: $$E=\\int_{-L/2}^{L/2}\\frac{k\\lambda d\\,dy}{(y^2+d^2)^{3/2}}=\\frac{2k\\lambda}{d}\\sin\\theta_0$$",
+    "$\\sin\\theta_0=\\frac{0.3}{0.5}=0.6$: $$E=\\frac{2\\cdot90}{0.4}\\cdot0.6=270\\ \\mathrm{N/C}$$",
+    "Cheksiz chiziq ($\\sin\\theta_0=1$): $$E=\\frac{2k\\lambda}{d}=450\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "Остаётся только перпендикулярная составляющая: $$E=\\int_{-L/2}^{L/2}\\frac{k\\lambda d\\,dy}{(y^2+d^2)^{3/2}}=\\frac{2k\\lambda}{d}\\sin\\theta_0$$",
+    "$\\sin\\theta_0=\\frac{0.3}{0.5}=0.6$: $$E=\\frac{2\\cdot90}{0.4}\\cdot0.6=270\\ \\mathrm{N/C}$$",
+    "Бесконечная линия ($\\sin\\theta_0=1$): $$E=\\frac{2k\\lambda}{d}=450\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "Only the perpendicular component survives: $$E=\\int_{-L/2}^{L/2}\\frac{k\\lambda d\\,dy}{(y^2+d^2)^{3/2}}=\\frac{2k\\lambda}{d}\\sin\\theta_0$$",
+    "$\\sin\\theta_0=\\frac{0.3}{0.5}=0.6$: $$E=\\frac{2\\cdot90}{0.4}\\cdot0.6=270\\ \\mathrm{N/C}$$",
+    "Infinite line ($\\sin\\theta_0=1$): $$E=\\frac{2k\\lambda}{d}=450\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uzluksiz taqsimot: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$",
+    "ru": "Непрерывное распределение: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$",
+    "en": "Continuous distribution: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$"
+   },
+   null,
+   {
+    "uz": "Cheksiz chiziq: $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$",
+    "ru": "Бесконечная линия: $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$",
+    "en": "Infinite line: $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$"
+   }
+  ],
+  "basis": {
+   "uz": "Chekli sterjen maydoni",
+   "ru": "Поле конечного стержня",
+   "en": "Field of a finite rod"
+  },
+  "answer": "E=270\\ \\mathrm{N/C};\\ E_\\infty=450\\ \\mathrm{N/C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 5.47-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.1\\ \\mathrm{m}$ bo'lgan disk $\\sigma=10^{-6}\\ \\mathrm{C/m^2}$ zichlik bilan zaryadlangan. Disk o'qida markazdan $0.1\\ \\mathrm{m}$ masofadagi maydonni toping va uni cheksiz tekislik maydoni bilan solishtiring.",
+   "ru": "Диск радиусом $0.1\\ \\mathrm{m}$ заряжен с плотностью $\\sigma=10^{-6}\\ \\mathrm{C/m^2}$. Найдите поле на оси диска на расстоянии $0.1\\ \\mathrm{m}$ от центра и сравните его с полем бесконечной плоскости.",
+   "en": "A disk of radius $0.1\\ \\mathrm{m}$ is charged with density $\\sigma=10^{-6}\\ \\mathrm{C/m^2}$. Find the field on the disk's axis $0.1\\ \\mathrm{m}$ from the centre and compare it with the field of an infinite plane."
+  },
+  "figure": "figures/B2-L12-S06.png",
+  "solution": {
+   "uz": [
+    "Diskni halqalarga bo'lamiz ($dq=\\sigma2\\pi r\\,dr$): $$E=\\int_0^R\\frac{kz\\sigma2\\pi r\\,dr}{(z^2+r^2)^{3/2}}=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{z}{\\sqrt{z^2+R^2}}\\right)$$",
+    "Son qiymat ($z=R$, qavs $1-\\frac{1}{\\sqrt2}\\approx0.293$): $$E\\approx5.65\\cdot10^4\\cdot0.293\\approx1.66\\cdot10^4\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "Разбиваем диск на кольца ($dq=\\sigma2\\pi r\\,dr$): $$E=\\int_0^R\\frac{kz\\sigma2\\pi r\\,dr}{(z^2+r^2)^{3/2}}=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{z}{\\sqrt{z^2+R^2}}\\right)$$",
+    "Численно ($z=R$, скобка $1-\\frac{1}{\\sqrt2}\\approx0.293$): $$E\\approx5.65\\cdot10^4\\cdot0.293\\approx1.66\\cdot10^4\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "Divide the disk into rings ($dq=\\sigma2\\pi r\\,dr$): $$E=\\int_0^R\\frac{kz\\sigma2\\pi r\\,dr}{(z^2+r^2)^{3/2}}=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{z}{\\sqrt{z^2+R^2}}\\right)$$",
+    "Numerically ($z=R$, bracket $1-\\frac{1}{\\sqrt2}\\approx0.293$): $$E\\approx5.65\\cdot10^4\\cdot0.293\\approx1.66\\cdot10^4\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uzluksiz taqsimot: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$",
+    "ru": "Непрерывное распределение: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$",
+    "en": "Continuous distribution: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$"
+   },
+   {
+    "uz": "Cheksiz tekislik: $E=\\frac{\\sigma}{2\\varepsilon_0}$",
+    "ru": "Бесконечная плоскость: $E=\\frac{\\sigma}{2\\varepsilon_0}$",
+    "en": "Infinite plane: $E=\\frac{\\sigma}{2\\varepsilon_0}$"
+   }
+  ],
+  "basis": {
+   "uz": "Disk o'qidagi maydon",
+   "ru": "Поле на оси диска",
+   "en": "Field on the axis of a disk"
+  },
+  "answer": "E\\approx1.66\\cdot10^4\\ \\mathrm{N/C};\\ \\frac{\\sigma}{2\\varepsilon_0}\\approx5.65\\cdot10^4\\ \\mathrm{N/C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 5.51-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.1\\ \\mathrm{m}$ bo'lgan yarim aylana shaklidagi ingichka sim $1\\ \\mathrm{nC}$ zaryad bilan bir tekis zaryadlangan. Aylana markazidagi maydonni toping.",
+   "ru": "Тонкая проволока в форме полуокружности радиусом $0.1\\ \\mathrm{m}$ равномерно заряжена зарядом $1\\ \\mathrm{nC}$. Найдите поле в центре окружности.",
+   "en": "A thin wire bent into a semicircle of radius $0.1\\ \\mathrm{m}$ carries a uniform charge of $1\\ \\mathrm{nC}$. Find the field at the centre of the circle."
+  },
+  "figure": "figures/B2-L12-S07.png",
+  "solution": {
+   "uz": [
+    "$dq=\\lambda R\\,d\\theta$, $\\lambda=\\frac{Q}{\\pi R}$; simmetriya o'qi bo'ylab tashkil etuvchi: $$E=\\int_0^\\pi\\frac{k\\lambda R\\,d\\theta}{R^2}\\sin\\theta=\\frac{2k\\lambda}{R}=\\frac{2kQ}{\\pi R^2}$$",
+    "Son qiymat: $$E=\\frac{2\\cdot9\\cdot10^9\\cdot10^{-9}}{\\pi\\cdot0.01}\\approx573\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "$dq=\\lambda R\\,d\\theta$, $\\lambda=\\frac{Q}{\\pi R}$; составляющая вдоль оси симметрии: $$E=\\int_0^\\pi\\frac{k\\lambda R\\,d\\theta}{R^2}\\sin\\theta=\\frac{2k\\lambda}{R}=\\frac{2kQ}{\\pi R^2}$$",
+    "Численно: $$E=\\frac{2\\cdot9\\cdot10^9\\cdot10^{-9}}{\\pi\\cdot0.01}\\approx573\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "$dq=\\lambda R\\,d\\theta$, $\\lambda=\\frac{Q}{\\pi R}$; the component along the symmetry axis: $$E=\\int_0^\\pi\\frac{k\\lambda R\\,d\\theta}{R^2}\\sin\\theta=\\frac{2k\\lambda}{R}=\\frac{2kQ}{\\pi R^2}$$",
+    "Numerically: $$E=\\frac{2\\cdot9\\cdot10^9\\cdot10^{-9}}{\\pi\\cdot0.01}\\approx573\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uzluksiz taqsimot: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$",
+    "ru": "Непрерывное распределение: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$",
+    "en": "Continuous distribution: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Yoy markazidagi maydon",
+   "ru": "Поле в центре дуги",
+   "en": "Field at the centre of an arc"
+  },
+  "answer": "E\\approx573\\ \\mathrm{N/C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 5.55-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$\\pm1\\ \\mathrm{nC}$ zaryadlar bir-biridan $2\\ \\mathrm{mm}$ masofada turibdi. Dipol momentini toping. Dipol markazidan $0.1\\ \\mathrm{m}$ masofada dipol o'qidagi va o'rta perpendikulyardagi maydonlarni toping. O'qdagi natijani aniq hisob bilan tekshiring.",
+   "ru": "Заряды $\\pm1\\ \\mathrm{nC}$ находятся на расстоянии $2\\ \\mathrm{mm}$ друг от друга. Найдите дипольный момент. Найдите поле на расстоянии $0.1\\ \\mathrm{m}$ от центра диполя на его оси и на серединном перпендикуляре. Проверьте результат на оси точным расчётом.",
+   "en": "Charges of $\\pm1\\ \\mathrm{nC}$ are $2\\ \\mathrm{mm}$ apart. Find the dipole moment. Find the field $0.1\\ \\mathrm{m}$ from the dipole's centre on its axis and on the perpendicular bisector. Check the axial result by an exact calculation."
+  },
+  "figure": "figures/B2-L12-S08.png",
+  "solution": {
+   "uz": [
+    "Dipol momenti: $$p=qd=2\\cdot10^{-12}\\ \\mathrm{C\\cdot m}$$",
+    "$r\\gg d$ — dipol yaqinlashuvi: $$E=\\frac{2kp}{r^3}=36\\ \\mathrm{N/C},\\qquad E'=\\frac{kp}{r^3}=18\\ \\mathrm{N/C}$$",
+    "Aniq hisob o'qda: $$kq\\left[\\frac{1}{(r-\\frac{d}{2})^2}-\\frac{1}{(r+\\frac{d}{2})^2}\\right]\\approx36.0\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "Дипольный момент: $$p=qd=2\\cdot10^{-12}\\ \\mathrm{C\\cdot m}$$",
+    "$r\\gg d$ — дипольное приближение: $$E=\\frac{2kp}{r^3}=36\\ \\mathrm{N/C},\\qquad E'=\\frac{kp}{r^3}=18\\ \\mathrm{N/C}$$",
+    "Точный расчёт на оси: $$kq\\left[\\frac{1}{(r-\\frac{d}{2})^2}-\\frac{1}{(r+\\frac{d}{2})^2}\\right]\\approx36.0\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "The dipole moment: $$p=qd=2\\cdot10^{-12}\\ \\mathrm{C\\cdot m}$$",
+    "$r\\gg d$ — the dipole approximation: $$E=\\frac{2kp}{r^3}=36\\ \\mathrm{N/C},\\qquad E'=\\frac{kp}{r^3}=18\\ \\mathrm{N/C}$$",
+    "The exact axial calculation: $$kq\\left[\\frac{1}{(r-\\frac{d}{2})^2}-\\frac{1}{(r+\\frac{d}{2})^2}\\right]\\approx36.0\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Dipol maydoni: $E_r=\\frac{2kp\\cos\\theta}{r^3}$, $E_\\theta=\\frac{kp\\sin\\theta}{r^3}$",
+    "ru": "Поле диполя: $E_r=\\frac{2kp\\cos\\theta}{r^3}$, $E_\\theta=\\frac{kp\\sin\\theta}{r^3}$",
+    "en": "Dipole field: $E_r=\\frac{2kp\\cos\\theta}{r^3}$, $E_\\theta=\\frac{kp\\sin\\theta}{r^3}$"
+   },
+   {
+    "uz": "Superpozitsiya: $\\vec E=\\sum\\vec E_i$",
+    "ru": "Суперпозиция: $\\vec E=\\sum\\vec E_i$",
+    "en": "Superposition: $\\vec E=\\sum\\vec E_i$"
+   }
+  ],
+  "basis": {
+   "uz": "Dipol maydoni",
+   "ru": "Поле диполя",
+   "en": "Dipole field"
+  },
+  "answer": "p=2\\cdot10^{-12}\\ \\mathrm{C\\cdot m};\\ 36\\ \\mathrm{N/C};\\ 18\\ \\mathrm{N/C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 5.40-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $0.1\\ \\mathrm{m}$ bo'lgan yengil izolyatsiyalangan sterjen uchlarida massasi $1\\ \\mathrm{g}$ dan bo'lgan sharchalar bor, ular $+1\\ \\mu\\mathrm{C}$ va $-1\\ \\mu\\mathrm{C}$ zaryadlangan. Sterjen markazi atrofida erkin aylana oladi va $10^4\\ \\mathrm{N/C}$ bir jinsli maydonda turibdi. Eng katta kuch momentini va maydon atrofidagi kichik tebranishlar davrini toping.",
+   "ru": "На концах лёгкого изолирующего стержня длиной $0.1\\ \\mathrm{m}$ закреплены шарики по $1\\ \\mathrm{g}$ с зарядами $+1\\ \\mu\\mathrm{C}$ и $-1\\ \\mu\\mathrm{C}$. Стержень может свободно вращаться вокруг центра и находится в однородном поле $10^4\\ \\mathrm{N/C}$. Найдите наибольший момент силы и период малых колебаний около направления поля.",
+   "en": "A light insulating rod $0.1\\ \\mathrm{m}$ long has $1\\ \\mathrm{g}$ balls at its ends charged $+1\\ \\mu\\mathrm{C}$ and $-1\\ \\mu\\mathrm{C}$. The rod can rotate freely about its centre in a uniform field of $10^4\\ \\mathrm{N/C}$. Find the maximum torque and the period of small oscillations about the field direction."
+  },
+  "figure": "figures/B2-L12-S09.png",
+  "solution": {
+   "uz": [
+    "Dipol momenti va eng katta moment ($\\theta=90^\\circ$): $$p=qd=10^{-7}\\ \\mathrm{C\\cdot m},\\qquad \\tau_{\\max}=pE=10^{-3}\\ \\mathrm{N\\cdot m}$$",
+    "Kichik burchakda $\\tau=-pE\\theta$, $I=2m\\left(\\frac{d}{2}\\right)^2=5\\cdot10^{-6}\\ \\mathrm{kg\\cdot m^2}$: $$\\omega=\\sqrt{\\frac{pE}{I}}=\\sqrt{200}\\approx14.1\\ \\mathrm{rad/s},\\qquad T=\\frac{2\\pi}{\\omega}\\approx0.44\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Дипольный момент и наибольший момент ($\\theta=90^\\circ$): $$p=qd=10^{-7}\\ \\mathrm{C\\cdot m},\\qquad \\tau_{\\max}=pE=10^{-3}\\ \\mathrm{N\\cdot m}$$",
+    "При малом угле $\\tau=-pE\\theta$, $I=2m\\left(\\frac{d}{2}\\right)^2=5\\cdot10^{-6}\\ \\mathrm{kg\\cdot m^2}$: $$\\omega=\\sqrt{\\frac{pE}{I}}=\\sqrt{200}\\approx14.1\\ \\mathrm{rad/s},\\qquad T=\\frac{2\\pi}{\\omega}\\approx0.44\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The dipole moment and the maximum torque ($\\theta=90^\\circ$): $$p=qd=10^{-7}\\ \\mathrm{C\\cdot m},\\qquad \\tau_{\\max}=pE=10^{-3}\\ \\mathrm{N\\cdot m}$$",
+    "At small angle $\\tau=-pE\\theta$, $I=2m\\left(\\frac{d}{2}\\right)^2=5\\cdot10^{-6}\\ \\mathrm{kg\\cdot m^2}$: $$\\omega=\\sqrt{\\frac{pE}{I}}=\\sqrt{200}\\approx14.1\\ \\mathrm{rad/s},\\qquad T=\\frac{2\\pi}{\\omega}\\approx0.44\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Maydondagi dipol: $\\vec\\tau=\\vec p\\times\\vec E$",
+    "ru": "Диполь в поле: $\\vec\\tau=\\vec p\\times\\vec E$",
+    "en": "Dipole in a field: $\\vec\\tau=\\vec p\\times\\vec E$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Bir jinsli maydondagi dipol",
+   "ru": "Диполь в однородном поле",
+   "en": "A dipole in a uniform field"
+  },
+  "answer": "\\tau_{\\max}=10^{-3}\\ \\mathrm{N\\cdot m};\\ T\\approx0.44\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original (B2-L12, dipol tebranishi)"
+ },
+ {
+  "id": "B2-L12-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$8.85\\ \\mathrm{nC}$ zaryad kub markazida turibdi. Kubning bitta yog'i orqali oqim qancha? Agar zaryad kubning bir uchiga ko'chirilsa, butun kub orqali va zaryaddan uzoqdagi har bir yoq orqali oqim qancha bo'ladi?",
+   "ru": "Заряд $8.85\\ \\mathrm{nC}$ находится в центре куба. Каков поток через одну грань куба? Если заряд перенести в вершину куба, каким будет поток через весь куб и через каждую удалённую от заряда грань?",
+   "en": "A charge of $8.85\\ \\mathrm{nC}$ sits at the centre of a cube. What is the flux through one face? If the charge is moved to a corner of the cube, what is the flux through the whole cube and through each face far from the charge?"
+  },
+  "figure": "figures/B2-L12-S10.png",
+  "solution": {
+   "uz": [
+    "To'liq oqim va simmetriya: $$\\Phi=\\frac{q}{\\varepsilon_0}=1000\\ \\mathrm{V\\cdot m},\\qquad \\Phi_1=\\frac{q}{6\\varepsilon_0}\\approx167\\ \\mathrm{V\\cdot m}$$",
+    "Uchdagi zaryad: uni $8$ ta kub o'rab oladi — har biriga sakkizdan bir; zaryadga tegib turgan uchta yoqdan oqim nol ($\\vec E$ yoqqa parallel): $$\\Phi=\\frac{q}{8\\varepsilon_0}=125\\ \\mathrm{V\\cdot m},\\qquad \\Phi_1=\\frac{q}{24\\varepsilon_0}\\approx41.7\\ \\mathrm{V\\cdot m}$$"
+   ],
+   "ru": [
+    "Полный поток и симметрия: $$\\Phi=\\frac{q}{\\varepsilon_0}=1000\\ \\mathrm{V\\cdot m},\\qquad \\Phi_1=\\frac{q}{6\\varepsilon_0}\\approx167\\ \\mathrm{V\\cdot m}$$",
+    "Заряд в вершине: его окружают $8$ кубов — каждому одна восьмая; через три грани, касающиеся заряда, поток нулевой ($\\vec E$ параллельно грани): $$\\Phi=\\frac{q}{8\\varepsilon_0}=125\\ \\mathrm{V\\cdot m},\\qquad \\Phi_1=\\frac{q}{24\\varepsilon_0}\\approx41.7\\ \\mathrm{V\\cdot m}$$"
+   ],
+   "en": [
+    "The total flux and symmetry: $$\\Phi=\\frac{q}{\\varepsilon_0}=1000\\ \\mathrm{V\\cdot m},\\qquad \\Phi_1=\\frac{q}{6\\varepsilon_0}\\approx167\\ \\mathrm{V\\cdot m}$$",
+    "A charge at a corner: $8$ cubes surround it — one eighth to each; the three faces touching the charge carry zero flux ($\\vec E$ is parallel to them): $$\\Phi=\\frac{q}{8\\varepsilon_0}=125\\ \\mathrm{V\\cdot m},\\qquad \\Phi_1=\\frac{q}{24\\varepsilon_0}\\approx41.7\\ \\mathrm{V\\cdot m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gauss teoremasi: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "ru": "Теорема Гаусса: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "en": "Gauss's law: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$"
+   },
+   {
+    "uz": "Oqim: $\\Phi=\\int\\vec E\\cdot d\\vec A$",
+    "ru": "Поток: $\\Phi=\\int\\vec E\\cdot d\\vec A$",
+    "en": "Flux: $\\Phi=\\int\\vec E\\cdot d\\vec A$"
+   }
+  ],
+  "basis": {
+   "uz": "Kub orqali oqim",
+   "ru": "Поток через куб",
+   "en": "Flux through a cube"
+  },
+  "answer": "\\Phi_1\\approx167\\ \\mathrm{V\\cdot m};\\ 125\\ \\mathrm{V\\cdot m};\\ 41.7\\ \\mathrm{V\\cdot m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 2.2 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.1\\ \\mathrm{m}$ bo'lgan dielektrik shar hajmi bo'ylab $10\\ \\mathrm{nC}$ zaryad bilan bir tekis zaryadlangan. Markazdan $0.05\\ \\mathrm{m}$, $0.1\\ \\mathrm{m}$ va $0.2\\ \\mathrm{m}$ masofadagi maydonni Gauss teoremasi bilan toping.",
+   "ru": "Диэлектрический шар радиусом $0.1\\ \\mathrm{m}$ равномерно заряжен по объёму зарядом $10\\ \\mathrm{nC}$. С помощью теоремы Гаусса найдите поле на расстояниях $0.05\\ \\mathrm{m}$, $0.1\\ \\mathrm{m}$ и $0.2\\ \\mathrm{m}$ от центра.",
+   "en": "A dielectric ball of radius $0.1\\ \\mathrm{m}$ is uniformly charged throughout its volume with $10\\ \\mathrm{nC}$. Using Gauss's law, find the field at $0.05\\ \\mathrm{m}$, $0.1\\ \\mathrm{m}$ and $0.2\\ \\mathrm{m}$ from the centre."
+  },
+  "figure": "figures/B2-L12-S11.png",
+  "solution": {
+   "uz": [
+    "Konsentrik Gauss sferasi, ichkarida $Q'=Q\\frac{r^3}{R^3}$: $$E\\cdot4\\pi r^2=\\frac{Q'}{\\varepsilon_0}\\ \\Rightarrow\\ E=\\frac{kQr}{R^3}$$",
+    "Son qiymatlar: $$E(0.05)=4500,\\quad E(0.1)=9000,\\quad E(0.2)=\\frac{kQ}{r^2}=2250\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "Концентрическая гауссова сфера, внутри $Q'=Q\\frac{r^3}{R^3}$: $$E\\cdot4\\pi r^2=\\frac{Q'}{\\varepsilon_0}\\ \\Rightarrow\\ E=\\frac{kQr}{R^3}$$",
+    "Численные значения: $$E(0.05)=4500,\\quad E(0.1)=9000,\\quad E(0.2)=\\frac{kQ}{r^2}=2250\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "A concentric Gaussian sphere; inside $Q'=Q\\frac{r^3}{R^3}$: $$E\\cdot4\\pi r^2=\\frac{Q'}{\\varepsilon_0}\\ \\Rightarrow\\ E=\\frac{kQr}{R^3}$$",
+    "Numerical values: $$E(0.05)=4500,\\quad E(0.1)=9000,\\quad E(0.2)=\\frac{kQ}{r^2}=2250\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gauss teoremasi: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "ru": "Теорема Гаусса: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "en": "Gauss's law: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$"
+   },
+   {
+    "uz": "Bir jinsli shar: $E=\\frac{kQr}{R^3}$ $(r<R)$",
+    "ru": "Однородный шар: $E=\\frac{kQr}{R^3}$ $(r<R)$",
+    "en": "Uniform ball: $E=\\frac{kQr}{R^3}$ $(r<R)$"
+   }
+  ],
+  "basis": {
+   "uz": "Bir jinsli zaryadlangan shar",
+   "ru": "Однородно заряженный шар",
+   "en": "A uniformly charged ball"
+  },
+  "answer": "4500;\\ 9000;\\ 2250\\ \\mathrm{N/C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 6.39-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Koaksial kabelning ichki o'tkazgichi (radiusi $1\\ \\mathrm{mm}$) uzunlik birligiga $+10^{-8}\\ \\mathrm{C/m}$, tashqi silindrik qobig'i (radiusi $1\\ \\mathrm{cm}$) esa $-10^{-8}\\ \\mathrm{C/m}$ zaryadga ega. O'qdan $5\\ \\mathrm{mm}$ masofadagi va kabel tashqarisidagi maydonni toping.",
+   "ru": "Внутренний проводник коаксиального кабеля (радиус $1\\ \\mathrm{mm}$) несёт заряд $+10^{-8}\\ \\mathrm{C/m}$ на единицу длины, а внешняя цилиндрическая оболочка (радиус $1\\ \\mathrm{cm}$) — $-10^{-8}\\ \\mathrm{C/m}$. Найдите поле на расстоянии $5\\ \\mathrm{mm}$ от оси и снаружи кабеля.",
+   "en": "The inner conductor of a coaxial cable (radius $1\\ \\mathrm{mm}$) carries $+10^{-8}\\ \\mathrm{C/m}$ per unit length and the outer cylindrical shell (radius $1\\ \\mathrm{cm}$) carries $-10^{-8}\\ \\mathrm{C/m}$. Find the field $5\\ \\mathrm{mm}$ from the axis and outside the cable."
+  },
+  "figure": "figures/B2-L12-S12.png",
+  "solution": {
+   "uz": [
+    "O'qdosh Gauss silindri; ichkarida faqat ichki o'tkazgich zaryadi: $$E\\cdot2\\pi rl=\\frac{\\lambda l}{\\varepsilon_0}\\ \\Rightarrow\\ E=\\frac{2k\\lambda}{r}=\\frac{180}{0.005}=3.6\\cdot10^4\\ \\mathrm{N/C}$$",
+    "Tashqarida ichki zaryad $\\lambda-\\lambda=0$: $$E=0$$"
+   ],
+   "ru": [
+    "Соосный гауссов цилиндр; внутри только заряд внутреннего проводника: $$E\\cdot2\\pi rl=\\frac{\\lambda l}{\\varepsilon_0}\\ \\Rightarrow\\ E=\\frac{2k\\lambda}{r}=\\frac{180}{0.005}=3.6\\cdot10^4\\ \\mathrm{N/C}$$",
+    "Снаружи внутренний заряд $\\lambda-\\lambda=0$: $$E=0$$"
+   ],
+   "en": [
+    "A coaxial Gaussian cylinder; only the inner conductor's charge is enclosed: $$E\\cdot2\\pi rl=\\frac{\\lambda l}{\\varepsilon_0}\\ \\Rightarrow\\ E=\\frac{2k\\lambda}{r}=\\frac{180}{0.005}=3.6\\cdot10^4\\ \\mathrm{N/C}$$",
+    "Outside the enclosed charge is $\\lambda-\\lambda=0$: $$E=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Cheksiz chiziq: $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$",
+    "ru": "Бесконечная линия: $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$",
+    "en": "Infinite line: $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$"
+   },
+   {
+    "uz": "Gauss teoremasi: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "ru": "Теорема Гаусса: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "en": "Gauss's law: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$"
+   }
+  ],
+  "basis": {
+   "uz": "Koaksial kabel",
+   "ru": "Коаксиальный кабель",
+   "en": "A coaxial cable"
+  },
+  "answer": "E=3.6\\cdot10^4\\ \\mathrm{N/C};\\ 0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 6.47-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Qalinligi $2\\ \\mathrm{cm}$ bo'lgan cheksiz plastinka $\\rho=8.85\\cdot10^{-7}\\ \\mathrm{C/m^3}$ hajmiy zichlik bilan bir tekis zaryadlangan. O'rta tekislikdan $0.5\\ \\mathrm{cm}$ masofadagi (ichkarida) va plastinka tashqarisidagi maydonni toping.",
+   "ru": "Бесконечная пластина толщиной $2\\ \\mathrm{cm}$ равномерно заряжена с объёмной плотностью $\\rho=8.85\\cdot10^{-7}\\ \\mathrm{C/m^3}$. Найдите поле на расстоянии $0.5\\ \\mathrm{cm}$ от средней плоскости (внутри) и снаружи пластины.",
+   "en": "An infinite slab $2\\ \\mathrm{cm}$ thick is uniformly charged with volume density $\\rho=8.85\\cdot10^{-7}\\ \\mathrm{C/m^3}$. Find the field $0.5\\ \\mathrm{cm}$ from the midplane (inside) and outside the slab."
+  },
+  "figure": "figures/B2-L12-S13.png",
+  "solution": {
+   "uz": [
+    "O'rta tekislikka simmetrik «pillbox», ikki asos $\\pm x$ da: $$2EA=\\frac{\\rho\\cdot2xA}{\\varepsilon_0}\\ \\Rightarrow\\ E=\\frac{\\rho x}{\\varepsilon_0}=10^5\\cdot0.005=500\\ \\mathrm{N/C}$$",
+    "Tashqarida $x$ o'rniga $a=1\\ \\mathrm{cm}$: $$E=\\frac{\\rho a}{\\varepsilon_0}=1000\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "Симметричная относительно средней плоскости «таблетка», основания при $\\pm x$: $$2EA=\\frac{\\rho\\cdot2xA}{\\varepsilon_0}\\ \\Rightarrow\\ E=\\frac{\\rho x}{\\varepsilon_0}=10^5\\cdot0.005=500\\ \\mathrm{N/C}$$",
+    "Снаружи вместо $x$ — $a=1\\ \\mathrm{cm}$: $$E=\\frac{\\rho a}{\\varepsilon_0}=1000\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "A “pillbox” symmetric about the midplane, with ends at $\\pm x$: $$2EA=\\frac{\\rho\\cdot2xA}{\\varepsilon_0}\\ \\Rightarrow\\ E=\\frac{\\rho x}{\\varepsilon_0}=10^5\\cdot0.005=500\\ \\mathrm{N/C}$$",
+    "Outside, $a=1\\ \\mathrm{cm}$ replaces $x$: $$E=\\frac{\\rho a}{\\varepsilon_0}=1000\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gauss teoremasi: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "ru": "Теорема Гаусса: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "en": "Gauss's law: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Zaryadlangan qatlam",
+   "ru": "Заряженный слой",
+   "en": "A charged slab"
+  },
+  "answer": "500\\ \\mathrm{N/C};\\ 1000\\ \\mathrm{N/C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B2-L12, zaryadlangan qatlam)"
+ },
+ {
+  "id": "B2-L12-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki parallel cheksiz tekislik $\\sigma_1=+4\\ \\mathrm{nC/m^2}$ va $\\sigma_2=-2\\ \\mathrm{nC/m^2}$ zichlik bilan zaryadlangan. Tekisliklar orasidagi va tashqaridagi maydonlarni toping.",
+   "ru": "Две параллельные бесконечные плоскости заряжены с плотностями $\\sigma_1=+4\\ \\mathrm{nC/m^2}$ и $\\sigma_2=-2\\ \\mathrm{nC/m^2}$. Найдите поле между плоскостями и снаружи.",
+   "en": "Two parallel infinite planes carry surface densities $\\sigma_1=+4\\ \\mathrm{nC/m^2}$ and $\\sigma_2=-2\\ \\mathrm{nC/m^2}$. Find the field between the planes and outside."
+  },
+  "figure": "figures/B2-L12-S14.png",
+  "solution": {
+   "uz": [
+    "Har bir tekislik $\\frac{|\\sigma|}{2\\varepsilon_0}$ beradi; orada ikkalasi bir tomonga ($1$ dan $2$ ga): $$E=\\frac{|\\sigma_1|+|\\sigma_2|}{2\\varepsilon_0}=\\frac{6\\cdot10^{-9}}{1.77\\cdot10^{-11}}\\approx339\\ \\mathrm{N/C}$$",
+    "Tashqarida maydonlar qarama-qarshi: $$E=\\frac{|\\sigma_1+\\sigma_2|}{2\\varepsilon_0}\\approx113\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "Каждая плоскость даёт $\\frac{|\\sigma|}{2\\varepsilon_0}$; между ними оба поля направлены в одну сторону (от $1$ к $2$): $$E=\\frac{|\\sigma_1|+|\\sigma_2|}{2\\varepsilon_0}=\\frac{6\\cdot10^{-9}}{1.77\\cdot10^{-11}}\\approx339\\ \\mathrm{N/C}$$",
+    "Снаружи поля противоположны: $$E=\\frac{|\\sigma_1+\\sigma_2|}{2\\varepsilon_0}\\approx113\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "Each plane gives $\\frac{|\\sigma|}{2\\varepsilon_0}$; between them both fields point the same way (from $1$ to $2$): $$E=\\frac{|\\sigma_1|+|\\sigma_2|}{2\\varepsilon_0}=\\frac{6\\cdot10^{-9}}{1.77\\cdot10^{-11}}\\approx339\\ \\mathrm{N/C}$$",
+    "Outside the fields are opposite: $$E=\\frac{|\\sigma_1+\\sigma_2|}{2\\varepsilon_0}\\approx113\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Cheksiz tekislik: $E=\\frac{\\sigma}{2\\varepsilon_0}$",
+    "ru": "Бесконечная плоскость: $E=\\frac{\\sigma}{2\\varepsilon_0}$",
+    "en": "Infinite plane: $E=\\frac{\\sigma}{2\\varepsilon_0}$"
+   },
+   {
+    "uz": "Superpozitsiya: $\\vec E=\\sum\\vec E_i$",
+    "ru": "Суперпозиция: $\\vec E=\\sum\\vec E_i$",
+    "en": "Superposition: $\\vec E=\\sum\\vec E_i$"
+   }
+  ],
+  "basis": {
+   "uz": "Ikki tekislik superpozitsiyasi",
+   "ru": "Суперпозиция двух плоскостей",
+   "en": "Superposition of two planes"
+  },
+  "answer": "339\\ \\mathrm{N/C};\\ 113\\ \\mathrm{N/C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 6.53-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radiusi $0.2\\ \\mathrm{m}$ bo'lgan neytral metall sharning ichida markazdan siljigan sferik bo'shliq bor; bo'shliqda (uning markazida emas) $5\\ \\mathrm{nC}$ nuqtaviy zaryad turibdi. Bo'shliq devori va shar tashqi sirtidagi zaryadlarni, tashqi sirt zichligini va markazdan $0.5\\ \\mathrm{m}$ masofadagi maydonni toping.",
+   "ru": "Внутри нейтрального металлического шара радиусом $0.2\\ \\mathrm{m}$ есть смещённая от центра сферическая полость; в полости (не в её центре) находится точечный заряд $5\\ \\mathrm{nC}$. Найдите заряды на стенке полости и на внешней поверхности шара, плотность на внешней поверхности и поле на расстоянии $0.5\\ \\mathrm{m}$ от центра.",
+   "en": "A neutral metal sphere of radius $0.2\\ \\mathrm{m}$ contains an off-centre spherical cavity; a point charge of $5\\ \\mathrm{nC}$ sits in the cavity (not at its centre). Find the charges on the cavity wall and on the outer surface, the outer surface density and the field $0.5\\ \\mathrm{m}$ from the centre."
+  },
+  "figure": "figures/B2-L12-S15.png",
+  "solution": {
+   "uz": [
+    "Gauss sirti metall ichida ($E=0$, oqim nol): $$q+q_1=0\\ \\Rightarrow\\ q_1=-5\\ \\mathrm{nC},\\qquad q_2=+5\\ \\mathrm{nC}$$",
+    "Tashqi sirt bo'shliq maydonidan to'liq ajralgan — zaryad bir tekis taqsimlanadi: $$\\sigma=\\frac{q}{4\\pi R^2}\\approx9.95\\cdot10^{-9}\\ \\mathrm{C/m^2}$$",
+    "Tashqarida — nuqtaviy zaryad kabi (zaryad qayerda turishidan qat'i nazar): $$E=\\frac{kq}{r^2}=\\frac{45}{0.25}=180\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "Гауссова поверхность в металле ($E=0$, поток нулевой): $$q+q_1=0\\ \\Rightarrow\\ q_1=-5\\ \\mathrm{nC},\\qquad q_2=+5\\ \\mathrm{nC}$$",
+    "Внешняя поверхность полностью отделена от поля полости — заряд распределяется равномерно: $$\\sigma=\\frac{q}{4\\pi R^2}\\approx9.95\\cdot10^{-9}\\ \\mathrm{C/m^2}$$",
+    "Снаружи — как точечный заряд (независимо от положения заряда): $$E=\\frac{kq}{r^2}=\\frac{45}{0.25}=180\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "A Gaussian surface inside the metal ($E=0$, zero flux): $$q+q_1=0\\ \\Rightarrow\\ q_1=-5\\ \\mathrm{nC},\\qquad q_2=+5\\ \\mathrm{nC}$$",
+    "The outer surface is completely isolated from the cavity's field — the charge spreads uniformly: $$\\sigma=\\frac{q}{4\\pi R^2}\\approx9.95\\cdot10^{-9}\\ \\mathrm{C/m^2}$$",
+    "Outside — like a point charge (wherever the charge sits): $$E=\\frac{kq}{r^2}=\\frac{45}{0.25}=180\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "O'tkazgich: ichkarida $E=0$, sirtda $E=\\frac{\\sigma}{\\varepsilon_0}$",
+    "ru": "Проводник: внутри $E=0$, у поверхности $E=\\frac{\\sigma}{\\varepsilon_0}$",
+    "en": "Conductor: $E=0$ inside, $E=\\frac{\\sigma}{\\varepsilon_0}$ at the surface"
+   },
+   null,
+   {
+    "uz": "Gauss teoremasi: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "ru": "Теорема Гаусса: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "en": "Gauss's law: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$"
+   }
+  ],
+  "basis": {
+   "uz": "Bo'shliqli o'tkazgich",
+   "ru": "Проводник с полостью",
+   "en": "A conductor with a cavity"
+  },
+  "answer": "-5\\ \\mathrm{nC};\\ +5\\ \\mathrm{nC};\\ \\sigma\\approx9.95\\cdot10^{-9}\\ \\mathrm{C/m^2};\\ E=180\\ \\mathrm{N/C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 2.2 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S16",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.1\\ \\mathrm{m}$ bo'lgan metall shar $1\\ \\mu\\mathrm{C}$ zaryadga ega. Sirt zaryad zichligini, sirt yonidagi maydonni va sirtga ta'sir qiluvchi elektrostatik bosimni toping. Havo teshilmaydimi ($3\\cdot10^6\\ \\mathrm{V/m}$)?",
+   "ru": "Металлический шар радиусом $0.1\\ \\mathrm{m}$ имеет заряд $1\\ \\mu\\mathrm{C}$. Найдите поверхностную плотность заряда, поле у поверхности и электростатическое давление на поверхность. Не пробьётся ли воздух ($3\\cdot10^6\\ \\mathrm{V/m}$)?",
+   "en": "A metal sphere of radius $0.1\\ \\mathrm{m}$ carries a charge of $1\\ \\mu\\mathrm{C}$. Find the surface charge density, the field just outside the surface and the electrostatic pressure on the surface. Will the air break down ($3\\cdot10^6\\ \\mathrm{V/m}$)?"
+  },
+  "figure": "figures/B2-L12-S16.png",
+  "solution": {
+   "uz": [
+    "Sirt zichligi va maydon: $$\\sigma=\\frac{Q}{4\\pi R^2}\\approx7.96\\cdot10^{-6}\\ \\mathrm{C/m^2},\\qquad E=\\frac{\\sigma}{\\varepsilon_0}\\approx9\\cdot10^5\\ \\mathrm{V/m}$$",
+    "Bosim; $E$ teshilish chegarasidan $\\approx3$ marta kichik — teshilmaydi: $$p=\\frac{\\sigma^2}{2\\varepsilon_0}\\approx3.6\\ \\mathrm{Pa}$$"
+   ],
+   "ru": [
+    "Поверхностная плотность и поле: $$\\sigma=\\frac{Q}{4\\pi R^2}\\approx7.96\\cdot10^{-6}\\ \\mathrm{C/m^2},\\qquad E=\\frac{\\sigma}{\\varepsilon_0}\\approx9\\cdot10^5\\ \\mathrm{V/m}$$",
+    "Давление; $E$ в $\\approx3$ раза меньше порога пробоя — пробоя нет: $$p=\\frac{\\sigma^2}{2\\varepsilon_0}\\approx3.6\\ \\mathrm{Pa}$$"
+   ],
+   "en": [
+    "The surface density and field: $$\\sigma=\\frac{Q}{4\\pi R^2}\\approx7.96\\cdot10^{-6}\\ \\mathrm{C/m^2},\\qquad E=\\frac{\\sigma}{\\varepsilon_0}\\approx9\\cdot10^5\\ \\mathrm{V/m}$$",
+    "The pressure; $E$ is $\\approx3$ times below breakdown — no breakdown: $$p=\\frac{\\sigma^2}{2\\varepsilon_0}\\approx3.6\\ \\mathrm{Pa}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "O'tkazgich: ichkarida $E=0$, sirtda $E=\\frac{\\sigma}{\\varepsilon_0}$",
+    "ru": "Проводник: внутри $E=0$, у поверхности $E=\\frac{\\sigma}{\\varepsilon_0}$",
+    "en": "Conductor: $E=0$ inside, $E=\\frac{\\sigma}{\\varepsilon_0}$ at the surface"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "O'tkazgich sirtidagi maydon va bosim",
+   "ru": "Поле и давление на поверхности проводника",
+   "en": "Field and pressure at a conductor's surface"
+  },
+  "answer": "\\sigma\\approx7.96\\ \\mu\\mathrm{C/m^2};\\ E\\approx9\\cdot10^5\\ \\mathrm{V/m};\\ p\\approx3.6\\ \\mathrm{Pa}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 6.61-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radiusi $0.1\\ \\mathrm{m}$ bo'lgan shar $\\rho=\\rho_0\\frac{r}{R}$ zichlik bilan zaryadlangan, $\\rho_0=3.54\\cdot10^{-7}\\ \\mathrm{C/m^3}$ ($\\frac{\\rho_0}{4\\varepsilon_0}=10^4\\ \\mathrm{V/m^2}$). Shar ichidagi maydonni, to'liq zaryadni va $r=0.05\\ \\mathrm{m}$, $r=R$ dagi maydonlarni toping.",
+   "ru": "Шар радиусом $0.1\\ \\mathrm{m}$ заряжен с плотностью $\\rho=\\rho_0\\frac{r}{R}$, $\\rho_0=3.54\\cdot10^{-7}\\ \\mathrm{C/m^3}$ ($\\frac{\\rho_0}{4\\varepsilon_0}=10^4\\ \\mathrm{V/m^2}$). Найдите поле внутри шара, полный заряд и поле при $r=0.05\\ \\mathrm{m}$ и $r=R$.",
+   "en": "A ball of radius $0.1\\ \\mathrm{m}$ is charged with density $\\rho=\\rho_0\\frac{r}{R}$, $\\rho_0=3.54\\cdot10^{-7}\\ \\mathrm{C/m^3}$ ($\\frac{\\rho_0}{4\\varepsilon_0}=10^4\\ \\mathrm{V/m^2}$). Find the field inside the ball, the total charge and the field at $r=0.05\\ \\mathrm{m}$ and $r=R$."
+  },
+  "figure": "figures/B2-L12-S17.png",
+  "solution": {
+   "uz": [
+    "Ichki zaryad integral bilan: $$Q'(r)=\\int_0^r\\rho_0\\frac{s}{R}4\\pi s^2ds=\\frac{\\pi\\rho_0r^4}{R}$$",
+    "Gauss teoremasi: $$E=\\frac{Q'}{4\\pi\\varepsilon_0r^2}=\\frac{\\rho_0r^2}{4\\varepsilon_0R},\\qquad Q=\\pi\\rho_0R^3\\approx1.1\\cdot10^{-9}\\ \\mathrm{C}$$",
+    "Son qiymatlar (tekshiruv: $\\frac{kQ}{R^2}\\approx1000$): $$E(0.05)=10^4\\cdot\\frac{0.0025}{0.1}=250\\ \\mathrm{N/C},\\qquad E(R)=1000\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "Внутренний заряд интегрированием: $$Q'(r)=\\int_0^r\\rho_0\\frac{s}{R}4\\pi s^2ds=\\frac{\\pi\\rho_0r^4}{R}$$",
+    "Теорема Гаусса: $$E=\\frac{Q'}{4\\pi\\varepsilon_0r^2}=\\frac{\\rho_0r^2}{4\\varepsilon_0R},\\qquad Q=\\pi\\rho_0R^3\\approx1.1\\cdot10^{-9}\\ \\mathrm{C}$$",
+    "Численные значения (проверка: $\\frac{kQ}{R^2}\\approx1000$): $$E(0.05)=10^4\\cdot\\frac{0.0025}{0.1}=250\\ \\mathrm{N/C},\\qquad E(R)=1000\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "The enclosed charge by integration: $$Q'(r)=\\int_0^r\\rho_0\\frac{s}{R}4\\pi s^2ds=\\frac{\\pi\\rho_0r^4}{R}$$",
+    "Gauss's law: $$E=\\frac{Q'}{4\\pi\\varepsilon_0r^2}=\\frac{\\rho_0r^2}{4\\varepsilon_0R},\\qquad Q=\\pi\\rho_0R^3\\approx1.1\\cdot10^{-9}\\ \\mathrm{C}$$",
+    "Numerical values (check: $\\frac{kQ}{R^2}\\approx1000$): $$E(0.05)=10^4\\cdot\\frac{0.0025}{0.1}=250\\ \\mathrm{N/C},\\qquad E(R)=1000\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Gauss teoremasi: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "ru": "Теорема Гаусса: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "en": "Gauss's law: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Bir jinsli bo'lmagan shar",
+   "ru": "Неоднородный шар",
+   "en": "A non-uniform ball"
+  },
+  "answer": "E=\\frac{\\rho_0r^2}{4\\varepsilon_0R};\\ Q\\approx1.1\\ \\mathrm{nC};\\ 250;\\ 1000\\ \\mathrm{N/C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 6.43-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L12-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Sferik simmetrik taqsimot ichida maydon $E=\\beta r^3$, $\\beta=10^6\\ \\mathrm{V/m^4}$. Zaryad zichligi $\\rho(r)$ ni toping va $r=0.1\\ \\mathrm{m}$ da hisoblang. Radiusi $0.1\\ \\mathrm{m}$ bo'lgan sfera ichidagi zaryad qancha?",
+   "ru": "Внутри сферически симметричного распределения поле $E=\\beta r^3$, $\\beta=10^6\\ \\mathrm{V/m^4}$. Найдите плотность заряда $\\rho(r)$ и вычислите её при $r=0.1\\ \\mathrm{m}$. Каков заряд внутри сферы радиусом $0.1\\ \\mathrm{m}$?",
+   "en": "Inside a spherically symmetric distribution the field is $E=\\beta r^3$, $\\beta=10^6\\ \\mathrm{V/m^4}$. Find the charge density $\\rho(r)$ and evaluate it at $r=0.1\\ \\mathrm{m}$. What is the charge inside a sphere of radius $0.1\\ \\mathrm{m}$?"
+  },
+  "figure": "figures/B2-L12-S18.png",
+  "solution": {
+   "uz": [
+    "Divergensiya sferik koordinatalarda: $$\\rho=\\frac{\\varepsilon_0}{r^2}\\frac{d}{dr}(r^2\\cdot\\beta r^3)=5\\varepsilon_0\\beta r^2$$",
+    "Son qiymat: $$\\rho(0.1)=5\\cdot8.85\\cdot10^{-12}\\cdot10^6\\cdot0.01\\approx4.4\\cdot10^{-7}\\ \\mathrm{C/m^3}$$",
+    "Ichki zaryad — Gauss teoremasidan, integralsiz: $$Q'=4\\pi\\varepsilon_0r^2E=4\\pi\\varepsilon_0\\beta r^5\\approx1.1\\cdot10^{-9}\\ \\mathrm{C}$$"
+   ],
+   "ru": [
+    "Дивергенция в сферических координатах: $$\\rho=\\frac{\\varepsilon_0}{r^2}\\frac{d}{dr}(r^2\\cdot\\beta r^3)=5\\varepsilon_0\\beta r^2$$",
+    "Численно: $$\\rho(0.1)=5\\cdot8.85\\cdot10^{-12}\\cdot10^6\\cdot0.01\\approx4.4\\cdot10^{-7}\\ \\mathrm{C/m^3}$$",
+    "Внутренний заряд — из теоремы Гаусса, без интегрирования: $$Q'=4\\pi\\varepsilon_0r^2E=4\\pi\\varepsilon_0\\beta r^5\\approx1.1\\cdot10^{-9}\\ \\mathrm{C}$$"
+   ],
+   "en": [
+    "The divergence in spherical coordinates: $$\\rho=\\frac{\\varepsilon_0}{r^2}\\frac{d}{dr}(r^2\\cdot\\beta r^3)=5\\varepsilon_0\\beta r^2$$",
+    "Numerically: $$\\rho(0.1)=5\\cdot8.85\\cdot10^{-12}\\cdot10^6\\cdot0.01\\approx4.4\\cdot10^{-7}\\ \\mathrm{C/m^3}$$",
+    "The enclosed charge — from Gauss's law, without integration: $$Q'=4\\pi\\varepsilon_0r^2E=4\\pi\\varepsilon_0\\beta r^5\\approx1.1\\cdot10^{-9}\\ \\mathrm{C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Differensial ko'rinish: $\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}$",
+    "ru": "Дифференциальная форма: $\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}$",
+    "en": "Differential form: $\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}$"
+   },
+   null,
+   {
+    "uz": "Gauss teoremasi: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "ru": "Теорема Гаусса: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$",
+    "en": "Gauss's law: $\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}$"
+   }
+  ],
+  "basis": {
+   "uz": "Maydondan zaryad zichligini topish",
+   "ru": "Плотность заряда по полю",
+   "en": "Charge density from the field"
+  },
+  "answer": "\\rho=5\\varepsilon_0\\beta r^2\\approx4.4\\cdot10^{-7}\\ \\mathrm{C/m^3};\\ Q'\\approx1.1\\ \\mathrm{nC}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L12, maydondan zaryad)"
+ }
+]

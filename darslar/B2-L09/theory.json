@@ -1,0 +1,573 @@
+[
+ {
+  "t": "h1",
+  "uz": "Lagranj mexanikasi (Lagrangian mechanics)",
+  "ru": "Лагранжева механика",
+  "en": "Lagrangian mechanics"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz sistemaning erkinlik darajalarini sanab, qulay umumlashgan koordinatalarni tanlaysiz; kinetik va potensial energiyadan Lagranj funksiyasini tuzasiz va Eyler–Lagranj tenglamalaridan harakat tenglamalarini olasiz; eng kichik ta'sir prinsipini tushuntirasiz; siklik koordinatalar va Noter teoremasi yordamida saqlanadigan kattaliklarni topasiz; energiya funksiyasi qachon to'liq energiyaga teng bo'lishini aniqlaysiz; kichik tebranishlar chastotalarini va bog'lanish kuchlarini Lagranj usulida hisoblaysiz.",
+  "ru": "**Цель.** После урока вы будете подсчитывать степени свободы системы и выбирать удобные обобщённые координаты; составлять функцию Лагранжа из кинетической и потенциальной энергии и получать уравнения движения из уравнений Эйлера–Лагранжа; объяснять принцип наименьшего действия; находить сохраняющиеся величины с помощью циклических координат и теоремы Нётер; определять, когда функция энергии равна полной энергии; вычислять частоты малых колебаний и силы связи методом Лагранжа.",
+  "en": "**Goal.** After this lesson you will count a system's degrees of freedom and choose convenient generalized coordinates; build the Lagrangian from the kinetic and potential energies and obtain the equations of motion from the Euler–Lagrange equations; explain the principle of least action; find conserved quantities using cyclic coordinates and Noether's theorem; determine when the energy function equals the total energy; and compute small-oscillation frequencies and constraint forces by the Lagrangian method."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L02 da harakat tenglamalarini Nyuton qonunlari bilan — har bir jismga ta'sir qiluvchi kuchlarni chizib — tuzdik. Bog'lanishlar ko'p bo'lsa (ip, sterjen, sirt, aylanuvchi sim), bu usul og'irlashadi: noma'lum reaksiya kuchlari ko'payadi. Lagranj usulida faqat ikkita skalyar — kinetik va potensial energiya — yoziladi, bog'lanish kuchlari esa umuman kirmaydi. GRE da Lagranj funksiyasini tuzish, undan harakat tenglamasini olish va saqlanadigan kattalikni topish odatiy savollar.",
+  "ru": "В B2-L02 мы составляли уравнения движения по законам Ньютона — рисуя силы, действующие на каждое тело. Если связей много (нить, стержень, поверхность, вращающаяся проволока), этот метод становится тяжёлым: растёт число неизвестных сил реакции. В методе Лагранжа записываются лишь два скаляра — кинетическая и потенциальная энергии, а силы связи вообще не входят. В GRE типичные вопросы — составить функцию Лагранжа, получить из неё уравнение движения и найти сохраняющуюся величину.",
+  "en": "In B2-L02 we set up equations of motion with Newton's laws — drawing the forces on each body. With many constraints (a string, a rod, a surface, a rotating wire) this becomes heavy: the number of unknown reaction forces grows. In the Lagrangian method only two scalars are written — the kinetic and potential energies — and the constraint forces do not enter at all. Typical GRE questions ask you to write the Lagrangian, derive the equation of motion from it and find a conserved quantity."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Bog'lanishlar, erkinlik darajalari, umumlashgan koordinatalar",
+  "ru": "1. Связи, степени свободы, обобщённые координаты",
+  "en": "1. Constraints, degrees of freedom, generalized coordinates"
+ },
+ {
+  "t": "li",
+  "uz": "**Bog'lanishlar.** Bog'lanish (constraint) — jismlar holatiga qo'yilgan cheklov: mayatnik ipi $x^2+y^2=l^2$, sirt bo'ylab harakat, sirpanmasdan dumalash. Koordinatalar orasidagi tenglik ko'rinishidagi bog'lanish golonom (holonomic) deyiladi; u vaqtga bog'liq bo'lishi ham mumkin (masalan, aylanuvchi sim). $N$ ta zarra va $k$ ta golonom bog'lanishli sistemaning erkinlik darajalari (degrees of freedom) soni $s=3N-k$.",
+  "ru": "**Связи.** Связь (constraint) — ограничение, наложенное на положение тел: нить маятника $x^2+y^2=l^2$, движение по поверхности, качение без проскальзывания. Связь в виде равенства между координатами называется голономной (holonomic); она может зависеть и от времени (например, вращающаяся проволока). Число степеней свободы (degrees of freedom) системы из $N$ частиц с $k$ голономными связями равно $s=3N-k$.",
+  "en": "**Constraints.** A constraint is a restriction on the positions of bodies: a pendulum string $x^2+y^2=l^2$, motion along a surface, rolling without slipping. A constraint expressed as an equation among coordinates is called holonomic; it may also depend on time (for example, a rotating wire). A system of $N$ particles with $k$ holonomic constraints has $s=3N-k$ degrees of freedom."
+ },
+ {
+  "t": "m",
+  "m": "s=3N-k,\\qquad x^2+y^2=l^2\\ \\Rightarrow\\ x=l\\sin\\theta,\\quad y=-l\\cos\\theta"
+ },
+ {
+  "t": "li",
+  "uz": "**Umumlashgan koordinatalar.** $s$ ta mustaqil kattalik $q_1,\\dots,q_s$ — umumlashgan koordinatalar (generalized coordinates) — sistema holatini to'liq aniqlaydi va bog'lanishlarni avtomatik bajaradi. Ular uzunlik bo'lishi shart emas: burchak, yoy uzunligi, ikki jism orasidagi masofa. Yaxshi tanlov — bog'lanishni «ichiga oladigan» va simmetriyani ko'rsatadigan koordinatalar ([[F01]]). Mayatnik uchun $\\theta$, Atvud mashinasi uchun bitta $x$, tekislikdagi qo'sh mayatnik uchun $\\theta_1,\\ \\theta_2$.",
+  "ru": "**Обобщённые координаты.** $s$ независимых величин $q_1,\\dots,q_s$ — обобщённые координаты (generalized coordinates) — полностью задают состояние системы и автоматически удовлетворяют связям. Они не обязаны быть длинами: угол, длина дуги, расстояние между двумя телами. Хороший выбор — координаты, которые «впитывают» связи и выявляют симметрию ([[F01]]). Для маятника — $\\theta$, для машины Атвуда — одна $x$, для плоского двойного маятника — $\\theta_1,\\ \\theta_2$.",
+  "en": "**Generalized coordinates.** $s$ independent quantities $q_1,\\dots,q_s$ — the generalized coordinates — fully specify the state of the system and satisfy the constraints automatically. They need not be lengths: an angle, an arc length, the distance between two bodies. A good choice is coordinates that “absorb” the constraints and reveal the symmetry ([[F01]]). For a pendulum $\\theta$, for an Atwood machine a single $x$, for a planar double pendulum $\\theta_1,\\ \\theta_2$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L09-F01.png",
+   "ru": "figures/B2-L09-F01-ru.png",
+   "en": "figures/B2-L09-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Kinetik energiyani yozish.** Avval Dekart koordinatalarini $q$ orqali ifodalaymiz, keyin hosila olamiz: masalan, mayatnik uchun $\\dot x=l\\cos\\theta\\,\\dot\\theta$, $\\dot y=l\\sin\\theta\\,\\dot\\theta$, demak $T=\\frac{1}{2}ml^2\\dot\\theta^2$. Qutb koordinatalarida $T=\\frac{1}{2}m(\\dot r^2+r^2\\dot\\varphi^2)$, sferik koordinatalarda $T=\\frac{1}{2}m(\\dot r^2+r^2\\dot\\theta^2+r^2\\sin^2\\theta\\,\\dot\\varphi^2)$. Qattiq jism uchun $T=\\frac{1}{2}Mv_C^2+\\frac{1}{2}I_C\\omega^2$ (Kyonig teoremasi).",
+  "ru": "**Запись кинетической энергии.** Сначала выражаем декартовы координаты через $q$, затем дифференцируем: например, для маятника $\\dot x=l\\cos\\theta\\,\\dot\\theta$, $\\dot y=l\\sin\\theta\\,\\dot\\theta$, значит $T=\\frac{1}{2}ml^2\\dot\\theta^2$. В полярных координатах $T=\\frac{1}{2}m(\\dot r^2+r^2\\dot\\varphi^2)$, в сферических $T=\\frac{1}{2}m(\\dot r^2+r^2\\dot\\theta^2+r^2\\sin^2\\theta\\,\\dot\\varphi^2)$. Для твёрдого тела $T=\\frac{1}{2}Mv_C^2+\\frac{1}{2}I_C\\omega^2$ (теорема Кёнига).",
+  "en": "**Writing the kinetic energy.** First express the Cartesian coordinates through $q$, then differentiate: for a pendulum $\\dot x=l\\cos\\theta\\,\\dot\\theta$, $\\dot y=l\\sin\\theta\\,\\dot\\theta$, so $T=\\frac{1}{2}ml^2\\dot\\theta^2$. In polar coordinates $T=\\frac{1}{2}m(\\dot r^2+r^2\\dot\\varphi^2)$, in spherical ones $T=\\frac{1}{2}m(\\dot r^2+r^2\\dot\\theta^2+r^2\\sin^2\\theta\\,\\dot\\varphi^2)$. For a rigid body $T=\\frac{1}{2}Mv_C^2+\\frac{1}{2}I_C\\omega^2$ (König's theorem)."
+ },
+ {
+  "t": "m",
+  "m": "T=\\frac{m}{2}(\\dot r^2+r^2\\dot\\varphi^2),\\qquad T=\\frac{m}{2}(\\dot r^2+r^2\\dot\\theta^2+r^2\\sin^2\\theta\\,\\dot\\varphi^2)"
+ },
+ {
+  "t": "h2",
+  "uz": "2. Lagranj funksiyasi va Eyler–Lagranj tenglamalari",
+  "ru": "2. Функция Лагранжа и уравнения Эйлера–Лагранжа",
+  "en": "2. The Lagrangian and the Euler–Lagrange equations"
+ },
+ {
+  "t": "li",
+  "uz": "**Lagranj funksiyasi.** Potensial kuchlar maydonidagi sistema uchun Lagranj funksiyasi (Lagrangian) $L(q,\\dot q,t)=T-U$ — kinetik va potensial energiyalar ayirmasi (yig'indisi emas!). Har bir umumlashgan koordinata uchun Eyler–Lagranj tenglamasi (Euler–Lagrange equation) yoziladi. $s$ ta erkinlik darajasi — $s$ ta ikkinchi tartibli tenglama.",
+  "ru": "**Функция Лагранжа.** Для системы в поле потенциальных сил функция Лагранжа (Lagrangian) $L(q,\\dot q,t)=T-U$ — разность (а не сумма!) кинетической и потенциальной энергий. Для каждой обобщённой координаты записывается уравнение Эйлера–Лагранжа (Euler–Lagrange equation). $s$ степеней свободы — $s$ уравнений второго порядка.",
+  "en": "**The Lagrangian.** For a system in a field of potential forces the Lagrangian is $L(q,\\dot q,t)=T-U$ — the difference (not the sum!) of the kinetic and potential energies. One Euler–Lagrange equation is written for each generalized coordinate. $s$ degrees of freedom give $s$ second-order equations."
+ },
+ {
+  "t": "m",
+  "m": "L=T-U,\\qquad \\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q_i}-\\frac{\\partial L}{\\partial q_i}=0,\\qquad i=1,\\dots,s"
+ },
+ {
+  "t": "li",
+  "uz": "**Nyuton qonuni bilan bog'lanish.** Bitta zarra uchun Dekart koordinatalarida $\\frac{\\partial L}{\\partial\\dot x}=m\\dot x$, $\\frac{\\partial L}{\\partial x}=-\\frac{\\partial U}{\\partial x}$, va tenglama $m\\ddot x=F_x$ ga aylanadi. Umumiy holda $\\frac{\\partial L}{\\partial\\dot q}$ — umumlashgan impuls, $\\frac{\\partial L}{\\partial q}$ — umumlashgan kuch. Bog'lanish kuchlari ideal bog'lanishlarda virtual siljishlarda ish bajarmaydi (Dalamber prinsipi), shuning uchun tenglamalarga kirmaydi.",
+  "ru": "**Связь с законом Ньютона.** Для одной частицы в декартовых координатах $\\frac{\\partial L}{\\partial\\dot x}=m\\dot x$, $\\frac{\\partial L}{\\partial x}=-\\frac{\\partial U}{\\partial x}$, и уравнение превращается в $m\\ddot x=F_x$. В общем случае $\\frac{\\partial L}{\\partial\\dot q}$ — обобщённый импульс, $\\frac{\\partial L}{\\partial q}$ — обобщённая сила. Силы идеальных связей не совершают работы на виртуальных перемещениях (принцип Даламбера), поэтому не входят в уравнения.",
+  "en": "**Connection with Newton's law.** For a single particle in Cartesian coordinates $\\frac{\\partial L}{\\partial\\dot x}=m\\dot x$ and $\\frac{\\partial L}{\\partial x}=-\\frac{\\partial U}{\\partial x}$, and the equation becomes $m\\ddot x=F_x$. In general $\\frac{\\partial L}{\\partial\\dot q}$ is the generalized momentum and $\\frac{\\partial L}{\\partial q}$ the generalized force. Ideal constraint forces do no work in virtual displacements (d'Alembert's principle), so they do not enter the equations."
+ },
+ {
+  "t": "li",
+  "uz": "**Algoritm.** 1) Erkinlik darajalarini sanash va $q_i$ ni tanlash. 2) $T$ ni $q,\\ \\dot q$ orqali yozish (inersial sanoq sistemasida!). 3) $U$ ni $q$ orqali yozish. 4) $L=T-U$. 5) Har bir $q_i$ uchun hosilalarni olib, tenglama tuzish. Tekshiruv: muvozanat holatlari $\\frac{\\partial \\tilde U}{\\partial q}=0$ ga mos kelishi, kichik tebranishlarda ma'lum chegaraviy hollar (masalan, $M\\to\\infty$) chiqishi kerak.",
+  "ru": "**Алгоритм.** 1) Подсчитать степени свободы и выбрать $q_i$. 2) Записать $T$ через $q,\\ \\dot q$ (в инерциальной системе отсчёта!). 3) Записать $U$ через $q$. 4) $L=T-U$. 5) Для каждой $q_i$ взять производные и составить уравнение. Проверка: положения равновесия должны соответствовать $\\frac{\\partial \\tilde U}{\\partial q}=0$, а при малых колебаниях должны получаться известные предельные случаи (например, $M\\to\\infty$).",
+  "en": "**Algorithm.** 1) Count the degrees of freedom and choose the $q_i$. 2) Write $T$ in terms of $q,\\ \\dot q$ (in an inertial frame!). 3) Write $U$ in terms of $q$. 4) $L=T-U$. 5) Take the derivatives for each $q_i$ and set up the equation. Check: the equilibria should satisfy $\\frac{\\partial \\tilde U}{\\partial q}=0$, and for small oscillations known limits (for example, $M\\to\\infty$) should come out."
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** Mayatnik: $L=\\frac{1}{2}ml^2\\dot\\theta^2+mgl\\cos\\theta$. Hosilalar: $\\frac{\\partial L}{\\partial\\dot\\theta}=ml^2\\dot\\theta$, $\\frac{\\partial L}{\\partial\\theta}=-mgl\\sin\\theta$. Tenglama $ml^2\\ddot\\theta+mgl\\sin\\theta=0$, ya'ni $\\ddot\\theta=-\\frac{g}{l}\\sin\\theta$ — ip tarangligini yozmasdan.",
+  "ru": "**Пример.** Маятник: $L=\\frac{1}{2}ml^2\\dot\\theta^2+mgl\\cos\\theta$. Производные: $\\frac{\\partial L}{\\partial\\dot\\theta}=ml^2\\dot\\theta$, $\\frac{\\partial L}{\\partial\\theta}=-mgl\\sin\\theta$. Уравнение $ml^2\\ddot\\theta+mgl\\sin\\theta=0$, т. е. $\\ddot\\theta=-\\frac{g}{l}\\sin\\theta$ — без записи натяжения нити.",
+  "en": "**Example.** Pendulum: $L=\\frac{1}{2}ml^2\\dot\\theta^2+mgl\\cos\\theta$. Derivatives: $\\frac{\\partial L}{\\partial\\dot\\theta}=ml^2\\dot\\theta$, $\\frac{\\partial L}{\\partial\\theta}=-mgl\\sin\\theta$. The equation is $ml^2\\ddot\\theta+mgl\\sin\\theta=0$, i.e. $\\ddot\\theta=-\\frac{g}{l}\\sin\\theta$ — without writing the string tension."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Eng kichik ta'sir prinsipi",
+  "ru": "3. Принцип наименьшего действия",
+  "en": "3. The principle of least action"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'sir.** Har bir mumkin bo'lgan yo'l $q(t)$ uchun ta'sir (action) $S=\\int_{t_1}^{t_2}L\\,dt$ — bitta son. Gamilton prinsipi: berilgan boshlang'ich va oxirgi holatlar $q(t_1)$, $q(t_2)$ orasidagi haqiqiy harakatda ta'sir statsionar — kichik variatsiyalarda $\\delta S=0$ ([[F02]]). Odatda bu minimum, shuning uchun «eng kichik ta'sir prinsipi» deyiladi. Ta'sir o'lchamligi $\\mathrm{J\\cdot s}$ — Plank doimiysi bilan bir xil; kvant mexanikasida aynan $\\frac{S}{\\hbar}$ fazani beradi.",
+  "ru": "**Действие.** Для каждого возможного пути $q(t)$ действие (action) $S=\\int_{t_1}^{t_2}L\\,dt$ — одно число. Принцип Гамильтона: при истинном движении между заданными начальным и конечным положениями $q(t_1)$, $q(t_2)$ действие стационарно — при малых вариациях $\\delta S=0$ ([[F02]]). Обычно это минимум, поэтому говорят «принцип наименьшего действия». Размерность действия $\\mathrm{J\\cdot s}$ — как у постоянной Планка; в квантовой механике именно $\\frac{S}{\\hbar}$ даёт фазу.",
+  "en": "**The action.** For each possible path $q(t)$ the action $S=\\int_{t_1}^{t_2}L\\,dt$ is a single number. Hamilton's principle: for the true motion between given initial and final positions $q(t_1)$, $q(t_2)$ the action is stationary — $\\delta S=0$ for small variations ([[F02]]). Usually it is a minimum, hence the name “principle of least action”. The action has units of $\\mathrm{J\\cdot s}$ — the same as Planck's constant; in quantum mechanics it is $\\frac{S}{\\hbar}$ that gives the phase."
+ },
+ {
+  "t": "m",
+  "m": "S=\\int_{t_1}^{t_2}L(q,\\dot q,t)\\,dt,\\qquad \\delta S=0"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L09-F02.png",
+   "ru": "figures/B2-L09-F02-ru.png",
+   "en": "figures/B2-L09-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Variatsion hisob.** $q(t)\\to q(t)+\\eta(t)$, $\\eta(t_1)=\\eta(t_2)=0$ deb olib, bo'laklab integrallasak: $\\delta S=\\int\\left(\\frac{\\partial L}{\\partial q}-\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}\\right)\\eta\\,dt$. Bu istalgan $\\eta$ uchun nol bo'lishi kerak — demak Eyler–Lagranj tenglamasi bajariladi. Xuddi shu usul har qanday funksional $J=\\int f(y,y',x)\\,dx$ ning ekstremumini topadi: ikki nuqta orasidagi eng qisqa chiziq ($f=\\sqrt{1+y'^2}$, javob — to'g'ri chiziq), braxistoxrona (eng tez tushish chizig'i — sikloida), Fermaning optik yo'l prinsipi.",
+  "ru": "**Вариационное исчисление.** Положив $q(t)\\to q(t)+\\eta(t)$, $\\eta(t_1)=\\eta(t_2)=0$, и проинтегрировав по частям: $\\delta S=\\int\\left(\\frac{\\partial L}{\\partial q}-\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}\\right)\\eta\\,dt$. Это должно обращаться в нуль при любом $\\eta$ — значит, выполняется уравнение Эйлера–Лагранжа. Тот же метод находит экстремум любого функционала $J=\\int f(y,y',x)\\,dx$: кратчайшая линия между двумя точками ($f=\\sqrt{1+y'^2}$, ответ — прямая), брахистохрона (линия быстрейшего спуска — циклоида), оптический принцип Ферма.",
+  "en": "**Calculus of variations.** Setting $q(t)\\to q(t)+\\eta(t)$ with $\\eta(t_1)=\\eta(t_2)=0$ and integrating by parts: $\\delta S=\\int\\left(\\frac{\\partial L}{\\partial q}-\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}\\right)\\eta\\,dt$. This must vanish for every $\\eta$ — so the Euler–Lagrange equation holds. The same method finds the extremum of any functional $J=\\int f(y,y',x)\\,dx$: the shortest curve between two points ($f=\\sqrt{1+y'^2}$, answer — a straight line), the brachistochrone (the curve of fastest descent — a cycloid), Fermat's principle of optical paths."
+ },
+ {
+  "t": "m",
+  "m": "J=\\int f(y,y',x)\\,dx:\\qquad \\frac{d}{dx}\\frac{\\partial f}{\\partial y'}-\\frac{\\partial f}{\\partial y}=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Beltrami ayniyati.** Agar $f$ $x$ ga oshkor bog'liq bo'lmasa, birinchi integral mavjud: $f-y'\\frac{\\partial f}{\\partial y'}=\\mathrm{const}$. Braxistoxronada $f=\\sqrt{\\frac{1+y'^2}{y}}$ ($y$ pastga o'lchanadi) va ayniyat $y(1+y'^2)=\\mathrm{const}$ ni beradi — bu sikloida tenglamasi: $x=R(\\varphi-\\sin\\varphi)$, $y=R(1-\\cos\\varphi)$ ([[F07]]). Bu Lagranj mexanikasidagi energiya funksiyasining saqlanishi bilan aynan bir xil matematik fakt (5-bo'lim).",
+  "ru": "**Тождество Бельтрами.** Если $f$ явно не зависит от $x$, существует первый интеграл: $f-y'\\frac{\\partial f}{\\partial y'}=\\mathrm{const}$. Для брахистохроны $f=\\sqrt{\\frac{1+y'^2}{y}}$ ($y$ отсчитывается вниз), и тождество даёт $y(1+y'^2)=\\mathrm{const}$ — уравнение циклоиды: $x=R(\\varphi-\\sin\\varphi)$, $y=R(1-\\cos\\varphi)$ ([[F07]]). Это тот же математический факт, что и сохранение функции энергии в лагранжевой механике (раздел 5).",
+  "en": "**The Beltrami identity.** If $f$ does not depend explicitly on $x$, there is a first integral: $f-y'\\frac{\\partial f}{\\partial y'}=\\mathrm{const}$. For the brachistochrone $f=\\sqrt{\\frac{1+y'^2}{y}}$ ($y$ measured downward), and the identity gives $y(1+y'^2)=\\mathrm{const}$ — the equation of a cycloid: $x=R(\\varphi-\\sin\\varphi)$, $y=R(1-\\cos\\varphi)$ ([[F07]]). This is the same mathematical fact as conservation of the energy function in Lagrangian mechanics (section 5)."
+ },
+ {
+  "t": "m",
+  "m": "f-y'\\frac{\\partial f}{\\partial y'}=\\mathrm{const},\\qquad x=R(\\varphi-\\sin\\varphi),\\quad y=R(1-\\cos\\varphi)"
+ },
+ {
+  "t": "h2",
+  "uz": "4. Asosiy misollar",
+  "ru": "4. Основные примеры",
+  "en": "4. Standard examples"
+ },
+ {
+  "t": "li",
+  "uz": "**Harakatlanuvchi pona.** Silliq gorizontal stolda massasi $M$, qiyalik burchagi $\\alpha$ bo'lgan pona, uning sirtida massasi $m$ brusok sirpanadi ([[F03]]). Koordinatalar: pona siljishi $X$ va brusokning pona bo'ylab siljishi $s$. $T=\\frac{1}{2}M\\dot X^2+\\frac{1}{2}m\\left(\\dot X^2+\\dot s^2+2\\dot X\\dot s\\cos\\alpha\\right)$, $U=-mgs\\sin\\alpha$. $X$ siklik — gorizontal impuls saqlanadi; ikkinchi tenglamadan ponaning tezlanishi chiqadi. Nyuton usulida buning uchun to'rtta noma'lum (ikki tezlanish, ikki normal kuch) kerak bo'lardi.",
+  "ru": "**Подвижный клин.** На гладком горизонтальном столе клин массой $M$ с углом $\\alpha$, по его поверхности скользит брусок массой $m$ ([[F03]]). Координаты: смещение клина $X$ и смещение бруска вдоль клина $s$. $T=\\frac{1}{2}M\\dot X^2+\\frac{1}{2}m\\left(\\dot X^2+\\dot s^2+2\\dot X\\dot s\\cos\\alpha\\right)$, $U=-mgs\\sin\\alpha$. $X$ — циклическая, горизонтальный импульс сохраняется; из второго уравнения следует ускорение клина. По Ньютону для этого понадобилось бы четыре неизвестных (два ускорения, две нормальные силы).",
+  "en": "**A movable wedge.** On a smooth horizontal table a wedge of mass $M$ and angle $\\alpha$, with a block of mass $m$ sliding on its face ([[F03]]). Coordinates: the wedge displacement $X$ and the block's displacement along the wedge $s$. $T=\\frac{1}{2}M\\dot X^2+\\frac{1}{2}m\\left(\\dot X^2+\\dot s^2+2\\dot X\\dot s\\cos\\alpha\\right)$, $U=-mgs\\sin\\alpha$. $X$ is cyclic, so horizontal momentum is conserved; the second equation gives the wedge's acceleration. With Newton's method this would require four unknowns (two accelerations, two normal forces)."
+ },
+ {
+  "t": "m",
+  "m": "A=\\frac{mg\\sin\\alpha\\cos\\alpha}{M+m\\sin^2\\alpha}"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L09-F03.png",
+   "ru": "figures/B2-L09-F03-ru.png",
+   "en": "figures/B2-L09-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Aylanuvchi halqadagi munchoq.** Radiusi $R$ bo'lgan vertikal halqa vertikal diametri atrofida $\\Omega$ burchak tezlik bilan majburan aylantiriladi, munchoq halqa bo'ylab erkin sirpanadi. Koordinata — pastki nuqtadan burchak $\\theta$: $L=\\frac{1}{2}mR^2(\\dot\\theta^2+\\Omega^2\\sin^2\\theta)+mgR\\cos\\theta$. Effektiv potensial $\\tilde U=-\\frac{1}{2}mR^2\\Omega^2\\sin^2\\theta-mgR\\cos\\theta$ ([[F04]]). $\\Omega^2<\\frac{g}{R}$ da yagona turg'un muvozanat — pastda; $\\Omega^2>\\frac{g}{R}$ da pastki nuqta turg'unmas bo'ladi va ikkita yangi turg'un holat paydo bo'ladi: $\\cos\\theta_0=\\frac{g}{\\Omega^2R}$ (bifurkatsiya).",
+  "ru": "**Бусинка на вращающемся кольце.** Вертикальное кольцо радиуса $R$ принудительно вращается вокруг вертикального диаметра с угловой скоростью $\\Omega$, бусинка свободно скользит по кольцу. Координата — угол $\\theta$ от нижней точки: $L=\\frac{1}{2}mR^2(\\dot\\theta^2+\\Omega^2\\sin^2\\theta)+mgR\\cos\\theta$. Эффективный потенциал $\\tilde U=-\\frac{1}{2}mR^2\\Omega^2\\sin^2\\theta-mgR\\cos\\theta$ ([[F04]]). При $\\Omega^2<\\frac{g}{R}$ единственное устойчивое равновесие — внизу; при $\\Omega^2>\\frac{g}{R}$ нижняя точка становится неустойчивой и появляются два новых устойчивых положения: $\\cos\\theta_0=\\frac{g}{\\Omega^2R}$ (бифуркация).",
+  "en": "**A bead on a rotating hoop.** A vertical hoop of radius $R$ is driven to rotate about its vertical diameter with angular velocity $\\Omega$, and a bead slides freely on the hoop. The coordinate is the angle $\\theta$ from the bottom: $L=\\frac{1}{2}mR^2(\\dot\\theta^2+\\Omega^2\\sin^2\\theta)+mgR\\cos\\theta$. The effective potential is $\\tilde U=-\\frac{1}{2}mR^2\\Omega^2\\sin^2\\theta-mgR\\cos\\theta$ ([[F04]]). For $\\Omega^2<\\frac{g}{R}$ the only stable equilibrium is at the bottom; for $\\Omega^2>\\frac{g}{R}$ the bottom becomes unstable and two new stable positions appear: $\\cos\\theta_0=\\frac{g}{\\Omega^2R}$ (a bifurcation)."
+ },
+ {
+  "t": "m",
+  "m": "\\tilde U=-\\frac{mR^2\\Omega^2}{2}\\sin^2\\theta-mgR\\cos\\theta,\\qquad \\cos\\theta_0=\\frac{g}{\\Omega^2R}"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L09-F04.png",
+   "ru": "figures/B2-L09-F04-ru.png",
+   "en": "figures/B2-L09-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Erkin osilgan mayatnik.** Mayatnik silliq gorizontal rels bo'ylab erkin harakatlana oladigan massasi $M$ bo'lgan aravachaga osilgan. Gorizontal impuls saqlanadi va aravacha mayatnikka qarama-qarshi tebranadi; kichik tebranishlar chastotasi $\\omega^2=\\frac{g}{l}\\left(1+\\frac{m}{M}\\right)$ — mahkamlangan mayatnikdagidan katta. Chegaraviy tekshiruv: $M\\to\\infty$ da $\\omega^2\\to\\frac{g}{l}$.",
+  "ru": "**Маятник на свободной опоре.** Маятник подвешен к тележке массой $M$, свободно движущейся по гладкому горизонтальному рельсу. Горизонтальный импульс сохраняется, и тележка колеблется в противофазе с маятником; частота малых колебаний $\\omega^2=\\frac{g}{l}\\left(1+\\frac{m}{M}\\right)$ — больше, чем у закреплённого маятника. Проверка предельного случая: при $M\\to\\infty$ $\\omega^2\\to\\frac{g}{l}$.",
+  "en": "**A pendulum on a free support.** A pendulum hangs from a cart of mass $M$ that moves freely on a smooth horizontal rail. Horizontal momentum is conserved and the cart oscillates opposite to the pendulum; the small-oscillation frequency is $\\omega^2=\\frac{g}{l}\\left(1+\\frac{m}{M}\\right)$ — higher than for a fixed pendulum. Limit check: as $M\\to\\infty$, $\\omega^2\\to\\frac{g}{l}$."
+ },
+ {
+  "t": "m",
+  "m": "\\omega^2=\\frac{g}{l}\\left(1+\\frac{m}{M}\\right)"
+ },
+ {
+  "t": "h2",
+  "uz": "5. Umumlashgan impuls, siklik koordinatalar va Noter teoremasi",
+  "ru": "5. Обобщённый импульс, циклические координаты и теорема Нётер",
+  "en": "5. Generalized momentum, cyclic coordinates, Noether's theorem"
+ },
+ {
+  "t": "li",
+  "uz": "**Umumlashgan impuls.** $p_i=\\frac{\\partial L}{\\partial\\dot q_i}$ — $q_i$ ga qo'shma umumlashgan impuls (generalized momentum). Dekart koordinatasida bu $m\\dot x$, burchak uchun — impuls momenti: qutb koordinatalarida $p_\\varphi=mr^2\\dot\\varphi=L_z$. Agar $L$ biror $q_i$ ga oshkor bog'liq bo'lmasa (siklik koordinata, cyclic coordinate), Eyler–Lagranj tenglamasidan $\\dot p_i=0$ — mos impuls saqlanadi.",
+  "ru": "**Обобщённый импульс.** $p_i=\\frac{\\partial L}{\\partial\\dot q_i}$ — обобщённый импульс (generalized momentum), сопряжённый $q_i$. Для декартовой координаты это $m\\dot x$, для угла — момент импульса: в полярных координатах $p_\\varphi=mr^2\\dot\\varphi=L_z$. Если $L$ явно не зависит от некоторой $q_i$ (циклическая координата, cyclic coordinate), из уравнения Эйлера–Лагранжа $\\dot p_i=0$ — соответствующий импульс сохраняется.",
+  "en": "**Generalized momentum.** $p_i=\\frac{\\partial L}{\\partial\\dot q_i}$ is the generalized momentum conjugate to $q_i$. For a Cartesian coordinate it is $m\\dot x$; for an angle it is angular momentum: in polar coordinates $p_\\varphi=mr^2\\dot\\varphi=L_z$. If $L$ does not depend explicitly on some $q_i$ (a cyclic coordinate), the Euler–Lagrange equation gives $\\dot p_i=0$ — the corresponding momentum is conserved."
+ },
+ {
+  "t": "m",
+  "m": "p_i=\\frac{\\partial L}{\\partial\\dot q_i},\\qquad \\frac{\\partial L}{\\partial q_i}=0\\ \\Rightarrow\\ p_i=\\mathrm{const}"
+ },
+ {
+  "t": "li",
+  "uz": "**Noter teoremasi.** Har bir uzluksiz simmetriyaga saqlanish qonuni mos keladi (Emmi Noter, 1918). Fazo bo'ylab siljishga nisbatan simmetriya — impuls saqlanadi; o'q atrofida burishga nisbatan — shu o'qqa nisbatan impuls momenti; vaqt bo'ylab siljishga nisbatan ($L$ $t$ ga oshkor bog'liq emas) — energiya funksiyasi ([[F05]]). Simmetriya yo'nalishi bo'ylab koordinatani tanlasak, u siklik bo'ladi va saqlanish qonuni darhol ko'rinadi.",
+  "ru": "**Теорема Нётер.** Каждой непрерывной симметрии соответствует закон сохранения (Эмми Нётер, 1918). Симметрия относительно сдвига в пространстве — сохраняется импульс; относительно поворота вокруг оси — момент импульса относительно этой оси; относительно сдвига во времени ($L$ явно не зависит от $t$) — функция энергии ([[F05]]). Если выбрать координату вдоль направления симметрии, она станет циклической, и закон сохранения виден сразу.",
+  "en": "**Noether's theorem.** Every continuous symmetry corresponds to a conservation law (Emmy Noether, 1918). Symmetry under spatial translation — momentum is conserved; under rotation about an axis — angular momentum about that axis; under time translation ($L$ does not depend explicitly on $t$) — the energy function ([[F05]]). If a coordinate is chosen along the symmetry direction, it becomes cyclic and the conservation law is immediately visible."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L09-F05.png",
+   "ru": "figures/B2-L09-F05-ru.png",
+   "en": "figures/B2-L09-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Yashirin simmetriya.** Agar $L$ koordinatalar kombinatsiyasiga bog'liq bo'lsa, masalan $U=U(x-y)$, unda $x$ va $y$ ni bir xil miqdorga siljitish $L$ ni o'zgartirmaydi: $p_x+p_y$ saqlanadi. Umumiy qoida: $L$ $\\delta x_i=\\epsilon a_i$ siljishda o'zgarmasa, $\\sum_ia_ip_i=\\mathrm{const}$. Sirt bo'ylab harakatda (masalan, konus) simmetriya o'qi atrofidagi $L_z$ saqlanadi, $L_x$ va $L_y$ esa saqlanmaydi.",
+  "ru": "**Скрытая симметрия.** Если $L$ зависит от комбинации координат, например $U=U(x-y)$, то сдвиг $x$ и $y$ на одну величину не меняет $L$: сохраняется $p_x+p_y$. Общее правило: если $L$ не меняется при сдвиге $\\delta x_i=\\epsilon a_i$, то $\\sum_ia_ip_i=\\mathrm{const}$. При движении по поверхности (например, конусу) сохраняется $L_z$ относительно оси симметрии, а $L_x$ и $L_y$ — нет.",
+  "en": "**Hidden symmetry.** If $L$ depends on a combination of coordinates, for example $U=U(x-y)$, then shifting $x$ and $y$ by the same amount does not change $L$: $p_x+p_y$ is conserved. General rule: if $L$ is unchanged under the shift $\\delta x_i=\\epsilon a_i$, then $\\sum_ia_ip_i=\\mathrm{const}$. For motion on a surface (for example, a cone) $L_z$ about the symmetry axis is conserved, but $L_x$ and $L_y$ are not."
+ },
+ {
+  "t": "m",
+  "m": "\\delta x_i=\\epsilon a_i,\\ \\ \\delta L=0\\ \\Rightarrow\\ \\sum_ia_ip_i=\\mathrm{const}"
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** Bir jinsli maydondagi zarra: $L=\\frac{1}{2}m(\\dot x^2+\\dot y^2+\\dot z^2)-mgz$. $x$ va $y$ siklik — gorizontal impulslar saqlanadi; $z$ o'qi atrofida burish simmetriyasi — $L_z$ saqlanadi; $t$ oshkor yo'q — energiya saqlanadi. Vertikal impuls saqlanmaydi: $\\dot p_z=-mg$.",
+  "ru": "**Пример.** Частица в однородном поле: $L=\\frac{1}{2}m(\\dot x^2+\\dot y^2+\\dot z^2)-mgz$. $x$ и $y$ циклические — сохраняются горизонтальные импульсы; симметрия поворота вокруг оси $z$ — сохраняется $L_z$; явно $t$ нет — сохраняется энергия. Вертикальный импульс не сохраняется: $\\dot p_z=-mg$.",
+  "en": "**Example.** A particle in a uniform field: $L=\\frac{1}{2}m(\\dot x^2+\\dot y^2+\\dot z^2)-mgz$. $x$ and $y$ are cyclic — the horizontal momenta are conserved; rotational symmetry about the $z$ axis — $L_z$ is conserved; no explicit $t$ — energy is conserved. The vertical momentum is not conserved: $\\dot p_z=-mg$."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Energiya funksiyasi",
+  "ru": "6. Функция энергии",
+  "en": "6. The energy function"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Energiya funksiyasi (energy function, Yakobi integrali) $h=\\sum_i\\dot q_i\\frac{\\partial L}{\\partial\\dot q_i}-L$. Eyler–Lagranj tenglamalaridan $\\frac{dh}{dt}=-\\frac{\\partial L}{\\partial t}$, shuning uchun $L$ vaqtga oshkor bog'liq bo'lmasa, $h$ saqlanadi. Bu ifoda keyingi darsda (B2-L10) Gamilton funksiyasiga aylanadi.",
+  "ru": "**Определение.** Функция энергии (energy function, интеграл Якоби) $h=\\sum_i\\dot q_i\\frac{\\partial L}{\\partial\\dot q_i}-L$. Из уравнений Эйлера–Лагранжа $\\frac{dh}{dt}=-\\frac{\\partial L}{\\partial t}$, поэтому если $L$ явно не зависит от времени, $h$ сохраняется. На следующем уроке (B2-L10) это выражение станет функцией Гамильтона.",
+  "en": "**Definition.** The energy function (the Jacobi integral) is $h=\\sum_i\\dot q_i\\frac{\\partial L}{\\partial\\dot q_i}-L$. The Euler–Lagrange equations give $\\frac{dh}{dt}=-\\frac{\\partial L}{\\partial t}$, so if $L$ does not depend explicitly on time, $h$ is conserved. In the next lesson (B2-L10) this expression becomes the Hamiltonian."
+ },
+ {
+  "t": "m",
+  "m": "h=\\sum_i\\dot q_i\\frac{\\partial L}{\\partial\\dot q_i}-L,\\qquad \\frac{dh}{dt}=-\\frac{\\partial L}{\\partial t}"
+ },
+ {
+  "t": "li",
+  "uz": "**Qachon $h=E$?** Agar bog'lanishlar vaqtga bog'liq bo'lmasa, $T$ tezliklarning bir jinsli kvadratik formasi bo'ladi va Eyler teoremasidan $\\sum\\dot q\\frac{\\partial T}{\\partial\\dot q}=2T$, ya'ni $h=2T-(T-U)=T+U=E$. Vaqtga bog'liq bog'lanishda (aylanuvchi halqa) $T$ da tezlikka bog'liq bo'lmagan had paydo bo'ladi va $h\\neq E$. Masalan, halqadagi munchoq uchun $h=\\frac{1}{2}mR^2\\dot\\theta^2-\\frac{1}{2}mR^2\\Omega^2\\sin^2\\theta-mgR\\cos\\theta$ saqlanadi, to'liq energiya $E$ esa saqlanmaydi — halqani aylantiruvchi motor ish bajaradi.",
+  "ru": "**Когда $h=E$?** Если связи не зависят от времени, $T$ — однородная квадратичная форма скоростей, и по теореме Эйлера $\\sum\\dot q\\frac{\\partial T}{\\partial\\dot q}=2T$, т. е. $h=2T-(T-U)=T+U=E$. При связях, зависящих от времени (вращающееся кольцо), в $T$ появляется член, не зависящий от скоростей, и $h\\neq E$. Например, для бусинки на кольце сохраняется $h=\\frac{1}{2}mR^2\\dot\\theta^2-\\frac{1}{2}mR^2\\Omega^2\\sin^2\\theta-mgR\\cos\\theta$, а полная энергия $E$ не сохраняется — мотор, вращающий кольцо, совершает работу.",
+  "en": "**When is $h=E$?** If the constraints do not depend on time, $T$ is a homogeneous quadratic form in the velocities, and Euler's theorem gives $\\sum\\dot q\\frac{\\partial T}{\\partial\\dot q}=2T$, i.e. $h=2T-(T-U)=T+U=E$. With time-dependent constraints (a rotating hoop) $T$ acquires a velocity-independent term and $h\\neq E$. For example, for the bead on the hoop $h=\\frac{1}{2}mR^2\\dot\\theta^2-\\frac{1}{2}mR^2\\Omega^2\\sin^2\\theta-mgR\\cos\\theta$ is conserved, while the total energy $E$ is not — the motor turning the hoop does work."
+ },
+ {
+  "t": "m",
+  "m": "\\sum_i\\dot q_i\\frac{\\partial T}{\\partial\\dot q_i}=2T\\ \\Rightarrow\\ h=T+U=E"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki shart farqi.** $h$ saqlanishi uchun $L$ vaqtga oshkor bog'liq bo'lmasligi kerak; $h=E$ bo'lishi uchun bog'lanishlar statsionar bo'lishi kerak. Bu ikki shart mustaqil: aylanuvchi halqada $h$ saqlanadi, lekin $h\\neq E$; uzunligi vaqt bilan o'zgaradigan mayatnikda $h=E$, lekin hech biri saqlanmaydi. Lagranj funksiyasiga istalgan funksiyaning to'liq vaqt hosilasi $\\frac{dF(q,t)}{dt}$ ni qo'shish harakat tenglamalarini o'zgartirmaydi.",
+  "ru": "**Различие двух условий.** Для сохранения $h$ нужно, чтобы $L$ явно не зависела от времени; для $h=E$ — чтобы связи были стационарными. Эти условия независимы: на вращающемся кольце $h$ сохраняется, но $h\\neq E$; у маятника с меняющейся во времени длиной $h=E$, но ни то, ни другое не сохраняется. Добавление к функции Лагранжа полной производной по времени любой функции $\\frac{dF(q,t)}{dt}$ не меняет уравнений движения.",
+  "en": "**Two different conditions.** For $h$ to be conserved, $L$ must not depend explicitly on time; for $h=E$, the constraints must be stationary. The two conditions are independent: on the rotating hoop $h$ is conserved but $h\\neq E$; for a pendulum whose length changes in time $h=E$, but neither is conserved. Adding the total time derivative of any function, $\\frac{dF(q,t)}{dt}$, to the Lagrangian does not change the equations of motion."
+ },
+ {
+  "t": "h2",
+  "uz": "7. Kichik tebranishlar Lagranj usulida",
+  "ru": "7. Малые колебания методом Лагранжа",
+  "en": "7. Small oscillations by the Lagrangian method"
+ },
+ {
+  "t": "li",
+  "uz": "**Kvadratik yaqinlashish.** Barqaror muvozanat atrofida $q_i=q_{i0}+\\eta_i$ deb, $L$ ni kichik $\\eta$ bo'yicha ikkinchi tartibgacha yoyamiz: $L\\approx\\frac{1}{2}\\sum M_{ij}\\dot\\eta_i\\dot\\eta_j-\\frac{1}{2}\\sum K_{ij}\\eta_i\\eta_j$. $M$ — massa (inersiya) matritsasi, $K$ — bikrlik matritsasi ($K_{ij}=\\frac{\\partial^2U}{\\partial q_i\\partial q_j}$). $\\eta=a\\cos\\omega t$ ni qo'ysak, $(K-\\omega^2M)a=0$ — normal chastotalar $\\det(K-\\omega^2M)=0$ dan topiladi (B2-L07 ning umumlashmasi).",
+  "ru": "**Квадратичное приближение.** Около устойчивого равновесия положим $q_i=q_{i0}+\\eta_i$ и разложим $L$ по малым $\\eta$ до второго порядка: $L\\approx\\frac{1}{2}\\sum M_{ij}\\dot\\eta_i\\dot\\eta_j-\\frac{1}{2}\\sum K_{ij}\\eta_i\\eta_j$. $M$ — матрица масс (инерции), $K$ — матрица жёсткости ($K_{ij}=\\frac{\\partial^2U}{\\partial q_i\\partial q_j}$). Подставив $\\eta=a\\cos\\omega t$, получаем $(K-\\omega^2M)a=0$ — нормальные частоты находятся из $\\det(K-\\omega^2M)=0$ (обобщение B2-L07).",
+  "en": "**The quadratic approximation.** Near a stable equilibrium set $q_i=q_{i0}+\\eta_i$ and expand $L$ to second order in small $\\eta$: $L\\approx\\frac{1}{2}\\sum M_{ij}\\dot\\eta_i\\dot\\eta_j-\\frac{1}{2}\\sum K_{ij}\\eta_i\\eta_j$. $M$ is the mass (inertia) matrix and $K$ the stiffness matrix ($K_{ij}=\\frac{\\partial^2U}{\\partial q_i\\partial q_j}$). Substituting $\\eta=a\\cos\\omega t$ gives $(K-\\omega^2M)a=0$ — the normal frequencies follow from $\\det(K-\\omega^2M)=0$ (a generalization of B2-L07)."
+ },
+ {
+  "t": "m",
+  "m": "L\\approx\\frac{1}{2}\\dot\\eta^TM\\dot\\eta-\\frac{1}{2}\\eta^TK\\eta,\\qquad \\det(K-\\omega^2M)=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Qo'sh mayatnik.** Ikki bir xil mayatnik (massa $m$, uzunlik $l$) ketma-ket ulangan. Kichik burchaklarda $T=\\frac{1}{2}ml^2(2\\dot\\theta_1^2+2\\dot\\theta_1\\dot\\theta_2+\\dot\\theta_2^2)$, $U=\\frac{1}{2}mgl(2\\theta_1^2+\\theta_2^2)$. Determinant tenglamasidan $\\omega^2=(2\\mp\\sqrt{2})\\frac{g}{l}$; pastki modada $\\frac{\\theta_2}{\\theta_1}=\\sqrt{2}$ (bir tomonga), yuqori modada $\\frac{\\theta_2}{\\theta_1}=-\\sqrt{2}$ (qarama-qarshi) ([[F06]]). $M$ matritsasi diagonal emas — kinetik bog'lanish tufayli modalar oddiy «bir fazali/qarama-qarshi fazali» emas.",
+  "ru": "**Двойной маятник.** Два одинаковых маятника (масса $m$, длина $l$) соединены последовательно. При малых углах $T=\\frac{1}{2}ml^2(2\\dot\\theta_1^2+2\\dot\\theta_1\\dot\\theta_2+\\dot\\theta_2^2)$, $U=\\frac{1}{2}mgl(2\\theta_1^2+\\theta_2^2)$. Из уравнения на определитель $\\omega^2=(2\\mp\\sqrt{2})\\frac{g}{l}$; в нижней моде $\\frac{\\theta_2}{\\theta_1}=\\sqrt{2}$ (в одну сторону), в верхней $\\frac{\\theta_2}{\\theta_1}=-\\sqrt{2}$ (в противоположные) ([[F06]]). Матрица $M$ не диагональна — из-за кинетической связи моды не просто «синфазная/противофазная».",
+  "en": "**The double pendulum.** Two identical pendulums (mass $m$, length $l$) are joined in series. For small angles $T=\\frac{1}{2}ml^2(2\\dot\\theta_1^2+2\\dot\\theta_1\\dot\\theta_2+\\dot\\theta_2^2)$ and $U=\\frac{1}{2}mgl(2\\theta_1^2+\\theta_2^2)$. The determinant equation gives $\\omega^2=(2\\mp\\sqrt{2})\\frac{g}{l}$; in the lower mode $\\frac{\\theta_2}{\\theta_1}=\\sqrt{2}$ (same direction), in the upper mode $\\frac{\\theta_2}{\\theta_1}=-\\sqrt{2}$ (opposite directions) ([[F06]]). The matrix $M$ is not diagonal — because of the kinetic coupling the modes are not simply “in phase/antiphase”."
+ },
+ {
+  "t": "m",
+  "m": "\\omega^2=(2\\mp\\sqrt{2})\\frac{g}{l},\\qquad \\frac{\\theta_2}{\\theta_1}=\\pm\\sqrt{2}"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L09-F06.png",
+   "ru": "figures/B2-L09-F06-ru.png",
+   "en": "figures/B2-L09-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Nol modalar.** Agar sistema butunligicha erkin siljiy olsa (masalan, prujinalar bilan bog'langan, hech narsaga mahkamlanmagan jismlar), $\\det(K-\\omega^2M)=0$ ning bir ildizi $\\omega=0$ — bu tebranish emas, massa markazining tekis harakati (siklik koordinata). Ikki jism uchun qolgan chastota $\\omega^2=\\frac{k}{\\mu}$, $\\mu$ — keltirilgan massa.",
+  "ru": "**Нулевые моды.** Если система может свободно смещаться как целое (например, тела, связанные пружинами и ни к чему не прикреплённые), один корень $\\det(K-\\omega^2M)=0$ равен $\\omega=0$ — это не колебание, а равномерное движение центра масс (циклическая координата). Для двух тел оставшаяся частота $\\omega^2=\\frac{k}{\\mu}$, где $\\mu$ — приведённая масса.",
+  "en": "**Zero modes.** If the system can move freely as a whole (for example, bodies joined by springs and attached to nothing), one root of $\\det(K-\\omega^2M)=0$ is $\\omega=0$ — not an oscillation but uniform motion of the center of mass (a cyclic coordinate). For two bodies the remaining frequency is $\\omega^2=\\frac{k}{\\mu}$, where $\\mu$ is the reduced mass."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Egri chiziqli koordinatalar va aylanuvchi sanoq sistemasi",
+  "ru": "8. Криволинейные координаты и вращающаяся система отсчёта",
+  "en": "8. Curvilinear coordinates and a rotating frame"
+ },
+ {
+  "t": "li",
+  "uz": "**Qutb koordinatalari.** Markaziy maydonda $L=\\frac{1}{2}m(\\dot r^2+r^2\\dot\\varphi^2)-U(r)$ ([[F08]]). $\\varphi$ siklik: $p_\\varphi=mr^2\\dot\\varphi=\\mathrm{const}$. Radial tenglama $m\\ddot r-mr\\dot\\varphi^2+U'(r)=0$ — ikkinchi had «markazdan qochma» ko'rinadi, lekin u inersial sistemadagi tezlanishning radial tashkil etuvchisi ($a_r=\\ddot r-r\\dot\\varphi^2$) dan kelib chiqadi. $\\dot\\varphi$ ni $p_\\varphi$ orqali ifodalasak, B2-L06 va B2-L08 dagi effektiv potensial hosil bo'ladi.",
+  "ru": "**Полярные координаты.** В центральном поле $L=\\frac{1}{2}m(\\dot r^2+r^2\\dot\\varphi^2)-U(r)$ ([[F08]]). $\\varphi$ циклическая: $p_\\varphi=mr^2\\dot\\varphi=\\mathrm{const}$. Радиальное уравнение $m\\ddot r-mr\\dot\\varphi^2+U'(r)=0$ — второй член выглядит «центробежным», но он происходит от радиальной составляющей ускорения в инерциальной системе ($a_r=\\ddot r-r\\dot\\varphi^2$). Выразив $\\dot\\varphi$ через $p_\\varphi$, получаем эффективный потенциал из B2-L06 и B2-L08.",
+  "en": "**Polar coordinates.** In a central field $L=\\frac{1}{2}m(\\dot r^2+r^2\\dot\\varphi^2)-U(r)$ ([[F08]]). $\\varphi$ is cyclic: $p_\\varphi=mr^2\\dot\\varphi=\\mathrm{const}$. The radial equation is $m\\ddot r-mr\\dot\\varphi^2+U'(r)=0$ — the second term looks “centrifugal”, but it comes from the radial component of acceleration in the inertial frame ($a_r=\\ddot r-r\\dot\\varphi^2$). Expressing $\\dot\\varphi$ through $p_\\varphi$ gives the effective potential of B2-L06 and B2-L08."
+ },
+ {
+  "t": "m",
+  "m": "m\\ddot r-mr\\dot\\varphi^2+U'(r)=0,\\qquad p_\\varphi=mr^2\\dot\\varphi"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L09-F08.png",
+   "ru": "figures/B2-L09-F08-ru.png",
+   "en": "figures/B2-L09-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Diqqat: $p_\\varphi$ ni $L$ ga qo'yib bo'lmaydi.** Saqlanadigan impulsni $\\dot\\varphi$ o'rniga to'g'ridan-to'g'ri Lagranj funksiyasiga qo'yish markazdan qochma hadning ishorasini noto'g'ri beradi. To'g'ri yo'l — energiyaga (yoki B2-L10 dagi Raus funksiyasiga) qo'yish: $E=\\frac{1}{2}m\\dot r^2+\\frac{p_\\varphi^2}{2mr^2}+U(r)$. Bu GRE da tez-tez uchraydigan tuzoq.",
+  "ru": "**Внимание: нельзя подставлять $p_\\varphi$ в $L$.** Подстановка сохраняющегося импульса вместо $\\dot\\varphi$ прямо в функцию Лагранжа даёт неверный знак центробежного члена. Правильный путь — подставлять в энергию (или в функцию Рауса из B2-L10): $E=\\frac{1}{2}m\\dot r^2+\\frac{p_\\varphi^2}{2mr^2}+U(r)$. Это частая ловушка в GRE.",
+  "en": "**Caution: do not substitute $p_\\varphi$ into $L$.** Substituting the conserved momentum for $\\dot\\varphi$ directly into the Lagrangian gives the wrong sign of the centrifugal term. The correct route is to substitute into the energy (or into the Routhian of B2-L10): $E=\\frac{1}{2}m\\dot r^2+\\frac{p_\\varphi^2}{2mr^2}+U(r)$. This is a common GRE trap."
+ },
+ {
+  "t": "li",
+  "uz": "**Aylanuvchi sanoq sistemasi.** $\\vec\\Omega$ burchak tezlik bilan aylanuvchi sistemada inersial tezlik $\\vec v+\\vec\\Omega\\times\\vec r$, shuning uchun $L=\\frac{1}{2}m|\\vec v+\\vec\\Omega\\times\\vec r|^2-U$. Kvadratni ochsak, $m\\vec v\\cdot(\\vec\\Omega\\times\\vec r)$ hadi Koriolis kuchini, $\\frac{1}{2}m|\\vec\\Omega\\times\\vec r|^2$ hadi markazdan qochma potensialni beradi (B2-L02 natijalari avtomatik chiqadi). Aylanuvchi gorizontal sterjendagi munchoq uchun $\\ddot r=\\Omega^2r$, ya'ni $r=r_0\\cosh\\Omega t$ — munchoq eksponensial uzoqlashadi.",
+  "ru": "**Вращающаяся система отсчёта.** В системе, вращающейся с угловой скоростью $\\vec\\Omega$, инерциальная скорость равна $\\vec v+\\vec\\Omega\\times\\vec r$, поэтому $L=\\frac{1}{2}m|\\vec v+\\vec\\Omega\\times\\vec r|^2-U$. Раскрыв квадрат, член $m\\vec v\\cdot(\\vec\\Omega\\times\\vec r)$ даёт силу Кориолиса, а $\\frac{1}{2}m|\\vec\\Omega\\times\\vec r|^2$ — центробежный потенциал (результаты B2-L02 получаются автоматически). Для бусинки на вращающемся горизонтальном стержне $\\ddot r=\\Omega^2r$, т. е. $r=r_0\\cosh\\Omega t$ — бусинка удаляется экспоненциально.",
+  "en": "**A rotating frame.** In a frame rotating with angular velocity $\\vec\\Omega$ the inertial velocity is $\\vec v+\\vec\\Omega\\times\\vec r$, so $L=\\frac{1}{2}m|\\vec v+\\vec\\Omega\\times\\vec r|^2-U$. Expanding the square, the term $m\\vec v\\cdot(\\vec\\Omega\\times\\vec r)$ gives the Coriolis force and $\\frac{1}{2}m|\\vec\\Omega\\times\\vec r|^2$ the centrifugal potential (the results of B2-L02 come out automatically). For a bead on a rotating horizontal rod $\\ddot r=\\Omega^2r$, i.e. $r=r_0\\cosh\\Omega t$ — the bead moves away exponentially."
+ },
+ {
+  "t": "m",
+  "m": "L=\\frac{m}{2}|\\vec v+\\vec\\Omega\\times\\vec r|^2-U,\\qquad \\ddot r=\\Omega^2r"
+ },
+ {
+  "t": "h2",
+  "uz": "9. Bog'lanish kuchlari va elektromagnit maydondagi zarra",
+  "ru": "9. Силы связи и частица в электромагнитном поле",
+  "en": "9. Constraint forces and a particle in an electromagnetic field"
+ },
+ {
+  "t": "li",
+  "uz": "**Lagranj ko'paytuvchilari.** Bog'lanish kuchini topish kerak bo'lsa, bog'lanishni yo'qotmay, uni $f(q)=0$ shart sifatida qoldiramiz va $L+\\lambda f$ ni yozamiz. Har bir koordinata uchun $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q_i}-\\frac{\\partial L}{\\partial q_i}=\\lambda\\frac{\\partial f}{\\partial q_i}$; o'ng tomon — bog'lanish kuchining umumlashgan tashkil etuvchisi. Masalan, mayatnikda $f=r-l$ bo'lsa, $\\lambda=-T$ — ip tarangligi: $T=mg\\cos\\theta+ml\\dot\\theta^2$.",
+  "ru": "**Множители Лагранжа.** Если нужно найти силу связи, связь не исключают, а оставляют как условие $f(q)=0$ и записывают $L+\\lambda f$. Для каждой координаты $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q_i}-\\frac{\\partial L}{\\partial q_i}=\\lambda\\frac{\\partial f}{\\partial q_i}$; правая часть — обобщённая составляющая силы связи. Например, для маятника при $f=r-l$ $\\lambda=-T$ — натяжение нити: $T=mg\\cos\\theta+ml\\dot\\theta^2$.",
+  "en": "**Lagrange multipliers.** If a constraint force is needed, the constraint is not eliminated but kept as a condition $f(q)=0$, and one writes $L+\\lambda f$. For each coordinate $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q_i}-\\frac{\\partial L}{\\partial q_i}=\\lambda\\frac{\\partial f}{\\partial q_i}$; the right-hand side is the generalized component of the constraint force. For a pendulum with $f=r-l$, $\\lambda=-T$ — the string tension: $T=mg\\cos\\theta+ml\\dot\\theta^2$."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q_i}-\\frac{\\partial L}{\\partial q_i}=\\lambda\\frac{\\partial f}{\\partial q_i},\\qquad T=mg\\cos\\theta+ml\\dot\\theta^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Nopotensial kuchlar.** Ishqalanish kabi kuchlar uchun $L$ yetarli emas: tenglamaning o'ng tomoniga umumlashgan kuch $Q_i=\\sum\\vec F\\cdot\\frac{\\partial\\vec r}{\\partial q_i}$ qo'shiladi. Qovushoq ishqalanish $F=-b\\dot x$ uchun $m\\ddot x+b\\dot x+kx=0$ (B2-L07). Qiziq fakt: $L=e^{\\gamma t}\\left(\\frac{1}{2}m\\dot x^2-\\frac{1}{2}kx^2\\right)$ ham aynan shu tenglamani beradi ($\\gamma=\\frac{b}{m}$).",
+  "ru": "**Непотенциальные силы.** Для сил вроде трения одной $L$ недостаточно: в правую часть уравнения добавляется обобщённая сила $Q_i=\\sum\\vec F\\cdot\\frac{\\partial\\vec r}{\\partial q_i}$. Для вязкого трения $F=-b\\dot x$ получаем $m\\ddot x+b\\dot x+kx=0$ (B2-L07). Любопытный факт: $L=e^{\\gamma t}\\left(\\frac{1}{2}m\\dot x^2-\\frac{1}{2}kx^2\\right)$ даёт то же самое уравнение ($\\gamma=\\frac{b}{m}$).",
+  "en": "**Non-potential forces.** For forces like friction $L$ alone is not enough: a generalized force $Q_i=\\sum\\vec F\\cdot\\frac{\\partial\\vec r}{\\partial q_i}$ is added to the right-hand side. Viscous friction $F=-b\\dot x$ gives $m\\ddot x+b\\dot x+kx=0$ (B2-L07). A curious fact: $L=e^{\\gamma t}\\left(\\frac{1}{2}m\\dot x^2-\\frac{1}{2}kx^2\\right)$ yields exactly the same equation ($\\gamma=\\frac{b}{m}$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Elektromagnit maydondagi zarra.** Tezlikka bog'liq Lorens kuchi ham Lagranj funksiyasidan olinadi: $L=\\frac{1}{2}mv^2-q\\phi+q\\vec v\\cdot\\vec A$, bu yerda $\\phi$ — skalyar, $\\vec A$ — vektor potensial. Kanonik impuls $\\vec p=m\\vec v+q\\vec A$ — mexanik impulsdan farq qiladi. Masalan, bir jinsli $\\vec B=B\\vec k$ da $\\vec A=Bx\\vec j$ deb tanlasak, $y$ siklik va $p_y=mv_y+qBx$ saqlanadi — bu aylana bo'ylab siklotron harakatini beradi. Bu natija kvant mexanikasida (Landau sathlari) qayta uchraydi.",
+  "ru": "**Частица в электромагнитном поле.** Зависящая от скорости сила Лоренца тоже получается из функции Лагранжа: $L=\\frac{1}{2}mv^2-q\\phi+q\\vec v\\cdot\\vec A$, где $\\phi$ — скалярный, $\\vec A$ — векторный потенциал. Канонический импульс $\\vec p=m\\vec v+q\\vec A$ отличается от механического. Например, в однородном $\\vec B=B\\vec k$ при выборе $\\vec A=Bx\\vec j$ координата $y$ циклическая и сохраняется $p_y=mv_y+qBx$ — это даёт циклотронное движение по окружности. Этот результат снова встретится в квантовой механике (уровни Ландау).",
+  "en": "**A particle in an electromagnetic field.** The velocity-dependent Lorentz force also follows from a Lagrangian: $L=\\frac{1}{2}mv^2-q\\phi+q\\vec v\\cdot\\vec A$, where $\\phi$ is the scalar and $\\vec A$ the vector potential. The canonical momentum $\\vec p=m\\vec v+q\\vec A$ differs from the mechanical one. For example, in a uniform $\\vec B=B\\vec k$ with the choice $\\vec A=Bx\\vec j$, $y$ is cyclic and $p_y=mv_y+qBx$ is conserved — this gives cyclotron motion on a circle. The result reappears in quantum mechanics (Landau levels)."
+ },
+ {
+  "t": "m",
+  "m": "L=\\frac{mv^2}{2}-q\\phi+q\\vec v\\cdot\\vec A,\\qquad \\vec p=m\\vec v+q\\vec A"
+ },
+ {
+  "t": "li",
+  "uz": "**Braxistoxrona.** Ishqalanishsiz egri chiziq bo'ylab tushish vaqti $t=\\int\\frac{ds}{\\sqrt{2gy}}$ eng kichik bo'ladigan chiziq — sikloida (3-bo'lim, [[F07]]). U to'g'ri chiziqdan uzunroq, lekin boshida tik tushib, tezlikni tez oladi. Qizig'i: sikloida tautoxrona ham — undagi tebranishlar davri amplitudaga mutlaqo bog'liq emas.",
+  "ru": "**Брахистохрона.** Кривая, для которой время спуска без трения $t=\\int\\frac{ds}{\\sqrt{2gy}}$ наименьшее, — циклоида (раздел 3, [[F07]]). Она длиннее прямой, но вначале круто опускается и быстро набирает скорость. Интересно, что циклоида ещё и таутохрона — период колебаний по ней совсем не зависит от амплитуды.",
+  "en": "**The brachistochrone.** The curve for which the frictionless descent time $t=\\int\\frac{ds}{\\sqrt{2gy}}$ is least is a cycloid (section 3, [[F07]]). It is longer than a straight line, but it drops steeply at first and gains speed quickly. Interestingly, the cycloid is also a tautochrone — the period of oscillation on it does not depend on the amplitude at all."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L09-F07.png",
+   "ru": "figures/B2-L09-F07-ru.png",
+   "en": "figures/B2-L09-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE usullari va tipik xatolar",
+  "ru": "10. Методы GRE и типичные ошибки",
+  "en": "10. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 1 — tayyor $L$ dan tenglama.** GRE ko'pincha $L$ ni beradi va harakat tenglamasini so'raydi. Ikki hosilani ehtiyotkorlik bilan oling: $\\frac{\\partial L}{\\partial\\dot q}$ ni vaqt bo'yicha differensiallashda $q$ ga bog'liq koeffitsiyentlarni unutmang ($\\frac{d}{dt}(mr^2\\dot\\varphi)=2mr\\dot r\\dot\\varphi+mr^2\\ddot\\varphi$).",
+  "ru": "**Метод 1 — уравнение из готовой $L$.** GRE часто даёт $L$ и спрашивает уравнение движения. Аккуратно возьмите две производные: при дифференцировании $\\frac{\\partial L}{\\partial\\dot q}$ по времени не забудьте коэффициенты, зависящие от $q$ ($\\frac{d}{dt}(mr^2\\dot\\varphi)=2mr\\dot r\\dot\\varphi+mr^2\\ddot\\varphi$).",
+  "en": "**Method 1 — equations from a given $L$.** The GRE often gives $L$ and asks for the equation of motion. Take the two derivatives carefully: when differentiating $\\frac{\\partial L}{\\partial\\dot q}$ with respect to time, do not forget coefficients that depend on $q$ ($\\frac{d}{dt}(mr^2\\dot\\varphi)=2mr\\dot r\\dot\\varphi+mr^2\\ddot\\varphi$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 2 — saqlanishni ko'rish.** Qaysi koordinata $L$ da yo'q — o'sha impuls saqlanadi; $t$ oshkor yo'q — $h$ saqlanadi. Variantlarda «energiya saqlanadi» deyilgan bo'lsa, bog'lanish statsionarligini tekshiring. Kichik tebranishlarda $\\omega^2=\\frac{K}{M}$ ni effektiv bikrlik va effektiv massa orqali o'qing (B2-L07 energiya usuli).",
+  "ru": "**Метод 2 — увидеть сохранение.** Какой координаты нет в $L$ — тот импульс и сохраняется; нет явного $t$ — сохраняется $h$. Если в вариантах сказано «энергия сохраняется», проверьте стационарность связей. При малых колебаниях читайте $\\omega^2=\\frac{K}{M}$ через эффективную жёсткость и эффективную массу (энергетический метод B2-L07).",
+  "en": "**Method 2 — spot the conservation.** Whichever coordinate is missing from $L$, its momentum is conserved; no explicit $t$ — $h$ is conserved. If an option says “energy is conserved”, check whether the constraints are stationary. For small oscillations read off $\\omega^2=\\frac{K}{M}$ through the effective stiffness and effective mass (the energy method of B2-L07)."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) $L=T+U$ yozish. 2) $T$ ni noinersial (aylanuvchi) sistemada yozish va inersial kuchlarni yana alohida qo'shish. 3) $p_\\varphi$ ni to'g'ridan-to'g'ri $L$ ga qo'yish. 4) Siklik koordinatani «nol tezlik» bilan adashtirish — $q$ o'zgaradi, $p$ o'zgarmaydi. 5) Har doim $h=E$ deb hisoblash. 6) Kanonik impulsni ($m\\vec v+q\\vec A$) mexanik impuls deb olish.",
+  "ru": "**Типичные ошибки.** 1) Писать $L=T+U$. 2) Записывать $T$ в неинерциальной (вращающейся) системе и отдельно ещё раз добавлять силы инерции. 3) Подставлять $p_\\varphi$ прямо в $L$. 4) Путать циклическую координату с «нулевой скоростью» — $q$ меняется, $p$ не меняется. 5) Всегда считать $h=E$. 6) Принимать канонический импульс ($m\\vec v+q\\vec A$) за механический.",
+  "en": "**Typical mistakes.** 1) Writing $L=T+U$. 2) Writing $T$ in a non-inertial (rotating) frame and then adding the inertial forces once more. 3) Substituting $p_\\varphi$ directly into $L$. 4) Confusing a cyclic coordinate with “zero velocity” — $q$ changes, $p$ does not. 5) Always assuming $h=E$. 6) Taking the canonical momentum ($m\\vec v+q\\vec A$) for the mechanical momentum."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Erkinlik darajalari",
+    "ru": "Степени свободы",
+    "en": "Degrees of freedom",
+    "m": "s=3N-k"
+   },
+   {
+    "uz": "Lagranj funksiyasi",
+    "ru": "Функция Лагранжа",
+    "en": "Lagrangian",
+    "m": "L=T-U"
+   },
+   {
+    "uz": "Eyler–Lagranj tenglamasi",
+    "ru": "Уравнение Эйлера–Лагранжа",
+    "en": "Euler–Lagrange equation",
+    "m": "\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0"
+   },
+   {
+    "uz": "Ta'sir",
+    "ru": "Действие",
+    "en": "Action",
+    "m": "S=\\int L\\,dt,\\quad \\delta S=0"
+   },
+   {
+    "uz": "Beltrami ayniyati",
+    "ru": "Тождество Бельтрами",
+    "en": "Beltrami identity",
+    "m": "f-y'\\frac{\\partial f}{\\partial y'}=\\mathrm{const}"
+   },
+   {
+    "uz": "Umumlashgan impuls",
+    "ru": "Обобщённый импульс",
+    "en": "Generalized momentum",
+    "m": "p=\\frac{\\partial L}{\\partial\\dot q},\\quad \\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}"
+   },
+   {
+    "uz": "Energiya funksiyasi",
+    "ru": "Функция энергии",
+    "en": "Energy function",
+    "m": "h=\\sum\\dot q\\frac{\\partial L}{\\partial\\dot q}-L,\\quad \\frac{dh}{dt}=-\\frac{\\partial L}{\\partial t}"
+   },
+   {
+    "uz": "Statsionar bog'lanishlar",
+    "ru": "Стационарные связи",
+    "en": "Stationary constraints",
+    "m": "h=T+U=E"
+   },
+   {
+    "uz": "Qutb koordinatalari",
+    "ru": "Полярные координаты",
+    "en": "Polar coordinates",
+    "m": "L=\\frac{m}{2}(\\dot r^2+r^2\\dot\\varphi^2)-U(r)"
+   },
+   {
+    "uz": "Harakatlanuvchi pona",
+    "ru": "Подвижный клин",
+    "en": "Movable wedge",
+    "m": "A=\\frac{mg\\sin\\alpha\\cos\\alpha}{M+m\\sin^2\\alpha}"
+   },
+   {
+    "uz": "Aylanuvchi halqa",
+    "ru": "Вращающееся кольцо",
+    "en": "Rotating hoop",
+    "m": "\\cos\\theta_0=\\frac{g}{\\Omega^2R}"
+   },
+   {
+    "uz": "Kichik tebranishlar",
+    "ru": "Малые колебания",
+    "en": "Small oscillations",
+    "m": "\\det(K-\\omega^2M)=0"
+   },
+   {
+    "uz": "Qo'sh mayatnik",
+    "ru": "Двойной маятник",
+    "en": "Double pendulum",
+    "m": "\\omega^2=(2\\mp\\sqrt{2})\\frac{g}{l}"
+   },
+   {
+    "uz": "Aylanuvchi sistema",
+    "ru": "Вращающаяся система",
+    "en": "Rotating frame",
+    "m": "L=\\frac{m}{2}|\\vec v+\\vec\\Omega\\times\\vec r|^2-U"
+   },
+   {
+    "uz": "Lagranj ko'paytuvchisi",
+    "ru": "Множитель Лагранжа",
+    "en": "Lagrange multiplier",
+    "m": "\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=\\lambda\\frac{\\partial f}{\\partial q}"
+   },
+   {
+    "uz": "EM maydondagi zarra",
+    "ru": "Частица в ЭМ поле",
+    "en": "Particle in an EM field",
+    "m": "L=\\frac{mv^2}{2}-q\\phi+q\\vec v\\cdot\\vec A,\\quad \\vec p=m\\vec v+q\\vec A"
+   }
+  ]
+ }
+]

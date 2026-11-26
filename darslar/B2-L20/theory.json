@@ -1,0 +1,601 @@
+[
+ {
+  "t": "h1",
+  "uz": "Maksvell tenglamalari (Maxwell's equations)",
+  "ru": "Уравнения Максвелла",
+  "en": "Maxwell's equations"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz Amper teoremasining o'zgaruvchan toklardagi ziddiyatini va uni siljish toki qanday hal qilishini tushuntirasiz; to'rtta Maksvell tenglamasini integral va differensial ko'rinishda yozasiz va har birining fizik ma'nosini aytasiz; divergensiya va rotorni hisoblab, maydondan zaryad va tok zichligini topasiz; moddadagi tenglamalarni qo'llaysiz; zaryad saqlanishini va o'tkazgichdagi relaksatsiyani tenglamalardan keltirib chiqarasiz; to'lqin tenglamasini olib, yorug'lik tezligini hisoblaysiz; ikki muhit chegarasidagi shartlarni yozasiz; potensiallar va kalibrlashni ishlatasiz; skin-qatlam qalinligini baholaysiz.",
+  "ru": "**Цель.** После урока вы будете объяснять противоречие теоремы о циркуляции для переменных токов и то, как его снимает ток смещения; записывать четыре уравнения Максвелла в интегральной и дифференциальной форме и называть физический смысл каждого; вычислять дивергенцию и ротор и находить по полю плотности заряда и тока; применять уравнения в веществе; выводить из уравнений закон сохранения заряда и релаксацию в проводнике; получать волновое уравнение и вычислять скорость света; записывать условия на границе двух сред; использовать потенциалы и калибровку; оценивать толщину скин-слоя.",
+  "en": "**Goal.** After this lesson you will explain the contradiction in Ampère's law for changing currents and how the displacement current resolves it; write the four Maxwell equations in integral and differential form and state the physical meaning of each; compute divergence and curl and find charge and current densities from a field; use the equations in matter; derive charge conservation and relaxation in a conductor from the equations; obtain the wave equation and compute the speed of light; write the boundary conditions between two media; use potentials and gauge transformations; and estimate the skin depth."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L12–L17 darslarida elektr va magnit maydonlar uchun to'rtta qonunni alohida o'rgandik: Gauss teoremasi, magnit monopol yo'qligi, Faradey qonuni va Amper teoremasi. B2-L14 va B2-L19 da ularni moddaga ko'chirdik. Maksvell (1865) bu qonunlar birgalikda qarama-qarshilikka olib kelishini payqadi va Amper teoremasiga yangi had — siljish tokini qo'shdi. Natijada to'rt tenglama yopiq tizimga aylandi: ular barcha klassik elektromagnit hodisalarni tavsiflaydi va yorug'lik elektromagnit to'lqin ekanini bashorat qiladi. GRE da siljish toki, tenglamalarning ma'nosi, monopol bo'lsa nima o'zgarishi va skin-effekt savollari uchraydi.",
+  "ru": "На уроках B2-L12–L17 мы по отдельности изучили четыре закона для электрического и магнитного полей: теорему Гаусса, отсутствие магнитных монополей, закон Фарадея и теорему о циркуляции. В B2-L14 и B2-L19 мы перенесли их на вещество. Максвелл (1865) заметил, что вместе эти законы приводят к противоречию, и добавил в теорему о циркуляции новый член — ток смещения. В результате четыре уравнения образовали замкнутую систему: они описывают все классические электромагнитные явления и предсказывают, что свет — электромагнитная волна. На GRE встречаются вопросы о токе смещения, смысле уравнений, о том, что изменилось бы при существовании монополя, и о скин-эффекте.",
+  "en": "In lessons B2-L12–L17 we studied four laws for the electric and magnetic fields separately: Gauss's law, the absence of magnetic monopoles, Faraday's law and Ampère's law. In B2-L14 and B2-L19 we carried them over to matter. Maxwell (1865) noticed that together these laws lead to a contradiction and added a new term to Ampère's law — the displacement current. As a result the four equations became a closed system: they describe all classical electromagnetic phenomena and predict that light is an electromagnetic wave. On the GRE you meet questions on the displacement current, the meaning of the equations, what would change if monopoles existed, and the skin effect."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Siljish toki",
+  "ru": "1. Ток смещения",
+  "en": "1. The displacement current"
+ },
+ {
+  "t": "li",
+  "uz": "**Ziddiyat.** Kondensator $I$ tok bilan zaryadlanmoqda. Simni o'rab olgan kontur uchun Amper teoremasi $\\oint\\vec B\\cdot d\\vec l=\\mu_0I$ ni beradi — bu yerda $I$ — kontur bilan chegaralangan istalgan sirtni kesib o'tuvchi tok. Agar sirt simni kesib o'tsa (1-sirt), tok $I$; agar u qoplamalar orasidan o'tadigan «xalta» bo'lsa (2-sirt), uni hech qanday tok kesmaydi va natija $0$. Bitta kontur uchun ikki xil javob — Amper teoremasi o'zgaruvchan toklarda noto'liq. Differensial ko'rinishda ham shu: $\\nabla\\cdot\\left(\\nabla\\times\\vec B\\right)=0$ bo'lgani uchun $\\nabla\\cdot\\vec J=0$ chiqadi, lekin zaryadlanayotgan qoplamada $\\nabla\\cdot\\vec J=-\\frac{\\partial\\rho}{\\partial t}\\neq0$.",
+  "ru": "**Противоречие.** Конденсатор заряжается током $I$. Для контура, охватывающего провод, теорема о циркуляции даёт $\\oint\\vec B\\cdot d\\vec l=\\mu_0I$ — здесь $I$ — ток через любую поверхность, натянутую на контур. Если поверхность пересекает провод (поверхность 1), ток равен $I$; если это «мешок», проходящий между обкладками (поверхность 2), его не пересекает никакой ток и результат $0$. Два разных ответа для одного контура — теорема о циркуляции для переменных токов неполна. То же в дифференциальной форме: так как $\\nabla\\cdot\\left(\\nabla\\times\\vec B\\right)=0$, получается $\\nabla\\cdot\\vec J=0$, но на заряжающейся обкладке $\\nabla\\cdot\\vec J=-\\frac{\\partial\\rho}{\\partial t}\\neq0$.",
+  "en": "**The contradiction.** A capacitor is being charged by a current $I$. For a loop around the wire, Ampère's law gives $\\oint\\vec B\\cdot d\\vec l=\\mu_0I$, where $I$ is the current through any surface bounded by the loop. If the surface cuts the wire (surface 1) the current is $I$; if it is a “bag” passing between the plates (surface 2), no current crosses it and the result is $0$. Two different answers for one loop — Ampère's law is incomplete for changing currents. The same in differential form: since $\\nabla\\cdot\\left(\\nabla\\times\\vec B\\right)=0$, it gives $\\nabla\\cdot\\vec J=0$, but on a charging plate $\\nabla\\cdot\\vec J=-\\frac{\\partial\\rho}{\\partial t}\\neq0$."
+ },
+ {
+  "t": "li",
+  "uz": "**Maksvell yechimi.** Qoplamalar orasida tok yo'q, lekin elektr maydon o'zgaradi: $E=\\frac{q}{\\varepsilon_0A}$, demak elektr oqim $\\Phi_E=EA=\\frac{q}{\\varepsilon_0}$ va $\\varepsilon_0\\frac{d\\Phi_E}{dt}=\\frac{dq}{dt}=I$. Bu kattalik simdagi tokka aynan teng va 2-sirtdan «o'tadi». Maksvell uni siljish toki deb atadi va Amper teoremasiga qo'shdi — Amper–Maksvell qonuni hosil bo'ladi. Endi ikkala sirt bir xil javob beradi: 1-sirtda faqat o'tkazuvchanlik toki, 2-sirtda faqat siljish toki, yig'indisi ikkalasida ham $I$.",
+  "ru": "**Решение Максвелла.** Между обкладками тока нет, но электрическое поле меняется: $E=\\frac{q}{\\varepsilon_0A}$, значит электрический поток $\\Phi_E=EA=\\frac{q}{\\varepsilon_0}$ и $\\varepsilon_0\\frac{d\\Phi_E}{dt}=\\frac{dq}{dt}=I$. Эта величина в точности равна току в проводе и «проходит» через поверхность 2. Максвелл назвал её током смещения и добавил в теорему о циркуляции — получается закон Ампера–Максвелла. Теперь обе поверхности дают один ответ: через поверхность 1 течёт только ток проводимости, через поверхность 2 — только ток смещения, сумма в обоих случаях $I$.",
+  "en": "**Maxwell's resolution.** There is no current between the plates, but the electric field changes: $E=\\frac{q}{\\varepsilon_0A}$, so the electric flux is $\\Phi_E=EA=\\frac{q}{\\varepsilon_0}$ and $\\varepsilon_0\\frac{d\\Phi_E}{dt}=\\frac{dq}{dt}=I$. This quantity equals the current in the wire exactly and “passes” through surface 2. Maxwell called it the displacement current and added it to Ampère's law, giving the Ampère–Maxwell law. Now both surfaces give the same answer: through surface 1 only the conduction current flows, through surface 2 only the displacement current, and the total is $I$ in both cases."
+ },
+ {
+  "t": "m",
+  "m": "\\oint\\vec B\\cdot d\\vec l=\\mu_0I+\\mu_0\\varepsilon_0\\frac{d\\Phi_E}{dt},\\qquad I'=\\varepsilon_0\\frac{d\\Phi_E}{dt},\\qquad \\vec J'=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L20-F01.png",
+   "ru": "figures/B2-L20-F01-ru.png",
+   "en": "figures/B2-L20-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Qoplamalar orasidagi magnit maydon.** Radiusi $R$ bo'lgan doiraviy qoplamalar orasida siljish toki bir tekis taqsimlangan. Radiusi $r$ bo'lgan kontur ichida $I'=I\\frac{r^2}{R^2}$, shuning uchun $B=\\frac{\\mu_0Ir}{2\\pi R^2}$ ($r<R$) — xuddi yo'g'on sim ichidagi kabi; $r>R$ da $B=\\frac{\\mu_0I}{2\\pi r}$ — xuddi simning o'zi atrofidagi kabi. Maydon kichik: $I=1\\ \\mathrm{A}$, $R=5\\ \\mathrm{cm}$ da eng katta qiymati $B=\\frac{\\mu_0I}{2\\pi R}=4\\ \\mu\\mathrm{T}$. Shu sababli siljish tokini bevosita o'lchash qiyin; uning eng kuchli tasdig'i — Gerts kashf etgan elektromagnit to'lqinlar.",
+  "ru": "**Магнитное поле между обкладками.** Между круглыми обкладками радиуса $R$ ток смещения распределён равномерно. Внутри контура радиуса $r$ ток $I'=I\\frac{r^2}{R^2}$, поэтому $B=\\frac{\\mu_0Ir}{2\\pi R^2}$ ($r<R$) — как внутри толстого провода; при $r>R$ поле $B=\\frac{\\mu_0I}{2\\pi r}$ — как вокруг самого провода. Поле мало: при $I=1\\ \\mathrm{A}$, $R=5\\ \\mathrm{cm}$ его максимум $B=\\frac{\\mu_0I}{2\\pi R}=4\\ \\mu\\mathrm{T}$. Поэтому ток смещения трудно измерить напрямую; его сильнейшее подтверждение — электромагнитные волны, открытые Герцем.",
+  "en": "**The magnetic field between the plates.** Between circular plates of radius $R$ the displacement current is spread uniformly. Inside a loop of radius $r$ it is $I'=I\\frac{r^2}{R^2}$, so $B=\\frac{\\mu_0Ir}{2\\pi R^2}$ ($r<R$) — as inside a thick wire; for $r>R$ the field is $B=\\frac{\\mu_0I}{2\\pi r}$ — as around the wire itself. The field is small: for $I=1\\ \\mathrm{A}$, $R=5\\ \\mathrm{cm}$ its maximum is $B=\\frac{\\mu_0I}{2\\pi R}=4\\ \\mu\\mathrm{T}$. This is why the displacement current is hard to measure directly; its strongest confirmation is the electromagnetic waves discovered by Hertz."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L20-F02.png",
+   "ru": "figures/B2-L20-F02-ru.png",
+   "en": "figures/B2-L20-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Siljish toki nima emas.** U zaryadlarning harakati emas: vakuumda ham mavjud va faqat $\\vec E$ ning o'zgarishi bilan aniqlanadi. Lekin u magnit maydonni haqiqiy tok kabi hosil qiladi. Dielektrikda $\\vec J'=\\frac{\\partial\\vec D}{\\partial t}=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}+\\frac{\\partial\\vec P}{\\partial t}$ — ikkinchi had (qutblanish toki) bog'langan zaryadlarning haqiqiy siljishi; «siljish» nomi shundan qolgan. Sinusoidal maydonda o'tkazuvchanlik va siljish toklarining nisbati $\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}$: misda $50\\ \\mathrm{Hz}$ da u $\\sim10^{16}$ (siljish tokini hisobga olmasa bo'ladi), vakuumda va izolyatorlarda esa faqat siljish toki qoladi.",
+  "ru": "**Чем ток смещения не является.** Это не движение зарядов: он существует и в вакууме и определяется только изменением $\\vec E$. Но магнитное поле он создаёт так же, как настоящий ток. В диэлектрике $\\vec J'=\\frac{\\partial\\vec D}{\\partial t}=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}+\\frac{\\partial\\vec P}{\\partial t}$ — второй член (ток поляризации) есть реальное смещение связанных зарядов; отсюда и название «смещение». В синусоидальном поле отношение токов проводимости и смещения равно $\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}$: в меди при $50\\ \\mathrm{Hz}$ оно $\\sim10^{16}$ (током смещения можно пренебречь), а в вакууме и изоляторах остаётся только ток смещения.",
+  "en": "**What the displacement current is not.** It is not a motion of charges: it exists in vacuum too and is set only by the change of $\\vec E$. Yet it produces a magnetic field just like a real current. In a dielectric $\\vec J'=\\frac{\\partial\\vec D}{\\partial t}=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}+\\frac{\\partial\\vec P}{\\partial t}$ — the second term (the polarization current) is a real displacement of bound charges, which is where the name comes from. In a sinusoidal field the ratio of conduction to displacement current is $\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}$: in copper at $50\\ \\mathrm{Hz}$ it is $\\sim10^{16}$ (the displacement current can be neglected), while in vacuum and insulators only the displacement current remains."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Maksvell tenglamalari: integral ko'rinish",
+  "ru": "2. Уравнения Максвелла в интегральной форме",
+  "en": "2. Maxwell's equations in integral form"
+ },
+ {
+  "t": "li",
+  "uz": "**To'rt tenglama.** Vakuumda, $Q$ — berk sirt ichidagi zaryad, $I$ — kontur bilan chegaralangan sirtdan o'tuvchi tok bo'lsa:",
+  "ru": "**Четыре уравнения.** В вакууме, где $Q$ — заряд внутри замкнутой поверхности, $I$ — ток через поверхность, натянутую на контур:",
+  "en": "**The four equations.** In vacuum, with $Q$ the charge inside a closed surface and $I$ the current through a surface bounded by the loop:"
+ },
+ {
+  "t": "m",
+  "m": "\\oint\\vec E\\cdot d\\vec A=\\frac{Q}{\\varepsilon_0},\\qquad \\oint\\vec B\\cdot d\\vec A=0"
+ },
+ {
+  "t": "m",
+  "m": "\\oint\\vec E\\cdot d\\vec l=-\\frac{d\\Phi_B}{dt},\\qquad \\oint\\vec B\\cdot d\\vec l=\\mu_0I+\\mu_0\\varepsilon_0\\frac{d\\Phi_E}{dt}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ma'nosi.** 1) Gauss teoremasi: elektr maydon manbalari — zaryadlar, chiziqlar musbat zaryaddan boshlanib manfiyda tugaydi. 2) Magnit zaryad (monopol) yo'q: $\\vec B$ chiziqlari berk, istalgan berk sirtdan oqim nol. 3) Faradey qonuni: o'zgaruvchan magnit oqim uyurmali elektr maydon hosil qiladi; minus ishorasi — Lens qoidasi. 4) Amper–Maksvell qonuni: magnit maydonni toklar va o'zgaruvchan elektr maydon hosil qiladi. Ularga Lorents kuchi $\\vec F=q\\left(\\vec E+\\vec v\\times\\vec B\\right)$ qo'shilsa, klassik elektrodinamika to'liq bo'ladi: maydonlar zaryadlarni harakatlantiradi, zaryadlar maydonlarni hosil qiladi.",
+  "ru": "**Смысл.** 1) Теорема Гаусса: источники электрического поля — заряды, линии начинаются на положительных зарядах и кончаются на отрицательных. 2) Магнитных зарядов (монополей) нет: линии $\\vec B$ замкнуты, поток через любую замкнутую поверхность равен нулю. 3) Закон Фарадея: переменный магнитный поток создаёт вихревое электрическое поле; знак минус — правило Ленца. 4) Закон Ампера–Максвелла: магнитное поле создают токи и переменное электрическое поле. Если добавить силу Лоренца $\\vec F=q\\left(\\vec E+\\vec v\\times\\vec B\\right)$, классическая электродинамика становится полной: поля движут заряды, заряды создают поля.",
+  "en": "**Meaning.** 1) Gauss's law: the sources of the electric field are charges; lines start on positive charges and end on negative ones. 2) There are no magnetic charges (monopoles): the lines of $\\vec B$ are closed and the flux through any closed surface is zero. 3) Faraday's law: a changing magnetic flux creates a vortex electric field; the minus sign is Lenz's rule. 4) The Ampère–Maxwell law: a magnetic field is created by currents and by a changing electric field. Adding the Lorentz force $\\vec F=q\\left(\\vec E+\\vec v\\times\\vec B\\right)$ makes classical electrodynamics complete: fields move charges and charges create fields."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L20-F03.png",
+   "ru": "figures/B2-L20-F03-ru.png",
+   "en": "figures/B2-L20-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Simmetriya.** Zaryad va tok bo'lmagan joyda tenglamalar deyarli simmetrik: o'zgaruvchan $\\vec B$ uyurmali $\\vec E$ ni, o'zgaruvchan $\\vec E$ uyurmali $\\vec B$ ni hosil qiladi. Aynan shu o'zaro hosil qilish maydonning manbadan ajralib, to'lqin bo'lib tarqalishiga imkon beradi (6-bo'lim). Ishoralar farqi muhim: Faradey qonunida minus, Amper–Maksvell qonunida plyus — aks holda maydon o'z-o'zidan cheksiz kuchayib ketardi. Kontur aylanish yo'nalishi va sirt normali o'ng parma qoidasi bilan bog'langan.",
+  "ru": "**Симметрия.** Там, где нет зарядов и токов, уравнения почти симметричны: переменное $\\vec B$ создаёт вихревое $\\vec E$, переменное $\\vec E$ создаёт вихревое $\\vec B$. Именно это взаимное порождение позволяет полю оторваться от источника и распространяться волной (раздел 6). Важна разница знаков: в законе Фарадея минус, в законе Ампера–Максвелла плюс — иначе поле неограниченно усиливалось бы само. Направление обхода контура и нормаль к поверхности связаны правилом правого винта.",
+  "en": "**Symmetry.** Where there are no charges or currents the equations are nearly symmetric: a changing $\\vec B$ creates a vortex $\\vec E$, and a changing $\\vec E$ creates a vortex $\\vec B$. This mutual generation is what lets the field detach from its source and travel as a wave (section 6). The difference in signs matters: a minus in Faraday's law and a plus in the Ampère–Maxwell law — otherwise the field would grow without bound by itself. The sense of the loop and the normal of the surface are related by the right-hand rule."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Differensial ko'rinish",
+  "ru": "3. Дифференциальная форма",
+  "en": "3. Differential form"
+ },
+ {
+  "t": "li",
+  "uz": "**Gauss va Stoks teoremalari.** Berk sirt bo'yicha oqim hajm bo'yicha divergensiya integraliga teng: $\\oint\\vec F\\cdot d\\vec A=\\int\\nabla\\cdot\\vec F\\,dV$; kontur bo'yicha sirkulyatsiya sirt bo'yicha rotor oqimiga teng: $\\oint\\vec F\\cdot d\\vec l=\\int\\left(\\nabla\\times\\vec F\\right)\\cdot d\\vec A$. Integral tenglamalar istalgan kichik hajm va sirt uchun bajarilgani uchun integral ostidagi ifodalar tenglashadi ($Q=\\int\\rho\\,dV$, $I=\\int\\vec J\\cdot d\\vec A$):",
+  "ru": "**Теоремы Гаусса и Стокса.** Поток через замкнутую поверхность равен интегралу дивергенции по объёму: $\\oint\\vec F\\cdot d\\vec A=\\int\\nabla\\cdot\\vec F\\,dV$; циркуляция по контуру равна потоку ротора через поверхность: $\\oint\\vec F\\cdot d\\vec l=\\int\\left(\\nabla\\times\\vec F\\right)\\cdot d\\vec A$. Поскольку интегральные уравнения выполняются для любых малых объёмов и поверхностей, равны подынтегральные выражения ($Q=\\int\\rho\\,dV$, $I=\\int\\vec J\\cdot d\\vec A$):",
+  "en": "**The Gauss and Stokes theorems.** The flux through a closed surface equals the volume integral of the divergence: $\\oint\\vec F\\cdot d\\vec A=\\int\\nabla\\cdot\\vec F\\,dV$; the circulation around a loop equals the flux of the curl through the surface: $\\oint\\vec F\\cdot d\\vec l=\\int\\left(\\nabla\\times\\vec F\\right)\\cdot d\\vec A$. Since the integral equations hold for any small volume and surface, the integrands are equal ($Q=\\int\\rho\\,dV$, $I=\\int\\vec J\\cdot d\\vec A$):"
+ },
+ {
+  "t": "m",
+  "m": "\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0},\\qquad \\nabla\\cdot\\vec B=0"
+ },
+ {
+  "t": "m",
+  "m": "\\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t},\\qquad \\nabla\\times\\vec B=\\mu_0\\vec J+\\mu_0\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}"
+ },
+ {
+  "t": "li",
+  "uz": "**Divergensiya va rotor.** Divergensiya — nuqtadagi «manba» kuchi: undan chiqayotgan oqimning birlik hajmga nisbati. Rotor — nuqta atrofidagi «uyurma»: kichik kontur bo'yicha sirkulyatsiyaning yuzaga nisbati. Nuqtaviy zaryad maydoni radial: zaryaddan tashqarida divergensiyasi ham, rotori ham nol. Elektrostatik maydon faqat manbali ($\\nabla\\times\\vec E=0$), magnit maydon faqat uyurmali ($\\nabla\\cdot\\vec B=0$); induksiyalangan elektr maydon ham uyurmali.",
+  "ru": "**Дивергенция и ротор.** Дивергенция — мощность «источника» в точке: отношение выходящего потока к единице объёма. Ротор — «вихрь» вокруг точки: отношение циркуляции по малому контуру к его площади. Поле точечного заряда радиально: вне заряда и дивергенция, и ротор равны нулю. Электростатическое поле только истоковое ($\\nabla\\times\\vec E=0$), магнитное — только вихревое ($\\nabla\\cdot\\vec B=0$); индуцированное электрическое поле тоже вихревое.",
+  "en": "**Divergence and curl.** The divergence is the strength of the “source” at a point: the outgoing flux per unit volume. The curl is the “swirl” around a point: the circulation around a small loop per unit area. The field of a point charge is radial: outside the charge both its divergence and its curl are zero. The electrostatic field has sources only ($\\nabla\\times\\vec E=0$), the magnetic field has swirl only ($\\nabla\\cdot\\vec B=0$); the induced electric field is also a vortex field."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L20-F04.png",
+   "ru": "figures/B2-L20-F04-ru.png",
+   "en": "figures/B2-L20-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Misollar.** 1) Bir tekis zaryadlangan shar ichida $\\vec E=k\\vec r$: $\\nabla\\cdot\\vec E=3k$, demak $\\rho=3\\varepsilon_0k$. 2) Sim ichidagi maydon $\\vec B=b\\left(-y\\hat x+x\\hat y\\right)$ (aylana chiziqlar, $B=br$): $\\nabla\\times\\vec B=2b\\hat z$, demak $\\vec J=\\frac{2b}{\\mu_0}\\hat z$ — bir tekis tok. 3) $\\vec E=E_0\\cos\\left(kz-\\omega t\\right)\\hat x$: $\\nabla\\cdot\\vec E=0$ — zaryad yo'q, $\\nabla\\times\\vec E=-kE_0\\sin\\left(kz-\\omega t\\right)\\hat y$ — demak $\\vec B$ vaqt bo'yicha o'zgaradi va $\\hat y$ yo'nalishida.",
+  "ru": "**Примеры.** 1) Внутри равномерно заряженного шара $\\vec E=k\\vec r$: $\\nabla\\cdot\\vec E=3k$, значит $\\rho=3\\varepsilon_0k$. 2) Поле внутри провода $\\vec B=b\\left(-y\\hat x+x\\hat y\\right)$ (линии — окружности, $B=br$): $\\nabla\\times\\vec B=2b\\hat z$, значит $\\vec J=\\frac{2b}{\\mu_0}\\hat z$ — однородный ток. 3) $\\vec E=E_0\\cos\\left(kz-\\omega t\\right)\\hat x$: $\\nabla\\cdot\\vec E=0$ — зарядов нет, $\\nabla\\times\\vec E=-kE_0\\sin\\left(kz-\\omega t\\right)\\hat y$ — значит $\\vec B$ меняется во времени и направлено по $\\hat y$.",
+  "en": "**Examples.** 1) Inside a uniformly charged sphere $\\vec E=k\\vec r$: $\\nabla\\cdot\\vec E=3k$, so $\\rho=3\\varepsilon_0k$. 2) The field inside a wire $\\vec B=b\\left(-y\\hat x+x\\hat y\\right)$ (circular lines, $B=br$): $\\nabla\\times\\vec B=2b\\hat z$, so $\\vec J=\\frac{2b}{\\mu_0}\\hat z$ — a uniform current. 3) $\\vec E=E_0\\cos\\left(kz-\\omega t\\right)\\hat x$: $\\nabla\\cdot\\vec E=0$ — no charge, and $\\nabla\\times\\vec E=-kE_0\\sin\\left(kz-\\omega t\\right)\\hat y$ — so $\\vec B$ changes in time and points along $\\hat y$."
+ },
+ {
+  "t": "li",
+  "uz": "**Nechta tenglama?** Ikki vektor tenglama va ikki skalyar tenglama — jami sakkizta, noma'lum esa oltita ($\\vec E$ va $\\vec B$ tashkil etuvchilari). Ziddiyat yo'q: divergensiya tenglamalari boshlang'ich shart rolini o'ynaydi — agar ular bir paytda bajarilsa, rotor tenglamalari va zaryad saqlanishi ularni keyingi barcha paytlarda saqlaydi. Masalan, Faradey qonunining divergensiyasidan $\\frac{\\partial}{\\partial t}\\left(\\nabla\\cdot\\vec B\\right)=0$.",
+  "ru": "**Сколько уравнений?** Два векторных и два скалярных уравнения — всего восемь, а неизвестных шесть (компоненты $\\vec E$ и $\\vec B$). Противоречия нет: уравнения для дивергенций играют роль начальных условий — если они выполнены в один момент, уравнения для роторов и сохранение заряда сохраняют их во все последующие моменты. Например, из дивергенции закона Фарадея $\\frac{\\partial}{\\partial t}\\left(\\nabla\\cdot\\vec B\\right)=0$.",
+  "en": "**How many equations?** Two vector and two scalar equations make eight, but there are only six unknowns (the components of $\\vec E$ and $\\vec B$). There is no contradiction: the divergence equations act as initial conditions — if they hold at one moment, the curl equations and charge conservation keep them true at all later moments. For example, taking the divergence of Faraday's law gives $\\frac{\\partial}{\\partial t}\\left(\\nabla\\cdot\\vec B\\right)=0$."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Moddadagi Maksvell tenglamalari",
+  "ru": "4. Уравнения Максвелла в веществе",
+  "en": "4. Maxwell's equations in matter"
+ },
+ {
+  "t": "li",
+  "uz": "**Erkin va bog'langan manbalar.** Moddada zaryadlar erkin (o'tkazgichdagi elektronlar, ionlar) va bog'langan bo'ladi. Bog'langan zaryad zichligi $-\\nabla\\cdot\\vec P$, magnitlanish toki $\\nabla\\times\\vec M$, qutblanish toki $\\frac{\\partial\\vec P}{\\partial t}$ (B2-L14, B2-L19). Ularni $\\vec D=\\varepsilon_0\\vec E+\\vec P$ va $\\vec H=\\frac{\\vec B}{\\mu_0}-\\vec M$ ichiga yashirsak, tenglamalarda faqat erkin zaryad zichligi $\\rho$ va erkin tok zichligi $\\vec J$ qoladi:",
+  "ru": "**Свободные и связанные источники.** В веществе заряды бывают свободными (электроны в проводнике, ионы) и связанными. Плотность связанных зарядов $-\\nabla\\cdot\\vec P$, ток намагничивания $\\nabla\\times\\vec M$, ток поляризации $\\frac{\\partial\\vec P}{\\partial t}$ (B2-L14, B2-L19). Если спрятать их в $\\vec D=\\varepsilon_0\\vec E+\\vec P$ и $\\vec H=\\frac{\\vec B}{\\mu_0}-\\vec M$, в уравнениях остаются только плотность свободных зарядов $\\rho$ и плотность свободного тока $\\vec J$:",
+  "en": "**Free and bound sources.** In matter charges are either free (electrons in a conductor, ions) or bound. The bound charge density is $-\\nabla\\cdot\\vec P$, the magnetization current $\\nabla\\times\\vec M$ and the polarization current $\\frac{\\partial\\vec P}{\\partial t}$ (B2-L14, B2-L19). Hiding them inside $\\vec D=\\varepsilon_0\\vec E+\\vec P$ and $\\vec H=\\frac{\\vec B}{\\mu_0}-\\vec M$ leaves only the free charge density $\\rho$ and the free current density $\\vec J$ in the equations:"
+ },
+ {
+  "t": "m",
+  "m": "\\nabla\\cdot\\vec D=\\rho,\\qquad \\nabla\\cdot\\vec B=0,\\qquad \\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t},\\qquad \\nabla\\times\\vec H=\\vec J+\\frac{\\partial\\vec D}{\\partial t}"
+ },
+ {
+  "t": "li",
+  "uz": "**Moddiy tenglamalar.** Tizim yopiq bo'lishi uchun $\\vec D$, $\\vec H$, $\\vec J$ ni $\\vec E$ va $\\vec B$ bilan bog'lash kerak. Chiziqli izotrop muhitda bu uchta tenglama: dielektrik singdiruvchanlik $\\varepsilon$, magnit kiruvchanlik $\\mu$ va solishtirma o'tkazuvchanlik $\\sigma$ (Om qonunining differensial ko'rinishi). Faradey qonuni va $\\nabla\\cdot\\vec B=0$ moddada o'zgarmaydi — ularda manba yo'q.",
+  "ru": "**Материальные уравнения.** Чтобы система была замкнутой, нужно связать $\\vec D$, $\\vec H$, $\\vec J$ с $\\vec E$ и $\\vec B$. В линейной изотропной среде это три уравнения: диэлектрическая проницаемость $\\varepsilon$, магнитная проницаемость $\\mu$ и удельная проводимость $\\sigma$ (закон Ома в дифференциальной форме). Закон Фарадея и $\\nabla\\cdot\\vec B=0$ в веществе не меняются — источников в них нет.",
+  "en": "**Constitutive relations.** To close the system, $\\vec D$, $\\vec H$, $\\vec J$ must be related to $\\vec E$ and $\\vec B$. In a linear isotropic medium these are three relations: the relative permittivity $\\varepsilon$, the relative permeability $\\mu$ and the conductivity $\\sigma$ (Ohm's law in differential form). Faraday's law and $\\nabla\\cdot\\vec B=0$ are unchanged in matter — they contain no sources."
+ },
+ {
+  "t": "m",
+  "m": "\\vec D=\\varepsilon_0\\varepsilon\\vec E,\\qquad \\vec B=\\mu_0\\mu\\vec H,\\qquad \\vec J=\\sigma\\vec E"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol — oqib ketuvchi kondensator.** Qoplamalar orasi $\\varepsilon$ va $\\sigma$ li modda bilan to'ldirilgan. Unda ikki tok bor: o'tkazuvchanlik toki $\\sigma E$ va siljish toki $\\varepsilon_0\\varepsilon\\frac{\\partial E}{\\partial t}$; ularning yig'indisi simdagi tokka teng. Chastota $\\omega$ da ular nisbati $\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}$. Dengiz suvi uchun ($\\sigma=4\\ \\mathrm{S/m}$, $\\varepsilon=80$) ikki tok $\\omega=\\frac{\\sigma}{\\varepsilon_0\\varepsilon}\\approx5.6\\cdot10^9\\ \\mathrm{rad/s}$ da ($f\\approx0.9\\ \\mathrm{GHz}$) tenglashadi: past chastotada suv o'tkazgich, yuqorida — dielektrik.",
+  "ru": "**Пример — конденсатор с утечкой.** Пространство между обкладками заполнено веществом с $\\varepsilon$ и $\\sigma$. В нём два тока: ток проводимости $\\sigma E$ и ток смещения $\\varepsilon_0\\varepsilon\\frac{\\partial E}{\\partial t}$; их сумма равна току в проводе. На частоте $\\omega$ их отношение $\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}$. Для морской воды ($\\sigma=4\\ \\mathrm{S/m}$, $\\varepsilon=80$) токи сравниваются при $\\omega=\\frac{\\sigma}{\\varepsilon_0\\varepsilon}\\approx5.6\\cdot10^9\\ \\mathrm{rad/s}$ ($f\\approx0.9\\ \\mathrm{GHz}$): на низких частотах вода — проводник, на высоких — диэлектрик.",
+  "en": "**Example — a leaky capacitor.** The space between the plates is filled with a material of $\\varepsilon$ and $\\sigma$. Two currents flow in it: the conduction current $\\sigma E$ and the displacement current $\\varepsilon_0\\varepsilon\\frac{\\partial E}{\\partial t}$; their sum equals the current in the wire. At frequency $\\omega$ their ratio is $\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}$. For sea water ($\\sigma=4\\ \\mathrm{S/m}$, $\\varepsilon=80$) the two are equal at $\\omega=\\frac{\\sigma}{\\varepsilon_0\\varepsilon}\\approx5.6\\cdot10^9\\ \\mathrm{rad/s}$ ($f\\approx0.9\\ \\mathrm{GHz}$): at low frequencies water is a conductor, at high ones a dielectric."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Zaryad saqlanishi va relaksatsiya",
+  "ru": "5. Сохранение заряда и релаксация",
+  "en": "5. Charge conservation and relaxation"
+ },
+ {
+  "t": "li",
+  "uz": "**Uzluksizlik tenglamasi tenglamalarning ichida.** Amper–Maksvell qonunining divergensiyasini olamiz: chap tomonda $\\nabla\\cdot\\left(\\nabla\\times\\vec B\\right)=0$, o'ngda Gauss teoremasi bo'yicha $\\mu_0\\nabla\\cdot\\vec J+\\mu_0\\varepsilon_0\\frac{\\partial}{\\partial t}\\left(\\nabla\\cdot\\vec E\\right)=\\mu_0\\left(\\nabla\\cdot\\vec J+\\frac{\\partial\\rho}{\\partial t}\\right)$. Demak zaryad saqlanishi Maksvell tenglamalaridan kelib chiqadi — aynan siljish toki tufayli. Usiz tenglamalar faqat $\\frac{\\partial\\rho}{\\partial t}=0$ bo'lgan holga yaroqli bo'lardi.",
+  "ru": "**Уравнение непрерывности внутри уравнений.** Возьмём дивергенцию закона Ампера–Максвелла: слева $\\nabla\\cdot\\left(\\nabla\\times\\vec B\\right)=0$, справа по теореме Гаусса $\\mu_0\\nabla\\cdot\\vec J+\\mu_0\\varepsilon_0\\frac{\\partial}{\\partial t}\\left(\\nabla\\cdot\\vec E\\right)=\\mu_0\\left(\\nabla\\cdot\\vec J+\\frac{\\partial\\rho}{\\partial t}\\right)$. Значит, сохранение заряда следует из уравнений Максвелла — именно благодаря току смещения. Без него уравнения годились бы только для случая $\\frac{\\partial\\rho}{\\partial t}=0$.",
+  "en": "**The continuity equation is built in.** Take the divergence of the Ampère–Maxwell law: the left side gives $\\nabla\\cdot\\left(\\nabla\\times\\vec B\\right)=0$, the right side, by Gauss's law, $\\mu_0\\nabla\\cdot\\vec J+\\mu_0\\varepsilon_0\\frac{\\partial}{\\partial t}\\left(\\nabla\\cdot\\vec E\\right)=\\mu_0\\left(\\nabla\\cdot\\vec J+\\frac{\\partial\\rho}{\\partial t}\\right)$. So charge conservation follows from Maxwell's equations — precisely because of the displacement current. Without it the equations would only hold when $\\frac{\\partial\\rho}{\\partial t}=0$."
+ },
+ {
+  "t": "m",
+  "m": "\\nabla\\cdot\\vec J+\\frac{\\partial\\rho}{\\partial t}=0"
+ },
+ {
+  "t": "li",
+  "uz": "**O'tkazgich ichidagi zaryad.** O'tkazgich ichiga ortiqcha zaryad kiritilsa, $\\vec J=\\sigma\\vec E$ va $\\nabla\\cdot\\vec D=\\rho$ dan $\\nabla\\cdot\\vec J=\\frac{\\sigma\\rho}{\\varepsilon_0\\varepsilon}$, uzluksizlik tenglamasi esa $\\frac{\\partial\\rho}{\\partial t}=-\\frac{\\sigma}{\\varepsilon_0\\varepsilon}\\rho$ ni beradi. Zaryad zichligi har bir nuqtada eksponensial kamayadi — jism shaklidan qat'i nazar; zaryad sirtga chiqib ketadi.",
+  "ru": "**Заряд внутри проводника.** Если внутрь проводника внести избыточный заряд, из $\\vec J=\\sigma\\vec E$ и $\\nabla\\cdot\\vec D=\\rho$ следует $\\nabla\\cdot\\vec J=\\frac{\\sigma\\rho}{\\varepsilon_0\\varepsilon}$, а уравнение непрерывности даёт $\\frac{\\partial\\rho}{\\partial t}=-\\frac{\\sigma}{\\varepsilon_0\\varepsilon}\\rho$. Плотность заряда в каждой точке убывает экспоненциально — независимо от формы тела; заряд уходит на поверхность.",
+  "en": "**Charge inside a conductor.** If excess charge is placed inside a conductor, $\\vec J=\\sigma\\vec E$ and $\\nabla\\cdot\\vec D=\\rho$ give $\\nabla\\cdot\\vec J=\\frac{\\sigma\\rho}{\\varepsilon_0\\varepsilon}$, and the continuity equation gives $\\frac{\\partial\\rho}{\\partial t}=-\\frac{\\sigma}{\\varepsilon_0\\varepsilon}\\rho$. The charge density decays exponentially at every point — whatever the shape of the body; the charge moves out to the surface."
+ },
+ {
+  "t": "m",
+  "m": "\\rho(t)=\\rho_0e^{-\\frac{t}{\\tau}},\\qquad \\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L20-F05.png",
+   "ru": "figures/B2-L20-F05-ru.png",
+   "en": "figures/B2-L20-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Kattaliklar.** Dengiz suvi: $\\tau=\\frac{80\\cdot8.85\\cdot10^{-12}}{4}\\approx1.8\\cdot10^{-10}\\ \\mathrm{s}$; distillangan suv ($\\sigma\\sim10^{-4}\\ \\mathrm{S/m}$): $\\sim10^{-5}\\ \\mathrm{s}$; shisha ($\\sigma\\sim10^{-12}\\ \\mathrm{S/m}$, $\\varepsilon\\approx5$): $\\sim40\\ \\mathrm{s}$ — shuning uchun shisha tayoqcha zaryadni uzoq saqlaydi. Mis uchun formula $\\sim10^{-19}\\ \\mathrm{s}$ beradi, lekin bu elektronlarning to'qnashuvlar orasidagi vaqtidan ($\\sim10^{-14}\\ \\mathrm{s}$) kichik — bunday tez jarayonlarda Om qonuni yaroqsiz; amalda yaxshi o'tkazgichlarda relaksatsiya shu to'qnashuv vaqti tartibida.",
+  "ru": "**Порядки величин.** Морская вода: $\\tau=\\frac{80\\cdot8.85\\cdot10^{-12}}{4}\\approx1.8\\cdot10^{-10}\\ \\mathrm{s}$; дистиллированная вода ($\\sigma\\sim10^{-4}\\ \\mathrm{S/m}$): $\\sim10^{-5}\\ \\mathrm{s}$; стекло ($\\sigma\\sim10^{-12}\\ \\mathrm{S/m}$, $\\varepsilon\\approx5$): $\\sim40\\ \\mathrm{s}$ — поэтому стеклянная палочка долго держит заряд. Для меди формула даёт $\\sim10^{-19}\\ \\mathrm{s}$, но это меньше времени между столкновениями электронов ($\\sim10^{-14}\\ \\mathrm{s}$) — для столь быстрых процессов закон Ома неприменим; на практике в хороших проводниках релаксация идёт за время порядка этого времени столкновений.",
+  "en": "**Magnitudes.** Sea water: $\\tau=\\frac{80\\cdot8.85\\cdot10^{-12}}{4}\\approx1.8\\cdot10^{-10}\\ \\mathrm{s}$; distilled water ($\\sigma\\sim10^{-4}\\ \\mathrm{S/m}$): $\\sim10^{-5}\\ \\mathrm{s}$; glass ($\\sigma\\sim10^{-12}\\ \\mathrm{S/m}$, $\\varepsilon\\approx5$): $\\sim40\\ \\mathrm{s}$ — which is why a glass rod holds its charge for a long time. For copper the formula gives $\\sim10^{-19}\\ \\mathrm{s}$, but this is shorter than the time between electron collisions ($\\sim10^{-14}\\ \\mathrm{s}$) — Ohm's law fails for such fast processes; in practice relaxation in good conductors takes about that collision time."
+ },
+ {
+  "t": "li",
+  "uz": "**RC o'xshashligi.** Qoplamalari orasi $\\varepsilon$, $\\sigma$ li modda bilan to'ldirilgan yassi kondensatorda $C=\\frac{\\varepsilon_0\\varepsilon A}{d}$, oqish qarshiligi $R=\\frac{d}{\\sigma A}$, demak $RC=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}=\\tau$ — geometriyaga bog'liq emas. Bu natija istalgan shakldagi elektrodlar uchun to'g'ri, chunki $C$ va $\\frac{1}{R}$ bir xil geometrik koeffitsiyent bilan aniqlanadi.",
+  "ru": "**Аналогия с RC.** В плоском конденсаторе, заполненном веществом с $\\varepsilon$, $\\sigma$, ёмкость $C=\\frac{\\varepsilon_0\\varepsilon A}{d}$, сопротивление утечки $R=\\frac{d}{\\sigma A}$, значит $RC=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}=\\tau$ — не зависит от геометрии. Результат верен для электродов любой формы, так как $C$ и $\\frac{1}{R}$ определяются одним и тем же геометрическим множителем.",
+  "en": "**The RC analogy.** For a parallel-plate capacitor filled with a material of $\\varepsilon$, $\\sigma$, the capacitance is $C=\\frac{\\varepsilon_0\\varepsilon A}{d}$ and the leakage resistance $R=\\frac{d}{\\sigma A}$, so $RC=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}=\\tau$ — independent of the geometry. The result holds for electrodes of any shape, because $C$ and $\\frac{1}{R}$ are set by the same geometric factor."
+ },
+ {
+  "t": "h2",
+  "uz": "6. To'lqin tenglamasi va yorug'lik tezligi",
+  "ru": "6. Волновое уравнение и скорость света",
+  "en": "6. The wave equation and the speed of light"
+ },
+ {
+  "t": "li",
+  "uz": "**Keltirib chiqarish.** Zaryad va tok bo'lmagan vakuumda Faradey qonunining rotorini olamiz. $\\nabla\\times\\left(\\nabla\\times\\vec E\\right)=\\nabla\\left(\\nabla\\cdot\\vec E\\right)-\\nabla^2\\vec E=-\\nabla^2\\vec E$, o'ng tomonda esa $-\\frac{\\partial}{\\partial t}\\left(\\nabla\\times\\vec B\\right)=-\\mu_0\\varepsilon_0\\frac{\\partial^2\\vec E}{\\partial t^2}$. $\\vec B$ uchun ham xuddi shunday:",
+  "ru": "**Вывод.** В вакууме без зарядов и токов возьмём ротор закона Фарадея. $\\nabla\\times\\left(\\nabla\\times\\vec E\\right)=\\nabla\\left(\\nabla\\cdot\\vec E\\right)-\\nabla^2\\vec E=-\\nabla^2\\vec E$, а справа $-\\frac{\\partial}{\\partial t}\\left(\\nabla\\times\\vec B\\right)=-\\mu_0\\varepsilon_0\\frac{\\partial^2\\vec E}{\\partial t^2}$. Для $\\vec B$ так же:",
+  "en": "**Derivation.** In vacuum with no charges or currents, take the curl of Faraday's law. $\\nabla\\times\\left(\\nabla\\times\\vec E\\right)=\\nabla\\left(\\nabla\\cdot\\vec E\\right)-\\nabla^2\\vec E=-\\nabla^2\\vec E$, while the right side becomes $-\\frac{\\partial}{\\partial t}\\left(\\nabla\\times\\vec B\\right)=-\\mu_0\\varepsilon_0\\frac{\\partial^2\\vec E}{\\partial t^2}$. The same holds for $\\vec B$:"
+ },
+ {
+  "t": "m",
+  "m": "\\nabla^2\\vec E=\\mu_0\\varepsilon_0\\frac{\\partial^2\\vec E}{\\partial t^2},\\qquad \\nabla^2\\vec B=\\mu_0\\varepsilon_0\\frac{\\partial^2\\vec B}{\\partial t^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tezlik.** Bu tezligi quyidagicha bo'lgan to'lqin tenglamasi. Maksvell bu son o'sha davrda o'lchangan yorug'lik tezligiga mos kelishini ko'rib, yorug'lik elektromagnit to'lqin degan xulosaga keldi. $\\varepsilon_0$ va $\\mu_0$ statik tajribalardan (kondensator, toklar o'zaro ta'siri) o'lchanadi — ular optikadan hech narsa bilmaydi. Muhitda tezlik $\\sqrt{\\varepsilon\\mu}$ marta kichik, $n=\\sqrt{\\varepsilon\\mu}$ — sindirish ko'rsatkichi (yuqori chastotada $\\varepsilon$ statik qiymatidan farq qiladi: suv uchun $\\sqrt{80}\\approx9$, lekin yorug'likda $n=1.33$).",
+  "ru": "**Скорость.** Это волновое уравнение со скоростью, приведённой ниже. Увидев, что это число совпадает с измеренной в то время скоростью света, Максвелл заключил, что свет — электромагнитная волна. $\\varepsilon_0$ и $\\mu_0$ измеряются в статических опытах (конденсатор, взаимодействие токов) — они ничего не знают об оптике. В среде скорость в $\\sqrt{\\varepsilon\\mu}$ раз меньше, $n=\\sqrt{\\varepsilon\\mu}$ — показатель преломления (на высоких частотах $\\varepsilon$ отличается от статического значения: для воды $\\sqrt{80}\\approx9$, но для света $n=1.33$).",
+  "en": "**The speed.** This is a wave equation with the speed given below. Seeing that this number matched the speed of light measured at the time, Maxwell concluded that light is an electromagnetic wave. $\\varepsilon_0$ and $\\mu_0$ are measured in static experiments (capacitors, forces between currents) — they know nothing about optics. In a medium the speed is $\\sqrt{\\varepsilon\\mu}$ times smaller, and $n=\\sqrt{\\varepsilon\\mu}$ is the refractive index (at high frequencies $\\varepsilon$ differs from its static value: for water $\\sqrt{80}\\approx9$, but for light $n=1.33$)."
+ },
+ {
+  "t": "m",
+  "m": "c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}\\approx3.00\\cdot10^8\\ \\mathrm{m/s},\\qquad v=\\frac{c}{\\sqrt{\\varepsilon\\mu}}=\\frac{c}{n}"
+ },
+ {
+  "t": "li",
+  "uz": "**Yassi to'lqin.** $\\vec E=E_0\\cos\\left(kx-\\omega t\\right)\\hat y$ to'lqin tenglamasini $\\omega=ck$ da qanoatlantiradi. Faradey qonunidan: $\\frac{\\partial E_y}{\\partial x}=-\\frac{\\partial B_z}{\\partial t}$, ya'ni $-kE_0\\sin\\left(kx-\\omega t\\right)=-\\omega B_0\\sin\\left(kx-\\omega t\\right)$, demak $\\vec B=B_0\\cos\\left(kx-\\omega t\\right)\\hat z$, $B_0=\\frac{E_0}{c}$. Divergensiya tenglamalaridan to'lqin ko'ndalang: $\\vec E$ va $\\vec B$ tarqalish yo'nalishiga tik, bir-biriga tik, bir fazada, $\\vec E\\times\\vec B$ esa tarqalish yo'nalishida. Batafsil — B2-L21 da.",
+  "ru": "**Плоская волна.** $\\vec E=E_0\\cos\\left(kx-\\omega t\\right)\\hat y$ удовлетворяет волновому уравнению при $\\omega=ck$. Из закона Фарадея: $\\frac{\\partial E_y}{\\partial x}=-\\frac{\\partial B_z}{\\partial t}$, то есть $-kE_0\\sin\\left(kx-\\omega t\\right)=-\\omega B_0\\sin\\left(kx-\\omega t\\right)$, значит $\\vec B=B_0\\cos\\left(kx-\\omega t\\right)\\hat z$, $B_0=\\frac{E_0}{c}$. Из уравнений для дивергенций волна поперечна: $\\vec E$ и $\\vec B$ перпендикулярны направлению распространения и друг другу, колеблются в фазе, а $\\vec E\\times\\vec B$ направлено по распространению. Подробно — в B2-L21.",
+  "en": "**A plane wave.** $\\vec E=E_0\\cos\\left(kx-\\omega t\\right)\\hat y$ satisfies the wave equation when $\\omega=ck$. From Faraday's law, $\\frac{\\partial E_y}{\\partial x}=-\\frac{\\partial B_z}{\\partial t}$, i.e. $-kE_0\\sin\\left(kx-\\omega t\\right)=-\\omega B_0\\sin\\left(kx-\\omega t\\right)$, so $\\vec B=B_0\\cos\\left(kx-\\omega t\\right)\\hat z$ with $B_0=\\frac{E_0}{c}$. The divergence equations make the wave transverse: $\\vec E$ and $\\vec B$ are perpendicular to the direction of travel and to each other, oscillate in phase, and $\\vec E\\times\\vec B$ points along the direction of travel. Details in B2-L21."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L20-F06.png",
+   "ru": "figures/B2-L20-F06-ru.png",
+   "en": "figures/B2-L20-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Umumiy chegaraviy shartlar",
+  "ru": "7. Общие граничные условия",
+  "en": "7. General boundary conditions"
+ },
+ {
+  "t": "li",
+  "uz": "**Keltirib chiqarish.** Chegarani kesib o'tuvchi yupqa silindr («quticha») ga divergensiya tenglamalarini, chegara bo'ylab cho'zilgan ingichka to'g'ri to'rtburchak konturga rotor tenglamalarini qo'llaymiz. Balandlik nolga intilganda yon sirtlar va kontur ichidagi oqimlar yo'qoladi; vaqt bo'yicha hosilali hadlar ($\\frac{\\partial\\vec B}{\\partial t}$, $\\frac{\\partial\\vec D}{\\partial t}$) ham chekli bo'lgani uchun yo'qoladi. Faqat sirtdagi erkin zaryad $\\sigma$ va erkin sirt toki $K$ qoladi:",
+  "ru": "**Вывод.** Применим уравнения для дивергенций к тонкому цилиндру («коробочке»), пересекающему границу, а уравнения для роторов — к узкому прямоугольному контуру вдоль границы. При стремлении высоты к нулю исчезают потоки через боковые поверхности и через контур; члены с производными по времени ($\\frac{\\partial\\vec B}{\\partial t}$, $\\frac{\\partial\\vec D}{\\partial t}$) тоже исчезают, поскольку они конечны. Остаются только поверхностный свободный заряд $\\sigma$ и свободный поверхностный ток $K$:",
+  "en": "**Derivation.** Apply the divergence equations to a thin cylinder (a “pillbox”) straddling the boundary, and the curl equations to a narrow rectangular loop along it. As the height goes to zero, the fluxes through the side walls and through the loop vanish; the time-derivative terms ($\\frac{\\partial\\vec B}{\\partial t}$, $\\frac{\\partial\\vec D}{\\partial t}$) vanish too, since they are finite. Only the free surface charge $\\sigma$ and the free surface current $K$ remain:"
+ },
+ {
+  "t": "m",
+  "m": "D_{2n}-D_{1n}=\\sigma,\\qquad E_{1\\tau}=E_{2\\tau},\\qquad B_{1n}=B_{2n},\\qquad H_{2\\tau}-H_{1\\tau}=K"
+ },
+ {
+  "t": "li",
+  "uz": "**Ma'nosi.** Normal tashkil etuvchilar manbalar (divergensiya) bilan, urinma tashkil etuvchilar uyurmalar (rotor) bilan bog'langan. $\\vec E$ ning urinma tashkil etuvchisi va $\\vec B$ ning normal tashkil etuvchisi har doim uzluksiz; $\\vec D$ normal va $\\vec H$ urinma tashkil etuvchilari faqat sirt zaryadi va sirt toki bo'lganda sakraydi ($\\vec H$ uchun yo'nalishlar o'ng parma qoidasi bilan: $\\hat n\\times\\left(\\vec H_2-\\vec H_1\\right)=\\vec K$). Bu shartlar o'zgaruvchan maydonlar uchun ham to'g'ri — ular B2-L14 va B2-L19 dagi statik shartlarni umumlashtiradi.",
+  "ru": "**Смысл.** Нормальные составляющие связаны с источниками (дивергенцией), касательные — с вихрями (ротором). Касательная составляющая $\\vec E$ и нормальная составляющая $\\vec B$ всегда непрерывны; нормальная составляющая $\\vec D$ и касательная $\\vec H$ испытывают скачок только при наличии поверхностного заряда и тока (для $\\vec H$ направления по правилу правого винта: $\\hat n\\times\\left(\\vec H_2-\\vec H_1\\right)=\\vec K$). Эти условия верны и для переменных полей — они обобщают статические условия из B2-L14 и B2-L19.",
+  "en": "**Meaning.** The normal components are tied to sources (divergence), the tangential ones to swirl (curl). The tangential component of $\\vec E$ and the normal component of $\\vec B$ are always continuous; the normal component of $\\vec D$ and the tangential component of $\\vec H$ jump only when there is a surface charge or surface current (for $\\vec H$ with directions set by the right-hand rule: $\\hat n\\times\\left(\\vec H_2-\\vec H_1\\right)=\\vec K$). These conditions hold for changing fields as well — they generalize the static conditions of B2-L14 and B2-L19."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L20-F07.png",
+   "ru": "figures/B2-L20-F07-ru.png",
+   "en": "figures/B2-L20-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Ideal o'tkazgich.** Ideal o'tkazgich ichida o'zgaruvchan maydonlar nolga teng ($\\vec E=0$, o'zgaruvchan $\\vec B=0$). Shuning uchun uning sirtida tashqi maydonda $E_\\tau=0$ va $B_n=0$, $\\vec E$ sirtga tik va $E=\\frac{\\sigma}{\\varepsilon_0}$, $\\vec B$ sirtga urinma va $B=\\mu_0K$. Masalan, metall ko'zguga tushgan to'lqin turg'un to'lqin hosil qiladi va sirtda $\\vec E$ tuguni joylashadi; to'lqin o'tkazgichlar orasida (to'lqin o'tkazgich, koaksial kabel) shu shartlar bilan aniqlanadi.",
+  "ru": "**Идеальный проводник.** Внутри идеального проводника переменные поля равны нулю ($\\vec E=0$, переменное $\\vec B=0$). Поэтому на его поверхности снаружи $E_\\tau=0$ и $B_n=0$: $\\vec E$ перпендикулярно поверхности и $E=\\frac{\\sigma}{\\varepsilon_0}$, $\\vec B$ касательно поверхности и $B=\\mu_0K$. Например, волна, падающая на металлическое зеркало, образует стоячую волну с узлом $\\vec E$ на поверхности; волна между проводниками (волновод, коаксиальный кабель) определяется этими условиями.",
+  "en": "**A perfect conductor.** Inside a perfect conductor the changing fields vanish ($\\vec E=0$, changing $\\vec B=0$). So just outside its surface $E_\\tau=0$ and $B_n=0$: $\\vec E$ is perpendicular to the surface with $E=\\frac{\\sigma}{\\varepsilon_0}$, and $\\vec B$ is tangent to it with $B=\\mu_0K$. For example, a wave hitting a metal mirror forms a standing wave with a node of $\\vec E$ at the surface; waves between conductors (waveguides, coaxial cables) are fixed by these conditions."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Potensiallar va kalibrlash",
+  "ru": "8. Потенциалы и калибровка",
+  "en": "8. Potentials and gauge"
+ },
+ {
+  "t": "li",
+  "uz": "**Potensiallarni kiritish.** $\\nabla\\cdot\\vec B=0$ bo'lgani uchun $\\vec B=\\nabla\\times\\vec A$ deb yozish mumkin ($\\vec A$ — vektor potensial, B2-L16). Faradey qonuniga qo'ysak, $\\nabla\\times\\left(\\vec E+\\frac{\\partial\\vec A}{\\partial t}\\right)=0$ — qavsdagi vektor potensialli, ya'ni $-\\nabla\\varphi$ ga teng. Natijada ikki «manbasiz» tenglama avtomatik bajariladi, oltita maydon tashkil etuvchisi o'rniga to'rtta funksiya qoladi. Statikada faqat $\\varphi$ qoladi; $\\vec A$ ning o'zgarishi esa uyurmali elektr maydonni beradi.",
+  "ru": "**Введение потенциалов.** Поскольку $\\nabla\\cdot\\vec B=0$, можно записать $\\vec B=\\nabla\\times\\vec A$ ($\\vec A$ — векторный потенциал, B2-L16). Подставив в закон Фарадея, получим $\\nabla\\times\\left(\\vec E+\\frac{\\partial\\vec A}{\\partial t}\\right)=0$ — вектор в скобках потенциален, то есть равен $-\\nabla\\varphi$. В итоге два «бесисточниковых» уравнения выполняются автоматически, и вместо шести компонент поля остаются четыре функции. В статике остаётся только $\\varphi$; изменение же $\\vec A$ даёт вихревое электрическое поле.",
+  "en": "**Introducing potentials.** Since $\\nabla\\cdot\\vec B=0$ we may write $\\vec B=\\nabla\\times\\vec A$ ($\\vec A$ is the vector potential, B2-L16). Substituting into Faraday's law gives $\\nabla\\times\\left(\\vec E+\\frac{\\partial\\vec A}{\\partial t}\\right)=0$ — the vector in brackets is a gradient, i.e. equal to $-\\nabla\\varphi$. The two “source-free” equations are then satisfied automatically, and four functions replace the six field components. In statics only $\\varphi$ remains; a changing $\\vec A$ gives the vortex electric field."
+ },
+ {
+  "t": "m",
+  "m": "\\vec B=\\nabla\\times\\vec A,\\qquad \\vec E=-\\nabla\\varphi-\\frac{\\partial\\vec A}{\\partial t}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kalibrlash erkinligi.** Potensiallar bir qiymatli emas: istalgan $f$ funksiya bilan quyidagi almashtirish $\\vec E$ va $\\vec B$ ni o'zgartirmaydi (tekshiring: $\\nabla\\times\\nabla f=0$, $-\\nabla\\left(-\\frac{\\partial f}{\\partial t}\\right)-\\frac{\\partial}{\\partial t}\\nabla f=0$). Bu erkinlik qulay qo'shimcha shart tanlashga imkon beradi.",
+  "ru": "**Калибровочная свобода.** Потенциалы неоднозначны: следующая замена с любой функцией $f$ не меняет $\\vec E$ и $\\vec B$ (проверьте: $\\nabla\\times\\nabla f=0$, $-\\nabla\\left(-\\frac{\\partial f}{\\partial t}\\right)-\\frac{\\partial}{\\partial t}\\nabla f=0$). Эта свобода позволяет выбрать удобное дополнительное условие.",
+  "en": "**Gauge freedom.** The potentials are not unique: the following change with any function $f$ leaves $\\vec E$ and $\\vec B$ unchanged (check: $\\nabla\\times\\nabla f=0$, $-\\nabla\\left(-\\frac{\\partial f}{\\partial t}\\right)-\\frac{\\partial}{\\partial t}\\nabla f=0$). This freedom lets us choose a convenient extra condition."
+ },
+ {
+  "t": "m",
+  "m": "\\vec A'=\\vec A+\\nabla f,\\qquad \\varphi'=\\varphi-\\frac{\\partial f}{\\partial t}"
+ },
+ {
+  "t": "li",
+  "uz": "**Lorens va Kulon kalibrlari.** Lorens sharti $\\nabla\\cdot\\vec A+\\frac{1}{c^2}\\frac{\\partial\\varphi}{\\partial t}=0$ da ikkala potensial manbali to'lqin tenglamasini qanoatlantiradi — ta'sir $c$ tezlik bilan tarqaladi (kechikuvchi potensiallar, B2-L23). Kulon sharti $\\nabla\\cdot\\vec A=0$ da $\\varphi$ statikadagi kabi Puasson tenglamasini qanoatlantiradi va bir onda «sezadi», lekin kuzatiladigan $\\vec E$ va $\\vec B$ baribir kechikadi.",
+  "ru": "**Калибровки Лоренца и Кулона.** При условии Лоренца $\\nabla\\cdot\\vec A+\\frac{1}{c^2}\\frac{\\partial\\varphi}{\\partial t}=0$ оба потенциала удовлетворяют волновому уравнению с источником — воздействие распространяется со скоростью $c$ (запаздывающие потенциалы, B2-L23). При условии Кулона $\\nabla\\cdot\\vec A=0$ потенциал $\\varphi$ удовлетворяет уравнению Пуассона, как в статике, и «чувствует» мгновенно, но наблюдаемые $\\vec E$ и $\\vec B$ всё равно запаздывают.",
+  "en": "**The Lorenz and Coulomb gauges.** With the Lorenz condition $\\nabla\\cdot\\vec A+\\frac{1}{c^2}\\frac{\\partial\\varphi}{\\partial t}=0$ both potentials obey a wave equation with a source — influence travels at speed $c$ (retarded potentials, B2-L23). With the Coulomb condition $\\nabla\\cdot\\vec A=0$ the potential $\\varphi$ obeys Poisson's equation as in statics and “responds” instantly, but the observable $\\vec E$ and $\\vec B$ are still retarded."
+ },
+ {
+  "t": "m",
+  "m": "\\nabla^2\\varphi-\\frac{1}{c^2}\\frac{\\partial^2\\varphi}{\\partial t^2}=-\\frac{\\rho}{\\varepsilon_0},\\qquad \\nabla^2\\vec A-\\frac{1}{c^2}\\frac{\\partial^2\\vec A}{\\partial t^2}=-\\mu_0\\vec J"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $z$ o'qi bo'ylab bir jinsli o'zgaruvchan $B(t)$ maydon uchun $\\vec A=\\frac{B}{2}\\left(-y\\hat x+x\\hat y\\right)$ ($\\nabla\\times\\vec A=B\\hat z$). Unda $\\vec E=-\\frac{\\partial\\vec A}{\\partial t}$ va $E=\\frac{r}{2}\\frac{dB}{dt}$ — B2-L17 dagi uyurmali maydonning aynan o'zi, Faradey qonunini alohida integrallamasdan.",
+  "ru": "**Пример.** Для однородного переменного поля $B(t)$ вдоль оси $z$ имеем $\\vec A=\\frac{B}{2}\\left(-y\\hat x+x\\hat y\\right)$ ($\\nabla\\times\\vec A=B\\hat z$). Тогда $\\vec E=-\\frac{\\partial\\vec A}{\\partial t}$ и $E=\\frac{r}{2}\\frac{dB}{dt}$ — то же вихревое поле, что в B2-L17, без отдельного интегрирования закона Фарадея.",
+  "en": "**Example.** For a uniform changing field $B(t)$ along the $z$ axis, $\\vec A=\\frac{B}{2}\\left(-y\\hat x+x\\hat y\\right)$ ($\\nabla\\times\\vec A=B\\hat z$). Then $\\vec E=-\\frac{\\partial\\vec A}{\\partial t}$ and $E=\\frac{r}{2}\\frac{dB}{dt}$ — exactly the vortex field of B2-L17, without integrating Faraday's law separately."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Kvazistatika va skin-effekt",
+  "ru": "9. Квазистатика и скин-эффект",
+  "en": "9. Quasistatics and the skin effect"
+ },
+ {
+  "t": "li",
+  "uz": "**Kvazistatik yaqinlashish.** Agar tizim o'lchami $l$ to'lqin uzunligidan ancha kichik bo'lsa ($l\\ll\\frac{c}{f}$), maydon tizim bo'ylab bir onda tarqalgan deb hisoblash mumkin; o'tkazgichlarda esa siljish toki o'tkazuvchanlik tokidan juda kichik. Bunda Kirxgof qoidalari, $L$ va $C$ tushunchalari ishlaydi (B2-L15–L18). Masalan, $50\\ \\mathrm{Hz}$ da $\\frac{c}{f}=6000\\ \\mathrm{km}$; $1\\ \\mathrm{GHz}$ da esa $30\\ \\mathrm{cm}$ — u yerda sxemalarni to'lqin sifatida qarash kerak.",
+  "ru": "**Квазистатическое приближение.** Если размер системы $l$ много меньше длины волны ($l\\ll\\frac{c}{f}$), можно считать, что поле устанавливается по всей системе мгновенно; в проводниках же ток смещения много меньше тока проводимости. Тогда работают правила Кирхгофа, понятия $L$ и $C$ (B2-L15–L18). Например, при $50\\ \\mathrm{Hz}$ величина $\\frac{c}{f}=6000\\ \\mathrm{km}$; а при $1\\ \\mathrm{GHz}$ — $30\\ \\mathrm{cm}$, и там схемы нужно рассматривать как волновые.",
+  "en": "**The quasistatic approximation.** If the size $l$ of a system is much smaller than the wavelength ($l\\ll\\frac{c}{f}$), the field may be taken to set up across the whole system instantly; and in conductors the displacement current is much smaller than the conduction current. Then Kirchhoff's rules and the ideas of $L$ and $C$ work (B2-L15–L18). For example, at $50\\ \\mathrm{Hz}$ we have $\\frac{c}{f}=6000\\ \\mathrm{km}$; at $1\\ \\mathrm{GHz}$ it is $30\\ \\mathrm{cm}$, and circuits must be treated as wave systems."
+ },
+ {
+  "t": "li",
+  "uz": "**Diffuziya tenglamasi.** Yaxshi o'tkazgichda $\\nabla\\times\\vec H=\\sigma\\vec E$ (siljish tokisiz). Faradey qonuni bilan birlashtirsak, $\\nabla^2\\vec B=\\mu_0\\mu\\sigma\\frac{\\partial\\vec B}{\\partial t}$ — issiqlik o'tkazuvchanlik tenglamasi kabi. O'zgaruvchan maydon o'tkazgichga to'lqin kabi emas, diffuziya kabi kiradi va tez so'nadi: sirtdan $x$ chuqurlikda $B=B_0e^{-\\frac{x}{\\delta}}\\cos\\left(\\omega t-\\frac{x}{\\delta}\\right)$. Skin-qatlam qalinligi:",
+  "ru": "**Уравнение диффузии.** В хорошем проводнике $\\nabla\\times\\vec H=\\sigma\\vec E$ (без тока смещения). Вместе с законом Фарадея получаем $\\nabla^2\\vec B=\\mu_0\\mu\\sigma\\frac{\\partial\\vec B}{\\partial t}$ — как уравнение теплопроводности. Переменное поле входит в проводник не как волна, а как диффузия, и быстро затухает: на глубине $x$ от поверхности $B=B_0e^{-\\frac{x}{\\delta}}\\cos\\left(\\omega t-\\frac{x}{\\delta}\\right)$. Толщина скин-слоя:",
+  "en": "**The diffusion equation.** In a good conductor $\\nabla\\times\\vec H=\\sigma\\vec E$ (no displacement current). Combined with Faraday's law this gives $\\nabla^2\\vec B=\\mu_0\\mu\\sigma\\frac{\\partial\\vec B}{\\partial t}$ — like the heat equation. A changing field enters a conductor not as a wave but by diffusion, and dies out quickly: at depth $x$ below the surface $B=B_0e^{-\\frac{x}{\\delta}}\\cos\\left(\\omega t-\\frac{x}{\\delta}\\right)$. The skin depth is:"
+ },
+ {
+  "t": "m",
+  "m": "\\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L20-F08.png",
+   "ru": "figures/B2-L20-F08-ru.png",
+   "en": "figures/B2-L20-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Kattaliklar va oqibatlar.** Mis ($\\sigma=5.9\\cdot10^7\\ \\mathrm{S/m}$): $50\\ \\mathrm{Hz}$ da $\\delta\\approx9\\ \\mathrm{mm}$, $1\\ \\mathrm{MHz}$ da $\\approx66\\ \\mu\\mathrm{m}$, $1\\ \\mathrm{GHz}$ da $\\approx2\\ \\mu\\mathrm{m}$. Yuqori chastotada tok faqat sirt qatlamidan oqadi — simning qarshiligi ortadi (shuning uchun ko'p tolali sim, kumush qoplama ishlatiladi). Yupqa metall qatlam radioto'lqinlarni ekranlaydi; uyurmali toklar induksion qizdirishda va tormozlashda ishlatiladi. Dengiz suvida ($\\sigma=4\\ \\mathrm{S/m}$) $\\delta\\approx\\frac{250}{\\sqrt{f}}\\ \\mathrm{m}$ — suv osti kemalari bilan aloqa juda past chastotalarda olib boriladi.",
+  "ru": "**Порядки величин и следствия.** Медь ($\\sigma=5.9\\cdot10^7\\ \\mathrm{S/m}$): при $50\\ \\mathrm{Hz}$ $\\delta\\approx9\\ \\mathrm{mm}$, при $1\\ \\mathrm{MHz}$ $\\approx66\\ \\mu\\mathrm{m}$, при $1\\ \\mathrm{GHz}$ $\\approx2\\ \\mu\\mathrm{m}$. На высоких частотах ток течёт только в поверхностном слое — сопротивление провода растёт (поэтому применяют многожильный провод, серебрение). Тонкий слой металла экранирует радиоволны; вихревые токи используются в индукционном нагреве и торможении. В морской воде ($\\sigma=4\\ \\mathrm{S/m}$) $\\delta\\approx\\frac{250}{\\sqrt{f}}\\ \\mathrm{m}$ — связь с подводными лодками ведут на очень низких частотах.",
+  "en": "**Magnitudes and consequences.** Copper ($\\sigma=5.9\\cdot10^7\\ \\mathrm{S/m}$): at $50\\ \\mathrm{Hz}$ $\\delta\\approx9\\ \\mathrm{mm}$, at $1\\ \\mathrm{MHz}$ $\\approx66\\ \\mu\\mathrm{m}$, at $1\\ \\mathrm{GHz}$ $\\approx2\\ \\mu\\mathrm{m}$. At high frequencies the current flows only in the surface layer — the wire's resistance rises (hence stranded wire and silver plating). A thin metal layer screens radio waves; eddy currents are used in induction heating and braking. In sea water ($\\sigma=4\\ \\mathrm{S/m}$) $\\delta\\approx\\frac{250}{\\sqrt{f}}\\ \\mathrm{m}$ — communication with submarines uses very low frequencies."
+ },
+ {
+  "t": "h2",
+  "uz": "10. Energiya oqimi va magnit monopol",
+  "ru": "10. Поток энергии и магнитный монополь",
+  "en": "10. Energy flow and the magnetic monopole"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya.** Maydon energiyasining zichligi va energiya oqimi zichligi (Poynting vektori) quyidagicha. Maksvell tenglamalaridan Poynting teoremasi kelib chiqadi: hajmdagi maydon energiyasining kamayishi sirt orqali chiqayotgan oqim va zaryadlar ustida bajarilgan ish $\\vec J\\cdot\\vec E$ ga teng (batafsil B2-L21). Kutilmagan misol: zaryadlanayotgan kondensatorga energiya simlar bo'ylab emas, yon sirt orqali kiradi — $\\vec E$ o'q bo'ylab, $\\vec B$ aylana bo'ylab, $\\vec S$ esa ichkariga yo'nalgan; uning yon sirt bo'yicha oqimi $UI$ ga aynan teng.",
+  "ru": "**Энергия.** Плотность энергии поля и плотность потока энергии (вектор Пойнтинга) приведены ниже. Из уравнений Максвелла следует теорема Пойнтинга: убыль энергии поля в объёме равна потоку через поверхность плюс работе над зарядами $\\vec J\\cdot\\vec E$ (подробно в B2-L21). Неожиданный пример: в заряжающийся конденсатор энергия входит не по проводам, а через боковую поверхность — $\\vec E$ направлено вдоль оси, $\\vec B$ по окружности, а $\\vec S$ внутрь; его поток через боковую поверхность в точности равен $UI$.",
+  "en": "**Energy.** The energy density of the field and the energy flux density (the Poynting vector) are given below. Poynting's theorem follows from Maxwell's equations: the decrease of field energy in a volume equals the flux out through its surface plus the work done on charges $\\vec J\\cdot\\vec E$ (details in B2-L21). A surprising example: energy enters a charging capacitor not along the wires but through its side surface — $\\vec E$ points along the axis, $\\vec B$ around circles and $\\vec S$ inward; its flux through the side surface equals $UI$ exactly."
+ },
+ {
+  "t": "m",
+  "m": "w=\\frac{\\varepsilon_0E^2}{2}+\\frac{B^2}{2\\mu_0},\\qquad \\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B"
+ },
+ {
+  "t": "li",
+  "uz": "**Magnit monopol bo'lsa.** Hozircha magnit zaryad topilmagan. Agar u mavjud bo'lsa, ikki tenglama o'zgarardi: magnit uchun Gauss teoremasida o'ng tomonda magnit zaryad paydo bo'lardi ($\\oint\\vec B\\cdot d\\vec A\\neq0$), Faradey qonuniga esa magnit tok qo'shilardi (zaryad saqlanishi uchun, xuddi Amper–Maksvell qonunidagi elektr tok kabi). Tenglamalar $\\vec E$ va $c\\vec B$ ga nisbatan to'liq simmetrik bo'lardi. Dirak ko'rsatdiki, bitta monopolning mavjudligi elektr zaryadning kvantlanganligini tushuntirardi.",
+  "ru": "**Если бы существовал магнитный монополь.** Магнитный заряд пока не найден. Если бы он существовал, изменились бы два уравнения: в теореме Гаусса для магнитного поля справа появился бы магнитный заряд ($\\oint\\vec B\\cdot d\\vec A\\neq0$), а в закон Фарадея добавился бы магнитный ток (для сохранения заряда, как электрический ток в законе Ампера–Максвелла). Уравнения стали бы полностью симметричны относительно $\\vec E$ и $c\\vec B$. Дирак показал, что существование хотя бы одного монополя объяснило бы квантование электрического заряда.",
+  "en": "**If magnetic monopoles existed.** No magnetic charge has been found so far. If it existed, two equations would change: the right side of Gauss's law for magnetism would contain the magnetic charge ($\\oint\\vec B\\cdot d\\vec A\\neq0$), and a magnetic current would be added to Faraday's law (for charge conservation, as the electric current is in the Ampère–Maxwell law). The equations would become fully symmetric in $\\vec E$ and $c\\vec B$. Dirac showed that the existence of even one monopole would explain why electric charge is quantized."
+ },
+ {
+  "t": "li",
+  "uz": "**Nisbiylik.** Maksvell tenglamalari har bir sanoq tizimida bir xil $c$ ni beradi — bu Galiley bo'yicha tezliklarni qo'shishga zid: tenglamalar Galiley almashtirishlarida o'zgaradi, Lorents almashtirishlarida esa o'zgarmaydi. Aynan shu Eynshteynni maxsus nisbiylik nazariyasiga olib keldi: bir sanoq tizimida faqat elektr bo'lgan maydon boshqa tizimda magnit tashkil etuvchiga ham ega bo'ladi — $\\vec E$ va $\\vec B$ yagona elektromagnit maydonning qismlari (B2-L16 da $B=\\frac{vE}{c^2}$ ni ko'rgan edik).",
+  "ru": "**Относительность.** Уравнения Максвелла дают одну и ту же $c$ в каждой системе отсчёта — это противоречит галилееву сложению скоростей: уравнения меняются при преобразованиях Галилея, но не меняются при преобразованиях Лоренца. Именно это привело Эйнштейна к специальной теории относительности: поле, чисто электрическое в одной системе, в другой имеет и магнитную составляющую — $\\vec E$ и $\\vec B$ являются частями единого электромагнитного поля (в B2-L16 мы видели $B=\\frac{vE}{c^2}$).",
+  "en": "**Relativity.** Maxwell's equations give the same $c$ in every frame — which contradicts Galilean velocity addition: the equations change under Galilean transformations but not under Lorentz transformations. This is what led Einstein to special relativity: a field that is purely electric in one frame has a magnetic component in another — $\\vec E$ and $\\vec B$ are parts of a single electromagnetic field (in B2-L16 we saw $B=\\frac{vE}{c^2}$)."
+ },
+ {
+  "t": "h2",
+  "uz": "11. GRE uchun usullar va tipik xatolar",
+  "ru": "11. Методы для GRE и типичные ошибки",
+  "en": "11. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**1-usul — qaysi tenglama?** Savolni tenglama bilan bog'lang: zaryad va oqim — Gauss; «chiziqlar berk», «monopol yo'q» — $\\nabla\\cdot\\vec B=0$; o'zgaruvchan oqim, EYK, Lens — Faradey; tok yoki o'zgaruvchan $\\vec E$ atrofida $\\vec B$ — Amper–Maksvell. Kondensator qoplamalari orasidagi siljish toki simdagi tokka teng: $B$ ni $r>R$ da simdagi kabi, $r<R$ da $\\frac{r^2}{R^2}$ ulush bilan hisoblang.",
+  "ru": "**Метод 1 — какое уравнение?** Свяжите вопрос с уравнением: заряд и поток — Гаусс; «линии замкнуты», «монополей нет» — $\\nabla\\cdot\\vec B=0$; переменный поток, ЭДС, Ленц — Фарадей; $\\vec B$ вокруг тока или переменного $\\vec E$ — Ампер–Максвелл. Ток смещения между обкладками равен току в проводе: $B$ при $r>R$ считайте как у провода, при $r<R$ — с долей $\\frac{r^2}{R^2}$.",
+  "en": "**Method 1 — which equation?** Match the question to an equation: charge and flux — Gauss; “closed lines”, “no monopoles” — $\\nabla\\cdot\\vec B=0$; changing flux, emf, Lenz — Faraday; $\\vec B$ around a current or a changing $\\vec E$ — Ampère–Maxwell. The displacement current between capacitor plates equals the current in the wire: compute $B$ for $r>R$ as for the wire, and for $r<R$ with the fraction $\\frac{r^2}{R^2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**2-usul — o'lchamlar va masshtab.** $\\mu_0\\varepsilon_0=\\frac{1}{c^2}$; $\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}$; $\\delta\\propto\\frac{1}{\\sqrt{\\sigma\\omega}}$ (chastota $4$ marta ortsa, $\\delta$ $2$ marta kamayadi); o'tkazuvchanlik va siljish toklari nisbati $\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}$. Divergensiya va rotorni tez hisoblash: $\\nabla\\cdot\\vec r=3$, $\\nabla\\times\\vec r=0$, $\\nabla\\times\\left(-y\\hat x+x\\hat y\\right)=2\\hat z$.",
+  "ru": "**Метод 2 — размерности и масштабы.** $\\mu_0\\varepsilon_0=\\frac{1}{c^2}$; $\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}$; $\\delta\\propto\\frac{1}{\\sqrt{\\sigma\\omega}}$ (при увеличении частоты в $4$ раза $\\delta$ уменьшается в $2$ раза); отношение токов проводимости и смещения $\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}$. Быстрый расчёт дивергенции и ротора: $\\nabla\\cdot\\vec r=3$, $\\nabla\\times\\vec r=0$, $\\nabla\\times\\left(-y\\hat x+x\\hat y\\right)=2\\hat z$.",
+  "en": "**Method 2 — dimensions and scaling.** $\\mu_0\\varepsilon_0=\\frac{1}{c^2}$; $\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}$; $\\delta\\propto\\frac{1}{\\sqrt{\\sigma\\omega}}$ (if the frequency increases by a factor of $4$, $\\delta$ decreases by a factor of $2$); the ratio of conduction to displacement current is $\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}$. Quick divergence and curl: $\\nabla\\cdot\\vec r=3$, $\\nabla\\times\\vec r=0$, $\\nabla\\times\\left(-y\\hat x+x\\hat y\\right)=2\\hat z$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) Kondensator qoplamalari orasida magnit maydon yo'q deb o'ylash (siljish toki uni hosil qiladi). 2) Siljish tokini zaryadlarning harakati deb bilish. 3) Faradey qonunidagi minusni Amper–Maksvell qonuniga ham qo'yish. 4) Moddada $\\nabla\\cdot\\vec D$ ga bog'langan zaryadni qo'shish (faqat erkin). 5) Monopol bo'lsa faqat bitta tenglama o'zgaradi deb javob berish (ikkitasi: magnit uchun Gauss va Faradey). 6) Skin-qatlam qalinligini $\\frac{1}{\\omega}$ ga proporsional deb olish (u $\\frac{1}{\\sqrt{\\omega}}$ ga proporsional).",
+  "ru": "**Типичные ошибки.** 1) Думать, что между обкладками конденсатора нет магнитного поля (его создаёт ток смещения). 2) Считать ток смещения движением зарядов. 3) Переносить минус из закона Фарадея в закон Ампера–Максвелла. 4) Включать в $\\nabla\\cdot\\vec D$ связанный заряд (только свободный). 5) Отвечать, что при существовании монополя меняется только одно уравнение (два: теорема Гаусса для магнитного поля и закон Фарадея). 6) Считать толщину скин-слоя пропорциональной $\\frac{1}{\\omega}$ (она пропорциональна $\\frac{1}{\\sqrt{\\omega}}$).",
+  "en": "**Typical mistakes.** 1) Thinking there is no magnetic field between capacitor plates (the displacement current creates one). 2) Taking the displacement current to be a motion of charges. 3) Carrying the minus sign of Faraday's law into the Ampère–Maxwell law. 4) Including bound charge in $\\nabla\\cdot\\vec D$ (free only). 5) Answering that only one equation changes if monopoles exist (two do: Gauss's law for magnetism and Faraday's law). 6) Taking the skin depth to be proportional to $\\frac{1}{\\omega}$ (it is proportional to $\\frac{1}{\\sqrt{\\omega}}$)."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Siljish toki",
+    "ru": "Ток смещения",
+    "en": "Displacement current",
+    "m": "I'=\\varepsilon_0\\frac{d\\Phi_E}{dt},\\quad \\vec J'=\\frac{\\partial\\vec D}{\\partial t}"
+   },
+   {
+    "uz": "Gauss teoremasi",
+    "ru": "Теорема Гаусса",
+    "en": "Gauss's law",
+    "m": "\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}"
+   },
+   {
+    "uz": "Monopol yo'q",
+    "ru": "Нет монополей",
+    "en": "No monopoles",
+    "m": "\\nabla\\cdot\\vec B=0"
+   },
+   {
+    "uz": "Faradey qonuni",
+    "ru": "Закон Фарадея",
+    "en": "Faraday's law",
+    "m": "\\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t}"
+   },
+   {
+    "uz": "Amper–Maksvell qonuni",
+    "ru": "Закон Ампера–Максвелла",
+    "en": "Ampère–Maxwell law",
+    "m": "\\nabla\\times\\vec B=\\mu_0\\vec J+\\mu_0\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}"
+   },
+   {
+    "uz": "Moddada",
+    "ru": "В веществе",
+    "en": "In matter",
+    "m": "\\nabla\\cdot\\vec D=\\rho,\\quad \\nabla\\times\\vec H=\\vec J+\\frac{\\partial\\vec D}{\\partial t}"
+   },
+   {
+    "uz": "Moddiy tenglamalar",
+    "ru": "Материальные уравнения",
+    "en": "Constitutive relations",
+    "m": "\\vec D=\\varepsilon_0\\varepsilon\\vec E,\\quad \\vec B=\\mu_0\\mu\\vec H,\\quad \\vec J=\\sigma\\vec E"
+   },
+   {
+    "uz": "Kondensatordagi maydon",
+    "ru": "Поле в конденсаторе",
+    "en": "Field in a capacitor",
+    "m": "B=\\frac{\\mu_0Ir}{2\\pi R^2}\\quad (r<R)"
+   },
+   {
+    "uz": "Uzluksizlik tenglamasi",
+    "ru": "Уравнение непрерывности",
+    "en": "Continuity equation",
+    "m": "\\nabla\\cdot\\vec J+\\frac{\\partial\\rho}{\\partial t}=0"
+   },
+   {
+    "uz": "Relaksatsiya vaqti",
+    "ru": "Время релаксации",
+    "en": "Relaxation time",
+    "m": "\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}"
+   },
+   {
+    "uz": "To'lqin tenglamasi",
+    "ru": "Волновое уравнение",
+    "en": "Wave equation",
+    "m": "\\nabla^2\\vec E=\\frac{1}{c^2}\\frac{\\partial^2\\vec E}{\\partial t^2},\\quad c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}"
+   },
+   {
+    "uz": "Yassi to'lqin",
+    "ru": "Плоская волна",
+    "en": "Plane wave",
+    "m": "B_0=\\frac{E_0}{c},\\quad \\omega=ck"
+   },
+   {
+    "uz": "Chegaraviy shartlar",
+    "ru": "Граничные условия",
+    "en": "Boundary conditions",
+    "m": "D_{2n}-D_{1n}=\\sigma,\\quad H_{2\\tau}-H_{1\\tau}=K"
+   },
+   {
+    "uz": "Potensiallar",
+    "ru": "Потенциалы",
+    "en": "Potentials",
+    "m": "\\vec B=\\nabla\\times\\vec A,\\quad \\vec E=-\\nabla\\varphi-\\frac{\\partial\\vec A}{\\partial t}"
+   },
+   {
+    "uz": "Lorens sharti",
+    "ru": "Условие Лоренца",
+    "en": "Lorenz condition",
+    "m": "\\nabla\\cdot\\vec A+\\frac{1}{c^2}\\frac{\\partial\\varphi}{\\partial t}=0"
+   },
+   {
+    "uz": "Skin-qatlam",
+    "ru": "Скин-слой",
+    "en": "Skin depth",
+    "m": "\\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}"
+   },
+   {
+    "uz": "Energiya va oqim",
+    "ru": "Энергия и поток",
+    "en": "Energy and flux",
+    "m": "w=\\frac{\\varepsilon_0E^2}{2}+\\frac{B^2}{2\\mu_0},\\quad \\vec S=\\frac{\\vec E\\times\\vec B}{\\mu_0}"
+   }
+  ]
+ }
+]

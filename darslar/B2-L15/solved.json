@@ -1,0 +1,776 @@
+[
+ {
+  "id": "B2-L15-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Kesimi $1\\ \\mathrm{mm^2}$ bo'lgan mis simdan $1\\ \\mathrm{A}$ tok o'tmoqda. Erkin elektronlar konsentratsiyasi $8.5\\cdot10^{28}\\ \\mathrm{m^{-3}}$. Tok zichligini va elektronlarning tartibli harakat tezligini toping.",
+   "ru": "По медному проводу сечением $1\\ \\mathrm{mm^2}$ течёт ток $1\\ \\mathrm{A}$. Концентрация свободных электронов $8.5\\cdot10^{28}\\ \\mathrm{m^{-3}}$. Найдите плотность тока и скорость дрейфа электронов.",
+   "en": "A current of $1\\ \\mathrm{A}$ flows in a copper wire of cross-section $1\\ \\mathrm{mm^2}$. The free-electron density is $8.5\\cdot10^{28}\\ \\mathrm{m^{-3}}$. Find the current density and the electrons' drift speed."
+  },
+  "figure": "figures/B2-L15-S01.png",
+  "solution": {
+   "uz": [
+    "Tok zichligi: $$J=\\frac{I}{A}=10^6\\ \\mathrm{A/m^2}$$",
+    "Tartibli harakat tezligi: $$v=\\frac{J}{ne}=\\frac{10^6}{8.5\\cdot10^{28}\\cdot1.6\\cdot10^{-19}}\\approx7.4\\cdot10^{-5}\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Плотность тока: $$J=\\frac{I}{A}=10^6\\ \\mathrm{A/m^2}$$",
+    "Скорость дрейфа: $$v=\\frac{J}{ne}=\\frac{10^6}{8.5\\cdot10^{28}\\cdot1.6\\cdot10^{-19}}\\approx7.4\\cdot10^{-5}\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Current density: $$J=\\frac{I}{A}=10^6\\ \\mathrm{A/m^2}$$",
+    "Drift speed: $$v=\\frac{J}{ne}=\\frac{10^6}{8.5\\cdot10^{28}\\cdot1.6\\cdot10^{-19}}\\approx7.4\\cdot10^{-5}\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Tok zichligi: $\\vec J=nq\\vec v$, $I=JA$",
+    "ru": "Плотность тока: $\\vec J=nq\\vec v$, $I=JA$",
+    "en": "Current density: $\\vec J=nq\\vec v$, $I=JA$"
+   }
+  ],
+  "basis": {
+   "uz": "Tartibli harakat tezligi",
+   "ru": "Скорость дрейфа",
+   "en": "Drift speed"
+  },
+  "answer": "J=10^6\\ \\mathrm{A/m^2};\\ v\\approx7.4\\cdot10^{-5}\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 9.13-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L15-S02",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Misning solishtirma qarshiligi $1.7\\cdot10^{-8}\\ \\Omega\\cdot\\mathrm{m}$, erkin elektronlar konsentratsiyasi $8.5\\cdot10^{28}\\ \\mathrm{m^{-3}}$. Drude modelida o'rtacha erkin yugurish vaqtini va harakatchanlikni toping. Fermi tezligi $1.6\\cdot10^6\\ \\mathrm{m/s}$ bo'lsa, erkin yugurish yo'li qancha ($m_e=9.1\\cdot10^{-31}\\ \\mathrm{kg}$)?",
+   "ru": "Удельное сопротивление меди $1.7\\cdot10^{-8}\\ \\Omega\\cdot\\mathrm{m}$, концентрация свободных электронов $8.5\\cdot10^{28}\\ \\mathrm{m^{-3}}$. Найдите в модели Друде среднее время свободного пробега и подвижность. Какова длина свободного пробега, если скорость Ферми $1.6\\cdot10^6\\ \\mathrm{m/s}$ ($m_e=9.1\\cdot10^{-31}\\ \\mathrm{kg}$)?",
+   "en": "Copper has resistivity $1.7\\cdot10^{-8}\\ \\Omega\\cdot\\mathrm{m}$ and free-electron density $8.5\\cdot10^{28}\\ \\mathrm{m^{-3}}$. In the Drude model find the mean free time and the mobility. If the Fermi speed is $1.6\\cdot10^6\\ \\mathrm{m/s}$, what is the mean free path ($m_e=9.1\\cdot10^{-31}\\ \\mathrm{kg}$)?"
+  },
+  "figure": "figures/B2-L15-S02.png",
+  "solution": {
+   "uz": [
+    "O'tkazuvchanlikdan vaqtni topamiz: $$\\tau_0=\\frac{m_e}{ne^2\\rho}=\\frac{9.1\\cdot10^{-31}}{8.5\\cdot10^{28}\\cdot2.56\\cdot10^{-38}\\cdot1.7\\cdot10^{-8}}\\approx2.5\\cdot10^{-14}\\ \\mathrm{s}$$",
+    "Harakatchanlik va erkin yugurish yo'li: $$\\mu=\\frac{e\\tau_0}{m_e}\\approx4.3\\cdot10^{-3}\\ \\mathrm{m^2/(V\\cdot s)},\\quad \\lambda=v_F\\tau_0\\approx39\\ \\mathrm{nm}$$"
+   ],
+   "ru": [
+    "Находим время из проводимости: $$\\tau_0=\\frac{m_e}{ne^2\\rho}=\\frac{9.1\\cdot10^{-31}}{8.5\\cdot10^{28}\\cdot2.56\\cdot10^{-38}\\cdot1.7\\cdot10^{-8}}\\approx2.5\\cdot10^{-14}\\ \\mathrm{s}$$",
+    "Подвижность и длина свободного пробега: $$\\mu=\\frac{e\\tau_0}{m_e}\\approx4.3\\cdot10^{-3}\\ \\mathrm{m^2/(V\\cdot s)},\\quad \\lambda=v_F\\tau_0\\approx39\\ \\mathrm{nm}$$"
+   ],
+   "en": [
+    "Get the time from the conductivity: $$\\tau_0=\\frac{m_e}{ne^2\\rho}=\\frac{9.1\\cdot10^{-31}}{8.5\\cdot10^{28}\\cdot2.56\\cdot10^{-38}\\cdot1.7\\cdot10^{-8}}\\approx2.5\\cdot10^{-14}\\ \\mathrm{s}$$",
+    "Mobility and mean free path: $$\\mu=\\frac{e\\tau_0}{m_e}\\approx4.3\\cdot10^{-3}\\ \\mathrm{m^2/(V\\cdot s)},\\quad \\lambda=v_F\\tau_0\\approx39\\ \\mathrm{nm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Drude modeli: $\\sigma=\\frac{ne^2\\tau_0}{m}$",
+    "ru": "Модель Друде: $\\sigma=\\frac{ne^2\\tau_0}{m}$",
+    "en": "Drude model: $\\sigma=\\frac{ne^2\\tau_0}{m}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Drude modeli",
+   "ru": "Модель Друде",
+   "en": "The Drude model"
+  },
+  "answer": "\\tau_0\\approx2.5\\cdot10^{-14}\\ \\mathrm{s};\\ \\mu\\approx4.3\\cdot10^{-3}\\ \\mathrm{m^2/(V\\cdot s)};\\ \\lambda\\approx39\\ \\mathrm{nm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original (B2-L15, Drude modeli)"
+ },
+ {
+  "id": "B2-L15-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Volfram tolali lampa qarshiligi $20^\\circ\\mathrm{C}$ da $50\\ \\Omega$, ish holatida $500\\ \\Omega$. Qarshilikning temperatura koeffitsiyenti $4.5\\cdot10^{-3}\\ \\mathrm{K^{-1}}$ (chiziqli deb hisoblang). Tola temperaturasini baholang.",
+   "ru": "Сопротивление лампы с вольфрамовой нитью при $20^\\circ\\mathrm{C}$ равно $50\\ \\Omega$, в рабочем состоянии — $500\\ \\Omega$. Температурный коэффициент сопротивления $4.5\\cdot10^{-3}\\ \\mathrm{K^{-1}}$ (считайте зависимость линейной). Оцените температуру нити.",
+   "en": "A tungsten-filament lamp has a resistance of $50\\ \\Omega$ at $20^\\circ\\mathrm{C}$ and $500\\ \\Omega$ when operating. The temperature coefficient of resistance is $4.5\\cdot10^{-3}\\ \\mathrm{K^{-1}}$ (take the dependence as linear). Estimate the filament temperature."
+  },
+  "figure": "figures/B2-L15-S03.png",
+  "solution": {
+   "uz": [
+    "Chiziqli bog'liqlik: $$\\Delta T=\\frac{R/R_0-1}{\\alpha}=\\frac{10-1}{4.5\\cdot10^{-3}}=2000\\ \\mathrm{K}$$",
+    "Temperatura: $$T\\approx20+2000\\approx2020^\\circ\\mathrm{C}$$"
+   ],
+   "ru": [
+    "Линейная зависимость: $$\\Delta T=\\frac{R/R_0-1}{\\alpha}=\\frac{10-1}{4.5\\cdot10^{-3}}=2000\\ \\mathrm{K}$$",
+    "Температура: $$T\\approx20+2000\\approx2020^\\circ\\mathrm{C}$$"
+   ],
+   "en": [
+    "Linear dependence: $$\\Delta T=\\frac{R/R_0-1}{\\alpha}=\\frac{10-1}{4.5\\cdot10^{-3}}=2000\\ \\mathrm{K}$$",
+    "Temperature: $$T\\approx20+2000\\approx2020^\\circ\\mathrm{C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Temperaturaga bog'liqlik: $R=R_0(1+\\alpha\\Delta T)$",
+    "ru": "Зависимость от температуры: $R=R_0(1+\\alpha\\Delta T)$",
+    "en": "Temperature dependence: $R=R_0(1+\\alpha\\Delta T)$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Qarshilikning temperaturaga bog'liqligi",
+   "ru": "Зависимость сопротивления от температуры",
+   "en": "Temperature dependence of resistance"
+  },
+  "answer": "T\\approx2020^\\circ\\mathrm{C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 9.45-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L15-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $1\\ \\mathrm{m}$ bo'lgan ikki koaksial silindr (radiuslari $1\\ \\mathrm{mm}$ va $5\\ \\mathrm{mm}$) orasi solishtirma qarshiligi $100\\ \\Omega\\cdot\\mathrm{m}$ bo'lgan modda bilan to'ldirilgan. Radial yo'nalishdagi qarshilikni toping.",
+   "ru": "Пространство между двумя коаксиальными цилиндрами длиной $1\\ \\mathrm{m}$ (радиусы $1\\ \\mathrm{mm}$ и $5\\ \\mathrm{mm}$) заполнено веществом с удельным сопротивлением $100\\ \\Omega\\cdot\\mathrm{m}$. Найдите сопротивление в радиальном направлении.",
+   "en": "The space between two coaxial cylinders $1\\ \\mathrm{m}$ long (radii $1\\ \\mathrm{mm}$ and $5\\ \\mathrm{mm}$) is filled with a material of resistivity $100\\ \\Omega\\cdot\\mathrm{m}$. Find the resistance in the radial direction."
+  },
+  "figure": "figures/B2-L15-S04.png",
+  "solution": {
+   "uz": [
+    "Yupqa silindrik qatlamlar ketma-ket, yuza $2\\pi rL$: $$R=\\int_a^b\\frac{\\rho\\,dr}{2\\pi rL}=\\frac{\\rho}{2\\pi L}\\ln\\frac{b}{a}$$",
+    "Son qiymat: $$R=\\frac{100\\cdot\\ln5}{2\\pi}\\approx25.6\\ \\Omega$$"
+   ],
+   "ru": [
+    "Тонкие цилиндрические слои последовательно, площадь $2\\pi rL$: $$R=\\int_a^b\\frac{\\rho\\,dr}{2\\pi rL}=\\frac{\\rho}{2\\pi L}\\ln\\frac{b}{a}$$",
+    "Численно: $$R=\\frac{100\\cdot\\ln5}{2\\pi}\\approx25.6\\ \\Omega$$"
+   ],
+   "en": [
+    "Thin cylindrical layers in series, area $2\\pi rL$: $$R=\\int_a^b\\frac{\\rho\\,dr}{2\\pi rL}=\\frac{\\rho}{2\\pi L}\\ln\\frac{b}{a}$$",
+    "Numerically: $$R=\\frac{100\\cdot\\ln5}{2\\pi}\\approx25.6\\ \\Omega$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qatlamlar ketma-ket: $R=\\int\\frac{\\rho\\,dl}{A}$",
+    "ru": "Слои последовательно: $R=\\int\\frac{\\rho\\,dl}{A}$",
+    "en": "Layers in series: $R=\\int\\frac{\\rho\\,dl}{A}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Radial qarshilik",
+   "ru": "Радиальное сопротивление",
+   "en": "Radial resistance"
+  },
+  "answer": "R\\approx25.6\\ \\Omega",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original (B2-L15, radial qarshilik)"
+ },
+ {
+  "id": "B2-L15-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.5\\ \\mathrm{m}$ bo'lgan yarim sferik metall yerga ulash elektrodi tuproqqa ($\\rho=100\\ \\Omega\\cdot\\mathrm{m}$) ko'milgan. Elektrod qarshiligini toping. Elektroddan $100\\ \\mathrm{A}$ tok o'tganda markazdan $10\\ \\mathrm{m}$ masofadagi potensialni va $0.8\\ \\mathrm{m}$ lik qadam kuchlanishini toping.",
+   "ru": "Полусферический металлический заземлитель радиусом $0.5\\ \\mathrm{m}$ закопан в грунт ($\\rho=100\\ \\Omega\\cdot\\mathrm{m}$). Найдите сопротивление заземлителя. При токе $100\\ \\mathrm{A}$ найдите потенциал на расстоянии $10\\ \\mathrm{m}$ от центра и шаговое напряжение для шага $0.8\\ \\mathrm{m}$.",
+   "en": "A hemispherical metal ground electrode of radius $0.5\\ \\mathrm{m}$ is buried in soil ($\\rho=100\\ \\Omega\\cdot\\mathrm{m}$). Find the electrode's resistance. With $100\\ \\mathrm{A}$ flowing, find the potential $10\\ \\mathrm{m}$ from the centre and the step voltage for a $0.8\\ \\mathrm{m}$ step."
+  },
+  "figure": "figures/B2-L15-S05.png",
+  "solution": {
+   "uz": [
+    "Yarim sferik qatlamlar, yuza $2\\pi r^2$: $$R=\\int_a^\\infty\\frac{\\rho\\,dr}{2\\pi r^2}=\\frac{\\rho}{2\\pi a}\\approx31.8\\ \\Omega$$",
+    "Tok zichligi $J=\\frac{I}{2\\pi r^2}$, maydon $E=\\rho J$: $$\\varphi(r)=\\frac{\\rho I}{2\\pi r}\\approx159\\ \\mathrm{V}$$",
+    "Qadam kuchlanishi: $$\\varphi(10)-\\varphi(10.8)\\approx11.8\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "Полусферические слои, площадь $2\\pi r^2$: $$R=\\int_a^\\infty\\frac{\\rho\\,dr}{2\\pi r^2}=\\frac{\\rho}{2\\pi a}\\approx31.8\\ \\Omega$$",
+    "Плотность тока $J=\\frac{I}{2\\pi r^2}$, поле $E=\\rho J$: $$\\varphi(r)=\\frac{\\rho I}{2\\pi r}\\approx159\\ \\mathrm{V}$$",
+    "Шаговое напряжение: $$\\varphi(10)-\\varphi(10.8)\\approx11.8\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "Hemispherical layers, area $2\\pi r^2$: $$R=\\int_a^\\infty\\frac{\\rho\\,dr}{2\\pi r^2}=\\frac{\\rho}{2\\pi a}\\approx31.8\\ \\Omega$$",
+    "Current density $J=\\frac{I}{2\\pi r^2}$, field $E=\\rho J$: $$\\varphi(r)=\\frac{\\rho I}{2\\pi r}\\approx159\\ \\mathrm{V}$$",
+    "Step voltage: $$\\varphi(10)-\\varphi(10.8)\\approx11.8\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qatlamlar ketma-ket: $R=\\int\\frac{\\rho\\,dl}{A}$",
+    "ru": "Слои последовательно: $R=\\int\\frac{\\rho\\,dl}{A}$",
+    "en": "Layers in series: $R=\\int\\frac{\\rho\\,dl}{A}$"
+   },
+   {
+    "uz": "Differensial Om qonuni: $\\vec J=\\frac{\\vec E}{\\rho}$",
+    "ru": "Закон Ома (дифф.): $\\vec J=\\frac{\\vec E}{\\rho}$",
+    "en": "Ohm's law (local): $\\vec J=\\frac{\\vec E}{\\rho}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Yerga ulash elektrodi",
+   "ru": "Заземлитель",
+   "en": "A ground electrode"
+  },
+  "answer": "R\\approx31.8\\ \\Omega;\\ \\varphi\\approx159\\ \\mathrm{V};\\ \\Delta\\varphi\\approx11.8\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B2-L15, yerga ulash)"
+ },
+ {
+  "id": "B2-L15-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Sig'imi $1\\ \\mu\\mathrm{F}$ bo'lgan kondensator dielektrigining singdiruvchanligi $\\varepsilon=5$, solishtirma qarshiligi $10^{12}\\ \\Omega\\cdot\\mathrm{m}$. O'z-o'zidan zaryadsizlanish vaqt doimiysini va sizish qarshiligini toping. Mis ichidagi zaryad relaksatsiya vaqtini baholang.",
+   "ru": "Диэлектрик конденсатора ёмкостью $1\\ \\mu\\mathrm{F}$ имеет проницаемость $\\varepsilon=5$ и удельное сопротивление $10^{12}\\ \\Omega\\cdot\\mathrm{m}$. Найдите постоянную времени саморазряда и сопротивление утечки. Оцените время релаксации заряда в меди.",
+   "en": "The dielectric of a $1\\ \\mu\\mathrm{F}$ capacitor has permittivity $\\varepsilon=5$ and resistivity $10^{12}\\ \\Omega\\cdot\\mathrm{m}$. Find the self-discharge time constant and the leakage resistance. Estimate the charge relaxation time in copper."
+  },
+  "figure": "figures/B2-L15-S06.png",
+  "solution": {
+   "uz": [
+    "$R$ va $C$ bir xil geometrik integraldan: $$\\tau=RC=\\varepsilon\\varepsilon_0\\rho=5\\cdot8.85\\cdot10^{-12}\\cdot10^{12}\\approx44\\ \\mathrm{s},\\quad R=\\frac{\\tau}{C}\\approx4.4\\cdot10^7\\ \\Omega$$",
+    "Mis uchun: $$\\tau=\\varepsilon_0\\rho\\approx8.85\\cdot10^{-12}\\cdot1.7\\cdot10^{-8}\\approx1.5\\cdot10^{-19}\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "$R$ и $C$ — из одного геометрического интеграла: $$\\tau=RC=\\varepsilon\\varepsilon_0\\rho=5\\cdot8.85\\cdot10^{-12}\\cdot10^{12}\\approx44\\ \\mathrm{s},\\quad R=\\frac{\\tau}{C}\\approx4.4\\cdot10^7\\ \\Omega$$",
+    "Для меди: $$\\tau=\\varepsilon_0\\rho\\approx8.85\\cdot10^{-12}\\cdot1.7\\cdot10^{-8}\\approx1.5\\cdot10^{-19}\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "$R$ and $C$ come from the same geometric integral: $$\\tau=RC=\\varepsilon\\varepsilon_0\\rho=5\\cdot8.85\\cdot10^{-12}\\cdot10^{12}\\approx44\\ \\mathrm{s},\\quad R=\\frac{\\tau}{C}\\approx4.4\\cdot10^7\\ \\Omega$$",
+    "For copper: $$\\tau=\\varepsilon_0\\rho\\approx8.85\\cdot10^{-12}\\cdot1.7\\cdot10^{-8}\\approx1.5\\cdot10^{-19}\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sizuvchi kondensator: $RC=\\varepsilon\\varepsilon_0\\rho$",
+    "ru": "Конденсатор с утечкой: $RC=\\varepsilon\\varepsilon_0\\rho$",
+    "en": "Leaky capacitor: $RC=\\varepsilon\\varepsilon_0\\rho$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Sizuvchi kondensator",
+   "ru": "Конденсатор с утечкой",
+   "en": "A leaky capacitor"
+  },
+  "answer": "\\tau\\approx44\\ \\mathrm{s};\\ R\\approx4.4\\cdot10^7\\ \\Omega;\\ \\sim10^{-19}\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original (B2-L15, sizuvchi kondensator)"
+ },
+ {
+  "id": "B2-L15-S07",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "EYK $12\\ \\mathrm{V}$, ichki qarshiligi $0.5\\ \\Omega$ bo'lgan akkumulyatorga $5.5\\ \\Omega$ yuk ulangan. Tokni, qisqichlardagi kuchlanishni, yukdagi quvvatni va FIK ni toping.",
+   "ru": "К аккумулятору с ЭДС $12\\ \\mathrm{V}$ и внутренним сопротивлением $0.5\\ \\Omega$ подключена нагрузка $5.5\\ \\Omega$. Найдите ток, напряжение на зажимах, мощность в нагрузке и КПД.",
+   "en": "A $5.5\\ \\Omega$ load is connected to a battery with EMF $12\\ \\mathrm{V}$ and internal resistance $0.5\\ \\Omega$. Find the current, the terminal voltage, the load power and the efficiency."
+  },
+  "figure": "figures/B2-L15-S07.png",
+  "solution": {
+   "uz": [
+    "To'liq zanjir uchun Om qonuni: $$I=\\frac{\\mathcal{E}}{R+r}=\\frac{12}{6}=2\\ \\mathrm{A},\\quad U=\\mathcal{E}-Ir=11\\ \\mathrm{V}$$",
+    "Quvvat va FIK: $$P=I^2R=22\\ \\mathrm{W},\\quad \\eta=\\frac{R}{R+r}\\approx92\\ \\%$$"
+   ],
+   "ru": [
+    "Закон Ома для полной цепи: $$I=\\frac{\\mathcal{E}}{R+r}=\\frac{12}{6}=2\\ \\mathrm{A},\\quad U=\\mathcal{E}-Ir=11\\ \\mathrm{V}$$",
+    "Мощность и КПД: $$P=I^2R=22\\ \\mathrm{W},\\quad \\eta=\\frac{R}{R+r}\\approx92\\ \\%$$"
+   ],
+   "en": [
+    "Ohm's law for the complete circuit: $$I=\\frac{\\mathcal{E}}{R+r}=\\frac{12}{6}=2\\ \\mathrm{A},\\quad U=\\mathcal{E}-Ir=11\\ \\mathrm{V}$$",
+    "Power and efficiency: $$P=I^2R=22\\ \\mathrm{W},\\quad \\eta=\\frac{R}{R+r}\\approx92\\ \\%$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'liq zanjir: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "ru": "Полная цепь: $I=\\frac{\\mathcal{E}}{R+r}$",
+    "en": "Complete circuit: $I=\\frac{\\mathcal{E}}{R+r}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Real manba",
+   "ru": "Реальный источник",
+   "en": "A real source"
+  },
+  "answer": "I=2\\ \\mathrm{A};\\ U=11\\ \\mathrm{V};\\ P=22\\ \\mathrm{W};\\ \\eta\\approx92\\ \\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 10.13-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L15-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Manba EYK $12\\ \\mathrm{V}$, ichki qarshiligi $2\\ \\Omega$. Qanday yuk qarshiligida undagi quvvat eng katta? Shu quvvatni va FIK ni toping. Qanday ikki yuk qarshiligida quvvat $16\\ \\mathrm{W}$ bo'ladi?",
+   "ru": "ЭДС источника $12\\ \\mathrm{V}$, внутреннее сопротивление $2\\ \\Omega$. При каком сопротивлении нагрузки мощность в ней максимальна? Найдите эту мощность и КПД. При каких двух сопротивлениях нагрузки мощность равна $16\\ \\mathrm{W}$?",
+   "en": "A source has EMF $12\\ \\mathrm{V}$ and internal resistance $2\\ \\Omega$. For what load resistance is the load power greatest? Find that power and the efficiency. For which two load resistances is the power $16\\ \\mathrm{W}$?"
+  },
+  "figure": "figures/B2-L15-S08.png",
+  "solution": {
+   "uz": [
+    "$\\frac{dP}{dR}=0$ dan: $$R=r=2\\ \\Omega,\\quad P_{\\max}=\\frac{\\mathcal{E}^2}{4r}=18\\ \\mathrm{W},\\quad \\eta=50\\ \\%$$",
+    "Kvadrat tenglama $\\frac{144R}{(R+2)^2}=16$: $$R^2-5R+4=0\\ \\Rightarrow\\ R=1\\ \\Omega;\\ 4\\ \\Omega\\quad(R_1R_2=r^2)$$"
+   ],
+   "ru": [
+    "Из $\\frac{dP}{dR}=0$: $$R=r=2\\ \\Omega,\\quad P_{\\max}=\\frac{\\mathcal{E}^2}{4r}=18\\ \\mathrm{W},\\quad \\eta=50\\ \\%$$",
+    "Квадратное уравнение $\\frac{144R}{(R+2)^2}=16$: $$R^2-5R+4=0\\ \\Rightarrow\\ R=1\\ \\Omega;\\ 4\\ \\Omega\\quad(R_1R_2=r^2)$$"
+   ],
+   "en": [
+    "From $\\frac{dP}{dR}=0$: $$R=r=2\\ \\Omega,\\quad P_{\\max}=\\frac{\\mathcal{E}^2}{4r}=18\\ \\mathrm{W},\\quad \\eta=50\\ \\%$$",
+    "The quadratic $\\frac{144R}{(R+2)^2}=16$: $$R^2-5R+4=0\\ \\Rightarrow\\ R=1\\ \\Omega;\\ 4\\ \\Omega\\quad(R_1R_2=r^2)$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Eng katta quvvat: $R=r$, $P_{\\max}=\\frac{\\mathcal{E}^2}{4r}$",
+    "ru": "Максимальная мощность: $R=r$, $P_{\\max}=\\frac{\\mathcal{E}^2}{4r}$",
+    "en": "Maximum power: $R=r$, $P_{\\max}=\\frac{\\mathcal{E}^2}{4r}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Eng katta foydali quvvat",
+   "ru": "Максимальная полезная мощность",
+   "en": "Maximum useful power"
+  },
+  "answer": "R=2\\ \\Omega;\\ P_{\\max}=18\\ \\mathrm{W};\\ \\eta=50\\ \\%;\\ 1\\ \\Omega,\\ 4\\ \\Omega",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 10.21-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L15-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "A va B tugunlar orasida uchta tarmoq bor: birinchisida $\\mathcal{E}_1=12\\ \\mathrm{V}$ va $R_1=2\\ \\Omega$, ikkinchisida $\\mathcal{E}_2=6\\ \\mathrm{V}$ va $R_2=4\\ \\Omega$, uchinchisida faqat $R_3=6\\ \\Omega$. Manbalarning musbat qutblari A ga ulangan, ichki qarshiliklar hisobga olinmaydi. Barcha toklarni toping.",
+   "ru": "Между узлами A и B три ветви: в первой $\\mathcal{E}_1=12\\ \\mathrm{V}$ и $R_1=2\\ \\Omega$, во второй $\\mathcal{E}_2=6\\ \\mathrm{V}$ и $R_2=4\\ \\Omega$, в третьей только $R_3=6\\ \\Omega$. Положительные полюсы источников подключены к A, внутренними сопротивлениями пренебречь. Найдите все токи.",
+   "en": "Three branches connect nodes A and B: the first has $\\mathcal{E}_1=12\\ \\mathrm{V}$ and $R_1=2\\ \\Omega$, the second $\\mathcal{E}_2=6\\ \\mathrm{V}$ and $R_2=4\\ \\Omega$, the third only $R_3=6\\ \\Omega$. The positive terminals of both sources face A; neglect internal resistances. Find all the currents."
+  },
+  "figure": "figures/B2-L15-S09.png",
+  "solution": {
+   "uz": [
+    "B tugun potensialini nol deb, A uchun tugun qoidasi: $$\\frac{12-\\varphi}{2}+\\frac{6-\\varphi}{4}=\\frac{\\varphi}{6}\\ \\Rightarrow\\ \\varphi=\\frac{90}{11}\\approx8.18\\ \\mathrm{V}$$",
+    "Toklar: $$I_1=\\frac{12-\\varphi}{2}\\approx1.91\\ \\mathrm{A},\\quad I_2=\\frac{6-\\varphi}{4}\\approx-0.55\\ \\mathrm{A},\\quad I_3=\\frac{\\varphi}{6}\\approx1.36\\ \\mathrm{A}$$",
+    "Tekshiruv: kontur $\\mathcal{E}_1-R_1-R_3$: $$I_1R_1+I_3R_3=3.82+8.18=12\\ \\mathrm{V}=\\mathcal{E}_1$$"
+   ],
+   "ru": [
+    "Приняв потенциал B за ноль, правило узла для A: $$\\frac{12-\\varphi}{2}+\\frac{6-\\varphi}{4}=\\frac{\\varphi}{6}\\ \\Rightarrow\\ \\varphi=\\frac{90}{11}\\approx8.18\\ \\mathrm{V}$$",
+    "Токи: $$I_1=\\frac{12-\\varphi}{2}\\approx1.91\\ \\mathrm{A},\\quad I_2=\\frac{6-\\varphi}{4}\\approx-0.55\\ \\mathrm{A},\\quad I_3=\\frac{\\varphi}{6}\\approx1.36\\ \\mathrm{A}$$",
+    "Проверка: контур $\\mathcal{E}_1-R_1-R_3$: $$I_1R_1+I_3R_3=3.82+8.18=12\\ \\mathrm{V}=\\mathcal{E}_1$$"
+   ],
+   "en": [
+    "Taking B at zero potential, the junction rule at A: $$\\frac{12-\\varphi}{2}+\\frac{6-\\varphi}{4}=\\frac{\\varphi}{6}\\ \\Rightarrow\\ \\varphi=\\frac{90}{11}\\approx8.18\\ \\mathrm{V}$$",
+    "The currents: $$I_1=\\frac{12-\\varphi}{2}\\approx1.91\\ \\mathrm{A},\\quad I_2=\\frac{6-\\varphi}{4}\\approx-0.55\\ \\mathrm{A},\\quad I_3=\\frac{\\varphi}{6}\\approx1.36\\ \\mathrm{A}$$",
+    "Check: the loop $\\mathcal{E}_1-R_1-R_3$: $$I_1R_1+I_3R_3=3.82+8.18=12\\ \\mathrm{V}=\\mathcal{E}_1$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tugun qoidasi: $\\sum I=0$",
+    "ru": "Правило узла: $\\sum I=0$",
+    "en": "Junction rule: $\\sum I=0$"
+   },
+   null,
+   {
+    "uz": "Kontur qoidasi: $\\sum\\mathcal{E}=\\sum IR$",
+    "ru": "Правило контура: $\\sum\\mathcal{E}=\\sum IR$",
+    "en": "Loop rule: $\\sum\\mathcal{E}=\\sum IR$"
+   }
+  ],
+  "basis": {
+   "uz": "Kirxgof qoidalari",
+   "ru": "Правила Кирхгофа",
+   "en": "Kirchhoff's rules"
+  },
+  "answer": "I_1\\approx1.91\\ \\mathrm{A};\\ I_2\\approx-0.55\\ \\mathrm{A};\\ I_3\\approx1.36\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 10.53-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L15-S10",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Oldingi masaladagi zanjirda $R_3$ ni yuk deb, qolgan qismni ekvivalent manba bilan almashtiring. $R_3$ dagi tokni toping. $R_3$ qanday bo'lganda undagi quvvat eng katta va u qancha?",
+   "ru": "В цепи предыдущей задачи считайте $R_3$ нагрузкой, а остальную часть замените эквивалентным источником. Найдите ток через $R_3$. При каком $R_3$ мощность в нём максимальна и чему она равна?",
+   "en": "In the circuit of the previous problem treat $R_3$ as the load and replace the rest by an equivalent source. Find the current in $R_3$. For what $R_3$ is its power greatest, and how large is it?"
+  },
+  "figure": "figures/B2-L15-S10.png",
+  "solution": {
+   "uz": [
+    "Salt ishlash kuchlanishi va EYK lar o'chirilgandagi qarshilik: $$\\mathcal{E}_0=\\frac{12/2+6/4}{1/2+1/4}=10\\ \\mathrm{V},\\quad r_0=\\frac{R_1R_2}{R_1+R_2}=\\frac{4}{3}\\ \\Omega$$",
+    "Yuk toki va eng katta quvvat: $$I_3=\\frac{10}{4/3+6}\\approx1.36\\ \\mathrm{A},\\quad R_3=r_0:\\ P_{\\max}=\\frac{\\mathcal{E}_0^2}{4r_0}=18.75\\ \\mathrm{W}$$"
+   ],
+   "ru": [
+    "Напряжение холостого хода и сопротивление при выключенных ЭДС: $$\\mathcal{E}_0=\\frac{12/2+6/4}{1/2+1/4}=10\\ \\mathrm{V},\\quad r_0=\\frac{R_1R_2}{R_1+R_2}=\\frac{4}{3}\\ \\Omega$$",
+    "Ток нагрузки и максимальная мощность: $$I_3=\\frac{10}{4/3+6}\\approx1.36\\ \\mathrm{A},\\quad R_3=r_0:\\ P_{\\max}=\\frac{\\mathcal{E}_0^2}{4r_0}=18.75\\ \\mathrm{W}$$"
+   ],
+   "en": [
+    "Open-circuit voltage and the resistance with the EMFs off: $$\\mathcal{E}_0=\\frac{12/2+6/4}{1/2+1/4}=10\\ \\mathrm{V},\\quad r_0=\\frac{R_1R_2}{R_1+R_2}=\\frac{4}{3}\\ \\Omega$$",
+    "Load current and maximum power: $$I_3=\\frac{10}{4/3+6}\\approx1.36\\ \\mathrm{A},\\quad R_3=r_0:\\ P_{\\max}=\\frac{\\mathcal{E}_0^2}{4r_0}=18.75\\ \\mathrm{W}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ekvivalent manba: $I=\\frac{\\mathcal{E}_0}{R+r_0}$",
+    "ru": "Эквивалентный источник: $I=\\frac{\\mathcal{E}_0}{R+r_0}$",
+    "en": "Equivalent source: $I=\\frac{\\mathcal{E}_0}{R+r_0}$"
+   },
+   {
+    "uz": "Eng katta quvvat: $R=r$, $P_{\\max}=\\frac{\\mathcal{E}^2}{4r}$",
+    "ru": "Максимальная мощность: $R=r$, $P_{\\max}=\\frac{\\mathcal{E}^2}{4r}$",
+    "en": "Maximum power: $R=r$, $P_{\\max}=\\frac{\\mathcal{E}^2}{4r}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ekvivalent manba",
+   "ru": "Эквивалентный источник",
+   "en": "The equivalent source"
+  },
+  "answer": "\\mathcal{E}_0=10\\ \\mathrm{V};\\ r_0=\\frac{4}{3}\\ \\Omega;\\ I_3\\approx1.36\\ \\mathrm{A};\\ P_{\\max}=18.75\\ \\mathrm{W}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original (B2-L15, Tevenin teoremasi)"
+ },
+ {
+  "id": "B2-L15-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Kub qirralari qarshiligi $12\\ \\Omega$ dan bo'lgan rezistorlardan yasalgan. Qarama-qarshi uchlar, yon diagonal uchlari va bitta qirra uchlari orasidagi qarshilikni toping.",
+   "ru": "Куб собран из резисторов по $12\\ \\Omega$ на рёбрах. Найдите сопротивление между противоположными вершинами, концами диагонали грани и концами одного ребра.",
+   "en": "A cube is made of $12\\ \\Omega$ resistors along its edges. Find the resistance between opposite corners, between the ends of a face diagonal, and between the ends of one edge."
+  },
+  "figure": "figures/B2-L15-S11.png",
+  "solution": {
+   "uz": [
+    "Qarama-qarshi uchlar: simmetriya bo'yicha $I$ tok $3$, $6$, $3$ qirraga teng bo'linadi: $$U=\\frac{I}{3}R+\\frac{I}{6}R+\\frac{I}{3}R=\\frac{5}{6}IR\\ \\Rightarrow\\ \\frac{5R}{6}=10\\ \\Omega$$",
+    "Xuddi shunday teng potensialli nuqtalarni birlashtirib: $$\\frac{3R}{4}=9\\ \\Omega,\\quad \\frac{7R}{12}=7\\ \\Omega$$"
+   ],
+   "ru": [
+    "Противоположные вершины: по симметрии ток $I$ делится поровну на $3$, $6$, $3$ ребра: $$U=\\frac{I}{3}R+\\frac{I}{6}R+\\frac{I}{3}R=\\frac{5}{6}IR\\ \\Rightarrow\\ \\frac{5R}{6}=10\\ \\Omega$$",
+    "Аналогично, объединяя точки равного потенциала: $$\\frac{3R}{4}=9\\ \\Omega,\\quad \\frac{7R}{12}=7\\ \\Omega$$"
+   ],
+   "en": [
+    "Opposite corners: by symmetry the current $I$ splits equally over $3$, $6$, $3$ edges: $$U=\\frac{I}{3}R+\\frac{I}{6}R+\\frac{I}{3}R=\\frac{5}{6}IR\\ \\Rightarrow\\ \\frac{5R}{6}=10\\ \\Omega$$",
+    "Similarly, joining points of equal potential: $$\\frac{3R}{4}=9\\ \\Omega,\\quad \\frac{7R}{12}=7\\ \\Omega$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Simmetriya: teng potensialli nuqtalar orasida tok yo'q",
+    "ru": "Симметрия: между точками равного потенциала тока нет",
+    "en": "Symmetry: no current between points of equal potential"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Rezistorlar kubi",
+   "ru": "Куб из резисторов",
+   "en": "A cube of resistors"
+  },
+  "answer": "10\\ \\Omega;\\ 9\\ \\Omega;\\ 7\\ \\Omega",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», rezistorlar kubi g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L15-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Cheksiz zanjirning har bir bo'g'ini ketma-ket $R=1\\ \\mathrm{k}\\Omega$ va undan keyingi parallel $R=1\\ \\mathrm{k}\\Omega$ dan iborat. Kirish qarshiligini toping.",
+   "ru": "Каждое звено бесконечной цепочки состоит из последовательного $R=1\\ \\mathrm{k}\\Omega$ и следующего за ним параллельного $R=1\\ \\mathrm{k}\\Omega$. Найдите входное сопротивление.",
+   "en": "Each section of an infinite ladder consists of a series $R=1\\ \\mathrm{k}\\Omega$ followed by a shunt $R=1\\ \\mathrm{k}\\Omega$. Find the input resistance."
+  },
+  "figure": "figures/B2-L15-S12.png",
+  "solution": {
+   "uz": [
+    "Birinchi bo'g'indan keyingi qism ham $R_x$: $$R_x=R+\\frac{RR_x}{R+R_x}\\ \\Rightarrow\\ R_x^2-RR_x-R^2=0$$",
+    "Musbat ildiz: $$R_x=R\\frac{1+\\sqrt{5}}{2}\\approx1.62\\ \\mathrm{k}\\Omega$$"
+   ],
+   "ru": [
+    "Часть после первого звена — тоже $R_x$: $$R_x=R+\\frac{RR_x}{R+R_x}\\ \\Rightarrow\\ R_x^2-RR_x-R^2=0$$",
+    "Положительный корень: $$R_x=R\\frac{1+\\sqrt{5}}{2}\\approx1.62\\ \\mathrm{k}\\Omega$$"
+   ],
+   "en": [
+    "The part after the first section is also $R_x$: $$R_x=R+\\frac{RR_x}{R+R_x}\\ \\Rightarrow\\ R_x^2-RR_x-R^2=0$$",
+    "The positive root: $$R_x=R\\frac{1+\\sqrt{5}}{2}\\approx1.62\\ \\mathrm{k}\\Omega$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Cheksiz zanjir: bir bo'g'inni olib tashlash $R$ ni o'zgartirmaydi",
+    "ru": "Бесконечная цепь: удаление звена не меняет $R$",
+    "en": "Infinite ladder: removing one section does not change $R$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Cheksiz zanjir",
+   "ru": "Бесконечная цепочка",
+   "en": "An infinite ladder"
+  },
+  "answer": "R_x=R\\frac{1+\\sqrt{5}}{2}\\approx1.62\\ \\mathrm{k}\\Omega",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original (B2-L15, cheksiz zanjir)"
+ },
+ {
+  "id": "B2-L15-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ko'prik sxemasi: A dan C ga $1\\ \\Omega$, C dan B ga $2\\ \\Omega$, A dan D ga $2\\ \\Omega$, D dan B ga $1\\ \\Omega$, C va D orasida $1\\ \\Omega$. A va B orasidagi qarshilikni toping. A–B ga $7\\ \\mathrm{V}$ berilsa, C–D rezistoridagi tok qancha?",
+   "ru": "Мостовая схема: от A к C $1\\ \\Omega$, от C к B $2\\ \\Omega$, от A к D $2\\ \\Omega$, от D к B $1\\ \\Omega$, между C и D $1\\ \\Omega$. Найдите сопротивление между A и B. Каков ток через резистор C–D при напряжении $7\\ \\mathrm{V}$ на A–B?",
+   "en": "A bridge circuit: $1\\ \\Omega$ from A to C, $2\\ \\Omega$ from C to B, $2\\ \\Omega$ from A to D, $1\\ \\Omega$ from D to B, and $1\\ \\Omega$ between C and D. Find the resistance between A and B. With $7\\ \\mathrm{V}$ across A–B, what current flows in the C–D resistor?"
+  },
+  "figure": "figures/B2-L15-S13.png",
+  "solution": {
+   "uz": [
+    "Ko'prik muvozanatlashmagan ($\\frac{1}{2}\\neq\\frac{2}{1}$). $\\varphi_A=1$, $\\varphi_B=0$ deb tugun tenglamalari: $$1+\\varphi_D=2.5\\varphi_C,\\quad 0.5+\\varphi_C=2.5\\varphi_D\\ \\Rightarrow\\ \\varphi_C=\\frac{4}{7},\\ \\varphi_D=\\frac{3}{7}$$",
+    "A dan chiquvchi tok va qarshilik: $$I=\\frac{3}{7}+\\frac{2}{7}=\\frac{5}{7}\\ \\Rightarrow\\ R=\\frac{7}{5}=1.4\\ \\Omega$$",
+    "$7\\ \\mathrm{V}$ da potensiallar $7$ marta katta: $$I_{CD}=\\frac{\\varphi_C-\\varphi_D}{1}=4-3=1\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "Мост не уравновешен ($\\frac{1}{2}\\neq\\frac{2}{1}$). Узловые уравнения при $\\varphi_A=1$, $\\varphi_B=0$: $$1+\\varphi_D=2.5\\varphi_C,\\quad 0.5+\\varphi_C=2.5\\varphi_D\\ \\Rightarrow\\ \\varphi_C=\\frac{4}{7},\\ \\varphi_D=\\frac{3}{7}$$",
+    "Ток из A и сопротивление: $$I=\\frac{3}{7}+\\frac{2}{7}=\\frac{5}{7}\\ \\Rightarrow\\ R=\\frac{7}{5}=1.4\\ \\Omega$$",
+    "При $7\\ \\mathrm{V}$ потенциалы в $7$ раз больше: $$I_{CD}=\\frac{\\varphi_C-\\varphi_D}{1}=4-3=1\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "The bridge is unbalanced ($\\frac{1}{2}\\neq\\frac{2}{1}$). Node equations with $\\varphi_A=1$, $\\varphi_B=0$: $$1+\\varphi_D=2.5\\varphi_C,\\quad 0.5+\\varphi_C=2.5\\varphi_D\\ \\Rightarrow\\ \\varphi_C=\\frac{4}{7},\\ \\varphi_D=\\frac{3}{7}$$",
+    "The current out of A and the resistance: $$I=\\frac{3}{7}+\\frac{2}{7}=\\frac{5}{7}\\ \\Rightarrow\\ R=\\frac{7}{5}=1.4\\ \\Omega$$",
+    "At $7\\ \\mathrm{V}$ the potentials are $7$ times larger: $$I_{CD}=\\frac{\\varphi_C-\\varphi_D}{1}=4-3=1\\ \\mathrm{A}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tugun qoidasi: $\\sum I=0$",
+    "ru": "Правило узла: $\\sum I=0$",
+    "en": "Junction rule: $\\sum I=0$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Muvozanatlashmagan ko'prik",
+   "ru": "Неуравновешенный мост",
+   "en": "An unbalanced bridge"
+  },
+  "answer": "R=1.4\\ \\Omega;\\ I_{CD}=1\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B2-L15, ko'prik sxemasi)"
+ },
+ {
+  "id": "B2-L15-S14",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$\\mathcal{E}=10\\ \\mathrm{V}$ manba, $R=10\\ \\mathrm{k}\\Omega$ va zaryadsiz $C=100\\ \\mu\\mathrm{F}$ kondensator ketma-ket ulandi. Vaqt doimiysini, boshlang'ich tokni, $1\\ \\mathrm{s}$ dan keyingi zaryadni va kondensator $90$ foizgacha zaryadlanish vaqtini toping.",
+   "ru": "Источник $\\mathcal{E}=10\\ \\mathrm{V}$, резистор $R=10\\ \\mathrm{k}\\Omega$ и незаряженный конденсатор $C=100\\ \\mu\\mathrm{F}$ соединены последовательно. Найдите постоянную времени, начальный ток, заряд через $1\\ \\mathrm{s}$ и время зарядки конденсатора до $90$ процентов.",
+   "en": "A source $\\mathcal{E}=10\\ \\mathrm{V}$, a resistor $R=10\\ \\mathrm{k}\\Omega$ and an uncharged capacitor $C=100\\ \\mu\\mathrm{F}$ are connected in series. Find the time constant, the initial current, the charge after $1\\ \\mathrm{s}$ and the time to charge to $90$ percent."
+  },
+  "figure": "figures/B2-L15-S14.png",
+  "solution": {
+   "uz": [
+    "Vaqt doimiysi va boshlang'ich tok: $$\\tau=RC=1\\ \\mathrm{s},\\quad I_0=\\frac{\\mathcal{E}}{R}=1\\ \\mathrm{mA}$$",
+    "Zaryad va $90$ foiz vaqti: $$q(1\\ \\mathrm{s})=C\\mathcal{E}\\left(1-e^{-1}\\right)\\approx632\\ \\mu\\mathrm{C},\\quad t=\\tau\\ln10\\approx2.3\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Постоянная времени и начальный ток: $$\\tau=RC=1\\ \\mathrm{s},\\quad I_0=\\frac{\\mathcal{E}}{R}=1\\ \\mathrm{mA}$$",
+    "Заряд и время $90$ процентов: $$q(1\\ \\mathrm{s})=C\\mathcal{E}\\left(1-e^{-1}\\right)\\approx632\\ \\mu\\mathrm{C},\\quad t=\\tau\\ln10\\approx2.3\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "Time constant and initial current: $$\\tau=RC=1\\ \\mathrm{s},\\quad I_0=\\frac{\\mathcal{E}}{R}=1\\ \\mathrm{mA}$$",
+    "Charge and the $90$-percent time: $$q(1\\ \\mathrm{s})=C\\mathcal{E}\\left(1-e^{-1}\\right)\\approx632\\ \\mu\\mathrm{C},\\quad t=\\tau\\ln10\\approx2.3\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "RC zaryadlash: $q=C\\mathcal{E}\\left(1-e^{-t/\\tau}\\right)$, $\\tau=RC$",
+    "ru": "Зарядка RC: $q=C\\mathcal{E}\\left(1-e^{-t/\\tau}\\right)$, $\\tau=RC$",
+    "en": "RC charging: $q=C\\mathcal{E}\\left(1-e^{-t/\\tau}\\right)$, $\\tau=RC$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "RC zanjirni zaryadlash",
+   "ru": "Зарядка RC-цепи",
+   "en": "Charging an RC circuit"
+  },
+  "answer": "\\tau=1\\ \\mathrm{s};\\ I_0=1\\ \\mathrm{mA};\\ q\\approx632\\ \\mu\\mathrm{C};\\ t\\approx2.3\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 10.73-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L15-S15",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$100\\ \\mathrm{V}$ ga zaryadlangan $10\\ \\mu\\mathrm{F}$ kondensator $1\\ \\mathrm{M}\\Omega$ rezistor orqali zaryadsizlanmoqda. Vaqt doimiysini, boshlang'ich tokni, kuchlanish yarmiga tushish vaqtini va rezistorda ajraladigan to'liq issiqlikni toping.",
+   "ru": "Конденсатор $10\\ \\mu\\mathrm{F}$, заряженный до $100\\ \\mathrm{V}$, разряжается через резистор $1\\ \\mathrm{M}\\Omega$. Найдите постоянную времени, начальный ток, время уменьшения напряжения вдвое и полное тепло в резисторе.",
+   "en": "A $10\\ \\mu\\mathrm{F}$ capacitor charged to $100\\ \\mathrm{V}$ discharges through a $1\\ \\mathrm{M}\\Omega$ resistor. Find the time constant, the initial current, the time for the voltage to halve and the total heat released in the resistor."
+  },
+  "figure": "figures/B2-L15-S15.png",
+  "solution": {
+   "uz": [
+    "Zaryadsizlanish: $$\\tau=RC=10\\ \\mathrm{s},\\quad I_0=\\frac{U_0}{R}=100\\ \\mu\\mathrm{A},\\quad t_{1/2}=\\tau\\ln2\\approx6.9\\ \\mathrm{s}$$",
+    "Issiqlik $\\int I^2R\\,dt$ — boshlang'ich energiyaga teng: $$Q=\\int_0^\\infty\\frac{U_0^2}{R}e^{-2t/\\tau}dt=\\frac{CU_0^2}{2}=0.05\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Разрядка: $$\\tau=RC=10\\ \\mathrm{s},\\quad I_0=\\frac{U_0}{R}=100\\ \\mu\\mathrm{A},\\quad t_{1/2}=\\tau\\ln2\\approx6.9\\ \\mathrm{s}$$",
+    "Тепло $\\int I^2R\\,dt$ — равно начальной энергии: $$Q=\\int_0^\\infty\\frac{U_0^2}{R}e^{-2t/\\tau}dt=\\frac{CU_0^2}{2}=0.05\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "Discharging: $$\\tau=RC=10\\ \\mathrm{s},\\quad I_0=\\frac{U_0}{R}=100\\ \\mu\\mathrm{A},\\quad t_{1/2}=\\tau\\ln2\\approx6.9\\ \\mathrm{s}$$",
+    "The heat $\\int I^2R\\,dt$ equals the initial energy: $$Q=\\int_0^\\infty\\frac{U_0^2}{R}e^{-2t/\\tau}dt=\\frac{CU_0^2}{2}=0.05\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "RC zaryadsizlanish: $q=q_0e^{-t/\\tau}$",
+    "ru": "Разрядка RC: $q=q_0e^{-t/\\tau}$",
+    "en": "RC discharging: $q=q_0e^{-t/\\tau}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kondensator zaryadsizlanishi",
+   "ru": "Разрядка конденсатора",
+   "en": "Discharging a capacitor"
+  },
+  "answer": "\\tau=10\\ \\mathrm{s};\\ I_0=100\\ \\mu\\mathrm{A};\\ t_{1/2}\\approx6.9\\ \\mathrm{s};\\ Q=0.05\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 10.77-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L15-S16",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$C=100\\ \\mu\\mathrm{F}$ kondensator $\\mathcal{E}=10\\ \\mathrm{V}$ manbadan $R$ rezistor orqali zaryadlanadi. Manba ishi, kondensator energiyasi va rezistordagi issiqlikni toping. Natija $R$ ga bog'liqmi?",
+   "ru": "Конденсатор $C=100\\ \\mu\\mathrm{F}$ заряжается от источника $\\mathcal{E}=10\\ \\mathrm{V}$ через резистор $R$. Найдите работу источника, энергию конденсатора и тепло в резисторе. Зависит ли результат от $R$?",
+   "en": "A capacitor $C=100\\ \\mu\\mathrm{F}$ is charged from a source $\\mathcal{E}=10\\ \\mathrm{V}$ through a resistor $R$. Find the work done by the source, the capacitor's energy and the heat in the resistor. Does the result depend on $R$?"
+  },
+  "figure": "figures/B2-L15-S16.png",
+  "solution": {
+   "uz": [
+    "Manba ishi: $$A_{\\mathcal{E}}=\\int\\mathcal{E}I\\,dt=\\mathcal{E}Q=C\\mathcal{E}^2=10\\ \\mathrm{mJ}$$",
+    "Issiqlik — $R$ dan qat'i nazar: $$Q=\\int_0^\\infty\\frac{\\mathcal{E}^2}{R}e^{-2t/RC}dt=\\frac{C\\mathcal{E}^2}{2}=5\\ \\mathrm{mJ}=W$$"
+   ],
+   "ru": [
+    "Работа источника: $$A_{\\mathcal{E}}=\\int\\mathcal{E}I\\,dt=\\mathcal{E}Q=C\\mathcal{E}^2=10\\ \\mathrm{mJ}$$",
+    "Тепло — независимо от $R$: $$Q=\\int_0^\\infty\\frac{\\mathcal{E}^2}{R}e^{-2t/RC}dt=\\frac{C\\mathcal{E}^2}{2}=5\\ \\mathrm{mJ}=W$$"
+   ],
+   "en": [
+    "The source's work: $$A_{\\mathcal{E}}=\\int\\mathcal{E}I\\,dt=\\mathcal{E}Q=C\\mathcal{E}^2=10\\ \\mathrm{mJ}$$",
+    "The heat — independent of $R$: $$Q=\\int_0^\\infty\\frac{\\mathcal{E}^2}{R}e^{-2t/RC}dt=\\frac{C\\mathcal{E}^2}{2}=5\\ \\mathrm{mJ}=W$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Energiya balansi: $A_{\\mathcal{E}}=C\\mathcal{E}^2=W+Q$",
+    "ru": "Баланс энергии: $A_{\\mathcal{E}}=C\\mathcal{E}^2=W+Q$",
+    "en": "Energy balance: $A_{\\mathcal{E}}=C\\mathcal{E}^2=W+Q$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "RC zaryadlashda energiya",
+   "ru": "Энергия при зарядке RC",
+   "en": "Energy in RC charging"
+  },
+  "answer": "A_{\\mathcal{E}}=10\\ \\mathrm{mJ};\\ W=5\\ \\mathrm{mJ};\\ Q=5\\ \\mathrm{mJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B2-L15, energiya balansi)"
+ },
+ {
+  "id": "B2-L15-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$\\mathcal{E}=12\\ \\mathrm{V}$ manbaga ketma-ket $R_1=2\\ \\mathrm{k}\\Omega$, so'ng parallel ulangan $C=10\\ \\mu\\mathrm{F}$ va $R_2=2\\ \\mathrm{k}\\Omega$ ulangan. Kalit ulangan ondagi $R_1$ tokini, kondensatorning oxirgi kuchlanishini va zaryadlash vaqt doimiysini toping. Manba uzilgandan keyingi zaryadsizlanish vaqt doimiysi qancha?",
+   "ru": "К источнику $\\mathcal{E}=12\\ \\mathrm{V}$ подключены последовательно $R_1=2\\ \\mathrm{k}\\Omega$ и затем параллельно соединённые $C=10\\ \\mu\\mathrm{F}$ и $R_2=2\\ \\mathrm{k}\\Omega$. Найдите ток через $R_1$ в момент замыкания ключа, конечное напряжение на конденсаторе и постоянную времени зарядки. Какова постоянная времени разрядки после отключения источника?",
+   "en": "A source $\\mathcal{E}=12\\ \\mathrm{V}$ feeds $R_1=2\\ \\mathrm{k}\\Omega$ in series, followed by $C=10\\ \\mu\\mathrm{F}$ in parallel with $R_2=2\\ \\mathrm{k}\\Omega$. Find the current in $R_1$ at the instant the switch closes, the final capacitor voltage and the charging time constant. What is the discharge time constant after the source is disconnected?"
+  },
+  "figure": "figures/B2-L15-S17.png",
+  "solution": {
+   "uz": [
+    "$t=0^+$: kondensator — sim, $R_2$ qisqa tutashgan: $$I_1(0)=\\frac{\\mathcal{E}}{R_1}=6\\ \\mathrm{mA}$$",
+    "$t\\to\\infty$ va ekvivalent manba: $$U_C=\\frac{\\mathcal{E}R_2}{R_1+R_2}=6\\ \\mathrm{V},\\quad \\tau=\\frac{R_1R_2}{R_1+R_2}C=10\\ \\mathrm{ms}$$",
+    "Manbasiz — faqat $R_2$ orqali: $$\\tau'=R_2C=20\\ \\mathrm{ms}$$"
+   ],
+   "ru": [
+    "$t=0^+$: конденсатор — провод, $R_2$ закорочен: $$I_1(0)=\\frac{\\mathcal{E}}{R_1}=6\\ \\mathrm{mA}$$",
+    "$t\\to\\infty$ и эквивалентный источник: $$U_C=\\frac{\\mathcal{E}R_2}{R_1+R_2}=6\\ \\mathrm{V},\\quad \\tau=\\frac{R_1R_2}{R_1+R_2}C=10\\ \\mathrm{ms}$$",
+    "Без источника — только через $R_2$: $$\\tau'=R_2C=20\\ \\mathrm{ms}$$"
+   ],
+   "en": [
+    "$t=0^+$: the capacitor is a wire and $R_2$ is shorted: $$I_1(0)=\\frac{\\mathcal{E}}{R_1}=6\\ \\mathrm{mA}$$",
+    "$t\\to\\infty$ and the equivalent source: $$U_C=\\frac{\\mathcal{E}R_2}{R_1+R_2}=6\\ \\mathrm{V},\\quad \\tau=\\frac{R_1R_2}{R_1+R_2}C=10\\ \\mathrm{ms}$$",
+    "Without the source — through $R_2$ only: $$\\tau'=R_2C=20\\ \\mathrm{ms}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Vaqt doimiysi: $\\tau=r_0C$",
+    "ru": "Постоянная времени: $\\tau=r_0C$",
+    "en": "Time constant: $\\tau=r_0C$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Murakkab RC zanjir",
+   "ru": "Сложная RC-цепь",
+   "en": "A more complex RC circuit"
+  },
+  "answer": "I_1(0)=6\\ \\mathrm{mA};\\ U_C=6\\ \\mathrm{V};\\ \\tau=10\\ \\mathrm{ms};\\ \\tau'=20\\ \\mathrm{ms}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L15, RC va ekvivalent manba)"
+ },
+ {
+  "id": "B2-L15-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$100\\ \\mathrm{V}$ gacha zaryadlangan $C_1=2\\ \\mu\\mathrm{F}$ kondensator $R=1\\ \\mathrm{k}\\Omega$ rezistor orqali zaryadsiz $C_2=3\\ \\mu\\mathrm{F}$ ga ulandi. Boshlang'ich tokni, vaqt doimiysini, oxirgi kuchlanishni va rezistordagi issiqlikni toping.",
+   "ru": "Конденсатор $C_1=2\\ \\mu\\mathrm{F}$, заряженный до $100\\ \\mathrm{V}$, подключили через резистор $R=1\\ \\mathrm{k}\\Omega$ к незаряженному $C_2=3\\ \\mu\\mathrm{F}$. Найдите начальный ток, постоянную времени, конечное напряжение и тепло в резисторе.",
+   "en": "A capacitor $C_1=2\\ \\mu\\mathrm{F}$ charged to $100\\ \\mathrm{V}$ is connected through a resistor $R=1\\ \\mathrm{k}\\Omega$ to an uncharged $C_2=3\\ \\mu\\mathrm{F}$. Find the initial current, the time constant, the final voltage and the heat in the resistor."
+  },
+  "figure": "figures/B2-L15-S18.png",
+  "solution": {
+   "uz": [
+    "Boshlang'ich tok va zaryad saqlanishi: $$I_0=\\frac{U_1}{R}=0.1\\ \\mathrm{A},\\quad U=\\frac{C_1U_1}{C_1+C_2}=40\\ \\mathrm{V}$$",
+    "Kuchlanishlar farqi ketma-ket sig'im bilan so'nadi: $$\\tau=R\\frac{C_1C_2}{C_1+C_2}=1.2\\ \\mathrm{ms}$$",
+    "Issiqlik: $$Q=\\int_0^\\infty I_0^2Re^{-2t/\\tau}dt=\\frac{I_0^2R\\tau}{2}=6\\ \\mathrm{mJ}$$"
+   ],
+   "ru": [
+    "Начальный ток и сохранение заряда: $$I_0=\\frac{U_1}{R}=0.1\\ \\mathrm{A},\\quad U=\\frac{C_1U_1}{C_1+C_2}=40\\ \\mathrm{V}$$",
+    "Разность напряжений спадает с последовательной ёмкостью: $$\\tau=R\\frac{C_1C_2}{C_1+C_2}=1.2\\ \\mathrm{ms}$$",
+    "Тепло: $$Q=\\int_0^\\infty I_0^2Re^{-2t/\\tau}dt=\\frac{I_0^2R\\tau}{2}=6\\ \\mathrm{mJ}$$"
+   ],
+   "en": [
+    "Initial current and charge conservation: $$I_0=\\frac{U_1}{R}=0.1\\ \\mathrm{A},\\quad U=\\frac{C_1U_1}{C_1+C_2}=40\\ \\mathrm{V}$$",
+    "The voltage difference decays with the series capacitance: $$\\tau=R\\frac{C_1C_2}{C_1+C_2}=1.2\\ \\mathrm{ms}$$",
+    "Heat: $$Q=\\int_0^\\infty I_0^2Re^{-2t/\\tau}dt=\\frac{I_0^2R\\tau}{2}=6\\ \\mathrm{mJ}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Zaryad saqlanishi: $\\sum q_i=\\mathrm{const}$",
+    "ru": "Сохранение заряда: $\\sum q_i=\\mathrm{const}$",
+    "en": "Charge conservation: $\\sum q_i=\\mathrm{const}$"
+   },
+   {
+    "uz": "Vaqt doimiysi: $\\tau=r_0C$",
+    "ru": "Постоянная времени: $\\tau=r_0C$",
+    "en": "Time constant: $\\tau=r_0C$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kondensatorlar orasida zaryad oqishi",
+   "ru": "Перетекание заряда между конденсаторами",
+   "en": "Charge flowing between capacitors"
+  },
+  "answer": "I_0=0.1\\ \\mathrm{A};\\ \\tau=1.2\\ \\mathrm{ms};\\ U=40\\ \\mathrm{V};\\ Q=6\\ \\mathrm{mJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L15, zaryad oqishi)"
+ }
+]

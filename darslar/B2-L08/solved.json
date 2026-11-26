@@ -1,0 +1,860 @@
+[
+ {
+  "id": "B2-L08-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Yer sirtidan qanday balandlikda og'irlik kuchi tezlanishi sirtdagidan $0.64$ qismini tashkil etadi? Qanday chuqurlikda (bir jinsli Yer modeli) u ham xuddi shunday bo'ladi? $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$.",
+   "ru": "На какой высоте над поверхностью Земли ускорение силы тяжести составляет $0.64$ от поверхностного? На какой глубине (модель однородной Земли) оно такое же? $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$.",
+   "en": "At what height above the Earth's surface is the gravitational acceleration $0.64$ of its surface value? At what depth (uniform-Earth model) is it the same? $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$."
+  },
+  "figure": "figures/B2-L08-S01.png",
+  "solution": {
+   "uz": [
+    "Balandlikda maydon masofa kvadratiga teskari: $$\\left(\\frac{R}{R+h}\\right)^2=0.64\\ \\Rightarrow\\ \\frac{R}{R+h}=0.8,\\qquad h=\\frac{R}{4}=1600\\ \\mathrm{km}$$",
+    "Shar ichida maydon markazgacha chiziqli kamayadi: $$1-\\frac{d}{R}=0.64\\ \\Rightarrow\\ d=0.36R\\approx2300\\ \\mathrm{km}$$",
+    "Chuqurlik balandlikdan katta — ichkarida maydon sekinroq kamayadi."
+   ],
+   "ru": [
+    "На высоте поле обратно пропорционально квадрату расстояния: $$\\left(\\frac{R}{R+h}\\right)^2=0.64\\ \\Rightarrow\\ \\frac{R}{R+h}=0.8,\\qquad h=\\frac{R}{4}=1600\\ \\mathrm{km}$$",
+    "Внутри шара поле линейно убывает к центру: $$1-\\frac{d}{R}=0.64\\ \\Rightarrow\\ d=0.36R\\approx2300\\ \\mathrm{km}$$",
+    "Глубина больше высоты — внутри поле убывает медленнее."
+   ],
+   "en": [
+    "Above the surface the field falls as the inverse square of the distance: $$\\left(\\frac{R}{R+h}\\right)^2=0.64\\ \\Rightarrow\\ \\frac{R}{R+h}=0.8,\\qquad h=\\frac{R}{4}=1600\\ \\mathrm{km}$$",
+    "Inside the sphere the field falls linearly toward the center: $$1-\\frac{d}{R}=0.64\\ \\Rightarrow\\ d=0.36R\\approx2300\\ \\mathrm{km}$$",
+    "The depth exceeds the height — inside, the field decreases more slowly."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Maydon: $g=\\frac{GM}{r^2}$, $GM=g_0R^2$",
+    "ru": "Поле: $g=\\frac{GM}{r^2}$, $GM=g_0R^2$",
+    "en": "Field: $g=\\frac{GM}{r^2}$, $GM=g_0R^2$"
+   },
+   {
+    "uz": "Chuqurlikda: $g=g_0\\left(1-\\frac{d}{R}\\right)$",
+    "ru": "На глубине: $g=g_0\\left(1-\\frac{d}{R}\\right)$",
+    "en": "At depth: $g=g_0\\left(1-\\frac{d}{R}\\right)$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Balandlik va chuqurlikda maydon",
+   "ru": "Поле на высоте и на глубине",
+   "en": "The field at height and at depth"
+  },
+  "answer": "h=1600\\ \\mathrm{km};\\ d\\approx2300\\ \\mathrm{km}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 13.62-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L08-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Sun'iy yo'ldosh Yer sirtidan $600\\ \\mathrm{km}$ balandlikda aylana orbita bo'ylab harakatlanadi. Uning tezligini va aylanish davrini toping. $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$.",
+   "ru": "Искусственный спутник движется по круговой орбите на высоте $600\\ \\mathrm{km}$ над поверхностью Земли. Найдите его скорость и период обращения. $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$.",
+   "en": "An artificial satellite moves on a circular orbit $600\\ \\mathrm{km}$ above the Earth's surface. Find its speed and orbital period. $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$."
+  },
+  "figure": "figures/B2-L08-S02.png",
+  "solution": {
+   "uz": [
+    "Orbita radiusi $r=R+h=7000\\ \\mathrm{km}$; $GM=gR^2=4.096\\cdot10^{14}\\ \\mathrm{m^3/s^2}$: $$v=\\sqrt{\\frac{GM}{r}}=\\sqrt{\\frac{4.096\\cdot10^{14}}{7\\cdot10^6}}\\approx7.65\\ \\mathrm{km/s}$$",
+    "Davr: $$T=\\frac{2\\pi r}{v}\\approx5750\\ \\mathrm{s}\\approx96\\ \\mathrm{min}$$"
+   ],
+   "ru": [
+    "Радиус орбиты $r=R+h=7000\\ \\mathrm{km}$; $GM=gR^2=4.096\\cdot10^{14}\\ \\mathrm{m^3/s^2}$: $$v=\\sqrt{\\frac{GM}{r}}=\\sqrt{\\frac{4.096\\cdot10^{14}}{7\\cdot10^6}}\\approx7.65\\ \\mathrm{km/s}$$",
+    "Период: $$T=\\frac{2\\pi r}{v}\\approx5750\\ \\mathrm{s}\\approx96\\ \\mathrm{min}$$"
+   ],
+   "en": [
+    "Orbit radius $r=R+h=7000\\ \\mathrm{km}$; $GM=gR^2=4.096\\cdot10^{14}\\ \\mathrm{m^3/s^2}$: $$v=\\sqrt{\\frac{GM}{r}}=\\sqrt{\\frac{4.096\\cdot10^{14}}{7\\cdot10^6}}\\approx7.65\\ \\mathrm{km/s}$$",
+    "Period: $$T=\\frac{2\\pi r}{v}\\approx5750\\ \\mathrm{s}\\approx96\\ \\mathrm{min}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Aylana orbita: $v_1=\\sqrt{\\frac{GM}{r}}$",
+    "ru": "Круговая орбита: $v_1=\\sqrt{\\frac{GM}{r}}$",
+    "en": "Circular orbit: $v_1=\\sqrt{\\frac{GM}{r}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Aylana orbita",
+   "ru": "Круговая орбита",
+   "en": "Circular orbit"
+  },
+  "answer": "v\\approx7.65\\ \\mathrm{km/s};\\ T\\approx96\\ \\mathrm{min}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 13.70-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L08-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Asteroid orbitasining katta yarim o'qi $4\\ \\mathrm{AU}$. Uning aylanish davri qancha? Davri $27$ yil bo'lgan boshqa asteroidning katta yarim o'qi qancha?",
+   "ru": "Большая полуось орбиты астероида $4\\ \\mathrm{AU}$. Каков его период обращения? Какова большая полуось другого астероида с периодом $27$ лет?",
+   "en": "An asteroid's orbit has semi-major axis $4\\ \\mathrm{AU}$. What is its period? What is the semi-major axis of another asteroid with a period of $27$ years?"
+  },
+  "figure": "figures/B2-L08-S03.png",
+  "solution": {
+   "uz": [
+    "Yer uchun $T=1$ yil, $a=1\\ \\mathrm{AU}$, shuning uchun bu birliklarda: $$T^2=a^3$$",
+    "Hisoblaymiz: $$T=4^{3/2}=8,\\qquad a=27^{2/3}=9\\ \\mathrm{AU}$$"
+   ],
+   "ru": [
+    "Для Земли $T=1$ год, $a=1\\ \\mathrm{AU}$, поэтому в этих единицах: $$T^2=a^3$$",
+    "Вычисляем: $$T=4^{3/2}=8,\\qquad a=27^{2/3}=9\\ \\mathrm{AU}$$"
+   ],
+   "en": [
+    "For the Earth $T=1$ year and $a=1\\ \\mathrm{AU}$, so in these units: $$T^2=a^3$$",
+    "Calculating: $$T=4^{3/2}=8,\\qquad a=27^{2/3}=9\\ \\mathrm{AU}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Quyosh tizimida: $T^2=a^3$ (yil, AU)",
+    "ru": "В Солнечной системе: $T^2=a^3$ (годы, AU)",
+    "en": "In the Solar System: $T^2=a^3$ (years, AU)"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Keplerning uchinchi qonuni",
+   "ru": "Третий закон Кеплера",
+   "en": "Kepler's third law"
+  },
+  "answer": "T=8;\\ a=9\\ \\mathrm{AU}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 13.53-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L08-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Sayyora radiusi $R$ bo'lgan shar; uning radiusi $\\frac{R}{2}$ bo'lgan yadrosining zichligi $2\\rho$, qolgan qismining zichligi $\\rho$. Yadro sirtidagi va sayyora sirtidagi maydonlar nisbatini toping.",
+   "ru": "Планета — шар радиуса $R$; плотность её ядра радиуса $\\frac{R}{2}$ равна $2\\rho$, остальной части — $\\rho$. Найдите отношение полей на поверхности ядра и на поверхности планеты.",
+   "en": "A planet is a sphere of radius $R$; its core of radius $\\frac{R}{2}$ has density $2\\rho$ and the rest has density $\\rho$. Find the ratio of the field at the core's surface to that at the planet's surface."
+  },
+  "figure": "figures/B2-L08-S04.png",
+  "solution": {
+   "uz": [
+    "Yadro massasi va to'liq massa: $$M_c=\\frac{4}{3}\\pi\\frac{R^3}{8}2\\rho=\\frac{1}{4}M_0,\\qquad M=\\frac{1}{4}M_0+\\frac{7}{8}M_0=\\frac{9}{8}M_0,\\qquad M_0=\\frac{4}{3}\\pi R^3\\rho$$",
+    "Qobiq teoremasi: har bir sirtda faqat ichkaridagi massa tortadi: $$g_c=\\frac{GM_c}{(R/2)^2}=\\frac{GM_0}{R^2},\\qquad g=\\frac{9}{8}\\cdot\\frac{GM_0}{R^2}$$",
+    "Nisbat: $$\\frac{g_c}{g}=\\frac{8}{9}$$"
+   ],
+   "ru": [
+    "Масса ядра и полная масса: $$M_c=\\frac{4}{3}\\pi\\frac{R^3}{8}2\\rho=\\frac{1}{4}M_0,\\qquad M=\\frac{1}{4}M_0+\\frac{7}{8}M_0=\\frac{9}{8}M_0,\\qquad M_0=\\frac{4}{3}\\pi R^3\\rho$$",
+    "Теорема о слое: на каждой поверхности притягивает лишь масса внутри: $$g_c=\\frac{GM_c}{(R/2)^2}=\\frac{GM_0}{R^2},\\qquad g=\\frac{9}{8}\\cdot\\frac{GM_0}{R^2}$$",
+    "Отношение: $$\\frac{g_c}{g}=\\frac{8}{9}$$"
+   ],
+   "en": [
+    "Core mass and total mass: $$M_c=\\frac{4}{3}\\pi\\frac{R^3}{8}2\\rho=\\frac{1}{4}M_0,\\qquad M=\\frac{1}{4}M_0+\\frac{7}{8}M_0=\\frac{9}{8}M_0,\\qquad M_0=\\frac{4}{3}\\pi R^3\\rho$$",
+    "Shell theorem: at each surface only the mass inside attracts: $$g_c=\\frac{GM_c}{(R/2)^2}=\\frac{GM_0}{R^2},\\qquad g=\\frac{9}{8}\\cdot\\frac{GM_0}{R^2}$$",
+    "Ratio: $$\\frac{g_c}{g}=\\frac{8}{9}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Qobiq teoremasi: $g(r)=\\frac{GM_{in}(r)}{r^2}$",
+    "ru": "Теорема о слое: $g(r)=\\frac{GM_{in}(r)}{r^2}$",
+    "en": "Shell theorem: $g(r)=\\frac{GM_{in}(r)}{r^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Qobiq teoremasi, bir jinsli bo'lmagan sayyora",
+   "ru": "Теорема о слое, неоднородная планета",
+   "en": "Shell theorem, a non-uniform planet"
+  },
+  "answer": "\\frac{g_c}{g}=\\frac{8}{9}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original (B2-L08, qobiq teoremasi)"
+ },
+ {
+  "id": "B2-L08-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $10\\ \\mathrm{km}$, zichligi $2000\\ \\mathrm{kg/m^3}$ bo'lgan sferik asteroiddan qochish tezligini toping ($G=6.67\\cdot10^{-11}\\ \\mathrm{N\\cdot m^2/kg^2}$). Odam sakrab undan ketib qola oladimi?",
+   "ru": "Найдите скорость убегания со сферического астероида радиусом $10\\ \\mathrm{km}$ и плотностью $2000\\ \\mathrm{kg/m^3}$ ($G=6.67\\cdot10^{-11}\\ \\mathrm{N\\cdot m^2/kg^2}$). Может ли человек улететь с него прыжком?",
+   "en": "Find the escape speed from a spherical asteroid of radius $10\\ \\mathrm{km}$ and density $2000\\ \\mathrm{kg/m^3}$ ($G=6.67\\cdot10^{-11}\\ \\mathrm{N\\cdot m^2/kg^2}$). Can a person jump off it?"
+  },
+  "figure": "figures/B2-L08-S05.png",
+  "solution": {
+   "uz": [
+    "Massani zichlik orqali ifodalaymiz, $M=\\frac{4}{3}\\pi R^3\\rho$: $$v_2=\\sqrt{\\frac{2GM}{R}}=R\\sqrt{\\frac{8\\pi G\\rho}{3}}$$",
+    "Hisoblaymiz: $$v_2=10^4\\sqrt{\\frac{8\\pi\\cdot6.67\\cdot10^{-11}\\cdot2000}{3}}\\approx10.6\\ \\mathrm{m/s}$$",
+    "Yaxshi sakrovchi $3$–$4\\ \\mathrm{m/s}$ tezlik bera oladi — kifoya qilmaydi, lekin bu asteroid juda «yengil»."
+   ],
+   "ru": [
+    "Выражаем массу через плотность, $M=\\frac{4}{3}\\pi R^3\\rho$: $$v_2=\\sqrt{\\frac{2GM}{R}}=R\\sqrt{\\frac{8\\pi G\\rho}{3}}$$",
+    "Вычисляем: $$v_2=10^4\\sqrt{\\frac{8\\pi\\cdot6.67\\cdot10^{-11}\\cdot2000}{3}}\\approx10.6\\ \\mathrm{m/s}$$",
+    "Хороший прыгун развивает $3$–$4\\ \\mathrm{m/s}$ — этого мало, но астероид очень «лёгкий»."
+   ],
+   "en": [
+    "Express the mass through the density, $M=\\frac{4}{3}\\pi R^3\\rho$: $$v_2=\\sqrt{\\frac{2GM}{R}}=R\\sqrt{\\frac{8\\pi G\\rho}{3}}$$",
+    "Calculating: $$v_2=10^4\\sqrt{\\frac{8\\pi\\cdot6.67\\cdot10^{-11}\\cdot2000}{3}}\\approx10.6\\ \\mathrm{m/s}$$",
+    "A good jumper reaches $3$–$4\\ \\mathrm{m/s}$ — not enough, but the asteroid is very “light”."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qochish tezligi: $v_2=\\sqrt{\\frac{2GM}{R}}$",
+    "ru": "Скорость убегания: $v_2=\\sqrt{\\frac{2GM}{R}}$",
+    "en": "Escape speed: $v_2=\\sqrt{\\frac{2GM}{R}}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Qochish tezligi",
+   "ru": "Скорость убегания",
+   "en": "Escape speed"
+  },
+  "answer": "v_2\\approx10.6\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 13.29-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L08-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yer yo'ldoshining perigeyi Yer markazidan $7000\\ \\mathrm{km}$, apogeyi $14\\ 000\\ \\mathrm{km}$ masofada. Orbitaning katta va kichik yarim o'qlarini, ekssentrisitetini, perigey va apogeydagi tezliklarni hamda davrini toping. $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$.",
+   "ru": "Перигей спутника Земли находится на расстоянии $7000\\ \\mathrm{km}$ от центра Земли, апогей — $14\\ 000\\ \\mathrm{km}$. Найдите большую и малую полуоси, эксцентриситет орбиты, скорости в перигее и апогее и период. $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$.",
+   "en": "An Earth satellite has its perigee $7000\\ \\mathrm{km}$ and its apogee $14\\ 000\\ \\mathrm{km}$ from the Earth's center. Find the semi-major and semi-minor axes, the eccentricity, the speeds at perigee and apogee, and the period. $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$."
+  },
+  "figure": "figures/B2-L08-S06.png",
+  "solution": {
+   "uz": [
+    "Ellips parametrlari: $$a=10\\ 500\\ \\mathrm{km},\\qquad e=\\frac{7000}{21\\ 000}=\\frac{1}{3},\\qquad b=\\sqrt{7000\\cdot14\\ 000}\\approx9900\\ \\mathrm{km}$$",
+    "Perigeydagi tezlik vis-viva tenglamasidan: $$v_p=\\sqrt{GM\\left(\\frac{2}{r_p}-\\frac{1}{a}\\right)}\\approx8.83\\ \\mathrm{km/s}$$",
+    "Apogeydagi tezlik impuls momentidan: $$v_a=v_p\\frac{r_p}{r_a}\\approx4.42\\ \\mathrm{km/s}$$",
+    "Davr: $$T=2\\pi\\sqrt{\\frac{a^3}{GM}}\\approx1.06\\cdot10^4\\ \\mathrm{s}\\approx176\\ \\mathrm{min}$$"
+   ],
+   "ru": [
+    "Параметры эллипса: $$a=10\\ 500\\ \\mathrm{km},\\qquad e=\\frac{7000}{21\\ 000}=\\frac{1}{3},\\qquad b=\\sqrt{7000\\cdot14\\ 000}\\approx9900\\ \\mathrm{km}$$",
+    "Скорость в перигее — из уравнения vis-viva: $$v_p=\\sqrt{GM\\left(\\frac{2}{r_p}-\\frac{1}{a}\\right)}\\approx8.83\\ \\mathrm{km/s}$$",
+    "Скорость в апогее — из момента импульса: $$v_a=v_p\\frac{r_p}{r_a}\\approx4.42\\ \\mathrm{km/s}$$",
+    "Период: $$T=2\\pi\\sqrt{\\frac{a^3}{GM}}\\approx1.06\\cdot10^4\\ \\mathrm{s}\\approx176\\ \\mathrm{min}$$"
+   ],
+   "en": [
+    "Ellipse parameters: $$a=10\\ 500\\ \\mathrm{km},\\qquad e=\\frac{7000}{21\\ 000}=\\frac{1}{3},\\qquad b=\\sqrt{7000\\cdot14\\ 000}\\approx9900\\ \\mathrm{km}$$",
+    "The perigee speed from the vis-viva equation: $$v_p=\\sqrt{GM\\left(\\frac{2}{r_p}-\\frac{1}{a}\\right)}\\approx8.83\\ \\mathrm{km/s}$$",
+    "The apogee speed from angular momentum: $$v_a=v_p\\frac{r_p}{r_a}\\approx4.42\\ \\mathrm{km/s}$$",
+    "Period: $$T=2\\pi\\sqrt{\\frac{a^3}{GM}}\\approx1.06\\cdot10^4\\ \\mathrm{s}\\approx176\\ \\mathrm{min}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ellips: $a=\\frac{r_p+r_a}{2}$, $e=\\frac{r_a-r_p}{r_a+r_p}$",
+    "ru": "Эллипс: $a=\\frac{r_p+r_a}{2}$, $e=\\frac{r_a-r_p}{r_a+r_p}$",
+    "en": "Ellipse: $a=\\frac{r_p+r_a}{2}$, $e=\\frac{r_a-r_p}{r_a+r_p}$"
+   },
+   {
+    "uz": "Vis-viva: $v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)$",
+    "ru": "Vis-viva: $v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)$",
+    "en": "Vis-viva: $v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)$"
+   },
+   {
+    "uz": "Apsidal nuqtalarda: $v_pr_p=v_ar_a$",
+    "ru": "В апсидах: $v_pr_p=v_ar_a$",
+    "en": "At the apsides: $v_pr_p=v_ar_a$"
+   },
+   {
+    "uz": "Keplerning uchinchi qonuni: $\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$",
+    "ru": "Третий закон Кеплера: $\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$",
+    "en": "Kepler's third law: $\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$"
+   }
+  ],
+  "basis": {
+   "uz": "Elliptik orbita parametrlari",
+   "ru": "Параметры эллиптической орбиты",
+   "en": "Parameters of an elliptic orbit"
+  },
+  "answer": "a=10\\ 500\\ \\mathrm{km};\\ e=\\frac{1}{3};\\ v_p\\approx8.83,\\ v_a\\approx4.42\\ \\mathrm{km/s};\\ T\\approx176\\ \\mathrm{min}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 13.79-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L08-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yo'ldosh Yer markazidan $7000\\ \\mathrm{km}$ masofada gorizontal yo'nalishda shu nuqtadagi aylana orbita tezligidan $1.2$ marta katta tezlik bilan otildi. Apogey masofasini va orbita ekssentrisitetini toping.",
+   "ru": "Спутник запущен горизонтально на расстоянии $7000\\ \\mathrm{km}$ от центра Земли со скоростью в $1.2$ раза больше круговой скорости в этой точке. Найдите расстояние апогея и эксцентриситет орбиты.",
+   "en": "A satellite is launched horizontally $7000\\ \\mathrm{km}$ from the Earth's center with a speed $1.2$ times the circular-orbit speed there. Find the apogee distance and the eccentricity of the orbit."
+  },
+  "figure": "figures/B2-L08-S07.png",
+  "solution": {
+   "uz": [
+    "Vis-viva: $v^2=1.44\\frac{GM}{r}$: $$\\frac{1}{a}=\\frac{2}{r}-\\frac{1.44}{r}\\ \\Rightarrow\\ a=\\frac{r}{0.56}=12\\ 500\\ \\mathrm{km}$$",
+    "Otish nuqtasi — perigey ($v\\perp r$): $$r_a=2a-r_p=18\\ 000\\ \\mathrm{km}$$",
+    "Ekssentrisitet: $$e=\\frac{18\\ 000-7000}{25\\ 000}=0.44$$"
+   ],
+   "ru": [
+    "Vis-viva: $v^2=1.44\\frac{GM}{r}$: $$\\frac{1}{a}=\\frac{2}{r}-\\frac{1.44}{r}\\ \\Rightarrow\\ a=\\frac{r}{0.56}=12\\ 500\\ \\mathrm{km}$$",
+    "Точка запуска — перигей ($v\\perp r$): $$r_a=2a-r_p=18\\ 000\\ \\mathrm{km}$$",
+    "Эксцентриситет: $$e=\\frac{18\\ 000-7000}{25\\ 000}=0.44$$"
+   ],
+   "en": [
+    "Vis-viva: $v^2=1.44\\frac{GM}{r}$: $$\\frac{1}{a}=\\frac{2}{r}-\\frac{1.44}{r}\\ \\Rightarrow\\ a=\\frac{r}{0.56}=12\\ 500\\ \\mathrm{km}$$",
+    "The launch point is the perigee ($v\\perp r$): $$r_a=2a-r_p=18\\ 000\\ \\mathrm{km}$$",
+    "Eccentricity: $$e=\\frac{18\\ 000-7000}{25\\ 000}=0.44$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Vis-viva: $v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)$",
+    "ru": "Vis-viva: $v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)$",
+    "en": "Vis-viva: $v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)$"
+   },
+   null,
+   {
+    "uz": "Ellips: $a=\\frac{r_p+r_a}{2}$, $e=\\frac{r_a-r_p}{r_a+r_p}$",
+    "ru": "Эллипс: $a=\\frac{r_p+r_a}{2}$, $e=\\frac{r_a-r_p}{r_a+r_p}$",
+    "en": "Ellipse: $a=\\frac{r_p+r_a}{2}$, $e=\\frac{r_a-r_p}{r_a+r_p}$"
+   }
+  ],
+  "basis": {
+   "uz": "Vis-viva tenglamasi, otish nuqtasi",
+   "ru": "Уравнение vis-viva, точка запуска",
+   "en": "Vis-viva equation, launch point"
+  },
+  "answer": "r_a=18\\ 000\\ \\mathrm{km};\\ e=0.44",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original (B2-L08, vis-viva)"
+ },
+ {
+  "id": "B2-L08-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Qo'shaloq yulduz komponentlari orasidagi masofa $4\\ \\mathrm{AU}$, aylanish davri $4$ yil, yulduzlar massalari nisbati $3:1$ (orbitalar aylana). Har bir yulduz massasini (Quyosh massalarida) va massa markazigacha masofalarini toping.",
+   "ru": "Расстояние между компонентами двойной звезды $4\\ \\mathrm{AU}$, период обращения $4$ года, отношение масс звёзд $3:1$ (орбиты круговые). Найдите массу каждой звезды (в массах Солнца) и их расстояния до центра масс.",
+   "en": "The components of a binary star are $4\\ \\mathrm{AU}$ apart, the orbital period is $4$ years and the mass ratio is $3:1$ (circular orbits). Find the mass of each star (in solar masses) and their distances from the center of mass."
+  },
+  "figure": "figures/B2-L08-S08.png",
+  "solution": {
+   "uz": [
+    "Quyosh birliklarida $T^2=\\frac{a^3}{m_1+m_2}$ (massalar Quyosh massasida): $$m_1+m_2=\\frac{4^3}{4^2}=4$$",
+    "Massalar nisbati $3:1$: $$m_1=3,\\qquad m_2=1$$",
+    "Massa markazigacha masofalar massalarga teskari: $$r_1=1\\ \\mathrm{AU},\\qquad r_2=3\\ \\mathrm{AU}$$"
+   ],
+   "ru": [
+    "В солнечных единицах $T^2=\\frac{a^3}{m_1+m_2}$ (массы — в массах Солнца): $$m_1+m_2=\\frac{4^3}{4^2}=4$$",
+    "Отношение масс $3:1$: $$m_1=3,\\qquad m_2=1$$",
+    "Расстояния до центра масс обратны массам: $$r_1=1\\ \\mathrm{AU},\\qquad r_2=3\\ \\mathrm{AU}$$"
+   ],
+   "en": [
+    "In solar units $T^2=\\frac{a^3}{m_1+m_2}$ (masses in solar masses): $$m_1+m_2=\\frac{4^3}{4^2}=4$$",
+    "Mass ratio $3:1$: $$m_1=3,\\qquad m_2=1$$",
+    "The distances to the center of mass are inverse to the masses: $$r_1=1\\ \\mathrm{AU},\\qquad r_2=3\\ \\mathrm{AU}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ikki jism: $T^2=\\frac{4\\pi^2a^3}{G(m_1+m_2)}$",
+    "ru": "Два тела: $T^2=\\frac{4\\pi^2a^3}{G(m_1+m_2)}$",
+    "en": "Two bodies: $T^2=\\frac{4\\pi^2a^3}{G(m_1+m_2)}$"
+   },
+   null,
+   {
+    "uz": "Massa markazi: $\\frac{r_1}{r_2}=\\frac{m_2}{m_1}$",
+    "ru": "Центр масс: $\\frac{r_1}{r_2}=\\frac{m_2}{m_1}$",
+    "en": "Center of mass: $\\frac{r_1}{r_2}=\\frac{m_2}{m_1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Qo'shaloq yulduz, ikki jism masalasi",
+   "ru": "Двойная звезда, задача двух тел",
+   "en": "Binary star, two-body problem"
+  },
+  "answer": "m_1=3,\\ m_2=1;\\ r_1=1,\\ r_2=3\\ \\mathrm{AU}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 13.78-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L08-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Qo'shaloq pulsar: massasi $1.4$ Quyosh massasidan ($M_\\odot=2\\cdot10^{30}\\ \\mathrm{kg}$) bo'lgan ikkita neytron yulduz bir-biridan $2\\cdot10^9\\ \\mathrm{m}$ masofada aylana orbitalarda aylanadi. Davrni va har bir yulduz tezligini toping ($G=6.67\\cdot10^{-11}\\ \\mathrm{N\\cdot m^2/kg^2}$).",
+   "ru": "Двойной пульсар: две нейтронные звезды массой $1.4$ массы Солнца ($M_\\odot=2\\cdot10^{30}\\ \\mathrm{kg}$) обращаются по круговым орбитам на расстоянии $2\\cdot10^9\\ \\mathrm{m}$ друг от друга. Найдите период и скорость каждой звезды ($G=6.67\\cdot10^{-11}\\ \\mathrm{N\\cdot m^2/kg^2}$).",
+   "en": "A binary pulsar: two neutron stars of $1.4$ solar masses each ($M_\\odot=2\\cdot10^{30}\\ \\mathrm{kg}$) move on circular orbits $2\\cdot10^9\\ \\mathrm{m}$ apart. Find the period and the speed of each star ($G=6.67\\cdot10^{-11}\\ \\mathrm{N\\cdot m^2/kg^2}$)."
+  },
+  "figure": "figures/B2-L08-S09.png",
+  "solution": {
+   "uz": [
+    "Nisbiy orbita radiusi $d$, massalar yig'indisi $2m$: $$T=2\\pi\\sqrt{\\frac{d^3}{G\\cdot2m}}\\approx2.9\\cdot10^4\\ \\mathrm{s}\\approx8.1\\ \\mathrm{h}$$",
+    "Har bir yulduz massa markazi atrofida radiusi $\\frac{d}{2}$ aylana bo'ylab yuradi: $$v=\\frac{2\\pi\\cdot\\frac{d}{2}}{T}=\\frac{\\pi d}{T}\\approx216\\ \\mathrm{km/s}$$"
+   ],
+   "ru": [
+    "Радиус относительной орбиты $d$, сумма масс $2m$: $$T=2\\pi\\sqrt{\\frac{d^3}{G\\cdot2m}}\\approx2.9\\cdot10^4\\ \\mathrm{s}\\approx8.1\\ \\mathrm{h}$$",
+    "Каждая звезда движется вокруг центра масс по окружности радиуса $\\frac{d}{2}$: $$v=\\frac{2\\pi\\cdot\\frac{d}{2}}{T}=\\frac{\\pi d}{T}\\approx216\\ \\mathrm{km/s}$$"
+   ],
+   "en": [
+    "The relative orbit has radius $d$ and the total mass is $2m$: $$T=2\\pi\\sqrt{\\frac{d^3}{G\\cdot2m}}\\approx2.9\\cdot10^4\\ \\mathrm{s}\\approx8.1\\ \\mathrm{h}$$",
+    "Each star moves around the center of mass on a circle of radius $\\frac{d}{2}$: $$v=\\frac{2\\pi\\cdot\\frac{d}{2}}{T}=\\frac{\\pi d}{T}\\approx216\\ \\mathrm{km/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ikki jism: $T^2=\\frac{4\\pi^2a^3}{G(m_1+m_2)}$",
+    "ru": "Два тела: $T^2=\\frac{4\\pi^2a^3}{G(m_1+m_2)}$",
+    "en": "Two bodies: $T^2=\\frac{4\\pi^2a^3}{G(m_1+m_2)}$"
+   },
+   {
+    "uz": "Massa markazi: $\\frac{r_1}{r_2}=\\frac{m_2}{m_1}$",
+    "ru": "Центр масс: $\\frac{r_1}{r_2}=\\frac{m_2}{m_1}$",
+    "en": "Center of mass: $\\frac{r_1}{r_2}=\\frac{m_2}{m_1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ikki jism masalasi, teng massalar",
+   "ru": "Задача двух тел, равные массы",
+   "en": "Two-body problem, equal masses"
+  },
+  "answer": "T\\approx8.1\\ \\mathrm{h};\\ v\\approx216\\ \\mathrm{km/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 13.78-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L08-S10",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Agar Yer orbitasidagi harakati to'xtatilsa, u Quyoshga qancha vaqtda tushadi? Yer yili $365.25$ sutka; Quyosh va Yer o'lchamlarini hisobga olmang.",
+   "ru": "За какое время Земля упала бы на Солнце, если бы её орбитальное движение остановилось? Земной год $365.25$ суток; размерами Солнца и Земли пренебречь.",
+   "en": "How long would the Earth take to fall into the Sun if its orbital motion were stopped? The year is $365.25$ days; neglect the sizes of the Sun and the Earth."
+  },
+  "figure": "figures/B2-L08-S10.png",
+  "solution": {
+   "uz": [
+    "To'g'ri chiziq bo'ylab tushish — ekssentrisiteti $1$ ga intilgan ellips; aposentr $r$, perisentr $0$: $$a=\\frac{r}{2}$$",
+    "Uchinchi qonun bilan, tushish — yarim davr: $$t=\\frac{T'}{2}=\\frac{T_E}{2}\\left(\\frac{1}{2}\\right)^{3/2}=\\frac{T_E}{4\\sqrt{2}}$$",
+    "Hisoblaymiz: $$t=\\frac{365.25}{5.66}\\approx64.6\\ \\mathrm{d}$$"
+   ],
+   "ru": [
+    "Падение по прямой — эллипс с эксцентриситетом, стремящимся к $1$; апоцентр $r$, перицентр $0$: $$a=\\frac{r}{2}$$",
+    "По третьему закону; падение — половина периода: $$t=\\frac{T'}{2}=\\frac{T_E}{2}\\left(\\frac{1}{2}\\right)^{3/2}=\\frac{T_E}{4\\sqrt{2}}$$",
+    "Вычисляем: $$t=\\frac{365.25}{5.66}\\approx64.6\\ \\mathrm{d}$$"
+   ],
+   "en": [
+    "A straight-line fall is an ellipse with eccentricity tending to $1$; apocenter $r$, pericenter $0$: $$a=\\frac{r}{2}$$",
+    "By the third law; the fall is half a period: $$t=\\frac{T'}{2}=\\frac{T_E}{2}\\left(\\frac{1}{2}\\right)^{3/2}=\\frac{T_E}{4\\sqrt{2}}$$",
+    "Calculating: $$t=\\frac{365.25}{5.66}\\approx64.6\\ \\mathrm{d}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ellips: $a=\\frac{r_p+r_a}{2}$, $e=\\frac{r_a-r_p}{r_a+r_p}$",
+    "ru": "Эллипс: $a=\\frac{r_p+r_a}{2}$, $e=\\frac{r_a-r_p}{r_a+r_p}$",
+    "en": "Ellipse: $a=\\frac{r_p+r_a}{2}$, $e=\\frac{r_a-r_p}{r_a+r_p}$"
+   },
+   {
+    "uz": "Keplerning uchinchi qonuni: $\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$",
+    "ru": "Третий закон Кеплера: $\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$",
+    "en": "Kepler's third law: $\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Radial tushish — qisilgan ellips",
+   "ru": "Радиальное падение — вырожденный эллипс",
+   "en": "Radial fall — a degenerate ellipse"
+  },
+  "answer": "t=\\frac{T_E}{4\\sqrt{2}}\\approx64.6\\ \\mathrm{d}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.6 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L08-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Sayyoraning radiusi $3400\\ \\mathrm{km}$, sirtidagi og'irlik tezlanishi $4\\ \\mathrm{m/s^2}$, o'z o'qi atrofida aylanish davri $24.6\\ \\mathrm{h}$. Sayyoraga nisbatan qo'zg'almas turadigan (statsionar) yo'ldosh orbitasi radiusini toping.",
+   "ru": "Радиус планеты $3400\\ \\mathrm{km}$, ускорение свободного падения на поверхности $4\\ \\mathrm{m/s^2}$, период вращения вокруг оси $24.6\\ \\mathrm{h}$. Найдите радиус орбиты стационарного спутника, неподвижного относительно планеты.",
+   "en": "A planet has radius $3400\\ \\mathrm{km}$, surface gravity $4\\ \\mathrm{m/s^2}$ and rotation period $24.6\\ \\mathrm{h}$. Find the orbital radius of a stationary satellite that stays fixed relative to the planet."
+  },
+  "figure": "figures/B2-L08-S11.png",
+  "solution": {
+   "uz": [
+    "Yo'ldosh davri sayyora aylanish davriga teng; $GM=g_0R^2$: $$\\frac{T^2}{r^3}=\\frac{4\\pi^2}{g_0R^2}$$",
+    "Hisoblaymiz: $$r=\\left(\\frac{g_0R^2T^2}{4\\pi^2}\\right)^{1/3}\\approx2.09\\cdot10^7\\ \\mathrm{m}\\approx6.2R$$"
+   ],
+   "ru": [
+    "Период спутника равен периоду вращения планеты; $GM=g_0R^2$: $$\\frac{T^2}{r^3}=\\frac{4\\pi^2}{g_0R^2}$$",
+    "Вычисляем: $$r=\\left(\\frac{g_0R^2T^2}{4\\pi^2}\\right)^{1/3}\\approx2.09\\cdot10^7\\ \\mathrm{m}\\approx6.2R$$"
+   ],
+   "en": [
+    "The satellite's period equals the planet's rotation period; $GM=g_0R^2$: $$\\frac{T^2}{r^3}=\\frac{4\\pi^2}{g_0R^2}$$",
+    "Calculating: $$r=\\left(\\frac{g_0R^2T^2}{4\\pi^2}\\right)^{1/3}\\approx2.09\\cdot10^7\\ \\mathrm{m}\\approx6.2R$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Keplerning uchinchi qonuni: $\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$",
+    "ru": "Третий закон Кеплера: $\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$",
+    "en": "Kepler's third law: $\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$"
+   },
+   {
+    "uz": "Maydon: $g=\\frac{GM}{r^2}$, $GM=g_0R^2$",
+    "ru": "Поле: $g=\\frac{GM}{r^2}$, $GM=g_0R^2$",
+    "en": "Field: $g=\\frac{GM}{r^2}$, $GM=g_0R^2$"
+   }
+  ],
+  "basis": {
+   "uz": "Statsionar orbita",
+   "ru": "Стационарная орбита",
+   "en": "Stationary orbit"
+  },
+  "answer": "r\\approx2.09\\cdot10^7\\ \\mathrm{m}\\approx6.2R",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 13.46-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L08-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Yo'ldosh radiusi $7000\\ \\mathrm{km}$ aylana orbitadan radiusi $42\\ 000\\ \\mathrm{km}$ aylana orbitaga Hohmann ellipsi bo'ylab o'tkaziladi. Ikki tezlik orttirmasini va o'tish vaqtini toping. $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$.",
+   "ru": "Спутник переводят с круговой орбиты радиусом $7000\\ \\mathrm{km}$ на круговую орбиту радиусом $42\\ 000\\ \\mathrm{km}$ по гомановскому эллипсу. Найдите два приращения скорости и время перехода. $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$.",
+   "en": "A satellite is moved from a circular orbit of radius $7000\\ \\mathrm{km}$ to one of radius $42\\ 000\\ \\mathrm{km}$ along a Hohmann ellipse. Find the two velocity increments and the transfer time. $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$."
+  },
+  "figure": "figures/B2-L08-S12.png",
+  "solution": {
+   "uz": [
+    "O'tish ellipsi: $r_p=7000\\ \\mathrm{km}$, $r_a=42\\ 000\\ \\mathrm{km}$: $$a=24\\ 500\\ \\mathrm{km}$$",
+    "Perigeyda: aylana tezligi $7.65\\ \\mathrm{km/s}$, ellips tezligi vis-viva tenglamasidan: $$v_p=\\sqrt{GM\\left(\\frac{2}{r_1}-\\frac{1}{a}\\right)}\\approx10.02\\ \\mathrm{km/s},\\qquad \\Delta v_1\\approx2.37\\ \\mathrm{km/s}$$",
+    "Apogeyda: $v_a=v_p\\frac{r_1}{r_2}\\approx1.67\\ \\mathrm{km/s}$, aylana tezligi $3.12\\ \\mathrm{km/s}$: $$\\Delta v_2\\approx1.45\\ \\mathrm{km/s}$$",
+    "O'tish vaqti — ellips davrining yarmi: $$t=\\pi\\sqrt{\\frac{a^3}{GM}}\\approx1.88\\cdot10^4\\ \\mathrm{s}\\approx5.2\\ \\mathrm{h}$$"
+   ],
+   "ru": [
+    "Эллипс перехода: $r_p=7000\\ \\mathrm{km}$, $r_a=42\\ 000\\ \\mathrm{km}$: $$a=24\\ 500\\ \\mathrm{km}$$",
+    "В перигее: круговая скорость $7.65\\ \\mathrm{km/s}$, скорость на эллипсе — из vis-viva: $$v_p=\\sqrt{GM\\left(\\frac{2}{r_1}-\\frac{1}{a}\\right)}\\approx10.02\\ \\mathrm{km/s},\\qquad \\Delta v_1\\approx2.37\\ \\mathrm{km/s}$$",
+    "В апогее: $v_a=v_p\\frac{r_1}{r_2}\\approx1.67\\ \\mathrm{km/s}$, круговая скорость $3.12\\ \\mathrm{km/s}$: $$\\Delta v_2\\approx1.45\\ \\mathrm{km/s}$$",
+    "Время перехода — половина периода эллипса: $$t=\\pi\\sqrt{\\frac{a^3}{GM}}\\approx1.88\\cdot10^4\\ \\mathrm{s}\\approx5.2\\ \\mathrm{h}$$"
+   ],
+   "en": [
+    "Transfer ellipse: $r_p=7000\\ \\mathrm{km}$, $r_a=42\\ 000\\ \\mathrm{km}$: $$a=24\\ 500\\ \\mathrm{km}$$",
+    "At perigee: circular speed $7.65\\ \\mathrm{km/s}$, ellipse speed from vis-viva: $$v_p=\\sqrt{GM\\left(\\frac{2}{r_1}-\\frac{1}{a}\\right)}\\approx10.02\\ \\mathrm{km/s},\\qquad \\Delta v_1\\approx2.37\\ \\mathrm{km/s}$$",
+    "At apogee: $v_a=v_p\\frac{r_1}{r_2}\\approx1.67\\ \\mathrm{km/s}$, circular speed $3.12\\ \\mathrm{km/s}$: $$\\Delta v_2\\approx1.45\\ \\mathrm{km/s}$$",
+    "The transfer time is half the ellipse's period: $$t=\\pi\\sqrt{\\frac{a^3}{GM}}\\approx1.88\\cdot10^4\\ \\mathrm{s}\\approx5.2\\ \\mathrm{h}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Hohmann o'tishi: $a=\\frac{r_1+r_2}{2}$, $t=\\frac{T}{2}$",
+    "ru": "Гомановский переход: $a=\\frac{r_1+r_2}{2}$, $t=\\frac{T}{2}$",
+    "en": "Hohmann transfer: $a=\\frac{r_1+r_2}{2}$, $t=\\frac{T}{2}$"
+   },
+   {
+    "uz": "Vis-viva: $v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)$",
+    "ru": "Vis-viva: $v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)$",
+    "en": "Vis-viva: $v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Hohmann o'tishi",
+   "ru": "Гомановский переход",
+   "en": "Hohmann transfer"
+  },
+  "answer": "\\Delta v_1\\approx2.37;\\ \\Delta v_2\\approx1.45\\ \\mathrm{km/s};\\ t\\approx5.2\\ \\mathrm{h}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original (B2-L08, Hohmann o'tishi)"
+ },
+ {
+  "id": "B2-L08-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $500\\ \\mathrm{kg}$ bo'lgan yo'ldosh radiusi $7000\\ \\mathrm{km}$ aylana orbitada. Atmosfera qarshiligi tufayli u bir necha aylanishda $10^8\\ \\mathrm{J}$ energiya yo'qotdi va yana aylanaga yaqin orbitada qoldi. Orbita radiusi qanchaga o'zgardi? Kinetik va potensial energiyalar qanchaga o'zgardi? $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$.",
+   "ru": "Спутник массой $500\\ \\mathrm{kg}$ находится на круговой орбите радиусом $7000\\ \\mathrm{km}$. Из-за сопротивления атмосферы за несколько оборотов он потерял $10^8\\ \\mathrm{J}$ энергии и остался на почти круговой орбите. На сколько изменился радиус орбиты? Как изменились кинетическая и потенциальная энергии? $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$.",
+   "en": "A satellite of mass $500\\ \\mathrm{kg}$ is on a circular orbit of radius $7000\\ \\mathrm{km}$. Because of atmospheric drag it loses $10^8\\ \\mathrm{J}$ over several revolutions and stays on a nearly circular orbit. By how much does the orbit radius change? How do the kinetic and potential energies change? $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$."
+  },
+  "figure": "figures/B2-L08-S13.png",
+  "solution": {
+   "uz": [
+    "Boshlang'ich energiya: $$E_1=-\\frac{GMm}{2r_1}\\approx-1.463\\cdot10^{10}\\ \\mathrm{J}$$",
+    "Yangi radius: $$r_2=\\frac{GMm}{2|E_1-\\Delta E|}\\approx6.952\\cdot10^6\\ \\mathrm{m},\\qquad \\Delta r\\approx-48\\ \\mathrm{km}$$",
+    "Aylana orbitada $E_k=-E$: kinetik energiya ortadi, potensial energiya ikki barobar ko'p kamayadi: $$\\Delta E_k=+10^8\\ \\mathrm{J},\\qquad \\Delta U=-2\\cdot10^8\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Начальная энергия: $$E_1=-\\frac{GMm}{2r_1}\\approx-1.463\\cdot10^{10}\\ \\mathrm{J}$$",
+    "Новый радиус: $$r_2=\\frac{GMm}{2|E_1-\\Delta E|}\\approx6.952\\cdot10^6\\ \\mathrm{m},\\qquad \\Delta r\\approx-48\\ \\mathrm{km}$$",
+    "На круговой орбите $E_k=-E$: кинетическая энергия растёт, потенциальная убывает вдвое больше: $$\\Delta E_k=+10^8\\ \\mathrm{J},\\qquad \\Delta U=-2\\cdot10^8\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "Initial energy: $$E_1=-\\frac{GMm}{2r_1}\\approx-1.463\\cdot10^{10}\\ \\mathrm{J}$$",
+    "New radius: $$r_2=\\frac{GMm}{2|E_1-\\Delta E|}\\approx6.952\\cdot10^6\\ \\mathrm{m},\\qquad \\Delta r\\approx-48\\ \\mathrm{km}$$",
+    "On a circular orbit $E_k=-E$: the kinetic energy rises, the potential energy falls twice as much: $$\\Delta E_k=+10^8\\ \\mathrm{J},\\qquad \\Delta U=-2\\cdot10^8\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Orbita energiyasi: $E=-\\frac{GMm}{2a}$",
+    "ru": "Энергия орбиты: $E=-\\frac{GMm}{2a}$",
+    "en": "Orbital energy: $E=-\\frac{GMm}{2a}$"
+   },
+   null,
+   {
+    "uz": "Aylana orbitada: $E_k=-\\frac{U}{2}=-E$",
+    "ru": "На круговой орбите: $E_k=-\\frac{U}{2}=-E$",
+    "en": "On a circular orbit: $E_k=-\\frac{U}{2}=-E$"
+   }
+  ],
+  "basis": {
+   "uz": "Atmosfera qarshiligi paradoksi",
+   "ru": "Парадокс сопротивления атмосферы",
+   "en": "The atmospheric drag paradox"
+  },
+  "answer": "\\Delta r\\approx-48\\ \\mathrm{km};\\ \\Delta E_k=+10^8\\ \\mathrm{J};\\ \\Delta U=-2\\cdot10^8\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B2-L08, virial)"
+ },
+ {
+  "id": "B2-L08-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Asteroid Yerga cheksizlikdan $3\\ \\mathrm{km/s}$ tezlik bilan yaqinlashmoqda; uning dastlabki to'g'ri chizig'i Yer markazidan $3R$ masofadan o'tadi. Eng yaqin masofani toping. Asteroid Yerga uriladimi? Uriladigan nishon masofasining eng katta qiymati qancha? $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$.",
+   "ru": "Астероид приближается к Земле из бесконечности со скоростью $3\\ \\mathrm{km/s}$; его начальная прямая проходит на расстоянии $3R$ от центра Земли. Найдите наименьшее расстояние. Столкнётся ли астероид с Землёй? Каково наибольшее прицельное расстояние, при котором он упадёт? $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$.",
+   "en": "An asteroid approaches the Earth from infinity at $3\\ \\mathrm{km/s}$; its initial line passes $3R$ from the Earth's center. Find the closest distance. Does the asteroid hit the Earth? What is the largest impact parameter for which it hits? $g=10\\ \\mathrm{m/s^2}$, $R=6400\\ \\mathrm{km}$."
+  },
+  "figure": "figures/B2-L08-S14.png",
+  "solution": {
+   "uz": [
+    "Impuls momenti va energiya saqlanadi: $$v_\\infty s=vr,\\qquad v^2=v_\\infty^2+\\frac{2GM}{r}$$",
+    "Kvadrat tenglamani yechamiz ($\\frac{GM}{v_\\infty^2}\\approx4.55\\cdot10^7\\ \\mathrm{m}$): $$r_{min}=\\frac{GM}{v_\\infty^2}\\left(\\sqrt{1+\\frac{s^2v_\\infty^4}{G^2M^2}}-1\\right)\\approx3.9\\cdot10^6\\ \\mathrm{m}<R$$",
+    "Uriladi. Chegaraviy nishon masofasi $r_{min}=R$ shartidan ($v_2^2=2gR$): $$s_{max}=R\\sqrt{1+\\frac{v_2^2}{v_\\infty^2}}\\approx3.9R$$"
+   ],
+   "ru": [
+    "Сохраняются момент импульса и энергия: $$v_\\infty s=vr,\\qquad v^2=v_\\infty^2+\\frac{2GM}{r}$$",
+    "Решаем квадратное уравнение ($\\frac{GM}{v_\\infty^2}\\approx4.55\\cdot10^7\\ \\mathrm{m}$): $$r_{min}=\\frac{GM}{v_\\infty^2}\\left(\\sqrt{1+\\frac{s^2v_\\infty^4}{G^2M^2}}-1\\right)\\approx3.9\\cdot10^6\\ \\mathrm{m}<R$$",
+    "Столкнётся. Предельное прицельное расстояние — из условия $r_{min}=R$ ($v_2^2=2gR$): $$s_{max}=R\\sqrt{1+\\frac{v_2^2}{v_\\infty^2}}\\approx3.9R$$"
+   ],
+   "en": [
+    "Angular momentum and energy are conserved: $$v_\\infty s=vr,\\qquad v^2=v_\\infty^2+\\frac{2GM}{r}$$",
+    "Solve the quadratic ($\\frac{GM}{v_\\infty^2}\\approx4.55\\cdot10^7\\ \\mathrm{m}$): $$r_{min}=\\frac{GM}{v_\\infty^2}\\left(\\sqrt{1+\\frac{s^2v_\\infty^4}{G^2M^2}}-1\\right)\\approx3.9\\cdot10^6\\ \\mathrm{m}<R$$",
+    "It hits. The limiting impact parameter follows from $r_{min}=R$ ($v_2^2=2gR$): $$s_{max}=R\\sqrt{1+\\frac{v_2^2}{v_\\infty^2}}\\approx3.9R$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Eng yaqin nuqta: $v_\\infty s=v_{max}r_{min}$",
+    "ru": "Ближайшая точка: $v_\\infty s=v_{max}r_{min}$",
+    "en": "Closest point: $v_\\infty s=v_{max}r_{min}$"
+   },
+   null,
+   {
+    "uz": "Tushish kesimi: $\\sigma=\\pi R^2\\left(1+\\frac{v_2^2}{v_\\infty^2}\\right)$",
+    "ru": "Сечение падения: $\\sigma=\\pi R^2\\left(1+\\frac{v_2^2}{v_\\infty^2}\\right)$",
+    "en": "Capture cross-section: $\\sigma=\\pi R^2\\left(1+\\frac{v_2^2}{v_\\infty^2}\\right)$"
+   }
+  ],
+  "basis": {
+   "uz": "Giperbolik orbita, gravitatsion fokuslash",
+   "ru": "Гиперболическая орбита, гравитационная фокусировка",
+   "en": "Hyperbolic orbit, gravitational focusing"
+  },
+  "answer": "r_{min}\\approx3.9\\cdot10^6\\ \\mathrm{m};\\ s_{max}\\approx3.9R",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "original (B2-L08, gravitatsion fokuslash)"
+ },
+ {
+  "id": "B2-L08-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Kosmik apparat sayyora ($GM=1.27\\cdot10^{17}\\ \\mathrm{m^3/s^2}$) yonidan cheksizlikdagi tezligi $10\\ \\mathrm{km/s}$ va nishon masofasi $1.27\\cdot10^6\\ \\mathrm{km}$ bilan uchib o'tadi. Og'ish burchagini toping. Kichik burchak formulasi qanday javob beradi?",
+   "ru": "Космический аппарат пролетает мимо планеты ($GM=1.27\\cdot10^{17}\\ \\mathrm{m^3/s^2}$) со скоростью на бесконечности $10\\ \\mathrm{km/s}$ и прицельным расстоянием $1.27\\cdot10^6\\ \\mathrm{km}$. Найдите угол отклонения. Какой ответ даёт формула малых углов?",
+   "en": "A spacecraft flies past a planet ($GM=1.27\\cdot10^{17}\\ \\mathrm{m^3/s^2}$) with speed at infinity $10\\ \\mathrm{km/s}$ and impact parameter $1.27\\cdot10^6\\ \\mathrm{km}$. Find the deflection angle. What does the small-angle formula give?"
+  },
+  "figure": "figures/B2-L08-S15.png",
+  "solution": {
+   "uz": [
+    "Og'ish burchagi formulasi: $$\\mathrm{tg}\\frac{\\theta}{2}=\\frac{GM}{sv_\\infty^2}=\\frac{1.27\\cdot10^{17}}{1.27\\cdot10^9\\cdot10^8}=1$$",
+    "Demak: $$\\frac{\\theta}{2}=\\frac{\\pi}{4},\\qquad \\theta=\\frac{\\pi}{2}$$",
+    "Kichik burchak formulasi $\\theta\\approx2\\ \\mathrm{rad}$ beradi — katta burilishda u yaramaydi. $$\\theta\\approx\\frac{2GM}{sv_\\infty^2}=2$$"
+   ],
+   "ru": [
+    "Формула угла отклонения: $$\\mathrm{tg}\\frac{\\theta}{2}=\\frac{GM}{sv_\\infty^2}=\\frac{1.27\\cdot10^{17}}{1.27\\cdot10^9\\cdot10^8}=1$$",
+    "Значит: $$\\frac{\\theta}{2}=\\frac{\\pi}{4},\\qquad \\theta=\\frac{\\pi}{2}$$",
+    "Формула малых углов даёт $\\theta\\approx2\\ \\mathrm{rad}$ — при большом отклонении она непригодна. $$\\theta\\approx\\frac{2GM}{sv_\\infty^2}=2$$"
+   ],
+   "en": [
+    "The deflection formula: $$\\mathrm{tg}\\frac{\\theta}{2}=\\frac{GM}{sv_\\infty^2}=\\frac{1.27\\cdot10^{17}}{1.27\\cdot10^9\\cdot10^8}=1$$",
+    "Hence: $$\\frac{\\theta}{2}=\\frac{\\pi}{4},\\qquad \\theta=\\frac{\\pi}{2}$$",
+    "The small-angle formula gives $\\theta\\approx2\\ \\mathrm{rad}$ — it fails for large deflections. $$\\theta\\approx\\frac{2GM}{sv_\\infty^2}=2$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Og'ish burchagi: $\\mathrm{tg}\\frac{\\theta}{2}=\\frac{GM}{sv_\\infty^2}$",
+    "ru": "Угол отклонения: $\\mathrm{tg}\\frac{\\theta}{2}=\\frac{GM}{sv_\\infty^2}$",
+    "en": "Deflection angle: $\\mathrm{tg}\\frac{\\theta}{2}=\\frac{GM}{sv_\\infty^2}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Gravitatsion sochilish",
+   "ru": "Гравитационное рассеяние",
+   "en": "Gravitational scattering"
+  },
+  "answer": "\\theta=\\frac{\\pi}{2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L08, sochilish)"
+ },
+ {
+  "id": "B2-L08-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Zarra $F=\\frac{k}{r^n}$ markaziy tortishish kuchi ta'sirida radiusi $r$ aylana bo'ylab harakatlanadi. Tezlik, davr va impuls momentining $r$ ga bog'liqligini toping. Nega $n<3$ da orbita barqaror? $n=4$ bo'lsa nima bo'ladi?",
+   "ru": "Частица движется по окружности радиуса $r$ под действием центральной силы притяжения $F=\\frac{k}{r^n}$. Найдите зависимость скорости, периода и момента импульса от $r$. Почему при $n<3$ орбита устойчива? Что будет при $n=4$?",
+   "en": "A particle moves on a circle of radius $r$ under the central attractive force $F=\\frac{k}{r^n}$. Find how the speed, period and angular momentum depend on $r$. Why is the orbit stable for $n<3$? What happens for $n=4$?"
+  },
+  "figure": "figures/B2-L08-S16.png",
+  "solution": {
+   "uz": [
+    "Markazga intilma kuch: $$\\frac{mv^2}{r}=\\frac{k}{r^n}\\ \\Rightarrow\\ v^2=\\frac{k}{m}r^{1-n},\\qquad T=2\\pi\\sqrt{\\frac{m}{k}}\\,r^{\\frac{n+1}{2}}$$",
+    "Impuls momenti: $$L^2=m^2v^2r^2=mkr^{3-n}$$",
+    "$n<3$ da $L$ radius bilan ortadi: $r$ ortsa, mavjud $L$ uchun kerakli markazga intilma kuch tortishdan kichik — jism qaytariladi; $n>3$ da teskari: $$\\frac{dL^2}{dr}\\propto(3-n)r^{2-n}$$",
+    "$n=4$ da kichik turtki jismni markazga tushiradi yoki uzoqlashtiradi — orbita barqaror emas."
+   ],
+   "ru": [
+    "Центростремительная сила: $$\\frac{mv^2}{r}=\\frac{k}{r^n}\\ \\Rightarrow\\ v^2=\\frac{k}{m}r^{1-n},\\qquad T=2\\pi\\sqrt{\\frac{m}{k}}\\,r^{\\frac{n+1}{2}}$$",
+    "Момент импульса: $$L^2=m^2v^2r^2=mkr^{3-n}$$",
+    "При $n<3$ $L$ растёт с радиусом: при увеличении $r$ нужная при данном $L$ центростремительная сила меньше притяжения — тело возвращается; при $n>3$ наоборот: $$\\frac{dL^2}{dr}\\propto(3-n)r^{2-n}$$",
+    "При $n=4$ малый толчок либо роняет тело на центр, либо уводит его прочь — орбита неустойчива."
+   ],
+   "en": [
+    "Centripetal force: $$\\frac{mv^2}{r}=\\frac{k}{r^n}\\ \\Rightarrow\\ v^2=\\frac{k}{m}r^{1-n},\\qquad T=2\\pi\\sqrt{\\frac{m}{k}}\\,r^{\\frac{n+1}{2}}$$",
+    "Angular momentum: $$L^2=m^2v^2r^2=mkr^{3-n}$$",
+    "For $n<3$, $L$ grows with radius: if $r$ increases, the centripetal force required for the given $L$ is less than the attraction and the body is pulled back; for $n>3$ the opposite: $$\\frac{dL^2}{dr}\\propto(3-n)r^{2-n}$$",
+    "For $n=4$ a small nudge sends the body either into the center or away — the orbit is unstable."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Daraja kuch: $F=\\frac{k}{r^n}\\Rightarrow T\\propto r^{\\frac{n+1}{2}}$",
+    "ru": "Степенная сила: $F=\\frac{k}{r^n}\\Rightarrow T\\propto r^{\\frac{n+1}{2}}$",
+    "en": "Power-law force: $F=\\frac{k}{r^n}\\Rightarrow T\\propto r^{\\frac{n+1}{2}}$"
+   },
+   null,
+   {
+    "uz": "Barqarorlik: $n<3$",
+    "ru": "Устойчивость: $n<3$",
+    "en": "Stability: $n<3$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Daraja ko'rinishidagi markaziy kuch, aylana orbita barqarorligi",
+   "ru": "Степенная центральная сила, устойчивость круговой орбиты",
+   "en": "Power-law central force, stability of circular orbits"
+  },
+  "answer": "v\\propto r^{\\frac{1-n}{2}};\\ T\\propto r^{\\frac{n+1}{2}};\\ L^2=mkr^{3-n};\\ n<3",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.6 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L08-S17",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $0.5\\ \\mathrm{kg}$ bo'lgan zarraga $\\vec F=-k\\vec r$ ($k=2\\ \\mathrm{N/m}$) kuch ta'sir qiladi. $t=0$ da zarra $(3;\\,0)\\ \\mathrm{m}$ nuqtada, tezligi $(0;\\,4)\\ \\mathrm{m/s}$. Traektoriyani, davrni, impuls momentini va energiyani toping.",
+   "ru": "На частицу массой $0.5\\ \\mathrm{kg}$ действует сила $\\vec F=-k\\vec r$ ($k=2\\ \\mathrm{N/m}$). При $t=0$ частица в точке $(3;\\,0)\\ \\mathrm{m}$, скорость $(0;\\,4)\\ \\mathrm{m/s}$. Найдите траекторию, период, момент импульса и энергию.",
+   "en": "A particle of mass $0.5\\ \\mathrm{kg}$ is acted on by $\\vec F=-k\\vec r$ ($k=2\\ \\mathrm{N/m}$). At $t=0$ it is at $(3;\\,0)\\ \\mathrm{m}$ with velocity $(0;\\,4)\\ \\mathrm{m/s}$. Find the trajectory, period, angular momentum and energy."
+  },
+  "figure": "figures/B2-L08-S17.png",
+  "solution": {
+   "uz": [
+    "Koordinatalar mustaqil tebranadi, $\\omega=\\sqrt{\\frac{k}{m}}=2\\ \\mathrm{rad/s}$: $$x=3\\cos2t,\\qquad y=\\frac{4}{2}\\sin2t=2\\sin2t$$",
+    "Traektoriya — markazi koordinata boshida bo'lgan ellips; davr: $$\\frac{x^2}{9}+\\frac{y^2}{4}=1,\\qquad T=\\frac{2\\pi}{\\omega}=\\pi\\ \\mathrm{s}$$",
+    "Impuls momenti va energiya: $$L=m\\omega AB=6\\ \\mathrm{kg\\cdot m^2/s},\\qquad E=\\frac{k(A^2+B^2)}{2}=13\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Координаты колеблются независимо, $\\omega=\\sqrt{\\frac{k}{m}}=2\\ \\mathrm{rad/s}$: $$x=3\\cos2t,\\qquad y=\\frac{4}{2}\\sin2t=2\\sin2t$$",
+    "Траектория — эллипс с центром в начале координат; период: $$\\frac{x^2}{9}+\\frac{y^2}{4}=1,\\qquad T=\\frac{2\\pi}{\\omega}=\\pi\\ \\mathrm{s}$$",
+    "Момент импульса и энергия: $$L=m\\omega AB=6\\ \\mathrm{kg\\cdot m^2/s},\\qquad E=\\frac{k(A^2+B^2)}{2}=13\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "The coordinates oscillate independently, $\\omega=\\sqrt{\\frac{k}{m}}=2\\ \\mathrm{rad/s}$: $$x=3\\cos2t,\\qquad y=\\frac{4}{2}\\sin2t=2\\sin2t$$",
+    "The trajectory is an ellipse centered at the origin; period: $$\\frac{x^2}{9}+\\frac{y^2}{4}=1,\\qquad T=\\frac{2\\pi}{\\omega}=\\pi\\ \\mathrm{s}$$",
+    "Angular momentum and energy: $$L=m\\omega AB=6\\ \\mathrm{kg\\cdot m^2/s},\\qquad E=\\frac{k(A^2+B^2)}{2}=13\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Izotrop ossilyator: $x=A\\cos\\omega t$, $y=B\\sin\\omega t$",
+    "ru": "Изотропный осциллятор: $x=A\\cos\\omega t$, $y=B\\sin\\omega t$",
+    "en": "Isotropic oscillator: $x=A\\cos\\omega t$, $y=B\\sin\\omega t$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Izotrop ossilyator",
+   "ru": "Изотропный осциллятор",
+   "en": "Isotropic oscillator"
+  },
+  "answer": "\\frac{x^2}{9}+\\frac{y^2}{4}=1;\\ T=\\pi\\ \\mathrm{s};\\ L=6;\\ E=13\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "Irodov, «Problems in General Physics», 4.37-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L08-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Zarra markaziy kuch ta'sirida logarifmik spiral $r=r_0e^{k\\theta}$ bo'ylab harakatlanadi. Bine tenglamasi yordamida kuch qonunini toping.",
+   "ru": "Частица под действием центральной силы движется по логарифмической спирали $r=r_0e^{k\\theta}$. С помощью уравнения Бине найдите закон силы.",
+   "en": "Under a central force a particle moves along the logarithmic spiral $r=r_0e^{k\\theta}$. Use the Binet equation to find the force law."
+  },
+  "figure": "figures/B2-L08-S18.png",
+  "solution": {
+   "uz": [
+    "$u=\\frac{1}{r}=\\frac{1}{r_0}e^{-k\\theta}$, ikkinchi hosila: $$\\frac{d^2u}{d\\theta^2}=k^2u\\ \\Rightarrow\\ \\frac{d^2u}{d\\theta^2}+u=(1+k^2)u$$",
+    "Bine tenglamasidan kuch: $$F=-\\frac{L^2u^2}{m}(1+k^2)u=-\\frac{(1+k^2)L^2}{mr^3}$$",
+    "Tortishish $\\frac{1}{r^3}$ ga proporsional — aylana orbitalari barqaror bo'lmagan chegaraviy hol ($n=3$)."
+   ],
+   "ru": [
+    "$u=\\frac{1}{r}=\\frac{1}{r_0}e^{-k\\theta}$, вторая производная: $$\\frac{d^2u}{d\\theta^2}=k^2u\\ \\Rightarrow\\ \\frac{d^2u}{d\\theta^2}+u=(1+k^2)u$$",
+    "Сила из уравнения Бине: $$F=-\\frac{L^2u^2}{m}(1+k^2)u=-\\frac{(1+k^2)L^2}{mr^3}$$",
+    "Притяжение пропорционально $\\frac{1}{r^3}$ — пограничный случай, когда круговые орбиты неустойчивы ($n=3$)."
+   ],
+   "en": [
+    "$u=\\frac{1}{r}=\\frac{1}{r_0}e^{-k\\theta}$, second derivative: $$\\frac{d^2u}{d\\theta^2}=k^2u\\ \\Rightarrow\\ \\frac{d^2u}{d\\theta^2}+u=(1+k^2)u$$",
+    "The force from the Binet equation: $$F=-\\frac{L^2u^2}{m}(1+k^2)u=-\\frac{(1+k^2)L^2}{mr^3}$$",
+    "The attraction is proportional to $\\frac{1}{r^3}$ — the borderline case where circular orbits are unstable ($n=3$)."
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Bine tenglamasi: $\\frac{d^2u}{d\\theta^2}+u=-\\frac{mF}{L^2u^2}$",
+    "ru": "Уравнение Бине: $\\frac{d^2u}{d\\theta^2}+u=-\\frac{mF}{L^2u^2}$",
+    "en": "Binet equation: $\\frac{d^2u}{d\\theta^2}+u=-\\frac{mF}{L^2u^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Bine tenglamasi — teskari masala",
+   "ru": "Уравнение Бине — обратная задача",
+   "en": "Binet equation — the inverse problem"
+  },
+  "answer": "F=-\\frac{(1+k^2)L^2}{mr^3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L08, Bine tenglamasi)"
+ }
+]

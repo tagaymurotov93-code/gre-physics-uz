@@ -1,0 +1,884 @@
+[
+ {
+  "id": "B2-L10-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Massasi $2\\ \\mathrm{kg}$ bo'lgan yuk bikrligi $8\\ \\mathrm{N/m}$ bo'lgan prujinada gorizontal tebranadi. Lagranj funksiyasidan Gamilton funksiyasini tuzing, kanonik tenglamalarni yozing va tebranish burchak chastotasini toping.",
+   "ru": "Груз массой $2\\ \\mathrm{kg}$ колеблется горизонтально на пружине жёсткостью $8\\ \\mathrm{N/m}$. Постройте функцию Гамильтона из функции Лагранжа, запишите канонические уравнения и найдите угловую частоту колебаний.",
+   "en": "A $2\\ \\mathrm{kg}$ load oscillates horizontally on a spring of stiffness $8\\ \\mathrm{N/m}$. Build the Hamiltonian from the Lagrangian, write the canonical equations and find the angular frequency of oscillation."
+  },
+  "figure": "figures/B2-L10-S01.png",
+  "solution": {
+   "uz": [
+    "$L=\\frac{1}{2}m\\dot x^2-\\frac{1}{2}kx^2$, impuls va tezlik: $$p=m\\dot x=2\\dot x,\\qquad \\dot x=\\frac{p}{2}$$",
+    "Lejandr almashtirishi: $$H=p\\dot x-L=\\frac{p^2}{4}+4x^2$$",
+    "Kanonik tenglamalar: $$\\dot x=\\frac{p}{2},\\qquad \\dot p=-8x\\ \\Rightarrow\\ \\ddot x=-4x$$",
+    "Chastota: $$\\omega=\\sqrt{\\frac{k}{m}}=2\\ \\mathrm{rad/s}$$"
+   ],
+   "ru": [
+    "$L=\\frac{1}{2}m\\dot x^2-\\frac{1}{2}kx^2$, импульс и скорость: $$p=m\\dot x=2\\dot x,\\qquad \\dot x=\\frac{p}{2}$$",
+    "Преобразование Лежандра: $$H=p\\dot x-L=\\frac{p^2}{4}+4x^2$$",
+    "Канонические уравнения: $$\\dot x=\\frac{p}{2},\\qquad \\dot p=-8x\\ \\Rightarrow\\ \\ddot x=-4x$$",
+    "Частота: $$\\omega=\\sqrt{\\frac{k}{m}}=2\\ \\mathrm{rad/s}$$"
+   ],
+   "en": [
+    "$L=\\frac{1}{2}m\\dot x^2-\\frac{1}{2}kx^2$; momentum and velocity: $$p=m\\dot x=2\\dot x,\\qquad \\dot x=\\frac{p}{2}$$",
+    "The Legendre transformation: $$H=p\\dot x-L=\\frac{p^2}{4}+4x^2$$",
+    "The canonical equations: $$\\dot x=\\frac{p}{2},\\qquad \\dot p=-8x\\ \\Rightarrow\\ \\ddot x=-4x$$",
+    "The frequency: $$\\omega=\\sqrt{\\frac{k}{m}}=2\\ \\mathrm{rad/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gamilton funksiyasi: $H=\\sum p\\dot q-L$, $p=\\frac{\\partial L}{\\partial\\dot q}$",
+    "ru": "Функция Гамильтона: $H=\\sum p\\dot q-L$, $p=\\frac{\\partial L}{\\partial\\dot q}$",
+    "en": "Hamiltonian: $H=\\sum p\\dot q-L$, $p=\\frac{\\partial L}{\\partial\\dot q}$"
+   },
+   null,
+   {
+    "uz": "Kanonik tenglamalar: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "ru": "Канонические уравнения: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "en": "Canonical equations: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Ossilyator gamiltoniani",
+   "ru": "Гамильтониан осциллятора",
+   "en": "Oscillator Hamiltonian"
+  },
+  "answer": "H=\\frac{p^2}{4}+4x^2;\\ \\omega=2\\ \\mathrm{rad/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original (B2-L10, ossilyator)"
+ },
+ {
+  "id": "B2-L10-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Mayatnik: massasi $0.5\\ \\mathrm{kg}$, ip uzunligi $0.4\\ \\mathrm{m}$. Koordinata — og'ish burchagi $\\theta$. Gamilton funksiyasini yozing, kanonik tenglamalarni oling va kichik tebranishlar chastotasini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Маятник: масса $0.5\\ \\mathrm{kg}$, длина нити $0.4\\ \\mathrm{m}$. Координата — угол отклонения $\\theta$. Запишите функцию Гамильтона, получите канонические уравнения и найдите частоту малых колебаний. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A pendulum: mass $0.5\\ \\mathrm{kg}$, string length $0.4\\ \\mathrm{m}$. The coordinate is the deflection angle $\\theta$. Write the Hamiltonian, derive the canonical equations and find the small-oscillation frequency. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L10-S02.png",
+  "solution": {
+   "uz": [
+    "$T=\\frac{1}{2}ml^2\\dot\\theta^2$, bog'lanish statsionar: $$p_\\theta=ml^2\\dot\\theta=0.08\\dot\\theta,\\qquad H=\\frac{p_\\theta^2}{2ml^2}-mgl\\cos\\theta=\\frac{p_\\theta^2}{0.16}-2\\cos\\theta$$",
+    "Kanonik tenglamalar: $$\\dot\\theta=\\frac{p_\\theta}{0.08},\\qquad \\dot p_\\theta=-2\\sin\\theta$$",
+    "Kichik burchaklarda $\\sin\\theta\\approx\\theta$: $$\\ddot\\theta=-\\frac{2}{0.08}\\theta=-25\\theta,\\qquad \\omega=5\\ \\mathrm{rad/s}$$"
+   ],
+   "ru": [
+    "$T=\\frac{1}{2}ml^2\\dot\\theta^2$, связь стационарна: $$p_\\theta=ml^2\\dot\\theta=0.08\\dot\\theta,\\qquad H=\\frac{p_\\theta^2}{2ml^2}-mgl\\cos\\theta=\\frac{p_\\theta^2}{0.16}-2\\cos\\theta$$",
+    "Канонические уравнения: $$\\dot\\theta=\\frac{p_\\theta}{0.08},\\qquad \\dot p_\\theta=-2\\sin\\theta$$",
+    "При малых углах $\\sin\\theta\\approx\\theta$: $$\\ddot\\theta=-\\frac{2}{0.08}\\theta=-25\\theta,\\qquad \\omega=5\\ \\mathrm{rad/s}$$"
+   ],
+   "en": [
+    "$T=\\frac{1}{2}ml^2\\dot\\theta^2$; the constraint is stationary: $$p_\\theta=ml^2\\dot\\theta=0.08\\dot\\theta,\\qquad H=\\frac{p_\\theta^2}{2ml^2}-mgl\\cos\\theta=\\frac{p_\\theta^2}{0.16}-2\\cos\\theta$$",
+    "The canonical equations: $$\\dot\\theta=\\frac{p_\\theta}{0.08},\\qquad \\dot p_\\theta=-2\\sin\\theta$$",
+    "For small angles $\\sin\\theta\\approx\\theta$: $$\\ddot\\theta=-\\frac{2}{0.08}\\theta=-25\\theta,\\qquad \\omega=5\\ \\mathrm{rad/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Statsionar bog'lanishlar: $H=T+U$",
+    "ru": "Стационарные связи: $H=T+U$",
+    "en": "Stationary constraints: $H=T+U$"
+   },
+   {
+    "uz": "Kanonik tenglamalar: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "ru": "Канонические уравнения: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "en": "Canonical equations: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Mayatnik gamiltoniani",
+   "ru": "Гамильтониан маятника",
+   "en": "Pendulum Hamiltonian"
+  },
+  "answer": "H=\\frac{p_\\theta^2}{0.16}-2\\cos\\theta;\\ \\omega=5\\ \\mathrm{rad/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original (B2-L10, mayatnik)"
+ },
+ {
+  "id": "B2-L10-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Massasi $0.2\\ \\mathrm{kg}$ bo'lgan tosh tezligining gorizontal tashkil etuvchisi $3\\ \\mathrm{m/s}$, vertikali $6\\ \\mathrm{m/s}$ bilan otildi. Gamilton funksiyasini yozing. Qaysi impuls saqlanadi? Kanonik tenglamalardan ko'tarilish vaqtini va eng katta balandlikni toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Камень массой $0.2\\ \\mathrm{kg}$ брошен с горизонтальной составляющей скорости $3\\ \\mathrm{m/s}$ и вертикальной $6\\ \\mathrm{m/s}$. Запишите функцию Гамильтона. Какой импульс сохраняется? Из канонических уравнений найдите время подъёма и наибольшую высоту. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A $0.2\\ \\mathrm{kg}$ stone is thrown with a horizontal velocity component of $3\\ \\mathrm{m/s}$ and a vertical one of $6\\ \\mathrm{m/s}$. Write the Hamiltonian. Which momentum is conserved? Use the canonical equations to find the rise time and the maximum height. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L10-S03.png",
+  "solution": {
+   "uz": [
+    "$H=T+U$: $$H=\\frac{p_x^2+p_y^2}{2m}+mgy$$",
+    "$x$ siklik; $p_y$ chiziqli kamayadi: $$\\dot p_x=0\\ (p_x=0.6\\ \\mathrm{kg\\cdot m/s}),\\qquad \\dot p_y=-mg=-2\\ \\mathrm{N}$$",
+    "Eng yuqori nuqtada $p_y=0$: $$t=\\frac{p_{y0}}{mg}=\\frac{1.2}{2}=0.6\\ \\mathrm{s}$$",
+    "$\\dot y=\\frac{p_y}{m}$ ni integrallaymiz: $$h=\\int_0^{0.6}(6-10t)\\,dt=1.8\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "$H=T+U$: $$H=\\frac{p_x^2+p_y^2}{2m}+mgy$$",
+    "$x$ циклическая; $p_y$ убывает линейно: $$\\dot p_x=0\\ (p_x=0.6\\ \\mathrm{kg\\cdot m/s}),\\qquad \\dot p_y=-mg=-2\\ \\mathrm{N}$$",
+    "В наивысшей точке $p_y=0$: $$t=\\frac{p_{y0}}{mg}=\\frac{1.2}{2}=0.6\\ \\mathrm{s}$$",
+    "Интегрируем $\\dot y=\\frac{p_y}{m}$: $$h=\\int_0^{0.6}(6-10t)\\,dt=1.8\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "$H=T+U$: $$H=\\frac{p_x^2+p_y^2}{2m}+mgy$$",
+    "$x$ is cyclic; $p_y$ decreases linearly: $$\\dot p_x=0\\ (p_x=0.6\\ \\mathrm{kg\\cdot m/s}),\\qquad \\dot p_y=-mg=-2\\ \\mathrm{N}$$",
+    "At the top $p_y=0$: $$t=\\frac{p_{y0}}{mg}=\\frac{1.2}{2}=0.6\\ \\mathrm{s}$$",
+    "Integrate $\\dot y=\\frac{p_y}{m}$: $$h=\\int_0^{0.6}(6-10t)\\,dt=1.8\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Statsionar bog'lanishlar: $H=T+U$",
+    "ru": "Стационарные связи: $H=T+U$",
+    "en": "Stationary constraints: $H=T+U$"
+   },
+   {
+    "uz": "Siklik koordinata: $\\frac{\\partial H}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "ru": "Циклическая координата: $\\frac{\\partial H}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "en": "Cyclic coordinate: $\\frac{\\partial H}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$"
+   },
+   null,
+   {
+    "uz": "Kanonik tenglamalar: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "ru": "Канонические уравнения: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "en": "Canonical equations: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$"
+   }
+  ],
+  "basis": {
+   "uz": "Otilgan jism — kanonik tenglamalar",
+   "ru": "Брошенное тело — канонические уравнения",
+   "en": "A projectile — canonical equations"
+  },
+  "answer": "p_x=\\mathrm{const};\\ t=0.6\\ \\mathrm{s};\\ h=1.8\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original (B2-L10, otilgan jism)"
+ },
+ {
+  "id": "B2-L10-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Zarra ($m=1\\ \\mathrm{kg}$) $U=-\\frac{k}{r}$ ($k=4\\ \\mathrm{J\\cdot m}$) potensialda tekislikda harakatlanadi, $p_\\varphi=2\\ \\mathrm{kg\\cdot m^2/s}$. Gamilton funksiyasini qutb koordinatalarida yozing. Aylana orbita radiusini, aylanish burchak tezligini va radial kichik tebranishlar chastotasini toping.",
+   "ru": "Частица ($m=1\\ \\mathrm{kg}$) движется в плоскости в потенциале $U=-\\frac{k}{r}$ ($k=4\\ \\mathrm{J\\cdot m}$), $p_\\varphi=2\\ \\mathrm{kg\\cdot m^2/s}$. Запишите функцию Гамильтона в полярных координатах. Найдите радиус круговой орбиты, угловую скорость обращения и частоту малых радиальных колебаний.",
+   "en": "A particle ($m=1\\ \\mathrm{kg}$) moves in a plane in the potential $U=-\\frac{k}{r}$ ($k=4\\ \\mathrm{J\\cdot m}$), with $p_\\varphi=2\\ \\mathrm{kg\\cdot m^2/s}$. Write the Hamiltonian in polar coordinates. Find the radius of the circular orbit, the angular velocity of revolution and the frequency of small radial oscillations."
+  },
+  "figure": "figures/B2-L10-S04.png",
+  "solution": {
+   "uz": [
+    "$\\varphi$ siklik — $p_\\varphi$ doimiy son: $$H=\\frac{p_r^2}{2m}+\\frac{p_\\varphi^2}{2mr^2}-\\frac{k}{r}$$",
+    "Aylana orbita: $\\dot p_r=0$ va $p_r=0$: $$\\dot p_r=\\frac{p_\\varphi^2}{mr^3}-\\frac{k}{r^2}=0\\ \\Rightarrow\\ r_0=\\frac{p_\\varphi^2}{mk}=1\\ \\mathrm{m}$$",
+    "Burchak tezlik $\\dot\\varphi=\\frac{\\partial H}{\\partial p_\\varphi}$: $$\\dot\\varphi=\\frac{p_\\varphi}{mr_0^2}=2\\ \\mathrm{rad/s}$$",
+    "Radial tebranish: $\\omega_r^2=\\frac{1}{m}\\frac{\\partial^2}{\\partial r^2}\\left(\\frac{p_\\varphi^2}{2mr^2}-\\frac{k}{r}\\right)$: $$\\omega_r^2=12-8=4,\\qquad \\omega_r=2\\ \\mathrm{rad/s}=\\dot\\varphi$$"
+   ],
+   "ru": [
+    "$\\varphi$ циклическая — $p_\\varphi$ постоянное число: $$H=\\frac{p_r^2}{2m}+\\frac{p_\\varphi^2}{2mr^2}-\\frac{k}{r}$$",
+    "Круговая орбита: $\\dot p_r=0$ и $p_r=0$: $$\\dot p_r=\\frac{p_\\varphi^2}{mr^3}-\\frac{k}{r^2}=0\\ \\Rightarrow\\ r_0=\\frac{p_\\varphi^2}{mk}=1\\ \\mathrm{m}$$",
+    "Угловая скорость $\\dot\\varphi=\\frac{\\partial H}{\\partial p_\\varphi}$: $$\\dot\\varphi=\\frac{p_\\varphi}{mr_0^2}=2\\ \\mathrm{rad/s}$$",
+    "Радиальные колебания: $\\omega_r^2=\\frac{1}{m}\\frac{\\partial^2}{\\partial r^2}\\left(\\frac{p_\\varphi^2}{2mr^2}-\\frac{k}{r}\\right)$: $$\\omega_r^2=12-8=4,\\qquad \\omega_r=2\\ \\mathrm{rad/s}=\\dot\\varphi$$"
+   ],
+   "en": [
+    "$\\varphi$ is cyclic — $p_\\varphi$ is a constant number: $$H=\\frac{p_r^2}{2m}+\\frac{p_\\varphi^2}{2mr^2}-\\frac{k}{r}$$",
+    "Circular orbit: $\\dot p_r=0$ and $p_r=0$: $$\\dot p_r=\\frac{p_\\varphi^2}{mr^3}-\\frac{k}{r^2}=0\\ \\Rightarrow\\ r_0=\\frac{p_\\varphi^2}{mk}=1\\ \\mathrm{m}$$",
+    "Angular velocity $\\dot\\varphi=\\frac{\\partial H}{\\partial p_\\varphi}$: $$\\dot\\varphi=\\frac{p_\\varphi}{mr_0^2}=2\\ \\mathrm{rad/s}$$",
+    "Radial oscillation: $\\omega_r^2=\\frac{1}{m}\\frac{\\partial^2}{\\partial r^2}\\left(\\frac{p_\\varphi^2}{2mr^2}-\\frac{k}{r}\\right)$: $$\\omega_r^2=12-8=4,\\qquad \\omega_r=2\\ \\mathrm{rad/s}=\\dot\\varphi$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Siklik koordinata: $\\frac{\\partial H}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "ru": "Циклическая координата: $\\frac{\\partial H}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "en": "Cyclic coordinate: $\\frac{\\partial H}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$"
+   },
+   {
+    "uz": "Kanonik tenglamalar: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "ru": "Канонические уравнения: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "en": "Canonical equations: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Markaziy maydon gamiltoniani",
+   "ru": "Гамильтониан в центральном поле",
+   "en": "Central-field Hamiltonian"
+  },
+  "answer": "r_0=1\\ \\mathrm{m};\\ \\dot\\varphi=\\omega_r=2\\ \\mathrm{rad/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.5 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L10-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Tekislik $\\Omega$ burchak tezlik bilan aylanadi. Aylanuvchi koordinatalarda $L=\\frac{m}{2}\\left[(\\dot x-\\Omega y)^2+(\\dot y+\\Omega x)^2\\right]-U(x,y)$. Kanonik impulslarni toping, Gamilton funksiyasini yozing va uni energiya bilan solishtiring.",
+   "ru": "Плоскость вращается с угловой скоростью $\\Omega$. Во вращающихся координатах $L=\\frac{m}{2}\\left[(\\dot x-\\Omega y)^2+(\\dot y+\\Omega x)^2\\right]-U(x,y)$. Найдите канонические импульсы, запишите функцию Гамильтона и сравните её с энергией.",
+   "en": "A plane rotates at angular velocity $\\Omega$. In rotating coordinates $L=\\frac{m}{2}\\left[(\\dot x-\\Omega y)^2+(\\dot y+\\Omega x)^2\\right]-U(x,y)$. Find the canonical momenta, write the Hamiltonian and compare it with the energy."
+  },
+  "figure": "figures/B2-L10-S05.png",
+  "solution": {
+   "uz": [
+    "Impulslar — inersial sistemadagi tezlik tashkil etuvchilari: $$p_x=m(\\dot x-\\Omega y),\\qquad p_y=m(\\dot y+\\Omega x)$$",
+    "$\\dot x=\\frac{p_x}{m}+\\Omega y$, $\\dot y=\\frac{p_y}{m}-\\Omega x$ ni qo'yamiz: $$H=\\frac{p_x^2+p_y^2}{2m}+U-\\Omega(xp_y-yp_x)=\\frac{p^2}{2m}+U-\\Omega L_z$$",
+    "$\\frac{p^2}{2m}+U$ — inersial sistemadagi energiya; $H$ undan $\\Omega L_z$ ga farq qiladi. $t$ oshkor yo'q — $H$ saqlanadi (Yakobi integrali), $E$ esa umuman olganda saqlanmaydi."
+   ],
+   "ru": [
+    "Импульсы — составляющие скорости в инерциальной системе: $$p_x=m(\\dot x-\\Omega y),\\qquad p_y=m(\\dot y+\\Omega x)$$",
+    "Подставляем $\\dot x=\\frac{p_x}{m}+\\Omega y$, $\\dot y=\\frac{p_y}{m}-\\Omega x$: $$H=\\frac{p_x^2+p_y^2}{2m}+U-\\Omega(xp_y-yp_x)=\\frac{p^2}{2m}+U-\\Omega L_z$$",
+    "$\\frac{p^2}{2m}+U$ — энергия в инерциальной системе; $H$ отличается от неё на $\\Omega L_z$. Явного $t$ нет — $H$ сохраняется (интеграл Якоби), а $E$, вообще говоря, не сохраняется."
+   ],
+   "en": [
+    "The momenta are the velocity components in the inertial frame: $$p_x=m(\\dot x-\\Omega y),\\qquad p_y=m(\\dot y+\\Omega x)$$",
+    "Substitute $\\dot x=\\frac{p_x}{m}+\\Omega y$, $\\dot y=\\frac{p_y}{m}-\\Omega x$: $$H=\\frac{p_x^2+p_y^2}{2m}+U-\\Omega(xp_y-yp_x)=\\frac{p^2}{2m}+U-\\Omega L_z$$",
+    "$\\frac{p^2}{2m}+U$ is the energy in the inertial frame; $H$ differs from it by $\\Omega L_z$. There is no explicit $t$ — $H$ is conserved (the Jacobi integral), while $E$ in general is not."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gamilton funksiyasi: $H=\\sum p\\dot q-L$, $p=\\frac{\\partial L}{\\partial\\dot q}$",
+    "ru": "Функция Гамильтона: $H=\\sum p\\dot q-L$, $p=\\frac{\\partial L}{\\partial\\dot q}$",
+    "en": "Hamiltonian: $H=\\sum p\\dot q-L$, $p=\\frac{\\partial L}{\\partial\\dot q}$"
+   },
+   null,
+   {
+    "uz": "$H$ ning o'zgarishi: $\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}$",
+    "ru": "Изменение $H$: $\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}$",
+    "en": "Change of $H$: $\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}$"
+   }
+  ],
+  "basis": {
+   "uz": "Aylanuvchi sistemadagi gamiltonian",
+   "ru": "Гамильтониан во вращающейся системе",
+   "en": "Hamiltonian in a rotating frame"
+  },
+  "answer": "H=\\frac{p^2}{2m}+U-\\Omega L_z",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B2-L10, aylanuvchi sistema)"
+ },
+ {
+  "id": "B2-L10-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Zarra ($q=2\\cdot10^{-6}\\ \\mathrm{C}$, $m=4\\cdot10^{-6}\\ \\mathrm{kg}$) $B=2\\ \\mathrm{T}$ bir jinsli magnit maydonda $xy$ tekisligida harakatlanadi; $\\vec A=Bx\\vec j$. Gamilton funksiyasini yozing. Kanonik impuls $p_y=6\\cdot10^{-6}\\ \\mathrm{kg\\cdot m/s}$ bo'lsa, $x$ bo'yicha harakat qanday? Orbita markazining $x$ koordinatasini va chastotani toping.",
+   "ru": "Частица ($q=2\\cdot10^{-6}\\ \\mathrm{C}$, $m=4\\cdot10^{-6}\\ \\mathrm{kg}$) движется в плоскости $xy$ в однородном магнитном поле $B=2\\ \\mathrm{T}$; $\\vec A=Bx\\vec j$. Запишите функцию Гамильтона. Каково движение по $x$ при каноническом импульсе $p_y=6\\cdot10^{-6}\\ \\mathrm{kg\\cdot m/s}$? Найдите координату $x$ центра орбиты и частоту.",
+   "en": "A particle ($q=2\\cdot10^{-6}\\ \\mathrm{C}$, $m=4\\cdot10^{-6}\\ \\mathrm{kg}$) moves in the $xy$ plane in a uniform magnetic field $B=2\\ \\mathrm{T}$; $\\vec A=Bx\\vec j$. Write the Hamiltonian. With canonical momentum $p_y=6\\cdot10^{-6}\\ \\mathrm{kg\\cdot m/s}$, what is the motion in $x$? Find the $x$ coordinate of the orbit's center and the frequency."
+  },
+  "figure": "figures/B2-L10-S06.png",
+  "solution": {
+   "uz": [
+    "$\\vec A=Bx\\vec j$ ni qo'yamiz: $$H=\\frac{p_x^2}{2m}+\\frac{(p_y-qBx)^2}{2m}$$",
+    "$y$ siklik — $p_y$ doimiy; $x$ uchun «effektiv ossilyator»: $$H=\\frac{p_x^2}{2m}+\\frac{q^2B^2}{2m}(x-x_0)^2,\\qquad x_0=\\frac{p_y}{qB}$$",
+    "Markaz va chastota: $$x_0=\\frac{6\\cdot10^{-6}}{4\\cdot10^{-6}}=1.5\\ \\mathrm{m},\\qquad \\omega=\\frac{qB}{m}=1\\ \\mathrm{rad/s}$$"
+   ],
+   "ru": [
+    "Подставляем $\\vec A=Bx\\vec j$: $$H=\\frac{p_x^2}{2m}+\\frac{(p_y-qBx)^2}{2m}$$",
+    "$y$ циклическая — $p_y$ постоянен; для $x$ — «эффективный осциллятор»: $$H=\\frac{p_x^2}{2m}+\\frac{q^2B^2}{2m}(x-x_0)^2,\\qquad x_0=\\frac{p_y}{qB}$$",
+    "Центр и частота: $$x_0=\\frac{6\\cdot10^{-6}}{4\\cdot10^{-6}}=1.5\\ \\mathrm{m},\\qquad \\omega=\\frac{qB}{m}=1\\ \\mathrm{rad/s}$$"
+   ],
+   "en": [
+    "Substitute $\\vec A=Bx\\vec j$: $$H=\\frac{p_x^2}{2m}+\\frac{(p_y-qBx)^2}{2m}$$",
+    "$y$ is cyclic — $p_y$ is constant; for $x$ an “effective oscillator”: $$H=\\frac{p_x^2}{2m}+\\frac{q^2B^2}{2m}(x-x_0)^2,\\qquad x_0=\\frac{p_y}{qB}$$",
+    "Center and frequency: $$x_0=\\frac{6\\cdot10^{-6}}{4\\cdot10^{-6}}=1.5\\ \\mathrm{m},\\qquad \\omega=\\frac{qB}{m}=1\\ \\mathrm{rad/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "EM maydonda: $H=\\frac{(\\vec p-q\\vec A)^2}{2m}+q\\phi$",
+    "ru": "В ЭМ поле: $H=\\frac{(\\vec p-q\\vec A)^2}{2m}+q\\phi$",
+    "en": "In an EM field: $H=\\frac{(\\vec p-q\\vec A)^2}{2m}+q\\phi$"
+   },
+   {
+    "uz": "Siklik koordinata: $\\frac{\\partial H}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "ru": "Циклическая координата: $\\frac{\\partial H}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "en": "Cyclic coordinate: $\\frac{\\partial H}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Magnit maydondagi zarra gamiltoniani",
+   "ru": "Гамильтониан частицы в магнитном поле",
+   "en": "Hamiltonian of a particle in a magnetic field"
+  },
+  "answer": "x_0=1.5\\ \\mathrm{m};\\ \\omega=1\\ \\mathrm{rad/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original (B2-L10, magnit maydon)"
+ },
+ {
+  "id": "B2-L10-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$L_x=yp_z-zp_y$, $L_y=zp_x-xp_z$, $L_z=xp_y-yp_x$. Ta'rif bo'yicha $\\{L_x,L_y\\}$, $\\{L_z,x\\}$ va $\\{L_z,p_x\\}$ ni hisoblang. Natijalarning geometrik ma'nosini tushuntiring.",
+   "ru": "$L_x=yp_z-zp_y$, $L_y=zp_x-xp_z$, $L_z=xp_y-yp_x$. По определению вычислите $\\{L_x,L_y\\}$, $\\{L_z,x\\}$ и $\\{L_z,p_x\\}$. Объясните геометрический смысл результатов.",
+   "en": "$L_x=yp_z-zp_y$, $L_y=zp_x-xp_z$, $L_z=xp_y-yp_x$. Compute $\\{L_x,L_y\\}$, $\\{L_z,x\\}$ and $\\{L_z,p_x\\}$ from the definition. Explain the geometric meaning of the results."
+  },
+  "figure": "figures/B2-L10-S07.png",
+  "solution": {
+   "uz": [
+    "$\\{L_x,L_y\\}$ da faqat $z$ va $p_z$ bo'yicha hosilalar nolga teng emas: $$\\{L_x,L_y\\}=\\frac{\\partial L_x}{\\partial z}\\frac{\\partial L_y}{\\partial p_z}-\\frac{\\partial L_x}{\\partial p_z}\\frac{\\partial L_y}{\\partial z}=(-p_y)(-x)-yp_x=L_z$$",
+    "$\\{L_z,x\\}=-\\frac{\\partial L_z}{\\partial p_x}$ va $\\{L_z,p_x\\}=\\frac{\\partial L_z}{\\partial x}$: $$\\{L_z,x\\}=y,\\qquad \\{L_z,p_x\\}=p_y$$",
+    "Ma'nosi: $L_z$ $z$ o'qi atrofidagi cheksiz kichik burishni hosil qiladi — $\\delta x=-\\epsilon y$, $\\delta p_x=-\\epsilon p_y$; vektorlar ($\\vec r$, $\\vec p$) bir xil buriladi."
+   ],
+   "ru": [
+    "В $\\{L_x,L_y\\}$ отличны от нуля только производные по $z$ и $p_z$: $$\\{L_x,L_y\\}=\\frac{\\partial L_x}{\\partial z}\\frac{\\partial L_y}{\\partial p_z}-\\frac{\\partial L_x}{\\partial p_z}\\frac{\\partial L_y}{\\partial z}=(-p_y)(-x)-yp_x=L_z$$",
+    "$\\{L_z,x\\}=-\\frac{\\partial L_z}{\\partial p_x}$ и $\\{L_z,p_x\\}=\\frac{\\partial L_z}{\\partial x}$: $$\\{L_z,x\\}=y,\\qquad \\{L_z,p_x\\}=p_y$$",
+    "Смысл: $L_z$ порождает бесконечно малый поворот вокруг оси $z$ — $\\delta x=-\\epsilon y$, $\\delta p_x=-\\epsilon p_y$; векторы ($\\vec r$, $\\vec p$) поворачиваются одинаково."
+   ],
+   "en": [
+    "In $\\{L_x,L_y\\}$ only the derivatives with respect to $z$ and $p_z$ are nonzero: $$\\{L_x,L_y\\}=\\frac{\\partial L_x}{\\partial z}\\frac{\\partial L_y}{\\partial p_z}-\\frac{\\partial L_x}{\\partial p_z}\\frac{\\partial L_y}{\\partial z}=(-p_y)(-x)-yp_x=L_z$$",
+    "$\\{L_z,x\\}=-\\frac{\\partial L_z}{\\partial p_x}$ and $\\{L_z,p_x\\}=\\frac{\\partial L_z}{\\partial x}$: $$\\{L_z,x\\}=y,\\qquad \\{L_z,p_x\\}=p_y$$",
+    "Meaning: $L_z$ generates an infinitesimal rotation about the $z$ axis — $\\delta x=-\\epsilon y$, $\\delta p_x=-\\epsilon p_y$; the vectors ($\\vec r$, $\\vec p$) rotate in the same way."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Puasson qavsi: $\\{f,g\\}=\\frac{\\partial f}{\\partial q}\\frac{\\partial g}{\\partial p}-\\frac{\\partial f}{\\partial p}\\frac{\\partial g}{\\partial q}$",
+    "ru": "Скобка Пуассона: $\\{f,g\\}=\\frac{\\partial f}{\\partial q}\\frac{\\partial g}{\\partial p}-\\frac{\\partial f}{\\partial p}\\frac{\\partial g}{\\partial q}$",
+    "en": "Poisson bracket: $\\{f,g\\}=\\frac{\\partial f}{\\partial q}\\frac{\\partial g}{\\partial p}-\\frac{\\partial f}{\\partial p}\\frac{\\partial g}{\\partial q}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Impuls momenti qavslari",
+   "ru": "Скобки момента импульса",
+   "en": "Angular-momentum brackets"
+  },
+  "answer": "\\{L_x,L_y\\}=L_z;\\ \\{L_z,x\\}=y;\\ \\{L_z,p_x\\}=p_y",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original (B2-L10, impuls momenti)"
+ },
+ {
+  "id": "B2-L10-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Anizotrop ossilyator: $H=\\frac{p_x^2+p_y^2}{2m}+\\frac{k}{2}(x^2+4y^2)$. Puasson qavslari yordamida tekshiring: $L_z$ saqlanadimi? $H_x=\\frac{p_x^2}{2m}+\\frac{1}{2}kx^2$ saqlanadimi?",
+   "ru": "Анизотропный осциллятор: $H=\\frac{p_x^2+p_y^2}{2m}+\\frac{k}{2}(x^2+4y^2)$. С помощью скобок Пуассона проверьте: сохраняется ли $L_z$? Сохраняется ли $H_x=\\frac{p_x^2}{2m}+\\frac{1}{2}kx^2$?",
+   "en": "An anisotropic oscillator: $H=\\frac{p_x^2+p_y^2}{2m}+\\frac{k}{2}(x^2+4y^2)$. Using Poisson brackets, check: is $L_z$ conserved? Is $H_x=\\frac{p_x^2}{2m}+\\frac{1}{2}kx^2$ conserved?"
+  },
+  "figure": "figures/B2-L10-S08.png",
+  "solution": {
+   "uz": [
+    "Kinetik qism burishga nisbatan simmetrik, shuning uchun faqat potensial hissa qo'shadi: $$\\{L_z,H\\}=-\\frac{\\partial L_z}{\\partial p_x}\\frac{\\partial H}{\\partial x}-\\frac{\\partial L_z}{\\partial p_y}\\frac{\\partial H}{\\partial y}=ykx-x\\cdot4ky=-3kxy\\neq0$$",
+    "$L_z$ saqlanmaydi: potensial burishga nisbatan simmetrik emas. $H_x$ uchun: $$\\{H_x,H\\}=\\{H_x,H_x\\}+\\{H_x,H_y\\}=0$$",
+    "$H_x$ va $H_y$ turli o'zgaruvchilarga bog'liq — ikkalasi alohida saqlanadi."
+   ],
+   "ru": [
+    "Кинетическая часть симметрична относительно поворота, поэтому вклад даёт только потенциал: $$\\{L_z,H\\}=-\\frac{\\partial L_z}{\\partial p_x}\\frac{\\partial H}{\\partial x}-\\frac{\\partial L_z}{\\partial p_y}\\frac{\\partial H}{\\partial y}=ykx-x\\cdot4ky=-3kxy\\neq0$$",
+    "$L_z$ не сохраняется: потенциал не симметричен относительно поворота. Для $H_x$: $$\\{H_x,H\\}=\\{H_x,H_x\\}+\\{H_x,H_y\\}=0$$",
+    "$H_x$ и $H_y$ зависят от разных переменных — обе сохраняются по отдельности."
+   ],
+   "en": [
+    "The kinetic part is rotationally symmetric, so only the potential contributes: $$\\{L_z,H\\}=-\\frac{\\partial L_z}{\\partial p_x}\\frac{\\partial H}{\\partial x}-\\frac{\\partial L_z}{\\partial p_y}\\frac{\\partial H}{\\partial y}=ykx-x\\cdot4ky=-3kxy\\neq0$$",
+    "$L_z$ is not conserved: the potential is not rotationally symmetric. For $H_x$: $$\\{H_x,H\\}=\\{H_x,H_x\\}+\\{H_x,H_y\\}=0$$",
+    "$H_x$ and $H_y$ depend on different variables — each is conserved separately."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Vaqt bo'yicha o'zgarish: $\\frac{df}{dt}=\\{f,H\\}+\\frac{\\partial f}{\\partial t}$",
+    "ru": "Изменение во времени: $\\frac{df}{dt}=\\{f,H\\}+\\frac{\\partial f}{\\partial t}$",
+    "en": "Time evolution: $\\frac{df}{dt}=\\{f,H\\}+\\frac{\\partial f}{\\partial t}$"
+   },
+   {
+    "uz": "Puasson qavsi: $\\{f,g\\}=\\frac{\\partial f}{\\partial q}\\frac{\\partial g}{\\partial p}-\\frac{\\partial f}{\\partial p}\\frac{\\partial g}{\\partial q}$",
+    "ru": "Скобка Пуассона: $\\{f,g\\}=\\frac{\\partial f}{\\partial q}\\frac{\\partial g}{\\partial p}-\\frac{\\partial f}{\\partial p}\\frac{\\partial g}{\\partial q}$",
+    "en": "Poisson bracket: $\\{f,g\\}=\\frac{\\partial f}{\\partial q}\\frac{\\partial g}{\\partial p}-\\frac{\\partial f}{\\partial p}\\frac{\\partial g}{\\partial q}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Puasson qavsi bilan saqlanishni tekshirish",
+   "ru": "Проверка сохранения скобкой Пуассона",
+   "en": "Checking conservation with a Poisson bracket"
+  },
+  "answer": "\\{L_z,H\\}=-3kxy\\neq0;\\ \\{H_x,H\\}=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original (B2-L10, anizotrop ossilyator)"
+ },
+ {
+  "id": "B2-L10-S09",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Massasi $0.5\\ \\mathrm{kg}$ bo'lgan yuk bikrligi $50\\ \\mathrm{N/m}$ bo'lgan prujinada $1\\ \\mathrm{J}$ energiya bilan tebranadi. Fazaviy trayektoriyani chizing: yarim o'qlarini, yuzasini va aylanib chiqish yo'nalishini toping. $T=\\frac{d\\Gamma}{dE}$ formulasi bilan davrni tekshiring.",
+   "ru": "Груз массой $0.5\\ \\mathrm{kg}$ колеблется на пружине жёсткостью $50\\ \\mathrm{N/m}$ с энергией $1\\ \\mathrm{J}$. Нарисуйте фазовую траекторию: найдите полуоси, площадь и направление обхода. Проверьте период по формуле $T=\\frac{d\\Gamma}{dE}$.",
+   "en": "A $0.5\\ \\mathrm{kg}$ load oscillates on a spring of stiffness $50\\ \\mathrm{N/m}$ with energy $1\\ \\mathrm{J}$. Sketch the phase trajectory: find its semi-axes, area and direction of motion. Check the period with $T=\\frac{d\\Gamma}{dE}$."
+  },
+  "figure": "figures/B2-L10-S09.png",
+  "solution": {
+   "uz": [
+    "$H=E$ — ellips; yarim o'qlar: $$A=\\sqrt{\\frac{2E}{k}}=0.2\\ \\mathrm{m},\\qquad p_0=\\sqrt{2mE}=1\\ \\mathrm{kg\\cdot m/s}$$",
+    "Yuza ($\\omega=10\\ \\mathrm{rad/s}$): $$\\Gamma=\\pi Ap_0=\\frac{2\\pi E}{\\omega}\\approx0.628\\ \\mathrm{J\\cdot s}$$",
+    "$x>0$ da $\\dot p=-kx<0$ — soat strelkasi bo'yicha. Davr: $$T=\\frac{d\\Gamma}{dE}=\\frac{2\\pi}{\\omega}\\approx0.628\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "$H=E$ — эллипс; полуоси: $$A=\\sqrt{\\frac{2E}{k}}=0.2\\ \\mathrm{m},\\qquad p_0=\\sqrt{2mE}=1\\ \\mathrm{kg\\cdot m/s}$$",
+    "Площадь ($\\omega=10\\ \\mathrm{rad/s}$): $$\\Gamma=\\pi Ap_0=\\frac{2\\pi E}{\\omega}\\approx0.628\\ \\mathrm{J\\cdot s}$$",
+    "При $x>0$ $\\dot p=-kx<0$ — по часовой стрелке. Период: $$T=\\frac{d\\Gamma}{dE}=\\frac{2\\pi}{\\omega}\\approx0.628\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "$H=E$ is an ellipse; the semi-axes: $$A=\\sqrt{\\frac{2E}{k}}=0.2\\ \\mathrm{m},\\qquad p_0=\\sqrt{2mE}=1\\ \\mathrm{kg\\cdot m/s}$$",
+    "The area ($\\omega=10\\ \\mathrm{rad/s}$): $$\\Gamma=\\pi Ap_0=\\frac{2\\pi E}{\\omega}\\approx0.628\\ \\mathrm{J\\cdot s}$$",
+    "For $x>0$, $\\dot p=-kx<0$ — clockwise. The period: $$T=\\frac{d\\Gamma}{dE}=\\frac{2\\pi}{\\omega}\\approx0.628\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Fazaviy yuza: $\\Gamma=\\oint p\\,dx=\\frac{2\\pi E}{\\omega}$",
+    "ru": "Фазовая площадь: $\\Gamma=\\oint p\\,dx=\\frac{2\\pi E}{\\omega}$",
+    "en": "Phase area: $\\Gamma=\\oint p\\,dx=\\frac{2\\pi E}{\\omega}$"
+   },
+   {
+    "uz": "Kanonik tenglamalar: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "ru": "Канонические уравнения: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "en": "Canonical equations: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ossilyatorning fazaviy trayektoriyasi",
+   "ru": "Фазовая траектория осциллятора",
+   "en": "Phase trajectory of an oscillator"
+  },
+  "answer": "A=0.2\\ \\mathrm{m};\\ p_0=1\\ \\mathrm{kg\\cdot m/s};\\ \\Gamma\\approx0.628\\ \\mathrm{J\\cdot s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original (B2-L10, fazaviy ellips)"
+ },
+ {
+  "id": "B2-L10-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Mayatnik: $m=1\\ \\mathrm{kg}$, $l=0.4\\ \\mathrm{m}$, $H=\\frac{p_\\theta^2}{2ml^2}-mgl\\cos\\theta$. Separatrisa energiyasini toping. Pastki nuqtada separatrisa qaysi $p_\\theta$ dan o'tadi? Mayatnik to'liq aylanishi uchun pastki nuqtada qanday eng kichik burchak tezlik kerak? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Маятник: $m=1\\ \\mathrm{kg}$, $l=0.4\\ \\mathrm{m}$, $H=\\frac{p_\\theta^2}{2ml^2}-mgl\\cos\\theta$. Найдите энергию сепаратрисы. Через какое $p_\\theta$ проходит сепаратриса в нижней точке? Какая наименьшая угловая скорость в нижней точке нужна для полного оборота? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A pendulum: $m=1\\ \\mathrm{kg}$, $l=0.4\\ \\mathrm{m}$, $H=\\frac{p_\\theta^2}{2ml^2}-mgl\\cos\\theta$. Find the separatrix energy. Through which $p_\\theta$ does the separatrix pass at the bottom? What minimum angular velocity at the bottom is needed for a full revolution? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L10-S10.png",
+  "solution": {
+   "uz": [
+    "Separatrisa yuqori egar nuqtadan ($\\theta=\\pi$, $p_\\theta=0$) o'tadi: $$E^*=H(\\pi,0)=mgl=4\\ \\mathrm{J}$$",
+    "Pastda ($\\theta=0$) $H=E^*$: $$\\frac{p_\\theta^2}{2ml^2}=2mgl\\ \\Rightarrow\\ p_\\theta=2ml\\sqrt{gl}=1.6\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Burchak tezlik $\\dot\\theta=\\frac{\\partial H}{\\partial p_\\theta}$: $$\\dot\\theta=\\frac{p_\\theta}{ml^2}=\\frac{1.6}{0.16}=10\\ \\mathrm{rad/s}$$"
+   ],
+   "ru": [
+    "Сепаратриса проходит через верхнюю седловую точку ($\\theta=\\pi$, $p_\\theta=0$): $$E^*=H(\\pi,0)=mgl=4\\ \\mathrm{J}$$",
+    "Внизу ($\\theta=0$) $H=E^*$: $$\\frac{p_\\theta^2}{2ml^2}=2mgl\\ \\Rightarrow\\ p_\\theta=2ml\\sqrt{gl}=1.6\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Угловая скорость $\\dot\\theta=\\frac{\\partial H}{\\partial p_\\theta}$: $$\\dot\\theta=\\frac{p_\\theta}{ml^2}=\\frac{1.6}{0.16}=10\\ \\mathrm{rad/s}$$"
+   ],
+   "en": [
+    "The separatrix passes through the upper saddle point ($\\theta=\\pi$, $p_\\theta=0$): $$E^*=H(\\pi,0)=mgl=4\\ \\mathrm{J}$$",
+    "At the bottom ($\\theta=0$) $H=E^*$: $$\\frac{p_\\theta^2}{2ml^2}=2mgl\\ \\Rightarrow\\ p_\\theta=2ml\\sqrt{gl}=1.6\\ \\mathrm{kg\\cdot m^2/s}$$",
+    "Angular velocity $\\dot\\theta=\\frac{\\partial H}{\\partial p_\\theta}$: $$\\dot\\theta=\\frac{p_\\theta}{ml^2}=\\frac{1.6}{0.16}=10\\ \\mathrm{rad/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Separatrisa: $E^*=mgl$",
+    "ru": "Сепаратриса: $E^*=mgl$",
+    "en": "Separatrix: $E^*=mgl$"
+   },
+   null,
+   {
+    "uz": "Kanonik tenglamalar: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "ru": "Канонические уравнения: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "en": "Canonical equations: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$"
+   }
+  ],
+  "basis": {
+   "uz": "Mayatnik separatrisasi",
+   "ru": "Сепаратриса маятника",
+   "en": "Pendulum separatrix"
+  },
+  "answer": "E^*=4\\ \\mathrm{J};\\ p_\\theta=1.6\\ \\mathrm{kg\\cdot m^2/s};\\ \\dot\\theta=10\\ \\mathrm{rad/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original (B2-L10, separatrisa)"
+ },
+ {
+  "id": "B2-L10-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $1\\ \\mathrm{kg}$ bo'lgan erkin zarralar ansambli $t=0$ da fazaviy tekislikda $0<x<1\\ \\mathrm{m}$, $0<p<0.2\\ \\mathrm{kg\\cdot m/s}$ to'rtburchakni egallaydi. $t=10\\ \\mathrm{s}$ dan keyin bu soha qanday shaklda bo'ladi? Uning $x$ bo'yicha kengligini va yuzasini toping.",
+   "ru": "Ансамбль свободных частиц массой $1\\ \\mathrm{kg}$ при $t=0$ занимает на фазовой плоскости прямоугольник $0<x<1\\ \\mathrm{m}$, $0<p<0.2\\ \\mathrm{kg\\cdot m/s}$. Какую форму примет эта область через $t=10\\ \\mathrm{s}$? Найдите её ширину по $x$ и площадь.",
+   "en": "An ensemble of free particles of mass $1\\ \\mathrm{kg}$ occupies the rectangle $0<x<1\\ \\mathrm{m}$, $0<p<0.2\\ \\mathrm{kg\\cdot m/s}$ of the phase plane at $t=0$. What shape will this region have after $t=10\\ \\mathrm{s}$? Find its width in $x$ and its area."
+  },
+  "figure": "figures/B2-L10-S11.png",
+  "solution": {
+   "uz": [
+    "Kanonik tenglamalar yechimi: $$x=x_0+\\frac{p_0}{m}t,\\qquad p=p_0$$",
+    "Yuqori tomon ($p_0=0.2$) $2\\ \\mathrm{m}$ ga, pastki tomon ($p_0=0$) umuman siljimaydi — parallelogramm: $$\\Delta x=1+\\frac{0.2\\cdot10}{1}=3\\ \\mathrm{m}$$",
+    "Akslantirish Yakobiani $1$ ga teng — yuza saqlanadi: $$\\Gamma=1\\cdot0.2=0.2\\ \\mathrm{J\\cdot s}$$"
+   ],
+   "ru": [
+    "Решение канонических уравнений: $$x=x_0+\\frac{p_0}{m}t,\\qquad p=p_0$$",
+    "Верхняя сторона ($p_0=0.2$) сдвигается на $2\\ \\mathrm{m}$, нижняя ($p_0=0$) не сдвигается — параллелограмм: $$\\Delta x=1+\\frac{0.2\\cdot10}{1}=3\\ \\mathrm{m}$$",
+    "Якобиан отображения равен $1$ — площадь сохраняется: $$\\Gamma=1\\cdot0.2=0.2\\ \\mathrm{J\\cdot s}$$"
+   ],
+   "en": [
+    "Solution of the canonical equations: $$x=x_0+\\frac{p_0}{m}t,\\qquad p=p_0$$",
+    "The top side ($p_0=0.2$) shifts by $2\\ \\mathrm{m}$, the bottom side ($p_0=0$) does not move — a parallelogram: $$\\Delta x=1+\\frac{0.2\\cdot10}{1}=3\\ \\mathrm{m}$$",
+    "The map's Jacobian equals $1$ — the area is conserved: $$\\Gamma=1\\cdot0.2=0.2\\ \\mathrm{J\\cdot s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kanonik tenglamalar: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "ru": "Канонические уравнения: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "en": "Canonical equations: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$"
+   },
+   null,
+   {
+    "uz": "Liuvill teoremasi: $\\frac{\\partial\\dot q}{\\partial q}+\\frac{\\partial\\dot p}{\\partial p}=0$, $\\Gamma=\\mathrm{const}$",
+    "ru": "Теорема Лиувилля: $\\frac{\\partial\\dot q}{\\partial q}+\\frac{\\partial\\dot p}{\\partial p}=0$, $\\Gamma=\\mathrm{const}$",
+    "en": "Liouville's theorem: $\\frac{\\partial\\dot q}{\\partial q}+\\frac{\\partial\\dot p}{\\partial p}=0$, $\\Gamma=\\mathrm{const}$"
+   }
+  ],
+  "basis": {
+   "uz": "Liuvill teoremasi — erkin zarralar",
+   "ru": "Теорема Лиувилля — свободные частицы",
+   "en": "Liouville's theorem — free particles"
+  },
+  "answer": "\\Delta x=3\\ \\mathrm{m};\\ \\Gamma=0.2\\ \\mathrm{J\\cdot s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L10, Liuvill teoremasi)"
+ },
+ {
+  "id": "B2-L10-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "So'nuvchi ossilyator: $\\dot x=\\frac{p}{m}$, $\\dot p=-kx-2\\beta p$, $\\beta=0.5\\ \\mathrm{s^{-1}}$. Boshlang'ich holatlar to'plamining fazaviy yuzasi qanday o'zgaradi? $1\\ \\mathrm{s}$ dan keyin yuza necha marta kamayadi? Yuza qancha vaqtda ikki marta kamayadi? Liuvill teoremasi buzilganmi?",
+   "ru": "Затухающий осциллятор: $\\dot x=\\frac{p}{m}$, $\\dot p=-kx-2\\beta p$, $\\beta=0.5\\ \\mathrm{s^{-1}}$. Как меняется фазовая площадь набора начальных состояний? Во сколько раз уменьшится площадь через $1\\ \\mathrm{s}$? За какое время площадь уменьшится вдвое? Нарушена ли теорема Лиувилля?",
+   "en": "A damped oscillator: $\\dot x=\\frac{p}{m}$, $\\dot p=-kx-2\\beta p$, $\\beta=0.5\\ \\mathrm{s^{-1}}$. How does the phase area of a set of initial states change? By what factor does the area decrease after $1\\ \\mathrm{s}$? How long does it take for the area to halve? Is Liouville's theorem violated?"
+  },
+  "figure": "figures/B2-L10-S12.png",
+  "solution": {
+   "uz": [
+    "Fazaviy oqim divergensiyasi: $$\\frac{\\partial\\dot x}{\\partial x}+\\frac{\\partial\\dot p}{\\partial p}=0-2\\beta=-1\\ \\mathrm{s^{-1}}$$",
+    "Yuza eksponensial kamayadi: $$\\Gamma=\\Gamma_0e^{-2\\beta t},\\qquad \\frac{\\Gamma(1)}{\\Gamma_0}=e^{-1}\\approx0.37$$",
+    "Yarim kamayish vaqti: $$t=\\frac{\\ln2}{2\\beta}\\approx0.69\\ \\mathrm{s}$$",
+    "Buzilmagan: ishqalanish kuchi gamiltonian sistemaga kirmaydi, teorema qo'llanilmaydi."
+   ],
+   "ru": [
+    "Дивергенция фазового потока: $$\\frac{\\partial\\dot x}{\\partial x}+\\frac{\\partial\\dot p}{\\partial p}=0-2\\beta=-1\\ \\mathrm{s^{-1}}$$",
+    "Площадь убывает экспоненциально: $$\\Gamma=\\Gamma_0e^{-2\\beta t},\\qquad \\frac{\\Gamma(1)}{\\Gamma_0}=e^{-1}\\approx0.37$$",
+    "Время уменьшения вдвое: $$t=\\frac{\\ln2}{2\\beta}\\approx0.69\\ \\mathrm{s}$$",
+    "Не нарушена: сила трения не входит в гамильтонову систему, теорема неприменима."
+   ],
+   "en": [
+    "Divergence of the phase flow: $$\\frac{\\partial\\dot x}{\\partial x}+\\frac{\\partial\\dot p}{\\partial p}=0-2\\beta=-1\\ \\mathrm{s^{-1}}$$",
+    "The area decreases exponentially: $$\\Gamma=\\Gamma_0e^{-2\\beta t},\\qquad \\frac{\\Gamma(1)}{\\Gamma_0}=e^{-1}\\approx0.37$$",
+    "The halving time: $$t=\\frac{\\ln2}{2\\beta}\\approx0.69\\ \\mathrm{s}$$",
+    "Not violated: the friction force is not part of a Hamiltonian system, so the theorem does not apply."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Fazaviy oqim: $\\frac{d\\Gamma}{dt}=\\Gamma\\left(\\frac{\\partial\\dot q}{\\partial q}+\\frac{\\partial\\dot p}{\\partial p}\\right)$",
+    "ru": "Фазовый поток: $\\frac{d\\Gamma}{dt}=\\Gamma\\left(\\frac{\\partial\\dot q}{\\partial q}+\\frac{\\partial\\dot p}{\\partial p}\\right)$",
+    "en": "Phase flow: $\\frac{d\\Gamma}{dt}=\\Gamma\\left(\\frac{\\partial\\dot q}{\\partial q}+\\frac{\\partial\\dot p}{\\partial p}\\right)$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "So'nuvchi sistemada fazaviy yuza",
+   "ru": "Фазовая площадь в затухающей системе",
+   "en": "Phase area in a damped system"
+  },
+  "answer": "\\frac{\\Gamma}{\\Gamma_0}=e^{-1}\\approx0.37;\\ t\\approx0.69\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original (B2-L10, so'nuvchi ossilyator)"
+ },
+ {
+  "id": "B2-L10-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$\\alpha$ va $\\beta$ ning qanday qiymatlarida $Q=q^\\alpha\\cos(\\beta p)$, $P=q^\\alpha\\sin(\\beta p)$ almashtirishi kanonik bo'ladi?",
+   "ru": "При каких $\\alpha$ и $\\beta$ преобразование $Q=q^\\alpha\\cos(\\beta p)$, $P=q^\\alpha\\sin(\\beta p)$ является каноническим?",
+   "en": "For which values of $\\alpha$ and $\\beta$ is the transformation $Q=q^\\alpha\\cos(\\beta p)$, $P=q^\\alpha\\sin(\\beta p)$ canonical?"
+  },
+  "figure": "figures/B2-L10-S13.png",
+  "solution": {
+   "uz": [
+    "Hosilalar: $$\\frac{\\partial Q}{\\partial q}=\\alpha q^{\\alpha-1}\\cos\\beta p,\\quad \\frac{\\partial Q}{\\partial p}=-\\beta q^\\alpha\\sin\\beta p,\\quad \\frac{\\partial P}{\\partial q}=\\alpha q^{\\alpha-1}\\sin\\beta p,\\quad \\frac{\\partial P}{\\partial p}=\\beta q^\\alpha\\cos\\beta p$$",
+    "Puasson qavsi ($\\cos^2+\\sin^2=1$): $$\\{Q,P\\}=\\alpha\\beta q^{2\\alpha-1}$$",
+    "$q$ ga bog'liq bo'lmasligi va $1$ ga tengligi kerak: $$2\\alpha-1=0,\\quad \\alpha\\beta=1\\ \\Rightarrow\\ \\alpha=\\frac{1}{2},\\quad \\beta=2$$"
+   ],
+   "ru": [
+    "Производные: $$\\frac{\\partial Q}{\\partial q}=\\alpha q^{\\alpha-1}\\cos\\beta p,\\quad \\frac{\\partial Q}{\\partial p}=-\\beta q^\\alpha\\sin\\beta p,\\quad \\frac{\\partial P}{\\partial q}=\\alpha q^{\\alpha-1}\\sin\\beta p,\\quad \\frac{\\partial P}{\\partial p}=\\beta q^\\alpha\\cos\\beta p$$",
+    "Скобка Пуассона ($\\cos^2+\\sin^2=1$): $$\\{Q,P\\}=\\alpha\\beta q^{2\\alpha-1}$$",
+    "Нужно, чтобы не зависела от $q$ и равнялась $1$: $$2\\alpha-1=0,\\quad \\alpha\\beta=1\\ \\Rightarrow\\ \\alpha=\\frac{1}{2},\\quad \\beta=2$$"
+   ],
+   "en": [
+    "Derivatives: $$\\frac{\\partial Q}{\\partial q}=\\alpha q^{\\alpha-1}\\cos\\beta p,\\quad \\frac{\\partial Q}{\\partial p}=-\\beta q^\\alpha\\sin\\beta p,\\quad \\frac{\\partial P}{\\partial q}=\\alpha q^{\\alpha-1}\\sin\\beta p,\\quad \\frac{\\partial P}{\\partial p}=\\beta q^\\alpha\\cos\\beta p$$",
+    "The Poisson bracket ($\\cos^2+\\sin^2=1$): $$\\{Q,P\\}=\\alpha\\beta q^{2\\alpha-1}$$",
+    "It must be independent of $q$ and equal to $1$: $$2\\alpha-1=0,\\quad \\alpha\\beta=1\\ \\Rightarrow\\ \\alpha=\\frac{1}{2},\\quad \\beta=2$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Kanoniklik mezoni: $\\{Q,P\\}_{q,p}=1$",
+    "ru": "Критерий каноничности: $\\{Q,P\\}_{q,p}=1$",
+    "en": "Canonicity test: $\\{Q,P\\}_{q,p}=1$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kanoniklik mezoni",
+   "ru": "Критерий каноничности",
+   "en": "Canonicity test"
+  },
+  "answer": "\\alpha=\\frac{1}{2};\\ \\beta=2",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B2-L10, kanonik almashtirish)"
+ },
+ {
+  "id": "B2-L10-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ossilyator ($m=0.5\\ \\mathrm{kg}$, $k=50\\ \\mathrm{N/m}$) $2\\ \\mathrm{J}$ energiya bilan tebranadi. $x=\\sqrt{\\frac{2I}{m\\omega}}\\sin\\psi$, $p=\\sqrt{2m\\omega I}\\cos\\psi$ almashtirishi kanonik ekanini tekshiring, yangi Gamilton funksiyasini toping va $I$, $\\psi(t)$ ni aniqlang.",
+   "ru": "Осциллятор ($m=0.5\\ \\mathrm{kg}$, $k=50\\ \\mathrm{N/m}$) колеблется с энергией $2\\ \\mathrm{J}$. Проверьте, что преобразование $x=\\sqrt{\\frac{2I}{m\\omega}}\\sin\\psi$, $p=\\sqrt{2m\\omega I}\\cos\\psi$ каноническое, найдите новую функцию Гамильтона и определите $I$ и $\\psi(t)$.",
+   "en": "An oscillator ($m=0.5\\ \\mathrm{kg}$, $k=50\\ \\mathrm{N/m}$) oscillates with energy $2\\ \\mathrm{J}$. Check that the transformation $x=\\sqrt{\\frac{2I}{m\\omega}}\\sin\\psi$, $p=\\sqrt{2m\\omega I}\\cos\\psi$ is canonical, find the new Hamiltonian, and determine $I$ and $\\psi(t)$."
+  },
+  "figure": "figures/B2-L10-S14.png",
+  "solution": {
+   "uz": [
+    "Kanoniklik — eski o'zgaruvchilarning yangi o'zgaruvchilardagi qavsi: $$\\{x,p\\}_{\\psi,I}=\\frac{\\partial x}{\\partial\\psi}\\frac{\\partial p}{\\partial I}-\\frac{\\partial x}{\\partial I}\\frac{\\partial p}{\\partial\\psi}=\\cos^2\\psi+\\sin^2\\psi=1$$",
+    "Yangi gamiltonian: $$H=\\frac{p^2}{2m}+\\frac{1}{2}m\\omega^2x^2=\\omega I$$",
+    "$\\psi$ siklik — $I$ doimiy, $\\dot\\psi=\\frac{\\partial H}{\\partial I}$: $$I=\\frac{E}{\\omega}=\\frac{2}{10}=0.2\\ \\mathrm{J\\cdot s},\\qquad \\psi=10t+\\psi_0$$"
+   ],
+   "ru": [
+    "Каноничность — скобка старых переменных по новым: $$\\{x,p\\}_{\\psi,I}=\\frac{\\partial x}{\\partial\\psi}\\frac{\\partial p}{\\partial I}-\\frac{\\partial x}{\\partial I}\\frac{\\partial p}{\\partial\\psi}=\\cos^2\\psi+\\sin^2\\psi=1$$",
+    "Новый гамильтониан: $$H=\\frac{p^2}{2m}+\\frac{1}{2}m\\omega^2x^2=\\omega I$$",
+    "$\\psi$ циклическая — $I$ постоянна, $\\dot\\psi=\\frac{\\partial H}{\\partial I}$: $$I=\\frac{E}{\\omega}=\\frac{2}{10}=0.2\\ \\mathrm{J\\cdot s},\\qquad \\psi=10t+\\psi_0$$"
+   ],
+   "en": [
+    "Canonicity — the bracket of the old variables in terms of the new ones: $$\\{x,p\\}_{\\psi,I}=\\frac{\\partial x}{\\partial\\psi}\\frac{\\partial p}{\\partial I}-\\frac{\\partial x}{\\partial I}\\frac{\\partial p}{\\partial\\psi}=\\cos^2\\psi+\\sin^2\\psi=1$$",
+    "The new Hamiltonian: $$H=\\frac{p^2}{2m}+\\frac{1}{2}m\\omega^2x^2=\\omega I$$",
+    "$\\psi$ is cyclic — $I$ is constant, $\\dot\\psi=\\frac{\\partial H}{\\partial I}$: $$I=\\frac{E}{\\omega}=\\frac{2}{10}=0.2\\ \\mathrm{J\\cdot s},\\qquad \\psi=10t+\\psi_0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kanoniklik mezoni: $\\{Q,P\\}_{q,p}=1$",
+    "ru": "Критерий каноничности: $\\{Q,P\\}_{q,p}=1$",
+    "en": "Canonicity test: $\\{Q,P\\}_{q,p}=1$"
+   },
+   null,
+   {
+    "uz": "Ta'sir o'zgaruvchisi: $I=\\frac{1}{2\\pi}\\oint p\\,dq$, $\\dot\\psi=\\frac{dH}{dI}$",
+    "ru": "Переменная действия: $I=\\frac{1}{2\\pi}\\oint p\\,dq$, $\\dot\\psi=\\frac{dH}{dI}$",
+    "en": "Action variable: $I=\\frac{1}{2\\pi}\\oint p\\,dq$, $\\dot\\psi=\\frac{dH}{dI}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ta'sir–burchak o'zgaruvchilari",
+   "ru": "Переменные действие–угол",
+   "en": "Action–angle variables"
+  },
+  "answer": "H=\\omega I;\\ I=0.2\\ \\mathrm{J\\cdot s};\\ \\psi=10t+\\psi_0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "original (B2-L10, ta'sir–burchak)"
+ },
+ {
+  "id": "B2-L10-S15",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Mayatnik ipi teshikdan juda sekin tortilib, uzunligi $1\\ \\mathrm{m}$ dan $0.25\\ \\mathrm{m}$ gacha qisqartirildi. Boshlang'ich amplituda $4^\\circ$. Oxirgi amplitudani toping. Energiya necha marta o'zgaradi?",
+   "ru": "Нить маятника очень медленно втягивается в отверстие, длина уменьшается от $1\\ \\mathrm{m}$ до $0.25\\ \\mathrm{m}$. Начальная амплитуда $4^\\circ$. Найдите конечную амплитуду. Во сколько раз изменится энергия?",
+   "en": "A pendulum string is pulled very slowly through a hole, shortening it from $1\\ \\mathrm{m}$ to $0.25\\ \\mathrm{m}$. The initial amplitude is $4^\\circ$. Find the final amplitude. By what factor does the energy change?"
+  },
+  "figure": "figures/B2-L10-S15.png",
+  "solution": {
+   "uz": [
+    "O'zgarish sekin — adiabatik invariant saqlanadi: $$\\frac{E}{\\omega}=\\mathrm{const},\\qquad E=\\frac{1}{2}mgl\\theta_0^2,\\qquad \\omega=\\sqrt{\\frac{g}{l}}$$",
+    "Demak $l^{\\frac{3}{2}}\\theta_0^2=\\mathrm{const}$: $$\\theta_0'=\\theta_0\\left(\\frac{l}{l'}\\right)^{\\frac{3}{4}}=4^\\circ\\cdot4^{\\frac{3}{4}}\\approx11.3^\\circ$$",
+    "Energiya chastota kabi o'zgaradi: $$\\frac{E'}{E}=\\frac{\\omega'}{\\omega}=\\sqrt{\\frac{l}{l'}}=2$$"
+   ],
+   "ru": [
+    "Изменение медленное — сохраняется адиабатический инвариант: $$\\frac{E}{\\omega}=\\mathrm{const},\\qquad E=\\frac{1}{2}mgl\\theta_0^2,\\qquad \\omega=\\sqrt{\\frac{g}{l}}$$",
+    "Значит $l^{\\frac{3}{2}}\\theta_0^2=\\mathrm{const}$: $$\\theta_0'=\\theta_0\\left(\\frac{l}{l'}\\right)^{\\frac{3}{4}}=4^\\circ\\cdot4^{\\frac{3}{4}}\\approx11.3^\\circ$$",
+    "Энергия меняется как частота: $$\\frac{E'}{E}=\\frac{\\omega'}{\\omega}=\\sqrt{\\frac{l}{l'}}=2$$"
+   ],
+   "en": [
+    "The change is slow — the adiabatic invariant is conserved: $$\\frac{E}{\\omega}=\\mathrm{const},\\qquad E=\\frac{1}{2}mgl\\theta_0^2,\\qquad \\omega=\\sqrt{\\frac{g}{l}}$$",
+    "So $l^{\\frac{3}{2}}\\theta_0^2=\\mathrm{const}$: $$\\theta_0'=\\theta_0\\left(\\frac{l}{l'}\\right)^{\\frac{3}{4}}=4^\\circ\\cdot4^{\\frac{3}{4}}\\approx11.3^\\circ$$",
+    "The energy changes like the frequency: $$\\frac{E'}{E}=\\frac{\\omega'}{\\omega}=\\sqrt{\\frac{l}{l'}}=2$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Adiabatik invariant: $I=\\frac{E}{\\omega}=\\mathrm{const}$",
+    "ru": "Адиабатический инвариант: $I=\\frac{E}{\\omega}=\\mathrm{const}$",
+    "en": "Adiabatic invariant: $I=\\frac{E}{\\omega}=\\mathrm{const}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Adiabatik invariant — mayatnik",
+   "ru": "Адиабатический инвариант — маятник",
+   "en": "Adiabatic invariant — the pendulum"
+  },
+  "answer": "\\theta_0'\\approx11.3^\\circ;\\ \\frac{E'}{E}=2",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L10, adiabatik invariant)"
+ },
+ {
+  "id": "B2-L10-S16",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Elektron bir-biridan $1\\ \\mathrm{nm}$ masofada joylashgan ikki o'tib bo'lmaydigan devor orasida harakatlanadi. Bor–Zommerfeld kvantlash shartidan energiya sathlarini toping; $E_1$ va $E_2$ ni eV da hisoblang ($h=6.63\\cdot10^{-34}\\ \\mathrm{J\\cdot s}$, $m=9.11\\cdot10^{-31}\\ \\mathrm{kg}$, $e=1.6\\cdot10^{-19}\\ \\mathrm{C}$).",
+   "ru": "Электрон движется между двумя непроницаемыми стенками, расположенными на расстоянии $1\\ \\mathrm{nm}$ друг от друга. Найдите уровни энергии из условия квантования Бора–Зоммерфельда; вычислите $E_1$ и $E_2$ в эВ ($h=6.63\\cdot10^{-34}\\ \\mathrm{J\\cdot s}$, $m=9.11\\cdot10^{-31}\\ \\mathrm{kg}$, $e=1.6\\cdot10^{-19}\\ \\mathrm{C}$).",
+   "en": "An electron moves between two impenetrable walls $1\\ \\mathrm{nm}$ apart. Find the energy levels from the Bohr–Sommerfeld quantization condition; compute $E_1$ and $E_2$ in eV ($h=6.63\\cdot10^{-34}\\ \\mathrm{J\\cdot s}$, $m=9.11\\cdot10^{-31}\\ \\mathrm{kg}$, $e=1.6\\cdot10^{-19}\\ \\mathrm{C}$)."
+  },
+  "figure": "figures/B2-L10-S16.png",
+  "solution": {
+   "uz": [
+    "Fazaviy trayektoriya — to'rtburchak: $p$ va $-p$ chiziqlari, devorlarda sakrash: $$\\oint p\\,dx=2pd=nh\\ \\Rightarrow\\ p=\\frac{nh}{2d}$$",
+    "Energiya: $$E_n=\\frac{p^2}{2m}=\\frac{n^2h^2}{8md^2}$$",
+    "Son qiymatlar: $$E_1=\\frac{(6.63\\cdot10^{-34})^2}{8\\cdot9.11\\cdot10^{-31}\\cdot10^{-18}}\\approx6.0\\cdot10^{-20}\\ \\mathrm{J}\\approx0.38\\ \\mathrm{eV},\\qquad E_2=4E_1\\approx1.5\\ \\mathrm{eV}$$"
+   ],
+   "ru": [
+    "Фазовая траектория — прямоугольник: прямые $p$ и $-p$, скачки на стенках: $$\\oint p\\,dx=2pd=nh\\ \\Rightarrow\\ p=\\frac{nh}{2d}$$",
+    "Энергия: $$E_n=\\frac{p^2}{2m}=\\frac{n^2h^2}{8md^2}$$",
+    "Численные значения: $$E_1=\\frac{(6.63\\cdot10^{-34})^2}{8\\cdot9.11\\cdot10^{-31}\\cdot10^{-18}}\\approx6.0\\cdot10^{-20}\\ \\mathrm{J}\\approx0.38\\ \\mathrm{eV},\\qquad E_2=4E_1\\approx1.5\\ \\mathrm{eV}$$"
+   ],
+   "en": [
+    "The phase trajectory is a rectangle: the lines $p$ and $-p$, with jumps at the walls: $$\\oint p\\,dx=2pd=nh\\ \\Rightarrow\\ p=\\frac{nh}{2d}$$",
+    "The energy: $$E_n=\\frac{p^2}{2m}=\\frac{n^2h^2}{8md^2}$$",
+    "Numerical values: $$E_1=\\frac{(6.63\\cdot10^{-34})^2}{8\\cdot9.11\\cdot10^{-31}\\cdot10^{-18}}\\approx6.0\\cdot10^{-20}\\ \\mathrm{J}\\approx0.38\\ \\mathrm{eV},\\qquad E_2=4E_1\\approx1.5\\ \\mathrm{eV}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bor–Zommerfeld sharti: $\\oint p\\,dq=nh$",
+    "ru": "Условие Бора–Зоммерфельда: $\\oint p\\,dq=nh$",
+    "en": "Bohr–Sommerfeld condition: $\\oint p\\,dq=nh$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Bor–Zommerfeld kvantlashi",
+   "ru": "Квантование Бора–Зоммерфельда",
+   "en": "Bohr–Sommerfeld quantization"
+  },
+  "answer": "E_n=\\frac{n^2h^2}{8md^2};\\ E_1\\approx0.38\\ \\mathrm{eV};\\ E_2\\approx1.5\\ \\mathrm{eV}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B2-L10, kvantlash)"
+ },
+ {
+  "id": "B2-L10-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Jism ($m=1\\ \\mathrm{kg}$) og'irlik maydonida vertikal harakatlanadi: $H=\\frac{p^2}{2m}+mgz$, energiyasi $20\\ \\mathrm{J}$. Gamilton–Yakobi tenglamasini yozing, uni o'zgaruvchilarni ajratish yo'li bilan yeching va $\\frac{\\partial S}{\\partial E}=\\mathrm{const}$ shartidan $z(t)$ ni toping. Eng katta balandlik qancha? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Тело ($m=1\\ \\mathrm{kg}$) движется вертикально в поле тяжести: $H=\\frac{p^2}{2m}+mgz$, энергия $20\\ \\mathrm{J}$. Запишите уравнение Гамильтона–Якоби, решите его разделением переменных и из условия $\\frac{\\partial S}{\\partial E}=\\mathrm{const}$ найдите $z(t)$. Какова наибольшая высота? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A body ($m=1\\ \\mathrm{kg}$) moves vertically in a gravitational field: $H=\\frac{p^2}{2m}+mgz$, with energy $20\\ \\mathrm{J}$. Write the Hamilton–Jacobi equation, solve it by separation of variables, and find $z(t)$ from the condition $\\frac{\\partial S}{\\partial E}=\\mathrm{const}$. What is the maximum height? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L10-S17.png",
+  "solution": {
+   "uz": [
+    "Tenglama va ajratish $S=W(z)-Et$: $$\\frac{\\partial S}{\\partial t}+\\frac{1}{2m}\\left(\\frac{\\partial S}{\\partial z}\\right)^2+mgz=0,\\qquad W=\\int\\sqrt{2m(E-mgz)}\\,dz$$",
+    "$E$ bo'yicha hosila: $$\\frac{\\partial S}{\\partial E}=-\\frac{1}{g}\\sqrt{\\frac{2(E-mgz)}{m}}-t=-t_0$$",
+    "$z$ ni topamiz: $$z=\\frac{E}{mg}-\\frac{g}{2}(t-t_0)^2,\\qquad z_{\\max}=\\frac{E}{mg}=2\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Уравнение и разделение $S=W(z)-Et$: $$\\frac{\\partial S}{\\partial t}+\\frac{1}{2m}\\left(\\frac{\\partial S}{\\partial z}\\right)^2+mgz=0,\\qquad W=\\int\\sqrt{2m(E-mgz)}\\,dz$$",
+    "Производная по $E$: $$\\frac{\\partial S}{\\partial E}=-\\frac{1}{g}\\sqrt{\\frac{2(E-mgz)}{m}}-t=-t_0$$",
+    "Находим $z$: $$z=\\frac{E}{mg}-\\frac{g}{2}(t-t_0)^2,\\qquad z_{\\max}=\\frac{E}{mg}=2\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "The equation and the separation $S=W(z)-Et$: $$\\frac{\\partial S}{\\partial t}+\\frac{1}{2m}\\left(\\frac{\\partial S}{\\partial z}\\right)^2+mgz=0,\\qquad W=\\int\\sqrt{2m(E-mgz)}\\,dz$$",
+    "Derivative with respect to $E$: $$\\frac{\\partial S}{\\partial E}=-\\frac{1}{g}\\sqrt{\\frac{2(E-mgz)}{m}}-t=-t_0$$",
+    "Solve for $z$: $$z=\\frac{E}{mg}-\\frac{g}{2}(t-t_0)^2,\\qquad z_{\\max}=\\frac{E}{mg}=2\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gamilton–Yakobi tenglamasi: $\\frac{\\partial S}{\\partial t}+H\\left(q,\\frac{\\partial S}{\\partial q}\\right)=0$",
+    "ru": "Уравнение Гамильтона–Якоби: $\\frac{\\partial S}{\\partial t}+H\\left(q,\\frac{\\partial S}{\\partial q}\\right)=0$",
+    "en": "Hamilton–Jacobi equation: $\\frac{\\partial S}{\\partial t}+H\\left(q,\\frac{\\partial S}{\\partial q}\\right)=0$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Gamilton–Yakobi usuli",
+   "ru": "Метод Гамильтона–Якоби",
+   "en": "The Hamilton–Jacobi method"
+  },
+  "answer": "z=\\frac{E}{mg}-\\frac{g}{2}(t-t_0)^2;\\ z_{\\max}=2\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L10, Gamilton–Yakobi)"
+ },
+ {
+  "id": "B2-L10-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Gamilton funksiyasi $H=e^{-\\gamma t}\\frac{p^2}{2m}+e^{\\gamma t}\\frac{1}{2}kx^2$, $m=1\\ \\mathrm{kg}$, $k=16\\ \\mathrm{N/m}$, $\\gamma=2\\ \\mathrm{s^{-1}}$. Kanonik tenglamalardan $x$ uchun tenglamani oling. Bu qanday harakat? Tebranish chastotasini toping. $H$ saqlanadimi?",
+   "ru": "Функция Гамильтона $H=e^{-\\gamma t}\\frac{p^2}{2m}+e^{\\gamma t}\\frac{1}{2}kx^2$, $m=1\\ \\mathrm{kg}$, $k=16\\ \\mathrm{N/m}$, $\\gamma=2\\ \\mathrm{s^{-1}}$. Получите из канонических уравнений уравнение для $x$. Какое это движение? Найдите частоту колебаний. Сохраняется ли $H$?",
+   "en": "The Hamiltonian is $H=e^{-\\gamma t}\\frac{p^2}{2m}+e^{\\gamma t}\\frac{1}{2}kx^2$, with $m=1\\ \\mathrm{kg}$, $k=16\\ \\mathrm{N/m}$, $\\gamma=2\\ \\mathrm{s^{-1}}$. Derive the equation for $x$ from the canonical equations. What kind of motion is this? Find the oscillation frequency. Is $H$ conserved?"
+  },
+  "figure": "figures/B2-L10-S18.png",
+  "solution": {
+   "uz": [
+    "Kanonik tenglamalar: $$\\dot x=e^{-\\gamma t}\\frac{p}{m},\\qquad \\dot p=-e^{\\gamma t}kx$$",
+    "$p=me^{\\gamma t}\\dot x$ ni differensiallaymiz: $$m\\ddot x+m\\gamma\\dot x+kx=0$$",
+    "So'nuvchi tebranish ($\\beta=\\frac{\\gamma}{2}=1\\ \\mathrm{s^{-1}}$): $$\\omega'=\\sqrt{\\frac{k}{m}-\\frac{\\gamma^2}{4}}=\\sqrt{15}\\approx3.87\\ \\mathrm{rad/s}$$",
+    "$H$ vaqtga oshkor bog'liq — saqlanmaydi: $$\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}\\neq0$$"
+   ],
+   "ru": [
+    "Канонические уравнения: $$\\dot x=e^{-\\gamma t}\\frac{p}{m},\\qquad \\dot p=-e^{\\gamma t}kx$$",
+    "Дифференцируем $p=me^{\\gamma t}\\dot x$: $$m\\ddot x+m\\gamma\\dot x+kx=0$$",
+    "Затухающее колебание ($\\beta=\\frac{\\gamma}{2}=1\\ \\mathrm{s^{-1}}$): $$\\omega'=\\sqrt{\\frac{k}{m}-\\frac{\\gamma^2}{4}}=\\sqrt{15}\\approx3.87\\ \\mathrm{rad/s}$$",
+    "$H$ явно зависит от времени — не сохраняется: $$\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}\\neq0$$"
+   ],
+   "en": [
+    "The canonical equations: $$\\dot x=e^{-\\gamma t}\\frac{p}{m},\\qquad \\dot p=-e^{\\gamma t}kx$$",
+    "Differentiate $p=me^{\\gamma t}\\dot x$: $$m\\ddot x+m\\gamma\\dot x+kx=0$$",
+    "A damped oscillation ($\\beta=\\frac{\\gamma}{2}=1\\ \\mathrm{s^{-1}}$): $$\\omega'=\\sqrt{\\frac{k}{m}-\\frac{\\gamma^2}{4}}=\\sqrt{15}\\approx3.87\\ \\mathrm{rad/s}$$",
+    "$H$ depends explicitly on time — it is not conserved: $$\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}\\neq0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kanonik tenglamalar: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "ru": "Канонические уравнения: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$",
+    "en": "Canonical equations: $\\dot q=\\frac{\\partial H}{\\partial p}$, $\\dot p=-\\frac{\\partial H}{\\partial q}$"
+   },
+   null,
+   null,
+   {
+    "uz": "$H$ ning o'zgarishi: $\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}$",
+    "ru": "Изменение $H$: $\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}$",
+    "en": "Change of $H$: $\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}$"
+   }
+  ],
+  "basis": {
+   "uz": "Vaqtga bog'liq gamiltonian",
+   "ru": "Зависящий от времени гамильтониан",
+   "en": "A time-dependent Hamiltonian"
+  },
+  "answer": "m\\ddot x+m\\gamma\\dot x+kx=0;\\ \\omega'\\approx3.87\\ \\mathrm{rad/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L10, Kaldirola–Kanay)"
+ }
+]

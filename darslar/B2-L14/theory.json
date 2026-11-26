@@ -1,0 +1,481 @@
+[
+ {
+  "t": "h1",
+  "uz": "Dielektriklar (Dielectrics)",
+  "ru": "Диэлектрики",
+  "en": "Dielectrics"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz qutblanish mexanizmlarini (elektron, ion, orientatsion) tushuntirasiz va qutblanuvchanlikni baholaysiz; qutblanish vektori va bog'langan zaryadlarni topasiz; elektr siljish vektori $\\vec D$ uchun Gauss teoremasini qo'llaysiz; dielektrikli kondensatorlar (to'liq, qatlamli, yonma-yon to'ldirilgan) sig'imini hisoblaysiz; ikki muhit chegarasidagi shartlardan foydalanasiz; dielektrik shar va Klauzius–Mossotti formulasini qo'llaysiz; dielektrikka ta'sir qiluvchi kuch va energiyani tahlil qilasiz.",
+  "ru": "**Цель.** После урока вы будете объяснять механизмы поляризации (электронная, ионная, ориентационная) и оценивать поляризуемость; находить вектор поляризации и связанные заряды; применять теорему Гаусса для вектора электрического смещения $\\vec D$; вычислять ёмкость конденсаторов с диэлектриком (полностью заполненных, слоистых, заполненных бок о бок); пользоваться граничными условиями на границе двух сред; применять диэлектрический шар и формулу Клаузиуса–Моссотти; анализировать силу, действующую на диэлектрик, и энергию.",
+  "en": "**Goal.** After this lesson you will explain the mechanisms of polarization (electronic, ionic, orientational) and estimate polarizability; find the polarization vector and the bound charges; apply Gauss's law for the electric displacement $\\vec D$; compute the capacitance of capacitors with dielectrics (fully filled, layered, filled side by side); use the boundary conditions between two media; apply the dielectric sphere and the Clausius–Mossotti formula; and analyse the force on a dielectric and the energy."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L30 da dielektrik qutbli va qutbsiz molekulalardan iborat ekani va tashqi maydon uni qutblashini, B1-L32 da dielektrik kondensator sig'imini $\\varepsilon$ marta oshirishini ko'rdik. Bu darsda shu hodisalarni mikroskopik darajadan boshlab tushuntiramiz: qutblanish bog'langan zaryadlarni hosil qiladi, ularning maydoni tashqi maydonni susaytiradi. Erkin zaryadlarni bog'langanlardan ajratish uchun $\\vec D$ vektori kiritiladi. GRE da dielektrikli kondensator, $Q$ yoki $U$ o'zgarmas bo'lgandagi o'zgarishlar va chegaraviy shartlar tez-tez so'raladi.",
+  "ru": "В B1-L30 мы видели, что диэлектрик состоит из полярных и неполярных молекул и внешнее поле его поляризует, а в B1-L32 — что диэлектрик увеличивает ёмкость конденсатора в $\\varepsilon$ раз. В этом уроке объясним эти явления начиная с микроскопического уровня: поляризация создаёт связанные заряды, поле которых ослабляет внешнее поле. Чтобы отделить свободные заряды от связанных, вводится вектор $\\vec D$. На GRE часто спрашивают о конденсаторе с диэлектриком, об изменениях при постоянных $Q$ или $U$ и о граничных условиях.",
+  "en": "In B1-L30 we saw that a dielectric consists of polar and non-polar molecules and that an external field polarizes it, and in B1-L32 that a dielectric increases a capacitor's capacitance by a factor of $\\varepsilon$. In this lesson we explain these effects starting from the microscopic level: polarization creates bound charges whose field weakens the external field. To separate free charges from bound ones, the vector $\\vec D$ is introduced. The GRE often asks about capacitors with dielectrics, the changes at constant $Q$ or $U$, and boundary conditions."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Qutblanish mexanizmlari",
+  "ru": "1. Механизмы поляризации",
+  "en": "1. Mechanisms of polarization"
+ },
+ {
+  "t": "li",
+  "uz": "**Elektron qutblanish.** Maydon atomdagi elektron bulutini yadroga nisbatan siljitadi va induksiyalangan dipol hosil bo'ladi: $\\vec p=\\alpha\\vec E$, $\\alpha$ — qutblanuvchanlik. Sodda model — radiusi $R$ bo'lgan bir tekis zaryadlangan bulut: qaytaruvchi kuch $\\frac{ke^2x}{R^3}$, demak $\\alpha=4\\pi\\varepsilon_0R^3$ — atom hajmi tartibidagi kattalik. $R\\approx10^{-10}\\ \\mathrm{m}$ va $E=10^6\\ \\mathrm{V/m}$ da siljish atigi $\\sim10^{-15}\\ \\mathrm{m}$ — shuning uchun qutblanish chiziqli ([[F01]]).",
+  "ru": "**Электронная поляризация.** Поле смещает электронное облако атома относительно ядра, и возникает индуцированный диполь: $\\vec p=\\alpha\\vec E$, $\\alpha$ — поляризуемость. Простая модель — равномерно заряженное облако радиуса $R$: возвращающая сила $\\frac{ke^2x}{R^3}$, значит $\\alpha=4\\pi\\varepsilon_0R^3$ — величина порядка объёма атома. При $R\\approx10^{-10}\\ \\mathrm{m}$ и $E=10^6\\ \\mathrm{V/m}$ смещение всего $\\sim10^{-15}\\ \\mathrm{m}$ — поэтому поляризация линейна ([[F01]]).",
+  "en": "**Electronic polarization.** The field shifts an atom's electron cloud relative to the nucleus, creating an induced dipole: $\\vec p=\\alpha\\vec E$, where $\\alpha$ is the polarizability. A simple model is a uniformly charged cloud of radius $R$: the restoring force is $\\frac{ke^2x}{R^3}$, so $\\alpha=4\\pi\\varepsilon_0R^3$ — of the order of the atomic volume. For $R\\approx10^{-10}\\ \\mathrm{m}$ and $E=10^6\\ \\mathrm{V/m}$ the shift is only $\\sim10^{-15}\\ \\mathrm{m}$ — which is why polarization is linear ([[F01]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Ion va orientatsion qutblanish.** Ion kristallarda (NaCl) musbat va manfiy ionlar panjaralari qarama-qarshi tomonga siljiydi. Qutbli molekulalar ($\\mathrm{H_2O}$, $p\\approx6.2\\cdot10^{-30}\\ \\mathrm{C\\cdot m}$) maydonsiz tartibsiz yo'nalgan; maydon ularni qisman tartiblaydi, issiqlik harakati esa xalaqit beradi. $pE\\ll kT$ da o'rtacha moment $\\langle p_E\\rangle=\\frac{p^2E}{3kT}$ (Debay) — qabul qiluvchanlik temperaturaga teskari proporsional.",
+  "ru": "**Ионная и ориентационная поляризация.** В ионных кристаллах (NaCl) решётки положительных и отрицательных ионов смещаются в противоположные стороны. Полярные молекулы ($\\mathrm{H_2O}$, $p\\approx6.2\\cdot10^{-30}\\ \\mathrm{C\\cdot m}$) без поля ориентированы хаотически; поле их частично упорядочивает, а тепловое движение мешает. При $pE\\ll kT$ средний момент $\\langle p_E\\rangle=\\frac{p^2E}{3kT}$ (Дебай) — восприимчивость обратно пропорциональна температуре.",
+  "en": "**Ionic and orientational polarization.** In ionic crystals (NaCl) the lattices of positive and negative ions shift in opposite directions. Polar molecules ($\\mathrm{H_2O}$, $p\\approx6.2\\cdot10^{-30}\\ \\mathrm{C\\cdot m}$) are randomly oriented without a field; the field partly aligns them, while thermal motion opposes it. For $pE\\ll kT$ the mean moment is $\\langle p_E\\rangle=\\frac{p^2E}{3kT}$ (Debye) — the susceptibility is inversely proportional to temperature."
+ },
+ {
+  "t": "m",
+  "m": "\\vec p=\\alpha\\vec E,\\qquad \\alpha=4\\pi\\varepsilon_0R^3,\\qquad \\langle p_E\\rangle=\\frac{p^2E}{3kT},\\qquad \\vec P=n\\langle\\vec p\\rangle=\\varepsilon_0\\chi\\vec E"
+ },
+ {
+  "t": "li",
+  "uz": "**Qutblanish vektori.** Birlik hajmdagi dipol momenti: $\\vec P=n\\langle\\vec p\\rangle$, birligi $\\mathrm{C/m^2}$. Chiziqli izotrop dielektrikda $\\vec P=\\varepsilon_0\\chi\\vec E$, $\\chi$ — dielektrik qabul qiluvchanlik, $\\varepsilon=1+\\chi$ — dielektrik singdiruvchanlik. Siyrak gazda $\\chi=\\frac{n\\alpha}{\\varepsilon_0}$ ($+\\frac{np^2}{3\\varepsilon_0kT}$ qutbli molekulalar uchun); havo uchun $\\chi\\approx5\\cdot10^{-4}$, suv uchun $\\varepsilon\\approx81$.",
+  "ru": "**Вектор поляризации.** Дипольный момент единицы объёма: $\\vec P=n\\langle\\vec p\\rangle$, единица $\\mathrm{C/m^2}$. В линейном изотропном диэлектрике $\\vec P=\\varepsilon_0\\chi\\vec E$, $\\chi$ — диэлектрическая восприимчивость, $\\varepsilon=1+\\chi$ — диэлектрическая проницаемость. В разреженном газе $\\chi=\\frac{n\\alpha}{\\varepsilon_0}$ ($+\\frac{np^2}{3\\varepsilon_0kT}$ для полярных молекул); для воздуха $\\chi\\approx5\\cdot10^{-4}$, для воды $\\varepsilon\\approx81$.",
+  "en": "**The polarization vector.** The dipole moment per unit volume: $\\vec P=n\\langle\\vec p\\rangle$, in $\\mathrm{C/m^2}$. In a linear isotropic dielectric $\\vec P=\\varepsilon_0\\chi\\vec E$, where $\\chi$ is the electric susceptibility and $\\varepsilon=1+\\chi$ the relative permittivity. In a dilute gas $\\chi=\\frac{n\\alpha}{\\varepsilon_0}$ ($+\\frac{np^2}{3\\varepsilon_0kT}$ for polar molecules); for air $\\chi\\approx5\\cdot10^{-4}$, for water $\\varepsilon\\approx81$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L14-F01.png",
+   "ru": "figures/B2-L14-F01-ru.png",
+   "en": "figures/B2-L14-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Bog'langan zaryadlar",
+  "ru": "2. Связанные заряды",
+  "en": "2. Bound charges"
+ },
+ {
+  "t": "li",
+  "uz": "**Sirt va hajmiy zaryad.** Qutblangan dielektrik maydoni bog'langan zaryadlar maydoniga teng: sirtda $\\sigma'=\\vec P\\cdot\\hat n$, hajmda $\\rho'=-\\nabla\\cdot\\vec P$. Bir jinsli qutblangan plastinkada hajmiy zaryad yo'q, faqat sirtlarda $\\pm P$ — bu yassi kondensatordek maydon beradi. Bir jinsli chiziqli dielektrikda erkin zaryad bo'lmasa, $\\rho'=0$: bog'langan zaryad faqat sirtlarda va erkin zaryadlar yonida paydo bo'ladi ([[F02]]).",
+  "ru": "**Поверхностный и объёмный заряд.** Поле поляризованного диэлектрика равно полю связанных зарядов: на поверхности $\\sigma'=\\vec P\\cdot\\hat n$, в объёме $\\rho'=-\\nabla\\cdot\\vec P$. В однородно поляризованной пластине объёмного заряда нет, лишь на поверхностях $\\pm P$ — это даёт поле, как у плоского конденсатора. В однородном линейном диэлектрике без свободных зарядов $\\rho'=0$: связанный заряд появляется только на поверхностях и рядом со свободными зарядами ([[F02]]).",
+  "en": "**Surface and volume charge.** The field of a polarized dielectric equals the field of its bound charges: on the surface $\\sigma'=\\vec P\\cdot\\hat n$, in the volume $\\rho'=-\\nabla\\cdot\\vec P$. A uniformly polarized slab has no volume charge, only $\\pm P$ on its faces — giving a field like a parallel-plate capacitor. In a uniform linear dielectric with no free charge, $\\rho'=0$: bound charge appears only on surfaces and next to free charges ([[F02]])."
+ },
+ {
+  "t": "m",
+  "m": "\\sigma'=\\vec P\\cdot\\hat n,\\qquad \\rho'=-\\nabla\\cdot\\vec P,\\qquad \\sigma'=\\sigma\\left(1-\\frac{1}{\\varepsilon}\\right),\\qquad \\rho'=-\\rho\\left(1-\\frac{1}{\\varepsilon}\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Kondensatordagi dielektrik.** Qoplamalarda erkin $\\pm\\sigma$, ularga tegib turgan dielektrik sirtlarida qarama-qarshi ishorali $\\mp\\sigma'$. Ichkaridagi maydon $E=\\frac{\\sigma-\\sigma'}{\\varepsilon_0}=\\frac{\\sigma}{\\varepsilon\\varepsilon_0}$, demak $\\sigma'=\\sigma\\left(1-\\frac{1}{\\varepsilon}\\right)$. $\\varepsilon\\to\\infty$ da $\\sigma'\\to\\sigma$ — dielektrik o'tkazgichdek maydonni to'liq so'ndiradi. Dielektrik ichidagi nuqtaviy $q$ atrofida $-q\\left(1-\\frac{1}{\\varepsilon}\\right)$ bog'langan zaryad to'planadi, natijada maydon $\\frac{kq}{\\varepsilon r^2}$.",
+  "ru": "**Диэлектрик в конденсаторе.** На обкладках свободные $\\pm\\sigma$, на прилегающих поверхностях диэлектрика — противоположные $\\mp\\sigma'$. Поле внутри $E=\\frac{\\sigma-\\sigma'}{\\varepsilon_0}=\\frac{\\sigma}{\\varepsilon\\varepsilon_0}$, значит $\\sigma'=\\sigma\\left(1-\\frac{1}{\\varepsilon}\\right)$. При $\\varepsilon\\to\\infty$ $\\sigma'\\to\\sigma$ — диэлектрик полностью гасит поле, как проводник. Вокруг точечного $q$ внутри диэлектрика скапливается связанный заряд $-q\\left(1-\\frac{1}{\\varepsilon}\\right)$, и поле равно $\\frac{kq}{\\varepsilon r^2}$.",
+  "en": "**A dielectric in a capacitor.** The plates carry free $\\pm\\sigma$, and the adjacent dielectric surfaces carry opposite $\\mp\\sigma'$. The field inside is $E=\\frac{\\sigma-\\sigma'}{\\varepsilon_0}=\\frac{\\sigma}{\\varepsilon\\varepsilon_0}$, so $\\sigma'=\\sigma\\left(1-\\frac{1}{\\varepsilon}\\right)$. As $\\varepsilon\\to\\infty$, $\\sigma'\\to\\sigma$ — the dielectric cancels the field completely, like a conductor. Around a point charge $q$ inside a dielectric a bound charge $-q\\left(1-\\frac{1}{\\varepsilon}\\right)$ gathers, and the field is $\\frac{kq}{\\varepsilon r^2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Bir jinsli qutblangan shar.** Sirtda $\\sigma'=P\\cos\\theta$. Ichkarida maydon bir jinsli: $\\vec E=-\\frac{\\vec P}{3\\varepsilon_0}$; tashqarida — momenti $\\vec p=\\frac{4}{3}\\pi R^3\\vec P$ bo'lgan dipol maydoni. Bu natija keyingi bo'limlardagi dielektrik shar va lokal maydon uchun asos.",
+  "ru": "**Однородно поляризованный шар.** На поверхности $\\sigma'=P\\cos\\theta$. Внутри поле однородно: $\\vec E=-\\frac{\\vec P}{3\\varepsilon_0}$; снаружи — поле диполя с моментом $\\vec p=\\frac{4}{3}\\pi R^3\\vec P$. Этот результат — основа для диэлектрического шара и локального поля в следующих разделах.",
+  "en": "**A uniformly polarized sphere.** On the surface $\\sigma'=P\\cos\\theta$. Inside, the field is uniform: $\\vec E=-\\frac{\\vec P}{3\\varepsilon_0}$; outside, it is the field of a dipole of moment $\\vec p=\\frac{4}{3}\\pi R^3\\vec P$. This result underlies the dielectric sphere and the local field in later sections."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L14-F02.png",
+   "ru": "figures/B2-L14-F02-ru.png",
+   "en": "figures/B2-L14-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Elektr siljish vektori",
+  "ru": "3. Вектор электрического смещения",
+  "en": "3. The electric displacement"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Gauss teoremasi barcha zaryadlarga tegishli: $\\varepsilon_0\\nabla\\cdot\\vec E=\\rho+\\rho'=\\rho-\\nabla\\cdot\\vec P$. Shuning uchun $\\vec D=\\varepsilon_0\\vec E+\\vec P$ uchun faqat erkin zaryad qoladi: $\\nabla\\cdot\\vec D=\\rho$, $\\oint\\vec D\\cdot d\\vec A=Q$ (bu yerda $\\rho$, $Q$ — erkin, $\\rho'$, $\\sigma'$ — bog'langan zaryadlar). Chiziqli dielektrikda $\\vec D=\\varepsilon\\varepsilon_0\\vec E$. Simmetriya bo'lsa, avval $D$ ni erkin zaryaddan topib, keyin $E=\\frac{D}{\\varepsilon\\varepsilon_0}$ va $P=D-\\varepsilon_0E$ ni olamiz ([[F03]]).",
+  "ru": "**Определение.** Теорема Гаусса относится ко всем зарядам: $\\varepsilon_0\\nabla\\cdot\\vec E=\\rho+\\rho'=\\rho-\\nabla\\cdot\\vec P$. Поэтому для $\\vec D=\\varepsilon_0\\vec E+\\vec P$ остаётся лишь свободный заряд: $\\nabla\\cdot\\vec D=\\rho$, $\\oint\\vec D\\cdot d\\vec A=Q$ (здесь $\\rho$, $Q$ — свободные, $\\rho'$, $\\sigma'$ — связанные заряды). В линейном диэлектрике $\\vec D=\\varepsilon\\varepsilon_0\\vec E$. При наличии симметрии сначала находим $D$ по свободному заряду, затем $E=\\frac{D}{\\varepsilon\\varepsilon_0}$ и $P=D-\\varepsilon_0E$ ([[F03]]).",
+  "en": "**Definition.** Gauss's law refers to all charges: $\\varepsilon_0\\nabla\\cdot\\vec E=\\rho+\\rho'=\\rho-\\nabla\\cdot\\vec P$. So for $\\vec D=\\varepsilon_0\\vec E+\\vec P$ only the free charge remains: $\\nabla\\cdot\\vec D=\\rho$, $\\oint\\vec D\\cdot d\\vec A=Q$ (here $\\rho$, $Q$ are free and $\\rho'$, $\\sigma'$ bound charges). In a linear dielectric $\\vec D=\\varepsilon\\varepsilon_0\\vec E$. When there is symmetry, first find $D$ from the free charge, then $E=\\frac{D}{\\varepsilon\\varepsilon_0}$ and $P=D-\\varepsilon_0E$ ([[F03]])."
+ },
+ {
+  "t": "m",
+  "m": "\\vec D=\\varepsilon_0\\vec E+\\vec P=\\varepsilon\\varepsilon_0\\vec E,\\qquad \\oint\\vec D\\cdot d\\vec A=Q,\\qquad \\nabla\\cdot\\vec D=\\rho,\\qquad \\varepsilon=1+\\chi"
+ },
+ {
+  "t": "li",
+  "uz": "**Ehtiyot bo'ling.** $\\nabla\\times\\vec D$ umuman nolga teng emas ($\\nabla\\times\\vec P$ nol bo'lmasligi mumkin), shuning uchun $\\vec D$ ni faqat erkin zaryadlardan Kulon qonunidek hisoblab bo'lmaydi; bu faqat yuqori simmetriyada yoki butun fazo bir jinsli dielektrik bilan to'ldirilganda ishlaydi. Butun fazo $\\varepsilon$ bilan to'ldirilsa, barcha elektrostatik formulalarda $\\varepsilon_0\\to\\varepsilon\\varepsilon_0$: $F=\\frac{kq_1q_2}{\\varepsilon r^2}$, $\\varphi=\\frac{kq}{\\varepsilon r}$, $C=\\frac{\\varepsilon\\varepsilon_0A}{d}$.",
+  "ru": "**Осторожно.** $\\nabla\\times\\vec D$ в общем случае не равен нулю ($\\nabla\\times\\vec P$ может быть ненулевым), поэтому $\\vec D$ нельзя вычислять по одним свободным зарядам как по закону Кулона; это работает лишь при высокой симметрии или когда всё пространство заполнено однородным диэлектриком. Если всё пространство заполнено $\\varepsilon$, во всех формулах электростатики $\\varepsilon_0\\to\\varepsilon\\varepsilon_0$: $F=\\frac{kq_1q_2}{\\varepsilon r^2}$, $\\varphi=\\frac{kq}{\\varepsilon r}$, $C=\\frac{\\varepsilon\\varepsilon_0A}{d}$.",
+  "en": "**Careful.** $\\nabla\\times\\vec D$ is not zero in general ($\\nabla\\times\\vec P$ can be non-zero), so $\\vec D$ cannot be computed from the free charges alone as if by Coulomb's law; this works only with high symmetry or when all space is filled with a uniform dielectric. If all space is filled with $\\varepsilon$, every electrostatic formula has $\\varepsilon_0\\to\\varepsilon\\varepsilon_0$: $F=\\frac{kq_1q_2}{\\varepsilon r^2}$, $\\varphi=\\frac{kq}{\\varepsilon r}$, $C=\\frac{\\varepsilon\\varepsilon_0A}{d}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L14-F03.png",
+   "ru": "figures/B2-L14-F03-ru.png",
+   "en": "figures/B2-L14-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Dielektrikli kondensatorlar",
+  "ru": "4. Конденсаторы с диэлектриком",
+  "en": "4. Capacitors with dielectrics"
+ },
+ {
+  "t": "li",
+  "uz": "**To'liq to'ldirilgan.** $C=\\varepsilon C_0$. Manbadan uzilgan kondensatorga ($Q$ = const) dielektrik kiritilsa, $U$, $E$ va $W$ $\\varepsilon$ marta kamayadi — dielektrik ichkariga tortiladi va maydon ish bajaradi. Manbaga ulangan kondensatorda ($U$ = const) $Q$ va $W$ $\\varepsilon$ marta ortadi; manba $\\Delta Q\\cdot U=2\\Delta W$ ish bajaradi, yarmi dielektrikni tortishga sarflanadi.",
+  "ru": "**Полное заполнение.** $C=\\varepsilon C_0$. Если в отключённый от источника конденсатор ($Q$ = const) вставить диэлектрик, $U$, $E$ и $W$ уменьшатся в $\\varepsilon$ раз — диэлектрик втягивается внутрь, и поле совершает работу. У подключённого к источнику ($U$ = const) $Q$ и $W$ возрастают в $\\varepsilon$ раз; источник совершает работу $\\Delta Q\\cdot U=2\\Delta W$, половина которой уходит на втягивание диэлектрика.",
+  "en": "**Fully filled.** $C=\\varepsilon C_0$. If a dielectric is inserted into a capacitor disconnected from the source ($Q$ = const), $U$, $E$ and $W$ fall by a factor of $\\varepsilon$ — the dielectric is pulled in and the field does work. For one connected to the source ($U$ = const), $Q$ and $W$ grow by a factor of $\\varepsilon$; the source does work $\\Delta Q\\cdot U=2\\Delta W$, half of which goes into pulling the dielectric in."
+ },
+ {
+  "t": "m",
+  "m": "C=\\frac{\\varepsilon_0A}{d-t+t/\\varepsilon},\\qquad C=\\frac{\\varepsilon_0A}{2d}(1+\\varepsilon),\\qquad C=\\frac{\\varepsilon_0A}{\\int_0^d\\frac{dx}{\\varepsilon(x)}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Qatlamli va yonma-yon to'ldirish ([[F04]]).** Qoplamalarga parallel qatlam (qalinligi $t$) — ketma-ket ulangan kondensatorlar: $D$ ikkala qatlamda bir xil, $E$ dielektrikda $\\varepsilon$ marta kichik, $C=\\frac{\\varepsilon_0A}{d-t+t/\\varepsilon}$. Qoplamalarga perpendikulyar chegara (yuzaning yarmi) — parallel ulanish: $E$ bir xil, erkin zaryad zichligi dielektrik tomonda $\\varepsilon$ marta katta, $C=\\frac{\\varepsilon_0A}{2d}(1+\\varepsilon)$. Singdiruvchanlik $\\varepsilon(x)$ uzluksiz o'zgarsa, cheksiz ko'p ketma-ket qatlam kabi integrallanadi.",
+  "ru": "**Слоистое и боковое заполнение ([[F04]]).** Слой, параллельный обкладкам (толщина $t$), — последовательное соединение: $D$ одинаково в обоих слоях, $E$ в диэлектрике в $\\varepsilon$ раз меньше, $C=\\frac{\\varepsilon_0A}{d-t+t/\\varepsilon}$. Граница, перпендикулярная обкладкам (половина площади), — параллельное соединение: $E$ одинаково, плотность свободного заряда со стороны диэлектрика в $\\varepsilon$ раз больше, $C=\\frac{\\varepsilon_0A}{2d}(1+\\varepsilon)$. Если проницаемость $\\varepsilon(x)$ меняется непрерывно, интегрируем как бесконечно много последовательных слоёв.",
+  "en": "**Layered and side-by-side filling ([[F04]]).** A layer parallel to the plates (thickness $t$) is a series combination: $D$ is the same in both layers, $E$ is smaller by $\\varepsilon$ in the dielectric, $C=\\frac{\\varepsilon_0A}{d-t+t/\\varepsilon}$. A boundary perpendicular to the plates (half the area) is a parallel combination: $E$ is the same, the free charge density on the dielectric side is larger by $\\varepsilon$, $C=\\frac{\\varepsilon_0A}{2d}(1+\\varepsilon)$. If the permittivity $\\varepsilon(x)$ varies continuously, integrate as infinitely many layers in series."
+ },
+ {
+  "t": "li",
+  "uz": "**Sferik va silindrik.** Bo'shliq to'liq to'ldirilsa, $C=\\frac{4\\pi\\varepsilon\\varepsilon_0ab}{b-a}$, $C=\\frac{2\\pi\\varepsilon\\varepsilon_0L}{\\ln(b/a)}$. Konsentrik qatlamlar ketma-ket ulanadi: $\\frac{1}{C}=\\sum\\frac{1}{4\\pi\\varepsilon_i\\varepsilon_0}\\left(\\frac{1}{r_i}-\\frac{1}{r_{i+1}}\\right)$. Koaksial kabellarda polietilen ($\\varepsilon\\approx2.3$) ishlatiladi.",
+  "ru": "**Сферический и цилиндрический.** При полном заполнении $C=\\frac{4\\pi\\varepsilon\\varepsilon_0ab}{b-a}$, $C=\\frac{2\\pi\\varepsilon\\varepsilon_0L}{\\ln(b/a)}$. Концентрические слои соединены последовательно: $\\frac{1}{C}=\\sum\\frac{1}{4\\pi\\varepsilon_i\\varepsilon_0}\\left(\\frac{1}{r_i}-\\frac{1}{r_{i+1}}\\right)$. В коаксиальных кабелях используют полиэтилен ($\\varepsilon\\approx2.3$).",
+  "en": "**Spherical and cylindrical.** When fully filled, $C=\\frac{4\\pi\\varepsilon\\varepsilon_0ab}{b-a}$, $C=\\frac{2\\pi\\varepsilon\\varepsilon_0L}{\\ln(b/a)}$. Concentric layers are in series: $\\frac{1}{C}=\\sum\\frac{1}{4\\pi\\varepsilon_i\\varepsilon_0}\\left(\\frac{1}{r_i}-\\frac{1}{r_{i+1}}\\right)$. Coaxial cables use polyethylene ($\\varepsilon\\approx2.3$)."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L14-F04.png",
+   "ru": "figures/B2-L14-F04-ru.png",
+   "en": "figures/B2-L14-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Ikki muhit chegarasidagi shartlar",
+  "ru": "5. Граничные условия на границе двух сред",
+  "en": "5. Boundary conditions between two media"
+ },
+ {
+  "t": "li",
+  "uz": "**Tik va urinma tashkil etuvchilar.** Chegarani kesib o'tuvchi yassi silindr («pillbox») uchun $\\oint\\vec D\\cdot d\\vec A=Q$ dan: chegarada erkin zaryad bo'lmasa, $D_{1n}=D_{2n}$ (bo'lsa, $D_{2n}-D_{1n}=\\sigma$). Chegarani kesuvchi kichik to'g'ri to'rtburchak kontur uchun $\\oint\\vec E\\cdot d\\vec l=0$ dan $E_{1\\tau}=E_{2\\tau}$ — urinma tashkil etuvchi har doim uzluksiz. Demak $\\varepsilon_1E_{1n}=\\varepsilon_2E_{2n}$: normal maydon katta $\\varepsilon$ tomonda kichikroq.",
+  "ru": "**Нормальные и касательные составляющие.** Для плоского цилиндра («таблетки»), пересекающего границу, из $\\oint\\vec D\\cdot d\\vec A=Q$: если на границе нет свободного заряда, $D_{1n}=D_{2n}$ (если есть, $D_{2n}-D_{1n}=\\sigma$). Для малого прямоугольного контура, пересекающего границу, из $\\oint\\vec E\\cdot d\\vec l=0$ следует $E_{1\\tau}=E_{2\\tau}$ — касательная составляющая всегда непрерывна. Значит, $\\varepsilon_1E_{1n}=\\varepsilon_2E_{2n}$: нормальное поле меньше со стороны большей $\\varepsilon$.",
+  "en": "**Normal and tangential components.** For a flat cylinder (“pillbox”) straddling the boundary, $\\oint\\vec D\\cdot d\\vec A=Q$ gives: if there is no free charge on the boundary, $D_{1n}=D_{2n}$ (if there is, $D_{2n}-D_{1n}=\\sigma$). For a small rectangular loop straddling the boundary, $\\oint\\vec E\\cdot d\\vec l=0$ gives $E_{1\\tau}=E_{2\\tau}$ — the tangential component is always continuous. Hence $\\varepsilon_1E_{1n}=\\varepsilon_2E_{2n}$: the normal field is smaller on the side with larger $\\varepsilon$."
+ },
+ {
+  "t": "m",
+  "m": "D_{1n}=D_{2n},\\qquad E_{1\\tau}=E_{2\\tau},\\qquad \\frac{\\mathrm{tg}\\,\\alpha_1}{\\mathrm{tg}\\,\\alpha_2}=\\frac{\\varepsilon_1}{\\varepsilon_2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Maydon chiziqlarining sinishi ([[F05]]).** Normal bilan burchaklar uchun $\\mathrm{tg}\\,\\alpha=\\frac{E_\\tau}{E_n}$, shuning uchun $\\frac{\\mathrm{tg}\\,\\alpha_1}{\\mathrm{tg}\\,\\alpha_2}=\\frac{\\varepsilon_1}{\\varepsilon_2}$. Katta $\\varepsilon$ li muhitga o'tganda chiziqlar normaldan uzoqlashadi — yorug'lik sinishiga teskari. Shu sababli kuchli dielektrik ($\\varepsilon\\gg1$) ichida maydon chiziqlari sirt bo'ylab ketadi, tashqarida esa sirtga deyarli perpendikulyar chiqadi — o'tkazgichdagi kabi.",
+  "ru": "**Преломление силовых линий ([[F05]]).** Для углов с нормалью $\\mathrm{tg}\\,\\alpha=\\frac{E_\\tau}{E_n}$, поэтому $\\frac{\\mathrm{tg}\\,\\alpha_1}{\\mathrm{tg}\\,\\alpha_2}=\\frac{\\varepsilon_1}{\\varepsilon_2}$. При переходе в среду с большей $\\varepsilon$ линии отклоняются от нормали — в противоположность преломлению света. Поэтому внутри сильного диэлектрика ($\\varepsilon\\gg1$) силовые линии идут вдоль поверхности, а снаружи выходят почти перпендикулярно к ней — как у проводника.",
+  "en": "**Refraction of field lines ([[F05]]).** For the angles with the normal, $\\mathrm{tg}\\,\\alpha=\\frac{E_\\tau}{E_n}$, so $\\frac{\\mathrm{tg}\\,\\alpha_1}{\\mathrm{tg}\\,\\alpha_2}=\\frac{\\varepsilon_1}{\\varepsilon_2}$. On entering a medium with larger $\\varepsilon$ the lines bend away from the normal — the opposite of the refraction of light. Hence inside a strong dielectric ($\\varepsilon\\gg1$) the field lines run along the surface, while outside they leave almost perpendicular to it — as for a conductor."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L14-F05.png",
+   "ru": "figures/B2-L14-F05-ru.png",
+   "en": "figures/B2-L14-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Dielektrikdagi energiya va kuchlar",
+  "ru": "6. Энергия и силы в диэлектрике",
+  "en": "6. Energy and forces in dielectrics"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya zichligi.** Chiziqli dielektrikda $w=\\frac{\\varepsilon\\varepsilon_0E^2}{2}=\\frac{ED}{2}=\\frac{D^2}{2\\varepsilon\\varepsilon_0}$. Bu energiyaga molekulalarni qutblash uchun sarflangan ish ham kiradi. Kondensatorga to'plash mumkin bo'lgan eng katta energiya zichligi $\\frac{\\varepsilon\\varepsilon_0E_{\\max}^2}{2}$ — shuning uchun katta $\\varepsilon$ va katta teshilish maydoni $E_{\\max}$ (elektr mustahkamlik) muhim: havo uchun $3\\cdot10^6\\ \\mathrm{V/m}$, yaxshi dielektriklar uchun $10^7$–$10^8\\ \\mathrm{V/m}$.",
+  "ru": "**Плотность энергии.** В линейном диэлектрике $w=\\frac{\\varepsilon\\varepsilon_0E^2}{2}=\\frac{ED}{2}=\\frac{D^2}{2\\varepsilon\\varepsilon_0}$. В эту энергию входит и работа на поляризацию молекул. Наибольшая плотность энергии, которую можно запасти в конденсаторе, равна $\\frac{\\varepsilon\\varepsilon_0E_{\\max}^2}{2}$ — поэтому важны большая $\\varepsilon$ и большое поле пробоя $E_{\\max}$ (электрическая прочность): для воздуха $3\\cdot10^6\\ \\mathrm{V/m}$, для хороших диэлектриков $10^7$–$10^8\\ \\mathrm{V/m}$.",
+  "en": "**Energy density.** In a linear dielectric $w=\\frac{\\varepsilon\\varepsilon_0E^2}{2}=\\frac{ED}{2}=\\frac{D^2}{2\\varepsilon\\varepsilon_0}$. This energy includes the work done polarizing the molecules. The largest energy density a capacitor can store is $\\frac{\\varepsilon\\varepsilon_0E_{\\max}^2}{2}$ — so a large $\\varepsilon$ and a large breakdown field $E_{\\max}$ (dielectric strength) matter: $3\\cdot10^6\\ \\mathrm{V/m}$ for air, $10^7$–$10^8\\ \\mathrm{V/m}$ for good dielectrics."
+ },
+ {
+  "t": "m",
+  "m": "w=\\frac{\\varepsilon\\varepsilon_0E^2}{2}=\\frac{ED}{2},\\qquad F=\\frac{(\\varepsilon-1)\\varepsilon_0bU^2}{2d},\\qquad h=\\frac{(\\varepsilon-1)\\varepsilon_0E^2}{2\\rho g}"
+ },
+ {
+  "t": "li",
+  "uz": "**Dielektrikni tortuvchi kuch ([[F07]]).** Eni $b$, oralig'i $d$ bo'lgan kondensatorga plastinka $x$ chuqurlikkacha kirgan: $C(x)=\\frac{\\varepsilon_0b}{d}\\left(l+(\\varepsilon-1)x\\right)$. $U$ = const da $F=\\frac{U^2}{2}\\frac{dC}{dx}=\\frac{(\\varepsilon-1)\\varepsilon_0bU^2}{2d}$ — $x$ ga bog'liq emas va plastinkani ichkariga tortadi. Kuchni chekka (bir jinsli bo'lmagan) maydon hosil qiladi, lekin energiya usuli uni chekka maydonni hisoblamay beradi. $Q$ = const da $F=\\frac{Q^2}{2C^2}\\frac{dC}{dx}$ — ikkala usul bir xil natija beradi.",
+  "ru": "**Сила, втягивающая диэлектрик ([[F07]]).** Пластина вошла на глубину $x$ в конденсатор шириной $b$ с зазором $d$: $C(x)=\\frac{\\varepsilon_0b}{d}\\left(l+(\\varepsilon-1)x\\right)$. При $U$ = const $F=\\frac{U^2}{2}\\frac{dC}{dx}=\\frac{(\\varepsilon-1)\\varepsilon_0bU^2}{2d}$ — не зависит от $x$ и втягивает пластину внутрь. Силу создаёт краевое (неоднородное) поле, но энергетический метод даёт её без расчёта краевого поля. При $Q$ = const $F=\\frac{Q^2}{2C^2}\\frac{dC}{dx}$ — оба способа дают одинаковый результат.",
+  "en": "**The force pulling a dielectric in ([[F07]]).** A slab has entered to depth $x$ a capacitor of width $b$ and gap $d$: $C(x)=\\frac{\\varepsilon_0b}{d}\\left(l+(\\varepsilon-1)x\\right)$. At $U$ = const, $F=\\frac{U^2}{2}\\frac{dC}{dx}=\\frac{(\\varepsilon-1)\\varepsilon_0bU^2}{2d}$ — independent of $x$, pulling the slab in. The force comes from the fringing (non-uniform) field, but the energy method gives it without computing that field. At $Q$ = const, $F=\\frac{Q^2}{2C^2}\\frac{dC}{dx}$ — both approaches give the same result."
+ },
+ {
+  "t": "li",
+  "uz": "**Suyuqlikning ko'tarilishi.** Vertikal kondensator qoplamalari dielektrik suyuqlikka botirilsa, suyuqlik ko'tariladi: elektr kuchi og'irlik bilan muvozanatlashadi, $h=\\frac{(\\varepsilon-1)\\varepsilon_0E^2}{2\\rho g}$. Dielektriklar bir jinsli bo'lmagan maydonda kuchli maydon tomonga tortiladi — zaryadlangan taroq qog'ozni, elektrlangan tayoqcha suv oqimini tortishi shundan.",
+  "ru": "**Подъём жидкости.** Если вертикальные обкладки конденсатора опустить в жидкий диэлектрик, жидкость поднимается: электрическая сила уравновешивается тяжестью, $h=\\frac{(\\varepsilon-1)\\varepsilon_0E^2}{2\\rho g}$. В неоднородном поле диэлектрики втягиваются в область сильного поля — поэтому заряженная расчёска притягивает бумагу, а наэлектризованная палочка отклоняет струю воды.",
+  "en": "**Rise of a liquid.** If the vertical plates of a capacitor are dipped into a liquid dielectric, the liquid rises: the electric force balances gravity, $h=\\frac{(\\varepsilon-1)\\varepsilon_0E^2}{2\\rho g}$. In a non-uniform field dielectrics are drawn towards the stronger field — which is why a charged comb attracts paper and a charged rod deflects a stream of water."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L14-F07.png",
+   "ru": "figures/B2-L14-F07-ru.png",
+   "en": "figures/B2-L14-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Dielektrik shar, lokal maydon va Klauzius–Mossotti formulasi",
+  "ru": "7. Диэлектрический шар, локальное поле и формула Клаузиуса–Моссотти",
+  "en": "7. Dielectric sphere, local field and the Clausius–Mossotti formula"
+ },
+ {
+  "t": "li",
+  "uz": "**Bir jinsli maydondagi dielektrik shar ([[F06]]).** Shar bir jinsli qutblanadi deb faraz qilamiz: ichki maydon $E=E_0-\\frac{P}{3\\varepsilon_0}$ va $P=\\varepsilon_0(\\varepsilon-1)E$ dan $E=\\frac{3E_0}{\\varepsilon+2}$. Yagonalik teoremasi bu yechim yagona ekanini kafolatlaydi. $\\varepsilon\\to\\infty$ da ichkarida $E\\to0$ va sharning dipol momenti $p=4\\pi\\varepsilon_0R^3E_0$ — o'tkazgich shar natijasi (atom qutblanuvchanligi modeli). Dielektrikdagi sferik bo'shliqda esa $E=\\frac{3\\varepsilon E_0}{2\\varepsilon+1}$ — tashqidagidan katta.",
+  "ru": "**Диэлектрический шар в однородном поле ([[F06]]).** Предположим, что шар поляризуется однородно: из внутреннего поля $E=E_0-\\frac{P}{3\\varepsilon_0}$ и $P=\\varepsilon_0(\\varepsilon-1)E$ получаем $E=\\frac{3E_0}{\\varepsilon+2}$. Теорема единственности гарантирует, что это решение единственное. При $\\varepsilon\\to\\infty$ внутри $E\\to0$, а дипольный момент шара $p=4\\pi\\varepsilon_0R^3E_0$ — результат для проводящего шара (модель поляризуемости атома). А в сферической полости внутри диэлектрика $E=\\frac{3\\varepsilon E_0}{2\\varepsilon+1}$ — больше, чем снаружи.",
+  "en": "**A dielectric sphere in a uniform field ([[F06]]).** Assume the sphere polarizes uniformly: from the interior field $E=E_0-\\frac{P}{3\\varepsilon_0}$ and $P=\\varepsilon_0(\\varepsilon-1)E$ we get $E=\\frac{3E_0}{\\varepsilon+2}$. The uniqueness theorem guarantees that this solution is the only one. As $\\varepsilon\\to\\infty$, $E\\to0$ inside and the sphere's dipole moment is $p=4\\pi\\varepsilon_0R^3E_0$ — the result for a conducting sphere (the model for atomic polarizability). In a spherical cavity inside a dielectric, by contrast, $E=\\frac{3\\varepsilon E_0}{2\\varepsilon+1}$ — larger than outside."
+ },
+ {
+  "t": "m",
+  "m": "E=\\frac{3E_0}{\\varepsilon+2},\\qquad \\vec E'=\\vec E+\\frac{\\vec P}{3\\varepsilon_0},\\qquad \\frac{\\varepsilon-1}{\\varepsilon+2}=\\frac{n\\alpha}{3\\varepsilon_0}"
+ },
+ {
+  "t": "li",
+  "uz": "**Lokal maydon.** Zich muhitda molekulaga o'rtacha maydon $E$ emas, balki qo'shni molekulalar ta'sirini ham hisobga olgan lokal maydon $E'=E+\\frac{P}{3\\varepsilon_0}$ ta'sir qiladi (molekula atrofidagi sferik bo'shliq). $P=n\\alpha E'$ ni birlashtirib, Klauzius–Mossotti formulasini olamiz: $\\frac{\\varepsilon-1}{\\varepsilon+2}=\\frac{n\\alpha}{3\\varepsilon_0}$. Siyrak gazda bu $\\varepsilon-1\\approx\\frac{n\\alpha}{\\varepsilon_0}$ ga o'tadi. Formula $\\frac{n\\alpha}{3\\varepsilon_0}\\to1$ da $\\varepsilon\\to\\infty$ ni bashorat qiladi — segnetoelektriklarda o'z-o'zidan qutblanish shunga o'xshash.",
+  "ru": "**Локальное поле.** В плотной среде на молекулу действует не среднее поле $E$, а локальное поле $E'=E+\\frac{P}{3\\varepsilon_0}$, учитывающее соседние молекулы (сферическая полость вокруг молекулы). Объединяя с $P=n\\alpha E'$, получаем формулу Клаузиуса–Моссотти: $\\frac{\\varepsilon-1}{\\varepsilon+2}=\\frac{n\\alpha}{3\\varepsilon_0}$. В разреженном газе она переходит в $\\varepsilon-1\\approx\\frac{n\\alpha}{\\varepsilon_0}$. Формула предсказывает $\\varepsilon\\to\\infty$ при $\\frac{n\\alpha}{3\\varepsilon_0}\\to1$ — похоже на спонтанную поляризацию в сегнетоэлектриках.",
+  "en": "**The local field.** In a dense medium a molecule feels not the average field $E$ but the local field $E'=E+\\frac{P}{3\\varepsilon_0}$, which includes its neighbours (a spherical cavity around the molecule). Combining with $P=n\\alpha E'$ gives the Clausius–Mossotti formula: $\\frac{\\varepsilon-1}{\\varepsilon+2}=\\frac{n\\alpha}{3\\varepsilon_0}$. In a dilute gas it reduces to $\\varepsilon-1\\approx\\frac{n\\alpha}{\\varepsilon_0}$. The formula predicts $\\varepsilon\\to\\infty$ as $\\frac{n\\alpha}{3\\varepsilon_0}\\to1$ — similar to the spontaneous polarization of ferroelectrics."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L14-F06.png",
+   "ru": "figures/B2-L14-F06-ru.png",
+   "en": "figures/B2-L14-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Orientatsion qutblanish va Lanjeven funksiyasi",
+  "ru": "8. Ориентационная поляризация и функция Ланжевена",
+  "en": "8. Orientational polarization and the Langevin function"
+ },
+ {
+  "t": "li",
+  "uz": "**Boltsman taqsimoti.** Maydon bilan $\\theta$ burchak hosil qilgan dipol energiyasi $W=-pE\\cos\\theta$; yo'nalishlar ehtimoli $\\propto e^{pE\\cos\\theta/kT}$. O'rtalashtirsak, $\\langle\\cos\\theta\\rangle=L(x)=\\mathrm{cth}\\,x-\\frac{1}{x}$, $x=\\frac{pE}{kT}$ — Lanjeven funksiyasi ([[F08]]). Kichik $x$ da $L(x)\\approx\\frac{x}{3}$, bu Debay formulasini beradi; katta $x$ da $L\\to1$ — to'yinish, barcha dipollar maydon bo'ylab.",
+  "ru": "**Распределение Больцмана.** Энергия диполя, образующего угол $\\theta$ с полем, $W=-pE\\cos\\theta$; вероятность ориентаций $\\propto e^{pE\\cos\\theta/kT}$. Усредняя, получаем $\\langle\\cos\\theta\\rangle=L(x)=\\mathrm{cth}\\,x-\\frac{1}{x}$, $x=\\frac{pE}{kT}$ — функция Ланжевена ([[F08]]). При малых $x$ $L(x)\\approx\\frac{x}{3}$, что даёт формулу Дебая; при больших $x$ $L\\to1$ — насыщение, все диполи вдоль поля.",
+  "en": "**The Boltzmann distribution.** A dipole at angle $\\theta$ to the field has energy $W=-pE\\cos\\theta$; the probability of an orientation is $\\propto e^{pE\\cos\\theta/kT}$. Averaging gives $\\langle\\cos\\theta\\rangle=L(x)=\\mathrm{cth}\\,x-\\frac{1}{x}$, $x=\\frac{pE}{kT}$ — the Langevin function ([[F08]]). For small $x$, $L(x)\\approx\\frac{x}{3}$, which gives Debye's formula; for large $x$, $L\\to1$ — saturation, with all dipoles along the field."
+ },
+ {
+  "t": "m",
+  "m": "\\langle\\cos\\theta\\rangle=\\mathrm{cth}\\,x-\\frac{1}{x}\\approx\\frac{x}{3},\\qquad x=\\frac{pE}{kT},\\qquad \\chi=\\frac{n}{\\varepsilon_0}\\left(\\alpha+\\frac{p^2}{3kT}\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Baholash.** Suv molekulasi uchun $p=6.2\\cdot10^{-30}\\ \\mathrm{C\\cdot m}$, $E=10^6\\ \\mathrm{V/m}$, $T=300\\ \\mathrm{K}$: $x=\\frac{pE}{kT}\\approx1.5\\cdot10^{-3}$ — juda kichik, shuning uchun amalda qutblanish har doim chiziqli. Gazda umumiy qabul qiluvchanlik $\\chi=\\frac{n}{\\varepsilon_0}\\left(\\alpha+\\frac{p^2}{3kT}\\right)$: $\\chi$ ni $\\frac{1}{T}$ ga qarshi chizib, $\\alpha$ (kesishma) va $p$ (qiyalik) ni ajratish mumkin — molekulalar dipol momenti shunday o'lchanadi.",
+  "ru": "**Оценка.** Для молекулы воды $p=6.2\\cdot10^{-30}\\ \\mathrm{C\\cdot m}$, $E=10^6\\ \\mathrm{V/m}$, $T=300\\ \\mathrm{K}$: $x=\\frac{pE}{kT}\\approx1.5\\cdot10^{-3}$ — очень мало, поэтому на практике поляризация всегда линейна. Полная восприимчивость газа $\\chi=\\frac{n}{\\varepsilon_0}\\left(\\alpha+\\frac{p^2}{3kT}\\right)$: построив $\\chi$ против $\\frac{1}{T}$, можно разделить $\\alpha$ (отрезок) и $p$ (наклон) — так измеряют дипольные моменты молекул.",
+  "en": "**An estimate.** For a water molecule $p=6.2\\cdot10^{-30}\\ \\mathrm{C\\cdot m}$, $E=10^6\\ \\mathrm{V/m}$, $T=300\\ \\mathrm{K}$: $x=\\frac{pE}{kT}\\approx1.5\\cdot10^{-3}$ — very small, so in practice polarization is always linear. The total susceptibility of a gas is $\\chi=\\frac{n}{\\varepsilon_0}\\left(\\alpha+\\frac{p^2}{3kT}\\right)$: plotting $\\chi$ against $\\frac{1}{T}$ separates $\\alpha$ (the intercept) from $p$ (the slope) — this is how molecular dipole moments are measured."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L14-F08.png",
+   "ru": "figures/B2-L14-F08-ru.png",
+   "en": "figures/B2-L14-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. Chastotaga bog'liqlik va maxsus dielektriklar",
+  "ru": "9. Частотная зависимость и особые диэлектрики",
+  "en": "9. Frequency dependence and special dielectrics"
+ },
+ {
+  "t": "li",
+  "uz": "**$\\varepsilon(\\omega)$.** O'zgaruvchan maydonda har bir mexanizm o'z chastotasigacha ulguradi: orientatsion — taxminan $10^{10}$–$10^{11}\\ \\mathrm{Hz}$ gacha (mikroto'lqinli pech suvni shu sohada isitadi), ion — infraqizil sohagacha, elektron — ultrabinafsha sohagacha. Optik chastotalarda faqat elektron qutblanish qoladi va $n=\\sqrt{\\varepsilon}$ (Maksvell munosabati, B2-L18). Suv uchun statik $\\varepsilon\\approx81$, lekin $n^2\\approx1.77$ — farq orientatsion qutblanishdan.",
+  "ru": "**$\\varepsilon(\\omega)$.** В переменном поле каждый механизм успевает до своей частоты: ориентационный — примерно до $10^{10}$–$10^{11}\\ \\mathrm{Hz}$ (микроволновка нагревает воду именно в этой области), ионный — до инфракрасной области, электронный — до ультрафиолетовой. На оптических частотах остаётся лишь электронная поляризация и $n=\\sqrt{\\varepsilon}$ (соотношение Максвелла, B2-L18). У воды статическая $\\varepsilon\\approx81$, но $n^2\\approx1.77$ — разница из-за ориентационной поляризации.",
+  "en": "**$\\varepsilon(\\omega)$.** In an alternating field each mechanism keeps up only to its own frequency: orientational up to roughly $10^{10}$–$10^{11}\\ \\mathrm{Hz}$ (a microwave oven heats water in this range), ionic up to the infrared, electronic up to the ultraviolet. At optical frequencies only electronic polarization remains and $n=\\sqrt{\\varepsilon}$ (Maxwell's relation, B2-L18). Water has a static $\\varepsilon\\approx81$ but $n^2\\approx1.77$ — the difference comes from orientational polarization."
+ },
+ {
+  "t": "li",
+  "uz": "**Segnetoelektriklar, piezoelektriklar, elektretlar.** Segnetoelektriklarda (BaTiO₃) Kyuri temperaturasidan pastda o'z-o'zidan qutblanish bor, $\\varepsilon\\sim10^3$–$10^4$, $P(E)$ bog'liqlik gisterezisli (ferromagnetizmga o'xshash, B2-L17). Piezoelektriklarda (kvars) mexanik deformatsiya qutblanish beradi va aksincha — kvars soatlar va pyezo-zajigalkalar asosi. Elektret — doimiy qutblangan dielektrik, doimiy magnitning elektr o'xshashi (elektret mikrofonlar).",
+  "ru": "**Сегнетоэлектрики, пьезоэлектрики, электреты.** У сегнетоэлектриков (BaTiO₃) ниже температуры Кюри есть спонтанная поляризация, $\\varepsilon\\sim10^3$–$10^4$, зависимость $P(E)$ с гистерезисом (аналог ферромагнетизма, B2-L17). У пьезоэлектриков (кварц) механическая деформация вызывает поляризацию и наоборот — основа кварцевых часов и пьезозажигалок. Электрет — постоянно поляризованный диэлектрик, электрический аналог постоянного магнита (электретные микрофоны).",
+  "en": "**Ferroelectrics, piezoelectrics, electrets.** Ferroelectrics (BaTiO₃) have spontaneous polarization below the Curie temperature, $\\varepsilon\\sim10^3$–$10^4$, and a hysteretic $P(E)$ (the analogue of ferromagnetism, B2-L17). In piezoelectrics (quartz) mechanical strain produces polarization and vice versa — the basis of quartz watches and piezo lighters. An electret is a permanently polarized dielectric, the electric analogue of a permanent magnet (electret microphones)."
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE usullari va tipik xatolar",
+  "ru": "10. Методы GRE и типичные ошибки",
+  "en": "10. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 1 — $\\varepsilon_0\\to\\varepsilon\\varepsilon_0$.** Dielektrik butun maydon sohasini to'ldirsa, vakuumdagi javobda $\\varepsilon_0$ ni $\\varepsilon\\varepsilon_0$ ga almashtiring. Qisman to'ldirilganda kondensatorni ketma-ket (qatlamlar qoplamalarga parallel) yoki parallel (chegara qoplamalarga perpendikulyar) ulangan kondensatorlarga ajrating.",
+  "ru": "**Метод 1 — $\\varepsilon_0\\to\\varepsilon\\varepsilon_0$.** Если диэлектрик заполняет всю область поля, замените в ответе для вакуума $\\varepsilon_0$ на $\\varepsilon\\varepsilon_0$. При частичном заполнении разбейте конденсатор на последовательно (слои параллельны обкладкам) или параллельно (граница перпендикулярна обкладкам) соединённые конденсаторы.",
+  "en": "**Method 1 — $\\varepsilon_0\\to\\varepsilon\\varepsilon_0$.** If the dielectric fills the whole region of field, replace $\\varepsilon_0$ by $\\varepsilon\\varepsilon_0$ in the vacuum answer. For partial filling, split the capacitor into capacitors in series (layers parallel to the plates) or in parallel (boundary perpendicular to the plates)."
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 2 — avval nima o'zgarmas.** Manbadan uzilgan kondensatorda $Q$, ulanganda $U$ saqlanadi. Dielektrik kiritilganda: $Q$ = const — $U$, $E$, $W$ kamayadi; $U$ = const — $Q$, $W$ ortadi, $E=\\frac{U}{d}$ o'zgarmaydi. Har ikki holda dielektrik ichkariga tortiladi.",
+  "ru": "**Метод 2 — сначала что постоянно.** У отключённого от источника конденсатора сохраняется $Q$, у подключённого — $U$. При внесении диэлектрика: $Q$ = const — $U$, $E$, $W$ уменьшаются; $U$ = const — $Q$, $W$ растут, а $E=\\frac{U}{d}$ не меняется. В обоих случаях диэлектрик втягивается.",
+  "en": "**Method 2 — first decide what is constant.** A capacitor disconnected from the source keeps $Q$; a connected one keeps $U$. On inserting a dielectric: $Q$ = const — $U$, $E$, $W$ decrease; $U$ = const — $Q$, $W$ increase while $E=\\frac{U}{d}$ stays the same. In both cases the dielectric is pulled in."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) $U$ = const da dielektrik maydonni kamaytiradi deb o'ylash ($E=\\frac{U}{d}$ o'zgarmaydi). 2) Qatlamli kondensatorni parallel ulangan deb hisoblash. 3) Chegarada $E_n$ uzluksiz deb olish (uzluksiz — $D_n$ va $E_\\tau$). 4) Sinishda yorug'likdagi kabi katta $\\varepsilon$ tomonda chiziq normalga yaqinlashadi deb o'ylash. 5) Bog'langan zaryadni erkin zaryad bilan Gauss teoremasiga ikki marta qo'shish. 6) Dielektrik sharda ichki maydonni $\\frac{E_0}{\\varepsilon}$ deb olish (to'g'ri: $\\frac{3E_0}{\\varepsilon+2}$).",
+  "ru": "**Типичные ошибки.** 1) Считать, что при $U$ = const диэлектрик уменьшает поле ($E=\\frac{U}{d}$ не меняется). 2) Считать слоистый конденсатор параллельным соединением. 3) Считать непрерывным $E_n$ на границе (непрерывны $D_n$ и $E_\\tau$). 4) Думать, что при преломлении, как у света, в среде с большей $\\varepsilon$ линия приближается к нормали. 5) Дважды учитывать связанный заряд вместе со свободным в теореме Гаусса. 6) Брать поле внутри диэлектрического шара $\\frac{E_0}{\\varepsilon}$ (верно: $\\frac{3E_0}{\\varepsilon+2}$).",
+  "en": "**Typical mistakes.** 1) Thinking that at $U$ = const a dielectric reduces the field ($E=\\frac{U}{d}$ does not change). 2) Treating a layered capacitor as a parallel combination. 3) Taking $E_n$ as continuous at a boundary (continuous are $D_n$ and $E_\\tau$). 4) Thinking that, as with light, the line bends towards the normal in the medium with larger $\\varepsilon$. 5) Counting the bound charge twice together with the free charge in Gauss's law. 6) Taking the field inside a dielectric sphere as $\\frac{E_0}{\\varepsilon}$ (correct: $\\frac{3E_0}{\\varepsilon+2}$)."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Qutblanuvchanlik",
+    "ru": "Поляризуемость",
+    "en": "Polarizability",
+    "m": "\\vec p=\\alpha\\vec E,\\quad \\alpha=4\\pi\\varepsilon_0R^3"
+   },
+   {
+    "uz": "Debay formulasi",
+    "ru": "Формула Дебая",
+    "en": "Debye formula",
+    "m": "\\langle p_E\\rangle=\\frac{p^2E}{3kT}"
+   },
+   {
+    "uz": "Qutblanish",
+    "ru": "Поляризация",
+    "en": "Polarization",
+    "m": "\\vec P=n\\langle\\vec p\\rangle=\\varepsilon_0\\chi\\vec E"
+   },
+   {
+    "uz": "Bog'langan zaryadlar",
+    "ru": "Связанные заряды",
+    "en": "Bound charges",
+    "m": "\\sigma'=\\vec P\\cdot\\hat n,\\quad \\rho'=-\\nabla\\cdot\\vec P"
+   },
+   {
+    "uz": "Kondensatorda",
+    "ru": "В конденсаторе",
+    "en": "In a capacitor",
+    "m": "\\sigma'=\\sigma\\left(1-\\frac{1}{\\varepsilon}\\right)"
+   },
+   {
+    "uz": "Qutblangan shar",
+    "ru": "Поляризованный шар",
+    "en": "Polarized sphere",
+    "m": "\\vec E=-\\frac{\\vec P}{3\\varepsilon_0},\\quad \\vec p=\\frac{4}{3}\\pi R^3\\vec P"
+   },
+   {
+    "uz": "Elektr siljish",
+    "ru": "Электрическое смещение",
+    "en": "Displacement",
+    "m": "\\vec D=\\varepsilon_0\\vec E+\\vec P=\\varepsilon\\varepsilon_0\\vec E,\\quad \\oint\\vec D\\cdot d\\vec A=Q"
+   },
+   {
+    "uz": "Butun fazo",
+    "ru": "Всё пространство",
+    "en": "All space",
+    "m": "\\varepsilon_0\\to\\varepsilon\\varepsilon_0,\\quad F=\\frac{kq_1q_2}{\\varepsilon r^2}"
+   },
+   {
+    "uz": "Qatlam",
+    "ru": "Слой",
+    "en": "Layer",
+    "m": "C=\\frac{\\varepsilon_0A}{d-t+t/\\varepsilon}"
+   },
+   {
+    "uz": "Yonma-yon",
+    "ru": "Бок о бок",
+    "en": "Side by side",
+    "m": "C=\\frac{\\varepsilon_0A}{2d}(1+\\varepsilon)"
+   },
+   {
+    "uz": "Chegaraviy shartlar",
+    "ru": "Граничные условия",
+    "en": "Boundary conditions",
+    "m": "D_{1n}=D_{2n},\\quad E_{1\\tau}=E_{2\\tau}"
+   },
+   {
+    "uz": "Chiziqlar sinishi",
+    "ru": "Преломление линий",
+    "en": "Refraction of lines",
+    "m": "\\frac{\\mathrm{tg}\\,\\alpha_1}{\\mathrm{tg}\\,\\alpha_2}=\\frac{\\varepsilon_1}{\\varepsilon_2}"
+   },
+   {
+    "uz": "Energiya zichligi",
+    "ru": "Плотность энергии",
+    "en": "Energy density",
+    "m": "w=\\frac{\\varepsilon\\varepsilon_0E^2}{2}=\\frac{ED}{2}"
+   },
+   {
+    "uz": "Tortuvchi kuch",
+    "ru": "Втягивающая сила",
+    "en": "Pulling force",
+    "m": "F=\\frac{(\\varepsilon-1)\\varepsilon_0bU^2}{2d}"
+   },
+   {
+    "uz": "Dielektrik shar",
+    "ru": "Диэлектрический шар",
+    "en": "Dielectric sphere",
+    "m": "E=\\frac{3E_0}{\\varepsilon+2}"
+   },
+   {
+    "uz": "Klauzius–Mossotti",
+    "ru": "Клаузиус–Моссотти",
+    "en": "Clausius–Mossotti",
+    "m": "\\frac{\\varepsilon-1}{\\varepsilon+2}=\\frac{n\\alpha}{3\\varepsilon_0}"
+   }
+  ]
+ }
+]

@@ -1,0 +1,507 @@
+[
+ {
+  "t": "h1",
+  "uz": "Moddadagi magnit maydon (Magnetic fields in matter)",
+  "ru": "Магнитное поле в веществе",
+  "en": "Magnetic fields in matter"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz magnitlanish vektori va bog'langan toklarni bog'laysiz; $\\vec H$ vektori va moddadagi Amper teoremasini qo'llaysiz; dia-, para- va ferromagnetiklarni mikroskopik mexanizmi va $\\chi$ ning kattaligi bo'yicha farqlaysiz; Kyuri qonunini spinlar statistikasidan keltirib chiqarasiz; gisterezis sirtmog'ini o'qiysiz; ikki muhit chegarasida maydonni topasiz; tekis magnitlangan jismlar maydonini va havo oralig'i bo'lgan magnit zanjirni hisoblaysiz; magnit energiya va moddaga ta'sir qiluvchi kuchni baholaysiz.",
+  "ru": "**Цель.** После урока вы будете связывать вектор намагниченности со связанными токами; применять вектор $\\vec H$ и теорему о циркуляции в веществе; различать диа-, пара- и ферромагнетики по микроскопическому механизму и величине $\\chi$; выводить закон Кюри из статистики спинов; читать петлю гистерезиса; находить поле на границе двух сред; рассчитывать поле однородно намагниченных тел и магнитную цепь с воздушным зазором; оценивать магнитную энергию и силы, действующие на вещество.",
+  "en": "**Goal.** After this lesson you will relate the magnetization vector to bound currents; use the vector $\\vec H$ and Ampère's law in matter; distinguish dia-, para- and ferromagnets by their microscopic mechanism and the size of $\\chi$; derive Curie's law from spin statistics; read a hysteresis loop; find the field at the boundary between two media; compute the field of uniformly magnetized bodies and of a magnetic circuit with an air gap; and estimate magnetic energy and the forces on matter."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L39 da moddalar magnit xossalariga ko'ra diamagnetik, paramagnetik va ferromagnetiklarga bo'linishini ko'rdik. B2-L14 da dielektriklar uchun qutblanish, bog'langan zaryadlar va $\\vec D$ vektorini kiritgan edik — bu dars uning magnit o'xshashi: qutblanish o'rnida magnitlanish $\\vec M$, bog'langan zaryadlar o'rnida bog'langan toklar, $\\vec D$ o'rnida $\\vec H$. Muhim farq ham bor: paramagnetiklar maydonni kuchaytiradi, diamagnetiklar esa (dielektriklardan farqli o'laroq) susaytiradi, ferromagnetiklarda esa $\\mu$ minglarga yetadi va «xotira» paydo bo'ladi. GRE da $\\vec H$ va $\\vec B$ bog'lanishi, Kyuri qonuni, gisterezis va magnetik turlari savollari uchraydi.",
+  "ru": "В B1-L39 мы видели, что по магнитным свойствам вещества делятся на диамагнетики, парамагнетики и ферромагнетики. В B2-L14 для диэлектриков вводились поляризация, связанные заряды и вектор $\\vec D$ — этот урок является его магнитным аналогом: вместо поляризации — намагниченность $\\vec M$, вместо связанных зарядов — связанные токи, вместо $\\vec D$ — $\\vec H$. Есть и важное отличие: парамагнетики усиливают поле, а диамагнетики (в отличие от диэлектриков) ослабляют его, у ферромагнетиков же $\\mu$ достигает тысяч и появляется «память». На GRE встречаются вопросы о связи $\\vec H$ и $\\vec B$, законе Кюри, гистерезисе и типах магнетиков.",
+  "en": "In B1-L39 we saw that materials divide magnetically into diamagnets, paramagnets and ferromagnets. In B2-L14 we introduced polarization, bound charges and the vector $\\vec D$ for dielectrics — this lesson is its magnetic analogue: magnetization $\\vec M$ instead of polarization, bound currents instead of bound charges, $\\vec H$ instead of $\\vec D$. There is an important difference too: paramagnets strengthen the field, but diamagnets (unlike dielectrics) weaken it, and in ferromagnets $\\mu$ reaches thousands and a “memory” appears. On the GRE you meet questions on the relation between $\\vec H$ and $\\vec B$, Curie's law, hysteresis and the types of magnetic materials."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Magnitlanish va bog'langan toklar",
+  "ru": "1. Намагниченность и связанные токи",
+  "en": "1. Magnetization and bound currents"
+ },
+ {
+  "t": "li",
+  "uz": "**Magnitlanish.** Moddadagi har bir atom yoki molekula magnit dipol $\\vec m$ ga ega bo'lishi mumkin (orbital harakat va spin). Birlik hajmdagi magnit moment — magnitlanish: $\\vec M=\\frac{\\sum\\vec m}{V}=n\\langle\\vec m\\rangle$, birligi $\\mathrm{A/m}$ (xuddi $\\vec H$ kabi). Tashqi maydon bo'lmaganda ko'pchilik moddalarda dipollar tartibsiz va $\\vec M=0$; maydon ularni qisman tartiblaydi (paramagnetik) yoki yangi momentlarni induksiyalaydi (diamagnetik).",
+  "ru": "**Намагниченность.** Каждый атом или молекула вещества может иметь магнитный дипольный момент $\\vec m$ (орбитальное движение и спин). Магнитный момент единицы объёма — намагниченность: $\\vec M=\\frac{\\sum\\vec m}{V}=n\\langle\\vec m\\rangle$, единица $\\mathrm{A/m}$ (как у $\\vec H$). Без внешнего поля в большинстве веществ диполи хаотичны и $\\vec M=0$; поле частично упорядочивает их (парамагнетик) или индуцирует новые моменты (диамагнетик).",
+  "en": "**Magnetization.** Each atom or molecule of a material may carry a magnetic dipole moment $\\vec m$ (orbital motion and spin). The magnetic moment per unit volume is the magnetization: $\\vec M=\\frac{\\sum\\vec m}{V}=n\\langle\\vec m\\rangle$, measured in $\\mathrm{A/m}$ (like $\\vec H$). With no external field, in most materials the dipoles are random and $\\vec M=0$; a field partly aligns them (paramagnets) or induces new moments (diamagnets)."
+ },
+ {
+  "t": "m",
+  "m": "\\vec M=n\\langle\\vec m\\rangle,\\qquad \\vec J'=\\nabla\\times\\vec M,\\qquad \\vec K'=\\vec M\\times\\hat n,\\qquad I'=\\oint\\vec M\\cdot d\\vec l"
+ },
+ {
+  "t": "li",
+  "uz": "**Bog'langan toklar.** Tekis magnitlangan jism ichida qo'shni molekulyar halqa toklari bir-birini yo'qotadi, faqat sirtda kompensatsiyalanmagan tok qoladi: sirt toki zichligi $\\vec K'=\\vec M\\times\\hat n$ ($\\hat n$ — tashqi normal). Notekis magnitlanishda hajmiy tok $\\vec J'=\\nabla\\times\\vec M$ ham bor. Masalan, o'qi bo'ylab tekis magnitlangan uzun silindr — yon sirtida $K'=M$ tok oqayotgan solenoid: ichkarida $B=\\mu_0M$ ([[F01]]). Bu toklar haqiqiy: ular $\\vec B$ hosil qiladi, lekin zaryad tashimaydi va ampermetr bilan o'lchanmaydi.",
+  "ru": "**Связанные токи.** Внутри однородно намагниченного тела соседние молекулярные кольцевые токи компенсируют друг друга, остаётся только нескомпенсированный ток на поверхности: поверхностная плотность тока $\\vec K'=\\vec M\\times\\hat n$ ($\\hat n$ — внешняя нормаль). При неоднородной намагниченности есть ещё объёмный ток $\\vec J'=\\nabla\\times\\vec M$. Например, длинный цилиндр, однородно намагниченный вдоль оси, — это соленоид с током $K'=M$ на боковой поверхности: внутри $B=\\mu_0M$ ([[F01]]). Эти токи реальны: они создают $\\vec B$, но не переносят заряд и не измеряются амперметром.",
+  "en": "**Bound currents.** Inside a uniformly magnetized body neighbouring molecular loop currents cancel, leaving only an uncompensated current at the surface: a surface current density $\\vec K'=\\vec M\\times\\hat n$ ($\\hat n$ is the outward normal). Non-uniform magnetization also gives a volume current $\\vec J'=\\nabla\\times\\vec M$. For example, a long cylinder magnetized uniformly along its axis is a solenoid with current $K'=M$ on its side surface: inside $B=\\mu_0M$ ([[F01]]). These currents are real: they produce $\\vec B$, but they carry no charge and cannot be measured with an ammeter."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L19-F01.png",
+   "ru": "figures/B2-L19-F01-ru.png",
+   "en": "figures/B2-L19-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. H vektori va moddadagi Amper teoremasi",
+  "ru": "2. Вектор H и теорема о циркуляции в веществе",
+  "en": "2. The H vector and Ampère's law in matter"
+ },
+ {
+  "t": "li",
+  "uz": "**H vektori.** Moddada $\\nabla\\times\\vec B=\\mu_0\\left(\\vec J+\\vec J'\\right)$, bu yerda $\\vec J$ — erkin (o'tkazgichdagi) tok. $\\vec J'=\\nabla\\times\\vec M$ ni chapga o'tkazsak: $\\nabla\\times\\left(\\frac{\\vec B}{\\mu_0}-\\vec M\\right)=\\vec J$. Shunday qilib, magnit maydon kuchlanganligi $\\vec H=\\frac{\\vec B}{\\mu_0}-\\vec M$ uchun $\\oint\\vec H\\cdot d\\vec l=I$ — faqat erkin toklar. Simmetrik masalalarda avval $\\vec H$ ni erkin tokdan topamiz, so'ng $\\vec B=\\mu_0\\left(\\vec H+\\vec M\\right)$ ([[F02]]).",
+  "ru": "**Вектор H.** В веществе $\\nabla\\times\\vec B=\\mu_0\\left(\\vec J+\\vec J'\\right)$, где $\\vec J$ — свободный (ток проводимости). Перенеся $\\vec J'=\\nabla\\times\\vec M$ влево: $\\nabla\\times\\left(\\frac{\\vec B}{\\mu_0}-\\vec M\\right)=\\vec J$. Таким образом, для напряжённости магнитного поля $\\vec H=\\frac{\\vec B}{\\mu_0}-\\vec M$ выполняется $\\oint\\vec H\\cdot d\\vec l=I$ — только свободные токи. В симметричных задачах сначала находим $\\vec H$ по свободному току, затем $\\vec B=\\mu_0\\left(\\vec H+\\vec M\\right)$ ([[F02]]).",
+  "en": "**The H vector.** In matter $\\nabla\\times\\vec B=\\mu_0\\left(\\vec J+\\vec J'\\right)$, where $\\vec J$ is the free (conduction) current. Moving $\\vec J'=\\nabla\\times\\vec M$ to the left: $\\nabla\\times\\left(\\frac{\\vec B}{\\mu_0}-\\vec M\\right)=\\vec J$. So the magnetic field strength $\\vec H=\\frac{\\vec B}{\\mu_0}-\\vec M$ satisfies $\\oint\\vec H\\cdot d\\vec l=I$ — free currents only. In symmetric problems we first find $\\vec H$ from the free current, then $\\vec B=\\mu_0\\left(\\vec H+\\vec M\\right)$ ([[F02]])."
+ },
+ {
+  "t": "m",
+  "m": "\\vec H=\\frac{\\vec B}{\\mu_0}-\\vec M,\\qquad \\oint\\vec H\\cdot d\\vec l=I,\\qquad \\vec M=\\chi\\vec H,\\qquad \\vec B=\\mu_0\\mu\\vec H,\\qquad \\mu=1+\\chi"
+ },
+ {
+  "t": "li",
+  "uz": "**Chiziqli magnetiklar.** Ko'p moddalarda $\\vec M=\\chi\\vec H$, $\\chi$ — magnit qabul qiluvchanlik (o'lchamsiz). Shunda $\\vec B=\\mu_0\\mu\\vec H$, $\\mu=1+\\chi$ — magnit kiruvchanlik. Paramagnetiklarda $\\chi\\sim10^{-5}$–$10^{-3}>0$, diamagnetiklarda $\\chi\\sim-10^{-5}<0$, ferromagnetiklarda $\\mu\\sim10^2$–$10^5$ va $\\chi$ maydonga bog'liq. Masalan, $n$ o'ram/m solenoid ichida temir o'zak bo'lsa, $H=nI$ o'zgarmaydi, $B=\\mu_0\\mu nI$ esa $\\mu$ marta ortadi — elektromagnitning siri.",
+  "ru": "**Линейные магнетики.** Во многих веществах $\\vec M=\\chi\\vec H$, $\\chi$ — магнитная восприимчивость (безразмерная). Тогда $\\vec B=\\mu_0\\mu\\vec H$, $\\mu=1+\\chi$ — магнитная проницаемость. У парамагнетиков $\\chi\\sim10^{-5}$–$10^{-3}>0$, у диамагнетиков $\\chi\\sim-10^{-5}<0$, у ферромагнетиков $\\mu\\sim10^2$–$10^5$, а $\\chi$ зависит от поля. Например, если в соленоиде с $n$ витками на метр есть железный сердечник, $H=nI$ не меняется, а $B=\\mu_0\\mu nI$ увеличивается в $\\mu$ раз — секрет электромагнита.",
+  "en": "**Linear magnetic materials.** In many materials $\\vec M=\\chi\\vec H$, where $\\chi$ is the (dimensionless) magnetic susceptibility. Then $\\vec B=\\mu_0\\mu\\vec H$ with $\\mu=1+\\chi$ the relative permeability. For paramagnets $\\chi\\sim10^{-5}$–$10^{-3}>0$, for diamagnets $\\chi\\sim-10^{-5}<0$, and for ferromagnets $\\mu\\sim10^2$–$10^5$ with $\\chi$ depending on the field. For example, with an iron core inside a solenoid of $n$ turns per metre, $H=nI$ is unchanged while $B=\\mu_0\\mu nI$ grows by a factor of $\\mu$ — the secret of the electromagnet."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L19-F02.png",
+   "ru": "figures/B2-L19-F02-ru.png",
+   "en": "figures/B2-L19-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Diamagnetizm",
+  "ru": "3. Диамагнетизм",
+  "en": "3. Diamagnetism"
+ },
+ {
+  "t": "li",
+  "uz": "**Larmor mexanizmi.** Maydon ulanayotganda atomdagi elektron orbitasida uyurmali elektr maydon paydo bo'ladi (B2-L17) va Lens qoidasiga ko'ra elektron tezligi maydon o'zgarishiga qarshi o'zgaradi. Radiusi $r$ bo'lgan orbita uchun $\\Delta v=\\frac{erB}{2m_e}$, magnit momenti o'zgarishi $\\Delta m=-\\frac{e^2r^2B}{4m_e}$ — maydonga qarshi. Bu hamma moddalarda bor, lekin juda kichik: $1\\ \\mathrm{T}$ da $\\Delta m\\sim10^{-29}\\ \\mathrm{A\\cdot m^2}$, Bor magnetoni $m_0\\approx9.3\\cdot10^{-24}\\ \\mathrm{A\\cdot m^2}$ dan million marta kichik.",
+  "ru": "**Механизм Лармора.** При включении поля на орбите электрона в атоме возникает вихревое электрическое поле (B2-L17), и по правилу Ленца скорость электрона меняется против изменения поля. Для орбиты радиуса $r$ имеем $\\Delta v=\\frac{erB}{2m_e}$, изменение магнитного момента $\\Delta m=-\\frac{e^2r^2B}{4m_e}$ — против поля. Это есть во всех веществах, но очень мало: при $1\\ \\mathrm{T}$ имеем $\\Delta m\\sim10^{-29}\\ \\mathrm{A\\cdot m^2}$ — в миллион раз меньше магнетона Бора $m_0\\approx9.3\\cdot10^{-24}\\ \\mathrm{A\\cdot m^2}$.",
+  "en": "**The Larmor mechanism.** As a field is switched on, an induced electric field appears along an electron's orbit in an atom (B2-L17), and by Lenz's law the electron's speed changes so as to oppose the change in field. For an orbit of radius $r$, $\\Delta v=\\frac{erB}{2m_e}$, and the change of magnetic moment is $\\Delta m=-\\frac{e^2r^2B}{4m_e}$ — opposite to the field. This is present in all materials but is very small: at $1\\ \\mathrm{T}$, $\\Delta m\\sim10^{-29}\\ \\mathrm{A\\cdot m^2}$, a million times smaller than the Bohr magneton $m_0\\approx9.3\\cdot10^{-24}\\ \\mathrm{A\\cdot m^2}$."
+ },
+ {
+  "t": "m",
+  "m": "\\Delta m=-\\frac{e^2r^2B}{4m_e},\\qquad \\chi=-\\frac{\\mu_0nZe^2\\langle r^2\\rangle}{6m_e},\\qquad \\chi\\sim-10^{-5}"
+ },
+ {
+  "t": "li",
+  "uz": "**Xossalari.** Diamagnit qabul qiluvchanlik manfiy va temperaturaga deyarli bog'liq emas; $Z$ elektronli atomlar uchun (orbitalar sferik o'rtalanganda) $\\chi=-\\frac{\\mu_0nZe^2\\langle r^2\\rangle}{6m_e}$. Toza diamagnetiklar — to'liq to'lgan qobiqli atomlar va molekulalar: inert gazlar, suv ($\\chi\\approx-9\\cdot10^{-6}$), mis, vismut ($-1.7\\cdot10^{-4}$, eng kuchlisi), grafit. Diamagnetik kuchli maydondan itariladi: yetarlicha katta $B\\frac{dB}{dz}$ da suv tomchisi, hatto qurbaqa ham havoda «suzadi».",
+  "ru": "**Свойства.** Диамагнитная восприимчивость отрицательна и почти не зависит от температуры; для атомов с $Z$ электронами (при сферически усреднённых орбитах) $\\chi=-\\frac{\\mu_0nZe^2\\langle r^2\\rangle}{6m_e}$. Чистые диамагнетики — атомы и молекулы с полностью заполненными оболочками: инертные газы, вода ($\\chi\\approx-9\\cdot10^{-6}$), медь, висмут ($-1.7\\cdot10^{-4}$, самый сильный), графит. Диамагнетик выталкивается из сильного поля: при достаточно большом $B\\frac{dB}{dz}$ «парит» капля воды и даже лягушка.",
+  "en": "**Properties.** The diamagnetic susceptibility is negative and nearly independent of temperature; for atoms with $Z$ electrons (orbits averaged over a sphere) $\\chi=-\\frac{\\mu_0nZe^2\\langle r^2\\rangle}{6m_e}$. Pure diamagnets are atoms and molecules with completely filled shells: noble gases, water ($\\chi\\approx-9\\cdot10^{-6}$), copper, bismuth ($-1.7\\cdot10^{-4}$, the strongest), graphite. A diamagnet is pushed out of strong fields: with a large enough $B\\frac{dB}{dz}$ a drop of water — even a frog — “floats”."
+ },
+ {
+  "t": "li",
+  "uz": "**O'ta o'tkazgich — ideal diamagnetik.** Kritik temperaturadan pastda o'ta o'tkazgich magnit maydonni ichidan butunlay itarib chiqaradi (Meysner effekti): $B=0$, ya'ni $\\chi=-1$. Sirtidagi so'nmas tok tashqi maydonni ichkarida aniq kompensatsiya qiladi. Shu sababli magnit o'ta o'tkazgich ustida barqaror levitatsiya qiladi. Oddiy diamagnetikdan farqi — $10^5$ marta kuchli effekt va mexanizmi kvant xarakterida.",
+  "ru": "**Сверхпроводник — идеальный диамагнетик.** Ниже критической температуры сверхпроводник полностью выталкивает магнитное поле (эффект Мейснера): $B=0$, то есть $\\chi=-1$. Незатухающий ток на поверхности точно компенсирует внешнее поле внутри. Поэтому магнит устойчиво левитирует над сверхпроводником. Отличие от обычного диамагнетика — эффект в $10^5$ раз сильнее и имеет квантовую природу.",
+  "en": "**A superconductor — a perfect diamagnet.** Below its critical temperature a superconductor expels the magnetic field completely (the Meissner effect): $B=0$, i.e. $\\chi=-1$. A persistent current on its surface exactly cancels the external field inside. That is why a magnet levitates stably above a superconductor. Unlike an ordinary diamagnet, the effect is $10^5$ times stronger and quantum in nature."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Paramagnetizm va Kyuri qonuni",
+  "ru": "4. Парамагнетизм и закон Кюри",
+  "en": "4. Paramagnetism and Curie's law"
+ },
+ {
+  "t": "li",
+  "uz": "**Spinlar maydonda.** To'liq to'lmagan qobiqli atomlarning doimiy momenti bor; spin-$\\frac{1}{2}$ uchun proyeksiyasi $\\pm m_0$. Maydonda energiyalar $\\mp m_0B$, Boltsman taqsimotidan: $M=nm_0\\tanh\\frac{m_0B}{kT}$. Kuchli maydon yoki past temperaturada $M\\to M_0=nm_0$ (to'yinish), odatdagi sharoitda ($m_0B\\ll kT$, $1\\ \\mathrm{T}$ da $\\frac{m_0B}{k}\\approx0.67\\ \\mathrm{K}$) $\\tanh x\\approx x$ va $M=\\frac{nm_0^2B}{kT}$ ([[F03]]).",
+  "ru": "**Спины в поле.** Атомы с незаполненными оболочками обладают постоянным моментом; для спина $\\frac{1}{2}$ его проекция $\\pm m_0$. В поле энергии $\\mp m_0B$, и из распределения Больцмана $M=nm_0\\tanh\\frac{m_0B}{kT}$. В сильном поле или при низкой температуре $M\\to M_0=nm_0$ (насыщение), в обычных условиях ($m_0B\\ll kT$; при $1\\ \\mathrm{T}$ имеем $\\frac{m_0B}{k}\\approx0.67\\ \\mathrm{K}$) $\\tanh x\\approx x$ и $M=\\frac{nm_0^2B}{kT}$ ([[F03]]).",
+  "en": "**Spins in a field.** Atoms with partly filled shells carry a permanent moment; for spin $\\frac{1}{2}$ its projection is $\\pm m_0$. In a field the energies are $\\mp m_0B$, and the Boltzmann distribution gives $M=nm_0\\tanh\\frac{m_0B}{kT}$. In a strong field or at low temperature $M\\to M_0=nm_0$ (saturation); under ordinary conditions ($m_0B\\ll kT$; at $1\\ \\mathrm{T}$, $\\frac{m_0B}{k}\\approx0.67\\ \\mathrm{K}$) $\\tanh x\\approx x$ and $M=\\frac{nm_0^2B}{kT}$ ([[F03]])."
+ },
+ {
+  "t": "m",
+  "m": "M=nm_0\\tanh\\frac{m_0B}{kT},\\qquad \\chi=\\frac{\\mu_0nm_0^2}{kT}=\\frac{C}{T},\\qquad m_0=\\frac{e\\hbar}{2m_e}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kyuri qonuni.** Kuchsiz maydonda $\\chi=\\frac{\\mu_0nm_0^2}{kT}=\\frac{C}{T}$ — paramagnit qabul qiluvchanlik temperaturaga teskari proporsional: issiqlik harakati momentlarni tartibsizlantiradi. Klassik Lanjeven nazariyasi ($\\vec m$ ixtiyoriy yo'nalishda) $\\chi=\\frac{\\mu_0nm^2}{3kT}$ ni beradi — B2-L14 dagi qutbli molekulalar formulasining aynan o'xshashi. Xona temperaturasida $\\chi\\sim10^{-4}$, $1\\ \\mathrm{K}$ da esa $300$ marta katta. O'tkazuvchanlik elektronlarining paramagnetizmi (Pauli) esa temperaturaga deyarli bog'liq emas.",
+  "ru": "**Закон Кюри.** В слабом поле $\\chi=\\frac{\\mu_0nm_0^2}{kT}=\\frac{C}{T}$ — парамагнитная восприимчивость обратно пропорциональна температуре: тепловое движение разупорядочивает моменты. Классическая теория Ланжевена ($\\vec m$ в любом направлении) даёт $\\chi=\\frac{\\mu_0nm^2}{3kT}$ — точный аналог формулы для полярных молекул из B2-L14. При комнатной температуре $\\chi\\sim10^{-4}$, а при $1\\ \\mathrm{K}$ — в $300$ раз больше. Парамагнетизм электронов проводимости (Паули) почти не зависит от температуры.",
+  "en": "**Curie's law.** In a weak field $\\chi=\\frac{\\mu_0nm_0^2}{kT}=\\frac{C}{T}$ — the paramagnetic susceptibility is inversely proportional to temperature: thermal motion scrambles the moments. Langevin's classical theory ($\\vec m$ in any direction) gives $\\chi=\\frac{\\mu_0nm^2}{3kT}$ — the exact analogue of the polar-molecule formula of B2-L14. At room temperature $\\chi\\sim10^{-4}$, at $1\\ \\mathrm{K}$ it is $300$ times larger. The paramagnetism of conduction electrons (Pauli) is almost independent of temperature."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L19-F03.png",
+   "ru": "figures/B2-L19-F03-ru.png",
+   "en": "figures/B2-L19-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Ferromagnetizm va Kyuri temperaturasi",
+  "ru": "5. Ферромагнетизм и температура Кюри",
+  "en": "5. Ferromagnetism and the Curie temperature"
+ },
+ {
+  "t": "li",
+  "uz": "**O'z-o'zidan magnitlanish.** Temir, nikel, kobalt va ba'zi qotishmalarda qo'shni atomlar spinlari kvant almashinuv ta'siri tufayli parallel joylashishga intiladi. Bu ta'sir $\\sim10^3\\ \\mathrm{T}$ effektiv maydonga teng, shuning uchun $\\Theta$ — Kyuri temperaturasidan pastda modda tashqi maydonsiz ham to'yinishga yaqin magnitlanadi ($M_0\\approx1.7\\cdot10^6\\ \\mathrm{A/m}$ temir uchun, ya'ni $\\mu_0M_0\\approx2.2\\ \\mathrm{T}$). Temperatura oshgan sari $M$ kamayadi va $\\Theta$ da nolga tushadi: temir $1043\\ \\mathrm{K}$, nikel $631\\ \\mathrm{K}$, kobalt $1388\\ \\mathrm{K}$ ([[F04]]).",
+  "ru": "**Самопроизвольная намагниченность.** В железе, никеле, кобальте и некоторых сплавах спины соседних атомов стремятся выстроиться параллельно из-за квантового обменного взаимодействия. Оно эквивалентно эффективному полю $\\sim10^3\\ \\mathrm{T}$, поэтому ниже температуры Кюри $\\Theta$ вещество намагничено почти до насыщения и без внешнего поля ($M_0\\approx1.7\\cdot10^6\\ \\mathrm{A/m}$ у железа, то есть $\\mu_0M_0\\approx2.2\\ \\mathrm{T}$). С ростом температуры $M$ уменьшается и при $\\Theta$ обращается в ноль: железо $1043\\ \\mathrm{K}$, никель $631\\ \\mathrm{K}$, кобальт $1388\\ \\mathrm{K}$ ([[F04]]).",
+  "en": "**Spontaneous magnetization.** In iron, nickel, cobalt and some alloys the spins of neighbouring atoms tend to line up parallel because of the quantum exchange interaction. It is equivalent to an effective field of $\\sim10^3\\ \\mathrm{T}$, so below the Curie temperature $\\Theta$ the material is magnetized close to saturation even with no external field ($M_0\\approx1.7\\cdot10^6\\ \\mathrm{A/m}$ for iron, i.e. $\\mu_0M_0\\approx2.2\\ \\mathrm{T}$). As the temperature rises, $M$ decreases and vanishes at $\\Theta$: iron $1043\\ \\mathrm{K}$, nickel $631\\ \\mathrm{K}$, cobalt $1388\\ \\mathrm{K}$ ([[F04]])."
+ },
+ {
+  "t": "m",
+  "m": "\\chi=\\frac{C}{T-\\Theta}\\ (T>\\Theta),\\qquad \\mu_0M_0\\approx2.2\\ \\mathrm{T},\\qquad \\Theta=1043\\ \\mathrm{K}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kyuri–Veys qonuni va domenlar.** $\\Theta$ dan yuqorida ferromagnetik paramagnetikka aylanadi: $\\chi=\\frac{C}{T-\\Theta}$ — $\\Theta$ ga yaqinlashganda qabul qiluvchanlik keskin o'sadi (fazaviy o'tish). Odatdagi temir bo'lagi magnit emas, chunki u $10^{-6}$–$10^{-4}\\ \\mathrm{m}$ o'lchamli domenlarga bo'lingan: har biri to'liq magnitlangan, lekin yo'nalishlari turlicha va o'rtacha moment nol — bu tashqi maydon energiyasini kamaytiradi. Tashqi maydon avval domen chegaralarini siljitadi, so'ng domenlarni buradi.",
+  "ru": "**Закон Кюри–Вейса и домены.** Выше $\\Theta$ ферромагнетик становится парамагнетиком: $\\chi=\\frac{C}{T-\\Theta}$ — при приближении к $\\Theta$ восприимчивость резко растёт (фазовый переход). Обычный кусок железа не является магнитом, потому что разбит на домены размером $10^{-6}$–$10^{-4}\\ \\mathrm{m}$: каждый намагничен полностью, но направления разные и средний момент равен нулю — так уменьшается энергия внешнего поля. Внешнее поле сначала смещает границы доменов, затем поворачивает домены.",
+  "en": "**The Curie–Weiss law and domains.** Above $\\Theta$ a ferromagnet becomes a paramagnet: $\\chi=\\frac{C}{T-\\Theta}$ — the susceptibility shoots up as $\\Theta$ is approached (a phase transition). An ordinary piece of iron is not a magnet because it is split into domains $10^{-6}$–$10^{-4}\\ \\mathrm{m}$ across: each is fully magnetized, but in different directions, so the average moment is zero — this lowers the energy of the external field. An applied field first moves the domain walls, then rotates the domains."
+ },
+ {
+  "t": "li",
+  "uz": "**Boshqa tartiblangan magnetiklar.** Antiferromagnetiklarda (MnO, Cr) qo'shni spinlar qarama-qarshi joylashadi va natijaviy moment nol; Neel temperaturasidan pastda $\\chi$ kichik. Ferrimagnetiklarda (ferritlar, magnetit $\\mathrm{Fe_3O_4}$) qarama-qarshi panjaralar momentlari teng emas — natijaviy moment ferromagnetiknikidek, lekin modda dielektrik bo'lgani uchun uyurmali toklar yo'q: yuqori chastotali transformator o'zaklari ferritdan yasaladi.",
+  "ru": "**Другие упорядоченные магнетики.** В антиферромагнетиках (MnO, Cr) соседние спины антипараллельны, результирующий момент равен нулю; ниже температуры Нееля $\\chi$ мала. В ферримагнетиках (ферриты, магнетит $\\mathrm{Fe_3O_4}$) моменты противоположных подрешёток не равны — результирующий момент как у ферромагнетика, но вещество — диэлектрик, поэтому вихревых токов нет: сердечники высокочастотных трансформаторов делают из феррита.",
+  "en": "**Other ordered magnets.** In antiferromagnets (MnO, Cr) neighbouring spins point opposite ways and the net moment is zero; below the Néel temperature $\\chi$ is small. In ferrimagnets (ferrites, magnetite $\\mathrm{Fe_3O_4}$) the moments of the opposing sublattices are unequal — the net moment is like a ferromagnet's, but the material is an insulator, so there are no eddy currents: high-frequency transformer cores are made of ferrite."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L19-F04.png",
+   "ru": "figures/B2-L19-F04-ru.png",
+   "en": "figures/B2-L19-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Gisterezis",
+  "ru": "6. Гистерезис",
+  "en": "6. Hysteresis"
+ },
+ {
+  "t": "li",
+  "uz": "**Sirtmoq.** Ferromagnetikda $B$ faqat $H$ ga emas, oldingi tarixga ham bog'liq. Magnitlanmagan namunada $H$ oshirilsa, $B$ boshlang'ich egri chiziq bo'yicha to'yinishgacha o'sadi; $H$ nolga qaytarilganda $B^*$ — qoldiq induksiya qoladi (doimiy magnit). $B$ ni nolga tushirish uchun teskari $H^*$ — koersitiv kuch kerak. To'liq sikl — gisterezis sirtmog'i ([[F05]]). $\\mu=\\frac{B}{\\mu_0H}$ o'zgarmas emas: boshlang'ich egri chiziqda maksimumga ega va to'yinishda $1$ ga intiladi.",
+  "ru": "**Петля.** В ферромагнетике $B$ зависит не только от $H$, но и от предыстории. Если увеличивать $H$ в ненамагниченном образце, $B$ растёт по начальной кривой до насыщения; при возвращении $H$ к нулю остаётся $B^*$ — остаточная индукция (постоянный магнит). Чтобы обратить $B$ в ноль, нужно обратное поле $H^*$ — коэрцитивная сила. Полный цикл — петля гистерезиса ([[F05]]). $\\mu=\\frac{B}{\\mu_0H}$ не постоянна: на начальной кривой имеет максимум, а при насыщении стремится к $1$.",
+  "en": "**The loop.** In a ferromagnet $B$ depends not only on $H$ but on the history. Raising $H$ in an unmagnetized sample, $B$ rises along the initial curve to saturation; bringing $H$ back to zero leaves $B^*$ — the remanence (a permanent magnet). Driving $B$ to zero takes a reverse field $H^*$ — the coercive force. A full cycle traces the hysteresis loop ([[F05]]). $\\mu=\\frac{B}{\\mu_0H}$ is not constant: on the initial curve it has a maximum, and at saturation it tends to $1$."
+ },
+ {
+  "t": "m",
+  "m": "w=\\oint H\\,dB,\\qquad P=wVf,\\qquad \\mu=\\frac{B}{\\mu_0H}"
+ },
+ {
+  "t": "li",
+  "uz": "**Isrof va materiallar.** Bir siklda birlik hajmga sarflanadigan ish $w=\\oint H\\,dB$ — sirtmoq yuzasi; u issiqlikka aylanadi, shuning uchun transformator o'zagidagi gisterezis isrofi $P=wVf$. Magnit yumshoq materiallar (kremniyli po'lat, permalloy) — tor sirtmoq, kichik $H^*$: transformator va elektromagnitlar uchun. Magnit qattiq materiallar (NdFeB, SmCo, alniko) — keng sirtmoq, katta $H^*$ va $B^*$: doimiy magnitlar uchun ($B^*\\approx1.2\\ \\mathrm{T}$, $H^*\\sim10^6\\ \\mathrm{A/m}$).",
+  "ru": "**Потери и материалы.** Работа на единицу объёма за цикл $w=\\oint H\\,dB$ — площадь петли; она переходит в тепло, поэтому потери на гистерезис в сердечнике трансформатора $P=wVf$. Магнитомягкие материалы (кремнистая сталь, пермаллой) — узкая петля, малая $H^*$: для трансформаторов и электромагнитов. Магнитотвёрдые материалы (NdFeB, SmCo, альнико) — широкая петля, большие $H^*$ и $B^*$: для постоянных магнитов ($B^*\\approx1.2\\ \\mathrm{T}$, $H^*\\sim10^6\\ \\mathrm{A/m}$).",
+  "en": "**Losses and materials.** The work per unit volume per cycle, $w=\\oint H\\,dB$, is the area of the loop; it turns into heat, so the hysteresis loss in a transformer core is $P=wVf$. Soft magnetic materials (silicon steel, permalloy) have a narrow loop and small $H^*$: for transformers and electromagnets. Hard magnetic materials (NdFeB, SmCo, alnico) have a wide loop with large $H^*$ and $B^*$: for permanent magnets ($B^*\\approx1.2\\ \\mathrm{T}$, $H^*\\sim10^6\\ \\mathrm{A/m}$)."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L19-F05.png",
+   "ru": "figures/B2-L19-F05-ru.png",
+   "en": "figures/B2-L19-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Ikki muhit chegarasidagi shartlar",
+  "ru": "7. Граничные условия на границе двух сред",
+  "en": "7. Boundary conditions between two media"
+ },
+ {
+  "t": "li",
+  "uz": "**Shartlar.** $\\oint\\vec B\\cdot d\\vec A=0$ dan chegarada $B_n$ uzluksiz; $\\oint\\vec H\\cdot d\\vec l=I$ dan, chegarada erkin sirt toki bo'lmasa, $H_\\tau$ uzluksiz. Chiziqli magnetiklarda $B_\\tau=\\mu_0\\mu H_\\tau$ bo'lgani uchun induksiya chiziqlari singan holda o'tadi: $\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\mu_2}{\\mu_1}$ ($\\alpha$ — normal bilan burchak). Bu dielektriklardagi $\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\varepsilon_2}{\\varepsilon_1}$ ning aynan o'xshashi (B2-L14) ([[F06]]).",
+  "ru": "**Условия.** Из $\\oint\\vec B\\cdot d\\vec A=0$ на границе непрерывна $B_n$; из $\\oint\\vec H\\cdot d\\vec l=I$ при отсутствии свободного поверхностного тока непрерывна $H_\\tau$. В линейных магнетиках $B_\\tau=\\mu_0\\mu H_\\tau$, поэтому линии индукции преломляются: $\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\mu_2}{\\mu_1}$ ($\\alpha$ — угол с нормалью). Это точный аналог соотношения $\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\varepsilon_2}{\\varepsilon_1}$ для диэлектриков (B2-L14) ([[F06]]).",
+  "en": "**The conditions.** From $\\oint\\vec B\\cdot d\\vec A=0$, $B_n$ is continuous at the boundary; from $\\oint\\vec H\\cdot d\\vec l=I$, with no free surface current, $H_\\tau$ is continuous. In linear magnetic materials $B_\\tau=\\mu_0\\mu H_\\tau$, so the field lines are refracted: $\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\mu_2}{\\mu_1}$ ($\\alpha$ is the angle with the normal). This is the exact analogue of $\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\varepsilon_2}{\\varepsilon_1}$ for dielectrics (B2-L14) ([[F06]])."
+ },
+ {
+  "t": "m",
+  "m": "B_{1n}=B_{2n},\\qquad H_{1\\tau}=H_{2\\tau},\\qquad \\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\mu_2}{\\mu_1}"
+ },
+ {
+  "t": "li",
+  "uz": "**Natijalar.** Katta $\\mu$ li muhitdan havoga chiqayotgan chiziqlar sirtga deyarli tik chiqadi ($\\tan\\alpha_1=\\frac{\\tan\\alpha_2}{\\mu}\\approx0$) — temir qutblar sirti «magnit ekvipotensial». Havodan temirga kirayotgan chiziqlar esa temir ichida sirt bo'ylab yo'naladi va temirda «yig'iladi». Geometriya muhim: tashqi $B_0$ maydonga parallel ingichka sterjen ichida $H=\\frac{B_0}{\\mu_0}$ (urinma $H$ uzluksiz), shuning uchun $B=\\mu B_0$; maydonga tik yupqa plastinka ichida esa $B=B_0$ ($B_n$ uzluksiz) va $H=\\frac{B_0}{\\mu_0\\mu}$.",
+  "ru": "**Следствия.** Линии, выходящие из среды с большой $\\mu$ в воздух, выходят почти перпендикулярно поверхности ($\\tan\\alpha_1=\\frac{\\tan\\alpha_2}{\\mu}\\approx0$) — поверхность железных полюсов «магнитно эквипотенциальна». Линии, входящие из воздуха в железо, внутри идут вдоль поверхности и «собираются» в железе. Геометрия важна: внутри тонкого стержня, параллельного внешнему полю $B_0$, $H=\\frac{B_0}{\\mu_0}$ (касательная $H$ непрерывна), поэтому $B=\\mu B_0$; внутри тонкой пластины, перпендикулярной полю, $B=B_0$ ($B_n$ непрерывна) и $H=\\frac{B_0}{\\mu_0\\mu}$.",
+  "en": "**Consequences.** Field lines leaving a high-$\\mu$ medium into air leave almost perpendicular to the surface ($\\tan\\alpha_1=\\frac{\\tan\\alpha_2}{\\mu}\\approx0$) — the surface of iron pole pieces is “magnetically equipotential”. Lines entering iron from air run along the surface inside and “crowd” into the iron. Geometry matters: inside a thin rod parallel to an external field $B_0$, $H=\\frac{B_0}{\\mu_0}$ (tangential $H$ is continuous), so $B=\\mu B_0$; inside a thin plate perpendicular to the field, $B=B_0$ ($B_n$ is continuous) and $H=\\frac{B_0}{\\mu_0\\mu}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L19-F06.png",
+   "ru": "figures/B2-L19-F06-ru.png",
+   "en": "figures/B2-L19-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Tekis magnitlangan jismlar va ekranlash",
+  "ru": "8. Однородно намагниченные тела и экранирование",
+  "en": "8. Uniformly magnetized bodies and shielding"
+ },
+ {
+  "t": "li",
+  "uz": "**Shar.** Tekis $\\vec M$ bilan magnitlangan sharning sirt toki $K'=M\\sin\\theta$ — B2-L16 dagi aylanayotgan zaryadlangan sfera tokiga o'xshash. Natija: ichkarida maydon bir jinsli, $\\vec B=\\frac{2}{3}\\mu_0\\vec M$, $\\vec H=\\frac{\\vec B}{\\mu_0}-\\vec M=-\\frac{\\vec M}{3}$ — $\\vec H$ magnitlanishga qarshi (magnitsizlantiruvchi maydon). Tashqarida — momenti $\\vec m=\\frac{4}{3}\\pi R^3\\vec M$ bo'lgan aniq dipol maydoni. Ichkarida $\\vec B$ va $\\vec H$ qarama-qarshi — doimiy magnitda bu odatiy holat ([[F07]]).",
+  "ru": "**Шар.** Поверхностный ток шара, однородно намагниченного с $\\vec M$, равен $K'=M\\sin\\theta$ — как ток вращающейся заряженной сферы из B2-L16. Итог: внутри поле однородно, $\\vec B=\\frac{2}{3}\\mu_0\\vec M$, $\\vec H=\\frac{\\vec B}{\\mu_0}-\\vec M=-\\frac{\\vec M}{3}$ — $\\vec H$ направлено против намагниченности (размагничивающее поле). Снаружи — точное поле диполя с моментом $\\vec m=\\frac{4}{3}\\pi R^3\\vec M$. Внутри $\\vec B$ и $\\vec H$ противоположны — для постоянного магнита это обычное дело ([[F07]]).",
+  "en": "**A sphere.** A sphere magnetized uniformly with $\\vec M$ carries a surface current $K'=M\\sin\\theta$ — like the current of the rotating charged sphere in B2-L16. The result: inside the field is uniform, $\\vec B=\\frac{2}{3}\\mu_0\\vec M$ and $\\vec H=\\frac{\\vec B}{\\mu_0}-\\vec M=-\\frac{\\vec M}{3}$ — $\\vec H$ points against the magnetization (the demagnetizing field). Outside is the exact field of a dipole of moment $\\vec m=\\frac{4}{3}\\pi R^3\\vec M$. Inside, $\\vec B$ and $\\vec H$ point opposite ways — quite normal for a permanent magnet ([[F07]])."
+ },
+ {
+  "t": "m",
+  "m": "\\vec B=\\frac{2}{3}\\mu_0\\vec M,\\qquad \\vec H=-\\frac{\\vec M}{3},\\qquad \\vec m=\\frac{4}{3}\\pi R^3\\vec M,\\qquad B=\\frac{3\\mu}{\\mu+2}B_0"
+ },
+ {
+  "t": "li",
+  "uz": "**Sterjen va shar tashqi maydonda.** Uzun tasmasimon magnit (sterjen) — yon sirtida $K'=M$ tokli solenoid: o'rtasida $B\\approx\\mu_0M$, uchlarida $\\frac{\\mu_0M}{2}$. $\\mu$ li shar bir jinsli $B_0$ maydonga qo'yilsa, ichkarida maydon bir jinsli va $B=\\frac{3\\mu}{\\mu+2}B_0$ — katta $\\mu$ da $3B_0$ ga intiladi (ingichka sterjendagi $\\mu B_0$ dan ancha kam: shakl magnitsizlantiradi). Dielektrik shardagi $E=\\frac{3}{\\varepsilon+2}E_0$ formulasidan farqi: magnitda $B$ kuchayadi.",
+  "ru": "**Стержень и шар во внешнем поле.** Длинный полосовой магнит (стержень) — соленоид с током $K'=M$ на боковой поверхности: в середине $B\\approx\\mu_0M$, на концах $\\frac{\\mu_0M}{2}$. Если шар с $\\mu$ поместить в однородное поле $B_0$, поле внутри однородно и $B=\\frac{3\\mu}{\\mu+2}B_0$ — при большом $\\mu$ стремится к $3B_0$ (намного меньше, чем $\\mu B_0$ в тонком стержне: форма размагничивает). Отличие от формулы $E=\\frac{3}{\\varepsilon+2}E_0$ для диэлектрического шара: в магнетике $B$ усиливается.",
+  "en": "**Rod and sphere in an external field.** A long bar magnet (rod) is a solenoid with current $K'=M$ on its side: at the middle $B\\approx\\mu_0M$, at the ends $\\frac{\\mu_0M}{2}$. A sphere of permeability $\\mu$ placed in a uniform field $B_0$ has a uniform field inside, $B=\\frac{3\\mu}{\\mu+2}B_0$ — tending to $3B_0$ for large $\\mu$ (much less than $\\mu B_0$ in a thin rod: shape demagnetizes). Unlike the formula $E=\\frac{3}{\\varepsilon+2}E_0$ for a dielectric sphere, here $B$ is enhanced."
+ },
+ {
+  "t": "li",
+  "uz": "**Magnit ekranlash.** Katta $\\mu$ li qobiq (permalloy) tashqi maydon chiziqlarini o'z devori bo'ylab «olib o'tadi» va ichidagi bo'shliqda maydonni keskin kamaytiradi: qalinligi $d$, radiusi $R$ bo'lgan sferik qobiq uchun susayish taxminan $\\frac{2\\mu d}{3R}$ marta. Elektr maydondan farqli o'laroq, mukammal magnit ekran yo'q (o'ta o'tkazgichdan tashqari) — bir necha qatlam ishlatiladi.",
+  "ru": "**Магнитное экранирование.** Оболочка с большой $\\mu$ (пермаллой) «проводит» линии внешнего поля по своей стенке и резко уменьшает поле во внутренней полости: для сферической оболочки толщиной $d$ и радиуса $R$ ослабление примерно в $\\frac{2\\mu d}{3R}$ раз. В отличие от электрического поля, идеального магнитного экрана нет (кроме сверхпроводника) — используют несколько слоёв.",
+  "en": "**Magnetic shielding.** A shell of high $\\mu$ (permalloy) “carries” the lines of an external field along its wall and sharply reduces the field in the cavity inside: for a spherical shell of thickness $d$ and radius $R$ the attenuation is roughly a factor of $\\frac{2\\mu d}{3R}$. Unlike the electric case, there is no perfect magnetic shield (apart from a superconductor) — several layers are used."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L19-F07.png",
+   "ru": "figures/B2-L19-F07-ru.png",
+   "en": "figures/B2-L19-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. Magnit zanjirlar",
+  "ru": "9. Магнитные цепи",
+  "en": "9. Magnetic circuits"
+ },
+ {
+  "t": "li",
+  "uz": "**Havo oralig'i bor o'zak.** Uzunligi $l$, kiruvchanligi $\\mu$ bo'lgan halqasimon o'zakda $d$ havo oralig'i bor, unga $N$ o'ram o'ralgan. Oqim o'zak bo'ylab bir xil ($B_n$ uzluksiz), shuning uchun $B$ o'zakda va oraliqda bir xil, $H$ esa o'zakda $\\frac{B}{\\mu_0\\mu}$, oraliqda $\\frac{B}{\\mu_0}$. Amper teoremasi: $NI=\\frac{B}{\\mu_0\\mu}l+\\frac{B}{\\mu_0}d$, ya'ni $B=\\frac{\\mu_0NI}{\\frac{l}{\\mu}+d}$. $\\mu=2000$ da $0.5\\ \\mathrm{m}$ temirning «samarali uzunligi» $\\frac{l}{\\mu}=0.25\\ \\mathrm{mm}$ — $2\\ \\mathrm{mm}$ oraliq maydonni $9$ marta kamaytiradi ([[F08]]).",
+  "ru": "**Сердечник с воздушным зазором.** Кольцевой сердечник длиной $l$ с проницаемостью $\\mu$ имеет воздушный зазор $d$, на него намотано $N$ витков. Поток вдоль сердечника одинаков ($B_n$ непрерывна), поэтому $B$ одинакова в сердечнике и в зазоре, а $H$ равна $\\frac{B}{\\mu_0\\mu}$ в сердечнике и $\\frac{B}{\\mu_0}$ в зазоре. Теорема о циркуляции: $NI=\\frac{B}{\\mu_0\\mu}l+\\frac{B}{\\mu_0}d$, то есть $B=\\frac{\\mu_0NI}{\\frac{l}{\\mu}+d}$. При $\\mu=2000$ «эффективная длина» $0.5\\ \\mathrm{m}$ железа $\\frac{l}{\\mu}=0.25\\ \\mathrm{mm}$ — зазор $2\\ \\mathrm{mm}$ уменьшает поле в $9$ раз ([[F08]]).",
+  "en": "**A core with an air gap.** A ring core of length $l$ and permeability $\\mu$ has an air gap $d$ and is wound with $N$ turns. The flux is the same all around the core ($B_n$ is continuous), so $B$ is the same in the core and in the gap, while $H$ is $\\frac{B}{\\mu_0\\mu}$ in the core and $\\frac{B}{\\mu_0}$ in the gap. Ampère's law: $NI=\\frac{B}{\\mu_0\\mu}l+\\frac{B}{\\mu_0}d$, so $B=\\frac{\\mu_0NI}{\\frac{l}{\\mu}+d}$. With $\\mu=2000$ the “effective length” of $0.5\\ \\mathrm{m}$ of iron is $\\frac{l}{\\mu}=0.25\\ \\mathrm{mm}$ — a $2\\ \\mathrm{mm}$ gap cuts the field by a factor of $9$ ([[F08]])."
+ },
+ {
+  "t": "m",
+  "m": "NI=\\oint H\\,dl,\\qquad B=\\frac{\\mu_0NI}{\\frac{l}{\\mu}+d},\\qquad \\Phi=\\frac{NI}{\\sum\\frac{l_k}{\\mu_0\\mu_kA_k}},\\qquad L=\\frac{\\mu_0N^2A}{\\frac{l}{\\mu}+d}"
+ },
+ {
+  "t": "li",
+  "uz": "**Om qonuni o'xshashi.** Magnit zanjirda $NI$ — «magnit yurituvchi kuch», $\\Phi$ — «tok», har bir qismning magnit qarshiligi $\\frac{l_k}{\\mu_0\\mu_kA_k}$: $\\Phi=\\frac{NI}{\\sum\\frac{l_k}{\\mu_0\\mu_kA_k}}$ — ketma-ket qarshiliklar kabi qo'shiladi. Havo oralig'i kichik bo'lsa ham asosiy magnit qarshilik va energiya unda to'planadi; induktivlik $L=\\frac{\\mu_0N^2A}{\\frac{l}{\\mu}+d}$ oraliq tufayli kamayadi, lekin o'zak to'yinishi va gisterezisga kam bog'liq bo'ladi — drossellar shu uchun oraliq bilan yasaladi.",
+  "ru": "**Аналог закона Ома.** В магнитной цепи $NI$ — «магнитодвижущая сила», $\\Phi$ — «ток», магнитное сопротивление каждого участка $\\frac{l_k}{\\mu_0\\mu_kA_k}$: $\\Phi=\\frac{NI}{\\sum\\frac{l_k}{\\mu_0\\mu_kA_k}}$ — складываются как последовательные сопротивления. Даже малый воздушный зазор несёт основное магнитное сопротивление и запасает основную энергию; индуктивность $L=\\frac{\\mu_0N^2A}{\\frac{l}{\\mu}+d}$ из-за зазора уменьшается, но становится мало зависящей от насыщения и гистерезиса сердечника — поэтому дроссели делают с зазором.",
+  "en": "**The Ohm's-law analogue.** In a magnetic circuit $NI$ is the “magnetomotive force”, $\\Phi$ the “current”, and each part has reluctance $\\frac{l_k}{\\mu_0\\mu_kA_k}$: $\\Phi=\\frac{NI}{\\sum\\frac{l_k}{\\mu_0\\mu_kA_k}}$ — they add like resistors in series. Even a small air gap carries most of the reluctance and stores most of the energy; the inductance $L=\\frac{\\mu_0N^2A}{\\frac{l}{\\mu}+d}$ is reduced by the gap but becomes nearly independent of core saturation and hysteresis — that is why chokes are built with a gap."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L19-F08.png",
+   "ru": "figures/B2-L19-F08-ru.png",
+   "en": "figures/B2-L19-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Magnetikdagi energiya va kuchlar",
+  "ru": "10. Энергия и силы в магнетиках",
+  "en": "10. Energy and forces in magnetic materials"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya zichligi.** Chiziqli magnetikda $w=\\frac{\\vec B\\cdot\\vec H}{2}=\\frac{B^2}{2\\mu_0\\mu}$. Bir xil erkin tokda solenoidga $\\mu$ li o'zak kiritilsa, $L$ va energiya $\\mu$ marta ortadi. Elektromagnit yoki magnit qutbi va temir orasidagi tortish kuchi oraliqdagi energiyadan: oraliq $dx$ ga ortsa, energiya $\\frac{B^2}{2\\mu_0}A\\,dx$ ga ortadi, demak $F=\\frac{B^2A}{2\\mu_0}$ — $1\\ \\mathrm{T}$ va $10\\ \\mathrm{cm^2}$ da taxminan $400\\ \\mathrm{N}$.",
+  "ru": "**Плотность энергии.** В линейном магнетике $w=\\frac{\\vec B\\cdot\\vec H}{2}=\\frac{B^2}{2\\mu_0\\mu}$. При том же свободном токе введение сердечника с $\\mu$ в соленоид увеличивает $L$ и энергию в $\\mu$ раз. Сила притяжения между полюсом электромагнита или магнита и железом находится из энергии в зазоре: при увеличении зазора на $dx$ энергия растёт на $\\frac{B^2}{2\\mu_0}A\\,dx$, значит $F=\\frac{B^2A}{2\\mu_0}$ — при $1\\ \\mathrm{T}$ и $10\\ \\mathrm{cm^2}$ около $400\\ \\mathrm{N}$.",
+  "en": "**Energy density.** In a linear magnetic material $w=\\frac{\\vec B\\cdot\\vec H}{2}=\\frac{B^2}{2\\mu_0\\mu}$. At the same free current, inserting a core of permeability $\\mu$ into a solenoid multiplies $L$ and the energy by $\\mu$. The pull between an electromagnet or magnet pole and a piece of iron follows from the energy in the gap: widening the gap by $dx$ adds energy $\\frac{B^2}{2\\mu_0}A\\,dx$, so $F=\\frac{B^2A}{2\\mu_0}$ — about $400\\ \\mathrm{N}$ at $1\\ \\mathrm{T}$ over $10\\ \\mathrm{cm^2}$."
+ },
+ {
+  "t": "m",
+  "m": "w=\\frac{BH}{2}=\\frac{B^2}{2\\mu_0\\mu},\\qquad F=\\frac{B^2A}{2\\mu_0},\\qquad F=\\frac{\\chi V}{2\\mu_0}\\frac{d\\left(B^2\\right)}{dz}"
+ },
+ {
+  "t": "li",
+  "uz": "**Bir jinsli bo'lmagan maydonda.** Kichik $\\chi$ li jismning maydondagi energiyasi $U=-\\frac{\\chi VB^2}{2\\mu_0}$, kuch $F=\\frac{\\chi V}{2\\mu_0}\\frac{d\\left(B^2\\right)}{dz}$: paramagnetik ($\\chi>0$) kuchli maydonga tortiladi (suyuq kislorod magnit qutblari orasida osilib qoladi), diamagnetik ($\\chi<0$) undan itariladi. Diamagnit levitatsiya sharti $\\frac{\\left|\\chi\\right|}{\\mu_0}B\\frac{dB}{dz}=\\rho g$: suv uchun $B\\frac{dB}{dz}\\approx1400\\ \\mathrm{T^2/m}$ — $16\\ \\mathrm{T}$ magnitda erishilgan.",
+  "ru": "**В неоднородном поле.** Энергия тела с малой $\\chi$ в поле $U=-\\frac{\\chi VB^2}{2\\mu_0}$, сила $F=\\frac{\\chi V}{2\\mu_0}\\frac{d\\left(B^2\\right)}{dz}$: парамагнетик ($\\chi>0$) втягивается в область сильного поля (жидкий кислород повисает между полюсами магнита), диамагнетик ($\\chi<0$) выталкивается. Условие диамагнитной левитации $\\frac{\\left|\\chi\\right|}{\\mu_0}B\\frac{dB}{dz}=\\rho g$: для воды $B\\frac{dB}{dz}\\approx1400\\ \\mathrm{T^2/m}$ — достигнуто в магните $16\\ \\mathrm{T}$.",
+  "en": "**In a non-uniform field.** The energy of a body with small $\\chi$ in a field is $U=-\\frac{\\chi VB^2}{2\\mu_0}$ and the force $F=\\frac{\\chi V}{2\\mu_0}\\frac{d\\left(B^2\\right)}{dz}$: a paramagnet ($\\chi>0$) is drawn into the strong field (liquid oxygen hangs between magnet poles), a diamagnet ($\\chi<0$) is pushed out. The condition for diamagnetic levitation is $\\frac{\\left|\\chi\\right|}{\\mu_0}B\\frac{dB}{dz}=\\rho g$: for water $B\\frac{dB}{dz}\\approx1400\\ \\mathrm{T^2/m}$ — achieved in a $16\\ \\mathrm{T}$ magnet."
+ },
+ {
+  "t": "h2",
+  "uz": "11. GRE uchun usullar va tipik xatolar",
+  "ru": "11. Методы для GRE и типичные ошибки",
+  "en": "11. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**1-usul — avval H, keyin B.** Erkin tok berilsa, Amper teoremasi bilan $H$ ni toping ($\\oint\\vec H\\cdot d\\vec l=I$), so'ng $B=\\mu_0\\mu H$, $M=\\chi H$, bog'langan tok $K'=M$. Doimiy magnit (erkin tok yo'q) berilsa — $M$ dan bog'langan toklarni toping va ularni oddiy tok sifatida Bio–Savar yoki Amper bilan ishlating. Chegarada $B_n$ va $H_\\tau$ uzluksiz.",
+  "ru": "**Метод 1 — сначала H, затем B.** Если задан свободный ток, найдите $H$ по теореме о циркуляции ($\\oint\\vec H\\cdot d\\vec l=I$), затем $B=\\mu_0\\mu H$, $M=\\chi H$, связанный ток $K'=M$. Если задан постоянный магнит (свободного тока нет), найдите по $M$ связанные токи и используйте их как обычные токи в законе Био–Савара или теореме о циркуляции. На границе непрерывны $B_n$ и $H_\\tau$.",
+  "en": "**Method 1 — H first, then B.** If a free current is given, find $H$ from Ampère's law ($\\oint\\vec H\\cdot d\\vec l=I$), then $B=\\mu_0\\mu H$, $M=\\chi H$ and the bound current $K'=M$. If a permanent magnet is given (no free current), find the bound currents from $M$ and treat them as ordinary currents with Biot–Savart or Ampère. At a boundary $B_n$ and $H_\\tau$ are continuous."
+ },
+ {
+  "t": "li",
+  "uz": "**2-usul — kattaliklarni eslab qolish.** Dia: $\\chi\\sim-10^{-5}$, temperaturaga bog'liq emas; para: $\\chi\\sim10^{-5}$–$10^{-3}$, $\\chi\\propto\\frac{1}{T}$; ferro: $\\mu\\sim10^3$, $\\Theta$ dan pastda, gisterezis; o'ta o'tkazgich: $\\chi=-1$. Spin-$\\frac{1}{2}$: $M=nm_0\\tanh\\frac{m_0B}{kT}$, $1\\ \\mathrm{T}$ da $\\frac{m_0B}{k}\\approx0.67\\ \\mathrm{K}$ — xona temperaturasida to'yinishdan juda uzoq.",
+  "ru": "**Метод 2 — запомнить порядки.** Диа: $\\chi\\sim-10^{-5}$, не зависит от температуры; пара: $\\chi\\sim10^{-5}$–$10^{-3}$, $\\chi\\propto\\frac{1}{T}$; ферро: $\\mu\\sim10^3$, ниже $\\Theta$, гистерезис; сверхпроводник: $\\chi=-1$. Спин $\\frac{1}{2}$: $M=nm_0\\tanh\\frac{m_0B}{kT}$; при $1\\ \\mathrm{T}$ имеем $\\frac{m_0B}{k}\\approx0.67\\ \\mathrm{K}$ — при комнатной температуре очень далеко от насыщения.",
+  "en": "**Method 2 — remember the magnitudes.** Dia: $\\chi\\sim-10^{-5}$, temperature-independent; para: $\\chi\\sim10^{-5}$–$10^{-3}$, $\\chi\\propto\\frac{1}{T}$; ferro: $\\mu\\sim10^3$, below $\\Theta$, hysteresis; superconductor: $\\chi=-1$. Spin $\\frac{1}{2}$: $M=nm_0\\tanh\\frac{m_0B}{kT}$; at $1\\ \\mathrm{T}$, $\\frac{m_0B}{k}\\approx0.67\\ \\mathrm{K}$ — at room temperature very far from saturation."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) $\\vec H=\\frac{\\vec B}{\\mu_0}+\\vec M$ deb yozish (minus kerak). 2) Amper teoremasiga $\\vec H$ uchun bog'langan tokni qo'shish. 3) Diamagnetik maydonni dielektrik kabi kuchaytiradi deb o'ylash (susaytiradi; dielektrikdan farqi — $\\varepsilon>1$ har doim, $\\mu$ esa $1$ dan kichik bo'lishi mumkin). 4) Kyuri qonunida $\\chi\\propto T$ olish. 5) Chegarada $H_n$ yoki $B_\\tau$ ni uzluksiz deb olish. 6) Shar ichida $B=\\mu_0M$ yozish ($\\frac{2}{3}\\mu_0M$). 7) Magnit zanjirda havo oralig'ining hissasini unutish.",
+  "ru": "**Типичные ошибки.** 1) Писать $\\vec H=\\frac{\\vec B}{\\mu_0}+\\vec M$ (нужен минус). 2) Включать связанный ток в теорему о циркуляции для $\\vec H$. 3) Думать, что диамагнетик усиливает поле, как диэлектрик (ослабляет; отличие — $\\varepsilon>1$ всегда, а $\\mu$ может быть меньше $1$). 4) Брать в законе Кюри $\\chi\\propto T$. 5) Считать непрерывными на границе $H_n$ или $B_\\tau$. 6) Писать внутри шара $B=\\mu_0M$ (нужно $\\frac{2}{3}\\mu_0M$). 7) Забывать вклад воздушного зазора в магнитной цепи.",
+  "en": "**Typical mistakes.** 1) Writing $\\vec H=\\frac{\\vec B}{\\mu_0}+\\vec M$ (it is a minus). 2) Including the bound current in Ampère's law for $\\vec H$. 3) Thinking a diamagnet strengthens the field like a dielectric (it weakens it; the difference is that $\\varepsilon>1$ always, while $\\mu$ can be below $1$). 4) Taking $\\chi\\propto T$ in Curie's law. 5) Treating $H_n$ or $B_\\tau$ as continuous at a boundary. 6) Writing $B=\\mu_0M$ inside a sphere (it is $\\frac{2}{3}\\mu_0M$). 7) Forgetting the air gap's contribution in a magnetic circuit."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Magnitlanish",
+    "ru": "Намагниченность",
+    "en": "Magnetization",
+    "m": "\\vec M=n\\langle\\vec m\\rangle"
+   },
+   {
+    "uz": "Bog'langan toklar",
+    "ru": "Связанные токи",
+    "en": "Bound currents",
+    "m": "\\vec J'=\\nabla\\times\\vec M,\\quad \\vec K'=\\vec M\\times\\hat n"
+   },
+   {
+    "uz": "H vektori",
+    "ru": "Вектор H",
+    "en": "The H vector",
+    "m": "\\vec H=\\frac{\\vec B}{\\mu_0}-\\vec M,\\quad \\oint\\vec H\\cdot d\\vec l=I"
+   },
+   {
+    "uz": "Chiziqli magnetik",
+    "ru": "Линейный магнетик",
+    "en": "Linear material",
+    "m": "\\vec M=\\chi\\vec H,\\quad \\vec B=\\mu_0\\mu\\vec H,\\quad \\mu=1+\\chi"
+   },
+   {
+    "uz": "Diamagnetizm",
+    "ru": "Диамагнетизм",
+    "en": "Diamagnetism",
+    "m": "\\Delta m=-\\frac{e^2r^2B}{4m_e},\\quad \\chi\\sim-10^{-5}"
+   },
+   {
+    "uz": "Spin-1/2 paramagnetik",
+    "ru": "Парамагнетик со спином 1/2",
+    "en": "Spin-1/2 paramagnet",
+    "m": "M=nm_0\\tanh\\frac{m_0B}{kT}"
+   },
+   {
+    "uz": "Kyuri qonuni",
+    "ru": "Закон Кюри",
+    "en": "Curie's law",
+    "m": "\\chi=\\frac{\\mu_0nm_0^2}{kT}=\\frac{C}{T}"
+   },
+   {
+    "uz": "Kyuri–Veys qonuni",
+    "ru": "Закон Кюри–Вейса",
+    "en": "Curie–Weiss law",
+    "m": "\\chi=\\frac{C}{T-\\Theta}"
+   },
+   {
+    "uz": "Gisterezis isrofi",
+    "ru": "Потери на гистерезис",
+    "en": "Hysteresis loss",
+    "m": "w=\\oint H\\,dB,\\quad P=wVf"
+   },
+   {
+    "uz": "Chegaraviy shartlar",
+    "ru": "Граничные условия",
+    "en": "Boundary conditions",
+    "m": "B_{1n}=B_{2n},\\quad H_{1\\tau}=H_{2\\tau}"
+   },
+   {
+    "uz": "Chiziqlar sinishi",
+    "ru": "Преломление линий",
+    "en": "Refraction of lines",
+    "m": "\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\mu_2}{\\mu_1}"
+   },
+   {
+    "uz": "Magnitlangan shar",
+    "ru": "Намагниченный шар",
+    "en": "Magnetized sphere",
+    "m": "\\vec B=\\frac{2}{3}\\mu_0\\vec M,\\quad \\vec H=-\\frac{\\vec M}{3}"
+   },
+   {
+    "uz": "Shar tashqi maydonda",
+    "ru": "Шар во внешнем поле",
+    "en": "Sphere in a field",
+    "m": "B=\\frac{3\\mu}{\\mu+2}B_0"
+   },
+   {
+    "uz": "Magnit zanjir",
+    "ru": "Магнитная цепь",
+    "en": "Magnetic circuit",
+    "m": "B=\\frac{\\mu_0NI}{\\frac{l}{\\mu}+d}"
+   },
+   {
+    "uz": "Energiya zichligi",
+    "ru": "Плотность энергии",
+    "en": "Energy density",
+    "m": "w=\\frac{BH}{2}=\\frac{B^2}{2\\mu_0\\mu}"
+   },
+   {
+    "uz": "Tortish kuchi",
+    "ru": "Подъёмная сила",
+    "en": "Lifting force",
+    "m": "F=\\frac{B^2A}{2\\mu_0}"
+   },
+   {
+    "uz": "Notekis maydonda kuch",
+    "ru": "Сила в неоднородном поле",
+    "en": "Force in a gradient",
+    "m": "F=\\frac{\\chi V}{2\\mu_0}\\frac{d\\left(B^2\\right)}{dz}"
+   }
+  ]
+ }
+]

@@ -1,0 +1,784 @@
+[
+ {
+  "id": "B2-L19-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Birlik uzunligida $1000$ o'ram bo'lgan uzun solenoiddan $2\\ \\mathrm{A}$ tok o'tmoqda; ichiga kiruvchanligi $500$ bo'lgan o'zak kiritilgan. O'zakdagi $H$, $B$ va $M$ ni toping.",
+   "ru": "По длинному соленоиду с $1000$ витками на метр течёт ток $2\\ \\mathrm{A}$; внутрь вставлен сердечник с проницаемостью $500$. Найдите $H$, $B$ и $M$ в сердечнике.",
+   "en": "A long solenoid with $1000$ turns per metre carries $2\\ \\mathrm{A}$; a core of permeability $500$ is inserted. Find $H$, $B$ and $M$ in the core."
+  },
+  "figure": "figures/B2-L19-S01.png",
+  "solution": {
+   "uz": [
+    "To'g'ri to'rtburchak kontur — faqat erkin tok: $$Hl=nlI\\ \\Rightarrow\\ H=nI=2000\\ \\mathrm{A/m}$$",
+    "Induksiya va magnitlanish: $$B=\\mu_0\\mu H=4\\pi\\cdot10^{-7}\\cdot500\\cdot2000\\approx1.26\\ \\mathrm{T},\\quad M=(\\mu-1)H\\approx10^6\\ \\mathrm{A/m}$$"
+   ],
+   "ru": [
+    "Прямоугольный контур — только свободный ток: $$Hl=nlI\\ \\Rightarrow\\ H=nI=2000\\ \\mathrm{A/m}$$",
+    "Индукция и намагниченность: $$B=\\mu_0\\mu H=4\\pi\\cdot10^{-7}\\cdot500\\cdot2000\\approx1.26\\ \\mathrm{T},\\quad M=(\\mu-1)H\\approx10^6\\ \\mathrm{A/m}$$"
+   ],
+   "en": [
+    "Rectangular loop — free current only: $$Hl=nlI\\ \\Rightarrow\\ H=nI=2000\\ \\mathrm{A/m}$$",
+    "Field and magnetization: $$B=\\mu_0\\mu H=4\\pi\\cdot10^{-7}\\cdot500\\cdot2000\\approx1.26\\ \\mathrm{T},\\quad M=(\\mu-1)H\\approx10^6\\ \\mathrm{A/m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "H vektori: $\\oint\\vec H\\cdot d\\vec l=I$, $\\vec B=\\mu_0\\left(\\vec H+\\vec M\\right)$",
+    "ru": "Вектор H: $\\oint\\vec H\\cdot d\\vec l=I$, $\\vec B=\\mu_0\\left(\\vec H+\\vec M\\right)$",
+    "en": "The H vector: $\\oint\\vec H\\cdot d\\vec l=I$, $\\vec B=\\mu_0\\left(\\vec H+\\vec M\\right)$"
+   },
+   {
+    "uz": "Chiziqli magnetik: $M=\\chi H$, $B=\\mu_0\\mu H$, $\\mu=1+\\chi$",
+    "ru": "Линейный магнетик: $M=\\chi H$, $B=\\mu_0\\mu H$, $\\mu=1+\\chi$",
+    "en": "Linear material: $M=\\chi H$, $B=\\mu_0\\mu H$, $\\mu=1+\\chi$"
+   }
+  ],
+  "basis": {
+   "uz": "H, B va M",
+   "ru": "H, B и M",
+   "en": "H, B and M"
+  },
+  "answer": "H=2000\\ \\mathrm{A/m};\\ B\\approx1.26\\ \\mathrm{T};\\ M\\approx10^6\\ \\mathrm{A/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 12.85-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L19-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Alyuminiyning magnit qabul qiluvchanligi $2.2\\cdot10^{-5}$. U $1\\ \\mathrm{T}$ tashqi maydonga kiritildi. Magnitlanishni va maydonning nisbiy o'zgarishini toping.",
+   "ru": "Магнитная восприимчивость алюминия $2.2\\cdot10^{-5}$. Его поместили во внешнее поле $1\\ \\mathrm{T}$. Найдите намагниченность и относительное изменение поля.",
+   "en": "Aluminium has a magnetic susceptibility of $2.2\\cdot10^{-5}$. It is placed in an external field of $1\\ \\mathrm{T}$. Find the magnetization and the relative change in field."
+  },
+  "figure": "figures/B2-L19-S02.png",
+  "solution": {
+   "uz": [
+    "$H\\approx\\frac{B_0}{\\mu_0}$ ($\\chi\\ll1$): $$M=\\chi H=\\frac{2.2\\cdot10^{-5}}{4\\pi\\cdot10^{-7}}\\approx17.5\\ \\mathrm{A/m}$$",
+    "Qo'shimcha maydon: $$\\Delta B=\\mu_0M=\\chi B_0=2.2\\cdot10^{-5}\\ \\mathrm{T},\\quad \\frac{\\Delta B}{B_0}=2.2\\cdot10^{-5}$$"
+   ],
+   "ru": [
+    "$H\\approx\\frac{B_0}{\\mu_0}$ ($\\chi\\ll1$): $$M=\\chi H=\\frac{2.2\\cdot10^{-5}}{4\\pi\\cdot10^{-7}}\\approx17.5\\ \\mathrm{A/m}$$",
+    "Добавочное поле: $$\\Delta B=\\mu_0M=\\chi B_0=2.2\\cdot10^{-5}\\ \\mathrm{T},\\quad \\frac{\\Delta B}{B_0}=2.2\\cdot10^{-5}$$"
+   ],
+   "en": [
+    "$H\\approx\\frac{B_0}{\\mu_0}$ ($\\chi\\ll1$): $$M=\\chi H=\\frac{2.2\\cdot10^{-5}}{4\\pi\\cdot10^{-7}}\\approx17.5\\ \\mathrm{A/m}$$",
+    "Extra field: $$\\Delta B=\\mu_0M=\\chi B_0=2.2\\cdot10^{-5}\\ \\mathrm{T},\\quad \\frac{\\Delta B}{B_0}=2.2\\cdot10^{-5}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Chiziqli magnetik: $M=\\chi H$, $B=\\mu_0\\mu H$, $\\mu=1+\\chi$",
+    "ru": "Линейный магнетик: $M=\\chi H$, $B=\\mu_0\\mu H$, $\\mu=1+\\chi$",
+    "en": "Linear material: $M=\\chi H$, $B=\\mu_0\\mu H$, $\\mu=1+\\chi$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Paramagnetik maydonda",
+   "ru": "Парамагнетик в поле",
+   "en": "A paramagnet in a field"
+  },
+  "answer": "M\\approx17.5\\ \\mathrm{A/m};\\ \\frac{\\Delta B}{B_0}=2.2\\cdot10^{-5}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 12.81-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L19-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Uzun silindrik doimiy magnit o'qi bo'ylab tekis magnitlangan, $M=10^6\\ \\mathrm{A/m}$. Yon sirtdagi bog'langan tok zichligini, magnit o'rtasidagi va uchidagi induksiyani toping.",
+   "ru": "Длинный цилиндрический постоянный магнит однородно намагничен вдоль оси, $M=10^6\\ \\mathrm{A/m}$. Найдите плотность связанного тока на боковой поверхности, индукцию в середине магнита и на его торце.",
+   "en": "A long cylindrical permanent magnet is uniformly magnetized along its axis with $M=10^6\\ \\mathrm{A/m}$. Find the bound current density on its side surface and the field at the middle and at the end of the magnet."
+  },
+  "figure": "figures/B2-L19-S03.png",
+  "solution": {
+   "uz": [
+    "Sirt toki — solenoidning $nI$ i kabi: $$K'=M=10^6\\ \\mathrm{A/m}$$",
+    "Uzun solenoid o'rtasida va uchida: $$B=\\mu_0K'\\approx1.26\\ \\mathrm{T},\\quad B'=\\frac{\\mu_0M}{2}\\approx0.63\\ \\mathrm{T}$$"
+   ],
+   "ru": [
+    "Поверхностный ток — как $nI$ соленоида: $$K'=M=10^6\\ \\mathrm{A/m}$$",
+    "В середине и на торце длинного соленоида: $$B=\\mu_0K'\\approx1.26\\ \\mathrm{T},\\quad B'=\\frac{\\mu_0M}{2}\\approx0.63\\ \\mathrm{T}$$"
+   ],
+   "en": [
+    "The surface current plays the role of a solenoid's $nI$: $$K'=M=10^6\\ \\mathrm{A/m}$$",
+    "At the middle and the end of a long solenoid: $$B=\\mu_0K'\\approx1.26\\ \\mathrm{T},\\quad B'=\\frac{\\mu_0M}{2}\\approx0.63\\ \\mathrm{T}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bog'langan toklar: $\\vec K'=\\vec M\\times\\hat n$, $\\vec J'=\\nabla\\times\\vec M$",
+    "ru": "Связанные токи: $\\vec K'=\\vec M\\times\\hat n$, $\\vec J'=\\nabla\\times\\vec M$",
+    "en": "Bound currents: $\\vec K'=\\vec M\\times\\hat n$, $\\vec J'=\\nabla\\times\\vec M$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Doimiy magnit — solenoid",
+   "ru": "Постоянный магнит — соленоид",
+   "en": "A permanent magnet as a solenoid"
+  },
+  "answer": "K'=10^6\\ \\mathrm{A/m};\\ B\\approx1.26\\ \\mathrm{T};\\ B'\\approx0.63\\ \\mathrm{T}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original (B2-L19, doimiy magnit)"
+ },
+ {
+  "id": "B2-L19-S04",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Paramagnit tuzning qabul qiluvchanligi $300\\ \\mathrm{K}$ da $3\\cdot10^{-4}$. Kyuri qonuni bajarilsa, $4\\ \\mathrm{K}$ da u qancha bo'ladi?",
+   "ru": "Восприимчивость парамагнитной соли при $300\\ \\mathrm{K}$ равна $3\\cdot10^{-4}$. Какой она будет при $4\\ \\mathrm{K}$, если выполняется закон Кюри?",
+   "en": "A paramagnetic salt has susceptibility $3\\cdot10^{-4}$ at $300\\ \\mathrm{K}$. What is it at $4\\ \\mathrm{K}$ if Curie's law holds?"
+  },
+  "figure": "figures/B2-L19-S04.png",
+  "solution": {
+   "uz": [
+    "$\\chi\\propto\\frac{1}{T}$: $$\\chi_2=\\chi_1\\frac{T_1}{T_2}=3\\cdot10^{-4}\\cdot\\frac{300}{4}=0.0225$$"
+   ],
+   "ru": [
+    "$\\chi\\propto\\frac{1}{T}$: $$\\chi_2=\\chi_1\\frac{T_1}{T_2}=3\\cdot10^{-4}\\cdot\\frac{300}{4}=0.0225$$"
+   ],
+   "en": [
+    "$\\chi\\propto\\frac{1}{T}$: $$\\chi_2=\\chi_1\\frac{T_1}{T_2}=3\\cdot10^{-4}\\cdot\\frac{300}{4}=0.0225$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kyuri qonuni: $\\chi=\\frac{C}{T}$",
+    "ru": "Закон Кюри: $\\chi=\\frac{C}{T}$",
+    "en": "Curie's law: $\\chi=\\frac{C}{T}$"
+   }
+  ],
+  "basis": {
+   "uz": "Kyuri qonuni",
+   "ru": "Закон Кюри",
+   "en": "Curie's law"
+  },
+  "answer": "\\chi\\approx0.023",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original (B2-L19, Kyuri qonuni)"
+ },
+ {
+  "id": "B2-L19-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Kristallda $1\\ \\mathrm{m^3}$ da $10^{28}$ ta erkin spin-$\\frac{1}{2}$ ion bor, har birining momenti bitta Bor magnetoniga teng ($9.27\\cdot10^{-24}\\ \\mathrm{A\\cdot m^2}$). $300\\ \\mathrm{K}$ dagi paramagnit qabul qiluvchanlikni toping.",
+   "ru": "В кристалле в $1\\ \\mathrm{m^3}$ находится $10^{28}$ свободных ионов со спином $\\frac{1}{2}$, момент каждого равен магнетону Бора ($9.27\\cdot10^{-24}\\ \\mathrm{A\\cdot m^2}$). Найдите парамагнитную восприимчивость при $300\\ \\mathrm{K}$.",
+   "en": "A crystal contains $10^{28}$ free spin-$\\frac{1}{2}$ ions in $1\\ \\mathrm{m^3}$, each with a moment of one Bohr magneton ($9.27\\cdot10^{-24}\\ \\mathrm{A\\cdot m^2}$). Find the paramagnetic susceptibility at $300\\ \\mathrm{K}$."
+  },
+  "figure": "figures/B2-L19-S05.png",
+  "solution": {
+   "uz": [
+    "Kuchsiz maydonda $\\tanh x\\approx x$: $$M=\\frac{nm_0^2B}{kT}\\ \\Rightarrow\\ \\chi=\\frac{\\mu_0nm_0^2}{kT}$$",
+    "Son qiymat: $$\\chi=\\frac{1.26\\cdot10^{-6}\\cdot10^{28}\\cdot8.6\\cdot10^{-47}}{1.38\\cdot10^{-23}\\cdot300}\\approx2.6\\cdot10^{-4}$$"
+   ],
+   "ru": [
+    "В слабом поле $\\tanh x\\approx x$: $$M=\\frac{nm_0^2B}{kT}\\ \\Rightarrow\\ \\chi=\\frac{\\mu_0nm_0^2}{kT}$$",
+    "Численно: $$\\chi=\\frac{1.26\\cdot10^{-6}\\cdot10^{28}\\cdot8.6\\cdot10^{-47}}{1.38\\cdot10^{-23}\\cdot300}\\approx2.6\\cdot10^{-4}$$"
+   ],
+   "en": [
+    "In a weak field $\\tanh x\\approx x$: $$M=\\frac{nm_0^2B}{kT}\\ \\Rightarrow\\ \\chi=\\frac{\\mu_0nm_0^2}{kT}$$",
+    "Numerically: $$\\chi=\\frac{1.26\\cdot10^{-6}\\cdot10^{28}\\cdot8.6\\cdot10^{-47}}{1.38\\cdot10^{-23}\\cdot300}\\approx2.6\\cdot10^{-4}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Spin paramagnetizmi: $\\chi=\\frac{\\mu_0nm_0^2}{kT}$",
+    "ru": "Спиновый парамагнетизм: $\\chi=\\frac{\\mu_0nm_0^2}{kT}$",
+    "en": "Spin paramagnetism: $\\chi=\\frac{\\mu_0nm_0^2}{kT}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Spin paramagnetizmi",
+   "ru": "Спиновый парамагнетизм",
+   "en": "Spin paramagnetism"
+  },
+  "answer": "\\chi\\approx2.6\\cdot10^{-4}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B2-L19, Kyuri doimiysi)"
+ },
+ {
+  "id": "B2-L19-S06",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "S05 dagi kristall ($n=10^{28}\\ \\mathrm{m^{-3}}$, spin-$\\frac{1}{2}$) $1\\ \\mathrm{K}$ temperaturada $5\\ \\mathrm{T}$ maydonga kiritildi. To'yinish magnitlanishini va haqiqiy magnitlanishni toping. Bu holda Kyuri qonuni nima beradi?",
+   "ru": "Кристалл из S05 ($n=10^{28}\\ \\mathrm{m^{-3}}$, спин $\\frac{1}{2}$) при температуре $1\\ \\mathrm{K}$ поместили в поле $5\\ \\mathrm{T}$. Найдите намагниченность насыщения и фактическую намагниченность. Что дал бы здесь закон Кюри?",
+   "en": "The crystal of S05 ($n=10^{28}\\ \\mathrm{m^{-3}}$, spin $\\frac{1}{2}$) is placed in a $5\\ \\mathrm{T}$ field at $1\\ \\mathrm{K}$. Find the saturation magnetization and the actual magnetization. What would Curie's law give here?"
+  },
+  "figure": "figures/B2-L19-S06.png",
+  "solution": {
+   "uz": [
+    "To'yinish — barcha spinlar maydon bo'ylab: $$M_0=nm_0=10^{28}\\cdot9.27\\cdot10^{-24}\\approx9.3\\cdot10^4\\ \\mathrm{A/m}$$",
+    "Argument katta, $x=\\frac{m_0B}{kT}\\approx3.36$: $$M=M_0\\tanh3.36\\approx0.998M_0$$",
+    "Kyuri qonuni $M=M_0x$ — to'yinishdan $3.4$ marta ortiq, ya'ni noto'g'ri: $$x\\gtrsim1:\\quad \\tanh x\\ne x$$"
+   ],
+   "ru": [
+    "Насыщение — все спины вдоль поля: $$M_0=nm_0=10^{28}\\cdot9.27\\cdot10^{-24}\\approx9.3\\cdot10^4\\ \\mathrm{A/m}$$",
+    "Аргумент велик, $x=\\frac{m_0B}{kT}\\approx3.36$: $$M=M_0\\tanh3.36\\approx0.998M_0$$",
+    "Закон Кюри $M=M_0x$ — в $3.4$ раза больше насыщения, то есть неверен: $$x\\gtrsim1:\\quad \\tanh x\\ne x$$"
+   ],
+   "en": [
+    "Saturation — all spins along the field: $$M_0=nm_0=10^{28}\\cdot9.27\\cdot10^{-24}\\approx9.3\\cdot10^4\\ \\mathrm{A/m}$$",
+    "The argument is large, $x=\\frac{m_0B}{kT}\\approx3.36$: $$M=M_0\\tanh3.36\\approx0.998M_0$$",
+    "Curie's law $M=M_0x$ gives $3.4$ times saturation — so it fails: $$x\\gtrsim1:\\quad \\tanh x\\ne x$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Spin-1/2 magnitlanishi: $M=nm_0\\tanh\\frac{m_0B}{kT}$",
+    "ru": "Намагниченность спинов 1/2: $M=nm_0\\tanh\\frac{m_0B}{kT}$",
+    "en": "Spin-1/2 magnetization: $M=nm_0\\tanh\\frac{m_0B}{kT}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Paramagnetikning to'yinishi",
+   "ru": "Насыщение парамагнетика",
+   "en": "Saturation of a paramagnet"
+  },
+  "answer": "M_0\\approx9.3\\cdot10^4\\ \\mathrm{A/m};\\ M\\approx0.998M_0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original (B2-L19, to'yinish)"
+ },
+ {
+  "id": "B2-L19-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Vodorod atomidagi elektron radiusi $0.53\\cdot10^{-10}\\ \\mathrm{m}$ bo'lgan orbitada harakatlanadi. Orbita tekisligiga tik $1\\ \\mathrm{T}$ maydon ulanganda orbital magnit momenti qanchaga o'zgaradi? Bu Bor magnetonining qanday ulushi?",
+   "ru": "Электрон в атоме водорода движется по орбите радиусом $0.53\\cdot10^{-10}\\ \\mathrm{m}$. На сколько изменится его орбитальный магнитный момент при включении поля $1\\ \\mathrm{T}$, перпендикулярного плоскости орбиты? Какая это доля магнетона Бора?",
+   "en": "The electron in a hydrogen atom moves on an orbit of radius $0.53\\cdot10^{-10}\\ \\mathrm{m}$. By how much does its orbital magnetic moment change when a $1\\ \\mathrm{T}$ field perpendicular to the orbit is switched on? What fraction of a Bohr magneton is this?"
+  },
+  "figure": "figures/B2-L19-S07.png",
+  "solution": {
+   "uz": [
+    "Uyurmali maydon tezlikni o'zgartiradi: $eE=m_e\\frac{dv}{dt}$, $E\\cdot2\\pi r=\\pi r^2\\frac{dB}{dt}$: $$\\Delta v=\\frac{erB}{2m_e},\\quad \\Delta m=\\frac{er\\Delta v}{2}=\\frac{e^2r^2B}{4m_e}$$",
+    "Son qiymat: $$\\Delta m=\\frac{2.56\\cdot10^{-38}\\cdot2.8\\cdot10^{-21}}{3.64\\cdot10^{-30}}\\approx2.0\\cdot10^{-29}\\ \\mathrm{A\\cdot m^2},\\quad \\frac{\\Delta m}{m_0}\\approx2\\cdot10^{-6}$$"
+   ],
+   "ru": [
+    "Вихревое поле меняет скорость: $eE=m_e\\frac{dv}{dt}$, $E\\cdot2\\pi r=\\pi r^2\\frac{dB}{dt}$: $$\\Delta v=\\frac{erB}{2m_e},\\quad \\Delta m=\\frac{er\\Delta v}{2}=\\frac{e^2r^2B}{4m_e}$$",
+    "Численно: $$\\Delta m=\\frac{2.56\\cdot10^{-38}\\cdot2.8\\cdot10^{-21}}{3.64\\cdot10^{-30}}\\approx2.0\\cdot10^{-29}\\ \\mathrm{A\\cdot m^2},\\quad \\frac{\\Delta m}{m_0}\\approx2\\cdot10^{-6}$$"
+   ],
+   "en": [
+    "The induced field changes the speed: $eE=m_e\\frac{dv}{dt}$, $E\\cdot2\\pi r=\\pi r^2\\frac{dB}{dt}$: $$\\Delta v=\\frac{erB}{2m_e},\\quad \\Delta m=\\frac{er\\Delta v}{2}=\\frac{e^2r^2B}{4m_e}$$",
+    "Numerically: $$\\Delta m=\\frac{2.56\\cdot10^{-38}\\cdot2.8\\cdot10^{-21}}{3.64\\cdot10^{-30}}\\approx2.0\\cdot10^{-29}\\ \\mathrm{A\\cdot m^2},\\quad \\frac{\\Delta m}{m_0}\\approx2\\cdot10^{-6}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Larmor diamagnetizmi: $\\Delta m=-\\frac{e^2r^2B}{4m_e}$",
+    "ru": "Диамагнетизм Лармора: $\\Delta m=-\\frac{e^2r^2B}{4m_e}$",
+    "en": "Larmor diamagnetism: $\\Delta m=-\\frac{e^2r^2B}{4m_e}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Larmor diamagnetizmi",
+   "ru": "Диамагнетизм Лармора",
+   "en": "Larmor diamagnetism"
+  },
+  "answer": "\\Delta m\\approx2\\cdot10^{-29}\\ \\mathrm{A\\cdot m^2};\\ \\frac{\\Delta m}{m_0}\\approx2\\cdot10^{-6}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "Irodov, «Problems in General Physics», 3.403-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L19-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $1\\ \\mathrm{cm}$ bo'lgan shar tekis magnitlangan, $M=10^6\\ \\mathrm{A/m}$. Shar ichidagi $B$ va $H$ ni, magnit momentini va o'qda markazdan $10\\ \\mathrm{cm}$ masofadagi induksiyani toping.",
+   "ru": "Шар радиусом $1\\ \\mathrm{cm}$ однородно намагничен, $M=10^6\\ \\mathrm{A/m}$. Найдите $B$ и $H$ внутри шара, его магнитный момент и индукцию на оси на расстоянии $10\\ \\mathrm{cm}$ от центра.",
+   "en": "A sphere of radius $1\\ \\mathrm{cm}$ is uniformly magnetized with $M=10^6\\ \\mathrm{A/m}$. Find $B$ and $H$ inside, its magnetic moment, and the field on the axis $10\\ \\mathrm{cm}$ from the centre."
+  },
+  "figure": "figures/B2-L19-S08.png",
+  "solution": {
+   "uz": [
+    "Ichkarida: $$B=\\frac{2}{3}\\mu_0M\\approx0.84\\ \\mathrm{T},\\quad H=-\\frac{M}{3}\\approx-3.3\\cdot10^5\\ \\mathrm{A/m}$$",
+    "Moment: $$m=\\frac{4}{3}\\pi R^3M=\\frac{4}{3}\\pi\\cdot10^{-6}\\cdot10^6\\approx4.2\\ \\mathrm{A\\cdot m^2}$$",
+    "Tashqarida — aniq dipol maydoni: $$B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{z^3}=10^{-7}\\cdot\\frac{8.4}{10^{-3}}\\approx8.4\\cdot10^{-4}\\ \\mathrm{T}$$"
+   ],
+   "ru": [
+    "Внутри: $$B=\\frac{2}{3}\\mu_0M\\approx0.84\\ \\mathrm{T},\\quad H=-\\frac{M}{3}\\approx-3.3\\cdot10^5\\ \\mathrm{A/m}$$",
+    "Момент: $$m=\\frac{4}{3}\\pi R^3M=\\frac{4}{3}\\pi\\cdot10^{-6}\\cdot10^6\\approx4.2\\ \\mathrm{A\\cdot m^2}$$",
+    "Снаружи — точное поле диполя: $$B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{z^3}=10^{-7}\\cdot\\frac{8.4}{10^{-3}}\\approx8.4\\cdot10^{-4}\\ \\mathrm{T}$$"
+   ],
+   "en": [
+    "Inside: $$B=\\frac{2}{3}\\mu_0M\\approx0.84\\ \\mathrm{T},\\quad H=-\\frac{M}{3}\\approx-3.3\\cdot10^5\\ \\mathrm{A/m}$$",
+    "Moment: $$m=\\frac{4}{3}\\pi R^3M=\\frac{4}{3}\\pi\\cdot10^{-6}\\cdot10^6\\approx4.2\\ \\mathrm{A\\cdot m^2}$$",
+    "Outside — an exact dipole field: $$B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{z^3}=10^{-7}\\cdot\\frac{8.4}{10^{-3}}\\approx8.4\\cdot10^{-4}\\ \\mathrm{T}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Magnitlangan shar: $\\vec B=\\frac{2}{3}\\mu_0\\vec M$, $\\vec m=\\frac{4}{3}\\pi R^3\\vec M$",
+    "ru": "Намагниченный шар: $\\vec B=\\frac{2}{3}\\mu_0\\vec M$, $\\vec m=\\frac{4}{3}\\pi R^3\\vec M$",
+    "en": "Magnetized sphere: $\\vec B=\\frac{2}{3}\\mu_0\\vec M$, $\\vec m=\\frac{4}{3}\\pi R^3\\vec M$"
+   },
+   null,
+   {
+    "uz": "Dipol maydoni: $B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{z^3}$",
+    "ru": "Поле диполя: $B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{z^3}$",
+    "en": "Dipole field: $B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{z^3}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tekis magnitlangan shar",
+   "ru": "Однородно намагниченный шар",
+   "en": "A uniformly magnetized sphere"
+  },
+  "answer": "B\\approx0.84\\ \\mathrm{T};\\ H\\approx-3.3\\cdot10^5\\ \\mathrm{A/m};\\ m\\approx4.2\\ \\mathrm{A\\cdot m^2};\\ B\\approx0.84\\ \\mathrm{mT}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original (B2-L19, magnitlangan shar)"
+ },
+ {
+  "id": "B2-L19-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Havodagi induksiya chiziqlari kiruvchanligi $1000$ bo'lgan temir sirtiga normal bilan $60^\\circ$ burchak ostida tushmoqda. Temir ichida chiziqlar normal bilan qanday burchak hosil qiladi? Temirdan $60^\\circ$ ostida havoga chiqayotgan chiziqlar-chi?",
+   "ru": "Линии индукции в воздухе падают на поверхность железа с проницаемостью $1000$ под углом $60^\\circ$ к нормали. Какой угол с нормалью образуют линии внутри железа? А линии, выходящие из железа в воздух под углом $60^\\circ$?",
+   "en": "Field lines in air strike the surface of iron of permeability $1000$ at $60^\\circ$ to the normal. What angle do they make with the normal inside the iron? And lines leaving the iron into air at $60^\\circ$?"
+  },
+  "figure": "figures/B2-L19-S09.png",
+  "solution": {
+   "uz": [
+    "$B_n$ va $H_\\tau$ uzluksiz: $$\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\mu_2}{\\mu_1}=1000$$",
+    "Havodan temirga: $$\\tan\\alpha_2=1000\\sqrt{3}\\approx1730\\ \\Rightarrow\\ \\alpha_2\\approx89.97^\\circ$$",
+    "Temirdan havoga: $$\\tan\\alpha=\\frac{\\sqrt{3}}{1000}\\ \\Rightarrow\\ \\alpha\\approx0.1^\\circ$$"
+   ],
+   "ru": [
+    "$B_n$ и $H_\\tau$ непрерывны: $$\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\mu_2}{\\mu_1}=1000$$",
+    "Из воздуха в железо: $$\\tan\\alpha_2=1000\\sqrt{3}\\approx1730\\ \\Rightarrow\\ \\alpha_2\\approx89.97^\\circ$$",
+    "Из железа в воздух: $$\\tan\\alpha=\\frac{\\sqrt{3}}{1000}\\ \\Rightarrow\\ \\alpha\\approx0.1^\\circ$$"
+   ],
+   "en": [
+    "$B_n$ and $H_\\tau$ are continuous: $$\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\mu_2}{\\mu_1}=1000$$",
+    "From air into iron: $$\\tan\\alpha_2=1000\\sqrt{3}\\approx1730\\ \\Rightarrow\\ \\alpha_2\\approx89.97^\\circ$$",
+    "From iron into air: $$\\tan\\alpha=\\frac{\\sqrt{3}}{1000}\\ \\Rightarrow\\ \\alpha\\approx0.1^\\circ$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Chiziqlar sinishi: $\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\mu_2}{\\mu_1}$",
+    "ru": "Преломление линий: $\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\mu_2}{\\mu_1}$",
+    "en": "Refraction of lines: $\\frac{\\tan\\alpha_2}{\\tan\\alpha_1}=\\frac{\\mu_2}{\\mu_1}$"
+   },
+   null,
+   {
+    "uz": "Chegaraviy shartlar: $B_{1n}=B_{2n}$, $H_{1\\tau}=H_{2\\tau}$",
+    "ru": "Граничные условия: $B_{1n}=B_{2n}$, $H_{1\\tau}=H_{2\\tau}$",
+    "en": "Boundary conditions: $B_{1n}=B_{2n}$, $H_{1\\tau}=H_{2\\tau}$"
+   }
+  ],
+  "basis": {
+   "uz": "Induksiya chiziqlarining sinishi",
+   "ru": "Преломление линий индукции",
+   "en": "Refraction of field lines"
+  },
+  "answer": "\\alpha_2\\approx89.97^\\circ;\\ \\alpha\\approx0.1^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Volkenshteyn, «Problems in General Physics», 12.41-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L19-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $0.5\\ \\mathrm{m}$, kiruvchanligi $2000$ bo'lgan halqasimon o'zakda $2\\ \\mathrm{mm}$ havo oralig'i bor; $500$ o'ramdan $2\\ \\mathrm{A}$ tok o'tmoqda. Oraliqdagi induksiyani va kuchlanganlikni toping. Oraliq bo'lmaganda induksiya qancha bo'lardi?",
+   "ru": "Кольцевой сердечник длиной $0.5\\ \\mathrm{m}$ с проницаемостью $2000$ имеет воздушный зазор $2\\ \\mathrm{mm}$; по $500$ виткам течёт ток $2\\ \\mathrm{A}$. Найдите индукцию и напряжённость в зазоре. Какой была бы индукция без зазора?",
+   "en": "A ring core $0.5\\ \\mathrm{m}$ long with permeability $2000$ has a $2\\ \\mathrm{mm}$ air gap; $500$ turns carry $2\\ \\mathrm{A}$. Find the magnetic induction and the field strength in the gap. What would the induction be without the gap?"
+  },
+  "figure": "figures/B2-L19-S10.png",
+  "solution": {
+   "uz": [
+    "Amper teoremasi, $B$ hamma joyda bir xil: $$NI=\\frac{Bl}{\\mu_0\\mu}+\\frac{Bd}{\\mu_0}\\ \\Rightarrow\\ B=\\frac{\\mu_0NI}{\\frac{l}{\\mu}+d}=\\frac{1.26\\cdot10^{-3}}{2.25\\cdot10^{-3}}\\approx0.56\\ \\mathrm{T}$$",
+    "Oraliqda $H=\\frac{B}{\\mu_0}$: $$H\\approx4.4\\cdot10^5\\ \\mathrm{A/m}$$",
+    "Oraliqsiz (o'zak to'yinib qolgan bo'lardi): $$B=\\frac{\\mu_0\\mu NI}{l}\\approx5\\ \\mathrm{T}$$"
+   ],
+   "ru": [
+    "Теорема о циркуляции, $B$ везде одинакова: $$NI=\\frac{Bl}{\\mu_0\\mu}+\\frac{Bd}{\\mu_0}\\ \\Rightarrow\\ B=\\frac{\\mu_0NI}{\\frac{l}{\\mu}+d}=\\frac{1.26\\cdot10^{-3}}{2.25\\cdot10^{-3}}\\approx0.56\\ \\mathrm{T}$$",
+    "В зазоре $H=\\frac{B}{\\mu_0}$: $$H\\approx4.4\\cdot10^5\\ \\mathrm{A/m}$$",
+    "Без зазора (сердечник насытился бы): $$B=\\frac{\\mu_0\\mu NI}{l}\\approx5\\ \\mathrm{T}$$"
+   ],
+   "en": [
+    "Ampère's law with the same $B$ everywhere: $$NI=\\frac{Bl}{\\mu_0\\mu}+\\frac{Bd}{\\mu_0}\\ \\Rightarrow\\ B=\\frac{\\mu_0NI}{\\frac{l}{\\mu}+d}=\\frac{1.26\\cdot10^{-3}}{2.25\\cdot10^{-3}}\\approx0.56\\ \\mathrm{T}$$",
+    "In the gap $H=\\frac{B}{\\mu_0}$: $$H\\approx4.4\\cdot10^5\\ \\mathrm{A/m}$$",
+    "Without the gap (the core would saturate): $$B=\\frac{\\mu_0\\mu NI}{l}\\approx5\\ \\mathrm{T}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Magnit zanjir: $NI=\\frac{Bl}{\\mu_0\\mu}+\\frac{Bd}{\\mu_0}$",
+    "ru": "Магнитная цепь: $NI=\\frac{Bl}{\\mu_0\\mu}+\\frac{Bd}{\\mu_0}$",
+    "en": "Magnetic circuit: $NI=\\frac{Bl}{\\mu_0\\mu}+\\frac{Bd}{\\mu_0}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Havo oralig'i bor magnit zanjir",
+   "ru": "Магнитная цепь с зазором",
+   "en": "A magnetic circuit with a gap"
+  },
+  "answer": "B\\approx0.56\\ \\mathrm{T};\\ H\\approx4.4\\cdot10^5\\ \\mathrm{A/m};\\ B'\\approx5\\ \\mathrm{T}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Volkenshteyn, «Problems in General Physics», 12.55-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L19-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Taqasimon elektromagnitning ikkita qutbi temir plastinkaga tegib turibdi; har bir qutb yuzasi $10\\ \\mathrm{cm^2}$, induksiya $1\\ \\mathrm{T}$. Elektromagnitning ko'tarish kuchini toping.",
+   "ru": "Два полюса подковообразного электромагнита касаются железной пластины; площадь каждого полюса $10\\ \\mathrm{cm^2}$, индукция $1\\ \\mathrm{T}$. Найдите подъёмную силу электромагнита.",
+   "en": "The two poles of a horseshoe electromagnet touch an iron plate; each pole has an area of $10\\ \\mathrm{cm^2}$ and the field is $1\\ \\mathrm{T}$. Find the lifting force."
+  },
+  "figure": "figures/B2-L19-S11.png",
+  "solution": {
+   "uz": [
+    "Plastinka $dx$ ga uzoqlashsa, ikkita oraliqda energiya ortadi: $$F\\,dx=\\frac{B^2}{2\\mu_0}\\cdot2A\\,dx$$",
+    "Son qiymat: $$F=\\frac{1\\cdot2\\cdot10^{-3}}{2\\cdot1.26\\cdot10^{-6}}\\approx800\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "При отрыве пластины на $dx$ энергия растёт в двух зазорах: $$F\\,dx=\\frac{B^2}{2\\mu_0}\\cdot2A\\,dx$$",
+    "Численно: $$F=\\frac{1\\cdot2\\cdot10^{-3}}{2\\cdot1.26\\cdot10^{-6}}\\approx800\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "If the plate moves away by $dx$, energy grows in two gaps: $$F\\,dx=\\frac{B^2}{2\\mu_0}\\cdot2A\\,dx$$",
+    "Numerically: $$F=\\frac{1\\cdot2\\cdot10^{-3}}{2\\cdot1.26\\cdot10^{-6}}\\approx800\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tortish kuchi: $F=\\frac{B^2A}{2\\mu_0}$",
+    "ru": "Подъёмная сила: $F=\\frac{B^2A}{2\\mu_0}$",
+    "en": "Lifting force: $F=\\frac{B^2A}{2\\mu_0}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Elektromagnitning ko'tarish kuchi",
+   "ru": "Подъёмная сила электромагнита",
+   "en": "Lifting force of an electromagnet"
+  },
+  "answer": "F\\approx800\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L19, ko'tarish kuchi)"
+ },
+ {
+  "id": "B2-L19-S12",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Transformator o'zagi materialining gisterezis sirtmog'i yuzasi $200\\ \\mathrm{J/m^3}$. O'zak hajmi $1\\ \\mathrm{dm^3}$, chastota $50\\ \\mathrm{Hz}$. Gisterezis isrofi quvvatini toping.",
+   "ru": "Площадь петли гистерезиса материала сердечника трансформатора $200\\ \\mathrm{J/m^3}$. Объём сердечника $1\\ \\mathrm{dm^3}$, частота $50\\ \\mathrm{Hz}$. Найдите мощность потерь на гистерезис.",
+   "en": "The hysteresis loop of a transformer core material has an area of $200\\ \\mathrm{J/m^3}$. The core volume is $1\\ \\mathrm{dm^3}$ and the frequency $50\\ \\mathrm{Hz}$. Find the hysteresis power loss."
+  },
+  "figure": "figures/B2-L19-S12.png",
+  "solution": {
+   "uz": [
+    "Har siklda birlik hajmdagi isrof — sirtmoq yuzasi: $$P=wVf=200\\cdot10^{-3}\\cdot50=10\\ \\mathrm{W}$$"
+   ],
+   "ru": [
+    "Потери на единицу объёма за цикл — площадь петли: $$P=wVf=200\\cdot10^{-3}\\cdot50=10\\ \\mathrm{W}$$"
+   ],
+   "en": [
+    "Loss per unit volume per cycle is the loop area: $$P=wVf=200\\cdot10^{-3}\\cdot50=10\\ \\mathrm{W}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gisterezis isrofi: $P=wVf$, $w=\\oint H\\,dB$",
+    "ru": "Потери на гистерезис: $P=wVf$, $w=\\oint H\\,dB$",
+    "en": "Hysteresis loss: $P=wVf$, $w=\\oint H\\,dB$"
+   }
+  ],
+  "basis": {
+   "uz": "Gisterezis isrofi",
+   "ru": "Потери на гистерезис",
+   "en": "Hysteresis loss"
+  },
+  "answer": "P=10\\ \\mathrm{W}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original (B2-L19, gisterezis)"
+ },
+ {
+  "id": "B2-L19-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "O'rtacha radiusi $10\\ \\mathrm{cm}$ bo'lgan toroid kiruvchanligi $1500$ bo'lgan temir halqaga o'ralgan, $200$ o'ram, tok $1\\ \\mathrm{A}$. O'zakdagi $H$, $B$, $M$ ni va o'zak sirtidagi bog'langan to'liq tokni toping.",
+   "ru": "Тороид со средним радиусом $10\\ \\mathrm{cm}$ намотан на железное кольцо с проницаемостью $1500$, $200$ витков, ток $1\\ \\mathrm{A}$. Найдите $H$, $B$, $M$ в сердечнике и полный связанный ток на поверхности сердечника.",
+   "en": "A toroid of mean radius $10\\ \\mathrm{cm}$ is wound on an iron ring of permeability $1500$, with $200$ turns carrying $1\\ \\mathrm{A}$. Find $H$, $B$ and $M$ in the core and the total bound current on the core surface."
+  },
+  "figure": "figures/B2-L19-S13.png",
+  "solution": {
+   "uz": [
+    "Aylana kontur $NI$ erkin tokni qamraydi: $$H=\\frac{NI}{2\\pi r}\\approx318\\ \\mathrm{A/m},\\quad B=\\mu_0\\mu H\\approx0.60\\ \\mathrm{T}$$",
+    "Magnitlanish va bog'langan tok: $$M=(\\mu-1)H\\approx4.8\\cdot10^5\\ \\mathrm{A/m},\\quad I'=M\\cdot2\\pi r=(\\mu-1)NI\\approx3\\cdot10^5\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "Контур-окружность охватывает свободный ток $NI$: $$H=\\frac{NI}{2\\pi r}\\approx318\\ \\mathrm{A/m},\\quad B=\\mu_0\\mu H\\approx0.60\\ \\mathrm{T}$$",
+    "Намагниченность и связанный ток: $$M=(\\mu-1)H\\approx4.8\\cdot10^5\\ \\mathrm{A/m},\\quad I'=M\\cdot2\\pi r=(\\mu-1)NI\\approx3\\cdot10^5\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "A circular loop encloses the free current $NI$: $$H=\\frac{NI}{2\\pi r}\\approx318\\ \\mathrm{A/m},\\quad B=\\mu_0\\mu H\\approx0.60\\ \\mathrm{T}$$",
+    "Magnetization and bound current: $$M=(\\mu-1)H\\approx4.8\\cdot10^5\\ \\mathrm{A/m},\\quad I'=M\\cdot2\\pi r=(\\mu-1)NI\\approx3\\cdot10^5\\ \\mathrm{A}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "H vektori: $\\oint\\vec H\\cdot d\\vec l=I$, $\\vec B=\\mu_0\\left(\\vec H+\\vec M\\right)$",
+    "ru": "Вектор H: $\\oint\\vec H\\cdot d\\vec l=I$, $\\vec B=\\mu_0\\left(\\vec H+\\vec M\\right)$",
+    "en": "The H vector: $\\oint\\vec H\\cdot d\\vec l=I$, $\\vec B=\\mu_0\\left(\\vec H+\\vec M\\right)$"
+   },
+   {
+    "uz": "Bog'langan toklar: $\\vec K'=\\vec M\\times\\hat n$, $\\vec J'=\\nabla\\times\\vec M$",
+    "ru": "Связанные токи: $\\vec K'=\\vec M\\times\\hat n$, $\\vec J'=\\nabla\\times\\vec M$",
+    "en": "Bound currents: $\\vec K'=\\vec M\\times\\hat n$, $\\vec J'=\\nabla\\times\\vec M$"
+   }
+  ],
+  "basis": {
+   "uz": "Temir o'zakli toroid",
+   "ru": "Тороид с железным сердечником",
+   "en": "A toroid with an iron core"
+  },
+  "answer": "H\\approx318\\ \\mathrm{A/m};\\ B\\approx0.6\\ \\mathrm{T};\\ M\\approx4.8\\cdot10^5\\ \\mathrm{A/m};\\ I'\\approx3\\cdot10^5\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 12.87-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L19-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Suvning qabul qiluvchanligi $-9\\cdot10^{-6}$, zichligi $1000\\ \\mathrm{kg/m^3}$. Suv tomchisi magnit maydonda muallaq turishi uchun $B\\frac{dB}{dz}$ qancha bo'lishi kerak?",
+   "ru": "Восприимчивость воды $-9\\cdot10^{-6}$, плотность $1000\\ \\mathrm{kg/m^3}$. Каким должно быть $B\\frac{dB}{dz}$, чтобы капля воды парила в магнитном поле?",
+   "en": "Water has susceptibility $-9\\cdot10^{-6}$ and density $1000\\ \\mathrm{kg/m^3}$. What must $B\\frac{dB}{dz}$ be for a water drop to levitate in a magnetic field?"
+  },
+  "figure": "figures/B2-L19-S14.png",
+  "solution": {
+   "uz": [
+    "Magnit kuch og'irlikni muvozanatlaydi: $$\\frac{\\left|\\chi\\right|V}{2\\mu_0}\\cdot2B\\frac{dB}{dz}=\\rho Vg$$",
+    "Hajm qisqaradi: $$B\\frac{dB}{dz}=\\frac{\\mu_0\\rho g}{\\left|\\chi\\right|}=\\frac{1.26\\cdot10^{-6}\\cdot10^4}{9\\cdot10^{-6}}\\approx1400\\ \\mathrm{T^2/m}$$"
+   ],
+   "ru": [
+    "Магнитная сила уравновешивает тяжесть: $$\\frac{\\left|\\chi\\right|V}{2\\mu_0}\\cdot2B\\frac{dB}{dz}=\\rho Vg$$",
+    "Объём сокращается: $$B\\frac{dB}{dz}=\\frac{\\mu_0\\rho g}{\\left|\\chi\\right|}=\\frac{1.26\\cdot10^{-6}\\cdot10^4}{9\\cdot10^{-6}}\\approx1400\\ \\mathrm{T^2/m}$$"
+   ],
+   "en": [
+    "The magnetic force balances gravity: $$\\frac{\\left|\\chi\\right|V}{2\\mu_0}\\cdot2B\\frac{dB}{dz}=\\rho Vg$$",
+    "The volume cancels: $$B\\frac{dB}{dz}=\\frac{\\mu_0\\rho g}{\\left|\\chi\\right|}=\\frac{1.26\\cdot10^{-6}\\cdot10^4}{9\\cdot10^{-6}}\\approx1400\\ \\mathrm{T^2/m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Notekis maydonda kuch: $F=\\frac{\\chi V}{2\\mu_0}\\frac{d\\left(B^2\\right)}{dz}$",
+    "ru": "Сила в неоднородном поле: $F=\\frac{\\chi V}{2\\mu_0}\\frac{d\\left(B^2\\right)}{dz}$",
+    "en": "Force in a gradient: $F=\\frac{\\chi V}{2\\mu_0}\\frac{d\\left(B^2\\right)}{dz}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Diamagnit levitatsiya",
+   "ru": "Диамагнитная левитация",
+   "en": "Diamagnetic levitation"
+  },
+  "answer": "B\\frac{dB}{dz}\\approx1400\\ \\mathrm{T^2/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "original (B2-L19, levitatsiya)"
+ },
+ {
+  "id": "B2-L19-S15",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Kiruvchanligi $1000$ bo'lgan temirdan yasalgan ingichka sterjen, yupqa plastinka va shar $1\\ \\mathrm{mT}$ bir jinsli tashqi maydonga qo'yilgan: sterjen maydonga parallel, plastinka maydonga tik. Har biri ichidagi induksiyani toping (to'yinish yo'q).",
+   "ru": "Тонкий стержень, тонкая пластина и шар из железа с проницаемостью $1000$ помещены в однородное внешнее поле $1\\ \\mathrm{mT}$: стержень параллельно полю, пластина перпендикулярно. Найдите индукцию внутри каждого (насыщения нет).",
+   "en": "A thin rod, a thin plate and a sphere of iron with permeability $1000$ are placed in a uniform external field of $1\\ \\mathrm{mT}$: the rod parallel to the field, the plate perpendicular to it. Find the field inside each (no saturation)."
+  },
+  "figure": "figures/B2-L19-S15.png",
+  "solution": {
+   "uz": [
+    "Sterjen — urinma $H$ uzluksiz: $$H=\\frac{B_0}{\\mu_0}\\ \\Rightarrow\\ B=\\mu B_0=1\\ \\mathrm{T}$$",
+    "Plastinka — normal $B$ uzluksiz: $$B=B_0=1\\ \\mathrm{mT},\\quad H=\\frac{B_0}{\\mu_0\\mu}\\approx0.8\\ \\mathrm{A/m}$$",
+    "Shar — oraliq holat: $$B=\\frac{3\\mu}{\\mu+2}B_0\\approx3\\ \\mathrm{mT}$$"
+   ],
+   "ru": [
+    "Стержень — непрерывна касательная $H$: $$H=\\frac{B_0}{\\mu_0}\\ \\Rightarrow\\ B=\\mu B_0=1\\ \\mathrm{T}$$",
+    "Пластина — непрерывна нормальная $B$: $$B=B_0=1\\ \\mathrm{mT},\\quad H=\\frac{B_0}{\\mu_0\\mu}\\approx0.8\\ \\mathrm{A/m}$$",
+    "Шар — промежуточный случай: $$B=\\frac{3\\mu}{\\mu+2}B_0\\approx3\\ \\mathrm{mT}$$"
+   ],
+   "en": [
+    "Rod — tangential $H$ is continuous: $$H=\\frac{B_0}{\\mu_0}\\ \\Rightarrow\\ B=\\mu B_0=1\\ \\mathrm{T}$$",
+    "Plate — normal $B$ is continuous: $$B=B_0=1\\ \\mathrm{mT},\\quad H=\\frac{B_0}{\\mu_0\\mu}\\approx0.8\\ \\mathrm{A/m}$$",
+    "Sphere — an intermediate case: $$B=\\frac{3\\mu}{\\mu+2}B_0\\approx3\\ \\mathrm{mT}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Chegaraviy shartlar: $B_{1n}=B_{2n}$, $H_{1\\tau}=H_{2\\tau}$",
+    "ru": "Граничные условия: $B_{1n}=B_{2n}$, $H_{1\\tau}=H_{2\\tau}$",
+    "en": "Boundary conditions: $B_{1n}=B_{2n}$, $H_{1\\tau}=H_{2\\tau}$"
+   },
+   null,
+   {
+    "uz": "Shar tashqi maydonda: $B=\\frac{3\\mu}{\\mu+2}B_0$",
+    "ru": "Шар во внешнем поле: $B=\\frac{3\\mu}{\\mu+2}B_0$",
+    "en": "Sphere in a field: $B=\\frac{3\\mu}{\\mu+2}B_0$"
+   }
+  ],
+  "basis": {
+   "uz": "Shakl va magnitlanish",
+   "ru": "Форма и намагничивание",
+   "en": "Shape and magnetization"
+  },
+  "answer": "B=1\\ \\mathrm{T};\\ B=1\\ \\mathrm{mT};\\ B\\approx3\\ \\mathrm{mT}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L19, shakl effekti)"
+ },
+ {
+  "id": "B2-L19-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Uzunligi $0.5\\ \\mathrm{m}$, kesimi $4\\ \\mathrm{cm^2}$, kiruvchanligi $2000$ bo'lgan halqasimon o'zakda $2\\ \\mathrm{mm}$ havo oralig'i bor, $500$ o'ram o'ralgan. Havo oralig'i bilan va usiz g'altak induktivligini toping. Magnit energiyaning qanday ulushi oraliqda to'plangan?",
+   "ru": "Кольцевой сердечник длиной $0.5\\ \\mathrm{m}$, сечением $4\\ \\mathrm{cm^2}$ и проницаемостью $2000$ имеет воздушный зазор $2\\ \\mathrm{mm}$, на него намотано $500$ витков. Найдите индуктивность катушки с зазором и без него. Какая доля магнитной энергии сосредоточена в зазоре?",
+   "en": "A ring core $0.5\\ \\mathrm{m}$ long with cross-section $4\\ \\mathrm{cm^2}$ and permeability $2000$ has a $2\\ \\mathrm{mm}$ air gap and is wound with $500$ turns. Find the coil's inductance with and without the gap. What fraction of the magnetic energy is stored in the gap?"
+  },
+  "figure": "figures/B2-L19-S16.png",
+  "solution": {
+   "uz": [
+    "$L=\\frac{N\\Phi}{I}$, $\\Phi=BA$: $$L=\\frac{\\mu_0N^2A}{\\frac{l}{\\mu}+d}=\\frac{1.26\\cdot10^{-6}\\cdot2.5\\cdot10^5\\cdot4\\cdot10^{-4}}{2.25\\cdot10^{-3}}\\approx0.056\\ \\mathrm{H}$$",
+    "Oraliqsiz: $$L'=\\frac{\\mu_0\\mu N^2A}{l}\\approx0.50\\ \\mathrm{H}$$",
+    "Energiya zichligi $\\frac{B^2}{2\\mu_0\\mu}$ — $B$ bir xil, temirda $\\mu$ marta kichik ($W'$ — oraliqdagi energiya): $$\\frac{W'}{W}=\\frac{d}{\\frac{l}{\\mu}+d}=\\frac{2}{2.25}\\approx0.89$$"
+   ],
+   "ru": [
+    "$L=\\frac{N\\Phi}{I}$, $\\Phi=BA$: $$L=\\frac{\\mu_0N^2A}{\\frac{l}{\\mu}+d}=\\frac{1.26\\cdot10^{-6}\\cdot2.5\\cdot10^5\\cdot4\\cdot10^{-4}}{2.25\\cdot10^{-3}}\\approx0.056\\ \\mathrm{H}$$",
+    "Без зазора: $$L'=\\frac{\\mu_0\\mu N^2A}{l}\\approx0.50\\ \\mathrm{H}$$",
+    "Плотность энергии $\\frac{B^2}{2\\mu_0\\mu}$ — при одинаковом $B$ в железе в $\\mu$ раз меньше ($W'$ — энергия в зазоре): $$\\frac{W'}{W}=\\frac{d}{\\frac{l}{\\mu}+d}=\\frac{2}{2.25}\\approx0.89$$"
+   ],
+   "en": [
+    "$L=\\frac{N\\Phi}{I}$, $\\Phi=BA$: $$L=\\frac{\\mu_0N^2A}{\\frac{l}{\\mu}+d}=\\frac{1.26\\cdot10^{-6}\\cdot2.5\\cdot10^5\\cdot4\\cdot10^{-4}}{2.25\\cdot10^{-3}}\\approx0.056\\ \\mathrm{H}$$",
+    "Without the gap: $$L'=\\frac{\\mu_0\\mu N^2A}{l}\\approx0.50\\ \\mathrm{H}$$",
+    "Energy density $\\frac{B^2}{2\\mu_0\\mu}$ — same $B$, $\\mu$ times smaller in iron ($W'$ is the energy in the gap): $$\\frac{W'}{W}=\\frac{d}{\\frac{l}{\\mu}+d}=\\frac{2}{2.25}\\approx0.89$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Magnit zanjir: $NI=\\frac{Bl}{\\mu_0\\mu}+\\frac{Bd}{\\mu_0}$",
+    "ru": "Магнитная цепь: $NI=\\frac{Bl}{\\mu_0\\mu}+\\frac{Bd}{\\mu_0}$",
+    "en": "Magnetic circuit: $NI=\\frac{Bl}{\\mu_0\\mu}+\\frac{Bd}{\\mu_0}$"
+   },
+   null,
+   {
+    "uz": "Energiya: $W=\\frac{LI^2}{2}$, $w=\\frac{B^2}{2\\mu_0\\mu}$",
+    "ru": "Энергия: $W=\\frac{LI^2}{2}$, $w=\\frac{B^2}{2\\mu_0\\mu}$",
+    "en": "Energy: $W=\\frac{LI^2}{2}$, $w=\\frac{B^2}{2\\mu_0\\mu}$"
+   }
+  ],
+  "basis": {
+   "uz": "Oraliqli o'zak induktivligi",
+   "ru": "Индуктивность сердечника с зазором",
+   "en": "Inductance of a gapped core"
+  },
+  "answer": "L\\approx0.056\\ \\mathrm{H};\\ L'\\approx0.5\\ \\mathrm{H};\\ \\frac{W'}{W}\\approx0.89",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B2-L19, oraliqli o'zak)"
+ },
+ {
+  "id": "B2-L19-S17",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Nikelning Kyuri temperaturasi $631\\ \\mathrm{K}$. $800\\ \\mathrm{K}$ da qabul qiluvchanligi $10^{-3}$. Kyuri–Veys qonuni bo'yicha $700\\ \\mathrm{K}$ dagi qabul qiluvchanlikni toping.",
+   "ru": "Температура Кюри никеля $631\\ \\mathrm{K}$. При $800\\ \\mathrm{K}$ его восприимчивость $10^{-3}$. Найдите по закону Кюри–Вейса восприимчивость при $700\\ \\mathrm{K}$.",
+   "en": "Nickel has a Curie temperature of $631\\ \\mathrm{K}$. At $800\\ \\mathrm{K}$ its susceptibility is $10^{-3}$. Using the Curie–Weiss law, find the susceptibility at $700\\ \\mathrm{K}$."
+  },
+  "figure": "figures/B2-L19-S17.png",
+  "solution": {
+   "uz": [
+    "$\\chi(T-\\Theta)=C$ o'zgarmas: $$\\chi_2=\\chi_1\\frac{T_1-\\Theta}{T_2-\\Theta}=10^{-3}\\cdot\\frac{169}{69}\\approx2.4\\cdot10^{-3}$$"
+   ],
+   "ru": [
+    "$\\chi(T-\\Theta)=C$ постоянно: $$\\chi_2=\\chi_1\\frac{T_1-\\Theta}{T_2-\\Theta}=10^{-3}\\cdot\\frac{169}{69}\\approx2.4\\cdot10^{-3}$$"
+   ],
+   "en": [
+    "$\\chi(T-\\Theta)=C$ is constant: $$\\chi_2=\\chi_1\\frac{T_1-\\Theta}{T_2-\\Theta}=10^{-3}\\cdot\\frac{169}{69}\\approx2.4\\cdot10^{-3}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kyuri–Veys qonuni: $\\chi=\\frac{C}{T-\\Theta}$",
+    "ru": "Закон Кюри–Вейса: $\\chi=\\frac{C}{T-\\Theta}$",
+    "en": "Curie–Weiss law: $\\chi=\\frac{C}{T-\\Theta}$"
+   }
+  ],
+  "basis": {
+   "uz": "Kyuri–Veys qonuni",
+   "ru": "Закон Кюри–Вейса",
+   "en": "The Curie–Weiss law"
+  },
+  "answer": "\\chi\\approx2.4\\cdot10^{-3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L19, Kyuri–Veys qonuni)"
+ },
+ {
+  "id": "B2-L19-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radiusi $R$ bo'lgan uzun silindr o'qi bo'ylab notekis magnitlangan: $M=ks$ ($s$ — o'qdan masofa). Hajmiy va sirt bog'langan toklarini toping va silindr ichidagi $B(s)$ ni ikki usulda hisoblang.",
+   "ru": "Длинный цилиндр радиуса $R$ неоднородно намагничен вдоль оси: $M=ks$ ($s$ — расстояние от оси). Найдите объёмный и поверхностный связанные токи и вычислите двумя способами $B(s)$ внутри цилиндра.",
+   "en": "A long cylinder of radius $R$ is magnetized non-uniformly along its axis: $M=ks$ ($s$ is the distance from the axis). Find the bound volume and surface currents, and compute $B(s)$ inside the cylinder in two ways."
+  },
+  "figure": "figures/B2-L19-S18.png",
+  "solution": {
+   "uz": [
+    "Bog'langan toklar (silindrik koordinatalarda): $$J'=-\\frac{dM}{ds}=-k,\\quad K'=M(R)=kR$$",
+    "1-usul: erkin tok yo'q, $H=0$: $$B=\\mu_0\\left(H+M\\right)=\\mu_0ks$$",
+    "2-usul: $s$ dan tashqaridagi bog'langan toklar (uzunlik birligiga): $$B=\\mu_0\\left(kR-k(R-s)\\right)=\\mu_0ks$$"
+   ],
+   "ru": [
+    "Связанные токи (в цилиндрических координатах): $$J'=-\\frac{dM}{ds}=-k,\\quad K'=M(R)=kR$$",
+    "Способ 1: свободного тока нет, $H=0$: $$B=\\mu_0\\left(H+M\\right)=\\mu_0ks$$",
+    "Способ 2: связанные токи снаружи $s$ (на единицу длины): $$B=\\mu_0\\left(kR-k(R-s)\\right)=\\mu_0ks$$"
+   ],
+   "en": [
+    "Bound currents (in cylindrical coordinates): $$J'=-\\frac{dM}{ds}=-k,\\quad K'=M(R)=kR$$",
+    "Way 1: there is no free current, so $H=0$: $$B=\\mu_0\\left(H+M\\right)=\\mu_0ks$$",
+    "Way 2: the bound currents outside $s$ (per unit length): $$B=\\mu_0\\left(kR-k(R-s)\\right)=\\mu_0ks$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bog'langan toklar: $\\vec K'=\\vec M\\times\\hat n$, $\\vec J'=\\nabla\\times\\vec M$",
+    "ru": "Связанные токи: $\\vec K'=\\vec M\\times\\hat n$, $\\vec J'=\\nabla\\times\\vec M$",
+    "en": "Bound currents: $\\vec K'=\\vec M\\times\\hat n$, $\\vec J'=\\nabla\\times\\vec M$"
+   },
+   {
+    "uz": "H vektori: $\\oint\\vec H\\cdot d\\vec l=I$, $\\vec B=\\mu_0\\left(\\vec H+\\vec M\\right)$",
+    "ru": "Вектор H: $\\oint\\vec H\\cdot d\\vec l=I$, $\\vec B=\\mu_0\\left(\\vec H+\\vec M\\right)$",
+    "en": "The H vector: $\\oint\\vec H\\cdot d\\vec l=I$, $\\vec B=\\mu_0\\left(\\vec H+\\vec M\\right)$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Notekis magnitlanish",
+   "ru": "Неоднородная намагниченность",
+   "en": "Non-uniform magnetization"
+  },
+  "answer": "J'=-k;\\ K'=kR;\\ B=\\mu_0ks",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L19, bog'langan toklar)"
+ }
+]

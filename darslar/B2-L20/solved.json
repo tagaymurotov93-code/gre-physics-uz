@@ -1,0 +1,828 @@
+[
+ {
+  "id": "B2-L20-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Radiusi $5\\ \\mathrm{cm}$ bo'lgan doiraviy qoplamali havo kondensatori $2\\ \\mathrm{A}$ tok bilan zaryadlanmoqda. Qoplamalar orasida $\\frac{dE}{dt}$ ni, siljish tokini va o'qdan $3\\ \\mathrm{cm}$ hamda $10\\ \\mathrm{cm}$ masofadagi magnit induksiyani toping.",
+   "ru": "Воздушный конденсатор с круглыми обкладками радиуса $5\\ \\mathrm{cm}$ заряжается током $2\\ \\mathrm{A}$. Найдите $\\frac{dE}{dt}$ между обкладками, ток смещения и магнитную индукцию на расстояниях $3\\ \\mathrm{cm}$ и $10\\ \\mathrm{cm}$ от оси.",
+   "en": "An air capacitor with circular plates of radius $5\\ \\mathrm{cm}$ is being charged by a current of $2\\ \\mathrm{A}$. Find $\\frac{dE}{dt}$ between the plates, the displacement current, and the magnetic field at $3\\ \\mathrm{cm}$ and $10\\ \\mathrm{cm}$ from the axis."
+  },
+  "figure": "figures/B2-L20-S01.png",
+  "solution": {
+   "uz": [
+    "$E=\\frac{q}{\\varepsilon_0A}$ dan: $$\\frac{dE}{dt}=\\frac{I}{\\varepsilon_0\\pi R^2}=\\frac{2}{8.85\\cdot10^{-12}\\cdot7.85\\cdot10^{-3}}\\approx2.9\\cdot10^{13}\\ \\mathrm{V/(m\\cdot s)},\\quad I'=\\varepsilon_0A\\frac{dE}{dt}=I=2\\ \\mathrm{A}$$",
+    "$r<R$ — siljish tokining ulushi $\\frac{r^2}{R^2}$: $$B=\\frac{\\mu_0Ir}{2\\pi R^2}=\\frac{4\\pi\\cdot10^{-7}\\cdot2\\cdot0.03}{2\\pi\\cdot0.0025}=4.8\\ \\mu\\mathrm{T}$$",
+    "$r>R$ — butun tok: $$B=\\frac{\\mu_0I}{2\\pi r}=4\\ \\mu\\mathrm{T}$$"
+   ],
+   "ru": [
+    "Из $E=\\frac{q}{\\varepsilon_0A}$: $$\\frac{dE}{dt}=\\frac{I}{\\varepsilon_0\\pi R^2}=\\frac{2}{8.85\\cdot10^{-12}\\cdot7.85\\cdot10^{-3}}\\approx2.9\\cdot10^{13}\\ \\mathrm{V/(m\\cdot s)},\\quad I'=\\varepsilon_0A\\frac{dE}{dt}=I=2\\ \\mathrm{A}$$",
+    "$r<R$ — доля тока смещения $\\frac{r^2}{R^2}$: $$B=\\frac{\\mu_0Ir}{2\\pi R^2}=\\frac{4\\pi\\cdot10^{-7}\\cdot2\\cdot0.03}{2\\pi\\cdot0.0025}=4.8\\ \\mu\\mathrm{T}$$",
+    "$r>R$ — весь ток: $$B=\\frac{\\mu_0I}{2\\pi r}=4\\ \\mu\\mathrm{T}$$"
+   ],
+   "en": [
+    "From $E=\\frac{q}{\\varepsilon_0A}$: $$\\frac{dE}{dt}=\\frac{I}{\\varepsilon_0\\pi R^2}=\\frac{2}{8.85\\cdot10^{-12}\\cdot7.85\\cdot10^{-3}}\\approx2.9\\cdot10^{13}\\ \\mathrm{V/(m\\cdot s)},\\quad I'=\\varepsilon_0A\\frac{dE}{dt}=I=2\\ \\mathrm{A}$$",
+    "$r<R$ — a fraction $\\frac{r^2}{R^2}$ of the displacement current: $$B=\\frac{\\mu_0Ir}{2\\pi R^2}=\\frac{4\\pi\\cdot10^{-7}\\cdot2\\cdot0.03}{2\\pi\\cdot0.0025}=4.8\\ \\mu\\mathrm{T}$$",
+    "$r>R$ — the whole current: $$B=\\frac{\\mu_0I}{2\\pi r}=4\\ \\mu\\mathrm{T}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Siljish toki: $I'=\\varepsilon_0\\frac{d\\Phi_E}{dt}$, $\\vec J'=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}$",
+    "ru": "Ток смещения: $I'=\\varepsilon_0\\frac{d\\Phi_E}{dt}$, $\\vec J'=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}$",
+    "en": "Displacement current: $I'=\\varepsilon_0\\frac{d\\Phi_E}{dt}$, $\\vec J'=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}$"
+   },
+   {
+    "uz": "Qoplamalar orasida: $B=\\frac{\\mu_0Ir}{2\\pi R^2}$ ($r<R$)",
+    "ru": "Между обкладками: $B=\\frac{\\mu_0Ir}{2\\pi R^2}$ ($r<R$)",
+    "en": "Between the plates: $B=\\frac{\\mu_0Ir}{2\\pi R^2}$ ($r<R$)"
+   },
+   {
+    "uz": "Amper–Maksvell qonuni: $\\oint\\vec B\\cdot d\\vec l=\\mu_0I+\\mu_0\\varepsilon_0\\frac{d\\Phi_E}{dt}$",
+    "ru": "Закон Ампера–Максвелла: $\\oint\\vec B\\cdot d\\vec l=\\mu_0I+\\mu_0\\varepsilon_0\\frac{d\\Phi_E}{dt}$",
+    "en": "Ampère–Maxwell law: $\\oint\\vec B\\cdot d\\vec l=\\mu_0I+\\mu_0\\varepsilon_0\\frac{d\\Phi_E}{dt}$"
+   }
+  ],
+  "basis": {
+   "uz": "Kondensator ichidagi magnit maydon",
+   "ru": "Магнитное поле внутри конденсатора",
+   "en": "The magnetic field inside a capacitor"
+  },
+  "answer": "\\frac{dE}{dt}\\approx2.9\\cdot10^{13}\\ \\mathrm{V/(m\\cdot s)};\\ I'=2\\ \\mathrm{A};\\ B=4.8\\ \\mu\\mathrm{T};\\ B'=4\\ \\mu\\mathrm{T}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 16.3-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L20-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Qoplamalari yuzasi $100\\ \\mathrm{cm^2}$, orasi $1\\ \\mathrm{mm}$ bo'lgan havo kondensatoriga $u=311\\sin\\left(100\\pi t\\right)$ kuchlanish ($\\mathrm{V}$) berilgan. Siljish toki va uning zichligi amplitudasini toping.",
+   "ru": "К воздушному конденсатору с площадью обкладок $100\\ \\mathrm{cm^2}$ и зазором $1\\ \\mathrm{mm}$ приложено напряжение $u=311\\sin\\left(100\\pi t\\right)$ ($\\mathrm{V}$). Найдите амплитуды тока смещения и его плотности.",
+   "en": "A voltage $u=311\\sin\\left(100\\pi t\\right)$ ($\\mathrm{V}$) is applied to an air capacitor with plate area $100\\ \\mathrm{cm^2}$ and gap $1\\ \\mathrm{mm}$. Find the amplitudes of the displacement current and its density."
+  },
+  "figure": "figures/B2-L20-S02.png",
+  "solution": {
+   "uz": [
+    "Sig'im: $$C=\\frac{\\varepsilon_0A}{d}=\\frac{8.85\\cdot10^{-12}\\cdot10^{-2}}{10^{-3}}=88.5\\ \\mathrm{pF}$$",
+    "Siljish toki simdagi tokka teng: $$I'_0=C\\omega U_0=88.5\\cdot10^{-12}\\cdot314\\cdot311\\approx8.6\\ \\mu\\mathrm{A},\\quad J'_0=\\frac{I'_0}{A}\\approx8.6\\cdot10^{-4}\\ \\mathrm{A/m^2}$$"
+   ],
+   "ru": [
+    "Ёмкость: $$C=\\frac{\\varepsilon_0A}{d}=\\frac{8.85\\cdot10^{-12}\\cdot10^{-2}}{10^{-3}}=88.5\\ \\mathrm{pF}$$",
+    "Ток смещения равен току в проводе: $$I'_0=C\\omega U_0=88.5\\cdot10^{-12}\\cdot314\\cdot311\\approx8.6\\ \\mu\\mathrm{A},\\quad J'_0=\\frac{I'_0}{A}\\approx8.6\\cdot10^{-4}\\ \\mathrm{A/m^2}$$"
+   ],
+   "en": [
+    "Capacitance: $$C=\\frac{\\varepsilon_0A}{d}=\\frac{8.85\\cdot10^{-12}\\cdot10^{-2}}{10^{-3}}=88.5\\ \\mathrm{pF}$$",
+    "The displacement current equals the wire current: $$I'_0=C\\omega U_0=88.5\\cdot10^{-12}\\cdot314\\cdot311\\approx8.6\\ \\mu\\mathrm{A},\\quad J'_0=\\frac{I'_0}{A}\\approx8.6\\cdot10^{-4}\\ \\mathrm{A/m^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kondensator: $C=\\frac{\\varepsilon_0\\varepsilon A}{d}$, $I=C\\frac{dU}{dt}$",
+    "ru": "Конденсатор: $C=\\frac{\\varepsilon_0\\varepsilon A}{d}$, $I=C\\frac{dU}{dt}$",
+    "en": "Capacitor: $C=\\frac{\\varepsilon_0\\varepsilon A}{d}$, $I=C\\frac{dU}{dt}$"
+   },
+   {
+    "uz": "Siljish toki: $I'=\\varepsilon_0\\frac{d\\Phi_E}{dt}$, $\\vec J'=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}$",
+    "ru": "Ток смещения: $I'=\\varepsilon_0\\frac{d\\Phi_E}{dt}$, $\\vec J'=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}$",
+    "en": "Displacement current: $I'=\\varepsilon_0\\frac{d\\Phi_E}{dt}$, $\\vec J'=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}$"
+   }
+  ],
+  "basis": {
+   "uz": "O'zgaruvchan kuchlanishdagi kondensator",
+   "ru": "Конденсатор под переменным напряжением",
+   "en": "A capacitor under AC voltage"
+  },
+  "answer": "I'_0\\approx8.6\\ \\mu\\mathrm{A};\\ J'_0\\approx8.6\\cdot10^{-4}\\ \\mathrm{A/m^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 16.5-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L20-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$\\mu_0=4\\pi\\cdot10^{-7}\\ \\mathrm{H/m}$ va $\\varepsilon_0=8.85\\cdot10^{-12}\\ \\mathrm{F/m}$ dan yorug'lik tezligini hisoblang. Vakuumda chastotasi $100\\ \\mathrm{MHz}$, elektr maydon amplitudasi $300\\ \\mathrm{V/m}$ bo'lgan yassi to'lqinning to'lqin uzunligi, to'lqin soni va magnit maydon amplitudasini toping.",
+   "ru": "Вычислите скорость света по $\\mu_0=4\\pi\\cdot10^{-7}\\ \\mathrm{H/m}$ и $\\varepsilon_0=8.85\\cdot10^{-12}\\ \\mathrm{F/m}$. Найдите длину волны, волновое число и амплитуду магнитного поля плоской волны в вакууме с частотой $100\\ \\mathrm{MHz}$ и амплитудой электрического поля $300\\ \\mathrm{V/m}$.",
+   "en": "Compute the speed of light from $\\mu_0=4\\pi\\cdot10^{-7}\\ \\mathrm{H/m}$ and $\\varepsilon_0=8.85\\cdot10^{-12}\\ \\mathrm{F/m}$. Find the wavelength, wave number and magnetic field amplitude of a plane wave in vacuum with frequency $100\\ \\mathrm{MHz}$ and electric field amplitude $300\\ \\mathrm{V/m}$."
+  },
+  "figure": "figures/B2-L20-S03.png",
+  "solution": {
+   "uz": [
+    "To'lqin tenglamasidan: $$c=\\frac{1}{\\sqrt{4\\pi\\cdot10^{-7}\\cdot8.85\\cdot10^{-12}}}\\approx3.00\\cdot10^8\\ \\mathrm{m/s}$$",
+    "To'lqin parametrlari: $$\\lambda=\\frac{c}{f}=3\\ \\mathrm{m},\\quad k=\\frac{2\\pi}{\\lambda}\\approx2.09\\ \\mathrm{m^{-1}},\\quad B_0=\\frac{E_0}{c}=10^{-6}\\ \\mathrm{T}$$"
+   ],
+   "ru": [
+    "Из волнового уравнения: $$c=\\frac{1}{\\sqrt{4\\pi\\cdot10^{-7}\\cdot8.85\\cdot10^{-12}}}\\approx3.00\\cdot10^8\\ \\mathrm{m/s}$$",
+    "Параметры волны: $$\\lambda=\\frac{c}{f}=3\\ \\mathrm{m},\\quad k=\\frac{2\\pi}{\\lambda}\\approx2.09\\ \\mathrm{m^{-1}},\\quad B_0=\\frac{E_0}{c}=10^{-6}\\ \\mathrm{T}$$"
+   ],
+   "en": [
+    "From the wave equation: $$c=\\frac{1}{\\sqrt{4\\pi\\cdot10^{-7}\\cdot8.85\\cdot10^{-12}}}\\approx3.00\\cdot10^8\\ \\mathrm{m/s}$$",
+    "Wave parameters: $$\\lambda=\\frac{c}{f}=3\\ \\mathrm{m},\\quad k=\\frac{2\\pi}{\\lambda}\\approx2.09\\ \\mathrm{m^{-1}},\\quad B_0=\\frac{E_0}{c}=10^{-6}\\ \\mathrm{T}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yassi to'lqin: $c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$, $B_0=\\frac{E_0}{c}$, $\\omega=ck$",
+    "ru": "Плоская волна: $c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$, $B_0=\\frac{E_0}{c}$, $\\omega=ck$",
+    "en": "Plane wave: $c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$, $B_0=\\frac{E_0}{c}$, $\\omega=ck$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Yorug'lik tezligi va yassi to'lqin",
+   "ru": "Скорость света и плоская волна",
+   "en": "The speed of light and a plane wave"
+  },
+  "answer": "c\\approx3.00\\cdot10^8\\ \\mathrm{m/s};\\ \\lambda=3\\ \\mathrm{m};\\ k\\approx2.09\\ \\mathrm{m^{-1}};\\ B_0=1\\ \\mu\\mathrm{T}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 16.11-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L20-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Biror sohada elektrostatik maydon $\\vec E=ax^2\\hat x+by\\hat y$, bu yerda $a=100\\ \\mathrm{V/m^3}$, $b=50\\ \\mathrm{V/m^2}$. $x=1\\ \\mathrm{m}$ nuqtadagi zaryad zichligini toping. Bu maydon elektrostatik bo'la oladimi?",
+   "ru": "В некоторой области электростатическое поле $\\vec E=ax^2\\hat x+by\\hat y$, где $a=100\\ \\mathrm{V/m^3}$, $b=50\\ \\mathrm{V/m^2}$. Найдите плотность заряда в точке $x=1\\ \\mathrm{m}$. Может ли это поле быть электростатическим?",
+   "en": "In some region the electrostatic field is $\\vec E=ax^2\\hat x+by\\hat y$, with $a=100\\ \\mathrm{V/m^3}$ and $b=50\\ \\mathrm{V/m^2}$. Find the charge density at the point $x=1\\ \\mathrm{m}$. Can this field be electrostatic?"
+  },
+  "figure": "figures/B2-L20-S04.png",
+  "solution": {
+   "uz": [
+    "Divergensiya: $$\\nabla\\cdot\\vec E=2ax+b$$",
+    "Gauss teoremasi: $$\\rho=\\varepsilon_0\\left(2ax+b\\right)=8.85\\cdot10^{-12}\\cdot250\\approx2.2\\cdot10^{-9}\\ \\mathrm{C/m^3}$$",
+    "Rotor nolga teng — elektrostatik bo'la oladi: $$\\nabla\\times\\vec E=0$$"
+   ],
+   "ru": [
+    "Дивергенция: $$\\nabla\\cdot\\vec E=2ax+b$$",
+    "Теорема Гаусса: $$\\rho=\\varepsilon_0\\left(2ax+b\\right)=8.85\\cdot10^{-12}\\cdot250\\approx2.2\\cdot10^{-9}\\ \\mathrm{C/m^3}$$",
+    "Ротор равен нулю — может быть электростатическим: $$\\nabla\\times\\vec E=0$$"
+   ],
+   "en": [
+    "Divergence: $$\\nabla\\cdot\\vec E=2ax+b$$",
+    "Gauss's law: $$\\rho=\\varepsilon_0\\left(2ax+b\\right)=8.85\\cdot10^{-12}\\cdot250\\approx2.2\\cdot10^{-9}\\ \\mathrm{C/m^3}$$",
+    "The curl is zero — it can be electrostatic: $$\\nabla\\times\\vec E=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Divergensiya: $\\nabla\\cdot\\vec E=\\frac{\\partial E_x}{\\partial x}+\\frac{\\partial E_y}{\\partial y}+\\frac{\\partial E_z}{\\partial z}$",
+    "ru": "Дивергенция: $\\nabla\\cdot\\vec E=\\frac{\\partial E_x}{\\partial x}+\\frac{\\partial E_y}{\\partial y}+\\frac{\\partial E_z}{\\partial z}$",
+    "en": "Divergence: $\\nabla\\cdot\\vec E=\\frac{\\partial E_x}{\\partial x}+\\frac{\\partial E_y}{\\partial y}+\\frac{\\partial E_z}{\\partial z}$"
+   },
+   {
+    "uz": "Gauss teoremasi: $\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}$",
+    "ru": "Теорема Гаусса: $\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}$",
+    "en": "Gauss's law: $\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Maydondan zaryad zichligi",
+   "ru": "Плотность заряда по полю",
+   "en": "Charge density from a field"
+  },
+  "answer": "\\rho\\approx2.2\\cdot10^{-9}\\ \\mathrm{C/m^3};\\ \\nabla\\times\\vec E=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original (B2-L20, divergensiya)"
+ },
+ {
+  "id": "B2-L20-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $2\\ \\mathrm{mm}$ bo'lgan sim ichida magnit maydon $\\vec B=b\\left(-y\\hat x+x\\hat y\\right)$, $b=0.5\\ \\mathrm{T/m}$ ($z$ — sim o'qi). Tok zichligini va simdagi to'liq tokni toping.",
+   "ru": "Внутри провода радиуса $2\\ \\mathrm{mm}$ магнитное поле $\\vec B=b\\left(-y\\hat x+x\\hat y\\right)$, $b=0.5\\ \\mathrm{T/m}$ ($z$ — ось провода). Найдите плотность тока и полный ток в проводе.",
+   "en": "Inside a wire of radius $2\\ \\mathrm{mm}$ the magnetic field is $\\vec B=b\\left(-y\\hat x+x\\hat y\\right)$, $b=0.5\\ \\mathrm{T/m}$ ($z$ is the wire axis). Find the current density and the total current in the wire."
+  },
+  "figure": "figures/B2-L20-S05.png",
+  "solution": {
+   "uz": [
+    "Rotor: $$\\nabla\\times\\vec B=\\left(\\frac{\\partial B_y}{\\partial x}-\\frac{\\partial B_x}{\\partial y}\\right)\\hat z=2b\\hat z$$",
+    "Statik maydon — siljish toki yo'q: $$\\vec J=\\frac{2b}{\\mu_0}\\hat z\\approx8.0\\cdot10^5\\ \\mathrm{A/m^2},\\quad I=J\\pi R^2\\approx10\\ \\mathrm{A}$$"
+   ],
+   "ru": [
+    "Ротор: $$\\nabla\\times\\vec B=\\left(\\frac{\\partial B_y}{\\partial x}-\\frac{\\partial B_x}{\\partial y}\\right)\\hat z=2b\\hat z$$",
+    "Статическое поле — тока смещения нет: $$\\vec J=\\frac{2b}{\\mu_0}\\hat z\\approx8.0\\cdot10^5\\ \\mathrm{A/m^2},\\quad I=J\\pi R^2\\approx10\\ \\mathrm{A}$$"
+   ],
+   "en": [
+    "Curl: $$\\nabla\\times\\vec B=\\left(\\frac{\\partial B_y}{\\partial x}-\\frac{\\partial B_x}{\\partial y}\\right)\\hat z=2b\\hat z$$",
+    "Static field — no displacement current: $$\\vec J=\\frac{2b}{\\mu_0}\\hat z\\approx8.0\\cdot10^5\\ \\mathrm{A/m^2},\\quad I=J\\pi R^2\\approx10\\ \\mathrm{A}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Amper teoremasi: $\\nabla\\times\\vec B=\\mu_0\\vec J$",
+    "ru": "Теорема о циркуляции: $\\nabla\\times\\vec B=\\mu_0\\vec J$",
+    "en": "Ampère's law: $\\nabla\\times\\vec B=\\mu_0\\vec J$"
+   }
+  ],
+  "basis": {
+   "uz": "Maydondan tok zichligi",
+   "ru": "Плотность тока по полю",
+   "en": "Current density from a field"
+  },
+  "answer": "J\\approx8.0\\cdot10^5\\ \\mathrm{A/m^2};\\ I\\approx10\\ \\mathrm{A}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B2-L20, rotor)"
+ },
+ {
+  "id": "B2-L20-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Dengiz suvi uchun $\\sigma=4\\ \\mathrm{S/m}$, $\\varepsilon=80$. $1\\ \\mathrm{MHz}$ va $10\\ \\mathrm{GHz}$ chastotalarda o'tkazuvchanlik va siljish toklari amplitudalari nisbatini toping. Qaysi chastotada suv o'tkazgich kabi ishlaydi?",
+   "ru": "Для морской воды $\\sigma=4\\ \\mathrm{S/m}$, $\\varepsilon=80$. Найдите отношение амплитуд токов проводимости и смещения на частотах $1\\ \\mathrm{MHz}$ и $10\\ \\mathrm{GHz}$. На какой частоте вода ведёт себя как проводник?",
+   "en": "For sea water $\\sigma=4\\ \\mathrm{S/m}$ and $\\varepsilon=80$. Find the ratio of the conduction and displacement current amplitudes at $1\\ \\mathrm{MHz}$ and $10\\ \\mathrm{GHz}$. At which frequency does the water behave like a conductor?"
+  },
+  "figure": "figures/B2-L20-S06.png",
+  "solution": {
+   "uz": [
+    "$J=\\sigma E_0$, $J'=\\omega\\varepsilon_0\\varepsilon E_0$: $$\\frac{J}{J'}=\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}=\\frac{4}{2\\pi\\cdot10^6\\cdot8.85\\cdot10^{-12}\\cdot80}\\approx900$$",
+    "$10\\ \\mathrm{GHz}$ da $10^4$ marta kichik: $$\\frac{J}{J'}\\approx0.09$$"
+   ],
+   "ru": [
+    "$J=\\sigma E_0$, $J'=\\omega\\varepsilon_0\\varepsilon E_0$: $$\\frac{J}{J'}=\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}=\\frac{4}{2\\pi\\cdot10^6\\cdot8.85\\cdot10^{-12}\\cdot80}\\approx900$$",
+    "При $10\\ \\mathrm{GHz}$ в $10^4$ раз меньше: $$\\frac{J}{J'}\\approx0.09$$"
+   ],
+   "en": [
+    "$J=\\sigma E_0$, $J'=\\omega\\varepsilon_0\\varepsilon E_0$: $$\\frac{J}{J'}=\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}=\\frac{4}{2\\pi\\cdot10^6\\cdot8.85\\cdot10^{-12}\\cdot80}\\approx900$$",
+    "At $10\\ \\mathrm{GHz}$ it is $10^4$ times smaller: $$\\frac{J}{J'}\\approx0.09$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Toklar nisbati: $\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}$",
+    "ru": "Отношение токов: $\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}$",
+    "en": "Current ratio: $\\frac{\\sigma}{\\omega\\varepsilon_0\\varepsilon}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "O'tkazgichmi yoki dielektrikmi",
+   "ru": "Проводник или диэлектрик",
+   "en": "Conductor or dielectric"
+  },
+  "answer": "\\frac{J}{J'}\\approx900;\\ \\frac{J}{J'}\\approx0.09",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original (B2-L20, toklar nisbati)"
+ },
+ {
+  "id": "B2-L20-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Plastmassa uchun $\\varepsilon=5$, $\\sigma=10^{-11}\\ \\mathrm{S/m}$. Uning ichiga kiritilgan ortiqcha zaryad zichligi qancha vaqtda $100$ marta kamayadi?",
+   "ru": "Для пластмассы $\\varepsilon=5$, $\\sigma=10^{-11}\\ \\mathrm{S/m}$. За какое время плотность внесённого в неё избыточного заряда уменьшится в $100$ раз?",
+   "en": "A plastic has $\\varepsilon=5$ and $\\sigma=10^{-11}\\ \\mathrm{S/m}$. How long does it take for the density of excess charge placed inside it to decrease by a factor of $100$?"
+  },
+  "figure": "figures/B2-L20-S07.png",
+  "solution": {
+   "uz": [
+    "Relaksatsiya vaqti: $$\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}=\\frac{8.85\\cdot10^{-12}\\cdot5}{10^{-11}}\\approx4.4\\ \\mathrm{s}$$",
+    "$e^{-\\frac{t}{\\tau}}=\\frac{1}{100}$: $$t=\\tau\\ln100\\approx20\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Время релаксации: $$\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}=\\frac{8.85\\cdot10^{-12}\\cdot5}{10^{-11}}\\approx4.4\\ \\mathrm{s}$$",
+    "$e^{-\\frac{t}{\\tau}}=\\frac{1}{100}$: $$t=\\tau\\ln100\\approx20\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "Relaxation time: $$\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}=\\frac{8.85\\cdot10^{-12}\\cdot5}{10^{-11}}\\approx4.4\\ \\mathrm{s}$$",
+    "$e^{-\\frac{t}{\\tau}}=\\frac{1}{100}$: $$t=\\tau\\ln100\\approx20\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Relaksatsiya: $\\rho=\\rho_0e^{-\\frac{t}{\\tau}}$, $\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}$",
+    "ru": "Релаксация: $\\rho=\\rho_0e^{-\\frac{t}{\\tau}}$, $\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}$",
+    "en": "Relaxation: $\\rho=\\rho_0e^{-\\frac{t}{\\tau}}$, $\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Zaryad relaksatsiyasi",
+   "ru": "Релаксация заряда",
+   "en": "Charge relaxation"
+  },
+  "answer": "\\tau\\approx4.4\\ \\mathrm{s};\\ t\\approx20\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original (B2-L20, relaksatsiya)"
+ },
+ {
+  "id": "B2-L20-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yassi kondensator ($A=100\\ \\mathrm{cm^2}$, $d=2\\ \\mathrm{mm}$) $\\varepsilon=4$, $\\sigma=10^{-8}\\ \\mathrm{S/m}$ li modda bilan to'ldirilgan, $100\\ \\mathrm{V}$ gacha zaryadlanib, manbadan uzilgan. Oqish qarshiligini, zaryadsizlanish vaqt doimiysini va qoplamalar orasidagi magnit maydonni toping.",
+   "ru": "Плоский конденсатор ($A=100\\ \\mathrm{cm^2}$, $d=2\\ \\mathrm{mm}$) заполнен веществом с $\\varepsilon=4$, $\\sigma=10^{-8}\\ \\mathrm{S/m}$, заряжен до $100\\ \\mathrm{V}$ и отключён от источника. Найдите сопротивление утечки, постоянную времени разрядки и магнитное поле между обкладками.",
+   "en": "A parallel-plate capacitor ($A=100\\ \\mathrm{cm^2}$, $d=2\\ \\mathrm{mm}$) is filled with a material of $\\varepsilon=4$ and $\\sigma=10^{-8}\\ \\mathrm{S/m}$, charged to $100\\ \\mathrm{V}$ and disconnected. Find the leakage resistance, the discharge time constant and the magnetic field between the plates."
+  },
+  "figure": "figures/B2-L20-S08.png",
+  "solution": {
+   "uz": [
+    "Qarshilik va sig'im: $$R=\\frac{d}{\\sigma A}=2\\cdot10^7\\ \\Omega,\\quad \\tau=RC=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}\\approx3.5\\ \\mathrm{ms}$$",
+    "Ichkarida o'tkazuvchanlik toki siljish toki bilan aynan qoplanadi: $$\\sigma E+\\varepsilon_0\\varepsilon\\frac{dE}{dt}=\\sigma E-\\frac{\\varepsilon_0\\varepsilon}{\\tau}E=0$$",
+    "To'liq tok nol, simmetriya bo'yicha: $$B=0$$"
+   ],
+   "ru": [
+    "Сопротивление и ёмкость: $$R=\\frac{d}{\\sigma A}=2\\cdot10^7\\ \\Omega,\\quad \\tau=RC=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}\\approx3.5\\ \\mathrm{ms}$$",
+    "Внутри ток проводимости точно компенсируется током смещения: $$\\sigma E+\\varepsilon_0\\varepsilon\\frac{dE}{dt}=\\sigma E-\\frac{\\varepsilon_0\\varepsilon}{\\tau}E=0$$",
+    "Полный ток равен нулю, по симметрии: $$B=0$$"
+   ],
+   "en": [
+    "Resistance and capacitance: $$R=\\frac{d}{\\sigma A}=2\\cdot10^7\\ \\Omega,\\quad \\tau=RC=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}\\approx3.5\\ \\mathrm{ms}$$",
+    "Inside, the conduction current is cancelled exactly by the displacement current: $$\\sigma E+\\varepsilon_0\\varepsilon\\frac{dE}{dt}=\\sigma E-\\frac{\\varepsilon_0\\varepsilon}{\\tau}E=0$$",
+    "The total current is zero, so by symmetry: $$B=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Relaksatsiya: $\\rho=\\rho_0e^{-\\frac{t}{\\tau}}$, $\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}$",
+    "ru": "Релаксация: $\\rho=\\rho_0e^{-\\frac{t}{\\tau}}$, $\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}$",
+    "en": "Relaxation: $\\rho=\\rho_0e^{-\\frac{t}{\\tau}}$, $\\tau=\\frac{\\varepsilon_0\\varepsilon}{\\sigma}$"
+   },
+   {
+    "uz": "Dielektrikda: $\\vec J'=\\frac{\\partial\\vec D}{\\partial t}$, $\\vec D=\\varepsilon_0\\varepsilon\\vec E$",
+    "ru": "В диэлектрике: $\\vec J'=\\frac{\\partial\\vec D}{\\partial t}$, $\\vec D=\\varepsilon_0\\varepsilon\\vec E$",
+    "en": "In a dielectric: $\\vec J'=\\frac{\\partial\\vec D}{\\partial t}$, $\\vec D=\\varepsilon_0\\varepsilon\\vec E$"
+   },
+   {
+    "uz": "Amper–Maksvell qonuni: $\\oint\\vec B\\cdot d\\vec l=\\mu_0I+\\mu_0\\varepsilon_0\\frac{d\\Phi_E}{dt}$",
+    "ru": "Закон Ампера–Максвелла: $\\oint\\vec B\\cdot d\\vec l=\\mu_0I+\\mu_0\\varepsilon_0\\frac{d\\Phi_E}{dt}$",
+    "en": "Ampère–Maxwell law: $\\oint\\vec B\\cdot d\\vec l=\\mu_0I+\\mu_0\\varepsilon_0\\frac{d\\Phi_E}{dt}$"
+   }
+  ],
+  "basis": {
+   "uz": "Oqib ketuvchi kondensator",
+   "ru": "Конденсатор с утечкой",
+   "en": "A leaky capacitor"
+  },
+  "answer": "R=2\\cdot10^7\\ \\Omega;\\ \\tau\\approx3.5\\ \\mathrm{ms};\\ B=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», oqib ketuvchi kondensator g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L20-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Mis uchun $\\sigma=5.9\\cdot10^7\\ \\mathrm{S/m}$. $50\\ \\mathrm{Hz}$ va $10\\ \\mathrm{kHz}$ da skin-qatlam qalinligini toping. Qanday chastotada u $1\\ \\mathrm{mm}$ ga teng bo'ladi?",
+   "ru": "Для меди $\\sigma=5.9\\cdot10^7\\ \\mathrm{S/m}$. Найдите толщину скин-слоя при $50\\ \\mathrm{Hz}$ и $10\\ \\mathrm{kHz}$. При какой частоте она равна $1\\ \\mathrm{mm}$?",
+   "en": "Copper has $\\sigma=5.9\\cdot10^7\\ \\mathrm{S/m}$. Find the skin depth at $50\\ \\mathrm{Hz}$ and $10\\ \\mathrm{kHz}$. At what frequency is it $1\\ \\mathrm{mm}$?"
+  },
+  "figure": "figures/B2-L20-S09.png",
+  "solution": {
+   "uz": [
+    "$50\\ \\mathrm{Hz}$ da: $$\\delta=\\sqrt{\\frac{2}{4\\pi\\cdot10^{-7}\\cdot5.9\\cdot10^7\\cdot2\\pi\\cdot50}}\\approx9.3\\ \\mathrm{mm}$$",
+    "$\\delta\\propto\\frac{1}{\\sqrt{f}}$: $$\\delta'=9.3\\cdot\\sqrt{\\frac{50}{10^4}}\\approx0.66\\ \\mathrm{mm}$$",
+    "Teskari masala: $$f=\\frac{1}{\\pi\\mu_0\\sigma\\delta^2}\\approx4.3\\ \\mathrm{kHz}$$"
+   ],
+   "ru": [
+    "При $50\\ \\mathrm{Hz}$: $$\\delta=\\sqrt{\\frac{2}{4\\pi\\cdot10^{-7}\\cdot5.9\\cdot10^7\\cdot2\\pi\\cdot50}}\\approx9.3\\ \\mathrm{mm}$$",
+    "$\\delta\\propto\\frac{1}{\\sqrt{f}}$: $$\\delta'=9.3\\cdot\\sqrt{\\frac{50}{10^4}}\\approx0.66\\ \\mathrm{mm}$$",
+    "Обратная задача: $$f=\\frac{1}{\\pi\\mu_0\\sigma\\delta^2}\\approx4.3\\ \\mathrm{kHz}$$"
+   ],
+   "en": [
+    "At $50\\ \\mathrm{Hz}$: $$\\delta=\\sqrt{\\frac{2}{4\\pi\\cdot10^{-7}\\cdot5.9\\cdot10^7\\cdot2\\pi\\cdot50}}\\approx9.3\\ \\mathrm{mm}$$",
+    "$\\delta\\propto\\frac{1}{\\sqrt{f}}$: $$\\delta'=9.3\\cdot\\sqrt{\\frac{50}{10^4}}\\approx0.66\\ \\mathrm{mm}$$",
+    "Inverse problem: $$f=\\frac{1}{\\pi\\mu_0\\sigma\\delta^2}\\approx4.3\\ \\mathrm{kHz}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Skin-qatlam: $\\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}$",
+    "ru": "Скин-слой: $\\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}$",
+    "en": "Skin depth: $\\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Misdagi skin-effekt",
+   "ru": "Скин-эффект в меди",
+   "en": "The skin effect in copper"
+  },
+  "answer": "\\delta\\approx9.3\\ \\mathrm{mm};\\ \\delta'\\approx0.66\\ \\mathrm{mm};\\ f\\approx4.3\\ \\mathrm{kHz}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original (B2-L20, skin-qatlam)"
+ },
+ {
+  "id": "B2-L20-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Vakuumda $\\vec E=E_0\\cos\\left(kz-\\omega t\\right)\\hat x$, $E_0=60\\ \\mathrm{V/m}$. Faradey qonunidan $\\vec B$ ni toping va Amper–Maksvell qonuni $\\omega=ck$ da bajarilishini ko'rsating. $B_0$ ni hisoblang.",
+   "ru": "В вакууме $\\vec E=E_0\\cos\\left(kz-\\omega t\\right)\\hat x$, $E_0=60\\ \\mathrm{V/m}$. Найдите $\\vec B$ из закона Фарадея и покажите, что закон Ампера–Максвелла выполняется при $\\omega=ck$. Вычислите $B_0$.",
+   "en": "In vacuum $\\vec E=E_0\\cos\\left(kz-\\omega t\\right)\\hat x$ with $E_0=60\\ \\mathrm{V/m}$. Find $\\vec B$ from Faraday's law and show that the Ampère–Maxwell law holds when $\\omega=ck$. Compute $B_0$."
+  },
+  "figure": "figures/B2-L20-S10.png",
+  "solution": {
+   "uz": [
+    "Faradey qonuni: $$\\frac{\\partial B_y}{\\partial t}=-\\frac{\\partial E_x}{\\partial z}=kE_0\\sin\\left(kz-\\omega t\\right)\\ \\Rightarrow\\ \\vec B=\\frac{kE_0}{\\omega}\\cos\\left(kz-\\omega t\\right)\\hat y$$",
+    "Amper–Maksvell: $-\\frac{\\partial B_y}{\\partial z}=\\frac{1}{c^2}\\frac{\\partial E_x}{\\partial t}$: $$\\frac{k^2E_0}{\\omega}=\\frac{\\omega E_0}{c^2}\\ \\Rightarrow\\ \\omega=ck,\\quad B_0=\\frac{E_0}{c}=2\\cdot10^{-7}\\ \\mathrm{T}$$"
+   ],
+   "ru": [
+    "Закон Фарадея: $$\\frac{\\partial B_y}{\\partial t}=-\\frac{\\partial E_x}{\\partial z}=kE_0\\sin\\left(kz-\\omega t\\right)\\ \\Rightarrow\\ \\vec B=\\frac{kE_0}{\\omega}\\cos\\left(kz-\\omega t\\right)\\hat y$$",
+    "Ампер–Максвелл: $-\\frac{\\partial B_y}{\\partial z}=\\frac{1}{c^2}\\frac{\\partial E_x}{\\partial t}$: $$\\frac{k^2E_0}{\\omega}=\\frac{\\omega E_0}{c^2}\\ \\Rightarrow\\ \\omega=ck,\\quad B_0=\\frac{E_0}{c}=2\\cdot10^{-7}\\ \\mathrm{T}$$"
+   ],
+   "en": [
+    "Faraday's law: $$\\frac{\\partial B_y}{\\partial t}=-\\frac{\\partial E_x}{\\partial z}=kE_0\\sin\\left(kz-\\omega t\\right)\\ \\Rightarrow\\ \\vec B=\\frac{kE_0}{\\omega}\\cos\\left(kz-\\omega t\\right)\\hat y$$",
+    "Ampère–Maxwell: $-\\frac{\\partial B_y}{\\partial z}=\\frac{1}{c^2}\\frac{\\partial E_x}{\\partial t}$: $$\\frac{k^2E_0}{\\omega}=\\frac{\\omega E_0}{c^2}\\ \\Rightarrow\\ \\omega=ck,\\quad B_0=\\frac{E_0}{c}=2\\cdot10^{-7}\\ \\mathrm{T}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Faradey qonuni: $\\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t}$",
+    "ru": "Закон Фарадея: $\\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t}$",
+    "en": "Faraday's law: $\\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t}$"
+   },
+   {
+    "uz": "Yassi to'lqin: $c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$, $B_0=\\frac{E_0}{c}$, $\\omega=ck$",
+    "ru": "Плоская волна: $c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$, $B_0=\\frac{E_0}{c}$, $\\omega=ck$",
+    "en": "Plane wave: $c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$, $B_0=\\frac{E_0}{c}$, $\\omega=ck$"
+   }
+  ],
+  "basis": {
+   "uz": "Yassi to'lqinda B ni topish",
+   "ru": "Нахождение B в плоской волне",
+   "en": "Finding B in a plane wave"
+  },
+  "answer": "\\vec B=\\frac{E_0}{c}\\cos\\left(kz-\\omega t\\right)\\hat y;\\ B_0=2\\cdot10^{-7}\\ \\mathrm{T}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original (B2-L20, yassi to'lqin)"
+ },
+ {
+  "id": "B2-L20-S11",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radiusi $5\\ \\mathrm{cm}$, orasi $2\\ \\mathrm{mm}$ bo'lgan doiraviy qoplamali kondensator zaryadlanmoqda; biror paytda $U=100\\ \\mathrm{V}$, $I=1\\ \\mathrm{A}$. Qoplamalar chetidagi Poynting vektorini va yon sirt orqali kirayotgan quvvatni toping.",
+   "ru": "Конденсатор с круглыми обкладками радиуса $5\\ \\mathrm{cm}$ и зазором $2\\ \\mathrm{mm}$ заряжается; в некоторый момент $U=100\\ \\mathrm{V}$, $I=1\\ \\mathrm{A}$. Найдите вектор Пойнтинга у края обкладок и мощность, входящую через боковую поверхность.",
+   "en": "A capacitor with circular plates of radius $5\\ \\mathrm{cm}$ and gap $2\\ \\mathrm{mm}$ is charging; at some instant $U=100\\ \\mathrm{V}$ and $I=1\\ \\mathrm{A}$. Find the Poynting vector at the edge of the plates and the power entering through the side surface."
+  },
+  "figure": "figures/B2-L20-S11.png",
+  "solution": {
+   "uz": [
+    "Chetda maydonlar: $$E=\\frac{U}{d}=5\\cdot10^4\\ \\mathrm{V/m},\\quad B=\\frac{\\mu_0I}{2\\pi R}=4\\ \\mu\\mathrm{T}$$",
+    "$\\vec E\\perp\\vec B$, $\\vec S$ o'qqa qarab: $$S=\\frac{EB}{\\mu_0}\\approx1.6\\cdot10^5\\ \\mathrm{W/m^2}$$",
+    "Yon sirt $2\\pi Rd$: $$P=S\\cdot2\\pi Rd=\\frac{U}{d}\\cdot\\frac{I}{2\\pi R}\\cdot2\\pi Rd=UI=100\\ \\mathrm{W}$$"
+   ],
+   "ru": [
+    "Поля у края: $$E=\\frac{U}{d}=5\\cdot10^4\\ \\mathrm{V/m},\\quad B=\\frac{\\mu_0I}{2\\pi R}=4\\ \\mu\\mathrm{T}$$",
+    "$\\vec E\\perp\\vec B$, $\\vec S$ направлен к оси: $$S=\\frac{EB}{\\mu_0}\\approx1.6\\cdot10^5\\ \\mathrm{W/m^2}$$",
+    "Боковая поверхность $2\\pi Rd$: $$P=S\\cdot2\\pi Rd=\\frac{U}{d}\\cdot\\frac{I}{2\\pi R}\\cdot2\\pi Rd=UI=100\\ \\mathrm{W}$$"
+   ],
+   "en": [
+    "Fields at the edge: $$E=\\frac{U}{d}=5\\cdot10^4\\ \\mathrm{V/m},\\quad B=\\frac{\\mu_0I}{2\\pi R}=4\\ \\mu\\mathrm{T}$$",
+    "$\\vec E\\perp\\vec B$, $\\vec S$ points toward the axis: $$S=\\frac{EB}{\\mu_0}\\approx1.6\\cdot10^5\\ \\mathrm{W/m^2}$$",
+    "Side surface $2\\pi Rd$: $$P=S\\cdot2\\pi Rd=\\frac{U}{d}\\cdot\\frac{I}{2\\pi R}\\cdot2\\pi Rd=UI=100\\ \\mathrm{W}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qoplamalar orasida: $B=\\frac{\\mu_0Ir}{2\\pi R^2}$ ($r<R$)",
+    "ru": "Между обкладками: $B=\\frac{\\mu_0Ir}{2\\pi R^2}$ ($r<R$)",
+    "en": "Between the plates: $B=\\frac{\\mu_0Ir}{2\\pi R^2}$ ($r<R$)"
+   },
+   {
+    "uz": "Poynting vektori: $\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B$",
+    "ru": "Вектор Пойнтинга: $\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B$",
+    "en": "Poynting vector: $\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kondensatorga energiya oqimi",
+   "ru": "Поток энергии в конденсатор",
+   "en": "Energy flow into a capacitor"
+  },
+  "answer": "S\\approx1.6\\cdot10^5\\ \\mathrm{W/m^2};\\ P=UI=100\\ \\mathrm{W}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L20, Poynting vektori)"
+ },
+ {
+  "id": "B2-L20-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Havodagi $100\\ \\mathrm{V/m}$ elektr maydon normal bilan $30^\\circ$ burchak ostida shisha ($\\varepsilon=4$) sirtiga tushmoqda; sirtda erkin zaryad yo'q. Shisha ichidagi maydon kuchlanganligini va uning normal bilan burchagini toping.",
+   "ru": "Электрическое поле $100\\ \\mathrm{V/m}$ в воздухе падает на поверхность стекла ($\\varepsilon=4$) под углом $30^\\circ$ к нормали; свободного заряда на поверхности нет. Найдите напряжённость поля в стекле и её угол с нормалью.",
+   "en": "An electric field of $100\\ \\mathrm{V/m}$ in air meets the surface of glass ($\\varepsilon=4$) at $30^\\circ$ to the normal; there is no free charge on the surface. Find the field strength inside the glass and its angle with the normal."
+  },
+  "figure": "figures/B2-L20-S12.png",
+  "solution": {
+   "uz": [
+    "Tashkil etuvchilar: $$E_{1n}=100\\cos30^\\circ\\approx86.6\\ \\mathrm{V/m},\\quad E_{1\\tau}=50\\ \\mathrm{V/m}$$",
+    "$D_n$ va $E_\\tau$ uzluksiz: $$E_{2n}=\\frac{E_{1n}}{4}\\approx21.7\\ \\mathrm{V/m},\\quad E_{2\\tau}=50\\ \\mathrm{V/m}$$",
+    "Natija: $$E_2=\\sqrt{21.7^2+50^2}\\approx54.5\\ \\mathrm{V/m},\\quad \\alpha_2=\\arctan\\frac{50}{21.7}\\approx66.6^\\circ$$"
+   ],
+   "ru": [
+    "Составляющие: $$E_{1n}=100\\cos30^\\circ\\approx86.6\\ \\mathrm{V/m},\\quad E_{1\\tau}=50\\ \\mathrm{V/m}$$",
+    "$D_n$ и $E_\\tau$ непрерывны: $$E_{2n}=\\frac{E_{1n}}{4}\\approx21.7\\ \\mathrm{V/m},\\quad E_{2\\tau}=50\\ \\mathrm{V/m}$$",
+    "Итог: $$E_2=\\sqrt{21.7^2+50^2}\\approx54.5\\ \\mathrm{V/m},\\quad \\alpha_2=\\arctan\\frac{50}{21.7}\\approx66.6^\\circ$$"
+   ],
+   "en": [
+    "Components: $$E_{1n}=100\\cos30^\\circ\\approx86.6\\ \\mathrm{V/m},\\quad E_{1\\tau}=50\\ \\mathrm{V/m}$$",
+    "$D_n$ and $E_\\tau$ continuous: $$E_{2n}=\\frac{E_{1n}}{4}\\approx21.7\\ \\mathrm{V/m},\\quad E_{2\\tau}=50\\ \\mathrm{V/m}$$",
+    "Result: $$E_2=\\sqrt{21.7^2+50^2}\\approx54.5\\ \\mathrm{V/m},\\quad \\alpha_2=\\arctan\\frac{50}{21.7}\\approx66.6^\\circ$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Chegaraviy shartlar: $D_{2n}-D_{1n}=\\sigma$, $E_{1\\tau}=E_{2\\tau}$",
+    "ru": "Граничные условия: $D_{2n}-D_{1n}=\\sigma$, $E_{1\\tau}=E_{2\\tau}$",
+    "en": "Boundary conditions: $D_{2n}-D_{1n}=\\sigma$, $E_{1\\tau}=E_{2\\tau}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Chegarada elektr maydon",
+   "ru": "Электрическое поле на границе",
+   "en": "The electric field at a boundary"
+  },
+  "answer": "E_2\\approx54.5\\ \\mathrm{V/m};\\ \\alpha_2\\approx66.6^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Volkenshteyn, «Problems in General Physics», 9.88-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L20-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Elektr maydon amplitudasi $100\\ \\mathrm{V/m}$ bo'lgan yassi to'lqin ideal o'tkazgich sirtiga tik tushib, to'liq qaytmoqda. Sirtdagi magnit maydon amplitudasini va sirt toki zichligi amplitudasini toping.",
+   "ru": "Плоская волна с амплитудой электрического поля $100\\ \\mathrm{V/m}$ падает нормально на поверхность идеального проводника и полностью отражается. Найдите амплитуду магнитного поля у поверхности и амплитуду плотности поверхностного тока.",
+   "en": "A plane wave with electric field amplitude $100\\ \\mathrm{V/m}$ hits the surface of a perfect conductor at normal incidence and is fully reflected. Find the amplitude of the magnetic field at the surface and the amplitude of the surface current density."
+  },
+  "figure": "figures/B2-L20-S13.png",
+  "solution": {
+   "uz": [
+    "Sirtda $E_\\tau=0$: qaytgan to'lqin $\\vec E$ ni yo'qotadi, $\\vec B$ esa ikki baravar: $$B=2\\frac{E_0}{c}=\\frac{2\\cdot100}{3\\cdot10^8}\\approx0.67\\ \\mu\\mathrm{T}$$",
+    "Ichkarida maydon yo'q: $$K=\\frac{B}{\\mu_0}\\approx0.53\\ \\mathrm{A/m}$$"
+   ],
+   "ru": [
+    "На поверхности $E_\\tau=0$: отражённая волна гасит $\\vec E$, а $\\vec B$ удваивается: $$B=2\\frac{E_0}{c}=\\frac{2\\cdot100}{3\\cdot10^8}\\approx0.67\\ \\mu\\mathrm{T}$$",
+    "Внутри поля нет: $$K=\\frac{B}{\\mu_0}\\approx0.53\\ \\mathrm{A/m}$$"
+   ],
+   "en": [
+    "At the surface $E_\\tau=0$: the reflected wave cancels $\\vec E$ and doubles $\\vec B$: $$B=2\\frac{E_0}{c}=\\frac{2\\cdot100}{3\\cdot10^8}\\approx0.67\\ \\mu\\mathrm{T}$$",
+    "No field inside: $$K=\\frac{B}{\\mu_0}\\approx0.53\\ \\mathrm{A/m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yassi to'lqin: $c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$, $B_0=\\frac{E_0}{c}$, $\\omega=ck$",
+    "ru": "Плоская волна: $c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$, $B_0=\\frac{E_0}{c}$, $\\omega=ck$",
+    "en": "Plane wave: $c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$, $B_0=\\frac{E_0}{c}$, $\\omega=ck$"
+   },
+   {
+    "uz": "Ideal o'tkazgich sirti: $E_\\tau=0$, $B=\\mu_0K$",
+    "ru": "Поверхность идеального проводника: $E_\\tau=0$, $B=\\mu_0K$",
+    "en": "Perfect conductor surface: $E_\\tau=0$, $B=\\mu_0K$"
+   }
+  ],
+  "basis": {
+   "uz": "Metall ko'zgudagi sirt toki",
+   "ru": "Поверхностный ток на металлическом зеркале",
+   "en": "Surface current on a metal mirror"
+  },
+  "answer": "B\\approx0.67\\ \\mu\\mathrm{T};\\ K\\approx0.53\\ \\mathrm{A/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B2-L20, ideal o'tkazgich)"
+ },
+ {
+  "id": "B2-L20-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Potensiallar $\\varphi=0$, $\\vec A=kt\\left(-y\\hat x+x\\hat y\\right)$, $k=0.5\\ \\mathrm{T/s}$. $\\vec B$ va $\\vec E$ ni toping, Faradey qonuni bajarilishini tekshiring va o'qdan $10\\ \\mathrm{cm}$ masofadagi $E$ ni hisoblang.",
+   "ru": "Потенциалы $\\varphi=0$, $\\vec A=kt\\left(-y\\hat x+x\\hat y\\right)$, $k=0.5\\ \\mathrm{T/s}$. Найдите $\\vec B$ и $\\vec E$, проверьте выполнение закона Фарадея и вычислите $E$ на расстоянии $10\\ \\mathrm{cm}$ от оси.",
+   "en": "The potentials are $\\varphi=0$ and $\\vec A=kt\\left(-y\\hat x+x\\hat y\\right)$ with $k=0.5\\ \\mathrm{T/s}$. Find $\\vec B$ and $\\vec E$, check that Faraday's law holds, and compute $E$ at $10\\ \\mathrm{cm}$ from the axis."
+  },
+  "figure": "figures/B2-L20-S14.png",
+  "solution": {
+   "uz": [
+    "Maydonlar: $$\\vec B=\\nabla\\times\\vec A=2kt\\hat z,\\quad \\vec E=-\\frac{\\partial\\vec A}{\\partial t}=k\\left(y\\hat x-x\\hat y\\right)$$",
+    "Tekshiruv: $$\\nabla\\times\\vec E=-2k\\hat z=-\\frac{\\partial\\vec B}{\\partial t}$$",
+    "Modul: $$E=kr=0.5\\cdot0.1=0.05\\ \\mathrm{V/m}$$"
+   ],
+   "ru": [
+    "Поля: $$\\vec B=\\nabla\\times\\vec A=2kt\\hat z,\\quad \\vec E=-\\frac{\\partial\\vec A}{\\partial t}=k\\left(y\\hat x-x\\hat y\\right)$$",
+    "Проверка: $$\\nabla\\times\\vec E=-2k\\hat z=-\\frac{\\partial\\vec B}{\\partial t}$$",
+    "Модуль: $$E=kr=0.5\\cdot0.1=0.05\\ \\mathrm{V/m}$$"
+   ],
+   "en": [
+    "Fields: $$\\vec B=\\nabla\\times\\vec A=2kt\\hat z,\\quad \\vec E=-\\frac{\\partial\\vec A}{\\partial t}=k\\left(y\\hat x-x\\hat y\\right)$$",
+    "Check: $$\\nabla\\times\\vec E=-2k\\hat z=-\\frac{\\partial\\vec B}{\\partial t}$$",
+    "Magnitude: $$E=kr=0.5\\cdot0.1=0.05\\ \\mathrm{V/m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Potensiallar: $\\vec B=\\nabla\\times\\vec A$, $\\vec E=-\\nabla\\varphi-\\frac{\\partial\\vec A}{\\partial t}$",
+    "ru": "Потенциалы: $\\vec B=\\nabla\\times\\vec A$, $\\vec E=-\\nabla\\varphi-\\frac{\\partial\\vec A}{\\partial t}$",
+    "en": "Potentials: $\\vec B=\\nabla\\times\\vec A$, $\\vec E=-\\nabla\\varphi-\\frac{\\partial\\vec A}{\\partial t}$"
+   },
+   {
+    "uz": "Faradey qonuni: $\\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t}$",
+    "ru": "Закон Фарадея: $\\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t}$",
+    "en": "Faraday's law: $\\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Potensiallardan maydonlar",
+   "ru": "Поля по потенциалам",
+   "en": "Fields from potentials"
+  },
+  "answer": "\\vec B=2kt\\hat z;\\ \\vec E=k\\left(y\\hat x-x\\hat y\\right);\\ E=0.05\\ \\mathrm{V/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "original (B2-L20, potensiallar)"
+ },
+ {
+  "id": "B2-L20-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$\\varphi=0$, $\\vec A=A_0\\cos\\left(kz-\\omega t\\right)\\hat x$, $A_0=10^{-8}\\ \\mathrm{T\\cdot m}$, $f=100\\ \\mathrm{MHz}$, $\\omega=ck$. Lorens sharti bajarilishini ko'rsating, $\\vec E$ va $\\vec B$ amplitudalarini va ularning nisbatini toping.",
+   "ru": "$\\varphi=0$, $\\vec A=A_0\\cos\\left(kz-\\omega t\\right)\\hat x$, $A_0=10^{-8}\\ \\mathrm{T\\cdot m}$, $f=100\\ \\mathrm{MHz}$, $\\omega=ck$. Покажите, что условие Лоренца выполнено, найдите амплитуды $\\vec E$ и $\\vec B$ и их отношение.",
+   "en": "$\\varphi=0$, $\\vec A=A_0\\cos\\left(kz-\\omega t\\right)\\hat x$ with $A_0=10^{-8}\\ \\mathrm{T\\cdot m}$, $f=100\\ \\mathrm{MHz}$ and $\\omega=ck$. Show that the Lorenz condition holds, and find the amplitudes of $\\vec E$ and $\\vec B$ and their ratio."
+  },
+  "figure": "figures/B2-L20-S15.png",
+  "solution": {
+   "uz": [
+    "$A_x$ faqat $z$ ga bog'liq: $$\\nabla\\cdot\\vec A=\\frac{\\partial A_x}{\\partial x}=0,\\quad \\frac{\\partial\\varphi}{\\partial t}=0$$",
+    "Maydonlar: $$E_0=\\omega A_0=2\\pi\\cdot10^8\\cdot10^{-8}\\approx6.3\\ \\mathrm{V/m},\\quad B_0=kA_0\\approx2.1\\cdot10^{-8}\\ \\mathrm{T}$$",
+    "Nisbat: $$\\frac{E_0}{B_0}=\\frac{\\omega}{k}=c$$"
+   ],
+   "ru": [
+    "$A_x$ зависит только от $z$: $$\\nabla\\cdot\\vec A=\\frac{\\partial A_x}{\\partial x}=0,\\quad \\frac{\\partial\\varphi}{\\partial t}=0$$",
+    "Поля: $$E_0=\\omega A_0=2\\pi\\cdot10^8\\cdot10^{-8}\\approx6.3\\ \\mathrm{V/m},\\quad B_0=kA_0\\approx2.1\\cdot10^{-8}\\ \\mathrm{T}$$",
+    "Отношение: $$\\frac{E_0}{B_0}=\\frac{\\omega}{k}=c$$"
+   ],
+   "en": [
+    "$A_x$ depends only on $z$: $$\\nabla\\cdot\\vec A=\\frac{\\partial A_x}{\\partial x}=0,\\quad \\frac{\\partial\\varphi}{\\partial t}=0$$",
+    "Fields: $$E_0=\\omega A_0=2\\pi\\cdot10^8\\cdot10^{-8}\\approx6.3\\ \\mathrm{V/m},\\quad B_0=kA_0\\approx2.1\\cdot10^{-8}\\ \\mathrm{T}$$",
+    "Ratio: $$\\frac{E_0}{B_0}=\\frac{\\omega}{k}=c$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lorens sharti: $\\nabla\\cdot\\vec A+\\frac{1}{c^2}\\frac{\\partial\\varphi}{\\partial t}=0$",
+    "ru": "Условие Лоренца: $\\nabla\\cdot\\vec A+\\frac{1}{c^2}\\frac{\\partial\\varphi}{\\partial t}=0$",
+    "en": "Lorenz condition: $\\nabla\\cdot\\vec A+\\frac{1}{c^2}\\frac{\\partial\\varphi}{\\partial t}=0$"
+   },
+   {
+    "uz": "Potensiallar: $\\vec B=\\nabla\\times\\vec A$, $\\vec E=-\\nabla\\varphi-\\frac{\\partial\\vec A}{\\partial t}$",
+    "ru": "Потенциалы: $\\vec B=\\nabla\\times\\vec A$, $\\vec E=-\\nabla\\varphi-\\frac{\\partial\\vec A}{\\partial t}$",
+    "en": "Potentials: $\\vec B=\\nabla\\times\\vec A$, $\\vec E=-\\nabla\\varphi-\\frac{\\partial\\vec A}{\\partial t}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "To'lqinning vektor potensiali",
+   "ru": "Векторный потенциал волны",
+   "en": "The vector potential of a wave"
+  },
+  "answer": "E_0\\approx6.3\\ \\mathrm{V/m};\\ B_0\\approx2.1\\cdot10^{-8}\\ \\mathrm{T};\\ \\frac{E_0}{B_0}=c",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L20, Lorens sharti)"
+ },
+ {
+  "id": "B2-L20-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radiusi $1\\ \\mathrm{mm}$, uzunligi $1\\ \\mathrm{m}$ bo'lgan mis sim ($\\sigma=5.9\\cdot10^7\\ \\mathrm{S/m}$). O'zgarmas tokdagi qarshilikni va $10\\ \\mathrm{MHz}$ dagi qarshilikni baholang (tok faqat $\\delta$ qalinlikdagi qatlamdan oqadi deb hisoblang).",
+   "ru": "Медный провод ($\\sigma=5.9\\cdot10^7\\ \\mathrm{S/m}$) радиусом $1\\ \\mathrm{mm}$ и длиной $1\\ \\mathrm{m}$. Оцените сопротивление на постоянном токе и на частоте $10\\ \\mathrm{MHz}$ (считайте, что ток течёт только в слое толщиной $\\delta$).",
+   "en": "A copper wire ($\\sigma=5.9\\cdot10^7\\ \\mathrm{S/m}$) has radius $1\\ \\mathrm{mm}$ and length $1\\ \\mathrm{m}$. Estimate its resistance for direct current and at $10\\ \\mathrm{MHz}$ (assume the current flows only in a layer of thickness $\\delta$)."
+  },
+  "figure": "figures/B2-L20-S16.png",
+  "solution": {
+   "uz": [
+    "O'zgarmas tok: $$R=\\frac{l}{\\sigma\\pi a^2}=\\frac{1}{5.9\\cdot10^7\\cdot3.14\\cdot10^{-6}}\\approx5.4\\ \\mathrm{m}\\Omega$$",
+    "Skin-qatlam: $$\\delta=\\sqrt{\\frac{2}{\\mu_0\\sigma\\omega}}\\approx21\\ \\mu\\mathrm{m}$$",
+    "Halqasimon kesim $2\\pi a\\delta$: $$R'=\\frac{l}{\\sigma2\\pi a\\delta}\\approx0.13\\ \\Omega,\\quad \\frac{R'}{R}=\\frac{a}{2\\delta}\\approx24$$"
+   ],
+   "ru": [
+    "Постоянный ток: $$R=\\frac{l}{\\sigma\\pi a^2}=\\frac{1}{5.9\\cdot10^7\\cdot3.14\\cdot10^{-6}}\\approx5.4\\ \\mathrm{m}\\Omega$$",
+    "Скин-слой: $$\\delta=\\sqrt{\\frac{2}{\\mu_0\\sigma\\omega}}\\approx21\\ \\mu\\mathrm{m}$$",
+    "Кольцевое сечение $2\\pi a\\delta$: $$R'=\\frac{l}{\\sigma2\\pi a\\delta}\\approx0.13\\ \\Omega,\\quad \\frac{R'}{R}=\\frac{a}{2\\delta}\\approx24$$"
+   ],
+   "en": [
+    "Direct current: $$R=\\frac{l}{\\sigma\\pi a^2}=\\frac{1}{5.9\\cdot10^7\\cdot3.14\\cdot10^{-6}}\\approx5.4\\ \\mathrm{m}\\Omega$$",
+    "Skin depth: $$\\delta=\\sqrt{\\frac{2}{\\mu_0\\sigma\\omega}}\\approx21\\ \\mu\\mathrm{m}$$",
+    "Ring cross-section $2\\pi a\\delta$: $$R'=\\frac{l}{\\sigma2\\pi a\\delta}\\approx0.13\\ \\Omega,\\quad \\frac{R'}{R}=\\frac{a}{2\\delta}\\approx24$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Skin-qatlam: $\\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}$",
+    "ru": "Скин-слой: $\\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}$",
+    "en": "Skin depth: $\\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Yuqori chastotada qarshilik",
+   "ru": "Сопротивление на высокой частоте",
+   "en": "Resistance at high frequency"
+  },
+  "answer": "R\\approx5.4\\ \\mathrm{m}\\Omega;\\ R'\\approx0.13\\ \\Omega;\\ \\frac{R'}{R}\\approx24",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B2-L20, skin-effekt)"
+ },
+ {
+  "id": "B2-L20-S17",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Kondensatordagi dielektrikda ($\\varepsilon=5$) maydon $E=E_0\\sin\\omega t$, $E_0=10^4\\ \\mathrm{V/m}$, $f=1\\ \\mathrm{kHz}$. Siljish toki zichligi amplitudasini toping va uni vakuum qismi va qutblanish tokiga ajrating.",
+   "ru": "В диэлектрике конденсатора ($\\varepsilon=5$) поле $E=E_0\\sin\\omega t$, $E_0=10^4\\ \\mathrm{V/m}$, $f=1\\ \\mathrm{kHz}$. Найдите амплитуду плотности тока смещения и разделите её на вакуумную часть и ток поляризации.",
+   "en": "In the dielectric of a capacitor ($\\varepsilon=5$) the field is $E=E_0\\sin\\omega t$ with $E_0=10^4\\ \\mathrm{V/m}$ and $f=1\\ \\mathrm{kHz}$. Find the amplitude of the displacement current density and split it into the vacuum part and the polarization current."
+  },
+  "figure": "figures/B2-L20-S17.png",
+  "solution": {
+   "uz": [
+    "$\\vec J'=\\frac{\\partial\\vec D}{\\partial t}$: $$J'_0=\\varepsilon_0\\varepsilon\\omega E_0=8.85\\cdot10^{-12}\\cdot5\\cdot6283\\cdot10^4\\approx2.8\\cdot10^{-3}\\ \\mathrm{A/m^2}$$",
+    "$\\varepsilon_0\\frac{\\partial E}{\\partial t}$ — ulushi $\\frac{1}{\\varepsilon}$, $\\frac{\\partial P}{\\partial t}$ — ulushi $\\frac{\\varepsilon-1}{\\varepsilon}$: $$0.56\\cdot10^{-3}\\ \\mathrm{A/m^2}+2.2\\cdot10^{-3}\\ \\mathrm{A/m^2}$$"
+   ],
+   "ru": [
+    "$\\vec J'=\\frac{\\partial\\vec D}{\\partial t}$: $$J'_0=\\varepsilon_0\\varepsilon\\omega E_0=8.85\\cdot10^{-12}\\cdot5\\cdot6283\\cdot10^4\\approx2.8\\cdot10^{-3}\\ \\mathrm{A/m^2}$$",
+    "$\\varepsilon_0\\frac{\\partial E}{\\partial t}$ — доля $\\frac{1}{\\varepsilon}$, $\\frac{\\partial P}{\\partial t}$ — доля $\\frac{\\varepsilon-1}{\\varepsilon}$: $$0.56\\cdot10^{-3}\\ \\mathrm{A/m^2}+2.2\\cdot10^{-3}\\ \\mathrm{A/m^2}$$"
+   ],
+   "en": [
+    "$\\vec J'=\\frac{\\partial\\vec D}{\\partial t}$: $$J'_0=\\varepsilon_0\\varepsilon\\omega E_0=8.85\\cdot10^{-12}\\cdot5\\cdot6283\\cdot10^4\\approx2.8\\cdot10^{-3}\\ \\mathrm{A/m^2}$$",
+    "$\\varepsilon_0\\frac{\\partial E}{\\partial t}$ — a fraction $\\frac{1}{\\varepsilon}$, $\\frac{\\partial P}{\\partial t}$ — a fraction $\\frac{\\varepsilon-1}{\\varepsilon}$: $$0.56\\cdot10^{-3}\\ \\mathrm{A/m^2}+2.2\\cdot10^{-3}\\ \\mathrm{A/m^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Dielektrikda: $\\vec J'=\\frac{\\partial\\vec D}{\\partial t}$, $\\vec D=\\varepsilon_0\\varepsilon\\vec E$",
+    "ru": "В диэлектрике: $\\vec J'=\\frac{\\partial\\vec D}{\\partial t}$, $\\vec D=\\varepsilon_0\\varepsilon\\vec E$",
+    "en": "In a dielectric: $\\vec J'=\\frac{\\partial\\vec D}{\\partial t}$, $\\vec D=\\varepsilon_0\\varepsilon\\vec E$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Dielektrikdagi siljish toki",
+   "ru": "Ток смещения в диэлектрике",
+   "en": "Displacement current in a dielectric"
+  },
+  "answer": "J'_0\\approx2.8\\cdot10^{-3}\\ \\mathrm{A/m^2};\\ 0.56\\cdot10^{-3}\\ \\mathrm{A/m^2};\\ 2.2\\cdot10^{-3}\\ \\mathrm{A/m^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L20, qutblanish toki)"
+ },
+ {
+  "id": "B2-L20-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Radioaktiv shar zaryadlangan zarralarni hamma yo'nalishda bir tekis chiqaradi, shuning uchun uning zaryadi $\\frac{dq}{dt}=-I$ tezlik bilan kamayadi. Shardan $r$ masofada o'tkazuvchanlik va siljish toklari zichliklarini toping. Magnit maydon qanday?",
+   "ru": "Радиоактивный шар равномерно испускает заряженные частицы во все стороны, поэтому его заряд убывает со скоростью $\\frac{dq}{dt}=-I$. Найдите плотности тока проводимости и тока смещения на расстоянии $r$ от шара. Каково магнитное поле?",
+   "en": "A radioactive sphere emits charged particles uniformly in all directions, so its charge decreases at the rate $\\frac{dq}{dt}=-I$. Find the conduction and displacement current densities at distance $r$ from the sphere. What is the magnetic field?"
+  },
+  "figure": "figures/B2-L20-S18.png",
+  "solution": {
+   "uz": [
+    "Zarralar oqimi: $$J=\\frac{I}{4\\pi r^2}$$",
+    "$r$ sfera ichidagi zaryad kamaymoqda: $$J'=\\varepsilon_0\\frac{\\partial}{\\partial t}\\left(\\frac{q}{4\\pi\\varepsilon_0r^2}\\right)=-\\frac{I}{4\\pi r^2}$$",
+    "Yig'indi nol, maydon esa sferik simmetrik — radial $\\vec B$ bo'lishi mumkin emas: $$J+J'=0\\ \\Rightarrow\\ B=0$$"
+   ],
+   "ru": [
+    "Поток частиц: $$J=\\frac{I}{4\\pi r^2}$$",
+    "Заряд внутри сферы $r$ убывает: $$J'=\\varepsilon_0\\frac{\\partial}{\\partial t}\\left(\\frac{q}{4\\pi\\varepsilon_0r^2}\\right)=-\\frac{I}{4\\pi r^2}$$",
+    "Сумма равна нулю, а поле сферически симметрично — радиального $\\vec B$ быть не может: $$J+J'=0\\ \\Rightarrow\\ B=0$$"
+   ],
+   "en": [
+    "Particle flux: $$J=\\frac{I}{4\\pi r^2}$$",
+    "The charge inside the sphere $r$ is decreasing: $$J'=\\varepsilon_0\\frac{\\partial}{\\partial t}\\left(\\frac{q}{4\\pi\\varepsilon_0r^2}\\right)=-\\frac{I}{4\\pi r^2}$$",
+    "The sum is zero and the field is spherically symmetric — a radial $\\vec B$ is impossible: $$J+J'=0\\ \\Rightarrow\\ B=0$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Siljish toki: $I'=\\varepsilon_0\\frac{d\\Phi_E}{dt}$, $\\vec J'=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}$",
+    "ru": "Ток смещения: $I'=\\varepsilon_0\\frac{d\\Phi_E}{dt}$, $\\vec J'=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}$",
+    "en": "Displacement current: $I'=\\varepsilon_0\\frac{d\\Phi_E}{dt}$, $\\vec J'=\\varepsilon_0\\frac{\\partial\\vec E}{\\partial t}$"
+   },
+   {
+    "uz": "Uzluksizlik tenglamasi: $\\nabla\\cdot\\vec J+\\frac{\\partial\\rho}{\\partial t}=0$",
+    "ru": "Уравнение непрерывности: $\\nabla\\cdot\\vec J+\\frac{\\partial\\rho}{\\partial t}=0$",
+    "en": "Continuity equation: $\\nabla\\cdot\\vec J+\\frac{\\partial\\rho}{\\partial t}=0$"
+   }
+  ],
+  "basis": {
+   "uz": "Sferik simmetrik tok",
+   "ru": "Сферически симметричный ток",
+   "en": "A spherically symmetric current"
+  },
+  "answer": "J=\\frac{I}{4\\pi r^2};\\ J'=-\\frac{I}{4\\pi r^2};\\ B=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "Irodov, «Problems in General Physics», 3.276-masala asosida; sharti o'zgartirilgan"
+ }
+]

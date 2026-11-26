@@ -1,0 +1,643 @@
+[
+ {
+  "t": "h1",
+  "uz": "Gamilton mexanikasi (Hamiltonian mechanics)",
+  "ru": "Гамильтонова механика",
+  "en": "Hamiltonian mechanics"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz Lagranj funksiyasidan Lejandr almashtirishi orqali Gamilton funksiyasini tuzasiz va kanonik tenglamalarni yozasiz; fazaviy portretni chizib, harakat turlarini (tebranish, aylanish, separatrisa) ajratasiz; Liuvill teoremasini qo'llaysiz; Puasson qavslarini hisoblab, saqlanadigan kattaliklarni aniqlaysiz; kanonik almashtirishni tekshirasiz; ta'sir–burchak o'zgaruvchilari va adiabatik invariantlar yordamida sekin o'zgaradigan sistemalarni tahlil qilasiz; Gamilton–Yakobi tenglamasi va Bor–Zommerfeld kvantlash shartining kvant mexanikasi bilan bog'lanishini tushuntirasiz.",
+  "ru": "**Цель.** После урока вы будете строить функцию Гамильтона из функции Лагранжа преобразованием Лежандра и записывать канонические уравнения; рисовать фазовый портрет и различать виды движения (колебание, вращение, сепаратриса); применять теорему Лиувилля; вычислять скобки Пуассона и находить сохраняющиеся величины; проверять каноничность преобразования; анализировать медленно меняющиеся системы с помощью переменных действие–угол и адиабатических инвариантов; объяснять связь уравнения Гамильтона–Якоби и условия квантования Бора–Зоммерфельда с квантовой механикой.",
+  "en": "**Goal.** After this lesson you will build the Hamiltonian from the Lagrangian by a Legendre transformation and write the canonical equations; draw a phase portrait and distinguish the types of motion (libration, rotation, separatrix); apply Liouville's theorem; compute Poisson brackets and identify conserved quantities; check whether a transformation is canonical; analyze slowly changing systems with action–angle variables and adiabatic invariants; and explain how the Hamilton–Jacobi equation and the Bohr–Sommerfeld quantization condition connect to quantum mechanics."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L09 da harakatni $s$ ta ikkinchi tartibli Eyler–Lagranj tenglamasi bilan tasvirladik. Gamilton usulida koordinatalar $q$ va impulslar $p$ teng huquqli mustaqil o'zgaruvchilar bo'ladi, harakat esa $2s$ ta birinchi tartibli tenglama bilan beriladi. Bu yozuv statistik fizika (Liuvill teoremasi, fazaviy hajm), kvant mexanikasi (gamiltonian, kommutator) va nochiziqli dinamikaning tili. GRE da Gamilton funksiyasini yozish, Gamilton tenglamalaridan $\\dot q$ yoki $\\dot p$ ni topish, fazaviy trayektoriyani tanish va Puasson qavsini hisoblash savollari uchraydi.",
+  "ru": "В B2-L09 мы описывали движение $s$ уравнениями Эйлера–Лагранжа второго порядка. В гамильтоновом подходе координаты $q$ и импульсы $p$ — равноправные независимые переменные, а движение задаётся $2s$ уравнениями первого порядка. Эта запись — язык статистической физики (теорема Лиувилля, фазовый объём), квантовой механики (гамильтониан, коммутатор) и нелинейной динамики. В GRE встречаются вопросы на запись функции Гамильтона, нахождение $\\dot q$ или $\\dot p$ из уравнений Гамильтона, узнавание фазовой траектории и вычисление скобки Пуассона.",
+  "en": "In B2-L09 we described motion by $s$ second-order Euler–Lagrange equations. In the Hamiltonian approach the coordinates $q$ and the momenta $p$ are independent variables on an equal footing, and the motion is given by $2s$ first-order equations. This formulation is the language of statistical physics (Liouville's theorem, phase-space volume), quantum mechanics (the Hamiltonian, the commutator) and nonlinear dynamics. GRE questions ask you to write the Hamiltonian, find $\\dot q$ or $\\dot p$ from Hamilton's equations, recognize a phase trajectory and compute a Poisson bracket."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Lejandr almashtirishi va Gamilton funksiyasi",
+  "ru": "1. Преобразование Лежандра и функция Гамильтона",
+  "en": "1. The Legendre transformation and the Hamiltonian"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Har bir koordinataga umumlashgan impuls $p_i=\\frac{\\partial L}{\\partial\\dot q_i}$ mos keladi (B2-L09). Gamilton funksiyasi (Hamiltonian, gamiltonian) — B2-L09 dagi energiya funksiyasining o'zi, lekin tezliklar orqali emas, impulslar orqali yozilgan: $H(q,p,t)=\\sum p_i\\dot q_i-L$, bunda har bir $\\dot q_i$ $p$ va $q$ orqali ifodalanadi. Tezliklardan impulslarga bunday o'tish Lejandr almashtirishi (Legendre transformation) deyiladi.",
+  "ru": "**Определение.** Каждой координате соответствует обобщённый импульс $p_i=\\frac{\\partial L}{\\partial\\dot q_i}$ (B2-L09). Функция Гамильтона (Hamiltonian, гамильтониан) — это та же функция энергии из B2-L09, но записанная не через скорости, а через импульсы: $H(q,p,t)=\\sum p_i\\dot q_i-L$, где каждая $\\dot q_i$ выражена через $p$ и $q$. Такой переход от скоростей к импульсам называется преобразованием Лежандра (Legendre transformation).",
+  "en": "**Definition.** Each coordinate has a generalized momentum $p_i=\\frac{\\partial L}{\\partial\\dot q_i}$ (B2-L09). The Hamiltonian is the energy function of B2-L09 itself, but written in terms of the momenta instead of the velocities: $H(q,p,t)=\\sum p_i\\dot q_i-L$, where each $\\dot q_i$ is expressed through $p$ and $q$. This passage from velocities to momenta is called the Legendre transformation."
+ },
+ {
+  "t": "m",
+  "m": "p_i=\\frac{\\partial L}{\\partial\\dot q_i},\\qquad H(q,p,t)=\\sum_i p_i\\dot q_i-L"
+ },
+ {
+  "t": "li",
+  "uz": "**Geometrik ma'nosi.** Bitta o'zgaruvchi uchun $L(\\dot q)$ — qavariq funksiya. Og'ishi $p$ bo'lgan to'g'ri chiziq grafikka $\\dot q$ nuqtada urinadi; urinmaning vertikal o'qni kesish nuqtasi $-H$ ga teng ([[F01]]). Demak $H(p)$ grafikning urinmalar oilasini — ya'ni o'sha ma'lumotni boshqa o'zgaruvchida — tasvirlaydi. Termodinamikadagi $U\\to F=U-TS$ o'tish ham Lejandr almashtirishi.",
+  "ru": "**Геометрический смысл.** Для одной переменной $L(\\dot q)$ — выпуклая функция. Прямая с наклоном $p$ касается графика в точке $\\dot q$; точка пересечения касательной с вертикальной осью равна $-H$ ([[F01]]). Значит, $H(p)$ описывает семейство касательных к графику — ту же информацию в другой переменной. Переход $U\\to F=U-TS$ в термодинамике — тоже преобразование Лежандра.",
+  "en": "**Geometric meaning.** For a single variable $L(\\dot q)$ is a convex function. The straight line of slope $p$ touches the graph at the point $\\dot q$; the tangent's intercept with the vertical axis equals $-H$ ([[F01]]). So $H(p)$ describes the family of tangents to the graph — the same information in a different variable. The passage $U\\to F=U-TS$ in thermodynamics is also a Legendre transformation."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L10-F01.png",
+   "ru": "figures/B2-L10-F01-ru.png",
+   "en": "figures/B2-L10-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Qachon $H=T+U$.** Agar bog'lanishlar statsionar bo'lsa va $T$ tezliklarning kvadratik formasi bo'lsa, Eyler teoremasiga ko'ra $\\sum p_i\\dot q_i=2T$, demak $H=2T-(T-U)=T+U=E$. Misollar: zarra $H=\\frac{p^2}{2m}+U(x)$; mayatnik $p_\\theta=ml^2\\dot\\theta$, $H=\\frac{p_\\theta^2}{2ml^2}-mgl\\cos\\theta$; qutb koordinatalarida $H=\\frac{p_r^2}{2m}+\\frac{p_\\varphi^2}{2mr^2}+U(r)$. Vaqtga bog'liq bog'lanishlarda (aylanuvchi halqa) $H\\neq E$, xuddi B2-L09 dagi $h$ kabi.",
+  "ru": "**Когда $H=T+U$.** Если связи стационарны и $T$ — квадратичная форма скоростей, то по теореме Эйлера $\\sum p_i\\dot q_i=2T$, значит $H=2T-(T-U)=T+U=E$. Примеры: частица $H=\\frac{p^2}{2m}+U(x)$; маятник $p_\\theta=ml^2\\dot\\theta$, $H=\\frac{p_\\theta^2}{2ml^2}-mgl\\cos\\theta$; в полярных координатах $H=\\frac{p_r^2}{2m}+\\frac{p_\\varphi^2}{2mr^2}+U(r)$. При связях, зависящих от времени (вращающееся кольцо), $H\\neq E$, как и $h$ в B2-L09.",
+  "en": "**When $H=T+U$.** If the constraints are stationary and $T$ is a quadratic form in the velocities, Euler's theorem gives $\\sum p_i\\dot q_i=2T$, hence $H=2T-(T-U)=T+U=E$. Examples: a particle $H=\\frac{p^2}{2m}+U(x)$; a pendulum $p_\\theta=ml^2\\dot\\theta$, $H=\\frac{p_\\theta^2}{2ml^2}-mgl\\cos\\theta$; in polar coordinates $H=\\frac{p_r^2}{2m}+\\frac{p_\\varphi^2}{2mr^2}+U(r)$. With time-dependent constraints (a rotating hoop) $H\\neq E$, just like $h$ in B2-L09."
+ },
+ {
+  "t": "m",
+  "m": "H=\\frac{p^2}{2m}+U(x),\\qquad H=\\frac{p_r^2}{2m}+\\frac{p_\\varphi^2}{2mr^2}+U(r)"
+ },
+ {
+  "t": "li",
+  "uz": "**Diqqat: $H$ ni $p$ orqali yozish shart.** $H=\\frac{1}{2}m\\dot x^2+U$ — son jihatdan to'g'ri, lekin Gamilton funksiyasi sifatida noto'g'ri: Gamilton tenglamalarida hosilalar $p$ va $q$ bo'yicha olinadi. Masalan, $L=\\frac{1}{2}a\\dot q^2+b\\dot q-U$ uchun $p=a\\dot q+b$, $\\dot q=\\frac{p-b}{a}$ va $H=\\frac{(p-b)^2}{2a}+U$.",
+  "ru": "**Внимание: $H$ обязательно записывать через $p$.** $H=\\frac{1}{2}m\\dot x^2+U$ — численно верно, но как функция Гамильтона неверно: в уравнениях Гамильтона производные берутся по $p$ и $q$. Например, для $L=\\frac{1}{2}a\\dot q^2+b\\dot q-U$ имеем $p=a\\dot q+b$, $\\dot q=\\frac{p-b}{a}$ и $H=\\frac{(p-b)^2}{2a}+U$.",
+  "en": "**Caution: $H$ must be written in terms of $p$.** $H=\\frac{1}{2}m\\dot x^2+U$ is numerically correct but wrong as a Hamiltonian: in Hamilton's equations the derivatives are taken with respect to $p$ and $q$. For example, for $L=\\frac{1}{2}a\\dot q^2+b\\dot q-U$ we have $p=a\\dot q+b$, $\\dot q=\\frac{p-b}{a}$ and $H=\\frac{(p-b)^2}{2a}+U$."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Gamiltonning kanonik tenglamalari",
+  "ru": "2. Канонические уравнения Гамильтона",
+  "en": "2. Hamilton's canonical equations"
+ },
+ {
+  "t": "li",
+  "uz": "**Keltirib chiqarish.** $H$ ning to'liq differensialini ikki xil yozamiz. Ta'rifdan va Eyler–Lagranj tenglamasidan ($\\frac{\\partial L}{\\partial q}=\\dot p$): $dH=\\dot q\\,dp-\\dot p\\,dq-\\frac{\\partial L}{\\partial t}dt$. Boshqa tomondan $dH=\\frac{\\partial H}{\\partial q}dq+\\frac{\\partial H}{\\partial p}dp+\\frac{\\partial H}{\\partial t}dt$. Koeffitsiyentlarni tenglashtirib, kanonik tenglamalarni (Hamilton's equations) olamiz. $s$ ta ikkinchi tartibli tenglama o'rniga $2s$ ta birinchi tartibli tenglama hosil bo'ladi.",
+  "ru": "**Вывод.** Запишем полный дифференциал $H$ двумя способами. Из определения и уравнения Эйлера–Лагранжа ($\\frac{\\partial L}{\\partial q}=\\dot p$): $dH=\\dot q\\,dp-\\dot p\\,dq-\\frac{\\partial L}{\\partial t}dt$. С другой стороны, $dH=\\frac{\\partial H}{\\partial q}dq+\\frac{\\partial H}{\\partial p}dp+\\frac{\\partial H}{\\partial t}dt$. Приравнивая коэффициенты, получаем канонические уравнения (Hamilton's equations). Вместо $s$ уравнений второго порядка — $2s$ уравнений первого порядка.",
+  "en": "**Derivation.** Write the total differential of $H$ in two ways. From the definition and the Euler–Lagrange equation ($\\frac{\\partial L}{\\partial q}=\\dot p$): $dH=\\dot q\\,dp-\\dot p\\,dq-\\frac{\\partial L}{\\partial t}dt$. On the other hand, $dH=\\frac{\\partial H}{\\partial q}dq+\\frac{\\partial H}{\\partial p}dp+\\frac{\\partial H}{\\partial t}dt$. Equating coefficients gives the canonical equations (Hamilton's equations). Instead of $s$ second-order equations we get $2s$ first-order equations."
+ },
+ {
+  "t": "m",
+  "m": "\\dot q_i=\\frac{\\partial H}{\\partial p_i},\\qquad \\dot p_i=-\\frac{\\partial H}{\\partial q_i},\\qquad \\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}=-\\frac{\\partial L}{\\partial t}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol — ossilyator.** $H=\\frac{p^2}{2m}+\\frac{1}{2}m\\omega^2x^2$: $\\dot x=\\frac{p}{m}$ (impuls ta'rifi qaytdi), $\\dot p=-m\\omega^2x$ (Nyutonning ikkinchi qonuni). Ikkalasini birlashtirsak, $\\ddot x=-\\omega^2x$. Birinchi tenglama doim «tezlik–impuls bog'lanishini» beradi, ikkinchisi — «kuch qonunini».",
+  "ru": "**Пример — осциллятор.** $H=\\frac{p^2}{2m}+\\frac{1}{2}m\\omega^2x^2$: $\\dot x=\\frac{p}{m}$ (вернулось определение импульса), $\\dot p=-m\\omega^2x$ (второй закон Ньютона). Объединив их, получаем $\\ddot x=-\\omega^2x$. Первое уравнение всегда даёт «связь скорости и импульса», второе — «закон силы».",
+  "en": "**Example — the oscillator.** $H=\\frac{p^2}{2m}+\\frac{1}{2}m\\omega^2x^2$: $\\dot x=\\frac{p}{m}$ (the definition of momentum returns), $\\dot p=-m\\omega^2x$ (Newton's second law). Combining them gives $\\ddot x=-\\omega^2x$. The first equation always gives the “velocity–momentum relation”, the second the “force law”."
+ },
+ {
+  "t": "li",
+  "uz": "**Siklik koordinatalar.** Agar $q_k$ $H$ da qatnashmasa, $\\dot p_k=-\\frac{\\partial H}{\\partial q_k}=0$ — impuls doimiy son $p_k=\\alpha$ bo'lib qoladi va masala bir erkinlik darajasiga kamayadi. Markaziy maydonda $\\dot p_\\varphi=0$, radial harakat esa $H=\\frac{p_r^2}{2m}+\\frac{\\alpha^2}{2mr^2}+U(r)$ bilan beriladi: $\\dot p_r=\\frac{\\alpha^2}{mr^3}-U'(r)$. Bu yerda $\\alpha$ ni qo'yish to'g'ri — B2-L09 dagi «$p_\\varphi$ ni $L$ ga qo'yish» xatosi $H$ da yuz bermaydi. Lagranj tilida xuddi shu natijani Raus funksiyasi (Routhian) $R=L-p_\\varphi\\dot\\varphi$ beradi.",
+  "ru": "**Циклические координаты.** Если $q_k$ не входит в $H$, то $\\dot p_k=-\\frac{\\partial H}{\\partial q_k}=0$ — импульс остаётся постоянным числом $p_k=\\alpha$, и задача сводится к меньшему числу степеней свободы. В центральном поле $\\dot p_\\varphi=0$, а радиальное движение задаётся $H=\\frac{p_r^2}{2m}+\\frac{\\alpha^2}{2mr^2}+U(r)$: $\\dot p_r=\\frac{\\alpha^2}{mr^3}-U'(r)$. Здесь подстановка $\\alpha$ законна — ошибка «подстановки $p_\\varphi$ в $L$» из B2-L09 в $H$ не возникает. На языке Лагранжа тот же результат даёт функция Рауса (Routhian) $R=L-p_\\varphi\\dot\\varphi$.",
+  "en": "**Cyclic coordinates.** If $q_k$ does not appear in $H$, then $\\dot p_k=-\\frac{\\partial H}{\\partial q_k}=0$ — the momentum stays a constant number $p_k=\\alpha$, and the problem loses a degree of freedom. In a central field $\\dot p_\\varphi=0$, and the radial motion is governed by $H=\\frac{p_r^2}{2m}+\\frac{\\alpha^2}{2mr^2}+U(r)$: $\\dot p_r=\\frac{\\alpha^2}{mr^3}-U'(r)$. Substituting $\\alpha$ here is legitimate — the B2-L09 mistake of “substituting $p_\\varphi$ into $L$” does not occur in $H$. In Lagrangian language the same result is given by the Routhian $R=L-p_\\varphi\\dot\\varphi$."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\partial H}{\\partial q_k}=0\\ \\Rightarrow\\ p_k=\\alpha,\\qquad \\dot p_r=\\frac{\\alpha^2}{mr^3}-U'(r)"
+ },
+ {
+  "t": "li",
+  "uz": "**EM maydondagi zarra.** B2-L09 da $\\vec p=m\\vec v+q\\vec A$ edi. Lejandr almashtirishi $H=\\frac{(\\vec p-q\\vec A)^2}{2m}+q\\phi$ ni beradi: son jihatdan bu kinetik energiya va elektr potensial energiyaning yig'indisi (magnit maydon ish bajarmaydi), lekin $H$ ning $\\vec p$ ga bog'liqligi «uzun hosila» $\\vec p-q\\vec A$ orqali. Bu yozuv kvant mexanikasida aynan saqlanadi: $\\hat{\\vec p}\\to-i\\hbar\\nabla$.",
+  "ru": "**Частица в ЭМ поле.** В B2-L09 было $\\vec p=m\\vec v+q\\vec A$. Преобразование Лежандра даёт $H=\\frac{(\\vec p-q\\vec A)^2}{2m}+q\\phi$: численно это сумма кинетической энергии и электрической потенциальной энергии (магнитное поле работы не совершает), но зависимость $H$ от $\\vec p$ — через «удлинённую производную» $\\vec p-q\\vec A$. Эта запись буквально сохраняется в квантовой механике: $\\hat{\\vec p}\\to-i\\hbar\\nabla$.",
+  "en": "**A particle in an EM field.** In B2-L09 we had $\\vec p=m\\vec v+q\\vec A$. The Legendre transformation gives $H=\\frac{(\\vec p-q\\vec A)^2}{2m}+q\\phi$: numerically this is the sum of the kinetic energy and the electric potential energy (the magnetic field does no work), but $H$ depends on $\\vec p$ through the “long derivative” $\\vec p-q\\vec A$. This form carries over literally to quantum mechanics: $\\hat{\\vec p}\\to-i\\hbar\\nabla$."
+ },
+ {
+  "t": "m",
+  "m": "H=\\frac{(\\vec p-q\\vec A)^2}{2m}+q\\phi,\\qquad m\\vec v=\\vec p-q\\vec A"
+ },
+ {
+  "t": "h2",
+  "uz": "3. Fazaviy fazo va fazaviy portret",
+  "ru": "3. Фазовое пространство и фазовый портрет",
+  "en": "3. Phase space and the phase portrait"
+ },
+ {
+  "t": "li",
+  "uz": "**Fazaviy fazo.** $(q,p)$ juftliklari fazosi — fazaviy fazo (phase space); bir erkinlik darajasida bu tekislik. Sistemaning holati — bitta nuqta, harakati — fazaviy trayektoriya (phase trajectory). Gamilton tenglamalari har bir nuqtada «tezlik vektori» $(\\dot q,\\dot p)$ ni beradi, shuning uchun $H$ vaqtga oshkor bog'liq bo'lmasa, trayektoriyalar kesishmaydi va $H=E$ sath chiziqlari bilan ustma-ust tushadi. Barcha trayektoriyalar majmui — fazaviy portret (phase portrait).",
+  "ru": "**Фазовое пространство.** Пространство пар $(q,p)$ — фазовое пространство (phase space); при одной степени свободы это плоскость. Состояние системы — одна точка, движение — фазовая траектория (phase trajectory). Уравнения Гамильтона задают в каждой точке «вектор скорости» $(\\dot q,\\dot p)$, поэтому, если $H$ явно не зависит от времени, траектории не пересекаются и совпадают с линиями уровня $H=E$. Совокупность всех траекторий — фазовый портрет (phase portrait).",
+  "en": "**Phase space.** The space of pairs $(q,p)$ is the phase space; for one degree of freedom it is a plane. The state of the system is a single point, the motion is a phase trajectory. Hamilton's equations assign a “velocity vector” $(\\dot q,\\dot p)$ to each point, so if $H$ does not depend explicitly on time, trajectories never cross and coincide with the level curves $H=E$. The set of all trajectories is the phase portrait."
+ },
+ {
+  "t": "li",
+  "uz": "**Ossilyator.** $\\frac{p^2}{2m}+\\frac{1}{2}m\\omega^2x^2=E$ — yarim o'qlari $A=\\sqrt{\\frac{2E}{m\\omega^2}}$ va $p_0=\\sqrt{2mE}$ bo'lgan ellips; nuqta uni soat strelkasi bo'yicha aylanib chiqadi ($x>0$ da $\\dot p<0$). Ellips yuzi $\\Gamma=\\pi Ap_0=\\frac{2\\pi E}{\\omega}$ ([[F02]]). Umumiy qoida: yopiq trayektoriya bo'ylab harakat davri $T=\\frac{d\\Gamma}{dE}$; ossilyator uchun $T=\\frac{2\\pi}{\\omega}$ — energiyaga bog'liq emas.",
+  "ru": "**Осциллятор.** $\\frac{p^2}{2m}+\\frac{1}{2}m\\omega^2x^2=E$ — эллипс с полуосями $A=\\sqrt{\\frac{2E}{m\\omega^2}}$ и $p_0=\\sqrt{2mE}$; точка обходит его по часовой стрелке (при $x>0$ $\\dot p<0$). Площадь эллипса $\\Gamma=\\pi Ap_0=\\frac{2\\pi E}{\\omega}$ ([[F02]]). Общее правило: период движения по замкнутой траектории $T=\\frac{d\\Gamma}{dE}$; для осциллятора $T=\\frac{2\\pi}{\\omega}$ — не зависит от энергии.",
+  "en": "**The oscillator.** $\\frac{p^2}{2m}+\\frac{1}{2}m\\omega^2x^2=E$ is an ellipse with semi-axes $A=\\sqrt{\\frac{2E}{m\\omega^2}}$ and $p_0=\\sqrt{2mE}$; the point goes around it clockwise ($\\dot p<0$ for $x>0$). The ellipse's area is $\\Gamma=\\pi Ap_0=\\frac{2\\pi E}{\\omega}$ ([[F02]]). General rule: the period of motion on a closed trajectory is $T=\\frac{d\\Gamma}{dE}$; for the oscillator $T=\\frac{2\\pi}{\\omega}$ — independent of the energy."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{x^2}{A^2}+\\frac{p^2}{p_0^2}=1,\\qquad \\Gamma=\\oint p\\,dx=\\frac{2\\pi E}{\\omega},\\qquad T=\\frac{d\\Gamma}{dE}"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L10-F02.png",
+   "ru": "figures/B2-L10-F02-ru.png",
+   "en": "figures/B2-L10-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Boshqa oddiy portretlar.** Erkin zarra: $p=\\mathrm{const}$ — gorizontal to'g'ri chiziqlar, nuqtalar $p>0$ da o'ngga, $p<0$ da chapga siljiydi. Doimiy kuch $F$ ($H=\\frac{p^2}{2m}-Fx$): parabolalar $x=\\frac{p^2}{2mF}-\\frac{E}{F}$. Itaruvchi potensial $U=-\\frac{1}{2}kx^2$: giperbolalar, asimptotalari $p=\\pm\\sqrt{mk}\\,x$ — muvozanat nuqtasi egar nuqta (saddle point).",
+  "ru": "**Другие простые портреты.** Свободная частица: $p=\\mathrm{const}$ — горизонтальные прямые, точки при $p>0$ смещаются вправо, при $p<0$ — влево. Постоянная сила $F$ ($H=\\frac{p^2}{2m}-Fx$): параболы $x=\\frac{p^2}{2mF}-\\frac{E}{F}$. Отталкивающий потенциал $U=-\\frac{1}{2}kx^2$: гиперболы с асимптотами $p=\\pm\\sqrt{mk}\\,x$ — точка равновесия является седловой точкой (saddle point).",
+  "en": "**Other simple portraits.** A free particle: $p=\\mathrm{const}$ — horizontal lines; points move right for $p>0$ and left for $p<0$. A constant force $F$ ($H=\\frac{p^2}{2m}-Fx$): parabolas $x=\\frac{p^2}{2mF}-\\frac{E}{F}$. A repulsive potential $U=-\\frac{1}{2}kx^2$: hyperbolas with asymptotes $p=\\pm\\sqrt{mk}\\,x$ — the equilibrium point is a saddle point."
+ },
+ {
+  "t": "li",
+  "uz": "**Mayatnik.** $H=\\frac{p_\\theta^2}{2ml^2}-mgl\\cos\\theta$. $E<mgl$ da yopiq egri chiziqlar — tebranish (libration); $E>mgl$ da $\\theta$ cheksiz o'sadi yoki kamayadi — aylanish (rotation). Ularni ajratuvchi chiziq $E^*=mgl$ — separatrisa (separatrix) — $\\theta=\\pm\\pi$ dagi egar nuqtalardan o'tadi ([[F03]]). Separatrisa bo'ylab harakat davri cheksiz: mayatnik yuqori nuqtaga cheksiz uzoq vaqtda yaqinlashadi. Pastki nuqtada separatrisa $p_\\theta=\\pm2ml\\sqrt{gl}$ dan o'tadi — aylanish uchun zarur eng kichik burchak tezlik $2\\sqrt{\\frac{g}{l}}$.",
+  "ru": "**Маятник.** $H=\\frac{p_\\theta^2}{2ml^2}-mgl\\cos\\theta$. При $E<mgl$ — замкнутые кривые — колебание (libration); при $E>mgl$ $\\theta$ неограниченно растёт или убывает — вращение (rotation). Разделяющая их линия $E^*=mgl$ — сепаратриса (separatrix) — проходит через седловые точки $\\theta=\\pm\\pi$ ([[F03]]). Период движения по сепаратрисе бесконечен: маятник приближается к верхней точке бесконечно долго. В нижней точке сепаратриса проходит через $p_\\theta=\\pm2ml\\sqrt{gl}$ — наименьшая угловая скорость, нужная для вращения, равна $2\\sqrt{\\frac{g}{l}}$.",
+  "en": "**The pendulum.** $H=\\frac{p_\\theta^2}{2ml^2}-mgl\\cos\\theta$. For $E<mgl$ the curves are closed — libration; for $E>mgl$, $\\theta$ grows or decreases without bound — rotation. The line separating them, $E^*=mgl$, is the separatrix; it passes through the saddle points $\\theta=\\pm\\pi$ ([[F03]]). The period of motion along the separatrix is infinite: the pendulum takes infinitely long to approach the top. At the bottom the separatrix passes through $p_\\theta=\\pm2ml\\sqrt{gl}$ — the smallest angular velocity needed for rotation is $2\\sqrt{\\frac{g}{l}}$."
+ },
+ {
+  "t": "m",
+  "m": "E^*=mgl,\\qquad p_\\theta(0)=\\pm2ml\\sqrt{gl},\\qquad \\dot\\theta=2\\sqrt{\\frac{g}{l}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L10-F03.png",
+   "ru": "figures/B2-L10-F03-ru.png",
+   "en": "figures/B2-L10-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Potensialdan portretni o'qish.** $p=\\pm\\sqrt{2m(E-U(x))}$: har bir $E$ uchun $U(x)<E$ bo'lgan oraliqda ikkita simmetrik tarmoq. $U$ ning minimumlariga markaz (centre) — yopiq trayektoriyalar bilan o'ralgan turg'un nuqta, maksimumlariga egar nuqta mos keladi. Burilish nuqtalarida ($U=E$) trayektoriya $x$ o'qini tik kesib o'tadi.",
+  "ru": "**Чтение портрета по потенциалу.** $p=\\pm\\sqrt{2m(E-U(x))}$: для каждого $E$ на интервале, где $U(x)<E$, — две симметричные ветви. Минимумам $U$ соответствует центр (centre) — устойчивая точка, окружённая замкнутыми траекториями, максимумам — седловая точка. В точках поворота ($U=E$) траектория пересекает ось $x$ вертикально.",
+  "en": "**Reading the portrait from the potential.** $p=\\pm\\sqrt{2m(E-U(x))}$: for each $E$, two symmetric branches over the interval where $U(x)<E$. Minima of $U$ correspond to centres — stable points surrounded by closed trajectories — and maxima to saddle points. At turning points ($U=E$) the trajectory crosses the $x$ axis vertically."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Liuvill teoremasi",
+  "ru": "4. Теорема Лиувилля",
+  "en": "4. Liouville's theorem"
+ },
+ {
+  "t": "li",
+  "uz": "**Fazaviy oqim siqilmaydi.** Fazaviy fazodagi «tezlik maydoni» $(\\dot q,\\dot p)$ ning divergensiyasi nolga teng: $\\frac{\\partial\\dot q}{\\partial q}+\\frac{\\partial\\dot p}{\\partial p}=\\frac{\\partial^2H}{\\partial q\\,\\partial p}-\\frac{\\partial^2H}{\\partial p\\,\\partial q}=0$. Demak, boshlang'ich holatlarning har qanday to'plami egallagan fazaviy hajm (yuza) $\\Gamma$ vaqt o'tishi bilan o'zgarmaydi — shakli cho'zilishi va buralishi mumkin, lekin hajmi saqlanadi. Bu Liuvill teoremasi (Liouville's theorem) ([[F04]]).",
+  "ru": "**Фазовый поток несжимаем.** Дивергенция «поля скоростей» $(\\dot q,\\dot p)$ в фазовом пространстве равна нулю: $\\frac{\\partial\\dot q}{\\partial q}+\\frac{\\partial\\dot p}{\\partial p}=\\frac{\\partial^2H}{\\partial q\\,\\partial p}-\\frac{\\partial^2H}{\\partial p\\,\\partial q}=0$. Значит, фазовый объём (площадь) $\\Gamma$, занимаемый любым набором начальных состояний, со временем не меняется — форма может растягиваться и закручиваться, но объём сохраняется. Это теорема Лиувилля (Liouville's theorem) ([[F04]]).",
+  "en": "**The phase flow is incompressible.** The divergence of the “velocity field” $(\\dot q,\\dot p)$ in phase space is zero: $\\frac{\\partial\\dot q}{\\partial q}+\\frac{\\partial\\dot p}{\\partial p}=\\frac{\\partial^2H}{\\partial q\\,\\partial p}-\\frac{\\partial^2H}{\\partial p\\,\\partial q}=0$. Hence the phase-space volume (area) $\\Gamma$ occupied by any set of initial states does not change in time — its shape can stretch and twist, but its volume is conserved. This is Liouville's theorem ([[F04]])."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\partial\\dot q}{\\partial q}+\\frac{\\partial\\dot p}{\\partial p}=0,\\qquad \\Gamma=\\int dq\\,dp=\\mathrm{const},\\qquad \\frac{d\\rho}{dt}=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** Erkin zarralar ansambli (ensemble): $0<x<a$, $0<p<b$ to'rtburchak. $t$ vaqtdan keyin $x\\to x+\\frac{p}{m}t$, $p$ o'zgarmaydi — to'rtburchak asosi va balandligi o'zgarmagan parallelogramga aylanadi, yuzi $ab$ saqlanadi, lekin $x$ bo'yicha kengligi $a+\\frac{bt}{m}$ gacha o'sadi. Fazaviy zichlik $\\rho$ trayektoriya bo'ylab o'zgarmaydi — ansambl «siqilmaydigan suyuqlik» kabi oqadi.",
+  "ru": "**Пример.** Ансамбль (ensemble) свободных частиц: прямоугольник $0<x<a$, $0<p<b$. Через время $t$ $x\\to x+\\frac{p}{m}t$, $p$ не меняется — прямоугольник превращается в параллелограмм с тем же основанием и высотой, площадь $ab$ сохраняется, но ширина по $x$ растёт до $a+\\frac{bt}{m}$. Фазовая плотность $\\rho$ вдоль траектории не меняется — ансамбль течёт как «несжимаемая жидкость».",
+  "en": "**Example.** An ensemble of free particles: the rectangle $0<x<a$, $0<p<b$. After time $t$, $x\\to x+\\frac{p}{m}t$ and $p$ is unchanged — the rectangle becomes a parallelogram with the same base and height, the area $ab$ is conserved, but the width in $x$ grows to $a+\\frac{bt}{m}$. The phase density $\\rho$ does not change along a trajectory — the ensemble flows like an “incompressible fluid”."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L10-F04.png",
+   "ru": "figures/B2-L10-F04-ru.png",
+   "en": "figures/B2-L10-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Gamilton bo'lmagan sistemalar.** So'nuvchi ossilyatorda ($\\dot p=-kx-2\\beta p$) divergensiya $-2\\beta$, shuning uchun yuza $\\Gamma\\propto e^{-2\\beta t}$ kamayadi — barcha trayektoriyalar bitta nuqtaga (attraktorga) tortiladi. Liuvill teoremasi shuni bildiradi: konservativ kuchlar (masalan, faqat linzalar va magnitlar) zarralar dastasining fazaviy hajmini (emittansini) kamaytira olmaydi — buning uchun dissipatsiya (sovutish) kerak.",
+  "ru": "**Негамильтоновы системы.** В затухающем осцилляторе ($\\dot p=-kx-2\\beta p$) дивергенция равна $-2\\beta$, поэтому площадь убывает как $\\Gamma\\propto e^{-2\\beta t}$ — все траектории стягиваются к одной точке (аттрактору). Теорема Лиувилля означает: консервативные силы (например, только линзы и магниты) не могут уменьшить фазовый объём (эмиттанс) пучка частиц — для этого нужна диссипация (охлаждение).",
+  "en": "**Non-Hamiltonian systems.** In a damped oscillator ($\\dot p=-kx-2\\beta p$) the divergence is $-2\\beta$, so the area decreases as $\\Gamma\\propto e^{-2\\beta t}$ — all trajectories are drawn to a single point (an attractor). Liouville's theorem means that conservative forces (for example, only lenses and magnets) cannot reduce the phase-space volume (emittance) of a particle beam — that requires dissipation (cooling)."
+ },
+ {
+  "t": "li",
+  "uz": "**Statistik fizika bilan bog'lanish.** Muvozanatdagi ansamblda $\\frac{\\partial\\rho}{\\partial t}=0$; buning uchun $\\rho$ saqlanadigan kattaliklarga, masalan $\\rho=\\rho(H)$ ga bog'liq bo'lishi kifoya. Mikrokanonik taqsimot ($\\rho=\\mathrm{const}$ yupqa $E$ qatlamda) va Boltsman taqsimoti $\\rho\\propto e^{-\\frac{H}{kT}}$ shunday. Fazaviy hajmni $h^s$ katakchalarga bo'lish kvant statistikasining asosi (8-bo'lim).",
+  "ru": "**Связь со статистической физикой.** В равновесном ансамбле $\\frac{\\partial\\rho}{\\partial t}=0$; для этого достаточно, чтобы $\\rho$ зависела от сохраняющихся величин, например $\\rho=\\rho(H)$. Таковы микроканоническое распределение ($\\rho=\\mathrm{const}$ в тонком слое по $E$) и распределение Больцмана $\\rho\\propto e^{-\\frac{H}{kT}}$. Разбиение фазового объёма на ячейки $h^s$ — основа квантовой статистики (раздел 8).",
+  "en": "**Link to statistical physics.** In an equilibrium ensemble $\\frac{\\partial\\rho}{\\partial t}=0$; it suffices that $\\rho$ depend on conserved quantities, for example $\\rho=\\rho(H)$. The microcanonical distribution ($\\rho=\\mathrm{const}$ in a thin shell of $E$) and the Boltzmann distribution $\\rho\\propto e^{-\\frac{H}{kT}}$ are of this kind. Dividing phase-space volume into cells $h^s$ is the basis of quantum statistics (section 8)."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Puasson qavslari",
+  "ru": "5. Скобки Пуассона",
+  "en": "5. Poisson brackets"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Fazaviy fazodagi ikki funksiya uchun Puasson qavsi (Poisson bracket) $\\{f,g\\}=\\sum_i\\left(\\frac{\\partial f}{\\partial q_i}\\frac{\\partial g}{\\partial p_i}-\\frac{\\partial f}{\\partial p_i}\\frac{\\partial g}{\\partial q_i}\\right)$. Har qanday $f(q,p,t)$ ning vaqt bo'yicha o'zgarishi Gamilton tenglamalaridan bevosita kelib chiqadi: $\\frac{df}{dt}=\\{f,H\\}+\\frac{\\partial f}{\\partial t}$. Xususan $\\dot q=\\{q,H\\}$, $\\dot p=\\{p,H\\}$ — kanonik tenglamalarning ixcham yozuvi.",
+  "ru": "**Определение.** Для двух функций на фазовом пространстве скобка Пуассона (Poisson bracket) $\\{f,g\\}=\\sum_i\\left(\\frac{\\partial f}{\\partial q_i}\\frac{\\partial g}{\\partial p_i}-\\frac{\\partial f}{\\partial p_i}\\frac{\\partial g}{\\partial q_i}\\right)$. Изменение во времени любой $f(q,p,t)$ прямо следует из уравнений Гамильтона: $\\frac{df}{dt}=\\{f,H\\}+\\frac{\\partial f}{\\partial t}$. В частности, $\\dot q=\\{q,H\\}$, $\\dot p=\\{p,H\\}$ — компактная запись канонических уравнений.",
+  "en": "**Definition.** For two functions on phase space the Poisson bracket is $\\{f,g\\}=\\sum_i\\left(\\frac{\\partial f}{\\partial q_i}\\frac{\\partial g}{\\partial p_i}-\\frac{\\partial f}{\\partial p_i}\\frac{\\partial g}{\\partial q_i}\\right)$. The time change of any $f(q,p,t)$ follows directly from Hamilton's equations: $\\frac{df}{dt}=\\{f,H\\}+\\frac{\\partial f}{\\partial t}$. In particular $\\dot q=\\{q,H\\}$, $\\dot p=\\{p,H\\}$ — a compact form of the canonical equations."
+ },
+ {
+  "t": "m",
+  "m": "\\{f,g\\}=\\sum_i\\left(\\frac{\\partial f}{\\partial q_i}\\frac{\\partial g}{\\partial p_i}-\\frac{\\partial f}{\\partial p_i}\\frac{\\partial g}{\\partial q_i}\\right),\\qquad \\frac{df}{dt}=\\{f,H\\}+\\frac{\\partial f}{\\partial t}"
+ },
+ {
+  "t": "li",
+  "uz": "**Xossalari.** Antisimmetriya $\\{f,g\\}=-\\{g,f\\}$ (demak $\\{f,f\\}=0$); chiziqlilik; Leybnits qoidasi $\\{f,gh\\}=\\{f,g\\}h+g\\{f,h\\}$; Yakobi ayniyati (Jacobi identity) $\\{f,\\{g,h\\}\\}+\\{g,\\{h,f\\}\\}+\\{h,\\{f,g\\}\\}=0$. Fundamental qavslar: $\\{q_i,q_j\\}=0$, $\\{p_i,p_j\\}=0$, $\\{q_i,p_j\\}=\\delta_{ij}$. Foydali natija: $\\{q,f\\}=\\frac{\\partial f}{\\partial p}$, $\\{p,f\\}=-\\frac{\\partial f}{\\partial q}$.",
+  "ru": "**Свойства.** Антисимметрия $\\{f,g\\}=-\\{g,f\\}$ (значит $\\{f,f\\}=0$); линейность; правило Лейбница $\\{f,gh\\}=\\{f,g\\}h+g\\{f,h\\}$; тождество Якоби (Jacobi identity) $\\{f,\\{g,h\\}\\}+\\{g,\\{h,f\\}\\}+\\{h,\\{f,g\\}\\}=0$. Фундаментальные скобки: $\\{q_i,q_j\\}=0$, $\\{p_i,p_j\\}=0$, $\\{q_i,p_j\\}=\\delta_{ij}$. Полезный результат: $\\{q,f\\}=\\frac{\\partial f}{\\partial p}$, $\\{p,f\\}=-\\frac{\\partial f}{\\partial q}$.",
+  "en": "**Properties.** Antisymmetry $\\{f,g\\}=-\\{g,f\\}$ (so $\\{f,f\\}=0$); linearity; the Leibniz rule $\\{f,gh\\}=\\{f,g\\}h+g\\{f,h\\}$; the Jacobi identity $\\{f,\\{g,h\\}\\}+\\{g,\\{h,f\\}\\}+\\{h,\\{f,g\\}\\}=0$. The fundamental brackets: $\\{q_i,q_j\\}=0$, $\\{p_i,p_j\\}=0$, $\\{q_i,p_j\\}=\\delta_{ij}$. A useful result: $\\{q,f\\}=\\frac{\\partial f}{\\partial p}$, $\\{p,f\\}=-\\frac{\\partial f}{\\partial q}$."
+ },
+ {
+  "t": "m",
+  "m": "\\{q_i,p_j\\}=\\delta_{ij},\\qquad \\{q,f\\}=\\frac{\\partial f}{\\partial p},\\qquad \\{p,f\\}=-\\frac{\\partial f}{\\partial q}"
+ },
+ {
+  "t": "li",
+  "uz": "**Harakat integrallari.** $f$ vaqtga oshkor bog'liq bo'lmasa, u saqlanadi (integral of motion) faqat va faqat $\\{f,H\\}=0$ bo'lganda. Xususan $\\{H,H\\}=0$ — $H$ saqlanadi. Puasson teoremasi: $f$ va $g$ harakat integrallari bo'lsa, $\\{f,g\\}$ ham harakat integrali (Yakobi ayniyatidan). Bu yangi integral berishi yoki $0$, doimiy son yoki eski integralga keltirilishi mumkin.",
+  "ru": "**Интегралы движения.** Если $f$ явно не зависит от времени, она сохраняется (integral of motion) тогда и только тогда, когда $\\{f,H\\}=0$. В частности, $\\{H,H\\}=0$ — $H$ сохраняется. Теорема Пуассона: если $f$ и $g$ — интегралы движения, то $\\{f,g\\}$ тоже интеграл движения (из тождества Якоби). Он может дать новый интеграл или свестись к $0$, постоянному числу или старому интегралу.",
+  "en": "**Integrals of motion.** If $f$ has no explicit time dependence, it is conserved (an integral of motion) if and only if $\\{f,H\\}=0$. In particular $\\{H,H\\}=0$ — $H$ is conserved. Poisson's theorem: if $f$ and $g$ are integrals of motion, so is $\\{f,g\\}$ (from the Jacobi identity). It may give a new integral or reduce to $0$, a constant number or an old integral."
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls momenti.** $L_z=xp_y-yp_x$ uchun $\\{L_x,L_y\\}=L_z$ va siklik almashtirishlar, $\\{L^2,L_z\\}=0$, $\\{L_z,x\\}=y$, $\\{L_z,y\\}=-x$ ([[F05]]). Markaziy maydonda $\\{L_z,H\\}=0$ — $\\vec L$ ning barcha tashkil etuvchilari saqlanadi. Puasson teoremasi: $L_x$ va $L_y$ saqlansa, $L_z=\\{L_x,L_y\\}$ ham avtomatik saqlanadi. Lekin $L_x$ va $L_y$ ni bir vaqtda kanonik impuls qilib bo'lmaydi: ularning qavsi nolga teng emas.",
+  "ru": "**Момент импульса.** Для $L_z=xp_y-yp_x$ имеем $\\{L_x,L_y\\}=L_z$ и циклические перестановки, $\\{L^2,L_z\\}=0$, $\\{L_z,x\\}=y$, $\\{L_z,y\\}=-x$ ([[F05]]). В центральном поле $\\{L_z,H\\}=0$ — сохраняются все составляющие $\\vec L$. Теорема Пуассона: если сохраняются $L_x$ и $L_y$, то $L_z=\\{L_x,L_y\\}$ сохраняется автоматически. Но сделать $L_x$ и $L_y$ одновременно каноническими импульсами нельзя: их скобка не равна нулю.",
+  "en": "**Angular momentum.** For $L_z=xp_y-yp_x$ we have $\\{L_x,L_y\\}=L_z$ and its cyclic permutations, $\\{L^2,L_z\\}=0$, $\\{L_z,x\\}=y$, $\\{L_z,y\\}=-x$ ([[F05]]). In a central field $\\{L_z,H\\}=0$ — all components of $\\vec L$ are conserved. Poisson's theorem: if $L_x$ and $L_y$ are conserved, $L_z=\\{L_x,L_y\\}$ is conserved automatically. But $L_x$ and $L_y$ cannot simultaneously be canonical momenta: their bracket is not zero."
+ },
+ {
+  "t": "m",
+  "m": "\\{L_x,L_y\\}=L_z,\\qquad \\{L^2,L_z\\}=0,\\qquad \\{L_z,x\\}=y"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L10-F05.png",
+   "ru": "figures/B2-L10-F05-ru.png",
+   "en": "figures/B2-L10-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Kvant mexanikasiga ko'prik.** Dirak qoidasi: klassik Puasson qavsi kvant kommutatoriga (commutator) o'tadi, $[\\hat f,\\hat g]=i\\hbar\\{f,g\\}$. Shu sababli $[\\hat x,\\hat p]=i\\hbar$, $[\\hat L_x,\\hat L_y]=i\\hbar\\hat L_z$, Geyzenberg tenglamasi esa $\\frac{d\\hat f}{dt}=\\frac{1}{i\\hbar}[\\hat f,\\hat H]$ — klassik $\\frac{df}{dt}=\\{f,H\\}$ ning aynan nusxasi. GRE ning kvant qismidagi kommutator savollari shu tuzilishga tayanadi.",
+  "ru": "**Мост к квантовой механике.** Правило Дирака: классическая скобка Пуассона переходит в квантовый коммутатор (commutator), $[\\hat f,\\hat g]=i\\hbar\\{f,g\\}$. Поэтому $[\\hat x,\\hat p]=i\\hbar$, $[\\hat L_x,\\hat L_y]=i\\hbar\\hat L_z$, а уравнение Гейзенберга $\\frac{d\\hat f}{dt}=\\frac{1}{i\\hbar}[\\hat f,\\hat H]$ — точная копия классического $\\frac{df}{dt}=\\{f,H\\}$. Вопросы о коммутаторах в квантовой части GRE опираются на эту структуру.",
+  "en": "**A bridge to quantum mechanics.** Dirac's rule: the classical Poisson bracket becomes the quantum commutator, $[\\hat f,\\hat g]=i\\hbar\\{f,g\\}$. Hence $[\\hat x,\\hat p]=i\\hbar$, $[\\hat L_x,\\hat L_y]=i\\hbar\\hat L_z$, and the Heisenberg equation $\\frac{d\\hat f}{dt}=\\frac{1}{i\\hbar}[\\hat f,\\hat H]$ is an exact copy of the classical $\\frac{df}{dt}=\\{f,H\\}$. Commutator questions in the quantum part of the GRE rest on this structure."
+ },
+ {
+  "t": "m",
+  "m": "[\\hat f,\\hat g]=i\\hbar\\{f,g\\},\\qquad [\\hat x,\\hat p]=i\\hbar,\\qquad \\frac{d\\hat f}{dt}=\\frac{1}{i\\hbar}[\\hat f,\\hat H]"
+ },
+ {
+  "t": "h2",
+  "uz": "6. Kanonik almashtirishlar",
+  "ru": "6. Канонические преобразования",
+  "en": "6. Canonical transformations"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Yangi o'zgaruvchilar $Q(q,p)$, $P(q,p)$ ga o'tganda Gamilton tenglamalari yangi funksiya $K$ bilan o'z ko'rinishini saqlasa, almashtirish kanonik (canonical transformation) deyiladi. Bir erkinlik darajasi uchun mezon oddiy: $\\{Q,P\\}_{q,p}=1$ — bu Yakobi determinanti $1$ ga teng, ya'ni almashtirish fazaviy yuzani saqlaydi. Ko'p o'lchovda barcha fundamental qavslar saqlanishi kerak.",
+  "ru": "**Определение.** Преобразование к новым переменным $Q(q,p)$, $P(q,p)$ называется каноническим (canonical transformation), если уравнения Гамильтона сохраняют свой вид с новой функцией $K$. Для одной степени свободы критерий прост: $\\{Q,P\\}_{q,p}=1$ — это якобиан, равный $1$, т. е. преобразование сохраняет фазовую площадь. В многомерном случае должны сохраняться все фундаментальные скобки.",
+  "en": "**Definition.** A change to new variables $Q(q,p)$, $P(q,p)$ is a canonical transformation if Hamilton's equations keep their form with a new function $K$. For one degree of freedom the criterion is simple: $\\{Q,P\\}_{q,p}=1$ — this is a Jacobian equal to $1$, i.e. the transformation preserves phase-space area. In many dimensions all the fundamental brackets must be preserved."
+ },
+ {
+  "t": "m",
+  "m": "\\{Q,P\\}_{q,p}=\\frac{\\partial Q}{\\partial q}\\frac{\\partial P}{\\partial p}-\\frac{\\partial Q}{\\partial p}\\frac{\\partial P}{\\partial q}=1"
+ },
+ {
+  "t": "li",
+  "uz": "**Misollar.** 1) $Q=p$, $P=-q$: koordinata va impuls rollarini almashtiradi — Gamilton formalizmida $q$ va $p$ teng huquqli. 2) Fazaviy tekislikdagi burish $Q=q\\cos\\alpha-p\\sin\\alpha$, $P=q\\sin\\alpha+p\\cos\\alpha$. 3) Masshtab $Q=\\lambda q$, $P=\\frac{p}{\\lambda}$ (lekin $Q=\\lambda q$, $P=\\lambda p$ — kanonik emas, $\\{Q,P\\}=\\lambda^2$). 4) $Q=q^2$, $P=\\frac{p}{2q}$. Har qanday nuqtaviy almashtirish $Q=f(q)$ impulsni $P=\\frac{p}{f'(q)}$ qilib to'ldirilsa, kanonik bo'ladi.",
+  "ru": "**Примеры.** 1) $Q=p$, $P=-q$: меняет роли координаты и импульса — в гамильтоновом формализме $q$ и $p$ равноправны. 2) Поворот в фазовой плоскости $Q=q\\cos\\alpha-p\\sin\\alpha$, $P=q\\sin\\alpha+p\\cos\\alpha$. 3) Масштаб $Q=\\lambda q$, $P=\\frac{p}{\\lambda}$ (но $Q=\\lambda q$, $P=\\lambda p$ — не каноническое, $\\{Q,P\\}=\\lambda^2$). 4) $Q=q^2$, $P=\\frac{p}{2q}$. Любое точечное преобразование $Q=f(q)$ становится каноническим, если дополнить импульс как $P=\\frac{p}{f'(q)}$.",
+  "en": "**Examples.** 1) $Q=p$, $P=-q$: swaps the roles of coordinate and momentum — in the Hamiltonian formalism $q$ and $p$ are on an equal footing. 2) A rotation of the phase plane $Q=q\\cos\\alpha-p\\sin\\alpha$, $P=q\\sin\\alpha+p\\cos\\alpha$. 3) A rescaling $Q=\\lambda q$, $P=\\frac{p}{\\lambda}$ (but $Q=\\lambda q$, $P=\\lambda p$ is not canonical: $\\{Q,P\\}=\\lambda^2$). 4) $Q=q^2$, $P=\\frac{p}{2q}$. Any point transformation $Q=f(q)$ becomes canonical if the momentum is completed as $P=\\frac{p}{f'(q)}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Hosil qiluvchi funksiyalar.** Kanonik almashtirishni bitta funksiya bilan berish mumkin. Masalan, $F_1(q,Q,t)$: $p=\\frac{\\partial F_1}{\\partial q}$, $P=-\\frac{\\partial F_1}{\\partial Q}$; $F_2(q,P,t)$: $p=\\frac{\\partial F_2}{\\partial q}$, $Q=\\frac{\\partial F_2}{\\partial P}$. Har ikkala holda $K=H+\\frac{\\partial F}{\\partial t}$. $F_2=qP$ — ayniy almashtirish, $F_1=qQ$ esa $Q=p$, $P=-q$ ni beradi. Hosil qiluvchi funksiya (generating function) tanlash — Gamilton–Yakobi usulining kaliti (8-bo'lim).",
+  "ru": "**Производящие функции.** Каноническое преобразование можно задать одной функцией. Например, $F_1(q,Q,t)$: $p=\\frac{\\partial F_1}{\\partial q}$, $P=-\\frac{\\partial F_1}{\\partial Q}$; $F_2(q,P,t)$: $p=\\frac{\\partial F_2}{\\partial q}$, $Q=\\frac{\\partial F_2}{\\partial P}$. В обоих случаях $K=H+\\frac{\\partial F}{\\partial t}$. $F_2=qP$ — тождественное преобразование, а $F_1=qQ$ даёт $Q=p$, $P=-q$. Выбор производящей функции (generating function) — ключ к методу Гамильтона–Якоби (раздел 8).",
+  "en": "**Generating functions.** A canonical transformation can be specified by a single function. For example, $F_1(q,Q,t)$: $p=\\frac{\\partial F_1}{\\partial q}$, $P=-\\frac{\\partial F_1}{\\partial Q}$; $F_2(q,P,t)$: $p=\\frac{\\partial F_2}{\\partial q}$, $Q=\\frac{\\partial F_2}{\\partial P}$. In both cases $K=H+\\frac{\\partial F}{\\partial t}$. $F_2=qP$ is the identity transformation, while $F_1=qQ$ gives $Q=p$, $P=-q$. Choosing a generating function is the key to the Hamilton–Jacobi method (section 8)."
+ },
+ {
+  "t": "m",
+  "m": "p=\\frac{\\partial F_1}{\\partial q},\\quad P=-\\frac{\\partial F_1}{\\partial Q};\\qquad p=\\frac{\\partial F_2}{\\partial q},\\quad Q=\\frac{\\partial F_2}{\\partial P};\\qquad K=H+\\frac{\\partial F}{\\partial t}"
+ },
+ {
+  "t": "li",
+  "uz": "**Harakatning o'zi kanonik almashtirish.** $(q_0,p_0)\\to(q(t),p(t))$ akslantirishi har bir $t$ da kanonik — Liuvill teoremasi buning natijasi. Maqsad: shunday $(Q,P)$ topishki, $K$ faqat $P$ ga bog'liq bo'lsin. U holda $\\dot P=0$, $\\dot Q=\\frac{\\partial K}{\\partial P}=\\mathrm{const}$ — harakat butunlay «to'g'rilanadi».",
+  "ru": "**Само движение — каноническое преобразование.** Отображение $(q_0,p_0)\\to(q(t),p(t))$ каноническое при каждом $t$ — теорема Лиувилля является его следствием. Цель: найти такие $(Q,P)$, чтобы $K$ зависела только от $P$. Тогда $\\dot P=0$, $\\dot Q=\\frac{\\partial K}{\\partial P}=\\mathrm{const}$ — движение полностью «выпрямляется».",
+  "en": "**Motion itself is a canonical transformation.** The map $(q_0,p_0)\\to(q(t),p(t))$ is canonical for every $t$ — Liouville's theorem is a consequence of this. The goal: find $(Q,P)$ such that $K$ depends only on $P$. Then $\\dot P=0$, $\\dot Q=\\frac{\\partial K}{\\partial P}=\\mathrm{const}$ — the motion is completely “straightened out”."
+ },
+ {
+  "t": "h2",
+  "uz": "7. Ta'sir–burchak o'zgaruvchilari va adiabatik invariantlar",
+  "ru": "7. Переменные действие–угол и адиабатические инварианты",
+  "en": "7. Action–angle variables and adiabatic invariants"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'sir o'zgaruvchisi.** Davriy harakat uchun ta'sir o'zgaruvchisi (action variable) $I=\\frac{1}{2\\pi}\\oint p\\,dq=\\frac{\\Gamma}{2\\pi}$ — trayektoriya o'rab olgan fazaviy yuza (B2-L09 dagi ta'sir integrali $S$ bilan adashtirmang). Unga qo'shma burchak o'zgaruvchisi (angle variable) $\\psi$ bir aylanishda $2\\pi$ ga o'sadi. Yangi o'zgaruvchilarda $H=H(I)$, $\\dot I=0$, $\\dot\\psi=\\frac{dH}{dI}=\\omega$ — aylanish chastotasi. Ossilyator uchun $I=\\frac{E}{\\omega}$, $H=\\omega I$.",
+  "ru": "**Переменная действия.** Для периодического движения переменная действия (action variable) $I=\\frac{1}{2\\pi}\\oint p\\,dq=\\frac{\\Gamma}{2\\pi}$ — фазовая площадь, охватываемая траекторией (не путать с интегралом действия $S$ из B2-L09). Сопряжённая ей угловая переменная (angle variable) $\\psi$ за один оборот растёт на $2\\pi$. В новых переменных $H=H(I)$, $\\dot I=0$, $\\dot\\psi=\\frac{dH}{dI}=\\omega$ — частота обращения. Для осциллятора $I=\\frac{E}{\\omega}$, $H=\\omega I$.",
+  "en": "**The action variable.** For periodic motion the action variable $I=\\frac{1}{2\\pi}\\oint p\\,dq=\\frac{\\Gamma}{2\\pi}$ is the phase-space area enclosed by the trajectory (not to be confused with the action integral $S$ of B2-L09). The conjugate angle variable $\\psi$ grows by $2\\pi$ per cycle. In the new variables $H=H(I)$, $\\dot I=0$, $\\dot\\psi=\\frac{dH}{dI}=\\omega$ — the frequency of the motion. For the oscillator $I=\\frac{E}{\\omega}$ and $H=\\omega I$."
+ },
+ {
+  "t": "m",
+  "m": "I=\\frac{1}{2\\pi}\\oint p\\,dq,\\qquad \\dot\\psi=\\frac{dH}{dI}=\\omega,\\qquad x=\\sqrt{\\frac{2I}{m\\omega}}\\sin\\psi,\\quad p=\\sqrt{2m\\omega I}\\cos\\psi"
+ },
+ {
+  "t": "li",
+  "uz": "**Ossilyatorni to'g'rilash.** Yuqoridagi almashtirish kanonik ($\\{\\psi,I\\}=1$) va $H=\\frac{p^2}{2m}+\\frac{1}{2}m\\omega^2x^2=\\omega I(\\cos^2\\psi+\\sin^2\\psi)=\\omega I$. Ellipslar fazaviy tekislikda $I=\\mathrm{const}$ gorizontal chiziqlarga, aylanish esa $\\psi=\\omega t+\\psi_0$ bo'ylab bir tekis siljishga aylanadi ([[F06]]).",
+  "ru": "**Выпрямление осциллятора.** Приведённое преобразование каноническое ($\\{\\psi,I\\}=1$) и $H=\\frac{p^2}{2m}+\\frac{1}{2}m\\omega^2x^2=\\omega I(\\cos^2\\psi+\\sin^2\\psi)=\\omega I$. Эллипсы на фазовой плоскости превращаются в горизонтальные прямые $I=\\mathrm{const}$, а обращение — в равномерный сдвиг $\\psi=\\omega t+\\psi_0$ ([[F06]]).",
+  "en": "**Straightening the oscillator.** The transformation above is canonical ($\\{\\psi,I\\}=1$) and $H=\\frac{p^2}{2m}+\\frac{1}{2}m\\omega^2x^2=\\omega I(\\cos^2\\psi+\\sin^2\\psi)=\\omega I$. The ellipses in the phase plane become horizontal lines $I=\\mathrm{const}$, and the circulation becomes a uniform shift $\\psi=\\omega t+\\psi_0$ ([[F06]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L10-F06.png",
+   "ru": "figures/B2-L10-F06-ru.png",
+   "en": "figures/B2-L10-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Adiabatik invariant.** Agar sistema parametri $\\lambda$ (ip uzunligi, prujina bikrligi, devorlar orasidagi masofa) bir davr ichida juda kam o'zgarsa ($T\\frac{d\\lambda}{dt}\\ll\\lambda$), energiya o'zgaradi, lekin $I$ deyarli o'zgarmaydi — adiabatik invariant (adiabatic invariant) ([[F07]]). Ossilyator uchun $\\frac{E}{\\omega}=\\mathrm{const}$: chastota ikki marta ortsa, energiya ham ikki marta ortadi. Tez (keskin) o'zgarishda bu qoida ishlamaydi.",
+  "ru": "**Адиабатический инвариант.** Если параметр системы $\\lambda$ (длина нити, жёсткость пружины, расстояние между стенками) за период меняется очень мало ($T\\frac{d\\lambda}{dt}\\ll\\lambda$), энергия меняется, но $I$ почти не меняется — адиабатический инвариант (adiabatic invariant) ([[F07]]). Для осциллятора $\\frac{E}{\\omega}=\\mathrm{const}$: при увеличении частоты в два раза энергия тоже увеличивается в два раза. При быстром (резком) изменении это правило не работает.",
+  "en": "**The adiabatic invariant.** If a system parameter $\\lambda$ (string length, spring stiffness, distance between walls) changes very little over one period ($T\\frac{d\\lambda}{dt}\\ll\\lambda$), the energy changes but $I$ hardly changes — it is an adiabatic invariant ([[F07]]). For the oscillator $\\frac{E}{\\omega}=\\mathrm{const}$: when the frequency doubles, the energy also doubles. For a fast (sudden) change this rule fails."
+ },
+ {
+  "t": "m",
+  "m": "I=\\frac{E}{\\omega}=\\mathrm{const}\\qquad \\left(T\\frac{d\\lambda}{dt}\\ll\\lambda\\right)"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L10-F07.png",
+   "ru": "figures/B2-L10-F07-ru.png",
+   "en": "figures/B2-L10-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Misollar.** 1) Ipi sekin qisqartirilayotgan mayatnik: $E\\propto\\omega\\propto l^{-\\frac{1}{2}}$, kichik amplitudada $E=\\frac{1}{2}mgl\\theta_0^2$, demak $\\theta_0\\propto l^{-\\frac{3}{4}}$. 2) Sekin yaqinlashayotgan devorlar orasidagi shar: $\\oint p\\,dx=2pd$, demak $pd=\\mathrm{const}$ — devorlar oralig'i $d$ ikki marta kamaysa, tezlik ikki marta ortadi. 3) Sekin o'zgaruvchi magnit maydondagi zarra: magnit oqim va $\\mu=\\frac{mv_\\perp^2}{2B}$ saqlanadi — magnit tuzoqlar (magnetic mirrors) va Yerning radiatsiya belbog'lari shunga asoslangan.",
+  "ru": "**Примеры.** 1) Маятник с медленно укорачиваемой нитью: $E\\propto\\omega\\propto l^{-\\frac{1}{2}}$, при малой амплитуде $E=\\frac{1}{2}mgl\\theta_0^2$, значит $\\theta_0\\propto l^{-\\frac{3}{4}}$. 2) Шарик между медленно сближающимися стенками: $\\oint p\\,dx=2pd$, значит $pd=\\mathrm{const}$ — при уменьшении расстояния $d$ между стенками в два раза скорость увеличивается в два раза. 3) Частица в медленно меняющемся магнитном поле: сохраняются магнитный поток и $\\mu=\\frac{mv_\\perp^2}{2B}$ — на этом основаны магнитные ловушки (magnetic mirrors) и радиационные пояса Земли.",
+  "en": "**Examples.** 1) A pendulum whose string is slowly shortened: $E\\propto\\omega\\propto l^{-\\frac{1}{2}}$; at small amplitude $E=\\frac{1}{2}mgl\\theta_0^2$, hence $\\theta_0\\propto l^{-\\frac{3}{4}}$. 2) A ball between slowly approaching walls: $\\oint p\\,dx=2pd$, hence $pd=\\mathrm{const}$ — when the wall separation $d$ halves, the speed doubles. 3) A particle in a slowly changing magnetic field: the magnetic flux and $\\mu=\\frac{mv_\\perp^2}{2B}$ are conserved — magnetic mirrors and the Earth's radiation belts rely on this."
+ },
+ {
+  "t": "m",
+  "m": "\\theta_0\\propto l^{-\\frac{3}{4}},\\qquad pd=\\mathrm{const},\\qquad \\mu=\\frac{mv_\\perp^2}{2B}=\\mathrm{const}"
+ },
+ {
+  "t": "h2",
+  "uz": "8. Gamilton–Yakobi tenglamasi va Bor–Zommerfeld kvantlashi",
+  "ru": "8. Уравнение Гамильтона–Якоби и квантование Бора–Зоммерфельда",
+  "en": "8. The Hamilton–Jacobi equation and Bohr–Sommerfeld quantization"
+ },
+ {
+  "t": "li",
+  "uz": "**Tenglama.** Ta'sir integralini yuqori chegaraning funksiyasi sifatida qaraymiz: $S(q,t)$ — Gamiltonning bosh funksiyasi (Hamilton's principal function). Uning hosilalari $\\frac{\\partial S}{\\partial q}=p$, $\\frac{\\partial S}{\\partial t}=-H$. Bularni birlashtirsak, $S$ uchun bitta xususiy hosilali tenglama — Gamilton–Yakobi tenglamasi (Hamilton–Jacobi equation) hosil bo'ladi. Uning to'liq yechimi hosil qiluvchi funksiya sifatida $K=0$ bo'ladigan kanonik almashtirishni beradi — barcha yangi o'zgaruvchilar doimiy.",
+  "ru": "**Уравнение.** Рассмотрим интеграл действия как функцию верхнего предела: $S(q,t)$ — главная функция Гамильтона (Hamilton's principal function). Её производные $\\frac{\\partial S}{\\partial q}=p$, $\\frac{\\partial S}{\\partial t}=-H$. Объединив их, получаем одно уравнение в частных производных для $S$ — уравнение Гамильтона–Якоби (Hamilton–Jacobi equation). Его полное решение как производящая функция даёт каноническое преобразование с $K=0$ — все новые переменные постоянны.",
+  "en": "**The equation.** Regard the action integral as a function of its upper limit: $S(q,t)$ is Hamilton's principal function. Its derivatives are $\\frac{\\partial S}{\\partial q}=p$ and $\\frac{\\partial S}{\\partial t}=-H$. Combining them gives a single partial differential equation for $S$ — the Hamilton–Jacobi equation. Its complete solution, used as a generating function, gives a canonical transformation with $K=0$ — all the new variables are constant."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\partial S}{\\partial t}+H\\left(q,\\frac{\\partial S}{\\partial q},t\\right)=0,\\qquad p=\\frac{\\partial S}{\\partial q}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ajratish.** $H$ vaqtga bog'liq bo'lmasa, $S=W(q)-Et$, bunda $W$ — xarakteristik funksiya: $H\\left(q,\\frac{dW}{dq}\\right)=E$. Erkin zarra: $S=px-\\frac{p^2}{2m}t$. Ossilyator: $W=\\int\\sqrt{2m\\left(E-\\frac{1}{2}m\\omega^2x^2\\right)}dx$; $\\frac{\\partial S}{\\partial E}=\\mathrm{const}$ shartidan $x=\\sqrt{\\frac{2E}{m\\omega^2}}\\sin(\\omega t+\\varphi)$ chiqadi. Trayektoriya integrallash orqali, ikkinchi tartibli tenglamani yechmasdan topiladi.",
+  "ru": "**Разделение.** Если $H$ не зависит от времени, $S=W(q)-Et$, где $W$ — характеристическая функция: $H\\left(q,\\frac{dW}{dq}\\right)=E$. Свободная частица: $S=px-\\frac{p^2}{2m}t$. Осциллятор: $W=\\int\\sqrt{2m\\left(E-\\frac{1}{2}m\\omega^2x^2\\right)}dx$; из условия $\\frac{\\partial S}{\\partial E}=\\mathrm{const}$ следует $x=\\sqrt{\\frac{2E}{m\\omega^2}}\\sin(\\omega t+\\varphi)$. Траектория находится интегрированием, без решения уравнения второго порядка.",
+  "en": "**Separation.** If $H$ does not depend on time, $S=W(q)-Et$, where $W$ is the characteristic function: $H\\left(q,\\frac{dW}{dq}\\right)=E$. A free particle: $S=px-\\frac{p^2}{2m}t$. The oscillator: $W=\\int\\sqrt{2m\\left(E-\\frac{1}{2}m\\omega^2x^2\\right)}dx$; the condition $\\frac{\\partial S}{\\partial E}=\\mathrm{const}$ gives $x=\\sqrt{\\frac{2E}{m\\omega^2}}\\sin(\\omega t+\\varphi)$. The trajectory is found by integration, without solving a second-order equation."
+ },
+ {
+  "t": "m",
+  "m": "S=W(q)-Et,\\qquad S=px-\\frac{p^2}{2m}t,\\qquad \\frac{\\partial S}{\\partial E}=\\mathrm{const}"
+ },
+ {
+  "t": "li",
+  "uz": "**Optika va kvant mexanikasi.** $S=\\mathrm{const}$ sirtlari to'lqin frontlari kabi, $\\vec p=\\nabla S$ trayektoriyalari esa ularga perpendikulyar nurlar kabi harakatlanadi — bu geometrik optikadagi eykonal tenglamasining mexanik analogi. Shryodinger to'lqin funksiyasini $\\psi\\approx Ae^{\\frac{iS}{\\hbar}}$ ko'rinishida qidirsak va $\\hbar\\to0$ desak, Shryodinger tenglamasi Gamilton–Yakobi tenglamasiga o'tadi (VKB yaqinlashuvi).",
+  "ru": "**Оптика и квантовая механика.** Поверхности $S=\\mathrm{const}$ движутся как волновые фронты, а траектории $\\vec p=\\nabla S$ — как перпендикулярные им лучи — это механический аналог уравнения эйконала геометрической оптики. Если искать волновую функцию Шрёдингера в виде $\\psi\\approx Ae^{\\frac{iS}{\\hbar}}$ и положить $\\hbar\\to0$, уравнение Шрёдингера переходит в уравнение Гамильтона–Якоби (приближение ВКБ).",
+  "en": "**Optics and quantum mechanics.** The surfaces $S=\\mathrm{const}$ move like wavefronts, and the trajectories $\\vec p=\\nabla S$ like rays perpendicular to them — the mechanical analogue of the eikonal equation of geometrical optics. If the Schrödinger wave function is sought in the form $\\psi\\approx Ae^{\\frac{iS}{\\hbar}}$ and we let $\\hbar\\to0$, the Schrödinger equation turns into the Hamilton–Jacobi equation (the WKB approximation)."
+ },
+ {
+  "t": "li",
+  "uz": "**Bor–Zommerfeld kvantlash sharti.** Eski kvant nazariyasida ruxsat etilgan orbitalar fazaviy yuzasi Plank doimiysiga karrali bo'lganlari: $\\oint p\\,dq=nh$, ya'ni $I=n\\hbar$ (kvantlash sharti, quantization condition). Ossilyator: $\\frac{2\\pi E}{\\omega}=nh$, $E_n=n\\hbar\\omega$ (aniq natija $(n+\\frac{1}{2})\\hbar\\omega$). Devorlar orasidagi zarra: $2pd=nh$, $E_n=\\frac{n^2h^2}{8md^2}$ — aniq natija bilan bir xil. Vodorod atomida aylana orbita uchun $\\oint p_\\varphi d\\varphi=2\\pi L=nh$ — Bor sharti $L=n\\hbar$. Har bir kvant holatga fazaviy fazoda $h$ yuza to'g'ri keladi ([[F08]]).",
+  "ru": "**Условие квантования Бора–Зоммерфельда.** В старой квантовой теории разрешены орбиты, фазовая площадь которых кратна постоянной Планка: $\\oint p\\,dq=nh$, т. е. $I=n\\hbar$ (условие квантования, quantization condition). Осциллятор: $\\frac{2\\pi E}{\\omega}=nh$, $E_n=n\\hbar\\omega$ (точный результат $(n+\\frac{1}{2})\\hbar\\omega$). Частица между стенками: $2pd=nh$, $E_n=\\frac{n^2h^2}{8md^2}$ — совпадает с точным результатом. Для круговой орбиты в атоме водорода $\\oint p_\\varphi d\\varphi=2\\pi L=nh$ — условие Бора $L=n\\hbar$. Каждому квантовому состоянию в фазовом пространстве соответствует площадь $h$ ([[F08]]).",
+  "en": "**The Bohr–Sommerfeld quantization condition.** In the old quantum theory the allowed orbits are those whose phase-space area is a multiple of Planck's constant: $\\oint p\\,dq=nh$, i.e. $I=n\\hbar$ (the quantization condition). The oscillator: $\\frac{2\\pi E}{\\omega}=nh$, $E_n=n\\hbar\\omega$ (the exact result is $(n+\\frac{1}{2})\\hbar\\omega$). A particle between walls: $2pd=nh$, $E_n=\\frac{n^2h^2}{8md^2}$ — the same as the exact result. For a circular orbit in the hydrogen atom $\\oint p_\\varphi d\\varphi=2\\pi L=nh$ — Bohr's condition $L=n\\hbar$. Each quantum state corresponds to an area $h$ in phase space ([[F08]])."
+ },
+ {
+  "t": "m",
+  "m": "\\oint p\\,dq=nh,\\qquad E_n=n\\hbar\\omega,\\qquad E_n=\\frac{n^2h^2}{8md^2},\\qquad L=n\\hbar"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L10-F08.png",
+   "ru": "figures/B2-L10-F08-ru.png",
+   "en": "figures/B2-L10-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Nega aynan adiabatik invariant.** Erenfest g'oyasi: kvantlanadigan kattalik sekin o'zgarishlarda saqlanishi kerak, aks holda tashqi parametrni sekin o'zgartirish sistemani «ruxsat etilmagan» holatga o'tkazar edi. Adiabatik invariant $I$ aynan shunday — kvant mexanikasidagi adiabatik teorema (sekin o'zgarishda sistema o'z $n$-holatida qoladi) buning kvant ko'rinishi.",
+  "ru": "**Почему именно адиабатический инвариант.** Идея Эренфеста: квантуемая величина должна сохраняться при медленных изменениях, иначе медленное изменение внешнего параметра переводило бы систему в «запрещённое» состояние. Адиабатический инвариант $I$ именно таков — адиабатическая теорема квантовой механики (при медленном изменении система остаётся в своём $n$-м состоянии) является его квантовым видом.",
+  "en": "**Why the adiabatic invariant.** Ehrenfest's idea: a quantized quantity must be conserved under slow changes, otherwise slowly changing an external parameter would carry the system into a “forbidden” state. The adiabatic invariant $I$ is exactly such a quantity — the adiabatic theorem of quantum mechanics (under slow change the system stays in its $n$th state) is its quantum form."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Maxsus gamiltonianlar",
+  "ru": "9. Особые гамильтонианы",
+  "en": "9. Special Hamiltonians"
+ },
+ {
+  "t": "li",
+  "uz": "**Vaqtga bog'liq $H$.** $\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}$: masalan, bikrligi o'zgaruvchi prujina $H=\\frac{p^2}{2m}+\\frac{1}{2}k(t)x^2$ uchun $\\frac{dH}{dt}=\\frac{1}{2}\\dot kx^2$ — tashqi manba ish bajaradi. Sekin o'zgarishda $H$ saqlanmaydi, lekin $\\frac{H}{\\omega}$ saqlanadi (7-bo'lim). So'nish ham $H$ ning vaqtga bog'liqligi orqali yozilishi mumkin: $H=e^{-\\gamma t}\\frac{p^2}{2m}+e^{\\gamma t}\\frac{1}{2}kx^2$ (Kaldirola–Kanay) $m\\ddot x+m\\gamma\\dot x+kx=0$ ni beradi, bunda $p=me^{\\gamma t}\\dot x$ — mexanik impuls emas.",
+  "ru": "**Зависящий от времени $H$.** $\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}$: например, для пружины с переменной жёсткостью $H=\\frac{p^2}{2m}+\\frac{1}{2}k(t)x^2$ имеем $\\frac{dH}{dt}=\\frac{1}{2}\\dot kx^2$ — внешний источник совершает работу. При медленном изменении $H$ не сохраняется, но сохраняется $\\frac{H}{\\omega}$ (раздел 7). Затухание тоже можно записать через зависимость $H$ от времени: $H=e^{-\\gamma t}\\frac{p^2}{2m}+e^{\\gamma t}\\frac{1}{2}kx^2$ (Кальдирола–Канаи) даёт $m\\ddot x+m\\gamma\\dot x+kx=0$, где $p=me^{\\gamma t}\\dot x$ — не механический импульс.",
+  "en": "**A time-dependent $H$.** $\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}$: for example, for a spring of varying stiffness $H=\\frac{p^2}{2m}+\\frac{1}{2}k(t)x^2$ we get $\\frac{dH}{dt}=\\frac{1}{2}\\dot kx^2$ — an external source does work. Under slow change $H$ is not conserved, but $\\frac{H}{\\omega}$ is (section 7). Damping can also be written through a time-dependent $H$: $H=e^{-\\gamma t}\\frac{p^2}{2m}+e^{\\gamma t}\\frac{1}{2}kx^2$ (Caldirola–Kanai) gives $m\\ddot x+m\\gamma\\dot x+kx=0$, where $p=me^{\\gamma t}\\dot x$ is not the mechanical momentum."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{dH}{dt}=\\frac{1}{2}\\dot kx^2,\\qquad H=e^{-\\gamma t}\\frac{p^2}{2m}+e^{\\gamma t}\\frac{1}{2}kx^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Aylanuvchi sanoq sistemasi.** B2-L09 dagi $L=\\frac{m}{2}|\\vec v+\\vec\\Omega\\times\\vec r|^2-U$ dan $\\vec p=m(\\vec v+\\vec\\Omega\\times\\vec r)$ — inersial sistemadagi impuls — va $H=\\frac{p^2}{2m}+U-\\vec\\Omega\\cdot\\vec L$. $U$ aylanuvchi sistemada qo'zg'almas bo'lsa, bu $H$ saqlanadi (Yakobi integrali), lekin u energiyadan $\\vec\\Omega\\cdot\\vec L$ ga farq qiladi. Kvant mexanikasida xuddi shu had atomning magnit maydondagi Larmor presessiyasini beradi.",
+  "ru": "**Вращающаяся система отсчёта.** Из $L=\\frac{m}{2}|\\vec v+\\vec\\Omega\\times\\vec r|^2-U$ из B2-L09 следует $\\vec p=m(\\vec v+\\vec\\Omega\\times\\vec r)$ — импульс в инерциальной системе — и $H=\\frac{p^2}{2m}+U-\\vec\\Omega\\cdot\\vec L$. Если $U$ неподвижен во вращающейся системе, этот $H$ сохраняется (интеграл Якоби), но отличается от энергии на $\\vec\\Omega\\cdot\\vec L$. В квантовой механике тот же член даёт ларморову прецессию атома в магнитном поле.",
+  "en": "**A rotating frame.** From $L=\\frac{m}{2}|\\vec v+\\vec\\Omega\\times\\vec r|^2-U$ of B2-L09 follows $\\vec p=m(\\vec v+\\vec\\Omega\\times\\vec r)$ — the momentum in the inertial frame — and $H=\\frac{p^2}{2m}+U-\\vec\\Omega\\cdot\\vec L$. If $U$ is fixed in the rotating frame, this $H$ is conserved (the Jacobi integral), but it differs from the energy by $\\vec\\Omega\\cdot\\vec L$. In quantum mechanics the same term gives the Larmor precession of an atom in a magnetic field."
+ },
+ {
+  "t": "m",
+  "m": "H=\\frac{p^2}{2m}+U-\\vec\\Omega\\cdot\\vec L"
+ },
+ {
+  "t": "li",
+  "uz": "**Relyativistik zarra.** $L=-mc^2\\sqrt{1-\\frac{v^2}{c^2}}-U$ dan $\\vec p=\\frac{m\\vec v}{\\sqrt{1-\\frac{v^2}{c^2}}}$ va $H=\\sqrt{p^2c^2+m^2c^4}+U$ — to'liq energiya (B1-L47 dagi energiya–impuls bog'lanishi). Gamilton tenglamasi $\\dot x=\\frac{\\partial H}{\\partial p}=\\frac{pc^2}{\\sqrt{p^2c^2+m^2c^4}}<c$ — impuls cheksiz o'ssa ham tezlik $c$ dan oshmaydi.",
+  "ru": "**Релятивистская частица.** Из $L=-mc^2\\sqrt{1-\\frac{v^2}{c^2}}-U$ следует $\\vec p=\\frac{m\\vec v}{\\sqrt{1-\\frac{v^2}{c^2}}}$ и $H=\\sqrt{p^2c^2+m^2c^4}+U$ — полная энергия (связь энергии и импульса из B1-L47). Уравнение Гамильтона $\\dot x=\\frac{\\partial H}{\\partial p}=\\frac{pc^2}{\\sqrt{p^2c^2+m^2c^4}}<c$ — даже при неограниченном росте импульса скорость не превышает $c$.",
+  "en": "**A relativistic particle.** From $L=-mc^2\\sqrt{1-\\frac{v^2}{c^2}}-U$ follow $\\vec p=\\frac{m\\vec v}{\\sqrt{1-\\frac{v^2}{c^2}}}$ and $H=\\sqrt{p^2c^2+m^2c^4}+U$ — the total energy (the energy–momentum relation of B1-L47). Hamilton's equation $\\dot x=\\frac{\\partial H}{\\partial p}=\\frac{pc^2}{\\sqrt{p^2c^2+m^2c^4}}<c$ — even as the momentum grows without bound, the speed never exceeds $c$."
+ },
+ {
+  "t": "m",
+  "m": "H=\\sqrt{p^2c^2+m^2c^4}+U,\\qquad \\dot x=\\frac{pc^2}{\\sqrt{p^2c^2+m^2c^4}}"
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE usullari va tipik xatolar",
+  "ru": "10. Методы GRE и типичные ошибки",
+  "en": "10. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 1 — $H$ ni yozish.** Avval $L$, keyin $p=\\frac{\\partial L}{\\partial\\dot q}$, so'ng $\\dot q$ ni $p$ orqali ifodalab $H=p\\dot q-L$. Statsionar bog'lanish va kvadratik $T$ bo'lsa, tezroq: $T$ ni $p$ orqali yozib, $U$ ni qo'shing ($T=\\frac{p^2}{2M}$, $M$ — mos «massa»: $ml^2$, $mr^2$ va hokazo).",
+  "ru": "**Метод 1 — запись $H$.** Сначала $L$, затем $p=\\frac{\\partial L}{\\partial\\dot q}$, потом выразить $\\dot q$ через $p$ и $H=p\\dot q-L$. При стационарных связях и квадратичной $T$ быстрее: запишите $T$ через $p$ и добавьте $U$ ($T=\\frac{p^2}{2M}$, $M$ — соответствующая «масса»: $ml^2$, $mr^2$ и т. д.).",
+  "en": "**Method 1 — writing $H$.** First $L$, then $p=\\frac{\\partial L}{\\partial\\dot q}$, then express $\\dot q$ in terms of $p$ and $H=p\\dot q-L$. With stationary constraints and a quadratic $T$ it is faster: write $T$ in terms of $p$ and add $U$ ($T=\\frac{p^2}{2M}$, where $M$ is the corresponding “mass”: $ml^2$, $mr^2$ and so on)."
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 2 — portret va yuza.** Fazaviy trayektoriya — $H=E$ sath chizig'i. Ellips — garmonik, gorizontal chiziq — erkin, parabola — doimiy kuch, giperbola — itarish; separatrisa — tebranish va aylanish chegarasi. Yopiq trayektoriya yuzasi $2\\pi I$, davri $T=\\frac{d\\Gamma}{dE}$; adiabatik masalalarda «yuza saqlanadi» deb hisoblang.",
+  "ru": "**Метод 2 — портрет и площадь.** Фазовая траектория — линия уровня $H=E$. Эллипс — гармоническое движение, горизонтальная прямая — свободное, парабола — постоянная сила, гипербола — отталкивание; сепаратриса — граница колебания и вращения. Площадь замкнутой траектории $2\\pi I$, период $T=\\frac{d\\Gamma}{dE}$; в адиабатических задачах считайте, что «площадь сохраняется».",
+  "en": "**Method 2 — portrait and area.** A phase trajectory is a level curve $H=E$. An ellipse — harmonic motion, a horizontal line — free motion, a parabola — a constant force, a hyperbola — repulsion; the separatrix — the boundary between libration and rotation. The area of a closed trajectory is $2\\pi I$ and the period is $T=\\frac{d\\Gamma}{dE}$; in adiabatic problems assume that “the area is conserved”."
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 3 — Puasson qavslari.** Hisoblashni fundamental qavslar va Leybnits qoidasiga keltiring: $\\{x^n,p\\}=nx^{n-1}$, $\\{L_z,x\\}=y$. Saqlanishni $\\{f,H\\}=0$ bilan tekshiring; kanoniklikni $\\{Q,P\\}=1$ bilan.",
+  "ru": "**Метод 3 — скобки Пуассона.** Сводите вычисление к фундаментальным скобкам и правилу Лейбница: $\\{x^n,p\\}=nx^{n-1}$, $\\{L_z,x\\}=y$. Сохранение проверяйте по $\\{f,H\\}=0$; каноничность — по $\\{Q,P\\}=1$.",
+  "en": "**Method 3 — Poisson brackets.** Reduce the computation to the fundamental brackets and the Leibniz rule: $\\{x^n,p\\}=nx^{n-1}$, $\\{L_z,x\\}=y$. Check conservation with $\\{f,H\\}=0$ and canonicity with $\\{Q,P\\}=1$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) $H$ ni $\\dot q$ orqali qoldirish. 2) $\\dot p=+\\frac{\\partial H}{\\partial q}$ deb ishorani adashtirish. 3) Har doim $H=E$ deb olish (aylanuvchi sistema, vaqtga bog'liq bog'lanish). 4) Puasson qavsi ishorasini ($\\{q,p\\}=+1$) yoki tartibini adashtirish. 5) $Q=\\lambda q$, $P=\\lambda p$ ni kanonik deb hisoblash. 6) Adiabatik o'zgarishda $E$ ni saqlanadi deb olish — saqlanadigani $\\frac{E}{\\omega}$. 7) Liuvill teoremasini so'nuvchi sistemalarga qo'llash.",
+  "ru": "**Типичные ошибки.** 1) Оставлять $H$ через $\\dot q$. 2) Путать знак: $\\dot p=+\\frac{\\partial H}{\\partial q}$. 3) Всегда считать $H=E$ (вращающаяся система, связь, зависящая от времени). 4) Путать знак ($\\{q,p\\}=+1$) или порядок в скобке Пуассона. 5) Считать каноническим $Q=\\lambda q$, $P=\\lambda p$. 6) При адиабатическом изменении считать сохраняющейся $E$ — сохраняется $\\frac{E}{\\omega}$. 7) Применять теорему Лиувилля к затухающим системам.",
+  "en": "**Typical mistakes.** 1) Leaving $H$ in terms of $\\dot q$. 2) Getting the sign wrong: $\\dot p=+\\frac{\\partial H}{\\partial q}$. 3) Always assuming $H=E$ (rotating frame, time-dependent constraint). 4) Mixing up the sign ($\\{q,p\\}=+1$) or the order in a Poisson bracket. 5) Taking $Q=\\lambda q$, $P=\\lambda p$ to be canonical. 6) Assuming $E$ is conserved in an adiabatic change — what is conserved is $\\frac{E}{\\omega}$. 7) Applying Liouville's theorem to damped systems."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Gamilton funksiyasi",
+    "ru": "Функция Гамильтона",
+    "en": "Hamiltonian",
+    "m": "H=\\sum p_i\\dot q_i-L"
+   },
+   {
+    "uz": "Statsionar bog'lanishlar",
+    "ru": "Стационарные связи",
+    "en": "Stationary constraints",
+    "m": "H=T+U=E"
+   },
+   {
+    "uz": "Kanonik tenglamalar",
+    "ru": "Канонические уравнения",
+    "en": "Canonical equations",
+    "m": "\\dot q=\\frac{\\partial H}{\\partial p},\\quad \\dot p=-\\frac{\\partial H}{\\partial q}"
+   },
+   {
+    "uz": "$H$ ning o'zgarishi",
+    "ru": "Изменение $H$",
+    "en": "Change of $H$",
+    "m": "\\frac{dH}{dt}=\\frac{\\partial H}{\\partial t}"
+   },
+   {
+    "uz": "EM maydondagi zarra",
+    "ru": "Частица в ЭМ поле",
+    "en": "Particle in an EM field",
+    "m": "H=\\frac{(\\vec p-q\\vec A)^2}{2m}+q\\phi"
+   },
+   {
+    "uz": "Ossilyator portreti",
+    "ru": "Портрет осциллятора",
+    "en": "Oscillator portrait",
+    "m": "\\Gamma=\\frac{2\\pi E}{\\omega},\\quad T=\\frac{d\\Gamma}{dE}"
+   },
+   {
+    "uz": "Mayatnik separatrisasi",
+    "ru": "Сепаратриса маятника",
+    "en": "Pendulum separatrix",
+    "m": "E^*=mgl,\\quad \\dot\\theta=2\\sqrt{\\frac{g}{l}}"
+   },
+   {
+    "uz": "Liuvill teoremasi",
+    "ru": "Теорема Лиувилля",
+    "en": "Liouville's theorem",
+    "m": "\\Gamma=\\mathrm{const},\\quad \\frac{d\\rho}{dt}=0"
+   },
+   {
+    "uz": "Puasson qavsi",
+    "ru": "Скобка Пуассона",
+    "en": "Poisson bracket",
+    "m": "\\frac{df}{dt}=\\{f,H\\}+\\frac{\\partial f}{\\partial t}"
+   },
+   {
+    "uz": "Fundamental qavslar",
+    "ru": "Фундаментальные скобки",
+    "en": "Fundamental brackets",
+    "m": "\\{q_i,p_j\\}=\\delta_{ij},\\quad \\{L_x,L_y\\}=L_z"
+   },
+   {
+    "uz": "Kommutator",
+    "ru": "Коммутатор",
+    "en": "Commutator",
+    "m": "[\\hat f,\\hat g]=i\\hbar\\{f,g\\}"
+   },
+   {
+    "uz": "Kanoniklik mezoni",
+    "ru": "Критерий каноничности",
+    "en": "Canonicity test",
+    "m": "\\{Q,P\\}_{q,p}=1"
+   },
+   {
+    "uz": "Ta'sir o'zgaruvchisi",
+    "ru": "Переменная действия",
+    "en": "Action variable",
+    "m": "I=\\frac{1}{2\\pi}\\oint p\\,dq,\\quad \\omega=\\frac{dH}{dI}"
+   },
+   {
+    "uz": "Adiabatik invariant",
+    "ru": "Адиабатический инвариант",
+    "en": "Adiabatic invariant",
+    "m": "\\frac{E}{\\omega}=\\mathrm{const},\\quad \\theta_0\\propto l^{-\\frac{3}{4}}"
+   },
+   {
+    "uz": "Gamilton–Yakobi tenglamasi",
+    "ru": "Уравнение Гамильтона–Якоби",
+    "en": "Hamilton–Jacobi equation",
+    "m": "\\frac{\\partial S}{\\partial t}+H\\left(q,\\frac{\\partial S}{\\partial q}\\right)=0"
+   },
+   {
+    "uz": "Bor–Zommerfeld sharti",
+    "ru": "Условие Бора–Зоммерфельда",
+    "en": "Bohr–Sommerfeld condition",
+    "m": "\\oint p\\,dq=nh"
+   }
+  ]
+ }
+]

@@ -1,0 +1,531 @@
+[
+ {
+  "t": "h1",
+  "uz": "Faradey qonuni, induktivlik, RL va LC zanjir (Faraday's law, inductance, RL and LC circuits)",
+  "ru": "Закон Фарадея, индуктивность, RL- и LC-цепи",
+  "en": "Faraday's law, inductance, RL and LC circuits"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz Faradey qonuni va Lens qoidasi bilan induksiya EYK ini va induksion tok yo'nalishini topasiz; harakatdagi o'tkazgich, aylanayotgan sterjen va generator EYK ini hisoblaysiz; o'zgaruvchan magnit maydon hosil qiladigan uyurmali elektr maydonni topasiz; o'zaro induktivlik va o'zinduktivlikni solenoid, toroid va kabel uchun hisoblaysiz; magnit maydon energiyasini qo'llaysiz; RL zanjirda tokning o'rnatilishi va yo'qolishini, LC zanjirda erkin tebranishlarni tahlil qilasiz.",
+  "ru": "**Цель.** После урока вы будете находить ЭДС индукции и направление индукционного тока с помощью закона Фарадея и правила Ленца; вычислять ЭДС в движущемся проводнике, вращающемся стержне и генераторе; находить вихревое электрическое поле, создаваемое переменным магнитным полем; вычислять взаимную индуктивность и индуктивность соленоида, тороида и кабеля; применять энергию магнитного поля; анализировать установление и исчезновение тока в RL-цепи и свободные колебания в LC-цепи.",
+  "en": "**Goal.** After this lesson you will use Faraday's law and Lenz's law to find the induced EMF and the direction of the induced current; compute the EMF of a moving conductor, a rotating rod and a generator; find the induced electric field produced by a changing magnetic field; calculate mutual inductance and the inductance of a solenoid, a toroid and a cable; apply the energy of the magnetic field; and analyse the growth and decay of current in an RL circuit and free oscillations in an LC circuit."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L40 va B1-L41 da elektromagnit induksiya hodisasi, o'zinduksiya, induktivlik va tebranish konturi uchun Tomson formulasi bilan tanishdik. B2-L16 da toklar magnit maydon hosil qilishini ko'rdik; endi teskari yo'nalish: o'zgaruvchan magnit maydon elektr maydon hosil qiladi. Bu darsda induksiyani maydon tilida ifodalaymiz, induktivlikni geometriyadan hisoblaymiz va vaqtga bog'liq ikki asosiy zanjir — RL va LC ni o'rganamiz. GRE da Faradey qonuni, Lens qoidasi, harakatdagi sterjen, $\\tau=\\frac{L}{R}$ va $\\omega_0=\\frac{1}{\\sqrt{LC}}$ savollari elektromagnetizmning eng ko'p uchraydigan mavzularidan.",
+  "ru": "В B1-L40 и B1-L41 мы познакомились с явлением электромагнитной индукции, самоиндукцией, индуктивностью и формулой Томсона для колебательного контура. В B2-L16 мы видели, что токи создают магнитное поле; теперь обратное направление: переменное магнитное поле создаёт электрическое. В этом уроке выразим индукцию на языке поля, вычислим индуктивность из геометрии и изучим две основные цепи, зависящие от времени, — RL и LC. На GRE вопросы о законе Фарадея, правиле Ленца, движущемся стержне, $\\tau=\\frac{L}{R}$ и $\\omega_0=\\frac{1}{\\sqrt{LC}}$ — одни из самых частых в электромагнетизме.",
+  "en": "In B1-L40 and B1-L41 we met electromagnetic induction, self-induction, inductance and Thomson's formula for an oscillating circuit. In B2-L16 we saw that currents produce magnetic fields; now the reverse: a changing magnetic field produces an electric field. In this lesson we express induction in the language of fields, compute inductance from geometry, and study the two basic time-dependent circuits — RL and LC. On the GRE, questions on Faraday's law, Lenz's law, the moving rod, $\\tau=\\frac{L}{R}$ and $\\omega_0=\\frac{1}{\\sqrt{LC}}$ are among the most frequent in electromagnetism."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Faradey qonuni va Lens qoidasi",
+  "ru": "1. Закон Фарадея и правило Ленца",
+  "en": "1. Faraday's law and Lenz's law"
+ },
+ {
+  "t": "li",
+  "uz": "**Qonun.** Berk kontur orqali magnit oqimi $\\Phi=\\int\\vec B\\cdot d\\vec A$ o'zgarsa, konturda EYK paydo bo'ladi: $\\mathcal{E}=-\\frac{d\\Phi}{dt}$; $N$ o'ramli g'altak uchun $\\mathcal{E}=-\\frac{d\\Psi}{dt}$, $\\Psi=N\\Phi$ — to'liq oqim. Oqim uch yo'l bilan o'zgarishi mumkin: $B$ o'zgaradi, yuza o'zgaradi (harakatlanuvchi sterjen) yoki burchak o'zgaradi (aylanayotgan ramka). Qarshiligi $R$ bo'lgan konturda tok $I=\\frac{\\mathcal{E}}{R}$ ([[F01]]).",
+  "ru": "**Закон.** Если магнитный поток $\\Phi=\\int\\vec B\\cdot d\\vec A$ через замкнутый контур меняется, в контуре возникает ЭДС: $\\mathcal{E}=-\\frac{d\\Phi}{dt}$; для катушки из $N$ витков $\\mathcal{E}=-\\frac{d\\Psi}{dt}$, $\\Psi=N\\Phi$ — потокосцепление. Поток может меняться тремя способами: меняется $B$, меняется площадь (движущийся стержень) или меняется угол (вращающаяся рамка). В контуре сопротивлением $R$ ток $I=\\frac{\\mathcal{E}}{R}$ ([[F01]]).",
+  "en": "**The law.** If the magnetic flux $\\Phi=\\int\\vec B\\cdot d\\vec A$ through a closed loop changes, an EMF appears in the loop: $\\mathcal{E}=-\\frac{d\\Phi}{dt}$; for a coil of $N$ turns $\\mathcal{E}=-\\frac{d\\Psi}{dt}$, where $\\Psi=N\\Phi$ is the flux linkage. The flux can change in three ways: $B$ changes, the area changes (a moving rod) or the angle changes (a rotating loop). In a loop of resistance $R$ the current is $I=\\frac{\\mathcal{E}}{R}$ ([[F01]])."
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal{E}=-\\frac{d\\Phi}{dt},\\qquad \\oint\\vec E\\cdot d\\vec l=-\\frac{d}{dt}\\int\\vec B\\cdot d\\vec A,\\qquad \\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t}"
+ },
+ {
+  "t": "li",
+  "uz": "**Lens qoidasi.** Minus ishorasi: induksion tok o'z magnit maydoni bilan oqim o'zgarishiga qarshilik qiladi. Magnit halqaga yaqinlashsa, halqa uni itaradi; uzoqlashsa — tortadi. Bu energiya saqlanishining natijasi: aks holda tok o'zini o'zi kuchaytirib, energiyani yo'qdan yaratgan bo'lardi. Amalda yo'nalishni shunday topamiz: 1) tashqi oqim qaysi tomonga va ortyaptimi yoki kamayyaptimi; 2) induksion maydon o'zgarishga qarshi yo'naladi; 3) o'ng qo'l qoidasi bilan tok yo'nalishi.",
+  "ru": "**Правило Ленца.** Знак минус: индукционный ток своим магнитным полем препятствует изменению потока. Если магнит приближается к кольцу, кольцо его отталкивает; если удаляется — притягивает. Это следствие сохранения энергии: иначе ток усиливал бы сам себя и создавал бы энергию из ничего. На практике направление находим так: 1) куда направлен внешний поток и растёт он или убывает; 2) индукционное поле направлено против изменения; 3) направление тока — по правилу правой руки.",
+  "en": "**Lenz's law.** The minus sign: the induced current, through its own magnetic field, opposes the change in flux. If a magnet approaches a ring, the ring repels it; if it moves away, the ring attracts it. This follows from energy conservation: otherwise the current would reinforce itself and create energy from nothing. In practice the direction is found as follows: 1) which way the external flux points and whether it is growing or shrinking; 2) the induced field points against the change; 3) the right-hand rule gives the current direction."
+ },
+ {
+  "t": "li",
+  "uz": "**Differensial ko'rinish.** Kontur qo'zg'almas bo'lsa, $\\mathcal{E}=\\oint\\vec E\\cdot d\\vec l$ va Stoks teoremasidan $\\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t}$ — Maksvellning ikkinchi tenglamasi. Demak, o'zgaruvchan magnit maydon bo'lgan joyda elektr maydon potensial emas: berk kontur bo'yicha ish noldan farqli, kuchlanishni «ikki nuqta orasidagi potensiallar farqi» deb bir qiymatli aniqlab bo'lmaydi.",
+  "ru": "**Дифференциальная форма.** Если контур неподвижен, $\\mathcal{E}=\\oint\\vec E\\cdot d\\vec l$, и по теореме Стокса $\\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t}$ — второе уравнение Максвелла. Значит, там, где есть переменное магнитное поле, электрическое поле не потенциально: работа по замкнутому контуру отлична от нуля, и напряжение нельзя однозначно определить как «разность потенциалов двух точек».",
+  "en": "**Differential form.** If the loop is stationary, $\\mathcal{E}=\\oint\\vec E\\cdot d\\vec l$, and Stokes' theorem gives $\\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t}$ — the second Maxwell equation. So wherever there is a changing magnetic field, the electric field is not conservative: the work around a closed loop is non-zero, and the voltage cannot be uniquely defined as a “potential difference between two points”."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L17-F01.png",
+   "ru": "figures/B2-L17-F01-ru.png",
+   "en": "figures/B2-L17-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Harakatdagi o'tkazgichda EYK",
+  "ru": "2. ЭДС в движущемся проводнике",
+  "en": "2. Motional EMF"
+ },
+ {
+  "t": "li",
+  "uz": "**Relslardagi sterjen.** Uzunligi $l$ bo'lgan sterjen $B$ maydonda relslar bo'ylab $v$ tezlik bilan harakatlansa, kontur yuzasi $lv$ tezlik bilan o'sadi: $\\mathcal{E}=Blv$. Xuddi shu natija Lorens kuchidan: sterjendagi zaryadga $qvB$ kuch ta'sir qiladi va uning $l$ yo'ldagi ishi $qvBl$. Tok $I=\\frac{Blv}{R}$, sterjenga tormozlovchi Amper kuchi $F=\\frac{B^2l^2v}{R}$; tezlikni ushlab turish uchun tashqi quvvat $Fv=\\frac{B^2l^2v^2}{R}=I^2R$ — mexanik ish to'liq issiqlikka aylanadi ([[F02]]).",
+  "ru": "**Стержень на рельсах.** Если стержень длиной $l$ движется по рельсам в поле $B$ со скоростью $v$, площадь контура растёт со скоростью $lv$: $\\mathcal{E}=Blv$. Тот же результат даёт сила Лоренца: на заряд в стержне действует сила $qvB$, и её работа на пути $l$ равна $qvBl$. Ток $I=\\frac{Blv}{R}$, на стержень действует тормозящая сила Ампера $F=\\frac{B^2l^2v}{R}$; для поддержания скорости нужна внешняя мощность $Fv=\\frac{B^2l^2v^2}{R}=I^2R$ — механическая работа целиком переходит в тепло ([[F02]]).",
+  "en": "**A rod on rails.** If a rod of length $l$ moves along rails in a field $B$ with speed $v$, the loop area grows at the rate $lv$: $\\mathcal{E}=Blv$. The Lorentz force gives the same result: a charge in the rod feels a force $qvB$, whose work over the length $l$ is $qvBl$. The current is $I=\\frac{Blv}{R}$, and a braking Ampère force $F=\\frac{B^2l^2v}{R}$ acts on the rod; keeping the speed constant takes an external power $Fv=\\frac{B^2l^2v^2}{R}=I^2R$ — the mechanical work all turns into heat ([[F02]])."
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal{E}=Blv,\\qquad F=\\frac{B^2l^2v}{R},\\qquad v_{\\infty}=\\frac{mgR}{B^2l^2},\\qquad \\mathcal{E}=\\frac{B\\omega l^2}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Sterjen dinamikasi.** Vertikal relslarda erkin tushayotgan $m$ massali sterjen uchun $m\\frac{dv}{dt}=mg-\\frac{B^2l^2v}{R}$ — havo qarshiligidagi kabi chiziqli tormozlanish: tezlik $v_{\\infty}=\\frac{mgR}{B^2l^2}$ ga $\\tau=\\frac{mR}{B^2l^2}$ vaqt doimiysi bilan eksponensial yaqinlashadi. Boshlang'ich $v_0$ tezlik bilan itarilgan va kuchsiz qoldirilgan sterjen $x=\\frac{mv_0R}{B^2l^2}$ masofada to'xtaydi; uning kinetik energiyasi to'liq issiqlikka aylanadi.",
+  "ru": "**Динамика стержня.** Для стержня массой $m$, свободно падающего по вертикальным рельсам, $m\\frac{dv}{dt}=mg-\\frac{B^2l^2v}{R}$ — линейное торможение, как при сопротивлении воздуха: скорость экспоненциально приближается к $v_{\\infty}=\\frac{mgR}{B^2l^2}$ с постоянной времени $\\tau=\\frac{mR}{B^2l^2}$. Стержень, толкнутый со скоростью $v_0$ и предоставленный самому себе, останавливается на расстоянии $x=\\frac{mv_0R}{B^2l^2}$; его кинетическая энергия целиком переходит в тепло.",
+  "en": "**Rod dynamics.** For a rod of mass $m$ falling freely on vertical rails, $m\\frac{dv}{dt}=mg-\\frac{B^2l^2v}{R}$ — linear drag, as with air resistance: the speed approaches $v_{\\infty}=\\frac{mgR}{B^2l^2}$ exponentially with time constant $\\tau=\\frac{mR}{B^2l^2}$. A rod pushed with speed $v_0$ and then left alone stops after a distance $x=\\frac{mv_0R}{B^2l^2}$; its kinetic energy all turns into heat."
+ },
+ {
+  "t": "li",
+  "uz": "**Aylanish.** Bir uchi atrofida $\\omega$ burchak tezlik bilan aylanayotgan sterjenning har bir $dr$ bo'lagi $v=\\omega r$ tezlikka ega: $\\mathcal{E}=\\int_0^lB\\omega r\\,dr=\\frac{B\\omega l^2}{2}$. Radiusi $a$ bo'lgan Faradey diski markazi va cheti orasida xuddi shunday $\\frac{B\\omega a^2}{2}$ o'zgarmas EYK beradi — bir qutbli generator. $N$ o'ramli, yuzasi $A$ bo'lgan ramka bir jinsli maydonda aylansa, $\\Phi=BA\\cos\\omega t$ va $\\mathcal{E}=NBA\\omega\\sin\\omega t$ — o'zgaruvchan tok generatori.",
+  "ru": "**Вращение.** У стержня, вращающегося вокруг одного конца с угловой скоростью $\\omega$, каждый участок $dr$ имеет скорость $v=\\omega r$: $\\mathcal{E}=\\int_0^lB\\omega r\\,dr=\\frac{B\\omega l^2}{2}$. Диск Фарадея радиусом $a$ даёт между центром и краем такую же постоянную ЭДС $\\frac{B\\omega a^2}{2}$ — униполярный генератор. Если рамка из $N$ витков площадью $A$ вращается в однородном поле, $\\Phi=BA\\cos\\omega t$ и $\\mathcal{E}=NBA\\omega\\sin\\omega t$ — генератор переменного тока.",
+  "en": "**Rotation.** For a rod rotating about one end with angular speed $\\omega$, each piece $dr$ moves at $v=\\omega r$: $\\mathcal{E}=\\int_0^lB\\omega r\\,dr=\\frac{B\\omega l^2}{2}$. A Faraday disc of radius $a$ gives the same steady EMF $\\frac{B\\omega a^2}{2}$ between centre and rim — a homopolar generator. If a coil of $N$ turns and area $A$ rotates in a uniform field, $\\Phi=BA\\cos\\omega t$ and $\\mathcal{E}=NBA\\omega\\sin\\omega t$ — an AC generator."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L17-F02.png",
+   "ru": "figures/B2-L17-F02-ru.png",
+   "en": "figures/B2-L17-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Uyurmali elektr maydon",
+  "ru": "3. Вихревое электрическое поле",
+  "en": "3. The induced electric field"
+ },
+ {
+  "t": "li",
+  "uz": "**Solenoid ichida va tashqarisida.** Radiusi $R$ bo'lgan uzun solenoiddagi maydon $\\frac{dB}{dt}$ tezlik bilan o'zgarsa, simmetriyadan $\\vec E$ aylanalar bo'yicha yo'naladi. Radiusi $r$ bo'lgan aylana uchun $E\\cdot2\\pi r=\\pi r^2\\frac{dB}{dt}$ ($r<R$) va $E\\cdot2\\pi r=\\pi R^2\\frac{dB}{dt}$ ($r>R$): ichkarida $E=\\frac{r}{2}\\frac{dB}{dt}$, tashqarida $E=\\frac{R^2}{2r}\\frac{dB}{dt}$. Solenoid tashqarisida $B=0$, lekin $E\\ne0$ — elektr maydonni o'sha joydagi emas, butun kontur ichidagi oqim o'zgarishi belgilaydi ([[F03]]).",
+  "ru": "**Внутри и снаружи соленоида.** Если поле в длинном соленоиде радиусом $R$ меняется со скоростью $\\frac{dB}{dt}$, по симметрии $\\vec E$ направлено по окружностям. Для окружности радиуса $r$ имеем $E\\cdot2\\pi r=\\pi r^2\\frac{dB}{dt}$ ($r<R$) и $E\\cdot2\\pi r=\\pi R^2\\frac{dB}{dt}$ ($r>R$): внутри $E=\\frac{r}{2}\\frac{dB}{dt}$, снаружи $E=\\frac{R^2}{2r}\\frac{dB}{dt}$. Снаружи соленоида $B=0$, но $E\\ne0$ — электрическое поле определяется изменением потока внутри всего контура, а не полем в данной точке ([[F03]]).",
+  "en": "**Inside and outside a solenoid.** If the field in a long solenoid of radius $R$ changes at the rate $\\frac{dB}{dt}$, by symmetry $\\vec E$ points around circles. For a circle of radius $r$, $E\\cdot2\\pi r=\\pi r^2\\frac{dB}{dt}$ ($r<R$) and $E\\cdot2\\pi r=\\pi R^2\\frac{dB}{dt}$ ($r>R$): inside $E=\\frac{r}{2}\\frac{dB}{dt}$, outside $E=\\frac{R^2}{2r}\\frac{dB}{dt}$. Outside the solenoid $B=0$ but $E\\ne0$ — the electric field is set by the change of flux through the whole loop, not by the field at that point ([[F03]])."
+ },
+ {
+  "t": "m",
+  "m": "E=\\frac{r}{2}\\frac{dB}{dt}\\ (r<R),\\qquad E=\\frac{R^2}{2r}\\frac{dB}{dt}\\ (r>R),\\qquad B_0=\\frac{\\langle B\\rangle}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Betatron.** Elektron radiusi $r_0$ bo'lgan doiraviy orbitada uyurmali maydon ta'sirida tezlashadi: $\\frac{dp}{dt}=eE=\\frac{e}{2\\pi r_0}\\frac{d\\Phi}{dt}$. Orbitada qolishi uchun $p=er_0B_0$ bo'lishi kerak ($B_0$ — orbitadagi maydon). Ikkalasidan $\\Phi=2\\pi r_0^2B_0$, ya'ni $B_0=\\frac{\\langle B\\rangle}{2}$: orbitadagi maydon orbita ichidagi o'rtacha maydonning yarmiga teng bo'lishi kerak — betatron sharti.",
+  "ru": "**Бетатрон.** Электрон на круговой орбите радиуса $r_0$ ускоряется вихревым полем: $\\frac{dp}{dt}=eE=\\frac{e}{2\\pi r_0}\\frac{d\\Phi}{dt}$. Чтобы оставаться на орбите, нужно $p=er_0B_0$ ($B_0$ — поле на орбите). Из этих двух условий $\\Phi=2\\pi r_0^2B_0$, то есть $B_0=\\frac{\\langle B\\rangle}{2}$: поле на орбите должно быть равно половине среднего поля внутри орбиты — условие бетатрона.",
+  "en": "**The betatron.** An electron on a circular orbit of radius $r_0$ is accelerated by the induced field: $\\frac{dp}{dt}=eE=\\frac{e}{2\\pi r_0}\\frac{d\\Phi}{dt}$. To stay on the orbit it needs $p=er_0B_0$ ($B_0$ is the field at the orbit). Together these give $\\Phi=2\\pi r_0^2B_0$, so $B_0=\\frac{\\langle B\\rangle}{2}$: the field at the orbit must be half the mean field inside the orbit — the betatron condition."
+ },
+ {
+  "t": "li",
+  "uz": "**Uyurmali (Fuko) toklar.** Massiv o'tkazgichda uyurmali elektr maydon berk tok halqalarini hosil qiladi. Ular o'tkazgichni qizdiradi (induksion pech, induksion plita) va Lens qoidasiga ko'ra harakatni tormozlaydi: magnit maydonda tebranayotgan metall plastinka tez so'nadi, mis quvur ichida tushayotgan magnit sekin tushadi. Transformator o'zaklari yupqa izolyatsiyalangan plastinkalardan yig'iladi: uyurmali tok yo'li qisqarib, isroflar keskin kamayadi.",
+  "ru": "**Вихревые токи (Фуко).** В массивном проводнике вихревое электрическое поле создаёт замкнутые контуры тока. Они нагревают проводник (индукционная печь, индукционная плита) и по правилу Ленца тормозят движение: металлическая пластина, качающаяся в магнитном поле, быстро останавливается, магнит в медной трубе падает медленно. Сердечники трансформаторов собирают из тонких изолированных пластин: путь вихревых токов укорачивается, и потери резко уменьшаются.",
+  "en": "**Eddy currents.** In a bulk conductor the induced electric field drives closed current loops. They heat the conductor (induction furnace, induction cooker) and, by Lenz's law, brake motion: a metal plate swinging in a magnetic field stops quickly, and a magnet falls slowly through a copper pipe. Transformer cores are built from thin insulated laminations: the eddy-current paths are cut short and the losses drop sharply."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L17-F03.png",
+   "ru": "figures/B2-L17-F03-ru.png",
+   "en": "figures/B2-L17-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. O'zaro induktivlik",
+  "ru": "4. Взаимная индуктивность",
+  "en": "4. Mutual inductance"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Birinchi g'altakdagi $I_1$ tok ikkinchi g'altakda unga proporsional to'liq oqim hosil qiladi: $\\Psi_2=MI_1$; $M$ — o'zaro induktivlik, birligi genri, $1\\ \\mathrm{H}=1\\ \\mathrm{Wb/A}$. Shunda $\\mathcal{E}_2=-M\\frac{dI_1}{dt}$. Muhim teorema: $M_{12}=M_{21}$ — qaysi g'altakka tok berilishidan qat'i nazar, $M$ bir xil (Neyman formulasidan simmetriya). Shuning uchun $M$ ni hisoblash oson bo'lgan g'altakdan boshlab topamiz ([[F04]]).",
+  "ru": "**Определение.** Ток $I_1$ в первой катушке создаёт во второй пропорциональное ему потокосцепление: $\\Psi_2=MI_1$; $M$ — взаимная индуктивность, единица — генри, $1\\ \\mathrm{H}=1\\ \\mathrm{Wb/A}$. Тогда $\\mathcal{E}_2=-M\\frac{dI_1}{dt}$. Важная теорема: $M_{12}=M_{21}$ — $M$ одинакова, в какую бы катушку ни подавался ток (симметрия формулы Неймана). Поэтому $M$ находим, начиная с той катушки, для которой расчёт проще ([[F04]]).",
+  "en": "**Definition.** A current $I_1$ in the first coil produces in the second a flux linkage proportional to it: $\\Psi_2=MI_1$; $M$ is the mutual inductance, measured in henries, $1\\ \\mathrm{H}=1\\ \\mathrm{Wb/A}$. Then $\\mathcal{E}_2=-M\\frac{dI_1}{dt}$. An important theorem: $M_{12}=M_{21}$ — $M$ is the same whichever coil carries the current (symmetry of the Neumann formula). So we compute $M$ starting from whichever coil makes the calculation easier ([[F04]])."
+ },
+ {
+  "t": "m",
+  "m": "\\Psi_2=MI_1,\\qquad \\mathcal{E}_2=-M\\frac{dI_1}{dt},\\qquad M=\\mu_0nN_2A,\\qquad M=k\\sqrt{L_1L_2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misollar.** Uzun solenoid ($n$ o'ram/m, kesimi $A$) ustiga o'ralgan $N_2$ o'ramli g'altak: $\\Psi_2=N_2\\mu_0nI_1A$, ya'ni $M=\\mu_0nN_2A$. Uzun sim va uning tekisligidagi to'g'ri to'rtburchak ramka (tomonlari $a$ — simga parallel, $b$; yaqin tomoni $d$ masofada): $M=\\frac{\\mu_0a}{2\\pi}\\ln\\frac{d+b}{d}$. Katta halqa markazidagi kichik halqa (radiuslari $R\\gg r$): $M\\approx\\frac{\\mu_0\\pi r^2}{2R}$ — teskari hisoblash (kichik halqa maydonini katta halqada topish) ancha qiyin bo'lardi.",
+  "ru": "**Примеры.** Катушка из $N_2$ витков, намотанная поверх длинного соленоида ($n$ витков на метр, сечение $A$): $\\Psi_2=N_2\\mu_0nI_1A$, то есть $M=\\mu_0nN_2A$. Длинный провод и прямоугольная рамка в его плоскости (стороны $a$ — параллельно проводу, $b$; ближняя сторона на расстоянии $d$): $M=\\frac{\\mu_0a}{2\\pi}\\ln\\frac{d+b}{d}$. Малое кольцо в центре большого (радиусы $R\\gg r$): $M\\approx\\frac{\\mu_0\\pi r^2}{2R}$ — обратный расчёт (поле малого кольца на большом) был бы гораздо сложнее.",
+  "en": "**Examples.** A coil of $N_2$ turns wound over a long solenoid ($n$ turns per metre, cross-section $A$): $\\Psi_2=N_2\\mu_0nI_1A$, so $M=\\mu_0nN_2A$. A long wire and a rectangular loop in its plane (sides $a$ parallel to the wire and $b$; near side at distance $d$): $M=\\frac{\\mu_0a}{2\\pi}\\ln\\frac{d+b}{d}$. A small ring at the centre of a large one (radii $R\\gg r$): $M\\approx\\frac{\\mu_0\\pi r^2}{2R}$ — the reverse calculation (the small ring's field over the large one) would be much harder."
+ },
+ {
+  "t": "li",
+  "uz": "**Bog'lanish koeffitsiyenti.** Har doim $M\\le\\sqrt{L_1L_2}$; $M=k\\sqrt{L_1L_2}$, $0\\le k\\le1$. $k=1$ — bir g'altakning butun oqimi ikkinchisidan o'tadi (umumiy o'zakli transformator). Ketma-ket ulangan bog'langan g'altaklar: $L=L_1+L_2\\pm2M$ (oqimlar qo'shilsa «$+$», qarama-qarshi bo'lsa «$-$»). Bog'lanmagan g'altaklar rezistorlar kabi qo'shiladi: ketma-ket $L_1+L_2$, parallel $\\frac{L_1L_2}{L_1+L_2}$.",
+  "ru": "**Коэффициент связи.** Всегда $M\\le\\sqrt{L_1L_2}$; $M=k\\sqrt{L_1L_2}$, $0\\le k\\le1$. $k=1$ — весь поток одной катушки проходит через другую (трансформатор с общим сердечником). Последовательно соединённые связанные катушки: $L=L_1+L_2\\pm2M$ («$+$», если потоки складываются, «$-$», если противоположны). Несвязанные катушки складываются как резисторы: последовательно $L_1+L_2$, параллельно $\\frac{L_1L_2}{L_1+L_2}$.",
+  "en": "**Coupling coefficient.** Always $M\\le\\sqrt{L_1L_2}$; $M=k\\sqrt{L_1L_2}$ with $0\\le k\\le1$. $k=1$ means all the flux of one coil passes through the other (a transformer with a common core). Coupled coils in series: $L=L_1+L_2\\pm2M$ (“$+$” if the fluxes add, “$-$” if they oppose). Uncoupled coils combine like resistors: in series $L_1+L_2$, in parallel $\\frac{L_1L_2}{L_1+L_2}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L17-F04.png",
+   "ru": "figures/B2-L17-F04-ru.png",
+   "en": "figures/B2-L17-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. O'zinduktivlik",
+  "ru": "5. Индуктивность",
+  "en": "5. Self-inductance"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** G'altakning o'z toki hosil qilgan to'liq oqim tokka proporsional: $\\Psi=LI$; $L$ — induktivlik (faqat geometriya va muhitga bog'liq). Tok o'zgarganda o'zinduksiya EYK $\\mathcal{E}_L=-L\\frac{dI}{dt}$ tok o'zgarishiga qarshilik qiladi — induktivlik elektr zanjirdagi «inersiya»: g'altakdagi tok sakrab o'zgara olmaydi. Zanjir sxemasida g'altak uchlaridagi kuchlanish $U=L\\frac{dI}{dt}$, tok kirgan uchda potensial yuqori, agar tok ortayotgan bo'lsa ([[F05]]).",
+  "ru": "**Определение.** Потокосцепление, создаваемое собственным током катушки, пропорционально току: $\\Psi=LI$; $L$ — индуктивность (зависит только от геометрии и среды). При изменении тока ЭДС самоиндукции $\\mathcal{E}_L=-L\\frac{dI}{dt}$ препятствует изменению тока — индуктивность является «инерцией» электрической цепи: ток в катушке не может меняться скачком. На схеме напряжение на катушке $U=L\\frac{dI}{dt}$, и если ток растёт, потенциал выше на том конце, куда ток входит ([[F05]]).",
+  "en": "**Definition.** The flux linkage produced by a coil's own current is proportional to that current: $\\Psi=LI$; $L$ is the inductance (it depends only on geometry and the medium). When the current changes, the self-induced EMF $\\mathcal{E}_L=-L\\frac{dI}{dt}$ opposes the change — inductance is the “inertia” of a circuit: the current in a coil cannot jump. On a circuit diagram the voltage across the coil is $U=L\\frac{dI}{dt}$, and if the current is increasing, the end where the current enters is at the higher potential ([[F05]])."
+ },
+ {
+  "t": "m",
+  "m": "\\Psi=LI,\\qquad \\mathcal{E}_L=-L\\frac{dI}{dt},\\qquad L=\\mu_0n^2Al=\\frac{\\mu_0N^2A}{l}"
+ },
+ {
+  "t": "li",
+  "uz": "**Solenoid va toroid.** Uzun solenoid: $B=\\mu_0nI$, $\\Psi=NBA=\\mu_0n^2AlI$, ya'ni $L=\\mu_0n^2V$, $V=Al$ — hajm. $L\\propto N^2$: o'ramlar soni ikki marta ortsa, induktivlik to'rt marta ortadi. Ferromagnit o'zak $L$ ni $\\mu$ marta oshiradi (B2-L19). To'g'ri to'rtburchak kesimli toroid (radiuslar $a$, $b$, balandligi $h$): $\\Psi=N\\cdot\\frac{\\mu_0NIh}{2\\pi}\\ln\\frac{b}{a}$, ya'ni $L=\\frac{\\mu_0N^2h}{2\\pi}\\ln\\frac{b}{a}$.",
+  "ru": "**Соленоид и тороид.** Длинный соленоид: $B=\\mu_0nI$, $\\Psi=NBA=\\mu_0n^2AlI$, то есть $L=\\mu_0n^2V$, $V=Al$ — объём. $L\\propto N^2$: при увеличении числа витков вдвое индуктивность растёт вчетверо. Ферромагнитный сердечник увеличивает $L$ в $\\mu$ раз (B2-L19). Тороид прямоугольного сечения (радиусы $a$, $b$, высота $h$): $\\Psi=N\\cdot\\frac{\\mu_0NIh}{2\\pi}\\ln\\frac{b}{a}$, то есть $L=\\frac{\\mu_0N^2h}{2\\pi}\\ln\\frac{b}{a}$.",
+  "en": "**Solenoid and toroid.** A long solenoid: $B=\\mu_0nI$, $\\Psi=NBA=\\mu_0n^2AlI$, so $L=\\mu_0n^2V$ with $V=Al$ the volume. $L\\propto N^2$: doubling the number of turns quadruples the inductance. A ferromagnetic core multiplies $L$ by $\\mu$ (B2-L19). A toroid of rectangular cross-section (radii $a$, $b$, height $h$): $\\Psi=N\\cdot\\frac{\\mu_0NIh}{2\\pi}\\ln\\frac{b}{a}$, so $L=\\frac{\\mu_0N^2h}{2\\pi}\\ln\\frac{b}{a}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Liniyalar.** Koaksial kabel (ichki sim radiusi $a$, qobiq radiusi $b$, tok yupqa sirtlarda): orasidagi $l\\,dr$ tasma orqali oqim $\\frac{\\mu_0I}{2\\pi r}l\\,dr$, jami $\\frac{L}{l}=\\frac{\\mu_0}{2\\pi}\\ln\\frac{b}{a}$. Ikki simli liniya (simlar radiusi $a$, o'qlari orasidagi masofa $d\\gg a$): $\\frac{L}{l}\\approx\\frac{\\mu_0}{\\pi}\\ln\\frac{d}{a}$. Bu natijalar sig'im formulalari bilan juft: koaksial kabel uchun $\\frac{L}{l}\\cdot\\frac{C}{l}=\\mu_0\\varepsilon_0=\\frac{1}{c^2}$ — signal liniya bo'ylab yorug'lik tezligida tarqaladi.",
+  "ru": "**Линии.** Коаксиальный кабель (радиус жилы $a$, радиус оболочки $b$, ток по тонким поверхностям): поток через полоску $l\\,dr$ между ними равен $\\frac{\\mu_0I}{2\\pi r}l\\,dr$, всего $\\frac{L}{l}=\\frac{\\mu_0}{2\\pi}\\ln\\frac{b}{a}$. Двухпроводная линия (радиус проводов $a$, расстояние между осями $d\\gg a$): $\\frac{L}{l}\\approx\\frac{\\mu_0}{\\pi}\\ln\\frac{d}{a}$. Эти результаты парны формулам ёмкости: для коаксиального кабеля $\\frac{L}{l}\\cdot\\frac{C}{l}=\\mu_0\\varepsilon_0=\\frac{1}{c^2}$ — сигнал распространяется вдоль линии со скоростью света.",
+  "en": "**Lines.** A coaxial cable (inner radius $a$, shell radius $b$, current on thin surfaces): the flux through a strip $l\\,dr$ between them is $\\frac{\\mu_0I}{2\\pi r}l\\,dr$, giving in total $\\frac{L}{l}=\\frac{\\mu_0}{2\\pi}\\ln\\frac{b}{a}$. A two-wire line (wire radius $a$, separation of axes $d\\gg a$): $\\frac{L}{l}\\approx\\frac{\\mu_0}{\\pi}\\ln\\frac{d}{a}$. These results pair with the capacitance formulas: for a coaxial cable $\\frac{L}{l}\\cdot\\frac{C}{l}=\\mu_0\\varepsilon_0=\\frac{1}{c^2}$ — a signal travels along the line at the speed of light."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L17-F05.png",
+   "ru": "figures/B2-L17-F05-ru.png",
+   "en": "figures/B2-L17-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Magnit maydon energiyasi",
+  "ru": "6. Энергия магнитного поля",
+  "en": "6. Energy of the magnetic field"
+ },
+ {
+  "t": "li",
+  "uz": "**G'altak energiyasi.** Tokni $0$ dan $I$ gacha oshirishda manba o'zinduksiya EYK iga qarshi ish bajaradi: $W=\\int_0^I LI'\\,dI'=\\frac{LI^2}{2}=\\frac{\\Psi I}{2}=\\frac{\\Psi^2}{2L}$ — kondensatordagi $\\frac{CU^2}{2}$ ning o'xshashi. Solenoid uchun $W=\\frac{\\mu_0n^2I^2}{2}V=\\frac{B^2}{2\\mu_0}V$, ya'ni energiya maydonda joylashgan, zichligi $w=\\frac{B^2}{2\\mu_0}$ — elektr maydondagi $\\frac{\\varepsilon_0E^2}{2}$ ning juftligi. $1\\ \\mathrm{T}$ maydonda $w\\approx4\\cdot10^5\\ \\mathrm{J/m^3}$, $1\\ \\mathrm{MV/m}$ elektr maydonda esa atigi $4.4\\ \\mathrm{J/m^3}$.",
+  "ru": "**Энергия катушки.** При увеличении тока от $0$ до $I$ источник совершает работу против ЭДС самоиндукции: $W=\\int_0^I LI'\\,dI'=\\frac{LI^2}{2}=\\frac{\\Psi I}{2}=\\frac{\\Psi^2}{2L}$ — аналог $\\frac{CU^2}{2}$ для конденсатора. Для соленоида $W=\\frac{\\mu_0n^2I^2}{2}V=\\frac{B^2}{2\\mu_0}V$, то есть энергия сосредоточена в поле с плотностью $w=\\frac{B^2}{2\\mu_0}$ — пара к $\\frac{\\varepsilon_0E^2}{2}$ для электрического поля. В поле $1\\ \\mathrm{T}$ имеем $w\\approx4\\cdot10^5\\ \\mathrm{J/m^3}$, а в электрическом поле $1\\ \\mathrm{MV/m}$ — всего $4.4\\ \\mathrm{J/m^3}$.",
+  "en": "**Energy of a coil.** Raising the current from $0$ to $I$, the source does work against the self-induced EMF: $W=\\int_0^I LI'\\,dI'=\\frac{LI^2}{2}=\\frac{\\Psi I}{2}=\\frac{\\Psi^2}{2L}$ — the analogue of $\\frac{CU^2}{2}$ for a capacitor. For a solenoid $W=\\frac{\\mu_0n^2I^2}{2}V=\\frac{B^2}{2\\mu_0}V$, so the energy resides in the field with density $w=\\frac{B^2}{2\\mu_0}$ — the partner of $\\frac{\\varepsilon_0E^2}{2}$ for the electric field. In a $1\\ \\mathrm{T}$ field $w\\approx4\\cdot10^5\\ \\mathrm{J/m^3}$, while in an electric field of $1\\ \\mathrm{MV/m}$ it is only $4.4\\ \\mathrm{J/m^3}$."
+ },
+ {
+  "t": "m",
+  "m": "W=\\frac{LI^2}{2},\\qquad w=\\frac{B^2}{2\\mu_0},\\qquad L=\\frac{2W}{I^2},\\qquad W=\\frac{L_1I_1^2}{2}+\\frac{L_2I_2^2}{2}+MI_1I_2"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya orqali induktivlik.** Ba'zan $L$ ni oqimdan emas, energiyadan topish qulay: $L=\\frac{2W}{I^2}$, $W=\\int\\frac{B^2}{2\\mu_0}dV$. Masalan, yo'g'on simning ichki induktivligi: ichkarida $B=\\frac{\\mu_0Ir}{2\\pi a^2}$, uzunlik birligiga energiya $\\frac{\\mu_0I^2}{16\\pi}$, ya'ni $\\frac{L}{l}=\\frac{\\mu_0}{8\\pi}$ — sim radiusiga bog'liq emas. Ikki g'altak uchun $W=\\frac{L_1I_1^2}{2}+\\frac{L_2I_2^2}{2}+MI_1I_2$; bu ifoda har qanday toklarda manfiy bo'lmasligidan $M\\le\\sqrt{L_1L_2}$ kelib chiqadi.",
+  "ru": "**Индуктивность через энергию.** Иногда $L$ удобнее находить не через поток, а через энергию: $L=\\frac{2W}{I^2}$, $W=\\int\\frac{B^2}{2\\mu_0}dV$. Например, внутренняя индуктивность толстого провода: внутри $B=\\frac{\\mu_0Ir}{2\\pi a^2}$, энергия на единицу длины $\\frac{\\mu_0I^2}{16\\pi}$, то есть $\\frac{L}{l}=\\frac{\\mu_0}{8\\pi}$ — не зависит от радиуса провода. Для двух катушек $W=\\frac{L_1I_1^2}{2}+\\frac{L_2I_2^2}{2}+MI_1I_2$; из неотрицательности этого выражения при любых токах следует $M\\le\\sqrt{L_1L_2}$.",
+  "en": "**Inductance from energy.** Sometimes it is easier to find $L$ from the energy rather than the flux: $L=\\frac{2W}{I^2}$, $W=\\int\\frac{B^2}{2\\mu_0}dV$. For example, the internal inductance of a thick wire: inside $B=\\frac{\\mu_0Ir}{2\\pi a^2}$, the energy per unit length is $\\frac{\\mu_0I^2}{16\\pi}$, so $\\frac{L}{l}=\\frac{\\mu_0}{8\\pi}$ — independent of the wire's radius. For two coils $W=\\frac{L_1I_1^2}{2}+\\frac{L_2I_2^2}{2}+MI_1I_2$; requiring this to be non-negative for any currents gives $M\\le\\sqrt{L_1L_2}$."
+ },
+ {
+  "t": "h2",
+  "uz": "7. RL zanjir",
+  "ru": "7. RL-цепь",
+  "en": "7. The RL circuit"
+ },
+ {
+  "t": "li",
+  "uz": "**Tokning o'rnatilishi.** $\\mathcal{E}$ manba, $R$ rezistor va $L$ g'altak ketma-ket ulanganda kontur qoidasi: $\\mathcal{E}=IR+L\\frac{dI}{dt}$. Yechim $I=\\frac{\\mathcal{E}}{R}\\left(1-e^{-t/\\tau}\\right)$, $\\tau=\\frac{L}{R}$ — vaqt doimiysi ($\\mathrm{H}/\\Omega=\\mathrm{s}$). $t=0^+$ da tok nol, g'altak uzilgan sim kabi (barcha kuchlanish g'altakda), $t\\to\\infty$ da g'altak oddiy sim ($U_L=0$). $t=\\tau$ da tok oxirgi qiymatning $63$ foizi ([[F06]]).",
+  "ru": "**Установление тока.** При последовательном соединении источника $\\mathcal{E}$, резистора $R$ и катушки $L$ правило контура даёт $\\mathcal{E}=IR+L\\frac{dI}{dt}$. Решение $I=\\frac{\\mathcal{E}}{R}\\left(1-e^{-t/\\tau}\\right)$, $\\tau=\\frac{L}{R}$ — постоянная времени ($\\mathrm{H}/\\Omega=\\mathrm{s}$). При $t=0^+$ ток равен нулю, катушка — как разрыв (всё напряжение на катушке), при $t\\to\\infty$ катушка — обычный провод ($U_L=0$). При $t=\\tau$ ток составляет $63$ процента конечного значения ([[F06]]).",
+  "en": "**Current build-up.** With a source $\\mathcal{E}$, a resistor $R$ and a coil $L$ in series, the loop rule gives $\\mathcal{E}=IR+L\\frac{dI}{dt}$. The solution is $I=\\frac{\\mathcal{E}}{R}\\left(1-e^{-t/\\tau}\\right)$ with time constant $\\tau=\\frac{L}{R}$ ($\\mathrm{H}/\\Omega=\\mathrm{s}$). At $t=0^+$ the current is zero and the coil acts like a break (all the voltage is across the coil); as $t\\to\\infty$ the coil is just a wire ($U_L=0$). At $t=\\tau$ the current is $63$ percent of its final value ([[F06]])."
+ },
+ {
+  "t": "m",
+  "m": "I=\\frac{\\mathcal{E}}{R}\\left(1-e^{-t/\\tau}\\right),\\qquad I=I_0e^{-t/\\tau},\\qquad \\tau=\\frac{L}{R}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tokning yo'qolishi.** Manba olib tashlanib, g'altak $R$ orqali berk qolsa, $I=I_0e^{-t/\\tau}$; ajraladigan issiqlik $\\int I^2R\\,dt=\\frac{LI_0^2}{2}$ — g'altak energiyasi. Agar zanjir to'satdan uzilsa ($R\\to\\infty$), $\\frac{dI}{dt}$ juda katta bo'lib, uchlarida yuqori kuchlanish paydo bo'ladi: kalitda uchqun, avtomobilning o't oldirish g'altagi aynan shundan foydalanadi. G'altakka parallel $R'$ ulansa, uzilish paytida uning kuchlanishi $I_0R'$ — manba EYK idan ancha katta bo'lishi mumkin.",
+  "ru": "**Исчезновение тока.** Если источник убран, а катушка замкнута на $R$, то $I=I_0e^{-t/\\tau}$; выделившееся тепло $\\int I^2R\\,dt=\\frac{LI_0^2}{2}$ — энергия катушки. Если цепь внезапно разорвать ($R\\to\\infty$), $\\frac{dI}{dt}$ очень велико и на концах катушки возникает высокое напряжение: искра в выключателе, катушка зажигания автомобиля использует именно это. Если параллельно катушке подключён $R'$, при размыкании напряжение на нём $I_0R'$ — оно может намного превышать ЭДС источника.",
+  "en": "**Current decay.** If the source is removed and the coil is left closed through $R$, $I=I_0e^{-t/\\tau}$; the heat released is $\\int I^2R\\,dt=\\frac{LI_0^2}{2}$ — the coil's energy. If the circuit is suddenly broken ($R\\to\\infty$), $\\frac{dI}{dt}$ is huge and a high voltage appears across the coil: a spark at the switch — the ignition coil of a car uses exactly this. If a resistor $R'$ is connected across the coil, at the moment of opening its voltage is $I_0R'$ — possibly far larger than the source EMF."
+ },
+ {
+  "t": "li",
+  "uz": "**RC bilan taqqoslash.** RC zanjirda kondensator kuchlanishi sakrab o'zgara olmaydi va $\\tau=RC$; RL zanjirda g'altak toki sakrab o'zgara olmaydi va $\\tau=\\frac{L}{R}$ — $R$ ortsa, RC sekinlashadi, RL esa tezlashadi. Murakkab zanjirda $\\tau=\\frac{L}{r_0}$, bu yerda $r_0$ — g'altak uchlaridan qaraganda (manbalar o'rniga qisqa tutashuv) ekvivalent qarshilik. Ikki chegarani tekshirish usuli o'zgarmaydi: $t=0^+$ da g'altak — uzilish, $t\\to\\infty$ da — sim.",
+  "ru": "**Сравнение с RC.** В RC-цепи напряжение на конденсаторе не может меняться скачком и $\\tau=RC$; в RL-цепи скачком не может меняться ток катушки и $\\tau=\\frac{L}{R}$ — с ростом $R$ RC-цепь замедляется, а RL ускоряется. В сложной цепи $\\tau=\\frac{L}{r_0}$, где $r_0$ — эквивалентное сопротивление со стороны выводов катушки (источники заменены коротким замыканием). Метод двух пределов тот же: при $t=0^+$ катушка — разрыв, при $t\\to\\infty$ — провод.",
+  "en": "**Comparison with RC.** In an RC circuit the capacitor voltage cannot jump and $\\tau=RC$; in an RL circuit the coil current cannot jump and $\\tau=\\frac{L}{R}$ — increasing $R$ slows the RC circuit but speeds up the RL one. In a complex circuit $\\tau=\\frac{L}{r_0}$, where $r_0$ is the equivalent resistance seen from the coil's terminals (sources replaced by short circuits). The two-limit method is the same: at $t=0^+$ the coil is a break, as $t\\to\\infty$ a wire."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L17-F06.png",
+   "ru": "figures/B2-L17-F06-ru.png",
+   "en": "figures/B2-L17-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. LC zanjirda erkin tebranishlar",
+  "ru": "8. Свободные колебания в LC-цепи",
+  "en": "8. Free oscillations in an LC circuit"
+ },
+ {
+  "t": "li",
+  "uz": "**Tenglama.** Zaryadlangan kondensator g'altakka ulanganda kontur qoidasi: $L\\frac{dI}{dt}+\\frac{q}{C}=0$, $I=\\frac{dq}{dt}$, ya'ni $\\ddot q+\\omega_0^2q=0$, $\\omega_0=\\frac{1}{\\sqrt{LC}}$ (Tomson formulasi $T=2\\pi\\sqrt{LC}$). Boshlang'ich zaryad $q_0$, tok nol bo'lsa: $q=q_0\\cos\\omega_0t$, $I=-\\omega_0q_0\\sin\\omega_0t$ — tok zaryaddan chorak davrga siljigan, $I_0=\\omega_0q_0$, $U_0=\\frac{q_0}{C}$, $I_0=U_0\\sqrt{\\frac{C}{L}}$ ([[F07]]).",
+  "ru": "**Уравнение.** При подключении заряженного конденсатора к катушке правило контура даёт $L\\frac{dI}{dt}+\\frac{q}{C}=0$, $I=\\frac{dq}{dt}$, то есть $\\ddot q+\\omega_0^2q=0$, $\\omega_0=\\frac{1}{\\sqrt{LC}}$ (формула Томсона $T=2\\pi\\sqrt{LC}$). Если начальный заряд $q_0$, а ток равен нулю: $q=q_0\\cos\\omega_0t$, $I=-\\omega_0q_0\\sin\\omega_0t$ — ток сдвинут относительно заряда на четверть периода, $I_0=\\omega_0q_0$, $U_0=\\frac{q_0}{C}$, $I_0=U_0\\sqrt{\\frac{C}{L}}$ ([[F07]]).",
+  "en": "**The equation.** When a charged capacitor is connected to a coil, the loop rule gives $L\\frac{dI}{dt}+\\frac{q}{C}=0$ with $I=\\frac{dq}{dt}$, i.e. $\\ddot q+\\omega_0^2q=0$, $\\omega_0=\\frac{1}{\\sqrt{LC}}$ (Thomson's formula $T=2\\pi\\sqrt{LC}$). With initial charge $q_0$ and zero current: $q=q_0\\cos\\omega_0t$, $I=-\\omega_0q_0\\sin\\omega_0t$ — the current is a quarter period out of step with the charge, $I_0=\\omega_0q_0$, $U_0=\\frac{q_0}{C}$, $I_0=U_0\\sqrt{\\frac{C}{L}}$ ([[F07]])."
+ },
+ {
+  "t": "m",
+  "m": "\\ddot q+\\omega_0^2q=0,\\qquad \\omega_0=\\frac{1}{\\sqrt{LC}},\\qquad \\frac{q^2}{2C}+\\frac{LI^2}{2}=\\frac{q_0^2}{2C}=\\frac{LI_0^2}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya almashinuvi.** Elektr energiya $\\frac{q^2}{2C}\\propto\\cos^2\\omega_0t$ va magnit energiya $\\frac{LI^2}{2}\\propto\\sin^2\\omega_0t$ yig'indisi o'zgarmas. Energiyalar $2\\omega_0$ chastota bilan, ya'ni $\\frac{T}{2}$ davr bilan almashinadi. Ular birinchi marta $t=\\frac{T}{8}$ da tenglashadi; shu paytda $q=\\frac{q_0}{\\sqrt{2}}$, $I=\\frac{I_0}{\\sqrt{2}}$. Ixtiyoriy boshlang'ich shartlarda $q=A\\cos(\\omega_0t+\\varphi)$: $A=\\sqrt{q_0^2+\\frac{I_0^2}{\\omega_0^2}}$.",
+  "ru": "**Обмен энергией.** Сумма электрической энергии $\\frac{q^2}{2C}\\propto\\cos^2\\omega_0t$ и магнитной $\\frac{LI^2}{2}\\propto\\sin^2\\omega_0t$ постоянна. Энергии обмениваются с частотой $2\\omega_0$, то есть с периодом $\\frac{T}{2}$. Впервые они равны при $t=\\frac{T}{8}$; в этот момент $q=\\frac{q_0}{\\sqrt{2}}$, $I=\\frac{I_0}{\\sqrt{2}}$. При произвольных начальных условиях $q=A\\cos(\\omega_0t+\\varphi)$: $A=\\sqrt{q_0^2+\\frac{I_0^2}{\\omega_0^2}}$.",
+  "en": "**Energy exchange.** The sum of the electric energy $\\frac{q^2}{2C}\\propto\\cos^2\\omega_0t$ and the magnetic energy $\\frac{LI^2}{2}\\propto\\sin^2\\omega_0t$ is constant. The energies swap back and forth at frequency $2\\omega_0$, i.e. with period $\\frac{T}{2}$. They are first equal at $t=\\frac{T}{8}$; at that moment $q=\\frac{q_0}{\\sqrt{2}}$ and $I=\\frac{I_0}{\\sqrt{2}}$. For arbitrary initial conditions $q=A\\cos(\\omega_0t+\\varphi)$ with $A=\\sqrt{q_0^2+\\frac{I_0^2}{\\omega_0^2}}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki kondensator va so'nish.** $C$ sig'imli zaryadlangan kondensator $L$ orqali shunday zaryadsiz kondensatorga ulansa, ketma-ket sig'im $\\frac{C}{2}$: $\\omega=\\sqrt{\\frac{2}{LC}}$, zaryad muvozanat ($\\frac{q_0}{2}$ dan) atrofida tebranadi va eng katta tok $\\frac{q_0}{\\sqrt{2LC}}$. Real konturda qarshilik bor: $q=q_0e^{-\\beta t}\\cos\\omega't$, $\\beta=\\frac{R}{2L}$ — so'nuvchi ossilyator (B2-L07) bilan aynan bir xil tenglama; batafsil — B2-L18.",
+  "ru": "**Два конденсатора и затухание.** Если заряженный конденсатор ёмкостью $C$ подключить через $L$ к такому же незаряженному, последовательная ёмкость равна $\\frac{C}{2}$: $\\omega=\\sqrt{\\frac{2}{LC}}$, заряд колеблется около равновесия ($\\frac{q_0}{2}$ на каждом), максимальный ток $\\frac{q_0}{\\sqrt{2LC}}$. В реальном контуре есть сопротивление: $q=q_0e^{-\\beta t}\\cos\\omega't$, $\\beta=\\frac{R}{2L}$ — то же уравнение, что для затухающего осциллятора (B2-L07); подробно — в B2-L18.",
+  "en": "**Two capacitors and damping.** If a charged capacitor $C$ is connected through $L$ to an identical uncharged one, the series capacitance is $\\frac{C}{2}$: $\\omega=\\sqrt{\\frac{2}{LC}}$, the charge oscillates about equilibrium ($\\frac{q_0}{2}$ on each), and the largest current is $\\frac{q_0}{\\sqrt{2LC}}$. A real circuit has resistance: $q=q_0e^{-\\beta t}\\cos\\omega't$ with $\\beta=\\frac{R}{2L}$ — exactly the damped-oscillator equation (B2-L07); details in B2-L18."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L17-F07.png",
+   "ru": "figures/B2-L17-F07-ru.png",
+   "en": "figures/B2-L17-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. Elektromexanik o'xshashlik",
+  "ru": "9. Электромеханическая аналогия",
+  "en": "9. The electromechanical analogy"
+ },
+ {
+  "t": "li",
+  "uz": "**Lug'at.** $L\\ddot q+R\\dot q+\\frac{q}{C}=\\mathcal{E}$ va $m\\ddot x+b\\dot x+kx=F$ tenglamalari bir xil, shuning uchun: $q\\leftrightarrow x$, $I\\leftrightarrow v$, $L\\leftrightarrow m$ (inersiya), $\\frac{1}{C}\\leftrightarrow k$ (bikrlik), $R\\leftrightarrow b$ (ishqalanish), $\\mathcal{E}\\leftrightarrow F$. Energiyalar ham mos: $\\frac{LI^2}{2}\\leftrightarrow\\frac{mv^2}{2}$, $\\frac{q^2}{2C}\\leftrightarrow\\frac{kx^2}{2}$; $\\omega_0=\\frac{1}{\\sqrt{LC}}\\leftrightarrow\\sqrt{\\frac{k}{m}}$ ([[F08]]).",
+  "ru": "**Словарь.** Уравнения $L\\ddot q+R\\dot q+\\frac{q}{C}=\\mathcal{E}$ и $m\\ddot x+b\\dot x+kx=F$ одинаковы, поэтому: $q\\leftrightarrow x$, $I\\leftrightarrow v$, $L\\leftrightarrow m$ (инерция), $\\frac{1}{C}\\leftrightarrow k$ (жёсткость), $R\\leftrightarrow b$ (трение), $\\mathcal{E}\\leftrightarrow F$. Энергии тоже соответствуют: $\\frac{LI^2}{2}\\leftrightarrow\\frac{mv^2}{2}$, $\\frac{q^2}{2C}\\leftrightarrow\\frac{kx^2}{2}$; $\\omega_0=\\frac{1}{\\sqrt{LC}}\\leftrightarrow\\sqrt{\\frac{k}{m}}$ ([[F08]]).",
+  "en": "**The dictionary.** The equations $L\\ddot q+R\\dot q+\\frac{q}{C}=\\mathcal{E}$ and $m\\ddot x+b\\dot x+kx=F$ are identical, so: $q\\leftrightarrow x$, $I\\leftrightarrow v$, $L\\leftrightarrow m$ (inertia), $\\frac{1}{C}\\leftrightarrow k$ (stiffness), $R\\leftrightarrow b$ (friction), $\\mathcal{E}\\leftrightarrow F$. The energies match too: $\\frac{LI^2}{2}\\leftrightarrow\\frac{mv^2}{2}$, $\\frac{q^2}{2C}\\leftrightarrow\\frac{kx^2}{2}$; $\\omega_0=\\frac{1}{\\sqrt{LC}}\\leftrightarrow\\sqrt{\\frac{k}{m}}$ ([[F08]])."
+ },
+ {
+  "t": "m",
+  "m": "L\\ddot q+R\\dot q+\\frac{q}{C}=\\mathcal{E}\\quad\\leftrightarrow\\quad m\\ddot x+b\\dot x+kx=F"
+ },
+ {
+  "t": "li",
+  "uz": "**Qo'llanishi.** O'xshashlik masalalarni tayyor natijalar bilan yechish imkonini beradi: ketma-ket kondensatorlarda zaryad umumiy, parallel prujinalarda siljish umumiy — shuning uchun ketma-ket kondensatorlar parallel prujinalarga mos ($\\frac{1}{C}$ lar $k$ lar kabi qo'shiladi). RL zanjirda tokning o'rnatilishi — qovushqoq muhitda tezlikning o'rnatilishi ($\\tau=\\frac{L}{R}\\leftrightarrow\\frac{m}{b}$), relslardagi sterjen esa haqiqiy elektromexanik tizim: uning effektiv «qovushqoqligi» $b=\\frac{B^2l^2}{R}$.",
+  "ru": "**Применение.** Аналогия позволяет решать задачи готовыми результатами: у последовательных конденсаторов общий заряд, у параллельных пружин общее смещение — поэтому последовательные конденсаторы соответствуют параллельным пружинам ($\\frac{1}{C}$ складываются, как $k$). Установление тока в RL-цепи — установление скорости в вязкой среде ($\\tau=\\frac{L}{R}\\leftrightarrow\\frac{m}{b}$), а стержень на рельсах — настоящая электромеханическая система: его эффективная «вязкость» $b=\\frac{B^2l^2}{R}$.",
+  "en": "**Uses.** The analogy lets you solve problems with ready-made results: capacitors in series share the same charge and springs in parallel share the same displacement — so series capacitors correspond to parallel springs (the $\\frac{1}{C}$ terms add like the $k$ values). Current build-up in an RL circuit is like velocity build-up in a viscous medium ($\\tau=\\frac{L}{R}\\leftrightarrow\\frac{m}{b}$), and the rod on rails is a genuine electromechanical system with effective “viscosity” $b=\\frac{B^2l^2}{R}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L17-F08.png",
+   "ru": "figures/B2-L17-F08-ru.png",
+   "en": "figures/B2-L17-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Induksion zaryad va oqimning saqlanishi",
+  "ru": "10. Индукционный заряд и сохранение потока",
+  "en": "10. Induced charge and flux conservation"
+ },
+ {
+  "t": "li",
+  "uz": "**Induksion zaryad.** Qarshiligi $R$ bo'lgan $N$ o'ramli konturda oqim $\\Phi_1$ dan $\\Phi_2$ gacha o'zgarsa, o'tgan zaryad $q=\\int I\\,dt=\\frac{N\\left|\\Phi_2-\\Phi_1\\right|}{R}$ — o'zgarish tezligiga bog'liq emas. Masalan, maydonga tik ramkani $180^\\circ$ ga burilganda $q=\\frac{2NBA}{R}$. Ballistik galvanometr (flyuksmetr) shu bilan maydonni o'lchaydi. Konturning o'z induktivligi bu natijani o'zgartirmaydi: boshida va oxirida tok nol bo'lgani uchun $L\\Delta I=0$.",
+  "ru": "**Индукционный заряд.** Если в контуре из $N$ витков сопротивлением $R$ поток меняется от $\\Phi_1$ до $\\Phi_2$, прошедший заряд $q=\\int I\\,dt=\\frac{N\\left|\\Phi_2-\\Phi_1\\right|}{R}$ — не зависит от скорости изменения. Например, при повороте рамки, перпендикулярной полю, на $180^\\circ$ имеем $q=\\frac{2NBA}{R}$. Баллистический гальванометр (флюксметр) так и измеряет поле. Собственная индуктивность контура не меняет результата: в начале и в конце ток равен нулю, поэтому $L\\Delta I=0$.",
+  "en": "**Induced charge.** If the flux through a loop of $N$ turns and resistance $R$ changes from $\\Phi_1$ to $\\Phi_2$, the charge that flows is $q=\\int I\\,dt=\\frac{N\\left|\\Phi_2-\\Phi_1\\right|}{R}$ — independent of how fast the change happens. For example, turning a loop perpendicular to the field through $180^\\circ$ gives $q=\\frac{2NBA}{R}$. A ballistic galvanometer (fluxmeter) measures fields this way. The loop's own inductance does not change the result: the current is zero at the start and at the end, so $L\\Delta I=0$."
+ },
+ {
+  "t": "m",
+  "m": "q=\\frac{N\\Delta\\Phi}{R},\\qquad LI+\\Phi=\\mathrm{const},\\qquad I=-\\frac{\\Delta\\Phi}{L}"
+ },
+ {
+  "t": "li",
+  "uz": "**O'ta o'tkazgich halqa.** $R=0$ da kontur qoidasi $L\\frac{dI}{dt}=-\\frac{d\\Phi}{dt}$ ni beradi, ya'ni to'liq oqim $LI+\\Phi$ saqlanadi. Tashqi maydon $\\Phi$ oqim hosil qilsa, halqada $I=-\\frac{\\Phi}{L}$ tok paydo bo'ladi va maydon olib tashlanmaguncha so'nmaydi — halqa ichidagi oqim «muzlatilgan». Magnit levitatsiyasi va o'ta o'tkazgich magnitlardagi so'nmas toklar shunga asoslangan.",
+  "ru": "**Сверхпроводящее кольцо.** При $R=0$ правило контура даёт $L\\frac{dI}{dt}=-\\frac{d\\Phi}{dt}$, то есть сохраняется полный поток $LI+\\Phi$. Если внешнее поле создаёт поток $\\Phi$, в кольце возникает ток $I=-\\frac{\\Phi}{L}$, который не затухает, пока поле не убрано, — поток внутри кольца «вморожен». На этом основаны магнитная левитация и незатухающие токи в сверхпроводящих магнитах.",
+  "en": "**A superconducting ring.** With $R=0$ the loop rule gives $L\\frac{dI}{dt}=-\\frac{d\\Phi}{dt}$, so the total flux $LI+\\Phi$ is conserved. If an external field produces a flux $\\Phi$, a current $I=-\\frac{\\Phi}{L}$ appears in the ring and does not decay until the field is removed — the flux inside the ring is “frozen”. Magnetic levitation and the persistent currents of superconducting magnets rest on this."
+ },
+ {
+  "t": "h2",
+  "uz": "11. GRE uchun usullar va tipik xatolar",
+  "ru": "11. Методы для GRE и типичные ошибки",
+  "en": "11. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**1-usul — Lens qoidasini ikki savol bilan.** Oqim qayoqqa? Ortyaptimi yoki kamayyaptimi? Induksion maydon o'zgarishga qarshi; tok yo'nalishi o'ng qo'l bilan. Kuch haqidagi savolda: induksiya har doim nisbiy harakatni sekinlatadi (magnit va halqa, sterjen va relslar, metall plastinka). Agar oqim o'zgarmasa — masalan, ramka bir jinsli maydonda ilgarilanma harakatlansa — EYK nol.",
+  "ru": "**Метод 1 — правило Ленца двумя вопросами.** Куда направлен поток? Растёт он или убывает? Индукционное поле — против изменения; направление тока — по правой руке. В вопросе о силе: индукция всегда тормозит относительное движение (магнит и кольцо, стержень и рельсы, металлическая пластина). Если поток не меняется — например, рамка движется поступательно в однородном поле, — ЭДС равна нулю.",
+  "en": "**Method 1 — Lenz's law in two questions.** Which way is the flux? Is it growing or shrinking? The induced field opposes the change; the current direction follows from the right hand. For a question about force: induction always slows relative motion (magnet and ring, rod and rails, metal plate). If the flux does not change — for example, a loop translating in a uniform field — the EMF is zero."
+ },
+ {
+  "t": "li",
+  "uz": "**2-usul — chegaralar va o'lchamlar.** RL: $t=0^+$ da g'altak — uzilish, $t\\to\\infty$ da — sim; LC: $\\omega_0=\\frac{1}{\\sqrt{LC}}$, energiya saqlanadi. O'lchamlar: $\\frac{L}{R}$ — sekund, $\\sqrt{LC}$ — sekund, $\\frac{\\mu_0}{4\\pi}=10^{-7}\\ \\mathrm{H/m}$. Proporsiyalar: $L\\propto N^2$, $\\mathcal{E}\\propto\\frac{d\\Phi}{dt}$, $\\frac{B^2l^2v^2}{R}$ — quvvat $v^2$ ga proporsional.",
+  "ru": "**Метод 2 — пределы и размерности.** RL: при $t=0^+$ катушка — разрыв, при $t\\to\\infty$ — провод; LC: $\\omega_0=\\frac{1}{\\sqrt{LC}}$, энергия сохраняется. Размерности: $\\frac{L}{R}$ — секунды, $\\sqrt{LC}$ — секунды, $\\frac{\\mu_0}{4\\pi}=10^{-7}\\ \\mathrm{H/m}$. Пропорции: $L\\propto N^2$, $\\mathcal{E}\\propto\\frac{d\\Phi}{dt}$, $\\frac{B^2l^2v^2}{R}$ — мощность пропорциональна $v^2$.",
+  "en": "**Method 2 — limits and dimensions.** RL: at $t=0^+$ the coil is a break, as $t\\to\\infty$ a wire; LC: $\\omega_0=\\frac{1}{\\sqrt{LC}}$, energy is conserved. Dimensions: $\\frac{L}{R}$ is in seconds, so is $\\sqrt{LC}$, and $\\frac{\\mu_0}{4\\pi}=10^{-7}\\ \\mathrm{H/m}$. Proportions: $L\\propto N^2$, $\\mathcal{E}\\propto\\frac{d\\Phi}{dt}$, $\\frac{B^2l^2v^2}{R}$ — the power goes as $v^2$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) EYK ni oqimning o'zidan topish ($\\frac{d\\Phi}{dt}$ kerak). 2) O'ramlar sonini unutish. 3) Lens qoidasida «induksion maydon tashqi maydonga doim qarshi» deb o'ylash (o'zgarishga qarshi!). 4) RL da $\\tau=RL$ yoki $\\frac{R}{L}$ yozish. 5) $L\\propto N$ deb olish ($N^2$ kerak). 6) LC da energiyalar davri $T$ deb olish ($\\frac{T}{2}$). 7) Solenoid tashqarisida $B=0$ bo'lgani uchun $E=0$ deb o'ylash.",
+  "ru": "**Типичные ошибки.** 1) Искать ЭДС по самому потоку (нужно $\\frac{d\\Phi}{dt}$). 2) Забывать число витков. 3) Думать, что по правилу Ленца «индукционное поле всегда против внешнего» (против изменения!). 4) Писать в RL $\\tau=RL$ или $\\frac{R}{L}$. 5) Считать $L\\propto N$ (нужно $N^2$). 6) Принимать период энергии в LC равным $T$ (он $\\frac{T}{2}$). 7) Думать, что снаружи соленоида $E=0$, раз там $B=0$.",
+  "en": "**Typical mistakes.** 1) Getting the EMF from the flux itself (you need $\\frac{d\\Phi}{dt}$). 2) Forgetting the number of turns. 3) Thinking Lenz's law says “the induced field always opposes the external field” (it opposes the change!). 4) Writing $\\tau=RL$ or $\\frac{R}{L}$ for RL. 5) Taking $L\\propto N$ (it is $N^2$). 6) Taking the energy period in LC to be $T$ (it is $\\frac{T}{2}$). 7) Thinking $E=0$ outside a solenoid because $B=0$ there."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Faradey qonuni",
+    "ru": "Закон Фарадея",
+    "en": "Faraday's law",
+    "m": "\\mathcal{E}=-\\frac{d\\Psi}{dt},\\quad \\nabla\\times\\vec E=-\\frac{\\partial\\vec B}{\\partial t}"
+   },
+   {
+    "uz": "Harakatdagi sterjen",
+    "ru": "Движущийся стержень",
+    "en": "Moving rod",
+    "m": "\\mathcal{E}=Blv,\\quad F=\\frac{B^2l^2v}{R}"
+   },
+   {
+    "uz": "Chegaraviy tezlik",
+    "ru": "Предельная скорость",
+    "en": "Terminal speed",
+    "m": "v_{\\infty}=\\frac{mgR}{B^2l^2},\\quad \\tau=\\frac{mR}{B^2l^2}"
+   },
+   {
+    "uz": "Aylanish, generator",
+    "ru": "Вращение, генератор",
+    "en": "Rotation, generator",
+    "m": "\\frac{B\\omega l^2}{2},\\quad NBA\\omega\\sin\\omega t"
+   },
+   {
+    "uz": "Uyurmali maydon",
+    "ru": "Вихревое поле",
+    "en": "Induced field",
+    "m": "E=\\frac{r}{2}\\frac{dB}{dt},\\quad E=\\frac{R^2}{2r}\\frac{dB}{dt}"
+   },
+   {
+    "uz": "Betatron sharti",
+    "ru": "Условие бетатрона",
+    "en": "Betatron condition",
+    "m": "B_0=\\frac{\\langle B\\rangle}{2}"
+   },
+   {
+    "uz": "O'zaro induktivlik",
+    "ru": "Взаимная индуктивность",
+    "en": "Mutual inductance",
+    "m": "\\Psi_2=MI_1,\\quad M_{12}=M_{21},\\quad M\\le\\sqrt{L_1L_2}"
+   },
+   {
+    "uz": "Solenoid",
+    "ru": "Соленоид",
+    "en": "Solenoid",
+    "m": "L=\\mu_0n^2V,\\quad M=\\mu_0nN_2A"
+   },
+   {
+    "uz": "Toroid, kabel",
+    "ru": "Тороид, кабель",
+    "en": "Toroid, cable",
+    "m": "\\frac{\\mu_0N^2h}{2\\pi}\\ln\\frac{b}{a},\\quad \\frac{L}{l}=\\frac{\\mu_0}{2\\pi}\\ln\\frac{b}{a}"
+   },
+   {
+    "uz": "G'altaklarni ulash",
+    "ru": "Соединение катушек",
+    "en": "Combining coils",
+    "m": "L_1+L_2\\pm2M,\\quad \\frac{L_1L_2}{L_1+L_2}"
+   },
+   {
+    "uz": "Magnit energiya",
+    "ru": "Магнитная энергия",
+    "en": "Magnetic energy",
+    "m": "W=\\frac{LI^2}{2},\\quad w=\\frac{B^2}{2\\mu_0}"
+   },
+   {
+    "uz": "RL zanjir",
+    "ru": "RL-цепь",
+    "en": "RL circuit",
+    "m": "I=\\frac{\\mathcal{E}}{R}\\left(1-e^{-t/\\tau}\\right),\\quad \\tau=\\frac{L}{R}"
+   },
+   {
+    "uz": "LC zanjir",
+    "ru": "LC-цепь",
+    "en": "LC circuit",
+    "m": "\\omega_0=\\frac{1}{\\sqrt{LC}},\\quad I_0=\\omega_0q_0"
+   },
+   {
+    "uz": "LC energiyasi",
+    "ru": "Энергия LC",
+    "en": "LC energy",
+    "m": "\\frac{q^2}{2C}+\\frac{LI^2}{2}=\\frac{q_0^2}{2C}"
+   },
+   {
+    "uz": "O'xshashlik",
+    "ru": "Аналогия",
+    "en": "Analogy",
+    "m": "L\\leftrightarrow m,\\quad \\frac{1}{C}\\leftrightarrow k,\\quad R\\leftrightarrow b"
+   },
+   {
+    "uz": "Induksion zaryad",
+    "ru": "Индукционный заряд",
+    "en": "Induced charge",
+    "m": "q=\\frac{N\\Delta\\Phi}{R}"
+   },
+   {
+    "uz": "O'ta o'tkazgich halqa",
+    "ru": "Сверхпроводящее кольцо",
+    "en": "Superconducting ring",
+    "m": "LI+\\Phi=\\mathrm{const}"
+   }
+  ]
+ }
+]

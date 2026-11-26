@@ -1,0 +1,501 @@
+[
+ {
+  "t": "h1",
+  "uz": "RLC zanjir, o'zgaruvchan tok (RLC circuits, alternating current)",
+  "ru": "RLC-цепь, переменный ток",
+  "en": "RLC circuits, alternating current"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz so'nuvchi RLC zanjirni tahlil qilasiz va uning rejimini aniqlaysiz; o'zgaruvchan tokning ta'sir etuvchi qiymatlarini hisoblaysiz; rezistor, g'altak va kondensatorda tok va kuchlanish fazalarini taqqoslaysiz; kompleks impedans yordamida ixtiyoriy zanjirni yechasiz; ketma-ket va parallel rezonansni, asllik va o'tkazish kengligini qo'llaysiz; aktiv quvvat va quvvat koeffitsiyentini topasiz; RC va RL filtrlarni hamda transformatorni tahlil qilasiz.",
+  "ru": "**Цель.** После урока вы будете анализировать затухающую RLC-цепь и определять её режим; вычислять действующие значения переменного тока; сравнивать фазы тока и напряжения на резисторе, катушке и конденсаторе; решать любую цепь с помощью комплексного импеданса; применять последовательный и параллельный резонанс, добротность и ширину полосы; находить активную мощность и коэффициент мощности; анализировать RC- и RL-фильтры и трансформатор.",
+  "en": "**Goal.** After this lesson you will analyse a damped RLC circuit and identify its regime; compute rms values of alternating current; compare the phases of current and voltage in a resistor, a coil and a capacitor; solve any circuit with complex impedance; apply series and parallel resonance, the quality factor and the bandwidth; find the average power and the power factor; and analyse RC and RL filters and the transformer."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L41 va B1-L42 da tebranish konturi, o'zgaruvchan tok, induktiv va sig'im qarshiliklari hamda transformator bilan tanishdik; B2-L07 da mexanik so'nuvchi va majburiy tebranishlarni chuqur o'rgandik. B2-L17 da ideal LC konturni ko'rdik. Bu darsda qarshilikni qo'shamiz va zanjirni tashqi o'zgaruvchan kuchlanish bilan majburlaymiz: mexanikadagi hamma natija ($Q$, rezonans egri chizig'i, fazalar) elektr tiliga o'tadi, kompleks sonlar esa hisobni oddiy algebraga aylantiradi. GRE da rezonans chastotasi, impedans, fazalar, ta'sir etuvchi qiymat va filtrlar savollari muntazam uchraydi.",
+  "ru": "В B1-L41 и B1-L42 мы познакомились с колебательным контуром, переменным током, индуктивным и ёмкостным сопротивлениями и трансформатором; в B2-L07 подробно изучили механические затухающие и вынужденные колебания. В B2-L17 мы рассмотрели идеальный LC-контур. В этом уроке добавим сопротивление и будем раскачивать цепь внешним переменным напряжением: все результаты механики ($Q$, резонансная кривая, фазы) переходят на электрический язык, а комплексные числа превращают расчёт в простую алгебру. На GRE регулярно встречаются вопросы о резонансной частоте, импедансе, фазах, действующем значении и фильтрах.",
+  "en": "In B1-L41 and B1-L42 we met the oscillating circuit, alternating current, inductive and capacitive reactance and the transformer; in B2-L07 we studied damped and driven mechanical oscillations in depth. In B2-L17 we looked at the ideal LC circuit. In this lesson we add resistance and drive the circuit with an external alternating voltage: every result of mechanics ($Q$, the resonance curve, the phases) carries over to electrical language, and complex numbers turn the calculation into simple algebra. On the GRE, questions on the resonant frequency, impedance, phases, rms values and filters come up regularly."
+ },
+ {
+  "t": "h2",
+  "uz": "1. So'nuvchi RLC zanjir",
+  "ru": "1. Затухающая RLC-цепь",
+  "en": "1. The damped RLC circuit"
+ },
+ {
+  "t": "li",
+  "uz": "**Tenglama va rejimlar.** Zaryadlangan kondensator ketma-ket ulangan $R$ va $L$ orqali zaryadsizlanganda: $L\\ddot q+R\\dot q+\\frac{q}{C}=0$, ya'ni $\\ddot q+2\\beta\\dot q+\\omega_0^2q=0$, $\\beta=\\frac{R}{2L}$, $\\omega_0=\\frac{1}{\\sqrt{LC}}$ — B2-L07 dagi so'nuvchi ossilyator tenglamasining aynan o'zi. $\\beta<\\omega_0$ da kuchsiz so'nish: $q=q_0e^{-\\beta t}\\cos\\left(\\omega't+\\varphi\\right)$, $\\omega'=\\sqrt{\\omega_0^2-\\beta^2}$. $\\beta=\\omega_0$, ya'ni $R=2\\sqrt{\\frac{L}{C}}$ — kritik so'nish (eng tez tebranishsiz qaytish); $\\beta>\\omega_0$ — kuchli so'nish, zaryad tebranmasdan sekin kamayadi ([[F01]]).",
+  "ru": "**Уравнение и режимы.** При разрядке заряженного конденсатора через последовательно соединённые $R$ и $L$: $L\\ddot q+R\\dot q+\\frac{q}{C}=0$, то есть $\\ddot q+2\\beta\\dot q+\\omega_0^2q=0$, $\\beta=\\frac{R}{2L}$, $\\omega_0=\\frac{1}{\\sqrt{LC}}$ — в точности уравнение затухающего осциллятора из B2-L07. При $\\beta<\\omega_0$ — слабое затухание: $q=q_0e^{-\\beta t}\\cos\\left(\\omega't+\\varphi\\right)$, $\\omega'=\\sqrt{\\omega_0^2-\\beta^2}$. При $\\beta=\\omega_0$, то есть $R=2\\sqrt{\\frac{L}{C}}$, — критическое затухание (самое быстрое возвращение без колебаний); при $\\beta>\\omega_0$ — сильное затухание, заряд убывает медленно и без колебаний ([[F01]]).",
+  "en": "**Equation and regimes.** When a charged capacitor discharges through $R$ and $L$ in series: $L\\ddot q+R\\dot q+\\frac{q}{C}=0$, i.e. $\\ddot q+2\\beta\\dot q+\\omega_0^2q=0$ with $\\beta=\\frac{R}{2L}$, $\\omega_0=\\frac{1}{\\sqrt{LC}}$ — exactly the damped-oscillator equation of B2-L07. For $\\beta<\\omega_0$ the damping is light: $q=q_0e^{-\\beta t}\\cos\\left(\\omega't+\\varphi\\right)$, $\\omega'=\\sqrt{\\omega_0^2-\\beta^2}$. $\\beta=\\omega_0$, i.e. $R=2\\sqrt{\\frac{L}{C}}$, is critical damping (the fastest return without oscillation); for $\\beta>\\omega_0$ the damping is heavy and the charge decays slowly without oscillating ([[F01]])."
+ },
+ {
+  "t": "m",
+  "m": "\\ddot q+2\\beta\\dot q+\\omega_0^2q=0,\\qquad \\beta=\\frac{R}{2L},\\qquad \\omega'=\\sqrt{\\omega_0^2-\\beta^2},\\qquad Q=\\frac{\\omega_0L}{R}=\\frac{1}{R}\\sqrt{\\frac{L}{C}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Asllik va dekrement.** Energiya $W\\propto e^{-2\\beta t}=e^{-Rt/L}$ bo'yicha kamayadi. Asllik $Q=\\frac{\\omega_0}{2\\beta}=\\frac{\\omega_0L}{R}=\\frac{1}{R}\\sqrt{\\frac{L}{C}}$; ma'nosi: $Q=2\\pi\\frac{W}{\\Delta W}$, bu yerda $\\Delta W$ — bir davrdagi energiya yo'qotilishi. Logarifmik dekrement $\\delta=\\beta T=\\ln\\frac{q_n}{q_{n+1}}$, kuchsiz so'nishda $Q\\approx\\frac{\\pi}{\\delta}$; amplituda $e$ marta kamayguncha taxminan $\\frac{Q}{\\pi}$ tebranish o'tadi. Radiokonturlarda $Q\\sim10^2$, kvars rezonatorlarda $10^5$ dan ortiq.",
+  "ru": "**Добротность и декремент.** Энергия убывает как $W\\propto e^{-2\\beta t}=e^{-Rt/L}$. Добротность $Q=\\frac{\\omega_0}{2\\beta}=\\frac{\\omega_0L}{R}=\\frac{1}{R}\\sqrt{\\frac{L}{C}}$; смысл: $Q=2\\pi\\frac{W}{\\Delta W}$, где $\\Delta W$ — потеря энергии за период. Логарифмический декремент $\\delta=\\beta T=\\ln\\frac{q_n}{q_{n+1}}$, при слабом затухании $Q\\approx\\frac{\\pi}{\\delta}$; пока амплитуда уменьшится в $e$ раз, проходит около $\\frac{Q}{\\pi}$ колебаний. У радиоконтуров $Q\\sim10^2$, у кварцевых резонаторов — больше $10^5$.",
+  "en": "**Quality factor and decrement.** The energy decays as $W\\propto e^{-2\\beta t}=e^{-Rt/L}$. The quality factor is $Q=\\frac{\\omega_0}{2\\beta}=\\frac{\\omega_0L}{R}=\\frac{1}{R}\\sqrt{\\frac{L}{C}}$; its meaning: $Q=2\\pi\\frac{W}{\\Delta W}$, where $\\Delta W$ is the energy lost per period. The logarithmic decrement is $\\delta=\\beta T=\\ln\\frac{q_n}{q_{n+1}}$, and for light damping $Q\\approx\\frac{\\pi}{\\delta}$; about $\\frac{Q}{\\pi}$ oscillations pass while the amplitude falls by a factor of $e$. Radio circuits have $Q\\sim10^2$, quartz resonators more than $10^5$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L18-F01.png",
+   "ru": "figures/B2-L18-F01-ru.png",
+   "en": "figures/B2-L18-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. O'zgaruvchan tok va ta'sir etuvchi qiymatlar",
+  "ru": "2. Переменный ток и действующие значения",
+  "en": "2. Alternating current and rms values"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'sir etuvchi qiymat.** $i=I_0\\sin\\omega t$ tok rezistorda o'rtacha $\\langle i^2\\rangle R$ quvvat ajratadi. O'zgarmas tok xuddi shunday quvvat ajratadigan qiymat — ta'sir etuvchi (o'rtacha kvadratik) qiymat: $I=\\sqrt{\\langle i^2\\rangle}$. Sinusoida uchun $\\langle\\sin^2\\omega t\\rangle=\\frac{1}{2}$, shuning uchun $I=\\frac{I_0}{\\sqrt{2}}$, $U=\\frac{U_0}{\\sqrt{2}}$. Tarmoqdagi $220\\ \\mathrm{V}$ — ta'sir etuvchi qiymat, amplituda $311\\ \\mathrm{V}$. Ampermetr va voltmetrlar ta'sir etuvchi qiymatni ko'rsatadi ([[F02]]).",
+  "ru": "**Действующее значение.** Ток $i=I_0\\sin\\omega t$ выделяет в резисторе среднюю мощность $\\langle i^2\\rangle R$. Постоянный ток, выделяющий такую же мощность, — действующее (среднеквадратичное) значение: $I=\\sqrt{\\langle i^2\\rangle}$. Для синусоиды $\\langle\\sin^2\\omega t\\rangle=\\frac{1}{2}$, поэтому $I=\\frac{I_0}{\\sqrt{2}}$, $U=\\frac{U_0}{\\sqrt{2}}$. Сетевые $220\\ \\mathrm{V}$ — действующее значение, амплитуда $311\\ \\mathrm{V}$. Амперметры и вольтметры показывают действующие значения ([[F02]]).",
+  "en": "**The rms value.** A current $i=I_0\\sin\\omega t$ dissipates an average power $\\langle i^2\\rangle R$ in a resistor. The steady current that dissipates the same power is the rms (root-mean-square) value: $I=\\sqrt{\\langle i^2\\rangle}$. For a sinusoid $\\langle\\sin^2\\omega t\\rangle=\\frac{1}{2}$, so $I=\\frac{I_0}{\\sqrt{2}}$ and $U=\\frac{U_0}{\\sqrt{2}}$. The $220\\ \\mathrm{V}$ of the mains is an rms value; the amplitude is $311\\ \\mathrm{V}$. Ammeters and voltmeters read rms values ([[F02]])."
+ },
+ {
+  "t": "m",
+  "m": "I=\\sqrt{\\langle i^2\\rangle},\\qquad I=\\frac{I_0}{\\sqrt{2}},\\qquad U=\\frac{U_0}{\\sqrt{2}},\\qquad P=I^2R=\\frac{U^2}{R}"
+ },
+ {
+  "t": "li",
+  "uz": "**Boshqa shakllar.** Ta'sir etuvchi qiymat signal shakliga bog'liq: to'g'ri burchakli $\\pm U_0$ signal uchun $U=U_0$; arrasimon yoki uchburchak signal uchun $U=\\frac{U_0}{\\sqrt{3}}$; bir yarim davrli to'g'rilangan sinusoida uchun $U=\\frac{U_0}{2}$ (o'rtacha qiymati esa $\\frac{U_0}{\\pi}$). Sinusoidaning o'rtacha qiymati davr bo'yicha nol, yarim davr bo'yicha $\\frac{2U_0}{\\pi}$ — ta'sir etuvchi qiymat bilan adashtirmaslik kerak.",
+  "ru": "**Другие формы.** Действующее значение зависит от формы сигнала: для прямоугольного сигнала $\\pm U_0$ имеем $U=U_0$; для пилообразного или треугольного сигнала $U=\\frac{U_0}{\\sqrt{3}}$; для однополупериодно выпрямленной синусоиды $U=\\frac{U_0}{2}$ (а среднее значение $\\frac{U_0}{\\pi}$). Среднее значение синусоиды за период равно нулю, за полпериода — $\\frac{2U_0}{\\pi}$; его не следует путать с действующим.",
+  "en": "**Other waveforms.** The rms value depends on the waveform: for a square wave $\\pm U_0$, $U=U_0$; for a sawtooth or triangle wave, $U=\\frac{U_0}{\\sqrt{3}}$; for a half-wave rectified sinusoid, $U=\\frac{U_0}{2}$ (while its mean is $\\frac{U_0}{\\pi}$). The mean of a sinusoid over a period is zero and over half a period $\\frac{2U_0}{\\pi}$ — not to be confused with the rms value."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L18-F02.png",
+   "ru": "figures/B2-L18-F02-ru.png",
+   "en": "figures/B2-L18-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Rezistor, g'altak va kondensator o'zgaruvchan tok zanjirida",
+  "ru": "3. Резистор, катушка и конденсатор в цепи переменного тока",
+  "en": "3. Resistor, coil and capacitor in an AC circuit"
+ },
+ {
+  "t": "li",
+  "uz": "**Reaktiv qarshiliklar va fazalar.** Tok $i=I_0\\sin\\omega t$ bo'lsin. Rezistorda $u=RI_0\\sin\\omega t$ — fazalar bir xil. G'altakda $u=L\\frac{di}{dt}=\\omega LI_0\\cos\\omega t$: amplituda $X_LI_0$, $X_L=\\omega L$, kuchlanish tokdan $\\frac{\\pi}{2}$ oldinda. Kondensatorda $u=\\frac{q}{C}=-\\frac{I_0}{\\omega C}\\cos\\omega t$: $X_C=\\frac{1}{\\omega C}$, kuchlanish tokdan $\\frac{\\pi}{2}$ orqada. Eslab qolish uchun inglizcha «ELI the ICE man»: L da EYK ($E$) tokdan ($I$) oldin, C da tok oldin ([[F03]]).",
+  "ru": "**Реактивные сопротивления и фазы.** Пусть ток $i=I_0\\sin\\omega t$. На резисторе $u=RI_0\\sin\\omega t$ — фазы совпадают. На катушке $u=L\\frac{di}{dt}=\\omega LI_0\\cos\\omega t$: амплитуда $X_LI_0$, $X_L=\\omega L$, напряжение опережает ток на $\\frac{\\pi}{2}$. На конденсаторе $u=\\frac{q}{C}=-\\frac{I_0}{\\omega C}\\cos\\omega t$: $X_C=\\frac{1}{\\omega C}$, напряжение отстаёт от тока на $\\frac{\\pi}{2}$. Для запоминания — английское «ELI the ICE man»: в L ЭДС ($E$) впереди тока ($I$), в C впереди ток ([[F03]]).",
+  "en": "**Reactances and phases.** Let the current be $i=I_0\\sin\\omega t$. In a resistor $u=RI_0\\sin\\omega t$ — in phase. In a coil $u=L\\frac{di}{dt}=\\omega LI_0\\cos\\omega t$: amplitude $X_LI_0$ with $X_L=\\omega L$, and the voltage leads the current by $\\frac{\\pi}{2}$. In a capacitor $u=\\frac{q}{C}=-\\frac{I_0}{\\omega C}\\cos\\omega t$: $X_C=\\frac{1}{\\omega C}$, and the voltage lags the current by $\\frac{\\pi}{2}$. The mnemonic “ELI the ICE man”: in L the EMF ($E$) comes before the current ($I$); in C the current comes first ([[F03]])."
+ },
+ {
+  "t": "m",
+  "m": "X_L=\\omega L,\\qquad X_C=\\frac{1}{\\omega C},\\qquad U_L=IX_L,\\qquad U_C=IX_C"
+ },
+ {
+  "t": "li",
+  "uz": "**Chastotaga bog'liqlik va quvvat.** $X_L$ chastota bilan o'sadi: yuqori chastotada g'altak — uzilish, past chastotada — sim. $X_C$ chastota bilan kamayadi: o'zgarmas tokda kondensator — uzilish, yuqori chastotada — sim (RL va RC zanjirdagi $t=0^+$ va $t\\to\\infty$ chegaralarining chastota tilidagi aksi). Ideal $L$ va $C$ da tok va kuchlanish $\\frac{\\pi}{2}$ ga siljigan, shuning uchun o'rtacha quvvat nol: chorak davrda energiya maydonda yig'iladi, keyingi chorakda manbaga qaytadi.",
+  "ru": "**Зависимость от частоты и мощность.** $X_L$ растёт с частотой: на высокой частоте катушка — разрыв, на низкой — провод. $X_C$ убывает с частотой: для постоянного тока конденсатор — разрыв, на высокой частоте — провод (это отражение пределов $t=0^+$ и $t\\to\\infty$ для RL- и RC-цепей на языке частот). В идеальных $L$ и $C$ ток и напряжение сдвинуты на $\\frac{\\pi}{2}$, поэтому средняя мощность равна нулю: за четверть периода энергия накапливается в поле, за следующую возвращается в источник.",
+  "en": "**Frequency dependence and power.** $X_L$ grows with frequency: at high frequency a coil is a break, at low frequency a wire. $X_C$ falls with frequency: to DC a capacitor is a break, at high frequency a wire (the frequency-domain mirror of the $t=0^+$ and $t\\to\\infty$ limits of RL and RC circuits). In ideal $L$ and $C$ the current and voltage are $\\frac{\\pi}{2}$ apart, so the average power is zero: for a quarter period energy is stored in the field, and in the next quarter it returns to the source."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L18-F03.png",
+   "ru": "figures/B2-L18-F03-ru.png",
+   "en": "figures/B2-L18-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Kompleks impedans",
+  "ru": "4. Комплексный импеданс",
+  "en": "4. Complex impedance"
+ },
+ {
+  "t": "li",
+  "uz": "**Usul.** Garmonik kattaliklarni kompleks son sifatida yozamiz: $u=\\mathrm{Re}\\left(\\hat Ue^{i\\omega t}\\right)$, $\\frac{d}{dt}\\to i\\omega$. Shunda har bir element uchun $\\hat U=Z\\hat I$: $Z_R=R$, $Z_L=i\\omega L$, $Z_C=\\frac{1}{i\\omega C}=-\\frac{i}{\\omega C}$. Impedanslar rezistorlar kabi qo'shiladi: ketma-ket $Z=\\sum Z_k$, parallel $\\frac{1}{Z}=\\sum\\frac{1}{Z_k}$; Kirxgof qoidalari kompleks amplitudalar uchun o'zgarishsiz qo'llanadi. Natija: $\\left|Z\\right|=\\frac{U_0}{I_0}$, $\\arg Z=\\varphi$ — kuchlanishning tokdan oldinlash fazasi.",
+  "ru": "**Метод.** Гармонические величины записываем как комплексные числа: $u=\\mathrm{Re}\\left(\\hat Ue^{i\\omega t}\\right)$, $\\frac{d}{dt}\\to i\\omega$. Тогда для каждого элемента $\\hat U=Z\\hat I$: $Z_R=R$, $Z_L=i\\omega L$, $Z_C=\\frac{1}{i\\omega C}=-\\frac{i}{\\omega C}$. Импедансы складываются как сопротивления: последовательно $Z=\\sum Z_k$, параллельно $\\frac{1}{Z}=\\sum\\frac{1}{Z_k}$; правила Кирхгофа применяются к комплексным амплитудам без изменений. Итог: $\\left|Z\\right|=\\frac{U_0}{I_0}$, $\\arg Z=\\varphi$ — фаза, на которую напряжение опережает ток.",
+  "en": "**The method.** Write harmonic quantities as complex numbers: $u=\\mathrm{Re}\\left(\\hat Ue^{i\\omega t}\\right)$, $\\frac{d}{dt}\\to i\\omega$. Then for each element $\\hat U=Z\\hat I$: $Z_R=R$, $Z_L=i\\omega L$, $Z_C=\\frac{1}{i\\omega C}=-\\frac{i}{\\omega C}$. Impedances combine like resistances: in series $Z=\\sum Z_k$, in parallel $\\frac{1}{Z}=\\sum\\frac{1}{Z_k}$; Kirchhoff's rules apply to the complex amplitudes unchanged. The result: $\\left|Z\\right|=\\frac{U_0}{I_0}$ and $\\arg Z=\\varphi$ — the phase by which the voltage leads the current."
+ },
+ {
+  "t": "m",
+  "m": "Z_R=R,\\qquad Z_L=i\\omega L,\\qquad Z_C=\\frac{1}{i\\omega C},\\qquad \\hat U=Z\\hat I,\\qquad \\tan\\varphi=\\frac{\\mathrm{Im}\\,Z}{\\mathrm{Re}\\,Z}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol va vektor diagramma.** $R$ ga ketma-ket parallel $L$ va $C$ ulangan bo'lsin: $Z=R+\\frac{Z_LZ_C}{Z_L+Z_C}=R+\\frac{i\\omega L}{1-\\omega^2LC}$ — $\\omega<\\omega_0$ da induktiv, $\\omega>\\omega_0$ da sig'im xarakterida. Kompleks amplitudalarni tekislikdagi vektorlar (fazorlar) bilan tasvirlash — vektor diagramma: tok vektori gorizontal, $U_R$ unga parallel, $U_L$ yuqoriga, $U_C$ pastga; manba kuchlanishi ularning vektor yig'indisi. Shuning uchun ketma-ket zanjirda voltmetrlar ko'rsatkichlari algebraik qo'shilmaydi.",
+  "ru": "**Пример и векторная диаграмма.** Пусть к $R$ последовательно подключены параллельные $L$ и $C$: $Z=R+\\frac{Z_LZ_C}{Z_L+Z_C}=R+\\frac{i\\omega L}{1-\\omega^2LC}$ — при $\\omega<\\omega_0$ характер индуктивный, при $\\omega>\\omega_0$ — ёмкостный. Изображение комплексных амплитуд векторами на плоскости (фазорами) — векторная диаграмма: вектор тока горизонтален, $U_R$ параллелен ему, $U_L$ вверх, $U_C$ вниз; напряжение источника — их векторная сумма. Поэтому в последовательной цепи показания вольтметров алгебраически не складываются.",
+  "en": "**Example and phasor diagram.** Let parallel $L$ and $C$ be in series with $R$: $Z=R+\\frac{Z_LZ_C}{Z_L+Z_C}=R+\\frac{i\\omega L}{1-\\omega^2LC}$ — inductive for $\\omega<\\omega_0$, capacitive for $\\omega>\\omega_0$. Drawing the complex amplitudes as vectors in the plane (phasors) gives the phasor diagram: the current vector is horizontal, $U_R$ parallel to it, $U_L$ up and $U_C$ down; the source voltage is their vector sum. That is why voltmeter readings in a series circuit do not add algebraically."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Ketma-ket RLC zanjir va kuchlanishlar rezonansi",
+  "ru": "5. Последовательная RLC-цепь и резонанс напряжений",
+  "en": "5. The series RLC circuit and voltage resonance"
+ },
+ {
+  "t": "li",
+  "uz": "**Impedans.** Ketma-ket ulangan $R$, $L$, $C$ uchun $Z=R+i\\left(\\omega L-\\frac{1}{\\omega C}\\right)$: to'la qarshilik $\\left|Z\\right|=\\sqrt{R^2+\\left(X_L-X_C\\right)^2}$, faza siljishi $\\tan\\varphi=\\frac{X_L-X_C}{R}$, tok $I=\\frac{U}{\\left|Z\\right|}$. Vektor diagrammada $U_R$, $U_L-U_C$ va $U$ — to'g'ri burchakli uchburchak (qarshiliklar uchburchagi). $X_L>X_C$ da zanjir induktiv (kuchlanish oldinda), $X_L<X_C$ da sig'im xarakterida (tok oldinda) ([[F04]]).",
+  "ru": "**Импеданс.** Для последовательно соединённых $R$, $L$, $C$: $Z=R+i\\left(\\omega L-\\frac{1}{\\omega C}\\right)$; полное сопротивление $\\left|Z\\right|=\\sqrt{R^2+\\left(X_L-X_C\\right)^2}$, сдвиг фаз $\\tan\\varphi=\\frac{X_L-X_C}{R}$, ток $I=\\frac{U}{\\left|Z\\right|}$. На векторной диаграмме $U_R$, $U_L-U_C$ и $U$ образуют прямоугольный треугольник (треугольник сопротивлений). При $X_L>X_C$ цепь индуктивна (напряжение впереди), при $X_L<X_C$ — ёмкостна (впереди ток) ([[F04]]).",
+  "en": "**Impedance.** For $R$, $L$, $C$ in series: $Z=R+i\\left(\\omega L-\\frac{1}{\\omega C}\\right)$; the impedance magnitude is $\\left|Z\\right|=\\sqrt{R^2+\\left(X_L-X_C\\right)^2}$, the phase shift $\\tan\\varphi=\\frac{X_L-X_C}{R}$, and the current $I=\\frac{U}{\\left|Z\\right|}$. On the phasor diagram $U_R$, $U_L-U_C$ and $U$ form a right triangle (the impedance triangle). For $X_L>X_C$ the circuit is inductive (voltage leads); for $X_L<X_C$ it is capacitive (current leads) ([[F04]])."
+ },
+ {
+  "t": "m",
+  "m": "\\left|Z\\right|=\\sqrt{R^2+\\left(\\omega L-\\frac{1}{\\omega C}\\right)^2},\\qquad \\tan\\varphi=\\frac{X_L-X_C}{R},\\qquad I=\\frac{U}{\\left|Z\\right|}"
+ },
+ {
+  "t": "li",
+  "uz": "**Rezonans.** $\\omega_0=\\frac{1}{\\sqrt{LC}}$ da $X_L=X_C$: impedans eng kichik ($\\left|Z\\right|=R$), tok eng katta ($I=\\frac{U}{R}$) va kuchlanish bilan bir fazada. Shu paytda $U_L=U_C=IX_L=QU$ — g'altak va kondensatordagi kuchlanishlar manba kuchlanishidan $Q$ marta katta bo'lishi mumkin, lekin qarama-qarshi fazada bo'lib, bir-birini yo'qotadi: kuchlanishlar rezonansi. Radiopriyomnikdagi kontur shu tufayli kerakli stansiyani ajratib, uning signalini $Q$ marta kuchaytiradi.",
+  "ru": "**Резонанс.** При $\\omega_0=\\frac{1}{\\sqrt{LC}}$ имеем $X_L=X_C$: импеданс минимален ($\\left|Z\\right|=R$), ток максимален ($I=\\frac{U}{R}$) и совпадает по фазе с напряжением. При этом $U_L=U_C=IX_L=QU$ — напряжения на катушке и конденсаторе могут в $Q$ раз превышать напряжение источника, но они в противофазе и компенсируют друг друга: резонанс напряжений. Благодаря этому контур радиоприёмника выделяет нужную станцию и усиливает её сигнал в $Q$ раз.",
+  "en": "**Resonance.** At $\\omega_0=\\frac{1}{\\sqrt{LC}}$, $X_L=X_C$: the impedance is smallest ($\\left|Z\\right|=R$), the current is largest ($I=\\frac{U}{R}$) and in phase with the voltage. Then $U_L=U_C=IX_L=QU$ — the voltages across the coil and the capacitor can be $Q$ times the source voltage, but they are in antiphase and cancel: voltage resonance. This is how the tuned circuit of a radio picks out one station and boosts its signal $Q$ times."
+ },
+ {
+  "t": "li",
+  "uz": "**Kondensatordagi kuchlanish maksimumi.** Tok aynan $\\omega_0$ da eng katta, lekin $U_C=\\frac{I}{\\omega C}$ ning maksimumi biroz pastroqda, $\\omega=\\omega_0\\sqrt{1-\\frac{1}{2Q^2}}$ da; $U_L$ niki esa biroz yuqoriroqda. Katta $Q$ da farq sezilmaydi. Mexanikadagi kabi: tezlik (tok) rezonansi aniq $\\omega_0$ da, siljish (zaryad) rezonansi esa pastroq chastotada (B2-L07).",
+  "ru": "**Максимум напряжения на конденсаторе.** Ток максимален ровно при $\\omega_0$, но максимум $U_C=\\frac{I}{\\omega C}$ лежит чуть ниже, при $\\omega=\\omega_0\\sqrt{1-\\frac{1}{2Q^2}}$, а максимум $U_L$ — чуть выше. При большом $Q$ разница незаметна. Как в механике: резонанс скорости (тока) — ровно при $\\omega_0$, а резонанс смещения (заряда) — на более низкой частоте (B2-L07).",
+  "en": "**Maximum of the capacitor voltage.** The current peaks exactly at $\\omega_0$, but $U_C=\\frac{I}{\\omega C}$ peaks slightly lower, at $\\omega=\\omega_0\\sqrt{1-\\frac{1}{2Q^2}}$, and $U_L$ slightly higher. For large $Q$ the difference is negligible. As in mechanics: velocity (current) resonance is exactly at $\\omega_0$, while displacement (charge) resonance is at a lower frequency (B2-L07)."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L18-F04.png",
+   "ru": "figures/B2-L18-F04-ru.png",
+   "en": "figures/B2-L18-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Rezonans egri chizig'i va o'tkazish kengligi",
+  "ru": "6. Резонансная кривая и ширина полосы",
+  "en": "6. The resonance curve and the bandwidth"
+ },
+ {
+  "t": "li",
+  "uz": "**Egri chiziq.** $I(\\omega)=\\frac{U}{\\sqrt{R^2+\\left(\\omega L-\\frac{1}{\\omega C}\\right)^2}}$ — $\\omega_0$ da cho'qqi. Ajraladigan quvvat $P=I^2R$ eng kattasining yarmiga teng bo'ladigan chastotalarda $\\left|X_L-X_C\\right|=R$; ulardan $\\omega_\\pm=\\sqrt{\\omega_0^2+\\beta^2}\\pm\\beta$, $\\omega_+\\omega_-=\\omega_0^2$ va o'tkazish kengligi $\\Delta\\omega=\\omega_+-\\omega_-=\\frac{R}{L}=2\\beta$. Demak, $Q=\\frac{\\omega_0}{\\Delta\\omega}$ — asllik qancha katta bo'lsa, cho'qqi shuncha tor va baland ([[F05]]).",
+  "ru": "**Кривая.** $I(\\omega)=\\frac{U}{\\sqrt{R^2+\\left(\\omega L-\\frac{1}{\\omega C}\\right)^2}}$ — пик при $\\omega_0$. На частотах, где выделяемая мощность $P=I^2R$ равна половине максимальной, $\\left|X_L-X_C\\right|=R$; отсюда $\\omega_\\pm=\\sqrt{\\omega_0^2+\\beta^2}\\pm\\beta$, $\\omega_+\\omega_-=\\omega_0^2$, а ширина полосы $\\Delta\\omega=\\omega_+-\\omega_-=\\frac{R}{L}=2\\beta$. Значит, $Q=\\frac{\\omega_0}{\\Delta\\omega}$ — чем больше добротность, тем уже и выше пик ([[F05]]).",
+  "en": "**The curve.** $I(\\omega)=\\frac{U}{\\sqrt{R^2+\\left(\\omega L-\\frac{1}{\\omega C}\\right)^2}}$ peaks at $\\omega_0$. At the frequencies where the dissipated power $P=I^2R$ is half its maximum, $\\left|X_L-X_C\\right|=R$; this gives $\\omega_\\pm=\\sqrt{\\omega_0^2+\\beta^2}\\pm\\beta$, $\\omega_+\\omega_-=\\omega_0^2$, and the bandwidth $\\Delta\\omega=\\omega_+-\\omega_-=\\frac{R}{L}=2\\beta$. So $Q=\\frac{\\omega_0}{\\Delta\\omega}$ — the higher the quality factor, the narrower and taller the peak ([[F05]])."
+ },
+ {
+  "t": "m",
+  "m": "\\Delta\\omega=\\frac{R}{L},\\qquad Q=\\frac{\\omega_0}{\\Delta\\omega},\\qquad \\omega_+\\omega_-=\\omega_0^2,\\qquad P(\\omega_\\pm)=\\frac{P_{\\max}}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Uch xil $Q$ — bitta son.** Asllikning uchta ta'rifi kuchsiz so'nishda bir xil natija beradi: 1) erkin tebranishlarda $Q=2\\pi\\frac{W}{\\Delta W}$; 2) rezonans egri chizig'ining nisbiy kengligi $Q=\\frac{\\omega_0}{\\Delta\\omega}$; 3) rezonansdagi kuchlanish kuchayishi $Q=\\frac{U_C}{U}$. Rezonans atrofida faza $\\varphi$ $-\\frac{\\pi}{2}$ dan $+\\frac{\\pi}{2}$ gacha o'zgaradi va $\\omega_\\pm$ da $\\pm\\frac{\\pi}{4}$ ga teng.",
+  "ru": "**Три $Q$ — одно число.** Три определения добротности при слабом затухании дают один результат: 1) для свободных колебаний $Q=2\\pi\\frac{W}{\\Delta W}$; 2) относительная ширина резонансной кривой $Q=\\frac{\\omega_0}{\\Delta\\omega}$; 3) усиление напряжения при резонансе $Q=\\frac{U_C}{U}$. Вблизи резонанса фаза $\\varphi$ меняется от $-\\frac{\\pi}{2}$ до $+\\frac{\\pi}{2}$ и на $\\omega_\\pm$ равна $\\pm\\frac{\\pi}{4}$.",
+  "en": "**Three $Q$s — one number.** For light damping the three definitions of the quality factor agree: 1) for free oscillations $Q=2\\pi\\frac{W}{\\Delta W}$; 2) the relative width of the resonance curve $Q=\\frac{\\omega_0}{\\Delta\\omega}$; 3) the voltage gain at resonance $Q=\\frac{U_C}{U}$. Around resonance the phase $\\varphi$ goes from $-\\frac{\\pi}{2}$ to $+\\frac{\\pi}{2}$ and equals $\\pm\\frac{\\pi}{4}$ at $\\omega_\\pm$."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L18-F05.png",
+   "ru": "figures/B2-L18-F05-ru.png",
+   "en": "figures/B2-L18-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Quvvat va quvvat koeffitsiyenti",
+  "ru": "7. Мощность и коэффициент мощности",
+  "en": "7. Power and the power factor"
+ },
+ {
+  "t": "li",
+  "uz": "**Aktiv quvvat.** $u=U_0\\sin\\omega t$, $i=I_0\\sin\\left(\\omega t-\\varphi\\right)$ bo'lsa, oniy quvvat $p=ui$ ning davr bo'yicha o'rtachasi $P=\\frac{U_0I_0}{2}\\cos\\varphi=UI\\cos\\varphi$; $\\cos\\varphi=\\frac{R}{\\left|Z\\right|}$ — quvvat koeffitsiyenti. Energiya faqat rezistorda yutiladi: $P=I^2R$. $UI$ — to'la quvvat (voltamperlarda), $UI\\sin\\varphi$ — reaktiv quvvat: manba va maydon orasida «borib-keladigan» energiya ([[F06]]).",
+  "ru": "**Активная мощность.** Если $u=U_0\\sin\\omega t$, $i=I_0\\sin\\left(\\omega t-\\varphi\\right)$, то среднее за период мгновенной мощности $p=ui$ равно $P=\\frac{U_0I_0}{2}\\cos\\varphi=UI\\cos\\varphi$; $\\cos\\varphi=\\frac{R}{\\left|Z\\right|}$ — коэффициент мощности. Энергия поглощается только в резисторе: $P=I^2R$. $UI$ — полная мощность (в вольт-амперах), $UI\\sin\\varphi$ — реактивная мощность: энергия, «качающаяся» между источником и полем ([[F06]]).",
+  "en": "**Average power.** If $u=U_0\\sin\\omega t$ and $i=I_0\\sin\\left(\\omega t-\\varphi\\right)$, the period average of the instantaneous power $p=ui$ is $P=\\frac{U_0I_0}{2}\\cos\\varphi=UI\\cos\\varphi$; $\\cos\\varphi=\\frac{R}{\\left|Z\\right|}$ is the power factor. Energy is absorbed only in the resistor: $P=I^2R$. $UI$ is the apparent power (in volt-amperes) and $UI\\sin\\varphi$ the reactive power — energy “sloshing” between the source and the field ([[F06]])."
+ },
+ {
+  "t": "m",
+  "m": "P=UI\\cos\\varphi=I^2R,\\qquad \\cos\\varphi=\\frac{R}{\\left|Z\\right|},\\qquad C=\\frac{P\\tan\\varphi}{\\omega U^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Koeffitsiyentni oshirish.** Elektr dvigatellar induktiv yuk: $\\cos\\varphi<1$ bo'lsa, bir xil foydali quvvat uchun katta tok kerak va simlarda isrof $I^2r$ ortadi. Yukka parallel kondensator ulab reaktiv tok kompensatsiya qilinadi: $\\cos\\varphi=1$ uchun kondensator reaktiv quvvati yukniki bilan teng bo'lishi kerak, $\\omega CU^2=P\\tan\\varphi$, ya'ni $C=\\frac{P\\tan\\varphi}{\\omega U^2}$. Aktiv quvvat o'zgarmaydi, manbadan olinadigan tok esa $\\cos\\varphi$ marta kamayadi.",
+  "ru": "**Повышение коэффициента мощности.** Электродвигатели — индуктивная нагрузка: при $\\cos\\varphi<1$ для той же полезной мощности нужен больший ток, и потери в проводах $I^2r$ растут. Конденсатор, подключённый параллельно нагрузке, компенсирует реактивный ток: для $\\cos\\varphi=1$ реактивная мощность конденсатора должна быть равна реактивной мощности нагрузки, $\\omega CU^2=P\\tan\\varphi$, то есть $C=\\frac{P\\tan\\varphi}{\\omega U^2}$. Активная мощность не меняется, а ток от источника уменьшается в $\\cos\\varphi$ раз.",
+  "en": "**Power-factor correction.** Electric motors are inductive loads: with $\\cos\\varphi<1$ the same useful power needs a larger current, and the line loss $I^2r$ grows. A capacitor placed in parallel with the load cancels the reactive current: for $\\cos\\varphi=1$ the capacitor's reactive power must equal the load's, $\\omega CU^2=P\\tan\\varphi$, i.e. $C=\\frac{P\\tan\\varphi}{\\omega U^2}$. The average power is unchanged, while the current drawn from the source drops by the factor $\\cos\\varphi$."
+ },
+ {
+  "t": "li",
+  "uz": "**Kompleks yukni moslash.** Ichki impedansi $Z_0=R_0+iX_0$ bo'lgan manbadan yukka eng katta quvvat $Z=R_0-iX_0$ bo'lganda, ya'ni yuk impedansi manbanikiga kompleks qo'shma bo'lganda uzatiladi: reaktiv qismlar bir-birini yo'qotadi va $P_{\\max}=\\frac{U^2}{4R_0}$ (B2-L15 dagi $R=r$ shartining umumlashmasi). Qarshiligi o'zgarmas, faqat reaktivligi tanlanadigan yuk uchun esa $X=-X_0$ yetarli.",
+  "ru": "**Согласование комплексной нагрузки.** От источника с внутренним импедансом $Z_0=R_0+iX_0$ наибольшая мощность передаётся в нагрузку при $Z=R_0-iX_0$, то есть когда импеданс нагрузки комплексно сопряжён импедансу источника: реактивные части компенсируются, и $P_{\\max}=\\frac{U^2}{4R_0}$ (обобщение условия $R=r$ из B2-L15). Если же сопротивление нагрузки фиксировано, а выбирается только реактивность, достаточно $X=-X_0$.",
+  "en": "**Matching a complex load.** From a source with internal impedance $Z_0=R_0+iX_0$, the largest power reaches the load when $Z=R_0-iX_0$, i.e. when the load impedance is the complex conjugate of the source's: the reactive parts cancel and $P_{\\max}=\\frac{U^2}{4R_0}$ (the generalisation of the $R=r$ condition of B2-L15). If the load resistance is fixed and only its reactance can be chosen, $X=-X_0$ is enough."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L18-F06.png",
+   "ru": "figures/B2-L18-F06-ru.png",
+   "en": "figures/B2-L18-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Parallel kontur va toklar rezonansi",
+  "ru": "8. Параллельный контур и резонанс токов",
+  "en": "8. The parallel circuit and current resonance"
+ },
+ {
+  "t": "li",
+  "uz": "**Ideal parallel LC.** $\\frac{1}{Z}=\\frac{1}{i\\omega L}+i\\omega C=i\\frac{\\omega^2LC-1}{\\omega L}$: $\\omega_0$ da $\\frac{1}{Z}=0$, ya'ni impedans cheksiz — manbadan tok olinmaydi, lekin konturning o'zida katta tok aylanib yuradi ($I_L=I_C=\\frac{U}{X_L}$, qarama-qarshi fazada): toklar rezonansi. Ketma-ket konturning aksi: u rezonansda signalni o'tkazadi, parallel kontur esa to'sadi (filtr-tiqin).",
+  "ru": "**Идеальный параллельный LC.** $\\frac{1}{Z}=\\frac{1}{i\\omega L}+i\\omega C=i\\frac{\\omega^2LC-1}{\\omega L}$: при $\\omega_0$ имеем $\\frac{1}{Z}=0$, то есть импеданс бесконечен — ток от источника не потребляется, но в самом контуре циркулирует большой ток ($I_L=I_C=\\frac{U}{X_L}$, в противофазе): резонанс токов. Это противоположность последовательному контуру: тот на резонансе пропускает сигнал, а параллельный — задерживает (фильтр-пробка).",
+  "en": "**The ideal parallel LC.** $\\frac{1}{Z}=\\frac{1}{i\\omega L}+i\\omega C=i\\frac{\\omega^2LC-1}{\\omega L}$: at $\\omega_0$, $\\frac{1}{Z}=0$, so the impedance is infinite — no current is drawn from the source, yet a large current circulates in the circuit itself ($I_L=I_C=\\frac{U}{X_L}$, in antiphase): current resonance. It is the opposite of the series circuit: the series circuit passes the signal at resonance, the parallel one blocks it (a trap filter)."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{1}{Z}=\\frac{1}{R}+\\frac{1}{i\\omega L}+i\\omega C,\\qquad Z(\\omega_0)=R,\\qquad Z\\approx\\frac{L}{rC},\\qquad \\omega^2=\\frac{1}{LC}-\\frac{r^2}{L^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Real kontur.** Parallel $R$, $L$, $C$ da rezonansda $Z=R$ (maksimal), asllik $Q=R\\sqrt{\\frac{C}{L}}$ — ketma-ket zanjirdagining teskarisi: parallel qarshilik qancha katta bo'lsa, $Q$ shuncha katta. Agar g'altakning o'z qarshiligi $r$ bo'lsa, rezonans chastotasi $\\omega^2=\\frac{1}{LC}-\\frac{r^2}{L^2}$ ga biroz siljiydi, rezonansdagi impedans $Z\\approx\\frac{L}{rC}$ — kichik $r$ da juda katta.",
+  "ru": "**Реальный контур.** У параллельных $R$, $L$, $C$ на резонансе $Z=R$ (максимум), добротность $Q=R\\sqrt{\\frac{C}{L}}$ — обратно последовательной цепи: чем больше параллельное сопротивление, тем больше $Q$. Если у катушки есть собственное сопротивление $r$, резонансная частота немного сдвигается к $\\omega^2=\\frac{1}{LC}-\\frac{r^2}{L^2}$, а импеданс на резонансе $Z\\approx\\frac{L}{rC}$ — очень велик при малом $r$.",
+  "en": "**A real circuit.** For parallel $R$, $L$, $C$ at resonance $Z=R$ (a maximum), and the quality factor is $Q=R\\sqrt{\\frac{C}{L}}$ — the inverse of the series case: the larger the parallel resistance, the larger $Q$. If the coil has its own resistance $r$, the resonant frequency shifts slightly to $\\omega^2=\\frac{1}{LC}-\\frac{r^2}{L^2}$, and the impedance at resonance is $Z\\approx\\frac{L}{rC}$ — very large for small $r$."
+ },
+ {
+  "t": "h2",
+  "uz": "9. RC va RL filtrlar",
+  "ru": "9. RC- и RL-фильтры",
+  "en": "9. RC and RL filters"
+ },
+ {
+  "t": "li",
+  "uz": "**Past chastotalar filtri.** Kirish kuchlanishi ketma-ket $R$ va $C$ ga beriladi, chiqish kondensatordan olinadi: uzatish koeffitsiyenti $H=\\frac{Z_C}{R+Z_C}=\\frac{1}{1+i\\omega RC}$, $\\left|H\\right|=\\frac{1}{\\sqrt{1+\\left(\\omega RC\\right)^2}}$. Past chastotada $\\left|H\\right|\\to1$, yuqorida $\\left|H\\right|\\approx\\frac{1}{\\omega RC}$ — chastota $10$ marta ortsa, signal $10$ marta ($20\\ \\mathrm{dB}$) kamayadi. Chegaraviy chastota $\\omega_1=\\frac{1}{RC}$ da $\\left|H\\right|=\\frac{1}{\\sqrt{2}}$ (quvvat yarmi, $-3\\ \\mathrm{dB}$) va faza $-\\frac{\\pi}{4}$ ([[F07]]).",
+  "ru": "**Фильтр нижних частот.** Входное напряжение подаётся на последовательные $R$ и $C$, выход снимается с конденсатора: коэффициент передачи $H=\\frac{Z_C}{R+Z_C}=\\frac{1}{1+i\\omega RC}$, $\\left|H\\right|=\\frac{1}{\\sqrt{1+\\left(\\omega RC\\right)^2}}$. На низких частотах $\\left|H\\right|\\to1$, на высоких $\\left|H\\right|\\approx\\frac{1}{\\omega RC}$ — при увеличении частоты в $10$ раз сигнал ослабевает в $10$ раз ($20\\ \\mathrm{dB}$). На граничной частоте $\\omega_1=\\frac{1}{RC}$ имеем $\\left|H\\right|=\\frac{1}{\\sqrt{2}}$ (половина мощности, $-3\\ \\mathrm{dB}$) и фазу $-\\frac{\\pi}{4}$ ([[F07]]).",
+  "en": "**Low-pass filter.** The input voltage is applied to $R$ and $C$ in series and the output is taken across the capacitor: the transfer function is $H=\\frac{Z_C}{R+Z_C}=\\frac{1}{1+i\\omega RC}$, $\\left|H\\right|=\\frac{1}{\\sqrt{1+\\left(\\omega RC\\right)^2}}$. At low frequency $\\left|H\\right|\\to1$; at high frequency $\\left|H\\right|\\approx\\frac{1}{\\omega RC}$ — when the frequency is increased by a factor of $10$, the signal drops by a factor of $10$ ($20\\ \\mathrm{dB}$). At the corner frequency $\\omega_1=\\frac{1}{RC}$, $\\left|H\\right|=\\frac{1}{\\sqrt{2}}$ (half power, $-3\\ \\mathrm{dB}$) and the phase is $-\\frac{\\pi}{4}$ ([[F07]])."
+ },
+ {
+  "t": "m",
+  "m": "\\left|H\\right|=\\frac{1}{\\sqrt{1+\\left(\\omega RC\\right)^2}},\\qquad \\left|H\\right|=\\frac{\\omega RC}{\\sqrt{1+\\left(\\omega RC\\right)^2}},\\qquad \\omega_1=\\frac{1}{RC},\\qquad \\omega_1=\\frac{R}{L}"
+ },
+ {
+  "t": "li",
+  "uz": "**Yuqori chastotalar filtri va RL.** Chiqish rezistordan olinsa: $\\left|H\\right|=\\frac{\\omega RC}{\\sqrt{1+\\left(\\omega RC\\right)^2}}$ — o'zgarmas tok va past chastotalar to'siladi (kondensator signal yo'lida «to'siq»). RL zanjirda g'altak kondensatorning aksi: chiqish rezistordan olinsa — past chastotalar filtri, g'altakdan olinsa — yuqori chastotalar filtri, $\\omega_1=\\frac{R}{L}$. Ketma-ket RLC dan rezistordagi kuchlanish olinsa — $\\omega_0$ atrofida $\\Delta\\omega$ kenglikdagi polosani o'tkazuvchi filtr.",
+  "ru": "**Фильтр верхних частот и RL.** Если выход снимается с резистора: $\\left|H\\right|=\\frac{\\omega RC}{\\sqrt{1+\\left(\\omega RC\\right)^2}}$ — постоянный ток и низкие частоты задерживаются (конденсатор — «барьер» на пути сигнала). В RL-цепи катушка ведёт себя противоположно конденсатору: выход с резистора — фильтр нижних частот, с катушки — фильтр верхних частот, $\\omega_1=\\frac{R}{L}$. Напряжение на резисторе последовательной RLC-цепи даёт полосовой фильтр шириной $\\Delta\\omega$ около $\\omega_0$.",
+  "en": "**High-pass filter and RL.** If the output is taken across the resistor: $\\left|H\\right|=\\frac{\\omega RC}{\\sqrt{1+\\left(\\omega RC\\right)^2}}$ — DC and low frequencies are blocked (the capacitor is a “barrier” in the signal path). In an RL circuit the coil behaves opposite to the capacitor: output across the resistor gives a low-pass filter, across the coil a high-pass filter, with $\\omega_1=\\frac{R}{L}$. The resistor voltage of a series RLC circuit gives a band-pass filter of width $\\Delta\\omega$ around $\\omega_0$."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L18-F07.png",
+   "ru": "figures/B2-L18-F07-ru.png",
+   "en": "figures/B2-L18-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Transformator va energiya uzatish",
+  "ru": "10. Трансформатор и передача энергии",
+  "en": "10. The transformer and power transmission"
+ },
+ {
+  "t": "li",
+  "uz": "**Ideal transformator.** Umumiy o'zakdagi ikki chulg'amni bir xil oqim kesib o'tadi ($k=1$), shuning uchun har bir o'ramdagi EYK bir xil: $\\frac{U_2}{U_1}=\\frac{N_2}{N_1}$. Isrofsiz transformatorda quvvat saqlanadi: $U_1I_1=U_2I_2$, demak $\\frac{I_2}{I_1}=\\frac{N_1}{N_2}$. Ikkilamchi tomondagi $Z$ yuk birlamchi tomondan $Z'=\\left(\\frac{N_1}{N_2}\\right)^2Z$ bo'lib ko'rinadi — impedansni moslash (masalan, $8\\ \\Omega$ karnayni kuchaytirgichga ulash). Transformator faqat o'zgaruvchan tokda ishlaydi: o'zgarmas tokda oqim o'zgarmaydi ([[F08]]).",
+  "ru": "**Идеальный трансформатор.** Обе обмотки на общем сердечнике пронизывает один и тот же поток ($k=1$), поэтому ЭДС на виток одинакова: $\\frac{U_2}{U_1}=\\frac{N_2}{N_1}$. В трансформаторе без потерь мощность сохраняется: $U_1I_1=U_2I_2$, значит $\\frac{I_2}{I_1}=\\frac{N_1}{N_2}$. Нагрузка $Z$ во вторичной цепи видна со стороны первичной как $Z'=\\left(\\frac{N_1}{N_2}\\right)^2Z$ — согласование импедансов (например, подключение громкоговорителя $8\\ \\Omega$ к усилителю). Трансформатор работает только на переменном токе: при постоянном токе поток не меняется ([[F08]]).",
+  "en": "**The ideal transformer.** Both windings on a common core are threaded by the same flux ($k=1$), so the EMF per turn is the same: $\\frac{U_2}{U_1}=\\frac{N_2}{N_1}$. In a lossless transformer power is conserved: $U_1I_1=U_2I_2$, so $\\frac{I_2}{I_1}=\\frac{N_1}{N_2}$. A load $Z$ on the secondary appears on the primary side as $Z'=\\left(\\frac{N_1}{N_2}\\right)^2Z$ — impedance matching (for example, connecting an $8\\ \\Omega$ loudspeaker to an amplifier). A transformer works only with AC: with DC the flux does not change ([[F08]])."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{U_2}{U_1}=\\frac{N_2}{N_1},\\qquad \\frac{I_2}{I_1}=\\frac{N_1}{N_2},\\qquad Z'=\\left(\\frac{N_1}{N_2}\\right)^2Z,\\qquad P'=\\frac{P^2r}{U^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Uzoq masofaga uzatish.** $P$ quvvat qarshiligi $r$ bo'lgan liniya orqali $U$ kuchlanishda uzatilsa, tok $I=\\frac{P}{U}$ va isrof $P'=I^2r=\\frac{P^2r}{U^2}$. Kuchlanish $10$ marta oshirilsa, isrof $100$ marta kamayadi — shuning uchun elektr energiyasi yuzlab kilovoltlarda uzatiladi va iste'molchiga yaqin pasaytiruvchi transformatorlar bilan $220\\ \\mathrm{V}$ gacha tushiriladi. Real transformatorlarda isrof — chulg'amlardagi Joul issiqligi, uyurmali toklar va gisterezis; FIK $95$–$99$ foiz.",
+  "ru": "**Передача на большие расстояния.** Если мощность $P$ передаётся по линии сопротивлением $r$ при напряжении $U$, ток $I=\\frac{P}{U}$, а потери $P'=I^2r=\\frac{P^2r}{U^2}$. При повышении напряжения в $10$ раз потери уменьшаются в $100$ раз — поэтому электроэнергию передают при сотнях киловольт и понижают до $220\\ \\mathrm{V}$ понижающими трансформаторами вблизи потребителя. Потери в реальных трансформаторах — джоулево тепло в обмотках, вихревые токи и гистерезис; КПД $95$–$99$ процентов.",
+  "en": "**Long-distance transmission.** If power $P$ is sent through a line of resistance $r$ at voltage $U$, the current is $I=\\frac{P}{U}$ and the loss $P'=I^2r=\\frac{P^2r}{U^2}$. Raising the voltage by a factor of $10$ cuts the loss by a factor of $100$ — which is why electric power is transmitted at hundreds of kilovolts and stepped down to $220\\ \\mathrm{V}$ by step-down transformers near the consumer. Losses in real transformers come from Joule heating in the windings, eddy currents and hysteresis; the efficiency is $95$–$99$ percent."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L18-F08.png",
+   "ru": "figures/B2-L18-F08-ru.png",
+   "en": "figures/B2-L18-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "11. GRE uchun usullar va tipik xatolar",
+  "ru": "11. Методы для GRE и типичные ошибки",
+  "en": "11. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**1-usul — chegaralar.** Javobni $\\omega\\to0$ va $\\omega\\to\\infty$ da tekshiring: $C$ — mos ravishda uzilish va sim, $L$ — sim va uzilish. Masalan, past chastotalar filtrini $\\omega\\to0$ da $\\left|H\\right|=1$ va $\\omega\\to\\infty$ da $0$ bo'lishidan darhol taniymiz. Rezonansda ketma-ket zanjir faqat $R$ ga aylanadi, ideal parallel kontur esa uzilishga.",
+  "ru": "**Метод 1 — пределы.** Проверяйте ответ при $\\omega\\to0$ и $\\omega\\to\\infty$: $C$ — соответственно разрыв и провод, $L$ — провод и разрыв. Например, фильтр нижних частот сразу узнаётся по $\\left|H\\right|=1$ при $\\omega\\to0$ и $0$ при $\\omega\\to\\infty$. На резонансе последовательная цепь сводится к одному $R$, а идеальный параллельный контур — к разрыву.",
+  "en": "**Method 1 — limits.** Check the answer at $\\omega\\to0$ and $\\omega\\to\\infty$: $C$ is a break and a wire respectively, $L$ a wire and a break. For example, a low-pass filter is recognised at once by $\\left|H\\right|=1$ as $\\omega\\to0$ and $0$ as $\\omega\\to\\infty$. At resonance a series circuit reduces to $R$ alone, and an ideal parallel circuit to a break."
+ },
+ {
+  "t": "li",
+  "uz": "**2-usul — o'lchamlar va proporsiyalar.** $\\sqrt{\\frac{L}{C}}$ — Om, $\\frac{L}{R}$ va $RC$ — sekund, $\\frac{1}{\\sqrt{LC}}$ — $\\mathrm{s^{-1}}$. $\\omega_0\\propto\\frac{1}{\\sqrt{LC}}$, $Q\\propto\\frac{1}{R}$ (ketma-ket), $\\Delta\\omega=\\frac{R}{L}$, $X_L\\propto\\omega$, $X_C\\propto\\frac{1}{\\omega}$. $f$ va $\\omega$ ni adashtirmang: $\\omega=2\\pi f$; $50\\ \\mathrm{Hz}$ da $\\omega\\approx314\\ \\mathrm{rad/s}$.",
+  "ru": "**Метод 2 — размерности и пропорции.** $\\sqrt{\\frac{L}{C}}$ — Омы, $\\frac{L}{R}$ и $RC$ — секунды, $\\frac{1}{\\sqrt{LC}}$ — $\\mathrm{s^{-1}}$. $\\omega_0\\propto\\frac{1}{\\sqrt{LC}}$, $Q\\propto\\frac{1}{R}$ (последовательно), $\\Delta\\omega=\\frac{R}{L}$, $X_L\\propto\\omega$, $X_C\\propto\\frac{1}{\\omega}$. Не путайте $f$ и $\\omega$: $\\omega=2\\pi f$; при $50\\ \\mathrm{Hz}$ имеем $\\omega\\approx314\\ \\mathrm{rad/s}$.",
+  "en": "**Method 2 — dimensions and proportions.** $\\sqrt{\\frac{L}{C}}$ is in ohms, $\\frac{L}{R}$ and $RC$ in seconds, $\\frac{1}{\\sqrt{LC}}$ in $\\mathrm{s^{-1}}$. $\\omega_0\\propto\\frac{1}{\\sqrt{LC}}$, $Q\\propto\\frac{1}{R}$ (series), $\\Delta\\omega=\\frac{R}{L}$, $X_L\\propto\\omega$, $X_C\\propto\\frac{1}{\\omega}$. Do not mix up $f$ and $\\omega$: $\\omega=2\\pi f$; at $50\\ \\mathrm{Hz}$, $\\omega\\approx314\\ \\mathrm{rad/s}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) Kuchlanishlarni algebraik qo'shish ($U\\ne U_R+U_L+U_C$, vektor yig'indi). 2) Amplituda va ta'sir etuvchi qiymatni adashtirish ($\\sqrt{2}$). 3) $P=UI$ yozish ($\\cos\\varphi$ unutiladi). 4) Kondensatorda kuchlanish oldinda deb o'ylash (tok oldinda). 5) Rezonansda $U_C\\le U$ deb o'ylash ($U_C=QU$). 6) Parallel konturda rezonansdagi impedansni nol deb olish (cheksiz). 7) Transformatorda tok ham o'ramlar nisbatida ortadi deb hisoblash (teskari).",
+  "ru": "**Типичные ошибки.** 1) Складывать напряжения алгебраически ($U\\ne U_R+U_L+U_C$, сумма векторная). 2) Путать амплитуду и действующее значение ($\\sqrt{2}$). 3) Писать $P=UI$ (забыт $\\cos\\varphi$). 4) Думать, что на конденсаторе впереди напряжение (впереди ток). 5) Считать, что на резонансе $U_C\\le U$ ($U_C=QU$). 6) Принимать импеданс параллельного контура на резонансе равным нулю (он бесконечен). 7) Считать, что в трансформаторе ток растёт пропорционально числу витков (обратно).",
+  "en": "**Typical mistakes.** 1) Adding voltages algebraically ($U\\ne U_R+U_L+U_C$; the sum is vectorial). 2) Confusing amplitude and rms value ($\\sqrt{2}$). 3) Writing $P=UI$ (forgetting $\\cos\\varphi$). 4) Thinking the voltage leads in a capacitor (the current leads). 5) Assuming $U_C\\le U$ at resonance ($U_C=QU$). 6) Taking the impedance of a parallel circuit at resonance as zero (it is infinite). 7) Thinking the current in a transformer scales with the turns ratio (it scales inversely)."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "So'nuvchi RLC",
+    "ru": "Затухающая RLC",
+    "en": "Damped RLC",
+    "m": "\\beta=\\frac{R}{2L},\\quad \\omega'=\\sqrt{\\omega_0^2-\\beta^2}"
+   },
+   {
+    "uz": "Kritik qarshilik",
+    "ru": "Критическое сопротивление",
+    "en": "Critical resistance",
+    "m": "R=2\\sqrt{\\frac{L}{C}}"
+   },
+   {
+    "uz": "Asllik",
+    "ru": "Добротность",
+    "en": "Quality factor",
+    "m": "Q=\\frac{\\omega_0L}{R}=2\\pi\\frac{W}{\\Delta W}\\approx\\frac{\\pi}{\\delta}"
+   },
+   {
+    "uz": "Ta'sir etuvchi qiymat",
+    "ru": "Действующее значение",
+    "en": "rms value",
+    "m": "I=\\frac{I_0}{\\sqrt{2}},\\quad U=\\frac{U_0}{\\sqrt{2}}"
+   },
+   {
+    "uz": "Reaktiv qarshiliklar",
+    "ru": "Реактивные сопротивления",
+    "en": "Reactances",
+    "m": "X_L=\\omega L,\\quad X_C=\\frac{1}{\\omega C}"
+   },
+   {
+    "uz": "Kompleks impedans",
+    "ru": "Комплексный импеданс",
+    "en": "Complex impedance",
+    "m": "R,\\quad i\\omega L,\\quad \\frac{1}{i\\omega C}"
+   },
+   {
+    "uz": "Ketma-ket RLC",
+    "ru": "Последовательная RLC",
+    "en": "Series RLC",
+    "m": "\\left|Z\\right|=\\sqrt{R^2+\\left(X_L-X_C\\right)^2}"
+   },
+   {
+    "uz": "Faza",
+    "ru": "Фаза",
+    "en": "Phase",
+    "m": "\\tan\\varphi=\\frac{X_L-X_C}{R}"
+   },
+   {
+    "uz": "Rezonans",
+    "ru": "Резонанс",
+    "en": "Resonance",
+    "m": "\\omega_0=\\frac{1}{\\sqrt{LC}},\\quad U_C=QU"
+   },
+   {
+    "uz": "O'tkazish kengligi",
+    "ru": "Ширина полосы",
+    "en": "Bandwidth",
+    "m": "\\Delta\\omega=\\frac{R}{L},\\quad Q=\\frac{\\omega_0}{\\Delta\\omega}"
+   },
+   {
+    "uz": "Aktiv quvvat",
+    "ru": "Активная мощность",
+    "en": "Average power",
+    "m": "P=UI\\cos\\varphi=I^2R"
+   },
+   {
+    "uz": "Koeffitsiyentni oshirish",
+    "ru": "Компенсация",
+    "en": "Power-factor correction",
+    "m": "C=\\frac{P\\tan\\varphi}{\\omega U^2}"
+   },
+   {
+    "uz": "Yukni moslash",
+    "ru": "Согласование",
+    "en": "Matching",
+    "m": "Z=Z_0^*,\\quad P_{\\max}=\\frac{U^2}{4R_0}"
+   },
+   {
+    "uz": "Parallel kontur",
+    "ru": "Параллельный контур",
+    "en": "Parallel circuit",
+    "m": "Z(\\omega_0)=R,\\quad Q=R\\sqrt{\\frac{C}{L}}"
+   },
+   {
+    "uz": "RC filtr",
+    "ru": "RC-фильтр",
+    "en": "RC filter",
+    "m": "\\left|H\\right|=\\frac{1}{\\sqrt{1+\\left(\\omega RC\\right)^2}},\\quad \\omega_1=\\frac{1}{RC}"
+   },
+   {
+    "uz": "Transformator",
+    "ru": "Трансформатор",
+    "en": "Transformer",
+    "m": "\\frac{U_2}{U_1}=\\frac{N_2}{N_1}=\\frac{I_1}{I_2}"
+   },
+   {
+    "uz": "Uzatishdagi isrof",
+    "ru": "Потери в линии",
+    "en": "Line loss",
+    "m": "P'=\\frac{P^2r}{U^2}"
+   }
+  ]
+ }
+]

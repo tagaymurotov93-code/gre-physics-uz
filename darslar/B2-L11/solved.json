@@ -1,0 +1,812 @@
+[
+ {
+  "id": "B2-L11-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Diametri $4\\ \\mathrm{cm}$ bo'lgan quvurda suv $2\\ \\mathrm{m/s}$ tezlik bilan oqadi; quvur diametri $2\\ \\mathrm{cm}$ gacha torayadi. Tor qismdagi tezlikni va hajmiy sarfni toping.",
+   "ru": "В трубе диаметром $4\\ \\mathrm{cm}$ вода течёт со скоростью $2\\ \\mathrm{m/s}$; труба сужается до диаметра $2\\ \\mathrm{cm}$. Найдите скорость в узкой части и объёмный расход.",
+   "en": "Water flows at $2\\ \\mathrm{m/s}$ in a pipe of diameter $4\\ \\mathrm{cm}$; the pipe narrows to a diameter of $2\\ \\mathrm{cm}$. Find the speed in the narrow part and the volume flow rate."
+  },
+  "figure": "figures/B2-L11-S01.png",
+  "solution": {
+   "uz": [
+    "Uzluksizlik — tezlik yuzaga, ya'ni diametr kvadratiga teskari: $$v_2=v_1\\left(\\frac{d_1}{d_2}\\right)^2=2\\cdot4=8\\ \\mathrm{m/s}$$",
+    "Hajmiy sarf: $$Q=\\frac{\\pi d_1^2}{4}v_1=\\pi\\cdot0.02^2\\cdot2\\approx2.5\\cdot10^{-3}\\ \\mathrm{m^3/s}$$"
+   ],
+   "ru": [
+    "Непрерывность — скорость обратно пропорциональна площади, т. е. квадрату диаметра: $$v_2=v_1\\left(\\frac{d_1}{d_2}\\right)^2=2\\cdot4=8\\ \\mathrm{m/s}$$",
+    "Объёмный расход: $$Q=\\frac{\\pi d_1^2}{4}v_1=\\pi\\cdot0.02^2\\cdot2\\approx2.5\\cdot10^{-3}\\ \\mathrm{m^3/s}$$"
+   ],
+   "en": [
+    "Continuity — the speed is inversely proportional to the area, i.e. to the diameter squared: $$v_2=v_1\\left(\\frac{d_1}{d_2}\\right)^2=2\\cdot4=8\\ \\mathrm{m/s}$$",
+    "The volume flow rate: $$Q=\\frac{\\pi d_1^2}{4}v_1=\\pi\\cdot0.02^2\\cdot2\\approx2.5\\cdot10^{-3}\\ \\mathrm{m^3/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uzluksizlik: $Q=A_1v_1=A_2v_2$",
+    "ru": "Непрерывность: $Q=A_1v_1=A_2v_2$",
+    "en": "Continuity: $Q=A_1v_1=A_2v_2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Uzluksizlik tenglamasi",
+   "ru": "Уравнение непрерывности",
+   "en": "The continuity equation"
+  },
+  "answer": "v_2=8\\ \\mathrm{m/s};\\ Q\\approx2.5\\cdot10^{-3}\\ \\mathrm{m^3/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 14.5-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L11-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Gorizontal quvurda suvning tezligi $2\\ \\mathrm{m/s}$ dan $8\\ \\mathrm{m/s}$ gacha ortadi. Keng qismdagi bosim $150\\ \\mathrm{kPa}$. Tor qismdagi bosimni toping.",
+   "ru": "В горизонтальной трубе скорость воды растёт от $2\\ \\mathrm{m/s}$ до $8\\ \\mathrm{m/s}$. Давление в широкой части $150\\ \\mathrm{kPa}$. Найдите давление в узкой части.",
+   "en": "In a horizontal pipe the speed of water increases from $2\\ \\mathrm{m/s}$ to $8\\ \\mathrm{m/s}$. The pressure in the wide part is $150\\ \\mathrm{kPa}$. Find the pressure in the narrow part."
+  },
+  "figure": "figures/B2-L11-S02.png",
+  "solution": {
+   "uz": [
+    "Bernulli, $z_1=z_2$: $$p_2=p_1-\\frac{1}{2}\\rho(v_2^2-v_1^2)=150-\\frac{1}{2}\\cdot1000\\cdot60\\cdot10^{-3}\\ \\mathrm{kPa}$$",
+    "Natija — tezlik ortgan joyda bosim kamaygan: $$p_2=120\\ \\mathrm{kPa}$$"
+   ],
+   "ru": [
+    "Бернулли, $z_1=z_2$: $$p_2=p_1-\\frac{1}{2}\\rho(v_2^2-v_1^2)=150-\\frac{1}{2}\\cdot1000\\cdot60\\cdot10^{-3}\\ \\mathrm{kPa}$$",
+    "Результат — там, где скорость больше, давление меньше: $$p_2=120\\ \\mathrm{kPa}$$"
+   ],
+   "en": [
+    "Bernoulli with $z_1=z_2$: $$p_2=p_1-\\frac{1}{2}\\rho(v_2^2-v_1^2)=150-\\frac{1}{2}\\cdot1000\\cdot60\\cdot10^{-3}\\ \\mathrm{kPa}$$",
+    "Result — where the speed is larger, the pressure is lower: $$p_2=120\\ \\mathrm{kPa}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bernulli tenglamasi: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$",
+    "ru": "Уравнение Бернулли: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$",
+    "en": "Bernoulli's equation: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Gorizontal quvurda Bernulli",
+   "ru": "Бернулли в горизонтальной трубе",
+   "en": "Bernoulli in a horizontal pipe"
+  },
+  "answer": "p_2=120\\ \\mathrm{kPa}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 14.6-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L11-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Stol ustidagi keng idishda suv sathidan $1.25\\ \\mathrm{m}$ pastda kichik teshik bor; teshik poldan $0.8\\ \\mathrm{m}$ balandlikda. Oqim tezligini va oqim polga qancha masofaga tushishini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "В широком сосуде на столе на глубине $1.25\\ \\mathrm{m}$ под уровнем воды есть маленькое отверстие; отверстие находится на высоте $0.8\\ \\mathrm{m}$ над полом. Найдите скорость струи и на каком расстоянии она падает на пол. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A wide tank on a table has a small hole $1.25\\ \\mathrm{m}$ below the water level; the hole is $0.8\\ \\mathrm{m}$ above the floor. Find the jet speed and how far from the tank the jet hits the floor. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L11-S03.png",
+  "solution": {
+   "uz": [
+    "Torrichelli formulasi: $$v=\\sqrt{2gh}=\\sqrt{2\\cdot10\\cdot1.25}=5\\ \\mathrm{m/s}$$",
+    "Gorizontal otilgan jism kabi: $$t=\\sqrt{\\frac{2H}{g}}=0.4\\ \\mathrm{s},\\qquad s=vt=2\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Формула Торричелли: $$v=\\sqrt{2gh}=\\sqrt{2\\cdot10\\cdot1.25}=5\\ \\mathrm{m/s}$$",
+    "Как тело, брошенное горизонтально: $$t=\\sqrt{\\frac{2H}{g}}=0.4\\ \\mathrm{s},\\qquad s=vt=2\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Torricelli's law: $$v=\\sqrt{2gh}=\\sqrt{2\\cdot10\\cdot1.25}=5\\ \\mathrm{m/s}$$",
+    "Like a horizontally launched projectile: $$t=\\sqrt{\\frac{2H}{g}}=0.4\\ \\mathrm{s},\\qquad s=vt=2\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Torrichelli formulasi: $v=\\sqrt{2gh}$",
+    "ru": "Формула Торричелли: $v=\\sqrt{2gh}$",
+    "en": "Torricelli's law: $v=\\sqrt{2gh}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Torrichelli oqimi",
+   "ru": "Струя Торричелли",
+   "en": "Torricelli's jet"
+  },
+  "answer": "v=5\\ \\mathrm{m/s};\\ s=2\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 14.6-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L11-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Venturi o'lchagichida quvur kesimi $40\\ \\mathrm{cm^2}$ dan $10\\ \\mathrm{cm^2}$ gacha torayadi; manometr bosimlar farqini $15\\ \\mathrm{kPa}$ ko'rsatadi. Suvning hajmiy sarfini toping.",
+   "ru": "В расходомере Вентури сечение трубы сужается от $40\\ \\mathrm{cm^2}$ до $10\\ \\mathrm{cm^2}$; манометр показывает разность давлений $15\\ \\mathrm{kPa}$. Найдите объёмный расход воды.",
+   "en": "In a Venturi meter the pipe cross-section narrows from $40\\ \\mathrm{cm^2}$ to $10\\ \\mathrm{cm^2}$; the manometer shows a pressure difference of $15\\ \\mathrm{kPa}$. Find the volume flow rate of water."
+  },
+  "figure": "figures/B2-L11-S04.png",
+  "solution": {
+   "uz": [
+    "Uzluksizlikdan $v_1=\\frac{v_2}{4}$; Bernulli: $$\\Delta p=\\frac{1}{2}\\rho v_2^2\\left(1-\\frac{1}{16}\\right)\\ \\Rightarrow\\ v_2^2=32,\\quad v_2\\approx5.66\\ \\mathrm{m/s}$$",
+    "Sarf: $$Q=A_2v_2=10^{-3}\\cdot5.66\\approx5.7\\cdot10^{-3}\\ \\mathrm{m^3/s}$$"
+   ],
+   "ru": [
+    "Из непрерывности $v_1=\\frac{v_2}{4}$; Бернулли: $$\\Delta p=\\frac{1}{2}\\rho v_2^2\\left(1-\\frac{1}{16}\\right)\\ \\Rightarrow\\ v_2^2=32,\\quad v_2\\approx5.66\\ \\mathrm{m/s}$$",
+    "Расход: $$Q=A_2v_2=10^{-3}\\cdot5.66\\approx5.7\\cdot10^{-3}\\ \\mathrm{m^3/s}$$"
+   ],
+   "en": [
+    "From continuity $v_1=\\frac{v_2}{4}$; Bernoulli: $$\\Delta p=\\frac{1}{2}\\rho v_2^2\\left(1-\\frac{1}{16}\\right)\\ \\Rightarrow\\ v_2^2=32,\\quad v_2\\approx5.66\\ \\mathrm{m/s}$$",
+    "The flow rate: $$Q=A_2v_2=10^{-3}\\cdot5.66\\approx5.7\\cdot10^{-3}\\ \\mathrm{m^3/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bernulli tenglamasi: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$",
+    "ru": "Уравнение Бернулли: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$",
+    "en": "Bernoulli's equation: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$"
+   },
+   {
+    "uz": "Uzluksizlik: $Q=A_1v_1=A_2v_2$",
+    "ru": "Непрерывность: $Q=A_1v_1=A_2v_2$",
+    "en": "Continuity: $Q=A_1v_1=A_2v_2$"
+   }
+  ],
+  "basis": {
+   "uz": "Venturi o'lchagichi",
+   "ru": "Расходомер Вентури",
+   "en": "The Venturi meter"
+  },
+  "answer": "Q\\approx5.7\\cdot10^{-3}\\ \\mathrm{m^3/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 14.6-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L11-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Samolyotning Pito nayi suvli manometrga ulangan; sathlar farqi $5\\ \\mathrm{cm}$. Havo zichligi $1.25\\ \\mathrm{kg/m^3}$. Samolyotning havoga nisbatan tezligini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Трубка Пито самолёта подключена к водяному манометру; разность уровней $5\\ \\mathrm{cm}$. Плотность воздуха $1.25\\ \\mathrm{kg/m^3}$. Найдите скорость самолёта относительно воздуха. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "An aircraft's Pitot tube is connected to a water manometer; the level difference is $5\\ \\mathrm{cm}$. The density of air is $1.25\\ \\mathrm{kg/m^3}$. Find the aircraft's speed relative to the air. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L11-S05.png",
+  "solution": {
+   "uz": [
+    "Manometr — gidrostatika (suv zichligi): $$p_0-p=\\rho_0g\\Delta h=1000\\cdot10\\cdot0.05=500\\ \\mathrm{Pa}$$",
+    "Pito nayi — Bernulli (havo zichligi): $$v=\\sqrt{\\frac{2(p_0-p)}{\\rho}}=\\sqrt{\\frac{1000}{1.25}}\\approx28.3\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Манометр — гидростатика (плотность воды): $$p_0-p=\\rho_0g\\Delta h=1000\\cdot10\\cdot0.05=500\\ \\mathrm{Pa}$$",
+    "Трубка Пито — Бернулли (плотность воздуха): $$v=\\sqrt{\\frac{2(p_0-p)}{\\rho}}=\\sqrt{\\frac{1000}{1.25}}\\approx28.3\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "The manometer is hydrostatics (water density): $$p_0-p=\\rho_0g\\Delta h=1000\\cdot10\\cdot0.05=500\\ \\mathrm{Pa}$$",
+    "The Pitot tube is Bernoulli (air density): $$v=\\sqrt{\\frac{2(p_0-p)}{\\rho}}=\\sqrt{\\frac{1000}{1.25}}\\approx28.3\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gidrostatik bosim: $p=p_0+\\rho gh$",
+    "ru": "Гидростатическое давление: $p=p_0+\\rho gh$",
+    "en": "Hydrostatic pressure: $p=p_0+\\rho gh$"
+   },
+   {
+    "uz": "Bernulli tenglamasi: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$",
+    "ru": "Уравнение Бернулли: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$",
+    "en": "Bernoulli's equation: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$"
+   }
+  ],
+  "basis": {
+   "uz": "Pito nayi",
+   "ru": "Трубка Пито",
+   "en": "The Pitot tube"
+  },
+  "answer": "v\\approx28.3\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B2-L11, Pito nayi)"
+ },
+ {
+  "id": "B2-L11-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Kesimi $0.5\\ \\mathrm{m^2}$ bo'lgan silindrik bakda $1.8\\ \\mathrm{m}$ suv bor; tubida yuzasi $5\\ \\mathrm{cm^2}$ bo'lgan teshik ochildi. Bak qancha vaqtda to'liq bo'shaydi? Suvning yarmi qancha vaqtda oqib chiqadi? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "В цилиндрическом баке сечением $0.5\\ \\mathrm{m^2}$ находится $1.8\\ \\mathrm{m}$ воды; в дне открыли отверстие площадью $5\\ \\mathrm{cm^2}$. За какое время бак полностью опорожнится? За какое время вытечет половина воды? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A cylindrical tank of cross-section $0.5\\ \\mathrm{m^2}$ holds $1.8\\ \\mathrm{m}$ of water; a hole of area $5\\ \\mathrm{cm^2}$ is opened in the bottom. How long does the tank take to empty completely? How long does it take for half of the water to flow out? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L11-S06.png",
+  "solution": {
+   "uz": [
+    "Sath tezligi uzluksizlik va Torrichellidan: $$A\\frac{dh}{dt}=-a\\sqrt{2gh}\\ \\Rightarrow\\ \\sqrt h=\\sqrt H-\\frac{a}{A}\\sqrt{\\frac{g}{2}}\\,t$$",
+    "To'liq bo'shash ($h=0$): $$t=\\frac{A}{a}\\sqrt{\\frac{2H}{g}}=1000\\cdot0.6=600\\ \\mathrm{s}$$",
+    "Yarim hajm ($h=0.9\\ \\mathrm{m}$) — sath yuqorida bo'lganda oqim tezroq: $$t'=\\frac{A}{a}\\sqrt{\\frac{2}{g}}\\left(\\sqrt{1.8}-\\sqrt{0.9}\\right)\\approx176\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Скорость уровня из непрерывности и Торричелли: $$A\\frac{dh}{dt}=-a\\sqrt{2gh}\\ \\Rightarrow\\ \\sqrt h=\\sqrt H-\\frac{a}{A}\\sqrt{\\frac{g}{2}}\\,t$$",
+    "Полное опорожнение ($h=0$): $$t=\\frac{A}{a}\\sqrt{\\frac{2H}{g}}=1000\\cdot0.6=600\\ \\mathrm{s}$$",
+    "Половина объёма ($h=0.9\\ \\mathrm{m}$) — пока уровень высок, вытекает быстрее: $$t'=\\frac{A}{a}\\sqrt{\\frac{2}{g}}\\left(\\sqrt{1.8}-\\sqrt{0.9}\\right)\\approx176\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The level's speed from continuity and Torricelli: $$A\\frac{dh}{dt}=-a\\sqrt{2gh}\\ \\Rightarrow\\ \\sqrt h=\\sqrt H-\\frac{a}{A}\\sqrt{\\frac{g}{2}}\\,t$$",
+    "Complete emptying ($h=0$): $$t=\\frac{A}{a}\\sqrt{\\frac{2H}{g}}=1000\\cdot0.6=600\\ \\mathrm{s}$$",
+    "Half the volume ($h=0.9\\ \\mathrm{m}$) — the outflow is faster while the level is high: $$t'=\\frac{A}{a}\\sqrt{\\frac{2}{g}}\\left(\\sqrt{1.8}-\\sqrt{0.9}\\right)\\approx176\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bo'shash: $A\\frac{dh}{dt}=-a\\sqrt{2gh}$",
+    "ru": "Опорожнение: $A\\frac{dh}{dt}=-a\\sqrt{2gh}$",
+    "en": "Draining: $A\\frac{dh}{dt}=-a\\sqrt{2gh}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Idishning bo'shash vaqti",
+   "ru": "Время опорожнения сосуда",
+   "en": "Draining time of a tank"
+  },
+  "answer": "t=600\\ \\mathrm{s};\\ t'\\approx176\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "Irodov, «Problems in General Physics», 1.317-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L11-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.1\\ \\mathrm{m}$ bo'lgan silindrik stakandagi suv vertikal o'q atrofida $10\\ \\mathrm{rad/s}$ burchak tezlik bilan aylanmoqda (qattiq jismdek). Erkin sirt shaklini toping. Markaz va devor yonidagi sathlar farqi qancha? Markazdagi sath boshlang'ich sathdan qanchaga pasaygan? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Вода в цилиндрическом стакане радиусом $0.1\\ \\mathrm{m}$ вращается вокруг вертикальной оси с угловой скоростью $10\\ \\mathrm{rad/s}$ (как твёрдое тело). Найдите форму свободной поверхности. Какова разность уровней в центре и у стенки? На сколько уровень в центре опустился относительно начального? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "Water in a cylindrical glass of radius $0.1\\ \\mathrm{m}$ rotates about the vertical axis at $10\\ \\mathrm{rad/s}$ (like a rigid body). Find the shape of the free surface. What is the level difference between the centre and the wall? By how much has the level at the centre dropped below the initial level? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L11-S07.png",
+  "solution": {
+   "uz": [
+    "Eyler tenglamasining radial va vertikal tashkil etuvchilari: $$\\frac{\\partial p}{\\partial r}=\\rho\\Omega^2r,\\quad \\frac{\\partial p}{\\partial z}=-\\rho g\\ \\Rightarrow\\ z=z_0+\\frac{\\Omega^2r^2}{2g}$$",
+    "Sathlar farqi: $$\\Delta z=\\frac{\\Omega^2R^2}{2g}=\\frac{100\\cdot0.01}{20}=0.05\\ \\mathrm{m}$$",
+    "Hajm saqlanadi — paraboloid ostidagi o'rtacha balandlik $z_0+\\frac{\\Delta z}{2}$: $$h_0-z_0=\\frac{\\Delta z}{2}=2.5\\ \\mathrm{cm}$$"
+   ],
+   "ru": [
+    "Радиальная и вертикальная составляющие уравнения Эйлера: $$\\frac{\\partial p}{\\partial r}=\\rho\\Omega^2r,\\quad \\frac{\\partial p}{\\partial z}=-\\rho g\\ \\Rightarrow\\ z=z_0+\\frac{\\Omega^2r^2}{2g}$$",
+    "Разность уровней: $$\\Delta z=\\frac{\\Omega^2R^2}{2g}=\\frac{100\\cdot0.01}{20}=0.05\\ \\mathrm{m}$$",
+    "Объём сохраняется — средняя высота под параболоидом $z_0+\\frac{\\Delta z}{2}$: $$h_0-z_0=\\frac{\\Delta z}{2}=2.5\\ \\mathrm{cm}$$"
+   ],
+   "en": [
+    "The radial and vertical components of the Euler equation: $$\\frac{\\partial p}{\\partial r}=\\rho\\Omega^2r,\\quad \\frac{\\partial p}{\\partial z}=-\\rho g\\ \\Rightarrow\\ z=z_0+\\frac{\\Omega^2r^2}{2g}$$",
+    "The level difference: $$\\Delta z=\\frac{\\Omega^2R^2}{2g}=\\frac{100\\cdot0.01}{20}=0.05\\ \\mathrm{m}$$",
+    "The volume is conserved — the mean height under the paraboloid is $z_0+\\frac{\\Delta z}{2}$: $$h_0-z_0=\\frac{\\Delta z}{2}=2.5\\ \\mathrm{cm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Eyler tenglamasi: $\\rho\\frac{D\\vec v}{Dt}=-\\nabla p+\\rho\\vec g$",
+    "ru": "Уравнение Эйлера: $\\rho\\frac{D\\vec v}{Dt}=-\\nabla p+\\rho\\vec g$",
+    "en": "Euler equation: $\\rho\\frac{D\\vec v}{Dt}=-\\nabla p+\\rho\\vec g$"
+   },
+   {
+    "uz": "Aylanuvchi suyuqlik: $z=z_0+\\frac{\\Omega^2r^2}{2g}$",
+    "ru": "Вращающаяся жидкость: $z=z_0+\\frac{\\Omega^2r^2}{2g}$",
+    "en": "Rotating fluid: $z=z_0+\\frac{\\Omega^2r^2}{2g}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Aylanuvchi suyuqlik sirti",
+   "ru": "Поверхность вращающейся жидкости",
+   "en": "Surface of a rotating fluid"
+  },
+  "answer": "\\Delta z=5\\ \\mathrm{cm};\\ 2.5\\ \\mathrm{cm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original (B2-L11, aylanuvchi stakan)"
+ },
+ {
+  "id": "B2-L11-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $2\\ \\mathrm{m}$ bo'lgan ochiq sisterna gorizontal yo'lda $2.5\\ \\mathrm{m/s^2}$ tezlanish bilan harakatlanadi. Suv sirti gorizontga qanday burchak ostida joylashadi? Old va orqa devorlardagi sathlar farqi qancha? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Открытая цистерна длиной $2\\ \\mathrm{m}$ движется по горизонтальной дороге с ускорением $2.5\\ \\mathrm{m/s^2}$. Под каким углом к горизонту располагается поверхность воды? Какова разность уровней у передней и задней стенок? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "An open tank $2\\ \\mathrm{m}$ long moves along a horizontal road with acceleration $2.5\\ \\mathrm{m/s^2}$. At what angle to the horizontal is the water surface? What is the level difference between the front and back walls? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L11-S08.png",
+  "solution": {
+   "uz": [
+    "Sisterna sistemasida effektiv og'irlik $\\vec g'=\\vec g-\\vec a$; sirt unga perpendikulyar: $$\\mathrm{tg}\\,\\alpha=\\frac{a}{g}=0.25,\\qquad \\alpha\\approx14^\\circ$$",
+    "Orqa devorda sath baland: $$\\Delta h=L\\,\\mathrm{tg}\\,\\alpha=2\\cdot0.25=0.5\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "В системе цистерны эффективная сила тяжести $\\vec g'=\\vec g-\\vec a$; поверхность ей перпендикулярна: $$\\mathrm{tg}\\,\\alpha=\\frac{a}{g}=0.25,\\qquad \\alpha\\approx14^\\circ$$",
+    "У задней стенки уровень выше: $$\\Delta h=L\\,\\mathrm{tg}\\,\\alpha=2\\cdot0.25=0.5\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "In the tank's frame the effective gravity is $\\vec g'=\\vec g-\\vec a$; the surface is perpendicular to it: $$\\mathrm{tg}\\,\\alpha=\\frac{a}{g}=0.25,\\qquad \\alpha\\approx14^\\circ$$",
+    "The level is higher at the back wall: $$\\Delta h=L\\,\\mathrm{tg}\\,\\alpha=2\\cdot0.25=0.5\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tezlanuvchi idish: $\\mathrm{tg}\\,\\alpha=\\frac{a}{g}$",
+    "ru": "Ускоренный сосуд: $\\mathrm{tg}\\,\\alpha=\\frac{a}{g}$",
+    "en": "Accelerating container: $\\mathrm{tg}\\,\\alpha=\\frac{a}{g}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Tezlanuvchi idishdagi suyuqlik",
+   "ru": "Жидкость в ускоренном сосуде",
+   "en": "Liquid in an accelerating container"
+  },
+  "answer": "\\alpha\\approx14^\\circ;\\ \\Delta h=0.5\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Volkenshteyn, «Problems in General Physics», 2.66-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L11-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Kesimi $2\\ \\mathrm{cm^2}$ bo'lgan suv oqimi $10\\ \\mathrm{m/s}$ tezlik bilan devorga tik urilib, yon tomonlarga tarqaladi. Devorga ta'sir kuchini toping. Agar oqim kosaga urilib, xuddi shu tezlik bilan orqaga qaytsa-chi?",
+   "ru": "Струя воды сечением $2\\ \\mathrm{cm^2}$ со скоростью $10\\ \\mathrm{m/s}$ ударяется по нормали о стенку и растекается в стороны. Найдите силу действия на стенку. А если струя ударяется о чашку и поворачивает назад с той же скоростью?",
+   "en": "A water jet of cross-section $2\\ \\mathrm{cm^2}$ at $10\\ \\mathrm{m/s}$ hits a wall normally and spreads sideways. Find the force on the wall. What if the jet hits a cup and turns back with the same speed?"
+  },
+  "figure": "figures/B2-L11-S09.png",
+  "solution": {
+   "uz": [
+    "Sekundiga keladigan massa: $$\\rho Av=1000\\cdot2\\cdot10^{-4}\\cdot10=2\\ \\mathrm{kg/s}$$",
+    "Normal impuls butunlay yo'qoladi: $$F=\\rho Q|\\vec v_2-\\vec v_1|=2\\cdot10=20\\ \\mathrm{N}$$",
+    "Orqaga qaytganda $|\\vec v_2-\\vec v_1|=2v$: $$F'=2\\rho Av^2=40\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Масса, приходящая за секунду: $$\\rho Av=1000\\cdot2\\cdot10^{-4}\\cdot10=2\\ \\mathrm{kg/s}$$",
+    "Нормальный импульс полностью теряется: $$F=\\rho Q|\\vec v_2-\\vec v_1|=2\\cdot10=20\\ \\mathrm{N}$$",
+    "При повороте назад $|\\vec v_2-\\vec v_1|=2v$: $$F'=2\\rho Av^2=40\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "The mass arriving per second: $$\\rho Av=1000\\cdot2\\cdot10^{-4}\\cdot10=2\\ \\mathrm{kg/s}$$",
+    "The normal momentum is entirely lost: $$F=\\rho Q|\\vec v_2-\\vec v_1|=2\\cdot10=20\\ \\mathrm{N}$$",
+    "When turned back $|\\vec v_2-\\vec v_1|=2v$: $$F'=2\\rho Av^2=40\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Oqim kuchi: $\\vec F=\\rho Q(\\vec v_2-\\vec v_1)$",
+    "ru": "Сила струи: $\\vec F=\\rho Q(\\vec v_2-\\vec v_1)$",
+    "en": "Jet force: $\\vec F=\\rho Q(\\vec v_2-\\vec v_1)$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Oqimning ta'sir kuchi",
+   "ru": "Сила действия струи",
+   "en": "The force of a jet"
+  },
+  "answer": "F=20\\ \\mathrm{N};\\ F'=40\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original (B2-L11, oqim kuchi)"
+ },
+ {
+  "id": "B2-L11-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Sifon nayining chiqish uchi idishdagi suv sathidan $0.8\\ \\mathrm{m}$ pastda. Oqim tezligi qancha? Nayning eng yuqori nuqtasi sathdan ko'pi bilan qancha balandda bo'lishi mumkin ($p_0=10^5\\ \\mathrm{Pa}$, nayda bosim manfiy bo'lolmaydi)? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Выход сифона находится на $0.8\\ \\mathrm{m}$ ниже уровня воды в сосуде. Какова скорость течения? На какой наибольшей высоте над уровнем может находиться верхняя точка трубки ($p_0=10^5\\ \\mathrm{Pa}$, давление в трубке не может быть отрицательным)? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "The outlet of a siphon is $0.8\\ \\mathrm{m}$ below the water level in the tank. What is the flow speed? How high above the level can the top of the tube be at most ($p_0=10^5\\ \\mathrm{Pa}$; the pressure in the tube cannot be negative)? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L11-S10.png",
+  "solution": {
+   "uz": [
+    "Sirt va chiqish orasida Bernulli (ikkalasida $p_0$): $$v=\\sqrt{2gh}=\\sqrt{2\\cdot10\\cdot0.8}=4\\ \\mathrm{m/s}$$",
+    "Sirt va eng yuqori nuqta orasida (tezlik o'sha, nay kesimi bir xil): $$p_0=p+\\frac{1}{2}\\rho v^2+\\rho gH\\ \\Rightarrow\\ H\\le\\frac{p_0-\\frac{1}{2}\\rho v^2}{\\rho g}=9.2\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Бернулли между поверхностью и выходом (в обоих $p_0$): $$v=\\sqrt{2gh}=\\sqrt{2\\cdot10\\cdot0.8}=4\\ \\mathrm{m/s}$$",
+    "Между поверхностью и верхней точкой (скорость та же, сечение трубки одинаково): $$p_0=p+\\frac{1}{2}\\rho v^2+\\rho gH\\ \\Rightarrow\\ H\\le\\frac{p_0-\\frac{1}{2}\\rho v^2}{\\rho g}=9.2\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Bernoulli between the surface and the outlet (both at $p_0$): $$v=\\sqrt{2gh}=\\sqrt{2\\cdot10\\cdot0.8}=4\\ \\mathrm{m/s}$$",
+    "Between the surface and the top (same speed, uniform tube): $$p_0=p+\\frac{1}{2}\\rho v^2+\\rho gH\\ \\Rightarrow\\ H\\le\\frac{p_0-\\frac{1}{2}\\rho v^2}{\\rho g}=9.2\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Torrichelli formulasi: $v=\\sqrt{2gh}$",
+    "ru": "Формула Торричелли: $v=\\sqrt{2gh}$",
+    "en": "Torricelli's law: $v=\\sqrt{2gh}$"
+   },
+   {
+    "uz": "Bernulli tenglamasi: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$",
+    "ru": "Уравнение Бернулли: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$",
+    "en": "Bernoulli's equation: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$"
+   }
+  ],
+  "basis": {
+   "uz": "Sifon",
+   "ru": "Сифон",
+   "en": "The siphon"
+  },
+  "answer": "v=4\\ \\mathrm{m/s};\\ H\\le9.2\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original (B2-L11, sifon)"
+ },
+ {
+  "id": "B2-L11-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.5\\ \\mathrm{mm}$, uzunligi $0.2\\ \\mathrm{m}$ bo'lgan kapillyar orqali suv $4\\ \\mathrm{kPa}$ bosimlar farqi ta'sirida oqadi ($\\eta=10^{-3}\\ \\mathrm{Pa\\cdot s}$). Hajmiy sarfni, o'qdagi va o'rtacha tezlikni toping. Oqim laminarmi?",
+   "ru": "Через капилляр радиусом $0.5\\ \\mathrm{mm}$ и длиной $0.2\\ \\mathrm{m}$ течёт вода под действием разности давлений $4\\ \\mathrm{kPa}$ ($\\eta=10^{-3}\\ \\mathrm{Pa\\cdot s}$). Найдите объёмный расход, скорость на оси и среднюю скорость. Ламинарно ли течение?",
+   "en": "Water flows through a capillary of radius $0.5\\ \\mathrm{mm}$ and length $0.2\\ \\mathrm{m}$ under a pressure difference of $4\\ \\mathrm{kPa}$ ($\\eta=10^{-3}\\ \\mathrm{Pa\\cdot s}$). Find the volume flow rate, the speed on the axis and the mean speed. Is the flow laminar?"
+  },
+  "figure": "figures/B2-L11-S11.png",
+  "solution": {
+   "uz": [
+    "Puazeyl qonuni: $$Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}=\\frac{\\pi\\cdot6.25\\cdot10^{-14}\\cdot4000}{8\\cdot10^{-3}\\cdot0.2}\\approx4.9\\cdot10^{-7}\\ \\mathrm{m^3/s}$$",
+    "Profil maksimumi va o'rtacha tezlik: $$v_{\\max}=\\frac{\\Delta pR^2}{4\\eta L}=1.25\\ \\mathrm{m/s},\\qquad \\bar v=\\frac{v_{\\max}}{2}\\approx0.63\\ \\mathrm{m/s}$$",
+    "Tekshiruv: $$\\mathrm{Re}=\\frac{\\rho\\bar v\\cdot2R}{\\eta}=625<2000$$"
+   ],
+   "ru": [
+    "Закон Пуазейля: $$Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}=\\frac{\\pi\\cdot6.25\\cdot10^{-14}\\cdot4000}{8\\cdot10^{-3}\\cdot0.2}\\approx4.9\\cdot10^{-7}\\ \\mathrm{m^3/s}$$",
+    "Максимум профиля и средняя скорость: $$v_{\\max}=\\frac{\\Delta pR^2}{4\\eta L}=1.25\\ \\mathrm{m/s},\\qquad \\bar v=\\frac{v_{\\max}}{2}\\approx0.63\\ \\mathrm{m/s}$$",
+    "Проверка: $$\\mathrm{Re}=\\frac{\\rho\\bar v\\cdot2R}{\\eta}=625<2000$$"
+   ],
+   "en": [
+    "Poiseuille's law: $$Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}=\\frac{\\pi\\cdot6.25\\cdot10^{-14}\\cdot4000}{8\\cdot10^{-3}\\cdot0.2}\\approx4.9\\cdot10^{-7}\\ \\mathrm{m^3/s}$$",
+    "The profile maximum and the mean speed: $$v_{\\max}=\\frac{\\Delta pR^2}{4\\eta L}=1.25\\ \\mathrm{m/s},\\qquad \\bar v=\\frac{v_{\\max}}{2}\\approx0.63\\ \\mathrm{m/s}$$",
+    "Check: $$\\mathrm{Re}=\\frac{\\rho\\bar v\\cdot2R}{\\eta}=625<2000$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Puazeyl qonuni: $Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}$",
+    "ru": "Закон Пуазейля: $Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}$",
+    "en": "Poiseuille's law: $Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}$"
+   },
+   null,
+   {
+    "uz": "Reynolds soni: $\\mathrm{Re}=\\frac{\\rho vL}{\\eta}$",
+    "ru": "Число Рейнольдса: $\\mathrm{Re}=\\frac{\\rho vL}{\\eta}$",
+    "en": "Reynolds number: $\\mathrm{Re}=\\frac{\\rho vL}{\\eta}$"
+   }
+  ],
+  "basis": {
+   "uz": "Puazeyl oqimi",
+   "ru": "Течение Пуазейля",
+   "en": "Poiseuille flow"
+  },
+  "answer": "Q\\approx4.9\\cdot10^{-7}\\ \\mathrm{m^3/s};\\ v_{\\max}=1.25\\ \\mathrm{m/s};\\ \\mathrm{Re}=625",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 14.7-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L11-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Arteriyaning bir qismi tomir devoridagi yog' qatlami tufayli radius bo'yicha $20$ foiz torayib qoldi (oqim laminar). Bosimlar farqi o'zgarmasa, shu qismdagi qon sarfi necha marta kamayadi? Sarf o'zgarmasligi uchun bosimlar farqi necha marta ortishi kerak?",
+   "ru": "Участок артерии сузился по радиусу на $20$ процентов из-за отложений на стенке (течение ламинарное). Во сколько раз уменьшится расход крови на этом участке при неизменной разности давлений? Во сколько раз должна вырасти разность давлений, чтобы расход не изменился?",
+   "en": "A section of an artery has narrowed in radius by $20$ percent due to deposits on the wall (the flow is laminar). By what factor does the blood flow through this section drop at an unchanged pressure difference? By what factor must the pressure difference grow to keep the flow the same?"
+  },
+  "figure": "figures/B2-L11-S12.png",
+  "solution": {
+   "uz": [
+    "Puazeyl: $Q\\propto R^4$: $$\\frac{Q'}{Q}=0.8^4\\approx0.41$$",
+    "Sarfni saqlash uchun: $$\\frac{\\Delta p'}{\\Delta p}=\\frac{1}{0.8^4}\\approx2.44$$"
+   ],
+   "ru": [
+    "Пуазейль: $Q\\propto R^4$: $$\\frac{Q'}{Q}=0.8^4\\approx0.41$$",
+    "Для сохранения расхода: $$\\frac{\\Delta p'}{\\Delta p}=\\frac{1}{0.8^4}\\approx2.44$$"
+   ],
+   "en": [
+    "Poiseuille: $Q\\propto R^4$: $$\\frac{Q'}{Q}=0.8^4\\approx0.41$$",
+    "To keep the flow: $$\\frac{\\Delta p'}{\\Delta p}=\\frac{1}{0.8^4}\\approx2.44$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Puazeyl qonuni: $Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}$",
+    "ru": "Закон Пуазейля: $Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}$",
+    "en": "Poiseuille's law: $Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Puazeyl qonunining $R^4$ masshtabi",
+   "ru": "Масштаб $R^4$ в законе Пуазейля",
+   "en": "The $R^4$ scaling of Poiseuille's law"
+  },
+  "answer": "\\frac{Q'}{Q}\\approx0.41;\\ \\frac{\\Delta p'}{\\Delta p}\\approx2.44",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 14.7-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L11-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $1\\ \\mathrm{mm}$ bo'lgan po'lat sharcha ($\\rho=7800\\ \\mathrm{kg/m^3}$) glitserinda ($\\rho_0=1260\\ \\mathrm{kg/m^3}$, $\\eta=1.5\\ \\mathrm{Pa\\cdot s}$) tushmoqda. Terminal tezlikni toping va Stoks formulasini qo'llash mumkinligini tekshiring. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Стальной шарик радиусом $1\\ \\mathrm{mm}$ ($\\rho=7800\\ \\mathrm{kg/m^3}$) падает в глицерине ($\\rho_0=1260\\ \\mathrm{kg/m^3}$, $\\eta=1.5\\ \\mathrm{Pa\\cdot s}$). Найдите установившуюся скорость и проверьте применимость формулы Стокса. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A steel ball of radius $1\\ \\mathrm{mm}$ ($\\rho=7800\\ \\mathrm{kg/m^3}$) falls through glycerine ($\\rho_0=1260\\ \\mathrm{kg/m^3}$, $\\eta=1.5\\ \\mathrm{Pa\\cdot s}$). Find the terminal velocity and check that Stokes' formula applies. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L11-S13.png",
+  "solution": {
+   "uz": [
+    "Og'irlik = Arximed + Stoks: $$\\frac{4}{3}\\pi r^3(\\rho-\\rho_0)g=6\\pi\\eta rv$$",
+    "Terminal tezlik: $$v=\\frac{2r^2(\\rho-\\rho_0)g}{9\\eta}=\\frac{2\\cdot10^{-6}\\cdot6540\\cdot10}{13.5}\\approx9.7\\cdot10^{-3}\\ \\mathrm{m/s}$$",
+    "Tekshiruv: $$\\mathrm{Re}=\\frac{\\rho_0v\\cdot2r}{\\eta}\\approx0.016\\ll1$$"
+   ],
+   "ru": [
+    "Тяжесть = Архимед + Стокс: $$\\frac{4}{3}\\pi r^3(\\rho-\\rho_0)g=6\\pi\\eta rv$$",
+    "Установившаяся скорость: $$v=\\frac{2r^2(\\rho-\\rho_0)g}{9\\eta}=\\frac{2\\cdot10^{-6}\\cdot6540\\cdot10}{13.5}\\approx9.7\\cdot10^{-3}\\ \\mathrm{m/s}$$",
+    "Проверка: $$\\mathrm{Re}=\\frac{\\rho_0v\\cdot2r}{\\eta}\\approx0.016\\ll1$$"
+   ],
+   "en": [
+    "Gravity = buoyancy + Stokes: $$\\frac{4}{3}\\pi r^3(\\rho-\\rho_0)g=6\\pi\\eta rv$$",
+    "The terminal velocity: $$v=\\frac{2r^2(\\rho-\\rho_0)g}{9\\eta}=\\frac{2\\cdot10^{-6}\\cdot6540\\cdot10}{13.5}\\approx9.7\\cdot10^{-3}\\ \\mathrm{m/s}$$",
+    "Check: $$\\mathrm{Re}=\\frac{\\rho_0v\\cdot2r}{\\eta}\\approx0.016\\ll1$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Stoks qarshiligi: $F=6\\pi\\eta rv$",
+    "ru": "Сопротивление Стокса: $F=6\\pi\\eta rv$",
+    "en": "Stokes drag: $F=6\\pi\\eta rv$"
+   },
+   null,
+   {
+    "uz": "Reynolds soni: $\\mathrm{Re}=\\frac{\\rho vL}{\\eta}$",
+    "ru": "Число Рейнольдса: $\\mathrm{Re}=\\frac{\\rho vL}{\\eta}$",
+    "en": "Reynolds number: $\\mathrm{Re}=\\frac{\\rho vL}{\\eta}$"
+   }
+  ],
+  "basis": {
+   "uz": "Stoks qarshiligi va terminal tezlik",
+   "ru": "Сопротивление Стокса и установившаяся скорость",
+   "en": "Stokes drag and terminal velocity"
+  },
+  "answer": "v\\approx9.7\\ \\mathrm{mm/s};\\ \\mathrm{Re}\\approx0.016",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 14.7-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L11-S14",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Diametri $2\\ \\mathrm{cm}$ bo'lgan quvurda suv $0.5\\ \\mathrm{m/s}$ tezlik bilan oqadi ($\\eta=10^{-3}\\ \\mathrm{Pa\\cdot s}$). Oqim laminarmi yoki turbulentmi? Oqim laminar bo'lishi uchun tezlik qanchadan oshmasligi kerak ($\\mathrm{Re}\\le2000$)?",
+   "ru": "В трубе диаметром $2\\ \\mathrm{cm}$ вода течёт со скоростью $0.5\\ \\mathrm{m/s}$ ($\\eta=10^{-3}\\ \\mathrm{Pa\\cdot s}$). Течение ламинарное или турбулентное? Какую скорость нельзя превышать, чтобы течение было ламинарным ($\\mathrm{Re}\\le2000$)?",
+   "en": "Water flows at $0.5\\ \\mathrm{m/s}$ in a pipe of diameter $2\\ \\mathrm{cm}$ ($\\eta=10^{-3}\\ \\mathrm{Pa\\cdot s}$). Is the flow laminar or turbulent? What speed must not be exceeded for the flow to be laminar ($\\mathrm{Re}\\le2000$)?"
+  },
+  "figure": "figures/B2-L11-S14.png",
+  "solution": {
+   "uz": [
+    "Reynolds soni: $$\\mathrm{Re}=\\frac{\\rho vd}{\\eta}=\\frac{1000\\cdot0.5\\cdot0.02}{10^{-3}}=10^4>4000$$",
+    "Turbulent; laminar chegara: $$v\\le\\frac{2000\\eta}{\\rho d}=0.1\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Число Рейнольдса: $$\\mathrm{Re}=\\frac{\\rho vd}{\\eta}=\\frac{1000\\cdot0.5\\cdot0.02}{10^{-3}}=10^4>4000$$",
+    "Турбулентное; ламинарная граница: $$v\\le\\frac{2000\\eta}{\\rho d}=0.1\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "The Reynolds number: $$\\mathrm{Re}=\\frac{\\rho vd}{\\eta}=\\frac{1000\\cdot0.5\\cdot0.02}{10^{-3}}=10^4>4000$$",
+    "Turbulent; the laminar limit: $$v\\le\\frac{2000\\eta}{\\rho d}=0.1\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Reynolds soni: $\\mathrm{Re}=\\frac{\\rho vL}{\\eta}$",
+    "ru": "Число Рейнольдса: $\\mathrm{Re}=\\frac{\\rho vL}{\\eta}$",
+    "en": "Reynolds number: $\\mathrm{Re}=\\frac{\\rho vL}{\\eta}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Reynolds soni",
+   "ru": "Число Рейнольдса",
+   "en": "The Reynolds number"
+  },
+  "answer": "\\mathrm{Re}=10^4;\\ v\\le0.1\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "OpenStax, «University Physics», Vol. 1 (CC BY 4.0), 14.7-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L11-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Vanna teshigi ustida erkin uyurma hosil bo'ldi: $v=\\frac{0.1}{r}$ ($v$ — m/s da, $r$ — m da). Sirkulyatsiyani toping va oqim uyurmasiz ekanini ko'rsating. O'qdan $5\\ \\mathrm{cm}$ masofada suv sirti uzoqdagi sathdan qancha pastda? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Над стоком ванны образовался свободный вихрь: $v=\\frac{0.1}{r}$ ($v$ — в м/с, $r$ — в м). Найдите циркуляцию и покажите, что течение безвихревое. На сколько ниже удалённого уровня находится поверхность воды на расстоянии $5\\ \\mathrm{cm}$ от оси? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A free vortex forms over a bathtub drain: $v=\\frac{0.1}{r}$ ($v$ in m/s, $r$ in m). Find the circulation and show that the flow is irrotational. How far below the distant level is the water surface at $5\\ \\mathrm{cm}$ from the axis? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L11-S15.png",
+  "solution": {
+   "uz": [
+    "Aylana bo'ylab sirkulyatsiya: $$\\Gamma=2\\pi rv=0.2\\pi\\approx0.63\\ \\mathrm{m^2/s}$$",
+    "$\\vec v=\\frac{0.1}{r^2}(-y,\\ x)$ uchun uyurma: $$\\omega_z=\\frac{\\partial v_y}{\\partial x}-\\frac{\\partial v_x}{\\partial y}=0\\quad(r\\neq0)$$",
+    "Uyurmasiz — Bernulli butun sirt bo'ylab, uzoqda $v=0$: $$\\Delta z=\\frac{v^2}{2g}=\\frac{2^2}{20}=0.2\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Циркуляция по окружности: $$\\Gamma=2\\pi rv=0.2\\pi\\approx0.63\\ \\mathrm{m^2/s}$$",
+    "Завихренность для $\\vec v=\\frac{0.1}{r^2}(-y,\\ x)$: $$\\omega_z=\\frac{\\partial v_y}{\\partial x}-\\frac{\\partial v_x}{\\partial y}=0\\quad(r\\neq0)$$",
+    "Безвихревое — Бернулли по всей поверхности, вдали $v=0$: $$\\Delta z=\\frac{v^2}{2g}=\\frac{2^2}{20}=0.2\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Circulation around a circle: $$\\Gamma=2\\pi rv=0.2\\pi\\approx0.63\\ \\mathrm{m^2/s}$$",
+    "The vorticity for $\\vec v=\\frac{0.1}{r^2}(-y,\\ x)$: $$\\omega_z=\\frac{\\partial v_y}{\\partial x}-\\frac{\\partial v_x}{\\partial y}=0\\quad(r\\neq0)$$",
+    "Irrotational — Bernoulli along the whole surface, with $v=0$ far away: $$\\Delta z=\\frac{v^2}{2g}=\\frac{2^2}{20}=0.2\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sirkulyatsiya: $\\Gamma=\\oint\\vec v\\cdot d\\vec l$, $\\vec\\omega=\\nabla\\times\\vec v$",
+    "ru": "Циркуляция: $\\Gamma=\\oint\\vec v\\cdot d\\vec l$, $\\vec\\omega=\\nabla\\times\\vec v$",
+    "en": "Circulation: $\\Gamma=\\oint\\vec v\\cdot d\\vec l$, $\\vec\\omega=\\nabla\\times\\vec v$"
+   },
+   null,
+   {
+    "uz": "Bernulli tenglamasi: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$",
+    "ru": "Уравнение Бернулли: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$",
+    "en": "Bernoulli's equation: $p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}$"
+   }
+  ],
+  "basis": {
+   "uz": "Erkin uyurma",
+   "ru": "Свободный вихрь",
+   "en": "A free vortex"
+  },
+  "answer": "\\Gamma\\approx0.63\\ \\mathrm{m^2/s};\\ \\omega=0;\\ \\Delta z=0.2\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L11, erkin uyurma)"
+ },
+ {
+  "id": "B2-L11-S16",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $1000\\ \\mathrm{kg}$ bo'lgan samolyot qanotlarining umumiy uzunligi $10\\ \\mathrm{m}$; u $50\\ \\mathrm{m/s}$ tezlik bilan gorizontal uchadi ($\\rho=1.2\\ \\mathrm{kg/m^3}$). Ko'taruvchi kuch og'irlikni muvozanatlashi uchun qanot atrofidagi sirkulyatsiya qancha bo'lishi kerak? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Общий размах крыльев самолёта массой $1000\\ \\mathrm{kg}$ равен $10\\ \\mathrm{m}$; он летит горизонтально со скоростью $50\\ \\mathrm{m/s}$ ($\\rho=1.2\\ \\mathrm{kg/m^3}$). Какой должна быть циркуляция вокруг крыла, чтобы подъёмная сила уравновешивала вес? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "An aircraft of mass $1000\\ \\mathrm{kg}$ has a total wingspan of $10\\ \\mathrm{m}$ and flies horizontally at $50\\ \\mathrm{m/s}$ ($\\rho=1.2\\ \\mathrm{kg/m^3}$). What circulation around the wing is needed for the lift to balance the weight? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L11-S16.png",
+  "solution": {
+   "uz": [
+    "Kutta–Jukovskiy, butun qanot bo'yicha: $$F=\\rho v\\Gamma l=mg$$",
+    "Sirkulyatsiya: $$\\Gamma=\\frac{mg}{\\rho vl}=\\frac{10^4}{1.2\\cdot50\\cdot10}\\approx16.7\\ \\mathrm{m^2/s}$$"
+   ],
+   "ru": [
+    "Кутта–Жуковский для всего крыла: $$F=\\rho v\\Gamma l=mg$$",
+    "Циркуляция: $$\\Gamma=\\frac{mg}{\\rho vl}=\\frac{10^4}{1.2\\cdot50\\cdot10}\\approx16.7\\ \\mathrm{m^2/s}$$"
+   ],
+   "en": [
+    "Kutta–Joukowski for the whole wing: $$F=\\rho v\\Gamma l=mg$$",
+    "The circulation: $$\\Gamma=\\frac{mg}{\\rho vl}=\\frac{10^4}{1.2\\cdot50\\cdot10}\\approx16.7\\ \\mathrm{m^2/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kutta–Jukovskiy teoremasi: $\\frac{F}{l}=\\rho v\\Gamma$",
+    "ru": "Теорема Кутты–Жуковского: $\\frac{F}{l}=\\rho v\\Gamma$",
+    "en": "Kutta–Joukowski theorem: $\\frac{F}{l}=\\rho v\\Gamma$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Ko'taruvchi kuch va sirkulyatsiya",
+   "ru": "Подъёмная сила и циркуляция",
+   "en": "Lift and circulation"
+  },
+  "answer": "\\Gamma\\approx16.7\\ \\mathrm{m^2/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B2-L11, Kutta–Jukovskiy)"
+ },
+ {
+  "id": "B2-L11-S17",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ochiq dengizda (chuqur suv) to'lqin uzunligi $15.7\\ \\mathrm{m}$ ($=5\\pi\\ \\mathrm{m}$) bo'lgan to'lqinlar tarqalmoqda. Fazaviy va guruh tezliklarini, davrni toping. Okean chuqurligi $4\\ \\mathrm{km}$ bo'lgan joyda tsunami qanday tezlik bilan tarqaladi? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "В открытом море (глубокая вода) распространяются волны длиной $15.7\\ \\mathrm{m}$ ($=5\\pi\\ \\mathrm{m}$). Найдите фазовую и групповую скорости, период. С какой скоростью распространяется цунами там, где глубина океана $4\\ \\mathrm{km}$? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "Waves of wavelength $15.7\\ \\mathrm{m}$ ($=5\\pi\\ \\mathrm{m}$) travel on the open sea (deep water). Find the phase and group velocities and the period. At what speed does a tsunami travel where the ocean is $4\\ \\mathrm{km}$ deep? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L11-S17.png",
+  "solution": {
+   "uz": [
+    "Chuqur suv dispersiyasi: $$v_\\varphi=\\sqrt{\\frac{g\\lambda}{2\\pi}}=\\sqrt{25}=5\\ \\mathrm{m/s},\\qquad u=\\frac{d\\omega}{dk}=\\frac{v_\\varphi}{2}=2.5\\ \\mathrm{m/s}$$",
+    "Davr: $$T=\\frac{\\lambda}{v_\\varphi}=\\pi\\approx3.14\\ \\mathrm{s}$$",
+    "Tsunami uchun $\\lambda\\gg h$ — sayoz suv: $$v=\\sqrt{gh}=\\sqrt{10\\cdot4000}=200\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Дисперсия на глубокой воде: $$v_\\varphi=\\sqrt{\\frac{g\\lambda}{2\\pi}}=\\sqrt{25}=5\\ \\mathrm{m/s},\\qquad u=\\frac{d\\omega}{dk}=\\frac{v_\\varphi}{2}=2.5\\ \\mathrm{m/s}$$",
+    "Период: $$T=\\frac{\\lambda}{v_\\varphi}=\\pi\\approx3.14\\ \\mathrm{s}$$",
+    "Для цунами $\\lambda\\gg h$ — мелкая вода: $$v=\\sqrt{gh}=\\sqrt{10\\cdot4000}=200\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Deep-water dispersion: $$v_\\varphi=\\sqrt{\\frac{g\\lambda}{2\\pi}}=\\sqrt{25}=5\\ \\mathrm{m/s},\\qquad u=\\frac{d\\omega}{dk}=\\frac{v_\\varphi}{2}=2.5\\ \\mathrm{m/s}$$",
+    "The period: $$T=\\frac{\\lambda}{v_\\varphi}=\\pi\\approx3.14\\ \\mathrm{s}$$",
+    "For a tsunami $\\lambda\\gg h$ — shallow water: $$v=\\sqrt{gh}=\\sqrt{10\\cdot4000}=200\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Chuqur suv to'lqinlari: $\\omega^2=gk$, $u=\\frac{d\\omega}{dk}$",
+    "ru": "Волны на глубокой воде: $\\omega^2=gk$, $u=\\frac{d\\omega}{dk}$",
+    "en": "Deep-water waves: $\\omega^2=gk$, $u=\\frac{d\\omega}{dk}$"
+   },
+   null,
+   {
+    "uz": "Sayoz suv to'lqinlari: $v=\\sqrt{gh}$",
+    "ru": "Волны на мелкой воде: $v=\\sqrt{gh}$",
+    "en": "Shallow-water waves: $v=\\sqrt{gh}$"
+   }
+  ],
+  "basis": {
+   "uz": "Suv sirtidagi to'lqinlar",
+   "ru": "Волны на поверхности воды",
+   "en": "Waves on a water surface"
+  },
+  "answer": "v_\\varphi=5\\ \\mathrm{m/s};\\ u=2.5\\ \\mathrm{m/s};\\ T\\approx3.14\\ \\mathrm{s};\\ 200\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L11, suv to'lqinlari)"
+ },
+ {
+  "id": "B2-L11-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Sharga ta'sir qiluvchi qarshilik kuchini o'lchamlar tahlili bilan toping: a) tez oqimda kuch faqat $\\rho$, $v$, $r$ ga bog'liq; b) sekin oqimda faqat $\\eta$, $v$, $r$ ga bog'liq. Natijalarni ma'lum formulalar bilan solishtiring.",
+   "ru": "Найдите силу сопротивления шара анализом размерностей: а) в быстром потоке сила зависит только от $\\rho$, $v$, $r$; б) в медленном — только от $\\eta$, $v$, $r$. Сравните результаты с известными формулами.",
+   "en": "Find the drag force on a sphere by dimensional analysis: a) in fast flow the force depends only on $\\rho$, $v$, $r$; b) in slow flow only on $\\eta$, $v$, $r$. Compare the results with the known formulas."
+  },
+  "figure": "figures/B2-L11-S18.png",
+  "solution": {
+   "uz": [
+    "a) $F=C\\rho^av^br^c$; kg, m, s darajalarini tenglashtiramiz: $$a=1,\\quad -3a+b+c=1,\\quad -b=-2\\ \\Rightarrow\\ F\\propto\\rho v^2r^2$$",
+    "Bu kvadratik qarshilik ($A=\\pi r^2$): $$F=\\frac{1}{2}C\\rho Av^2$$",
+    "b) $F=C\\eta^dv^br^c$: $$d=1,\\quad -d+b+c=1,\\quad -d-b=-2\\ \\Rightarrow\\ F\\propto\\eta rv\\quad(6\\pi\\eta rv)$$"
+   ],
+   "ru": [
+    "а) $F=C\\rho^av^br^c$; приравниваем степени кг, м, с: $$a=1,\\quad -3a+b+c=1,\\quad -b=-2\\ \\Rightarrow\\ F\\propto\\rho v^2r^2$$",
+    "Это квадратичное сопротивление ($A=\\pi r^2$): $$F=\\frac{1}{2}C\\rho Av^2$$",
+    "б) $F=C\\eta^dv^br^c$: $$d=1,\\quad -d+b+c=1,\\quad -d-b=-2\\ \\Rightarrow\\ F\\propto\\eta rv\\quad(6\\pi\\eta rv)$$"
+   ],
+   "en": [
+    "a) $F=C\\rho^av^br^c$; match the powers of kg, m, s: $$a=1,\\quad -3a+b+c=1,\\quad -b=-2\\ \\Rightarrow\\ F\\propto\\rho v^2r^2$$",
+    "This is quadratic drag ($A=\\pi r^2$): $$F=\\frac{1}{2}C\\rho Av^2$$",
+    "b) $F=C\\eta^dv^br^c$: $$d=1,\\quad -d+b+c=1,\\quad -d-b=-2\\ \\Rightarrow\\ F\\propto\\eta rv\\quad(6\\pi\\eta rv)$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "O'lchamlar tahlili: $[F]=\\mathrm{kg\\cdot m\\cdot s^{-2}}$",
+    "ru": "Анализ размерностей: $[F]=\\mathrm{kg\\cdot m\\cdot s^{-2}}$",
+    "en": "Dimensional analysis: $[F]=\\mathrm{kg\\cdot m\\cdot s^{-2}}$"
+   },
+   {
+    "uz": "Kvadratik qarshilik: $F=\\frac{1}{2}C\\rho Av^2$",
+    "ru": "Квадратичное сопротивление: $F=\\frac{1}{2}C\\rho Av^2$",
+    "en": "Quadratic drag: $F=\\frac{1}{2}C\\rho Av^2$"
+   },
+   {
+    "uz": "Stoks qarshiligi: $F=6\\pi\\eta rv$",
+    "ru": "Сопротивление Стокса: $F=6\\pi\\eta rv$",
+    "en": "Stokes drag: $F=6\\pi\\eta rv$"
+   }
+  ],
+  "basis": {
+   "uz": "O'lchamlar tahlili",
+   "ru": "Анализ размерностей",
+   "en": "Dimensional analysis"
+  },
+  "answer": "F\\propto\\rho v^2r^2;\\ F\\propto\\eta rv",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L11, o'lchamlar tahlili)"
+ }
+]

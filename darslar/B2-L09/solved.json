@@ -1,0 +1,892 @@
+[
+ {
+  "id": "B2-L09-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Bir jinsli og'irlik maydonida otilgan jism uchun Lagranj funksiyasini yozing ($y$ o'qi yuqoriga). Eyler–Lagranj tenglamalarini oling. Qaysi umumlashgan impuls saqlanadi?",
+   "ru": "Запишите функцию Лагранжа для тела, брошенного в однородном поле тяжести (ось $y$ вверх). Получите уравнения Эйлера–Лагранжа. Какой обобщённый импульс сохраняется?",
+   "en": "Write the Lagrangian for a projectile in a uniform gravitational field ($y$ axis upward). Obtain the Euler–Lagrange equations. Which generalized momentum is conserved?"
+  },
+  "figure": "figures/B2-L09-S01.png",
+  "solution": {
+   "uz": [
+    "Kinetik va potensial energiya: $$L=\\frac{m}{2}(\\dot x^2+\\dot y^2)-mgy$$",
+    "Har bir koordinata uchun tenglama: $$m\\ddot x=0,\\qquad m\\ddot y=-mg$$",
+    "$x$ siklik — gorizontal impuls saqlanadi: $$p_x=m\\dot x=\\mathrm{const}$$"
+   ],
+   "ru": [
+    "Кинетическая и потенциальная энергии: $$L=\\frac{m}{2}(\\dot x^2+\\dot y^2)-mgy$$",
+    "Уравнение для каждой координаты: $$m\\ddot x=0,\\qquad m\\ddot y=-mg$$",
+    "$x$ циклическая — сохраняется горизонтальный импульс: $$p_x=m\\dot x=\\mathrm{const}$$"
+   ],
+   "en": [
+    "Kinetic and potential energies: $$L=\\frac{m}{2}(\\dot x^2+\\dot y^2)-mgy$$",
+    "An equation for each coordinate: $$m\\ddot x=0,\\qquad m\\ddot y=-mg$$",
+    "$x$ is cyclic — the horizontal momentum is conserved: $$p_x=m\\dot x=\\mathrm{const}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lagranj funksiyasi: $L=T-U$",
+    "ru": "Функция Лагранжа: $L=T-U$",
+    "en": "Lagrangian: $L=T-U$"
+   },
+   {
+    "uz": "Eyler–Lagranj tenglamasi: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$",
+    "ru": "Уравнение Эйлера–Лагранжа: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$",
+    "en": "Euler–Lagrange equation: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$"
+   },
+   {
+    "uz": "Siklik koordinata: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "ru": "Циклическая координата: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "en": "Cyclic coordinate: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$"
+   }
+  ],
+  "basis": {
+   "uz": "Lagranj funksiyasi va siklik koordinata",
+   "ru": "Функция Лагранжа и циклическая координата",
+   "en": "Lagrangian and a cyclic coordinate"
+  },
+  "answer": "\\ddot x=0,\\ \\ddot y=-g;\\ p_x=\\mathrm{const}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original (B2-L09, otilgan jism)"
+ },
+ {
+  "id": "B2-L09-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Massasi $0.5\\ \\mathrm{kg}$ bo'lgan yuk bikrligi $50\\ \\mathrm{N/m}$ vertikal prujinaga osilgan ($y$ — cho'zilmagan prujina uchidan pastga). Lagranj funksiyasini yozing, harakat tenglamasini oling, muvozanat holatini va tebranish chastotasini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Груз массой $0.5\\ \\mathrm{kg}$ подвешен на вертикальной пружине жёсткостью $50\\ \\mathrm{N/m}$ ($y$ — вниз от конца недеформированной пружины). Запишите функцию Лагранжа, получите уравнение движения, найдите положение равновесия и частоту колебаний. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A $0.5\\ \\mathrm{kg}$ load hangs on a vertical spring of stiffness $50\\ \\mathrm{N/m}$ ($y$ measured downward from the end of the unstretched spring). Write the Lagrangian, derive the equation of motion, and find the equilibrium position and the oscillation frequency. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L09-S02.png",
+  "solution": {
+   "uz": [
+    "$y$ pastga o'lchanadi, shuning uchun og'irlik potensiali $-mgy$: $$L=\\frac{m\\dot y^2}{2}-\\frac{ky^2}{2}+mgy$$",
+    "Tenglama: $$m\\ddot y=-ky+mg$$",
+    "Muvozanat $\\ddot y=0$ da; chastota o'zgarmaydi: $$y_0=\\frac{mg}{k}=0.1\\ \\mathrm{m},\\qquad \\omega=\\sqrt{\\frac{k}{m}}=10\\ \\mathrm{rad/s}$$"
+   ],
+   "ru": [
+    "$y$ отсчитывается вниз, поэтому потенциал тяжести $-mgy$: $$L=\\frac{m\\dot y^2}{2}-\\frac{ky^2}{2}+mgy$$",
+    "Уравнение: $$m\\ddot y=-ky+mg$$",
+    "Равновесие при $\\ddot y=0$; частота не меняется: $$y_0=\\frac{mg}{k}=0.1\\ \\mathrm{m},\\qquad \\omega=\\sqrt{\\frac{k}{m}}=10\\ \\mathrm{rad/s}$$"
+   ],
+   "en": [
+    "$y$ is measured downward, so the gravitational potential is $-mgy$: $$L=\\frac{m\\dot y^2}{2}-\\frac{ky^2}{2}+mgy$$",
+    "Equation: $$m\\ddot y=-ky+mg$$",
+    "Equilibrium at $\\ddot y=0$; the frequency is unchanged: $$y_0=\\frac{mg}{k}=0.1\\ \\mathrm{m},\\qquad \\omega=\\sqrt{\\frac{k}{m}}=10\\ \\mathrm{rad/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lagranj funksiyasi: $L=T-U$",
+    "ru": "Функция Лагранжа: $L=T-U$",
+    "en": "Lagrangian: $L=T-U$"
+   },
+   {
+    "uz": "Eyler–Lagranj tenglamasi: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$",
+    "ru": "Уравнение Эйлера–Лагранжа: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$",
+    "en": "Euler–Lagrange equation: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Lagranj usuli — prujinali ossilyator",
+   "ru": "Метод Лагранжа — пружинный осциллятор",
+   "en": "Lagrangian method — spring oscillator"
+  },
+  "answer": "y_0=0.1\\ \\mathrm{m};\\ \\omega=10\\ \\mathrm{rad/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original (B2-L09, vertikal prujina)"
+ },
+ {
+  "id": "B2-L09-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Uzunligi $0.4\\ \\mathrm{m}$ bo'lgan matematik mayatnik uchun Lagranj funksiyasini burchak $\\theta$ orqali yozing, harakat tenglamasini oling va kichik tebranishlar davrini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Запишите функцию Лагранжа математического маятника длиной $0.4\\ \\mathrm{m}$ через угол $\\theta$, получите уравнение движения и найдите период малых колебаний. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "Write the Lagrangian of a simple pendulum of length $0.4\\ \\mathrm{m}$ in terms of the angle $\\theta$, derive the equation of motion and find the period of small oscillations. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L09-S03.png",
+  "solution": {
+   "uz": [
+    "$x=l\\sin\\theta$, $y=-l\\cos\\theta$: $$L=\\frac{ml^2\\dot\\theta^2}{2}+mgl\\cos\\theta$$",
+    "Tenglama (ip tarangligi kirmaydi): $$ml^2\\ddot\\theta+mgl\\sin\\theta=0$$",
+    "Kichik burchaklarda $\\sin\\theta\\approx\\theta$: $$\\omega=\\sqrt{\\frac{g}{l}}=5\\ \\mathrm{rad/s},\\qquad T=\\frac{2\\pi}{5}\\approx1.26\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "$x=l\\sin\\theta$, $y=-l\\cos\\theta$: $$L=\\frac{ml^2\\dot\\theta^2}{2}+mgl\\cos\\theta$$",
+    "Уравнение (натяжение нити не входит): $$ml^2\\ddot\\theta+mgl\\sin\\theta=0$$",
+    "При малых углах $\\sin\\theta\\approx\\theta$: $$\\omega=\\sqrt{\\frac{g}{l}}=5\\ \\mathrm{rad/s},\\qquad T=\\frac{2\\pi}{5}\\approx1.26\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "$x=l\\sin\\theta$, $y=-l\\cos\\theta$: $$L=\\frac{ml^2\\dot\\theta^2}{2}+mgl\\cos\\theta$$",
+    "Equation (the string tension does not enter): $$ml^2\\ddot\\theta+mgl\\sin\\theta=0$$",
+    "For small angles $\\sin\\theta\\approx\\theta$: $$\\omega=\\sqrt{\\frac{g}{l}}=5\\ \\mathrm{rad/s},\\qquad T=\\frac{2\\pi}{5}\\approx1.26\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lagranj funksiyasi: $L=T-U$",
+    "ru": "Функция Лагранжа: $L=T-U$",
+    "en": "Lagrangian: $L=T-U$"
+   },
+   {
+    "uz": "Eyler–Lagranj tenglamasi: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$",
+    "ru": "Уравнение Эйлера–Лагранжа: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$",
+    "en": "Euler–Lagrange equation: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Lagranj usuli — mayatnik",
+   "ru": "Метод Лагранжа — маятник",
+   "en": "Lagrangian method — pendulum"
+  },
+  "answer": "\\ddot\\theta=-\\frac{g}{l}\\sin\\theta;\\ T\\approx1.26\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original (B2-L09, mayatnik)"
+ },
+ {
+  "id": "B2-L09-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Atvud mashinasida massalari $3\\ \\mathrm{kg}$ va $1\\ \\mathrm{kg}$ bo'lgan yuklar massasi $2\\ \\mathrm{kg}$ bo'lgan disk shaklidagi blok orqali o'tgan ipga osilgan; ip blokda sirpanmaydi. Lagranj usulida tezlanishni va ip tarangliklarini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "В машине Атвуда грузы массами $3\\ \\mathrm{kg}$ и $1\\ \\mathrm{kg}$ подвешены на нити, перекинутой через блок-диск массой $2\\ \\mathrm{kg}$; нить по блоку не скользит. Методом Лагранжа найдите ускорение и натяжения нити. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "In an Atwood machine, loads of $3\\ \\mathrm{kg}$ and $1\\ \\mathrm{kg}$ hang from a string over a disc-shaped pulley of mass $2\\ \\mathrm{kg}$; the string does not slip. Using the Lagrangian method find the acceleration and the string tensions. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L09-S04.png",
+  "solution": {
+   "uz": [
+    "Bitta koordinata $x$ (og'ir yukning pastga siljishi), blok burchak tezligi $\\frac{\\dot x}{R}$: $$L=\\frac{1}{2}\\left(m_1+m_2+\\frac{M}{2}\\right)\\dot x^2+(m_1-m_2)gx$$",
+    "Tenglama: $$a=\\frac{(m_1-m_2)g}{m_1+m_2+\\frac{M}{2}}=\\frac{20}{5}=4\\ \\mathrm{m/s^2}$$",
+    "Tarangliklar har bir yuk uchun Nyuton qonunidan (Lagranj usulida ular kirmagan edi): $$T_1=m_1(g-a)=18\\ \\mathrm{N},\\qquad T_2=m_2(g+a)=14\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Одна координата $x$ (смещение тяжёлого груза вниз), угловая скорость блока $\\frac{\\dot x}{R}$: $$L=\\frac{1}{2}\\left(m_1+m_2+\\frac{M}{2}\\right)\\dot x^2+(m_1-m_2)gx$$",
+    "Уравнение: $$a=\\frac{(m_1-m_2)g}{m_1+m_2+\\frac{M}{2}}=\\frac{20}{5}=4\\ \\mathrm{m/s^2}$$",
+    "Натяжения — из закона Ньютона для каждого груза (в методе Лагранжа они не входили): $$T_1=m_1(g-a)=18\\ \\mathrm{N},\\qquad T_2=m_2(g+a)=14\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "One coordinate $x$ (the heavy load's downward displacement); the pulley's angular velocity is $\\frac{\\dot x}{R}$: $$L=\\frac{1}{2}\\left(m_1+m_2+\\frac{M}{2}\\right)\\dot x^2+(m_1-m_2)gx$$",
+    "Equation: $$a=\\frac{(m_1-m_2)g}{m_1+m_2+\\frac{M}{2}}=\\frac{20}{5}=4\\ \\mathrm{m/s^2}$$",
+    "The tensions follow from Newton's law for each load (they did not enter the Lagrangian method): $$T_1=m_1(g-a)=18\\ \\mathrm{N},\\qquad T_2=m_2(g+a)=14\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lagranj funksiyasi: $L=T-U$",
+    "ru": "Функция Лагранжа: $L=T-U$",
+    "en": "Lagrangian: $L=T-U$"
+   },
+   {
+    "uz": "Eyler–Lagranj tenglamasi: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$",
+    "ru": "Уравнение Эйлера–Лагранжа: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$",
+    "en": "Euler–Lagrange equation: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Atvud mashinasi, massali blok",
+   "ru": "Машина Атвуда, массивный блок",
+   "en": "Atwood machine, massive pulley"
+  },
+  "answer": "a=4\\ \\mathrm{m/s^2};\\ T_1=18\\ \\mathrm{N},\\ T_2=14\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.5 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L09-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Silliq gorizontal stolda massasi $M=3m$, qiyalik burchagi $30^\\circ$ bo'lgan pona turibdi; uning silliq sirtida massasi $m$ brusok sirpanadi. Lagranj usulida ponaning va brusokning (ponaga nisbatan) tezlanishlarini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "На гладком горизонтальном столе стоит клин массой $M=3m$ с углом $30^\\circ$; по его гладкой поверхности скользит брусок массой $m$. Методом Лагранжа найдите ускорение клина и ускорение бруска относительно клина. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A wedge of mass $M=3m$ and angle $30^\\circ$ stands on a smooth horizontal table; a block of mass $m$ slides on its smooth face. Using the Lagrangian method find the wedge's acceleration and the block's acceleration relative to the wedge. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L09-S05.png",
+  "solution": {
+   "uz": [
+    "Koordinatalar: pona siljishi $X$, brusokning pona bo'ylab pastga siljishi $s$: $$L=\\frac{M+m}{2}\\dot X^2+\\frac{m}{2}\\dot s^2+m\\dot X\\dot s\\cos\\alpha+mgs\\sin\\alpha$$",
+    "$X$ siklik: $(M+m)\\ddot X+m\\ddot s\\cos\\alpha=0$; $s$ uchun: $m\\ddot s+m\\ddot X\\cos\\alpha=mg\\sin\\alpha$: $$\\ddot s=\\frac{(M+m)g\\sin\\alpha}{M+m\\sin^2\\alpha}=\\frac{20}{3.25}\\approx6.15\\ \\mathrm{m/s^2}$$",
+    "Pona tezlanishi (brusokka teskari tomonga): $$|\\ddot X|=\\frac{m\\ddot s\\cos\\alpha}{M+m}\\approx1.33\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Координаты: смещение клина $X$, смещение бруска вниз вдоль клина $s$: $$L=\\frac{M+m}{2}\\dot X^2+\\frac{m}{2}\\dot s^2+m\\dot X\\dot s\\cos\\alpha+mgs\\sin\\alpha$$",
+    "$X$ циклическая: $(M+m)\\ddot X+m\\ddot s\\cos\\alpha=0$; для $s$: $m\\ddot s+m\\ddot X\\cos\\alpha=mg\\sin\\alpha$: $$\\ddot s=\\frac{(M+m)g\\sin\\alpha}{M+m\\sin^2\\alpha}=\\frac{20}{3.25}\\approx6.15\\ \\mathrm{m/s^2}$$",
+    "Ускорение клина (в сторону, противоположную бруску): $$|\\ddot X|=\\frac{m\\ddot s\\cos\\alpha}{M+m}\\approx1.33\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "Coordinates: the wedge displacement $X$ and the block's displacement down the wedge $s$: $$L=\\frac{M+m}{2}\\dot X^2+\\frac{m}{2}\\dot s^2+m\\dot X\\dot s\\cos\\alpha+mgs\\sin\\alpha$$",
+    "$X$ is cyclic: $(M+m)\\ddot X+m\\ddot s\\cos\\alpha=0$; for $s$: $m\\ddot s+m\\ddot X\\cos\\alpha=mg\\sin\\alpha$: $$\\ddot s=\\frac{(M+m)g\\sin\\alpha}{M+m\\sin^2\\alpha}=\\frac{20}{3.25}\\approx6.15\\ \\mathrm{m/s^2}$$",
+    "The wedge's acceleration (opposite to the block): $$|\\ddot X|=\\frac{m\\ddot s\\cos\\alpha}{M+m}\\approx1.33\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lagranj funksiyasi: $L=T-U$",
+    "ru": "Функция Лагранжа: $L=T-U$",
+    "en": "Lagrangian: $L=T-U$"
+   },
+   {
+    "uz": "Siklik koordinata: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "ru": "Циклическая координата: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "en": "Cyclic coordinate: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Harakatlanuvchi pona",
+   "ru": "Подвижный клин",
+   "en": "Movable wedge"
+  },
+  "answer": "|\\ddot X|\\approx1.33\\ \\mathrm{m/s^2};\\ \\ddot s\\approx6.15\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B2-L09, harakatlanuvchi pona)"
+ },
+ {
+  "id": "B2-L09-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $10\\ \\mathrm{cm}$ bo'lgan vertikal halqa vertikal diametri atrofida $20\\ \\mathrm{rad/s}$ burchak tezlik bilan aylantiriladi; munchoq halqa bo'ylab ishqalanishsiz sirpanadi. Munchoqning turg'un muvozanat holatlarini va ular atrofidagi kichik tebranishlar chastotasini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Вертикальное кольцо радиусом $10\\ \\mathrm{cm}$ вращается вокруг вертикального диаметра с угловой скоростью $20\\ \\mathrm{rad/s}$; бусинка скользит по кольцу без трения. Найдите устойчивые положения равновесия бусинки и частоту малых колебаний около них. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A vertical hoop of radius $10\\ \\mathrm{cm}$ rotates about its vertical diameter at $20\\ \\mathrm{rad/s}$; a bead slides on the hoop without friction. Find the bead's stable equilibrium positions and the frequency of small oscillations about them. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L09-S06.png",
+  "solution": {
+   "uz": [
+    "Lagranj funksiyasi va effektiv potensial ($\\theta$ — pastdan): $$L=\\frac{mR^2}{2}(\\dot\\theta^2+\\Omega^2\\sin^2\\theta)+mgR\\cos\\theta$$",
+    "$\\Omega^2=400>\\frac{g}{R}=100$ — pastki nuqta turg'unmas; muvozanat: $$\\cos\\theta_0=\\frac{g}{\\Omega^2R}=0.25,\\qquad \\theta_0\\approx\\pm75.5^\\circ$$",
+    "Ikkinchi hosiladan kichik tebranishlar chastotasi: $$\\omega^2=\\Omega^2\\sin^2\\theta_0=400\\cdot\\frac{15}{16}=375,\\qquad \\omega\\approx19.4\\ \\mathrm{rad/s}$$"
+   ],
+   "ru": [
+    "Функция Лагранжа и эффективный потенциал ($\\theta$ — от нижней точки): $$L=\\frac{mR^2}{2}(\\dot\\theta^2+\\Omega^2\\sin^2\\theta)+mgR\\cos\\theta$$",
+    "$\\Omega^2=400>\\frac{g}{R}=100$ — нижняя точка неустойчива; равновесие: $$\\cos\\theta_0=\\frac{g}{\\Omega^2R}=0.25,\\qquad \\theta_0\\approx\\pm75.5^\\circ$$",
+    "Частота малых колебаний — из второй производной: $$\\omega^2=\\Omega^2\\sin^2\\theta_0=400\\cdot\\frac{15}{16}=375,\\qquad \\omega\\approx19.4\\ \\mathrm{rad/s}$$"
+   ],
+   "en": [
+    "Lagrangian and effective potential ($\\theta$ from the bottom): $$L=\\frac{mR^2}{2}(\\dot\\theta^2+\\Omega^2\\sin^2\\theta)+mgR\\cos\\theta$$",
+    "$\\Omega^2=400>\\frac{g}{R}=100$ — the bottom is unstable; equilibrium: $$\\cos\\theta_0=\\frac{g}{\\Omega^2R}=0.25,\\qquad \\theta_0\\approx\\pm75.5^\\circ$$",
+    "The small-oscillation frequency from the second derivative: $$\\omega^2=\\Omega^2\\sin^2\\theta_0=400\\cdot\\frac{15}{16}=375,\\qquad \\omega\\approx19.4\\ \\mathrm{rad/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Aylanuvchi bog'lanish: $T=\\frac{m}{2}(\\dot r^2+\\Omega^2r^2)$",
+    "ru": "Вращающаяся связь: $T=\\frac{m}{2}(\\dot r^2+\\Omega^2r^2)$",
+    "en": "Rotating constraint: $T=\\frac{m}{2}(\\dot r^2+\\Omega^2r^2)$"
+   },
+   {
+    "uz": "Muvozanat: $\\frac{\\partial\\tilde U}{\\partial q}=0$",
+    "ru": "Равновесие: $\\frac{\\partial\\tilde U}{\\partial q}=0$",
+    "en": "Equilibrium: $\\frac{\\partial\\tilde U}{\\partial q}=0$"
+   },
+   {
+    "uz": "Turg'unlik: $\\tilde U''(q_0)>0$",
+    "ru": "Устойчивость: $\\tilde U''(q_0)>0$",
+    "en": "Stability: $\\tilde U''(q_0)>0$"
+   }
+  ],
+  "basis": {
+   "uz": "Aylanuvchi halqadagi munchoq",
+   "ru": "Бусинка на вращающемся кольце",
+   "en": "Bead on a rotating hoop"
+  },
+  "answer": "\\cos\\theta_0=0.25;\\ \\omega\\approx19.4\\ \\mathrm{rad/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.5 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L09-S07",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Zarra uchi pastga qaragan, yarim burchagi $45^\\circ$ bo'lgan silliq konusning ichki sirti bo'ylab harakatlanadi (o'qi vertikal). Lagranj funksiyasini $r$ (o'qdan masofa) va $\\varphi$ orqali yozing. Zarra uchdan $0.4\\ \\mathrm{m}$ balandlikda aylana bo'ylab harakatlanishi uchun burchak tezlik va tezlik qancha bo'lishi kerak? Aylanaga yaqin orbitada radial tebranishlar chastotasini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Частица движется по внутренней поверхности гладкого конуса с вершиной вниз и полууглом $45^\\circ$ (ось вертикальна). Запишите функцию Лагранжа через $r$ (расстояние от оси) и $\\varphi$. Какими должны быть угловая скорость и скорость, чтобы частица двигалась по окружности на высоте $0.4\\ \\mathrm{m}$ над вершиной? Найдите частоту радиальных колебаний на орбите, близкой к круговой. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A particle moves on the inside of a smooth cone with its apex down and half-angle $45^\\circ$ (vertical axis). Write the Lagrangian in terms of $r$ (distance from the axis) and $\\varphi$. What angular velocity and speed are needed for circular motion $0.4\\ \\mathrm{m}$ above the apex? Find the frequency of radial oscillations on a nearly circular orbit. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L09-S07.png",
+  "solution": {
+   "uz": [
+    "Sirt $z=r\\,\\mathrm{ctg}\\,\\alpha$, shuning uchun $\\dot z=\\dot r\\,\\mathrm{ctg}\\,\\alpha$: $$L=\\frac{m}{2}\\left(\\frac{\\dot r^2}{\\sin^2\\alpha}+r^2\\dot\\varphi^2\\right)-mgr\\,\\mathrm{ctg}\\,\\alpha$$",
+    "$\\varphi$ siklik — $p_\\varphi=mr^2\\dot\\varphi$ saqlanadi; aylana uchun $\\ddot r=0$: $$r\\dot\\varphi^2=g\\,\\mathrm{ctg}\\,\\alpha\\ \\Rightarrow\\ \\dot\\varphi=\\sqrt{\\frac{10}{0.4}}=5\\ \\mathrm{rad/s},\\qquad v=2\\ \\mathrm{m/s}$$",
+    "Radial tenglama $\\frac{\\ddot r}{\\sin^2\\alpha}=\\frac{p_\\varphi^2}{m^2r^3}-g\\,\\mathrm{ctg}\\,\\alpha$ ni chiziqlashtiramiz: $$\\omega_r^2=3\\dot\\varphi^2\\sin^2\\alpha=37.5,\\qquad \\omega_r\\approx6.1\\ \\mathrm{rad/s}$$",
+    "$\\frac{\\omega_r}{\\dot\\varphi}=\\sqrt{1.5}$ — butun son emas, orbita yopilmaydi."
+   ],
+   "ru": [
+    "Поверхность $z=r\\,\\mathrm{ctg}\\,\\alpha$, поэтому $\\dot z=\\dot r\\,\\mathrm{ctg}\\,\\alpha$: $$L=\\frac{m}{2}\\left(\\frac{\\dot r^2}{\\sin^2\\alpha}+r^2\\dot\\varphi^2\\right)-mgr\\,\\mathrm{ctg}\\,\\alpha$$",
+    "$\\varphi$ циклическая — сохраняется $p_\\varphi=mr^2\\dot\\varphi$; для окружности $\\ddot r=0$: $$r\\dot\\varphi^2=g\\,\\mathrm{ctg}\\,\\alpha\\ \\Rightarrow\\ \\dot\\varphi=\\sqrt{\\frac{10}{0.4}}=5\\ \\mathrm{rad/s},\\qquad v=2\\ \\mathrm{m/s}$$",
+    "Линеаризуем радиальное уравнение $\\frac{\\ddot r}{\\sin^2\\alpha}=\\frac{p_\\varphi^2}{m^2r^3}-g\\,\\mathrm{ctg}\\,\\alpha$: $$\\omega_r^2=3\\dot\\varphi^2\\sin^2\\alpha=37.5,\\qquad \\omega_r\\approx6.1\\ \\mathrm{rad/s}$$",
+    "$\\frac{\\omega_r}{\\dot\\varphi}=\\sqrt{1.5}$ — не целое, орбита не замыкается."
+   ],
+   "en": [
+    "The surface is $z=r\\,\\mathrm{ctg}\\,\\alpha$, so $\\dot z=\\dot r\\,\\mathrm{ctg}\\,\\alpha$: $$L=\\frac{m}{2}\\left(\\frac{\\dot r^2}{\\sin^2\\alpha}+r^2\\dot\\varphi^2\\right)-mgr\\,\\mathrm{ctg}\\,\\alpha$$",
+    "$\\varphi$ is cyclic — $p_\\varphi=mr^2\\dot\\varphi$ is conserved; for a circle $\\ddot r=0$: $$r\\dot\\varphi^2=g\\,\\mathrm{ctg}\\,\\alpha\\ \\Rightarrow\\ \\dot\\varphi=\\sqrt{\\frac{10}{0.4}}=5\\ \\mathrm{rad/s},\\qquad v=2\\ \\mathrm{m/s}$$",
+    "Linearize the radial equation $\\frac{\\ddot r}{\\sin^2\\alpha}=\\frac{p_\\varphi^2}{m^2r^3}-g\\,\\mathrm{ctg}\\,\\alpha$: $$\\omega_r^2=3\\dot\\varphi^2\\sin^2\\alpha=37.5,\\qquad \\omega_r\\approx6.1\\ \\mathrm{rad/s}$$",
+    "$\\frac{\\omega_r}{\\dot\\varphi}=\\sqrt{1.5}$ — not an integer, so the orbit does not close."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lagranj funksiyasi: $L=T-U$",
+    "ru": "Функция Лагранжа: $L=T-U$",
+    "en": "Lagrangian: $L=T-U$"
+   },
+   {
+    "uz": "Siklik koordinata: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "ru": "Циклическая координата: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "en": "Cyclic coordinate: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$"
+   },
+   {
+    "uz": "Kichik tebranishlar: $\\omega^2=\\frac{K}{M}$",
+    "ru": "Малые колебания: $\\omega^2=\\frac{K}{M}$",
+    "en": "Small oscillations: $\\omega^2=\\frac{K}{M}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Konus ichidagi harakat",
+   "ru": "Движение внутри конуса",
+   "en": "Motion inside a cone"
+  },
+  "answer": "\\dot\\varphi=5\\ \\mathrm{rad/s};\\ v=2\\ \\mathrm{m/s};\\ \\omega_r\\approx6.1\\ \\mathrm{rad/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.5 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L09-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Tekislikdagi zarraning Lagranj funksiyasi $L=\\frac{m}{2}(\\dot x^2+\\dot y^2)-k(x-2y)^2$. Qaysi siljishga nisbatan $L$ simmetrik? Noter teoremasiga ko'ra qanday kattalik saqlanadi? Buni harakat tenglamalaridan tekshiring.",
+   "ru": "Функция Лагранжа частицы на плоскости $L=\\frac{m}{2}(\\dot x^2+\\dot y^2)-k(x-2y)^2$. Относительно какого сдвига $L$ симметрична? Какая величина сохраняется по теореме Нётер? Проверьте это по уравнениям движения.",
+   "en": "A particle in a plane has Lagrangian $L=\\frac{m}{2}(\\dot x^2+\\dot y^2)-k(x-2y)^2$. Under which shift is $L$ symmetric? What quantity is conserved by Noether's theorem? Check this from the equations of motion."
+  },
+  "figure": "figures/B2-L09-S08.png",
+  "solution": {
+   "uz": [
+    "$x\\to x+2\\epsilon$, $y\\to y+\\epsilon$ da $x-2y$ o'zgarmaydi, kinetik energiya ham: $$a=(2,\\ 1)\\ \\Rightarrow\\ 2p_x+p_y=\\mathrm{const}$$",
+    "Tenglamalar: $m\\ddot x=-2k(x-2y)$, $m\\ddot y=4k(x-2y)$: $$2m\\ddot x+m\\ddot y=0\\ \\Rightarrow\\ \\frac{d}{dt}(2m\\dot x+m\\dot y)=0$$"
+   ],
+   "ru": [
+    "При $x\\to x+2\\epsilon$, $y\\to y+\\epsilon$ величина $x-2y$ не меняется, кинетическая энергия тоже: $$a=(2,\\ 1)\\ \\Rightarrow\\ 2p_x+p_y=\\mathrm{const}$$",
+    "Уравнения: $m\\ddot x=-2k(x-2y)$, $m\\ddot y=4k(x-2y)$: $$2m\\ddot x+m\\ddot y=0\\ \\Rightarrow\\ \\frac{d}{dt}(2m\\dot x+m\\dot y)=0$$"
+   ],
+   "en": [
+    "Under $x\\to x+2\\epsilon$, $y\\to y+\\epsilon$ the combination $x-2y$ is unchanged, and so is the kinetic energy: $$a=(2,\\ 1)\\ \\Rightarrow\\ 2p_x+p_y=\\mathrm{const}$$",
+    "Equations: $m\\ddot x=-2k(x-2y)$, $m\\ddot y=4k(x-2y)$: $$2m\\ddot x+m\\ddot y=0\\ \\Rightarrow\\ \\frac{d}{dt}(2m\\dot x+m\\dot y)=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Noter teoremasi: $\\delta x_i=\\epsilon a_i,\\ \\delta L=0\\Rightarrow\\sum a_ip_i=\\mathrm{const}$",
+    "ru": "Теорема Нётер: $\\delta x_i=\\epsilon a_i,\\ \\delta L=0\\Rightarrow\\sum a_ip_i=\\mathrm{const}$",
+    "en": "Noether's theorem: $\\delta x_i=\\epsilon a_i,\\ \\delta L=0\\Rightarrow\\sum a_ip_i=\\mathrm{const}$"
+   },
+   {
+    "uz": "Eyler–Lagranj tenglamasi: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$",
+    "ru": "Уравнение Эйлера–Лагранжа: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$",
+    "en": "Euler–Lagrange equation: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$"
+   }
+  ],
+  "basis": {
+   "uz": "Noter teoremasi, yashirin simmetriya",
+   "ru": "Теорема Нётер, скрытая симметрия",
+   "en": "Noether's theorem, hidden symmetry"
+  },
+  "answer": "2p_x+p_y=\\mathrm{const}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original (B2-L09, Noter teoremasi)"
+ },
+ {
+  "id": "B2-L09-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Aylanuvchi halqadagi munchoq ($R$, $\\Omega$ o'zgarmas) uchun energiya funksiyasi $h$ ni toping va u saqlanishini ko'rsating. To'liq energiya $E$ saqlanadimi? $\\frac{dE}{dt}$ ni toping va uning fizik ma'nosini tushuntiring.",
+   "ru": "Для бусинки на вращающемся кольце ($R$, $\\Omega$ постоянны) найдите функцию энергии $h$ и покажите, что она сохраняется. Сохраняется ли полная энергия $E$? Найдите $\\frac{dE}{dt}$ и объясните её физический смысл.",
+   "en": "For the bead on the rotating hoop ($R$ and $\\Omega$ constant) find the energy function $h$ and show that it is conserved. Is the total energy $E$ conserved? Find $\\frac{dE}{dt}$ and explain its physical meaning."
+  },
+  "figure": "figures/B2-L09-S09.png",
+  "solution": {
+   "uz": [
+    "Energiya funksiyasi: $$h=\\dot\\theta\\frac{\\partial L}{\\partial\\dot\\theta}-L=\\frac{mR^2\\dot\\theta^2}{2}-\\frac{mR^2\\Omega^2\\sin^2\\theta}{2}-mgR\\cos\\theta$$",
+    "$L$ vaqtga oshkor bog'liq emas — $h$ saqlanadi: $$\\frac{dh}{dt}=-\\frac{\\partial L}{\\partial t}=0$$",
+    "To'liq energiya $E=h+mR^2\\Omega^2\\sin^2\\theta$ (bog'lanish vaqtga bog'liq): $$\\frac{dE}{dt}=2mR^2\\Omega^2\\sin\\theta\\cos\\theta\\,\\dot\\theta$$",
+    "Bu — halqani o'zgarmas $\\Omega$ da ushlab turuvchi motor quvvati: munchoq uzoqlashsa, inersiya momenti ortadi va motor ish bajaradi."
+   ],
+   "ru": [
+    "Функция энергии: $$h=\\dot\\theta\\frac{\\partial L}{\\partial\\dot\\theta}-L=\\frac{mR^2\\dot\\theta^2}{2}-\\frac{mR^2\\Omega^2\\sin^2\\theta}{2}-mgR\\cos\\theta$$",
+    "$L$ явно не зависит от времени — $h$ сохраняется: $$\\frac{dh}{dt}=-\\frac{\\partial L}{\\partial t}=0$$",
+    "Полная энергия $E=h+mR^2\\Omega^2\\sin^2\\theta$ (связь зависит от времени): $$\\frac{dE}{dt}=2mR^2\\Omega^2\\sin\\theta\\cos\\theta\\,\\dot\\theta$$",
+    "Это мощность мотора, поддерживающего постоянную $\\Omega$: когда бусинка удаляется, момент инерции растёт и мотор совершает работу."
+   ],
+   "en": [
+    "Energy function: $$h=\\dot\\theta\\frac{\\partial L}{\\partial\\dot\\theta}-L=\\frac{mR^2\\dot\\theta^2}{2}-\\frac{mR^2\\Omega^2\\sin^2\\theta}{2}-mgR\\cos\\theta$$",
+    "$L$ does not depend explicitly on time — $h$ is conserved: $$\\frac{dh}{dt}=-\\frac{\\partial L}{\\partial t}=0$$",
+    "The total energy $E=h+mR^2\\Omega^2\\sin^2\\theta$ (the constraint depends on time): $$\\frac{dE}{dt}=2mR^2\\Omega^2\\sin\\theta\\cos\\theta\\,\\dot\\theta$$",
+    "This is the power of the motor keeping $\\Omega$ constant: as the bead moves out, the moment of inertia grows and the motor does work."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Energiya funksiyasi: $h=\\sum\\dot q\\frac{\\partial L}{\\partial\\dot q}-L$",
+    "ru": "Функция энергии: $h=\\sum\\dot q\\frac{\\partial L}{\\partial\\dot q}-L$",
+    "en": "Energy function: $h=\\sum\\dot q\\frac{\\partial L}{\\partial\\dot q}-L$"
+   },
+   {
+    "uz": "$h$ saqlanishi: $\\frac{dh}{dt}=-\\frac{\\partial L}{\\partial t}$",
+    "ru": "Сохранение $h$: $\\frac{dh}{dt}=-\\frac{\\partial L}{\\partial t}$",
+    "en": "Conservation of $h$: $\\frac{dh}{dt}=-\\frac{\\partial L}{\\partial t}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Energiya funksiyasi va to'liq energiya",
+   "ru": "Функция энергии и полная энергия",
+   "en": "Energy function and total energy"
+  },
+  "answer": "h=\\mathrm{const};\\ \\frac{dE}{dt}=2mR^2\\Omega^2\\sin\\theta\\cos\\theta\\,\\dot\\theta",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original (B2-L09, energiya funksiyasi)"
+ },
+ {
+  "id": "B2-L09-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki bir xil mayatnikdan (massa $m$, uzunlik $0.5\\ \\mathrm{m}$) iborat qo'sh mayatnik vertikal tekislikda kichik tebranishlar qiladi. Massa va bikrlik matritsalarini yozing, normal chastotalarni va amplitudalar nisbatini toping. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Двойной маятник из двух одинаковых маятников (масса $m$, длина $0.5\\ \\mathrm{m}$) совершает малые колебания в вертикальной плоскости. Запишите матрицы масс и жёсткости, найдите нормальные частоты и отношения амплитуд. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A double pendulum of two identical pendulums (mass $m$, length $0.5\\ \\mathrm{m}$) makes small oscillations in a vertical plane. Write the mass and stiffness matrices and find the normal frequencies and amplitude ratios. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L09-S10.png",
+  "solution": {
+   "uz": [
+    "Kichik burchaklarda $T$ va $U$ ($ml^2$ va $mgl$ ko'paytuvchilarsiz): $$M=\\begin{pmatrix}2&1\\\\1&1\\end{pmatrix},\\qquad K=\\frac{g}{l}\\begin{pmatrix}2&0\\\\0&1\\end{pmatrix}$$",
+    "Determinant tenglamasi: $$\\omega^4-4\\frac{g}{l}\\omega^2+2\\frac{g^2}{l^2}=0\\ \\Rightarrow\\ \\omega^2=(2\\mp\\sqrt{2})\\cdot20$$",
+    "Chastotalar va amplitudalar nisbati: $$\\omega_1\\approx3.42,\\ \\ \\frac{\\theta_2}{\\theta_1}=\\sqrt{2};\\qquad \\omega_2\\approx8.26\\ \\mathrm{rad/s},\\ \\ \\frac{\\theta_2}{\\theta_1}=-\\sqrt{2}$$"
+   ],
+   "ru": [
+    "При малых углах $T$ и $U$ (без множителей $ml^2$ и $mgl$): $$M=\\begin{pmatrix}2&1\\\\1&1\\end{pmatrix},\\qquad K=\\frac{g}{l}\\begin{pmatrix}2&0\\\\0&1\\end{pmatrix}$$",
+    "Уравнение на определитель: $$\\omega^4-4\\frac{g}{l}\\omega^2+2\\frac{g^2}{l^2}=0\\ \\Rightarrow\\ \\omega^2=(2\\mp\\sqrt{2})\\cdot20$$",
+    "Частоты и отношения амплитуд: $$\\omega_1\\approx3.42,\\ \\ \\frac{\\theta_2}{\\theta_1}=\\sqrt{2};\\qquad \\omega_2\\approx8.26\\ \\mathrm{rad/s},\\ \\ \\frac{\\theta_2}{\\theta_1}=-\\sqrt{2}$$"
+   ],
+   "en": [
+    "For small angles $T$ and $U$ (without the factors $ml^2$ and $mgl$): $$M=\\begin{pmatrix}2&1\\\\1&1\\end{pmatrix},\\qquad K=\\frac{g}{l}\\begin{pmatrix}2&0\\\\0&1\\end{pmatrix}$$",
+    "The determinant equation: $$\\omega^4-4\\frac{g}{l}\\omega^2+2\\frac{g^2}{l^2}=0\\ \\Rightarrow\\ \\omega^2=(2\\mp\\sqrt{2})\\cdot20$$",
+    "Frequencies and amplitude ratios: $$\\omega_1\\approx3.42,\\ \\ \\frac{\\theta_2}{\\theta_1}=\\sqrt{2};\\qquad \\omega_2\\approx8.26\\ \\mathrm{rad/s},\\ \\ \\frac{\\theta_2}{\\theta_1}=-\\sqrt{2}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Normal chastotalar: $\\det(K-\\omega^2M)=0$",
+    "ru": "Нормальные частоты: $\\det(K-\\omega^2M)=0$",
+    "en": "Normal frequencies: $\\det(K-\\omega^2M)=0$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Qo'sh mayatnik normal modalari",
+   "ru": "Нормальные моды двойного маятника",
+   "en": "Normal modes of a double pendulum"
+  },
+  "answer": "\\omega_1\\approx3.42;\\ \\omega_2\\approx8.26\\ \\mathrm{rad/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.7.1 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L09-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Gorizontal tekislikda vertikal o'q atrofida $5\\ \\mathrm{rad/s}$ bilan aylanayotgan uzunligi $0.5\\ \\mathrm{m}$ silliq sterjenda munchoq o'qdan $0.1\\ \\mathrm{m}$ masofada nisbiy tinch holatda qo'yib yuborildi. Munchoq qancha vaqtda sterjen uchiga yetadi va u yerda (yerga nisbatan) tezligi qancha?",
+   "ru": "Бусинку отпустили в состоянии относительного покоя на расстоянии $0.1\\ \\mathrm{m}$ от оси на гладком стержне длиной $0.5\\ \\mathrm{m}$, вращающемся в горизонтальной плоскости вокруг вертикальной оси с угловой скоростью $5\\ \\mathrm{rad/s}$. За какое время бусинка достигнет конца стержня и какова там её скорость (относительно земли)?",
+   "en": "A bead is released at relative rest $0.1\\ \\mathrm{m}$ from the axis on a smooth rod of length $0.5\\ \\mathrm{m}$ rotating in a horizontal plane about a vertical axis at $5\\ \\mathrm{rad/s}$. How long does the bead take to reach the end of the rod, and what is its speed there (relative to the ground)?"
+  },
+  "figure": "figures/B2-L09-S11.png",
+  "solution": {
+   "uz": [
+    "Koordinata $r$, bog'lanish $\\varphi=\\Omega t$: $$L=\\frac{m}{2}(\\dot r^2+\\Omega^2r^2)\\ \\Rightarrow\\ \\ddot r=\\Omega^2r$$",
+    "Boshlang'ich shartlar $r(0)=r_0$, $\\dot r(0)=0$: $$r=r_0\\cosh\\Omega t,\\qquad \\cosh5t=5\\ \\Rightarrow\\ t=\\frac{\\ln(5+\\sqrt{24})}{5}\\approx0.46\\ \\mathrm{s}$$",
+    "Uchdagi tezlik — radial va aylanma tashkil etuvchilar: $$\\dot r=r_0\\Omega\\sinh\\Omega t=0.5\\sqrt{24}\\approx2.45\\ \\mathrm{m/s},\\qquad v=\\sqrt{2.45^2+2.5^2}\\approx3.5\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Координата $r$, связь $\\varphi=\\Omega t$: $$L=\\frac{m}{2}(\\dot r^2+\\Omega^2r^2)\\ \\Rightarrow\\ \\ddot r=\\Omega^2r$$",
+    "Начальные условия $r(0)=r_0$, $\\dot r(0)=0$: $$r=r_0\\cosh\\Omega t,\\qquad \\cosh5t=5\\ \\Rightarrow\\ t=\\frac{\\ln(5+\\sqrt{24})}{5}\\approx0.46\\ \\mathrm{s}$$",
+    "Скорость на конце — радиальная и вращательная составляющие: $$\\dot r=r_0\\Omega\\sinh\\Omega t=0.5\\sqrt{24}\\approx2.45\\ \\mathrm{m/s},\\qquad v=\\sqrt{2.45^2+2.5^2}\\approx3.5\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Coordinate $r$, constraint $\\varphi=\\Omega t$: $$L=\\frac{m}{2}(\\dot r^2+\\Omega^2r^2)\\ \\Rightarrow\\ \\ddot r=\\Omega^2r$$",
+    "Initial conditions $r(0)=r_0$, $\\dot r(0)=0$: $$r=r_0\\cosh\\Omega t,\\qquad \\cosh5t=5\\ \\Rightarrow\\ t=\\frac{\\ln(5+\\sqrt{24})}{5}\\approx0.46\\ \\mathrm{s}$$",
+    "Speed at the end — radial and rotational components: $$\\dot r=r_0\\Omega\\sinh\\Omega t=0.5\\sqrt{24}\\approx2.45\\ \\mathrm{m/s},\\qquad v=\\sqrt{2.45^2+2.5^2}\\approx3.5\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Aylanuvchi bog'lanish: $T=\\frac{m}{2}(\\dot r^2+\\Omega^2r^2)$",
+    "ru": "Вращающаяся связь: $T=\\frac{m}{2}(\\dot r^2+\\Omega^2r^2)$",
+    "en": "Rotating constraint: $T=\\frac{m}{2}(\\dot r^2+\\Omega^2r^2)$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Aylanuvchi sterjendagi munchoq",
+   "ru": "Бусинка на вращающемся стержне",
+   "en": "Bead on a rotating rod"
+  },
+  "answer": "t\\approx0.46\\ \\mathrm{s};\\ v\\approx3.5\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L09, aylanuvchi sterjen)"
+ },
+ {
+  "id": "B2-L09-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $0.2\\ \\mathrm{kg}$, uzunligi $1\\ \\mathrm{m}$ bo'lgan mayatnik vertikaldan $60^\\circ$ ga og'dirilib qo'yib yuborildi. Lagranj ko'paytuvchisi usulida ip tarangligini $\\theta$ ning funksiyasi sifatida toping; $\\theta=30^\\circ$ va eng pastki nuqtadagi qiymatlarini hisoblang. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Маятник массой $0.2\\ \\mathrm{kg}$ и длиной $1\\ \\mathrm{m}$ отклонили от вертикали на $60^\\circ$ и отпустили. Методом множителей Лагранжа найдите натяжение нити как функцию $\\theta$; вычислите его при $\\theta=30^\\circ$ и в нижней точке. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A pendulum of mass $0.2\\ \\mathrm{kg}$ and length $1\\ \\mathrm{m}$ is pulled $60^\\circ$ from the vertical and released. Using the Lagrange-multiplier method find the string tension as a function of $\\theta$; evaluate it at $\\theta=30^\\circ$ and at the lowest point. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L09-S12.png",
+  "solution": {
+   "uz": [
+    "$r$ ni erkin koordinata qoldiramiz, bog'lanish $f=r-l=0$: $$L=\\frac{m}{2}(\\dot r^2+r^2\\dot\\theta^2)+mgr\\cos\\theta$$",
+    "$r$ uchun tenglama ($r=l$, $\\dot r=\\ddot r=0$): $$-ml\\dot\\theta^2-mg\\cos\\theta=\\lambda\\ \\Rightarrow\\ T=-\\lambda=mg\\cos\\theta+ml\\dot\\theta^2$$",
+    "Energiyadan $ml\\dot\\theta^2=2mg(\\cos\\theta-\\cos\\theta_0)$: $$T=mg(3\\cos\\theta-2\\cos\\theta_0);\\qquad T(30^\\circ)\\approx3.2\\ \\mathrm{N},\\quad T(0)=4\\ \\mathrm{N}$$"
+   ],
+   "ru": [
+    "Оставляем $r$ свободной координатой, связь $f=r-l=0$: $$L=\\frac{m}{2}(\\dot r^2+r^2\\dot\\theta^2)+mgr\\cos\\theta$$",
+    "Уравнение для $r$ ($r=l$, $\\dot r=\\ddot r=0$): $$-ml\\dot\\theta^2-mg\\cos\\theta=\\lambda\\ \\Rightarrow\\ T=-\\lambda=mg\\cos\\theta+ml\\dot\\theta^2$$",
+    "Из энергии $ml\\dot\\theta^2=2mg(\\cos\\theta-\\cos\\theta_0)$: $$T=mg(3\\cos\\theta-2\\cos\\theta_0);\\qquad T(30^\\circ)\\approx3.2\\ \\mathrm{N},\\quad T(0)=4\\ \\mathrm{N}$$"
+   ],
+   "en": [
+    "Keep $r$ as a free coordinate with the constraint $f=r-l=0$: $$L=\\frac{m}{2}(\\dot r^2+r^2\\dot\\theta^2)+mgr\\cos\\theta$$",
+    "The equation for $r$ ($r=l$, $\\dot r=\\ddot r=0$): $$-ml\\dot\\theta^2-mg\\cos\\theta=\\lambda\\ \\Rightarrow\\ T=-\\lambda=mg\\cos\\theta+ml\\dot\\theta^2$$",
+    "From energy $ml\\dot\\theta^2=2mg(\\cos\\theta-\\cos\\theta_0)$: $$T=mg(3\\cos\\theta-2\\cos\\theta_0);\\qquad T(30^\\circ)\\approx3.2\\ \\mathrm{N},\\quad T(0)=4\\ \\mathrm{N}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lagranj funksiyasi: $L=T-U$",
+    "ru": "Функция Лагранжа: $L=T-U$",
+    "en": "Lagrangian: $L=T-U$"
+   },
+   {
+    "uz": "Lagranj ko'paytuvchisi: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=\\lambda\\frac{\\partial f}{\\partial q}$",
+    "ru": "Множитель Лагранжа: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=\\lambda\\frac{\\partial f}{\\partial q}$",
+    "en": "Lagrange multiplier: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=\\lambda\\frac{\\partial f}{\\partial q}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Lagranj ko'paytuvchisi — bog'lanish kuchi",
+   "ru": "Множитель Лагранжа — сила связи",
+   "en": "Lagrange multiplier — constraint force"
+  },
+  "answer": "T=mg(3\\cos\\theta-2\\cos\\theta_0);\\ 3.2\\ \\mathrm{N};\\ 4\\ \\mathrm{N}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original (B2-L09, Lagranj ko'paytuvchisi)"
+ },
+ {
+  "id": "B2-L09-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Zaryadi $q$, massasi $m$ bo'lgan zarra bir jinsli $\\vec B=B\\vec k$ maydonda $xy$ tekisligida harakatlanadi; vektor potensial $\\vec A=Bx\\vec j$. Lagranj funksiyasini yozing, harakat tenglamalarini oling va ular Lorens kuchiga mos kelishini ko'rsating. Qaysi kanonik impuls saqlanadi? $\\frac{q}{m}=10^8\\ \\mathrm{C/kg}$, $B=0.5\\ \\mathrm{T}$ da aylanish chastotasi qancha?",
+   "ru": "Частица с зарядом $q$ и массой $m$ движется в плоскости $xy$ в однородном поле $\\vec B=B\\vec k$; векторный потенциал $\\vec A=Bx\\vec j$. Запишите функцию Лагранжа, получите уравнения движения и покажите, что они соответствуют силе Лоренца. Какой канонический импульс сохраняется? Какова частота обращения при $\\frac{q}{m}=10^8\\ \\mathrm{C/kg}$, $B=0.5\\ \\mathrm{T}$?",
+   "en": "A particle of charge $q$ and mass $m$ moves in the $xy$ plane in a uniform field $\\vec B=B\\vec k$; the vector potential is $\\vec A=Bx\\vec j$. Write the Lagrangian, derive the equations of motion and show that they match the Lorentz force. Which canonical momentum is conserved? What is the revolution frequency for $\\frac{q}{m}=10^8\\ \\mathrm{C/kg}$ and $B=0.5\\ \\mathrm{T}$?"
+  },
+  "figure": "figures/B2-L09-S13.png",
+  "solution": {
+   "uz": [
+    "$\\vec v\\cdot\\vec A=Bx\\dot y$: $$L=\\frac{m}{2}(\\dot x^2+\\dot y^2)+qBx\\dot y$$",
+    "Eyler–Lagranj tenglamalari: $$m\\ddot x=qB\\dot y,\\qquad m\\ddot y=-qB\\dot x\\quad (\\vec F=q\\vec v\\times\\vec B)$$",
+    "$y$ siklik — kanonik impuls saqlanadi (mexanik impuls $m\\dot y$ emas!): $$p_y=m\\dot y+qBx=\\mathrm{const}$$",
+    "Ikki tenglamadan $\\ddot{\\dot x}=-\\left(\\frac{qB}{m}\\right)^2\\dot x$: $$\\omega=\\frac{qB}{m}=5\\cdot10^7\\ \\mathrm{rad/s}$$"
+   ],
+   "ru": [
+    "$\\vec v\\cdot\\vec A=Bx\\dot y$: $$L=\\frac{m}{2}(\\dot x^2+\\dot y^2)+qBx\\dot y$$",
+    "Уравнения Эйлера–Лагранжа: $$m\\ddot x=qB\\dot y,\\qquad m\\ddot y=-qB\\dot x\\quad (\\vec F=q\\vec v\\times\\vec B)$$",
+    "$y$ циклическая — сохраняется канонический импульс (а не механический $m\\dot y$!): $$p_y=m\\dot y+qBx=\\mathrm{const}$$",
+    "Из двух уравнений $\\ddot{\\dot x}=-\\left(\\frac{qB}{m}\\right)^2\\dot x$: $$\\omega=\\frac{qB}{m}=5\\cdot10^7\\ \\mathrm{rad/s}$$"
+   ],
+   "en": [
+    "$\\vec v\\cdot\\vec A=Bx\\dot y$: $$L=\\frac{m}{2}(\\dot x^2+\\dot y^2)+qBx\\dot y$$",
+    "Euler–Lagrange equations: $$m\\ddot x=qB\\dot y,\\qquad m\\ddot y=-qB\\dot x\\quad (\\vec F=q\\vec v\\times\\vec B)$$",
+    "$y$ is cyclic — the canonical momentum is conserved (not the mechanical $m\\dot y$!): $$p_y=m\\dot y+qBx=\\mathrm{const}$$",
+    "From the two equations $\\ddot{\\dot x}=-\\left(\\frac{qB}{m}\\right)^2\\dot x$: $$\\omega=\\frac{qB}{m}=5\\cdot10^7\\ \\mathrm{rad/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "EM maydonda: $L=\\frac{mv^2}{2}-q\\phi+q\\vec v\\cdot\\vec A$",
+    "ru": "В ЭМ поле: $L=\\frac{mv^2}{2}-q\\phi+q\\vec v\\cdot\\vec A$",
+    "en": "In an EM field: $L=\\frac{mv^2}{2}-q\\phi+q\\vec v\\cdot\\vec A$"
+   },
+   {
+    "uz": "Eyler–Lagranj tenglamasi: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$",
+    "ru": "Уравнение Эйлера–Лагранжа: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$",
+    "en": "Euler–Lagrange equation: $\\frac{d}{dt}\\frac{\\partial L}{\\partial\\dot q}-\\frac{\\partial L}{\\partial q}=0$"
+   },
+   {
+    "uz": "Siklik koordinata: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "ru": "Циклическая координата: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "en": "Cyclic coordinate: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Magnit maydondagi zarra, kanonik impuls",
+   "ru": "Частица в магнитном поле, канонический импульс",
+   "en": "Particle in a magnetic field, canonical momentum"
+  },
+  "answer": "p_y=m\\dot y+qBx;\\ \\omega=5\\cdot10^7\\ \\mathrm{rad/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B2-L09, EM maydon)"
+ },
+ {
+  "id": "B2-L09-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $0.6\\ \\mathrm{m}$, massasi $m$ bo'lgan mayatnik silliq gorizontal rels bo'ylab erkin harakatlanadigan massasi $M=2m$ bo'lgan aravachaga osilgan. Kichik tebranishlar chastotasini toping. Mayatnik amplitudasi $\\theta_0$ bo'lsa, aravacha qanday amplituda bilan tebranadi? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Маятник длиной $0.6\\ \\mathrm{m}$ и массой $m$ подвешен к тележке массой $M=2m$, свободно движущейся по гладкому горизонтальному рельсу. Найдите частоту малых колебаний. С какой амплитудой колеблется тележка, если амплитуда маятника $\\theta_0$? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A pendulum of length $0.6\\ \\mathrm{m}$ and mass $m$ hangs from a cart of mass $M=2m$ moving freely on a smooth horizontal rail. Find the small-oscillation frequency. With what amplitude does the cart oscillate if the pendulum's amplitude is $\\theta_0$? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L09-S14.png",
+  "solution": {
+   "uz": [
+    "Koordinatalar $X$ va $\\theta$; kichik burchaklarda: $$L=\\frac{M+m}{2}\\dot X^2+ml\\dot X\\dot\\theta+\\frac{ml^2}{2}\\dot\\theta^2-\\frac{mgl}{2}\\theta^2$$",
+    "$X$ siklik: $(M+m)\\dot X+ml\\dot\\theta=0$; buni $\\theta$ tenglamasiga qo'yamiz: $$\\omega^2=\\frac{g}{l}\\cdot\\frac{M+m}{M}=\\frac{10}{0.6}\\cdot1.5=25,\\qquad \\omega=5\\ \\mathrm{rad/s}$$",
+    "Massa markazi qo'zg'almas — aravacha amplitudasi: $$X_0=\\frac{ml\\theta_0}{M+m}=\\frac{l\\theta_0}{3}=0.2\\theta_0\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Координаты $X$ и $\\theta$; при малых углах: $$L=\\frac{M+m}{2}\\dot X^2+ml\\dot X\\dot\\theta+\\frac{ml^2}{2}\\dot\\theta^2-\\frac{mgl}{2}\\theta^2$$",
+    "$X$ циклическая: $(M+m)\\dot X+ml\\dot\\theta=0$; подставляем в уравнение для $\\theta$: $$\\omega^2=\\frac{g}{l}\\cdot\\frac{M+m}{M}=\\frac{10}{0.6}\\cdot1.5=25,\\qquad \\omega=5\\ \\mathrm{rad/s}$$",
+    "Центр масс неподвижен — амплитуда тележки: $$X_0=\\frac{ml\\theta_0}{M+m}=\\frac{l\\theta_0}{3}=0.2\\theta_0\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Coordinates $X$ and $\\theta$; for small angles: $$L=\\frac{M+m}{2}\\dot X^2+ml\\dot X\\dot\\theta+\\frac{ml^2}{2}\\dot\\theta^2-\\frac{mgl}{2}\\theta^2$$",
+    "$X$ is cyclic: $(M+m)\\dot X+ml\\dot\\theta=0$; substitute into the $\\theta$ equation: $$\\omega^2=\\frac{g}{l}\\cdot\\frac{M+m}{M}=\\frac{10}{0.6}\\cdot1.5=25,\\qquad \\omega=5\\ \\mathrm{rad/s}$$",
+    "The center of mass stays put — the cart's amplitude: $$X_0=\\frac{ml\\theta_0}{M+m}=\\frac{l\\theta_0}{3}=0.2\\theta_0\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lagranj funksiyasi: $L=T-U$",
+    "ru": "Функция Лагранжа: $L=T-U$",
+    "en": "Lagrangian: $L=T-U$"
+   },
+   {
+    "uz": "Siklik koordinata: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "ru": "Циклическая координата: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$",
+    "en": "Cyclic coordinate: $\\frac{\\partial L}{\\partial q}=0\\Rightarrow p=\\mathrm{const}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Erkin tayanchli mayatnik",
+   "ru": "Маятник на свободной опоре",
+   "en": "Pendulum on a free support"
+  },
+  "answer": "\\omega=5\\ \\mathrm{rad/s};\\ X_0=0.2\\theta_0\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.5 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L09-S15",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Sistemaning Lagranj funksiyasi $L=\\frac{1}{2}(\\dot x^2+\\dot y^2)-\\frac{1}{2}(x^2+y^2)-0.36xy$ (o'lchamsiz birliklarda). Normal chastotalarni va normal modalarni toping.",
+   "ru": "Функция Лагранжа системы $L=\\frac{1}{2}(\\dot x^2+\\dot y^2)-\\frac{1}{2}(x^2+y^2)-0.36xy$ (в безразмерных единицах). Найдите нормальные частоты и нормальные моды.",
+   "en": "A system has Lagrangian $L=\\frac{1}{2}(\\dot x^2+\\dot y^2)-\\frac{1}{2}(x^2+y^2)-0.36xy$ (in dimensionless units). Find the normal frequencies and normal modes."
+  },
+  "figure": "figures/B2-L09-S15.png",
+  "solution": {
+   "uz": [
+    "Massa matritsasi birlik, bikrlik matritsasi: $$K=\\begin{pmatrix}1&0.36\\\\0.36&1\\end{pmatrix}$$",
+    "Determinant tenglamasi $(1-\\omega^2)^2=0.36^2$: $$\\omega^2=1\\pm0.36\\ \\Rightarrow\\ \\omega_1=0.8,\\quad \\omega_2=\\sqrt{1.36}\\approx1.17$$",
+    "Modalar: $x=y$ da $\\omega_2$, $x=-y$ da $\\omega_1$ — normal koordinatalar $x\\pm y$."
+   ],
+   "ru": [
+    "Матрица масс единичная, матрица жёсткости: $$K=\\begin{pmatrix}1&0.36\\\\0.36&1\\end{pmatrix}$$",
+    "Уравнение на определитель $(1-\\omega^2)^2=0.36^2$: $$\\omega^2=1\\pm0.36\\ \\Rightarrow\\ \\omega_1=0.8,\\quad \\omega_2=\\sqrt{1.36}\\approx1.17$$",
+    "Моды: при $x=y$ — $\\omega_2$, при $x=-y$ — $\\omega_1$ — нормальные координаты $x\\pm y$."
+   ],
+   "en": [
+    "The mass matrix is the identity; the stiffness matrix: $$K=\\begin{pmatrix}1&0.36\\\\0.36&1\\end{pmatrix}$$",
+    "The determinant equation $(1-\\omega^2)^2=0.36^2$: $$\\omega^2=1\\pm0.36\\ \\Rightarrow\\ \\omega_1=0.8,\\quad \\omega_2=\\sqrt{1.36}\\approx1.17$$",
+    "Modes: $x=y$ gives $\\omega_2$, $x=-y$ gives $\\omega_1$ — the normal coordinates are $x\\pm y$."
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Normal chastotalar: $\\det(K-\\omega^2M)=0$",
+    "ru": "Нормальные частоты: $\\det(K-\\omega^2M)=0$",
+    "en": "Normal frequencies: $\\det(K-\\omega^2M)=0$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Normal modalar, bikrlik matritsasi",
+   "ru": "Нормальные моды, матрица жёсткости",
+   "en": "Normal modes, stiffness matrix"
+  },
+  "answer": "\\omega_1=0.8\\ (x=-y);\\ \\omega_2\\approx1.17\\ (x=y)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 1.7.1 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L09-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Munchoq $z=cr^2$ ($c=0.8\\ \\mathrm{m^{-1}}$) parabola shaklidagi silliq simda harakatlanadi; sim vertikal o'q atrofida $\\Omega$ burchak tezlik bilan aylanadi. Lagranj funksiyasini yozing. $\\Omega$ ning qanday qiymatida munchoq simning istalgan nuqtasida muvozanatda bo'ladi? Pastki nuqta qachon turg'un? $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Бусинка движется по гладкой проволоке в форме параболы $z=cr^2$ ($c=0.8\\ \\mathrm{m^{-1}}$); проволока вращается вокруг вертикальной оси с угловой скоростью $\\Omega$. Запишите функцию Лагранжа. При каком $\\Omega$ бусинка находится в равновесии в любой точке проволоки? Когда нижняя точка устойчива? $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A bead moves on a smooth wire bent into the parabola $z=cr^2$ ($c=0.8\\ \\mathrm{m^{-1}}$); the wire rotates about the vertical axis at angular velocity $\\Omega$. Write the Lagrangian. For what $\\Omega$ is the bead in equilibrium anywhere on the wire? When is the lowest point stable? $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L09-S16.png",
+  "solution": {
+   "uz": [
+    "$\\dot z=2cr\\dot r$, aylanish $r\\Omega$ tezlik beradi: $$L=\\frac{m}{2}\\left[(1+4c^2r^2)\\dot r^2+\\Omega^2r^2\\right]-mgcr^2$$",
+    "Effektiv potensial — ikkala had $r^2$ ga proporsional: $$\\tilde U=\\frac{m}{2}(2gc-\\Omega^2)r^2$$",
+    "$\\Omega^2=2gc$ da $\\tilde U\\equiv0$ — farqsiz muvozanat har joyda; $\\Omega<4$ da pastki nuqta turg'un: $$\\Omega=\\sqrt{2gc}=4\\ \\mathrm{rad/s},\\qquad \\omega^2=2gc-\\Omega^2\\ (r\\to0)$$"
+   ],
+   "ru": [
+    "$\\dot z=2cr\\dot r$, вращение даёт скорость $r\\Omega$: $$L=\\frac{m}{2}\\left[(1+4c^2r^2)\\dot r^2+\\Omega^2r^2\\right]-mgcr^2$$",
+    "Эффективный потенциал — оба члена пропорциональны $r^2$: $$\\tilde U=\\frac{m}{2}(2gc-\\Omega^2)r^2$$",
+    "При $\\Omega^2=2gc$ $\\tilde U\\equiv0$ — безразличное равновесие везде; при $\\Omega<4$ нижняя точка устойчива: $$\\Omega=\\sqrt{2gc}=4\\ \\mathrm{rad/s},\\qquad \\omega^2=2gc-\\Omega^2\\ (r\\to0)$$"
+   ],
+   "en": [
+    "$\\dot z=2cr\\dot r$, and the rotation gives speed $r\\Omega$: $$L=\\frac{m}{2}\\left[(1+4c^2r^2)\\dot r^2+\\Omega^2r^2\\right]-mgcr^2$$",
+    "The effective potential — both terms are proportional to $r^2$: $$\\tilde U=\\frac{m}{2}(2gc-\\Omega^2)r^2$$",
+    "For $\\Omega^2=2gc$, $\\tilde U\\equiv0$ — neutral equilibrium everywhere; for $\\Omega<4$ the lowest point is stable: $$\\Omega=\\sqrt{2gc}=4\\ \\mathrm{rad/s},\\qquad \\omega^2=2gc-\\Omega^2\\ (r\\to0)$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Aylanuvchi bog'lanish: $T=\\frac{m}{2}(\\dot r^2+\\Omega^2r^2)$",
+    "ru": "Вращающаяся связь: $T=\\frac{m}{2}(\\dot r^2+\\Omega^2r^2)$",
+    "en": "Rotating constraint: $T=\\frac{m}{2}(\\dot r^2+\\Omega^2r^2)$"
+   },
+   {
+    "uz": "Turg'unlik: $\\tilde U''(q_0)>0$",
+    "ru": "Устойчивость: $\\tilde U''(q_0)>0$",
+    "en": "Stability: $\\tilde U''(q_0)>0$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Aylanuvchi parabola",
+   "ru": "Вращающаяся парабола",
+   "en": "Rotating parabola"
+  },
+  "answer": "\\Omega=4\\ \\mathrm{rad/s};\\ \\Omega<4",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B2-L09, aylanuvchi parabola)"
+ },
+ {
+  "id": "B2-L09-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Jism ishqalanishsiz $x=R(\\varphi-\\sin\\varphi)$, $y=R(1-\\cos\\varphi)$ sikloida ($y$ pastga, $R=0.4\\ \\mathrm{m}$) bo'ylab $\\varphi=0$ dan $\\varphi=\\pi$ gacha tinch holatdan sirpanadi. Tushish vaqtini toping va uni xuddi shu nuqtalarni tutashtiruvchi qiya tekislik bo'ylab tushish vaqti bilan solishtiring. Sikloida Beltrami ayniyatini qanoatlantirishini tekshiring. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Тело без трения скользит из покоя по циклоиде $x=R(\\varphi-\\sin\\varphi)$, $y=R(1-\\cos\\varphi)$ ($y$ вниз, $R=0.4\\ \\mathrm{m}$) от $\\varphi=0$ до $\\varphi=\\pi$. Найдите время спуска и сравните его со временем спуска по наклонной плоскости, соединяющей те же точки. Проверьте, что циклоида удовлетворяет тождеству Бельтрами. $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A body slides from rest without friction along the cycloid $x=R(\\varphi-\\sin\\varphi)$, $y=R(1-\\cos\\varphi)$ ($y$ downward, $R=0.4\\ \\mathrm{m}$) from $\\varphi=0$ to $\\varphi=\\pi$. Find the descent time and compare it with the time along the inclined plane joining the same points. Check that the cycloid satisfies the Beltrami identity. $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L09-S17.png",
+  "solution": {
+   "uz": [
+    "$ds=2R\\sin\\frac{\\varphi}{2}d\\varphi$, $\\sqrt{2gy}=2\\sqrt{gR}\\sin\\frac{\\varphi}{2}$: $$t=\\int_0^\\pi\\sqrt{\\frac{R}{g}}\\,d\\varphi=\\pi\\sqrt{\\frac{R}{g}}=0.2\\pi\\approx0.63\\ \\mathrm{s}$$",
+    "Qiya tekislik: uzunligi $s=R\\sqrt{\\pi^2+4}\\approx1.49\\ \\mathrm{m}$, $\\sin\\alpha=\\frac{2R}{s}$: $$t'=\\sqrt{\\frac{2s}{g\\sin\\alpha}}\\approx0.75\\ \\mathrm{s}>t$$",
+    "Beltrami ayniyati: $y'=\\mathrm{ctg}\\frac{\\varphi}{2}$, demak: $$y(1+y'^2)=2R\\sin^2\\frac{\\varphi}{2}\\cdot\\frac{1}{\\sin^2\\frac{\\varphi}{2}}=2R=\\mathrm{const}$$"
+   ],
+   "ru": [
+    "$ds=2R\\sin\\frac{\\varphi}{2}d\\varphi$, $\\sqrt{2gy}=2\\sqrt{gR}\\sin\\frac{\\varphi}{2}$: $$t=\\int_0^\\pi\\sqrt{\\frac{R}{g}}\\,d\\varphi=\\pi\\sqrt{\\frac{R}{g}}=0.2\\pi\\approx0.63\\ \\mathrm{s}$$",
+    "Наклонная плоскость: длина $s=R\\sqrt{\\pi^2+4}\\approx1.49\\ \\mathrm{m}$, $\\sin\\alpha=\\frac{2R}{s}$: $$t'=\\sqrt{\\frac{2s}{g\\sin\\alpha}}\\approx0.75\\ \\mathrm{s}>t$$",
+    "Тождество Бельтрами: $y'=\\mathrm{ctg}\\frac{\\varphi}{2}$, значит: $$y(1+y'^2)=2R\\sin^2\\frac{\\varphi}{2}\\cdot\\frac{1}{\\sin^2\\frac{\\varphi}{2}}=2R=\\mathrm{const}$$"
+   ],
+   "en": [
+    "$ds=2R\\sin\\frac{\\varphi}{2}d\\varphi$, $\\sqrt{2gy}=2\\sqrt{gR}\\sin\\frac{\\varphi}{2}$: $$t=\\int_0^\\pi\\sqrt{\\frac{R}{g}}\\,d\\varphi=\\pi\\sqrt{\\frac{R}{g}}=0.2\\pi\\approx0.63\\ \\mathrm{s}$$",
+    "Inclined plane: length $s=R\\sqrt{\\pi^2+4}\\approx1.49\\ \\mathrm{m}$, $\\sin\\alpha=\\frac{2R}{s}$: $$t'=\\sqrt{\\frac{2s}{g\\sin\\alpha}}\\approx0.75\\ \\mathrm{s}>t$$",
+    "Beltrami identity: $y'=\\mathrm{ctg}\\frac{\\varphi}{2}$, so: $$y(1+y'^2)=2R\\sin^2\\frac{\\varphi}{2}\\cdot\\frac{1}{\\sin^2\\frac{\\varphi}{2}}=2R=\\mathrm{const}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tushish vaqti: $t=\\int\\frac{ds}{\\sqrt{2gy}}$",
+    "ru": "Время спуска: $t=\\int\\frac{ds}{\\sqrt{2gy}}$",
+    "en": "Descent time: $t=\\int\\frac{ds}{\\sqrt{2gy}}$"
+   },
+   null,
+   {
+    "uz": "Beltrami ayniyati: $f-y'\\frac{\\partial f}{\\partial y'}=\\mathrm{const}$",
+    "ru": "Тождество Бельтрами: $f-y'\\frac{\\partial f}{\\partial y'}=\\mathrm{const}$",
+    "en": "Beltrami identity: $f-y'\\frac{\\partial f}{\\partial y'}=\\mathrm{const}$"
+   }
+  ],
+  "basis": {
+   "uz": "Braxistoxrona — sikloida",
+   "ru": "Брахистохрона — циклоида",
+   "en": "Brachistochrone — the cycloid"
+  },
+  "answer": "t\\approx0.63\\ \\mathrm{s};\\ t'\\approx0.75\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L09, braxistoxrona)"
+ },
+ {
+  "id": "B2-L09-S18",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $1\\ \\mathrm{kg}$ bo'lgan jism $y=0$ dan yuqoriga otilib, $T=2\\ \\mathrm{s}$ dan keyin yana $y=0$ ga qaytadi. Haqiqiy yo'l $y=\\frac{g}{2}t(T-t)$ uchun ta'sirni hisoblang va uni «sinov» yo'li $y\\equiv0$ (jism joyida turadi) uchun ta'sir bilan solishtiring. $g=10\\ \\mathrm{m/s^2}$.",
+   "ru": "Тело массой $1\\ \\mathrm{kg}$ брошено вверх из $y=0$ и через $T=2\\ \\mathrm{s}$ возвращается в $y=0$. Вычислите действие для истинного пути $y=\\frac{g}{2}t(T-t)$ и сравните его с действием для «пробного» пути $y\\equiv0$ (тело стоит на месте). $g=10\\ \\mathrm{m/s^2}$.",
+   "en": "A $1\\ \\mathrm{kg}$ body is thrown up from $y=0$ and returns to $y=0$ after $T=2\\ \\mathrm{s}$. Compute the action for the true path $y=\\frac{g}{2}t(T-t)$ and compare it with the action for the “trial” path $y\\equiv0$ (the body stays put). $g=10\\ \\mathrm{m/s^2}$."
+  },
+  "figure": "figures/B2-L09-S18.png",
+  "solution": {
+   "uz": [
+    "Ta'sir ta'rifi: $$S=\\int_0^T\\left(\\frac{m\\dot y^2}{2}-mgy\\right)dt$$",
+    "Haqiqiy yo'l uchun integral: $$S=-\\frac{mg^2T^3}{24}=-\\frac{100\\cdot8}{24}\\approx-33.3\\ \\mathrm{J\\cdot s}$$",
+    "Sinov yo'lida $L\\equiv0$, ya'ni $S_0=0>S$ — haqiqiy yo'lda ta'sir kichik."
+   ],
+   "ru": [
+    "Определение действия: $$S=\\int_0^T\\left(\\frac{m\\dot y^2}{2}-mgy\\right)dt$$",
+    "Интеграл для истинного пути: $$S=-\\frac{mg^2T^3}{24}=-\\frac{100\\cdot8}{24}\\approx-33.3\\ \\mathrm{J\\cdot s}$$",
+    "На пробном пути $L\\equiv0$, т. е. $S_0=0>S$ — на истинном пути действие меньше."
+   ],
+   "en": [
+    "Definition of the action: $$S=\\int_0^T\\left(\\frac{m\\dot y^2}{2}-mgy\\right)dt$$",
+    "The integral for the true path: $$S=-\\frac{mg^2T^3}{24}=-\\frac{100\\cdot8}{24}\\approx-33.3\\ \\mathrm{J\\cdot s}$$",
+    "On the trial path $L\\equiv0$, so $S_0=0>S$ — the action is smaller on the true path."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ta'sir: $S=\\int L\\,dt$, $\\delta S=0$",
+    "ru": "Действие: $S=\\int L\\,dt$, $\\delta S=0$",
+    "en": "Action: $S=\\int L\\,dt$, $\\delta S=0$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Eng kichik ta'sir prinsipi",
+   "ru": "Принцип наименьшего действия",
+   "en": "Principle of least action"
+  },
+  "answer": "S\\approx-33.3\\ \\mathrm{J\\cdot s}<S_0=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L09, ta'sir)"
+ }
+]

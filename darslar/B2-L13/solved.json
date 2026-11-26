@@ -1,0 +1,844 @@
+[
+ {
+  "id": "B2-L13-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Nuqtaviy zaryad $q=+4\\ \\mathrm{nC}$ dan $0.2\\ \\mathrm{m}$ va $0.6\\ \\mathrm{m}$ masofadagi nuqtalar potensialini toping. $q_0=+1\\ \\mu\\mathrm{C}$ zaryadni birinchi nuqtadan ikkinchisiga ko'chirishda maydon qancha ish bajaradi?",
+   "ru": "Найдите потенциалы точек на расстояниях $0.2\\ \\mathrm{m}$ и $0.6\\ \\mathrm{m}$ от точечного заряда $q=+4\\ \\mathrm{nC}$. Какую работу совершает поле при перемещении заряда $q_0=+1\\ \\mu\\mathrm{C}$ из первой точки во вторую?",
+   "en": "Find the potentials at distances $0.2\\ \\mathrm{m}$ and $0.6\\ \\mathrm{m}$ from a point charge $q=+4\\ \\mathrm{nC}$. How much work does the field do in moving a charge $q_0=+1\\ \\mu\\mathrm{C}$ from the first point to the second?"
+  },
+  "figure": "figures/B2-L13-S01.png",
+  "solution": {
+   "uz": [
+    "Nuqtaviy zaryad potensiali: $$\\varphi_1=\\frac{9\\cdot10^9\\cdot4\\cdot10^{-9}}{0.2}=180\\ \\mathrm{V},\\quad \\varphi_2=60\\ \\mathrm{V}$$",
+    "Maydon ishi musbat — zaryad itarilib uzoqlashadi: $$A=q_0(\\varphi_1-\\varphi_2)=10^{-6}\\cdot120=1.2\\cdot10^{-4}\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Потенциал точечного заряда: $$\\varphi_1=\\frac{9\\cdot10^9\\cdot4\\cdot10^{-9}}{0.2}=180\\ \\mathrm{V},\\quad \\varphi_2=60\\ \\mathrm{V}$$",
+    "Работа поля положительна — заряд отталкивается и удаляется: $$A=q_0(\\varphi_1-\\varphi_2)=10^{-6}\\cdot120=1.2\\cdot10^{-4}\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "The point-charge potential: $$\\varphi_1=\\frac{9\\cdot10^9\\cdot4\\cdot10^{-9}}{0.2}=180\\ \\mathrm{V},\\quad \\varphi_2=60\\ \\mathrm{V}$$",
+    "The field's work is positive — the charge is repelled outwards: $$A=q_0(\\varphi_1-\\varphi_2)=10^{-6}\\cdot120=1.2\\cdot10^{-4}\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nuqtaviy zaryad potensiali: $\\varphi=\\frac{kq}{r}$",
+    "ru": "Потенциал точечного заряда: $\\varphi=\\frac{kq}{r}$",
+    "en": "Point-charge potential: $\\varphi=\\frac{kq}{r}$"
+   },
+   {
+    "uz": "Maydon ishi: $A=q(\\varphi_1-\\varphi_2)$",
+    "ru": "Работа поля: $A=q(\\varphi_1-\\varphi_2)$",
+    "en": "Work of the field: $A=q(\\varphi_1-\\varphi_2)$"
+   }
+  ],
+  "basis": {
+   "uz": "Potensial va maydon ishi",
+   "ru": "Потенциал и работа поля",
+   "en": "Potential and the work of the field"
+  },
+  "answer": "\\varphi_1=180\\ \\mathrm{V};\\ \\varphi_2=60\\ \\mathrm{V};\\ A=1.2\\cdot10^{-4}\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 7.21-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L13-S02",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Elektron tinch holatdan $U_0=500\\ \\mathrm{V}$ kuchlanish bilan tezlatilib, uzunligi $L=5\\ \\mathrm{cm}$, oralig'i $d=1\\ \\mathrm{cm}$ bo'lgan yassi kondensatorga qoplamalarga parallel kiradi. Kondensatorda $U=50\\ \\mathrm{V}$. Elektron tezligini va chiqishdagi og'ishini toping ($m_e=9.1\\cdot10^{-31}\\ \\mathrm{kg}$).",
+   "ru": "Электрон, ускоренный из состояния покоя напряжением $U_0=500\\ \\mathrm{V}$, влетает параллельно обкладкам в плоский конденсатор длиной $L=5\\ \\mathrm{cm}$ с зазором $d=1\\ \\mathrm{cm}$. На конденсаторе $U=50\\ \\mathrm{V}$. Найдите скорость электрона и его отклонение на выходе ($m_e=9.1\\cdot10^{-31}\\ \\mathrm{kg}$).",
+   "en": "An electron accelerated from rest through $U_0=500\\ \\mathrm{V}$ enters, parallel to the plates, a parallel-plate capacitor of length $L=5\\ \\mathrm{cm}$ and gap $d=1\\ \\mathrm{cm}$. The capacitor is at $U=50\\ \\mathrm{V}$. Find the electron's speed and its deflection at the exit ($m_e=9.1\\cdot10^{-31}\\ \\mathrm{kg}$)."
+  },
+  "figure": "figures/B2-L13-S02.png",
+  "solution": {
+   "uz": [
+    "Tezlatish — energiya saqlanishi: $$v=\\sqrt{\\frac{2eU_0}{m_e}}=\\sqrt{\\frac{2\\cdot1.6\\cdot10^{-19}\\cdot500}{9.1\\cdot10^{-31}}}\\approx1.33\\cdot10^7\\ \\mathrm{m/s}$$",
+    "Kondensatorda gorizontal otilgan jismdek, $E=\\frac{U}{d}=5000\\ \\mathrm{V/m}$: $$y=\\frac{eEL^2}{2m_ev^2}=\\frac{UL^2}{4dU_0}=\\frac{50\\cdot0.0025}{4\\cdot0.01\\cdot500}=6.25\\cdot10^{-3}\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Ускорение — сохранение энергии: $$v=\\sqrt{\\frac{2eU_0}{m_e}}=\\sqrt{\\frac{2\\cdot1.6\\cdot10^{-19}\\cdot500}{9.1\\cdot10^{-31}}}\\approx1.33\\cdot10^7\\ \\mathrm{m/s}$$",
+    "В конденсаторе — как тело, брошенное горизонтально, $E=\\frac{U}{d}=5000\\ \\mathrm{V/m}$: $$y=\\frac{eEL^2}{2m_ev^2}=\\frac{UL^2}{4dU_0}=\\frac{50\\cdot0.0025}{4\\cdot0.01\\cdot500}=6.25\\cdot10^{-3}\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Acceleration — energy conservation: $$v=\\sqrt{\\frac{2eU_0}{m_e}}=\\sqrt{\\frac{2\\cdot1.6\\cdot10^{-19}\\cdot500}{9.1\\cdot10^{-31}}}\\approx1.33\\cdot10^7\\ \\mathrm{m/s}$$",
+    "In the capacitor — like a horizontal projectile, $E=\\frac{U}{d}=5000\\ \\mathrm{V/m}$: $$y=\\frac{eEL^2}{2m_ev^2}=\\frac{UL^2}{4dU_0}=\\frac{50\\cdot0.0025}{4\\cdot0.01\\cdot500}=6.25\\cdot10^{-3}\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Energiya saqlanishi: $\\frac{mv^2}{2}=qU$",
+    "ru": "Сохранение энергии: $\\frac{mv^2}{2}=qU$",
+    "en": "Energy conservation: $\\frac{mv^2}{2}=qU$"
+   },
+   {
+    "uz": "Og'ish: $y=\\frac{qEL^2}{2mv^2}$",
+    "ru": "Отклонение: $y=\\frac{qEL^2}{2mv^2}$",
+    "en": "Deflection: $y=\\frac{qEL^2}{2mv^2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Kondensatorda og'ish",
+   "ru": "Отклонение в конденсаторе",
+   "en": "Deflection in a capacitor"
+  },
+  "answer": "v\\approx1.33\\cdot10^7\\ \\mathrm{m/s};\\ y=6.25\\ \\mathrm{mm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 7.39-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L13-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Tomoni $0.1\\ \\mathrm{m}$ bo'lgan teng tomonli uchburchak uchlarida $+1\\ \\mathrm{nC}$ dan zaryad turibdi. Sistemaning elektrostatik energiyasini va uchburchak markazidagi potensialni toping.",
+   "ru": "В вершинах равностороннего треугольника со стороной $0.1\\ \\mathrm{m}$ находятся заряды по $+1\\ \\mathrm{nC}$. Найдите электростатическую энергию системы и потенциал в центре треугольника.",
+   "en": "Charges of $+1\\ \\mathrm{nC}$ each sit at the corners of an equilateral triangle of side $0.1\\ \\mathrm{m}$. Find the electrostatic energy of the system and the potential at the centre of the triangle."
+  },
+  "figure": "figures/B2-L13-S03.png",
+  "solution": {
+   "uz": [
+    "Uchta juft, har biri bir marta: $$W=3\\cdot\\frac{kq^2}{a}=3\\cdot\\frac{9\\cdot10^9\\cdot10^{-18}}{0.1}=2.7\\cdot10^{-7}\\ \\mathrm{J}$$",
+    "Markazdan uchlargacha $\\frac{a}{\\sqrt{3}}$; potensiallar skalyar qo'shiladi: $$\\varphi=3\\cdot\\frac{kq\\sqrt{3}}{a}=270\\sqrt{3}\\approx468\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "Три пары, каждая один раз: $$W=3\\cdot\\frac{kq^2}{a}=3\\cdot\\frac{9\\cdot10^9\\cdot10^{-18}}{0.1}=2.7\\cdot10^{-7}\\ \\mathrm{J}$$",
+    "От центра до вершин $\\frac{a}{\\sqrt{3}}$; потенциалы складываются как скаляры: $$\\varphi=3\\cdot\\frac{kq\\sqrt{3}}{a}=270\\sqrt{3}\\approx468\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "Three pairs, each counted once: $$W=3\\cdot\\frac{kq^2}{a}=3\\cdot\\frac{9\\cdot10^9\\cdot10^{-18}}{0.1}=2.7\\cdot10^{-7}\\ \\mathrm{J}$$",
+    "From the centre to the corners is $\\frac{a}{\\sqrt{3}}$; potentials add as scalars: $$\\varphi=3\\cdot\\frac{kq\\sqrt{3}}{a}=270\\sqrt{3}\\approx468\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Zaryadlar energiyasi: $W=\\sum_{i<j}\\frac{kq_iq_j}{r_{ij}}$",
+    "ru": "Энергия зарядов: $W=\\sum_{i<j}\\frac{kq_iq_j}{r_{ij}}$",
+    "en": "Energy of charges: $W=\\sum_{i<j}\\frac{kq_iq_j}{r_{ij}}$"
+   },
+   {
+    "uz": "Superpozitsiya: $\\varphi=\\sum\\frac{kq_i}{r_i}$",
+    "ru": "Суперпозиция: $\\varphi=\\sum\\frac{kq_i}{r_i}$",
+    "en": "Superposition: $\\varphi=\\sum\\frac{kq_i}{r_i}$"
+   }
+  ],
+  "basis": {
+   "uz": "Zaryadlar sistemasi energiyasi",
+   "ru": "Энергия системы зарядов",
+   "en": "Energy of a system of charges"
+  },
+  "answer": "W=2.7\\cdot10^{-7}\\ \\mathrm{J};\\ \\varphi\\approx468\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 7.31-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L13-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.3\\ \\mathrm{m}$ bo'lgan halqa $10\\ \\mathrm{nC}$ zaryad bilan bir tekis zaryadlangan. Halqa o'qida markazdan $0.4\\ \\mathrm{m}$ masofadagi va markazdagi potensialni toping. $+1\\ \\mathrm{nC}$ zaryadni birinchi nuqtadan markazga keltirish uchun qancha ish bajarish kerak? Potensialdan maydonni toping.",
+   "ru": "Кольцо радиусом $0.3\\ \\mathrm{m}$ равномерно заряжено зарядом $10\\ \\mathrm{nC}$. Найдите потенциал на оси кольца на расстоянии $0.4\\ \\mathrm{m}$ от центра и в центре. Какую работу нужно совершить, чтобы перенести заряд $+1\\ \\mathrm{nC}$ из первой точки в центр? Найдите поле по потенциалу.",
+   "en": "A ring of radius $0.3\\ \\mathrm{m}$ carries a uniform charge of $10\\ \\mathrm{nC}$. Find the potential on its axis $0.4\\ \\mathrm{m}$ from the centre and at the centre. How much work must be done to bring a charge $+1\\ \\mathrm{nC}$ from the first point to the centre? Find the field from the potential."
+  },
+  "figure": "figures/B2-L13-S04.png",
+  "solution": {
+   "uz": [
+    "Barcha elementlar $\\sqrt{z^2+R^2}=0.5\\ \\mathrm{m}$ masofada: $$\\varphi=\\frac{kQ}{\\sqrt{z^2+R^2}}=\\frac{90}{0.5}=180\\ \\mathrm{V},\\quad \\varphi_0=\\frac{kQ}{R}=300\\ \\mathrm{V}$$",
+    "Tashqi kuch ishi: $$A=q(\\varphi_0-\\varphi)=10^{-9}\\cdot120=1.2\\cdot10^{-7}\\ \\mathrm{J}$$",
+    "Maydon — potensial hosilasi: $$E_z=-\\frac{d\\varphi}{dz}=\\frac{kQz}{(z^2+R^2)^{3/2}}=\\frac{90\\cdot0.4}{0.125}=288\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "Все элементы на расстоянии $\\sqrt{z^2+R^2}=0.5\\ \\mathrm{m}$: $$\\varphi=\\frac{kQ}{\\sqrt{z^2+R^2}}=\\frac{90}{0.5}=180\\ \\mathrm{V},\\quad \\varphi_0=\\frac{kQ}{R}=300\\ \\mathrm{V}$$",
+    "Работа внешней силы: $$A=q(\\varphi_0-\\varphi)=10^{-9}\\cdot120=1.2\\cdot10^{-7}\\ \\mathrm{J}$$",
+    "Поле — производная потенциала: $$E_z=-\\frac{d\\varphi}{dz}=\\frac{kQz}{(z^2+R^2)^{3/2}}=\\frac{90\\cdot0.4}{0.125}=288\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "All elements are at distance $\\sqrt{z^2+R^2}=0.5\\ \\mathrm{m}$: $$\\varphi=\\frac{kQ}{\\sqrt{z^2+R^2}}=\\frac{90}{0.5}=180\\ \\mathrm{V},\\quad \\varphi_0=\\frac{kQ}{R}=300\\ \\mathrm{V}$$",
+    "Work by the external force: $$A=q(\\varphi_0-\\varphi)=10^{-9}\\cdot120=1.2\\cdot10^{-7}\\ \\mathrm{J}$$",
+    "The field is the derivative of the potential: $$E_z=-\\frac{d\\varphi}{dz}=\\frac{kQz}{(z^2+R^2)^{3/2}}=\\frac{90\\cdot0.4}{0.125}=288\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uzluksiz taqsimot: $\\varphi=k\\int\\frac{dq}{r}$",
+    "ru": "Непрерывное распределение: $\\varphi=k\\int\\frac{dq}{r}$",
+    "en": "Continuous distribution: $\\varphi=k\\int\\frac{dq}{r}$"
+   },
+   null,
+   {
+    "uz": "Maydon va potensial: $\\vec E=-\\nabla\\varphi$",
+    "ru": "Поле и потенциал: $\\vec E=-\\nabla\\varphi$",
+    "en": "Field and potential: $\\vec E=-\\nabla\\varphi$"
+   }
+  ],
+  "basis": {
+   "uz": "Halqa o'qidagi potensial",
+   "ru": "Потенциал на оси кольца",
+   "en": "Potential on a ring's axis"
+  },
+  "answer": "\\varphi=180\\ \\mathrm{V};\\ \\varphi_0=300\\ \\mathrm{V};\\ A=1.2\\cdot10^{-7}\\ \\mathrm{J};\\ E=288\\ \\mathrm{N/C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 7.49-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L13-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.1\\ \\mathrm{m}$ bo'lgan disk $\\sigma=10^{-6}\\ \\mathrm{C/m^2}$ zichlik bilan zaryadlangan. Disk o'qida, markazda va markazdan $0.1\\ \\mathrm{m}$ masofada potensialni toping. Potensialdan maydonni toping va B2-L12 dagi natija bilan solishtiring.",
+   "ru": "Диск радиусом $0.1\\ \\mathrm{m}$ заряжен с плотностью $\\sigma=10^{-6}\\ \\mathrm{C/m^2}$. Найдите потенциал на оси диска в центре и на расстоянии $0.1\\ \\mathrm{m}$ от центра. Найдите поле по потенциалу и сравните с результатом B2-L12.",
+   "en": "A disk of radius $0.1\\ \\mathrm{m}$ carries surface density $\\sigma=10^{-6}\\ \\mathrm{C/m^2}$. Find the potential on its axis at the centre and $0.1\\ \\mathrm{m}$ from the centre. Find the field from the potential and compare with the result of B2-L12."
+  },
+  "figure": "figures/B2-L13-S05.png",
+  "solution": {
+   "uz": [
+    "Halqalarni yig'amiz, $dq=\\sigma\\cdot2\\pi s\\,ds$: $$\\varphi=\\int_0^R\\frac{k\\sigma2\\pi s\\,ds}{\\sqrt{z^2+s^2}}=\\frac{\\sigma}{2\\varepsilon_0}\\left(\\sqrt{z^2+R^2}-z\\right)$$",
+    "Son qiymatlar, $\\frac{\\sigma}{2\\varepsilon_0}\\approx5.65\\cdot10^4\\ \\mathrm{V/m}$: $$\\varphi_0=\\frac{\\sigma R}{2\\varepsilon_0}\\approx5650\\ \\mathrm{V},\\quad \\varphi=5.65\\cdot10^4\\cdot0.0414\\approx2340\\ \\mathrm{V}$$",
+    "Hosila: $$E_z=-\\frac{d\\varphi}{dz}=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{z}{\\sqrt{z^2+R^2}}\\right)\\approx1.66\\cdot10^4\\ \\mathrm{N/C}$$"
+   ],
+   "ru": [
+    "Суммируем кольца, $dq=\\sigma\\cdot2\\pi s\\,ds$: $$\\varphi=\\int_0^R\\frac{k\\sigma2\\pi s\\,ds}{\\sqrt{z^2+s^2}}=\\frac{\\sigma}{2\\varepsilon_0}\\left(\\sqrt{z^2+R^2}-z\\right)$$",
+    "Численно, $\\frac{\\sigma}{2\\varepsilon_0}\\approx5.65\\cdot10^4\\ \\mathrm{V/m}$: $$\\varphi_0=\\frac{\\sigma R}{2\\varepsilon_0}\\approx5650\\ \\mathrm{V},\\quad \\varphi=5.65\\cdot10^4\\cdot0.0414\\approx2340\\ \\mathrm{V}$$",
+    "Производная: $$E_z=-\\frac{d\\varphi}{dz}=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{z}{\\sqrt{z^2+R^2}}\\right)\\approx1.66\\cdot10^4\\ \\mathrm{N/C}$$"
+   ],
+   "en": [
+    "Sum over rings, $dq=\\sigma\\cdot2\\pi s\\,ds$: $$\\varphi=\\int_0^R\\frac{k\\sigma2\\pi s\\,ds}{\\sqrt{z^2+s^2}}=\\frac{\\sigma}{2\\varepsilon_0}\\left(\\sqrt{z^2+R^2}-z\\right)$$",
+    "Numerically, $\\frac{\\sigma}{2\\varepsilon_0}\\approx5.65\\cdot10^4\\ \\mathrm{V/m}$: $$\\varphi_0=\\frac{\\sigma R}{2\\varepsilon_0}\\approx5650\\ \\mathrm{V},\\quad \\varphi=5.65\\cdot10^4\\cdot0.0414\\approx2340\\ \\mathrm{V}$$",
+    "The derivative: $$E_z=-\\frac{d\\varphi}{dz}=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{z}{\\sqrt{z^2+R^2}}\\right)\\approx1.66\\cdot10^4\\ \\mathrm{N/C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Uzluksiz taqsimot: $\\varphi=k\\int\\frac{dq}{r}$",
+    "ru": "Непрерывное распределение: $\\varphi=k\\int\\frac{dq}{r}$",
+    "en": "Continuous distribution: $\\varphi=k\\int\\frac{dq}{r}$"
+   },
+   null,
+   {
+    "uz": "Maydon va potensial: $\\vec E=-\\nabla\\varphi$",
+    "ru": "Поле и потенциал: $\\vec E=-\\nabla\\varphi$",
+    "en": "Field and potential: $\\vec E=-\\nabla\\varphi$"
+   }
+  ],
+  "basis": {
+   "uz": "Disk o'qidagi potensial",
+   "ru": "Потенциал на оси диска",
+   "en": "Potential on a disk's axis"
+  },
+  "answer": "\\varphi_0\\approx5.65\\ \\mathrm{kV};\\ \\varphi\\approx2.34\\ \\mathrm{kV};\\ E\\approx1.66\\cdot10^4\\ \\mathrm{N/C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B2-L13, disk potensiali)"
+ },
+ {
+  "id": "B2-L13-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.1\\ \\mathrm{m}$ bo'lgan shar hajmi bo'ylab $10\\ \\mathrm{nC}$ zaryad bilan bir tekis zaryadlangan. Shar sirtidagi, markazidagi va markazdan $0.05\\ \\mathrm{m}$ masofadagi potensialni toping.",
+   "ru": "Шар радиусом $0.1\\ \\mathrm{m}$ равномерно заряжен по объёму зарядом $10\\ \\mathrm{nC}$. Найдите потенциал на поверхности шара, в его центре и на расстоянии $0.05\\ \\mathrm{m}$ от центра.",
+   "en": "A ball of radius $0.1\\ \\mathrm{m}$ is uniformly charged throughout its volume with $10\\ \\mathrm{nC}$. Find the potential at its surface, at its centre and $0.05\\ \\mathrm{m}$ from the centre."
+  },
+  "figure": "figures/B2-L13-S06.png",
+  "solution": {
+   "uz": [
+    "Sirtda va tashqarida — nuqtaviy zaryaddek: $$\\varphi(R)=\\frac{kQ}{R}=\\frac{90}{0.1}=900\\ \\mathrm{V}$$",
+    "Ichkarida maydonni $\\frac{kQr}{R^3}$ ni sirtdan integrallaymiz: $$\\varphi(r)=\\frac{kQ}{R}+\\int_r^R\\frac{kQr'}{R^3}dr'=\\frac{kQ(3R^2-r^2)}{2R^3}$$",
+    "Son qiymatlar: $$\\varphi(0)=\\frac{3}{2}\\cdot900=1350\\ \\mathrm{V},\\quad \\varphi(0.05)=450\\cdot2.75\\approx1240\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "На поверхности и снаружи — как точечный заряд: $$\\varphi(R)=\\frac{kQ}{R}=\\frac{90}{0.1}=900\\ \\mathrm{V}$$",
+    "Внутри интегрируем поле $\\frac{kQr}{R^3}$ от поверхности: $$\\varphi(r)=\\frac{kQ}{R}+\\int_r^R\\frac{kQr'}{R^3}dr'=\\frac{kQ(3R^2-r^2)}{2R^3}$$",
+    "Численно: $$\\varphi(0)=\\frac{3}{2}\\cdot900=1350\\ \\mathrm{V},\\quad \\varphi(0.05)=450\\cdot2.75\\approx1240\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "At the surface and outside — like a point charge: $$\\varphi(R)=\\frac{kQ}{R}=\\frac{90}{0.1}=900\\ \\mathrm{V}$$",
+    "Inside, integrate the field $\\frac{kQr}{R^3}$ in from the surface: $$\\varphi(r)=\\frac{kQ}{R}+\\int_r^R\\frac{kQr'}{R^3}dr'=\\frac{kQ(3R^2-r^2)}{2R^3}$$",
+    "Numerically: $$\\varphi(0)=\\frac{3}{2}\\cdot900=1350\\ \\mathrm{V},\\quad \\varphi(0.05)=450\\cdot2.75\\approx1240\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nuqtaviy zaryad potensiali: $\\varphi=\\frac{kq}{r}$",
+    "ru": "Потенциал точечного заряда: $\\varphi=\\frac{kq}{r}$",
+    "en": "Point-charge potential: $\\varphi=\\frac{kq}{r}$"
+   },
+   {
+    "uz": "Bir jinsli shar: $\\varphi=\\frac{kQ(3R^2-r^2)}{2R^3}$ $(r<R)$",
+    "ru": "Однородный шар: $\\varphi=\\frac{kQ(3R^2-r^2)}{2R^3}$ $(r<R)$",
+    "en": "Uniform ball: $\\varphi=\\frac{kQ(3R^2-r^2)}{2R^3}$ $(r<R)$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Bir jinsli shar potensiali",
+   "ru": "Потенциал однородного шара",
+   "en": "Potential of a uniform ball"
+  },
+  "answer": "900\\ \\mathrm{V};\\ 1350\\ \\mathrm{V};\\ \\approx1240\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 7.55-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L13-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki konsentrik yupqa sfera: ichkisining radiusi $0.1\\ \\mathrm{m}$, zaryadi $+2\\ \\mathrm{nC}$; tashqisining radiusi $0.3\\ \\mathrm{m}$, zaryadi $-1\\ \\mathrm{nC}$. Markazdagi, markazdan $0.2\\ \\mathrm{m}$ masofadagi va tashqi sfera sirtidagi potensialni toping.",
+   "ru": "Две концентрические тонкие сферы: внутренняя радиусом $0.1\\ \\mathrm{m}$ с зарядом $+2\\ \\mathrm{nC}$, внешняя радиусом $0.3\\ \\mathrm{m}$ с зарядом $-1\\ \\mathrm{nC}$. Найдите потенциал в центре, на расстоянии $0.2\\ \\mathrm{m}$ от центра и на поверхности внешней сферы.",
+   "en": "Two concentric thin spheres: the inner one has radius $0.1\\ \\mathrm{m}$ and charge $+2\\ \\mathrm{nC}$; the outer one has radius $0.3\\ \\mathrm{m}$ and charge $-1\\ \\mathrm{nC}$. Find the potential at the centre, $0.2\\ \\mathrm{m}$ from the centre, and at the surface of the outer sphere."
+  },
+  "figure": "figures/B2-L13-S07.png",
+  "solution": {
+   "uz": [
+    "Har bir sfera hissasi: ichki nuqtada $\\frac{kQ_i}{R_i}$, tashqi nuqtada $\\frac{kQ_i}{r}$: $$\\varphi(0)=\\frac{18}{0.1}-\\frac{9}{0.3}=180-30=150\\ \\mathrm{V}$$",
+    "Sferalar orasida va tashqi sirtda: $$\\varphi(0.2)=\\frac{18}{0.2}-30=60\\ \\mathrm{V},\\quad \\varphi(0.3)=\\frac{9}{0.3}=30\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "Вклад каждой сферы: во внутренней точке $\\frac{kQ_i}{R_i}$, во внешней — $\\frac{kQ_i}{r}$: $$\\varphi(0)=\\frac{18}{0.1}-\\frac{9}{0.3}=180-30=150\\ \\mathrm{V}$$",
+    "Между сферами и на внешней поверхности: $$\\varphi(0.2)=\\frac{18}{0.2}-30=60\\ \\mathrm{V},\\quad \\varphi(0.3)=\\frac{9}{0.3}=30\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "Each sphere's contribution: $\\frac{kQ_i}{R_i}$ at an interior point, $\\frac{kQ_i}{r}$ at an exterior point: $$\\varphi(0)=\\frac{18}{0.1}-\\frac{9}{0.3}=180-30=150\\ \\mathrm{V}$$",
+    "Between the spheres and at the outer surface: $$\\varphi(0.2)=\\frac{18}{0.2}-30=60\\ \\mathrm{V},\\quad \\varphi(0.3)=\\frac{9}{0.3}=30\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yupqa sfera: ichkarida $\\varphi=\\frac{kQ}{R}$, tashqarida $\\frac{kQ}{r}$",
+    "ru": "Тонкая сфера: внутри $\\varphi=\\frac{kQ}{R}$, снаружи $\\frac{kQ}{r}$",
+    "en": "Thin shell: $\\varphi=\\frac{kQ}{R}$ inside, $\\frac{kQ}{r}$ outside"
+   },
+   {
+    "uz": "Superpozitsiya: $\\varphi=\\sum\\frac{kq_i}{r_i}$",
+    "ru": "Суперпозиция: $\\varphi=\\sum\\frac{kq_i}{r_i}$",
+    "en": "Superposition: $\\varphi=\\sum\\frac{kq_i}{r_i}$"
+   }
+  ],
+  "basis": {
+   "uz": "Konsentrik sferalar potensiali",
+   "ru": "Потенциал концентрических сфер",
+   "en": "Potential of concentric spheres"
+  },
+  "answer": "150\\ \\mathrm{V};\\ 60\\ \\mathrm{V};\\ 30\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original (B2-L13, konsentrik sferalar)"
+ },
+ {
+  "id": "B2-L13-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Dipol $\\pm1\\ \\mathrm{nC}$ zaryadlardan iborat, ular orasidagi masofa $2\\ \\mathrm{mm}$. Markazdan $0.1\\ \\mathrm{m}$ masofada, dipol o'qi bilan $\\theta=0$, $60^\\circ$ va $90^\\circ$ burchak hosil qiluvchi yo'nalishlarda potensialni toping. Potensialdan $\\theta=0$ dagi $E_r$ ni toping.",
+   "ru": "Диполь состоит из зарядов $\\pm1\\ \\mathrm{nC}$ на расстоянии $2\\ \\mathrm{mm}$. Найдите потенциал на расстоянии $0.1\\ \\mathrm{m}$ от центра в направлениях, составляющих с осью диполя углы $\\theta=0$, $60^\\circ$ и $90^\\circ$. По потенциалу найдите $E_r$ при $\\theta=0$.",
+   "en": "A dipole consists of charges $\\pm1\\ \\mathrm{nC}$ separated by $2\\ \\mathrm{mm}$. Find the potential $0.1\\ \\mathrm{m}$ from the centre in directions making angles $\\theta=0$, $60^\\circ$ and $90^\\circ$ with the dipole axis. From the potential find $E_r$ at $\\theta=0$."
+  },
+  "figure": "figures/B2-L13-S08.png",
+  "solution": {
+   "uz": [
+    "Dipol momenti va potensiali: $$p=qd=2\\cdot10^{-12}\\ \\mathrm{C\\cdot m},\\quad \\varphi=\\frac{kp\\cos\\theta}{r^2}=1.8\\cos\\theta\\ \\mathrm{V}$$",
+    "Uchta yo'nalish: $$\\varphi=1.8\\ \\mathrm{V};\\ 0.9\\ \\mathrm{V};\\ 0$$",
+    "Gradient: $$E_r=-\\frac{\\partial\\varphi}{\\partial r}=\\frac{2kp\\cos\\theta}{r^3}=36\\ \\mathrm{V/m}$$"
+   ],
+   "ru": [
+    "Дипольный момент и потенциал: $$p=qd=2\\cdot10^{-12}\\ \\mathrm{C\\cdot m},\\quad \\varphi=\\frac{kp\\cos\\theta}{r^2}=1.8\\cos\\theta\\ \\mathrm{V}$$",
+    "Три направления: $$\\varphi=1.8\\ \\mathrm{V};\\ 0.9\\ \\mathrm{V};\\ 0$$",
+    "Градиент: $$E_r=-\\frac{\\partial\\varphi}{\\partial r}=\\frac{2kp\\cos\\theta}{r^3}=36\\ \\mathrm{V/m}$$"
+   ],
+   "en": [
+    "Dipole moment and potential: $$p=qd=2\\cdot10^{-12}\\ \\mathrm{C\\cdot m},\\quad \\varphi=\\frac{kp\\cos\\theta}{r^2}=1.8\\cos\\theta\\ \\mathrm{V}$$",
+    "The three directions: $$\\varphi=1.8\\ \\mathrm{V};\\ 0.9\\ \\mathrm{V};\\ 0$$",
+    "The gradient: $$E_r=-\\frac{\\partial\\varphi}{\\partial r}=\\frac{2kp\\cos\\theta}{r^3}=36\\ \\mathrm{V/m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Dipol potensiali: $\\varphi=\\frac{kp\\cos\\theta}{r^2}$",
+    "ru": "Потенциал диполя: $\\varphi=\\frac{kp\\cos\\theta}{r^2}$",
+    "en": "Dipole potential: $\\varphi=\\frac{kp\\cos\\theta}{r^2}$"
+   },
+   null,
+   {
+    "uz": "Maydon va potensial: $\\vec E=-\\nabla\\varphi$",
+    "ru": "Поле и потенциал: $\\vec E=-\\nabla\\varphi$",
+    "en": "Field and potential: $\\vec E=-\\nabla\\varphi$"
+   }
+  ],
+  "basis": {
+   "uz": "Dipol potensiali",
+   "ru": "Потенциал диполя",
+   "en": "Dipole potential"
+  },
+  "answer": "1.8\\ \\mathrm{V};\\ 0.9\\ \\mathrm{V};\\ 0;\\ E_r=36\\ \\mathrm{V/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original (B2-L13, dipol potensiali)"
+ },
+ {
+  "id": "B2-L13-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Tomoni $0.1\\ \\mathrm{m}$ bo'lgan kvadrat uchlarida $+1\\ \\mathrm{nC}$ dan zaryad turibdi. Sistemaning energiyasini toping. Beshinchi $+1\\ \\mathrm{nC}$ zaryadni cheksizlikdan kvadrat markaziga keltirish uchun qancha ish kerak?",
+   "ru": "В вершинах квадрата со стороной $0.1\\ \\mathrm{m}$ находятся заряды по $+1\\ \\mathrm{nC}$. Найдите энергию системы. Какую работу нужно совершить, чтобы перенести пятый заряд $+1\\ \\mathrm{nC}$ из бесконечности в центр квадрата?",
+   "en": "Charges of $+1\\ \\mathrm{nC}$ each sit at the corners of a square of side $0.1\\ \\mathrm{m}$. Find the energy of the system. How much work is needed to bring a fifth charge $+1\\ \\mathrm{nC}$ from infinity to the centre of the square?"
+  },
+  "figure": "figures/B2-L13-S09.png",
+  "solution": {
+   "uz": [
+    "To'rtta tomon juftligi va ikkita diagonal juftlik: $$W=\\frac{kq^2}{a}\\left(4+\\frac{2}{\\sqrt{2}}\\right)=9\\cdot10^{-8}\\cdot5.41\\approx4.87\\cdot10^{-7}\\ \\mathrm{J}$$",
+    "Markazda maydon nol, lekin potensial nol emas: $$A=q\\varphi=q\\cdot\\frac{4kq\\sqrt{2}}{a}\\approx5.09\\cdot10^{-7}\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Четыре пары по сторонам и две пары по диагоналям: $$W=\\frac{kq^2}{a}\\left(4+\\frac{2}{\\sqrt{2}}\\right)=9\\cdot10^{-8}\\cdot5.41\\approx4.87\\cdot10^{-7}\\ \\mathrm{J}$$",
+    "В центре поле нулевое, но потенциал — нет: $$A=q\\varphi=q\\cdot\\frac{4kq\\sqrt{2}}{a}\\approx5.09\\cdot10^{-7}\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "Four side pairs and two diagonal pairs: $$W=\\frac{kq^2}{a}\\left(4+\\frac{2}{\\sqrt{2}}\\right)=9\\cdot10^{-8}\\cdot5.41\\approx4.87\\cdot10^{-7}\\ \\mathrm{J}$$",
+    "At the centre the field is zero, but the potential is not: $$A=q\\varphi=q\\cdot\\frac{4kq\\sqrt{2}}{a}\\approx5.09\\cdot10^{-7}\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Zaryadlar energiyasi: $W=\\sum_{i<j}\\frac{kq_iq_j}{r_{ij}}$",
+    "ru": "Энергия зарядов: $W=\\sum_{i<j}\\frac{kq_iq_j}{r_{ij}}$",
+    "en": "Energy of charges: $W=\\sum_{i<j}\\frac{kq_iq_j}{r_{ij}}$"
+   },
+   {
+    "uz": "Superpozitsiya: $\\varphi=\\sum\\frac{kq_i}{r_i}$",
+    "ru": "Суперпозиция: $\\varphi=\\sum\\frac{kq_i}{r_i}$",
+    "en": "Superposition: $\\varphi=\\sum\\frac{kq_i}{r_i}$"
+   }
+  ],
+  "basis": {
+   "uz": "Zaryadlar sistemasi energiyasi",
+   "ru": "Энергия системы зарядов",
+   "en": "Energy of a system of charges"
+  },
+  "answer": "W\\approx4.87\\cdot10^{-7}\\ \\mathrm{J};\\ A\\approx5.09\\cdot10^{-7}\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 7.33-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L13-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.1\\ \\mathrm{m}$ bo'lgan yupqa metall sfera va xuddi shunday radiusli, hajmi bo'ylab bir tekis zaryadlangan shar har biri $1\\ \\mu\\mathrm{C}$ zaryadga ega. Har birining elektrostatik energiyasini toping. Sirt yonidagi energiya zichligi qancha?",
+   "ru": "Тонкая металлическая сфера радиусом $0.1\\ \\mathrm{m}$ и шар того же радиуса, равномерно заряженный по объёму, имеют заряд по $1\\ \\mu\\mathrm{C}$. Найдите электростатическую энергию каждого. Какова плотность энергии у поверхности?",
+   "en": "A thin metal shell of radius $0.1\\ \\mathrm{m}$ and a ball of the same radius, uniformly charged throughout its volume, each carry $1\\ \\mu\\mathrm{C}$. Find the electrostatic energy of each. What is the energy density next to the surface?"
+  },
+  "figure": "figures/B2-L13-S10.png",
+  "solution": {
+   "uz": [
+    "Sfera — maydon faqat tashqarida: $$W=\\frac{\\varepsilon_0}{2}\\int_R^\\infty\\left(\\frac{kQ}{r^2}\\right)^24\\pi r^2dr=\\frac{kQ^2}{2R}=0.045\\ \\mathrm{J}$$",
+    "Shar — ichkaridagi maydon ham qo'shiladi: $$W=\\frac{kQ^2}{2R}+\\frac{kQ^2}{10R}=\\frac{3kQ^2}{5R}=0.054\\ \\mathrm{J}$$",
+    "Sirt yonida $E=9\\cdot10^5\\ \\mathrm{V/m}$: $$w=\\frac{\\varepsilon_0E^2}{2}\\approx3.6\\ \\mathrm{J/m^3}$$"
+   ],
+   "ru": [
+    "Сфера — поле только снаружи: $$W=\\frac{\\varepsilon_0}{2}\\int_R^\\infty\\left(\\frac{kQ}{r^2}\\right)^24\\pi r^2dr=\\frac{kQ^2}{2R}=0.045\\ \\mathrm{J}$$",
+    "Шар — добавляется и поле внутри: $$W=\\frac{kQ^2}{2R}+\\frac{kQ^2}{10R}=\\frac{3kQ^2}{5R}=0.054\\ \\mathrm{J}$$",
+    "У поверхности $E=9\\cdot10^5\\ \\mathrm{V/m}$: $$w=\\frac{\\varepsilon_0E^2}{2}\\approx3.6\\ \\mathrm{J/m^3}$$"
+   ],
+   "en": [
+    "Shell — the field is only outside: $$W=\\frac{\\varepsilon_0}{2}\\int_R^\\infty\\left(\\frac{kQ}{r^2}\\right)^24\\pi r^2dr=\\frac{kQ^2}{2R}=0.045\\ \\mathrm{J}$$",
+    "Ball — the field inside adds to it: $$W=\\frac{kQ^2}{2R}+\\frac{kQ^2}{10R}=\\frac{3kQ^2}{5R}=0.054\\ \\mathrm{J}$$",
+    "Next to the surface $E=9\\cdot10^5\\ \\mathrm{V/m}$: $$w=\\frac{\\varepsilon_0E^2}{2}\\approx3.6\\ \\mathrm{J/m^3}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Maydon energiyasi: $W=\\frac{\\varepsilon_0}{2}\\int E^2\\,dV$",
+    "ru": "Энергия поля: $W=\\frac{\\varepsilon_0}{2}\\int E^2\\,dV$",
+    "en": "Field energy: $W=\\frac{\\varepsilon_0}{2}\\int E^2\\,dV$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Maydon energiyasi",
+   "ru": "Энергия поля",
+   "en": "Field energy"
+  },
+  "answer": "0.045\\ \\mathrm{J};\\ 0.054\\ \\mathrm{J};\\ w\\approx3.6\\ \\mathrm{J/m^3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original (B2-L13, xususiy energiya)"
+ },
+ {
+  "id": "B2-L13-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $0.1\\ \\mathrm{m}$ bo'lgan metall sharda $3\\ \\mathrm{nC}$ zaryad bor. U uzoqdagi radiusi $0.05\\ \\mathrm{m}$ bo'lgan zaryadsiz shar bilan ingichka sim orqali ulandi. Sharlarning zaryadlarini, umumiy potensialni va sirtlar yonidagi maydonlarni toping. Qancha energiya yo'qoladi?",
+   "ru": "На металлическом шаре радиусом $0.1\\ \\mathrm{m}$ заряд $3\\ \\mathrm{nC}$. Его соединили тонкой проволокой с удалённым незаряженным шаром радиусом $0.05\\ \\mathrm{m}$. Найдите заряды шаров, общий потенциал и поля у поверхностей. Сколько энергии теряется?",
+   "en": "A metal sphere of radius $0.1\\ \\mathrm{m}$ carries $3\\ \\mathrm{nC}$. It is joined by a thin wire to a distant uncharged sphere of radius $0.05\\ \\mathrm{m}$. Find the charges on the spheres, the common potential and the fields at their surfaces. How much energy is lost?"
+  },
+  "figure": "figures/B2-L13-S11.png",
+  "solution": {
+   "uz": [
+    "Potensiallar tenglashadi, zaryad saqlanadi: $$\\frac{q_1}{R_1}=\\frac{q_2}{R_2},\\quad q_1+q_2=3\\ \\mathrm{nC}\\ \\Rightarrow\\ q_1=2\\ \\mathrm{nC},\\ q_2=1\\ \\mathrm{nC}$$",
+    "Umumiy potensial va maydonlar: $$\\varphi=\\frac{kq_1}{R_1}=180\\ \\mathrm{V},\\quad E_1=1800\\ \\mathrm{V/m},\\quad E_2=3600\\ \\mathrm{V/m}$$",
+    "Energiya $\\frac{Q\\varphi}{2}$ ko'rinishida: $$W_0=\\frac{kQ^2}{2R_1}=4.05\\cdot10^{-7}\\ \\mathrm{J},\\quad W=\\frac{Q\\varphi}{2}=2.7\\cdot10^{-7}\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Потенциалы выравниваются, заряд сохраняется: $$\\frac{q_1}{R_1}=\\frac{q_2}{R_2},\\quad q_1+q_2=3\\ \\mathrm{nC}\\ \\Rightarrow\\ q_1=2\\ \\mathrm{nC},\\ q_2=1\\ \\mathrm{nC}$$",
+    "Общий потенциал и поля: $$\\varphi=\\frac{kq_1}{R_1}=180\\ \\mathrm{V},\\quad E_1=1800\\ \\mathrm{V/m},\\quad E_2=3600\\ \\mathrm{V/m}$$",
+    "Энергия в виде $\\frac{Q\\varphi}{2}$: $$W_0=\\frac{kQ^2}{2R_1}=4.05\\cdot10^{-7}\\ \\mathrm{J},\\quad W=\\frac{Q\\varphi}{2}=2.7\\cdot10^{-7}\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "The potentials equalise and charge is conserved: $$\\frac{q_1}{R_1}=\\frac{q_2}{R_2},\\quad q_1+q_2=3\\ \\mathrm{nC}\\ \\Rightarrow\\ q_1=2\\ \\mathrm{nC},\\ q_2=1\\ \\mathrm{nC}$$",
+    "The common potential and the fields: $$\\varphi=\\frac{kq_1}{R_1}=180\\ \\mathrm{V},\\quad E_1=1800\\ \\mathrm{V/m},\\quad E_2=3600\\ \\mathrm{V/m}$$",
+    "The energy as $\\frac{Q\\varphi}{2}$: $$W_0=\\frac{kQ^2}{2R_1}=4.05\\cdot10^{-7}\\ \\mathrm{J},\\quad W=\\frac{Q\\varphi}{2}=2.7\\cdot10^{-7}\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "O'tkazgich ekvipotensial: $\\varphi=\\mathrm{const}$",
+    "ru": "Проводник эквипотенциален: $\\varphi=\\mathrm{const}$",
+    "en": "A conductor is equipotential: $\\varphi=\\mathrm{const}$"
+   },
+   null,
+   {
+    "uz": "Kondensator energiyasi: $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}$",
+    "ru": "Энергия конденсатора: $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}$",
+    "en": "Capacitor energy: $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ulangan o'tkazgichlar",
+   "ru": "Соединённые проводники",
+   "en": "Connected conductors"
+  },
+  "answer": "2\\ \\mathrm{nC};\\ 1\\ \\mathrm{nC};\\ 180\\ \\mathrm{V};\\ 1800,\\ 3600\\ \\mathrm{V/m};\\ \\Delta W=1.35\\cdot10^{-7}\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 7.61-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L13-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$q=1\\ \\mathrm{nC}$ zaryad yerga ulangan cheksiz o'tkazgich tekislikdan $d=0.1\\ \\mathrm{m}$ masofada turibdi. Zaryadga ta'sir qiluvchi kuchni, zaryad ostidagi sirt zichligini va zaryadni cheksizlikka olib ketish ishini toping.",
+   "ru": "Заряд $q=1\\ \\mathrm{nC}$ находится на расстоянии $d=0.1\\ \\mathrm{m}$ от заземлённой бесконечной проводящей плоскости. Найдите силу, действующую на заряд, поверхностную плотность под зарядом и работу удаления заряда на бесконечность.",
+   "en": "A charge $q=1\\ \\mathrm{nC}$ is a distance $d=0.1\\ \\mathrm{m}$ from a grounded infinite conducting plane. Find the force on the charge, the surface density beneath it, and the work needed to remove the charge to infinity."
+  },
+  "figure": "figures/B2-L13-S12.png",
+  "solution": {
+   "uz": [
+    "Tasvir $-q$ tekislikdan narida $d$ masofada: $$F=\\frac{kq^2}{(2d)^2}=\\frac{9\\cdot10^9\\cdot10^{-18}}{0.04}=2.25\\cdot10^{-7}\\ \\mathrm{N}$$",
+    "Tekislik yonida $E=\\frac{2kqd}{(d^2+s^2)^{3/2}}$, $\\sigma=-\\varepsilon_0E$: $$\\sigma(0)=-\\frac{q}{2\\pi d^2}\\approx-1.59\\cdot10^{-8}\\ \\mathrm{C/m^2}$$",
+    "Kuch masofaga bog'liq — integrallaymiz: $$A=\\int_d^\\infty\\frac{kq^2}{4x^2}dx=\\frac{kq^2}{4d}=2.25\\cdot10^{-8}\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Изображение $-q$ на расстоянии $d$ за плоскостью: $$F=\\frac{kq^2}{(2d)^2}=\\frac{9\\cdot10^9\\cdot10^{-18}}{0.04}=2.25\\cdot10^{-7}\\ \\mathrm{N}$$",
+    "У плоскости $E=\\frac{2kqd}{(d^2+s^2)^{3/2}}$, $\\sigma=-\\varepsilon_0E$: $$\\sigma(0)=-\\frac{q}{2\\pi d^2}\\approx-1.59\\cdot10^{-8}\\ \\mathrm{C/m^2}$$",
+    "Сила зависит от расстояния — интегрируем: $$A=\\int_d^\\infty\\frac{kq^2}{4x^2}dx=\\frac{kq^2}{4d}=2.25\\cdot10^{-8}\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "The image $-q$ is a distance $d$ behind the plane: $$F=\\frac{kq^2}{(2d)^2}=\\frac{9\\cdot10^9\\cdot10^{-18}}{0.04}=2.25\\cdot10^{-7}\\ \\mathrm{N}$$",
+    "Next to the plane $E=\\frac{2kqd}{(d^2+s^2)^{3/2}}$, $\\sigma=-\\varepsilon_0E$: $$\\sigma(0)=-\\frac{q}{2\\pi d^2}\\approx-1.59\\cdot10^{-8}\\ \\mathrm{C/m^2}$$",
+    "The force depends on distance — integrate: $$A=\\int_d^\\infty\\frac{kq^2}{4x^2}dx=\\frac{kq^2}{4d}=2.25\\cdot10^{-8}\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tasvir zaryad: $-q$, masofa $2d$",
+    "ru": "Заряд-изображение: $-q$, расстояние $2d$",
+    "en": "Image charge: $-q$, separation $2d$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Tasvirlar usuli",
+   "ru": "Метод изображений",
+   "en": "Method of images"
+  },
+  "answer": "F=2.25\\cdot10^{-7}\\ \\mathrm{N};\\ \\sigma\\approx-1.59\\cdot10^{-8}\\ \\mathrm{C/m^2};\\ A=2.25\\cdot10^{-8}\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original (B2-L13, tasvirlar usuli)"
+ },
+ {
+  "id": "B2-L13-S13",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Yassi havo kondensatori qoplamalarining yuzi $100\\ \\mathrm{cm^2}$, oralig'i $1\\ \\mathrm{mm}$. U $100\\ \\mathrm{V}$ ga zaryadlangan. Sig'imni, zaryadni, maydonni va energiyani toping. Energiyani maydon energiyasi zichligi orqali tekshiring.",
+   "ru": "Площадь обкладок плоского воздушного конденсатора $100\\ \\mathrm{cm^2}$, зазор $1\\ \\mathrm{mm}$. Он заряжен до $100\\ \\mathrm{V}$. Найдите ёмкость, заряд, поле и энергию. Проверьте энергию через плотность энергии поля.",
+   "en": "An air parallel-plate capacitor has plate area $100\\ \\mathrm{cm^2}$ and gap $1\\ \\mathrm{mm}$. It is charged to $100\\ \\mathrm{V}$. Find the capacitance, charge, field and energy. Check the energy via the field energy density."
+  },
+  "figure": "figures/B2-L13-S13.png",
+  "solution": {
+   "uz": [
+    "Sig'im va zaryad: $$C=\\frac{\\varepsilon_0A}{d}=\\frac{8.85\\cdot10^{-12}\\cdot0.01}{0.001}=88.5\\ \\mathrm{pF},\\quad Q=CU=8.85\\cdot10^{-9}\\ \\mathrm{C}$$",
+    "Maydon va energiya: $$E=\\frac{U}{d}=10^5\\ \\mathrm{V/m},\\quad W=\\frac{CU^2}{2}\\approx4.43\\cdot10^{-7}\\ \\mathrm{J}$$",
+    "Tekshiruv: $$W=\\frac{\\varepsilon_0E^2}{2}\\cdot Ad=44.3\\cdot10^{-5}\\cdot10^{-3}\\approx4.43\\cdot10^{-7}\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Ёмкость и заряд: $$C=\\frac{\\varepsilon_0A}{d}=\\frac{8.85\\cdot10^{-12}\\cdot0.01}{0.001}=88.5\\ \\mathrm{pF},\\quad Q=CU=8.85\\cdot10^{-9}\\ \\mathrm{C}$$",
+    "Поле и энергия: $$E=\\frac{U}{d}=10^5\\ \\mathrm{V/m},\\quad W=\\frac{CU^2}{2}\\approx4.43\\cdot10^{-7}\\ \\mathrm{J}$$",
+    "Проверка: $$W=\\frac{\\varepsilon_0E^2}{2}\\cdot Ad=44.3\\cdot10^{-5}\\cdot10^{-3}\\approx4.43\\cdot10^{-7}\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "Capacitance and charge: $$C=\\frac{\\varepsilon_0A}{d}=\\frac{8.85\\cdot10^{-12}\\cdot0.01}{0.001}=88.5\\ \\mathrm{pF},\\quad Q=CU=8.85\\cdot10^{-9}\\ \\mathrm{C}$$",
+    "Field and energy: $$E=\\frac{U}{d}=10^5\\ \\mathrm{V/m},\\quad W=\\frac{CU^2}{2}\\approx4.43\\cdot10^{-7}\\ \\mathrm{J}$$",
+    "Check: $$W=\\frac{\\varepsilon_0E^2}{2}\\cdot Ad=44.3\\cdot10^{-5}\\cdot10^{-3}\\approx4.43\\cdot10^{-7}\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yassi kondensator: $C=\\frac{\\varepsilon_0A}{d}$",
+    "ru": "Плоский конденсатор: $C=\\frac{\\varepsilon_0A}{d}$",
+    "en": "Parallel plates: $C=\\frac{\\varepsilon_0A}{d}$"
+   },
+   {
+    "uz": "Kondensator energiyasi: $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}$",
+    "ru": "Энергия конденсатора: $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}$",
+    "en": "Capacitor energy: $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Yassi kondensator",
+   "ru": "Плоский конденсатор",
+   "en": "Parallel-plate capacitor"
+  },
+  "answer": "C=88.5\\ \\mathrm{pF};\\ Q=8.85\\ \\mathrm{nC};\\ E=10^5\\ \\mathrm{V/m};\\ W\\approx4.43\\cdot10^{-7}\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 8.21-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L13-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Sferik kondensator qoplamalarining radiuslari $a=0.1\\ \\mathrm{m}$ va $b=0.2\\ \\mathrm{m}$. Sig'imni toping va radiusi $0.1\\ \\mathrm{m}$ bo'lgan yakkalangan shar sig'imi bilan solishtiring. $100\\ \\mathrm{V}$ da zaryadni va ichki qoplama yonidagi maydonni toping.",
+   "ru": "Радиусы обкладок сферического конденсатора $a=0.1\\ \\mathrm{m}$ и $b=0.2\\ \\mathrm{m}$. Найдите ёмкость и сравните с ёмкостью уединённого шара радиусом $0.1\\ \\mathrm{m}$. При $100\\ \\mathrm{V}$ найдите заряд и поле у внутренней обкладки.",
+   "en": "The plates of a spherical capacitor have radii $a=0.1\\ \\mathrm{m}$ and $b=0.2\\ \\mathrm{m}$. Find the capacitance and compare it with that of an isolated sphere of radius $0.1\\ \\mathrm{m}$. At $100\\ \\mathrm{V}$ find the charge and the field next to the inner plate."
+  },
+  "figure": "figures/B2-L13-S14.png",
+  "solution": {
+   "uz": [
+    "Gauss teoremasidan $E=\\frac{kQ}{r^2}$, integrallab: $$U=kQ\\left(\\frac{1}{a}-\\frac{1}{b}\\right),\\quad C=\\frac{4\\pi\\varepsilon_0ab}{b-a}\\approx22.2\\ \\mathrm{pF}$$",
+    "Yakkalangan shar ($b\\to\\infty$): $$C=4\\pi\\varepsilon_0a\\approx11.1\\ \\mathrm{pF}$$",
+    "Zaryad va maydon: $$Q=CU\\approx2.22\\ \\mathrm{nC},\\quad E(a)=\\frac{Ub}{a(b-a)}=2000\\ \\mathrm{V/m}$$"
+   ],
+   "ru": [
+    "Из теоремы Гаусса $E=\\frac{kQ}{r^2}$, интегрируя: $$U=kQ\\left(\\frac{1}{a}-\\frac{1}{b}\\right),\\quad C=\\frac{4\\pi\\varepsilon_0ab}{b-a}\\approx22.2\\ \\mathrm{pF}$$",
+    "Уединённый шар ($b\\to\\infty$): $$C=4\\pi\\varepsilon_0a\\approx11.1\\ \\mathrm{pF}$$",
+    "Заряд и поле: $$Q=CU\\approx2.22\\ \\mathrm{nC},\\quad E(a)=\\frac{Ub}{a(b-a)}=2000\\ \\mathrm{V/m}$$"
+   ],
+   "en": [
+    "From Gauss's law $E=\\frac{kQ}{r^2}$; integrating: $$U=kQ\\left(\\frac{1}{a}-\\frac{1}{b}\\right),\\quad C=\\frac{4\\pi\\varepsilon_0ab}{b-a}\\approx22.2\\ \\mathrm{pF}$$",
+    "Isolated sphere ($b\\to\\infty$): $$C=4\\pi\\varepsilon_0a\\approx11.1\\ \\mathrm{pF}$$",
+    "Charge and field: $$Q=CU\\approx2.22\\ \\mathrm{nC},\\quad E(a)=\\frac{Ub}{a(b-a)}=2000\\ \\mathrm{V/m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sferik kondensator: $C=\\frac{4\\pi\\varepsilon_0ab}{b-a}$",
+    "ru": "Сферический конденсатор: $C=\\frac{4\\pi\\varepsilon_0ab}{b-a}$",
+    "en": "Spherical capacitor: $C=\\frac{4\\pi\\varepsilon_0ab}{b-a}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Sferik kondensator",
+   "ru": "Сферический конденсатор",
+   "en": "Spherical capacitor"
+  },
+  "answer": "C\\approx22.2\\ \\mathrm{pF};\\ Q\\approx2.22\\ \\mathrm{nC};\\ E=2000\\ \\mathrm{V/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 8.25-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L13-S15",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Koaksial kabelning ichki simi radiusi $1\\ \\mathrm{mm}$, tashqi qobig'i radiusi $1\\ \\mathrm{cm}$. Uzunlik birligiga sig'imni toping. Kabel $100\\ \\mathrm{V}$ ga zaryadlanganda uzunlik birligidagi zaryadni va ichki sim sirti hamda tashqi qobiq yonidagi maydonni toping.",
+   "ru": "Радиус внутренней жилы коаксиального кабеля $1\\ \\mathrm{mm}$, внешней оболочки $1\\ \\mathrm{cm}$. Найдите ёмкость на единицу длины. При зарядке кабеля до $100\\ \\mathrm{V}$ найдите заряд на единицу длины и поле у поверхности жилы и у внешней оболочки.",
+   "en": "A coaxial cable has an inner wire of radius $1\\ \\mathrm{mm}$ and an outer sheath of radius $1\\ \\mathrm{cm}$. Find the capacitance per unit length. When the cable is charged to $100\\ \\mathrm{V}$, find the charge per unit length and the field at the wire's surface and next to the outer sheath."
+  },
+  "figure": "figures/B2-L13-S15.png",
+  "solution": {
+   "uz": [
+    "Maydon $\\frac{\\lambda}{2\\pi\\varepsilon_0r}$ ni integrallab: $$\\frac{C}{L}=\\frac{2\\pi\\varepsilon_0}{\\ln(b/a)}=\\frac{55.6\\ \\mathrm{pF/m}}{\\ln10}\\approx24.2\\ \\mathrm{pF/m}$$",
+    "Zaryad va maydonlar: $$\\lambda\\approx2.42\\cdot10^{-9}\\ \\mathrm{C/m},\\quad E(a)=\\frac{U}{a\\ln(b/a)}\\approx4.34\\cdot10^4\\ \\mathrm{V/m},\\quad E(b)\\approx4.34\\cdot10^3\\ \\mathrm{V/m}$$"
+   ],
+   "ru": [
+    "Интегрируя поле $\\frac{\\lambda}{2\\pi\\varepsilon_0r}$: $$\\frac{C}{L}=\\frac{2\\pi\\varepsilon_0}{\\ln(b/a)}=\\frac{55.6\\ \\mathrm{pF/m}}{\\ln10}\\approx24.2\\ \\mathrm{pF/m}$$",
+    "Заряд и поля: $$\\lambda\\approx2.42\\cdot10^{-9}\\ \\mathrm{C/m},\\quad E(a)=\\frac{U}{a\\ln(b/a)}\\approx4.34\\cdot10^4\\ \\mathrm{V/m},\\quad E(b)\\approx4.34\\cdot10^3\\ \\mathrm{V/m}$$"
+   ],
+   "en": [
+    "Integrating the field $\\frac{\\lambda}{2\\pi\\varepsilon_0r}$: $$\\frac{C}{L}=\\frac{2\\pi\\varepsilon_0}{\\ln(b/a)}=\\frac{55.6\\ \\mathrm{pF/m}}{\\ln10}\\approx24.2\\ \\mathrm{pF/m}$$",
+    "Charge and fields: $$\\lambda\\approx2.42\\cdot10^{-9}\\ \\mathrm{C/m},\\quad E(a)=\\frac{U}{a\\ln(b/a)}\\approx4.34\\cdot10^4\\ \\mathrm{V/m},\\quad E(b)\\approx4.34\\cdot10^3\\ \\mathrm{V/m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Silindrik kondensator: $C=\\frac{2\\pi\\varepsilon_0L}{\\ln(b/a)}$",
+    "ru": "Цилиндрический конденсатор: $C=\\frac{2\\pi\\varepsilon_0L}{\\ln(b/a)}$",
+    "en": "Cylindrical capacitor: $C=\\frac{2\\pi\\varepsilon_0L}{\\ln(b/a)}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Silindrik kondensator",
+   "ru": "Цилиндрический конденсатор",
+   "en": "Cylindrical capacitor"
+  },
+  "answer": "\\frac{C}{L}\\approx24.2\\ \\mathrm{pF/m};\\ \\lambda\\approx2.42\\ \\mathrm{nC/m};\\ 4.34\\cdot10^4;\\ 4.34\\cdot10^3\\ \\mathrm{V/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 8.27-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L13-S16",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$C_1=2\\ \\mu\\mathrm{F}$ va $C_2=3\\ \\mu\\mathrm{F}$ kondensatorlar ketma-ket ulangan, ularga parallel ravishda $C_3=1.8\\ \\mu\\mathrm{F}$ ulangan. Batareya $10\\ \\mathrm{V}$ kuchlanish beradi. Umumiy sig'imni, har bir kondensatordagi zaryad va kuchlanishni hamda umumiy energiyani toping.",
+   "ru": "Конденсаторы $C_1=2\\ \\mu\\mathrm{F}$ и $C_2=3\\ \\mu\\mathrm{F}$ соединены последовательно, параллельно им подключён $C_3=1.8\\ \\mu\\mathrm{F}$. Батарея даёт напряжение $10\\ \\mathrm{V}$. Найдите общую ёмкость, заряд и напряжение на каждом конденсаторе и общую энергию.",
+   "en": "Capacitors $C_1=2\\ \\mu\\mathrm{F}$ and $C_2=3\\ \\mu\\mathrm{F}$ are in series, with $C_3=1.8\\ \\mu\\mathrm{F}$ in parallel with them. A battery supplies $10\\ \\mathrm{V}$. Find the equivalent capacitance, the charge and voltage on each capacitor, and the total energy."
+  },
+  "figure": "figures/B2-L13-S16.png",
+  "solution": {
+   "uz": [
+    "Ketma-ket juftlik: $$C_{12}=\\frac{C_1C_2}{C_1+C_2}=1.2\\ \\mu\\mathrm{F},\\quad C=C_{12}+C_3=3\\ \\mu\\mathrm{F}$$",
+    "Juftlikda $Q$ bir xil, kuchlanish teskari taqsimlanadi: $$Q_{12}=12\\ \\mu\\mathrm{C},\\quad U_1=6\\ \\mathrm{V},\\quad U_2=4\\ \\mathrm{V},\\quad Q_3=18\\ \\mu\\mathrm{C}$$",
+    "Energiya: $$W=\\frac{CU^2}{2}=\\frac{3\\cdot10^{-6}\\cdot100}{2}=1.5\\cdot10^{-4}\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Последовательная пара: $$C_{12}=\\frac{C_1C_2}{C_1+C_2}=1.2\\ \\mu\\mathrm{F},\\quad C=C_{12}+C_3=3\\ \\mu\\mathrm{F}$$",
+    "В паре $Q$ одинаков, напряжение делится обратно: $$Q_{12}=12\\ \\mu\\mathrm{C},\\quad U_1=6\\ \\mathrm{V},\\quad U_2=4\\ \\mathrm{V},\\quad Q_3=18\\ \\mu\\mathrm{C}$$",
+    "Энергия: $$W=\\frac{CU^2}{2}=\\frac{3\\cdot10^{-6}\\cdot100}{2}=1.5\\cdot10^{-4}\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "The series pair: $$C_{12}=\\frac{C_1C_2}{C_1+C_2}=1.2\\ \\mu\\mathrm{F},\\quad C=C_{12}+C_3=3\\ \\mu\\mathrm{F}$$",
+    "In the pair $Q$ is shared and the voltage divides inversely: $$Q_{12}=12\\ \\mu\\mathrm{C},\\quad U_1=6\\ \\mathrm{V},\\quad U_2=4\\ \\mathrm{V},\\quad Q_3=18\\ \\mu\\mathrm{C}$$",
+    "Energy: $$W=\\frac{CU^2}{2}=\\frac{3\\cdot10^{-6}\\cdot100}{2}=1.5\\cdot10^{-4}\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ketma-ket: $\\frac{1}{C}=\\sum\\frac{1}{C_i}$, $Q$ bir xil",
+    "ru": "Последовательно: $\\frac{1}{C}=\\sum\\frac{1}{C_i}$, $Q$ одинаков",
+    "en": "Series: $\\frac{1}{C}=\\sum\\frac{1}{C_i}$, same $Q$"
+   },
+   {
+    "uz": "Parallel: $C=\\sum C_i$, $U$ bir xil",
+    "ru": "Параллельно: $C=\\sum C_i$, $U$ одинаково",
+    "en": "Parallel: $C=\\sum C_i$, same $U$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kondensatorlar batareyasi",
+   "ru": "Батарея конденсаторов",
+   "en": "A capacitor network"
+  },
+  "answer": "C=3\\ \\mu\\mathrm{F};\\ 12\\ \\mu\\mathrm{C}\\ (6\\ \\mathrm{V},\\ 4\\ \\mathrm{V});\\ 18\\ \\mu\\mathrm{C};\\ W=150\\ \\mu\\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 8.41-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L13-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$100\\ \\mathrm{V}$ ga zaryadlangan $C_1=2\\ \\mu\\mathrm{F}$ kondensator manbadan uzilib, zaryadsiz $C_2=3\\ \\mu\\mathrm{F}$ kondensatorga parallel ulandi. Umumiy kuchlanishni, boshlang'ich va oxirgi energiyani toping. Energiyaning qayerga ketganini tushuntiring.",
+   "ru": "Конденсатор $C_1=2\\ \\mu\\mathrm{F}$, заряженный до $100\\ \\mathrm{V}$, отключили от источника и подключили параллельно к незаряженному конденсатору $C_2=3\\ \\mu\\mathrm{F}$. Найдите общее напряжение, начальную и конечную энергии. Объясните, куда ушла энергия.",
+   "en": "A capacitor $C_1=2\\ \\mu\\mathrm{F}$ charged to $100\\ \\mathrm{V}$ is disconnected from the source and connected in parallel to an uncharged capacitor $C_2=3\\ \\mu\\mathrm{F}$. Find the common voltage and the initial and final energies. Explain where the energy went."
+  },
+  "figure": "figures/B2-L13-S17.png",
+  "solution": {
+   "uz": [
+    "Zaryad saqlanadi: $$U=\\frac{C_1U_1}{C_1+C_2}=\\frac{200\\ \\mu\\mathrm{C}}{5\\ \\mu\\mathrm{F}}=40\\ \\mathrm{V}$$",
+    "Energiyalar: $$W_0=\\frac{C_1U_1^2}{2}=10\\ \\mathrm{mJ},\\quad W=\\frac{(C_1+C_2)U^2}{2}=4\\ \\mathrm{mJ}$$",
+    "Yo'qotish — simlardagi issiqlik va nurlanish, qarshilikka bog'liq emas: $$\\Delta W=\\frac{C_1C_2U_1^2}{2(C_1+C_2)}=6\\ \\mathrm{mJ}$$"
+   ],
+   "ru": [
+    "Заряд сохраняется: $$U=\\frac{C_1U_1}{C_1+C_2}=\\frac{200\\ \\mu\\mathrm{C}}{5\\ \\mu\\mathrm{F}}=40\\ \\mathrm{V}$$",
+    "Энергии: $$W_0=\\frac{C_1U_1^2}{2}=10\\ \\mathrm{mJ},\\quad W=\\frac{(C_1+C_2)U^2}{2}=4\\ \\mathrm{mJ}$$",
+    "Потеря — тепло в проводах и излучение, не зависит от сопротивления: $$\\Delta W=\\frac{C_1C_2U_1^2}{2(C_1+C_2)}=6\\ \\mathrm{mJ}$$"
+   ],
+   "en": [
+    "Charge is conserved: $$U=\\frac{C_1U_1}{C_1+C_2}=\\frac{200\\ \\mu\\mathrm{C}}{5\\ \\mu\\mathrm{F}}=40\\ \\mathrm{V}$$",
+    "Energies: $$W_0=\\frac{C_1U_1^2}{2}=10\\ \\mathrm{mJ},\\quad W=\\frac{(C_1+C_2)U^2}{2}=4\\ \\mathrm{mJ}$$",
+    "The loss — heat in the wires and radiation, independent of the resistance: $$\\Delta W=\\frac{C_1C_2U_1^2}{2(C_1+C_2)}=6\\ \\mathrm{mJ}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Zaryad saqlanishi: $\\sum Q_i=\\mathrm{const}$",
+    "ru": "Сохранение заряда: $\\sum Q_i=\\mathrm{const}$",
+    "en": "Charge conservation: $\\sum Q_i=\\mathrm{const}$"
+   },
+   {
+    "uz": "Kondensator energiyasi: $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}$",
+    "ru": "Энергия конденсатора: $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}$",
+    "en": "Capacitor energy: $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Zaryadlangan kondensatorlarni ulash",
+   "ru": "Соединение заряженных конденсаторов",
+   "en": "Connecting charged capacitors"
+  },
+  "answer": "U=40\\ \\mathrm{V};\\ W_0=10\\ \\mathrm{mJ};\\ W=4\\ \\mathrm{mJ};\\ \\Delta W=6\\ \\mathrm{mJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L13, energiya yo'qotilishi)"
+ },
+ {
+  "id": "B2-L13-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Yuzi $100\\ \\mathrm{cm^2}$, oralig'i $1\\ \\mathrm{mm}$ bo'lgan yassi havo kondensatori $100\\ \\mathrm{V}$ ga zaryadlanib, manbadan uzildi. Qoplamalar orasi sekin $3\\ \\mathrm{mm}$ ga uzaytirildi. Qoplamalarning tortishish kuchini, bajarilgan ishni va oxirgi kuchlanishni toping.",
+   "ru": "Плоский воздушный конденсатор с площадью $100\\ \\mathrm{cm^2}$ и зазором $1\\ \\mathrm{mm}$ зарядили до $100\\ \\mathrm{V}$ и отключили от источника. Зазор медленно увеличили до $3\\ \\mathrm{mm}$. Найдите силу притяжения обкладок, совершённую работу и конечное напряжение.",
+   "en": "An air parallel-plate capacitor with area $100\\ \\mathrm{cm^2}$ and gap $1\\ \\mathrm{mm}$ is charged to $100\\ \\mathrm{V}$ and disconnected from the source. The gap is slowly increased to $3\\ \\mathrm{mm}$. Find the attractive force between the plates, the work done and the final voltage."
+  },
+  "figure": "figures/B2-L13-S18.png",
+  "solution": {
+   "uz": [
+    "$Q=8.85\\cdot10^{-9}\\ \\mathrm{C}$ o'zgarmaydi, kuch masofaga bog'liq emas: $$F=\\frac{Q^2}{2\\varepsilon_0A}\\approx4.43\\cdot10^{-4}\\ \\mathrm{N}$$",
+    "Ish energiya o'zgarishiga teng: $$A=F\\Delta d=4.43\\cdot10^{-4}\\cdot0.002\\approx8.85\\cdot10^{-7}\\ \\mathrm{J}=W_2-W_1$$",
+    "Sig'im $3$ marta kamaydi: $$U=\\frac{Q}{C}=3U_0=300\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "$Q=8.85\\cdot10^{-9}\\ \\mathrm{C}$ не меняется, сила не зависит от расстояния: $$F=\\frac{Q^2}{2\\varepsilon_0A}\\approx4.43\\cdot10^{-4}\\ \\mathrm{N}$$",
+    "Работа равна изменению энергии: $$A=F\\Delta d=4.43\\cdot10^{-4}\\cdot0.002\\approx8.85\\cdot10^{-7}\\ \\mathrm{J}=W_2-W_1$$",
+    "Ёмкость уменьшилась в $3$ раза: $$U=\\frac{Q}{C}=3U_0=300\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "$Q=8.85\\cdot10^{-9}\\ \\mathrm{C}$ is fixed, and the force does not depend on the gap: $$F=\\frac{Q^2}{2\\varepsilon_0A}\\approx4.43\\cdot10^{-4}\\ \\mathrm{N}$$",
+    "The work equals the change in energy: $$A=F\\Delta d=4.43\\cdot10^{-4}\\cdot0.002\\approx8.85\\cdot10^{-7}\\ \\mathrm{J}=W_2-W_1$$",
+    "The capacitance fell by a factor of $3$: $$U=\\frac{Q}{C}=3U_0=300\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qoplamalar kuchi: $F=\\frac{Q^2}{2\\varepsilon_0A}$",
+    "ru": "Сила обкладок: $F=\\frac{Q^2}{2\\varepsilon_0A}$",
+    "en": "Force between plates: $F=\\frac{Q^2}{2\\varepsilon_0A}$"
+   },
+   {
+    "uz": "Kondensator energiyasi: $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}$",
+    "ru": "Энергия конденсатора: $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}$",
+    "en": "Capacitor energy: $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Qoplamalarni uzoqlashtirish",
+   "ru": "Раздвижение обкладок",
+   "en": "Pulling the plates apart"
+  },
+  "answer": "F\\approx4.43\\cdot10^{-4}\\ \\mathrm{N};\\ A\\approx8.85\\cdot10^{-7}\\ \\mathrm{J};\\ U=300\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L13, qoplamalar kuchi)"
+ }
+]

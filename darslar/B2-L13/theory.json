@@ -1,0 +1,509 @@
+[
+ {
+  "t": "h1",
+  "uz": "Potensial, kondensatorlar (Potential, capacitors)",
+  "ru": "Потенциал, конденсаторы",
+  "en": "Potential, capacitors"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz potensialni maydondan va maydonni potensialdan topasiz; nuqtaviy zaryadlar va uzluksiz taqsimotlar (halqa, disk, shar, chiziq) potensialini hisoblaysiz; dipol potensiali va multipol yoyilmasini qo'llaysiz; zaryadlar sistemasining energiyasini va maydon energiyasini hisoblaysiz; o'tkazgichlar potensiali, Laplas tenglamasi va tasvirlar usulidan foydalanasiz; yassi, sferik va silindrik kondensatorlar sig'imini topasiz; kondensatorlar ulanishi, energiyasi va qoplamalar orasidagi kuchni tahlil qilasiz.",
+  "ru": "**Цель.** После урока вы будете находить потенциал по полю и поле по потенциалу; вычислять потенциал точечных зарядов и непрерывных распределений (кольцо, диск, шар, линия); применять потенциал диполя и мультипольное разложение; вычислять энергию системы зарядов и энергию поля; пользоваться потенциалом проводников, уравнением Лапласа и методом изображений; находить ёмкость плоского, сферического и цилиндрического конденсаторов; анализировать соединения конденсаторов, их энергию и силу притяжения обкладок.",
+  "en": "**Goal.** After this lesson you will find the potential from the field and the field from the potential; compute the potential of point charges and continuous distributions (ring, disk, sphere, line); use the dipole potential and the multipole expansion; compute the energy of a system of charges and the energy of the field; use the potential of conductors, Laplace's equation and the method of images; find the capacitance of parallel-plate, spherical and cylindrical capacitors; and analyse combinations of capacitors, their energy and the force between the plates."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L31 da potensial, potensiallar farqi va elektronvoltni, B1-L32 da elektr sig'im, yassi kondensator va kondensatorlarni ulashni ko'rdik. B2-L12 da elektrostatik maydon uyurmasiz ekanini ko'rsatdik: $\\nabla\\times\\vec E=0$. Shu sababli maydonni bitta skalyar funksiya — potensial bilan to'liq tavsiflash mumkin. Bu darsda potensialdan energiya, o'tkazgichlar va kondensatorlar nazariyasini quramiz. GRE da potensial, kondensatorlar va energiya savollari elektromagnetizm qismining katta ulushini tashkil etadi.",
+  "ru": "В B1-L31 мы рассмотрели потенциал, разность потенциалов и электронвольт, в B1-L32 — электроёмкость, плоский конденсатор и соединения конденсаторов. В B2-L12 мы показали, что электростатическое поле безвихревое: $\\nabla\\times\\vec E=0$. Поэтому поле можно полностью описать одной скалярной функцией — потенциалом. В этом уроке на основе потенциала построим теорию энергии, проводников и конденсаторов. На GRE вопросы о потенциале, конденсаторах и энергии составляют большую долю раздела электромагнетизма.",
+  "en": "In B1-L31 we met the potential, the potential difference and the electronvolt, and in B1-L32 capacitance, the parallel-plate capacitor and combinations of capacitors. In B2-L12 we showed that the electrostatic field is curl-free: $\\nabla\\times\\vec E=0$. Therefore the field can be fully described by a single scalar function — the potential. In this lesson we build the theory of energy, conductors and capacitors on the potential. On the GRE, questions on potential, capacitors and energy make up a large share of the electromagnetism part."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Elektr potensial",
+  "ru": "1. Электрический потенциал",
+  "en": "1. Electric potential"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Maydon konservativ bo'lgani uchun zaryadni bir nuqtadan ikkinchisiga ko'chirishdagi ish yo'lga bog'liq emas. Potensial — birlik musbat zaryadni sanoq nuqtasidan berilgan nuqtaga ko'chirishda tashqi kuch bajaradigan ish: $\\varphi(\\vec r)=-\\int_{\\infty}^{\\vec r}\\vec E\\cdot d\\vec l$. Odatda sanoq nuqtasi cheksizlikda olinadi. Teskari munosabat $\\vec E=-\\nabla\\varphi$: maydon potensial eng tez kamayadigan tomonga yo'nalgan va ekvipotensial sirtlarga perpendikulyar ([[F01]]).",
+  "ru": "**Определение.** Поскольку поле консервативно, работа при перемещении заряда из одной точки в другую не зависит от пути. Потенциал — работа внешней силы по перемещению единичного положительного заряда из точки отсчёта в данную точку: $\\varphi(\\vec r)=-\\int_{\\infty}^{\\vec r}\\vec E\\cdot d\\vec l$. Обычно точку отсчёта берут на бесконечности. Обратное соотношение $\\vec E=-\\nabla\\varphi$: поле направлено в сторону наиболее быстрого убывания потенциала и перпендикулярно эквипотенциальным поверхностям ([[F01]]).",
+  "en": "**Definition.** Since the field is conservative, the work done in moving a charge from one point to another is independent of the path. The potential is the work done by an external force in moving a unit positive charge from the reference point to the given point: $\\varphi(\\vec r)=-\\int_{\\infty}^{\\vec r}\\vec E\\cdot d\\vec l$. The reference point is usually taken at infinity. The inverse relation is $\\vec E=-\\nabla\\varphi$: the field points in the direction of fastest decrease of the potential and is perpendicular to the equipotential surfaces ([[F01]])."
+ },
+ {
+  "t": "m",
+  "m": "\\varphi(\\vec r)=-\\int_{\\infty}^{\\vec r}\\vec E\\cdot d\\vec l,\\qquad \\vec E=-\\nabla\\varphi,\\qquad \\varphi_A-\\varphi_B=\\int_A^B\\vec E\\cdot d\\vec l"
+ },
+ {
+  "t": "li",
+  "uz": "**Nuqtaviy zaryad va superpozitsiya.** $\\varphi=\\frac{kq}{r}$; zaryadlar sistemasi uchun potensiallar skalyar ravishda qo'shiladi: $\\varphi=\\sum\\frac{kq_i}{r_i}$ — maydonni vektor qo'shishdan ko'ra ancha oson. Masalan, kvadrat uchlaridagi to'rtta $+q$ zaryad markazda $E=0$, lekin $\\varphi=\\frac{4\\sqrt{2}kq}{a}\\neq0$ beradi. Zaryadning potensial energiyasi $W=q\\varphi$, maydon ishi $A=q(\\varphi_1-\\varphi_2)$.",
+  "ru": "**Точечный заряд и суперпозиция.** $\\varphi=\\frac{kq}{r}$; для системы зарядов потенциалы складываются как скаляры: $\\varphi=\\sum\\frac{kq_i}{r_i}$ — гораздо проще, чем векторное сложение полей. Например, четыре заряда $+q$ в вершинах квадрата дают в центре $E=0$, но $\\varphi=\\frac{4\\sqrt{2}kq}{a}\\neq0$. Потенциальная энергия заряда $W=q\\varphi$, работа поля $A=q(\\varphi_1-\\varphi_2)$.",
+  "en": "**Point charge and superposition.** $\\varphi=\\frac{kq}{r}$; for a system of charges the potentials add as scalars: $\\varphi=\\sum\\frac{kq_i}{r_i}$ — much easier than adding fields as vectors. For example, four charges $+q$ at the corners of a square give $E=0$ at the centre but $\\varphi=\\frac{4\\sqrt{2}kq}{a}\\neq0$. The potential energy of a charge is $W=q\\varphi$, and the work done by the field is $A=q(\\varphi_1-\\varphi_2)$."
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya saqlanishi va elektronvolt.** Faqat elektr kuchi ta'sir qilsa, $\\frac{mv^2}{2}+q\\varphi=\\mathrm{const}$. Tinch holatdan $U$ kuchlanish bilan tezlatilgan zarra uchun $v=\\sqrt{\\frac{2qU}{m}}$. $1\\ \\mathrm{eV}=1.6\\cdot10^{-19}\\ \\mathrm{J}$ — $e$ zaryad $1\\ \\mathrm{V}$ dan o'tganda oladigan energiya. Bir xil kuchlanishda tezlik $\\sqrt{\\frac{q}{m}}$ ga proporsional: proton va alfa-zarra tezliklari nisbati $\\sqrt{2}$.",
+  "ru": "**Сохранение энергии и электронвольт.** Если действует только электрическая сила, $\\frac{mv^2}{2}+q\\varphi=\\mathrm{const}$. Для частицы, ускоренной из состояния покоя напряжением $U$, $v=\\sqrt{\\frac{2qU}{m}}$. $1\\ \\mathrm{eV}=1.6\\cdot10^{-19}\\ \\mathrm{J}$ — энергия, которую получает заряд $e$, пройдя $1\\ \\mathrm{V}$. При одинаковом напряжении скорость пропорциональна $\\sqrt{\\frac{q}{m}}$: отношение скоростей протона и альфа-частицы равно $\\sqrt{2}$.",
+  "en": "**Energy conservation and the electronvolt.** If only the electric force acts, $\\frac{mv^2}{2}+q\\varphi=\\mathrm{const}$. For a particle accelerated from rest through a voltage $U$, $v=\\sqrt{\\frac{2qU}{m}}$. $1\\ \\mathrm{eV}=1.6\\cdot10^{-19}\\ \\mathrm{J}$ is the energy a charge $e$ gains passing through $1\\ \\mathrm{V}$. For the same voltage the speed is proportional to $\\sqrt{\\frac{q}{m}}$: the ratio of the speeds of a proton and an alpha particle is $\\sqrt{2}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L13-F01.png",
+   "ru": "figures/B2-L13-F01-ru.png",
+   "en": "figures/B2-L13-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Uzluksiz taqsimotlar potensiali",
+  "ru": "2. Потенциал непрерывных распределений",
+  "en": "2. Potential of continuous distributions"
+ },
+ {
+  "t": "li",
+  "uz": "**Integral.** $\\varphi=k\\int\\frac{dq}{r}$ — skalyar integral, yo'nalishlarni hisobga olish shart emas. Halqa o'qida barcha elementlar bir xil masofada: $\\varphi=\\frac{kQ}{\\sqrt{z^2+R^2}}$. Disk o'qida halqalar yig'indisi: $\\varphi=\\frac{\\sigma}{2\\varepsilon_0}\\left(\\sqrt{z^2+R^2}-z\\right)$; markazda $\\varphi=\\frac{\\sigma R}{2\\varepsilon_0}=\\frac{2kQ}{R}$. $E_z=-\\frac{d\\varphi}{dz}$ olsak, B2-L12 dagi maydonlar qaytadan chiqadi — bu tekshirishning qulay usuli.",
+  "ru": "**Интеграл.** $\\varphi=k\\int\\frac{dq}{r}$ — скалярный интеграл, учитывать направления не нужно. На оси кольца все элементы на одинаковом расстоянии: $\\varphi=\\frac{kQ}{\\sqrt{z^2+R^2}}$. На оси диска — сумма колец: $\\varphi=\\frac{\\sigma}{2\\varepsilon_0}\\left(\\sqrt{z^2+R^2}-z\\right)$; в центре $\\varphi=\\frac{\\sigma R}{2\\varepsilon_0}=\\frac{2kQ}{R}$. Взяв $E_z=-\\frac{d\\varphi}{dz}$, снова получаем поля из B2-L12 — удобный способ проверки.",
+  "en": "**The integral.** $\\varphi=k\\int\\frac{dq}{r}$ is a scalar integral — no need to track directions. On a ring's axis all elements are at the same distance: $\\varphi=\\frac{kQ}{\\sqrt{z^2+R^2}}$. On a disk's axis, summing rings: $\\varphi=\\frac{\\sigma}{2\\varepsilon_0}\\left(\\sqrt{z^2+R^2}-z\\right)$; at the centre $\\varphi=\\frac{\\sigma R}{2\\varepsilon_0}=\\frac{2kQ}{R}$. Taking $E_z=-\\frac{d\\varphi}{dz}$ gives back the fields of B2-L12 — a convenient check."
+ },
+ {
+  "t": "m",
+  "m": "\\varphi=k\\int\\frac{dq}{r},\\qquad \\varphi=\\frac{kQ}{\\sqrt{z^2+R^2}},\\qquad \\varphi=\\frac{\\sigma}{2\\varepsilon_0}\\left(\\sqrt{z^2+R^2}-z\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Sferik taqsimotlar.** Maydonni Gauss teoremasidan topib, cheksizlikdan integrallaymiz. Yupqa sfera: tashqarida $\\varphi=\\frac{kQ}{r}$, ichkarida o'zgarmas $\\varphi=\\frac{kQ}{R}$ (maydon nol, potensial esa nol emas!). Bir tekis zaryadlangan shar: ichkarida $\\varphi=\\frac{kQ(3R^2-r^2)}{2R^3}$; markazda potensial sirtdagidan $\\frac{3}{2}$ marta katta ([[F02]]). Konsentrik sferalar potensiali — har bir sfera hissasining yig'indisi: ichki nuqtalarda sfera $\\frac{kQ_i}{R_i}$, tashqi nuqtalarda $\\frac{kQ_i}{r}$ beradi.",
+  "ru": "**Сферические распределения.** Находим поле по теореме Гаусса и интегрируем от бесконечности. Тонкая сфера: снаружи $\\varphi=\\frac{kQ}{r}$, внутри постоянный $\\varphi=\\frac{kQ}{R}$ (поле нулевое, а потенциал — нет!). Равномерно заряженный шар: внутри $\\varphi=\\frac{kQ(3R^2-r^2)}{2R^3}$; в центре потенциал в $\\frac{3}{2}$ раза больше, чем на поверхности ([[F02]]). Потенциал концентрических сфер — сумма вкладов каждой: во внутренних точках сфера даёт $\\frac{kQ_i}{R_i}$, во внешних — $\\frac{kQ_i}{r}$.",
+  "en": "**Spherical distributions.** Find the field from Gauss's law and integrate in from infinity. Thin shell: outside $\\varphi=\\frac{kQ}{r}$, inside a constant $\\varphi=\\frac{kQ}{R}$ (the field is zero but the potential is not!). Uniformly charged ball: inside $\\varphi=\\frac{kQ(3R^2-r^2)}{2R^3}$; at the centre the potential is $\\frac{3}{2}$ times that at the surface ([[F02]]). The potential of concentric shells is the sum of each shell's contribution: at interior points a shell gives $\\frac{kQ_i}{R_i}$, at exterior points $\\frac{kQ_i}{r}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Cheksiz chiziq.** Zaryad cheksizgacha yoyilgani uchun sanoq nuqtasini cheksizlikda olib bo'lmaydi: $\\varphi=-\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{r}{r_0}$. Faqat farq ma'noga ega: $\\varphi_1-\\varphi_2=\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{r_2}{r_1}$ — silindrik kondensator sig'imi shundan keladi (6-bo'lim).",
+  "ru": "**Бесконечная линия.** Поскольку заряд простирается до бесконечности, точку отсчёта нельзя взять на бесконечности: $\\varphi=-\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{r}{r_0}$. Смысл имеет лишь разность: $\\varphi_1-\\varphi_2=\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{r_2}{r_1}$ — отсюда ёмкость цилиндрического конденсатора (раздел 6).",
+  "en": "**Infinite line.** Because the charge extends to infinity, the reference point cannot be taken at infinity: $\\varphi=-\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{r}{r_0}$. Only the difference is meaningful: $\\varphi_1-\\varphi_2=\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{r_2}{r_1}$ — this gives the capacitance of a cylindrical capacitor (section 6)."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L13-F02.png",
+   "ru": "figures/B2-L13-F02-ru.png",
+   "en": "figures/B2-L13-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Dipol potensiali va multipol yoyilmasi",
+  "ru": "3. Потенциал диполя и мультипольное разложение",
+  "en": "3. Dipole potential and the multipole expansion"
+ },
+ {
+  "t": "li",
+  "uz": "**Dipol.** $\\pm q$ zaryadlar uchun $r\\gg d$ da $\\varphi=\\frac{kq}{r_+}-\\frac{kq}{r_-}\\approx\\frac{kp\\cos\\theta}{r^2}=\\frac{k\\,\\vec p\\cdot\\vec r}{r^3}$. Gradientdan $E_r=-\\frac{\\partial\\varphi}{\\partial r}=\\frac{2kp\\cos\\theta}{r^3}$ va $E_\\theta=-\\frac{1}{r}\\frac{\\partial\\varphi}{\\partial\\theta}=\\frac{kp\\sin\\theta}{r^3}$ — B2-L12 dagi natija ancha qisqa yo'l bilan olinadi. O'rta perpendikulyar tekislikda $\\varphi=0$, lekin $E\\neq0$ ([[F03]]).",
+  "ru": "**Диполь.** Для зарядов $\\pm q$ при $r\\gg d$ $\\varphi=\\frac{kq}{r_+}-\\frac{kq}{r_-}\\approx\\frac{kp\\cos\\theta}{r^2}=\\frac{k\\,\\vec p\\cdot\\vec r}{r^3}$. Из градиента $E_r=-\\frac{\\partial\\varphi}{\\partial r}=\\frac{2kp\\cos\\theta}{r^3}$ и $E_\\theta=-\\frac{1}{r}\\frac{\\partial\\varphi}{\\partial\\theta}=\\frac{kp\\sin\\theta}{r^3}$ — результат B2-L12 получается гораздо короче. В плоскости серединного перпендикуляра $\\varphi=0$, но $E\\neq0$ ([[F03]]).",
+  "en": "**Dipole.** For charges $\\pm q$ with $r\\gg d$, $\\varphi=\\frac{kq}{r_+}-\\frac{kq}{r_-}\\approx\\frac{kp\\cos\\theta}{r^2}=\\frac{k\\,\\vec p\\cdot\\vec r}{r^3}$. From the gradient, $E_r=-\\frac{\\partial\\varphi}{\\partial r}=\\frac{2kp\\cos\\theta}{r^3}$ and $E_\\theta=-\\frac{1}{r}\\frac{\\partial\\varphi}{\\partial\\theta}=\\frac{kp\\sin\\theta}{r^3}$ — the B2-L12 result follows much more quickly. On the perpendicular bisector plane $\\varphi=0$, yet $E\\neq0$ ([[F03]])."
+ },
+ {
+  "t": "m",
+  "m": "\\varphi=\\frac{kQ}{r}+\\frac{k\\,\\vec p\\cdot\\hat r}{r^2}+\\frac{k}{r^3}\\sum_iq_ir_i^2P_2(\\cos\\theta_i)+\\dots,\\qquad P_2(x)=\\frac{3x^2-1}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Multipol yoyilmasi.** Chekli taqsimot potensiali uzoqda $\\frac{1}{r}$ darajalari bo'yicha yoyiladi: monopol ($Q$, $\\propto\\frac{1}{r}$), dipol ($\\vec p=\\sum q_i\\vec r_i$, $\\propto\\frac{1}{r^2}$), kvadrupol ($\\propto\\frac{1}{r^3}$). Uzoqda nol bo'lmagan eng birinchi had ustunlik qiladi. Neytral sistemada $Q=0$ bo'lsa, dipol momenti koordinata boshini tanlashga bog'liq emas. Masalan, chiziqdagi $+q,\\ -2q,\\ +q$ (masofalar $a$) uchun $Q=0$, $\\vec p=0$, potensial $\\propto\\frac{1}{r^3}$ — chiziqli kvadrupol.",
+  "ru": "**Мультипольное разложение.** Потенциал конечного распределения вдали раскладывается по степеням $\\frac{1}{r}$: монополь ($Q$, $\\propto\\frac{1}{r}$), диполь ($\\vec p=\\sum q_i\\vec r_i$, $\\propto\\frac{1}{r^2}$), квадруполь ($\\propto\\frac{1}{r^3}$). Вдали доминирует первый ненулевой член. Если в нейтральной системе $Q=0$, дипольный момент не зависит от выбора начала координат. Например, для зарядов $+q,\\ -2q,\\ +q$ на прямой (расстояния $a$) $Q=0$, $\\vec p=0$, потенциал $\\propto\\frac{1}{r^3}$ — линейный квадруполь.",
+  "en": "**Multipole expansion.** Far away, the potential of a finite distribution expands in powers of $\\frac{1}{r}$: monopole ($Q$, $\\propto\\frac{1}{r}$), dipole ($\\vec p=\\sum q_i\\vec r_i$, $\\propto\\frac{1}{r^2}$), quadrupole ($\\propto\\frac{1}{r^3}$). Far away the first non-zero term dominates. If a system is neutral, $Q=0$, its dipole moment does not depend on the choice of origin. For example, for charges $+q,\\ -2q,\\ +q$ on a line (spacings $a$), $Q=0$, $\\vec p=0$, and the potential goes as $\\propto\\frac{1}{r^3}$ — a linear quadrupole."
+ },
+ {
+  "t": "li",
+  "uz": "**Tashqi maydondagi dipol energiyasi.** $W=q\\varphi(\\vec r_+)-q\\varphi(\\vec r_-)\\approx-\\vec p\\cdot\\vec E$. Minimum $\\vec p\\parallel\\vec E$ da; dipolni maydon bo'ylab holatdan teskari holatga burish ishi $2pE$. Ikki dipolning o'zaro energiyasi $\\propto\\frac{1}{r^3}$ — molekulalararo kuchlar shundan kelib chiqadi.",
+  "ru": "**Энергия диполя во внешнем поле.** $W=q\\varphi(\\vec r_+)-q\\varphi(\\vec r_-)\\approx-\\vec p\\cdot\\vec E$. Минимум при $\\vec p\\parallel\\vec E$; работа поворота диполя из положения по полю в противоположное равна $2pE$. Энергия взаимодействия двух диполей $\\propto\\frac{1}{r^3}$ — отсюда межмолекулярные силы.",
+  "en": "**Energy of a dipole in an external field.** $W=q\\varphi(\\vec r_+)-q\\varphi(\\vec r_-)\\approx-\\vec p\\cdot\\vec E$. The minimum is at $\\vec p\\parallel\\vec E$; the work to turn the dipole from along the field to against it is $2pE$. The interaction energy of two dipoles goes as $\\propto\\frac{1}{r^3}$ — the origin of intermolecular forces."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L13-F03.png",
+   "ru": "figures/B2-L13-F03-ru.png",
+   "en": "figures/B2-L13-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Elektrostatik energiya va maydon energiyasi",
+  "ru": "4. Электростатическая энергия и энергия поля",
+  "en": "4. Electrostatic energy and field energy"
+ },
+ {
+  "t": "li",
+  "uz": "**Zaryadlar sistemasi.** Zaryadlarni cheksizlikdan birma-bir keltirishdagi ish: har bir juft bir marta hisoblanadi, $W=\\sum_{i<j}\\frac{kq_iq_j}{r_{ij}}=\\frac{1}{2}\\sum_iq_i\\varphi_i$, bunda $\\varphi_i$ — qolgan zaryadlarning $i$-zaryad joyidagi potensiali. Tomoni $a$ bo'lgan kvadrat uchlaridagi to'rtta $q$ zaryad uchun $W=\\frac{kq^2}{a}\\left(4+\\sqrt{2}\\right)$. Manfiy $W$ — sistema bog'langan (ajratish uchun ish kerak).",
+  "ru": "**Система зарядов.** Работа по поочерёдному переносу зарядов из бесконечности: каждая пара учитывается один раз, $W=\\sum_{i<j}\\frac{kq_iq_j}{r_{ij}}=\\frac{1}{2}\\sum_iq_i\\varphi_i$, где $\\varphi_i$ — потенциал остальных зарядов в точке нахождения $i$-го. Для четырёх зарядов $q$ в вершинах квадрата со стороной $a$ $W=\\frac{kq^2}{a}\\left(4+\\sqrt{2}\\right)$. Отрицательная $W$ — система связана (для разделения нужна работа).",
+  "en": "**A system of charges.** The work of bringing the charges in from infinity one by one: each pair is counted once, $W=\\sum_{i<j}\\frac{kq_iq_j}{r_{ij}}=\\frac{1}{2}\\sum_iq_i\\varphi_i$, where $\\varphi_i$ is the potential of the other charges at the position of charge $i$. For four charges $q$ at the corners of a square of side $a$, $W=\\frac{kq^2}{a}\\left(4+\\sqrt{2}\\right)$. A negative $W$ means the system is bound (work is needed to separate it)."
+ },
+ {
+  "t": "m",
+  "m": "W=\\sum_{i<j}\\frac{kq_iq_j}{r_{ij}}=\\frac{1}{2}\\int\\rho\\varphi\\,dV=\\frac{\\varepsilon_0}{2}\\int E^2\\,dV,\\qquad w=\\frac{\\varepsilon_0E^2}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Maydon energiyasi.** Uzluksiz taqsimotda $W=\\frac{1}{2}\\int\\rho\\varphi\\,dV$; Gauss teoremasi va bo'laklab integrallash uni $W=\\frac{\\varepsilon_0}{2}\\int E^2\\,dV$ ga keltiradi. Energiya maydonda joylashgan deb qarash mumkin, energiya zichligi $w=\\frac{\\varepsilon_0E^2}{2}$ ([[F04]]). Yupqa sfera: $W=\\frac{kQ^2}{2R}$ (hammasi tashqarida). Bir tekis zaryadlangan shar: $W=\\frac{3kQ^2}{5R}$, uning $\\frac{1}{6}$ qismi shar ichida.",
+  "ru": "**Энергия поля.** Для непрерывного распределения $W=\\frac{1}{2}\\int\\rho\\varphi\\,dV$; теорема Гаусса и интегрирование по частям приводят её к виду $W=\\frac{\\varepsilon_0}{2}\\int E^2\\,dV$. Можно считать, что энергия сосредоточена в поле, с плотностью $w=\\frac{\\varepsilon_0E^2}{2}$ ([[F04]]). Тонкая сфера: $W=\\frac{kQ^2}{2R}$ (вся снаружи). Равномерно заряженный шар: $W=\\frac{3kQ^2}{5R}$, из неё $\\frac{1}{6}$ часть внутри шара.",
+  "en": "**Field energy.** For a continuous distribution $W=\\frac{1}{2}\\int\\rho\\varphi\\,dV$; Gauss's law and integration by parts turn it into $W=\\frac{\\varepsilon_0}{2}\\int E^2\\,dV$. The energy can be regarded as stored in the field, with energy density $w=\\frac{\\varepsilon_0E^2}{2}$ ([[F04]]). Thin shell: $W=\\frac{kQ^2}{2R}$ (all of it outside). Uniformly charged ball: $W=\\frac{3kQ^2}{5R}$, of which a $\\frac{1}{6}$ part is inside the ball."
+ },
+ {
+  "t": "li",
+  "uz": "**Xususiy energiya.** Nuqtaviy zaryad uchun $\\frac{\\varepsilon_0}{2}\\int E^2\\,dV$ cheksiz — klassik elektrodinamikaning ma'lum muammosi. Elektronning klassik radiusi $r_e$ energiyani tinchlikdagi energiyaga tenglashtirib baholanadi: $\\frac{ke^2}{r_e}\\approx m_ec^2$, $r_e\\approx2.8\\cdot10^{-15}\\ \\mathrm{m}$. Diskret yig'indi $\\sum_{i<j}$ xususiy energiyalarni o'z ichiga olmaydi, shuning uchun u manfiy bo'lishi mumkin, $\\frac{\\varepsilon_0}{2}\\int E^2\\,dV$ esa doim musbat.",
+  "ru": "**Собственная энергия.** Для точечного заряда $\\frac{\\varepsilon_0}{2}\\int E^2\\,dV$ бесконечна — известная проблема классической электродинамики. Классический радиус электрона $r_e$ оценивают, приравнивая энергию энергии покоя: $\\frac{ke^2}{r_e}\\approx m_ec^2$, $r_e\\approx2.8\\cdot10^{-15}\\ \\mathrm{m}$. Дискретная сумма $\\sum_{i<j}$ не содержит собственных энергий, поэтому может быть отрицательной, а $\\frac{\\varepsilon_0}{2}\\int E^2\\,dV$ всегда положительна.",
+  "en": "**Self-energy.** For a point charge $\\frac{\\varepsilon_0}{2}\\int E^2\\,dV$ is infinite — a well-known problem of classical electrodynamics. The classical electron radius $r_e$ is estimated by equating the energy to the rest energy: $\\frac{ke^2}{r_e}\\approx m_ec^2$, $r_e\\approx2.8\\cdot10^{-15}\\ \\mathrm{m}$. The discrete sum $\\sum_{i<j}$ leaves out the self-energies, so it can be negative, whereas $\\frac{\\varepsilon_0}{2}\\int E^2\\,dV$ is always positive."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L13-F04.png",
+   "ru": "figures/B2-L13-F04-ru.png",
+   "en": "figures/B2-L13-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. O'tkazgichlar, Laplas tenglamasi va tasvirlar usuli",
+  "ru": "5. Проводники, уравнение Лапласа и метод изображений",
+  "en": "5. Conductors, Laplace's equation and the method of images"
+ },
+ {
+  "t": "li",
+  "uz": "**O'tkazgich — ekvipotensial jism.** Muvozanatda o'tkazgich ichida $E=0$, demak butun o'tkazgich (sirti ham) bir xil potensialda. Uzoqdagi ikki sfera ingichka sim bilan ulansa, potensiallari tenglashadi: $\\frac{kq_1}{R_1}=\\frac{kq_2}{R_2}$, ya'ni $\\frac{q_1}{q_2}=\\frac{R_1}{R_2}$, $\\frac{\\sigma_1}{\\sigma_2}=\\frac{R_2}{R_1}$ — kichik sferada sirt zichligi va maydon katta. Uchli joylarda maydon kuchliligining sababi shu (B2-L12). Erga ulash potensialni nolga tenglashtiradi; zaryad shunga mos ravishda Yerga oqadi.",
+  "ru": "**Проводник — эквипотенциальное тело.** В равновесии внутри проводника $E=0$, поэтому весь проводник (и его поверхность) находится при одном потенциале. Если две удалённые сферы соединить тонкой проволокой, их потенциалы выравниваются: $\\frac{kq_1}{R_1}=\\frac{kq_2}{R_2}$, т. е. $\\frac{q_1}{q_2}=\\frac{R_1}{R_2}$, $\\frac{\\sigma_1}{\\sigma_2}=\\frac{R_2}{R_1}$ — на малой сфере поверхностная плотность и поле больше. Именно поэтому поле сильно у острий (B2-L12). Заземление делает потенциал нулевым; заряд соответственно стекает в Землю.",
+  "en": "**A conductor is an equipotential body.** In equilibrium $E=0$ inside a conductor, so the whole conductor (including its surface) is at a single potential. If two distant spheres are joined by a thin wire, their potentials equalise: $\\frac{kq_1}{R_1}=\\frac{kq_2}{R_2}$, i.e. $\\frac{q_1}{q_2}=\\frac{R_1}{R_2}$, $\\frac{\\sigma_1}{\\sigma_2}=\\frac{R_2}{R_1}$ — the smaller sphere has the larger surface density and field. This is why the field is strong at sharp points (B2-L12). Grounding sets the potential to zero; charge flows to or from the Earth accordingly."
+ },
+ {
+  "t": "li",
+  "uz": "**Puasson va Laplas tenglamalari.** $\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}$ va $\\vec E=-\\nabla\\varphi$ dan $\\nabla^2\\varphi=-\\frac{\\rho}{\\varepsilon_0}$ (Puasson); zaryadsiz sohada $\\nabla^2\\varphi=0$ (Laplas). Laplas tenglamasi yechimi sohaning ichida maksimum yoki minimumga ega emas — Irnshou teoremasining yana bir ifodasi. **Yagonalik teoremasi:** chegaradagi potensiallar (yoki o'tkazgichlar zaryadlari) berilsa, yechim yagona. Demak shartlarni qanoatlantiradigan har qanday yechim — to'g'ri yechim.",
+  "ru": "**Уравнения Пуассона и Лапласа.** Из $\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}$ и $\\vec E=-\\nabla\\varphi$ следует $\\nabla^2\\varphi=-\\frac{\\rho}{\\varepsilon_0}$ (Пуассон); в области без зарядов $\\nabla^2\\varphi=0$ (Лаплас). Решение уравнения Лапласа не имеет максимума или минимума внутри области — ещё одна формулировка теоремы Ирншоу. **Теорема единственности:** если заданы потенциалы на границе (или заряды проводников), решение единственно. Значит, любое решение, удовлетворяющее условиям, — правильное.",
+  "en": "**Poisson's and Laplace's equations.** From $\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}$ and $\\vec E=-\\nabla\\varphi$ we get $\\nabla^2\\varphi=-\\frac{\\rho}{\\varepsilon_0}$ (Poisson); in a charge-free region $\\nabla^2\\varphi=0$ (Laplace). A solution of Laplace's equation has no maximum or minimum inside the region — another statement of Earnshaw's theorem. **Uniqueness theorem:** if the potentials on the boundary (or the charges on the conductors) are given, the solution is unique. So any solution that satisfies the conditions is the correct one."
+ },
+ {
+  "t": "m",
+  "m": "\\nabla^2\\varphi=-\\frac{\\rho}{\\varepsilon_0},\\qquad \\nabla^2\\varphi=0,\\qquad \\frac{1}{r^2}\\frac{d}{dr}\\left(r^2\\frac{d\\varphi}{dr}\\right)=-\\frac{\\rho}{\\varepsilon_0}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tasvirlar usuli.** Yerga ulangan cheksiz o'tkazgich tekislikdan $d$ masofadagi $q$ zaryad: tekislikni oyna simmetrik nuqtadagi $-q$ «tasvir» zaryad bilan almashtiramiz — tekislikda $\\varphi=0$ sharti bajariladi, yagonalik teoremasiga ko'ra ustki yarim fazodagi maydon aynan shunday ([[F05]]). Tortishish kuchi $F=\\frac{kq^2}{4d^2}$; induksiyalangan zichlik $\\sigma=-\\frac{qd}{2\\pi(d^2+s^2)^{3/2}}$ ($s$ — zaryad proyeksiyasidan masofa), to'liq induksiyalangan zaryad $-q$. Zaryadni cheksizlikka olib ketish ishi $\\frac{kq^2}{4d}$ — «zaryad va tasvir» energiyasining yarmi, chunki maydon faqat yarim fazoda.",
+  "ru": "**Метод изображений.** Заряд $q$ на расстоянии $d$ от заземлённой бесконечной проводящей плоскости: заменяем плоскость зарядом-«изображением» $-q$ в зеркально симметричной точке — условие $\\varphi=0$ на плоскости выполнено, и по теореме единственности поле в верхнем полупространстве именно такое ([[F05]]). Сила притяжения $F=\\frac{kq^2}{4d^2}$; индуцированная плотность $\\sigma=-\\frac{qd}{2\\pi(d^2+s^2)^{3/2}}$ ($s$ — расстояние от проекции заряда), полный индуцированный заряд $-q$. Работа удаления заряда на бесконечность $\\frac{kq^2}{4d}$ — половина энергии пары «заряд и изображение», потому что поле есть только в полупространстве.",
+  "en": "**Method of images.** A charge $q$ at distance $d$ from a grounded infinite conducting plane: replace the plane by an “image” charge $-q$ at the mirror point — the condition $\\varphi=0$ on the plane holds, and by the uniqueness theorem the field in the upper half-space is exactly this ([[F05]]). The attractive force is $F=\\frac{kq^2}{4d^2}$; the induced density is $\\sigma=-\\frac{qd}{2\\pi(d^2+s^2)^{3/2}}$ ($s$ is the distance from the charge's projection), and the total induced charge is $-q$. The work to remove the charge to infinity is $\\frac{kq^2}{4d}$ — half the energy of the “charge and image” pair, because the field exists only in a half-space."
+ },
+ {
+  "t": "li",
+  "uz": "**Yerga ulangan sfera.** Radiusi $R$ bo'lgan sfera markazidan $a$ masofadagi $q$ zaryad uchun tasvir $q'=-\\frac{qR}{a}$, markazdan $\\frac{R^2}{a}$ masofada. Sferaning tortishish kuchi $F=\\frac{kq^2Ra}{(a^2-R^2)^2}$. Sfera yerga ulanmagan va neytral bo'lsa, markazga qo'shimcha $+\\frac{qR}{a}$ zaryad qo'yiladi — u ham tortadi, lekin kuchsizroq.",
+  "ru": "**Заземлённая сфера.** Для заряда $q$ на расстоянии $a$ от центра сферы радиуса $R$ изображение $q'=-\\frac{qR}{a}$ находится на расстоянии $\\frac{R^2}{a}$ от центра. Сила притяжения к сфере $F=\\frac{kq^2Ra}{(a^2-R^2)^2}$. Если сфера не заземлена и нейтральна, в центр добавляют заряд $+\\frac{qR}{a}$ — она тоже притягивает, но слабее.",
+  "en": "**A grounded sphere.** For a charge $q$ at distance $a$ from the centre of a sphere of radius $R$, the image is $q'=-\\frac{qR}{a}$ at distance $\\frac{R^2}{a}$ from the centre. The attractive force is $F=\\frac{kq^2Ra}{(a^2-R^2)^2}$. If the sphere is ungrounded and neutral, an extra charge $+\\frac{qR}{a}$ is placed at the centre — it still attracts, but more weakly."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L13-F05.png",
+   "ru": "figures/B2-L13-F05-ru.png",
+   "en": "figures/B2-L13-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Elektr sig'im",
+  "ru": "6. Электроёмкость",
+  "en": "6. Capacitance"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Ikki o'tkazgichda $+Q$ va $-Q$ zaryad bo'lsa, ular orasidagi kuchlanish $U$ zaryadga proporsional; $C=\\frac{Q}{U}$ faqat geometriyaga bog'liq. Birligi farad: $1\\ \\mathrm{F}=1\\ \\mathrm{C/V}$. Hisob tartibi: $Q$ ni berib, Gauss teoremasidan $E$ ni topamiz, integrallab $U=\\int\\vec E\\cdot d\\vec l$ ni olamiz, so'ng $C=\\frac{Q}{U}$. Yakkalangan shar (ikkinchi «qoplama» cheksizlikda): $C=4\\pi\\varepsilon_0R$; Yer uchun atigi $\\approx710\\ \\mu\\mathrm{F}$.",
+  "ru": "**Определение.** Если на двух проводниках заряды $+Q$ и $-Q$, напряжение $U$ между ними пропорционально заряду; $C=\\frac{Q}{U}$ зависит только от геометрии. Единица — фарад: $1\\ \\mathrm{F}=1\\ \\mathrm{C/V}$. Порядок расчёта: задаём $Q$, по теореме Гаусса находим $E$, интегрируя, получаем $U=\\int\\vec E\\cdot d\\vec l$, затем $C=\\frac{Q}{U}$. Уединённый шар (вторая «обкладка» на бесконечности): $C=4\\pi\\varepsilon_0R$; для Земли всего $\\approx710\\ \\mu\\mathrm{F}$.",
+  "en": "**Definition.** If two conductors carry $+Q$ and $-Q$, the voltage $U$ between them is proportional to the charge; $C=\\frac{Q}{U}$ depends only on the geometry. The unit is the farad: $1\\ \\mathrm{F}=1\\ \\mathrm{C/V}$. The procedure: assume $Q$, find $E$ from Gauss's law, integrate to get $U=\\int\\vec E\\cdot d\\vec l$, then $C=\\frac{Q}{U}$. An isolated sphere (the second “plate” at infinity): $C=4\\pi\\varepsilon_0R$; for the Earth only $\\approx710\\ \\mu\\mathrm{F}$."
+ },
+ {
+  "t": "m",
+  "m": "C=\\frac{\\varepsilon_0A}{d},\\qquad C=\\frac{4\\pi\\varepsilon_0ab}{b-a},\\qquad C=\\frac{2\\pi\\varepsilon_0L}{\\ln(b/a)},\\qquad C=4\\pi\\varepsilon_0R"
+ },
+ {
+  "t": "li",
+  "uz": "**Uch asosiy geometriya ([[F06]]).** Yassi kondensator: $E=\\frac{\\sigma}{\\varepsilon_0}$, $U=Ed$, $C=\\frac{\\varepsilon_0A}{d}$ (chekka effektlar hisobga olinmaydi, $d\\ll\\sqrt{A}$). Sferik: $U=kQ\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$, $C=\\frac{4\\pi\\varepsilon_0ab}{b-a}$; $b\\to\\infty$ da yakkalangan shar, $b-a=d\\ll a$ da $\\frac{\\varepsilon_0\\cdot4\\pi a^2}{d}$ — yassi kondensator. Silindrik (koaksial kabel): $U=\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{b}{a}$, $C=\\frac{2\\pi\\varepsilon_0L}{\\ln(b/a)}$.",
+  "ru": "**Три основные геометрии ([[F06]]).** Плоский конденсатор: $E=\\frac{\\sigma}{\\varepsilon_0}$, $U=Ed$, $C=\\frac{\\varepsilon_0A}{d}$ (краевые эффекты не учитываются, $d\\ll\\sqrt{A}$). Сферический: $U=kQ\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$, $C=\\frac{4\\pi\\varepsilon_0ab}{b-a}$; при $b\\to\\infty$ — уединённый шар, при $b-a=d\\ll a$ — $\\frac{\\varepsilon_0\\cdot4\\pi a^2}{d}$, т. е. плоский конденсатор. Цилиндрический (коаксиальный кабель): $U=\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{b}{a}$, $C=\\frac{2\\pi\\varepsilon_0L}{\\ln(b/a)}$.",
+  "en": "**Three basic geometries ([[F06]]).** Parallel plates: $E=\\frac{\\sigma}{\\varepsilon_0}$, $U=Ed$, $C=\\frac{\\varepsilon_0A}{d}$ (edge effects neglected, $d\\ll\\sqrt{A}$). Spherical: $U=kQ\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$, $C=\\frac{4\\pi\\varepsilon_0ab}{b-a}$; for $b\\to\\infty$ an isolated sphere, for $b-a=d\\ll a$ we get $\\frac{\\varepsilon_0\\cdot4\\pi a^2}{d}$ — a parallel-plate capacitor. Cylindrical (coaxial cable): $U=\\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{b}{a}$, $C=\\frac{2\\pi\\varepsilon_0L}{\\ln(b/a)}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Masshtab.** Har qanday sig'im $\\varepsilon_0\\cdot$(uzunlik) ko'rinishida: $\\varepsilon_0\\approx8.85\\ \\mathrm{pF/m}$, shuning uchun santimetrli kondensatorlar pikofarad tartibida. Barcha chiziqli o'lchamlar $n$ marta oshirilsa, sig'im ham $n$ marta ortadi. Koaksial kabelda sig'im logarifmik: $\\frac{b}{a}=e$ da $\\frac{C}{L}=2\\pi\\varepsilon_0\\approx55.6\\ \\mathrm{pF/m}$.",
+  "ru": "**Масштаб.** Любая ёмкость имеет вид $\\varepsilon_0\\cdot$(длина): $\\varepsilon_0\\approx8.85\\ \\mathrm{pF/m}$, поэтому сантиметровые конденсаторы — порядка пикофарад. Если все линейные размеры увеличить в $n$ раз, ёмкость тоже возрастёт в $n$ раз. У коаксиального кабеля ёмкость логарифмическая: при $\\frac{b}{a}=e$ $\\frac{C}{L}=2\\pi\\varepsilon_0\\approx55.6\\ \\mathrm{pF/m}$.",
+  "en": "**Scaling.** Every capacitance has the form $\\varepsilon_0\\cdot$(length): $\\varepsilon_0\\approx8.85\\ \\mathrm{pF/m}$, so centimetre-sized capacitors are of order picofarads. If all linear dimensions are scaled by $n$, the capacitance also grows by $n$. For a coaxial cable the capacitance is logarithmic: for $\\frac{b}{a}=e$, $\\frac{C}{L}=2\\pi\\varepsilon_0\\approx55.6\\ \\mathrm{pF/m}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L13-F06.png",
+   "ru": "figures/B2-L13-F06-ru.png",
+   "en": "figures/B2-L13-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Kondensatorlarni ulash",
+  "ru": "7. Соединения конденсаторов",
+  "en": "7. Combinations of capacitors"
+ },
+ {
+  "t": "li",
+  "uz": "**Parallel va ketma-ket ([[F07]]).** Parallel ulanganda kuchlanish umumiy, zaryadlar qo'shiladi: $C=\\sum C_i$. Ketma-ket ulanganda har birida bir xil $Q$ (ichki qoplamalar juftligi neytral), kuchlanishlar qo'shiladi: $\\frac{1}{C}=\\sum\\frac{1}{C_i}$. Ketma-ket zanjirda kuchlanish sig'imga teskari taqsimlanadi: $U_1=U\\frac{C_2}{C_1+C_2}$ — kichik sig'imda katta kuchlanish. Ikki bir xil $C$ ketma-ket — $\\frac{C}{2}$, parallel — $2C$.",
+  "ru": "**Параллельно и последовательно ([[F07]]).** При параллельном соединении напряжение общее, заряды складываются: $C=\\sum C_i$. При последовательном на каждом одинаковый $Q$ (пара внутренних обкладок нейтральна), напряжения складываются: $\\frac{1}{C}=\\sum\\frac{1}{C_i}$. В последовательной цепи напряжение делится обратно ёмкостям: $U_1=U\\frac{C_2}{C_1+C_2}$ — на меньшей ёмкости большее напряжение. Два одинаковых $C$ последовательно — $\\frac{C}{2}$, параллельно — $2C$.",
+  "en": "**Parallel and series ([[F07]]).** In parallel the voltage is common and the charges add: $C=\\sum C_i$. In series each carries the same $Q$ (each pair of inner plates is neutral) and the voltages add: $\\frac{1}{C}=\\sum\\frac{1}{C_i}$. In a series chain the voltage divides inversely to the capacitances: $U_1=U\\frac{C_2}{C_1+C_2}$ — the smaller capacitance takes the larger voltage. Two identical $C$ in series give $\\frac{C}{2}$, in parallel $2C$."
+ },
+ {
+  "t": "m",
+  "m": "C=\\sum C_i,\\qquad \\frac{1}{C}=\\sum\\frac{1}{C_i},\\qquad U_1=U\\frac{C_2}{C_1+C_2},\\qquad \\Delta W=\\frac{C_1C_2(U_1-U_2)^2}{2(C_1+C_2)}"
+ },
+ {
+  "t": "li",
+  "uz": "**Zaryadlangan kondensatorlarni ulash.** Bir-biriga bir xil ishorali qoplamalar bilan ulansa, zaryad saqlanadi: $U=\\frac{C_1U_1+C_2U_2}{C_1+C_2}$; qarama-qarshi ishorali qoplamalar bilan ulansa, $U=\\frac{|C_1U_1-C_2U_2|}{C_1+C_2}$. Energiya saqlanmaydi: $\\Delta W=\\frac{C_1C_2(U_1-U_2)^2}{2(C_1+C_2)}$ (ikkinchi holda $U_2$ o'rniga $-U_2$) simlar qarshiligida issiqlikka va nurlanishga ketadi. Zaryadlangan $C$ ni bir xil zaryadsiz $C$ ga ulasak, energiyaning yarmi yo'qoladi — qarshilik qanchalik kichik bo'lmasin.",
+  "ru": "**Соединение заряженных конденсаторов.** При соединении одноимёнными обкладками заряд сохраняется: $U=\\frac{C_1U_1+C_2U_2}{C_1+C_2}$; при соединении разноимёнными $U=\\frac{|C_1U_1-C_2U_2|}{C_1+C_2}$. Энергия не сохраняется: $\\Delta W=\\frac{C_1C_2(U_1-U_2)^2}{2(C_1+C_2)}$ (во втором случае вместо $U_2$ берётся $-U_2$) уходит в тепло на сопротивлении проводов и в излучение. Если заряженный $C$ соединить с таким же незаряженным $C$, теряется половина энергии — каким бы малым ни было сопротивление.",
+  "en": "**Connecting charged capacitors.** If like-signed plates are joined, charge is conserved: $U=\\frac{C_1U_1+C_2U_2}{C_1+C_2}$; if oppositely signed plates are joined, $U=\\frac{|C_1U_1-C_2U_2|}{C_1+C_2}$. Energy is not conserved: $\\Delta W=\\frac{C_1C_2(U_1-U_2)^2}{2(C_1+C_2)}$ (in the second case with $-U_2$ in place of $U_2$) goes into heat in the wires' resistance and into radiation. If a charged $C$ is connected to an identical uncharged $C$, half the energy is lost — however small the resistance."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L13-F07.png",
+   "ru": "figures/B2-L13-F07-ru.png",
+   "en": "figures/B2-L13-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Kondensator energiyasi va qoplamalar orasidagi kuch",
+  "ru": "8. Энергия конденсатора и сила между обкладками",
+  "en": "8. Energy of a capacitor and the force between the plates"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya.** Zaryadni $dq$ bo'laklarda ko'chirish ishi $U\\,dq=\\frac{q}{C}dq$; integrallab $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}=\\frac{QU}{2}$. Yassi kondensatorda bu $w\\cdot Ad=\\frac{\\varepsilon_0E^2}{2}Ad$ ga teng — energiya qoplamalar orasidagi maydonda. Manba zaryadlashda $QU$ ish bajaradi, kondensatorga faqat $\\frac{QU}{2}$ o'tadi; yarmi zanjir qarshiligida issiqlikka aylanadi (B2-L15 da RC zanjir).",
+  "ru": "**Энергия.** Работа переноса заряда порциями $dq$ равна $U\\,dq=\\frac{q}{C}dq$; интегрируя, $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}=\\frac{QU}{2}$. В плоском конденсаторе это равно $w\\cdot Ad=\\frac{\\varepsilon_0E^2}{2}Ad$ — энергия находится в поле между обкладками. Источник при зарядке совершает работу $QU$, а в конденсатор переходит только $\\frac{QU}{2}$; половина превращается в тепло на сопротивлении цепи (RC-цепь в B2-L15).",
+  "en": "**Energy.** The work of moving charge in portions $dq$ is $U\\,dq=\\frac{q}{C}dq$; integrating, $W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}=\\frac{QU}{2}$. For parallel plates this equals $w\\cdot Ad=\\frac{\\varepsilon_0E^2}{2}Ad$ — the energy sits in the field between the plates. While charging, the source does work $QU$, but only $\\frac{QU}{2}$ goes into the capacitor; half becomes heat in the circuit resistance (RC circuit in B2-L15)."
+ },
+ {
+  "t": "m",
+  "m": "W=\\frac{Q^2}{2C}=\\frac{CU^2}{2}=\\frac{QU}{2},\\qquad F=\\frac{Q^2}{2\\varepsilon_0A}=\\frac{QE}{2}=\\frac{\\varepsilon_0AU^2}{2d^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Qoplamalar orasidagi kuch.** Zaryad o'zgarmas bo'lganda $F=-\\frac{dW}{dx}$: $W=\\frac{Q^2x}{2\\varepsilon_0A}$ dan $F=\\frac{Q^2}{2\\varepsilon_0A}=\\frac{QE}{2}$ (tortishish). Har bir qoplama ikkinchisining maydoni $\\frac{E}{2}$ da turadi — shuning uchun $QE$ emas. Bosim $\\frac{F}{A}=\\frac{\\varepsilon_0E^2}{2}=w$ — B2-L12 dagi elektrostatik bosim bilan bir xil.",
+  "ru": "**Сила между обкладками.** При постоянном заряде $F=-\\frac{dW}{dx}$: из $W=\\frac{Q^2x}{2\\varepsilon_0A}$ получаем $F=\\frac{Q^2}{2\\varepsilon_0A}=\\frac{QE}{2}$ (притяжение). Каждая обкладка находится в поле другой $\\frac{E}{2}$ — поэтому не $QE$. Давление $\\frac{F}{A}=\\frac{\\varepsilon_0E^2}{2}=w$ — то же, что электростатическое давление в B2-L12.",
+  "en": "**Force between the plates.** At constant charge $F=-\\frac{dW}{dx}$: from $W=\\frac{Q^2x}{2\\varepsilon_0A}$ we get $F=\\frac{Q^2}{2\\varepsilon_0A}=\\frac{QE}{2}$ (attractive). Each plate sits in the other's field $\\frac{E}{2}$ — hence not $QE$. The pressure $\\frac{F}{A}=\\frac{\\varepsilon_0E^2}{2}=w$ is the same as the electrostatic pressure of B2-L12."
+ },
+ {
+  "t": "li",
+  "uz": "**$Q$ = const yoki $U$ = const.** Qoplamalar orasini $d$ dan $2d$ ga uzaytirsak: manbadan uzilgan kondensatorda $Q$ o'zgarmaydi, $U$ va $W$ ikki marta ortadi — ortiqcha energiya tortishish kuchiga qarshi bajarilgan ishdan keladi. Manbaga ulangan kondensatorda $U$ o'zgarmaydi, $C$, $Q$ va $W$ ikki marta kamayadi; manba $\\Delta Q\\cdot U=2|\\Delta W|$ energiyani qaytarib oladi, tashqi kuch esa $|\\Delta W|$ ish bajaradi ([[F08]]). Qoplamalar orasiga qalinligi $t$ bo'lgan metall plastinka kiritilsa, $C=\\frac{\\varepsilon_0A}{d-t}$.",
+  "ru": "**$Q$ = const или $U$ = const.** Раздвинем обкладки с $d$ до $2d$: у отключённого от источника конденсатора $Q$ не меняется, $U$ и $W$ возрастают в два раза — избыточная энергия берётся из работы против силы притяжения. У подключённого к источнику $U$ не меняется, $C$, $Q$ и $W$ уменьшаются в два раза; источник получает обратно энергию $\\Delta Q\\cdot U=2|\\Delta W|$, а внешняя сила совершает работу $|\\Delta W|$ ([[F08]]). Если между обкладками вставить металлическую пластину толщиной $t$, то $C=\\frac{\\varepsilon_0A}{d-t}$.",
+  "en": "**$Q$ = const or $U$ = const.** Pull the plates apart from $d$ to $2d$: for a capacitor disconnected from the source, $Q$ stays fixed while $U$ and $W$ double — the extra energy comes from the work done against the attraction. For one connected to the source, $U$ stays fixed while $C$, $Q$ and $W$ halve; the source takes back energy $\\Delta Q\\cdot U=2|\\Delta W|$, and the external force does work $|\\Delta W|$ ([[F08]]). If a metal slab of thickness $t$ is inserted between the plates, $C=\\frac{\\varepsilon_0A}{d-t}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L13-F08.png",
+   "ru": "figures/B2-L13-F08-ru.png",
+   "en": "figures/B2-L13-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. Zaryadli zarralarning elektr maydondagi harakati",
+  "ru": "9. Движение заряженных частиц в электрическом поле",
+  "en": "9. Motion of charged particles in an electric field"
+ },
+ {
+  "t": "li",
+  "uz": "**Kondensatorda og'ish.** Qoplamalarga parallel $v$ tezlik bilan kirgan zarra bir jinsli maydonda gorizontal otilgan jismdek harakatlanadi: $a=\\frac{qE}{m}$, uzunligi $L$ bo'lgan qoplamalardan chiqishda $y=\\frac{qEL^2}{2mv^2}$, $\\mathrm{tg}\\,\\alpha=\\frac{qEL}{mv^2}$. Zarra avval $U_0$ kuchlanish bilan tezlatilgan bo'lsa, $y=\\frac{UL^2}{4dU_0}$ — zarraning zaryadi va massasiga bog'liq emas. Chiqqandan keyin zarra to'g'ri chiziq bo'ylab, go'yo qoplamalar o'rtasidan chiqqandek uchadi (osillograf trubkasi).",
+  "ru": "**Отклонение в конденсаторе.** Частица, влетевшая параллельно обкладкам со скоростью $v$, движется в однородном поле как тело, брошенное горизонтально: $a=\\frac{qE}{m}$, на выходе из обкладок длиной $L$ $y=\\frac{qEL^2}{2mv^2}$, $\\mathrm{tg}\\,\\alpha=\\frac{qEL}{mv^2}$. Если частицу предварительно ускорили напряжением $U_0$, то $y=\\frac{UL^2}{4dU_0}$ — не зависит от заряда и массы частицы. После вылета частица летит по прямой, как будто вылетела из середины обкладок (осциллографическая трубка).",
+  "en": "**Deflection in a capacitor.** A particle entering parallel to the plates with speed $v$ moves in the uniform field like a horizontally launched projectile: $a=\\frac{qE}{m}$, and on leaving plates of length $L$, $y=\\frac{qEL^2}{2mv^2}$, $\\mathrm{tg}\\,\\alpha=\\frac{qEL}{mv^2}$. If the particle was first accelerated through a voltage $U_0$, then $y=\\frac{UL^2}{4dU_0}$ — independent of the particle's charge and mass. After leaving, the particle travels in a straight line as if it came from the middle of the plates (oscilloscope tube)."
+ },
+ {
+  "t": "m",
+  "m": "y=\\frac{qEL^2}{2mv^2}=\\frac{UL^2}{4dU_0},\\qquad \\mathrm{tg}\\,\\alpha=\\frac{qEL}{mv^2},\\qquad \\omega=\\sqrt{\\frac{kQq}{mR^3}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Potensial chuqurliklar.** Zarra potensial energiya $W(x)=q\\varphi(x)$ minimumi atrofida tebranadi: $\\omega^2=\\frac{W''}{m}$. Halqa o'qida $-q$ zaryad: $\\varphi\\approx\\frac{kQ}{R}\\left(1-\\frac{z^2}{2R^2}\\right)$, $\\omega=\\sqrt{\\frac{kQq}{mR^3}}$. Irnshou teoremasiga ko'ra elektrostatik maydonda turg'un muvozanat uch o'lchamda bo'lmaydi: halqa markazidagi $-q$ o'q bo'ylab turg'un, lekin halqa tekisligida turg'unmas.",
+  "ru": "**Потенциальные ямы.** Частица колеблется около минимума потенциальной энергии $W(x)=q\\varphi(x)$: $\\omega^2=\\frac{W''}{m}$. Заряд $-q$ на оси кольца: $\\varphi\\approx\\frac{kQ}{R}\\left(1-\\frac{z^2}{2R^2}\\right)$, $\\omega=\\sqrt{\\frac{kQq}{mR^3}}$. По теореме Ирншоу в электростатическом поле нет устойчивого равновесия по трём измерениям: заряд $-q$ в центре кольца устойчив вдоль оси, но неустойчив в плоскости кольца.",
+  "en": "**Potential wells.** A particle oscillates about a minimum of the potential energy $W(x)=q\\varphi(x)$: $\\omega^2=\\frac{W''}{m}$. A charge $-q$ on a ring's axis: $\\varphi\\approx\\frac{kQ}{R}\\left(1-\\frac{z^2}{2R^2}\\right)$, $\\omega=\\sqrt{\\frac{kQq}{mR^3}}$. By Earnshaw's theorem there is no stable equilibrium in all three dimensions in an electrostatic field: the charge $-q$ at the ring's centre is stable along the axis but unstable in the plane of the ring."
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE usullari va tipik xatolar",
+  "ru": "10. Методы GRE и типичные ошибки",
+  "en": "10. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 1 — avval potensial.** Ko'p zaryadli masalalarda potensialni (skalyar) topish, so'ng $\\vec E=-\\nabla\\varphi$ olish maydonni vektor qo'shishdan qisqa. Energiya va tezlik so'ralganda maydon umuman kerak emas: $\\frac{mv^2}{2}=q\\Delta\\varphi$. Ekvipotensial sirt bo'ylab ko'chirish ishi nol.",
+  "ru": "**Метод 1 — сначала потенциал.** В задачах со многими зарядами найти потенциал (скаляр), а затем взять $\\vec E=-\\nabla\\varphi$ короче, чем складывать поля как векторы. Если спрашивают энергию и скорость, поле вообще не нужно: $\\frac{mv^2}{2}=q\\Delta\\varphi$. Работа перемещения вдоль эквипотенциальной поверхности равна нулю.",
+  "en": "**Method 1 — potential first.** With many charges, finding the potential (a scalar) and then taking $\\vec E=-\\nabla\\varphi$ is quicker than adding fields as vectors. When energy or speed is asked for, the field is not needed at all: $\\frac{mv^2}{2}=q\\Delta\\varphi$. The work done moving along an equipotential surface is zero."
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 2 — kondensatorlarda nima o'zgarmas?** Avval aniqlang: manbadan uzilgan ($Q$ = const, $W=\\frac{Q^2}{2C}$ dan foydalaning) yoki manbaga ulangan ($U$ = const, $W=\\frac{CU^2}{2}$ dan foydalaning). Ulashda zaryad saqlanadi, energiya emas. Murakkab zanjirni bosqichma-bosqich soddalashtiring va har bosqichda ketma-ket ulanganlarda $Q$, parallel ulanganlarda $U$ bir xil ekanini tekshiring.",
+  "ru": "**Метод 2 — что постоянно у конденсатора?** Сначала определите: отключён от источника ($Q$ = const, пользуйтесь $W=\\frac{Q^2}{2C}$) или подключён ($U$ = const, пользуйтесь $W=\\frac{CU^2}{2}$). При соединении сохраняется заряд, а не энергия. Сложную цепь упрощайте поэтапно, проверяя, что у последовательных одинаков $Q$, у параллельных — $U$.",
+  "en": "**Method 2 — what is constant for the capacitor?** First decide: disconnected from the source ($Q$ = const, use $W=\\frac{Q^2}{2C}$) or connected ($U$ = const, use $W=\\frac{CU^2}{2}$). On connecting, charge is conserved, not energy. Simplify a complicated network step by step, checking that series elements share $Q$ and parallel ones share $U$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) $E=0$ bo'lgan joyda $\\varphi=0$ deb o'ylash (sfera ichida, ikki bir xil zaryad o'rtasida). 2) Energiyani hisoblashda juftlarni ikki marta sanash ($\\frac{1}{2}$ ni unutish). 3) Qoplamalar orasidagi kuchni $QE$ deb olish ($\\frac{QE}{2}$ kerak). 4) Ketma-ket va parallel formulalarini almashtirish (rezistorlarnikiga teskari). 5) Ulashda energiya saqlanadi deb hisoblash. 6) Tasvir usulida kuchni $\\frac{kq^2}{d^2}$ deb olish (masofa $2d$). 7) Cheksiz chiziq potensialini cheksizlikdan hisoblash.",
+  "ru": "**Типичные ошибки.** 1) Считать $\\varphi=0$ там, где $E=0$ (внутри сферы, посередине между двумя одинаковыми зарядами). 2) При вычислении энергии считать пары дважды (забыть $\\frac{1}{2}$). 3) Брать силу между обкладками $QE$ (нужно $\\frac{QE}{2}$). 4) Путать формулы последовательного и параллельного соединения (они обратны формулам для резисторов). 5) Считать, что при соединении энергия сохраняется. 6) В методе изображений брать силу $\\frac{kq^2}{d^2}$ (расстояние $2d$). 7) Отсчитывать потенциал бесконечной линии от бесконечности.",
+  "en": "**Typical mistakes.** 1) Assuming $\\varphi=0$ where $E=0$ (inside a sphere, midway between two equal charges). 2) Counting pairs twice when computing energy (forgetting the $\\frac{1}{2}$). 3) Taking the force between the plates as $QE$ (it should be $\\frac{QE}{2}$). 4) Mixing up the series and parallel formulas (they are the reverse of those for resistors). 5) Assuming energy is conserved on connecting. 6) Taking the image force as $\\frac{kq^2}{d^2}$ (the separation is $2d$). 7) Measuring the potential of an infinite line from infinity."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Potensial",
+    "ru": "Потенциал",
+    "en": "Potential",
+    "m": "\\varphi=-\\int_\\infty^{\\vec r}\\vec E\\cdot d\\vec l,\\quad \\vec E=-\\nabla\\varphi"
+   },
+   {
+    "uz": "Nuqtaviy zaryad",
+    "ru": "Точечный заряд",
+    "en": "Point charge",
+    "m": "\\varphi=\\frac{kq}{r},\\quad W=q\\varphi"
+   },
+   {
+    "uz": "Tezlatish",
+    "ru": "Ускорение",
+    "en": "Acceleration",
+    "m": "v=\\sqrt{\\frac{2qU}{m}}"
+   },
+   {
+    "uz": "Halqa, disk o'qida",
+    "ru": "На оси кольца, диска",
+    "en": "On a ring's, disk's axis",
+    "m": "\\frac{kQ}{\\sqrt{z^2+R^2}},\\quad \\frac{\\sigma}{2\\varepsilon_0}\\left(\\sqrt{z^2+R^2}-z\\right)"
+   },
+   {
+    "uz": "Bir jinsli shar ichida",
+    "ru": "Внутри однородного шара",
+    "en": "Inside a uniform ball",
+    "m": "\\varphi=\\frac{kQ(3R^2-r^2)}{2R^3}"
+   },
+   {
+    "uz": "Dipol",
+    "ru": "Диполь",
+    "en": "Dipole",
+    "m": "\\varphi=\\frac{kp\\cos\\theta}{r^2},\\quad W=-\\vec p\\cdot\\vec E"
+   },
+   {
+    "uz": "Zaryadlar energiyasi",
+    "ru": "Энергия зарядов",
+    "en": "Energy of charges",
+    "m": "W=\\sum_{i<j}\\frac{kq_iq_j}{r_{ij}}=\\frac{1}{2}\\sum q_i\\varphi_i"
+   },
+   {
+    "uz": "Maydon energiyasi",
+    "ru": "Энергия поля",
+    "en": "Field energy",
+    "m": "w=\\frac{\\varepsilon_0E^2}{2},\\quad \\frac{kQ^2}{2R},\\quad \\frac{3kQ^2}{5R}"
+   },
+   {
+    "uz": "Puasson, Laplas",
+    "ru": "Пуассон, Лаплас",
+    "en": "Poisson, Laplace",
+    "m": "\\nabla^2\\varphi=-\\frac{\\rho}{\\varepsilon_0},\\quad \\nabla^2\\varphi=0"
+   },
+   {
+    "uz": "Tasvir: tekislik",
+    "ru": "Изображение: плоскость",
+    "en": "Image: plane",
+    "m": "F=\\frac{kq^2}{4d^2}"
+   },
+   {
+    "uz": "Tasvir: sfera",
+    "ru": "Изображение: сфера",
+    "en": "Image: sphere",
+    "m": "q'=-\\frac{qR}{a},\\quad \\frac{R^2}{a}"
+   },
+   {
+    "uz": "Sig'imlar",
+    "ru": "Ёмкости",
+    "en": "Capacitances",
+    "m": "\\frac{\\varepsilon_0A}{d},\\quad \\frac{4\\pi\\varepsilon_0ab}{b-a},\\quad \\frac{2\\pi\\varepsilon_0L}{\\ln(b/a)}"
+   },
+   {
+    "uz": "Ulash",
+    "ru": "Соединения",
+    "en": "Combinations",
+    "m": "C=\\sum C_i,\\quad \\frac{1}{C}=\\sum\\frac{1}{C_i}"
+   },
+   {
+    "uz": "Ulashdagi yo'qotish",
+    "ru": "Потери при соединении",
+    "en": "Loss on connecting",
+    "m": "\\Delta W=\\frac{C_1C_2(U_1-U_2)^2}{2(C_1+C_2)}"
+   },
+   {
+    "uz": "Energiya, kuch",
+    "ru": "Энергия, сила",
+    "en": "Energy, force",
+    "m": "W=\\frac{Q^2}{2C}=\\frac{CU^2}{2},\\quad F=\\frac{QE}{2}"
+   },
+   {
+    "uz": "Kondensatorda og'ish",
+    "ru": "Отклонение в конденсаторе",
+    "en": "Deflection in a capacitor",
+    "m": "y=\\frac{qEL^2}{2mv^2}=\\frac{UL^2}{4dU_0}"
+   }
+  ]
+ }
+]

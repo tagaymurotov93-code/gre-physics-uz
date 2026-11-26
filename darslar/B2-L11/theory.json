@@ -1,0 +1,573 @@
+[
+ {
+  "t": "h1",
+  "uz": "Suyuqliklar dinamikasi (Fluid dynamics)",
+  "ru": "Динамика жидкостей",
+  "en": "Fluid dynamics"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz oqimni tezlik maydoni orqali tasvirlaysiz; uzluksizlik va Eyler tenglamalarini differensial ko'rinishda yozasiz; aylanuvchi va tezlanish bilan harakatlanayotgan idishdagi suyuqlik sirtini topasiz; Bernulli tenglamasini Venturi va Pito naylari, sifon va idishning bo'shash vaqtiga qo'llaysiz; impuls oqimi orqali oqimning devorga ta'sir kuchini hisoblaysiz; uyurma va sirkulyatsiya tushunchalari bilan ko'taruvchi kuchni tushuntirasiz; qovushoq oqimda Puazeyl qonuni, Reynolds soni va Stoks qarshiligidan foydalanasiz; suv sirtidagi to'lqinlar tezligini topasiz.",
+  "ru": "**Цель.** После урока вы будете описывать течение полем скоростей; записывать уравнения непрерывности и Эйлера в дифференциальной форме; находить форму поверхности жидкости во вращающемся и ускоренно движущемся сосуде; применять уравнение Бернулли к трубкам Вентури и Пито, сифону и времени опорожнения сосуда; вычислять силу действия струи на стенку через поток импульса; объяснять подъёмную силу через понятия завихренности и циркуляции; пользоваться законом Пуазейля, числом Рейнольдса и сопротивлением Стокса в вязком течении; находить скорость волн на поверхности воды.",
+  "en": "**Goal.** After this lesson you will describe a flow by its velocity field; write the continuity and Euler equations in differential form; find the shape of the liquid surface in a rotating or accelerating container; apply Bernoulli's equation to Venturi and Pitot tubes, a siphon and the draining time of a tank; compute the force of a jet on a wall from the momentum flux; explain lift through the concepts of vorticity and circulation; use Poiseuille's law, the Reynolds number and Stokes drag for viscous flow; and find the speed of waves on a water surface."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L19 da ideal suyuqlik uchun uzluksizlik tenglamasi $Av=\\mathrm{const}$, Bernulli tenglamasi va Torrichelli formulasini, B1-L26 da sirt tarangligini, B2-L01 da muhitning chiziqli va kvadratik qarshiligini ko'rdik. Bu darsda ularni Nyuton qonunlarining suyuqlik uchun yozilgan ko'rinishidan — Eyler tenglamasidan — keltirib chiqaramiz va qovushoqlik, uyurmalar va to'lqinlar bilan to'ldiramiz. GRE da bu mavzu klassik mexanika qismida: Bernulli, uzluksizlik, Puazeyl qonunining $R^4$ masshtabi, terminal tezlik va o'lchamlar tahlili savollari tez-tez uchraydi.",
+  "ru": "В B1-L19 мы рассмотрели для идеальной жидкости уравнение непрерывности $Av=\\mathrm{const}$, уравнение Бернулли и формулу Торричелли, в B1-L26 — поверхностное натяжение, в B2-L01 — линейное и квадратичное сопротивление среды. В этом уроке мы выведем их из записи законов Ньютона для жидкости — уравнения Эйлера — и дополним вязкостью, вихрями и волнами. В GRE эта тема входит в классическую механику: часто встречаются вопросы на Бернулли, непрерывность, масштаб $R^4$ в законе Пуазейля, установившуюся скорость и анализ размерностей.",
+  "en": "In B1-L19 we met the continuity equation $Av=\\mathrm{const}$, Bernoulli's equation and Torricelli's law for an ideal fluid; in B1-L26, surface tension; and in B2-L01, linear and quadratic drag. In this lesson we derive them from Newton's laws written for a fluid — the Euler equation — and add viscosity, vortices and waves. On the GRE this topic belongs to classical mechanics: questions on Bernoulli, continuity, the $R^4$ scaling of Poiseuille's law, terminal velocity and dimensional analysis are common."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Oqimni tasvirlash va uzluksizlik tenglamasi",
+  "ru": "1. Описание течения и уравнение непрерывности",
+  "en": "1. Describing a flow and the continuity equation"
+ },
+ {
+  "t": "li",
+  "uz": "**Tezlik maydoni.** Har bir zarrani alohida kuzatish (Lagranj yondashuvi) o'rniga fazoning har bir nuqtasida tezlik $\\vec v(\\vec r,t)$ beriladi (Eyler yondashuvi). Oqim chizig'i (streamline) har bir nuqtada $\\vec v$ ga urinadi; zarraning trayektoriyasi (pathline) esa haqiqiy yo'li. Statsionar oqimda ($\\frac{\\partial\\vec v}{\\partial t}=0$) ular ustma-ust tushadi, nostatsionar oqimda farq qiladi ([[F01]]).",
+  "ru": "**Поле скоростей.** Вместо слежения за каждой частицей (подход Лагранжа) в каждой точке пространства задаётся скорость $\\vec v(\\vec r,t)$ (подход Эйлера). Линия тока (streamline) в каждой точке касается $\\vec v$; траектория частицы (pathline) — её действительный путь. В стационарном течении ($\\frac{\\partial\\vec v}{\\partial t}=0$) они совпадают, в нестационарном — различаются ([[F01]]).",
+  "en": "**The velocity field.** Instead of following each particle separately (the Lagrangian approach), a velocity $\\vec v(\\vec r,t)$ is given at every point of space (the Eulerian approach). A streamline is tangent to $\\vec v$ at every point; a pathline is a particle's actual path. In steady flow ($\\frac{\\partial\\vec v}{\\partial t}=0$) they coincide; in unsteady flow they differ ([[F01]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Moddiy hosila.** Suyuqlik zarrasining tezlanishi ikki qismdan iborat: nuqtadagi tezlikning vaqt bo'yicha o'zgarishi va zarraning tezligi boshqacha bo'lgan joyga ko'chishi (konvektiv had). Statsionar oqimda ham zarra tezlanishi mumkin: toraygan quvurda $\\frac{\\partial\\vec v}{\\partial t}=0$, lekin zarra tezlashadi.",
+  "ru": "**Материальная производная.** Ускорение частицы жидкости состоит из двух частей: изменения скорости в точке со временем и переноса частицы туда, где скорость другая (конвективный член). Даже в стационарном течении частица может ускоряться: в сужающейся трубе $\\frac{\\partial\\vec v}{\\partial t}=0$, но частица разгоняется.",
+  "en": "**The material derivative.** The acceleration of a fluid particle has two parts: the change in time of the velocity at a point, and the particle's transport to where the velocity is different (the convective term). Even in steady flow a particle can accelerate: in a narrowing pipe $\\frac{\\partial\\vec v}{\\partial t}=0$, yet the particle speeds up."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{D\\vec v}{Dt}=\\frac{\\partial\\vec v}{\\partial t}+(\\vec v\\cdot\\nabla)\\vec v"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L11-F01.png",
+   "ru": "figures/B2-L11-F01-ru.png",
+   "en": "figures/B2-L11-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Uzluksizlik tenglamasi.** Har qanday hajmdagi massa o'zgarishi uning sirtidan oqib chiqayotgan massa oqimi bilan muvozanatda: differensial ko'rinishda $\\frac{\\partial\\rho}{\\partial t}+\\nabla\\cdot(\\rho\\vec v)=0$ — xuddi zaryad saqlanishi kabi (B1-L33). Siqilmaydigan suyuqlikda $\\rho=\\mathrm{const}$ va $\\nabla\\cdot\\vec v=0$. Oqim nayi bo'ylab integrallasak, B1-L19 dagi $Q=Av=\\mathrm{const}$ chiqadi; quvur diametri $2$ marta kichraysa, tezlik $4$ marta ortadi.",
+  "ru": "**Уравнение непрерывности.** Изменение массы в любом объёме уравновешено потоком массы через его поверхность: в дифференциальной форме $\\frac{\\partial\\rho}{\\partial t}+\\nabla\\cdot(\\rho\\vec v)=0$ — как сохранение заряда (B1-L33). В несжимаемой жидкости $\\rho=\\mathrm{const}$ и $\\nabla\\cdot\\vec v=0$. Интегрируя вдоль трубки тока, получаем $Q=Av=\\mathrm{const}$ из B1-L19; при уменьшении диаметра трубы в $2$ раза скорость растёт в $4$ раза.",
+  "en": "**The continuity equation.** The change of mass in any volume is balanced by the mass flux through its surface: in differential form $\\frac{\\partial\\rho}{\\partial t}+\\nabla\\cdot(\\rho\\vec v)=0$ — just like charge conservation (B1-L33). In an incompressible fluid $\\rho=\\mathrm{const}$ and $\\nabla\\cdot\\vec v=0$. Integrating along a stream tube gives $Q=Av=\\mathrm{const}$ of B1-L19; when the pipe diameter shrinks by a factor of $2$, the speed grows by a factor of $4$."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\partial\\rho}{\\partial t}+\\nabla\\cdot(\\rho\\vec v)=0,\\qquad \\nabla\\cdot\\vec v=0,\\qquad Q=A_1v_1=A_2v_2"
+ },
+ {
+  "t": "h2",
+  "uz": "2. Eyler tenglamasi va noinersial idishlar",
+  "ru": "2. Уравнение Эйлера и неинерциальные сосуды",
+  "en": "2. The Euler equation and non-inertial containers"
+ },
+ {
+  "t": "li",
+  "uz": "**Eyler tenglamasi.** Qovushoqligi yo'q (ideal) suyuqlikning kichik hajmiga Nyutonning ikkinchi qonuni: birlik hajmga ta'sir qiluvchi bosim kuchi $-\\nabla p$, og'irlik kuchi $\\rho\\vec g$. Bosim gradiyenti suyuqlikni yuqori bosimdan past bosim tomonga itaradi. $\\vec v=0$ da gidrostatika qaytadi: $\\nabla p=\\rho\\vec g$, ya'ni $p=p_0+\\rho gh$ (B1-L18).",
+  "ru": "**Уравнение Эйлера.** Второй закон Ньютона для малого объёма невязкой (идеальной) жидкости: сила давления на единицу объёма $-\\nabla p$, сила тяжести $\\rho\\vec g$. Градиент давления толкает жидкость от высокого давления к низкому. При $\\vec v=0$ возвращается гидростатика: $\\nabla p=\\rho\\vec g$, т. е. $p=p_0+\\rho gh$ (B1-L18).",
+  "en": "**The Euler equation.** Newton's second law for a small volume of inviscid (ideal) fluid: the pressure force per unit volume is $-\\nabla p$, and gravity gives $\\rho\\vec g$. The pressure gradient pushes the fluid from high to low pressure. For $\\vec v=0$ hydrostatics returns: $\\nabla p=\\rho\\vec g$, i.e. $p=p_0+\\rho gh$ (B1-L18)."
+ },
+ {
+  "t": "m",
+  "m": "\\rho\\left(\\frac{\\partial\\vec v}{\\partial t}+(\\vec v\\cdot\\nabla)\\vec v\\right)=-\\nabla p+\\rho\\vec g"
+ },
+ {
+  "t": "li",
+  "uz": "**Tezlanish bilan harakatlanayotgan idish.** Idish gorizontal $a$ tezlanish bilan harakatlansa, uning sistemasida suyuqlik tinch, lekin effektiv og'irlik $\\vec g'=\\vec g-\\vec a$. Erkin sirt $\\vec g'$ ga perpendikulyar: $\\mathrm{tg}\\,\\alpha=\\frac{a}{g}$, suyuqlik orqa devorda ko'tariladi. Vertikal yuqoriga tezlanishda sirt gorizontal qoladi, lekin bosim $p=p_0+\\rho(g+a)h$.",
+  "ru": "**Сосуд, движущийся с ускорением.** Если сосуд движется с горизонтальным ускорением $a$, в его системе жидкость покоится, но эффективная сила тяжести $\\vec g'=\\vec g-\\vec a$. Свободная поверхность перпендикулярна $\\vec g'$: $\\mathrm{tg}\\,\\alpha=\\frac{a}{g}$, жидкость поднимается у задней стенки. При вертикальном ускорении вверх поверхность остаётся горизонтальной, но давление $p=p_0+\\rho(g+a)h$.",
+  "en": "**A container moving with acceleration.** If the container accelerates horizontally at $a$, in its frame the fluid is at rest but the effective gravity is $\\vec g'=\\vec g-\\vec a$. The free surface is perpendicular to $\\vec g'$: $\\mathrm{tg}\\,\\alpha=\\frac{a}{g}$, and the liquid rises at the back wall. For vertical upward acceleration the surface stays horizontal, but the pressure is $p=p_0+\\rho(g+a)h$."
+ },
+ {
+  "t": "li",
+  "uz": "**Aylanuvchi suyuqlik.** $\\Omega$ burchak tezlik bilan qattiq jismdek aylanayotgan suyuqlikda $v=\\Omega r$, markazga intilma tezlanish $\\Omega^2r$ ni bosimning radial gradiyenti beradi: $\\frac{\\partial p}{\\partial r}=\\rho\\Omega^2r$, $\\frac{\\partial p}{\\partial z}=-\\rho g$. Izobar sirtlar, shu jumladan erkin sirt — aylanish paraboloidi ([[F02]]). Silindrik idishda markaz va devor orasidagi balandlik farqi $\\frac{\\Omega^2R^2}{2g}$; suyuqlik hajmi saqlanganligi sababli markaz boshlang'ich sathdan $\\frac{\\Omega^2R^2}{4g}$ ga pasayadi, devorda shuncha ko'tariladi.",
+  "ru": "**Вращающаяся жидкость.** В жидкости, вращающейся как твёрдое тело с угловой скоростью $\\Omega$, $v=\\Omega r$, а центростремительное ускорение $\\Omega^2r$ обеспечивает радиальный градиент давления: $\\frac{\\partial p}{\\partial r}=\\rho\\Omega^2r$, $\\frac{\\partial p}{\\partial z}=-\\rho g$. Изобарические поверхности, в том числе свободная поверхность, — параболоиды вращения ([[F02]]). В цилиндрическом сосуде разность высот между центром и стенкой равна $\\frac{\\Omega^2R^2}{2g}$; так как объём жидкости сохраняется, центр опускается на $\\frac{\\Omega^2R^2}{4g}$ ниже начального уровня, а у стенки поднимается на столько же.",
+  "en": "**A rotating fluid.** In a fluid rotating like a rigid body at angular velocity $\\Omega$, $v=\\Omega r$, and the centripetal acceleration $\\Omega^2r$ is supplied by the radial pressure gradient: $\\frac{\\partial p}{\\partial r}=\\rho\\Omega^2r$, $\\frac{\\partial p}{\\partial z}=-\\rho g$. The isobaric surfaces, including the free surface, are paraboloids of revolution ([[F02]]). In a cylindrical container the height difference between centre and wall is $\\frac{\\Omega^2R^2}{2g}$; since the liquid volume is conserved, the centre drops by $\\frac{\\Omega^2R^2}{4g}$ below the initial level and the edge rises by the same amount."
+ },
+ {
+  "t": "m",
+  "m": "\\mathrm{tg}\\,\\alpha=\\frac{a}{g},\\qquad z(r)=z_0+\\frac{\\Omega^2r^2}{2g},\\qquad \\Delta z=\\frac{\\Omega^2R^2}{2g}"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L11-F02.png",
+   "ru": "figures/B2-L11-F02-ru.png",
+   "en": "figures/B2-L11-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Bernulli tenglamasi va uning qo'llanishlari",
+  "ru": "3. Уравнение Бернулли и его применения",
+  "en": "3. Bernoulli's equation and its applications"
+ },
+ {
+  "t": "li",
+  "uz": "**Eyler tenglamasidan.** Statsionar oqimda Eyler tenglamasini oqim chizig'i bo'ylab integrallasak (yoki birlik hajm uchun energiya balansini yozsak), $p+\\frac{1}{2}\\rho v^2+\\rho gz$ oqim chizig'i bo'ylab o'zgarmaydi. Shartlar: statsionar, siqilmaydigan, qovushoqsiz oqim; agar oqim uyurmasiz bo'lsa (5-bo'lim), doimiy butun oqim uchun bir xil. Ma'nosi: birlik hajmga to'g'ri keladigan bosim ishi, kinetik va potensial energiya yig'indisi saqlanadi.",
+  "ru": "**Из уравнения Эйлера.** Интегрируя уравнение Эйлера в стационарном течении вдоль линии тока (или записывая баланс энергии на единицу объёма), получаем, что $p+\\frac{1}{2}\\rho v^2+\\rho gz$ не меняется вдоль линии тока. Условия: стационарное, несжимаемое, невязкое течение; если течение безвихревое (раздел 5), постоянная одинакова для всего потока. Смысл: сохраняется сумма работы давления, кинетической и потенциальной энергии на единицу объёма.",
+  "en": "**From the Euler equation.** Integrating the Euler equation along a streamline in steady flow (or writing the energy balance per unit volume) shows that $p+\\frac{1}{2}\\rho v^2+\\rho gz$ does not change along a streamline. The conditions: steady, incompressible, inviscid flow; if the flow is irrotational (section 5), the constant is the same for the whole flow. Meaning: the sum of pressure work, kinetic and potential energy per unit volume is conserved."
+ },
+ {
+  "t": "m",
+  "m": "p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}"
+ },
+ {
+  "t": "li",
+  "uz": "**Venturi o'lchagichi.** Kesimi $A_1$ dan $A_2$ ga toraygan gorizontal quvurda bosimlar farqi $\\Delta p$ o'lchanadi. Uzluksizlik $v_1A_1=v_2A_2$ va Bernulli birgalikda: $\\Delta p=\\frac{1}{2}\\rho v_2^2\\left(1-\\frac{A_2^2}{A_1^2}\\right)$ — bundan sarf $Q=A_2v_2$ topiladi ([[F03]]). Torayishda tezlik ortadi, bosim kamayadi — purkagich, karbyurator va «ikki qog'oz varag'i» tajribasi shu effekt.",
+  "ru": "**Расходомер Вентури.** В горизонтальной трубе, сужающейся от сечения $A_1$ до $A_2$, измеряется разность давлений $\\Delta p$. Непрерывность $v_1A_1=v_2A_2$ и Бернулли вместе дают $\\Delta p=\\frac{1}{2}\\rho v_2^2\\left(1-\\frac{A_2^2}{A_1^2}\\right)$ — отсюда находится расход $Q=A_2v_2$ ([[F03]]). В сужении скорость растёт, давление падает — на этом основаны пульверизатор, карбюратор и опыт «два листа бумаги».",
+  "en": "**The Venturi meter.** In a horizontal pipe narrowing from cross-section $A_1$ to $A_2$, the pressure difference $\\Delta p$ is measured. Continuity $v_1A_1=v_2A_2$ together with Bernoulli gives $\\Delta p=\\frac{1}{2}\\rho v_2^2\\left(1-\\frac{A_2^2}{A_1^2}\\right)$ — from which the flow rate $Q=A_2v_2$ follows ([[F03]]). In the constriction the speed rises and the pressure drops — the sprayer, the carburettor and the “two sheets of paper” experiment rely on this effect."
+ },
+ {
+  "t": "li",
+  "uz": "**Pito nayi.** Oqimga qaratilgan nay uchida suyuqlik to'xtaydi (to'xtash nuqtasi, $v=0$), shuning uchun u yerda bosim to'liq bosimga teng: $p_0=p+\\frac{1}{2}\\rho v^2$. Yon teshik statik bosim $p$ ni o'lchaydi; farqdan $v=\\sqrt{\\frac{2(p_0-p)}{\\rho}}$. Samolyotlarning tezlik o'lchagichi shunday ishlaydi; bunda $\\rho$ — havo zichligi, manometr suyuqligi zichligi emas.",
+  "ru": "**Трубка Пито.** В носике трубки, направленной против потока, жидкость останавливается (точка торможения, $v=0$), поэтому там давление равно полному: $p_0=p+\\frac{1}{2}\\rho v^2$. Боковое отверстие измеряет статическое давление $p$; из разности $v=\\sqrt{\\frac{2(p_0-p)}{\\rho}}$. Так работает указатель скорости самолёта; здесь $\\rho$ — плотность воздуха, а не жидкости манометра.",
+  "en": "**The Pitot tube.** At the nose of a tube facing the flow the fluid stops (a stagnation point, $v=0$), so the pressure there equals the total pressure: $p_0=p+\\frac{1}{2}\\rho v^2$. A side hole measures the static pressure $p$; from the difference $v=\\sqrt{\\frac{2(p_0-p)}{\\rho}}$. An aircraft airspeed indicator works this way; here $\\rho$ is the density of air, not of the manometer liquid."
+ },
+ {
+  "t": "m",
+  "m": "\\Delta p=\\frac{1}{2}\\rho v_2^2\\left(1-\\frac{A_2^2}{A_1^2}\\right),\\qquad v=\\sqrt{\\frac{2(p_0-p)}{\\rho}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L11-F03.png",
+   "ru": "figures/B2-L11-F03-ru.png",
+   "en": "figures/B2-L11-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Sifon va idishning bo'shashi.** Sifonda chiqish teshigi sathdan $h$ pastda bo'lsa, $v=\\sqrt{2gh}$ (Torrichelli); nayning eng yuqori nuqtasida bosim eng kichik, u manfiy bo'lolmaydi — shuning uchun suv sifon sathdan atmosfera bosimiga mos balandlikdan ($\\approx10\\ \\mathrm{m}$) yuqoriga ko'tarilolmaydi. Kesimi $A$ bo'lgan idish tubidagi $a$ teshikdan bo'shaganda $A\\frac{dh}{dt}=-a\\sqrt{2gh}$, demak $\\sqrt h$ chiziqli kamayadi va bo'shash vaqti $t=\\frac{A}{a}\\sqrt{\\frac{2H}{g}}$. Balandlik $4$ marta ortsa, vaqt $2$ marta ortadi.",
+  "ru": "**Сифон и опорожнение сосуда.** В сифоне с выходом на $h$ ниже уровня $v=\\sqrt{2gh}$ (Торричелли); в наивысшей точке трубки давление наименьшее и не может быть отрицательным — поэтому вода в сифоне не поднимается выше уровня на высоту, соответствующую атмосферному давлению ($\\approx10\\ \\mathrm{m}$). При опорожнении сосуда сечением $A$ через отверстие $a$ в дне $A\\frac{dh}{dt}=-a\\sqrt{2gh}$, значит $\\sqrt h$ убывает линейно, и время опорожнения $t=\\frac{A}{a}\\sqrt{\\frac{2H}{g}}$. При увеличении высоты в $4$ раза время растёт в $2$ раза.",
+  "en": "**The siphon and the draining tank.** In a siphon whose outlet is $h$ below the level, $v=\\sqrt{2gh}$ (Torricelli); at the highest point of the tube the pressure is lowest and cannot be negative — so water in a siphon cannot rise above the level by more than the height corresponding to atmospheric pressure ($\\approx10\\ \\mathrm{m}$). When a tank of cross-section $A$ drains through a hole $a$ in the bottom, $A\\frac{dh}{dt}=-a\\sqrt{2gh}$, so $\\sqrt h$ decreases linearly and the draining time is $t=\\frac{A}{a}\\sqrt{\\frac{2H}{g}}$. When the height grows by a factor of $4$, the time grows by a factor of $2$."
+ },
+ {
+  "t": "m",
+  "m": "v=\\sqrt{2gh},\\qquad A\\frac{dh}{dt}=-a\\sqrt{2gh},\\qquad t=\\frac{A}{a}\\sqrt{\\frac{2H}{g}}"
+ },
+ {
+  "t": "h2",
+  "uz": "4. Impuls oqimi: oqimning ta'sir kuchi",
+  "ru": "4. Поток импульса: сила действия струи",
+  "en": "4. Momentum flux: the force of a jet"
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls balansi.** Nazorat hajmiga sekundiga $\\rho Q$ massa $\\vec v_1$ tezlik bilan kirib, $\\vec v_2$ bilan chiqsa, hajmdagi suyuqlikka ta'sir qiluvchi kuchlar yig'indisi $\\vec F=\\rho Q(\\vec v_2-\\vec v_1)$ ga teng (Nyutonning ikkinchi qonuni, B2-L04 dagi o'zgaruvchan massali sistema kabi). Suyuqlik devorga teng va qarama-qarshi kuch bilan ta'sir qiladi ([[F04]]).",
+  "ru": "**Баланс импульса.** Если в контрольный объём каждую секунду входит масса $\\rho Q$ со скоростью $\\vec v_1$ и выходит со скоростью $\\vec v_2$, сумма сил, действующих на жидкость в объёме, равна $\\vec F=\\rho Q(\\vec v_2-\\vec v_1)$ (второй закон Ньютона, как для системы переменной массы в B2-L04). Жидкость действует на стенку с равной и противоположной силой ([[F04]]).",
+  "en": "**Momentum balance.** If a mass $\\rho Q$ per second enters a control volume with velocity $\\vec v_1$ and leaves with $\\vec v_2$, the sum of the forces on the fluid in the volume is $\\vec F=\\rho Q(\\vec v_2-\\vec v_1)$ (Newton's second law, as for the variable-mass system of B2-L04). The fluid acts on the wall with an equal and opposite force ([[F04]])."
+ },
+ {
+  "t": "m",
+  "m": "\\vec F=\\rho Q(\\vec v_2-\\vec v_1),\\qquad F=\\rho Av^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Misollar.** 1) Oqim devorga tik urilib, yon tomonlarga tarqalsa, normal impuls butunlay yo'qoladi: $F=\\rho Av^2$ — tezlik $2$ marta ortsa, kuch $4$ marta ortadi. 2) Oqim orqaga qaytarilsa (Pelton g'ildiragi kosasi), kuch ikki baravar: $2\\rho Av^2$. 3) $90^\\circ$ ga burilgan quvur: $|\\vec v_2-\\vec v_1|=\\sqrt{2}v$, kuch $\\sqrt{2}\\rho Qv$, burchak bissektrisasi bo'ylab yo'nalgan. 4) O't o'chirish shlangi qo'lga $\\rho Qv$ teskari kuch beradi — reaktiv harakat.",
+  "ru": "**Примеры.** 1) Если струя ударяется о стенку по нормали и растекается в стороны, нормальный импульс полностью исчезает: $F=\\rho Av^2$ — при увеличении скорости в $2$ раза сила растёт в $4$ раза. 2) Если струя поворачивается назад (ковш колеса Пелтона), сила вдвое больше: $2\\rho Av^2$. 3) Труба, изогнутая на $90^\\circ$: $|\\vec v_2-\\vec v_1|=\\sqrt{2}v$, сила $\\sqrt{2}\\rho Qv$, направлена по биссектрисе угла. 4) Пожарный шланг даёт отдачу $\\rho Qv$ — реактивное движение.",
+  "en": "**Examples.** 1) If a jet hits a wall normally and spreads sideways, its normal momentum is entirely lost: $F=\\rho Av^2$ — when the speed grows by a factor of $2$, the force grows by a factor of $4$. 2) If the jet is turned back (a Pelton-wheel bucket), the force doubles: $2\\rho Av^2$. 3) A pipe bent through $90^\\circ$: $|\\vec v_2-\\vec v_1|=\\sqrt{2}v$, the force is $\\sqrt{2}\\rho Qv$, directed along the bisector. 4) A fire hose kicks back with $\\rho Qv$ — jet propulsion."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L11-F04.png",
+   "ru": "figures/B2-L11-F04-ru.png",
+   "en": "figures/B2-L11-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Uyurma, sirkulyatsiya va ko'taruvchi kuch",
+  "ru": "5. Завихренность, циркуляция и подъёмная сила",
+  "en": "5. Vorticity, circulation and lift"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'riflar.** Uyurma (vorticity) $\\vec\\omega=\\nabla\\times\\vec v$ — suyuqlik zarrasining mahalliy aylanishi (burchak tezligining ikki baravari). Sirkulyatsiya (circulation) $\\Gamma=\\oint\\vec v\\cdot d\\vec l$ — yopiq kontur bo'ylab tezlik; Stoks teoremasiga ko'ra u kontur ichidagi uyurma oqimiga teng. $\\vec\\omega=0$ bo'lgan oqim uyurmasiz (potensial): $\\vec v=\\nabla\\phi$, siqilmaslikdan esa $\\nabla^2\\phi=0$ — elektrostatikadagi Laplas tenglamasining aynan o'zi.",
+  "ru": "**Определения.** Завихренность (vorticity) $\\vec\\omega=\\nabla\\times\\vec v$ — местное вращение частицы жидкости (удвоенная угловая скорость). Циркуляция (circulation) $\\Gamma=\\oint\\vec v\\cdot d\\vec l$ — скорость вдоль замкнутого контура; по теореме Стокса она равна потоку завихренности через контур. Течение с $\\vec\\omega=0$ — безвихревое (потенциальное): $\\vec v=\\nabla\\phi$, а из несжимаемости $\\nabla^2\\phi=0$ — в точности уравнение Лапласа электростатики.",
+  "en": "**Definitions.** The vorticity $\\vec\\omega=\\nabla\\times\\vec v$ is the local rotation of a fluid particle (twice its angular velocity). The circulation $\\Gamma=\\oint\\vec v\\cdot d\\vec l$ is the velocity around a closed contour; by Stokes' theorem it equals the flux of vorticity through the contour. A flow with $\\vec\\omega=0$ is irrotational (potential): $\\vec v=\\nabla\\phi$, and incompressibility gives $\\nabla^2\\phi=0$ — exactly the Laplace equation of electrostatics."
+ },
+ {
+  "t": "m",
+  "m": "\\vec\\omega=\\nabla\\times\\vec v,\\qquad \\Gamma=\\oint\\vec v\\cdot d\\vec l=\\int\\vec\\omega\\cdot d\\vec S,\\qquad \\vec v=\\nabla\\phi,\\ \\nabla^2\\phi=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki xil aylanma oqim.** 1) Qattiq jismdek aylanish $v=\\Omega r$: uyurma hamma joyda $\\omega=2\\Omega$, radiusi $r$ bo'lgan aylana bo'ylab $\\Gamma=2\\pi\\Omega r^2$. 2) Erkin (potensial) uyurma $v=\\frac{\\Gamma}{2\\pi r}$: markazdan tashqari hamma joyda $\\omega=0$, barcha aylanalar uchun sirkulyatsiya bir xil $\\Gamma$ — u markazdagi «uyurma ipida» to'plangan. Erkin uyurmada Bernulli butun oqim uchun o'rinli: $p=p_\\infty-\\frac{\\rho\\Gamma^2}{8\\pi^2r^2}$ — vanna teshigi ustidagi voronka va tornado shunday ([[F05]]).",
+  "ru": "**Два вида вращательного течения.** 1) Вращение как твёрдое тело $v=\\Omega r$: завихренность всюду $\\omega=2\\Omega$, по окружности радиуса $r$ $\\Gamma=2\\pi\\Omega r^2$. 2) Свободный (потенциальный) вихрь $v=\\frac{\\Gamma}{2\\pi r}$: всюду вне центра $\\omega=0$, циркуляция одна и та же $\\Gamma$ для всех окружностей — она сосредоточена в «вихревой нити» в центре. В свободном вихре Бернулли справедлив для всего потока: $p=p_\\infty-\\frac{\\rho\\Gamma^2}{8\\pi^2r^2}$ — такова воронка над стоком ванны и смерч ([[F05]]).",
+  "en": "**Two kinds of swirling flow.** 1) Rigid-body rotation $v=\\Omega r$: the vorticity is $\\omega=2\\Omega$ everywhere, and around a circle of radius $r$, $\\Gamma=2\\pi\\Omega r^2$. 2) A free (potential) vortex $v=\\frac{\\Gamma}{2\\pi r}$: $\\omega=0$ everywhere except the centre, and the circulation is the same $\\Gamma$ for every circle — it is concentrated in a “vortex line” at the centre. In a free vortex Bernoulli holds throughout the flow: $p=p_\\infty-\\frac{\\rho\\Gamma^2}{8\\pi^2r^2}$ — this is the funnel over a bathtub drain and a tornado ([[F05]])."
+ },
+ {
+  "t": "m",
+  "m": "v=\\Omega r:\\ \\omega=2\\Omega;\\qquad v=\\frac{\\Gamma}{2\\pi r}:\\ \\omega=0,\\quad p=p_\\infty-\\frac{\\rho\\Gamma^2}{8\\pi^2r^2}"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L11-F05.png",
+   "ru": "figures/B2-L11-F05-ru.png",
+   "en": "figures/B2-L11-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'taruvchi kuch.** Oqim tezligi $v$ bo'lgan jism atrofida sirkulyatsiya $\\Gamma$ bo'lsa, bir tomonda tezlik katta, ikkinchi tomonda kichik bo'ladi va Bernulli bo'yicha bosimlar farqi kuch beradi. Kutta–Jukovskiy teoremasi: uzunlik birligiga ko'taruvchi kuch $\\frac{F}{l}=\\rho v\\Gamma$, u oqimga perpendikulyar. Qanot profili o'tkir orqa qirrasi tufayli sirkulyatsiya hosil qiladi; aylanayotgan to'p yoki silindr esa Magnus effektini beradi — «buralgan» to'p egri uchadi.",
+  "ru": "**Подъёмная сила.** Если вокруг тела в потоке скорости $v$ есть циркуляция $\\Gamma$, то с одной стороны скорость больше, с другой меньше, и по Бернулли разность давлений даёт силу. Теорема Кутты–Жуковского: подъёмная сила на единицу длины $\\frac{F}{l}=\\rho v\\Gamma$, перпендикулярна потоку. Профиль крыла создаёт циркуляцию благодаря острой задней кромке; вращающийся мяч или цилиндр даёт эффект Магнуса — «закрученный» мяч летит по кривой.",
+  "en": "**Lift.** If there is a circulation $\\Gamma$ around a body in a flow of speed $v$, the speed is larger on one side and smaller on the other, and by Bernoulli the pressure difference gives a force. The Kutta–Joukowski theorem: the lift per unit length is $\\frac{F}{l}=\\rho v\\Gamma$, perpendicular to the flow. A wing profile creates circulation thanks to its sharp trailing edge; a spinning ball or cylinder gives the Magnus effect — a “spun” ball curves."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{F}{l}=\\rho v\\Gamma"
+ },
+ {
+  "t": "li",
+  "uz": "**Kelvin teoremasi va Dalamber paradoksi.** Ideal suyuqlikda suyuqlik bilan birga harakatlanuvchi kontur bo'ylab sirkulyatsiya saqlanadi — tinch holatdan boshlangan oqim uyurmasiz qoladi. Shuning uchun ideal potensial oqim jismga hech qanday qarshilik ko'rsatmaydi (Dalamber paradoksi). Haqiqiy qarshilik va uyurmalar qovushoqlik va chegara qatlami tufayli paydo bo'ladi (6–8-bo'limlar).",
+  "ru": "**Теорема Кельвина и парадокс Даламбера.** В идеальной жидкости циркуляция по контуру, движущемуся вместе с жидкостью, сохраняется — течение, начавшееся из покоя, остаётся безвихревым. Поэтому идеальное потенциальное течение не оказывает телу никакого сопротивления (парадокс Даламбера). Реальное сопротивление и вихри возникают из-за вязкости и пограничного слоя (разделы 6–8).",
+  "en": "**Kelvin's theorem and d'Alembert's paradox.** In an ideal fluid the circulation around a contour moving with the fluid is conserved — a flow started from rest stays irrotational. Hence an ideal potential flow exerts no drag on a body (d'Alembert's paradox). Real drag and vortices arise from viscosity and the boundary layer (sections 6–8)."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Qovushoqlik va Puazeyl qonuni",
+  "ru": "6. Вязкость и закон Пуазейля",
+  "en": "6. Viscosity and Poiseuille's law"
+ },
+ {
+  "t": "li",
+  "uz": "**Nyuton qovushoqlik qonuni.** Qatlamlar bir-biriga nisbatan sirpanganda urinma kuchlanish tezlik gradiyentiga proporsional: $\\tau=\\eta\\frac{dv}{dy}$. $\\eta$ — dinamik qovushoqlik (viscosity), birligi $\\mathrm{Pa\\cdot s}$ (suv $\\approx10^{-3}$, glitserin $\\approx1.5$, havo $\\approx1.8\\cdot10^{-5}$); $\\nu=\\frac{\\eta}{\\rho}$ — kinematik qovushoqlik. Ikki parallel plastinka orasidagi oqimda (Kuetta oqimi) tezlik chiziqli o'zgaradi va plastinkani tortish uchun $F=\\frac{\\eta Av}{d}$ kuch kerak. Devorda suyuqlik tezligi devor tezligiga teng (yopishish sharti).",
+  "ru": "**Закон вязкости Ньютона.** При скольжении слоёв друг относительно друга касательное напряжение пропорционально градиенту скорости: $\\tau=\\eta\\frac{dv}{dy}$. $\\eta$ — динамическая вязкость (viscosity), единица $\\mathrm{Pa\\cdot s}$ (вода $\\approx10^{-3}$, глицерин $\\approx1.5$, воздух $\\approx1.8\\cdot10^{-5}$); $\\nu=\\frac{\\eta}{\\rho}$ — кинематическая вязкость. В течении между двумя параллельными пластинами (течение Куэтта) скорость меняется линейно, и чтобы тянуть пластину, нужна сила $F=\\frac{\\eta Av}{d}$. На стенке скорость жидкости равна скорости стенки (условие прилипания).",
+  "en": "**Newton's law of viscosity.** When layers slide past one another, the shear stress is proportional to the velocity gradient: $\\tau=\\eta\\frac{dv}{dy}$. $\\eta$ is the dynamic viscosity, in units of $\\mathrm{Pa\\cdot s}$ (water $\\approx10^{-3}$, glycerine $\\approx1.5$, air $\\approx1.8\\cdot10^{-5}$); $\\nu=\\frac{\\eta}{\\rho}$ is the kinematic viscosity. In flow between two parallel plates (Couette flow) the velocity varies linearly, and pulling a plate requires a force $F=\\frac{\\eta Av}{d}$. At a wall the fluid velocity equals the wall's velocity (the no-slip condition)."
+ },
+ {
+  "t": "m",
+  "m": "\\tau=\\eta\\frac{dv}{dy},\\qquad F=\\frac{\\eta Av}{d},\\qquad \\nu=\\frac{\\eta}{\\rho}"
+ },
+ {
+  "t": "li",
+  "uz": "**Puazeyl oqimi.** Radiusi $R$, uzunligi $L$ bo'lgan quvurda $\\Delta p$ bosimlar farqi ta'sirida laminar oqim. Radiusi $r$ bo'lgan suyuqlik silindriga bosim kuchi $\\Delta p\\pi r^2$ va qovushoqlik kuchi $-\\eta\\frac{dv}{dr}2\\pi rL$ muvozanatda — bundan parabolik profil $v(r)=\\frac{\\Delta p}{4\\eta L}(R^2-r^2)$ ([[F06]]). O'qda tezlik eng katta, devorda nol, o'rtacha tezlik $\\frac{v_{\\max}}{2}$. Hajmiy sarf (Puazeyl qonuni) $Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}$.",
+  "ru": "**Течение Пуазейля.** Ламинарное течение в трубе радиуса $R$ и длины $L$ под действием разности давлений $\\Delta p$. На цилиндр жидкости радиуса $r$ сила давления $\\Delta p\\pi r^2$ уравновешена силой вязкости $-\\eta\\frac{dv}{dr}2\\pi rL$ — отсюда параболический профиль $v(r)=\\frac{\\Delta p}{4\\eta L}(R^2-r^2)$ ([[F06]]). На оси скорость наибольшая, у стенки нулевая, средняя скорость $\\frac{v_{\\max}}{2}$. Объёмный расход (закон Пуазейля) $Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}$.",
+  "en": "**Poiseuille flow.** Laminar flow in a pipe of radius $R$ and length $L$ driven by a pressure difference $\\Delta p$. On a cylinder of fluid of radius $r$, the pressure force $\\Delta p\\pi r^2$ balances the viscous force $-\\eta\\frac{dv}{dr}2\\pi rL$ — giving the parabolic profile $v(r)=\\frac{\\Delta p}{4\\eta L}(R^2-r^2)$ ([[F06]]). The speed is largest on the axis, zero at the wall, and the mean speed is $\\frac{v_{\\max}}{2}$. The volume flow rate (Poiseuille's law) is $Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}$."
+ },
+ {
+  "t": "m",
+  "m": "v(r)=\\frac{\\Delta p}{4\\eta L}(R^2-r^2),\\qquad \\bar v=\\frac{v_{\\max}}{2},\\qquad Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L11-F06.png",
+   "ru": "figures/B2-L11-F06-ru.png",
+   "en": "figures/B2-L11-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**$R^4$ masshtabi va gidravlik qarshilik.** $\\Delta p=\\mathcal{R}Q$, bunda $\\mathcal{R}=\\frac{8\\eta L}{\\pi R^4}$ — Om qonunining gidravlik analogi: ketma-ket quvurlarda qarshiliklar qo'shiladi, parallel quvurlarda teskari qiymatlari qo'shiladi. Radius $2$ marta kamaysa, sarf $16$ marta kamayadi; radius $20$ foiz torayganda bir xil sarf uchun bosimlar farqi $\\approx2.4$ marta ortishi kerak — qon tomirlarining torayishi shuning uchun xavfli.",
+  "ru": "**Масштаб $R^4$ и гидравлическое сопротивление.** $\\Delta p=\\mathcal{R}Q$, где $\\mathcal{R}=\\frac{8\\eta L}{\\pi R^4}$ — гидравлический аналог закона Ома: при последовательном соединении труб сопротивления складываются, при параллельном — складываются обратные величины. При уменьшении радиуса в $2$ раза расход падает в $16$ раз; при сужении радиуса на $20$ процентов для того же расхода разность давлений должна вырасти в $\\approx2.4$ раза — поэтому сужение сосудов опасно.",
+  "en": "**The $R^4$ scaling and hydraulic resistance.** $\\Delta p=\\mathcal{R}Q$, where $\\mathcal{R}=\\frac{8\\eta L}{\\pi R^4}$ is the hydraulic analogue of Ohm's law: resistances add for pipes in series and their reciprocals add for pipes in parallel. When the radius shrinks by a factor of $2$, the flow rate drops by a factor of $16$; when the radius narrows by $20$ percent, the pressure difference must grow by a factor of $\\approx2.4$ to keep the same flow — which is why narrowed blood vessels are dangerous."
+ },
+ {
+  "t": "m",
+  "m": "\\Delta p=\\mathcal{R}Q,\\qquad \\mathcal{R}=\\frac{8\\eta L}{\\pi R^4}"
+ },
+ {
+  "t": "h2",
+  "uz": "7. Reynolds soni, Stoks qarshiligi va turbulentlik",
+  "ru": "7. Число Рейнольдса, сопротивление Стокса и турбулентность",
+  "en": "7. The Reynolds number, Stokes drag and turbulence"
+ },
+ {
+  "t": "li",
+  "uz": "**Reynolds soni.** Inersiya kuchlari ($\\sim\\rho v^2$) va qovushoqlik kuchlari ($\\sim\\frac{\\eta v}{L}$) nisbati — o'lchamsiz son $\\mathrm{Re}=\\frac{\\rho vL}{\\eta}=\\frac{vL}{\\nu}$ ($L$ — xarakterli o'lcham: quvur diametri, shar diametri). Quvurda $\\mathrm{Re}\\lesssim2000$ — laminar (laminar) oqim, $\\mathrm{Re}\\gtrsim4000$ — turbulent (turbulent) oqim, ular orasida o'tish sohasi. Turbulent oqimda Puazeyl qonuni bajarilmaydi: qarshilik sarfga taxminan kvadratik bog'liq.",
+  "ru": "**Число Рейнольдса.** Отношение сил инерции ($\\sim\\rho v^2$) к силам вязкости ($\\sim\\frac{\\eta v}{L}$) — безразмерное число $\\mathrm{Re}=\\frac{\\rho vL}{\\eta}=\\frac{vL}{\\nu}$ ($L$ — характерный размер: диаметр трубы, диаметр шара). В трубе при $\\mathrm{Re}\\lesssim2000$ течение ламинарное (laminar), при $\\mathrm{Re}\\gtrsim4000$ — турбулентное (turbulent), между ними переходная область. В турбулентном течении закон Пуазейля не выполняется: сопротивление зависит от расхода примерно квадратично.",
+  "en": "**The Reynolds number.** The ratio of inertial forces ($\\sim\\rho v^2$) to viscous forces ($\\sim\\frac{\\eta v}{L}$) is the dimensionless number $\\mathrm{Re}=\\frac{\\rho vL}{\\eta}=\\frac{vL}{\\nu}$ ($L$ is a characteristic size: the pipe diameter, the sphere diameter). In a pipe, $\\mathrm{Re}\\lesssim2000$ gives laminar flow and $\\mathrm{Re}\\gtrsim4000$ turbulent flow, with a transition region in between. In turbulent flow Poiseuille's law fails: the resistance depends roughly quadratically on the flow rate."
+ },
+ {
+  "t": "m",
+  "m": "\\mathrm{Re}=\\frac{\\rho vL}{\\eta}=\\frac{vL}{\\nu}"
+ },
+ {
+  "t": "li",
+  "uz": "**Stoks qarshiligi.** Kichik Reynolds sonida ($\\mathrm{Re}\\ll1$) radiusi $r$ bo'lgan sharga qarshilik $F=6\\pi\\eta rv$ — tezlikka chiziqli (B2-L01 dagi chiziqli qarshilikning mikroskopik ifodasi). Og'irlik, Arximed va Stoks kuchlari muvozanatidan terminal (tushish) tezlik $v=\\frac{2r^2(\\rho-\\rho_0)g}{9\\eta}$ ($\\rho$ — shar, $\\rho_0$ — suyuqlik zichligi) — radius $2$ marta ortsa, tezlik $4$ marta ortadi. Millikenning moy tomchisi tajribasi va qovushoqlikni tushayotgan shar bilan o'lchash shunga asoslangan. Natija topilgach $\\mathrm{Re}\\ll1$ ekanini tekshirish shart.",
+  "ru": "**Сопротивление Стокса.** При малом числе Рейнольдса ($\\mathrm{Re}\\ll1$) сопротивление шара радиуса $r$ равно $F=6\\pi\\eta rv$ — линейно по скорости (микроскопическое выражение линейного сопротивления из B2-L01). Из равновесия силы тяжести, силы Архимеда и силы Стокса установившаяся скорость падения $v=\\frac{2r^2(\\rho-\\rho_0)g}{9\\eta}$ ($\\rho$ — плотность шара, $\\rho_0$ — жидкости) — при увеличении радиуса в $2$ раза скорость растёт в $4$ раза. На этом основаны опыт Милликена с каплями масла и измерение вязкости падающим шариком. Найдя результат, обязательно проверьте $\\mathrm{Re}\\ll1$.",
+  "en": "**Stokes drag.** At small Reynolds number ($\\mathrm{Re}\\ll1$) the drag on a sphere of radius $r$ is $F=6\\pi\\eta rv$ — linear in speed (the microscopic form of the linear drag of B2-L01). Balancing gravity, buoyancy and the Stokes force gives the terminal velocity $v=\\frac{2r^2(\\rho-\\rho_0)g}{9\\eta}$ ($\\rho$ is the sphere's density, $\\rho_0$ the fluid's) — when the radius grows by a factor of $2$, the speed grows by a factor of $4$. Millikan's oil-drop experiment and falling-ball viscometry rely on this. Once you have the result, always check that $\\mathrm{Re}\\ll1$."
+ },
+ {
+  "t": "m",
+  "m": "F=6\\pi\\eta rv,\\qquad v=\\frac{2r^2(\\rho-\\rho_0)g}{9\\eta}"
+ },
+ {
+  "t": "li",
+  "uz": "**Katta Reynolds sonlari.** $\\mathrm{Re}\\gg1$ da qarshilik asosan jism orqasidagi iz va uyurmalar bilan bog'liq: $F=\\frac{1}{2}C\\rho Av^2$, bunda qarshilik koeffitsiyenti $C$ keng oraliqda deyarli doimiy (shar uchun $\\approx0.5$) — B2-L01 dagi kvadratik qarshilik. $C(\\mathrm{Re})$ grafigi: kichik $\\mathrm{Re}$ da $C=\\frac{24}{\\mathrm{Re}}$ (Stoks), keyin «yassi» soha, $\\mathrm{Re}\\sim3\\cdot10^5$ da chegara qatlami turbulentlashib, qarshilik keskin kamayadi (qarshilik inqirozi) — golf to'pidagi chuqurchalar shu effektdan foydalanadi ([[F07]]).",
+  "ru": "**Большие числа Рейнольдса.** При $\\mathrm{Re}\\gg1$ сопротивление связано в основном со следом и вихрями позади тела: $F=\\frac{1}{2}C\\rho Av^2$, где коэффициент сопротивления $C$ почти постоянен в широком диапазоне (для шара $\\approx0.5$) — квадратичное сопротивление из B2-L01. График $C(\\mathrm{Re})$: при малых $\\mathrm{Re}$ $C=\\frac{24}{\\mathrm{Re}}$ (Стокс), затем «плато», при $\\mathrm{Re}\\sim3\\cdot10^5$ пограничный слой турбулизуется, и сопротивление резко падает (кризис сопротивления) — лунки на мяче для гольфа используют этот эффект ([[F07]]).",
+  "en": "**Large Reynolds numbers.** For $\\mathrm{Re}\\gg1$ the drag is mainly due to the wake and vortices behind the body: $F=\\frac{1}{2}C\\rho Av^2$, where the drag coefficient $C$ is nearly constant over a wide range (about $\\approx0.5$ for a sphere) — the quadratic drag of B2-L01. The graph of $C(\\mathrm{Re})$: at small $\\mathrm{Re}$, $C=\\frac{24}{\\mathrm{Re}}$ (Stokes), then a “plateau”, and at $\\mathrm{Re}\\sim3\\cdot10^5$ the boundary layer becomes turbulent and the drag drops sharply (the drag crisis) — the dimples on a golf ball exploit this effect ([[F07]])."
+ },
+ {
+  "t": "m",
+  "m": "F=\\frac{1}{2}C\\rho Av^2,\\qquad C=\\frac{24}{\\mathrm{Re}}\\quad(\\mathrm{Re}\\ll1)"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L11-F07.png",
+   "ru": "figures/B2-L11-F07-ru.png",
+   "en": "figures/B2-L11-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Nave–Stoks tenglamasi, o'xshashlik va o'lchamlar tahlili",
+  "ru": "8. Уравнение Навье–Стокса, подобие и анализ размерностей",
+  "en": "8. The Navier–Stokes equation, similarity and dimensional analysis"
+ },
+ {
+  "t": "li",
+  "uz": "**Nave–Stoks tenglamasi.** Eyler tenglamasiga qovushoqlik kuchi qo'shiladi: siqilmaydigan suyuqlik uchun birlik hajmga $\\eta\\nabla^2\\vec v$. Tenglama nochiziqli (konvektiv had), shuning uchun umumiy yechimi yo'q — turbulentlik klassik fizikaning hal etilmagan muammolaridan biri. Aniq yechimlar faqat oddiy holatlarda ma'lum: Kuetta, Puazeyl, Stoks oqimlari.",
+  "ru": "**Уравнение Навье–Стокса.** К уравнению Эйлера добавляется сила вязкости: для несжимаемой жидкости на единицу объёма $\\eta\\nabla^2\\vec v$. Уравнение нелинейно (конвективный член), поэтому общего решения нет — турбулентность остаётся одной из нерешённых задач классической физики. Точные решения известны лишь в простых случаях: течения Куэтта, Пуазейля, Стокса.",
+  "en": "**The Navier–Stokes equation.** A viscous force is added to the Euler equation: for an incompressible fluid it is $\\eta\\nabla^2\\vec v$ per unit volume. The equation is nonlinear (the convective term), so it has no general solution — turbulence remains one of the unsolved problems of classical physics. Exact solutions are known only in simple cases: Couette, Poiseuille and Stokes flows."
+ },
+ {
+  "t": "m",
+  "m": "\\rho\\left(\\frac{\\partial\\vec v}{\\partial t}+(\\vec v\\cdot\\nabla)\\vec v\\right)=-\\nabla p+\\eta\\nabla^2\\vec v+\\rho\\vec g"
+ },
+ {
+  "t": "li",
+  "uz": "**O'xshashlik.** Tenglamani o'lchamsiz ko'rinishga keltirsak, unda faqat $\\mathrm{Re}$ (va erkin sirt bo'lsa Frud soni $\\mathrm{Fr}=\\frac{v}{\\sqrt{gL}}$) qoladi. Demak geometrik o'xshash ikki oqim, agar bu sonlar teng bo'lsa, bir xil. Kema modeli to'lqin qarshiligini o'rganishda Frud soni bo'yicha moslashtiriladi: $16$ marta kichik modelning tezligi $4$ marta kichik bo'lishi kerak. Samolyot modeli aerodinamik quvurda Reynolds soni bo'yicha moslashtiriladi.",
+  "ru": "**Подобие.** Если привести уравнение к безразмерному виду, в нём останутся только $\\mathrm{Re}$ (и при свободной поверхности число Фруда $\\mathrm{Fr}=\\frac{v}{\\sqrt{gL}}$). Значит, два геометрически подобных течения одинаковы, если эти числа равны. Модель корабля при изучении волнового сопротивления согласуют по числу Фруда: модель, меньшая в $16$ раз, должна двигаться со скоростью, меньшей в $4$ раза. Модель самолёта в аэродинамической трубе согласуют по числу Рейнольдса.",
+  "en": "**Similarity.** Writing the equation in dimensionless form leaves only $\\mathrm{Re}$ (and, with a free surface, the Froude number $\\mathrm{Fr}=\\frac{v}{\\sqrt{gL}}$). So two geometrically similar flows are identical if these numbers are equal. A ship model for wave-drag studies is matched in Froude number: a model smaller by a factor of $16$ must move at a speed smaller by a factor of $4$. An aircraft model in a wind tunnel is matched in Reynolds number."
+ },
+ {
+  "t": "li",
+  "uz": "**O'lchamlar tahlili.** GRE da formulani eslab qolmasdan topish usuli: kattalikni $\\rho^av^br^c\\eta^d$ ko'rinishida qidirib, o'lchamlarni tenglashtirish. Qovushoqlikka bog'liq bo'lmasa, qarshilik $F\\propto\\rho v^2r^2$ (kvadratik); zichlikka bog'liq bo'lmasa (sekin oqim), $F\\propto\\eta rv$ (Stoks). Chegara qatlami qalinligi $\\delta\\sim\\frac{L}{\\sqrt{\\mathrm{Re}}}$ — katta $\\mathrm{Re}$ da qovushoqlik faqat jism sirti yaqinidagi yupqa qatlamda muhim.",
+  "ru": "**Анализ размерностей.** Способ найти формулу на GRE, не запоминая её: искать величину в виде $\\rho^av^br^c\\eta^d$ и приравнивать размерности. Если от вязкости зависимости нет, сопротивление $F\\propto\\rho v^2r^2$ (квадратичное); если нет зависимости от плотности (медленное течение), $F\\propto\\eta rv$ (Стокс). Толщина пограничного слоя $\\delta\\sim\\frac{L}{\\sqrt{\\mathrm{Re}}}$ — при большом $\\mathrm{Re}$ вязкость важна лишь в тонком слое у поверхности тела.",
+  "en": "**Dimensional analysis.** A way to find a formula on the GRE without memorizing it: seek the quantity in the form $\\rho^av^br^c\\eta^d$ and match the dimensions. With no dependence on viscosity the drag is $F\\propto\\rho v^2r^2$ (quadratic); with no dependence on density (slow flow), $F\\propto\\eta rv$ (Stokes). The boundary-layer thickness is $\\delta\\sim\\frac{L}{\\sqrt{\\mathrm{Re}}}$ — at large $\\mathrm{Re}$ viscosity matters only in a thin layer near the body's surface."
+ },
+ {
+  "t": "m",
+  "m": "\\mathrm{Fr}=\\frac{v}{\\sqrt{gL}},\\qquad F\\propto\\rho v^2r^2,\\qquad F\\propto\\eta rv,\\qquad \\delta\\sim\\frac{L}{\\sqrt{\\mathrm{Re}}}"
+ },
+ {
+  "t": "h2",
+  "uz": "9. Suyuqlikdagi to'lqinlar",
+  "ru": "9. Волны в жидкости",
+  "en": "9. Waves in fluids"
+ },
+ {
+  "t": "li",
+  "uz": "**Tovush.** Siqiluvchanlikni hisobga olsak, Eyler va uzluksizlik tenglamalaridan to'lqin tenglamasi chiqadi: tovush tezligi $c=\\sqrt{\\frac{K}{\\rho}}$, bunda $K$ — hajmiy siqilish moduli. Suvda $K\\approx2.2\\cdot10^9\\ \\mathrm{Pa}$, $c\\approx1500\\ \\mathrm{m/s}$. Oqim tezligi $c$ dan ancha kichik bo'lsa ($v\\ll c$), suyuqlikni siqilmaydigan deb hisoblash mumkin — shuning uchun Bernulli tenglamasi havoda ham ishlaydi.",
+  "ru": "**Звук.** С учётом сжимаемости из уравнений Эйлера и непрерывности получается волновое уравнение: скорость звука $c=\\sqrt{\\frac{K}{\\rho}}$, где $K$ — модуль объёмного сжатия. В воде $K\\approx2.2\\cdot10^9\\ \\mathrm{Pa}$, $c\\approx1500\\ \\mathrm{m/s}$. Если скорость течения много меньше $c$ ($v\\ll c$), жидкость можно считать несжимаемой — поэтому уравнение Бернулли работает и в воздухе.",
+  "en": "**Sound.** Including compressibility, the Euler and continuity equations give a wave equation: the speed of sound is $c=\\sqrt{\\frac{K}{\\rho}}$, where $K$ is the bulk modulus. In water $K\\approx2.2\\cdot10^9\\ \\mathrm{Pa}$ and $c\\approx1500\\ \\mathrm{m/s}$. If the flow speed is much smaller than $c$ ($v\\ll c$), the fluid may be treated as incompressible — which is why Bernoulli's equation also works in air."
+ },
+ {
+  "t": "m",
+  "m": "c=\\sqrt{\\frac{K}{\\rho}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Gravitatsion to'lqinlar suv sirtida.** Bu to'lqinlarda tiklovchi kuch — og'irlik. Chuqur suvda ($h\\gg\\lambda$) dispersiya munosabati $\\omega^2=gk$: fazaviy tezlik $v_\\varphi=\\sqrt{\\frac{g}{k}}=\\sqrt{\\frac{g\\lambda}{2\\pi}}$ — uzun to'lqinlar tezroq; guruh tezligi $u=\\frac{d\\omega}{dk}=\\frac{v_\\varphi}{2}$. Sayoz suvda ($h\\ll\\lambda$) $v=\\sqrt{gh}$ — dispersiyasiz; okeanda ($h\\approx4\\ \\mathrm{km}$) tsunami $\\approx200\\ \\mathrm{m/s}$ tezlik bilan tarqaladi va qirg'oqqa yaqinlashganda sekinlashib, balandlashadi ([[F08]]).",
+  "ru": "**Гравитационные волны на поверхности воды.** В этих волнах возвращающая сила — тяжесть. На глубокой воде ($h\\gg\\lambda$) дисперсионное соотношение $\\omega^2=gk$: фазовая скорость $v_\\varphi=\\sqrt{\\frac{g}{k}}=\\sqrt{\\frac{g\\lambda}{2\\pi}}$ — длинные волны быстрее; групповая скорость $u=\\frac{d\\omega}{dk}=\\frac{v_\\varphi}{2}$. На мелкой воде ($h\\ll\\lambda$) $v=\\sqrt{gh}$ — без дисперсии; в океане ($h\\approx4\\ \\mathrm{km}$) цунами распространяется со скоростью $\\approx200\\ \\mathrm{m/s}$ и, приближаясь к берегу, замедляется и растёт в высоту ([[F08]]).",
+  "en": "**Gravity waves on a water surface.** In these waves the restoring force is gravity. In deep water ($h\\gg\\lambda$) the dispersion relation is $\\omega^2=gk$: the phase velocity is $v_\\varphi=\\sqrt{\\frac{g}{k}}=\\sqrt{\\frac{g\\lambda}{2\\pi}}$ — long waves are faster; the group velocity is $u=\\frac{d\\omega}{dk}=\\frac{v_\\varphi}{2}$. In shallow water ($h\\ll\\lambda$) $v=\\sqrt{gh}$ — no dispersion; in the ocean ($h\\approx4\\ \\mathrm{km}$) a tsunami travels at $\\approx200\\ \\mathrm{m/s}$ and slows and grows taller as it approaches the shore ([[F08]])."
+ },
+ {
+  "t": "m",
+  "m": "\\omega^2=gk,\\quad v_\\varphi=\\sqrt{\\frac{g\\lambda}{2\\pi}},\\quad u=\\frac{v_\\varphi}{2};\\qquad v=\\sqrt{gh}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kapillyar to'lqinlar.** Juda qisqa to'lqinlarda tiklovchi kuch — sirt taranglik (B1-L26): $\\omega^2=\\frac{\\sigma k^3}{\\rho}$, $v_\\varphi=\\sqrt{\\frac{\\sigma k}{\\rho}}$ — bu yerda qisqa to'lqinlar tezroq. Umumiy holda $\\omega^2=gk+\\frac{\\sigma k^3}{\\rho}$; fazaviy tezlik $k=\\sqrt{\\frac{\\rho g}{\\sigma}}$ da minimumga erishadi: suv uchun $\\lambda\\approx1.7\\ \\mathrm{cm}$, $v_{\\min}\\approx0.23\\ \\mathrm{m/s}$ — shundan sekin harakatlanuvchi jism to'lqin hosil qilmaydi.",
+  "ru": "**Капиллярные волны.** У очень коротких волн возвращающая сила — поверхностное натяжение (B1-L26): $\\omega^2=\\frac{\\sigma k^3}{\\rho}$, $v_\\varphi=\\sqrt{\\frac{\\sigma k}{\\rho}}$ — здесь короткие волны быстрее. В общем случае $\\omega^2=gk+\\frac{\\sigma k^3}{\\rho}$; фазовая скорость минимальна при $k=\\sqrt{\\frac{\\rho g}{\\sigma}}$: для воды $\\lambda\\approx1.7\\ \\mathrm{cm}$, $v_{\\min}\\approx0.23\\ \\mathrm{m/s}$ — тело, движущееся медленнее, волн не создаёт.",
+  "en": "**Capillary waves.** For very short waves the restoring force is surface tension (B1-L26): $\\omega^2=\\frac{\\sigma k^3}{\\rho}$, $v_\\varphi=\\sqrt{\\frac{\\sigma k}{\\rho}}$ — here short waves are faster. In general $\\omega^2=gk+\\frac{\\sigma k^3}{\\rho}$; the phase velocity is smallest at $k=\\sqrt{\\frac{\\rho g}{\\sigma}}$: for water $\\lambda\\approx1.7\\ \\mathrm{cm}$, $v_{\\min}\\approx0.23\\ \\mathrm{m/s}$ — a body moving more slowly makes no waves."
+ },
+ {
+  "t": "m",
+  "m": "\\omega^2=gk+\\frac{\\sigma k^3}{\\rho},\\qquad k^*=\\sqrt{\\frac{\\rho g}{\\sigma}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L11-F08.png",
+   "ru": "figures/B2-L11-F08-ru.png",
+   "en": "figures/B2-L11-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE usullari va tipik xatolar",
+  "ru": "10. Методы GRE и типичные ошибки",
+  "en": "10. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 1 — uzluksizlik + Bernulli.** Avval uzluksizlikdan tezliklar nisbatini toping ($v\\propto\\frac{1}{A}\\propto\\frac{1}{d^2}$), keyin Bernulli bilan bosimni. Ochiq sirtlarda bosim atmosfera bosimi, keng idish sirtida $v\\approx0$; to'xtash nuqtasida $v=0$.",
+  "ru": "**Метод 1 — непрерывность + Бернулли.** Сначала из непрерывности найдите отношение скоростей ($v\\propto\\frac{1}{A}\\propto\\frac{1}{d^2}$), затем давление из Бернулли. На открытых поверхностях давление атмосферное, на поверхности широкого сосуда $v\\approx0$; в точке торможения $v=0$.",
+  "en": "**Method 1 — continuity + Bernoulli.** First find the ratio of speeds from continuity ($v\\propto\\frac{1}{A}\\propto\\frac{1}{d^2}$), then the pressure from Bernoulli. On open surfaces the pressure is atmospheric, on the surface of a wide tank $v\\approx0$; at a stagnation point $v=0$."
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 2 — masshtab bo'yicha javob.** Ko'p savol nisbat so'raydi: Puazeyl $Q\\propto R^4$, Stoks terminal tezligi $v\\propto r^2$, bo'shash vaqti $t\\propto\\sqrt H$, oqim kuchi $F\\propto v^2$, chuqur suv to'lqini $v\\propto\\sqrt\\lambda$, sayoz suv $v\\propto\\sqrt h$. Formulani to'liq hisoblamasdan daraja ko'rsatkichini ishlating; o'lchamlar tahlili bilan tekshiring.",
+  "ru": "**Метод 2 — ответ через масштабирование.** Многие вопросы спрашивают отношение: Пуазейль $Q\\propto R^4$, установившаяся скорость Стокса $v\\propto r^2$, время опорожнения $t\\propto\\sqrt H$, сила струи $F\\propto v^2$, волна на глубокой воде $v\\propto\\sqrt\\lambda$, на мелкой $v\\propto\\sqrt h$. Используйте показатель степени, не вычисляя формулу целиком; проверяйте анализом размерностей.",
+  "en": "**Method 2 — answer by scaling.** Many questions ask for a ratio: Poiseuille $Q\\propto R^4$, Stokes terminal speed $v\\propto r^2$, draining time $t\\propto\\sqrt H$, jet force $F\\propto v^2$, a deep-water wave $v\\propto\\sqrt\\lambda$, a shallow-water wave $v\\propto\\sqrt h$. Use the exponent without computing the whole formula; check with dimensional analysis."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) Uzluksizlikda radius va diametrni, yuza va radiusni adashtirish ($v\\propto\\frac{1}{r^2}$). 2) Bernullini qovushoq yoki turbulent oqimga, nostatsionar oqimga qo'llash. 3) Pito nayida manometr suyuqligi zichligini oqim zichligi o'rniga qo'yish. 4) Puazeylda $R^2$ yoki $R^3$ olish. 5) Stoks formulasini $\\mathrm{Re}\\gg1$ da ishlatish yoki Arximed kuchini unutish. 6) Oqim kuchida $\\rho Qv$ ni impuls o'zgarishi bilan emas, faqat bitta tezlik bilan hisoblash (qaytgan oqimda kuch ikki baravar). 7) Fazaviy va guruh tezliklarini adashtirish.",
+  "ru": "**Типичные ошибки.** 1) Путать в непрерывности радиус и диаметр, площадь и радиус ($v\\propto\\frac{1}{r^2}$). 2) Применять Бернулли к вязкому, турбулентному или нестационарному течению. 3) В трубке Пито подставлять плотность жидкости манометра вместо плотности потока. 4) Брать в законе Пуазейля $R^2$ или $R^3$. 5) Использовать формулу Стокса при $\\mathrm{Re}\\gg1$ или забывать силу Архимеда. 6) Считать силу струи $\\rho Qv$ по одной скорости, а не по изменению импульса (при отражённой струе сила вдвое больше). 7) Путать фазовую и групповую скорости.",
+  "en": "**Typical mistakes.** 1) Mixing up radius and diameter, or area and radius, in continuity ($v\\propto\\frac{1}{r^2}$). 2) Applying Bernoulli to viscous, turbulent or unsteady flow. 3) Using the manometer liquid's density instead of the flow's density in a Pitot tube. 4) Taking $R^2$ or $R^3$ in Poiseuille's law. 5) Using Stokes' formula at $\\mathrm{Re}\\gg1$ or forgetting buoyancy. 6) Computing the jet force $\\rho Qv$ from one velocity instead of the change in momentum (for a reflected jet the force doubles). 7) Confusing phase and group velocities."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Uzluksizlik",
+    "ru": "Непрерывность",
+    "en": "Continuity",
+    "m": "\\frac{\\partial\\rho}{\\partial t}+\\nabla\\cdot(\\rho\\vec v)=0,\\quad A_1v_1=A_2v_2"
+   },
+   {
+    "uz": "Eyler tenglamasi",
+    "ru": "Уравнение Эйлера",
+    "en": "Euler equation",
+    "m": "\\rho\\frac{D\\vec v}{Dt}=-\\nabla p+\\rho\\vec g"
+   },
+   {
+    "uz": "Tezlanuvchi idish",
+    "ru": "Ускоренный сосуд",
+    "en": "Accelerating container",
+    "m": "\\mathrm{tg}\\,\\alpha=\\frac{a}{g}"
+   },
+   {
+    "uz": "Aylanuvchi suyuqlik",
+    "ru": "Вращающаяся жидкость",
+    "en": "Rotating fluid",
+    "m": "z=z_0+\\frac{\\Omega^2r^2}{2g}"
+   },
+   {
+    "uz": "Bernulli tenglamasi",
+    "ru": "Уравнение Бернулли",
+    "en": "Bernoulli's equation",
+    "m": "p+\\frac{1}{2}\\rho v^2+\\rho gz=\\mathrm{const}"
+   },
+   {
+    "uz": "Venturi o'lchagichi",
+    "ru": "Расходомер Вентури",
+    "en": "Venturi meter",
+    "m": "\\Delta p=\\frac{1}{2}\\rho v_2^2\\left(1-\\frac{A_2^2}{A_1^2}\\right)"
+   },
+   {
+    "uz": "Pito nayi",
+    "ru": "Трубка Пито",
+    "en": "Pitot tube",
+    "m": "v=\\sqrt{\\frac{2(p_0-p)}{\\rho}}"
+   },
+   {
+    "uz": "Bo'shash vaqti",
+    "ru": "Время опорожнения",
+    "en": "Draining time",
+    "m": "t=\\frac{A}{a}\\sqrt{\\frac{2H}{g}}"
+   },
+   {
+    "uz": "Oqim kuchi",
+    "ru": "Сила струи",
+    "en": "Jet force",
+    "m": "\\vec F=\\rho Q(\\vec v_2-\\vec v_1)"
+   },
+   {
+    "uz": "Uyurma, sirkulyatsiya",
+    "ru": "Завихренность, циркуляция",
+    "en": "Vorticity, circulation",
+    "m": "\\vec\\omega=\\nabla\\times\\vec v,\\quad \\Gamma=\\oint\\vec v\\cdot d\\vec l"
+   },
+   {
+    "uz": "Ko'taruvchi kuch",
+    "ru": "Подъёмная сила",
+    "en": "Lift",
+    "m": "\\frac{F}{l}=\\rho v\\Gamma"
+   },
+   {
+    "uz": "Qovushoqlik",
+    "ru": "Вязкость",
+    "en": "Viscosity",
+    "m": "\\tau=\\eta\\frac{dv}{dy},\\quad F=\\frac{\\eta Av}{d}"
+   },
+   {
+    "uz": "Puazeyl qonuni",
+    "ru": "Закон Пуазейля",
+    "en": "Poiseuille's law",
+    "m": "Q=\\frac{\\pi R^4\\Delta p}{8\\eta L}"
+   },
+   {
+    "uz": "Reynolds soni",
+    "ru": "Число Рейнольдса",
+    "en": "Reynolds number",
+    "m": "\\mathrm{Re}=\\frac{\\rho vL}{\\eta}"
+   },
+   {
+    "uz": "Stoks qarshiligi",
+    "ru": "Сопротивление Стокса",
+    "en": "Stokes drag",
+    "m": "F=6\\pi\\eta rv,\\quad v=\\frac{2r^2(\\rho-\\rho_0)g}{9\\eta}"
+   },
+   {
+    "uz": "Suv to'lqinlari",
+    "ru": "Волны на воде",
+    "en": "Water waves",
+    "m": "v_\\varphi=\\sqrt{\\frac{g\\lambda}{2\\pi}},\\quad v=\\sqrt{gh}"
+   }
+  ]
+ }
+]

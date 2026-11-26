@@ -1,0 +1,541 @@
+[
+ {
+  "t": "h1",
+  "uz": "Kulon qonuni, Gauss teoremasi (Coulomb's law, Gauss's law)",
+  "ru": "Закон Кулона, теорема Гаусса",
+  "en": "Coulomb's law, Gauss's law"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz Kulon qonunini vektor ko'rinishda qo'llab, nuqtaviy zaryadlar sistemasining maydonini superpozitsiya bilan topasiz; uzluksiz taqsimlangan zaryadlar (sterjen, halqa, yoy, disk) maydonini integrallaysiz; elektr dipolning maydoni, unga ta'sir qiluvchi kuch momenti va kuchni hisoblaysiz; elektr maydon oqimini topasiz; Gauss teoremasini integral va differensial ko'rinishda yozasiz va simmetrik taqsimotlar (shar, silindr, tekislik, qatlam) maydonini bir qatorda topasiz; o'tkazgichlarda zaryad va maydon taqsimotini tushuntirasiz.",
+  "ru": "**Цель.** После урока вы будете применять закон Кулона в векторной форме и находить поле системы точечных зарядов суперпозицией; интегрировать поле непрерывно распределённых зарядов (стержень, кольцо, дуга, диск); вычислять поле электрического диполя, действующие на него момент силы и силу; находить поток электрического поля; записывать теорему Гаусса в интегральной и дифференциальной форме и в одну строку находить поле симметричных распределений (шар, цилиндр, плоскость, слой); объяснять распределение заряда и поля в проводниках.",
+  "en": "**Goal.** After this lesson you will apply Coulomb's law in vector form and find the field of a system of point charges by superposition; integrate the field of continuously distributed charges (rod, ring, arc, disk); compute the field of an electric dipole and the torque and force acting on it; find the flux of an electric field; write Gauss's law in integral and differential form and find the field of symmetric distributions (sphere, cylinder, plane, slab) in a single line; and explain how charge and field are distributed in conductors."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L29 va B1-L30 da Kulon qonuni, nuqtaviy zaryad maydoni, zaryadlangan shar va cheksiz tekislik maydonlari, maydon chiziqlari va Faradey qafasini ko'rdik. Bu darsda shu natijalarni universitet darajasida keltirib chiqaramiz: superpozitsiyani integral ko'rinishda yozamiz, dipol yaqinlashuvini kiritamiz va Gauss teoremasini asosiy vosita sifatida ishlatamiz. B2-L08 dagi gravitatsiya uchun Gauss teoremasi bilan to'liq o'xshashlik bor — faqat zaryad ikki ishorali. GRE ning elektromagnetizm qismida (18 foiz) Gauss teoremasi, dipol va o'tkazgichlar savollari muntazam uchraydi.",
+  "ru": "В B1-L29 и B1-L30 мы рассмотрели закон Кулона, поле точечного заряда, поля заряженного шара и бесконечной плоскости, силовые линии и клетку Фарадея. В этом уроке выведем эти результаты на университетском уровне: запишем суперпозицию в интегральной форме, введём дипольное приближение и будем использовать теорему Гаусса как основной инструмент. Есть полная аналогия с теоремой Гаусса для тяготения из B2-L08 — только заряд бывает двух знаков. В разделе электромагнетизма GRE (18 процентов) регулярно встречаются вопросы на теорему Гаусса, диполь и проводники.",
+  "en": "In B1-L29 and B1-L30 we met Coulomb's law, the field of a point charge, the fields of a charged sphere and an infinite plane, field lines and the Faraday cage. In this lesson we derive these results at university level: we write superposition in integral form, introduce the dipole approximation and use Gauss's law as the main tool. There is a complete analogy with Gauss's law for gravity from B2-L08 — except that charge comes in two signs. In the electromagnetism part of the GRE (18 percent), questions on Gauss's law, dipoles and conductors appear regularly."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Kulon qonuni vektor ko'rinishda va superpozitsiya",
+  "ru": "1. Закон Кулона в векторной форме и суперпозиция",
+  "en": "1. Coulomb's law in vector form and superposition"
+ },
+ {
+  "t": "li",
+  "uz": "**Vektor ko'rinish.** $\\vec r'$ nuqtadagi $q'$ zaryad $\\vec r$ nuqtadagi $q$ zaryadga $\\vec F=kqq'\\frac{\\vec r-\\vec r'}{|\\vec r-\\vec r'|^3}$ kuch bilan ta'sir qiladi; $k=\\frac{1}{4\\pi\\varepsilon_0}\\approx9\\cdot10^9\\ \\mathrm{N\\cdot m^2/C^2}$. Bir xil ishorali zaryadlar itarishadi ($qq'>0$ da kuch $\\vec r-\\vec r'$ bo'ylab). Elektr maydon kuchlanganligi — birlik musbat sinov zaryadiga ta'sir qiluvchi kuch: $\\vec E=\\frac{\\vec F}{q}$.",
+  "ru": "**Векторная форма.** Заряд $q'$ в точке $\\vec r'$ действует на заряд $q$ в точке $\\vec r$ с силой $\\vec F=kqq'\\frac{\\vec r-\\vec r'}{|\\vec r-\\vec r'|^3}$; $k=\\frac{1}{4\\pi\\varepsilon_0}\\approx9\\cdot10^9\\ \\mathrm{N\\cdot m^2/C^2}$. Одноимённые заряды отталкиваются (при $qq'>0$ сила направлена вдоль $\\vec r-\\vec r'$). Напряжённость электрического поля — сила, действующая на единичный положительный пробный заряд: $\\vec E=\\frac{\\vec F}{q}$.",
+  "en": "**Vector form.** A charge $q'$ at $\\vec r'$ acts on a charge $q$ at $\\vec r$ with force $\\vec F=kqq'\\frac{\\vec r-\\vec r'}{|\\vec r-\\vec r'|^3}$; $k=\\frac{1}{4\\pi\\varepsilon_0}\\approx9\\cdot10^9\\ \\mathrm{N\\cdot m^2/C^2}$. Like charges repel (for $qq'>0$ the force points along $\\vec r-\\vec r'$). The electric field is the force on a unit positive test charge: $\\vec E=\\frac{\\vec F}{q}$."
+ },
+ {
+  "t": "m",
+  "m": "\\vec F=kqq'\\frac{\\vec r-\\vec r'}{|\\vec r-\\vec r'|^3},\\qquad \\vec E=\\sum_ikq_i\\frac{\\vec r-\\vec r_i}{|\\vec r-\\vec r_i|^3},\\qquad k=\\frac{1}{4\\pi\\varepsilon_0}"
+ },
+ {
+  "t": "li",
+  "uz": "**Superpozitsiya.** Maydonlar vektor sifatida qo'shiladi: har bir zaryad maydonini alohida hisoblab, tashkil etuvchilarni yig'ing. Simmetriya hisobni qisqartiradi: masalan, kvadrat uchlaridagi uchta $+q$ va bitta $-q$ zaryad markazda faqat $-q$ tomonga yo'nalgan maydon beradi, chunki qarama-qarshi uchlardagi bir xil zaryadlar maydonlari qisqaradi ([[F01]]). Maydon nolga teng nuqtani qidirishda avval zaryadlar orasidagi va tashqarisidagi sohalarda yo'nalishlarni tekshiring.",
+  "ru": "**Суперпозиция.** Поля складываются как векторы: вычислите поле каждого заряда отдельно и сложите составляющие. Симметрия сокращает расчёт: например, три заряда $+q$ и один $-q$ в вершинах квадрата дают в центре поле, направленное только к $-q$, поскольку поля одинаковых зарядов в противоположных вершинах взаимно уничтожаются ([[F01]]). Ища точку нулевого поля, сначала проверьте направления в областях между зарядами и снаружи.",
+  "en": "**Superposition.** Fields add as vectors: compute each charge's field separately and add the components. Symmetry shortens the work: for example, three charges $+q$ and one $-q$ at the corners of a square give a field at the centre that points only towards $-q$, because the fields of equal charges at opposite corners cancel ([[F01]]). When looking for a point of zero field, first check the directions in the regions between and outside the charges."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L12-F01.png",
+   "ru": "figures/B2-L12-F01-ru.png",
+   "en": "figures/B2-L12-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Uzluksiz taqsimlangan zaryadlar maydoni",
+  "ru": "2. Поле непрерывно распределённых зарядов",
+  "en": "2. The field of continuous charge distributions"
+ },
+ {
+  "t": "li",
+  "uz": "**Usul.** Zaryadni elementlarga bo'lamiz: $dq=\\lambda\\,dl$ (chiziq), $\\sigma\\,dA$ (sirt), $\\rho\\,dV$ (hajm). Har bir element nuqtaviy zaryad kabi $d\\vec E$ beradi va integrallaymiz: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$. Integrallashdan oldin simmetriya bo'yicha qaysi tashkil etuvchilar qisqarishini aniqlang — odatda faqat bittasi qoladi.",
+  "ru": "**Метод.** Разбиваем заряд на элементы: $dq=\\lambda\\,dl$ (линия), $\\sigma\\,dA$ (поверхность), $\\rho\\,dV$ (объём). Каждый элемент даёт $d\\vec E$ как точечный заряд, и мы интегрируем: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$. До интегрирования определите по симметрии, какие составляющие сокращаются, — обычно остаётся лишь одна.",
+  "en": "**Method.** Divide the charge into elements: $dq=\\lambda\\,dl$ (line), $\\sigma\\,dA$ (surface), $\\rho\\,dV$ (volume). Each element gives $d\\vec E$ like a point charge, and we integrate: $\\vec E=k\\int\\frac{dq}{r^2}\\hat r$. Before integrating, use symmetry to decide which components cancel — usually only one survives."
+ },
+ {
+  "t": "li",
+  "uz": "**Halqa o'qida.** Radiusi $R$, zaryadi $Q$ bo'lgan halqa uchun o'qdagi $z$ masofada faqat o'q bo'ylab tashkil etuvchilar qo'shiladi: $E=\\frac{kQz}{(z^2+R^2)^{3/2}}$. Markazda $E=0$, uzoqda $z\\gg R$ da $\\frac{kQ}{z^2}$ (nuqtaviy zaryad), maksimum $z=\\frac{R}{\\sqrt{2}}$ da ([[F02]]).",
+  "ru": "**На оси кольца.** Для кольца радиуса $R$ с зарядом $Q$ на оси на расстоянии $z$ складываются лишь осевые составляющие: $E=\\frac{kQz}{(z^2+R^2)^{3/2}}$. В центре $E=0$, вдали при $z\\gg R$ — $\\frac{kQ}{z^2}$ (точечный заряд), максимум при $z=\\frac{R}{\\sqrt{2}}$ ([[F02]]).",
+  "en": "**On the axis of a ring.** For a ring of radius $R$ and charge $Q$, at distance $z$ on the axis only the axial components add: $E=\\frac{kQz}{(z^2+R^2)^{3/2}}$. At the centre $E=0$, far away for $z\\gg R$ it is $\\frac{kQ}{z^2}$ (a point charge), and the maximum is at $z=\\frac{R}{\\sqrt{2}}$ ([[F02]])."
+ },
+ {
+  "t": "m",
+  "m": "E=\\frac{kQz}{(z^2+R^2)^{3/2}},\\qquad z^*=\\frac{R}{\\sqrt{2}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Sterjen va cheksiz chiziq.** Chiziqli zichligi $\\lambda$ bo'lgan sterjenning o'rta perpendikulyarida, $d$ masofada, sterjen uchlari $\\pm\\theta_0$ burchak ostida ko'rinsa, $E=\\frac{2k\\lambda}{d}\\sin\\theta_0$. Cheksiz chiziqda $\\theta_0\\to90^\\circ$: $E=\\frac{2k\\lambda}{d}=\\frac{\\lambda}{2\\pi\\varepsilon_0d}$ — masofaga teskari proporsional. Sterjen o'qida, uchidan $d$ masofada: $E=\\frac{kQ}{d(d+L)}$.",
+  "ru": "**Стержень и бесконечная линия.** На серединном перпендикуляре стержня с линейной плотностью $\\lambda$, на расстоянии $d$, если концы стержня видны под углами $\\pm\\theta_0$, $E=\\frac{2k\\lambda}{d}\\sin\\theta_0$. Для бесконечной линии $\\theta_0\\to90^\\circ$: $E=\\frac{2k\\lambda}{d}=\\frac{\\lambda}{2\\pi\\varepsilon_0d}$ — обратно пропорционально расстоянию. На оси стержня, на расстоянии $d$ от конца: $E=\\frac{kQ}{d(d+L)}$.",
+  "en": "**A rod and an infinite line.** On the perpendicular bisector of a rod of linear density $\\lambda$, at distance $d$, where the rod's ends are seen at angles $\\pm\\theta_0$, $E=\\frac{2k\\lambda}{d}\\sin\\theta_0$. For an infinite line $\\theta_0\\to90^\\circ$: $E=\\frac{2k\\lambda}{d}=\\frac{\\lambda}{2\\pi\\varepsilon_0d}$ — inversely proportional to distance. On the rod's axis, at distance $d$ from an end: $E=\\frac{kQ}{d(d+L)}$."
+ },
+ {
+  "t": "m",
+  "m": "E=\\frac{2k\\lambda}{d}\\sin\\theta_0,\\qquad E_\\infty=\\frac{\\lambda}{2\\pi\\varepsilon_0d}"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L12-F02.png",
+   "ru": "figures/B2-L12-F02-ru.png",
+   "en": "figures/B2-L12-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Disk va cheksiz tekislik.** Sirt zichligi $\\sigma$, radiusi $R$ bo'lgan diskni halqalarga bo'lib integrallasak, o'qda $E=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{z}{\\sqrt{z^2+R^2}}\\right)$. $R\\to\\infty$ da cheksiz tekislik maydoni $\\frac{\\sigma}{2\\varepsilon_0}$ — masofaga bog'liq emas (B1-L30). Uzoqda ($z\\gg R$) binomial yaqinlashuv $\\frac{kQ}{z^2}$ ni qaytaradi — har qanday chekli zaryad uzoqdan nuqtaviy ko'rinadi ([[F03]]).",
+  "ru": "**Диск и бесконечная плоскость.** Разбив диск радиуса $R$ с поверхностной плотностью $\\sigma$ на кольца и проинтегрировав, на оси получаем $E=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{z}{\\sqrt{z^2+R^2}}\\right)$. При $R\\to\\infty$ — поле бесконечной плоскости $\\frac{\\sigma}{2\\varepsilon_0}$, не зависящее от расстояния (B1-L30). Вдали ($z\\gg R$) биномиальное приближение возвращает $\\frac{kQ}{z^2}$ — любой конечный заряд издалека выглядит точечным ([[F03]]).",
+  "en": "**A disk and an infinite plane.** Dividing a disk of radius $R$ and surface density $\\sigma$ into rings and integrating gives on the axis $E=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{z}{\\sqrt{z^2+R^2}}\\right)$. As $R\\to\\infty$ this becomes the infinite-plane field $\\frac{\\sigma}{2\\varepsilon_0}$, independent of distance (B1-L30). Far away ($z\\gg R$) the binomial approximation returns $\\frac{kQ}{z^2}$ — any finite charge looks like a point from far away ([[F03]])."
+ },
+ {
+  "t": "m",
+  "m": "E=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{z}{\\sqrt{z^2+R^2}}\\right)\\ \\xrightarrow{R\\to\\infty}\\ \\frac{\\sigma}{2\\varepsilon_0}"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L12-F03.png",
+   "ru": "figures/B2-L12-F03-ru.png",
+   "en": "figures/B2-L12-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Yoy.** Radiusi $R$, markaziy burchagi $2\\alpha$ bo'lgan bir jinsli zaryadlangan yoyning markazida $E=\\frac{2k\\lambda}{R}\\sin\\alpha$. Yarim aylana ($\\alpha=90^\\circ$, $\\lambda=\\frac{Q}{\\pi R}$) uchun $E=\\frac{2kQ}{\\pi R^2}$; to'liq aylanada $\\alpha=180^\\circ$ va $E=0$.",
+  "ru": "**Дуга.** В центре равномерно заряженной дуги радиуса $R$ с центральным углом $2\\alpha$ $E=\\frac{2k\\lambda}{R}\\sin\\alpha$. Для полуокружности ($\\alpha=90^\\circ$, $\\lambda=\\frac{Q}{\\pi R}$) $E=\\frac{2kQ}{\\pi R^2}$; для полной окружности $\\alpha=180^\\circ$ и $E=0$.",
+  "en": "**An arc.** At the centre of a uniformly charged arc of radius $R$ subtending a central angle $2\\alpha$, $E=\\frac{2k\\lambda}{R}\\sin\\alpha$. For a semicircle ($\\alpha=90^\\circ$, $\\lambda=\\frac{Q}{\\pi R}$), $E=\\frac{2kQ}{\\pi R^2}$; for a full circle $\\alpha=180^\\circ$ and $E=0$."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Elektr dipol",
+  "ru": "3. Электрический диполь",
+  "en": "3. The electric dipole"
+ },
+ {
+  "t": "li",
+  "uz": "**Dipol momenti.** Bir-biridan $\\vec d$ masofadagi $+q$ va $-q$ zaryadlar — elektr dipol (electric dipole), momenti $\\vec p=q\\vec d$ ($-q$ dan $+q$ ga yo'nalgan), birligi $\\mathrm{C\\cdot m}$. Umumiy neytral sistemada $\\vec p=\\sum q_i\\vec r_i$ — sanoq boshi tanloviga bog'liq emas. Molekulalar (suv $p\\approx6.2\\cdot10^{-30}\\ \\mathrm{C\\cdot m}$), antennalar va qutblangan dielektriklar (B2-L14) dipol sifatida tasvirlanadi.",
+  "ru": "**Дипольный момент.** Заряды $+q$ и $-q$ на расстоянии $\\vec d$ друг от друга образуют электрический диполь (electric dipole) с моментом $\\vec p=q\\vec d$ (направлен от $-q$ к $+q$), единица $\\mathrm{C\\cdot m}$. Для нейтральной системы в целом $\\vec p=\\sum q_i\\vec r_i$ — не зависит от выбора начала отсчёта. Молекулы (вода $p\\approx6.2\\cdot10^{-30}\\ \\mathrm{C\\cdot m}$), антенны и поляризованные диэлектрики (B2-L14) описываются как диполи.",
+  "en": "**The dipole moment.** Charges $+q$ and $-q$ separated by $\\vec d$ form an electric dipole with moment $\\vec p=q\\vec d$ (pointing from $-q$ to $+q$), in units of $\\mathrm{C\\cdot m}$. For an overall neutral system $\\vec p=\\sum q_i\\vec r_i$ — independent of the choice of origin. Molecules (water, $p\\approx6.2\\cdot10^{-30}\\ \\mathrm{C\\cdot m}$), antennas and polarized dielectrics (B2-L14) are described as dipoles."
+ },
+ {
+  "t": "li",
+  "uz": "**Dipol maydoni.** $r\\gg d$ masofada dipol o'qida $E=\\frac{2kp}{r^3}$ ($\\vec p$ bo'ylab), o'rta perpendikulyarda $E=\\frac{kp}{r^3}$ ($\\vec p$ ga qarama-qarshi). Umumiy holda qutb koordinatalarida $E_r=\\frac{2kp\\cos\\theta}{r^3}$, $E_\\theta=\\frac{kp\\sin\\theta}{r^3}$ ([[F04]]). Dipol maydoni $\\frac{1}{r^3}$ kabi — nuqtaviy zaryadnikidan tezroq kamayadi, chunki uzoqdan zaryadlar bir-birini deyarli qoplaydi.",
+  "ru": "**Поле диполя.** На расстоянии $r\\gg d$ на оси диполя $E=\\frac{2kp}{r^3}$ (вдоль $\\vec p$), на серединном перпендикуляре $E=\\frac{kp}{r^3}$ (противоположно $\\vec p$). В общем случае в полярных координатах $E_r=\\frac{2kp\\cos\\theta}{r^3}$, $E_\\theta=\\frac{kp\\sin\\theta}{r^3}$ ([[F04]]). Поле диполя убывает как $\\frac{1}{r^3}$ — быстрее, чем у точечного заряда, поскольку издалека заряды почти компенсируют друг друга.",
+  "en": "**The dipole field.** At distance $r\\gg d$, on the dipole's axis $E=\\frac{2kp}{r^3}$ (along $\\vec p$), and on the perpendicular bisector $E=\\frac{kp}{r^3}$ (opposite to $\\vec p$). In general, in polar coordinates $E_r=\\frac{2kp\\cos\\theta}{r^3}$, $E_\\theta=\\frac{kp\\sin\\theta}{r^3}$ ([[F04]]). The dipole field falls off as $\\frac{1}{r^3}$ — faster than a point charge's, because from far away the charges nearly cancel."
+ },
+ {
+  "t": "m",
+  "m": "\\vec p=q\\vec d,\\qquad E_r=\\frac{2kp\\cos\\theta}{r^3},\\qquad E_\\theta=\\frac{kp\\sin\\theta}{r^3}"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L12-F04.png",
+   "ru": "figures/B2-L12-F04-ru.png",
+   "en": "figures/B2-L12-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Tashqi maydondagi dipol.** Bir jinsli maydonda natijaviy kuch nol, lekin kuch momenti $\\vec\\tau=\\vec p\\times\\vec E$ dipolni maydon bo'ylab buradi; $p$ va $E$ parallel bo'lganda muvozanat turg'un. Kichik tebranishlar chastotasi $\\omega=\\sqrt{\\frac{pE}{I}}$. Bir jinsli bo'lmagan maydonda natijaviy kuch ham bor: $\\vec F=(\\vec p\\cdot\\nabla)\\vec E$, maydon bo'ylab yo'nalgan dipol kuchliroq maydon tomonga tortiladi — shuning uchun zaryadlangan taroq neytral qog'oz bo'laklarini tortadi.",
+  "ru": "**Диполь во внешнем поле.** В однородном поле результирующая сила равна нулю, но момент силы $\\vec\\tau=\\vec p\\times\\vec E$ поворачивает диполь вдоль поля; при параллельных $p$ и $E$ равновесие устойчиво. Частота малых колебаний $\\omega=\\sqrt{\\frac{pE}{I}}$. В неоднородном поле есть и результирующая сила: $\\vec F=(\\vec p\\cdot\\nabla)\\vec E$, диполь, ориентированный по полю, втягивается в область более сильного поля — поэтому заряженная расчёска притягивает нейтральные кусочки бумаги.",
+  "en": "**A dipole in an external field.** In a uniform field the net force is zero, but the torque $\\vec\\tau=\\vec p\\times\\vec E$ turns the dipole along the field; equilibrium with $p$ parallel to $E$ is stable. The small-oscillation frequency is $\\omega=\\sqrt{\\frac{pE}{I}}$. In a non-uniform field there is also a net force: $\\vec F=(\\vec p\\cdot\\nabla)\\vec E$, so a dipole aligned with the field is pulled towards the stronger field — which is why a charged comb attracts neutral bits of paper."
+ },
+ {
+  "t": "m",
+  "m": "\\vec\\tau=\\vec p\\times\\vec E,\\qquad \\omega=\\sqrt{\\frac{pE}{I}},\\qquad \\vec F=(\\vec p\\cdot\\nabla)\\vec E"
+ },
+ {
+  "t": "h2",
+  "uz": "4. Maydon chiziqlari va elektr oqimi",
+  "ru": "4. Силовые линии и поток электрического поля",
+  "en": "4. Field lines and electric flux"
+ },
+ {
+  "t": "li",
+  "uz": "**Maydon chiziqlari.** Har bir nuqtada $\\vec E$ ga urinadi, musbat zaryadlardan boshlanib manfiy zaryadlarda (yoki cheksizlikda) tugaydi, hech qachon kesishmaydi; zichligi maydon kuchlanganligiga proporsional (B1-L30). Zaryaddan chiqadigan chiziqlar soni zaryadga proporsional — bu kuzatish Gauss teoremasining sifat ko'rinishi.",
+  "ru": "**Силовые линии.** В каждой точке касаются $\\vec E$, начинаются на положительных зарядах и заканчиваются на отрицательных (или в бесконечности), никогда не пересекаются; их густота пропорциональна напряжённости поля (B1-L30). Число линий, выходящих из заряда, пропорционально заряду — это наблюдение есть качественная форма теоремы Гаусса.",
+  "en": "**Field lines.** They are tangent to $\\vec E$ at every point, start on positive charges and end on negative charges (or at infinity), and never cross; their density is proportional to the field strength (B1-L30). The number of lines leaving a charge is proportional to the charge — this observation is the qualitative form of Gauss's law."
+ },
+ {
+  "t": "li",
+  "uz": "**Oqim.** Kichik $d\\vec A$ yuza orqali elektr oqimi (electric flux) $d\\Phi=\\vec E\\cdot d\\vec A=EdA\\cos\\theta$ — sirtni kesib o'tuvchi chiziqlar soni. Bir jinsli maydonda tekis yuza uchun $\\Phi=EA\\cos\\theta$; yopiq sirtda $d\\vec A$ tashqariga yo'nalgan, chiqayotgan oqim musbat. Bir jinsli maydonda har qanday yopiq sirt orqali umumiy oqim nol: kirgan chiziqlar chiqib ketadi. Yarim sferadan oqim uning asosi orqali oqimga teng: $\\pi R^2E$.",
+  "ru": "**Поток.** Поток электрического поля (electric flux) через малую площадку $d\\vec A$: $d\\Phi=\\vec E\\cdot d\\vec A=EdA\\cos\\theta$ — число линий, пересекающих площадку. В однородном поле для плоской площадки $\\Phi=EA\\cos\\theta$; для замкнутой поверхности $d\\vec A$ направлен наружу, выходящий поток положителен. В однородном поле полный поток через любую замкнутую поверхность равен нулю: вошедшие линии выходят. Поток через полусферу равен потоку через её основание: $\\pi R^2E$.",
+  "en": "**Flux.** The electric flux through a small area $d\\vec A$ is $d\\Phi=\\vec E\\cdot d\\vec A=EdA\\cos\\theta$ — the number of lines crossing the area. In a uniform field, for a flat area $\\Phi=EA\\cos\\theta$; for a closed surface $d\\vec A$ points outward, and outgoing flux is positive. In a uniform field the total flux through any closed surface is zero: the lines that enter also leave. The flux through a hemisphere equals the flux through its base: $\\pi R^2E$."
+ },
+ {
+  "t": "m",
+  "m": "\\Phi=\\int\\vec E\\cdot d\\vec A,\\qquad \\Phi=EA\\cos\\theta"
+ },
+ {
+  "t": "li",
+  "uz": "**Nuqtaviy zaryad oqimi.** Zaryad markazidagi sfera orqali $\\Phi=\\frac{kq}{r^2}4\\pi r^2=\\frac{q}{\\varepsilon_0}$ — radiusga bog'liq emas, chunki $\\frac{1}{r^2}$ va $r^2$ qisqaradi. Ixtiyoriy sirt elementi orqali oqim u ko'rinadigan fazoviy burchakka proporsional: $d\\Phi=\\frac{q}{4\\pi\\varepsilon_0}d\\Omega$. Shuning uchun zaryadni o'rab olgan har qanday sirtdan oqim $\\frac{q}{\\varepsilon_0}$, tashqaridagi zaryad uchun nol ([[F05]]). Kub markazidagi zaryaddan bitta yoqqa $\\frac{q}{6\\varepsilon_0}$ to'g'ri keladi; kub uchidagi zaryaddan kub orqali $\\frac{q}{8\\varepsilon_0}$.",
+  "ru": "**Поток точечного заряда.** Через сферу с зарядом в центре $\\Phi=\\frac{kq}{r^2}4\\pi r^2=\\frac{q}{\\varepsilon_0}$ — не зависит от радиуса, поскольку $\\frac{1}{r^2}$ и $r^2$ сокращаются. Поток через произвольный элемент поверхности пропорционален телесному углу, под которым он виден: $d\\Phi=\\frac{q}{4\\pi\\varepsilon_0}d\\Omega$. Поэтому поток через любую поверхность, охватывающую заряд, равен $\\frac{q}{\\varepsilon_0}$, а для внешнего заряда — нулю ([[F05]]). От заряда в центре куба на одну грань приходится $\\frac{q}{6\\varepsilon_0}$; от заряда в вершине куба через куб — $\\frac{q}{8\\varepsilon_0}$.",
+  "en": "**The flux of a point charge.** Through a sphere centred on the charge, $\\Phi=\\frac{kq}{r^2}4\\pi r^2=\\frac{q}{\\varepsilon_0}$ — independent of the radius, because $\\frac{1}{r^2}$ and $r^2$ cancel. The flux through any surface element is proportional to the solid angle it subtends: $d\\Phi=\\frac{q}{4\\pi\\varepsilon_0}d\\Omega$. Hence the flux through any surface enclosing the charge is $\\frac{q}{\\varepsilon_0}$, and zero for a charge outside ([[F05]]). A charge at the centre of a cube sends $\\frac{q}{6\\varepsilon_0}$ through each face; a charge at a corner of a cube sends $\\frac{q}{8\\varepsilon_0}$ through the cube."
+ },
+ {
+  "t": "m",
+  "m": "\\oint\\vec E\\cdot d\\vec A=\\frac{q}{\\varepsilon_0},\\qquad d\\Phi=\\frac{q}{4\\pi\\varepsilon_0}d\\Omega"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L12-F05.png",
+   "ru": "figures/B2-L12-F05-ru.png",
+   "en": "figures/B2-L12-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Gauss teoremasi",
+  "ru": "5. Теорема Гаусса",
+  "en": "5. Gauss's law"
+ },
+ {
+  "t": "li",
+  "uz": "**Integral ko'rinish.** Superpozitsiya va nuqtaviy zaryad oqimidan: har qanday yopiq sirt orqali elektr oqimi sirt ichidagi to'liq zaryadning $\\varepsilon_0$ ga nisbatiga teng (Gauss's law). Tashqi zaryadlar sirtdagi maydonni o'zgartiradi, lekin umumiy oqimga hissa qo'shmaydi. Teorema har doim to'g'ri, ammo maydonni topish uchun faqat yuqori simmetriyada qulay: sirtni shunday tanlash kerakki, unda $E$ o'zgarmas va $\\vec E$ sirtga perpendikulyar (yoki parallel) bo'lsin.",
+  "ru": "**Интегральная форма.** Из суперпозиции и потока точечного заряда: поток электрического поля через любую замкнутую поверхность равен полному заряду внутри поверхности, делённому на $\\varepsilon_0$ (Gauss's law). Внешние заряды меняют поле на поверхности, но не дают вклада в полный поток. Теорема верна всегда, но для нахождения поля удобна лишь при высокой симметрии: поверхность нужно выбрать так, чтобы на ней $E$ было постоянным, а $\\vec E$ — перпендикулярным (или параллельным) поверхности.",
+  "en": "**Integral form.** From superposition and the flux of a point charge: the electric flux through any closed surface equals the total charge inside the surface divided by $\\varepsilon_0$ (Gauss's law). External charges change the field on the surface but contribute nothing to the total flux. The law always holds, but it is useful for finding the field only with high symmetry: the surface must be chosen so that on it $E$ is constant and $\\vec E$ is perpendicular (or parallel) to the surface."
+ },
+ {
+  "t": "m",
+  "m": "\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0}"
+ },
+ {
+  "t": "li",
+  "uz": "**Differensial ko'rinish.** Kichik hajmga qo'llab va divergensiya teoremasidan foydalanib (B0-L05): $\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}$ — maydon chiziqlari faqat zaryadlardan boshlanadi. Zaryadsiz sohada $\\nabla\\cdot\\vec E=0$. Bu Maksvell tenglamalarining birinchisi. Agar maydon berilgan bo'lsa, zaryad zichligi to'g'ridan-to'g'ri topiladi: masalan, $\\vec E=\\alpha(x,\\ y,\\ z)$ uchun $\\rho=3\\varepsilon_0\\alpha$ — bir jinsli zaryadlangan shar ichidagi maydon shunday.",
+  "ru": "**Дифференциальная форма.** Применив теорему к малому объёму и используя теорему о дивергенции (B0-L05): $\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}$ — силовые линии начинаются только на зарядах. В области без зарядов $\\nabla\\cdot\\vec E=0$. Это первое уравнение Максвелла. Если поле задано, плотность заряда находится сразу: например, для $\\vec E=\\alpha(x,\\ y,\\ z)$ $\\rho=3\\varepsilon_0\\alpha$ — таково поле внутри однородно заряженного шара.",
+  "en": "**Differential form.** Applying the law to a small volume and using the divergence theorem (B0-L05): $\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}$ — field lines begin only on charges. In a charge-free region $\\nabla\\cdot\\vec E=0$. This is the first of Maxwell's equations. If the field is given, the charge density follows directly: for example, for $\\vec E=\\alpha(x,\\ y,\\ z)$, $\\rho=3\\varepsilon_0\\alpha$ — this is the field inside a uniformly charged sphere."
+ },
+ {
+  "t": "m",
+  "m": "\\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0},\\qquad \\frac{1}{r^2}\\frac{d}{dr}(r^2E_r)=\\frac{\\rho}{\\varepsilon_0}"
+ },
+ {
+  "t": "li",
+  "uz": "**Gravitatsiya bilan o'xshashlik.** B2-L08 dagi $\\oint\\vec g\\cdot d\\vec S=-4\\pi GM'$ shu teoremaning o'zi: $k\\to G$, $q\\to m$ va ishora teskari (massalar tortishadi). Shuning uchun qobiq teoremasi va bir jinsli shar ichidagi chiziqli maydon ikkala hol uchun ham bir xil. Farq — zaryad ikki ishorali, shu sababli elektr maydonni ekranlash (o'tkazgich, 7-bo'lim) mumkin, gravitatsiyani — yo'q.",
+  "ru": "**Аналогия с тяготением.** Соотношение $\\oint\\vec g\\cdot d\\vec S=-4\\pi GM'$ из B2-L08 — это та же теорема: $k\\to G$, $q\\to m$ и знак обратный (массы притягиваются). Поэтому теорема об оболочке и линейное поле внутри однородного шара одинаковы в обоих случаях. Разница — заряд двух знаков, поэтому электрическое поле можно экранировать (проводник, раздел 7), а тяготение — нет.",
+  "en": "**The analogy with gravity.** The relation $\\oint\\vec g\\cdot d\\vec S=-4\\pi GM'$ from B2-L08 is the same theorem: $k\\to G$, $q\\to m$ and the opposite sign (masses attract). So the shell theorem and the linear field inside a uniform sphere are the same in both cases. The difference is that charge comes in two signs, so an electric field can be screened (a conductor, section 7), while gravity cannot."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Simmetrik taqsimotlar maydoni",
+  "ru": "6. Поле симметричных распределений",
+  "en": "6. The field of symmetric distributions"
+ },
+ {
+  "t": "li",
+  "uz": "**Sferik simmetriya.** Konsentrik sfera tanlanadi: $E\\cdot4\\pi r^2=\\frac{Q'}{\\varepsilon_0}$. Bir jinsli zaryadlangan shar ($Q$, $R$): ichkarida $Q'=Q\\frac{r^3}{R^3}$, $E=\\frac{kQr}{R^3}$ — markazdan chiziqli o'sadi; tashqarida $E=\\frac{kQ}{r^2}$; maksimum sirtda ([[F06]]). Yupqa sferik qobiq ichida $E=0$ (B1-L30), tashqarida nuqtaviy zaryad kabi. Sirtda $E$ sakraydi: $\\Delta E=\\frac{\\sigma}{\\varepsilon_0}$.",
+  "ru": "**Сферическая симметрия.** Выбирается концентрическая сфера: $E\\cdot4\\pi r^2=\\frac{Q'}{\\varepsilon_0}$. Однородно заряженный шар ($Q$, $R$): внутри $Q'=Q\\frac{r^3}{R^3}$, $E=\\frac{kQr}{R^3}$ — растёт линейно от центра; снаружи $E=\\frac{kQ}{r^2}$; максимум на поверхности ([[F06]]). Внутри тонкой сферической оболочки $E=0$ (B1-L30), снаружи — как у точечного заряда. На поверхности $E$ испытывает скачок $\\Delta E=\\frac{\\sigma}{\\varepsilon_0}$.",
+  "en": "**Spherical symmetry.** Choose a concentric sphere: $E\\cdot4\\pi r^2=\\frac{Q'}{\\varepsilon_0}$. A uniformly charged ball ($Q$, $R$): inside, $Q'=Q\\frac{r^3}{R^3}$ and $E=\\frac{kQr}{R^3}$ — growing linearly from the centre; outside, $E=\\frac{kQ}{r^2}$; the maximum is at the surface ([[F06]]). Inside a thin spherical shell $E=0$ (B1-L30); outside it is like a point charge. At the surface $E$ jumps by $\\Delta E=\\frac{\\sigma}{\\varepsilon_0}$."
+ },
+ {
+  "t": "m",
+  "m": "E=\\frac{kQr}{R^3}\\ (r<R),\\qquad E=\\frac{kQ}{r^2}\\ (r>R),\\qquad \\Delta E=\\frac{\\sigma}{\\varepsilon_0}"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L12-F06.png",
+   "ru": "figures/B2-L12-F06-ru.png",
+   "en": "figures/B2-L12-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Silindrik simmetriya.** O'qdosh silindr (radiusi $r$, uzunligi $l$): oqim faqat yon sirtdan, $E\\cdot2\\pi rl=\\frac{\\lambda l}{\\varepsilon_0}$. Cheksiz chiziq yoki zaryadlangan silindr tashqarisida $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$ — integrallashsiz. Bir jinsli zaryadlangan silindr (hajmiy $\\rho$, radiusi $R$) ichida $E=\\frac{\\rho r}{2\\varepsilon_0}$. Koaksial kabelda maydon faqat ichki va tashqi o'tkazgichlar orasida.",
+  "ru": "**Цилиндрическая симметрия.** Соосный цилиндр (радиус $r$, длина $l$): поток только через боковую поверхность, $E\\cdot2\\pi rl=\\frac{\\lambda l}{\\varepsilon_0}$. Снаружи бесконечной линии или заряженного цилиндра $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$ — без интегрирования. Внутри однородно заряженного цилиндра (объёмная $\\rho$, радиус $R$) $E=\\frac{\\rho r}{2\\varepsilon_0}$. В коаксиальном кабеле поле есть только между внутренним и внешним проводниками.",
+  "en": "**Cylindrical symmetry.** A coaxial cylinder (radius $r$, length $l$): flux only through the side, $E\\cdot2\\pi rl=\\frac{\\lambda l}{\\varepsilon_0}$. Outside an infinite line or a charged cylinder $E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}$ — without integration. Inside a uniformly charged cylinder (volume density $\\rho$, radius $R$) $E=\\frac{\\rho r}{2\\varepsilon_0}$. In a coaxial cable the field exists only between the inner and outer conductors."
+ },
+ {
+  "t": "m",
+  "m": "E=\\frac{\\lambda}{2\\pi\\varepsilon_0r}\\ (r>R),\\qquad E=\\frac{\\rho r}{2\\varepsilon_0}\\ (r<R)"
+ },
+ {
+  "t": "li",
+  "uz": "**Tekis simmetriya.** «Pillbox» — tekislikni kesib o'tuvchi silindr: oqim ikkala asosdan, $2EA=\\frac{\\sigma A}{\\varepsilon_0}$, $E=\\frac{\\sigma}{2\\varepsilon_0}$. Qalinligi $2a$, hajmiy zichligi $\\rho$ bo'lgan cheksiz qatlam: ichkarida $E=\\frac{\\rho x}{\\varepsilon_0}$ (o'rtadan $x$ masofada), tashqarida $E=\\frac{\\rho a}{\\varepsilon_0}$. Bir nechta tekislik maydonlari superpozitsiya bilan qo'shiladi: $+\\sigma$ va $-\\sigma$ plastinkalar orasida $\\frac{\\sigma}{\\varepsilon_0}$, tashqarida nol — kondensator (B2-L13).",
+  "ru": "**Плоская симметрия.** «Таблетка» — цилиндр, пересекающий плоскость: поток через оба основания, $2EA=\\frac{\\sigma A}{\\varepsilon_0}$, $E=\\frac{\\sigma}{2\\varepsilon_0}$. Бесконечный слой толщины $2a$ с объёмной плотностью $\\rho$: внутри $E=\\frac{\\rho x}{\\varepsilon_0}$ (на расстоянии $x$ от середины), снаружи $E=\\frac{\\rho a}{\\varepsilon_0}$. Поля нескольких плоскостей складываются суперпозицией: между пластинами $+\\sigma$ и $-\\sigma$ — $\\frac{\\sigma}{\\varepsilon_0}$, снаружи — ноль; это конденсатор (B2-L13).",
+  "en": "**Planar symmetry.** A “pillbox” — a cylinder straddling the plane: flux through both ends, $2EA=\\frac{\\sigma A}{\\varepsilon_0}$, $E=\\frac{\\sigma}{2\\varepsilon_0}$. An infinite slab of thickness $2a$ and volume density $\\rho$: inside, $E=\\frac{\\rho x}{\\varepsilon_0}$ (at distance $x$ from the midplane); outside, $E=\\frac{\\rho a}{\\varepsilon_0}$. The fields of several planes add by superposition: between plates $+\\sigma$ and $-\\sigma$ it is $\\frac{\\sigma}{\\varepsilon_0}$, outside zero — a capacitor (B2-L13)."
+ },
+ {
+  "t": "m",
+  "m": "E=\\frac{\\sigma}{2\\varepsilon_0},\\qquad E=\\frac{\\rho x}{\\varepsilon_0}\\ (|x|<a),\\qquad E=\\frac{\\rho a}{\\varepsilon_0}\\ (|x|>a)"
+ },
+ {
+  "t": "h2",
+  "uz": "7. Elektrostatik muvozanatdagi o'tkazgichlar",
+  "ru": "7. Проводники в электростатическом равновесии",
+  "en": "7. Conductors in electrostatic equilibrium"
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy xossalar.** O'tkazgichda erkin zaryadlar bor, shuning uchun muvozanatda: 1) ichkarida $\\vec E=0$ (aks holda zaryadlar harakatlanar edi); 2) Gauss teoremasidan ichkarida $\\rho=0$ — butun ortiqcha zaryad sirtda; 3) sirt yonida maydon sirtga perpendikulyar va $E=\\frac{\\sigma}{\\varepsilon_0}$ («pillbox»ning faqat tashqi asosidan oqim) — bu tekislikdagi $\\frac{\\sigma}{2\\varepsilon_0}$ dan ikki marta katta, chunki ichkaridagi maydonni boshqa zaryadlar to'liq qoplaydi.",
+  "ru": "**Основные свойства.** В проводнике есть свободные заряды, поэтому в равновесии: 1) внутри $\\vec E=0$ (иначе заряды двигались бы); 2) из теоремы Гаусса внутри $\\rho=0$ — весь избыточный заряд на поверхности; 3) у поверхности поле перпендикулярно поверхности и $E=\\frac{\\sigma}{\\varepsilon_0}$ (поток только через внешнее основание «таблетки») — вдвое больше, чем $\\frac{\\sigma}{2\\varepsilon_0}$ для плоскости, поскольку внутреннее поле полностью компенсируется другими зарядами.",
+  "en": "**Basic properties.** A conductor has free charges, so in equilibrium: 1) $\\vec E=0$ inside (otherwise the charges would move); 2) by Gauss's law $\\rho=0$ inside — all the excess charge is on the surface; 3) just outside the surface the field is perpendicular to it and $E=\\frac{\\sigma}{\\varepsilon_0}$ (flux only through the outer end of the “pillbox”) — twice the plane's $\\frac{\\sigma}{2\\varepsilon_0}$, because the field inside is fully cancelled by the other charges."
+ },
+ {
+  "t": "m",
+  "m": "\\vec E=0,\\qquad E=\\frac{\\sigma}{\\varepsilon_0},\\qquad p=\\frac{\\sigma^2}{2\\varepsilon_0}"
+ },
+ {
+  "t": "li",
+  "uz": "**Bo'shliqli o'tkazgich.** O'tkazgich ichidagi zaryadsiz bo'shliqda maydon nol — Faradey qafasi (B1-L30). Bo'shliqqa $q$ zaryad qo'yilsa, Gauss sirtini o'tkazgich ichidan o'tkazib, bo'shliq devorida $-q$ induksiyalanishini topamiz; tashqi sirtda esa (o'tkazgich zaryadi $Q$ bo'lsa) $Q+q$ to'planadi. Tashqi maydon sferik o'tkazgich uchun bo'shliqdagi zaryad qayerda turishidan qat'i nazar $\\frac{k(Q+q)}{r^2}$ ([[F07]]).",
+  "ru": "**Проводник с полостью.** В полости без зарядов внутри проводника поле равно нулю — клетка Фарадея (B1-L30). Если в полость поместить заряд $q$, то, проведя гауссову поверхность внутри проводника, находим, что на стенке полости индуцируется $-q$; на внешней поверхности (при заряде проводника $Q$) собирается $Q+q$. Внешнее поле сферического проводника равно $\\frac{k(Q+q)}{r^2}$ независимо от того, где в полости находится заряд ([[F07]]).",
+  "en": "**A conductor with a cavity.** In a charge-free cavity inside a conductor the field is zero — a Faraday cage (B1-L30). If a charge $q$ is placed in the cavity, running a Gaussian surface through the conductor shows that $-q$ is induced on the cavity wall; on the outer surface (if the conductor carries $Q$) $Q+q$ collects. The external field of a spherical conductor is $\\frac{k(Q+q)}{r^2}$ no matter where the charge sits in the cavity ([[F07]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L12-F07.png",
+   "ru": "figures/B2-L12-F07-ru.png",
+   "en": "figures/B2-L12-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Uchli joylar va bosim.** Tashqi sirtda zaryad egrilik katta joylarda zichroq — uchlarda maydon kuchli va havo teshiladi ($\\approx3\\cdot10^6\\ \\mathrm{V/m}$): chaqmoq qaytargich va «toj razryadi» shunga asoslangan. Sirt zaryadlariga qolgan zaryadlar maydoni $\\frac{E}{2}$ ta'sir qiladi, shuning uchun sirtga tashqariga yo'nalgan elektrostatik bosim $p=\\frac{\\sigma^2}{2\\varepsilon_0}=\\frac{\\varepsilon_0E^2}{2}$ ta'sir qiladi — bu maydon energiyasi zichligiga teng (B2-L13).",
+  "ru": "**Острия и давление.** На внешней поверхности заряд гуще там, где кривизна больше, — у острий поле сильное и воздух пробивается ($\\approx3\\cdot10^6\\ \\mathrm{V/m}$): на этом основаны громоотвод и «коронный разряд». На поверхностные заряды действует поле остальных зарядов $\\frac{E}{2}$, поэтому на поверхность действует направленное наружу электростатическое давление $p=\\frac{\\sigma^2}{2\\varepsilon_0}=\\frac{\\varepsilon_0E^2}{2}$ — оно равно плотности энергии поля (B2-L13).",
+  "en": "**Sharp points and pressure.** On the outer surface the charge is denser where the curvature is greater — at sharp points the field is strong and the air breaks down ($\\approx3\\cdot10^6\\ \\mathrm{V/m}$): the lightning rod and “corona discharge” rely on this. The surface charges feel the field $\\frac{E}{2}$ of the other charges, so an outward electrostatic pressure $p=\\frac{\\sigma^2}{2\\varepsilon_0}=\\frac{\\varepsilon_0E^2}{2}$ acts on the surface — equal to the field's energy density (B2-L13)."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Uyurmasiz maydon va Irnshou teoremasi",
+  "ru": "8. Безвихревое поле и теорема Ирншоу",
+  "en": "8. The curl-free field and Earnshaw's theorem"
+ },
+ {
+  "t": "li",
+  "uz": "**$\\nabla\\times\\vec E=0$.** Nuqtaviy zaryad maydoni radial va faqat $r$ ga bog'liq, shuning uchun uning rotori nol; superpozitsiyadan har qanday elektrostatik maydon uchun $\\nabla\\times\\vec E=0$, ya'ni $\\oint\\vec E\\cdot d\\vec l=0$ — maydon konservativ (B2-L03, B1-L31). Demak $\\vec E=-\\nabla\\varphi$ ko'rinishida yoziladi — potensial va kondensatorlar B2-L13 da. Gauss teoremasi va $\\nabla\\times\\vec E=0$ birgalikda elektrostatikani to'liq aniqlaydi.",
+  "ru": "**$\\nabla\\times\\vec E=0$.** Поле точечного заряда радиально и зависит только от $r$, поэтому его ротор равен нулю; по суперпозиции для любого электростатического поля $\\nabla\\times\\vec E=0$, т. е. $\\oint\\vec E\\cdot d\\vec l=0$ — поле консервативно (B2-L03, B1-L31). Значит, его можно записать как $\\vec E=-\\nabla\\varphi$ — потенциал и конденсаторы в B2-L13. Теорема Гаусса и $\\nabla\\times\\vec E=0$ вместе полностью определяют электростатику.",
+  "en": "**$\\nabla\\times\\vec E=0$.** The field of a point charge is radial and depends only on $r$, so its curl is zero; by superposition every electrostatic field has $\\nabla\\times\\vec E=0$, i.e. $\\oint\\vec E\\cdot d\\vec l=0$ — the field is conservative (B2-L03, B1-L31). Hence it can be written as $\\vec E=-\\nabla\\varphi$ — potential and capacitors are in B2-L13. Gauss's law and $\\nabla\\times\\vec E=0$ together determine electrostatics completely."
+ },
+ {
+  "t": "m",
+  "m": "\\nabla\\times\\vec E=0,\\qquad \\oint\\vec E\\cdot d\\vec l=0,\\qquad \\vec E=-\\nabla\\varphi"
+ },
+ {
+  "t": "li",
+  "uz": "**Irnshou teoremasi.** Zaryad faqat elektrostatik kuchlar ta'sirida turg'un muvozanatda bo'la olmaydi. Turg'unlik uchun muvozanat nuqtasini o'rab olgan kichik sferada maydon hamma joyda ichkariga (musbat zaryad uchun) yo'nalgan bo'lishi kerak edi — ya'ni sferadan oqim manfiy; lekin u yerda boshqa zaryad yo'q, shuning uchun oqim nol. Masalan, kvadrat uchlaridagi to'rtta $+Q$ markazida $+q$ zaryad kvadrat tekisligida turg'un, lekin tekislikka perpendikulyar yo'nalishda turg'unmas. Ion tuzoqlari shu sababli o'zgaruvchan maydon yoki magnit maydondan foydalanadi.",
+  "ru": "**Теорема Ирншоу.** Заряд не может находиться в устойчивом равновесии под действием одних электростатических сил. Для устойчивости на малой сфере вокруг точки равновесия поле всюду должно было бы быть направлено внутрь (для положительного заряда) — т. е. поток через сферу отрицателен; но других зарядов там нет, поэтому поток равен нулю. Например, заряд $+q$ в центре четырёх зарядов $+Q$ в вершинах квадрата устойчив в плоскости квадрата, но неустойчив в направлении, перпендикулярном плоскости. Поэтому ионные ловушки используют переменное или магнитное поле.",
+  "en": "**Earnshaw's theorem.** A charge cannot be in stable equilibrium under electrostatic forces alone. Stability would require the field on a small sphere around the equilibrium point to point inward everywhere (for a positive charge) — i.e. a negative flux through the sphere; but there is no other charge there, so the flux is zero. For example, a charge $+q$ at the centre of four charges $+Q$ at the corners of a square is stable within the square's plane but unstable perpendicular to it. That is why ion traps use alternating or magnetic fields."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Bir jinsli bo'lmagan taqsimotlar",
+  "ru": "9. Неоднородные распределения",
+  "en": "9. Non-uniform distributions"
+ },
+ {
+  "t": "li",
+  "uz": "**Zaryad $r$ ga bog'liq.** Sferik simmetriya saqlansa, Gauss teoremasi hali ham ishlaydi, faqat ichki zaryad integral bilan topiladi: $Q'(r)=\\int_0^r\\rho(r')4\\pi r'^2dr'$. Masalan, $\\rho=\\rho_0\\frac{r}{R}$ bo'lsa, $Q'=\\frac{\\pi\\rho_0r^4}{R}$ va ichkarida $E=\\frac{\\rho_0r^2}{4\\varepsilon_0R}$ — kvadratik o'sadi; to'liq zaryad $Q=\\pi\\rho_0R^3$ ([[F08]]). $\\rho=\\frac{A}{r}$ bo'lsa, ichkarida maydon doimiy: $E=\\frac{A}{2\\varepsilon_0}$.",
+  "ru": "**Заряд зависит от $r$.** Если сферическая симметрия сохраняется, теорема Гаусса по-прежнему работает, только внутренний заряд находится интегрированием: $Q'(r)=\\int_0^r\\rho(r')4\\pi r'^2dr'$. Например, при $\\rho=\\rho_0\\frac{r}{R}$ $Q'=\\frac{\\pi\\rho_0r^4}{R}$, и внутри $E=\\frac{\\rho_0r^2}{4\\varepsilon_0R}$ — растёт квадратично; полный заряд $Q=\\pi\\rho_0R^3$ ([[F08]]). При $\\rho=\\frac{A}{r}$ поле внутри постоянно: $E=\\frac{A}{2\\varepsilon_0}$.",
+  "en": "**Charge depending on $r$.** As long as spherical symmetry holds, Gauss's law still works; only the enclosed charge must be integrated: $Q'(r)=\\int_0^r\\rho(r')4\\pi r'^2dr'$. For example, if $\\rho=\\rho_0\\frac{r}{R}$, then $Q'=\\frac{\\pi\\rho_0r^4}{R}$ and inside $E=\\frac{\\rho_0r^2}{4\\varepsilon_0R}$ — growing quadratically; the total charge is $Q=\\pi\\rho_0R^3$ ([[F08]]). If $\\rho=\\frac{A}{r}$, the field inside is constant: $E=\\frac{A}{2\\varepsilon_0}$."
+ },
+ {
+  "t": "m",
+  "m": "Q'(r)=\\int_0^r\\rho\\,4\\pi r'^2dr',\\qquad \\rho=\\rho_0\\frac{r}{R}\\ \\Rightarrow\\ E=\\frac{\\rho_0r^2}{4\\varepsilon_0R}"
+ },
+ {
+  "t": "li",
+  "uz": "**Maydondan zaryadga.** Teskari masala differensial ko'rinish bilan yechiladi: sferik simmetriyada $\\rho=\\frac{\\varepsilon_0}{r^2}\\frac{d}{dr}(r^2E)$. Masalan, $E=\\beta r^3$ bo'lsa, $\\rho=5\\varepsilon_0\\beta r^2$. Atom modeli: musbat yadro va uning atrofidagi manfiy elektron buluti — tashqarida maydon tez kamayadi, chunki $Q'\\to0$; Rezerford tajribasi shu maydonni o'rgangan.",
+  "ru": "**От поля к заряду.** Обратная задача решается дифференциальной формой: при сферической симметрии $\\rho=\\frac{\\varepsilon_0}{r^2}\\frac{d}{dr}(r^2E)$. Например, при $E=\\beta r^3$ $\\rho=5\\varepsilon_0\\beta r^2$. Модель атома: положительное ядро и окружающее его отрицательное электронное облако — снаружи поле быстро убывает, поскольку $Q'\\to0$; опыт Резерфорда исследовал именно это поле.",
+  "en": "**From field to charge.** The inverse problem is solved with the differential form: with spherical symmetry $\\rho=\\frac{\\varepsilon_0}{r^2}\\frac{d}{dr}(r^2E)$. For example, if $E=\\beta r^3$, then $\\rho=5\\varepsilon_0\\beta r^2$. An atom model: a positive nucleus surrounded by a negative electron cloud — outside, the field falls off quickly because $Q'\\to0$; Rutherford's experiment probed exactly this field."
+ },
+ {
+  "t": "m",
+  "m": "\\rho=\\frac{\\varepsilon_0}{r^2}\\frac{d}{dr}(r^2E)"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L12-F08.png",
+   "ru": "figures/B2-L12-F08-ru.png",
+   "en": "figures/B2-L12-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE usullari va tipik xatolar",
+  "ru": "10. Методы GRE и типичные ошибки",
+  "en": "10. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 1 — simmetriya va superpozitsiya.** Avval simmetriyani aniqlang: sfera, silindr yoki tekislik bo'lsa — Gauss teoremasi, aks holda — superpozitsiya. Murakkab shakl ko'pincha oddiylarning yig'indisi: teshikli shar = butun shar + manfiy zaryadli kichik shar; teshikli tekislik = tekislik − disk.",
+  "ru": "**Метод 1 — симметрия и суперпозиция.** Сначала определите симметрию: сфера, цилиндр или плоскость — теорема Гаусса, иначе — суперпозиция. Сложная форма часто — сумма простых: шар с полостью = целый шар + малый шар с отрицательным зарядом; плоскость с отверстием = плоскость − диск.",
+  "en": "**Method 1 — symmetry and superposition.** First identify the symmetry: a sphere, cylinder or plane — Gauss's law; otherwise — superposition. A complicated shape is often a sum of simple ones: a sphere with a cavity = a whole sphere + a small sphere of negative charge; a plane with a hole = plane − disk."
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 2 — masshtab va chegaraviy holatlar.** Javobni chegaralarda tekshiring: uzoqda har qanday neytral bo'lmagan taqsimot $\\frac{kQ}{r^2}$, neytral dipol $\\frac{1}{r^3}$; cheksiz chiziq $\\frac{1}{r}$, tekislik $r^0$. Masofa ikki marta ortsa, nuqtaviy zaryad maydoni $4$ marta, dipolniki $8$ marta, chiziqniki $2$ marta kamayadi.",
+  "ru": "**Метод 2 — масштаб и предельные случаи.** Проверяйте ответ в пределах: вдали любое ненейтральное распределение даёт $\\frac{kQ}{r^2}$, нейтральный диполь — $\\frac{1}{r^3}$; бесконечная линия — $\\frac{1}{r}$, плоскость — $r^0$. При удвоении расстояния поле точечного заряда уменьшается в $4$ раза, диполя — в $8$ раз, линии — в $2$ раза.",
+  "en": "**Method 2 — scaling and limiting cases.** Check the answer in limits: far away any non-neutral distribution gives $\\frac{kQ}{r^2}$, a neutral dipole $\\frac{1}{r^3}$; an infinite line $\\frac{1}{r}$, a plane $r^0$. When the distance doubles, a point charge's field drops by a factor of $4$, a dipole's by $8$, a line's by $2$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) Maydonlarni vektor emas, son sifatida qo'shish. 2) Gauss teoremasini simmetriya yo'q joyda maydon topish uchun ishlatish (oqim baribir to'g'ri, lekin $E$ sirtda o'zgarmas emas). 3) Ichki zaryad o'rniga to'liq zaryadni olish (shar ichida). 4) O'tkazgich sirtida $\\frac{\\sigma}{2\\varepsilon_0}$ yozish ($\\frac{\\sigma}{\\varepsilon_0}$ kerak). 5) Bo'shliqdagi zaryad tashqi maydonni «ekranlaydi» deb o'ylash — tashqi sirtda $q$ paydo bo'ladi. 6) Dipol momenti yo'nalishini $+q$ dan $-q$ ga deb olish.",
+  "ru": "**Типичные ошибки.** 1) Складывать поля как числа, а не векторы. 2) Использовать теорему Гаусса для нахождения поля там, где нет симметрии (поток всё равно верен, но $E$ на поверхности не постоянно). 3) Брать полный заряд вместо внутреннего (внутри шара). 4) Писать у поверхности проводника $\\frac{\\sigma}{2\\varepsilon_0}$ (нужно $\\frac{\\sigma}{\\varepsilon_0}$). 5) Думать, что заряд в полости «экранирован» снаружи — на внешней поверхности появляется $q$. 6) Направлять дипольный момент от $+q$ к $-q$.",
+  "en": "**Typical mistakes.** 1) Adding fields as numbers rather than vectors. 2) Using Gauss's law to find the field where there is no symmetry (the flux is still right, but $E$ is not constant on the surface). 3) Taking the total charge instead of the enclosed charge (inside a sphere). 4) Writing $\\frac{\\sigma}{2\\varepsilon_0}$ at a conductor's surface (it should be $\\frac{\\sigma}{\\varepsilon_0}$). 5) Thinking a charge in a cavity is “screened” from outside — $q$ appears on the outer surface. 6) Pointing the dipole moment from $+q$ to $-q$."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Kulon qonuni",
+    "ru": "Закон Кулона",
+    "en": "Coulomb's law",
+    "m": "\\vec F=kqq'\\frac{\\vec r-\\vec r'}{|\\vec r-\\vec r'|^3},\\quad k=\\frac{1}{4\\pi\\varepsilon_0}"
+   },
+   {
+    "uz": "Uzluksiz taqsimot",
+    "ru": "Непрерывное распределение",
+    "en": "Continuous distribution",
+    "m": "\\vec E=k\\int\\frac{dq}{r^2}\\hat r"
+   },
+   {
+    "uz": "Halqa o'qida",
+    "ru": "На оси кольца",
+    "en": "On a ring's axis",
+    "m": "E=\\frac{kQz}{(z^2+R^2)^{3/2}}"
+   },
+   {
+    "uz": "Sterjen, cheksiz chiziq",
+    "ru": "Стержень, бесконечная линия",
+    "en": "Rod, infinite line",
+    "m": "E=\\frac{2k\\lambda}{d}\\sin\\theta_0,\\quad E=\\frac{\\lambda}{2\\pi\\varepsilon_0d}"
+   },
+   {
+    "uz": "Disk o'qida",
+    "ru": "На оси диска",
+    "en": "On a disk's axis",
+    "m": "E=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{z}{\\sqrt{z^2+R^2}}\\right)"
+   },
+   {
+    "uz": "Yarim aylana markazida",
+    "ru": "В центре полуокружности",
+    "en": "Centre of a semicircle",
+    "m": "E=\\frac{2kQ}{\\pi R^2}"
+   },
+   {
+    "uz": "Dipol maydoni",
+    "ru": "Поле диполя",
+    "en": "Dipole field",
+    "m": "E_r=\\frac{2kp\\cos\\theta}{r^3},\\quad E_\\theta=\\frac{kp\\sin\\theta}{r^3}"
+   },
+   {
+    "uz": "Maydondagi dipol",
+    "ru": "Диполь в поле",
+    "en": "Dipole in a field",
+    "m": "\\vec\\tau=\\vec p\\times\\vec E,\\quad \\vec F=(\\vec p\\cdot\\nabla)\\vec E"
+   },
+   {
+    "uz": "Oqim",
+    "ru": "Поток",
+    "en": "Flux",
+    "m": "\\Phi=\\int\\vec E\\cdot d\\vec A"
+   },
+   {
+    "uz": "Gauss teoremasi",
+    "ru": "Теорема Гаусса",
+    "en": "Gauss's law",
+    "m": "\\oint\\vec E\\cdot d\\vec A=\\frac{Q'}{\\varepsilon_0},\\quad \\nabla\\cdot\\vec E=\\frac{\\rho}{\\varepsilon_0}"
+   },
+   {
+    "uz": "Bir jinsli shar",
+    "ru": "Однородный шар",
+    "en": "Uniform ball",
+    "m": "E=\\frac{kQr}{R^3}\\ (r<R),\\quad \\frac{kQ}{r^2}\\ (r>R)"
+   },
+   {
+    "uz": "Silindr",
+    "ru": "Цилиндр",
+    "en": "Cylinder",
+    "m": "E=\\frac{\\rho r}{2\\varepsilon_0}\\ (r<R),\\quad \\frac{\\lambda}{2\\pi\\varepsilon_0r}\\ (r>R)"
+   },
+   {
+    "uz": "Tekislik, qatlam",
+    "ru": "Плоскость, слой",
+    "en": "Plane, slab",
+    "m": "E=\\frac{\\sigma}{2\\varepsilon_0},\\quad E=\\frac{\\rho x}{\\varepsilon_0}"
+   },
+   {
+    "uz": "O'tkazgich sirti",
+    "ru": "Поверхность проводника",
+    "en": "Conductor surface",
+    "m": "E=\\frac{\\sigma}{\\varepsilon_0},\\quad p=\\frac{\\sigma^2}{2\\varepsilon_0}"
+   },
+   {
+    "uz": "Uyurmasizlik",
+    "ru": "Безвихревость",
+    "en": "Curl-free",
+    "m": "\\nabla\\times\\vec E=0,\\quad \\vec E=-\\nabla\\varphi"
+   },
+   {
+    "uz": "Maydondan zaryad",
+    "ru": "Заряд по полю",
+    "en": "Charge from field",
+    "m": "\\rho=\\frac{\\varepsilon_0}{r^2}\\frac{d}{dr}(r^2E)"
+   }
+  ]
+ }
+]

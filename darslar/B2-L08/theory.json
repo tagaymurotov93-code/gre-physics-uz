@@ -1,0 +1,627 @@
+[
+ {
+  "t": "h1",
+  "uz": "Markaziy kuchlar, Kepler qonunlari (Central forces, Kepler's laws)",
+  "ru": "Центральные силы, законы Кеплера",
+  "en": "Central forces, Kepler's laws"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz sferik jismlar gravitatsiya maydoni va potensialini (ichida ham, tashqarisida ham) hisoblaysiz; ikki jism masalasini keltirilgan massa yordamida bitta jism masalasiga keltirasiz; orbita tenglamasidan Keplerning birinchi va uchinchi qonunlarini chiqarasiz; ellips parametrlari, energiya va vis-viva tenglamasi orqali orbita masalalarini yechasiz; sun'iy yo'ldosh o'tishlari, giperbolik orbitalar va sochilishni tahlil qilasiz; boshqa markaziy kuchlar uchun aylana orbita barqarorligini va virial teoremani qo'llaysiz.",
+  "ru": "**Цель.** После урока вы будете вычислять поле и потенциал тяготения сферических тел (и внутри, и снаружи); сводить задачу двух тел к задаче одного тела с помощью приведённой массы; выводить первый и третий законы Кеплера из уравнения орбиты; решать орбитальные задачи через параметры эллипса, энергию и уравнение vis-viva; анализировать переходы спутников, гиперболические орбиты и рассеяние; применять условие устойчивости круговых орбит и теорему о вириале для других центральных сил.",
+  "en": "**Goal.** After this lesson you will compute the gravitational field and potential of spherical bodies (both inside and outside); reduce the two-body problem to a one-body problem with the reduced mass; derive Kepler's first and third laws from the orbit equation; solve orbital problems using the ellipse parameters, the energy and the vis-viva equation; analyze satellite transfers, hyperbolic orbits and scattering; and apply the stability condition for circular orbits and the virial theorem to other central forces."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L07 da butun olam tortishish qonuni va sun'iy yo'ldoshlarni maktab darajasida, B2-L06 da esa markaziy maydonda impuls momentining saqlanishi, Keplerning ikkinchi qonuni va effektiv potensialni ko'rdik. Endi bu natijalarni yagona nazariyaga birlashtiramiz. GRE da orbitalar haqidagi savollar deyarli har bir variantda uchraydi va ular odatda bitta-ikkita munosabatga — Keplerning uchinchi qonuni, energiya va impuls momentining saqlanishi, $E=-\\frac{GMm}{2a}$ ga — tayanadi.",
+  "ru": "В B1-L07 мы рассмотрели закон всемирного тяготения и искусственные спутники на школьном уровне, а в B2-L06 — сохранение момента импульса в центральном поле, второй закон Кеплера и эффективный потенциал. Теперь объединим эти результаты в единую теорию. В GRE вопросы об орбитах встречаются почти в каждом варианте и обычно опираются на одно-два соотношения — третий закон Кеплера, сохранение энергии и момента импульса, $E=-\\frac{GMm}{2a}$.",
+  "en": "In B1-L07 we met the law of universal gravitation and artificial satellites at the school level, and in B2-L06 conservation of angular momentum in a central field, Kepler's second law and the effective potential. Now we combine these results into a single theory. On the GRE orbit questions appear in almost every test, and they usually rest on one or two relations — Kepler's third law, conservation of energy and angular momentum, and $E=-\\frac{GMm}{2a}$."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Sferik jismlarning gravitatsiya maydoni va potensiali",
+  "ru": "1. Поле и потенциал тяготения сферических тел",
+  "en": "1. Gravitational field and potential of spherical bodies"
+ },
+ {
+  "t": "li",
+  "uz": "**Maydon va potensial.** Nuqtaviy massa $M$ ning gravitatsiya maydoni kuchlanganligi (gravitational field) $\\vec g=-\\frac{GM}{r^2}\\vec e_r$, potensiali $\\phi=-\\frac{GM}{r}$; massasi $m$ bo'lgan jismga kuch $\\vec F=m\\vec g$, potensial energiya $U=m\\phi$. Bir nechta massa maydonlari qo'shiladi (superpozitsiya). Potensial cheksizlikda nolga teng deb olinadi, shuning uchun bog'langan holatlarda energiya manfiy.",
+  "ru": "**Поле и потенциал.** Напряжённость поля тяготения (gravitational field) точечной массы $M$ равна $\\vec g=-\\frac{GM}{r^2}\\vec e_r$, потенциал $\\phi=-\\frac{GM}{r}$; сила на тело массой $m$ — $\\vec F=m\\vec g$, потенциальная энергия $U=m\\phi$. Поля нескольких масс складываются (суперпозиция). Потенциал на бесконечности принимается равным нулю, поэтому в связанных состояниях энергия отрицательна.",
+  "en": "**Field and potential.** The gravitational field of a point mass $M$ is $\\vec g=-\\frac{GM}{r^2}\\vec e_r$ and its potential is $\\phi=-\\frac{GM}{r}$; the force on a body of mass $m$ is $\\vec F=m\\vec g$ and the potential energy is $U=m\\phi$. The fields of several masses add (superposition). The potential is taken to be zero at infinity, so bound states have negative energy."
+ },
+ {
+  "t": "m",
+  "m": "\\vec g=-\\frac{GM}{r^2}\\vec e_r,\\qquad \\phi=-\\frac{GM}{r},\\qquad U=-\\frac{GMm}{r},\\qquad GM=g_0R^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Gauss teoremasi.** Kulon qonuni bilan o'xshashlikdan: yopiq sirt orqali maydon oqimi ichidagi massaga proporsional, $\\oint\\vec g\\cdot d\\vec S=-4\\pi GM_{in}$. Sferik simmetriyada bundan qobiq teoremasi (shell theorem) kelib chiqadi: 1) sferik qatlam tashqarisida u butun massasi markazda to'plangandek tortadi; 2) bir jinsli sferik qobiq ichida maydon nolga teng. Shuning uchun Yer va sayyoralarni nuqtaviy massa deb hisoblash mumkin.",
+  "ru": "**Теорема Гаусса.** По аналогии с законом Кулона: поток поля через замкнутую поверхность пропорционален массе внутри, $\\oint\\vec g\\cdot d\\vec S=-4\\pi GM_{in}$. При сферической симметрии отсюда следует теорема о сферическом слое (shell theorem): 1) вне сферического слоя он притягивает так, будто вся масса сосредоточена в центре; 2) внутри однородной сферической оболочки поле равно нулю. Поэтому Землю и планеты можно считать точечными массами.",
+  "en": "**Gauss's law.** By analogy with Coulomb's law, the flux of the field through a closed surface is proportional to the mass inside: $\\oint\\vec g\\cdot d\\vec S=-4\\pi GM_{in}$. With spherical symmetry this gives the shell theorem: 1) outside a spherical shell it attracts as if all its mass were at the center; 2) inside a uniform spherical shell the field is zero. That is why the Earth and the planets may be treated as point masses."
+ },
+ {
+  "t": "m",
+  "m": "\\oint\\vec g\\cdot d\\vec S=-4\\pi GM_{in},\\qquad g(r)=\\frac{GM_{in}(r)}{r^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Bir jinsli shar ichida.** Radiusi $R$ bo'lgan bir jinsli shar ichida $r$ masofada faqat $M\\frac{r^3}{R^3}$ massa tortadi, shuning uchun $g(r)=g_0\\frac{r}{R}$ — maydon markazgacha chiziqli kamayadi; eng kattasi sirtda ([[F01]]). Potensial ichkarida parabola: $\\phi(r)=-\\frac{GM(3R^2-r^2)}{2R^3}$, markazda $\\phi=-\\frac{3GM}{2R}$ — sirtdagidan $1.5$ marta chuqur. Kuch $F=-\\frac{mg_0}{R}r$ elastik kuchga o'xshaydi, shuning uchun shar ichidagi tunnelda harakat garmonik (B2-L07).",
+  "ru": "**Внутри однородного шара.** Внутри однородного шара радиуса $R$ на расстоянии $r$ притягивает лишь масса $M\\frac{r^3}{R^3}$, поэтому $g(r)=g_0\\frac{r}{R}$ — поле линейно убывает к центру; наибольшее — на поверхности ([[F01]]). Потенциал внутри — парабола: $\\phi(r)=-\\frac{GM(3R^2-r^2)}{2R^3}$, в центре $\\phi=-\\frac{3GM}{2R}$ — в $1.5$ раза глубже, чем на поверхности. Сила $F=-\\frac{mg_0}{R}r$ похожа на упругую, поэтому движение в туннеле внутри шара гармоническое (B2-L07).",
+  "en": "**Inside a uniform sphere.** Inside a uniform sphere of radius $R$, at distance $r$ only the mass $M\\frac{r^3}{R^3}$ attracts, so $g(r)=g_0\\frac{r}{R}$ — the field falls linearly toward the center and is largest at the surface ([[F01]]). Inside, the potential is a parabola: $\\phi(r)=-\\frac{GM(3R^2-r^2)}{2R^3}$, and at the center $\\phi=-\\frac{3GM}{2R}$ — $1.5$ times deeper than at the surface. The force $F=-\\frac{mg_0}{R}r$ is like an elastic force, so motion in a tunnel inside the sphere is harmonic (B2-L07)."
+ },
+ {
+  "t": "m",
+  "m": "g(r)=g_0\\frac{r}{R}\\ (r\\leq R),\\qquad g(r)=g_0\\frac{R^2}{r^2}\\ (r\\geq R),\\qquad \\phi(0)=-\\frac{3GM}{2R}"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L08-F01.png",
+   "ru": "figures/B2-L08-F01-ru.png",
+   "en": "figures/B2-L08-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Balandlik va chuqurlik.** Sirtdan $h$ balandlikda $g=g_0\\frac{R^2}{(R+h)^2}\\approx g_0\\left(1-\\frac{2h}{R}\\right)$, $d$ chuqurlikda (bir jinsli Yer modeli) $g=g_0\\left(1-\\frac{d}{R}\\right)$ — chuqurlikda maydon ikki marta sekinroq kamayadi. Haqiqiy Yer zichligi markazga tomon ortadi, shuning uchun mantiyada $g$ deyarli o'zgarmaydi.",
+  "ru": "**Высота и глубина.** На высоте $h$ над поверхностью $g=g_0\\frac{R^2}{(R+h)^2}\\approx g_0\\left(1-\\frac{2h}{R}\\right)$, на глубине $d$ (модель однородной Земли) $g=g_0\\left(1-\\frac{d}{R}\\right)$ — с глубиной поле убывает вдвое медленнее. Плотность реальной Земли растёт к центру, поэтому в мантии $g$ почти не меняется.",
+  "en": "**Height and depth.** At height $h$ above the surface $g=g_0\\frac{R^2}{(R+h)^2}\\approx g_0\\left(1-\\frac{2h}{R}\\right)$, and at depth $d$ (uniform-Earth model) $g=g_0\\left(1-\\frac{d}{R}\\right)$ — with depth the field falls half as fast. The density of the real Earth increases toward the center, so in the mantle $g$ hardly changes."
+ },
+ {
+  "t": "li",
+  "uz": "**Suv qalqishi (tidal) kuchlari.** Jismning turli nuqtalariga tashqi massa $M$ turli kuch bilan ta'sir qiladi. Markazdan $\\Delta r$ masofadagi nuqtaning markazga nisbatan tezlanishi $\\Delta g\\approx\\frac{2GM\\Delta r}{r^3}$ — $\\frac{1}{r^3}$ ga proporsional. Shu sababli Oyning Yerdagi suv qalqishiga ta'siri Quyoshnikidan taxminan $2$ marta katta, garchi Quyoshning tortish kuchi ancha katta bo'lsa ham; suv qalqishi do'ngliklari ikkita — Oyga qaragan va qarama-qarshi tomonda.",
+  "ru": "**Приливные силы.** Внешняя масса $M$ действует на разные точки тела с разной силой. Ускорение точки на расстоянии $\\Delta r$ от центра относительно центра $\\Delta g\\approx\\frac{2GM\\Delta r}{r^3}$ — пропорционально $\\frac{1}{r^3}$. Поэтому приливное действие Луны на Землю примерно в $2$ раза больше солнечного, хотя сила притяжения Солнца намного больше; приливных горбов два — на стороне, обращённой к Луне, и на противоположной.",
+  "en": "**Tidal forces.** An external mass $M$ acts on different points of a body with different forces. The acceleration of a point at distance $\\Delta r$ from the center relative to the center is $\\Delta g\\approx\\frac{2GM\\Delta r}{r^3}$ — proportional to $\\frac{1}{r^3}$. That is why the Moon's tidal effect on the Earth is about $2$ times the Sun's, even though the Sun's pull is much larger; there are two tidal bulges — on the side facing the Moon and on the opposite side."
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** Zichligi Yernikiga teng, radiusi Yernikidan $2$ marta katta sayyorada $g=\\frac{4}{3}\\pi G\\rho R$ ham $2$ marta katta — sirtdagi maydon radiusga proporsional (zichlik bir xil bo'lsa). Massasi esa $8$ marta katta.",
+  "ru": "**Пример.** На планете той же плотности, что и Земля, но с радиусом в $2$ раза больше, $g=\\frac{4}{3}\\pi G\\rho R$ тоже в $2$ раза больше — при одинаковой плотности поле на поверхности пропорционально радиусу. Масса же больше в $8$ раз.",
+  "en": "**Example.** On a planet with the Earth's density but $2$ times its radius, $g=\\frac{4}{3}\\pi G\\rho R$ is also $2$ times larger — at equal density the surface field is proportional to the radius. The mass, however, is $8$ times larger."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Markaziy kuchlarning umumiy xossalari",
+  "ru": "2. Общие свойства центральных сил",
+  "en": "2. General properties of central forces"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif va saqlanish qonunlari.** Markaziy kuch (central force) doim qo'zg'almas markazga yo'nalgan va moduli faqat $r$ ga bog'liq: $\\vec F=F(r)\\vec e_r$. Bunday kuch konservativ — $F=-\\frac{dU}{dr}$. Uning markazga nisbatan momenti nol, shuning uchun $\\vec L$ saqlanadi: harakat $\\vec L$ ga perpendikulyar tekislikda bo'ladi va sektor tezlik o'zgarmaydi (B2-L06). Energiyani radial harakat tenglamasi ko'rinishida yozish mumkin: $E=\\frac{m\\dot r^2}{2}+\\tilde U(r)$, $\\tilde U=U+\\frac{L^2}{2mr^2}$.",
+  "ru": "**Определение и законы сохранения.** Центральная сила (central force) всегда направлена к неподвижному центру, а её модуль зависит только от $r$: $\\vec F=F(r)\\vec e_r$. Такая сила консервативна — $F=-\\frac{dU}{dr}$. Её момент относительно центра равен нулю, поэтому $\\vec L$ сохраняется: движение плоское (в плоскости, перпендикулярной $\\vec L$), а секторная скорость постоянна (B2-L06). Энергию можно записать в виде уравнения радиального движения: $E=\\frac{m\\dot r^2}{2}+\\tilde U(r)$, $\\tilde U=U+\\frac{L^2}{2mr^2}$.",
+  "en": "**Definition and conservation laws.** A central force always points toward a fixed center and its magnitude depends only on $r$: $\\vec F=F(r)\\vec e_r$. Such a force is conservative — $F=-\\frac{dU}{dr}$. Its torque about the center is zero, so $\\vec L$ is conserved: the motion is planar (in the plane perpendicular to $\\vec L$) and the areal velocity is constant (B2-L06). The energy can be written as a radial equation of motion: $E=\\frac{m\\dot r^2}{2}+\\tilde U(r)$, $\\tilde U=U+\\frac{L^2}{2mr^2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Aylana orbitalar.** Kuch $F=\\frac{k}{r^n}$ (tortishish) bo'lsa, aylana orbita sharti $\\frac{mv^2}{r}=\\frac{k}{r^n}$ dan $v^2\\propto r^{1-n}$ va davr $T=\\frac{2\\pi r}{v}\\propto r^{\\frac{n+1}{2}}$. Gravitatsiyada ($n=2$) bu Keplerning uchinchi qonuni $T\\propto r^{3/2}$; elastik kuchda ($n=-1$) davr radiusga bog'liq emas; $n=1$ da tezlik o'zgarmas — galaktikalardagi «tekis aylanish egri chizig'i» shunday kuchga mos keladi.",
+  "ru": "**Круговые орбиты.** Если сила $F=\\frac{k}{r^n}$ (притяжение), условие круговой орбиты $\\frac{mv^2}{r}=\\frac{k}{r^n}$ даёт $v^2\\propto r^{1-n}$ и период $T=\\frac{2\\pi r}{v}\\propto r^{\\frac{n+1}{2}}$. При тяготении ($n=2$) это третий закон Кеплера $T\\propto r^{3/2}$; при упругой силе ($n=-1$) период не зависит от радиуса; при $n=1$ скорость постоянна — «плоская кривая вращения» галактик соответствует такой силе.",
+  "en": "**Circular orbits.** If the force is $F=\\frac{k}{r^n}$ (attractive), the circular-orbit condition $\\frac{mv^2}{r}=\\frac{k}{r^n}$ gives $v^2\\propto r^{1-n}$ and a period $T=\\frac{2\\pi r}{v}\\propto r^{\\frac{n+1}{2}}$. For gravity ($n=2$) this is Kepler's third law $T\\propto r^{3/2}$; for an elastic force ($n=-1$) the period does not depend on the radius; for $n=1$ the speed is constant — the “flat rotation curve” of galaxies corresponds to such a force."
+ },
+ {
+  "t": "m",
+  "m": "F=\\frac{k}{r^n}:\\qquad v^2\\propto r^{1-n},\\qquad T\\propto r^{\\frac{n+1}{2}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Barqarorlik.** Aylana orbita $\\tilde U(r)$ ning minimumida bo'lsa barqaror. $\\tilde U''>0$ shartidan: $F\\propto\\frac{1}{r^n}$ uchun aylana orbitalar faqat $n<3$ da barqaror. Aylanaga yaqin orbitada radius kichik tebranadi; radial tebranish chastotasi $\\omega_r=\\omega\\sqrt{3-n}$, bu yerda $\\omega$ — aylanish burchak tezligi. Gravitatsiyada $\\omega_r=\\omega$ — bir aylanishda bitta perisentr, orbita yopiq ellips; elastik kuchda $\\omega_r=2\\omega$ — markazi kuch markazida bo'lgan ellips.",
+  "ru": "**Устойчивость.** Круговая орбита устойчива, если она в минимуме $\\tilde U(r)$. Из условия $\\tilde U''>0$: для $F\\propto\\frac{1}{r^n}$ круговые орбиты устойчивы лишь при $n<3$. На орбите, близкой к круговой, радиус совершает малые колебания; частота радиальных колебаний $\\omega_r=\\omega\\sqrt{3-n}$, где $\\omega$ — угловая скорость обращения. При тяготении $\\omega_r=\\omega$ — один перицентр за оборот, орбита — замкнутый эллипс; при упругой силе $\\omega_r=2\\omega$ — эллипс с центром в центре силы.",
+  "en": "**Stability.** A circular orbit is stable if it sits at a minimum of $\\tilde U(r)$. From $\\tilde U''>0$: for $F\\propto\\frac{1}{r^n}$ circular orbits are stable only for $n<3$. On a nearly circular orbit the radius oscillates slightly; the radial oscillation frequency is $\\omega_r=\\omega\\sqrt{3-n}$, where $\\omega$ is the orbital angular velocity. For gravity $\\omega_r=\\omega$ — one pericenter per revolution and a closed ellipse; for an elastic force $\\omega_r=2\\omega$ — an ellipse centered on the force center."
+ },
+ {
+  "t": "m",
+  "m": "n<3,\\qquad \\omega_r=\\omega\\sqrt{3-n}"
+ },
+ {
+  "t": "li",
+  "uz": "**Bertran teoremasi.** Barcha chegaralangan orbitalar yopiq bo'ladigan markaziy kuchlar faqat ikkita: $F\\propto\\frac{1}{r^2}$ va $F\\propto r$. Boshqa har qanday kuchda (masalan, gravitatsiyaga kichik qo'shimcha bo'lsa) ellips o'qi sekin buriladi — perisentr presessiyasi. Merkuriy perigeliysining umumiy nisbiylik nazariyasi bilan tushuntirilgan qo'shimcha siljishi shunday effekt.",
+  "ru": "**Теорема Бертрана.** Центральных сил, при которых все финитные орбиты замкнуты, только две: $F\\propto\\frac{1}{r^2}$ и $F\\propto r$. При любой другой силе (например, при малой добавке к тяготению) ось эллипса медленно поворачивается — прецессия перицентра. Дополнительное смещение перигелия Меркурия, объяснённое общей теорией относительности, — такой эффект.",
+  "en": "**Bertrand's theorem.** There are only two central forces for which all bound orbits are closed: $F\\propto\\frac{1}{r^2}$ and $F\\propto r$. For any other force (for example, a small addition to gravity) the axis of the ellipse slowly rotates — precession of the pericenter. The extra shift of Mercury's perihelion explained by general relativity is such an effect."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L08-F02.png",
+   "ru": "figures/B2-L08-F02-ru.png",
+   "en": "figures/B2-L08-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Ikki jism masalasi va keltirilgan massa",
+  "ru": "3. Задача двух тел и приведённая масса",
+  "en": "3. The two-body problem and the reduced mass"
+ },
+ {
+  "t": "li",
+  "uz": "**Massa markazi va nisbiy koordinata.** Faqat o'zaro tortishuvchi ikki jismda massa markazi tekis harakatlanadi. Nisbiy radius-vektor $\\vec r=\\vec r_1-\\vec r_2$ uchun tenglama $\\mu\\ddot{\\vec r}=\\vec F(\\vec r)$, bu yerda $\\mu=\\frac{m_1m_2}{m_1+m_2}$ — keltirilgan massa (reduced mass). Ya'ni masala qo'zg'almas markaz atrofida $\\mu$ massali bitta jism masalasiga keltiriladi. Ikkala jism massa markazi atrofida bir xil davr bilan aylanadi, radiuslari esa massalarga teskari proporsional: $\\frac{r_1}{r_2}=\\frac{m_2}{m_1}$ ([[F03]]).",
+  "ru": "**Центр масс и относительная координата.** У двух тел, взаимодействующих только друг с другом, центр масс движется равномерно. Для относительного радиус-вектора $\\vec r=\\vec r_1-\\vec r_2$ уравнение имеет вид $\\mu\\ddot{\\vec r}=\\vec F(\\vec r)$, где $\\mu=\\frac{m_1m_2}{m_1+m_2}$ — приведённая масса (reduced mass). То есть задача сводится к задаче одного тела массой $\\mu$ вокруг неподвижного центра. Оба тела обращаются вокруг центра масс с одинаковым периодом, а их радиусы обратно пропорциональны массам: $\\frac{r_1}{r_2}=\\frac{m_2}{m_1}$ ([[F03]]).",
+  "en": "**Center of mass and relative coordinate.** For two bodies interacting only with each other, the center of mass moves uniformly. For the relative position vector $\\vec r=\\vec r_1-\\vec r_2$ the equation is $\\mu\\ddot{\\vec r}=\\vec F(\\vec r)$, where $\\mu=\\frac{m_1m_2}{m_1+m_2}$ is the reduced mass. That is, the problem reduces to that of a single body of mass $\\mu$ around a fixed center. Both bodies orbit the center of mass with the same period, and their radii are inversely proportional to their masses: $\\frac{r_1}{r_2}=\\frac{m_2}{m_1}$ ([[F03]])."
+ },
+ {
+  "t": "m",
+  "m": "\\mu=\\frac{m_1m_2}{m_1+m_2},\\qquad \\mu\\ddot{\\vec r}=-\\frac{Gm_1m_2}{r^2}\\vec e_r,\\qquad \\frac{r_1}{r_2}=\\frac{m_2}{m_1}"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L08-F03.png",
+   "ru": "figures/B2-L08-F03-ru.png",
+   "en": "figures/B2-L08-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Uchinchi qonundagi tuzatish.** Gravitatsiyada $\\mu\\ddot{\\vec r}=-\\frac{G(m_1+m_2)\\mu}{r^2}\\vec e_r$ — nisbiy harakat massasi $m_1+m_2$ bo'lgan qo'zg'almas jism atrofidagi harakat bilan bir xil. Shuning uchun aniq Kepler qonuni $T^2=\\frac{4\\pi^2a^3}{G(m_1+m_2)}$, bu yerda $a$ — nisbiy orbitaning katta yarim o'qi (ikki jism orasidagi masofa uchun). $m\\ll M$ bo'lsa, tuzatish kichik; qo'shaloq yulduzlarda esa davr va masofadan aynan massalar yig'indisi aniqlanadi.",
+  "ru": "**Поправка в третьем законе.** При тяготении $\\mu\\ddot{\\vec r}=-\\frac{G(m_1+m_2)\\mu}{r^2}\\vec e_r$ — относительное движение такое же, как движение вокруг неподвижного тела массой $m_1+m_2$. Поэтому точный закон Кеплера $T^2=\\frac{4\\pi^2a^3}{G(m_1+m_2)}$, где $a$ — большая полуось относительной орбиты (для расстояния между телами). При $m\\ll M$ поправка мала; у двойных звёзд по периоду и расстоянию определяется именно сумма масс.",
+  "en": "**The correction to the third law.** For gravity $\\mu\\ddot{\\vec r}=-\\frac{G(m_1+m_2)\\mu}{r^2}\\vec e_r$ — the relative motion is the same as motion around a fixed body of mass $m_1+m_2$. Hence the exact Kepler law $T^2=\\frac{4\\pi^2a^3}{G(m_1+m_2)}$, where $a$ is the semi-major axis of the relative orbit (for the distance between the bodies). For $m\\ll M$ the correction is small; for binary stars the period and separation give precisely the sum of the masses."
+ },
+ {
+  "t": "m",
+  "m": "T^2=\\frac{4\\pi^2a^3}{G(m_1+m_2)}"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya va impuls momenti.** Massa markazi sanoq sistemasida to'liq kinetik energiya $\\frac{\\mu v^2}{2}$, impuls momenti $\\mu\\vec r\\times\\vec v$, bu yerda $\\vec v$ — nisbiy tezlik. Shunday qilib bitta jism formulalarining hammasi ishlaydi, faqat $m$ o'rniga $\\mu$, $M$ o'rniga $m_1+m_2$ qo'yiladi. Bu usul atom fizikasida ham qo'llanadi: vodorod atomidagi elektron massasi o'rniga keltirilgan massa olinadi.",
+  "ru": "**Энергия и момент импульса.** В системе центра масс полная кинетическая энергия равна $\\frac{\\mu v^2}{2}$, момент импульса $\\mu\\vec r\\times\\vec v$, где $\\vec v$ — относительная скорость. Таким образом, все формулы для одного тела работают, только вместо $m$ ставится $\\mu$, а вместо $M$ — $m_1+m_2$. Этот метод применяется и в атомной физике: вместо массы электрона в атоме водорода берут приведённую массу.",
+  "en": "**Energy and angular momentum.** In the center-of-mass frame the total kinetic energy is $\\frac{\\mu v^2}{2}$ and the angular momentum is $\\mu\\vec r\\times\\vec v$, where $\\vec v$ is the relative velocity. So all one-body formulas work, with $\\mu$ in place of $m$ and $m_1+m_2$ in place of $M$. The same method is used in atomic physics: the reduced mass replaces the electron mass in the hydrogen atom."
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** Ikki jism dastlab tinch holatda $d$ masofada turgan bo'lsa, ular to'qnashguncha qancha vaqt o'tadi? Nisbiy harakat — ekssentrisiteti $1$ ga intiluvchi «qisilgan» ellips, katta yarim o'qi $\\frac{d}{2}$. Tushish davrning yarmini egallaydi: $t=\\frac{T}{2}=\\pi\\sqrt{\\frac{d^3}{8G(m_1+m_2)}}$.",
+  "ru": "**Пример.** Сколько времени пройдёт до столкновения двух тел, первоначально покоившихся на расстоянии $d$? Относительное движение — «сплющенный» эллипс с эксцентриситетом, стремящимся к $1$, и большой полуосью $\\frac{d}{2}$. Падение занимает половину периода: $t=\\frac{T}{2}=\\pi\\sqrt{\\frac{d^3}{8G(m_1+m_2)}}$.",
+  "en": "**Example.** How long does it take two bodies, initially at rest a distance $d$ apart, to collide? The relative motion is a “squashed” ellipse with eccentricity tending to $1$ and semi-major axis $\\frac{d}{2}$. The fall takes half a period: $t=\\frac{T}{2}=\\pi\\sqrt{\\frac{d^3}{8G(m_1+m_2)}}$."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Orbita tenglamasi",
+  "ru": "4. Уравнение орбиты",
+  "en": "4. The orbit equation"
+ },
+ {
+  "t": "li",
+  "uz": "**Bine tenglamasi.** Vaqtni chiqarib tashlash uchun $u=\\frac{1}{r}$ va $\\dot\\theta=\\frac{L}{mr^2}$ dan foydalanamiz: $\\dot r=-\\frac{L}{m}\\frac{du}{d\\theta}$. Radial tenglama orbita shaklini beradigan Bine tenglamasiga (Binet equation) aylanadi. U teskari masalani ham yechadi: orbita shakli ma'lum bo'lsa, kuch qonunini topish mumkin.",
+  "ru": "**Уравнение Бине.** Чтобы исключить время, используем $u=\\frac{1}{r}$ и $\\dot\\theta=\\frac{L}{mr^2}$: $\\dot r=-\\frac{L}{m}\\frac{du}{d\\theta}$. Радиальное уравнение превращается в уравнение Бине (Binet equation), задающее форму орбиты. Оно решает и обратную задачу: по известной форме орбиты можно найти закон силы.",
+  "en": "**The Binet equation.** To eliminate time we use $u=\\frac{1}{r}$ and $\\dot\\theta=\\frac{L}{mr^2}$: $\\dot r=-\\frac{L}{m}\\frac{du}{d\\theta}$. The radial equation turns into the Binet equation, which gives the shape of the orbit. It also solves the inverse problem: from a known orbit shape one can find the force law."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{d^2u}{d\\theta^2}+u=-\\frac{m}{L^2u^2}F\\left(\\frac{1}{u}\\right),\\qquad u=\\frac{1}{r}"
+ },
+ {
+  "t": "li",
+  "uz": "**Konus kesimlar.** Gravitatsiyada $F=-GMmu^2$ va o'ng tomon o'zgarmas $\\frac{GMm^2}{L^2}$ ga teng; yechim $u=\\frac{1}{p}(1+e\\cos\\theta)$. Demak orbita — fokusi kuch markazida bo'lgan konus kesim (conic section): $r=\\frac{p}{1+e\\cos\\theta}$, fokal parametr $p=\\frac{L^2}{GMm^2}$. Ekssentrisitet (eccentricity) $e$ energiyaga bog'liq: $e=0$ — aylana, $0<e<1$ — ellips ($E<0$), $e=1$ — parabola ($E=0$), $e>1$ — giperbola ($E>0$) ([[F04]]).",
+  "ru": "**Конические сечения.** При тяготении $F=-GMmu^2$, и правая часть равна постоянной $\\frac{GMm^2}{L^2}$; решение $u=\\frac{1}{p}(1+e\\cos\\theta)$. Значит, орбита — коническое сечение (conic section) с фокусом в центре силы: $r=\\frac{p}{1+e\\cos\\theta}$, фокальный параметр $p=\\frac{L^2}{GMm^2}$. Эксцентриситет (eccentricity) $e$ зависит от энергии: $e=0$ — окружность, $0<e<1$ — эллипс ($E<0$), $e=1$ — парабола ($E=0$), $e>1$ — гипербола ($E>0$) ([[F04]]).",
+  "en": "**Conic sections.** For gravity $F=-GMmu^2$, so the right-hand side is the constant $\\frac{GMm^2}{L^2}$; the solution is $u=\\frac{1}{p}(1+e\\cos\\theta)$. So the orbit is a conic section with a focus at the force center: $r=\\frac{p}{1+e\\cos\\theta}$, with semi-latus rectum $p=\\frac{L^2}{GMm^2}$. The eccentricity $e$ depends on the energy: $e=0$ — a circle, $0<e<1$ — an ellipse ($E<0$), $e=1$ — a parabola ($E=0$), $e>1$ — a hyperbola ($E>0$) ([[F04]])."
+ },
+ {
+  "t": "m",
+  "m": "r=\\frac{p}{1+e\\cos\\theta},\\qquad p=\\frac{L^2}{GMm^2},\\qquad e=\\sqrt{1+\\frac{2EL^2}{G^2M^2m^3}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L08-F04.png",
+   "ru": "figures/B2-L08-F04-ru.png",
+   "en": "figures/B2-L08-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Burchak hisobi.** $\\theta$ perisentrdan (eng yaqin nuqtadan) hisoblanadi: $\\theta=0$ da $r_p=\\frac{p}{1+e}$, $\\theta=\\pi$ da $r_a=\\frac{p}{1-e}$. $\\theta=\\frac{\\pi}{2}$ da $r=p$ — fokal parametr fokusdan katta o'qqa perpendikulyar yo'nalishdagi masofa. Bine tenglamasi chiziqli bo'lgani uchun gravitatsiyada orbita aniq yopiq; bu Bertran teoremasining bevosita ko'rinishi.",
+  "ru": "**Отсчёт угла.** $\\theta$ отсчитывается от перицентра (ближайшей точки): при $\\theta=0$ $r_p=\\frac{p}{1+e}$, при $\\theta=\\pi$ $r_a=\\frac{p}{1-e}$. При $\\theta=\\frac{\\pi}{2}$ $r=p$ — фокальный параметр есть расстояние от фокуса в направлении, перпендикулярном большой оси. Так как уравнение Бине линейно, при тяготении орбита точно замкнута; это прямое проявление теоремы Бертрана.",
+  "en": "**Measuring the angle.** $\\theta$ is measured from the pericenter (the closest point): at $\\theta=0$ $r_p=\\frac{p}{1+e}$, at $\\theta=\\pi$ $r_a=\\frac{p}{1-e}$. At $\\theta=\\frac{\\pi}{2}$ $r=p$ — the semi-latus rectum is the distance from the focus perpendicular to the major axis. Since the Binet equation is linear, the gravitational orbit is exactly closed; this is a direct manifestation of Bertrand's theorem."
+ },
+ {
+  "t": "p",
+  "uz": "**Misol (teskari masala).** Zarra kuch markazi ustidan o'tuvchi aylana bo'ylab harakatlanadi: $r=D\\cos\\theta$. U holda $u=\\frac{1}{D\\cos\\theta}$ va Bine tenglamasidan $\\frac{d^2u}{d\\theta^2}+u=2D^2u^3$, ya'ni $F\\propto-u^5$ — kuch $\\frac{1}{r^5}$ ga proporsional.",
+  "ru": "**Пример (обратная задача).** Частица движется по окружности, проходящей через центр силы: $r=D\\cos\\theta$. Тогда $u=\\frac{1}{D\\cos\\theta}$ и из уравнения Бине $\\frac{d^2u}{d\\theta^2}+u=2D^2u^3$, т. е. $F\\propto-u^5$ — сила пропорциональна $\\frac{1}{r^5}$.",
+  "en": "**Example (inverse problem).** A particle moves on a circle passing through the force center: $r=D\\cos\\theta$. Then $u=\\frac{1}{D\\cos\\theta}$ and the Binet equation gives $\\frac{d^2u}{d\\theta^2}+u=2D^2u^3$, i.e. $F\\propto-u^5$ — the force is proportional to $\\frac{1}{r^5}$."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Kepler qonunlari va ellips geometriyasi",
+  "ru": "5. Законы Кеплера и геометрия эллипса",
+  "en": "5. Kepler's laws and the geometry of the ellipse"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchta qonun.** I — sayyoralar fokuslaridan birida Quyosh joylashgan ellips bo'ylab harakatlanadi (orbita tenglamasidan). II — radius-vektor teng vaqtlarda teng yuzalar chizadi ($\\vec L$ saqlanishidan, B2-L06). III — aylanish davri kvadratining katta yarim o'q kubiga nisbati barcha sayyoralar uchun bir xil: $\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$. Uchinchi qonun orbita shakliga bog'liq emas: katta yarim o'qi bir xil aylana va juda cho'zilgan ellips davri teng.",
+  "ru": "**Три закона.** I — планеты движутся по эллипсам, в одном из фокусов которых находится Солнце (из уравнения орбиты). II — радиус-вектор за равные времена описывает равные площади (из сохранения $\\vec L$, B2-L06). III — отношение квадрата периода обращения к кубу большой полуоси одинаково для всех планет: $\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$. Третий закон не зависит от формы орбиты: окружность и сильно вытянутый эллипс с одинаковой большой полуосью имеют равные периоды.",
+  "en": "**The three laws.** I — the planets move on ellipses with the Sun at one focus (from the orbit equation). II — the position vector sweeps equal areas in equal times (from conservation of $\\vec L$, B2-L06). III — the ratio of the square of the period to the cube of the semi-major axis is the same for all planets: $\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$. The third law does not depend on the shape of the orbit: a circle and a very elongated ellipse with the same semi-major axis have equal periods."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ellips parametrlari.** Katta yarim o'q $a$, kichik yarim o'q $b$, fokusdan markazgacha $c=ae$; perisentr va aposentr masofalari $r_p=a(1-e)$, $r_a=a(1+e)$. Bulardan foydali munosabatlar: $a=\\frac{r_p+r_a}{2}$, $e=\\frac{r_a-r_p}{r_a+r_p}$, $b=\\sqrt{r_pr_a}$, $p=\\frac{b^2}{a}=\\frac{2r_pr_a}{r_p+r_a}$ ([[F05]]). Ellips yuzasi $\\pi ab$; uchinchi qonunni ikkinchidan ham olish mumkin: $T=\\frac{\\pi ab}{L/(2m)}$.",
+  "ru": "**Параметры эллипса.** Большая полуось $a$, малая полуось $b$, расстояние от фокуса до центра $c=ae$; расстояния перицентра и апоцентра $r_p=a(1-e)$, $r_a=a(1+e)$. Отсюда полезные соотношения: $a=\\frac{r_p+r_a}{2}$, $e=\\frac{r_a-r_p}{r_a+r_p}$, $b=\\sqrt{r_pr_a}$, $p=\\frac{b^2}{a}=\\frac{2r_pr_a}{r_p+r_a}$ ([[F05]]). Площадь эллипса $\\pi ab$; третий закон можно получить и из второго: $T=\\frac{\\pi ab}{L/(2m)}$.",
+  "en": "**Ellipse parameters.** The semi-major axis $a$, the semi-minor axis $b$, the distance from the focus to the center $c=ae$; the pericenter and apocenter distances $r_p=a(1-e)$, $r_a=a(1+e)$. Useful relations follow: $a=\\frac{r_p+r_a}{2}$, $e=\\frac{r_a-r_p}{r_a+r_p}$, $b=\\sqrt{r_pr_a}$, $p=\\frac{b^2}{a}=\\frac{2r_pr_a}{r_p+r_a}$ ([[F05]]). The area of the ellipse is $\\pi ab$; the third law can also be obtained from the second: $T=\\frac{\\pi ab}{L/(2m)}$."
+ },
+ {
+  "t": "m",
+  "m": "r_p=a(1-e),\\qquad r_a=a(1+e),\\qquad b=\\sqrt{r_pr_a},\\qquad p=\\frac{b^2}{a}"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L08-F05.png",
+   "ru": "figures/B2-L08-F05-ru.png",
+   "en": "figures/B2-L08-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Uchinchi qonun bilan hisoblash.** Bitta markaz atrofidagi ikki jism uchun $\\frac{T_1^2}{T_2^2}=\\frac{a_1^3}{a_2^3}$ — $G$ va $M$ kerak emas. Yer yo'ldoshlari uchun qulay mezon — Yer sirtiga yaqin aylana orbita: $T_0=2\\pi\\sqrt{\\frac{R}{g}}\\approx84\\ \\mathrm{min}$. Quyosh tizimida yillar va astronomik birliklarda ($\\mathrm{AU}$) $T^2=a^3$; log-log grafikda barcha sayyoralar og'ishi $\\frac{3}{2}$ bo'lgan to'g'ri chiziqqa tushadi ([[F06]]).",
+  "ru": "**Расчёт по третьему закону.** Для двух тел вокруг одного центра $\\frac{T_1^2}{T_2^2}=\\frac{a_1^3}{a_2^3}$ — $G$ и $M$ не нужны. Для спутников Земли удобный эталон — круговая орбита у поверхности Земли: $T_0=2\\pi\\sqrt{\\frac{R}{g}}\\approx84\\ \\mathrm{min}$. В Солнечной системе в годах и астрономических единицах ($\\mathrm{AU}$) $T^2=a^3$; на графике в логарифмическом масштабе все планеты ложатся на прямую с наклоном $\\frac{3}{2}$ ([[F06]]).",
+  "en": "**Calculating with the third law.** For two bodies around the same center $\\frac{T_1^2}{T_2^2}=\\frac{a_1^3}{a_2^3}$ — no need for $G$ and $M$. For Earth satellites a handy reference is the circular orbit just above the surface: $T_0=2\\pi\\sqrt{\\frac{R}{g}}\\approx84\\ \\mathrm{min}$. In the Solar System, in years and astronomical units ($\\mathrm{AU}$), $T^2=a^3$; on a log-log plot all planets fall on a straight line of slope $\\frac{3}{2}$ ([[F06]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L08-F06.png",
+   "ru": "figures/B2-L08-F06-ru.png",
+   "en": "figures/B2-L08-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Orbita energiyasi va vis-viva tenglamasi",
+  "ru": "6. Энергия орбиты и уравнение vis-viva",
+  "en": "6. Orbital energy and the vis-viva equation"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya katta yarim o'q bilan aniqlanadi.** Perisentr va aposentrda tezlik radiusga perpendikulyar; $L=mv_pr_p=mv_ar_a$ va energiyaning saqlanishidan $E=-\\frac{GMm}{r_p+r_a}$, ya'ni $E=-\\frac{GMm}{2a}$. Energiya faqat $a$ ga bog'liq, ekssentrisitetga esa impuls momenti ta'sir qiladi: bir xil energiyali orbitalardan $L$ eng katta bo'lgani — aylana.",
+  "ru": "**Энергия определяется большой полуосью.** В перицентре и апоцентре скорость перпендикулярна радиусу; из $L=mv_pr_p=mv_ar_a$ и сохранения энергии $E=-\\frac{GMm}{r_p+r_a}$, т. е. $E=-\\frac{GMm}{2a}$. Энергия зависит только от $a$, а на эксцентриситет влияет момент импульса: из орбит с одинаковой энергией наибольший $L$ у окружности.",
+  "en": "**The energy is set by the semi-major axis.** At the pericenter and apocenter the velocity is perpendicular to the radius; from $L=mv_pr_p=mv_ar_a$ and energy conservation, $E=-\\frac{GMm}{r_p+r_a}$, i.e. $E=-\\frac{GMm}{2a}$. The energy depends only on $a$, while the eccentricity is governed by the angular momentum: of all orbits with the same energy, the circle has the largest $L$."
+ },
+ {
+  "t": "m",
+  "m": "E=-\\frac{GMm}{2a},\\qquad L=m\\sqrt{GMa(1-e^2)}"
+ },
+ {
+  "t": "li",
+  "uz": "**Vis-viva tenglamasi.** $\\frac{mv^2}{2}-\\frac{GMm}{r}=-\\frac{GMm}{2a}$ dan istalgan nuqtadagi tezlik: $v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)$. Bu orbita masalalarining eng kuchli formulasi: $r$ va $v$ ma'lum bo'lsa, $a$ va davr darhol topiladi (yo'nalish shart emas!). Kichik o'q uchida $r=a$, shuning uchun u yerda tezlik aylana orbitadagidek: $v=\\sqrt{\\frac{GM}{a}}$.",
+  "ru": "**Уравнение vis-viva.** Из $\\frac{mv^2}{2}-\\frac{GMm}{r}=-\\frac{GMm}{2a}$ получаем скорость в любой точке: $v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)$. Это самая сильная формула орбитальных задач: если известны $r$ и $v$, сразу находятся $a$ и период (направление не нужно!). В конце малой оси $r=a$, поэтому там скорость такая же, как на круговой орбите: $v=\\sqrt{\\frac{GM}{a}}$.",
+  "en": "**The vis-viva equation.** From $\\frac{mv^2}{2}-\\frac{GMm}{r}=-\\frac{GMm}{2a}$ we get the speed at any point: $v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)$. This is the most powerful formula for orbit problems: given $r$ and $v$, one immediately finds $a$ and the period (the direction is not needed!). At the end of the minor axis $r=a$, so the speed there equals the circular-orbit speed: $v=\\sqrt{\\frac{GM}{a}}$."
+ },
+ {
+  "t": "m",
+  "m": "v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Kosmik tezliklar.** $a=r$ — aylana orbita: $v_1=\\sqrt{\\frac{GM}{r}}$; $a\\to\\infty$ — parabola, qochish tezligi (escape speed) $v_2=\\sqrt{\\frac{2GM}{r}}=\\sqrt{2}v_1$. Yer sirti uchun $v_1=\\sqrt{gR}\\approx7.9\\ \\mathrm{km/s}$, $v_2\\approx11.2\\ \\mathrm{km/s}$. Gorizontal otilgan jism uchun: $v<v_1$ — Yerga qaytadi (sirtdan pastga tushadigan ellips), $v_1<v<v_2$ — ellips (otish nuqtasi perigey), $v\\geq v_2$ — qaytmaydi.",
+  "ru": "**Космические скорости.** $a=r$ — круговая орбита: $v_1=\\sqrt{\\frac{GM}{r}}$; $a\\to\\infty$ — парабола, скорость убегания (escape speed) $v_2=\\sqrt{\\frac{2GM}{r}}=\\sqrt{2}v_1$. Для поверхности Земли $v_1=\\sqrt{gR}\\approx7.9\\ \\mathrm{km/s}$, $v_2\\approx11.2\\ \\mathrm{km/s}$. Для тела, брошенного горизонтально: $v<v_1$ — возвращается на Землю (эллипс, уходящий под поверхность), $v_1<v<v_2$ — эллипс (точка броска — перигей), $v\\geq v_2$ — не возвращается.",
+  "en": "**Cosmic speeds.** $a=r$ — a circular orbit: $v_1=\\sqrt{\\frac{GM}{r}}$; $a\\to\\infty$ — a parabola, the escape speed $v_2=\\sqrt{\\frac{2GM}{r}}=\\sqrt{2}v_1$. At the Earth's surface $v_1=\\sqrt{gR}\\approx7.9\\ \\mathrm{km/s}$ and $v_2\\approx11.2\\ \\mathrm{km/s}$. For a body launched horizontally: $v<v_1$ — it returns to the Earth (an ellipse dipping below the surface), $v_1<v<v_2$ — an ellipse (the launch point is the perigee), $v\\geq v_2$ — it does not return."
+ },
+ {
+  "t": "m",
+  "m": "v_1=\\sqrt{\\frac{GM}{r}},\\qquad v_2=\\sqrt{2}v_1,\\qquad E_k=-\\frac{U}{2}=-E"
+ },
+ {
+  "t": "li",
+  "uz": "**Virial munosabati.** Aylana orbitada $E_k=\\frac{GMm}{2r}=-\\frac{U}{2}$, demak $E=-E_k$. Ellipsda bu vaqt bo'yicha o'rtacha uchun bajariladi: $\\langle E_k\\rangle=-\\frac{1}{2}\\langle U\\rangle$. Natijada paradoks: atmosfera qarshiligi energiyani kamaytirsa, yo'ldosh pastki orbitaga tushadi va tezligi ortadi — kinetik energiya yo'qotilgan energiyaga teng miqdorda ortadi, potensial energiya esa ikki barobar ko'p kamayadi.",
+  "ru": "**Соотношение вириала.** На круговой орбите $E_k=\\frac{GMm}{2r}=-\\frac{U}{2}$, значит $E=-E_k$. На эллипсе это выполняется для средних по времени: $\\langle E_k\\rangle=-\\frac{1}{2}\\langle U\\rangle$. Отсюда парадокс: если сопротивление атмосферы уменьшает энергию, спутник опускается на более низкую орбиту и его скорость растёт — кинетическая энергия увеличивается на величину потерянной энергии, а потенциальная уменьшается вдвое больше.",
+  "en": "**The virial relation.** On a circular orbit $E_k=\\frac{GMm}{2r}=-\\frac{U}{2}$, so $E=-E_k$. On an ellipse this holds for time averages: $\\langle E_k\\rangle=-\\frac{1}{2}\\langle U\\rangle$. Hence a paradox: if atmospheric drag reduces the energy, the satellite sinks to a lower orbit and speeds up — its kinetic energy grows by the amount of energy lost, and its potential energy falls by twice as much."
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** Kometa Quyoshdan $1\\ \\mathrm{AU}$ masofada Yerning orbital tezligidan $1.3$ marta katta tezlik bilan uchmoqda. Vis-viva: $\\frac{1}{a}=2-1.69=0.31$, $a\\approx3.2\\ \\mathrm{AU}$, $T=a^{3/2}\\approx5.8$ yil. Tezlik $\\sqrt{2}\\approx1.41$ martadan kichik — orbita yopiq.",
+  "ru": "**Пример.** Комета на расстоянии $1\\ \\mathrm{AU}$ от Солнца летит со скоростью в $1.3$ раза больше орбитальной скорости Земли. Vis-viva: $\\frac{1}{a}=2-1.69=0.31$, $a\\approx3.2\\ \\mathrm{AU}$, $T=a^{3/2}\\approx5.8$ года. Скорость меньше чем в $\\sqrt{2}\\approx1.41$ раза — орбита замкнута.",
+  "en": "**Example.** A comet $1\\ \\mathrm{AU}$ from the Sun moves at $1.3$ times the Earth's orbital speed. Vis-viva: $\\frac{1}{a}=2-1.69=0.31$, $a\\approx3.2\\ \\mathrm{AU}$, $T=a^{3/2}\\approx5.8$ years. The speed is less than $\\sqrt{2}\\approx1.41$ times — the orbit is closed."
+ },
+ {
+  "t": "h2",
+  "uz": "7. Sun'iy yo'ldoshlar va orbitalar orasidagi o'tishlar",
+  "ru": "7. Искусственные спутники и переходы между орбитами",
+  "en": "7. Artificial satellites and transfers between orbits"
+ },
+ {
+  "t": "li",
+  "uz": "**Geostatsionar orbita.** Ekvator tekisligida, Yer bilan bir xil burchak tezlikda (yulduz sutkasi, taxminan $24$ soat) aylanadigan yo'ldosh Yerdan qaraganda qo'zg'almas turadi. Uchinchi qonundan $r=\\left(\\frac{gR^2T^2}{4\\pi^2}\\right)^{1/3}\\approx4.2\\cdot10^7\\ \\mathrm{m}\\approx6.6R$. Oy uchun $r\\approx60R$, $T\\approx27$ sutka — ikki orbita uchinchi qonun bilan tez tekshiriladi.",
+  "ru": "**Геостационарная орбита.** Спутник, вращающийся в плоскости экватора с той же угловой скоростью, что и Земля (звёздные сутки, около $24$ часов), неподвижен для земного наблюдателя. Из третьего закона $r=\\left(\\frac{gR^2T^2}{4\\pi^2}\\right)^{1/3}\\approx4.2\\cdot10^7\\ \\mathrm{m}\\approx6.6R$. Для Луны $r\\approx60R$, $T\\approx27$ суток — две орбиты быстро сверяются третьим законом.",
+  "en": "**The geostationary orbit.** A satellite in the equatorial plane turning with the Earth's angular velocity (a sidereal day, about $24$ hours) appears fixed to an observer on the Earth. From the third law $r=\\left(\\frac{gR^2T^2}{4\\pi^2}\\right)^{1/3}\\approx4.2\\cdot10^7\\ \\mathrm{m}\\approx6.6R$. For the Moon $r\\approx60R$, $T\\approx27$ days — the two orbits are quickly cross-checked with the third law."
+ },
+ {
+  "t": "m",
+  "m": "r=\\left(\\frac{gR^2T^2}{4\\pi^2}\\right)^{1/3}\\approx6.6R"
+ },
+ {
+  "t": "li",
+  "uz": "**Hohmann o'tishi.** Radiusi $r_1$ aylana orbitadan $r_2$ ga o'tishning energiya jihatidan eng tejamkor usuli — ikkala aylanaga urinadigan ellips: $r_p=r_1$, $r_a=r_2$, $a=\\frac{r_1+r_2}{2}$ ([[F07]]). Birinchi tezlik orttirmasi perigeyda: $\\Delta v_1=\\sqrt{\\frac{GM}{r_1}}\\left(\\sqrt{\\frac{2r_2}{r_1+r_2}}-1\\right)$; ikkinchisi apogeyda: $\\Delta v_2=\\sqrt{\\frac{GM}{r_2}}\\left(1-\\sqrt{\\frac{2r_1}{r_1+r_2}}\\right)$. O'tish vaqti — ellips davrining yarmi.",
+  "ru": "**Гомановский переход.** Энергетически наиболее экономный переход с круговой орбиты радиуса $r_1$ на орбиту $r_2$ — эллипс, касающийся обеих окружностей: $r_p=r_1$, $r_a=r_2$, $a=\\frac{r_1+r_2}{2}$ ([[F07]]). Первое приращение скорости — в перигее: $\\Delta v_1=\\sqrt{\\frac{GM}{r_1}}\\left(\\sqrt{\\frac{2r_2}{r_1+r_2}}-1\\right)$; второе — в апогее: $\\Delta v_2=\\sqrt{\\frac{GM}{r_2}}\\left(1-\\sqrt{\\frac{2r_1}{r_1+r_2}}\\right)$. Время перехода — половина периода эллипса.",
+  "en": "**The Hohmann transfer.** The most energy-efficient way to move from a circular orbit of radius $r_1$ to one of radius $r_2$ is an ellipse tangent to both circles: $r_p=r_1$, $r_a=r_2$, $a=\\frac{r_1+r_2}{2}$ ([[F07]]). The first velocity increment is at perigee: $\\Delta v_1=\\sqrt{\\frac{GM}{r_1}}\\left(\\sqrt{\\frac{2r_2}{r_1+r_2}}-1\\right)$; the second at apogee: $\\Delta v_2=\\sqrt{\\frac{GM}{r_2}}\\left(1-\\sqrt{\\frac{2r_1}{r_1+r_2}}\\right)$. The transfer time is half the period of the ellipse."
+ },
+ {
+  "t": "m",
+  "m": "a=\\frac{r_1+r_2}{2},\\qquad t=\\frac{T}{2}=\\pi\\sqrt{\\frac{a^3}{GM}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L08-F07.png",
+   "ru": "figures/B2-L08-F07-ru.png",
+   "en": "figures/B2-L08-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Manyovrlar mantiqi.** Orbitaning bir nuqtasida urinma yo'nalishda tezlik oshirilsa, shu nuqta perisentrga aylanadi va qarama-qarshi nuqta uzoqlashadi; tezlik kamaytirilsa — aposentrga aylanadi. Radial impuls (tezlikka perpendikulyar) $L$ ni o'zgartirmaydi, faqat orbita shaklini va yo'nalishini o'zgartiradi. Orbitada oldinda ketayotgan yo'ldoshni quvib yetish uchun avval tormozlash kerak: pastroq orbita davri qisqa.",
+  "ru": "**Логика манёвров.** Если в точке орбиты увеличить скорость по касательной, эта точка становится перицентром, а противоположная удаляется; если скорость уменьшить — точка становится апоцентром. Радиальный импульс (перпендикулярный скорости) не меняет $L$, он меняет лишь форму и ориентацию орбиты. Чтобы догнать спутник, летящий впереди по той же орбите, нужно сначала затормозить: у более низкой орбиты период короче.",
+  "en": "**The logic of maneuvers.** If the speed is increased tangentially at a point of the orbit, that point becomes the pericenter and the opposite point moves farther out; if the speed is decreased, the point becomes the apocenter. A radial impulse (perpendicular to the velocity) does not change $L$; it changes only the shape and orientation of the orbit. To catch a satellite ahead on the same orbit one must first slow down: a lower orbit has a shorter period."
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** Yer yo'ldoshi $r_1=2R$ dan $r_2=4R$ ga Hohmann ellipsi bo'ylab o'tadi: $a=3R$, o'tish vaqti $\\frac{1}{2}\\cdot3^{3/2}T_0\\approx2.6T_0$, bu yerda $T_0\\approx84\\ \\mathrm{min}$ — sirtga yaqin orbita davri. Demak o'tish taxminan $3.6$ soat davom etadi.",
+  "ru": "**Пример.** Спутник Земли переходит с $r_1=2R$ на $r_2=4R$ по гомановскому эллипсу: $a=3R$, время перехода $\\frac{1}{2}\\cdot3^{3/2}T_0\\approx2.6T_0$, где $T_0\\approx84\\ \\mathrm{min}$ — период околоземной орбиты. Значит, переход длится около $3.6$ часа.",
+  "en": "**Example.** An Earth satellite moves from $r_1=2R$ to $r_2=4R$ along a Hohmann ellipse: $a=3R$, the transfer time is $\\frac{1}{2}\\cdot3^{3/2}T_0\\approx2.6T_0$, where $T_0\\approx84\\ \\mathrm{min}$ is the period of a near-surface orbit. So the transfer lasts about $3.6$ hours."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Ochiq orbitalar va gravitatsion sochilish",
+  "ru": "8. Открытые орбиты и гравитационное рассеяние",
+  "en": "8. Open orbits and gravitational scattering"
+ },
+ {
+  "t": "li",
+  "uz": "**Nishon masofasi.** Cheksizlikdan $v_\\infty$ tezlik bilan kelayotgan jism uchun energiya $E=\\frac{mv_\\infty^2}{2}>0$ — orbita giperbola. Nishon masofasi (impact parameter) $s$ — dastlabki to'g'ri chiziqning markazdan masofasi; impuls momenti $L=mv_\\infty s$. Eng yaqin masofa $r_{min}$ ikki saqlanish qonunidan: $v_\\infty s=v_{max}r_{min}$ va $\\frac{v_\\infty^2}{2}=\\frac{v_{max}^2}{2}-\\frac{GM}{r_{min}}$ ([[F08]]).",
+  "ru": "**Прицельный параметр.** Для тела, летящего из бесконечности со скоростью $v_\\infty$, энергия $E=\\frac{mv_\\infty^2}{2}>0$ — орбита гипербола. Прицельный параметр (impact parameter) $s$ — расстояние от центра до начальной прямой; момент импульса $L=mv_\\infty s$. Наименьшее расстояние $r_{min}$ — из двух законов сохранения: $v_\\infty s=v_{max}r_{min}$ и $\\frac{v_\\infty^2}{2}=\\frac{v_{max}^2}{2}-\\frac{GM}{r_{min}}$ ([[F08]]).",
+  "en": "**Impact parameter.** For a body arriving from infinity with speed $v_\\infty$ the energy $E=\\frac{mv_\\infty^2}{2}>0$ — the orbit is a hyperbola. The impact parameter $s$ is the distance from the center to the initial straight line; the angular momentum is $L=mv_\\infty s$. The closest distance $r_{min}$ follows from the two conservation laws: $v_\\infty s=v_{max}r_{min}$ and $\\frac{v_\\infty^2}{2}=\\frac{v_{max}^2}{2}-\\frac{GM}{r_{min}}$ ([[F08]])."
+ },
+ {
+  "t": "m",
+  "m": "L=mv_\\infty s,\\qquad r_{min}=\\frac{GM}{v_\\infty^2}\\left(\\sqrt{1+\\frac{s^2v_\\infty^4}{G^2M^2}}-1\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Og'ish burchagi.** Giperbola asimptotalari orasidagi og'ish burchagi (deflection angle) $\\theta$ uchun $\\mathrm{tg}\\frac{\\theta}{2}=\\frac{GM}{sv_\\infty^2}$. Kichik burchakda $\\theta\\approx\\frac{2GM}{sv_\\infty^2}$ — buni impuls yondashuvi bilan ham olish mumkin: ko'ndalang impuls $\\int F_\\perp dt=\\frac{2GMm}{sv_\\infty}$. Xuddi shu formula Kulon kuchida Rezerford sochilishini beradi ($GMm\\to\\frac{q_1q_2}{4\\pi\\varepsilon_0}$; B3 bosqichida).",
+  "ru": "**Угол отклонения.** Для угла отклонения (deflection angle) $\\theta$ между асимптотами гиперболы $\\mathrm{tg}\\frac{\\theta}{2}=\\frac{GM}{sv_\\infty^2}$. При малом угле $\\theta\\approx\\frac{2GM}{sv_\\infty^2}$ — это можно получить и импульсным приближением: поперечный импульс $\\int F_\\perp dt=\\frac{2GMm}{sv_\\infty}$. Та же формула для кулоновской силы даёт резерфордовское рассеяние ($GMm\\to\\frac{q_1q_2}{4\\pi\\varepsilon_0}$; в этапе B3).",
+  "en": "**Deflection angle.** For the deflection angle $\\theta$ between the asymptotes of the hyperbola $\\mathrm{tg}\\frac{\\theta}{2}=\\frac{GM}{sv_\\infty^2}$. For a small angle $\\theta\\approx\\frac{2GM}{sv_\\infty^2}$ — this also follows from the impulse approximation: the transverse impulse is $\\int F_\\perp dt=\\frac{2GMm}{sv_\\infty}$. The same formula for the Coulomb force gives Rutherford scattering ($GMm\\to\\frac{q_1q_2}{4\\pi\\varepsilon_0}$; in stage B3)."
+ },
+ {
+  "t": "m",
+  "m": "\\mathrm{tg}\\frac{\\theta}{2}=\\frac{GM}{sv_\\infty^2},\\qquad \\theta\\approx\\frac{2GM}{sv_\\infty^2}"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L08-F08.png",
+   "ru": "figures/B2-L08-F08-ru.png",
+   "en": "figures/B2-L08-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Gravitatsion fokuslash.** Sayyora (radiusi $R$) o'ziga tushadigan jismlarni geometrik kesimidan ko'proq «yig'adi»: $r_{min}=R$ shartidan tushish uchun kesim $\\sigma=\\pi R^2\\left(1+\\frac{v_2^2}{v_\\infty^2}\\right)$, bu yerda $v_2$ — sirtdan qochish tezligi. Sekin jismlar uchun kesim juda katta bo'ladi. Gravitatsion manyovr (sayyora yonidan uchib o'tish) sayyora sanoq sistemasida tezlik modulini o'zgartirmaydi, lekin Quyosh sistemasida uni oshirishi mumkin.",
+  "ru": "**Гравитационная фокусировка.** Планета (радиус $R$) «собирает» падающие тела больше, чем её геометрическое сечение: из условия $r_{min}=R$ сечение падения $\\sigma=\\pi R^2\\left(1+\\frac{v_2^2}{v_\\infty^2}\\right)$, где $v_2$ — скорость убегания с поверхности. Для медленных тел сечение очень велико. Гравитационный манёвр (пролёт около планеты) не меняет модуль скорости в системе планеты, но может увеличить его в системе Солнца.",
+  "en": "**Gravitational focusing.** A planet (radius $R$) “collects” infalling bodies over more than its geometric cross-section: from the condition $r_{min}=R$ the capture cross-section is $\\sigma=\\pi R^2\\left(1+\\frac{v_2^2}{v_\\infty^2}\\right)$, where $v_2$ is the escape speed from the surface. For slow bodies the cross-section is very large. A gravity assist (a flyby past a planet) does not change the speed in the planet's frame, but can increase it in the Sun's frame."
+ },
+ {
+  "t": "m",
+  "m": "\\sigma=\\pi R^2\\left(1+\\frac{v_2^2}{v_\\infty^2}\\right)"
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** Parabolik orbitada ($E=0$) perisentrdagi tezlik qochish tezligiga teng: $v_p=\\sqrt{\\frac{2GM}{r_p}}$, fokal parametr $p=2r_p$. Kometa Quyoshdan $0.5\\ \\mathrm{AU}$ masofadan parabola bo'ylab o'tsa, u yerdagi tezligi Yer tezligidan $\\sqrt{\\frac{2}{0.5}}=2$ marta katta, ya'ni taxminan $60\\ \\mathrm{km/s}$.",
+  "ru": "**Пример.** На параболической орбите ($E=0$) скорость в перицентре равна скорости убегания: $v_p=\\sqrt{\\frac{2GM}{r_p}}$, фокальный параметр $p=2r_p$. Если комета проходит по параболе на расстоянии $0.5\\ \\mathrm{AU}$ от Солнца, её скорость там в $\\sqrt{\\frac{2}{0.5}}=2$ раза больше скорости Земли, т. е. около $60\\ \\mathrm{km/s}$.",
+  "en": "**Example.** On a parabolic orbit ($E=0$) the pericenter speed equals the escape speed: $v_p=\\sqrt{\\frac{2GM}{r_p}}$, and the semi-latus rectum is $p=2r_p$. If a comet passes the Sun on a parabola at $0.5\\ \\mathrm{AU}$, its speed there is $\\sqrt{\\frac{2}{0.5}}=2$ times the Earth's speed, i.e. about $60\\ \\mathrm{km/s}$."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Boshqa markaziy kuchlar va virial teorema",
+  "ru": "9. Другие центральные силы и теорема о вириале",
+  "en": "9. Other central forces and the virial theorem"
+ },
+ {
+  "t": "li",
+  "uz": "**Izotrop ossilyator.** $\\vec F=-k\\vec r$ kuchda $x$ va $y$ koordinatalar mustaqil garmonik tebranadi: $x=A\\cos\\omega t$, $y=B\\sin\\omega t$, $\\omega=\\sqrt{\\frac{k}{m}}$. Orbita — markazi kuch markazida bo'lgan ellips (fokusda emas!), davr amplitudaga bog'liq emas. Energiya $E=\\frac{k(A^2+B^2)}{2}$, impuls momenti $L=m\\omega AB$. Bu kuch shar ichidagi gravitatsiyaga mos keladi (1-bo'lim).",
+  "ru": "**Изотропный осциллятор.** При силе $\\vec F=-k\\vec r$ координаты $x$ и $y$ совершают независимые гармонические колебания: $x=A\\cos\\omega t$, $y=B\\sin\\omega t$, $\\omega=\\sqrt{\\frac{k}{m}}$. Орбита — эллипс с центром (а не фокусом!) в центре силы, период не зависит от амплитуды. Энергия $E=\\frac{k(A^2+B^2)}{2}$, момент импульса $L=m\\omega AB$. Такая сила соответствует тяготению внутри шара (раздел 1).",
+  "en": "**The isotropic oscillator.** For the force $\\vec F=-k\\vec r$ the coordinates $x$ and $y$ oscillate harmonically and independently: $x=A\\cos\\omega t$, $y=B\\sin\\omega t$, $\\omega=\\sqrt{\\frac{k}{m}}$. The orbit is an ellipse centered (not focused!) on the force center, and the period does not depend on the amplitude. The energy is $E=\\frac{k(A^2+B^2)}{2}$ and the angular momentum is $L=m\\omega AB$. This force corresponds to gravity inside a sphere (section 1)."
+ },
+ {
+  "t": "m",
+  "m": "\\vec F=-k\\vec r:\\qquad x=A\\cos\\omega t,\\quad y=B\\sin\\omega t,\\qquad L=m\\omega AB"
+ },
+ {
+  "t": "li",
+  "uz": "**Virial teorema.** Chegaralangan harakatda vaqt bo'yicha o'rtacha $2\\langle E_k\\rangle=\\langle\\vec r\\cdot\\nabla U\\rangle$. Daraja ko'rinishidagi potensial $U\\propto r^\\nu$ uchun $2\\langle E_k\\rangle=\\nu\\langle U\\rangle$. Gravitatsiya va Kulon ($\\nu=-1$): $\\langle E_k\\rangle=-\\frac{1}{2}\\langle U\\rangle$, $E=\\frac{1}{2}\\langle U\\rangle$; garmonik ossilyator ($\\nu=2$): $\\langle E_k\\rangle=\\langle U\\rangle$ (B2-L07). Teorema yulduzlar to'dalari va galaktikalar massasini baholashda ishlatiladi.",
+  "ru": "**Теорема о вириале.** При финитном движении среднее по времени $2\\langle E_k\\rangle=\\langle\\vec r\\cdot\\nabla U\\rangle$. Для степенного потенциала $U\\propto r^\\nu$: $2\\langle E_k\\rangle=\\nu\\langle U\\rangle$. Тяготение и Кулон ($\\nu=-1$): $\\langle E_k\\rangle=-\\frac{1}{2}\\langle U\\rangle$, $E=\\frac{1}{2}\\langle U\\rangle$; гармонический осциллятор ($\\nu=2$): $\\langle E_k\\rangle=\\langle U\\rangle$ (B2-L07). Теорема используется для оценки масс звёздных скоплений и галактик.",
+  "en": "**The virial theorem.** For bounded motion the time average satisfies $2\\langle E_k\\rangle=\\langle\\vec r\\cdot\\nabla U\\rangle$. For a power-law potential $U\\propto r^\\nu$: $2\\langle E_k\\rangle=\\nu\\langle U\\rangle$. Gravity and Coulomb ($\\nu=-1$): $\\langle E_k\\rangle=-\\frac{1}{2}\\langle U\\rangle$, $E=\\frac{1}{2}\\langle U\\rangle$; the harmonic oscillator ($\\nu=2$): $\\langle E_k\\rangle=\\langle U\\rangle$ (B2-L07). The theorem is used to estimate the masses of star clusters and galaxies."
+ },
+ {
+  "t": "m",
+  "m": "U\\propto r^\\nu:\\qquad 2\\langle E_k\\rangle=\\nu\\langle U\\rangle"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchinchi qonunning umumlashmasi.** O'lchamlilik (masshtab) tahlili: $U\\propto r^\\nu$ bo'lsa, o'xshash orbitalar uchun $T\\propto r^{1-\\frac{\\nu}{2}}$. $\\nu=-1$ da $T\\propto r^{3/2}$ (Kepler), $\\nu=2$ da $T$ o'zgarmas (ossilyator), $\\nu=0$ ga yaqin logarifmik potensialda $T\\propto r$ — tezlik o'zgarmas. Bu GRE da «agar tortishish $\\frac{1}{r^3}$ bo'lsa...» kabi savollarga tez javob beradi (2-bo'limdagi $n=1-\\nu$).",
+  "ru": "**Обобщение третьего закона.** Анализ размерностей (масштабов): если $U\\propto r^\\nu$, то для подобных орбит $T\\propto r^{1-\\frac{\\nu}{2}}$. При $\\nu=-1$ $T\\propto r^{3/2}$ (Кеплер), при $\\nu=2$ $T$ постоянен (осциллятор), при логарифмическом потенциале (близко к $\\nu=0$) $T\\propto r$ — скорость постоянна. Это даёт быстрый ответ на вопросы GRE вида «если бы тяготение было $\\frac{1}{r^3}$...» ($n=1-\\nu$ из раздела 2).",
+  "en": "**Generalizing the third law.** Scaling analysis: if $U\\propto r^\\nu$, then for similar orbits $T\\propto r^{1-\\frac{\\nu}{2}}$. For $\\nu=-1$ $T\\propto r^{3/2}$ (Kepler), for $\\nu=2$ $T$ is constant (oscillator), and for a logarithmic potential (close to $\\nu=0$) $T\\propto r$ — the speed is constant. This quickly answers GRE questions like “if gravity went as $\\frac{1}{r^3}$...” ($n=1-\\nu$ from section 2)."
+ },
+ {
+  "t": "m",
+  "m": "U\\propto r^\\nu:\\qquad T\\propto r^{1-\\frac{\\nu}{2}}"
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE usullari va tipik xatolar",
+  "ru": "10. Методы GRE и типичные ошибки",
+  "en": "10. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 1 — nisbatlar.** Ko'p savollarda $G$ va $M$ kerak emas: $v\\propto r^{-1/2}$, $T\\propto a^{3/2}$, $\\omega\\propto r^{-3/2}$, $E\\propto-\\frac{1}{a}$, $v_2\\propto\\sqrt{\\frac{M}{R}}\\propto R\\sqrt{\\rho}$. $G$ o'rniga $GM=gR^2$ ni qo'yish hisobni soddalashtiradi.",
+  "ru": "**Метод 1 — отношения.** Во многих вопросах $G$ и $M$ не нужны: $v\\propto r^{-1/2}$, $T\\propto a^{3/2}$, $\\omega\\propto r^{-3/2}$, $E\\propto-\\frac{1}{a}$, $v_2\\propto\\sqrt{\\frac{M}{R}}\\propto R\\sqrt{\\rho}$. Подстановка $GM=gR^2$ вместо $G$ упрощает счёт.",
+  "en": "**Method 1 — ratios.** Many questions need neither $G$ nor $M$: $v\\propto r^{-1/2}$, $T\\propto a^{3/2}$, $\\omega\\propto r^{-3/2}$, $E\\propto-\\frac{1}{a}$, $v_2\\propto\\sqrt{\\frac{M}{R}}\\propto R\\sqrt{\\rho}$. Substituting $GM=gR^2$ for $G$ simplifies the arithmetic."
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 2 — ikki saqlanish qonuni.** Perisentr–aposentr masalalari: $v_pr_p=v_ar_a$ va energiya; yoki vis-viva bilan birdan. Orbita turini aniqlash uchun $v$ ni $\\sqrt{2}v_1$ bilan solishtiring. Energiya farqini topishda $E=-\\frac{GMm}{2a}$ dan foydalaning: aylana $r$ dan $2r$ ga o'tish uchun $\\Delta E=\\frac{GMm}{4r}$.",
+  "ru": "**Метод 2 — два закона сохранения.** Задачи о перицентре и апоцентре: $v_pr_p=v_ar_a$ и энергия; или сразу vis-viva. Чтобы определить тип орбиты, сравните $v$ с $\\sqrt{2}v_1$. Для разности энергий используйте $E=-\\frac{GMm}{2a}$: для перехода с окружности $r$ на $2r$ нужно $\\Delta E=\\frac{GMm}{4r}$.",
+  "en": "**Method 2 — two conservation laws.** Pericenter–apocenter problems: $v_pr_p=v_ar_a$ plus energy, or vis-viva at once. To determine the orbit type, compare $v$ with $\\sqrt{2}v_1$. For energy differences use $E=-\\frac{GMm}{2a}$: moving from a circle of radius $r$ to $2r$ requires $\\Delta E=\\frac{GMm}{4r}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) Uchinchi qonunda $r$ ni ellipsning katta yarim o'qi o'rniga perisentr masofasi deb olish. 2) Quyosh ellips markazida deb o'ylash — u fokusda. 3) Qo'shaloq yulduzlarda $M$ o'rniga $m_1+m_2$ ni unutish yoki $a$ ni bitta yulduz orbitasi radiusi deb olish. 4) Shar ichida ham $g\\propto\\frac{1}{r^2}$ deb hisoblash. 5) Energiya kamayganda yo'ldosh sekinlashadi deb o'ylash. 6) Qochish tezligi yo'nalishga bog'liq deb o'ylash — u bog'liq emas (faqat energiya).",
+  "ru": "**Типичные ошибки.** 1) Брать в третьем законе в качестве $r$ расстояние перицентра вместо большой полуоси эллипса. 2) Думать, что Солнце в центре эллипса — оно в фокусе. 3) У двойных звёзд забывать $m_1+m_2$ вместо $M$ или брать $a$ равным радиусу орбиты одной звезды. 4) Считать $g\\propto\\frac{1}{r^2}$ и внутри шара. 5) Думать, что при уменьшении энергии спутник замедляется. 6) Думать, что скорость убегания зависит от направления — не зависит (важна только энергия).",
+  "en": "**Typical mistakes.** 1) Using the pericenter distance as $r$ in the third law instead of the ellipse's semi-major axis. 2) Thinking the Sun is at the center of the ellipse — it is at a focus. 3) For binary stars, forgetting $m_1+m_2$ instead of $M$ or taking $a$ as the orbital radius of one star. 4) Assuming $g\\propto\\frac{1}{r^2}$ even inside a sphere. 5) Thinking a satellite slows down when its energy decreases. 6) Thinking the escape speed depends on direction — it does not (only the energy matters)."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Maydon va potensial",
+    "ru": "Поле и потенциал",
+    "en": "Field and potential",
+    "m": "g=\\frac{GM}{r^2},\\quad \\phi=-\\frac{GM}{r},\\quad GM=g_0R^2"
+   },
+   {
+    "uz": "Gauss teoremasi",
+    "ru": "Теорема Гаусса",
+    "en": "Gauss's law",
+    "m": "\\oint\\vec g\\cdot d\\vec S=-4\\pi GM_{in}"
+   },
+   {
+    "uz": "Shar ichida",
+    "ru": "Внутри шара",
+    "en": "Inside a sphere",
+    "m": "g=g_0\\frac{r}{R},\\quad \\phi(0)=-\\frac{3GM}{2R}"
+   },
+   {
+    "uz": "Aylana orbitalar, barqarorlik",
+    "ru": "Круговые орбиты, устойчивость",
+    "en": "Circular orbits, stability",
+    "m": "F\\propto r^{-n}:\\ T\\propto r^{\\frac{n+1}{2}},\\quad n<3"
+   },
+   {
+    "uz": "Keltirilgan massa",
+    "ru": "Приведённая масса",
+    "en": "Reduced mass",
+    "m": "\\mu=\\frac{m_1m_2}{m_1+m_2}"
+   },
+   {
+    "uz": "Bine tenglamasi",
+    "ru": "Уравнение Бине",
+    "en": "Binet equation",
+    "m": "\\frac{d^2u}{d\\theta^2}+u=-\\frac{mF}{L^2u^2}"
+   },
+   {
+    "uz": "Orbita",
+    "ru": "Орбита",
+    "en": "Orbit",
+    "m": "r=\\frac{p}{1+e\\cos\\theta},\\quad p=\\frac{L^2}{GMm^2}"
+   },
+   {
+    "uz": "Ellips",
+    "ru": "Эллипс",
+    "en": "Ellipse",
+    "m": "r_{p,a}=a(1\\mp e),\\quad b=\\sqrt{r_pr_a}"
+   },
+   {
+    "uz": "Keplerning uchinchi qonuni",
+    "ru": "Третий закон Кеплера",
+    "en": "Kepler's third law",
+    "m": "T^2=\\frac{4\\pi^2a^3}{G(m_1+m_2)}"
+   },
+   {
+    "uz": "Energiya",
+    "ru": "Энергия",
+    "en": "Energy",
+    "m": "E=-\\frac{GMm}{2a}"
+   },
+   {
+    "uz": "Vis-viva",
+    "ru": "Vis-viva",
+    "en": "Vis-viva",
+    "m": "v^2=GM\\left(\\frac{2}{r}-\\frac{1}{a}\\right)"
+   },
+   {
+    "uz": "Kosmik tezliklar",
+    "ru": "Космические скорости",
+    "en": "Cosmic speeds",
+    "m": "v_1=\\sqrt{\\frac{GM}{r}},\\quad v_2=\\sqrt{2}v_1"
+   },
+   {
+    "uz": "Hohmann o'tishi",
+    "ru": "Гомановский переход",
+    "en": "Hohmann transfer",
+    "m": "a=\\frac{r_1+r_2}{2},\\quad t=\\frac{T}{2}"
+   },
+   {
+    "uz": "Sochilish",
+    "ru": "Рассеяние",
+    "en": "Scattering",
+    "m": "L=mv_\\infty s,\\quad \\mathrm{tg}\\frac{\\theta}{2}=\\frac{GM}{sv_\\infty^2}"
+   },
+   {
+    "uz": "Izotrop ossilyator",
+    "ru": "Изотропный осциллятор",
+    "en": "Isotropic oscillator",
+    "m": "x=A\\cos\\omega t,\\quad y=B\\sin\\omega t"
+   },
+   {
+    "uz": "Virial teorema",
+    "ru": "Теорема о вириале",
+    "en": "Virial theorem",
+    "m": "2\\langle E_k\\rangle=\\nu\\langle U\\rangle"
+   }
+  ]
+ }
+]

@@ -1,0 +1,699 @@
+[
+ {
+  "t": "h1",
+  "uz": "Garmonik ossilyator: so'nuvchi, majburiy, rezonans (Harmonic oscillator: damped, driven, resonance)",
+  "ru": "Гармонический осциллятор: затухающий, вынужденный, резонанс",
+  "en": "Harmonic oscillator: damped, driven, resonance"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz garmonik ossilyator tenglamasini istalgan sistema (prujina, fizik va buralma mayatnik, suyuqlik ustuni, potensial o'ra tubidagi zarra) uchun tuzib, uning chastotasini topasiz; boshlang'ich shartlardan amplituda va fazani aniqlaysiz; so'nuvchi tebranishlarni so'nish koeffitsiyenti, logarifmik dekrement va asllik (Q-faktor) orqali tavsiflaysiz; majburiy tebranishlar amplitudasi va fazasini, rezonans chastotasini va rezonans egri chizig'ining kengligini hisoblaysiz; bog'langan ossilyatorlarning normal modalarini topasiz.",
+  "ru": "**Цель.** После урока вы будете составлять уравнение гармонического осциллятора для любой системы (пружина, физический и крутильный маятники, столб жидкости, частица на дне потенциальной ямы) и находить его частоту; определять амплитуду и фазу из начальных условий; описывать затухающие колебания через коэффициент затухания, логарифмический декремент и добротность (Q-фактор); вычислять амплитуду и фазу вынужденных колебаний, резонансную частоту и ширину резонансной кривой; находить нормальные моды связанных осцилляторов.",
+  "en": "**Goal.** After this lesson you will set up the harmonic-oscillator equation for any system (a spring, a physical or torsion pendulum, a liquid column, a particle at the bottom of a potential well) and find its frequency; determine the amplitude and phase from the initial conditions; describe damped oscillations by the damping coefficient, the logarithmic decrement and the quality factor (Q factor); calculate the amplitude and phase of driven oscillations, the resonance frequency and the width of the resonance curve; and find the normal modes of coupled oscillators."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L20 va B1-L21 da prujinali va matematik mayatnikni, garmonik tebranish tenglamasini va rezonansni maktab darajasida ko'rdik. Endi shu mavzuni differensial tenglama tilida qaraymiz. Garmonik ossilyator (harmonic oscillator) — fizikaning eng muhim modeli: barqaror muvozanat atrofidagi har qanday kichik tebranish — molekuladagi atomlar, ko'prik, tebranish konturidagi zaryad, kvant mexanikasidagi zarra — aynan shu tenglamaga bo'ysunadi. GRE da bu mavzu klassik mexanikada (chastota, energiya, so'nish, rezonans), elektromagnetizmda (RLC zanjir) va kvant mexanikasida (kvant ossilyatori) uchraydi.",
+  "ru": "В B1-L20 и B1-L21 мы рассмотрели пружинный и математический маятники, уравнение гармонических колебаний и резонанс на школьном уровне. Теперь рассмотрим эту тему на языке дифференциальных уравнений. Гармонический осциллятор (harmonic oscillator) — важнейшая модель физики: любое малое колебание около устойчивого равновесия — атомы в молекуле, мост, заряд в колебательном контуре, частица в квантовой механике — подчиняется именно этому уравнению. В GRE эта тема встречается в классической механике (частота, энергия, затухание, резонанс), в электромагнетизме (цепь RLC) и в квантовой механике (квантовый осциллятор).",
+  "en": "In B1-L20 and B1-L21 we met the spring and simple pendulums, the equation of harmonic oscillation and resonance at the school level. Now we treat the topic in the language of differential equations. The harmonic oscillator is the most important model in physics: any small oscillation about a stable equilibrium — atoms in a molecule, a bridge, the charge in an oscillating circuit, a particle in quantum mechanics — obeys exactly this equation. On the GRE the topic appears in classical mechanics (frequency, energy, damping, resonance), in electromagnetism (the RLC circuit) and in quantum mechanics (the quantum oscillator)."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Garmonik ossilyator tenglamasi va uning yechimi",
+  "ru": "1. Уравнение гармонического осциллятора и его решение",
+  "en": "1. The harmonic-oscillator equation and its solution"
+ },
+ {
+  "t": "li",
+  "uz": "**Tenglama.** Massasi $m$ bo'lgan jismga siljishga proporsional va unga qarama-qarshi qaytaruvchi kuch (restoring force) $F=-kx$ ta'sir qilsa, Nyutonning ikkinchi qonuni $m\\ddot x=-kx$ ni beradi. $\\omega_0^2=\\frac{k}{m}$ belgilash bilan garmonik ossilyator tenglamasi hosil bo'ladi. Bu yerda $\\omega_0$ — xususiy siklik chastota (natural angular frequency); u faqat sistemaning o'ziga ($k$ va $m$ ga) bog'liq.",
+  "ru": "**Уравнение.** Если на тело массой $m$ действует возвращающая сила (restoring force) $F=-kx$, пропорциональная смещению и направленная против него, второй закон Ньютона даёт $m\\ddot x=-kx$. Обозначив $\\omega_0^2=\\frac{k}{m}$, получаем уравнение гармонического осциллятора. Здесь $\\omega_0$ — собственная циклическая частота (natural angular frequency); она зависит только от самой системы (от $k$ и $m$).",
+  "en": "**The equation.** If a body of mass $m$ is acted on by a restoring force $F=-kx$ proportional and opposite to the displacement, Newton's second law gives $m\\ddot x=-kx$. Writing $\\omega_0^2=\\frac{k}{m}$, we obtain the harmonic-oscillator equation. Here $\\omega_0$ is the natural angular frequency; it depends only on the system itself (on $k$ and $m$)."
+ },
+ {
+  "t": "m",
+  "m": "\\ddot x+\\omega_0^2x=0,\\qquad \\omega_0=\\sqrt{\\frac{k}{m}},\\qquad T=\\frac{2\\pi}{\\omega_0},\\qquad \\nu=\\frac{1}{T}"
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy yechim.** Ikkinchi tartibli chiziqli tenglamaning umumiy yechimi ikkita ixtiyoriy doimiyni o'z ichiga oladi: $x=A\\cos(\\omega_0t+\\varphi_0)$ yoki unga teng kuchli $x=C_1\\cos\\omega_0t+C_2\\sin\\omega_0t$. Bu yerda $A$ — amplituda (amplitude), $\\omega_0t+\\varphi_0$ — faza (phase), $\\varphi_0$ — boshlang'ich faza (initial phase). Doimiylar boshlang'ich shartlardan — $t=0$ dagi siljish $x_0$ va tezlik $v_0$ dan topiladi ([[F01]]).",
+  "ru": "**Общее решение.** Общее решение линейного уравнения второго порядка содержит две произвольные постоянные: $x=A\\cos(\\omega_0t+\\varphi_0)$ или равносильное ему $x=C_1\\cos\\omega_0t+C_2\\sin\\omega_0t$. Здесь $A$ — амплитуда (amplitude), $\\omega_0t+\\varphi_0$ — фаза (phase), $\\varphi_0$ — начальная фаза (initial phase). Постоянные находят из начальных условий — смещения $x_0$ и скорости $v_0$ при $t=0$ ([[F01]]).",
+  "en": "**General solution.** The general solution of a second-order linear equation contains two arbitrary constants: $x=A\\cos(\\omega_0t+\\varphi_0)$ or the equivalent $x=C_1\\cos\\omega_0t+C_2\\sin\\omega_0t$. Here $A$ is the amplitude, $\\omega_0t+\\varphi_0$ is the phase and $\\varphi_0$ is the initial phase. The constants are found from the initial conditions — the displacement $x_0$ and the velocity $v_0$ at $t=0$ ([[F01]])."
+ },
+ {
+  "t": "m",
+  "m": "x=A\\cos(\\omega_0t+\\varphi_0),\\qquad A=\\sqrt{x_0^2+\\frac{v_0^2}{\\omega_0^2}},\\qquad \\cos\\varphi_0=\\frac{x_0}{A},\\quad \\sin\\varphi_0=-\\frac{v_0}{\\omega_0A}"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L07-F01.png",
+   "ru": "figures/B2-L07-F01-ru.png",
+   "en": "figures/B2-L07-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Tezlik va tezlanish.** Hosila olsak: $v=\\dot x=-A\\omega_0\\sin(\\omega_0t+\\varphi_0)$, $a=\\ddot x=-\\omega_0^2x$. Tezlik siljishdan fazada $\\frac{\\pi}{2}$ ga oldinda, tezlanish esa siljishga qarama-qarshi fazada. Eng katta qiymatlar: $v_{max}=A\\omega_0$, $a_{max}=A\\omega_0^2$. Vaqtni chiqarib tashlasak, $v=\\pm\\omega_0\\sqrt{A^2-x^2}$ — bu ikki holat orasidagi tezlikni bog'laydigan juda foydali formula: masalan, $x_1$ va $x_2$ nuqtalardagi tezliklar ma'lum bo'lsa, $\\omega_0$ va $A$ topiladi.",
+  "ru": "**Скорость и ускорение.** Дифференцируя, получаем: $v=\\dot x=-A\\omega_0\\sin(\\omega_0t+\\varphi_0)$, $a=\\ddot x=-\\omega_0^2x$. Скорость опережает смещение по фазе на $\\frac{\\pi}{2}$, а ускорение находится в противофазе со смещением. Наибольшие значения: $v_{max}=A\\omega_0$, $a_{max}=A\\omega_0^2$. Исключив время, получаем $v=\\pm\\omega_0\\sqrt{A^2-x^2}$ — очень полезную формулу, связывающую скорости в двух положениях: например, если известны скорости в точках $x_1$ и $x_2$, находятся $\\omega_0$ и $A$.",
+  "en": "**Velocity and acceleration.** Differentiating gives $v=\\dot x=-A\\omega_0\\sin(\\omega_0t+\\varphi_0)$ and $a=\\ddot x=-\\omega_0^2x$. The velocity leads the displacement by $\\frac{\\pi}{2}$ in phase, and the acceleration is in antiphase with the displacement. The largest values are $v_{max}=A\\omega_0$ and $a_{max}=A\\omega_0^2$. Eliminating time gives $v=\\pm\\omega_0\\sqrt{A^2-x^2}$ — a very useful formula linking the velocities at two positions: for example, if the speeds at the points $x_1$ and $x_2$ are known, $\\omega_0$ and $A$ follow."
+ },
+ {
+  "t": "m",
+  "m": "v=-A\\omega_0\\sin(\\omega_0t+\\varphi_0),\\qquad a=-\\omega_0^2x,\\qquad v^2=\\omega_0^2(A^2-x^2)"
+ },
+ {
+  "t": "li",
+  "uz": "**Kompleks ko'rinish.** Hisoblarni soddalashtirish uchun yechimni $x=\\mathrm{Re}\\,\\tilde Ae^{i\\omega_0t}$ ko'rinishida yozamiz, bu yerda $\\tilde A=Ae^{i\\varphi_0}$ — kompleks amplituda. Hosila olish $i\\omega_0$ ga ko'paytirishga aylanadi; bu usul majburiy tebranishlarda (7-bo'lim) juda qulay. Fazaviy tekislikda $(x,\\ \\frac{v}{\\omega_0})$ nuqta radiusi $A$ bo'lgan aylana bo'ylab soat strelkasi yo'nalishida tekis aylanadi — bu yordamchi aylana (reference circle) usuli.",
+  "ru": "**Комплексная форма.** Чтобы упростить вычисления, запишем решение в виде $x=\\mathrm{Re}\\,\\tilde Ae^{i\\omega_0t}$, где $\\tilde A=Ae^{i\\varphi_0}$ — комплексная амплитуда. Дифференцирование превращается в умножение на $i\\omega_0$; этот метод очень удобен для вынужденных колебаний (раздел 7). На фазовой плоскости точка $(x,\\ \\frac{v}{\\omega_0})$ равномерно движется по окружности радиуса $A$ по часовой стрелке — это метод вспомогательной окружности (reference circle).",
+  "en": "**Complex form.** To simplify calculations we write the solution as $x=\\mathrm{Re}\\,\\tilde Ae^{i\\omega_0t}$, where $\\tilde A=Ae^{i\\varphi_0}$ is the complex amplitude. Differentiation becomes multiplication by $i\\omega_0$; this method is very convenient for driven oscillations (section 7). In the phase plane the point $(x,\\ \\frac{v}{\\omega_0})$ moves uniformly clockwise around a circle of radius $A$ — this is the reference-circle method."
+ },
+ {
+  "t": "li",
+  "uz": "**Izoxronlik.** Garmonik ossilyator davri amplitudaga bog'liq emas (isochronism). Bu chiziqli kuchning natijasi: amplituda $2$ marta ortsa, kuch ham, yo'l ham $2$ marta ortadi. Haqiqiy mayatnikda katta burchaklarda davr biroz ortadi: $T\\approx T_0\\left(1+\\frac{\\theta_0^2}{16}\\right)$; GRE masalalarida «kichik tebranishlar» deyilsa, bu tuzatish hisobga olinmaydi.",
+  "ru": "**Изохронность.** Период гармонического осциллятора не зависит от амплитуды (isochronism). Это следствие линейности силы: если амплитуда увеличивается в $2$ раза, то и сила, и путь увеличиваются в $2$ раза. У реального маятника при больших углах период немного растёт: $T\\approx T_0\\left(1+\\frac{\\theta_0^2}{16}\\right)$; если в задачах GRE сказано «малые колебания», эта поправка не учитывается.",
+  "en": "**Isochronism.** The period of a harmonic oscillator does not depend on the amplitude (isochronism). This follows from the linearity of the force: if the amplitude increases by a factor of $2$, both the force and the path increase by a factor of $2$. For a real pendulum the period grows slightly at large angles: $T\\approx T_0\\left(1+\\frac{\\theta_0^2}{16}\\right)$; when a GRE problem says “small oscillations”, this correction is ignored."
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** $\\omega_0=5\\ \\mathrm{rad/s}$ bo'lgan ossilyator $t=0$ da $x_0=6\\ \\mathrm{cm}$ nuqtada $v_0=40\\ \\mathrm{cm/s}$ tezlik bilan muvozanatdan uzoqlashmoqda. Amplituda $A=\\sqrt{36+64}=10\\ \\mathrm{cm}$; $\\cos\\varphi_0=0.6$, $\\sin\\varphi_0=-0.8$, ya'ni $\\varphi_0\\approx-0.93\\ \\mathrm{rad}$. Ishora tekshiruvi: $v_0>0$ va $x_0>0$ — jism hali eng chetki nuqtaga yetmagan, demak faza manfiy.",
+  "ru": "**Пример.** Осциллятор с $\\omega_0=5\\ \\mathrm{rad/s}$ при $t=0$ находится в точке $x_0=6\\ \\mathrm{cm}$ и удаляется от равновесия со скоростью $v_0=40\\ \\mathrm{cm/s}$. Амплитуда $A=\\sqrt{36+64}=10\\ \\mathrm{cm}$; $\\cos\\varphi_0=0.6$, $\\sin\\varphi_0=-0.8$, т. е. $\\varphi_0\\approx-0.93\\ \\mathrm{rad}$. Проверка знака: $v_0>0$ и $x_0>0$ — тело ещё не дошло до крайней точки, значит фаза отрицательна.",
+  "en": "**Example.** An oscillator with $\\omega_0=5\\ \\mathrm{rad/s}$ is at $x_0=6\\ \\mathrm{cm}$ at $t=0$ and moves away from equilibrium at $v_0=40\\ \\mathrm{cm/s}$. The amplitude is $A=\\sqrt{36+64}=10\\ \\mathrm{cm}$; $\\cos\\varphi_0=0.6$, $\\sin\\varphi_0=-0.8$, i.e. $\\varphi_0\\approx-0.93\\ \\mathrm{rad}$. Sign check: $v_0>0$ and $x_0>0$ — the body has not yet reached the turning point, so the phase is negative."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Turli ossilyatorlar: prujinalar, fizik va buralma mayatnik, suyuqlik",
+  "ru": "2. Разные осцилляторы: пружины, физический и крутильный маятники, жидкость",
+  "en": "2. Various oscillators: springs, physical and torsion pendulums, a liquid"
+ },
+ {
+  "t": "li",
+  "uz": "**Vertikal prujina.** Og'irlik kuchi faqat muvozanat holatini $\\Delta l=\\frac{mg}{k}$ ga siljitadi; yangi muvozanatdan hisoblangan siljish uchun tenglama o'zgarmaydi. Shuning uchun davr gorizontal holatdagidek, uni cho'zilish orqali yozish qulay: $T=2\\pi\\sqrt{\\frac{\\Delta l}{g}}$. Doimiy kuch (og'irlik, liftning doimiy tezlanishi, bir jinsli elektr maydon) chiziqli ossilyatorning chastotasini o'zgartirmaydi.",
+  "ru": "**Вертикальная пружина.** Сила тяжести лишь смещает положение равновесия на $\\Delta l=\\frac{mg}{k}$; для смещения, отсчитанного от нового равновесия, уравнение не меняется. Поэтому период такой же, как в горизонтальном положении, и его удобно записать через растяжение: $T=2\\pi\\sqrt{\\frac{\\Delta l}{g}}$. Постоянная сила (сила тяжести, постоянное ускорение лифта, однородное электрическое поле) не меняет частоту линейного осциллятора.",
+  "en": "**A vertical spring.** Gravity only shifts the equilibrium position by $\\Delta l=\\frac{mg}{k}$; for the displacement measured from the new equilibrium the equation is unchanged. So the period is the same as for a horizontal spring, and it is convenient to write it through the extension: $T=2\\pi\\sqrt{\\frac{\\Delta l}{g}}$. A constant force (gravity, a constant elevator acceleration, a uniform electric field) does not change the frequency of a linear oscillator."
+ },
+ {
+  "t": "li",
+  "uz": "**Prujinalarni ulash.** Parallel ulanganda bikrliklar qo'shiladi, ketma-ket ulanganda teskari qiymatlari qo'shiladi. Prujinani $n$ ta teng bo'lakka bo'lsak, har birining bikrligi $nk$. Bitta yukni ikki tomondan ikkita prujina tutib tursa, ular parallel ulangan hisoblanadi (ikkalasi ham bir xil siljiydi).",
+  "ru": "**Соединение пружин.** При параллельном соединении жёсткости складываются, при последовательном — складываются обратные величины. Если пружину разрезать на $n$ равных частей, жёсткость каждой равна $nk$. Если один груз удерживают две пружины с двух сторон, они соединены параллельно (обе смещаются одинаково).",
+  "en": "**Combining springs.** In parallel the stiffnesses add; in series their reciprocals add. If a spring is cut into $n$ equal pieces, each has stiffness $nk$. If one load is held by two springs from two sides, they are in parallel (both are displaced equally)."
+ },
+ {
+  "t": "m",
+  "m": "k=k_1+k_2,\\qquad \\frac{1}{k}=\\frac{1}{k_1}+\\frac{1}{k_2},\\qquad T=2\\pi\\sqrt{\\frac{\\Delta l}{g}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Fizik mayatnik (physical pendulum).** Massasi $m$, osish o'qiga nisbatan inersiya momenti $I$, o'qdan massa markazigacha masofa $a$ bo'lgan qattiq jism. Og'irlik kuchi momenti $\\tau=-mga\\sin\\theta\\approx-mga\\theta$; $I\\ddot\\theta=\\tau$ dan $\\omega_0^2=\\frac{mga}{I}$. Keltirilgan uzunlik (reduced length) $l'=\\frac{I}{ma}$ — davri shu fizik mayatnikniki bilan bir xil bo'lgan matematik mayatnik uzunligi. Shteyner teoremasi $I=I_C+ma^2$ dan: davr $a\\to0$ da ham, $a\\to\\infty$ da ham cheksiz o'sadi va $a=\\sqrt{\\frac{I_C}{m}}$ da eng kichik bo'ladi ([[F02]]).",
+  "ru": "**Физический маятник (physical pendulum).** Твёрдое тело массой $m$ с моментом инерции $I$ относительно оси подвеса и расстоянием $a$ от оси до центра масс. Момент силы тяжести $\\tau=-mga\\sin\\theta\\approx-mga\\theta$; из $I\\ddot\\theta=\\tau$ получаем $\\omega_0^2=\\frac{mga}{I}$. Приведённая длина (reduced length) $l'=\\frac{I}{ma}$ — длина математического маятника с тем же периодом. Из теоремы Штейнера $I=I_C+ma^2$: период неограниченно растёт и при $a\\to0$, и при $a\\to\\infty$, а наименьшим он будет при $a=\\sqrt{\\frac{I_C}{m}}$ ([[F02]]).",
+  "en": "**The physical pendulum.** A rigid body of mass $m$ with moment of inertia $I$ about the pivot axis and distance $a$ from the axis to the center of mass. The torque of gravity is $\\tau=-mga\\sin\\theta\\approx-mga\\theta$; from $I\\ddot\\theta=\\tau$ we get $\\omega_0^2=\\frac{mga}{I}$. The reduced length $l'=\\frac{I}{ma}$ is the length of a simple pendulum with the same period. From the parallel-axis theorem $I=I_C+ma^2$: the period grows without bound both as $a\\to0$ and as $a\\to\\infty$, and it is smallest at $a=\\sqrt{\\frac{I_C}{m}}$ ([[F02]])."
+ },
+ {
+  "t": "m",
+  "m": "T=2\\pi\\sqrt{\\frac{I}{mga}},\\qquad l'=\\frac{I}{ma},\\qquad T=2\\pi\\sqrt{\\frac{I}{\\kappa}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Buralma mayatnik (torsion pendulum).** Ingichka simga osilgan disk buralganda sim qaytaruvchi moment $\\tau=-\\kappa\\theta$ hosil qiladi, $\\kappa$ — buralish bikrligi (torsion constant). Tenglama $I\\ddot\\theta=-\\kappa\\theta$, ya'ni $\\omega_0^2=\\frac{\\kappa}{I}$. Bu ossilyator katta burchaklarda ham garmonik qoladi, shuning uchun u inersiya momentini o'lchash va Kavendish tajribasida ishlatiladi: jism diskka qo'yilganda davr $T_1$ dan $T_2$ ga o'zgarsa, $I_x=I\\left(\\frac{T_2^2}{T_1^2}-1\\right)$.",
+  "ru": "**Крутильный маятник (torsion pendulum).** При закручивании диска, подвешенного на тонкой нити, нить создаёт возвращающий момент $\\tau=-\\kappa\\theta$, $\\kappa$ — крутильная жёсткость (torsion constant). Уравнение $I\\ddot\\theta=-\\kappa\\theta$, т. е. $\\omega_0^2=\\frac{\\kappa}{I}$. Этот осциллятор остаётся гармоническим и при больших углах, поэтому его используют для измерения моментов инерции и в опыте Кавендиша: если при помещении тела на диск период меняется с $T_1$ на $T_2$, то $I_x=I\\left(\\frac{T_2^2}{T_1^2}-1\\right)$.",
+  "en": "**The torsion pendulum.** When a disc hanging on a thin wire is twisted, the wire produces a restoring torque $\\tau=-\\kappa\\theta$, where $\\kappa$ is the torsion constant. The equation is $I\\ddot\\theta=-\\kappa\\theta$, i.e. $\\omega_0^2=\\frac{\\kappa}{I}$. This oscillator stays harmonic even at large angles, so it is used to measure moments of inertia and in the Cavendish experiment: if placing a body on the disc changes the period from $T_1$ to $T_2$, then $I_x=I\\left(\\frac{T_2^2}{T_1^2}-1\\right)$."
+ },
+ {
+  "t": "li",
+  "uz": "**Suyuqlik ustuni.** U shaklidagi naychada umumiy uzunligi $l$ bo'lgan suyuqlik ustuni bir tirsakda $x$ ga ko'tarilsa, ikki sath farqi $2x$ ga teng bo'lib, qaytaruvchi kuch $2\\rho gSx$ bo'ladi; harakatlanuvchi massa $\\rho Sl$. Natijada $\\omega_0^2=\\frac{2g}{l}$ — suyuqlik zichligi va naycha kesimi qisqaradi ([[F02]]). Xuddi shunday, suvda suzayotgan areometr uchun $\\omega_0^2=\\frac{\\rho gS}{m}$, bu yerda $S$ — naycha kesimi.",
+  "ru": "**Столб жидкости.** Если в U-образной трубке столб жидкости общей длиной $l$ поднимается в одном колене на $x$, разность уровней равна $2x$, и возвращающая сила равна $2\\rho gSx$; движущаяся масса $\\rho Sl$. В итоге $\\omega_0^2=\\frac{2g}{l}$ — плотность жидкости и сечение трубки сокращаются ([[F02]]). Аналогично для ареометра, плавающего в воде, $\\omega_0^2=\\frac{\\rho gS}{m}$, где $S$ — сечение трубки.",
+  "en": "**A liquid column.** If a liquid column of total length $l$ in a U-tube rises by $x$ in one arm, the level difference is $2x$ and the restoring force is $2\\rho gSx$; the moving mass is $\\rho Sl$. As a result $\\omega_0^2=\\frac{2g}{l}$ — the liquid density and the tube cross-section cancel ([[F02]]). Similarly, for a hydrometer floating in water $\\omega_0^2=\\frac{\\rho gS}{m}$, where $S$ is the cross-section of the stem."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L07-F02.png",
+   "ru": "figures/B2-L07-F02-ru.png",
+   "en": "figures/B2-L07-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** Uzunligi $l$ bo'lgan bir jinsli sterjen uchidan osilgan: $I=\\frac{ml^2}{3}$, $a=\\frac{l}{2}$, demak $l'=\\frac{2l}{3}$. Radiusi $R$ bo'lgan halqa gardishidagi nuqtadan osilsa: $I=2mR^2$, $a=R$, $l'=2R$ — halqa diametriga teng uzunlikdagi matematik mayatnik bilan bir xil tebranadi.",
+  "ru": "**Пример.** Однородный стержень длиной $l$ подвешен за конец: $I=\\frac{ml^2}{3}$, $a=\\frac{l}{2}$, значит $l'=\\frac{2l}{3}$. Если кольцо радиуса $R$ подвешено за точку обода: $I=2mR^2$, $a=R$, $l'=2R$ — оно колеблется так же, как математический маятник длиной, равной диаметру кольца.",
+  "en": "**Example.** A uniform rod of length $l$ hangs from one end: $I=\\frac{ml^2}{3}$, $a=\\frac{l}{2}$, so $l'=\\frac{2l}{3}$. A hoop of radius $R$ hung from a point on its rim: $I=2mR^2$, $a=R$, $l'=2R$ — it oscillates like a simple pendulum whose length equals the hoop's diameter."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Kichik tebranishlar va energiya usuli",
+  "ru": "3. Малые колебания и энергетический метод",
+  "en": "3. Small oscillations and the energy method"
+ },
+ {
+  "t": "li",
+  "uz": "**Potensial o'ra tubi.** Zarra potensial energiyasi $U(x)$ bo'lgan maydonda $x_0$ nuqtada barqaror muvozanatda bo'lsin: $U'(x_0)=0$, $U''(x_0)>0$. Teylor qatorida $U(x)\\approx U(x_0)+\\frac{1}{2}U''(x_0)(x-x_0)^2$ — har qanday silliq o'ra tubi paraboladek ([[F03]]). Demak kichik tebranishlarda effektiv bikrlik $k=U''(x_0)$. $U''(x_0)<0$ bo'lsa, muvozanat turg'unmas, $U''(x_0)=0$ bo'lsa, tebranish garmonik emas.",
+  "ru": "**Дно потенциальной ямы.** Пусть частица в поле с потенциальной энергией $U(x)$ находится в устойчивом равновесии в точке $x_0$: $U'(x_0)=0$, $U''(x_0)>0$. В ряде Тейлора $U(x)\\approx U(x_0)+\\frac{1}{2}U''(x_0)(x-x_0)^2$ — дно любой гладкой ямы похоже на параболу ([[F03]]). Значит, при малых колебаниях эффективная жёсткость $k=U''(x_0)$. Если $U''(x_0)<0$, равновесие неустойчиво, а если $U''(x_0)=0$, колебания не гармонические.",
+  "en": "**The bottom of a potential well.** Let a particle in a field with potential energy $U(x)$ be in stable equilibrium at $x_0$: $U'(x_0)=0$, $U''(x_0)>0$. In the Taylor series $U(x)\\approx U(x_0)+\\frac{1}{2}U''(x_0)(x-x_0)^2$ — the bottom of any smooth well looks like a parabola ([[F03]]). So for small oscillations the effective stiffness is $k=U''(x_0)$. If $U''(x_0)<0$ the equilibrium is unstable, and if $U''(x_0)=0$ the oscillations are not harmonic."
+ },
+ {
+  "t": "m",
+  "m": "U'(x_0)=0,\\qquad \\omega_0=\\sqrt{\\frac{U''(x_0)}{m}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L07-F03.png",
+   "ru": "figures/B2-L07-F03-ru.png",
+   "en": "figures/B2-L07-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya usuli (energy method).** Sistema holati bitta umumlashgan koordinata $q$ (siljish, burchak, sath) bilan berilsa, uning to'liq energiyasini $E=\\frac{1}{2}\\mu\\dot q^2+\\frac{1}{2}\\kappa q^2$ ko'rinishiga keltiramiz; bu yerda $\\mu$ — effektiv massa (effective mass), $\\kappa$ — effektiv bikrlik. U holda $\\omega_0^2=\\frac{\\kappa}{\\mu}$. Kuchlarni yozish shart emas — ishqalanmasdan dumalash, bloklar, ip bilan bog'lanishlar avtomatik hisobga olinadi.",
+  "ru": "**Энергетический метод (energy method).** Если состояние системы задаётся одной обобщённой координатой $q$ (смещение, угол, уровень), приводим её полную энергию к виду $E=\\frac{1}{2}\\mu\\dot q^2+\\frac{1}{2}\\kappa q^2$; здесь $\\mu$ — эффективная масса (effective mass), $\\kappa$ — эффективная жёсткость. Тогда $\\omega_0^2=\\frac{\\kappa}{\\mu}$. Силы записывать не нужно — качение без проскальзывания, блоки, связи нитями учитываются автоматически.",
+  "en": "**The energy method.** If the state of a system is given by one generalized coordinate $q$ (a displacement, an angle, a level), we bring its total energy to the form $E=\\frac{1}{2}\\mu\\dot q^2+\\frac{1}{2}\\kappa q^2$; here $\\mu$ is the effective mass and $\\kappa$ the effective stiffness. Then $\\omega_0^2=\\frac{\\kappa}{\\mu}$. There is no need to write the forces — rolling without slipping, pulleys and string constraints are taken into account automatically."
+ },
+ {
+  "t": "m",
+  "m": "E=\\frac{\\mu\\dot q^2}{2}+\\frac{\\kappa q^2}{2}\\ \\Rightarrow\\ \\omega_0^2=\\frac{\\kappa}{\\mu}"
+ },
+ {
+  "t": "li",
+  "uz": "**Prujina massasi.** Massasi $m_s$ bo'lgan bir jinsli prujinaning $s$ masofadagi bo'lagi tezligi $v\\frac{s}{l}$ ga teng; uning kinetik energiyasi $\\int_0^l\\frac{m_s}{2l}\\left(\\frac{vs}{l}\\right)^2ds=\\frac{1}{2}\\cdot\\frac{m_s}{3}v^2$. Demak effektiv massa $\\mu=M+\\frac{m_s}{3}$ — prujina massasining uchdan biri yukka qo'shiladi.",
+  "ru": "**Масса пружины.** Скорость участка однородной пружины массой $m_s$ на расстоянии $s$ равна $v\\frac{s}{l}$; её кинетическая энергия $\\int_0^l\\frac{m_s}{2l}\\left(\\frac{vs}{l}\\right)^2ds=\\frac{1}{2}\\cdot\\frac{m_s}{3}v^2$. Значит, эффективная масса $\\mu=M+\\frac{m_s}{3}$ — к грузу добавляется треть массы пружины.",
+  "en": "**The mass of the spring.** The piece of a uniform spring of mass $m_s$ at distance $s$ moves with speed $v\\frac{s}{l}$; its kinetic energy is $\\int_0^l\\frac{m_s}{2l}\\left(\\frac{vs}{l}\\right)^2ds=\\frac{1}{2}\\cdot\\frac{m_s}{3}v^2$. So the effective mass is $\\mu=M+\\frac{m_s}{3}$ — one third of the spring's mass is added to the load."
+ },
+ {
+  "t": "li",
+  "uz": "**Dumalash.** Radiusi $r$ bo'lgan yaxlit silindr radiusi $R$ bo'lgan botiq sirt ichida sirpanmasdan dumalasa, massa markazi radiusi $R-r$ bo'lgan aylana bo'ylab harakatlanadi. Kinetik energiya $\\frac{3}{4}mv^2$ (ilgarilanma $\\frac{1}{2}$ + aylanma $\\frac{1}{4}$), potensial energiya $\\frac{mg}{2(R-r)}s^2$. Effektiv massa $\\frac{3}{2}m$ bo'lgani uchun $\\omega_0^2=\\frac{2g}{3(R-r)}$ — sirpanib harakatlanuvchi jismnikidan $\\frac{3}{2}$ marta kichik.",
+  "ru": "**Качение.** Если сплошной цилиндр радиуса $r$ катится без проскальзывания внутри вогнутой поверхности радиуса $R$, его центр масс движется по окружности радиуса $R-r$. Кинетическая энергия $\\frac{3}{4}mv^2$ (поступательная $\\frac{1}{2}$ + вращательная $\\frac{1}{4}$), потенциальная энергия $\\frac{mg}{2(R-r)}s^2$. Так как эффективная масса $\\frac{3}{2}m$, то $\\omega_0^2=\\frac{2g}{3(R-r)}$ — в $\\frac{3}{2}$ раза меньше, чем у скользящего тела.",
+  "en": "**Rolling.** If a solid cylinder of radius $r$ rolls without slipping inside a concave surface of radius $R$, its center of mass moves on a circle of radius $R-r$. The kinetic energy is $\\frac{3}{4}mv^2$ (translational $\\frac{1}{2}$ + rotational $\\frac{1}{4}$), and the potential energy is $\\frac{mg}{2(R-r)}s^2$. Since the effective mass is $\\frac{3}{2}m$, $\\omega_0^2=\\frac{2g}{3(R-r)}$ — smaller by a factor of $\\frac{3}{2}$ than for a sliding body."
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** $U(x)=U_0\\left(\\frac{x^2}{a^2}-1\\right)^2$ ikki chuqurchali potensialda minimumlar $x=\\pm a$ da, $U''(a)=\\frac{8U_0}{a^2}$, demak $\\omega_0=\\sqrt{\\frac{8U_0}{ma^2}}$. $x=0$ nuqtada ham muvozanat bor, lekin $U''(0)=-\\frac{4U_0}{a^2}<0$ — u turg'unmas.",
+  "ru": "**Пример.** В двухъямном потенциале $U(x)=U_0\\left(\\frac{x^2}{a^2}-1\\right)^2$ минимумы находятся при $x=\\pm a$, $U''(a)=\\frac{8U_0}{a^2}$, значит $\\omega_0=\\sqrt{\\frac{8U_0}{ma^2}}$. В точке $x=0$ тоже равновесие, но $U''(0)=-\\frac{4U_0}{a^2}<0$ — оно неустойчиво.",
+  "en": "**Example.** In the double-well potential $U(x)=U_0\\left(\\frac{x^2}{a^2}-1\\right)^2$ the minima are at $x=\\pm a$, $U''(a)=\\frac{8U_0}{a^2}$, so $\\omega_0=\\sqrt{\\frac{8U_0}{ma^2}}$. The point $x=0$ is also an equilibrium, but $U''(0)=-\\frac{4U_0}{a^2}<0$ — it is unstable."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Garmonik tebranish energiyasi",
+  "ru": "4. Энергия гармонических колебаний",
+  "en": "4. Energy of harmonic oscillations"
+ },
+ {
+  "t": "li",
+  "uz": "**To'liq energiya.** Kinetik energiya $E_k=\\frac{1}{2}mA^2\\omega_0^2\\sin^2(\\omega_0t+\\varphi_0)$, potensial energiya $U=\\frac{1}{2}kA^2\\cos^2(\\omega_0t+\\varphi_0)$; $k=m\\omega_0^2$ bo'lgani uchun yig'indi o'zgarmas. Energiya amplituda kvadratiga va chastota kvadratiga proporsional. Kinetik va potensial energiyalar $2\\omega_0$ chastota bilan (ya'ni $\\frac{T}{2}$ davr bilan) bir-biriga aylanadi ([[F04]]).",
+  "ru": "**Полная энергия.** Кинетическая энергия $E_k=\\frac{1}{2}mA^2\\omega_0^2\\sin^2(\\omega_0t+\\varphi_0)$, потенциальная $U=\\frac{1}{2}kA^2\\cos^2(\\omega_0t+\\varphi_0)$; так как $k=m\\omega_0^2$, их сумма постоянна. Энергия пропорциональна квадрату амплитуды и квадрату частоты. Кинетическая и потенциальная энергии переходят друг в друга с частотой $2\\omega_0$ (т. е. с периодом $\\frac{T}{2}$) ([[F04]]).",
+  "en": "**Total energy.** The kinetic energy is $E_k=\\frac{1}{2}mA^2\\omega_0^2\\sin^2(\\omega_0t+\\varphi_0)$ and the potential energy is $U=\\frac{1}{2}kA^2\\cos^2(\\omega_0t+\\varphi_0)$; since $k=m\\omega_0^2$, their sum is constant. The energy is proportional to the square of the amplitude and to the square of the frequency. The kinetic and potential energies turn into each other with frequency $2\\omega_0$ (i.e. with period $\\frac{T}{2}$) ([[F04]])."
+ },
+ {
+  "t": "m",
+  "m": "E=E_k+U=\\frac{kA^2}{2}=\\frac{m\\omega_0^2A^2}{2}=\\frac{mv_{max}^2}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**O'rtacha qiymatlar.** Bir davr bo'yicha $\\langle\\sin^2\\rangle=\\langle\\cos^2\\rangle=\\frac{1}{2}$, shuning uchun $\\langle E_k\\rangle=\\langle U\\rangle=\\frac{E}{2}$. Bu virial teoremaning garmonik ossilyator uchun xususiy holi. Ehtiyot bo'ling: koordinata bo'yicha o'rtacha boshqa — $x=\\frac{A}{\\sqrt{2}}$ nuqtada $E_k=U$, lekin jism vaqtining ko'p qismini chetki nuqtalar yaqinida o'tkazadi.",
+  "ru": "**Средние значения.** За период $\\langle\\sin^2\\rangle=\\langle\\cos^2\\rangle=\\frac{1}{2}$, поэтому $\\langle E_k\\rangle=\\langle U\\rangle=\\frac{E}{2}$. Это частный случай теоремы о вириале для гармонического осциллятора. Будьте внимательны: среднее по координате другое — в точке $x=\\frac{A}{\\sqrt{2}}$ $E_k=U$, но большую часть времени тело проводит вблизи крайних точек.",
+  "en": "**Average values.** Over a period $\\langle\\sin^2\\rangle=\\langle\\cos^2\\rangle=\\frac{1}{2}$, so $\\langle E_k\\rangle=\\langle U\\rangle=\\frac{E}{2}$. This is a special case of the virial theorem for the harmonic oscillator. Be careful: the average over position is different — at $x=\\frac{A}{\\sqrt{2}}$ $E_k=U$, but the body spends most of its time near the turning points."
+ },
+ {
+  "t": "m",
+  "m": "\\langle E_k\\rangle=\\langle U\\rangle=\\frac{E}{2},\\qquad E_k=U\\ \\Leftrightarrow\\ x=\\pm\\frac{A}{\\sqrt{2}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ehtimollik zichligi.** Jismni tasodifiy vaqtda kuzatsak, uni $dx$ oraliqda topish ehtimoli shu oraliqda o'tkazilgan vaqtga, ya'ni $\\frac{dx}{|v|}$ ga proporsional. Normallashdan $\\frac{dP}{dx}=\\frac{1}{\\pi\\sqrt{A^2-x^2}}$ — zichlik markazda eng kichik, chetki nuqtalarda cheksiz ([[F04]]). Kvant ossilyatorida katta kvant sonlarda ehtimollik zichligi aynan shu klassik egri chiziqqa yaqinlashadi (moslik prinsipi) — GRE da bu tez-tez so'raladi.",
+  "ru": "**Плотность вероятности.** Если наблюдать тело в случайный момент, вероятность найти его в интервале $dx$ пропорциональна времени, проведённому в этом интервале, т. е. $\\frac{dx}{|v|}$. Из нормировки $\\frac{dP}{dx}=\\frac{1}{\\pi\\sqrt{A^2-x^2}}$ — плотность наименьшая в центре и бесконечна в крайних точках ([[F04]]). У квантового осциллятора при больших квантовых числах плотность вероятности приближается именно к этой классической кривой (принцип соответствия) — в GRE это часто спрашивают.",
+  "en": "**Probability density.** If we observe the body at a random moment, the probability of finding it in an interval $dx$ is proportional to the time spent there, i.e. to $\\frac{dx}{|v|}$. Normalization gives $\\frac{dP}{dx}=\\frac{1}{\\pi\\sqrt{A^2-x^2}}$ — the density is smallest at the center and infinite at the turning points ([[F04]]). For a quantum oscillator at large quantum numbers the probability density approaches exactly this classical curve (the correspondence principle) — the GRE often asks about it."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{dP}{dx}=\\frac{1}{\\pi\\sqrt{A^2-x^2}},\\qquad \\int_{-A}^{A}\\frac{dP}{dx}\\,dx=1"
+ },
+ {
+  "t": "li",
+  "uz": "**Fazaviy portret.** $(x,\\ p)$ tekisligida harakat yarim o'qlari $A$ va $m\\omega_0A$ bo'lgan ellips bo'ylab bo'ladi. Ellips yuzasi $\\pi m\\omega_0A^2=\\frac{2\\pi E}{\\omega_0}$ — u adiabatik invariant: sistema parametrlari sekin o'zgarganda (masalan, mayatnik ipi sekin qisqartirilsa) $\\frac{E}{\\omega_0}$ saqlanadi. Kvant mexanikasida $E=\\hbar\\omega_0\\left(n+\\frac{1}{2}\\right)$ aynan shu nisbatni kvantlaydi.",
+  "ru": "**Фазовый портрет.** На плоскости $(x,\\ p)$ движение происходит по эллипсу с полуосями $A$ и $m\\omega_0A$. Площадь эллипса $\\pi m\\omega_0A^2=\\frac{2\\pi E}{\\omega_0}$ — адиабатический инвариант: при медленном изменении параметров системы (например, если нить маятника медленно укорачивать) сохраняется $\\frac{E}{\\omega_0}$. В квантовой механике $E=\\hbar\\omega_0\\left(n+\\frac{1}{2}\\right)$ квантует именно это отношение.",
+  "en": "**Phase portrait.** In the $(x,\\ p)$ plane the motion runs along an ellipse with semi-axes $A$ and $m\\omega_0A$. The area of the ellipse $\\pi m\\omega_0A^2=\\frac{2\\pi E}{\\omega_0}$ is an adiabatic invariant: when the parameters of the system change slowly (for example, a pendulum string is slowly shortened), $\\frac{E}{\\omega_0}$ is conserved. In quantum mechanics $E=\\hbar\\omega_0\\left(n+\\frac{1}{2}\\right)$ quantizes exactly this ratio."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L07-F04.png",
+   "ru": "figures/B2-L07-F04-ru.png",
+   "en": "figures/B2-L07-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** Massasi $0.5\\ \\mathrm{kg}$ bo'lgan yuk bikrligi $200\\ \\mathrm{N/m}$ prujinada $4\\ \\mathrm{cm}$ amplituda bilan tebranmoqda: $E=\\frac{200\\cdot0.0016}{2}=0.16\\ \\mathrm{J}$, $v_{max}=\\sqrt{\\frac{2E}{m}}=0.8\\ \\mathrm{m/s}$. Bir davrdagi o'rtacha kinetik energiya $0.08\\ \\mathrm{J}$.",
+  "ru": "**Пример.** Груз массой $0.5\\ \\mathrm{kg}$ колеблется на пружине жёсткостью $200\\ \\mathrm{N/m}$ с амплитудой $4\\ \\mathrm{cm}$: $E=\\frac{200\\cdot0.0016}{2}=0.16\\ \\mathrm{J}$, $v_{max}=\\sqrt{\\frac{2E}{m}}=0.8\\ \\mathrm{m/s}$. Средняя за период кинетическая энергия $0.08\\ \\mathrm{J}$.",
+  "en": "**Example.** A load of mass $0.5\\ \\mathrm{kg}$ oscillates on a spring of stiffness $200\\ \\mathrm{N/m}$ with amplitude $4\\ \\mathrm{cm}$: $E=\\frac{200\\cdot0.0016}{2}=0.16\\ \\mathrm{J}$, $v_{max}=\\sqrt{\\frac{2E}{m}}=0.8\\ \\mathrm{m/s}$. The kinetic energy averaged over a period is $0.08\\ \\mathrm{J}$."
+ },
+ {
+  "t": "h2",
+  "uz": "5. So'nuvchi tebranishlar",
+  "ru": "5. Затухающие колебания",
+  "en": "5. Damped oscillations"
+ },
+ {
+  "t": "li",
+  "uz": "**Tenglama.** Kichik tezliklarda muhit qarshiligi tezlikka proporsional: $F=-bv$, $b$ — qarshilik koeffitsiyenti (drag coefficient). $m\\ddot x=-kx-b\\dot x$ tenglamani $m$ ga bo'lib, so'nish koeffitsiyenti (damping coefficient) $\\beta=\\frac{b}{2m}$ ni kiritamiz. Yechimni $x=e^{rt}$ ko'rinishida izlasak, xarakteristik tenglama $r^2+2\\beta r+\\omega_0^2=0$ va $r=-\\beta\\pm\\sqrt{\\beta^2-\\omega_0^2}$ hosil bo'ladi. Uch holat bor: $\\beta<\\omega_0$, $\\beta=\\omega_0$, $\\beta>\\omega_0$ ([[F05]]).",
+  "ru": "**Уравнение.** При малых скоростях сопротивление среды пропорционально скорости: $F=-bv$, $b$ — коэффициент сопротивления (drag coefficient). Разделив уравнение $m\\ddot x=-kx-b\\dot x$ на $m$, вводим коэффициент затухания (damping coefficient) $\\beta=\\frac{b}{2m}$. Ищем решение в виде $x=e^{rt}$ и получаем характеристическое уравнение $r^2+2\\beta r+\\omega_0^2=0$ и $r=-\\beta\\pm\\sqrt{\\beta^2-\\omega_0^2}$. Возможны три случая: $\\beta<\\omega_0$, $\\beta=\\omega_0$, $\\beta>\\omega_0$ ([[F05]]).",
+  "en": "**The equation.** At low speeds the drag of a medium is proportional to the velocity: $F=-bv$, where $b$ is the drag coefficient. Dividing $m\\ddot x=-kx-b\\dot x$ by $m$, we introduce the damping coefficient $\\beta=\\frac{b}{2m}$. Seeking a solution of the form $x=e^{rt}$ gives the characteristic equation $r^2+2\\beta r+\\omega_0^2=0$ and $r=-\\beta\\pm\\sqrt{\\beta^2-\\omega_0^2}$. There are three cases: $\\beta<\\omega_0$, $\\beta=\\omega_0$, $\\beta>\\omega_0$ ([[F05]])."
+ },
+ {
+  "t": "m",
+  "m": "\\ddot x+2\\beta\\dot x+\\omega_0^2x=0,\\qquad \\beta=\\frac{b}{2m},\\qquad r=-\\beta\\pm\\sqrt{\\beta^2-\\omega_0^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kuchsiz so'nish (underdamping).** $\\beta<\\omega_0$ da ildizlar kompleks va $x=A_0e^{-\\beta t}\\cos(\\omega't+\\varphi_0)$, bu yerda $\\omega'=\\sqrt{\\omega_0^2-\\beta^2}$ — so'nuvchi tebranish chastotasi. Amplituda $A(t)=A_0e^{-\\beta t}$ eksponensial kamayadi, chastota esa xususiy chastotadan biroz kichik. Qat'iy aytganda, bu harakat davriy emas, lekin ketma-ket bir tomondagi chetki holatlar orasidagi vaqt doimiy: $T'=\\frac{2\\pi}{\\omega'}$.",
+  "ru": "**Слабое затухание (underdamping).** При $\\beta<\\omega_0$ корни комплексные и $x=A_0e^{-\\beta t}\\cos(\\omega't+\\varphi_0)$, где $\\omega'=\\sqrt{\\omega_0^2-\\beta^2}$ — частота затухающих колебаний. Амплитуда $A(t)=A_0e^{-\\beta t}$ убывает экспоненциально, а частота немного меньше собственной. Строго говоря, это движение не периодическое, но время между последовательными крайними положениями с одной стороны постоянно: $T'=\\frac{2\\pi}{\\omega'}$.",
+  "en": "**Underdamping.** For $\\beta<\\omega_0$ the roots are complex and $x=A_0e^{-\\beta t}\\cos(\\omega't+\\varphi_0)$, where $\\omega'=\\sqrt{\\omega_0^2-\\beta^2}$ is the frequency of the damped oscillations. The amplitude $A(t)=A_0e^{-\\beta t}$ decreases exponentially, and the frequency is slightly lower than the natural one. Strictly speaking the motion is not periodic, but the time between successive extreme positions on one side is constant: $T'=\\frac{2\\pi}{\\omega'}$."
+ },
+ {
+  "t": "m",
+  "m": "x=A_0e^{-\\beta t}\\cos(\\omega't+\\varphi_0),\\qquad \\omega'=\\sqrt{\\omega_0^2-\\beta^2},\\qquad T'=\\frac{2\\pi}{\\omega'}"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L07-F05.png",
+   "ru": "figures/B2-L07-F05-ru.png",
+   "en": "figures/B2-L07-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**So'nish kattaliklari.** Relaksatsiya vaqti (relaxation time) $\\tau=\\frac{1}{\\beta}$ — amplituda $e$ marta kamayadigan vaqt. Logarifmik dekrement (logarithmic decrement) $\\lambda=\\ln\\frac{A(t)}{A(t+T')}=\\beta T'$ — bir davrda amplituda nisbatining logarifmi; $N_e=\\frac{1}{\\lambda}$ — amplituda $e$ marta kamayguncha bo'ladigan tebranishlar soni. Energiya amplituda kvadratiga proporsional, shuning uchun u ikki barobar tez so'nadi: $E=E_0e^{-2\\beta t}$.",
+  "ru": "**Характеристики затухания.** Время релаксации (relaxation time) $\\tau=\\frac{1}{\\beta}$ — время, за которое амплитуда уменьшается в $e$ раз. Логарифмический декремент (logarithmic decrement) $\\lambda=\\ln\\frac{A(t)}{A(t+T')}=\\beta T'$ — логарифм отношения амплитуд за период; $N_e=\\frac{1}{\\lambda}$ — число колебаний, за которое амплитуда уменьшается в $e$ раз. Энергия пропорциональна квадрату амплитуды, поэтому она затухает вдвое быстрее: $E=E_0e^{-2\\beta t}$.",
+  "en": "**Damping parameters.** The relaxation time $\\tau=\\frac{1}{\\beta}$ is the time in which the amplitude decreases by a factor of $e$. The logarithmic decrement $\\lambda=\\ln\\frac{A(t)}{A(t+T')}=\\beta T'$ is the logarithm of the amplitude ratio over one period; $N_e=\\frac{1}{\\lambda}$ is the number of oscillations in which the amplitude decreases by a factor of $e$. The energy is proportional to the square of the amplitude, so it decays twice as fast: $E=E_0e^{-2\\beta t}$."
+ },
+ {
+  "t": "m",
+  "m": "\\tau=\\frac{1}{\\beta},\\qquad \\lambda=\\beta T'=\\frac{1}{N_e},\\qquad E=E_0e^{-2\\beta t}"
+ },
+ {
+  "t": "li",
+  "uz": "**Asllik (quality factor).** $Q=\\frac{\\omega_0}{2\\beta}$. Kuchsiz so'nishda $Q\\approx\\frac{\\pi}{\\lambda}=\\pi N_e$ va $Q\\approx2\\pi\\frac{E}{\\Delta E}$, bu yerda $\\Delta E$ — bir davrda yo'qotilgan energiya. Boshqacha aytganda, $Q$ — energiya $e$ marta kamayguncha o'tadigan radianlar soni. Tipik qiymatlar: avtomobil amortizatori $Q\\sim1$, gitara tori $Q\\sim10^3$, kvars rezonator $Q\\sim10^5$. $Q\\gg1$ da $\\omega'\\approx\\omega_0\\left(1-\\frac{1}{8Q^2}\\right)$ — chastota siljishi juda kichik.",
+  "ru": "**Добротность (quality factor).** $Q=\\frac{\\omega_0}{2\\beta}$. При слабом затухании $Q\\approx\\frac{\\pi}{\\lambda}=\\pi N_e$ и $Q\\approx2\\pi\\frac{E}{\\Delta E}$, где $\\Delta E$ — энергия, теряемая за период. Иначе говоря, $Q$ — число радиан, за которое энергия уменьшается в $e$ раз. Типичные значения: амортизатор автомобиля $Q\\sim1$, гитарная струна $Q\\sim10^3$, кварцевый резонатор $Q\\sim10^5$. При $Q\\gg1$ $\\omega'\\approx\\omega_0\\left(1-\\frac{1}{8Q^2}\\right)$ — сдвиг частоты очень мал.",
+  "en": "**Quality factor.** $Q=\\frac{\\omega_0}{2\\beta}$. For weak damping $Q\\approx\\frac{\\pi}{\\lambda}=\\pi N_e$ and $Q\\approx2\\pi\\frac{E}{\\Delta E}$, where $\\Delta E$ is the energy lost per period. In other words, $Q$ is the number of radians in which the energy decreases by a factor of $e$. Typical values: a car shock absorber $Q\\sim1$, a guitar string $Q\\sim10^3$, a quartz resonator $Q\\sim10^5$. For $Q\\gg1$ $\\omega'\\approx\\omega_0\\left(1-\\frac{1}{8Q^2}\\right)$ — the frequency shift is very small."
+ },
+ {
+  "t": "m",
+  "m": "Q=\\frac{\\omega_0}{2\\beta}\\approx\\frac{\\pi}{\\lambda}\\approx2\\pi\\frac{E}{\\Delta E}"
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** Mayatnik amplitudasi har davrda $2$ foizga kamaysa, $\\lambda=-\\ln0.98\\approx0.0202$, $Q\\approx\\frac{\\pi}{0.0202}\\approx155$. Energiya esa har davrda taxminan $4$ foizga kamayadi, chunki $0.98^2\\approx0.96$ — amplituda va energiya ulushlarini adashtirmang.",
+  "ru": "**Пример.** Если амплитуда маятника за каждый период уменьшается на $2$ процента, то $\\lambda=-\\ln0.98\\approx0.0202$, $Q\\approx\\frac{\\pi}{0.0202}\\approx155$. Энергия же за период уменьшается примерно на $4$ процента, так как $0.98^2\\approx0.96$ — не путайте доли амплитуды и энергии.",
+  "en": "**Example.** If a pendulum's amplitude decreases by $2$ percent each period, then $\\lambda=-\\ln0.98\\approx0.0202$ and $Q\\approx\\frac{\\pi}{0.0202}\\approx155$. The energy decreases by about $4$ percent per period, since $0.98^2\\approx0.96$ — do not confuse the fractions for amplitude and energy."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Kritik va kuchli so'nish",
+  "ru": "6. Критическое и сильное затухание",
+  "en": "6. Critical and heavy damping"
+ },
+ {
+  "t": "li",
+  "uz": "**Kritik so'nish (critical damping).** $\\beta=\\omega_0$, ya'ni $b=2\\sqrt{km}$ bo'lganda ildizlar ustma-ust tushadi va $x=(C_1+C_2t)e^{-\\omega_0t}$. Jism muvozanatga tebranmasdan qaytadi va bu eng tez sodir bo'ladi: kuchliroq so'nishda harakat sekinlashadi, kuchsizroqda esa jism muvozanatdan o'tib ketadi. Avtomobil amortizatorlari, o'lchov asboblari (galvanometr, tarozi) strelkalari va eshik yopgichlari kritikka yaqin so'nishga sozlanadi.",
+  "ru": "**Критическое затухание (critical damping).** При $\\beta=\\omega_0$, т. е. $b=2\\sqrt{km}$, корни совпадают и $x=(C_1+C_2t)e^{-\\omega_0t}$. Тело возвращается в равновесие без колебаний, и это происходит быстрее всего: при более сильном затухании движение замедляется, а при более слабом тело проскакивает равновесие. Амортизаторы автомобилей, стрелки измерительных приборов (гальванометр, весы) и доводчики дверей настраивают на затухание, близкое к критическому.",
+  "en": "**Critical damping.** For $\\beta=\\omega_0$, i.e. $b=2\\sqrt{km}$, the roots coincide and $x=(C_1+C_2t)e^{-\\omega_0t}$. The body returns to equilibrium without oscillating, and does so fastest: with heavier damping the motion is slower, and with lighter damping the body overshoots the equilibrium. Car shock absorbers, the needles of measuring instruments (galvanometers, scales) and door closers are tuned close to critical damping."
+ },
+ {
+  "t": "m",
+  "m": "\\beta=\\omega_0,\\qquad b=2\\sqrt{km},\\qquad x=(C_1+C_2t)e^{-\\omega_0t}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kuchli so'nish (overdamping).** $\\beta>\\omega_0$ da ikkala ildiz haqiqiy va manfiy: $x=C_1e^{-r_1t}+C_2e^{-r_2t}$, bu yerda $r_{1,2}=\\beta\\mp\\sqrt{\\beta^2-\\omega_0^2}$. Uzoq vaqtda sekinroq ildiz $r_1\\approx\\frac{\\omega_0^2}{2\\beta}$ hal qiladi — so'nish qanchalik kuchli bo'lsa, qaytish shunchalik sekin. Masalan, quyuq yog'dagi prujinali yuk muvozanatga juda sekin «sudralib» qaytadi. Jism muvozanat nuqtasidan ko'pi bilan bir marta o'tishi mumkin (agar unga katta boshlang'ich tezlik berilgan bo'lsa).",
+  "ru": "**Сильное затухание (overdamping).** При $\\beta>\\omega_0$ оба корня вещественные и отрицательные: $x=C_1e^{-r_1t}+C_2e^{-r_2t}$, где $r_{1,2}=\\beta\\mp\\sqrt{\\beta^2-\\omega_0^2}$. На больших временах определяющим является более медленный корень $r_1\\approx\\frac{\\omega_0^2}{2\\beta}$ — чем сильнее затухание, тем медленнее возвращение. Например, груз на пружине в густом масле очень медленно «сползает» к равновесию. Тело может пройти положение равновесия не более одного раза (если ему сообщили большую начальную скорость).",
+  "en": "**Overdamping.** For $\\beta>\\omega_0$ both roots are real and negative: $x=C_1e^{-r_1t}+C_2e^{-r_2t}$, where $r_{1,2}=\\beta\\mp\\sqrt{\\beta^2-\\omega_0^2}$. At long times the slower root $r_1\\approx\\frac{\\omega_0^2}{2\\beta}$ dominates — the heavier the damping, the slower the return. For example, a load on a spring in thick oil “creeps” back to equilibrium very slowly. The body can cross the equilibrium point at most once (if it was given a large initial velocity)."
+ },
+ {
+  "t": "li",
+  "uz": "**Quruq ishqalanish bilan farq.** Qarshilik tezlikka proporsional bo'lmasa, so'nish eksponensial bo'lmaydi. Sirpanish ishqalanishi $\\mu mg$ da amplituda har yarim davrda bir xil miqdor $\\frac{2\\mu mg}{k}$ ga kamayadi — ya'ni chiziqli; davr o'zgarmaydi; jism $|x|\\leq\\frac{\\mu mg}{k}$ «turg'un zona»ga tushganda to'xtaydi. Shuning uchun amplitudalar grafigi qaysi so'nish turi ekanini ko'rsatadi: geometrik progressiya — qovushoq qarshilik, arifmetik progressiya — quruq ishqalanish.",
+  "ru": "**Отличие от сухого трения.** Если сопротивление не пропорционально скорости, затухание не экспоненциальное. При трении скольжения $\\mu mg$ амплитуда за каждые полпериода уменьшается на одну и ту же величину $\\frac{2\\mu mg}{k}$ — т. е. линейно; период не меняется; тело останавливается, попав в «зону застоя» $|x|\\leq\\frac{\\mu mg}{k}$. Поэтому график амплитуд показывает тип затухания: геометрическая прогрессия — вязкое сопротивление, арифметическая — сухое трение.",
+  "en": "**Contrast with dry friction.** If the resistance is not proportional to velocity, the damping is not exponential. With sliding friction $\\mu mg$ the amplitude decreases each half period by the same amount $\\frac{2\\mu mg}{k}$ — i.e. linearly; the period does not change; the body stops once it lands in the “dead zone” $|x|\\leq\\frac{\\mu mg}{k}$. So a plot of the amplitudes shows the type of damping: a geometric progression means viscous drag, an arithmetic progression means dry friction."
+ },
+ {
+  "t": "m",
+  "m": "r_1\\approx\\frac{\\omega_0^2}{2\\beta}\\ (\\beta\\gg\\omega_0),\\qquad \\Delta A=\\frac{2\\mu mg}{k}"
+ },
+ {
+  "t": "h2",
+  "uz": "7. Majburiy tebranishlar",
+  "ru": "7. Вынужденные колебания",
+  "en": "7. Driven oscillations"
+ },
+ {
+  "t": "li",
+  "uz": "**Tenglama.** Ossilyatorga tashqi davriy kuch $F_0\\cos\\omega t$ ta'sir qilsin ($\\omega$ — majburlovchi kuch chastotasi, driving frequency). Tenglamaning umumiy yechimi = bir jinsli tenglamaning yechimi (so'nuvchi, o'tkinchi qism — transient) + xususiy yechim (barqaror tebranish — steady state). Bir necha $\\tau=\\frac{1}{\\beta}$ vaqtdan keyin faqat barqaror qism qoladi: jism kuch chastotasi $\\omega$ bilan tebranadi, xususiy chastotasi bilan emas.",
+  "ru": "**Уравнение.** Пусть на осциллятор действует внешняя периодическая сила $F_0\\cos\\omega t$ ($\\omega$ — частота вынуждающей силы, driving frequency). Общее решение уравнения = решение однородного уравнения (затухающая, переходная часть — transient) + частное решение (установившиеся колебания — steady state). Через несколько $\\tau=\\frac{1}{\\beta}$ остаётся только установившаяся часть: тело колеблется с частотой силы $\\omega$, а не со своей собственной.",
+  "en": "**The equation.** Let an external periodic force $F_0\\cos\\omega t$ act on the oscillator ($\\omega$ is the driving frequency). The general solution of the equation = the solution of the homogeneous equation (the decaying transient part) + a particular solution (the steady state). After a few times $\\tau=\\frac{1}{\\beta}$ only the steady-state part remains: the body oscillates at the driving frequency $\\omega$, not at its own natural frequency."
+ },
+ {
+  "t": "m",
+  "m": "\\ddot x+2\\beta\\dot x+\\omega_0^2x=\\frac{F_0}{m}\\cos\\omega t"
+ },
+ {
+  "t": "li",
+  "uz": "**Kompleks usul.** $x=\\mathrm{Re}\\,\\tilde Ae^{i\\omega t}$ ni qo'ysak, $(\\omega_0^2-\\omega^2+2i\\beta\\omega)\\tilde A=\\frac{F_0}{m}$. Kompleks son modulidan amplituda, argumentidan faza kelib chiqadi: barqaror tebranish $x=A\\cos(\\omega t-\\varphi)$, bu yerda $\\varphi$ — siljishning kuchdan orqada qolish fazasi. Amplituda boshlang'ich shartlarga bog'liq emas — faqat sistema parametrlari va kuch bilan aniqlanadi ([[F06]]).",
+  "ru": "**Комплексный метод.** Подставив $x=\\mathrm{Re}\\,\\tilde Ae^{i\\omega t}$, получаем $(\\omega_0^2-\\omega^2+2i\\beta\\omega)\\tilde A=\\frac{F_0}{m}$. Из модуля комплексного числа следует амплитуда, из аргумента — фаза: установившиеся колебания $x=A\\cos(\\omega t-\\varphi)$, где $\\varphi$ — отставание смещения от силы по фазе. Амплитуда не зависит от начальных условий — она определяется только параметрами системы и силой ([[F06]]).",
+  "en": "**The complex method.** Substituting $x=\\mathrm{Re}\\,\\tilde Ae^{i\\omega t}$ gives $(\\omega_0^2-\\omega^2+2i\\beta\\omega)\\tilde A=\\frac{F_0}{m}$. The amplitude follows from the modulus of the complex number and the phase from its argument: the steady state is $x=A\\cos(\\omega t-\\varphi)$, where $\\varphi$ is the phase lag of the displacement behind the force. The amplitude does not depend on the initial conditions — it is set only by the system parameters and the force ([[F06]])."
+ },
+ {
+  "t": "m",
+  "m": "A(\\omega)=\\frac{F_0}{m\\sqrt{(\\omega_0^2-\\omega^2)^2+4\\beta^2\\omega^2}},\\qquad \\mathrm{tg}\\,\\varphi=\\frac{2\\beta\\omega}{\\omega_0^2-\\omega^2}"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L07-F06.png",
+   "ru": "figures/B2-L07-F06-ru.png",
+   "en": "figures/B2-L07-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaraviy hollar.** $\\omega\\ll\\omega_0$: $A\\approx\\frac{F_0}{k}$, $\\varphi\\approx0$ — sistema statik cho'zilgandek kuchga ergashadi (bikrlik nazorat qiladi). $\\omega=\\omega_0$: $\\varphi=\\frac{\\pi}{2}$, $A=\\frac{F_0}{2m\\beta\\omega_0}=\\frac{F_0}{b\\omega_0}$ — tezlik kuch bilan bir fazada (qarshilik nazorat qiladi). $\\omega\\gg\\omega_0$: $A\\approx\\frac{F_0}{m\\omega^2}$, $\\varphi\\approx\\pi$ — jism kuchga qarama-qarshi fazada tebranadi va erkin jismdek harakat qiladi (inersiya nazorat qiladi).",
+  "ru": "**Предельные случаи.** $\\omega\\ll\\omega_0$: $A\\approx\\frac{F_0}{k}$, $\\varphi\\approx0$ — система следует за силой, как при статическом растяжении (управляет жёсткость). $\\omega=\\omega_0$: $\\varphi=\\frac{\\pi}{2}$, $A=\\frac{F_0}{2m\\beta\\omega_0}=\\frac{F_0}{b\\omega_0}$ — скорость в фазе с силой (управляет сопротивление). $\\omega\\gg\\omega_0$: $A\\approx\\frac{F_0}{m\\omega^2}$, $\\varphi\\approx\\pi$ — тело колеблется в противофазе с силой и движется как свободное (управляет инерция).",
+  "en": "**Limiting cases.** $\\omega\\ll\\omega_0$: $A\\approx\\frac{F_0}{k}$, $\\varphi\\approx0$ — the system follows the force as if statically stretched (stiffness-controlled). $\\omega=\\omega_0$: $\\varphi=\\frac{\\pi}{2}$, $A=\\frac{F_0}{2m\\beta\\omega_0}=\\frac{F_0}{b\\omega_0}$ — the velocity is in phase with the force (resistance-controlled). $\\omega\\gg\\omega_0$: $A\\approx\\frac{F_0}{m\\omega^2}$, $\\varphi\\approx\\pi$ — the body oscillates in antiphase with the force and moves like a free body (inertia-controlled)."
+ },
+ {
+  "t": "li",
+  "uz": "**O'tkinchi jarayon va tepish.** Tinch turgan ossilyatorga kuch qo'yilganda boshida ikki chastota — $\\omega$ va $\\omega'$ — qo'shiladi; $\\omega\\approx\\omega'$ bo'lsa, amplituda $|\\omega-\\omega'|$ chastota bilan tepish (beats) hosil qiladi va $\\tau$ vaqt ichida so'nib, barqaror holatga o'tadi. So'nish bo'lmasa va $\\omega=\\omega_0$ bo'lsa, amplituda chiziqli o'sadi: $x=\\frac{F_0t}{2m\\omega_0}\\sin\\omega_0t$ — energiya cheksiz to'planadi.",
+  "ru": "**Переходный процесс и биения.** Когда к покоящемуся осциллятору прикладывают силу, вначале складываются две частоты — $\\omega$ и $\\omega'$; при $\\omega\\approx\\omega'$ амплитуда образует биения (beats) с частотой $|\\omega-\\omega'|$ и за время $\\tau$ затухает, переходя в установившийся режим. Если затухания нет и $\\omega=\\omega_0$, амплитуда растёт линейно: $x=\\frac{F_0t}{2m\\omega_0}\\sin\\omega_0t$ — энергия накапливается неограниченно.",
+  "en": "**The transient and beats.** When a force is applied to an oscillator at rest, at first two frequencies — $\\omega$ and $\\omega'$ — add up; for $\\omega\\approx\\omega'$ the amplitude forms beats with frequency $|\\omega-\\omega'|$ and dies out within a time $\\tau$, passing into the steady state. If there is no damping and $\\omega=\\omega_0$, the amplitude grows linearly: $x=\\frac{F_0t}{2m\\omega_0}\\sin\\omega_0t$ — energy accumulates without bound."
+ },
+ {
+  "t": "m",
+  "m": "\\omega\\ll\\omega_0:\\ A\\approx\\frac{F_0}{k},\\qquad \\omega=\\omega_0:\\ A=\\frac{F_0}{b\\omega_0},\\qquad \\omega\\gg\\omega_0:\\ A\\approx\\frac{F_0}{m\\omega^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kinematik majburlash.** Ko'pincha kuch emas, prujinaning osish nuqtasi $y=a\\cos\\omega t$ qonun bilan tebrantiriladi (avtomobil notekis yo'lda, seysmograf). Prujina cho'zilishi $x-y$ bo'lgani uchun tenglamada $ka\\cos\\omega t$ kuch paydo bo'ladi — ya'ni $F_0=ka$. Shuning uchun past chastotada yuk osish nuqtasi bilan birga $a$ amplituda bilan harakatlanadi.",
+  "ru": "**Кинематическое возбуждение.** Часто колеблется не сила, а точка подвеса пружины по закону $y=a\\cos\\omega t$ (автомобиль на неровной дороге, сейсмограф). Так как растяжение пружины равно $x-y$, в уравнении появляется сила $ka\\cos\\omega t$ — т. е. $F_0=ka$. Поэтому на низкой частоте груз движется вместе с точкой подвеса с амплитудой $a$.",
+  "en": "**Kinematic driving.** Often it is not a force that oscillates but the suspension point of the spring, as $y=a\\cos\\omega t$ (a car on a bumpy road, a seismograph). Since the spring's extension is $x-y$, a force $ka\\cos\\omega t$ appears in the equation — i.e. $F_0=ka$. That is why at low frequency the load moves together with the suspension point with amplitude $a$."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Rezonans, quvvat va rezonans egri chizig'ining kengligi",
+  "ru": "8. Резонанс, мощность и ширина резонансной кривой",
+  "en": "8. Resonance, power and the width of the resonance curve"
+ },
+ {
+  "t": "li",
+  "uz": "**Amplituda rezonansi.** $A(\\omega)$ ning maksimumi ildiz ostidagi ifoda minimumiga mos keladi. $(\\omega_0^2-\\omega^2)^2+4\\beta^2\\omega^2$ ni $\\omega^2$ bo'yicha differensiallasak, rezonans chastota (resonance frequency) $\\omega^*=\\sqrt{\\omega_0^2-2\\beta^2}$ chiqadi. U $\\beta<\\frac{\\omega_0}{\\sqrt{2}}$ dagina mavjud; aks holda amplituda $\\omega=0$ dan boshlab kamayadi. Uch chastota tartibi: $\\omega^*<\\omega'<\\omega_0$.",
+  "ru": "**Резонанс амплитуды.** Максимум $A(\\omega)$ соответствует минимуму подкоренного выражения. Дифференцируя $(\\omega_0^2-\\omega^2)^2+4\\beta^2\\omega^2$ по $\\omega^2$, получаем резонансную частоту (resonance frequency) $\\omega^*=\\sqrt{\\omega_0^2-2\\beta^2}$. Она существует лишь при $\\beta<\\frac{\\omega_0}{\\sqrt{2}}$; иначе амплитуда убывает, начиная с $\\omega=0$. Порядок трёх частот: $\\omega^*<\\omega'<\\omega_0$.",
+  "en": "**Amplitude resonance.** The maximum of $A(\\omega)$ corresponds to the minimum of the expression under the root. Differentiating $(\\omega_0^2-\\omega^2)^2+4\\beta^2\\omega^2$ with respect to $\\omega^2$ gives the resonance frequency $\\omega^*=\\sqrt{\\omega_0^2-2\\beta^2}$. It exists only for $\\beta<\\frac{\\omega_0}{\\sqrt{2}}$; otherwise the amplitude decreases starting from $\\omega=0$. The order of the three frequencies is $\\omega^*<\\omega'<\\omega_0$."
+ },
+ {
+  "t": "m",
+  "m": "\\omega^*=\\sqrt{\\omega_0^2-2\\beta^2},\\qquad A_{max}=\\frac{F_0}{2m\\beta\\sqrt{\\omega_0^2-\\beta^2}},\\qquad \\frac{A_{max}}{A(0)}\\approx Q"
+ },
+ {
+  "t": "li",
+  "uz": "**Rezonansda kuchayish.** Kuchsiz so'nishda rezonans amplitudasi statik siljishdan taxminan $Q$ marta katta: $\\frac{A_{max}}{A(0)}=\\frac{\\omega_0^2}{2\\beta\\omega'}\\approx\\frac{\\omega_0}{2\\beta}$. Shuning uchun asllik baland sistemalar (ko'prik, bino, mashina vali) kichik davriy kuchdan ham xavfli darajada tebranadi; askarlar ko'prikdan qadam tashlab o'tmaydi. Bunga qarshi baland binolarda so'ndiruvchi massa (tuned mass damper) o'rnatiladi.",
+  "ru": "**Усиление при резонансе.** При слабом затухании резонансная амплитуда примерно в $Q$ раз больше статического смещения: $\\frac{A_{max}}{A(0)}=\\frac{\\omega_0^2}{2\\beta\\omega'}\\approx\\frac{\\omega_0}{2\\beta}$. Поэтому системы с высокой добротностью (мост, здание, вал машины) опасно раскачиваются даже малой периодической силой; солдаты не идут по мосту в ногу. Для защиты в высотных зданиях устанавливают динамический гаситель (tuned mass damper).",
+  "en": "**Amplification at resonance.** For weak damping the resonant amplitude is about $Q$ times the static displacement: $\\frac{A_{max}}{A(0)}=\\frac{\\omega_0^2}{2\\beta\\omega'}\\approx\\frac{\\omega_0}{2\\beta}$. That is why high-Q systems (a bridge, a building, a machine shaft) swing dangerously even under a small periodic force; soldiers do not march in step across a bridge. As protection, tall buildings are fitted with a tuned mass damper."
+ },
+ {
+  "t": "li",
+  "uz": "**Tezlik rezonansi va quvvat.** Tezlik amplitudasi $v_0=A\\omega$ aynan $\\omega=\\omega_0$ da eng katta. Kuchning o'rtacha quvvati $\\langle P\\rangle=\\frac{1}{2}F_0v_0\\cos\\left(\\varphi-\\frac{\\pi}{2}\\right)$ ishqalanishda ajralgan quvvatga teng: $\\langle P\\rangle=\\frac{1}{2}bv_0^2$. Rezonansda kuch tezlik bilan bir fazada bo'lgani uchun har doim musbat ish bajaradi va $\\langle P\\rangle_{max}=\\frac{F_0^2}{2b}=\\frac{F_0^2}{4m\\beta}$ ([[F07]]).",
+  "ru": "**Резонанс скорости и мощность.** Амплитуда скорости $v_0=A\\omega$ наибольшая именно при $\\omega=\\omega_0$. Средняя мощность силы $\\langle P\\rangle=\\frac{1}{2}F_0v_0\\cos\\left(\\varphi-\\frac{\\pi}{2}\\right)$ равна мощности, выделяющейся при трении: $\\langle P\\rangle=\\frac{1}{2}bv_0^2$. При резонансе сила в фазе со скоростью, поэтому всегда совершает положительную работу, и $\\langle P\\rangle_{max}=\\frac{F_0^2}{2b}=\\frac{F_0^2}{4m\\beta}$ ([[F07]]).",
+  "en": "**Velocity resonance and power.** The velocity amplitude $v_0=A\\omega$ is largest exactly at $\\omega=\\omega_0$. The average power of the force $\\langle P\\rangle=\\frac{1}{2}F_0v_0\\cos\\left(\\varphi-\\frac{\\pi}{2}\\right)$ equals the power dissipated by friction: $\\langle P\\rangle=\\frac{1}{2}bv_0^2$. At resonance the force is in phase with the velocity, so it always does positive work, and $\\langle P\\rangle_{max}=\\frac{F_0^2}{2b}=\\frac{F_0^2}{4m\\beta}$ ([[F07]])."
+ },
+ {
+  "t": "m",
+  "m": "\\langle P\\rangle=\\frac{bv_0^2}{2}=\\frac{F_0^2}{2m}\\cdot\\frac{2\\beta\\omega^2}{(\\omega_0^2-\\omega^2)^2+4\\beta^2\\omega^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kenglik va asllik.** Rezonans yaqinida $\\omega_0^2-\\omega^2\\approx2\\omega_0(\\omega_0-\\omega)$ va quvvat egri chizig'i Lorens shakliga keladi: $\\langle P\\rangle\\propto\\frac{\\beta^2}{(\\omega-\\omega_0)^2+\\beta^2}$. Quvvat maksimumning yarmiga teng bo'ladigan nuqtalar $\\omega=\\omega_0\\pm\\beta$ da, ya'ni yarim balandlikdagi to'liq kenglik (FWHM) $\\Delta\\omega=2\\beta$. Bundan muhim munosabat: $Q=\\frac{\\omega_0}{\\Delta\\omega}$ — rezonans qanchalik o'tkir bo'lsa, tebranishlar shunchalik sekin so'nadi ([[F07]]).",
+  "ru": "**Ширина и добротность.** Вблизи резонанса $\\omega_0^2-\\omega^2\\approx2\\omega_0(\\omega_0-\\omega)$, и кривая мощности принимает лоренцеву форму: $\\langle P\\rangle\\propto\\frac{\\beta^2}{(\\omega-\\omega_0)^2+\\beta^2}$. Мощность равна половине максимальной в точках $\\omega=\\omega_0\\pm\\beta$, т. е. полная ширина на половине высоты (FWHM) $\\Delta\\omega=2\\beta$. Отсюда важное соотношение: $Q=\\frac{\\omega_0}{\\Delta\\omega}$ — чем острее резонанс, тем медленнее затухают колебания ([[F07]]).",
+  "en": "**Width and quality factor.** Near resonance $\\omega_0^2-\\omega^2\\approx2\\omega_0(\\omega_0-\\omega)$, and the power curve becomes a Lorentzian: $\\langle P\\rangle\\propto\\frac{\\beta^2}{(\\omega-\\omega_0)^2+\\beta^2}$. The power equals half its maximum at $\\omega=\\omega_0\\pm\\beta$, i.e. the full width at half maximum (FWHM) is $\\Delta\\omega=2\\beta$. Hence an important relation: $Q=\\frac{\\omega_0}{\\Delta\\omega}$ — the sharper the resonance, the more slowly the oscillations decay ([[F07]])."
+ },
+ {
+  "t": "m",
+  "m": "\\Delta\\omega=2\\beta,\\qquad Q=\\frac{\\omega_0}{\\Delta\\omega},\\qquad \\langle P\\rangle_{max}=\\frac{F_0^2}{2b}"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L07-F07.png",
+   "ru": "figures/B2-L07-F07-ru.png",
+   "en": "figures/B2-L07-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Bir xil amplitudali ikki chastota.** $A(\\omega)$ ifodasidagi maxraj $\\omega^2$ ga nisbatan parabola: $\\omega^4-2(\\omega_0^2-2\\beta^2)\\omega^2+\\omega_0^4$. Uning uchi $\\omega^{*2}$ da, shuning uchun amplitudalar teng bo'lgan ikki chastota uchun $\\omega^{*2}=\\frac{\\omega_1^2+\\omega_2^2}{2}$. Bu GRE uchun qulay: egri chiziq to'liq berilmasa ham, rezonans chastotasini topish mumkin.",
+  "ru": "**Две частоты с одинаковой амплитудой.** Знаменатель в $A(\\omega)$ — парабола относительно $\\omega^2$: $\\omega^4-2(\\omega_0^2-2\\beta^2)\\omega^2+\\omega_0^4$. Её вершина при $\\omega^{*2}$, поэтому для двух частот с равными амплитудами $\\omega^{*2}=\\frac{\\omega_1^2+\\omega_2^2}{2}$. Это удобно для GRE: резонансную частоту можно найти, даже если кривая не дана полностью.",
+  "en": "**Two frequencies with the same amplitude.** The denominator of $A(\\omega)$ is a parabola in $\\omega^2$: $\\omega^4-2(\\omega_0^2-2\\beta^2)\\omega^2+\\omega_0^4$. Its vertex is at $\\omega^{*2}$, so for two frequencies with equal amplitudes $\\omega^{*2}=\\frac{\\omega_1^2+\\omega_2^2}{2}$. This is handy on the GRE: the resonance frequency can be found even if the curve is not given in full."
+ },
+ {
+  "t": "p",
+  "uz": "**Misol.** Rezonans chastotasi $\\omega_0=300\\ \\mathrm{rad/s}$ bo'lgan rezonatorning quvvat egri chizig'i kengligi $\\Delta\\omega=1.5\\ \\mathrm{rad/s}$. U holda $Q=200$, $\\beta=0.75\\ \\mathrm{s^{-1}}$, erkin tebranish energiyasi $\\frac{1}{2\\beta}\\approx0.67\\ \\mathrm{s}$ da $e$ marta kamayadi.",
+  "ru": "**Пример.** Ширина кривой мощности резонатора с резонансной частотой $\\omega_0=300\\ \\mathrm{rad/s}$ равна $\\Delta\\omega=1.5\\ \\mathrm{rad/s}$. Тогда $Q=200$, $\\beta=0.75\\ \\mathrm{s^{-1}}$, энергия свободных колебаний уменьшается в $e$ раз за $\\frac{1}{2\\beta}\\approx0.67\\ \\mathrm{s}$.",
+  "en": "**Example.** The power curve of a resonator with resonance frequency $\\omega_0=300\\ \\mathrm{rad/s}$ has width $\\Delta\\omega=1.5\\ \\mathrm{rad/s}$. Then $Q=200$, $\\beta=0.75\\ \\mathrm{s^{-1}}$, and the energy of free oscillations decreases by a factor of $e$ in $\\frac{1}{2\\beta}\\approx0.67\\ \\mathrm{s}$."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Bog'langan ossilyatorlar va normal modalar",
+  "ru": "9. Связанные осцилляторы и нормальные моды",
+  "en": "9. Coupled oscillators and normal modes"
+ },
+ {
+  "t": "li",
+  "uz": "**Model.** Massasi $m$ bo'lgan ikki jism devorlarga bikrligi $k$ bo'lgan prujinalar bilan, bir-biriga esa bikrligi $k'$ bo'lgan bog'lovchi prujina bilan ulangan ([[F08]]). Tenglamalar: $m\\ddot x_1=-kx_1-k'(x_1-x_2)$, $m\\ddot x_2=-kx_2-k'(x_2-x_1)$. Har bir jism harakati ikkinchisiga bog'liq — tenglamalar bog'langan.",
+  "ru": "**Модель.** Два тела массой $m$ соединены со стенками пружинами жёсткостью $k$, а друг с другом — связывающей пружиной жёсткостью $k'$ ([[F08]]). Уравнения: $m\\ddot x_1=-kx_1-k'(x_1-x_2)$, $m\\ddot x_2=-kx_2-k'(x_2-x_1)$. Движение каждого тела зависит от другого — уравнения связаны.",
+  "en": "**The model.** Two bodies of mass $m$ are attached to walls by springs of stiffness $k$ and to each other by a coupling spring of stiffness $k'$ ([[F08]]). The equations are $m\\ddot x_1=-kx_1-k'(x_1-x_2)$, $m\\ddot x_2=-kx_2-k'(x_2-x_1)$. The motion of each body depends on the other — the equations are coupled."
+ },
+ {
+  "t": "li",
+  "uz": "**Normal modalar (normal modes).** Tenglamalarni qo'shsak va ayirsak, normal koordinatalar $q_1=x_1+x_2$ va $q_2=x_1-x_2$ uchun mustaqil ossilyatorlar hosil bo'ladi. 1-moda — jismlar bir fazada, bog'lovchi prujina cho'zilmaydi: $\\omega_1=\\sqrt{\\frac{k}{m}}$. 2-moda — qarama-qarshi fazada, bog'lovchi prujina ikki tomondan cho'ziladi: $\\omega_2=\\sqrt{\\frac{k+2k'}{m}}$. Normal modada barcha jismlar bitta chastota bilan va doimiy fazalar farqi bilan tebranadi; istalgan harakat modalar yig'indisi.",
+  "ru": "**Нормальные моды (normal modes).** Складывая и вычитая уравнения, получаем независимые осцилляторы для нормальных координат $q_1=x_1+x_2$ и $q_2=x_1-x_2$. Мода 1 — тела в фазе, связывающая пружина не растягивается: $\\omega_1=\\sqrt{\\frac{k}{m}}$. Мода 2 — в противофазе, связывающая пружина растягивается с двух сторон: $\\omega_2=\\sqrt{\\frac{k+2k'}{m}}$. В нормальной моде все тела колеблются с одной частотой и с постоянной разностью фаз; любое движение — сумма мод.",
+  "en": "**Normal modes.** Adding and subtracting the equations gives independent oscillators for the normal coordinates $q_1=x_1+x_2$ and $q_2=x_1-x_2$. Mode 1 — the bodies move in phase and the coupling spring is not stretched: $\\omega_1=\\sqrt{\\frac{k}{m}}$. Mode 2 — they move in antiphase and the coupling spring is stretched from both sides: $\\omega_2=\\sqrt{\\frac{k+2k'}{m}}$. In a normal mode all bodies oscillate at one frequency with a constant phase difference; any motion is a sum of modes."
+ },
+ {
+  "t": "m",
+  "m": "q_1=x_1+x_2:\\ \\omega_1=\\sqrt{\\frac{k}{m}},\\qquad q_2=x_1-x_2:\\ \\omega_2=\\sqrt{\\frac{k+2k'}{m}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya almashinuvi.** Boshida faqat birinchi jism $A$ ga siljitilib qo'yib yuborilsa, ikkala moda teng qo'zg'aladi: $x_1=A\\cos\\frac{(\\omega_2-\\omega_1)t}{2}\\cos\\frac{(\\omega_1+\\omega_2)t}{2}$, $x_2=A\\sin\\frac{(\\omega_2-\\omega_1)t}{2}\\sin\\frac{(\\omega_1+\\omega_2)t}{2}$. Bog'lanish kuchsiz ($k'\\ll k$) bo'lsa, energiya jismlar orasida sekin «oqib» o'tadi: $t=\\frac{\\pi}{\\omega_2-\\omega_1}$ vaqtdan keyin birinchi jism to'xtaydi, ikkinchisi to'liq amplituda bilan tebranadi ([[F08]]).",
+  "ru": "**Обмен энергией.** Если вначале только первое тело сместить на $A$ и отпустить, обе моды возбуждаются одинаково: $x_1=A\\cos\\frac{(\\omega_2-\\omega_1)t}{2}\\cos\\frac{(\\omega_1+\\omega_2)t}{2}$, $x_2=A\\sin\\frac{(\\omega_2-\\omega_1)t}{2}\\sin\\frac{(\\omega_1+\\omega_2)t}{2}$. При слабой связи ($k'\\ll k$) энергия медленно «перетекает» между телами: через время $t=\\frac{\\pi}{\\omega_2-\\omega_1}$ первое тело останавливается, а второе колеблется с полной амплитудой ([[F08]]).",
+  "en": "**Energy exchange.** If at first only the first body is displaced by $A$ and released, both modes are excited equally: $x_1=A\\cos\\frac{(\\omega_2-\\omega_1)t}{2}\\cos\\frac{(\\omega_1+\\omega_2)t}{2}$, $x_2=A\\sin\\frac{(\\omega_2-\\omega_1)t}{2}\\sin\\frac{(\\omega_1+\\omega_2)t}{2}$. With weak coupling ($k'\\ll k$) the energy slowly “flows” between the bodies: after a time $t=\\frac{\\pi}{\\omega_2-\\omega_1}$ the first body stops and the second oscillates with the full amplitude ([[F08]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L07-F08.png",
+   "ru": "figures/B2-L07-F08-ru.png",
+   "en": "figures/B2-L07-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy usul.** $N$ ta erkinlik darajali sistemada $x_j=a_je^{i\\omega t}$ deb olsak, $(K-\\omega^2M)\\vec a=0$ tenglamalar sistemasi chiqadi; noldan farqli yechim uchun $\\det(K-\\omega^2M)=0$ — bu $N$ ta normal chastotani beradi. Masalan, $\\mathrm{CO_2}$ molekulasining bo'ylama tebranishlarida markaziy atom tinch turgan simmetrik moda $\\omega=\\sqrt{\\frac{k}{m_O}}$ chastotaga ega. Bog'langan mayatniklar uchun $\\omega_1=\\sqrt{\\frac{g}{l}}$, $\\omega_2=\\sqrt{\\frac{g}{l}+\\frac{2k'}{m}}$.",
+  "ru": "**Общий метод.** В системе с $N$ степенями свободы, положив $x_j=a_je^{i\\omega t}$, получаем систему уравнений $(K-\\omega^2M)\\vec a=0$; для ненулевого решения $\\det(K-\\omega^2M)=0$ — это даёт $N$ нормальных частот. Например, у продольных колебаний молекулы $\\mathrm{CO_2}$ симметричная мода, в которой центральный атом покоится, имеет частоту $\\omega=\\sqrt{\\frac{k}{m_O}}$. Для связанных маятников $\\omega_1=\\sqrt{\\frac{g}{l}}$, $\\omega_2=\\sqrt{\\frac{g}{l}+\\frac{2k'}{m}}$.",
+  "en": "**The general method.** In a system with $N$ degrees of freedom, setting $x_j=a_je^{i\\omega t}$ gives the system of equations $(K-\\omega^2M)\\vec a=0$; a nonzero solution requires $\\det(K-\\omega^2M)=0$ — this yields the $N$ normal frequencies. For example, in the longitudinal vibrations of the $\\mathrm{CO_2}$ molecule the symmetric mode, in which the central atom is at rest, has frequency $\\omega=\\sqrt{\\frac{k}{m_O}}$. For coupled pendulums $\\omega_1=\\sqrt{\\frac{g}{l}}$, $\\omega_2=\\sqrt{\\frac{g}{l}+\\frac{2k'}{m}}$."
+ },
+ {
+  "t": "m",
+  "m": "\\det(K-\\omega^2M)=0,\\qquad t=\\frac{\\pi}{\\omega_2-\\omega_1}"
+ },
+ {
+  "t": "h2",
+  "uz": "10. Elektr analogiyasi va GRE usullari",
+  "ru": "10. Электрическая аналогия и методы GRE",
+  "en": "10. The electrical analogy and GRE methods"
+ },
+ {
+  "t": "li",
+  "uz": "**RLC analogiyasi.** Ketma-ket RLC zanjirda $L\\ddot q+R\\dot q+\\frac{q}{C}=\\mathcal{E}(t)$ — mexanik ossilyator tenglamasining aynan o'zi. Moslik: $m\\leftrightarrow L$, $b\\leftrightarrow R$, $k\\leftrightarrow\\frac{1}{C}$, $x\\leftrightarrow q$, $v\\leftrightarrow I$. Demak $\\omega_0=\\frac{1}{\\sqrt{LC}}$, $\\beta=\\frac{R}{2L}$, $Q=\\frac{1}{R}\\sqrt{\\frac{L}{C}}$; tok rezonansi tezlik rezonansiga mos keladi. Bu natijalar B2-L18 da batafsil ishlatiladi.",
+  "ru": "**Аналогия с RLC.** В последовательной цепи RLC $L\\ddot q+R\\dot q+\\frac{q}{C}=\\mathcal{E}(t)$ — в точности уравнение механического осциллятора. Соответствие: $m\\leftrightarrow L$, $b\\leftrightarrow R$, $k\\leftrightarrow\\frac{1}{C}$, $x\\leftrightarrow q$, $v\\leftrightarrow I$. Значит, $\\omega_0=\\frac{1}{\\sqrt{LC}}$, $\\beta=\\frac{R}{2L}$, $Q=\\frac{1}{R}\\sqrt{\\frac{L}{C}}$; резонанс тока соответствует резонансу скорости. Эти результаты подробно используются в B2-L18.",
+  "en": "**The RLC analogy.** In a series RLC circuit $L\\ddot q+R\\dot q+\\frac{q}{C}=\\mathcal{E}(t)$ — exactly the equation of a mechanical oscillator. The correspondence: $m\\leftrightarrow L$, $b\\leftrightarrow R$, $k\\leftrightarrow\\frac{1}{C}$, $x\\leftrightarrow q$, $v\\leftrightarrow I$. Hence $\\omega_0=\\frac{1}{\\sqrt{LC}}$, $\\beta=\\frac{R}{2L}$, $Q=\\frac{1}{R}\\sqrt{\\frac{L}{C}}$; current resonance corresponds to velocity resonance. These results are used in detail in B2-L18."
+ },
+ {
+  "t": "m",
+  "m": "L\\ddot q+R\\dot q+\\frac{q}{C}=\\mathcal{E}(t),\\qquad \\omega_0=\\frac{1}{\\sqrt{LC}},\\qquad Q=\\frac{1}{R}\\sqrt{\\frac{L}{C}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 1 — chastotani tez topish.** Avval effektiv bikrlik va effektiv massani aniqlang: $\\omega_0^2=\\frac{\\kappa}{\\mu}$ (kuch yoki energiya orqali). O'lchamlilikni tekshiring: $\\sqrt{\\frac{g}{l}}$, $\\sqrt{\\frac{k}{m}}$, $\\sqrt{\\frac{T}{ml}}$ — barchasi $\\mathrm{s^{-1}}$. Kalkulyatorsiz hisoblashda $\\pi^2\\approx g\\approx10$ juda qo'l keladi: $l=1\\ \\mathrm{m}$ mayatnik davri $2\\ \\mathrm{s}$ ga yaqin.",
+  "ru": "**Метод 1 — быстро найти частоту.** Сначала определите эффективную жёсткость и эффективную массу: $\\omega_0^2=\\frac{\\kappa}{\\mu}$ (через силу или энергию). Проверьте размерность: $\\sqrt{\\frac{g}{l}}$, $\\sqrt{\\frac{k}{m}}$, $\\sqrt{\\frac{T}{ml}}$ — все в $\\mathrm{s^{-1}}$. При счёте без калькулятора очень помогает $\\pi^2\\approx g\\approx10$: период маятника с $l=1\\ \\mathrm{m}$ близок к $2\\ \\mathrm{s}$.",
+  "en": "**Method 1 — finding a frequency quickly.** First identify the effective stiffness and effective mass: $\\omega_0^2=\\frac{\\kappa}{\\mu}$ (via forces or energy). Check dimensions: $\\sqrt{\\frac{g}{l}}$, $\\sqrt{\\frac{k}{m}}$, $\\sqrt{\\frac{T}{ml}}$ — all in $\\mathrm{s^{-1}}$. Without a calculator $\\pi^2\\approx g\\approx10$ helps a lot: a pendulum with $l=1\\ \\mathrm{m}$ has a period close to $2\\ \\mathrm{s}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 2 — so'nish ma'lumotlarini bog'lash.** $\\beta$, $\\tau$, $\\lambda$, $Q$, $\\Delta\\omega$ — bitta kattalikning turli ko'rinishlari: $\\tau=\\frac{1}{\\beta}$, $\\lambda=\\beta T'$, $Q=\\frac{\\omega_0}{2\\beta}=\\frac{\\omega_0}{\\Delta\\omega}$. Amplituda va energiya uchun eksponenta ko'rsatkichi $2$ marta farq qiladi. «Amplituda $N$ tebranishda $e$ marta kamaydi» degan gap $Q\\approx\\pi N$ ni beradi.",
+  "ru": "**Метод 2 — связать данные о затухании.** $\\beta$, $\\tau$, $\\lambda$, $Q$, $\\Delta\\omega$ — разные формы одной величины: $\\tau=\\frac{1}{\\beta}$, $\\lambda=\\beta T'$, $Q=\\frac{\\omega_0}{2\\beta}=\\frac{\\omega_0}{\\Delta\\omega}$. Показатель экспоненты для амплитуды и энергии различается в $2$ раза. Фраза «амплитуда уменьшилась в $e$ раз за $N$ колебаний» даёт $Q\\approx\\pi N$.",
+  "en": "**Method 2 — linking damping data.** $\\beta$, $\\tau$, $\\lambda$, $Q$, $\\Delta\\omega$ are different forms of one quantity: $\\tau=\\frac{1}{\\beta}$, $\\lambda=\\beta T'$, $Q=\\frac{\\omega_0}{2\\beta}=\\frac{\\omega_0}{\\Delta\\omega}$. The exponent for amplitude and for energy differs by a factor of $2$. The phrase “the amplitude fell by a factor of $e$ in $N$ oscillations” gives $Q\\approx\\pi N$."
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 3 — chegaraviy hollar.** Majburiy tebranish formulasini tekshirish uchun $\\omega\\to0$ (statik $\\frac{F_0}{k}$), $\\omega\\to\\infty$ ($\\frac{F_0}{m\\omega^2}$, faza $\\pi$) va $\\beta\\to0$ (rezonansda cheksizlik) hollarini qo'ying — noto'g'ri variantlarning ko'pi shu tekshiruvdan o'tmaydi.",
+  "ru": "**Метод 3 — предельные случаи.** Чтобы проверить формулу вынужденных колебаний, подставьте случаи $\\omega\\to0$ (статическое $\\frac{F_0}{k}$), $\\omega\\to\\infty$ ($\\frac{F_0}{m\\omega^2}$, фаза $\\pi$) и $\\beta\\to0$ (бесконечность при резонансе) — большинство неверных вариантов эту проверку не проходят.",
+  "en": "**Method 3 — limiting cases.** To check a driven-oscillation formula, plug in $\\omega\\to0$ (static $\\frac{F_0}{k}$), $\\omega\\to\\infty$ ($\\frac{F_0}{m\\omega^2}$, phase $\\pi$) and $\\beta\\to0$ (infinite at resonance) — most wrong options fail this test."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) Vertikal prujina davriga $g$ ni kiritish — davr faqat $\\frac{m}{k}$ ga bog'liq. 2) Fizik mayatnikda $I$ ni massa markaziga nisbatan olish — o'qqa nisbatan kerak. 3) $\\omega'$, $\\omega^*$ va $\\omega_0$ ni adashtirish. 4) Energiya ulushini amplituda ulushi bilan tenglashtirish. 5) Barqaror majburiy tebranish xususiy chastotada bo'ladi deb o'ylash — u kuch chastotasida. 6) Rezonansda siljish kuch bilan bir fazada deb o'ylash — siljish $\\frac{\\pi}{2}$ ga orqada, tezlik bir fazada.",
+  "ru": "**Типичные ошибки.** 1) Включать $g$ в период вертикальной пружины — период зависит только от $\\frac{m}{k}$. 2) Брать в физическом маятнике $I$ относительно центра масс — нужен относительно оси. 3) Путать $\\omega'$, $\\omega^*$ и $\\omega_0$. 4) Приравнивать долю энергии доле амплитуды. 5) Думать, что установившиеся вынужденные колебания идут на собственной частоте — они на частоте силы. 6) Думать, что при резонансе смещение в фазе с силой — смещение отстаёт на $\\frac{\\pi}{2}$, в фазе скорость.",
+  "en": "**Typical mistakes.** 1) Putting $g$ into the period of a vertical spring — the period depends only on $\\frac{m}{k}$. 2) Taking $I$ about the center of mass for a physical pendulum — it must be about the pivot. 3) Confusing $\\omega'$, $\\omega^*$ and $\\omega_0$. 4) Equating the energy fraction with the amplitude fraction. 5) Thinking that steady driven oscillations occur at the natural frequency — they occur at the driving frequency. 6) Thinking that at resonance the displacement is in phase with the force — the displacement lags by $\\frac{\\pi}{2}$; the velocity is in phase."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Garmonik ossilyator",
+    "ru": "Гармонический осциллятор",
+    "en": "Harmonic oscillator",
+    "m": "\\ddot x+\\omega_0^2x=0,\\quad \\omega_0=\\sqrt{\\frac{k}{m}}"
+   },
+   {
+    "uz": "Yechim va boshlang'ich shartlar",
+    "ru": "Решение и начальные условия",
+    "en": "Solution and initial conditions",
+    "m": "x=A\\cos(\\omega_0t+\\varphi_0),\\quad A=\\sqrt{x_0^2+\\frac{v_0^2}{\\omega_0^2}}"
+   },
+   {
+    "uz": "Fizik va buralma mayatnik",
+    "ru": "Физический и крутильный маятники",
+    "en": "Physical and torsion pendulums",
+    "m": "T=2\\pi\\sqrt{\\frac{I}{mga}},\\quad T=2\\pi\\sqrt{\\frac{I}{\\kappa}}"
+   },
+   {
+    "uz": "Kichik tebranishlar",
+    "ru": "Малые колебания",
+    "en": "Small oscillations",
+    "m": "\\omega_0^2=\\frac{U''(x_0)}{m}=\\frac{\\kappa}{\\mu}"
+   },
+   {
+    "uz": "Energiya",
+    "ru": "Энергия",
+    "en": "Energy",
+    "m": "E=\\frac{kA^2}{2},\\quad \\langle E_k\\rangle=\\langle U\\rangle=\\frac{E}{2}"
+   },
+   {
+    "uz": "Ehtimollik zichligi",
+    "ru": "Плотность вероятности",
+    "en": "Probability density",
+    "m": "\\frac{dP}{dx}=\\frac{1}{\\pi\\sqrt{A^2-x^2}}"
+   },
+   {
+    "uz": "So'nuvchi tebranishlar",
+    "ru": "Затухающие колебания",
+    "en": "Damped oscillations",
+    "m": "x=A_0e^{-\\beta t}\\cos(\\omega't+\\varphi_0),\\quad \\beta=\\frac{b}{2m}"
+   },
+   {
+    "uz": "So'nuvchi tebranish chastotasi",
+    "ru": "Частота затухающих колебаний",
+    "en": "Damped frequency",
+    "m": "\\omega'=\\sqrt{\\omega_0^2-\\beta^2}"
+   },
+   {
+    "uz": "Dekrement, asllik",
+    "ru": "Декремент, добротность",
+    "en": "Decrement, quality factor",
+    "m": "\\lambda=\\beta T',\\quad Q=\\frac{\\omega_0}{2\\beta}\\approx\\frac{\\pi}{\\lambda}"
+   },
+   {
+    "uz": "Kritik so'nish",
+    "ru": "Критическое затухание",
+    "en": "Critical damping",
+    "m": "\\beta=\\omega_0,\\quad b=2\\sqrt{km}"
+   },
+   {
+    "uz": "Majburiy tebranish amplitudasi",
+    "ru": "Амплитуда вынужденных колебаний",
+    "en": "Driven amplitude",
+    "m": "A=\\frac{F_0}{m\\sqrt{(\\omega_0^2-\\omega^2)^2+4\\beta^2\\omega^2}}"
+   },
+   {
+    "uz": "Faza",
+    "ru": "Фаза",
+    "en": "Phase",
+    "m": "\\mathrm{tg}\\,\\varphi=\\frac{2\\beta\\omega}{\\omega_0^2-\\omega^2}"
+   },
+   {
+    "uz": "Rezonans",
+    "ru": "Резонанс",
+    "en": "Resonance",
+    "m": "\\omega^*=\\sqrt{\\omega_0^2-2\\beta^2},\\quad \\frac{A_{max}}{A(0)}\\approx Q"
+   },
+   {
+    "uz": "Quvvat egri chizig'i kengligi",
+    "ru": "Ширина кривой мощности",
+    "en": "Width of the power curve",
+    "m": "\\Delta\\omega=2\\beta,\\quad Q=\\frac{\\omega_0}{\\Delta\\omega}"
+   },
+   {
+    "uz": "Normal modalar",
+    "ru": "Нормальные моды",
+    "en": "Normal modes",
+    "m": "\\omega_1=\\sqrt{\\frac{k}{m}},\\quad \\omega_2=\\sqrt{\\frac{k+2k'}{m}}"
+   },
+   {
+    "uz": "RLC analogiyasi",
+    "ru": "Аналогия с RLC",
+    "en": "RLC analogy",
+    "m": "\\omega_0=\\frac{1}{\\sqrt{LC}},\\quad Q=\\frac{1}{R}\\sqrt{\\frac{L}{C}}"
+   }
+  ]
+ }
+]

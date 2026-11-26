@@ -1,0 +1,537 @@
+[
+ {
+  "t": "h1",
+  "uz": "Bio–Savar va Amper qonunlari (Biot–Savart and Ampère's laws)",
+  "ru": "Законы Био–Савара и Ампера",
+  "en": "Biot–Savart and Ampère's laws"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz Bio–Savar–Laplas qonuni bilan to'g'ri tok kesmasi, yoy, ko'pburchak va aylanma tok maydonini hisoblaysiz; magnit moment va dipol maydonini qo'llaysiz; Amper sirkulyatsiya teoremasi yordamida simmetrik toklar — yo'g'on sim, quvur, koaksial kabel, solenoid, toroid va tokli tekislik maydonini topasiz; magnit maydonning manbasizligi, vektor potensial va chegaraviy shartlarni tushunasiz; toklarning o'zaro ta'siri, magnit bosim va aylanayotgan zaryadlar maydonini tahlil qilasiz.",
+  "ru": "**Цель.** После урока вы будете вычислять по закону Био–Савара–Лапласа поле отрезка прямого тока, дуги, многоугольника и кругового тока; применять магнитный момент и поле диполя; находить с помощью теоремы о циркуляции поле симметричных токов — толстого провода, трубы, коаксиального кабеля, соленоида, тороида и плоскости с током; понимать отсутствие источников магнитного поля, векторный потенциал и граничные условия; анализировать взаимодействие токов, магнитное давление и поле вращающихся зарядов.",
+  "en": "**Goal.** After this lesson you will use the Biot–Savart law to compute the field of a straight current segment, an arc, a polygon and a circular loop; apply the magnetic moment and the dipole field; use Ampère's circuital law to find the field of symmetric currents — a thick wire, a pipe, a coaxial cable, a solenoid, a toroid and a current sheet; understand that the magnetic field has no sources, the vector potential and the boundary conditions; and analyse the force between currents, magnetic pressure and the field of rotating charges."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L38 va B1-L39 da magnit maydon, induksiya chiziqlari, Amper kuchi $F=BIl\\sin\\alpha$ va Lorens kuchini ko'rdik — u yerda maydon «berilgan» edi. Bu darsda savolni teskari qo'yamiz: maydonni nima hosil qiladi va uni qanday hisoblash mumkin? Javob ikki qonunda: Bio–Savar–Laplas qonuni ixtiyoriy tok uchun maydonni integral orqali beradi, Amper teoremasi esa simmetriya bo'lganda maydonni bir qatorda topadi. Bu ikki usul elektrostatikadagi Kulon qonuni va Gauss teoremasining (B2-L12) magnit o'xshashidir. GRE da to'g'ri tok, halqa, solenoid maydoni va toklarning o'zaro ta'siri savollari har bir testda uchraydi.",
+  "ru": "В B1-L38 и B1-L39 мы рассмотрели магнитное поле, линии индукции, силу Ампера $F=BIl\\sin\\alpha$ и силу Лоренца — там поле было «задано». В этом уроке поставим вопрос наоборот: что создаёт поле и как его вычислить? Ответ — в двух законах: закон Био–Савара–Лапласа даёт поле любого тока через интеграл, а теорема о циркуляции при наличии симметрии находит поле в одну строку. Эти два метода — магнитные аналоги закона Кулона и теоремы Гаусса в электростатике (B2-L12). На GRE вопросы о поле прямого тока, витка, соленоида и о взаимодействии токов встречаются в каждом тесте.",
+  "en": "In B1-L38 and B1-L39 we met the magnetic field, field lines, the Ampère force $F=BIl\\sin\\alpha$ and the Lorentz force — there the field was “given”. In this lesson we ask the reverse question: what produces the field and how can we compute it? The answer lies in two laws: the Biot–Savart law gives the field of any current as an integral, and Ampère's law finds the field in one line when there is symmetry. These two methods are the magnetic analogues of Coulomb's law and Gauss's law in electrostatics (B2-L12). On the GRE, questions on the field of a straight wire, a loop and a solenoid and on the force between currents appear in every test."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Bio–Savar–Laplas qonuni",
+  "ru": "1. Закон Био–Савара–Лапласа",
+  "en": "1. The Biot–Savart law"
+ },
+ {
+  "t": "li",
+  "uz": "**Tok elementi maydoni.** Tokning kichik $d\\vec l$ bo'lagi (tok elementi $I\\,d\\vec l$) undan $\\vec r$ masofadagi nuqtada $d\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec l\\times\\hat r}{r^2}$ maydon hosil qiladi; moduli $dB=\\frac{\\mu_0}{4\\pi}\\frac{I\\,dl\\sin\\theta}{r^2}$, bu yerda $\\theta$ — $d\\vec l$ va $\\vec r$ orasidagi burchak. Magnit doimiysi $\\mu_0=4\\pi\\cdot10^{-7}\\ \\mathrm{T\\cdot m/A}$, ya'ni $\\frac{\\mu_0}{4\\pi}=10^{-7}\\ \\mathrm{T\\cdot m/A}$. Yo'nalish — vektor ko'paytma bo'yicha: $d\\vec B$ ham $d\\vec l$ ga, ham $\\vec r$ ga tik ([[F01]]).",
+  "ru": "**Поле элемента тока.** Малый участок тока $d\\vec l$ (элемент тока $I\\,d\\vec l$) создаёт в точке на расстоянии $\\vec r$ поле $d\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec l\\times\\hat r}{r^2}$; модуль $dB=\\frac{\\mu_0}{4\\pi}\\frac{I\\,dl\\sin\\theta}{r^2}$, где $\\theta$ — угол между $d\\vec l$ и $\\vec r$. Магнитная постоянная $\\mu_0=4\\pi\\cdot10^{-7}\\ \\mathrm{T\\cdot m/A}$, то есть $\\frac{\\mu_0}{4\\pi}=10^{-7}\\ \\mathrm{T\\cdot m/A}$. Направление — по векторному произведению: $d\\vec B$ перпендикулярен и $d\\vec l$, и $\\vec r$ ([[F01]]).",
+  "en": "**Field of a current element.** A small piece $d\\vec l$ of a current (the current element $I\\,d\\vec l$) produces at a point a displacement $\\vec r$ away the field $d\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec l\\times\\hat r}{r^2}$; its magnitude is $dB=\\frac{\\mu_0}{4\\pi}\\frac{I\\,dl\\sin\\theta}{r^2}$, where $\\theta$ is the angle between $d\\vec l$ and $\\vec r$. The magnetic constant is $\\mu_0=4\\pi\\cdot10^{-7}\\ \\mathrm{T\\cdot m/A}$, so $\\frac{\\mu_0}{4\\pi}=10^{-7}\\ \\mathrm{T\\cdot m/A}$. The direction follows the cross product: $d\\vec B$ is perpendicular to both $d\\vec l$ and $\\vec r$ ([[F01]])."
+ },
+ {
+  "t": "m",
+  "m": "d\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec l\\times\\hat r}{r^2},\\qquad \\vec B=\\frac{\\mu_0}{4\\pi}\\int\\frac{\\vec J\\times\\hat r}{r^2}\\,dV,\\qquad \\frac{\\mu_0}{4\\pi}=10^{-7}\\ \\mathrm{T\\cdot m/A}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kulon qonuni bilan taqqoslash.** Ikkala qonunda ham maydon $\\frac{1}{r^2}$ kabi kamayadi va superpozitsiya prinsipi o'rinli: $\\vec B=\\sum\\vec B_i$. Farqi — manba: elektr maydon skalyar zaryaddan radial chiqadi, magnit maydon esa vektor manbadan ($I\\,d\\vec l$) aylanma hosil bo'ladi. Shuning uchun $d\\vec l$ yo'nalishida yotgan nuqtalarda ($\\theta=0$) tok elementi maydon bermaydi. Hajmiy tok uchun $I\\,d\\vec l\\to\\vec J\\,dV$, sirt toki uchun $I\\,d\\vec l\\to\\vec K\\,dA$.",
+  "ru": "**Сравнение с законом Кулона.** В обоих законах поле убывает как $\\frac{1}{r^2}$ и выполняется принцип суперпозиции: $\\vec B=\\sum\\vec B_i$. Отличие — в источнике: электрическое поле выходит радиально из скалярного заряда, а магнитное создаётся векторным источником ($I\\,d\\vec l$) и закручено вокруг него. Поэтому в точках, лежащих на направлении $d\\vec l$ ($\\theta=0$), элемент тока поля не создаёт. Для объёмного тока $I\\,d\\vec l\\to\\vec J\\,dV$, для поверхностного $I\\,d\\vec l\\to\\vec K\\,dA$.",
+  "en": "**Comparison with Coulomb's law.** In both laws the field falls off as $\\frac{1}{r^2}$ and superposition holds: $\\vec B=\\sum\\vec B_i$. The difference is the source: the electric field points radially out of a scalar charge, whereas the magnetic field comes from a vector source ($I\\,d\\vec l$) and curls around it. Hence a current element gives no field at points lying along $d\\vec l$ ($\\theta=0$). For a volume current $I\\,d\\vec l\\to\\vec J\\,dV$, for a surface current $I\\,d\\vec l\\to\\vec K\\,dA$."
+ },
+ {
+  "t": "li",
+  "uz": "**Harakatlanuvchi zaryad maydoni.** $I\\,d\\vec l=nqA\\,dl\\,\\vec v$ bo'lgani uchun bitta zaryad $q$ ning maydoni $\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{q\\vec v\\times\\hat r}{r^2}$ ($v\\ll c$). Uning elektr maydoni $\\vec E=\\frac{1}{4\\pi\\varepsilon_0}\\frac{q\\hat r}{r^2}$ bilan solishtirsak, $\\vec B=\\frac{\\vec v\\times\\vec E}{c^2}$, chunki $\\mu_0\\varepsilon_0=\\frac{1}{c^2}$. Demak, sekin zaryad uchun magnit ta'sir elektr ta'sirdan $\\frac{v^2}{c^2}$ marta kuchsiz — o'tkazgichlarda esa musbat ionlar elektr maydonini to'liq kompensatsiya qilgani uchun faqat magnit ta'sir qoladi.",
+  "ru": "**Поле движущегося заряда.** Так как $I\\,d\\vec l=nqA\\,dl\\,\\vec v$, поле одного заряда $q$ равно $\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{q\\vec v\\times\\hat r}{r^2}$ ($v\\ll c$). Сравнивая с его электрическим полем $\\vec E=\\frac{1}{4\\pi\\varepsilon_0}\\frac{q\\hat r}{r^2}$, получаем $\\vec B=\\frac{\\vec v\\times\\vec E}{c^2}$, поскольку $\\mu_0\\varepsilon_0=\\frac{1}{c^2}$. Значит, для медленного заряда магнитное действие в $\\frac{v^2}{c^2}$ раз слабее электрического — а в проводниках положительные ионы полностью компенсируют электрическое поле, и остаётся только магнитное действие.",
+  "en": "**Field of a moving charge.** Since $I\\,d\\vec l=nqA\\,dl\\,\\vec v$, the field of a single charge $q$ is $\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{q\\vec v\\times\\hat r}{r^2}$ ($v\\ll c$). Comparing with its electric field $\\vec E=\\frac{1}{4\\pi\\varepsilon_0}\\frac{q\\hat r}{r^2}$ gives $\\vec B=\\frac{\\vec v\\times\\vec E}{c^2}$, because $\\mu_0\\varepsilon_0=\\frac{1}{c^2}$. So for a slow charge the magnetic effect is $\\frac{v^2}{c^2}$ times weaker than the electric one — in conductors, however, the positive ions cancel the electric field completely and only the magnetic effect remains."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L16-F01.png",
+   "ru": "figures/B2-L16-F01-ru.png",
+   "en": "figures/B2-L16-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. To'g'ri tok maydoni",
+  "ru": "2. Поле прямого тока",
+  "en": "2. Field of a straight current"
+ },
+ {
+  "t": "li",
+  "uz": "**Kesma.** Nuqta simdan $d$ masofada bo'lsin, sim uchlari nuqtadan tik chiziqqa nisbatan $\\alpha_1$ va $\\alpha_2$ burchak ostida ko'rinsin. $l=d\\tan\\alpha$, $dl=\\frac{d\\,d\\alpha}{\\cos^2\\alpha}$, $r=\\frac{d}{\\cos\\alpha}$ almashtirishlaridan $B=\\frac{\\mu_0I}{4\\pi d}\\int_{\\alpha_1}^{\\alpha_2}\\cos\\alpha\\,d\\alpha=\\frac{\\mu_0I}{4\\pi d}\\left(\\sin\\alpha_2-\\sin\\alpha_1\\right)$ (burchaklar ishorasi bilan). Induksiya chiziqlari sim atrofidagi aylanalar, yo'nalish — o'ng qo'l (parma) qoidasi bo'yicha ([[F02]]).",
+  "ru": "**Отрезок.** Пусть точка находится на расстоянии $d$ от провода, а концы провода видны из неё под углами $\\alpha_1$ и $\\alpha_2$ к перпендикуляру. Из подстановок $l=d\\tan\\alpha$, $dl=\\frac{d\\,d\\alpha}{\\cos^2\\alpha}$, $r=\\frac{d}{\\cos\\alpha}$ получаем $B=\\frac{\\mu_0I}{4\\pi d}\\int_{\\alpha_1}^{\\alpha_2}\\cos\\alpha\\,d\\alpha=\\frac{\\mu_0I}{4\\pi d}\\left(\\sin\\alpha_2-\\sin\\alpha_1\\right)$ (углы со знаком). Линии индукции — окружности вокруг провода, направление — по правилу правой руки (буравчика) ([[F02]]).",
+  "en": "**A segment.** Let the point be a distance $d$ from the wire, with the ends of the wire seen at angles $\\alpha_1$ and $\\alpha_2$ from the perpendicular. The substitutions $l=d\\tan\\alpha$, $dl=\\frac{d\\,d\\alpha}{\\cos^2\\alpha}$, $r=\\frac{d}{\\cos\\alpha}$ give $B=\\frac{\\mu_0I}{4\\pi d}\\int_{\\alpha_1}^{\\alpha_2}\\cos\\alpha\\,d\\alpha=\\frac{\\mu_0I}{4\\pi d}\\left(\\sin\\alpha_2-\\sin\\alpha_1\\right)$ (signed angles). The field lines are circles around the wire, with the direction given by the right-hand rule ([[F02]])."
+ },
+ {
+  "t": "m",
+  "m": "B=\\frac{\\mu_0I}{4\\pi d}\\left(\\sin\\alpha_2-\\sin\\alpha_1\\right),\\qquad B_{\\infty}=\\frac{\\mu_0I}{2\\pi d},\\qquad B_{1/2}=\\frac{\\mu_0I}{4\\pi d}"
+ },
+ {
+  "t": "li",
+  "uz": "**Xususiy hollar.** Cheksiz sim ($\\alpha_1=-\\frac{\\pi}{2}$, $\\alpha_2=\\frac{\\pi}{2}$): $B=\\frac{\\mu_0I}{2\\pi d}$ — masalan, $10\\ \\mathrm{A}$ tok $5\\ \\mathrm{cm}$ da $40\\ \\mu\\mathrm{T}$ beradi, bu Yer maydoniga yaqin. Yarim cheksiz sim, nuqta uning uchidan o'tgan tik chiziqda: $B=\\frac{\\mu_0I}{4\\pi d}$ — cheksiz simning yarmi. Nuqta sim davomida yotsa, $B=0$. O'rta perpendikulyarda, kesma uzunligi $2a$: $B=\\frac{\\mu_0I}{2\\pi d}\\frac{a}{\\sqrt{a^2+d^2}}$.",
+  "ru": "**Частные случаи.** Бесконечный провод ($\\alpha_1=-\\frac{\\pi}{2}$, $\\alpha_2=\\frac{\\pi}{2}$): $B=\\frac{\\mu_0I}{2\\pi d}$ — например, ток $10\\ \\mathrm{A}$ на расстоянии $5\\ \\mathrm{cm}$ даёт $40\\ \\mu\\mathrm{T}$, что близко к полю Земли. Полубесконечный провод, точка на перпендикуляре, проведённом через его конец: $B=\\frac{\\mu_0I}{4\\pi d}$ — половина поля бесконечного провода. Если точка лежит на продолжении провода, $B=0$. На серединном перпендикуляре отрезка длиной $2a$: $B=\\frac{\\mu_0I}{2\\pi d}\\frac{a}{\\sqrt{a^2+d^2}}$.",
+  "en": "**Special cases.** An infinite wire ($\\alpha_1=-\\frac{\\pi}{2}$, $\\alpha_2=\\frac{\\pi}{2}$): $B=\\frac{\\mu_0I}{2\\pi d}$ — for example, $10\\ \\mathrm{A}$ at $5\\ \\mathrm{cm}$ gives $40\\ \\mu\\mathrm{T}$, close to the Earth's field. A semi-infinite wire, with the point on the perpendicular through its end: $B=\\frac{\\mu_0I}{4\\pi d}$ — half the infinite-wire field. If the point lies on the line of the wire, $B=0$. On the perpendicular bisector of a segment of length $2a$: $B=\\frac{\\mu_0I}{2\\pi d}\\frac{a}{\\sqrt{a^2+d^2}}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'pburchak.** Muntazam $n$ burchakli ramka markazida har bir tomon $d=R\\cos\\frac{\\pi}{n}$ masofada va $\\pm\\frac{\\pi}{n}$ burchak ostida ko'rinadi ($R$ — tashqi chizilgan aylana radiusi): $B=\\frac{n\\mu_0I}{2\\pi R}\\tan\\frac{\\pi}{n}$. Kvadrat (tomoni $a$): $B=\\frac{2\\sqrt{2}\\mu_0I}{\\pi a}$; teng tomonli uchburchak: $B=\\frac{9\\mu_0I}{2\\pi a}$. $n\\to\\infty$ da $\\tan\\frac{\\pi}{n}\\to\\frac{\\pi}{n}$ va $B\\to\\frac{\\mu_0I}{2R}$ — aylanma tok natijasi.",
+  "ru": "**Многоугольник.** В центре правильной $n$-угольной рамки каждая сторона находится на расстоянии $d=R\\cos\\frac{\\pi}{n}$ и видна под углами $\\pm\\frac{\\pi}{n}$ ($R$ — радиус описанной окружности): $B=\\frac{n\\mu_0I}{2\\pi R}\\tan\\frac{\\pi}{n}$. Квадрат (сторона $a$): $B=\\frac{2\\sqrt{2}\\mu_0I}{\\pi a}$; равносторонний треугольник: $B=\\frac{9\\mu_0I}{2\\pi a}$. При $n\\to\\infty$ имеем $\\tan\\frac{\\pi}{n}\\to\\frac{\\pi}{n}$ и $B\\to\\frac{\\mu_0I}{2R}$ — результат для кругового тока.",
+  "en": "**A polygon.** At the centre of a regular $n$-sided loop each side is at distance $d=R\\cos\\frac{\\pi}{n}$ and subtends angles $\\pm\\frac{\\pi}{n}$ ($R$ is the circumradius): $B=\\frac{n\\mu_0I}{2\\pi R}\\tan\\frac{\\pi}{n}$. A square (side $a$): $B=\\frac{2\\sqrt{2}\\mu_0I}{\\pi a}$; an equilateral triangle: $B=\\frac{9\\mu_0I}{2\\pi a}$. As $n\\to\\infty$, $\\tan\\frac{\\pi}{n}\\to\\frac{\\pi}{n}$ and $B\\to\\frac{\\mu_0I}{2R}$ — the circular-loop result."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L16-F02.png",
+   "ru": "figures/B2-L16-F02-ru.png",
+   "en": "figures/B2-L16-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Aylanma tok va magnit dipol",
+  "ru": "3. Круговой ток и магнитный диполь",
+  "en": "3. The circular loop and the magnetic dipole"
+ },
+ {
+  "t": "li",
+  "uz": "**Markazda va yoyda.** Radiusi $R$ bo'lgan halqaning har bir elementi markazdan $R$ masofada va $\\theta=\\frac{\\pi}{2}$ da: $B_0=\\frac{\\mu_0I}{4\\pi R^2}\\cdot2\\pi R=\\frac{\\mu_0I}{2R}$. $\\varphi$ markaziy burchakli yoy uchun $B=\\frac{\\mu_0I\\varphi}{4\\pi R}$ (yarim aylana — $\\frac{\\mu_0I}{4R}$, chorak — $\\frac{\\mu_0I}{8R}$). Radial yo'nalgan to'g'ri qismlar markazda maydon bermaydi. $N$ o'ramli g'altak uchun $B_0=\\frac{\\mu_0NI}{2R}$.",
+  "ru": "**В центре и для дуги.** Каждый элемент витка радиуса $R$ находится на расстоянии $R$ от центра и при $\\theta=\\frac{\\pi}{2}$: $B_0=\\frac{\\mu_0I}{4\\pi R^2}\\cdot2\\pi R=\\frac{\\mu_0I}{2R}$. Для дуги с центральным углом $\\varphi$: $B=\\frac{\\mu_0I\\varphi}{4\\pi R}$ (полуокружность — $\\frac{\\mu_0I}{4R}$, четверть — $\\frac{\\mu_0I}{8R}$). Прямые участки, направленные по радиусу, в центре поля не дают. Для катушки из $N$ витков $B_0=\\frac{\\mu_0NI}{2R}$.",
+  "en": "**At the centre and for an arc.** Every element of a loop of radius $R$ is a distance $R$ from the centre, with $\\theta=\\frac{\\pi}{2}$: $B_0=\\frac{\\mu_0I}{4\\pi R^2}\\cdot2\\pi R=\\frac{\\mu_0I}{2R}$. For an arc subtending a central angle $\\varphi$: $B=\\frac{\\mu_0I\\varphi}{4\\pi R}$ (a semicircle gives $\\frac{\\mu_0I}{4R}$, a quarter circle $\\frac{\\mu_0I}{8R}$). Straight radial leads give no field at the centre. For a coil of $N$ turns, $B_0=\\frac{\\mu_0NI}{2R}$."
+ },
+ {
+  "t": "m",
+  "m": "B_0=\\frac{\\mu_0I}{2R},\\qquad B=\\frac{\\mu_0I\\varphi}{4\\pi R},\\qquad B_z=\\frac{\\mu_0IR^2}{2\\left(R^2+z^2\\right)^{3/2}}"
+ },
+ {
+  "t": "li",
+  "uz": "**O'qdagi maydon.** O'qdagi nuqtadan halqa elementlari $r=\\sqrt{R^2+z^2}$ masofada; har bir $d\\vec B$ ning o'qqa tik tashkil etuvchilari simmetriya tufayli yo'qoladi, o'q bo'ylab tashkil etuvchilar $\\frac{R}{r}$ ko'paytuvchi bilan qo'shiladi: $B_z=\\frac{\\mu_0IR^2}{2\\left(R^2+z^2\\right)^{3/2}}$. $z=R$ da $\\frac{B}{B_0}=\\frac{1}{2\\sqrt{2}}\\approx0.35$, $z=\\sqrt{3}R$ da $\\frac{1}{8}$. O'q bo'ylab integral $\\int_{-\\infty}^{\\infty}B_z\\,dz=\\mu_0I$ — bu Amper teoremasining birinchi belgisi ([[F03]]).",
+  "ru": "**Поле на оси.** От точки на оси элементы витка находятся на расстоянии $r=\\sqrt{R^2+z^2}$; перпендикулярные оси составляющие каждого $d\\vec B$ по симметрии взаимно уничтожаются, а осевые складываются с множителем $\\frac{R}{r}$: $B_z=\\frac{\\mu_0IR^2}{2\\left(R^2+z^2\\right)^{3/2}}$. При $z=R$ имеем $\\frac{B}{B_0}=\\frac{1}{2\\sqrt{2}}\\approx0.35$, при $z=\\sqrt{3}R$ — $\\frac{1}{8}$. Интеграл вдоль оси $\\int_{-\\infty}^{\\infty}B_z\\,dz=\\mu_0I$ — первый признак теоремы о циркуляции ([[F03]]).",
+  "en": "**Field on the axis.** From a point on the axis the loop elements are at distance $r=\\sqrt{R^2+z^2}$; by symmetry the components of each $d\\vec B$ perpendicular to the axis cancel, while the axial components add with a factor $\\frac{R}{r}$: $B_z=\\frac{\\mu_0IR^2}{2\\left(R^2+z^2\\right)^{3/2}}$. At $z=R$, $\\frac{B}{B_0}=\\frac{1}{2\\sqrt{2}}\\approx0.35$; at $z=\\sqrt{3}R$, $\\frac{1}{8}$. The integral along the axis $\\int_{-\\infty}^{\\infty}B_z\\,dz=\\mu_0I$ — a first hint of Ampère's law ([[F03]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Magnit moment va dipol.** Tokli ramkaning magnit momenti $\\vec m=IA\\hat n$ ($\\hat n$ — o'ng qo'l qoidasi bo'yicha normal), birligi $\\mathrm{A\\cdot m^2}$. Uzoqda ($z\\gg R$) o'qdagi maydon $B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{z^3}$, ekvator tekisligida esa $\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$ — elektr dipol maydonining aynan o'xshashi ($p\\to m$, $\\frac{1}{\\varepsilon_0}\\to\\mu_0$). Umumiy ko'rinish: $\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{3(\\vec m\\cdot\\hat r)\\hat r-\\vec m}{r^3}$. Masofa $2$ marta ortsa, dipol maydoni $8$ marta kamayadi.",
+  "ru": "**Магнитный момент и диполь.** Магнитный момент рамки с током $\\vec m=IA\\hat n$ ($\\hat n$ — нормаль по правилу правой руки), единица $\\mathrm{A\\cdot m^2}$. Вдали ($z\\gg R$) поле на оси $B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{z^3}$, а в экваториальной плоскости $\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$ — точный аналог поля электрического диполя ($p\\to m$, $\\frac{1}{\\varepsilon_0}\\to\\mu_0$). Общий вид: $\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{3(\\vec m\\cdot\\hat r)\\hat r-\\vec m}{r^3}$. При увеличении расстояния в $2$ раза поле диполя уменьшается в $8$ раз.",
+  "en": "**Magnetic moment and the dipole.** The magnetic moment of a current loop is $\\vec m=IA\\hat n$ ($\\hat n$ is the normal given by the right-hand rule), measured in $\\mathrm{A\\cdot m^2}$. Far away ($z\\gg R$) the field on the axis is $B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{z^3}$, and in the equatorial plane $\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$ — the exact analogue of the electric dipole field ($p\\to m$, $\\frac{1}{\\varepsilon_0}\\to\\mu_0$). In general: $\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{3(\\vec m\\cdot\\hat r)\\hat r-\\vec m}{r^3}$. When the distance is increased by a factor of $2$, the dipole field drops by a factor of $8$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L16-F03.png",
+   "ru": "figures/B2-L16-F03-ru.png",
+   "en": "figures/B2-L16-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Gelmgols g'altaklari va superpozitsiya",
+  "ru": "4. Катушки Гельмгольца и суперпозиция",
+  "en": "4. Helmholtz coils and superposition"
+ },
+ {
+  "t": "li",
+  "uz": "**Gelmgols g'altaklari.** Radiusi $R$ bo'lgan ikki koaksial g'altak orasidagi masofa $d$ va toklar bir yo'nalishda bo'lsin. O'rtadagi nuqtada $\\frac{dB}{dz}=0$ simmetriyadan, $\\frac{d^2B}{dz^2}=0$ esa faqat $d=R$ da bajariladi — shunda $z^4$ gacha maydon deyarli bir jinsli. Markazdagi maydon $B=\\left(\\frac{4}{5}\\right)^{3/2}\\frac{\\mu_0NI}{R}\\approx0.716\\frac{\\mu_0NI}{R}$. $d>R$ da o'rtada «chuqurcha», $d<R$ da «do'nglik» paydo bo'ladi ([[F04]]). Bunday g'altaklar Yer maydonini kompensatsiya qilish va $\\frac{e}{m}$ tajribasida ishlatiladi.",
+  "ru": "**Катушки Гельмгольца.** Пусть две коаксиальные катушки радиуса $R$ находятся на расстоянии $d$ и токи в них одного направления. В средней точке $\\frac{dB}{dz}=0$ по симметрии, а $\\frac{d^2B}{dz^2}=0$ выполняется только при $d=R$ — тогда поле почти однородно с точностью до $z^4$. Поле в центре $B=\\left(\\frac{4}{5}\\right)^{3/2}\\frac{\\mu_0NI}{R}\\approx0.716\\frac{\\mu_0NI}{R}$. При $d>R$ в середине появляется «провал», при $d<R$ — «горб» ([[F04]]). Такие катушки применяют для компенсации поля Земли и в опыте по измерению $\\frac{e}{m}$.",
+  "en": "**Helmholtz coils.** Let two coaxial coils of radius $R$ be a distance $d$ apart with currents in the same direction. At the midpoint $\\frac{dB}{dz}=0$ by symmetry, while $\\frac{d^2B}{dz^2}=0$ holds only for $d=R$ — then the field is nearly uniform up to order $z^4$. The central field is $B=\\left(\\frac{4}{5}\\right)^{3/2}\\frac{\\mu_0NI}{R}\\approx0.716\\frac{\\mu_0NI}{R}$. For $d>R$ a “dip” appears in the middle, for $d<R$ a “hump” ([[F04]]). Such coils are used to cancel the Earth's field and in the $\\frac{e}{m}$ experiment."
+ },
+ {
+  "t": "m",
+  "m": "B=\\left(\\frac{4}{5}\\right)^{3/2}\\frac{\\mu_0NI}{R},\\qquad d=R,\\qquad \\vec B=\\sum\\vec B_i"
+ },
+ {
+  "t": "li",
+  "uz": "**Murakkab konturlar.** Konturni to'g'ri kesmalar, yoylar va yarim cheksiz qismlarga bo'lib, har birining maydonini alohida topamiz va vektor sifatida qo'shamiz. Masalan, «soch to'g'nag'ich» (ikki parallel yarim cheksiz sim + yarim aylana) markazida: $B=\\frac{\\mu_0I}{4R}+2\\cdot\\frac{\\mu_0I}{4\\pi R}=\\frac{\\mu_0I}{4R}\\left(1+\\frac{2}{\\pi}\\right)$ — uchala hissa bir yo'nalishda. Yo'nalishni har bir qism uchun o'ng qo'l qoidasi bilan alohida tekshirish shart: ba'zi hissalar ayiriladi.",
+  "ru": "**Сложные контуры.** Разбиваем контур на прямые отрезки, дуги и полубесконечные участки, находим поле каждого по отдельности и складываем как векторы. Например, в центре «шпильки» (два параллельных полубесконечных провода + полуокружность): $B=\\frac{\\mu_0I}{4R}+2\\cdot\\frac{\\mu_0I}{4\\pi R}=\\frac{\\mu_0I}{4R}\\left(1+\\frac{2}{\\pi}\\right)$ — все три вклада направлены одинаково. Направление для каждого участка обязательно проверять отдельно по правилу правой руки: некоторые вклады вычитаются.",
+  "en": "**Composite circuits.** Split the circuit into straight segments, arcs and semi-infinite pieces, find the field of each separately and add them as vectors. For example, at the centre of a “hairpin” (two parallel semi-infinite wires plus a semicircle): $B=\\frac{\\mu_0I}{4R}+2\\cdot\\frac{\\mu_0I}{4\\pi R}=\\frac{\\mu_0I}{4R}\\left(1+\\frac{2}{\\pi}\\right)$ — all three contributions point the same way. The direction must be checked for each piece separately with the right-hand rule: some contributions subtract."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L16-F04.png",
+   "ru": "figures/B2-L16-F04-ru.png",
+   "en": "figures/B2-L16-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Amper sirkulyatsiya teoremasi",
+  "ru": "5. Теорема о циркуляции (закон Ампера)",
+  "en": "5. Ampère's circuital law"
+ },
+ {
+  "t": "li",
+  "uz": "**Teorema.** $\\vec B$ ning ixtiyoriy berk kontur bo'yicha sirkulyatsiyasi kontur qamrab olgan to'liq tokka proporsional: $\\oint\\vec B\\cdot d\\vec l=\\mu_0I$. Toklar ishorasi o'ng qo'l qoidasi bilan olinadi: kontur aylanish yo'nalishiga mos normal tomon oqayotgan tok musbat. Kontur tashqarisidagi toklar sirkulyatsiyaga hissa qo'shmaydi, lekin konturdagi $\\vec B$ ga ta'sir qiladi! Cheksiz sim uchun tekshiruv: radiusi $r$ bo'lgan aylana bo'yicha $B\\cdot2\\pi r=\\mu_0I$ ([[F05]]).",
+  "ru": "**Теорема.** Циркуляция $\\vec B$ по любому замкнутому контуру пропорциональна полному току, охватываемому контуром: $\\oint\\vec B\\cdot d\\vec l=\\mu_0I$. Знаки токов берутся по правилу правой руки: положителен ток, текущий в сторону нормали, согласованной с направлением обхода. Токи вне контура в циркуляцию не входят, но на $\\vec B$ на контуре влияют! Проверка для бесконечного провода: по окружности радиуса $r$ имеем $B\\cdot2\\pi r=\\mu_0I$ ([[F05]]).",
+  "en": "**The law.** The circulation of $\\vec B$ around any closed loop is proportional to the total current enclosed by the loop: $\\oint\\vec B\\cdot d\\vec l=\\mu_0I$. Signs follow the right-hand rule: a current flowing along the normal that matches the sense of traversal is positive. Currents outside the loop do not enter the circulation, but they do affect $\\vec B$ on the loop! Check for an infinite wire: around a circle of radius $r$, $B\\cdot2\\pi r=\\mu_0I$ ([[F05]])."
+ },
+ {
+  "t": "m",
+  "m": "\\oint\\vec B\\cdot d\\vec l=\\mu_0I,\\qquad \\nabla\\times\\vec B=\\mu_0\\vec J,\\qquad \\oint\\vec B\\cdot d\\vec A=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Differensial ko'rinish.** Stoks teoremasi $\\oint\\vec B\\cdot d\\vec l=\\int\\left(\\nabla\\times\\vec B\\right)\\cdot d\\vec A$ va $I=\\int\\vec J\\cdot d\\vec A$ dan $\\nabla\\times\\vec B=\\mu_0\\vec J$. Elektrostatikada $\\nabla\\times\\vec E=0$ va maydon potensial edi; magnit maydon esa uyurmali — tok atrofida «aylanadi», shuning uchun skalyar potensial butun fazoda kiritib bo'lmaydi. Teorema faqat o'zgarmas toklar uchun to'g'ri: o'zgaruvchan maydonlarda Maksvell qo'shgan siljish toki kerak (B2-L20).",
+  "ru": "**Дифференциальная форма.** Из теоремы Стокса $\\oint\\vec B\\cdot d\\vec l=\\int\\left(\\nabla\\times\\vec B\\right)\\cdot d\\vec A$ и $I=\\int\\vec J\\cdot d\\vec A$ получаем $\\nabla\\times\\vec B=\\mu_0\\vec J$. В электростатике $\\nabla\\times\\vec E=0$ и поле было потенциальным; магнитное же поле вихревое — «закручено» вокруг тока, поэтому скалярный потенциал во всём пространстве ввести нельзя. Теорема верна только для постоянных токов: в переменных полях нужен ток смещения, добавленный Максвеллом (B2-L20).",
+  "en": "**Differential form.** Stokes' theorem $\\oint\\vec B\\cdot d\\vec l=\\int\\left(\\nabla\\times\\vec B\\right)\\cdot d\\vec A$ and $I=\\int\\vec J\\cdot d\\vec A$ give $\\nabla\\times\\vec B=\\mu_0\\vec J$. In electrostatics $\\nabla\\times\\vec E=0$ and the field was conservative; the magnetic field, by contrast, has curl — it “circulates” around the current, so a scalar potential cannot be defined throughout space. The law holds only for steady currents: for time-varying fields Maxwell's displacement current is needed (B2-L20)."
+ },
+ {
+  "t": "li",
+  "uz": "**Qachon foydali.** Gauss teoremasi kabi, Amper teoremasi har doim to'g'ri, lekin $B$ ni faqat yuqori simmetriyada topish mumkin: 1) silindrik (cheksiz sim, quvur, kabel) — kontur aylana, $B$ unda o'zgarmas; 2) tekis (cheksiz tokli tekislik) — to'g'ri to'rtburchak kontur; 3) solenoid va toroid. Halqa yoki chekli kesma uchun simmetriya yetarli emas — Bio–Savar qonuni kerak. Kontur tanlash qoidasi: har bir qismida $\\vec B$ yo urinma va o'zgarmas, yo konturga tik, yo nol.",
+  "ru": "**Когда полезна.** Как и теорема Гаусса, теорема о циркуляции верна всегда, но найти $B$ с её помощью можно только при высокой симметрии: 1) цилиндрической (бесконечный провод, труба, кабель) — контур-окружность, на нём $B$ постоянен; 2) плоской (бесконечная плоскость с током) — прямоугольный контур; 3) соленоид и тороид. Для витка или конечного отрезка симметрии недостаточно — нужен закон Био–Савара. Правило выбора контура: на каждом его участке $\\vec B$ либо касателен и постоянен, либо перпендикулярен контуру, либо равен нулю.",
+  "en": "**When it helps.** Like Gauss's law, Ampère's law is always true, but it yields $B$ only for high symmetry: 1) cylindrical (infinite wire, pipe, cable) — a circular loop on which $B$ is constant; 2) planar (an infinite current sheet) — a rectangular loop; 3) the solenoid and the toroid. For a loop or a finite segment the symmetry is not enough — the Biot–Savart law is needed. The rule for choosing the loop: on each part of it $\\vec B$ is either tangent and constant, or perpendicular to the loop, or zero."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L16-F05.png",
+   "ru": "figures/B2-L16-F05-ru.png",
+   "en": "figures/B2-L16-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Silindrik simmetriya: yo'g'on sim, quvur, koaksial kabel",
+  "ru": "6. Цилиндрическая симметрия: толстый провод, труба, коаксиальный кабель",
+  "en": "6. Cylindrical symmetry: thick wire, pipe, coaxial cable"
+ },
+ {
+  "t": "li",
+  "uz": "**Yo'g'on sim.** Radiusi $R$ bo'lgan simda tok kesim bo'yicha tekis taqsimlangan bo'lsa, $r<R$ aylana ichidagi tok $I\\frac{r^2}{R^2}$: $B=\\frac{\\mu_0Ir}{2\\pi R^2}$ — markazda nol, sirtgacha chiziqli o'sadi. $r>R$ da $B=\\frac{\\mu_0I}{2\\pi r}$, xuddi butun tok o'qda bo'lgandek. Eng katta qiymat sirtda: $B=\\frac{\\mu_0I}{2\\pi R}$; $r=\\frac{R}{2}$ va $r=2R$ da maydon bir xil — sirtdagining yarmi ([[F06]]).",
+  "ru": "**Толстый провод.** Если в проводе радиуса $R$ ток равномерно распределён по сечению, то внутри окружности $r<R$ течёт ток $I\\frac{r^2}{R^2}$: $B=\\frac{\\mu_0Ir}{2\\pi R^2}$ — ноль в центре, линейный рост до поверхности. При $r>R$ имеем $B=\\frac{\\mu_0I}{2\\pi r}$, как если бы весь ток шёл по оси. Наибольшее значение на поверхности: $B=\\frac{\\mu_0I}{2\\pi R}$; при $r=\\frac{R}{2}$ и $r=2R$ поле одинаково — половина поверхностного ([[F06]]).",
+  "en": "**Thick wire.** If the current in a wire of radius $R$ is spread uniformly over the cross-section, the current inside a circle $r<R$ is $I\\frac{r^2}{R^2}$: $B=\\frac{\\mu_0Ir}{2\\pi R^2}$ — zero at the centre, growing linearly to the surface. For $r>R$, $B=\\frac{\\mu_0I}{2\\pi r}$, as if the whole current flowed along the axis. The maximum is at the surface: $B=\\frac{\\mu_0I}{2\\pi R}$; at $r=\\frac{R}{2}$ and $r=2R$ the field is the same — half the surface value ([[F06]])."
+ },
+ {
+  "t": "m",
+  "m": "B=\\frac{\\mu_0Ir}{2\\pi R^2}\\ (r<R),\\qquad B=\\frac{\\mu_0I}{2\\pi r}\\ (r>R),\\qquad B=\\frac{\\mu_0}{2\\pi r}\\int_0^r J\\,2\\pi s\\,ds"
+ },
+ {
+  "t": "li",
+  "uz": "**Notekis tok va quvur.** Agar tok zichligi radiusga bog'liq bo'lsa, $J(s)$, qamrab olingan tokni integrallaymiz: $B=\\frac{\\mu_0}{2\\pi r}\\int_0^r J\\,2\\pi s\\,ds$. Masalan, $J=J_0\\frac{s}{R}$ da $B=\\frac{\\mu_0J_0r^2}{3R}$ ichkarida. Yupqa devorli quvur ichida qamrab olingan tok nol — $B=0$, tashqarisida $\\frac{\\mu_0I}{2\\pi r}$. Qalin devorli quvurda ($a<r<b$): $B=\\frac{\\mu_0I}{2\\pi r}\\frac{r^2-a^2}{b^2-a^2}$.",
+  "ru": "**Неоднородный ток и труба.** Если плотность тока зависит от радиуса, $J(s)$, интегрируем охватываемый ток: $B=\\frac{\\mu_0}{2\\pi r}\\int_0^r J\\,2\\pi s\\,ds$. Например, при $J=J_0\\frac{s}{R}$ внутри $B=\\frac{\\mu_0J_0r^2}{3R}$. Внутри тонкостенной трубы охватываемый ток равен нулю — $B=0$, снаружи $\\frac{\\mu_0I}{2\\pi r}$. В толстостенной трубе ($a<r<b$): $B=\\frac{\\mu_0I}{2\\pi r}\\frac{r^2-a^2}{b^2-a^2}$.",
+  "en": "**Non-uniform current and a pipe.** If the current density depends on the radius, $J(s)$, integrate the enclosed current: $B=\\frac{\\mu_0}{2\\pi r}\\int_0^r J\\,2\\pi s\\,ds$. For example, with $J=J_0\\frac{s}{R}$, inside $B=\\frac{\\mu_0J_0r^2}{3R}$. Inside a thin-walled pipe the enclosed current is zero — $B=0$; outside it is $\\frac{\\mu_0I}{2\\pi r}$. In a thick-walled pipe ($a<r<b$): $B=\\frac{\\mu_0I}{2\\pi r}\\frac{r^2-a^2}{b^2-a^2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Koaksial kabel.** Ichki sim (radiusi $a$) va tashqi qobiq ($b<r<c$) bo'ylab bir xil $I$ tok qarama-qarshi yo'nalishda oqadi. $r<a$: $\\frac{\\mu_0Ir}{2\\pi a^2}$; $a<r<b$: $\\frac{\\mu_0I}{2\\pi r}$; qobiq ichida maydon $\\frac{\\mu_0I}{2\\pi r}\\frac{c^2-r^2}{c^2-b^2}$ gacha kamayadi; $r>c$ da qamrab olingan to'liq tok nol — $B=0$. Shuning uchun kabel tashqi qurilmalarga xalaqit bermaydi va tashqi maydonlardan himoyalangan. Yo'g'on simdagi qiziq natija: $r<R$ da $B$ ning o'zi bir jinsli bo'lmasa-da, simdagi silindrik bo'shliq ichida maydon bir jinsli — $B=\\frac{\\mu_0Jd}{2}$, bu yerda $d$ — o'qlar orasidagi masofa (superpozitsiya).",
+  "ru": "**Коаксиальный кабель.** По внутренней жиле (радиус $a$) и внешней оболочке ($b<r<c$) течёт одинаковый ток $I$ в противоположных направлениях. $r<a$: $\\frac{\\mu_0Ir}{2\\pi a^2}$; $a<r<b$: $\\frac{\\mu_0I}{2\\pi r}$; внутри оболочки поле убывает как $\\frac{\\mu_0I}{2\\pi r}\\frac{c^2-r^2}{c^2-b^2}$; при $r>c$ полный охватываемый ток равен нулю — $B=0$. Поэтому кабель не создаёт помех внешним устройствам и защищён от внешних полей. Интересный результат для толстого провода: хотя при $r<R$ само $B$ неоднородно, внутри цилиндрической полости в проводе поле однородно — $B=\\frac{\\mu_0Jd}{2}$, где $d$ — расстояние между осями (суперпозиция).",
+  "en": "**Coaxial cable.** Equal currents $I$ flow in opposite directions along the inner conductor (radius $a$) and the outer shell ($b<r<c$). $r<a$: $\\frac{\\mu_0Ir}{2\\pi a^2}$; $a<r<b$: $\\frac{\\mu_0I}{2\\pi r}$; inside the shell the field falls as $\\frac{\\mu_0I}{2\\pi r}\\frac{c^2-r^2}{c^2-b^2}$; for $r>c$ the total enclosed current is zero — $B=0$. That is why a cable does not interfere with nearby devices and is shielded from outside fields. An interesting result for a thick wire: although $B$ itself is non-uniform for $r<R$, inside a cylindrical cavity in the wire the field is uniform — $B=\\frac{\\mu_0Jd}{2}$, where $d$ is the distance between the axes (superposition)."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L16-F06.png",
+   "ru": "figures/B2-L16-F06-ru.png",
+   "en": "figures/B2-L16-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Solenoid, toroid, tokli tekislik",
+  "ru": "7. Соленоид, тороид, плоскость с током",
+  "en": "7. Solenoid, toroid, current sheet"
+ },
+ {
+  "t": "li",
+  "uz": "**Uzun solenoid.** Birlik uzunlikda $n=\\frac{N}{L}$ o'ram bo'lsin. Simmetriyadan ichkarida maydon o'q bo'ylab, tashqarisida (uzun solenoid uchun) deyarli nol. Bir tomoni ichkarida, bir tomoni tashqarida bo'lgan $l$ uzunlikdagi to'g'ri to'rtburchak kontur $nl$ o'ramni qamraydi: $Bl=\\mu_0nlI$, ya'ni $B=\\mu_0nI$ — radiusga ham, kesim ichidagi joyga ham bog'liq emas ([[F07]]). Chekli solenoid o'rtasida $B=\\mu_0nI\\frac{L}{\\sqrt{L^2+4R^2}}$, uzun solenoid uchida esa $\\frac{\\mu_0nI}{2}$.",
+  "ru": "**Длинный соленоид.** Пусть на единицу длины приходится $n=\\frac{N}{L}$ витков. По симметрии внутри поле направлено вдоль оси, а снаружи (для длинного соленоида) почти равно нулю. Прямоугольный контур длиной $l$, одна сторона которого внутри, а другая снаружи, охватывает $nl$ витков: $Bl=\\mu_0nlI$, то есть $B=\\mu_0nI$ — не зависит ни от радиуса, ни от положения внутри сечения ([[F07]]). В середине конечного соленоида $B=\\mu_0nI\\frac{L}{\\sqrt{L^2+4R^2}}$, а на торце длинного соленоида $\\frac{\\mu_0nI}{2}$.",
+  "en": "**Long solenoid.** Let there be $n=\\frac{N}{L}$ turns per unit length. By symmetry the field inside is along the axis, and outside (for a long solenoid) it is nearly zero. A rectangular loop of length $l$ with one side inside and one outside encloses $nl$ turns: $Bl=\\mu_0nlI$, so $B=\\mu_0nI$ — independent of the radius and of the position within the cross-section ([[F07]]). At the middle of a finite solenoid $B=\\mu_0nI\\frac{L}{\\sqrt{L^2+4R^2}}$, and at the end of a long solenoid $\\frac{\\mu_0nI}{2}$."
+ },
+ {
+  "t": "m",
+  "m": "B=\\mu_0nI,\\qquad B=\\frac{\\mu_0NI}{2\\pi r},\\qquad B=\\frac{\\mu_0K}{2},\\qquad \\Phi=\\int\\vec B\\cdot d\\vec A"
+ },
+ {
+  "t": "li",
+  "uz": "**Toroid.** $N$ o'ramli toroid ichida kontur — radiusi $r$ bo'lgan aylana, u $NI$ tokni qamraydi: $B=\\frac{\\mu_0NI}{2\\pi r}$ — ichki chetda kattaroq, tashqi chetda kichikroq; toroid tashqarisida va «teshigida» $B=0$. Ichki va tashqi radiuslar $a$ va $b$, balandligi $h$ bo'lgan to'g'ri to'rtburchak kesim orqali oqim $\\Phi=\\frac{\\mu_0NIh}{2\\pi}\\ln\\frac{b}{a}$. $b-a\\ll a$ da toroid — egilgan solenoid: $B\\approx\\mu_0nI$, $n=\\frac{N}{2\\pi r}$.",
+  "ru": "**Тороид.** Внутри тороида из $N$ витков контур — окружность радиуса $r$, охватывающая ток $NI$: $B=\\frac{\\mu_0NI}{2\\pi r}$ — у внутреннего края больше, у внешнего меньше; снаружи тороида и в его «отверстии» $B=0$. Поток через прямоугольное сечение с внутренним и внешним радиусами $a$ и $b$ и высотой $h$: $\\Phi=\\frac{\\mu_0NIh}{2\\pi}\\ln\\frac{b}{a}$. При $b-a\\ll a$ тороид — согнутый соленоид: $B\\approx\\mu_0nI$, $n=\\frac{N}{2\\pi r}$.",
+  "en": "**Toroid.** Inside a toroid of $N$ turns the loop is a circle of radius $r$ enclosing a current $NI$: $B=\\frac{\\mu_0NI}{2\\pi r}$ — larger at the inner edge, smaller at the outer edge; outside the toroid and in its “hole” $B=0$. The flux through a rectangular cross-section with inner and outer radii $a$ and $b$ and height $h$ is $\\Phi=\\frac{\\mu_0NIh}{2\\pi}\\ln\\frac{b}{a}$. For $b-a\\ll a$ the toroid is a bent solenoid: $B\\approx\\mu_0nI$, $n=\\frac{N}{2\\pi r}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tokli tekislik.** Cheksiz tekislik bo'ylab sirt tok zichligi $K$ (birlik kenglikdagi tok, $\\mathrm{A/m}$) bilan tok oqsin. Simmetriyadan $\\vec B$ tekislikka parallel, tokka tik va ikki tomonda qarama-qarshi. Tekislikni kesib o'tgan to'g'ri to'rtburchak kontur uchun $2Bl=\\mu_0Kl$: $B=\\frac{\\mu_0K}{2}$ — masofaga bog'liq emas (zaryadlangan tekislikdagi $\\frac{\\sigma}{2\\varepsilon_0}$ kabi). Qarama-qarshi toklar oqayotgan ikki tekislik orasida $B=\\mu_0K$, tashqarisida nol — bu «yassilangan solenoid», $K=nI$.",
+  "ru": "**Плоскость с током.** Пусть по бесконечной плоскости течёт ток с поверхностной плотностью $K$ (ток на единицу ширины, $\\mathrm{A/m}$). По симметрии $\\vec B$ параллелен плоскости, перпендикулярен току и противоположен по разные стороны. Для прямоугольного контура, пересекающего плоскость, $2Bl=\\mu_0Kl$: $B=\\frac{\\mu_0K}{2}$ — не зависит от расстояния (как $\\frac{\\sigma}{2\\varepsilon_0}$ для заряженной плоскости). Между двумя плоскостями с противоположными токами $B=\\mu_0K$, снаружи ноль — это «сплющенный соленоид», $K=nI$.",
+  "en": "**Current sheet.** Let current flow along an infinite plane with surface current density $K$ (current per unit width, $\\mathrm{A/m}$). By symmetry $\\vec B$ is parallel to the plane, perpendicular to the current and opposite on the two sides. For a rectangular loop crossing the plane, $2Bl=\\mu_0Kl$: $B=\\frac{\\mu_0K}{2}$ — independent of distance (like $\\frac{\\sigma}{2\\varepsilon_0}$ for a charged plane). Between two sheets carrying opposite currents $B=\\mu_0K$, and outside it is zero — a “flattened solenoid” with $K=nI$."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L16-F07.png",
+   "ru": "figures/B2-L16-F07-ru.png",
+   "en": "figures/B2-L16-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Manbasiz maydon, magnit oqimi, vektor potensial",
+  "ru": "8. Поле без источников, магнитный поток, векторный потенциал",
+  "en": "8. A source-free field, magnetic flux, the vector potential"
+ },
+ {
+  "t": "li",
+  "uz": "**$\\nabla\\cdot\\vec B=0$.** Bio–Savar qonunidan har qanday tok maydoni uchun $\\nabla\\cdot\\vec B=0$ kelib chiqadi: magnit zaryadlar (monopollar) yo'q, induksiya chiziqlari berk — boshlanmaydi ham, tugamaydi ham. Integral ko'rinishda ixtiyoriy berk sirt orqali oqim nol: $\\oint\\vec B\\cdot d\\vec A=0$. Demak, bir xil kontur bilan chegaralangan barcha sirtlar orqali oqim $\\Phi=\\int\\vec B\\cdot d\\vec A$ bir xil; oqim birligi — veber, $1\\ \\mathrm{Wb}=1\\ \\mathrm{T\\cdot m^2}$.",
+  "ru": "**$\\nabla\\cdot\\vec B=0$.** Из закона Био–Савара для поля любого тока следует $\\nabla\\cdot\\vec B=0$: магнитных зарядов (монополей) нет, линии индукции замкнуты — не начинаются и не заканчиваются. В интегральной форме поток через любую замкнутую поверхность равен нулю: $\\oint\\vec B\\cdot d\\vec A=0$. Значит, поток $\\Phi=\\int\\vec B\\cdot d\\vec A$ через все поверхности, ограниченные одним контуром, одинаков; единица потока — вебер, $1\\ \\mathrm{Wb}=1\\ \\mathrm{T\\cdot m^2}$.",
+  "en": "**$\\nabla\\cdot\\vec B=0$.** The Biot–Savart law implies $\\nabla\\cdot\\vec B=0$ for the field of any current: there are no magnetic charges (monopoles), and field lines are closed — they neither begin nor end. In integral form the flux through any closed surface is zero: $\\oint\\vec B\\cdot d\\vec A=0$. Hence the flux $\\Phi=\\int\\vec B\\cdot d\\vec A$ is the same through every surface bounded by the same loop; the unit of flux is the weber, $1\\ \\mathrm{Wb}=1\\ \\mathrm{T\\cdot m^2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Vektor potensial.** Divergensiyasi nol bo'lgan maydonni rotor ko'rinishida yozish mumkin: $\\vec B=\\nabla\\times\\vec A$. Shunda $\\nabla\\times\\vec B=\\mu_0\\vec J$ dan ($\\nabla\\cdot\\vec A=0$ shartida) $\\nabla^2\\vec A=-\\mu_0\\vec J$ — Puasson tenglamasi, yechimi $\\vec A=\\frac{\\mu_0}{4\\pi}\\int\\frac{\\vec J}{r}\\,dV$; $\\vec A$ tok bo'ylab yo'naladi. Stoks teoremasidan $\\oint\\vec A\\cdot d\\vec l=\\Phi$. Uzun solenoid ichida $A=\\frac{Br}{2}$, tashqarisida $A=\\frac{\\mu_0nIR^2}{2r}$ — maydon nol bo'lgan joyda ham potensial noldan farqli (kvant mexanikasida Aharonov–Bom effekti).",
+  "ru": "**Векторный потенциал.** Поле с нулевой дивергенцией можно записать как ротор: $\\vec B=\\nabla\\times\\vec A$. Тогда из $\\nabla\\times\\vec B=\\mu_0\\vec J$ (при условии $\\nabla\\cdot\\vec A=0$) получаем $\\nabla^2\\vec A=-\\mu_0\\vec J$ — уравнение Пуассона с решением $\\vec A=\\frac{\\mu_0}{4\\pi}\\int\\frac{\\vec J}{r}\\,dV$; $\\vec A$ направлен вдоль тока. Из теоремы Стокса $\\oint\\vec A\\cdot d\\vec l=\\Phi$. Внутри длинного соленоида $A=\\frac{Br}{2}$, снаружи $A=\\frac{\\mu_0nIR^2}{2r}$ — потенциал отличен от нуля даже там, где поле равно нулю (эффект Ааронова–Бома в квантовой механике).",
+  "en": "**The vector potential.** A divergence-free field can be written as a curl: $\\vec B=\\nabla\\times\\vec A$. Then $\\nabla\\times\\vec B=\\mu_0\\vec J$ gives (with $\\nabla\\cdot\\vec A=0$) $\\nabla^2\\vec A=-\\mu_0\\vec J$ — a Poisson equation with solution $\\vec A=\\frac{\\mu_0}{4\\pi}\\int\\frac{\\vec J}{r}\\,dV$; $\\vec A$ points along the current. Stokes' theorem gives $\\oint\\vec A\\cdot d\\vec l=\\Phi$. Inside a long solenoid $A=\\frac{Br}{2}$, outside $A=\\frac{\\mu_0nIR^2}{2r}$ — the potential is non-zero even where the field vanishes (the Aharonov–Bohm effect in quantum mechanics)."
+ },
+ {
+  "t": "m",
+  "m": "\\nabla\\cdot\\vec B=0,\\qquad \\vec B=\\nabla\\times\\vec A,\\qquad \\vec A=\\frac{\\mu_0}{4\\pi}\\int\\frac{\\vec J}{r}\\,dV,\\qquad \\oint\\vec A\\cdot d\\vec l=\\Phi"
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaraviy shartlar.** Sirt toki $K$ oqayotgan sirtdan o'tganda $\\oint\\vec B\\cdot d\\vec A=0$ dan normal tashkil etuvchi uzluksiz: $B_n$ ikki tomonda bir xil; Amper teoremasidan urinma tashkil etuvchi sakraydi: $\\Delta B_\\tau=\\mu_0K$ (tokka tik yo'nalishda). Tokli tekislik maydoni ($\\pm\\frac{\\mu_0K}{2}$) va solenoid devori (ichkarida $\\mu_0nI$, tashqarida nol) aynan shu sakrashni ko'rsatadi. Elektrostatikada esa aksincha: $E_\\tau$ uzluksiz, $E_n$ esa $\\frac{\\sigma}{\\varepsilon_0}$ ga sakraydi (B2-L14).",
+  "ru": "**Граничные условия.** При переходе через поверхность с поверхностным током $K$ из $\\oint\\vec B\\cdot d\\vec A=0$ следует непрерывность нормальной составляющей: $B_n$ одинакова по обе стороны; из теоремы о циркуляции — скачок касательной составляющей: $\\Delta B_\\tau=\\mu_0K$ (в направлении, перпендикулярном току). Поле плоскости с током ($\\pm\\frac{\\mu_0K}{2}$) и стенка соленоида (внутри $\\mu_0nI$, снаружи ноль) показывают именно этот скачок. В электростатике наоборот: $E_\\tau$ непрерывна, а $E_n$ скачет на $\\frac{\\sigma}{\\varepsilon_0}$ (B2-L14).",
+  "en": "**Boundary conditions.** Crossing a surface carrying a surface current $K$, $\\oint\\vec B\\cdot d\\vec A=0$ makes the normal component continuous: $B_n$ is the same on both sides; Ampère's law makes the tangential component jump: $\\Delta B_\\tau=\\mu_0K$ (in the direction perpendicular to the current). The field of a current sheet ($\\pm\\frac{\\mu_0K}{2}$) and the wall of a solenoid ($\\mu_0nI$ inside, zero outside) show exactly this jump. In electrostatics it is the other way round: $E_\\tau$ is continuous and $E_n$ jumps by $\\frac{\\sigma}{\\varepsilon_0}$ (B2-L14)."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Toklarning o'zaro ta'siri va magnit bosim",
+  "ru": "9. Взаимодействие токов и магнитное давление",
+  "en": "9. Forces between currents and magnetic pressure"
+ },
+ {
+  "t": "li",
+  "uz": "**Parallel toklar.** Birinchi sim ikkinchisi joylashgan joyda $B_1=\\frac{\\mu_0I_1}{2\\pi d}$ maydon hosil qiladi; ikkinchi simning $l$ uzunlikdagi qismiga Amper kuchi $F=I_2lB_1$: $\\frac{F}{l}=\\frac{\\mu_0I_1I_2}{2\\pi d}$. Bir yo'nalishdagi toklar tortishadi, qarama-qarshilari itarishadi — zaryadlardagining teskarisi ([[F08]]). Ilgari amper shu orqali aniqlangan: $1\\ \\mathrm{m}$ masofadagi $1\\ \\mathrm{A}$ li toklar har metrga $2\\cdot10^{-7}\\ \\mathrm{N}$ kuch bilan ta'sirlashadi; 2019 yildan amper elementar zaryad orqali aniqlanadi va $\\mu_0$ tajribada $4\\pi\\cdot10^{-7}$ ga juda yaqin topiladi.",
+  "ru": "**Параллельные токи.** Первый провод создаёт в месте второго поле $B_1=\\frac{\\mu_0I_1}{2\\pi d}$; на участок второго провода длиной $l$ действует сила Ампера $F=I_2lB_1$: $\\frac{F}{l}=\\frac{\\mu_0I_1I_2}{2\\pi d}$. Токи одного направления притягиваются, противоположного — отталкиваются: наоборот по сравнению с зарядами ([[F08]]). Раньше ампер определяли именно так: токи по $1\\ \\mathrm{A}$ на расстоянии $1\\ \\mathrm{m}$ взаимодействуют с силой $2\\cdot10^{-7}\\ \\mathrm{N}$ на каждый метр; с 2019 года ампер определяется через элементарный заряд, а $\\mu_0$ на опыте оказывается очень близкой к $4\\pi\\cdot10^{-7}$.",
+  "en": "**Parallel currents.** The first wire produces at the second the field $B_1=\\frac{\\mu_0I_1}{2\\pi d}$; a length $l$ of the second wire feels the Ampère force $F=I_2lB_1$: $\\frac{F}{l}=\\frac{\\mu_0I_1I_2}{2\\pi d}$. Currents in the same direction attract, opposite currents repel — the reverse of charges ([[F08]]). The ampere used to be defined this way: currents of $1\\ \\mathrm{A}$ a distance $1\\ \\mathrm{m}$ apart interact with a force of $2\\cdot10^{-7}\\ \\mathrm{N}$ per metre; since 2019 the ampere is defined through the elementary charge, and $\\mu_0$ is measured to be very close to $4\\pi\\cdot10^{-7}$."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{F}{l}=\\frac{\\mu_0I_1I_2}{2\\pi d},\\qquad \\vec\\tau=\\vec m\\times\\vec B,\\qquad U=-\\vec m\\cdot\\vec B,\\qquad p=\\frac{B^2}{2\\mu_0}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ramka va dipol.** Bir jinsli maydonda tokli ramkaga natijaviy kuch nol, kuch momenti $\\vec\\tau=\\vec m\\times\\vec B$, potensial energiya $U=-\\vec m\\cdot\\vec B$: turg'un holat $\\vec m\\parallel\\vec B$, uni $180^\\circ$ ga burish uchun $2mB$ ish kerak. Bir jinsli bo'lmagan maydonda dipolga kuch $\\vec F=\\nabla(\\vec m\\cdot\\vec B)$ — $\\vec m\\parallel\\vec B$ bo'lsa, dipol kuchli maydon tomon tortiladi. Uzun sim yonidagi to'g'ri to'rtburchak ramkada yaqin va uzoq tomonlarga kuchlar farqi natijaviy kuch beradi: $F=\\frac{\\mu_0I_1I_2a}{2\\pi}\\left(\\frac{1}{d}-\\frac{1}{d+b}\\right)$.",
+  "ru": "**Рамка и диполь.** В однородном поле результирующая сила на рамку с током равна нулю, момент сил $\\vec\\tau=\\vec m\\times\\vec B$, потенциальная энергия $U=-\\vec m\\cdot\\vec B$: устойчивое положение $\\vec m\\parallel\\vec B$, для поворота на $180^\\circ$ нужна работа $2mB$. В неоднородном поле на диполь действует сила $\\vec F=\\nabla(\\vec m\\cdot\\vec B)$ — при $\\vec m\\parallel\\vec B$ диполь втягивается в область сильного поля. Для прямоугольной рамки рядом с длинным проводом разность сил на ближнюю и дальнюю стороны даёт результирующую силу: $F=\\frac{\\mu_0I_1I_2a}{2\\pi}\\left(\\frac{1}{d}-\\frac{1}{d+b}\\right)$.",
+  "en": "**A loop and a dipole.** In a uniform field the net force on a current loop is zero, the torque is $\\vec\\tau=\\vec m\\times\\vec B$ and the potential energy $U=-\\vec m\\cdot\\vec B$: the stable position is $\\vec m\\parallel\\vec B$, and turning it through $180^\\circ$ takes work $2mB$. In a non-uniform field a dipole feels the force $\\vec F=\\nabla(\\vec m\\cdot\\vec B)$ — with $\\vec m\\parallel\\vec B$ the dipole is pulled towards the stronger field. For a rectangular loop next to a long wire, the difference between the forces on the near and far sides gives a net force: $F=\\frac{\\mu_0I_1I_2a}{2\\pi}\\left(\\frac{1}{d}-\\frac{1}{d+b}\\right)$."
+ },
+ {
+  "t": "li",
+  "uz": "**Magnit bosim.** Tokli tekislikka boshqa toklarning maydoni ta'sir qiladi; o'z maydoni ikki tomonda qarama-qarshi bo'lgani uchun o'rtacha qiymat olinadi. Qarama-qarshi toklar oqayotgan ikki tekislik itarishadi: har biriga birlik yuzaga kuch $KB_1=\\frac{\\mu_0K^2}{2}=\\frac{B^2}{2\\mu_0}$, bu yerda $B=\\mu_0K$ — orasidagi maydon. Demak, maydon devorni maydon kuchli tomondan kuchsiz tomonga $p=\\frac{B^2}{2\\mu_0}$ bosim bilan itaradi: solenoid o'ramlari tashqariga cho'zilishga intiladi. $B=1\\ \\mathrm{T}$ da $p\\approx4\\cdot10^5\\ \\mathrm{Pa}$ — taxminan $4$ atmosfera.",
+  "ru": "**Магнитное давление.** На плоскость с током действует поле других токов; собственное поле по разные стороны противоположно, поэтому берётся среднее значение. Две плоскости с противоположными токами отталкиваются: на единицу площади каждой действует сила $KB_1=\\frac{\\mu_0K^2}{2}=\\frac{B^2}{2\\mu_0}$, где $B=\\mu_0K$ — поле между ними. Значит, поле давит на стенку со стороны сильного поля в сторону слабого с давлением $p=\\frac{B^2}{2\\mu_0}$: витки соленоида стремятся растянуться наружу. При $B=1\\ \\mathrm{T}$ имеем $p\\approx4\\cdot10^5\\ \\mathrm{Pa}$ — около $4$ атмосфер.",
+  "en": "**Magnetic pressure.** A current sheet is acted on by the field of the other currents; its own field is opposite on the two sides, so the average value is used. Two sheets carrying opposite currents repel: the force per unit area on each is $KB_1=\\frac{\\mu_0K^2}{2}=\\frac{B^2}{2\\mu_0}$, where $B=\\mu_0K$ is the field between them. So the field pushes a wall from the strong-field side towards the weak-field side with pressure $p=\\frac{B^2}{2\\mu_0}$: the windings of a solenoid tend to be pushed outward. At $B=1\\ \\mathrm{T}$, $p\\approx4\\cdot10^5\\ \\mathrm{Pa}$ — about $4$ atmospheres."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L16-F08.png",
+   "ru": "figures/B2-L16-F08-ru.png",
+   "en": "figures/B2-L16-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Aylanayotgan zaryadlar maydoni",
+  "ru": "10. Поле вращающихся зарядов",
+  "en": "10. The field of rotating charges"
+ },
+ {
+  "t": "li",
+  "uz": "**Halqa va disk.** $\\omega$ burchak tezlik bilan aylanayotgan $Q$ zaryadli halqa — $I=\\frac{Q\\omega}{2\\pi}$ tokli halqa: $B_0=\\frac{\\mu_0Q\\omega}{4\\pi R}$, $m=\\frac{Q\\omega R^2}{2}$. Sirt zichligi $\\sigma$ bo'lgan disk — konsentrik halqalar: $dI=\\sigma\\omega s\\,ds$, markazda $B=\\int_0^R\\frac{\\mu_0\\sigma\\omega s\\,ds}{2s}=\\frac{\\mu_0\\sigma\\omega R}{2}=\\frac{\\mu_0Q\\omega}{2\\pi R}$, moment $m=\\int_0^R\\pi s^2\\sigma\\omega s\\,ds=\\frac{\\pi\\sigma\\omega R^4}{4}=\\frac{Q\\omega R^2}{4}$.",
+  "ru": "**Кольцо и диск.** Кольцо с зарядом $Q$, вращающееся с угловой скоростью $\\omega$, — это виток с током $I=\\frac{Q\\omega}{2\\pi}$: $B_0=\\frac{\\mu_0Q\\omega}{4\\pi R}$, $m=\\frac{Q\\omega R^2}{2}$. Диск с поверхностной плотностью $\\sigma$ — набор концентрических колец: $dI=\\sigma\\omega s\\,ds$, в центре $B=\\int_0^R\\frac{\\mu_0\\sigma\\omega s\\,ds}{2s}=\\frac{\\mu_0\\sigma\\omega R}{2}=\\frac{\\mu_0Q\\omega}{2\\pi R}$, момент $m=\\int_0^R\\pi s^2\\sigma\\omega s\\,ds=\\frac{\\pi\\sigma\\omega R^4}{4}=\\frac{Q\\omega R^2}{4}$.",
+  "en": "**Ring and disc.** A ring of charge $Q$ rotating with angular speed $\\omega$ is a loop carrying $I=\\frac{Q\\omega}{2\\pi}$: $B_0=\\frac{\\mu_0Q\\omega}{4\\pi R}$, $m=\\frac{Q\\omega R^2}{2}$. A disc of surface density $\\sigma$ is a set of concentric rings: $dI=\\sigma\\omega s\\,ds$; at the centre $B=\\int_0^R\\frac{\\mu_0\\sigma\\omega s\\,ds}{2s}=\\frac{\\mu_0\\sigma\\omega R}{2}=\\frac{\\mu_0Q\\omega}{2\\pi R}$, and the moment is $m=\\int_0^R\\pi s^2\\sigma\\omega s\\,ds=\\frac{\\pi\\sigma\\omega R^4}{4}=\\frac{Q\\omega R^2}{4}$."
+ },
+ {
+  "t": "m",
+  "m": "I=\\frac{Q\\omega}{2\\pi},\\qquad m=\\frac{Q\\omega R^2}{2},\\qquad B=\\frac{\\mu_0\\sigma\\omega R}{2},\\qquad \\frac{m}{L}=\\frac{q}{2M}"
+ },
+ {
+  "t": "li",
+  "uz": "**Sfera va giromagnit nisbat.** Aylanayotgan zaryadlangan sferik qobiq ichida maydon bir jinsli: $B=\\frac{2}{3}\\mu_0\\sigma\\omega R$, magnit momenti $m=\\frac{Q\\omega R^2}{3}$; tekis zaryadlangan shar uchun $m=\\frac{Q\\omega R^2}{5}$. Zaryad va massa bir xil taqsimlangan bo'lsa, $\\frac{m}{L}=\\frac{q}{2M}$ — giromagnit nisbat shakldan qat'i nazar bir xil. Elektronning orbital harakati uchun $L=\\hbar$ da $m=\\frac{e\\hbar}{2m_e}\\approx9.27\\cdot10^{-24}\\ \\mathrm{A\\cdot m^2}$ — Bor magnetoni (B1-L39); spin uchun nisbat ikki baravar katta.",
+  "ru": "**Сфера и гиромагнитное отношение.** Внутри вращающейся заряженной сферической оболочки поле однородно: $B=\\frac{2}{3}\\mu_0\\sigma\\omega R$, магнитный момент $m=\\frac{Q\\omega R^2}{3}$; для равномерно заряженного шара $m=\\frac{Q\\omega R^2}{5}$. Если заряд и масса распределены одинаково, $\\frac{m}{L}=\\frac{q}{2M}$ — гиромагнитное отношение не зависит от формы. Для орбитального движения электрона при $L=\\hbar$ получаем $m=\\frac{e\\hbar}{2m_e}\\approx9.27\\cdot10^{-24}\\ \\mathrm{A\\cdot m^2}$ — магнетон Бора (B1-L39); для спина отношение вдвое больше.",
+  "en": "**Sphere and the gyromagnetic ratio.** Inside a rotating charged spherical shell the field is uniform: $B=\\frac{2}{3}\\mu_0\\sigma\\omega R$, with magnetic moment $m=\\frac{Q\\omega R^2}{3}$; for a uniformly charged ball $m=\\frac{Q\\omega R^2}{5}$. If charge and mass are distributed alike, $\\frac{m}{L}=\\frac{q}{2M}$ — the gyromagnetic ratio does not depend on the shape. For the electron's orbital motion with $L=\\hbar$ this gives $m=\\frac{e\\hbar}{2m_e}\\approx9.27\\cdot10^{-24}\\ \\mathrm{A\\cdot m^2}$ — the Bohr magneton (B1-L39); for spin the ratio is twice as large."
+ },
+ {
+  "t": "h2",
+  "uz": "11. GRE uchun usullar va tipik xatolar",
+  "ru": "11. Методы для GRE и типичные ошибки",
+  "en": "11. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**1-usul — usulni tanlash.** Simmetriya bormi (cheksiz sim, quvur, kabel, solenoid, toroid, tekislik)? Bo'lsa — Amper teoremasi, bir qatorda. Bo'lmasa — Bio–Savar: kontur to'g'ri kesmalar va yoylarga bo'linadi, tayyor formulalar ($\\frac{\\mu_0I}{2\\pi d}$, $\\frac{\\mu_0I}{4\\pi d}$, $\\frac{\\mu_0I\\varphi}{4\\pi R}$) qo'shiladi; radial qismlar va sim davomidagi nuqtalar nol beradi. Uzoq masofada har qanday ramka — dipol, $B\\propto\\frac{m}{r^3}$.",
+  "ru": "**Метод 1 — выбор метода.** Есть ли симметрия (бесконечный провод, труба, кабель, соленоид, тороид, плоскость)? Если да — теорема о циркуляции, в одну строку. Если нет — Био–Савар: контур разбивается на отрезки и дуги, складываются готовые формулы ($\\frac{\\mu_0I}{2\\pi d}$, $\\frac{\\mu_0I}{4\\pi d}$, $\\frac{\\mu_0I\\varphi}{4\\pi R}$); радиальные участки и точки на продолжении провода дают ноль. Вдали любая рамка — диполь, $B\\propto\\frac{m}{r^3}$.",
+  "en": "**Method 1 — choosing the method.** Is there symmetry (infinite wire, pipe, cable, solenoid, toroid, sheet)? If so, Ampère's law, in one line. If not, Biot–Savart: split the circuit into segments and arcs and add the ready-made formulas ($\\frac{\\mu_0I}{2\\pi d}$, $\\frac{\\mu_0I}{4\\pi d}$, $\\frac{\\mu_0I\\varphi}{4\\pi R}$); radial pieces and points on the line of a wire give zero. Far away any loop is a dipole, $B\\propto\\frac{m}{r^3}$."
+ },
+ {
+  "t": "li",
+  "uz": "**2-usul — masshtab va son.** Kalkulyatorsiz: $\\frac{\\mu_0}{4\\pi}=10^{-7}$, $\\frac{\\mu_0}{2\\pi}=2\\cdot10^{-7}$, $\\mu_0\\approx1.26\\cdot10^{-6}$. Masalan, $B=\\frac{\\mu_0I}{2\\pi d}=2\\cdot10^{-7}\\frac{I}{d}$. Proporsiyalar: $B\\propto\\frac{I}{d}$ (sim), $\\frac{I}{R}$ (halqa), $nI$ (solenoid), $\\frac{F}{l}\\propto\\frac{I_1I_2}{d}$. Ishoralarni tekshirish: parallel toklar tortishadi, bir xil uzunlikdagi simdan yasalgan $N$ o'ramli halqada $B\\propto N^2$.",
+  "ru": "**Метод 2 — масштаб и числа.** Без калькулятора: $\\frac{\\mu_0}{4\\pi}=10^{-7}$, $\\frac{\\mu_0}{2\\pi}=2\\cdot10^{-7}$, $\\mu_0\\approx1.26\\cdot10^{-6}$. Например, $B=\\frac{\\mu_0I}{2\\pi d}=2\\cdot10^{-7}\\frac{I}{d}$. Пропорции: $B\\propto\\frac{I}{d}$ (провод), $\\frac{I}{R}$ (виток), $nI$ (соленоид), $\\frac{F}{l}\\propto\\frac{I_1I_2}{d}$. Проверка знаков: параллельные токи притягиваются; у катушки из $N$ витков из провода одной длины $B\\propto N^2$.",
+  "en": "**Method 2 — scale and numbers.** Without a calculator: $\\frac{\\mu_0}{4\\pi}=10^{-7}$, $\\frac{\\mu_0}{2\\pi}=2\\cdot10^{-7}$, $\\mu_0\\approx1.26\\cdot10^{-6}$. For example, $B=\\frac{\\mu_0I}{2\\pi d}=2\\cdot10^{-7}\\frac{I}{d}$. Proportions: $B\\propto\\frac{I}{d}$ (wire), $\\frac{I}{R}$ (loop), $nI$ (solenoid), $\\frac{F}{l}\\propto\\frac{I_1I_2}{d}$. Sign check: parallel currents attract; for a coil of $N$ turns wound from wire of fixed length, $B\\propto N^2$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) Halqa markazida $\\frac{\\mu_0I}{2\\pi R}$ yozish ($\\frac{\\mu_0I}{2R}$ kerak). 2) Amper teoremasida kontur tashqarisidagi tokni qo'shish yoki tok ishorasini unutish. 3) «Sirkulyatsiya nol, demak $B=0$» deb o'ylash (koaksial kabel tashqarisida to'g'ri, ixtiyoriy kontur uchun emas). 4) Solenoid maydonini radiusga bog'liq deb olish. 5) Toroidda $B$ ni o'zgarmas deb hisoblash. 6) Parallel toklarni itarishadi deb olish. 7) Tokli tekislikda $\\mu_0K$ yozish ($\\frac{\\mu_0K}{2}$ kerak; $\\mu_0K$ — ikki tekislik orasida).",
+  "ru": "**Типичные ошибки.** 1) Писать в центре витка $\\frac{\\mu_0I}{2\\pi R}$ (нужно $\\frac{\\mu_0I}{2R}$). 2) Включать в теорему о циркуляции ток вне контура или забывать знак тока. 3) Думать: «циркуляция равна нулю, значит $B=0$» (верно снаружи коаксиального кабеля, но не для любого контура). 4) Считать поле соленоида зависящим от радиуса. 5) Считать $B$ в тороиде постоянным. 6) Считать, что параллельные токи отталкиваются. 7) Писать для плоскости с током $\\mu_0K$ (нужно $\\frac{\\mu_0K}{2}$; $\\mu_0K$ — между двумя плоскостями).",
+  "en": "**Typical mistakes.** 1) Writing $\\frac{\\mu_0I}{2\\pi R}$ at the centre of a loop (it should be $\\frac{\\mu_0I}{2R}$). 2) Including a current outside the loop in Ampère's law, or forgetting the sign of a current. 3) Thinking “the circulation is zero, so $B=0$” (true outside a coaxial cable, but not for an arbitrary loop). 4) Taking the solenoid field to depend on the radius. 5) Treating $B$ in a toroid as constant. 6) Thinking parallel currents repel. 7) Writing $\\mu_0K$ for a current sheet (it should be $\\frac{\\mu_0K}{2}$; $\\mu_0K$ is between two sheets)."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Bio–Savar–Laplas",
+    "ru": "Био–Савар–Лаплас",
+    "en": "Biot–Savart",
+    "m": "d\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec l\\times\\hat r}{r^2}"
+   },
+   {
+    "uz": "Harakatlanuvchi zaryad",
+    "ru": "Движущийся заряд",
+    "en": "Moving charge",
+    "m": "\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{q\\vec v\\times\\hat r}{r^2}=\\frac{\\vec v\\times\\vec E}{c^2}"
+   },
+   {
+    "uz": "Tok kesmasi",
+    "ru": "Отрезок тока",
+    "en": "Current segment",
+    "m": "B=\\frac{\\mu_0I}{4\\pi d}\\left(\\sin\\alpha_2-\\sin\\alpha_1\\right)"
+   },
+   {
+    "uz": "Cheksiz sim",
+    "ru": "Бесконечный провод",
+    "en": "Infinite wire",
+    "m": "B=\\frac{\\mu_0I}{2\\pi d}"
+   },
+   {
+    "uz": "Ko'pburchak",
+    "ru": "Многоугольник",
+    "en": "Polygon",
+    "m": "B=\\frac{n\\mu_0I}{2\\pi R}\\tan\\frac{\\pi}{n},\\quad \\frac{2\\sqrt{2}\\mu_0I}{\\pi a}"
+   },
+   {
+    "uz": "Halqa, yoy",
+    "ru": "Виток, дуга",
+    "en": "Loop, arc",
+    "m": "B_0=\\frac{\\mu_0I}{2R},\\quad B=\\frac{\\mu_0I\\varphi}{4\\pi R}"
+   },
+   {
+    "uz": "Halqa o'qida",
+    "ru": "На оси витка",
+    "en": "Loop axis",
+    "m": "B_z=\\frac{\\mu_0IR^2}{2\\left(R^2+z^2\\right)^{3/2}}"
+   },
+   {
+    "uz": "Magnit dipol",
+    "ru": "Магнитный диполь",
+    "en": "Magnetic dipole",
+    "m": "m=IA,\\quad B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{z^3}"
+   },
+   {
+    "uz": "Gelmgols g'altaklari",
+    "ru": "Катушки Гельмгольца",
+    "en": "Helmholtz coils",
+    "m": "d=R,\\quad B=\\left(\\frac{4}{5}\\right)^{3/2}\\frac{\\mu_0NI}{R}"
+   },
+   {
+    "uz": "Amper teoremasi",
+    "ru": "Теорема о циркуляции",
+    "en": "Ampère's law",
+    "m": "\\oint\\vec B\\cdot d\\vec l=\\mu_0I,\\quad \\nabla\\times\\vec B=\\mu_0\\vec J"
+   },
+   {
+    "uz": "Yo'g'on sim",
+    "ru": "Толстый провод",
+    "en": "Thick wire",
+    "m": "B=\\frac{\\mu_0Ir}{2\\pi R^2}\\ (r<R)"
+   },
+   {
+    "uz": "Solenoid, toroid",
+    "ru": "Соленоид, тороид",
+    "en": "Solenoid, toroid",
+    "m": "B=\\mu_0nI,\\quad B=\\frac{\\mu_0NI}{2\\pi r}"
+   },
+   {
+    "uz": "Tokli tekislik",
+    "ru": "Плоскость с током",
+    "en": "Current sheet",
+    "m": "B=\\frac{\\mu_0K}{2},\\quad \\Delta B_\\tau=\\mu_0K"
+   },
+   {
+    "uz": "Manbasizlik",
+    "ru": "Отсутствие источников",
+    "en": "No sources",
+    "m": "\\nabla\\cdot\\vec B=0,\\quad \\vec B=\\nabla\\times\\vec A"
+   },
+   {
+    "uz": "Parallel toklar",
+    "ru": "Параллельные токи",
+    "en": "Parallel currents",
+    "m": "\\frac{F}{l}=\\frac{\\mu_0I_1I_2}{2\\pi d}"
+   },
+   {
+    "uz": "Ramka, bosim",
+    "ru": "Рамка, давление",
+    "en": "Loop, pressure",
+    "m": "\\vec\\tau=\\vec m\\times\\vec B,\\quad U=-\\vec m\\cdot\\vec B,\\quad p=\\frac{B^2}{2\\mu_0}"
+   },
+   {
+    "uz": "Aylanayotgan zaryad",
+    "ru": "Вращающийся заряд",
+    "en": "Rotating charge",
+    "m": "m=\\frac{Q\\omega R^2}{2},\\quad \\frac{m}{L}=\\frac{q}{2M}"
+   }
+  ]
+ }
+]

@@ -1,0 +1,469 @@
+[
+ {
+  "t": "h1",
+  "uz": "Tok, Kirxgof qoidalari, RC zanjir (Current, Kirchhoff's rules, RC circuits)",
+  "ru": "Ток, правила Кирхгофа, RC-цепь",
+  "en": "Current, Kirchhoff's rules, RC circuits"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz tok zichligi va uzluksizlik tenglamasini qo'llaysiz; Drude modeli orqali o'tkazuvchanlik va tartibli harakat tezligini baholaysiz; murakkab shakldagi o'tkazgichlar qarshiligini integrallab topasiz; EYK manbai va eng katta quvvat shartini qo'llaysiz; Kirxgof qoidalarini tizimli ishlatasiz va zanjirlarni ekvivalent manba, superpozitsiya va simmetriya usullari bilan soddalashtirasiz; RC zanjirda zaryadlash va zaryadsizlanishni, vaqt doimiysini va energiya balansini tahlil qilasiz.",
+  "ru": "**Цель.** После урока вы будете применять плотность тока и уравнение неразрывности; оценивать проводимость и скорость дрейфа в модели Друде; находить интегрированием сопротивление проводников сложной формы; применять источник ЭДС и условие максимальной мощности; систематически пользоваться правилами Кирхгофа и упрощать цепи методами эквивалентного источника, суперпозиции и симметрии; анализировать зарядку и разрядку RC-цепи, постоянную времени и баланс энергии.",
+  "en": "**Goal.** After this lesson you will use current density and the continuity equation; estimate conductivity and drift speed with the Drude model; find the resistance of conductors of complicated shape by integration; apply an EMF source and the maximum-power condition; use Kirchhoff's rules systematically and simplify circuits by the equivalent-source, superposition and symmetry methods; and analyse charging and discharging in an RC circuit, the time constant and the energy balance."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L33–B1-L36 da tok kuchi, Om qonuni, qarshilik, ulash usullari, Joul–Lens qonuni, EYK va to'liq zanjir uchun Om qonuni hamda Kirxgof qoidalarini ko'rdik. Bu darsda shu natijalarni maydon tilida ifodalaymiz: tok — maydon ta'sirida zaryadlarning tartibli harakati, Om qonuni esa $\\vec J=\\sigma\\vec E$ ko'rinishida. So'ng murakkab zanjirlarni yechishning umumiy usullarini va vaqtga bog'liq eng muhim jarayon — RC zanjirni o'rganamiz. GRE da zanjirlar, quvvat va RC vaqt doimiysi savollari elektromagnetizm qismida eng ko'p uchraydiganlardan.",
+  "ru": "В B1-L33–B1-L36 мы рассмотрели силу тока, закон Ома, сопротивление, способы соединения, закон Джоуля–Ленца, ЭДС, закон Ома для полной цепи и правила Кирхгофа. В этом уроке выразим эти результаты на языке поля: ток — упорядоченное движение зарядов под действием поля, а закон Ома имеет вид $\\vec J=\\sigma\\vec E$. Затем изучим общие методы решения сложных цепей и важнейший процесс, зависящий от времени, — RC-цепь. На GRE вопросы о цепях, мощности и постоянной времени RC — одни из самых частых в разделе электромагнетизма.",
+  "en": "In B1-L33–B1-L36 we met current, Ohm's law, resistance, ways of connecting, Joule's law, EMF, Ohm's law for a complete circuit and Kirchhoff's rules. In this lesson we express these results in the language of fields: current is the ordered motion of charges driven by a field, and Ohm's law takes the form $\\vec J=\\sigma\\vec E$. Then we study general methods for solving complex circuits and the most important time-dependent process — the RC circuit. On the GRE, questions on circuits, power and the RC time constant are among the most frequent in electromagnetism."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Tok zichligi va uzluksizlik tenglamasi",
+  "ru": "1. Плотность тока и уравнение неразрывности",
+  "en": "1. Current density and the continuity equation"
+ },
+ {
+  "t": "li",
+  "uz": "**Tok zichligi.** Konsentratsiyasi $n$, zaryadi $q$ bo'lgan tashuvchilar o'rtacha $\\vec v$ tezlik bilan harakatlansa, $\\vec J=nq\\vec v$; sirt orqali tok $I=\\int\\vec J\\cdot d\\vec A$. Metallarda tartibli harakat tezligi juda kichik: mis simda ($n\\approx8.5\\cdot10^{28}\\ \\mathrm{m^{-3}}$, kesim $1\\ \\mathrm{mm^2}$, $1\\ \\mathrm{A}$) $v\\approx7\\cdot10^{-5}\\ \\mathrm{m/s}$. Chiroq bir zumda yonadi, chunki simdagi maydon yorug'lik tezligiga yaqin tezlikda o'rnatiladi va barcha elektronlar birdaniga harakatga keladi ([[F01]]).",
+  "ru": "**Плотность тока.** Если носители с концентрацией $n$ и зарядом $q$ движутся со средней скоростью $\\vec v$, то $\\vec J=nq\\vec v$; ток через поверхность $I=\\int\\vec J\\cdot d\\vec A$. В металлах скорость упорядоченного движения очень мала: в медном проводе ($n\\approx8.5\\cdot10^{28}\\ \\mathrm{m^{-3}}$, сечение $1\\ \\mathrm{mm^2}$, $1\\ \\mathrm{A}$) $v\\approx7\\cdot10^{-5}\\ \\mathrm{m/s}$. Лампа загорается мгновенно, потому что поле в проводе устанавливается со скоростью, близкой к скорости света, и все электроны приходят в движение сразу ([[F01]]).",
+  "en": "**Current density.** If carriers of density $n$ and charge $q$ move with mean velocity $\\vec v$, then $\\vec J=nq\\vec v$; the current through a surface is $I=\\int\\vec J\\cdot d\\vec A$. In metals the drift speed is very small: in a copper wire ($n\\approx8.5\\cdot10^{28}\\ \\mathrm{m^{-3}}$, cross-section $1\\ \\mathrm{mm^2}$, $1\\ \\mathrm{A}$) $v\\approx7\\cdot10^{-5}\\ \\mathrm{m/s}$. A lamp lights instantly because the field in the wire is set up at nearly the speed of light and all the electrons start moving at once ([[F01]])."
+ },
+ {
+  "t": "m",
+  "m": "\\vec J=nq\\vec v,\\qquad I=\\int\\vec J\\cdot d\\vec A,\\qquad \\nabla\\cdot\\vec J+\\frac{\\partial\\rho}{\\partial t}=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Uzluksizlik tenglamasi.** Zaryad saqlanishi: yopiq sirtdan chiqayotgan tok ichki zaryad kamayish tezligiga teng, $\\oint\\vec J\\cdot d\\vec A=-\\frac{dQ}{dt}$, differensial ko'rinishda $\\nabla\\cdot\\vec J=-\\frac{\\partial\\rho}{\\partial t}$ ($\\rho$ — bu yerda zaryad zichligi; keyingi bo'limlarda $\\rho$ — solishtirma qarshilik). Statsionar tokda $\\nabla\\cdot\\vec J=0$ — tugun qoidasi aynan shu: tugunga kirgan toklar yig'indisi chiqqanlariga teng.",
+  "ru": "**Уравнение неразрывности.** Сохранение заряда: ток, выходящий из замкнутой поверхности, равен скорости убывания заряда внутри, $\\oint\\vec J\\cdot d\\vec A=-\\frac{dQ}{dt}$, в дифференциальной форме $\\nabla\\cdot\\vec J=-\\frac{\\partial\\rho}{\\partial t}$ ($\\rho$ — здесь плотность заряда; в следующих разделах $\\rho$ — удельное сопротивление). Для постоянного тока $\\nabla\\cdot\\vec J=0$ — это и есть правило узла: сумма входящих в узел токов равна сумме выходящих.",
+  "en": "**The continuity equation.** Charge conservation: the current leaving a closed surface equals the rate at which the enclosed charge decreases, $\\oint\\vec J\\cdot d\\vec A=-\\frac{dQ}{dt}$, or in differential form $\\nabla\\cdot\\vec J=-\\frac{\\partial\\rho}{\\partial t}$ ($\\rho$ here is the charge density; in later sections $\\rho$ is the resistivity). For a steady current $\\nabla\\cdot\\vec J=0$ — exactly the junction rule: the currents entering a junction add up to those leaving it."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L15-F01.png",
+   "ru": "figures/B2-L15-F01-ru.png",
+   "en": "figures/B2-L15-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Drude modeli va differensial Om qonuni",
+  "ru": "2. Модель Друде и закон Ома в дифференциальной форме",
+  "en": "2. The Drude model and Ohm's law in differential form"
+ },
+ {
+  "t": "li",
+  "uz": "**Drude modeli.** Elektron maydonda $\\frac{eE}{m}$ tezlanish bilan tezlashadi va o'rtacha $\\tau_0$ vaqtda panjara nuqsonlari va tebranishlari bilan to'qnashib, «yo'nalishni unutadi». O'rtacha tezlik $v=\\frac{eE\\tau_0}{m}$, harakatchanlik $\\mu=\\frac{v}{E}=\\frac{e\\tau_0}{m}$. Bundan $\\vec J=\\sigma\\vec E$, $\\sigma=\\frac{ne^2\\tau_0}{m}$ — differensial Om qonuni ([[F02]]). Mis uchun $\\rho\\approx1.7\\cdot10^{-8}\\ \\Omega\\cdot\\mathrm{m}$ dan $\\tau_0\\approx2.5\\cdot10^{-14}\\ \\mathrm{s}$, Fermi tezligida ($\\approx1.6\\cdot10^6\\ \\mathrm{m/s}$) erkin yugurish yo'li $\\lambda\\approx40\\ \\mathrm{nm}$.",
+  "ru": "**Модель Друде.** Электрон ускоряется в поле с ускорением $\\frac{eE}{m}$ и в среднем через время $\\tau_0$ сталкивается с дефектами и колебаниями решётки, «забывая направление». Средняя скорость $v=\\frac{eE\\tau_0}{m}$, подвижность $\\mu=\\frac{v}{E}=\\frac{e\\tau_0}{m}$. Отсюда $\\vec J=\\sigma\\vec E$, $\\sigma=\\frac{ne^2\\tau_0}{m}$ — закон Ома в дифференциальной форме ([[F02]]). Для меди из $\\rho\\approx1.7\\cdot10^{-8}\\ \\Omega\\cdot\\mathrm{m}$ получаем $\\tau_0\\approx2.5\\cdot10^{-14}\\ \\mathrm{s}$, при скорости Ферми ($\\approx1.6\\cdot10^6\\ \\mathrm{m/s}$) длина свободного пробега $\\lambda\\approx40\\ \\mathrm{nm}$.",
+  "en": "**The Drude model.** An electron accelerates in the field at $\\frac{eE}{m}$ and, on average after a time $\\tau_0$, collides with lattice defects and vibrations, “forgetting its direction”. The mean velocity is $v=\\frac{eE\\tau_0}{m}$ and the mobility $\\mu=\\frac{v}{E}=\\frac{e\\tau_0}{m}$. Hence $\\vec J=\\sigma\\vec E$ with $\\sigma=\\frac{ne^2\\tau_0}{m}$ — Ohm's law in differential form ([[F02]]). For copper, $\\rho\\approx1.7\\cdot10^{-8}\\ \\Omega\\cdot\\mathrm{m}$ gives $\\tau_0\\approx2.5\\cdot10^{-14}\\ \\mathrm{s}$, and at the Fermi speed ($\\approx1.6\\cdot10^6\\ \\mathrm{m/s}$) the mean free path is $\\lambda\\approx40\\ \\mathrm{nm}$."
+ },
+ {
+  "t": "m",
+  "m": "v=\\frac{eE\\tau_0}{m},\\qquad \\sigma=\\frac{ne^2\\tau_0}{m}=ne\\mu,\\qquad \\vec J=\\sigma\\vec E,\\qquad w=\\vec J\\cdot\\vec E=\\sigma E^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Joul issiqligi va temperatura.** Birlik hajmda ajraladigan quvvat $\\vec J\\cdot\\vec E=\\sigma E^2=\\rho J^2$ — integrallasak, $P=I^2R$. Metallarda temperatura oshsa, panjara tebranishlari ko'payib, $\\tau_0$ kamayadi: $\\rho=\\rho_0(1+\\alpha\\Delta T)$, mis uchun $\\alpha\\approx4\\cdot10^{-3}\\ \\mathrm{K^{-1}}$. Yarimo'tkazgichlarda esa $n$ tez o'sadi va qarshilik kamayadi (B1-L37). O'ta o'tkazgichlarda kritik temperaturadan pastda $\\rho=0$.",
+  "ru": "**Джоулево тепло и температура.** Мощность, выделяющаяся в единице объёма, $\\vec J\\cdot\\vec E=\\sigma E^2=\\rho J^2$ — интегрируя, получаем $P=I^2R$. В металлах с ростом температуры колебания решётки усиливаются и $\\tau_0$ уменьшается: $\\rho=\\rho_0(1+\\alpha\\Delta T)$, для меди $\\alpha\\approx4\\cdot10^{-3}\\ \\mathrm{K^{-1}}$. В полупроводниках же быстро растёт $n$ и сопротивление падает (B1-L37). У сверхпроводников ниже критической температуры $\\rho=0$.",
+  "en": "**Joule heating and temperature.** The power released per unit volume is $\\vec J\\cdot\\vec E=\\sigma E^2=\\rho J^2$ — integrating gives $P=I^2R$. In metals, as the temperature rises the lattice vibrations grow and $\\tau_0$ falls: $\\rho=\\rho_0(1+\\alpha\\Delta T)$, with $\\alpha\\approx4\\cdot10^{-3}\\ \\mathrm{K^{-1}}$ for copper. In semiconductors, by contrast, $n$ grows quickly and the resistance falls (B1-L37). Superconductors have $\\rho=0$ below the critical temperature."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L15-F02.png",
+   "ru": "figures/B2-L15-F02-ru.png",
+   "en": "figures/B2-L15-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Murakkab shakldagi o'tkazgichlar qarshiligi",
+  "ru": "3. Сопротивление проводников сложной формы",
+  "en": "3. Resistance of conductors of complicated shape"
+ },
+ {
+  "t": "li",
+  "uz": "**Ketma-ket qatlamlar.** Tok chiziqlariga perpendikulyar yupqa qatlamlar ketma-ket ulangan: $R=\\int\\frac{\\rho\\,dl}{A(l)}$. Kesik konus (radiuslar $a$, $b$, uzunlik $L$): $R=\\frac{\\rho L}{\\pi ab}$. Radial oqim ([[F03]]): silindrik qatlam (koaksial kabel izolyatsiyasi) $R=\\frac{\\rho}{2\\pi L}\\ln\\frac{b}{a}$, sferik qatlam $R=\\frac{\\rho}{4\\pi}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$. Yerdagi yarim sferik elektrod uchun $b\\to\\infty$: $R=\\frac{\\rho}{2\\pi a}$ — chaqmoq yaqinidagi «qadam kuchlanishi» shundan.",
+  "ru": "**Последовательные слои.** Тонкие слои, перпендикулярные линиям тока, соединены последовательно: $R=\\int\\frac{\\rho\\,dl}{A(l)}$. Усечённый конус (радиусы $a$, $b$, длина $L$): $R=\\frac{\\rho L}{\\pi ab}$. Радиальный ток ([[F03]]): цилиндрический слой (изоляция коаксиального кабеля) $R=\\frac{\\rho}{2\\pi L}\\ln\\frac{b}{a}$, сферический слой $R=\\frac{\\rho}{4\\pi}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$. Для полусферического заземлителя $b\\to\\infty$: $R=\\frac{\\rho}{2\\pi a}$ — отсюда «шаговое напряжение» вблизи удара молнии.",
+  "en": "**Layers in series.** Thin layers perpendicular to the current lines are in series: $R=\\int\\frac{\\rho\\,dl}{A(l)}$. A truncated cone (radii $a$, $b$, length $L$): $R=\\frac{\\rho L}{\\pi ab}$. Radial flow ([[F03]]): a cylindrical shell (coaxial-cable insulation) has $R=\\frac{\\rho}{2\\pi L}\\ln\\frac{b}{a}$, a spherical shell $R=\\frac{\\rho}{4\\pi}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$. For a hemispherical ground electrode $b\\to\\infty$: $R=\\frac{\\rho}{2\\pi a}$ — the origin of the “step voltage” near a lightning strike."
+ },
+ {
+  "t": "m",
+  "m": "R=\\int\\frac{\\rho\\,dl}{A},\\qquad R=\\frac{\\rho}{2\\pi L}\\ln\\frac{b}{a},\\qquad R=\\frac{\\rho}{4\\pi}\\left(\\frac{1}{a}-\\frac{1}{b}\\right),\\qquad RC=\\varepsilon\\varepsilon_0\\rho"
+ },
+ {
+  "t": "li",
+  "uz": "**$RC=\\varepsilon\\varepsilon_0\\rho$.** Ikki elektrod orasi singdiruvchanligi $\\varepsilon$, solishtirma qarshiligi $\\rho$ bo'lgan modda bilan to'ldirilsa, $R$ va $C$ bir xil geometrik integraldan hisoblanadi, shuning uchun $RC=\\varepsilon\\varepsilon_0\\rho$ — shaklga bog'liq emas. Bu: sizuvchi kondensatorning o'z-o'zidan zaryadsizlanish vaqti; sig'imi ma'lum bo'lsa qarshilikni topishning qisqa yo'li. O'tkazgich ichidagi ortiqcha zaryad $\\tau=\\frac{\\varepsilon_0}{\\sigma}$ vaqtda yo'qoladi: mis uchun $\\sim10^{-19}\\ \\mathrm{s}$ — shuning uchun o'tkazgich ichida zaryad bo'lmaydi.",
+  "ru": "**$RC=\\varepsilon\\varepsilon_0\\rho$.** Если промежуток между двумя электродами заполнен веществом с проницаемостью $\\varepsilon$ и удельным сопротивлением $\\rho$, то $R$ и $C$ вычисляются по одному и тому же геометрическому интегралу, поэтому $RC=\\varepsilon\\varepsilon_0\\rho$ — не зависит от формы. Это время саморазряда конденсатора с утечкой; и короткий путь найти сопротивление, если ёмкость известна. Избыточный заряд внутри проводника исчезает за время $\\tau=\\frac{\\varepsilon_0}{\\sigma}$: для меди $\\sim10^{-19}\\ \\mathrm{s}$ — поэтому внутри проводника заряда нет.",
+  "en": "**$RC=\\varepsilon\\varepsilon_0\\rho$.** If the space between two electrodes is filled with a material of permittivity $\\varepsilon$ and resistivity $\\rho$, then $R$ and $C$ come from the same geometric integral, so $RC=\\varepsilon\\varepsilon_0\\rho$ — independent of shape. This is the self-discharge time of a leaky capacitor, and a shortcut to the resistance when the capacitance is known. Excess charge inside a conductor disappears in a time $\\tau=\\frac{\\varepsilon_0}{\\sigma}$: $\\sim10^{-19}\\ \\mathrm{s}$ for copper — which is why there is no charge inside a conductor."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L15-F03.png",
+   "ru": "figures/B2-L15-F03-ru.png",
+   "en": "figures/B2-L15-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. EYK manbai va quvvat",
+  "ru": "4. Источник ЭДС и мощность",
+  "en": "4. EMF sources and power"
+ },
+ {
+  "t": "li",
+  "uz": "**Real manba.** EYK $\\mathcal{E}$ — chetki kuchlarning birlik zaryadni ko'chirishdagi ishi. Ichki qarshilik $r$ tufayli qisqichlardagi kuchlanish $U=\\mathcal{E}-Ir$ — tok ortishi bilan chiziqli kamayadi ([[F04]]). Salt ishlashda $U=\\mathcal{E}$, qisqa tutashuvda $I=\\frac{\\mathcal{E}}{r}$. Akkumulyator zaryadlanganda tok teskari yo'nalgan va $U=\\mathcal{E}+Ir$. Ketma-ket manbalar: $\\mathcal{E}=\\sum\\mathcal{E}_i$, $r=\\sum r_i$; $n$ ta bir xil manba parallel: $\\mathcal{E}$ o'zgarmaydi, $r'=\\frac{r}{n}$.",
+  "ru": "**Реальный источник.** ЭДС $\\mathcal{E}$ — работа сторонних сил по переносу единичного заряда. Из-за внутреннего сопротивления $r$ напряжение на зажимах $U=\\mathcal{E}-Ir$ — линейно падает с ростом тока ([[F04]]). На холостом ходу $U=\\mathcal{E}$, при коротком замыкании $I=\\frac{\\mathcal{E}}{r}$. При зарядке аккумулятора ток направлен обратно и $U=\\mathcal{E}+Ir$. Последовательные источники: $\\mathcal{E}=\\sum\\mathcal{E}_i$, $r=\\sum r_i$; $n$ одинаковых источников параллельно: $\\mathcal{E}$ не меняется, $r'=\\frac{r}{n}$.",
+  "en": "**A real source.** The EMF $\\mathcal{E}$ is the work done by the non-electrostatic forces per unit charge moved. Because of the internal resistance $r$ the terminal voltage $U=\\mathcal{E}-Ir$ falls linearly as the current rises ([[F04]]). At no load $U=\\mathcal{E}$; on short circuit $I=\\frac{\\mathcal{E}}{r}$. When a battery is being charged the current is reversed and $U=\\mathcal{E}+Ir$. Sources in series: $\\mathcal{E}=\\sum\\mathcal{E}_i$, $r=\\sum r_i$; $n$ identical sources in parallel: $\\mathcal{E}$ is unchanged, $r'=\\frac{r}{n}$."
+ },
+ {
+  "t": "m",
+  "m": "U=\\mathcal{E}-Ir,\\qquad I=\\frac{\\mathcal{E}}{R+r},\\qquad P=\\frac{\\mathcal{E}^2R}{(R+r)^2},\\qquad P_{\\max}=\\frac{\\mathcal{E}^2}{4r},\\qquad \\eta=\\frac{R}{R+r}"
+ },
+ {
+  "t": "li",
+  "uz": "**Eng katta foydali quvvat.** Yuk quvvati $P=\\frac{\\mathcal{E}^2R}{(R+r)^2}$ $R=r$ da eng katta: $P_{\\max}=\\frac{\\mathcal{E}^2}{4r}$, bunda FIK $\\eta=\\frac{R}{R+r}=50$ foiz (yukni moslash). Bir xil quvvat beruvchi ikki yuk uchun $R_1R_2=r^2$. Elektr tarmoqlarida esa yuqori FIK kerak, shuning uchun $R\\gg r$ tanlanadi — moslash faqat signal (kuchsiz manba) uchun foydali.",
+  "ru": "**Максимальная полезная мощность.** Мощность в нагрузке $P=\\frac{\\mathcal{E}^2R}{(R+r)^2}$ максимальна при $R=r$: $P_{\\max}=\\frac{\\mathcal{E}^2}{4r}$, при этом КПД $\\eta=\\frac{R}{R+r}=50$ процентов (согласование нагрузки). Для двух нагрузок с одинаковой мощностью $R_1R_2=r^2$. В электросетях же нужен высокий КПД, поэтому выбирают $R\\gg r$ — согласование полезно только для сигналов (слабых источников).",
+  "en": "**Maximum useful power.** The load power $P=\\frac{\\mathcal{E}^2R}{(R+r)^2}$ is greatest at $R=r$: $P_{\\max}=\\frac{\\mathcal{E}^2}{4r}$, with efficiency $\\eta=\\frac{R}{R+r}=50$ percent (load matching). Two loads giving the same power satisfy $R_1R_2=r^2$. Power grids, however, need high efficiency, so $R\\gg r$ is chosen — matching is useful only for signals (weak sources)."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L15-F04.png",
+   "ru": "figures/B2-L15-F04-ru.png",
+   "en": "figures/B2-L15-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Kirxgof qoidalari: tizimli usul",
+  "ru": "5. Правила Кирхгофа: систематический метод",
+  "en": "5. Kirchhoff's rules: a systematic method"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki qoida.** Tugun qoidasi (zaryad saqlanishi): $\\sum I=0$ — kiruvchi toklar musbat, chiquvchilar manfiy. Kontur qoidasi (elektrostatik maydon konservativ, $\\oint\\vec E\\cdot d\\vec l=0$): har qanday berk kontur bo'ylab $\\sum\\mathcal{E}=\\sum IR$. Ishoralar: konturni aylanib chiqish yo'nalishini tanlaymiz; tok shu yo'nalishda bo'lsa $IR$ musbat; manba ichida $-$ dan $+$ ga o'tsak $\\mathcal{E}$ musbat. Toklar yo'nalishi ixtiyoriy tanlanadi — manfiy javob tok teskari oqishini bildiradi.",
+  "ru": "**Два правила.** Правило узла (сохранение заряда): $\\sum I=0$ — входящие токи положительны, выходящие отрицательны. Правило контура (электростатическое поле консервативно, $\\oint\\vec E\\cdot d\\vec l=0$): по любому замкнутому контуру $\\sum\\mathcal{E}=\\sum IR$. Знаки: выбираем направление обхода; если ток по обходу, $IR$ положительно; если внутри источника идём от $-$ к $+$, $\\mathcal{E}$ положительна. Направления токов выбираются произвольно — отрицательный ответ означает, что ток течёт в обратную сторону.",
+  "en": "**Two rules.** The junction rule (charge conservation): $\\sum I=0$ — currents in are positive, currents out negative. The loop rule (the electrostatic field is conservative, $\\oint\\vec E\\cdot d\\vec l=0$): around any closed loop $\\sum\\mathcal{E}=\\sum IR$. Signs: choose a direction of traversal; if the current is along it, $IR$ is positive; if inside a source we go from $-$ to $+$, $\\mathcal{E}$ is positive. Current directions are chosen arbitrarily — a negative answer means the current flows the other way."
+ },
+ {
+  "t": "m",
+  "m": "\\sum_kI_k=0,\\qquad \\sum\\mathcal{E}=\\sum IR,\\qquad \\sum_k\\frac{\\varphi_k-\\varphi}{R_k}+\\sum_k\\frac{\\mathcal{E}_k}{R_k}=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Tenglamalar soni va tugun potensiallari.** $N$ ta tugun va $B$ ta tarmoqli zanjirda mustaqil tenglamalar: $N-1$ ta tugun tenglamasi va $B-N+1$ ta kontur tenglamasi (oddiy konturlar — «derazalar»). Ko'pincha tugun potensiallari usuli tezroq: bir tugunni nol potensialli deb olamiz va qolganlari uchun tugun qoidasini $\\frac{\\varphi_k-\\varphi}{R_k}$ toklari orqali yozamiz. Ikki tugunli zanjir (bir nechta parallel tarmoq) uchun bitta tenglama yetarli: $\\varphi=\\frac{\\sum\\mathcal{E}_k/R_k}{\\sum1/R_k}$ ([[F05]]).",
+  "ru": "**Число уравнений и узловые потенциалы.** В цепи с $N$ узлами и $B$ ветвями независимых уравнений: $N-1$ узловых и $B-N+1$ контурных (простые контуры — «окна»). Часто быстрее метод узловых потенциалов: один узел берём с нулевым потенциалом и для остальных записываем правило узла через токи $\\frac{\\varphi_k-\\varphi}{R_k}$. Для цепи с двумя узлами (несколько параллельных ветвей) достаточно одного уравнения: $\\varphi=\\frac{\\sum\\mathcal{E}_k/R_k}{\\sum1/R_k}$ ([[F05]]).",
+  "en": "**Number of equations and node potentials.** A circuit with $N$ nodes and $B$ branches has $N-1$ independent junction equations and $B-N+1$ loop equations (simple loops — the “windows”). The node-potential method is often faster: take one node at zero potential and write the junction rule for the others using the currents $\\frac{\\varphi_k-\\varphi}{R_k}$. For a two-node circuit (several parallel branches) one equation suffices: $\\varphi=\\frac{\\sum\\mathcal{E}_k/R_k}{\\sum1/R_k}$ ([[F05]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L15-F05.png",
+   "ru": "figures/B2-L15-F05-ru.png",
+   "en": "figures/B2-L15-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Zanjirlarni soddalashtirish usullari",
+  "ru": "6. Методы упрощения цепей",
+  "en": "6. Methods for simplifying circuits"
+ },
+ {
+  "t": "li",
+  "uz": "**Superpozitsiya va ekvivalent manba.** Chiziqli zanjirda har bir toki manbalarning alohida hissalari yig'indisi (qolgan EYK lar nolga almashtiriladi, ichki qarshiliklar qoladi). Har qanday ikki qisqichli chiziqli zanjirni bitta ekvivalent manba ($\\mathcal{E}_0$ va $r_0$) bilan almashtirish mumkin (Tevenin teoremasi): $\\mathcal{E}_0$ — salt ishlash kuchlanishi, $r_0$ — EYK lar o'chirilgandagi qisqichlar orasidagi qarshilik. Bu yuk tokini va eng katta quvvat shartini ($R=r_0$) bir qatorda beradi.",
+  "ru": "**Суперпозиция и эквивалентный источник.** В линейной цепи каждый ток — сумма вкладов отдельных источников (остальные ЭДС заменяются нулём, внутренние сопротивления остаются). Любую двухполюсную линейную цепь можно заменить одним эквивалентным источником ($\\mathcal{E}_0$ и $r_0$) (теорема Тевенена): $\\mathcal{E}_0$ — напряжение холостого хода, $r_0$ — сопротивление между зажимами при выключенных ЭДС. Это сразу даёт ток нагрузки и условие максимальной мощности ($R=r_0$).",
+  "en": "**Superposition and the equivalent source.** In a linear circuit every current is the sum of the contributions of the individual sources (the other EMFs set to zero, internal resistances kept). Any two-terminal linear circuit can be replaced by a single equivalent source ($\\mathcal{E}_0$ and $r_0$) (Thévenin's theorem): $\\mathcal{E}_0$ is the open-circuit voltage, $r_0$ the resistance between the terminals with the EMFs switched off. This gives the load current and the maximum-power condition ($R=r_0$) in one line."
+ },
+ {
+  "t": "li",
+  "uz": "**Simmetriya.** Simmetrik joylashgan nuqtalar teng potensialda — ularni ulash yoki ajratish toklarni o'zgartirmaydi; teng potensialli nuqtalar orasidagi rezistordan tok o'tmaydi (muvozanatlashgan ko'prik). Kub (har qirrasi $R$): qarama-qarshi uchlar orasida $\\frac{5R}{6}$, yon diagonal $\\frac{3R}{4}$, qo'shni uchlar $\\frac{7R}{12}$ ([[F06]]). Cheksiz zanjir: bir bo'g'inni olib tashlash qarshilikni o'zgartirmaydi, $R_x=R+\\frac{RR_x}{R+R_x}$ dan $R_x=R\\frac{1+\\sqrt{5}}{2}$ (ketma-ket $R$, parallel $R$).",
+  "ru": "**Симметрия.** Симметрично расположенные точки имеют равные потенциалы — их соединение или разъединение не меняет токов; через резистор между точками равного потенциала ток не идёт (уравновешенный мост). Куб (каждое ребро $R$): между противоположными вершинами $\\frac{5R}{6}$, по диагонали грани $\\frac{3R}{4}$, между соседними вершинами $\\frac{7R}{12}$ ([[F06]]). Бесконечная цепочка: удаление одного звена не меняет сопротивления, из $R_x=R+\\frac{RR_x}{R+R_x}$ получаем $R_x=R\\frac{1+\\sqrt{5}}{2}$ (последовательно $R$, параллельно $R$).",
+  "en": "**Symmetry.** Symmetrically placed points are at equal potential — joining or separating them does not change the currents; no current flows through a resistor between points of equal potential (a balanced bridge). Cube (each edge $R$): between opposite corners $\\frac{5R}{6}$, across a face diagonal $\\frac{3R}{4}$, between adjacent corners $\\frac{7R}{12}$ ([[F06]]). Infinite ladder: removing one section does not change the resistance, so $R_x=R+\\frac{RR_x}{R+R_x}$ gives $R_x=R\\frac{1+\\sqrt{5}}{2}$ (series $R$, shunt $R$)."
+ },
+ {
+  "t": "m",
+  "m": "R_1=\\frac{R_{12}R_{13}}{R_{12}+R_{13}+R_{23}},\\qquad R_x=R+\\frac{RR_x}{R+R_x}\\ \\Rightarrow\\ R_x=R\\frac{1+\\sqrt{5}}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchburchak–yulduz.** Muvozanatlashmagan ko'prikni ketma-ket/parallelga keltirib bo'lmaydi; unda uchburchakni (rezistorlar $R_{12}$, $R_{13}$, $R_{23}$) ekvivalent yulduzga almashtiramiz: $R_1=\\frac{R_{12}R_{13}}{R_{12}+R_{13}+R_{23}}$ va hokazo. Yoki tugun potensiallari usulini qo'llaymiz — GRE da odatda shu tezroq.",
+  "ru": "**Треугольник–звезда.** Неуравновешенный мост нельзя свести к последовательным и параллельным соединениям; заменяем треугольник (резисторы $R_{12}$, $R_{13}$, $R_{23}$) эквивалентной звездой: $R_1=\\frac{R_{12}R_{13}}{R_{12}+R_{13}+R_{23}}$ и т. д. Или применяем метод узловых потенциалов — на GRE это обычно быстрее.",
+  "en": "**Delta–star.** An unbalanced bridge cannot be reduced to series and parallel combinations; replace the delta (resistors $R_{12}$, $R_{13}$, $R_{23}$) by an equivalent star: $R_1=\\frac{R_{12}R_{13}}{R_{12}+R_{13}+R_{23}}$ and so on. Or apply the node-potential method — on the GRE this is usually faster."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L15-F06.png",
+   "ru": "figures/B2-L15-F06-ru.png",
+   "en": "figures/B2-L15-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. RC zanjir: zaryadlash va zaryadsizlanish",
+  "ru": "7. RC-цепь: зарядка и разрядка",
+  "en": "7. The RC circuit: charging and discharging"
+ },
+ {
+  "t": "li",
+  "uz": "**Zaryadlash.** EYK $\\mathcal{E}$, rezistor $R$ va zaryadsiz kondensator $C$ ketma-ket ulanadi. Kontur qoidasi: $\\mathcal{E}=IR+\\frac{q}{C}$, $I=\\frac{dq}{dt}$. Yechim $q=C\\mathcal{E}\\left(1-e^{-t/\\tau}\\right)$, $I=\\frac{\\mathcal{E}}{R}e^{-t/\\tau}$, $\\tau=RC$ — vaqt doimiysi ([[F07]]). $t=\\tau$ da kondensator $63$ foizgacha zaryadlanadi, $5\\tau$ dan keyin amalda to'liq. Kuchlanish yarmiga tushish vaqti $\\tau\\ln2\\approx0.69\\tau$.",
+  "ru": "**Зарядка.** ЭДС $\\mathcal{E}$, резистор $R$ и незаряженный конденсатор $C$ соединены последовательно. Правило контура: $\\mathcal{E}=IR+\\frac{q}{C}$, $I=\\frac{dq}{dt}$. Решение $q=C\\mathcal{E}\\left(1-e^{-t/\\tau}\\right)$, $I=\\frac{\\mathcal{E}}{R}e^{-t/\\tau}$, $\\tau=RC$ — постоянная времени ([[F07]]). При $t=\\tau$ конденсатор заряжается на $63$ процента, после $5\\tau$ — практически полностью. Время уменьшения вдвое $\\tau\\ln2\\approx0.69\\tau$.",
+  "en": "**Charging.** An EMF $\\mathcal{E}$, a resistor $R$ and an uncharged capacitor $C$ are in series. The loop rule: $\\mathcal{E}=IR+\\frac{q}{C}$, $I=\\frac{dq}{dt}$. The solution is $q=C\\mathcal{E}\\left(1-e^{-t/\\tau}\\right)$, $I=\\frac{\\mathcal{E}}{R}e^{-t/\\tau}$, with $\\tau=RC$ the time constant ([[F07]]). At $t=\\tau$ the capacitor is $63$ percent charged, after $5\\tau$ practically fully. The halving time is $\\tau\\ln2\\approx0.69\\tau$."
+ },
+ {
+  "t": "m",
+  "m": "q=C\\mathcal{E}\\left(1-e^{-t/\\tau}\\right),\\qquad I=\\frac{\\mathcal{E}}{R}e^{-t/\\tau},\\qquad q=q_0e^{-t/\\tau},\\qquad \\tau=RC"
+ },
+ {
+  "t": "li",
+  "uz": "**Zaryadsizlanish va chegaraviy holatlar.** Zaryadlangan kondensator $R$ orqali zaryadsizlansa, $q=q_0e^{-t/\\tau}$, $I=\\frac{q_0}{\\tau}e^{-t/\\tau}$. Tezkor tahlil: kalit ulangan ondan ($t=0^+$) kondensator kuchlanishi sakramaydi — zaryadsiz kondensator «sim» kabi; ko'p vaqt o'tgach ($t\\to\\infty$) tok kondensatordan o'tmaydi — u «uzilish» kabi. Bu ikki holat ko'pincha GRE savoliga javob berish uchun yetarli.",
+  "ru": "**Разрядка и предельные случаи.** При разрядке заряженного конденсатора через $R$ $q=q_0e^{-t/\\tau}$, $I=\\frac{q_0}{\\tau}e^{-t/\\tau}$. Быстрый анализ: в момент замыкания ключа ($t=0^+$) напряжение на конденсаторе не скачет — незаряженный конденсатор ведёт себя как «провод»; спустя долгое время ($t\\to\\infty$) ток через конденсатор не идёт — он как «разрыв». Этих двух случаев часто достаточно для ответа на вопрос GRE.",
+  "en": "**Discharging and limiting cases.** A charged capacitor discharging through $R$ has $q=q_0e^{-t/\\tau}$, $I=\\frac{q_0}{\\tau}e^{-t/\\tau}$. Quick analysis: at the instant the switch closes ($t=0^+$) the capacitor's voltage cannot jump — an uncharged capacitor acts like a “wire”; after a long time ($t\\to\\infty$) no current flows through the capacitor — it acts like a “break”. These two limits are often enough to answer a GRE question."
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya balansi.** Zaryadlash davomida manba $\\mathcal{E}Q=C\\mathcal{E}^2$ ish bajaradi; kondensatorga $\\frac{C\\mathcal{E}^2}{2}$ o'tadi, rezistorda $\\int I^2R\\,dt=\\frac{C\\mathcal{E}^2}{2}$ issiqlik ajraladi — $R$ ga bog'liq emas! Zaryadlashni ikki bosqichda ($\\frac{\\mathcal{E}}{2}$, keyin $\\mathcal{E}$) olib borsak, isrof ikki marta kamayadi; $N$ bosqichda $N$ marta. B2-L13 dagi zaryadlangan kondensatorlarni ulashdagi yo'qotish ham shunday — qarshilik qanchalik kichik bo'lmasin.",
+  "ru": "**Баланс энергии.** При зарядке источник совершает работу $\\mathcal{E}Q=C\\mathcal{E}^2$; в конденсатор переходит $\\frac{C\\mathcal{E}^2}{2}$, в резисторе выделяется $\\int I^2R\\,dt=\\frac{C\\mathcal{E}^2}{2}$ тепла — не зависит от $R$! Если заряжать в два этапа (до $\\frac{\\mathcal{E}}{2}$, затем до $\\mathcal{E}$), потери уменьшатся вдвое; за $N$ этапов — в $N$ раз. Так же и потери при соединении заряженных конденсаторов в B2-L13 — каким бы малым ни было сопротивление.",
+  "en": "**The energy balance.** During charging the source does work $\\mathcal{E}Q=C\\mathcal{E}^2$; the capacitor receives $\\frac{C\\mathcal{E}^2}{2}$ and the resistor dissipates $\\int I^2R\\,dt=\\frac{C\\mathcal{E}^2}{2}$ as heat — independent of $R$! Charging in two steps (to $\\frac{\\mathcal{E}}{2}$, then to $\\mathcal{E}$) halves the loss; in $N$ steps, $N$ times less. The loss on connecting charged capacitors in B2-L13 is the same — however small the resistance."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L15-F07.png",
+   "ru": "figures/B2-L15-F07-ru.png",
+   "en": "figures/B2-L15-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Murakkab RC zanjirlar",
+  "ru": "8. Сложные RC-цепи",
+  "en": "8. More complex RC circuits"
+ },
+ {
+  "t": "li",
+  "uz": "**Ekvivalent manba orqali vaqt doimiysi.** Kondensatordan tashqaridagi zanjirni ekvivalent manba ($\\mathcal{E}_0$, $r_0$) bilan almashtirsak, kondensator kuchlanishi $\\mathcal{E}_0$ ga $\\tau=r_0C$ vaqt doimiysi bilan intiladi. Masalan, $\\mathcal{E}$, ketma-ket $R_1$ va kondensatorga parallel $R_2$: $U_C\\to\\frac{\\mathcal{E}R_2}{R_1+R_2}$, $\\tau=\\frac{R_1R_2}{R_1+R_2}C$. Manba uzilsa, kondensator faqat $R_2$ orqali $\\tau'=R_2C$ bilan zaryadsizlanadi — zaryadlash va zaryadsizlanish vaqt doimiylari har xil ([[F08]]).",
+  "ru": "**Постоянная времени через эквивалентный источник.** Заменив цепь вне конденсатора эквивалентным источником ($\\mathcal{E}_0$, $r_0$), получаем, что напряжение на конденсаторе стремится к $\\mathcal{E}_0$ с постоянной времени $\\tau=r_0C$. Например, $\\mathcal{E}$, последовательный $R_1$ и параллельный конденсатору $R_2$: $U_C\\to\\frac{\\mathcal{E}R_2}{R_1+R_2}$, $\\tau=\\frac{R_1R_2}{R_1+R_2}C$. Если источник отключить, конденсатор разряжается только через $R_2$ с $\\tau'=R_2C$ — постоянные времени зарядки и разрядки различны ([[F08]]).",
+  "en": "**Time constant via the equivalent source.** Replacing the circuit outside the capacitor by an equivalent source ($\\mathcal{E}_0$, $r_0$), the capacitor's voltage approaches $\\mathcal{E}_0$ with time constant $\\tau=r_0C$. For example, with $\\mathcal{E}$, $R_1$ in series and $R_2$ in parallel with the capacitor: $U_C\\to\\frac{\\mathcal{E}R_2}{R_1+R_2}$, $\\tau=\\frac{R_1R_2}{R_1+R_2}C$. If the source is disconnected, the capacitor discharges through $R_2$ alone with $\\tau'=R_2C$ — the charging and discharging time constants differ ([[F08]])."
+ },
+ {
+  "t": "m",
+  "m": "U_C(\\infty)=\\mathcal{E}_0,\\qquad \\tau=r_0C,\\qquad \\tau=R\\frac{C_1C_2}{C_1+C_2},\\qquad \\frac{d\\ln I}{dt}=-\\frac{1}{\\tau}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki kondensator orasida zaryad oqishi.** $U_1$ gacha zaryadlangan $C_1$ zaryadsiz $C_2$ ga $R$ orqali ulansa, kuchlanishlar farqi $\\tau=R\\frac{C_1C_2}{C_1+C_2}$ bilan so'nadi (ketma-ket sig'im), oxirgi kuchlanish $\\frac{C_1U_1}{C_1+C_2}$, rezistordagi issiqlik B2-L13 dagi yo'qotishga teng. Ketma-ket ulangan ikki kondensatorni $R$ orqali zaryadlashda ham $\\tau=R\\frac{C_1C_2}{C_1+C_2}$.",
+  "ru": "**Перетекание заряда между двумя конденсаторами.** Если заряженный до $U_1$ конденсатор $C_1$ подключить через $R$ к незаряженному $C_2$, разность напряжений спадает с $\\tau=R\\frac{C_1C_2}{C_1+C_2}$ (последовательная ёмкость), конечное напряжение $\\frac{C_1U_1}{C_1+C_2}$, тепло в резисторе равно потере из B2-L13. При зарядке двух последовательных конденсаторов через $R$ тоже $\\tau=R\\frac{C_1C_2}{C_1+C_2}$.",
+  "en": "**Charge flowing between two capacitors.** If $C_1$, charged to $U_1$, is connected through $R$ to an uncharged $C_2$, the voltage difference decays with $\\tau=R\\frac{C_1C_2}{C_1+C_2}$ (the series capacitance), the final voltage is $\\frac{C_1U_1}{C_1+C_2}$, and the heat in the resistor equals the loss found in B2-L13. Charging two capacitors in series through $R$ also gives $\\tau=R\\frac{C_1C_2}{C_1+C_2}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L15-F08.png",
+   "ru": "figures/B2-L15-F08-ru.png",
+   "en": "figures/B2-L15-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. O'lchov asboblari va o'lchash usullari",
+  "ru": "9. Измерительные приборы и методы измерений",
+  "en": "9. Measuring instruments and methods"
+ },
+ {
+  "t": "li",
+  "uz": "**Asboblar zanjirga ta'sir qiladi.** Ampermetr ketma-ket ulanadi va kichik qarshilikli bo'lishi kerak; voltmetr parallel ulanadi va katta qarshilikli bo'lishi kerak. Qarshiligi $R_0$ bo'lgan voltmetr $R$ ga ulansa, u $\\frac{RR_0}{R+R_0}$ ga almashadi — katta qarshilikli zanjirda ko'rsatish sezilarli kamayadi. O'lchash chegarasini kengaytirish: ampermetrga parallel shunt $R'=\\frac{R_0}{n-1}$, voltmetrga ketma-ket qo'shimcha qarshilik $(n-1)R_0$ ($n$ — chegarani necha marta oshirish).",
+  "ru": "**Приборы влияют на цепь.** Амперметр включают последовательно, и он должен иметь малое сопротивление; вольтметр — параллельно, с большим сопротивлением. Вольтметр с сопротивлением $R_0$, подключённый к $R$, заменяет его на $\\frac{RR_0}{R+R_0}$ — в высокоомной цепи показание заметно занижается. Расширение предела измерения: шунт параллельно амперметру $R'=\\frac{R_0}{n-1}$, добавочное сопротивление последовательно с вольтметром $(n-1)R_0$ ($n$ — во сколько раз увеличивают предел).",
+  "en": "**Instruments affect the circuit.** An ammeter is connected in series and should have a small resistance; a voltmeter in parallel, with a large resistance. A voltmeter of resistance $R_0$ connected across $R$ replaces it with $\\frac{RR_0}{R+R_0}$ — in a high-resistance circuit the reading drops noticeably. Extending the range: a shunt in parallel with an ammeter, $R'=\\frac{R_0}{n-1}$, and an additional resistance in series with a voltmeter, $(n-1)R_0$ ($n$ is the factor by which the range grows)."
+ },
+ {
+  "t": "li",
+  "uz": "**Nol usullari va vaqt doimiysini o'lchash.** Uitston ko'prigi ($\\frac{R_1}{R_2}=\\frac{R_3}{R_4}$ da galvanometr toki nol) va potensiometr (noma'lum EYK ni reoxord kuchlanishi bilan muvozanatlash) tok o'tmaydigan holatda o'lchaydi — asbob qarshiligi natijaga ta'sir qilmaydi. RC vaqt doimiysi: $\\ln I$ ni $t$ ga qarshi chizsak, to'g'ri chiziq, qiyaligi $-\\frac{1}{\\tau}$ — ko'plab nuqtalardan aniq baholash (laboratoriya metodlari, GRE ning 6 foizi).",
+  "ru": "**Нулевые методы и измерение постоянной времени.** Мост Уитстона (ток гальванометра равен нулю при $\\frac{R_1}{R_2}=\\frac{R_3}{R_4}$) и потенциометр (неизвестная ЭДС уравновешивается напряжением на реохорде) измеряют в состоянии без тока — сопротивление прибора не влияет на результат. Постоянная времени RC: если построить $\\ln I$ против $t$, получится прямая с наклоном $-\\frac{1}{\\tau}$ — точная оценка по многим точкам (лабораторные методы, 6 процентов GRE).",
+  "en": "**Null methods and measuring the time constant.** The Wheatstone bridge (galvanometer current zero when $\\frac{R_1}{R_2}=\\frac{R_3}{R_4}$) and the potentiometer (an unknown EMF balanced against the voltage on a slide wire) measure with no current flowing — the instrument's resistance does not affect the result. The RC time constant: plotting $\\ln I$ against $t$ gives a straight line of slope $-\\frac{1}{\\tau}$ — an accurate estimate from many points (laboratory methods, 6 percent of the GRE)."
+ },
+ {
+  "t": "h2",
+  "uz": "10. GRE usullari va tipik xatolar",
+  "ru": "10. Методы GRE и типичные ошибки",
+  "en": "10. GRE methods and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 1 — avval soddalashtiring.** Teng potensialli nuqtalarni toping (simmetriya, muvozanatlashgan ko'prik), ketma-ket va parallel qismlarni birlashtiring. Bir nechta manbali ikki tugunli zanjirda tugun potensiali formulasini, yuk bilan bog'liq savolda ekvivalent manbani ishlating.",
+  "ru": "**Метод 1 — сначала упростите.** Найдите точки равного потенциала (симметрия, уравновешенный мост), объедините последовательные и параллельные участки. В цепи с двумя узлами и несколькими источниками используйте формулу узлового потенциала, в вопросе о нагрузке — эквивалентный источник.",
+  "en": "**Method 1 — simplify first.** Find points of equal potential (symmetry, a balanced bridge) and combine the series and parallel parts. In a two-node circuit with several sources use the node-potential formula; in a question about a load use the equivalent source."
+ },
+ {
+  "t": "li",
+  "uz": "**Usul 2 — RC uchun ikki chegara.** $t=0^+$ da zaryadsiz kondensator — sim, $t\\to\\infty$ da — uzilish; oraliq vaqt uchun $\\tau=r_0C$ va eksponenta. O'lchamlarni tekshiring: $\\Omega\\cdot\\mathrm{F}=\\mathrm{s}$; $1\\ \\mathrm{k}\\Omega\\cdot1\\ \\mu\\mathrm{F}=1\\ \\mathrm{ms}$.",
+  "ru": "**Метод 2 — два предела для RC.** При $t=0^+$ незаряженный конденсатор — провод, при $t\\to\\infty$ — разрыв; для промежуточных времён $\\tau=r_0C$ и экспонента. Проверяйте размерности: $\\Omega\\cdot\\mathrm{F}=\\mathrm{s}$; $1\\ \\mathrm{k}\\Omega\\cdot1\\ \\mu\\mathrm{F}=1\\ \\mathrm{ms}$.",
+  "en": "**Method 2 — two limits for RC.** At $t=0^+$ an uncharged capacitor is a wire, as $t\\to\\infty$ a break; for intermediate times use $\\tau=r_0C$ and an exponential. Check units: $\\Omega\\cdot\\mathrm{F}=\\mathrm{s}$; $1\\ \\mathrm{k}\\Omega\\cdot1\\ \\mu\\mathrm{F}=1\\ \\mathrm{ms}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) Kontur qoidasida EYK yoki $IR$ ishorasini noto'g'ri olish. 2) Ichki qarshilikni unutish. 3) Eng katta quvvatda FIK $100$ foiz deb o'ylash ($50$ foiz). 4) Zaryadlashda energiyaning hammasi kondensatorga o'tadi deb hisoblash (yarmi issiqlikka). 5) Vaqt doimiysida faqat ketma-ket $R$ ni olish ($\\tau=r_0C$ kerak). 6) Kuchlanish yarmiga tushish vaqtini $\\tau$ deb olish ($\\tau\\ln2$). 7) Tartibli harakat tezligini elektronlar issiqlik tezligi bilan adashtirish.",
+  "ru": "**Типичные ошибки.** 1) Неверный знак ЭДС или $IR$ в правиле контура. 2) Забыть внутреннее сопротивление. 3) Считать, что при максимальной мощности КПД $100$ процентов ($50$ процентов). 4) Считать, что при зарядке вся энергия переходит в конденсатор (половина — в тепло). 5) Брать в постоянной времени только последовательное $R$ (нужно $\\tau=r_0C$). 6) Принимать время уменьшения вдвое за $\\tau$ ($\\tau\\ln2$). 7) Путать скорость дрейфа с тепловой скоростью электронов.",
+  "en": "**Typical mistakes.** 1) Wrong sign of an EMF or $IR$ in the loop rule. 2) Forgetting the internal resistance. 3) Thinking the efficiency at maximum power is $100$ percent (it is $50$ percent). 4) Assuming all the energy goes into the capacitor on charging (half becomes heat). 5) Using only the series $R$ in the time constant (it should be $\\tau=r_0C$). 6) Taking the halving time as $\\tau$ (it is $\\tau\\ln2$). 7) Confusing the drift speed with the electrons' thermal speed."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Tok zichligi",
+    "ru": "Плотность тока",
+    "en": "Current density",
+    "m": "\\vec J=nq\\vec v,\\quad I=\\int\\vec J\\cdot d\\vec A"
+   },
+   {
+    "uz": "Uzluksizlik",
+    "ru": "Непрерывность",
+    "en": "Continuity",
+    "m": "\\nabla\\cdot\\vec J=-\\frac{\\partial\\rho}{\\partial t}"
+   },
+   {
+    "uz": "Drude modeli",
+    "ru": "Модель Друде",
+    "en": "Drude model",
+    "m": "\\sigma=\\frac{ne^2\\tau_0}{m},\\quad \\mu=\\frac{e\\tau_0}{m}"
+   },
+   {
+    "uz": "Differensial Om qonuni",
+    "ru": "Закон Ома (дифф.)",
+    "en": "Ohm's law (local)",
+    "m": "\\vec J=\\sigma\\vec E,\\quad w=\\sigma E^2"
+   },
+   {
+    "uz": "Temperatura",
+    "ru": "Температура",
+    "en": "Temperature",
+    "m": "\\rho=\\rho_0(1+\\alpha\\Delta T)"
+   },
+   {
+    "uz": "Qatlamlar",
+    "ru": "Слои",
+    "en": "Layers",
+    "m": "R=\\int\\frac{\\rho\\,dl}{A},\\quad R=\\frac{\\rho L}{\\pi ab}"
+   },
+   {
+    "uz": "Radial oqim",
+    "ru": "Радиальный ток",
+    "en": "Radial flow",
+    "m": "\\frac{\\rho}{2\\pi L}\\ln\\frac{b}{a},\\quad \\frac{\\rho}{4\\pi}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)"
+   },
+   {
+    "uz": "Sizuvchi kondensator",
+    "ru": "Конденсатор с утечкой",
+    "en": "Leaky capacitor",
+    "m": "RC=\\varepsilon\\varepsilon_0\\rho,\\quad \\tau=\\frac{\\varepsilon_0}{\\sigma}"
+   },
+   {
+    "uz": "Real manba",
+    "ru": "Реальный источник",
+    "en": "Real source",
+    "m": "U=\\mathcal{E}-Ir,\\quad I=\\frac{\\mathcal{E}}{R+r}"
+   },
+   {
+    "uz": "Eng katta quvvat",
+    "ru": "Максимальная мощность",
+    "en": "Maximum power",
+    "m": "R=r,\\quad P_{\\max}=\\frac{\\mathcal{E}^2}{4r},\\quad \\eta=50\\ \\%"
+   },
+   {
+    "uz": "Kirxgof qoidalari",
+    "ru": "Правила Кирхгофа",
+    "en": "Kirchhoff's rules",
+    "m": "\\sum I=0,\\quad \\sum\\mathcal{E}=\\sum IR"
+   },
+   {
+    "uz": "Ikki tugunli zanjir",
+    "ru": "Цепь с двумя узлами",
+    "en": "Two-node circuit",
+    "m": "\\varphi=\\frac{\\sum\\mathcal{E}_k/R_k}{\\sum1/R_k}"
+   },
+   {
+    "uz": "Simmetriya",
+    "ru": "Симметрия",
+    "en": "Symmetry",
+    "m": "\\frac{5R}{6},\\quad \\frac{3R}{4},\\quad \\frac{7R}{12},\\quad R\\frac{1+\\sqrt{5}}{2}"
+   },
+   {
+    "uz": "RC zaryadlash",
+    "ru": "Зарядка RC",
+    "en": "RC charging",
+    "m": "q=C\\mathcal{E}\\left(1-e^{-t/\\tau}\\right),\\quad \\tau=RC"
+   },
+   {
+    "uz": "RC zaryadsizlanish",
+    "ru": "Разрядка RC",
+    "en": "RC discharging",
+    "m": "q=q_0e^{-t/\\tau},\\quad t_{1/2}=\\tau\\ln2"
+   },
+   {
+    "uz": "Energiya balansi",
+    "ru": "Баланс энергии",
+    "en": "Energy balance",
+    "m": "A_{\\mathcal{E}}=C\\mathcal{E}^2,\\quad W=\\frac{C\\mathcal{E}^2}{2}"
+   }
+  ]
+ }
+]
