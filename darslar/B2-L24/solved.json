@@ -1,0 +1,884 @@
+[
+ {
+  "id": "B2-L24-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Tordagi to'lqin $y=0.02\\sin\\left(4\\pi x-200\\pi t\\right)$ tenglama bilan berilgan (SI birliklarda). Amplituda, to'lqin uzunligi, chastota, to'lqin tezligi va tarqalish yo'nalishini, zarralarning eng katta tezligini toping.",
+   "ru": "Волна в струне задана уравнением $y=0.02\\sin\\left(4\\pi x-200\\pi t\\right)$ (в единицах СИ). Найдите амплитуду, длину волны, частоту, скорость и направление распространения волны, наибольшую скорость частиц.",
+   "en": "A wave on a string is given by $y=0.02\\sin\\left(4\\pi x-200\\pi t\\right)$ (SI units). Find the amplitude, wavelength, frequency, wave speed and direction of propagation, and the maximum particle speed."
+  },
+  "figure": "figures/B2-L24-S01.png",
+  "solution": {
+   "uz": [
+    "Standart ko'rinish bilan solishtiramiz: $$A=0.02\\ \\mathrm{m},\\qquad \\lambda=\\frac{2\\pi}{k}=\\frac{2\\pi}{4\\pi}=0.5\\ \\mathrm{m},\\qquad f=\\frac{\\omega}{2\\pi}=100\\ \\mathrm{Hz}$$",
+    "Tezlik; $x-vt$ ko'rinish — $+x$ yo'nalish: $$v=\\frac{\\omega}{k}=\\frac{200\\pi}{4\\pi}=50\\ \\mathrm{m/s}$$",
+    "Zarralarning eng katta tezligi: $$\\left(\\frac{\\partial y}{\\partial t}\\right)_{max}=\\omega A=200\\pi\\cdot0.02\\approx12.6\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Сравниваем со стандартным видом: $$A=0.02\\ \\mathrm{m},\\qquad \\lambda=\\frac{2\\pi}{k}=\\frac{2\\pi}{4\\pi}=0.5\\ \\mathrm{m},\\qquad f=\\frac{\\omega}{2\\pi}=100\\ \\mathrm{Hz}$$",
+    "Скорость; вид $x-vt$ — направление $+x$: $$v=\\frac{\\omega}{k}=\\frac{200\\pi}{4\\pi}=50\\ \\mathrm{m/s}$$",
+    "Наибольшая скорость частиц: $$\\left(\\frac{\\partial y}{\\partial t}\\right)_{max}=\\omega A=200\\pi\\cdot0.02\\approx12.6\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "Compare with the standard form: $$A=0.02\\ \\mathrm{m},\\qquad \\lambda=\\frac{2\\pi}{k}=\\frac{2\\pi}{4\\pi}=0.5\\ \\mathrm{m},\\qquad f=\\frac{\\omega}{2\\pi}=100\\ \\mathrm{Hz}$$",
+    "The speed; the form $x-vt$ means the $+x$ direction: $$v=\\frac{\\omega}{k}=\\frac{200\\pi}{4\\pi}=50\\ \\mathrm{m/s}$$",
+    "The maximum particle speed: $$\\left(\\frac{\\partial y}{\\partial t}\\right)_{max}=\\omega A=200\\pi\\cdot0.02\\approx12.6\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Garmonik to'lqin: $k=\\frac{2\\pi}{\\lambda}$, $\\omega=2\\pi f$, $v=\\frac{\\omega}{k}$",
+    "ru": "Гармоническая волна: $k=\\frac{2\\pi}{\\lambda}$, $\\omega=2\\pi f$, $v=\\frac{\\omega}{k}$",
+    "en": "Harmonic wave: $k=\\frac{2\\pi}{\\lambda}$, $\\omega=2\\pi f$, $v=\\frac{\\omega}{k}$"
+   },
+   null,
+   {
+    "uz": "Zarra tezligi: $\\left(\\frac{\\partial y}{\\partial t}\\right)_{max}=\\omega A$",
+    "ru": "Скорость частицы: $\\left(\\frac{\\partial y}{\\partial t}\\right)_{max}=\\omega A$",
+    "en": "Particle velocity: $\\left(\\frac{\\partial y}{\\partial t}\\right)_{max}=\\omega A$"
+   }
+  ],
+  "basis": {
+   "uz": "Garmonik to'lqin parametrlari",
+   "ru": "Параметры гармонической волны",
+   "en": "Parameters of a harmonic wave"
+  },
+  "answer": "A=0.02\\ \\mathrm{m};\\ \\lambda=0.5\\ \\mathrm{m};\\ f=100\\ \\mathrm{Hz};\\ v=50\\ \\mathrm{m/s}\\ \\left(+x\\right);\\ 12.6\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "Irodov, «Problems in General Physics», 4.155-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L24-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Gitara torining tebranuvchi qismi $65\\ \\mathrm{cm}$, chiziqli zichligi $2\\ \\mathrm{g/m}$. Asosiy ton $196\\ \\mathrm{Hz}$ bo'lishi uchun tor qanday kuch bilan tortilishi kerak? Ikkinchi garmonika chastotasi qancha?",
+   "ru": "Колеблющаяся часть гитарной струны $65\\ \\mathrm{cm}$, линейная плотность $2\\ \\mathrm{g/m}$. С какой силой нужно натянуть струну, чтобы основной тон был $196\\ \\mathrm{Hz}$? Какова частота второй гармоники?",
+   "en": "The vibrating part of a guitar string is $65\\ \\mathrm{cm}$ long with linear density $2\\ \\mathrm{g/m}$. With what force must the string be tensioned for the fundamental to be $196\\ \\mathrm{Hz}$? What is the frequency of the second harmonic?"
+  },
+  "figure": "figures/B2-L24-S02.png",
+  "solution": {
+   "uz": [
+    "Asosiy tonda $L=\\frac{\\lambda}{2}$: $$v=2Lf_1=2\\cdot0.65\\cdot196=254.8\\ \\mathrm{m/s}$$",
+    "Taranglik: $$F=\\mu v^2=0.002\\cdot254.8^2\\approx130\\ \\mathrm{N}$$",
+    "Ikkinchi garmonika: $$f_2=2f_1=392\\ \\mathrm{Hz}$$"
+   ],
+   "ru": [
+    "Для основного тона $L=\\frac{\\lambda}{2}$: $$v=2Lf_1=2\\cdot0.65\\cdot196=254.8\\ \\mathrm{m/s}$$",
+    "Натяжение: $$F=\\mu v^2=0.002\\cdot254.8^2\\approx130\\ \\mathrm{N}$$",
+    "Вторая гармоника: $$f_2=2f_1=392\\ \\mathrm{Hz}$$"
+   ],
+   "en": [
+    "For the fundamental $L=\\frac{\\lambda}{2}$: $$v=2Lf_1=2\\cdot0.65\\cdot196=254.8\\ \\mathrm{m/s}$$",
+    "The tension: $$F=\\mu v^2=0.002\\cdot254.8^2\\approx130\\ \\mathrm{N}$$",
+    "The second harmonic: $$f_2=2f_1=392\\ \\mathrm{Hz}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tor garmonikalari: $f_n=\\frac{nv}{2L}$",
+    "ru": "Гармоники струны: $f_n=\\frac{nv}{2L}$",
+    "en": "String harmonics: $f_n=\\frac{nv}{2L}$"
+   },
+   {
+    "uz": "Tordagi tezlik: $v=\\sqrt{\\frac{F}{\\mu}}$",
+    "ru": "Скорость в струне: $v=\\sqrt{\\frac{F}{\\mu}}$",
+    "en": "Speed on a string: $v=\\sqrt{\\frac{F}{\\mu}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Tor tarangligi",
+   "ru": "Натяжение струны",
+   "en": "String tension"
+  },
+  "answer": "F\\approx130\\ \\mathrm{N};\\ f_2=392\\ \\mathrm{Hz}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original (B2-L24, gitara)"
+ },
+ {
+  "id": "B2-L24-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$27^\\circ\\mathrm{C}$ va $0^\\circ\\mathrm{C}$ dagi havoda ($\\gamma=1.4$, $M=29\\ \\mathrm{g/mol}$) hamda $27^\\circ\\mathrm{C}$ dagi geliyda ($\\gamma=\\frac{5}{3}$, $M=4\\ \\mathrm{g/mol}$) tovush tezligini toping. $27^\\circ\\mathrm{C}$ dagi havoda $440\\ \\mathrm{Hz}$ li tovushning to'lqin uzunligi qancha?",
+   "ru": "Найдите скорость звука в воздухе ($\\gamma=1.4$, $M=29\\ \\mathrm{g/mol}$) при $27^\\circ\\mathrm{C}$ и $0^\\circ\\mathrm{C}$, а также в гелии ($\\gamma=\\frac{5}{3}$, $M=4\\ \\mathrm{g/mol}$) при $27^\\circ\\mathrm{C}$. Какова длина волны звука $440\\ \\mathrm{Hz}$ в воздухе при $27^\\circ\\mathrm{C}$?",
+   "en": "Find the speed of sound in air ($\\gamma=1.4$, $M=29\\ \\mathrm{g/mol}$) at $27^\\circ\\mathrm{C}$ and $0^\\circ\\mathrm{C}$, and in helium ($\\gamma=\\frac{5}{3}$, $M=4\\ \\mathrm{g/mol}$) at $27^\\circ\\mathrm{C}$. What is the wavelength of a $440\\ \\mathrm{Hz}$ sound in air at $27^\\circ\\mathrm{C}$?"
+  },
+  "figure": "figures/B2-L24-S03.png",
+  "solution": {
+   "uz": [
+    "Havoda, $T=300\\ \\mathrm{K}$: $$v=\\sqrt{\\frac{\\gamma RT}{M}}=\\sqrt{\\frac{1.4\\cdot8.31\\cdot300}{0.029}}\\approx347\\ \\mathrm{m/s}$$",
+    "$T=273\\ \\mathrm{K}$ da $v\\propto\\sqrt{T}$: $$v=347\\sqrt{\\frac{273}{300}}\\approx331\\ \\mathrm{m/s}$$",
+    "Geliyda: $$v=\\sqrt{\\frac{5\\cdot8.31\\cdot300}{3\\cdot0.004}}\\approx1019\\ \\mathrm{m/s}$$",
+    "To'lqin uzunligi: $$\\lambda=\\frac{v}{f}=\\frac{347}{440}\\approx0.79\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "В воздухе, $T=300\\ \\mathrm{K}$: $$v=\\sqrt{\\frac{\\gamma RT}{M}}=\\sqrt{\\frac{1.4\\cdot8.31\\cdot300}{0.029}}\\approx347\\ \\mathrm{m/s}$$",
+    "При $T=273\\ \\mathrm{K}$ $v\\propto\\sqrt{T}$: $$v=347\\sqrt{\\frac{273}{300}}\\approx331\\ \\mathrm{m/s}$$",
+    "В гелии: $$v=\\sqrt{\\frac{5\\cdot8.31\\cdot300}{3\\cdot0.004}}\\approx1019\\ \\mathrm{m/s}$$",
+    "Длина волны: $$\\lambda=\\frac{v}{f}=\\frac{347}{440}\\approx0.79\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "In air, $T=300\\ \\mathrm{K}$: $$v=\\sqrt{\\frac{\\gamma RT}{M}}=\\sqrt{\\frac{1.4\\cdot8.31\\cdot300}{0.029}}\\approx347\\ \\mathrm{m/s}$$",
+    "At $T=273\\ \\mathrm{K}$, $v\\propto\\sqrt{T}$: $$v=347\\sqrt{\\frac{273}{300}}\\approx331\\ \\mathrm{m/s}$$",
+    "In helium: $$v=\\sqrt{\\frac{5\\cdot8.31\\cdot300}{3\\cdot0.004}}\\approx1019\\ \\mathrm{m/s}$$",
+    "The wavelength: $$\\lambda=\\frac{v}{f}=\\frac{347}{440}\\approx0.79\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gazdagi tovush tezligi: $v=\\sqrt{\\frac{\\gamma RT}{M}}$",
+    "ru": "Скорость звука в газе: $v=\\sqrt{\\frac{\\gamma RT}{M}}$",
+    "en": "Speed of sound in a gas: $v=\\sqrt{\\frac{\\gamma RT}{M}}$"
+   },
+   null,
+   null,
+   {
+    "uz": "To'lqin uzunligi: $\\lambda=\\frac{v}{f}$",
+    "ru": "Длина волны: $\\lambda=\\frac{v}{f}$",
+    "en": "Wavelength: $\\lambda=\\frac{v}{f}$"
+   }
+  ],
+  "basis": {
+   "uz": "Gazdagi tovush tezligi",
+   "ru": "Скорость звука в газе",
+   "en": "Speed of sound in a gas"
+  },
+  "answer": "347\\ \\mathrm{m/s};\\ 331\\ \\mathrm{m/s};\\ 1019\\ \\mathrm{m/s};\\ \\lambda\\approx0.79\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original (B2-L24, tovush tezligi)"
+ },
+ {
+  "id": "B2-L24-S04",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Chiziqli zichligi $10\\ \\mathrm{g/m}$ bo'lgan tor $100\\ \\mathrm{N}$ kuch bilan tortilgan. Tor bo'ylab chastotasi $50\\ \\mathrm{Hz}$, amplitudasi $5\\ \\mathrm{mm}$ bo'lgan sinusoidal to'lqin yugurmoqda. To'lqin tezligini, o'rtacha quvvatni va uzunlik birligidagi o'rtacha energiyani toping.",
+   "ru": "Струна с линейной плотностью $10\\ \\mathrm{g/m}$ натянута силой $100\\ \\mathrm{N}$. По струне бежит синусоидальная волна частотой $50\\ \\mathrm{Hz}$ и амплитудой $5\\ \\mathrm{mm}$. Найдите скорость волны, среднюю мощность и среднюю энергию на единицу длины.",
+   "en": "A string of linear density $10\\ \\mathrm{g/m}$ is under a tension of $100\\ \\mathrm{N}$. A sinusoidal wave of frequency $50\\ \\mathrm{Hz}$ and amplitude $5\\ \\mathrm{mm}$ travels along it. Find the wave speed, the average power and the average energy per unit length."
+  },
+  "figure": "figures/B2-L24-S04.png",
+  "solution": {
+   "uz": [
+    "Tezlik: $$v=\\sqrt{\\frac{F}{\\mu}}=\\sqrt{\\frac{100}{0.01}}=100\\ \\mathrm{m/s}$$",
+    "O'rtacha quvvat: $$\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\mu v\\omega^2A^2=\\frac{1}{2}\\cdot0.01\\cdot100\\cdot\\left(100\\pi\\right)^2\\cdot\\left(5\\cdot10^{-3}\\right)^2\\approx1.23\\ \\mathrm{W}$$",
+    "Energiya zichligi — quvvatning tezlikka nisbati: $$\\left\\langle w\\right\\rangle=\\frac{\\left\\langle\\mathcal P\\right\\rangle}{v}\\approx1.23\\cdot10^{-2}\\ \\mathrm{J/m}$$"
+   ],
+   "ru": [
+    "Скорость: $$v=\\sqrt{\\frac{F}{\\mu}}=\\sqrt{\\frac{100}{0.01}}=100\\ \\mathrm{m/s}$$",
+    "Средняя мощность: $$\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\mu v\\omega^2A^2=\\frac{1}{2}\\cdot0.01\\cdot100\\cdot\\left(100\\pi\\right)^2\\cdot\\left(5\\cdot10^{-3}\\right)^2\\approx1.23\\ \\mathrm{W}$$",
+    "Плотность энергии — отношение мощности к скорости: $$\\left\\langle w\\right\\rangle=\\frac{\\left\\langle\\mathcal P\\right\\rangle}{v}\\approx1.23\\cdot10^{-2}\\ \\mathrm{J/m}$$"
+   ],
+   "en": [
+    "The speed: $$v=\\sqrt{\\frac{F}{\\mu}}=\\sqrt{\\frac{100}{0.01}}=100\\ \\mathrm{m/s}$$",
+    "The average power: $$\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\mu v\\omega^2A^2=\\frac{1}{2}\\cdot0.01\\cdot100\\cdot\\left(100\\pi\\right)^2\\cdot\\left(5\\cdot10^{-3}\\right)^2\\approx1.23\\ \\mathrm{W}$$",
+    "The energy density is the power divided by the speed: $$\\left\\langle w\\right\\rangle=\\frac{\\left\\langle\\mathcal P\\right\\rangle}{v}\\approx1.23\\cdot10^{-2}\\ \\mathrm{J/m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tordagi tezlik: $v=\\sqrt{\\frac{F}{\\mu}}$",
+    "ru": "Скорость в струне: $v=\\sqrt{\\frac{F}{\\mu}}$",
+    "en": "Speed on a string: $v=\\sqrt{\\frac{F}{\\mu}}$"
+   },
+   {
+    "uz": "Tordagi quvvat: $\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\mu v\\omega^2A^2$",
+    "ru": "Мощность в струне: $\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\mu v\\omega^2A^2$",
+    "en": "Power on a string: $\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\mu v\\omega^2A^2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "To'lqin energiyasi",
+   "ru": "Энергия волны",
+   "en": "Wave energy"
+  },
+  "answer": "v=100\\ \\mathrm{m/s};\\ \\left\\langle\\mathcal P\\right\\rangle\\approx1.23\\ \\mathrm{W};\\ \\left\\langle w\\right\\rangle\\approx1.23\\cdot10^{-2}\\ \\mathrm{J/m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original (B2-L24, quvvat)"
+ },
+ {
+  "id": "B2-L24-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Nuqtaviy manbadan $10\\ \\mathrm{m}$ masofada tovush darajasi $60\\ \\mathrm{dB}$. Intensivlikni, manba quvvatini, $100\\ \\mathrm{m}$ dagi darajani va bosim amplitudasini toping ($\\rho=1.2\\ \\mathrm{kg/m^3}$, $v=343\\ \\mathrm{m/s}$). Xuddi shunday 10 ta nokogerent manba $10\\ \\mathrm{m}$ da qanday daraja beradi?",
+   "ru": "На расстоянии $10\\ \\mathrm{m}$ от точечного источника уровень звука $60\\ \\mathrm{dB}$. Найдите интенсивность, мощность источника, уровень на $100\\ \\mathrm{m}$ и амплитуду давления ($\\rho=1.2\\ \\mathrm{kg/m^3}$, $v=343\\ \\mathrm{m/s}$). Какой уровень на $10\\ \\mathrm{m}$ дадут 10 таких некогерентных источников?",
+   "en": "At $10\\ \\mathrm{m}$ from a point source the sound level is $60\\ \\mathrm{dB}$. Find the intensity, the source power, the level at $100\\ \\mathrm{m}$ and the pressure amplitude ($\\rho=1.2\\ \\mathrm{kg/m^3}$, $v=343\\ \\mathrm{m/s}$). What level do 10 such incoherent sources give at $10\\ \\mathrm{m}$?"
+  },
+  "figure": "figures/B2-L24-S05.png",
+  "solution": {
+   "uz": [
+    "Darajadan intensivlik: $$I=I_0\\cdot10^{\\frac{\\beta}{10}}=10^{-12}\\cdot10^6=10^{-6}\\ \\mathrm{W/m^2}$$",
+    "Quvvat va $100\\ \\mathrm{m}$ dagi daraja (intensivlik 100 marta kichik): $$\\mathcal P=4\\pi r^2I\\approx1.26\\ \\mathrm{mW},\\qquad \\beta=60-10\\log_{10}100=40\\ \\mathrm{dB}$$",
+    "Bosim amplitudasi: $$p_0=\\sqrt{2\\rho vI}=\\sqrt{2\\cdot1.2\\cdot343\\cdot10^{-6}}\\approx0.029\\ \\mathrm{Pa}$$",
+    "10 ta manba — intensivliklar qo'shiladi: $$\\beta=60+10\\log_{10}10=70\\ \\mathrm{dB}$$"
+   ],
+   "ru": [
+    "Интенсивность из уровня: $$I=I_0\\cdot10^{\\frac{\\beta}{10}}=10^{-12}\\cdot10^6=10^{-6}\\ \\mathrm{W/m^2}$$",
+    "Мощность и уровень на $100\\ \\mathrm{m}$ (интенсивность в 100 раз меньше): $$\\mathcal P=4\\pi r^2I\\approx1.26\\ \\mathrm{mW},\\qquad \\beta=60-10\\log_{10}100=40\\ \\mathrm{dB}$$",
+    "Амплитуда давления: $$p_0=\\sqrt{2\\rho vI}=\\sqrt{2\\cdot1.2\\cdot343\\cdot10^{-6}}\\approx0.029\\ \\mathrm{Pa}$$",
+    "10 источников — складываются интенсивности: $$\\beta=60+10\\log_{10}10=70\\ \\mathrm{dB}$$"
+   ],
+   "en": [
+    "Intensity from the level: $$I=I_0\\cdot10^{\\frac{\\beta}{10}}=10^{-12}\\cdot10^6=10^{-6}\\ \\mathrm{W/m^2}$$",
+    "The power and the level at $100\\ \\mathrm{m}$ (intensity 100 times smaller): $$\\mathcal P=4\\pi r^2I\\approx1.26\\ \\mathrm{mW},\\qquad \\beta=60-10\\log_{10}100=40\\ \\mathrm{dB}$$",
+    "The pressure amplitude: $$p_0=\\sqrt{2\\rho vI}=\\sqrt{2\\cdot1.2\\cdot343\\cdot10^{-6}}\\approx0.029\\ \\mathrm{Pa}$$",
+    "10 sources — the intensities add: $$\\beta=60+10\\log_{10}10=70\\ \\mathrm{dB}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tovush darajasi: $\\beta=10\\log_{10}\\frac{I}{I_0}$",
+    "ru": "Уровень звука: $\\beta=10\\log_{10}\\frac{I}{I_0}$",
+    "en": "Sound level: $\\beta=10\\log_{10}\\frac{I}{I_0}$"
+   },
+   {
+    "uz": "Nuqtaviy manba: $I=\\frac{\\mathcal P}{4\\pi r^2}$",
+    "ru": "Точечный источник: $I=\\frac{\\mathcal P}{4\\pi r^2}$",
+    "en": "Point source: $I=\\frac{\\mathcal P}{4\\pi r^2}$"
+   },
+   {
+    "uz": "Intensivlik va bosim: $I=\\frac{p_0^2}{2\\rho v}$",
+    "ru": "Интенсивность и давление: $I=\\frac{p_0^2}{2\\rho v}$",
+    "en": "Intensity and pressure: $I=\\frac{p_0^2}{2\\rho v}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Detsibellar",
+   "ru": "Децибелы",
+   "en": "Decibels"
+  },
+  "answer": "I=10^{-6}\\ \\mathrm{W/m^2};\\ \\mathcal P\\approx1.26\\ \\mathrm{mW};\\ 40\\ \\mathrm{dB};\\ p_0\\approx0.029\\ \\mathrm{Pa};\\ 70\\ \\mathrm{dB}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "Irodov, «Problems in General Physics», 4.163-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L24-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Bir yo'nalishda tarqalayotgan, chastotasi bir xil, amplitudalari $3\\ \\mathrm{mm}$ va $4\\ \\mathrm{mm}$ bo'lgan ikki to'lqin qo'shiladi. Fazalar farqi $\\frac{\\pi}{2}$, $\\frac{\\pi}{3}$ va $\\pi$ bo'lganda natijaviy amplitudani toping. Birinchi holda natijaviy to'lqinning fazasi birinchi to'lqinnikidan qancha oldinda?",
+   "ru": "Складываются две волны одинаковой частоты, распространяющиеся в одном направлении, с амплитудами $3\\ \\mathrm{mm}$ и $4\\ \\mathrm{mm}$. Найдите результирующую амплитуду при разности фаз $\\frac{\\pi}{2}$, $\\frac{\\pi}{3}$ и $\\pi$. На сколько в первом случае фаза результирующей волны опережает фазу первой волны?",
+   "en": "Two waves of the same frequency travelling in the same direction, with amplitudes $3\\ \\mathrm{mm}$ and $4\\ \\mathrm{mm}$, are added. Find the resultant amplitude for phase differences $\\frac{\\pi}{2}$, $\\frac{\\pi}{3}$ and $\\pi$. In the first case, by how much does the phase of the resultant lead that of the first wave?"
+  },
+  "figure": "figures/B2-L24-S06.png",
+  "solution": {
+   "uz": [
+    "Fazor diagrammasi: $$\\Delta\\varphi=\\frac{\\pi}{2}:\\ A=\\sqrt{9+16}=5\\ \\mathrm{mm}$$",
+    "Boshqa fazalar farqlari: $$\\Delta\\varphi=\\frac{\\pi}{3}:\\ A=\\sqrt{9+16+12}\\approx6.08\\ \\mathrm{mm},\\qquad \\Delta\\varphi=\\pi:\\ A=4-3=1\\ \\mathrm{mm}$$",
+    "Natijaviy faza: $$\\tan\\varphi=\\frac{4\\sin90^\\circ}{3+4\\cos90^\\circ}=\\frac{4}{3}\\ \\Rightarrow\\ \\varphi\\approx53^\\circ$$"
+   ],
+   "ru": [
+    "Векторная диаграмма: $$\\Delta\\varphi=\\frac{\\pi}{2}:\\ A=\\sqrt{9+16}=5\\ \\mathrm{mm}$$",
+    "Другие разности фаз: $$\\Delta\\varphi=\\frac{\\pi}{3}:\\ A=\\sqrt{9+16+12}\\approx6.08\\ \\mathrm{mm},\\qquad \\Delta\\varphi=\\pi:\\ A=4-3=1\\ \\mathrm{mm}$$",
+    "Результирующая фаза: $$\\tan\\varphi=\\frac{4\\sin90^\\circ}{3+4\\cos90^\\circ}=\\frac{4}{3}\\ \\Rightarrow\\ \\varphi\\approx53^\\circ$$"
+   ],
+   "en": [
+    "The phasor diagram: $$\\Delta\\varphi=\\frac{\\pi}{2}:\\ A=\\sqrt{9+16}=5\\ \\mathrm{mm}$$",
+    "The other phase differences: $$\\Delta\\varphi=\\frac{\\pi}{3}:\\ A=\\sqrt{9+16+12}\\approx6.08\\ \\mathrm{mm},\\qquad \\Delta\\varphi=\\pi:\\ A=4-3=1\\ \\mathrm{mm}$$",
+    "The resultant phase: $$\\tan\\varphi=\\frac{4\\sin90^\\circ}{3+4\\cos90^\\circ}=\\frac{4}{3}\\ \\Rightarrow\\ \\varphi\\approx53^\\circ$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ikki to'lqin yig'indisi: $A^2=A_1^2+A_2^2+2A_1A_2\\cos\\Delta\\varphi$",
+    "ru": "Сумма двух волн: $A^2=A_1^2+A_2^2+2A_1A_2\\cos\\Delta\\varphi$",
+    "en": "Sum of two waves: $A^2=A_1^2+A_2^2+2A_1A_2\\cos\\Delta\\varphi$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "To'lqinlar superpozitsiyasi",
+   "ru": "Суперпозиция волн",
+   "en": "Superposition of waves"
+  },
+  "answer": "5\\ \\mathrm{mm};\\ 6.08\\ \\mathrm{mm};\\ 1\\ \\mathrm{mm};\\ \\varphi\\approx53^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original (B2-L24, fazor)"
+ },
+ {
+  "id": "B2-L24-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki tor ulangan, tarangligi bir xil, ikkinchisining chiziqli zichligi birinchisinikidan 4 marta katta. Birinchi tordan amplitudasi $6\\ \\mathrm{mm}$ bo'lgan impuls keladi. Qaytgan va o'tgan impulslarning amplitudalari va ishoralarini, energiya ulushlarini hamda tezliklar nisbatini toping.",
+   "ru": "Две струны соединены, натяжение одинаково, линейная плотность второй в 4 раза больше, чем первой. По первой струне приходит импульс амплитудой $6\\ \\mathrm{mm}$. Найдите амплитуды и знаки отражённого и прошедшего импульсов, доли энергии и отношение скоростей.",
+   "en": "Two strings are joined, with the same tension; the linear density of the second is 4 times that of the first. A pulse of amplitude $6\\ \\mathrm{mm}$ arrives along the first string. Find the amplitudes and signs of the reflected and transmitted pulses, the energy fractions and the ratio of speeds."
+  },
+  "figure": "figures/B2-L24-S07.png",
+  "solution": {
+   "uz": [
+    "To'lqin qarshiligi $\\sqrt{\\mu}$ ga, tezlik $\\frac{1}{\\sqrt{\\mu}}$ ga proporsional: $$Z_2=2Z_1,\\qquad v_2=\\frac{v_1}{2}$$",
+    "Koeffitsiyentlar: $$r=\\frac{1-2}{1+2}=-\\frac{1}{3},\\qquad \\tau=\\frac{2}{3}\\qquad\\Rightarrow\\qquad -2\\ \\mathrm{mm},\\ 4\\ \\mathrm{mm}$$",
+    "Energiya ulushlari: $$R=\\frac{1}{9},\\qquad \\frac{Z_2}{Z_1}\\tau^2=2\\cdot\\frac{4}{9}=\\frac{8}{9},\\qquad \\frac{1}{9}+\\frac{8}{9}=1$$"
+   ],
+   "ru": [
+    "Волновое сопротивление пропорционально $\\sqrt{\\mu}$, скорость — $\\frac{1}{\\sqrt{\\mu}}$: $$Z_2=2Z_1,\\qquad v_2=\\frac{v_1}{2}$$",
+    "Коэффициенты: $$r=\\frac{1-2}{1+2}=-\\frac{1}{3},\\qquad \\tau=\\frac{2}{3}\\qquad\\Rightarrow\\qquad -2\\ \\mathrm{mm},\\ 4\\ \\mathrm{mm}$$",
+    "Доли энергии: $$R=\\frac{1}{9},\\qquad \\frac{Z_2}{Z_1}\\tau^2=2\\cdot\\frac{4}{9}=\\frac{8}{9},\\qquad \\frac{1}{9}+\\frac{8}{9}=1$$"
+   ],
+   "en": [
+    "The wave impedance is proportional to $\\sqrt{\\mu}$ and the speed to $\\frac{1}{\\sqrt{\\mu}}$: $$Z_2=2Z_1,\\qquad v_2=\\frac{v_1}{2}$$",
+    "The coefficients: $$r=\\frac{1-2}{1+2}=-\\frac{1}{3},\\qquad \\tau=\\frac{2}{3}\\qquad\\Rightarrow\\qquad -2\\ \\mathrm{mm},\\ 4\\ \\mathrm{mm}$$",
+    "The energy fractions: $$R=\\frac{1}{9},\\qquad \\frac{Z_2}{Z_1}\\tau^2=2\\cdot\\frac{4}{9}=\\frac{8}{9},\\qquad \\frac{1}{9}+\\frac{8}{9}=1$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'lqin qarshiligi: $Z=\\sqrt{F\\mu}$",
+    "ru": "Волновое сопротивление: $Z=\\sqrt{F\\mu}$",
+    "en": "Wave impedance: $Z=\\sqrt{F\\mu}$"
+   },
+   {
+    "uz": "Qaytish va o'tish: $r=\\frac{Z_1-Z_2}{Z_1+Z_2}$, $\\tau=\\frac{2Z_1}{Z_1+Z_2}$",
+    "ru": "Отражение и прохождение: $r=\\frac{Z_1-Z_2}{Z_1+Z_2}$, $\\tau=\\frac{2Z_1}{Z_1+Z_2}$",
+    "en": "Reflection and transmission: $r=\\frac{Z_1-Z_2}{Z_1+Z_2}$, $\\tau=\\frac{2Z_1}{Z_1+Z_2}$"
+   },
+   {
+    "uz": "Energiya ulushlari: $R=r^2$, $\\frac{Z_2}{Z_1}\\tau^2=1-R$",
+    "ru": "Доли энергии: $R=r^2$, $\\frac{Z_2}{Z_1}\\tau^2=1-R$",
+    "en": "Energy fractions: $R=r^2$, $\\frac{Z_2}{Z_1}\\tau^2=1-R$"
+   }
+  ],
+  "basis": {
+   "uz": "Chegarada qaytish va o'tish",
+   "ru": "Отражение и прохождение на границе",
+   "en": "Reflection and transmission at a boundary"
+  },
+  "answer": "-2\\ \\mathrm{mm};\\ 4\\ \\mathrm{mm};\\ R=\\frac{1}{9};\\ \\frac{8}{9};\\ v_2=\\frac{v_1}{2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original (B2-L24, ulanish)"
+ },
+ {
+  "id": "B2-L24-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki uchi mahkamlangan torda turg'un to'lqin $y=0.004\\sin5\\pi x\\cos300\\pi t$ (SI) hosil bo'lgan, bu uchinchi garmonika. To'lqin uzunligi, chastota, yuguruvchi to'lqinlar tezligi, tugunlar o'rni va tor uzunligini toping. Do'nglikdagi zarraning eng katta tezligi qancha?",
+   "ru": "В струне с закреплёнными концами образовалась стоячая волна $y=0.004\\sin5\\pi x\\cos300\\pi t$ (СИ), это третья гармоника. Найдите длину волны, частоту, скорость бегущих волн, положения узлов и длину струны. Какова наибольшая скорость частицы в пучности?",
+   "en": "A string fixed at both ends carries the standing wave $y=0.004\\sin5\\pi x\\cos300\\pi t$ (SI), which is the third harmonic. Find the wavelength, frequency, speed of the travelling waves, positions of the nodes and length of the string. What is the maximum speed of a particle at an antinode?"
+  },
+  "figure": "figures/B2-L24-S08.png",
+  "solution": {
+   "uz": [
+    "Parametrlar: $$\\lambda=\\frac{2\\pi}{5\\pi}=0.4\\ \\mathrm{m},\\qquad f=150\\ \\mathrm{Hz},\\qquad v=\\lambda f=60\\ \\mathrm{m/s}$$",
+    "Tugunlar va tor uzunligi: $$x_n=\\frac{n\\lambda}{2}=0,\\ 0.2,\\ 0.4,\\ 0.6\\ \\mathrm{m},\\qquad L=3\\cdot\\frac{\\lambda}{2}=0.6\\ \\mathrm{m}$$",
+    "Do'nglikda amplituda $0.004\\ \\mathrm{m}$: $$\\left(\\frac{\\partial y}{\\partial t}\\right)_{max}=0.004\\cdot300\\pi\\approx3.8\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Параметры: $$\\lambda=\\frac{2\\pi}{5\\pi}=0.4\\ \\mathrm{m},\\qquad f=150\\ \\mathrm{Hz},\\qquad v=\\lambda f=60\\ \\mathrm{m/s}$$",
+    "Узлы и длина струны: $$x_n=\\frac{n\\lambda}{2}=0,\\ 0.2,\\ 0.4,\\ 0.6\\ \\mathrm{m},\\qquad L=3\\cdot\\frac{\\lambda}{2}=0.6\\ \\mathrm{m}$$",
+    "В пучности амплитуда $0.004\\ \\mathrm{m}$: $$\\left(\\frac{\\partial y}{\\partial t}\\right)_{max}=0.004\\cdot300\\pi\\approx3.8\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "The parameters: $$\\lambda=\\frac{2\\pi}{5\\pi}=0.4\\ \\mathrm{m},\\qquad f=150\\ \\mathrm{Hz},\\qquad v=\\lambda f=60\\ \\mathrm{m/s}$$",
+    "The nodes and the length of the string: $$x_n=\\frac{n\\lambda}{2}=0,\\ 0.2,\\ 0.4,\\ 0.6\\ \\mathrm{m},\\qquad L=3\\cdot\\frac{\\lambda}{2}=0.6\\ \\mathrm{m}$$",
+    "At an antinode the amplitude is $0.004\\ \\mathrm{m}$: $$\\left(\\frac{\\partial y}{\\partial t}\\right)_{max}=0.004\\cdot300\\pi\\approx3.8\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Garmonik to'lqin: $k=\\frac{2\\pi}{\\lambda}$, $\\omega=2\\pi f$, $v=\\frac{\\omega}{k}$",
+    "ru": "Гармоническая волна: $k=\\frac{2\\pi}{\\lambda}$, $\\omega=2\\pi f$, $v=\\frac{\\omega}{k}$",
+    "en": "Harmonic wave: $k=\\frac{2\\pi}{\\lambda}$, $\\omega=2\\pi f$, $v=\\frac{\\omega}{k}$"
+   },
+   {
+    "uz": "Turg'un to'lqin: $y=2A\\sin kx\\cos\\omega t$, $x_n=\\frac{n\\lambda}{2}$",
+    "ru": "Стоячая волна: $y=2A\\sin kx\\cos\\omega t$, $x_n=\\frac{n\\lambda}{2}$",
+    "en": "Standing wave: $y=2A\\sin kx\\cos\\omega t$, $x_n=\\frac{n\\lambda}{2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Turg'un to'lqin",
+   "ru": "Стоячая волна",
+   "en": "A standing wave"
+  },
+  "answer": "\\lambda=0.4\\ \\mathrm{m};\\ f=150\\ \\mathrm{Hz};\\ v=60\\ \\mathrm{m/s};\\ x_n=0,\\ 0.2,\\ 0.4,\\ 0.6\\ \\mathrm{m};\\ L=0.6\\ \\mathrm{m};\\ 3.8\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Irodov, «Problems in General Physics», 4.164-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L24-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $25\\ \\mathrm{cm}$ bo'lgan truba bir uchidan yopiq. Uning dastlabki ikki rezonans chastotasini toping ($v=340\\ \\mathrm{m/s}$). Agar yopiq uch ochilsa, chastotalar qanday bo'ladi? Ikki uchi ochiq qanday uzunlikdagi trubaning asosiy toni birinchi trubanikiga teng?",
+   "ru": "Труба длиной $25\\ \\mathrm{cm}$ закрыта с одного конца. Найдите её первые две резонансные частоты ($v=340\\ \\mathrm{m/s}$). Какими станут частоты, если закрытый конец открыть? Какой длины открытая с обоих концов труба имеет тот же основной тон, что и первая?",
+   "en": "A pipe $25\\ \\mathrm{cm}$ long is closed at one end. Find its first two resonant frequencies ($v=340\\ \\mathrm{m/s}$). What are the frequencies if the closed end is opened? What length of pipe open at both ends has the same fundamental as the first pipe?"
+  },
+  "figure": "figures/B2-L24-S09.png",
+  "solution": {
+   "uz": [
+    "Bir uchi yopiq — toq garmonikalar: $$f_1=\\frac{v}{4L}=\\frac{340}{1}=340\\ \\mathrm{Hz},\\qquad f_2=\\frac{3v}{4L}=1020\\ \\mathrm{Hz}$$",
+    "Ikki uchi ochiq — barcha garmonikalar: $$f_1=\\frac{v}{2L}=680\\ \\mathrm{Hz},\\qquad f_2=1360\\ \\mathrm{Hz}$$",
+    "Tenglik sharti: $$\\frac{v}{2L'}=\\frac{v}{4L}\\ \\Rightarrow\\ L'=2L=0.5\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Закрытая с одного конца — нечётные гармоники: $$f_1=\\frac{v}{4L}=\\frac{340}{1}=340\\ \\mathrm{Hz},\\qquad f_2=\\frac{3v}{4L}=1020\\ \\mathrm{Hz}$$",
+    "Открытая с обоих концов — все гармоники: $$f_1=\\frac{v}{2L}=680\\ \\mathrm{Hz},\\qquad f_2=1360\\ \\mathrm{Hz}$$",
+    "Условие равенства: $$\\frac{v}{2L'}=\\frac{v}{4L}\\ \\Rightarrow\\ L'=2L=0.5\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Closed at one end — odd harmonics: $$f_1=\\frac{v}{4L}=\\frac{340}{1}=340\\ \\mathrm{Hz},\\qquad f_2=\\frac{3v}{4L}=1020\\ \\mathrm{Hz}$$",
+    "Open at both ends — all harmonics: $$f_1=\\frac{v}{2L}=680\\ \\mathrm{Hz},\\qquad f_2=1360\\ \\mathrm{Hz}$$",
+    "The condition of equality: $$\\frac{v}{2L'}=\\frac{v}{4L}\\ \\Rightarrow\\ L'=2L=0.5\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yopiq truba: $f_n=\\frac{\\left(2n-1\\right)v}{4L}$",
+    "ru": "Закрытая труба: $f_n=\\frac{\\left(2n-1\\right)v}{4L}$",
+    "en": "Closed pipe: $f_n=\\frac{\\left(2n-1\\right)v}{4L}$"
+   },
+   {
+    "uz": "Ochiq truba: $f_n=\\frac{nv}{2L}$",
+    "ru": "Открытая труба: $f_n=\\frac{nv}{2L}$",
+    "en": "Open pipe: $f_n=\\frac{nv}{2L}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Trubalardagi rezonans",
+   "ru": "Резонанс в трубах",
+   "en": "Resonance in pipes"
+  },
+  "answer": "340\\ \\mathrm{Hz},\\ 1020\\ \\mathrm{Hz};\\ 680\\ \\mathrm{Hz},\\ 1360\\ \\mathrm{Hz};\\ L'=0.5\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 4.170-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L24-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Rezonans trubasi ustida chastotasi $500\\ \\mathrm{Hz}$ bo'lgan kamerton tebranmoqda. Suv sathini pasaytirganda tovush havo ustuni uzunligi $16.5\\ \\mathrm{cm}$ va $50.5\\ \\mathrm{cm}$ bo'lganda kuchayadi. Tovush tezligini va uch tuzatmasini toping.",
+   "ru": "Над резонансной трубой колеблется камертон с частотой $500\\ \\mathrm{Hz}$. При понижении уровня воды звук усиливается при длине воздушного столба $16.5\\ \\mathrm{cm}$ и $50.5\\ \\mathrm{cm}$. Найдите скорость звука и поправку на открытый конец.",
+   "en": "A $500\\ \\mathrm{Hz}$ tuning fork vibrates above a resonance tube. As the water level is lowered, the sound is reinforced at air-column lengths of $16.5\\ \\mathrm{cm}$ and $50.5\\ \\mathrm{cm}$. Find the speed of sound and the end correction."
+  },
+  "figure": "figures/B2-L24-S10.png",
+  "solution": {
+   "uz": [
+    "Ketma-ket rezonanslar: $$\\frac{\\lambda}{2}=50.5-16.5=34\\ \\mathrm{cm}\\ \\Rightarrow\\ \\lambda=0.68\\ \\mathrm{m}$$",
+    "Tezlik: $$v=\\lambda f=0.68\\cdot500=340\\ \\mathrm{m/s}$$",
+    "Birinchi rezonansda $L_1+e=\\frac{\\lambda}{4}$: $$e=17-16.5=0.5\\ \\mathrm{cm}$$"
+   ],
+   "ru": [
+    "Соседние резонансы: $$\\frac{\\lambda}{2}=50.5-16.5=34\\ \\mathrm{cm}\\ \\Rightarrow\\ \\lambda=0.68\\ \\mathrm{m}$$",
+    "Скорость: $$v=\\lambda f=0.68\\cdot500=340\\ \\mathrm{m/s}$$",
+    "В первом резонансе $L_1+e=\\frac{\\lambda}{4}$: $$e=17-16.5=0.5\\ \\mathrm{cm}$$"
+   ],
+   "en": [
+    "Successive resonances: $$\\frac{\\lambda}{2}=50.5-16.5=34\\ \\mathrm{cm}\\ \\Rightarrow\\ \\lambda=0.68\\ \\mathrm{m}$$",
+    "The speed: $$v=\\lambda f=0.68\\cdot500=340\\ \\mathrm{m/s}$$",
+    "At the first resonance $L_1+e=\\frac{\\lambda}{4}$: $$e=17-16.5=0.5\\ \\mathrm{cm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ketma-ket rezonanslar orasidagi masofa $\\frac{\\lambda}{2}$",
+    "ru": "Расстояние между соседними резонансами $\\frac{\\lambda}{2}$",
+    "en": "Successive resonances are $\\frac{\\lambda}{2}$ apart"
+   },
+   {
+    "uz": "To'lqin uzunligi: $\\lambda=\\frac{v}{f}$",
+    "ru": "Длина волны: $\\lambda=\\frac{v}{f}$",
+    "en": "Wavelength: $\\lambda=\\frac{v}{f}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Rezonans trubasi",
+   "ru": "Резонансная труба",
+   "en": "The resonance tube"
+  },
+  "answer": "v=340\\ \\mathrm{m/s};\\ e=0.5\\ \\mathrm{cm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Irodov, «Problems in General Physics», 4.169-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L24-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki bir xil tor $440\\ \\mathrm{Hz}$ ga sozlangan. Ulardan birining tarangligi $1\\%$ ga oshirilsa, sekundiga nechta tepish eshitiladi? Boshqa holda pianino tori $440\\ \\mathrm{Hz}$ li kamerton bilan sekundiga 3 ta tepish beradi; torning tarangligi biroz oshirilganda tepishlar soni kamaydi. Torning dastlabki chastotasi qancha edi?",
+   "ru": "Две одинаковые струны настроены на $440\\ \\mathrm{Hz}$. Сколько биений в секунду будет слышно, если натяжение одной из них увеличить на $1\\%$? В другом случае струна пианино даёт с камертоном $440\\ \\mathrm{Hz}$ 3 биения в секунду; при небольшом увеличении натяжения струны число биений уменьшилось. Какой была исходная частота струны?",
+   "en": "Two identical strings are tuned to $440\\ \\mathrm{Hz}$. How many beats per second are heard if the tension of one is increased by $1\\%$? In another case a piano string gives 3 beats per second with a $440\\ \\mathrm{Hz}$ tuning fork; when the tension of the string is increased slightly, the number of beats decreases. What was the original frequency of the string?"
+  },
+  "figure": "figures/B2-L24-S11.png",
+  "solution": {
+   "uz": [
+    "Chastota $\\sqrt{F}$ ga proporsional: $$f_2=440\\sqrt{1.01}\\approx442.2\\ \\mathrm{Hz}$$",
+    "Tepish chastotasi: $$\\Delta f=442.2-440\\approx2.2\\ \\mathrm{Hz}$$",
+    "$f=437$ yoki $443\\ \\mathrm{Hz}$; taranglik oshganda chastota ortadi va farq kamayishi kerak: $$f=437\\ \\mathrm{Hz}$$"
+   ],
+   "ru": [
+    "Частота пропорциональна $\\sqrt{F}$: $$f_2=440\\sqrt{1.01}\\approx442.2\\ \\mathrm{Hz}$$",
+    "Частота биений: $$\\Delta f=442.2-440\\approx2.2\\ \\mathrm{Hz}$$",
+    "$f=437$ или $443\\ \\mathrm{Hz}$; при росте натяжения частота растёт, и разность должна уменьшиться: $$f=437\\ \\mathrm{Hz}$$"
+   ],
+   "en": [
+    "The frequency is proportional to $\\sqrt{F}$: $$f_2=440\\sqrt{1.01}\\approx442.2\\ \\mathrm{Hz}$$",
+    "The beat frequency: $$\\Delta f=442.2-440\\approx2.2\\ \\mathrm{Hz}$$",
+    "$f=437$ or $443\\ \\mathrm{Hz}$; increasing the tension raises the frequency, and the difference must decrease: $$f=437\\ \\mathrm{Hz}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Chastota va taranglik: $f\\propto\\sqrt{F}$",
+    "ru": "Частота и натяжение: $f\\propto\\sqrt{F}$",
+    "en": "Frequency and tension: $f\\propto\\sqrt{F}$"
+   },
+   {
+    "uz": "Tepish: $\\Delta f=\\left|f_1-f_2\\right|$",
+    "ru": "Биения: $\\Delta f=\\left|f_1-f_2\\right|$",
+    "en": "Beats: $\\Delta f=\\left|f_1-f_2\\right|$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Tepish",
+   "ru": "Биения",
+   "en": "Beats"
+  },
+  "answer": "\\approx2.2\\ \\mathrm{Hz};\\ 437\\ \\mathrm{Hz}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L24, tepish)"
+ },
+ {
+  "id": "B2-L24-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Chuqur suvda to'lqin uzunligi $10\\ \\mathrm{m}$ bo'lgan to'lqinlar uchun dispersiya munosabati $\\omega=\\sqrt{gk}$. Fazaviy va guruh tezligini hamda davrni toping. To'lqinlar guruhi ichidagi do'ngliklar guruhga nisbatan qanday tezlik bilan harakatlanadi?",
+   "ru": "Для волн длиной $10\\ \\mathrm{m}$ на глубокой воде закон дисперсии $\\omega=\\sqrt{gk}$. Найдите фазовую и групповую скорости и период. С какой скоростью гребни внутри группы движутся относительно группы?",
+   "en": "For waves of wavelength $10\\ \\mathrm{m}$ on deep water the dispersion relation is $\\omega=\\sqrt{gk}$. Find the phase and group velocities and the period. At what speed do the crests inside the group move relative to the group?"
+  },
+  "figure": "figures/B2-L24-S12.png",
+  "solution": {
+   "uz": [
+    "Fazaviy tezlik, $k=\\frac{2\\pi}{\\lambda}\\approx0.628\\ \\mathrm{m^{-1}}$: $$v=\\frac{\\omega}{k}=\\sqrt{\\frac{g}{k}}=\\sqrt{\\frac{9.8}{0.628}}\\approx3.95\\ \\mathrm{m/s}$$",
+    "Guruh tezligi: $$u=\\frac{d\\omega}{dk}=\\frac{1}{2}\\sqrt{\\frac{g}{k}}=\\frac{v}{2}\\approx1.97\\ \\mathrm{m/s}$$",
+    "Davr va nisbiy tezlik: $$T=\\frac{\\lambda}{v}\\approx2.53\\ \\mathrm{s},\\qquad v-u\\approx1.97\\ \\mathrm{m/s}$$"
+   ],
+   "ru": [
+    "Фазовая скорость, $k=\\frac{2\\pi}{\\lambda}\\approx0.628\\ \\mathrm{m^{-1}}$: $$v=\\frac{\\omega}{k}=\\sqrt{\\frac{g}{k}}=\\sqrt{\\frac{9.8}{0.628}}\\approx3.95\\ \\mathrm{m/s}$$",
+    "Групповая скорость: $$u=\\frac{d\\omega}{dk}=\\frac{1}{2}\\sqrt{\\frac{g}{k}}=\\frac{v}{2}\\approx1.97\\ \\mathrm{m/s}$$",
+    "Период и относительная скорость: $$T=\\frac{\\lambda}{v}\\approx2.53\\ \\mathrm{s},\\qquad v-u\\approx1.97\\ \\mathrm{m/s}$$"
+   ],
+   "en": [
+    "The phase velocity, $k=\\frac{2\\pi}{\\lambda}\\approx0.628\\ \\mathrm{m^{-1}}$: $$v=\\frac{\\omega}{k}=\\sqrt{\\frac{g}{k}}=\\sqrt{\\frac{9.8}{0.628}}\\approx3.95\\ \\mathrm{m/s}$$",
+    "The group velocity: $$u=\\frac{d\\omega}{dk}=\\frac{1}{2}\\sqrt{\\frac{g}{k}}=\\frac{v}{2}\\approx1.97\\ \\mathrm{m/s}$$",
+    "The period and the relative speed: $$T=\\frac{\\lambda}{v}\\approx2.53\\ \\mathrm{s},\\qquad v-u\\approx1.97\\ \\mathrm{m/s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Chuqur suv: $\\omega=\\sqrt{gk}$",
+    "ru": "Глубокая вода: $\\omega=\\sqrt{gk}$",
+    "en": "Deep water: $\\omega=\\sqrt{gk}$"
+   },
+   {
+    "uz": "Guruh tezligi: $u=\\frac{d\\omega}{dk}$",
+    "ru": "Групповая скорость: $u=\\frac{d\\omega}{dk}$",
+    "en": "Group velocity: $u=\\frac{d\\omega}{dk}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Guruh tezligi",
+   "ru": "Групповая скорость",
+   "en": "Group velocity"
+  },
+  "answer": "v\\approx3.95\\ \\mathrm{m/s};\\ u\\approx1.97\\ \\mathrm{m/s};\\ T\\approx2.53\\ \\mathrm{s};\\ \\approx1.97\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 3.1.3 (Dispersion Relations) g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L24-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Tez yordam mashinasi sirenasining chastotasi $700\\ \\mathrm{Hz}$, mashina $25\\ \\mathrm{m/s}$ tezlik bilan harakatlanmoqda. Yo'l chetidagi tinch kuzatuvchi mashina yaqinlashganda va uzoqlashganda qanday chastotani eshitadi ($v=340\\ \\mathrm{m/s}$)?",
+   "ru": "Частота сирены машины скорой помощи $700\\ \\mathrm{Hz}$, машина движется со скоростью $25\\ \\mathrm{m/s}$. Какую частоту слышит неподвижный наблюдатель у дороги при приближении и при удалении машины ($v=340\\ \\mathrm{m/s}$)?",
+   "en": "An ambulance siren has frequency $700\\ \\mathrm{Hz}$ and the ambulance moves at $25\\ \\mathrm{m/s}$. What frequency does a stationary observer at the roadside hear as it approaches and as it recedes ($v=340\\ \\mathrm{m/s}$)?"
+  },
+  "figure": "figures/B2-L24-S13.png",
+  "solution": {
+   "uz": [
+    "Yaqinlashayotgan manba ($v_2=25\\ \\mathrm{m/s}$): $$f'=f\\,\\frac{v}{v-v_2}=700\\cdot\\frac{340}{315}\\approx756\\ \\mathrm{Hz}$$",
+    "Uzoqlashayotgan manba: $$f'=700\\cdot\\frac{340}{365}\\approx652\\ \\mathrm{Hz}$$"
+   ],
+   "ru": [
+    "Приближающийся источник ($v_2=25\\ \\mathrm{m/s}$): $$f'=f\\,\\frac{v}{v-v_2}=700\\cdot\\frac{340}{315}\\approx756\\ \\mathrm{Hz}$$",
+    "Удаляющийся источник: $$f'=700\\cdot\\frac{340}{365}\\approx652\\ \\mathrm{Hz}$$"
+   ],
+   "en": [
+    "An approaching source ($v_2=25\\ \\mathrm{m/s}$): $$f'=f\\,\\frac{v}{v-v_2}=700\\cdot\\frac{340}{315}\\approx756\\ \\mathrm{Hz}$$",
+    "A receding source: $$f'=700\\cdot\\frac{340}{365}\\approx652\\ \\mathrm{Hz}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Dopler effekti: $f'=f\\,\\frac{v+v_1}{v-v_2}$",
+    "ru": "Эффект Доплера: $f'=f\\,\\frac{v+v_1}{v-v_2}$",
+    "en": "Doppler effect: $f'=f\\,\\frac{v+v_1}{v-v_2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Dopler effekti",
+   "ru": "Эффект Доплера",
+   "en": "The Doppler effect"
+  },
+  "answer": "\\approx756\\ \\mathrm{Hz};\\ \\approx652\\ \\mathrm{Hz}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "Irodov, «Problems in General Physics», 4.174-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L24-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ko'rshapalak devorga tomon $10\\ \\mathrm{m/s}$ tezlik bilan uchib, $40\\ \\mathrm{kHz}$ chastotali ultratovush chiqaradi. Devordan qaytgan tovushni u qanday chastotada eshitadi va yuborilgan hamda qaytgan tovush orasidagi tepish chastotasi qancha ($v=340\\ \\mathrm{m/s}$)?",
+   "ru": "Летучая мышь летит к стене со скоростью $10\\ \\mathrm{m/s}$ и издаёт ультразвук частотой $40\\ \\mathrm{kHz}$. Какую частоту отражённого от стены звука она слышит и какова частота биений между испущенным и отражённым звуком ($v=340\\ \\mathrm{m/s}$)?",
+   "en": "A bat flies towards a wall at $10\\ \\mathrm{m/s}$ emitting $40\\ \\mathrm{kHz}$ ultrasound. At what frequency does it hear the sound reflected from the wall, and what is the beat frequency between the emitted and reflected sound ($v=340\\ \\mathrm{m/s}$)?"
+  },
+  "figure": "figures/B2-L24-S14.png",
+  "solution": {
+   "uz": [
+    "Devor — tinch kuzatuvchi, manba yaqinlashmoqda: $$f_1=f\\,\\frac{v}{v-v_2}=40\\cdot\\frac{340}{330}\\approx41.21\\ \\mathrm{kHz}$$",
+    "Devor — tinch manba, kuzatuvchi (ko'rshapalak) yaqinlashmoqda: $$f''=f_1\\frac{v+v_1}{v}=40\\cdot\\frac{350}{330}\\approx42.42\\ \\mathrm{kHz}$$",
+    "Tepish: $$\\Delta f=42.42-40\\approx2.4\\ \\mathrm{kHz}$$"
+   ],
+   "ru": [
+    "Стена — неподвижный наблюдатель, источник приближается: $$f_1=f\\,\\frac{v}{v-v_2}=40\\cdot\\frac{340}{330}\\approx41.21\\ \\mathrm{kHz}$$",
+    "Стена — неподвижный источник, наблюдатель (мышь) приближается: $$f''=f_1\\frac{v+v_1}{v}=40\\cdot\\frac{350}{330}\\approx42.42\\ \\mathrm{kHz}$$",
+    "Биения: $$\\Delta f=42.42-40\\approx2.4\\ \\mathrm{kHz}$$"
+   ],
+   "en": [
+    "The wall is a stationary observer and the source approaches: $$f_1=f\\,\\frac{v}{v-v_2}=40\\cdot\\frac{340}{330}\\approx41.21\\ \\mathrm{kHz}$$",
+    "The wall is a stationary source and the observer (the bat) approaches: $$f''=f_1\\frac{v+v_1}{v}=40\\cdot\\frac{350}{330}\\approx42.42\\ \\mathrm{kHz}$$",
+    "The beats: $$\\Delta f=42.42-40\\approx2.4\\ \\mathrm{kHz}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Dopler effekti: $f'=f\\,\\frac{v+v_1}{v-v_2}$",
+    "ru": "Эффект Доплера: $f'=f\\,\\frac{v+v_1}{v-v_2}$",
+    "en": "Doppler effect: $f'=f\\,\\frac{v+v_1}{v-v_2}$"
+   },
+   null,
+   {
+    "uz": "Tepish: $\\Delta f=\\left|f_1-f_2\\right|$",
+    "ru": "Биения: $\\Delta f=\\left|f_1-f_2\\right|$",
+    "en": "Beats: $\\Delta f=\\left|f_1-f_2\\right|$"
+   }
+  ],
+  "basis": {
+   "uz": "Harakatlanuvchi jismdan qaytish",
+   "ru": "Отражение от движущегося тела",
+   "en": "Reflection from a moving body"
+  },
+  "answer": "f''\\approx42.4\\ \\mathrm{kHz};\\ \\Delta f\\approx2.4\\ \\mathrm{kHz}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "Irodov, «Problems in General Physics», 4.176-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L24-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Samolyot $6\\ \\mathrm{km}$ balandlikda tovush tezligidan ikki marta tez ($M=2$) gorizontal uchmoqda ($v=340\\ \\mathrm{m/s}$). Max konusining yarim burchagini toping. Samolyot kuzatuvchi ustidan o'tgandan qancha vaqt keyin u tovush zarbasini eshitadi?",
+   "ru": "Самолёт летит горизонтально на высоте $6\\ \\mathrm{km}$ со скоростью, вдвое большей скорости звука ($M=2$, $v=340\\ \\mathrm{m/s}$). Найдите половину угла конуса Маха. Через какое время после пролёта самолёта над наблюдателем тот услышит звуковой удар?",
+   "en": "An aircraft flies horizontally at an altitude of $6\\ \\mathrm{km}$ at twice the speed of sound ($M=2$, $v=340\\ \\mathrm{m/s}$). Find the half-angle of the Mach cone. How long after the aircraft passes overhead does the observer hear the sonic boom?"
+  },
+  "figure": "figures/B2-L24-S15.png",
+  "solution": {
+   "uz": [
+    "Konus burchagi: $$\\sin\\theta=\\frac{1}{M}=\\frac{1}{2}\\ \\Rightarrow\\ \\theta=30^\\circ$$",
+    "Konus kuzatuvchiga yetganda samolyot gorizontal bo'yicha $x$ masofada: $$x=\\frac{h}{\\tan\\theta}=\\frac{6}{\\tan30^\\circ}\\approx10.4\\ \\mathrm{km}$$",
+    "Vaqt, $v_2=680\\ \\mathrm{m/s}$: $$t=\\frac{x}{v_2}=\\frac{10392}{680}\\approx15\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Угол конуса: $$\\sin\\theta=\\frac{1}{M}=\\frac{1}{2}\\ \\Rightarrow\\ \\theta=30^\\circ$$",
+    "Когда конус доходит до наблюдателя, самолёт находится на горизонтальном расстоянии $x$: $$x=\\frac{h}{\\tan\\theta}=\\frac{6}{\\tan30^\\circ}\\approx10.4\\ \\mathrm{km}$$",
+    "Время, $v_2=680\\ \\mathrm{m/s}$: $$t=\\frac{x}{v_2}=\\frac{10392}{680}\\approx15\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The cone angle: $$\\sin\\theta=\\frac{1}{M}=\\frac{1}{2}\\ \\Rightarrow\\ \\theta=30^\\circ$$",
+    "When the cone reaches the observer, the aircraft is a horizontal distance $x$ away: $$x=\\frac{h}{\\tan\\theta}=\\frac{6}{\\tan30^\\circ}\\approx10.4\\ \\mathrm{km}$$",
+    "The time, $v_2=680\\ \\mathrm{m/s}$: $$t=\\frac{x}{v_2}=\\frac{10392}{680}\\approx15\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Max konusi: $\\sin\\theta=\\frac{v}{v_2}$",
+    "ru": "Конус Маха: $\\sin\\theta=\\frac{v}{v_2}$",
+    "en": "Mach cone: $\\sin\\theta=\\frac{v}{v_2}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Zarb to'lqini",
+   "ru": "Ударная волна",
+   "en": "A shock wave"
+  },
+  "answer": "\\theta=30^\\circ;\\ t\\approx15\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L24, Max konusi)"
+ },
+ {
+  "id": "B2-L24-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Uzun tarang torda $t=0$ da balandligi $4\\ \\mathrm{mm}$ bo'lgan qo'ng'iroqsimon impuls hosil qilinib, tinch qo'yib yuborildi. To'lqin tezligi $20\\ \\mathrm{m/s}$. $0.1\\ \\mathrm{s}$ dan keyin tor shakli qanday bo'ladi? Impuls kengligi $2\\ \\mathrm{m}$ dan ancha kichik.",
+   "ru": "На длинной натянутой струне при $t=0$ создан колоколообразный импульс высотой $4\\ \\mathrm{mm}$ и отпущен без начальной скорости. Скорость волны $20\\ \\mathrm{m/s}$. Какова форма струны через $0.1\\ \\mathrm{s}$? Ширина импульса много меньше $2\\ \\mathrm{m}$.",
+   "en": "At $t=0$ a bell-shaped pulse $4\\ \\mathrm{mm}$ high is formed on a long taut string and released from rest. The wave speed is $20\\ \\mathrm{m/s}$. What is the shape of the string after $0.1\\ \\mathrm{s}$? The pulse width is much less than $2\\ \\mathrm{m}$."
+  },
+  "figure": "figures/B2-L24-S16.png",
+  "solution": {
+   "uz": [
+    "Boshlang'ich tezlik nol — Dalamber yechimi: $$y\\left(x,t\\right)=\\frac{1}{2}\\left[y_0\\left(x-vt\\right)+y_0\\left(x+vt\\right)\\right]$$",
+    "Har bir yarim $vt=2\\ \\mathrm{m}$ ga siljiydi: $$x=\\pm2\\ \\mathrm{m}:\\ y_{max}=\\frac{4}{2}=2\\ \\mathrm{mm}$$",
+    "Impulslar ustma-ust tushmaydi, orada tor tekis: $$y\\left(0,\\ 0.1\\ \\mathrm{s}\\right)\\approx0$$"
+   ],
+   "ru": [
+    "Начальная скорость равна нулю — решение Даламбера: $$y\\left(x,t\\right)=\\frac{1}{2}\\left[y_0\\left(x-vt\\right)+y_0\\left(x+vt\\right)\\right]$$",
+    "Каждая половина сдвигается на $vt=2\\ \\mathrm{m}$: $$x=\\pm2\\ \\mathrm{m}:\\ y_{max}=\\frac{4}{2}=2\\ \\mathrm{mm}$$",
+    "Импульсы не перекрываются, между ними струна прямая: $$y\\left(0,\\ 0.1\\ \\mathrm{s}\\right)\\approx0$$"
+   ],
+   "en": [
+    "The initial velocity is zero — d'Alembert's solution: $$y\\left(x,t\\right)=\\frac{1}{2}\\left[y_0\\left(x-vt\\right)+y_0\\left(x+vt\\right)\\right]$$",
+    "Each half moves by $vt=2\\ \\mathrm{m}$: $$x=\\pm2\\ \\mathrm{m}:\\ y_{max}=\\frac{4}{2}=2\\ \\mathrm{mm}$$",
+    "The pulses do not overlap; between them the string is straight: $$y\\left(0,\\ 0.1\\ \\mathrm{s}\\right)\\approx0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Dalamber yechimi: $y=\\frac{1}{2}\\left[y_0\\left(x-vt\\right)+y_0\\left(x+vt\\right)\\right]$",
+    "ru": "Решение Даламбера: $y=\\frac{1}{2}\\left[y_0\\left(x-vt\\right)+y_0\\left(x+vt\\right)\\right]$",
+    "en": "D'Alembert's solution: $y=\\frac{1}{2}\\left[y_0\\left(x-vt\\right)+y_0\\left(x+vt\\right)\\right]$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Dalamber yechimi",
+   "ru": "Решение Даламбера",
+   "en": "D'Alembert's solution"
+  },
+  "answer": "x=\\pm2\\ \\mathrm{m};\\ y_{max}=2\\ \\mathrm{mm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "Irodov, «Problems in General Physics», 4.154-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L24-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Amplitudasi $1\\ \\mathrm{V}$, chastotasi $100\\ \\mathrm{Hz}$ bo'lgan to'g'ri burchakli signal (yarim davr $+1\\ \\mathrm{V}$, yarim davr $-1\\ \\mathrm{V}$) Furye qatoriga yoyiladi. Dastlabki uchta noldan farqli garmonikaning chastotasi va amplitudasini toping. Signal quvvatining qanday ulushi asosiy garmonikaga to'g'ri keladi?",
+   "ru": "Прямоугольный сигнал амплитудой $1\\ \\mathrm{V}$ и частотой $100\\ \\mathrm{Hz}$ (полпериода $+1\\ \\mathrm{V}$, полпериода $-1\\ \\mathrm{V}$) раскладывается в ряд Фурье. Найдите частоты и амплитуды первых трёх ненулевых гармоник. Какая доля мощности сигнала приходится на основную гармонику?",
+   "en": "A square wave of amplitude $1\\ \\mathrm{V}$ and frequency $100\\ \\mathrm{Hz}$ (half a period at $+1\\ \\mathrm{V}$, half at $-1\\ \\mathrm{V}$) is expanded in a Fourier series. Find the frequencies and amplitudes of the first three non-zero harmonics. What fraction of the signal power is in the fundamental?"
+  },
+  "figure": "figures/B2-L24-S17.png",
+  "solution": {
+   "uz": [
+    "Koeffitsiyentlar $b_n=\\frac{2}{T}\\int_0^Tf\\sin n\\omega t\\,dt$; juft $n$ uchun nol: $$b_n=\\frac{4}{n\\pi}\\ \\left(n=1,3,5\\right):\\ 1.27,\\ 0.42,\\ 0.25\\ \\mathrm{V}$$",
+    "Chastotalar: $$100,\\ 300,\\ 500\\ \\mathrm{Hz}$$",
+    "Signal quvvati $1\\ \\mathrm{V^2}$ ga, asosiy garmonikaniki $\\frac{b_1^2}{2}$ ga proporsional: $$\\frac{b_1^2}{2}=\\frac{8}{\\pi^2}\\approx0.81$$"
+   ],
+   "ru": [
+    "Коэффициенты $b_n=\\frac{2}{T}\\int_0^Tf\\sin n\\omega t\\,dt$; для чётных $n$ нули: $$b_n=\\frac{4}{n\\pi}\\ \\left(n=1,3,5\\right):\\ 1.27,\\ 0.42,\\ 0.25\\ \\mathrm{V}$$",
+    "Частоты: $$100,\\ 300,\\ 500\\ \\mathrm{Hz}$$",
+    "Мощность сигнала пропорциональна $1\\ \\mathrm{V^2}$, основной гармоники — $\\frac{b_1^2}{2}$: $$\\frac{b_1^2}{2}=\\frac{8}{\\pi^2}\\approx0.81$$"
+   ],
+   "en": [
+    "The coefficients are $b_n=\\frac{2}{T}\\int_0^Tf\\sin n\\omega t\\,dt$; zero for even $n$: $$b_n=\\frac{4}{n\\pi}\\ \\left(n=1,3,5\\right):\\ 1.27,\\ 0.42,\\ 0.25\\ \\mathrm{V}$$",
+    "The frequencies: $$100,\\ 300,\\ 500\\ \\mathrm{Hz}$$",
+    "The signal power is proportional to $1\\ \\mathrm{V^2}$ and that of the fundamental to $\\frac{b_1^2}{2}$: $$\\frac{b_1^2}{2}=\\frac{8}{\\pi^2}\\approx0.81$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'g'ri burchakli signal: $\\frac{4A}{\\pi}\\left(\\sin\\omega t+\\frac{\\sin3\\omega t}{3}+\\dots\\right)$",
+    "ru": "Прямоугольный сигнал: $\\frac{4A}{\\pi}\\left(\\sin\\omega t+\\frac{\\sin3\\omega t}{3}+\\dots\\right)$",
+    "en": "Square wave: $\\frac{4A}{\\pi}\\left(\\sin\\omega t+\\frac{\\sin3\\omega t}{3}+\\dots\\right)$"
+   },
+   null,
+   {
+    "uz": "Garmonikalar quvvatlari qo'shiladi (Parseval)",
+    "ru": "Мощности гармоник складываются (Парсеваль)",
+    "en": "The powers of the harmonics add (Parseval)"
+   }
+  ],
+  "basis": {
+   "uz": "Furye qatori",
+   "ru": "Ряд Фурье",
+   "en": "The Fourier series"
+  },
+  "answer": "100,\\ 300,\\ 500\\ \\mathrm{Hz};\\ 1.27,\\ 0.42,\\ 0.25\\ \\mathrm{V};\\ \\approx0.81",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L24, Furye)"
+ },
+ {
+  "id": "B2-L24-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Melde tajribasi: uzunligi $1.2\\ \\mathrm{m}$, massasi $6\\ \\mathrm{g}$ bo'lgan tor bir uchidan $120\\ \\mathrm{Hz}$ li vibratorga ulangan, ikkinchi uchi blok orqali osilgan yuk bilan tortilgan. Torda 4 ta qorincha (do'nglik) ko'rinadi. Yuk massasini toping. 3 ta qorincha hosil bo'lishi uchun yuk qanday bo'lishi kerak?",
+   "ru": "Опыт Мельде: струна длиной $1.2\\ \\mathrm{m}$ и массой $6\\ \\mathrm{g}$ одним концом прикреплена к вибратору $120\\ \\mathrm{Hz}$, другой конец натянут грузом, подвешенным через блок. На струне видно 4 пучности. Найдите массу груза. Каким должен быть груз, чтобы образовалось 3 пучности?",
+   "en": "Melde's experiment: a string $1.2\\ \\mathrm{m}$ long with mass $6\\ \\mathrm{g}$ is attached at one end to a $120\\ \\mathrm{Hz}$ vibrator; the other end is tensioned by a weight hung over a pulley. Four loops (antinodes) are seen on the string. Find the mass of the weight. What weight gives 3 loops?"
+  },
+  "figure": "figures/B2-L24-S18.png",
+  "solution": {
+   "uz": [
+    "4 qorincha — $L=4\\cdot\\frac{\\lambda}{2}$: $$\\lambda=0.6\\ \\mathrm{m},\\qquad v=\\lambda f=72\\ \\mathrm{m/s}$$",
+    "Taranglik, $\\mu=\\frac{0.006}{1.2}=0.005\\ \\mathrm{kg/m}$: $$F=\\mu v^2=0.005\\cdot72^2\\approx25.9\\ \\mathrm{N},\\qquad M=\\frac{F}{g}\\approx2.64\\ \\mathrm{kg}$$",
+    "Chastota o'zgarmas, $n\\propto\\frac{1}{v}\\propto\\frac{1}{\\sqrt{F}}$: $$M'=M\\left(\\frac{4}{3}\\right)^2\\approx4.70\\ \\mathrm{kg}$$"
+   ],
+   "ru": [
+    "4 пучности — $L=4\\cdot\\frac{\\lambda}{2}$: $$\\lambda=0.6\\ \\mathrm{m},\\qquad v=\\lambda f=72\\ \\mathrm{m/s}$$",
+    "Натяжение, $\\mu=\\frac{0.006}{1.2}=0.005\\ \\mathrm{kg/m}$: $$F=\\mu v^2=0.005\\cdot72^2\\approx25.9\\ \\mathrm{N},\\qquad M=\\frac{F}{g}\\approx2.64\\ \\mathrm{kg}$$",
+    "Частота неизменна, $n\\propto\\frac{1}{v}\\propto\\frac{1}{\\sqrt{F}}$: $$M'=M\\left(\\frac{4}{3}\\right)^2\\approx4.70\\ \\mathrm{kg}$$"
+   ],
+   "en": [
+    "4 loops — $L=4\\cdot\\frac{\\lambda}{2}$: $$\\lambda=0.6\\ \\mathrm{m},\\qquad v=\\lambda f=72\\ \\mathrm{m/s}$$",
+    "The tension, $\\mu=\\frac{0.006}{1.2}=0.005\\ \\mathrm{kg/m}$: $$F=\\mu v^2=0.005\\cdot72^2\\approx25.9\\ \\mathrm{N},\\qquad M=\\frac{F}{g}\\approx2.64\\ \\mathrm{kg}$$",
+    "The frequency is fixed, $n\\propto\\frac{1}{v}\\propto\\frac{1}{\\sqrt{F}}$: $$M'=M\\left(\\frac{4}{3}\\right)^2\\approx4.70\\ \\mathrm{kg}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tor garmonikalari: $f_n=\\frac{nv}{2L}$",
+    "ru": "Гармоники струны: $f_n=\\frac{nv}{2L}$",
+    "en": "String harmonics: $f_n=\\frac{nv}{2L}$"
+   },
+   {
+    "uz": "Muvozanat: $F=Mg$",
+    "ru": "Равновесие: $F=Mg$",
+    "en": "Equilibrium: $F=Mg$"
+   },
+   {
+    "uz": "Tordagi tezlik: $v=\\sqrt{\\frac{F}{\\mu}}$",
+    "ru": "Скорость в струне: $v=\\sqrt{\\frac{F}{\\mu}}$",
+    "en": "Speed on a string: $v=\\sqrt{\\frac{F}{\\mu}}$"
+   }
+  ],
+  "basis": {
+   "uz": "Melde tajribasi",
+   "ru": "Опыт Мельде",
+   "en": "Melde's experiment"
+  },
+  "answer": "M\\approx2.64\\ \\mathrm{kg};\\ M'\\approx4.70\\ \\mathrm{kg}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "Irodov, «Problems in General Physics», 4.172-masala asosida; sharti o'zgartirilgan"
+ }
+]

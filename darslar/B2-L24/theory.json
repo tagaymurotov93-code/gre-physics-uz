@@ -1,0 +1,683 @@
+[
+ {
+  "t": "h1",
+  "uz": "To'lqin tenglamasi, superpozitsiya (The wave equation, superposition)",
+  "ru": "Волновое уравнение, суперпозиция",
+  "en": "The wave equation, superposition"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz tor uchun to'lqin tenglamasini keltirib chiqarasiz va uning har qanday yechimi chapga va o'ngga yuguruvchi to'lqinlar yig'indisi ekanini tushuntirasiz; tor, sterjen, suyuqlik va gazdagi to'lqin tezligini topasiz; garmonik to'lqinning parametrlari, zarralar tezligi, energiyasi, quvvati va intensivligini, tovush balandligini detsibellarda hisoblaysiz; superpozitsiya prinsipi bilan to'lqinlarni qo'shasiz; chegarada qaytish va o'tish koeffitsiyentlarini to'lqin qarshiligi orqali topasiz; torlar va trubalardagi turg'un to'lqinlarning chastotalarini aniqlaysiz; tepish, guruh tezligi va dispersiyani, Furye qatorini tushuntirasiz; Dopler effekti va zarb to'lqini masalalarini yechasiz.",
+  "ru": "**Цель.** После урока вы будете выводить волновое уравнение для струны и объяснять, почему любое его решение есть сумма волн, бегущих влево и вправо; находить скорость волны в струне, стержне, жидкости и газе; вычислять параметры гармонической волны, скорость частиц, энергию, мощность и интенсивность, уровень громкости в децибелах; складывать волны по принципу суперпозиции; находить коэффициенты отражения и прохождения на границе через волновое сопротивление; определять частоты стоячих волн в струнах и трубах; объяснять биения, групповую скорость и дисперсию, ряд Фурье; решать задачи на эффект Доплера и ударную волну.",
+  "en": "**Goal.** After this lesson you will derive the wave equation for a string and explain why every solution is a sum of left- and right-moving waves; find the wave speed on a string, in a rod, in a liquid and in a gas; compute the parameters of a harmonic wave, the particle velocity, the energy, power and intensity, and the sound level in decibels; add waves by the superposition principle; find the reflection and transmission coefficients at a boundary from the wave impedance; determine the frequencies of standing waves on strings and in pipes; explain beats, group velocity, dispersion and the Fourier series; and solve problems on the Doppler effect and shock waves."
+ },
+ {
+  "t": "p",
+  "uz": "B1 da mexanik to'lqinlar, tovush va turg'un to'lqinlarni maktab darajasida ko'rdik, B2-L07 da garmonik tebranishni, B2-L21 da elektromagnit to'lqinlarni o'rgandik. Bu darsda barcha to'lqinlar uchun umumiy bo'lgan matematik asosni quramiz: to'lqin tenglamasi va uning chiziqliligi, ya'ni superpozitsiya prinsipi. Keyingi darslardagi interferensiya (B2-L25), difraksiya (B2-L26) va kvant mexanikasidagi to'lqin paketlari shu asosga tayanadi. GRE da to'lqinlardan har testda 3–5 savol bo'ladi: tor va trubadagi garmonikalar, tor tezligi $\\sqrt{\\frac{F}{\\mu}}$, tepish, Dopler effekti, guruh tezligi, detsibellar.",
+  "ru": "В B1 мы на школьном уровне рассмотрели механические волны, звук и стоячие волны, в B2-L07 изучили гармонические колебания, в B2-L21 — электромагнитные волны. На этом уроке мы построим общую для всех волн математическую основу: волновое уравнение и его линейность, то есть принцип суперпозиции. На эту основу опираются интерференция (B2-L25), дифракция (B2-L26) и волновые пакеты в квантовой механике. На GRE по волнам в каждом тесте бывает 3–5 вопросов: гармоники в струне и трубе, скорость в струне $\\sqrt{\\frac{F}{\\mu}}$, биения, эффект Доплера, групповая скорость, децибелы.",
+  "en": "In B1 we looked at mechanical waves, sound and standing waves at school level, in B2-L07 we studied harmonic oscillation, and in B2-L21 electromagnetic waves. In this lesson we build the mathematical foundation common to all waves: the wave equation and its linearity, that is, the superposition principle. Interference (B2-L25), diffraction (B2-L26) and wave packets in quantum mechanics all rest on this foundation. Each GRE test usually has 3–5 questions on waves: harmonics on strings and in pipes, the string speed $\\sqrt{\\frac{F}{\\mu}}$, beats, the Doppler effect, group velocity, decibels."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Yuguruvchi to'lqin",
+  "ru": "1. Бегущая волна",
+  "en": "1. The travelling wave"
+ },
+ {
+  "t": "li",
+  "uz": "**To'lqin nima.** **Mexanik to'lqin (mechanical wave)** — muhitdagi g'alayonning bir joydan boshqasiga ko'chishi; bunda muhit zarralari o'z muvozanat holati atrofida tebranadi va to'lqin bilan birga ketmaydi. To'lqin energiya va impulsni ko'chiradi, moddani esa ko'chirmaydi. Zarralar tarqalish yo'nalishiga tik tebransa — **ko'ndalang to'lqin (transverse wave)** (tor), bo'ylab tebransa — **bo'ylama to'lqin (longitudinal wave)** (gazdagi tovush). Suv yuzidagi to'lqinda zarralar aylana bo'ylab harakatlanadi — ikkalasining aralashmasi.",
+  "ru": "**Что такое волна.** **Механическая волна (mechanical wave)** — перенос возмущения в среде из одного места в другое; при этом частицы среды колеблются около положения равновесия и не уходят вместе с волной. Волна переносит энергию и импульс, но не вещество. Если частицы колеблются перпендикулярно направлению распространения — это **поперечная волна (transverse wave)** (струна), если вдоль — **продольная волна (longitudinal wave)** (звук в газе). В волне на поверхности воды частицы движутся по окружностям — это смесь обоих видов.",
+  "en": "**What a wave is.** A **mechanical wave** is the transfer of a disturbance in a medium from one place to another; the particles of the medium oscillate about their equilibrium positions and do not travel with the wave. A wave transports energy and momentum, not matter. If the particles oscillate perpendicular to the direction of propagation, it is a **transverse wave** (a string); if along it, a **longitudinal wave** (sound in a gas). In a wave on the surface of water the particles move in circles — a mixture of both kinds."
+ },
+ {
+  "t": "li",
+  "uz": "**To'lqin funksiyasi ([[F01]]).** Tor bo'ylab $v$ tezlik bilan shaklini o'zgartirmay harakatlanayotgan impulsni ko'ramiz. $t=0$ da tor shakli $y=f\\left(x\\right)$ bo'lsa, $t$ vaqtdan keyin shu shakl $vt$ ga siljiydi: $x$ nuqtadagi siljish $t=0$ da $x-vt$ nuqtadagi siljishga teng. Demak $+x$ yo'nalishda yuguruvchi har qanday to'lqin $x-vt$ kombinatsiyaning funksiyasi, $-x$ yo'nalishdagisi esa $x+vt$ ning funksiyasi. Ishorani eslash oson: $x-vt=\\mathrm{const}$ bo'lsa, $t$ ortganda $x$ ham ortadi.",
+  "ru": "**Волновая функция ([[F01]]).** Рассмотрим импульс, движущийся вдоль струны со скоростью $v$ без изменения формы. Если при $t=0$ форма струны $y=f\\left(x\\right)$, то через время $t$ та же форма сдвинется на $vt$: смещение в точке $x$ равно смещению в точке $x-vt$ при $t=0$. Значит, любая волна, бегущая в направлении $+x$, — функция комбинации $x-vt$, а в направлении $-x$ — функция $x+vt$. Знак легко запомнить: если $x-vt=\\mathrm{const}$, то при росте $t$ растёт и $x$.",
+  "en": "**The wave function ([[F01]]).** Consider a pulse moving along a string at speed $v$ without changing shape. If at $t=0$ the shape of the string is $y=f\\left(x\\right)$, then after a time $t$ the same shape has shifted by $vt$: the displacement at point $x$ equals the displacement at point $x-vt$ at $t=0$. So any wave travelling in the $+x$ direction is a function of the combination $x-vt$, and one travelling in the $-x$ direction a function of $x+vt$. The sign is easy to remember: if $x-vt=\\mathrm{const}$, then $x$ increases as $t$ increases."
+ },
+ {
+  "t": "m",
+  "m": "y\\left(x,t\\right)=f\\left(x-vt\\right)\\ \\left(+x\\right),\\qquad y\\left(x,t\\right)=g\\left(x+vt\\right)\\ \\left(-x\\right)"
+ },
+ {
+  "t": "h2",
+  "uz": "2. To'lqin tenglamasi",
+  "ru": "2. Волновое уравнение",
+  "en": "2. The wave equation"
+ },
+ {
+  "t": "li",
+  "uz": "**Tor uchun keltirib chiqarish ([[F01]]).** Taranglik kuchi $F$, chiziqli zichligi $\\mu$ bo'lgan torning $dx$ bo'lagini olamiz; og'ishlar kichik, shuning uchun $F$ o'zgarmaydi va burchak sinusi qiyalik $\\frac{\\partial y}{\\partial x}$ ga teng. Bo'lakning ikki uchidagi kuchlarning gorizontal tashkil etuvchilari qisqaradi, vertikal tashkil etuvchilari esa qiyaliklar farqiga proporsional. Nyutonning ikkinchi qonuni $\\mu\\,dx\\cdot\\frac{\\partial^2y}{\\partial t^2}$ ni beradi; $dx$ ga qisqartirsak, **to'lqin tenglamasi (wave equation)** hosil bo'ladi.",
+  "ru": "**Вывод для струны ([[F01]]).** Возьмём элемент $dx$ струны с силой натяжения $F$ и линейной плотностью $\\mu$; отклонения малы, поэтому $F$ не меняется, а синус угла равен наклону $\\frac{\\partial y}{\\partial x}$. Горизонтальные составляющие сил на концах элемента сокращаются, а вертикальные пропорциональны разности наклонов. Второй закон Ньютона даёт $\\mu\\,dx\\cdot\\frac{\\partial^2y}{\\partial t^2}$; сократив на $dx$, получим **волновое уравнение (wave equation)**.",
+  "en": "**Derivation for a string ([[F01]]).** Take an element $dx$ of a string with tension $F$ and linear density $\\mu$; the deflections are small, so $F$ does not change and the sine of the angle equals the slope $\\frac{\\partial y}{\\partial x}$. The horizontal components of the forces at the two ends of the element cancel, while the vertical components are proportional to the difference in slopes. Newton's second law gives $\\mu\\,dx\\cdot\\frac{\\partial^2y}{\\partial t^2}$; cancelling $dx$ gives the **wave equation**."
+ },
+ {
+  "t": "m",
+  "m": "F\\left(\\frac{\\partial y}{\\partial x}\\Big|_{x+dx}-\\frac{\\partial y}{\\partial x}\\Big|_x\\right)=\\mu\\,dx\\,\\frac{\\partial^2y}{\\partial t^2}\\qquad\\Rightarrow\\qquad \\frac{\\partial^2y}{\\partial t^2}=v^2\\frac{\\partial^2y}{\\partial x^2},\\qquad v=\\sqrt{\\frac{F}{\\mu}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L24-F01.png",
+   "ru": "figures/B2-L24-F01-ru.png",
+   "en": "figures/B2-L24-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Dalamber yechimi (d'Alembert's solution).** $f\\left(x-vt\\right)$ ni tenglamaga qo'ysak, zanjir qoidasi bo'yicha $\\frac{\\partial^2f}{\\partial t^2}=v^2f''$ va $\\frac{\\partial^2f}{\\partial x^2}=f''$ — tenglama bajariladi, $f$ qanday bo'lishidan qat'i nazar. Xuddi shunday $g\\left(x+vt\\right)$ ham yechim. Teskarisi ham to'g'ri: to'lqin tenglamasining umumiy yechimi — ikki yuguruvchi to'lqinning yig'indisi. $f$ va $g$ boshlang'ich shartlardan topiladi. Masalan, tor $t=0$ da $y_0\\left(x\\right)$ shaklda tinch qo'yib yuborilsa, impuls teng ikkiga bo'linadi va ikki tomonga yuguradi.",
+  "ru": "**Решение Даламбера (d'Alembert's solution).** Подставив $f\\left(x-vt\\right)$ в уравнение, по правилу цепочки получим $\\frac{\\partial^2f}{\\partial t^2}=v^2f''$ и $\\frac{\\partial^2f}{\\partial x^2}=f''$ — уравнение выполняется, какой бы ни была $f$. Точно так же решение и $g\\left(x+vt\\right)$. Верно и обратное: общее решение волнового уравнения — сумма двух бегущих волн. $f$ и $g$ находятся из начальных условий. Например, если струну в форме $y_0\\left(x\\right)$ отпустить при $t=0$ без начальной скорости, импульс разделится пополам и побежит в обе стороны.",
+  "en": "**D'Alembert's solution.** Substituting $f\\left(x-vt\\right)$ into the equation, the chain rule gives $\\frac{\\partial^2f}{\\partial t^2}=v^2f''$ and $\\frac{\\partial^2f}{\\partial x^2}=f''$ — the equation is satisfied whatever $f$ is. Likewise $g\\left(x+vt\\right)$ is a solution. The converse is also true: the general solution of the wave equation is the sum of two travelling waves. $f$ and $g$ are found from the initial conditions. For example, if the string is released at $t=0$ from rest in the shape $y_0\\left(x\\right)$, the pulse splits into two equal halves that run off in both directions."
+ },
+ {
+  "t": "m",
+  "m": "y=f\\left(x-vt\\right)+g\\left(x+vt\\right),\\qquad y\\left(x,0\\right)=y_0\\left(x\\right),\\ \\frac{\\partial y}{\\partial t}\\Big|_{t=0}=0\\ \\Rightarrow\\ y=\\frac{1}{2}\\left[y_0\\left(x-vt\\right)+y_0\\left(x+vt\\right)\\right]"
+ },
+ {
+  "t": "li",
+  "uz": "**Uch o'lchamli ko'rinish.** Fazoda (tovush, yorug'lik) tenglama Laplas operatori bilan yoziladi. Uning eng sodda yechimlari — yassi to'lqin $f\\left(\\vec n\\cdot\\vec r-vt\\right)$ va sferik to'lqin $\\frac{1}{r}f\\left(r-vt\\right)$: sferik to'lqin amplitudasi $\\frac{1}{r}$ kabi kamayadi, shuning uchun intensivlik $\\frac{1}{r^2}$ kabi kamayadi va istalgan sferadan o'tuvchi quvvat bir xil bo'ladi.",
+  "ru": "**Трёхмерная форма.** В пространстве (звук, свет) уравнение записывается с оператором Лапласа. Его простейшие решения — плоская волна $f\\left(\\vec n\\cdot\\vec r-vt\\right)$ и сферическая волна $\\frac{1}{r}f\\left(r-vt\\right)$: амплитуда сферической волны убывает как $\\frac{1}{r}$, поэтому интенсивность убывает как $\\frac{1}{r^2}$, и мощность через любую сферу одинакова.",
+  "en": "**The three-dimensional form.** In space (sound, light) the equation is written with the Laplacian. Its simplest solutions are the plane wave $f\\left(\\vec n\\cdot\\vec r-vt\\right)$ and the spherical wave $\\frac{1}{r}f\\left(r-vt\\right)$: the amplitude of a spherical wave falls off as $\\frac{1}{r}$, so the intensity falls off as $\\frac{1}{r^2}$, and the power through any sphere is the same."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\partial^2\\psi}{\\partial t^2}=v^2\\nabla^2\\psi,\\qquad \\psi=\\frac{1}{r}f\\left(r-vt\\right)"
+ },
+ {
+  "t": "h2",
+  "uz": "3. To'lqin tezligi turli muhitlarda",
+  "ru": "3. Скорость волн в разных средах",
+  "en": "3. Wave speed in different media"
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy qoida.** Barcha mexanik to'lqinlarda tezlik kvadrati — «elastiklik» ning «inertlik» ka nisbati. Torda elastiklik — taranglik $F$, inertlik — $\\mu$. Ingichka sterjendagi bo'ylama to'lqinda — **Yung moduli (Young's modulus)** $Y$ va zichlik $\\rho$. Suyuqlik yoki gazdagi tovushda — **hajmiy siqilish moduli (bulk modulus)** $K=-V\\frac{dp}{dV}$ va $\\rho$. O'lchamlar tahlili ham shu ko'rinishni beradi: $\\sqrt{\\frac{\\mathrm{Pa}}{\\mathrm{kg/m^3}}}=\\mathrm{m/s}$.",
+  "ru": "**Общее правило.** Во всех механических волнах квадрат скорости — отношение «упругости» к «инертности». В струне упругость — натяжение $F$, инертность — $\\mu$. В продольной волне в тонком стержне — **модуль Юнга (Young's modulus)** $Y$ и плотность $\\rho$. В звуке в жидкости или газе — **модуль объёмного сжатия (bulk modulus)** $K=-V\\frac{dp}{dV}$ и $\\rho$. Анализ размерностей даёт тот же вид: $\\sqrt{\\frac{\\mathrm{Pa}}{\\mathrm{kg/m^3}}}=\\mathrm{m/s}$.",
+  "en": "**The general rule.** In all mechanical waves the square of the speed is the ratio of \"elasticity\" to \"inertia\". On a string the elasticity is the tension $F$ and the inertia is $\\mu$. For a longitudinal wave in a thin rod they are **Young's modulus** $Y$ and the density $\\rho$. For sound in a liquid or a gas they are the **bulk modulus** $K=-V\\frac{dp}{dV}$ and $\\rho$. Dimensional analysis gives the same form: $\\sqrt{\\frac{\\mathrm{Pa}}{\\mathrm{kg/m^3}}}=\\mathrm{m/s}$."
+ },
+ {
+  "t": "m",
+  "m": "v=\\sqrt{\\frac{F}{\\mu}},\\qquad v=\\sqrt{\\frac{Y}{\\rho}},\\qquad v=\\sqrt{\\frac{K}{\\rho}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Gazdagi tovush.** Tovush to'lqinida siqilish va kengayish shunchalik tez bo'ladiki, issiqlik almashishga ulgurmaydi — jarayon adiabatik: $pV^\\gamma=\\mathrm{const}$ dan $K=\\gamma p$. Ideal gaz uchun $\\frac{p}{\\rho}=\\frac{RT}{M}$, demak tezlik faqat temperaturaga bog'liq (bosimga emas) va $\\sqrt{T}$ ga proporsional. Nyuton izotermik jarayonni ($K=p$) olgan va havoda taxminan $15\\%$ kichik qiymat topgan edi — bu farqni Laplas tuzatgan. Havoda $0^\\circ\\mathrm{C}$ da $v\\approx331\\ \\mathrm{m/s}$, xona temperaturasida taxminan $343\\ \\mathrm{m/s}$.",
+  "ru": "**Звук в газе.** В звуковой волне сжатия и разрежения происходят так быстро, что теплообмен не успевает произойти — процесс адиабатический: из $pV^\\gamma=\\mathrm{const}$ получаем $K=\\gamma p$. Для идеального газа $\\frac{p}{\\rho}=\\frac{RT}{M}$, значит, скорость зависит только от температуры (не от давления) и пропорциональна $\\sqrt{T}$. Ньютон взял изотермический процесс ($K=p$) и получил для воздуха значение примерно на $15\\%$ меньше — эту разницу исправил Лаплас. В воздухе при $0^\\circ\\mathrm{C}$ $v\\approx331\\ \\mathrm{m/s}$, при комнатной температуре около $343\\ \\mathrm{m/s}$.",
+  "en": "**Sound in a gas.** In a sound wave the compressions and rarefactions happen so fast that heat exchange cannot keep up — the process is adiabatic: from $pV^\\gamma=\\mathrm{const}$ we get $K=\\gamma p$. For an ideal gas $\\frac{p}{\\rho}=\\frac{RT}{M}$, so the speed depends only on temperature (not on pressure) and is proportional to $\\sqrt{T}$. Newton assumed an isothermal process ($K=p$) and obtained a value for air about $15\\%$ too small — Laplace corrected this discrepancy. In air at $0^\\circ\\mathrm{C}$, $v\\approx331\\ \\mathrm{m/s}$; at room temperature about $343\\ \\mathrm{m/s}$."
+ },
+ {
+  "t": "m",
+  "m": "v=\\sqrt{\\frac{\\gamma p}{\\rho}}=\\sqrt{\\frac{\\gamma RT}{M}}\\propto\\sqrt{T}"
+ },
+ {
+  "t": "li",
+  "uz": "**Taqqoslash uchun.** Odatda «tovush gazda suyuqlikdagidan, suyuqlikda qattiq jismdagidan sekin» deyiladi, lekin formula bilan fikrlash yaxshiroq: suv havodan 800 marta zich, lekin uning $K$ si havonikidan qariyb 15 000 marta katta, shuning uchun suvda tovush taxminan $1500\\ \\mathrm{m/s}$; po'latda $Y$ juda katta va tezlik $5000\\ \\mathrm{m/s}$ atrofida. Geliyda (kichik $M$) tovush havodagidan qariyb uch baravar tez — geliy yutgan odam ovozi «ingichka» eshitiladi, chunki og'iz bo'shlig'ining rezonans chastotalari ortadi.",
+  "ru": "**Для сравнения.** Обычно говорят «в газе звук медленнее, чем в жидкости, а в жидкости — медленнее, чем в твёрдом теле», но лучше рассуждать по формуле: вода в 800 раз плотнее воздуха, но её $K$ примерно в 15 000 раз больше, поэтому в воде звук идёт со скоростью около $1500\\ \\mathrm{m/s}$; в стали $Y$ очень велик, и скорость около $5000\\ \\mathrm{m/s}$. В гелии (малое $M$) звук почти втрое быстрее, чем в воздухе, — голос человека, вдохнувшего гелий, звучит «тонко», потому что резонансные частоты полости рта растут.",
+  "en": "**For comparison.** People often say \"sound is slower in a gas than in a liquid, and slower in a liquid than in a solid\", but it is better to reason with the formula: water is 800 times denser than air, but its $K$ is about 15 000 times larger, so sound in water travels at about $1500\\ \\mathrm{m/s}$; in steel $Y$ is very large and the speed is around $5000\\ \\mathrm{m/s}$. In helium (small $M$) sound is nearly three times faster than in air — the voice of someone who has inhaled helium sounds \"thin\" because the resonant frequencies of the mouth cavity rise."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Garmonik to'lqin",
+  "ru": "4. Гармоническая волна",
+  "en": "4. The harmonic wave"
+ },
+ {
+  "t": "li",
+  "uz": "**Parametrlar ([[F02]]).** Eng muhim yuguruvchi to'lqin — sinusoidal. **Amplituda (amplitude)** $A$, **to'lqin soni (wave number)** $k=\\frac{2\\pi}{\\lambda}$ — $2\\pi$ uzunlikdagi to'lqinlar soni, siklik chastota $\\omega=\\frac{2\\pi}{T}=2\\pi f$; qavs ichidagi ifoda — faza. Fiksirlangan $t$ da grafik fazoviy davri $\\lambda$ bo'lgan sinusoida, fiksirlangan $x$ da — davri $T$ bo'lgan tebranish. Bir davrda to'lqin bir to'lqin uzunligiga siljiydi.",
+  "ru": "**Параметры ([[F02]]).** Важнейшая бегущая волна — синусоидальная. **Амплитуда (amplitude)** $A$, **волновое число (wave number)** $k=\\frac{2\\pi}{\\lambda}$ — число волн на длине $2\\pi$, циклическая частота $\\omega=\\frac{2\\pi}{T}=2\\pi f$; выражение в скобках — фаза. При фиксированном $t$ график — синусоида с пространственным периодом $\\lambda$, при фиксированном $x$ — колебание с периодом $T$. За один период волна смещается на одну длину волны.",
+  "en": "**Parameters ([[F02]]).** The most important travelling wave is sinusoidal. The **amplitude** $A$, the **wave number** $k=\\frac{2\\pi}{\\lambda}$ — the number of waves in a length $2\\pi$, and the angular frequency $\\omega=\\frac{2\\pi}{T}=2\\pi f$; the expression in brackets is the phase. At fixed $t$ the graph is a sinusoid with spatial period $\\lambda$; at fixed $x$ it is an oscillation with period $T$. In one period the wave moves forward by one wavelength."
+ },
+ {
+  "t": "m",
+  "m": "y=A\\sin\\left(kx-\\omega t+\\varphi_0\\right),\\qquad k=\\frac{2\\pi}{\\lambda},\\qquad \\omega=2\\pi f,\\qquad v=\\frac{\\omega}{k}=\\lambda f"
+ },
+ {
+  "t": "li",
+  "uz": "**Zarralar tezligi.** To'lqin tezligi $v$ va zarraning ko'ndalang tezligi $\\frac{\\partial y}{\\partial t}$ — butunlay boshqa narsalar. Zarra tezligining eng katta qiymati $\\omega A$, u muvozanat holatidan o'tishda; tezlanishining eng kattasi $\\omega^2A$, chekka nuqtalarda. Yuguruvchi to'lqinda zarra tezligi qiyalikka proporsional: $+x$ yo'nalishdagi to'lqinda qiyalik musbat bo'lgan joyda zarra pastga harakatlanadi. Bu GRE dagi «qaysi nuqta yuqoriga harakatlanmoqda» savollarining kaliti.",
+  "ru": "**Скорость частиц.** Скорость волны $v$ и поперечная скорость частицы $\\frac{\\partial y}{\\partial t}$ — совершенно разные вещи. Наибольшая скорость частицы $\\omega A$ — при прохождении положения равновесия; наибольшее ускорение $\\omega^2A$ — в крайних точках. В бегущей волне скорость частицы пропорциональна наклону: в волне, идущей в $+x$, там, где наклон положителен, частица движется вниз. Это ключ к вопросам GRE «какая точка движется вверх».",
+  "en": "**Particle velocity.** The wave speed $v$ and the transverse velocity of a particle $\\frac{\\partial y}{\\partial t}$ are completely different things. The greatest particle speed is $\\omega A$, when passing through equilibrium; the greatest acceleration is $\\omega^2A$, at the extreme points. In a travelling wave the particle velocity is proportional to the slope: in a wave moving in $+x$, where the slope is positive the particle moves down. This is the key to GRE questions of the type \"which point is moving upwards\"."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\partial y}{\\partial t}=-v\\frac{\\partial y}{\\partial x},\\qquad \\left(\\frac{\\partial y}{\\partial t}\\right)_{max}=\\omega A,\\qquad \\left(\\frac{\\partial^2y}{\\partial t^2}\\right)_{max}=\\omega^2A"
+ },
+ {
+  "t": "li",
+  "uz": "**Tovush to'lqinida siljish va bosim.** Gazda zarralar siljishi $s=s_0\\cos\\left(kx-\\omega t\\right)$ bo'lsin. Bosimning muvozanatdan o'zgarishi hajm o'zgarishiga proporsional: $p=-K\\frac{\\partial s}{\\partial x}$. Shuning uchun bosim to'lqini siljish to'lqinidan chorak to'lqinga siljigan: siljish nol bo'lgan joyda bosim eng katta yoki eng kichik va aksincha. Bosim amplitudasi siljish amplitudasi orqali ifodalanadi. Quloq aynan bosim o'zgarishini sezadi.",
+  "ru": "**Смещение и давление в звуковой волне.** Пусть смещение частиц в газе $s=s_0\\cos\\left(kx-\\omega t\\right)$. Изменение давления от равновесного пропорционально изменению объёма: $p=-K\\frac{\\partial s}{\\partial x}$. Поэтому волна давления сдвинута относительно волны смещения на четверть волны: там, где смещение равно нулю, давление наибольшее или наименьшее, и наоборот. Амплитуда давления выражается через амплитуду смещения. Ухо воспринимает именно изменение давления.",
+  "en": "**Displacement and pressure in a sound wave.** Let the displacement of the particles in a gas be $s=s_0\\cos\\left(kx-\\omega t\\right)$. The deviation of the pressure from equilibrium is proportional to the change in volume: $p=-K\\frac{\\partial s}{\\partial x}$. So the pressure wave is shifted by a quarter wavelength relative to the displacement wave: where the displacement is zero the pressure is greatest or least, and vice versa. The pressure amplitude is expressed through the displacement amplitude. The ear senses precisely the pressure change."
+ },
+ {
+  "t": "m",
+  "m": "p=-K\\frac{\\partial s}{\\partial x}=-Kks_0\\sin\\left(kx-\\omega t\\right),\\qquad p_0=Kks_0=\\rho v\\omega s_0"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L24-F02.png",
+   "ru": "figures/B2-L24-F02-ru.png",
+   "en": "figures/B2-L24-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Kompleks yozuv.** Hisoblashni soddalashtirish uchun to'lqin $y=\\mathrm{Re}\\left[Ae^{i\\left(kx-\\omega t\\right)}\\right]$ ko'rinishida yoziladi; kompleks amplituda $A$ boshlang'ich fazani ham o'z ichiga oladi. Bu B2-L18 dagi o'zgaruvchan tok usulining o'zi. Kvant mexanikasida ham erkin zarraning to'lqin funksiyasi $e^{i\\left(kx-\\omega t\\right)}$ ko'rinishida.",
+  "ru": "**Комплексная запись.** Для упрощения вычислений волну записывают в виде $y=\\mathrm{Re}\\left[Ae^{i\\left(kx-\\omega t\\right)}\\right]$; комплексная амплитуда $A$ включает и начальную фазу. Это тот же приём, что и в методе переменного тока из B2-L18. В квантовой механике волновая функция свободной частицы тоже имеет вид $e^{i\\left(kx-\\omega t\\right)}$.",
+  "en": "**Complex notation.** To simplify calculations a wave is written as $y=\\mathrm{Re}\\left[Ae^{i\\left(kx-\\omega t\\right)}\\right]$; the complex amplitude $A$ also contains the initial phase. This is the same trick as the AC method of B2-L18. In quantum mechanics the wave function of a free particle also has the form $e^{i\\left(kx-\\omega t\\right)}$."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Energiya, quvvat va intensivlik",
+  "ru": "5. Энергия, мощность и интенсивность",
+  "en": "5. Energy, power and intensity"
+ },
+ {
+  "t": "li",
+  "uz": "**Tordagi energiya.** Torning har bir bo'lagi harakatlanadi (kinetik energiya) va cho'ziladi (potensial energiya). Uzunlik birligidagi kinetik energiya $\\frac{1}{2}\\mu\\left(\\frac{\\partial y}{\\partial t}\\right)^2$, potensial energiya esa cho'zilishdan $\\frac{1}{2}F\\left(\\frac{\\partial y}{\\partial x}\\right)^2$. Yuguruvchi to'lqinda $\\frac{\\partial y}{\\partial t}=-v\\frac{\\partial y}{\\partial x}$ va $F=\\mu v^2$, shuning uchun ikkala qism har nuqtada teng — garmonik ossilyatordan farqli ravishda, ular bir vaqtda eng katta bo'ladi (muvozanat holatidan o'tayotgan zarra eng tez harakatlanadi va tor shu joyda eng tik).",
+  "ru": "**Энергия в струне.** Каждый элемент струны движется (кинетическая энергия) и растягивается (потенциальная энергия). Кинетическая энергия на единицу длины $\\frac{1}{2}\\mu\\left(\\frac{\\partial y}{\\partial t}\\right)^2$, а потенциальная энергия растяжения $\\frac{1}{2}F\\left(\\frac{\\partial y}{\\partial x}\\right)^2$. В бегущей волне $\\frac{\\partial y}{\\partial t}=-v\\frac{\\partial y}{\\partial x}$ и $F=\\mu v^2$, поэтому обе части в каждой точке равны — в отличие от гармонического осциллятора, они одновременно максимальны (частица, проходящая положение равновесия, движется быстрее всего, и струна там наиболее крута).",
+  "en": "**Energy on a string.** Every element of the string moves (kinetic energy) and is stretched (potential energy). The kinetic energy per unit length is $\\frac{1}{2}\\mu\\left(\\frac{\\partial y}{\\partial t}\\right)^2$, and the potential energy of stretching is $\\frac{1}{2}F\\left(\\frac{\\partial y}{\\partial x}\\right)^2$. In a travelling wave $\\frac{\\partial y}{\\partial t}=-v\\frac{\\partial y}{\\partial x}$ and $F=\\mu v^2$, so the two parts are equal at every point — unlike the harmonic oscillator, they are maximal at the same time (a particle passing through equilibrium moves fastest, and the string is steepest there)."
+ },
+ {
+  "t": "m",
+  "m": "w=\\frac{1}{2}\\mu\\left(\\frac{\\partial y}{\\partial t}\\right)^2+\\frac{1}{2}F\\left(\\frac{\\partial y}{\\partial x}\\right)^2,\\qquad \\left\\langle w\\right\\rangle=\\frac{1}{2}\\mu\\omega^2A^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Quvvat.** Energiya to'lqin bilan $v$ tezlikda ko'chadi, demak o'rtacha quvvat — o'rtacha energiya zichligining tezlikka ko'paytmasi. U amplituda kvadratiga va chastota kvadratiga proporsional. $Z=\\mu v=\\sqrt{F\\mu}$ kattalik — torning **to'lqin qarshiligi (wave impedance)**: u qaytishni ham boshqaradi (7-bo'lim).",
+  "ru": "**Мощность.** Энергия переносится волной со скоростью $v$, значит, средняя мощность — произведение средней плотности энергии на скорость. Она пропорциональна квадрату амплитуды и квадрату частоты. Величина $Z=\\mu v=\\sqrt{F\\mu}$ — **волновое сопротивление (wave impedance)** струны: оно же управляет отражением (раздел 7).",
+  "en": "**Power.** Energy is carried by the wave at speed $v$, so the average power is the average energy density times the speed. It is proportional to the square of the amplitude and the square of the frequency. The quantity $Z=\\mu v=\\sqrt{F\\mu}$ is the **wave impedance** of the string: it also controls reflection (section 7)."
+ },
+ {
+  "t": "m",
+  "m": "\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\mu v\\omega^2A^2=\\frac{1}{2}Z\\omega^2A^2,\\qquad Z=\\mu v=\\sqrt{F\\mu}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tovush intensivligi.** Gazdagi tovushda ham xuddi shunday: **tovush intensivligi (sound intensity)** — yuza birligidan o'tuvchi o'rtacha quvvat. Uni siljish amplitudasi yoki bosim amplitudasi orqali yozish mumkin; ikkinchisi amalda qulayroq, chunki mikrofon bosimni o'lchaydi. Nuqtaviy manbadan intensivlik $\\frac{1}{r^2}$ kabi kamayadi.",
+  "ru": "**Интенсивность звука.** Для звука в газе всё так же: **интенсивность звука (sound intensity)** — средняя мощность через единицу площади. Её можно записать через амплитуду смещения или амплитуду давления; второе на практике удобнее, потому что микрофон измеряет давление. От точечного источника интенсивность убывает как $\\frac{1}{r^2}$.",
+  "en": "**Sound intensity.** For sound in a gas everything is the same: the **sound intensity** is the average power through unit area. It can be written through the displacement amplitude or the pressure amplitude; the latter is more convenient in practice because a microphone measures pressure. From a point source the intensity falls off as $\\frac{1}{r^2}$."
+ },
+ {
+  "t": "m",
+  "m": "I=\\frac{1}{2}\\rho v\\omega^2s_0^2=\\frac{p_0^2}{2\\rho v},\\qquad I=\\frac{\\mathcal P}{4\\pi r^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Detsibellar (decibel).** Quloq $10^{-12}\\ \\mathrm{W/m^2}$ dan (eshitish bo'sag'asi) taxminan $1\\ \\mathrm{W/m^2}$ gacha (og'riq bo'sag'asi) intensivliklarni sezadi — 12 tartibli diapazon. Sezgi taxminan logarifmik, shuning uchun **tovush darajasi (sound level)** $\\beta$ logarifmik shkalada o'lchanadi. Intensivliklar nisbati bir xil bo'lsa, darajalar farqi ham bir xil bo'ladi — bu masalalarda hisoblashni ancha soddalashtiradi. Bir nechta nokogerent manba bo'lsa, detsibellar emas, intensivliklar qo'shiladi.",
+  "ru": "**Децибелы (decibel).** Ухо воспринимает интенсивности от $10^{-12}\\ \\mathrm{W/m^2}$ (порог слышимости) примерно до $1\\ \\mathrm{W/m^2}$ (болевой порог) — диапазон в 12 порядков. Ощущение примерно логарифмическое, поэтому **уровень звука (sound level)** $\\beta$ измеряется в логарифмической шкале. Одинаковому отношению интенсивностей соответствует одинаковая разность уровней — это сильно упрощает вычисления в задачах. Если есть несколько некогерентных источников, складываются интенсивности, а не децибелы.",
+  "en": "**Decibels.** The ear senses intensities from $10^{-12}\\ \\mathrm{W/m^2}$ (the threshold of hearing) to about $1\\ \\mathrm{W/m^2}$ (the threshold of pain) — a range of 12 orders of magnitude. Perception is roughly logarithmic, so the **sound level** $\\beta$ is measured on a logarithmic scale. Equal ratios of intensity correspond to equal differences in level — which greatly simplifies calculations in problems. If there are several incoherent sources, intensities add, not decibels."
+ },
+ {
+  "t": "m",
+  "m": "\\beta=10\\log_{10}\\frac{I}{I_0}\\ \\mathrm{dB},\\qquad I_0=10^{-12}\\ \\mathrm{W/m^2},\\qquad \\beta_2-\\beta_1=10\\log_{10}\\frac{I_2}{I_1}"
+ },
+ {
+  "t": "h2",
+  "uz": "6. Superpozitsiya prinsipi",
+  "ru": "6. Принцип суперпозиции",
+  "en": "6. The superposition principle"
+ },
+ {
+  "t": "li",
+  "uz": "**Chiziqlilik.** To'lqin tenglamasi chiziqli: unda $y$ va uning hosilalari faqat birinchi darajada qatnashadi. Shuning uchun $y_1$ va $y_2$ yechim bo'lsa, $y_1+y_2$ ham yechim — bu **superpozitsiya prinsipi (superposition principle)**. Fizik ma'nosi: to'lqinlar bir-biridan o'tib ketadi va o'zaro ta'sirlashmaydi; ustma-ust tushgan joyda siljishlar qo'shiladi, keyin har bir to'lqin o'z shakli bilan yo'lini davom ettiradi ([[F03]]).",
+  "ru": "**Линейность.** Волновое уравнение линейно: $y$ и его производные входят в него только в первой степени. Поэтому если $y_1$ и $y_2$ — решения, то и $y_1+y_2$ — решение; это **принцип суперпозиции (superposition principle)**. Физический смысл: волны проходят друг сквозь друга и не взаимодействуют; там, где они перекрываются, смещения складываются, а затем каждая волна продолжает путь со своей формой ([[F03]]).",
+  "en": "**Linearity.** The wave equation is linear: $y$ and its derivatives appear only to the first power. So if $y_1$ and $y_2$ are solutions, then $y_1+y_2$ is also a solution — this is the **superposition principle**. Physically: waves pass through one another without interacting; where they overlap the displacements add, and afterwards each wave continues on its way with its own shape ([[F03]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Qarama-qarshi impulslar.** Bir xil shaklli, lekin qarama-qarshi ishorali ikki impuls uchrashganda bir lahzada tor butunlay tekis bo'ladi. Energiya yo'qolmaydi: shu paytda tor bo'laklari eng tez harakatlanmoqda va barcha energiya kinetik. Bir ishorali impulslar uchrashganda esa siljish ikki baravar, tezliklar esa qisqa vaqt nolga teng — energiya potensial.",
+  "ru": "**Противоположные импульсы.** Когда встречаются два импульса одинаковой формы, но противоположного знака, на мгновение струна становится совсем прямой. Энергия не исчезает: в этот момент элементы струны движутся быстрее всего, и вся энергия кинетическая. Когда встречаются импульсы одного знака, смещение удваивается, а скорости на короткое время равны нулю — энергия потенциальная.",
+  "en": "**Opposite pulses.** When two pulses of the same shape but opposite sign meet, for an instant the string becomes completely straight. The energy does not vanish: at that moment the elements of the string are moving fastest, and all the energy is kinetic. When pulses of the same sign meet, the displacement doubles and the velocities are briefly zero — the energy is potential."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L24-F03.png",
+   "ru": "figures/B2-L24-F03-ru.png",
+   "en": "figures/B2-L24-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Bir xil chastotali to'lqinlar.** Bir yo'nalishda tarqalayotgan, chastotasi bir xil, fazalari $\\Delta\\varphi$ ga farq qiluvchi ikki to'lqinning yig'indisi yana shu chastotali to'lqin. Uning amplitudasi vektor diagrammasi (fazor) bilan topiladi: amplitudalar uzunligi $A_1$ va $A_2$, orasidagi burchagi $\\Delta\\varphi$ bo'lgan vektorlar sifatida qo'shiladi. $\\Delta\\varphi=0$ da amplitudalar qo'shiladi, $\\Delta\\varphi=\\pi$ da ayiriladi. Bu interferensiyaning asosi (B2-L25).",
+  "ru": "**Волны одинаковой частоты.** Сумма двух волн одинаковой частоты, распространяющихся в одном направлении и отличающихся по фазе на $\\Delta\\varphi$, — снова волна той же частоты. Её амплитуда находится векторной диаграммой (фазором): амплитуды складываются как векторы длиной $A_1$ и $A_2$ с углом $\\Delta\\varphi$ между ними. При $\\Delta\\varphi=0$ амплитуды складываются, при $\\Delta\\varphi=\\pi$ вычитаются. Это основа интерференции (B2-L25).",
+  "en": "**Waves of the same frequency.** The sum of two waves of the same frequency travelling in the same direction and differing in phase by $\\Delta\\varphi$ is again a wave of that frequency. Its amplitude is found with a vector (phasor) diagram: the amplitudes add as vectors of lengths $A_1$ and $A_2$ with angle $\\Delta\\varphi$ between them. For $\\Delta\\varphi=0$ the amplitudes add, for $\\Delta\\varphi=\\pi$ they subtract. This is the basis of interference (B2-L25)."
+ },
+ {
+  "t": "m",
+  "m": "A^2=A_1^2+A_2^2+2A_1A_2\\cos\\Delta\\varphi,\\qquad \\tan\\varphi=\\frac{A_2\\sin\\Delta\\varphi}{A_1+A_2\\cos\\Delta\\varphi}"
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaralari.** Superpozitsiya faqat chiziqli muhitda — kichik amplitudalarda (Guk qonuni sohasida) aniq bajariladi. Juda kuchli tovushda (portlash) tezlik amplitudaga bog'liq bo'lib qoladi, to'lqin shakli buziladi va zarb to'lqini hosil bo'ladi; okeandagi katta to'lqinlar ag'dariladi. GRE masalalarida muhit har doim chiziqli deb hisoblanadi.",
+  "ru": "**Границы применимости.** Суперпозиция точно выполняется только в линейной среде — при малых амплитудах (в области закона Гука). В очень сильном звуке (взрыв) скорость начинает зависеть от амплитуды, форма волны искажается и образуется ударная волна; большие океанские волны опрокидываются. В задачах GRE среда всегда считается линейной.",
+  "en": "**Limits.** Superposition holds exactly only in a linear medium — at small amplitudes (in the Hooke's-law regime). In very loud sound (an explosion) the speed comes to depend on the amplitude, the waveform distorts and a shock wave forms; large ocean waves break. In GRE problems the medium is always taken to be linear."
+ },
+ {
+  "t": "h2",
+  "uz": "7. Chegarada qaytish va o'tish",
+  "ru": "7. Отражение и прохождение на границе",
+  "en": "7. Reflection and transmission at a boundary"
+ },
+ {
+  "t": "li",
+  "uz": "**Mahkamlangan va erkin uch ([[F04]]).** Mahkamlangan uchda $y=0$ har doim bajarilishi kerak. Bunga devor ortidan qarama-qarshi ishorali «tasvir» impuls kelayotgandek qilib erishiladi — qaytgan impuls **ag'darilgan**, faza $\\pi$ ga sakraydi. Erkin uchda (ishqalanishsiz sterjen bo'ylab sirpanuvchi halqa) vertikal kuch yo'q, demak qiyalik nolga teng — tasvir bir xil ishorali va qaytgan impuls **ag'darilmagan**. Erkin uchda bir lahzada siljish ikki baravar bo'ladi.",
+  "ru": "**Закреплённый и свободный конец ([[F04]]).** На закреплённом конце всё время должно выполняться $y=0$. Этого можно добиться, как будто из-за стены приходит «изображение» — импульс противоположного знака: отражённый импульс **перевёрнут**, фаза скачком меняется на $\\pi$. На свободном конце (кольцо, скользящее по стержню без трения) нет вертикальной силы, значит, наклон равен нулю — изображение того же знака, и отражённый импульс **не перевёрнут**. На свободном конце смещение на мгновение удваивается.",
+  "en": "**Fixed and free ends ([[F04]]).** At a fixed end $y=0$ must hold at all times. This is achieved as if an \"image\" pulse of opposite sign were arriving from behind the wall — the reflected pulse is **inverted**, the phase jumps by $\\pi$. At a free end (a ring sliding on a frictionless rod) there is no vertical force, so the slope is zero — the image has the same sign and the reflected pulse is **not inverted**. At a free end the displacement momentarily doubles."
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki tor ulangan joy.** Tarangligi bir xil, chiziqli zichliklari har xil ikki tor ulangan bo'lsin. Ulanish nuqtasida ikki shart bajariladi: tor uzilmaydi ($y$ uzluksiz) va massasiz tugunga ta'sir qiluvchi kuchlar muvozanatda (qiyalik uzluksiz). Tushayotgan to'lqin amplitudasini $1$ deb, qaytgan $r$ va o'tgan $\\tau$ amplitudalarni shu shartlardan topamiz — ular faqat to'lqin qarshiliklariga bog'liq.",
+  "ru": "**Место соединения двух струн.** Пусть соединены две струны с одинаковым натяжением и разными линейными плотностями. В точке соединения выполняются два условия: струна не рвётся ($y$ непрерывно) и силы, действующие на безмассовый узел, уравновешены (наклон непрерывен). Приняв амплитуду падающей волны за $1$, из этих условий находим амплитуды отражённой $r$ и прошедшей $\\tau$ волн — они зависят только от волновых сопротивлений.",
+  "en": "**The junction of two strings.** Let two strings with the same tension but different linear densities be joined. At the junction two conditions hold: the string does not break ($y$ is continuous) and the forces on the massless knot balance (the slope is continuous). Taking the incident amplitude as $1$, these conditions give the reflected amplitude $r$ and the transmitted amplitude $\\tau$ — they depend only on the wave impedances."
+ },
+ {
+  "t": "m",
+  "m": "1+r=\\tau,\\qquad Z_1\\left(1-r\\right)=Z_2\\tau\\qquad\\Rightarrow\\qquad r=\\frac{Z_1-Z_2}{Z_1+Z_2},\\qquad \\tau=\\frac{2Z_1}{Z_1+Z_2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Talqin.** To'lqin og'irroq torga ($Z_2>Z_1$) o'tsa, $r<0$ — qaytgan to'lqin ag'darilgan; $Z_2\\to\\infty$ chegarasi — mahkamlangan uch. Yengilroq torga o'tsa, $r>0$, chegarasi — erkin uch. O'tgan to'lqin hech qachon ag'darilmaydi. Energiya saqlanadi: qaytgan ulush $r^2$, o'tgan ulush esa $\\frac{Z_2}{Z_1}\\tau^2$ (quvvat $Z$ ga ham proporsional!), ularning yig'indisi $1$. $Z_1=Z_2$ bo'lsa, qaytish yo'q — **impedanslarni moslash (impedance matching)**: ultratovush tekshiruvida terining ustiga gel surtiladi, antennalar kabelga moslanadi.",
+  "ru": "**Интерпретация.** Если волна переходит на более тяжёлую струну ($Z_2>Z_1$), то $r<0$ — отражённая волна перевёрнута; предел $Z_2\\to\\infty$ — закреплённый конец. При переходе на более лёгкую струну $r>0$, предел — свободный конец. Прошедшая волна никогда не переворачивается. Энергия сохраняется: отражённая доля $r^2$, прошедшая доля $\\frac{Z_2}{Z_1}\\tau^2$ (мощность пропорциональна и $Z$!), их сумма равна $1$. При $Z_1=Z_2$ отражения нет — **согласование импедансов (impedance matching)**: при УЗИ на кожу наносят гель, антенны согласуют с кабелем.",
+  "en": "**Interpretation.** If the wave passes onto a heavier string ($Z_2>Z_1$), then $r<0$ — the reflected wave is inverted; the limit $Z_2\\to\\infty$ is a fixed end. Onto a lighter string, $r>0$, and the limit is a free end. The transmitted wave is never inverted. Energy is conserved: the reflected fraction is $r^2$ and the transmitted fraction is $\\frac{Z_2}{Z_1}\\tau^2$ (the power is also proportional to $Z$!); their sum is $1$. If $Z_1=Z_2$ there is no reflection — **impedance matching**: gel is spread on the skin for an ultrasound scan, antennas are matched to their cables."
+ },
+ {
+  "t": "m",
+  "m": "R=r^2,\\qquad \\frac{Z_2}{Z_1}\\tau^2=1-R"
+ },
+ {
+  "t": "li",
+  "uz": "**Chastota saqlanadi.** Chegaradan o'tganda chastota o'zgarmaydi — uni manba belgilaydi va ulanish nuqtasi ikkala torda bir xil tebranadi. Tezlik muhitga bog'liq, shuning uchun to'lqin uzunligi $\\lambda=\\frac{v}{f}$ o'zgaradi. Bu qoida yorug'likning sinishida ham ishlaydi.",
+  "ru": "**Частота сохраняется.** При переходе через границу частота не меняется — её задаёт источник, и точка соединения колеблется одинаково в обеих струнах. Скорость зависит от среды, поэтому длина волны $\\lambda=\\frac{v}{f}$ меняется. Это правило работает и при преломлении света.",
+  "en": "**Frequency is conserved.** On crossing a boundary the frequency does not change — it is set by the source, and the junction oscillates in the same way for both strings. The speed depends on the medium, so the wavelength $\\lambda=\\frac{v}{f}$ changes. This rule also applies to the refraction of light."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L24-F04.png",
+   "ru": "figures/B2-L24-F04-ru.png",
+   "en": "figures/B2-L24-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Tordagi turg'un to'lqinlar",
+  "ru": "8. Стоячие волны в струне",
+  "en": "8. Standing waves on a string"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki qarama-qarshi to'lqin.** Amplitudasi va chastotasi bir xil, qarama-qarshi yo'nalgan ikki to'lqinni qo'shsak, **turg'un to'lqin (standing wave)** hosil bo'ladi. Endi barcha nuqtalar bir fazada (yoki qarama-qarshi fazada) tebranadi, faqat amplitudasi $2A\\left|\\sin kx\\right|$ joyga bog'liq. Hech qachon tebranmaydigan nuqtalar — **tugunlar (nodes)**, eng katta amplitudali nuqtalar — **do'ngliklar (antinodes)**. Qo'shni tugunlar orasidagi masofa $\\frac{\\lambda}{2}$. Turg'un to'lqin o'rtacha energiya ko'chirmaydi: energiya tugunlar orasida kinetik va potensial shakllar o'rtasida almashinib turadi.",
+  "ru": "**Две встречные волны.** Сложив две волны одинаковой амплитуды и частоты, бегущие навстречу, получим **стоячую волну (standing wave)**. Теперь все точки колеблются в одной фазе (или в противофазе), только амплитуда $2A\\left|\\sin kx\\right|$ зависит от места. Точки, которые никогда не колеблются, — **узлы (nodes)**, точки с наибольшей амплитудой — **пучности (antinodes)**. Расстояние между соседними узлами $\\frac{\\lambda}{2}$. Стоячая волна в среднем не переносит энергию: энергия между узлами переходит из кинетической формы в потенциальную и обратно.",
+  "en": "**Two counter-propagating waves.** Adding two waves of the same amplitude and frequency travelling in opposite directions gives a **standing wave**. Now all points oscillate in phase (or in antiphase); only the amplitude $2A\\left|\\sin kx\\right|$ depends on position. Points that never oscillate are **nodes**, points of greatest amplitude are **antinodes**. Adjacent nodes are $\\frac{\\lambda}{2}$ apart. A standing wave transports no energy on average: between the nodes the energy is exchanged back and forth between kinetic and potential forms."
+ },
+ {
+  "t": "m",
+  "m": "y=A\\sin\\left(kx-\\omega t\\right)+A\\sin\\left(kx+\\omega t\\right)=2A\\sin kx\\cos\\omega t,\\qquad x_n=\\frac{n\\lambda}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki uchi mahkamlangan tor ([[F05]]).** Uchlarda tugun bo'lishi kerak, demak uzunlikka butun son yarim to'lqin joylashadi. Bu faqat ma'lum chastotalarni — **garmonikalarni (harmonics)** ruxsat etadi. $n=1$ — **asosiy ton (fundamental tone)**, qolganlari — **obertonlar (overtones)**; torda barcha garmonikalar asosiy chastotaning butun karralisi. Bir uchi erkin bo'lsa (masalan, halqa bilan), erkin uchda do'nglik bo'ladi va faqat toq garmonikalar qoladi.",
+  "ru": "**Струна с двумя закреплёнными концами ([[F05]]).** На концах должны быть узлы, значит, на длине укладывается целое число полуволн. Это разрешает только определённые частоты — **гармоники (harmonics)**. $n=1$ — **основной тон (fundamental tone)**, остальные — **обертоны (overtones)**; в струне все гармоники кратны основной частоте. Если один конец свободен (например, с кольцом), на свободном конце будет пучность, и останутся только нечётные гармоники.",
+  "en": "**A string fixed at both ends ([[F05]]).** There must be nodes at the ends, so a whole number of half-wavelengths fits into the length. This allows only certain frequencies — the **harmonics**. $n=1$ is the **fundamental tone**, the rest are **overtones**; on a string every harmonic is an integer multiple of the fundamental. If one end is free (for example, attached to a ring), there is an antinode at the free end and only the odd harmonics remain."
+ },
+ {
+  "t": "m",
+  "m": "L=n\\frac{\\lambda_n}{2},\\qquad f_n=\\frac{nv}{2L}=\\frac{n}{2L}\\sqrt{\\frac{F}{\\mu}},\\qquad n=1,2,3,\\dots"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L24-F05.png",
+   "ru": "figures/B2-L24-F05-ru.png",
+   "en": "figures/B2-L24-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Haqiqiy tebranish — modalar yig'indisi.** Chertilgan tor bitta modada tebranmaydi: uning boshlang'ich shakli garmonikalar yig'indisiga yoyiladi va har biri o'z chastotasida tebranadi (superpozitsiya!). Tor qayerdan chertilsa, shu joyda tuguni bo'lgan modalar uyg'onmaydi: o'rtasidan chertilgan tor faqat toq garmonikalarni beradi. Torga $\\frac{L}{3}$ nuqtada yengil tegilsa (flajolet), u yerda tuguni bo'lmagan modalar so'nadi va asosiy ton o'rniga uchinchi garmonika eshitiladi.",
+  "ru": "**Реальное колебание — сумма мод.** Щипнутая струна колеблется не в одной моде: её начальная форма раскладывается в сумму гармоник, и каждая колеблется со своей частотой (суперпозиция!). Моды, у которых в месте щипка узел, не возбуждаются: струна, щипнутая посередине, даёт только нечётные гармоники. Если слегка коснуться струны в точке $\\frac{L}{3}$ (флажолет), моды без узла в этой точке гаснут, и вместо основного тона звучит третья гармоника.",
+  "en": "**A real vibration is a sum of modes.** A plucked string does not vibrate in a single mode: its initial shape is decomposed into a sum of harmonics, and each oscillates at its own frequency (superposition!). Modes with a node at the plucking point are not excited: a string plucked at the middle gives only odd harmonics. If the string is lightly touched at the point $\\frac{L}{3}$ (a harmonic, or flageolet), the modes without a node there die out, and the third harmonic sounds instead of the fundamental."
+ },
+ {
+  "t": "li",
+  "uz": "**Torli asboblarni sozlash.** Formuladan: tonni ko'tarish uchun torni tortish (chastota $\\sqrt{F}$ kabi), qisqartirish (lad — chastota $\\frac{1}{L}$ kabi) yoki ingichkaroq tor olish ($\\frac{1}{\\sqrt\\mu}$) kerak. Melde tajribasida chastotasi o'zgarmas vibratorga ulangan tor yuk bilan tortiladi: yuk o'zgarganda tezlik va to'lqin uzunligi o'zgaradi, tordagi «qorinchalar» soni ham o'zgaradi.",
+  "ru": "**Настройка струнных инструментов.** Из формулы: чтобы повысить тон, струну нужно натянуть (частота растёт как $\\sqrt{F}$), укоротить (лад — частота как $\\frac{1}{L}$) или взять более тонкую струну ($\\frac{1}{\\sqrt\\mu}$). В опыте Мельде струна, присоединённая к вибратору постоянной частоты, натягивается грузом: при изменении груза меняются скорость и длина волны, и меняется число «пучностей» на струне.",
+  "en": "**Tuning stringed instruments.** From the formula: to raise the pitch the string must be tightened (frequency grows as $\\sqrt{F}$), shortened (a fret — frequency as $\\frac{1}{L}$) or made thinner ($\\frac{1}{\\sqrt\\mu}$). In Melde's experiment a string attached to a vibrator of fixed frequency is tensioned by a hanging weight: when the weight changes, the speed and the wavelength change, and so does the number of \"loops\" on the string."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Trubalardagi turg'un tovush to'lqinlari",
+  "ru": "9. Стоячие звуковые волны в трубах",
+  "en": "9. Standing sound waves in pipes"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchlardagi shartlar ([[F06]]).** Trubadagi havo ustunida turg'un tovush to'lqini hosil bo'ladi. Yopiq uchda havo harakatlana olmaydi — siljish tuguni, lekin bosim u yerda eng ko'p o'zgaradi — bosim do'ngligi. Ochiq uchda bosim atmosfera bosimiga yaqin — bosim tuguni va siljish do'ngligi (4-bo'limdagi chorak to'lqin siljishi). Aniqrog'i, do'nglik trubadan biroz tashqarida, taxminan $0.6r$ masofada ($r$ — truba radiusi) — bu **uch tuzatmasi (end correction)**.",
+  "ru": "**Условия на концах ([[F06]]).** В столбе воздуха в трубе образуется стоячая звуковая волна. У закрытого конца воздух не может двигаться — узел смещения, но давление там меняется сильнее всего — пучность давления. У открытого конца давление близко к атмосферному — узел давления и пучность смещения (сдвиг на четверть волны из раздела 4). Точнее, пучность находится немного снаружи трубы, примерно на расстоянии $0.6r$ ($r$ — радиус трубы), — это **поправка на открытый конец (end correction)**.",
+  "en": "**Conditions at the ends ([[F06]]).** A standing sound wave forms in the column of air in a pipe. At a closed end the air cannot move — a displacement node, but the pressure varies most there — a pressure antinode. At an open end the pressure is close to atmospheric — a pressure node and a displacement antinode (the quarter-wave shift of section 4). More precisely, the antinode lies slightly outside the pipe, about $0.6r$ beyond it ($r$ is the radius of the pipe) — the **end correction**."
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki uchi ochiq va bir uchi yopiq truba.** Ikki uchi ochiq trubada ikkala uchda siljish do'ngligi, uzunlikka butun son yarim to'lqin joylashadi — barcha garmonikalar bor, xuddi tordagidek. Bir uchi yopiq trubada bir uchda tugun, ikkinchisida do'nglik — uzunlikka toq son chorak to'lqin joylashadi: faqat toq garmonikalar bor, asosiy ton esa xuddi shunday uzunlikdagi ochiq trubanikidan bir oktava past.",
+  "ru": "**Труба, открытая с обоих концов, и закрытая с одного.** В трубе, открытой с обоих концов, на обоих концах пучности смещения, на длине укладывается целое число полуволн — есть все гармоники, как в струне. В трубе, закрытой с одного конца, на одном конце узел, на другом пучность — на длине укладывается нечётное число четвертей волны: есть только нечётные гармоники, а основной тон на октаву ниже, чем у открытой трубы той же длины.",
+  "en": "**Open–open and closed–open pipes.** In a pipe open at both ends there are displacement antinodes at both ends, and a whole number of half-wavelengths fits into the length — all harmonics are present, as on a string. In a pipe closed at one end there is a node at one end and an antinode at the other — an odd number of quarter-wavelengths fits into the length: only odd harmonics are present, and the fundamental is an octave lower than that of an open pipe of the same length."
+ },
+ {
+  "t": "m",
+  "m": "f_n=\\frac{nv}{2L}\\ \\left(n=1,2,3,\\dots\\right),\\qquad f_n=\\frac{\\left(2n-1\\right)v}{4L}\\ \\left(n=1,2,3,\\dots\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Rezonans trubasi.** Ichidagi suv sathini o'zgartirish mumkin bo'lgan truba ustida kamerton tebranadi. Havo ustuni uzunligi $\\frac{\\lambda}{4}$, $\\frac{3\\lambda}{4}$, … ga teng bo'lganda tovush kuchayadi. Ketma-ket ikki rezonans orasidagi farq $\\frac{\\lambda}{2}$ — uch tuzatmasi bu farqda qisqarib ketadi, shuning uchun tovush tezligi aniq o'lchanadi. Musiqa asboblarida: fleyta — ikki uchi ochiq truba, klarnet — taxminan bir uchi yopiq truba, uning tovushida toq garmonikalar ustunligi o'ziga xos tembr beradi.",
+  "ru": "**Резонансная труба.** Над трубой, уровень воды в которой можно менять, колеблется камертон. Звук усиливается, когда длина воздушного столба равна $\\frac{\\lambda}{4}$, $\\frac{3\\lambda}{4}$, … Разность между двумя соседними резонансами равна $\\frac{\\lambda}{2}$ — поправка на конец в этой разности сокращается, поэтому скорость звука измеряется точно. В музыкальных инструментах: флейта — труба, открытая с обоих концов, кларнет — приблизительно труба, закрытая с одного конца; преобладание нечётных гармоник даёт ему характерный тембр.",
+  "en": "**The resonance tube.** A tuning fork vibrates above a tube in which the water level can be changed. The sound is reinforced when the length of the air column is $\\frac{\\lambda}{4}$, $\\frac{3\\lambda}{4}$, … The difference between two successive resonances is $\\frac{\\lambda}{2}$ — the end correction cancels in this difference, so the speed of sound is measured accurately. In musical instruments: the flute is a pipe open at both ends, the clarinet is approximately a pipe closed at one end; the predominance of odd harmonics gives it its characteristic timbre."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L24-F06.png",
+   "ru": "figures/B2-L24-F06-ru.png",
+   "en": "figures/B2-L24-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Tepish, dispersiya va Furye qatori",
+  "ru": "10. Биения, дисперсия и ряд Фурье",
+  "en": "10. Beats, dispersion and the Fourier series"
+ },
+ {
+  "t": "li",
+  "uz": "**Tepish (beats) ([[F07]]).** Chastotalari yaqin ikki tebranish bir nuqtada qo'shilsin. Yig'indi o'rtacha chastotali tez tebranish, uning amplitudasi esa sekin o'zgaradi. Ovoz balandligi o'ramaning har bir davrida ikki marta eng katta bo'ladi, shuning uchun eshitiladigan **tepish chastotasi** chastotalar farqiga teng. Musiqachilar shu bilan asbobni sozlaydi: tepish yo'qolganda chastotalar teng.",
+  "ru": "**Биения (beats) ([[F07]]).** Пусть в одной точке складываются два колебания с близкими частотами. Сумма — быстрое колебание со средней частотой, амплитуда которого медленно меняется. Громкость максимальна дважды за период огибающей, поэтому слышимая **частота биений** равна разности частот. Так музыканты настраивают инструмент: когда биения исчезают, частоты равны.",
+  "en": "**Beats ([[F07]]).** Let two oscillations with close frequencies add at one point. The sum is a fast oscillation at the average frequency whose amplitude varies slowly. The loudness is greatest twice per period of the envelope, so the audible **beat frequency** equals the difference of the frequencies. Musicians tune instruments this way: when the beats disappear, the frequencies are equal."
+ },
+ {
+  "t": "m",
+  "m": "A\\cos\\omega_1t+A\\cos\\omega_2t=2A\\cos\\frac{\\left(\\omega_1-\\omega_2\\right)t}{2}\\cos\\frac{\\left(\\omega_1+\\omega_2\\right)t}{2},\\qquad \\Delta f=\\left|f_1-f_2\\right|"
+ },
+ {
+  "t": "li",
+  "uz": "**To'lqin paketi va guruh tezligi.** Fazoda to'lqin sonlari yaqin bo'lgan to'lqinlar qo'shilsa, **to'lqin paketi (wave packet)** — chegaralangan to'lqinlar guruhi hosil bo'ladi. Paket ichidagi do'ngliklar **fazaviy tezlik (phase velocity)** $v=\\frac{\\omega}{k}$ bilan, paket o'ramasi esa **guruh tezligi (group velocity)** $u=\\frac{d\\omega}{dk}$ bilan harakatlanadi. $\\omega\\left(k\\right)$ bog'lanish — **dispersiya munosabati (dispersion relation)**. Tor va havodagi tovushda $\\omega=vk$ chiziqli — dispersiya yo'q va $u=v$. Energiya va axborot guruh tezligi bilan ko'chadi.",
+  "ru": "**Волновой пакет и групповая скорость.** Если в пространстве складываются волны с близкими волновыми числами, образуется **волновой пакет (wave packet)** — ограниченная группа волн. Гребни внутри пакета движутся с **фазовой скоростью (phase velocity)** $v=\\frac{\\omega}{k}$, а огибающая — с **групповой скоростью (group velocity)** $u=\\frac{d\\omega}{dk}$. Зависимость $\\omega\\left(k\\right)$ — **закон дисперсии (dispersion relation)**. В струне и в звуке в воздухе $\\omega=vk$ линейна — дисперсии нет и $u=v$. Энергия и информация переносятся с групповой скоростью.",
+  "en": "**The wave packet and group velocity.** If waves with close wave numbers add in space, a **wave packet** forms — a localized group of waves. The crests inside the packet move at the **phase velocity** $v=\\frac{\\omega}{k}$, and the envelope at the **group velocity** $u=\\frac{d\\omega}{dk}$. The relation $\\omega\\left(k\\right)$ is the **dispersion relation**. On a string and for sound in air $\\omega=vk$ is linear — there is no dispersion and $u=v$. Energy and information travel at the group velocity."
+ },
+ {
+  "t": "m",
+  "m": "v=\\frac{\\omega}{k},\\qquad u=\\frac{d\\omega}{dk}=v+k\\frac{dv}{dk}=v-\\lambda\\frac{dv}{d\\lambda}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misollar.** Chuqur suvdagi gravitatsion to'lqinlarda $\\omega=\\sqrt{gk}$: fazaviy tezlik to'lqin uzunligi bilan o'sadi va guruh tezligi uning yarmiga teng — do'ngliklar paketning orqasida paydo bo'lib, oldida yo'qoladi. Kvant mexanikasida erkin zarra uchun $\\omega=\\frac{\\hbar k^2}{2m}$, va $u=2v$ — guruh tezligi zarraning klassik tezligiga teng. Plazmada va to'lqin o'tkazgichda $vu=c^2$ (B2-L21): fazaviy tezlik $c$ dan katta bo'lishi mumkin, lekin signal $u<c$ bilan ketadi.",
+  "ru": "**Примеры.** Для гравитационных волн на глубокой воде $\\omega=\\sqrt{gk}$: фазовая скорость растёт с длиной волны, а групповая равна её половине — гребни возникают в хвосте пакета и исчезают впереди. В квантовой механике для свободной частицы $\\omega=\\frac{\\hbar k^2}{2m}$, и $u=2v$ — групповая скорость равна классической скорости частицы. В плазме и волноводе $vu=c^2$ (B2-L21): фазовая скорость может быть больше $c$, но сигнал идёт с $u<c$.",
+  "en": "**Examples.** For gravity waves on deep water $\\omega=\\sqrt{gk}$: the phase velocity grows with wavelength, and the group velocity is half of it — crests appear at the back of the packet and vanish at the front. In quantum mechanics, for a free particle $\\omega=\\frac{\\hbar k^2}{2m}$ and $u=2v$ — the group velocity equals the classical velocity of the particle. In a plasma and in a waveguide $vu=c^2$ (B2-L21): the phase velocity can exceed $c$, but the signal travels at $u<c$."
+ },
+ {
+  "t": "m",
+  "m": "\\omega=\\sqrt{gk}:\\ u=\\frac{v}{2},\\qquad \\omega=\\frac{\\hbar k^2}{2m}:\\ u=2v"
+ },
+ {
+  "t": "li",
+  "uz": "**Paket kengligi.** Uzunligi $\\Delta x$ bo'lgan paketni hosil qilish uchun to'lqin sonlari taxminan $\\Delta k\\sim\\frac{2\\pi}{\\Delta x}$ oraliqda bo'lishi kerak; vaqtda ham xuddi shunday: davomiyligi $\\Delta t$ bo'lgan signal $\\Delta f\\sim\\frac{1}{\\Delta t}$ chastotalar oralig'ini egallaydi. Qisqa impuls keng chastota polosasini talab qiladi. Kvant mexanikasida $p=\\hbar k$ bo'lgani uchun bu Geyzenberg noaniqlik munosabatiga aylanadi. Dispersiv muhitda turli garmonikalar turli tezlikda yuradi va paket vaqt o'tishi bilan yoyiladi.",
+  "ru": "**Ширина пакета.** Чтобы получить пакет длиной $\\Delta x$, волновые числа должны лежать в интервале примерно $\\Delta k\\sim\\frac{2\\pi}{\\Delta x}$; во времени так же: сигнал длительностью $\\Delta t$ занимает интервал частот $\\Delta f\\sim\\frac{1}{\\Delta t}$. Короткий импульс требует широкой полосы частот. В квантовой механике, поскольку $p=\\hbar k$, это превращается в соотношение неопределённостей Гейзенберга. В диспергирующей среде разные гармоники идут с разной скоростью, и пакет со временем расплывается.",
+  "en": "**Packet width.** To make a packet of length $\\Delta x$, the wave numbers must span roughly $\\Delta k\\sim\\frac{2\\pi}{\\Delta x}$; likewise in time: a signal of duration $\\Delta t$ occupies a frequency band $\\Delta f\\sim\\frac{1}{\\Delta t}$. A short pulse needs a wide frequency band. In quantum mechanics, since $p=\\hbar k$, this becomes the Heisenberg uncertainty relation. In a dispersive medium different harmonics travel at different speeds, and the packet spreads out over time."
+ },
+ {
+  "t": "m",
+  "m": "\\Delta x\\,\\Delta k\\sim2\\pi,\\qquad \\Delta t\\,\\Delta f\\sim1"
+ },
+ {
+  "t": "li",
+  "uz": "**Furye qatori (Fourier series).** Davri $T$ bo'lgan har qanday davriy signalni $\\omega=\\frac{2\\pi}{T}$ chastotaning karralilari — garmonikalar yig'indisi sifatida yozish mumkin. Shu tufayli chiziqli tizimda istalgan signalni har bir garmonikasi uchun alohida hisoblab, so'ng qo'shish mumkin — superpozitsiyaning eng kuchli qo'llanilishi. Masalan, amplitudasi $A$ bo'lgan **to'g'ri burchakli signal (square wave)** faqat toq garmonikalardan iborat. Bir xil balandlikdagi notani turli asboblar har xil chaladi: **tembr (timbre)** garmonikalar tarkibi bilan belgilanadi.",
+  "ru": "**Ряд Фурье (Fourier series).** Любой периодический сигнал с периодом $T$ можно записать как сумму гармоник — кратных частоты $\\omega=\\frac{2\\pi}{T}$. Поэтому в линейной системе любой сигнал можно рассчитать отдельно для каждой гармоники, а затем сложить — самое сильное применение суперпозиции. Например, **прямоугольный сигнал (square wave)** амплитуды $A$ состоит только из нечётных гармоник. Одну и ту же ноту разные инструменты звучат по-разному: **тембр (timbre)** определяется составом гармоник.",
+  "en": "**The Fourier series.** Any periodic signal with period $T$ can be written as a sum of harmonics — multiples of the frequency $\\omega=\\frac{2\\pi}{T}$. So in a linear system any signal can be computed separately for each harmonic and the results added — the most powerful application of superposition. For example, a **square wave** of amplitude $A$ consists only of odd harmonics. The same note sounds different on different instruments: the **timbre** is determined by the mix of harmonics."
+ },
+ {
+  "t": "m",
+  "m": "f\\left(t\\right)=a_0+\\sum_{n=1}^\\infty\\left(a_n\\cos n\\omega t+b_n\\sin n\\omega t\\right),\\qquad \\frac{4A}{\\pi}\\left(\\sin\\omega t+\\frac{\\sin3\\omega t}{3}+\\frac{\\sin5\\omega t}{5}+\\dots\\right)"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L24-F07.png",
+   "ru": "figures/B2-L24-F07-ru.png",
+   "en": "figures/B2-L24-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "11. Dopler effekti va zarb to'lqini",
+  "ru": "11. Эффект Доплера и ударная волна",
+  "en": "11. The Doppler effect and shock waves"
+ },
+ {
+  "t": "li",
+  "uz": "**Harakatlanuvchi kuzatuvchi va manba ([[F08]]).** Muhitga nisbatan tinch manba chastotasi $f$ bo'lsin, tovush tezligi $v$. Manbaga $v_1$ tezlik bilan yaqinlashayotgan kuzatuvchi to'lqin do'ngliklarini tezroq kesib o'tadi: nisbiy tezlik $v+v_1$. Kuzatuvchiga $v_2$ tezlik bilan yaqinlashayotgan manba esa har bir keyingi do'nglikni oldingisiga yaqinroq chiqaradi: oldinda to'lqin uzunligi qisqaradi. Ikkalasini birlashtirsak, **Dopler effekti (Doppler effect)** formulasi chiqadi; uzoqlashishda tegishli tezlik ishorasi teskari.",
+  "ru": "**Движущиеся наблюдатель и источник ([[F08]]).** Пусть частота покоящегося относительно среды источника $f$, скорость звука $v$. Наблюдатель, приближающийся к источнику со скоростью $v_1$, быстрее пересекает гребни: относительная скорость $v+v_1$. Источник, приближающийся к наблюдателю со скоростью $v_2$, испускает каждый следующий гребень ближе к предыдущему: впереди длина волны сокращается. Объединив оба эффекта, получаем формулу **эффекта Доплера (Doppler effect)**; при удалении знак соответствующей скорости меняется.",
+  "en": "**A moving observer and source ([[F08]]).** Let a source at rest relative to the medium have frequency $f$, and let the speed of sound be $v$. An observer approaching the source at speed $v_1$ crosses the crests faster: the relative speed is $v+v_1$. A source approaching the observer at speed $v_2$ emits each successive crest closer to the previous one: ahead of it the wavelength shortens. Combining both gives the **Doppler effect** formula; when receding, the sign of the corresponding speed is reversed."
+ },
+ {
+  "t": "m",
+  "m": "\\lambda'=\\frac{v-v_2}{f},\\qquad f'=f\\,\\frac{v+v_1}{v-v_2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Muhitning roli.** Tovush uchun formula faqat nisbiy tezlikka emas, kuzatuvchi va manbaning muhitga nisbatan tezligiga bog'liq: manbaning harakati to'lqin uzunligini, kuzatuvchining harakati esa to'lqinni qabul qilish tezligini o'zgartiradi. Kichik tezliklarda ikkala formula bir xil natija beradi: $\\frac{\\Delta f}{f}\\approx\\frac{v_1+v_2}{v}$. Yorug'lik uchun muhit yo'q va relativistik Dopler formulasi faqat nisbiy tezlikka bog'liq (B2 nisbiylik darsida). Manba yonidan o'tib ketganda chastota $\\frac{fv}{v-v_2}$ dan $\\frac{fv}{v+v_2}$ gacha keskin pasayadi; faqat ko'rish chizig'i bo'ylab tezlik tashkil etuvchisi ahamiyatga ega.",
+  "ru": "**Роль среды.** Для звука формула зависит не только от относительной скорости, а от скоростей наблюдателя и источника относительно среды: движение источника меняет длину волны, движение наблюдателя — скорость приёма волны. При малых скоростях обе формулы дают одно и то же: $\\frac{\\Delta f}{f}\\approx\\frac{v_1+v_2}{v}$. Для света среды нет, и релятивистская формула Доплера зависит только от относительной скорости (в уроке B2 по теории относительности). Когда источник проходит мимо, частота резко падает от $\\frac{fv}{v-v_2}$ до $\\frac{fv}{v+v_2}$; важна только составляющая скорости вдоль луча зрения.",
+  "en": "**The role of the medium.** For sound the formula depends not only on the relative velocity but on the velocities of the observer and the source relative to the medium: motion of the source changes the wavelength, motion of the observer changes the rate at which the wave is received. At small speeds both formulas give the same result: $\\frac{\\Delta f}{f}\\approx\\frac{v_1+v_2}{v}$. For light there is no medium, and the relativistic Doppler formula depends only on the relative velocity (in the B2 relativity lesson). As a source passes by, the frequency drops sharply from $\\frac{fv}{v-v_2}$ to $\\frac{fv}{v+v_2}$; only the component of velocity along the line of sight matters."
+ },
+ {
+  "t": "li",
+  "uz": "**Harakatlanuvchi jismdan qaytish.** Tovush $v_1$ tezlik bilan yaqinlashayotgan jismdan qaytsa, Dopler effekti ikki marta ishlaydi: avval jism kuzatuvchi sifatida $f\\frac{v+v_1}{v}$ ni qabul qiladi, so'ng manba sifatida uni qaytaradi. Kichik tezliklarda chastota siljishi $\\frac{2v_1}{v}f$. Ko'rshapalaklar, sonar, ultratovush bilan qon oqimini o'lchash va politsiya radari shunga asoslangan; yuborilgan va qaytgan to'lqinlar orasidagi tepish chastotasi tezlikni beradi.",
+  "ru": "**Отражение от движущегося тела.** Если звук отражается от тела, приближающегося со скоростью $v_1$, эффект Доплера работает дважды: сначала тело как наблюдатель принимает $f\\frac{v+v_1}{v}$, затем как источник переизлучает её. При малых скоростях сдвиг частоты равен $\\frac{2v_1}{v}f$. На этом основаны летучие мыши, сонар, ультразвуковое измерение кровотока и полицейский радар; частота биений между посланной и отражённой волнами даёт скорость.",
+  "en": "**Reflection from a moving body.** If sound reflects from a body approaching at speed $v_1$, the Doppler effect acts twice: first the body as an observer receives $f\\frac{v+v_1}{v}$, then as a source it re-emits it. At small speeds the frequency shift is $\\frac{2v_1}{v}f$. Bats, sonar, ultrasonic measurement of blood flow and police radar are based on this; the beat frequency between the emitted and reflected waves gives the speed."
+ },
+ {
+  "t": "m",
+  "m": "f''=f\\,\\frac{v+v_1}{v-v_1}\\approx f\\left(1+\\frac{2v_1}{v}\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Zarb to'lqini (shock wave).** Manba tezligi tovush tezligidan katta bo'lsa ($v_2>v$), to'lqin frontlari manbadan orqada qolib, konus sirtida yig'iladi — **Max konusi (Mach cone)**. Konus yarim burchagi tovush tezligining manba tezligiga nisbati bilan aniqlanadi, $M=\\frac{v_2}{v}$ — **Max soni (Mach number)**. Konus kuzatuvchi ustidan o'tganda bosim keskin sakraydi — «tovush zarbasi» eshitiladi. Qayiq ortidagi iz va Cherenkov nurlanishi (B2-L23) ham xuddi shunday konus.",
+  "ru": "**Ударная волна (shock wave).** Если скорость источника больше скорости звука ($v_2>v$), волновые фронты отстают от источника и собираются на поверхности конуса — **конуса Маха (Mach cone)**. Половина угла конуса определяется отношением скорости звука к скорости источника, $M=\\frac{v_2}{v}$ — **число Маха (Mach number)**. Когда конус проходит над наблюдателем, давление резко скачет — слышен «звуковой удар». След за лодкой и излучение Черенкова (B2-L23) — такой же конус.",
+  "en": "**Shock waves.** If the speed of the source exceeds the speed of sound ($v_2>v$), the wavefronts fall behind the source and pile up on the surface of a cone — the **Mach cone**. The half-angle of the cone is set by the ratio of the speed of sound to the speed of the source, and $M=\\frac{v_2}{v}$ is the **Mach number**. When the cone sweeps over an observer the pressure jumps sharply — a \"sonic boom\" is heard. The wake behind a boat and Cherenkov radiation (B2-L23) are the same kind of cone."
+ },
+ {
+  "t": "m",
+  "m": "\\sin\\theta=\\frac{v}{v_2}=\\frac{1}{M}"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L24-F08.png",
+   "ru": "figures/B2-L24-F08-ru.png",
+   "en": "figures/B2-L24-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "12. GRE usullari",
+  "ru": "12. Приёмы для GRE",
+  "en": "12. GRE techniques"
+ },
+ {
+  "t": "li",
+  "uz": "**Uch kattalikni ajrating.** Chastotani manba belgilaydi va u chegaradan o'tganda o'zgarmaydi; tezlikni muhit belgilaydi ($\\sqrt{\\frac{F}{\\mu}}$, $\\sqrt{\\frac{\\gamma RT}{M}}$); to'lqin uzunligi ulardan kelib chiqadi: $\\lambda=\\frac{v}{f}$. Tor uchun masshtab: $f_n\\propto\\frac{n}{L}\\sqrt{\\frac{F}{\\mu}}$ — taranglikni to'qqiz baravar oshirish chastotani uch baravar oshiradi.",
+  "ru": "**Различайте три величины.** Частоту задаёт источник, и при переходе через границу она не меняется; скорость задаёт среда ($\\sqrt{\\frac{F}{\\mu}}$, $\\sqrt{\\frac{\\gamma RT}{M}}$); длина волны следует из них: $\\lambda=\\frac{v}{f}$. Масштаб для струны: $f_n\\propto\\frac{n}{L}\\sqrt{\\frac{F}{\\mu}}$ — увеличение натяжения в девять раз утраивает частоту.",
+  "en": "**Distinguish three quantities.** The frequency is set by the source and does not change across a boundary; the speed is set by the medium ($\\sqrt{\\frac{F}{\\mu}}$, $\\sqrt{\\frac{\\gamma RT}{M}}$); the wavelength follows from them: $\\lambda=\\frac{v}{f}$. Scaling for a string: $f_n\\propto\\frac{n}{L}\\sqrt{\\frac{F}{\\mu}}$ — increasing the tension ninefold triples the frequency."
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaraviy shartlardan chastotalarga.** Tor va ikki uchi ochiq truba — barcha garmonikalar, $\\frac{nv}{2L}$; bir uchi yopiq truba yoki bir uchi erkin tor — faqat toq garmonikalar, $\\frac{\\left(2n-1\\right)v}{4L}$. Rasm chizing: tugun va do'ngliklarni joylashtiring, uzunlikka nechta $\\frac{\\lambda}{4}$ sig'ishini sanang.",
+  "ru": "**От граничных условий к частотам.** Струна и труба, открытая с обоих концов, — все гармоники, $\\frac{nv}{2L}$; труба, закрытая с одного конца, или струна со свободным концом — только нечётные гармоники, $\\frac{\\left(2n-1\\right)v}{4L}$. Нарисуйте картинку: расставьте узлы и пучности, сосчитайте, сколько $\\frac{\\lambda}{4}$ укладывается на длине.",
+  "en": "**From boundary conditions to frequencies.** A string and an open–open pipe — all harmonics, $\\frac{nv}{2L}$; a closed–open pipe or a string with a free end — only odd harmonics, $\\frac{\\left(2n-1\\right)v}{4L}$. Draw a picture: place the nodes and antinodes and count how many $\\frac{\\lambda}{4}$ fit into the length."
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya va detsibellar.** Quvvat va intensivlik $A^2\\omega^2$ ga proporsional; nuqtaviy manbadan $\\frac{1}{r^2}$. Detsibellarda intensivliklar nisbati daraja farqiga aylanadi: masalani avval nisbatlar bilan, keyin logarifm bilan yeching.",
+  "ru": "**Энергия и децибелы.** Мощность и интенсивность пропорциональны $A^2\\omega^2$; от точечного источника — $\\frac{1}{r^2}$. В децибелах отношение интенсивностей превращается в разность уровней: решайте задачу сначала через отношения, затем через логарифм.",
+  "en": "**Energy and decibels.** Power and intensity are proportional to $A^2\\omega^2$; from a point source, $\\frac{1}{r^2}$. In decibels a ratio of intensities becomes a difference of levels: solve the problem first with ratios, then with the logarithm."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik tuzoqlar.** To'lqin tezligini zarra tezligi bilan adashtirish; chastota chegarada o'zgaradi deb o'ylash; yopiq trubada juft garmonikalarni yozish; detsibellarni to'g'ridan-to'g'ri qo'shish; Dopler formulasida ishoralarni almashtirish (yaqinlashish chastotani doim oshiradi — tekshirib ko'ring); fazaviy va guruh tezligini chalkashtirish; o'tgan energiya ulushini $\\tau^2$ deb olish ($\\frac{Z_2}{Z_1}$ ko'paytuvchini unutish).",
+  "ru": "**Типичные ловушки.** Путать скорость волны со скоростью частицы; думать, что частота на границе меняется; записывать в закрытой трубе чётные гармоники; складывать децибелы напрямую; путать знаки в формуле Доплера (сближение всегда повышает частоту — проверьте); путать фазовую и групповую скорости; брать прошедшую долю энергии как $\\tau^2$ (забывая множитель $\\frac{Z_2}{Z_1}$).",
+  "en": "**Typical traps.** Confusing the wave speed with the particle speed; thinking the frequency changes at a boundary; writing even harmonics for a closed pipe; adding decibels directly; mixing up the signs in the Doppler formula (approach always raises the frequency — check it); confusing phase and group velocity; taking the transmitted energy fraction as $\\tau^2$ (forgetting the factor $\\frac{Z_2}{Z_1}$)."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "To'lqin tenglamasi",
+    "ru": "Волновое уравнение",
+    "en": "Wave equation",
+    "m": "\\frac{\\partial^2y}{\\partial t^2}=v^2\\frac{\\partial^2y}{\\partial x^2},\\quad y=f\\left(x-vt\\right)+g\\left(x+vt\\right)"
+   },
+   {
+    "uz": "Tezliklar",
+    "ru": "Скорости",
+    "en": "Speeds",
+    "m": "\\sqrt{\\frac{F}{\\mu}},\\quad \\sqrt{\\frac{Y}{\\rho}},\\quad \\sqrt{\\frac{K}{\\rho}},\\quad \\sqrt{\\frac{\\gamma RT}{M}}"
+   },
+   {
+    "uz": "Garmonik to'lqin",
+    "ru": "Гармоническая волна",
+    "en": "Harmonic wave",
+    "m": "y=A\\sin\\left(kx-\\omega t\\right),\\quad v=\\frac{\\omega}{k}=\\lambda f"
+   },
+   {
+    "uz": "Zarra tezligi",
+    "ru": "Скорость частицы",
+    "en": "Particle velocity",
+    "m": "\\frac{\\partial y}{\\partial t}=-v\\frac{\\partial y}{\\partial x},\\quad \\omega A"
+   },
+   {
+    "uz": "Tordagi quvvat",
+    "ru": "Мощность в струне",
+    "en": "Power on a string",
+    "m": "\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}Z\\omega^2A^2,\\quad Z=\\sqrt{F\\mu}"
+   },
+   {
+    "uz": "Tovush intensivligi",
+    "ru": "Интенсивность звука",
+    "en": "Sound intensity",
+    "m": "I=\\frac{p_0^2}{2\\rho v},\\quad p_0=\\rho v\\omega s_0"
+   },
+   {
+    "uz": "Tovush darajasi",
+    "ru": "Уровень звука",
+    "en": "Sound level",
+    "m": "\\beta=10\\log_{10}\\frac{I}{I_0},\\quad I_0=10^{-12}\\ \\mathrm{W/m^2}"
+   },
+   {
+    "uz": "Ikki to'lqin yig'indisi",
+    "ru": "Сумма двух волн",
+    "en": "Sum of two waves",
+    "m": "A^2=A_1^2+A_2^2+2A_1A_2\\cos\\Delta\\varphi"
+   },
+   {
+    "uz": "Qaytish va o'tish",
+    "ru": "Отражение и прохождение",
+    "en": "Reflection and transmission",
+    "m": "r=\\frac{Z_1-Z_2}{Z_1+Z_2},\\quad \\tau=\\frac{2Z_1}{Z_1+Z_2}"
+   },
+   {
+    "uz": "Turg'un to'lqin",
+    "ru": "Стоячая волна",
+    "en": "Standing wave",
+    "m": "y=2A\\sin kx\\cos\\omega t"
+   },
+   {
+    "uz": "Tor, ochiq truba",
+    "ru": "Струна, открытая труба",
+    "en": "String, open pipe",
+    "m": "f_n=\\frac{nv}{2L}"
+   },
+   {
+    "uz": "Yopiq truba",
+    "ru": "Закрытая труба",
+    "en": "Closed pipe",
+    "m": "f_n=\\frac{\\left(2n-1\\right)v}{4L}"
+   },
+   {
+    "uz": "Tepish",
+    "ru": "Биения",
+    "en": "Beats",
+    "m": "\\Delta f=\\left|f_1-f_2\\right|"
+   },
+   {
+    "uz": "Guruh tezligi",
+    "ru": "Групповая скорость",
+    "en": "Group velocity",
+    "m": "u=\\frac{d\\omega}{dk},\\quad v=\\frac{\\omega}{k}"
+   },
+   {
+    "uz": "Dopler effekti",
+    "ru": "Эффект Доплера",
+    "en": "Doppler effect",
+    "m": "f'=f\\,\\frac{v+v_1}{v-v_2}"
+   },
+   {
+    "uz": "Max konusi",
+    "ru": "Конус Маха",
+    "en": "Mach cone",
+    "m": "\\sin\\theta=\\frac{v}{v_2}"
+   }
+  ]
+ }
+]
