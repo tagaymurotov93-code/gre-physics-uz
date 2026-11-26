@@ -1,0 +1,936 @@
+[
+ {
+  "id": "B2-L23-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Elektron kuchlanganligi $10^5\\ \\mathrm{V/m}$ bo'lgan bir jinsli elektr maydonda tinch holatdan tezlanmoqda. Uning tezlanishini va nurlanish quvvatini toping. Birinchi $1\\ \\mathrm{ns}$ da nurlangan energiya elektron olgan kinetik energiyaning qancha ulushini tashkil qiladi?",
+   "ru": "Электрон ускоряется из состояния покоя в однородном электрическом поле напряжённостью $10^5\\ \\mathrm{V/m}$. Найдите его ускорение и мощность излучения. Какую долю от полученной электроном кинетической энергии составляет энергия, излучённая за первую $1\\ \\mathrm{ns}$?",
+   "en": "An electron is accelerated from rest in a uniform electric field of strength $10^5\\ \\mathrm{V/m}$. Find its acceleration and radiated power. What fraction of the kinetic energy gained by the electron is the energy radiated during the first $1\\ \\mathrm{ns}$?"
+  },
+  "figure": "figures/B2-L23-S01.png",
+  "solution": {
+   "uz": [
+    "Tezlanish: $$a=\\frac{eE}{m_e}=\\frac{1.6\\cdot10^{-19}\\cdot10^5}{9.1\\cdot10^{-31}}\\approx1.76\\cdot10^{16}\\ \\mathrm{m/s^2}$$",
+    "Nurlanish quvvati: $$\\mathcal P=\\frac{e^2a^2}{6\\pi\\varepsilon_0c^3}=\\frac{2.56\\cdot10^{-38}\\cdot3.09\\cdot10^{32}}{6\\pi\\cdot8.85\\cdot10^{-12}\\cdot2.7\\cdot10^{25}}\\approx1.76\\cdot10^{-21}\\ \\mathrm{W}$$",
+    "$1\\ \\mathrm{ns}$ dan keyin $v=at\\approx1.76\\cdot10^7\\ \\mathrm{m/s}$ (bu $c$ dan ancha kichik): $$K=\\frac{m_ev^2}{2}\\approx1.41\\cdot10^{-16}\\ \\mathrm{J},\\qquad W=\\mathcal Pt\\approx1.76\\cdot10^{-30}\\ \\mathrm{J},\\qquad \\frac{W}{K}\\approx1.2\\cdot10^{-14}$$"
+   ],
+   "ru": [
+    "Ускорение: $$a=\\frac{eE}{m_e}=\\frac{1.6\\cdot10^{-19}\\cdot10^5}{9.1\\cdot10^{-31}}\\approx1.76\\cdot10^{16}\\ \\mathrm{m/s^2}$$",
+    "Мощность излучения: $$\\mathcal P=\\frac{e^2a^2}{6\\pi\\varepsilon_0c^3}=\\frac{2.56\\cdot10^{-38}\\cdot3.09\\cdot10^{32}}{6\\pi\\cdot8.85\\cdot10^{-12}\\cdot2.7\\cdot10^{25}}\\approx1.76\\cdot10^{-21}\\ \\mathrm{W}$$",
+    "Через $1\\ \\mathrm{ns}$ скорость $v=at\\approx1.76\\cdot10^7\\ \\mathrm{m/s}$ (много меньше $c$): $$K=\\frac{m_ev^2}{2}\\approx1.41\\cdot10^{-16}\\ \\mathrm{J},\\qquad W=\\mathcal Pt\\approx1.76\\cdot10^{-30}\\ \\mathrm{J},\\qquad \\frac{W}{K}\\approx1.2\\cdot10^{-14}$$"
+   ],
+   "en": [
+    "The acceleration: $$a=\\frac{eE}{m_e}=\\frac{1.6\\cdot10^{-19}\\cdot10^5}{9.1\\cdot10^{-31}}\\approx1.76\\cdot10^{16}\\ \\mathrm{m/s^2}$$",
+    "The radiated power: $$\\mathcal P=\\frac{e^2a^2}{6\\pi\\varepsilon_0c^3}=\\frac{2.56\\cdot10^{-38}\\cdot3.09\\cdot10^{32}}{6\\pi\\cdot8.85\\cdot10^{-12}\\cdot2.7\\cdot10^{25}}\\approx1.76\\cdot10^{-21}\\ \\mathrm{W}$$",
+    "After $1\\ \\mathrm{ns}$, $v=at\\approx1.76\\cdot10^7\\ \\mathrm{m/s}$ (much less than $c$): $$K=\\frac{m_ev^2}{2}\\approx1.41\\cdot10^{-16}\\ \\mathrm{J},\\qquad W=\\mathcal Pt\\approx1.76\\cdot10^{-30}\\ \\mathrm{J},\\qquad \\frac{W}{K}\\approx1.2\\cdot10^{-14}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nyutonning ikkinchi qonuni: $ma=qE$",
+    "ru": "Второй закон Ньютона: $ma=qE$",
+    "en": "Newton's second law: $ma=qE$"
+   },
+   {
+    "uz": "Larmor formulasi: $\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}$",
+    "ru": "Формула Лармора: $\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}$",
+    "en": "Larmor formula: $\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Larmor formulasi",
+   "ru": "Формула Лармора",
+   "en": "The Larmor formula"
+  },
+  "answer": "a\\approx1.76\\cdot10^{16}\\ \\mathrm{m/s^2};\\ \\mathcal P\\approx1.76\\cdot10^{-21}\\ \\mathrm{W};\\ \\frac{W}{K}\\approx1.2\\cdot10^{-14}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original (B2-L23, Larmor)"
+ },
+ {
+  "id": "B2-L23-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Elektron qisqa muddat $10^{20}\\ \\mathrm{m/s^2}$ tezlanish oldi. Tezlanish yo'nalishi bilan $30^\\circ$ burchak hosil qiluvchi yo'nalishda $1\\ \\mathrm{m}$ masofada nurlanish maydonini va Kulon maydonini toping. Qanday masofada ular tenglashadi? Kuzatuvchi bu maydonni tezlanishdan qancha vaqt keyin sezadi?",
+   "ru": "Электрон кратковременно получил ускорение $10^{20}\\ \\mathrm{m/s^2}$. Найдите поле излучения и кулоновское поле на расстоянии $1\\ \\mathrm{m}$ в направлении, составляющем угол $30^\\circ$ с ускорением. На каком расстоянии они сравниваются? Через какое время после ускорения наблюдатель почувствует это поле?",
+   "en": "An electron briefly received an acceleration of $10^{20}\\ \\mathrm{m/s^2}$. Find the radiation field and the Coulomb field at a distance of $1\\ \\mathrm{m}$ in a direction making $30^\\circ$ with the acceleration. At what distance are they equal? How long after the acceleration does the observer feel this field?"
+  },
+  "figure": "figures/B2-L23-S02.png",
+  "solution": {
+   "uz": [
+    "Nurlanish maydoni: $$E_\\perp=\\frac{ea\\sin\\theta}{4\\pi\\varepsilon_0c^2r}=\\frac{9\\cdot10^9\\cdot1.6\\cdot10^{-19}\\cdot10^{20}\\cdot0.5}{9\\cdot10^{16}\\cdot1}\\approx8.0\\cdot10^{-7}\\ \\mathrm{V/m}$$",
+    "Kulon maydoni: $$E=\\frac{e}{4\\pi\\varepsilon_0r^2}\\approx1.44\\cdot10^{-9}\\ \\mathrm{V/m}$$",
+    "Nisbat $\\frac{E_\\perp}{E}=\\frac{ar\\sin\\theta}{c^2}$, tenglik sharti: $$r=\\frac{c^2}{a\\sin\\theta}=\\frac{9\\cdot10^{16}}{5\\cdot10^{19}}=1.8\\cdot10^{-3}\\ \\mathrm{m}$$",
+    "Kechikish: $$t-t'=\\frac{r}{c}=\\frac{1}{3\\cdot10^8}\\approx3.3\\ \\mathrm{ns}$$"
+   ],
+   "ru": [
+    "Поле излучения: $$E_\\perp=\\frac{ea\\sin\\theta}{4\\pi\\varepsilon_0c^2r}=\\frac{9\\cdot10^9\\cdot1.6\\cdot10^{-19}\\cdot10^{20}\\cdot0.5}{9\\cdot10^{16}\\cdot1}\\approx8.0\\cdot10^{-7}\\ \\mathrm{V/m}$$",
+    "Кулоновское поле: $$E=\\frac{e}{4\\pi\\varepsilon_0r^2}\\approx1.44\\cdot10^{-9}\\ \\mathrm{V/m}$$",
+    "Отношение $\\frac{E_\\perp}{E}=\\frac{ar\\sin\\theta}{c^2}$, условие равенства: $$r=\\frac{c^2}{a\\sin\\theta}=\\frac{9\\cdot10^{16}}{5\\cdot10^{19}}=1.8\\cdot10^{-3}\\ \\mathrm{m}$$",
+    "Запаздывание: $$t-t'=\\frac{r}{c}=\\frac{1}{3\\cdot10^8}\\approx3.3\\ \\mathrm{ns}$$"
+   ],
+   "en": [
+    "The radiation field: $$E_\\perp=\\frac{ea\\sin\\theta}{4\\pi\\varepsilon_0c^2r}=\\frac{9\\cdot10^9\\cdot1.6\\cdot10^{-19}\\cdot10^{20}\\cdot0.5}{9\\cdot10^{16}\\cdot1}\\approx8.0\\cdot10^{-7}\\ \\mathrm{V/m}$$",
+    "The Coulomb field: $$E=\\frac{e}{4\\pi\\varepsilon_0r^2}\\approx1.44\\cdot10^{-9}\\ \\mathrm{V/m}$$",
+    "The ratio is $\\frac{E_\\perp}{E}=\\frac{ar\\sin\\theta}{c^2}$; the condition of equality: $$r=\\frac{c^2}{a\\sin\\theta}=\\frac{9\\cdot10^{16}}{5\\cdot10^{19}}=1.8\\cdot10^{-3}\\ \\mathrm{m}$$",
+    "The delay: $$t-t'=\\frac{r}{c}=\\frac{1}{3\\cdot10^8}\\approx3.3\\ \\mathrm{ns}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nurlanish maydoni: $E_\\perp=\\frac{qa\\sin\\theta}{4\\pi\\varepsilon_0c^2r}$",
+    "ru": "Поле излучения: $E_\\perp=\\frac{qa\\sin\\theta}{4\\pi\\varepsilon_0c^2r}$",
+    "en": "Radiation field: $E_\\perp=\\frac{qa\\sin\\theta}{4\\pi\\varepsilon_0c^2r}$"
+   },
+   {
+    "uz": "Kulon maydoni: $E=\\frac{q}{4\\pi\\varepsilon_0r^2}$",
+    "ru": "Поле Кулона: $E=\\frac{q}{4\\pi\\varepsilon_0r^2}$",
+    "en": "Coulomb field: $E=\\frac{q}{4\\pi\\varepsilon_0r^2}$"
+   },
+   null,
+   {
+    "uz": "Kechikkan vaqt: $t'=t-\\frac{r}{c}$",
+    "ru": "Запаздывающее время: $t'=t-\\frac{r}{c}$",
+    "en": "Retarded time: $t'=t-\\frac{r}{c}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tezlanuvchi zaryad maydoni",
+   "ru": "Поле ускоренного заряда",
+   "en": "Field of an accelerated charge"
+  },
+  "answer": "E_\\perp\\approx8.0\\cdot10^{-7}\\ \\mathrm{V/m};\\ E\\approx1.44\\cdot10^{-9}\\ \\mathrm{V/m};\\ r=1.8\\ \\mathrm{mm};\\ 3.3\\ \\mathrm{ns}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original (B2-L23, Pursell)"
+ },
+ {
+  "id": "B2-L23-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Elementar dipoldan $10\\ \\mathrm{km}$ masofada, dipol o'qiga tik yo'nalishda o'rtacha energiya oqimi zichligi $3\\ \\mu\\mathrm{W/m^2}$. Dipolning o'rtacha nurlanish quvvatini, shu masofada o'qqa $30^\\circ$ burchak ostidagi va o'q bo'ylab intensivlikni hamda tik yo'nalishdagi o'rtacha energiya zichligini toping.",
+   "ru": "На расстоянии $10\\ \\mathrm{km}$ от элементарного диполя, в направлении, перпендикулярном оси диполя, средняя плотность потока энергии равна $3\\ \\mu\\mathrm{W/m^2}$. Найдите среднюю мощность излучения диполя, интенсивность на том же расстоянии под углом $30^\\circ$ к оси и вдоль оси, а также среднюю плотность энергии в перпендикулярном направлении.",
+   "en": "At a distance of $10\\ \\mathrm{km}$ from an elementary dipole, in the direction perpendicular to the dipole axis, the mean energy flux density is $3\\ \\mu\\mathrm{W/m^2}$. Find the dipole's mean radiated power, the intensity at the same distance at $30^\\circ$ to the axis and along the axis, and the mean energy density in the perpendicular direction."
+  },
+  "figure": "figures/B2-L23-S03.png",
+  "solution": {
+   "uz": [
+    "Intensivlik $\\sin^2\\theta$ kabi; sfera bo'yicha integrallaymiz: $$\\left\\langle\\mathcal P\\right\\rangle=S_0r^2\\int\\sin^2\\theta\\,d\\Omega=\\frac{8\\pi}{3}r^2S_0=\\frac{8\\pi}{3}\\cdot10^8\\cdot3\\cdot10^{-6}\\approx2.5\\ \\mathrm{kW}$$",
+    "Boshqa yo'nalishlarda: $$S\\left(30^\\circ\\right)=S_0\\sin^230^\\circ=0.75\\ \\mu\\mathrm{W/m^2},\\qquad S\\left(0\\right)=0$$",
+    "Energiya zichligi: $$\\left\\langle w\\right\\rangle=\\frac{S_0}{c}=\\frac{3\\cdot10^{-6}}{3\\cdot10^8}=10^{-14}\\ \\mathrm{J/m^3}$$"
+   ],
+   "ru": [
+    "Интенсивность пропорциональна $\\sin^2\\theta$; интегрируем по сфере: $$\\left\\langle\\mathcal P\\right\\rangle=S_0r^2\\int\\sin^2\\theta\\,d\\Omega=\\frac{8\\pi}{3}r^2S_0=\\frac{8\\pi}{3}\\cdot10^8\\cdot3\\cdot10^{-6}\\approx2.5\\ \\mathrm{kW}$$",
+    "В других направлениях: $$S\\left(30^\\circ\\right)=S_0\\sin^230^\\circ=0.75\\ \\mu\\mathrm{W/m^2},\\qquad S\\left(0\\right)=0$$",
+    "Плотность энергии: $$\\left\\langle w\\right\\rangle=\\frac{S_0}{c}=\\frac{3\\cdot10^{-6}}{3\\cdot10^8}=10^{-14}\\ \\mathrm{J/m^3}$$"
+   ],
+   "en": [
+    "The intensity goes as $\\sin^2\\theta$; integrate over the sphere: $$\\left\\langle\\mathcal P\\right\\rangle=S_0r^2\\int\\sin^2\\theta\\,d\\Omega=\\frac{8\\pi}{3}r^2S_0=\\frac{8\\pi}{3}\\cdot10^8\\cdot3\\cdot10^{-6}\\approx2.5\\ \\mathrm{kW}$$",
+    "In other directions: $$S\\left(30^\\circ\\right)=S_0\\sin^230^\\circ=0.75\\ \\mu\\mathrm{W/m^2},\\qquad S\\left(0\\right)=0$$",
+    "The energy density: $$\\left\\langle w\\right\\rangle=\\frac{S_0}{c}=\\frac{3\\cdot10^{-6}}{3\\cdot10^8}=10^{-14}\\ \\mathrm{J/m^3}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Dipol diagrammasi: $\\left\\langle S\\right\\rangle=\\left\\langle S\\right\\rangle_{max}\\sin^2\\theta$, $\\int\\sin^2\\theta\\,d\\Omega=\\frac{8\\pi}{3}$",
+    "ru": "Диаграмма диполя: $\\left\\langle S\\right\\rangle=\\left\\langle S\\right\\rangle_{max}\\sin^2\\theta$, $\\int\\sin^2\\theta\\,d\\Omega=\\frac{8\\pi}{3}$",
+    "en": "Dipole pattern: $\\left\\langle S\\right\\rangle=\\left\\langle S\\right\\rangle_{max}\\sin^2\\theta$, $\\int\\sin^2\\theta\\,d\\Omega=\\frac{8\\pi}{3}$"
+   },
+   null,
+   {
+    "uz": "Energiya zichligi: $\\left\\langle w\\right\\rangle=\\frac{\\left\\langle S\\right\\rangle}{c}$",
+    "ru": "Плотность энергии: $\\left\\langle w\\right\\rangle=\\frac{\\left\\langle S\\right\\rangle}{c}$",
+    "en": "Energy density: $\\left\\langle w\\right\\rangle=\\frac{\\left\\langle S\\right\\rangle}{c}$"
+   }
+  ],
+  "basis": {
+   "uz": "Dipol nurlanishining diagrammasi",
+   "ru": "Диаграмма дипольного излучения",
+   "en": "The pattern of dipole radiation"
+  },
+  "answer": "\\left\\langle\\mathcal P\\right\\rangle\\approx2.5\\ \\mathrm{kW};\\ 0.75\\ \\mu\\mathrm{W/m^2};\\ 0;\\ \\left\\langle w\\right\\rangle=10^{-14}\\ \\mathrm{J/m^3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "Irodov, «Problems in General Physics», 4.219, 4.220-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L23-S04",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Atomdagi elektron $0.08\\ \\mathrm{nm}$ amplituda va $3\\cdot10^{15}\\ \\mathrm{s^{-1}}$ burchak chastota bilan garmonik tebranmoqda. Nurlanishning o'rtacha quvvatini, tebranish energiyasini va energiya sezilarli kamayadigan vaqt tartibini toping. Qanday to'lqin uzunligi nurlanadi?",
+   "ru": "Электрон в атоме гармонически колеблется с амплитудой $0.08\\ \\mathrm{nm}$ и угловой частотой $3\\cdot10^{15}\\ \\mathrm{s^{-1}}$. Найдите среднюю мощность излучения, энергию колебаний и порядок времени, за которое энергия заметно уменьшится. Какая длина волны излучается?",
+   "en": "An electron in an atom oscillates harmonically with amplitude $0.08\\ \\mathrm{nm}$ and angular frequency $3\\cdot10^{15}\\ \\mathrm{s^{-1}}$. Find the mean radiated power, the energy of oscillation and the order of the time over which the energy decreases appreciably. What wavelength is emitted?"
+  },
+  "figure": "figures/B2-L23-S04.png",
+  "solution": {
+   "uz": [
+    "Dipol momenti amplitudasi: $$p_0=ex_0=1.6\\cdot10^{-19}\\cdot8\\cdot10^{-11}=1.28\\cdot10^{-29}\\ \\mathrm{C\\cdot m}$$",
+    "O'rtacha quvvat: $$\\left\\langle\\mathcal P\\right\\rangle=\\frac{p_0^2\\omega^4}{12\\pi\\varepsilon_0c^3}=\\frac{1.64\\cdot10^{-58}\\cdot8.1\\cdot10^{61}}{12\\pi\\cdot8.85\\cdot10^{-12}\\cdot2.7\\cdot10^{25}}\\approx1.47\\cdot10^{-12}\\ \\mathrm{W}$$",
+    "Tebranish energiyasi va vaqt: $$W=\\frac{1}{2}m_e\\omega^2x_0^2\\approx2.62\\cdot10^{-20}\\ \\mathrm{J},\\qquad t\\sim\\frac{W}{\\left\\langle\\mathcal P\\right\\rangle}\\approx1.8\\cdot10^{-8}\\ \\mathrm{s}$$",
+    "To'lqin uzunligi: $$\\lambda=\\frac{2\\pi c}{\\omega}\\approx628\\ \\mathrm{nm}$$"
+   ],
+   "ru": [
+    "Амплитуда дипольного момента: $$p_0=ex_0=1.6\\cdot10^{-19}\\cdot8\\cdot10^{-11}=1.28\\cdot10^{-29}\\ \\mathrm{C\\cdot m}$$",
+    "Средняя мощность: $$\\left\\langle\\mathcal P\\right\\rangle=\\frac{p_0^2\\omega^4}{12\\pi\\varepsilon_0c^3}=\\frac{1.64\\cdot10^{-58}\\cdot8.1\\cdot10^{61}}{12\\pi\\cdot8.85\\cdot10^{-12}\\cdot2.7\\cdot10^{25}}\\approx1.47\\cdot10^{-12}\\ \\mathrm{W}$$",
+    "Энергия колебаний и время: $$W=\\frac{1}{2}m_e\\omega^2x_0^2\\approx2.62\\cdot10^{-20}\\ \\mathrm{J},\\qquad t\\sim\\frac{W}{\\left\\langle\\mathcal P\\right\\rangle}\\approx1.8\\cdot10^{-8}\\ \\mathrm{s}$$",
+    "Длина волны: $$\\lambda=\\frac{2\\pi c}{\\omega}\\approx628\\ \\mathrm{nm}$$"
+   ],
+   "en": [
+    "The amplitude of the dipole moment: $$p_0=ex_0=1.6\\cdot10^{-19}\\cdot8\\cdot10^{-11}=1.28\\cdot10^{-29}\\ \\mathrm{C\\cdot m}$$",
+    "The mean power: $$\\left\\langle\\mathcal P\\right\\rangle=\\frac{p_0^2\\omega^4}{12\\pi\\varepsilon_0c^3}=\\frac{1.64\\cdot10^{-58}\\cdot8.1\\cdot10^{61}}{12\\pi\\cdot8.85\\cdot10^{-12}\\cdot2.7\\cdot10^{25}}\\approx1.47\\cdot10^{-12}\\ \\mathrm{W}$$",
+    "The energy of oscillation and the time: $$W=\\frac{1}{2}m_e\\omega^2x_0^2\\approx2.62\\cdot10^{-20}\\ \\mathrm{J},\\qquad t\\sim\\frac{W}{\\left\\langle\\mathcal P\\right\\rangle}\\approx1.8\\cdot10^{-8}\\ \\mathrm{s}$$",
+    "The wavelength: $$\\lambda=\\frac{2\\pi c}{\\omega}\\approx628\\ \\mathrm{nm}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Dipol nurlanishi quvvati: $\\left\\langle\\mathcal P\\right\\rangle=\\frac{p_0^2\\omega^4}{12\\pi\\varepsilon_0c^3}$",
+    "ru": "Мощность дипольного излучения: $\\left\\langle\\mathcal P\\right\\rangle=\\frac{p_0^2\\omega^4}{12\\pi\\varepsilon_0c^3}$",
+    "en": "Dipole radiated power: $\\left\\langle\\mathcal P\\right\\rangle=\\frac{p_0^2\\omega^4}{12\\pi\\varepsilon_0c^3}$"
+   },
+   {
+    "uz": "Ossillyator energiyasi: $W=\\frac{1}{2}m\\omega^2x_0^2$",
+    "ru": "Энергия осциллятора: $W=\\frac{1}{2}m\\omega^2x_0^2$",
+    "en": "Oscillator energy: $W=\\frac{1}{2}m\\omega^2x_0^2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Tebranuvchi elektron",
+   "ru": "Колеблющийся электрон",
+   "en": "An oscillating electron"
+  },
+  "answer": "\\left\\langle\\mathcal P\\right\\rangle\\approx1.47\\cdot10^{-12}\\ \\mathrm{W};\\ W\\approx2.6\\cdot10^{-20}\\ \\mathrm{J};\\ t\\sim1.8\\cdot10^{-8}\\ \\mathrm{s};\\ \\lambda\\approx628\\ \\mathrm{nm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Irodov, «Problems in General Physics», 4.212-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L23-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Uzunligi $1.5\\ \\mathrm{m}$ bo'lgan qisqa dipol antenna $10\\ \\mathrm{MHz}$ chastotada ishlaydi, tok antenna bo'ylab bir xil, amplitudasi $4\\ \\mathrm{A}$. Nurlanish qarshiligini, nurlanish quvvatini va simlarning omik qarshiligi $0.5\\ \\Omega$ bo'lganda FIK ni toping. Uchlarida qalpoq bo'lmasa (tok uchburchak taqsimlangan), nurlanish qarshiligi va FIK qanday bo'ladi?",
+   "ru": "Короткая дипольная антенна длиной $1.5\\ \\mathrm{m}$ работает на частоте $10\\ \\mathrm{MHz}$, ток вдоль антенны одинаков, амплитуда $4\\ \\mathrm{A}$. Найдите сопротивление излучения, мощность излучения и КПД при омическом сопротивлении проводов $0.5\\ \\Omega$. Каковы сопротивление излучения и КПД, если на концах нет «шапок» (ток распределён треугольником)?",
+   "en": "A short dipole antenna $1.5\\ \\mathrm{m}$ long operates at $10\\ \\mathrm{MHz}$; the current is the same along the antenna with amplitude $4\\ \\mathrm{A}$. Find the radiation resistance, the radiated power and the efficiency if the ohmic resistance of the wires is $0.5\\ \\Omega$. What are the radiation resistance and efficiency without end hats (triangular current distribution)?"
+  },
+  "figure": "figures/B2-L23-S05.png",
+  "solution": {
+   "uz": [
+    "To'lqin uzunligi $\\lambda=\\frac{c}{f}=30\\ \\mathrm{m}$, $\\frac{l}{\\lambda}=0.05$: $$R_\\Sigma=80\\pi^2\\cdot0.05^2\\approx1.97\\ \\Omega$$",
+    "Quvvat: $$\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\cdot4^2\\cdot1.97\\approx15.8\\ \\mathrm{W}$$",
+    "FIK: $$\\eta=\\frac{1.97}{1.97+0.5}\\approx0.80$$",
+    "Uchburchak tokda: $$R_\\Sigma'=\\frac{1.97}{4}\\approx0.49\\ \\Omega,\\qquad \\eta'=\\frac{0.49}{0.49+0.5}\\approx0.50$$"
+   ],
+   "ru": [
+    "Длина волны $\\lambda=\\frac{c}{f}=30\\ \\mathrm{m}$, $\\frac{l}{\\lambda}=0.05$: $$R_\\Sigma=80\\pi^2\\cdot0.05^2\\approx1.97\\ \\Omega$$",
+    "Мощность: $$\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\cdot4^2\\cdot1.97\\approx15.8\\ \\mathrm{W}$$",
+    "КПД: $$\\eta=\\frac{1.97}{1.97+0.5}\\approx0.80$$",
+    "При треугольном токе: $$R_\\Sigma'=\\frac{1.97}{4}\\approx0.49\\ \\Omega,\\qquad \\eta'=\\frac{0.49}{0.49+0.5}\\approx0.50$$"
+   ],
+   "en": [
+    "The wavelength is $\\lambda=\\frac{c}{f}=30\\ \\mathrm{m}$, $\\frac{l}{\\lambda}=0.05$: $$R_\\Sigma=80\\pi^2\\cdot0.05^2\\approx1.97\\ \\Omega$$",
+    "The power: $$\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\cdot4^2\\cdot1.97\\approx15.8\\ \\mathrm{W}$$",
+    "The efficiency: $$\\eta=\\frac{1.97}{1.97+0.5}\\approx0.80$$",
+    "With a triangular current: $$R_\\Sigma'=\\frac{1.97}{4}\\approx0.49\\ \\Omega,\\qquad \\eta'=\\frac{0.49}{0.49+0.5}\\approx0.50$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qisqa dipolning nurlanish qarshiligi: $R_\\Sigma=80\\pi^2\\left(\\frac{l}{\\lambda}\\right)^2$",
+    "ru": "Сопротивление излучения короткого диполя: $R_\\Sigma=80\\pi^2\\left(\\frac{l}{\\lambda}\\right)^2$",
+    "en": "Radiation resistance of a short dipole: $R_\\Sigma=80\\pi^2\\left(\\frac{l}{\\lambda}\\right)^2$"
+   },
+   {
+    "uz": "Nurlanish quvvati: $\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}I_0^2R_\\Sigma$",
+    "ru": "Мощность излучения: $\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}I_0^2R_\\Sigma$",
+    "en": "Radiated power: $\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}I_0^2R_\\Sigma$"
+   },
+   {
+    "uz": "FIK: $\\eta=\\frac{R_\\Sigma}{R_\\Sigma+r}$",
+    "ru": "КПД: $\\eta=\\frac{R_\\Sigma}{R_\\Sigma+r}$",
+    "en": "Efficiency: $\\eta=\\frac{R_\\Sigma}{R_\\Sigma+r}$"
+   },
+   {
+    "uz": "Uchburchak tok: $R_\\Sigma$ to'rt baravar kichik",
+    "ru": "Треугольный ток: $R_\\Sigma$ в четыре раза меньше",
+    "en": "Triangular current: $R_\\Sigma$ is four times smaller"
+   }
+  ],
+  "basis": {
+   "uz": "Qisqa antenna",
+   "ru": "Короткая антенна",
+   "en": "A short antenna"
+  },
+  "answer": "R_\\Sigma\\approx1.97\\ \\Omega;\\ \\left\\langle\\mathcal P\\right\\rangle\\approx15.8\\ \\mathrm{W};\\ \\eta\\approx0.80;\\ R_\\Sigma'\\approx0.49\\ \\Omega,\\ \\eta'\\approx0.50",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B2-L23, antenna)"
+ },
+ {
+  "id": "B2-L23-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yarim to'lqinli dipol $100\\ \\mathrm{MHz}$ chastotada $1\\ \\mathrm{kW}$ quvvat nurlantiradi. Antenna uzunligini, ta'minlash nuqtasidagi tok amplitudasini, eng katta nurlanish yo'nalishida $10\\ \\mathrm{km}$ masofadagi intensivlikni va elektr maydon amplitudasini toping. Shu nuqtada maydonga parallel qo'yilgan $1\\ \\mathrm{m}$ li qisqa sterjenda qanday EYuK amplitudasi hosil bo'ladi?",
+   "ru": "Полуволновой диполь излучает мощность $1\\ \\mathrm{kW}$ на частоте $100\\ \\mathrm{MHz}$. Найдите длину антенны, амплитуду тока в точке питания, интенсивность на расстоянии $10\\ \\mathrm{km}$ в направлении наибольшего излучения и амплитуду электрического поля. Какая амплитуда ЭДС возникнет в этой точке в коротком стержне длиной $1\\ \\mathrm{m}$, параллельном полю?",
+   "en": "A half-wave dipole radiates $1\\ \\mathrm{kW}$ at $100\\ \\mathrm{MHz}$. Find the length of the antenna, the current amplitude at the feed point, the intensity at $10\\ \\mathrm{km}$ in the direction of maximum radiation, and the electric field amplitude. What emf amplitude appears there in a short $1\\ \\mathrm{m}$ rod parallel to the field?"
+  },
+  "figure": "figures/B2-L23-S06.png",
+  "solution": {
+   "uz": [
+    "To'lqin uzunligi va antenna uzunligi: $$\\lambda=\\frac{c}{f}=3\\ \\mathrm{m},\\qquad l=\\frac{\\lambda}{2}=1.5\\ \\mathrm{m}$$",
+    "Tok amplitudasi: $$I_0=\\sqrt{\\frac{2\\left\\langle\\mathcal P\\right\\rangle}{R_\\Sigma}}=\\sqrt{\\frac{2000}{73.1}}\\approx5.2\\ \\mathrm{A}$$",
+    "Eng katta intensivlik: $$S_{max}=\\frac{1.64\\cdot10^3}{4\\pi\\cdot10^8}\\approx1.31\\cdot10^{-6}\\ \\mathrm{W/m^2}$$",
+    "Maydon amplitudasi va EYuK: $$E_0=\\sqrt{\\frac{2S_{max}}{c\\varepsilon_0}}\\approx0.031\\ \\mathrm{V/m},\\qquad \\mathcal E_0=E_0l\\approx31\\ \\mathrm{mV}$$"
+   ],
+   "ru": [
+    "Длина волны и длина антенны: $$\\lambda=\\frac{c}{f}=3\\ \\mathrm{m},\\qquad l=\\frac{\\lambda}{2}=1.5\\ \\mathrm{m}$$",
+    "Амплитуда тока: $$I_0=\\sqrt{\\frac{2\\left\\langle\\mathcal P\\right\\rangle}{R_\\Sigma}}=\\sqrt{\\frac{2000}{73.1}}\\approx5.2\\ \\mathrm{A}$$",
+    "Наибольшая интенсивность: $$S_{max}=\\frac{1.64\\cdot10^3}{4\\pi\\cdot10^8}\\approx1.31\\cdot10^{-6}\\ \\mathrm{W/m^2}$$",
+    "Амплитуда поля и ЭДС: $$E_0=\\sqrt{\\frac{2S_{max}}{c\\varepsilon_0}}\\approx0.031\\ \\mathrm{V/m},\\qquad \\mathcal E_0=E_0l\\approx31\\ \\mathrm{mV}$$"
+   ],
+   "en": [
+    "The wavelength and the length of the antenna: $$\\lambda=\\frac{c}{f}=3\\ \\mathrm{m},\\qquad l=\\frac{\\lambda}{2}=1.5\\ \\mathrm{m}$$",
+    "The current amplitude: $$I_0=\\sqrt{\\frac{2\\left\\langle\\mathcal P\\right\\rangle}{R_\\Sigma}}=\\sqrt{\\frac{2000}{73.1}}\\approx5.2\\ \\mathrm{A}$$",
+    "The maximum intensity: $$S_{max}=\\frac{1.64\\cdot10^3}{4\\pi\\cdot10^8}\\approx1.31\\cdot10^{-6}\\ \\mathrm{W/m^2}$$",
+    "The field amplitude and the emf: $$E_0=\\sqrt{\\frac{2S_{max}}{c\\varepsilon_0}}\\approx0.031\\ \\mathrm{V/m},\\qquad \\mathcal E_0=E_0l\\approx31\\ \\mathrm{mV}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Yarim to'lqinli dipol: $R_\\Sigma\\approx73\\ \\Omega$, $D\\approx1.64$",
+    "ru": "Полуволновой диполь: $R_\\Sigma\\approx73\\ \\Omega$, $D\\approx1.64$",
+    "en": "Half-wave dipole: $R_\\Sigma\\approx73\\ \\Omega$, $D\\approx1.64$"
+   },
+   {
+    "uz": "Yo'nalganlik: $\\left\\langle S\\right\\rangle_{max}=\\frac{D\\left\\langle\\mathcal P\\right\\rangle}{4\\pi r^2}$",
+    "ru": "Направленность: $\\left\\langle S\\right\\rangle_{max}=\\frac{D\\left\\langle\\mathcal P\\right\\rangle}{4\\pi r^2}$",
+    "en": "Directivity: $\\left\\langle S\\right\\rangle_{max}=\\frac{D\\left\\langle\\mathcal P\\right\\rangle}{4\\pi r^2}$"
+   },
+   {
+    "uz": "Intensivlik va amplituda: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$",
+    "ru": "Интенсивность и амплитуда: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$",
+    "en": "Intensity and amplitude: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$"
+   }
+  ],
+  "basis": {
+   "uz": "Yarim to'lqinli dipol",
+   "ru": "Полуволновой диполь",
+   "en": "A half-wave dipole"
+  },
+  "answer": "l=1.5\\ \\mathrm{m};\\ I_0\\approx5.2\\ \\mathrm{A};\\ S_{max}\\approx1.31\\cdot10^{-6}\\ \\mathrm{W/m^2};\\ E_0\\approx0.031\\ \\mathrm{V/m};\\ \\mathcal E_0\\approx31\\ \\mathrm{mV}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original (B2-L23, yarim to'lqinli dipol)"
+ },
+ {
+  "id": "B2-L23-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "O'rta to'lqinli radiostansiya $1\\ \\mathrm{MHz}$ chastotada yerga o'rnatilgan vertikal chorak to'lqinli machta orqali $50\\ \\mathrm{kW}$ nurlantiradi. Machta balandligini va asosidagi tok amplitudasini toping. Xuddi shu chastotada balandligi $15\\ \\mathrm{m}$ bo'lgan, tepasida sig'im qalpog'i o'rnatilgan (tok bir xil) machtaning nurlanish qarshiligi qancha?",
+   "ru": "Средневолновая радиостанция излучает $50\\ \\mathrm{kW}$ на частоте $1\\ \\mathrm{MHz}$ через вертикальную четвертьволновую мачту, установленную на земле. Найдите высоту мачты и амплитуду тока у её основания. Каково сопротивление излучения мачты высотой $15\\ \\mathrm{m}$ с ёмкостной «шапкой» наверху (ток одинаков) на той же частоте?",
+   "en": "A medium-wave radio station radiates $50\\ \\mathrm{kW}$ at $1\\ \\mathrm{MHz}$ through a vertical quarter-wave mast standing on the ground. Find the height of the mast and the current amplitude at its base. What is the radiation resistance of a $15\\ \\mathrm{m}$ mast with a capacitive hat on top (uniform current) at the same frequency?"
+  },
+  "figure": "figures/B2-L23-S07.png",
+  "solution": {
+   "uz": [
+    "To'lqin uzunligi va balandlik: $$\\lambda=\\frac{c}{f}=300\\ \\mathrm{m},\\qquad h=\\frac{\\lambda}{4}=75\\ \\mathrm{m}$$",
+    "Yer bilan birga bu yarim to'lqinli dipol, lekin nurlanish yarim fazoga: $$R_\\Sigma=\\frac{73}{2}=36.5\\ \\Omega,\\qquad I_0=\\sqrt{\\frac{2\\cdot5\\cdot10^4}{36.5}}\\approx52\\ \\mathrm{A}$$",
+    "Past machta tasviri bilan uzunligi $2h=30\\ \\mathrm{m}$ bo'lgan qisqa dipol: $$R_\\Sigma=\\frac{1}{2}\\cdot80\\pi^2\\left(\\frac{30}{300}\\right)^2\\approx3.95\\ \\Omega$$"
+   ],
+   "ru": [
+    "Длина волны и высота: $$\\lambda=\\frac{c}{f}=300\\ \\mathrm{m},\\qquad h=\\frac{\\lambda}{4}=75\\ \\mathrm{m}$$",
+    "Вместе с землёй это полуволновой диполь, но излучение в полупространство: $$R_\\Sigma=\\frac{73}{2}=36.5\\ \\Omega,\\qquad I_0=\\sqrt{\\frac{2\\cdot5\\cdot10^4}{36.5}}\\approx52\\ \\mathrm{A}$$",
+    "Низкая мачта с изображением — короткий диполь длиной $2h=30\\ \\mathrm{m}$: $$R_\\Sigma=\\frac{1}{2}\\cdot80\\pi^2\\left(\\frac{30}{300}\\right)^2\\approx3.95\\ \\Omega$$"
+   ],
+   "en": [
+    "The wavelength and the height: $$\\lambda=\\frac{c}{f}=300\\ \\mathrm{m},\\qquad h=\\frac{\\lambda}{4}=75\\ \\mathrm{m}$$",
+    "Together with the ground this is a half-wave dipole, but radiating into a half-space: $$R_\\Sigma=\\frac{73}{2}=36.5\\ \\Omega,\\qquad I_0=\\sqrt{\\frac{2\\cdot5\\cdot10^4}{36.5}}\\approx52\\ \\mathrm{A}$$",
+    "The short mast with its image is a short dipole of length $2h=30\\ \\mathrm{m}$: $$R_\\Sigma=\\frac{1}{2}\\cdot80\\pi^2\\left(\\frac{30}{300}\\right)^2\\approx3.95\\ \\Omega$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Monopol yer bilan: uzunligi $2h$ dipol, $R_\\Sigma$ ikki baravar kichik",
+    "ru": "Монополь с землёй: диполь длиной $2h$, $R_\\Sigma$ вдвое меньше",
+    "en": "A monopole with the ground: a dipole of length $2h$, $R_\\Sigma$ halved"
+   },
+   {
+    "uz": "Qisqa dipolning nurlanish qarshiligi: $R_\\Sigma=80\\pi^2\\left(\\frac{l}{\\lambda}\\right)^2$",
+    "ru": "Сопротивление излучения короткого диполя: $R_\\Sigma=80\\pi^2\\left(\\frac{l}{\\lambda}\\right)^2$",
+    "en": "Radiation resistance of a short dipole: $R_\\Sigma=80\\pi^2\\left(\\frac{l}{\\lambda}\\right)^2$"
+   }
+  ],
+  "basis": {
+   "uz": "Yer ustidagi antenna",
+   "ru": "Антенна над землёй",
+   "en": "An antenna above the ground"
+  },
+  "answer": "h=75\\ \\mathrm{m};\\ I_0\\approx52\\ \\mathrm{A};\\ R_\\Sigma\\approx3.95\\ \\Omega",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original (B2-L23, monopol)"
+ },
+ {
+  "id": "B2-L23-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $10\\ \\mathrm{cm}$ bo'lgan bir o'ramli halqali antennada $30\\ \\mathrm{MHz}$ chastotali, amplitudasi $2\\ \\mathrm{A}$ tok oqmoqda. Halqaning nurlanish qarshiligini va quvvatini toping. Uzunligi halqa diametriga teng, toki xuddi shunday (bir xil taqsimlangan) qisqa dipolning nurlanish qarshiligi necha marta katta?",
+   "ru": "В одновитковой рамочной антенне радиусом $10\\ \\mathrm{cm}$ течёт ток частотой $30\\ \\mathrm{MHz}$ с амплитудой $2\\ \\mathrm{A}$. Найдите сопротивление излучения и мощность рамки. Во сколько раз больше сопротивление излучения короткого диполя длиной, равной диаметру рамки, с таким же (равномерным) током?",
+   "en": "A single-turn loop antenna of radius $10\\ \\mathrm{cm}$ carries a $30\\ \\mathrm{MHz}$ current of amplitude $2\\ \\mathrm{A}$. Find the radiation resistance and the power of the loop. How many times larger is the radiation resistance of a short dipole as long as the loop's diameter with the same (uniform) current?"
+  },
+  "figure": "figures/B2-L23-S08.png",
+  "solution": {
+   "uz": [
+    "$\\lambda=10\\ \\mathrm{m}$, $A=\\pi b^2\\approx0.0314\\ \\mathrm{m^2}$, $\\frac{A}{\\lambda^2}\\approx3.14\\cdot10^{-4}$: $$R_\\Sigma=320\\pi^4\\left(3.14\\cdot10^{-4}\\right)^2\\approx3.1\\cdot10^{-3}\\ \\Omega$$",
+    "Quvvat: $$\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\cdot2^2\\cdot3.08\\cdot10^{-3}\\approx6.2\\ \\mathrm{mW}$$",
+    "Uzunligi $0.2\\ \\mathrm{m}$ bo'lgan dipol: $$R_\\Sigma=80\\pi^2\\cdot0.02^2\\approx0.316\\ \\Omega,\\qquad \\frac{0.316}{3.08\\cdot10^{-3}}\\approx100$$"
+   ],
+   "ru": [
+    "$\\lambda=10\\ \\mathrm{m}$, $A=\\pi b^2\\approx0.0314\\ \\mathrm{m^2}$, $\\frac{A}{\\lambda^2}\\approx3.14\\cdot10^{-4}$: $$R_\\Sigma=320\\pi^4\\left(3.14\\cdot10^{-4}\\right)^2\\approx3.1\\cdot10^{-3}\\ \\Omega$$",
+    "Мощность: $$\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\cdot2^2\\cdot3.08\\cdot10^{-3}\\approx6.2\\ \\mathrm{mW}$$",
+    "Диполь длиной $0.2\\ \\mathrm{m}$: $$R_\\Sigma=80\\pi^2\\cdot0.02^2\\approx0.316\\ \\Omega,\\qquad \\frac{0.316}{3.08\\cdot10^{-3}}\\approx100$$"
+   ],
+   "en": [
+    "$\\lambda=10\\ \\mathrm{m}$, $A=\\pi b^2\\approx0.0314\\ \\mathrm{m^2}$, $\\frac{A}{\\lambda^2}\\approx3.14\\cdot10^{-4}$: $$R_\\Sigma=320\\pi^4\\left(3.14\\cdot10^{-4}\\right)^2\\approx3.1\\cdot10^{-3}\\ \\Omega$$",
+    "The power: $$\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}\\cdot2^2\\cdot3.08\\cdot10^{-3}\\approx6.2\\ \\mathrm{mW}$$",
+    "A dipole of length $0.2\\ \\mathrm{m}$: $$R_\\Sigma=80\\pi^2\\cdot0.02^2\\approx0.316\\ \\Omega,\\qquad \\frac{0.316}{3.08\\cdot10^{-3}}\\approx100$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Halqaning nurlanish qarshiligi: $R_\\Sigma=320\\pi^4\\left(\\frac{A}{\\lambda^2}\\right)^2$",
+    "ru": "Сопротивление излучения рамки: $R_\\Sigma=320\\pi^4\\left(\\frac{A}{\\lambda^2}\\right)^2$",
+    "en": "Radiation resistance of a loop: $R_\\Sigma=320\\pi^4\\left(\\frac{A}{\\lambda^2}\\right)^2$"
+   },
+   {
+    "uz": "Nurlanish quvvati: $\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}I_0^2R_\\Sigma$",
+    "ru": "Мощность излучения: $\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}I_0^2R_\\Sigma$",
+    "en": "Radiated power: $\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}I_0^2R_\\Sigma$"
+   },
+   {
+    "uz": "Qisqa dipolning nurlanish qarshiligi: $R_\\Sigma=80\\pi^2\\left(\\frac{l}{\\lambda}\\right)^2$",
+    "ru": "Сопротивление излучения короткого диполя: $R_\\Sigma=80\\pi^2\\left(\\frac{l}{\\lambda}\\right)^2$",
+    "en": "Radiation resistance of a short dipole: $R_\\Sigma=80\\pi^2\\left(\\frac{l}{\\lambda}\\right)^2$"
+   }
+  ],
+  "basis": {
+   "uz": "Halqali antenna",
+   "ru": "Рамочная антенна",
+   "en": "A loop antenna"
+  },
+  "answer": "R_\\Sigma\\approx3.1\\cdot10^{-3}\\ \\Omega;\\ \\left\\langle\\mathcal P\\right\\rangle\\approx6.2\\ \\mathrm{mW};\\ \\approx100",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original (B2-L23, halqa)"
+ },
+ {
+  "id": "B2-L23-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Klassik vodorod atomida elektron radiusi $5.29\\cdot10^{-11}\\ \\mathrm{m}$ bo'lgan aylana bo'ylab $2.19\\cdot10^6\\ \\mathrm{m/s}$ tezlik bilan harakatlanadi. Tezlanishni, nurlanish quvvatini va aylanish chastotasini toping. $13.6\\ \\mathrm{eV}$ energiya shu quvvat bilan qancha vaqtda nurlanadi? Spiral bo'ylab qulash vaqtining aniq klassik qiymati qancha?",
+   "ru": "В классическом атоме водорода электрон движется по окружности радиусом $5.29\\cdot10^{-11}\\ \\mathrm{m}$ со скоростью $2.19\\cdot10^6\\ \\mathrm{m/s}$. Найдите ускорение, мощность излучения и частоту обращения. За какое время при такой мощности излучится энергия $13.6\\ \\mathrm{eV}$? Каково точное классическое время падения по спирали?",
+   "en": "In the classical hydrogen atom the electron moves in a circle of radius $5.29\\cdot10^{-11}\\ \\mathrm{m}$ at $2.19\\cdot10^6\\ \\mathrm{m/s}$. Find the acceleration, the radiated power and the orbital frequency. How long would it take to radiate $13.6\\ \\mathrm{eV}$ at this power? What is the exact classical spiral fall time?"
+  },
+  "figure": "figures/B2-L23-S09.png",
+  "solution": {
+   "uz": [
+    "Tezlanish: $$a=\\frac{v^2}{r}=\\frac{\\left(2.19\\cdot10^6\\right)^2}{5.29\\cdot10^{-11}}\\approx9.07\\cdot10^{22}\\ \\mathrm{m/s^2}$$",
+    "Quvvat va chastota: $$\\mathcal P=\\frac{e^2a^2}{6\\pi\\varepsilon_0c^3}\\approx4.7\\cdot10^{-8}\\ \\mathrm{W},\\qquad f=\\frac{v}{2\\pi r}\\approx6.6\\cdot10^{15}\\ \\mathrm{Hz}$$",
+    "Baho: $$t\\sim\\frac{13.6\\cdot1.6\\cdot10^{-19}}{4.67\\cdot10^{-8}}\\approx4.7\\cdot10^{-11}\\ \\mathrm{s}$$",
+    "Aniq klassik qiymat ($r_e\\approx2.81\\cdot10^{-15}\\ \\mathrm{m}$): $$t=\\frac{a_0^3}{4r_e^2c}=\\frac{1.48\\cdot10^{-31}}{4\\cdot7.9\\cdot10^{-30}\\cdot3\\cdot10^8}\\approx1.6\\cdot10^{-11}\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Ускорение: $$a=\\frac{v^2}{r}=\\frac{\\left(2.19\\cdot10^6\\right)^2}{5.29\\cdot10^{-11}}\\approx9.07\\cdot10^{22}\\ \\mathrm{m/s^2}$$",
+    "Мощность и частота: $$\\mathcal P=\\frac{e^2a^2}{6\\pi\\varepsilon_0c^3}\\approx4.7\\cdot10^{-8}\\ \\mathrm{W},\\qquad f=\\frac{v}{2\\pi r}\\approx6.6\\cdot10^{15}\\ \\mathrm{Hz}$$",
+    "Оценка: $$t\\sim\\frac{13.6\\cdot1.6\\cdot10^{-19}}{4.67\\cdot10^{-8}}\\approx4.7\\cdot10^{-11}\\ \\mathrm{s}$$",
+    "Точное классическое значение ($r_e\\approx2.81\\cdot10^{-15}\\ \\mathrm{m}$): $$t=\\frac{a_0^3}{4r_e^2c}=\\frac{1.48\\cdot10^{-31}}{4\\cdot7.9\\cdot10^{-30}\\cdot3\\cdot10^8}\\approx1.6\\cdot10^{-11}\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The acceleration: $$a=\\frac{v^2}{r}=\\frac{\\left(2.19\\cdot10^6\\right)^2}{5.29\\cdot10^{-11}}\\approx9.07\\cdot10^{22}\\ \\mathrm{m/s^2}$$",
+    "The power and the frequency: $$\\mathcal P=\\frac{e^2a^2}{6\\pi\\varepsilon_0c^3}\\approx4.7\\cdot10^{-8}\\ \\mathrm{W},\\qquad f=\\frac{v}{2\\pi r}\\approx6.6\\cdot10^{15}\\ \\mathrm{Hz}$$",
+    "The estimate: $$t\\sim\\frac{13.6\\cdot1.6\\cdot10^{-19}}{4.67\\cdot10^{-8}}\\approx4.7\\cdot10^{-11}\\ \\mathrm{s}$$",
+    "The exact classical value ($r_e\\approx2.81\\cdot10^{-15}\\ \\mathrm{m}$): $$t=\\frac{a_0^3}{4r_e^2c}=\\frac{1.48\\cdot10^{-31}}{4\\cdot7.9\\cdot10^{-30}\\cdot3\\cdot10^8}\\approx1.6\\cdot10^{-11}\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Markazga intilma tezlanish: $a=\\frac{v^2}{r}$",
+    "ru": "Центростремительное ускорение: $a=\\frac{v^2}{r}$",
+    "en": "Centripetal acceleration: $a=\\frac{v^2}{r}$"
+   },
+   {
+    "uz": "Larmor formulasi: $\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}$",
+    "ru": "Формула Лармора: $\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}$",
+    "en": "Larmor formula: $\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}$"
+   },
+   null,
+   {
+    "uz": "Klassik atomning qulash vaqti: $t=\\frac{a_0^3}{4r_e^2c}$",
+    "ru": "Время падения классического атома: $t=\\frac{a_0^3}{4r_e^2c}$",
+    "en": "Fall time of the classical atom: $t=\\frac{a_0^3}{4r_e^2c}$"
+   }
+  ],
+  "basis": {
+   "uz": "Klassik atom",
+   "ru": "Классический атом",
+   "en": "The classical atom"
+  },
+  "answer": "a\\approx9.1\\cdot10^{22}\\ \\mathrm{m/s^2};\\ \\mathcal P\\approx4.7\\cdot10^{-8}\\ \\mathrm{W};\\ f\\approx6.6\\cdot10^{15}\\ \\mathrm{Hz};\\ 4.7\\cdot10^{-11}\\ \\mathrm{s};\\ 1.6\\cdot10^{-11}\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 4.213-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L23-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Natriyning sariq chizig'i $589\\ \\mathrm{nm}$. Bog'langan elektron modelida radiatsion so'nish tezligini, yashash vaqtini, chiziqning tabiiy kengligini (to'lqin uzunliklarida) va tebranish aslligini baholang.",
+   "ru": "Жёлтая линия натрия — $589\\ \\mathrm{nm}$. В модели связанного электрона оцените скорость радиационного затухания, время жизни, естественную ширину линии (в длинах волн) и добротность колебаний.",
+   "en": "The yellow line of sodium is at $589\\ \\mathrm{nm}$. In the bound-electron model, estimate the radiation damping rate, the lifetime, the natural linewidth (in wavelength) and the quality factor of the oscillation."
+  },
+  "figure": "figures/B2-L23-S10.png",
+  "solution": {
+   "uz": [
+    "Elektronning nurlanish vaqti: $$\\tau=\\frac{e^2}{6\\pi\\varepsilon_0m_ec^3}=\\frac{2.56\\cdot10^{-38}}{6\\pi\\cdot8.85\\cdot10^{-12}\\cdot9.1\\cdot10^{-31}\\cdot2.7\\cdot10^{25}}\\approx6.25\\cdot10^{-24}\\ \\mathrm{s}$$",
+    "$\\omega_0=\\frac{2\\pi c}{\\lambda}\\approx3.20\\cdot10^{15}\\ \\mathrm{s^{-1}}$: $$\\Gamma=\\omega_0^2\\tau\\approx6.4\\cdot10^7\\ \\mathrm{s^{-1}},\\qquad \\frac{1}{\\Gamma}\\approx16\\ \\mathrm{ns}$$",
+    "Kenglik va asllik: $$\\Delta\\lambda=\\frac{\\lambda^2\\Gamma}{2\\pi c}\\approx1.2\\cdot10^{-14}\\ \\mathrm{m},\\qquad Q=\\frac{\\omega_0}{\\Gamma}\\approx5\\cdot10^7$$"
+   ],
+   "ru": [
+    "Время излучения электрона: $$\\tau=\\frac{e^2}{6\\pi\\varepsilon_0m_ec^3}=\\frac{2.56\\cdot10^{-38}}{6\\pi\\cdot8.85\\cdot10^{-12}\\cdot9.1\\cdot10^{-31}\\cdot2.7\\cdot10^{25}}\\approx6.25\\cdot10^{-24}\\ \\mathrm{s}$$",
+    "$\\omega_0=\\frac{2\\pi c}{\\lambda}\\approx3.20\\cdot10^{15}\\ \\mathrm{s^{-1}}$: $$\\Gamma=\\omega_0^2\\tau\\approx6.4\\cdot10^7\\ \\mathrm{s^{-1}},\\qquad \\frac{1}{\\Gamma}\\approx16\\ \\mathrm{ns}$$",
+    "Ширина и добротность: $$\\Delta\\lambda=\\frac{\\lambda^2\\Gamma}{2\\pi c}\\approx1.2\\cdot10^{-14}\\ \\mathrm{m},\\qquad Q=\\frac{\\omega_0}{\\Gamma}\\approx5\\cdot10^7$$"
+   ],
+   "en": [
+    "The radiation time of the electron: $$\\tau=\\frac{e^2}{6\\pi\\varepsilon_0m_ec^3}=\\frac{2.56\\cdot10^{-38}}{6\\pi\\cdot8.85\\cdot10^{-12}\\cdot9.1\\cdot10^{-31}\\cdot2.7\\cdot10^{25}}\\approx6.25\\cdot10^{-24}\\ \\mathrm{s}$$",
+    "$\\omega_0=\\frac{2\\pi c}{\\lambda}\\approx3.20\\cdot10^{15}\\ \\mathrm{s^{-1}}$: $$\\Gamma=\\omega_0^2\\tau\\approx6.4\\cdot10^7\\ \\mathrm{s^{-1}},\\qquad \\frac{1}{\\Gamma}\\approx16\\ \\mathrm{ns}$$",
+    "The width and the quality factor: $$\\Delta\\lambda=\\frac{\\lambda^2\\Gamma}{2\\pi c}\\approx1.2\\cdot10^{-14}\\ \\mathrm{m},\\qquad Q=\\frac{\\omega_0}{\\Gamma}\\approx5\\cdot10^7$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nurlanish vaqti: $\\tau=\\frac{q^2}{6\\pi\\varepsilon_0mc^3}$",
+    "ru": "Время излучения: $\\tau=\\frac{q^2}{6\\pi\\varepsilon_0mc^3}$",
+    "en": "Radiation time: $\\tau=\\frac{q^2}{6\\pi\\varepsilon_0mc^3}$"
+   },
+   {
+    "uz": "Radiatsion so'nish: $\\Gamma=\\omega_0^2\\tau$",
+    "ru": "Радиационное затухание: $\\Gamma=\\omega_0^2\\tau$",
+    "en": "Radiation damping: $\\Gamma=\\omega_0^2\\tau$"
+   },
+   {
+    "uz": "Tabiiy kenglik: $\\Delta\\omega=\\Gamma$, $\\Delta\\lambda=\\frac{\\lambda^2\\Delta\\omega}{2\\pi c}$",
+    "ru": "Естественная ширина: $\\Delta\\omega=\\Gamma$, $\\Delta\\lambda=\\frac{\\lambda^2\\Delta\\omega}{2\\pi c}$",
+    "en": "Natural width: $\\Delta\\omega=\\Gamma$, $\\Delta\\lambda=\\frac{\\lambda^2\\Delta\\omega}{2\\pi c}$"
+   }
+  ],
+  "basis": {
+   "uz": "Chiziqning tabiiy kengligi",
+   "ru": "Естественная ширина линии",
+   "en": "The natural linewidth"
+  },
+  "answer": "\\Gamma\\approx6.4\\cdot10^7\\ \\mathrm{s^{-1}};\\ \\frac{1}{\\Gamma}\\approx16\\ \\mathrm{ns};\\ \\Delta\\lambda\\approx1.2\\cdot10^{-14}\\ \\mathrm{m};\\ Q\\approx5\\cdot10^7",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original (B2-L23, tabiiy kenglik)"
+ },
+ {
+  "id": "B2-L23-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Elektronning klassik radiusini va Tomson kesimini hisoblang. Intensivligi $1360\\ \\mathrm{W/m^2}$ bo'lgan quyosh nurida bitta erkin elektron qancha quvvat sochadi? Elektronlar konsentratsiyasi $6\\cdot10^{29}\\ \\mathrm{m^{-3}}$ bo'lgan plazmada (Quyosh ichki qatlamlariga xos) fotonning erkin yugurish yo'li qancha?",
+   "ru": "Вычислите классический радиус электрона и томсоновское сечение. Какую мощность рассеивает один свободный электрон в солнечном свете интенсивностью $1360\\ \\mathrm{W/m^2}$? Какова длина свободного пробега фотона в плазме с концентрацией электронов $6\\cdot10^{29}\\ \\mathrm{m^{-3}}$ (типичной для внутренних слоёв Солнца)?",
+   "en": "Calculate the classical electron radius and the Thomson cross-section. How much power does one free electron scatter in sunlight of intensity $1360\\ \\mathrm{W/m^2}$? What is the photon mean free path in a plasma with electron concentration $6\\cdot10^{29}\\ \\mathrm{m^{-3}}$ (typical of the Sun's interior)?"
+  },
+  "figure": "figures/B2-L23-S11.png",
+  "solution": {
+   "uz": [
+    "Klassik radius: $$r_e=\\frac{e^2}{4\\pi\\varepsilon_0m_ec^2}=\\frac{2.30\\cdot10^{-28}}{8.19\\cdot10^{-14}}\\approx2.81\\cdot10^{-15}\\ \\mathrm{m}$$",
+    "Kesim va sochilgan quvvat: $$\\sigma_0=\\frac{8\\pi}{3}r_e^2\\approx6.6\\cdot10^{-29}\\ \\mathrm{m^2},\\qquad \\left\\langle\\mathcal P\\right\\rangle=\\sigma_0I\\approx9.0\\cdot10^{-26}\\ \\mathrm{W}$$",
+    "Erkin yugurish yo'li: $$\\ell=\\frac{1}{n\\sigma_0}=\\frac{1}{6\\cdot10^{29}\\cdot6.6\\cdot10^{-29}}\\approx2.5\\ \\mathrm{cm}$$"
+   ],
+   "ru": [
+    "Классический радиус: $$r_e=\\frac{e^2}{4\\pi\\varepsilon_0m_ec^2}=\\frac{2.30\\cdot10^{-28}}{8.19\\cdot10^{-14}}\\approx2.81\\cdot10^{-15}\\ \\mathrm{m}$$",
+    "Сечение и рассеянная мощность: $$\\sigma_0=\\frac{8\\pi}{3}r_e^2\\approx6.6\\cdot10^{-29}\\ \\mathrm{m^2},\\qquad \\left\\langle\\mathcal P\\right\\rangle=\\sigma_0I\\approx9.0\\cdot10^{-26}\\ \\mathrm{W}$$",
+    "Длина свободного пробега: $$\\ell=\\frac{1}{n\\sigma_0}=\\frac{1}{6\\cdot10^{29}\\cdot6.6\\cdot10^{-29}}\\approx2.5\\ \\mathrm{cm}$$"
+   ],
+   "en": [
+    "The classical radius: $$r_e=\\frac{e^2}{4\\pi\\varepsilon_0m_ec^2}=\\frac{2.30\\cdot10^{-28}}{8.19\\cdot10^{-14}}\\approx2.81\\cdot10^{-15}\\ \\mathrm{m}$$",
+    "The cross-section and the scattered power: $$\\sigma_0=\\frac{8\\pi}{3}r_e^2\\approx6.6\\cdot10^{-29}\\ \\mathrm{m^2},\\qquad \\left\\langle\\mathcal P\\right\\rangle=\\sigma_0I\\approx9.0\\cdot10^{-26}\\ \\mathrm{W}$$",
+    "The mean free path: $$\\ell=\\frac{1}{n\\sigma_0}=\\frac{1}{6\\cdot10^{29}\\cdot6.6\\cdot10^{-29}}\\approx2.5\\ \\mathrm{cm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Klassik radius: $r_e=\\frac{e^2}{4\\pi\\varepsilon_0m_ec^2}$",
+    "ru": "Классический радиус: $r_e=\\frac{e^2}{4\\pi\\varepsilon_0m_ec^2}$",
+    "en": "Classical radius: $r_e=\\frac{e^2}{4\\pi\\varepsilon_0m_ec^2}$"
+   },
+   {
+    "uz": "Tomson sochilishi: $\\sigma_0=\\frac{8\\pi}{3}r_e^2$, $\\left\\langle\\mathcal P\\right\\rangle=\\sigma_0I$",
+    "ru": "Томсоновское рассеяние: $\\sigma_0=\\frac{8\\pi}{3}r_e^2$, $\\left\\langle\\mathcal P\\right\\rangle=\\sigma_0I$",
+    "en": "Thomson scattering: $\\sigma_0=\\frac{8\\pi}{3}r_e^2$, $\\left\\langle\\mathcal P\\right\\rangle=\\sigma_0I$"
+   },
+   {
+    "uz": "Erkin yugurish yo'li: $\\ell=\\frac{1}{n\\sigma}$",
+    "ru": "Длина свободного пробега: $\\ell=\\frac{1}{n\\sigma}$",
+    "en": "Mean free path: $\\ell=\\frac{1}{n\\sigma}$"
+   }
+  ],
+  "basis": {
+   "uz": "Tomson sochilishi",
+   "ru": "Томсоновское рассеяние",
+   "en": "Thomson scattering"
+  },
+  "answer": "r_e\\approx2.81\\cdot10^{-15}\\ \\mathrm{m};\\ \\sigma_0\\approx6.6\\cdot10^{-29}\\ \\mathrm{m^2};\\ 9.0\\cdot10^{-26}\\ \\mathrm{W};\\ \\ell\\approx2.5\\ \\mathrm{cm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "Irodov, «Problems in General Physics», 4.222-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L23-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Havo molekulasidagi elektronni xususiy chastotasi $2\\cdot10^{16}\\ \\mathrm{s^{-1}}$ bo'lgan ossillyator deb hisoblang. $450\\ \\mathrm{nm}$ li ko'k yorug'lik $700\\ \\mathrm{nm}$ li qizilga qaraganda necha marta kuchliroq sochiladi? $500\\ \\mathrm{nm}$ uchun sochilish kesimini toping va Tomson kesimi bilan solishtiring.",
+   "ru": "Считайте электрон в молекуле воздуха осциллятором с собственной частотой $2\\cdot10^{16}\\ \\mathrm{s^{-1}}$. Во сколько раз синий свет $450\\ \\mathrm{nm}$ рассеивается сильнее красного $700\\ \\mathrm{nm}$? Найдите сечение рассеяния для $500\\ \\mathrm{nm}$ и сравните его с томсоновским.",
+   "en": "Treat an electron in an air molecule as an oscillator with natural frequency $2\\cdot10^{16}\\ \\mathrm{s^{-1}}$. How many times more strongly is $450\\ \\mathrm{nm}$ blue light scattered than $700\\ \\mathrm{nm}$ red light? Find the scattering cross-section at $500\\ \\mathrm{nm}$ and compare it with the Thomson cross-section."
+  },
+  "figure": "figures/B2-L23-S12.png",
+  "solution": {
+   "uz": [
+    "Rezonans to'lqin uzunligi $\\frac{2\\pi c}{\\omega_0}\\approx94\\ \\mathrm{nm}$ — ko'rinadigan yorug'lik uchun $\\omega\\ll\\omega_0$: $$\\frac{\\sigma\\left(450\\right)}{\\sigma\\left(700\\right)}=\\left(\\frac{700}{450}\\right)^4\\approx5.9$$",
+    "$500\\ \\mathrm{nm}$ uchun $\\omega\\approx3.77\\cdot10^{15}\\ \\mathrm{s^{-1}}$, $\\frac{\\omega}{\\omega_0}\\approx0.188$: $$\\frac{\\sigma}{\\sigma_0}=\\frac{\\omega^4}{\\left(\\omega_0^2-\\omega^2\\right)^2}\\approx1.36\\cdot10^{-3},\\qquad \\sigma\\approx9.0\\cdot10^{-32}\\ \\mathrm{m^2}$$"
+   ],
+   "ru": [
+    "Резонансная длина волны $\\frac{2\\pi c}{\\omega_0}\\approx94\\ \\mathrm{nm}$ — для видимого света $\\omega\\ll\\omega_0$: $$\\frac{\\sigma\\left(450\\right)}{\\sigma\\left(700\\right)}=\\left(\\frac{700}{450}\\right)^4\\approx5.9$$",
+    "Для $500\\ \\mathrm{nm}$ $\\omega\\approx3.77\\cdot10^{15}\\ \\mathrm{s^{-1}}$, $\\frac{\\omega}{\\omega_0}\\approx0.188$: $$\\frac{\\sigma}{\\sigma_0}=\\frac{\\omega^4}{\\left(\\omega_0^2-\\omega^2\\right)^2}\\approx1.36\\cdot10^{-3},\\qquad \\sigma\\approx9.0\\cdot10^{-32}\\ \\mathrm{m^2}$$"
+   ],
+   "en": [
+    "The resonant wavelength is $\\frac{2\\pi c}{\\omega_0}\\approx94\\ \\mathrm{nm}$ — for visible light $\\omega\\ll\\omega_0$: $$\\frac{\\sigma\\left(450\\right)}{\\sigma\\left(700\\right)}=\\left(\\frac{700}{450}\\right)^4\\approx5.9$$",
+    "For $500\\ \\mathrm{nm}$, $\\omega\\approx3.77\\cdot10^{15}\\ \\mathrm{s^{-1}}$, $\\frac{\\omega}{\\omega_0}\\approx0.188$: $$\\frac{\\sigma}{\\sigma_0}=\\frac{\\omega^4}{\\left(\\omega_0^2-\\omega^2\\right)^2}\\approx1.36\\cdot10^{-3},\\qquad \\sigma\\approx9.0\\cdot10^{-32}\\ \\mathrm{m^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Reley qonuni: $\\sigma\\propto\\frac{1}{\\lambda^4}$",
+    "ru": "Закон Рэлея: $\\sigma\\propto\\frac{1}{\\lambda^4}$",
+    "en": "Rayleigh's law: $\\sigma\\propto\\frac{1}{\\lambda^4}$"
+   },
+   {
+    "uz": "Bog'langan elektronda sochilish: $\\sigma=\\sigma_0\\frac{\\omega^4}{\\left(\\omega_0^2-\\omega^2\\right)^2}$",
+    "ru": "Рассеяние на связанном электроне: $\\sigma=\\sigma_0\\frac{\\omega^4}{\\left(\\omega_0^2-\\omega^2\\right)^2}$",
+    "en": "Scattering by a bound electron: $\\sigma=\\sigma_0\\frac{\\omega^4}{\\left(\\omega_0^2-\\omega^2\\right)^2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Reley sochilishi",
+   "ru": "Рэлеевское рассеяние",
+   "en": "Rayleigh scattering"
+  },
+  "answer": "\\approx5.9;\\ \\sigma\\approx9.0\\cdot10^{-32}\\ \\mathrm{m^2}\\approx1.4\\cdot10^{-3}\\sigma_0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Irodov, «Problems in General Physics», 4.223-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L23-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Norelativistik elektron induksiyasi $2\\ \\mathrm{T}$ bo'lgan bir jinsli magnit maydonda maydonga tik tekislikda aylanmoqda. Kinetik energiya nurlanish tufayli qanday qonun bilan kamayadi va qancha vaqtda $e$ marta kamayadi? Nurlanish chastotasini toping. Proton uchun bu vaqt qancha?",
+   "ru": "Нерелятивистский электрон вращается в однородном магнитном поле с индукцией $2\\ \\mathrm{T}$ в плоскости, перпендикулярной полю. По какому закону убывает кинетическая энергия из-за излучения и за какое время она уменьшается в $e$ раз? Найдите частоту излучения. Каково это время для протона?",
+   "en": "A non-relativistic electron circles in a uniform magnetic field of induction $2\\ \\mathrm{T}$ in a plane perpendicular to the field. By what law does its kinetic energy decrease because of radiation, and in what time does it fall by a factor $e$? Find the frequency of the radiation. What is this time for a proton?"
+  },
+  "figure": "figures/B2-L23-S13.png",
+  "solution": {
+   "uz": [
+    "Tezlanish $a=\\frac{eBv}{m}$, Larmor quvvati kinetik energiyaga proporsional: $$\\frac{dK}{dt}=-\\frac{e^4B^2v^2}{6\\pi\\varepsilon_0m^2c^3}=-\\frac{K}{\\tau_B}\\ \\Rightarrow\\ K=K_0e^{-\\frac{t}{\\tau_B}}$$",
+    "So'nish vaqti: $$\\tau_B=\\frac{3\\pi\\varepsilon_0m_e^3c^3}{e^4B^2}=\\frac{3\\pi\\cdot8.85\\cdot10^{-12}\\cdot7.54\\cdot10^{-91}\\cdot2.7\\cdot10^{25}}{6.55\\cdot10^{-76}\\cdot4}\\approx0.65\\ \\mathrm{s}$$",
+    "Chastota: $$f=\\frac{eB}{2\\pi m_e}\\approx56\\ \\mathrm{GHz}$$",
+    "Proton uchun $\\tau_B\\propto m^3$ (taxminan 127 yil): $$\\tau_B=0.65\\cdot\\left(\\frac{m_p}{m_e}\\right)^3\\approx4\\cdot10^9\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Ускорение $a=\\frac{eBv}{m}$, мощность Лармора пропорциональна кинетической энергии: $$\\frac{dK}{dt}=-\\frac{e^4B^2v^2}{6\\pi\\varepsilon_0m^2c^3}=-\\frac{K}{\\tau_B}\\ \\Rightarrow\\ K=K_0e^{-\\frac{t}{\\tau_B}}$$",
+    "Время затухания: $$\\tau_B=\\frac{3\\pi\\varepsilon_0m_e^3c^3}{e^4B^2}=\\frac{3\\pi\\cdot8.85\\cdot10^{-12}\\cdot7.54\\cdot10^{-91}\\cdot2.7\\cdot10^{25}}{6.55\\cdot10^{-76}\\cdot4}\\approx0.65\\ \\mathrm{s}$$",
+    "Частота: $$f=\\frac{eB}{2\\pi m_e}\\approx56\\ \\mathrm{GHz}$$",
+    "Для протона $\\tau_B\\propto m^3$ (около 127 лет): $$\\tau_B=0.65\\cdot\\left(\\frac{m_p}{m_e}\\right)^3\\approx4\\cdot10^9\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The acceleration is $a=\\frac{eBv}{m}$, so the Larmor power is proportional to the kinetic energy: $$\\frac{dK}{dt}=-\\frac{e^4B^2v^2}{6\\pi\\varepsilon_0m^2c^3}=-\\frac{K}{\\tau_B}\\ \\Rightarrow\\ K=K_0e^{-\\frac{t}{\\tau_B}}$$",
+    "The decay time: $$\\tau_B=\\frac{3\\pi\\varepsilon_0m_e^3c^3}{e^4B^2}=\\frac{3\\pi\\cdot8.85\\cdot10^{-12}\\cdot7.54\\cdot10^{-91}\\cdot2.7\\cdot10^{25}}{6.55\\cdot10^{-76}\\cdot4}\\approx0.65\\ \\mathrm{s}$$",
+    "The frequency: $$f=\\frac{eB}{2\\pi m_e}\\approx56\\ \\mathrm{GHz}$$",
+    "For a proton $\\tau_B\\propto m^3$ (about 127 years): $$\\tau_B=0.65\\cdot\\left(\\frac{m_p}{m_e}\\right)^3\\approx4\\cdot10^9\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Larmor formulasi: $\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}$",
+    "ru": "Формула Лармора: $\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}$",
+    "en": "Larmor formula: $\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}$"
+   },
+   {
+    "uz": "Siklotron so'nish: $\\tau_B=\\frac{3\\pi\\varepsilon_0m^3c^3}{q^4B^2}$",
+    "ru": "Циклотронное затухание: $\\tau_B=\\frac{3\\pi\\varepsilon_0m^3c^3}{q^4B^2}$",
+    "en": "Cyclotron decay: $\\tau_B=\\frac{3\\pi\\varepsilon_0m^3c^3}{q^4B^2}$"
+   },
+   {
+    "uz": "Siklotron chastota: $\\Omega=\\frac{qB}{m}$",
+    "ru": "Циклотронная частота: $\\Omega=\\frac{qB}{m}$",
+    "en": "Cyclotron frequency: $\\Omega=\\frac{qB}{m}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Siklotron nurlanish",
+   "ru": "Циклотронное излучение",
+   "en": "Cyclotron radiation"
+  },
+  "answer": "K=K_0e^{-\\frac{t}{\\tau_B}};\\ \\tau_B\\approx0.65\\ \\mathrm{s};\\ f\\approx56\\ \\mathrm{GHz};\\ \\tau_B\\approx4\\cdot10^9\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "Irodov, «Problems in General Physics», 4.216-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L23-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Energiyasi $5\\ \\mathrm{GeV}$ bo'lgan elektronlar radiusi $100\\ \\mathrm{m}$ bo'lgan halqada aylanmoqda ($m_ec^2=0.511\\ \\mathrm{MeV}$). Bir aylanishda sinxrotron nurlanishga yo'qotiladigan energiyani toping. Dasta toki $0.2\\ \\mathrm{A}$ bo'lsa, yo'qotishni qoplash uchun qancha quvvat kerak? Nurlanish konusining ochilish burchagini baholang.",
+   "ru": "Электроны с энергией $5\\ \\mathrm{GeV}$ движутся по кольцу радиусом $100\\ \\mathrm{m}$ ($m_ec^2=0.511\\ \\mathrm{MeV}$). Найдите энергию, теряемую на синхротронное излучение за один оборот. Какая мощность нужна для компенсации потерь при токе пучка $0.2\\ \\mathrm{A}$? Оцените угол раствора конуса излучения.",
+   "en": "Electrons of energy $5\\ \\mathrm{GeV}$ circulate in a ring of radius $100\\ \\mathrm{m}$ ($m_ec^2=0.511\\ \\mathrm{MeV}$). Find the energy lost to synchrotron radiation per revolution. What power is needed to make up the loss if the beam current is $0.2\\ \\mathrm{A}$? Estimate the opening angle of the radiation cone."
+  },
+  "figure": "figures/B2-L23-S14.png",
+  "solution": {
+   "uz": [
+    "Lorents ko'paytuvchisi: $$\\gamma=\\frac{5\\cdot10^9}{0.511\\cdot10^6}\\approx9.79\\cdot10^3$$",
+    "$\\mathcal P=\\frac{e^2\\gamma^4a^2}{6\\pi\\varepsilon_0c^3}$, $a=\\frac{c^2}{R}$, aylanish davri $\\frac{2\\pi R}{c}$: $$\\Delta W=\\frac{e^2\\gamma^4}{3\\varepsilon_0R}=\\frac{2.56\\cdot10^{-38}\\cdot9.17\\cdot10^{15}}{3\\cdot8.85\\cdot10^{-12}\\cdot100}\\approx8.8\\cdot10^{-14}\\ \\mathrm{J}\\approx552\\ \\mathrm{keV}$$",
+    "Har bir elektron $\\Delta W$ yo'qotadi, sekundiga $\\frac{I}{e}$ elektron o'tadi: $$\\mathcal P=\\frac{\\Delta W}{e}I=5.52\\cdot10^5\\ \\mathrm{V}\\cdot0.2\\ \\mathrm{A}\\approx110\\ \\mathrm{kW},\\qquad \\Delta\\theta\\sim\\frac{1}{\\gamma}\\approx10^{-4}\\ \\mathrm{rad}$$"
+   ],
+   "ru": [
+    "Множитель Лоренца: $$\\gamma=\\frac{5\\cdot10^9}{0.511\\cdot10^6}\\approx9.79\\cdot10^3$$",
+    "$\\mathcal P=\\frac{e^2\\gamma^4a^2}{6\\pi\\varepsilon_0c^3}$, $a=\\frac{c^2}{R}$, период обращения $\\frac{2\\pi R}{c}$: $$\\Delta W=\\frac{e^2\\gamma^4}{3\\varepsilon_0R}=\\frac{2.56\\cdot10^{-38}\\cdot9.17\\cdot10^{15}}{3\\cdot8.85\\cdot10^{-12}\\cdot100}\\approx8.8\\cdot10^{-14}\\ \\mathrm{J}\\approx552\\ \\mathrm{keV}$$",
+    "Каждый электрон теряет $\\Delta W$, в секунду проходит $\\frac{I}{e}$ электронов: $$\\mathcal P=\\frac{\\Delta W}{e}I=5.52\\cdot10^5\\ \\mathrm{V}\\cdot0.2\\ \\mathrm{A}\\approx110\\ \\mathrm{kW},\\qquad \\Delta\\theta\\sim\\frac{1}{\\gamma}\\approx10^{-4}\\ \\mathrm{rad}$$"
+   ],
+   "en": [
+    "The Lorentz factor: $$\\gamma=\\frac{5\\cdot10^9}{0.511\\cdot10^6}\\approx9.79\\cdot10^3$$",
+    "$\\mathcal P=\\frac{e^2\\gamma^4a^2}{6\\pi\\varepsilon_0c^3}$, $a=\\frac{c^2}{R}$, the period is $\\frac{2\\pi R}{c}$: $$\\Delta W=\\frac{e^2\\gamma^4}{3\\varepsilon_0R}=\\frac{2.56\\cdot10^{-38}\\cdot9.17\\cdot10^{15}}{3\\cdot8.85\\cdot10^{-12}\\cdot100}\\approx8.8\\cdot10^{-14}\\ \\mathrm{J}\\approx552\\ \\mathrm{keV}$$",
+    "Each electron loses $\\Delta W$, and $\\frac{I}{e}$ electrons pass per second: $$\\mathcal P=\\frac{\\Delta W}{e}I=5.52\\cdot10^5\\ \\mathrm{V}\\cdot0.2\\ \\mathrm{A}\\approx110\\ \\mathrm{kW},\\qquad \\Delta\\theta\\sim\\frac{1}{\\gamma}\\approx10^{-4}\\ \\mathrm{rad}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Lorents ko'paytuvchisi: $\\gamma=\\frac{E}{mc^2}$",
+    "ru": "Множитель Лоренца: $\\gamma=\\frac{E}{mc^2}$",
+    "en": "Lorentz factor: $\\gamma=\\frac{E}{mc^2}$"
+   },
+   {
+    "uz": "Sinxrotron yo'qotish: $\\Delta W=\\frac{q^2\\gamma^4}{3\\varepsilon_0R}$",
+    "ru": "Синхротронные потери: $\\Delta W=\\frac{q^2\\gamma^4}{3\\varepsilon_0R}$",
+    "en": "Synchrotron loss: $\\Delta W=\\frac{q^2\\gamma^4}{3\\varepsilon_0R}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Sinxrotron nurlanish",
+   "ru": "Синхротронное излучение",
+   "en": "Synchrotron radiation"
+  },
+  "answer": "\\Delta W\\approx552\\ \\mathrm{keV};\\ \\mathcal P\\approx110\\ \\mathrm{kW};\\ \\Delta\\theta\\sim10^{-4}\\ \\mathrm{rad}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "original (B2-L23, sinxrotron)"
+ },
+ {
+  "id": "B2-L23-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ikki bir xil vertikal antenna bir-biridan $d=\\lambda$ masofada, toklari bir fazada. Gorizontal tekislikda (antennalar chizig'i bilan $\\phi$ burchak) intensivlik qaysi yo'nalishlarda nolga teng va qaysilarida eng katta (bitta antennanikiga nisbatan necha marta)? Eng katta nurlanish $\\phi=60^\\circ$ yo'nalishiga tushishi uchun toklar fazalari farqi qancha bo'lishi kerak?",
+   "ru": "Две одинаковые вертикальные антенны находятся на расстоянии $d=\\lambda$ друг от друга, токи в фазе. В горизонтальной плоскости (угол $\\phi$ с линией антенн) в каких направлениях интенсивность равна нулю и в каких наибольшая (во сколько раз больше, чем у одной антенны)? Какой должна быть разность фаз токов, чтобы наибольшее излучение пришлось на направление $\\phi=60^\\circ$?",
+   "en": "Two identical vertical antennas are a distance $d=\\lambda$ apart with currents in phase. In the horizontal plane (angle $\\phi$ to the line of the antennas), in which directions is the intensity zero and in which is it greatest (how many times that of one antenna)? What phase difference between the currents puts the greatest radiation in the direction $\\phi=60^\\circ$?"
+  },
+  "figure": "figures/B2-L23-S15.png",
+  "solution": {
+   "uz": [
+    "$kd=2\\pi$, $\\delta=0$: $$I=4I_1\\cos^2\\left(\\pi\\cos\\phi\\right)$$",
+    "Nollar $\\cos\\phi=\\pm\\frac{1}{2}$ da, maksimumlar $\\cos\\phi=0,\\ \\pm1$ da: $$\\phi=60^\\circ,\\ 120^\\circ:\\ I=0;\\qquad \\phi=0,\\ 90^\\circ,\\ 180^\\circ:\\ I=4I_1$$",
+    "$\\phi=60^\\circ$ da $\\Delta=0$ bo'lishi kerak (shunda $120^\\circ$ da ham maksimum, $90^\\circ$ da esa nol bo'ladi): $$\\delta=kd\\cos60^\\circ=2\\pi\\cdot\\frac{1}{2}=\\pi$$"
+   ],
+   "ru": [
+    "$kd=2\\pi$, $\\delta=0$: $$I=4I_1\\cos^2\\left(\\pi\\cos\\phi\\right)$$",
+    "Нули при $\\cos\\phi=\\pm\\frac{1}{2}$, максимумы при $\\cos\\phi=0,\\ \\pm1$: $$\\phi=60^\\circ,\\ 120^\\circ:\\ I=0;\\qquad \\phi=0,\\ 90^\\circ,\\ 180^\\circ:\\ I=4I_1$$",
+    "При $\\phi=60^\\circ$ должно быть $\\Delta=0$ (тогда максимум будет и при $120^\\circ$, а при $90^\\circ$ — нуль): $$\\delta=kd\\cos60^\\circ=2\\pi\\cdot\\frac{1}{2}=\\pi$$"
+   ],
+   "en": [
+    "$kd=2\\pi$, $\\delta=0$: $$I=4I_1\\cos^2\\left(\\pi\\cos\\phi\\right)$$",
+    "Zeros at $\\cos\\phi=\\pm\\frac{1}{2}$, maxima at $\\cos\\phi=0,\\ \\pm1$: $$\\phi=60^\\circ,\\ 120^\\circ:\\ I=0;\\qquad \\phi=0,\\ 90^\\circ,\\ 180^\\circ:\\ I=4I_1$$",
+    "At $\\phi=60^\\circ$ we need $\\Delta=0$ (then there is also a maximum at $120^\\circ$ and a zero at $90^\\circ$): $$\\delta=kd\\cos60^\\circ=2\\pi\\cdot\\frac{1}{2}=\\pi$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ikki antenna: $I=4I_1\\cos^2\\frac{\\Delta}{2}$, $\\Delta=kd\\cos\\phi-\\delta$",
+    "ru": "Две антенны: $I=4I_1\\cos^2\\frac{\\Delta}{2}$, $\\Delta=kd\\cos\\phi-\\delta$",
+    "en": "Two antennas: $I=4I_1\\cos^2\\frac{\\Delta}{2}$, $\\Delta=kd\\cos\\phi-\\delta$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Antennalar massivi",
+   "ru": "Антенная решётка",
+   "en": "An antenna array"
+  },
+  "answer": "I=0:\\ 60^\\circ,\\ 120^\\circ;\\ I=4I_1:\\ 0,\\ 90^\\circ,\\ 180^\\circ;\\ \\delta=\\pi",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L23, massiv)"
+ },
+ {
+  "id": "B2-L23-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Elektron tinch protonning yonidan $10^6\\ \\mathrm{m/s}$ tezlik bilan $b=10^{-10}\\ \\mathrm{m}$ nishon masofasida uchib o'tadi. Trayektoriyaning egrilanishini hisobga olmay, eng katta tezlanishni va butun uchish davomida nurlangan energiyani toping.",
+   "ru": "Электрон пролетает мимо покоящегося протона со скоростью $10^6\\ \\mathrm{m/s}$ при прицельном расстоянии $b=10^{-10}\\ \\mathrm{m}$. Пренебрегая искривлением траектории, найдите наибольшее ускорение и энергию, излучённую за всё время пролёта.",
+   "en": "An electron flies past a stationary proton at $10^6\\ \\mathrm{m/s}$ with impact parameter $b=10^{-10}\\ \\mathrm{m}$. Neglecting the bending of the trajectory, find the greatest acceleration and the energy radiated during the whole flight."
+  },
+  "figure": "figures/B2-L23-S16.png",
+  "solution": {
+   "uz": [
+    "To'g'ri chiziqda masofa $\\sqrt{b^2+v^2t^2}$: $$a\\left(t\\right)=\\frac{e^2}{4\\pi\\varepsilon_0m_e\\left(b^2+v^2t^2\\right)},\\qquad a_{max}=\\frac{e^2}{4\\pi\\varepsilon_0m_eb^2}\\approx2.5\\cdot10^{22}\\ \\mathrm{m/s^2}$$",
+    "Nurlangan energiya — quvvat integrali: $$W=\\int\\mathcal P\\,dt=\\frac{e^2}{6\\pi\\varepsilon_0c^3}\\left(\\frac{e^2}{4\\pi\\varepsilon_0m_e}\\right)^2\\int\\frac{dt}{\\left(b^2+v^2t^2\\right)^2}$$",
+    "Integralni hisoblaymiz: $$W=\\frac{e^2}{6\\pi\\varepsilon_0c^3}\\left(\\frac{e^2}{4\\pi\\varepsilon_0m_e}\\right)^2\\frac{\\pi}{2b^3v}\\approx5.7\\cdot10^{-25}\\ \\mathrm{J}\\approx3.6\\cdot10^{-6}\\ \\mathrm{eV}$$"
+   ],
+   "ru": [
+    "На прямой расстояние равно $\\sqrt{b^2+v^2t^2}$: $$a\\left(t\\right)=\\frac{e^2}{4\\pi\\varepsilon_0m_e\\left(b^2+v^2t^2\\right)},\\qquad a_{max}=\\frac{e^2}{4\\pi\\varepsilon_0m_eb^2}\\approx2.5\\cdot10^{22}\\ \\mathrm{m/s^2}$$",
+    "Излучённая энергия — интеграл мощности: $$W=\\int\\mathcal P\\,dt=\\frac{e^2}{6\\pi\\varepsilon_0c^3}\\left(\\frac{e^2}{4\\pi\\varepsilon_0m_e}\\right)^2\\int\\frac{dt}{\\left(b^2+v^2t^2\\right)^2}$$",
+    "Вычисляем интеграл: $$W=\\frac{e^2}{6\\pi\\varepsilon_0c^3}\\left(\\frac{e^2}{4\\pi\\varepsilon_0m_e}\\right)^2\\frac{\\pi}{2b^3v}\\approx5.7\\cdot10^{-25}\\ \\mathrm{J}\\approx3.6\\cdot10^{-6}\\ \\mathrm{eV}$$"
+   ],
+   "en": [
+    "Along the straight line the distance is $\\sqrt{b^2+v^2t^2}$: $$a\\left(t\\right)=\\frac{e^2}{4\\pi\\varepsilon_0m_e\\left(b^2+v^2t^2\\right)},\\qquad a_{max}=\\frac{e^2}{4\\pi\\varepsilon_0m_eb^2}\\approx2.5\\cdot10^{22}\\ \\mathrm{m/s^2}$$",
+    "The radiated energy is the integral of the power: $$W=\\int\\mathcal P\\,dt=\\frac{e^2}{6\\pi\\varepsilon_0c^3}\\left(\\frac{e^2}{4\\pi\\varepsilon_0m_e}\\right)^2\\int\\frac{dt}{\\left(b^2+v^2t^2\\right)^2}$$",
+    "Evaluate the integral: $$W=\\frac{e^2}{6\\pi\\varepsilon_0c^3}\\left(\\frac{e^2}{4\\pi\\varepsilon_0m_e}\\right)^2\\frac{\\pi}{2b^3v}\\approx5.7\\cdot10^{-25}\\ \\mathrm{J}\\approx3.6\\cdot10^{-6}\\ \\mathrm{eV}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kulon maydoni: $E=\\frac{q}{4\\pi\\varepsilon_0r^2}$",
+    "ru": "Поле Кулона: $E=\\frac{q}{4\\pi\\varepsilon_0r^2}$",
+    "en": "Coulomb field: $E=\\frac{q}{4\\pi\\varepsilon_0r^2}$"
+   },
+   {
+    "uz": "Larmor formulasi: $\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}$",
+    "ru": "Формула Лармора: $\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}$",
+    "en": "Larmor formula: $\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}$"
+   },
+   {
+    "uz": "Integral: $\\int_{-\\infty}^{\\infty}\\frac{dt}{\\left(b^2+v^2t^2\\right)^2}=\\frac{\\pi}{2b^3v}$",
+    "ru": "Интеграл: $\\int_{-\\infty}^{\\infty}\\frac{dt}{\\left(b^2+v^2t^2\\right)^2}=\\frac{\\pi}{2b^3v}$",
+    "en": "Integral: $\\int_{-\\infty}^{\\infty}\\frac{dt}{\\left(b^2+v^2t^2\\right)^2}=\\frac{\\pi}{2b^3v}$"
+   }
+  ],
+  "basis": {
+   "uz": "Uchib o'tishdagi nurlanish",
+   "ru": "Излучение при пролёте",
+   "en": "Radiation during a flyby"
+  },
+  "answer": "a_{max}\\approx2.5\\cdot10^{22}\\ \\mathrm{m/s^2};\\ W\\approx5.7\\cdot10^{-25}\\ \\mathrm{J}\\approx3.6\\cdot10^{-6}\\ \\mathrm{eV}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "Irodov, «Problems in General Physics», 4.214-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L23-S17",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Qutblanmagan yorug'lik erkin elektronlarda sochiladi. $90^\\circ$ va $0^\\circ$ burchak ostida sochilgan yorug'lik intensivliklari nisbatini, $60^\\circ$ va $90^\\circ$ dagi qutblanish darajasini toping. $90^\\circ$ da sochilgan yorug'likda $\\vec E$ qanday yo'nalgan?",
+   "ru": "Неполяризованный свет рассеивается на свободных электронах. Найдите отношение интенсивностей света, рассеянного под углами $90^\\circ$ и $0^\\circ$, и степень поляризации при $60^\\circ$ и $90^\\circ$. Как направлено $\\vec E$ в свете, рассеянном под $90^\\circ$?",
+   "en": "Unpolarized light is scattered by free electrons. Find the ratio of the intensities of light scattered at $90^\\circ$ and $0^\\circ$, and the degree of polarization at $60^\\circ$ and $90^\\circ$. How is $\\vec E$ directed in the light scattered at $90^\\circ$?"
+  },
+  "figure": "figures/B2-L23-S17.png",
+  "solution": {
+   "uz": [
+    "Tushayotgan yorug'likni ikki o'zaro tik qutblanishga ajratamiz: biri sochilish tekisligiga tik (har doim to'liq ko'rinadi), ikkinchisi tekislikda ($\\cos^2\\theta$ ulushi ko'rinadi): $$I\\left(\\theta\\right)\\propto\\frac{1+\\cos^2\\theta}{2},\\qquad \\frac{I\\left(90^\\circ\\right)}{I\\left(0\\right)}=\\frac{1}{2}$$",
+    "Qutblanish darajasi: $$\\Pi\\left(60^\\circ\\right)=\\frac{0.75}{1.25}=0.6,\\qquad \\Pi\\left(90^\\circ\\right)=1$$",
+    "$90^\\circ$ da faqat sochilish tekisligiga tik tebranishlar ko'rinadi: $$\\vec E\\perp\\left(\\vec n_0,\\vec n\\right)$$"
+   ],
+   "ru": [
+    "Разложим падающий свет на две взаимно перпендикулярные поляризации: одна перпендикулярна плоскости рассеяния (видна всегда полностью), другая — в плоскости (видна доля $\\cos^2\\theta$): $$I\\left(\\theta\\right)\\propto\\frac{1+\\cos^2\\theta}{2},\\qquad \\frac{I\\left(90^\\circ\\right)}{I\\left(0\\right)}=\\frac{1}{2}$$",
+    "Степень поляризации: $$\\Pi\\left(60^\\circ\\right)=\\frac{0.75}{1.25}=0.6,\\qquad \\Pi\\left(90^\\circ\\right)=1$$",
+    "При $90^\\circ$ видны только колебания, перпендикулярные плоскости рассеяния: $$\\vec E\\perp\\left(\\vec n_0,\\vec n\\right)$$"
+   ],
+   "en": [
+    "Split the incident light into two mutually perpendicular polarizations: one perpendicular to the scattering plane (always fully seen), the other in the plane (the fraction $\\cos^2\\theta$ is seen): $$I\\left(\\theta\\right)\\propto\\frac{1+\\cos^2\\theta}{2},\\qquad \\frac{I\\left(90^\\circ\\right)}{I\\left(0\\right)}=\\frac{1}{2}$$",
+    "The degree of polarization: $$\\Pi\\left(60^\\circ\\right)=\\frac{0.75}{1.25}=0.6,\\qquad \\Pi\\left(90^\\circ\\right)=1$$",
+    "At $90^\\circ$ only oscillations perpendicular to the scattering plane are seen: $$\\vec E\\perp\\left(\\vec n_0,\\vec n\\right)$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sochilgan yorug'lik: $I\\propto\\frac{1+\\cos^2\\theta}{2}$, $\\Pi=\\frac{\\sin^2\\theta}{1+\\cos^2\\theta}$",
+    "ru": "Рассеянный свет: $I\\propto\\frac{1+\\cos^2\\theta}{2}$, $\\Pi=\\frac{\\sin^2\\theta}{1+\\cos^2\\theta}$",
+    "en": "Scattered light: $I\\propto\\frac{1+\\cos^2\\theta}{2}$, $\\Pi=\\frac{\\sin^2\\theta}{1+\\cos^2\\theta}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Sochilgan yorug'likning qutblanishi",
+   "ru": "Поляризация рассеянного света",
+   "en": "Polarization of scattered light"
+  },
+  "answer": "\\frac{1}{2};\\ \\Pi\\left(60^\\circ\\right)=0.6;\\ \\Pi\\left(90^\\circ\\right)=1;\\ \\vec E\\perp\\left(\\vec n_0,\\vec n\\right)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L23, qutblanish)"
+ },
+ {
+  "id": "B2-L23-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Chiziqli tezlatkichda elektronlar $20\\ \\mathrm{MV/m}$ maydon bilan tezlatiladi, elektron tezligi $c$ ga yaqin. Nurlanish quvvati elektron energiyasiga bog'liqmi? Uni toping va maydondan olinayotgan energiya tezligi bilan solishtiring.",
+   "ru": "В линейном ускорителе электроны ускоряются полем $20\\ \\mathrm{MV/m}$, скорость электрона близка к $c$. Зависит ли мощность излучения от энергии электрона? Найдите её и сравните со скоростью получения энергии от поля.",
+   "en": "In a linear accelerator electrons are accelerated by a field of $20\\ \\mathrm{MV/m}$, the electron speed being close to $c$. Does the radiated power depend on the electron's energy? Find it and compare it with the rate at which energy is gained from the field."
+  },
+  "figure": "figures/B2-L23-S18.png",
+  "solution": {
+   "uz": [
+    "Tezlanish tezlikka parallel; kuch $F=eE=\\gamma^3m_ea$: $$\\gamma^6a^2=\\frac{F^2}{m_e^2}$$",
+    "Lenar formulasi — energiyaga bog'liq emas: $$\\mathcal P=\\frac{e^2\\gamma^6a^2}{6\\pi\\varepsilon_0c^3}=\\frac{e^4E^2}{6\\pi\\varepsilon_0m_e^2c^3}\\approx7.0\\cdot10^{-17}\\ \\mathrm{W}$$",
+    "Energiya olish tezligi: $$\\frac{dK}{dt}=eEc\\approx9.6\\cdot10^{-4}\\ \\mathrm{W},\\qquad \\frac{\\mathcal P}{eEc}\\approx7\\cdot10^{-14}$$"
+   ],
+   "ru": [
+    "Ускорение параллельно скорости; сила $F=eE=\\gamma^3m_ea$: $$\\gamma^6a^2=\\frac{F^2}{m_e^2}$$",
+    "Формула Льенара — от энергии не зависит: $$\\mathcal P=\\frac{e^2\\gamma^6a^2}{6\\pi\\varepsilon_0c^3}=\\frac{e^4E^2}{6\\pi\\varepsilon_0m_e^2c^3}\\approx7.0\\cdot10^{-17}\\ \\mathrm{W}$$",
+    "Скорость получения энергии: $$\\frac{dK}{dt}=eEc\\approx9.6\\cdot10^{-4}\\ \\mathrm{W},\\qquad \\frac{\\mathcal P}{eEc}\\approx7\\cdot10^{-14}$$"
+   ],
+   "en": [
+    "The acceleration is parallel to the velocity; the force is $F=eE=\\gamma^3m_ea$: $$\\gamma^6a^2=\\frac{F^2}{m_e^2}$$",
+    "The Liénard formula — independent of the energy: $$\\mathcal P=\\frac{e^2\\gamma^6a^2}{6\\pi\\varepsilon_0c^3}=\\frac{e^4E^2}{6\\pi\\varepsilon_0m_e^2c^3}\\approx7.0\\cdot10^{-17}\\ \\mathrm{W}$$",
+    "The rate of energy gain: $$\\frac{dK}{dt}=eEc\\approx9.6\\cdot10^{-4}\\ \\mathrm{W},\\qquad \\frac{\\mathcal P}{eEc}\\approx7\\cdot10^{-14}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Chiziqli harakatda kuch: $F=\\gamma^3ma$",
+    "ru": "Сила при прямолинейном движении: $F=\\gamma^3ma$",
+    "en": "Force in linear motion: $F=\\gamma^3ma$"
+   },
+   {
+    "uz": "Lenar formulasi: $\\vec v\\parallel\\vec a:\\ \\mathcal P=\\frac{q^2\\gamma^6a^2}{6\\pi\\varepsilon_0c^3}$",
+    "ru": "Формула Льенара: $\\vec v\\parallel\\vec a:\\ \\mathcal P=\\frac{q^2\\gamma^6a^2}{6\\pi\\varepsilon_0c^3}$",
+    "en": "Liénard formula: $\\vec v\\parallel\\vec a:\\ \\mathcal P=\\frac{q^2\\gamma^6a^2}{6\\pi\\varepsilon_0c^3}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Chiziqli tezlatkich",
+   "ru": "Линейный ускоритель",
+   "en": "A linear accelerator"
+  },
+  "answer": "\\mathcal P\\approx7.0\\cdot10^{-17}\\ \\mathrm{W};\\ \\frac{\\mathcal P}{eEc}\\approx7\\cdot10^{-14}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L23, chiziqli tezlatkich)"
+ }
+]

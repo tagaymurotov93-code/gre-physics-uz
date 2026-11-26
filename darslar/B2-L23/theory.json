@@ -1,0 +1,785 @@
+[
+ {
+  "t": "h1",
+  "uz": "Nurlanish (Radiation)",
+  "ru": "Излучение",
+  "en": "Radiation"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz qaysi zaryadlar va toklar nurlanishini va nima uchun nurlanish maydoni $\\frac{1}{r}$ kabi kamayishini tushuntirasiz; Larmor formulasi bilan tezlanuvchi zaryadning nurlanish quvvatini hisoblaysiz; elektr va magnit dipol nurlanishining maydoni, yo'nalganlik diagrammasi va quvvatini topasiz; antennaning nurlanish qarshiligini, yer ustidagi antenna va antennalar massivini hisoblaysiz; radiatsion so'nish, chiziqning tabiiy kengligi va klassik atom muammosini baholaysiz; Tomson va Reley sochilishini, osmonning ko'kligi va sochilgan yorug'likning qutblanishini tushuntirasiz; siklotron, sinxrotron va tormozlanish nurlanishini hisoblaysiz.",
+  "ru": "**Цель.** После урока вы будете объяснять, какие заряды и токи излучают и почему поле излучения убывает как $\\frac{1}{r}$; вычислять по формуле Лармора мощность излучения ускоренного заряда; находить поле, диаграмму направленности и мощность электрического и магнитного дипольного излучения; рассчитывать сопротивление излучения антенны, антенну над землёй и антенные решётки; оценивать радиационное затухание, естественную ширину линии и проблему классического атома; объяснять томсоновское и рэлеевское рассеяние, голубой цвет неба и поляризацию рассеянного света; рассчитывать циклотронное, синхротронное и тормозное излучение.",
+  "en": "**Goal.** After this lesson you will explain which charges and currents radiate and why the radiation field falls off as $\\frac{1}{r}$; compute the radiated power of an accelerated charge with the Larmor formula; find the field, the radiation pattern and the power of electric and magnetic dipole radiation; calculate the radiation resistance of an antenna, an antenna above the ground and antenna arrays; estimate radiation damping, the natural linewidth and the problem of the classical atom; explain Thomson and Rayleigh scattering, the blue colour of the sky and the polarization of scattered light; and calculate cyclotron, synchrotron and bremsstrahlung radiation."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L20 da Maksvell tenglamalaridan elektromagnit to'lqinlar mavjudligini, B2-L21 da to'lqin energiyasi va Poynting vektorini ko'rdik. Lekin to'lqin qayerdan paydo bo'ladi? Bu darsda manbaga qaytamiz: to'lqinni faqat **tezlanuvchi zaryad (accelerated charge)** chiqaradi. Bitta formula — Larmor formulasi — antennalar, atomlar, osmon rangi, rentgen trubkasi va zarralar tezlatkichlarini tushuntiradi. GRE da bu mavzudan 1–2 savol bo'ladi: Larmor formulasining masshtablari, dipol nurlanishining $\\sin^2\\theta$ taqsimoti va $\\omega^4$ bog'lanishi, sochilish, magnit dipol nurlanishi.",
+  "ru": "В B2-L20 мы увидели из уравнений Максвелла, что существуют электромагнитные волны, в B2-L21 — энергию волны и вектор Пойнтинга. Но откуда берётся волна? На этом уроке мы возвращаемся к источнику: волну испускает только **ускоренный заряд (accelerated charge)**. Одна формула — формула Лармора — объясняет антенны, атомы, цвет неба, рентгеновскую трубку и ускорители частиц. На GRE по этой теме бывает 1–2 вопроса: масштабные зависимости формулы Лармора, распределение $\\sin^2\\theta$ и зависимость $\\omega^4$ дипольного излучения, рассеяние, магнитное дипольное излучение.",
+  "en": "In B2-L20 we saw from Maxwell's equations that electromagnetic waves exist, and in B2-L21 we studied the energy of a wave and the Poynting vector. But where does a wave come from? In this lesson we return to the source: a wave is emitted only by an **accelerated charge**. A single formula, the Larmor formula, explains antennas, atoms, the colour of the sky, the X-ray tube and particle accelerators. The GRE usually has 1–2 questions on this topic: the scalings of the Larmor formula, the $\\sin^2\\theta$ distribution and the $\\omega^4$ dependence of dipole radiation, scattering, and magnetic dipole radiation."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Nurlanish nima va kechikish",
+  "ru": "1. Что такое излучение и запаздывание",
+  "en": "1. What radiation is, and retardation"
+ },
+ {
+  "t": "li",
+  "uz": "**Nurlanish ta'rifi.** Manbani radiusi $r$ bo'lgan katta sfera bilan o'raymiz va sferadan chiqayotgan energiya oqimini hisoblaymiz. Agar $r\\to\\infty$ da bu quvvat nolga intilmasa, energiya manbadan butunlay ajralib, cheksizlikka ketadi — buni **nurlanish (radiation)** deymiz. Sfera yuzi $r^2$ kabi o'sadi, demak nurlanish bo'lishi uchun $\\vec S$ kamida $\\frac{1}{r^2}$ kabi, ya'ni $\\vec E$ va $\\vec B$ kamida $\\frac{1}{r}$ kabi kamayishi kerak.",
+  "ru": "**Определение излучения.** Окружим источник большой сферой радиуса $r$ и найдём поток энергии, выходящий через неё. Если при $r\\to\\infty$ эта мощность не стремится к нулю, энергия полностью отрывается от источника и уходит на бесконечность — это и называется **излучением (radiation)**. Площадь сферы растёт как $r^2$, значит, для излучения $\\vec S$ должен убывать не быстрее $\\frac{1}{r^2}$, то есть $\\vec E$ и $\\vec B$ — не быстрее $\\frac{1}{r}$.",
+  "en": "**Definition of radiation.** Surround the source with a large sphere of radius $r$ and compute the energy flux leaving it. If this power does not go to zero as $r\\to\\infty$, energy detaches completely from the source and escapes to infinity — this is what we call **radiation**. The area of the sphere grows as $r^2$, so for radiation $\\vec S$ must fall off no faster than $\\frac{1}{r^2}$, that is, $\\vec E$ and $\\vec B$ no faster than $\\frac{1}{r}$."
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal P=\\lim_{r\\to\\infty}\\oint\\vec S\\cdot d\\vec A,\\qquad \\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B"
+ },
+ {
+  "t": "li",
+  "uz": "**Kim nurlanmaydi.** Tinch zaryadning maydoni $\\frac{1}{r^2}$ kabi kamayadi, magnit maydoni yo'q — nurlanish yo'q. O'zgarmas tok ham nurlanmaydi: $\\vec E$ va $\\vec B$ statik, $\\frac{1}{r^2}$ kabi, va $\\vec S\\propto\\frac{1}{r^4}$ — sferadan oqim $\\frac{1}{r^2}$ kabi nolga ketadi. Tekis harakatlanuvchi zaryad ham nurlanmaydi: uning bilan birga harakatlanuvchi sanoq sistemasida zaryad tinch, nisbiylik prinsipi bo'yicha esa nurlanish bir sistemada bor, boshqasida yo'q bo'lishi mumkin emas. Demak nurlanishning manbai — **tezlanish**.",
+  "ru": "**Кто не излучает.** Поле покоящегося заряда убывает как $\\frac{1}{r^2}$, магнитного поля нет — излучения нет. Постоянный ток тоже не излучает: $\\vec E$ и $\\vec B$ статические, убывают как $\\frac{1}{r^2}$, и $\\vec S\\propto\\frac{1}{r^4}$ — поток через сферу стремится к нулю как $\\frac{1}{r^2}$. Равномерно движущийся заряд также не излучает: в системе отсчёта, движущейся вместе с ним, заряд покоится, а по принципу относительности излучение не может быть в одной системе и отсутствовать в другой. Следовательно, источник излучения — **ускорение**.",
+  "en": "**Who does not radiate.** The field of a charge at rest falls off as $\\frac{1}{r^2}$ and there is no magnetic field — no radiation. A steady current does not radiate either: $\\vec E$ and $\\vec B$ are static, fall off as $\\frac{1}{r^2}$, and $\\vec S\\propto\\frac{1}{r^4}$ — the flux through the sphere goes to zero as $\\frac{1}{r^2}$. A uniformly moving charge does not radiate either: in the frame moving with it the charge is at rest, and by the principle of relativity radiation cannot be present in one frame and absent in another. Hence the source of radiation is **acceleration**."
+ },
+ {
+  "t": "li",
+  "uz": "**Kechikish (retardation).** Elektromagnit ta'sir cheksiz tez emas, $c$ tezlik bilan tarqaladi. Shuning uchun $r$ masofadagi nuqtada $t$ paytdagi maydon manbaning hozirgi holatiga emas, balki oldingi **kechikkan vaqtdagi (retarded time)** $t'$ holatiga bog'liq. B2-L20 dagi potensiallar uchun bu **kechikuvchi potensiallar (retarded potentials)** ni beradi: statik formulalardagi zaryad va tok zichligi kechikkan vaqtda olinadi.",
+  "ru": "**Запаздывание (retardation).** Электромагнитное взаимодействие распространяется не мгновенно, а со скоростью $c$. Поэтому поле в точке на расстоянии $r$ в момент $t$ зависит не от нынешнего состояния источника, а от его состояния в более ранний **момент запаздывания (retarded time)** $t'$. Для потенциалов из B2-L20 это даёт **запаздывающие потенциалы (retarded potentials)**: плотности заряда и тока в статических формулах берутся в момент запаздывания.",
+  "en": "**Retardation.** The electromagnetic interaction does not act instantaneously; it propagates at speed $c$. So the field at a point a distance $r$ away at time $t$ depends not on the present state of the source but on its state at an earlier **retarded time** $t'$. For the potentials of B2-L20 this gives the **retarded potentials**: the charge and current densities in the static formulas are taken at the retarded time."
+ },
+ {
+  "t": "m",
+  "m": "t'=t-\\frac{\\left|\\vec r-\\vec r\\,'\\right|}{c},\\qquad \\varphi\\left(\\vec r,t\\right)=\\frac{1}{4\\pi\\varepsilon_0}\\int\\frac{\\rho\\left(\\vec r\\,',t'\\right)}{\\left|\\vec r-\\vec r\\,'\\right|}dV',\\qquad \\vec A\\left(\\vec r,t\\right)=\\frac{\\mu_0}{4\\pi}\\int\\frac{\\vec J\\left(\\vec r\\,',t'\\right)}{\\left|\\vec r-\\vec r\\,'\\right|}dV'"
+ },
+ {
+  "t": "li",
+  "uz": "**Yaqin va to'lqin zonalari.** Manba o'lchami $d$ to'lqin uzunligidan kichik bo'lsin. Masofani $\\frac{\\lambda}{2\\pi}=\\frac{c}{\\omega}$ bilan solishtiramiz. **Yaqin zonada (near zone)** $r\\ll\\frac{\\lambda}{2\\pi}$ kechikish sezilmaydi: maydon statik formulalar bilan, faqat zaryad va tokning shu paytdagi qiymatlari bilan hisoblanadi; bu yerda energiya asosan manba yonida «tebranib» turadi. **To'lqin (uzoq) zonasida (wave zone, far zone)** $r\\gg\\frac{\\lambda}{2\\pi}$ maydonning $\\frac{1}{r}$ kabi qismi ustun keladi: kichik sohada u B2-L21 dagi yassi to'lqinga o'xshaydi — $\\vec E$, $\\vec B$ va $\\vec n$ o'zaro tik, $E=cB$.",
+  "ru": "**Ближняя и волновая зоны.** Пусть размер источника $d$ меньше длины волны. Сравним расстояние с $\\frac{\\lambda}{2\\pi}=\\frac{c}{\\omega}$. В **ближней зоне (near zone)** $r\\ll\\frac{\\lambda}{2\\pi}$ запаздывание незаметно: поле вычисляется по статическим формулам, только с мгновенными значениями заряда и тока; здесь энергия в основном «колеблется» около источника. В **волновой (дальней) зоне (wave zone, far zone)** $r\\gg\\frac{\\lambda}{2\\pi}$ преобладает часть поля, убывающая как $\\frac{1}{r}$: в малой области она похожа на плоскую волну из B2-L21 — $\\vec E$, $\\vec B$ и $\\vec n$ взаимно перпендикулярны, $E=cB$.",
+  "en": "**Near and wave zones.** Let the size of the source $d$ be smaller than the wavelength. Compare the distance with $\\frac{\\lambda}{2\\pi}=\\frac{c}{\\omega}$. In the **near zone** $r\\ll\\frac{\\lambda}{2\\pi}$ retardation is negligible: the field is computed from the static formulas, only with the instantaneous values of charge and current; here the energy mostly \"sloshes\" back and forth near the source. In the **wave (far) zone** $r\\gg\\frac{\\lambda}{2\\pi}$ the part of the field falling off as $\\frac{1}{r}$ dominates: in a small region it looks like the plane wave of B2-L21 — $\\vec E$, $\\vec B$ and $\\vec n$ are mutually perpendicular and $E=cB$."
+ },
+ {
+  "t": "m",
+  "m": "r\\ll\\frac{\\lambda}{2\\pi}=\\frac{c}{\\omega},\\qquad r\\gg\\frac{\\lambda}{2\\pi}:\\quad \\vec E\\perp\\vec B\\perp\\vec n,\\quad E=cB"
+ },
+ {
+  "t": "h2",
+  "uz": "2. Tezlanuvchi zaryadning maydoni",
+  "ru": "2. Поле ускоренного заряда",
+  "en": "2. The field of an accelerated charge"
+ },
+ {
+  "t": "li",
+  "uz": "**Pursell mulohazasi ([[F01]]).** Zaryad $q$ tinch turgan edi; $t=0$ da qisqa $\\Delta t$ vaqt ichida u kichik $v\\ll c$ tezlikka erishdi va tekis harakatlana boshladi. $t\\gg\\Delta t$ paytda maydon qanday? Radiusi $ct$ dan katta sfera tashqarisiga «zaryad qo'zg'aldi» degan xabar hali yetmagan — u yerda maydon zaryadning eski o'rnidan chiqadigan radial chiziqlar. Radiusi $c\\left(t-\\Delta t\\right)$ dan kichik sfera ichida maydon harakatlanayotgan zaryadning hozirgi o'rnidan chiqadi. Qalinligi $c\\,\\Delta t$ bo'lgan yupqa qatlamda maydon chiziqlari uzilmasligi kerak (Gauss teoremasi), shuning uchun ular **siniq (kink)** hosil qilib ulanadi.",
+  "ru": "**Рассуждение Парселла ([[F01]]).** Заряд $q$ покоился; при $t=0$ за короткое время $\\Delta t$ он приобрёл малую скорость $v\\ll c$ и стал двигаться равномерно. Каково поле в момент $t\\gg\\Delta t$? За пределы сферы радиуса $ct$ весть «заряд сдвинулся» ещё не дошла — там поле состоит из радиальных линий, выходящих из старого положения заряда. Внутри сферы радиуса $c\\left(t-\\Delta t\\right)$ поле выходит из нынешнего положения движущегося заряда. В тонком слое толщиной $c\\,\\Delta t$ линии поля не могут обрываться (теорема Гаусса), поэтому они соединяются, образуя **излом (kink)**.",
+  "en": "**Purcell's argument ([[F01]]).** A charge $q$ was at rest; at $t=0$, within a short time $\\Delta t$, it acquired a small speed $v\\ll c$ and then moved uniformly. What is the field at time $t\\gg\\Delta t$? The news \"the charge has moved\" has not yet reached beyond the sphere of radius $ct$ — there the field consists of radial lines from the old position of the charge. Inside the sphere of radius $c\\left(t-\\Delta t\\right)$ the field comes from the present position of the moving charge. In the thin shell of thickness $c\\,\\Delta t$ the field lines cannot break (Gauss's law), so they join up, forming a **kink**."
+ },
+ {
+  "t": "li",
+  "uz": "**Siniqdagi ko'ndalang maydon.** $\\theta$ burchak ostidagi chiziqni olaylik. Ichki va tashqi chiziqlar bir-biridan ko'ndalang yo'nalishda $vt\\sin\\theta$ ga siljigan, qatlam qalinligi esa $c\\,\\Delta t$. Siniqda maydonning ko'ndalang va radial tashkil etuvchilari nisbati shu siljishlar nisbatiga teng. $a=\\frac{v}{\\Delta t}$ va $r=ct$ ekanini hisobga olsak, radial qism $\\frac{q}{4\\pi\\varepsilon_0r^2}$ dan **ko'ndalang nurlanish maydoni** kelib chiqadi:",
+  "ru": "**Поперечное поле в изломе.** Возьмём линию под углом $\\theta$. Внутренняя и внешняя линии смещены друг относительно друга в поперечном направлении на $vt\\sin\\theta$, а толщина слоя равна $c\\,\\Delta t$. В изломе отношение поперечной и радиальной составляющих поля равно отношению этих смещений. Учитывая $a=\\frac{v}{\\Delta t}$ и $r=ct$, из радиальной части $\\frac{q}{4\\pi\\varepsilon_0r^2}$ получаем **поперечное поле излучения**:",
+  "en": "**The transverse field in the kink.** Take the line at angle $\\theta$. The inner and outer lines are displaced relative to each other in the transverse direction by $vt\\sin\\theta$, while the thickness of the shell is $c\\,\\Delta t$. In the kink the ratio of the transverse to the radial component of the field equals the ratio of these displacements. Using $a=\\frac{v}{\\Delta t}$ and $r=ct$, the radial part $\\frac{q}{4\\pi\\varepsilon_0r^2}$ gives the **transverse radiation field**:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{E_\\perp}{E_r}=\\frac{vt\\sin\\theta}{c\\,\\Delta t}=\\frac{ar\\sin\\theta}{c^2}\\qquad\\Rightarrow\\qquad E_\\perp=\\frac{qa\\sin\\theta}{4\\pi\\varepsilon_0c^2r}"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L23-F01.png",
+   "ru": "figures/B2-L23-F01-ru.png",
+   "en": "figures/B2-L23-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Nurlanish maydonining xossalari.** 1) U $\\frac{1}{r}$ kabi kamayadi — uzoqda Kulon maydonidan ustun keladi; ular $r=\\frac{c^2}{a\\sin\\theta}$ da tenglashadi. 2) U tezlikka emas, **tezlanishga** proporsional. 3) $\\sin\\theta$ ko'paytuvchi: tezlanish yo'nalishida ($\\theta=0$) nurlanish yo'q, unga tik yo'nalishda eng katta. 4) $\\vec E_\\perp$ kuzatish yo'nalishi $\\vec n$ ga tik — to'lqin ko'ndalang; u $\\vec a$ va $\\vec n$ tekisligida yotadi va $\\vec a$ ning ko'ndalang proyeksiyasiga qarama-qarshi yo'nalgan. 5) Formulada $a$ kechikkan vaqtdagi tezlanish.",
+  "ru": "**Свойства поля излучения.** 1) Оно убывает как $\\frac{1}{r}$ — вдали преобладает над кулоновским полем; они сравниваются при $r=\\frac{c^2}{a\\sin\\theta}$. 2) Оно пропорционально не скорости, а **ускорению**. 3) Множитель $\\sin\\theta$: в направлении ускорения ($\\theta=0$) излучения нет, перпендикулярно ему — наибольшее. 4) $\\vec E_\\perp$ перпендикулярно направлению наблюдения $\\vec n$ — волна поперечная; оно лежит в плоскости $\\vec a$ и $\\vec n$ и направлено против поперечной проекции $\\vec a$. 5) В формуле $a$ — ускорение в момент запаздывания.",
+  "en": "**Properties of the radiation field.** 1) It falls off as $\\frac{1}{r}$ — far away it dominates the Coulomb field; the two are equal at $r=\\frac{c^2}{a\\sin\\theta}$. 2) It is proportional not to the velocity but to the **acceleration**. 3) The factor $\\sin\\theta$: along the acceleration ($\\theta=0$) there is no radiation, perpendicular to it the radiation is greatest. 4) $\\vec E_\\perp$ is perpendicular to the direction of observation $\\vec n$ — the wave is transverse; it lies in the plane of $\\vec a$ and $\\vec n$ and points opposite to the transverse projection of $\\vec a$. 5) In the formula $a$ is the acceleration at the retarded time."
+ },
+ {
+  "t": "m",
+  "m": "\\vec E=\\frac{q}{4\\pi\\varepsilon_0c^2r}\\,\\vec n\\times\\left(\\vec n\\times\\vec a\\right),\\qquad \\vec B=\\frac{1}{c}\\,\\vec n\\times\\vec E,\\qquad \\vec S=\\frac{E_\\perp^2}{\\mu_0c}\\,\\vec n"
+ },
+ {
+  "t": "li",
+  "uz": "**Nega yorug'lik ko'ndalang.** Zaryad yuqoriga-pastga tebransa, gorizontal yo'nalishda chiqqan nurlanishning $\\vec E$ vektori vertikal — tebranish chizig'iga parallel, tarqalish yo'nalishiga tik. Tebranish o'qi bo'ylab qarasangiz, $\\vec a$ ning ko'ndalang proyeksiyasi nol — bu yo'nalishda hech narsa ko'rinmaydi. Bu oddiy geometrik fakt keyinroq sochilgan yorug'likning qutblanishini tushuntiradi (10-bo'lim).",
+  "ru": "**Почему свет поперечный.** Если заряд колеблется вверх-вниз, то у излучения, вышедшего в горизонтальном направлении, вектор $\\vec E$ вертикален — параллелен линии колебаний и перпендикулярен направлению распространения. Если смотреть вдоль оси колебаний, поперечная проекция $\\vec a$ равна нулю — в этом направлении ничего не видно. Этот простой геометрический факт позже объяснит поляризацию рассеянного света (раздел 10).",
+  "en": "**Why light is transverse.** If a charge oscillates up and down, the radiation emitted horizontally has a vertical $\\vec E$ — parallel to the line of oscillation and perpendicular to the direction of propagation. Looking along the axis of oscillation, the transverse projection of $\\vec a$ is zero — nothing is seen in that direction. This simple geometric fact will later explain the polarization of scattered light (section 10)."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Larmor formulasi",
+  "ru": "3. Формула Лармора",
+  "en": "3. The Larmor formula"
+ },
+ {
+  "t": "li",
+  "uz": "**Burchak bo'yicha taqsimot.** To'lqin zonasida $\\vec E_\\perp$ va $\\vec B$ yassi to'lqindagidek bog'langan, shuning uchun $S=\\frac{E_\\perp^2}{\\mu_0c}=\\varepsilon_0cE_\\perp^2$. Kichik fazoviy burchak $d\\Omega$ ichiga chiqqan quvvat $dA=r^2d\\Omega$ yuzadan o'tadi; $r^2$ maydondagi $\\frac{1}{r^2}$ bilan qisqaradi — taqsimot masofaga bog'liq emas:",
+  "ru": "**Угловое распределение.** В волновой зоне $\\vec E_\\perp$ и $\\vec B$ связаны, как в плоской волне, поэтому $S=\\frac{E_\\perp^2}{\\mu_0c}=\\varepsilon_0cE_\\perp^2$. Мощность, излучённая в малый телесный угол $d\\Omega$, проходит через площадку $dA=r^2d\\Omega$; $r^2$ сокращается с $\\frac{1}{r^2}$ из поля — распределение не зависит от расстояния:",
+  "en": "**Angular distribution.** In the wave zone $\\vec E_\\perp$ and $\\vec B$ are related as in a plane wave, so $S=\\frac{E_\\perp^2}{\\mu_0c}=\\varepsilon_0cE_\\perp^2$. The power emitted into a small solid angle $d\\Omega$ passes through the area $dA=r^2d\\Omega$; the $r^2$ cancels the $\\frac{1}{r^2}$ from the field — the distribution does not depend on distance:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{d\\mathcal P}{d\\Omega}=Sr^2=\\frac{q^2a^2\\sin^2\\theta}{16\\pi^2\\varepsilon_0c^3}"
+ },
+ {
+  "t": "li",
+  "uz": "**To'liq quvvat.** Barcha yo'nalishlar bo'yicha integrallaymiz: $d\\Omega=2\\pi\\sin\\theta\\,d\\theta$ va $\\int_0^\\pi\\sin^3\\theta\\,d\\theta=\\frac{4}{3}$, demak $\\int\\sin^2\\theta\\,d\\Omega=\\frac{8\\pi}{3}$. Natija — **Larmor formulasi (Larmor formula)**, norelativistik ($v\\ll c$) zaryadning nurlanish quvvati:",
+  "ru": "**Полная мощность.** Проинтегрируем по всем направлениям: $d\\Omega=2\\pi\\sin\\theta\\,d\\theta$ и $\\int_0^\\pi\\sin^3\\theta\\,d\\theta=\\frac{4}{3}$, значит, $\\int\\sin^2\\theta\\,d\\Omega=\\frac{8\\pi}{3}$. Результат — **формула Лармора (Larmor formula)**, мощность излучения нерелятивистского ($v\\ll c$) заряда:",
+  "en": "**Total power.** Integrate over all directions: $d\\Omega=2\\pi\\sin\\theta\\,d\\theta$ and $\\int_0^\\pi\\sin^3\\theta\\,d\\theta=\\frac{4}{3}$, so $\\int\\sin^2\\theta\\,d\\Omega=\\frac{8\\pi}{3}$. The result is the **Larmor formula**, the radiated power of a non-relativistic ($v\\ll c$) charge:"
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}=\\frac{\\mu_0q^2a^2}{6\\pi c}"
+ },
+ {
+  "t": "li",
+  "uz": "**O'lchamlar tahlili (GRE usuli).** Formulani eslab qolmasangiz ham uning ko'rinishini tiklash mumkin. Quvvat faqat $\\frac{q^2}{\\varepsilon_0}$ (birligi $\\mathrm{J\\cdot m}$), $a$ va $c$ ga bog'lanishi mumkin; $\\mathrm{W}$ birligini beradigan yagona kombinatsiya $\\frac{q^2a^2}{\\varepsilon_0c^3}$. Raqamli ko'paytuvchi $\\frac{1}{6\\pi}$ ni GRE odatda so'ramaydi — masshtablar so'raladi: $\\mathcal P\\propto q^2$, $\\mathcal P\\propto a^2$, massaga bevosita bog'liq emas.",
+  "ru": "**Анализ размерностей (приём для GRE).** Даже если вы не помните формулу, её вид можно восстановить. Мощность может зависеть только от $\\frac{q^2}{\\varepsilon_0}$ (единица $\\mathrm{J\\cdot m}$), $a$ и $c$; единственная комбинация с единицей $\\mathrm{W}$ — это $\\frac{q^2a^2}{\\varepsilon_0c^3}$. Числовой множитель $\\frac{1}{6\\pi}$ на GRE обычно не спрашивают — спрашивают масштабные зависимости: $\\mathcal P\\propto q^2$, $\\mathcal P\\propto a^2$, от массы явно не зависит.",
+  "en": "**Dimensional analysis (a GRE technique).** Even if you do not remember the formula, you can reconstruct its form. The power can depend only on $\\frac{q^2}{\\varepsilon_0}$ (unit $\\mathrm{J\\cdot m}$), $a$ and $c$; the only combination with the unit $\\mathrm{W}$ is $\\frac{q^2a^2}{\\varepsilon_0c^3}$. The GRE usually does not ask for the numerical factor $\\frac{1}{6\\pi}$ — it asks for the scalings: $\\mathcal P\\propto q^2$, $\\mathcal P\\propto a^2$, no explicit dependence on mass."
+ },
+ {
+  "t": "li",
+  "uz": "**Nurlanish qachon muhim.** Elektron $a=9.8\\ \\mathrm{m/s^2}$ tezlanish bilan tushsa, $\\mathcal P\\approx5.5\\cdot10^{-52}\\ \\mathrm{W}$ — juda kichik. Umuman, tezlanish $\\Delta t$ vaqt davom etsa, nurlangan energiyaning kinetik energiya o'zgarishiga nisbati taxminan $\\frac{\\tau}{\\Delta t}$, bu yerda $\\tau=\\frac{q^2}{6\\pi\\varepsilon_0mc^3}$; elektron uchun $\\tau\\approx6.3\\cdot10^{-24}\\ \\mathrm{s}$. Shuning uchun oddiy sharoitda nurlanish harakatga deyarli ta'sir qilmaydi, lekin ko'p marta takrorlanadigan jarayonlarda (atom, tezlatkich halqasi) yoki juda katta tezlanishlarda u hal qiluvchi bo'ladi.",
+  "ru": "**Когда излучение важно.** Если электрон падает с ускорением $a=9.8\\ \\mathrm{m/s^2}$, то $\\mathcal P\\approx5.5\\cdot10^{-52}\\ \\mathrm{W}$ — очень мало. Вообще, если ускорение длится время $\\Delta t$, отношение излучённой энергии к изменению кинетической энергии примерно равно $\\frac{\\tau}{\\Delta t}$, где $\\tau=\\frac{q^2}{6\\pi\\varepsilon_0mc^3}$; для электрона $\\tau\\approx6.3\\cdot10^{-24}\\ \\mathrm{s}$. Поэтому в обычных условиях излучение почти не влияет на движение, но в многократно повторяющихся процессах (атом, кольцо ускорителя) или при очень больших ускорениях оно становится решающим.",
+  "en": "**When radiation matters.** If an electron falls with acceleration $a=9.8\\ \\mathrm{m/s^2}$, then $\\mathcal P\\approx5.5\\cdot10^{-52}\\ \\mathrm{W}$ — tiny. In general, if the acceleration lasts a time $\\Delta t$, the ratio of the radiated energy to the change in kinetic energy is roughly $\\frac{\\tau}{\\Delta t}$, where $\\tau=\\frac{q^2}{6\\pi\\varepsilon_0mc^3}$; for an electron $\\tau\\approx6.3\\cdot10^{-24}\\ \\mathrm{s}$. So under ordinary conditions radiation hardly affects the motion, but in processes repeated many times (an atom, an accelerator ring) or at very large accelerations it becomes decisive."
+ },
+ {
+  "t": "li",
+  "uz": "**Relativistik zaryad ([[F02]]).** Tezlik $c$ ga yaqin bo'lsa, Larmor formulasi **Lenar formulasi (Liénard formula)** ga almashadi, $\\gamma=\\frac{1}{\\sqrt{1-\\beta^2}}$. Ikki muhim xususiy hol: tezlanish tezlikka parallel bo'lsa (chiziqli tezlatkich) $\\mathcal P\\propto\\gamma^6a^2$, tik bo'lsa (aylana bo'ylab harakat) $\\mathcal P\\propto\\gamma^4a^2$. Taqsimot ham o'zgaradi: nurlanish harakat yo'nalishiga qarab egiladi. $\\vec v\\parallel\\vec a$ da burchak taqsimoti $\\frac{\\sin^2\\theta}{\\left(1-\\beta\\cos\\theta\\right)^5}$ kabi; $\\beta\\to1$ da nurlanish ochilish burchagi taxminan $\\frac{1}{\\gamma}$ bo'lgan tor konusga yig'iladi (**relativistik yo'nalganlik, beaming**).",
+  "ru": "**Релятивистский заряд ([[F02]]).** Если скорость близка к $c$, формула Лармора заменяется **формулой Льенара (Liénard formula)**, $\\gamma=\\frac{1}{\\sqrt{1-\\beta^2}}$. Два важных частных случая: если ускорение параллельно скорости (линейный ускоритель), $\\mathcal P\\propto\\gamma^6a^2$, если перпендикулярно (движение по окружности), $\\mathcal P\\propto\\gamma^4a^2$. Меняется и распределение: излучение наклоняется в сторону движения. При $\\vec v\\parallel\\vec a$ угловое распределение пропорционально $\\frac{\\sin^2\\theta}{\\left(1-\\beta\\cos\\theta\\right)^5}$; при $\\beta\\to1$ излучение собирается в узкий конус с углом раствора около $\\frac{1}{\\gamma}$ (**релятивистская направленность, beaming**).",
+  "en": "**A relativistic charge ([[F02]]).** If the speed is close to $c$, the Larmor formula is replaced by the **Liénard formula**, $\\gamma=\\frac{1}{\\sqrt{1-\\beta^2}}$. Two important special cases: if the acceleration is parallel to the velocity (a linear accelerator), $\\mathcal P\\propto\\gamma^6a^2$; if it is perpendicular (motion in a circle), $\\mathcal P\\propto\\gamma^4a^2$. The distribution changes too: the radiation tilts towards the direction of motion. For $\\vec v\\parallel\\vec a$ the angular distribution goes as $\\frac{\\sin^2\\theta}{\\left(1-\\beta\\cos\\theta\\right)^5}$; as $\\beta\\to1$ the radiation gathers into a narrow cone with an opening angle of about $\\frac{1}{\\gamma}$ (**relativistic beaming**)."
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal P=\\frac{q^2\\gamma^6}{6\\pi\\varepsilon_0c^3}\\left(a^2-\\frac{\\left|\\vec v\\times\\vec a\\right|^2}{c^2}\\right),\\qquad \\vec v\\parallel\\vec a:\\ \\gamma^6a^2,\\qquad \\vec v\\perp\\vec a:\\ \\gamma^4a^2"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L23-F02.png",
+   "ru": "figures/B2-L23-F02-ru.png",
+   "en": "figures/B2-L23-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Kuch orqali yozish.** Chiziqli tezlatkichda kuch $F=\\frac{dp}{dt}=\\gamma^3ma$, shuning uchun $\\gamma^6a^2=\\frac{F^2}{m^2}$: quvvat $\\frac{q^2F^2}{6\\pi\\varepsilon_0m^2c^3}$ — u energiyaga bog'liq emas. Aylana bo'ylab harakatda $F=\\gamma ma$, va $\\gamma^4a^2=\\frac{\\gamma^2F^2}{m^2}$ — energiya ortgan sari nurlanish keskin o'sadi. Shu sababli elektronlarni halqada emas, chiziqli tezlatkichda tezlatish qulayroq (11-bo'lim).",
+  "ru": "**Запись через силу.** В линейном ускорителе сила $F=\\frac{dp}{dt}=\\gamma^3ma$, поэтому $\\gamma^6a^2=\\frac{F^2}{m^2}$: мощность равна $\\frac{q^2F^2}{6\\pi\\varepsilon_0m^2c^3}$ — она не зависит от энергии. При движении по окружности $F=\\gamma ma$, и $\\gamma^4a^2=\\frac{\\gamma^2F^2}{m^2}$ — с ростом энергии излучение резко растёт. Поэтому электроны выгоднее ускорять не в кольце, а в линейном ускорителе (раздел 11).",
+  "en": "**Writing it in terms of force.** In a linear accelerator the force is $F=\\frac{dp}{dt}=\\gamma^3ma$, so $\\gamma^6a^2=\\frac{F^2}{m^2}$: the power is $\\frac{q^2F^2}{6\\pi\\varepsilon_0m^2c^3}$ — it does not depend on the energy. In circular motion $F=\\gamma ma$, and $\\gamma^4a^2=\\frac{\\gamma^2F^2}{m^2}$ — the radiation grows sharply as the energy increases. That is why it is better to accelerate electrons in a linear accelerator rather than in a ring (section 11)."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Tebranuvchi elektr dipol",
+  "ru": "4. Колеблющийся электрический диполь",
+  "en": "4. The oscillating electric dipole"
+ },
+ {
+  "t": "li",
+  "uz": "**Model.** Uzunligi $d\\ll\\lambda$ bo'lgan sistemada zaryadlar garmonik tebranadi va **elektr dipol momenti (electric dipole moment)** $p=p_0\\cos\\omega t$ bo'ladi — masalan, $q$ zaryad $x=x_0\\cos\\omega t$ qonun bilan tebransa, $p_0=qx_0$. Bu **Gerts dipoli (Hertzian dipole)** — har qanday kichik nurlatgichning asosiy modeli. Barcha zaryadlar o'lchami $\\lambda$ dan kichik sohada bo'lgani uchun kechikish farqlari sezilmaydi va maydon Larmor formulasidagi $q\\vec a$ o'rniga $\\ddot{\\vec p}=-\\omega^2\\vec p$ bilan yoziladi.",
+  "ru": "**Модель.** В системе размером $d\\ll\\lambda$ заряды гармонически колеблются, и **электрический дипольный момент (electric dipole moment)** равен $p=p_0\\cos\\omega t$ — например, если заряд $q$ колеблется по закону $x=x_0\\cos\\omega t$, то $p_0=qx_0$. Это **диполь Герца (Hertzian dipole)** — основная модель любого малого излучателя. Поскольку все заряды находятся в области размером меньше $\\lambda$, различия в запаздывании незаметны, и поле записывается через $\\ddot{\\vec p}=-\\omega^2\\vec p$ вместо $q\\vec a$ в формуле Лармора.",
+  "en": "**The model.** In a system of size $d\\ll\\lambda$ the charges oscillate harmonically and the **electric dipole moment** is $p=p_0\\cos\\omega t$ — for example, if a charge $q$ oscillates as $x=x_0\\cos\\omega t$, then $p_0=qx_0$. This is the **Hertzian dipole**, the basic model of any small radiator. Because all the charges lie in a region smaller than $\\lambda$, the differences in retardation are negligible, and the field is written with $\\ddot{\\vec p}=-\\omega^2\\vec p$ in place of $q\\vec a$ in the Larmor formula."
+ },
+ {
+  "t": "li",
+  "uz": "**To'lqin zonasidagi maydon.** $\\theta$ — dipol o'qi bilan kuzatish yo'nalishi orasidagi burchak. $\\vec E$ meridian bo'ylab ($\\theta$ ortadigan yo'nalishda), $\\vec B$ parallel (azimut) bo'ylab yo'nalgan; ikkalasi kechikkan vaqtga bog'liq:",
+  "ru": "**Поле в волновой зоне.** $\\theta$ — угол между осью диполя и направлением наблюдения. $\\vec E$ направлено по меридиану (в сторону возрастания $\\theta$), $\\vec B$ — по параллели (по азимуту); оба зависят от запаздывающего времени:",
+  "en": "**The field in the wave zone.** $\\theta$ is the angle between the dipole axis and the direction of observation. $\\vec E$ points along the meridian (in the direction of increasing $\\theta$) and $\\vec B$ along the parallel (in azimuth); both depend on the retarded time:"
+ },
+ {
+  "t": "m",
+  "m": "E_\\theta=-\\frac{\\mu_0p_0\\omega^2\\sin\\theta}{4\\pi r}\\cos\\omega\\left(t-\\frac{r}{c}\\right),\\qquad B_\\phi=\\frac{E_\\theta}{c}"
+ },
+ {
+  "t": "li",
+  "uz": "**Intensivlik va quvvat.** Vaqt bo'yicha o'rtacha $\\left\\langle\\cos^2\\right\\rangle=\\frac{1}{2}$. Intensivlik $\\sin^2\\theta$ va $\\frac{1}{r^2}$ ga, to'liq quvvat esa $\\omega^4$ ga proporsional. Larmor formulasidan ham shu natija chiqadi: $p=qx$ bo'lsa, $\\left\\langle a^2\\right\\rangle=\\frac{\\omega^4x_0^2}{2}$.",
+  "ru": "**Интенсивность и мощность.** Среднее по времени $\\left\\langle\\cos^2\\right\\rangle=\\frac{1}{2}$. Интенсивность пропорциональна $\\sin^2\\theta$ и $\\frac{1}{r^2}$, а полная мощность — $\\omega^4$. Тот же результат следует из формулы Лармора: если $p=qx$, то $\\left\\langle a^2\\right\\rangle=\\frac{\\omega^4x_0^2}{2}$.",
+  "en": "**Intensity and power.** The time average is $\\left\\langle\\cos^2\\right\\rangle=\\frac{1}{2}$. The intensity is proportional to $\\sin^2\\theta$ and $\\frac{1}{r^2}$, and the total power to $\\omega^4$. The same result follows from the Larmor formula: if $p=qx$, then $\\left\\langle a^2\\right\\rangle=\\frac{\\omega^4x_0^2}{2}$."
+ },
+ {
+  "t": "m",
+  "m": "\\left\\langle S\\right\\rangle=\\frac{\\mu_0p_0^2\\omega^4\\sin^2\\theta}{32\\pi^2cr^2},\\qquad \\left\\langle\\mathcal P\\right\\rangle=\\frac{\\mu_0p_0^2\\omega^4}{12\\pi c}=\\frac{p_0^2\\omega^4}{12\\pi\\varepsilon_0c^3}"
+ },
+ {
+  "t": "li",
+  "uz": "**Yo'nalganlik diagrammasi (radiation pattern).** Fazoda $\\left\\langle S\\right\\rangle\\left(\\theta\\right)$ «bublik» (tor) shaklida: dipol o'qi bo'ylab nurlanish yo'q, ekvator tekisligida eng katta. **Yo'nalganlik koeffitsiyenti (directivity)** $D$ — eng katta intensivlikning o'rtacha intensivlik $\\frac{\\mathcal P}{4\\pi r^2}$ ga nisbati; Gerts dipoli uchun $D=\\frac{3}{2}$. Nurlanish chiziqli qutblangan: $\\vec E$ dipol o'qi va kuzatish yo'nalishi yotgan tekislikda.",
+  "ru": "**Диаграмма направленности (radiation pattern).** В пространстве $\\left\\langle S\\right\\rangle\\left(\\theta\\right)$ имеет форму «бублика» (тора): вдоль оси диполя излучения нет, в экваториальной плоскости оно наибольшее. **Коэффициент направленного действия (directivity)** $D$ — отношение наибольшей интенсивности к средней $\\frac{\\mathcal P}{4\\pi r^2}$; для диполя Герца $D=\\frac{3}{2}$. Излучение линейно поляризовано: $\\vec E$ лежит в плоскости, содержащей ось диполя и направление наблюдения.",
+  "en": "**The radiation pattern.** In space $\\left\\langle S\\right\\rangle\\left(\\theta\\right)$ has the shape of a \"doughnut\" (a torus): there is no radiation along the dipole axis and the most in the equatorial plane. The **directivity** $D$ is the ratio of the greatest intensity to the average intensity $\\frac{\\mathcal P}{4\\pi r^2}$; for a Hertzian dipole $D=\\frac{3}{2}$. The radiation is linearly polarized: $\\vec E$ lies in the plane containing the dipole axis and the direction of observation."
+ },
+ {
+  "t": "m",
+  "m": "D=\\frac{\\left\\langle S\\right\\rangle_{max}}{\\frac{\\left\\langle\\mathcal P\\right\\rangle}{4\\pi r^2}}=\\frac{3}{2},\\qquad \\left\\langle S\\right\\rangle=\\left\\langle S\\right\\rangle_{max}\\sin^2\\theta"
+ },
+ {
+  "t": "li",
+  "uz": "**$\\omega^4$ ning ma'nosi.** Bir xil amplitudali dipolning quvvati chastotaning to'rtinchi darajasi bilan o'sadi: ikkita $\\omega$ maydonning tezlanishdan, yana ikkitasi — uning kvadratidan keladi. Shuning uchun past chastotali tizimlar (masalan, $50\\ \\mathrm{Hz}$ li elektr tarmoqlari) deyarli nurlanmaydi, molekulalar esa qisqa to'lqinli ko'k yorug'likni qizilga qaraganda kuchliroq sochadi (10-bo'lim).",
+  "ru": "**Смысл $\\omega^4$.** Мощность диполя с той же амплитудой растёт как четвёртая степень частоты: две $\\omega$ приходят в поле из ускорения, ещё две — из его квадрата. Поэтому низкочастотные системы (например, электросети на $50\\ \\mathrm{Hz}$) почти не излучают, а молекулы рассеивают коротковолновый синий свет сильнее, чем красный (раздел 10).",
+  "en": "**The meaning of $\\omega^4$.** The power of a dipole of the same amplitude grows as the fourth power of the frequency: two factors of $\\omega$ enter the field through the acceleration, and two more come from squaring it. That is why low-frequency systems (for example, $50\\ \\mathrm{Hz}$ power grids) hardly radiate at all, while molecules scatter short-wavelength blue light more strongly than red (section 10)."
+ },
+ {
+  "t": "li",
+  "uz": "**To'liq maydon va chiziqlarning uzilishi ([[F03]]).** Barcha masofalar uchun maydonda uch xil had bor: $\\frac{1}{r^3}$ — statik dipol maydoni (yaqin zona), $\\frac{1}{r^2}$ — induksion had, $\\frac{1}{r}$ — nurlanish. Ular $kr=1$, ya'ni $r=\\frac{\\lambda}{2\\pi}$ atrofida tenglashadi. Maydon chiziqlari $F=\\sin^2\\theta\\left(\\frac{\\cos\\xi}{r}+k\\sin\\xi\\right)=\\mathrm{const}$ chiziqlar bilan beriladi: yaqinda ular dipolga «bog'langan», $r\\approx\\frac{\\lambda}{4}$ atrofida uzilib, yopiq halqalar hosil qiladi va $c$ tezlik bilan uzoqlashadi — bu nurlangan to'lqin.",
+  "ru": "**Полное поле и отрыв линий ([[F03]]).** На всех расстояниях в поле есть три члена: $\\frac{1}{r^3}$ — поле статического диполя (ближняя зона), $\\frac{1}{r^2}$ — индукционный член, $\\frac{1}{r}$ — излучение. Они сравниваются около $kr=1$, то есть $r=\\frac{\\lambda}{2\\pi}$. Силовые линии задаются линиями $F=\\sin^2\\theta\\left(\\frac{\\cos\\xi}{r}+k\\sin\\xi\\right)=\\mathrm{const}$: вблизи они «привязаны» к диполю, около $r\\approx\\frac{\\lambda}{4}$ отрываются, образуют замкнутые петли и уходят со скоростью $c$ — это излучённая волна.",
+  "en": "**The full field and the detachment of lines ([[F03]]).** At all distances the field has three terms: $\\frac{1}{r^3}$ — the static dipole field (the near zone), $\\frac{1}{r^2}$ — the induction term, $\\frac{1}{r}$ — the radiation. They are comparable near $kr=1$, that is, $r=\\frac{\\lambda}{2\\pi}$. The field lines are given by the lines $F=\\sin^2\\theta\\left(\\frac{\\cos\\xi}{r}+k\\sin\\xi\\right)=\\mathrm{const}$: close in they are \"attached\" to the dipole, near $r\\approx\\frac{\\lambda}{4}$ they break off, form closed loops and move away at speed $c$ — this is the radiated wave."
+ },
+ {
+  "t": "m",
+  "m": "E_\\theta=\\frac{p_0\\sin\\theta}{4\\pi\\varepsilon_0}\\left(\\frac{\\cos\\xi}{r^3}+\\frac{k\\sin\\xi}{r^2}-\\frac{k^2\\cos\\xi}{r}\\right),\\qquad E_r=\\frac{p_0\\cos\\theta}{2\\pi\\varepsilon_0}\\left(\\frac{\\cos\\xi}{r^3}+\\frac{k\\sin\\xi}{r^2}\\right),\\qquad \\xi=kr-\\omega t"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L23-F03.png",
+   "ru": "figures/B2-L23-F03-ru.png",
+   "en": "figures/B2-L23-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Antenna va nurlanish qarshiligi",
+  "ru": "5. Антенна и сопротивление излучения",
+  "en": "5. Antennas and radiation resistance"
+ },
+ {
+  "t": "li",
+  "uz": "**Qisqa dipol antenna (short dipole antenna).** Ikki ingichka sterjendan iborat, umumiy uzunligi $l\\ll\\lambda$ bo'lgan antenna o'rtasidan generatorga ulangan; tok $I=I_0\\cos\\omega t$. Tok antenna bo'ylab bir xil bo'lsin (buning uchun uchlariga sig'im «qalpoqlari» o'rnatiladi). Uchlarda $\\pm Q$ zaryad yig'iladi, $\\frac{dQ}{dt}=I$ va $p=Ql$, demak $\\dot p=Il$ va dipol momenti amplitudasi tok orqali ifodalanadi. Uni 4-bo'limdagi quvvatga qo'yamiz:",
+  "ru": "**Короткая дипольная антенна (short dipole antenna).** Антенна из двух тонких стержней общей длиной $l\\ll\\lambda$ подключена посередине к генератору; ток $I=I_0\\cos\\omega t$. Пусть ток одинаков вдоль антенны (для этого на концах ставят ёмкостные «шапки»). На концах накапливаются заряды $\\pm Q$, $\\frac{dQ}{dt}=I$ и $p=Ql$, значит, $\\dot p=Il$, и амплитуда дипольного момента выражается через ток. Подставим её в мощность из раздела 4:",
+  "en": "**The short dipole antenna.** An antenna of two thin rods with total length $l\\ll\\lambda$ is connected at its middle to a generator; the current is $I=I_0\\cos\\omega t$. Let the current be the same along the antenna (for this, capacitive \"hats\" are fitted at the ends). Charges $\\pm Q$ build up at the ends, $\\frac{dQ}{dt}=I$ and $p=Ql$, so $\\dot p=Il$, and the amplitude of the dipole moment is expressed through the current. Substitute it into the power from section 4:"
+ },
+ {
+  "t": "m",
+  "m": "p_0=\\frac{I_0l}{\\omega},\\qquad \\left\\langle\\mathcal P\\right\\rangle=\\frac{\\mu_0I_0^2l^2\\omega^2}{12\\pi c}"
+ },
+ {
+  "t": "li",
+  "uz": "**Nurlanish qarshiligi (radiation resistance).** Quvvat $I_0^2$ ga proporsional — xuddi rezistordagidek. Shuning uchun $\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}I_0^2R_\\Sigma$ ko'rinishida yozamiz: $R_\\Sigma$ — tok amplitudasi bir xil bo'lganda antenna nurlatayotgan quvvatni issiqlik sifatida ajratadigan rezistorning qarshiligi. Generator uchun antenna xuddi shunday yuk; farqi shundaki, energiya qizdirishga emas, fazoga ketadi. $\\omega=\\frac{2\\pi c}{\\lambda}$ va $Z_0=\\mu_0c$ (B2-L21) bilan:",
+  "ru": "**Сопротивление излучения (radiation resistance).** Мощность пропорциональна $I_0^2$ — как в резисторе. Поэтому запишем $\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}I_0^2R_\\Sigma$: $R_\\Sigma$ — сопротивление резистора, который при той же амплитуде тока выделял бы в виде тепла мощность, излучаемую антенной. Для генератора антенна — именно такая нагрузка; разница в том, что энергия идёт не на нагрев, а в пространство. С $\\omega=\\frac{2\\pi c}{\\lambda}$ и $Z_0=\\mu_0c$ (B2-L21):",
+  "en": "**Radiation resistance.** The power is proportional to $I_0^2$ — just as in a resistor. So we write $\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}I_0^2R_\\Sigma$: $R_\\Sigma$ is the resistance of a resistor that, with the same current amplitude, would dissipate as heat the power the antenna radiates. For the generator the antenna is exactly such a load; the difference is that the energy goes not into heating but into space. With $\\omega=\\frac{2\\pi c}{\\lambda}$ and $Z_0=\\mu_0c$ (B2-L21):"
+ },
+ {
+  "t": "m",
+  "m": "\\left\\langle\\mathcal P\\right\\rangle=\\frac{1}{2}I_0^2R_\\Sigma,\\qquad R_\\Sigma=\\frac{2\\pi}{3}Z_0\\left(\\frac{l}{\\lambda}\\right)^2=80\\pi^2\\left(\\frac{l}{\\lambda}\\right)^2\\approx790\\left(\\frac{l}{\\lambda}\\right)^2\\ \\Omega"
+ },
+ {
+  "t": "li",
+  "uz": "**Haqiqiy qisqa antenna va FIK.** Uchlarida qalpoq bo'lmasa, tok uchlarda nolga tushadi va antenna bo'ylab taxminan chiziqli (uchburchak) taqsimlanadi. O'rtacha tok ikki baravar kichik, dipol momenti ham ikki baravar kichik, nurlanish qarshiligi esa to'rt baravar kichik bo'ladi. Qisqa antennaning $R_\\Sigma$ juda kichik va simlarning omik qarshiligi $r$ bilan raqobatlashadi: generator quvvatining faqat bir qismi nurlanadi. **FIK (efficiency)** $\\eta$ shu ulushdir.",
+  "ru": "**Реальная короткая антенна и КПД.** Если на концах нет «шапок», ток на концах падает до нуля и распределяется вдоль антенны примерно линейно (треугольником). Средний ток вдвое меньше, дипольный момент тоже вдвое меньше, а сопротивление излучения — в четыре раза меньше. У короткой антенны $R_\\Sigma$ очень мало и конкурирует с омическим сопротивлением проводов $r$: излучается лишь часть мощности генератора. **КПД (efficiency)** $\\eta$ — эта доля.",
+  "en": "**A real short antenna and efficiency.** Without end hats the current drops to zero at the ends and is distributed roughly linearly (as a triangle) along the antenna. The average current is half as large, the dipole moment is also halved, and the radiation resistance is four times smaller. A short antenna has a very small $R_\\Sigma$ that competes with the ohmic resistance $r$ of the wires: only part of the generator's power is radiated. The **efficiency** $\\eta$ is this fraction."
+ },
+ {
+  "t": "m",
+  "m": "R_\\Sigma'=20\\pi^2\\left(\\frac{l}{\\lambda}\\right)^2,\\qquad \\eta=\\frac{R_\\Sigma}{R_\\Sigma+r}"
+ },
+ {
+  "t": "li",
+  "uz": "**Yarim to'lqinli dipol (half-wave dipole) ([[F04]]).** $l=\\frac{\\lambda}{2}$ bo'lganda antennada tokning turg'un to'lqini hosil bo'ladi: $I\\left(z\\right)=I_0\\cos kz$, o'rtada eng katta, uchlarda nol. Antenna endi kichik emas, lekin uni ko'p kichik Gerts dipollariga bo'lib, maydonlarni fazalari bilan qo'shish mumkin. Natijada diagramma $\\sin^2\\theta$ dan biroz torroq, nurlanish qarshiligi taxminan $73\\ \\Omega$, yo'nalganlik $D\\approx1.64$. Shuning uchun televizor antennalari $75\\ \\Omega$ li koaksial kabelga yaxshi moslashadi.",
+  "ru": "**Полуволновой диполь (half-wave dipole) ([[F04]]).** При $l=\\frac{\\lambda}{2}$ в антенне образуется стоячая волна тока: $I\\left(z\\right)=I_0\\cos kz$, наибольший посередине и нулевой на концах. Антенна уже не мала, но её можно разбить на множество малых диполей Герца и сложить их поля с учётом фаз. В итоге диаграмма немного уже, чем $\\sin^2\\theta$, сопротивление излучения около $73\\ \\Omega$, направленность $D\\approx1.64$. Поэтому телевизионные антенны хорошо согласуются с коаксиальным кабелем на $75\\ \\Omega$.",
+  "en": "**The half-wave dipole ([[F04]]).** When $l=\\frac{\\lambda}{2}$ a standing wave of current forms in the antenna: $I\\left(z\\right)=I_0\\cos kz$, greatest at the middle and zero at the ends. The antenna is no longer small, but it can be split into many small Hertzian dipoles whose fields are added with their phases. As a result the pattern is slightly narrower than $\\sin^2\\theta$, the radiation resistance is about $73\\ \\Omega$ and the directivity is $D\\approx1.64$. That is why television antennas match a $75\\ \\Omega$ coaxial cable well."
+ },
+ {
+  "t": "m",
+  "m": "\\left\\langle S\\right\\rangle\\propto\\frac{\\cos^2\\left(\\frac{\\pi}{2}\\cos\\theta\\right)}{\\sin^2\\theta},\\qquad R_\\Sigma\\approx73\\ \\Omega,\\qquad D\\approx1.64"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L23-F04.png",
+   "ru": "figures/B2-L23-F04-ru.png",
+   "en": "figures/B2-L23-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Qabul qiluvchi antenna (receiving antenna).** O'zaro teoremaga ko'ra antenna qabul qilishda ham uzatishdagidek diagrammaga ega. To'lqin maydonida joylashgan qisqa sterjen bo'ylab $\\vec E$ ning proyeksiyasi EYuK hosil qiladi — sterjen $\\vec E$ ga parallel bo'lishi kerak. Kichik halqa esa Faradey qonuni bo'yicha ishlaydi: EYuK $\\vec B$ oqimining o'zgarishidan, ya'ni halqa tekisligi $\\vec B$ ga tik (manbaga yo'nalish halqa tekisligida yotadi) bo'lganda eng katta.",
+  "ru": "**Приёмная антенна (receiving antenna).** По теореме взаимности антенна при приёме имеет ту же диаграмму, что и при передаче. В поле волны проекция $\\vec E$ на короткий стержень создаёт ЭДС — стержень должен быть параллелен $\\vec E$. Малая рамка работает по закону Фарадея: ЭДС возникает из-за изменения потока $\\vec B$, то есть она наибольшая, когда плоскость рамки перпендикулярна $\\vec B$ (направление на источник лежит в плоскости рамки).",
+  "en": "**The receiving antenna.** By the reciprocity theorem an antenna has the same pattern for reception as for transmission. In the field of a wave, the projection of $\\vec E$ onto a short rod produces an emf — the rod should be parallel to $\\vec E$. A small loop works by Faraday's law: the emf comes from the changing flux of $\\vec B$, so it is greatest when the plane of the loop is perpendicular to $\\vec B$ (the direction to the source lies in the plane of the loop)."
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal E_0=E_0l,\\qquad \\mathcal E_0=\\omega B_0A"
+ },
+ {
+  "t": "h2",
+  "uz": "6. Yer ustidagi antenna va antennalar massivi",
+  "ru": "6. Антенна над землёй и антенные решётки",
+  "en": "6. An antenna above the ground and antenna arrays"
+ },
+ {
+  "t": "li",
+  "uz": "**Yer — o'tkazgich tekislik.** Uzun to'lqinlar uchun yer (yoki metall ekran) yaxshi o'tkazgich, va B2-L22 dagi tasvirlar usuli ishlaydi. Vertikal dipolning tasviri bir xil yo'nalgan ($p'_n=p_n$), shuning uchun balandligi $h$ bo'lgan vertikal **monopol (monopole)** yer bilan birga uzunligi $2h$ bo'lgan dipolga teng. Yer ustida maydon dipolnikidek, lekin energiya faqat yuqori yarim fazoga ketadi: bir xil tokda quvvat ikki baravar kichik va nurlanish qarshiligi ham ikki baravar kichik. Chorak to'lqinli monopol uchun $R_\\Sigma\\approx36.5\\ \\Omega$. Gorizontal dipolning tasviri esa qarama-qarshi yo'nalgan, shuning uchun yerga juda yaqin gorizontal antenna yomon nurlanadi.",
+  "ru": "**Земля — проводящая плоскость.** Для длинных волн земля (или металлический экран) — хороший проводник, и работает метод изображений из B2-L22. Изображение вертикального диполя направлено так же ($p'_n=p_n$), поэтому вертикальный **монополь (monopole)** высотой $h$ вместе с землёй эквивалентен диполю длиной $2h$. Над землёй поле такое же, как у диполя, но энергия уходит только в верхнее полупространство: при том же токе мощность вдвое меньше, и сопротивление излучения тоже вдвое меньше. Для четвертьволнового монополя $R_\\Sigma\\approx36.5\\ \\Omega$. Изображение горизонтального диполя направлено противоположно, поэтому горизонтальная антенна очень близко к земле излучает плохо.",
+  "en": "**The ground as a conducting plane.** For long waves the ground (or a metal screen) is a good conductor, and the method of images from B2-L22 works. The image of a vertical dipole points the same way ($p'_n=p_n$), so a vertical **monopole** of height $h$ together with the ground is equivalent to a dipole of length $2h$. Above the ground the field is the same as the dipole's, but the energy goes only into the upper half-space: for the same current the power is half as large, and so is the radiation resistance. For a quarter-wave monopole $R_\\Sigma\\approx36.5\\ \\Omega$. The image of a horizontal dipole points the opposite way, so a horizontal antenna very close to the ground radiates poorly."
+ },
+ {
+  "t": "m",
+  "m": "R_\\Sigma\\left(h\\right)=\\frac{1}{2}R_\\Sigma\\left(2h\\right),\\qquad h=\\frac{\\lambda}{4}:\\ R_\\Sigma\\approx36.5\\ \\Omega"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki kogerent manba ([[F05]]).** Bir xil ikki antenna bir-biridan $d$ masofada, toklarining amplitudasi teng, ikkinchisining toki birinchisidan $\\delta$ fazaga orqada. Uzoq nuqtada antennalar chizig'i bilan $\\phi$ burchak hosil qiluvchi yo'nalishda yo'llar farqi $d\\cos\\phi$, fazalar farqi esa $\\Delta$. Maydonlar qo'shiladi, intensivliklar emas — bu interferensiya (B2-L25 da batafsil o'rganiladi). Bitta antennaning intensivligi $I_1$ bo'lsa:",
+  "ru": "**Два когерентных источника ([[F05]]).** Две одинаковые антенны на расстоянии $d$ друг от друга, амплитуды токов равны, ток второй отстаёт по фазе от тока первой на $\\delta$. В далёкой точке в направлении, составляющем угол $\\phi$ с линией антенн, разность хода равна $d\\cos\\phi$, а разность фаз — $\\Delta$. Складываются поля, а не интенсивности — это интерференция (подробно изучается в B2-L25). Если интенсивность одной антенны $I_1$:",
+  "en": "**Two coherent sources ([[F05]]).** Two identical antennas a distance $d$ apart carry currents of equal amplitude, the second lagging the first in phase by $\\delta$. At a distant point in a direction making an angle $\\phi$ with the line of the antennas, the path difference is $d\\cos\\phi$ and the phase difference is $\\Delta$. The fields add, not the intensities — this is interference (studied in detail in B2-L25). If the intensity of one antenna is $I_1$:"
+ },
+ {
+  "t": "m",
+  "m": "I\\left(\\phi\\right)=4I_1\\cos^2\\frac{\\Delta}{2},\\qquad \\Delta=kd\\cos\\phi-\\delta"
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'ndalang va bo'ylama massiv.** $d=\\frac{\\lambda}{2}$ va $\\delta=0$ bo'lsa, antennalar chizig'iga tik yo'nalishda to'lqinlar bir fazada qo'shiladi ($4I_1$), chiziq bo'ylab esa so'nadi — **ko'ndalang massiv (broadside array)**. $d=\\frac{\\lambda}{4}$ va $\\delta=\\frac{\\pi}{2}$ bo'lsa, ikkinchi antenna tomonga nurlanish kuchayadi, birinchisi tomonga esa butunlay so'nadi — **bo'ylama massiv (endfire array)**, nurlanish bir tomonga yo'naladi. $\\delta$ ni o'zgartirib, nurni mexanik burmasdan burish mumkin — fazalangan antenna panjaralari (radar, mobil aloqa) shunday ishlaydi.",
+  "ru": "**Поперечная и продольная решётки.** Если $d=\\frac{\\lambda}{2}$ и $\\delta=0$, в направлении, перпендикулярном линии антенн, волны складываются в фазе ($4I_1$), а вдоль линии гасятся — **поперечная решётка (broadside array)**. Если $d=\\frac{\\lambda}{4}$ и $\\delta=\\frac{\\pi}{2}$, излучение в сторону второй антенны усиливается, а в сторону первой полностью гасится — **продольная решётка (endfire array)**, излучение направлено в одну сторону. Меняя $\\delta$, можно поворачивать луч без механического поворота — так работают фазированные антенные решётки (радар, мобильная связь).",
+  "en": "**Broadside and endfire arrays.** If $d=\\frac{\\lambda}{2}$ and $\\delta=0$, the waves add in phase in the direction perpendicular to the line of the antennas ($4I_1$) and cancel along the line — a **broadside array**. If $d=\\frac{\\lambda}{4}$ and $\\delta=\\frac{\\pi}{2}$, the radiation towards the second antenna is reinforced and towards the first it cancels completely — an **endfire array**, which radiates in one direction. By changing $\\delta$ the beam can be steered without turning anything mechanically — this is how phased arrays (radar, mobile communications) work."
+ },
+ {
+  "t": "li",
+  "uz": "**N ta manba va energiyaning saqlanishi.** Bir fazadagi $N$ ta kogerent antenna asosiy yo'nalishda maydonni $N$ marta, intensivlikni $N^2$ marta oshiradi. Bu energiyaning saqlanishiga zid emas: to'liq quvvat taxminan $N$ marta ortadi, nur esa torayadi — energiya yo'nalishlar bo'yicha qayta taqsimlanadi. Nokogerent manbalarda (masalan, cho'g'lanma lampadagi atomlar) intensivliklar qo'shiladi: $N$ marta.",
+  "ru": "**N источников и сохранение энергии.** $N$ когерентных антенн в фазе увеличивают поле в главном направлении в $N$ раз, а интенсивность — в $N^2$ раз. Это не противоречит сохранению энергии: полная мощность растёт примерно в $N$ раз, а луч сужается — энергия перераспределяется по направлениям. У некогерентных источников (например, атомов в лампе накаливания) складываются интенсивности: в $N$ раз.",
+  "en": "**N sources and energy conservation.** $N$ coherent antennas in phase increase the field in the main direction $N$ times and the intensity $N^2$ times. This does not contradict energy conservation: the total power grows roughly $N$ times, while the beam narrows — the energy is redistributed among directions. For incoherent sources (for example, the atoms in an incandescent lamp) the intensities add: $N$ times."
+ },
+ {
+  "t": "m",
+  "m": "I_{max}=N^2I_1,\\qquad I=NI_1"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L23-F05.png",
+   "ru": "figures/B2-L23-F05-ru.png",
+   "en": "figures/B2-L23-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Magnit dipol nurlanishi va multipollar",
+  "ru": "7. Магнитное дипольное излучение и мультиполи",
+  "en": "7. Magnetic dipole radiation and multipoles"
+ },
+ {
+  "t": "li",
+  "uz": "**Tebranuvchi magnit dipol.** Yuzi $A$ bo'lgan kichik halqada tok $I=I_0\\cos\\omega t$ oqsa, **magnit dipol momenti (magnetic dipole moment)** $m=m_0\\cos\\omega t$, $m_0=I_0A$. To'lqin zonasidagi maydon elektr dipolnikiga o'xshaydi, faqat $\\vec E$ va $\\vec B$ o'rin almashgan: endi $\\vec E$ azimut bo'ylab, $\\vec B$ meridian bo'ylab yo'nalgan. Diagramma yana $\\sin^2\\theta$ (halqa o'qidan hisoblangan), quvvat yana $\\omega^4$ ga proporsional; formulalar elektr dipolnikidan $p_0\\to\\frac{m_0}{c}$ almashtirish bilan olinadi:",
+  "ru": "**Колеблющийся магнитный диполь.** Если в малой рамке площадью $A$ течёт ток $I=I_0\\cos\\omega t$, **магнитный дипольный момент (magnetic dipole moment)** равен $m=m_0\\cos\\omega t$, $m_0=I_0A$. Поле в волновой зоне похоже на поле электрического диполя, только $\\vec E$ и $\\vec B$ поменялись местами: теперь $\\vec E$ направлено по азимуту, $\\vec B$ — по меридиану. Диаграмма снова $\\sin^2\\theta$ (угол от оси рамки), мощность снова пропорциональна $\\omega^4$; формулы получаются из электрического диполя заменой $p_0\\to\\frac{m_0}{c}$:",
+  "en": "**The oscillating magnetic dipole.** If a current $I=I_0\\cos\\omega t$ flows in a small loop of area $A$, the **magnetic dipole moment** is $m=m_0\\cos\\omega t$, $m_0=I_0A$. The field in the wave zone resembles that of an electric dipole, only $\\vec E$ and $\\vec B$ have swapped roles: now $\\vec E$ points in azimuth and $\\vec B$ along the meridian. The pattern is again $\\sin^2\\theta$ (angle from the loop's axis) and the power is again proportional to $\\omega^4$; the formulas follow from the electric dipole by the substitution $p_0\\to\\frac{m_0}{c}$:"
+ },
+ {
+  "t": "m",
+  "m": "E_\\phi=\\frac{\\mu_0m_0\\omega^2\\sin\\theta}{4\\pi cr}\\cos\\omega\\left(t-\\frac{r}{c}\\right),\\qquad \\left\\langle\\mathcal P\\right\\rangle=\\frac{\\mu_0m_0^2\\omega^4}{12\\pi c^3}"
+ },
+ {
+  "t": "li",
+  "uz": "**Halqali antenna.** $m_0=I_0A$ ni qo'yib, halqaning nurlanish qarshiligini olamiz. U $\\left(\\frac{A}{\\lambda^2}\\right)^2$ ga proporsional, ya'ni o'lchamning to'rtinchi darajasiga: kichik halqa juda yomon nurlatadi (lekin qabul qilishda yo'nalishni yaxshi aniqlaydi). $N$ o'ramli halqada moment $N$ marta, qarshilik $N^2$ marta katta.",
+  "ru": "**Рамочная антенна.** Подставив $m_0=I_0A$, получим сопротивление излучения рамки. Оно пропорционально $\\left(\\frac{A}{\\lambda^2}\\right)^2$, то есть четвёртой степени размера: малая рамка излучает очень плохо (но при приёме хорошо определяет направление). В рамке из $N$ витков момент больше в $N$ раз, сопротивление — в $N^2$ раз.",
+  "en": "**The loop antenna.** Substituting $m_0=I_0A$ gives the radiation resistance of the loop. It is proportional to $\\left(\\frac{A}{\\lambda^2}\\right)^2$, that is, to the fourth power of the size: a small loop is a very poor radiator (but in reception it determines direction well). In a loop of $N$ turns the moment is $N$ times larger and the resistance $N^2$ times larger."
+ },
+ {
+  "t": "m",
+  "m": "R_\\Sigma=320\\pi^4\\left(\\frac{A}{\\lambda^2}\\right)^2\\approx3.1\\cdot10^4\\left(\\frac{A}{\\lambda^2}\\right)^2\\ \\Omega"
+ },
+ {
+  "t": "li",
+  "uz": "**Multipollar ierarxiyasi.** O'lchami $d$ bo'lgan sistemada zaryadlar $v$ tezlik bilan harakatlansin. Elektr dipol $p\\sim qd$, magnit dipol $m\\sim qvd$, shuning uchun $\\frac{m}{c}$ ning $p$ ga nisbati $\\frac{v}{c}$ tartibida va magnit dipol nurlanishi elektr dipolnikidan $\\left(\\frac{v}{c}\\right)^2$ marta kuchsiz. Elektr kvadrupol nurlanishi esa $\\omega^6$ ga proporsional va $\\left(\\frac{d}{\\lambda}\\right)^2$ marta kuchsiz. Demak, agar sistemaning o'zgaruvchan elektr dipol momenti bo'lsa, u asosiy nurlanishni beradi; bo'lmasa — keyingi, ancha kuchsiz multipollar ishlaydi. Atomlarda bu «ruxsat etilgan» va «taqiqlangan» o'tishlarga mos keladi.",
+  "ru": "**Иерархия мультиполей.** Пусть в системе размером $d$ заряды движутся со скоростью $v$. Электрический диполь $p\\sim qd$, магнитный $m\\sim qvd$, поэтому отношение $\\frac{m}{c}$ к $p$ порядка $\\frac{v}{c}$, и магнитное дипольное излучение слабее электрического в $\\left(\\frac{v}{c}\\right)^2$ раз. Излучение электрического квадруполя пропорционально $\\omega^6$ и слабее в $\\left(\\frac{d}{\\lambda}\\right)^2$ раз. Значит, если у системы есть переменный электрический дипольный момент, он даёт основное излучение; если нет — работают следующие, гораздо более слабые мультиполи. В атомах это соответствует «разрешённым» и «запрещённым» переходам.",
+  "en": "**The hierarchy of multipoles.** Let the charges in a system of size $d$ move at speed $v$. The electric dipole is $p\\sim qd$ and the magnetic dipole $m\\sim qvd$, so the ratio of $\\frac{m}{c}$ to $p$ is of order $\\frac{v}{c}$, and magnetic dipole radiation is weaker than electric dipole radiation by a factor $\\left(\\frac{v}{c}\\right)^2$. Electric quadrupole radiation is proportional to $\\omega^6$ and weaker by a factor $\\left(\\frac{d}{\\lambda}\\right)^2$. So if a system has a varying electric dipole moment, it gives the main radiation; if not, the next, much weaker multipoles take over. In atoms this corresponds to \"allowed\" and \"forbidden\" transitions."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{m_0}{c\\,p_0}\\sim\\frac{v}{c}\\ll1,\\qquad \\frac{d}{\\lambda}\\ll1"
+ },
+ {
+  "t": "li",
+  "uz": "**Qutblanish bo'yicha farqlash.** Elektr va magnit dipollarning diagrammasi bir xil ($\\sin^2\\theta$), lekin qutblanishi har xil: elektr dipolda $\\vec E$ dipol o'qi va kuzatish yo'nalishi tekisligida, magnit dipolda — shu tekislikka tik. Shu tufayli tajribada manbaning turini qutblagich bilan aniqlash mumkin.",
+  "ru": "**Различение по поляризации.** Диаграммы электрического и магнитного диполей одинаковы ($\\sin^2\\theta$), но поляризация разная: у электрического диполя $\\vec E$ лежит в плоскости оси диполя и направления наблюдения, у магнитного — перпендикулярно этой плоскости. Поэтому в эксперименте тип источника можно определить поляризатором.",
+  "en": "**Telling them apart by polarization.** Electric and magnetic dipoles have the same pattern ($\\sin^2\\theta$) but different polarizations: for the electric dipole $\\vec E$ lies in the plane of the dipole axis and the direction of observation, for the magnetic dipole it is perpendicular to that plane. So in an experiment the type of source can be identified with a polarizer."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Nurlanish bo'lmaydigan va maxsus hollar",
+  "ru": "8. Случаи без излучения и особые случаи",
+  "en": "8. Cases with no radiation, and special cases"
+ },
+ {
+  "t": "li",
+  "uz": "**Monopol nurlanishi yo'q.** Zaryad saqlanadi, shuning uchun sferik simmetrik taqsimotning tashqaridagi maydoni Gauss teoremasi bo'yicha har doim $\\frac{Q}{4\\pi\\varepsilon_0r^2}$ — taqsimot qanday «pulsatsiyalanmasin». Radial toklar simmetriya tufayli magnit maydon hosil qilmaydi. Demak, sferik simmetrik manba umuman nurlanmaydi; eng past nurlanish — dipol nurlanishi.",
+  "ru": "**Монопольного излучения нет.** Заряд сохраняется, поэтому поле сферически симметричного распределения снаружи по теореме Гаусса всегда равно $\\frac{Q}{4\\pi\\varepsilon_0r^2}$ — как бы распределение ни «пульсировало». Радиальные токи по симметрии не создают магнитного поля. Значит, сферически симметричный источник вообще не излучает; низшее излучение — дипольное.",
+  "en": "**There is no monopole radiation.** Charge is conserved, so by Gauss's law the field outside a spherically symmetric distribution is always $\\frac{Q}{4\\pi\\varepsilon_0r^2}$ — however the distribution \"pulsates\". Radial currents produce no magnetic field by symmetry. So a spherically symmetric source does not radiate at all; the lowest radiation is dipole radiation."
+ },
+ {
+  "t": "li",
+  "uz": "**Solishtirma zaryadi bir xil zarralar.** Yopiq sistemada barcha zarralarning $\\frac{q}{m}$ nisbati bir xil bo'lsa, dipol momenti massa markazining radius-vektoriga proporsional. Tashqi kuch bo'lmasa, massa markazi tekis harakatlanadi, shuning uchun $\\ddot{\\vec p}=0$ va dipol nurlanishi yo'q. Masalan, ikki elektron yoki ikki alfa-zarraning to'qnashuvida faqat kuchsiz kvadrupol nurlanish bo'ladi, elektron va protonning to'qnashuvida esa dipol nurlanish bor.",
+  "ru": "**Частицы с одинаковым удельным зарядом.** Если в замкнутой системе у всех частиц одинаковое отношение $\\frac{q}{m}$, дипольный момент пропорционален радиус-вектору центра масс. Без внешних сил центр масс движется равномерно, поэтому $\\ddot{\\vec p}=0$, и дипольного излучения нет. Например, при столкновении двух электронов или двух альфа-частиц есть лишь слабое квадрупольное излучение, а при столкновении электрона с протоном — дипольное.",
+  "en": "**Particles with the same specific charge.** If all the particles in a closed system have the same ratio $\\frac{q}{m}$, the dipole moment is proportional to the position vector of the centre of mass. With no external forces the centre of mass moves uniformly, so $\\ddot{\\vec p}=0$ and there is no dipole radiation. For example, a collision of two electrons or two alpha particles gives only weak quadrupole radiation, whereas an electron–proton collision gives dipole radiation."
+ },
+ {
+  "t": "m",
+  "m": "\\vec p=\\sum q_i\\vec r_i=\\frac{q}{m}\\sum m_i\\vec r_i=\\frac{q}{m}M\\vec R,\\qquad \\ddot{\\vec R}=0\\ \\Rightarrow\\ \\ddot{\\vec p}=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Aylanuvchi dipol (rotating dipole).** Moduli o'zgarmas $p$ bo'lgan dipol tekislikda $\\omega$ burchak tezlik bilan aylansin. Uni fazalari $\\frac{\\pi}{2}$ ga farq qiluvchi ikki o'zaro tik tebranuvchi dipolning yig'indisi deb qarash mumkin; ularning quvvatlari qo'shiladi, shuning uchun quvvat bitta tebranuvchi dipolnikidan ikki baravar katta. Aylanish o'qi bo'ylab nurlanish doiraviy, aylanish tekisligida — chiziqli qutblangan. Aylana bo'ylab harakatlanuvchi zaryad ham aylanuvchi dipol ($p=qR$), va natija Larmor formulasi bilan $a=\\omega^2R$ da mos keladi.",
+  "ru": "**Вращающийся диполь (rotating dipole).** Пусть диполь постоянного модуля $p$ вращается в плоскости с угловой скоростью $\\omega$. Его можно рассматривать как сумму двух взаимно перпендикулярных колеблющихся диполей со сдвигом фаз $\\frac{\\pi}{2}$; их мощности складываются, поэтому мощность вдвое больше, чем у одного колеблющегося диполя. Вдоль оси вращения излучение поляризовано по кругу, в плоскости вращения — линейно. Заряд, движущийся по окружности, — тоже вращающийся диполь ($p=qR$), и результат совпадает с формулой Лармора при $a=\\omega^2R$.",
+  "en": "**The rotating dipole.** Let a dipole of constant magnitude $p$ rotate in a plane with angular velocity $\\omega$. It can be treated as the sum of two mutually perpendicular oscillating dipoles with a phase difference of $\\frac{\\pi}{2}$; their powers add, so the power is twice that of a single oscillating dipole. Along the rotation axis the radiation is circularly polarized, in the plane of rotation linearly polarized. A charge moving in a circle is also a rotating dipole ($p=qR$), and the result agrees with the Larmor formula with $a=\\omega^2R$."
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal P=\\frac{p^2\\omega^4}{6\\pi\\varepsilon_0c^3}"
+ },
+ {
+  "t": "li",
+  "uz": "**Simmetrik halqa va o'zgarmas tok.** Aylana bo'ylab diametral qarama-qarshi joylashgan ikki bir xil zaryad aylansa, $p=0$ — dipol nurlanishi yo'q, faqat kvadrupol. Aylanada teng oraliqda $N$ ta zaryad bo'lsa, nurlanish $N$ ortgan sari keskin kamayadi, $N\\to\\infty$ da esa o'zgarmas halqa toki hosil bo'ladi, u umuman nurlanmaydi. Bu 1-bo'limdagi xulosa bilan mos: o'zgarmas tok nurlanmaydi, garchi undagi har bir zaryad tezlanish bilan harakatlansa ham.",
+  "ru": "**Симметричное кольцо и постоянный ток.** Если по окружности вращаются два одинаковых заряда в диаметрально противоположных точках, $p=0$ — дипольного излучения нет, только квадрупольное. Если на окружности $N$ зарядов на равных расстояниях, излучение резко убывает с ростом $N$, а при $N\\to\\infty$ получается постоянный кольцевой ток, который вообще не излучает. Это согласуется с выводом раздела 1: постоянный ток не излучает, хотя каждый заряд в нём движется с ускорением.",
+  "en": "**A symmetric ring and a steady current.** If two identical charges at diametrically opposite points rotate around a circle, $p=0$ — there is no dipole radiation, only quadrupole. If there are $N$ equally spaced charges on the circle, the radiation drops sharply as $N$ grows, and as $N\\to\\infty$ we get a steady ring current, which does not radiate at all. This agrees with the conclusion of section 1: a steady current does not radiate, even though every charge in it moves with an acceleration."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Radiatsion so'nish va klassik atom",
+  "ru": "9. Радиационное затухание и классический атом",
+  "en": "9. Radiation damping and the classical atom"
+ },
+ {
+  "t": "li",
+  "uz": "**Nurlanish reaksiyasi (radiation reaction).** Nurlanayotgan zaryad energiya yo'qotadi, demak unga harakatni sekinlatuvchi kuch ta'sir qilishi kerak. Davriy harakatda bu kuchning o'rtacha ishi Larmor quvvatiga teng va qarama-qarshi ishorali bo'lishi talabidan **Abraham–Lorents kuchi (Abraham–Lorentz force)** kelib chiqadi; u tezlanishning hosilasiga proporsional. Undagi $\\tau$ — zaryadning «nurlanish vaqti»; elektron uchun u **klassik elektron radiusi (classical electron radius)** $r_e$ ni yorug'lik bosib o'tadigan vaqt tartibida.",
+  "ru": "**Реакция излучения (radiation reaction).** Излучающий заряд теряет энергию, значит, на него должна действовать сила, тормозящая движение. Из требования, чтобы при периодическом движении средняя работа этой силы была равна мощности Лармора с обратным знаком, получается **сила Абрагама–Лоренца (Abraham–Lorentz force)**; она пропорциональна производной ускорения. Величина $\\tau$ в ней — «время излучения» заряда; для электрона оно порядка времени, за которое свет проходит **классический радиус электрона (classical electron radius)** $r_e$.",
+  "en": "**Radiation reaction.** A radiating charge loses energy, so a force slowing its motion must act on it. Requiring that, for periodic motion, the average work of this force equal minus the Larmor power gives the **Abraham–Lorentz force**; it is proportional to the derivative of the acceleration. The $\\tau$ in it is the \"radiation time\" of the charge; for an electron it is of the order of the time light takes to cross the **classical electron radius** $r_e$."
+ },
+ {
+  "t": "m",
+  "m": "\\vec F=m\\tau\\dot{\\vec a},\\qquad \\tau=\\frac{q^2}{6\\pi\\varepsilon_0mc^3}=\\frac{2r_e}{3c},\\qquad r_e=\\frac{e^2}{4\\pi\\varepsilon_0m_ec^2}\\approx2.82\\cdot10^{-15}\\ \\mathrm{m}"
+ },
+ {
+  "t": "li",
+  "uz": "**Elektron uchun sonlar.** $r_e$ — elektrostatik energiyasi $m_ec^2$ ga teng bo'ladigan shar radiusi tartibida, $\\tau\\approx6.3\\cdot10^{-24}\\ \\mathrm{s}$. Bu vaqt har qanday atom jarayonining davridan ($\\sim10^{-15}\\ \\mathrm{s}$) ancha kichik, shuning uchun nurlanish reaksiyasi har bir davrda kichik tuzatish beradi — lekin u ko'p davrlar davomida to'planadi.",
+  "ru": "**Числа для электрона.** $r_e$ — порядка радиуса шара, электростатическая энергия которого равна $m_ec^2$, $\\tau\\approx6.3\\cdot10^{-24}\\ \\mathrm{s}$. Это время намного меньше периода любого атомного процесса ($\\sim10^{-15}\\ \\mathrm{s}$), поэтому реакция излучения за каждый период даёт малую поправку — но она накапливается за много периодов.",
+  "en": "**Numbers for the electron.** $r_e$ is of the order of the radius of a sphere whose electrostatic energy equals $m_ec^2$, and $\\tau\\approx6.3\\cdot10^{-24}\\ \\mathrm{s}$. This time is much shorter than the period of any atomic process ($\\sim10^{-15}\\ \\mathrm{s}$), so radiation reaction gives a small correction in each period — but it accumulates over many periods."
+ },
+ {
+  "t": "li",
+  "uz": "**So'nuvchi ossillyator ([[F06]]).** Xususiy chastotasi $\\omega_0$ bo'lgan bog'langan elektron tebransin. Uning energiyasi $W=\\frac{1}{2}m\\omega_0^2x_0^2$, o'rtacha nurlanish quvvati esa $\\frac{q^2\\omega_0^4x_0^2}{12\\pi\\varepsilon_0c^3}$. Ularning nisbati amplitudaga bog'liq emas, shuning uchun energiya eksponensial kamayadi. $\\Gamma$ — so'nish tezligi, $\\frac{1}{\\Gamma}$ — **yashash vaqti (lifetime)**, asllik $Q$ esa ko'rinadigan yorug'lik uchun $10^7$–$10^8$ tartibida: atom yuz millionlab tebranish qilib bo'lgach so'nadi.",
+  "ru": "**Затухающий осциллятор ([[F06]]).** Пусть колеблется связанный электрон с собственной частотой $\\omega_0$. Его энергия $W=\\frac{1}{2}m\\omega_0^2x_0^2$, а средняя мощность излучения $\\frac{q^2\\omega_0^4x_0^2}{12\\pi\\varepsilon_0c^3}$. Их отношение не зависит от амплитуды, поэтому энергия убывает экспоненциально. $\\Gamma$ — скорость затухания, $\\frac{1}{\\Gamma}$ — **время жизни (lifetime)**, а добротность $Q$ для видимого света порядка $10^7$–$10^8$: атом затухает, совершив сотни миллионов колебаний.",
+  "en": "**The damped oscillator ([[F06]]).** Let a bound electron with natural frequency $\\omega_0$ oscillate. Its energy is $W=\\frac{1}{2}m\\omega_0^2x_0^2$ and its average radiated power is $\\frac{q^2\\omega_0^4x_0^2}{12\\pi\\varepsilon_0c^3}$. Their ratio does not depend on the amplitude, so the energy decays exponentially. $\\Gamma$ is the damping rate, $\\frac{1}{\\Gamma}$ the **lifetime**, and the quality factor $Q$ for visible light is of order $10^7$–$10^8$: the atom dies out after hundreds of millions of oscillations."
+ },
+ {
+  "t": "m",
+  "m": "W=W_0e^{-\\Gamma t},\\qquad \\Gamma=\\omega_0^2\\tau,\\qquad Q=\\frac{\\omega_0}{\\Gamma}=\\frac{1}{\\omega_0\\tau}"
+ },
+ {
+  "t": "li",
+  "uz": "**Chiziqning tabiiy kengligi (natural linewidth).** So'nuvchi to'lqin poyezdi monoxromatik emas: uning spektri **Lorens egri chizig'i (Lorentzian line)**, yarim balandlikdagi to'liq kengligi $\\Delta\\omega=\\Gamma$. To'lqin uzunliklarida $\\Delta\\lambda=\\frac{\\lambda^2\\Delta\\omega}{2\\pi c}$, va $\\Gamma=\\omega_0^2\\tau$ ni qo'yganda $\\lambda$ qisqarib ketadi: klassik tabiiy kenglik barcha chiziqlar uchun bir xil. Kvant nazariyasida kengliklar o'tishga bog'liq, lekin kuchli chiziqlar uchun klassik baho to'g'ri tartibni beradi.",
+  "ru": "**Естественная ширина линии (natural linewidth).** Затухающий цуг волн не монохроматичен: его спектр — **лоренцева кривая (Lorentzian line)** с полной шириной на половине высоты $\\Delta\\omega=\\Gamma$. В длинах волн $\\Delta\\lambda=\\frac{\\lambda^2\\Delta\\omega}{2\\pi c}$, и после подстановки $\\Gamma=\\omega_0^2\\tau$ длина $\\lambda$ сокращается: классическая естественная ширина одинакова для всех линий. В квантовой теории ширины зависят от перехода, но для сильных линий классическая оценка даёт правильный порядок.",
+  "en": "**The natural linewidth.** A decaying wave train is not monochromatic: its spectrum is a **Lorentzian line** with full width at half maximum $\\Delta\\omega=\\Gamma$. In wavelength $\\Delta\\lambda=\\frac{\\lambda^2\\Delta\\omega}{2\\pi c}$, and on substituting $\\Gamma=\\omega_0^2\\tau$ the $\\lambda$ cancels: the classical natural width is the same for all lines. In quantum theory the widths depend on the transition, but for strong lines the classical estimate gives the right order of magnitude."
+ },
+ {
+  "t": "m",
+  "m": "I\\left(\\omega\\right)\\propto\\frac{1}{\\left(\\omega-\\omega_0\\right)^2+\\frac{\\Gamma^2}{4}},\\qquad \\Delta\\omega=\\Gamma,\\qquad \\Delta\\lambda=2\\pi c\\tau\\approx1.2\\cdot10^{-14}\\ \\mathrm{m}"
+ },
+ {
+  "t": "li",
+  "uz": "**Klassik atom muammosi.** Rezerford modelida elektron yadro atrofida aylana bo'ylab harakatlanadi va markazga intilma tezlanishga ega — u nurlanishi kerak. Energiya $-\\frac{e^2}{8\\pi\\varepsilon_0r}$ kamaygan sari orbita kichrayadi, tezlanish va nurlanish ortadi, elektron spiral bo'ylab yadroga qulaydi. Larmor formulasidan radiusning kamayish tezligi kelib chiqadi; uni integrallasak, $a_0\\approx5.3\\cdot10^{-11}\\ \\mathrm{m}$ dan qulash vaqti atigi $10^{-11}\\ \\mathrm{s}$ tartibida. Bundan tashqari, aylanish chastotasi uzluksiz o'zgaradi — spektr tutash bo'lishi kerak edi, tajribada esa chiziqli. Bu ziddiyatni kvant mexanikasi hal qildi: statsionar holatlarda elektron nurlanmaydi.",
+  "ru": "**Проблема классического атома.** В модели Резерфорда электрон движется по окружности вокруг ядра и имеет центростремительное ускорение — он должен излучать. По мере уменьшения энергии $-\\frac{e^2}{8\\pi\\varepsilon_0r}$ орбита сжимается, ускорение и излучение растут, электрон падает на ядро по спирали. Из формулы Лармора следует скорость уменьшения радиуса; интегрируя её, получаем, что время падения с $a_0\\approx5.3\\cdot10^{-11}\\ \\mathrm{m}$ всего порядка $10^{-11}\\ \\mathrm{s}$. Кроме того, частота обращения меняется непрерывно — спектр должен был бы быть сплошным, а на опыте он линейчатый. Это противоречие разрешила квантовая механика: в стационарных состояниях электрон не излучает.",
+  "en": "**The problem of the classical atom.** In Rutherford's model the electron moves in a circle around the nucleus and has a centripetal acceleration — it must radiate. As the energy $-\\frac{e^2}{8\\pi\\varepsilon_0r}$ decreases, the orbit shrinks, the acceleration and the radiation grow, and the electron spirals into the nucleus. The Larmor formula gives the rate at which the radius decreases; integrating it, the fall time from $a_0\\approx5.3\\cdot10^{-11}\\ \\mathrm{m}$ is only of order $10^{-11}\\ \\mathrm{s}$. Moreover, the orbital frequency changes continuously — the spectrum ought to be continuous, whereas experimentally it consists of lines. Quantum mechanics resolved this contradiction: in stationary states the electron does not radiate."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{dr}{dt}=-\\frac{4r_e^2c}{3r^2}\\qquad\\Rightarrow\\qquad t=\\frac{a_0^3}{4r_e^2c}"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L23-F06.png",
+   "ru": "figures/B2-L23-F06-ru.png",
+   "en": "figures/B2-L23-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Yorug'likning sochilishi",
+  "ru": "10. Рассеяние света",
+  "en": "10. Scattering of light"
+ },
+ {
+  "t": "li",
+  "uz": "**Tomson sochilishi (Thomson scattering).** Erkin elektron to'lqin maydonida $a=\\frac{eE_0}{m_e}\\cos\\omega t$ tezlanish bilan tebranadi va o'zi ham nurlanadi — tushayotgan energiyaning bir qismini hamma tomonga qayta tarqatadi. Sochilgan quvvatning tushayotgan intensivlikka nisbati yuza birligida o'lchanadi va **sochilish kesimi (scattering cross-section)** deyiladi. Erkin elektron uchun u **Tomson kesimi** $\\sigma_0$ — chastotaga bog'liq emas. Proton uchun kesim $\\left(\\frac{m_e}{m_p}\\right)^2$ marta kichik, shuning uchun moddada yorug'likni elektronlar sochadi.",
+  "ru": "**Томсоновское рассеяние (Thomson scattering).** Свободный электрон в поле волны колеблется с ускорением $a=\\frac{eE_0}{m_e}\\cos\\omega t$ и сам излучает — переизлучает часть падающей энергии во все стороны. Отношение рассеянной мощности к падающей интенсивности измеряется в единицах площади и называется **сечением рассеяния (scattering cross-section)**. Для свободного электрона это **томсоновское сечение** $\\sigma_0$ — оно не зависит от частоты. Для протона сечение меньше в $\\left(\\frac{m_e}{m_p}\\right)^2$ раз, поэтому в веществе свет рассеивают электроны.",
+  "en": "**Thomson scattering.** A free electron in the field of a wave oscillates with acceleration $a=\\frac{eE_0}{m_e}\\cos\\omega t$ and radiates itself — it re-emits part of the incident energy in all directions. The ratio of the scattered power to the incident intensity is measured in units of area and is called the **scattering cross-section**. For a free electron this is the **Thomson cross-section** $\\sigma_0$ — it does not depend on frequency. For a proton the cross-section is smaller by $\\left(\\frac{m_e}{m_p}\\right)^2$, so in matter light is scattered by electrons."
+ },
+ {
+  "t": "m",
+  "m": "\\left\\langle\\mathcal P\\right\\rangle=\\sigma_0I,\\qquad \\sigma_0=\\frac{8\\pi}{3}r_e^2\\approx6.65\\cdot10^{-29}\\ \\mathrm{m^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Bog'langan elektron ([[F07]]).** Atomdagi elektronni xususiy chastotasi $\\omega_0$ bo'lgan ossillyator deb qaraymiz (Lorents modeli). Majburiy tebranish amplitudasi $\\frac{eE_0}{m_e\\left(\\omega_0^2-\\omega^2\\right)}$, shuning uchun kesim chastotaga kuchli bog'liq. Uch soha bor: $\\omega\\gg\\omega_0$ da elektron amalda erkin — Tomson sochilishi; $\\omega\\approx\\omega_0$ da rezonans (cheksizlikni so'nish $\\Gamma$ cheklaydi); $\\omega\\ll\\omega_0$ da **Reley sochilishi (Rayleigh scattering)**, kesim to'lqin uzunligining to'rtinchi darajasiga teskari proporsional.",
+  "ru": "**Связанный электрон ([[F07]]).** Будем считать электрон в атоме осциллятором с собственной частотой $\\omega_0$ (модель Лоренца). Амплитуда вынужденных колебаний равна $\\frac{eE_0}{m_e\\left(\\omega_0^2-\\omega^2\\right)}$, поэтому сечение сильно зависит от частоты. Есть три области: при $\\omega\\gg\\omega_0$ электрон практически свободен — томсоновское рассеяние; при $\\omega\\approx\\omega_0$ — резонанс (бесконечность ограничивается затуханием $\\Gamma$); при $\\omega\\ll\\omega_0$ — **рэлеевское рассеяние (Rayleigh scattering)**, сечение обратно пропорционально четвёртой степени длины волны.",
+  "en": "**A bound electron ([[F07]]).** Treat an electron in an atom as an oscillator with natural frequency $\\omega_0$ (the Lorentz model). The amplitude of the forced oscillation is $\\frac{eE_0}{m_e\\left(\\omega_0^2-\\omega^2\\right)}$, so the cross-section depends strongly on frequency. There are three regions: for $\\omega\\gg\\omega_0$ the electron is practically free — Thomson scattering; for $\\omega\\approx\\omega_0$ there is resonance (the infinity is limited by the damping $\\Gamma$); for $\\omega\\ll\\omega_0$ there is **Rayleigh scattering**, with a cross-section inversely proportional to the fourth power of the wavelength."
+ },
+ {
+  "t": "m",
+  "m": "\\sigma=\\sigma_0\\frac{\\omega^4}{\\left(\\omega_0^2-\\omega^2\\right)^2},\\qquad \\omega\\ll\\omega_0:\\ \\sigma\\approx\\sigma_0\\left(\\frac{\\omega}{\\omega_0}\\right)^4\\propto\\frac{1}{\\lambda^4}"
+ },
+ {
+  "t": "li",
+  "uz": "**Nega osmon ko'k.** Havo molekulalarining xususiy chastotalari ultrabinafsha sohada, ko'rinadigan yorug'lik uchun $\\omega\\ll\\omega_0$ — Reley sochilishi. Ko'k yorug'lik qizilga qaraganda bir necha marta kuchliroq sochiladi, shuning uchun Quyoshdan chetdagi osmon ko'k ko'rinadi. Quyosh botayotganda nur atmosferada uzun yo'l bosadi, ko'k qism sochilib ketadi va Quyosh qizarib ko'rinadi. Binafsha yorug'lik yanada kuchliroq sochiladi, lekin Quyosh spektrida u kam va ko'z unga kam sezgir. Bulutlar oq: tomchilar to'lqin uzunligidan ancha katta va Reley qonuni ishlamaydi.",
+  "ru": "**Почему небо голубое.** Собственные частоты молекул воздуха лежат в ультрафиолете, для видимого света $\\omega\\ll\\omega_0$ — рэлеевское рассеяние. Синий свет рассеивается в несколько раз сильнее красного, поэтому небо вдали от Солнца кажется голубым. На закате луч проходит в атмосфере длинный путь, синяя часть рассеивается, и Солнце выглядит красным. Фиолетовый свет рассеивается ещё сильнее, но в спектре Солнца его мало, и глаз к нему малочувствителен. Облака белые: капли намного больше длины волны, и закон Рэлея не работает.",
+  "en": "**Why the sky is blue.** The natural frequencies of air molecules lie in the ultraviolet, so for visible light $\\omega\\ll\\omega_0$ — Rayleigh scattering. Blue light is scattered several times more strongly than red, so the sky away from the Sun looks blue. At sunset the light travels a long path through the atmosphere, the blue part is scattered away, and the Sun looks red. Violet light is scattered even more strongly, but there is little of it in the solar spectrum and the eye is not very sensitive to it. Clouds are white: the droplets are much larger than the wavelength, and Rayleigh's law does not apply."
+ },
+ {
+  "t": "li",
+  "uz": "**Sochilgan yorug'likning qutblanishi.** Qutblanmagan yorug'lik $z$ o'qi bo'ylab tushsin: elektronlar $xy$ tekisligida barcha yo'nalishlarda tebranadi. $x$ o'qi bo'ylab (sochilish burchagi $90^\\circ$) kuzatuvchi $x$ bo'ylab tebranishni ko'rmaydi (1-bo'lim) — faqat $y$ bo'ylab tebranish nurlanishi yetib keladi, va yorug'lik to'liq chiziqli qutblangan. Ixtiyoriy burchakda intensivlik $\\frac{1+\\cos^2\\theta}{2}$ ga proporsional, qutblanish darajasi esa $\\Pi$. Osmon nurining qutblanishini asalarilar yo'nalish topishda ishlatadi, fotograflar esa qutblovchi filtr bilan osmonni to'qlashtiradi.",
+  "ru": "**Поляризация рассеянного света.** Пусть неполяризованный свет падает вдоль оси $z$: электроны колеблются в плоскости $xy$ во всех направлениях. Наблюдатель на оси $x$ (угол рассеяния $90^\\circ$) не видит колебаний вдоль $x$ (раздел 1) — до него доходит только излучение колебаний вдоль $y$, и свет полностью линейно поляризован. При произвольном угле интенсивность пропорциональна $\\frac{1+\\cos^2\\theta}{2}$, а степень поляризации равна $\\Pi$. Поляризацию света неба пчёлы используют для ориентации, а фотографы поляризационным фильтром делают небо темнее.",
+  "en": "**Polarization of scattered light.** Let unpolarized light travel along the $z$ axis: the electrons oscillate in the $xy$ plane in all directions. An observer on the $x$ axis (scattering angle $90^\\circ$) does not see oscillations along $x$ (section 1) — only the radiation of oscillations along $y$ reaches him, and the light is completely linearly polarized. At an arbitrary angle the intensity is proportional to $\\frac{1+\\cos^2\\theta}{2}$ and the degree of polarization is $\\Pi$. Bees use the polarization of skylight to navigate, and photographers darken the sky with a polarizing filter."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{d\\sigma}{d\\Omega}=r_e^2\\,\\frac{1+\\cos^2\\theta}{2},\\qquad \\Pi=\\frac{\\sin^2\\theta}{1+\\cos^2\\theta}"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L23-F07.png",
+   "ru": "figures/B2-L23-F07-ru.png",
+   "en": "figures/B2-L23-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "11. Magnit maydondagi zaryad va tormozlanish nurlanishi",
+  "ru": "11. Заряд в магнитном поле и тормозное излучение",
+  "en": "11. A charge in a magnetic field, and bremsstrahlung"
+ },
+ {
+  "t": "li",
+  "uz": "**Siklotron nurlanish (cyclotron radiation).** Norelativistik zaryad bir jinsli $\\vec B$ maydonda $\\Omega=\\frac{qB}{m}$ chastota bilan aylanadi va $a=\\Omega v$ tezlanishga ega. Larmor formulasi bo'yicha quvvat $v^2$ ga, ya'ni kinetik energiyaga proporsional — demak kinetik energiya eksponensial kamayadi. Nurlanish $\\Omega$ chastotada, $\\vec B$ bo'ylab doiraviy qutblangan. So'nish vaqti massaning kubiga proporsional: elektron soniyalar ichida, proton esa yillar davomida energiyasini yo'qotadi.",
+  "ru": "**Циклотронное излучение (cyclotron radiation).** Нерелятивистский заряд в однородном поле $\\vec B$ вращается с частотой $\\Omega=\\frac{qB}{m}$ и имеет ускорение $a=\\Omega v$. По формуле Лармора мощность пропорциональна $v^2$, то есть кинетической энергии, — значит, кинетическая энергия убывает экспоненциально. Излучение идёт на частоте $\\Omega$, вдоль $\\vec B$ оно поляризовано по кругу. Время затухания пропорционально кубу массы: электрон теряет энергию за секунды, а протон — за годы.",
+  "en": "**Cyclotron radiation.** A non-relativistic charge in a uniform field $\\vec B$ circles with frequency $\\Omega=\\frac{qB}{m}$ and has acceleration $a=\\Omega v$. By the Larmor formula the power is proportional to $v^2$, that is, to the kinetic energy — so the kinetic energy decays exponentially. The radiation is at frequency $\\Omega$ and, along $\\vec B$, circularly polarized. The decay time is proportional to the cube of the mass: an electron loses its energy within seconds, a proton over years."
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal P=\\frac{q^4B^2v^2}{6\\pi\\varepsilon_0m^2c^3},\\qquad K=K_0e^{-\\frac{t}{\\tau_B}},\\qquad \\tau_B=\\frac{3\\pi\\varepsilon_0m^3c^3}{q^4B^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Sinxrotron nurlanish (synchrotron radiation) ([[F08]]).** Ultrarelativistik ($\\gamma\\gg1$) zaryad radiusi $R$ bo'lgan halqada harakatlansa, $a\\approx\\frac{c^2}{R}$ va Lenar formulasidagi $\\gamma^4$ ko'paytuvchi ishlaydi. Har bir aylanishda yo'qotiladigan energiya $\\gamma^4$ ga proporsional. Nurlanish orbitaga urinma bo'ylab ochilish burchagi taxminan $\\frac{1}{\\gamma}$ bo'lgan tor konusda chiqadi; kuzatuvchi uni juda qisqa impulslar sifatida ko'radi, shuning uchun spektr keng — rentgen nurlarigacha. Sinxrotron nur manbalari shunga asoslangan. Bir xil energiyada protonning $\\gamma$ si $\\frac{m_p}{m_e}$ marta kichik, va yo'qotish $\\left(\\frac{m_p}{m_e}\\right)^4\\sim10^{13}$ marta kam — shuning uchun eng katta halqalarda protonlar tezlatiladi.",
+  "ru": "**Синхротронное излучение (synchrotron radiation) ([[F08]]).** Если ультрарелятивистский ($\\gamma\\gg1$) заряд движется по кольцу радиуса $R$, то $a\\approx\\frac{c^2}{R}$, и работает множитель $\\gamma^4$ из формулы Льенара. Энергия, теряемая за каждый оборот, пропорциональна $\\gamma^4$. Излучение выходит по касательной к орбите в узком конусе с углом раствора около $\\frac{1}{\\gamma}$; наблюдатель видит его как очень короткие импульсы, поэтому спектр широкий — вплоть до рентгеновских лучей. На этом основаны источники синхротронного излучения. При той же энергии $\\gamma$ протона меньше в $\\frac{m_p}{m_e}$ раз, и потери меньше в $\\left(\\frac{m_p}{m_e}\\right)^4\\sim10^{13}$ раз — поэтому в самых больших кольцах ускоряют протоны.",
+  "en": "**Synchrotron radiation ([[F08]]).** If an ultrarelativistic ($\\gamma\\gg1$) charge moves around a ring of radius $R$, then $a\\approx\\frac{c^2}{R}$ and the factor $\\gamma^4$ from the Liénard formula comes into play. The energy lost in each revolution is proportional to $\\gamma^4$. The radiation leaves tangentially to the orbit in a narrow cone with an opening angle of about $\\frac{1}{\\gamma}$; the observer sees it as very short pulses, so the spectrum is broad — reaching X-rays. Synchrotron light sources are based on this. At the same energy a proton's $\\gamma$ is smaller by $\\frac{m_p}{m_e}$, and the losses are smaller by $\\left(\\frac{m_p}{m_e}\\right)^4\\sim10^{13}$ — which is why protons are accelerated in the largest rings."
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal P=\\frac{q^2c\\gamma^4}{6\\pi\\varepsilon_0R^2},\\qquad \\Delta W=\\mathcal P\\cdot\\frac{2\\pi R}{c}=\\frac{q^2\\gamma^4}{3\\varepsilon_0R},\\qquad \\Delta\\theta\\sim\\frac{1}{\\gamma}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tormozlanish nurlanishi (bremsstrahlung).** Tez elektron nishonga urilib, yadrolarning Kulon maydonida keskin sekinlashadi va nurlanadi. Har bir to'qnashuv qisqa impuls beradi, shuning uchun spektr tutash. Foton energiyasi elektronning kinetik energiyasidan oshmaydi: rentgen trubkasida spektr qisqa to'lqinli chegarada keskin uziladi (Duan–Xant qonuni). Tutash spektr ustida nishon atomlarining xarakteristik chiziqlari ham bo'ladi — ular atom fizikasida o'rganiladi.",
+  "ru": "**Тормозное излучение (bremsstrahlung).** Быстрый электрон, ударяясь в мишень, резко тормозится в кулоновском поле ядер и излучает. Каждое столкновение даёт короткий импульс, поэтому спектр сплошной. Энергия фотона не превышает кинетическую энергию электрона: в рентгеновской трубке спектр резко обрывается на коротковолновой границе (закон Дуэйна–Ханта). На сплошной спектр накладываются характеристические линии атомов мишени — они изучаются в атомной физике.",
+  "en": "**Bremsstrahlung.** A fast electron striking a target is abruptly decelerated in the Coulomb field of the nuclei and radiates. Each collision gives a short pulse, so the spectrum is continuous. The photon energy cannot exceed the electron's kinetic energy: in an X-ray tube the spectrum cuts off sharply at a short-wavelength limit (the Duane–Hunt law). Superimposed on the continuous spectrum are the characteristic lines of the target atoms — these are studied in atomic physics."
+ },
+ {
+  "t": "m",
+  "m": "\\lambda_{min}=\\frac{hc}{eU}"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L23-F08.png",
+   "ru": "figures/B2-L23-F08-ru.png",
+   "en": "figures/B2-L23-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Istisno: Cherenkov nurlanishi.** Vakuumda tekis harakatlanuvchi zaryad nurlanmaydi. Lekin sindirish ko'rsatkichi $n$ bo'lgan muhitda zaryad yorug'likning muhitdagi tezligi $\\frac{c}{n}$ dan tezroq harakatlansa, u **Cherenkov nurlanishi (Cherenkov radiation)** ni hosil qiladi — tovushdan tez uchayotgan samolyotning zarb to'lqiniga o'xshash konus. Bu holda nurlanishni muhit atomlari chiqaradi; zarra tezligini konus burchagidan aniqlash mumkin (zarralar detektorlari).",
+  "ru": "**Исключение: излучение Черенкова.** В вакууме равномерно движущийся заряд не излучает. Но в среде с показателем преломления $n$ заряд, движущийся быстрее скорости света в среде $\\frac{c}{n}$, создаёт **излучение Черенкова (Cherenkov radiation)** — конус, похожий на ударную волну сверхзвукового самолёта. В этом случае излучают атомы среды; скорость частицы можно определить по углу конуса (детекторы частиц).",
+  "en": "**An exception: Cherenkov radiation.** In vacuum a uniformly moving charge does not radiate. But in a medium of refractive index $n$, a charge moving faster than the speed of light in the medium $\\frac{c}{n}$ produces **Cherenkov radiation** — a cone resembling the shock wave of a supersonic aircraft. In this case it is the atoms of the medium that radiate; the particle's speed can be found from the cone angle (particle detectors)."
+ },
+ {
+  "t": "m",
+  "m": "v>\\frac{c}{n},\\qquad \\cos\\theta=\\frac{c}{nv}"
+ },
+ {
+  "t": "h2",
+  "uz": "12. GRE usullari",
+  "ru": "12. Приёмы для GRE",
+  "en": "12. GRE techniques"
+ },
+ {
+  "t": "li",
+  "uz": "**Masshtablar — asosiy qurol.** Ko'p savollar «nechi marta o'zgaradi» shaklida: Larmor $\\mathcal P\\propto q^2a^2$; dipol $\\left\\langle\\mathcal P\\right\\rangle\\propto p_0^2\\omega^4$; qisqa antenna $R_\\Sigma\\propto\\left(\\frac{l}{\\lambda}\\right)^2$; halqa $\\left\\langle\\mathcal P\\right\\rangle\\propto m_0^2\\omega^4\\propto A^2\\omega^4$; Tomson kesimi $\\propto\\frac{q^4}{m^2}$; Reley $\\propto\\frac{1}{\\lambda^4}$; siklotron so'nish vaqti $\\propto\\frac{m^3}{B^2}$; sinxrotron yo'qotish $\\propto\\frac{\\gamma^4}{R}$. Formulani to'liq eslash shart emas — darajalarni o'lchamlar tahlili bilan tekshiring.",
+  "ru": "**Масштабы — главное оружие.** Многие вопросы имеют вид «во сколько раз изменится»: Лармор $\\mathcal P\\propto q^2a^2$; диполь $\\left\\langle\\mathcal P\\right\\rangle\\propto p_0^2\\omega^4$; короткая антенна $R_\\Sigma\\propto\\left(\\frac{l}{\\lambda}\\right)^2$; рамка $\\left\\langle\\mathcal P\\right\\rangle\\propto m_0^2\\omega^4\\propto A^2\\omega^4$; томсоновское сечение $\\propto\\frac{q^4}{m^2}$; Рэлей $\\propto\\frac{1}{\\lambda^4}$; время циклотронного затухания $\\propto\\frac{m^3}{B^2}$; синхротронные потери $\\propto\\frac{\\gamma^4}{R}$. Формулу не обязательно помнить целиком — проверяйте степени анализом размерностей.",
+  "en": "**Scalings are the main weapon.** Many questions take the form \"by what factor does it change\": Larmor $\\mathcal P\\propto q^2a^2$; dipole $\\left\\langle\\mathcal P\\right\\rangle\\propto p_0^2\\omega^4$; short antenna $R_\\Sigma\\propto\\left(\\frac{l}{\\lambda}\\right)^2$; loop $\\left\\langle\\mathcal P\\right\\rangle\\propto m_0^2\\omega^4\\propto A^2\\omega^4$; Thomson cross-section $\\propto\\frac{q^4}{m^2}$; Rayleigh $\\propto\\frac{1}{\\lambda^4}$; cyclotron decay time $\\propto\\frac{m^3}{B^2}$; synchrotron loss $\\propto\\frac{\\gamma^4}{R}$. You need not remember the whole formula — check the powers by dimensional analysis."
+ },
+ {
+  "t": "li",
+  "uz": "**Burchak va qutblanish.** Tezlanish yoki dipol o'qi bo'ylab nurlanish yo'q, unga tik yo'nalishda eng katta; boshqa burchakda intensivlik eng kattasining $\\sin^2\\theta$ ulushi. Elektr dipol nurlanishida $\\vec E$ dipol o'qi va kuzatish yo'nalishi tekisligida yotadi; $90^\\circ$ da sochilgan yorug'lik sochilish tekisligiga tik qutblangan.",
+  "ru": "**Угол и поляризация.** Вдоль ускорения или оси диполя излучения нет, перпендикулярно — наибольшее; при другом угле интенсивность составляет долю $\\sin^2\\theta$ от наибольшей. В электрическом дипольном излучении $\\vec E$ лежит в плоскости оси диполя и направления наблюдения; свет, рассеянный под $90^\\circ$, поляризован перпендикулярно плоскости рассеяния.",
+  "en": "**Angle and polarization.** There is no radiation along the acceleration or the dipole axis and the most perpendicular to it; at another angle the intensity is the fraction $\\sin^2\\theta$ of the maximum. In electric dipole radiation $\\vec E$ lies in the plane of the dipole axis and the direction of observation; light scattered through $90^\\circ$ is polarized perpendicular to the scattering plane."
+ },
+ {
+  "t": "li",
+  "uz": "**Masofa va energiya.** Nurlanish maydoni $\\frac{1}{r}$, intensivlik $\\frac{1}{r^2}$ kabi kamayadi, istalgan sferadan o'tuvchi quvvat bir xil; statik maydonlar $\\frac{1}{r^2}$ va $\\frac{1}{r^3}$ kabi — ular uzoqda nurlanishga hissa qo'shmaydi. Yaqin va uzoq zona chegarasi $\\frac{\\lambda}{2\\pi}$.",
+  "ru": "**Расстояние и энергия.** Поле излучения убывает как $\\frac{1}{r}$, интенсивность — как $\\frac{1}{r^2}$, мощность через любую сферу одинакова; статические поля убывают как $\\frac{1}{r^2}$ и $\\frac{1}{r^3}$ — вдали они не дают вклада в излучение. Граница ближней и дальней зон — $\\frac{\\lambda}{2\\pi}$.",
+  "en": "**Distance and energy.** The radiation field falls off as $\\frac{1}{r}$ and the intensity as $\\frac{1}{r^2}$; the power through any sphere is the same; static fields fall off as $\\frac{1}{r^2}$ and $\\frac{1}{r^3}$ — far away they contribute nothing to the radiation. The boundary between the near and far zones is $\\frac{\\lambda}{2\\pi}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik tuzoqlar.** Tezlanishni tezlik bilan almashtirish; o'rtacha qiymatdagi $\\frac{1}{2}$ ni unutish; $\\omega$ va $f$ ni chalkashtirish; tekis harakatlanuvchi zaryad yoki o'zgarmas tok nurlanadi deb o'ylash; magnit dipol formulasidagi qo'shimcha $\\frac{1}{c^2}$ ni unutish; $\\gamma^4$ (aylana) va $\\gamma^6$ (chiziqli) ni almashtirish; Tomson kesimi chastotaga bog'liq deb o'ylash.",
+  "ru": "**Типичные ловушки.** Путать ускорение со скоростью; забывать $\\frac{1}{2}$ в среднем значении; путать $\\omega$ и $f$; думать, что равномерно движущийся заряд или постоянный ток излучают; забывать дополнительный множитель $\\frac{1}{c^2}$ в формуле магнитного диполя; путать $\\gamma^4$ (окружность) и $\\gamma^6$ (прямая); считать, что томсоновское сечение зависит от частоты.",
+  "en": "**Typical traps.** Confusing acceleration with velocity; forgetting the $\\frac{1}{2}$ in an average; mixing up $\\omega$ and $f$; thinking that a uniformly moving charge or a steady current radiates; forgetting the extra $\\frac{1}{c^2}$ in the magnetic dipole formula; swapping $\\gamma^4$ (circle) and $\\gamma^6$ (straight line); thinking that the Thomson cross-section depends on frequency."
+ },
+ {
+  "t": "li",
+  "uz": "**Eslab qolish uchun sonlar.** $Z_0\\approx377\\ \\Omega$; qisqa dipol $R_\\Sigma\\approx790\\left(\\frac{l}{\\lambda}\\right)^2\\ \\Omega$; yarim to'lqinli dipol $73\\ \\Omega$, chorak to'lqinli monopol $36.5\\ \\Omega$; $r_e\\approx2.8\\cdot10^{-15}\\ \\mathrm{m}$; $\\sigma_0\\approx6.7\\cdot10^{-29}\\ \\mathrm{m^2}$; elektron uchun $\\tau\\approx6.3\\cdot10^{-24}\\ \\mathrm{s}$.",
+  "ru": "**Числа, которые стоит помнить.** $Z_0\\approx377\\ \\Omega$; короткий диполь $R_\\Sigma\\approx790\\left(\\frac{l}{\\lambda}\\right)^2\\ \\Omega$; полуволновой диполь $73\\ \\Omega$, четвертьволновой монополь $36.5\\ \\Omega$; $r_e\\approx2.8\\cdot10^{-15}\\ \\mathrm{m}$; $\\sigma_0\\approx6.7\\cdot10^{-29}\\ \\mathrm{m^2}$; для электрона $\\tau\\approx6.3\\cdot10^{-24}\\ \\mathrm{s}$.",
+  "en": "**Numbers worth remembering.** $Z_0\\approx377\\ \\Omega$; short dipole $R_\\Sigma\\approx790\\left(\\frac{l}{\\lambda}\\right)^2\\ \\Omega$; half-wave dipole $73\\ \\Omega$, quarter-wave monopole $36.5\\ \\Omega$; $r_e\\approx2.8\\cdot10^{-15}\\ \\mathrm{m}$; $\\sigma_0\\approx6.7\\cdot10^{-29}\\ \\mathrm{m^2}$; for the electron $\\tau\\approx6.3\\cdot10^{-24}\\ \\mathrm{s}$."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Kechikkan vaqt",
+    "ru": "Запаздывающее время",
+    "en": "Retarded time",
+    "m": "t'=t-\\frac{r}{c}"
+   },
+   {
+    "uz": "Nurlanish maydoni",
+    "ru": "Поле излучения",
+    "en": "Radiation field",
+    "m": "E_\\perp=\\frac{qa\\sin\\theta}{4\\pi\\varepsilon_0c^2r},\\quad B=\\frac{E_\\perp}{c}"
+   },
+   {
+    "uz": "Larmor formulasi",
+    "ru": "Формула Лармора",
+    "en": "Larmor formula",
+    "m": "\\mathcal P=\\frac{q^2a^2}{6\\pi\\varepsilon_0c^3}"
+   },
+   {
+    "uz": "Lenar formulasi",
+    "ru": "Формула Льенара",
+    "en": "Liénard formula",
+    "m": "\\vec v\\parallel\\vec a:\\ \\gamma^6a^2,\\quad \\vec v\\perp\\vec a:\\ \\gamma^4a^2"
+   },
+   {
+    "uz": "Elektr dipol",
+    "ru": "Электрический диполь",
+    "en": "Electric dipole",
+    "m": "\\left\\langle\\mathcal P\\right\\rangle=\\frac{p_0^2\\omega^4}{12\\pi\\varepsilon_0c^3},\\quad \\left\\langle S\\right\\rangle\\propto\\frac{\\sin^2\\theta}{r^2}"
+   },
+   {
+    "uz": "Qisqa antenna",
+    "ru": "Короткая антенна",
+    "en": "Short antenna",
+    "m": "R_\\Sigma=80\\pi^2\\left(\\frac{l}{\\lambda}\\right)^2"
+   },
+   {
+    "uz": "Yarim to'lqinli dipol",
+    "ru": "Полуволновой диполь",
+    "en": "Half-wave dipole",
+    "m": "R_\\Sigma\\approx73\\ \\Omega,\\quad D\\approx1.64"
+   },
+   {
+    "uz": "Ikki antenna",
+    "ru": "Две антенны",
+    "en": "Two antennas",
+    "m": "I=4I_1\\cos^2\\frac{\\Delta}{2},\\quad \\Delta=kd\\cos\\phi-\\delta"
+   },
+   {
+    "uz": "Magnit dipol",
+    "ru": "Магнитный диполь",
+    "en": "Magnetic dipole",
+    "m": "\\left\\langle\\mathcal P\\right\\rangle=\\frac{\\mu_0m_0^2\\omega^4}{12\\pi c^3}"
+   },
+   {
+    "uz": "Aylanuvchi dipol",
+    "ru": "Вращающийся диполь",
+    "en": "Rotating dipole",
+    "m": "\\mathcal P=\\frac{p^2\\omega^4}{6\\pi\\varepsilon_0c^3}"
+   },
+   {
+    "uz": "Radiatsion so'nish",
+    "ru": "Радиационное затухание",
+    "en": "Radiation damping",
+    "m": "\\tau=\\frac{q^2}{6\\pi\\varepsilon_0mc^3},\\quad \\Gamma=\\omega_0^2\\tau"
+   },
+   {
+    "uz": "Tomson sochilishi",
+    "ru": "Томсоновское рассеяние",
+    "en": "Thomson scattering",
+    "m": "\\sigma_0=\\frac{8\\pi}{3}r_e^2,\\quad \\left\\langle\\mathcal P\\right\\rangle=\\sigma_0I"
+   },
+   {
+    "uz": "Reley sochilishi",
+    "ru": "Рэлеевское рассеяние",
+    "en": "Rayleigh scattering",
+    "m": "\\sigma=\\sigma_0\\frac{\\omega^4}{\\left(\\omega_0^2-\\omega^2\\right)^2}\\propto\\frac{1}{\\lambda^4}"
+   },
+   {
+    "uz": "Siklotron so'nish",
+    "ru": "Циклотронное затухание",
+    "en": "Cyclotron decay",
+    "m": "\\tau_B=\\frac{3\\pi\\varepsilon_0m^3c^3}{q^4B^2}"
+   },
+   {
+    "uz": "Sinxrotron yo'qotish",
+    "ru": "Синхротронные потери",
+    "en": "Synchrotron loss",
+    "m": "\\Delta W=\\frac{q^2\\gamma^4}{3\\varepsilon_0R}"
+   },
+   {
+    "uz": "Tormozlanish nurlanishi",
+    "ru": "Тормозное излучение",
+    "en": "Bremsstrahlung",
+    "m": "\\lambda_{min}=\\frac{hc}{eU}"
+   }
+  ]
+ }
+]
