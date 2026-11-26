@@ -1,0 +1,944 @@
+[
+ {
+  "id": "B2-L30-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Karno dvigateli $500\\ \\mathrm{K}$ temperaturali qizdirgich va $300\\ \\mathrm{K}$ temperaturali sovitkich orasida ishlaydi va har siklda qizdirgichdan $2\\ \\mathrm{kJ}$ issiqlik oladi. FIK ni, bir sikldagi ishni va sovitkichga berilgan issiqlikni toping.",
+   "ru": "Двигатель Карно работает между нагревателем с температурой $500\\ \\mathrm{K}$ и холодильником с температурой $300\\ \\mathrm{K}$ и за цикл получает от нагревателя $2\\ \\mathrm{kJ}$ теплоты. Найдите КПД, работу за цикл и теплоту, отданную холодильнику.",
+   "en": "A Carnot engine works between a heater at $500\\ \\mathrm{K}$ and a cooler at $300\\ \\mathrm{K}$ and receives $2\\ \\mathrm{kJ}$ of heat from the heater per cycle. Find the efficiency, the work per cycle and the heat given to the cooler."
+  },
+  "figure": "figures/B2-L30-S01.png",
+  "solution": {
+   "uz": [
+    "Karno FIK i: $$\\eta=1-\\frac{300}{500}=0.4$$",
+    "Bir sikldagi ish: $$A=\\eta Q_1=0.4\\cdot2000=800\\ \\mathrm{J}$$",
+    "Sovitkichga berilgan issiqlik: $$Q_2=Q_1-A=1200\\ \\mathrm{J},\\qquad \\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}=0.6$$"
+   ],
+   "ru": [
+    "КПД Карно: $$\\eta=1-\\frac{300}{500}=0.4$$",
+    "Работа за цикл: $$A=\\eta Q_1=0.4\\cdot2000=800\\ \\mathrm{J}$$",
+    "Теплота, отданная холодильнику: $$Q_2=Q_1-A=1200\\ \\mathrm{J},\\qquad \\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}=0.6$$"
+   ],
+   "en": [
+    "The Carnot efficiency: $$\\eta=1-\\frac{300}{500}=0.4$$",
+    "The work per cycle: $$A=\\eta Q_1=0.4\\cdot2000=800\\ \\mathrm{J}$$",
+    "The heat given to the cooler: $$Q_2=Q_1-A=1200\\ \\mathrm{J},\\qquad \\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}=0.6$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Karno FIK i: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$",
+    "ru": "КПД Карно: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$",
+    "en": "Carnot efficiency: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$"
+   },
+   {
+    "uz": "FIK: $\\eta=\\frac{A}{Q_1}$, $Q_1=A+Q_2$",
+    "ru": "КПД: $\\eta=\\frac{A}{Q_1}$, $Q_1=A+Q_2$",
+    "en": "Efficiency: $\\eta=\\frac{A}{Q_1}$, $Q_1=A+Q_2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Karno FIK i",
+   "ru": "КПД Карно",
+   "en": "Carnot efficiency"
+  },
+  "answer": "\\eta=0.4;\\ A=800\\ \\mathrm{J};\\ Q_2=1200\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original (B2-L30, Karno FIK i)"
+ },
+ {
+  "id": "B2-L30-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$0^\\circ\\mathrm{C}$ dagi $0.5\\ \\mathrm{kg}$ muz eridi, so'ng hosil bo'lgan suv $20^\\circ\\mathrm{C}$ gacha isidi. Muz va suv entropiyasining o'zgarishini toping ($\\lambda=334\\ \\mathrm{kJ/kg}$, $c=4190\\ \\mathrm{J/(kg\\cdot K)}$).",
+   "ru": "$0.5\\ \\mathrm{kg}$ льда при $0^\\circ\\mathrm{C}$ растаяло, затем образовавшаяся вода нагрелась до $20^\\circ\\mathrm{C}$. Найдите изменение энтропии льда и воды ($\\lambda=334\\ \\mathrm{kJ/kg}$, $c=4190\\ \\mathrm{J/(kg\\cdot K)}$).",
+   "en": "$0.5\\ \\mathrm{kg}$ of ice at $0^\\circ\\mathrm{C}$ melts, and the resulting water is then warmed to $20^\\circ\\mathrm{C}$. Find the change in entropy of the ice and water ($\\lambda=334\\ \\mathrm{kJ/kg}$, $c=4190\\ \\mathrm{J/(kg\\cdot K)}$)."
+  },
+  "figure": "figures/B2-L30-S02.png",
+  "solution": {
+   "uz": [
+    "Erish $273\\ \\mathrm{K}$ da boradi: $$\\Delta S_1=\\frac{\\lambda m}{T}=\\frac{334000\\cdot0.5}{273}\\approx612\\ \\mathrm{J/K}$$",
+    "Suvni isitish: $$\\Delta S_2=mc\\ln\\frac{293}{273}=0.5\\cdot4190\\cdot0.0707\\approx148\\ \\mathrm{J/K}$$",
+    "Jami: $$\\Delta S=\\Delta S_1+\\Delta S_2\\approx760\\ \\mathrm{J/K}$$"
+   ],
+   "ru": [
+    "Плавление идёт при $273\\ \\mathrm{K}$: $$\\Delta S_1=\\frac{\\lambda m}{T}=\\frac{334000\\cdot0.5}{273}\\approx612\\ \\mathrm{J/K}$$",
+    "Нагревание воды: $$\\Delta S_2=mc\\ln\\frac{293}{273}=0.5\\cdot4190\\cdot0.0707\\approx148\\ \\mathrm{J/K}$$",
+    "Всего: $$\\Delta S=\\Delta S_1+\\Delta S_2\\approx760\\ \\mathrm{J/K}$$"
+   ],
+   "en": [
+    "Melting takes place at $273\\ \\mathrm{K}$: $$\\Delta S_1=\\frac{\\lambda m}{T}=\\frac{334000\\cdot0.5}{273}\\approx612\\ \\mathrm{J/K}$$",
+    "Warming the water: $$\\Delta S_2=mc\\ln\\frac{293}{273}=0.5\\cdot4190\\cdot0.0707\\approx148\\ \\mathrm{J/K}$$",
+    "In total: $$\\Delta S=\\Delta S_1+\\Delta S_2\\approx760\\ \\mathrm{J/K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Fazaviy o'tish: $\\Delta S=\\frac{\\lambda m}{T}$",
+    "ru": "Фазовый переход: $\\Delta S=\\frac{\\lambda m}{T}$",
+    "en": "Phase change: $\\Delta S=\\frac{\\lambda m}{T}$"
+   },
+   {
+    "uz": "Jism entropiyasi: $\\Delta S=mc\\ln\\frac{T_2}{T_1}=C\\ln\\frac{T_2}{T_1}$",
+    "ru": "Энтропия тела: $\\Delta S=mc\\ln\\frac{T_2}{T_1}=C\\ln\\frac{T_2}{T_1}$",
+    "en": "Entropy of a body: $\\Delta S=mc\\ln\\frac{T_2}{T_1}=C\\ln\\frac{T_2}{T_1}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Fazaviy o'tish va isish entropiyasi",
+   "ru": "Энтропия фазового перехода и нагрева",
+   "en": "Entropy of a phase change and of heating"
+  },
+  "answer": "\\Delta S\\approx760\\ \\mathrm{J/K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original (B2-L30, erish entropiyasi)"
+ },
+ {
+  "id": "B2-L30-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Ideal sovutgich (teskari Karno sikli) $270\\ \\mathrm{K}$ dagi kameradan har siklda $900\\ \\mathrm{J}$ issiqlik olib, uni $300\\ \\mathrm{K}$ dagi xonaga beradi. Sovutish koeffitsiyentini, bir sikldagi ishni va xonaga berilgan issiqlikni toping.",
+   "ru": "Идеальная холодильная машина (обратный цикл Карно) за цикл отбирает $900\\ \\mathrm{J}$ теплоты от камеры при $270\\ \\mathrm{K}$ и передаёт её в комнату при $300\\ \\mathrm{K}$. Найдите холодильный коэффициент, работу за цикл и теплоту, отданную в комнату.",
+   "en": "An ideal refrigerator (a reversed Carnot cycle) takes $900\\ \\mathrm{J}$ of heat per cycle from a compartment at $270\\ \\mathrm{K}$ and gives it to a room at $300\\ \\mathrm{K}$. Find the coefficient of performance, the work per cycle and the heat given to the room."
+  },
+  "figure": "figures/B2-L30-S03.png",
+  "solution": {
+   "uz": [
+    "Ideal sovutgich koeffitsiyenti: $$\\varepsilon=\\frac{T_2}{T_1-T_2}=\\frac{270}{30}=9$$",
+    "Kerakli ish: $$A=\\frac{Q_2}{\\varepsilon}=\\frac{900}{9}=100\\ \\mathrm{J}$$",
+    "Xonaga berilgan issiqlik: $$Q_1=Q_2+A=1000\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Коэффициент идеальной холодильной машины: $$\\varepsilon=\\frac{T_2}{T_1-T_2}=\\frac{270}{30}=9$$",
+    "Необходимая работа: $$A=\\frac{Q_2}{\\varepsilon}=\\frac{900}{9}=100\\ \\mathrm{J}$$",
+    "Теплота, отданная в комнату: $$Q_1=Q_2+A=1000\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "The coefficient of an ideal refrigerator: $$\\varepsilon=\\frac{T_2}{T_1-T_2}=\\frac{270}{30}=9$$",
+    "The work needed: $$A=\\frac{Q_2}{\\varepsilon}=\\frac{900}{9}=100\\ \\mathrm{J}$$",
+    "The heat given to the room: $$Q_1=Q_2+A=1000\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ideal sovutgich: $\\varepsilon=\\frac{Q_2}{A}=\\frac{T_2}{T_1-T_2}$",
+    "ru": "Идеальный холодильник: $\\varepsilon=\\frac{Q_2}{A}=\\frac{T_2}{T_1-T_2}$",
+    "en": "Ideal refrigerator: $\\varepsilon=\\frac{Q_2}{A}=\\frac{T_2}{T_1-T_2}$"
+   },
+   null,
+   {
+    "uz": "FIK: $\\eta=\\frac{A}{Q_1}$, $Q_1=A+Q_2$",
+    "ru": "КПД: $\\eta=\\frac{A}{Q_1}$, $Q_1=A+Q_2$",
+    "en": "Efficiency: $\\eta=\\frac{A}{Q_1}$, $Q_1=A+Q_2$"
+   }
+  ],
+  "basis": {
+   "uz": "Ideal sovutgich",
+   "ru": "Идеальная холодильная машина",
+   "en": "Ideal refrigerator"
+  },
+  "answer": "\\varepsilon=9;\\ A=100\\ \\mathrm{J};\\ Q_1=1000\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "Irodov, «Problems in General Physics», 2.115-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L30-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$1\\ \\mathrm{mol}$ ikki atomli ideal gaz Karno siklini $400\\ \\mathrm{K}$ va $300\\ \\mathrm{K}$ temperaturalar orasida bajaradi; izotermik kengayishda hajm $3$ marta ortadi. Bir siklda olingan va berilgan issiqliklarni, ishni hamda adiabatik kengayishda hajm necha marta ortishini toping.",
+   "ru": "$1\\ \\mathrm{mol}$ двухатомного идеального газа совершает цикл Карно между температурами $400\\ \\mathrm{K}$ и $300\\ \\mathrm{K}$; при изотермическом расширении объём увеличивается в $3$ раза. Найдите полученную и отданную за цикл теплоту, работу, а также во сколько раз увеличивается объём при адиабатном расширении.",
+   "en": "$1\\ \\mathrm{mol}$ of a diatomic ideal gas performs a Carnot cycle between $400\\ \\mathrm{K}$ and $300\\ \\mathrm{K}$; in the isothermal expansion the volume increases by a factor of $3$. Find the heat received and given up per cycle, the work, and by what factor the volume increases in the adiabatic expansion."
+  },
+  "figure": "figures/B2-L30-S04.png",
+  "solution": {
+   "uz": [
+    "$T_1$ izotermada olingan issiqlik: $$Q_1=\\nu RT_1\\ln\\frac{V_2}{V_1}=8.31\\cdot400\\cdot\\ln3\\approx3652\\ \\mathrm{J}$$",
+    "Adiabatik kengayish, $\\gamma=1.4$: $$\\frac{V_3}{V_2}=\\left(\\frac{T_1}{T_2}\\right)^{\\frac{1}{\\gamma-1}}=\\left(\\frac{4}{3}\\right)^{2.5}\\approx2.05$$",
+    "$\\frac{V_3}{V_4}=\\frac{V_2}{V_1}=3$, berilgan issiqlik: $$Q_2=\\nu RT_2\\ln3\\approx2739\\ \\mathrm{J}$$",
+    "Ish va FIK: $$A=Q_1-Q_2\\approx913\\ \\mathrm{J},\\qquad \\eta=\\frac{A}{Q_1}=0.25=1-\\frac{T_2}{T_1}$$"
+   ],
+   "ru": [
+    "Теплота, полученная на изотерме $T_1$: $$Q_1=\\nu RT_1\\ln\\frac{V_2}{V_1}=8.31\\cdot400\\cdot\\ln3\\approx3652\\ \\mathrm{J}$$",
+    "Адиабатное расширение, $\\gamma=1.4$: $$\\frac{V_3}{V_2}=\\left(\\frac{T_1}{T_2}\\right)^{\\frac{1}{\\gamma-1}}=\\left(\\frac{4}{3}\\right)^{2.5}\\approx2.05$$",
+    "$\\frac{V_3}{V_4}=\\frac{V_2}{V_1}=3$, отданная теплота: $$Q_2=\\nu RT_2\\ln3\\approx2739\\ \\mathrm{J}$$",
+    "Работа и КПД: $$A=Q_1-Q_2\\approx913\\ \\mathrm{J},\\qquad \\eta=\\frac{A}{Q_1}=0.25=1-\\frac{T_2}{T_1}$$"
+   ],
+   "en": [
+    "The heat received on the $T_1$ isotherm: $$Q_1=\\nu RT_1\\ln\\frac{V_2}{V_1}=8.31\\cdot400\\cdot\\ln3\\approx3652\\ \\mathrm{J}$$",
+    "Adiabatic expansion, $\\gamma=1.4$: $$\\frac{V_3}{V_2}=\\left(\\frac{T_1}{T_2}\\right)^{\\frac{1}{\\gamma-1}}=\\left(\\frac{4}{3}\\right)^{2.5}\\approx2.05$$",
+    "$\\frac{V_3}{V_4}=\\frac{V_2}{V_1}=3$, the heat given up: $$Q_2=\\nu RT_2\\ln3\\approx2739\\ \\mathrm{J}$$",
+    "The work and the efficiency: $$A=Q_1-Q_2\\approx913\\ \\mathrm{J},\\qquad \\eta=\\frac{A}{Q_1}=0.25=1-\\frac{T_2}{T_1}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Izotermik jarayon: $Q=A=\\nu RT\\ln\\frac{V_2}{V_1}$",
+    "ru": "Изотермический процесс: $Q=A=\\nu RT\\ln\\frac{V_2}{V_1}$",
+    "en": "Isothermal process: $Q=A=\\nu RT\\ln\\frac{V_2}{V_1}$"
+   },
+   {
+    "uz": "Adiabata: $TV^{\\gamma-1}=\\mathrm{const}$, $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$",
+    "ru": "Адиабата: $TV^{\\gamma-1}=\\mathrm{const}$, $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$",
+    "en": "Adiabat: $TV^{\\gamma-1}=\\mathrm{const}$, $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$"
+   },
+   null,
+   {
+    "uz": "Karno FIK i: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$",
+    "ru": "КПД Карно: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$",
+    "en": "Carnot efficiency: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Karno sikli ideal gazda",
+   "ru": "Цикл Карно на идеальном газе",
+   "en": "Carnot cycle with an ideal gas"
+  },
+  "answer": "Q_1\\approx3.65\\ \\mathrm{kJ};\\ Q_2\\approx2.74\\ \\mathrm{kJ};\\ A\\approx913\\ \\mathrm{J};\\ \\frac{V_3}{V_2}\\approx2.05",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Irodov, «Problems in General Physics», 2.114-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L30-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Karno dvigateli $800\\ \\mathrm{K}$ va $400\\ \\mathrm{K}$ orasida ishlaydi. FIK ni oshirish uchun nima foydaliroq: qizdirgich temperaturasini $100\\ \\mathrm{K}$ ga oshirishmi yoki sovitkich temperaturasini $100\\ \\mathrm{K}$ ga kamaytirishmi? Natijani umumiy holda asoslang.",
+   "ru": "Двигатель Карно работает между $800\\ \\mathrm{K}$ и $400\\ \\mathrm{K}$. Что выгоднее для повышения КПД: повысить температуру нагревателя на $100\\ \\mathrm{K}$ или понизить температуру холодильника на $100\\ \\mathrm{K}$? Обоснуйте результат в общем виде.",
+   "en": "A Carnot engine works between $800\\ \\mathrm{K}$ and $400\\ \\mathrm{K}$. Which is more useful for raising the efficiency: increasing the heater temperature by $100\\ \\mathrm{K}$ or decreasing the cooler temperature by $100\\ \\mathrm{K}$? Justify the result in general."
+  },
+  "figure": "figures/B2-L30-S05.png",
+  "solution": {
+   "uz": [
+    "Boshlang'ich FIK: $$\\eta_0=1-\\frac{400}{800}=0.5$$",
+    "Ikki variant: $$1-\\frac{400}{900}\\approx0.556,\\qquad 1-\\frac{300}{800}=0.625$$",
+    "Umumiy holda — hosilalar nisbati: $$\\frac{\\left|\\partial\\eta/\\partial T_2\\right|}{\\partial\\eta/\\partial T_1}=\\frac{1/T_1}{T_2/T_1^2}=\\frac{T_1}{T_2}>1$$"
+   ],
+   "ru": [
+    "Начальный КПД: $$\\eta_0=1-\\frac{400}{800}=0.5$$",
+    "Два варианта: $$1-\\frac{400}{900}\\approx0.556,\\qquad 1-\\frac{300}{800}=0.625$$",
+    "В общем виде — отношение производных: $$\\frac{\\left|\\partial\\eta/\\partial T_2\\right|}{\\partial\\eta/\\partial T_1}=\\frac{1/T_1}{T_2/T_1^2}=\\frac{T_1}{T_2}>1$$"
+   ],
+   "en": [
+    "The initial efficiency: $$\\eta_0=1-\\frac{400}{800}=0.5$$",
+    "The two options: $$1-\\frac{400}{900}\\approx0.556,\\qquad 1-\\frac{300}{800}=0.625$$",
+    "In general — the ratio of derivatives: $$\\frac{\\left|\\partial\\eta/\\partial T_2\\right|}{\\partial\\eta/\\partial T_1}=\\frac{1/T_1}{T_2/T_1^2}=\\frac{T_1}{T_2}>1$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Karno FIK i: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$",
+    "ru": "КПД Карно: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$",
+    "en": "Carnot efficiency: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Karno FIK ining temperaturalarga bog'liqligi",
+   "ru": "Зависимость КПД Карно от температур",
+   "en": "Dependence of the Carnot efficiency on the temperatures"
+  },
+  "answer": "\\eta\\left(T_2-100\\right)=0.625>\\eta\\left(T_1+100\\right)\\approx0.556",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "Irodov, «Problems in General Physics», 2.113-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L30-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$2\\ \\mathrm{mol}$ azot $300\\ \\mathrm{K}$ dan $600\\ \\mathrm{K}$ gacha isitildi: a) o'zgarmas hajmda; b) o'zgarmas bosimda. Har ikki holda entropiya o'zgarishini toping va farqini izohlang.",
+   "ru": "$2\\ \\mathrm{mol}$ азота нагрели от $300\\ \\mathrm{K}$ до $600\\ \\mathrm{K}$: а) при постоянном объёме; б) при постоянном давлении. Найдите изменение энтропии в обоих случаях и объясните разницу.",
+   "en": "$2\\ \\mathrm{mol}$ of nitrogen is heated from $300\\ \\mathrm{K}$ to $600\\ \\mathrm{K}$: a) at constant volume; b) at constant pressure. Find the change in entropy in both cases and explain the difference."
+  },
+  "figure": "figures/B2-L30-S06.png",
+  "solution": {
+   "uz": [
+    "a) $C_V=\\frac{5}{2}R$: $$\\Delta S_V=\\nu C_V\\ln2=2\\cdot2.5\\cdot8.31\\cdot0.693\\approx28.8\\ \\mathrm{J/K}$$",
+    "b) $C_p=\\frac{7}{2}R$: $$\\Delta S_p=\\nu C_p\\ln2\\approx40.3\\ \\mathrm{J/K}$$",
+    "Farq — izobarada hajm ham $2$ marta ortadi: $$\\Delta S_p-\\Delta S_V=\\nu R\\ln2\\approx11.5\\ \\mathrm{J/K}$$"
+   ],
+   "ru": [
+    "а) $C_V=\\frac{5}{2}R$: $$\\Delta S_V=\\nu C_V\\ln2=2\\cdot2.5\\cdot8.31\\cdot0.693\\approx28.8\\ \\mathrm{J/K}$$",
+    "б) $C_p=\\frac{7}{2}R$: $$\\Delta S_p=\\nu C_p\\ln2\\approx40.3\\ \\mathrm{J/K}$$",
+    "Разница — на изобаре объём тоже растёт в $2$ раза: $$\\Delta S_p-\\Delta S_V=\\nu R\\ln2\\approx11.5\\ \\mathrm{J/K}$$"
+   ],
+   "en": [
+    "a) $C_V=\\frac{5}{2}R$: $$\\Delta S_V=\\nu C_V\\ln2=2\\cdot2.5\\cdot8.31\\cdot0.693\\approx28.8\\ \\mathrm{J/K}$$",
+    "b) $C_p=\\frac{7}{2}R$: $$\\Delta S_p=\\nu C_p\\ln2\\approx40.3\\ \\mathrm{J/K}$$",
+    "The difference — on the isobar the volume also grows by a factor of $2$: $$\\Delta S_p-\\Delta S_V=\\nu R\\ln2\\approx11.5\\ \\mathrm{J/K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Izoxorik isish: $\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}$",
+    "ru": "Изохорный нагрев: $\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}$",
+    "en": "Isochoric heating: $\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}$"
+   },
+   {
+    "uz": "Izobarik isish: $\\Delta S=\\nu C_p\\ln\\frac{T_2}{T_1}$",
+    "ru": "Изобарный нагрев: $\\Delta S=\\nu C_p\\ln\\frac{T_2}{T_1}$",
+    "en": "Isobaric heating: $\\Delta S=\\nu C_p\\ln\\frac{T_2}{T_1}$"
+   },
+   {
+    "uz": "Ideal gaz entropiyasi: $\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}+\\nu R\\ln\\frac{V_2}{V_1}$",
+    "ru": "Энтропия идеального газа: $\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}+\\nu R\\ln\\frac{V_2}{V_1}$",
+    "en": "Ideal-gas entropy: $\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}+\\nu R\\ln\\frac{V_2}{V_1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ideal gaz entropiyasi",
+   "ru": "Энтропия идеального газа",
+   "en": "Ideal-gas entropy"
+  },
+  "answer": "\\Delta S_V\\approx28.8\\ \\mathrm{J/K};\\ \\Delta S_p\\approx40.3\\ \\mathrm{J/K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "Irodov, «Problems in General Physics», 2.130-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L30-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Issiqlik izolyatsiyalangan idishning bir qismida $3\\ \\mathrm{mol}$ ideal gaz bor, qolgan qismi bo'sh. To'siq olingach, gaz hajmi $3$ marta ortdi. Gaz temperaturasi, ichki energiyasi va entropiyasi qanday o'zgaradi? Natijani statistik nuqtai nazardan tekshiring.",
+   "ru": "В одной части теплоизолированного сосуда находится $3\\ \\mathrm{mol}$ идеального газа, другая часть пуста. После удаления перегородки объём газа увеличился в $3$ раза. Как изменятся температура, внутренняя энергия и энтропия газа? Проверьте результат со статистической точки зрения.",
+   "en": "One part of a thermally insulated vessel contains $3\\ \\mathrm{mol}$ of an ideal gas; the other part is empty. After the partition is removed, the volume of the gas increases by a factor of $3$. How do the temperature, internal energy and entropy of the gas change? Check the result from the statistical point of view."
+  },
+  "figure": "figures/B2-L30-S07.png",
+  "solution": {
+   "uz": [
+    "Issiqlik ham, ish ham yo'q: $$Q=0,\\quad A=0\\ \\Rightarrow\\ \\Delta U=0,\\quad T_2=T_1$$",
+    "$\\Delta S$ ni qaytar izoterma bo'ylab hisoblaymiz: $$\\Delta S=\\nu R\\ln\\frac{V_2}{V_1}=3\\cdot8.31\\cdot\\ln3\\approx27.4\\ \\mathrm{J/K}$$",
+    "Statistik vazn har molekula uchun $3$ marta ortadi: $$\\frac{W_2}{W_1}=3^N,\\qquad \\Delta S=Nk\\ln3=\\nu N_Ak\\ln3=\\nu R\\ln3$$"
+   ],
+   "ru": [
+    "Нет ни теплоты, ни работы: $$Q=0,\\quad A=0\\ \\Rightarrow\\ \\Delta U=0,\\quad T_2=T_1$$",
+    "$\\Delta S$ вычисляем по обратимой изотерме: $$\\Delta S=\\nu R\\ln\\frac{V_2}{V_1}=3\\cdot8.31\\cdot\\ln3\\approx27.4\\ \\mathrm{J/K}$$",
+    "Статистический вес растёт в $3$ раза для каждой молекулы: $$\\frac{W_2}{W_1}=3^N,\\qquad \\Delta S=Nk\\ln3=\\nu N_Ak\\ln3=\\nu R\\ln3$$"
+   ],
+   "en": [
+    "There is neither heat nor work: $$Q=0,\\quad A=0\\ \\Rightarrow\\ \\Delta U=0,\\quad T_2=T_1$$",
+    "We calculate $\\Delta S$ along a reversible isotherm: $$\\Delta S=\\nu R\\ln\\frac{V_2}{V_1}=3\\cdot8.31\\cdot\\ln3\\approx27.4\\ \\mathrm{J/K}$$",
+    "The statistical weight grows by a factor of $3$ for each molecule: $$\\frac{W_2}{W_1}=3^N,\\qquad \\Delta S=Nk\\ln3=\\nu N_Ak\\ln3=\\nu R\\ln3$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Erkin kengayish: $Q=0$, $A=0$, $\\Delta S=\\nu R\\ln\\frac{V_2}{V_1}$",
+    "ru": "Свободное расширение: $Q=0$, $A=0$, $\\Delta S=\\nu R\\ln\\frac{V_2}{V_1}$",
+    "en": "Free expansion: $Q=0$, $A=0$, $\\Delta S=\\nu R\\ln\\frac{V_2}{V_1}$"
+   },
+   {
+    "uz": "Bolsman formulasi: $S=k\\ln W$",
+    "ru": "Формула Больцмана: $S=k\\ln W$",
+    "en": "Boltzmann's formula: $S=k\\ln W$"
+   }
+  ],
+  "basis": {
+   "uz": "Erkin kengayish entropiyasi",
+   "ru": "Энтропия свободного расширения",
+   "en": "Entropy of free expansion"
+  },
+  "answer": "\\Delta T=0;\\ \\Delta U=0;\\ \\Delta S\\approx27.4\\ \\mathrm{J/K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "Irodov, «Problems in General Physics», 2.148-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L30-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$500\\ \\mathrm{K}$ temperaturali rezervuardan $300\\ \\mathrm{K}$ temperaturali rezervuarga issiqlik o'tkazuvchi sterjen orqali $600\\ \\mathrm{J}$ issiqlik o'tdi. Tizim entropiyasining o'zgarishini va $300\\ \\mathrm{K}$ muhitda yo'qotilgan ishni toping.",
+   "ru": "От резервуара с температурой $500\\ \\mathrm{K}$ к резервуару с температурой $300\\ \\mathrm{K}$ через теплопроводящий стержень перешло $600\\ \\mathrm{J}$ теплоты. Найдите изменение энтропии системы и потерянную работу при окружении $300\\ \\mathrm{K}$.",
+   "en": "$600\\ \\mathrm{J}$ of heat passes through a conducting rod from a reservoir at $500\\ \\mathrm{K}$ to a reservoir at $300\\ \\mathrm{K}$. Find the change in entropy of the system and the work lost with surroundings at $300\\ \\mathrm{K}$."
+  },
+  "figure": "figures/B2-L30-S08.png",
+  "solution": {
+   "uz": [
+    "Har bir rezervuar uchun $T=\\mathrm{const}$: $$\\Delta S_1=-\\frac{600}{500}=-1.2\\ \\mathrm{J/K},\\qquad \\Delta S_2=\\frac{600}{300}=2\\ \\mathrm{J/K}$$",
+    "Tizim entropiyasi ortadi: $$\\Delta S=\\Delta S_1+\\Delta S_2=0.8\\ \\mathrm{J/K}>0$$",
+    "Yo'qotilgan ish — Karno dvigateli bera oladigan ish: $$A'=T_0\\Delta S=240\\ \\mathrm{J}=600\\left(1-\\frac{300}{500}\\right)$$"
+   ],
+   "ru": [
+    "Для каждого резервуара $T=\\mathrm{const}$: $$\\Delta S_1=-\\frac{600}{500}=-1.2\\ \\mathrm{J/K},\\qquad \\Delta S_2=\\frac{600}{300}=2\\ \\mathrm{J/K}$$",
+    "Энтропия системы растёт: $$\\Delta S=\\Delta S_1+\\Delta S_2=0.8\\ \\mathrm{J/K}>0$$",
+    "Потерянная работа — работа, которую дал бы двигатель Карно: $$A'=T_0\\Delta S=240\\ \\mathrm{J}=600\\left(1-\\frac{300}{500}\\right)$$"
+   ],
+   "en": [
+    "For each reservoir $T=\\mathrm{const}$: $$\\Delta S_1=-\\frac{600}{500}=-1.2\\ \\mathrm{J/K},\\qquad \\Delta S_2=\\frac{600}{300}=2\\ \\mathrm{J/K}$$",
+    "The entropy of the system grows: $$\\Delta S=\\Delta S_1+\\Delta S_2=0.8\\ \\mathrm{J/K}>0$$",
+    "The lost work — the work a Carnot engine could have given: $$A'=T_0\\Delta S=240\\ \\mathrm{J}=600\\left(1-\\frac{300}{500}\\right)$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Entropiya: $dS=\\frac{\\delta Q}{T}$, $T=\\mathrm{const}\\Rightarrow\\Delta S=\\frac{Q}{T}$",
+    "ru": "Энтропия: $dS=\\frac{\\delta Q}{T}$, $T=\\mathrm{const}\\Rightarrow\\Delta S=\\frac{Q}{T}$",
+    "en": "Entropy: $dS=\\frac{\\delta Q}{T}$, $T=\\mathrm{const}\\Rightarrow\\Delta S=\\frac{Q}{T}$"
+   },
+   {
+    "uz": "Entropiyaning o'sishi: $\\Delta S\\geq0$",
+    "ru": "Возрастание энтропии: $\\Delta S\\geq0$",
+    "en": "Growth of entropy: $\\Delta S\\geq0$"
+   },
+   {
+    "uz": "Yo'qotilgan ish: $A'=T_0\\Delta S$",
+    "ru": "Потерянная работа: $A'=T_0\\Delta S$",
+    "en": "Lost work: $A'=T_0\\Delta S$"
+   }
+  ],
+  "basis": {
+   "uz": "Issiqlik o'tishida entropiya o'sishi",
+   "ru": "Рост энтропии при теплопередаче",
+   "en": "Growth of entropy in heat transfer"
+  },
+  "answer": "\\Delta S=0.8\\ \\mathrm{J/K};\\ A'=240\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original (B2-L30, issiqlik o'tishi)"
+ },
+ {
+  "id": "B2-L30-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Issiqlik izolyatsiyalangan idishda $80^\\circ\\mathrm{C}$ dagi $2\\ \\mathrm{kg}$ suv $20^\\circ\\mathrm{C}$ dagi $3\\ \\mathrm{kg}$ suv bilan aralashtirildi. Muvozanat temperaturasini va entropiya o'zgarishini toping ($c=4190\\ \\mathrm{J/(kg\\cdot K)}$).",
+   "ru": "В теплоизолированном сосуде смешали $2\\ \\mathrm{kg}$ воды при $80^\\circ\\mathrm{C}$ и $3\\ \\mathrm{kg}$ воды при $20^\\circ\\mathrm{C}$. Найдите равновесную температуру и изменение энтропии ($c=4190\\ \\mathrm{J/(kg\\cdot K)}$).",
+   "en": "In a thermally insulated vessel, $2\\ \\mathrm{kg}$ of water at $80^\\circ\\mathrm{C}$ is mixed with $3\\ \\mathrm{kg}$ of water at $20^\\circ\\mathrm{C}$. Find the equilibrium temperature and the change in entropy ($c=4190\\ \\mathrm{J/(kg\\cdot K)}$)."
+  },
+  "figure": "figures/B2-L30-S09.png",
+  "solution": {
+   "uz": [
+    "Issiqlik balansidan: $$T=\\frac{2\\cdot353+3\\cdot293}{5}=317\\ \\mathrm{K}$$",
+    "Issiq va sovuq suv entropiyasi: $$\\Delta S_1=2\\cdot4190\\ln\\frac{317}{353}\\approx-901\\ \\mathrm{J/K},\\qquad \\Delta S_2=3\\cdot4190\\ln\\frac{317}{293}\\approx990\\ \\mathrm{J/K}$$",
+    "Jami entropiya ortadi: $$\\Delta S\\approx88\\ \\mathrm{J/K}>0$$"
+   ],
+   "ru": [
+    "Из теплового баланса: $$T=\\frac{2\\cdot353+3\\cdot293}{5}=317\\ \\mathrm{K}$$",
+    "Энтропия горячей и холодной воды: $$\\Delta S_1=2\\cdot4190\\ln\\frac{317}{353}\\approx-901\\ \\mathrm{J/K},\\qquad \\Delta S_2=3\\cdot4190\\ln\\frac{317}{293}\\approx990\\ \\mathrm{J/K}$$",
+    "Суммарная энтропия растёт: $$\\Delta S\\approx88\\ \\mathrm{J/K}>0$$"
+   ],
+   "en": [
+    "From the heat balance: $$T=\\frac{2\\cdot353+3\\cdot293}{5}=317\\ \\mathrm{K}$$",
+    "The entropy of the hot and the cold water: $$\\Delta S_1=2\\cdot4190\\ln\\frac{317}{353}\\approx-901\\ \\mathrm{J/K},\\qquad \\Delta S_2=3\\cdot4190\\ln\\frac{317}{293}\\approx990\\ \\mathrm{J/K}$$",
+    "The total entropy grows: $$\\Delta S\\approx88\\ \\mathrm{J/K}>0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Issiqlik balansi: $T=\\frac{C_1T_1+C_2T_2}{C_1+C_2}$",
+    "ru": "Тепловой баланс: $T=\\frac{C_1T_1+C_2T_2}{C_1+C_2}$",
+    "en": "Heat balance: $T=\\frac{C_1T_1+C_2T_2}{C_1+C_2}$"
+   },
+   {
+    "uz": "Jism entropiyasi: $\\Delta S=mc\\ln\\frac{T_2}{T_1}=C\\ln\\frac{T_2}{T_1}$",
+    "ru": "Энтропия тела: $\\Delta S=mc\\ln\\frac{T_2}{T_1}=C\\ln\\frac{T_2}{T_1}$",
+    "en": "Entropy of a body: $\\Delta S=mc\\ln\\frac{T_2}{T_1}=C\\ln\\frac{T_2}{T_1}$"
+   },
+   {
+    "uz": "Entropiyaning o'sishi: $\\Delta S\\geq0$",
+    "ru": "Возрастание энтропии: $\\Delta S\\geq0$",
+    "en": "Growth of entropy: $\\Delta S\\geq0$"
+   }
+  ],
+  "basis": {
+   "uz": "Aralashish entropiyasi",
+   "ru": "Энтропия смешения",
+   "en": "Entropy of mixing"
+  },
+  "answer": "T=317\\ \\mathrm{K};\\ \\Delta S\\approx88\\ \\mathrm{J/K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 2.152-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L30-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ishchi jism $TS$-diagrammada uchburchak sikl bajaradi: $a\\left(10\\ \\mathrm{J/K},\\ 300\\ \\mathrm{K}\\right)\\to b\\left(30\\ \\mathrm{J/K},\\ 600\\ \\mathrm{K}\\right)$ to'g'ri chiziq bo'ylab, $b\\to c\\left(30\\ \\mathrm{J/K},\\ 300\\ \\mathrm{K}\\right)$, so'ng $c\\to a$. Olingan va berilgan issiqliklarni, ishni va FIK ni toping, uni shu temperaturalar orasidagi Karno FIK i bilan solishtiring.",
+   "ru": "Рабочее тело совершает треугольный цикл на $TS$-диаграмме: $a\\left(10\\ \\mathrm{J/K},\\ 300\\ \\mathrm{K}\\right)\\to b\\left(30\\ \\mathrm{J/K},\\ 600\\ \\mathrm{K}\\right)$ по прямой, $b\\to c\\left(30\\ \\mathrm{J/K},\\ 300\\ \\mathrm{K}\\right)$, затем $c\\to a$. Найдите полученную и отданную теплоту, работу и КПД и сравните его с КПД Карно между теми же температурами.",
+   "en": "A working substance performs a triangular cycle on a $TS$-diagram: $a\\left(10\\ \\mathrm{J/K},\\ 300\\ \\mathrm{K}\\right)\\to b\\left(30\\ \\mathrm{J/K},\\ 600\\ \\mathrm{K}\\right)$ along a straight line, $b\\to c\\left(30\\ \\mathrm{J/K},\\ 300\\ \\mathrm{K}\\right)$, then $c\\to a$. Find the heat received and given up, the work and the efficiency, and compare it with the Carnot efficiency between the same temperatures."
+  },
+  "figure": "figures/B2-L30-S10.png",
+  "solution": {
+   "uz": [
+    "$a\\to b$ da $S$ ortadi — issiqlik olinadi, trapetsiya yuzasi: $$Q_1=\\frac{300+600}{2}\\cdot20=9000\\ \\mathrm{J}$$",
+    "$b\\to c$ — adiabata, $c\\to a$ — $300\\ \\mathrm{K}$ da issiqlik beriladi: $$Q_2=300\\cdot20=6000\\ \\mathrm{J}$$",
+    "Ish — uchburchak yuzasi: $$A=Q_1-Q_2=3000\\ \\mathrm{J},\\qquad \\eta=\\frac{3000}{9000}=\\frac{1}{3}$$",
+    "Karno chegarasi: $$\\eta_C=1-\\frac{300}{600}=0.5>\\frac{1}{3}$$"
+   ],
+   "ru": [
+    "На $a\\to b$ $S$ растёт — теплота получается, площадь трапеции: $$Q_1=\\frac{300+600}{2}\\cdot20=9000\\ \\mathrm{J}$$",
+    "$b\\to c$ — адиабата, $c\\to a$ — теплота отдаётся при $300\\ \\mathrm{K}$: $$Q_2=300\\cdot20=6000\\ \\mathrm{J}$$",
+    "Работа — площадь треугольника: $$A=Q_1-Q_2=3000\\ \\mathrm{J},\\qquad \\eta=\\frac{3000}{9000}=\\frac{1}{3}$$",
+    "Предел Карно: $$\\eta_C=1-\\frac{300}{600}=0.5>\\frac{1}{3}$$"
+   ],
+   "en": [
+    "On $a\\to b$, $S$ grows — heat is received, the area of a trapezium: $$Q_1=\\frac{300+600}{2}\\cdot20=9000\\ \\mathrm{J}$$",
+    "$b\\to c$ is an adiabat; on $c\\to a$ heat is given up at $300\\ \\mathrm{K}$: $$Q_2=300\\cdot20=6000\\ \\mathrm{J}$$",
+    "The work is the area of the triangle: $$A=Q_1-Q_2=3000\\ \\mathrm{J},\\qquad \\eta=\\frac{3000}{9000}=\\frac{1}{3}$$",
+    "The Carnot limit: $$\\eta_C=1-\\frac{300}{600}=0.5>\\frac{1}{3}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "TS-diagramma: $Q=\\int T\\,dS$, $A=\\oint T\\,dS$",
+    "ru": "TS-диаграмма: $Q=\\int T\\,dS$, $A=\\oint T\\,dS$",
+    "en": "TS-diagram: $Q=\\int T\\,dS$, $A=\\oint T\\,dS$"
+   },
+   null,
+   {
+    "uz": "FIK: $\\eta=\\frac{A}{Q_1}$, $Q_1=A+Q_2$",
+    "ru": "КПД: $\\eta=\\frac{A}{Q_1}$, $Q_1=A+Q_2$",
+    "en": "Efficiency: $\\eta=\\frac{A}{Q_1}$, $Q_1=A+Q_2$"
+   },
+   {
+    "uz": "Karno FIK i: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$",
+    "ru": "КПД Карно: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$",
+    "en": "Carnot efficiency: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$"
+   }
+  ],
+  "basis": {
+   "uz": "TS-diagrammada sikl",
+   "ru": "Цикл на TS-диаграмме",
+   "en": "A cycle on a TS-diagram"
+  },
+  "answer": "Q_1=9\\ \\mathrm{kJ};\\ Q_2=6\\ \\mathrm{kJ};\\ A=3\\ \\mathrm{kJ};\\ \\eta=\\frac{1}{3}<\\eta_C=0.5",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Irodov, «Problems in General Physics», 2.147-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L30-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Otto siklida ($\\gamma=1.4$) siqish darajasi $r=8$, siqish boshida havo temperaturasi $300\\ \\mathrm{K}$, yonishdan keyingi eng yuqori temperatura $2000\\ \\mathrm{K}$. Sikl burchaklaridagi temperaturalarni, FIK ni va uni shu temperaturalar orasidagi Karno FIK i bilan solishtiring.",
+   "ru": "В цикле Отто ($\\gamma=1.4$) степень сжатия $r=8$, температура воздуха в начале сжатия $300\\ \\mathrm{K}$, наибольшая температура после сгорания $2000\\ \\mathrm{K}$. Найдите температуры в вершинах цикла, КПД и сравните его с КПД Карно между теми же температурами.",
+   "en": "In an Otto cycle ($\\gamma=1.4$) the compression ratio is $r=8$, the air temperature at the start of compression is $300\\ \\mathrm{K}$ and the highest temperature after combustion is $2000\\ \\mathrm{K}$. Find the temperatures at the corners of the cycle and the efficiency, and compare it with the Carnot efficiency between the same temperatures."
+  },
+  "figure": "figures/B2-L30-S11.png",
+  "solution": {
+   "uz": [
+    "Adiabatik siqish: $$T_2=T_1r^{\\gamma-1}=300\\cdot8^{0.4}\\approx689\\ \\mathrm{K}$$",
+    "Adiabatik kengayish: $$T_4=\\frac{T_3}{r^{\\gamma-1}}=\\frac{2000}{2.297}\\approx871\\ \\mathrm{K}$$",
+    "Izoxoralarda olingan va berilgan issiqliklar nisbati: $$\\eta=1-\\frac{T_4-T_1}{T_3-T_2}=1-\\frac{571}{1311}\\approx0.565=1-\\frac{1}{8^{0.4}}$$",
+    "Karno chegarasi: $$\\eta_C=1-\\frac{300}{2000}=0.85$$"
+   ],
+   "ru": [
+    "Адиабатное сжатие: $$T_2=T_1r^{\\gamma-1}=300\\cdot8^{0.4}\\approx689\\ \\mathrm{K}$$",
+    "Адиабатное расширение: $$T_4=\\frac{T_3}{r^{\\gamma-1}}=\\frac{2000}{2.297}\\approx871\\ \\mathrm{K}$$",
+    "Отношение теплот на изохорах: $$\\eta=1-\\frac{T_4-T_1}{T_3-T_2}=1-\\frac{571}{1311}\\approx0.565=1-\\frac{1}{8^{0.4}}$$",
+    "Предел Карно: $$\\eta_C=1-\\frac{300}{2000}=0.85$$"
+   ],
+   "en": [
+    "Adiabatic compression: $$T_2=T_1r^{\\gamma-1}=300\\cdot8^{0.4}\\approx689\\ \\mathrm{K}$$",
+    "Adiabatic expansion: $$T_4=\\frac{T_3}{r^{\\gamma-1}}=\\frac{2000}{2.297}\\approx871\\ \\mathrm{K}$$",
+    "The ratio of heats on the isochores: $$\\eta=1-\\frac{T_4-T_1}{T_3-T_2}=1-\\frac{571}{1311}\\approx0.565=1-\\frac{1}{8^{0.4}}$$",
+    "The Carnot limit: $$\\eta_C=1-\\frac{300}{2000}=0.85$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Adiabata: $TV^{\\gamma-1}=\\mathrm{const}$, $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$",
+    "ru": "Адиабата: $TV^{\\gamma-1}=\\mathrm{const}$, $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$",
+    "en": "Adiabat: $TV^{\\gamma-1}=\\mathrm{const}$, $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$"
+   },
+   null,
+   {
+    "uz": "Otto sikli: $\\eta_{O}=1-\\frac{1}{r^{\\gamma-1}}$",
+    "ru": "Цикл Отто: $\\eta_{O}=1-\\frac{1}{r^{\\gamma-1}}$",
+    "en": "Otto cycle: $\\eta_{O}=1-\\frac{1}{r^{\\gamma-1}}$"
+   },
+   {
+    "uz": "Karno FIK i: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$",
+    "ru": "КПД Карно: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$",
+    "en": "Carnot efficiency: $\\eta_C=1-\\frac{T_2}{T_1}$, $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Otto sikli",
+   "ru": "Цикл Отто",
+   "en": "Otto cycle"
+  },
+  "answer": "T_2\\approx689\\ \\mathrm{K};\\ T_4\\approx871\\ \\mathrm{K};\\ \\eta\\approx0.565<0.85",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L30, Otto sikli)"
+ },
+ {
+  "id": "B2-L30-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Dizel siklida ($\\gamma=1.4$) siqish darajasi $r=16$, kesish darajasi $\\rho=2$, siqish boshidagi temperatura $300\\ \\mathrm{K}$. Sikl burchaklaridagi temperaturalarni va FIK ni toping. FIK ni shu $r$ dagi Otto sikli bilan solishtiring.",
+   "ru": "В цикле Дизеля ($\\gamma=1.4$) степень сжатия $r=16$, степень предварительного расширения $\\rho=2$, температура в начале сжатия $300\\ \\mathrm{K}$. Найдите температуры в вершинах цикла и КПД. Сравните КПД с циклом Отто при том же $r$.",
+   "en": "In a Diesel cycle ($\\gamma=1.4$) the compression ratio is $r=16$, the cutoff ratio $\\rho=2$ and the temperature at the start of compression $300\\ \\mathrm{K}$. Find the temperatures at the corners of the cycle and the efficiency. Compare the efficiency with an Otto cycle at the same $r$."
+  },
+  "figure": "figures/B2-L30-S12.png",
+  "solution": {
+   "uz": [
+    "Adiabatik siqish: $$T_2=T_1r^{\\gamma-1}=300\\cdot16^{0.4}\\approx909\\ \\mathrm{K}$$",
+    "Izobarik kengayish va kengayish adiabatasi ($V_4=V_1$): $$T_3=\\rho T_2\\approx1819\\ \\mathrm{K},\\qquad T_4=T_3\\left(\\frac{\\rho}{r}\\right)^{\\gamma-1}=T_1\\rho^\\gamma\\approx792\\ \\mathrm{K}$$",
+    "$Q_1=\\nu C_p\\left(T_3-T_2\\right)$, $Q_2=\\nu C_V\\left(T_4-T_1\\right)$: $$\\eta=1-\\frac{792-300}{1.4\\cdot\\left(1819-909\\right)}\\approx0.614$$",
+    "Shu $r$ dagi Otto sikli: $$\\eta_{O}=1-16^{-0.4}\\approx0.67>0.614$$"
+   ],
+   "ru": [
+    "Адиабатное сжатие: $$T_2=T_1r^{\\gamma-1}=300\\cdot16^{0.4}\\approx909\\ \\mathrm{K}$$",
+    "Изобарное расширение и адиабата расширения ($V_4=V_1$): $$T_3=\\rho T_2\\approx1819\\ \\mathrm{K},\\qquad T_4=T_3\\left(\\frac{\\rho}{r}\\right)^{\\gamma-1}=T_1\\rho^\\gamma\\approx792\\ \\mathrm{K}$$",
+    "$Q_1=\\nu C_p\\left(T_3-T_2\\right)$, $Q_2=\\nu C_V\\left(T_4-T_1\\right)$: $$\\eta=1-\\frac{792-300}{1.4\\cdot\\left(1819-909\\right)}\\approx0.614$$",
+    "Цикл Отто при том же $r$: $$\\eta_{O}=1-16^{-0.4}\\approx0.67>0.614$$"
+   ],
+   "en": [
+    "Adiabatic compression: $$T_2=T_1r^{\\gamma-1}=300\\cdot16^{0.4}\\approx909\\ \\mathrm{K}$$",
+    "Isobaric expansion and the expansion adiabat ($V_4=V_1$): $$T_3=\\rho T_2\\approx1819\\ \\mathrm{K},\\qquad T_4=T_3\\left(\\frac{\\rho}{r}\\right)^{\\gamma-1}=T_1\\rho^\\gamma\\approx792\\ \\mathrm{K}$$",
+    "$Q_1=\\nu C_p\\left(T_3-T_2\\right)$, $Q_2=\\nu C_V\\left(T_4-T_1\\right)$: $$\\eta=1-\\frac{792-300}{1.4\\cdot\\left(1819-909\\right)}\\approx0.614$$",
+    "An Otto cycle at the same $r$: $$\\eta_{O}=1-16^{-0.4}\\approx0.67>0.614$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Adiabata: $TV^{\\gamma-1}=\\mathrm{const}$, $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$",
+    "ru": "Адиабата: $TV^{\\gamma-1}=\\mathrm{const}$, $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$",
+    "en": "Adiabat: $TV^{\\gamma-1}=\\mathrm{const}$, $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$"
+   },
+   null,
+   {
+    "uz": "Dizel sikli: $\\eta_{D}=1-\\frac{T_4-T_1}{\\gamma\\left(T_3-T_2\\right)}$",
+    "ru": "Цикл Дизеля: $\\eta_{D}=1-\\frac{T_4-T_1}{\\gamma\\left(T_3-T_2\\right)}$",
+    "en": "Diesel cycle: $\\eta_{D}=1-\\frac{T_4-T_1}{\\gamma\\left(T_3-T_2\\right)}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Dizel sikli",
+   "ru": "Цикл Дизеля",
+   "en": "Diesel cycle"
+  },
+  "answer": "T_2\\approx909\\ \\mathrm{K};\\ T_3\\approx1819\\ \\mathrm{K};\\ T_4\\approx792\\ \\mathrm{K};\\ \\eta\\approx0.614",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original (B2-L30, Dizel sikli)"
+ },
+ {
+  "id": "B2-L30-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Gaz turbinasi Brayton siklida ishlaydi ($\\gamma=1.4$): kompressorga $290\\ \\mathrm{K}$ da havo kiradi, bosim $10$ marta oshiriladi, turbinaga kirishdagi temperatura $1400\\ \\mathrm{K}$. Kompressordan va turbinadan chiqishdagi temperaturalarni hamda sikl FIK ini toping.",
+   "ru": "Газовая турбина работает по циклу Брайтона ($\\gamma=1.4$): в компрессор входит воздух при $290\\ \\mathrm{K}$, давление повышается в $10$ раз, температура на входе турбины $1400\\ \\mathrm{K}$. Найдите температуры на выходе компрессора и турбины и КПД цикла.",
+   "en": "A gas turbine works on a Brayton cycle ($\\gamma=1.4$): air enters the compressor at $290\\ \\mathrm{K}$, the pressure is raised by a factor of $10$ and the turbine inlet temperature is $1400\\ \\mathrm{K}$. Find the temperatures at the compressor and turbine outlets and the efficiency of the cycle."
+  },
+  "figure": "figures/B2-L30-S13.png",
+  "solution": {
+   "uz": [
+    "Adiabatada $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$, $\\frac{\\gamma-1}{\\gamma}=\\frac{2}{7}$: $$T_2=290\\cdot10^{\\frac{2}{7}}\\approx560\\ \\mathrm{K},\\qquad T_4=\\frac{1400}{10^{\\frac{2}{7}}}\\approx725\\ \\mathrm{K}$$",
+    "Izobaralarda $Q_1=\\nu C_p\\left(T_3-T_2\\right)$, $Q_2=\\nu C_p\\left(T_4-T_1\\right)$: $$\\eta=1-\\frac{725-290}{1400-560}\\approx0.482$$",
+    "Tekshiruv — formula bo'yicha: $$\\eta_{B}=1-\\frac{T_1}{T_2}=1-\\frac{290}{560}\\approx0.482$$"
+   ],
+   "ru": [
+    "На адиабате $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$, $\\frac{\\gamma-1}{\\gamma}=\\frac{2}{7}$: $$T_2=290\\cdot10^{\\frac{2}{7}}\\approx560\\ \\mathrm{K},\\qquad T_4=\\frac{1400}{10^{\\frac{2}{7}}}\\approx725\\ \\mathrm{K}$$",
+    "На изобарах $Q_1=\\nu C_p\\left(T_3-T_2\\right)$, $Q_2=\\nu C_p\\left(T_4-T_1\\right)$: $$\\eta=1-\\frac{725-290}{1400-560}\\approx0.482$$",
+    "Проверка — по формуле: $$\\eta_{B}=1-\\frac{T_1}{T_2}=1-\\frac{290}{560}\\approx0.482$$"
+   ],
+   "en": [
+    "On an adiabat $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$, $\\frac{\\gamma-1}{\\gamma}=\\frac{2}{7}$: $$T_2=290\\cdot10^{\\frac{2}{7}}\\approx560\\ \\mathrm{K},\\qquad T_4=\\frac{1400}{10^{\\frac{2}{7}}}\\approx725\\ \\mathrm{K}$$",
+    "On the isobars $Q_1=\\nu C_p\\left(T_3-T_2\\right)$, $Q_2=\\nu C_p\\left(T_4-T_1\\right)$: $$\\eta=1-\\frac{725-290}{1400-560}\\approx0.482$$",
+    "Check — by the formula: $$\\eta_{B}=1-\\frac{T_1}{T_2}=1-\\frac{290}{560}\\approx0.482$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Adiabata: $TV^{\\gamma-1}=\\mathrm{const}$, $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$",
+    "ru": "Адиабата: $TV^{\\gamma-1}=\\mathrm{const}$, $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$",
+    "en": "Adiabat: $TV^{\\gamma-1}=\\mathrm{const}$, $Tp^{\\frac{1-\\gamma}{\\gamma}}=\\mathrm{const}$"
+   },
+   null,
+   {
+    "uz": "Brayton sikli: $\\eta_{B}=1-\\frac{T_1}{T_2}$",
+    "ru": "Цикл Брайтона: $\\eta_{B}=1-\\frac{T_1}{T_2}$",
+    "en": "Brayton cycle: $\\eta_{B}=1-\\frac{T_1}{T_2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Brayton sikli",
+   "ru": "Цикл Брайтона",
+   "en": "Brayton cycle"
+  },
+  "answer": "T_2\\approx560\\ \\mathrm{K};\\ T_4\\approx725\\ \\mathrm{K};\\ \\eta\\approx0.48",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "Irodov, «Problems in General Physics», 2.118-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L30-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$1\\ \\mathrm{mol}$ geliy Stirling siklini bajaradi: $600\\ \\mathrm{K}$ va $300\\ \\mathrm{K}$ dagi izotermalar va ikki izoxora, eng katta va eng kichik hajmlar nisbati $2.5$. Regeneratorsiz va ideal regeneratorli hollarda sikl FIK ini toping.",
+   "ru": "$1\\ \\mathrm{mol}$ гелия совершает цикл Стирлинга: изотермы при $600\\ \\mathrm{K}$ и $300\\ \\mathrm{K}$ и две изохоры, отношение наибольшего и наименьшего объёмов $2.5$. Найдите КПД цикла без регенератора и с идеальным регенератором.",
+   "en": "$1\\ \\mathrm{mol}$ of helium performs a Stirling cycle: isotherms at $600\\ \\mathrm{K}$ and $300\\ \\mathrm{K}$ and two isochores, the ratio of the largest to the smallest volume being $2.5$. Find the efficiency of the cycle without a regenerator and with an ideal regenerator."
+  },
+  "figure": "figures/B2-L30-S14.png",
+  "solution": {
+   "uz": [
+    "Issiq izotermada olingan issiqlik: $$Q_T=RT_1\\ln2.5=8.31\\cdot600\\cdot0.916\\approx4569\\ \\mathrm{J}$$",
+    "Izoxorik isishda olingan issiqlik: $$Q_V=\\frac{3}{2}R\\left(T_1-T_2\\right)\\approx3740\\ \\mathrm{J}$$",
+    "Bir sikldagi ish va regeneratorsiz FIK: $$A=R\\left(T_1-T_2\\right)\\ln2.5\\approx2284\\ \\mathrm{J},\\qquad \\eta=\\frac{A}{Q_T+Q_V}\\approx0.275$$",
+    "Regenerator $Q_V$ ni ichkarida aylantiradi: $$\\eta=\\frac{A}{Q_T}=1-\\frac{T_2}{T_1}=0.5$$"
+   ],
+   "ru": [
+    "Теплота, полученная на горячей изотерме: $$Q_T=RT_1\\ln2.5=8.31\\cdot600\\cdot0.916\\approx4569\\ \\mathrm{J}$$",
+    "Теплота, полученная при изохорном нагреве: $$Q_V=\\frac{3}{2}R\\left(T_1-T_2\\right)\\approx3740\\ \\mathrm{J}$$",
+    "Работа за цикл и КПД без регенератора: $$A=R\\left(T_1-T_2\\right)\\ln2.5\\approx2284\\ \\mathrm{J},\\qquad \\eta=\\frac{A}{Q_T+Q_V}\\approx0.275$$",
+    "Регенератор возвращает $Q_V$ внутри цикла: $$\\eta=\\frac{A}{Q_T}=1-\\frac{T_2}{T_1}=0.5$$"
+   ],
+   "en": [
+    "The heat received on the hot isotherm: $$Q_T=RT_1\\ln2.5=8.31\\cdot600\\cdot0.916\\approx4569\\ \\mathrm{J}$$",
+    "The heat received in isochoric heating: $$Q_V=\\frac{3}{2}R\\left(T_1-T_2\\right)\\approx3740\\ \\mathrm{J}$$",
+    "The work per cycle and the efficiency without a regenerator: $$A=R\\left(T_1-T_2\\right)\\ln2.5\\approx2284\\ \\mathrm{J},\\qquad \\eta=\\frac{A}{Q_T+Q_V}\\approx0.275$$",
+    "The regenerator recycles $Q_V$ inside the cycle: $$\\eta=\\frac{A}{Q_T}=1-\\frac{T_2}{T_1}=0.5$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Izotermik jarayon: $Q=A=\\nu RT\\ln\\frac{V_2}{V_1}$",
+    "ru": "Изотермический процесс: $Q=A=\\nu RT\\ln\\frac{V_2}{V_1}$",
+    "en": "Isothermal process: $Q=A=\\nu RT\\ln\\frac{V_2}{V_1}$"
+   },
+   {
+    "uz": "Izoxorik jarayon: $Q=\\nu C_V\\Delta T$",
+    "ru": "Изохорный процесс: $Q=\\nu C_V\\Delta T$",
+    "en": "Isochoric process: $Q=\\nu C_V\\Delta T$"
+   },
+   null,
+   {
+    "uz": "Regeneratorli Stirling sikli: $\\eta=\\eta_C$",
+    "ru": "Цикл Стирлинга с регенератором: $\\eta=\\eta_C$",
+    "en": "Stirling cycle with a regenerator: $\\eta=\\eta_C$"
+   }
+  ],
+  "basis": {
+   "uz": "Stirling sikli",
+   "ru": "Цикл Стирлинга",
+   "en": "Stirling cycle"
+  },
+  "answer": "\\eta\\approx0.275;\\ \\eta=0.5",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "Irodov, «Problems in General Physics», 2.125-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L30-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Issiqlik sig'imlari $C=1\\ \\mathrm{kJ/K}$ dan bo'lgan ikki jism $400\\ \\mathrm{K}$ va $100\\ \\mathrm{K}$ temperaturada. a) Ular orasida qaytar dvigatel ishlatilsa, qanday umumiy temperatura qaror topadi va eng ko'pi bilan qancha ish olinadi? b) Jismlar to'g'ridan-to'g'ri tegishtirilsa, entropiya qanchaga ortadi?",
+   "ru": "Два тела с теплоёмкостями $C=1\\ \\mathrm{kJ/K}$ каждое имеют температуры $400\\ \\mathrm{K}$ и $100\\ \\mathrm{K}$. а) Какая общая температура установится, если между ними работает обратимый двигатель, и какую наибольшую работу можно получить? б) На сколько возрастёт энтропия, если привести тела в прямой контакт?",
+   "en": "Two bodies, each of heat capacity $C=1\\ \\mathrm{kJ/K}$, are at $400\\ \\mathrm{K}$ and $100\\ \\mathrm{K}$. a) What common temperature is reached if a reversible engine works between them, and what is the greatest work that can be obtained? b) By how much does the entropy grow if the bodies are put in direct contact?"
+  },
+  "figure": "figures/B2-L30-S15.png",
+  "solution": {
+   "uz": [
+    "a) Qaytar jarayonda jami entropiya o'zgarmaydi: $$C\\ln\\frac{T}{400}+C\\ln\\frac{T}{100}=0\\ \\Rightarrow\\ T=\\sqrt{400\\cdot100}=200\\ \\mathrm{K}$$",
+    "Ish — ichki energiyalar kamayishi: $$A=C\\left(T_1+T_2-2T\\right)=1000\\cdot\\left(500-400\\right)=100\\ \\mathrm{kJ}$$",
+    "b) To'g'ridan-to'g'ri tegishda: $$T'=\\frac{400+100}{2}=250\\ \\mathrm{K}$$",
+    "Entropiya o'zgarishi: $$\\Delta S=C\\ln\\frac{250}{400}+C\\ln\\frac{250}{100}\\approx446\\ \\mathrm{J/K}$$"
+   ],
+   "ru": [
+    "а) В обратимом процессе суммарная энтропия не меняется: $$C\\ln\\frac{T}{400}+C\\ln\\frac{T}{100}=0\\ \\Rightarrow\\ T=\\sqrt{400\\cdot100}=200\\ \\mathrm{K}$$",
+    "Работа — убыль внутренних энергий: $$A=C\\left(T_1+T_2-2T\\right)=1000\\cdot\\left(500-400\\right)=100\\ \\mathrm{kJ}$$",
+    "б) При прямом контакте: $$T'=\\frac{400+100}{2}=250\\ \\mathrm{K}$$",
+    "Изменение энтропии: $$\\Delta S=C\\ln\\frac{250}{400}+C\\ln\\frac{250}{100}\\approx446\\ \\mathrm{J/K}$$"
+   ],
+   "en": [
+    "a) In a reversible process the total entropy does not change: $$C\\ln\\frac{T}{400}+C\\ln\\frac{T}{100}=0\\ \\Rightarrow\\ T=\\sqrt{400\\cdot100}=200\\ \\mathrm{K}$$",
+    "The work is the decrease in internal energy: $$A=C\\left(T_1+T_2-2T\\right)=1000\\cdot\\left(500-400\\right)=100\\ \\mathrm{kJ}$$",
+    "b) In direct contact: $$T'=\\frac{400+100}{2}=250\\ \\mathrm{K}$$",
+    "The change in entropy: $$\\Delta S=C\\ln\\frac{250}{400}+C\\ln\\frac{250}{100}\\approx446\\ \\mathrm{J/K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qaytar jarayon: $\\Delta S=0\\Rightarrow T=\\sqrt{T_1T_2}$",
+    "ru": "Обратимый процесс: $\\Delta S=0\\Rightarrow T=\\sqrt{T_1T_2}$",
+    "en": "Reversible process: $\\Delta S=0\\Rightarrow T=\\sqrt{T_1T_2}$"
+   },
+   null,
+   {
+    "uz": "Issiqlik balansi: $T=\\frac{C_1T_1+C_2T_2}{C_1+C_2}$",
+    "ru": "Тепловой баланс: $T=\\frac{C_1T_1+C_2T_2}{C_1+C_2}$",
+    "en": "Heat balance: $T=\\frac{C_1T_1+C_2T_2}{C_1+C_2}$"
+   },
+   {
+    "uz": "Jism entropiyasi: $\\Delta S=mc\\ln\\frac{T_2}{T_1}=C\\ln\\frac{T_2}{T_1}$",
+    "ru": "Энтропия тела: $\\Delta S=mc\\ln\\frac{T_2}{T_1}=C\\ln\\frac{T_2}{T_1}$",
+    "en": "Entropy of a body: $\\Delta S=mc\\ln\\frac{T_2}{T_1}=C\\ln\\frac{T_2}{T_1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ikki jismdan eng katta ish",
+   "ru": "Наибольшая работа от двух тел",
+   "en": "Maximum work from two bodies"
+  },
+  "answer": "T=200\\ \\mathrm{K};\\ A=100\\ \\mathrm{kJ};\\ \\Delta S\\approx446\\ \\mathrm{J/K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L30, eng katta ish)"
+ },
+ {
+  "id": "B2-L30-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ixtirochi dvigateli har siklda $600\\ \\mathrm{K}$ dagi qizdirgichdan $1200\\ \\mathrm{J}$ issiqlik olib, $300\\ \\mathrm{K}$ dagi sovitkichga $900\\ \\mathrm{J}$ beradi. Bunday dvigatel mumkinmi? Bir siklda Olam entropiyasi qanchaga o'zgaradi va qaytmaslik tufayli qancha ish yo'qotiladi?",
+   "ru": "Двигатель изобретателя за цикл получает $1200\\ \\mathrm{J}$ теплоты от нагревателя при $600\\ \\mathrm{K}$ и отдаёт $900\\ \\mathrm{J}$ холодильнику при $300\\ \\mathrm{K}$. Возможен ли такой двигатель? На сколько меняется энтропия Вселенной за цикл и какая работа теряется из-за необратимости?",
+   "en": "An inventor's engine takes $1200\\ \\mathrm{J}$ of heat per cycle from a heater at $600\\ \\mathrm{K}$ and gives $900\\ \\mathrm{J}$ to a cooler at $300\\ \\mathrm{K}$. Is such an engine possible? By how much does the entropy of the Universe change per cycle, and how much work is lost because of irreversibility?"
+  },
+  "figure": "figures/B2-L30-S16.png",
+  "solution": {
+   "uz": [
+    "Klauzius yig'indisi (algebraik): $$\\sum\\frac{Q_i}{T_i}=\\frac{1200}{600}-\\frac{900}{300}=-1\\ \\mathrm{J/K}<0$$",
+    "Rezervuarlar entropiyasi (ishchi jismniki siklda o'zgarmaydi): $$\\Delta S=-\\frac{1200}{600}+\\frac{900}{300}=1\\ \\mathrm{J/K}>0$$",
+    "Yo'qotilgan ish: $$A'=T_2\\Delta S=300\\ \\mathrm{J}=1200\\cdot0.5-300$$"
+   ],
+   "ru": [
+    "Сумма Клаузиуса (алгебраически): $$\\sum\\frac{Q_i}{T_i}=\\frac{1200}{600}-\\frac{900}{300}=-1\\ \\mathrm{J/K}<0$$",
+    "Энтропия резервуаров (у рабочего тела за цикл не меняется): $$\\Delta S=-\\frac{1200}{600}+\\frac{900}{300}=1\\ \\mathrm{J/K}>0$$",
+    "Потерянная работа: $$A'=T_2\\Delta S=300\\ \\mathrm{J}=1200\\cdot0.5-300$$"
+   ],
+   "en": [
+    "The Clausius sum (algebraic): $$\\sum\\frac{Q_i}{T_i}=\\frac{1200}{600}-\\frac{900}{300}=-1\\ \\mathrm{J/K}<0$$",
+    "The entropy of the reservoirs (that of the working substance does not change over a cycle): $$\\Delta S=-\\frac{1200}{600}+\\frac{900}{300}=1\\ \\mathrm{J/K}>0$$",
+    "The lost work: $$A'=T_2\\Delta S=300\\ \\mathrm{J}=1200\\cdot0.5-300$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Klauzius tengsizligi: $\\sum\\frac{Q_i}{T_i}\\leq0$",
+    "ru": "Неравенство Клаузиуса: $\\sum\\frac{Q_i}{T_i}\\leq0$",
+    "en": "Clausius inequality: $\\sum\\frac{Q_i}{T_i}\\leq0$"
+   },
+   {
+    "uz": "Entropiyaning o'sishi: $\\Delta S\\geq0$",
+    "ru": "Возрастание энтропии: $\\Delta S\\geq0$",
+    "en": "Growth of entropy: $\\Delta S\\geq0$"
+   },
+   {
+    "uz": "Yo'qotilgan ish: $A'=T_0\\Delta S$",
+    "ru": "Потерянная работа: $A'=T_0\\Delta S$",
+    "en": "Lost work: $A'=T_0\\Delta S$"
+   }
+  ],
+  "basis": {
+   "uz": "Klauzius tengsizligi",
+   "ru": "Неравенство Клаузиуса",
+   "en": "Clausius inequality"
+  },
+  "answer": "\\sum\\frac{Q_i}{T_i}=-1\\ \\mathrm{J/K}<0;\\ \\Delta S=1\\ \\mathrm{J/K};\\ A'=300\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B2-L30, Klauzius tengsizligi)"
+ },
+ {
+  "id": "B2-L30-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Idishda $8$ ta molekula bor; idishni fikran ikki teng yarmga bo'lamiz. Mikroholatlarning umumiy sonini, $4:4$ taqsimotning statistik vazni va ehtimolini, barcha molekulalar chap yarmda bo'lish ehtimolini hamda bu ikki makroholat entropiyalari farqini toping.",
+   "ru": "В сосуде $8$ молекул; мысленно разделим сосуд на две равные половины. Найдите общее число микросостояний, статистический вес и вероятность распределения $4:4$, вероятность того, что все молекулы в левой половине, и разность энтропий этих двух макросостояний.",
+   "en": "A vessel contains $8$ molecules; mentally divide the vessel into two equal halves. Find the total number of microstates, the statistical weight and probability of the $4:4$ distribution, the probability that all molecules are in the left half, and the difference in entropy between these two macrostates."
+  },
+  "figure": "figures/B2-L30-S17.png",
+  "solution": {
+   "uz": [
+    "Har bir molekula ikki joydan birini tanlaydi: $$2^N=2^8=256$$",
+    "$4:4$ taqsimotning statistik vazni: $$W=\\frac{8!}{4!\\,4!}=70,\\qquad P=\\frac{70}{256}\\approx0.27$$",
+    "Hammasi chap yarmda — bitta mikroholat: $$W=1,\\qquad P=\\frac{1}{256}\\approx0.0039$$",
+    "Entropiyalar farqi: $$\\Delta S=k\\ln70-k\\ln1\\approx4.25k$$"
+   ],
+   "ru": [
+    "Каждая молекула выбирает одно из двух мест: $$2^N=2^8=256$$",
+    "Статистический вес распределения $4:4$: $$W=\\frac{8!}{4!\\,4!}=70,\\qquad P=\\frac{70}{256}\\approx0.27$$",
+    "Все в левой половине — одно микросостояние: $$W=1,\\qquad P=\\frac{1}{256}\\approx0.0039$$",
+    "Разность энтропий: $$\\Delta S=k\\ln70-k\\ln1\\approx4.25k$$"
+   ],
+   "en": [
+    "Each molecule chooses one of two places: $$2^N=2^8=256$$",
+    "The statistical weight of the $4:4$ distribution: $$W=\\frac{8!}{4!\\,4!}=70,\\qquad P=\\frac{70}{256}\\approx0.27$$",
+    "All in the left half — a single microstate: $$W=1,\\qquad P=\\frac{1}{256}\\approx0.0039$$",
+    "The difference in entropy: $$\\Delta S=k\\ln70-k\\ln1\\approx4.25k$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Statistik vazn: $W=\\frac{N!}{n!\\left(N-n\\right)!}$",
+    "ru": "Статистический вес: $W=\\frac{N!}{n!\\left(N-n\\right)!}$",
+    "en": "Statistical weight: $W=\\frac{N!}{n!\\left(N-n\\right)!}$"
+   },
+   null,
+   {
+    "uz": "Bolsman formulasi: $S=k\\ln W$",
+    "ru": "Формула Больцмана: $S=k\\ln W$",
+    "en": "Boltzmann's formula: $S=k\\ln W$"
+   }
+  ],
+  "basis": {
+   "uz": "Statistik vazn va Bolsman entropiyasi",
+   "ru": "Статистический вес и энтропия Больцмана",
+   "en": "Statistical weight and Boltzmann entropy"
+  },
+  "answer": "256;\\ W=70,\\ P\\approx0.27;\\ P=\\frac{1}{256};\\ \\Delta S\\approx4.25k",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "Irodov, «Problems in General Physics», 2.155-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L30-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$1.5\\ \\mathrm{mol}$ argon shunday kengayadiki, bosimi hajmiga proporsional ($p=\\alpha V$); hajm $3$ marta ortadi. Gaz temperaturasi necha marta ortishini, jarayondagi molyar issiqlik sig'imini va entropiya o'zgarishini toping.",
+   "ru": "$1.5\\ \\mathrm{mol}$ аргона расширяется так, что давление пропорционально объёму ($p=\\alpha V$); объём увеличивается в $3$ раза. Найдите, во сколько раз растёт температура газа, молярную теплоёмкость в процессе и изменение энтропии.",
+   "en": "$1.5\\ \\mathrm{mol}$ of argon expands so that its pressure is proportional to its volume ($p=\\alpha V$); the volume increases by a factor of $3$. Find by what factor the gas temperature increases, the molar heat capacity in the process and the change in entropy."
+  },
+  "figure": "figures/B2-L30-S18.png",
+  "solution": {
+   "uz": [
+    "Holat tenglamasidan $T\\propto pV\\propto V^2$: $$\\frac{T_2}{T_1}=3^2=9$$",
+    "Bu politropa $n=-1$: $$C=C_V-\\frac{R}{n-1}=\\frac{3}{2}R+\\frac{R}{2}=2R$$",
+    "Entropiya (tekshiruv: $\\nu C_V\\ln9+\\nu R\\ln3$ bilan bir xil): $$\\Delta S=\\nu C\\ln\\frac{T_2}{T_1}=1.5\\cdot2\\cdot8.31\\cdot\\ln9\\approx54.8\\ \\mathrm{J/K}$$"
+   ],
+   "ru": [
+    "Из уравнения состояния $T\\propto pV\\propto V^2$: $$\\frac{T_2}{T_1}=3^2=9$$",
+    "Это политропа $n=-1$: $$C=C_V-\\frac{R}{n-1}=\\frac{3}{2}R+\\frac{R}{2}=2R$$",
+    "Энтропия (проверка: совпадает с $\\nu C_V\\ln9+\\nu R\\ln3$): $$\\Delta S=\\nu C\\ln\\frac{T_2}{T_1}=1.5\\cdot2\\cdot8.31\\cdot\\ln9\\approx54.8\\ \\mathrm{J/K}$$"
+   ],
+   "en": [
+    "From the equation of state $T\\propto pV\\propto V^2$: $$\\frac{T_2}{T_1}=3^2=9$$",
+    "This is a polytrope with $n=-1$: $$C=C_V-\\frac{R}{n-1}=\\frac{3}{2}R+\\frac{R}{2}=2R$$",
+    "The entropy (check: the same as $\\nu C_V\\ln9+\\nu R\\ln3$): $$\\Delta S=\\nu C\\ln\\frac{T_2}{T_1}=1.5\\cdot2\\cdot8.31\\cdot\\ln9\\approx54.8\\ \\mathrm{J/K}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Politropa: $pV^n=\\mathrm{const}$, $C=C_V-\\frac{R}{n-1}$",
+    "ru": "Политропа: $pV^n=\\mathrm{const}$, $C=C_V-\\frac{R}{n-1}$",
+    "en": "Polytrope: $pV^n=\\mathrm{const}$, $C=C_V-\\frac{R}{n-1}$"
+   },
+   {
+    "uz": "Ideal gaz entropiyasi: $\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}+\\nu R\\ln\\frac{V_2}{V_1}$",
+    "ru": "Энтропия идеального газа: $\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}+\\nu R\\ln\\frac{V_2}{V_1}$",
+    "en": "Ideal-gas entropy: $\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}+\\nu R\\ln\\frac{V_2}{V_1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Politropik jarayon entropiyasi",
+   "ru": "Энтропия политропного процесса",
+   "en": "Entropy of a polytropic process"
+  },
+  "answer": "\\frac{T_2}{T_1}=9;\\ C=2R;\\ \\Delta S\\approx54.8\\ \\mathrm{J/K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "Irodov, «Problems in General Physics», 2.137-masala asosida; sharti o'zgartirilgan"
+ }
+]

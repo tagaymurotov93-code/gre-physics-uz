@@ -1,0 +1,713 @@
+[
+ {
+  "t": "h1",
+  "uz": "Entropiya, issiqlik mashinalari (Entropy, heat engines)",
+  "ru": "Энтропия, тепловые машины",
+  "en": "Entropy, heat engines"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz Karno siklini $pV$- va $TS$-diagrammada chizib, uning FIK ini ideal gaz uchun keltirib chiqarasiz; Karno teoremasini isbotlaysiz va undan termodinamik temperatura shkalasi qanday kelib chiqishini tushuntirasiz; Klauzius tengsizligidan entropiyani holat funksiyasi sifatida kiritasiz; ideal gaz, qattiq jism va suyuqlik entropiyasining o'zgarishini istalgan jarayonda hisoblaysiz; erkin kengayish, issiqlik o'tishi va aralashishda entropiya o'sishini topasiz; $TS$-diagrammadan issiqlik va ishni yuza sifatida o'qiysiz; Otto, Dizel, Stirling va Brayton sikllari FIK ini hisoblaysiz; jism yoki ikki jismdan olinadigan eng katta ishni topasiz; entropiyaning statistik ma'nosini $S=k\\ln W$ orqali tushuntirasiz.",
+  "ru": "**Цель.** После урока вы будете изображать цикл Карно на $pV$- и $TS$-диаграммах и выводить его КПД для идеального газа; доказывать теорему Карно и объяснять, как из неё следует термодинамическая шкала температур; вводить энтропию как функцию состояния из неравенства Клаузиуса; вычислять изменение энтропии идеального газа, твёрдого тела и жидкости в любом процессе; находить рост энтропии при свободном расширении, теплопередаче и смешении; читать теплоту и работу как площади на $TS$-диаграмме; вычислять КПД циклов Отто, Дизеля, Стирлинга и Брайтона; находить наибольшую работу, которую можно получить от тела или двух тел; объяснять статистический смысл энтропии через $S=k\\ln W$.",
+  "en": "**Goal.** After this lesson you will draw the Carnot cycle on $pV$- and $TS$-diagrams and derive its efficiency for an ideal gas; prove Carnot's theorem and explain how the thermodynamic temperature scale follows from it; introduce entropy as a state function from the Clausius inequality; calculate the change in entropy of an ideal gas, a solid and a liquid in any process; find the growth of entropy in free expansion, heat transfer and mixing; read heat and work as areas on a $TS$-diagram; calculate the efficiency of the Otto, Diesel, Stirling and Brayton cycles; find the greatest work that can be obtained from one body or from two bodies; and explain the statistical meaning of entropy through $S=k\\ln W$."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L29 da birinchi qonunni, issiqlik sig'imlarini va izojarayonlarni o'rgandik, ikkinchi qonunni esa ikki ta'rif (Kelvin–Plank va Klauzius) ko'rinishida va Karno chegarasini isbotsiz berdik. Bu darsda ikkinchi qonunni miqdoriy qonunga aylantiramiz: Karno siklidan boshlab yangi holat funksiyasi — **entropiya (entropy)** ni kiritamiz va «qaysi jarayon o'z-o'zidan boradi?» degan savolga bitta tengsizlik bilan javob beramiz. Keyin real issiqlik mashinalari sikllarini tahlil qilamiz va entropiyaning mikroskopik ma'nosiga o'tamiz — bu B2-L31 (kinetik nazariya) va B2-L32 (termodinamik potensiallar) uchun ko'prik. GRE da Karno FIK i, ideal gaz entropiyasi, $TS$-diagramma va $S=k\\ln W$ deyarli har testda uchraydi.",
+  "ru": "В B2-L29 мы изучили первый закон, теплоёмкости и изопроцессы, а второй закон дали в виде двух формулировок (Кельвина–Планка и Клаузиуса) и предела Карно без доказательства. В этом уроке превратим второй закон в количественный: начиная с цикла Карно, введём новую функцию состояния — **энтропию (entropy)** — и одним неравенством ответим на вопрос «какой процесс идёт сам собой?». Затем разберём циклы реальных тепловых машин и перейдём к микроскопическому смыслу энтропии — это мост к B2-L31 (кинетическая теория) и B2-L32 (термодинамические потенциалы). На GRE КПД Карно, энтропия идеального газа, $TS$-диаграмма и $S=k\\ln W$ встречаются почти в каждом тесте.",
+  "en": "In B2-L29 we studied the first law, heat capacities and isoprocesses, and gave the second law as two statements (Kelvin–Planck and Clausius) together with the Carnot limit without proof. In this lesson we turn the second law into a quantitative law: starting from the Carnot cycle we introduce a new state function — **entropy** — and answer the question \"which process goes by itself?\" with a single inequality. Then we analyse the cycles of real heat engines and move to the microscopic meaning of entropy — a bridge to B2-L31 (kinetic theory) and B2-L32 (thermodynamic potentials). On the GRE, the Carnot efficiency, the entropy of an ideal gas, the $TS$-diagram and $S=k\\ln W$ appear in almost every test."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Karno sikli (Carnot cycle)",
+  "ru": "1. Цикл Карно",
+  "en": "1. The Carnot cycle"
+ },
+ {
+  "t": "li",
+  "uz": "**Nega aynan shu sikl.** Issiqlik dvigateli faqat ikkita issiqlik rezervuari — temperaturasi $T_1$ bo'lgan qizdirgich va $T_2$ bo'lgan sovitkich bilan ishlasin. Issiqlik almashinuvi qaytar bo'lishi uchun ishchi jism rezervuardan issiqlikni faqat o'sha rezervuar temperaturasida (izotermik) olishi yoki berishi, bir temperaturadan ikkinchisiga esa issiqlik almashmasdan (adiabatik) o'tishi kerak. Ikki izoterma va ikki adiabatadan iborat bunday qaytar sikl **Karno sikli** deyiladi (Sadi Karno, 1824). Chekli temperaturalar farqi orqali o'tgan har qanday issiqlik qaytmas bo'lgani uchun, ikki rezervuar orasidagi qaytar sikl faqat shunday bo'lishi mumkin.",
+  "ru": "**Почему именно этот цикл.** Пусть тепловой двигатель работает только с двумя тепловыми резервуарами — нагревателем с температурой $T_1$ и холодильником с температурой $T_2$. Чтобы теплообмен был обратимым, рабочее тело должно получать или отдавать теплоту резервуару только при температуре этого резервуара (изотермически), а переходить от одной температуры к другой без теплообмена (адиабатно). Такой обратимый цикл из двух изотерм и двух адиабат называется **циклом Карно** (Сади Карно, 1824). Поскольку любая теплота, переданная через конечную разность температур, необратима, обратимый цикл между двумя резервуарами может быть только таким.",
+  "en": "**Why this particular cycle.** Let a heat engine work with only two heat reservoirs — a heater at temperature $T_1$ and a cooler at temperature $T_2$. For the heat exchange to be reversible, the working substance must receive or give up heat to a reservoir only at that reservoir's temperature (isothermally), and must pass from one temperature to the other without exchanging heat (adiabatically). Such a reversible cycle of two isotherms and two adiabats is called the **Carnot cycle** (Sadi Carnot, 1824). Since any heat passed across a finite temperature difference is irreversible, a reversible cycle between two reservoirs can only be of this kind."
+ },
+ {
+  "t": "li",
+  "uz": "**To'rt bosqich ([[F01]]).** Ishchi jism — $\\nu$ mol ideal gaz. $1\\to2$: $T_1$ da izotermik kengayish ($V_1\\to V_2$), gaz qizdirgichdan $Q_1$ issiqlik oladi va hammasini ishga aylantiradi ($\\Delta U=0$). $2\\to3$: adiabatik kengayish ($V_2\\to V_3$), gaz $T_2$ gacha soviydi. $3\\to4$: $T_2$ da izotermik siqish ($V_3\\to V_4$), gaz sovitkichga $Q_2$ issiqlik beradi. $4\\to1$: adiabatik siqish, gaz yana $T_1$ gacha isiydi. $pV$-diagrammada sikl soat mili bo'yicha aylanadi, o'ralgan yuza bir sikldagi foydali ish $A=Q_1-Q_2$ ga teng.",
+  "ru": "**Четыре стадии ([[F01]]).** Рабочее тело — $\\nu$ моль идеального газа. $1\\to2$: изотермическое расширение при $T_1$ ($V_1\\to V_2$), газ получает от нагревателя теплоту $Q_1$ и целиком превращает её в работу ($\\Delta U=0$). $2\\to3$: адиабатное расширение ($V_2\\to V_3$), газ охлаждается до $T_2$. $3\\to4$: изотермическое сжатие при $T_2$ ($V_3\\to V_4$), газ отдаёт холодильнику теплоту $Q_2$. $4\\to1$: адиабатное сжатие, газ снова нагревается до $T_1$. На $pV$-диаграмме цикл обходится по часовой стрелке, охватываемая площадь равна полезной работе за цикл $A=Q_1-Q_2$.",
+  "en": "**Four stages ([[F01]]).** The working substance is $\\nu$ mol of an ideal gas. $1\\to2$: isothermal expansion at $T_1$ ($V_1\\to V_2$); the gas receives heat $Q_1$ from the heater and turns all of it into work ($\\Delta U=0$). $2\\to3$: adiabatic expansion ($V_2\\to V_3$); the gas cools to $T_2$. $3\\to4$: isothermal compression at $T_2$ ($V_3\\to V_4$); the gas gives heat $Q_2$ to the cooler. $4\\to1$: adiabatic compression; the gas heats up to $T_1$ again. On the $pV$-diagram the cycle runs clockwise, and the enclosed area equals the useful work per cycle $A=Q_1-Q_2$."
+ },
+ {
+  "t": "li",
+  "uz": "**Issiqliklar.** Izotermalarda ideal gaz olgan issiqlik bajargan ishiga teng (B2-L29):",
+  "ru": "**Теплоты.** На изотермах теплота, полученная идеальным газом, равна его работе (B2-L29):",
+  "en": "**The heats.** On the isotherms the heat received by an ideal gas equals the work it does (B2-L29):"
+ },
+ {
+  "t": "m",
+  "m": "Q_1=\\nu RT_1\\ln\\frac{V_2}{V_1},\\qquad Q_2=\\nu RT_2\\ln\\frac{V_3}{V_4}"
+ },
+ {
+  "t": "li",
+  "uz": "**Adiabatalar hajmlarni bog'laydi.** $2\\to3$ va $4\\to1$ adiabatalarda $TV^{\\gamma-1}=\\mathrm{const}$: $T_1V_2^{\\gamma-1}=T_2V_3^{\\gamma-1}$ va $T_1V_1^{\\gamma-1}=T_2V_4^{\\gamma-1}$. Birinchisini ikkinchisiga bo'lsak, $\\frac{V_2}{V_1}=\\frac{V_3}{V_4}$ — logarifmlar teng bo'ladi va FIK faqat temperaturalarga bog'liq qoladi:",
+  "ru": "**Адиабаты связывают объёмы.** На адиабатах $2\\to3$ и $4\\to1$ $TV^{\\gamma-1}=\\mathrm{const}$: $T_1V_2^{\\gamma-1}=T_2V_3^{\\gamma-1}$ и $T_1V_1^{\\gamma-1}=T_2V_4^{\\gamma-1}$. Разделив первое на второе, получим $\\frac{V_2}{V_1}=\\frac{V_3}{V_4}$ — логарифмы равны, и КПД зависит только от температур:",
+  "en": "**The adiabats link the volumes.** On the adiabats $2\\to3$ and $4\\to1$, $TV^{\\gamma-1}=\\mathrm{const}$: $T_1V_2^{\\gamma-1}=T_2V_3^{\\gamma-1}$ and $T_1V_1^{\\gamma-1}=T_2V_4^{\\gamma-1}$. Dividing the first by the second gives $\\frac{V_2}{V_1}=\\frac{V_3}{V_4}$ — the logarithms are equal, and the efficiency depends only on the temperatures:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1},\\qquad \\eta=\\frac{A}{Q_1}=1-\\frac{Q_2}{Q_1}=1-\\frac{T_2}{T_1}"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L30-F01.png",
+   "ru": "figures/B2-L30-F01-ru.png",
+   "en": "figures/B2-L30-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Natijaning ma'nosi.** Karno FIK i ishchi jism turiga, hajmlarga va gaz miqdoriga bog'liq emas — faqat temperaturalar nisbati muhim. $\\eta=1$ uchun $T_2=0$ kerak, bu esa uchinchi qonunga ko'ra erishib bo'lmaydi; $T_1=T_2$ da $\\eta=0$ — bitta rezervuardan ish olib bo'lmaydi (Kelvin–Plank). Masalan, $T_1=900\\ \\mathrm{K}$ bug' va $T_2=300\\ \\mathrm{K}$ daryo suvi uchun $\\eta=1-\\frac{1}{3}\\approx0.67$; real issiqlik elektr stansiyalari $0.35$–$0.45$ ga erishadi. Temperaturalar har doim kelvinda olinadi: selsiy shkalasidagi sonlarni qo'yish — GRE dagi eng ko'p uchraydigan xato.",
+  "ru": "**Смысл результата.** КПД Карно не зависит ни от рода рабочего тела, ни от объёмов, ни от количества газа — важно только отношение температур. Для $\\eta=1$ нужно $T_2=0$, что по третьему закону недостижимо; при $T_1=T_2$ $\\eta=0$ — работу от одного резервуара получить нельзя (Кельвин–Планк). Например, для пара при $T_1=900\\ \\mathrm{K}$ и речной воды при $T_2=300\\ \\mathrm{K}$ $\\eta=1-\\frac{1}{3}\\approx0.67$; реальные тепловые электростанции достигают $0.35$–$0.45$. Температуры всегда берутся в кельвинах: подстановка чисел по шкале Цельсия — самая частая ошибка на GRE.",
+  "en": "**Meaning of the result.** The Carnot efficiency depends neither on the kind of working substance, nor on the volumes, nor on the amount of gas — only the ratio of the temperatures matters. For $\\eta=1$ we would need $T_2=0$, which by the third law cannot be reached; at $T_1=T_2$, $\\eta=0$ — no work can be obtained from a single reservoir (Kelvin–Planck). For example, for steam at $T_1=900\\ \\mathrm{K}$ and river water at $T_2=300\\ \\mathrm{K}$, $\\eta=1-\\frac{1}{3}\\approx0.67$; real thermal power stations reach $0.35$–$0.45$. Temperatures are always taken in kelvins: substituting Celsius numbers is the most common mistake on the GRE."
+ },
+ {
+  "t": "li",
+  "uz": "**Teskari Karno sikli.** Qaytar sikl teskari yo'nalishda (soat miliga qarshi) aylantirilsa, barcha issiqlik va ishlar ishorasini almashtiradi: tashqi ish $A$ hisobiga sovitkichdan $Q_2$ olinadi va qizdirgichga $Q_1=Q_2+A$ beriladi. Bu ideal sovutgich va ideal issiqlik nasosi; ularning koeffitsiyentlari $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$ dan kelib chiqadi:",
+  "ru": "**Обратный цикл Карно.** Если обратимый цикл обходить в обратном направлении (против часовой стрелки), все теплоты и работы меняют знак: за счёт внешней работы $A$ от холодильника отбирается $Q_2$, а нагревателю передаётся $Q_1=Q_2+A$. Это идеальная холодильная машина и идеальный тепловой насос; их коэффициенты следуют из $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$:",
+  "en": "**The reversed Carnot cycle.** If a reversible cycle is run in the opposite direction (anticlockwise), all heats and works change sign: at the expense of external work $A$, heat $Q_2$ is taken from the cooler and $Q_1=Q_2+A$ is given to the heater. This is an ideal refrigerator and an ideal heat pump; their coefficients follow from $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$:"
+ },
+ {
+  "t": "m",
+  "m": "\\varepsilon=\\frac{Q_2}{A}=\\frac{T_2}{T_1-T_2},\\qquad \\varphi=\\frac{Q_1}{A}=\\frac{T_1}{T_1-T_2}=1+\\varepsilon"
+ },
+ {
+  "t": "li",
+  "uz": "**Kichik temperaturalar farqi — katta koeffitsiyent.** $T_1-T_2$ kichik bo'lganda $\\varepsilon$ va $\\varphi$ juda katta bo'ladi: sovutgich kichik ish bilan ko'p issiqlik «ko'chiradi». Aksincha, juda past temperaturalarda ($T_2\\to0$) $\\varepsilon\\to0$: har bir joulni olib chiqish uchun tobora ko'p ish kerak — shuning uchun absolyut nolga yaqinlashish tobora qiyinlashadi. FIK aksincha $T_1-T_2$ katta bo'lganda yaxshi; shu sababli dvigatel uchun $\\eta<1$, sovutgich uchun esa $\\varepsilon>1$ odatiy hol.",
+  "ru": "**Малая разность температур — большой коэффициент.** При малой $T_1-T_2$ $\\varepsilon$ и $\\varphi$ очень велики: холодильная машина малой работой «перекачивает» много теплоты. Наоборот, при очень низких температурах ($T_2\\to0$) $\\varepsilon\\to0$: для отвода каждого джоуля нужно всё больше работы — поэтому приближаться к абсолютному нулю всё труднее. КПД, наоборот, хорош при большой $T_1-T_2$; поэтому для двигателя $\\eta<1$, а для холодильной машины $\\varepsilon>1$ — обычное дело.",
+  "en": "**A small temperature difference means a large coefficient.** When $T_1-T_2$ is small, $\\varepsilon$ and $\\varphi$ are very large: a refrigerator \"moves\" a lot of heat with little work. Conversely, at very low temperatures ($T_2\\to0$), $\\varepsilon\\to0$: removing each joule takes ever more work — which is why approaching absolute zero becomes ever harder. The efficiency, on the contrary, is good when $T_1-T_2$ is large; this is why $\\eta<1$ for an engine while $\\varepsilon>1$ is normal for a refrigerator."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Karno teoremasi (Carnot's theorem)",
+  "ru": "2. Теорема Карно",
+  "en": "2. Carnot's theorem"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** (1) Bir xil qizdirgich va sovitkich orasida ishlaydigan barcha qaytar dvigatellarning FIK i bir xil va ishchi jismga bog'liq emas. (2) Shu rezervuarlar orasidagi har qanday qaytmas dvigatelning FIK i qaytarnikidan kichik. Shuning uchun $\\eta=1-\\frac{T_2}{T_1}$ — faqat ideal gaz uchun emas, balki ikki rezervuar orasidagi har qanday dvigatel uchun yuqori chegara:",
+  "ru": "**Формулировка.** (1) КПД всех обратимых двигателей, работающих между одними и теми же нагревателем и холодильником, одинаков и не зависит от рабочего тела. (2) КПД любого необратимого двигателя, работающего между теми же резервуарами, меньше КПД обратимого. Поэтому $\\eta=1-\\frac{T_2}{T_1}$ — верхний предел не только для идеального газа, но и для любого двигателя между двумя резервуарами:",
+  "en": "**Statement.** (1) All reversible engines working between the same heater and cooler have the same efficiency, independent of the working substance. (2) Any irreversible engine working between the same reservoirs has a smaller efficiency than a reversible one. Therefore $\\eta=1-\\frac{T_2}{T_1}$ is an upper limit not only for an ideal gas but for any engine between two reservoirs:"
+ },
+ {
+  "t": "m",
+  "m": "\\eta\\leq\\eta_C=1-\\frac{T_2}{T_1}"
+ },
+ {
+  "t": "li",
+  "uz": "**Isbot ([[F02]]).** Faraz qilaylik, $X$ dvigatelning FIK i $\\eta'>\\eta_C$. Uni teskari ishlaydigan Karno mashinasi bilan shunday ulaymizki, $X$ ning bir sikldagi ishi $A$ Karno sovutgichini aylantirsin. $X$ qizdirgichdan $Q_1'=\\frac{A}{\\eta'}$ oladi, Karno sovutgichi esa qizdirgichga $Q_1=\\frac{A}{\\eta_C}$ beradi; $\\eta'>\\eta_C$ bo'lgani uchun $Q_1>Q_1'$. Birgalikdagi mashina tashqi ishsiz qizdirgichga $Q_1-Q_1'>0$ issiqlik beradi va birinchi qonunga ko'ra sovitkichdan aynan shuncha oladi — bu Klauzius ta'rifiga zid. Demak $\\eta'\\leq\\eta_C$. Agar $X$ ham qaytar bo'lsa, uni teskari aylantirib, xuddi shunday $\\eta_C\\leq\\eta'$ ni olamiz, ya'ni $\\eta'=\\eta_C$.",
+  "ru": "**Доказательство ([[F02]]).** Предположим, что КПД двигателя $X$ равен $\\eta'>\\eta_C$. Соединим его с машиной Карно, работающей в обратном направлении, так, чтобы работа $A$ двигателя $X$ за цикл приводила в действие холодильную машину Карно. $X$ берёт от нагревателя $Q_1'=\\frac{A}{\\eta'}$, а холодильная машина Карно отдаёт нагревателю $Q_1=\\frac{A}{\\eta_C}$; так как $\\eta'>\\eta_C$, $Q_1>Q_1'$. Совместная машина без внешней работы передаёт нагревателю теплоту $Q_1-Q_1'>0$ и по первому закону ровно столько же берёт от холодильника — это противоречит формулировке Клаузиуса. Значит, $\\eta'\\leq\\eta_C$. Если $X$ тоже обратим, то, обратив его, так же получим $\\eta_C\\leq\\eta'$, то есть $\\eta'=\\eta_C$.",
+  "en": "**Proof ([[F02]]).** Suppose the efficiency of an engine $X$ is $\\eta'>\\eta_C$. Couple it to a Carnot machine running in reverse so that the work $A$ of $X$ per cycle drives the Carnot refrigerator. $X$ takes $Q_1'=\\frac{A}{\\eta'}$ from the heater, while the Carnot refrigerator gives $Q_1=\\frac{A}{\\eta_C}$ to the heater; since $\\eta'>\\eta_C$, $Q_1>Q_1'$. The combined machine, with no external work, delivers heat $Q_1-Q_1'>0$ to the heater and, by the first law, takes exactly as much from the cooler — this contradicts the Clausius statement. Hence $\\eta'\\leq\\eta_C$. If $X$ is also reversible, running it backwards gives in the same way $\\eta_C\\leq\\eta'$, that is, $\\eta'=\\eta_C$."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L30-F02.png",
+   "ru": "figures/B2-L30-F02-ru.png",
+   "en": "figures/B2-L30-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Real dvigatelda qaytmaslik manbalari.** Ishqalanish, chekli temperaturalar farqi orqali issiqlik o'tishi, gazning tez (nomuvozanat) kengayishi, aralashish va yonish — barchasi FIK ni Karno chegarasidan pasaytiradi. Karno sikli amalda qurilmaydi: izotermik bosqichlar cheksiz sekin bo'lishi kerak, ya'ni dvigatel quvvati nolga intiladi. Shu sababli real dvigatellar tezroq, lekin kamroq tejamkor sikllarda ishlaydi (9-bo'lim).",
+  "ru": "**Источники необратимости в реальном двигателе.** Трение, теплопередача через конечную разность температур, быстрое (неравновесное) расширение газа, смешение и горение — всё это снижает КПД ниже предела Карно. Цикл Карно на практике не строят: изотермические стадии должны быть бесконечно медленными, то есть мощность двигателя стремится к нулю. Поэтому реальные двигатели работают по более быстрым, но менее экономичным циклам (раздел 9).",
+  "en": "**Sources of irreversibility in a real engine.** Friction, heat transfer across a finite temperature difference, fast (non-equilibrium) expansion of the gas, mixing and combustion — all of these lower the efficiency below the Carnot limit. The Carnot cycle is not built in practice: the isothermal stages would have to be infinitely slow, that is, the power of the engine tends to zero. This is why real engines run on faster but less economical cycles (Section 9)."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Termodinamik temperatura shkalasi",
+  "ru": "3. Термодинамическая шкала температур",
+  "en": "3. The thermodynamic temperature scale"
+ },
+ {
+  "t": "li",
+  "uz": "**Moddaga bog'liq bo'lmagan shkala.** Karno teoremasiga ko'ra qaytar sikldagi $\\frac{Q_2}{Q_1}$ nisbat faqat ikki rezervuar holatiga bog'liq va ishchi jismni tanlashga bog'liq emas. Kelvin bundan foydalanib, temperaturani istalgan termometrik moddadan mustaqil aniqlashni taklif qildi: ikki jism temperaturalari nisbati ular orasidagi qaytar sikldagi issiqliklar nisbatiga teng deb olinadi. Shkala birligini belgilash uchun bitta tayanch nuqta yetarli — suvning uchlik nuqtasi:",
+  "ru": "**Шкала, не зависящая от вещества.** По теореме Карно отношение $\\frac{Q_2}{Q_1}$ в обратимом цикле зависит только от состояний двух резервуаров и не зависит от выбора рабочего тела. Кельвин воспользовался этим и предложил определять температуру независимо от любого термометрического вещества: отношение температур двух тел принимается равным отношению теплот в обратимом цикле между ними. Для задания единицы шкалы достаточно одной реперной точки — тройной точки воды:",
+  "en": "**A scale independent of the substance.** By Carnot's theorem the ratio $\\frac{Q_2}{Q_1}$ in a reversible cycle depends only on the states of the two reservoirs and not on the choice of working substance. Kelvin used this to propose defining temperature independently of any thermometric substance: the ratio of the temperatures of two bodies is taken equal to the ratio of the heats in a reversible cycle between them. To fix the unit of the scale a single reference point suffices — the triple point of water:"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{T}{T_3}=\\frac{Q}{Q_3},\\qquad T_3=273.16\\ \\mathrm{K}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ideal gaz shkalasi bilan mosligi.** 1-bo'limda ideal gaz uchun $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$ ni oldik, bunda $T$ — holat tenglamasidagi (ideal gaz termometri) temperatura. Demak termodinamik shkala ideal gaz shkalasi bilan butunlay mos keladi va $pV=\\nu RT$ dagi $T$ — haqiqiy termodinamik temperatura. Shkalaning nol nuqtasi — FIK $1$ ga teng bo'ladigan sovitkich temperaturasi; manfiy termodinamik temperatura oddiy (energiyasi chegaralanmagan) tizimlar uchun ma'noga ega emas.",
+  "ru": "**Совпадение со шкалой идеального газа.** В разделе 1 для идеального газа мы получили $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$, где $T$ — температура из уравнения состояния (термометр на идеальном газе). Значит, термодинамическая шкала полностью совпадает со шкалой идеального газа, и $T$ в $pV=\\nu RT$ — истинная термодинамическая температура. Нуль шкалы — температура холодильника, при которой КПД равен $1$; отрицательная термодинамическая температура для обычных систем (с неограниченной энергией) смысла не имеет.",
+  "en": "**Agreement with the ideal-gas scale.** In Section 1 we obtained $\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}$ for an ideal gas, where $T$ is the temperature in the equation of state (the ideal-gas thermometer). Hence the thermodynamic scale coincides completely with the ideal-gas scale, and the $T$ in $pV=\\nu RT$ is the true thermodynamic temperature. The zero of the scale is the cooler temperature at which the efficiency would equal $1$; a negative thermodynamic temperature has no meaning for ordinary systems (with unbounded energy)."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Klauzius tengsizligi (Clausius inequality)",
+  "ru": "4. Неравенство Клаузиуса",
+  "en": "4. The Clausius inequality"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki rezervuar.** Issiqliklarni algebraik yozamiz: $Q_i$ — ishchi jism $T_i$ rezervuardan olgan issiqlik (bergan bo'lsa manfiy). U holda Karno uchun $\\frac{Q_1}{T_1}-\\frac{Q_2}{T_2}=0$ shartni $\\frac{Q_1}{T_1}+\\frac{\\left(-Q_2\\right)}{T_2}=0$ deb yozish mumkin. Qaytmas dvigatelda $\\eta<\\eta_C$, ya'ni $\\frac{Q_2}{Q_1}>\\frac{T_2}{T_1}$ va yig'indi manfiy bo'ladi. Ko'p rezervuarli ixtiyoriy siklga umumlashtirsak:",
+  "ru": "**Два резервуара.** Запишем теплоты алгебраически: $Q_i$ — теплота, полученная рабочим телом от резервуара $T_i$ (если отдана — отрицательна). Тогда условие Карно $\\frac{Q_1}{T_1}-\\frac{Q_2}{T_2}=0$ можно записать как $\\frac{Q_1}{T_1}+\\frac{\\left(-Q_2\\right)}{T_2}=0$. В необратимом двигателе $\\eta<\\eta_C$, то есть $\\frac{Q_2}{Q_1}>\\frac{T_2}{T_1}$, и сумма отрицательна. Обобщая на произвольный цикл со многими резервуарами:",
+  "en": "**Two reservoirs.** Let us write the heats algebraically: $Q_i$ is the heat received by the working substance from the reservoir $T_i$ (negative if given up). Then the Carnot condition $\\frac{Q_1}{T_1}-\\frac{Q_2}{T_2}=0$ can be written as $\\frac{Q_1}{T_1}+\\frac{\\left(-Q_2\\right)}{T_2}=0$. In an irreversible engine $\\eta<\\eta_C$, that is, $\\frac{Q_2}{Q_1}>\\frac{T_2}{T_1}$, and the sum is negative. Generalising to an arbitrary cycle with many reservoirs:"
+ },
+ {
+  "t": "m",
+  "m": "\\sum_i\\frac{Q_i}{T_i}\\leq0,\\qquad \\oint\\frac{\\delta Q}{T}\\leq0"
+ },
+ {
+  "t": "li",
+  "uz": "**Ixtiyoriy siklni Karno sikllariga bo'lish ([[F03]]).** $pV$-diagrammadagi istalgan qaytar siklni zich joylashgan adiabatalar bilan ingichka bo'laklarga ajratamiz va har bir bo'lakni kichik izoterma qismlari bilan yopamiz. Natijada sikl ko'plab kichik Karno sikllari yig'indisiga aylanadi: qo'shni sikllarning umumiy adiabata qismlari qarama-qarshi yo'nalishda o'tiladi va qisqaradi, izoterma qismlari esa birgalikda asl siklning chegarasini takrorlaydi. Har bir kichik Karno sikli uchun $\\frac{\\delta Q_1}{T_1}+\\frac{\\delta Q_2}{T_2}=0$ (algebraik), shuning uchun qaytar siklda tenglik bajariladi. Bu yerda $T$ — issiqlik berayotgan rezervuar temperaturasi; qaytar jarayonda u ishchi jism temperaturasiga teng.",
+  "ru": "**Разбиение произвольного цикла на циклы Карно ([[F03]]).** Разобьём любой обратимый цикл на $pV$-диаграмме густо расположенными адиабатами на узкие полосы и замкнём каждую полосу малыми участками изотерм. В результате цикл превращается в сумму множества малых циклов Карно: общие участки адиабат у соседних циклов проходятся в противоположных направлениях и сокращаются, а участки изотерм вместе повторяют границу исходного цикла. Для каждого малого цикла Карно $\\frac{\\delta Q_1}{T_1}+\\frac{\\delta Q_2}{T_2}=0$ (алгебраически), поэтому в обратимом цикле выполняется равенство. Здесь $T$ — температура резервуара, отдающего теплоту; в обратимом процессе она равна температуре рабочего тела.",
+  "en": "**Splitting an arbitrary cycle into Carnot cycles ([[F03]]).** Divide any reversible cycle on the $pV$-diagram into narrow strips by closely spaced adiabats and close each strip with short pieces of isotherms. The cycle then becomes a sum of many small Carnot cycles: the shared adiabat pieces of neighbouring cycles are traversed in opposite directions and cancel, while the isotherm pieces together reproduce the boundary of the original cycle. For each small Carnot cycle $\\frac{\\delta Q_1}{T_1}+\\frac{\\delta Q_2}{T_2}=0$ (algebraically), so in a reversible cycle the equality holds. Here $T$ is the temperature of the reservoir supplying the heat; in a reversible process it equals the temperature of the working substance."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L30-F03.png",
+   "ru": "figures/B2-L30-F03-ru.png",
+   "en": "figures/B2-L30-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Tekshiruv usuli.** Klauzius tengsizligi ixtirochining da'vosini tekshirishning eng tez yo'li: dvigatelning har bir rezervuar bilan almashgan issiqligini algebraik yozib, $\\sum\\frac{Q_i}{T_i}$ ni hisoblang. Yig'indi musbat chiqsa — qurilma mumkin emas, nolga teng — qaytar (ideal), manfiy — qaytmas, lekin mumkin. Bu usul uch va undan ko'p rezervuarli qurilmalar uchun ham ishlaydi, u yerda oddiy Karno formulasini qo'llab bo'lmaydi.",
+  "ru": "**Способ проверки.** Неравенство Клаузиуса — самый быстрый способ проверить заявление изобретателя: запишите алгебраически теплоту, которой двигатель обменялся с каждым резервуаром, и вычислите $\\sum\\frac{Q_i}{T_i}$. Если сумма положительна — устройство невозможно, равна нулю — обратимо (идеально), отрицательна — необратимо, но возможно. Этот способ работает и для устройств с тремя и более резервуарами, где простую формулу Карно применить нельзя.",
+  "en": "**A checking method.** The Clausius inequality is the fastest way to check an inventor's claim: write algebraically the heat the engine exchanges with each reservoir and calculate $\\sum\\frac{Q_i}{T_i}$. If the sum is positive the device is impossible, if zero it is reversible (ideal), if negative it is irreversible but possible. This method also works for devices with three or more reservoirs, where the simple Carnot formula cannot be applied."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Entropiya — holat funksiyasi",
+  "ru": "5. Энтропия — функция состояния",
+  "en": "5. Entropy as a state function"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Qaytar siklda $\\oint\\frac{\\delta Q}{T}=0$. Bu shuni bildiradiki, ikki holat orasida qaytar yo'l bo'ylab olingan $\\int\\frac{\\delta Q}{T}$ yo'lga bog'liq emas: ikki xil qaytar yo'ldan birini teskari aylantirsak, sikl hosil bo'ladi va integrallar ayirmasi nolga teng. Demak shunday holat funksiyasi $S$ mavjudki, uning o'zgarishi shu integralga teng. Bu funksiya **entropiya** deyiladi (Klauzius, 1865; yunoncha «aylanish»):",
+  "ru": "**Определение.** В обратимом цикле $\\oint\\frac{\\delta Q}{T}=0$. Это значит, что $\\int\\frac{\\delta Q}{T}$, взятый по обратимому пути между двумя состояниями, не зависит от пути: обратив один из двух обратимых путей, получим цикл, и разность интегралов равна нулю. Следовательно, существует функция состояния $S$, изменение которой равно этому интегралу. Эта функция называется **энтропией** (Клаузиус, 1865; от греческого «превращение»):",
+  "en": "**Definition.** In a reversible cycle $\\oint\\frac{\\delta Q}{T}=0$. This means that $\\int\\frac{\\delta Q}{T}$ taken along a reversible path between two states does not depend on the path: reversing one of two reversible paths gives a cycle, and the difference of the integrals is zero. Hence there exists a state function $S$ whose change equals this integral. This function is called **entropy** (Clausius, 1865; from the Greek for \"transformation\"):"
+ },
+ {
+  "t": "m",
+  "m": "dS=\\frac{\\delta Q}{T},\\qquad \\Delta S=S_2-S_1=\\int_1^2\\frac{\\delta Q}{T}"
+ },
+ {
+  "t": "li",
+  "uz": "**Birlik va xossalari.** Entropiya birligi $\\mathrm{J/K}$. U ekstensiv kattalik: tizim qismlari entropiyalari qo'shiladi. Ta'rif faqat entropiya **o'zgarishini** beradi; mutlaq qiymatni uchinchi qonun belgilaydi (11-bo'lim). Formula faqat qaytar yo'lda qo'llanadi, lekin $S$ holat funksiyasi bo'lgani uchun qaytmas jarayonda ham $\\Delta S$ ni boshlang'ich va oxirgi holatlarni tutashtiruvchi **istalgan qulay qaytar yo'l** bo'ylab hisoblash mumkin — bu entropiya masalalarining asosiy usuli. Qaytar adiabatik jarayonda $\\delta Q=0$, ya'ni $S=\\mathrm{const}$; shuning uchun qaytar adiabata **izoentropik** jarayon ham deyiladi.",
+  "ru": "**Единица и свойства.** Единица энтропии — $\\mathrm{J/K}$. Это экстенсивная величина: энтропии частей системы складываются. Определение даёт только **изменение** энтропии; абсолютное значение задаёт третий закон (раздел 11). Формула применяется только на обратимом пути, но так как $S$ — функция состояния, и в необратимом процессе $\\Delta S$ можно вычислять по **любому удобному обратимому пути**, соединяющему начальное и конечное состояния, — это основной приём задач на энтропию. В обратимом адиабатном процессе $\\delta Q=0$, то есть $S=\\mathrm{const}$; поэтому обратимую адиабату называют также **изоэнтропным** процессом.",
+  "en": "**Unit and properties.** The unit of entropy is $\\mathrm{J/K}$. It is an extensive quantity: the entropies of the parts of a system add. The definition gives only the **change** in entropy; the absolute value is fixed by the third law (Section 11). The formula applies only along a reversible path, but since $S$ is a state function, $\\Delta S$ in an irreversible process can also be calculated along **any convenient reversible path** joining the initial and final states — this is the main technique in entropy problems. In a reversible adiabatic process $\\delta Q=0$, that is, $S=\\mathrm{const}$; this is why a reversible adiabat is also called an **isentropic** process."
+ },
+ {
+  "t": "li",
+  "uz": "**Entropiyaning o'sish qonuni.** Holat $1$ dan $2$ ga qaytmas yo'l bilan o'tib, qaytar yo'l bilan qaytaylik. Hosil bo'lgan sikl qaytmas, shuning uchun Klauzius tengsizligidan $\\int_1^2\\frac{\\delta Q}{T}<S_2-S_1$ (qaytmas yo'l bo'ylab, $T$ — rezervuar temperaturasi). Izolyatsiyalangan tizimda $\\delta Q=0$, demak:",
+  "ru": "**Закон возрастания энтропии.** Перейдём из состояния $1$ в $2$ необратимым путём и вернёмся обратимым. Получившийся цикл необратим, поэтому из неравенства Клаузиуса $\\int_1^2\\frac{\\delta Q}{T}<S_2-S_1$ (по необратимому пути, $T$ — температура резервуара). В изолированной системе $\\delta Q=0$, следовательно:",
+  "en": "**The law of increase of entropy.** Go from state $1$ to $2$ by an irreversible path and return by a reversible one. The resulting cycle is irreversible, so the Clausius inequality gives $\\int_1^2\\frac{\\delta Q}{T}<S_2-S_1$ (along the irreversible path, $T$ being the reservoir temperature). In an isolated system $\\delta Q=0$, therefore:"
+ },
+ {
+  "t": "m",
+  "m": "dS\\geq\\frac{\\delta Q}{T},\\qquad \\Delta S\\geq0"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikkinchi qonunning umumiy ta'rifi.** Izolyatsiyalangan tizimning entropiyasi kamaymaydi: qaytar jarayonlarda o'zgarmaydi, qaytmas jarayonlarda o'sadi. Tizim muvozanatga yetganda entropiya maksimumga erishadi. Kelvin–Plank va Klauzius ta'riflari shu qonunning xususiy hollari: bitta rezervuardan $Q$ olib to'liq ishga aylantirish rezervuar entropiyasini $\\frac{Q}{T}$ ga kamaytiradi va hech narsa uni qoplamaydi; issiqlikning sovuq jismdan issiqqa o'z-o'zidan o'tishi ham entropiyani kamaytirar edi. Ochiq tizim (tirik organizm, muzlatgich ichi) entropiyasi kamayishi mumkin — faqat muhit entropiyasi undan ko'proq ortsa.",
+  "ru": "**Общая формулировка второго закона.** Энтропия изолированной системы не убывает: в обратимых процессах не меняется, в необратимых растёт. Когда система достигает равновесия, энтропия достигает максимума. Формулировки Кельвина–Планка и Клаузиуса — частные случаи этого закона: взять от одного резервуара $Q$ и целиком превратить в работу значит уменьшить энтропию резервуара на $\\frac{Q}{T}$, ничем это не компенсировав; самопроизвольный переход теплоты от холодного тела к горячему тоже уменьшил бы энтропию. Энтропия открытой системы (живого организма, камеры холодильника) может уменьшаться — но только если энтропия окружения растёт больше.",
+  "en": "**The general statement of the second law.** The entropy of an isolated system does not decrease: it stays constant in reversible processes and grows in irreversible ones. When the system reaches equilibrium its entropy reaches a maximum. The Kelvin–Planck and Clausius statements are special cases of this law: taking $Q$ from one reservoir and turning it entirely into work would decrease the reservoir's entropy by $\\frac{Q}{T}$ with nothing to compensate; a spontaneous flow of heat from a cold body to a hot one would also decrease the entropy. The entropy of an open system (a living organism, the inside of a refrigerator) can decrease — but only if the entropy of the surroundings grows by more."
+ },
+ {
+  "t": "li",
+  "uz": "**Termodinamikaning asosiy tenglamasi.** Qaytar jarayonda $\\delta Q=T\\,dS$ va $\\delta A=p\\,dV$; birinchi qonun bilan birlashtirsak, faqat holat funksiyalari qatnashgan munosabat chiqadi. U qaytar yo'l yordamida keltirilgan bo'lsa ham, holat funksiyalari orasidagi bog'lanish bo'lgani uchun istalgan ikki yaqin muvozanat holat uchun to'g'ri; termodinamik potensiallar (B2-L32) shu tenglamadan boshlanadi:",
+  "ru": "**Основное уравнение термодинамики.** В обратимом процессе $\\delta Q=T\\,dS$ и $\\delta A=p\\,dV$; объединив с первым законом, получим соотношение, содержащее только функции состояния. Хотя оно выведено с помощью обратимого пути, как связь между функциями состояния оно верно для любых двух близких равновесных состояний; термодинамические потенциалы (B2-L32) начинаются с этого уравнения:",
+  "en": "**The fundamental equation of thermodynamics.** In a reversible process $\\delta Q=T\\,dS$ and $\\delta A=p\\,dV$; combining these with the first law gives a relation containing only state functions. Although it was derived using a reversible path, as a relation between state functions it holds for any two neighbouring equilibrium states; the thermodynamic potentials (B2-L32) start from this equation:"
+ },
+ {
+  "t": "m",
+  "m": "T\\,dS=dU+p\\,dV"
+ },
+ {
+  "t": "h2",
+  "uz": "6. Ideal gaz, qattiq jism va suyuqlik entropiyasi",
+  "ru": "6. Энтропия идеального газа, твёрдого тела и жидкости",
+  "en": "6. Entropy of an ideal gas, a solid and a liquid"
+ },
+ {
+  "t": "li",
+  "uz": "**Ideal gaz.** Asosiy tenglamaga $dU=\\nu C_VdT$ va $p=\\frac{\\nu RT}{V}$ ni qo'yamiz: $dS=\\nu C_V\\frac{dT}{T}+\\nu R\\frac{dV}{V}$. Integrallasak, istalgan ikki holat orasidagi o'zgarish chiqadi (jarayon qanday bo'lishidan qat'i nazar); holat tenglamasi yordamida uni boshqa juft o'zgaruvchilarda ham yozish mumkin:",
+  "ru": "**Идеальный газ.** Подставим в основное уравнение $dU=\\nu C_VdT$ и $p=\\frac{\\nu RT}{V}$: $dS=\\nu C_V\\frac{dT}{T}+\\nu R\\frac{dV}{V}$. Интегрируя, получим изменение между любыми двумя состояниями (каким бы ни был процесс); с помощью уравнения состояния его можно записать и в других парах переменных:",
+  "en": "**Ideal gas.** Substitute $dU=\\nu C_VdT$ and $p=\\frac{\\nu RT}{V}$ into the fundamental equation: $dS=\\nu C_V\\frac{dT}{T}+\\nu R\\frac{dV}{V}$. Integrating gives the change between any two states (whatever the process); using the equation of state it can also be written in other pairs of variables:"
+ },
+ {
+  "t": "m",
+  "m": "\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}+\\nu R\\ln\\frac{V_2}{V_1}=\\nu C_p\\ln\\frac{T_2}{T_1}-\\nu R\\ln\\frac{p_2}{p_1}=\\nu C_V\\ln\\frac{p_2}{p_1}+\\nu C_p\\ln\\frac{V_2}{V_1}"
+ },
+ {
+  "t": "li",
+  "uz": "**Xususiy hollar.** Izotermik: $\\Delta S=\\nu R\\ln\\frac{V_2}{V_1}=\\frac{Q}{T}$. Izoxorik: $\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}$. Izobarik: $\\Delta S=\\nu C_p\\ln\\frac{T_2}{T_1}$ — bir xil isishda izoxorikdan $\\frac{C_p}{C_V}=\\gamma$ marta katta. Qaytar adiabatik: $\\Delta S=0$; uchinchi ko'rinishda $\\nu C_V\\ln\\frac{p_2}{p_1}+\\nu C_p\\ln\\frac{V_2}{V_1}=0$ dan Puasson tenglamasi $pV^\\gamma=\\mathrm{const}$ darhol kelib chiqadi. Politropik ($C=\\mathrm{const}$): $\\Delta S=\\nu C\\ln\\frac{T_2}{T_1}$; $C<0$ bo'lsa, gaz soviganda entropiyasi ortadi. Shunday qilib, $S=\\nu C_V\\ln T+\\nu R\\ln V+\\mathrm{const}$ — temperatura va hajm ortganda entropiya o'sadi.",
+  "ru": "**Частные случаи.** Изотермический: $\\Delta S=\\nu R\\ln\\frac{V_2}{V_1}=\\frac{Q}{T}$. Изохорный: $\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}$. Изобарный: $\\Delta S=\\nu C_p\\ln\\frac{T_2}{T_1}$ — при одинаковом нагреве в $\\frac{C_p}{C_V}=\\gamma$ раз больше изохорного. Обратимый адиабатный: $\\Delta S=0$; из третьей формы $\\nu C_V\\ln\\frac{p_2}{p_1}+\\nu C_p\\ln\\frac{V_2}{V_1}=0$ сразу следует уравнение Пуассона $pV^\\gamma=\\mathrm{const}$. Политропный ($C=\\mathrm{const}$): $\\Delta S=\\nu C\\ln\\frac{T_2}{T_1}$; при $C<0$ энтропия газа растёт при его охлаждении. Итак, $S=\\nu C_V\\ln T+\\nu R\\ln V+\\mathrm{const}$ — энтропия растёт с ростом температуры и объёма.",
+  "en": "**Special cases.** Isothermal: $\\Delta S=\\nu R\\ln\\frac{V_2}{V_1}=\\frac{Q}{T}$. Isochoric: $\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}$. Isobaric: $\\Delta S=\\nu C_p\\ln\\frac{T_2}{T_1}$ — for the same heating it is $\\frac{C_p}{C_V}=\\gamma$ times the isochoric value. Reversible adiabatic: $\\Delta S=0$; from the third form, $\\nu C_V\\ln\\frac{p_2}{p_1}+\\nu C_p\\ln\\frac{V_2}{V_1}=0$ gives Poisson's equation $pV^\\gamma=\\mathrm{const}$ at once. Polytropic ($C=\\mathrm{const}$): $\\Delta S=\\nu C\\ln\\frac{T_2}{T_1}$; if $C<0$ the entropy of the gas grows as it cools. Thus $S=\\nu C_V\\ln T+\\nu R\\ln V+\\mathrm{const}$ — entropy grows as the temperature and the volume increase."
+ },
+ {
+  "t": "li",
+  "uz": "**Qattiq jism va suyuqlik.** Kondensatsiyalangan jismda hajm deyarli o'zgarmaydi, shuning uchun $\\delta Q=mc\\,dT$ va issiqlik sig'imi o'zgarmas bo'lsa:",
+  "ru": "**Твёрдое тело и жидкость.** В конденсированном теле объём почти не меняется, поэтому $\\delta Q=mc\\,dT$, и при постоянной теплоёмкости:",
+  "en": "**Solid and liquid.** In a condensed body the volume hardly changes, so $\\delta Q=mc\\,dT$, and for a constant heat capacity:"
+ },
+ {
+  "t": "m",
+  "m": "\\Delta S=mc\\ln\\frac{T_2}{T_1},\\qquad \\Delta S=\\frac{\\lambda m}{T},\\qquad \\Delta S=\\frac{Q}{T}"
+ },
+ {
+  "t": "li",
+  "uz": "**Fazaviy o'tish va rezervuar.** Erish yoki qaynash o'zgarmas temperaturada boradi, shuning uchun solishtirma o'tish issiqligi $\\lambda$ bo'lsa, $\\Delta S=\\frac{\\lambda m}{T}$ (ikkinchi formula). Masalan, $1\\ \\mathrm{kg}$ suv $373\\ \\mathrm{K}$ da bug'lanib ($\\lambda\\approx2.26\\ \\mathrm{MJ/kg}$) entropiyasini taxminan $6.1\\ \\mathrm{kJ/K}$ ga oshiradi — bu uni $0$ dan $100^\\circ\\mathrm{C}$ gacha isitishdagidan ($mc\\ln\\frac{373}{273}\\approx1.3\\ \\mathrm{kJ/K}$) ancha ko'p: bug' molekulalari ancha erkin. **Issiqlik rezervuari** — issiqlik sig'imi juda katta jism; u $Q$ issiqlik olganda temperaturasi o'zgarmaydi va entropiyasi $\\frac{Q}{T}$ ga ortadi (uchinchi formula). Muhit (havo, ko'l, xona) odatda rezervuar sifatida olinadi.",
+  "ru": "**Фазовый переход и резервуар.** Плавление или кипение идёт при постоянной температуре, поэтому при удельной теплоте перехода $\\lambda$ $\\Delta S=\\frac{\\lambda m}{T}$ (вторая формула). Например, $1\\ \\mathrm{kg}$ воды, испаряясь при $373\\ \\mathrm{K}$ ($\\lambda\\approx2.26\\ \\mathrm{MJ/kg}$), увеличивает энтропию примерно на $6.1\\ \\mathrm{kJ/K}$ — гораздо больше, чем при нагревании от $0$ до $100^\\circ\\mathrm{C}$ ($mc\\ln\\frac{373}{273}\\approx1.3\\ \\mathrm{kJ/K}$): молекулы пара гораздо свободнее. **Тепловой резервуар** — тело с очень большой теплоёмкостью; получив теплоту $Q$, оно не меняет температуру, а его энтропия растёт на $\\frac{Q}{T}$ (третья формула). Окружение (воздух, озеро, комната) обычно считают резервуаром.",
+  "en": "**Phase change and reservoir.** Melting or boiling takes place at constant temperature, so with a specific latent heat $\\lambda$, $\\Delta S=\\frac{\\lambda m}{T}$ (second formula). For example, $1\\ \\mathrm{kg}$ of water evaporating at $373\\ \\mathrm{K}$ ($\\lambda\\approx2.26\\ \\mathrm{MJ/kg}$) increases its entropy by about $6.1\\ \\mathrm{kJ/K}$ — much more than heating it from $0$ to $100^\\circ\\mathrm{C}$ ($mc\\ln\\frac{373}{273}\\approx1.3\\ \\mathrm{kJ/K}$): the vapour molecules are much freer. A **heat reservoir** is a body with a very large heat capacity; on receiving heat $Q$ its temperature does not change and its entropy grows by $\\frac{Q}{T}$ (third formula). The surroundings (air, a lake, a room) are usually treated as a reservoir."
+ },
+ {
+  "t": "h2",
+  "uz": "7. Qaytmas jarayonlarda entropiya o'sishi",
+  "ru": "7. Рост энтропии в необратимых процессах",
+  "en": "7. Growth of entropy in irreversible processes"
+ },
+ {
+  "t": "li",
+  "uz": "**Vakuumga erkin kengayish.** Izolyatsiyalangan idishda ideal gaz to'siq olingach $V_1$ dan $V_2$ gacha kengayadi: $Q=0$, $A=0$, $\\Delta U=0$, temperatura o'zgarmaydi. Jarayon davomida gaz muvozanatda emas, ya'ni yo'l $pV$-diagrammada chizilmaydi. Lekin oxirgi holat boshlang'ich bilan bir xil temperaturada, shuning uchun $\\Delta S$ ni o'sha holatlarni tutashtiruvchi qaytar izoterma bo'ylab hisoblaymiz ([[F04]], chapda): $\\Delta S=\\nu R\\ln\\frac{V_2}{V_1}>0$, garchi hech qanday issiqlik berilmagan bo'lsa ham. Muhit o'zgarmagan, demak Olam entropiyasi shuncha ortdi. Bu misol $\\Delta S=\\int\\frac{\\delta Q}{T}$ ni qaytmas yo'lga qo'llash xato ekanini yaqqol ko'rsatadi.",
+  "ru": "**Свободное расширение в вакуум.** В изолированном сосуде после удаления перегородки идеальный газ расширяется от $V_1$ до $V_2$: $Q=0$, $A=0$, $\\Delta U=0$, температура не меняется. В ходе процесса газ неравновесен, то есть путь на $pV$-диаграмме не изображается. Но конечное состояние имеет ту же температуру, что и начальное, поэтому $\\Delta S$ вычисляем по обратимой изотерме, соединяющей эти состояния ([[F04]], слева): $\\Delta S=\\nu R\\ln\\frac{V_2}{V_1}>0$, хотя никакой теплоты не подводилось. Окружение не изменилось, значит, энтропия Вселенной выросла на столько же. Этот пример наглядно показывает, что применять $\\Delta S=\\int\\frac{\\delta Q}{T}$ к необратимому пути — ошибка.",
+  "en": "**Free expansion into a vacuum.** In an insulated vessel, once the partition is removed, an ideal gas expands from $V_1$ to $V_2$: $Q=0$, $A=0$, $\\Delta U=0$, and the temperature does not change. During the process the gas is not in equilibrium, so the path cannot be drawn on the $pV$-diagram. But the final state has the same temperature as the initial one, so we calculate $\\Delta S$ along the reversible isotherm joining these states ([[F04]], left): $\\Delta S=\\nu R\\ln\\frac{V_2}{V_1}>0$, although no heat was supplied. The surroundings did not change, so the entropy of the Universe grew by the same amount. This example clearly shows that applying $\\Delta S=\\int\\frac{\\delta Q}{T}$ to an irreversible path is a mistake."
+ },
+ {
+  "t": "li",
+  "uz": "**Temperaturalar farqi orqali issiqlik o'tishi.** $T_1$ rezervuardan $T_2<T_1$ rezervuarga $Q$ issiqlik o'tganda issiq rezervuar entropiyasi $\\frac{Q}{T_1}$ ga kamayadi, sovuq rezervuarniki $\\frac{Q}{T_2}$ ga ortadi; yig'indi musbat. Agar xuddi shu $Q$ Karno dvigateli orqali o'tkazilsa edi, $A=Q\\left(1-\\frac{T_2}{T_1}\\right)$ ish olinar edi; to'g'ridan-to'g'ri o'tishda bu ish butunlay yo'qoladi. Yo'qotilgan ish $T_2\\Delta S$ ga teng — bu **Guy–Stodola teoremasi**ning xususiy holi: muhit temperaturasi $T_0$ bo'lganda, har qanday qaytmaslik $T_0\\Delta S$ ish imkoniyatini yo'qotadi.",
+  "ru": "**Теплопередача через разность температур.** Когда теплота $Q$ переходит от резервуара $T_1$ к резервуару $T_2<T_1$, энтропия горячего резервуара уменьшается на $\\frac{Q}{T_1}$, а холодного растёт на $\\frac{Q}{T_2}$; сумма положительна. Если бы та же $Q$ прошла через двигатель Карно, была бы получена работа $A=Q\\left(1-\\frac{T_2}{T_1}\\right)$; при прямом переходе эта работа полностью теряется. Потерянная работа равна $T_2\\Delta S$ — это частный случай **теоремы Гюи–Стодолы**: при температуре окружения $T_0$ любая необратимость теряет возможность совершить работу $T_0\\Delta S$.",
+  "en": "**Heat transfer across a temperature difference.** When heat $Q$ passes from a reservoir $T_1$ to a reservoir $T_2<T_1$, the entropy of the hot reservoir decreases by $\\frac{Q}{T_1}$ and that of the cold one grows by $\\frac{Q}{T_2}$; the sum is positive. Had the same $Q$ passed through a Carnot engine, work $A=Q\\left(1-\\frac{T_2}{T_1}\\right)$ would have been obtained; in direct transfer this work is lost completely. The lost work equals $T_2\\Delta S$ — a special case of the **Gouy–Stodola theorem**: with surroundings at temperature $T_0$, every irreversibility loses the possibility of doing work $T_0\\Delta S$."
+ },
+ {
+  "t": "m",
+  "m": "\\Delta S=\\frac{Q}{T_2}-\\frac{Q}{T_1}>0,\\qquad A'=T_0\\Delta S"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki jismning aralashishi ([[F04]], o'ngda).** Issiqlik sig'imlari $C_1$, $C_2$ bo'lgan, temperaturalari har xil ikki jism izolyatsiyada tegishtirilsa, ular umumiy $T=\\frac{C_1T_1+C_2T_2}{C_1+C_2}$ temperaturaga keladi. Har bir jism uchun $\\Delta S_j=C_j\\ln\\frac{T}{T_j}$; issiq jism entropiyasi kamayadi, sovuq jismniki ortadi, yig'indi esa har doim musbat. Bir xil jismlar ($C_1=C_2$) uchun $\\Delta S=C\\ln\\frac{\\left(T_1+T_2\\right)^2}{4T_1T_2}\\geq0$ — o'rta arifmetik o'rta geometrikdan kichik emasligining natijasi. Issiq choyga muz solish, issiq metallni suvga botirish — barchasi shu sxema.",
+  "ru": "**Смешение двух тел ([[F04]], справа).** Если два тела с теплоёмкостями $C_1$, $C_2$ и разными температурами привести в контакт в изоляции, они придут к общей температуре $T=\\frac{C_1T_1+C_2T_2}{C_1+C_2}$. Для каждого тела $\\Delta S_j=C_j\\ln\\frac{T}{T_j}$; энтропия горячего тела уменьшается, холодного растёт, а сумма всегда положительна. Для одинаковых тел ($C_1=C_2$) $\\Delta S=C\\ln\\frac{\\left(T_1+T_2\\right)^2}{4T_1T_2}\\geq0$ — следствие того, что среднее арифметическое не меньше среднего геометрического. Лёд в горячем чае, горячий металл в воде — всё это та же схема.",
+  "en": "**Mixing of two bodies ([[F04]], right).** If two bodies with heat capacities $C_1$, $C_2$ and different temperatures are brought into contact in isolation, they reach the common temperature $T=\\frac{C_1T_1+C_2T_2}{C_1+C_2}$. For each body $\\Delta S_j=C_j\\ln\\frac{T}{T_j}$; the entropy of the hot body decreases, that of the cold one grows, and the sum is always positive. For identical bodies ($C_1=C_2$), $\\Delta S=C\\ln\\frac{\\left(T_1+T_2\\right)^2}{4T_1T_2}\\geq0$ — a consequence of the arithmetic mean being no less than the geometric mean. Ice in hot tea, hot metal dropped into water — all follow this scheme."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L30-F04.png",
+   "ru": "figures/B2-L30-F04-ru.png",
+   "en": "figures/B2-L30-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Gazlarning aralashishi va Gibbs paradoksi.** Bir xil $T$ va $p$ dagi ikki **har xil** ideal gaz ($\\nu_1$ va $\\nu_2$ mol) orasidagi to'siq olinsa, har biri butun hajmga erkin kengayadi, $V=V_1+V_2$. Har bir gaz uchun erkin kengayish formulasi qo'llanadi va aralashish entropiyasi musbat bo'ladi. Agar gazlar **bir xil** bo'lsa, to'siqni olish hech narsani o'zgartirmaydi va $\\Delta S=0$. Gazlar istalgancha o'xshash bo'lsa ham, ular farqlanar ekan, sakrash $2\\nu R\\ln2$ (teng miqdorlarda) saqlanadi — bu **Gibbs paradoksi**; uning yechimi bir xil zarralarning kvant aynanligida (B2-L31).",
+  "ru": "**Смешение газов и парадокс Гиббса.** Если убрать перегородку между двумя **разными** идеальными газами ($\\nu_1$ и $\\nu_2$ моль) при одинаковых $T$ и $p$, каждый свободно расширяется на весь объём, $V=V_1+V_2$. Для каждого газа применяется формула свободного расширения, и энтропия смешения положительна. Если газы **одинаковы**, удаление перегородки ничего не меняет и $\\Delta S=0$. Как бы похожи ни были газы, пока они различимы, скачок $2\\nu R\\ln2$ (при равных количествах) сохраняется — это **парадокс Гиббса**; его разрешение — в квантовой тождественности одинаковых частиц (B2-L31).",
+  "en": "**Mixing of gases and Gibbs's paradox.** If the partition between two **different** ideal gases ($\\nu_1$ and $\\nu_2$ mol) at the same $T$ and $p$ is removed, each expands freely into the whole volume, $V=V_1+V_2$. The free-expansion formula applies to each gas, and the entropy of mixing is positive. If the gases are **identical**, removing the partition changes nothing and $\\Delta S=0$. However similar the gases are, as long as they are distinguishable the jump $2\\nu R\\ln2$ (for equal amounts) remains — this is **Gibbs's paradox**; its resolution lies in the quantum identity of identical particles (B2-L31)."
+ },
+ {
+  "t": "m",
+  "m": "\\Delta S=\\nu_1R\\ln\\frac{V}{V_1}+\\nu_2R\\ln\\frac{V}{V_2}"
+ },
+ {
+  "t": "h2",
+  "uz": "8. TS-diagramma",
+  "ru": "8. TS-диаграмма",
+  "en": "8. The TS-diagram"
+ },
+ {
+  "t": "li",
+  "uz": "**Issiqlik — yuza.** Qaytar jarayonda $\\delta Q=T\\,dS$, shuning uchun gorizontal o'qqa entropiya, vertikal o'qqa temperatura qo'yilgan $TS$-diagrammada egri chiziq ostidagi yuza tizim olgan issiqlikka teng — xuddi $pV$-diagrammada yuza ish bo'lgani kabi. Entropiya ortadigan bo'lakda ($S$ o'ngga) issiqlik olinadi, kamayadigan bo'lakda beriladi. Siklda $\\Delta U=0$, demak o'ralgan yuza bir sikldagi ishga teng; soat mili bo'yicha aylanish — dvigatel, teskari — sovutgich:",
+  "ru": "**Теплота — площадь.** В обратимом процессе $\\delta Q=T\\,dS$, поэтому на $TS$-диаграмме, где по горизонтальной оси отложена энтропия, а по вертикальной — температура, площадь под кривой равна теплоте, полученной системой, — так же как на $pV$-диаграмме площадь есть работа. На участке, где энтропия растёт ($S$ вправо), теплота получается, где убывает — отдаётся. В цикле $\\Delta U=0$, значит, охватываемая площадь равна работе за цикл; обход по часовой стрелке — двигатель, против — холодильная машина:",
+  "en": "**Heat as an area.** In a reversible process $\\delta Q=T\\,dS$, so on a $TS$-diagram, with entropy on the horizontal axis and temperature on the vertical axis, the area under a curve equals the heat received by the system — just as the area on a $pV$-diagram is the work. Heat is received where the entropy grows ($S$ to the right) and given up where it decreases. In a cycle $\\Delta U=0$, so the enclosed area equals the work per cycle; a clockwise loop is an engine, an anticlockwise one a refrigerator:"
+ },
+ {
+  "t": "m",
+  "m": "Q=\\int T\\,dS,\\qquad A=\\oint T\\,dS"
+ },
+ {
+  "t": "li",
+  "uz": "**Karno — to'g'ri to'rtburchak ([[F05]], chapda).** Izotermalar — gorizontal, qaytar adiabatalar — vertikal chiziqlar, shuning uchun Karno sikli $TS$-diagrammada to'g'ri to'rtburchak. Olingan issiqlik $Q_1=T_1\\Delta S$ — butun ustun yuzasi, berilgan $Q_2=T_2\\Delta S$ — pastki qism, ish — to'rtburchak yuzasi. FIK ni yuzalar nisbatidan bir qarashda o'qish mumkin: $\\eta=\\frac{\\left(T_1-T_2\\right)\\Delta S}{T_1\\Delta S}$. Bundan muhim xulosa: berilgan eng katta va eng kichik temperaturalar orasida sig'adigan har qanday boshqa sikl shu to'rtburchak ichida yotadi va uning ishi va olingan issiqligining nisbati kichikroq — Karno sikli eng samarali.",
+  "ru": "**Карно — прямоугольник ([[F05]], слева).** Изотермы — горизонтальные, обратимые адиабаты — вертикальные линии, поэтому цикл Карно на $TS$-диаграмме — прямоугольник. Полученная теплота $Q_1=T_1\\Delta S$ — площадь всего столбца, отданная $Q_2=T_2\\Delta S$ — нижняя часть, работа — площадь прямоугольника. КПД читается из отношения площадей с одного взгляда: $\\eta=\\frac{\\left(T_1-T_2\\right)\\Delta S}{T_1\\Delta S}$. Отсюда важный вывод: любой другой цикл между заданными наибольшей и наименьшей температурами лежит внутри этого прямоугольника, и отношение его работы к полученной теплоте меньше — цикл Карно самый эффективный.",
+  "en": "**Carnot is a rectangle ([[F05]], left).** Isotherms are horizontal and reversible adiabats vertical lines, so the Carnot cycle on a $TS$-diagram is a rectangle. The heat received, $Q_1=T_1\\Delta S$, is the area of the whole column, the heat given up, $Q_2=T_2\\Delta S$, its lower part, and the work the area of the rectangle. The efficiency can be read off from the ratio of areas at a glance: $\\eta=\\frac{\\left(T_1-T_2\\right)\\Delta S}{T_1\\Delta S}$. An important conclusion follows: any other cycle that fits between given highest and lowest temperatures lies inside this rectangle, and the ratio of its work to the heat received is smaller — the Carnot cycle is the most efficient."
+ },
+ {
+  "t": "li",
+  "uz": "**Boshqa jarayonlar ([[F05]], o'ngda).** Issiqlik sig'imi $C$ o'zgarmas bo'lgan jarayonda $dS=\\nu C\\frac{dT}{T}$, ya'ni $T=T_0e^{\\frac{S-S_0}{\\nu C}}$ — eksponenta. Uning qiyaligi $\\frac{dT}{dS}=\\frac{T}{\\nu C}$: issiqlik sig'imi qancha kichik bo'lsa, chiziq shuncha tik. Shuning uchun bitta nuqtadan chiqqan izoxora ($C_V$) izobaradan ($C_p$) tikroq, qiyaliklar nisbati $\\gamma$ ga teng — $pV$-diagrammadagi adiabata va izoterma holatiga o'xshash. Izoterma — gorizontal ($C\\to\\infty$), qaytar adiabata — vertikal ($C=0$), manfiy issiqlik sig'imli politropa esa temperatura kamayganda entropiya ortadigan chiziq.",
+  "ru": "**Другие процессы ([[F05]], справа).** В процессе с постоянной теплоёмкостью $C$ $dS=\\nu C\\frac{dT}{T}$, то есть $T=T_0e^{\\frac{S-S_0}{\\nu C}}$ — экспонента. Её наклон $\\frac{dT}{dS}=\\frac{T}{\\nu C}$: чем меньше теплоёмкость, тем круче линия. Поэтому изохора ($C_V$), выходящая из одной точки, круче изобары ($C_p$), отношение наклонов равно $\\gamma$ — похоже на адиабату и изотерму на $pV$-диаграмме. Изотерма — горизонтальна ($C\\to\\infty$), обратимая адиабата — вертикальна ($C=0$), а политропа с отрицательной теплоёмкостью — линия, на которой энтропия растёт при уменьшении температуры.",
+  "en": "**Other processes ([[F05]], right).** In a process with constant heat capacity $C$, $dS=\\nu C\\frac{dT}{T}$, that is, $T=T_0e^{\\frac{S-S_0}{\\nu C}}$ — an exponential. Its slope is $\\frac{dT}{dS}=\\frac{T}{\\nu C}$: the smaller the heat capacity, the steeper the line. Hence an isochore ($C_V$) leaving a point is steeper than the isobar ($C_p$), the ratio of the slopes being $\\gamma$ — similar to the adiabat and the isotherm on a $pV$-diagram. The isotherm is horizontal ($C\\to\\infty$), the reversible adiabat vertical ($C=0$), and a polytrope with negative heat capacity is a line on which the entropy grows as the temperature decreases."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L30-F05.png",
+   "ru": "figures/B2-L30-F05-ru.png",
+   "en": "figures/B2-L30-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**O'rtacha temperaturalar usuli.** Ixtiyoriy qaytar sikl uchun issiqlik olinadigan bo'lakdagi o'rtacha temperatura $\\bar T_1=\\frac{Q_1}{\\Delta S}$ ni, beriladigan bo'lakdagi $\\bar T_2=\\frac{Q_2}{\\Delta S}$ ni kiritsak ($\\Delta S$ — bu bo'laklarda entropiyaning bir xil o'zgarishi), $\\eta=1-\\frac{\\bar T_2}{\\bar T_1}$ bo'ladi. Real sikllar FIK i Karnonikidan kichikligining sababi aniq ko'rinadi: issiqlik eng yuqori temperaturada emas, o'rtachasi pastroq temperaturada olinadi va eng pastda emas, yuqoriroqda beriladi. Dvigatellarni yaxshilash — $\\bar T_1$ ni oshirish va $\\bar T_2$ ni kamaytirish demak.",
+  "ru": "**Метод средних температур.** Для произвольного обратимого цикла введём среднюю температуру на участке получения теплоты $\\bar T_1=\\frac{Q_1}{\\Delta S}$ и на участке отдачи $\\bar T_2=\\frac{Q_2}{\\Delta S}$ ($\\Delta S$ — одинаковое изменение энтропии на этих участках); тогда $\\eta=1-\\frac{\\bar T_2}{\\bar T_1}$. Причина того, что КПД реальных циклов меньше КПД Карно, становится наглядной: теплота получается не при наибольшей температуре, а в среднем при более низкой, и отдаётся не при наименьшей, а при более высокой. Улучшать двигатели — значит повышать $\\bar T_1$ и понижать $\\bar T_2$.",
+  "en": "**The mean-temperature method.** For an arbitrary reversible cycle, introduce the mean temperature on the part where heat is received, $\\bar T_1=\\frac{Q_1}{\\Delta S}$, and on the part where it is given up, $\\bar T_2=\\frac{Q_2}{\\Delta S}$ ($\\Delta S$ being the same change in entropy on these parts); then $\\eta=1-\\frac{\\bar T_2}{\\bar T_1}$. The reason why real cycles are less efficient than Carnot's becomes clear: heat is received not at the highest temperature but, on average, at a lower one, and given up not at the lowest but at a higher one. Improving engines means raising $\\bar T_1$ and lowering $\\bar T_2$."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Real issiqlik dvigatellari sikllari",
+  "ru": "9. Циклы реальных тепловых двигателей",
+  "en": "9. Cycles of real heat engines"
+ },
+ {
+  "t": "li",
+  "uz": "**Otto sikli (benzin dvigateli, [[F06]] chapda).** Ideal model: $1\\to2$ — yonilg'i aralashmasini adiabatik siqish ($V_1\\to V_2$), $2\\to3$ — uchqundan yonish, ya'ni o'zgarmas hajmda issiqlik olish $Q_1=\\nu C_V\\left(T_3-T_2\\right)$, $3\\to4$ — adiabatik kengayish (ishchi yo'l), $4\\to1$ — chiqindi gazlarni chiqarish, ya'ni o'zgarmas hajmda issiqlik berish $Q_2=\\nu C_V\\left(T_4-T_1\\right)$. Ikki adiabatada hajmlar nisbati bir xil — **siqish darajasi** $r=\\frac{V_1}{V_2}$, shuning uchun $\\frac{T_2}{T_1}=\\frac{T_3}{T_4}=r^{\\gamma-1}$ va FIK faqat $r$ ga bog'liq:",
+  "ru": "**Цикл Отто (бензиновый двигатель, [[F06]] слева).** Идеальная модель: $1\\to2$ — адиабатное сжатие горючей смеси ($V_1\\to V_2$), $2\\to3$ — сгорание от искры, то есть получение теплоты при постоянном объёме $Q_1=\\nu C_V\\left(T_3-T_2\\right)$, $3\\to4$ — адиабатное расширение (рабочий ход), $4\\to1$ — выпуск отработанных газов, то есть отдача теплоты при постоянном объёме $Q_2=\\nu C_V\\left(T_4-T_1\\right)$. На обеих адиабатах отношение объёмов одинаково — **степень сжатия** $r=\\frac{V_1}{V_2}$, поэтому $\\frac{T_2}{T_1}=\\frac{T_3}{T_4}=r^{\\gamma-1}$, и КПД зависит только от $r$:",
+  "en": "**The Otto cycle (petrol engine, [[F06]] left).** Ideal model: $1\\to2$ — adiabatic compression of the fuel mixture ($V_1\\to V_2$), $2\\to3$ — combustion from the spark, that is, heat received at constant volume $Q_1=\\nu C_V\\left(T_3-T_2\\right)$, $3\\to4$ — adiabatic expansion (the power stroke), $4\\to1$ — exhaust, that is, heat given up at constant volume $Q_2=\\nu C_V\\left(T_4-T_1\\right)$. On both adiabats the volume ratio is the same — the **compression ratio** $r=\\frac{V_1}{V_2}$ — so $\\frac{T_2}{T_1}=\\frac{T_3}{T_4}=r^{\\gamma-1}$, and the efficiency depends only on $r$:"
+ },
+ {
+  "t": "m",
+  "m": "\\eta_{O}=1-\\frac{T_4-T_1}{T_3-T_2}=1-\\frac{1}{r^{\\gamma-1}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Siqish darajasi chegarasi.** Masalan, $r=9$ va havo uchun $\\gamma=1.4$ da $\\eta_{O}=1-9^{-0.4}\\approx0.58$; real benzin dvigatellarida ishqalanish, issiqlik yo'qotishlari va tez jarayonlar tufayli $0.25$–$0.35$. FIK ni $r$ ni oshirib ko'tarish mumkin, lekin siqishda aralashma juda qizib, uchqunsiz o'z-o'zidan portlaydi (detonatsiya) — shuning uchun benzin dvigatellarida $r\\approx8$–$12$. Otto FIK i eng yuqori temperatura $T_3$ ga bog'liq emasligiga e'tibor bering: issiqlik o'rtacha $\\bar T_1$ temperaturada olinadi va u $T_3$ dan ancha past.",
+  "ru": "**Предел степени сжатия.** Например, при $r=9$ и $\\gamma=1.4$ для воздуха $\\eta_{O}=1-9^{-0.4}\\approx0.58$; в реальных бензиновых двигателях из-за трения, теплопотерь и быстрых процессов — $0.25$–$0.35$. КПД можно поднять, увеличивая $r$, но при сжатии смесь сильно нагревается и самовоспламеняется без искры (детонация) — поэтому в бензиновых двигателях $r\\approx8$–$12$. Обратите внимание, что КПД Отто не зависит от наибольшей температуры $T_3$: теплота получается при средней температуре $\\bar T_1$, значительно ниже $T_3$.",
+  "en": "**The limit on the compression ratio.** For example, with $r=9$ and $\\gamma=1.4$ for air, $\\eta_{O}=1-9^{-0.4}\\approx0.58$; real petrol engines, because of friction, heat losses and fast processes, reach $0.25$–$0.35$. The efficiency can be raised by increasing $r$, but on compression the mixture heats up strongly and ignites by itself without a spark (knocking) — which is why petrol engines have $r\\approx8$–$12$. Note that the Otto efficiency does not depend on the highest temperature $T_3$: heat is received at a mean temperature $\\bar T_1$ well below $T_3$."
+ },
+ {
+  "t": "li",
+  "uz": "**Dizel sikli ([[F06]] o'ngda).** Dizel dvigatelida faqat havo siqiladi (shuning uchun detonatsiya yo'q va $r\\approx15$–$22$), yonilg'i siqish oxirida purkaladi va o'z-o'zidan yonadi. Yonish porshen harakatlanayotganda boradi, shuning uchun issiqlik o'zgarmas **bosimda** olinadi: $Q_1=\\nu C_p\\left(T_3-T_2\\right)$, $V_2\\to V_3$. **Kesish darajasi** $\\rho=\\frac{V_3}{V_2}$ ni kiritsak, $T_2=T_1r^{\\gamma-1}$, $T_3=\\rho T_2$, kengayish adiabatasidan $T_4=T_1\\rho^\\gamma$ va:",
+  "ru": "**Цикл Дизеля ([[F06]] справа).** В дизельном двигателе сжимается только воздух (поэтому детонации нет и $r\\approx15$–$22$), топливо впрыскивается в конце сжатия и самовоспламеняется. Сгорание идёт при движущемся поршне, поэтому теплота получается при постоянном **давлении**: $Q_1=\\nu C_p\\left(T_3-T_2\\right)$, $V_2\\to V_3$. Введя **степень предварительного расширения** $\\rho=\\frac{V_3}{V_2}$, получим $T_2=T_1r^{\\gamma-1}$, $T_3=\\rho T_2$, из адиабаты расширения $T_4=T_1\\rho^\\gamma$, и:",
+  "en": "**The Diesel cycle ([[F06]] right).** In a Diesel engine only air is compressed (so there is no knocking and $r\\approx15$–$22$); the fuel is injected at the end of compression and ignites by itself. Combustion takes place while the piston moves, so heat is received at constant **pressure**: $Q_1=\\nu C_p\\left(T_3-T_2\\right)$, $V_2\\to V_3$. Introducing the **cutoff ratio** $\\rho=\\frac{V_3}{V_2}$, we get $T_2=T_1r^{\\gamma-1}$, $T_3=\\rho T_2$, from the expansion adiabat $T_4=T_1\\rho^\\gamma$, and:"
+ },
+ {
+  "t": "m",
+  "m": "\\eta_{D}=1-\\frac{T_4-T_1}{\\gamma\\left(T_3-T_2\\right)}=1-\\frac{\\rho^\\gamma-1}{\\gamma r^{\\gamma-1}\\left(\\rho-1\\right)}"
+ },
+ {
+  "t": "li",
+  "uz": "**Otto va Dizelni solishtirish.** $\\rho>1$ da $\\frac{\\rho^\\gamma-1}{\\gamma\\left(\\rho-1\\right)}>1$, ya'ni bir xil $r$ da Dizel FIK i Otto nikidan kichik; $\\rho\\to1$ da ular tenglashadi. Lekin Dizel dvigateli ancha katta $r$ da ishlay oladi va natijada tejamliroq: masalan, $r=20$, $\\rho=2$ da $\\eta_{D}\\approx0.65$, real dvigatellarda $0.35$–$0.45$. Ikkala siklda ham chiqarish issiqligi o'zgarmas hajmda va nisbatan yuqori temperaturada beriladi — bu Karnodan asosiy farq.",
+  "ru": "**Сравнение Отто и Дизеля.** При $\\rho>1$ $\\frac{\\rho^\\gamma-1}{\\gamma\\left(\\rho-1\\right)}>1$, то есть при одинаковом $r$ КПД Дизеля меньше, чем Отто; при $\\rho\\to1$ они сравниваются. Но дизельный двигатель может работать при значительно большем $r$ и в итоге экономичнее: например, при $r=20$, $\\rho=2$ $\\eta_{D}\\approx0.65$, в реальных двигателях $0.35$–$0.45$. В обоих циклах теплота выпуска отдаётся при постоянном объёме и сравнительно высокой температуре — это главное отличие от Карно.",
+  "en": "**Comparing Otto and Diesel.** For $\\rho>1$, $\\frac{\\rho^\\gamma-1}{\\gamma\\left(\\rho-1\\right)}>1$, that is, at the same $r$ the Diesel efficiency is lower than Otto's; as $\\rho\\to1$ they become equal. But a Diesel engine can work at a much larger $r$ and is more economical as a result: for example, at $r=20$, $\\rho=2$, $\\eta_{D}\\approx0.65$, and real engines reach $0.35$–$0.45$. In both cycles the exhaust heat is given up at constant volume and a relatively high temperature — the main difference from Carnot."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L30-F06.png",
+   "ru": "figures/B2-L30-F06-ru.png",
+   "en": "figures/B2-L30-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Stirling sikli ([[F07]] chapda).** Tashqi yonuvli dvigatel: ikki izoterma ($T_1$ va $T_2$) va ikki izoxora. Izoxorik sovishda gaz bergan $\\nu C_V\\left(T_1-T_2\\right)$ issiqlik **regeneratorda** (g'ovak issiqlik akkumulyatori) saqlanib, izoxorik isishda gazga qaytarilsa, tashqaridan issiqlik faqat $T_1$ izotermada olinadi va faqat $T_2$ izotermada beriladi. Bunda $Q_1=\\nu RT_1\\ln\\frac{V_2}{V_1}$, $Q_2=\\nu RT_2\\ln\\frac{V_2}{V_1}$ va $\\eta=1-\\frac{T_2}{T_1}$ — Karno FIK i. Regeneratorsiz izoxorik isish issiqligi ham qizdirgichdan olinadi va FIK pasayadi.",
+  "ru": "**Цикл Стирлинга ([[F07]] слева).** Двигатель внешнего сгорания: две изотермы ($T_1$ и $T_2$) и две изохоры. Если теплота $\\nu C_V\\left(T_1-T_2\\right)$, отданная газом при изохорном охлаждении, запасается в **регенераторе** (пористом тепловом аккумуляторе) и возвращается газу при изохорном нагреве, то извне теплота получается только на изотерме $T_1$ и отдаётся только на изотерме $T_2$. Тогда $Q_1=\\nu RT_1\\ln\\frac{V_2}{V_1}$, $Q_2=\\nu RT_2\\ln\\frac{V_2}{V_1}$ и $\\eta=1-\\frac{T_2}{T_1}$ — КПД Карно. Без регенератора теплота изохорного нагрева тоже берётся от нагревателя, и КПД снижается.",
+  "en": "**The Stirling cycle ([[F07]] left).** An external-combustion engine: two isotherms ($T_1$ and $T_2$) and two isochores. If the heat $\\nu C_V\\left(T_1-T_2\\right)$ given up by the gas during isochoric cooling is stored in a **regenerator** (a porous heat store) and returned to the gas during isochoric heating, then heat is received from outside only on the $T_1$ isotherm and given up only on the $T_2$ isotherm. Then $Q_1=\\nu RT_1\\ln\\frac{V_2}{V_1}$, $Q_2=\\nu RT_2\\ln\\frac{V_2}{V_1}$ and $\\eta=1-\\frac{T_2}{T_1}$ — the Carnot efficiency. Without a regenerator, the heat for isochoric heating also comes from the heater and the efficiency drops."
+ },
+ {
+  "t": "li",
+  "uz": "**Brayton (Joul) sikli ([[F07]] o'ngda).** Gaz turbinasi va reaktiv dvigatel modeli: kompressorda adiabatik siqish, yonish kamerasida o'zgarmas bosimda isish, turbinada adiabatik kengayish va atmosferada o'zgarmas bosimda sovish. Bosimlar nisbati $\\frac{p_2}{p_1}$ ikkala adiabatada bir xil, shuning uchun har bir adiabatada temperaturalar nisbati bir xil va FIK kompressordagi temperatura nisbati bilan aniqlanadi:",
+  "ru": "**Цикл Брайтона (Джоуля) ([[F07]] справа).** Модель газовой турбины и реактивного двигателя: адиабатное сжатие в компрессоре, нагрев при постоянном давлении в камере сгорания, адиабатное расширение в турбине и охлаждение при постоянном давлении в атмосфере. Отношение давлений $\\frac{p_2}{p_1}$ на обеих адиабатах одинаково, поэтому на каждой адиабате отношение температур одинаково, и КПД определяется отношением температур в компрессоре:",
+  "en": "**The Brayton (Joule) cycle ([[F07]] right).** A model of a gas turbine and a jet engine: adiabatic compression in the compressor, heating at constant pressure in the combustion chamber, adiabatic expansion in the turbine and cooling at constant pressure in the atmosphere. The pressure ratio $\\frac{p_2}{p_1}$ is the same on both adiabats, so the temperature ratio is the same on each adiabat, and the efficiency is set by the temperature ratio in the compressor:"
+ },
+ {
+  "t": "m",
+  "m": "\\eta_{B}=1-\\left(\\frac{p_1}{p_2}\\right)^{\\frac{\\gamma-1}{\\gamma}}=1-\\frac{T_1}{T_2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Izoh.** Bu yerda $T_1$ — kompressorga kirish, $T_2$ — kompressordan chiqish temperaturasi (Karno formulasidagi rezervuarlar emas!). Masalan, bosimlar nisbati $20$ va havo uchun $\\eta_{B}=1-20^{-\\frac{2}{7}}\\approx0.58$. Formula Otto formulasiga o'xshaydi: $\\left(\\frac{p_1}{p_2}\\right)^{\\frac{\\gamma-1}{\\gamma}}$ ham siqishdagi temperatura nisbatining teskarisi. Barcha to'rt siklning umumiy xulosasi: ideal sikl FIK i siqishda gaz qanchalik qizishi bilan aniqlanadi.",
+  "ru": "**Замечание.** Здесь $T_1$ — температура на входе компрессора, $T_2$ — на выходе (а не резервуары из формулы Карно!). Например, при отношении давлений $20$ для воздуха $\\eta_{B}=1-20^{-\\frac{2}{7}}\\approx0.58$. Формула похожа на формулу Отто: $\\left(\\frac{p_1}{p_2}\\right)^{\\frac{\\gamma-1}{\\gamma}}$ — тоже обратное отношение температур при сжатии. Общий вывод для всех четырёх циклов: КПД идеального цикла определяется тем, насколько газ нагревается при сжатии.",
+  "en": "**Remark.** Here $T_1$ is the temperature at the compressor inlet and $T_2$ at its outlet (not the reservoirs of the Carnot formula!). For example, with a pressure ratio of $20$ for air, $\\eta_{B}=1-20^{-\\frac{2}{7}}\\approx0.58$. The formula resembles Otto's: $\\left(\\frac{p_1}{p_2}\\right)^{\\frac{\\gamma-1}{\\gamma}}$ is likewise the inverse of the temperature ratio on compression. The common conclusion for all four cycles: the efficiency of an ideal cycle is set by how much the gas heats up on compression."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L30-F07.png",
+   "ru": "figures/B2-L30-F07-ru.png",
+   "en": "figures/B2-L30-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Eng katta ish va sovutish",
+  "ru": "10. Наибольшая работа и охлаждение",
+  "en": "10. Maximum work and refrigeration"
+ },
+ {
+  "t": "li",
+  "uz": "**Chekli jismdan ish.** Issiqlik sig'imi $C$, temperaturasi $T_1$ bo'lgan jism $T_0$ temperaturali muhitga soviganda eng katta ish qaytar dvigatellar zanjiri bilan olinadi: har bir kichik $\\delta Q=-C\\,dT$ issiqlik Karno dvigateliga beriladi. Natijada jism bergan issiqlikdan muhitga berilgan issiqlik ayiriladi, u esa $T_0$ ning jism entropiyasi kamayishiga ko'paytmasiga teng (qaytar jarayonda Olam entropiyasi o'zgarmaydi). Bu kattalik — jismning **eksergiyasi** (ishga aylanishi mumkin bo'lgan qism):",
+  "ru": "**Работа от конечного тела.** Когда тело с теплоёмкостью $C$ и температурой $T_1$ остывает до температуры окружения $T_0$, наибольшая работа получается цепочкой обратимых двигателей: каждая малая теплота $\\delta Q=-C\\,dT$ передаётся двигателю Карно. В итоге из теплоты, отданной телом, вычитается теплота, переданная окружению, а она равна произведению $T_0$ на уменьшение энтропии тела (в обратимом процессе энтропия Вселенной не меняется). Эта величина — **эксергия** тела (часть, которая может превратиться в работу):",
+  "en": "**Work from a finite body.** When a body of heat capacity $C$ and temperature $T_1$ cools to the temperature $T_0$ of the surroundings, the greatest work is obtained with a chain of reversible engines: each small heat $\\delta Q=-C\\,dT$ is passed to a Carnot engine. As a result, the heat given to the surroundings is subtracted from the heat given up by the body, and it equals $T_0$ times the decrease in the body's entropy (in a reversible process the entropy of the Universe does not change). This quantity is the **exergy** of the body (the part that can turn into work):"
+ },
+ {
+  "t": "m",
+  "m": "A_{max}=C\\left(T_1-T_0\\right)-CT_0\\ln\\frac{T_1}{T_0}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki chekli jism.** Bir xil issiqlik sig'imli $C$ ikki jism ($T_1>T_2$) orasida qaytar dvigatel ishlasa, jarayon temperaturalar tenglashganda to'xtaydi. Qaytarlik sharti $\\Delta S=C\\ln\\frac{T}{T_1}+C\\ln\\frac{T}{T_2}=0$ dan umumiy temperatura o'rta geometrik bo'ladi, ish esa energiyalar ayirmasiga teng. Jismlar to'g'ridan-to'g'ri tegishtirilsa, umumiy temperatura o'rta arifmetik, ish nolga teng va entropiya o'sadi (7-bo'lim):",
+  "ru": "**Два конечных тела.** Если между двумя телами одинаковой теплоёмкости $C$ ($T_1>T_2$) работает обратимый двигатель, процесс прекращается, когда температуры выравниваются. Из условия обратимости $\\Delta S=C\\ln\\frac{T}{T_1}+C\\ln\\frac{T}{T_2}=0$ общая температура равна среднему геометрическому, а работа — разности энергий. Если тела привести в прямой контакт, общая температура равна среднему арифметическому, работа равна нулю, а энтропия растёт (раздел 7):",
+  "en": "**Two finite bodies.** If a reversible engine works between two bodies of the same heat capacity $C$ ($T_1>T_2$), the process stops when the temperatures become equal. From the reversibility condition $\\Delta S=C\\ln\\frac{T}{T_1}+C\\ln\\frac{T}{T_2}=0$ the common temperature is the geometric mean, and the work is the difference of the energies. If the bodies are put in direct contact, the common temperature is the arithmetic mean, the work is zero and the entropy grows (Section 7):"
+ },
+ {
+  "t": "m",
+  "m": "T=\\sqrt{T_1T_2},\\qquad A_{max}=C\\left(T_1+T_2-2\\sqrt{T_1T_2}\\right)=C\\left(\\sqrt{T_1}-\\sqrt{T_2}\\right)^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Eng kichik sovutish ishi.** Teskari masala: $C$ issiqlik sig'imli jismni $T_0$ muhitdan $T<T_0$ gacha sovitish uchun eng kichik ish ham qaytar sovutgichlar zanjiri bilan bajariladi: $A_{min}=CT_0\\ln\\frac{T_0}{T}-C\\left(T_0-T\\right)$. $T\\to0$ da $\\ln\\frac{T_0}{T}\\to\\infty$, ammo real jismlarda past temperaturada $C\\to0$ (11-bo'lim), shuning uchun ish chekli qoladi; lekin har bir keyingi pog'ona tobora qimmatlashadi. Shuningdek, Karno FIK i eng katta FIK, lekin nol quvvatda; eng katta **quvvatda** ishlaydigan endoqaytar dvigatel uchun Kerzon–Alborn natijasi $\\eta=1-\\sqrt{\\frac{T_2}{T_1}}$ — real stansiyalar unga yaqin.",
+  "ru": "**Наименьшая работа охлаждения.** Обратная задача: наименьшая работа для охлаждения тела теплоёмкостью $C$ от температуры окружения $T_0$ до $T<T_0$ тоже совершается цепочкой обратимых холодильных машин: $A_{min}=CT_0\\ln\\frac{T_0}{T}-C\\left(T_0-T\\right)$. При $T\\to0$ $\\ln\\frac{T_0}{T}\\to\\infty$, но у реальных тел при низких температурах $C\\to0$ (раздел 11), поэтому работа остаётся конечной; однако каждая следующая ступень всё дороже. Кроме того, КПД Карно — наибольший КПД, но при нулевой мощности; для эндообратимого двигателя, работающего при наибольшей **мощности**, результат Курзона–Альборна $\\eta=1-\\sqrt{\\frac{T_2}{T_1}}$ — реальные станции близки к нему.",
+  "en": "**Minimum work of refrigeration.** The inverse problem: the least work needed to cool a body of heat capacity $C$ from the surroundings' temperature $T_0$ to $T<T_0$ is also done by a chain of reversible refrigerators: $A_{min}=CT_0\\ln\\frac{T_0}{T}-C\\left(T_0-T\\right)$. As $T\\to0$, $\\ln\\frac{T_0}{T}\\to\\infty$, but for real bodies $C\\to0$ at low temperatures (Section 11), so the work stays finite; still, each further step costs more. Also, the Carnot efficiency is the greatest efficiency, but at zero power; for an endoreversible engine working at maximum **power**, the Curzon–Ahlborn result is $\\eta=1-\\sqrt{\\frac{T_2}{T_1}}$ — real power stations are close to it."
+ },
+ {
+  "t": "h2",
+  "uz": "11. Entropiyaning statistik ma'nosi va uchinchi qonun",
+  "ru": "11. Статистический смысл энтропии и третий закон",
+  "en": "11. The statistical meaning of entropy and the third law"
+ },
+ {
+  "t": "li",
+  "uz": "**Makroholat va mikroholat.** Makroholat bir necha kattalik bilan beriladi ($p$, $V$, $T$ yoki «chap yarmida $n$ ta molekula»), mikroholat esa har bir zarra holatini to'liq ko'rsatadi. Bitta makroholatni amalga oshiradigan mikroholatlar soni $W$ — **statistik vazn** (termodinamik ehtimollik). Masalan, $N$ ta molekula idishning ikki yarmi bo'ylab taqsimlansa, har bir molekula ikki joydan birini tanlaydi, jami $2^N$ mikroholat; chap yarmida $n$ ta molekula bo'lgan makroholatniki — binomial koeffitsiyent:",
+  "ru": "**Макросостояние и микросостояние.** Макросостояние задаётся несколькими величинами ($p$, $V$, $T$ или «в левой половине $n$ молекул»), а микросостояние полностью указывает состояние каждой частицы. Число микросостояний, реализующих одно макросостояние, $W$ — **статистический вес** (термодинамическая вероятность). Например, если $N$ молекул распределяются по двум половинам сосуда, каждая выбирает одно из двух мест, всего $2^N$ микросостояний; у макросостояния с $n$ молекулами в левой половине — биномиальный коэффициент:",
+  "en": "**Macrostate and microstate.** A macrostate is given by a few quantities ($p$, $V$, $T$, or \"$n$ molecules in the left half\"), whereas a microstate specifies the state of every particle completely. The number of microstates realising one macrostate, $W$, is the **statistical weight** (thermodynamic probability). For example, if $N$ molecules are distributed over the two halves of a vessel, each chooses one of two places, giving $2^N$ microstates in all; the macrostate with $n$ molecules in the left half has the binomial coefficient:"
+ },
+ {
+  "t": "m",
+  "m": "W\\left(n\\right)=\\frac{N!}{n!\\left(N-n\\right)!},\\qquad P\\left(n\\right)=\\frac{W\\left(n\\right)}{2^N}"
+ },
+ {
+  "t": "li",
+  "uz": "**Eng ehtimolli holat ([[F08]]).** Barcha mikroholatlar teng ehtimolli deb olinadi (statistik fizikaning asosiy postulati). $W\\left(n\\right)$ $n=\\frac{N}{2}$ da maksimal, cho'qqining nisbiy kengligi esa $\\frac{1}{\\sqrt N}$ kabi kamayadi: $N=4$ da teng taqsimot ehtimoli faqat $\\frac{6}{16}$, makroskopik $N\\sim10^{23}$ da esa sezilarli og'ish amalda hech qachon kuzatilmaydi. Barcha molekulalarning bir yarmda to'planish ehtimoli $2\\cdot2^{-N}$ — $N=100$ da ham $10^{-30}$ tartibida. Shuning uchun ikkinchi qonun mutlaq taqiq emas, balki juda katta ehtimollik qonuni: tizim kam ehtimolli holatdan ko'p ehtimolli holatga o'tadi.",
+  "ru": "**Наиболее вероятное состояние ([[F08]]).** Все микросостояния считаются равновероятными (основной постулат статистической физики). $W\\left(n\\right)$ максимален при $n=\\frac{N}{2}$, а относительная ширина пика убывает как $\\frac{1}{\\sqrt N}$: при $N=4$ вероятность равного распределения лишь $\\frac{6}{16}$, а при макроскопическом $N\\sim10^{23}$ заметное отклонение практически никогда не наблюдается. Вероятность собраться всем молекулам в одной половине $2\\cdot2^{-N}$ — даже при $N=100$ порядка $10^{-30}$. Поэтому второй закон — не абсолютный запрет, а закон огромной вероятности: система переходит из менее вероятного состояния в более вероятное.",
+  "en": "**The most probable state ([[F08]]).** All microstates are taken to be equally probable (the basic postulate of statistical physics). $W\\left(n\\right)$ is greatest at $n=\\frac{N}{2}$, and the relative width of the peak falls off as $\\frac{1}{\\sqrt N}$: for $N=4$ the probability of an even split is only $\\frac{6}{16}$, whereas for a macroscopic $N\\sim10^{23}$ a noticeable deviation is practically never observed. The probability of all molecules gathering in one half is $2\\cdot2^{-N}$ — of order $10^{-30}$ even for $N=100$. So the second law is not an absolute prohibition but a law of overwhelming probability: a system passes from a less probable state to a more probable one."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L30-F08.png",
+   "ru": "figures/B2-L30-F08-ru.png",
+   "en": "figures/B2-L30-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Bolsman formulasi.** Ikki mustaqil tizimning statistik vaznlari ko'paytiriladi, entropiyalari esa qo'shiladi; bu ikki xossani faqat logarifm bog'laydi. Bolsman entropiyani statistik vaznning logarifmiga proporsional deb oldi; proporsionallik koeffitsiyenti — Bolsman doimiysi. Ehtimolliklari $P_j$ bo'lgan holatlar uchun umumiyroq Gibbs formulasi ishlatiladi; barcha $W$ holat teng ehtimolli bo'lsa, u Bolsman formulasiga aylanadi:",
+  "ru": "**Формула Больцмана.** Статистические веса двух независимых систем перемножаются, а энтропии складываются; эти два свойства связывает только логарифм. Больцман принял энтропию пропорциональной логарифму статистического веса; коэффициент пропорциональности — постоянная Больцмана. Для состояний с вероятностями $P_j$ используют более общую формулу Гиббса; если все $W$ состояний равновероятны, она переходит в формулу Больцмана:",
+  "en": "**Boltzmann's formula.** The statistical weights of two independent systems multiply while their entropies add; only the logarithm links these two properties. Boltzmann took the entropy to be proportional to the logarithm of the statistical weight; the constant of proportionality is Boltzmann's constant. For states with probabilities $P_j$ the more general Gibbs formula is used; if all $W$ states are equally probable it turns into Boltzmann's formula:"
+ },
+ {
+  "t": "m",
+  "m": "S=k\\ln W,\\qquad S=-k\\sum_jP_j\\ln P_j,\\qquad k\\approx1.38\\cdot10^{-23}\\ \\mathrm{J/K}"
+ },
+ {
+  "t": "li",
+  "uz": "**Termodinamika bilan mosligi.** Ideal gaz izotermik ravishda $V_1$ dan $V_2$ gacha kengaysa, har bir molekula uchun joylar soni $\\frac{V_2}{V_1}$ marta ortadi va $N$ ta molekula uchun $\\frac{W_2}{W_1}=\\left(\\frac{V_2}{V_1}\\right)^N$. Demak $\\Delta S=Nk\\ln\\frac{V_2}{V_1}=\\nu R\\ln\\frac{V_2}{V_1}$ — 6-bo'limdagi termodinamik natija bilan aynan bir xil, chunki $Nk=\\nu R$. Temperatura ortganda esa molekulalarga ruxsat etilgan tezliklar sohasi kengayadi — $\\nu C_V\\ln\\frac{T_2}{T_1}$ hadi shundan. Ikki holatli $N$ ta mustaqil zarra (masalan, spinlar) uchun eng katta entropiya $Nk\\ln2$, chunki $W\\leq2^N$.",
+  "ru": "**Согласие с термодинамикой.** При изотермическом расширении идеального газа от $V_1$ до $V_2$ число мест для каждой молекулы увеличивается в $\\frac{V_2}{V_1}$ раз, и для $N$ молекул $\\frac{W_2}{W_1}=\\left(\\frac{V_2}{V_1}\\right)^N$. Значит, $\\Delta S=Nk\\ln\\frac{V_2}{V_1}=\\nu R\\ln\\frac{V_2}{V_1}$ — в точности термодинамический результат раздела 6, так как $Nk=\\nu R$. При росте температуры расширяется область разрешённых скоростей молекул — отсюда член $\\nu C_V\\ln\\frac{T_2}{T_1}$. Для $N$ независимых частиц с двумя состояниями (например, спинов) наибольшая энтропия равна $Nk\\ln2$, так как $W\\leq2^N$.",
+  "en": "**Agreement with thermodynamics.** When an ideal gas expands isothermally from $V_1$ to $V_2$, the number of places for each molecule increases by a factor of $\\frac{V_2}{V_1}$, and for $N$ molecules $\\frac{W_2}{W_1}=\\left(\\frac{V_2}{V_1}\\right)^N$. Hence $\\Delta S=Nk\\ln\\frac{V_2}{V_1}=\\nu R\\ln\\frac{V_2}{V_1}$ — exactly the thermodynamic result of Section 6, since $Nk=\\nu R$. When the temperature rises, the range of allowed molecular speeds widens — this gives the term $\\nu C_V\\ln\\frac{T_2}{T_1}$. For $N$ independent two-state particles (spins, for example) the greatest entropy is $Nk\\ln2$, since $W\\leq2^N$."
+ },
+ {
+  "t": "li",
+  "uz": "**Uchinchi qonun (Nernst–Plank).** $T\\to0$ da muvozanatdagi tizim asosiy holatga o'tadi; u yagona bo'lsa, $W=1$ va $S\\to0$. Natijalar: (1) entropiya mutlaq qiymat oladi, $S\\left(T\\right)=\\int_0^T\\frac{C\\,dT}{T}$; integral chekli bo'lishi uchun $T\\to0$ da barcha issiqlik sig'imlari nolga intilishi kerak — qattiq jismlarda Debay qonuni $C\\propto T^3$, ideal gaz formulasi $\\nu C_V\\ln T$ esa past temperaturada yaroqsiz. (2) Kengayish koeffitsiyentlari ham nolga intiladi. (3) Absolyut nolga chekli sondagi qadamda erishib bo'lmaydi (10-bo'limdagi sovutish ishining o'sishi).",
+  "ru": "**Третий закон (Нернст–Планк).** При $T\\to0$ равновесная система переходит в основное состояние; если оно единственно, $W=1$ и $S\\to0$. Следствия: (1) энтропия приобретает абсолютное значение, $S\\left(T\\right)=\\int_0^T\\frac{C\\,dT}{T}$; чтобы интеграл был конечен, при $T\\to0$ все теплоёмкости должны стремиться к нулю — в твёрдых телах закон Дебая $C\\propto T^3$, а формула идеального газа $\\nu C_V\\ln T$ при низких температурах неприменима. (2) Коэффициенты расширения тоже стремятся к нулю. (3) Абсолютного нуля нельзя достичь за конечное число шагов (рост работы охлаждения из раздела 10).",
+  "en": "**The third law (Nernst–Planck).** As $T\\to0$ a system in equilibrium passes into its ground state; if this is unique, $W=1$ and $S\\to0$. Consequences: (1) entropy acquires an absolute value, $S\\left(T\\right)=\\int_0^T\\frac{C\\,dT}{T}$; for the integral to be finite all heat capacities must tend to zero as $T\\to0$ — in solids the Debye law $C\\propto T^3$, while the ideal-gas formula $\\nu C_V\\ln T$ is invalid at low temperatures. (2) The expansion coefficients also tend to zero. (3) Absolute zero cannot be reached in a finite number of steps (the growth of the refrigeration work from Section 10)."
+ },
+ {
+  "t": "h2",
+  "uz": "12. GRE usullari",
+  "ru": "12. Приёмы для GRE",
+  "en": "12. GRE techniques"
+ },
+ {
+  "t": "li",
+  "uz": "**Avval kelvinga o'tkazing.** Karno FIK i, sovutish koeffitsiyenti, $\\frac{Q}{T}$ va $\\ln\\frac{T_2}{T_1}$ — hammasi absolyut temperaturada. Variantlar orasida selsiy bilan hisoblangan son albatta bo'ladi.",
+  "ru": "**Сначала переведите в кельвины.** КПД Карно, холодильный коэффициент, $\\frac{Q}{T}$ и $\\ln\\frac{T_2}{T_1}$ — всё в абсолютной температуре. Среди вариантов обязательно будет число, вычисленное по Цельсию.",
+  "en": "**Convert to kelvins first.** The Carnot efficiency, the coefficient of performance, $\\frac{Q}{T}$ and $\\ln\\frac{T_2}{T_1}$ all use absolute temperature. Among the options there will certainly be a number calculated in Celsius."
+ },
+ {
+  "t": "li",
+  "uz": "**Qaytmas jarayonda — qaytar yo'l.** Erkin kengayish, aralashish, issiqlik o'tishi: boshlang'ich va oxirgi holatni toping, ularni qulay qaytar yo'l bilan tutashtiring va formulani qo'llang. $Q=0$ bo'lsa ham $\\Delta S$ musbat bo'lishi mumkin; izolyatsiyalangan tizimda $\\Delta S<0$ javob — har doim xato.",
+  "ru": "**В необратимом процессе — обратимый путь.** Свободное расширение, смешение, теплопередача: найдите начальное и конечное состояния, соедините их удобным обратимым путём и примените формулу. Даже при $Q=0$ $\\Delta S$ может быть положительной; ответ $\\Delta S<0$ в изолированной системе — всегда ошибка.",
+  "en": "**For an irreversible process, use a reversible path.** Free expansion, mixing, heat transfer: find the initial and final states, join them by a convenient reversible path and apply the formula. Even with $Q=0$, $\\Delta S$ can be positive; an answer $\\Delta S<0$ for an isolated system is always wrong."
+ },
+ {
+  "t": "li",
+  "uz": "**Ideal gaz formulasini yodlang.** $S=\\nu C_V\\ln T+\\nu R\\ln V+\\mathrm{const}$: izotermada faqat ikkinchi had, izoxorada faqat birinchi had, izobarada $C_V$ o'rniga $C_p$, adiabatada $\\Delta S=0$. «Necha marta» savollarida faqat logarifm ichidagi nisbatlar kerak.",
+  "ru": "**Запомните формулу идеального газа.** $S=\\nu C_V\\ln T+\\nu R\\ln V+\\mathrm{const}$: на изотерме только второй член, на изохоре только первый, на изобаре $C_p$ вместо $C_V$, на адиабате $\\Delta S=0$. В вопросах «во сколько раз» нужны только отношения под логарифмом.",
+  "en": "**Memorise the ideal-gas formula.** $S=\\nu C_V\\ln T+\\nu R\\ln V+\\mathrm{const}$: on an isotherm only the second term, on an isochore only the first, on an isobar $C_p$ instead of $C_V$, on an adiabat $\\Delta S=0$. In \"by what factor\" questions only the ratios inside the logarithm are needed."
+ },
+ {
+  "t": "li",
+  "uz": "**Diagrammalardan foydalaning.** $TS$-diagrammada o'ralgan yuza — ish, yuqori bo'lak ostidagi yuza — $Q_1$; to'g'ri to'rtburchak — Karno. Real sikllar uchun formulani eslay olmasangiz, temperaturalarni adiabatalar bo'ylab $TV^{\\gamma-1}=\\mathrm{const}$ bilan toping va $\\eta=1-\\frac{Q_2}{Q_1}$ ni hisoblang.",
+  "ru": "**Пользуйтесь диаграммами.** На $TS$-диаграмме охватываемая площадь — работа, площадь под верхним участком — $Q_1$; прямоугольник — Карно. Если не помните формулу реального цикла, найдите температуры вдоль адиабат по $TV^{\\gamma-1}=\\mathrm{const}$ и вычислите $\\eta=1-\\frac{Q_2}{Q_1}$.",
+  "en": "**Use the diagrams.** On a $TS$-diagram the enclosed area is the work and the area under the upper part is $Q_1$; a rectangle is Carnot. If you cannot remember the formula for a real cycle, find the temperatures along the adiabats from $TV^{\\gamma-1}=\\mathrm{const}$ and calculate $\\eta=1-\\frac{Q_2}{Q_1}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Statistika — sanash.** $S=k\\ln W$ masalalarida mikroholatlarni sanang: $N$ ta ikki holatli zarra — $2^N$, hajm $n$ marta ortsa — $W$ $n^N$ marta ortadi, mustaqil tizimlar — $W$ lar ko'paytmasi. Ehtimolliklar nisbati $\\frac{W_2}{W_1}=e^{\\frac{\\Delta S}{k}}$.",
+  "ru": "**Статистика — это подсчёт.** В задачах на $S=k\\ln W$ считайте микросостояния: $N$ частиц с двумя состояниями — $2^N$, объём увеличен в $n$ раз — $W$ растёт в $n^N$ раз, независимые системы — произведение $W$. Отношение вероятностей $\\frac{W_2}{W_1}=e^{\\frac{\\Delta S}{k}}$.",
+  "en": "**Statistics means counting.** In $S=k\\ln W$ problems count the microstates: $N$ two-state particles give $2^N$; if the volume increases $n$ times, $W$ grows $n^N$ times; independent systems give a product of the $W$'s. The ratio of probabilities is $\\frac{W_2}{W_1}=e^{\\frac{\\Delta S}{k}}$."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Karno FIK i",
+    "ru": "КПД Карно",
+    "en": "Carnot efficiency",
+    "m": "\\eta_C=1-\\frac{T_2}{T_1}"
+   },
+   {
+    "uz": "Karno sharti",
+    "ru": "Условие Карно",
+    "en": "Carnot condition",
+    "m": "\\frac{Q_2}{Q_1}=\\frac{T_2}{T_1}"
+   },
+   {
+    "uz": "Ideal sovutgich va nasos",
+    "ru": "Идеальные холодильник и насос",
+    "en": "Ideal refrigerator and pump",
+    "m": "\\varepsilon=\\frac{T_2}{T_1-T_2},\\quad \\varphi=\\frac{T_1}{T_1-T_2}"
+   },
+   {
+    "uz": "Klauzius tengsizligi",
+    "ru": "Неравенство Клаузиуса",
+    "en": "Clausius inequality",
+    "m": "\\oint\\frac{\\delta Q}{T}\\leq0"
+   },
+   {
+    "uz": "Entropiya",
+    "ru": "Энтропия",
+    "en": "Entropy",
+    "m": "dS=\\frac{\\delta Q}{T}"
+   },
+   {
+    "uz": "Entropiyaning o'sishi",
+    "ru": "Возрастание энтропии",
+    "en": "Growth of entropy",
+    "m": "\\Delta S\\geq0"
+   },
+   {
+    "uz": "Asosiy tenglama",
+    "ru": "Основное уравнение",
+    "en": "Fundamental equation",
+    "m": "T\\,dS=dU+p\\,dV"
+   },
+   {
+    "uz": "Ideal gaz entropiyasi",
+    "ru": "Энтропия идеального газа",
+    "en": "Ideal-gas entropy",
+    "m": "\\Delta S=\\nu C_V\\ln\\frac{T_2}{T_1}+\\nu R\\ln\\frac{V_2}{V_1}"
+   },
+   {
+    "uz": "Jism, fazaviy o'tish",
+    "ru": "Тело, фазовый переход",
+    "en": "Body, phase change",
+    "m": "\\Delta S=mc\\ln\\frac{T_2}{T_1},\\quad \\Delta S=\\frac{\\lambda m}{T}"
+   },
+   {
+    "uz": "Issiqlik o'tishi",
+    "ru": "Теплопередача",
+    "en": "Heat transfer",
+    "m": "\\Delta S=\\frac{Q}{T_2}-\\frac{Q}{T_1}"
+   },
+   {
+    "uz": "TS-diagramma",
+    "ru": "TS-диаграмма",
+    "en": "TS-diagram",
+    "m": "Q=\\int T\\,dS"
+   },
+   {
+    "uz": "Otto sikli",
+    "ru": "Цикл Отто",
+    "en": "Otto cycle",
+    "m": "\\eta_{O}=1-\\frac{1}{r^{\\gamma-1}}"
+   },
+   {
+    "uz": "Dizel sikli",
+    "ru": "Цикл Дизеля",
+    "en": "Diesel cycle",
+    "m": "\\eta_{D}=1-\\frac{\\rho^\\gamma-1}{\\gamma r^{\\gamma-1}\\left(\\rho-1\\right)}"
+   },
+   {
+    "uz": "Brayton sikli",
+    "ru": "Цикл Брайтона",
+    "en": "Brayton cycle",
+    "m": "\\eta_{B}=1-\\left(\\frac{p_1}{p_2}\\right)^{\\frac{\\gamma-1}{\\gamma}}"
+   },
+   {
+    "uz": "Ikki jismdan eng katta ish",
+    "ru": "Наибольшая работа от двух тел",
+    "en": "Maximum work from two bodies",
+    "m": "A_{max}=C\\left(\\sqrt{T_1}-\\sqrt{T_2}\\right)^2"
+   },
+   {
+    "uz": "Bolsman formulasi",
+    "ru": "Формула Больцмана",
+    "en": "Boltzmann's formula",
+    "m": "S=k\\ln W"
+   },
+   {
+    "uz": "Statistik vazn",
+    "ru": "Статистический вес",
+    "en": "Statistical weight",
+    "m": "W=\\frac{N!}{n!\\left(N-n\\right)!}"
+   }
+  ]
+ }
+]
