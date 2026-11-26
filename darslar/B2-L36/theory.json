@@ -1,0 +1,667 @@
+[
+ {
+  "t": "h1",
+  "uz": "Elektronika asoslari: diod, tranzistor, kuchaytirgich (Basics of electronics)",
+  "ru": "Основы электроники: диод, транзистор, усилитель",
+  "en": "Basics of electronics: diode, transistor, amplifier"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz o'zgarmas kuchlanish ulanganda RC va RL zanjirlarda tok va kuchlanish qanday o'zgarishini ($t=0$ va $t\\to\\infty$ qoidalari bilan) grafikdan taniysiz; impedans yordamida past va yuqori chastotalar filtrini tahlil qilib, kesish chastotasi, detsibellar va Bode diagrammasini o'qiysiz; diodning volt-amper xarakteristikasini (Shokli tenglamasi) va modellarini qo'llab, diodli zanjirlarni, to'g'rilagich va stabilitronni hisoblaysiz; bipolyar tranzistor toklari, ish rejimlari, umumiy emitterli kuchaytirgich va tranzistor kalitni tahlil qilasiz; ideal operatsion kuchaytirgich qoidalari bilan invertor, noinvertor, summator va integratorni yechasiz; mantiqiy elementlar, Bul algebrasi, ikkilik sanoq va analog-raqamli o'zgartirgich asoslarini bilasiz.",
+  "ru": "**Цель.** После урока вы будете узнавать по графику, как меняются ток и напряжение в цепях RC и RL при подключении постоянного напряжения (с помощью правил $t=0$ и $t\\to\\infty$); анализировать фильтры нижних и верхних частот через импеданс, читать частоту среза, децибелы и диаграмму Боде; применять вольт-амперную характеристику диода (уравнение Шокли) и его модели, рассчитывать диодные цепи, выпрямитель и стабилитрон; анализировать токи биполярного транзистора, режимы работы, усилитель с общим эмиттером и транзисторный ключ; решать инвертирующий, неинвертирующий усилители, сумматор и интегратор по правилам идеального операционного усилителя; знать основы логических элементов, булевой алгебры, двоичного счёта и аналого-цифрового преобразователя.",
+  "en": "**Goal.** After this lesson you will recognise from a graph how the current and voltage change in RC and RL circuits when a constant voltage is switched on (using the $t=0$ and $t\\to\\infty$ rules); analyse low-pass and high-pass filters with impedances and read the cutoff frequency, decibels and Bode plots; apply the diode current–voltage characteristic (the Shockley equation) and its models to compute diode circuits, rectifiers and Zener regulators; analyse bipolar transistor currents, operating modes, the common-emitter amplifier and the transistor switch; solve inverting and non-inverting amplifiers, summers and integrators with the ideal operational-amplifier rules; and know the basics of logic gates, Boolean algebra, binary counting and analog-to-digital converters."
+ },
+ {
+  "t": "p",
+  "uz": "Elektr zanjirlari B2-L15, B2-L17 va B2-L18 da o'rganildi: o'zgarmas tok, Kirxgof qoidalari, induksiya va o'zgaruvchan tok. Elektronika shu yerdan davom etadi: bizni endi signal — vaqt bo'yicha o'zgaruvchi kuchlanish — va uni qayta ishlovchi qurilmalar qiziqtiradi. Rezistor, kondensator va g'altak — **passiv elementlar**: ular energiyani faqat sarflaydi yoki to'playdi. Diod, tranzistor va operatsion kuchaytirgich — **nochiziqli va aktiv elementlar**: ular tokni bir tomonga o'tkazadi, signalni kuchaytiradi yoki uni raqamli shaklga keltiradi. GRE da laboratoriya metodlari bo'limining sezilarli qismi aynan shu mavzular: RC zanjir grafigi, filtrning chastota xarakteristikasi, diod yo'nalishi, ideal operatsion kuchaytirgich va mantiqiy elementlar.",
+  "ru": "Электрические цепи изучены в B2-L15, B2-L17 и B2-L18: постоянный ток, правила Кирхгофа, индукция и переменный ток. Электроника продолжает отсюда: теперь нас интересует сигнал — меняющееся во времени напряжение — и устройства, которые его обрабатывают. Резистор, конденсатор и катушка — **пассивные элементы**: они только расходуют или запасают энергию. Диод, транзистор и операционный усилитель — **нелинейные и активные элементы**: они пропускают ток в одну сторону, усиливают сигнал или переводят его в цифровую форму. На GRE заметная часть раздела лабораторных методов — именно эти темы: график RC-цепи, частотная характеристика фильтра, направление диода, идеальный операционный усилитель и логические элементы.",
+  "en": "Electric circuits were studied in B2-L15, B2-L17 and B2-L18: direct current, Kirchhoff's rules, induction and alternating current. Electronics continues from there: we are now interested in a signal — a voltage that varies in time — and in the devices that process it. Resistors, capacitors and inductors are **passive elements**: they only dissipate or store energy. Diodes, transistors and operational amplifiers are **nonlinear and active elements**: they let current pass one way, amplify a signal or turn it into digital form. On the GRE a noticeable part of the laboratory-methods section is exactly these topics: the graph of an RC circuit, the frequency response of a filter, the direction of a diode, the ideal operational amplifier and logic gates."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Signal, manba va yuklama; Tevenin teoremasi",
+  "ru": "1. Сигнал, источник и нагрузка; теорема Тевенена",
+  "en": "1. Signal, source and load; Thévenin's theorem"
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy nuqta (yer).** Elektron sxemada barcha potensiallar bitta tanlangan tugunga nisbatan o'lchanadi; uni **yer** (ground) yoki umumiy sim deb atashadi va uning potensialini $\\varphi=0$ deb olishadi. Shuning uchun «nuqtadagi kuchlanish $U$» degani — shu nuqta bilan yer orasidagi potensiallar farqi. Sxemada yer belgisi — gorizontal chiziqlar to'plami; bir xil belgi bilan ko'rsatilgan barcha nuqtalar o'zaro ulangan deb hisoblanadi. Signal — vaqtga bog'liq kuchlanish $U\\left(t\\right)$: **analog** signal uzluksiz qiymatlar qabul qiladi, **raqamli** signal esa faqat ikki daraja — mantiqiy $0$ va $1$.",
+  "ru": "**Общая точка (земля).** В электронной схеме все потенциалы измеряют относительно одного выбранного узла; его называют **землёй** (общим проводом) и считают его потенциал $\\varphi=0$. Поэтому «напряжение $U$ в точке» — это разность потенциалов между этой точкой и землёй. Символ земли на схеме — набор горизонтальных черт; все точки, обозначенные этим символом, считаются соединёнными между собой. Сигнал — зависящее от времени напряжение $U\\left(t\\right)$: **аналоговый** сигнал принимает непрерывные значения, а **цифровой** — только два уровня, логические $0$ и $1$.",
+  "en": "**Common point (ground).** In an electronic circuit all potentials are measured relative to one chosen node; it is called **ground** (the common wire) and its potential is taken as $\\varphi=0$. So \"the voltage $U$ at a point\" means the potential difference between that point and ground. The ground symbol in a diagram is a stack of horizontal bars; all points marked with this symbol are considered connected to each other. A signal is a time-dependent voltage $U\\left(t\\right)$: an **analog** signal takes continuous values, while a **digital** signal takes only two levels, logical $0$ and $1$."
+ },
+ {
+  "t": "li",
+  "uz": "**Tevenin teoremasi.** Rezistorlar va manbalardan iborat har qanday chiziqli ikki qutbli zanjirni tashqi yuklama uchun bitta ideal manba $\\mathcal E_T$ va unga ketma-ket ulangan qarshilik $R_T$ bilan almashtirish mumkin. $\\mathcal E_T$ — chiqish uchlari uzilgan holdagi (salt ishlash) kuchlanish, $R_T$ — barcha ideal manbalar o'rniga sim (EYK manbalari) yoki uzilish (tok manbalari) qo'yilganda uchlar orasidagi qarshilik. Masalan, $\\mathcal E$ manbadan $R_1$ va $R_2$ kuchlanish bo'lgichi orqali olingan chiqish uchun quyidagicha bo'ladi. Teorema elektronikada hamma joyda ishlatiladi: har bir kaskad keyingisi uchun «ichki qarshilikli manba».",
+  "ru": "**Теорема Тевенена.** Любую линейную двухполюсную цепь из резисторов и источников для внешней нагрузки можно заменить одним идеальным источником $\\mathcal E_T$ и последовательно включённым сопротивлением $R_T$. $\\mathcal E_T$ — напряжение на разомкнутых выходных зажимах (холостой ход), $R_T$ — сопротивление между зажимами, если все идеальные источники заменить проводом (источники ЭДС) или разрывом (источники тока). Например, для выхода, снятого с делителя напряжения $R_1$ и $R_2$ от источника $\\mathcal E$, получается следующее. Теорема используется в электронике повсюду: каждый каскад для следующего — «источник с внутренним сопротивлением».",
+  "en": "**Thévenin's theorem.** Any linear two-terminal network of resistors and sources can be replaced, as seen by an external load, by a single ideal source $\\mathcal E_T$ in series with a resistance $R_T$. $\\mathcal E_T$ is the voltage across the open output terminals (no load), and $R_T$ is the resistance between the terminals when every ideal source is replaced by a wire (EMF sources) or a break (current sources). For instance, for an output taken from a voltage divider $R_1$ and $R_2$ fed by a source $\\mathcal E$ one gets the following. The theorem is used everywhere in electronics: each stage is, for the next one, \"a source with an internal resistance\"."
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal E_T=\\mathcal E\\frac{R_2}{R_1+R_2},\\qquad R_T=\\frac{R_1R_2}{R_1+R_2},\\qquad U=\\mathcal E_T\\frac{R}{R+R_T}"
+ },
+ {
+  "t": "li",
+  "uz": "**Yuklanish effekti, kirish va chiqish qarshiligi.** Uchinchi formula yuklama $R$ ulanganda chiqish kuchlanishi kamayishini ko'rsatadi. Kaskadning **chiqish qarshiligi** — uning $R_T$, keyingi kaskad yoki asbobning **kirish qarshiligi** — uning yuklama sifatidagi $R$. Signal buzilmasligi uchun qoida: $R\\gg R_T$ bo'lsa $U\\approx\\mathcal E_T$. Misol: $\\mathcal E=10\\ \\mathrm{V}$ manbadan ikkita $100\\ \\mathrm{k}\\Omega$ li bo'lgich, chiqishga ichki qarshiligi $1\\ \\mathrm{M}\\Omega$ bo'lgan voltmetr ulangan. Unda $\\mathcal E_T=5\\ \\mathrm{V}$, $R_T=50\\ \\mathrm{k}\\Omega$ va voltmetr $U=5\\cdot\\frac{1000}{1050}\\approx4.76\\ \\mathrm{V}$ ni ko'rsatadi — o'lchashning o'zi natijani deyarli $5$ foizga buzdi. Shuning uchun yaxshi voltmetr va operatsion kuchaytirgich kirishi juda katta qarshilikka ega. Aksincha, yuklamaga eng katta quvvat $R=R_T$ da beriladi (B1-L36, yukni moslash).",
+  "ru": "**Эффект нагрузки, входное и выходное сопротивления.** Третья формула показывает, что при подключении нагрузки $R$ выходное напряжение уменьшается. **Выходное сопротивление** каскада — его $R_T$, **входное сопротивление** следующего каскада или прибора — его $R$ как нагрузки. Правило, чтобы сигнал не искажался: при $R\\gg R_T$ имеем $U\\approx\\mathcal E_T$. Пример: делитель из двух резисторов по $100\\ \\mathrm{k}\\Omega$ от источника $\\mathcal E=10\\ \\mathrm{V}$, к выходу подключён вольтметр с внутренним сопротивлением $1\\ \\mathrm{M}\\Omega$. Тогда $\\mathcal E_T=5\\ \\mathrm{V}$, $R_T=50\\ \\mathrm{k}\\Omega$, и вольтметр покажет $U=5\\cdot\\frac{1000}{1050}\\approx4.76\\ \\mathrm{V}$ — само измерение исказило результат почти на $5$ процентов. Поэтому хороший вольтметр и вход операционного усилителя имеют очень большое сопротивление. Напротив, наибольшая мощность передаётся нагрузке при $R=R_T$ (B1-L36, согласование нагрузки).",
+  "en": "**Loading, input and output resistance.** The third formula shows that connecting a load $R$ lowers the output voltage. A stage's **output resistance** is its $R_T$; the **input resistance** of the next stage or meter is its $R$ as a load. The rule that keeps the signal undistorted: for $R\\gg R_T$ we have $U\\approx\\mathcal E_T$. Example: a divider of two $100\\ \\mathrm{k}\\Omega$ resistors fed by $\\mathcal E=10\\ \\mathrm{V}$, with a voltmeter of internal resistance $1\\ \\mathrm{M}\\Omega$ across the output. Then $\\mathcal E_T=5\\ \\mathrm{V}$, $R_T=50\\ \\mathrm{k}\\Omega$, and the voltmeter reads $U=5\\cdot\\frac{1000}{1050}\\approx4.76\\ \\mathrm{V}$ — the measurement itself spoiled the result by almost $5$ percent. That is why a good voltmeter and an operational-amplifier input have a very large resistance. Conversely, the largest power is delivered to the load at $R=R_T$ (B1-L36, load matching)."
+ },
+ {
+  "t": "h2",
+  "uz": "2. O'tish jarayonlari: RC va RL zanjirlar",
+  "ru": "2. Переходные процессы: цепи RC и RL",
+  "en": "2. Transients: RC and RL circuits"
+ },
+ {
+  "t": "li",
+  "uz": "**Ulash paytidagi tenglamalar.** $t=0$ da kalit yopilib, $\\mathcal E$ manba $R$ orqali zaryadsiz kondensatorga ulansin. Kirxgofning kontur qoidasi $\\mathcal E=IR+\\frac{q}{C}$ yechimi — eksponenta; kondensator kuchlanishi o'sadi, tok kamayadi. $R$ va $L$ ketma-ket ulangan zanjirda esa tok o'sadi, g'altakdagi kuchlanish kamayadi. Ikkala holda o'zgarish tezligini **vaqt doimiysi** belgilaydi: $\\tau=RC$ yoki $\\tau=\\frac{L}{R}$. Uzish (razryad) jarayonida xuddi shu eksponentalar nolga intiladi: $U_C=U_0e^{-t/\\tau}$.",
+  "ru": "**Уравнения при включении.** Пусть при $t=0$ ключ замыкается и источник $\\mathcal E$ через $R$ подключается к незаряженному конденсатору. Решение правила контуров Кирхгофа $\\mathcal E=IR+\\frac{q}{C}$ — экспонента: напряжение конденсатора растёт, ток убывает. В цепи из последовательно соединённых $R$ и $L$, наоборот, ток растёт, а напряжение на катушке убывает. В обоих случаях скорость изменения задаёт **постоянная времени**: $\\tau=RC$ или $\\tau=\\frac{L}{R}$. При отключении (разряде) те же экспоненты стремятся к нулю: $U_C=U_0e^{-t/\\tau}$.",
+  "en": "**Equations at switch-on.** Let a switch close at $t=0$, connecting a source $\\mathcal E$ through $R$ to an uncharged capacitor. The solution of Kirchhoff's loop rule $\\mathcal E=IR+\\frac{q}{C}$ is an exponential: the capacitor voltage rises and the current falls. In a circuit with $R$ and $L$ in series, on the contrary, the current rises and the inductor voltage falls. In both cases the rate of change is set by the **time constant**: $\\tau=RC$ or $\\tau=\\frac{L}{R}$. On disconnection (discharge) the same exponentials tend to zero: $U_C=U_0e^{-t/\\tau}$."
+ },
+ {
+  "t": "m",
+  "m": "RC:\\ U_C=\\mathcal E\\left(1-e^{-t/\\tau}\\right),\\quad I=\\frac{\\mathcal E}{R}e^{-t/\\tau};\\qquad RL:\\ I=\\frac{\\mathcal E}{R}\\left(1-e^{-t/\\tau}\\right),\\quad U_L=\\mathcal Ee^{-t/\\tau}"
+ },
+ {
+  "t": "li",
+  "uz": "**Foydali sonlar.** $t=\\tau$ da o'suvchi kattalik oxirgi qiymatining $1-e^{-1}\\approx63$ foiziga, $3\\tau$ da $95$ foiziga, $5\\tau$ da $99.3$ foiziga yetadi. Oxirgi qiymatning $f$ ulushiga yetish vaqti $t=\\tau\\ln\\frac{1}{1-f}$, yarmiga — $\\tau\\ln2\\approx0.69\\tau$. Grafik bo'yicha $\\tau$ ni topishning tez usuli: $t=0$ dagi urinma oxirgi qiymat chizig'ini aynan $t=\\tau$ da kesadi, chunki boshlang'ich o'zgarish tezligi «oxirgi qiymat bo'linsin $\\tau$» ga teng ([[F01]]). Birliklar: $\\left[RC\\right]=\\Omega\\cdot\\mathrm{F}=\\mathrm{s}$, $\\left[\\frac{L}{R}\\right]=\\frac{\\mathrm{H}}{\\Omega}=\\mathrm{s}$.",
+  "ru": "**Полезные числа.** При $t=\\tau$ растущая величина достигает $1-e^{-1}\\approx63$ процентов конечного значения, при $3\\tau$ — $95$ процентов, при $5\\tau$ — $99.3$ процента. Время достижения доли $f$ конечного значения $t=\\tau\\ln\\frac{1}{1-f}$, половины — $\\tau\\ln2\\approx0.69\\tau$. Быстрый способ найти $\\tau$ по графику: касательная при $t=0$ пересекает линию конечного значения ровно при $t=\\tau$, потому что начальная скорость изменения равна «конечное значение, делённое на $\\tau$» ([[F01]]). Единицы: $\\left[RC\\right]=\\Omega\\cdot\\mathrm{F}=\\mathrm{s}$, $\\left[\\frac{L}{R}\\right]=\\frac{\\mathrm{H}}{\\Omega}=\\mathrm{s}$.",
+  "en": "**Useful numbers.** At $t=\\tau$ a rising quantity reaches $1-e^{-1}\\approx63$ percent of its final value, at $3\\tau$ it reaches $95$ percent and at $5\\tau$ it reaches $99.3$ percent. The time to reach a fraction $f$ of the final value is $t=\\tau\\ln\\frac{1}{1-f}$, and half of it — $\\tau\\ln2\\approx0.69\\tau$. A quick way to find $\\tau$ from a graph: the tangent at $t=0$ crosses the final-value line exactly at $t=\\tau$, because the initial rate of change equals \"final value divided by $\\tau$\" ([[F01]]). Units: $\\left[RC\\right]=\\Omega\\cdot\\mathrm{F}=\\mathrm{s}$, $\\left[\\frac{L}{R}\\right]=\\frac{\\mathrm{H}}{\\Omega}=\\mathrm{s}$."
+ },
+ {
+  "t": "li",
+  "uz": "**$t=0$ va $t\\to\\infty$ qoidalari.** Kondensator kuchlanishi va g'altak toki sakrab o'zgara olmaydi (aks holda tok yoki kuchlanish cheksiz bo'lardi). Bundan GRE uchun eng muhim qoidalar kelib chiqadi. Ulash paytida ($t=0$) zaryadsiz **kondensator — sim** (qisqa tutashuv), **g'altak — uzilish**: undan tok o'tmaydi va manba kuchlanishi to'liq unga tushadi. Ko'p vaqt o'tgach ($t\\to\\infty$) o'zgarmas tokda **kondensator — uzilish**, **g'altak — sim**. Eslab qolish usuli (Conquering): ulanish lahzasi — juda yuqori chastota, uzoq vaqt — nol chastota; yuqori chastotada kondensator tokni o'tkazadi, g'altak to'sadi, nol chastotada esa aksincha. Shu qoidalar bilan murakkab zanjirdagi boshlang'ich va oxirgi toklarni differensial tenglamasiz topamiz.",
+  "ru": "**Правила $t=0$ и $t\\to\\infty$.** Напряжение конденсатора и ток катушки не могут меняться скачком (иначе ток или напряжение были бы бесконечными). Отсюда следуют важнейшие для GRE правила. В момент включения ($t=0$) незаряженный **конденсатор — провод** (короткое замыкание), **катушка — разрыв**: ток через неё не идёт и всё напряжение источника падает на ней. Спустя долгое время ($t\\to\\infty$) при постоянном токе **конденсатор — разрыв**, **катушка — провод**. Способ запомнить (Conquering): момент включения — очень высокая частота, долгое время — нулевая частота; на высокой частоте конденсатор пропускает ток, катушка его задерживает, а на нулевой частоте — наоборот. С этими правилами начальные и конечные токи в сложной цепи находят без дифференциальных уравнений.",
+  "en": "**The $t=0$ and $t\\to\\infty$ rules.** A capacitor's voltage and an inductor's current cannot change abruptly (otherwise a current or voltage would be infinite). This gives the rules that matter most for the GRE. At switch-on ($t=0$) an uncharged **capacitor is a wire** (a short circuit) and an **inductor is a break**: no current flows through it and the whole source voltage appears across it. After a long time ($t\\to\\infty$) with direct current the **capacitor is a break** and the **inductor is a wire**. A way to remember (Conquering): the switching instant is a very high frequency and a long time is zero frequency; at high frequency a capacitor passes current and an inductor blocks it, at zero frequency it is the other way round. With these rules the initial and final currents in a complicated circuit are found without differential equations."
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya.** Zaryadlangan kondensatorda $W_C=\\frac{CU^2}{2}$, tokli g'altakda $W_L=\\frac{LI^2}{2}$ energiya to'planadi. Kondensatorni rezistor orqali $\\mathcal E$ gacha zaryadlaganda manba $q\\mathcal E=C\\mathcal E^2$ ish bajaradi, uning yarmi kondensatorda qoladi, yarmi esa $R$ qanday bo'lishidan qat'i nazar issiqlikka aylanadi: $Q=\\frac{C\\mathcal E^2}{2}$. G'altak tokini birdan uzish xavfli: $U_L=-L\\frac{dI}{dt}$ juda katta bo'ladi va kalitda uchqun chiqadi — shuning uchun g'altakka parallel himoya diodi qo'yiladi (5-bo'lim).",
+  "ru": "**Энергия.** В заряженном конденсаторе запасена энергия $W_C=\\frac{CU^2}{2}$, в катушке с током — $W_L=\\frac{LI^2}{2}$. При зарядке конденсатора через резистор до $\\mathcal E$ источник совершает работу $q\\mathcal E=C\\mathcal E^2$, половина её остаётся в конденсаторе, а половина, независимо от величины $R$, переходит в тепло: $Q=\\frac{C\\mathcal E^2}{2}$. Резко разрывать ток катушки опасно: $U_L=-L\\frac{dI}{dt}$ становится очень большим и в ключе проскакивает искра — поэтому параллельно катушке ставят защитный диод (раздел 5).",
+  "en": "**Energy.** A charged capacitor stores $W_C=\\frac{CU^2}{2}$ and an inductor carrying current stores $W_L=\\frac{LI^2}{2}$. When a capacitor is charged to $\\mathcal E$ through a resistor the source does work $q\\mathcal E=C\\mathcal E^2$; half of it stays in the capacitor and half turns into heat whatever the value of $R$: $Q=\\frac{C\\mathcal E^2}{2}$. Interrupting an inductor current abruptly is dangerous: $U_L=-L\\frac{dI}{dt}$ becomes huge and a spark jumps across the switch — that is why a protection diode is placed in parallel with the inductor (section 5)."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L36-F01.png",
+   "ru": "figures/B2-L36-F01-ru.png",
+   "en": "figures/B2-L36-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Impedans va filtrlar; detsibellar va Bode diagrammasi",
+  "ru": "3. Импеданс и фильтры; децибелы и диаграмма Боде",
+  "en": "3. Impedance and filters; decibels and Bode plots"
+ },
+ {
+  "t": "li",
+  "uz": "**Impedans (B2-L18 eslatma).** Garmonik signal $U=U_me^{i\\omega t}$ uchun uchala passiv element Om qonuniga $U=IZ$ bo'ysunadi, faqat **impedans** $Z$ kompleks son. Ketma-ket ulanganda impedanslar qo'shiladi, parallel ulanganda — teskari qiymatlari. Modullarga qarab: past chastotada ($\\omega\\to0$) kondensator — uzilish, g'altak — sim; yuqori chastotada ($\\omega\\to\\infty$) kondensator — sim, g'altak — uzilish. Bu 2-bo'limdagi qoidalarning chastota tilidagi ko'rinishi.",
+  "ru": "**Импеданс (напоминание B2-L18).** Для гармонического сигнала $U=U_me^{i\\omega t}$ все три пассивных элемента подчиняются закону Ома $U=IZ$, только **импеданс** $Z$ — комплексное число. При последовательном соединении импедансы складываются, при параллельном — их обратные величины. По модулям: на низкой частоте ($\\omega\\to0$) конденсатор — разрыв, катушка — провод; на высокой частоте ($\\omega\\to\\infty$) конденсатор — провод, катушка — разрыв. Это те же правила раздела 2 на языке частот.",
+  "en": "**Impedance (a B2-L18 reminder).** For a harmonic signal $U=U_me^{i\\omega t}$ all three passive elements obey Ohm's law $U=IZ$, only the **impedance** $Z$ is a complex number. In series impedances add; in parallel their reciprocals add. In magnitude: at low frequency ($\\omega\\to0$) a capacitor is a break and an inductor a wire; at high frequency ($\\omega\\to\\infty$) a capacitor is a wire and an inductor a break. These are the rules of section 2 in the language of frequency."
+ },
+ {
+  "t": "m",
+  "m": "Z_R=R,\\qquad Z_C=\\frac{1}{i\\omega C},\\qquad Z_L=i\\omega L,\\qquad Z=Z_1+Z_2,\\qquad \\frac{1}{Z}=\\frac{1}{Z_1}+\\frac{1}{Z_2}"
+ },
+ {
+  "t": "li",
+  "uz": "**RC past chastotalar filtri.** Kirish $U_1$ ketma-ket $R$ ga beriladi, chiqish $U_2$ esa yerga ulangan $C$ dan olinadi. Kompleks kuchlanish bo'lgichi formulasidan **uzatish koeffitsiyenti** $H=\\frac{U_2}{U_1}$ topiladi. Past chastotada kondensator deyarli uzilish — signal o'zgarishsiz o'tadi; yuqori chastotada u signalni yerga «qisqa tutashtiradi». Chegarani **kesish chastotasi** $\\omega_c=\\frac{1}{RC}$ belgilaydi; Hz da $f_c=\\frac{\\omega_c}{2\\pi}$ — $\\omega$ va $f$ ni adashtirmang! $\\omega=\\omega_c$ da $\\left|H\\right|=\\frac{1}{\\sqrt2}$ (yuklamadagi quvvat ikki marta kamayadi), faza siljishi $-45^\\circ$. $\\omega\\gg\\omega_c$ da $\\left|H\\right|\\approx\\frac{\\omega_c}{\\omega}$: chastota $10$ marta ortsa, signal $10$ marta kamayadi. Eslab qolish: past chastotalar filtrida kondensator «pastda», ya'ni yerga ulangan.",
+  "ru": "**RC-фильтр нижних частот.** Вход $U_1$ подаётся на последовательный $R$, а выход $U_2$ снимается с заземлённого $C$. Из формулы комплексного делителя напряжения находят **коэффициент передачи** $H=\\frac{U_2}{U_1}$. На низкой частоте конденсатор почти разрыв — сигнал проходит без изменений; на высокой частоте он «закорачивает» сигнал на землю. Границу задаёт **частота среза** $\\omega_c=\\frac{1}{RC}$; в Гц $f_c=\\frac{\\omega_c}{2\\pi}$ — не путайте $\\omega$ и $f$! При $\\omega=\\omega_c$ имеем $\\left|H\\right|=\\frac{1}{\\sqrt2}$ (мощность в нагрузке падает вдвое), сдвиг фазы $-45^\\circ$. При $\\omega\\gg\\omega_c$ $\\left|H\\right|\\approx\\frac{\\omega_c}{\\omega}$: при росте частоты в $10$ раз сигнал уменьшается в $10$ раз. Способ запомнить: в фильтре нижних частот конденсатор «внизу», то есть соединён с землёй.",
+  "en": "**The RC low-pass filter.** The input $U_1$ is applied to a series $R$, and the output $U_2$ is taken across a grounded $C$. The complex voltage-divider formula gives the **transfer function** $H=\\frac{U_2}{U_1}$. At low frequency the capacitor is almost a break and the signal passes unchanged; at high frequency it \"shorts\" the signal to ground. The boundary is set by the **cutoff frequency** $\\omega_c=\\frac{1}{RC}$; in Hz $f_c=\\frac{\\omega_c}{2\\pi}$ — do not confuse $\\omega$ and $f$! At $\\omega=\\omega_c$ we have $\\left|H\\right|=\\frac{1}{\\sqrt2}$ (the power in the load halves) and the phase shift is $-45^\\circ$. For $\\omega\\gg\\omega_c$, $\\left|H\\right|\\approx\\frac{\\omega_c}{\\omega}$: when the frequency increases by a factor of $10$ the signal decreases by a factor of $10$. A way to remember: in a low-pass filter the capacitor is \"low\", i.e. connected to ground."
+ },
+ {
+  "t": "m",
+  "m": "H=\\frac{Z_C}{R+Z_C}=\\frac{1}{1+i\\omega RC},\\qquad \\left|H\\right|=\\frac{1}{\\sqrt{1+\\left(\\frac{\\omega}{\\omega_c}\\right)^2}},\\qquad \\omega_c=\\frac{1}{RC},\\qquad \\tan\\phi=-\\frac{\\omega}{\\omega_c}"
+ },
+ {
+  "t": "li",
+  "uz": "**RC yuqori chastotalar filtri.** $R$ va $C$ o'rinlari almashtirilsa (chiqish yerga ulangan $R$ dan), past chastotalar to'siladi, yuqorilari o'tadi: $\\left|H\\right|=\\frac{\\omega/\\omega_c}{\\sqrt{1+\\left(\\omega/\\omega_c\\right)^2}}$, $\\omega=\\omega_c$ da yana $\\frac{1}{\\sqrt2}$, lekin faza $+45^\\circ$. Bunday zanjir kuchaytirgich kaskadlari orasida o'zgarmas tashkil etuvchini to'sib, faqat o'zgaruvchan signalni o'tkazadi (ajratuvchi kondensator). G'altakli filtrlarda rollar teskari: yerga ulangan g'altakdan olingan chiqish — yuqori chastotalar filtri, ketma-ket g'altak va yerga ulangan rezistor — past chastotalar filtri.",
+  "ru": "**RC-фильтр верхних частот.** Если поменять местами $R$ и $C$ (выход с заземлённого $R$), низкие частоты задерживаются, а высокие проходят: $\\left|H\\right|=\\frac{\\omega/\\omega_c}{\\sqrt{1+\\left(\\omega/\\omega_c\\right)^2}}$, при $\\omega=\\omega_c$ снова $\\frac{1}{\\sqrt2}$, но фаза $+45^\\circ$. Такая цепь между каскадами усилителя задерживает постоянную составляющую и пропускает только переменный сигнал (разделительный конденсатор). В фильтрах с катушкой роли обратные: выход с заземлённой катушки — фильтр верхних частот, последовательная катушка и заземлённый резистор — фильтр нижних частот.",
+  "en": "**The RC high-pass filter.** If $R$ and $C$ swap places (output across a grounded $R$), low frequencies are blocked and high ones pass: $\\left|H\\right|=\\frac{\\omega/\\omega_c}{\\sqrt{1+\\left(\\omega/\\omega_c\\right)^2}}$, again $\\frac{1}{\\sqrt2}$ at $\\omega=\\omega_c$, but the phase is $+45^\\circ$. Placed between amplifier stages, such a circuit blocks the DC component and passes only the AC signal (a coupling capacitor). In filters with an inductor the roles are reversed: an output across a grounded inductor gives a high-pass filter, while a series inductor with a grounded resistor gives a low-pass filter."
+ },
+ {
+  "t": "li",
+  "uz": "**Detsibellar va Bode diagrammasi.** Kuchlanish bo'yicha kuchaytirish detsibelda $G=20\\lg\\left|H\\right|$, quvvat bo'yicha esa $10\\lg\\frac{P_2}{P_1}$ — ikkalasi bir xil son beradi, chunki $P\\propto U^2$. $20\\ \\mathrm{dB}$ — kuchlanish $10$ marta, $6\\ \\mathrm{dB}$ — taxminan $2$ marta. Kesish chastotasida $G=20\\lg\\frac{1}{\\sqrt2}\\approx-3\\ \\mathrm{dB}$, shuning uchun $\\omega_c$ ni «$-3\\ \\mathrm{dB}$ nuqta» deyishadi. **Bode diagrammasi**da gorizontal o'q $\\lg\\omega$ (yoki $\\lg f$), vertikal o'q $G$, dB. Birinchi tartibli RC filtrning grafigi ikki asimptotadan iborat: past chastotali filtrda $0\\ \\mathrm{dB}$ dagi gorizontal chiziq va $\\omega_c$ dan keyin $-20\\ \\mathrm{dB}$ dekadaga qiyalik ($-6\\ \\mathrm{dB}$ oktavaga); asimptotalar aynan $\\omega_c$ da kesishadi, haqiqiy egri chiziq u yerda $3\\ \\mathrm{dB}$ pastda ([[F02]]).",
+  "ru": "**Децибелы и диаграмма Боде.** Усиление по напряжению в децибелах $G=20\\lg\\left|H\\right|$, а по мощности — $10\\lg\\frac{P_2}{P_1}$; оба дают одно и то же число, поскольку $P\\propto U^2$. $20\\ \\mathrm{dB}$ — напряжение в $10$ раз, $6\\ \\mathrm{dB}$ — примерно в $2$ раза. На частоте среза $G=20\\lg\\frac{1}{\\sqrt2}\\approx-3\\ \\mathrm{dB}$, поэтому $\\omega_c$ называют «точкой $-3\\ \\mathrm{dB}$». На **диаграмме Боде** горизонтальная ось — $\\lg\\omega$ (или $\\lg f$), вертикальная — $G$, dB. График RC-фильтра первого порядка состоит из двух асимптот: у фильтра нижних частот — горизонталь на $0\\ \\mathrm{dB}$ и после $\\omega_c$ наклон $-20\\ \\mathrm{dB}$ на декаду ($-6\\ \\mathrm{dB}$ на октаву); асимптоты пересекаются ровно при $\\omega_c$, где реальная кривая на $3\\ \\mathrm{dB}$ ниже ([[F02]]).",
+  "en": "**Decibels and Bode plots.** The voltage gain in decibels is $G=20\\lg\\left|H\\right|$, and the power gain is $10\\lg\\frac{P_2}{P_1}$; both give the same number because $P\\propto U^2$. $20\\ \\mathrm{dB}$ means a factor of $10$ in voltage, $6\\ \\mathrm{dB}$ roughly a factor of $2$. At the cutoff frequency $G=20\\lg\\frac{1}{\\sqrt2}\\approx-3\\ \\mathrm{dB}$, which is why $\\omega_c$ is called \"the $-3\\ \\mathrm{dB}$ point\". On a **Bode plot** the horizontal axis is $\\lg\\omega$ (or $\\lg f$) and the vertical axis is $G$, dB. The graph of a first-order RC filter consists of two asymptotes: for a low-pass filter a horizontal line at $0\\ \\mathrm{dB}$ and, beyond $\\omega_c$, a slope of $-20\\ \\mathrm{dB}$ per decade ($-6\\ \\mathrm{dB}$ per octave); the asymptotes meet exactly at $\\omega_c$, where the real curve lies $3\\ \\mathrm{dB}$ lower ([[F02]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Passiv integrator va differensiator.** $\\omega\\gg\\omega_c$ chastotalarda past chastotalar filtrining chiqishi kirishning integraliga proporsional: $U_2\\approx\\frac{1}{RC}\\int U_1\\,dt$ — to'g'ri burchakli impuls uchburchakka aylanadi. $\\omega\\ll\\omega_c$ da yuqori chastotalar filtrining chiqishi hosilaga proporsional: $U_2\\approx RC\\frac{dU_1}{dt}$ — to'g'ri burchakli impuls fronti o'tkir cho'qqilarga aylanadi. Bu oddiy zanjirlar signal kichrayishi evaziga ishlaydi; aniq integrator operatsion kuchaytirgich bilan yasaladi (9-bo'lim).",
+  "ru": "**Пассивные интегратор и дифференциатор.** На частотах $\\omega\\gg\\omega_c$ выход фильтра нижних частот пропорционален интегралу от входа: $U_2\\approx\\frac{1}{RC}\\int U_1\\,dt$ — прямоугольный импульс превращается в треугольник. При $\\omega\\ll\\omega_c$ выход фильтра верхних частот пропорционален производной: $U_2\\approx RC\\frac{dU_1}{dt}$ — фронты прямоугольного импульса превращаются в острые пики. Эти простые цепи работают ценой уменьшения сигнала; точный интегратор делают на операционном усилителе (раздел 9).",
+  "en": "**Passive integrator and differentiator.** At frequencies $\\omega\\gg\\omega_c$ the output of a low-pass filter is proportional to the integral of the input: $U_2\\approx\\frac{1}{RC}\\int U_1\\,dt$ — a rectangular pulse turns into a triangle. At $\\omega\\ll\\omega_c$ the output of a high-pass filter is proportional to the derivative: $U_2\\approx RC\\frac{dU_1}{dt}$ — the edges of a rectangular pulse turn into sharp spikes. These simple circuits work at the cost of a smaller signal; an accurate integrator is built with an operational amplifier (section 9)."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L36-F02.png",
+   "ru": "figures/B2-L36-F02-ru.png",
+   "en": "figures/B2-L36-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Yarimo'tkazgichli diod",
+  "ru": "4. Полупроводниковый диод",
+  "en": "4. The semiconductor diode"
+ },
+ {
+  "t": "li",
+  "uz": "**p–n o'tish (B1-L37 eslatma).** p- va n-turdagi yarimo'tkazgichlar tutashgan joyda asosiy zaryad tashuvchilar diffuziyasi tufayli berkituvchi qatlam va potensial to'siq hosil bo'ladi. **To'g'ri ulashda** ($p$ soha musbat) tashqi kuchlanish to'siqni pasaytiradi va tok eksponensial o'sadi; **teskari ulashda** to'siq ortadi va faqat kichik teskari tok $I_0$ o'tadi. Shuning uchun diod tokni asosan bir tomonga o'tkazadi. Sxemadagi belgi — uchburchak va chiziq: uchburchak tokning ruxsat etilgan yo'nalishini (anoddan katodga) ko'rsatadi.",
+  "ru": "**p–n-переход (напоминание B1-L37).** В месте контакта полупроводников p- и n-типа из-за диффузии основных носителей образуются запирающий слой и потенциальный барьер. При **прямом включении** ($p$-область положительна) внешнее напряжение понижает барьер и ток растёт экспоненциально; при **обратном включении** барьер растёт и идёт лишь малый обратный ток $I_0$. Поэтому диод проводит ток в основном в одну сторону. Символ на схеме — треугольник с чертой: треугольник указывает разрешённое направление тока (от анода к катоду).",
+  "en": "**The p–n junction (a B1-L37 reminder).** Where p-type and n-type semiconductors meet, diffusion of the majority carriers creates a depletion layer and a potential barrier. Under **forward bias** (the $p$ side positive) the external voltage lowers the barrier and the current grows exponentially; under **reverse bias** the barrier rises and only a small reverse current $I_0$ flows. So a diode conducts mainly in one direction. Its circuit symbol is a triangle with a bar: the triangle points in the allowed direction of current (from anode to cathode)."
+ },
+ {
+  "t": "li",
+  "uz": "**Volt-amper xarakteristikasi va Shokli tenglamasi.** Ideal p–n o'tishning toki quyidagi formula bilan beriladi; $U_T=\\frac{kT}{e}$ — **issiqlik kuchlanishi**, xona temperaturasida taxminan $26\\ \\mathrm{mV}$. Kremniy diod uchun $I_0$ juda kichik ($10^{-12}\\ \\mathrm{A}$ va undan kam) va temperatura bilan keskin o'sadi. Real diodlarda ko'rsatkichda $nU_T$ turadi, bunda $n$ — $1$ dan $2$ gacha bo'lgan ideallik koeffitsiyenti. Teskari kuchlanishda ($U<0$, $\\left|U\\right|\\gg U_T$) $I\\approx-I_0$: tok deyarli kuchlanishga bog'liq emas.",
+  "ru": "**Вольт-амперная характеристика и уравнение Шокли.** Ток идеального p–n-перехода даётся формулой ниже; $U_T=\\frac{kT}{e}$ — **тепловое напряжение**, при комнатной температуре около $26\\ \\mathrm{mV}$. Для кремниевого диода $I_0$ очень мал ($10^{-12}\\ \\mathrm{A}$ и меньше) и резко растёт с температурой. У реальных диодов в показателе стоит $nU_T$, где $n$ — коэффициент идеальности от $1$ до $2$. При обратном напряжении ($U<0$, $\\left|U\\right|\\gg U_T$) $I\\approx-I_0$: ток почти не зависит от напряжения.",
+  "en": "**The current–voltage characteristic and the Shockley equation.** The current of an ideal p–n junction is given by the formula below; $U_T=\\frac{kT}{e}$ is the **thermal voltage**, about $26\\ \\mathrm{mV}$ at room temperature. For a silicon diode $I_0$ is very small ($10^{-12}\\ \\mathrm{A}$ or less) and grows steeply with temperature. In real diodes the exponent contains $nU_T$, where $n$ is an ideality factor between $1$ and $2$. Under reverse voltage ($U<0$, $\\left|U\\right|\\gg U_T$) $I\\approx-I_0$: the current hardly depends on the voltage."
+ },
+ {
+  "t": "m",
+  "m": "I=I_0\\left(e^{U/U_T}-1\\right),\\qquad U_T=\\frac{kT}{e}\\approx26\\ \\mathrm{mV},\\qquad U=U_T\\ln\\frac{I}{I_0},\\qquad r=\\frac{dU}{dI}=\\frac{U_T}{I}"
+ },
+ {
+  "t": "li",
+  "uz": "**Nima uchun diod kuchlanishi deyarli o'zgarmas.** To'g'ri tok $I\\gg I_0$ da logarifm sekin o'zgaradi: tok $10$ marta ortsa, kuchlanish atigi $U_T\\ln10\\approx60\\ \\mathrm{mV}$ ga ortadi. Kremniy diodda milliamper toklar $0.6\\ldots0.7\\ \\mathrm{V}$ ga, germaniyda $0.2\\ldots0.3\\ \\mathrm{V}$ ga to'g'ri keladi. Kichik signal uchun diod **differensial qarshilik** $r=\\frac{U_T}{I}$ ga ega: masalan, $2\\ \\mathrm{mA}$ da $r\\approx13\\ \\Omega$. O'zgarmas tokda diod kuchlanishi temperatura ortishi bilan taxminan $2\\ \\mathrm{mV/K}$ ga kamayadi — bu termometr sifatida ishlatiladi.",
+  "ru": "**Почему напряжение диода почти постоянно.** При прямом токе $I\\gg I_0$ логарифм меняется медленно: при росте тока в $10$ раз напряжение растёт всего на $U_T\\ln10\\approx60\\ \\mathrm{mV}$. В кремниевом диоде миллиамперным токам соответствует $0.6\\ldots0.7\\ \\mathrm{V}$, в германиевом — $0.2\\ldots0.3\\ \\mathrm{V}$. Для малого сигнала диод имеет **дифференциальное сопротивление** $r=\\frac{U_T}{I}$: например, при $2\\ \\mathrm{mA}$ $r\\approx13\\ \\Omega$. При постоянном токе напряжение диода с ростом температуры уменьшается примерно на $2\\ \\mathrm{mV/K}$ — это используют как термометр.",
+  "en": "**Why the diode voltage is almost constant.** For a forward current $I\\gg I_0$ the logarithm changes slowly: when the current increases by a factor of $10$ the voltage rises by only $U_T\\ln10\\approx60\\ \\mathrm{mV}$. In a silicon diode milliampere currents correspond to $0.6\\ldots0.7\\ \\mathrm{V}$, in germanium to $0.2\\ldots0.3\\ \\mathrm{V}$. For a small signal the diode has a **differential resistance** $r=\\frac{U_T}{I}$: for example, at $2\\ \\mathrm{mA}$, $r\\approx13\\ \\Omega$. At constant current the diode voltage decreases by about $2\\ \\mathrm{mV/K}$ as the temperature rises — this is used as a thermometer."
+ },
+ {
+  "t": "li",
+  "uz": "**Diod modellari.** Masalaga qarab to'rt darajali yaqinlashish ishlatiladi. (1) **Ideal diod**: ochiq bo'lsa $U=0$ (sim), berk bo'lsa $I=0$ (uzilish). (2) **O'zgarmas kuchlanish tushuvi**: ochiq diod o'rniga $U_D\\approx0.7\\ \\mathrm{V}$ (kremniy) manba, berk diod — uzilish; GRE va ko'pchilik hisoblar shu modelda. (3) Kuchlanish tushuvi va unga ketma-ket $r$. (4) To'liq eksponensial Shokli modeli ([[F03]]). Modelni tanlash qoidasi: zanjirdagi boshqa kuchlanishlar $0.7\\ \\mathrm{V}$ dan ancha katta bo'lsa, (1) model ham yetarli.",
+  "ru": "**Модели диода.** В зависимости от задачи применяют четыре уровня приближения. (1) **Идеальный диод**: открыт — $U=0$ (провод), закрыт — $I=0$ (разрыв). (2) **Постоянное падение напряжения**: открытый диод заменяют источником $U_D\\approx0.7\\ \\mathrm{V}$ (кремний), закрытый — разрывом; GRE и большинство расчётов используют эту модель. (3) Падение напряжения и последовательное $r$. (4) Полная экспоненциальная модель Шокли ([[F03]]). Правило выбора модели: если остальные напряжения в цепи намного больше $0.7\\ \\mathrm{V}$, достаточно и модели (1).",
+  "en": "**Diode models.** Depending on the problem four levels of approximation are used. (1) **Ideal diode**: on — $U=0$ (a wire), off — $I=0$ (a break). (2) **Constant voltage drop**: an on diode is replaced by a source $U_D\\approx0.7\\ \\mathrm{V}$ (silicon) and an off diode by a break; the GRE and most calculations use this model. (3) The voltage drop plus a series $r$. (4) The full exponential Shockley model ([[F03]]). The rule for choosing: if the other voltages in the circuit are much larger than $0.7\\ \\mathrm{V}$, model (1) is enough."
+ },
+ {
+  "t": "li",
+  "uz": "**Teskari teshilish.** Teskari kuchlanish ma'lum qiymatga yetganda (ko'chki yoki Zener effekti) teskari tok keskin o'sadi, kuchlanish esa deyarli o'zgarmay qoladi. Oddiy diod uchun bu buzilish, maxsus **stabilitron** (Zener diodi) uchun esa ish rejimi: uning teshilish kuchlanishi $U_Z$ aniq belgilangan va kuchlanishni barqarorlashda ishlatiladi (5-bo'lim).",
+  "ru": "**Обратный пробой.** Когда обратное напряжение достигает определённого значения (лавинный или зенеровский эффект), обратный ток резко растёт, а напряжение остаётся почти постоянным. Для обычного диода это поломка, а для специального **стабилитрона** (диода Зенера) — рабочий режим: его напряжение пробоя $U_Z$ точно задано и используется для стабилизации напряжения (раздел 5).",
+  "en": "**Reverse breakdown.** When the reverse voltage reaches a certain value (the avalanche or Zener effect) the reverse current rises sharply while the voltage stays almost constant. For an ordinary diode this is failure, but for a special **Zener diode** it is the working mode: its breakdown voltage $U_Z$ is precisely set and used to stabilise a voltage (section 5)."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L36-F03.png",
+   "ru": "figures/B2-L36-F03-ru.png",
+   "en": "figures/B2-L36-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Diodli zanjirlar: to'g'rilagich, stabilitron, svetodiod",
+  "ru": "5. Диодные цепи: выпрямитель, стабилитрон, светодиод",
+  "en": "5. Diode circuits: rectifier, Zener regulator, LED"
+ },
+ {
+  "t": "li",
+  "uz": "**Holatni faraz qilish usuli.** Diod nochiziqli bo'lgani uchun zanjir quyidagicha yechiladi: har bir diod uchun «ochiq» yoki «berk» deb faraz qilinadi; ochiq diod o'rniga $U_D$ manba qo'yiladi va undan o'tayotgan tok to'g'ri yo'nalishda ($I>0$) ekani tekshiriladi; berk diod uzilish bilan almashtiriladi va undagi to'g'ri kuchlanish $U_D$ dan kichik ekani tekshiriladi. Shart bajarilmasa, faraz o'zgartiriladi. Bir nechta diodda eng ko'p kuchlanish tushadigan diod birinchi ochiladi; parallel diodlardan kuchlanishi kichigi ochiq bo'lib, qolganlarini «qisib» qo'yadi.",
+  "ru": "**Метод предположения состояний.** Поскольку диод нелинеен, цепь решают так: для каждого диода предполагают «открыт» или «закрыт»; открытый диод заменяют источником $U_D$ и проверяют, что ток через него идёт в прямом направлении ($I>0$); закрытый диод заменяют разрывом и проверяют, что прямое напряжение на нём меньше $U_D$. Если условие не выполняется, предположение меняют. Из нескольких диодов первым открывается тот, на который приходится наибольшее напряжение; из параллельных диодов открыт тот, у которого напряжение меньше, и он «зажимает» остальные.",
+  "en": "**The assumed-state method.** Since a diode is nonlinear, a circuit is solved as follows: for each diode assume \"on\" or \"off\"; replace an on diode by a source $U_D$ and check that its current flows in the forward direction ($I>0$); replace an off diode by a break and check that its forward voltage is less than $U_D$. If a condition fails, change the assumption. Of several diodes the one that receives the largest voltage turns on first; of parallel diodes the one with the smaller voltage is on and \"clamps\" the others."
+ },
+ {
+  "t": "li",
+  "uz": "**To'g'rilagichlar.** **Bir yarim davrli to'g'rilagich** — manba, diod va yuklama ketma-ket: diod faqat musbat yarim davrlarni o'tkazadi; ideal diodda yuklamadagi kuchlanishning o'rtacha qiymati $\\bar U=\\frac{U_m}{\\pi}$. **Ikki yarim davrli ko'prik to'g'rilagich** (to'rtta diod, Grets ko'prigi) har ikkala yarim davrda yuklamadan tokni bir yo'nalishda o'tkazadi: $\\bar U=\\frac{2U_m}{\\pi}$, pulsatsiya chastotasi $2f$. Ko'prikda har lahzada ikkita diod ketma-ket ochiq bo'lgani uchun chiqish cho'qqisi $U_m-2U_D$ ga kamayadi ([[F04]]).",
+  "ru": "**Выпрямители.** **Однополупериодный выпрямитель** — источник, диод и нагрузка последовательно: диод пропускает только положительные полупериоды; при идеальном диоде среднее напряжение на нагрузке $\\bar U=\\frac{U_m}{\\pi}$. **Двухполупериодный мостовой выпрямитель** (четыре диода, мост Гретца) в обоих полупериодах пропускает ток через нагрузку в одном направлении: $\\bar U=\\frac{2U_m}{\\pi}$, частота пульсаций $2f$. Так как в мосте в каждый момент открыты два последовательных диода, пик на выходе уменьшается до $U_m-2U_D$ ([[F04]]).",
+  "en": "**Rectifiers.** A **half-wave rectifier** is a source, a diode and a load in series: the diode passes only the positive half-cycles; with an ideal diode the mean load voltage is $\\bar U=\\frac{U_m}{\\pi}$. A **full-wave bridge rectifier** (four diodes, the Graetz bridge) passes current through the load in one direction during both half-cycles: $\\bar U=\\frac{2U_m}{\\pi}$, and the ripple frequency is $2f$. Since two diodes in series conduct at any instant in a bridge, the output peak drops to $U_m-2U_D$ ([[F04]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Silliqlovchi kondensator va pulsatsiya.** Yuklamaga parallel katta $C$ ulansa, u cho'qqida zaryadlanadi, cho'qqilar orasida esa yuklama orqali sekin razryadlanadi, chunki diod bu vaqtda berk. Agar $RC\\gg\\frac{1}{f}$ bo'lsa, razryad deyarli o'zgarmas tok $I$ bilan boradi va zaryad $\\Delta q=I\\Delta t$ ga kamayadi; razryad vaqti bir yarim davrli sxemada $\\Delta t\\approx\\frac{1}{f}$, ko'prikda $\\Delta t\\approx\\frac{1}{2f}$. Shundan pulsatsiya (cho'qqidan cho'qqigacha) kelib chiqadi. Pulsatsiyani kamaytirish uchun $C$ ni oshirish yoki ikki yarim davrli sxemaga o'tish kerak; qoldiq pulsatsiyani stabilitron yoki integral stabilizator yo'qotadi.",
+  "ru": "**Сглаживающий конденсатор и пульсации.** Если параллельно нагрузке включить большой $C$, он заряжается на пике, а между пиками медленно разряжается через нагрузку, так как диод в это время закрыт. Если $RC\\gg\\frac{1}{f}$, разряд идёт почти постоянным током $I$ и заряд уменьшается на $\\Delta q=I\\Delta t$; время разряда в однополупериодной схеме $\\Delta t\\approx\\frac{1}{f}$, в мосте $\\Delta t\\approx\\frac{1}{2f}$. Отсюда пульсации (от пика до пика). Чтобы уменьшить пульсации, нужно увеличить $C$ или перейти к двухполупериодной схеме; остаточные пульсации убирает стабилитрон или интегральный стабилизатор.",
+  "en": "**The smoothing capacitor and ripple.** If a large $C$ is placed across the load, it charges at the peak and slowly discharges through the load between peaks, because the diode is off meanwhile. If $RC\\gg\\frac{1}{f}$, the discharge proceeds at an almost constant current $I$ and the charge drops by $\\Delta q=I\\Delta t$; the discharge time is $\\Delta t\\approx\\frac{1}{f}$ in a half-wave circuit and $\\Delta t\\approx\\frac{1}{2f}$ in a bridge. This gives the ripple (peak to peak). To reduce the ripple increase $C$ or switch to a full-wave circuit; the remaining ripple is removed by a Zener diode or an integrated regulator."
+ },
+ {
+  "t": "m",
+  "m": "\\bar U=\\frac{U_m}{\\pi},\\qquad \\bar U=\\frac{2U_m}{\\pi},\\qquad \\Delta U=\\frac{\\Delta q}{C}\\approx\\frac{I}{fC},\\qquad \\Delta U\\approx\\frac{I}{2fC}"
+ },
+ {
+  "t": "li",
+  "uz": "**Cheklagich va himoya diodlari.** Chiqishga yerga nisbatan parallel ulangan diod chiqish kuchlanishini $U_D$ dan oshirmaydi — sinusoida tepasi kesiladi (cheklagich, clipper); qarama-qarshi yo'nalishdagi ikki diod signalni $\\pm U_D$ oralig'ida ushlaydi va sezgir kirishni himoya qiladi. G'altakka (rele, dvigatel) teskari parallel ulangan diod tok uzilganda g'altak tokiga yo'l ochib, $L\\frac{dI}{dt}$ kuchlanish sakrashini so'ndiradi.",
+  "ru": "**Ограничитель и защитные диоды.** Диод, включённый параллельно выходу относительно земли, не даёт выходному напряжению превысить $U_D$ — верх синусоиды срезается (ограничитель); два встречно направленных диода удерживают сигнал в пределах $\\pm U_D$ и защищают чувствительный вход. Диод, включённый обратно параллельно катушке (реле, двигатель), при разрыве тока открывает путь току катушки и гасит выброс напряжения $L\\frac{dI}{dt}$.",
+  "en": "**Clipper and protection diodes.** A diode connected across the output to ground does not let the output exceed $U_D$ — the top of a sine wave is cut off (a clipper); two diodes in opposite directions hold the signal within $\\pm U_D$ and protect a sensitive input. A diode connected in reverse across an inductor (a relay, a motor) gives the inductor current a path when it is interrupted and quenches the $L\\frac{dI}{dt}$ voltage spike."
+ },
+ {
+  "t": "li",
+  "uz": "**Stabilitronli stabilizator.** Manba $\\mathcal E$, ketma-ket rezistor $R_1$ va teskari ulangan stabilitron; yuklama $R$ stabilitronga parallel. Stabilitron teshilish rejimida ekan, chiqish $U=U_Z$ bo'ladi. $R_1$ dagi tok $I_1=\\frac{\\mathcal E-U_Z}{R_1}$ yuklama toki $\\frac{U_Z}{R}$ va stabilitron toki $I_Z$ ga bo'linadi. Ish sharti $I_Z>0$ (amalda $I_Z$ eng kichik ruxsat etilgan qiymatdan katta); stabilitron quvvati $P=U_ZI_Z$ chegaradan oshmasligi kerak — eng og'ir holat yuklama uzilganda.",
+  "ru": "**Стабилизатор на стабилитроне.** Источник $\\mathcal E$, последовательный резистор $R_1$ и включённый в обратном направлении стабилитрон; нагрузка $R$ параллельна стабилитрону. Пока стабилитрон в режиме пробоя, выход $U=U_Z$. Ток в $R_1$ $I_1=\\frac{\\mathcal E-U_Z}{R_1}$ делится на ток нагрузки $\\frac{U_Z}{R}$ и ток стабилитрона $I_Z$. Условие работы $I_Z>0$ (на практике $I_Z$ больше минимально допустимого); мощность стабилитрона $P=U_ZI_Z$ не должна превышать предел — самый тяжёлый случай при отключённой нагрузке.",
+  "en": "**The Zener regulator.** A source $\\mathcal E$, a series resistor $R_1$ and a reverse-connected Zener diode; the load $R$ is in parallel with the Zener. As long as the Zener is in breakdown, the output is $U=U_Z$. The current in $R_1$, $I_1=\\frac{\\mathcal E-U_Z}{R_1}$, splits into the load current $\\frac{U_Z}{R}$ and the Zener current $I_Z$. The working condition is $I_Z>0$ (in practice $I_Z$ above a minimum allowed value); the Zener power $P=U_ZI_Z$ must not exceed its limit — the worst case is when the load is disconnected."
+ },
+ {
+  "t": "m",
+  "m": "I_1=\\frac{\\mathcal E-U_Z}{R_1},\\qquad I_Z=I_1-\\frac{U_Z}{R}>0,\\qquad P=U_ZI_Z"
+ },
+ {
+  "t": "li",
+  "uz": "**Svetodiod va fotodiod.** Svetodiodda (LED) to'g'ri tokda elektron va kovaklar rekombinatsiyalanib, energiyasi taqiqlangan zona kengligiga yaqin foton chiqaradi: $h\\nu\\approx E_g$, $\\lambda\\approx\\frac{hc}{E_g}$, bunda $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$. Shuning uchun svetodioddagi kuchlanish tushuvi taxminan $\\frac{E_g}{e}$: infraqizil ($\\lambda\\approx940\\ \\mathrm{nm}$) uchun $1.3\\ \\mathrm{V}$ atrofida, ko'k uchun $2.5\\ \\mathrm{V}$ dan ko'p. Svetodiod tokini cheklash uchun unga ketma-ket rezistor qo'yiladi. **Fotodiod** va quyosh elementi teskari jarayonda ishlaydi: yutilgan foton juft hosil qiladi va teskari tok yorug'lik oqimiga proporsional bo'ladi.",
+  "ru": "**Светодиод и фотодиод.** В светодиоде (LED) при прямом токе электроны и дырки рекомбинируют и испускают фотон с энергией, близкой к ширине запрещённой зоны: $h\\nu\\approx E_g$, $\\lambda\\approx\\frac{hc}{E_g}$, где $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$. Поэтому падение напряжения на светодиоде примерно $\\frac{E_g}{e}$: для инфракрасного ($\\lambda\\approx940\\ \\mathrm{nm}$) около $1.3\\ \\mathrm{V}$, для синего больше $2.5\\ \\mathrm{V}$. Чтобы ограничить ток светодиода, последовательно с ним ставят резистор. **Фотодиод** и солнечный элемент работают в обратном процессе: поглощённый фотон рождает пару, и обратный ток пропорционален световому потоку.",
+  "en": "**LED and photodiode.** In a light-emitting diode (LED) electrons and holes recombine under forward current and emit a photon of energy close to the band gap: $h\\nu\\approx E_g$, $\\lambda\\approx\\frac{hc}{E_g}$, where $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$. So the voltage drop across an LED is about $\\frac{E_g}{e}$: around $1.3\\ \\mathrm{V}$ for infrared ($\\lambda\\approx940\\ \\mathrm{nm}$) and more than $2.5\\ \\mathrm{V}$ for blue. A resistor in series limits the LED current. A **photodiode** and a solar cell work by the reverse process: an absorbed photon creates a pair, and the reverse current is proportional to the light flux."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L36-F04.png",
+   "ru": "figures/B2-L36-F04-ru.png",
+   "en": "figures/B2-L36-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Bipolyar tranzistor",
+  "ru": "6. Биполярный транзистор",
+  "en": "6. The bipolar transistor"
+ },
+ {
+  "t": "li",
+  "uz": "**Tuzilishi.** Bipolyar tranzistor — uch qatlamli yarimo'tkazgich: npn yoki pnp. Uch elektrod: **emitter** (E, kuchli legirlangan, zaryad tashuvchilarni «chiqaradi»), **baza** (B, juda yupqa va kam legirlangan) va **kollektor** (C, tashuvchilarni «yig'adi»). Ikki p–n o'tish bor: baza–emitter va baza–kollektor. Sxemadagi belgida emitterdagi strelka shartli tok yo'nalishini ko'rsatadi: npn da tashqariga, pnp da ichkariga ([[F05]]). Quyida npn tranzistor ko'riladi; pnp da barcha kuchlanish va toklar ishorasi teskari.",
+  "ru": "**Устройство.** Биполярный транзистор — трёхслойный полупроводник: npn или pnp. Три электрода: **эмиттер** (E, сильно легирован, «испускает» носители), **база** (B, очень тонкая и слабо легированная) и **коллектор** (C, «собирает» носители). Есть два p–n-перехода: база–эмиттер и база–коллектор. На символе стрелка на эмиттере показывает условное направление тока: у npn наружу, у pnp внутрь ([[F05]]). Ниже рассматривается npn-транзистор; у pnp знаки всех напряжений и токов обратные.",
+  "en": "**Structure.** A bipolar transistor is a three-layer semiconductor: npn or pnp. It has three electrodes: the **emitter** (E, heavily doped, \"emits\" carriers), the **base** (B, very thin and lightly doped) and the **collector** (C, \"collects\" carriers). There are two p–n junctions: base–emitter and base–collector. In the symbol the arrow on the emitter shows the conventional current direction: outward for npn, inward for pnp ([[F05]]). Below we consider an npn transistor; for pnp the signs of all voltages and currents are reversed."
+ },
+ {
+  "t": "li",
+  "uz": "**Toklar va kuchaytirish.** Baza–emitter o'tishi to'g'ri ulanganda emitterdan bazaga ko'p elektron injeksiyalanadi. Baza yupqa bo'lgani uchun ularning ozgina qismi rekombinatsiyalanadi (bu baza tokini beradi), qolgan deyarli hammasi teskari ulangan baza–kollektor o'tishining maydoni bilan kollektorga tortiladi. Natijada kollektor toki baza tokidan $\\beta$ marta katta: $\\beta$ — tok bo'yicha kuchaytirish koeffitsiyenti, odatda $50\\ldots300$. Kirxgofning tugun qoidasi va $\\alpha$ koeffitsiyenti quyidagicha. Kichik baza toki katta kollektor tokini boshqaradi — tranzistorning mohiyati shu.",
+  "ru": "**Токи и усиление.** При прямом включении перехода база–эмиттер из эмиттера в базу инжектируется много электронов. Поскольку база тонкая, лишь малая их часть рекомбинирует (это даёт ток базы), а почти все остальные затягиваются в коллектор полем обратно включённого перехода база–коллектор. В результате ток коллектора в $\\beta$ раз больше тока базы: $\\beta$ — коэффициент усиления по току, обычно $50\\ldots300$. Правило узлов Кирхгофа и коэффициент $\\alpha$ имеют вид ниже. Малый ток базы управляет большим током коллектора — в этом суть транзистора.",
+  "en": "**Currents and amplification.** When the base–emitter junction is forward biased, many electrons are injected from the emitter into the base. Because the base is thin, only a small fraction recombine (this gives the base current), and almost all the rest are pulled into the collector by the field of the reverse-biased base–collector junction. As a result the collector current is $\\beta$ times the base current: $\\beta$ is the current gain, usually $50\\ldots300$. Kirchhoff's junction rule and the coefficient $\\alpha$ read as below. A small base current controls a large collector current — that is the essence of a transistor."
+ },
+ {
+  "t": "m",
+  "m": "I_E=I_B+I_C,\\qquad I_C=\\beta I_B,\\qquad \\alpha=\\frac{I_C}{I_E}=\\frac{\\beta}{\\beta+1},\\qquad I_C\\approx I_0e^{U_{BE}/U_T}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ish rejimlari.** **Berk rejim**: baza–emitter o'tishi ochilmagan ($U_{BE}$ taxminan $0.5\\ \\mathrm{V}$ dan kichik) — $I_C\\approx0$, tranzistor uzilgan kalit. **Aktiv rejim**: baza–emitter to'g'ri ($U_{BE}\\approx0.7\\ \\mathrm{V}$), baza–kollektor teskari ($U_{CE}$ taxminan $0.2\\ \\mathrm{V}$ dan katta) — $I_C=\\beta I_B$, kuchaytirgich rejimi. **To'yinish rejimi**: ikkala o'tish to'g'ri ulangan, $U_{CE}\\approx0.1\\ldots0.2\\ \\mathrm{V}$ — kollektor tokini endi tashqi zanjir belgilaydi va $I_C<\\beta I_B$; tranzistor yopilgan kalit. Kirish tomonidan baza–emitter o'tishi oddiy diod kabi: $I_C$ ning $U_{BE}$ ga bog'liqligi eksponensial — $U_{BE}$ ning $60\\ \\mathrm{mV}$ ga ortishi tokni $10$ marta oshiradi.",
+  "ru": "**Режимы работы.** **Режим отсечки**: переход база–эмиттер не открыт ($U_{BE}$ меньше примерно $0.5\\ \\mathrm{V}$) — $I_C\\approx0$, транзистор — разомкнутый ключ. **Активный режим**: база–эмиттер в прямом направлении ($U_{BE}\\approx0.7\\ \\mathrm{V}$), база–коллектор в обратном ($U_{CE}$ больше примерно $0.2\\ \\mathrm{V}$) — $I_C=\\beta I_B$, режим усилителя. **Режим насыщения**: оба перехода включены прямо, $U_{CE}\\approx0.1\\ldots0.2\\ \\mathrm{V}$ — ток коллектора теперь задаёт внешняя цепь и $I_C<\\beta I_B$; транзистор — замкнутый ключ. Со стороны входа переход база–эмиттер как обычный диод: зависимость $I_C$ от $U_{BE}$ экспоненциальная — увеличение $U_{BE}$ на $60\\ \\mathrm{mV}$ увеличивает ток в $10$ раз.",
+  "en": "**Operating modes.** **Cutoff**: the base–emitter junction is not open ($U_{BE}$ below about $0.5\\ \\mathrm{V}$) — $I_C\\approx0$, the transistor is an open switch. **Active mode**: base–emitter forward ($U_{BE}\\approx0.7\\ \\mathrm{V}$), base–collector reverse ($U_{CE}$ above about $0.2\\ \\mathrm{V}$) — $I_C=\\beta I_B$, the amplifier mode. **Saturation**: both junctions forward biased, $U_{CE}\\approx0.1\\ldots0.2\\ \\mathrm{V}$ — the collector current is now set by the external circuit and $I_C<\\beta I_B$; the transistor is a closed switch. Seen from the input, the base–emitter junction is like an ordinary diode: $I_C$ depends exponentially on $U_{BE}$ — raising $U_{BE}$ by $60\\ \\mathrm{mV}$ increases the current by a factor of $10$."
+ },
+ {
+  "t": "li",
+  "uz": "**Chiqish xarakteristikalari va yuklama chizig'i.** $I_C\\left(U_{CE}\\right)$ egri chiziqlari oilasi har xil $I_B$ uchun chiziladi: aktiv sohada ular deyarli gorizontal ($I_C=\\beta I_B$ kuchlanishga kam bog'liq), $U_{CE}$ kichik bo'lganda esa birga nolga tushadi (to'yinish sohasi). Kollektor zanjiri $U_{CC}$ manba va $R_C$ rezistordan iborat bo'lsa, Kirxgof qoidasi to'g'ri chiziq beradi — **yuklama chizig'i**. Uning tanlangan $I_B$ egri chizig'i bilan kesishgan nuqtasi — **ish nuqtasi** ([[F05]]). Kuchaytirgich uchun ish nuqtasi yuklama chizig'ining o'rtasida tanlanadi, kalit uchun esa uning ikki uchida (berk va to'yingan).",
+  "ru": "**Выходные характеристики и линия нагрузки.** Семейство кривых $I_C\\left(U_{CE}\\right)$ строят для разных $I_B$: в активной области они почти горизонтальны ($I_C=\\beta I_B$ слабо зависит от напряжения), а при малом $U_{CE}$ вместе падают к нулю (область насыщения). Если коллекторная цепь состоит из источника $U_{CC}$ и резистора $R_C$, правило Кирхгофа даёт прямую — **линию нагрузки**. Её точка пересечения с кривой выбранного $I_B$ — **рабочая точка** ([[F05]]). Для усилителя рабочую точку выбирают в середине линии нагрузки, для ключа — на её концах (отсечка и насыщение).",
+  "en": "**Output characteristics and the load line.** A family of curves $I_C\\left(U_{CE}\\right)$ is drawn for different $I_B$: in the active region they are almost horizontal ($I_C=\\beta I_B$ depends weakly on the voltage), while at small $U_{CE}$ they all drop to zero together (the saturation region). If the collector circuit consists of a source $U_{CC}$ and a resistor $R_C$, Kirchhoff's rule gives a straight line — the **load line**. Its intersection with the curve of the chosen $I_B$ is the **operating point** ([[F05]]). For an amplifier the operating point is chosen in the middle of the load line; for a switch, at its two ends (cutoff and saturation)."
+ },
+ {
+  "t": "m",
+  "m": "U_{CE}=U_{CC}-I_CR_C,\\qquad I_{max}\\approx\\frac{U_{CC}}{R_C}"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L36-F05.png",
+   "ru": "figures/B2-L36-F05-ru.png",
+   "en": "figures/B2-L36-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Tranzistorli kuchaytirgich va kalit",
+  "ru": "7. Транзисторный усилитель и ключ",
+  "en": "7. The transistor amplifier and switch"
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy emitterli kuchaytirgichning ish nuqtasi.** Baza kuchlanishi $U_B$ ni $U_{CC}$ dan olingan bo'lgich beradi (bo'lgich toki baza tokidan ancha katta bo'lsa, $I_B$ uni deyarli o'zgartirmaydi). Emitter bazadan bitta diod tushuvi pastda turadi: $U_E=U_B-U_{BE}$; emitter toki $I_E=\\frac{U_E}{R_E}$, va $\\beta\\gg1$ da $I_C\\approx I_E$. Kollektor kuchlanishi $U_C=U_{CC}-I_CR_C$. Oxirida aktiv rejim tekshiriladi: $U_{CE}=U_C-U_E$ taxminan $0.2\\ \\mathrm{V}$ dan katta bo'lishi kerak. Bu hisobda $\\beta$ ning aniq qiymati deyarli kerak emas — yaxshi sxemaning afzalligi.",
+  "ru": "**Рабочая точка усилителя с общим эмиттером.** Напряжение базы $U_B$ задаёт делитель от $U_{CC}$ (если ток делителя намного больше тока базы, $I_B$ почти не меняет его). Эмиттер находится на одно диодное падение ниже базы: $U_E=U_B-U_{BE}$; ток эмиттера $I_E=\\frac{U_E}{R_E}$, и при $\\beta\\gg1$ $I_C\\approx I_E$. Напряжение коллектора $U_C=U_{CC}-I_CR_C$. В конце проверяют активный режим: $U_{CE}=U_C-U_E$ должно быть больше примерно $0.2\\ \\mathrm{V}$. В этом расчёте точное значение $\\beta$ почти не нужно — достоинство хорошей схемы.",
+  "en": "**The operating point of a common-emitter amplifier.** The base voltage $U_B$ is set by a divider from $U_{CC}$ (if the divider current is much larger than the base current, $I_B$ hardly changes it). The emitter sits one diode drop below the base: $U_E=U_B-U_{BE}$; the emitter current is $I_E=\\frac{U_E}{R_E}$, and for $\\beta\\gg1$, $I_C\\approx I_E$. The collector voltage is $U_C=U_{CC}-I_CR_C$. Finally, check the active mode: $U_{CE}=U_C-U_E$ must exceed about $0.2\\ \\mathrm{V}$. This calculation hardly needs the exact value of $\\beta$ — the merit of a good circuit."
+ },
+ {
+  "t": "li",
+  "uz": "**Kuchlanish bo'yicha kuchaytirish.** Bazaga kichik o'zgaruvchan signal $\\Delta U_B$ qo'shilsa, emitter uni kuzatadi: $\\Delta U_E\\approx\\Delta U_B$, demak $\\Delta I_C\\approx\\frac{\\Delta U_B}{R_E}$ va $\\Delta U_C=-R_C\\Delta I_C$. Kuchaytirish koeffitsiyenti $K=\\frac{\\Delta U_C}{\\Delta U_B}=-\\frac{R_C}{R_E}$: minus — chiqish fazasi teskari (invertor), qiymati faqat rezistorlar nisbatiga bog'liq va barqaror. Agar $R_E$ kondensator bilan o'zgaruvchan tok uchun shuntlansa, kuchaytirishni eksponensial xarakteristika belgilaydi: $K=-\\frac{I_CR_C}{U_T}$. Masalan, $I_C=1\\ \\mathrm{mA}$, $R_C=5\\ \\mathrm{k}\\Omega$ da $K\\approx-190$ — katta, lekin temperaturaga bog'liq va nochiziqli.",
+  "ru": "**Усиление по напряжению.** Если к базе добавить малый переменный сигнал $\\Delta U_B$, эмиттер его повторяет: $\\Delta U_E\\approx\\Delta U_B$, значит $\\Delta I_C\\approx\\frac{\\Delta U_B}{R_E}$ и $\\Delta U_C=-R_C\\Delta I_C$. Коэффициент усиления $K=\\frac{\\Delta U_C}{\\Delta U_B}=-\\frac{R_C}{R_E}$: минус — выход в противофазе (инвертор), величина зависит только от отношения резисторов и стабильна. Если $R_E$ шунтирован конденсатором по переменному току, усиление определяет экспоненциальная характеристика: $K=-\\frac{I_CR_C}{U_T}$. Например, при $I_C=1\\ \\mathrm{mA}$, $R_C=5\\ \\mathrm{k}\\Omega$ $K\\approx-190$ — велико, но зависит от температуры и нелинейно.",
+  "en": "**Voltage gain.** If a small AC signal $\\Delta U_B$ is added to the base, the emitter follows it: $\\Delta U_E\\approx\\Delta U_B$, so $\\Delta I_C\\approx\\frac{\\Delta U_B}{R_E}$ and $\\Delta U_C=-R_C\\Delta I_C$. The gain is $K=\\frac{\\Delta U_C}{\\Delta U_B}=-\\frac{R_C}{R_E}$: the minus means the output is inverted, and the value depends only on a ratio of resistors and is stable. If $R_E$ is bypassed for AC by a capacitor, the gain is set by the exponential characteristic: $K=-\\frac{I_CR_C}{U_T}$. For example, at $I_C=1\\ \\mathrm{mA}$, $R_C=5\\ \\mathrm{k}\\Omega$, $K\\approx-190$ — large, but temperature dependent and nonlinear."
+ },
+ {
+  "t": "m",
+  "m": "U_E=U_B-U_{BE},\\qquad I_C\\approx\\frac{U_E}{R_E},\\qquad U_C=U_{CC}-I_CR_C,\\qquad K=-\\frac{R_C}{R_E},\\qquad K=-\\frac{I_CR_C}{U_T}"
+ },
+ {
+  "t": "li",
+  "uz": "**Emitter qaytargich.** Chiqish emitterdan olinsa (umumiy kollektorli ulanish), $U_E=U_B-0.7\\ \\mathrm{V}$ har lahzada bazani kuzatadi: $K\\approx1$. Kuchlanish kuchaymaydi, lekin tok $\\beta+1$ marta kuchayadi: kirish qarshiligi taxminan $\\beta R_E$ (katta), chiqish qarshiligi kichik. Shuning uchun emitter qaytargich bufer sifatida ishlatiladi — kuchsiz manbani og'ir yuklamaga ulash uchun (1-bo'limdagi yuklanish muammosini hal qiladi).",
+  "ru": "**Эмиттерный повторитель.** Если выход снимать с эмиттера (схема с общим коллектором), $U_E=U_B-0.7\\ \\mathrm{V}$ в каждый момент повторяет базу: $K\\approx1$. Напряжение не усиливается, но ток усиливается в $\\beta+1$ раз: входное сопротивление около $\\beta R_E$ (большое), выходное — малое. Поэтому эмиттерный повторитель используют как буфер — чтобы подключить слабый источник к тяжёлой нагрузке (решает проблему нагрузки из раздела 1).",
+  "en": "**The emitter follower.** If the output is taken from the emitter (common-collector connection), $U_E=U_B-0.7\\ \\mathrm{V}$ follows the base at every instant: $K\\approx1$. The voltage is not amplified, but the current is amplified by $\\beta+1$: the input resistance is about $\\beta R_E$ (large) and the output resistance is small. So the emitter follower is used as a buffer — to connect a weak source to a heavy load (it solves the loading problem of section 1)."
+ },
+ {
+  "t": "li",
+  "uz": "**Tranzistor — kalit.** Raqamli boshqaruvda tranzistor faqat ikki holatda ishlaydi. Kirish past bo'lsa — berk rejim, yuklama (lampa, rele, svetodiod) o'chiq. Kirish yuqori bo'lsa, baza toki $I_B=\\frac{U_1-U_{BE}}{R_B}$ shunchalik katta tanlanadiki, $\\beta I_B$ to'yinish tokidan katta bo'ladi: $\\beta I_B>\\frac{U_{CC}-U_{CE}}{R_C}$, bu yerda $U_{CE}\\approx0.2\\ \\mathrm{V}$. Odatda $2\\ldots5$ marta zaxira olinadi. Ikkala holatda tranzistorda kam quvvat ajraladi: berkda tok yo'q, to'yinishda kuchlanish kichik.",
+  "ru": "**Транзистор — ключ.** При цифровом управлении транзистор работает только в двух состояниях. При низком входе — отсечка, нагрузка (лампа, реле, светодиод) выключена. При высоком входе ток базы $I_B=\\frac{U_1-U_{BE}}{R_B}$ выбирают настолько большим, чтобы $\\beta I_B$ превышал ток насыщения: $\\beta I_B>\\frac{U_{CC}-U_{CE}}{R_C}$, где $U_{CE}\\approx0.2\\ \\mathrm{V}$. Обычно берут запас в $2\\ldots5$ раз. В обоих состояниях в транзисторе выделяется мало мощности: при отсечке нет тока, при насыщении мало напряжение.",
+  "en": "**The transistor as a switch.** Under digital control a transistor works in only two states. With a low input it is in cutoff and the load (a lamp, relay or LED) is off. With a high input the base current $I_B=\\frac{U_1-U_{BE}}{R_B}$ is chosen so large that $\\beta I_B$ exceeds the saturation current: $\\beta I_B>\\frac{U_{CC}-U_{CE}}{R_C}$, where $U_{CE}\\approx0.2\\ \\mathrm{V}$. A margin of $2\\ldots5$ times is usual. In both states little power is dissipated in the transistor: in cutoff there is no current, in saturation the voltage is small."
+ },
+ {
+  "t": "li",
+  "uz": "**Maydon tranzistori (MOSFET).** Unda tokni zatvor kuchlanishi boshqaradi: zatvor kanaldan yupqa dielektrik bilan ajratilgan, shuning uchun zatvor toki deyarli nol va kirish qarshiligi juda katta. Zatvor kuchlanishi bo'sag'a qiymati $U^*$ dan oshganda istok va stok orasida o'tkazuvchan kanal hosil bo'ladi. Zamonaviy raqamli mikrosxemalar komplementar juftliklardan (CMOS) tuzilgan: har bir holatda juftlikning bittasi berk, shuning uchun quvvat asosan faqat holat almashganda sarflanadi.",
+  "ru": "**Полевой транзистор (MOSFET).** В нём током управляет напряжение затвора: затвор отделён от канала тонким диэлектриком, поэтому ток затвора почти нулевой и входное сопротивление очень велико. Когда напряжение затвора превышает пороговое значение $U^*$, между истоком и стоком образуется проводящий канал. Современные цифровые микросхемы построены из комплементарных пар (КМОП): в каждом состоянии один транзистор пары закрыт, поэтому мощность расходуется в основном только при переключении.",
+  "en": "**The field-effect transistor (MOSFET).** Here the current is controlled by the gate voltage: the gate is separated from the channel by a thin insulator, so the gate current is almost zero and the input resistance is very large. When the gate voltage exceeds a threshold value $U^*$, a conducting channel forms between source and drain. Modern digital chips are built from complementary pairs (CMOS): in each state one transistor of the pair is off, so power is consumed mainly only during switching."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Operatsion kuchaytirgich",
+  "ru": "8. Операционный усилитель",
+  "en": "8. The operational amplifier"
+ },
+ {
+  "t": "li",
+  "uz": "**Operatsion kuchaytirgich (OK).** Bu ko'p tranzistorli integral sxema: ikki kirish — noinvertor ($U_+$) va invertor ($U_-$) — va bitta chiqish. Chiqish kirishlar ayirmasiga proporsional, xususiy kuchaytirish $K_0$ juda katta ($10^5\\ldots10^6$). Lekin chiqish manba kuchlanishidan chiqa olmaydi: $\\left|U_2\\right|\\leq U_{max}$, bunda $U_{max}$ manba kuchlanishiga yaqin. Demak teskari aloqasiz OK kirishlar orasidagi millivolt farqda ham to'yinadi; foydali kuchaytirgich faqat **manfiy teskari aloqa** bilan yasaladi.",
+  "ru": "**Операционный усилитель (ОУ).** Это многотранзисторная интегральная схема: два входа — неинвертирующий ($U_+$) и инвертирующий ($U_-$) — и один выход. Выход пропорционален разности входов, собственное усиление $K_0$ очень велико ($10^5\\ldots10^6$). Но выход не может выйти за напряжение питания: $\\left|U_2\\right|\\leq U_{max}$, где $U_{max}$ близко к напряжению питания. Значит, без обратной связи ОУ насыщается уже при милливольтовой разности входов; полезный усилитель делают только с **отрицательной обратной связью**.",
+  "en": "**The operational amplifier (op-amp).** This is a many-transistor integrated circuit with two inputs — non-inverting ($U_+$) and inverting ($U_-$) — and one output. The output is proportional to the difference of the inputs, and the open-loop gain $K_0$ is huge ($10^5\\ldots10^6$). But the output cannot go beyond the supply voltage: $\\left|U_2\\right|\\leq U_{max}$, where $U_{max}$ is close to the supply voltage. So without feedback an op-amp saturates even for a millivolt difference between its inputs; a useful amplifier is built only with **negative feedback**."
+ },
+ {
+  "t": "m",
+  "m": "U_2=K_0\\left(U_+-U_-\\right),\\qquad \\left|U_2\\right|\\leq U_{max}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ideal OK ning ikki «oltin qoidasi».** (1) Kirishlarga tok kirmaydi (kirish qarshiligi cheksiz). (2) Manfiy teskari aloqa bo'lsa, chiqish shunday o'rnatiladiki, kirishlar potensiali tenglashadi: $U_+=U_-$ («virtual qisqa tutashuv»). Ikkinchi qoida faqat manfiy teskari aloqa bor va chiqish to'yinmagan bo'lsa ishlaydi. Ikkala qoida bilan deyarli har qanday OK sxemasi Kirxgof qoidalari orqali bir necha qatorda yechiladi.",
+  "ru": "**Два «золотых правила» идеального ОУ.** (1) Во входы ток не втекает (входное сопротивление бесконечно). (2) При отрицательной обратной связи выход устанавливается так, что потенциалы входов выравниваются: $U_+=U_-$ («виртуальное короткое замыкание»). Второе правило работает только при наличии отрицательной обратной связи и ненасыщенном выходе. С обоими правилами почти любая схема на ОУ решается правилами Кирхгофа в несколько строк.",
+  "en": "**The two \"golden rules\" of an ideal op-amp.** (1) No current flows into the inputs (infinite input resistance). (2) With negative feedback the output settles so that the input potentials become equal: $U_+=U_-$ (\"virtual short\"). The second rule holds only when there is negative feedback and the output is not saturated. With both rules almost any op-amp circuit is solved by Kirchhoff's rules in a few lines."
+ },
+ {
+  "t": "li",
+  "uz": "**Invertor kuchaytirgich.** $U_+$ yerga ulangan, kirish signali $R_1$ orqali $U_-$ ga, chiqishdan $U_-$ ga $R_2$ teskari aloqa rezistori. 2-qoida bo'yicha $U_-=0$ — «virtual yer». $R_1$ dagi tok $\\frac{U_1}{R_1}$ 1-qoida bo'yicha to'liq $R_2$ dan o'tadi: $\\frac{U_1}{R_1}=-\\frac{U_2}{R_2}$. Bundan $K=-\\frac{R_2}{R_1}$; sxemaning kirish qarshiligi $R_1$ ga teng (signal manbai virtual yerga $R_1$ orqali ulangan). Bir nechta kirish $R_a$, $R_b$ orqali bitta virtual yerga ulansa — **summator**: toklar qo'shiladi ([[F06]]).",
+  "ru": "**Инвертирующий усилитель.** $U_+$ заземлён, входной сигнал подаётся через $R_1$ на $U_-$, с выхода на $U_-$ — резистор обратной связи $R_2$. По правилу 2 $U_-=0$ — «виртуальная земля». Ток в $R_1$, $\\frac{U_1}{R_1}$, по правилу 1 целиком проходит через $R_2$: $\\frac{U_1}{R_1}=-\\frac{U_2}{R_2}$. Отсюда $K=-\\frac{R_2}{R_1}$; входное сопротивление схемы равно $R_1$ (источник сигнала подключён к виртуальной земле через $R_1$). Если несколько входов через $R_a$, $R_b$ подключить к одной виртуальной земле — получится **сумматор**: токи складываются ([[F06]]).",
+  "en": "**The inverting amplifier.** $U_+$ is grounded, the input signal goes through $R_1$ to $U_-$, and a feedback resistor $R_2$ connects the output to $U_-$. By rule 2, $U_-=0$ — a \"virtual ground\". The current in $R_1$, $\\frac{U_1}{R_1}$, flows entirely through $R_2$ by rule 1: $\\frac{U_1}{R_1}=-\\frac{U_2}{R_2}$. Hence $K=-\\frac{R_2}{R_1}$; the input resistance of the circuit equals $R_1$ (the signal source is connected to the virtual ground through $R_1$). If several inputs are connected through $R_a$, $R_b$ to the same virtual ground we get a **summer**: the currents add ([[F06]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Noinvertor kuchaytirgich va qaytargich.** Signal to'g'ridan-to'g'ri $U_+$ ga beriladi, chiqishdan $R_2$ va $R_1$ bo'lgichi orqali $U_-$ ga teskari aloqa. 2-qoida: $U_-=U_1$, bo'lgichdan $U_-=U_2\\frac{R_1}{R_1+R_2}$, demak $K=1+\\frac{R_2}{R_1}$ — faza saqlanadi, kirish qarshiligi cheksiz. $R_2=0$ (va $R_1$ olib tashlangan) bo'lsa **kuchlanish qaytargichi** hosil bo'ladi: $U_2=U_1$, $K=1$ — eng yaxshi bufer. Ikki kirishga bir xil nisbatli rezistorlar orqali signal berilsa — **differensial kuchaytirgich**: u faqat ayirmani kuchaytiradi va ikkala kirishdagi umumiy shovqinni yo'qotadi.",
+  "ru": "**Неинвертирующий усилитель и повторитель.** Сигнал подаётся прямо на $U_+$, обратная связь с выхода на $U_-$ — через делитель $R_2$ и $R_1$. Правило 2: $U_-=U_1$, из делителя $U_-=U_2\\frac{R_1}{R_1+R_2}$, значит $K=1+\\frac{R_2}{R_1}$ — фаза сохраняется, входное сопротивление бесконечно. При $R_2=0$ (и удалённом $R_1$) получается **повторитель напряжения**: $U_2=U_1$, $K=1$ — лучший буфер. Если сигналы подать на оба входа через резисторы с одинаковым отношением — получится **дифференциальный усилитель**: он усиливает только разность и устраняет общую для обоих входов помеху.",
+  "en": "**The non-inverting amplifier and the follower.** The signal goes straight to $U_+$, and feedback from the output reaches $U_-$ through a divider $R_2$ and $R_1$. Rule 2 gives $U_-=U_1$, and the divider gives $U_-=U_2\\frac{R_1}{R_1+R_2}$, so $K=1+\\frac{R_2}{R_1}$ — the phase is preserved and the input resistance is infinite. With $R_2=0$ (and $R_1$ removed) we get a **voltage follower**: $U_2=U_1$, $K=1$ — the best buffer. If signals are fed to both inputs through resistors with the same ratio we get a **differential amplifier**: it amplifies only the difference and removes noise common to both inputs."
+ },
+ {
+  "t": "m",
+  "m": "K=-\\frac{R_2}{R_1},\\qquad K=1+\\frac{R_2}{R_1},\\qquad U_2=-R_0\\left(\\frac{U_a}{R_a}+\\frac{U_b}{R_b}\\right),\\qquad U_2=\\frac{R_2}{R_1}\\left(U_b-U_a\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Nima uchun teskari aloqa yaxshi.** Chiqishning $\\gamma=\\frac{R_1}{R_1+R_2}$ ulushi invertor kirishga qaytarilsa, $U_2=K_0\\left(U_1-\\gamma U_2\\right)$, ya'ni yopiq tizim kuchaytirishi $K=\\frac{K_0}{1+K_0\\gamma}$. $K_0\\gamma\\gg1$ da $K\\approx\\frac{1}{\\gamma}$ — natija OK ning o'ziga (temperatura, tranzistorlar tarqoqligi) deyarli bog'liq emas, faqat rezistorlarga bog'liq. Masalan, $K_0=10^5$, $\\frac{1}{\\gamma}=20$ da $K\\approx19.996$. Teskari aloqa kuchaytirishning bir qismini «sotib», aniqlik, chiziqlilik va keng o'tkazish polosasini beradi.",
+  "ru": "**Почему обратная связь полезна.** Если доля $\\gamma=\\frac{R_1}{R_1+R_2}$ выхода возвращается на инвертирующий вход, то $U_2=K_0\\left(U_1-\\gamma U_2\\right)$, т. е. усиление замкнутой системы $K=\\frac{K_0}{1+K_0\\gamma}$. При $K_0\\gamma\\gg1$ $K\\approx\\frac{1}{\\gamma}$ — результат почти не зависит от самого ОУ (температуры, разброса транзисторов), а только от резисторов. Например, при $K_0=10^5$, $\\frac{1}{\\gamma}=20$ $K\\approx19.996$. Обратная связь «покупает» за часть усиления точность, линейность и широкую полосу пропускания.",
+  "en": "**Why feedback is good.** If a fraction $\\gamma=\\frac{R_1}{R_1+R_2}$ of the output is returned to the inverting input, then $U_2=K_0\\left(U_1-\\gamma U_2\\right)$, i.e. the closed-loop gain is $K=\\frac{K_0}{1+K_0\\gamma}$. For $K_0\\gamma\\gg1$, $K\\approx\\frac{1}{\\gamma}$ — the result hardly depends on the op-amp itself (temperature, transistor spread), only on the resistors. For example, with $K_0=10^5$, $\\frac{1}{\\gamma}=20$, $K\\approx19.996$. Feedback \"buys\" accuracy, linearity and a wide bandwidth with part of the gain."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L36-F06.png",
+   "ru": "figures/B2-L36-F06-ru.png",
+   "en": "figures/B2-L36-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. OK: integrator, komparator, to'yinish va real cheklovlar",
+  "ru": "9. ОУ: интегратор, компаратор, насыщение и реальные ограничения",
+  "en": "9. Op-amps: integrator, comparator, saturation and real limits"
+ },
+ {
+  "t": "li",
+  "uz": "**Integrator.** Invertor sxemada $R_2$ o'rniga kondensator $C$ qo'yilsa, $R$ dagi tok $\\frac{U_1}{R}$ kondensatorni zaryadlaydi, virtual yer tufayli kondensator kuchlanishi $-U_2$ ga teng: $C\\frac{dU_2}{dt}=-\\frac{U_1}{R}$. Chiqish kirishning vaqt bo'yicha integraliga proporsional (formula quyida). O'zgarmas kirishda chiqish chiziqli o'zgaradi — qiyaligi $-\\frac{U_1}{RC}$ — va $\\pm U_{max}$ ga yetguncha davom etadi; to'g'ri burchakli signal uchburchak signalga aylanadi ([[F07]]). Passiv RC integratordan farqi: bu yerda yaqinlashish yo'q va signal kichraymaydi.",
+  "ru": "**Интегратор.** Если в инвертирующей схеме вместо $R_2$ поставить конденсатор $C$, ток в $R$, $\\frac{U_1}{R}$, заряжает конденсатор, а благодаря виртуальной земле напряжение конденсатора равно $-U_2$: $C\\frac{dU_2}{dt}=-\\frac{U_1}{R}$. Выход пропорционален интегралу входа по времени (формула ниже). При постоянном входе выход меняется линейно — с наклоном $-\\frac{U_1}{RC}$ — и так до достижения $\\pm U_{max}$; прямоугольный сигнал превращается в треугольный ([[F07]]). Отличие от пассивного RC-интегратора: здесь нет приближения и сигнал не уменьшается.",
+  "en": "**The integrator.** If the capacitor $C$ replaces $R_2$ in the inverting circuit, the current in $R$, $\\frac{U_1}{R}$, charges the capacitor, and thanks to the virtual ground the capacitor voltage equals $-U_2$: $C\\frac{dU_2}{dt}=-\\frac{U_1}{R}$. The output is proportional to the time integral of the input (formula below). With a constant input the output changes linearly — with slope $-\\frac{U_1}{RC}$ — until it reaches $\\pm U_{max}$; a rectangular signal turns into a triangular one ([[F07]]). The difference from the passive RC integrator: here there is no approximation and the signal does not shrink."
+ },
+ {
+  "t": "m",
+  "m": "U_2=-\\frac{1}{RC}\\int_0^tU_1\\,dt+U_2\\left(0\\right),\\qquad U_2=-RC\\frac{dU_1}{dt}"
+ },
+ {
+  "t": "li",
+  "uz": "**Differensiator.** $R$ va $C$ o'rni almashtirilsa (kirishda $C$, teskari aloqada $R$), chiqish kirishning hosilasiga proporsional: ikkinchi formula. Amalda differensiator yuqori chastotali shovqinni kuchaytiradi, shuning uchun kam ishlatiladi; integrator esa analog hisoblash, ADC va PID-rostlagichlarda keng tarqalgan.",
+  "ru": "**Дифференциатор.** Если поменять местами $R$ и $C$ (на входе $C$, в обратной связи $R$), выход пропорционален производной входа: вторая формула. На практике дифференциатор усиливает высокочастотный шум, поэтому применяется редко; интегратор же широко распространён в аналоговых вычислениях, АЦП и ПИД-регуляторах.",
+  "en": "**The differentiator.** If $R$ and $C$ swap places ($C$ at the input, $R$ in the feedback), the output is proportional to the derivative of the input: the second formula. In practice a differentiator amplifies high-frequency noise, so it is rarely used; the integrator, on the other hand, is widespread in analog computing, ADCs and PID controllers."
+ },
+ {
+  "t": "li",
+  "uz": "**Komparator.** Teskari aloqasiz OK ikki kuchlanishni solishtiradi: $U_+>U_-$ bo'lsa $U_2=+U_{max}$, aks holda $U_2=-U_{max}$. Bu analog signalni raqamli «ha/yo'q» ga aylantirishning eng oddiy usuli. Shovqinli signalda chiqish chegarada ko'p marta sakramasligi uchun musbat teskari aloqa qo'shiladi — **Shmitt triggeri**: yoqilish va o'chish chegaralari har xil (gisterezis). Musbat teskari aloqada «oltin qoida» (2) ishlamaydi!",
+  "ru": "**Компаратор.** ОУ без обратной связи сравнивает два напряжения: при $U_+>U_-$ $U_2=+U_{max}$, иначе $U_2=-U_{max}$. Это простейший способ превратить аналоговый сигнал в цифровое «да/нет». Чтобы на зашумлённом сигнале выход не переключался многократно у порога, добавляют положительную обратную связь — **триггер Шмитта**: пороги включения и выключения разные (гистерезис). При положительной обратной связи «золотое правило» (2) не работает!",
+  "en": "**The comparator.** An op-amp without feedback compares two voltages: if $U_+>U_-$ then $U_2=+U_{max}$, otherwise $U_2=-U_{max}$. This is the simplest way to turn an analog signal into a digital \"yes/no\". So that the output does not flip many times near the threshold on a noisy signal, positive feedback is added — the **Schmitt trigger**: the switch-on and switch-off thresholds differ (hysteresis). With positive feedback \"golden rule\" (2) does not hold!"
+ },
+ {
+  "t": "li",
+  "uz": "**To'yinish va kesilish (clipping).** Kuchaytirgich chiziqli ishlashi uchun $\\left|K\\right|U_m<U_{max}$ bo'lishi kerak. Aks holda chiqish $\\pm U_{max}$ da «kesiladi»: sinusoida tepalari yassi bo'lib qoladi, signal buziladi va spektrida yuqori garmonikalar paydo bo'ladi ([[F07]]). Bu GRE da taniladigan xarakterli to'lqin shakli. Kesilishni yo'qotish uchun kirish amplitudasini yoki kuchaytirishni kamaytirish, yoki manba kuchlanishini oshirish kerak.",
+  "ru": "**Насыщение и ограничение (clipping).** Чтобы усилитель работал линейно, нужно $\\left|K\\right|U_m<U_{max}$. Иначе выход «срезается» на $\\pm U_{max}$: вершины синусоиды становятся плоскими, сигнал искажается и в его спектре появляются высшие гармоники ([[F07]]). Это характерная форма волны, узнаваемая на GRE. Чтобы убрать ограничение, нужно уменьшить амплитуду входа или усиление либо увеличить напряжение питания.",
+  "en": "**Saturation and clipping.** For linear operation the amplifier needs $\\left|K\\right|U_m<U_{max}$. Otherwise the output is \"clipped\" at $\\pm U_{max}$: the tops of the sine wave become flat, the signal is distorted and higher harmonics appear in its spectrum ([[F07]]). This characteristic waveform is recognised on the GRE. To remove clipping, reduce the input amplitude or the gain, or raise the supply voltage."
+ },
+ {
+  "t": "li",
+  "uz": "**Real OK cheklovlari.** (a) **Kuchaytirish va o'tkazish kengligi ko'paytmasi** taxminan o'zgarmas: $K\\Delta f\\approx f_1$, bunda $f_1$ — xususiy kuchaytirish birga tushadigan chastota. Masalan, $f_1=10\\ \\mathrm{MHz}$ va $K=1000$ da o'tkazish kengligi $10\\ \\mathrm{kHz}$ atrofida. (b) **Chiqish kuchlanishining o'sish tezligi** cheklangan: $\\left|\\frac{dU_2}{dt}\\right|\\leq\\dot U_{max}$; amplitudasi $U_m$ bo'lgan sinusoida uchun $2\\pi fU_m\\leq\\dot U_{max}$, aks holda sinus uchburchakka aylanadi. (c) Kichik kirish toklari va siljish kuchlanishi (millivoltlar) — aniq o'lchashlarda hisobga olinadi.",
+  "ru": "**Реальные ограничения ОУ.** (a) **Произведение усиления на полосу пропускания** примерно постоянно: $K\\Delta f\\approx f_1$, где $f_1$ — частота, на которой собственное усиление падает до единицы. Например, при $f_1=10\\ \\mathrm{MHz}$ и $K=1000$ полоса пропускания около $10\\ \\mathrm{kHz}$. (b) **Скорость нарастания выходного напряжения** ограничена: $\\left|\\frac{dU_2}{dt}\\right|\\leq\\dot U_{max}$; для синусоиды амплитуды $U_m$ нужно $2\\pi fU_m\\leq\\dot U_{max}$, иначе синус превращается в треугольник. (c) Малые входные токи и напряжение смещения (милливольты) учитывают в точных измерениях.",
+  "en": "**Real op-amp limits.** (a) The **gain–bandwidth product** is roughly constant: $K\\Delta f\\approx f_1$, where $f_1$ is the frequency at which the open-loop gain falls to one. For example, with $f_1=10\\ \\mathrm{MHz}$ and $K=1000$ the bandwidth is about $10\\ \\mathrm{kHz}$. (b) The **slew rate** of the output voltage is limited: $\\left|\\frac{dU_2}{dt}\\right|\\leq\\dot U_{max}$; for a sine wave of amplitude $U_m$ one needs $2\\pi fU_m\\leq\\dot U_{max}$, otherwise the sine turns into a triangle. (c) Small input currents and the offset voltage (millivolts) are taken into account in precise measurements."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L36-F07.png",
+   "ru": "figures/B2-L36-F07-ru.png",
+   "en": "figures/B2-L36-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Raqamli elektronika: mantiqiy elementlar, Bul algebrasi, ARO'",
+  "ru": "10. Цифровая электроника: логические элементы, булева алгебра, АЦП",
+  "en": "10. Digital electronics: logic gates, Boolean algebra, ADC"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikkilik signal va sanoq.** Raqamli sxemada kuchlanish faqat ikki sohada bo'ladi: past (mantiqiy $0$) va yuqori (mantiqiy $1$); oraliq qiymatlar taqiqlangan, shuning uchun kichik shovqin ma'lumotni buzmaydi. Sonlar ikkilik sanoqda yoziladi: $N=\\sum b_k2^k$, bunda $b_k$ — $0$ yoki $1$. Masalan, $1101_2=8+4+0+1=13$. $n$ bitli so'z $2^n$ xil qiymat qabul qiladi: $8$ bit — $256$, $10$ bit — $1024$.",
+  "ru": "**Двоичный сигнал и счёт.** В цифровой схеме напряжение бывает только в двух областях: низкое (логический $0$) и высокое (логическая $1$); промежуточные значения запрещены, поэтому малый шум не портит информацию. Числа записывают в двоичной системе: $N=\\sum b_k2^k$, где $b_k$ — $0$ или $1$. Например, $1101_2=8+4+0+1=13$. Слово из $n$ бит принимает $2^n$ различных значений: $8$ бит — $256$, $10$ бит — $1024$.",
+  "en": "**Binary signals and counting.** In a digital circuit the voltage lies only in two ranges: low (logical $0$) and high (logical $1$); intermediate values are forbidden, so small noise does not corrupt the information. Numbers are written in binary: $N=\\sum b_k2^k$, where $b_k$ is $0$ or $1$. For example, $1101_2=8+4+0+1=13$. A word of $n$ bits takes $2^n$ different values: $8$ bits — $256$, $10$ bits — $1024$."
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy mantiqiy elementlar.** **EMAS** (NOT, inversiya) $\\bar A$; **VA** (AND, kon'yunksiya) $A\\cdot B$ — ikkala kirish $1$ bo'lsagina $1$; **YOKI** (OR, diz'yunksiya) $A+B$ — kamida bittasi $1$ bo'lsa $1$; **VA-EMAS** (NAND) $\\overline{A\\cdot B}$; **YOKI-EMAS** (NOR) $\\overline{A+B}$; **istisno qiluvchi YOKI** (XOR) $A\\oplus B$ — kirishlar har xil bo'lsa $1$. Har bir element **haqiqat jadvali** bilan to'liq tavsiflanadi: barcha kirish kombinatsiyalari uchun chiqish qiymati ([[F08]]). Sxemadagi belgilarda chiqishdagi kichik doiracha inversiyani bildiradi.",
+  "ru": "**Основные логические элементы.** **НЕ** (NOT, инверсия) $\\bar A$; **И** (AND, конъюнкция) $A\\cdot B$ — $1$, только если оба входа $1$; **ИЛИ** (OR, дизъюнкция) $A+B$ — $1$, если хотя бы один вход $1$; **И-НЕ** (NAND) $\\overline{A\\cdot B}$; **ИЛИ-НЕ** (NOR) $\\overline{A+B}$; **исключающее ИЛИ** (XOR) $A\\oplus B$ — $1$, если входы различны. Каждый элемент полностью описывается **таблицей истинности**: выходом при всех комбинациях входов ([[F08]]). На символах маленький кружок на выходе означает инверсию.",
+  "en": "**The basic logic gates.** **NOT** (inversion) $\\bar A$; **AND** (conjunction) $A\\cdot B$ — $1$ only if both inputs are $1$; **OR** (disjunction) $A+B$ — $1$ if at least one input is $1$; **NAND** $\\overline{A\\cdot B}$; **NOR** $\\overline{A+B}$; **exclusive OR** (XOR) $A\\oplus B$ — $1$ if the inputs differ. Each gate is completely described by its **truth table**: the output for every combination of inputs ([[F08]]). In the symbols a small circle at the output denotes inversion."
+ },
+ {
+  "t": "li",
+  "uz": "**Bul algebrasi.** Mantiqiy ifodalar quyidagi qoidalar bilan soddalashtiriladi: $A+\\bar A=1$, $A\\cdot\\bar A=0$, $A+A=A$, $A\\cdot1=A$, $A+1=1$, yutilish qonuni $A+A\\cdot B=A$ va **de Morgan qonunlari** — inversiya VA ni YOKI ga aylantiradi va aksincha. XOR ni asosiy elementlar orqali yozish mumkin: $A\\oplus B=A\\cdot\\bar B+\\bar A\\cdot B$. Ifodani tekshirishning ishonchli usuli — haqiqat jadvalini to'liq yozib chiqish: $n$ ta o'zgaruvchi uchun $2^n$ qator.",
+  "ru": "**Булева алгебра.** Логические выражения упрощают по правилам: $A+\\bar A=1$, $A\\cdot\\bar A=0$, $A+A=A$, $A\\cdot1=A$, $A+1=1$, закон поглощения $A+A\\cdot B=A$ и **законы де Моргана** — инверсия превращает И в ИЛИ и наоборот. XOR можно выразить через основные элементы: $A\\oplus B=A\\cdot\\bar B+\\bar A\\cdot B$. Надёжный способ проверки выражения — полностью выписать таблицу истинности: для $n$ переменных $2^n$ строк.",
+  "en": "**Boolean algebra.** Logical expressions are simplified with the rules $A+\\bar A=1$, $A\\cdot\\bar A=0$, $A+A=A$, $A\\cdot1=A$, $A+1=1$, the absorption law $A+A\\cdot B=A$ and **De Morgan's laws** — inversion turns AND into OR and vice versa. XOR can be written through the basic gates: $A\\oplus B=A\\cdot\\bar B+\\bar A\\cdot B$. A reliable way to check an expression is to write out the full truth table: $2^n$ rows for $n$ variables."
+ },
+ {
+  "t": "m",
+  "m": "\\overline{A\\cdot B}=\\bar A+\\bar B,\\qquad \\overline{A+B}=\\bar A\\cdot\\bar B,\\qquad A\\oplus B=A\\cdot\\bar B+\\bar A\\cdot B"
+ },
+ {
+  "t": "li",
+  "uz": "**NAND universalligi va yarim summator.** Faqat NAND elementlaridan istalgan mantiqiy funksiyani yig'ish mumkin: masalan, ikkala kirishi birlashtirilgan NAND — inversiya, $\\overline{A\\cdot A}=\\bar A$; NAND dan keyin inversiya — VA. Shuning uchun mikrosxemalar bir xil elementlardan tuziladi. Ikki bitni qo'shuvchi **yarim summator**: yig'indi biti $S=A\\oplus B$, ko'chirish biti $P=A\\cdot B$ ($1+1=10_2$). Ikki yarim summator va YOKI elementi **to'liq summator**ni beradi — ko'p bitli sonlarni qo'shish shundan.",
+  "ru": "**Универсальность NAND и полусумматор.** Только из элементов NAND можно собрать любую логическую функцию: например, NAND с объединёнными входами — инверсия, $\\overline{A\\cdot A}=\\bar A$; NAND с последующей инверсией — И. Поэтому микросхемы строят из одинаковых элементов. **Полусумматор**, складывающий два бита: бит суммы $S=A\\oplus B$, бит переноса $P=A\\cdot B$ ($1+1=10_2$). Два полусумматора и элемент ИЛИ дают **полный сумматор** — отсюда сложение многобитных чисел.",
+  "en": "**NAND universality and the half adder.** Any logical function can be assembled from NAND gates alone: for example, a NAND with its inputs tied together is an inverter, $\\overline{A\\cdot A}=\\bar A$; a NAND followed by an inverter is an AND. That is why chips are built from identical gates. The **half adder**, which adds two bits, gives the sum bit $S=A\\oplus B$ and the carry bit $P=A\\cdot B$ ($1+1=10_2$). Two half adders and an OR gate make a **full adder** — the basis for adding multi-bit numbers."
+ },
+ {
+  "t": "li",
+  "uz": "**Analog-raqamli o'zgartirgich (ARO') va Naykvist teoremasi.** ARO' kuchlanishni $n$ bitli songa aylantiradi. Uning **ajrata olishi** (bitta pog'ona) $\\Delta U=\\frac{U_{max}}{2^n}$, kvantlash xatoligi $\\pm\\frac{\\Delta U}{2}$; masalan, $10$ bitli ARO' $0\\ldots5\\ \\mathrm{V}$ oralig'ida $\\Delta U\\approx4.9\\ \\mathrm{mV}$. Dinamik diapazon $20\\lg2^n\\approx6.02n\\ \\mathrm{dB}$. Signal vaqt bo'yicha $F$ chastota bilan o'lchab olinadi; **Naykvist–Kotelnikov teoremasi**: eng yuqori chastotasi $f_{max}$ bo'lgan signalni tiklash uchun $F\\geq2f_{max}$ kerak. Aks holda yuqori chastotalar past chastotalarga «o'tib qoladi» (aliasing) — buni ARO' oldidagi past chastotalar filtri oldini oladi. Teskari qurilma — raqamli-analog o'zgartirgich (RAO').",
+  "ru": "**Аналого-цифровой преобразователь (АЦП) и теорема Найквиста.** АЦП превращает напряжение в $n$-битное число. Его **разрешение** (одна ступень) $\\Delta U=\\frac{U_{max}}{2^n}$, ошибка квантования $\\pm\\frac{\\Delta U}{2}$; например, у $10$-битного АЦП в диапазоне $0\\ldots5\\ \\mathrm{V}$ $\\Delta U\\approx4.9\\ \\mathrm{mV}$. Динамический диапазон $20\\lg2^n\\approx6.02n\\ \\mathrm{dB}$. Сигнал измеряют во времени с частотой $F$; **теорема Найквиста–Котельникова**: чтобы восстановить сигнал с наивысшей частотой $f_{max}$, нужно $F\\geq2f_{max}$. Иначе высокие частоты «переходят» в низкие (наложение спектров) — это предотвращает фильтр нижних частот перед АЦП. Обратное устройство — цифро-аналоговый преобразователь (ЦАП).",
+  "en": "**The analog-to-digital converter (ADC) and the Nyquist theorem.** An ADC turns a voltage into an $n$-bit number. Its **resolution** (one step) is $\\Delta U=\\frac{U_{max}}{2^n}$, and the quantisation error is $\\pm\\frac{\\Delta U}{2}$; for example, a $10$-bit ADC with a $0\\ldots5\\ \\mathrm{V}$ range has $\\Delta U\\approx4.9\\ \\mathrm{mV}$. The dynamic range is $20\\lg2^n\\approx6.02n\\ \\mathrm{dB}$. The signal is sampled in time at a frequency $F$; the **Nyquist–Kotelnikov theorem**: to reconstruct a signal whose highest frequency is $f_{max}$ one needs $F\\geq2f_{max}$. Otherwise high frequencies \"fold\" into low ones (aliasing) — a low-pass filter in front of the ADC prevents this. The reverse device is a digital-to-analog converter (DAC)."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L36-F08.png",
+   "ru": "figures/B2-L36-F08-ru.png",
+   "en": "figures/B2-L36-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "11. GRE usullari va tipik xatolar",
+  "ru": "11. Приёмы для GRE и типичные ошибки",
+  "en": "11. GRE techniques and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaraviy hollar.** Filtr yoki zanjirni tanish uchun ikki chegarani tekshiring: $\\omega\\to0$ (kondensator — uzilish, g'altak — sim) va $\\omega\\to\\infty$ (aksincha). Xuddi shu $t=0$ va $t\\to\\infty$ uchun. Variantlardagi formulani $\\omega=0$, $\\omega=\\omega_c$ va $\\omega\\to\\infty$ da hisoblash ko'pincha yagona to'g'ri javobni qoldiradi.",
+  "ru": "**Предельные случаи.** Чтобы распознать фильтр или цепь, проверьте два предела: $\\omega\\to0$ (конденсатор — разрыв, катушка — провод) и $\\omega\\to\\infty$ (наоборот). То же для $t=0$ и $t\\to\\infty$. Вычисление формулы из вариантов при $\\omega=0$, $\\omega=\\omega_c$ и $\\omega\\to\\infty$ часто оставляет единственный верный ответ.",
+  "en": "**Limiting cases.** To identify a filter or circuit, check two limits: $\\omega\\to0$ (a capacitor is a break, an inductor a wire) and $\\omega\\to\\infty$ (the reverse). The same for $t=0$ and $t\\to\\infty$. Evaluating an answer-option formula at $\\omega=0$, $\\omega=\\omega_c$ and $\\omega\\to\\infty$ often leaves the only correct answer."
+ },
+ {
+  "t": "li",
+  "uz": "**Birliklar va tipik sonlar.** $RC$ va $\\frac{L}{R}$ — sekund, $\\frac{1}{\\sqrt{LC}}$ — $\\mathrm{s^{-1}}$. Yodda tuting: kremniy diod $U_D\\approx0.7\\ \\mathrm{V}$, $U_T\\approx26\\ \\mathrm{mV}$, tok dekadasiga $60\\ \\mathrm{mV}$, $\\beta\\sim100$, $K_0\\sim10^5$, $-3\\ \\mathrm{dB}$ kesish chastotasida, filtr qiyaligi $20\\ \\mathrm{dB}$ dekadaga.",
+  "ru": "**Единицы и типичные числа.** $RC$ и $\\frac{L}{R}$ — секунды, $\\frac{1}{\\sqrt{LC}}$ — $\\mathrm{s^{-1}}$. Запомните: кремниевый диод $U_D\\approx0.7\\ \\mathrm{V}$, $U_T\\approx26\\ \\mathrm{mV}$, на декаду тока $60\\ \\mathrm{mV}$, $\\beta\\sim100$, $K_0\\sim10^5$, $-3\\ \\mathrm{dB}$ на частоте среза, наклон фильтра $20\\ \\mathrm{dB}$ на декаду.",
+  "en": "**Units and typical numbers.** $RC$ and $\\frac{L}{R}$ are seconds, $\\frac{1}{\\sqrt{LC}}$ is $\\mathrm{s^{-1}}$. Remember: a silicon diode $U_D\\approx0.7\\ \\mathrm{V}$, $U_T\\approx26\\ \\mathrm{mV}$, $60\\ \\mathrm{mV}$ per decade of current, $\\beta\\sim100$, $K_0\\sim10^5$, $-3\\ \\mathrm{dB}$ at the cutoff frequency, a filter slope of $20\\ \\mathrm{dB}$ per decade."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** (1) Diod kuchlanish tushuvini yoki ko'prikdagi ikkita diodni unutish. (2) Diod yo'nalishini noto'g'ri o'qish — tok uchburchak ko'rsatgan tomonga o'tadi. (3) $U_+=U_-$ qoidasini teskari aloqasiz yoki musbat teskari aloqali sxemaga qo'llash. (4) $f_c$ va $\\omega_c$ ni adashtirish ($2\\pi$ ko'paytuvchi). (5) Kuchlanish uchun $20\\lg$ o'rniga $10\\lg$ olish. (6) Invertor kuchaytirgich ishorasini yoki noinvertordagi «$1+$» ni unutish. (7) Tranzistor to'yinganida ham $I_C=\\beta I_B$ deb hisoblash.",
+  "ru": "**Типичные ошибки.** (1) Забыть падение напряжения на диоде или два диода в мосте. (2) Неверно прочитать направление диода — ток идёт туда, куда указывает треугольник. (3) Применять правило $U_+=U_-$ к схеме без обратной связи или с положительной обратной связью. (4) Путать $f_c$ и $\\omega_c$ (множитель $2\\pi$). (5) Брать для напряжения $10\\lg$ вместо $20\\lg$. (6) Забыть знак инвертирующего усилителя или «$1+$» в неинвертирующем. (7) Считать $I_C=\\beta I_B$ и при насыщении транзистора.",
+  "en": "**Typical mistakes.** (1) Forgetting the diode voltage drop, or the two diodes of a bridge. (2) Misreading the diode direction — current flows where the triangle points. (3) Applying the $U_+=U_-$ rule to a circuit without feedback or with positive feedback. (4) Confusing $f_c$ and $\\omega_c$ (a factor of $2\\pi$). (5) Using $10\\lg$ instead of $20\\lg$ for voltage. (6) Forgetting the sign of the inverting amplifier or the \"$1+$\" of the non-inverting one. (7) Taking $I_C=\\beta I_B$ even when the transistor is saturated."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Tevenin ekvivalenti (bo'lgich)",
+    "ru": "Эквивалент Тевенена (делитель)",
+    "en": "Thévenin equivalent (divider)",
+    "m": "\\mathcal E_T=\\mathcal E\\frac{R_2}{R_1+R_2},\\quad R_T=\\frac{R_1R_2}{R_1+R_2}"
+   },
+   {
+    "uz": "RC zaryadlanish",
+    "ru": "Зарядка RC",
+    "en": "RC charging",
+    "m": "U_C=\\mathcal E\\left(1-e^{-t/\\tau}\\right),\\quad \\tau=RC"
+   },
+   {
+    "uz": "RL zanjirda tok",
+    "ru": "Ток в цепи RL",
+    "en": "Current in an RL circuit",
+    "m": "I=\\frac{\\mathcal E}{R}\\left(1-e^{-t/\\tau}\\right),\\quad \\tau=\\frac{L}{R}"
+   },
+   {
+    "uz": "Impedanslar",
+    "ru": "Импедансы",
+    "en": "Impedances",
+    "m": "Z_R=R,\\quad Z_C=\\frac{1}{i\\omega C},\\quad Z_L=i\\omega L"
+   },
+   {
+    "uz": "RC past chastotalar filtri",
+    "ru": "RC-фильтр нижних частот",
+    "en": "RC low-pass filter",
+    "m": "\\left|H\\right|=\\frac{1}{\\sqrt{1+\\left(\\frac{\\omega}{\\omega_c}\\right)^2}},\\quad \\omega_c=\\frac{1}{RC}"
+   },
+   {
+    "uz": "Detsibellar",
+    "ru": "Децибелы",
+    "en": "Decibels",
+    "m": "G=20\\lg\\left|H\\right|"
+   },
+   {
+    "uz": "Shokli tenglamasi",
+    "ru": "Уравнение Шокли",
+    "en": "Shockley equation",
+    "m": "I=I_0\\left(e^{U/U_T}-1\\right),\\quad U_T=\\frac{kT}{e}"
+   },
+   {
+    "uz": "Diod differensial qarshiligi",
+    "ru": "Дифференциальное сопротивление диода",
+    "en": "Diode differential resistance",
+    "m": "r=\\frac{U_T}{I}"
+   },
+   {
+    "uz": "To'g'rilagich pulsatsiyasi",
+    "ru": "Пульсации выпрямителя",
+    "en": "Rectifier ripple",
+    "m": "\\Delta U\\approx\\frac{I}{fC},\\quad \\Delta U\\approx\\frac{I}{2fC}"
+   },
+   {
+    "uz": "Stabilitron toki",
+    "ru": "Ток стабилитрона",
+    "en": "Zener current",
+    "m": "I_Z=\\frac{\\mathcal E-U_Z}{R_1}-\\frac{U_Z}{R}"
+   },
+   {
+    "uz": "Tranzistor toklari",
+    "ru": "Токи транзистора",
+    "en": "Transistor currents",
+    "m": "I_E=I_B+I_C,\\quad I_C=\\beta I_B,\\quad \\alpha=\\frac{\\beta}{\\beta+1}"
+   },
+   {
+    "uz": "Umumiy emitterli kuchaytirgich",
+    "ru": "Усилитель с общим эмиттером",
+    "en": "Common-emitter amplifier",
+    "m": "K=-\\frac{R_C}{R_E},\\quad K=-\\frac{I_CR_C}{U_T}"
+   },
+   {
+    "uz": "Invertor va noinvertor OK",
+    "ru": "Инвертирующий и неинвертирующий ОУ",
+    "en": "Inverting and non-inverting op-amp",
+    "m": "K=-\\frac{R_2}{R_1},\\quad K=1+\\frac{R_2}{R_1}"
+   },
+   {
+    "uz": "Summator",
+    "ru": "Сумматор",
+    "en": "Summer",
+    "m": "U_2=-R_0\\left(\\frac{U_a}{R_a}+\\frac{U_b}{R_b}\\right)"
+   },
+   {
+    "uz": "Integrator",
+    "ru": "Интегратор",
+    "en": "Integrator",
+    "m": "U_2=-\\frac{1}{RC}\\int U_1\\,dt"
+   },
+   {
+    "uz": "De Morgan qonunlari",
+    "ru": "Законы де Моргана",
+    "en": "De Morgan's laws",
+    "m": "\\overline{A\\cdot B}=\\bar A+\\bar B,\\quad \\overline{A+B}=\\bar A\\cdot\\bar B"
+   },
+   {
+    "uz": "ARO' ajrata olishi va Naykvist sharti",
+    "ru": "Разрешение АЦП и условие Найквиста",
+    "en": "ADC resolution and Nyquist condition",
+    "m": "\\Delta U=\\frac{U_{max}}{2^n},\\quad F\\geq2f_{max}"
+   }
+  ]
+ }
+]
