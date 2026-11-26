@@ -1,0 +1,936 @@
+[
+ {
+  "id": "B2-L21-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Lazer ko'rsatkichning quvvati $5\\ \\mathrm{mW}$, nuri diametri $2\\ \\mathrm{mm}$ (intensivlik kesim bo'yicha bir xil deb hisoblang). Nur intensivligini, elektr va magnit maydon amplitudalarini hamda o'rtacha energiya zichligini toping.",
+   "ru": "Мощность лазерной указки $5\\ \\mathrm{mW}$, диаметр луча $2\\ \\mathrm{mm}$ (считайте интенсивность одинаковой по сечению). Найдите интенсивность луча, амплитуды электрического и магнитного полей и среднюю плотность энергии.",
+   "en": "A laser pointer has a power of $5\\ \\mathrm{mW}$ and a beam diameter of $2\\ \\mathrm{mm}$ (take the intensity to be uniform over the cross-section). Find the beam intensity, the amplitudes of the electric and magnetic fields, and the average energy density."
+  },
+  "figure": "figures/B2-L21-S01.png",
+  "solution": {
+   "uz": [
+    "Intensivlik — quvvatning kesim yuzasiga nisbati: $$I=\\frac{\\mathcal P}{\\pi r^2}=\\frac{5\\cdot10^{-3}}{\\pi\\cdot10^{-6}}\\approx1.59\\cdot10^3\\ \\mathrm{W/m^2}$$",
+    "Elektr maydon amplitudasi: $$E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}=\\sqrt{\\frac{2\\cdot1.59\\cdot10^3}{3\\cdot10^8\\cdot8.85\\cdot10^{-12}}}\\approx1.09\\cdot10^3\\ \\mathrm{V/m}$$",
+    "Magnit maydon va energiya zichligi: $$B_0=\\frac{E_0}{c}\\approx3.65\\ \\mu\\mathrm{T},\\qquad \\langle w\\rangle=\\frac{I}{c}\\approx5.3\\cdot10^{-6}\\ \\mathrm{J/m^3}$$"
+   ],
+   "ru": [
+    "Интенсивность — отношение мощности к площади сечения: $$I=\\frac{\\mathcal P}{\\pi r^2}=\\frac{5\\cdot10^{-3}}{\\pi\\cdot10^{-6}}\\approx1.59\\cdot10^3\\ \\mathrm{W/m^2}$$",
+    "Амплитуда электрического поля: $$E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}=\\sqrt{\\frac{2\\cdot1.59\\cdot10^3}{3\\cdot10^8\\cdot8.85\\cdot10^{-12}}}\\approx1.09\\cdot10^3\\ \\mathrm{V/m}$$",
+    "Магнитное поле и плотность энергии: $$B_0=\\frac{E_0}{c}\\approx3.65\\ \\mu\\mathrm{T},\\qquad \\langle w\\rangle=\\frac{I}{c}\\approx5.3\\cdot10^{-6}\\ \\mathrm{J/m^3}$$"
+   ],
+   "en": [
+    "The intensity is the power divided by the cross-sectional area: $$I=\\frac{\\mathcal P}{\\pi r^2}=\\frac{5\\cdot10^{-3}}{\\pi\\cdot10^{-6}}\\approx1.59\\cdot10^3\\ \\mathrm{W/m^2}$$",
+    "Electric field amplitude: $$E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}=\\sqrt{\\frac{2\\cdot1.59\\cdot10^3}{3\\cdot10^8\\cdot8.85\\cdot10^{-12}}}\\approx1.09\\cdot10^3\\ \\mathrm{V/m}$$",
+    "Magnetic field and energy density: $$B_0=\\frac{E_0}{c}\\approx3.65\\ \\mu\\mathrm{T},\\qquad \\langle w\\rangle=\\frac{I}{c}\\approx5.3\\cdot10^{-6}\\ \\mathrm{J/m^3}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Intensivlik: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$",
+    "ru": "Интенсивность: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$",
+    "en": "Intensity: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$"
+   },
+   {
+    "uz": "Energiya zichligi: $\\langle w\\rangle=\\frac{1}{2}\\varepsilon_0E_0^2$, $I=c\\langle w\\rangle$",
+    "ru": "Плотность энергии: $\\langle w\\rangle=\\frac{1}{2}\\varepsilon_0E_0^2$, $I=c\\langle w\\rangle$",
+    "en": "Energy density: $\\langle w\\rangle=\\frac{1}{2}\\varepsilon_0E_0^2$, $I=c\\langle w\\rangle$"
+   }
+  ],
+  "basis": {
+   "uz": "Lazer nuri maydonlari",
+   "ru": "Поля лазерного луча",
+   "en": "The fields of a laser beam"
+  },
+  "answer": "I\\approx1.59\\ \\mathrm{kW/m^2};\\ E_0\\approx1.09\\ \\mathrm{kV/m};\\ B_0\\approx3.65\\ \\mu\\mathrm{T};\\ \\langle w\\rangle\\approx5.3\\cdot10^{-6}\\ \\mathrm{J/m^3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 16.60-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Vakuumdagi to'lqinning elektr maydoni $\\vec E=150\\cos\\left(2\\cdot10^7x+\\omega t\\right)\\vec j$ ($\\mathrm{V/m}$, $x$ — metrda). To'lqin qaysi tomonga tarqaladi? To'lqin uzunligi, siklik chastota, chastota va magnit maydon vektorini toping.",
+   "ru": "Электрическое поле волны в вакууме $\\vec E=150\\cos\\left(2\\cdot10^7x+\\omega t\\right)\\vec j$ ($\\mathrm{V/m}$, $x$ — в метрах). В какую сторону распространяется волна? Найдите длину волны, циклическую частоту, частоту и вектор магнитного поля.",
+   "en": "The electric field of a wave in vacuum is $\\vec E=150\\cos\\left(2\\cdot10^7x+\\omega t\\right)\\vec j$ ($\\mathrm{V/m}$, $x$ in metres). In which direction does the wave travel? Find the wavelength, the angular frequency, the frequency and the magnetic field vector."
+  },
+  "figure": "figures/B2-L21-S02.png",
+  "solution": {
+   "uz": [
+    "Fazada $kx+\\omega t$ — to'lqin $-x$ tomonga tarqaladi: $$\\vec n=-\\vec i$$",
+    "To'lqin kattaliklari: $$\\lambda=\\frac{2\\pi}{k}\\approx3.14\\cdot10^{-7}\\ \\mathrm{m},\\quad \\omega=ck=6\\cdot10^{15}\\ \\mathrm{rad/s},\\quad f=\\frac{\\omega}{2\\pi}\\approx9.55\\cdot10^{14}\\ \\mathrm{Hz}$$",
+    "Magnit maydon: $$\\vec B=\\frac{1}{c}\\left(-\\vec i\\right)\\times\\vec E=-\\frac{150}{3\\cdot10^8}\\cos\\left(2\\cdot10^7x+\\omega t\\right)\\vec k=-0.5\\cos\\left(2\\cdot10^7x+\\omega t\\right)\\vec k\\ \\mu\\mathrm{T}$$",
+    "Tekshirish: $\\vec E\\times\\vec B$ tarqalish tomoniga qaragan, $\\lambda$ — ultrabinafsha soha: $$\\vec j\\times\\left(-\\vec k\\right)=-\\vec i$$"
+   ],
+   "ru": [
+    "В фазе $kx+\\omega t$ — волна бежит в сторону $-x$: $$\\vec n=-\\vec i$$",
+    "Характеристики волны: $$\\lambda=\\frac{2\\pi}{k}\\approx3.14\\cdot10^{-7}\\ \\mathrm{m},\\quad \\omega=ck=6\\cdot10^{15}\\ \\mathrm{rad/s},\\quad f=\\frac{\\omega}{2\\pi}\\approx9.55\\cdot10^{14}\\ \\mathrm{Hz}$$",
+    "Магнитное поле: $$\\vec B=\\frac{1}{c}\\left(-\\vec i\\right)\\times\\vec E=-\\frac{150}{3\\cdot10^8}\\cos\\left(2\\cdot10^7x+\\omega t\\right)\\vec k=-0.5\\cos\\left(2\\cdot10^7x+\\omega t\\right)\\vec k\\ \\mu\\mathrm{T}$$",
+    "Проверка: $\\vec E\\times\\vec B$ направлено по распространению, $\\lambda$ — ультрафиолет: $$\\vec j\\times\\left(-\\vec k\\right)=-\\vec i$$"
+   ],
+   "en": [
+    "The phase is $kx+\\omega t$, so the wave travels towards $-x$: $$\\vec n=-\\vec i$$",
+    "Wave quantities: $$\\lambda=\\frac{2\\pi}{k}\\approx3.14\\cdot10^{-7}\\ \\mathrm{m},\\quad \\omega=ck=6\\cdot10^{15}\\ \\mathrm{rad/s},\\quad f=\\frac{\\omega}{2\\pi}\\approx9.55\\cdot10^{14}\\ \\mathrm{Hz}$$",
+    "Magnetic field: $$\\vec B=\\frac{1}{c}\\left(-\\vec i\\right)\\times\\vec E=-\\frac{150}{3\\cdot10^8}\\cos\\left(2\\cdot10^7x+\\omega t\\right)\\vec k=-0.5\\cos\\left(2\\cdot10^7x+\\omega t\\right)\\vec k\\ \\mu\\mathrm{T}$$",
+    "Check: $\\vec E\\times\\vec B$ points along the direction of travel, and $\\lambda$ is in the ultraviolet: $$\\vec j\\times\\left(-\\vec k\\right)=-\\vec i$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yo'nalish: $\\cos\\left(kx+\\omega t\\right)$ — $-x$ tomonga",
+    "ru": "Направление: $\\cos\\left(kx+\\omega t\\right)$ — в сторону $-x$",
+    "en": "Direction: $\\cos\\left(kx+\\omega t\\right)$ travels towards $-x$"
+   },
+   {
+    "uz": "To'lqin kattaliklari: $c=\\lambda f=\\frac{\\omega}{k}$, $k=\\frac{2\\pi}{\\lambda}$",
+    "ru": "Характеристики волны: $c=\\lambda f=\\frac{\\omega}{k}$, $k=\\frac{2\\pi}{\\lambda}$",
+    "en": "Wave quantities: $c=\\lambda f=\\frac{\\omega}{k}$, $k=\\frac{2\\pi}{\\lambda}$"
+   },
+   {
+    "uz": "Yassi to'lqin: $\\vec B=\\frac{1}{c}\\vec n\\times\\vec E$, $B_0=\\frac{E_0}{c}$",
+    "ru": "Плоская волна: $\\vec B=\\frac{1}{c}\\vec n\\times\\vec E$, $B_0=\\frac{E_0}{c}$",
+    "en": "Plane wave: $\\vec B=\\frac{1}{c}\\vec n\\times\\vec E$, $B_0=\\frac{E_0}{c}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "To'lqin ifodasini o'qish",
+   "ru": "Чтение выражения волны",
+   "en": "Reading a wave expression"
+  },
+  "answer": "\\vec n=-\\vec i;\\ \\lambda\\approx314\\ \\mathrm{nm};\\ \\omega=6\\cdot10^{15}\\ \\mathrm{rad/s};\\ f\\approx9.55\\cdot10^{14}\\ \\mathrm{Hz};\\ \\vec B=-0.5\\cos\\left(2\\cdot10^7x+\\omega t\\right)\\vec k\\ \\mu\\mathrm{T}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "Irodov, «Problems in General Physics», 4.193-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Aylanuvchi patnisi olingan mikroto'lqinli pechga shokolad plitkasi qo'yildi. Bir necha soniyadan keyin plitkada erigan dog'lar paydo bo'ldi, qo'shni dog'lar orasi $6.1\\ \\mathrm{cm}$. Mikroto'lqinlar chastotasini toping. Dog'lar orasidagi qaysi nuqtalarda shokolad umuman qizimaydi?",
+   "ru": "В микроволновую печь со снятым вращающимся поддоном положили плитку шоколада. Через несколько секунд на плитке появились расплавленные пятна, расстояние между соседними пятнами $6.1\\ \\mathrm{cm}$. Найдите частоту микроволн. В каких точках между пятнами шоколад совсем не нагревается?",
+   "en": "A chocolate bar is placed in a microwave oven with its turntable removed. After a few seconds melted spots appear on the bar, with neighbouring spots $6.1\\ \\mathrm{cm}$ apart. Find the frequency of the microwaves. At which points between the spots does the chocolate not heat at all?"
+  },
+  "figure": "figures/B2-L21-S03.png",
+  "solution": {
+   "uz": [
+    "Pech ichida turg'un to'lqin; eng qizigan joylar — $\\vec E$ do'ngliklari: $$\\frac{\\lambda}{2}=6.1\\ \\mathrm{cm}\\ \\Rightarrow\\ \\lambda=12.2\\ \\mathrm{cm}$$",
+    "Chastota: $$f=\\frac{c}{\\lambda}=\\frac{3\\cdot10^8}{0.122}\\approx2.46\\cdot10^9\\ \\mathrm{Hz}$$",
+    "$\\vec E$ tugunlari dog'lar o'rtasida: $$\\Delta x=\\frac{\\lambda}{4}\\approx3.05\\ \\mathrm{cm}$$"
+   ],
+   "ru": [
+    "В печи стоячая волна; сильнее всего греются пучности $\\vec E$: $$\\frac{\\lambda}{2}=6.1\\ \\mathrm{cm}\\ \\Rightarrow\\ \\lambda=12.2\\ \\mathrm{cm}$$",
+    "Частота: $$f=\\frac{c}{\\lambda}=\\frac{3\\cdot10^8}{0.122}\\approx2.46\\cdot10^9\\ \\mathrm{Hz}$$",
+    "Узлы $\\vec E$ — посередине между пятнами: $$\\Delta x=\\frac{\\lambda}{4}\\approx3.05\\ \\mathrm{cm}$$"
+   ],
+   "en": [
+    "There is a standing wave in the oven; the hottest places are the antinodes of $\\vec E$: $$\\frac{\\lambda}{2}=6.1\\ \\mathrm{cm}\\ \\Rightarrow\\ \\lambda=12.2\\ \\mathrm{cm}$$",
+    "Frequency: $$f=\\frac{c}{\\lambda}=\\frac{3\\cdot10^8}{0.122}\\approx2.46\\cdot10^9\\ \\mathrm{Hz}$$",
+    "The nodes of $\\vec E$ are midway between the spots: $$\\Delta x=\\frac{\\lambda}{4}\\approx3.05\\ \\mathrm{cm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Turg'un to'lqin: qo'shni do'ngliklar orasi $\\frac{\\lambda}{2}$",
+    "ru": "Стоячая волна: между соседними пучностями $\\frac{\\lambda}{2}$",
+    "en": "Standing wave: neighbouring antinodes are $\\frac{\\lambda}{2}$ apart"
+   },
+   {
+    "uz": "To'lqin kattaliklari: $c=\\lambda f=\\frac{\\omega}{k}$, $k=\\frac{2\\pi}{\\lambda}$",
+    "ru": "Характеристики волны: $c=\\lambda f=\\frac{\\omega}{k}$, $k=\\frac{2\\pi}{\\lambda}$",
+    "en": "Wave quantities: $c=\\lambda f=\\frac{\\omega}{k}$, $k=\\frac{2\\pi}{\\lambda}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Mikroto'lqinli pechdagi turg'un to'lqin",
+   "ru": "Стоячая волна в микроволновой печи",
+   "en": "A standing wave in a microwave oven"
+  },
+  "answer": "f\\approx2.46\\ \\mathrm{GHz};\\ \\Delta x=\\frac{\\lambda}{4}\\approx3.05\\ \\mathrm{cm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "Irodov, «Problems in General Physics», 4.199-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yer atmosferasi chegarasida Quyosh nuri intensivligi $1.36\\ \\mathrm{kW/m^2}$, Quyoshgacha masofa $1.5\\cdot10^{11}\\ \\mathrm{m}$. Quyoshning nurlanish quvvatini, Yer yaqinida nurning elektr va magnit maydon amplitudalarini hamda Quyoshdan $1.52$ marta uzoqroq bo'lgan Marsdagi intensivlikni toping.",
+   "ru": "На границе атмосферы Земли интенсивность солнечного света $1.36\\ \\mathrm{kW/m^2}$, расстояние до Солнца $1.5\\cdot10^{11}\\ \\mathrm{m}$. Найдите мощность излучения Солнца, амплитуды электрического и магнитного полей света у Земли и интенсивность у Марса, который в $1.52$ раза дальше от Солнца.",
+   "en": "At the top of Earth's atmosphere the intensity of sunlight is $1.36\\ \\mathrm{kW/m^2}$, and the distance to the Sun is $1.5\\cdot10^{11}\\ \\mathrm{m}$. Find the radiated power of the Sun, the amplitudes of the electric and magnetic fields of sunlight near the Earth, and the intensity at Mars, which is $1.52$ times farther from the Sun."
+  },
+  "figure": "figures/B2-L21-S04.png",
+  "solution": {
+   "uz": [
+    "Butun energiya radiusi $r$ bo'lgan sferadan o'tadi: $$\\mathcal P=4\\pi r^2I=4\\pi\\left(1.5\\cdot10^{11}\\right)^2\\cdot1360\\approx3.85\\cdot10^{26}\\ \\mathrm{W}$$",
+    "Amplitudalar: $$E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}=\\sqrt{\\frac{2720}{2.655\\cdot10^{-3}}}\\approx1.01\\cdot10^3\\ \\mathrm{V/m},\\qquad B_0=\\frac{E_0}{c}\\approx3.37\\ \\mu\\mathrm{T}$$",
+    "Marsda $I\\propto\\frac{1}{r^2}$: $$I'=\\frac{1360}{1.52^2}\\approx589\\ \\mathrm{W/m^2}$$"
+   ],
+   "ru": [
+    "Вся энергия проходит через сферу радиуса $r$: $$\\mathcal P=4\\pi r^2I=4\\pi\\left(1.5\\cdot10^{11}\\right)^2\\cdot1360\\approx3.85\\cdot10^{26}\\ \\mathrm{W}$$",
+    "Амплитуды: $$E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}=\\sqrt{\\frac{2720}{2.655\\cdot10^{-3}}}\\approx1.01\\cdot10^3\\ \\mathrm{V/m},\\qquad B_0=\\frac{E_0}{c}\\approx3.37\\ \\mu\\mathrm{T}$$",
+    "У Марса $I\\propto\\frac{1}{r^2}$: $$I'=\\frac{1360}{1.52^2}\\approx589\\ \\mathrm{W/m^2}$$"
+   ],
+   "en": [
+    "All the energy passes through a sphere of radius $r$: $$\\mathcal P=4\\pi r^2I=4\\pi\\left(1.5\\cdot10^{11}\\right)^2\\cdot1360\\approx3.85\\cdot10^{26}\\ \\mathrm{W}$$",
+    "Amplitudes: $$E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}=\\sqrt{\\frac{2720}{2.655\\cdot10^{-3}}}\\approx1.01\\cdot10^3\\ \\mathrm{V/m},\\qquad B_0=\\frac{E_0}{c}\\approx3.37\\ \\mu\\mathrm{T}$$",
+    "At Mars $I\\propto\\frac{1}{r^2}$: $$I'=\\frac{1360}{1.52^2}\\approx589\\ \\mathrm{W/m^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nuqtaviy manba: $I=\\frac{\\mathcal P}{4\\pi r^2}$, $E_0\\propto\\frac{1}{r}$",
+    "ru": "Точечный источник: $I=\\frac{\\mathcal P}{4\\pi r^2}$, $E_0\\propto\\frac{1}{r}$",
+    "en": "Point source: $I=\\frac{\\mathcal P}{4\\pi r^2}$, $E_0\\propto\\frac{1}{r}$"
+   },
+   {
+    "uz": "Intensivlik: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$",
+    "ru": "Интенсивность: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$",
+    "en": "Intensity: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Quyosh nuri",
+   "ru": "Солнечный свет",
+   "en": "Sunlight"
+  },
+  "answer": "\\mathcal P\\approx3.85\\cdot10^{26}\\ \\mathrm{W};\\ E_0\\approx1.01\\ \\mathrm{kV/m};\\ B_0\\approx3.37\\ \\mu\\mathrm{T};\\ I'\\approx589\\ \\mathrm{W/m^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 16.57-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiostansiya antennasi $50\\ \\mathrm{kW}$ quvvatni hamma tomonga bir xil nurlaydi (yutilish yo'q). $10\\ \\mathrm{km}$ masofada intensivlikni, elektr va magnit maydon amplitudalarini toping. Qanday masofada elektr maydon amplitudasi $1\\ \\mathrm{mV/m}$ ga tushadi?",
+   "ru": "Антенна радиостанции излучает мощность $50\\ \\mathrm{kW}$ одинаково во все стороны (поглощения нет). Найдите интенсивность, амплитуды электрического и магнитного полей на расстоянии $10\\ \\mathrm{km}$. На каком расстоянии амплитуда электрического поля упадёт до $1\\ \\mathrm{mV/m}$?",
+   "en": "A radio station antenna radiates $50\\ \\mathrm{kW}$ equally in all directions (no absorption). Find the intensity and the amplitudes of the electric and magnetic fields at $10\\ \\mathrm{km}$. At what distance does the electric field amplitude fall to $1\\ \\mathrm{mV/m}$?"
+  },
+  "figure": "figures/B2-L21-S05.png",
+  "solution": {
+   "uz": [
+    "Intensivlik: $$I=\\frac{\\mathcal P}{4\\pi r^2}=\\frac{5\\cdot10^4}{4\\pi\\cdot10^8}\\approx3.98\\cdot10^{-5}\\ \\mathrm{W/m^2}$$",
+    "Amplitudalar: $$E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}\\approx0.173\\ \\mathrm{V/m},\\qquad B_0=\\frac{E_0}{c}\\approx5.8\\cdot10^{-10}\\ \\mathrm{T}$$",
+    "$E_0\\propto\\frac{1}{r}$, shuning uchun: $$r'=r\\frac{E_0}{E'_0}=10\\ \\mathrm{km}\\cdot\\frac{0.173}{10^{-3}}\\approx1.73\\cdot10^3\\ \\mathrm{km}$$"
+   ],
+   "ru": [
+    "Интенсивность: $$I=\\frac{\\mathcal P}{4\\pi r^2}=\\frac{5\\cdot10^4}{4\\pi\\cdot10^8}\\approx3.98\\cdot10^{-5}\\ \\mathrm{W/m^2}$$",
+    "Амплитуды: $$E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}\\approx0.173\\ \\mathrm{V/m},\\qquad B_0=\\frac{E_0}{c}\\approx5.8\\cdot10^{-10}\\ \\mathrm{T}$$",
+    "$E_0\\propto\\frac{1}{r}$, поэтому: $$r'=r\\frac{E_0}{E'_0}=10\\ \\mathrm{km}\\cdot\\frac{0.173}{10^{-3}}\\approx1.73\\cdot10^3\\ \\mathrm{km}$$"
+   ],
+   "en": [
+    "Intensity: $$I=\\frac{\\mathcal P}{4\\pi r^2}=\\frac{5\\cdot10^4}{4\\pi\\cdot10^8}\\approx3.98\\cdot10^{-5}\\ \\mathrm{W/m^2}$$",
+    "Amplitudes: $$E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}\\approx0.173\\ \\mathrm{V/m},\\qquad B_0=\\frac{E_0}{c}\\approx5.8\\cdot10^{-10}\\ \\mathrm{T}$$",
+    "$E_0\\propto\\frac{1}{r}$, so: $$r'=r\\frac{E_0}{E'_0}=10\\ \\mathrm{km}\\cdot\\frac{0.173}{10^{-3}}\\approx1.73\\cdot10^3\\ \\mathrm{km}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nuqtaviy manba: $I=\\frac{\\mathcal P}{4\\pi r^2}$, $E_0\\propto\\frac{1}{r}$",
+    "ru": "Точечный источник: $I=\\frac{\\mathcal P}{4\\pi r^2}$, $E_0\\propto\\frac{1}{r}$",
+    "en": "Point source: $I=\\frac{\\mathcal P}{4\\pi r^2}$, $E_0\\propto\\frac{1}{r}$"
+   },
+   {
+    "uz": "Intensivlik: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$",
+    "ru": "Интенсивность: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$",
+    "en": "Intensity: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Izotrop antenna maydoni",
+   "ru": "Поле изотропной антенны",
+   "en": "The field of an isotropic antenna"
+  },
+  "answer": "I\\approx3.98\\cdot10^{-5}\\ \\mathrm{W/m^2};\\ E_0\\approx0.173\\ \\mathrm{V/m};\\ B_0\\approx5.8\\cdot10^{-10}\\ \\mathrm{T};\\ r'\\approx1.7\\cdot10^3\\ \\mathrm{km}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 16.61-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Impulsli lazer $10\\ \\mathrm{ns}$ davomida $1\\ \\mathrm{J}$ energiya chiqaradi; nur kesimi $1\\ \\mathrm{mm^2}$. Impulsning fazodagi uzunligini, o'rtacha energiya zichligini, intensivlikni hamda elektr va magnit maydon amplitudalarini toping.",
+   "ru": "Импульсный лазер испускает энергию $1\\ \\mathrm{J}$ за $10\\ \\mathrm{ns}$; сечение луча $1\\ \\mathrm{mm^2}$. Найдите длину импульса в пространстве, среднюю плотность энергии, интенсивность и амплитуды электрического и магнитного полей.",
+   "en": "A pulsed laser emits $1\\ \\mathrm{J}$ of energy in $10\\ \\mathrm{ns}$; the beam cross-section is $1\\ \\mathrm{mm^2}$. Find the length of the pulse in space, the average energy density, the intensity and the amplitudes of the electric and magnetic fields."
+  },
+  "figure": "figures/B2-L21-S06.png",
+  "solution": {
+   "uz": [
+    "Impuls uzunligi va hajmi, energiya zichligi: $$l=c\\tau=3\\ \\mathrm{m},\\quad V=lA=3\\cdot10^{-6}\\ \\mathrm{m^3},\\quad \\langle w\\rangle=\\frac{U}{V}\\approx3.3\\cdot10^5\\ \\mathrm{J/m^3}$$",
+    "Intensivlik (tekshiruv: $I=c\\langle w\\rangle$): $$I=\\frac{U}{\\tau A}=\\frac{1}{10^{-8}\\cdot10^{-6}}=10^{14}\\ \\mathrm{W/m^2}$$",
+    "Amplitudalar: $$E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}\\approx2.7\\cdot10^8\\ \\mathrm{V/m},\\qquad B_0=\\frac{E_0}{c}\\approx0.91\\ \\mathrm{T}$$"
+   ],
+   "ru": [
+    "Длина и объём импульса, плотность энергии: $$l=c\\tau=3\\ \\mathrm{m},\\quad V=lA=3\\cdot10^{-6}\\ \\mathrm{m^3},\\quad \\langle w\\rangle=\\frac{U}{V}\\approx3.3\\cdot10^5\\ \\mathrm{J/m^3}$$",
+    "Интенсивность (проверка: $I=c\\langle w\\rangle$): $$I=\\frac{U}{\\tau A}=\\frac{1}{10^{-8}\\cdot10^{-6}}=10^{14}\\ \\mathrm{W/m^2}$$",
+    "Амплитуды: $$E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}\\approx2.7\\cdot10^8\\ \\mathrm{V/m},\\qquad B_0=\\frac{E_0}{c}\\approx0.91\\ \\mathrm{T}$$"
+   ],
+   "en": [
+    "Length and volume of the pulse, energy density: $$l=c\\tau=3\\ \\mathrm{m},\\quad V=lA=3\\cdot10^{-6}\\ \\mathrm{m^3},\\quad \\langle w\\rangle=\\frac{U}{V}\\approx3.3\\cdot10^5\\ \\mathrm{J/m^3}$$",
+    "Intensity (check: $I=c\\langle w\\rangle$): $$I=\\frac{U}{\\tau A}=\\frac{1}{10^{-8}\\cdot10^{-6}}=10^{14}\\ \\mathrm{W/m^2}$$",
+    "Amplitudes: $$E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}\\approx2.7\\cdot10^8\\ \\mathrm{V/m},\\qquad B_0=\\frac{E_0}{c}\\approx0.91\\ \\mathrm{T}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Energiya zichligi: $\\langle w\\rangle=\\frac{1}{2}\\varepsilon_0E_0^2$, $I=c\\langle w\\rangle$",
+    "ru": "Плотность энергии: $\\langle w\\rangle=\\frac{1}{2}\\varepsilon_0E_0^2$, $I=c\\langle w\\rangle$",
+    "en": "Energy density: $\\langle w\\rangle=\\frac{1}{2}\\varepsilon_0E_0^2$, $I=c\\langle w\\rangle$"
+   },
+   {
+    "uz": "Intensivlik: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$",
+    "ru": "Интенсивность: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$",
+    "en": "Intensity: $I=\\frac{1}{2}c\\varepsilon_0E_0^2$"
+   }
+  ],
+  "basis": {
+   "uz": "Impulsli lazer",
+   "ru": "Импульсный лазер",
+   "en": "A pulsed laser"
+  },
+  "answer": "l=3\\ \\mathrm{m};\\ \\langle w\\rangle\\approx3.3\\cdot10^5\\ \\mathrm{J/m^3};\\ I=10^{14}\\ \\mathrm{W/m^2};\\ E_0\\approx2.7\\cdot10^8\\ \\mathrm{V/m};\\ B_0\\approx0.91\\ \\mathrm{T}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 16.64-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Massasi $100\\ \\mathrm{kg}$ bo'lgan kosmik apparatning ideal qaytaruvchi yelkani $100\\ \\mathrm{m}\\times100\\ \\mathrm{m}$. Yerdan Quyoshgacha masofada ($1.5\\cdot10^{11}\\ \\mathrm{m}$, $I=1.36\\ \\mathrm{kW/m^2}$) yelka nurga perpendikulyar. Bosim kuchini, tezlanishni va bir sutkada tezlik ortishini toping. Tezlanishni Quyosh tortishishi tezlanishi bilan solishtiring ($GM=1.33\\cdot10^{20}\\ \\mathrm{m^3/s^2}$).",
+   "ru": "Идеально отражающий парус космического аппарата массы $100\\ \\mathrm{kg}$ имеет размер $100\\ \\mathrm{m}\\times100\\ \\mathrm{m}$. На расстоянии Земли от Солнца ($1.5\\cdot10^{11}\\ \\mathrm{m}$, $I=1.36\\ \\mathrm{kW/m^2}$) парус перпендикулярен лучам. Найдите силу давления, ускорение и прирост скорости за сутки. Сравните ускорение с ускорением солнечного притяжения ($GM=1.33\\cdot10^{20}\\ \\mathrm{m^3/s^2}$).",
+   "en": "A perfectly reflecting sail of a $100\\ \\mathrm{kg}$ spacecraft measures $100\\ \\mathrm{m}\\times100\\ \\mathrm{m}$. At the Earth's distance from the Sun ($1.5\\cdot10^{11}\\ \\mathrm{m}$, $I=1.36\\ \\mathrm{kW/m^2}$) the sail is perpendicular to the sunlight. Find the force of radiation pressure, the acceleration and the gain in speed in one day. Compare the acceleration with that of the Sun's gravity ($GM=1.33\\cdot10^{20}\\ \\mathrm{m^3/s^2}$)."
+  },
+  "figure": "figures/B2-L21-S07.png",
+  "solution": {
+   "uz": [
+    "Ko'zgu uchun bosim $\\frac{2I}{c}$: $$F=\\frac{2IA}{c}=\\frac{2\\cdot1360\\cdot10^4}{3\\cdot10^8}\\approx0.091\\ \\mathrm{N}$$",
+    "Tezlanish va sutkadagi tezlik ortishi: $$a=\\frac{F}{m}\\approx9.1\\cdot10^{-4}\\ \\mathrm{m/s^2},\\qquad \\Delta v=a\\cdot86400\\ \\mathrm{s}\\approx78\\ \\mathrm{m/s}$$",
+    "Quyosh tortishishi — ikkalasi ham $\\frac{1}{r^2}$ kabi kamayadi, nisbat o'zgarmas: $$g_S=\\frac{GM}{r^2}=\\frac{1.33\\cdot10^{20}}{2.25\\cdot10^{22}}\\approx5.9\\cdot10^{-3}\\ \\mathrm{m/s^2},\\qquad \\frac{a}{g_S}\\approx0.15$$"
+   ],
+   "ru": [
+    "Для зеркала давление $\\frac{2I}{c}$: $$F=\\frac{2IA}{c}=\\frac{2\\cdot1360\\cdot10^4}{3\\cdot10^8}\\approx0.091\\ \\mathrm{N}$$",
+    "Ускорение и прирост скорости за сутки: $$a=\\frac{F}{m}\\approx9.1\\cdot10^{-4}\\ \\mathrm{m/s^2},\\qquad \\Delta v=a\\cdot86400\\ \\mathrm{s}\\approx78\\ \\mathrm{m/s}$$",
+    "Притяжение Солнца — оба убывают как $\\frac{1}{r^2}$, отношение постоянно: $$g_S=\\frac{GM}{r^2}=\\frac{1.33\\cdot10^{20}}{2.25\\cdot10^{22}}\\approx5.9\\cdot10^{-3}\\ \\mathrm{m/s^2},\\qquad \\frac{a}{g_S}\\approx0.15$$"
+   ],
+   "en": [
+    "For a mirror the pressure is $\\frac{2I}{c}$: $$F=\\frac{2IA}{c}=\\frac{2\\cdot1360\\cdot10^4}{3\\cdot10^8}\\approx0.091\\ \\mathrm{N}$$",
+    "Acceleration and the speed gained in a day: $$a=\\frac{F}{m}\\approx9.1\\cdot10^{-4}\\ \\mathrm{m/s^2},\\qquad \\Delta v=a\\cdot86400\\ \\mathrm{s}\\approx78\\ \\mathrm{m/s}$$",
+    "The Sun's gravity — both fall off as $\\frac{1}{r^2}$, so the ratio is constant: $$g_S=\\frac{GM}{r^2}=\\frac{1.33\\cdot10^{20}}{2.25\\cdot10^{22}}\\approx5.9\\cdot10^{-3}\\ \\mathrm{m/s^2},\\qquad \\frac{a}{g_S}\\approx0.15$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yorug'lik bosimi: $P=\\frac{I}{c}$ (yutilish), $P=\\frac{2I}{c}$ (ko'zgu)",
+    "ru": "Давление света: $P=\\frac{I}{c}$ (поглощение), $P=\\frac{2I}{c}$ (зеркало)",
+    "en": "Radiation pressure: $P=\\frac{I}{c}$ (absorbed), $P=\\frac{2I}{c}$ (mirror)"
+   },
+   null,
+   {
+    "uz": "Butun olam tortishish qonuni: $F=\\frac{GMm}{r^2}$",
+    "ru": "Закон всемирного тяготения: $F=\\frac{GMm}{r^2}$",
+    "en": "Law of gravitation: $F=\\frac{GMm}{r^2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Quyosh yelkani",
+   "ru": "Солнечный парус",
+   "en": "A solar sail"
+  },
+  "answer": "F\\approx0.091\\ \\mathrm{N};\\ a\\approx9.1\\cdot10^{-4}\\ \\mathrm{m/s^2};\\ \\Delta v\\approx78\\ \\mathrm{m/s};\\ \\frac{a}{g_S}\\approx0.15",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "OpenStax, «University Physics», Vol. 2 (CC BY 4.0), 16.69-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yuzasi $2\\ \\mathrm{m^2}$ bo'lgan qora (to'liq yutuvchi) plastinkaga intensivligi $1\\ \\mathrm{kW/m^2}$ bo'lgan parallel nur normalga $30^\\circ$ burchak ostida tushmoqda. Plastinkaga ta'sir qiluvchi kuchning normal va urinma tashkil etuvchilarini toping. Plastinka ideal ko'zgu bo'lsa-chi?",
+   "ru": "На чёрную (полностью поглощающую) пластинку площадью $2\\ \\mathrm{m^2}$ падает параллельный пучок интенсивностью $1\\ \\mathrm{kW/m^2}$ под углом $30^\\circ$ к нормали. Найдите нормальную и касательную составляющие силы, действующей на пластинку. А если пластинка — идеальное зеркало?",
+   "en": "A parallel beam of intensity $1\\ \\mathrm{kW/m^2}$ falls on a black (fully absorbing) plate of area $2\\ \\mathrm{m^2}$ at $30^\\circ$ to the normal. Find the normal and tangential components of the force on the plate. What if the plate is a perfect mirror?"
+  },
+  "figure": "figures/B2-L21-S08.png",
+  "solution": {
+   "uz": [
+    "Plastinka $IA\\cos\\theta$ quvvatni ushlaydi; har sekundda shu energiyaga mos impuls nur bo'ylab yutiladi: $$F=\\frac{IA\\cos\\theta}{c}=\\frac{1000\\cdot2\\cdot0.866}{3\\cdot10^8}\\approx5.8\\cdot10^{-6}\\ \\mathrm{N}$$",
+    "Tashkil etuvchilar: $$F_n=\\frac{IA\\cos^2\\theta}{c}=5.0\\cdot10^{-6}\\ \\mathrm{N},\\qquad F_\\tau=\\frac{IA\\sin\\theta\\cos\\theta}{c}\\approx2.9\\cdot10^{-6}\\ \\mathrm{N}$$",
+    "Ko'zguda urinma impuls saqlanadi, normal impuls teskari bo'ladi: $$F_n=\\frac{2IA\\cos^2\\theta}{c}=1.0\\cdot10^{-5}\\ \\mathrm{N},\\qquad F_\\tau=0$$"
+   ],
+   "ru": [
+    "Пластинка перехватывает мощность $IA\\cos\\theta$; каждую секунду поглощается импульс этой энергии вдоль луча: $$F=\\frac{IA\\cos\\theta}{c}=\\frac{1000\\cdot2\\cdot0.866}{3\\cdot10^8}\\approx5.8\\cdot10^{-6}\\ \\mathrm{N}$$",
+    "Составляющие: $$F_n=\\frac{IA\\cos^2\\theta}{c}=5.0\\cdot10^{-6}\\ \\mathrm{N},\\qquad F_\\tau=\\frac{IA\\sin\\theta\\cos\\theta}{c}\\approx2.9\\cdot10^{-6}\\ \\mathrm{N}$$",
+    "У зеркала касательный импульс сохраняется, нормальный обращается: $$F_n=\\frac{2IA\\cos^2\\theta}{c}=1.0\\cdot10^{-5}\\ \\mathrm{N},\\qquad F_\\tau=0$$"
+   ],
+   "en": [
+    "The plate intercepts the power $IA\\cos\\theta$; each second the momentum of this energy along the beam is absorbed: $$F=\\frac{IA\\cos\\theta}{c}=\\frac{1000\\cdot2\\cdot0.866}{3\\cdot10^8}\\approx5.8\\cdot10^{-6}\\ \\mathrm{N}$$",
+    "Components: $$F_n=\\frac{IA\\cos^2\\theta}{c}=5.0\\cdot10^{-6}\\ \\mathrm{N},\\qquad F_\\tau=\\frac{IA\\sin\\theta\\cos\\theta}{c}\\approx2.9\\cdot10^{-6}\\ \\mathrm{N}$$",
+    "For a mirror the tangential momentum is conserved and the normal one reverses: $$F_n=\\frac{2IA\\cos^2\\theta}{c}=1.0\\cdot10^{-5}\\ \\mathrm{N},\\qquad F_\\tau=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'lqin impulsi: $p=\\frac{U}{c}$",
+    "ru": "Импульс волны: $p=\\frac{U}{c}$",
+    "en": "Momentum of a wave: $p=\\frac{U}{c}$"
+   },
+   {
+    "uz": "Og'ma tushish: $P=\\frac{I}{c}\\cos^2\\theta$, urinma $\\frac{I}{c}\\sin\\theta\\cos\\theta$",
+    "ru": "Наклонное падение: $P=\\frac{I}{c}\\cos^2\\theta$, касательная $\\frac{I}{c}\\sin\\theta\\cos\\theta$",
+    "en": "Oblique incidence: $P=\\frac{I}{c}\\cos^2\\theta$, tangential $\\frac{I}{c}\\sin\\theta\\cos\\theta$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Og'ma tushgan nur bosimi",
+   "ru": "Давление наклонного пучка",
+   "en": "Pressure of an oblique beam"
+  },
+  "answer": "F_n=5.0\\cdot10^{-6}\\ \\mathrm{N};\\ F_\\tau\\approx2.9\\cdot10^{-6}\\ \\mathrm{N};\\ F'_n=1.0\\cdot10^{-5}\\ \\mathrm{N},\\ F'_\\tau=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Volkenshteyn, «Problems in General Physics», 19.27-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Kosmosdagi sharsimon chang zarrasi Quyosh nurini to'liq yutadi, zichligi $2000\\ \\mathrm{kg/m^3}$. Zarra radiusi qanday bo'lganda Quyoshning yorug'lik bosimi kuchi uning tortishish kuchini muvozanatlaydi? Quyosh nurlanish quvvati $3.85\\cdot10^{26}\\ \\mathrm{W}$, $GM=1.33\\cdot10^{20}\\ \\mathrm{m^3/s^2}$. Natija Quyoshgacha masofaga bog'liqmi?",
+   "ru": "Сферическая пылинка в космосе полностью поглощает солнечный свет, её плотность $2000\\ \\mathrm{kg/m^3}$. При каком радиусе частицы сила светового давления Солнца уравновешивает силу его притяжения? Мощность излучения Солнца $3.85\\cdot10^{26}\\ \\mathrm{W}$, $GM=1.33\\cdot10^{20}\\ \\mathrm{m^3/s^2}$. Зависит ли результат от расстояния до Солнца?",
+   "en": "A spherical dust grain in space fully absorbs sunlight; its density is $2000\\ \\mathrm{kg/m^3}$. For what grain radius does the Sun's radiation pressure force balance its gravitational force? The Sun radiates $3.85\\cdot10^{26}\\ \\mathrm{W}$, and $GM=1.33\\cdot10^{20}\\ \\mathrm{m^3/s^2}$. Does the result depend on the distance from the Sun?"
+  },
+  "figure": "figures/B2-L21-S09.png",
+  "solution": {
+   "uz": [
+    "Nur zarraning kesimi $\\pi a^2$ ga tushadi: $$F_1=\\frac{I}{c}\\pi a^2=\\frac{\\mathcal P}{4\\pi r^2c}\\pi a^2$$",
+    "Tortishish kuchi: $$F_2=\\frac{GM}{r^2}\\cdot\\frac{4}{3}\\pi a^3\\rho$$",
+    "Tenglaymiz — $r^2$ qisqaradi: $$a=\\frac{3\\mathcal P}{16\\pi GMc\\rho}=\\frac{3\\cdot3.85\\cdot10^{26}}{16\\pi\\cdot1.33\\cdot10^{20}\\cdot3\\cdot10^8\\cdot2000}\\approx2.9\\cdot10^{-7}\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Свет падает на сечение частицы $\\pi a^2$: $$F_1=\\frac{I}{c}\\pi a^2=\\frac{\\mathcal P}{4\\pi r^2c}\\pi a^2$$",
+    "Сила притяжения: $$F_2=\\frac{GM}{r^2}\\cdot\\frac{4}{3}\\pi a^3\\rho$$",
+    "Приравниваем — $r^2$ сокращается: $$a=\\frac{3\\mathcal P}{16\\pi GMc\\rho}=\\frac{3\\cdot3.85\\cdot10^{26}}{16\\pi\\cdot1.33\\cdot10^{20}\\cdot3\\cdot10^8\\cdot2000}\\approx2.9\\cdot10^{-7}\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "The light falls on the grain's cross-section $\\pi a^2$: $$F_1=\\frac{I}{c}\\pi a^2=\\frac{\\mathcal P}{4\\pi r^2c}\\pi a^2$$",
+    "Gravitational force: $$F_2=\\frac{GM}{r^2}\\cdot\\frac{4}{3}\\pi a^3\\rho$$",
+    "Equate them — $r^2$ cancels: $$a=\\frac{3\\mathcal P}{16\\pi GMc\\rho}=\\frac{3\\cdot3.85\\cdot10^{26}}{16\\pi\\cdot1.33\\cdot10^{20}\\cdot3\\cdot10^8\\cdot2000}\\approx2.9\\cdot10^{-7}\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yorug'lik bosimi: $P=\\frac{I}{c}$ (yutilish), $P=\\frac{2I}{c}$ (ko'zgu)",
+    "ru": "Давление света: $P=\\frac{I}{c}$ (поглощение), $P=\\frac{2I}{c}$ (зеркало)",
+    "en": "Radiation pressure: $P=\\frac{I}{c}$ (absorbed), $P=\\frac{2I}{c}$ (mirror)"
+   },
+   {
+    "uz": "Butun olam tortishish qonuni: $F=\\frac{GMm}{r^2}$",
+    "ru": "Закон всемирного тяготения: $F=\\frac{GMm}{r^2}$",
+    "en": "Law of gravitation: $F=\\frac{GMm}{r^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Chang zarrasining kritik radiusi",
+   "ru": "Критический радиус пылинки",
+   "en": "The critical radius of a dust grain"
+  },
+  "answer": "a\\approx0.29\\ \\mu\\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 4.224-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Vakuumdagi to'lqin uzunligi $600\\ \\mathrm{nm}$, elektr maydon amplitudasi $100\\ \\mathrm{V/m}$ bo'lgan yorug'lik havodan sindirish ko'rsatkichi $1.6$ bo'lgan shisha sirtiga normal tushmoqda. Shishadagi tezlik va to'lqin uzunligini, qaytgan va o'tgan to'lqinlarning amplitudalarini hamda $R$ va $T$ koeffitsiyentlarini toping.",
+   "ru": "Свет с длиной волны в вакууме $600\\ \\mathrm{nm}$ и амплитудой электрического поля $100\\ \\mathrm{V/m}$ падает из воздуха нормально на поверхность стекла с показателем преломления $1.6$. Найдите скорость и длину волны в стекле, амплитуды отражённой и прошедшей волн и коэффициенты $R$ и $T$.",
+   "en": "Light of vacuum wavelength $600\\ \\mathrm{nm}$ and electric field amplitude $100\\ \\mathrm{V/m}$ falls from air at normal incidence on glass of refractive index $1.6$. Find the speed and wavelength in the glass, the amplitudes of the reflected and transmitted waves, and the coefficients $R$ and $T$."
+  },
+  "figure": "figures/B2-L21-S10.png",
+  "solution": {
+   "uz": [
+    "Shishada chastota o'zgarmaydi: $$v=\\frac{c}{n}=1.875\\cdot10^8\\ \\mathrm{m/s},\\qquad \\lambda=\\frac{\\lambda_0}{n}=375\\ \\mathrm{nm}$$",
+    "Amplitudalar ($r<0$ — qaytgan $\\vec E$ teskari): $$r=\\frac{1-1.6}{2.6}\\approx-0.231,\\quad E_r\\approx-23\\ \\mathrm{V/m};\\qquad t=\\frac{2}{2.6}\\approx0.769,\\quad E_t\\approx77\\ \\mathrm{V/m}$$",
+    "Energiya koeffitsiyentlari: $$R=r^2\\approx0.053,\\qquad T=\\frac{n_2}{n_1}t^2=1.6\\cdot0.592\\approx0.947,\\qquad R+T=1$$"
+   ],
+   "ru": [
+    "В стекле частота не меняется: $$v=\\frac{c}{n}=1.875\\cdot10^8\\ \\mathrm{m/s},\\qquad \\lambda=\\frac{\\lambda_0}{n}=375\\ \\mathrm{nm}$$",
+    "Амплитуды ($r<0$ — отражённое $\\vec E$ обращено): $$r=\\frac{1-1.6}{2.6}\\approx-0.231,\\quad E_r\\approx-23\\ \\mathrm{V/m};\\qquad t=\\frac{2}{2.6}\\approx0.769,\\quad E_t\\approx77\\ \\mathrm{V/m}$$",
+    "Энергетические коэффициенты: $$R=r^2\\approx0.053,\\qquad T=\\frac{n_2}{n_1}t^2=1.6\\cdot0.592\\approx0.947,\\qquad R+T=1$$"
+   ],
+   "en": [
+    "In the glass the frequency does not change: $$v=\\frac{c}{n}=1.875\\cdot10^8\\ \\mathrm{m/s},\\qquad \\lambda=\\frac{\\lambda_0}{n}=375\\ \\mathrm{nm}$$",
+    "Amplitudes ($r<0$ — the reflected $\\vec E$ is reversed): $$r=\\frac{1-1.6}{2.6}\\approx-0.231,\\quad E_r\\approx-23\\ \\mathrm{V/m};\\qquad t=\\frac{2}{2.6}\\approx0.769,\\quad E_t\\approx77\\ \\mathrm{V/m}$$",
+    "Energy coefficients: $$R=r^2\\approx0.053,\\qquad T=\\frac{n_2}{n_1}t^2=1.6\\cdot0.592\\approx0.947,\\qquad R+T=1$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Moddada: $v=\\frac{c}{n}$, $\\lambda=\\frac{\\lambda_0}{n}$, $f$ o'zgarmaydi",
+    "ru": "В веществе: $v=\\frac{c}{n}$, $\\lambda=\\frac{\\lambda_0}{n}$, $f$ не меняется",
+    "en": "In matter: $v=\\frac{c}{n}$, $\\lambda=\\frac{\\lambda_0}{n}$, $f$ is unchanged"
+   },
+   {
+    "uz": "Normal tushish: $r=\\frac{n_1-n_2}{n_1+n_2}$, $t=\\frac{2n_1}{n_1+n_2}$",
+    "ru": "Нормальное падение: $r=\\frac{n_1-n_2}{n_1+n_2}$, $t=\\frac{2n_1}{n_1+n_2}$",
+    "en": "Normal incidence: $r=\\frac{n_1-n_2}{n_1+n_2}$, $t=\\frac{2n_1}{n_1+n_2}$"
+   },
+   {
+    "uz": "Energiya: $R=r^2$, $T=\\frac{n_2}{n_1}t^2$, $R+T=1$",
+    "ru": "Энергия: $R=r^2$, $T=\\frac{n_2}{n_1}t^2$, $R+T=1$",
+    "en": "Energy: $R=r^2$, $T=\\frac{n_2}{n_1}t^2$, $R+T=1$"
+   }
+  ],
+  "basis": {
+   "uz": "Shisha sirtidan qaytish",
+   "ru": "Отражение от поверхности стекла",
+   "en": "Reflection from a glass surface"
+  },
+  "answer": "v=1.875\\cdot10^8\\ \\mathrm{m/s};\\ \\lambda=375\\ \\mathrm{nm};\\ E_r\\approx-23\\ \\mathrm{V/m};\\ E_t\\approx77\\ \\mathrm{V/m};\\ R\\approx0.053;\\ T\\approx0.947",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Irodov, «Problems in General Physics», 4.189-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Vakuumdagi to'lqin $\\vec E=E_0\\cos\\left(kz-\\omega t\\right)\\vec i+E_0\\sin\\left(kz-\\omega t\\right)\\vec j$, $E_0=200\\ \\mathrm{V/m}$. $\\vec E$ moduli o'zgarmasligini ko'rsating, $\\vec B$ va Poynting vektorini toping. $z=0$ nuqtada $\\vec E$ qaysi tomonga aylanadi?",
+   "ru": "Волна в вакууме $\\vec E=E_0\\cos\\left(kz-\\omega t\\right)\\vec i+E_0\\sin\\left(kz-\\omega t\\right)\\vec j$, $E_0=200\\ \\mathrm{V/m}$. Покажите, что модуль $\\vec E$ постоянен, найдите $\\vec B$ и вектор Пойнтинга. В какую сторону вращается $\\vec E$ в точке $z=0$?",
+   "en": "A wave in vacuum is $\\vec E=E_0\\cos\\left(kz-\\omega t\\right)\\vec i+E_0\\sin\\left(kz-\\omega t\\right)\\vec j$ with $E_0=200\\ \\mathrm{V/m}$. Show that the magnitude of $\\vec E$ is constant, and find $\\vec B$ and the Poynting vector. In which direction does $\\vec E$ rotate at $z=0$?"
+  },
+  "figure": "figures/B2-L21-S11.png",
+  "solution": {
+   "uz": [
+    "Tashkil etuvchilar teng, fazalar farqi $\\frac{\\pi}{2}$ — doiraviy qutblanish: $$\\left|\\vec E\\right|^2=E_0^2\\left(\\cos^2+\\sin^2\\right)=E_0^2$$",
+    "Magnit maydon, $\\vec n=\\vec k$: $$\\vec B=\\frac{1}{c}\\vec k\\times\\vec E=\\frac{E_0}{c}\\left(-\\sin\\left(kz-\\omega t\\right)\\vec i+\\cos\\left(kz-\\omega t\\right)\\vec j\\right)$$",
+    "Poynting vektori vaqtga bog'liq emas — chiziqli qutblanishdagidan ikki marta katta: $$\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B=\\frac{E_0^2}{\\mu_0c}\\vec k=c\\varepsilon_0E_0^2\\vec k\\approx106\\ \\mathrm{W/m^2}\\,\\vec k$$",
+    "$z=0$ da $\\vec E$ uchi $+x$ dan $-y$ tomonga aylanadi: $$\\vec E\\left(0,t\\right)=E_0\\left(\\cos\\omega t\\,\\vec i-\\sin\\omega t\\,\\vec j\\right)$$"
+   ],
+   "ru": [
+    "Составляющие равны, разность фаз $\\frac{\\pi}{2}$ — круговая поляризация: $$\\left|\\vec E\\right|^2=E_0^2\\left(\\cos^2+\\sin^2\\right)=E_0^2$$",
+    "Магнитное поле, $\\vec n=\\vec k$: $$\\vec B=\\frac{1}{c}\\vec k\\times\\vec E=\\frac{E_0}{c}\\left(-\\sin\\left(kz-\\omega t\\right)\\vec i+\\cos\\left(kz-\\omega t\\right)\\vec j\\right)$$",
+    "Вектор Пойнтинга не зависит от времени — вдвое больше, чем при линейной поляризации: $$\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B=\\frac{E_0^2}{\\mu_0c}\\vec k=c\\varepsilon_0E_0^2\\vec k\\approx106\\ \\mathrm{W/m^2}\\,\\vec k$$",
+    "При $z=0$ конец $\\vec E$ вращается от $+x$ к $-y$: $$\\vec E\\left(0,t\\right)=E_0\\left(\\cos\\omega t\\,\\vec i-\\sin\\omega t\\,\\vec j\\right)$$"
+   ],
+   "en": [
+    "Equal components with a phase difference of $\\frac{\\pi}{2}$ — circular polarization: $$\\left|\\vec E\\right|^2=E_0^2\\left(\\cos^2+\\sin^2\\right)=E_0^2$$",
+    "Magnetic field, $\\vec n=\\vec k$: $$\\vec B=\\frac{1}{c}\\vec k\\times\\vec E=\\frac{E_0}{c}\\left(-\\sin\\left(kz-\\omega t\\right)\\vec i+\\cos\\left(kz-\\omega t\\right)\\vec j\\right)$$",
+    "The Poynting vector is time-independent — twice that for linear polarization: $$\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B=\\frac{E_0^2}{\\mu_0c}\\vec k=c\\varepsilon_0E_0^2\\vec k\\approx106\\ \\mathrm{W/m^2}\\,\\vec k$$",
+    "At $z=0$ the tip of $\\vec E$ turns from $+x$ towards $-y$: $$\\vec E\\left(0,t\\right)=E_0\\left(\\cos\\omega t\\,\\vec i-\\sin\\omega t\\,\\vec j\\right)$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Doiraviy qutblanish: $E_1=E_2$, $\\delta=\\pm\\frac{\\pi}{2}$",
+    "ru": "Круговая поляризация: $E_1=E_2$, $\\delta=\\pm\\frac{\\pi}{2}$",
+    "en": "Circular polarization: $E_1=E_2$, $\\delta=\\pm\\frac{\\pi}{2}$"
+   },
+   {
+    "uz": "Yassi to'lqin: $\\vec B=\\frac{1}{c}\\vec n\\times\\vec E$, $B_0=\\frac{E_0}{c}$",
+    "ru": "Плоская волна: $\\vec B=\\frac{1}{c}\\vec n\\times\\vec E$, $B_0=\\frac{E_0}{c}$",
+    "en": "Plane wave: $\\vec B=\\frac{1}{c}\\vec n\\times\\vec E$, $B_0=\\frac{E_0}{c}$"
+   },
+   {
+    "uz": "Poynting vektori: $\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B$",
+    "ru": "Вектор Пойнтинга: $\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B$",
+    "en": "Poynting vector: $\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Doiraviy qutblangan to'lqin",
+   "ru": "Волна с круговой поляризацией",
+   "en": "A circularly polarized wave"
+  },
+  "answer": "\\left|\\vec E\\right|=E_0;\\ \\vec B=\\frac{E_0}{c}\\left(-\\sin\\left(kz-\\omega t\\right)\\vec i+\\cos\\left(kz-\\omega t\\right)\\vec j\\right);\\ S=c\\varepsilon_0E_0^2\\approx106\\ \\mathrm{W/m^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "Irodov, «Problems in General Physics», 4.196-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Koaksial kabelda ichki o'tkazgich radiusi $1\\ \\mathrm{mm}$, tashqi qobiq radiusi $4\\ \\mathrm{mm}$; manba kuchlanishi $100\\ \\mathrm{V}$, iste'molchi toki $2\\ \\mathrm{A}$ (o'tkazgichlar qarshiligi hisobga olinmaydi). O'qdan $2\\ \\mathrm{mm}$ masofada $E$, $B$ va Poynting vektorini toping. Kabel kesimi orqali o'tadigan to'liq energiya oqimini hisoblang.",
+   "ru": "В коаксиальном кабеле радиус внутреннего проводника $1\\ \\mathrm{mm}$, внешней оболочки $4\\ \\mathrm{mm}$; напряжение источника $100\\ \\mathrm{V}$, ток потребителя $2\\ \\mathrm{A}$ (сопротивлением проводников пренебречь). Найдите $E$, $B$ и вектор Пойнтинга на расстоянии $2\\ \\mathrm{mm}$ от оси. Вычислите полный поток энергии через сечение кабеля.",
+   "en": "In a coaxial cable the inner conductor has radius $1\\ \\mathrm{mm}$ and the outer sheath radius $4\\ \\mathrm{mm}$; the source voltage is $100\\ \\mathrm{V}$ and the load current $2\\ \\mathrm{A}$ (neglect the resistance of the conductors). Find $E$, $B$ and the Poynting vector $2\\ \\mathrm{mm}$ from the axis. Compute the total energy flux through the cross-section of the cable."
+  },
+  "figure": "figures/B2-L21-S12.png",
+  "solution": {
+   "uz": [
+    "Elektr maydon (silindrik kondensator): $$E=\\frac{U}{r\\ln\\frac{b}{a}}=\\frac{100}{2\\cdot10^{-3}\\cdot\\ln4}\\approx3.61\\cdot10^4\\ \\mathrm{V/m}$$",
+    "Magnit maydon — faqat ichki o'tkazgich toki: $$B=\\frac{\\mu_0I}{2\\pi r}=\\frac{4\\pi\\cdot10^{-7}\\cdot2}{2\\pi\\cdot2\\cdot10^{-3}}=2\\cdot10^{-4}\\ \\mathrm{T}$$",
+    "$\\vec E$ radial, $\\vec B$ aylanma — $\\vec S$ kabel o'qi bo'ylab iste'molchiga: $$S=\\frac{EB}{\\mu_0}=\\frac{3.61\\cdot10^4\\cdot2\\cdot10^{-4}}{4\\pi\\cdot10^{-7}}\\approx5.7\\cdot10^6\\ \\mathrm{W/m^2}$$",
+    "Halqa kesim bo'yicha oqim: $$\\int_a^b\\frac{UI}{2\\pi r^2\\ln\\frac{b}{a}}2\\pi r\\,dr=UI=200\\ \\mathrm{W}$$"
+   ],
+   "ru": [
+    "Электрическое поле (цилиндрический конденсатор): $$E=\\frac{U}{r\\ln\\frac{b}{a}}=\\frac{100}{2\\cdot10^{-3}\\cdot\\ln4}\\approx3.61\\cdot10^4\\ \\mathrm{V/m}$$",
+    "Магнитное поле — только ток внутреннего проводника: $$B=\\frac{\\mu_0I}{2\\pi r}=\\frac{4\\pi\\cdot10^{-7}\\cdot2}{2\\pi\\cdot2\\cdot10^{-3}}=2\\cdot10^{-4}\\ \\mathrm{T}$$",
+    "$\\vec E$ радиально, $\\vec B$ по окружности — $\\vec S$ вдоль оси к потребителю: $$S=\\frac{EB}{\\mu_0}=\\frac{3.61\\cdot10^4\\cdot2\\cdot10^{-4}}{4\\pi\\cdot10^{-7}}\\approx5.7\\cdot10^6\\ \\mathrm{W/m^2}$$",
+    "Поток через кольцевое сечение: $$\\int_a^b\\frac{UI}{2\\pi r^2\\ln\\frac{b}{a}}2\\pi r\\,dr=UI=200\\ \\mathrm{W}$$"
+   ],
+   "en": [
+    "Electric field (a cylindrical capacitor): $$E=\\frac{U}{r\\ln\\frac{b}{a}}=\\frac{100}{2\\cdot10^{-3}\\cdot\\ln4}\\approx3.61\\cdot10^4\\ \\mathrm{V/m}$$",
+    "Magnetic field — only the inner conductor's current: $$B=\\frac{\\mu_0I}{2\\pi r}=\\frac{4\\pi\\cdot10^{-7}\\cdot2}{2\\pi\\cdot2\\cdot10^{-3}}=2\\cdot10^{-4}\\ \\mathrm{T}$$",
+    "$\\vec E$ is radial and $\\vec B$ circular — $\\vec S$ points along the axis to the load: $$S=\\frac{EB}{\\mu_0}=\\frac{3.61\\cdot10^4\\cdot2\\cdot10^{-4}}{4\\pi\\cdot10^{-7}}\\approx5.7\\cdot10^6\\ \\mathrm{W/m^2}$$",
+    "Flux through the annular cross-section: $$\\int_a^b\\frac{UI}{2\\pi r^2\\ln\\frac{b}{a}}2\\pi r\\,dr=UI=200\\ \\mathrm{W}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Koaksial kabel: $E=\\frac{U}{r\\ln\\frac{b}{a}}$",
+    "ru": "Коаксиальный кабель: $E=\\frac{U}{r\\ln\\frac{b}{a}}$",
+    "en": "Coaxial cable: $E=\\frac{U}{r\\ln\\frac{b}{a}}$"
+   },
+   {
+    "uz": "To'g'ri tok maydoni: $B=\\frac{\\mu_0I}{2\\pi r}$",
+    "ru": "Поле прямого тока: $B=\\frac{\\mu_0I}{2\\pi r}$",
+    "en": "Field of a straight current: $B=\\frac{\\mu_0I}{2\\pi r}$"
+   },
+   {
+    "uz": "Poynting vektori: $\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B$",
+    "ru": "Вектор Пойнтинга: $\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B$",
+    "en": "Poynting vector: $\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Koaksial kabeldagi energiya oqimi",
+   "ru": "Поток энергии в коаксиальном кабеле",
+   "en": "Energy flow in a coaxial cable"
+  },
+  "answer": "E\\approx3.6\\cdot10^4\\ \\mathrm{V/m};\\ B=0.2\\ \\mathrm{mT};\\ S\\approx5.7\\cdot10^6\\ \\mathrm{W/m^2};\\ \\Phi_S=UI=200\\ \\mathrm{W}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Irodov, «Problems in General Physics», 4.208-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Uzun solenoidning uzunligi $0.5\\ \\mathrm{m}$, radiusi $2\\ \\mathrm{cm}$, birlik uzunlikdagi o'ramlar soni $2000\\ \\mathrm{m^{-1}}$. Biror paytda tok $3\\ \\mathrm{A}$ va $50\\ \\mathrm{A/s}$ tezlik bilan ortmoqda. Solenoid yon sirtida uyurmali elektr maydonni, Poynting vektorini va yon sirt orqali kirayotgan quvvatni toping. Natijani magnit energiyaning o'sish tezligi bilan solishtiring.",
+   "ru": "Длинный соленоид имеет длину $0.5\\ \\mathrm{m}$, радиус $2\\ \\mathrm{cm}$ и $2000\\ \\mathrm{m^{-1}}$ витков на единицу длины. В некоторый момент ток $3\\ \\mathrm{A}$ и растёт со скоростью $50\\ \\mathrm{A/s}$. Найдите вихревое электрическое поле на боковой поверхности соленоида, вектор Пойнтинга и мощность, входящую через боковую поверхность. Сравните результат со скоростью роста магнитной энергии.",
+   "en": "A long solenoid has length $0.5\\ \\mathrm{m}$, radius $2\\ \\mathrm{cm}$ and $2000\\ \\mathrm{m^{-1}}$ turns per unit length. At some instant the current is $3\\ \\mathrm{A}$ and rising at $50\\ \\mathrm{A/s}$. Find the induced electric field at the side surface of the solenoid, the Poynting vector and the power entering through the side surface. Compare the result with the rate of growth of the magnetic energy."
+  },
+  "figure": "figures/B2-L21-S13.png",
+  "solution": {
+   "uz": [
+    "Maydon va uning o'zgarish tezligi: $$B=\\mu_0nI\\approx7.54\\cdot10^{-3}\\ \\mathrm{T},\\qquad \\frac{dB}{dt}=\\mu_0n\\frac{dI}{dt}\\approx0.126\\ \\mathrm{T/s}$$",
+    "Faradey qonunidan — sirtdagi uyurmali maydon: $$E=\\frac{R}{2}\\frac{dB}{dt}=0.01\\cdot0.126\\approx1.26\\cdot10^{-3}\\ \\mathrm{V/m}$$",
+    "$\\vec E$ aylanma, $\\vec B$ o'q bo'ylab — $\\vec S$ ichkariga: $$S=\\frac{EB}{\\mu_0}\\approx7.54\\ \\mathrm{W/m^2},\\qquad S\\cdot2\\pi Rl\\approx0.474\\ \\mathrm{W}$$",
+    "Magnit energiyaning o'sish tezligi — bir xil: $$\\frac{dW}{dt}=LI\\frac{dI}{dt},\\quad L=\\mu_0n^2\\pi R^2l\\approx3.16\\ \\mathrm{mH}\\ \\Rightarrow\\ \\frac{dW}{dt}\\approx0.474\\ \\mathrm{W}$$"
+   ],
+   "ru": [
+    "Поле и скорость его изменения: $$B=\\mu_0nI\\approx7.54\\cdot10^{-3}\\ \\mathrm{T},\\qquad \\frac{dB}{dt}=\\mu_0n\\frac{dI}{dt}\\approx0.126\\ \\mathrm{T/s}$$",
+    "Из закона Фарадея — вихревое поле на поверхности: $$E=\\frac{R}{2}\\frac{dB}{dt}=0.01\\cdot0.126\\approx1.26\\cdot10^{-3}\\ \\mathrm{V/m}$$",
+    "$\\vec E$ по окружности, $\\vec B$ вдоль оси — $\\vec S$ внутрь: $$S=\\frac{EB}{\\mu_0}\\approx7.54\\ \\mathrm{W/m^2},\\qquad S\\cdot2\\pi Rl\\approx0.474\\ \\mathrm{W}$$",
+    "Скорость роста магнитной энергии — та же: $$\\frac{dW}{dt}=LI\\frac{dI}{dt},\\quad L=\\mu_0n^2\\pi R^2l\\approx3.16\\ \\mathrm{mH}\\ \\Rightarrow\\ \\frac{dW}{dt}\\approx0.474\\ \\mathrm{W}$$"
+   ],
+   "en": [
+    "The field and its rate of change: $$B=\\mu_0nI\\approx7.54\\cdot10^{-3}\\ \\mathrm{T},\\qquad \\frac{dB}{dt}=\\mu_0n\\frac{dI}{dt}\\approx0.126\\ \\mathrm{T/s}$$",
+    "From Faraday's law — the induced field at the surface: $$E=\\frac{R}{2}\\frac{dB}{dt}=0.01\\cdot0.126\\approx1.26\\cdot10^{-3}\\ \\mathrm{V/m}$$",
+    "$\\vec E$ is circular and $\\vec B$ axial — $\\vec S$ points inward: $$S=\\frac{EB}{\\mu_0}\\approx7.54\\ \\mathrm{W/m^2},\\qquad S\\cdot2\\pi Rl\\approx0.474\\ \\mathrm{W}$$",
+    "The rate of growth of the magnetic energy — the same: $$\\frac{dW}{dt}=LI\\frac{dI}{dt},\\quad L=\\mu_0n^2\\pi R^2l\\approx3.16\\ \\mathrm{mH}\\ \\Rightarrow\\ \\frac{dW}{dt}\\approx0.474\\ \\mathrm{W}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Solenoid: $B=\\mu_0nI$, $L=\\mu_0n^2\\pi R^2l$",
+    "ru": "Соленоид: $B=\\mu_0nI$, $L=\\mu_0n^2\\pi R^2l$",
+    "en": "Solenoid: $B=\\mu_0nI$, $L=\\mu_0n^2\\pi R^2l$"
+   },
+   {
+    "uz": "Uyurmali maydon: $E=\\frac{R}{2}\\frac{dB}{dt}$ (solenoid sirtida)",
+    "ru": "Вихревое поле: $E=\\frac{R}{2}\\frac{dB}{dt}$ (на поверхности соленоида)",
+    "en": "Induced field: $E=\\frac{R}{2}\\frac{dB}{dt}$ (at the solenoid surface)"
+   },
+   {
+    "uz": "Poynting vektori: $\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B$",
+    "ru": "Вектор Пойнтинга: $\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B$",
+    "en": "Poynting vector: $\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B$"
+   },
+   {
+    "uz": "Magnit energiya: $W=\\frac{LI^2}{2}$",
+    "ru": "Магнитная энергия: $W=\\frac{LI^2}{2}$",
+    "en": "Magnetic energy: $W=\\frac{LI^2}{2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Solenoidga energiya kirishi",
+   "ru": "Поступление энергии в соленоид",
+   "en": "Energy flowing into a solenoid"
+  },
+  "answer": "E\\approx1.26\\cdot10^{-3}\\ \\mathrm{V/m};\\ S\\approx7.5\\ \\mathrm{W/m^2};\\ \\Phi_S=\\frac{dW}{dt}\\approx0.47\\ \\mathrm{W}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "Irodov, «Problems in General Physics», 4.206-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Noferromagnit muhitda to'lqin $\\vec E=60\\cos\\left(10\\pi z-2\\pi\\cdot10^9t\\right)\\vec i$ ($\\mathrm{V/m}$, $z$ — metrda, $t$ — sekundda). Tezlikni, sindirish ko'rsatkichini, dielektrik singdiruvchanlikni, to'lqin uzunligini, $\\vec B$ vektorini va intensivlikni toping. Muhitdagi radiusi $0.5\\ \\mathrm{m}$ bo'lgan sharga $1$ minutda qancha energiya tushadi?",
+   "ru": "В неферромагнитной среде волна $\\vec E=60\\cos\\left(10\\pi z-2\\pi\\cdot10^9t\\right)\\vec i$ ($\\mathrm{V/m}$, $z$ — в метрах, $t$ — в секундах). Найдите скорость, показатель преломления, диэлектрическую проницаемость, длину волны, вектор $\\vec B$ и интенсивность. Какая энергия падает за $1$ минуту на шар радиуса $0.5\\ \\mathrm{m}$, находящийся в среде?",
+   "en": "In a non-ferromagnetic medium a wave is $\\vec E=60\\cos\\left(10\\pi z-2\\pi\\cdot10^9t\\right)\\vec i$ ($\\mathrm{V/m}$, $z$ in metres, $t$ in seconds). Find the speed, the refractive index, the permittivity, the wavelength, the vector $\\vec B$ and the intensity. How much energy falls in $1$ minute on a ball of radius $0.5\\ \\mathrm{m}$ in the medium?"
+  },
+  "figure": "figures/B2-L21-S14.png",
+  "solution": {
+   "uz": [
+    "Ifodadan $k=10\\pi\\ \\mathrm{m^{-1}}$, $\\omega=2\\pi\\cdot10^9\\ \\mathrm{rad/s}$: $$v=\\frac{\\omega}{k}=2\\cdot10^8\\ \\mathrm{m/s},\\quad n=\\frac{c}{v}=1.5,\\quad \\varepsilon=n^2=2.25,\\quad \\lambda=\\frac{2\\pi}{k}=0.2\\ \\mathrm{m}$$",
+    "Magnit maydon, $\\vec n=\\vec k$ ($\\vec k\\times\\vec i=\\vec j$): $$\\vec B=\\frac{n}{c}\\vec k\\times\\vec E=0.3\\cos\\left(10\\pi z-2\\pi\\cdot10^9t\\right)\\vec j\\ \\mu\\mathrm{T}$$",
+    "Intensivlik: $$I=\\frac{1}{2}nc\\varepsilon_0E_0^2=\\frac{1}{2}\\cdot1.5\\cdot2.655\\cdot10^{-3}\\cdot3600\\approx7.17\\ \\mathrm{W/m^2}$$",
+    "Shar nurni kesimi $\\pi R^2$ bilan ushlaydi: $$W=I\\pi R^2t=7.17\\cdot0.785\\cdot60\\approx338\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Из выражения $k=10\\pi\\ \\mathrm{m^{-1}}$, $\\omega=2\\pi\\cdot10^9\\ \\mathrm{rad/s}$: $$v=\\frac{\\omega}{k}=2\\cdot10^8\\ \\mathrm{m/s},\\quad n=\\frac{c}{v}=1.5,\\quad \\varepsilon=n^2=2.25,\\quad \\lambda=\\frac{2\\pi}{k}=0.2\\ \\mathrm{m}$$",
+    "Магнитное поле, $\\vec n=\\vec k$ ($\\vec k\\times\\vec i=\\vec j$): $$\\vec B=\\frac{n}{c}\\vec k\\times\\vec E=0.3\\cos\\left(10\\pi z-2\\pi\\cdot10^9t\\right)\\vec j\\ \\mu\\mathrm{T}$$",
+    "Интенсивность: $$I=\\frac{1}{2}nc\\varepsilon_0E_0^2=\\frac{1}{2}\\cdot1.5\\cdot2.655\\cdot10^{-3}\\cdot3600\\approx7.17\\ \\mathrm{W/m^2}$$",
+    "Шар перехватывает свет сечением $\\pi R^2$: $$W=I\\pi R^2t=7.17\\cdot0.785\\cdot60\\approx338\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "From the expression $k=10\\pi\\ \\mathrm{m^{-1}}$ and $\\omega=2\\pi\\cdot10^9\\ \\mathrm{rad/s}$: $$v=\\frac{\\omega}{k}=2\\cdot10^8\\ \\mathrm{m/s},\\quad n=\\frac{c}{v}=1.5,\\quad \\varepsilon=n^2=2.25,\\quad \\lambda=\\frac{2\\pi}{k}=0.2\\ \\mathrm{m}$$",
+    "Magnetic field, $\\vec n=\\vec k$ ($\\vec k\\times\\vec i=\\vec j$): $$\\vec B=\\frac{n}{c}\\vec k\\times\\vec E=0.3\\cos\\left(10\\pi z-2\\pi\\cdot10^9t\\right)\\vec j\\ \\mu\\mathrm{T}$$",
+    "Intensity: $$I=\\frac{1}{2}nc\\varepsilon_0E_0^2=\\frac{1}{2}\\cdot1.5\\cdot2.655\\cdot10^{-3}\\cdot3600\\approx7.17\\ \\mathrm{W/m^2}$$",
+    "The ball intercepts the wave with its cross-section $\\pi R^2$: $$W=I\\pi R^2t=7.17\\cdot0.785\\cdot60\\approx338\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Moddada: $v=\\frac{c}{n}$, $\\lambda=\\frac{\\lambda_0}{n}$, $f$ o'zgarmaydi",
+    "ru": "В веществе: $v=\\frac{c}{n}$, $\\lambda=\\frac{\\lambda_0}{n}$, $f$ не меняется",
+    "en": "In matter: $v=\\frac{c}{n}$, $\\lambda=\\frac{\\lambda_0}{n}$, $f$ is unchanged"
+   },
+   {
+    "uz": "Moddada: $\\vec B=\\frac{n}{c}\\vec n\\times\\vec E$",
+    "ru": "В веществе: $\\vec B=\\frac{n}{c}\\vec n\\times\\vec E$",
+    "en": "In matter: $\\vec B=\\frac{n}{c}\\vec n\\times\\vec E$"
+   },
+   {
+    "uz": "Moddadagi intensivlik: $I=\\frac{1}{2}nc\\varepsilon_0E_0^2$",
+    "ru": "Интенсивность в веществе: $I=\\frac{1}{2}nc\\varepsilon_0E_0^2$",
+    "en": "Intensity in matter: $I=\\frac{1}{2}nc\\varepsilon_0E_0^2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Muhitdagi to'lqin",
+   "ru": "Волна в среде",
+   "en": "A wave in a medium"
+  },
+  "answer": "n=1.5;\\ \\varepsilon=2.25;\\ \\lambda=0.2\\ \\mathrm{m};\\ B_0=0.3\\ \\mu\\mathrm{T}\\ \\left(\\vec j\\right);\\ I\\approx7.2\\ \\mathrm{W/m^2};\\ W\\approx338\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "Irodov, «Problems in General Physics», 4.198-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L21-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Ionosfera qatlamida elektronlar konsentratsiyasi $10^{12}\\ \\mathrm{m^{-3}}$. Plazma chastotasini toping. Chastotasi $1\\ \\mathrm{MHz}$ va $20\\ \\mathrm{MHz}$ bo'lgan radioto'lqinlardan qaysi biri qatlamdan o'tadi? O'tgan to'lqinning fazaviy va guruh tezliklarini toping.",
+   "ru": "В слое ионосферы концентрация электронов $10^{12}\\ \\mathrm{m^{-3}}$. Найдите плазменную частоту. Какая из радиоволн с частотами $1\\ \\mathrm{MHz}$ и $20\\ \\mathrm{MHz}$ проходит через слой? Найдите фазовую и групповую скорости прошедшей волны.",
+   "en": "In a layer of the ionosphere the electron concentration is $10^{12}\\ \\mathrm{m^{-3}}$. Find the plasma frequency. Which of the radio waves with frequencies $1\\ \\mathrm{MHz}$ and $20\\ \\mathrm{MHz}$ passes through the layer? Find the phase and group velocities of the transmitted wave."
+  },
+  "figure": "figures/B2-L21-S15.png",
+  "solution": {
+   "uz": [
+    "Plazma chastotasi: $$\\omega_p=\\sqrt{\\frac{10^{12}\\cdot\\left(1.6\\cdot10^{-19}\\right)^2}{8.85\\cdot10^{-12}\\cdot9.1\\cdot10^{-31}}}\\approx5.64\\cdot10^7\\ \\mathrm{rad/s},\\qquad f_p\\approx8.97\\ \\mathrm{MHz}$$",
+    "$f<f_p$ bo'lsa to'lqin qaytadi, $f>f_p$ bo'lsa o'tadi: $$1\\ \\mathrm{MHz}<f_p<20\\ \\mathrm{MHz}$$",
+    "$20\\ \\mathrm{MHz}$ uchun $\\sqrt{1-\\frac{f_p^2}{f^2}}\\approx0.894$: $$v_p=\\frac{c}{0.894}\\approx3.36\\cdot10^8\\ \\mathrm{m/s},\\qquad v_g=0.894c\\approx2.68\\cdot10^8\\ \\mathrm{m/s},\\qquad v_pv_g=c^2$$"
+   ],
+   "ru": [
+    "Плазменная частота: $$\\omega_p=\\sqrt{\\frac{10^{12}\\cdot\\left(1.6\\cdot10^{-19}\\right)^2}{8.85\\cdot10^{-12}\\cdot9.1\\cdot10^{-31}}}\\approx5.64\\cdot10^7\\ \\mathrm{rad/s},\\qquad f_p\\approx8.97\\ \\mathrm{MHz}$$",
+    "При $f<f_p$ волна отражается, при $f>f_p$ проходит: $$1\\ \\mathrm{MHz}<f_p<20\\ \\mathrm{MHz}$$",
+    "Для $20\\ \\mathrm{MHz}$ $\\sqrt{1-\\frac{f_p^2}{f^2}}\\approx0.894$: $$v_p=\\frac{c}{0.894}\\approx3.36\\cdot10^8\\ \\mathrm{m/s},\\qquad v_g=0.894c\\approx2.68\\cdot10^8\\ \\mathrm{m/s},\\qquad v_pv_g=c^2$$"
+   ],
+   "en": [
+    "Plasma frequency: $$\\omega_p=\\sqrt{\\frac{10^{12}\\cdot\\left(1.6\\cdot10^{-19}\\right)^2}{8.85\\cdot10^{-12}\\cdot9.1\\cdot10^{-31}}}\\approx5.64\\cdot10^7\\ \\mathrm{rad/s},\\qquad f_p\\approx8.97\\ \\mathrm{MHz}$$",
+    "For $f<f_p$ the wave is reflected; for $f>f_p$ it passes: $$1\\ \\mathrm{MHz}<f_p<20\\ \\mathrm{MHz}$$",
+    "For $20\\ \\mathrm{MHz}$, $\\sqrt{1-\\frac{f_p^2}{f^2}}\\approx0.894$: $$v_p=\\frac{c}{0.894}\\approx3.36\\cdot10^8\\ \\mathrm{m/s},\\qquad v_g=0.894c\\approx2.68\\cdot10^8\\ \\mathrm{m/s},\\qquad v_pv_g=c^2$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Plazma chastotasi: $\\omega_p=\\sqrt{\\frac{ne^2}{\\varepsilon_0m}}$",
+    "ru": "Плазменная частота: $\\omega_p=\\sqrt{\\frac{ne^2}{\\varepsilon_0m}}$",
+    "en": "Plasma frequency: $\\omega_p=\\sqrt{\\frac{ne^2}{\\varepsilon_0m}}$"
+   },
+   null,
+   {
+    "uz": "Plazmada: $v_g=c\\sqrt{1-\\frac{\\omega_p^2}{\\omega^2}}$, $v_pv_g=c^2$",
+    "ru": "В плазме: $v_g=c\\sqrt{1-\\frac{\\omega_p^2}{\\omega^2}}$, $v_pv_g=c^2$",
+    "en": "In a plasma: $v_g=c\\sqrt{1-\\frac{\\omega_p^2}{\\omega^2}}$, $v_pv_g=c^2$"
+   }
+  ],
+  "basis": {
+   "uz": "Ionosfera plazmasi",
+   "ru": "Плазма ионосферы",
+   "en": "The ionospheric plasma"
+  },
+  "answer": "f_p\\approx9.0\\ \\mathrm{MHz};\\ 20\\ \\mathrm{MHz};\\ v_p\\approx3.36\\cdot10^8\\ \\mathrm{m/s};\\ v_g\\approx2.68\\cdot10^8\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L21, plazma chastotasi)"
+ },
+ {
+  "id": "B2-L21-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Dengiz suvining solishtirma o'tkazuvchanligi $4\\ \\mathrm{S/m}$ ($\\mu=1$). $10\\ \\mathrm{kHz}$ va $1\\ \\mathrm{MHz}$ chastotalarda skin-qatlam qalinligini toping. Qanday chuqurlikda radioto'lqin intensivligi $10^6$ marta kamayadi?",
+   "ru": "Удельная проводимость морской воды $4\\ \\mathrm{S/m}$ ($\\mu=1$). Найдите толщину скин-слоя на частотах $10\\ \\mathrm{kHz}$ и $1\\ \\mathrm{MHz}$. На какой глубине интенсивность радиоволны уменьшается в $10^6$ раз?",
+   "en": "Sea water has conductivity $4\\ \\mathrm{S/m}$ ($\\mu=1$). Find the skin depth at $10\\ \\mathrm{kHz}$ and at $1\\ \\mathrm{MHz}$. At what depth does the intensity of a radio wave fall by a factor of $10^6$?"
+  },
+  "figure": "figures/B2-L21-S16.png",
+  "solution": {
+   "uz": [
+    "Skin-qatlam: $$\\delta=\\sqrt{\\frac{2}{\\mu_0\\sigma\\omega}}=\\frac{1}{\\sqrt{\\pi f\\mu_0\\sigma}}:\\quad \\delta\\left(10\\ \\mathrm{kHz}\\right)\\approx2.52\\ \\mathrm{m},\\quad \\delta\\left(1\\ \\mathrm{MHz}\\right)\\approx0.252\\ \\mathrm{m}$$",
+    "Intensivlik $e^{-\\frac{2x}{\\delta}}$ kabi kamayadi: $$x=\\frac{\\delta}{2}\\ln10^6\\approx6.9\\delta:\\quad x\\left(10\\ \\mathrm{kHz}\\right)\\approx17\\ \\mathrm{m},\\quad x\\left(1\\ \\mathrm{MHz}\\right)\\approx1.7\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Скин-слой: $$\\delta=\\sqrt{\\frac{2}{\\mu_0\\sigma\\omega}}=\\frac{1}{\\sqrt{\\pi f\\mu_0\\sigma}}:\\quad \\delta\\left(10\\ \\mathrm{kHz}\\right)\\approx2.52\\ \\mathrm{m},\\quad \\delta\\left(1\\ \\mathrm{MHz}\\right)\\approx0.252\\ \\mathrm{m}$$",
+    "Интенсивность убывает как $e^{-\\frac{2x}{\\delta}}$: $$x=\\frac{\\delta}{2}\\ln10^6\\approx6.9\\delta:\\quad x\\left(10\\ \\mathrm{kHz}\\right)\\approx17\\ \\mathrm{m},\\quad x\\left(1\\ \\mathrm{MHz}\\right)\\approx1.7\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "Skin depth: $$\\delta=\\sqrt{\\frac{2}{\\mu_0\\sigma\\omega}}=\\frac{1}{\\sqrt{\\pi f\\mu_0\\sigma}}:\\quad \\delta\\left(10\\ \\mathrm{kHz}\\right)\\approx2.52\\ \\mathrm{m},\\quad \\delta\\left(1\\ \\mathrm{MHz}\\right)\\approx0.252\\ \\mathrm{m}$$",
+    "The intensity decreases as $e^{-\\frac{2x}{\\delta}}$: $$x=\\frac{\\delta}{2}\\ln10^6\\approx6.9\\delta:\\quad x\\left(10\\ \\mathrm{kHz}\\right)\\approx17\\ \\mathrm{m},\\quad x\\left(1\\ \\mathrm{MHz}\\right)\\approx1.7\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Skin-qatlam: $\\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}$",
+    "ru": "Скин-слой: $\\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}$",
+    "en": "Skin depth: $\\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}$"
+   },
+   {
+    "uz": "O'tkazgichda: $I=I_0e^{-\\frac{2x}{\\delta}}$",
+    "ru": "В проводнике: $I=I_0e^{-\\frac{2x}{\\delta}}$",
+    "en": "In a conductor: $I=I_0e^{-\\frac{2x}{\\delta}}$"
+   }
+  ],
+  "basis": {
+   "uz": "Dengiz suvida radioto'lqinlar",
+   "ru": "Радиоволны в морской воде",
+   "en": "Radio waves in sea water"
+  },
+  "answer": "\\delta\\approx2.52\\ \\mathrm{m}\\ \\left(10\\ \\mathrm{kHz}\\right),\\ 0.252\\ \\mathrm{m}\\ \\left(1\\ \\mathrm{MHz}\\right);\\ x\\approx17\\ \\mathrm{m},\\ 1.7\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B2-L21, dengiz suvi)"
+ },
+ {
+  "id": "B2-L21-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "To'g'ri burchakli to'lqin o'tkazgich kesimi $2.5\\ \\mathrm{cm}\\times1\\ \\mathrm{cm}$. Eng past modaning kesish chastotasini va keyingi modalar chastotalarini toping. $10\\ \\mathrm{GHz}$ chastotali signal uchun quvurdagi to'lqin uzunligini, guruh va fazaviy tezliklarni hisoblang.",
+   "ru": "Прямоугольный волновод имеет сечение $2.5\\ \\mathrm{cm}\\times1\\ \\mathrm{cm}$. Найдите частоту отсечки низшей моды и частоты следующих мод. Для сигнала частотой $10\\ \\mathrm{GHz}$ вычислите длину волны в волноводе, групповую и фазовую скорости.",
+   "en": "A rectangular waveguide has a cross-section of $2.5\\ \\mathrm{cm}\\times1\\ \\mathrm{cm}$. Find the cutoff frequency of the lowest mode and the frequencies of the next modes. For a $10\\ \\mathrm{GHz}$ signal compute the wavelength in the guide and the group and phase velocities."
+  },
+  "figure": "figures/B2-L21-S17.png",
+  "solution": {
+   "uz": [
+    "Kesish chastotalari ($a$ bo'ylab bitta va ikkita yarim to'lqin, $b$ bo'ylab bitta): $$f_c=\\frac{c}{2a}=6\\ \\mathrm{GHz},\\qquad \\frac{c}{a}=12\\ \\mathrm{GHz},\\qquad \\frac{c}{2b}=15\\ \\mathrm{GHz}$$",
+    "$10\\ \\mathrm{GHz}$ da faqat eng past moda; $\\lambda_0=3\\ \\mathrm{cm}$: $$\\sqrt{1-\\frac{f_c^2}{f^2}}=\\sqrt{1-0.36}=0.8,\\qquad \\lambda_g=\\frac{3\\ \\mathrm{cm}}{0.8}=3.75\\ \\mathrm{cm}$$",
+    "Tezliklar: $$v_g=0.8c=2.4\\cdot10^8\\ \\mathrm{m/s},\\qquad v_p=\\frac{c}{0.8}=3.75\\cdot10^8\\ \\mathrm{m/s},\\qquad v_pv_g=c^2$$"
+   ],
+   "ru": [
+    "Частоты отсечки (одна и две полуволны вдоль $a$, одна вдоль $b$): $$f_c=\\frac{c}{2a}=6\\ \\mathrm{GHz},\\qquad \\frac{c}{a}=12\\ \\mathrm{GHz},\\qquad \\frac{c}{2b}=15\\ \\mathrm{GHz}$$",
+    "На $10\\ \\mathrm{GHz}$ только низшая мода; $\\lambda_0=3\\ \\mathrm{cm}$: $$\\sqrt{1-\\frac{f_c^2}{f^2}}=\\sqrt{1-0.36}=0.8,\\qquad \\lambda_g=\\frac{3\\ \\mathrm{cm}}{0.8}=3.75\\ \\mathrm{cm}$$",
+    "Скорости: $$v_g=0.8c=2.4\\cdot10^8\\ \\mathrm{m/s},\\qquad v_p=\\frac{c}{0.8}=3.75\\cdot10^8\\ \\mathrm{m/s},\\qquad v_pv_g=c^2$$"
+   ],
+   "en": [
+    "Cutoff frequencies (one and two half-waves along $a$, one along $b$): $$f_c=\\frac{c}{2a}=6\\ \\mathrm{GHz},\\qquad \\frac{c}{a}=12\\ \\mathrm{GHz},\\qquad \\frac{c}{2b}=15\\ \\mathrm{GHz}$$",
+    "At $10\\ \\mathrm{GHz}$ only the lowest mode; $\\lambda_0=3\\ \\mathrm{cm}$: $$\\sqrt{1-\\frac{f_c^2}{f^2}}=\\sqrt{1-0.36}=0.8,\\qquad \\lambda_g=\\frac{3\\ \\mathrm{cm}}{0.8}=3.75\\ \\mathrm{cm}$$",
+    "Velocities: $$v_g=0.8c=2.4\\cdot10^8\\ \\mathrm{m/s},\\qquad v_p=\\frac{c}{0.8}=3.75\\cdot10^8\\ \\mathrm{m/s},\\qquad v_pv_g=c^2$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'lqin o'tkazgich: $f_c=\\frac{c}{2a}$",
+    "ru": "Волновод: $f_c=\\frac{c}{2a}$",
+    "en": "Waveguide: $f_c=\\frac{c}{2a}$"
+   },
+   {
+    "uz": "To'lqin o'tkazgichda: $v_g=c\\sqrt{1-\\frac{f_c^2}{f^2}}$, $\\lambda_g=\\frac{\\lambda_0}{\\sqrt{1-\\frac{f_c^2}{f^2}}}$",
+    "ru": "В волноводе: $v_g=c\\sqrt{1-\\frac{f_c^2}{f^2}}$, $\\lambda_g=\\frac{\\lambda_0}{\\sqrt{1-\\frac{f_c^2}{f^2}}}$",
+    "en": "In a waveguide: $v_g=c\\sqrt{1-\\frac{f_c^2}{f^2}}$, $\\lambda_g=\\frac{\\lambda_0}{\\sqrt{1-\\frac{f_c^2}{f^2}}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "To'g'ri burchakli to'lqin o'tkazgich",
+   "ru": "Прямоугольный волновод",
+   "en": "A rectangular waveguide"
+  },
+  "answer": "f_c=6\\ \\mathrm{GHz};\\ 12\\ \\mathrm{GHz},\\ 15\\ \\mathrm{GHz};\\ \\lambda_g=3.75\\ \\mathrm{cm};\\ v_g=2.4\\cdot10^8\\ \\mathrm{m/s};\\ v_p=3.75\\cdot10^8\\ \\mathrm{m/s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L21, to'lqin o'tkazgich)"
+ },
+ {
+  "id": "B2-L21-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Quvvati $10\\ \\mathrm{mW}$, to'lqin uzunligi $600\\ \\mathrm{nm}$ bo'lgan doiraviy qutblangan lazer nuri ipga osilgan diskda to'liq yutiladi. Diskka ta'sir qiluvchi kuch momentini toping. Natijani fotonlar soni orqali tekshiring. Disk o'rniga nurning aylanish yo'nalishini teskari qiladigan yarim to'lqinli plastinka qo'yilsa, moment qanday bo'ladi?",
+   "ru": "Лазерный луч с круговой поляризацией мощностью $10\\ \\mathrm{mW}$ и длиной волны $600\\ \\mathrm{nm}$ полностью поглощается диском, подвешенным на нити. Найдите действующий на диск момент силы. Проверьте результат через число фотонов. Каким будет момент, если вместо диска поставить полуволновую пластинку, обращающую направление вращения?",
+   "en": "A circularly polarized laser beam of power $10\\ \\mathrm{mW}$ and wavelength $600\\ \\mathrm{nm}$ is completely absorbed by a disc hanging on a thread. Find the torque on the disc. Check the result by counting photons. What is the torque if the disc is replaced by a half-wave plate that reverses the sense of rotation?"
+  },
+  "figure": "figures/B2-L21-S18.png",
+  "solution": {
+   "uz": [
+    "Siklik chastota: $$\\omega=\\frac{2\\pi c}{\\lambda}=\\frac{2\\pi\\cdot3\\cdot10^8}{6\\cdot10^{-7}}\\approx3.14\\cdot10^{15}\\ \\mathrm{rad/s}$$",
+    "Har sekundda yutiladigan impuls momenti: $$\\tau=\\frac{1}{\\omega}\\frac{dU}{dt}=\\frac{10^{-2}}{3.14\\cdot10^{15}}\\approx3.18\\cdot10^{-18}\\ \\mathrm{N\\cdot m}$$",
+    "Fotonlar: har biri $\\hbar$ spin tashiydi: $$N=\\frac{\\mathcal P\\lambda}{hc}\\approx3.02\\cdot10^{16}\\ \\mathrm{s^{-1}},\\qquad \\tau=N\\hbar\\approx3.18\\cdot10^{-18}\\ \\mathrm{N\\cdot m}$$",
+    "Plastinkada spin $+\\hbar$ dan $-\\hbar$ ga o'zgaradi — moment ikki baravar: $$\\tau'=2\\tau\\approx6.4\\cdot10^{-18}\\ \\mathrm{N\\cdot m}$$"
+   ],
+   "ru": [
+    "Циклическая частота: $$\\omega=\\frac{2\\pi c}{\\lambda}=\\frac{2\\pi\\cdot3\\cdot10^8}{6\\cdot10^{-7}}\\approx3.14\\cdot10^{15}\\ \\mathrm{rad/s}$$",
+    "Момент импульса, поглощаемый за секунду: $$\\tau=\\frac{1}{\\omega}\\frac{dU}{dt}=\\frac{10^{-2}}{3.14\\cdot10^{15}}\\approx3.18\\cdot10^{-18}\\ \\mathrm{N\\cdot m}$$",
+    "Фотоны: каждый несёт спин $\\hbar$: $$N=\\frac{\\mathcal P\\lambda}{hc}\\approx3.02\\cdot10^{16}\\ \\mathrm{s^{-1}},\\qquad \\tau=N\\hbar\\approx3.18\\cdot10^{-18}\\ \\mathrm{N\\cdot m}$$",
+    "В пластинке спин меняется с $+\\hbar$ на $-\\hbar$ — момент вдвое больше: $$\\tau'=2\\tau\\approx6.4\\cdot10^{-18}\\ \\mathrm{N\\cdot m}$$"
+   ],
+   "en": [
+    "Angular frequency: $$\\omega=\\frac{2\\pi c}{\\lambda}=\\frac{2\\pi\\cdot3\\cdot10^8}{6\\cdot10^{-7}}\\approx3.14\\cdot10^{15}\\ \\mathrm{rad/s}$$",
+    "Angular momentum absorbed per second: $$\\tau=\\frac{1}{\\omega}\\frac{dU}{dt}=\\frac{10^{-2}}{3.14\\cdot10^{15}}\\approx3.18\\cdot10^{-18}\\ \\mathrm{N\\cdot m}$$",
+    "Photons: each carries spin $\\hbar$: $$N=\\frac{\\mathcal P\\lambda}{hc}\\approx3.02\\cdot10^{16}\\ \\mathrm{s^{-1}},\\qquad \\tau=N\\hbar\\approx3.18\\cdot10^{-18}\\ \\mathrm{N\\cdot m}$$",
+    "In the plate the spin changes from $+\\hbar$ to $-\\hbar$ — twice the torque: $$\\tau'=2\\tau\\approx6.4\\cdot10^{-18}\\ \\mathrm{N\\cdot m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'lqin kattaliklari: $c=\\lambda f=\\frac{\\omega}{k}$, $k=\\frac{2\\pi}{\\lambda}$",
+    "ru": "Характеристики волны: $c=\\lambda f=\\frac{\\omega}{k}$, $k=\\frac{2\\pi}{\\lambda}$",
+    "en": "Wave quantities: $c=\\lambda f=\\frac{\\omega}{k}$, $k=\\frac{2\\pi}{\\lambda}$"
+   },
+   {
+    "uz": "Impuls momenti: $L=\\frac{U}{\\omega}$, $\\tau=\\frac{1}{\\omega}\\frac{dU}{dt}$",
+    "ru": "Момент импульса: $L=\\frac{U}{\\omega}$, $\\tau=\\frac{1}{\\omega}\\frac{dU}{dt}$",
+    "en": "Angular momentum: $L=\\frac{U}{\\omega}$, $\\tau=\\frac{1}{\\omega}\\frac{dU}{dt}$"
+   },
+   {
+    "uz": "Foton: $E_\\gamma=hf=\\frac{hc}{\\lambda}$, spin $\\hbar$",
+    "ru": "Фотон: $E_\\gamma=hf=\\frac{hc}{\\lambda}$, спин $\\hbar$",
+    "en": "Photon: $E_\\gamma=hf=\\frac{hc}{\\lambda}$, spin $\\hbar$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Yorug'likning impuls momenti",
+   "ru": "Момент импульса света",
+   "en": "The angular momentum of light"
+  },
+  "answer": "\\tau\\approx3.2\\cdot10^{-18}\\ \\mathrm{N\\cdot m};\\ N\\approx3.0\\cdot10^{16}\\ \\mathrm{s^{-1}};\\ \\tau'\\approx6.4\\cdot10^{-18}\\ \\mathrm{N\\cdot m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L21, Bet tajribasi)"
+ }
+]

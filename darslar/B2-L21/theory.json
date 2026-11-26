@@ -1,0 +1,707 @@
+[
+ {
+  "t": "h1",
+  "uz": "Elektromagnit to'lqinlar, Poynting vektori (Electromagnetic waves, the Poynting vector)",
+  "ru": "Электромагнитные волны, вектор Пойнтинга",
+  "en": "Electromagnetic waves, the Poynting vector"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz Maksvell tenglamalaridan yassi elektromagnit to'lqinning xossalarini keltirib chiqarasiz va to'lqin ifodasidan uning yo'nalishi, chastotasi, to'lqin uzunligi va magnit maydonini topasiz; spektr sohalarini va qutblanish holatlarini ajratasiz; energiya zichligi, Poynting vektori va intensivlikni hisoblaysiz; Poynting teoremasini sim, kondensator, kabel va g'altakka qo'llaysiz; to'lqin impulsi va yorug'lik bosimini (burchak ostida ham) topasiz; moddadagi to'lqin tezligi, to'lqin qarshiligi va chegaradan qaytish koeffitsiyentlarini hisoblaysiz; o'tkazgich, plazma, rezonator va to'lqin o'tkazgichdagi to'lqinlarni baholaysiz.",
+  "ru": "**Цель.** После урока вы будете выводить из уравнений Максвелла свойства плоской электромагнитной волны и находить по выражению волны её направление, частоту, длину волны и магнитное поле; различать диапазоны спектра и состояния поляризации; вычислять плотность энергии, вектор Пойнтинга и интенсивность; применять теорему Пойнтинга к проводу, конденсатору, кабелю и катушке; находить импульс волны и давление света (в том числе под углом); вычислять скорость волны в веществе, волновое сопротивление и коэффициенты отражения от границы; оценивать волны в проводнике, плазме, резонаторе и волноводе.",
+  "en": "**Goal.** After this lesson you will derive the properties of a plane electromagnetic wave from Maxwell's equations and read off its direction, frequency, wavelength and magnetic field from the wave expression; distinguish the regions of the spectrum and the polarization states; compute the energy density, the Poynting vector and the intensity; apply Poynting's theorem to a wire, a capacitor, a cable and a coil; find the momentum of a wave and the radiation pressure (also at an angle); compute the wave speed in matter, the wave impedance and the reflection coefficients at a boundary; and estimate waves in a conductor, a plasma, a resonator and a waveguide."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L20 da Maksvell tenglamalaridan to'lqin tenglamasini oldik va yorug'lik tezligi $c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$ ekanini ko'rdik. Endi to'lqinning o'zini o'rganamiz: u qanday tuzilgan, qancha energiya va impuls tashiydi, modda va chegaralar bilan qanday ta'sirlashadi. GRE da bu mavzudan har testda 2–4 savol bo'ladi: $\\vec E$, $\\vec B$ va $\\vec S$ yo'nalishlari, $B_0=\\frac{E_0}{c}$, intensivlik va masofa, yorug'lik bosimi, sindirish ko'rsatkichi va qaytish. Nurlanish manbalari (tebranuvchi dipol, tezlanuvchi zaryad) B2-L23 da, qutblagichlar va Malyus qonuni B2-L27 da.",
+  "ru": "В B2-L20 мы получили из уравнений Максвелла волновое уравнение и увидели, что скорость света $c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$. Теперь изучим саму волну: как она устроена, сколько энергии и импульса переносит, как взаимодействует с веществом и границами. В GRE по этой теме в каждом тесте 2–4 вопроса: направления $\\vec E$, $\\vec B$ и $\\vec S$, $B_0=\\frac{E_0}{c}$, интенсивность и расстояние, давление света, показатель преломления и отражение. Источники излучения (колеблющийся диполь, ускоренный заряд) — в B2-L23, поляризаторы и закон Малюса — в B2-L27.",
+  "en": "In B2-L20 we obtained the wave equation from Maxwell's equations and saw that the speed of light is $c=\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$. Now we study the wave itself: how it is built, how much energy and momentum it carries, and how it interacts with matter and boundaries. The GRE has 2–4 questions on this topic in every test: the directions of $\\vec E$, $\\vec B$ and $\\vec S$, $B_0=\\frac{E_0}{c}$, intensity and distance, radiation pressure, the refractive index and reflection. Sources of radiation (an oscillating dipole, an accelerating charge) are in B2-L23; polarizers and Malus's law are in B2-L27."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Maksvell tenglamalaridan yassi to'lqin",
+  "ru": "1. Плоская волна из уравнений Максвелла",
+  "en": "1. The plane wave from Maxwell's equations"
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy yechim.** Bo'shliqda (zaryad va toksiz) har bir maydon tashkil etuvchisi to'lqin tenglamasini qanoatlantiradi. Agar maydon faqat $x$ va $t$ ga bog'liq bo'lsa, tenglama $\\frac{\\partial^2E}{\\partial x^2}=\\frac{1}{c^2}\\frac{\\partial^2E}{\\partial t^2}$ ko'rinishga keladi va uning umumiy yechimi — ikki ixtiyoriy shaklning yig'indisi: $f\\left(x-ct\\right)$ o'ngga, $g\\left(x+ct\\right)$ chapga shaklini o'zgartirmasdan $c$ tezlik bilan siljiydi. $x$ ga perpendikulyar har bir tekislikda maydon bir xil bo'lgani uchun bunday to'lqin **yassi to'lqin (plane wave)** deyiladi. Uzoq manbadan kelgan to'lqinni kichik sohada yassi deb hisoblash mumkin.",
+  "ru": "**Общее решение.** В пустоте (без зарядов и токов) каждая компонента поля удовлетворяет волновому уравнению. Если поле зависит только от $x$ и $t$, уравнение принимает вид $\\frac{\\partial^2E}{\\partial x^2}=\\frac{1}{c^2}\\frac{\\partial^2E}{\\partial t^2}$, и его общее решение — сумма двух произвольных профилей: $f\\left(x-ct\\right)$ сдвигается вправо, $g\\left(x+ct\\right)$ — влево со скоростью $c$, не меняя формы. Поскольку в каждой плоскости, перпендикулярной $x$, поле одинаково, такая волна называется **плоской волной (plane wave)**. Волну от далёкого источника в небольшой области можно считать плоской.",
+  "en": "**The general solution.** In empty space (no charges or currents) each field component satisfies the wave equation. If the field depends only on $x$ and $t$, the equation becomes $\\frac{\\partial^2E}{\\partial x^2}=\\frac{1}{c^2}\\frac{\\partial^2E}{\\partial t^2}$, and its general solution is the sum of two arbitrary profiles: $f\\left(x-ct\\right)$ moves to the right and $g\\left(x+ct\\right)$ to the left with speed $c$, without changing shape. Since the field is the same in every plane perpendicular to $x$, such a wave is called a **plane wave**. A wave from a distant source may be treated as plane over a small region."
+ },
+ {
+  "t": "li",
+  "uz": "**Monoxromatik to'lqin.** Eng muhim hol — sinusoidal (bitta chastotali) to'lqin. Uning elektr maydoni $\\vec j$ bo'ylab, magnit maydoni $\\vec k$ bo'ylab yo'nalgan bo'lsin. Faradey qonunining $z$ tashkil etuvchisi $\\frac{\\partial E_y}{\\partial x}=-\\frac{\\partial B_z}{\\partial t}$ ikki amplituda orasidagi bog'lanishni beradi, to'lqin tenglamasi esa **dispersiya munosabati (dispersion relation)** $\\omega=ck$ ni beradi. Fazasi $kx-\\omega t$ o'zgarmas bo'lgan nuqta $\\frac{dx}{dt}=\\frac{\\omega}{k}=c$ tezlik bilan siljiydi — bu **fazaviy tezlik (phase velocity)**.",
+  "ru": "**Монохроматическая волна.** Важнейший случай — синусоидальная (одночастотная) волна. Пусть её электрическое поле направлено вдоль $\\vec j$, а магнитное — вдоль $\\vec k$. Компонента $z$ закона Фарадея $\\frac{\\partial E_y}{\\partial x}=-\\frac{\\partial B_z}{\\partial t}$ даёт связь между двумя амплитудами, а волновое уравнение — **закон дисперсии (dispersion relation)** $\\omega=ck$. Точка с постоянной фазой $kx-\\omega t$ движется со скоростью $\\frac{dx}{dt}=\\frac{\\omega}{k}=c$ — это **фазовая скорость (phase velocity)**.",
+  "en": "**A monochromatic wave.** The most important case is a sinusoidal (single-frequency) wave. Let its electric field point along $\\vec j$ and its magnetic field along $\\vec k$. The $z$ component of Faraday's law, $\\frac{\\partial E_y}{\\partial x}=-\\frac{\\partial B_z}{\\partial t}$, gives the relation between the two amplitudes, and the wave equation gives the **dispersion relation** $\\omega=ck$. A point of constant phase $kx-\\omega t$ moves with speed $\\frac{dx}{dt}=\\frac{\\omega}{k}=c$ — this is the **phase velocity**."
+ },
+ {
+  "t": "m",
+  "m": "\\vec E=E_0\\cos\\left(kx-\\omega t\\right)\\vec j,\\qquad \\vec B=B_0\\cos\\left(kx-\\omega t\\right)\\vec k,\\qquad B_0=\\frac{E_0}{c},\\qquad \\omega=ck"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L21-F01.png",
+   "ru": "figures/B2-L21-F01-ru.png",
+   "en": "figures/B2-L21-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**To'rtta xossa ([[F01]]).** 1) To'lqin **ko'ndalang (transverse)**: $\\nabla\\cdot\\vec E=0$ va $\\nabla\\cdot\\vec B=0$ dan $\\vec E\\perp\\vec n$ va $\\vec B\\perp\\vec n$, bu yerda $\\vec n$ — tarqalish yo'nalishining birlik vektori. 2) $\\vec E\\perp\\vec B$, va $\\vec E\\times\\vec B$ har doim tarqalish yo'nalishiga qaragan (o'ng uchlik $\\vec E,\\ \\vec B,\\ \\vec n$). 3) $\\vec E$ va $\\vec B$ **bir fazada (in phase)** tebranadi: ikkalasi bir vaqtda maksimal va bir vaqtda nol. 4) Har lahzada $E=cB$. Bularni bitta vektor formulaga yig'ish qulay — u istalgan yo'nalishdagi to'lqin uchun $\\vec B$ ni beradi:",
+  "ru": "**Четыре свойства ([[F01]]).** 1) Волна **поперечная (transverse)**: из $\\nabla\\cdot\\vec E=0$ и $\\nabla\\cdot\\vec B=0$ следует $\\vec E\\perp\\vec n$ и $\\vec B\\perp\\vec n$, где $\\vec n$ — единичный вектор направления распространения. 2) $\\vec E\\perp\\vec B$, и $\\vec E\\times\\vec B$ всегда направлено по распространению (правая тройка $\\vec E,\\ \\vec B,\\ \\vec n$). 3) $\\vec E$ и $\\vec B$ колеблются **в фазе (in phase)**: оба одновременно максимальны и одновременно равны нулю. 4) В каждый момент $E=cB$. Удобно собрать это в одну векторную формулу — она даёт $\\vec B$ для волны любого направления:",
+  "en": "**Four properties ([[F01]]).** 1) The wave is **transverse**: from $\\nabla\\cdot\\vec E=0$ and $\\nabla\\cdot\\vec B=0$ it follows that $\\vec E\\perp\\vec n$ and $\\vec B\\perp\\vec n$, where $\\vec n$ is the unit vector along the direction of travel. 2) $\\vec E\\perp\\vec B$, and $\\vec E\\times\\vec B$ always points along the direction of travel (a right-handed triple $\\vec E,\\ \\vec B,\\ \\vec n$). 3) $\\vec E$ and $\\vec B$ oscillate **in phase**: both are maximal at the same time and zero at the same time. 4) At every instant $E=cB$. It is convenient to collect this in one vector formula — it gives $\\vec B$ for a wave travelling in any direction:"
+ },
+ {
+  "t": "m",
+  "m": "\\vec B=\\frac{1}{c}\\,\\vec n\\times\\vec E,\\qquad \\vec E=c\\,\\vec B\\times\\vec n,\\qquad \\vec E=\\vec E_0\\cos\\left(\\vec k\\cdot\\vec r-\\omega t\\right),\\qquad \\vec k=k\\vec n"
+ },
+ {
+  "t": "li",
+  "uz": "**To'lqin ifodasini o'qish.** $\\cos\\left(kx-\\omega t\\right)$ — $+x$ tomonga, $\\cos\\left(kx+\\omega t\\right)$ — $-x$ tomonga tarqaladi (faza o'zgarmasligi uchun $t$ ortganda $x$ kamayishi kerak). Masalan, $\\vec E=E_0\\cos\\left(kz+\\omega t\\right)\\vec i$ uchun $\\vec n=-\\vec k$ va $\\vec B=\\frac{1}{c}\\left(-\\vec k\\right)\\times\\vec E=-\\frac{E_0}{c}\\cos\\left(kz+\\omega t\\right)\\vec j$. Tekshirish: $\\vec E\\times\\vec B\\propto\\vec i\\times\\left(-\\vec j\\right)=-\\vec k$ — to'g'ri. GRE da eng ko'p xato — $\\vec B$ ning ishorasi; har safar $\\vec E\\times\\vec B$ bilan tekshiring.",
+  "ru": "**Чтение выражения волны.** $\\cos\\left(kx-\\omega t\\right)$ распространяется в сторону $+x$, $\\cos\\left(kx+\\omega t\\right)$ — в сторону $-x$ (чтобы фаза не менялась, при росте $t$ должно уменьшаться $x$). Например, для $\\vec E=E_0\\cos\\left(kz+\\omega t\\right)\\vec i$ имеем $\\vec n=-\\vec k$ и $\\vec B=\\frac{1}{c}\\left(-\\vec k\\right)\\times\\vec E=-\\frac{E_0}{c}\\cos\\left(kz+\\omega t\\right)\\vec j$. Проверка: $\\vec E\\times\\vec B\\propto\\vec i\\times\\left(-\\vec j\\right)=-\\vec k$ — верно. Самая частая ошибка в GRE — знак $\\vec B$; каждый раз проверяйте через $\\vec E\\times\\vec B$.",
+  "en": "**Reading a wave expression.** $\\cos\\left(kx-\\omega t\\right)$ travels towards $+x$, and $\\cos\\left(kx+\\omega t\\right)$ towards $-x$ (for the phase to stay constant, $x$ must decrease as $t$ grows). For example, for $\\vec E=E_0\\cos\\left(kz+\\omega t\\right)\\vec i$ we have $\\vec n=-\\vec k$ and $\\vec B=\\frac{1}{c}\\left(-\\vec k\\right)\\times\\vec E=-\\frac{E_0}{c}\\cos\\left(kz+\\omega t\\right)\\vec j$. Check: $\\vec E\\times\\vec B\\propto\\vec i\\times\\left(-\\vec j\\right)=-\\vec k$ — correct. The most common GRE mistake is the sign of $\\vec B$; check it with $\\vec E\\times\\vec B$ every time."
+ },
+ {
+  "t": "li",
+  "uz": "**Nega magnit maydon «kichik».** $B_0=\\frac{E_0}{c}$ — son jihatdan juda kichik: $E_0=900\\ \\mathrm{V/m}$ da $B_0=3\\ \\mu\\mathrm{T}$. Lekin bu nisbat birliklar tanlovidan kelib chiqadi: zaryadga ta'sir qiluvchi magnit kuch $qvB$ elektr kuch $qE$ dan $\\frac{v}{c}$ marta kichik, energiya esa ikkala maydonda teng (4-bo'lim). Shuning uchun yorug'likni qayd qiluvchi asboblar (ko'z, fotoplastinka, antenna) asosan $\\vec E$ ga sezgir, va qutblanish yo'nalishi deganda $\\vec E$ ning yo'nalishi tushuniladi.",
+  "ru": "**Почему магнитное поле «маленькое».** $B_0=\\frac{E_0}{c}$ численно очень мало: при $E_0=900\\ \\mathrm{V/m}$ имеем $B_0=3\\ \\mu\\mathrm{T}$. Но это отношение — следствие выбора единиц: магнитная сила $qvB$, действующая на заряд, в $\\frac{v}{c}$ раз меньше электрической $qE$, а энергия в обоих полях одинакова (раздел 4). Поэтому приборы, регистрирующие свет (глаз, фотопластинка, антенна), чувствительны в основном к $\\vec E$, и под направлением поляризации понимают направление $\\vec E$.",
+  "en": "**Why the magnetic field is \"small\".** $B_0=\\frac{E_0}{c}$ is numerically very small: for $E_0=900\\ \\mathrm{V/m}$ we get $B_0=3\\ \\mu\\mathrm{T}$. But this ratio comes from the choice of units: the magnetic force $qvB$ on a charge is $\\frac{v}{c}$ times smaller than the electric force $qE$, while the energy is the same in both fields (Section 4). That is why light detectors (the eye, a photographic plate, an antenna) respond mainly to $\\vec E$, and the direction of polarization means the direction of $\\vec E$."
+ },
+ {
+  "t": "h2",
+  "uz": "2. To'lqin kattaliklari va elektromagnit spektr",
+  "ru": "2. Характеристики волны и электромагнитный спектр",
+  "en": "2. Wave quantities and the electromagnetic spectrum"
+ },
+ {
+  "t": "li",
+  "uz": "**Kattaliklar.** Davr $T$, chastota $f=\\frac{1}{T}$, siklik chastota $\\omega=2\\pi f$, to'lqin uzunligi $\\lambda$ (bir xil fazali qo'shni nuqtalar orasidagi masofa) va to'lqin soni $k=\\frac{2\\pi}{\\lambda}$ quyidagicha bog'langan. To'lqin bir muhitdan ikkinchisiga o'tganda chastota saqlanadi (chegaradagi maydonlar bir xil tebranadi), tezlik va to'lqin uzunligi esa o'zgaradi (8-bo'lim).",
+  "ru": "**Величины.** Период $T$, частота $f=\\frac{1}{T}$, циклическая частота $\\omega=2\\pi f$, длина волны $\\lambda$ (расстояние между соседними точками с одинаковой фазой) и волновое число $k=\\frac{2\\pi}{\\lambda}$ связаны так, как показано ниже. При переходе волны из одной среды в другую частота сохраняется (поля на границе колеблются одинаково), а скорость и длина волны меняются (раздел 8).",
+  "en": "**Quantities.** The period $T$, frequency $f=\\frac{1}{T}$, angular frequency $\\omega=2\\pi f$, wavelength $\\lambda$ (the distance between neighbouring points of the same phase) and wave number $k=\\frac{2\\pi}{\\lambda}$ are related as shown below. When a wave passes from one medium into another, the frequency is conserved (the fields at the boundary oscillate together), while the speed and the wavelength change (Section 8)."
+ },
+ {
+  "t": "m",
+  "m": "c=\\lambda f=\\frac{\\omega}{k},\\qquad k=\\frac{2\\pi}{\\lambda},\\qquad \\omega=\\frac{2\\pi}{T},\\qquad E_\\gamma=hf=\\frac{hc}{\\lambda},\\qquad hc\\approx1240\\ \\mathrm{eV\\cdot nm}"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L21-F02.png",
+   "ru": "figures/B2-L21-F02-ru.png",
+   "en": "figures/B2-L21-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Spektr ([[F02]]).** Barcha elektromagnit to'lqinlar bir xil tabiatga ega va faqat chastotasi bilan farq qiladi. To'lqin uzunligi kamayishi tartibida: radioto'lqinlar ($\\lambda>1\\ \\mathrm{mm}$; ularning qisqa qismi — mikroto'lqinlar), infraqizil nurlanish, ko'rinadigan yorug'lik (taxminan $400$–$700\\ \\mathrm{nm}$, binafshadan qizilgacha), ultrabinafsha, rentgen va gamma nurlanish. Sohalar orasidagi chegara shartli: nomi ko'pincha manbaga bog'liq (rentgen — elektron tormozlanishidan, gamma — yadrodan).",
+  "ru": "**Спектр ([[F02]]).** Все электромагнитные волны имеют одну природу и различаются только частотой. В порядке убывания длины волны: радиоволны ($\\lambda>1\\ \\mathrm{mm}$; их коротковолновая часть — микроволны), инфракрасное излучение, видимый свет (примерно $400$–$700\\ \\mathrm{nm}$, от фиолетового до красного), ультрафиолет, рентгеновское и гамма-излучение. Границы между диапазонами условны: название часто связано с источником (рентгеновское — от торможения электронов, гамма — от ядер).",
+  "en": "**The spectrum ([[F02]]).** All electromagnetic waves have the same nature and differ only in frequency. In order of decreasing wavelength: radio waves ($\\lambda>1\\ \\mathrm{mm}$; their short-wavelength part is microwaves), infrared radiation, visible light (about $400$–$700\\ \\mathrm{nm}$, from violet to red), ultraviolet, X-rays and gamma rays. The boundaries between the regions are conventional: the name often refers to the source (X-rays come from braking electrons, gamma rays from nuclei)."
+ },
+ {
+  "t": "li",
+  "uz": "**Foton energiyasi va GRE hisoblari.** Kvant nuqtai nazaridan to'lqin $E_\\gamma=hf$ energiyali fotonlardan iborat. $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$ ni yod olish kalkulyatorsiz hisoblashni tezlashtiradi: $620\\ \\mathrm{nm}$ li qizil foton — $2\\ \\mathrm{eV}$, $124\\ \\mathrm{nm}$ li ultrabinafsha — $10\\ \\mathrm{eV}$, $0.1\\ \\mathrm{nm}$ li rentgen — $12.4\\ \\mathrm{keV}$. Kimyoviy bog'lanishlar va atom elektronlari energiyasi bir necha $\\mathrm{eV}$ — shuning uchun ultrabinafsha va undan qisqa nurlanish **ionlashtiruvchi (ionizing)**, radio va mikroto'lqinlar esa faqat qizdiradi.",
+  "ru": "**Энергия фотона и расчёты в GRE.** С квантовой точки зрения волна состоит из фотонов с энергией $E_\\gamma=hf$. Запомнив $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$, легко считать без калькулятора: красный фотон $620\\ \\mathrm{nm}$ — $2\\ \\mathrm{eV}$, ультрафиолет $124\\ \\mathrm{nm}$ — $10\\ \\mathrm{eV}$, рентген $0.1\\ \\mathrm{nm}$ — $12.4\\ \\mathrm{keV}$. Энергии химических связей и атомных электронов — несколько $\\mathrm{eV}$, поэтому ультрафиолет и более коротковолновое излучение **ионизирующие (ionizing)**, а радиоволны и микроволны лишь нагревают.",
+  "en": "**Photon energy and GRE estimates.** From the quantum point of view a wave consists of photons of energy $E_\\gamma=hf$. Remembering $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$ makes calculations without a calculator quick: a red $620\\ \\mathrm{nm}$ photon has $2\\ \\mathrm{eV}$, ultraviolet at $124\\ \\mathrm{nm}$ has $10\\ \\mathrm{eV}$, and an X-ray of $0.1\\ \\mathrm{nm}$ has $12.4\\ \\mathrm{keV}$. Chemical bonds and atomic electrons have energies of a few $\\mathrm{eV}$ — so ultraviolet and shorter-wavelength radiation is **ionizing**, while radio waves and microwaves only heat."
+ },
+ {
+  "t": "li",
+  "uz": "**Masshtab va antenna.** Antenna yoki rezonator o'lchami to'lqin uzunligi bilan solishtiriladi: chorak to'lqinli vertikal antenna balandligi $\\frac{\\lambda}{4}$ (FM radio $100\\ \\mathrm{MHz}$ da $\\lambda=3\\ \\mathrm{m}$, antenna $75\\ \\mathrm{cm}$). Atom o'lchamidagi ($\\sim0.1\\ \\mathrm{nm}$) tuzilmani «ko'rish» uchun to'lqin uzunligi ham shunday bo'lishi kerak — kristallar rentgen nurlari bilan o'rganiladi. Optik mikroskopning ajrata olishi esa $\\sim\\lambda$ bilan chegaralangan.",
+  "ru": "**Масштаб и антенна.** Размер антенны или резонатора сравнивают с длиной волны: высота четвертьволновой вертикальной антенны $\\frac{\\lambda}{4}$ (для FM-радио $100\\ \\mathrm{MHz}$ имеем $\\lambda=3\\ \\mathrm{m}$, антенна $75\\ \\mathrm{cm}$). Чтобы «увидеть» структуру атомного размера ($\\sim0.1\\ \\mathrm{nm}$), длина волны должна быть такой же — кристаллы изучают рентгеновскими лучами. Разрешение оптического микроскопа ограничено величиной $\\sim\\lambda$.",
+  "en": "**Scale and antennas.** The size of an antenna or a resonator is compared with the wavelength: a quarter-wave vertical antenna has height $\\frac{\\lambda}{4}$ (for FM radio at $100\\ \\mathrm{MHz}$ we have $\\lambda=3\\ \\mathrm{m}$, so the antenna is $75\\ \\mathrm{cm}$). To \"see\" a structure of atomic size ($\\sim0.1\\ \\mathrm{nm}$) the wavelength must be similar — crystals are studied with X-rays. The resolution of an optical microscope is limited to $\\sim\\lambda$."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Qutblanish holatlari",
+  "ru": "3. Состояния поляризации",
+  "en": "3. Polarization states"
+ },
+ {
+  "t": "li",
+  "uz": "**Chiziqli qutblanish (linear polarization).** Yuqoridagi to'lqinda $\\vec E$ doim bitta to'g'ri chiziq bo'ylab tebranadi — bu **chiziqli qutblangan** to'lqin; $\\vec E$ va $\\vec n$ dan o'tgan tekislik **qutblanish tekisligi (plane of polarization)** deyiladi. $z$ bo'ylab tarqalayotgan har qanday to'lqinni ikkita mustaqil chiziqli qutblangan to'lqin — $\\vec i$ va $\\vec j$ bo'ylab — yig'indisi sifatida yozish mumkin; ularning amplitudalari va fazalar farqi $\\delta$ qutblanish holatini to'liq aniqlaydi.",
+  "ru": "**Линейная поляризация (linear polarization).** В волне, рассмотренной выше, $\\vec E$ всё время колеблется вдоль одной прямой — это **линейно поляризованная** волна; плоскость, проходящая через $\\vec E$ и $\\vec n$, называется **плоскостью поляризации (plane of polarization)**. Любую волну, бегущую вдоль $z$, можно записать как сумму двух независимых линейно поляризованных волн — вдоль $\\vec i$ и вдоль $\\vec j$; их амплитуды и разность фаз $\\delta$ полностью определяют состояние поляризации.",
+  "en": "**Linear polarization.** In the wave above $\\vec E$ always oscillates along one straight line — this is a **linearly polarized** wave; the plane through $\\vec E$ and $\\vec n$ is called the **plane of polarization**. Any wave travelling along $z$ can be written as the sum of two independent linearly polarized waves — along $\\vec i$ and along $\\vec j$; their amplitudes and phase difference $\\delta$ completely determine the polarization state."
+ },
+ {
+  "t": "m",
+  "m": "\\vec E=E_1\\cos\\left(kz-\\omega t\\right)\\vec i+E_2\\cos\\left(kz-\\omega t+\\delta\\right)\\vec j"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L21-F03.png",
+   "ru": "figures/B2-L21-F03-ru.png",
+   "en": "figures/B2-L21-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Uch hol ([[F03]]).** Berilgan $z$ nuqtada $\\vec E$ vektorining uchi $xy$ tekisligida chiziq chizadi. $\\delta=0$ yoki $\\pi$ — to'g'ri chiziq (chiziqli qutblanish, burchagi $\\tan\\theta=\\pm\\frac{E_2}{E_1}$). $E_1=E_2$ va $\\delta=\\pm\\frac{\\pi}{2}$ — aylana: $\\vec E$ moduli o'zgarmas, faqat yo'nalishi $\\omega$ burchak tezlik bilan aylanadi — **doiraviy qutblanish (circular polarization)**. Qolgan barcha hollarda — ellips (**elliptik qutblanish**). Aylanish yo'nalishi $\\delta$ ishorasi bilan aniqlanadi; «chap» va «o'ng» atamalari optika va radiotexnikada qarama-qarshi ma'noda ishlatiladi, shuning uchun GRE da odatda aylanish yo'nalishini so'zsiz, formula bilan so'rashadi.",
+  "ru": "**Три случая ([[F03]]).** В данной точке $z$ конец вектора $\\vec E$ описывает в плоскости $xy$ линию. $\\delta=0$ или $\\pi$ — прямая (линейная поляризация, угол $\\tan\\theta=\\pm\\frac{E_2}{E_1}$). $E_1=E_2$ и $\\delta=\\pm\\frac{\\pi}{2}$ — окружность: модуль $\\vec E$ постоянен, вращается только направление с угловой скоростью $\\omega$ — **круговая поляризация (circular polarization)**. Во всех остальных случаях — эллипс (**эллиптическая поляризация**). Направление вращения определяется знаком $\\delta$; термины «левая» и «правая» в оптике и радиотехнике используются в противоположном смысле, поэтому в GRE направление вращения обычно спрашивают через формулу.",
+  "en": "**Three cases ([[F03]]).** At a given $z$ the tip of $\\vec E$ traces a curve in the $xy$ plane. $\\delta=0$ or $\\pi$ gives a straight line (linear polarization at angle $\\tan\\theta=\\pm\\frac{E_2}{E_1}$). $E_1=E_2$ and $\\delta=\\pm\\frac{\\pi}{2}$ give a circle: the magnitude of $\\vec E$ is constant and only its direction rotates with angular velocity $\\omega$ — **circular polarization**. All other cases give an ellipse (**elliptical polarization**). The sense of rotation is set by the sign of $\\delta$; the terms \"left\" and \"right\" are used with opposite meanings in optics and in radio engineering, so the GRE usually asks about the sense of rotation through a formula."
+ },
+ {
+  "t": "li",
+  "uz": "**Tabiiy yorug'lik.** Quyosh yoki cho'g'lanma lampadagi atomlar mustaqil, juda qisqa ($\\sim10^{-8}\\ \\mathrm{s}$) to'lqin poyezdlari chiqaradi, ularning qutblanishi tasodifiy. Natijada $\\vec E$ yo'nalishi tez va tartibsiz o'zgaradi — bu **qutblanmagan (unpolarized)** yoki tabiiy yorug'lik. Uni ham ikki o'zaro perpendikulyar, teng intensivlikli va bog'liqmas (fazalar farqi tasodifiy) chiziqli tashkil etuvchilar yig'indisi deb qarash mumkin. Lazer nuri odatda chiziqli qutblangan. Qutblagichlar, Malyus qonuni va qaytishda qutblanish — B2-L27.",
+  "ru": "**Естественный свет.** Атомы Солнца или лампы накаливания испускают независимые очень короткие ($\\sim10^{-8}\\ \\mathrm{s}$) цуги волн со случайной поляризацией. В результате направление $\\vec E$ быстро и беспорядочно меняется — это **неполяризованный (unpolarized)**, или естественный, свет. Его тоже можно рассматривать как сумму двух взаимно перпендикулярных линейных составляющих равной интенсивности, не связанных друг с другом (разность фаз случайна). Лазерный луч обычно линейно поляризован. Поляризаторы, закон Малюса и поляризация при отражении — в B2-L27.",
+  "en": "**Natural light.** Atoms in the Sun or in an incandescent lamp emit independent, very short ($\\sim10^{-8}\\ \\mathrm{s}$) wave trains with random polarization. As a result the direction of $\\vec E$ changes quickly and randomly — this is **unpolarized**, or natural, light. It too can be regarded as the sum of two mutually perpendicular linear components of equal intensity that are unrelated to each other (the phase difference is random). A laser beam is usually linearly polarized. Polarizers, Malus's law and polarization by reflection are in B2-L27."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Energiya zichligi",
+  "ru": "4. Плотность энергии",
+  "en": "4. Energy density"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki maydon teng.** Elektromagnit maydon energiyasining hajmiy zichligi (B2-L13, B2-L17) elektr va magnit qismlar yig'indisi. To'lqinda $B=\\frac{E}{c}$ va $c^2=\\frac{1}{\\mu_0\\varepsilon_0}$ bo'lgani uchun $\\frac{B^2}{2\\mu_0}=\\frac{E^2}{2\\mu_0c^2}=\\frac{\\varepsilon_0E^2}{2}$: energiya elektr va magnit maydonlar orasida **teng taqsimlangan**. Bu tasodif emas — o'zgaruvchan $\\vec E$ $\\vec B$ ni, o'zgaruvchan $\\vec B$ $\\vec E$ ni hosil qiladi, va ikkalasi to'lqinda teng huquqli.",
+  "ru": "**Два поля равны.** Объёмная плотность энергии электромагнитного поля (B2-L13, B2-L17) — сумма электрической и магнитной частей. В волне $B=\\frac{E}{c}$ и $c^2=\\frac{1}{\\mu_0\\varepsilon_0}$, поэтому $\\frac{B^2}{2\\mu_0}=\\frac{E^2}{2\\mu_0c^2}=\\frac{\\varepsilon_0E^2}{2}$: энергия **поровну распределена** между электрическим и магнитным полями. Это не случайно — переменное $\\vec E$ порождает $\\vec B$, переменное $\\vec B$ порождает $\\vec E$, и в волне они равноправны.",
+  "en": "**The two fields are equal.** The volume energy density of the electromagnetic field (B2-L13, B2-L17) is the sum of the electric and magnetic parts. In a wave $B=\\frac{E}{c}$ and $c^2=\\frac{1}{\\mu_0\\varepsilon_0}$, so $\\frac{B^2}{2\\mu_0}=\\frac{E^2}{2\\mu_0c^2}=\\frac{\\varepsilon_0E^2}{2}$: the energy is **shared equally** between the electric and magnetic fields. This is no accident — a changing $\\vec E$ produces $\\vec B$, a changing $\\vec B$ produces $\\vec E$, and in a wave they are on an equal footing."
+ },
+ {
+  "t": "m",
+  "m": "w=\\frac{\\varepsilon_0E^2}{2}+\\frac{B^2}{2\\mu_0}=\\varepsilon_0E^2=\\frac{B^2}{\\mu_0},\\qquad \\langle w\\rangle=\\frac{1}{2}\\varepsilon_0E_0^2=\\varepsilon_0E_{rms}^2"
+ },
+ {
+  "t": "li",
+  "uz": "**O'rtacha qiymat.** Yorug'lik chastotasi $\\sim5\\cdot10^{14}\\ \\mathrm{Hz}$ — hech bir asbob oniy qiymatni kuzata olmaydi, shuning uchun vaqt bo'yicha o'rtacha olinadi. Davr bo'yicha $\\langle\\cos^2\\left(kx-\\omega t\\right)\\rangle=\\frac{1}{2}$, demak $\\langle w\\rangle$ maksimal $w$ ning yarmi. Ta'sir etuvchi (o'rtacha kvadratik) qiymat $E_{rms}=\\frac{E_0}{\\sqrt{2}}$ (B2-L18 dagi o'zgaruvchan tok kabi) bilan formula ixchamlashadi. Diqqat: $\\varepsilon_0E_0^2$ — oniy maksimum, $\\frac{1}{2}\\varepsilon_0E_0^2$ — o'rtacha; ikkalasini adashtirish 2 marta xatoga olib keladi.",
+  "ru": "**Среднее значение.** Частота света $\\sim5\\cdot10^{14}\\ \\mathrm{Hz}$ — ни один прибор не следит за мгновенным значением, поэтому берут среднее по времени. За период $\\langle\\cos^2\\left(kx-\\omega t\\right)\\rangle=\\frac{1}{2}$, значит $\\langle w\\rangle$ — половина максимального $w$. С действующим (среднеквадратичным) значением $E_{rms}=\\frac{E_0}{\\sqrt{2}}$ (как для переменного тока в B2-L18) формула компактнее. Внимание: $\\varepsilon_0E_0^2$ — мгновенный максимум, $\\frac{1}{2}\\varepsilon_0E_0^2$ — среднее; спутав их, вы ошибётесь в 2 раза.",
+  "en": "**The average value.** The frequency of light is $\\sim5\\cdot10^{14}\\ \\mathrm{Hz}$ — no instrument can follow the instantaneous value, so we take the time average. Over a period $\\langle\\cos^2\\left(kx-\\omega t\\right)\\rangle=\\frac{1}{2}$, so $\\langle w\\rangle$ is half the maximum $w$. With the effective (root-mean-square) value $E_{rms}=\\frac{E_0}{\\sqrt{2}}$ (as for alternating current in B2-L18) the formula is more compact. Careful: $\\varepsilon_0E_0^2$ is the instantaneous maximum and $\\frac{1}{2}\\varepsilon_0E_0^2$ is the average; confusing them gives an error of a factor of 2."
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya qanday ko'chadi.** Yassi to'lqinni kesimi $A$ bo'lgan tasavvuriy quvur ichida qaraylik. $dt$ vaqtda $A$ yuzadan uzunligi $c\\,dt$ bo'lgan qatlam o'tadi, unda $w\\,A\\,c\\,dt$ energiya bor. Demak birlik yuzadan birlik vaqtda o'tadigan energiya $wc$ ga teng — energiya to'lqin bilan birga $c$ tezlik bilan oqadi. Bu mulohaza keyingi bo'limdagi Poynting vektoriga va intensivlikka olib keladi.",
+  "ru": "**Как переносится энергия.** Рассмотрим плоскую волну внутри воображаемой трубы сечением $A$. За время $dt$ через площадку $A$ проходит слой длиной $c\\,dt$, в котором энергия $w\\,A\\,c\\,dt$. Значит, энергия, проходящая через единичную площадку за единицу времени, равна $wc$ — энергия течёт вместе с волной со скоростью $c$. Это рассуждение приводит к вектору Пойнтинга и интенсивности в следующем разделе.",
+  "en": "**How energy is carried.** Consider a plane wave inside an imaginary tube of cross-section $A$. In a time $dt$ a layer of length $c\\,dt$ passes through the area $A$, and it contains energy $w\\,A\\,c\\,dt$. So the energy crossing unit area per unit time is $wc$ — the energy flows with the wave at speed $c$. This argument leads to the Poynting vector and the intensity in the next section."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Poynting vektori va intensivlik",
+  "ru": "5. Вектор Пойнтинга и интенсивность",
+  "en": "5. The Poynting vector and intensity"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Elektromagnit energiya oqimining zichligi **Poynting vektori (Poynting vector)** bilan beriladi: uning yo'nalishi energiya oqadigan tomonni, moduli esa shu yo'nalishga perpendikulyar birlik yuzadan birlik vaqtda o'tadigan energiyani ko'rsatadi; birligi $\\mathrm{W/m^2}$. Yassi to'lqinda $\\vec S$ tarqalish yo'nalishiga qaragan va oldingi bo'limdagi $wc$ ga teng: $S=\\frac{EB}{\\mu_0}=\\frac{E^2}{\\mu_0c}=c\\varepsilon_0E^2$. Formula faqat to'lqinlar uchun emas — u istalgan elektromagnit maydonda energiya qayerdan qayerga oqayotganini ko'rsatadi (6-bo'lim).",
+  "ru": "**Определение.** Плотность потока электромагнитной энергии задаётся **вектором Пойнтинга (Poynting vector)**: его направление показывает, куда течёт энергия, а модуль — энергию, проходящую за единицу времени через единичную площадку, перпендикулярную этому направлению; единица — $\\mathrm{W/m^2}$. В плоской волне $\\vec S$ направлен по распространению и равен $wc$ из предыдущего раздела: $S=\\frac{EB}{\\mu_0}=\\frac{E^2}{\\mu_0c}=c\\varepsilon_0E^2$. Формула относится не только к волнам — она показывает, откуда и куда течёт энергия в любом электромагнитном поле (раздел 6).",
+  "en": "**Definition.** The flux density of electromagnetic energy is given by the **Poynting vector**: its direction shows where the energy flows, and its magnitude is the energy crossing unit area perpendicular to that direction per unit time; the unit is $\\mathrm{W/m^2}$. In a plane wave $\\vec S$ points along the direction of travel and equals $wc$ from the previous section: $S=\\frac{EB}{\\mu_0}=\\frac{E^2}{\\mu_0c}=c\\varepsilon_0E^2$. The formula is not only for waves — it shows where energy flows in any electromagnetic field (Section 6)."
+ },
+ {
+  "t": "m",
+  "m": "\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B,\\qquad \\vec S=cw\\,\\vec n"
+ },
+ {
+  "t": "li",
+  "uz": "**Intensivlik.** Yorug'lik yoki radioto'lqinlar uchun o'lchanadigan kattalik — **intensivlik (intensity)**, ya'ni Poynting vektori modulining vaqt bo'yicha o'rtachasi. U amplituda kvadratiga proporsional: amplituda 2 marta ortsa, intensivlik 4 marta ortadi. $Z_0=\\sqrt{\\frac{\\mu_0}{\\varepsilon_0}}\\approx377\\ \\Omega$ — **vakuumning to'lqin qarshiligi (impedance of free space)**: u $E$ va $H=\\frac{B}{\\mu_0}$ nisbati, va intensivlik formulasi rezistordagi o'rtacha quvvat $\\frac{U_{rms}^2}{R}$ ga o'xshab qoladi.",
+  "ru": "**Интенсивность.** Для света или радиоволн измеряемая величина — **интенсивность (intensity)**, то есть среднее по времени модуля вектора Пойнтинга. Она пропорциональна квадрату амплитуды: при увеличении амплитуды в 2 раза интенсивность растёт в 4 раза. $Z_0=\\sqrt{\\frac{\\mu_0}{\\varepsilon_0}}\\approx377\\ \\Omega$ — **волновое сопротивление вакуума (impedance of free space)**: это отношение $E$ и $H=\\frac{B}{\\mu_0}$, и формула интенсивности становится похожей на среднюю мощность в резисторе $\\frac{U_{rms}^2}{R}$.",
+  "en": "**Intensity.** For light or radio waves the measured quantity is the **intensity**, the time average of the magnitude of the Poynting vector. It is proportional to the square of the amplitude: doubling the amplitude makes the intensity 4 times larger. $Z_0=\\sqrt{\\frac{\\mu_0}{\\varepsilon_0}}\\approx377\\ \\Omega$ is the **impedance of free space**: it is the ratio of $E$ to $H=\\frac{B}{\\mu_0}$, and the intensity formula looks like the average power in a resistor, $\\frac{U_{rms}^2}{R}$."
+ },
+ {
+  "t": "m",
+  "m": "I=\\langle S\\rangle=\\frac{1}{2}c\\varepsilon_0E_0^2=\\frac{E_0^2}{2\\mu_0c}=\\frac{cB_0^2}{2\\mu_0}=c\\langle w\\rangle=\\frac{E_{rms}^2}{Z_0},\\qquad Z_0=\\sqrt{\\frac{\\mu_0}{\\varepsilon_0}}\\approx377\\ \\Omega"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L21-F04.png",
+   "ru": "figures/B2-L21-F04-ru.png",
+   "en": "figures/B2-L21-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Oniy va o'rtacha ([[F04]]).** Yugurma to'lqinda $E$ va $B$ bir fazada bo'lgani uchun $S\\propto\\cos^2\\left(kx-\\omega t\\right)$ hech qachon manfiy emas: energiya doim oldinga oqadi, lekin «to'lqin-to'lqin» bo'lib — $0$ dan $2I$ gacha tebranadi, o'rtachasi $I$. (Turg'un to'lqinda esa $E$ va $B$ fazasi $\\frac{\\pi}{2}$ ga farq qiladi va $\\langle S\\rangle=0$ — 11-bo'lim.)",
+  "ru": "**Мгновенное и среднее ([[F04]]).** В бегущей волне $E$ и $B$ в фазе, поэтому $S\\propto\\cos^2\\left(kx-\\omega t\\right)$ никогда не отрицателен: энергия всегда течёт вперёд, но «порциями» — колеблется от $0$ до $2I$, среднее $I$. (В стоячей волне фазы $E$ и $B$ различаются на $\\frac{\\pi}{2}$ и $\\langle S\\rangle=0$ — раздел 11.)",
+  "en": "**Instantaneous and average ([[F04]]).** In a travelling wave $E$ and $B$ are in phase, so $S\\propto\\cos^2\\left(kx-\\omega t\\right)$ is never negative: energy always flows forward, but in \"pulses\" — it oscillates between $0$ and $2I$ with average $I$. (In a standing wave the phases of $E$ and $B$ differ by $\\frac{\\pi}{2}$ and $\\langle S\\rangle=0$ — Section 11.)"
+ },
+ {
+  "t": "li",
+  "uz": "**Nuqtaviy manba.** Quvvati $\\mathcal P$ bo'lgan manba hamma tomonga bir xil nurlansa, energiya radiusi $r$ bo'lgan sferadan o'tadi va yutilmasa, $\\mathcal P$ har bir sfera uchun bir xil. Demak $I\\propto\\frac{1}{r^2}$, amplituda esa $E_0\\propto\\frac{1}{r}$ (Kulon maydonidan sekinroq kamayadi — shuning uchun nurlanish uzoqqa yetadi). Yerdagi antenna faqat yarim sferaga nurlansa, $2\\pi r^2$ yuza olinadi. Uzun chiziqli manba (masalan, lyuminessent lampa yaqinida) — silindrik to'lqin, $I\\propto\\frac{1}{r}$; yassi to'lqin intensivligi masofaga bog'liq emas.",
+  "ru": "**Точечный источник.** Если источник мощности $\\mathcal P$ излучает одинаково во все стороны, энергия проходит через сферу радиуса $r$, и без поглощения $\\mathcal P$ одинакова для всех сфер. Значит $I\\propto\\frac{1}{r^2}$, а амплитуда $E_0\\propto\\frac{1}{r}$ (убывает медленнее кулоновского поля — поэтому излучение распространяется далеко). Если наземная антенна излучает только в полусферу, берут площадь $2\\pi r^2$. Длинный линейный источник (например, вблизи люминесцентной лампы) — цилиндрическая волна, $I\\propto\\frac{1}{r}$; интенсивность плоской волны от расстояния не зависит.",
+  "en": "**A point source.** If a source of power $\\mathcal P$ radiates equally in all directions, the energy passes through a sphere of radius $r$, and without absorption $\\mathcal P$ is the same for every sphere. So $I\\propto\\frac{1}{r^2}$ and the amplitude $E_0\\propto\\frac{1}{r}$ (it falls off more slowly than the Coulomb field — that is why radiation reaches far). If a ground antenna radiates only into a hemisphere, the area $2\\pi r^2$ is used. A long line source (for example, near a fluorescent tube) gives a cylindrical wave with $I\\propto\\frac{1}{r}$; the intensity of a plane wave does not depend on distance."
+ },
+ {
+  "t": "m",
+  "m": "I=\\frac{\\mathcal P}{4\\pi r^2},\\qquad E_0=\\sqrt{\\frac{2I}{c\\varepsilon_0}}\\propto\\frac{1}{r}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tartiblar.** Atmosfera chegarasida Quyosh nuri intensivligi taxminan $1.4\\ \\mathrm{kW/m^2}$ (**quyosh doimiysi, solar constant**), bunga $E_0\\sim10^3\\ \\mathrm{V/m}$ va $B_0\\sim\\mu\\mathrm{T}$ mos keladi. Lazer ko'rsatkich nuri intensivligi Quyosh nuri bilan bir tartibda, lekin ko'z gavhari parallel nurni to'r pardada mayda nuqtaga yig'adi — shuning uchun lazerga qarash xavfli. Radiostansiyadan o'nlab kilometrda maydon $\\mathrm{mV/m}$ tartibida — qabul qilgich kuchsiz signalni kuchaytiradi.",
+  "ru": "**Порядки величин.** На границе атмосферы интенсивность солнечного света около $1.4\\ \\mathrm{kW/m^2}$ (**солнечная постоянная, solar constant**), ей соответствуют $E_0\\sim10^3\\ \\mathrm{V/m}$ и $B_0\\sim\\mu\\mathrm{T}$. Интенсивность луча лазерной указки того же порядка, что и солнечного света, но хрусталик собирает параллельный пучок в крошечное пятно на сетчатке — поэтому смотреть на лазер опасно. В десятках километров от радиостанции поле порядка $\\mathrm{mV/m}$ — приёмник усиливает слабый сигнал.",
+  "en": "**Orders of magnitude.** At the top of the atmosphere the intensity of sunlight is about $1.4\\ \\mathrm{kW/m^2}$ (the **solar constant**), corresponding to $E_0\\sim10^3\\ \\mathrm{V/m}$ and $B_0\\sim\\mu\\mathrm{T}$. A laser pointer beam has an intensity of the same order as sunlight, but the eye lens focuses a parallel beam to a tiny spot on the retina — that is why looking into a laser is dangerous. Tens of kilometres from a radio station the field is of order $\\mathrm{mV/m}$ — the receiver amplifies the weak signal."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Poynting teoremasi",
+  "ru": "6. Теорема Пойнтинга",
+  "en": "6. Poynting's theorem"
+ },
+ {
+  "t": "li",
+  "uz": "**Keltirib chiqarish.** Faradey qonunini $\\vec B$ ga, Amper–Maksvell qonunini $\\vec E$ ga skalyar ko'paytirib, ayiramiz va $\\nabla\\cdot\\left(\\vec E\\times\\vec B\\right)=\\vec B\\cdot\\left(\\nabla\\times\\vec E\\right)-\\vec E\\cdot\\left(\\nabla\\times\\vec B\\right)$ ayniyatidan foydalanamiz. Natija — energiyaning saqlanish qonuni lokal ko'rinishda: hajmdagi maydon energiyasining kamayish tezligi sirtdan chiqib ketayotgan oqim va maydonning zaryadlar ustida bajargan ishi yig'indisiga teng. Bu — **Poynting teoremasi (Poynting's theorem)**; uning tuzilishi zaryad uchun uzluksizlik tenglamasiga (B2-L20) o'xshaydi, faqat o'ng tomonda «manba» bor.",
+  "ru": "**Вывод.** Умножим закон Фарадея скалярно на $\\vec B$, закон Ампера–Максвелла — на $\\vec E$, вычтем и воспользуемся тождеством $\\nabla\\cdot\\left(\\vec E\\times\\vec B\\right)=\\vec B\\cdot\\left(\\nabla\\times\\vec E\\right)-\\vec E\\cdot\\left(\\nabla\\times\\vec B\\right)$. Результат — закон сохранения энергии в локальной форме: скорость убыли энергии поля в объёме равна сумме потока, уходящего через поверхность, и работы поля над зарядами. Это — **теорема Пойнтинга (Poynting's theorem)**; по структуре она похожа на уравнение непрерывности для заряда (B2-L20), только справа есть «источник».",
+  "en": "**Derivation.** Take the dot product of Faraday's law with $\\vec B$ and of the Ampère–Maxwell law with $\\vec E$, subtract, and use the identity $\\nabla\\cdot\\left(\\vec E\\times\\vec B\\right)=\\vec B\\cdot\\left(\\nabla\\times\\vec E\\right)-\\vec E\\cdot\\left(\\nabla\\times\\vec B\\right)$. The result is energy conservation in local form: the rate at which the field energy in a volume decreases equals the flux leaving through the surface plus the work done by the field on charges. This is **Poynting's theorem**; its structure resembles the continuity equation for charge (B2-L20), except that the right side contains a \"source\"."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\partial w}{\\partial t}+\\nabla\\cdot\\vec S=-\\vec J\\cdot\\vec E,\\qquad -\\frac{dW}{dt}=\\oint\\vec S\\cdot d\\vec A+\\int\\vec J\\cdot\\vec E\\,dV"
+ },
+ {
+  "t": "li",
+  "uz": "**Hadlar ma'nosi.** $W=\\int w\\,dV$ — hajmdagi maydon energiyasi; $\\vec J\\cdot\\vec E$ — maydon birlik hajmdagi zaryadlarga beradigan quvvat. Omik o'tkazgichda $\\vec J=\\sigma\\vec E$ va $\\vec J\\cdot\\vec E=\\sigma E^2=\\frac{J^2}{\\sigma}$ — Joul issiqligi zichligi; zaryadlarni tezlatishda u kinetik energiyaga aylanadi; batareya ichida esa $\\vec J\\cdot\\vec E<0$ — maydon energiya oladi. Teorema energiya «uzilib-sakramasligini» aytadi: biror joyda kamaygan energiya qo'shni joyga oqib o'tadi yoki moddaga beriladi.",
+  "ru": "**Смысл слагаемых.** $W=\\int w\\,dV$ — энергия поля в объёме; $\\vec J\\cdot\\vec E$ — мощность, которую поле передаёт зарядам в единице объёма. В омическом проводнике $\\vec J=\\sigma\\vec E$ и $\\vec J\\cdot\\vec E=\\sigma E^2=\\frac{J^2}{\\sigma}$ — плотность джоулева тепла; при ускорении зарядов она переходит в кинетическую энергию; а внутри батареи $\\vec J\\cdot\\vec E<0$ — поле получает энергию. Теорема говорит, что энергия не «перепрыгивает»: убыль в одном месте — это перетекание в соседнее место или передача веществу.",
+  "en": "**Meaning of the terms.** $W=\\int w\\,dV$ is the field energy in the volume; $\\vec J\\cdot\\vec E$ is the power the field delivers to charges per unit volume. In an ohmic conductor $\\vec J=\\sigma\\vec E$ and $\\vec J\\cdot\\vec E=\\sigma E^2=\\frac{J^2}{\\sigma}$ is the Joule heating density; when charges are accelerated it becomes kinetic energy; and inside a battery $\\vec J\\cdot\\vec E<0$ — the field gains energy. The theorem says that energy does not \"jump\": a decrease in one place is a flow into a neighbouring place or a transfer to matter."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L21-F05.png",
+   "ru": "figures/B2-L21-F05-ru.png",
+   "en": "figures/B2-L21-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Rezistor ([[F05]], chap).** Uzunligi $l$, radiusi $a$ bo'lgan simda $I$ tok, uchlarida $U$ kuchlanish. Sirtda $\\vec E$ sim bo'ylab ($E=\\frac{U}{l}$), $\\vec B$ simni aylanib ($B=\\frac{\\mu_0I}{2\\pi a}$), demak $\\vec S$ **sim o'qiga qarab, ichkariga** yo'nalgan. Yon sirt orqali kirayotgan oqim: $S\\cdot2\\pi al=\\frac{U}{l}\\cdot\\frac{I}{2\\pi a}\\cdot2\\pi al=UI=I^2R$ — aynan Joul issiqligi. Ya'ni simni qizdiradigan energiya sim ichidan emas, atrofdagi maydondan kiradi; elektronlar faqat «yo'naltiruvchi».",
+  "ru": "**Резистор ([[F05]], слева).** В проводе длины $l$ и радиуса $a$ течёт ток $I$, на концах напряжение $U$. На поверхности $\\vec E$ направлено вдоль провода ($E=\\frac{U}{l}$), $\\vec B$ — вокруг провода ($B=\\frac{\\mu_0I}{2\\pi a}$), значит $\\vec S$ направлен **к оси провода, внутрь**. Поток через боковую поверхность: $S\\cdot2\\pi al=\\frac{U}{l}\\cdot\\frac{I}{2\\pi a}\\cdot2\\pi al=UI=I^2R$ — ровно джоулево тепло. То есть энергия, нагревающая провод, входит не по проводу, а из окружающего поля; электроны лишь «направляют» её.",
+  "en": "**A resistor ([[F05]], left).** A wire of length $l$ and radius $a$ carries current $I$ with voltage $U$ across its ends. At the surface $\\vec E$ points along the wire ($E=\\frac{U}{l}$) and $\\vec B$ circles it ($B=\\frac{\\mu_0I}{2\\pi a}$), so $\\vec S$ points **towards the axis, inward**. The flux through the side surface is $S\\cdot2\\pi al=\\frac{U}{l}\\cdot\\frac{I}{2\\pi a}\\cdot2\\pi al=UI=I^2R$ — exactly the Joule heat. So the energy heating the wire enters not along the wire but from the surrounding field; the electrons only \"guide\" it."
+ },
+ {
+  "t": "li",
+  "uz": "**Koaksial kabel ([[F05]], o'ng).** Ichki o'tkazgich radiusi $a$, tashqi qobiq radiusi $b$; manba kuchlanishi $U$, iste'molchi toki $I$. O'tkazgichlar orasida $E=\\frac{U}{r\\ln\\frac{b}{a}}$ (radial), $B=\\frac{\\mu_0I}{2\\pi r}$ (aylanma), $\\vec S$ kabel o'qi bo'ylab manbadan iste'molchiga yo'nalgan. Halqa kesim bo'yicha integral: $\\int_a^b\\frac{UI}{2\\pi r^2\\ln\\frac{b}{a}}2\\pi r\\,dr=UI$. Energiya o'tkazgichlarning o'zida emas, ular orasidagi dielektrikda oqadi. Ikki simli liniyada ham shunday — shuning uchun yuqori chastotada liniya geometriyasi muhim.",
+  "ru": "**Коаксиальный кабель ([[F05]], справа).** Радиус внутреннего проводника $a$, внешней оболочки $b$; напряжение источника $U$, ток потребителя $I$. Между проводниками $E=\\frac{U}{r\\ln\\frac{b}{a}}$ (радиально), $B=\\frac{\\mu_0I}{2\\pi r}$ (по окружности), $\\vec S$ направлен вдоль оси кабеля от источника к потребителю. Интеграл по кольцевому сечению: $\\int_a^b\\frac{UI}{2\\pi r^2\\ln\\frac{b}{a}}2\\pi r\\,dr=UI$. Энергия течёт не в самих проводниках, а в диэлектрике между ними. Так же и в двухпроводной линии — поэтому на высоких частотах важна геометрия линии.",
+  "en": "**A coaxial cable ([[F05]], right).** The inner conductor has radius $a$ and the outer sheath radius $b$; the source voltage is $U$ and the load current $I$. Between the conductors $E=\\frac{U}{r\\ln\\frac{b}{a}}$ (radial) and $B=\\frac{\\mu_0I}{2\\pi r}$ (circular), and $\\vec S$ points along the cable axis from the source to the load. The integral over the annular cross-section is $\\int_a^b\\frac{UI}{2\\pi r^2\\ln\\frac{b}{a}}2\\pi r\\,dr=UI$. The energy flows not in the conductors themselves but in the dielectric between them. The same holds for a two-wire line — which is why the line geometry matters at high frequencies."
+ },
+ {
+  "t": "li",
+  "uz": "**Kondensator va g'altak.** Zaryadlanayotgan kondensatorga energiya qoplamalar orasidagi yon sirt orqali kiradi va oqim $\\frac{d}{dt}\\left(\\frac{CU^2}{2}\\right)$ ga teng (B2-L20). Toki ortayotgan uzun solenoidda uyurmali elektr maydon $E=\\frac{R}{2}\\frac{dB}{dt}$ aylanma, $\\vec B$ o'q bo'ylab — $\\vec S$ yana yon sirtdan ichkariga qaragan, oqim esa magnit energiyaning o'sish tezligi $\\frac{d}{dt}\\left(\\frac{LI^2}{2}\\right)$ ga teng. Tok kamaysa, $\\vec S$ tashqariga burilib, energiya zanjirga qaytadi.",
+  "ru": "**Конденсатор и катушка.** В заряжающийся конденсатор энергия входит через боковую поверхность между обкладками, и поток равен $\\frac{d}{dt}\\left(\\frac{CU^2}{2}\\right)$ (B2-L20). В длинном соленоиде с растущим током вихревое электрическое поле $E=\\frac{R}{2}\\frac{dB}{dt}$ направлено по окружности, $\\vec B$ — вдоль оси, и $\\vec S$ снова направлен внутрь через боковую поверхность, а поток равен скорости роста магнитной энергии $\\frac{d}{dt}\\left(\\frac{LI^2}{2}\\right)$. Если ток убывает, $\\vec S$ поворачивается наружу, и энергия возвращается в цепь.",
+  "en": "**A capacitor and a coil.** Energy enters a charging capacitor through the side surface between the plates, and the flux equals $\\frac{d}{dt}\\left(\\frac{CU^2}{2}\\right)$ (B2-L20). In a long solenoid with a growing current the induced electric field $E=\\frac{R}{2}\\frac{dB}{dt}$ circles the axis and $\\vec B$ points along it — $\\vec S$ again points inward through the side surface, and the flux equals the rate of growth of the magnetic energy $\\frac{d}{dt}\\left(\\frac{LI^2}{2}\\right)$. If the current decreases, $\\vec S$ turns outward and the energy returns to the circuit."
+ },
+ {
+  "t": "li",
+  "uz": "**Statik maydonlar.** Zaryadlangan kondensator doimiy magnit yonida tursa, $\\vec E\\times\\vec B\\neq0$, lekin hech narsa qizimaydi va energiya o'zgarmaydi: bu holda $\\nabla\\cdot\\vec S=0$ — energiya yopiq halqalar bo'ylab «aylanadi». Fizik ma'noga faqat yopiq sirt orqali oqim ega; $\\vec S$ ning o'ziga istalgan uyurmali maydon qo'shish mumkin. Ammo bunday aylanma oqim impuls momentiga ega — Feynman paradoksi: maydon yo'qolganda (masalan, magnit toki uzilsa) zaryadlangan disk aylana boshlaydi.",
+  "ru": "**Статические поля.** Если заряженный конденсатор стоит возле постоянного магнита, $\\vec E\\times\\vec B\\neq0$, но ничего не нагревается и энергия не меняется: здесь $\\nabla\\cdot\\vec S=0$ — энергия «циркулирует» по замкнутым петлям. Физический смысл имеет только поток через замкнутую поверхность; к самому $\\vec S$ можно добавить любое вихревое поле. Однако такой циркулирующий поток обладает моментом импульса — парадокс Фейнмана: при исчезновении поля (например, если отключить ток магнита) заряженный диск начинает вращаться.",
+  "en": "**Static fields.** If a charged capacitor sits next to a permanent magnet, $\\vec E\\times\\vec B\\neq0$, yet nothing heats up and the energy does not change: here $\\nabla\\cdot\\vec S=0$ — energy \"circulates\" around closed loops. Only the flux through a closed surface has physical meaning; any curl field can be added to $\\vec S$ itself. Yet such a circulating flow carries angular momentum — Feynman's paradox: when the field disappears (for example, if the magnet's current is switched off) a charged disc starts to rotate."
+ },
+ {
+  "t": "h2",
+  "uz": "7. To'lqin impulsi va yorug'lik bosimi",
+  "ru": "7. Импульс волны и давление света",
+  "en": "7. Momentum of a wave and radiation pressure"
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls.** Elektromagnit to'lqin energiya bilan birga impuls ham tashiydi: $U$ energiyali to'lqin bo'lagining impulsi $p=\\frac{U}{c}$. Bu massasiz zarra uchun nisbiylik nazariyasidagi $E=pc$ bilan mos keladi: fotonning impulsi $p_\\gamma=\\frac{h}{\\lambda}$. Birlik hajmdagi impuls (impuls zichligi) Poynting vektoridan $c^2$ ga bo'lib topiladi. Energiyaga nisbatan impuls juda kichik: $1\\ \\mathrm{J}$ yorug'lik atigi $3.3\\cdot10^{-9}\\ \\mathrm{kg\\cdot m/s}$ impuls tashiydi.",
+  "ru": "**Импульс.** Электромагнитная волна переносит вместе с энергией и импульс: импульс участка волны с энергией $U$ равен $p=\\frac{U}{c}$. Это согласуется с соотношением теории относительности $E=pc$ для безмассовой частицы: импульс фотона $p_\\gamma=\\frac{h}{\\lambda}$. Импульс единицы объёма (плотность импульса) получается делением вектора Пойнтинга на $c^2$. По сравнению с энергией импульс очень мал: $1\\ \\mathrm{J}$ света несёт всего $3.3\\cdot10^{-9}\\ \\mathrm{kg\\cdot m/s}$ импульса.",
+  "en": "**Momentum.** An electromagnetic wave carries momentum as well as energy: a portion of the wave with energy $U$ has momentum $p=\\frac{U}{c}$. This agrees with the relativistic relation $E=pc$ for a massless particle: a photon has momentum $p_\\gamma=\\frac{h}{\\lambda}$. The momentum per unit volume (momentum density) is the Poynting vector divided by $c^2$. Compared with the energy, the momentum is very small: $1\\ \\mathrm{J}$ of light carries only $3.3\\cdot10^{-9}\\ \\mathrm{kg\\cdot m/s}$ of momentum."
+ },
+ {
+  "t": "m",
+  "m": "p=\\frac{U}{c},\\qquad \\vec g=\\frac{\\vec S}{c^2}=\\frac{w}{c}\\,\\vec n,\\qquad p_\\gamma=\\frac{h}{\\lambda}=\\frac{E_\\gamma}{c}"
+ },
+ {
+  "t": "li",
+  "uz": "**Mexanizm.** To'lqin metall sirtiga tushganda $\\vec E$ elektronlarni sirt bo'ylab tebratadi, $\\vec B$ esa harakatlanayotgan elektronlarga $q\\vec v\\times\\vec B$ kuch bilan ta'sir qiladi. Bu kuch har doim to'lqin tarqalish yo'nalishiga qaragan ($\\vec v\\parallel\\vec E$ bo'lganda $\\vec v\\times\\vec B\\parallel\\vec E\\times\\vec B$), demak sirt to'lqin yo'nalishida itariladi. Shu tarzda yutilgan impuls sirtga beriladi — **yorug'lik bosimi (radiation pressure)** paydo bo'ladi.",
+  "ru": "**Механизм.** Когда волна падает на металлическую поверхность, $\\vec E$ раскачивает электроны вдоль поверхности, а $\\vec B$ действует на движущиеся электроны силой $q\\vec v\\times\\vec B$. Эта сила всегда направлена по распространению волны (при $\\vec v\\parallel\\vec E$ имеем $\\vec v\\times\\vec B\\parallel\\vec E\\times\\vec B$), значит поверхность толкается в направлении волны. Так поглощённый импульс передаётся поверхности — возникает **давление света (radiation pressure)**.",
+  "en": "**The mechanism.** When a wave falls on a metal surface, $\\vec E$ drives the electrons along the surface, and $\\vec B$ acts on the moving electrons with the force $q\\vec v\\times\\vec B$. This force always points along the direction of travel (for $\\vec v\\parallel\\vec E$ we have $\\vec v\\times\\vec B\\parallel\\vec E\\times\\vec B$), so the surface is pushed in the direction of the wave. In this way the absorbed momentum is transferred to the surface — **radiation pressure** appears."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L21-F06.png",
+   "ru": "figures/B2-L21-F06-ru.png",
+   "en": "figures/B2-L21-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Bosim ([[F06]]).** Normal tushgan to'lqin to'liq yutilsa, birlik yuzaga birlik vaqtda $\\frac{I}{c}$ impuls beriladi — bosim $P=\\frac{I}{c}$. Ideal ko'zgu impulsni teskari aylantiradi, o'zgarish ikki marta katta: $P=\\frac{2I}{c}$. Qaytarish koeffitsiyenti $R$ bo'lsa (qolgani yutiladi) — $P=\\left(1+R\\right)\\frac{I}{c}$. To'lqin normalga $\\theta$ burchak ostida tushsa, ikkita $\\cos\\theta$ paydo bo'ladi: birlik yuzaga tushadigan energiya $I\\cos\\theta$ ga kamayadi, impulsning normal tashkil etuvchisi esa $\\cos\\theta$ ga ko'payadi.",
+  "ru": "**Давление ([[F06]]).** Если нормально падающая волна полностью поглощается, единице площади за единицу времени передаётся импульс $\\frac{I}{c}$ — давление $P=\\frac{I}{c}$. Идеальное зеркало обращает импульс, изменение вдвое больше: $P=\\frac{2I}{c}$. При коэффициенте отражения $R$ (остальное поглощается) — $P=\\left(1+R\\right)\\frac{I}{c}$. Если волна падает под углом $\\theta$ к нормали, появляются два множителя $\\cos\\theta$: энергия, падающая на единицу площади, уменьшается до $I\\cos\\theta$, а нормальная составляющая импульса содержит ещё $\\cos\\theta$.",
+  "en": "**Pressure ([[F06]]).** If a normally incident wave is completely absorbed, momentum $\\frac{I}{c}$ is delivered to unit area per unit time — the pressure is $P=\\frac{I}{c}$. A perfect mirror reverses the momentum, so the change is twice as large: $P=\\frac{2I}{c}$. With a reflection coefficient $R$ (the rest absorbed) — $P=\\left(1+R\\right)\\frac{I}{c}$. If the wave falls at an angle $\\theta$ to the normal, two factors of $\\cos\\theta$ appear: the energy falling on unit area drops to $I\\cos\\theta$, and the normal component of the momentum carries another $\\cos\\theta$."
+ },
+ {
+  "t": "m",
+  "m": "P=\\frac{I}{c}\\cos^2\\theta,\\qquad P=\\frac{2I}{c}\\cos^2\\theta,\\qquad P=\\left(1+R\\right)\\frac{I}{c},\\qquad F=PA"
+ },
+ {
+  "t": "li",
+  "uz": "**Burchak ostida yutuvchi sirt.** Yutuvchi sirtga og'ma tushgan nur sirtga faqat normal emas, urinma kuch ham beradi: birlik yuzaga urinma tashkil etuvchi $\\frac{I}{c}\\sin\\theta\\cos\\theta$. Ko'zguda urinma impuls o'zgarmaydi — kuch faqat normal bo'ylab. Shuning uchun quyosh yelkani (solar sail) ko'zgudek yaltiroq qilinadi va uni Quyoshga nisbatan burib, orbitada «tormozlash» yoki «tezlashtirish» mumkin.",
+  "ru": "**Поглощающая поверхность под углом.** Луч, падающий наклонно на поглощающую поверхность, создаёт не только нормальную, но и касательную силу: касательная составляющая на единицу площади $\\frac{I}{c}\\sin\\theta\\cos\\theta$. У зеркала касательный импульс не меняется — сила только по нормали. Поэтому солнечный парус (solar sail) делают зеркальным и, поворачивая его относительно Солнца, можно «тормозить» или «разгоняться» на орбите.",
+  "en": "**An absorbing surface at an angle.** A beam falling obliquely on an absorbing surface exerts not only a normal but also a tangential force: the tangential component per unit area is $\\frac{I}{c}\\sin\\theta\\cos\\theta$. For a mirror the tangential momentum does not change — the force is purely normal. That is why a solar sail is made mirror-like, and by turning it relative to the Sun one can \"brake\" or \"accelerate\" in orbit."
+ },
+ {
+  "t": "li",
+  "uz": "**Kattaliklar.** Quyosh nuri bosimi yutuvchi sirtga taxminan $5\\ \\mu\\mathrm{Pa}$ — atmosfera bosimidan $10^{10}$ marta kichik. Uni birinchi bo'lib P. N. Lebedev (1899) va Nikols–Xall o'lchagan. Mayda chang zarrasi uchun bosim kuchi ($\\propto a^2$) va tortishish ($\\propto a^3$) ikkalasi ham $\\frac{1}{r^2}$ kabi kamayadi, shuning uchun ularning nisbati Quyoshgacha masofaga bog'liq emas va zarra radiusi kichrayganda ortadi: mikrometrdan kichik zarralar Quyosh sistemasidan «puflab» chiqariladi, kometa dumi esa Quyoshdan teskari tomonga qaraydi. Massiv yulduzlarda nurlanish bosimi tortishishga qarshi turadi (Eddington chegarasi).",
+  "ru": "**Величины.** Давление солнечного света на поглощающую поверхность около $5\\ \\mu\\mathrm{Pa}$ — в $10^{10}$ раз меньше атмосферного. Впервые его измерили П. Н. Лебедев (1899) и Николс–Халл. Для мелкой пылинки сила давления ($\\propto a^2$) и притяжение ($\\propto a^3$) обе убывают как $\\frac{1}{r^2}$, поэтому их отношение не зависит от расстояния до Солнца и растёт при уменьшении радиуса частицы: частицы меньше микрометра «выдуваются» из Солнечной системы, а хвост кометы направлен от Солнца. В массивных звёздах давление излучения противостоит тяготению (предел Эддингтона).",
+  "en": "**Magnitudes.** The pressure of sunlight on an absorbing surface is about $5\\ \\mu\\mathrm{Pa}$ — $10^{10}$ times smaller than atmospheric pressure. It was first measured by P. N. Lebedev (1899) and by Nichols and Hull. For a small dust grain the pressure force ($\\propto a^2$) and gravity ($\\propto a^3$) both fall off as $\\frac{1}{r^2}$, so their ratio does not depend on the distance from the Sun and grows as the grain radius decreases: grains smaller than a micrometre are \"blown out\" of the Solar System, and a comet's tail points away from the Sun. In massive stars radiation pressure resists gravity (the Eddington limit)."
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls momenti.** Doiraviy qutblangan to'lqin energiya va impuls bilan birga impuls momenti ham tashiydi: $U$ energiyaga $L=\\frac{U}{\\omega}$ to'g'ri keladi (har bir foton $\\hbar$ spin, $\\hbar\\omega$ energiya). Bunday nurni yutgan jismga $\\tau=\\frac{1}{\\omega}\\frac{dU}{dt}$ kuch momenti ta'sir qiladi; yarim to'lqinli plastinka aylanish yo'nalishini teskari qiladi va momentni ikki baravar oladi — buni R. Bet (1936) o'lchagan. Chiziqli qutblangan to'lqinning spin impuls momenti nolga teng.",
+  "ru": "**Момент импульса.** Волна с круговой поляризацией несёт вместе с энергией и импульсом ещё и момент импульса: на энергию $U$ приходится $L=\\frac{U}{\\omega}$ (каждый фотон — спин $\\hbar$, энергия $\\hbar\\omega$). На тело, поглотившее такой луч, действует момент силы $\\tau=\\frac{1}{\\omega}\\frac{dU}{dt}$; полуволновая пластинка обращает направление вращения и получает вдвое больший момент — это измерил Р. Бет (1936). Спиновый момент импульса линейно поляризованной волны равен нулю.",
+  "en": "**Angular momentum.** A circularly polarized wave carries angular momentum as well as energy and momentum: an energy $U$ comes with $L=\\frac{U}{\\omega}$ (each photon has spin $\\hbar$ and energy $\\hbar\\omega$). A body that absorbs such a beam feels a torque $\\tau=\\frac{1}{\\omega}\\frac{dU}{dt}$; a half-wave plate reverses the sense of rotation and receives twice the torque — this was measured by R. Beth (1936). The spin angular momentum of a linearly polarized wave is zero."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Moddadagi to'lqinlar",
+  "ru": "8. Волны в веществе",
+  "en": "8. Waves in matter"
+ },
+ {
+  "t": "li",
+  "uz": "**Tezlik va sindirish ko'rsatkichi.** Bir jinsli chiziqli dielektrikda (zaryad va toksiz) Maksvell tenglamalari bo'shliqdagidek ko'rinishga ega, faqat $\\varepsilon_0\\to\\varepsilon_0\\varepsilon$, $\\mu_0\\to\\mu_0\\mu$. Shuning uchun to'lqin tezligi $n$ marta kichik, $n=\\sqrt{\\varepsilon\\mu}$ — **sindirish ko'rsatkichi (refractive index)**; ko'pchilik shaffof moddalar uchun $\\mu\\approx1$ va $n\\approx\\sqrt{\\varepsilon}$ (yorug'lik chastotasidagi $\\varepsilon$). Chastota saqlanadi, to'lqin uzunligi $n$ marta qisqaradi, va $B_0=\\frac{nE_0}{c}$ — moddada magnit maydon nisbatan kattaroq.",
+  "ru": "**Скорость и показатель преломления.** В однородном линейном диэлектрике (без зарядов и токов) уравнения Максвелла имеют тот же вид, что в пустоте, только $\\varepsilon_0\\to\\varepsilon_0\\varepsilon$, $\\mu_0\\to\\mu_0\\mu$. Поэтому скорость волны в $n$ раз меньше, $n=\\sqrt{\\varepsilon\\mu}$ — **показатель преломления (refractive index)**; для большинства прозрачных веществ $\\mu\\approx1$ и $n\\approx\\sqrt{\\varepsilon}$ ($\\varepsilon$ на частоте света). Частота сохраняется, длина волны уменьшается в $n$ раз, и $B_0=\\frac{nE_0}{c}$ — в веществе магнитное поле относительно больше.",
+  "en": "**Speed and refractive index.** In a uniform linear dielectric (no charges or currents) Maxwell's equations look the same as in empty space, except that $\\varepsilon_0\\to\\varepsilon_0\\varepsilon$ and $\\mu_0\\to\\mu_0\\mu$. So the wave speed is $n$ times smaller, where $n=\\sqrt{\\varepsilon\\mu}$ is the **refractive index**; for most transparent substances $\\mu\\approx1$ and $n\\approx\\sqrt{\\varepsilon}$ ($\\varepsilon$ at the frequency of light). The frequency is conserved, the wavelength becomes $n$ times shorter, and $B_0=\\frac{nE_0}{c}$ — in matter the magnetic field is relatively larger."
+ },
+ {
+  "t": "m",
+  "m": "v=\\frac{1}{\\sqrt{\\mu_0\\mu\\varepsilon_0\\varepsilon}}=\\frac{c}{n},\\qquad n=\\sqrt{\\varepsilon\\mu},\\qquad \\lambda=\\frac{\\lambda_0}{n},\\qquad B_0=\\frac{nE_0}{c}"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya va to'lqin qarshiligi.** Moddada ham elektr va magnit energiyalar teng: $\\frac{\\varepsilon_0\\varepsilon E^2}{2}=\\frac{B^2}{2\\mu_0\\mu}$. Energiya $v$ tezlik bilan oqadi, shuning uchun $I=v\\langle w\\rangle$; Poynting vektori umumiy holda $\\vec S=\\vec E\\times\\vec H$. Muhitning **to'lqin qarshiligi (wave impedance)** $Z=\\frac{E}{H}$ noferromagnit muhitda $n$ marta kichik. Bir xil $E_0$ da shishadagi to'lqin havodagidan $n$ marta ko'p energiya tashiydi — chunki unda $B_0$ katta.",
+  "ru": "**Энергия и волновое сопротивление.** В веществе электрическая и магнитная энергии тоже равны: $\\frac{\\varepsilon_0\\varepsilon E^2}{2}=\\frac{B^2}{2\\mu_0\\mu}$. Энергия течёт со скоростью $v$, поэтому $I=v\\langle w\\rangle$; вектор Пойнтинга в общем случае $\\vec S=\\vec E\\times\\vec H$. **Волновое сопротивление (wave impedance)** среды $Z=\\frac{E}{H}$ в неферромагнитной среде в $n$ раз меньше. При одинаковом $E_0$ волна в стекле переносит в $n$ раз больше энергии, чем в воздухе, — потому что в ней больше $B_0$.",
+  "en": "**Energy and wave impedance.** In matter the electric and magnetic energies are also equal: $\\frac{\\varepsilon_0\\varepsilon E^2}{2}=\\frac{B^2}{2\\mu_0\\mu}$. The energy flows at speed $v$, so $I=v\\langle w\\rangle$; in general the Poynting vector is $\\vec S=\\vec E\\times\\vec H$. The **wave impedance** of the medium, $Z=\\frac{E}{H}$, is $n$ times smaller in a non-ferromagnetic medium. For the same $E_0$ a wave in glass carries $n$ times more energy than in air — because its $B_0$ is larger."
+ },
+ {
+  "t": "m",
+  "m": "I=\\frac{1}{2}nc\\varepsilon_0E_0^2\\ \\ (\\mu=1),\\qquad Z=\\sqrt{\\frac{\\mu_0\\mu}{\\varepsilon_0\\varepsilon}}=\\frac{Z_0}{n},\\qquad \\vec S=\\vec E\\times\\vec H"
+ },
+ {
+  "t": "li",
+  "uz": "**Dispersiya.** Moddadagi zaryadlar tashqi maydonga darhol emas, o'z xususiy chastotalariga bog'liq holda javob beradi, shuning uchun $\\varepsilon$ va $n$ chastotaga bog'liq — **dispersiya (dispersion)**. Shaffof sohada odatda $n$ chastota bilan ortadi (normal dispersiya): binafsha nur qizildan kuchliroq sinadi — prizma yorug'likni spektrga ajratadi. Dispersiyali muhitda to'lqin «paketi» (signal, energiya) fazaviy tezlik bilan emas, **guruh tezligi (group velocity)** $v_g=\\frac{d\\omega}{dk}$ bilan harakatlanadi.",
+  "ru": "**Дисперсия.** Заряды в веществе отвечают на внешнее поле не мгновенно, а в зависимости от своих собственных частот, поэтому $\\varepsilon$ и $n$ зависят от частоты — **дисперсия (dispersion)**. В области прозрачности обычно $n$ растёт с частотой (нормальная дисперсия): фиолетовый луч преломляется сильнее красного — призма раскладывает свет в спектр. В диспергирующей среде волновой «пакет» (сигнал, энергия) движется не с фазовой скоростью, а с **групповой скоростью (group velocity)** $v_g=\\frac{d\\omega}{dk}$.",
+  "en": "**Dispersion.** Charges in matter respond to an external field not instantly but according to their own natural frequencies, so $\\varepsilon$ and $n$ depend on frequency — **dispersion**. In the transparent region $n$ usually increases with frequency (normal dispersion): violet light is refracted more than red — a prism splits light into a spectrum. In a dispersive medium a wave \"packet\" (a signal, energy) moves not with the phase velocity but with the **group velocity** $v_g=\\frac{d\\omega}{dk}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Yutilish.** Real muhitda to'lqin energiyasining bir qismi issiqlikka aylanadi va intensivlik chuqurlik bo'yicha eksponensial kamayadi — **Buger–Lambert–Ber qonuni (Beer–Lambert law)**; $\\alpha$ — yutilish koeffitsiyenti, amplituda esa $e^{-\\frac{\\alpha x}{2}}$ kabi kamayadi. Yutilish chastotaga kuchli bog'liq: shisha ko'rinadigan yorug'likni o'tkazadi, ultrabinafshani yutadi; suv ko'rinadigan nurga shaffof, lekin infraqizil va mikroto'lqinlarni kuchli yutadi — mikroto'lqinli pech ovqatdagi suvni qizdiradi.",
+  "ru": "**Поглощение.** В реальной среде часть энергии волны переходит в тепло, и интенсивность экспоненциально убывает с глубиной — **закон Бугера–Ламберта–Бера (Beer–Lambert law)**; $\\alpha$ — коэффициент поглощения, а амплитуда убывает как $e^{-\\frac{\\alpha x}{2}}$. Поглощение сильно зависит от частоты: стекло пропускает видимый свет и поглощает ультрафиолет; вода прозрачна для видимого света, но сильно поглощает инфракрасное излучение и микроволны — микроволновая печь нагревает воду в пище.",
+  "en": "**Absorption.** In a real medium part of the wave energy turns into heat, and the intensity decreases exponentially with depth — the **Beer–Lambert law**; $\\alpha$ is the absorption coefficient, and the amplitude decreases as $e^{-\\frac{\\alpha x}{2}}$. Absorption depends strongly on frequency: glass transmits visible light and absorbs ultraviolet; water is transparent to visible light but strongly absorbs infrared and microwaves — a microwave oven heats the water in food."
+ },
+ {
+  "t": "m",
+  "m": "I=I_0e^{-\\alpha x},\\qquad v_g=\\frac{d\\omega}{dk}"
+ },
+ {
+  "t": "h2",
+  "uz": "9. Normal tushishda qaytish va o'tish",
+  "ru": "9. Отражение и прохождение при нормальном падении",
+  "en": "9. Reflection and transmission at normal incidence"
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaraviy shartlar.** To'lqin sindirish ko'rsatkichi $n_1$ bo'lgan muhitdan $n_2$ muhitga chegaraga perpendikulyar tushsin (ikkalasi noferromagnit). Chegarada erkin zaryad va tok yo'q, shuning uchun $\\vec E$ va $\\vec H$ ning urinma tashkil etuvchilari uzluksiz (B2-L20). Tushuvchi, qaytgan va o'tgan to'lqinlar amplitudalari $E_i$, $E_r$, $E_t$ bo'lsa, birinchi shart $E_i+E_r=E_t$ ni beradi. Moddada $H=\\frac{nE}{Z_0}$, va qaytgan to'lqinda $\\vec H$ teskari yo'nalgan, demak ikkinchi shart $n_1\\left(E_i-E_r\\right)=n_2E_t$. Ikki tenglamadan amplituda koeffitsiyentlari topiladi.",
+  "ru": "**Граничные условия.** Пусть волна падает из среды с показателем преломления $n_1$ в среду $n_2$ перпендикулярно границе (обе неферромагнитные). На границе нет свободных зарядов и токов, поэтому касательные составляющие $\\vec E$ и $\\vec H$ непрерывны (B2-L20). Если амплитуды падающей, отражённой и прошедшей волн $E_i$, $E_r$, $E_t$, первое условие даёт $E_i+E_r=E_t$. В веществе $H=\\frac{nE}{Z_0}$, а в отражённой волне $\\vec H$ направлен противоположно, значит второе условие $n_1\\left(E_i-E_r\\right)=n_2E_t$. Из двух уравнений находятся коэффициенты для амплитуд.",
+  "en": "**Boundary conditions.** Let a wave fall from a medium of refractive index $n_1$ into a medium $n_2$ perpendicular to the boundary (both non-ferromagnetic). There are no free charges or currents on the boundary, so the tangential components of $\\vec E$ and $\\vec H$ are continuous (B2-L20). If the amplitudes of the incident, reflected and transmitted waves are $E_i$, $E_r$, $E_t$, the first condition gives $E_i+E_r=E_t$. In matter $H=\\frac{nE}{Z_0}$, and in the reflected wave $\\vec H$ points the opposite way, so the second condition is $n_1\\left(E_i-E_r\\right)=n_2E_t$. The two equations give the amplitude coefficients."
+ },
+ {
+  "t": "m",
+  "m": "r=\\frac{E_r}{E_i}=\\frac{n_1-n_2}{n_1+n_2},\\qquad t=\\frac{E_t}{E_i}=\\frac{2n_1}{n_1+n_2},\\qquad R=r^2,\\qquad T=\\frac{n_2}{n_1}t^2,\\qquad R+T=1"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L21-F07.png",
+   "ru": "figures/B2-L21-F07-ru.png",
+   "en": "figures/B2-L21-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya koeffitsiyentlari ([[F07]]).** Qaytish koeffitsiyenti (qaytish ulushi, reflectance) $R$ — qaytgan va tushgan intensivliklar nisbati; intensivlik $nE^2$ ga proporsional bo'lgani uchun o'tish koeffitsiyentida $\\frac{n_2}{n_1}$ ko'paytuvchi bor. $R+T=1$ — energiya saqlanishi (tekshirib ko'ring). $R$ qaysi tomondan tushishga bog'liq emas: $n_1$ va $n_2$ ni almashtirish faqat $r$ ishorasini o'zgartiradi. Havo–shisha ($n=1.5$) chegarasida $R=0.04$: har bir sirt yorug'likning $4$ foizini qaytaradi, oyna orqali ikki sirtdan taxminan $8$ foiz yo'qoladi.",
+  "ru": "**Энергетические коэффициенты ([[F07]]).** Коэффициент отражения (reflectance) $R$ — отношение отражённой и падающей интенсивностей; так как интенсивность пропорциональна $nE^2$, в коэффициенте пропускания есть множитель $\\frac{n_2}{n_1}$. $R+T=1$ — сохранение энергии (проверьте). $R$ не зависит от того, с какой стороны падает волна: замена $n_1$ и $n_2$ меняет только знак $r$. На границе воздух–стекло ($n=1.5$) $R=0.04$: каждая поверхность отражает $4$ процента света, через окно с двумя поверхностями теряется около $8$ процентов.",
+  "en": "**Energy coefficients ([[F07]]).** The reflection coefficient (reflectance) $R$ is the ratio of the reflected and incident intensities; since the intensity is proportional to $nE^2$, the transmission coefficient contains the factor $\\frac{n_2}{n_1}$. $R+T=1$ is energy conservation (check it). $R$ does not depend on the side from which the wave arrives: swapping $n_1$ and $n_2$ only changes the sign of $r$. At an air–glass boundary ($n=1.5$) $R=0.04$: each surface reflects $4$ percent of the light, and about $8$ percent is lost through a window with two surfaces."
+ },
+ {
+  "t": "li",
+  "uz": "**Faza sakrashi.** Agar $n_2>n_1$ (optik zichroq muhitdan qaytish), $r<0$: qaytgan to'lqinning $\\vec E$ si teskari — faza $\\pi$ ga sakraydi, xuddi mahkamlangan uchidan qaytgan arqon to'lqini kabi (B1-L22). Zichroq muhitdan siyrakroqqa qaytishda sakrash yo'q, o'tgan to'lqinda esa hech qachon yo'q ($t>0$). Bu qoida yupqa pardalardagi interferensiya (B2-L25) uchun hal qiluvchi.",
+  "ru": "**Скачок фазы.** Если $n_2>n_1$ (отражение от оптически более плотной среды), $r<0$: $\\vec E$ отражённой волны обращается — фаза скачком меняется на $\\pi$, как у волны на верёвке, отражённой от закреплённого конца (B1-L22). При отражении от менее плотной среды скачка нет, а у прошедшей волны его не бывает никогда ($t>0$). Это правило решающее для интерференции в тонких плёнках (B2-L25).",
+  "en": "**Phase jump.** If $n_2>n_1$ (reflection from an optically denser medium), $r<0$: the $\\vec E$ of the reflected wave is reversed — the phase jumps by $\\pi$, just like a wave on a rope reflected from a fixed end (B1-L22). On reflection from a less dense medium there is no jump, and the transmitted wave never has one ($t>0$). This rule is decisive for interference in thin films (B2-L25)."
+ },
+ {
+  "t": "li",
+  "uz": "**Metall — deyarli ideal ko'zgu.** Ideal o'tkazgich ichida maydon yo'q, sirtda $E_\\tau=0$ — bu $n_2\\to\\infty$ holiga mos keladi: $r=-1$, $R=1$, to'lqin to'liq qaytadi, sirtda $\\vec E$ tugunga, $\\vec B$ esa do'nglikka ega (sirt toki tufayli, B2-L20). Haqiqiy metallarda erkin elektronlar ko'rinadigan yorug'likning $90$ foizdan ortig'ini qaytaradi (kumush, alyuminiy), qolgani skin-qatlamda yutiladi (10-bo'lim). Ko'zguning qaytarishi uni yaltiroq qiladi va yorug'lik bosimini ikki baravar oshiradi.",
+  "ru": "**Металл — почти идеальное зеркало.** Внутри идеального проводника поля нет, на поверхности $E_\\tau=0$ — это соответствует случаю $n_2\\to\\infty$: $r=-1$, $R=1$, волна полностью отражается, у поверхности $\\vec E$ имеет узел, а $\\vec B$ — пучность (из-за поверхностного тока, B2-L20). В реальных металлах свободные электроны отражают более $90$ процентов видимого света (серебро, алюминий), остальное поглощается в скин-слое (раздел 10). Отражение делает металл блестящим и удваивает давление света.",
+  "en": "**A metal is an almost perfect mirror.** Inside a perfect conductor there is no field, and at the surface $E_\\tau=0$ — this corresponds to the case $n_2\\to\\infty$: $r=-1$, $R=1$, the wave is totally reflected, and at the surface $\\vec E$ has a node while $\\vec B$ has an antinode (because of the surface current, B2-L20). In real metals the free electrons reflect more than $90$ percent of visible light (silver, aluminium), and the rest is absorbed in the skin layer (Section 10). Reflection makes a metal shiny and doubles the radiation pressure."
+ },
+ {
+  "t": "h2",
+  "uz": "10. O'tkazgich va plazmadagi to'lqinlar",
+  "ru": "10. Волны в проводнике и плазме",
+  "en": "10. Waves in a conductor and a plasma"
+ },
+ {
+  "t": "li",
+  "uz": "**Yaxshi o'tkazgich.** $\\sigma\\gg\\omega\\varepsilon_0\\varepsilon$ bo'lganda o'tkazuvchanlik toki siljish tokidan ancha katta va maydon ichkariga to'lqin sifatida emas, diffuziya yo'li bilan kiradi (B2-L20). Amplituda skin-qatlam qalinligi $\\delta$ masofada $e$ marta kamayadi. O'tkazgich ichida $\\vec B$ fazasi $\\vec E$ dan $\\frac{\\pi}{4}$ ga orqada va $\\frac{B}{E}\\gg\\frac{1}{c}$ — energiya asosan magnit maydonda. Okean suvi radioto'lqinlarni kuchli so'ndiradi: suv osti kemalari bilan aloqa juda past chastotalarda olib boriladi.",
+  "ru": "**Хороший проводник.** При $\\sigma\\gg\\omega\\varepsilon_0\\varepsilon$ ток проводимости много больше тока смещения, и поле проникает внутрь не как волна, а путём диффузии (B2-L20). Амплитуда уменьшается в $e$ раз на расстоянии толщины скин-слоя $\\delta$. Внутри проводника фаза $\\vec B$ отстаёт от $\\vec E$ на $\\frac{\\pi}{4}$ и $\\frac{B}{E}\\gg\\frac{1}{c}$ — энергия в основном в магнитном поле. Морская вода сильно гасит радиоволны: связь с подводными лодками ведётся на очень низких частотах.",
+  "en": "**A good conductor.** When $\\sigma\\gg\\omega\\varepsilon_0\\varepsilon$ the conduction current is much larger than the displacement current, and the field enters not as a wave but by diffusion (B2-L20). The amplitude drops by a factor $e$ over the skin depth $\\delta$. Inside the conductor the phase of $\\vec B$ lags that of $\\vec E$ by $\\frac{\\pi}{4}$ and $\\frac{B}{E}\\gg\\frac{1}{c}$ — the energy is mostly magnetic. Sea water strongly damps radio waves: communication with submarines uses very low frequencies."
+ },
+ {
+  "t": "m",
+  "m": "E=E_0e^{-\\frac{x}{\\delta}}\\cos\\left(\\frac{x}{\\delta}-\\omega t\\right),\\qquad I=I_0e^{-\\frac{2x}{\\delta}},\\qquad \\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Plazma.** Ionlashgan gazda (ionosfera, yulduzlar, metall ichidagi elektron gazi) erkin elektronlar maydonda $m\\frac{d\\vec v}{dt}=-e\\vec E$ tenglama bo'yicha tebranadi. Ular hosil qilgan tok maydonga qarama-qarshi fazada bo'lib, samarali dielektrik singdiruvchanlikni kamaytiradi. Natijada muhit $\\omega_p$ **plazma chastotasi (plasma frequency)** bilan tavsiflanadi; $n$ — elektronlar konsentratsiyasi. Amaliy formula: $f_p\\approx9\\sqrt{n}\\ \\mathrm{Hz}$ ($n$ — $\\mathrm{m^{-3}}$ da).",
+  "ru": "**Плазма.** В ионизованном газе (ионосфера, звёзды, электронный газ в металле) свободные электроны колеблются в поле по уравнению $m\\frac{d\\vec v}{dt}=-e\\vec E$. Создаваемый ими ток находится в противофазе с полем и уменьшает эффективную диэлектрическую проницаемость. В результате среда характеризуется **плазменной частотой (plasma frequency)** $\\omega_p$; $n$ — концентрация электронов. Практическая формула: $f_p\\approx9\\sqrt{n}\\ \\mathrm{Hz}$ ($n$ — в $\\mathrm{m^{-3}}$).",
+  "en": "**A plasma.** In an ionized gas (the ionosphere, stars, the electron gas in a metal) free electrons oscillate in the field according to $m\\frac{d\\vec v}{dt}=-e\\vec E$. The current they produce is out of phase with the field and reduces the effective permittivity. As a result the medium is characterized by the **plasma frequency** $\\omega_p$; $n$ is the electron concentration. A practical formula: $f_p\\approx9\\sqrt{n}\\ \\mathrm{Hz}$ ($n$ in $\\mathrm{m^{-3}}$)."
+ },
+ {
+  "t": "m",
+  "m": "\\varepsilon\\left(\\omega\\right)=1-\\frac{\\omega_p^2}{\\omega^2},\\qquad \\omega_p=\\sqrt{\\frac{ne^2}{\\varepsilon_0m}},\\qquad \\omega^2=\\omega_p^2+c^2k^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Oqibatlar.** $\\omega<\\omega_p$ da $\\varepsilon<0$, $k$ mavhum — to'lqin plazmaga kirmaydi va to'liq qaytadi. Ionosferada $n\\sim10^{11}$–$10^{12}\\ \\mathrm{m^{-3}}$, $f_p$ — bir necha $\\mathrm{MHz}$: o'rta va qisqa radioto'lqinlar qaytib, Yer atrofida uzoqqa tarqaladi, FM, televideniye va sun'iy yo'ldosh signallari esa ionosferadan o'tib ketadi. Metallarda $n\\sim10^{29}\\ \\mathrm{m^{-3}}$ va $f_p\\sim10^{15}\\ \\mathrm{Hz}$ (ultrabinafsha) — shuning uchun metallar ko'rinadigan yorug'likni qaytaradi, ishqoriy metallar esa ultrabinafshada shaffof bo'lib qoladi.",
+  "ru": "**Следствия.** При $\\omega<\\omega_p$ имеем $\\varepsilon<0$, $k$ мнимое — волна не входит в плазму и полностью отражается. В ионосфере $n\\sim10^{11}$–$10^{12}\\ \\mathrm{m^{-3}}$, $f_p$ — несколько $\\mathrm{MHz}$: средние и короткие радиоволны отражаются и распространяются далеко вокруг Земли, а сигналы FM, телевидения и спутников проходят сквозь ионосферу. В металлах $n\\sim10^{29}\\ \\mathrm{m^{-3}}$ и $f_p\\sim10^{15}\\ \\mathrm{Hz}$ (ультрафиолет) — поэтому металлы отражают видимый свет, а щелочные металлы становятся прозрачными в ультрафиолете.",
+  "en": "**Consequences.** For $\\omega<\\omega_p$ we have $\\varepsilon<0$ and $k$ imaginary — the wave does not enter the plasma and is totally reflected. In the ionosphere $n\\sim10^{11}$–$10^{12}\\ \\mathrm{m^{-3}}$ and $f_p$ is a few $\\mathrm{MHz}$: medium and short radio waves are reflected and travel far around the Earth, while FM, television and satellite signals pass through the ionosphere. In metals $n\\sim10^{29}\\ \\mathrm{m^{-3}}$ and $f_p\\sim10^{15}\\ \\mathrm{Hz}$ (ultraviolet) — that is why metals reflect visible light, and alkali metals become transparent in the ultraviolet."
+ },
+ {
+  "t": "li",
+  "uz": "**Fazaviy va guruh tezliklari ([[F08]], o'ng).** $\\omega>\\omega_p$ da dispersiya munosabatidan fazaviy tezlik $c$ dan katta, guruh tezligi esa $c$ dan kichik, ko'paytmasi $c^2$. Bu nisbiylik nazariyasiga zid emas: fazaviy tezlik hech qanday signal yoki energiya tashimaydi. Kosmik plazmadan o'tgan pulsar impulsida past chastotalar kechikib keladi — kechikishdan yo'ldagi elektronlar soni aniqlanadi.",
+  "ru": "**Фазовая и групповая скорости ([[F08]], справа).** При $\\omega>\\omega_p$ из закона дисперсии фазовая скорость больше $c$, групповая — меньше $c$, а их произведение равно $c^2$. Это не противоречит теории относительности: фазовая скорость не переносит ни сигнала, ни энергии. В импульсе пульсара, прошедшем через космическую плазму, низкие частоты приходят с запаздыванием — по задержке определяют число электронов на пути.",
+  "en": "**Phase and group velocities ([[F08]], right).** For $\\omega>\\omega_p$ the dispersion relation gives a phase velocity larger than $c$ and a group velocity smaller than $c$, with product $c^2$. This does not contradict relativity: the phase velocity carries neither a signal nor energy. In a pulsar pulse that has crossed the interstellar plasma the low frequencies arrive late — the delay gives the number of electrons along the path."
+ },
+ {
+  "t": "m",
+  "m": "v_p=\\frac{\\omega}{k}=\\frac{c}{\\sqrt{1-\\frac{\\omega_p^2}{\\omega^2}}}>c,\\qquad v_g=\\frac{d\\omega}{dk}=c\\sqrt{1-\\frac{\\omega_p^2}{\\omega^2}}<c,\\qquad v_pv_g=c^2"
+ },
+ {
+  "t": "h2",
+  "uz": "11. Turg'un to'lqinlar, rezonator va to'lqin o'tkazgich",
+  "ru": "11. Стоячие волны, резонатор и волновод",
+  "en": "11. Standing waves, resonators and waveguides"
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'zgu oldidagi turg'un to'lqin.** $x=0$ dagi ideal ko'zguga $+x$ yo'nalishda $\\vec E=E_0\\cos\\left(kx-\\omega t\\right)\\vec j$ to'lqin tushsin. Qaytgan to'lqin $-E_0\\cos\\left(kx+\\omega t\\right)\\vec j$ (sirtda $E=0$), uning magnit maydoni esa $\\vec n=-\\vec i$ bilan topiladi. Yig'indi — **turg'un to'lqin (standing wave)**: $\\vec E$ tugunlari ko'zguda va har $\\frac{\\lambda}{2}$ da, $\\vec B$ tugunlari ulardan $\\frac{\\lambda}{4}$ ga siljigan; vaqt bo'yicha ham $\\frac{\\pi}{2}$ siljish bor. Energiya elektr va magnit shakllar orasida «chayqaladi», lekin hech qayerga oqmaydi: $\\langle S_x\\rangle=0$.",
+  "ru": "**Стоячая волна перед зеркалом.** Пусть на идеальное зеркало при $x=0$ в направлении $+x$ падает волна $\\vec E=E_0\\cos\\left(kx-\\omega t\\right)\\vec j$. Отражённая волна $-E_0\\cos\\left(kx+\\omega t\\right)\\vec j$ (на поверхности $E=0$), а её магнитное поле находится с $\\vec n=-\\vec i$. Сумма — **стоячая волна (standing wave)**: узлы $\\vec E$ на зеркале и через каждые $\\frac{\\lambda}{2}$, узлы $\\vec B$ сдвинуты относительно них на $\\frac{\\lambda}{4}$; по времени тоже сдвиг на $\\frac{\\pi}{2}$. Энергия «перекачивается» между электрической и магнитной формами, но никуда не течёт: $\\langle S_x\\rangle=0$.",
+  "en": "**A standing wave in front of a mirror.** Let the wave $\\vec E=E_0\\cos\\left(kx-\\omega t\\right)\\vec j$ travel in the $+x$ direction towards a perfect mirror at $x=0$. The reflected wave is $-E_0\\cos\\left(kx+\\omega t\\right)\\vec j$ (so that $E=0$ at the surface), and its magnetic field is found with $\\vec n=-\\vec i$. The sum is a **standing wave**: the nodes of $\\vec E$ are at the mirror and every $\\frac{\\lambda}{2}$, and the nodes of $\\vec B$ are shifted from them by $\\frac{\\lambda}{4}$; there is also a shift of $\\frac{\\pi}{2}$ in time. Energy \"sloshes\" between the electric and magnetic forms but flows nowhere: $\\langle S_x\\rangle=0$."
+ },
+ {
+  "t": "m",
+  "m": "E_y=2E_0\\sin kx\\,\\sin\\omega t,\\qquad B_z=2B_0\\cos kx\\,\\cos\\omega t,\\qquad \\langle S_x\\rangle=0"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L21-F08.png",
+   "ru": "figures/B2-L21-F08-ru.png",
+   "en": "figures/B2-L21-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Tajribalar ([[F08]], chap).** O. Viner (1890) ko'zgu oldiga yupqa fotoemulsiyani qiya qo'yib, qorayish $\\vec E$ do'ngliklarida bo'lishini, $\\vec E$ tugunlarida esa yo'qligini ko'rsatdi — fotokimyoviy ta'sir elektr maydonga bog'liq. Mikroto'lqinli pechda aylanuvchi patnissiz shokolad faqat $\\vec E$ do'ngliklarida eriydi; qo'shni dog'lar orasi $\\frac{\\lambda}{2}$ — bundan $c=\\lambda f$ ni o'lchash mumkin.",
+  "ru": "**Опыты ([[F08]], слева).** О. Винер (1890), поставив перед зеркалом наклонно тонкую фотоэмульсию, показал, что почернение возникает в пучностях $\\vec E$ и отсутствует в узлах $\\vec E$ — фотохимическое действие связано с электрическим полем. В микроволновой печи без вращающегося поддона шоколад плавится только в пучностях $\\vec E$; расстояние между соседними пятнами $\\frac{\\lambda}{2}$ — отсюда можно измерить $c=\\lambda f$.",
+  "en": "**Experiments ([[F08]], left).** O. Wiener (1890) placed a thin photographic emulsion at a slant in front of a mirror and showed that blackening occurs at the antinodes of $\\vec E$ and is absent at the nodes of $\\vec E$ — the photochemical action is due to the electric field. In a microwave oven without its turntable, chocolate melts only at the antinodes of $\\vec E$; the distance between neighbouring spots is $\\frac{\\lambda}{2}$ — from this one can measure $c=\\lambda f$."
+ },
+ {
+  "t": "li",
+  "uz": "**Rezonator.** Oralig'i $L$ bo'lgan ikki ko'zgu orasida turg'un to'lqin faqat ikkala ko'zguda $E=0$ bo'lganda yashaydi: $L$ ga yarim to'lqinlarning butun soni $m$ joylashishi kerak. **Xususiy chastotalar (modes)** teng oraliqli. Lazer rezonatorida $m\\sim10^6$ va qo'shni modalar orasi yuzlab $\\mathrm{MHz}$; uch o'lchamli metall qutidagi modalarni sanash Reley–Jins formulasi va issiqlik nurlanishi nazariyasining boshlanishidir.",
+  "ru": "**Резонатор.** Между двумя зеркалами на расстоянии $L$ стоячая волна существует, только если $E=0$ на обоих зеркалах: на $L$ должно укладываться целое число $m$ полуволн. **Собственные частоты (modes)** равноотстоящие. В лазерном резонаторе $m\\sim10^6$, и соседние моды отстоят на сотни $\\mathrm{MHz}$; подсчёт мод в трёхмерном металлическом ящике — начало формулы Рэлея–Джинса и теории теплового излучения.",
+  "en": "**A resonator.** Between two mirrors a distance $L$ apart a standing wave can exist only if $E=0$ at both mirrors: an integer number $m$ of half-wavelengths must fit into $L$. The **modes** are equally spaced in frequency. In a laser cavity $m\\sim10^6$ and neighbouring modes are hundreds of $\\mathrm{MHz}$ apart; counting the modes in a three-dimensional metal box is the starting point of the Rayleigh–Jeans formula and the theory of thermal radiation."
+ },
+ {
+  "t": "m",
+  "m": "L=m\\frac{\\lambda}{2},\\qquad f_m=\\frac{mc}{2L},\\qquad \\Delta f=\\frac{c}{2L}"
+ },
+ {
+  "t": "li",
+  "uz": "**To'lqin o'tkazgich (waveguide).** Kesimi $a\\times b$ ($a>b$) bo'lgan ichi bo'sh metall quvurda to'lqin devorlardan qiya qaytib boradi. Eng past moda kengligi bo'ylab yarim to'lqin joylashganda paydo bo'ladi — **kesish chastotasi (cutoff frequency)** $f_c$; undan past chastotali to'lqin quvur bo'ylab tarqalmaydi, eksponensial so'nadi. Dispersiya munosabati plazmadagidek ($\\omega_p\\to\\omega_c$), shuning uchun $v_g<c$ va quvurdagi to'lqin uzunligi $\\lambda_g>\\lambda_0$. Bitta moda tarqaladigan oraliq: $f_c$ dan $\\frac{c}{a}$ va $\\frac{c}{2b}$ ning kichigigacha. Mikroto'lqinli pech eshigidagi teshiklar mikroto'lqin uzunligidan ancha kichik — mikroto'lqin chiqmaydi, yorug'lik esa o'tadi.",
+  "ru": "**Волновод (waveguide).** В полой металлической трубе сечения $a\\times b$ ($a>b$) волна идёт, наклонно отражаясь от стенок. Низшая мода возникает, когда поперёк ширины укладывается полволны, — **частота отсечки (cutoff frequency)** $f_c$; волна с меньшей частотой вдоль трубы не распространяется, а экспоненциально затухает. Закон дисперсии такой же, как в плазме ($\\omega_p\\to\\omega_c$), поэтому $v_g<c$, а длина волны в трубе $\\lambda_g>\\lambda_0$. Одномодовый диапазон: от $f_c$ до меньшей из величин $\\frac{c}{a}$ и $\\frac{c}{2b}$. Отверстия в дверце микроволновки намного меньше длины микроволны — микроволны не выходят, а свет проходит.",
+  "en": "**A waveguide.** In a hollow metal pipe of cross-section $a\\times b$ ($a>b$) the wave travels by bouncing obliquely off the walls. The lowest mode appears when half a wavelength fits across the width — the **cutoff frequency** $f_c$; a wave of lower frequency does not propagate along the pipe but decays exponentially. The dispersion relation is the same as in a plasma ($\\omega_p\\to\\omega_c$), so $v_g<c$ and the wavelength in the pipe is $\\lambda_g>\\lambda_0$. The single-mode range is from $f_c$ up to the smaller of $\\frac{c}{a}$ and $\\frac{c}{2b}$. The holes in a microwave oven door are much smaller than the microwave wavelength — microwaves do not get out, while light passes through."
+ },
+ {
+  "t": "m",
+  "m": "f_c=\\frac{c}{2a},\\qquad \\omega^2=\\omega_c^2+c^2k^2,\\qquad v_g=c\\sqrt{1-\\frac{f_c^2}{f^2}},\\qquad \\lambda_g=\\frac{\\lambda_0}{\\sqrt{1-\\frac{f_c^2}{f^2}}}"
+ },
+ {
+  "t": "h2",
+  "uz": "12. GRE uchun usullar va tipik xatolar",
+  "ru": "12. Приёмы для GRE и типичные ошибки",
+  "en": "12. GRE techniques and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**Yo'nalishlar.** Har doim o'ng uchlik: $\\vec E\\times\\vec B$ — tarqalish yo'nalishi. Ifodadan yo'nalishni o'qing ($kx-\\omega t$ — $+x$, $kx+\\omega t$ — $-x$), keyin $\\vec B=\\frac{1}{c}\\vec n\\times\\vec E$. Ideal o'tkazgichdan qaytganda $\\vec E$ teskari bo'ladi, $\\vec B$ esa o'zgarmaydi — chunki $\\vec n$ ham teskari.",
+  "ru": "**Направления.** Всегда правая тройка: $\\vec E\\times\\vec B$ — направление распространения. Прочитайте направление из выражения ($kx-\\omega t$ — $+x$, $kx+\\omega t$ — $-x$), затем $\\vec B=\\frac{1}{c}\\vec n\\times\\vec E$. При отражении от идеального проводника $\\vec E$ обращается, а $\\vec B$ не меняется — потому что $\\vec n$ тоже обращается.",
+  "en": "**Directions.** Always a right-handed triple: $\\vec E\\times\\vec B$ is the direction of travel. Read the direction from the expression ($kx-\\omega t$ means $+x$, $kx+\\omega t$ means $-x$), then use $\\vec B=\\frac{1}{c}\\vec n\\times\\vec E$. On reflection from a perfect conductor $\\vec E$ reverses while $\\vec B$ does not — because $\\vec n$ reverses too."
+ },
+ {
+  "t": "li",
+  "uz": "**«2» ko'paytuvchilari.** O'rtacha va maksimal ($\\frac{1}{2}$), yutilish va qaytish (bosim $\\frac{I}{c}$ va $\\frac{2I}{c}$), amplituda va ta'sir etuvchi qiymat ($\\sqrt{2}$). Har bir javob variantlari ko'pincha aynan shu ko'paytuvchilar bilan farq qiladi.",
+  "ru": "**Множители «2».** Среднее и максимальное ($\\frac{1}{2}$), поглощение и отражение (давление $\\frac{I}{c}$ и $\\frac{2I}{c}$), амплитуда и действующее значение ($\\sqrt{2}$). Варианты ответа часто отличаются именно этими множителями.",
+  "en": "**Factors of 2.** Average versus maximum ($\\frac{1}{2}$), absorption versus reflection (pressure $\\frac{I}{c}$ versus $\\frac{2I}{c}$), amplitude versus rms value ($\\sqrt{2}$). The answer choices often differ by exactly these factors."
+ },
+ {
+  "t": "li",
+  "uz": "**Masshtablash.** Nuqtaviy manba: $I\\propto\\frac{1}{r^2}$, $E_0\\propto\\frac{1}{r}$; chiziqli manba: $I\\propto\\frac{1}{r}$; yassi to'lqin — masofaga bog'liq emas. Moddaga o'tganda $f$ o'zgarmaydi, $v$ va $\\lambda$ $n$ marta kamayadi. Chang zarrasi uchun bosim va tortishish nisbati $\\propto\\frac{1}{\\rho a}$ va masofaga bog'liq emas.",
+  "ru": "**Масштабирование.** Точечный источник: $I\\propto\\frac{1}{r^2}$, $E_0\\propto\\frac{1}{r}$; линейный источник: $I\\propto\\frac{1}{r}$; плоская волна — от расстояния не зависит. При переходе в вещество $f$ не меняется, $v$ и $\\lambda$ уменьшаются в $n$ раз. Для пылинки отношение давления и притяжения $\\propto\\frac{1}{\\rho a}$ и не зависит от расстояния.",
+  "en": "**Scaling.** Point source: $I\\propto\\frac{1}{r^2}$, $E_0\\propto\\frac{1}{r}$; line source: $I\\propto\\frac{1}{r}$; plane wave — independent of distance. On entering matter $f$ does not change, while $v$ and $\\lambda$ become $n$ times smaller. For a dust grain the ratio of radiation force to gravity is $\\propto\\frac{1}{\\rho a}$ and does not depend on distance."
+ },
+ {
+  "t": "li",
+  "uz": "**O'lchamlar va sonlar.** $[S]=\\mathrm{W/m^2}$, $[w]=\\mathrm{J/m^3}$, bosim $\\frac{I}{c}$ — $\\mathrm{Pa}$. Yod oling: $c=3\\cdot10^8\\ \\mathrm{m/s}$, $Z_0\\approx377\\ \\Omega$, $c\\varepsilon_0\\approx\\frac{1}{377}\\ \\mathrm{S}$, $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$, ko'rinadigan yorug'lik $400$–$700\\ \\mathrm{nm}$, quyosh doimiysi $\\approx1.4\\ \\mathrm{kW/m^2}$. Kalkulyatorsiz testda $I=\\frac{E_0^2}{2Z_0}$ ko'pincha eng tez yo'l.",
+  "ru": "**Размерности и числа.** $[S]=\\mathrm{W/m^2}$, $[w]=\\mathrm{J/m^3}$, давление $\\frac{I}{c}$ — в $\\mathrm{Pa}$. Запомните: $c=3\\cdot10^8\\ \\mathrm{m/s}$, $Z_0\\approx377\\ \\Omega$, $c\\varepsilon_0\\approx\\frac{1}{377}\\ \\mathrm{S}$, $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$, видимый свет $400$–$700\\ \\mathrm{nm}$, солнечная постоянная $\\approx1.4\\ \\mathrm{kW/m^2}$. В тесте без калькулятора $I=\\frac{E_0^2}{2Z_0}$ часто самый быстрый путь.",
+  "en": "**Dimensions and numbers.** $[S]=\\mathrm{W/m^2}$, $[w]=\\mathrm{J/m^3}$, and the pressure $\\frac{I}{c}$ is in $\\mathrm{Pa}$. Remember: $c=3\\cdot10^8\\ \\mathrm{m/s}$, $Z_0\\approx377\\ \\Omega$, $c\\varepsilon_0\\approx\\frac{1}{377}\\ \\mathrm{S}$, $hc\\approx1240\\ \\mathrm{eV\\cdot nm}$, visible light $400$–$700\\ \\mathrm{nm}$, solar constant $\\approx1.4\\ \\mathrm{kW/m^2}$. In a test without a calculator $I=\\frac{E_0^2}{2Z_0}$ is often the quickest route."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Yassi to'lqin",
+    "ru": "Плоская волна",
+    "en": "Plane wave",
+    "m": "\\vec B=\\frac{1}{c}\\vec n\\times\\vec E,\\quad B_0=\\frac{E_0}{c},\\quad \\omega=ck"
+   },
+   {
+    "uz": "To'lqin kattaliklari",
+    "ru": "Характеристики волны",
+    "en": "Wave quantities",
+    "m": "c=\\lambda f,\\quad k=\\frac{2\\pi}{\\lambda},\\quad E_\\gamma=\\frac{hc}{\\lambda}"
+   },
+   {
+    "uz": "Qutblanish",
+    "ru": "Поляризация",
+    "en": "Polarization",
+    "m": "E_x=E_1\\cos\\phi,\\quad E_y=E_2\\cos\\left(\\phi+\\delta\\right)"
+   },
+   {
+    "uz": "Energiya zichligi",
+    "ru": "Плотность энергии",
+    "en": "Energy density",
+    "m": "w=\\varepsilon_0E^2=\\frac{B^2}{\\mu_0},\\quad \\langle w\\rangle=\\frac{1}{2}\\varepsilon_0E_0^2"
+   },
+   {
+    "uz": "Poynting vektori",
+    "ru": "Вектор Пойнтинга",
+    "en": "Poynting vector",
+    "m": "\\vec S=\\frac{1}{\\mu_0}\\vec E\\times\\vec B=\\vec E\\times\\vec H"
+   },
+   {
+    "uz": "Intensivlik",
+    "ru": "Интенсивность",
+    "en": "Intensity",
+    "m": "I=\\frac{1}{2}c\\varepsilon_0E_0^2=\\frac{E_{rms}^2}{Z_0},\\quad Z_0\\approx377\\ \\Omega"
+   },
+   {
+    "uz": "Nuqtaviy manba",
+    "ru": "Точечный источник",
+    "en": "Point source",
+    "m": "I=\\frac{\\mathcal P}{4\\pi r^2},\\quad E_0\\propto\\frac{1}{r}"
+   },
+   {
+    "uz": "Poynting teoremasi",
+    "ru": "Теорема Пойнтинга",
+    "en": "Poynting's theorem",
+    "m": "\\frac{\\partial w}{\\partial t}+\\nabla\\cdot\\vec S=-\\vec J\\cdot\\vec E"
+   },
+   {
+    "uz": "Impuls",
+    "ru": "Импульс",
+    "en": "Momentum",
+    "m": "p=\\frac{U}{c},\\quad \\vec g=\\frac{\\vec S}{c^2},\\quad L=\\frac{U}{\\omega}"
+   },
+   {
+    "uz": "Yorug'lik bosimi",
+    "ru": "Давление света",
+    "en": "Radiation pressure",
+    "m": "P=\\frac{I}{c}\\cos^2\\theta,\\quad P=\\frac{2I}{c}\\cos^2\\theta"
+   },
+   {
+    "uz": "Moddada",
+    "ru": "В веществе",
+    "en": "In matter",
+    "m": "v=\\frac{c}{n},\\quad n=\\sqrt{\\varepsilon\\mu},\\quad Z=\\frac{Z_0}{n}"
+   },
+   {
+    "uz": "Qaytish va o'tish",
+    "ru": "Отражение и прохождение",
+    "en": "Reflection and transmission",
+    "m": "r=\\frac{n_1-n_2}{n_1+n_2},\\quad R+T=1"
+   },
+   {
+    "uz": "O'tkazgichda",
+    "ru": "В проводнике",
+    "en": "In a conductor",
+    "m": "I=I_0e^{-\\frac{2x}{\\delta}},\\quad \\delta=\\sqrt{\\frac{2}{\\mu_0\\mu\\sigma\\omega}}"
+   },
+   {
+    "uz": "Plazma",
+    "ru": "Плазма",
+    "en": "Plasma",
+    "m": "\\omega_p=\\sqrt{\\frac{ne^2}{\\varepsilon_0m}},\\quad v_pv_g=c^2"
+   },
+   {
+    "uz": "Turg'un to'lqin, rezonator",
+    "ru": "Стоячая волна, резонатор",
+    "en": "Standing wave, resonator",
+    "m": "L=m\\frac{\\lambda}{2},\\quad \\Delta f=\\frac{c}{2L}"
+   },
+   {
+    "uz": "To'lqin o'tkazgich",
+    "ru": "Волновод",
+    "en": "Waveguide",
+    "m": "f_c=\\frac{c}{2a},\\quad v_g=c\\sqrt{1-\\frac{f_c^2}{f^2}}"
+   }
+  ]
+ }
+]
