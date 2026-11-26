@@ -1,0 +1,908 @@
+[
+ {
+  "id": "B2-L29-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Hajmi $10\\ \\mathrm{L}$ bo'lgan ballonda $300\\ \\mathrm{K}$ temperaturada va $1.5\\ \\mathrm{MPa}$ bosimda kislorod ($M=32\\ \\mathrm{g/mol}$) bor. Modda miqdorini, gaz massasini va molekulalar sonini toping.",
+   "ru": "В баллоне объёмом $10\\ \\mathrm{L}$ при температуре $300\\ \\mathrm{K}$ и давлении $1.5\\ \\mathrm{MPa}$ находится кислород ($M=32\\ \\mathrm{g/mol}$). Найдите количество вещества, массу газа и число молекул.",
+   "en": "A $10\\ \\mathrm{L}$ cylinder holds oxygen ($M=32\\ \\mathrm{g/mol}$) at $300\\ \\mathrm{K}$ and $1.5\\ \\mathrm{MPa}$. Find the amount of substance, the mass of the gas and the number of molecules."
+  },
+  "figure": "figures/B2-L29-S01.png",
+  "solution": {
+   "uz": [
+    "Holat tenglamasidan: $$\\nu=\\frac{pV}{RT}=\\frac{1.5\\cdot10^6\\cdot10^{-2}}{8.31\\cdot300}\\approx6.0\\ \\mathrm{mol}$$",
+    "Massa: $$m=\\nu M\\approx6.02\\cdot32\\approx193\\ \\mathrm{g}$$",
+    "Molekulalar soni: $$N=\\nu N_A\\approx6.02\\cdot6.02\\cdot10^{23}\\approx3.6\\cdot10^{24}$$"
+   ],
+   "ru": [
+    "Из уравнения состояния: $$\\nu=\\frac{pV}{RT}=\\frac{1.5\\cdot10^6\\cdot10^{-2}}{8.31\\cdot300}\\approx6.0\\ \\mathrm{mol}$$",
+    "Масса: $$m=\\nu M\\approx6.02\\cdot32\\approx193\\ \\mathrm{g}$$",
+    "Число молекул: $$N=\\nu N_A\\approx6.02\\cdot6.02\\cdot10^{23}\\approx3.6\\cdot10^{24}$$"
+   ],
+   "en": [
+    "From the equation of state: $$\\nu=\\frac{pV}{RT}=\\frac{1.5\\cdot10^6\\cdot10^{-2}}{8.31\\cdot300}\\approx6.0\\ \\mathrm{mol}$$",
+    "The mass: $$m=\\nu M\\approx6.02\\cdot32\\approx193\\ \\mathrm{g}$$",
+    "The number of molecules: $$N=\\nu N_A\\approx6.02\\cdot6.02\\cdot10^{23}\\approx3.6\\cdot10^{24}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Holat tenglamasi: $pV=\\nu RT$",
+    "ru": "Уравнение состояния: $pV=\\nu RT$",
+    "en": "Equation of state: $pV=\\nu RT$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Holat tenglamasi",
+   "ru": "Уравнение состояния",
+   "en": "Equation of state"
+  },
+  "answer": "\\nu\\approx6.0\\ \\mathrm{mol};\\ m\\approx193\\ \\mathrm{g};\\ N\\approx3.6\\cdot10^{24}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original (B2-L29, holat tenglamasi)"
+ },
+ {
+  "id": "B2-L29-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$2\\ \\mathrm{mol}$ bir atomli ideal gaz o'zgarmas bosimda $50\\ \\mathrm{K}$ ga isitildi. Gaz bajargan ishni, ichki energiya o'zgarishini va olgan issiqlikni toping.",
+   "ru": "$2\\ \\mathrm{mol}$ одноатомного идеального газа нагрели при постоянном давлении на $50\\ \\mathrm{K}$. Найдите работу газа, изменение внутренней энергии и полученную теплоту.",
+   "en": "$2\\ \\mathrm{mol}$ of a monatomic ideal gas is heated at constant pressure by $50\\ \\mathrm{K}$. Find the work done by the gas, the change in internal energy and the heat received."
+  },
+  "figure": "figures/B2-L29-S02.png",
+  "solution": {
+   "uz": [
+    "Izobarik ish: $$A=\\nu R\\Delta T=2\\cdot8.31\\cdot50=831\\ \\mathrm{J}$$",
+    "Ichki energiya, $C_V=\\frac{3}{2}R$: $$\\Delta U=\\frac{3}{2}\\nu R\\Delta T\\approx1.25\\ \\mathrm{kJ}$$",
+    "Birinchi qonun: $$Q=\\Delta U+A\\approx2.08\\ \\mathrm{kJ}$$"
+   ],
+   "ru": [
+    "Работа при изобаре: $$A=\\nu R\\Delta T=2\\cdot8.31\\cdot50=831\\ \\mathrm{J}$$",
+    "Внутренняя энергия, $C_V=\\frac{3}{2}R$: $$\\Delta U=\\frac{3}{2}\\nu R\\Delta T\\approx1.25\\ \\mathrm{kJ}$$",
+    "Первый закон: $$Q=\\Delta U+A\\approx2.08\\ \\mathrm{kJ}$$"
+   ],
+   "en": [
+    "Isobaric work: $$A=\\nu R\\Delta T=2\\cdot8.31\\cdot50=831\\ \\mathrm{J}$$",
+    "Internal energy, $C_V=\\frac{3}{2}R$: $$\\Delta U=\\frac{3}{2}\\nu R\\Delta T\\approx1.25\\ \\mathrm{kJ}$$",
+    "The first law: $$Q=\\Delta U+A\\approx2.08\\ \\mathrm{kJ}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Izobarik jarayon: $A=\\nu R\\Delta T$, $Q=\\nu C_p\\Delta T$",
+    "ru": "Изобарный процесс: $A=\\nu R\\Delta T$, $Q=\\nu C_p\\Delta T$",
+    "en": "Isobaric process: $A=\\nu R\\Delta T$, $Q=\\nu C_p\\Delta T$"
+   },
+   {
+    "uz": "Ideal gaz ichki energiyasi: $\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$",
+    "ru": "Внутренняя энергия идеального газа: $\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$",
+    "en": "Internal energy of an ideal gas: $\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$"
+   },
+   {
+    "uz": "Birinchi qonun: $Q=\\Delta U+A$",
+    "ru": "Первый закон: $Q=\\Delta U+A$",
+    "en": "First law: $Q=\\Delta U+A$"
+   }
+  ],
+  "basis": {
+   "uz": "Izobarik jarayon",
+   "ru": "Изобарный процесс",
+   "en": "Isobaric process"
+  },
+  "answer": "A=831\\ \\mathrm{J};\\ \\Delta U\\approx1.25\\ \\mathrm{kJ};\\ Q\\approx2.08\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "Irodov, «Problems in General Physics», 2.31-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L29-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Bir atomli ideal gaz $pV$-diagrammada to'g'ri chiziq bo'ylab $\\left(2\\ \\mathrm{L},\\ 100\\ \\mathrm{kPa}\\right)$ holatdan $\\left(6\\ \\mathrm{L},\\ 300\\ \\mathrm{kPa}\\right)$ holatga o'tdi. Gaz bajargan ishni, ichki energiya o'zgarishini va olgan issiqlikni toping.",
+   "ru": "Одноатомный идеальный газ перешёл по прямой на $pV$-диаграмме из состояния $\\left(2\\ \\mathrm{L},\\ 100\\ \\mathrm{kPa}\\right)$ в состояние $\\left(6\\ \\mathrm{L},\\ 300\\ \\mathrm{kPa}\\right)$. Найдите работу газа, изменение внутренней энергии и полученную теплоту.",
+   "en": "A monatomic ideal gas goes along a straight line on a $pV$-diagram from the state $\\left(2\\ \\mathrm{L},\\ 100\\ \\mathrm{kPa}\\right)$ to the state $\\left(6\\ \\mathrm{L},\\ 300\\ \\mathrm{kPa}\\right)$. Find the work done by the gas, the change in internal energy and the heat received."
+  },
+  "figure": "figures/B2-L29-S03.png",
+  "solution": {
+   "uz": [
+    "Ish — trapetsiya yuzasi: $$A=\\frac{100+300}{2}\\ \\mathrm{kPa}\\cdot4\\ \\mathrm{L}=800\\ \\mathrm{J}$$",
+    "Ichki energiya $pV$ orqali: $$\\Delta U=\\frac{3}{2}\\left(1800-200\\right)\\ \\mathrm{J}=2400\\ \\mathrm{J}$$",
+    "Issiqlik: $$Q=2400+800=3200\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "Работа — площадь трапеции: $$A=\\frac{100+300}{2}\\ \\mathrm{kPa}\\cdot4\\ \\mathrm{L}=800\\ \\mathrm{J}$$",
+    "Внутренняя энергия через $pV$: $$\\Delta U=\\frac{3}{2}\\left(1800-200\\right)\\ \\mathrm{J}=2400\\ \\mathrm{J}$$",
+    "Теплота: $$Q=2400+800=3200\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "Work — the area of a trapezium: $$A=\\frac{100+300}{2}\\ \\mathrm{kPa}\\cdot4\\ \\mathrm{L}=800\\ \\mathrm{J}$$",
+    "Internal energy via $pV$: $$\\Delta U=\\frac{3}{2}\\left(1800-200\\right)\\ \\mathrm{J}=2400\\ \\mathrm{J}$$",
+    "The heat: $$Q=2400+800=3200\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ish — yuza: $A=\\int p\\,dV$",
+    "ru": "Работа — площадь: $A=\\int p\\,dV$",
+    "en": "Work is an area: $A=\\int p\\,dV$"
+   },
+   {
+    "uz": "Ideal gaz ichki energiyasi: $\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$",
+    "ru": "Внутренняя энергия идеального газа: $\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$",
+    "en": "Internal energy of an ideal gas: $\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$"
+   },
+   {
+    "uz": "Birinchi qonun: $Q=\\Delta U+A$",
+    "ru": "Первый закон: $Q=\\Delta U+A$",
+    "en": "First law: $Q=\\Delta U+A$"
+   }
+  ],
+  "basis": {
+   "uz": "Ish — yuza, birinchi qonun",
+   "ru": "Работа — площадь, первый закон",
+   "en": "Work as an area, first law"
+  },
+  "answer": "A=800\\ \\mathrm{J};\\ \\Delta U=2400\\ \\mathrm{J};\\ Q=3200\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original (B2-L29, pV-diagramma)"
+ },
+ {
+  "id": "B2-L29-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Aralashma $2\\ \\mathrm{mol}$ geliy va $3\\ \\mathrm{mol}$ azotdan iborat (xona temperaturasi). Aralashmaning molyar issiqlik sig'imlari $C_V$, $C_p$ va Puasson koeffitsiyenti $\\gamma$ ni toping.",
+   "ru": "Смесь состоит из $2\\ \\mathrm{mol}$ гелия и $3\\ \\mathrm{mol}$ азота (комнатная температура). Найдите молярные теплоёмкости смеси $C_V$, $C_p$ и показатель адиабаты $\\gamma$.",
+   "en": "A mixture consists of $2\\ \\mathrm{mol}$ of helium and $3\\ \\mathrm{mol}$ of nitrogen (room temperature). Find the molar heat capacities $C_V$, $C_p$ of the mixture and the adiabatic index $\\gamma$."
+  },
+  "figure": "figures/B2-L29-S04.png",
+  "solution": {
+   "uz": [
+    "Geliy $i=3$, azot $i=5$: $$C_V=\\frac{2\\cdot1.5R+3\\cdot2.5R}{5}=2.1R\\approx17.5\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "Mayer tenglamasi: $$C_p=3.1R\\approx25.8\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "$\\gamma$ — o'rtacha $C_V$ dan: $$\\gamma=\\frac{3.1}{2.1}\\approx1.48$$"
+   ],
+   "ru": [
+    "Гелий $i=3$, азот $i=5$: $$C_V=\\frac{2\\cdot1.5R+3\\cdot2.5R}{5}=2.1R\\approx17.5\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "Уравнение Майера: $$C_p=3.1R\\approx25.8\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "$\\gamma$ — из средней $C_V$: $$\\gamma=\\frac{3.1}{2.1}\\approx1.48$$"
+   ],
+   "en": [
+    "Helium $i=3$, nitrogen $i=5$: $$C_V=\\frac{2\\cdot1.5R+3\\cdot2.5R}{5}=2.1R\\approx17.5\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "Mayer's relation: $$C_p=3.1R\\approx25.8\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "$\\gamma$ — from the average $C_V$: $$\\gamma=\\frac{3.1}{2.1}\\approx1.48$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Aralashma: $C_V=\\frac{\\sum\\nu_jC_{Vj}}{\\sum\\nu_j}$",
+    "ru": "Смесь: $C_V=\\frac{\\sum\\nu_jC_{Vj}}{\\sum\\nu_j}$",
+    "en": "Mixture: $C_V=\\frac{\\sum\\nu_jC_{Vj}}{\\sum\\nu_j}$"
+   },
+   {
+    "uz": "Mayer tenglamasi: $C_p=C_V+R$, $\\gamma=\\frac{C_p}{C_V}$",
+    "ru": "Уравнение Майера: $C_p=C_V+R$, $\\gamma=\\frac{C_p}{C_V}$",
+    "en": "Mayer's relation: $C_p=C_V+R$, $\\gamma=\\frac{C_p}{C_V}$"
+   },
+   {
+    "uz": "Teng taqsimlanish: $C_V=\\frac{i}{2}R$",
+    "ru": "Равнораспределение: $C_V=\\frac{i}{2}R$",
+    "en": "Equipartition: $C_V=\\frac{i}{2}R$"
+   }
+  ],
+  "basis": {
+   "uz": "Aralashma issiqlik sig'imi",
+   "ru": "Теплоёмкость смеси",
+   "en": "Heat capacity of a mixture"
+  },
+  "answer": "C_V=2.1R;\\ C_p=3.1R;\\ \\gamma\\approx1.48",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Irodov, «Problems in General Physics», 2.33-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L29-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$1\\ \\mathrm{mol}$ ideal gaz $300\\ \\mathrm{K}$ temperaturada izotermik ravishda $5\\ \\mathrm{L}$ dan $20\\ \\mathrm{L}$ gacha kengaydi. Ichki energiya o'zgarishini, gaz bajargan ishni, olgan issiqlikni va oxirgi bosimni toping.",
+   "ru": "$1\\ \\mathrm{mol}$ идеального газа при температуре $300\\ \\mathrm{K}$ изотермически расширился от $5\\ \\mathrm{L}$ до $20\\ \\mathrm{L}$. Найдите изменение внутренней энергии, работу газа, полученную теплоту и конечное давление.",
+   "en": "$1\\ \\mathrm{mol}$ of an ideal gas expands isothermally at $300\\ \\mathrm{K}$ from $5\\ \\mathrm{L}$ to $20\\ \\mathrm{L}$. Find the change in internal energy, the work done by the gas, the heat received and the final pressure."
+  },
+  "figure": "figures/B2-L29-S05.png",
+  "solution": {
+   "uz": [
+    "$T=\\mathrm{const}$: $$\\Delta U=0$$",
+    "Izotermik ish: $$A=Q=RT\\ln4=8.31\\cdot300\\cdot1.386\\approx3.46\\ \\mathrm{kJ}$$",
+    "Oxirgi bosim: $$p_2=\\frac{RT}{V_2}=\\frac{2493}{0.02}\\approx125\\ \\mathrm{kPa}$$"
+   ],
+   "ru": [
+    "$T=\\mathrm{const}$: $$\\Delta U=0$$",
+    "Изотермическая работа: $$A=Q=RT\\ln4=8.31\\cdot300\\cdot1.386\\approx3.46\\ \\mathrm{kJ}$$",
+    "Конечное давление: $$p_2=\\frac{RT}{V_2}=\\frac{2493}{0.02}\\approx125\\ \\mathrm{kPa}$$"
+   ],
+   "en": [
+    "$T=\\mathrm{const}$: $$\\Delta U=0$$",
+    "Isothermal work: $$A=Q=RT\\ln4=8.31\\cdot300\\cdot1.386\\approx3.46\\ \\mathrm{kJ}$$",
+    "The final pressure: $$p_2=\\frac{RT}{V_2}=\\frac{2493}{0.02}\\approx125\\ \\mathrm{kPa}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ideal gaz ichki energiyasi: $\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$",
+    "ru": "Внутренняя энергия идеального газа: $\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$",
+    "en": "Internal energy of an ideal gas: $\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$"
+   },
+   {
+    "uz": "Izotermik jarayon: $Q=A=\\nu RT\\ln\\frac{V_2}{V_1}$",
+    "ru": "Изотермический процесс: $Q=A=\\nu RT\\ln\\frac{V_2}{V_1}$",
+    "en": "Isothermal process: $Q=A=\\nu RT\\ln\\frac{V_2}{V_1}$"
+   },
+   {
+    "uz": "Holat tenglamasi: $pV=\\nu RT$",
+    "ru": "Уравнение состояния: $pV=\\nu RT$",
+    "en": "Equation of state: $pV=\\nu RT$"
+   }
+  ],
+  "basis": {
+   "uz": "Izotermik jarayon",
+   "ru": "Изотермический процесс",
+   "en": "Isothermal process"
+  },
+  "answer": "\\Delta U=0;\\ A=Q\\approx3.46\\ \\mathrm{kJ};\\ p_2\\approx125\\ \\mathrm{kPa}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B2-L29, izotermik jarayon)"
+ },
+ {
+  "id": "B2-L29-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Dizel dvigatelida $300\\ \\mathrm{K}$ temperaturali havo ($\\gamma=1.4$) adiabatik ravishda hajmi $10$ marta kamayguncha siqiladi. Oxirgi temperaturani, bosim necha marta oshishini va bir mol havo ustida bajarilgan ishni toping.",
+   "ru": "В дизельном двигателе воздух ($\\gamma=1.4$) с температурой $300\\ \\mathrm{K}$ адиабатно сжимают до уменьшения объёма в $10$ раз. Найдите конечную температуру, во сколько раз возрастёт давление и работу, совершённую над одним молем воздуха.",
+   "en": "In a diesel engine, air ($\\gamma=1.4$) at $300\\ \\mathrm{K}$ is compressed adiabatically until its volume is reduced $10$ times. Find the final temperature, by what factor the pressure increases, and the work done on one mole of air."
+  },
+  "figure": "figures/B2-L29-S06.png",
+  "solution": {
+   "uz": [
+    "$TV^{\\gamma-1}=\\mathrm{const}$: $$T_2=300\\cdot10^{0.4}\\approx754\\ \\mathrm{K}$$",
+    "$pV^\\gamma=\\mathrm{const}$: $$\\frac{p_2}{p_1}=10^{1.4}\\approx25.1$$",
+    "Gaz ustidagi ish ichki energiya o'sishiga teng: $$A'=\\frac{5}{2}R\\left(T_2-T_1\\right)\\approx9.4\\ \\mathrm{kJ}$$"
+   ],
+   "ru": [
+    "$TV^{\\gamma-1}=\\mathrm{const}$: $$T_2=300\\cdot10^{0.4}\\approx754\\ \\mathrm{K}$$",
+    "$pV^\\gamma=\\mathrm{const}$: $$\\frac{p_2}{p_1}=10^{1.4}\\approx25.1$$",
+    "Работа над газом равна росту внутренней энергии: $$A'=\\frac{5}{2}R\\left(T_2-T_1\\right)\\approx9.4\\ \\mathrm{kJ}$$"
+   ],
+   "en": [
+    "$TV^{\\gamma-1}=\\mathrm{const}$: $$T_2=300\\cdot10^{0.4}\\approx754\\ \\mathrm{K}$$",
+    "$pV^\\gamma=\\mathrm{const}$: $$\\frac{p_2}{p_1}=10^{1.4}\\approx25.1$$",
+    "The work done on the gas equals the rise in internal energy: $$A'=\\frac{5}{2}R\\left(T_2-T_1\\right)\\approx9.4\\ \\mathrm{kJ}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Adiabata: $pV^\\gamma=\\mathrm{const}$, $TV^{\\gamma-1}=\\mathrm{const}$",
+    "ru": "Адиабата: $pV^\\gamma=\\mathrm{const}$, $TV^{\\gamma-1}=\\mathrm{const}$",
+    "en": "Adiabat: $pV^\\gamma=\\mathrm{const}$, $TV^{\\gamma-1}=\\mathrm{const}$"
+   },
+   null,
+   {
+    "uz": "Adiabatik ish: $A=-\\Delta U=\\frac{p_1V_1-p_2V_2}{\\gamma-1}$",
+    "ru": "Работа при адиабате: $A=-\\Delta U=\\frac{p_1V_1-p_2V_2}{\\gamma-1}$",
+    "en": "Adiabatic work: $A=-\\Delta U=\\frac{p_1V_1-p_2V_2}{\\gamma-1}$"
+   }
+  ],
+  "basis": {
+   "uz": "Adiabatik siqish",
+   "ru": "Адиабатное сжатие",
+   "en": "Adiabatic compression"
+  },
+  "answer": "T_2\\approx754\\ \\mathrm{K};\\ \\frac{p_2}{p_1}\\approx25.1;\\ A'\\approx9.4\\ \\mathrm{kJ}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "Irodov, «Problems in General Physics», 2.39-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L29-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki atomli ideal gaz bir xil boshlang'ich holatdan hajmi $4$ marta kamayguncha bir marta izotermik, bir marta adiabatik siqiladi. Gaz ustida bajarilgan ishlar nisbatini toping.",
+   "ru": "Двухатомный идеальный газ из одного и того же начального состояния сжимают до уменьшения объёма в $4$ раза один раз изотермически, другой раз адиабатно. Найдите отношение работ, совершённых над газом.",
+   "en": "A diatomic ideal gas is compressed from the same initial state until its volume is reduced $4$ times, once isothermally and once adiabatically. Find the ratio of the works done on the gas."
+  },
+  "figure": "figures/B2-L29-S07.png",
+  "solution": {
+   "uz": [
+    "Izotermik siqish: $$A_1'=p_1V_1\\ln4\\approx1.386\\,p_1V_1$$",
+    "Adiabatik siqish, $\\gamma=1.4$: $$A_2'=\\frac{p_1V_1\\left(4^{0.4}-1\\right)}{0.4}\\approx1.853\\,p_1V_1$$",
+    "Nisbat — adiabata tikroq: $$\\frac{A_2'}{A_1'}\\approx1.34$$"
+   ],
+   "ru": [
+    "Изотермическое сжатие: $$A_1'=p_1V_1\\ln4\\approx1.386\\,p_1V_1$$",
+    "Адиабатное сжатие, $\\gamma=1.4$: $$A_2'=\\frac{p_1V_1\\left(4^{0.4}-1\\right)}{0.4}\\approx1.853\\,p_1V_1$$",
+    "Отношение — адиабата круче: $$\\frac{A_2'}{A_1'}\\approx1.34$$"
+   ],
+   "en": [
+    "Isothermal compression: $$A_1'=p_1V_1\\ln4\\approx1.386\\,p_1V_1$$",
+    "Adiabatic compression, $\\gamma=1.4$: $$A_2'=\\frac{p_1V_1\\left(4^{0.4}-1\\right)}{0.4}\\approx1.853\\,p_1V_1$$",
+    "Ratio — the adiabat is steeper: $$\\frac{A_2'}{A_1'}\\approx1.34$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Izotermik jarayon: $Q=A=\\nu RT\\ln\\frac{V_2}{V_1}$",
+    "ru": "Изотермический процесс: $Q=A=\\nu RT\\ln\\frac{V_2}{V_1}$",
+    "en": "Isothermal process: $Q=A=\\nu RT\\ln\\frac{V_2}{V_1}$"
+   },
+   {
+    "uz": "Adiabatik ish: $A=-\\Delta U=\\frac{p_1V_1-p_2V_2}{\\gamma-1}$",
+    "ru": "Работа при адиабате: $A=-\\Delta U=\\frac{p_1V_1-p_2V_2}{\\gamma-1}$",
+    "en": "Adiabatic work: $A=-\\Delta U=\\frac{p_1V_1-p_2V_2}{\\gamma-1}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Izotermik va adiabatik siqish",
+   "ru": "Изотермическое и адиабатное сжатие",
+   "en": "Isothermal and adiabatic compression"
+  },
+  "answer": "\\frac{A_2'}{A_1'}\\approx1.34",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "Irodov, «Problems in General Physics», 2.40-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L29-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Politropik jarayonda argonning hajmi $8$ marta oshdi, bosimi esa $16$ marta kamaydi. Politropa ko'rsatkichini va molyar issiqlik sig'imini toping. Gaz isidimi yoki sovidimi, issiqlik oldimi yoki berdimi?",
+   "ru": "В политропном процессе объём аргона увеличился в $8$ раз, а давление уменьшилось в $16$ раз. Найдите показатель политропы и молярную теплоёмкость. Нагрелся газ или охладился, получил теплоту или отдал?",
+   "en": "In a polytropic process the volume of argon increases $8$ times and its pressure decreases $16$ times. Find the polytropic index and the molar heat capacity. Did the gas warm up or cool down, and did it receive or give off heat?"
+  },
+  "figure": "figures/B2-L29-S08.png",
+  "solution": {
+   "uz": [
+    "$pV^n=\\mathrm{const}$: $$8^n=16\\ \\Rightarrow\\ n=\\frac{4}{3}$$",
+    "Argon, $\\gamma=\\frac{5}{3}$: $$C=\\frac{3}{2}R\\cdot\\frac{\\frac{4}{3}-\\frac{5}{3}}{\\frac{1}{3}}=-\\frac{3}{2}R\\approx-12.5\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "$T\\propto pV$ — gaz soviydi, lekin $C<0$ bo'lgani uchun issiqlik oladi: $$\\frac{T_2}{T_1}=\\frac{8}{16}=\\frac{1}{2},\\qquad Q=\\nu C\\Delta T>0$$"
+   ],
+   "ru": [
+    "$pV^n=\\mathrm{const}$: $$8^n=16\\ \\Rightarrow\\ n=\\frac{4}{3}$$",
+    "Аргон, $\\gamma=\\frac{5}{3}$: $$C=\\frac{3}{2}R\\cdot\\frac{\\frac{4}{3}-\\frac{5}{3}}{\\frac{1}{3}}=-\\frac{3}{2}R\\approx-12.5\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "$T\\propto pV$ — газ охлаждается, но так как $C<0$, получает теплоту: $$\\frac{T_2}{T_1}=\\frac{8}{16}=\\frac{1}{2},\\qquad Q=\\nu C\\Delta T>0$$"
+   ],
+   "en": [
+    "$pV^n=\\mathrm{const}$: $$8^n=16\\ \\Rightarrow\\ n=\\frac{4}{3}$$",
+    "Argon, $\\gamma=\\frac{5}{3}$: $$C=\\frac{3}{2}R\\cdot\\frac{\\frac{4}{3}-\\frac{5}{3}}{\\frac{1}{3}}=-\\frac{3}{2}R\\approx-12.5\\ \\mathrm{J/(mol\\cdot K)}$$",
+    "$T\\propto pV$ — the gas cools, but since $C<0$ it receives heat: $$\\frac{T_2}{T_1}=\\frac{8}{16}=\\frac{1}{2},\\qquad Q=\\nu C\\Delta T>0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Politropa: $pV^n=\\mathrm{const}$, $C=C_V\\frac{n-\\gamma}{n-1}$",
+    "ru": "Политропа: $pV^n=\\mathrm{const}$, $C=C_V\\frac{n-\\gamma}{n-1}$",
+    "en": "Polytrope: $pV^n=\\mathrm{const}$, $C=C_V\\frac{n-\\gamma}{n-1}$"
+   },
+   null,
+   {
+    "uz": "Jarayondagi issiqlik sig'imi: $C=\\frac{Q}{\\nu\\Delta T}$",
+    "ru": "Теплоёмкость в процессе: $C=\\frac{Q}{\\nu\\Delta T}$",
+    "en": "Heat capacity of a process: $C=\\frac{Q}{\\nu\\Delta T}$"
+   }
+  ],
+  "basis": {
+   "uz": "Politropik jarayon",
+   "ru": "Политропный процесс",
+   "en": "Polytropic process"
+  },
+  "answer": "n=\\frac{4}{3};\\ C=-\\frac{3}{2}R;\\ \\frac{T_2}{T_1}=\\frac{1}{2},\\ Q>0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Irodov, «Problems in General Physics», 2.46-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L29-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$1\\ \\mathrm{mol}$ ikki atomli ideal gaz bosimi hajmga proporsional ($p=\\alpha V$) bo'lgan jarayonda $300\\ \\mathrm{K}$ dan boshlab hajmini ikki marta oshirdi. Oxirgi temperaturani, ishni, olingan issiqlikni va jarayondagi molyar issiqlik sig'imini toping.",
+   "ru": "$1\\ \\mathrm{mol}$ двухатомного идеального газа в процессе, где давление пропорционально объёму ($p=\\alpha V$), начиная с $300\\ \\mathrm{K}$, увеличил объём вдвое. Найдите конечную температуру, работу, полученную теплоту и молярную теплоёмкость в процессе.",
+   "en": "$1\\ \\mathrm{mol}$ of a diatomic ideal gas, starting at $300\\ \\mathrm{K}$, doubles its volume in a process where the pressure is proportional to the volume ($p=\\alpha V$). Find the final temperature, the work, the heat received and the molar heat capacity in the process."
+  },
+  "figure": "figures/B2-L29-S09.png",
+  "solution": {
+   "uz": [
+    "$T\\propto pV\\propto V^2$: $$T_2=4T_1=1200\\ \\mathrm{K}$$",
+    "Ish — uchburchak ostidagi yuza: $$A=\\frac{p_2V_2-p_1V_1}{2}=\\frac{R\\Delta T}{2}\\approx3.74\\ \\mathrm{kJ}$$",
+    "Ichki energiya va issiqlik: $$\\Delta U=\\frac{5}{2}R\\Delta T\\approx18.7\\ \\mathrm{kJ},\\qquad Q\\approx22.4\\ \\mathrm{kJ}$$",
+    "Issiqlik sig'imi: $$C=\\frac{Q}{\\nu\\Delta T}=\\frac{5}{2}R+\\frac{1}{2}R=3R$$"
+   ],
+   "ru": [
+    "$T\\propto pV\\propto V^2$: $$T_2=4T_1=1200\\ \\mathrm{K}$$",
+    "Работа — площадь под прямой: $$A=\\frac{p_2V_2-p_1V_1}{2}=\\frac{R\\Delta T}{2}\\approx3.74\\ \\mathrm{kJ}$$",
+    "Внутренняя энергия и теплота: $$\\Delta U=\\frac{5}{2}R\\Delta T\\approx18.7\\ \\mathrm{kJ},\\qquad Q\\approx22.4\\ \\mathrm{kJ}$$",
+    "Теплоёмкость: $$C=\\frac{Q}{\\nu\\Delta T}=\\frac{5}{2}R+\\frac{1}{2}R=3R$$"
+   ],
+   "en": [
+    "$T\\propto pV\\propto V^2$: $$T_2=4T_1=1200\\ \\mathrm{K}$$",
+    "Work — the area under the line: $$A=\\frac{p_2V_2-p_1V_1}{2}=\\frac{R\\Delta T}{2}\\approx3.74\\ \\mathrm{kJ}$$",
+    "Internal energy and heat: $$\\Delta U=\\frac{5}{2}R\\Delta T\\approx18.7\\ \\mathrm{kJ},\\qquad Q\\approx22.4\\ \\mathrm{kJ}$$",
+    "The heat capacity: $$C=\\frac{Q}{\\nu\\Delta T}=\\frac{5}{2}R+\\frac{1}{2}R=3R$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Holat tenglamasi: $pV=\\nu RT$",
+    "ru": "Уравнение состояния: $pV=\\nu RT$",
+    "en": "Equation of state: $pV=\\nu RT$"
+   },
+   {
+    "uz": "Ish — yuza: $A=\\int p\\,dV$",
+    "ru": "Работа — площадь: $A=\\int p\\,dV$",
+    "en": "Work is an area: $A=\\int p\\,dV$"
+   },
+   {
+    "uz": "Birinchi qonun: $Q=\\Delta U+A$",
+    "ru": "Первый закон: $Q=\\Delta U+A$",
+    "en": "First law: $Q=\\Delta U+A$"
+   },
+   {
+    "uz": "Jarayondagi issiqlik sig'imi: $C=\\frac{Q}{\\nu\\Delta T}$",
+    "ru": "Теплоёмкость в процессе: $C=\\frac{Q}{\\nu\\Delta T}$",
+    "en": "Heat capacity of a process: $C=\\frac{Q}{\\nu\\Delta T}$"
+   }
+  ],
+  "basis": {
+   "uz": "Ixtiyoriy jarayondagi issiqlik sig'imi",
+   "ru": "Теплоёмкость в произвольном процессе",
+   "en": "Heat capacity of an arbitrary process"
+  },
+  "answer": "T_2=1200\\ \\mathrm{K};\\ A\\approx3.74\\ \\mathrm{kJ};\\ Q\\approx22.4\\ \\mathrm{kJ};\\ C=3R",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 2.48-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L29-S10",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Issiqlik izolyatsiyalangan ikki idish jo'mrakli nay bilan ulangan. Birinchisida $2\\ \\mathrm{L}$ geliy $300\\ \\mathrm{kPa}$ va $300\\ \\mathrm{K}$ da, ikkinchisida $3\\ \\mathrm{L}$ geliy $100\\ \\mathrm{kPa}$ va $450\\ \\mathrm{K}$ da. Jo'mrak ochilgandan keyin qaror topgan bosim va temperaturani toping.",
+   "ru": "Два теплоизолированных сосуда соединены трубкой с краном. В первом $2\\ \\mathrm{L}$ гелия при $300\\ \\mathrm{kPa}$ и $300\\ \\mathrm{K}$, во втором $3\\ \\mathrm{L}$ гелия при $100\\ \\mathrm{kPa}$ и $450\\ \\mathrm{K}$. Найдите установившиеся давление и температуру после открытия крана.",
+   "en": "Two thermally insulated vessels are connected by a tube with a valve. The first holds $2\\ \\mathrm{L}$ of helium at $300\\ \\mathrm{kPa}$ and $300\\ \\mathrm{K}$, the second $3\\ \\mathrm{L}$ of helium at $100\\ \\mathrm{kPa}$ and $450\\ \\mathrm{K}$. Find the final pressure and temperature after the valve is opened."
+  },
+  "figure": "figures/B2-L29-S10.png",
+  "solution": {
+   "uz": [
+    "$Q=0$, $A=0$ — ichki energiyalar yig'indisi saqlanadi: $$\\frac{3}{2}\\left(p_1V_1+p_2V_2\\right)=\\frac{3}{2}p\\left(V_1+V_2\\right)$$",
+    "Bosim: $$p=\\frac{600+300}{5}\\ \\mathrm{kPa}=180\\ \\mathrm{kPa}$$",
+    "Temperatura — umumiy modda miqdoridan: $$T=\\frac{p_1V_1+p_2V_2}{\\frac{p_1V_1}{T_1}+\\frac{p_2V_2}{T_2}}=\\frac{900}{2+0.667}\\approx338\\ \\mathrm{K}$$"
+   ],
+   "ru": [
+    "$Q=0$, $A=0$ — сумма внутренних энергий сохраняется: $$\\frac{3}{2}\\left(p_1V_1+p_2V_2\\right)=\\frac{3}{2}p\\left(V_1+V_2\\right)$$",
+    "Давление: $$p=\\frac{600+300}{5}\\ \\mathrm{kPa}=180\\ \\mathrm{kPa}$$",
+    "Температура — из общего количества вещества: $$T=\\frac{p_1V_1+p_2V_2}{\\frac{p_1V_1}{T_1}+\\frac{p_2V_2}{T_2}}=\\frac{900}{2+0.667}\\approx338\\ \\mathrm{K}$$"
+   ],
+   "en": [
+    "$Q=0$, $A=0$ — the total internal energy is conserved: $$\\frac{3}{2}\\left(p_1V_1+p_2V_2\\right)=\\frac{3}{2}p\\left(V_1+V_2\\right)$$",
+    "The pressure: $$p=\\frac{600+300}{5}\\ \\mathrm{kPa}=180\\ \\mathrm{kPa}$$",
+    "The temperature — from the total amount of substance: $$T=\\frac{p_1V_1+p_2V_2}{\\frac{p_1V_1}{T_1}+\\frac{p_2V_2}{T_2}}=\\frac{900}{2+0.667}\\approx338\\ \\mathrm{K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ichki energiya saqlanishi: $Q=0$, $A=0\\ \\Rightarrow\\ \\Delta U=0$",
+    "ru": "Сохранение внутренней энергии: $Q=0$, $A=0\\ \\Rightarrow\\ \\Delta U=0$",
+    "en": "Conservation of internal energy: $Q=0$, $A=0\\ \\Rightarrow\\ \\Delta U=0$"
+   },
+   null,
+   {
+    "uz": "Holat tenglamasi: $pV=\\nu RT$",
+    "ru": "Уравнение состояния: $pV=\\nu RT$",
+    "en": "Equation of state: $pV=\\nu RT$"
+   }
+  ],
+  "basis": {
+   "uz": "Idishlarni ulash",
+   "ru": "Соединение сосудов",
+   "en": "Connecting vessels"
+  },
+  "answer": "p=180\\ \\mathrm{kPa};\\ T\\approx338\\ \\mathrm{K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Irodov, «Problems in General Physics», 2.28-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L29-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Bir atomli ideal gaz $pV$-diagrammada to'g'ri to'rtburchak sikl bo'ylab soat mili yo'nalishida aylanadi: $p_1=100\\ \\mathrm{kPa}$, $p_2=200\\ \\mathrm{kPa}$, $V_1=1\\ \\mathrm{L}$, $V_2=3\\ \\mathrm{L}$. Sikl ishini, FIK ni va sikldagi eng yuqori va eng past temperaturalar orasida ishlovchi Karno dvigateli FIK ini toping.",
+   "ru": "Одноатомный идеальный газ совершает по часовой стрелке прямоугольный цикл на $pV$-диаграмме: $p_1=100\\ \\mathrm{kPa}$, $p_2=200\\ \\mathrm{kPa}$, $V_1=1\\ \\mathrm{L}$, $V_2=3\\ \\mathrm{L}$. Найдите работу цикла, КПД и КПД двигателя Карно, работающего между наибольшей и наименьшей температурами цикла.",
+   "en": "A monatomic ideal gas runs clockwise around a rectangular cycle on a $pV$-diagram: $p_1=100\\ \\mathrm{kPa}$, $p_2=200\\ \\mathrm{kPa}$, $V_1=1\\ \\mathrm{L}$, $V_2=3\\ \\mathrm{L}$. Find the work per cycle, the efficiency, and the efficiency of a Carnot engine working between the highest and lowest temperatures of the cycle."
+  },
+  "figure": "figures/B2-L29-S11.png",
+  "solution": {
+   "uz": [
+    "Ish — to'rtburchak yuzasi: $$A=\\left(p_2-p_1\\right)\\left(V_2-V_1\\right)=100\\ \\mathrm{kPa}\\cdot2\\ \\mathrm{L}=200\\ \\mathrm{J}$$",
+    "Issiqlik izoxorik isitish va izobarik kengayishda olinadi: $$Q_1=\\frac{3}{2}V_1\\Delta p+\\frac{5}{2}p_2\\Delta V=150+1000=1150\\ \\mathrm{J}$$",
+    "FIK: $$\\eta=\\frac{200}{1150}\\approx17.4\\%$$",
+    "$T\\propto pV$: $\\frac{T_{max}}{T_{min}}=\\frac{600}{100}=6$: $$\\eta_{max}=1-\\frac{1}{6}\\approx83\\%$$"
+   ],
+   "ru": [
+    "Работа — площадь прямоугольника: $$A=\\left(p_2-p_1\\right)\\left(V_2-V_1\\right)=100\\ \\mathrm{kPa}\\cdot2\\ \\mathrm{L}=200\\ \\mathrm{J}$$",
+    "Теплота получается при изохорном нагревании и изобарном расширении: $$Q_1=\\frac{3}{2}V_1\\Delta p+\\frac{5}{2}p_2\\Delta V=150+1000=1150\\ \\mathrm{J}$$",
+    "КПД: $$\\eta=\\frac{200}{1150}\\approx17.4\\%$$",
+    "$T\\propto pV$: $\\frac{T_{max}}{T_{min}}=\\frac{600}{100}=6$: $$\\eta_{max}=1-\\frac{1}{6}\\approx83\\%$$"
+   ],
+   "en": [
+    "Work — the area of the rectangle: $$A=\\left(p_2-p_1\\right)\\left(V_2-V_1\\right)=100\\ \\mathrm{kPa}\\cdot2\\ \\mathrm{L}=200\\ \\mathrm{J}$$",
+    "Heat is received in isochoric heating and isobaric expansion: $$Q_1=\\frac{3}{2}V_1\\Delta p+\\frac{5}{2}p_2\\Delta V=150+1000=1150\\ \\mathrm{J}$$",
+    "The efficiency: $$\\eta=\\frac{200}{1150}\\approx17.4\\%$$",
+    "$T\\propto pV$: $\\frac{T_{max}}{T_{min}}=\\frac{600}{100}=6$: $$\\eta_{max}=1-\\frac{1}{6}\\approx83\\%$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ish — yuza: $A=\\int p\\,dV$",
+    "ru": "Работа — площадь: $A=\\int p\\,dV$",
+    "en": "Work is an area: $A=\\int p\\,dV$"
+   },
+   {
+    "uz": "Ideal gaz ichki energiyasi: $\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$",
+    "ru": "Внутренняя энергия идеального газа: $\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$",
+    "en": "Internal energy of an ideal gas: $\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$"
+   },
+   {
+    "uz": "FIK: $\\eta=\\frac{A}{Q_1}$",
+    "ru": "КПД: $\\eta=\\frac{A}{Q_1}$",
+    "en": "Efficiency: $\\eta=\\frac{A}{Q_1}$"
+   },
+   {
+    "uz": "Karno chegarasi: $\\eta\\le1-\\frac{T_2}{T_1}$, $\\varepsilon\\le\\frac{T_2}{T_1-T_2}$",
+    "ru": "Предел Карно: $\\eta\\le1-\\frac{T_2}{T_1}$, $\\varepsilon\\le\\frac{T_2}{T_1-T_2}$",
+    "en": "Carnot limit: $\\eta\\le1-\\frac{T_2}{T_1}$, $\\varepsilon\\le\\frac{T_2}{T_1-T_2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Sikl FIK i",
+   "ru": "КПД цикла",
+   "en": "Efficiency of a cycle"
+  },
+  "answer": "A=200\\ \\mathrm{J};\\ \\eta\\approx17.4\\%;\\ \\eta_{max}\\approx83\\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L29, to'rtburchak sikl)"
+ },
+ {
+  "id": "B2-L29-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Muzlatgich $100\\ \\mathrm{W}$ quvvat iste'mol qiladi, uning sovutish koeffitsiyenti $4$. Muzlatgich ichidan har sekundda qancha issiqlik olinadi va xonaga qancha issiqlik beriladi? Ichki temperatura $-5^\\circ\\mathrm{C}$, xona $25^\\circ\\mathrm{C}$ bo'lsa, sovutish koeffitsiyentining nazariy chegarasi qancha?",
+   "ru": "Холодильник потребляет мощность $100\\ \\mathrm{W}$, его холодильный коэффициент $4$. Сколько теплоты в секунду отбирается из камеры и сколько отдаётся в комнату? Каков теоретический предел холодильного коэффициента, если в камере $-5^\\circ\\mathrm{C}$, а в комнате $25^\\circ\\mathrm{C}$?",
+   "en": "A refrigerator consumes $100\\ \\mathrm{W}$ and has a coefficient of performance of $4$. How much heat per second is removed from the inside and how much is delivered to the room? What is the theoretical limit of the coefficient of performance if the inside is at $-5^\\circ\\mathrm{C}$ and the room at $25^\\circ\\mathrm{C}$?"
+  },
+  "figure": "figures/B2-L29-S12.png",
+  "solution": {
+   "uz": [
+    "Sovuq kameradan olinadigan issiqlik quvvati: $$P_2=\\varepsilon P=4\\cdot100=400\\ \\mathrm{W}$$",
+    "Xonaga beriladigan quvvat: $$P_1=P_2+P=500\\ \\mathrm{W}$$",
+    "Karno chegarasi, $T_2=268\\ \\mathrm{K}$, $T_1=298\\ \\mathrm{K}$: $$\\varepsilon_{max}=\\frac{268}{30}\\approx8.9$$"
+   ],
+   "ru": [
+    "Мощность теплоты, отбираемой из камеры: $$P_2=\\varepsilon P=4\\cdot100=400\\ \\mathrm{W}$$",
+    "Мощность, отдаваемая в комнату: $$P_1=P_2+P=500\\ \\mathrm{W}$$",
+    "Предел Карно, $T_2=268\\ \\mathrm{K}$, $T_1=298\\ \\mathrm{K}$: $$\\varepsilon_{max}=\\frac{268}{30}\\approx8.9$$"
+   ],
+   "en": [
+    "Rate of heat removed from the inside: $$P_2=\\varepsilon P=4\\cdot100=400\\ \\mathrm{W}$$",
+    "Rate of heat delivered to the room: $$P_1=P_2+P=500\\ \\mathrm{W}$$",
+    "Carnot limit, $T_2=268\\ \\mathrm{K}$, $T_1=298\\ \\mathrm{K}$: $$\\varepsilon_{max}=\\frac{268}{30}\\approx8.9$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sovutish koeffitsiyenti: $\\varepsilon=\\frac{Q_2}{A}$, $Q_1=Q_2+A$",
+    "ru": "Холодильный коэффициент: $\\varepsilon=\\frac{Q_2}{A}$, $Q_1=Q_2+A$",
+    "en": "Coefficient of performance: $\\varepsilon=\\frac{Q_2}{A}$, $Q_1=Q_2+A$"
+   },
+   {
+    "uz": "Birinchi qonun: $Q=\\Delta U+A$",
+    "ru": "Первый закон: $Q=\\Delta U+A$",
+    "en": "First law: $Q=\\Delta U+A$"
+   },
+   {
+    "uz": "Karno chegarasi: $\\eta\\le1-\\frac{T_2}{T_1}$, $\\varepsilon\\le\\frac{T_2}{T_1-T_2}$",
+    "ru": "Предел Карно: $\\eta\\le1-\\frac{T_2}{T_1}$, $\\varepsilon\\le\\frac{T_2}{T_1-T_2}$",
+    "en": "Carnot limit: $\\eta\\le1-\\frac{T_2}{T_1}$, $\\varepsilon\\le\\frac{T_2}{T_1-T_2}$"
+   }
+  ],
+  "basis": {
+   "uz": "Sovutgich",
+   "ru": "Холодильная машина",
+   "en": "Refrigerator"
+  },
+  "answer": "400\\ \\mathrm{W};\\ 500\\ \\mathrm{W};\\ \\varepsilon_{max}\\approx8.9",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "original (B2-L29, sovutgich)"
+ },
+ {
+  "id": "B2-L29-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$300\\ \\mathrm{K}$ da azotda ($M=28\\ \\mathrm{g/mol}$) va geliyda ($M=4\\ \\mathrm{g/mol}$) tovush tezligini toping. Azot qanday temperaturada bo'lganda undagi tovush tezligi $300\\ \\mathrm{K}$ dagi geliydagiga teng bo'ladi?",
+   "ru": "Найдите скорость звука в азоте ($M=28\\ \\mathrm{g/mol}$) и в гелии ($M=4\\ \\mathrm{g/mol}$) при $300\\ \\mathrm{K}$. При какой температуре азота скорость звука в нём будет равна скорости в гелии при $300\\ \\mathrm{K}$?",
+   "en": "Find the speed of sound in nitrogen ($M=28\\ \\mathrm{g/mol}$) and in helium ($M=4\\ \\mathrm{g/mol}$) at $300\\ \\mathrm{K}$. At what temperature of the nitrogen will the speed of sound in it equal that in helium at $300\\ \\mathrm{K}$?"
+  },
+  "figure": "figures/B2-L29-S13.png",
+  "solution": {
+   "uz": [
+    "Azot, $\\gamma=1.4$: $$v=\\sqrt{\\frac{1.4\\cdot8.31\\cdot300}{0.028}}\\approx353\\ \\mathrm{m/s}$$",
+    "Geliy, $\\gamma=\\frac{5}{3}$: $$v=\\sqrt{\\frac{5\\cdot8.31\\cdot300}{3\\cdot0.004}}\\approx1019\\ \\mathrm{m/s}$$",
+    "$v^2\\propto\\frac{\\gamma T}{M}$ larni tenglaymiz: $$T=300\\cdot\\frac{\\frac{5}{3}\\cdot\\frac{1}{4}}{\\frac{1.4}{28}}=2500\\ \\mathrm{K}$$"
+   ],
+   "ru": [
+    "Азот, $\\gamma=1.4$: $$v=\\sqrt{\\frac{1.4\\cdot8.31\\cdot300}{0.028}}\\approx353\\ \\mathrm{m/s}$$",
+    "Гелий, $\\gamma=\\frac{5}{3}$: $$v=\\sqrt{\\frac{5\\cdot8.31\\cdot300}{3\\cdot0.004}}\\approx1019\\ \\mathrm{m/s}$$",
+    "Приравниваем $v^2\\propto\\frac{\\gamma T}{M}$: $$T=300\\cdot\\frac{\\frac{5}{3}\\cdot\\frac{1}{4}}{\\frac{1.4}{28}}=2500\\ \\mathrm{K}$$"
+   ],
+   "en": [
+    "Nitrogen, $\\gamma=1.4$: $$v=\\sqrt{\\frac{1.4\\cdot8.31\\cdot300}{0.028}}\\approx353\\ \\mathrm{m/s}$$",
+    "Helium, $\\gamma=\\frac{5}{3}$: $$v=\\sqrt{\\frac{5\\cdot8.31\\cdot300}{3\\cdot0.004}}\\approx1019\\ \\mathrm{m/s}$$",
+    "Equating $v^2\\propto\\frac{\\gamma T}{M}$: $$T=300\\cdot\\frac{\\frac{5}{3}\\cdot\\frac{1}{4}}{\\frac{1.4}{28}}=2500\\ \\mathrm{K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Tovush tezligi: $v=\\sqrt{\\frac{\\gamma RT}{M}}$",
+    "ru": "Скорость звука: $v=\\sqrt{\\frac{\\gamma RT}{M}}$",
+    "en": "Speed of sound: $v=\\sqrt{\\frac{\\gamma RT}{M}}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Tovush tezligi",
+   "ru": "Скорость звука",
+   "en": "Speed of sound"
+  },
+  "answer": "353\\ \\mathrm{m/s};\\ 1019\\ \\mathrm{m/s};\\ 2500\\ \\mathrm{K}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B2-L29, tovush tezligi)"
+ },
+ {
+  "id": "B2-L29-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Yuzasi $10\\ \\mathrm{m^2}$ bo'lgan devor ichki tomondan $20\\ \\mathrm{cm}$ g'isht ($\\kappa=0.8\\ \\mathrm{W/(m\\cdot K)}$) va tashqi tomondan $5\\ \\mathrm{cm}$ izolyatsiya ($\\kappa=0.04\\ \\mathrm{W/(m\\cdot K)}$) dan iborat. Ichkarida $20^\\circ\\mathrm{C}$, tashqarida $-10^\\circ\\mathrm{C}$. Issiqlik yo'qotish quvvatini va qatlamlar chegarasidagi temperaturani toping.",
+   "ru": "Стена площадью $10\\ \\mathrm{m^2}$ состоит из $20\\ \\mathrm{cm}$ кирпича ($\\kappa=0.8\\ \\mathrm{W/(m\\cdot K)}$) с внутренней стороны и $5\\ \\mathrm{cm}$ утеплителя ($\\kappa=0.04\\ \\mathrm{W/(m\\cdot K)}$) с наружной. Внутри $20^\\circ\\mathrm{C}$, снаружи $-10^\\circ\\mathrm{C}$. Найдите мощность теплопотерь и температуру на границе слоёв.",
+   "en": "A wall of area $10\\ \\mathrm{m^2}$ consists of $20\\ \\mathrm{cm}$ of brick ($\\kappa=0.8\\ \\mathrm{W/(m\\cdot K)}$) on the inside and $5\\ \\mathrm{cm}$ of insulation ($\\kappa=0.04\\ \\mathrm{W/(m\\cdot K)}$) on the outside. It is $20^\\circ\\mathrm{C}$ inside and $-10^\\circ\\mathrm{C}$ outside. Find the rate of heat loss and the temperature at the boundary between the layers."
+  },
+  "figure": "figures/B2-L29-S14.png",
+  "solution": {
+   "uz": [
+    "Qatlamlar qarshiligi: $$R_1=\\frac{0.2}{0.8\\cdot10}=0.025\\ \\mathrm{K/W},\\qquad R_2=\\frac{0.05}{0.04\\cdot10}=0.125\\ \\mathrm{K/W}$$",
+    "Ketma-ket — qarshiliklar qo'shiladi: $$P=\\frac{30}{0.15}=200\\ \\mathrm{W}$$",
+    "G'ishtdagi temperatura pasayishi: $$T=20-200\\cdot0.025=15^\\circ\\mathrm{C}$$"
+   ],
+   "ru": [
+    "Сопротивления слоёв: $$R_1=\\frac{0.2}{0.8\\cdot10}=0.025\\ \\mathrm{K/W},\\qquad R_2=\\frac{0.05}{0.04\\cdot10}=0.125\\ \\mathrm{K/W}$$",
+    "Последовательно — сопротивления складываются: $$P=\\frac{30}{0.15}=200\\ \\mathrm{W}$$",
+    "Падение температуры в кирпиче: $$T=20-200\\cdot0.025=15^\\circ\\mathrm{C}$$"
+   ],
+   "en": [
+    "Resistances of the layers: $$R_1=\\frac{0.2}{0.8\\cdot10}=0.025\\ \\mathrm{K/W},\\qquad R_2=\\frac{0.05}{0.04\\cdot10}=0.125\\ \\mathrm{K/W}$$",
+    "In series — the resistances add: $$P=\\frac{30}{0.15}=200\\ \\mathrm{W}$$",
+    "Temperature drop across the brick: $$T=20-200\\cdot0.025=15^\\circ\\mathrm{C}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Issiqlik qarshiligi: $R_T=\\frac{L}{\\kappa S}$, $P=\\frac{\\Delta T}{R_T}$",
+    "ru": "Термическое сопротивление: $R_T=\\frac{L}{\\kappa S}$, $P=\\frac{\\Delta T}{R_T}$",
+    "en": "Thermal resistance: $R_T=\\frac{L}{\\kappa S}$, $P=\\frac{\\Delta T}{R_T}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Issiqlik o'tkazuvchanlik",
+   "ru": "Теплопроводность",
+   "en": "Heat conduction"
+  },
+  "answer": "P=200\\ \\mathrm{W};\\ 15^\\circ\\mathrm{C}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "original (B2-L29, issiqlik o'tkazuvchanlik)"
+ },
+ {
+  "id": "B2-L29-S15",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Radiusi $5\\ \\mathrm{cm}$, temperaturasi $500\\ \\mathrm{K}$ bo'lgan qora shar temperaturasi $300\\ \\mathrm{K}$ bo'lgan xonada turibdi. Shar nurlanish bilan chiqaradigan, yutadigan va natijaviy yo'qotadigan quvvatni toping.",
+   "ru": "Чёрный шар радиусом $5\\ \\mathrm{cm}$ при температуре $500\\ \\mathrm{K}$ находится в комнате с температурой $300\\ \\mathrm{K}$. Найдите мощность, которую шар излучает, поглощает и теряет в итоге.",
+   "en": "A black sphere of radius $5\\ \\mathrm{cm}$ at $500\\ \\mathrm{K}$ is in a room at $300\\ \\mathrm{K}$. Find the power the sphere radiates, absorbs and loses overall."
+  },
+  "figure": "figures/B2-L29-S15.png",
+  "solution": {
+   "uz": [
+    "Sirt yuzasi: $$S=4\\pi r^2\\approx3.14\\cdot10^{-2}\\ \\mathrm{m^2}$$",
+    "Chiqariladigan va yutiladigan quvvat: $$\\sigma ST^4\\approx111\\ \\mathrm{W},\\qquad \\sigma ST_0^4\\approx14\\ \\mathrm{W}$$",
+    "Natijaviy yo'qotish: $$P\\approx97\\ \\mathrm{W}$$"
+   ],
+   "ru": [
+    "Площадь поверхности: $$S=4\\pi r^2\\approx3.14\\cdot10^{-2}\\ \\mathrm{m^2}$$",
+    "Излучаемая и поглощаемая мощность: $$\\sigma ST^4\\approx111\\ \\mathrm{W},\\qquad \\sigma ST_0^4\\approx14\\ \\mathrm{W}$$",
+    "Итоговая потеря: $$P\\approx97\\ \\mathrm{W}$$"
+   ],
+   "en": [
+    "The surface area: $$S=4\\pi r^2\\approx3.14\\cdot10^{-2}\\ \\mathrm{m^2}$$",
+    "Radiated and absorbed power: $$\\sigma ST^4\\approx111\\ \\mathrm{W},\\qquad \\sigma ST_0^4\\approx14\\ \\mathrm{W}$$",
+    "Net loss: $$P\\approx97\\ \\mathrm{W}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Stefan–Bolsman qonuni: $P=\\sigma S\\left(T^4-T_0^4\\right)$",
+    "ru": "Закон Стефана–Больцмана: $P=\\sigma S\\left(T^4-T_0^4\\right)$",
+    "en": "Stefan–Boltzmann law: $P=\\sigma S\\left(T^4-T_0^4\\right)$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Stefan–Bolsman qonuni",
+   "ru": "Закон Стефана–Больцмана",
+   "en": "Stefan–Boltzmann law"
+  },
+  "answer": "111\\ \\mathrm{W};\\ 14\\ \\mathrm{W};\\ P\\approx97\\ \\mathrm{W}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B2-L29, nurlanish)"
+ },
+ {
+  "id": "B2-L29-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$20^\\circ\\mathrm{C}$ li xonada kofe $10\\ \\mathrm{min}$ da $90^\\circ\\mathrm{C}$ dan $60^\\circ\\mathrm{C}$ gacha sovidi. Nyuton sovish qonuni bajariladi deb, kofe qachon (boshidan hisoblaganda) $40^\\circ\\mathrm{C}$ gacha soviydi?",
+   "ru": "В комнате при $20^\\circ\\mathrm{C}$ кофе за $10\\ \\mathrm{min}$ остыл с $90^\\circ\\mathrm{C}$ до $60^\\circ\\mathrm{C}$. Считая, что выполняется закон охлаждения Ньютона, через какое время (от начала) кофе остынет до $40^\\circ\\mathrm{C}$?",
+   "en": "In a room at $20^\\circ\\mathrm{C}$ a cup of coffee cools from $90^\\circ\\mathrm{C}$ to $60^\\circ\\mathrm{C}$ in $10\\ \\mathrm{min}$. Assuming Newton's law of cooling, how long (from the start) does it take to cool to $40^\\circ\\mathrm{C}$?"
+  },
+  "figure": "figures/B2-L29-S16.png",
+  "solution": {
+   "uz": [
+    "Farq eksponensial kamayadi: $$\\frac{40}{70}=e^{-10k}\\ \\Rightarrow\\ k=\\frac{\\ln1.75}{10}\\approx0.056\\ \\mathrm{min^{-1}}$$",
+    "$40^\\circ\\mathrm{C}$ da farq $20$: $$\\frac{20}{70}=e^{-kt}\\ \\Rightarrow\\ t=\\frac{10\\ln3.5}{\\ln1.75}\\approx22.4\\ \\mathrm{min}$$"
+   ],
+   "ru": [
+    "Разность убывает экспоненциально: $$\\frac{40}{70}=e^{-10k}\\ \\Rightarrow\\ k=\\frac{\\ln1.75}{10}\\approx0.056\\ \\mathrm{min^{-1}}$$",
+    "При $40^\\circ\\mathrm{C}$ разность $20$: $$\\frac{20}{70}=e^{-kt}\\ \\Rightarrow\\ t=\\frac{10\\ln3.5}{\\ln1.75}\\approx22.4\\ \\mathrm{min}$$"
+   ],
+   "en": [
+    "The difference decays exponentially: $$\\frac{40}{70}=e^{-10k}\\ \\Rightarrow\\ k=\\frac{\\ln1.75}{10}\\approx0.056\\ \\mathrm{min^{-1}}$$",
+    "At $40^\\circ\\mathrm{C}$ the difference is $20$: $$\\frac{20}{70}=e^{-kt}\\ \\Rightarrow\\ t=\\frac{10\\ln3.5}{\\ln1.75}\\approx22.4\\ \\mathrm{min}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Nyuton sovish qonuni: $T-T_0=\\left(T\\left(0\\right)-T_0\\right)e^{-kt}$",
+    "ru": "Закон охлаждения Ньютона: $T-T_0=\\left(T\\left(0\\right)-T_0\\right)e^{-kt}$",
+    "en": "Newton's law of cooling: $T-T_0=\\left(T\\left(0\\right)-T_0\\right)e^{-kt}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Nyuton sovish qonuni",
+   "ru": "Закон охлаждения Ньютона",
+   "en": "Newton's law of cooling"
+  },
+  "answer": "t\\approx22.4\\ \\mathrm{min}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B2-L29, Nyuton sovish qonuni)"
+ },
+ {
+  "id": "B2-L29-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$1\\ \\mathrm{mol}$ bir atomli ideal gaz $400\\ \\mathrm{K}$ dan boshlab kvazistatik adiabatik ravishda hajmi $27$ marta oshguncha kengaydi. Oxirgi temperaturani va ishni toping. Xuddi shu hajmgacha vakuumga erkin kengaysa-chi?",
+   "ru": "$1\\ \\mathrm{mol}$ одноатомного идеального газа, начиная с $400\\ \\mathrm{K}$, квазистатически адиабатно расширился до увеличения объёма в $27$ раз. Найдите конечную температуру и работу. А если до того же объёма газ свободно расширится в вакуум?",
+   "en": "$1\\ \\mathrm{mol}$ of a monatomic ideal gas, starting at $400\\ \\mathrm{K}$, expands quasi-statically and adiabatically until its volume increases $27$ times. Find the final temperature and the work. What if it expands freely into a vacuum to the same volume?"
+  },
+  "figure": "figures/B2-L29-S17.png",
+  "solution": {
+   "uz": [
+    "$TV^{\\gamma-1}=\\mathrm{const}$, $\\gamma-1=\\frac{2}{3}$: $$T_2=\\frac{400}{27^{\\frac{2}{3}}}=\\frac{400}{9}\\approx44\\ \\mathrm{K}$$",
+    "Ish — ichki energiya kamayishi: $$A=\\frac{3}{2}R\\left(400-44.4\\right)\\approx4.43\\ \\mathrm{kJ}$$",
+    "Erkin kengayish: $$A=0,\\qquad T=400\\ \\mathrm{K}$$"
+   ],
+   "ru": [
+    "$TV^{\\gamma-1}=\\mathrm{const}$, $\\gamma-1=\\frac{2}{3}$: $$T_2=\\frac{400}{27^{\\frac{2}{3}}}=\\frac{400}{9}\\approx44\\ \\mathrm{K}$$",
+    "Работа — убыль внутренней энергии: $$A=\\frac{3}{2}R\\left(400-44.4\\right)\\approx4.43\\ \\mathrm{kJ}$$",
+    "Свободное расширение: $$A=0,\\qquad T=400\\ \\mathrm{K}$$"
+   ],
+   "en": [
+    "$TV^{\\gamma-1}=\\mathrm{const}$, $\\gamma-1=\\frac{2}{3}$: $$T_2=\\frac{400}{27^{\\frac{2}{3}}}=\\frac{400}{9}\\approx44\\ \\mathrm{K}$$",
+    "Work — the decrease in internal energy: $$A=\\frac{3}{2}R\\left(400-44.4\\right)\\approx4.43\\ \\mathrm{kJ}$$",
+    "Free expansion: $$A=0,\\qquad T=400\\ \\mathrm{K}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Adiabata: $pV^\\gamma=\\mathrm{const}$, $TV^{\\gamma-1}=\\mathrm{const}$",
+    "ru": "Адиабата: $pV^\\gamma=\\mathrm{const}$, $TV^{\\gamma-1}=\\mathrm{const}$",
+    "en": "Adiabat: $pV^\\gamma=\\mathrm{const}$, $TV^{\\gamma-1}=\\mathrm{const}$"
+   },
+   {
+    "uz": "Adiabatik ish: $A=-\\Delta U=\\frac{p_1V_1-p_2V_2}{\\gamma-1}$",
+    "ru": "Работа при адиабате: $A=-\\Delta U=\\frac{p_1V_1-p_2V_2}{\\gamma-1}$",
+    "en": "Adiabatic work: $A=-\\Delta U=\\frac{p_1V_1-p_2V_2}{\\gamma-1}$"
+   },
+   {
+    "uz": "Ichki energiya saqlanishi: $Q=0$, $A=0\\ \\Rightarrow\\ \\Delta U=0$",
+    "ru": "Сохранение внутренней энергии: $Q=0$, $A=0\\ \\Rightarrow\\ \\Delta U=0$",
+    "en": "Conservation of internal energy: $Q=0$, $A=0\\ \\Rightarrow\\ \\Delta U=0$"
+   }
+  ],
+  "basis": {
+   "uz": "Qaytar va qaytmas kengayish",
+   "ru": "Обратимое и необратимое расширение",
+   "en": "Reversible and irreversible expansion"
+  },
+  "answer": "T_2\\approx44\\ \\mathrm{K};\\ A\\approx4.43\\ \\mathrm{kJ};\\ 400\\ \\mathrm{K},\\ A=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L29, erkin kengayish)"
+ },
+ {
+  "id": "B2-L29-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$2\\ \\mathrm{mol}$ vodorod o'zgarmas hajmda $10\\ \\mathrm{K}$ ga isitiladi: a) juda past temperaturada (aylanma darajalar muzlagan); b) xona temperaturasida; c) juda yuqori temperaturada (tebranishlar ham uyg'ongan, molekulalar parchalanmagan deb hisoblang). Har holda kerakli issiqlikni toping.",
+   "ru": "$2\\ \\mathrm{mol}$ водорода нагревают при постоянном объёме на $10\\ \\mathrm{K}$: а) при очень низкой температуре (вращательные степени выморожены); б) при комнатной температуре; в) при очень высокой температуре (возбуждены и колебания, молекулы считать недиссоциированными). Найдите нужную теплоту в каждом случае.",
+   "en": "$2\\ \\mathrm{mol}$ of hydrogen is heated at constant volume by $10\\ \\mathrm{K}$: a) at a very low temperature (rotational degrees frozen); b) at room temperature; c) at a very high temperature (vibrations also excited, the molecules assumed not to dissociate). Find the heat required in each case."
+  },
+  "figure": "figures/B2-L29-S18.png",
+  "solution": {
+   "uz": [
+    "a) faqat ilgarilanma: $i=3$: $$Q=\\frac{3}{2}\\nu R\\Delta T\\approx249\\ \\mathrm{J}$$",
+    "b) aylanish qo'shiladi: $i=5$: $$Q=\\frac{5}{2}\\nu R\\Delta T\\approx416\\ \\mathrm{J}$$",
+    "c) tebranish $2$ ta had beradi: $i=7$: $$Q=\\frac{7}{2}\\nu R\\Delta T\\approx582\\ \\mathrm{J}$$"
+   ],
+   "ru": [
+    "а) только поступательные: $i=3$: $$Q=\\frac{3}{2}\\nu R\\Delta T\\approx249\\ \\mathrm{J}$$",
+    "б) добавляется вращение: $i=5$: $$Q=\\frac{5}{2}\\nu R\\Delta T\\approx416\\ \\mathrm{J}$$",
+    "в) колебание даёт $2$ слагаемых: $i=7$: $$Q=\\frac{7}{2}\\nu R\\Delta T\\approx582\\ \\mathrm{J}$$"
+   ],
+   "en": [
+    "a) translation only: $i=3$: $$Q=\\frac{3}{2}\\nu R\\Delta T\\approx249\\ \\mathrm{J}$$",
+    "b) rotation added: $i=5$: $$Q=\\frac{5}{2}\\nu R\\Delta T\\approx416\\ \\mathrm{J}$$",
+    "c) vibration gives $2$ terms: $i=7$: $$Q=\\frac{7}{2}\\nu R\\Delta T\\approx582\\ \\mathrm{J}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Teng taqsimlanish: $C_V=\\frac{i}{2}R$",
+    "ru": "Равнораспределение: $C_V=\\frac{i}{2}R$",
+    "en": "Equipartition: $C_V=\\frac{i}{2}R$"
+   },
+   {
+    "uz": "Izoxorik jarayon: $A=0$, $Q=\\nu C_V\\Delta T$",
+    "ru": "Изохорный процесс: $A=0$, $Q=\\nu C_V\\Delta T$",
+    "en": "Isochoric process: $A=0$, $Q=\\nu C_V\\Delta T$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Erkinlik darajalarining muzlashi",
+   "ru": "Вымораживание степеней свободы",
+   "en": "Freezing out of degrees of freedom"
+  },
+  "answer": "249\\ \\mathrm{J};\\ 416\\ \\mathrm{J};\\ 582\\ \\mathrm{J}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 4.2.1 (Three Laws) g'oyasi asosida; sharti o'zgartirilgan"
+ }
+]

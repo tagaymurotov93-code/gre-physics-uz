@@ -1,0 +1,721 @@
+[
+ {
+  "t": "h1",
+  "uz": "Difraksiya (Diffraction)",
+  "ru": "Дифракция",
+  "en": "Diffraction"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz Gyuygens–Frenel prinsipi asosida to'lqin to'siq chetini nima uchun aylanib o'tishini tushuntirasiz; Frenel zonalari radiusini hisoblab, teshik yoki disk ortidagi intensivlikni (Puasson dog'i, zona plastinkasi) topasiz; bitta tirqish, ikki tirqish va difraksion panjara manzaralarini intensivlik formulalari bilan tasvirlaysiz; panjaraning burchak dispersiyasi va ajrata olish qobiliyatini, teleskop va mikroskopning difraksion chegarasini (Reley mezoni) baholaysiz; Vulf–Bregg sharti bilan kristall tekisliklari orasidagi masofani va rentgen nurlari yoki elektronlar to'lqin uzunligini topasiz; Frenel soni orqali qaysi difraksiya turi kuzatilishini aniqlaysiz.",
+  "ru": "**Цель.** После урока вы будете объяснять на основе принципа Гюйгенса–Френеля, почему волна огибает край препятствия; вычислять радиусы зон Френеля и находить интенсивность за отверстием или диском (пятно Пуассона, зонная пластинка); описывать формулами интенсивности картины от одной щели, двух щелей и дифракционной решётки; оценивать угловую дисперсию и разрешающую способность решётки, дифракционный предел телескопа и микроскопа (критерий Рэлея); находить по условию Вульфа–Брэгга межплоскостное расстояние в кристалле и длину волны рентгеновских лучей или электронов; определять по числу Френеля, какой вид дифракции наблюдается.",
+  "en": "**Goal.** After this lesson you will explain, using the Huygens–Fresnel principle, why a wave bends around the edge of an obstacle; calculate the radii of Fresnel zones and find the intensity behind an aperture or a disc (Poisson's spot, the zone plate); describe the patterns of a single slit, a double slit and a diffraction grating with intensity formulas; estimate the angular dispersion and resolving power of a grating and the diffraction limit of a telescope and a microscope (the Rayleigh criterion); use the Bragg condition to find the interplanar spacing of a crystal and the wavelength of X-rays or electrons; and decide from the Fresnel number which kind of diffraction is observed."
+ },
+ {
+  "t": "p",
+  "uz": "B2-L25 da bir necha kogerent dastaning qo'shilishini ko'rdik: ikki tirqish, yupqa parda, $N$ ta tirqish. Endi bitta to'lqin frontining o'zi ichidagi «interferensiya»ga o'tamiz. To'lqin tirqishdan, teshikdan yoki to'siq chetidan o'tganda geometrik soya chegarasi aniq bo'lmaydi: yorug'lik soya ichiga kiradi, soya tashqarisida esa yorug' va qorong'i yo'llar paydo bo'ladi. Bu — **difraksiya (diffraction)**. U to'siq o'lchami $\\lambda$ ga yaqin bo'lganda kuchli seziladi va har qanday optik asbobning aniqlik chegarasini belgilaydi. GRE da difraksiya optika va to'lqinlar bo'limining (8%) eng ko'p so'raladigan mavzularidan biri: bitta tirqish minimumlari, panjara tenglamasi, Reley mezoni, Bregg sharti.",
+  "ru": "В B2-L25 мы рассмотрели сложение нескольких когерентных пучков: две щели, тонкая плёнка, $N$ щелей. Теперь перейдём к «интерференции» внутри одного волнового фронта. Когда волна проходит через щель, отверстие или мимо края препятствия, граница геометрической тени перестаёт быть резкой: свет заходит в область тени, а вне тени появляются светлые и тёмные полосы. Это **дифракция (diffraction)**. Она заметна, когда размер препятствия близок к $\\lambda$, и определяет предел точности любого оптического прибора. На GRE дифракция — одна из самых частых тем раздела «оптика и волны» (8%): минимумы от одной щели, уравнение решётки, критерий Рэлея, условие Брэгга.",
+  "en": "In B2-L25 we studied the superposition of several coherent beams: two slits, a thin film, $N$ slits. Now we turn to \"interference\" within a single wavefront. When a wave passes through a slit, an aperture or past the edge of an obstacle, the boundary of the geometric shadow is no longer sharp: light enters the shadow region, and bright and dark fringes appear outside it. This is **diffraction**. It is strong when the size of the obstacle is close to $\\lambda$, and it sets the accuracy limit of every optical instrument. On the GRE, diffraction is one of the most frequently tested topics of the optics and waves section (8%): single-slit minima, the grating equation, the Rayleigh criterion, the Bragg condition."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Gyuygens–Frenel prinsipi",
+  "ru": "1. Принцип Гюйгенса–Френеля",
+  "en": "1. The Huygens–Fresnel principle"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikkilamchi to'lqinlar (secondary waves).** Gyuygens prinsipiga ko'ra to'lqin frontining har bir nuqtasi ikkilamchi sferik to'lqinlar manbai bo'lib, keyingi frontni ularning o'ramasi beradi. Bu sinish va qaytish yo'nalishlarini to'g'ri beradi, lekin intensivlik haqida hech narsa demaydi. Frenel qo'shimchasi: ikkilamchi to'lqinlar **kogerent** va kuzatish nuqtasida **interferensiya qiladi**; har bir elementning hissasi uning yuziga proporsional, masofaga teskari proporsional va normaldan og'ish burchagi ortishi bilan kamayadi (orqaga to'lqin yo'q).",
+  "ru": "**Вторичные волны (secondary waves).** По принципу Гюйгенса каждая точка волнового фронта является источником вторичных сферических волн, а следующий фронт даёт их огибающая. Это правильно даёт направления отражения и преломления, но ничего не говорит об интенсивности. Дополнение Френеля: вторичные волны **когерентны** и **интерферируют** в точке наблюдения; вклад каждого элемента пропорционален его площади, обратно пропорционален расстоянию и убывает с ростом угла отклонения от нормали (обратной волны нет).",
+  "en": "**Secondary waves.** According to Huygens' principle, every point of a wavefront is a source of secondary spherical wavelets, and the next wavefront is their envelope. This correctly gives the directions of reflection and refraction but says nothing about intensity. Fresnel's addition: the secondary wavelets are **coherent** and **interfere** at the observation point; the contribution of each element is proportional to its area, inversely proportional to the distance, and decreases as the angle from the normal grows (there is no backward wave)."
+ },
+ {
+  "t": "li",
+  "uz": "**Difraksiya va interferensiya.** Fizik jihatdan ular bir hodisa — kogerent to'lqinlarning qo'shilishi. Odatda manbalar soni kam (ikki nur, bir necha tirqish) bo'lsa interferensiya, uzluksiz to'lqin fronti bo'laklari qo'shilsa difraksiya deyiladi. Shuning uchun difraksiya intensivligini topish — front bo'ylab integrallash yoki fazorlarni (B2-L24) uzluksiz qo'shish masalasi.",
+  "ru": "**Дифракция и интерференция.** Физически это одно явление — сложение когерентных волн. Обычно при малом числе источников (два луча, несколько щелей) говорят об интерференции, а при сложении непрерывных участков волнового фронта — о дифракции. Поэтому нахождение интенсивности при дифракции — это задача интегрирования по фронту или непрерывного сложения фазоров (B2-L24).",
+  "en": "**Diffraction and interference.** Physically they are one phenomenon — the superposition of coherent waves. Usually, with a small number of sources (two rays, a few slits) we speak of interference, and when continuous portions of a wavefront add up we speak of diffraction. So finding the intensity in diffraction is a problem of integrating over the wavefront or of adding phasors (B2-L24) continuously."
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki tur: Frenel va Fraungofer.** Agar manba va kuzatish nuqtasi to'siqdan chekli masofada bo'lsa va to'lqin frontining egriligi muhim bo'lsa — **Frenel difraksiyasi (Fresnel diffraction)**. Agar tushuvchi va kuzatiladigan to'lqinlar amalda yassi bo'lsa (manba va ekran juda uzoqda yoki linzalar fokusida) — **Fraungofer difraksiyasi (Fraunhofer diffraction)**: bunda manzara faqat yo'nalishga, ya'ni $\\theta$ burchakka bog'liq. Qaysi tur kuzatilishini o'lchovsiz **Frenel soni (Fresnel number)** belgilaydi:",
+  "ru": "**Два вида: Френель и Фраунгофер.** Если источник и точка наблюдения находятся на конечном расстоянии от препятствия и кривизна волнового фронта существенна — это **дифракция Френеля (Fresnel diffraction)**. Если падающая и наблюдаемая волны практически плоские (источник и экран очень далеко или в фокусе линз) — **дифракция Фраунгофера (Fraunhofer diffraction)**: картина зависит только от направления, то есть от угла $\\theta$. Какой вид наблюдается, определяет безразмерное **число Френеля (Fresnel number)**:",
+  "en": "**Two kinds: Fresnel and Fraunhofer.** If the source and the observation point are at finite distances from the obstacle and the curvature of the wavefront matters, we have **Fresnel diffraction**. If the incident and observed waves are practically plane (the source and the screen very far away, or at the foci of lenses), we have **Fraunhofer diffraction**: the pattern depends only on the direction, that is, on the angle $\\theta$. Which kind is observed is decided by the dimensionless **Fresnel number**:"
+ },
+ {
+  "t": "m",
+  "m": "F=\\frac{a^2}{L\\lambda}:\\qquad F\\gg1,\\qquad F\\sim1,\\qquad F\\ll1"
+ },
+ {
+  "t": "li",
+  "uz": "Bu yerda $a$ — teshik yoki tirqishning xarakterli o'lchami, $L$ — kuzatish masofasi. $F\\gg1$ da geometrik optika ishlaydi (aniq soya, faqat chetida ingichka yo'llar), $F\\sim1$ da Frenel difraksiyasi, $F\\ll1$ da Fraungofer difraksiyasi ([[F08]]). Masalan, $a=1\\ \\mathrm{mm}$ va $\\lambda=500\\ \\mathrm{nm}$ uchun $\\frac{a^2}{\\lambda}=2\\ \\mathrm{m}$: bir necha santimetrda soya deyarli geometrik, o'nlab metrda esa manzara Fraungofer manzarasi. Laboratoriyada Fraungofer manzarasini yaqinda olish uchun ekran yig'uvchi linzaning fokal tekisligiga qo'yiladi — linza cheksizlikni fokusga «ko'chiradi».",
+  "ru": "Здесь $a$ — характерный размер отверстия или щели, $L$ — расстояние наблюдения. При $F\\gg1$ работает геометрическая оптика (резкая тень, лишь у края узкие полосы), при $F\\sim1$ — дифракция Френеля, при $F\\ll1$ — дифракция Фраунгофера ([[F08]]). Например, для $a=1\\ \\mathrm{mm}$ и $\\lambda=500\\ \\mathrm{nm}$ имеем $\\frac{a^2}{\\lambda}=2\\ \\mathrm{m}$: на расстоянии нескольких сантиметров тень почти геометрическая, а на десятках метров картина фраунгоферова. Чтобы получить фраунгоферову картину вблизи, в лаборатории экран ставят в фокальной плоскости собирающей линзы — линза «переносит» бесконечность в фокус.",
+  "en": "Here $a$ is the characteristic size of the aperture or slit and $L$ is the observation distance. For $F\\gg1$ geometric optics works (a sharp shadow with only narrow fringes at its edge), for $F\\sim1$ we have Fresnel diffraction, and for $F\\ll1$ Fraunhofer diffraction ([[F08]]). For example, for $a=1\\ \\mathrm{mm}$ and $\\lambda=500\\ \\mathrm{nm}$ we have $\\frac{a^2}{\\lambda}=2\\ \\mathrm{m}$: a few centimetres away the shadow is almost geometric, while tens of metres away the pattern is a Fraunhofer pattern. To obtain a Fraunhofer pattern close by, in the laboratory the screen is placed in the focal plane of a converging lens — the lens \"moves\" infinity to its focus."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L26-F08.png",
+   "ru": "figures/B2-L26-F08-ru.png",
+   "en": "figures/B2-L26-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Frenel zonalari",
+  "ru": "2. Зоны Френеля",
+  "en": "2. Fresnel zones"
+ },
+ {
+  "t": "li",
+  "uz": "**Zonalar qurilishi.** Yassi to'lqin doiraviy teshikka tik tushsin, kuzatish nuqtasi $P$ teshik o'qida, undan $b$ masofada. To'lqin frontini halqalarga bo'lamiz: $k$-halqaning tashqi chetidan $P$ gacha masofa $b+k\\frac{\\lambda}{2}$. Bu halqalar — **Frenel zonalari (Fresnel zones)**. Qo'shni zonalardan kelgan to'lqinlar qarama-qarshi fazada ($\\pi$ farq). $k$-zona tashqi radiusi:",
+  "ru": "**Построение зон.** Пусть плоская волна падает нормально на круглое отверстие, точка наблюдения $P$ лежит на оси отверстия на расстоянии $b$ от него. Разобьём волновой фронт на кольца: расстояние от внешнего края $k$-го кольца до $P$ равно $b+k\\frac{\\lambda}{2}$. Эти кольца — **зоны Френеля (Fresnel zones)**. Волны от соседних зон приходят в противофазе (разность $\\pi$). Внешний радиус $k$-й зоны:",
+  "en": "**Constructing the zones.** Let a plane wave fall normally on a circular aperture, with the observation point $P$ on the axis at a distance $b$ from it. We divide the wavefront into rings such that the distance from the outer edge of the $k$-th ring to $P$ is $b+k\\frac{\\lambda}{2}$. These rings are the **Fresnel zones**. Waves from neighbouring zones arrive in antiphase (a difference of $\\pi$). The outer radius of the $k$-th zone is"
+ },
+ {
+  "t": "m",
+  "m": "r_k=\\sqrt{kb\\lambda}\\ \\left(a\\to\\infty\\right),\\qquad r_k=\\sqrt{k\\frac{ab}{a+b}\\lambda}"
+ },
+ {
+  "t": "li",
+  "uz": "Ikkinchi formula manba teshikdan $a$ masofadagi nuqtaviy manba bo'lgan hol uchun. Zonalar yuzlari deyarli teng: $\\pi r_k^2-\\pi r_{k-1}^2=\\pi b\\lambda$. Radiuslar $\\sqrt{k}$ ga proporsional — zonalar chetga qarab zichlashadi. Odatiy son: $b=2\\ \\mathrm{m}$, $\\lambda=500\\ \\mathrm{nm}$ da birinchi zona radiusi atigi $1\\ \\mathrm{mm}$ — shuning uchun kundalik hayotda (teshik o'lchami bir necha santimetr) zonalar soni minglab va difraksiya sezilmaydi.",
+  "ru": "Вторая формула — для точечного источника на расстоянии $a$ от отверстия. Площади зон почти одинаковы: $\\pi r_k^2-\\pi r_{k-1}^2=\\pi b\\lambda$. Радиусы пропорциональны $\\sqrt{k}$ — зоны сгущаются к краю. Типичное число: при $b=2\\ \\mathrm{m}$, $\\lambda=500\\ \\mathrm{nm}$ радиус первой зоны всего $1\\ \\mathrm{mm}$ — поэтому в быту (отверстия размером в несколько сантиметров) число зон исчисляется тысячами и дифракция незаметна.",
+  "en": "The second formula is for a point source at a distance $a$ from the aperture. The zone areas are almost equal: $\\pi r_k^2-\\pi r_{k-1}^2=\\pi b\\lambda$. The radii are proportional to $\\sqrt{k}$ — the zones crowd together towards the edge. A typical number: for $b=2\\ \\mathrm{m}$, $\\lambda=500\\ \\mathrm{nm}$ the radius of the first zone is only $1\\ \\mathrm{mm}$ — that is why in everyday life (apertures a few centimetres across) the number of zones runs into thousands and diffraction goes unnoticed."
+ },
+ {
+  "t": "li",
+  "uz": "**Zonalar amplitudalari.** Zonalar yuzi teng, lekin og'ish burchagi va masofa sekin ortadi, shuning uchun amplitudalar sekin kamayadi: $A_1>A_2>A_3>\\ldots$, ishoralari esa almashinadi. Qo'shni zonalar yig'indisini juftlab guruhlab, butun (to'siqsiz) to'lqin amplitudasi birinchi zona amplitudasining yarmiga teng ekanini olamiz: $A_\\infty\\approx\\frac{A_1}{2}$. Teshik $k$ ta zonani ochsa:",
+  "ru": "**Амплитуды зон.** Площади зон равны, но угол отклонения и расстояние медленно растут, поэтому амплитуды медленно убывают: $A_1>A_2>A_3>\\ldots$, а знаки чередуются. Группируя соседние зоны попарно, получаем, что амплитуда всей (неограниченной) волны равна половине амплитуды первой зоны: $A_\\infty\\approx\\frac{A_1}{2}$. Если отверстие открывает $k$ зон:",
+  "en": "**Zone amplitudes.** The zone areas are equal, but the obliquity and the distance grow slowly, so the amplitudes decrease slowly: $A_1>A_2>A_3>\\ldots$, while the signs alternate. Grouping neighbouring zones in pairs, we find that the amplitude of the whole (unobstructed) wave is half the amplitude of the first zone: $A_\\infty\\approx\\frac{A_1}{2}$. If the aperture opens $k$ zones:"
+ },
+ {
+  "t": "m",
+  "m": "A=\\frac{A_1}{2}+\\left(-1\\right)^{k+1}\\frac{A_k}{2},\\qquad A_\\infty=\\frac{A_1}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "Natija paradoksal: teshik bitta zonani ochsa, $P$ nuqtadagi amplituda $A_1=2A_\\infty$, intensivlik esa to'siq yo'qdagidan **4 marta katta** ($4I_0$). Ikki zona ochilsa, ular bir-birini deyarli yo'qotadi — markaz qorong'i. Teshik radiusini (yoki $b$ ni) silliq o'zgartirsak, markaz navbat bilan yorug' va qorong'i bo'ladi. Bu energiya saqlanishiga zid emas: yorug'lik ekranda qayta taqsimlanadi, markaz atrofida qorong'i va yorug' halqalar hosil bo'ladi.",
+  "ru": "Результат парадоксален: если отверстие открывает одну зону, амплитуда в точке $P$ равна $A_1=2A_\\infty$, а интенсивность **в 4 раза больше**, чем без препятствия ($4I_0$). Если открыты две зоны, они почти гасят друг друга — центр тёмный. Плавно меняя радиус отверстия (или $b$), получаем попеременно светлый и тёмный центр. Это не противоречит сохранению энергии: свет перераспределяется по экрану, вокруг центра образуются тёмные и светлые кольца.",
+  "en": "The result is paradoxical: if the aperture opens one zone, the amplitude at $P$ is $A_1=2A_\\infty$ and the intensity is **4 times larger** than without any obstacle ($4I_0$). If two zones are open, they almost cancel — the centre is dark. Varying the aperture radius (or $b$) smoothly, we get a bright and a dark centre in turn. This does not contradict energy conservation: the light is redistributed over the screen, with dark and bright rings around the centre."
+ },
+ {
+  "t": "m",
+  "m": "k=\\frac{r^2}{b\\lambda}:\\qquad k=1\\ \\Rightarrow\\ I=4I_0,\\qquad k=2\\ \\Rightarrow\\ I\\approx0"
+ },
+ {
+  "t": "li",
+  "uz": "**Vektor diagramma (Kornyu spirali).** Zonani yanada mayda halqalarga bo'lib, ularning fazorlarini (B2-L24) uchma-uch qo'shamiz. Har bir zona ichida faza $\\pi$ ga o'zgaradi, amplitudalar sekin kamayadi, shuning uchun fazorlar zanjiri ichkariga buraluvchi spiral hosil qiladi ([[F01]]). Birinchi zona — deyarli yarim aylana, uning diametri $A_1$; butun front — spiral markaziga yo'nalgan vektor, uzunligi $\\frac{A_1}{2}$. Spiral yordamida «chorak zona», «yarim zona» kabi oraliq hollarni ham hisoblash oson: masalan, yarim zona ochilganda vatar $\\frac{A_1}{\\sqrt{2}}$, intensivlik $2I_0$. Tirqish va yarim tekislik uchun xuddi shu rolni **Kornyu spirali (Cornu spiral)** — Frenel integrallari egri chizig'i — o'ynaydi.",
+  "ru": "**Векторная диаграмма (спираль Корню).** Разобьём зону на ещё более мелкие кольца и сложим их фазоры (B2-L24) один за другим. Внутри каждой зоны фаза меняется на $\\pi$, амплитуды медленно убывают, поэтому цепочка фазоров образует закручивающуюся внутрь спираль ([[F01]]). Первая зона — почти полуокружность диаметром $A_1$; весь фронт — вектор, направленный в центр спирали, длиной $\\frac{A_1}{2}$. Со спиралью легко считать и промежуточные случаи вроде «четверти зоны», «половины зоны»: например, при открытой половине зоны хорда равна $\\frac{A_1}{\\sqrt{2}}$, интенсивность $2I_0$. Для щели и полуплоскости ту же роль играет **спираль Корню (Cornu spiral)** — кривая интегралов Френеля.",
+  "en": "**The vector diagram (the Cornu spiral).** We divide each zone into still finer rings and add their phasors (B2-L24) head to tail. Within each zone the phase changes by $\\pi$ and the amplitudes decrease slowly, so the chain of phasors forms an inward-winding spiral ([[F01]]). The first zone is almost a semicircle of diameter $A_1$; the whole wavefront is a vector pointing to the centre of the spiral, of length $\\frac{A_1}{2}$. With the spiral, intermediate cases such as a \"quarter zone\" or a \"half zone\" are easy to compute: for example, with half a zone open the chord is $\\frac{A_1}{\\sqrt{2}}$ and the intensity is $2I_0$. For a slit and a half-plane the same role is played by the **Cornu spiral** — the curve of the Fresnel integrals."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L26-F01.png",
+   "ru": "figures/B2-L26-F01-ru.png",
+   "en": "figures/B2-L26-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Puasson dog'i (Poisson's spot).** Teshik o'rniga noshaffof disk birinchi bir necha zonani yopsin. Qolgan barcha zonalar yig'indisi $\\frac{A_{k+1}}{2}$ ga teng — agar disk kichik bo'lsa, bu deyarli $A_\\infty$. Demak, disk soyasining markazida **har doim yorug' dog'** bo'ladi va uning intensivligi to'siqsizdagiga yaqin. 1818-yilda Puasson bu natijani Frenel nazariyasini rad etish uchun keltirgan, Arago esa tajribada dog'ni ko'rsatgan — bu to'lqin optikasining hal qiluvchi g'alabasi bo'ldi.",
+  "ru": "**Пятно Пуассона (Poisson's spot).** Пусть вместо отверстия непрозрачный диск закрывает несколько первых зон. Сумма всех остальных зон равна $\\frac{A_{k+1}}{2}$ — при малом диске это почти $A_\\infty$. Значит, в центре тени диска **всегда есть светлое пятно**, и его интенсивность близка к интенсивности без препятствия. В 1818 году Пуассон привёл этот результат, чтобы опровергнуть теорию Френеля, а Араго показал пятно на опыте — это стало решающей победой волновой оптики.",
+  "en": "**Poisson's spot.** Suppose that instead of an aperture an opaque disc covers the first few zones. The sum of all the remaining zones equals $\\frac{A_{k+1}}{2}$ — for a small disc this is almost $A_\\infty$. So at the centre of the disc's shadow there is **always a bright spot**, with an intensity close to that without the obstacle. In 1818 Poisson put forward this result to refute Fresnel's theory, and Arago demonstrated the spot experimentally — a decisive victory for wave optics."
+ },
+ {
+  "t": "li",
+  "uz": "**Zona plastinkasi (zone plate).** Agar shaffof plastinkada faqat toq (yoki faqat juft) zonalar qoldirilib, qolganlari qoraytirilsa, barcha ochiq zonalar $P$ ga bir xil fazada keladi va amplituda $A_1+A_3+A_5+\\ldots$ — juda katta. Plastinka linza kabi ishlaydi: $r_k=\\sqrt{kf\\lambda}$ dan uning fokus masofasi va linza formulasi:",
+  "ru": "**Зонная пластинка (zone plate).** Если на прозрачной пластинке оставить только нечётные (или только чётные) зоны, а остальные зачернить, все открытые зоны приходят в $P$ в одной фазе и амплитуда $A_1+A_3+A_5+\\ldots$ очень велика. Пластинка работает как линза: из $r_k=\\sqrt{kf\\lambda}$ получаем её фокусное расстояние и формулу линзы:",
+  "en": "**The zone plate.** If on a transparent plate only the odd (or only the even) zones are left and the rest are blackened, all open zones arrive at $P$ in phase and the amplitude $A_1+A_3+A_5+\\ldots$ is very large. The plate works like a lens: from $r_k=\\sqrt{kf\\lambda}$ we get its focal length and the lens formula:"
+ },
+ {
+  "t": "m",
+  "m": "f=\\frac{r_1^2}{\\lambda},\\qquad \\frac{1}{a}+\\frac{1}{b}=\\frac{1}{f},\\qquad f_3=\\frac{f}{3},\\ f_5=\\frac{f}{5},\\ \\ldots"
+ },
+ {
+  "t": "li",
+  "uz": "Oddiy linzadan farqi: qo'shimcha fokuslar $\\frac{f}{3}$, $\\frac{f}{5}$ da (u yerda har bir zona uchta, beshta yangi zonaga bo'linadi) va kuchli xromatizm ($f\\propto\\frac{1}{\\lambda}$). Yopiq zonalar o'rniga ularning fazasini $\\pi$ ga siljituvchi qalinlik berilsa (**fazaviy zona plastinkasi**), amplituda yana ikki baravar, intensivlik to'rt baravar ortadi. Zona plastinkalari rentgen mikroskoplarida ishlatiladi — u yerda oddiy linza yo'q, chunki moddalarda $n\\approx1$.",
+  "ru": "Отличие от обычной линзы: дополнительные фокусы в $\\frac{f}{3}$, $\\frac{f}{5}$ (там каждая зона делится на три, пять новых зон) и сильный хроматизм ($f\\propto\\frac{1}{\\lambda}$). Если вместо закрывания зон сдвинуть их фазу на $\\pi$ подходящей толщиной (**фазовая зонная пластинка**), амплитуда возрастает ещё вдвое, интенсивность — вчетверо. Зонные пластинки применяются в рентгеновских микроскопах — там обычных линз нет, потому что у веществ $n\\approx1$.",
+  "en": "The differences from an ordinary lens: additional foci at $\\frac{f}{3}$, $\\frac{f}{5}$ (where each zone is split into three, five new zones) and strong chromatic aberration ($f\\propto\\frac{1}{\\lambda}$). If instead of blocking the zones their phase is shifted by $\\pi$ with a suitable thickness (a **phase zone plate**), the amplitude doubles again and the intensity quadruples. Zone plates are used in X-ray microscopes — there are no ordinary lenses there, because $n\\approx1$ for all materials."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Bitta tirqishda Fraungofer difraksiyasi",
+  "ru": "3. Дифракция Фраунгофера на одной щели",
+  "en": "3. Fraunhofer diffraction by a single slit"
+ },
+ {
+  "t": "li",
+  "uz": "**Minimumlar sharti.** Kengligi $a$ bo'lgan uzun tirqishga yassi to'lqin tik tushsin, manzara uzoq ekranda (yoki linza fokusida) $\\theta$ burchak ostida kuzatilsin. Tirqish chetlaridan kelgan nurlar yo'llari farqi $a\\sin\\theta$. Agar u $\\lambda$ ga teng bo'lsa, tirqishni ikki yarmiga bo'lamiz: yuqori yarmining har bir nuqtasiga quyi yarmida yo'llar farqi $\\frac{\\lambda}{2}$ bo'lgan juft nuqta topiladi va ular bir-birini yo'qotadi. Shunday qilib, minimumlar:",
+  "ru": "**Условие минимумов.** Пусть плоская волна падает нормально на длинную щель шириной $a$, а картина наблюдается на далёком экране (или в фокусе линзы) под углом $\\theta$. Разность хода лучей от краёв щели равна $a\\sin\\theta$. Если она равна $\\lambda$, разделим щель на две половины: каждой точке верхней половины найдётся парная точка нижней с разностью хода $\\frac{\\lambda}{2}$, и они гасят друг друга. Итак, минимумы:",
+  "en": "**The condition for minima.** Let a plane wave fall normally on a long slit of width $a$, and let the pattern be observed on a distant screen (or in the focus of a lens) at an angle $\\theta$. The path difference between the rays from the edges of the slit is $a\\sin\\theta$. If it equals $\\lambda$, we divide the slit into two halves: each point of the upper half has a partner in the lower half with a path difference of $\\frac{\\lambda}{2}$, and they cancel. So the minima are at"
+ },
+ {
+  "t": "m",
+  "m": "a\\sin\\theta=m\\lambda,\\qquad m=\\pm1,\\ \\pm2,\\ \\ldots\\qquad \\left(m\\neq0\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "Diqqat: bu formula ko'rinishidan ikki tirqish **maksimumi** sharti ($d\\sin\\theta=m\\lambda$) bilan bir xil, lekin ma'nosi teskari — bu yerda u **minimumlarni** beradi. $m=0$ — markaz, u yerda barcha nurlar bir fazada, intensivlik eng katta. Kichik burchaklarda ekrandagi minimumlar orasidagi masofa $\\frac{\\lambda L}{a}$, markaziy maksimum kengligi esa ikki baravar katta:",
+  "ru": "Внимание: внешне эта формула совпадает с условием **максимумов** двух щелей ($d\\sin\\theta=m\\lambda$), но смысл обратный — здесь она даёт **минимумы**. $m=0$ — центр, там все лучи в одной фазе, интенсивность наибольшая. При малых углах расстояние между минимумами на экране равно $\\frac{\\lambda L}{a}$, а ширина центрального максимума вдвое больше:",
+  "en": "Careful: this formula looks the same as the condition for double-slit **maxima** ($d\\sin\\theta=m\\lambda$), but its meaning is the opposite — here it gives the **minima**. $m=0$ is the centre, where all rays are in phase and the intensity is largest. At small angles the spacing of the minima on the screen is $\\frac{\\lambda L}{a}$, and the width of the central maximum is twice as large:"
+ },
+ {
+  "t": "m",
+  "m": "y_m=m\\frac{\\lambda L}{a},\\qquad w=2\\frac{\\lambda L}{a},\\qquad \\theta_1\\approx\\frac{\\lambda}{a}"
+ },
+ {
+  "t": "li",
+  "uz": "**Intensivlik taqsimoti.** Tirqishni $N\\to\\infty$ ta ingichka bo'lakka bo'lib, fazorlarni qo'shamiz. Chekka nurlar orasidagi to'liq faza farqi $2\\beta$, $\\beta=\\frac{\\pi a\\sin\\theta}{\\lambda}$. Fazorlar zanjiri aylana yoyiga egiladi, yoy uzunligi $A_0$ (markazdagi amplituda) o'zgarmaydi; natijaviy vektor — shu yoyning vatari: $A=A_0\\frac{\\sin\\beta}{\\beta}$. Demak:",
+  "ru": "**Распределение интенсивности.** Разобьём щель на $N\\to\\infty$ узких полосок и сложим фазоры. Полная разность фаз крайних лучей равна $2\\beta$, $\\beta=\\frac{\\pi a\\sin\\theta}{\\lambda}$. Цепочка фазоров изгибается в дугу окружности, длина дуги $A_0$ (амплитуда в центре) не меняется; результирующий вектор — хорда этой дуги: $A=A_0\\frac{\\sin\\beta}{\\beta}$. Значит:",
+  "en": "**The intensity distribution.** We divide the slit into $N\\to\\infty$ narrow strips and add the phasors. The total phase difference between the edge rays is $2\\beta$, $\\beta=\\frac{\\pi a\\sin\\theta}{\\lambda}$. The chain of phasors bends into an arc of a circle whose length $A_0$ (the amplitude at the centre) does not change; the resultant vector is the chord of this arc: $A=A_0\\frac{\\sin\\beta}{\\beta}$. Hence"
+ },
+ {
+  "t": "m",
+  "m": "I=I_0\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2,\\qquad \\beta=\\frac{\\pi a\\sin\\theta}{\\lambda}"
+ },
+ {
+  "t": "li",
+  "uz": "Nollar $\\beta=m\\pi$ da — bu yuqoridagi minimumlar sharti. Yon maksimumlar $\\tan\\beta=\\beta$ tenglamasidan topiladi: $\\beta\\approx1.43\\pi$, $2.46\\pi$, $3.47\\pi$, … — ular qo'shni minimumlar o'rtasidan biroz markazga siljigan. Ularning intensivligi tez kamayadi: $0.047I_0$, $0.017I_0$, $0.008I_0$ ([[F02]]). Demak, yorug'likning taxminan $90$ foizi markaziy maksimumga to'g'ri keladi va u yon maksimumlardan ikki baravar keng. Bu — GRE ning sevimli savoli: «markaziy maksimum ikki baravar keng, yon maksimumlar juda xira».",
+  "ru": "Нули при $\\beta=m\\pi$ — это условие минимумов выше. Побочные максимумы находятся из уравнения $\\tan\\beta=\\beta$: $\\beta\\approx1.43\\pi$, $2.46\\pi$, $3.47\\pi$, … — они немного смещены от середины между соседними минимумами к центру. Их интенсивность быстро убывает: $0.047I_0$, $0.017I_0$, $0.008I_0$ ([[F02]]). Значит, примерно $90$ процентов света приходится на центральный максимум, и он вдвое шире побочных. Это любимый вопрос GRE: «центральный максимум вдвое шире, побочные максимумы очень слабые».",
+  "en": "The zeros are at $\\beta=m\\pi$ — the condition for minima above. The secondary maxima follow from the equation $\\tan\\beta=\\beta$: $\\beta\\approx1.43\\pi$, $2.46\\pi$, $3.47\\pi$, … — they are shifted slightly from the midpoints between neighbouring minima towards the centre. Their intensity falls quickly: $0.047I_0$, $0.017I_0$, $0.008I_0$ ([[F02]]). So about $90$ percent of the light falls in the central maximum, which is twice as wide as the secondary ones. This is a favourite GRE question: \"the central maximum is twice as wide, the secondary maxima are very faint\"."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L26-F02.png",
+   "ru": "figures/B2-L26-F02-ru.png",
+   "en": "figures/B2-L26-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Tirqish kengligining ta'siri.** $a$ kamaysa, manzara kengayadi ($\\theta_1\\approx\\frac{\\lambda}{a}$) va xiralashadi: $a\\to\\lambda$ da markaziy maksimum butun yarim fazoni egallaydi, tirqish nuqtaviy manbaga aylanadi. $a\\gg\\lambda$ da esa $\\theta_1\\to0$ — geometrik optikaga qaytamiz. Muhitda ($n$) $\\lambda$ o'rniga $\\frac{\\lambda}{n}$ olinadi — manzara $n$ marta torayadi. Oq yorug'likda markaziy maksimum oq, chetlari rangli: qizil nurlar ($\\lambda$ katta) ko'proq og'adi.",
+  "ru": "**Влияние ширины щели.** При уменьшении $a$ картина расширяется ($\\theta_1\\approx\\frac{\\lambda}{a}$) и тускнеет: при $a\\to\\lambda$ центральный максимум занимает всё полупространство, щель превращается в точечный источник. При $a\\gg\\lambda$ имеем $\\theta_1\\to0$ — возвращаемся к геометрической оптике. В среде ($n$) вместо $\\lambda$ берётся $\\frac{\\lambda}{n}$ — картина сужается в $n$ раз. В белом свете центральный максимум белый, края цветные: красные лучи ($\\lambda$ больше) отклоняются сильнее.",
+  "en": "**The effect of slit width.** As $a$ decreases, the pattern widens ($\\theta_1\\approx\\frac{\\lambda}{a}$) and dims: for $a\\to\\lambda$ the central maximum fills the whole half-space and the slit becomes a point source. For $a\\gg\\lambda$ we have $\\theta_1\\to0$ — back to geometric optics. In a medium ($n$) we use $\\frac{\\lambda}{n}$ instead of $\\lambda$ — the pattern narrows by a factor of $n$. In white light the central maximum is white and its edges are coloured: red rays (larger $\\lambda$) are deflected more."
+ },
+ {
+  "t": "li",
+  "uz": "**Qiya tushish.** Agar yorug'lik tirqish normaliga $\\theta_0$ burchak ostida tushsa, chekka nurlar orasidagi yo'llar farqi $a\\left(\\sin\\theta-\\sin\\theta_0\\right)$ bo'ladi. Markaziy maksimum tushuvchi nur yo'nalishida ($\\theta=\\theta_0$), minimumlar esa nosimmetrik joylashadi:",
+  "ru": "**Наклонное падение.** Если свет падает под углом $\\theta_0$ к нормали щели, разность хода крайних лучей равна $a\\left(\\sin\\theta-\\sin\\theta_0\\right)$. Центральный максимум лежит в направлении падающего луча ($\\theta=\\theta_0$), а минимумы расположены несимметрично:",
+  "en": "**Oblique incidence.** If light falls at an angle $\\theta_0$ to the normal of the slit, the path difference between the edge rays is $a\\left(\\sin\\theta-\\sin\\theta_0\\right)$. The central maximum lies in the direction of the incident ray ($\\theta=\\theta_0$), and the minima are placed asymmetrically:"
+ },
+ {
+  "t": "m",
+  "m": "a\\left(\\sin\\theta-\\sin\\theta_0\\right)=m\\lambda,\\qquad m=\\pm1,\\ \\pm2,\\ \\ldots"
+ },
+ {
+  "t": "h2",
+  "uz": "4. Ikki tirqish: interferensiya va difraksiya birga",
+  "ru": "4. Две щели: интерференция и дифракция вместе",
+  "en": "4. Two slits: interference and diffraction together"
+ },
+ {
+  "t": "li",
+  "uz": "B2-L25 da Yung tajribasini tirqishlarni cheksiz ingichka deb hisoblagan edik. Haqiqiy tirqishlar kengligi $a$, orasi $d>a$. Har bir tirqish o'zining $\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2$ manzarasini beradi, ikki tirqish to'lqinlari esa $\\cos^2\\frac{\\delta}{2}$ bilan interferensiya qiladi. Natija — ko'paytma: tez o'zgaruvchi interferension yo'llar sekin o'zgaruvchi **difraksion o'rama (diffraction envelope)** ichida ([[F03]]):",
+  "ru": "В B2-L25 мы считали щели опыта Юнга бесконечно узкими. Реальные щели имеют ширину $a$ и расстояние между ними $d>a$. Каждая щель даёт свою картину $\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2$, а волны двух щелей интерферируют с множителем $\\cos^2\\frac{\\delta}{2}$. Итог — произведение: быстро меняющиеся интерференционные полосы внутри медленно меняющейся **дифракционной огибающей (diffraction envelope)** ([[F03]]):",
+  "en": "In B2-L25 we treated the slits of Young's experiment as infinitely narrow. Real slits have a width $a$ and a separation $d>a$. Each slit gives its own pattern $\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2$, while the waves from the two slits interfere with a factor $\\cos^2\\frac{\\delta}{2}$. The result is the product: rapidly varying interference fringes inside a slowly varying **diffraction envelope** ([[F03]]):"
+ },
+ {
+  "t": "m",
+  "m": "I=4I_0\\cos^2\\frac{\\delta}{2}\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2,\\qquad \\frac{\\delta}{2}=\\frac{\\pi d\\sin\\theta}{\\lambda},\\qquad \\beta=\\frac{\\pi a\\sin\\theta}{\\lambda}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tushib qolgan tartiblar (missing orders).** Interferension maksimum ($d\\sin\\theta=m\\lambda$) difraksion minimumga ($a\\sin\\theta=k\\lambda$) to'g'ri kelsa, u yo'qoladi. Bu $m=\\frac{d}{a}k$ da bo'ladi. Masalan, $d=6a$ da $6$-, $12$-, … tartiblar yo'q, markaziy o'rama ichida esa $2\\frac{d}{a}-1=11$ ta yorug' yo'l bor. Grafikdan $\\frac{d}{a}$ ni o'qish — GRE ning tipik savoli: o'rama ichidagi yo'llarni sanang va birinchi tushib qolgan tartibni toping.",
+  "ru": "**Пропущенные порядки (missing orders).** Если интерференционный максимум ($d\\sin\\theta=m\\lambda$) попадает на дифракционный минимум ($a\\sin\\theta=k\\lambda$), он исчезает. Это происходит при $m=\\frac{d}{a}k$. Например, при $d=6a$ отсутствуют $6$-й, $12$-й, … порядки, а внутри центральной огибающей $2\\frac{d}{a}-1=11$ светлых полос. Прочитать $\\frac{d}{a}$ по графику — типичный вопрос GRE: сосчитайте полосы внутри огибающей и найдите первый пропущенный порядок.",
+  "en": "**Missing orders.** If an interference maximum ($d\\sin\\theta=m\\lambda$) falls on a diffraction minimum ($a\\sin\\theta=k\\lambda$), it disappears. This happens for $m=\\frac{d}{a}k$. For example, for $d=6a$ the $6$th, $12$th, … orders are missing, and inside the central envelope there are $2\\frac{d}{a}-1=11$ bright fringes. Reading $\\frac{d}{a}$ off a graph is a typical GRE question: count the fringes inside the envelope and find the first missing order."
+ },
+ {
+  "t": "m",
+  "m": "m=\\frac{d}{a}k,\\qquad n=2\\frac{d}{a}-1"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L26-F03.png",
+   "ru": "figures/B2-L26-F03-ru.png",
+   "en": "figures/B2-L26-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Tirqishlardan birini yopish.** Agar ikki tirqishdan biri yopilsa, interferension yo'llar yo'qoladi, lekin manzara yo'qolmaydi — bitta tirqishning keng difraksion manzarasi qoladi, markazdagi intensivlik esa $4$ marta kamayadi ($4I_0\\to I_0$). Agar tirqishlar ham torayib borsa, o'rama kengayadi va yo'llar soni ortadi; $a\\to0$ chegarasida B2-L25 dagi ideal Yung manzarasi chiqadi.",
+  "ru": "**Закрытие одной из щелей.** Если закрыть одну из двух щелей, интерференционные полосы исчезают, но картина не пропадает — остаётся широкая дифракционная картина одной щели, а интенсивность в центре уменьшается в $4$ раза ($4I_0\\to I_0$). Если щели сужать, огибающая расширяется и число полос растёт; в пределе $a\\to0$ получается идеальная картина Юнга из B2-L25.",
+  "en": "**Closing one of the slits.** If one of the two slits is closed, the interference fringes disappear, but the pattern does not — the broad diffraction pattern of one slit remains, and the intensity at the centre drops by a factor of $4$ ($4I_0\\to I_0$). If the slits are made narrower, the envelope widens and the number of fringes grows; in the limit $a\\to0$ we recover the ideal Young pattern of B2-L25."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Difraksion panjara",
+  "ru": "5. Дифракционная решётка",
+  "en": "5. The diffraction grating"
+ },
+ {
+  "t": "li",
+  "uz": "**Panjara tenglamasi.** **Difraksion panjara (diffraction grating)** — davri $d$ bo'lgan $N$ ta bir xil tirqish (yoki qaytaruvchi chiziqlar) to'plami. $d$ — **panjara davri (doimiysi)**, $1\\ \\mathrm{mm}$ dagi chiziqlar soni $\\frac{1}{d}$. Qo'shni tirqishlardan kelgan nurlar yo'llari farqi $d\\sin\\theta$ butun son $\\lambda$ ga teng bo'lgan yo'nalishlarda barcha $N$ ta to'lqin bir fazada qo'shiladi — **bosh maksimumlar (principal maxima)**:",
+  "ru": "**Уравнение решётки.** **Дифракционная решётка (diffraction grating)** — совокупность $N$ одинаковых щелей (или отражающих штрихов) с периодом $d$. $d$ — **период решётки**, число штрихов на $1\\ \\mathrm{mm}$ равно $\\frac{1}{d}$. В направлениях, где разность хода лучей от соседних щелей $d\\sin\\theta$ равна целому числу $\\lambda$, все $N$ волн складываются в одной фазе — это **главные максимумы (principal maxima)**:",
+  "en": "**The grating equation.** A **diffraction grating** is a set of $N$ identical slits (or reflecting lines) with period $d$. $d$ is the **grating period**, and the number of lines per $1\\ \\mathrm{mm}$ is $\\frac{1}{d}$. In the directions where the path difference $d\\sin\\theta$ between rays from neighbouring slits is a whole number of $\\lambda$, all $N$ waves add in phase — these are the **principal maxima**:"
+ },
+ {
+  "t": "m",
+  "m": "d\\sin\\theta=m\\lambda,\\qquad m=0,\\ \\pm1,\\ \\pm2,\\ \\ldots,\\qquad \\left|m\\right|\\leq\\frac{d}{\\lambda}"
+ },
+ {
+  "t": "li",
+  "uz": "Formula ikki tirqish bilan bir xil, lekin $N$ katta bo'lgani uchun maksimumlar juda **ingichka va yorqin**: B2-L25 dagi $N$ tirqish formulasiga ko'ra cho'qqi intensivligi $N^2I_0$, kengligi esa $\\frac{1}{N}$ ga proporsional, qo'shni bosh maksimumlar orasida $N-1$ ta nol va $N-2$ ta xira qo'shimcha maksimum bor. Har bir tirqishning chekli kengligi $a$ hisobga olinsa, to'liq intensivlik — bitta tirqish o'ramasi va $N$ tirqish ko'paytuvchisi ko'paytmasi ([[F04]]):",
+  "ru": "Формула та же, что для двух щелей, но из-за большого $N$ максимумы очень **узкие и яркие**: по формуле $N$ щелей из B2-L25 интенсивность пика равна $N^2I_0$, ширина пропорциональна $\\frac{1}{N}$, а между соседними главными максимумами $N-1$ нулей и $N-2$ слабых добавочных максимумов. С учётом конечной ширины $a$ каждой щели полная интенсивность — произведение огибающей одной щели и множителя $N$ щелей ([[F04]]):",
+  "en": "The formula is the same as for two slits, but because $N$ is large the maxima are very **narrow and bright**: by the $N$-slit formula of B2-L25 the peak intensity is $N^2I_0$ and the width is proportional to $\\frac{1}{N}$, with $N-1$ zeros and $N-2$ faint secondary maxima between neighbouring principal maxima. Taking into account the finite width $a$ of each slit, the full intensity is the product of the single-slit envelope and the $N$-slit factor ([[F04]]):"
+ },
+ {
+  "t": "m",
+  "m": "I=I_0\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2\\frac{\\sin^2\\left(N\\delta/2\\right)}{\\sin^2\\left(\\delta/2\\right)},\\qquad \\delta=\\frac{2\\pi d\\sin\\theta}{\\lambda}"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L26-F04.png",
+   "ru": "figures/B2-L26-F04-ru.png",
+   "en": "figures/B2-L26-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Spektrlar.** Bosh maksimum burchagi $\\lambda$ ga bog'liq, shuning uchun oq yorug'lik har bir $m\\neq0$ tartibda **spektrga** yoyiladi: binafsha nurlar markazga yaqin, qizil nurlar uzoqroq (prizmadagi teskari tartib: u yerda binafsha ko'proq og'adi). $m=0$ tartib — barcha to'lqin uzunliklari uchun $\\theta=0$, ya'ni oq. Yuqori tartiblarda spektrlar bir-birini qoplaydi: $m$-tartibdagi $\\lambda_1$ va $\\left(m+1\\right)$-tartibdagi $\\lambda_2$ bir burchakda, agar $m\\lambda_1=\\left(m+1\\right)\\lambda_2$. Ko'rinadigan yorug'likda ($400$–$700\\ \\mathrm{nm}$) birinchi va ikkinchi tartib qoplanmaydi ($700<2\\cdot400$), ikkinchi va uchinchi esa qoplanadi ($2\\cdot700>3\\cdot400$).",
+  "ru": "**Спектры.** Угол главного максимума зависит от $\\lambda$, поэтому белый свет в каждом порядке $m\\neq0$ раскладывается в **спектр**: фиолетовые лучи ближе к центру, красные дальше (обратный порядок по сравнению с призмой, где фиолетовые отклоняются сильнее). Порядок $m=0$ — $\\theta=0$ для всех длин волн, то есть белый. В высоких порядках спектры перекрываются: $\\lambda_1$ в $m$-м порядке и $\\lambda_2$ в $\\left(m+1\\right)$-м порядке идут под одним углом, если $m\\lambda_1=\\left(m+1\\right)\\lambda_2$. Для видимого света ($400$–$700\\ \\mathrm{nm}$) первый и второй порядки не перекрываются ($700<2\\cdot400$), а второй и третий перекрываются ($2\\cdot700>3\\cdot400$).",
+  "en": "**Spectra.** The angle of a principal maximum depends on $\\lambda$, so white light is spread into a **spectrum** in every order $m\\neq0$: violet rays are closer to the centre, red ones farther out (the opposite order to a prism, where violet is deviated more). The order $m=0$ has $\\theta=0$ for all wavelengths, so it is white. In higher orders the spectra overlap: $\\lambda_1$ in order $m$ and $\\lambda_2$ in order $\\left(m+1\\right)$ go at the same angle if $m\\lambda_1=\\left(m+1\\right)\\lambda_2$. For visible light ($400$–$700\\ \\mathrm{nm}$) the first and second orders do not overlap ($700<2\\cdot400$), while the second and third do ($2\\cdot700>3\\cdot400$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Qiya tushish va qaytaruvchi panjara.** Yorug'lik panjara normaliga $\\theta_0$ burchak ostida tushsa, tenglama $d\\left(\\sin\\theta-\\sin\\theta_0\\right)=m\\lambda$ bo'ladi; nol tartib tushuvchi nur yo'nalishini davom ettiradi, bir tomonda kuzatiladigan eng katta tartib esa normal tushishdagidan katta bo'lishi mumkin. **Qaytaruvchi panjarada (reflection grating)** (masalan, kompakt-disk yoki spektrometr panjarasi) nol tartib — ko'zgudagi qaytish yo'nalishi. Panjara chiziqlari ma'lum burchakda qiyalatib kesilsa (blyaz), yorug'lik asosan bitta kerakli tartibga yo'naltiriladi.",
+  "ru": "**Наклонное падение и отражательная решётка.** Если свет падает под углом $\\theta_0$ к нормали решётки, уравнение принимает вид $d\\left(\\sin\\theta-\\sin\\theta_0\\right)=m\\lambda$; нулевой порядок продолжает направление падающего луча, а наибольший порядок, наблюдаемый с одной стороны, может быть больше, чем при нормальном падении. В **отражательной решётке (reflection grating)** (например, компакт-диск или решётка спектрометра) нулевой порядок — направление зеркального отражения. Если штрихи нарезаны под определённым углом (блеск), свет направляется в основном в один нужный порядок.",
+  "en": "**Oblique incidence and the reflection grating.** If light falls at an angle $\\theta_0$ to the grating normal, the equation becomes $d\\left(\\sin\\theta-\\sin\\theta_0\\right)=m\\lambda$; the zeroth order continues the direction of the incident ray, and the highest order seen on one side can be larger than at normal incidence. In a **reflection grating** (for example a compact disc or a spectrometer grating) the zeroth order is the direction of specular reflection. If the lines are cut at a particular angle (blazing), the light is directed mainly into one desired order."
+ },
+ {
+  "t": "m",
+  "m": "d\\left(\\sin\\theta-\\sin\\theta_0\\right)=m\\lambda"
+ },
+ {
+  "t": "h2",
+  "uz": "6. Dispersiya va ajrata olish qobiliyati",
+  "ru": "6. Дисперсия и разрешающая способность",
+  "en": "6. Dispersion and resolving power"
+ },
+ {
+  "t": "li",
+  "uz": "**Burchak dispersiyasi (angular dispersion).** Panjara tenglamasini differensiallasak, $d\\cos\\theta\\,d\\theta=m\\,d\\lambda$. Demak, to'lqin uzunligi $d\\lambda$ ga o'zgarganda maksimum qancha burchakka siljishi — burchak dispersiyasi — tartib $m$ ga proporsional va davr $d$ ga teskari proporsional. Fokus masofasi $f$ bo'lgan obyektiv fokal tekisligida **chiziqli dispersiya** $fD$:",
+  "ru": "**Угловая дисперсия (angular dispersion).** Дифференцируя уравнение решётки, получаем $d\\cos\\theta\\,d\\theta=m\\,d\\lambda$. Значит, на какой угол смещается максимум при изменении длины волны на $d\\lambda$ — угловая дисперсия — пропорционально порядку $m$ и обратно пропорционально периоду $d$. В фокальной плоскости объектива с фокусным расстоянием $f$ **линейная дисперсия** равна $fD$:",
+  "en": "**Angular dispersion.** Differentiating the grating equation gives $d\\cos\\theta\\,d\\theta=m\\,d\\lambda$. So the angle through which a maximum moves when the wavelength changes by $d\\lambda$ — the angular dispersion — is proportional to the order $m$ and inversely proportional to the period $d$. In the focal plane of an objective of focal length $f$ the **linear dispersion** is $fD$:"
+ },
+ {
+  "t": "m",
+  "m": "D=\\frac{d\\theta}{d\\lambda}=\\frac{m}{d\\cos\\theta},\\qquad D_l=fD"
+ },
+ {
+  "t": "li",
+  "uz": "**Maksimum kengligi.** Bosh maksimumdan qo'shni nolgacha faza $\\frac{2\\pi}{N}$ ga o'zgaradi, bu esa butun panjara chetlari orasidagi yo'llar farqining $\\lambda$ ga o'zgarishiga teng: $Nd\\cos\\theta\\,\\delta\\theta=\\lambda$. Demak, maksimumning burchak yarim kengligi $\\delta\\theta=\\frac{\\lambda}{Nd\\cos\\theta}$ — bu kengligi $Nd$ bo'lgan «bitta katta tirqish» difraksiyasi.",
+  "ru": "**Ширина максимума.** От главного максимума до соседнего нуля фаза меняется на $\\frac{2\\pi}{N}$, что соответствует изменению разности хода между краями всей решётки на $\\lambda$: $Nd\\cos\\theta\\,\\delta\\theta=\\lambda$. Значит, угловая полуширина максимума $\\delta\\theta=\\frac{\\lambda}{Nd\\cos\\theta}$ — это дифракция на «одной большой щели» ширины $Nd$.",
+  "en": "**The width of a maximum.** From a principal maximum to the neighbouring zero the phase changes by $\\frac{2\\pi}{N}$, which corresponds to a change of $\\lambda$ in the path difference between the edges of the whole grating: $Nd\\cos\\theta\\,\\delta\\theta=\\lambda$. So the angular half-width of a maximum is $\\delta\\theta=\\frac{\\lambda}{Nd\\cos\\theta}$ — this is diffraction by \"one big slit\" of width $Nd$."
+ },
+ {
+  "t": "li",
+  "uz": "**Reley mezoni (Rayleigh criterion).** Ikki yaqin spektral chiziq **ajratiladi**, agar birining maksimumi ikkinchisining birinchi minimumiga tushsa (yoki undan uzoqroq bo'lsa); bunda yig'indi egri chiziqda o'rtada taxminan $20$ foizlik botiq bo'ladi. Dispersiya bilan siljish $D\\,\\delta\\lambda$ ni yarim kenglik $\\delta\\theta$ ga tenglab, **ajrata olish qobiliyati (resolving power)** ni olamiz:",
+  "ru": "**Критерий Рэлея (Rayleigh criterion).** Две близкие спектральные линии **разрешаются**, если максимум одной попадает на первый минимум другой (или дальше); при этом на суммарной кривой посередине получается провал примерно в $20$ процентов. Приравнивая смещение за счёт дисперсии $D\\,\\delta\\lambda$ полуширине $\\delta\\theta$, получаем **разрешающую способность (resolving power)**:",
+  "en": "**The Rayleigh criterion.** Two close spectral lines are **resolved** if the maximum of one falls on the first minimum of the other (or beyond); the summed curve then has a dip of about $20$ percent in the middle. Equating the dispersion shift $D\\,\\delta\\lambda$ to the half-width $\\delta\\theta$, we obtain the **resolving power**:"
+ },
+ {
+  "t": "m",
+  "m": "R=\\frac{\\lambda}{\\delta\\lambda}=mN,\\qquad R_{max}=\\frac{Nd}{\\lambda}"
+ },
+ {
+  "t": "li",
+  "uz": "Ajrata olish faqat **ishtirok etgan tirqishlar soni** va tartibga bog'liq, davrga emas. Davr dispersiyani belgilaydi (chiziqlar qanchalik uzoqlashadi), $N$ esa chiziqlar qanchalik ingichka ekanini. $\\sin\\theta\\leq1$ bo'lgani uchun $mN\\leq\\frac{Nd}{\\lambda}$ — ajrata olish panjaraning to'liq kengligi $Nd$ ning necha to'lqin uzunligiga tengligidan oshmaydi. Misol: natriyning sariq dubleti ($589.0$ va $589.6\\ \\mathrm{nm}$) uchun $R\\approx1000$ kerak — birinchi tartibda kamida $1000$ ta yoritilgan chiziq.",
+  "ru": "Разрешающая способность зависит только от **числа участвующих щелей** и порядка, а не от периода. Период задаёт дисперсию (насколько разнесены линии), а $N$ — насколько они узки. Поскольку $\\sin\\theta\\leq1$, имеем $mN\\leq\\frac{Nd}{\\lambda}$ — разрешающая способность не превышает числа длин волн, укладывающихся на полной ширине решётки $Nd$. Пример: для жёлтого дублета натрия ($589.0$ и $589.6\\ \\mathrm{nm}$) нужно $R\\approx1000$ — в первом порядке не менее $1000$ освещённых штрихов.",
+  "en": "The resolving power depends only on the **number of participating slits** and the order, not on the period. The period sets the dispersion (how far apart the lines are), while $N$ sets how narrow they are. Since $\\sin\\theta\\leq1$, we have $mN\\leq\\frac{Nd}{\\lambda}$ — the resolving power cannot exceed the number of wavelengths that fit into the full width $Nd$ of the grating. Example: the yellow sodium doublet ($589.0$ and $589.6\\ \\mathrm{nm}$) needs $R\\approx1000$ — at least $1000$ illuminated lines in the first order."
+ },
+ {
+  "t": "li",
+  "uz": "**Dispersiya sohasi (free spectral range).** $m$-tartibda qo'shni tartib bilan qoplanmaydigan to'lqin uzunliklari oralig'i $\\Delta\\lambda=\\frac{\\lambda}{m}$. Yuqori tartib ajrata olishni oshiradi, lekin ishchi oraliqni toraytiradi — B2-L25 dagi Fabri–Pero etaloni ($m\\sim10^4$–$10^5$) xuddi shu sababli ingichka chiziqlarni tekshirishda yaxshi, keng spektrni ko'rishda esa yaroqsiz.",
+  "ru": "**Область дисперсии (free spectral range).** Интервал длин волн, которые в $m$-м порядке не перекрываются с соседним порядком, равен $\\Delta\\lambda=\\frac{\\lambda}{m}$. Высокий порядок повышает разрешение, но сужает рабочий интервал — по той же причине эталон Фабри–Перо из B2-L25 ($m\\sim10^4$–$10^5$) хорош для исследования тонких линий и непригоден для обзора широкого спектра.",
+  "en": "**The free spectral range.** The range of wavelengths that in order $m$ do not overlap with the neighbouring order is $\\Delta\\lambda=\\frac{\\lambda}{m}$. A high order increases the resolving power but narrows the working range — for the same reason the Fabry–Pérot etalon of B2-L25 ($m\\sim10^4$–$10^5$) is good for studying fine lines and useless for surveying a broad spectrum."
+ },
+ {
+  "t": "m",
+  "m": "\\Delta\\lambda=\\frac{\\lambda}{m},\\qquad \\delta\\theta=\\frac{\\lambda}{Nd\\cos\\theta}"
+ },
+ {
+  "t": "h2",
+  "uz": "7. Doiraviy teshik va optik asboblarning chegarasi",
+  "ru": "7. Круглое отверстие и предел оптических приборов",
+  "en": "7. The circular aperture and the limit of optical instruments"
+ },
+ {
+  "t": "li",
+  "uz": "**Eyri diski (Airy disk).** Diametri $D$ bo'lgan doiraviy teshikdagi Fraungofer difraksiyasida markazda yorug' dog' — **Eyri diski** — va uning atrofida xira halqalar hosil bo'ladi. Hisob Bessel funksiyasi $J_1$ ni beradi: $I=I_0\\left(\\frac{2J_1(x)}{x}\\right)^2$, $x=\\frac{\\pi D\\sin\\theta}{\\lambda}$. Birinchi qorong'i halqa tirqishdagi $\\frac{\\lambda}{a}$ o'rniga biroz kattaroq burchakda — doira chetlari tirqishnikidan «kamroq samarali»:",
+  "ru": "**Диск Эйри (Airy disk).** При дифракции Фраунгофера на круглом отверстии диаметром $D$ в центре образуется светлое пятно — **диск Эйри** — и вокруг него слабые кольца. Расчёт приводит к функции Бесселя $J_1$: $I=I_0\\left(\\frac{2J_1(x)}{x}\\right)^2$, $x=\\frac{\\pi D\\sin\\theta}{\\lambda}$. Первое тёмное кольцо лежит под несколько большим углом, чем $\\frac{\\lambda}{a}$ для щели — края круга «менее эффективны», чем у щели:",
+  "en": "**The Airy disk.** In Fraunhofer diffraction by a circular aperture of diameter $D$, a bright spot — the **Airy disk** — forms at the centre, surrounded by faint rings. The calculation leads to the Bessel function $J_1$: $I=I_0\\left(\\frac{2J_1(x)}{x}\\right)^2$, $x=\\frac{\\pi D\\sin\\theta}{\\lambda}$. The first dark ring lies at a somewhat larger angle than $\\frac{\\lambda}{a}$ for a slit — the edges of a circle are \"less effective\" than those of a slit:"
+ },
+ {
+  "t": "m",
+  "m": "\\sin\\theta_1=1.22\\frac{\\lambda}{D}"
+ },
+ {
+  "t": "li",
+  "uz": "Eyri diskiga yorug'likning taxminan $84$ foizi tushadi, birinchi yorug' halqaga atigi $1.7$ foizi. Disk radiusi ekranda (linza fokal tekisligida) $1.22\\frac{\\lambda f}{D}$. Shuning uchun **ideal linza ham nuqtani nuqtaga aylantirmaydi** — har bir nuqta kichik disk bo'lib tasvirlanadi. Lazer dastasi ham yoyiladi: diametri $D$ bo'lgan chiqish teshigidan **dastaning yoyilishi (beam divergence)** burchagi $\\sim\\frac{\\lambda}{D}$ — shuning uchun Oyga yuborilgan lazer dastasi diametri kilometrlab bo'ladi.",
+  "ru": "На диск Эйри приходится примерно $84$ процента света, на первое светлое кольцо — лишь $1.7$ процента. Радиус диска на экране (в фокальной плоскости линзы) равен $1.22\\frac{\\lambda f}{D}$. Поэтому **даже идеальная линза не отображает точку в точку** — каждая точка изображается маленьким диском. Лазерный пучок тоже расходится: при выходном отверстии диаметром $D$ угол **расходимости пучка (beam divergence)** $\\sim\\frac{\\lambda}{D}$ — поэтому пятно лазерного луча на Луне имеет диаметр в километры.",
+  "en": "About $84$ percent of the light falls in the Airy disk and only $1.7$ percent in the first bright ring. The radius of the disk on a screen (in the focal plane of the lens) is $1.22\\frac{\\lambda f}{D}$. So **even an ideal lens does not image a point into a point** — each point is imaged as a small disk. A laser beam spreads too: for an exit aperture of diameter $D$ the **beam divergence** angle is $\\sim\\frac{\\lambda}{D}$ — that is why a laser spot sent to the Moon is kilometres across."
+ },
+ {
+  "t": "li",
+  "uz": "**Teleskop va ko'zning ajrata olishi.** Ikki nuqtaviy manba (masalan, qo'shaloq yulduz) Reley mezoni bo'yicha ajratiladi, agar biri Eyri diskining markazi ikkinchisining birinchi qorong'i halqasiga tushsa ([[F05]]). Eng kichik ajratiladigan burchak — **burchak ajrata olishi (angular resolution)**:",
+  "ru": "**Разрешение телескопа и глаза.** Два точечных источника (например, двойная звезда) разрешаются по критерию Рэлея, если центр диска Эйри одного попадает на первое тёмное кольцо другого ([[F05]]). Наименьший разрешаемый угол — **угловое разрешение (angular resolution)**:",
+  "en": "**The resolution of a telescope and of the eye.** Two point sources (for example a double star) are resolved by the Rayleigh criterion if the centre of the Airy disk of one falls on the first dark ring of the other ([[F05]]). The smallest resolvable angle is the **angular resolution**:"
+ },
+ {
+  "t": "m",
+  "m": "\\theta_{min}=1.22\\frac{\\lambda}{D}"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L26-F05.png",
+   "ru": "figures/B2-L26-F05-ru.png",
+   "en": "figures/B2-L26-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "Diametr qancha katta bo'lsa, ajrata olish shuncha yaxshi — katta teleskoplar faqat ko'proq yorug'lik yig'ish uchun emas, aniqroq ko'rish uchun ham quriladi. Ko'z qorachig'i $D\\approx3$–$5\\ \\mathrm{mm}$ uchun $\\theta_{min}\\approx1'$ — bu $100\\ \\mathrm{m}$ masofadan taxminan $3\\ \\mathrm{cm}$ li ikki nuqtani ajratishga mos. Radioteleskoplarda $\\lambda$ katta, shuning uchun ularni yuzlab metr yoki interferometr sifatida minglab kilometr «diametrli» qilib birlashtiriladi. Atmosfera turbulentligi Yerdagi optik teleskoplar uchun amaldagi chegarani $\\sim1''$ ga tushiradi.",
+  "ru": "Чем больше диаметр, тем лучше разрешение — большие телескопы строят не только для сбора большего количества света, но и для более чёткого изображения. Для зрачка глаза $D\\approx3$–$5\\ \\mathrm{mm}$ имеем $\\theta_{min}\\approx1'$ — это соответствует различению двух точек на расстоянии около $3\\ \\mathrm{cm}$ с $100\\ \\mathrm{m}$. У радиотелескопов $\\lambda$ велико, поэтому их делают размером в сотни метров или объединяют в интерферометр с «диаметром» в тысячи километров. Атмосферная турбулентность снижает практический предел наземных оптических телескопов до $\\sim1''$.",
+  "en": "The larger the diameter, the better the resolution — large telescopes are built not only to collect more light but also to see more sharply. For the eye's pupil, $D\\approx3$–$5\\ \\mathrm{mm}$ gives $\\theta_{min}\\approx1'$ — this corresponds to resolving two points about $3\\ \\mathrm{cm}$ apart from $100\\ \\mathrm{m}$. Radio telescopes have large $\\lambda$, so they are made hundreds of metres across or combined into an interferometer with a \"diameter\" of thousands of kilometres. Atmospheric turbulence lowers the practical limit of ground-based optical telescopes to $\\sim1''$."
+ },
+ {
+  "t": "li",
+  "uz": "**Mikroskop.** Obyektiv buyumdan $\\alpha$ yarim burchak ostida ko'rinsa, ajratiladigan eng kichik masofa (Abbe–Reley chegarasi) **sonli apertura** $n\\sin\\alpha$ bilan aniqlanadi. Immersion moy ($n\\approx1.5$) va katta burchak bilan $d_{min}\\approx0.2\\ \\mu\\mathrm{m}$ — yorug'lik mikroskopining asosiy chegarasi; undan kichik buyumlar uchun ultrabinafsha yoki elektron mikroskop (de Broyl to'lqin uzunligi juda kichik) kerak.",
+  "ru": "**Микроскоп.** Если объектив виден из предмета под половинным углом $\\alpha$, наименьшее разрешаемое расстояние (предел Аббе–Рэлея) определяется **числовой апертурой** $n\\sin\\alpha$. С иммерсионным маслом ($n\\approx1.5$) и большим углом $d_{min}\\approx0.2\\ \\mu\\mathrm{m}$ — основной предел светового микроскопа; для меньших объектов нужен ультрафиолетовый или электронный микроскоп (длина волны де Бройля очень мала).",
+  "en": "**The microscope.** If the objective subtends a half-angle $\\alpha$ at the object, the smallest resolvable distance (the Abbe–Rayleigh limit) is set by the **numerical aperture** $n\\sin\\alpha$. With immersion oil ($n\\approx1.5$) and a large angle, $d_{min}\\approx0.2\\ \\mu\\mathrm{m}$ — the basic limit of the light microscope; smaller objects need an ultraviolet or an electron microscope (the de Broglie wavelength is very small)."
+ },
+ {
+  "t": "m",
+  "m": "d_{min}=\\frac{0.61\\lambda}{n\\sin\\alpha}"
+ },
+ {
+  "t": "h2",
+  "uz": "8. Rentgen nurlari va elektronlar difraksiyasi",
+  "ru": "8. Дифракция рентгеновских лучей и электронов",
+  "en": "8. Diffraction of X-rays and electrons"
+ },
+ {
+  "t": "li",
+  "uz": "**Kristall — uch o'lchamli panjara.** Atomlararo masofa $\\sim0.1$–$0.5\\ \\mathrm{nm}$, ko'rinadigan yorug'lik uchun bu juda kichik ($d\\ll\\lambda$ — tartiblar yo'q), lekin **rentgen nurlari** uchun ($\\lambda\\sim0.01$–$1\\ \\mathrm{nm}$) aynan mos. 1912-yilda Laue kristalldan rentgen difraksiyasini kuzatib, bir yo'la rentgen nurlarining to'lqin tabiatini va kristallarning panjara tuzilishini isbotladi.",
+  "ru": "**Кристалл — трёхмерная решётка.** Межатомные расстояния $\\sim0.1$–$0.5\\ \\mathrm{nm}$; для видимого света это слишком мало ($d\\ll\\lambda$ — порядков нет), но для **рентгеновских лучей** ($\\lambda\\sim0.01$–$1\\ \\mathrm{nm}$) как раз подходит. В 1912 году Лауэ наблюдал дифракцию рентгеновских лучей на кристалле и сразу доказал и волновую природу рентгеновских лучей, и решётчатое строение кристаллов.",
+  "en": "**A crystal is a three-dimensional grating.** Interatomic distances are $\\sim0.1$–$0.5\\ \\mathrm{nm}$; for visible light this is far too small ($d\\ll\\lambda$ — no orders), but for **X-rays** ($\\lambda\\sim0.01$–$1\\ \\mathrm{nm}$) it is just right. In 1912 Laue observed X-ray diffraction by a crystal, proving at once the wave nature of X-rays and the lattice structure of crystals."
+ },
+ {
+  "t": "li",
+  "uz": "**Vulf–Bregg sharti (Bragg condition).** Kristallni orasi $d$ bo'lgan parallel atom tekisliklari to'plami deb qaraymiz. Har bir tekislik rentgen nurlarining kichik qismini ko'zgudagidek qaytaradi. Qo'shni tekisliklardan qaytgan nurlar yo'llari farqi $2d\\sin\\theta$, bu yerda $\\theta$ — tekislikka nisbatan olingan **sirg'anish burchagi (glancing angle)**, normalga nisbatan emas ([[F06]]). Kuchli qaytish sharti:",
+  "ru": "**Условие Вульфа–Брэгга (Bragg condition).** Рассмотрим кристалл как набор параллельных атомных плоскостей с расстоянием $d$. Каждая плоскость зеркально отражает малую часть рентгеновских лучей. Разность хода лучей, отражённых соседними плоскостями, равна $2d\\sin\\theta$, где $\\theta$ — **угол скольжения (glancing angle)**, отсчитываемый от плоскости, а не от нормали ([[F06]]). Условие сильного отражения:",
+  "en": "**The Bragg condition.** We regard the crystal as a set of parallel atomic planes with spacing $d$. Each plane reflects a small part of the X-rays specularly. The path difference between rays reflected by neighbouring planes is $2d\\sin\\theta$, where $\\theta$ is the **glancing angle** measured from the plane, not from the normal ([[F06]]). The condition for strong reflection is"
+ },
+ {
+  "t": "m",
+  "m": "2d\\sin\\theta=m\\lambda,\\qquad m=1,\\ 2,\\ \\ldots,\\qquad m\\leq\\frac{2d}{\\lambda}"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L26-F06.png",
+   "ru": "figures/B2-L26-F06-ru.png",
+   "en": "figures/B2-L26-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "Bitta kristallda turli yo'nalishdagi ko'plab tekisliklar oilalari bor, har biri o'z $d$ siga ega. **Laue usuli** — qo'zg'almas monokristall va uzluksiz spektr: har bir oila o'ziga mos $\\lambda$ ni tanlaydi, plastinkada dog'lar naqshi chiqadi. **Debay–Sherrer usuli** — monoxromatik nurlar va kukun (polikristall): mikrokristallar barcha yo'nalishlarda, shuning uchun har bir $d$ uchun $2\\theta$ yarim burchakli konus va ekranda halqa hosil bo'ladi. Kubik kristallda tekisliklararo masofani zichlikdan topish mumkin: NaCl da bir kub katakchada (qirrasi $d$) o'rtacha yarim «molekula» bor, shuning uchun $\\rho d^3=\\frac{M}{2N_A}$.",
+  "ru": "В одном кристалле много семейств плоскостей разных направлений, у каждого своё $d$. **Метод Лауэ** — неподвижный монокристалл и сплошной спектр: каждое семейство выбирает подходящее $\\lambda$, на пластинке получается узор из пятен. **Метод Дебая–Шеррера** — монохроматические лучи и порошок (поликристалл): микрокристаллы ориентированы во всех направлениях, поэтому для каждого $d$ образуется конус с полууглом $2\\theta$, а на экране — кольцо. В кубическом кристалле межплоскостное расстояние можно найти по плотности: в NaCl на одну кубическую ячейку (с ребром $d$) приходится в среднем половина «молекулы», поэтому $\\rho d^3=\\frac{M}{2N_A}$.",
+  "en": "A single crystal contains many families of planes with different orientations, each with its own $d$. The **Laue method** uses a fixed single crystal and a continuous spectrum: each family picks out a suitable $\\lambda$, and the plate shows a pattern of spots. The **Debye–Scherrer method** uses monochromatic rays and a powder (a polycrystal): the microcrystals point in all directions, so for each $d$ a cone with half-angle $2\\theta$ forms, and a ring appears on the screen. In a cubic crystal the interplanar spacing can be found from the density: in NaCl each cubic cell (of edge $d$) contains on average half a \"molecule\", so $\\rho d^3=\\frac{M}{2N_A}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Elektronlar difraksiyasi.** De Broyl gipotezasiga ko'ra impulsi $p$ bo'lgan zarra to'lqin uzunligi $\\lambda=\\frac{h}{p}$ (B2-L25 da elektronlar interferensiyasi). $U$ kuchlanish bilan tezlatilgan elektron uchun $\\lambda=\\frac{h}{\\sqrt{2meU}}\\approx\\frac{1.23}{\\sqrt{U}}\\ \\mathrm{nm}$ ($U$ voltlarda) — $10\\ \\mathrm{kV}$ da atigi $\\approx0.012\\ \\mathrm{nm}$, rentgen nurlaridan ham qisqa. 1927-yilda Devisson va Jermer nikel kristallidan qaytgan elektronlar dastasida aynan Bregg sharti bo'yicha maksimum topdilar — bu zarralarning to'lqin xossasining birinchi to'g'ridan-to'g'ri isboti. Neytronlar difraksiyasi ham xuddi shu tarzda moddaning tuzilishini o'rganadi.",
+  "ru": "**Дифракция электронов.** По гипотезе де Бройля частица с импульсом $p$ имеет длину волны $\\lambda=\\frac{h}{p}$ (интерференция электронов — в B2-L25). Для электрона, ускоренного напряжением $U$, $\\lambda=\\frac{h}{\\sqrt{2meU}}\\approx\\frac{1.23}{\\sqrt{U}}\\ \\mathrm{nm}$ ($U$ в вольтах) — при $10\\ \\mathrm{kV}$ всего $\\approx0.012\\ \\mathrm{nm}$, короче, чем у рентгеновских лучей. В 1927 году Дэвиссон и Джермер обнаружили в пучке электронов, отражённых кристаллом никеля, максимум именно по условию Брэгга — первое прямое доказательство волновых свойств частиц. Дифракция нейтронов так же применяется для изучения строения вещества.",
+  "en": "**Electron diffraction.** According to de Broglie's hypothesis a particle of momentum $p$ has a wavelength $\\lambda=\\frac{h}{p}$ (electron interference was in B2-L25). For an electron accelerated through a voltage $U$, $\\lambda=\\frac{h}{\\sqrt{2meU}}\\approx\\frac{1.23}{\\sqrt{U}}\\ \\mathrm{nm}$ ($U$ in volts) — at $10\\ \\mathrm{kV}$ only $\\approx0.012\\ \\mathrm{nm}$, shorter than X-rays. In 1927 Davisson and Germer found a maximum, exactly as the Bragg condition predicts, in a beam of electrons reflected by a nickel crystal — the first direct proof of the wave properties of particles. Neutron diffraction is used in the same way to study the structure of matter."
+ },
+ {
+  "t": "m",
+  "m": "\\lambda=\\frac{h}{p}=\\frac{h}{\\sqrt{2meU}},\\qquad \\rho d^3=\\frac{M}{2N_A}"
+ },
+ {
+  "t": "h2",
+  "uz": "9. Babine prinsipi va boshqa difraksion to'siqlar",
+  "ru": "9. Принцип Бабине и другие дифракционные препятствия",
+  "en": "9. Babinet's principle and other diffracting obstacles"
+ },
+ {
+  "t": "li",
+  "uz": "**Babine prinsipi (Babinet's principle).** Ikki **to'ldiruvchi to'siq (complementary screens)** — biri shaffof bo'lgan joyda ikkinchisi noshaffof (masalan, tirqish va xuddi shunday kenglikdagi sim). Ikkalasidan o'tgan to'lqinlar yig'indisi to'siqsiz to'lqinga teng: $A_1+A_2=A_{0}$. Fraungofer manzarasida to'siqsiz to'lqin faqat markaziy nuqtani yoritadi, shuning uchun markazdan tashqarida $A_1=-A_2$ va intensivliklar **bir xil**. Demak, ingichka sim yoki soch xuddi shunday kenglikdagi tirqish kabi manzara beradi — minimumlar $a\\sin\\theta=m\\lambda$ da.",
+  "ru": "**Принцип Бабине (Babinet's principle).** Два **дополнительных экрана (complementary screens)** — там, где один прозрачен, другой непрозрачен (например, щель и проволока той же ширины). Сумма волн, прошедших через оба, равна волне без препятствия: $A_1+A_2=A_{0}$. В фраунгоферовой картине волна без препятствия освещает только центральную точку, поэтому вне центра $A_1=-A_2$ и интенсивности **одинаковы**. Значит, тонкая проволока или волос дают такую же картину, как щель той же ширины, — минимумы при $a\\sin\\theta=m\\lambda$.",
+  "en": "**Babinet's principle.** Two **complementary screens** — where one is transparent the other is opaque (for example a slit and a wire of the same width). The sum of the waves passing through both equals the unobstructed wave: $A_1+A_2=A_{0}$. In a Fraunhofer pattern the unobstructed wave illuminates only the central point, so away from the centre $A_1=-A_2$ and the intensities are **the same**. So a thin wire or a hair gives the same pattern as a slit of the same width — minima at $a\\sin\\theta=m\\lambda$."
+ },
+ {
+  "t": "li",
+  "uz": "Bu bilan soch, ingichka tola yoki sim qalinligini lazer bilan oson o'lchash mumkin: ekrandagi markazning ikki tomonidagi birinchi minimumlar orasidagi masofani $2y_1$ o'lchab, $a=\\frac{2\\lambda L}{2y_1}$. Xuddi shu prinsip bo'yicha mayda zarralar (tuman tomchilari, chang) Quyosh yoki Oy atrofida rangli halqalar — **tojlar** — hosil qiladi: tomchi qancha kichik bo'lsa, halqa shuncha katta.",
+  "ru": "Так можно легко измерить лазером толщину волоса, тонкого волокна или проволоки: измерив расстояние $2y_1$ между первыми минимумами по обе стороны от центра, получаем $a=\\frac{2\\lambda L}{2y_1}$. По тому же принципу мелкие частицы (капли тумана, пыль) образуют вокруг Солнца или Луны цветные кольца — **венцы**: чем мельче капля, тем больше кольцо.",
+  "en": "This makes it easy to measure the thickness of a hair, a thin fibre or a wire with a laser: measuring the distance $2y_1$ between the first minima on either side of the centre, we get $a=\\frac{2\\lambda L}{2y_1}$. By the same principle small particles (fog droplets, dust) form coloured rings around the Sun or the Moon — **coronae**: the smaller the droplet, the larger the ring."
+ },
+ {
+  "t": "m",
+  "m": "A_1+A_2=A_{0},\\qquad a=\\frac{2\\lambda L}{2y_1}"
+ },
+ {
+  "t": "li",
+  "uz": "**Fazaviy panjara va ultratovushda difraksiya.** Panjara bo'lishi uchun tirqishlar shart emas — yo'l bo'ylab davriy o'zgaradigan faza ham yetarli. Shaffof plastinkadagi davriy qalinlik o'zgarishi (**fazaviy panjara**) yorug'likni yutmasdan tartiblarga taqsimlaydi; to'g'ri chuqurlikda nol tartibni butunlay yo'qotish ham mumkin. Suyuqlikdagi turg'un yoki yuguruvchi ultratovush to'lqini zichlik va sindirish ko'rsatkichini davriy o'zgartiradi — davri tovush to'lqin uzunligi $\\Lambda=\\frac{v}{f}$ bo'lgan panjara hosil bo'ladi (akusto-optik modulyator). Shunday qilib, $\\Lambda$ ni, demak, suyuqlikdagi tovush tezligini optik usulda o'lchash mumkin:",
+  "ru": "**Фазовая решётка и дифракция на ультразвуке.** Для решётки щели не обязательны — достаточно фазы, периодически меняющейся вдоль пути. Периодическое изменение толщины прозрачной пластинки (**фазовая решётка**) распределяет свет по порядкам без поглощения; при правильной глубине можно даже полностью погасить нулевой порядок. Стоячая или бегущая ультразвуковая волна в жидкости периодически меняет плотность и показатель преломления — образуется решётка с периодом, равным длине звуковой волны $\\Lambda=\\frac{v}{f}$ (акустооптический модулятор). Так можно оптически измерить $\\Lambda$, а значит, и скорость звука в жидкости:",
+  "en": "**The phase grating and diffraction by ultrasound.** A grating does not need slits — a phase that varies periodically along the path is enough. A periodic variation in the thickness of a transparent plate (a **phase grating**) distributes light among the orders without absorption; with the right depth the zeroth order can even be suppressed completely. A standing or travelling ultrasonic wave in a liquid periodically changes the density and the refractive index — a grating forms whose period is the sound wavelength $\\Lambda=\\frac{v}{f}$ (an acousto-optic modulator). In this way $\\Lambda$, and hence the speed of sound in the liquid, can be measured optically:"
+ },
+ {
+  "t": "m",
+  "m": "\\Lambda\\sin\\theta=m\\lambda,\\qquad \\Lambda=\\frac{v}{f}"
+ },
+ {
+  "t": "h2",
+  "uz": "10. Chetdagi Frenel difraksiyasi",
+  "ru": "10. Дифракция Френеля на краю",
+  "en": "10. Fresnel diffraction at an edge"
+ },
+ {
+  "t": "li",
+  "uz": "**Yarim tekislik (half-plane).** Yassi to'lqin yo'liga to'g'ri chetli noshaffof yarim tekislik qo'yilsin. Geometrik optika bo'yicha ekran keskin yorug' va qorong'i qismlarga bo'linadi. Aslida **geometrik soya (geometric shadow)** chegarasida amplituda aynan yarmiga teng (yarim front ochiq), intensivlik esa $\\frac{I_0}{4}$. Soya ichida intensivlik monoton so'nadi, yorug' tomonda esa so'nuvchi yo'llar hosil bo'ladi; birinchi maksimum $1.37I_0$ ga yetadi ([[F07]]). Yo'llarning xarakterli kengligi $\\sqrt{\\frac{\\lambda b}{2}}$ — Frenel zonasi o'lchami bilan bir xil tartibda.",
+  "ru": "**Полуплоскость (half-plane).** Поставим на пути плоской волны непрозрачную полуплоскость с прямым краем. По геометрической оптике экран делится на резко освещённую и тёмную части. На самом деле на границе **геометрической тени (geometric shadow)** амплитуда равна ровно половине (открыта половина фронта), а интенсивность $\\frac{I_0}{4}$. Внутри тени интенсивность монотонно спадает, а на освещённой стороне образуются затухающие полосы; первый максимум достигает $1.37I_0$ ([[F07]]). Характерная ширина полос $\\sqrt{\\frac{\\lambda b}{2}}$ — того же порядка, что размер зоны Френеля.",
+  "en": "**The half-plane.** Place an opaque half-plane with a straight edge in the path of a plane wave. By geometric optics the screen is split sharply into a lit part and a dark part. In fact, at the edge of the **geometric shadow** the amplitude is exactly one half (half of the wavefront is open), so the intensity is $\\frac{I_0}{4}$. Inside the shadow the intensity falls off monotonically, while on the lit side decaying fringes appear; the first maximum reaches $1.37I_0$ ([[F07]]). The characteristic fringe width is $\\sqrt{\\frac{\\lambda b}{2}}$ — of the same order as the size of a Fresnel zone."
+ },
+ {
+  "t": "m",
+  "m": "I\\left(0\\right)=\\frac{I_0}{4},\\qquad I_{max}\\approx1.37I_0,\\qquad u=x\\sqrt{\\frac{2}{\\lambda b}}"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L26-F07.png",
+   "ru": "figures/B2-L26-F07-ru.png",
+   "en": "figures/B2-L26-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "Hisob Frenel integrallari $C(u)$ va $S(u)$ yordamida bajariladi: $u$ o'lchovsiz koordinata, $u\\to\\infty$ da Kornyu spiralining uchi to'liq to'lqinni beradi. Xuddi shu usul bilan tirqish va ingichka chiziq ortidagi Frenel manzarasini hisoblash mumkin; tirqish uchun Frenel soni kichiklashgan sari manzara bitta tirqishning Fraungofer manzarasiga o'tadi ([[F08]]).",
+  "ru": "Расчёт выполняется с помощью интегралов Френеля $C(u)$ и $S(u)$: $u$ — безразмерная координата, при $u\\to\\infty$ конец спирали Корню даёт полную волну. Тем же способом можно рассчитать картину Френеля за щелью и за узкой полоской; для щели по мере уменьшения числа Френеля картина переходит в фраунгоферову картину одной щели ([[F08]]).",
+  "en": "The calculation uses the Fresnel integrals $C(u)$ and $S(u)$: $u$ is a dimensionless coordinate, and as $u\\to\\infty$ the end of the Cornu spiral gives the full wave. The same method gives the Fresnel pattern behind a slit and behind a narrow strip; for a slit, as the Fresnel number decreases the pattern turns into the Fraunhofer pattern of a single slit ([[F08]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Kamera-obskura (pinhole camera).** Teshikli qorong'i quti ham difraksiya chegarasiga ega. Teshik katta bo'lsa, tasvir geometrik sabab bilan xira (dog' o'lchami $\\sim r$); kichik bo'lsa — difraksiya sababli (dog' $\\sim\\frac{\\lambda b}{r}$). Eng aniq tasvir bu ikki o'lcham teng bo'lganda, ya'ni teshik birinchi Frenel zonasi tartibida bo'lganda: $r\\approx\\sqrt{\\lambda b}$. $b=10\\ \\mathrm{cm}$ uchun bu taxminan $0.2\\ \\mathrm{mm}$.",
+  "ru": "**Камера-обскура (pinhole camera).** Тёмный ящик с отверстием тоже имеет дифракционный предел. При большом отверстии изображение размыто геометрически (размер пятна $\\sim r$), при малом — дифракционно (пятно $\\sim\\frac{\\lambda b}{r}$). Самое чёткое изображение получается, когда эти размеры равны, то есть когда отверстие порядка первой зоны Френеля: $r\\approx\\sqrt{\\lambda b}$. Для $b=10\\ \\mathrm{cm}$ это примерно $0.2\\ \\mathrm{mm}$.",
+  "en": "**The pinhole camera.** A dark box with a hole also has a diffraction limit. With a large hole the image is blurred geometrically (spot size $\\sim r$); with a small one it is blurred by diffraction (spot $\\sim\\frac{\\lambda b}{r}$). The sharpest image is obtained when the two sizes are equal, that is, when the hole is of the order of the first Fresnel zone: $r\\approx\\sqrt{\\lambda b}$. For $b=10\\ \\mathrm{cm}$ this is about $0.2\\ \\mathrm{mm}$."
+ },
+ {
+  "t": "h2",
+  "uz": "11. Difraksiya va noaniqlik",
+  "ru": "11. Дифракция и неопределённость",
+  "en": "11. Diffraction and uncertainty"
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy qoida.** Barcha natijalar bitta masshtab munosabatiga keltiriladi: o'lchami $a$ bo'lgan teshik yoki dasta $\\Delta\\theta\\sim\\frac{\\lambda}{a}$ burchakka yoyiladi. Tirqish uchun $\\frac{\\lambda}{a}$, doira uchun $1.22\\frac{\\lambda}{D}$, panjara maksimumi uchun $\\frac{\\lambda}{Nd}$, lazer dastasi uchun $\\sim\\frac{\\lambda}{D}$. Matematik jihatdan Fraungofer manzarasining amplitudasi teshik funksiyasining **Furye almashtirishi**: tor narsa — keng spektr va aksincha. Shuning uchun ingichka strukturalarni ko'rish uchun qisqa to'lqin kerak.",
+  "ru": "**Общее правило.** Все результаты сводятся к одному масштабному соотношению: отверстие или пучок размера $a$ расходится на угол $\\Delta\\theta\\sim\\frac{\\lambda}{a}$. Для щели $\\frac{\\lambda}{a}$, для круга $1.22\\frac{\\lambda}{D}$, для максимума решётки $\\frac{\\lambda}{Nd}$, для лазерного пучка $\\sim\\frac{\\lambda}{D}$. Математически амплитуда фраунгоферовой картины — это **преобразование Фурье** функции отверстия: узкое — широкий спектр, и наоборот. Поэтому для наблюдения тонких структур нужна короткая волна.",
+  "en": "**The general rule.** All the results reduce to one scaling relation: an aperture or beam of size $a$ spreads through an angle $\\Delta\\theta\\sim\\frac{\\lambda}{a}$. For a slit it is $\\frac{\\lambda}{a}$, for a circle $1.22\\frac{\\lambda}{D}$, for a grating maximum $\\frac{\\lambda}{Nd}$, for a laser beam $\\sim\\frac{\\lambda}{D}$. Mathematically, the amplitude of a Fraunhofer pattern is the **Fourier transform** of the aperture function: something narrow has a broad spectrum and vice versa. That is why short waves are needed to see fine structures."
+ },
+ {
+  "t": "li",
+  "uz": "**Kvant talqini.** Tirqishdan o'tgan foton yoki elektron uchun tirqish kengligi $\\Delta y=a$ — ko'ndalang koordinata noaniqligi. Birinchi minimumgacha og'ish burchagi $\\frac{\\lambda}{a}$ ko'ndalang impuls tarqoqligi $\\Delta p_y\\approx p\\frac{\\lambda}{a}=\\frac{h}{a}$ ni beradi. Ko'paytma $\\Delta y\\Delta p_y\\approx h$ — Geyzenberg noaniqlik munosabati (B3 bosqichida batafsil). Tirqishni toraytirib zarra o'rnini aniqroq bilsak, uning yo'nalishi noaniqroq bo'ladi.",
+  "ru": "**Квантовая трактовка.** Для фотона или электрона, прошедшего через щель, ширина щели $\\Delta y=a$ — неопределённость поперечной координаты. Угол отклонения до первого минимума $\\frac{\\lambda}{a}$ даёт разброс поперечного импульса $\\Delta p_y\\approx p\\frac{\\lambda}{a}=\\frac{h}{a}$. Произведение $\\Delta y\\Delta p_y\\approx h$ — соотношение неопределённостей Гейзенберга (подробно на этапе B3). Сужая щель и точнее зная положение частицы, мы хуже знаем её направление.",
+  "en": "**The quantum interpretation.** For a photon or an electron passing through a slit, the slit width $\\Delta y=a$ is the uncertainty in the transverse coordinate. The deflection angle to the first minimum, $\\frac{\\lambda}{a}$, gives a spread of transverse momentum $\\Delta p_y\\approx p\\frac{\\lambda}{a}=\\frac{h}{a}$. The product $\\Delta y\\Delta p_y\\approx h$ is the Heisenberg uncertainty relation (in detail in stage B3). By narrowing the slit and knowing the particle's position better, we know its direction worse."
+ },
+ {
+  "t": "m",
+  "m": "\\Delta\\theta\\sim\\frac{\\lambda}{a},\\qquad \\Delta y\\Delta p_y\\approx h"
+ },
+ {
+  "t": "h2",
+  "uz": "12. GRE usullari",
+  "ru": "12. Приёмы для GRE",
+  "en": "12. GRE techniques"
+ },
+ {
+  "t": "li",
+  "uz": "**Qaysi formula?** Bitta tirqish: $a\\sin\\theta=m\\lambda$ — **minimumlar**. Ikki tirqish va panjara: $d\\sin\\theta=m\\lambda$ — **maksimumlar**. Doiraviy teshik: $1.22\\frac{\\lambda}{D}$ — birinchi minimum va ajrata olish. Kristall: $2d\\sin\\theta=m\\lambda$, $\\theta$ — tekislikdan olingan burchak. Avval masalada nima so'ralganini (minimum yoki maksimum) va burchak qayerdan o'lchanishini aniqlang.",
+  "ru": "**Какая формула?** Одна щель: $a\\sin\\theta=m\\lambda$ — **минимумы**. Две щели и решётка: $d\\sin\\theta=m\\lambda$ — **максимумы**. Круглое отверстие: $1.22\\frac{\\lambda}{D}$ — первый минимум и разрешение. Кристалл: $2d\\sin\\theta=m\\lambda$, $\\theta$ — угол от плоскости. Сначала определите, что спрашивается (минимум или максимум) и откуда отсчитывается угол.",
+  "en": "**Which formula?** A single slit: $a\\sin\\theta=m\\lambda$ — **minima**. Two slits and a grating: $d\\sin\\theta=m\\lambda$ — **maxima**. A circular aperture: $1.22\\frac{\\lambda}{D}$ — the first minimum and the resolution. A crystal: $2d\\sin\\theta=m\\lambda$, $\\theta$ measured from the plane. First decide what is asked (a minimum or a maximum) and where the angle is measured from."
+ },
+ {
+  "t": "li",
+  "uz": "**Masshtablar.** Manzara kengligi $\\propto\\frac{\\lambda}{a}$: tirqishni toraytirsa yoki to'lqin uzunligini oshirsa — kengayadi; suvga botirilsa — $n$ marta torayadi. Markaziy maksimum yon maksimumlardan ikki baravar keng. Panjarada maksimumlar soni $2\\left\\lfloor\\frac{d}{\\lambda}\\right\\rfloor+1$, ajrata olish $mN$. Teleskopda $\\theta_{min}\\propto\\frac{\\lambda}{D}$: diametr ikki baravar — ajrata olinadigan burchak ikki baravar kichik. Zona plastinkasi $f=\\frac{r_1^2}{\\lambda}$, Frenel zonalari soni $\\frac{r^2}{b\\lambda}$: toq — yorug', juft — qorong'i markaz.",
+  "ru": "**Масштабы.** Ширина картины $\\propto\\frac{\\lambda}{a}$: при сужении щели или увеличении длины волны — расширяется; при погружении в воду — сужается в $n$ раз. Центральный максимум вдвое шире побочных. У решётки число максимумов $2\\left\\lfloor\\frac{d}{\\lambda}\\right\\rfloor+1$, разрешение $mN$. У телескопа $\\theta_{min}\\propto\\frac{\\lambda}{D}$: вдвое больший диаметр — вдвое меньший разрешаемый угол. Зонная пластинка $f=\\frac{r_1^2}{\\lambda}$, число зон Френеля $\\frac{r^2}{b\\lambda}$: нечётное — светлый, чётное — тёмный центр.",
+  "en": "**Scalings.** The width of the pattern $\\propto\\frac{\\lambda}{a}$: narrowing the slit or increasing the wavelength widens it; immersing it in water narrows it by a factor of $n$. The central maximum is twice as wide as the secondary ones. For a grating, the number of maxima is $2\\left\\lfloor\\frac{d}{\\lambda}\\right\\rfloor+1$ and the resolving power is $mN$. For a telescope $\\theta_{min}\\propto\\frac{\\lambda}{D}$: double the diameter — half the resolvable angle. A zone plate has $f=\\frac{r_1^2}{\\lambda}$, and the number of Fresnel zones is $\\frac{r^2}{b\\lambda}$: odd — a bright centre, even — a dark one."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik tuzoqlar.** Bitta tirqish minimum formulasini maksimum deb olish; Bregg shartida normaldan o'lchangan burchakni qo'yish yoki $2$ ni unutish; panjarada $\\sin\\theta=1$ tartibini (ekranga tushmaydi) hisobga qo'shish; ajrata olishda davrni ishlatish ($R$ faqat $m$ va $N$ ga bog'liq); Reley mezonida $1.22$ ni tirqish uchun ham qo'llash; ikki tirqishda tushib qolgan tartiblarni unutish; markaziy maksimum kengligini $\\frac{\\lambda L}{a}$ deb olish (aslida $2\\frac{\\lambda L}{a}$); bitta zona ochilganda intensivlik $I_0$ deb o'ylash (aslida $4I_0$).",
+  "ru": "**Типичные ловушки.** Принимать формулу минимумов одной щели за максимумы; подставлять в условие Брэгга угол от нормали или забывать $2$; учитывать в решётке порядок с $\\sin\\theta=1$ (на экран не попадает); использовать период для разрешающей способности ($R$ зависит только от $m$ и $N$); применять $1.22$ и для щели; забывать пропущенные порядки у двух щелей; считать ширину центрального максимума равной $\\frac{\\lambda L}{a}$ (на самом деле $2\\frac{\\lambda L}{a}$); думать, что при одной открытой зоне интенсивность $I_0$ (на самом деле $4I_0$).",
+  "en": "**Typical traps.** Taking the single-slit minimum formula for maxima; putting the angle from the normal into the Bragg condition or forgetting the $2$; counting in a grating the order with $\\sin\\theta=1$ (it does not reach the screen); using the period for the resolving power ($R$ depends only on $m$ and $N$); applying $1.22$ to a slit as well; forgetting the missing orders of two slits; taking the width of the central maximum as $\\frac{\\lambda L}{a}$ (it is actually $2\\frac{\\lambda L}{a}$); thinking that with one zone open the intensity is $I_0$ (it is actually $4I_0$)."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Frenel soni",
+    "ru": "Число Френеля",
+    "en": "Fresnel number",
+    "m": "F=\\frac{a^2}{L\\lambda}"
+   },
+   {
+    "uz": "Frenel zonasi radiusi",
+    "ru": "Радиус зоны Френеля",
+    "en": "Fresnel zone radius",
+    "m": "r_k=\\sqrt{k\\frac{ab}{a+b}\\lambda},\\quad r_k=\\sqrt{kb\\lambda}"
+   },
+   {
+    "uz": "Zonalar amplitudasi",
+    "ru": "Амплитуда зон",
+    "en": "Zone amplitude",
+    "m": "A_\\infty=\\frac{A_1}{2},\\quad I_1=4I_0"
+   },
+   {
+    "uz": "Zona plastinkasi",
+    "ru": "Зонная пластинка",
+    "en": "Zone plate",
+    "m": "f=\\frac{r_1^2}{\\lambda}"
+   },
+   {
+    "uz": "Bitta tirqish, minimumlar",
+    "ru": "Одна щель, минимумы",
+    "en": "Single slit, minima",
+    "m": "a\\sin\\theta=m\\lambda,\\quad w=2\\frac{\\lambda L}{a}"
+   },
+   {
+    "uz": "Bitta tirqish intensivligi",
+    "ru": "Интенсивность одной щели",
+    "en": "Single-slit intensity",
+    "m": "I=I_0\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2,\\quad \\beta=\\frac{\\pi a\\sin\\theta}{\\lambda}"
+   },
+   {
+    "uz": "Tushib qolgan tartiblar",
+    "ru": "Пропущенные порядки",
+    "en": "Missing orders",
+    "m": "m=\\frac{d}{a}k"
+   },
+   {
+    "uz": "Panjara tenglamasi",
+    "ru": "Уравнение решётки",
+    "en": "Grating equation",
+    "m": "d\\left(\\sin\\theta-\\sin\\theta_0\\right)=m\\lambda"
+   },
+   {
+    "uz": "Burchak dispersiyasi",
+    "ru": "Угловая дисперсия",
+    "en": "Angular dispersion",
+    "m": "D=\\frac{m}{d\\cos\\theta}"
+   },
+   {
+    "uz": "Maksimum yarim kengligi",
+    "ru": "Полуширина максимума",
+    "en": "Half-width of a maximum",
+    "m": "\\delta\\theta=\\frac{\\lambda}{Nd\\cos\\theta}"
+   },
+   {
+    "uz": "Ajrata olish qobiliyati",
+    "ru": "Разрешающая способность",
+    "en": "Resolving power",
+    "m": "R=\\frac{\\lambda}{\\delta\\lambda}=mN"
+   },
+   {
+    "uz": "Doiraviy teshik, Reley",
+    "ru": "Круглое отверстие, Рэлей",
+    "en": "Circular aperture, Rayleigh",
+    "m": "\\theta_{min}=1.22\\frac{\\lambda}{D}"
+   },
+   {
+    "uz": "Mikroskop",
+    "ru": "Микроскоп",
+    "en": "Microscope",
+    "m": "d_{min}=\\frac{0.61\\lambda}{n\\sin\\alpha}"
+   },
+   {
+    "uz": "Vulf–Bregg sharti",
+    "ru": "Условие Вульфа–Брэгга",
+    "en": "Bragg condition",
+    "m": "2d\\sin\\theta=m\\lambda"
+   },
+   {
+    "uz": "De Broyl to'lqin uzunligi",
+    "ru": "Длина волны де Бройля",
+    "en": "De Broglie wavelength",
+    "m": "\\lambda=\\frac{h}{\\sqrt{2meU}}"
+   },
+   {
+    "uz": "Babine prinsipi",
+    "ru": "Принцип Бабине",
+    "en": "Babinet's principle",
+    "m": "A_1+A_2=A_{0}"
+   },
+   {
+    "uz": "Ultratovush panjarasi",
+    "ru": "Ультразвуковая решётка",
+    "en": "Ultrasonic grating",
+    "m": "\\Lambda\\sin\\theta=m\\lambda,\\quad \\Lambda=\\frac{v}{f}"
+   }
+  ]
+ }
+]

@@ -1,0 +1,725 @@
+[
+ {
+  "t": "h1",
+  "uz": "Termodinamika qonunlari (Laws of thermodynamics)",
+  "ru": "Законы термодинамики",
+  "en": "Laws of thermodynamics"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz termodinamik tizim holatini parametrlar bilan tavsiflaysiz va nolinchi qonun temperaturani qanday aniqlashini tushuntirasiz; gaz bajargan ishni $pV$-diagrammadagi yuza sifatida hisoblaysiz; birinchi qonunni ishoralarni chalkashtirmasdan qo'llaysiz; issiqlik sig'imlarini erkinlik darajalari orqali topasiz va past temperaturada ularning «muzlashini» tushuntirasiz; izoxorik, izobarik, izotermik, adiabatik va politropik jarayonlarda ish, issiqlik va ichki energiya o'zgarishini hisoblaysiz; erkin kengayish va drossellashni tahlil qilasiz; sikl FIK va sovutish koeffitsiyentini topasiz; ikkinchi qonunni ishlatib, «mumkin emas» qurilmalarni ajratasiz; issiqlik o'tkazuvchanlik, Nyuton sovish qonuni va Stefan–Bolsman qonuni masalalarini yechasiz.",
+  "ru": "**Цель.** После урока вы будете описывать состояние термодинамической системы параметрами и объяснять, как нулевой закон определяет температуру; вычислять работу газа как площадь на $pV$-диаграмме; применять первый закон, не путая знаков; находить теплоёмкости через степени свободы и объяснять их «вымораживание» при низких температурах; вычислять работу, теплоту и изменение внутренней энергии в изохорном, изобарном, изотермическом, адиабатном и политропном процессах; анализировать свободное расширение и дросселирование; находить КПД цикла и холодильный коэффициент; с помощью второго закона отличать «невозможные» устройства; решать задачи на теплопроводность, закон охлаждения Ньютона и закон Стефана–Больцмана.",
+  "en": "**Goal.** After this lesson you will describe the state of a thermodynamic system by its parameters and explain how the zeroth law defines temperature; calculate the work done by a gas as an area on a $pV$-diagram; apply the first law without mixing up signs; find heat capacities from degrees of freedom and explain how they \"freeze out\" at low temperatures; calculate the work, the heat and the change in internal energy in isochoric, isobaric, isothermal, adiabatic and polytropic processes; analyse free expansion and throttling; find the efficiency of a cycle and the coefficient of performance; use the second law to recognise \"impossible\" devices; and solve problems on heat conduction, Newton's law of cooling and the Stefan–Boltzmann law."
+ },
+ {
+  "t": "p",
+  "uz": "B1-L23–B1-L28 da maktab darajasida ideal gaz, ichki energiya, issiqlik miqdori va issiqlik dvigatellari bilan tanishdik. Bu darsda termodinamikani GRE darajasigacha ko'taramiz: ish va issiqlik jarayonga bog'liqligini, ichki energiya esa holat funksiyasi ekanini aniq ajratamiz, issiqlik sig'imini mikroskopik (erkinlik darajalari) va kvant (muzlash) nuqtai nazaridan tushuntiramiz, istalgan politropik jarayonni bitta formula bilan hisoblaymiz. Entropiya, Karno sikli va real dvigatellar — B2-L30 da, gazlarning kinetik nazariyasi — B2-L31 da. GRE da termodinamika va statistik fizika umumiy savollarning taxminan $10\\%$ ini tashkil etadi; bu darsdagi jarayonlar, issiqlik sig'imlari va $pV$-diagrammalar ularning asosiy qismidir.",
+  "ru": "В B1-L23–B1-L28 мы на школьном уровне познакомились с идеальным газом, внутренней энергией, количеством теплоты и тепловыми двигателями. В этом уроке поднимем термодинамику до уровня GRE: чётко разделим, что работа и теплота зависят от процесса, а внутренняя энергия — функция состояния; объясним теплоёмкость с микроскопической (степени свободы) и квантовой (вымораживание) точек зрения; рассчитаем любой политропный процесс одной формулой. Энтропия, цикл Карно и реальные двигатели — в B2-L30, кинетическая теория газов — в B2-L31. На GRE термодинамика и статистическая физика составляют около $10\\%$ всех вопросов; процессы, теплоёмкости и $pV$-диаграммы этого урока — их основная часть.",
+  "en": "In B1-L23–B1-L28 we met the ideal gas, internal energy, quantity of heat and heat engines at school level. In this lesson we raise thermodynamics to GRE level: we clearly separate the fact that work and heat depend on the process while internal energy is a state function; we explain heat capacity from the microscopic (degrees of freedom) and quantum (freezing out) points of view; and we treat any polytropic process with a single formula. Entropy, the Carnot cycle and real engines come in B2-L30, the kinetic theory of gases in B2-L31. On the GRE, thermodynamics and statistical physics make up about $10\\%$ of all questions; the processes, heat capacities and $pV$-diagrams of this lesson are their core."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Termodinamik tizim, holat va nolinchi qonun",
+  "ru": "1. Термодинамическая система, состояние и нулевой закон",
+  "en": "1. Thermodynamic systems, states and the zeroth law"
+ },
+ {
+  "t": "li",
+  "uz": "**Tizim va muhit.** **Termodinamik tizim** — fikran ajratilgan jismlar to'plami (silindrdagi gaz, idishdagi suv); qolgani — muhit. Tizim muhit bilan energiya ham, modda ham almashsa — ochiq, faqat energiya almashsa — yopiq, hech narsa almashmasa — izolyatsiyalangan. Termodinamika tizimning ichki tuzilishiga kirmasdan, makroskopik kattaliklar orasidagi umumiy qonunlarni o'rganadi; ularning mikroskopik asosini statistik fizika beradi (B2-L31).",
+  "ru": "**Система и окружение.** **Термодинамическая система** — мысленно выделенная совокупность тел (газ в цилиндре, вода в сосуде); всё остальное — окружение. Если система обменивается с окружением и энергией, и веществом — она открытая, только энергией — закрытая, ничем — изолированная. Термодинамика, не вникая во внутреннее строение системы, изучает общие законы, связывающие макроскопические величины; их микроскопическую основу даёт статистическая физика (B2-L31).",
+  "en": "**System and surroundings.** A **thermodynamic system** is a set of bodies singled out in thought (a gas in a cylinder, water in a vessel); everything else is the surroundings. If the system exchanges both energy and matter with its surroundings it is open, if only energy — closed, if nothing — isolated. Thermodynamics studies general laws relating macroscopic quantities without going into the internal structure of the system; their microscopic basis is provided by statistical physics (B2-L31)."
+ },
+ {
+  "t": "li",
+  "uz": "**Holat parametrlari.** Muvozanatdagi oddiy tizim (masalan, gaz) holati bir nechta **holat parametrlari** bilan to'liq aniqlanadi: bosim $p$, hajm $V$, temperatura $T$, modda miqdori $\\nu$. Ular holat tenglamasi bilan bog'langan, shuning uchun ikkitasini tanlash yetarli — holat $pV$-diagrammada nuqta bilan tasvirlanadi. Parametrlar **intensiv** (tizim bo'linganda o'zgarmaydi: $p$, $T$) va **ekstensiv** (tizim o'lchamiga proporsional: $V$, $U$, $\\nu$) bo'ladi.",
+  "ru": "**Параметры состояния.** Состояние простой равновесной системы (например, газа) полностью задаётся несколькими **параметрами состояния**: давлением $p$, объёмом $V$, температурой $T$, количеством вещества $\\nu$. Они связаны уравнением состояния, поэтому достаточно выбрать два — состояние изображается точкой на $pV$-диаграмме. Параметры бывают **интенсивными** (не меняются при делении системы: $p$, $T$) и **экстенсивными** (пропорциональны размеру системы: $V$, $U$, $\\nu$).",
+  "en": "**State variables.** The state of a simple system in equilibrium (for example, a gas) is completely specified by a few **state variables**: the pressure $p$, the volume $V$, the temperature $T$ and the amount of substance $\\nu$. They are linked by the equation of state, so it is enough to choose two of them — a state is shown as a point on a $pV$-diagram. Variables are **intensive** (unchanged when the system is divided: $p$, $T$) or **extensive** (proportional to the size of the system: $V$, $U$, $\\nu$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Muvozanat va kvazistatik jarayon.** Tashqi sharoit o'zgarmasa, izolyatsiyalangan tizim o'z-o'zidan **muvozanat** holatiga keladi va unda qoladi; bunga ketadigan vaqt — relaksatsiya vaqti. Agar parametrlar relaksatsiya vaqtiga nisbatan juda sekin o'zgarsa, tizim har onda deyarli muvozanatda bo'ladi — bu **kvazistatik jarayon**. Faqat kvazistatik jarayonni $pV$-diagrammada uzluksiz chiziq bilan chizish mumkin; tez jarayonlarda (portlash, vakuumga kengayish) oraliq holatlarda $p$ va $T$ butun hajm uchun aniqlanmagan.",
+  "ru": "**Равновесие и квазистатический процесс.** При неизменных внешних условиях изолированная система сама приходит в состояние **равновесия** и остаётся в нём; время, за которое это происходит, — время релаксации. Если параметры меняются очень медленно по сравнению со временем релаксации, система в каждый момент почти равновесна — это **квазистатический процесс**. Только квазистатический процесс можно изобразить непрерывной линией на $pV$-диаграмме; в быстрых процессах (взрыв, расширение в вакуум) в промежуточных состояниях $p$ и $T$ не определены для всего объёма.",
+  "en": "**Equilibrium and quasi-static processes.** If the external conditions do not change, an isolated system reaches a state of **equilibrium** by itself and stays there; the time this takes is the relaxation time. If the parameters change very slowly compared with the relaxation time, the system is almost in equilibrium at every moment — this is a **quasi-static process**. Only a quasi-static process can be drawn as a continuous line on a $pV$-diagram; in fast processes (an explosion, expansion into a vacuum) $p$ and $T$ are not defined for the whole volume in the intermediate states."
+ },
+ {
+  "t": "li",
+  "uz": "**Nolinchi qonun (zeroth law).** Agar $A$ va $B$ tizimlarning har biri $C$ tizim bilan issiqlik muvozanatida bo'lsa, $A$ va $B$ ham o'zaro issiqlik muvozanatida bo'ladi. Bu tranzitivlik barcha o'zaro muvozanatdagi tizimlar uchun umumiy bo'lgan kattalik — **temperatura** — mavjudligini bildiradi. $C$ tizim — termometr: issiqlik muvozanati shartini $T_1=T_2$ ko'rinishida yozish mumkin. Qonun birinchi va ikkinchi qonundan keyin aniqlangan, lekin mantiqan ulardan oldin turgani uchun «nolinchi» deb atalgan.",
+  "ru": "**Нулевой закон (zeroth law).** Если каждая из систем $A$ и $B$ находится в тепловом равновесии с системой $C$, то $A$ и $B$ находятся в тепловом равновесии и между собой. Эта транзитивность означает существование величины, общей для всех систем, находящихся в равновесии друг с другом, — **температуры**. Система $C$ — термометр: условие теплового равновесия можно записать как $T_1=T_2$. Закон сформулировали позже первого и второго, но логически он стоит перед ними, поэтому его назвали «нулевым».",
+  "en": "**The zeroth law.** If systems $A$ and $B$ are each in thermal equilibrium with a system $C$, then $A$ and $B$ are in thermal equilibrium with each other. This transitivity means that there is a quantity shared by all systems in equilibrium with one another — the **temperature**. System $C$ is a thermometer: the condition of thermal equilibrium can be written as $T_1=T_2$. The law was formulated after the first and second laws, but logically it comes before them, which is why it is called the \"zeroth\" law."
+ },
+ {
+  "t": "li",
+  "uz": "**Temperatura shkalasi.** Termometr sifatida istalgan monoton o'zgaruvchi xossadan foydalanish mumkin (simob ustuni, qarshilik, termojuft EYuK), lekin turli termometrlar faqat kalibrlash nuqtalarida mos keladi. Siyrak gaz termometri moddaga bog'liq bo'lmagan shkalani beradi: o'zgarmas hajmda gaz bosimi $T$ ga proporsional. Kelvin shkalasi suvning uchlanma nuqtasi ($p_3$ — shu nuqtadagi gaz termometri bosimi) bo'yicha aniqlanadi; ikkinchi qonun asosidagi termodinamik shkala (B2-L30) u bilan mos keladi:",
+  "ru": "**Температурная шкала.** В качестве термометра можно использовать любое монотонно меняющееся свойство (столбик ртути, сопротивление, ЭДС термопары), но разные термометры совпадают только в точках калибровки. Газовый термометр с разреженным газом даёт шкалу, не зависящую от вещества: при постоянном объёме давление газа пропорционально $T$. Шкала Кельвина задаётся по тройной точке воды ($p_3$ — давление газового термометра в этой точке); термодинамическая шкала на основе второго закона (B2-L30) с ней совпадает:",
+  "en": "**Temperature scales.** Any monotonically varying property can serve as a thermometer (a mercury column, a resistance, the emf of a thermocouple), but different thermometers agree only at the calibration points. A dilute-gas thermometer gives a scale independent of the substance: at constant volume the gas pressure is proportional to $T$. The Kelvin scale is fixed by the triple point of water ($p_3$ is the gas-thermometer pressure at this point); the thermodynamic scale based on the second law (B2-L30) coincides with it:"
+ },
+ {
+  "t": "m",
+  "m": "T=273.16\\ \\mathrm{K}\\cdot\\frac{p}{p_3},\\qquad t=T-273.15"
+ },
+ {
+  "t": "h2",
+  "uz": "2. Ideal gaz va holat tenglamasi",
+  "ru": "2. Идеальный газ и уравнение состояния",
+  "en": "2. The ideal gas and the equation of state"
+ },
+ {
+  "t": "li",
+  "uz": "**Holat tenglamasi.** Siyrak gaz molekulalari orasidagi o'zaro ta'sir energiyasi ularning kinetik energiyasiga nisbatan juda kichik — bunday gaz **ideal gaz** deyiladi. Uning holat tenglamasi (Mendeleyev–Klapeyron) $\\nu$ mol yoki $N$ molekula uchun:",
+  "ru": "**Уравнение состояния.** В разреженном газе энергия взаимодействия молекул очень мала по сравнению с их кинетической энергией — такой газ называют **идеальным газом**. Его уравнение состояния (Менделеева–Клапейрона) для $\\nu$ молей или $N$ молекул:",
+  "en": "**The equation of state.** In a dilute gas the interaction energy of the molecules is very small compared with their kinetic energy — such a gas is called an **ideal gas**. Its equation of state (the Clapeyron–Mendeleev equation) for $\\nu$ moles or $N$ molecules is"
+ },
+ {
+  "t": "m",
+  "m": "pV=\\nu RT=NkT,\\qquad p=nkT,\\qquad R=kN_A\\approx8.31\\ \\mathrm{J/(mol\\cdot K)}"
+ },
+ {
+  "t": "li",
+  "uz": "Bu yerda $n=\\frac{N}{V}$ — molekulalar konsentratsiyasi, $k\\approx1.38\\cdot10^{-23}\\ \\mathrm{J/K}$ — Bolsman doimiysi, $N_A\\approx6.02\\cdot10^{23}\\ \\mathrm{mol^{-1}}$. Normal sharoitda ($273\\ \\mathrm{K}$, $101\\ \\mathrm{kPa}$) istalgan ideal gazning bir moli $22.4\\ \\mathrm{L}$ hajm egallaydi. Gazlar aralashmasida har bir komponent o'zi yolg'iz egallagandagidek bosim beradi — parsial bosimlar qo'shiladi (Dalton qonuni): $p=\\sum p_i$.",
+  "ru": "Здесь $n=\\frac{N}{V}$ — концентрация молекул, $k\\approx1.38\\cdot10^{-23}\\ \\mathrm{J/K}$ — постоянная Больцмана, $N_A\\approx6.02\\cdot10^{23}\\ \\mathrm{mol^{-1}}$. При нормальных условиях ($273\\ \\mathrm{K}$, $101\\ \\mathrm{kPa}$) моль любого идеального газа занимает объём $22.4\\ \\mathrm{L}$. В смеси газов каждый компонент создаёт такое давление, как если бы занимал объём один, — парциальные давления складываются (закон Дальтона): $p=\\sum p_i$.",
+  "en": "Here $n=\\frac{N}{V}$ is the number density of molecules, $k\\approx1.38\\cdot10^{-23}\\ \\mathrm{J/K}$ is the Boltzmann constant and $N_A\\approx6.02\\cdot10^{23}\\ \\mathrm{mol^{-1}}$. Under standard conditions ($273\\ \\mathrm{K}$, $101\\ \\mathrm{kPa}$) one mole of any ideal gas occupies $22.4\\ \\mathrm{L}$. In a mixture of gases each component exerts the pressure it would exert if it occupied the volume alone — the partial pressures add up (Dalton's law): $p=\\sum p_i$."
+ },
+ {
+  "t": "li",
+  "uz": "**Ideal gaz ichki energiyasi faqat temperaturaga bog'liq.** Molekulalar o'zaro ta'sirlashmagani uchun ularning energiyasi faqat issiqlik harakati energiyasidan iborat va hajmga bog'liq emas: $U=U\\left(T\\right)$. Buni Joul tajribasi (vakuumga erkin kengayishda temperatura o'zgarmaydi, 9-bo'lim) tasdiqlaydi. Real gazlarda molekulalar tortishadi va o'z hajmiga ega; buni Van-der-Vaals tenglamasi hisobga oladi (batafsil B2-L32, B2-L33):",
+  "ru": "**Внутренняя энергия идеального газа зависит только от температуры.** Поскольку молекулы не взаимодействуют, их энергия — это только энергия теплового движения и не зависит от объёма: $U=U\\left(T\\right)$. Это подтверждает опыт Джоуля (при свободном расширении в вакуум температура не меняется, раздел 9). В реальных газах молекулы притягиваются и имеют собственный объём; это учитывает уравнение Ван-дер-Ваальса (подробно в B2-L32, B2-L33):",
+  "en": "**The internal energy of an ideal gas depends only on temperature.** Since the molecules do not interact, their energy is only the energy of thermal motion and does not depend on the volume: $U=U\\left(T\\right)$. This is confirmed by Joule's experiment (the temperature does not change in free expansion into a vacuum, section 9). In real gases the molecules attract each other and have their own volume; the van der Waals equation takes this into account (details in B2-L32, B2-L33):"
+ },
+ {
+  "t": "m",
+  "m": "\\left(p+\\frac{a\\nu^2}{V^2}\\right)\\left(V-\\nu b\\right)=\\nu RT"
+ },
+ {
+  "t": "h2",
+  "uz": "3. Ish va issiqlik",
+  "ru": "3. Работа и теплота",
+  "en": "3. Work and heat"
+ },
+ {
+  "t": "li",
+  "uz": "**Gaz ishi.** Yuzasi $S$ bo'lgan porshen $dx$ ga kvazistatik siljiganda gaz $\\delta A=pS\\,dx=p\\,dV$ ish bajaradi. Chekli jarayonda ish integral bilan hisoblanadi va $pV$-diagrammada jarayon chizig'i ostidagi **yuzaga** teng. Kengayishda $A>0$, siqilishda $A<0$; gaz ustida bajarilgan ish $A'=-A$. Doimiy bosimda $A=p\\Delta V$, lekin umumiy holda $p$ ni integral ostida qoldirish kerak:",
+  "ru": "**Работа газа.** При квазистатическом смещении поршня площадью $S$ на $dx$ газ совершает работу $\\delta A=pS\\,dx=p\\,dV$. В конечном процессе работа вычисляется интегралом и равна **площади** под линией процесса на $pV$-диаграмме. При расширении $A>0$, при сжатии $A<0$; работа над газом $A'=-A$. При постоянном давлении $A=p\\Delta V$, но в общем случае $p$ надо оставлять под интегралом:",
+  "en": "**Work done by a gas.** When a piston of area $S$ moves quasi-statically by $dx$, the gas does work $\\delta A=pS\\,dx=p\\,dV$. In a finite process the work is calculated as an integral and equals the **area** under the process line on a $pV$-diagram. In expansion $A>0$, in compression $A<0$; the work done on the gas is $A'=-A$. At constant pressure $A=p\\Delta V$, but in general $p$ must be kept under the integral:"
+ },
+ {
+  "t": "m",
+  "m": "A=\\int_{V_1}^{V_2}p\\,dV,\\qquad A'=-A"
+ },
+ {
+  "t": "li",
+  "uz": "**Ish jarayonga bog'liq.** Bir xil boshlang'ich va oxirgi holatlar orasida turli yo'llar bilan o'tish mumkin, va har bir yo'l ostidagi yuza har xil ([[F01]]): avval kengayib keyin bosimni pasaytirish, avval bosimni pasaytirib keyin kengayishga qaraganda ko'proq ish beradi. Shuning uchun «gazdagi ish» degan tushuncha yo'q — ish faqat jarayon uchun aniqlanadi. Cheksiz kichik ish $\\delta A$ to'liq differensial emas (shuning uchun $d$ emas, $\\delta$ yoziladi).",
+  "ru": "**Работа зависит от процесса.** Между одними и теми же начальным и конечным состояниями можно перейти разными путями, и площадь под каждым путём разная ([[F01]]): сначала расшириться, а потом понизить давление — даёт больше работы, чем сначала понизить давление, а потом расшириться. Поэтому понятия «работа в газе» нет — работа определена только для процесса. Бесконечно малая работа $\\delta A$ не является полным дифференциалом (поэтому пишут $\\delta$, а не $d$).",
+  "en": "**Work depends on the process.** The same initial and final states can be connected by different paths, and the area under each path is different ([[F01]]): expanding first and then lowering the pressure gives more work than lowering the pressure first and then expanding. That is why there is no such thing as \"the work in a gas\" — work is defined only for a process. An infinitesimal amount of work $\\delta A$ is not an exact differential (which is why we write $\\delta$ rather than $d$)."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L29-F01.png",
+   "ru": "figures/B2-L29-F01-ru.png",
+   "en": "figures/B2-L29-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Issiqlik.** **Issiqlik miqdori** $Q$ — temperaturalar farqi tufayli, makroskopik ish bajarilmasdan, molekulalar to'qnashuvi yoki nurlanish orqali uzatilgan energiya. Ish kabi u ham jarayonga bog'liq: jismda «issiqlik zaxirasi» bo'lmaydi, faqat ichki energiya bo'ladi. Ishora qoidasi: tizim olgan issiqlik $Q>0$, bergan issiqlik $Q<0$. Tarixiy birlik — kaloriya, $1\\ \\mathrm{cal}\\approx4.19\\ \\mathrm{J}$ (Joulning issiqlikning mexanik ekvivalenti tajribasi).",
+  "ru": "**Теплота.** **Количество теплоты** $Q$ — энергия, переданная из-за разности температур без совершения макроскопической работы — через столкновения молекул или излучение. Как и работа, она зависит от процесса: в теле нет «запаса теплоты», есть только внутренняя энергия. Правило знаков: полученная системой теплота $Q>0$, отданная — $Q<0$. Историческая единица — калория, $1\\ \\mathrm{cal}\\approx4.19\\ \\mathrm{J}$ (опыт Джоуля по механическому эквиваленту теплоты).",
+  "en": "**Heat.** The **quantity of heat** $Q$ is energy transferred because of a temperature difference without macroscopic work being done — through molecular collisions or radiation. Like work, it depends on the process: a body has no \"store of heat\", only internal energy. Sign convention: heat received by the system is $Q>0$, heat given off is $Q<0$. The historical unit is the calorie, $1\\ \\mathrm{cal}\\approx4.19\\ \\mathrm{J}$ (Joule's experiment on the mechanical equivalent of heat)."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Birinchi qonun",
+  "ru": "4. Первый закон",
+  "en": "4. The first law"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiyaning saqlanishi.** Tizimga berilgan issiqlik uning ichki energiyasini oshirishga va tizim bajaradigan ishga sarflanadi — bu **termodinamikaning birinchi qonuni**. Differensial ko'rinishda ham, chekli jarayon uchun ham:",
+  "ru": "**Сохранение энергии.** Теплота, переданная системе, идёт на увеличение её внутренней энергии и на работу, совершаемую системой, — это **первый закон термодинамики**. В дифференциальной форме и для конечного процесса:",
+  "en": "**Conservation of energy.** The heat given to a system goes into increasing its internal energy and into the work done by the system — this is the **first law of thermodynamics**. In differential form and for a finite process:"
+ },
+ {
+  "t": "m",
+  "m": "\\delta Q=dU+\\delta A,\\qquad Q=\\Delta U+A"
+ },
+ {
+  "t": "li",
+  "uz": "Ba'zi kitoblarda (va GRE da ham) ish gaz ustida bajarilgan deb olinadi: $\\Delta U=Q+A'$ — mazmuni bir xil, faqat ishora boshqacha. Masalada qaysi ishora ishlatilganini aniqlab olish shart. Birinchi qonun «birinchi tur abadiy dvigatel» — energiya olmasdan ish bajaradigan qurilma — mumkin emasligini bildiradi.",
+  "ru": "В некоторых книгах (и на GRE) работу считают совершённой над газом: $\\Delta U=Q+A'$ — смысл тот же, отличается только знак. В задаче обязательно нужно выяснить, какой знак используется. Первый закон означает, что «вечный двигатель первого рода» — устройство, совершающее работу без притока энергии, — невозможен.",
+  "en": "Some books (and the GRE) take the work as done on the gas: $\\Delta U=Q+A'$ — the meaning is the same, only the sign differs. In a problem it is essential to find out which sign convention is used. The first law means that a \"perpetual motion machine of the first kind\" — a device that does work without an input of energy — is impossible."
+ },
+ {
+  "t": "li",
+  "uz": "**Ichki energiya — holat funksiyasi.** $Q$ va $A$ alohida jarayonga bog'liq, lekin ularning ayirmasi $\\Delta U=Q-A$ faqat boshlang'ich va oxirgi holatga bog'liq: $dU$ — to'liq differensial. Ideal gazda $U$ faqat $T$ ga bog'liq, shuning uchun **istalgan** jarayonda (izoxorik bo'lmasa ham) ichki energiya o'zgarishi bitta formula bilan topiladi — bu GRE dagi eng ko'p ishlatiladigan dalil:",
+  "ru": "**Внутренняя энергия — функция состояния.** $Q$ и $A$ по отдельности зависят от процесса, но их разность $\\Delta U=Q-A$ зависит только от начального и конечного состояний: $dU$ — полный дифференциал. У идеального газа $U$ зависит только от $T$, поэтому в **любом** процессе (даже не изохорном) изменение внутренней энергии находится одной формулой — это самый используемый довод на GRE:",
+  "en": "**Internal energy is a state function.** $Q$ and $A$ separately depend on the process, but their difference $\\Delta U=Q-A$ depends only on the initial and final states: $dU$ is an exact differential. For an ideal gas $U$ depends only on $T$, so in **any** process (even a non-isochoric one) the change in internal energy is given by a single formula — the most frequently used argument on the GRE:"
+ },
+ {
+  "t": "m",
+  "m": "\\Delta U=\\nu C_V\\Delta T=\\frac{i}{2}\\nu R\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}"
+ },
+ {
+  "t": "li",
+  "uz": "**Sikl.** Tizim boshlang'ich holatga qaytsa, $\\Delta U=0$ va birinchi qonundan sikl davomidagi natijaviy ish olingan natijaviy issiqlikka teng: $A=Q$. Adiabatik ($Q=0$) jarayonda esa ish faqat ichki energiya hisobiga bajariladi: $A=-\\Delta U$ — kengayganda gaz soviydi, siqilganda isiydi (velosiped nasosi qiziydi).",
+  "ru": "**Цикл.** Если система возвращается в исходное состояние, $\\Delta U=0$, и из первого закона результирующая работа за цикл равна результирующей полученной теплоте: $A=Q$. В адиабатном ($Q=0$) процессе работа совершается только за счёт внутренней энергии: $A=-\\Delta U$ — при расширении газ охлаждается, при сжатии нагревается (велосипедный насос греется).",
+  "en": "**Cycles.** If the system returns to its initial state, $\\Delta U=0$, and the first law says that the net work over the cycle equals the net heat received: $A=Q$. In an adiabatic ($Q=0$) process, on the other hand, work is done only at the expense of internal energy: $A=-\\Delta U$ — a gas cools when it expands and heats up when compressed (a bicycle pump gets warm)."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Issiqlik sig'imlari",
+  "ru": "5. Теплоёмкости",
+  "en": "5. Heat capacities"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** **Issiqlik sig'imi** — temperaturani bir kelvinga oshirish uchun kerak bo'lgan issiqlik: $C=\\frac{\\delta Q}{dT}$. U jarayonga bog'liq, chunki $\\delta Q$ ham jarayonga bog'liq. Bir kilogramm uchun — solishtirma issiqlik sig'imi $c$, bir mol uchun — molyar issiqlik sig'imi; ular $c=\\frac{C}{M}$ bilan bog'langan ($M$ — molyar massa). Gaz uchun eng muhimlari — o'zgarmas hajmdagi $C_V$ va o'zgarmas bosimdagi $C_p$ molyar issiqlik sig'imlari.",
+  "ru": "**Определение.** **Теплоёмкость** — теплота, нужная для повышения температуры на один кельвин: $C=\\frac{\\delta Q}{dT}$. Она зависит от процесса, потому что от процесса зависит и $\\delta Q$. На один килограмм — удельная теплоёмкость $c$, на один моль — молярная теплоёмкость; они связаны соотношением $c=\\frac{C}{M}$ ($M$ — молярная масса). Для газа важнейшие — молярные теплоёмкости при постоянном объёме $C_V$ и при постоянном давлении $C_p$.",
+  "en": "**Definition.** The **heat capacity** is the heat needed to raise the temperature by one kelvin: $C=\\frac{\\delta Q}{dT}$. It depends on the process, because $\\delta Q$ depends on the process. Per kilogram it is the specific heat capacity $c$, per mole the molar heat capacity; they are related by $c=\\frac{C}{M}$ ($M$ is the molar mass). For a gas the most important ones are the molar heat capacities at constant volume $C_V$ and at constant pressure $C_p$."
+ },
+ {
+  "t": "li",
+  "uz": "**Mayer tenglamasi.** O'zgarmas hajmda ish yo'q, barcha issiqlik ichki energiyaga ketadi: $C_V=\\frac{1}{\\nu}\\frac{dU}{dT}$. O'zgarmas bosimda esa gaz qo'shimcha $p\\,dV=\\nu R\\,dT$ ish bajaradi, shuning uchun bir xil isitish uchun ko'proq issiqlik kerak. Bundan Mayer tenglamasi va Puasson koeffitsiyenti $\\gamma$ kelib chiqadi:",
+  "ru": "**Уравнение Майера.** При постоянном объёме работы нет, вся теплота идёт во внутреннюю энергию: $C_V=\\frac{1}{\\nu}\\frac{dU}{dT}$. При постоянном давлении газ дополнительно совершает работу $p\\,dV=\\nu R\\,dT$, поэтому для того же нагрева нужно больше теплоты. Отсюда следуют уравнение Майера и показатель адиабаты $\\gamma$:",
+  "en": "**Mayer's relation.** At constant volume there is no work and all the heat goes into internal energy: $C_V=\\frac{1}{\\nu}\\frac{dU}{dT}$. At constant pressure the gas also does work $p\\,dV=\\nu R\\,dT$, so more heat is needed for the same heating. This gives Mayer's relation and the adiabatic index $\\gamma$:"
+ },
+ {
+  "t": "m",
+  "m": "C_p=C_V+R,\\qquad \\gamma=\\frac{C_p}{C_V}=1+\\frac{R}{C_V}"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiyaning teng taqsimlanishi.** Klassik statistik fizikaga ko'ra energiya ifodasiga kvadratik kiruvchi har bir erkinlik darajasiga o'rtacha $\\frac{1}{2}kT$ energiya to'g'ri keladi (isboti B2-L31 da). Bir atomli gazda faqat 3 ta ilgarilanma daraja bor; qattiq ikki atomli molekulaga 2 ta aylanma daraja qo'shiladi (o'q atrofidagi aylanish hisobga olinmaydi); chiziqli bo'lmagan qattiq molekulada 3 ta aylanma daraja; har bir tebranma moda 2 ta kvadratik had beradi (kinetik va potensial). Darajalar soni $i$ bo'lsa:",
+  "ru": "**Равнораспределение энергии.** Согласно классической статистической физике, на каждую степень свободы, входящую в выражение энергии квадратично, приходится в среднем энергия $\\frac{1}{2}kT$ (доказательство — в B2-L31). У одноатомного газа есть только 3 поступательные степени; у жёсткой двухатомной молекулы добавляются 2 вращательные (вращение вокруг оси не учитывается); у нелинейной жёсткой молекулы — 3 вращательные; каждая колебательная мода даёт 2 квадратичных слагаемых (кинетическое и потенциальное). Если число степеней равно $i$:",
+  "en": "**Equipartition of energy.** According to classical statistical physics, every degree of freedom that enters the energy quadratically carries an average energy of $\\frac{1}{2}kT$ (proof in B2-L31). A monatomic gas has only 3 translational degrees; a rigid diatomic molecule adds 2 rotational ones (rotation about the axis does not count); a non-linear rigid molecule has 3 rotational ones; each vibrational mode contributes 2 quadratic terms (kinetic and potential). If the number of degrees is $i$:"
+ },
+ {
+  "t": "m",
+  "m": "U=\\frac{i}{2}\\nu RT,\\qquad C_V=\\frac{i}{2}R,\\qquad C_p=\\frac{i+2}{2}R,\\qquad \\gamma=\\frac{i+2}{i}"
+ },
+ {
+  "t": "li",
+  "uz": "Bir atomli gaz: $i=3$, $\\gamma=\\frac{5}{3}$; ikki atomli (xona temperaturasida): $i=5$, $\\gamma=\\frac{7}{5}$; ko'p atomli chiziqli bo'lmagan: $i=6$, $\\gamma=\\frac{4}{3}$. Aralashmada issiqlik sig'imlari modda miqdori bo'yicha o'rtalanadi: $C_V=\\frac{\\sum\\nu_jC_{Vj}}{\\sum\\nu_j}$; $\\gamma$ ni esa o'rtalab bo'lmaydi — uni o'rtacha $C_V$ dan hisoblash kerak.",
+  "ru": "Одноатомный газ: $i=3$, $\\gamma=\\frac{5}{3}$; двухатомный (при комнатной температуре): $i=5$, $\\gamma=\\frac{7}{5}$; многоатомный нелинейный: $i=6$, $\\gamma=\\frac{4}{3}$. В смеси теплоёмкости усредняются по количеству вещества: $C_V=\\frac{\\sum\\nu_jC_{Vj}}{\\sum\\nu_j}$; а $\\gamma$ усреднять нельзя — его надо вычислять из средней $C_V$.",
+  "en": "Monatomic gas: $i=3$, $\\gamma=\\frac{5}{3}$; diatomic (at room temperature): $i=5$, $\\gamma=\\frac{7}{5}$; polyatomic non-linear: $i=6$, $\\gamma=\\frac{4}{3}$. In a mixture the heat capacities are averaged over the amounts of substance: $C_V=\\frac{\\sum\\nu_jC_{Vj}}{\\sum\\nu_j}$; $\\gamma$, however, cannot be averaged — it must be calculated from the average $C_V$."
+ },
+ {
+  "t": "li",
+  "uz": "**Erkinlik darajalarining muzlashi.** Teng taqsimlanish klassik natija. Kvant mexanikasida aylanma va tebranma energiya diskret; agar sathlar orasidagi masofa $kT$ dan ancha katta bo'lsa, molekula yuqori sathga deyarli o'tmaydi va bu daraja issiqlik sig'imiga hissa qo'shmaydi — u **muzlagan** ([[F02]]). Ikki atomli gazda past temperaturada $C_V\\approx\\frac{3}{2}R$, xona temperaturasida $\\frac{5}{2}R$ (tebranishlar muzlagan), juda yuqori temperaturada $\\frac{7}{2}R$. Vodorod uchun aylanma darajalar taxminan $100\\ \\mathrm{K}$ atrofida, tebranma darajalar esa minglab kelvinlarda «eriydi». Bu XIX asrda klassik fizikaning eng katta jumboqlaridan biri edi.",
+  "ru": "**Вымораживание степеней свободы.** Равнораспределение — классический результат. В квантовой механике вращательная и колебательная энергии дискретны; если расстояние между уровнями много больше $kT$, молекула почти не переходит на верхний уровень и эта степень не даёт вклада в теплоёмкость — она **выморожена** ([[F02]]). У двухатомного газа при низкой температуре $C_V\\approx\\frac{3}{2}R$, при комнатной $\\frac{5}{2}R$ (колебания выморожены), при очень высокой $\\frac{7}{2}R$. У водорода вращательные степени «размораживаются» примерно около $100\\ \\mathrm{K}$, а колебательные — при тысячах кельвинов. В XIX веке это была одна из главных загадок классической физики.",
+  "en": "**Freezing out of degrees of freedom.** Equipartition is a classical result. In quantum mechanics rotational and vibrational energies are discrete; if the spacing between levels is much larger than $kT$, the molecule hardly ever reaches the upper level and this degree contributes nothing to the heat capacity — it is **frozen out** ([[F02]]). For a diatomic gas $C_V\\approx\\frac{3}{2}R$ at low temperature, $\\frac{5}{2}R$ at room temperature (vibrations frozen) and $\\frac{7}{2}R$ at very high temperature. For hydrogen the rotational degrees \"thaw\" at roughly $100\\ \\mathrm{K}$, the vibrational ones at thousands of kelvins. In the 19th century this was one of the great puzzles of classical physics."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L29-F02.png",
+   "ru": "figures/B2-L29-F02-ru.png",
+   "en": "figures/B2-L29-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Qattiq jismlar.** Kristall panjaradagi har bir atom uch o'q bo'ylab tebranadi: 3 ta kinetik va 3 ta potensial kvadratik had, ya'ni $6\\cdot\\frac{1}{2}kT$. Bundan **Dyulong–Pti qonuni**: oddiy qattiq jismlarning molyar issiqlik sig'imi $C\\approx3R\\approx25\\ \\mathrm{J/(mol\\cdot K)}$. Past temperaturada bu daraja ham muzlaydi va $C\\propto T^3$ (Debay qonuni) bo'ladi; qattiq jismlarda $C_p\\approx C_V$, chunki issiqlikdan kengayish juda kichik.",
+  "ru": "**Твёрдые тела.** Каждый атом кристаллической решётки колеблется вдоль трёх осей: 3 кинетических и 3 потенциальных квадратичных слагаемых, то есть $6\\cdot\\frac{1}{2}kT$. Отсюда **закон Дюлонга–Пти**: молярная теплоёмкость простых твёрдых тел $C\\approx3R\\approx25\\ \\mathrm{J/(mol\\cdot K)}$. При низких температурах и эти степени вымораживаются, и $C\\propto T^3$ (закон Дебая); у твёрдых тел $C_p\\approx C_V$, так как тепловое расширение очень мало.",
+  "en": "**Solids.** Each atom of a crystal lattice vibrates along three axes: 3 kinetic and 3 potential quadratic terms, that is $6\\cdot\\frac{1}{2}kT$. Hence the **Dulong–Petit law**: the molar heat capacity of simple solids is $C\\approx3R\\approx25\\ \\mathrm{J/(mol\\cdot K)}$. At low temperatures these degrees also freeze out and $C\\propto T^3$ (the Debye law); for solids $C_p\\approx C_V$, because thermal expansion is very small."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Izojarayonlar",
+  "ru": "6. Изопроцессы",
+  "en": "6. Isoprocesses"
+ },
+ {
+  "t": "li",
+  "uz": "**Izoxorik jarayon** ($V=\\mathrm{const}$). Ish bajarilmaydi, barcha issiqlik ichki energiyaga ketadi; bosim temperaturaga proporsional (Sharl qonuni). $pV$-diagrammada — vertikal chiziq ([[F03]]):",
+  "ru": "**Изохорный процесс** ($V=\\mathrm{const}$). Работа не совершается, вся теплота идёт во внутреннюю энергию; давление пропорционально температуре (закон Шарля). На $pV$-диаграмме — вертикальная линия ([[F03]]):",
+  "en": "**Isochoric process** ($V=\\mathrm{const}$). No work is done and all the heat goes into internal energy; the pressure is proportional to the temperature (Charles's law of pressures). On a $pV$-diagram it is a vertical line ([[F03]]):"
+ },
+ {
+  "t": "m",
+  "m": "A=0,\\qquad Q=\\Delta U=\\nu C_V\\Delta T,\\qquad \\frac{p}{T}=\\mathrm{const}"
+ },
+ {
+  "t": "li",
+  "uz": "**Izobarik jarayon** ($p=\\mathrm{const}$). Hajm temperaturaga proporsional (Gey-Lyussak qonuni), diagrammada — gorizontal chiziq. Issiqlik ichki energiyaga va ishga $C_V:R$ nisbatda taqsimlanadi; bir atomli gazda $\\Delta U:A:Q=3:2:5$ — olingan issiqlikning $40\\%$ i ishga aylanadi:",
+  "ru": "**Изобарный процесс** ($p=\\mathrm{const}$). Объём пропорционален температуре (закон Гей-Люссака), на диаграмме — горизонтальная линия. Теплота распределяется между внутренней энергией и работой в отношении $C_V:R$; у одноатомного газа $\\Delta U:A:Q=3:2:5$ — $40\\%$ полученной теплоты превращается в работу:",
+  "en": "**Isobaric process** ($p=\\mathrm{const}$). The volume is proportional to the temperature (Gay-Lussac's law), and on the diagram it is a horizontal line. The heat is shared between internal energy and work in the ratio $C_V:R$; for a monatomic gas $\\Delta U:A:Q=3:2:5$ — $40\\%$ of the heat received is turned into work:"
+ },
+ {
+  "t": "m",
+  "m": "A=p\\Delta V=\\nu R\\Delta T,\\qquad Q=\\nu C_p\\Delta T,\\qquad \\frac{V}{T}=\\mathrm{const}"
+ },
+ {
+  "t": "li",
+  "uz": "**Izotermik jarayon** ($T=\\mathrm{const}$). Ideal gaz ichki energiyasi o'zgarmaydi, olingan barcha issiqlik ishga aylanadi; bosim hajmga teskari proporsional (Boyl–Mariott qonuni), diagrammada — giperbola (**izoterma**). Ish integralni hisoblab topiladi:",
+  "ru": "**Изотермический процесс** ($T=\\mathrm{const}$). Внутренняя энергия идеального газа не меняется, вся полученная теплота превращается в работу; давление обратно пропорционально объёму (закон Бойля–Мариотта), на диаграмме — гипербола (**изотерма**). Работа находится вычислением интеграла:",
+  "en": "**Isothermal process** ($T=\\mathrm{const}$). The internal energy of an ideal gas does not change and all the heat received is turned into work; the pressure is inversely proportional to the volume (Boyle's law), and on the diagram it is a hyperbola (an **isotherm**). The work is found by evaluating the integral:"
+ },
+ {
+  "t": "m",
+  "m": "\\Delta U=0,\\qquad Q=A=\\int_{V_1}^{V_2}\\frac{\\nu RT}{V}\\,dV=\\nu RT\\ln\\frac{V_2}{V_1}=\\nu RT\\ln\\frac{p_1}{p_2}"
+ },
+ {
+  "t": "li",
+  "uz": "Masalan, hajm ikki marta oshganda $A=\\nu RT\\ln2\\approx0.69\\,\\nu RT$. Izotermik jarayonda issiqlik sig'imi cheksiz: issiqlik olinadi, lekin temperatura o'zgarmaydi. Amalda izotermik jarayon sekin va termostat bilan yaxshi issiqlik almashganda amalga oshadi.",
+  "ru": "Например, при увеличении объёма вдвое $A=\\nu RT\\ln2\\approx0.69\\,\\nu RT$. В изотермическом процессе теплоёмкость бесконечна: теплота получается, а температура не меняется. На практике изотермический процесс реализуется при медленном протекании и хорошем теплообмене с термостатом.",
+  "en": "For example, when the volume doubles $A=\\nu RT\\ln2\\approx0.69\\,\\nu RT$. In an isothermal process the heat capacity is infinite: heat is received but the temperature does not change. In practice an isothermal process is realised when it is slow and there is good heat exchange with a thermostat."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L29-F03.png",
+   "ru": "figures/B2-L29-F03-ru.png",
+   "en": "figures/B2-L29-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Adiabatik jarayon",
+  "ru": "7. Адиабатный процесс",
+  "en": "7. The adiabatic process"
+ },
+ {
+  "t": "li",
+  "uz": "**Puasson tenglamasi.** Issiqlik almashinuvisiz ($\\delta Q=0$) kvazistatik jarayonda birinchi qonun $\\nu C_V\\,dT=-p\\,dV$ ko'rinishini oladi. $p=\\frac{\\nu RT}{V}$ ni qo'yib va o'zgaruvchilarni ajratib, quyidagini olamiz: $\\frac{dT}{T}=-\\left(\\gamma-1\\right)\\frac{dV}{V}$. Integrallab, **adiabata** tenglamasini uch xil ko'rinishda olamiz:",
+  "ru": "**Уравнение Пуассона.** В квазистатическом процессе без теплообмена ($\\delta Q=0$) первый закон принимает вид $\\nu C_V\\,dT=-p\\,dV$. Подставив $p=\\frac{\\nu RT}{V}$, разделяем переменные: $\\frac{dT}{T}=-\\left(\\gamma-1\\right)\\frac{dV}{V}$. Интегрируя, получаем уравнение **адиабаты** в трёх формах:",
+  "en": "**Poisson's equation.** In a quasi-static process with no heat exchange ($\\delta Q=0$) the first law becomes $\\nu C_V\\,dT=-p\\,dV$. Substituting $p=\\frac{\\nu RT}{V}$ and separating the variables: $\\frac{dT}{T}=-\\left(\\gamma-1\\right)\\frac{dV}{V}$. Integrating gives the equation of the **adiabat** in three forms:"
+ },
+ {
+  "t": "m",
+  "m": "pV^\\gamma=\\mathrm{const},\\qquad TV^{\\gamma-1}=\\mathrm{const},\\qquad T^\\gamma p^{1-\\gamma}=\\mathrm{const}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ish.** $Q=0$ bo'lgani uchun ish ichki energiya kamayishiga teng. Uni Puasson tenglamasini integrallab ham, to'g'ridan-to'g'ri $\\Delta U$ dan ham topish mumkin — ikkinchi yo'l ancha qisqa:",
+  "ru": "**Работа.** Поскольку $Q=0$, работа равна убыли внутренней энергии. Её можно найти интегрированием уравнения Пуассона или прямо из $\\Delta U$ — второй путь гораздо короче:",
+  "en": "**Work.** Since $Q=0$, the work equals the decrease in internal energy. It can be found by integrating Poisson's equation or directly from $\\Delta U$ — the second way is much shorter:"
+ },
+ {
+  "t": "m",
+  "m": "A=-\\Delta U=\\nu C_V\\left(T_1-T_2\\right)=\\frac{p_1V_1-p_2V_2}{\\gamma-1}"
+ },
+ {
+  "t": "li",
+  "uz": "**Adiabata izotermadan tikroq.** Bir nuqtada adiabata qiyaligi $\\frac{dp}{dV}=-\\gamma\\frac{p}{V}$, izotermaniki $-\\frac{p}{V}$ — adiabata $\\gamma$ marta tik ([[F04]]). Adiabatik kengayishda gaz soviydi va pastroq izotermalarni kesib o'tadi; bir xil hajmgacha siqishda adiabatik siqish izotermikka qaraganda ko'proq ish talab qiladi. Masalan, havoni ikki marta siqsak, temperatura $2^{0.4}\\approx1.32$ marta oshadi.",
+  "ru": "**Адиабата круче изотермы.** В одной точке наклон адиабаты $\\frac{dp}{dV}=-\\gamma\\frac{p}{V}$, а изотермы $-\\frac{p}{V}$ — адиабата круче в $\\gamma$ раз ([[F04]]). При адиабатном расширении газ охлаждается и пересекает всё более низкие изотермы; при сжатии до одного и того же объёма адиабатное сжатие требует больше работы, чем изотермическое. Например, если сжать воздух вдвое, температура возрастёт в $2^{0.4}\\approx1.32$ раза.",
+  "en": "**The adiabat is steeper than the isotherm.** At a given point the slope of the adiabat is $\\frac{dp}{dV}=-\\gamma\\frac{p}{V}$ and that of the isotherm $-\\frac{p}{V}$ — the adiabat is $\\gamma$ times steeper ([[F04]]). In adiabatic expansion the gas cools and crosses lower and lower isotherms; when compressing to the same volume, adiabatic compression needs more work than isothermal compression. For example, compressing air to half its volume raises the temperature by a factor of $2^{0.4}\\approx1.32$."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L29-F04.png",
+   "ru": "figures/B2-L29-F04-ru.png",
+   "en": "figures/B2-L29-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Qayerda uchraydi.** Issiqlik almashinuvi uchun vaqt yetmaydigan tez jarayonlar adiabatik: tovush to'lqinidagi siqilish va siyraklanish, dizel dvigatelida havoning siqilib, yoqilg'ini o'zi alangalatadigan darajada qizishi, ko'tarilayotgan havoning sovib bulut hosil qilishi (quruq havo har kilometrda taxminan $10\\ \\mathrm{K}$ soviydi). Nyuton tovush tezligini izotermik deb hisoblab, $\\sqrt{\\gamma}$ marta kichik qiymat olgan edi; to'g'ri formula:",
+  "ru": "**Где встречается.** Адиабатны быстрые процессы, при которых теплообмен не успевает произойти: сжатия и разрежения в звуковой волне, сжатие воздуха в дизельном двигателе до температуры самовоспламенения топлива, охлаждение поднимающегося воздуха с образованием облаков (сухой воздух охлаждается примерно на $10\\ \\mathrm{K}$ на каждый километр). Ньютон, считая звук изотермическим, получил скорость в $\\sqrt{\\gamma}$ раз меньше; правильная формула:",
+  "en": "**Where it occurs.** Fast processes with no time for heat exchange are adiabatic: the compressions and rarefactions in a sound wave, the compression of air in a diesel engine until it is hot enough to ignite the fuel, the cooling of rising air that forms clouds (dry air cools by about $10\\ \\mathrm{K}$ per kilometre). Newton, treating sound as isothermal, obtained a speed $\\sqrt{\\gamma}$ times too small; the correct formula is"
+ },
+ {
+  "t": "m",
+  "m": "v=\\sqrt{\\frac{\\gamma p}{\\rho}}=\\sqrt{\\frac{\\gamma RT}{M}}"
+ },
+ {
+  "t": "h2",
+  "uz": "8. Politropik jarayon",
+  "ru": "8. Политропный процесс",
+  "en": "8. The polytropic process"
+ },
+ {
+  "t": "li",
+  "uz": "**Umumlashtirish.** Issiqlik sig'imi o'zgarmas bo'lgan jarayon **politropik jarayon** deyiladi; ideal gaz uchun uning tenglamasi $pV^n=\\mathrm{const}$, $n$ — politropa ko'rsatkichi. Barcha izojarayonlar uning xususiy hollari: $n=0$ — izobarik, $n=1$ — izotermik, $n=\\gamma$ — adiabatik, $n\\to\\pm\\infty$ — izoxorik ([[F05]]).",
+  "ru": "**Обобщение.** Процесс с постоянной теплоёмкостью называют **политропным процессом**; для идеального газа его уравнение $pV^n=\\mathrm{const}$, $n$ — показатель политропы. Все изопроцессы — его частные случаи: $n=0$ — изобарный, $n=1$ — изотермический, $n=\\gamma$ — адиабатный, $n\\to\\pm\\infty$ — изохорный ([[F05]]).",
+  "en": "**Generalisation.** A process with constant heat capacity is called a **polytropic process**; for an ideal gas its equation is $pV^n=\\mathrm{const}$, where $n$ is the polytropic index. All the isoprocesses are special cases: $n=0$ — isobaric, $n=1$ — isothermal, $n=\\gamma$ — adiabatic, $n\\to\\pm\\infty$ — isochoric ([[F05]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Issiqlik sig'imi va ish.** $pV^n=\\mathrm{const}$ dan $TV^{n-1}=\\mathrm{const}$ va $p\\,dV=-\\frac{\\nu R\\,dT}{n-1}$. Birinchi qonunga qo'yib, $\\nu C\\,dT=\\nu C_V\\,dT+p\\,dV$ dan molyar issiqlik sig'imini, integrallab esa ishni olamiz:",
+  "ru": "**Теплоёмкость и работа.** Из $pV^n=\\mathrm{const}$ следуют $TV^{n-1}=\\mathrm{const}$ и $p\\,dV=-\\frac{\\nu R\\,dT}{n-1}$. Подставляя в первый закон, из $\\nu C\\,dT=\\nu C_V\\,dT+p\\,dV$ получаем молярную теплоёмкость, а интегрируя — работу:",
+  "en": "**Heat capacity and work.** From $pV^n=\\mathrm{const}$ it follows that $TV^{n-1}=\\mathrm{const}$ and $p\\,dV=-\\frac{\\nu R\\,dT}{n-1}$. Substituting into the first law, $\\nu C\\,dT=\\nu C_V\\,dT+p\\,dV$ gives the molar heat capacity, and integrating gives the work:"
+ },
+ {
+  "t": "m",
+  "m": "C=C_V-\\frac{R}{n-1}=C_V\\frac{n-\\gamma}{n-1},\\qquad A=\\frac{p_1V_1-p_2V_2}{n-1}=\\frac{\\nu R\\left(T_1-T_2\\right)}{n-1}"
+ },
+ {
+  "t": "li",
+  "uz": "**Manfiy issiqlik sig'imi.** $1<n<\\gamma$ da $C<0$: gaz issiqlik oladi, lekin kengayishda shu issiqlikdan ko'proq ish bajargani uchun soviydi (yoki issiqlik berib, isiydi). Bu jarayon izoterma va adiabata orasida yotadi. Manfiy issiqlik sig'imi yulduzlarda ham uchraydi: o'z tortishishi bilan bog'langan tizim energiya yo'qotganda qiziydi.",
+  "ru": "**Отрицательная теплоёмкость.** При $1<n<\\gamma$ $C<0$: газ получает теплоту, но при расширении совершает работу больше этой теплоты и поэтому охлаждается (или, отдавая теплоту, нагревается). Такой процесс лежит между изотермой и адиабатой. Отрицательная теплоёмкость встречается и у звёзд: система, связанная собственным тяготением, нагревается при потере энергии.",
+  "en": "**Negative heat capacity.** For $1<n<\\gamma$, $C<0$: the gas receives heat but, in expanding, does more work than that heat and therefore cools (or, giving off heat, warms up). Such a process lies between the isotherm and the adiabat. Negative heat capacity also occurs in stars: a system bound by its own gravity heats up when it loses energy."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L29-F05.png",
+   "ru": "figures/B2-L29-F05-ru.png",
+   "en": "figures/B2-L29-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Istalgan jarayonda issiqlik sig'imi.** Umumiy holda $C=C_V+\\frac{p}{\\nu}\\frac{dV}{dT}$ — jarayon tenglamasidan $\\frac{dV}{dT}$ ni topish kifoya. Masalan, $V\\propto T^2$ jarayonda $p\\propto\\frac{T}{V}\\propto V^{-\\frac{1}{2}}$ — bu $n=\\frac{1}{2}$ politropa. Jarayonda gaz issiqlik oladimi yoki beradimi, bilish uchun $\\delta Q=\\nu C\\,dT$ ning ishorasini tekshirish kerak: chiziq bo'ylab ba'zi joyda issiqlik olinib, boshqa joyda berilishi mumkin.",
+  "ru": "**Теплоёмкость в любом процессе.** В общем случае $C=C_V+\\frac{p}{\\nu}\\frac{dV}{dT}$ — достаточно найти $\\frac{dV}{dT}$ из уравнения процесса. Например, в процессе $V\\propto T^2$ $p\\propto\\frac{T}{V}\\propto V^{-\\frac{1}{2}}$ — это политропа $n=\\frac{1}{2}$. Чтобы понять, получает газ теплоту или отдаёт, надо проверить знак $\\delta Q=\\nu C\\,dT$: на одних участках линии теплота может получаться, на других — отдаваться.",
+  "en": "**Heat capacity in any process.** In general $C=C_V+\\frac{p}{\\nu}\\frac{dV}{dT}$ — it is enough to find $\\frac{dV}{dT}$ from the equation of the process. For example, in the process $V\\propto T^2$ $p\\propto\\frac{T}{V}\\propto V^{-\\frac{1}{2}}$ — this is the polytrope $n=\\frac{1}{2}$. To decide whether the gas receives or gives off heat, check the sign of $\\delta Q=\\nu C\\,dT$: heat may be received on some parts of the line and given off on others."
+ },
+ {
+  "t": "h2",
+  "uz": "9. Qaytar va qaytmas jarayonlar, erkin kengayish, drossellash",
+  "ru": "9. Обратимые и необратимые процессы, свободное расширение, дросселирование",
+  "en": "9. Reversible and irreversible processes, free expansion, throttling"
+ },
+ {
+  "t": "li",
+  "uz": "**Qaytar jarayon.** Agar jarayonni teskari yo'nalishda o'tkazib, tizimni ham, muhitni ham boshlang'ich holatga qaytarish mumkin bo'lsa, u **qaytar jarayon** deyiladi. Buning uchun jarayon kvazistatik bo'lishi va ishqalanish bo'lmasligi, issiqlik esa cheksiz kichik temperatura farqida uzatilishi kerak. Real jarayonlar **qaytmas**: ishqalanish, chekli temperatura farqida issiqlik o'tishi, vakuumga kengayish, gazlarning aralashishi. Qaytmaslikning miqdoriy o'lchovi — entropiya (B2-L30).",
+  "ru": "**Обратимый процесс.** Если процесс можно провести в обратном направлении так, что и система, и окружение вернутся в исходное состояние, его называют **обратимым процессом**. Для этого процесс должен быть квазистатическим и без трения, а теплота должна передаваться при бесконечно малой разности температур. Реальные процессы **необратимы**: трение, переход теплоты при конечной разности температур, расширение в вакуум, смешение газов. Количественная мера необратимости — энтропия (B2-L30).",
+  "en": "**Reversible processes.** If a process can be run in the opposite direction so that both the system and its surroundings return to their initial states, it is called a **reversible process**. For this the process must be quasi-static and frictionless, and heat must be transferred across an infinitesimal temperature difference. Real processes are **irreversible**: friction, heat flow across a finite temperature difference, expansion into a vacuum, mixing of gases. The quantitative measure of irreversibility is entropy (B2-L30)."
+ },
+ {
+  "t": "li",
+  "uz": "**Erkin kengayish.** Issiqlik izolyatsiyalangan idishning bir qismida gaz, ikkinchisida vakuum; to'siq olinsa, gaz butun hajmni egallaydi ([[F06]]). Gaz hech narsani itarmaydi — $A=0$, issiqlik almashmaydi — $Q=0$, demak $\\Delta U=0$. Ideal gaz uchun bu $T$ o'zgarmasligini bildiradi (Joul tajribasi). Jarayon kvazistatik emas, uni $pV$-diagrammada chiziq bilan chizib bo'lmaydi — faqat boshlang'ich va oxirgi nuqtalar bor. Oxirgi holat izotermik kengayishdagi bilan bir xil, lekin u yerda gaz $\\nu RT\\ln\\frac{V_2}{V_1}$ ish bajarib, shuncha issiqlik oladi — $Q$ va $A$ jarayonga bog'liqligining yaqqol misoli.",
+  "ru": "**Свободное расширение.** В одной части теплоизолированного сосуда газ, в другой — вакуум; если убрать перегородку, газ займёт весь объём ([[F06]]). Газ ничего не толкает — $A=0$, теплообмена нет — $Q=0$, значит $\\Delta U=0$. Для идеального газа это означает, что $T$ не меняется (опыт Джоуля). Процесс не квазистатический, на $pV$-диаграмме его нельзя изобразить линией — есть только начальная и конечная точки. Конечное состояние такое же, как при изотермическом расширении, но там газ совершает работу $\\nu RT\\ln\\frac{V_2}{V_1}$ и получает столько же теплоты — наглядный пример того, что $Q$ и $A$ зависят от процесса.",
+  "en": "**Free expansion.** One part of a thermally insulated vessel holds a gas, the other a vacuum; when the partition is removed, the gas fills the whole volume ([[F06]]). The gas pushes nothing — $A=0$, and there is no heat exchange — $Q=0$, so $\\Delta U=0$. For an ideal gas this means that $T$ does not change (Joule's experiment). The process is not quasi-static and cannot be drawn as a line on a $pV$-diagram — there are only the initial and final points. The final state is the same as after isothermal expansion, but there the gas does work $\\nu RT\\ln\\frac{V_2}{V_1}$ and receives the same amount of heat — a clear example of $Q$ and $A$ depending on the process."
+ },
+ {
+  "t": "li",
+  "uz": "**Idishlarni ulash.** Issiqlik izolyatsiyalangan ikki idishdagi bir xil ideal gaz jo'mrak ochilib aralashganda ham $Q=0$, $A=0$: oxirgi holat ichki energiyalar yig'indisi saqlanishidan topiladi. Har bir idishda $U_j=\\frac{p_jV_j}{\\gamma-1}$, shuning uchun bunday masalalarda temperaturalarni emas, $pV$ ko'paytmalarni qo'shish qulay.",
+  "ru": "**Соединение сосудов.** Когда одинаковый идеальный газ в двух теплоизолированных сосудах смешивается после открытия крана, тоже $Q=0$, $A=0$: конечное состояние находится из сохранения суммы внутренних энергий. В каждом сосуде $U_j=\\frac{p_jV_j}{\\gamma-1}$, поэтому в таких задачах удобно складывать не температуры, а произведения $pV$.",
+  "en": "**Connecting vessels.** When the same ideal gas in two thermally insulated vessels mixes after a valve is opened, again $Q=0$ and $A=0$: the final state follows from conservation of the total internal energy. In each vessel $U_j=\\frac{p_jV_j}{\\gamma-1}$, so in such problems it is convenient to add not the temperatures but the products $pV$."
+ },
+ {
+  "t": "li",
+  "uz": "**Drossellash (Joul–Tomson effekti).** Gaz g'ovak to'siq orqali yuqori bosim $p_1$ dan past bosim $p_2$ ga sekin, issiqlik almashmasdan siqib o'tkaziladi. Chap porshen gaz ustida $p_1V_1$ ish bajaradi, gaz o'ng porshen ustida $p_2V_2$ ish bajaradi, shuning uchun $U_1+p_1V_1=U_2+p_2V_2$ — **entalpiya** saqlanadi:",
+  "ru": "**Дросселирование (эффект Джоуля–Томсона).** Газ медленно и без теплообмена продавливают через пористую перегородку из области высокого давления $p_1$ в область низкого $p_2$. Левый поршень совершает над газом работу $p_1V_1$, газ совершает над правым поршнем работу $p_2V_2$, поэтому $U_1+p_1V_1=U_2+p_2V_2$ — сохраняется **энтальпия**:",
+  "en": "**Throttling (the Joule–Thomson effect).** A gas is slowly pushed, without heat exchange, through a porous plug from a region of high pressure $p_1$ to one of low pressure $p_2$. The left piston does work $p_1V_1$ on the gas and the gas does work $p_2V_2$ on the right piston, so $U_1+p_1V_1=U_2+p_2V_2$ — the **enthalpy** is conserved:"
+ },
+ {
+  "t": "m",
+  "m": "H=U+pV=\\mathrm{const},\\qquad \\Delta H=\\nu C_p\\Delta T"
+ },
+ {
+  "t": "li",
+  "uz": "Ideal gaz uchun $H$ ham faqat $T$ ga bog'liq, shuning uchun drossellashda uning temperaturasi o'zgarmaydi. Real gazlarda molekulalar tortishishi tufayli inversiya temperaturasidan pastda gaz soviydi — havoni, azotni va geliyni suyultirish (Linde usuli) va sovutgichlar shunga asoslangan. O'zgarmas bosimda olingan issiqlik entalpiya o'zgarishiga teng: $Q=\\Delta H$.",
+  "ru": "Для идеального газа $H$ тоже зависит только от $T$, поэтому при дросселировании его температура не меняется. В реальных газах из-за притяжения молекул ниже температуры инверсии газ охлаждается — на этом основаны сжижение воздуха, азота и гелия (метод Линде) и холодильники. Теплота, полученная при постоянном давлении, равна изменению энтальпии: $Q=\\Delta H$.",
+  "en": "For an ideal gas $H$ also depends only on $T$, so its temperature does not change on throttling. In real gases, because of molecular attraction, the gas cools below the inversion temperature — the liquefaction of air, nitrogen and helium (the Linde method) and refrigerators are based on this. The heat received at constant pressure equals the change in enthalpy: $Q=\\Delta H$."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L29-F06.png",
+   "ru": "figures/B2-L29-F06-ru.png",
+   "en": "figures/B2-L29-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Sikllar, ikkinchi va uchinchi qonunlar",
+  "ru": "10. Циклы, второй и третий законы",
+  "en": "10. Cycles, the second and third laws"
+ },
+ {
+  "t": "li",
+  "uz": "**Sikl ishi.** Sikl — tizim boshlang'ich holatga qaytadigan jarayon; $\\Delta U=0$, natijaviy ish $pV$-diagrammada sikl o'rab olgan **yuzaga** teng. Sikl soat mili bo'yicha aylansa, kengayish yuqoriroq bosimda bo'ladi va $A>0$ — bu **issiqlik dvigateli**; soat miliga teskari aylansa, $A<0$ — bu **sovutgich** ([[F07]]).",
+  "ru": "**Работа цикла.** Цикл — процесс, в котором система возвращается в исходное состояние; $\\Delta U=0$, а результирующая работа равна **площади**, охватываемой циклом на $pV$-диаграмме. Если цикл обходится по часовой стрелке, расширение идёт при более высоком давлении и $A>0$ — это **тепловой двигатель**; если против часовой стрелки, $A<0$ — это **холодильная машина** ([[F07]]).",
+  "en": "**Work of a cycle.** A cycle is a process in which the system returns to its initial state; $\\Delta U=0$, and the net work equals the **area** enclosed by the cycle on a $pV$-diagram. If the cycle runs clockwise, expansion happens at higher pressure and $A>0$ — this is a **heat engine**; if it runs anticlockwise, $A<0$ — this is a **refrigerator** ([[F07]])."
+ },
+ {
+  "t": "li",
+  "uz": "**FIK.** Dvigatel qizdirgichdan $Q_1$ issiqlik oladi, sovitkichga $Q_2$ beradi (ikkalasi musbat kattalik sifatida olinadi) va $A=Q_1-Q_2$ ish bajaradi. **Foydali ish koeffitsiyenti** — olingan issiqlikning ishga aylangan ulushi. Sikl FIK ini hisoblashda $Q_1$ ga sikldagi **barcha** issiqlik olinadigan qismlar kiradi, natijaviy issiqlik emas:",
+  "ru": "**КПД.** Двигатель получает от нагревателя теплоту $Q_1$, отдаёт холодильнику $Q_2$ (обе берутся как положительные величины) и совершает работу $A=Q_1-Q_2$. **Коэффициент полезного действия** — доля полученной теплоты, превращённая в работу. При вычислении КПД цикла в $Q_1$ входят **все** участки цикла, где теплота получается, а не результирующая теплота:",
+  "en": "**Efficiency.** An engine takes heat $Q_1$ from the heater, gives $Q_2$ to the cooler (both taken as positive quantities) and does work $A=Q_1-Q_2$. The **efficiency** is the fraction of the heat received that is turned into work. When calculating the efficiency of a cycle, $Q_1$ includes **all** parts of the cycle where heat is received, not the net heat:"
+ },
+ {
+  "t": "m",
+  "m": "\\eta=\\frac{A}{Q_1}=1-\\frac{Q_2}{Q_1},\\qquad \\varepsilon=\\frac{Q_2}{A},\\qquad \\varphi=\\frac{Q_1}{A}=1+\\varepsilon"
+ },
+ {
+  "t": "li",
+  "uz": "**Sovutgich va issiqlik nasosi.** Sovutgich $A$ ish sarflab, sovuq jismdan $Q_2$ issiqlik olib, issiq muhitga $Q_1=Q_2+A$ beradi; uning samaradorligi — **sovutish koeffitsiyenti** $\\varepsilon$, u $1$ dan katta bo'lishi mumkin va odatda katta. **Issiqlik nasosi** — xuddi shu qurilma, lekin foydali natija — xonaga berilgan $Q_1$; uning koeffitsiyenti $\\varphi$ har doim $1$ dan katta, shuning uchun issiqlik nasosi elektr isitgichdan tejamliroq.",
+  "ru": "**Холодильник и тепловой насос.** Холодильная машина, затрачивая работу $A$, отбирает у холодного тела теплоту $Q_2$ и отдаёт горячему окружению $Q_1=Q_2+A$; её эффективность — **холодильный коэффициент** $\\varepsilon$, он может быть и обычно бывает больше $1$. **Тепловой насос** — то же устройство, но полезный результат — отданная в комнату $Q_1$; его коэффициент $\\varphi$ всегда больше $1$, поэтому тепловой насос экономичнее электронагревателя.",
+  "en": "**Refrigerators and heat pumps.** A refrigerator uses work $A$ to take heat $Q_2$ from a cold body and give $Q_1=Q_2+A$ to the warm surroundings; its effectiveness is the **coefficient of performance** $\\varepsilon$, which can be, and usually is, greater than $1$. A **heat pump** is the same device, but the useful result is the heat $Q_1$ delivered to the room; its coefficient $\\varphi$ is always greater than $1$, which is why a heat pump is more economical than an electric heater."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L29-F07.png",
+   "ru": "figures/B2-L29-F07-ru.png",
+   "en": "figures/B2-L29-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Ikkinchi qonun.** Birinchi qonun energiya saqlanishini aytadi, lekin jarayon yo'nalishini aytmaydi. **Kelvin–Plank ta'rifi:** yagona natijasi bitta issiqlik manbaidan olingan issiqlikni to'liq ishga aylantirish bo'lgan siklik jarayon mumkin emas («ikkinchi tur abadiy dvigatel» yo'q, $\\eta<1$). **Klauzius ta'rifi:** yagona natijasi issiqlikni sovuq jismdan issiq jismga o'tkazish bo'lgan jarayon mumkin emas. Ikki ta'rif teng kuchli: biri buzilsa, ikkinchisini buzadigan qurilma yasash mumkin.",
+  "ru": "**Второй закон.** Первый закон говорит о сохранении энергии, но не о направлении процесса. **Формулировка Кельвина–Планка:** невозможен циклический процесс, единственным результатом которого было бы полное превращение в работу теплоты, взятой от одного источника (нет «вечного двигателя второго рода», $\\eta<1$). **Формулировка Клаузиуса:** невозможен процесс, единственным результатом которого была бы передача теплоты от холодного тела к горячему. Обе формулировки равносильны: если нарушается одна, можно построить устройство, нарушающее другую.",
+  "en": "**The second law.** The first law states the conservation of energy, but not the direction of a process. **Kelvin–Planck statement:** no cyclic process is possible whose sole result is the complete conversion into work of heat taken from a single source (there is no \"perpetual motion machine of the second kind\", $\\eta<1$). **Clausius statement:** no process is possible whose sole result is the transfer of heat from a cold body to a hot one. The two statements are equivalent: if one is violated, a device violating the other can be built."
+ },
+ {
+  "t": "li",
+  "uz": "**Karno teoremasi.** Temperaturalari $T_1$ va $T_2$ bo'lgan ikki rezervuar orasida ishlaydigan har qanday dvigatelning FIK i qaytar (Karno) dvigateli FIK idan katta emas, sovutgich uchun ham shunday cheklov bor. Isboti va Karno sikli — B2-L30 da; GRE da «bu qurilma mumkinmi?» savoliga javob berish uchun chegaralarni bilish yetarli:",
+  "ru": "**Теорема Карно.** КПД любого двигателя, работающего между двумя резервуарами с температурами $T_1$ и $T_2$, не больше КПД обратимого двигателя (Карно); такое же ограничение есть и для холодильника. Доказательство и цикл Карно — в B2-L30; на GRE для ответа на вопрос «возможно ли такое устройство?» достаточно знать пределы:",
+  "en": "**Carnot's theorem.** The efficiency of any engine working between two reservoirs at temperatures $T_1$ and $T_2$ is no greater than that of a reversible (Carnot) engine, and there is a similar limit for a refrigerator. The proof and the Carnot cycle are in B2-L30; on the GRE, to answer \"is this device possible?\" it is enough to know the limits:"
+ },
+ {
+  "t": "m",
+  "m": "\\eta\\le1-\\frac{T_2}{T_1},\\qquad \\varepsilon\\le\\frac{T_2}{T_1-T_2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchinchi qonun (Nernst teoremasi).** $T\\to0$ da muvozanatdagi tizim entropiyasi doimiy qiymatga (oddiy kristall uchun nolga) intiladi. Natijalari: barcha issiqlik sig'imlari $T\\to0$ da nolga intiladi (muzlash, Debay qonuni) va absolyut nolga chekli sondagi qadamlar bilan erishib bo'lmaydi. Amalda millikelvin va undan past temperaturalarga erishilgan, lekin $T=0$ ga hech qachon.",
+  "ru": "**Третий закон (теорема Нернста).** При $T\\to0$ энтропия равновесной системы стремится к постоянному значению (для простого кристалла — к нулю). Следствия: все теплоёмкости при $T\\to0$ стремятся к нулю (вымораживание, закон Дебая), и абсолютного нуля нельзя достичь за конечное число шагов. На практике достигнуты милликельвины и ниже, но никогда $T=0$.",
+  "en": "**The third law (Nernst's theorem).** As $T\\to0$ the entropy of a system in equilibrium tends to a constant value (zero for a simple crystal). Consequences: all heat capacities tend to zero as $T\\to0$ (freezing out, the Debye law), and absolute zero cannot be reached in a finite number of steps. In practice millikelvins and below have been reached, but never $T=0$."
+ },
+ {
+  "t": "h2",
+  "uz": "11. Issiqlik uzatish",
+  "ru": "11. Теплопередача",
+  "en": "11. Heat transfer"
+ },
+ {
+  "t": "li",
+  "uz": "**Issiqlik o'tkazuvchanlik.** Issiqlik oqimi zichligi temperatura gradiyentiga proporsional va issiqdan sovuqqa yo'nalgan (Furye qonuni, B0-L05): $q=-\\kappa\\frac{dT}{dx}$, $\\kappa$ — issiqlik o'tkazuvchanlik koeffitsiyenti (mis $\\approx400$, shisha $\\approx1$, havo $\\approx0.025\\ \\mathrm{W/(m\\cdot K)}$). Qalinligi $L$, yuzasi $S$ bo'lgan qatlamdan statsionar holatda o'tadigan quvvat va **issiqlik qarshiligi**:",
+  "ru": "**Теплопроводность.** Плотность теплового потока пропорциональна градиенту температуры и направлена от горячего к холодному (закон Фурье, B0-L05): $q=-\\kappa\\frac{dT}{dx}$, $\\kappa$ — коэффициент теплопроводности (медь $\\approx400$, стекло $\\approx1$, воздух $\\approx0.025\\ \\mathrm{W/(m\\cdot K)}$). Мощность, проходящая в стационарном режиме через слой толщиной $L$ и площадью $S$, и **термическое сопротивление**:",
+  "en": "**Conduction.** The heat flux density is proportional to the temperature gradient and directed from hot to cold (Fourier's law, B0-L05): $q=-\\kappa\\frac{dT}{dx}$, where $\\kappa$ is the thermal conductivity (copper $\\approx400$, glass $\\approx1$, air $\\approx0.025\\ \\mathrm{W/(m\\cdot K)}$). The power passing in the steady state through a layer of thickness $L$ and area $S$, and the **thermal resistance**, are"
+ },
+ {
+  "t": "m",
+  "m": "P=\\kappa S\\frac{\\Delta T}{L}=\\frac{\\Delta T}{R_T},\\qquad R_T=\\frac{L}{\\kappa S}"
+ },
+ {
+  "t": "li",
+  "uz": "Bu Om qonunining aynan o'xshashi: $\\Delta T$ — kuchlanish, $P$ — tok. Ketma-ket qatlamlarda (devor + izolyatsiya) issiqlik qarshiliklari qo'shiladi va har bir qatlamdan bir xil quvvat o'tadi, shuning uchun temperatura eng ko'p qarshilikli qatlamda pasayadi ([[F08]]). Parallel yo'llarda o'tkazuvchanliklar qo'shiladi — derazadan yo'qotish ko'pincha butun devordan yo'qotishdan katta.",
+  "ru": "Это точный аналог закона Ома: $\\Delta T$ — напряжение, $P$ — ток. В последовательных слоях (стена + утеплитель) термические сопротивления складываются, и через каждый слой проходит одна и та же мощность, поэтому температура падает больше всего в слое с наибольшим сопротивлением ([[F08]]). При параллельных путях складываются проводимости — потери через окно часто больше, чем через всю стену.",
+  "en": "This is an exact analogue of Ohm's law: $\\Delta T$ plays the role of voltage and $P$ of current. In layers in series (a wall plus insulation) the thermal resistances add and the same power passes through each layer, so the temperature drops most across the layer with the largest resistance ([[F08]]). For parallel paths the conductances add — the loss through a window is often larger than through the whole wall."
+ },
+ {
+  "t": "li",
+  "uz": "**Konveksiya va Nyuton sovish qonuni.** Suyuqlik yoki gaz oqimi issiqlikni o'zi bilan olib ketadi. Kichik temperatura farqida jismdan muhitga issiqlik berish quvvati farqqa proporsional, shuning uchun jism temperaturasi muhit temperaturasi $T_0$ ga eksponensial yaqinlashadi ($k$ — jism va muhitga bog'liq doimiy):",
+  "ru": "**Конвекция и закон охлаждения Ньютона.** Поток жидкости или газа уносит теплоту с собой. При малой разности температур мощность теплоотдачи от тела в окружение пропорциональна разности, поэтому температура тела экспоненциально приближается к температуре окружения $T_0$ ($k$ — постоянная, зависящая от тела и окружения):",
+  "en": "**Convection and Newton's law of cooling.** A flow of liquid or gas carries heat away with it. For a small temperature difference the rate of heat loss from a body to the surroundings is proportional to the difference, so the temperature of the body approaches the ambient temperature $T_0$ exponentially ($k$ is a constant depending on the body and the surroundings):"
+ },
+ {
+  "t": "m",
+  "m": "\\frac{dT}{dt}=-k\\left(T-T_0\\right),\\qquad T-T_0=\\left(T\\left(0\\right)-T_0\\right)e^{-kt}"
+ },
+ {
+  "t": "li",
+  "uz": "**Nurlanish.** Har qanday jism temperaturasiga qarab elektromagnit nurlanish chiqaradi; absolyut qora jism uchun nurlanish quvvati Stefan–Bolsman qonuni bilan beriladi, real jism uchun qoralik darajasi $\\epsilon<1$ ko'paytiriladi. Muhit ham jismga nurlanish yuboradi, shuning uchun natijaviy quvvat $T^4$ lar ayirmasiga bog'liq. Spektr maksimumi Vin qonuni bilan siljiydi: $\\lambda_{max}T\\approx2.9\\cdot10^{-3}\\ \\mathrm{m\\cdot K}$ (batafsil — kvant fizikasida).",
+  "ru": "**Излучение.** Любое тело в зависимости от температуры испускает электромагнитное излучение; для абсолютно чёрного тела мощность излучения даётся законом Стефана–Больцмана, для реального тела добавляется множитель — степень черноты $\\epsilon<1$. Окружение тоже излучает на тело, поэтому результирующая мощность зависит от разности $T^4$. Максимум спектра смещается по закону Вина: $\\lambda_{max}T\\approx2.9\\cdot10^{-3}\\ \\mathrm{m\\cdot K}$ (подробно — в квантовой физике).",
+  "en": "**Radiation.** Every body emits electromagnetic radiation depending on its temperature; for a black body the radiated power is given by the Stefan–Boltzmann law, and for a real body it is multiplied by the emissivity $\\epsilon<1$. The surroundings also radiate onto the body, so the net power depends on the difference of the $T^4$ terms. The peak of the spectrum shifts according to Wien's law: $\\lambda_{max}T\\approx2.9\\cdot10^{-3}\\ \\mathrm{m\\cdot K}$ (details in quantum physics)."
+ },
+ {
+  "t": "m",
+  "m": "P=\\epsilon\\sigma ST^4,\\qquad P'=\\epsilon\\sigma S\\left(T^4-T_0^4\\right),\\qquad \\sigma\\approx5.67\\cdot10^{-8}\\ \\mathrm{W/(m^2\\cdot K^4)}"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L29-F08.png",
+   "ru": "figures/B2-L29-F08-ru.png",
+   "en": "figures/B2-L29-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "12. GRE usullari",
+  "ru": "12. Приёмы для GRE",
+  "en": "12. GRE techniques"
+ },
+ {
+  "t": "li",
+  "uz": "**Ishoralarni aniqlang.** Masala $Q=\\Delta U+A$ (gaz bajargan ish) yoki $\\Delta U=Q+A'$ (gaz ustidagi ish) qoidasida yozilganini birinchi bo'lib aniqlang. Kengayishda gaz ishi musbat, siqilishda manfiy; issiqlik olinsa musbat.",
+  "ru": "**Определите знаки.** Первым делом выясните, записана ли задача по правилу $Q=\\Delta U+A$ (работа газа) или $\\Delta U=Q+A'$ (работа над газом). При расширении работа газа положительна, при сжатии отрицательна; полученная теплота положительна.",
+  "en": "**Pin down the signs.** First find out whether the problem uses $Q=\\Delta U+A$ (work by the gas) or $\\Delta U=Q+A'$ (work on the gas). In expansion the work by the gas is positive, in compression negative; heat received is positive."
+ },
+ {
+  "t": "li",
+  "uz": "**$\\Delta U$ — har doim $\\nu C_V\\Delta T$.** Ideal gaz uchun jarayon qanday bo'lishidan qat'i nazar. $pV$-diagrammada $\\Delta U=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$ — temperaturani hisoblamasdan ham topiladi. Sikl uchun $\\Delta U=0$.",
+  "ru": "**$\\Delta U$ — всегда $\\nu C_V\\Delta T$.** Для идеального газа независимо от процесса. На $pV$-диаграмме $\\Delta U=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$ — находится даже без вычисления температуры. Для цикла $\\Delta U=0$.",
+  "en": "**$\\Delta U$ is always $\\nu C_V\\Delta T$.** For an ideal gas, whatever the process. On a $pV$-diagram $\\Delta U=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}$ — found even without calculating the temperature. For a cycle $\\Delta U=0$."
+ },
+ {
+  "t": "li",
+  "uz": "**Ish — yuza.** To'g'ri chiziqli jarayonda trapetsiya yuzasi, sikl uchun o'ralgan yuza; yo'nalish ishorani beradi. Izoterma uchun $\\nu RT\\ln\\frac{V_2}{V_1}$, adiabata uchun $-\\Delta U$ — integralni qayta hisoblamang.",
+  "ru": "**Работа — площадь.** Для прямолинейного процесса — площадь трапеции, для цикла — охватываемая площадь; направление даёт знак. Для изотермы $\\nu RT\\ln\\frac{V_2}{V_1}$, для адиабаты $-\\Delta U$ — не пересчитывайте интеграл.",
+  "en": "**Work is an area.** For a straight-line process use the area of a trapezium, for a cycle the enclosed area; the direction gives the sign. For an isotherm use $\\nu RT\\ln\\frac{V_2}{V_1}$, for an adiabat $-\\Delta U$ — do not redo the integral."
+ },
+ {
+  "t": "li",
+  "uz": "**$\\gamma$ ni erkinlik darajalaridan biling.** Bir atomli $\\frac{5}{3}$, ikki atomli $\\frac{7}{5}$, ko'p atomli $\\frac{4}{3}$. Adiabatada nisbatlar darajalarda: $\\frac{T_2}{T_1}=\\left(\\frac{V_1}{V_2}\\right)^{\\gamma-1}$, $\\frac{p_2}{p_1}=\\left(\\frac{V_1}{V_2}\\right)^\\gamma$ — kalkulyatorsiz hisoblash uchun sonlar odatda «qulay» tanlanadi.",
+  "ru": "**Знайте $\\gamma$ по степеням свободы.** Одноатомный $\\frac{5}{3}$, двухатомный $\\frac{7}{5}$, многоатомный $\\frac{4}{3}$. На адиабате отношения в степенях: $\\frac{T_2}{T_1}=\\left(\\frac{V_1}{V_2}\\right)^{\\gamma-1}$, $\\frac{p_2}{p_1}=\\left(\\frac{V_1}{V_2}\\right)^\\gamma$ — числа для счёта без калькулятора обычно подобраны «удобные».",
+  "en": "**Know $\\gamma$ from the degrees of freedom.** Monatomic $\\frac{5}{3}$, diatomic $\\frac{7}{5}$, polyatomic $\\frac{4}{3}$. On an adiabat the ratios go as powers: $\\frac{T_2}{T_1}=\\left(\\frac{V_1}{V_2}\\right)^{\\gamma-1}$, $\\frac{p_2}{p_1}=\\left(\\frac{V_1}{V_2}\\right)^\\gamma$ — the numbers are usually chosen to be \"convenient\" for working without a calculator."
+ },
+ {
+  "t": "li",
+  "uz": "**FIK da $Q_1$ — faqat olingan issiqlik.** Sikl bo'laklari bo'yicha $Q$ ning ishorasini tekshiring va faqat musbatlarini qo'shing. Javobni Karno chegarasi bilan solishtiring: undan katta FIK — ikkinchi qonunni buzadi, $1$ dan katta FIK — birinchi qonunni ham.",
+  "ru": "**В КПД $Q_1$ — только полученная теплота.** Проверьте знак $Q$ на участках цикла и складывайте только положительные. Сравните ответ с пределом Карно: КПД больше него нарушает второй закон, больше $1$ — ещё и первый.",
+  "en": "**In the efficiency, $Q_1$ is only the heat received.** Check the sign of $Q$ on each part of the cycle and add only the positive ones. Compare the answer with the Carnot limit: an efficiency above it violates the second law, above $1$ the first law as well."
+ },
+ {
+  "t": "li",
+  "uz": "**Proporsionallik bilan ishlang.** Nurlanish $\\propto T^4$, tovush tezligi $\\propto\\sqrt{T}$, o'tkazuvchanlik $\\propto\\frac{S}{L}$, Nyuton sovishida teng vaqtlarda farq bir xil marta kamayadi. Bunday savollarda son emas, nisbat so'raladi.",
+  "ru": "**Работайте с пропорциями.** Излучение $\\propto T^4$, скорость звука $\\propto\\sqrt{T}$, теплопроводность $\\propto\\frac{S}{L}$, при охлаждении по Ньютону за равные времена разность уменьшается в одно и то же число раз. В таких вопросах спрашивают не число, а отношение.",
+  "en": "**Work with proportions.** Radiation goes as $\\propto T^4$, the speed of sound as $\\propto\\sqrt{T}$, conduction as $\\propto\\frac{S}{L}$, and in Newtonian cooling the difference falls by the same factor in equal times. Such questions ask for a ratio, not a number."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Holat tenglamasi",
+    "ru": "Уравнение состояния",
+    "en": "Equation of state",
+    "m": "pV=\\nu RT=NkT"
+   },
+   {
+    "uz": "Gaz ishi",
+    "ru": "Работа газа",
+    "en": "Work of a gas",
+    "m": "A=\\int p\\,dV"
+   },
+   {
+    "uz": "Birinchi qonun",
+    "ru": "Первый закон",
+    "en": "First law",
+    "m": "Q=\\Delta U+A"
+   },
+   {
+    "uz": "Ichki energiya",
+    "ru": "Внутренняя энергия",
+    "en": "Internal energy",
+    "m": "\\Delta U=\\nu C_V\\Delta T=\\frac{\\Delta\\left(pV\\right)}{\\gamma-1}"
+   },
+   {
+    "uz": "Teng taqsimlanish",
+    "ru": "Равнораспределение",
+    "en": "Equipartition",
+    "m": "C_V=\\frac{i}{2}R,\\quad \\gamma=\\frac{i+2}{i}"
+   },
+   {
+    "uz": "Mayer tenglamasi",
+    "ru": "Уравнение Майера",
+    "en": "Mayer's relation",
+    "m": "C_p=C_V+R"
+   },
+   {
+    "uz": "Izobarik jarayon",
+    "ru": "Изобарный процесс",
+    "en": "Isobaric process",
+    "m": "A=\\nu R\\Delta T,\\quad Q=\\nu C_p\\Delta T"
+   },
+   {
+    "uz": "Izotermik jarayon",
+    "ru": "Изотермический процесс",
+    "en": "Isothermal process",
+    "m": "Q=A=\\nu RT\\ln\\frac{V_2}{V_1}"
+   },
+   {
+    "uz": "Adiabata",
+    "ru": "Адиабата",
+    "en": "Adiabat",
+    "m": "pV^\\gamma=\\mathrm{const},\\quad TV^{\\gamma-1}=\\mathrm{const}"
+   },
+   {
+    "uz": "Adiabatik ish",
+    "ru": "Работа при адиабате",
+    "en": "Adiabatic work",
+    "m": "A=\\frac{p_1V_1-p_2V_2}{\\gamma-1}"
+   },
+   {
+    "uz": "Politropa",
+    "ru": "Политропа",
+    "en": "Polytrope",
+    "m": "C=C_V\\frac{n-\\gamma}{n-1}"
+   },
+   {
+    "uz": "Tovush tezligi",
+    "ru": "Скорость звука",
+    "en": "Speed of sound",
+    "m": "v=\\sqrt{\\frac{\\gamma RT}{M}}"
+   },
+   {
+    "uz": "Entalpiya",
+    "ru": "Энтальпия",
+    "en": "Enthalpy",
+    "m": "H=U+pV"
+   },
+   {
+    "uz": "FIK va sovutish koeffitsiyenti",
+    "ru": "КПД и холодильный коэффициент",
+    "en": "Efficiency and COP",
+    "m": "\\eta=\\frac{A}{Q_1},\\quad \\varepsilon=\\frac{Q_2}{A}"
+   },
+   {
+    "uz": "Karno chegarasi",
+    "ru": "Предел Карно",
+    "en": "Carnot limit",
+    "m": "\\eta\\le1-\\frac{T_2}{T_1}"
+   },
+   {
+    "uz": "Issiqlik o'tkazuvchanlik",
+    "ru": "Теплопроводность",
+    "en": "Conduction",
+    "m": "P=\\kappa S\\frac{\\Delta T}{L}"
+   },
+   {
+    "uz": "Stefan–Bolsman qonuni",
+    "ru": "Закон Стефана–Больцмана",
+    "en": "Stefan–Boltzmann law",
+    "m": "P=\\epsilon\\sigma ST^4"
+   }
+  ]
+ }
+]

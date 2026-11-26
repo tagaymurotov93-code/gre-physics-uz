@@ -1,0 +1,916 @@
+[
+ {
+  "id": "B2-L26-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Kengligi $0.1\\ \\mathrm{mm}$ bo'lgan tirqishga to'lqin uzunligi $500\\ \\mathrm{nm}$ bo'lgan yassi to'lqin tik tushadi, ekran $2\\ \\mathrm{m}$ masofada. Birinchi minimum burchagini, markaziy maksimum kengligini va birinchi yon maksimum kengligini toping.",
+   "ru": "На щель шириной $0.1\\ \\mathrm{mm}$ нормально падает плоская волна с длиной волны $500\\ \\mathrm{nm}$, экран на расстоянии $2\\ \\mathrm{m}$. Найдите угол первого минимума, ширину центрального максимума и ширину первого побочного максимума.",
+   "en": "A plane wave of wavelength $500\\ \\mathrm{nm}$ falls normally on a slit $0.1\\ \\mathrm{mm}$ wide, with a screen $2\\ \\mathrm{m}$ away. Find the angle of the first minimum, the width of the central maximum and the width of the first secondary maximum."
+  },
+  "figure": "figures/B2-L26-S01.png",
+  "solution": {
+   "uz": [
+    "Birinchi minimum ($m=1$): $$\\sin\\theta_1=\\frac{\\lambda}{a}=\\frac{5\\cdot10^{-7}}{10^{-4}}=5\\cdot10^{-3}$$",
+    "Markaziy maksimum — $m=\\pm1$ minimumlar orasida: $$w=2\\frac{\\lambda L}{a}=2\\cdot\\frac{5\\cdot10^{-7}\\cdot2}{10^{-4}}=20\\ \\mathrm{mm}$$",
+    "Yon maksimum — qo'shni minimumlar orasida: $$y_2-y_1=\\frac{\\lambda L}{a}=10\\ \\mathrm{mm}$$"
+   ],
+   "ru": [
+    "Первый минимум ($m=1$): $$\\sin\\theta_1=\\frac{\\lambda}{a}=\\frac{5\\cdot10^{-7}}{10^{-4}}=5\\cdot10^{-3}$$",
+    "Центральный максимум — между минимумами $m=\\pm1$: $$w=2\\frac{\\lambda L}{a}=2\\cdot\\frac{5\\cdot10^{-7}\\cdot2}{10^{-4}}=20\\ \\mathrm{mm}$$",
+    "Побочный максимум — между соседними минимумами: $$y_2-y_1=\\frac{\\lambda L}{a}=10\\ \\mathrm{mm}$$"
+   ],
+   "en": [
+    "The first minimum ($m=1$): $$\\sin\\theta_1=\\frac{\\lambda}{a}=\\frac{5\\cdot10^{-7}}{10^{-4}}=5\\cdot10^{-3}$$",
+    "The central maximum lies between the minima $m=\\pm1$: $$w=2\\frac{\\lambda L}{a}=2\\cdot\\frac{5\\cdot10^{-7}\\cdot2}{10^{-4}}=20\\ \\mathrm{mm}$$",
+    "A secondary maximum lies between neighbouring minima: $$y_2-y_1=\\frac{\\lambda L}{a}=10\\ \\mathrm{mm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bitta tirqish minimumlari: $a\\sin\\theta=m\\lambda$",
+    "ru": "Минимумы одной щели: $a\\sin\\theta=m\\lambda$",
+    "en": "Single-slit minima: $a\\sin\\theta=m\\lambda$"
+   },
+   {
+    "uz": "Markaziy maksimum kengligi: $w=2\\frac{\\lambda L}{a}$",
+    "ru": "Ширина центрального максимума: $w=2\\frac{\\lambda L}{a}$",
+    "en": "Width of the central maximum: $w=2\\frac{\\lambda L}{a}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Bitta tirqish minimumlari",
+   "ru": "Минимумы одной щели",
+   "en": "Single-slit minima"
+  },
+  "answer": "\\theta_1\\approx5\\cdot10^{-3}\\ \\mathrm{rad};\\ w=20\\ \\mathrm{mm};\\ 10\\ \\mathrm{mm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 3.2.2 (Single-Slit Diffraction) g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L26-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "To'lqin uzunligi $500\\ \\mathrm{nm}$ bo'lgan yassi to'lqin radiusi $1\\ \\mathrm{mm}$ bo'lgan doiraviy teshikka tik tushadi. Teshik o'qida undan $1\\ \\mathrm{m}$ masofadagi $P$ nuqta uchun birinchi Frenel zonasi radiusini va teshikdagi zonalar sonini toping. Markaz yorug'mi yoki qorong'imi? Qanday masofada teshik aynan bitta zonani ochadi va u yerda intensivlik qanday?",
+   "ru": "Плоская волна с длиной волны $500\\ \\mathrm{nm}$ падает нормально на круглое отверстие радиусом $1\\ \\mathrm{mm}$. Для точки $P$ на оси отверстия на расстоянии $1\\ \\mathrm{m}$ найдите радиус первой зоны Френеля и число зон в отверстии. Светлый или тёмный центр? На каком расстоянии отверстие открывает ровно одну зону и какова там интенсивность?",
+   "en": "A plane wave of wavelength $500\\ \\mathrm{nm}$ falls normally on a circular aperture of radius $1\\ \\mathrm{mm}$. For a point $P$ on the axis $1\\ \\mathrm{m}$ from the aperture, find the radius of the first Fresnel zone and the number of zones in the aperture. Is the centre bright or dark? At what distance does the aperture open exactly one zone, and what is the intensity there?"
+  },
+  "figure": "figures/B2-L26-S02.png",
+  "solution": {
+   "uz": [
+    "Birinchi zona radiusi: $$r_1=\\sqrt{b\\lambda}=\\sqrt{1\\cdot5\\cdot10^{-7}}\\approx0.71\\ \\mathrm{mm}$$",
+    "Teshikdagi zonalar soni: $$k=\\frac{r^2}{b\\lambda}=\\frac{10^{-6}}{5\\cdot10^{-7}}=2$$",
+    "Ikki zona deyarli yo'qotadi — markaz qorong'i: $$I\\approx0$$",
+    "Bitta zona uchun $k=1$: $$b=\\frac{r^2}{\\lambda}=\\frac{10^{-6}}{5\\cdot10^{-7}}=2\\ \\mathrm{m},\\qquad I=4I_0$$"
+   ],
+   "ru": [
+    "Радиус первой зоны: $$r_1=\\sqrt{b\\lambda}=\\sqrt{1\\cdot5\\cdot10^{-7}}\\approx0.71\\ \\mathrm{mm}$$",
+    "Число зон в отверстии: $$k=\\frac{r^2}{b\\lambda}=\\frac{10^{-6}}{5\\cdot10^{-7}}=2$$",
+    "Две зоны гасят друг друга — центр тёмный: $$I\\approx0$$",
+    "Для одной зоны $k=1$: $$b=\\frac{r^2}{\\lambda}=\\frac{10^{-6}}{5\\cdot10^{-7}}=2\\ \\mathrm{m},\\qquad I=4I_0$$"
+   ],
+   "en": [
+    "The radius of the first zone: $$r_1=\\sqrt{b\\lambda}=\\sqrt{1\\cdot5\\cdot10^{-7}}\\approx0.71\\ \\mathrm{mm}$$",
+    "The number of zones in the aperture: $$k=\\frac{r^2}{b\\lambda}=\\frac{10^{-6}}{5\\cdot10^{-7}}=2$$",
+    "Two zones cancel — the centre is dark: $$I\\approx0$$",
+    "For one zone $k=1$: $$b=\\frac{r^2}{\\lambda}=\\frac{10^{-6}}{5\\cdot10^{-7}}=2\\ \\mathrm{m},\\qquad I=4I_0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Frenel zonasi radiusi: $r_k=\\sqrt{kb\\lambda}$",
+    "ru": "Радиус зоны Френеля: $r_k=\\sqrt{kb\\lambda}$",
+    "en": "Fresnel zone radius: $r_k=\\sqrt{kb\\lambda}$"
+   },
+   null,
+   {
+    "uz": "Zonalar amplitudasi: $A_\\infty=\\frac{A_1}{2}$, bitta zona — $4I_0$, ikki zona — $0$",
+    "ru": "Амплитуды зон: $A_\\infty=\\frac{A_1}{2}$, одна зона — $4I_0$, две зоны — $0$",
+    "en": "Zone amplitudes: $A_\\infty=\\frac{A_1}{2}$, one zone — $4I_0$, two zones — $0$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Frenel zonalari",
+   "ru": "Зоны Френеля",
+   "en": "Fresnel zones"
+  },
+  "answer": "r_1\\approx0.71\\ \\mathrm{mm};\\ k=2;\\ b=2\\ \\mathrm{m},\\ I=4I_0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "Irodov, «Problems in General Physics», 5.98-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L26-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$1\\ \\mathrm{mm}$ da $500$ ta chizig'i bor panjaraga to'lqin uzunligi $600\\ \\mathrm{nm}$ bo'lgan yorug'lik tik tushadi. Birinchi tartibli maksimum burchagini, kuzatiladigan eng katta tartibni va maksimumlarning umumiy sonini toping.",
+   "ru": "На решётку, имеющую $500$ штрихов на $1\\ \\mathrm{mm}$, нормально падает свет с длиной волны $600\\ \\mathrm{nm}$. Найдите угол максимума первого порядка, наибольший наблюдаемый порядок и общее число максимумов.",
+   "en": "Light of wavelength $600\\ \\mathrm{nm}$ falls normally on a grating with $500$ lines per $1\\ \\mathrm{mm}$. Find the angle of the first-order maximum, the highest observable order and the total number of maxima."
+  },
+  "figure": "figures/B2-L26-S03.png",
+  "solution": {
+   "uz": [
+    "Panjara davri: $$d=\\frac{1\\ \\mathrm{mm}}{500}=2\\ \\mu\\mathrm{m}$$",
+    "Birinchi tartib: $$\\sin\\theta_1=\\frac{\\lambda}{d}=\\frac{0.6}{2}=0.3,\\qquad \\theta_1\\approx17.5^\\circ$$",
+    "$\\sin\\theta<1$ sharti: $$m<\\frac{d}{\\lambda}=3.33\\ \\Rightarrow\\ m_{max}=3$$",
+    "Har ikki tomonda $3$ tadan va markaziy: $$2\\cdot3+1=7$$"
+   ],
+   "ru": [
+    "Период решётки: $$d=\\frac{1\\ \\mathrm{mm}}{500}=2\\ \\mu\\mathrm{m}$$",
+    "Первый порядок: $$\\sin\\theta_1=\\frac{\\lambda}{d}=\\frac{0.6}{2}=0.3,\\qquad \\theta_1\\approx17.5^\\circ$$",
+    "Условие $\\sin\\theta<1$: $$m<\\frac{d}{\\lambda}=3.33\\ \\Rightarrow\\ m_{max}=3$$",
+    "По $3$ с каждой стороны и центральный: $$2\\cdot3+1=7$$"
+   ],
+   "en": [
+    "The grating period: $$d=\\frac{1\\ \\mathrm{mm}}{500}=2\\ \\mu\\mathrm{m}$$",
+    "The first order: $$\\sin\\theta_1=\\frac{\\lambda}{d}=\\frac{0.6}{2}=0.3,\\qquad \\theta_1\\approx17.5^\\circ$$",
+    "The condition $\\sin\\theta<1$: $$m<\\frac{d}{\\lambda}=3.33\\ \\Rightarrow\\ m_{max}=3$$",
+    "$3$ on each side plus the central one: $$2\\cdot3+1=7$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Panjara tenglamasi: $d\\sin\\theta=m\\lambda$",
+    "ru": "Уравнение решётки: $d\\sin\\theta=m\\lambda$",
+    "en": "Grating equation: $d\\sin\\theta=m\\lambda$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Panjara tenglamasi",
+   "ru": "Уравнение решётки",
+   "en": "Grating equation"
+  },
+  "answer": "\\theta_1\\approx17.5^\\circ;\\ m_{max}=3;\\ 7",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original (B2-L26, panjara)"
+ },
+ {
+  "id": "B2-L26-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Intensivligi $I_0$ bo'lgan yassi to'lqin radiusini o'zgartirish mumkin bo'lgan doiraviy teshikka tik tushadi. Vektor diagramma yordamida o'qdagi $P$ nuqtada intensivlikni toping: teshik birinchi zonaning yarmini (yuz bo'yicha), birinchi zonani, birinchi ikki zonani ochganda. Teshik o'rniga birinchi zonani yopuvchi noshaffof disk qo'yilsa-chi?",
+   "ru": "Плоская волна интенсивностью $I_0$ падает нормально на круглое отверстие с изменяемым радиусом. С помощью векторной диаграммы найдите интенсивность в точке $P$ на оси, когда отверстие открывает половину первой зоны (по площади), первую зону, первые две зоны. А если вместо отверстия поставить непрозрачный диск, закрывающий первую зону?",
+   "en": "A plane wave of intensity $I_0$ falls normally on a circular aperture of adjustable radius. Using the vector diagram, find the intensity at the point $P$ on the axis when the aperture opens half of the first zone (by area), the first zone, the first two zones. What if the aperture is replaced by an opaque disc covering the first zone?"
+  },
+  "figure": "figures/B2-L26-S04.png",
+  "solution": {
+   "uz": [
+    "Birinchi zona — diametri $A_1$ bo'lgan yarim aylana, butun front: $$A_\\infty=\\frac{A_1}{2},\\qquad I_0\\propto\\frac{A_1^2}{4}$$",
+    "Yarim zona — faza $\\frac{\\pi}{2}$, vatar: $$A=A_1\\sin\\frac{\\pi}{4}=\\frac{A_1}{\\sqrt{2}}\\ \\Rightarrow\\ I=2I_0$$",
+    "Bitta zona — diametr, ikki zona — spiral o'z boshiga qaytadi: $$I=\\left(\\frac{A_1}{A_1/2}\\right)^2I_0=4I_0,\\qquad I\\approx0$$",
+    "Disk: qolgan zonalar — Puasson dog'i: $$A\\approx\\frac{A_1}{2}\\ \\Rightarrow\\ I\\approx I_0$$"
+   ],
+   "ru": [
+    "Первая зона — полуокружность диаметром $A_1$, весь фронт: $$A_\\infty=\\frac{A_1}{2},\\qquad I_0\\propto\\frac{A_1^2}{4}$$",
+    "Половина зоны — фаза $\\frac{\\pi}{2}$, хорда: $$A=A_1\\sin\\frac{\\pi}{4}=\\frac{A_1}{\\sqrt{2}}\\ \\Rightarrow\\ I=2I_0$$",
+    "Одна зона — диаметр, две зоны — спираль возвращается к началу: $$I=\\left(\\frac{A_1}{A_1/2}\\right)^2I_0=4I_0,\\qquad I\\approx0$$",
+    "Диск: остальные зоны — пятно Пуассона: $$A\\approx\\frac{A_1}{2}\\ \\Rightarrow\\ I\\approx I_0$$"
+   ],
+   "en": [
+    "The first zone is a semicircle of diameter $A_1$; the whole front gives: $$A_\\infty=\\frac{A_1}{2},\\qquad I_0\\propto\\frac{A_1^2}{4}$$",
+    "Half a zone — phase $\\frac{\\pi}{2}$, the chord: $$A=A_1\\sin\\frac{\\pi}{4}=\\frac{A_1}{\\sqrt{2}}\\ \\Rightarrow\\ I=2I_0$$",
+    "One zone — the diameter; two zones — the spiral returns to its start: $$I=\\left(\\frac{A_1}{A_1/2}\\right)^2I_0=4I_0,\\qquad I\\approx0$$",
+    "Disc: the remaining zones — Poisson's spot: $$A\\approx\\frac{A_1}{2}\\ \\Rightarrow\\ I\\approx I_0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Zonalar amplitudasi: $A_\\infty=\\frac{A_1}{2}$, bitta zona — $4I_0$, ikki zona — $0$",
+    "ru": "Амплитуды зон: $A_\\infty=\\frac{A_1}{2}$, одна зона — $4I_0$, две зоны — $0$",
+    "en": "Zone amplitudes: $A_\\infty=\\frac{A_1}{2}$, one zone — $4I_0$, two zones — $0$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Vektor diagramma, Frenel zonalari",
+   "ru": "Векторная диаграмма, зоны Френеля",
+   "en": "Vector diagram, Fresnel zones"
+  },
+  "answer": "2I_0;\\ 4I_0;\\ 0;\\ I_0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "Irodov, «Problems in General Physics», 5.101-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L26-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Zona plastinkasining birinchi zonasi radiusi $0.5\\ \\mathrm{mm}$, to'lqin uzunligi $500\\ \\mathrm{nm}$. Plastinkaning bosh fokus masofasini toping. Plastinkadan $1.5\\ \\mathrm{m}$ masofadagi nuqtaviy manbaning tasviri qayerda hosil bo'ladi? Eng yaqin qo'shimcha fokus qayerda?",
+   "ru": "Радиус первой зоны зонной пластинки $0.5\\ \\mathrm{mm}$, длина волны $500\\ \\mathrm{nm}$. Найдите главное фокусное расстояние пластинки. Где получится изображение точечного источника, находящегося на расстоянии $1.5\\ \\mathrm{m}$ от пластинки? Где ближайший дополнительный фокус?",
+   "en": "The first zone of a zone plate has radius $0.5\\ \\mathrm{mm}$ and the wavelength is $500\\ \\mathrm{nm}$. Find the principal focal length of the plate. Where is the image of a point source $1.5\\ \\mathrm{m}$ from the plate formed? Where is the nearest additional focus?"
+  },
+  "figure": "figures/B2-L26-S05.png",
+  "solution": {
+   "uz": [
+    "Fokusda birinchi zona radiusi $r_1=\\sqrt{f\\lambda}$: $$f=\\frac{r_1^2}{\\lambda}=\\frac{\\left(5\\cdot10^{-4}\\right)^2}{5\\cdot10^{-7}}=0.5\\ \\mathrm{m}$$",
+    "Linza formulasi (zonalar sharti $r_1^2=\\frac{ab}{a+b}\\lambda$ dan): $$\\frac{1}{b}=\\frac{1}{0.5}-\\frac{1}{1.5}=\\frac{4}{3}\\ \\Rightarrow\\ b=0.75\\ \\mathrm{m}$$",
+    "$\\frac{f}{3}$ da har bir zona uchta yangi zonani o'z ichiga oladi: $$\\frac{f}{3}\\approx0.17\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "В фокусе радиус первой зоны $r_1=\\sqrt{f\\lambda}$: $$f=\\frac{r_1^2}{\\lambda}=\\frac{\\left(5\\cdot10^{-4}\\right)^2}{5\\cdot10^{-7}}=0.5\\ \\mathrm{m}$$",
+    "Формула линзы (из условия зон $r_1^2=\\frac{ab}{a+b}\\lambda$): $$\\frac{1}{b}=\\frac{1}{0.5}-\\frac{1}{1.5}=\\frac{4}{3}\\ \\Rightarrow\\ b=0.75\\ \\mathrm{m}$$",
+    "В $\\frac{f}{3}$ каждая зона содержит три новые зоны: $$\\frac{f}{3}\\approx0.17\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "At the focus the first zone has radius $r_1=\\sqrt{f\\lambda}$: $$f=\\frac{r_1^2}{\\lambda}=\\frac{\\left(5\\cdot10^{-4}\\right)^2}{5\\cdot10^{-7}}=0.5\\ \\mathrm{m}$$",
+    "The lens formula (from the zone condition $r_1^2=\\frac{ab}{a+b}\\lambda$): $$\\frac{1}{b}=\\frac{1}{0.5}-\\frac{1}{1.5}=\\frac{4}{3}\\ \\Rightarrow\\ b=0.75\\ \\mathrm{m}$$",
+    "At $\\frac{f}{3}$ each zone contains three new zones: $$\\frac{f}{3}\\approx0.17\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Zona plastinkasi: $f=\\frac{r_1^2}{\\lambda}$, $\\frac{1}{a}+\\frac{1}{b}=\\frac{1}{f}$",
+    "ru": "Зонная пластинка: $f=\\frac{r_1^2}{\\lambda}$, $\\frac{1}{a}+\\frac{1}{b}=\\frac{1}{f}$",
+    "en": "Zone plate: $f=\\frac{r_1^2}{\\lambda}$, $\\frac{1}{a}+\\frac{1}{b}=\\frac{1}{f}$"
+   },
+   {
+    "uz": "Nuqtaviy manba uchun zona radiusi: $r_k=\\sqrt{k\\frac{ab}{a+b}\\lambda}$",
+    "ru": "Радиус зоны для точечного источника: $r_k=\\sqrt{k\\frac{ab}{a+b}\\lambda}$",
+    "en": "Zone radius for a point source: $r_k=\\sqrt{k\\frac{ab}{a+b}\\lambda}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Zona plastinkasi",
+   "ru": "Зонная пластинка",
+   "en": "Zone plate"
+  },
+  "answer": "f=0.5\\ \\mathrm{m};\\ b=0.75\\ \\mathrm{m};\\ \\frac{f}{3}\\approx0.17\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "Irodov, «Problems in General Physics», 5.109-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L26-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki tirqishli tajribada har bir tirqish kengligi $0.06\\ \\mathrm{mm}$, tirqishlar markazlari orasi $0.3\\ \\mathrm{mm}$, $\\lambda=600\\ \\mathrm{nm}$, ekran $2\\ \\mathrm{m}$ masofada. Interferension yo'llar orasidagi masofani, markaziy difraksion maksimum kengligini, tushib qolgan tartiblarni va markaziy maksimum ichidagi yorug' yo'llar sonini toping. Birinchi tartibli yo'l intensivligi markaziynikidan necha marta kichik?",
+   "ru": "В опыте с двумя щелями ширина каждой щели $0.06\\ \\mathrm{mm}$, расстояние между центрами щелей $0.3\\ \\mathrm{mm}$, $\\lambda=600\\ \\mathrm{nm}$, экран на расстоянии $2\\ \\mathrm{m}$. Найдите расстояние между интерференционными полосами, ширину центрального дифракционного максимума, пропущенные порядки и число светлых полос внутри центрального максимума. Во сколько раз интенсивность полосы первого порядка меньше центральной?",
+   "en": "In a double-slit experiment each slit is $0.06\\ \\mathrm{mm}$ wide, the slit centres are $0.3\\ \\mathrm{mm}$ apart, $\\lambda=600\\ \\mathrm{nm}$ and the screen is $2\\ \\mathrm{m}$ away. Find the spacing of the interference fringes, the width of the central diffraction maximum, the missing orders and the number of bright fringes inside the central maximum. By what factor is the intensity of the first-order fringe smaller than that of the central one?"
+  },
+  "figure": "figures/B2-L26-S06.png",
+  "solution": {
+   "uz": [
+    "Interferension yo'llar: $$\\Delta y=\\frac{\\lambda L}{d}=\\frac{6\\cdot10^{-7}\\cdot2}{3\\cdot10^{-4}}=4\\ \\mathrm{mm}$$",
+    "Difraksion o'rama: $$w=2\\frac{\\lambda L}{a}=40\\ \\mathrm{mm}$$",
+    "$\\frac{d}{a}=5$ — tushib qolgan tartiblar va yo'llar soni: $$m=5,\\ 10,\\ \\ldots,\\qquad 2\\cdot5-1=9$$",
+    "Birinchi tartibda $\\sin\\theta=\\frac{\\lambda}{d}$, $\\beta=\\frac{\\pi a}{d}=\\frac{\\pi}{5}$: $$\\frac{I_1}{I_0}=\\left(\\frac{\\sin36^\\circ}{\\pi/5}\\right)^2\\approx0.875$$"
+   ],
+   "ru": [
+    "Интерференционные полосы: $$\\Delta y=\\frac{\\lambda L}{d}=\\frac{6\\cdot10^{-7}\\cdot2}{3\\cdot10^{-4}}=4\\ \\mathrm{mm}$$",
+    "Дифракционная огибающая: $$w=2\\frac{\\lambda L}{a}=40\\ \\mathrm{mm}$$",
+    "$\\frac{d}{a}=5$ — пропущенные порядки и число полос: $$m=5,\\ 10,\\ \\ldots,\\qquad 2\\cdot5-1=9$$",
+    "В первом порядке $\\sin\\theta=\\frac{\\lambda}{d}$, $\\beta=\\frac{\\pi a}{d}=\\frac{\\pi}{5}$: $$\\frac{I_1}{I_0}=\\left(\\frac{\\sin36^\\circ}{\\pi/5}\\right)^2\\approx0.875$$"
+   ],
+   "en": [
+    "The interference fringes: $$\\Delta y=\\frac{\\lambda L}{d}=\\frac{6\\cdot10^{-7}\\cdot2}{3\\cdot10^{-4}}=4\\ \\mathrm{mm}$$",
+    "The diffraction envelope: $$w=2\\frac{\\lambda L}{a}=40\\ \\mathrm{mm}$$",
+    "$\\frac{d}{a}=5$ — the missing orders and the number of fringes: $$m=5,\\ 10,\\ \\ldots,\\qquad 2\\cdot5-1=9$$",
+    "In the first order $\\sin\\theta=\\frac{\\lambda}{d}$ and $\\beta=\\frac{\\pi a}{d}=\\frac{\\pi}{5}$: $$\\frac{I_1}{I_0}=\\left(\\frac{\\sin36^\\circ}{\\pi/5}\\right)^2\\approx0.875$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Markaziy maksimum kengligi: $w=2\\frac{\\lambda L}{a}$",
+    "ru": "Ширина центрального максимума: $w=2\\frac{\\lambda L}{a}$",
+    "en": "Width of the central maximum: $w=2\\frac{\\lambda L}{a}$"
+   },
+   {
+    "uz": "Tushib qolgan tartiblar: $m=\\frac{d}{a}k$",
+    "ru": "Пропущенные порядки: $m=\\frac{d}{a}k$",
+    "en": "Missing orders: $m=\\frac{d}{a}k$"
+   },
+   {
+    "uz": "Bitta tirqish intensivligi: $I=I_0\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2$",
+    "ru": "Интенсивность одной щели: $I=I_0\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2$",
+    "en": "Single-slit intensity: $I=I_0\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2$"
+   }
+  ],
+  "basis": {
+   "uz": "Ikki tirqish: interferensiya va difraksiya",
+   "ru": "Две щели: интерференция и дифракция",
+   "en": "Double slit: interference and diffraction"
+  },
+  "answer": "\\Delta y=4\\ \\mathrm{mm};\\ w=40\\ \\mathrm{mm};\\ m=5,\\ 10;\\ 9;\\ 0.875",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "Irodov, «Problems in General Physics», 5.124-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L26-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Panjaraga oq yorug'lik ($400$–$700\\ \\mathrm{nm}$) tik tushadi. Birinchi va ikkinchi tartibli spektrlar qoplanmasligini ko'rsating. Uchinchi tartibda qaysi to'lqin uzunligi ikkinchi tartibdagi $600\\ \\mathrm{nm}$ bilan bir yo'nalishda? Uchinchi tartib spektrining qaysi qismi ikkinchi tartib bilan qoplanadi?",
+   "ru": "На решётку нормально падает белый свет ($400$–$700\\ \\mathrm{nm}$). Покажите, что спектры первого и второго порядков не перекрываются. Какая длина волны в третьем порядке идёт в том же направлении, что и $600\\ \\mathrm{nm}$ во втором? Какая часть спектра третьего порядка перекрывается со вторым порядком?",
+   "en": "White light ($400$–$700\\ \\mathrm{nm}$) falls normally on a grating. Show that the first- and second-order spectra do not overlap. Which wavelength in the third order goes in the same direction as $600\\ \\mathrm{nm}$ in the second? Which part of the third-order spectrum overlaps the second order?"
+  },
+  "figure": "figures/B2-L26-S07.png",
+  "solution": {
+   "uz": [
+    "Burchak $m\\lambda$ bilan aniqlanadi; $1$-tartib oxiri va $2$-tartib boshi: $$1\\cdot700<2\\cdot400$$",
+    "$2$-tartibdagi $600\\ \\mathrm{nm}$ bilan ustma-ust: $$3\\lambda=2\\cdot600\\ \\Rightarrow\\ \\lambda=400\\ \\mathrm{nm}$$",
+    "$2$-tartib $2\\cdot700$ gacha yetadi: $$3\\lambda\\leq1400\\ \\Rightarrow\\ 400\\ \\mathrm{nm}\\leq\\lambda\\leq467\\ \\mathrm{nm}$$"
+   ],
+   "ru": [
+    "Угол определяется $m\\lambda$; конец $1$-го порядка и начало $2$-го: $$1\\cdot700<2\\cdot400$$",
+    "Совпадает с $600\\ \\mathrm{nm}$ во $2$-м порядке: $$3\\lambda=2\\cdot600\\ \\Rightarrow\\ \\lambda=400\\ \\mathrm{nm}$$",
+    "$2$-й порядок доходит до $2\\cdot700$: $$3\\lambda\\leq1400\\ \\Rightarrow\\ 400\\ \\mathrm{nm}\\leq\\lambda\\leq467\\ \\mathrm{nm}$$"
+   ],
+   "en": [
+    "The angle is set by $m\\lambda$; the end of order $1$ and the start of order $2$: $$1\\cdot700<2\\cdot400$$",
+    "Coincides with $600\\ \\mathrm{nm}$ in order $2$: $$3\\lambda=2\\cdot600\\ \\Rightarrow\\ \\lambda=400\\ \\mathrm{nm}$$",
+    "Order $2$ reaches $2\\cdot700$: $$3\\lambda\\leq1400\\ \\Rightarrow\\ 400\\ \\mathrm{nm}\\leq\\lambda\\leq467\\ \\mathrm{nm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Spektrlar qoplanishi: $m_1\\lambda_1=m_2\\lambda_2$",
+    "ru": "Перекрытие спектров: $m_1\\lambda_1=m_2\\lambda_2$",
+    "en": "Overlap of spectra: $m_1\\lambda_1=m_2\\lambda_2$"
+   },
+   {
+    "uz": "Panjara tenglamasi: $d\\sin\\theta=m\\lambda$",
+    "ru": "Уравнение решётки: $d\\sin\\theta=m\\lambda$",
+    "en": "Grating equation: $d\\sin\\theta=m\\lambda$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Spektrlar qoplanishi",
+   "ru": "Перекрытие спектров",
+   "en": "Overlap of spectra"
+  },
+  "answer": "\\lambda=400\\ \\mathrm{nm};\\ 400\\ \\mathrm{nm}\\leq\\lambda\\leq467\\ \\mathrm{nm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original (B2-L26, spektrlar)"
+ },
+ {
+  "id": "B2-L26-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Natriyning sariq dubleti $589.0\\ \\mathrm{nm}$ va $589.6\\ \\mathrm{nm}$. Uni ajratish uchun qanday ajrata olish qobiliyati kerak? $1\\ \\mathrm{mm}$ da $300$ ta chizig'i bor panjaraning $1\\ \\mathrm{cm}$ kengligi yoritilgan. Birinchi tartibda dublet ajratiladimi? Shu tartibda ajratiladigan eng kichik farq va eng katta tartibni toping.",
+   "ru": "Жёлтый дублет натрия: $589.0\\ \\mathrm{nm}$ и $589.6\\ \\mathrm{nm}$. Какая разрешающая способность нужна, чтобы его разрешить? У решётки с $300$ штрихами на $1\\ \\mathrm{mm}$ освещена ширина $1\\ \\mathrm{cm}$. Разрешается ли дублет в первом порядке? Найдите наименьшую разрешаемую в этом порядке разность и наибольший порядок.",
+   "en": "The yellow sodium doublet is $589.0\\ \\mathrm{nm}$ and $589.6\\ \\mathrm{nm}$. What resolving power is needed to resolve it? A grating with $300$ lines per $1\\ \\mathrm{mm}$ is illuminated over a width of $1\\ \\mathrm{cm}$. Is the doublet resolved in the first order? Find the smallest difference resolved in this order and the highest order."
+  },
+  "figure": "figures/B2-L26-S08.png",
+  "solution": {
+   "uz": [
+    "Kerakli ajrata olish: $$R=\\frac{\\lambda}{\\delta\\lambda}=\\frac{589.3}{0.6}\\approx982$$",
+    "Yoritilgan chiziqlar soni va birinchi tartib: $$N=300\\cdot10=3000,\\qquad R_1=3000>982$$",
+    "Eng kichik ajratiladigan farq: $$\\delta\\lambda=\\frac{\\lambda}{N}=\\frac{589.3}{3000}\\approx0.20\\ \\mathrm{nm}$$",
+    "Eng katta tartib ($d\\approx3.33\\ \\mu\\mathrm{m}$): $$m<\\frac{d}{\\lambda}\\approx5.66\\ \\Rightarrow\\ m_{max}=5$$"
+   ],
+   "ru": [
+    "Нужная разрешающая способность: $$R=\\frac{\\lambda}{\\delta\\lambda}=\\frac{589.3}{0.6}\\approx982$$",
+    "Число освещённых штрихов и первый порядок: $$N=300\\cdot10=3000,\\qquad R_1=3000>982$$",
+    "Наименьшая разрешаемая разность: $$\\delta\\lambda=\\frac{\\lambda}{N}=\\frac{589.3}{3000}\\approx0.20\\ \\mathrm{nm}$$",
+    "Наибольший порядок ($d\\approx3.33\\ \\mu\\mathrm{m}$): $$m<\\frac{d}{\\lambda}\\approx5.66\\ \\Rightarrow\\ m_{max}=5$$"
+   ],
+   "en": [
+    "The required resolving power: $$R=\\frac{\\lambda}{\\delta\\lambda}=\\frac{589.3}{0.6}\\approx982$$",
+    "The number of illuminated lines and the first order: $$N=300\\cdot10=3000,\\qquad R_1=3000>982$$",
+    "The smallest resolved difference: $$\\delta\\lambda=\\frac{\\lambda}{N}=\\frac{589.3}{3000}\\approx0.20\\ \\mathrm{nm}$$",
+    "The highest order ($d\\approx3.33\\ \\mu\\mathrm{m}$): $$m<\\frac{d}{\\lambda}\\approx5.66\\ \\Rightarrow\\ m_{max}=5$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ajrata olish qobiliyati: $R=\\frac{\\lambda}{\\delta\\lambda}=mN$",
+    "ru": "Разрешающая способность: $R=\\frac{\\lambda}{\\delta\\lambda}=mN$",
+    "en": "Resolving power: $R=\\frac{\\lambda}{\\delta\\lambda}=mN$"
+   },
+   null,
+   null,
+   {
+    "uz": "Panjara tenglamasi: $d\\sin\\theta=m\\lambda$",
+    "ru": "Уравнение решётки: $d\\sin\\theta=m\\lambda$",
+    "en": "Grating equation: $d\\sin\\theta=m\\lambda$"
+   }
+  ],
+  "basis": {
+   "uz": "Ajrata olish qobiliyati",
+   "ru": "Разрешающая способность",
+   "en": "Resolving power"
+  },
+  "answer": "R\\approx982;\\ N=3000;\\ \\delta\\lambda\\approx0.20\\ \\mathrm{nm};\\ m_{max}=5",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "Irodov, «Problems in General Physics», 5.140-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L26-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Orbital teleskop ko'zgusining diametri $2.4\\ \\mathrm{m}$. To'lqin uzunligi $550\\ \\mathrm{nm}$ uchun uning burchak ajrata olishini toping. Oy sirtidagi qanday masofadagi ikki nuqtani ajrata oladi (Oygacha masofa $3.84\\cdot10^8\\ \\mathrm{m}$)?",
+   "ru": "Диаметр зеркала орбитального телескопа $2.4\\ \\mathrm{m}$. Найдите его угловое разрешение для длины волны $550\\ \\mathrm{nm}$. Какие две точки на поверхности Луны он может разрешить (расстояние до Луны $3.84\\cdot10^8\\ \\mathrm{m}$)?",
+   "en": "The mirror of an orbital telescope has a diameter of $2.4\\ \\mathrm{m}$. Find its angular resolution at a wavelength of $550\\ \\mathrm{nm}$. How far apart must two points on the Moon's surface be for it to resolve them (the distance to the Moon is $3.84\\cdot10^8\\ \\mathrm{m}$)?"
+  },
+  "figure": "figures/B2-L26-S09.png",
+  "solution": {
+   "uz": [
+    "Reley mezoni: $$\\theta_{min}=1.22\\cdot\\frac{5.5\\cdot10^{-7}}{2.4}\\approx2.8\\cdot10^{-7}\\ \\mathrm{rad}$$",
+    "Yoy sekundlarida ($1\\ \\mathrm{rad}\\approx2.06\\cdot10^5\\,''$): $$\\theta_{min}\\approx0.058''$$",
+    "Oydagi masofa: $$s=\\theta_{min}L=2.8\\cdot10^{-7}\\cdot3.84\\cdot10^8\\approx107\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Критерий Рэлея: $$\\theta_{min}=1.22\\cdot\\frac{5.5\\cdot10^{-7}}{2.4}\\approx2.8\\cdot10^{-7}\\ \\mathrm{rad}$$",
+    "В угловых секундах ($1\\ \\mathrm{rad}\\approx2.06\\cdot10^5\\,''$): $$\\theta_{min}\\approx0.058''$$",
+    "Расстояние на Луне: $$s=\\theta_{min}L=2.8\\cdot10^{-7}\\cdot3.84\\cdot10^8\\approx107\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "The Rayleigh criterion: $$\\theta_{min}=1.22\\cdot\\frac{5.5\\cdot10^{-7}}{2.4}\\approx2.8\\cdot10^{-7}\\ \\mathrm{rad}$$",
+    "In arcseconds ($1\\ \\mathrm{rad}\\approx2.06\\cdot10^5\\,''$): $$\\theta_{min}\\approx0.058''$$",
+    "The distance on the Moon: $$s=\\theta_{min}L=2.8\\cdot10^{-7}\\cdot3.84\\cdot10^8\\approx107\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Reley mezoni: $\\theta_{min}=1.22\\frac{\\lambda}{D}$",
+    "ru": "Критерий Рэлея: $\\theta_{min}=1.22\\frac{\\lambda}{D}$",
+    "en": "Rayleigh criterion: $\\theta_{min}=1.22\\frac{\\lambda}{D}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Reley mezoni",
+   "ru": "Критерий Рэлея",
+   "en": "Rayleigh criterion"
+  },
+  "answer": "\\theta_{min}\\approx2.8\\cdot10^{-7}\\ \\mathrm{rad}\\approx0.058'';\\ 107\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "Irodov, «Problems in General Physics», 5.147-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L26-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Diametri $2\\ \\mathrm{mm}$ bo'lgan geliy-neon lazer dastasi ($\\lambda=633\\ \\mathrm{nm}$) Oyga yo'naltirilgan. Oydagi dog' diametrini (birinchi qorong'i halqa bo'yicha) baholang. Dasta diametri $1\\ \\mathrm{m}$ gacha kengaytirilsa-chi? Oygacha masofa $3.84\\cdot10^8\\ \\mathrm{m}$.",
+   "ru": "Пучок гелий-неонового лазера диаметром $2\\ \\mathrm{mm}$ ($\\lambda=633\\ \\mathrm{nm}$) направлен на Луну. Оцените диаметр пятна на Луне (по первому тёмному кольцу). А если расширить пучок до $1\\ \\mathrm{m}$? Расстояние до Луны $3.84\\cdot10^8\\ \\mathrm{m}$.",
+   "en": "A helium-neon laser beam $2\\ \\mathrm{mm}$ in diameter ($\\lambda=633\\ \\mathrm{nm}$) is aimed at the Moon. Estimate the diameter of the spot on the Moon (to the first dark ring). What if the beam is expanded to $1\\ \\mathrm{m}$? The distance to the Moon is $3.84\\cdot10^8\\ \\mathrm{m}$."
+  },
+  "figure": "figures/B2-L26-S10.png",
+  "solution": {
+   "uz": [
+    "Dastaning yoyilish yarim burchagi (doiraviy teshik): $$\\theta_1=1.22\\frac{\\lambda}{D}=1.22\\cdot\\frac{6.33\\cdot10^{-7}}{2\\cdot10^{-3}}\\approx3.86\\cdot10^{-4}$$",
+    "Dog' diametri: $$2\\theta_1L=2\\cdot3.86\\cdot10^{-4}\\cdot3.84\\cdot10^8\\approx297\\ \\mathrm{km}$$",
+    "$D$ ni $500$ marta oshirsak, dog' $500$ marta kichrayadi: $$\\frac{297\\ \\mathrm{km}}{500}\\approx593\\ \\mathrm{m}$$"
+   ],
+   "ru": [
+    "Полуугол расходимости пучка (круглое отверстие): $$\\theta_1=1.22\\frac{\\lambda}{D}=1.22\\cdot\\frac{6.33\\cdot10^{-7}}{2\\cdot10^{-3}}\\approx3.86\\cdot10^{-4}$$",
+    "Диаметр пятна: $$2\\theta_1L=2\\cdot3.86\\cdot10^{-4}\\cdot3.84\\cdot10^8\\approx297\\ \\mathrm{km}$$",
+    "Увеличив $D$ в $500$ раз, уменьшаем пятно в $500$ раз: $$\\frac{297\\ \\mathrm{km}}{500}\\approx593\\ \\mathrm{m}$$"
+   ],
+   "en": [
+    "The half-angle of beam divergence (circular aperture): $$\\theta_1=1.22\\frac{\\lambda}{D}=1.22\\cdot\\frac{6.33\\cdot10^{-7}}{2\\cdot10^{-3}}\\approx3.86\\cdot10^{-4}$$",
+    "The spot diameter: $$2\\theta_1L=2\\cdot3.86\\cdot10^{-4}\\cdot3.84\\cdot10^8\\approx297\\ \\mathrm{km}$$",
+    "Increasing $D$ by a factor of $500$ shrinks the spot $500$ times: $$\\frac{297\\ \\mathrm{km}}{500}\\approx593\\ \\mathrm{m}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Reley mezoni: $\\theta_{min}=1.22\\frac{\\lambda}{D}$",
+    "ru": "Критерий Рэлея: $\\theta_{min}=1.22\\frac{\\lambda}{D}$",
+    "en": "Rayleigh criterion: $\\theta_{min}=1.22\\frac{\\lambda}{D}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Dastaning difraksion yoyilishi",
+   "ru": "Дифракционная расходимость пучка",
+   "en": "Diffraction divergence of a beam"
+  },
+  "answer": "\\approx297\\ \\mathrm{km};\\ \\approx593\\ \\mathrm{m}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original (B2-L26, lazer dastasi)"
+ },
+ {
+  "id": "B2-L26-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Devisson–Jermer tajribasida elektronlar $54\\ \\mathrm{V}$ kuchlanish bilan tezlatilib, nikel kristalli sirtiga tik tushadi. Sirtdagi atom qatorlari orasi $0.215\\ \\mathrm{nm}$. Elektronning de Broyl to'lqin uzunligini va birinchi difraksion maksimum kuzatiladigan burchakni (tushuvchi dastaga nisbatan) toping.",
+   "ru": "В опыте Дэвиссона–Джермера электроны, ускоренные напряжением $54\\ \\mathrm{V}$, падают нормально на поверхность кристалла никеля. Расстояние между атомными рядами на поверхности $0.215\\ \\mathrm{nm}$. Найдите длину волны де Бройля электрона и угол (относительно падающего пучка), под которым наблюдается первый дифракционный максимум.",
+   "en": "In the Davisson–Germer experiment electrons accelerated through $54\\ \\mathrm{V}$ fall normally on the surface of a nickel crystal. The spacing of the atomic rows on the surface is $0.215\\ \\mathrm{nm}$. Find the de Broglie wavelength of the electron and the angle (relative to the incident beam) at which the first diffraction maximum is observed."
+  },
+  "figure": "figures/B2-L26-S11.png",
+  "solution": {
+   "uz": [
+    "De Broyl to'lqin uzunligi: $$\\lambda=\\frac{6.63\\cdot10^{-34}}{\\sqrt{2\\cdot9.1\\cdot10^{-31}\\cdot1.6\\cdot10^{-19}\\cdot54}}\\approx0.167\\ \\mathrm{nm}$$",
+    "Sirtdagi atom qatorlari — qaytaruvchi panjara ($m=1$): $$d\\sin\\varphi=\\lambda\\ \\Rightarrow\\ \\sin\\varphi=\\frac{0.167}{0.215}\\approx0.78$$",
+    "Burchak: $$\\varphi\\approx51^\\circ$$"
+   ],
+   "ru": [
+    "Длина волны де Бройля: $$\\lambda=\\frac{6.63\\cdot10^{-34}}{\\sqrt{2\\cdot9.1\\cdot10^{-31}\\cdot1.6\\cdot10^{-19}\\cdot54}}\\approx0.167\\ \\mathrm{nm}$$",
+    "Атомные ряды на поверхности — отражательная решётка ($m=1$): $$d\\sin\\varphi=\\lambda\\ \\Rightarrow\\ \\sin\\varphi=\\frac{0.167}{0.215}\\approx0.78$$",
+    "Угол: $$\\varphi\\approx51^\\circ$$"
+   ],
+   "en": [
+    "The de Broglie wavelength: $$\\lambda=\\frac{6.63\\cdot10^{-34}}{\\sqrt{2\\cdot9.1\\cdot10^{-31}\\cdot1.6\\cdot10^{-19}\\cdot54}}\\approx0.167\\ \\mathrm{nm}$$",
+    "The atomic rows on the surface form a reflection grating ($m=1$): $$d\\sin\\varphi=\\lambda\\ \\Rightarrow\\ \\sin\\varphi=\\frac{0.167}{0.215}\\approx0.78$$",
+    "The angle: $$\\varphi\\approx51^\\circ$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "De Broyl to'lqin uzunligi: $\\lambda=\\frac{h}{\\sqrt{2meU}}$",
+    "ru": "Длина волны де Бройля: $\\lambda=\\frac{h}{\\sqrt{2meU}}$",
+    "en": "De Broglie wavelength: $\\lambda=\\frac{h}{\\sqrt{2meU}}$"
+   },
+   {
+    "uz": "Panjara tenglamasi: $d\\sin\\theta=m\\lambda$",
+    "ru": "Уравнение решётки: $d\\sin\\theta=m\\lambda$",
+    "en": "Grating equation: $d\\sin\\theta=m\\lambda$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Elektronlar difraksiyasi",
+   "ru": "Дифракция электронов",
+   "en": "Electron diffraction"
+  },
+  "answer": "\\lambda\\approx0.167\\ \\mathrm{nm};\\ \\varphi\\approx51^\\circ",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L26, Devisson–Jermer)"
+ },
+ {
+  "id": "B2-L26-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "NaCl kristalli kubik panjarali, zichligi $2.16\\ \\mathrm{g/cm^3}$, molyar massasi $58.5\\ \\mathrm{g/mol}$. Qo'shni atomlar (asosiy tekisliklar) orasidagi masofani toping. To'lqin uzunligi $0.154\\ \\mathrm{nm}$ bo'lgan rentgen nurlarining shu tekisliklardan ikkinchi tartibli qaytishi qanday sirg'anish burchagida kuzatiladi? Eng katta tartib qancha?",
+   "ru": "Кристалл NaCl имеет кубическую решётку, плотность $2.16\\ \\mathrm{g/cm^3}$, молярную массу $58.5\\ \\mathrm{g/mol}$. Найдите расстояние между соседними атомами (основными плоскостями). При каком угле скольжения наблюдается отражение второго порядка рентгеновских лучей с длиной волны $0.154\\ \\mathrm{nm}$ от этих плоскостей? Каков наибольший порядок?",
+   "en": "A NaCl crystal has a cubic lattice, a density of $2.16\\ \\mathrm{g/cm^3}$ and a molar mass of $58.5\\ \\mathrm{g/mol}$. Find the distance between neighbouring atoms (the principal planes). At what glancing angle is the second-order reflection of X-rays of wavelength $0.154\\ \\mathrm{nm}$ from these planes observed? What is the highest order?"
+  },
+  "figure": "figures/B2-L26-S12.png",
+  "solution": {
+   "uz": [
+    "Har bir $d^3$ katakda yarim «molekula»: $$d=\\sqrt[3]{\\frac{M}{2\\rho N_A}}=\\sqrt[3]{\\frac{0.0585}{2\\cdot2160\\cdot6.02\\cdot10^{23}}}\\approx0.282\\ \\mathrm{nm}$$",
+    "Bregg sharti ($m=2$): $$\\sin\\theta=\\frac{2\\lambda}{2d}=\\frac{0.154}{0.282}\\approx0.546,\\qquad \\theta\\approx33.1^\\circ$$",
+    "$\\sin\\theta\\leq1$: $$m\\leq\\frac{2d}{\\lambda}\\approx3.66\\ \\Rightarrow\\ m_{max}=3$$"
+   ],
+   "ru": [
+    "На каждую ячейку $d^3$ — половина «молекулы»: $$d=\\sqrt[3]{\\frac{M}{2\\rho N_A}}=\\sqrt[3]{\\frac{0.0585}{2\\cdot2160\\cdot6.02\\cdot10^{23}}}\\approx0.282\\ \\mathrm{nm}$$",
+    "Условие Брэгга ($m=2$): $$\\sin\\theta=\\frac{2\\lambda}{2d}=\\frac{0.154}{0.282}\\approx0.546,\\qquad \\theta\\approx33.1^\\circ$$",
+    "$\\sin\\theta\\leq1$: $$m\\leq\\frac{2d}{\\lambda}\\approx3.66\\ \\Rightarrow\\ m_{max}=3$$"
+   ],
+   "en": [
+    "Each cell $d^3$ holds half a \"molecule\": $$d=\\sqrt[3]{\\frac{M}{2\\rho N_A}}=\\sqrt[3]{\\frac{0.0585}{2\\cdot2160\\cdot6.02\\cdot10^{23}}}\\approx0.282\\ \\mathrm{nm}$$",
+    "The Bragg condition ($m=2$): $$\\sin\\theta=\\frac{2\\lambda}{2d}=\\frac{0.154}{0.282}\\approx0.546,\\qquad \\theta\\approx33.1^\\circ$$",
+    "$\\sin\\theta\\leq1$: $$m\\leq\\frac{2d}{\\lambda}\\approx3.66\\ \\Rightarrow\\ m_{max}=3$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kubik kristall zichligi: $\\rho d^3=\\frac{M}{2N_A}$",
+    "ru": "Плотность кубического кристалла: $\\rho d^3=\\frac{M}{2N_A}$",
+    "en": "Density of a cubic crystal: $\\rho d^3=\\frac{M}{2N_A}$"
+   },
+   {
+    "uz": "Vulf–Bregg sharti: $2d\\sin\\theta=m\\lambda$",
+    "ru": "Условие Вульфа–Брэгга: $2d\\sin\\theta=m\\lambda$",
+    "en": "Bragg condition: $2d\\sin\\theta=m\\lambda$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Vulf–Bregg sharti",
+   "ru": "Условие Вульфа–Брэгга",
+   "en": "Bragg condition"
+  },
+  "answer": "d\\approx0.282\\ \\mathrm{nm};\\ \\theta\\approx33.1^\\circ;\\ m_{max}=3",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Irodov, «Problems in General Physics», 5.154-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L26-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Bitta tirqishdagi Fraungofer difraksiyasida yon maksimumlar qayerda joylashganini va ularning intensivligini toping. Ular qo'shni minimumlar o'rtasida yotadimi?",
+   "ru": "Найдите, где расположены побочные максимумы при дифракции Фраунгофера на одной щели, и их интенсивность. Лежат ли они посередине между соседними минимумами?",
+   "en": "Find where the secondary maxima of Fraunhofer diffraction by a single slit are located and their intensities. Do they lie midway between neighbouring minima?"
+  },
+  "figure": "figures/B2-L26-S13.png",
+  "solution": {
+   "uz": [
+    "Intensivlik va uning hosilasi: $$I=I_0\\frac{\\sin^2\\beta}{\\beta^2},\\qquad \\frac{dI}{d\\beta}\\propto\\frac{\\sin\\beta\\left(\\beta\\cos\\beta-\\sin\\beta\\right)}{\\beta^3}$$",
+    "$\\sin\\beta=0$ — minimumlar, qolgan holda: $$\\tan\\beta=\\beta$$",
+    "Grafik yoki sonli yechim: $$\\beta_1\\approx4.493=1.430\\pi,\\qquad \\beta_2\\approx7.725=2.459\\pi$$",
+    "Intensivliklar: $$\\frac{I_1}{I_0}=\\frac{\\sin^2\\beta_1}{\\beta_1^2}\\approx0.047,\\qquad \\frac{I_2}{I_0}\\approx0.016$$",
+    "$1.5\\pi$, $2.5\\pi$ o'rniga — biroz markazga siljigan: $$1.430\\pi<1.5\\pi,\\qquad 2.459\\pi<2.5\\pi$$"
+   ],
+   "ru": [
+    "Интенсивность и её производная: $$I=I_0\\frac{\\sin^2\\beta}{\\beta^2},\\qquad \\frac{dI}{d\\beta}\\propto\\frac{\\sin\\beta\\left(\\beta\\cos\\beta-\\sin\\beta\\right)}{\\beta^3}$$",
+    "$\\sin\\beta=0$ — минимумы, иначе: $$\\tan\\beta=\\beta$$",
+    "Графическое или численное решение: $$\\beta_1\\approx4.493=1.430\\pi,\\qquad \\beta_2\\approx7.725=2.459\\pi$$",
+    "Интенсивности: $$\\frac{I_1}{I_0}=\\frac{\\sin^2\\beta_1}{\\beta_1^2}\\approx0.047,\\qquad \\frac{I_2}{I_0}\\approx0.016$$",
+    "Вместо $1.5\\pi$, $2.5\\pi$ — немного смещены к центру: $$1.430\\pi<1.5\\pi,\\qquad 2.459\\pi<2.5\\pi$$"
+   ],
+   "en": [
+    "The intensity and its derivative: $$I=I_0\\frac{\\sin^2\\beta}{\\beta^2},\\qquad \\frac{dI}{d\\beta}\\propto\\frac{\\sin\\beta\\left(\\beta\\cos\\beta-\\sin\\beta\\right)}{\\beta^3}$$",
+    "$\\sin\\beta=0$ gives the minima; otherwise: $$\\tan\\beta=\\beta$$",
+    "Graphical or numerical solution: $$\\beta_1\\approx4.493=1.430\\pi,\\qquad \\beta_2\\approx7.725=2.459\\pi$$",
+    "The intensities: $$\\frac{I_1}{I_0}=\\frac{\\sin^2\\beta_1}{\\beta_1^2}\\approx0.047,\\qquad \\frac{I_2}{I_0}\\approx0.016$$",
+    "Instead of $1.5\\pi$, $2.5\\pi$ — shifted slightly towards the centre: $$1.430\\pi<1.5\\pi,\\qquad 2.459\\pi<2.5\\pi$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bitta tirqish intensivligi: $I=I_0\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2$",
+    "ru": "Интенсивность одной щели: $I=I_0\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2$",
+    "en": "Single-slit intensity: $I=I_0\\left(\\frac{\\sin\\beta}{\\beta}\\right)^2$"
+   },
+   null,
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Bitta tirqish intensivligi",
+   "ru": "Интенсивность одной щели",
+   "en": "Single-slit intensity"
+  },
+  "answer": "\\beta_1\\approx1.43\\pi,\\ I_1\\approx0.047I_0;\\ \\beta_2\\approx2.46\\pi,\\ I_2\\approx0.016I_0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "Irodov, «Problems in General Physics», 5.120-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L26-S14",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Davri $1.5\\ \\mu\\mathrm{m}$ bo'lgan panjaraga $0.5\\ \\mu\\mathrm{m}$ to'lqin uzunlikli yorug'lik normalga $30^\\circ$ burchak ostida tushadi. Qaysi tartiblar kuzatiladi? Eng katta tartib qaysi burchakda? Normal tushish bilan solishtiring.",
+   "ru": "На решётку с периодом $1.5\\ \\mu\\mathrm{m}$ падает свет с длиной волны $0.5\\ \\mu\\mathrm{m}$ под углом $30^\\circ$ к нормали. Какие порядки наблюдаются? Под каким углом наибольший порядок? Сравните с нормальным падением.",
+   "en": "Light of wavelength $0.5\\ \\mu\\mathrm{m}$ falls on a grating of period $1.5\\ \\mu\\mathrm{m}$ at $30^\\circ$ to the normal. Which orders are observed? At what angle is the highest order? Compare with normal incidence."
+  },
+  "figure": "figures/B2-L26-S14.png",
+  "solution": {
+   "uz": [
+    "Qiya tushishdagi panjara tenglamasi: $$\\sin\\theta=\\sin\\theta_0+\\frac{m\\lambda}{d}=0.5+\\frac{m}{3}$$",
+    "$\\left|\\sin\\theta\\right|<1$ sharti: $$-4.5<m<1.5\\ \\Rightarrow\\ m=-4,\\ldots,1$$",
+    "Eng katta tartib — boshqa tomonda: $$\\sin\\theta=0.5-\\frac{4}{3}\\approx-0.833,\\qquad \\theta\\approx-56.4^\\circ$$",
+    "Normal tushishda $m=\\pm3$ uchun $\\sin\\theta=1$ — ekranga tushmaydi: $$m=-2,\\ldots,2$$"
+   ],
+   "ru": [
+    "Уравнение решётки при наклонном падении: $$\\sin\\theta=\\sin\\theta_0+\\frac{m\\lambda}{d}=0.5+\\frac{m}{3}$$",
+    "Условие $\\left|\\sin\\theta\\right|<1$: $$-4.5<m<1.5\\ \\Rightarrow\\ m=-4,\\ldots,1$$",
+    "Наибольший порядок — с другой стороны: $$\\sin\\theta=0.5-\\frac{4}{3}\\approx-0.833,\\qquad \\theta\\approx-56.4^\\circ$$",
+    "При нормальном падении для $m=\\pm3$ $\\sin\\theta=1$ — на экран не попадает: $$m=-2,\\ldots,2$$"
+   ],
+   "en": [
+    "The grating equation at oblique incidence: $$\\sin\\theta=\\sin\\theta_0+\\frac{m\\lambda}{d}=0.5+\\frac{m}{3}$$",
+    "The condition $\\left|\\sin\\theta\\right|<1$: $$-4.5<m<1.5\\ \\Rightarrow\\ m=-4,\\ldots,1$$",
+    "The highest order is on the other side: $$\\sin\\theta=0.5-\\frac{4}{3}\\approx-0.833,\\qquad \\theta\\approx-56.4^\\circ$$",
+    "At normal incidence $m=\\pm3$ gives $\\sin\\theta=1$ — it does not reach the screen: $$m=-2,\\ldots,2$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qiya tushishda panjara: $d\\left(\\sin\\theta-\\sin\\theta_0\\right)=m\\lambda$",
+    "ru": "Решётка при наклонном падении: $d\\left(\\sin\\theta-\\sin\\theta_0\\right)=m\\lambda$",
+    "en": "Grating at oblique incidence: $d\\left(\\sin\\theta-\\sin\\theta_0\\right)=m\\lambda$"
+   },
+   null,
+   null,
+   {
+    "uz": "Panjara tenglamasi: $d\\sin\\theta=m\\lambda$",
+    "ru": "Уравнение решётки: $d\\sin\\theta=m\\lambda$",
+    "en": "Grating equation: $d\\sin\\theta=m\\lambda$"
+   }
+  ],
+  "basis": {
+   "uz": "Qiya tushishda panjara",
+   "ru": "Решётка при наклонном падении",
+   "en": "Grating at oblique incidence"
+  },
+  "answer": "m=-4,\\ldots,1;\\ 6;\\ \\theta\\approx-56.4^\\circ;\\ m=-2,\\ldots,2",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "Irodov, «Problems in General Physics», 5.128-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L26-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Davri $2\\ \\mu\\mathrm{m}$ va chiziqlari soni $5000$ bo'lgan panjaraga $500\\ \\mathrm{nm}$ li yorug'lik tik tushadi. Ikkinchi tartibli maksimum uchun difraksiya burchagini, burchak dispersiyasini, maksimumning burchak yarim kengligini va ajratiladigan eng kichik $\\delta\\lambda$ ni toping.",
+   "ru": "На решётку с периодом $2\\ \\mu\\mathrm{m}$ и числом штрихов $5000$ нормально падает свет $500\\ \\mathrm{nm}$. Для максимума второго порядка найдите угол дифракции, угловую дисперсию, угловую полуширину максимума и наименьшее разрешаемое $\\delta\\lambda$.",
+   "en": "Light of $500\\ \\mathrm{nm}$ falls normally on a grating with period $2\\ \\mu\\mathrm{m}$ and $5000$ lines. For the second-order maximum find the diffraction angle, the angular dispersion, the angular half-width of the maximum and the smallest resolvable $\\delta\\lambda$."
+  },
+  "figure": "figures/B2-L26-S15.png",
+  "solution": {
+   "uz": [
+    "Difraksiya burchagi: $$\\sin\\theta=\\frac{2\\cdot0.5}{2}=0.5,\\qquad \\theta=30^\\circ$$",
+    "Burchak dispersiyasi: $$D=\\frac{2}{2\\cdot10^{-6}\\cdot0.866}\\approx1.15\\cdot10^{-3}\\ \\mathrm{rad/nm}$$",
+    "Yarim kenglik: $$\\delta\\theta=\\frac{5\\cdot10^{-7}}{5000\\cdot2\\cdot10^{-6}\\cdot0.866}\\approx5.8\\cdot10^{-5}\\ \\mathrm{rad}$$",
+    "Reley: $D\\,\\delta\\lambda=\\delta\\theta$: $$\\delta\\lambda=\\frac{\\lambda}{mN}=\\frac{500}{10^4}=0.05\\ \\mathrm{nm}$$"
+   ],
+   "ru": [
+    "Угол дифракции: $$\\sin\\theta=\\frac{2\\cdot0.5}{2}=0.5,\\qquad \\theta=30^\\circ$$",
+    "Угловая дисперсия: $$D=\\frac{2}{2\\cdot10^{-6}\\cdot0.866}\\approx1.15\\cdot10^{-3}\\ \\mathrm{rad/nm}$$",
+    "Полуширина: $$\\delta\\theta=\\frac{5\\cdot10^{-7}}{5000\\cdot2\\cdot10^{-6}\\cdot0.866}\\approx5.8\\cdot10^{-5}\\ \\mathrm{rad}$$",
+    "Рэлей: $D\\,\\delta\\lambda=\\delta\\theta$: $$\\delta\\lambda=\\frac{\\lambda}{mN}=\\frac{500}{10^4}=0.05\\ \\mathrm{nm}$$"
+   ],
+   "en": [
+    "The diffraction angle: $$\\sin\\theta=\\frac{2\\cdot0.5}{2}=0.5,\\qquad \\theta=30^\\circ$$",
+    "The angular dispersion: $$D=\\frac{2}{2\\cdot10^{-6}\\cdot0.866}\\approx1.15\\cdot10^{-3}\\ \\mathrm{rad/nm}$$",
+    "The half-width: $$\\delta\\theta=\\frac{5\\cdot10^{-7}}{5000\\cdot2\\cdot10^{-6}\\cdot0.866}\\approx5.8\\cdot10^{-5}\\ \\mathrm{rad}$$",
+    "Rayleigh: $D\\,\\delta\\lambda=\\delta\\theta$: $$\\delta\\lambda=\\frac{\\lambda}{mN}=\\frac{500}{10^4}=0.05\\ \\mathrm{nm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Panjara tenglamasi: $d\\sin\\theta=m\\lambda$",
+    "ru": "Уравнение решётки: $d\\sin\\theta=m\\lambda$",
+    "en": "Grating equation: $d\\sin\\theta=m\\lambda$"
+   },
+   {
+    "uz": "Burchak dispersiyasi: $D=\\frac{m}{d\\cos\\theta}$",
+    "ru": "Угловая дисперсия: $D=\\frac{m}{d\\cos\\theta}$",
+    "en": "Angular dispersion: $D=\\frac{m}{d\\cos\\theta}$"
+   },
+   {
+    "uz": "Maksimum yarim kengligi: $\\delta\\theta=\\frac{\\lambda}{Nd\\cos\\theta}$",
+    "ru": "Полуширина максимума: $\\delta\\theta=\\frac{\\lambda}{Nd\\cos\\theta}$",
+    "en": "Half-width of a maximum: $\\delta\\theta=\\frac{\\lambda}{Nd\\cos\\theta}$"
+   },
+   {
+    "uz": "Ajrata olish qobiliyati: $R=\\frac{\\lambda}{\\delta\\lambda}=mN$",
+    "ru": "Разрешающая способность: $R=\\frac{\\lambda}{\\delta\\lambda}=mN$",
+    "en": "Resolving power: $R=\\frac{\\lambda}{\\delta\\lambda}=mN$"
+   }
+  ],
+  "basis": {
+   "uz": "Dispersiya va ajrata olish",
+   "ru": "Дисперсия и разрешение",
+   "en": "Dispersion and resolution"
+  },
+  "answer": "\\theta=30^\\circ;\\ D\\approx1.15\\cdot10^{-3}\\ \\mathrm{rad/nm};\\ \\delta\\theta\\approx5.8\\cdot10^{-5}\\ \\mathrm{rad};\\ \\delta\\lambda=0.05\\ \\mathrm{nm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "Irodov, «Problems in General Physics», 5.136-masala asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L26-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Soch tolasi qalinligini o'lchash uchun unga $633\\ \\mathrm{nm}$ li lazer dastasi yuborildi. $1.5\\ \\mathrm{m}$ masofadagi ekranda markazning ikki tomonidagi birinchi qorong'i yo'llar orasi $19\\ \\mathrm{mm}$. Soch qalinligini toping. Uchinchi qorong'i yo'l markazdan qancha masofada?",
+   "ru": "Чтобы измерить толщину волоса, на него направили луч лазера $633\\ \\mathrm{nm}$. На экране на расстоянии $1.5\\ \\mathrm{m}$ расстояние между первыми тёмными полосами по обе стороны от центра $19\\ \\mathrm{mm}$. Найдите толщину волоса. На каком расстоянии от центра третья тёмная полоса?",
+   "en": "To measure the thickness of a hair, a $633\\ \\mathrm{nm}$ laser beam is shone on it. On a screen $1.5\\ \\mathrm{m}$ away the first dark fringes on either side of the centre are $19\\ \\mathrm{mm}$ apart. Find the thickness of the hair. How far from the centre is the third dark fringe?"
+  },
+  "figure": "figures/B2-L26-S16.png",
+  "solution": {
+   "uz": [
+    "Babine prinsipi — soch tirqish kabi: $$y_1=\\frac{\\lambda L}{a},\\qquad y_1=\\frac{19}{2}=9.5\\ \\mathrm{mm}$$",
+    "Qalinlik: $$a=\\frac{\\lambda L}{y_1}=\\frac{6.33\\cdot10^{-7}\\cdot1.5}{9.5\\cdot10^{-3}}\\approx0.10\\ \\mathrm{mm}$$",
+    "Uchinchi minimum ($m=3$): $$y_3=3y_1=28.5\\ \\mathrm{mm}$$"
+   ],
+   "ru": [
+    "Принцип Бабине — волос как щель: $$y_1=\\frac{\\lambda L}{a},\\qquad y_1=\\frac{19}{2}=9.5\\ \\mathrm{mm}$$",
+    "Толщина: $$a=\\frac{\\lambda L}{y_1}=\\frac{6.33\\cdot10^{-7}\\cdot1.5}{9.5\\cdot10^{-3}}\\approx0.10\\ \\mathrm{mm}$$",
+    "Третий минимум ($m=3$): $$y_3=3y_1=28.5\\ \\mathrm{mm}$$"
+   ],
+   "en": [
+    "Babinet's principle — the hair acts like a slit: $$y_1=\\frac{\\lambda L}{a},\\qquad y_1=\\frac{19}{2}=9.5\\ \\mathrm{mm}$$",
+    "The thickness: $$a=\\frac{\\lambda L}{y_1}=\\frac{6.33\\cdot10^{-7}\\cdot1.5}{9.5\\cdot10^{-3}}\\approx0.10\\ \\mathrm{mm}$$",
+    "The third minimum ($m=3$): $$y_3=3y_1=28.5\\ \\mathrm{mm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Babine prinsipi: sim xuddi shunday tirqish kabi manzara beradi, $a\\sin\\theta=m\\lambda$",
+    "ru": "Принцип Бабине: проволока даёт ту же картину, что и щель, $a\\sin\\theta=m\\lambda$",
+    "en": "Babinet's principle: a wire gives the same pattern as a slit, $a\\sin\\theta=m\\lambda$"
+   },
+   {
+    "uz": "Bitta tirqish minimumlari: $a\\sin\\theta=m\\lambda$",
+    "ru": "Минимумы одной щели: $a\\sin\\theta=m\\lambda$",
+    "en": "Single-slit minima: $a\\sin\\theta=m\\lambda$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Babine prinsipi",
+   "ru": "Принцип Бабине",
+   "en": "Babinet's principle"
+  },
+  "answer": "a\\approx0.10\\ \\mathrm{mm};\\ y_3=28.5\\ \\mathrm{mm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B2-L26, Babine)"
+ },
+ {
+  "id": "B2-L26-S17",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Kengligi $1\\ \\mathrm{mm}$ bo'lgan tirqish $500\\ \\mathrm{nm}$ li yorug'lik bilan yoritiladi. Ekran $0.2\\ \\mathrm{m}$, $2\\ \\mathrm{m}$ va $40\\ \\mathrm{m}$ masofada bo'lganda Frenel sonini toping va qaysi manzara kuzatilishini ayting. $40\\ \\mathrm{m}$ da markaziy maksimum kengligi qancha? Shu yorug'lik uchun chuqurligi $0.2\\ \\mathrm{m}$ bo'lgan kamera-obskuraning optimal teshik radiusini baholang.",
+   "ru": "Щель шириной $1\\ \\mathrm{mm}$ освещается светом $500\\ \\mathrm{nm}$. Найдите число Френеля для экрана на расстоянии $0.2\\ \\mathrm{m}$, $2\\ \\mathrm{m}$ и $40\\ \\mathrm{m}$ и скажите, какая картина наблюдается. Какова ширина центрального максимума на $40\\ \\mathrm{m}$? Оцените оптимальный радиус отверстия камеры-обскуры глубиной $0.2\\ \\mathrm{m}$ для этого света.",
+   "en": "A slit $1\\ \\mathrm{mm}$ wide is illuminated with $500\\ \\mathrm{nm}$ light. Find the Fresnel number for a screen at $0.2\\ \\mathrm{m}$, $2\\ \\mathrm{m}$ and $40\\ \\mathrm{m}$ and say which pattern is observed. What is the width of the central maximum at $40\\ \\mathrm{m}$? Estimate the optimal hole radius of a pinhole camera $0.2\\ \\mathrm{m}$ deep for this light."
+  },
+  "figure": "figures/B2-L26-S17.png",
+  "solution": {
+   "uz": [
+    "Frenel soni ($\\frac{a^2}{\\lambda}=2\\ \\mathrm{m}$): $$F=\\frac{2}{L}:\\qquad F=10,\\qquad F=1,\\qquad F=0.05$$",
+    "$F\\gg1$ — deyarli geometrik soya, $F\\sim1$ — Frenel, $F\\ll1$ — Fraungofer: $$L=40\\ \\mathrm{m}:\\ w=2\\frac{\\lambda L}{a}=2\\cdot\\frac{5\\cdot10^{-7}\\cdot40}{10^{-3}}=40\\ \\mathrm{mm}$$",
+    "Kamera-obskura — geometrik va difraksion xiralik teng: $$r\\approx\\sqrt{\\lambda b}=\\sqrt{5\\cdot10^{-7}\\cdot0.2}\\approx0.32\\ \\mathrm{mm}$$"
+   ],
+   "ru": [
+    "Число Френеля ($\\frac{a^2}{\\lambda}=2\\ \\mathrm{m}$): $$F=\\frac{2}{L}:\\qquad F=10,\\qquad F=1,\\qquad F=0.05$$",
+    "$F\\gg1$ — почти геометрическая тень, $F\\sim1$ — Френель, $F\\ll1$ — Фраунгофер: $$L=40\\ \\mathrm{m}:\\ w=2\\frac{\\lambda L}{a}=2\\cdot\\frac{5\\cdot10^{-7}\\cdot40}{10^{-3}}=40\\ \\mathrm{mm}$$",
+    "Камера-обскура — геометрическое и дифракционное размытие равны: $$r\\approx\\sqrt{\\lambda b}=\\sqrt{5\\cdot10^{-7}\\cdot0.2}\\approx0.32\\ \\mathrm{mm}$$"
+   ],
+   "en": [
+    "The Fresnel number ($\\frac{a^2}{\\lambda}=2\\ \\mathrm{m}$): $$F=\\frac{2}{L}:\\qquad F=10,\\qquad F=1,\\qquad F=0.05$$",
+    "$F\\gg1$ — almost a geometric shadow, $F\\sim1$ — Fresnel, $F\\ll1$ — Fraunhofer: $$L=40\\ \\mathrm{m}:\\ w=2\\frac{\\lambda L}{a}=2\\cdot\\frac{5\\cdot10^{-7}\\cdot40}{10^{-3}}=40\\ \\mathrm{mm}$$",
+    "Pinhole camera — geometric and diffraction blur are equal: $$r\\approx\\sqrt{\\lambda b}=\\sqrt{5\\cdot10^{-7}\\cdot0.2}\\approx0.32\\ \\mathrm{mm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Frenel soni: $F=\\frac{a^2}{L\\lambda}$",
+    "ru": "Число Френеля: $F=\\frac{a^2}{L\\lambda}$",
+    "en": "Fresnel number: $F=\\frac{a^2}{L\\lambda}$"
+   },
+   {
+    "uz": "Markaziy maksimum kengligi: $w=2\\frac{\\lambda L}{a}$",
+    "ru": "Ширина центрального максимума: $w=2\\frac{\\lambda L}{a}$",
+    "en": "Width of the central maximum: $w=2\\frac{\\lambda L}{a}$"
+   },
+   {
+    "uz": "Kamera-obskura: $r\\approx\\sqrt{\\lambda b}$",
+    "ru": "Камера-обскура: $r\\approx\\sqrt{\\lambda b}$",
+    "en": "Pinhole camera: $r\\approx\\sqrt{\\lambda b}$"
+   }
+  ],
+  "basis": {
+   "uz": "Frenel soni",
+   "ru": "Число Френеля",
+   "en": "Fresnel number"
+  },
+  "answer": "F=10;\\ 1;\\ 0.05;\\ w=40\\ \\mathrm{mm};\\ r\\approx0.32\\ \\mathrm{mm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B2-L26, Frenel soni)"
+ },
+ {
+  "id": "B2-L26-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Suvli idishda chastotasi $5\\ \\mathrm{MHz}$ bo'lgan ultratovush to'lqini hosil qilingan, suvda tovush tezligi $1500\\ \\mathrm{m/s}$. Idish orqali $600\\ \\mathrm{nm}$ li lazer dastasi tovushga tik o'tkaziladi. Panjara davrini, birinchi tartib burchagini va $1\\ \\mathrm{m}$ masofadagi ekranda dog'lar orasini toping.",
+   "ru": "В сосуде с водой создана ультразвуковая волна частотой $5\\ \\mathrm{MHz}$, скорость звука в воде $1500\\ \\mathrm{m/s}$. Через сосуд перпендикулярно звуку пропускают луч лазера $600\\ \\mathrm{nm}$. Найдите период решётки, угол первого порядка и расстояние между пятнами на экране на расстоянии $1\\ \\mathrm{m}$.",
+   "en": "An ultrasonic wave of frequency $5\\ \\mathrm{MHz}$ is set up in a water tank, where the speed of sound is $1500\\ \\mathrm{m/s}$. A $600\\ \\mathrm{nm}$ laser beam is sent through the tank perpendicular to the sound. Find the grating period, the first-order angle and the spacing of the spots on a screen $1\\ \\mathrm{m}$ away."
+  },
+  "figure": "figures/B2-L26-S18.png",
+  "solution": {
+   "uz": [
+    "Davr — tovush to'lqin uzunligi: $$\\Lambda=\\frac{v}{f}=\\frac{1500}{5\\cdot10^6}=0.3\\ \\mathrm{mm}$$",
+    "Birinchi tartib: $$\\sin\\theta_1=\\frac{\\lambda}{\\Lambda}=\\frac{6\\cdot10^{-7}}{3\\cdot10^{-4}}=2\\cdot10^{-3}$$",
+    "Ekranda (kichik burchak): $$\\Delta y=\\theta_1L=2\\ \\mathrm{mm}$$"
+   ],
+   "ru": [
+    "Период — длина звуковой волны: $$\\Lambda=\\frac{v}{f}=\\frac{1500}{5\\cdot10^6}=0.3\\ \\mathrm{mm}$$",
+    "Первый порядок: $$\\sin\\theta_1=\\frac{\\lambda}{\\Lambda}=\\frac{6\\cdot10^{-7}}{3\\cdot10^{-4}}=2\\cdot10^{-3}$$",
+    "На экране (малый угол): $$\\Delta y=\\theta_1L=2\\ \\mathrm{mm}$$"
+   ],
+   "en": [
+    "The period is the sound wavelength: $$\\Lambda=\\frac{v}{f}=\\frac{1500}{5\\cdot10^6}=0.3\\ \\mathrm{mm}$$",
+    "The first order: $$\\sin\\theta_1=\\frac{\\lambda}{\\Lambda}=\\frac{6\\cdot10^{-7}}{3\\cdot10^{-4}}=2\\cdot10^{-3}$$",
+    "On the screen (small angle): $$\\Delta y=\\theta_1L=2\\ \\mathrm{mm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ultratovush panjarasi: $\\Lambda=\\frac{v}{f}$, $\\Lambda\\sin\\theta=m\\lambda$",
+    "ru": "Ультразвуковая решётка: $\\Lambda=\\frac{v}{f}$, $\\Lambda\\sin\\theta=m\\lambda$",
+    "en": "Ultrasonic grating: $\\Lambda=\\frac{v}{f}$, $\\Lambda\\sin\\theta=m\\lambda$"
+   },
+   {
+    "uz": "Panjara tenglamasi: $d\\sin\\theta=m\\lambda$",
+    "ru": "Уравнение решётки: $d\\sin\\theta=m\\lambda$",
+    "en": "Grating equation: $d\\sin\\theta=m\\lambda$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Ultratovushda difraksiya",
+   "ru": "Дифракция на ультразвуке",
+   "en": "Diffraction by ultrasound"
+  },
+  "answer": "\\Lambda=0.3\\ \\mathrm{mm};\\ \\theta_1=2\\cdot10^{-3}\\ \\mathrm{rad};\\ \\Delta y=2\\ \\mathrm{mm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "Irodov, «Problems in General Physics», 5.132-masala asosida; sharti o'zgartirilgan"
+ }
+]
