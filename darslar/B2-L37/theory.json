@@ -1,0 +1,789 @@
+[
+ {
+  "t": "h1",
+  "uz": "Detektorlar va o'lchov asboblari (Detectors and measuring instruments)",
+  "ru": "Детекторы и измерительные приборы",
+  "en": "Detectors and measuring instruments"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz zaryadli zarra moddada qanday energiya yo'qotishini (Bete formulasi, Bragg cho'qqisi, yugurish masofasi) va fotonlar qaysi uch jarayon orqali yutilishini (fotoeffekt, Kompton sochilishi, juft hosil bo'lishi; susayish qonuni) tushuntirasiz; ionlanish kamerasi, proporsional va Geyger hisoblagichi, ssintillyator bilan fotoelektron ko'paytirgich, yarimo'tkazgichli detektorning ishlash prinsipini bilib, ulardan olinadigan signalni hisoblaysiz; energiya ajrata olishi, samaradorlik, mos tushish usuli va o'lik vaqtni miqdoriy baholaysiz; magnit spektrometr, uchish vaqti, Cherenkov sanagichi va kalorimetr yordamida zarraning impulsi, tezligi va energiyasi qanday o'lchanishini bilasiz; elektr o'lchov asboblari, ossillograf, shovqin manbalari, lock-in kuchaytirgich va interferometrlar bilan bog'liq GRE masalalarini yechasiz.",
+  "ru": "**Цель.** После урока вы будете объяснять, как заряженная частица теряет энергию в веществе (формула Бете, пик Брэгга, пробег) и посредством каких трёх процессов поглощаются фотоны (фотоэффект, комптоновское рассеяние, рождение пары; закон ослабления); знать принцип работы ионизационной камеры, пропорционального счётчика и счётчика Гейгера, сцинтиллятора с фотоэлектронным умножителем, полупроводникового детектора и рассчитывать получаемый от них сигнал; количественно оценивать энергетическое разрешение, эффективность, метод совпадений и мёртвое время; знать, как с помощью магнитного спектрометра, времени пролёта, черенковского счётчика и калориметра измеряют импульс, скорость и энергию частицы; решать задачи GRE, связанные с электроизмерительными приборами, осциллографом, источниками шума, синхронным усилителем (lock-in) и интерферометрами.",
+  "en": "**Goal.** After this lesson you will explain how a charged particle loses energy in matter (the Bethe formula, the Bragg peak, the range) and through which three processes photons are absorbed (the photoelectric effect, Compton scattering, pair production; the attenuation law); know how an ionization chamber, a proportional counter and a Geiger counter, a scintillator with a photomultiplier tube and a semiconductor detector work, and compute the signal they give; estimate energy resolution, efficiency, the coincidence method and dead time quantitatively; know how the momentum, velocity and energy of a particle are measured with a magnetic spectrometer, time of flight, a Cherenkov counter and a calorimeter; and solve GRE problems on electrical meters, the oscilloscope, noise sources, the lock-in amplifier and interferometers."
+ },
+ {
+  "t": "p",
+  "uz": "Har qanday detektor bitta g'oyaga asoslanadi: zarra moddaga energiyasining bir qismini beradi, bu energiya esa **o'lchanadigan signalga** — elektr zaryadi, yorug'lik chaqnashi, issiqlik yoki kimyoviy o'zgarishga aylantiriladi. Zaryadli zarralar moddani bevosita ionlaydi; fotonlar va neytronlar esa avval zaryadli zarra hosil qiladi (elektron, pozitron, tepilgan yadro), keyin o'sha zarra ionlaydi. Shuning uchun dars ikki qismdan iborat: avval o'zaro ta'sir fizikasi (1–2-bo'limlar), keyin u asosida qurilgan detektorlar va asboblar (3–11-bo'limlar). GRE da laboratoriya metodlari bo'limi testlarning taxminan $6$ foizini tashkil etadi: detektor turini tanlash, sanoq tezligi va o'lik vaqt, energiya ajrata olishi, Cherenkov sharti, ossillograf va shovqin — tipik savollar. Sanash statistikasi ($\\sqrt N$ qoidasi, fonni ayirish) B2-L34 da, elektronika (diod, kuchaytirgich, ARO') B2-L36 da o'rganilgan; bu yerda ular tayyor holda ishlatiladi.",
+  "ru": "Любой детектор основан на одной идее: частица передаёт веществу часть своей энергии, а эта энергия превращается в **измеримый сигнал** — электрический заряд, световую вспышку, тепло или химическое изменение. Заряженные частицы ионизуют вещество непосредственно; фотоны и нейтроны сначала создают заряженную частицу (электрон, позитрон, ядро отдачи), а уже она ионизует. Поэтому урок состоит из двух частей: сначала физика взаимодействия (разделы 1–2), затем построенные на ней детекторы и приборы (разделы 3–11). В GRE раздел лабораторных методов составляет примерно $6$ процентов заданий: выбор типа детектора, скорость счёта и мёртвое время, энергетическое разрешение, условие Черенкова, осциллограф и шум — типичные вопросы. Статистика счёта (правило $\\sqrt N$, вычитание фона) изучена в B2-L34, электроника (диод, усилитель, АЦП) — в B2-L36; здесь они используются в готовом виде.",
+  "en": "Every detector rests on one idea: a particle gives part of its energy to matter, and that energy is converted into a **measurable signal** — an electric charge, a flash of light, heat or a chemical change. Charged particles ionize matter directly; photons and neutrons first produce a charged particle (an electron, a positron, a recoil nucleus), and that particle does the ionizing. So the lesson has two parts: first the physics of the interaction (sections 1–2), then the detectors and instruments built on it (sections 3–11). On the GRE the laboratory methods part is about $6$ percent of the questions: choosing the type of detector, counting rate and dead time, energy resolution, the Cherenkov condition, the oscilloscope and noise are typical questions. Counting statistics (the $\\sqrt N$ rule, background subtraction) were studied in B2-L34 and electronics (the diode, amplifiers, the ADC) in B2-L36; here they are used ready-made."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Zaryadli zarralarning modda bilan o'zaro ta'siri",
+  "ru": "1. Взаимодействие заряженных частиц с веществом",
+  "en": "1. Interaction of charged particles with matter"
+ },
+ {
+  "t": "li",
+  "uz": "**Ionlanish va uyg'otish.** Moddadan o'tayotgan zaryadli zarra atom elektronlari bilan Kulon kuchi orqali to'qnashadi: elektronni yuqori sathga ko'taradi (**uyg'otish**) yoki atomdan butunlay uzib oladi (**ionlanish**). Har bir to'qnashuvda zarra energiyasining kichik qismini yo'qotadi, shuning uchun uning energiyasi yo'l bo'ylab deyarli uzluksiz kamayadi. Birlik yo'ldagi energiya yo'qotish $-\\frac{dE}{dx}$ moddaning **tormozlash qobiliyati** (stopping power) deyiladi; uni ko'pincha zichlikka bo'lib, $\\mathrm{MeV\\cdot cm^2/g}$ da beradilar — shunda u turli moddalar uchun bir-biriga yaqin bo'ladi. Yadro bilan to'qnashuvlar og'ir zarralar uchun juda kam uchraydi (Rezerford tajribasi aynan shu kam hodisalarni kuzatgan).",
+  "ru": "**Ионизация и возбуждение.** Заряженная частица, проходя через вещество, сталкивается с атомными электронами посредством кулоновской силы: переводит электрон на более высокий уровень (**возбуждение**) или полностью отрывает его от атома (**ионизация**). В каждом столкновении частица теряет малую часть энергии, поэтому её энергия убывает вдоль пути почти непрерывно. Потеря энергии на единицу пути $-\\frac{dE}{dx}$ называется **тормозной способностью** вещества; её часто делят на плотность и дают в $\\mathrm{MeV\\cdot cm^2/g}$ — тогда она близка для разных веществ. Столкновения с ядрами для тяжёлых частиц очень редки (опыт Резерфорда наблюдал как раз эти редкие события).",
+  "en": "**Ionization and excitation.** A charged particle passing through matter collides with atomic electrons via the Coulomb force: it raises an electron to a higher level (**excitation**) or tears it off the atom completely (**ionization**). In each collision the particle loses a small part of its energy, so its energy decreases almost continuously along the path. The energy loss per unit path length $-\\frac{dE}{dx}$ is called the **stopping power** of the material; it is often divided by the density and given in $\\mathrm{MeV\\cdot cm^2/g}$ — then it is similar for different materials. Collisions with nuclei are very rare for heavy particles (Rutherford's experiment observed exactly these rare events)."
+ },
+ {
+  "t": "li",
+  "uz": "**Bete formulasi.** Og'ir zaryadli zarra (myuon, pion, proton, alfa-zarra) uchun ionlanish yo'qotishini Bete formulasi beradi. Bu yerda $z$ — zarra zaryadi ($e$ birliklarida), $\\beta=\\frac{v}{c}$, $\\gamma=\\frac{1}{\\sqrt{1-\\beta^2}}$, $Z$, $A$, $\\rho$ — moddaning tartib raqami, massa soni va zichligi, $I\\approx10Z\\ \\mathrm{eV}$ — o'rtacha ionlanish potensiali, $K\\approx0.307\\ \\mathrm{MeV\\cdot cm^2/mol}$. Eng muhim xulosa: yo'qotish zarraning massasiga bog'liq emas, faqat zaryadi va tezligiga bog'liq. Norelyativistik sohada logarifm sekin o'zgaradi va asosiy qism qoladi.",
+  "ru": "**Формула Бете.** Для тяжёлой заряженной частицы (мюона, пиона, протона, альфа-частицы) ионизационные потери даёт формула Бете. Здесь $z$ — заряд частицы (в единицах $e$), $\\beta=\\frac{v}{c}$, $\\gamma=\\frac{1}{\\sqrt{1-\\beta^2}}$, $Z$, $A$, $\\rho$ — порядковый номер, массовое число и плотность вещества, $I\\approx10Z\\ \\mathrm{eV}$ — средний потенциал ионизации, $K\\approx0.307\\ \\mathrm{MeV\\cdot cm^2/mol}$. Важнейший вывод: потери не зависят от массы частицы, а только от её заряда и скорости. В нерелятивистской области логарифм меняется медленно и остаётся основная часть.",
+  "en": "**The Bethe formula.** For a heavy charged particle (a muon, pion, proton or alpha particle) the ionization loss is given by the Bethe formula. Here $z$ is the particle charge (in units of $e$), $\\beta=\\frac{v}{c}$, $\\gamma=\\frac{1}{\\sqrt{1-\\beta^2}}$, $Z$, $A$, $\\rho$ are the atomic number, mass number and density of the material, $I\\approx10Z\\ \\mathrm{eV}$ is the mean ionization potential, and $K\\approx0.307\\ \\mathrm{MeV\\cdot cm^2/mol}$. The most important conclusion: the loss does not depend on the particle's mass, only on its charge and speed. In the non-relativistic region the logarithm changes slowly and the main part remains."
+ },
+ {
+  "t": "m",
+  "m": "-\\frac{dE}{dx}=K\\rho\\frac{Z}{A}\\frac{z^2}{\\beta^2}\\left[\\ln\\frac{2m_ec^2\\beta^2\\gamma^2}{I}-\\beta^2\\right],\\qquad -\\frac{dE}{dx}\\propto\\frac{z^2}{v^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Bete egri chizig'i va minimal ionlovchi zarra.** Sekin zarra kuchli ionlaydi: $\\frac{1}{v^2}$ omili zarra sekinlashgani sari yo'qotishni oshiradi. Tezlik oshgan sari yo'qotish kamayadi, $\\beta\\gamma\\approx3\\ldots4$ da minimumga yetadi, so'ng logarifm tufayli sekin o'sadi (relyativistik o'sish). Minimum qiymati yengil moddalar uchun taxminan $2\\ \\mathrm{MeV\\cdot cm^2/g}$: suvda $1\\ \\mathrm{cm}$ yo'lga $2\\ \\mathrm{MeV}$, havoda $1\\ \\mathrm{cm}$ ga taxminan $2\\ \\mathrm{keV}$. Kosmik myuonlar kabi relyativistik zarralar deyarli shu minimumda ionlaydi, shuning uchun ular **minimal ionlovchi zarralar** (MIP) deyiladi. Bir xil impulsda og'ir zarra sekinroq va kuchliroq ionlaydi — $\\frac{dE}{dx}$ ni impuls bilan birga o'lchab, zarralarni ajratish mumkin (8-bo'lim; [[F01]], chapda).",
+  "ru": "**Кривая Бете и минимально ионизирующая частица.** Медленная частица ионизует сильно: множитель $\\frac{1}{v^2}$ увеличивает потери по мере замедления частицы. С ростом скорости потери уменьшаются, при $\\beta\\gamma\\approx3\\ldots4$ достигают минимума, затем медленно растут из-за логарифма (релятивистский подъём). Значение минимума для лёгких веществ около $2\\ \\mathrm{MeV\\cdot cm^2/g}$: в воде $2\\ \\mathrm{MeV}$ на $1\\ \\mathrm{cm}$ пути, в воздухе около $2\\ \\mathrm{keV}$ на $1\\ \\mathrm{cm}$. Релятивистские частицы, например космические мюоны, ионизуют почти в этом минимуме, поэтому их называют **минимально ионизирующими частицами** (MIP). При одинаковом импульсе тяжёлая частица медленнее и ионизует сильнее — измеряя $\\frac{dE}{dx}$ вместе с импульсом, можно различать частицы (раздел 8; [[F01]], слева).",
+  "en": "**The Bethe curve and the minimum ionizing particle.** A slow particle ionizes strongly: the factor $\\frac{1}{v^2}$ increases the loss as the particle slows down. As the speed grows the loss decreases, reaches a minimum at $\\beta\\gamma\\approx3\\ldots4$, and then rises slowly because of the logarithm (the relativistic rise). The minimum value for light materials is about $2\\ \\mathrm{MeV\\cdot cm^2/g}$: $2\\ \\mathrm{MeV}$ per $1\\ \\mathrm{cm}$ of path in water and about $2\\ \\mathrm{keV}$ per $1\\ \\mathrm{cm}$ in air. Relativistic particles such as cosmic muons ionize almost at this minimum, so they are called **minimum ionizing particles** (MIPs). At the same momentum a heavier particle is slower and ionizes more strongly — measuring $\\frac{dE}{dx}$ together with the momentum lets one distinguish particles (section 8; [[F01]], left)."
+ },
+ {
+  "t": "li",
+  "uz": "**Bragg cho'qqisi va yugurish masofasi.** Zarra sekinlashgani sari $\\frac{dE}{dx}$ ortib boradi, shuning uchun energiyaning katta qismi yo'lning oxirida, to'xtashdan oldin ajraladi — bu **Bragg cho'qqisi** ([[F01]], o'ngda). Zarra to'xtaguncha bosib o'tgan yo'l **yugurish masofasi** (range) $l$ deyiladi: og'ir zarralar deyarli to'g'ri chiziq bo'ylab harakatlanadi, shuning uchun bir xil energiyali zarralarning yugurish masofasi deyarli bir xil. Bu xossa proton terapiyasida ishlatiladi: energiyani tanlab, dozani o'simta chuqurligiga jamlash mumkin. Tipik qiymatlar: $5\\ \\mathrm{MeV}$ li alfa-zarra havoda taxminan $3.5\\ \\mathrm{cm}$ ni, suvda va tirik to'qimada esa atigi $40\\ \\mu\\mathrm{m}$ ni o'tadi — uni qog'oz varag'i to'xtatadi.",
+  "ru": "**Пик Брэгга и пробег.** По мере замедления частицы $\\frac{dE}{dx}$ растёт, поэтому бо́льшая часть энергии выделяется в конце пути, перед остановкой, — это **пик Брэгга** ([[F01]], справа). Путь, пройденный частицей до остановки, называется **пробегом** $l$: тяжёлые частицы движутся почти по прямой, поэтому пробег частиц одинаковой энергии почти одинаков. Это свойство используется в протонной терапии: выбирая энергию, можно сосредоточить дозу на глубине опухоли. Типичные значения: альфа-частица с энергией $5\\ \\mathrm{MeV}$ проходит в воздухе около $3.5\\ \\mathrm{cm}$, а в воде и живой ткани — всего $40\\ \\mu\\mathrm{m}$: её останавливает лист бумаги.",
+  "en": "**The Bragg peak and the range.** As the particle slows down $\\frac{dE}{dx}$ grows, so most of the energy is deposited at the end of the path, just before it stops — this is the **Bragg peak** ([[F01]], right). The path travelled by the particle until it stops is called the **range** $l$: heavy particles move almost in a straight line, so particles of the same energy have almost the same range. This property is used in proton therapy: by choosing the energy one can concentrate the dose at the depth of a tumour. Typical values: a $5\\ \\mathrm{MeV}$ alpha particle travels about $3.5\\ \\mathrm{cm}$ in air but only $40\\ \\mu\\mathrm{m}$ in water and living tissue — a sheet of paper stops it."
+ },
+ {
+  "t": "li",
+  "uz": "**Masshtablash qoidasi.** Bete formulasiga ko'ra $\\frac{dE}{dx}=z^2g\\left(v\\right)$, bunda $g$ faqat tezlikning funksiyasi. Kinetik energiya $E=Mh\\left(v\\right)$ ko'rinishida (norelyativistik holda $h=\\frac{v^2}{2}$), shuning uchun $dx=\\frac{dE}{z^2g}=\\frac{M}{z^2}\\frac{h'\\left(v\\right)dv}{g\\left(v\\right)}$. Integrallasak, quyidagi natija chiqadi: bir xil boshlang'ich **tezlikdagi** zarralar uchun yugurish masofasi $\\frac{M}{z^2}$ ga proporsional. GRE da bu tez-tez uchraydi: masalan, bir xil tezlikdagi deyton protondan ikki marta uzoqroq yuguradi, $\\frac{dE}{dx}$ esa ularda bir xil.",
+  "ru": "**Правило масштабирования.** Согласно формуле Бете $\\frac{dE}{dx}=z^2g\\left(v\\right)$, где $g$ — функция только скорости. Кинетическая энергия имеет вид $E=Mh\\left(v\\right)$ (в нерелятивистском случае $h=\\frac{v^2}{2}$), поэтому $dx=\\frac{dE}{z^2g}=\\frac{M}{z^2}\\frac{h'\\left(v\\right)dv}{g\\left(v\\right)}$. Интегрируя, получаем следующий результат: для частиц с одинаковой начальной **скоростью** пробег пропорционален $\\frac{M}{z^2}$. В GRE это встречается часто: например, дейтрон с той же скоростью пробегает вдвое больше протона, а $\\frac{dE}{dx}$ у них одинаково.",
+  "en": "**The scaling rule.** By the Bethe formula $\\frac{dE}{dx}=z^2g\\left(v\\right)$, where $g$ is a function of the speed alone. The kinetic energy has the form $E=Mh\\left(v\\right)$ (in the non-relativistic case $h=\\frac{v^2}{2}$), so $dx=\\frac{dE}{z^2g}=\\frac{M}{z^2}\\frac{h'\\left(v\\right)dv}{g\\left(v\\right)}$. Integrating gives the following result: for particles with the same initial **speed** the range is proportional to $\\frac{M}{z^2}$. This comes up often on the GRE: for example, a deuteron with the same speed travels twice as far as a proton, while their $\\frac{dE}{dx}$ is the same."
+ },
+ {
+  "t": "m",
+  "m": "l=\\frac{M}{z^2}f\\left(v\\right),\\qquad \\frac{l_1}{l_2}=\\frac{M_1z_2^2}{M_2z_1^2}\\quad\\left(v_1=v_2\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Elektronlar.** Elektron atom elektronlari bilan bir xil massaga ega, shuning uchun bitta to'qnashuvda energiyasining katta qismini yo'qotishi va katta burchakka sochilishi mumkin: uning yo'li siniq chiziq, yugurish masofasi esa noaniq. Bundan tashqari, yengil elektron yadro maydonida keskin tormozlanib, **tormozlanish nurlanishi** (bremsstrahlung) chiqaradi (B2-L23). Bu yo'qotish $\\frac{E}{X_0}$ ga teng, bu yerda $X_0$ — **radiatsion uzunlik**: qo'rg'oshinda $0.56\\ \\mathrm{cm}$, suvda $36\\ \\mathrm{cm}$, havoda $300\\ \\mathrm{m}$. Nurlanish yo'qotishi ionlanish yo'qotishiga tenglashadigan energiya **kritik energiya** deyiladi. Undan katta energiyalarda elektron asosan nurlanish orqali energiya yo'qotadi. Bir xil energiyada elektronning yugurish masofasi alfa-zarranikidan ancha katta: $1\\ \\mathrm{MeV}$ li elektron suvda taxminan $4\\ \\mathrm{mm}$ o'tadi, uni bir necha millimetrli alyuminiy plastinka to'xtatadi.",
+  "ru": "**Электроны.** Электрон имеет ту же массу, что и атомные электроны, поэтому в одном столкновении он может потерять большую часть энергии и рассеяться на большой угол: его путь — ломаная линия, а пробег размыт. Кроме того, лёгкий электрон резко тормозится в поле ядра и испускает **тормозное излучение** (B2-L23). Эти потери равны $\\frac{E}{X_0}$, где $X_0$ — **радиационная длина**: в свинце $0.56\\ \\mathrm{cm}$, в воде $36\\ \\mathrm{cm}$, в воздухе $300\\ \\mathrm{m}$. Энергия, при которой радиационные потери сравниваются с ионизационными, называется **критической энергией**. При больших энергиях электрон теряет энергию в основном на излучение. При одинаковой энергии пробег электрона гораздо больше, чем у альфа-частицы: электрон с энергией $1\\ \\mathrm{MeV}$ проходит в воде около $4\\ \\mathrm{mm}$, его останавливает алюминиевая пластинка толщиной несколько миллиметров.",
+  "en": "**Electrons.** An electron has the same mass as the atomic electrons, so in a single collision it can lose a large part of its energy and scatter through a large angle: its path is a zigzag and its range is blurred. In addition, the light electron is sharply decelerated in the field of a nucleus and emits **bremsstrahlung** (B2-L23). This loss equals $\\frac{E}{X_0}$, where $X_0$ is the **radiation length**: $0.56\\ \\mathrm{cm}$ in lead, $36\\ \\mathrm{cm}$ in water and $300\\ \\mathrm{m}$ in air. The energy at which the radiation loss equals the ionization loss is called the **critical energy**. Above it the electron loses energy mainly by radiation. At the same energy an electron's range is much larger than an alpha particle's: a $1\\ \\mathrm{MeV}$ electron travels about $4\\ \\mathrm{mm}$ in water and is stopped by an aluminium plate a few millimetres thick."
+ },
+ {
+  "t": "m",
+  "m": "\\left(\\frac{dE}{dx}\\right)_{rad}=\\frac{E}{X_0},\\qquad E_c\\approx\\frac{610\\ \\mathrm{MeV}}{Z+1.24}"
+ },
+ {
+  "t": "li",
+  "uz": "**Neytral zarralar.** Neytronlar va neytrinolar moddani ionlamaydi. Neytronlar yadrolar bilan to'qnashib, zaryadli zarra hosil qiladi: tez neytronlar vodorodga boy moddada (plastmassa, suv) tepilgan protonlar orqali, sekin (issiqlik) neytronlar esa ${}^{3}\\mathrm{He}$ yoki ${}^{10}\\mathrm{B}$ yadrolari bilan reaksiyalarda hosil bo'lgan zaryadli mahsulotlar orqali qayd etiladi. Neytrinolar shunchalik kam o'zaro ta'sir qiladiki, ularni tutish uchun ming tonnalab moddadan iborat detektorlar kerak; kollayder detektorlarida neytrino faqat **yetishmayotgan impuls** sifatida «ko'rinadi» (8-bo'lim).",
+  "ru": "**Нейтральные частицы.** Нейтроны и нейтрино вещество не ионизуют. Нейтроны, сталкиваясь с ядрами, создают заряженную частицу: быстрые нейтроны регистрируют в веществе, богатом водородом (пластмасса, вода), по протонам отдачи, а медленные (тепловые) — по заряженным продуктам реакций с ядрами ${}^{3}\\mathrm{He}$ или ${}^{10}\\mathrm{B}$. Нейтрино взаимодействуют так слабо, что для их улавливания нужны детекторы из тысяч тонн вещества; в детекторах на коллайдерах нейтрино «видно» только как **недостающий импульс** (раздел 8).",
+  "en": "**Neutral particles.** Neutrons and neutrinos do not ionize matter. Neutrons collide with nuclei and produce a charged particle: fast neutrons are detected in hydrogen-rich material (plastic, water) through recoil protons, and slow (thermal) neutrons through the charged products of reactions with ${}^{3}\\mathrm{He}$ or ${}^{10}\\mathrm{B}$ nuclei. Neutrinos interact so weakly that catching them takes detectors of thousands of tonnes of material; in collider detectors a neutrino is \"seen\" only as **missing momentum** (section 8)."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L37-F01.png",
+   "ru": "figures/B2-L37-F01-ru.png",
+   "en": "figures/B2-L37-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Fotonlarning modda bilan o'zaro ta'siri; susayish qonuni",
+  "ru": "2. Взаимодействие фотонов с веществом; закон ослабления",
+  "en": "2. Interaction of photons with matter; the attenuation law"
+ },
+ {
+  "t": "li",
+  "uz": "**Uch jarayon.** Foton zaryadsiz, u moddadan o'tganda asta-sekin energiya yo'qotmaydi: u yoki butunlay yo'qoladi, yoki sochiladi. Gamma va rentgen nurlari uchun uchta jarayon muhim ([[F02]], o'ngda). **Fotoeffekt** (fotoyutilish): foton butun atom tomonidan yutiladi, chiqqan elektron energiyasi $E-E_b$ ($E_b$ — bog'lanish energiyasi). U past energiyalarda (qo'rg'oshinda taxminan $0.5\\ \\mathrm{MeV}$ gacha) ustun keladi va tartib raqamiga juda kuchli bog'liq: ehtimollik $Z^4\\ldots Z^5$ ga proporsional. **Kompton sochilishi**: foton erkin deb hisoblanadigan elektronda sochiladi va energiyasining bir qismini unga beradi; o'rta energiyalarda (qo'rg'oshinda $0.5\\ldots5\\ \\mathrm{MeV}$, suvda $30\\ \\mathrm{keV}\\ldots25\\ \\mathrm{MeV}$) ustun, atomga hisoblaganda $Z$ ga proporsional. **Juft hosil bo'lishi**: yadro maydonida foton elektron–pozitron juftiga aylanadi; bo'sag'a $2m_ec^2=1.022\\ \\mathrm{MeV}$, yuqori energiyalarda ustun, ehtimolligi $Z^2$ ga proporsional.",
+  "ru": "**Три процесса.** Фотон не заряжен; проходя через вещество, он не теряет энергию постепенно: он либо исчезает целиком, либо рассеивается. Для гамма- и рентгеновских лучей важны три процесса ([[F02]], справа). **Фотоэффект** (фотопоглощение): фотон поглощается атомом как целым, энергия вылетевшего электрона $E-E_b$ ($E_b$ — энергия связи). Он преобладает при низких энергиях (в свинце примерно до $0.5\\ \\mathrm{MeV}$) и очень сильно зависит от порядкового номера: вероятность пропорциональна $Z^4\\ldots Z^5$. **Комптоновское рассеяние**: фотон рассеивается на электроне, который можно считать свободным, и передаёт ему часть энергии; преобладает при средних энергиях (в свинце $0.5\\ldots5\\ \\mathrm{MeV}$, в воде $30\\ \\mathrm{keV}\\ldots25\\ \\mathrm{MeV}$), в расчёте на атом пропорционально $Z$. **Рождение пары**: в поле ядра фотон превращается в электрон-позитронную пару; порог $2m_ec^2=1.022\\ \\mathrm{MeV}$, преобладает при высоких энергиях, вероятность пропорциональна $Z^2$.",
+  "en": "**Three processes.** A photon is uncharged; passing through matter it does not lose energy gradually: it either disappears entirely or is scattered. For gamma and X rays three processes matter ([[F02]], right). **The photoelectric effect** (photoabsorption): the photon is absorbed by the atom as a whole, and the ejected electron has energy $E-E_b$ ($E_b$ is the binding energy). It dominates at low energies (up to about $0.5\\ \\mathrm{MeV}$ in lead) and depends very strongly on the atomic number: the probability is proportional to $Z^4\\ldots Z^5$. **Compton scattering**: the photon scatters off an electron that can be treated as free and gives it part of its energy; it dominates at intermediate energies ($0.5\\ldots5\\ \\mathrm{MeV}$ in lead, $30\\ \\mathrm{keV}\\ldots25\\ \\mathrm{MeV}$ in water) and is proportional to $Z$ per atom. **Pair production**: in the field of a nucleus the photon turns into an electron–positron pair; the threshold is $2m_ec^2=1.022\\ \\mathrm{MeV}$, it dominates at high energies, and its probability is proportional to $Z^2$."
+ },
+ {
+  "t": "li",
+  "uz": "**Kompton kinematikasi.** Sochilish burchagi $\\theta$ bo'lganda to'lqin uzunligi $\\frac{h}{m_ec}\\left(1-\\cos\\theta\\right)$ ga ortadi (B1-L48). Energiyalar tilida yozsak, $\\varepsilon=\\frac{E}{m_ec^2}$ belgilash qulay. Elektron eng ko'p energiyani foton orqaga ($\\theta=\\pi$) sochilganda oladi — bu energiya spektrda **Kompton qirrasi** deb ataladi. Orqaga sochilgan fotonning energiyasi $\\frac{E}{1+2\\varepsilon}$; katta $E$ da u $\\frac{m_ec^2}{2}\\approx256\\ \\mathrm{keV}$ ga intiladi. Shuning uchun Kompton jarayonida foton energiyasining hammasi elektronga hech qachon o'tmaydi — bu detektor spektrining shaklini belgilaydi (4-bo'lim).",
+  "ru": "**Кинематика Комптона.** При угле рассеяния $\\theta$ длина волны увеличивается на $\\frac{h}{m_ec}\\left(1-\\cos\\theta\\right)$ (B1-L48). На языке энергий удобно обозначение $\\varepsilon=\\frac{E}{m_ec^2}$. Наибольшую энергию электрон получает, когда фотон рассеивается назад ($\\theta=\\pi$), — эта энергия в спектре называется **комптоновским краем**. Энергия фотона, рассеянного назад, равна $\\frac{E}{1+2\\varepsilon}$; при больших $E$ она стремится к $\\frac{m_ec^2}{2}\\approx256\\ \\mathrm{keV}$. Поэтому в комптоновском процессе вся энергия фотона никогда не переходит к электрону — это определяет форму спектра детектора (раздел 4).",
+  "en": "**Compton kinematics.** At a scattering angle $\\theta$ the wavelength increases by $\\frac{h}{m_ec}\\left(1-\\cos\\theta\\right)$ (B1-L48). In terms of energies the notation $\\varepsilon=\\frac{E}{m_ec^2}$ is convenient. The electron receives the most energy when the photon is scattered backwards ($\\theta=\\pi$) — in a spectrum this energy is called the **Compton edge**. The energy of the backscattered photon is $\\frac{E}{1+2\\varepsilon}$; for large $E$ it tends to $\\frac{m_ec^2}{2}\\approx256\\ \\mathrm{keV}$. So in the Compton process the whole photon energy never passes to the electron — this sets the shape of a detector's spectrum (section 4)."
+ },
+ {
+  "t": "m",
+  "m": "E'=\\frac{E}{1+\\varepsilon\\left(1-\\cos\\theta\\right)},\\qquad E_{max}=E\\frac{2\\varepsilon}{1+2\\varepsilon},\\qquad \\varepsilon=\\frac{E}{m_ec^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Susayish qonuni.** Har bir foton qalinligi $dx$ bo'lgan qatlamda $\\mu\\,dx$ ehtimollik bilan «yo'qoladi» (yutiladi yoki dastadan chetga sochiladi). Bundan $dI=-\\mu I\\,dx$ va eksponensial qonun kelib chiqadi. **Chiziqli susayish koeffitsiyenti** $\\mu=n_0\\sigma$, bu yerda $n_0$ — atomlar konsentratsiyasi, $\\sigma$ — bitta atomga to'g'ri keladigan to'liq **kesim** (uch jarayon kesimlarining yig'indisi). Kesimni zarra «ko'radigan» effektiv yuza deb tasavvur qilish mumkin. Jadvallarda ko'pincha **massaviy** koeffitsiyent $\\frac{\\mu}{\\rho}$ ($\\mathrm{cm^2/g}$) beriladi. $\\frac{1}{\\mu}$ — fotonning o'rtacha erkin yugurish yo'li, intensivlikni ikki marta kamaytiradigan qalinlik esa **yarim susaytirish qatlami**.",
+  "ru": "**Закон ослабления.** Каждый фотон в слое толщиной $dx$ «пропадает» (поглощается или рассеивается из пучка) с вероятностью $\\mu\\,dx$. Отсюда $dI=-\\mu I\\,dx$ и экспоненциальный закон. **Линейный коэффициент ослабления** $\\mu=n_0\\sigma$, где $n_0$ — концентрация атомов, $\\sigma$ — полное **сечение** в расчёте на один атом (сумма сечений трёх процессов). Сечение можно представлять как эффективную площадь, которую «видит» частица. В таблицах часто дают **массовый** коэффициент $\\frac{\\mu}{\\rho}$ ($\\mathrm{cm^2/g}$). $\\frac{1}{\\mu}$ — средняя длина свободного пробега фотона, а толщина, уменьшающая интенсивность вдвое, — **слой половинного ослабления**.",
+  "en": "**The attenuation law.** Each photon \"disappears\" (is absorbed or scattered out of the beam) in a layer of thickness $dx$ with probability $\\mu\\,dx$. Hence $dI=-\\mu I\\,dx$ and an exponential law. The **linear attenuation coefficient** is $\\mu=n_0\\sigma$, where $n_0$ is the concentration of atoms and $\\sigma$ is the total **cross section** per atom (the sum of the cross sections of the three processes). A cross section can be pictured as the effective area that the particle \"sees\". Tables often give the **mass** coefficient $\\frac{\\mu}{\\rho}$ ($\\mathrm{cm^2/g}$). $\\frac{1}{\\mu}$ is the photon's mean free path, and the thickness that halves the intensity is the **half-value layer**."
+ },
+ {
+  "t": "m",
+  "m": "I=I_0e^{-\\mu x},\\qquad \\mu=n_0\\sigma,\\qquad x_{1/2}=\\frac{\\ln2}{\\mu}\\approx\\frac{0.693}{\\mu}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol va izohlar.** $1\\ \\mathrm{MeV}$ li fotonlar uchun suvda $\\frac{\\mu}{\\rho}\\approx0.071\\ \\mathrm{cm^2/g}$, demak $\\mu\\approx0.071\\ \\mathrm{cm^{-1}}$ va $x_{1/2}\\approx9.8\\ \\mathrm{cm}$: intensivlik har $9.8\\ \\mathrm{cm}$ da ikki marta kamayadi. Muhim farq: zaryadli zarra aniq yugurish masofasiga ega, foton esa ega emas — qalinlik qancha bo'lmasin, fotonlarning bir qismi o'tib ketadi, $n$ ta yarim qatlamdan keyin $2^{-n}$ ulushi qoladi ([[F02]], chapda). Qonun tor dasta uchun aniq; keng dastada sochilgan fotonlarning bir qismi baribir detektorga yetib keladi va o'lchangan intensivlik kattaroq chiqadi. Himoyada og'ir moddalar (qo'rg'oshin, volfram) ishlatiladi, chunki $\\mu$ zichlik bilan ham, $Z$ bilan ham o'sadi.",
+  "ru": "**Пример и замечания.** Для фотонов с энергией $1\\ \\mathrm{MeV}$ в воде $\\frac{\\mu}{\\rho}\\approx0.071\\ \\mathrm{cm^2/g}$, значит $\\mu\\approx0.071\\ \\mathrm{cm^{-1}}$ и $x_{1/2}\\approx9.8\\ \\mathrm{cm}$: интенсивность уменьшается вдвое через каждые $9.8\\ \\mathrm{cm}$. Важное отличие: заряженная частица имеет определённый пробег, а фотон — нет: какой бы ни была толщина, часть фотонов проходит, после $n$ слоёв половинного ослабления остаётся доля $2^{-n}$ ([[F02]], слева). Закон точен для узкого пучка; в широком пучке часть рассеянных фотонов всё же доходит до детектора и измеренная интенсивность оказывается больше. Для защиты используют тяжёлые вещества (свинец, вольфрам), так как $\\mu$ растёт и с плотностью, и с $Z$.",
+  "en": "**Example and remarks.** For $1\\ \\mathrm{MeV}$ photons in water $\\frac{\\mu}{\\rho}\\approx0.071\\ \\mathrm{cm^2/g}$, so $\\mu\\approx0.071\\ \\mathrm{cm^{-1}}$ and $x_{1/2}\\approx9.8\\ \\mathrm{cm}$: the intensity halves every $9.8\\ \\mathrm{cm}$. An important difference: a charged particle has a definite range, but a photon does not — whatever the thickness, some photons get through, and after $n$ half-value layers a fraction $2^{-n}$ remains ([[F02]], left). The law is exact for a narrow beam; in a broad beam some scattered photons still reach the detector and the measured intensity comes out larger. Shielding uses heavy materials (lead, tungsten) because $\\mu$ grows with both the density and $Z$."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L37-F02.png",
+   "ru": "figures/B2-L37-F02-ru.png",
+   "en": "figures/B2-L37-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Gazli detektorlar: ionlanish kamerasi, proporsional va Geyger hisoblagichi",
+  "ru": "3. Газовые детекторы: ионизационная камера, пропорциональный счётчик и счётчик Гейгера",
+  "en": "3. Gas detectors: ionization chamber, proportional counter and Geiger counter"
+ },
+ {
+  "t": "li",
+  "uz": "**Bir juftga energiya.** Zarra gazda $E$ energiya qoldirsa, o'rtacha $N_0=\\frac{E}{W}$ ta **ion–elektron jufti** hosil bo'ladi. $W$ — bitta juft hosil qilishga sarflanadigan o'rtacha energiya: havoda $34\\ \\mathrm{eV}$, argonda $26\\ \\mathrm{eV}$, geliyda $41\\ \\mathrm{eV}$. $W$ ionlanish energiyasidan (argonda $15.8\\ \\mathrm{eV}$) taxminan ikki marta katta, chunki energiyaning bir qismi uyg'otishga va issiqlikka ketadi. Gazli detektor — ichi gaz bilan to'ldirilgan, elektrodlariga kuchlanish berilgan idish: elektr maydon elektronlarni anodga, musbat ionlarni katodga olib boradi va zanjirda signal hosil bo'ladi. Uchta asosiy turi — ionlanish kamerasi, proporsional va Geyger hisoblagichi — tuzilishi o'xshash, lekin turli kuchlanishlarda ishlaydi ([[F03]]).",
+  "ru": "**Энергия на пару ионов.** Если частица оставляет в газе энергию $E$, в среднем образуется $N_0=\\frac{E}{W}$ **ион-электронных пар**. $W$ — средняя энергия, затрачиваемая на образование одной пары: в воздухе $34\\ \\mathrm{eV}$, в аргоне $26\\ \\mathrm{eV}$, в гелии $41\\ \\mathrm{eV}$. $W$ примерно вдвое больше энергии ионизации (в аргоне $15.8\\ \\mathrm{eV}$), потому что часть энергии уходит на возбуждение и в тепло. Газовый детектор — сосуд, заполненный газом, на электроды которого подано напряжение: электрическое поле ведёт электроны к аноду, положительные ионы — к катоду, и в цепи возникает сигнал. Три основных типа — ионизационная камера, пропорциональный счётчик и счётчик Гейгера — устроены похоже, но работают при разных напряжениях ([[F03]]).",
+  "en": "**Energy per ion pair.** If a particle deposits energy $E$ in a gas, on average $N_0=\\frac{E}{W}$ **ion–electron pairs** are formed. $W$ is the mean energy spent on forming one pair: $34\\ \\mathrm{eV}$ in air, $26\\ \\mathrm{eV}$ in argon, $41\\ \\mathrm{eV}$ in helium. $W$ is about twice the ionization energy ($15.8\\ \\mathrm{eV}$ in argon) because part of the energy goes into excitation and heat. A gas detector is a gas-filled vessel with a voltage applied to its electrodes: the electric field drives the electrons to the anode and the positive ions to the cathode, and a signal appears in the circuit. The three main types — the ionization chamber, the proportional counter and the Geiger counter — are built similarly but work at different voltages ([[F03]])."
+ },
+ {
+  "t": "m",
+  "m": "N_0=\\frac{E}{W},\\qquad Q=MN_0e,\\qquad U=\\frac{Q}{C}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ionlanish kamerasi.** Kuchlanish rekombinatsiyani yo'qotishga yetarli, lekin ko'chki hosil qilish uchun kam: barcha birlamchi zaryadlar yig'iladi, kuchaytirish $M=1$. Yakka zarra signali juda kichik: $1\\ \\mathrm{MeV}$ energiya havoda $3\\cdot10^4$ juft, ya'ni $5\\ \\mathrm{fC}$ zaryad beradi — uni kam shovqinli kuchaytirgich bilan o'lchash kerak. Shuning uchun ionlanish kamerasi ko'pincha **tok rejimida** ishlaydi: o'rtacha tok har sekundda hosil bo'ladigan zaryadga teng va nurlanish dozasi tezligiga proporsional. Dozimetrlar, tutun datchiklari (ichida kuchsiz alfa-manba bor) va reaktor quvvatini o'lchovchi kameralar shunday ishlaydi.",
+  "ru": "**Ионизационная камера.** Напряжения достаточно, чтобы исключить рекомбинацию, но мало для образования лавины: собираются все первичные заряды, усиление $M=1$. Сигнал от одной частицы очень мал: энергия $1\\ \\mathrm{MeV}$ даёт в воздухе $3\\cdot10^4$ пар, то есть заряд $5\\ \\mathrm{fC}$, — его нужно измерять малошумящим усилителем. Поэтому ионизационная камера часто работает в **токовом режиме**: средний ток равен заряду, образующемуся за секунду, и пропорционален мощности дозы излучения. Так работают дозиметры, датчики дыма (внутри — слабый альфа-источник) и камеры для измерения мощности реактора.",
+  "en": "**The ionization chamber.** The voltage is high enough to eliminate recombination but too low for an avalanche: all the primary charges are collected and the gain is $M=1$. The signal of a single particle is very small: an energy of $1\\ \\mathrm{MeV}$ gives $3\\cdot10^4$ pairs in air, i.e. a charge of $5\\ \\mathrm{fC}$ — it must be measured with a low-noise amplifier. So an ionization chamber often works in **current mode**: the mean current equals the charge produced per second and is proportional to the radiation dose rate. Dosimeters, smoke detectors (with a weak alpha source inside) and chambers that measure reactor power work this way."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'chki va proporsional hisoblagich.** Hisoblagich odatda silindrdan (katod, radiusi $b$) va uning o'qidagi ingichka simdan (anod, radiusi $a$) iborat. Maydon simga yaqinlashgan sari $\\frac{1}{r}$ kabi o'sadi va ingichka sim yonida juda kuchli bo'ladi. U yerda elektron bitta erkin yugurish yo'lida ionlashga yetarli energiya oladi va yangi elektron uradi; ular ham shunday qiladi — **elektron ko'chkisi** (Taunsend razryadi) hosil bo'ladi. **Proporsional hisoblagichda** har bir birlamchi elektron o'zining mustaqil ko'chkisini beradi, gaz kuchaytirishi $M\\sim10^2\\ldots10^5$. Signal birlamchi juftlar soniga, ya'ni energiyaga proporsional qoladi — proporsional hisoblagich zarra energiyasini o'lchaydi va bir xil kuchlanishda alfa va beta zarralarni impuls amplitudasi bo'yicha ajratadi. Signalning asosiy qismini simdan uzoqlashayotgan ionlar induksiyalaydi.",
+  "ru": "**Лавина и пропорциональный счётчик.** Счётчик обычно состоит из цилиндра (катод, радиус $b$) и тонкой нити на его оси (анод, радиус $a$). Поле растёт как $\\frac{1}{r}$ по мере приближения к нити и около тонкой нити становится очень сильным. Там электрон на одной длине свободного пробега набирает энергию, достаточную для ионизации, и выбивает новый электрон; те делают то же самое — возникает **электронная лавина** (таунсендовский разряд). В **пропорциональном счётчике** каждый первичный электрон даёт свою независимую лавину, газовое усиление $M\\sim10^2\\ldots10^5$. Сигнал остаётся пропорциональным числу первичных пар, то есть энергии, — пропорциональный счётчик измеряет энергию частицы и при одинаковом напряжении различает альфа- и бета-частицы по амплитуде импульса. Основную часть сигнала наводят ионы, удаляющиеся от нити.",
+  "en": "**The avalanche and the proportional counter.** A counter usually consists of a cylinder (the cathode, radius $b$) and a thin wire on its axis (the anode, radius $a$). The field grows as $\\frac{1}{r}$ towards the wire and becomes very strong near the thin wire. There an electron gains enough energy within one mean free path to ionize and knocks out a new electron; these do the same — an **electron avalanche** (a Townsend discharge) forms. In a **proportional counter** each primary electron gives its own independent avalanche, with gas gain $M\\sim10^2\\ldots10^5$. The signal remains proportional to the number of primary pairs, i.e. to the energy — the proportional counter measures particle energy and, at the same voltage, distinguishes alpha and beta particles by pulse height. Most of the signal is induced by the ions moving away from the wire."
+ },
+ {
+  "t": "m",
+  "m": "E\\left(r\\right)=\\frac{U}{r\\ln\\frac{b}{a}},\\qquad a<r<b"
+ },
+ {
+  "t": "li",
+  "uz": "**Geyger–Myuller hisoblagichi.** Kuchlanish yana oshirilsa, ko'chkida hosil bo'lgan ultrabinafsha fotonlar gazning boshqa joylarida yangi ko'chkilar boshlaydi va razryad butun sim bo'ylab tarqaladi. Endi har bir zarra bir xil katta impuls beradi ($10^9\\ldots10^{10}$ juft), u birlamchi ionlanishga bog'liq emas. Afzalligi — oddiy va arzon, signal katta, kuchaytirgich kerak emas; kamchiligi — **energiyani o'lchay olmaydi** va zarra turini ajratmaydi, faqat sanaydi. Razryadni o'chirish uchun gazga galogen yoki organik bug' qo'shiladi; simni o'rab olgan sekin ionlar maydonni susaytirib turgan vaqtda hisoblagich yangi zarrani sezmaydi — o'lik vaqt $50\\ldots300\\ \\mu\\mathrm{s}$ (7-bo'lim). Kuchlanish yanada oshirilsa, uzluksiz razryad boshlanadi va hisoblagich buziladi.",
+  "ru": "**Счётчик Гейгера–Мюллера.** Если ещё повысить напряжение, ультрафиолетовые фотоны, образовавшиеся в лавине, начинают новые лавины в других местах газа, и разряд распространяется вдоль всей нити. Теперь каждая частица даёт одинаковый большой импульс ($10^9\\ldots10^{10}$ пар), не зависящий от первичной ионизации. Достоинство — простой и дешёвый, сигнал большой, усилитель не нужен; недостаток — **не может измерять энергию** и не различает тип частицы, только считает. Для гашения разряда в газ добавляют галоген или органические пары; пока медленные ионы, окружающие нить, ослабляют поле, счётчик не чувствует новую частицу — мёртвое время $50\\ldots300\\ \\mu\\mathrm{s}$ (раздел 7). При дальнейшем повышении напряжения начинается непрерывный разряд и счётчик выходит из строя.",
+  "en": "**The Geiger–Müller counter.** If the voltage is raised further, ultraviolet photons produced in the avalanche start new avalanches elsewhere in the gas and the discharge spreads along the whole wire. Now every particle gives the same large pulse ($10^9\\ldots10^{10}$ pairs), independent of the primary ionization. The advantages: simple and cheap, a large signal, no amplifier needed; the drawback: it **cannot measure energy** and does not distinguish the type of particle, it only counts. To quench the discharge a halogen or organic vapour is added to the gas; while the slow ions surrounding the wire weaken the field, the counter does not notice a new particle — a dead time of $50\\ldots300\\ \\mu\\mathrm{s}$ (section 7). If the voltage is raised further still, a continuous discharge begins and the counter is ruined."
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls amplitudasining kuchlanishga bog'liqligi.** [[F03]] dagi egri chiziq barcha rejimlarni birlashtiradi: rekombinatsiya sohasi (kichik kuchlanishda ionlarning bir qismi qayta birikadi), ionlanish kamerasi sohasi (tekis plato, $M=1$), proporsional soha ($M$ kuchlanish bilan eksponensial o'sadi, alfa va beta egri chiziqlari parallel), cheklangan proporsionallik sohasi (ionlarning hajmiy zaryadi maydonni buzadi), Geyger sohasi (egri chiziqlar birlashadi) va uzluksiz razryad. Geyger sohasida sanoq tezligi kuchlanishga deyarli bog'liq emas — bu **plato**; ish kuchlanishi plato o'rtasida tanlanadi.",
+  "ru": "**Зависимость амплитуды импульса от напряжения.** Кривая на [[F03]] объединяет все режимы: область рекомбинации (при малом напряжении часть ионов рекомбинирует), область ионизационной камеры (ровное плато, $M=1$), пропорциональная область ($M$ растёт с напряжением экспоненциально, кривые для альфа и бета параллельны), область ограниченной пропорциональности (объёмный заряд ионов искажает поле), область Гейгера (кривые сливаются) и непрерывный разряд. В области Гейгера скорость счёта почти не зависит от напряжения — это **плато**; рабочее напряжение выбирают в середине плато.",
+  "en": "**Pulse height versus voltage.** The curve in [[F03]] unites all the modes: the recombination region (at low voltage some of the ions recombine), the ionization chamber region (a flat plateau, $M=1$), the proportional region ($M$ grows exponentially with voltage, the alpha and beta curves are parallel), the region of limited proportionality (the space charge of the ions distorts the field), the Geiger region (the curves merge) and continuous discharge. In the Geiger region the counting rate hardly depends on the voltage — this is the **plateau**; the operating voltage is chosen in the middle of the plateau."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'p simli va dreyf kameralari.** Ko'p parallel anod simlari bo'lgan proporsional kamera (Sharpak, 1968; Nobel mukofoti 1992) zarra qaysi sim yonidan o'tganini aniqlaydi. **Dreyf kamerasida** esa elektronlar bir jinsli maydonda o'zgarmas tezlik $v_d\\approx50\\ \\mu\\mathrm{m/ns}$ bilan simga suzib boradi; kelish vaqtini tashqi signalga nisbatan o'lchab, masofa $x=v_dt$ topiladi va koordinata $0.1\\ \\mathrm{mm}$ gacha aniqlikda o'lchanadi. Bunday kameralar zarra trekini — trayektoriyasini — tiklaydi (8-bo'lim).",
+  "ru": "**Многопроволочные и дрейфовые камеры.** Пропорциональная камера с множеством параллельных анодных проволок (Шарпак, 1968; Нобелевская премия 1992) определяет, около какой проволоки прошла частица. В **дрейфовой камере** электроны в однородном поле дрейфуют к проволоке с постоянной скоростью $v_d\\approx50\\ \\mu\\mathrm{m/ns}$; измеряя время прихода относительно внешнего сигнала, находят расстояние $x=v_dt$, и координата измеряется с точностью до $0.1\\ \\mathrm{mm}$. Такие камеры восстанавливают трек — траекторию — частицы (раздел 8).",
+  "en": "**Multiwire and drift chambers.** A proportional chamber with many parallel anode wires (Charpak, 1968; Nobel Prize 1992) determines which wire the particle passed near. In a **drift chamber** the electrons drift to the wire in a uniform field at a constant speed $v_d\\approx50\\ \\mu\\mathrm{m/ns}$; measuring their arrival time relative to an external signal gives the distance $x=v_dt$, and the coordinate is measured to within $0.1\\ \\mathrm{mm}$. Such chambers reconstruct the particle's track — its trajectory (section 8)."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L37-F03.png",
+   "ru": "figures/B2-L37-F03-ru.png",
+   "en": "figures/B2-L37-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Ssintillyatsion detektor va fotoelektron ko'paytirgich",
+  "ru": "4. Сцинтилляционный детектор и фотоэлектронный умножитель",
+  "en": "4. The scintillation detector and the photomultiplier tube"
+ },
+ {
+  "t": "li",
+  "uz": "**Ssintillyatorlar.** Ba'zi moddalarda zaryadli zarra qoldirgan energiyaning bir qismi ko'rinadigan yorug'lik chaqnashiga aylanadi; chaqnashdagi fotonlar soni qoldirilgan energiyaga taxminan proporsional. **Noorganik kristallar**: talliy qo'shilgan natriy yodid $\\mathrm{NaI}\\left(\\mathrm{Tl}\\right)$ — keV ga taxminan $38$ foton, so'nish vaqti $230\\ \\mathrm{ns}$; yod ($Z=53$) va katta zichlik ($3.7\\ \\mathrm{g/cm^3}$) tufayli gamma-nurlarni yaxshi yutadi; BGO ($\\mathrm{Bi_4Ge_3O_{12}}$) undan ham zichroq. **Organik va plastik ssintillyatorlar**: keV ga taxminan $10$ foton, lekin juda tez ($2\\ \\mathrm{ns}$) va arzon, istalgan shaklda yasaladi; $Z$ kichik bo'lgani uchun beta-zarralar, tez neytronlar (tepilgan protonlar) va vaqtni aniq o'lchash uchun ishlatiladi.",
+  "ru": "**Сцинтилляторы.** В некоторых веществах часть энергии, оставленной заряженной частицей, превращается во вспышку видимого света; число фотонов во вспышке примерно пропорционально оставленной энергии. **Неорганические кристаллы**: йодид натрия, активированный таллием, $\\mathrm{NaI}\\left(\\mathrm{Tl}\\right)$ — около $38$ фотонов на keV, время высвечивания $230\\ \\mathrm{ns}$; благодаря йоду ($Z=53$) и большой плотности ($3.7\\ \\mathrm{g/cm^3}$) хорошо поглощает гамма-лучи; BGO ($\\mathrm{Bi_4Ge_3O_{12}}$) ещё плотнее. **Органические и пластиковые сцинтилляторы**: около $10$ фотонов на keV, но очень быстрые ($2\\ \\mathrm{ns}$) и дешёвые, изготавливаются любой формы; из-за малого $Z$ используются для бета-частиц, быстрых нейтронов (протоны отдачи) и точного измерения времени.",
+  "en": "**Scintillators.** In some materials part of the energy left by a charged particle turns into a flash of visible light; the number of photons in the flash is roughly proportional to the deposited energy. **Inorganic crystals**: thallium-doped sodium iodide $\\mathrm{NaI}\\left(\\mathrm{Tl}\\right)$ — about $38$ photons per keV, decay time $230\\ \\mathrm{ns}$; thanks to iodine ($Z=53$) and its high density ($3.7\\ \\mathrm{g/cm^3}$) it absorbs gamma rays well; BGO ($\\mathrm{Bi_4Ge_3O_{12}}$) is denser still. **Organic and plastic scintillators**: about $10$ photons per keV, but very fast ($2\\ \\mathrm{ns}$) and cheap, and made in any shape; because of their low $Z$ they are used for beta particles, fast neutrons (recoil protons) and precise timing."
+ },
+ {
+  "t": "li",
+  "uz": "**Fotoelektron ko'paytirgich (FEK).** Ssintillyatsiya yorug'ligi juda kuchsiz, uni FEK qayd etadi ([[F04]], chapda). Fotonlar **fotokatodga** tushib, fotoeffekt orqali elektron uradi; bitta foton elektron urib chiqarish ehtimoli **kvant samaradorligi** $\\eta$ deyiladi (ko'k yorug'lik uchun $\\eta\\approx0.25$). Fotoelektronlar maydon bilan birinchi **dinodga** tezlashtiriladi va har bir elektron undan $\\delta$ ta ikkilamchi elektron uradi ($\\delta\\approx3\\ldots6$). $n$ ta dinoddan keyin anodga $M=\\delta^n$ marta ko'paygan elektronlar oqimi keladi: masalan, $n=8$ va $\\delta=6$ da $M\\approx1.7\\cdot10^6$. Shunday qilib, bitta fotoelektron ham o'lchanadigan impuls beradi — FEK yakka fotonlarni sanay oladi.",
+  "ru": "**Фотоэлектронный умножитель (ФЭУ).** Сцинтилляционный свет очень слаб, его регистрирует ФЭУ ([[F04]], слева). Фотоны падают на **фотокатод** и выбивают электрон за счёт фотоэффекта; вероятность того, что один фотон выбьет электрон, называется **квантовой эффективностью** $\\eta$ (для синего света $\\eta\\approx0.25$). Фотоэлектроны ускоряются полем к первому **диноду**, и каждый электрон выбивает из него $\\delta$ вторичных электронов ($\\delta\\approx3\\ldots6$). После $n$ динодов на анод приходит поток электронов, умноженный в $M=\\delta^n$ раз: например, при $n=8$ и $\\delta=6$ имеем $M\\approx1.7\\cdot10^6$. Таким образом, даже один фотоэлектрон даёт измеримый импульс — ФЭУ может считать отдельные фотоны.",
+  "en": "**The photomultiplier tube (PMT).** Scintillation light is very weak, and it is recorded by a PMT ([[F04]], left). The photons fall on the **photocathode** and knock out electrons by the photoelectric effect; the probability that one photon ejects an electron is called the **quantum efficiency** $\\eta$ ($\\eta\\approx0.25$ for blue light). The photoelectrons are accelerated by the field to the first **dynode**, and each electron knocks $\\delta$ secondary electrons out of it ($\\delta\\approx3\\ldots6$). After $n$ dynodes a stream of electrons multiplied $M=\\delta^n$ times arrives at the anode: for example, $n=8$ and $\\delta=6$ give $M\\approx1.7\\cdot10^6$. So even a single photoelectron gives a measurable pulse — a PMT can count individual photons."
+ },
+ {
+  "t": "m",
+  "m": "N_e=\\eta N_{\\gamma},\\qquad M=\\delta^n,\\qquad Q=N_eMe,\\qquad \\frac{dM}{M}=n\\frac{d\\delta}{\\delta}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kuchlanish barqarorligi.** Har bir dinodning koeffitsiyenti dinodlar orasidagi kuchlanishga bog'liq ($\\delta\\propto U^{0.7}$ atrofida), kuchaytirish esa uning $n$-darajasi. Oxirgi formula ko'rsatadiki, $\\delta$ ning kichik nisbiy o'zgarishi kuchaytirishda $n$ marta kattalashadi. Shuning uchun FEK yuqori kuchlanish manbai juda barqaror bo'lishi kerak, aks holda energiya shkalasi «suzadi». FEK ning boshqa xossalari: vaqt bo'yicha aniqligi yuqori (nanosekundlar), magnit maydonga sezgir (elektronlar yo'li buziladi), sovuq holatda ham kichik qorong'i tok beradi. Ixcham muqobillari — kremniy fotoko'paytirgichlar (SiPM) va ko'chkili fotodiodlar: ular magnit maydonda ham ishlaydi.",
+  "ru": "**Стабильность напряжения.** Коэффициент каждого динода зависит от напряжения между динодами (около $\\delta\\propto U^{0.7}$), а усиление — его $n$-я степень. Последняя формула показывает, что малое относительное изменение $\\delta$ увеличивается в усилении в $n$ раз. Поэтому источник высокого напряжения ФЭУ должен быть очень стабильным, иначе шкала энергий «плывёт». Другие свойства ФЭУ: высокая временная точность (наносекунды), чувствительность к магнитному полю (искажается путь электронов), небольшой темновой ток даже в холодном состоянии. Компактные альтернативы — кремниевые фотоумножители (SiPM) и лавинные фотодиоды: они работают и в магнитном поле.",
+  "en": "**Voltage stability.** The coefficient of each dynode depends on the voltage between dynodes (around $\\delta\\propto U^{0.7}$), and the gain is its $n$-th power. The last formula shows that a small relative change in $\\delta$ is magnified $n$ times in the gain. So the PMT's high-voltage supply must be very stable, otherwise the energy scale \"drifts\". Other PMT properties: high timing precision (nanoseconds), sensitivity to magnetic fields (the electron paths are distorted), and a small dark current even when cold. Compact alternatives are silicon photomultipliers (SiPMs) and avalanche photodiodes: they also work in a magnetic field."
+ },
+ {
+  "t": "li",
+  "uz": "**Amplituda spektri.** Impulslarni amplitudasi bo'yicha saralab (ko'p kanalli analizator), detektorda qoldirilgan energiyaning taqsimoti — **amplituda spektri** olinadi ([[F04]], o'ngda). Monoenergetik gamma-chiziq uchun unda quyidagilar ko'rinadi: **fotocho'qqi** — foton energiyasi to'liq yutilgan hodisalar (fotoeffekt yoki Komptondan keyin yutilish), uning holati energiya shkalasini beradi; **Kompton kontinuumi** — foton sochilib, detektordan chiqib ketgan hodisalar, u Kompton qirrasida keskin tugaydi; **orqaga sochilish cho'qqisi** — atrofdagi moddalardan orqaga sochilib kelgan fotonlar. Juft hosil bo'lishi mumkin bo'lgan energiyalarda annigilyatsiya fotonlaridan biri yoki ikkalasi chiqib ketsa, $E-m_ec^2$ va $E-2m_ec^2$ da **qochish cho'qqilari** paydo bo'ladi. Detektor qanchalik katta va $Z$ i qanchalik baland bo'lsa, fotocho'qqining kontinuumga nisbati shunchalik katta. Real $\\mathrm{NaI}\\left(\\mathrm{Tl}\\right)$ uchun ${}^{137}\\mathrm{Cs}$ chizig'ida ($662\\ \\mathrm{keV}$) fotocho'qqi kengligi energiyaning taxminan $7$ foizini tashkil etadi.",
+  "ru": "**Амплитудный спектр.** Сортируя импульсы по амплитуде (многоканальный анализатор), получают распределение оставленной в детекторе энергии — **амплитудный спектр** ([[F04]], справа). Для моноэнергетической гамма-линии в нём видно следующее: **фотопик** — события, в которых энергия фотона поглощена полностью (фотоэффект или поглощение после комптоновского рассеяния), его положение даёт шкалу энергий; **комптоновский континуум** — события, в которых фотон рассеялся и покинул детектор, он резко обрывается на комптоновском крае; **пик обратного рассеяния** — фотоны, рассеянные назад окружающими веществами. При энергиях, где возможно рождение пары, если один или оба аннигиляционных фотона уходят, появляются **пики вылета** при $E-m_ec^2$ и $E-2m_ec^2$. Чем больше детектор и чем выше его $Z$, тем больше отношение фотопика к континууму. Для реального $\\mathrm{NaI}\\left(\\mathrm{Tl}\\right)$ на линии ${}^{137}\\mathrm{Cs}$ ($662\\ \\mathrm{keV}$) ширина фотопика составляет около $7$ процентов энергии.",
+  "en": "**The pulse-height spectrum.** Sorting the pulses by height (a multichannel analyser) gives the distribution of the energy deposited in the detector — the **pulse-height spectrum** ([[F04]], right). For a monoenergetic gamma line it shows the following: the **photopeak** — events in which the photon energy is fully absorbed (the photoelectric effect, or absorption after Compton scattering), and its position gives the energy scale; the **Compton continuum** — events in which the photon was scattered and left the detector, ending sharply at the Compton edge; the **backscatter peak** — photons scattered back from the surrounding materials. At energies where pair production is possible, if one or both annihilation photons escape, **escape peaks** appear at $E-m_ec^2$ and $E-2m_ec^2$. The larger the detector and the higher its $Z$, the larger the ratio of the photopeak to the continuum. For a real $\\mathrm{NaI}\\left(\\mathrm{Tl}\\right)$ detector at the ${}^{137}\\mathrm{Cs}$ line ($662\\ \\mathrm{keV}$) the photopeak width is about $7$ percent of the energy."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L37-F04.png",
+   "ru": "figures/B2-L37-F04-ru.png",
+   "en": "figures/B2-L37-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Yarimo'tkazgichli detektorlar",
+  "ru": "5. Полупроводниковые детекторы",
+  "en": "5. Semiconductor detectors"
+ },
+ {
+  "t": "li",
+  "uz": "**Qattiq jismli ionlanish kamerasi.** Yarimo'tkazgichli detektor — teskari ulangan p–n o'tish (B2-L36). O'tish atrofida erkin zaryad tashuvchilardan xoli **kambag'allashgan soha** hosil bo'ladi; unda kuchli elektr maydon bor, tok esa deyarli oqmaydi. Zaryadli zarra bu sohada **elektron–kovak juftlarini** hosil qiladi, maydon ularni $10\\ \\mathrm{ns}$ atrofida elektrodlarga olib boradi va zaryad impulsi paydo bo'ladi — bu gaz o'rniga kristall ishlatilgan ionlanish kamerasi. Kambag'allashgan soha qalinligi teskari kuchlanish bilan ildiz kabi o'sadi: masalan, kirishma konsentratsiyasi $10^{18}\\ \\mathrm{m^{-3}}$ bo'lgan toza kremniyda $100\\ \\mathrm{V}$ da $w\\approx0.36\\ \\mathrm{mm}$. Detektor sig'imi $C=\\frac{\\epsilon S}{w}$ kuchlanish oshgan sari kamayadi — bu shovqinni ham kamaytiradi.",
+  "ru": "**Твердотельная ионизационная камера.** Полупроводниковый детектор — обратно включённый p–n-переход (B2-L36). Около перехода образуется **обеднённая область**, свободная от носителей заряда; в ней сильное электрическое поле, а ток почти не течёт. Заряженная частица создаёт в этой области **электрон-дырочные пары**, поле за время около $10\\ \\mathrm{ns}$ уводит их к электродам и возникает импульс заряда — это ионизационная камера, в которой вместо газа использован кристалл. Толщина обеднённой области растёт с обратным напряжением как корень: например, в чистом кремнии с концентрацией примеси $10^{18}\\ \\mathrm{m^{-3}}$ при $100\\ \\mathrm{V}$ имеем $w\\approx0.36\\ \\mathrm{mm}$. Ёмкость детектора $C=\\frac{\\epsilon S}{w}$ с ростом напряжения уменьшается — это уменьшает и шум.",
+  "en": "**A solid-state ionization chamber.** A semiconductor detector is a reverse-biased p–n junction (B2-L36). Around the junction a **depletion region** free of charge carriers forms; it has a strong electric field and almost no current flows. A charged particle creates **electron–hole pairs** in this region, the field sweeps them to the electrodes in about $10\\ \\mathrm{ns}$, and a charge pulse appears — it is an ionization chamber that uses a crystal instead of a gas. The depletion thickness grows with the reverse voltage like a square root: for example, in pure silicon with an impurity concentration of $10^{18}\\ \\mathrm{m^{-3}}$ we get $w\\approx0.36\\ \\mathrm{mm}$ at $100\\ \\mathrm{V}$. The detector capacitance $C=\\frac{\\epsilon S}{w}$ falls as the voltage rises — this also reduces the noise."
+ },
+ {
+  "t": "m",
+  "m": "w=\\sqrt{\\frac{2\\epsilon U}{eN_d}}\\propto\\sqrt U,\\qquad N=\\frac{E}{W},\\qquad U_2=\\frac{Q}{C_f}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kichik W — ko'p tashuvchi.** Bir juft hosil qilish energiyasi kremniyda $W=3.62\\ \\mathrm{eV}$, germaniyda $2.96\\ \\mathrm{eV}$ — taqiqlangan zona kengligidan taxminan uch marta katta va gazdagidan qariyb o'n marta kichik. Demak, bir xil energiyadan gazdagiga qaraganda o'n marta, ssintillyatorda fotokatoddan chiqqan fotoelektronlarga qaraganda yuz martacha ko'p tashuvchi hosil bo'ladi va nisbiy statistik tebranish $\\frac{1}{\\sqrt N}$ shuncha kichik. Signal **zaryadga sezgir kuchaytirgich** bilan o'qiladi: zaryad teskari aloqa kondensatori $C_f$ da yig'iladi va chiqish kuchlanishi detektor sig'imiga bog'liq bo'lmaydi.",
+  "ru": "**Малое W — много носителей.** Энергия образования пары в кремнии $W=3.62\\ \\mathrm{eV}$, в германии $2.96\\ \\mathrm{eV}$ — примерно втрое больше ширины запрещённой зоны и почти в десять раз меньше, чем в газе. Значит, из той же энергии образуется в десять раз больше носителей, чем в газе, и примерно в сто раз больше, чем фотоэлектронов с фотокатода в сцинтилляторе, а относительная статистическая флуктуация $\\frac{1}{\\sqrt N}$ соответственно меньше. Сигнал считывается **зарядочувствительным усилителем**: заряд собирается на конденсаторе обратной связи $C_f$, и выходное напряжение не зависит от ёмкости детектора.",
+  "en": "**Small W — many carriers.** The pair creation energy is $W=3.62\\ \\mathrm{eV}$ in silicon and $2.96\\ \\mathrm{eV}$ in germanium — about three times the band gap and almost ten times smaller than in a gas. So the same energy produces ten times more carriers than in a gas and about a hundred times more than the photoelectrons leaving the photocathode in a scintillator, and the relative statistical fluctuation $\\frac{1}{\\sqrt N}$ is correspondingly smaller. The signal is read out by a **charge-sensitive amplifier**: the charge collects on the feedback capacitor $C_f$, and the output voltage does not depend on the detector capacitance."
+ },
+ {
+  "t": "li",
+  "uz": "**Germaniy va kremniy.** Germaniyning taqiqlangan zonasi tor ($0.67\\ \\mathrm{eV}$), xona haroratida issiqlik tufayli juda ko'p tashuvchi hosil bo'ladi va qorong'i tok signalni bosib ketadi. Shuning uchun yuqori tozalikdagi germaniy detektorlari (HPGe) suyuq azot bilan $77\\ \\mathrm{K}$ gacha sovitiladi. Ularning hajmi katta, $Z=32$ — gamma-spektroskopiya uchun eng yaxshi tanlov. Kremniy ($1.12\\ \\mathrm{eV}$) xona haroratida ishlaydi: zaryadli zarralar va rentgen nurlari spektrometriyasi, shuningdek trek detektorlari uchun ishlatiladi. Trek detektorlarida qadami $p\\approx50\\ \\mu\\mathrm{m}$ bo'lgan mikrostriplar yoki piksellar zarra koordinatasini $\\frac{p}{\\sqrt{12}}\\approx14\\ \\mu\\mathrm{m}$ aniqlikda beradi. Raqamli kameralar va teleskoplardagi PZS (CCD) matritsalari ham yarimo'tkazgichli detektorlardir. Kamchiliklari: kristallar qimmat, kuchli nurlanish panjarani shikastlaydi.",
+  "ru": "**Германий и кремний.** Запрещённая зона германия узкая ($0.67\\ \\mathrm{eV}$), при комнатной температуре тепловым путём рождается очень много носителей и темновой ток подавляет сигнал. Поэтому детекторы из особо чистого германия (HPGe) охлаждают жидким азотом до $77\\ \\mathrm{K}$. Они имеют большой объём, $Z=32$ — лучший выбор для гамма-спектроскопии. Кремний ($1.12\\ \\mathrm{eV}$) работает при комнатной температуре: используется для спектрометрии заряженных частиц и рентгеновских лучей, а также в трековых детекторах. В трековых детекторах микрострипы или пиксели с шагом $p\\approx50\\ \\mu\\mathrm{m}$ дают координату частицы с точностью $\\frac{p}{\\sqrt{12}}\\approx14\\ \\mu\\mathrm{m}$. Матрицы ПЗС (CCD) в цифровых камерах и телескопах — тоже полупроводниковые детекторы. Недостатки: кристаллы дороги, сильное излучение повреждает решётку.",
+  "en": "**Germanium and silicon.** Germanium has a narrow band gap ($0.67\\ \\mathrm{eV}$): at room temperature very many carriers are created thermally and the dark current swamps the signal. So high-purity germanium (HPGe) detectors are cooled to $77\\ \\mathrm{K}$ with liquid nitrogen. They have large volumes and $Z=32$ — the best choice for gamma spectroscopy. Silicon ($1.12\\ \\mathrm{eV}$) works at room temperature: it is used for the spectrometry of charged particles and X rays, and in tracking detectors. In tracking detectors microstrips or pixels with a pitch $p\\approx50\\ \\mu\\mathrm{m}$ give the particle coordinate to $\\frac{p}{\\sqrt{12}}\\approx14\\ \\mu\\mathrm{m}$. The CCD arrays in digital cameras and telescopes are semiconductor detectors too. Drawbacks: the crystals are expensive and strong radiation damages the lattice."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L37-F05.png",
+   "ru": "figures/B2-L37-F05-ru.png",
+   "en": "figures/B2-L37-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Energiya ajrata olishi, samaradorlik va mos tushish usuli",
+  "ru": "6. Энергетическое разрешение, эффективность и метод совпадений",
+  "en": "6. Energy resolution, efficiency and the coincidence method"
+ },
+ {
+  "t": "li",
+  "uz": "**Energiya ajrata olishi.** Bir xil energiyali zarralar ham har xil amplitudali impuls beradi: cho'qqi Gauss shaklida yoyiladi. Detektorning **energiya ajrata olishi** — cho'qqining **yarim balandlikdagi kengligi** (FWHM) $\\Delta E$ ning cho'qqi energiyasiga nisbati. Gauss taqsimotida $\\Delta E=2\\sqrt{2\\ln2}\\,\\sigma\\approx2.355\\sigma$ (B2-L34). Ikki yaqin chiziq ular orasidagi masofa taxminan FWHM dan katta bo'lsa ajraladi. [[F05]] ning o'ng qismida bir xil spektr ssintillyator va germaniy detektori bilan qanday ko'rinishi solishtirilgan: ssintillyatorda bir-biriga qo'shilib ketgan chiziqlar germaniyda alohida ingichka cho'qqilarga aylanadi.",
+  "ru": "**Энергетическое разрешение.** Даже частицы одинаковой энергии дают импульсы разной амплитуды: пик размывается в гауссиану. **Энергетическое разрешение** детектора — отношение **ширины пика на полувысоте** (FWHM) $\\Delta E$ к энергии пика. Для распределения Гаусса $\\Delta E=2\\sqrt{2\\ln2}\\,\\sigma\\approx2.355\\sigma$ (B2-L34). Две близкие линии разрешаются, если расстояние между ними больше примерно FWHM. На правой части [[F05]] сравнивается, как один и тот же спектр выглядит в сцинтилляторе и в германиевом детекторе: линии, слившиеся в сцинтилляторе, в германии превращаются в отдельные узкие пики.",
+  "en": "**Energy resolution.** Even particles of the same energy give pulses of different heights: the peak is smeared into a Gaussian. A detector's **energy resolution** is the ratio of the peak's **full width at half maximum** (FWHM) $\\Delta E$ to the peak energy. For a Gaussian distribution $\\Delta E=2\\sqrt{2\\ln2}\\,\\sigma\\approx2.355\\sigma$ (B2-L34). Two nearby lines are resolved if the distance between them exceeds roughly the FWHM. The right part of [[F05]] compares how the same spectrum looks in a scintillator and in a germanium detector: lines merged in the scintillator become separate narrow peaks in germanium."
+ },
+ {
+  "t": "li",
+  "uz": "**Statistik chegara va Fano faktori.** Agar $N$ ta tashuvchi Puasson qonuni bo'yicha hosil bo'lsa, dispersiya $N$ ga teng va nisbiy kenglik $\\frac{2.355}{\\sqrt N}$. Gaz va yarimo'tkazgichlarda alohida ionlanish aktlari mustaqil emas — umumiy energiya qat'iy belgilangan, shuning uchun dispersiya kichikroq: $FN$, bu yerda $F$ — **Fano faktori** (kremniy va germaniyda $F\\approx0.1$, gazlarda $0.2$ atrofida). Ssintillyatorda esa cheklovchi bosqich — fotokatoddan chiqqan kam sonli fotoelektronlar, ular uchun $F\\approx1$. Natijada statistik ajrata olish energiyaning ildiziga teskari proporsional: energiya to'rt marta oshsa, ajrata olish ikki marta yaxshilanadi. Elektron shovqin kabi boshqa hissalar mustaqil bo'lgani uchun kvadratlari qo'shiladi.",
+  "ru": "**Статистический предел и фактор Фано.** Если $N$ носителей рождаются по закону Пуассона, дисперсия равна $N$ и относительная ширина $\\frac{2.355}{\\sqrt N}$. В газах и полупроводниках отдельные акты ионизации не независимы — полная энергия строго задана, поэтому дисперсия меньше: $FN$, где $F$ — **фактор Фано** (в кремнии и германии $F\\approx0.1$, в газах около $0.2$). В сцинтилляторе же ограничивающая стадия — немногочисленные фотоэлектроны с фотокатода, для них $F\\approx1$. В итоге статистическое разрешение обратно пропорционально корню из энергии: если энергия вырастает в четыре раза, разрешение улучшается вдвое. Другие вклады, например электронный шум, независимы, поэтому складываются их квадраты.",
+  "en": "**The statistical limit and the Fano factor.** If $N$ carriers are created according to the Poisson law, the variance equals $N$ and the relative width is $\\frac{2.355}{\\sqrt N}$. In gases and semiconductors the individual ionization events are not independent — the total energy is fixed — so the variance is smaller: $FN$, where $F$ is the **Fano factor** ($F\\approx0.1$ in silicon and germanium, around $0.2$ in gases). In a scintillator the limiting stage is the small number of photoelectrons leaving the photocathode, for which $F\\approx1$. As a result the statistical resolution is inversely proportional to the square root of the energy: if the energy grows four times, the resolution improves by a factor of two. Other contributions such as electronic noise are independent, so their squares add."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\Delta E}{E}=2.355\\sqrt{\\frac{FW}{E}}\\propto\\frac{1}{\\sqrt E},\\qquad \\Delta E^2=\\Delta E_1^2+\\Delta E_2^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik qiymatlar.** ${}^{137}\\mathrm{Cs}$ ning $662\\ \\mathrm{keV}$ chizig'ida: $\\mathrm{NaI}\\left(\\mathrm{Tl}\\right)$ — taxminan $7$ foiz ($46\\ \\mathrm{keV}$), HPGe — $0.2$ foiz atrofida (taxminan $1.2\\ \\mathrm{keV}$), plastik ssintillyator fotocho'qqi bermaydi (kichik $Z$, faqat Kompton). Qoida: energiyani aniq o'lchash kerak bo'lsa (izotoplarni aniqlash, yaqin chiziqlar) — germaniy; yuqori samaradorlik va arzonlik kerak bo'lsa — $\\mathrm{NaI}$; vaqtni aniq o'lchash va katta yuzalar uchun — plastik; faqat sanash uchun — Geyger hisoblagichi.",
+  "ru": "**Типичные значения.** На линии ${}^{137}\\mathrm{Cs}$ с энергией $662\\ \\mathrm{keV}$: $\\mathrm{NaI}\\left(\\mathrm{Tl}\\right)$ — около $7$ процентов ($46\\ \\mathrm{keV}$), HPGe — около $0.2$ процента (примерно $1.2\\ \\mathrm{keV}$), пластиковый сцинтиллятор фотопика не даёт (малое $Z$, только комптоновское рассеяние). Правило: если нужно точно измерить энергию (идентификация изотопов, близкие линии) — германий; если нужны высокая эффективность и дешевизна — $\\mathrm{NaI}$; для точного измерения времени и больших площадей — пластик; только для счёта — счётчик Гейгера.",
+  "en": "**Typical values.** At the $662\\ \\mathrm{keV}$ line of ${}^{137}\\mathrm{Cs}$: $\\mathrm{NaI}\\left(\\mathrm{Tl}\\right)$ — about $7$ percent ($46\\ \\mathrm{keV}$), HPGe — around $0.2$ percent (about $1.2\\ \\mathrm{keV}$), and a plastic scintillator gives no photopeak (low $Z$, Compton scattering only). The rule: if energy must be measured precisely (identifying isotopes, close lines) — germanium; if high efficiency and low cost are needed — $\\mathrm{NaI}$; for precise timing and large areas — plastic; for counting only — a Geiger counter."
+ },
+ {
+  "t": "li",
+  "uz": "**Samaradorlik.** Detektorning to'liq samaradorligi $\\varepsilon$ — qayd etilgan hodisalar sonining manba chiqargan zarralar soniga nisbati. U ikki omildan iborat. **Geometrik** omil — detektor manbadan ko'rinadigan **fazoviy burchak** ulushi $\\frac{\\Omega}{4\\pi}$: radiusi $a$ bo'lgan disk o'qida $d$ masofadagi nuqtaviy manba uchun quyidagicha; uzoqda u $\\frac{\\pi a^2}{4\\pi d^2}$ ga, ya'ni teskari kvadratlar qonuniga keladi. Masalan, $d=a$ da $\\frac{\\Omega}{4\\pi}=\\frac{1}{2}\\left(1-\\frac{1}{\\sqrt2}\\right)\\approx0.15$. **Ichki** samaradorlik $\\varepsilon_i$ — detektorga tushgan zarradan qayd etilganlar ulushi: zaryadli zarralar uchun deyarli $1$, gamma-nurlar uchun qalinligi $t$ bo'lgan detektorda $1-e^{-\\mu t}$. Geyger hisoblagichi gamma-nurlar uchun atigi bir necha foiz samaradorlikka ega, chunki gaz yupqa va zich emas.",
+  "ru": "**Эффективность.** Полная эффективность детектора $\\varepsilon$ — отношение числа зарегистрированных событий к числу частиц, испущенных источником. Она состоит из двух множителей. **Геометрический** множитель — доля **телесного угла** $\\frac{\\Omega}{4\\pi}$, под которым детектор виден из источника: для точечного источника на оси диска радиуса $a$ на расстоянии $d$ — как ниже; вдали он переходит в $\\frac{\\pi a^2}{4\\pi d^2}$, то есть в закон обратных квадратов. Например, при $d=a$ имеем $\\frac{\\Omega}{4\\pi}=\\frac{1}{2}\\left(1-\\frac{1}{\\sqrt2}\\right)\\approx0.15$. **Собственная** эффективность $\\varepsilon_i$ — доля зарегистрированных среди попавших в детектор частиц: для заряженных частиц почти $1$, для гамма-лучей в детекторе толщины $t$ — $1-e^{-\\mu t}$. Счётчик Гейгера имеет для гамма-лучей эффективность всего несколько процентов, так как газ тонкий и неплотный.",
+  "en": "**Efficiency.** A detector's total efficiency $\\varepsilon$ is the ratio of the number of recorded events to the number of particles emitted by the source. It has two factors. The **geometric** factor is the fraction of **solid angle** $\\frac{\\Omega}{4\\pi}$ that the detector subtends at the source: for a point source on the axis of a disc of radius $a$ at a distance $d$ it is as below; far away it becomes $\\frac{\\pi a^2}{4\\pi d^2}$, i.e. the inverse square law. For example, at $d=a$ we get $\\frac{\\Omega}{4\\pi}=\\frac{1}{2}\\left(1-\\frac{1}{\\sqrt2}\\right)\\approx0.15$. The **intrinsic** efficiency $\\varepsilon_i$ is the fraction of the particles entering the detector that are recorded: almost $1$ for charged particles, and $1-e^{-\\mu t}$ for gamma rays in a detector of thickness $t$. A Geiger counter has an efficiency of only a few percent for gamma rays because the gas is thin and not dense."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\Omega}{4\\pi}=\\frac{1}{2}\\left(1-\\frac{d}{\\sqrt{d^2+a^2}}\\right)\\approx\\frac{a^2}{4d^2},\\qquad \\varepsilon=\\varepsilon_i\\frac{\\Omega}{4\\pi}"
+ },
+ {
+  "t": "li",
+  "uz": "**Mos tushish usuli.** Ikki detektor signallari $\\Delta t$ vaqt oralig'ida kelsagina hodisa qayd etiladi. Bu bitta hodisadan chiqqan ikki zarrani (masalan, pozitron annigilyatsiyasidagi qarama-qarshi yo'nalgan ikki $511\\ \\mathrm{keV}$ fotonini — pozitron-emission tomografiyasi asosi) yoki ikki detektor orqali o'tgan kosmik myuonni ajratib oladi. Biroq ikki o'zaro bog'liq bo'lmagan zarra ham tasodifan bir vaqtda kelishi mumkin. Har bir detektorning sanoq tezligi $R_1$ va $R_2$ bo'lsa, **tasodifiy mos tushishlar** tezligi quyidagicha (oyna kengligi $2\\Delta t$, chunki ikkinchi impuls birinchisidan oldin ham, keyin ham kelishi mumkin). U sanoq tezliklari ko'paytmasiga proporsional, shuning uchun katta yuklamada tez o'sadi — $\\Delta t$ ni kichraytirish kerak. **Antimos tushish** (veto) esa keraksiz hodisalarni chiqarib tashlaydi: masalan, tashqi qobiq ham signal bergan bo'lsa, hodisa kosmik deb hisoblanadi.",
+  "ru": "**Метод совпадений.** Событие регистрируется, только если сигналы двух детекторов приходят в интервале $\\Delta t$. Это выделяет две частицы от одного события (например, два противоположно направленных фотона $511\\ \\mathrm{keV}$ при аннигиляции позитрона — основа позитронно-эмиссионной томографии) или космический мюон, прошедший через два детектора. Однако две несвязанные частицы тоже могут случайно прийти одновременно. Если скорости счёта детекторов $R_1$ и $R_2$, скорость **случайных совпадений** такова, как ниже (ширина окна $2\\Delta t$, так как второй импульс может прийти и до, и после первого). Она пропорциональна произведению скоростей счёта, поэтому быстро растёт при большой загрузке — нужно уменьшать $\\Delta t$. **Антисовпадения** (вето), наоборот, исключают ненужные события: например, если сигнал дала и внешняя оболочка, событие считается космическим.",
+  "en": "**The coincidence method.** An event is recorded only if the signals of two detectors arrive within a time $\\Delta t$ of each other. This picks out two particles from one event (for example, the two oppositely directed $511\\ \\mathrm{keV}$ photons from positron annihilation — the basis of positron emission tomography) or a cosmic muon passing through two detectors. However, two unrelated particles can also arrive at the same time by chance. If the counting rates of the detectors are $R_1$ and $R_2$, the rate of **accidental coincidences** is as below (the window width is $2\\Delta t$, because the second pulse can come before or after the first). It is proportional to the product of the counting rates, so it grows quickly under heavy load — $\\Delta t$ must be made smaller. **Anticoincidence** (a veto) does the opposite and removes unwanted events: for example, if an outer shell also gave a signal, the event is counted as cosmic."
+ },
+ {
+  "t": "m",
+  "m": "R_{12}=2\\Delta t\\,R_1R_2"
+ },
+ {
+  "t": "h2",
+  "uz": "7. O'lik vaqt",
+  "ru": "7. Мёртвое время",
+  "en": "7. Dead time"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Har bir hodisani qayd etgandan keyin detektor yoki elektronika ma'lum vaqt $\\tau$ davomida yangi hodisani qabul qila olmaydi — bu **o'lik vaqt**. Geyger hisoblagichida $\\tau\\approx50\\ldots300\\ \\mu\\mathrm{s}$, $\\mathrm{NaI}$ va spektrometrik elektronikada bir necha mikrosekund, plastik ssintillyator va tez elektronikada o'nlab nanosekund. Natijada o'lchangan sanoq tezligi $R'$ haqiqiy $R$ dan kichik. Ikki ideallashtirilgan model bor ([[F06]]). **Falajlanmaydigan** modelda o'lik vaqt ichida kelgan hodisa shunchaki yo'qoladi va o'lik vaqtni uzaytirmaydi: bir sekundda tizim jami $R'\\tau$ vaqt «o'lik» bo'ladi, shu vaqtga to'g'ri kelgan $RR'\\tau$ hodisa yo'qoladi, ya'ni $R-R'=RR'\\tau$.",
+  "ru": "**Определение.** После регистрации каждого события детектор или электроника в течение некоторого времени $\\tau$ не может принять новое событие — это **мёртвое время**. В счётчике Гейгера $\\tau\\approx50\\ldots300\\ \\mu\\mathrm{s}$, в $\\mathrm{NaI}$ и спектрометрической электронике — несколько микросекунд, в пластиковом сцинтилляторе и быстрой электронике — десятки наносекунд. В результате измеренная скорость счёта $R'$ меньше истинной $R$. Есть две идеализированные модели ([[F06]]). В **непродлеваемой** модели событие, пришедшее в мёртвое время, просто теряется и мёртвое время не продлевает: за секунду система «мертва» в течение суммарного времени $R'\\tau$, на это время приходится $RR'\\tau$ потерянных событий, то есть $R-R'=RR'\\tau$.",
+  "en": "**Definition.** After recording each event the detector or electronics cannot accept a new event for a certain time $\\tau$ — this is the **dead time**. In a Geiger counter $\\tau\\approx50\\ldots300\\ \\mu\\mathrm{s}$; in $\\mathrm{NaI}$ and spectroscopy electronics it is a few microseconds; in plastic scintillators and fast electronics, tens of nanoseconds. As a result the measured counting rate $R'$ is less than the true rate $R$. There are two idealized models ([[F06]]). In the **non-paralyzable** model an event arriving during the dead time is simply lost and does not extend the dead time: in one second the system is \"dead\" for a total time $R'\\tau$, and the $RR'\\tau$ events falling in that time are lost, i.e. $R-R'=RR'\\tau$."
+ },
+ {
+  "t": "m",
+  "m": "R'=\\frac{R}{1+R\\tau},\\qquad R=\\frac{R'}{1-R'\\tau}"
+ },
+ {
+  "t": "li",
+  "uz": "**Falajlanuvchi model.** Bu modelda o'lik vaqt ichida kelgan har bir hodisa qayd etilmaydi, lekin o'lik vaqtni yangidan boshlaydi. Hodisa faqat oldingi hodisadan keyin $\\tau$ dan ko'p vaqt o'tgan bo'lsa qayd etiladi; Puasson oqimida bu ehtimollik $e^{-R\\tau}$ (B2-L34, kutish vaqti). O'lchangan tezlik $R=\\frac{1}{\\tau}$ da maksimumga — $\\frac{1}{e\\tau}$ ga yetadi, keyin kamayadi: juda kuchli manba yonida hisoblagich «falajlanadi» va deyarli hech narsa sanamaydi. Shuning uchun bir xil $R'$ ga ikkita $R$ to'g'ri keladi — kichik va katta; qaysi biri ekanini manbani uzoqlashtirib tekshirish mumkin. Geyger hisoblagichi falajlanuvchi modelga yaqinroq.",
+  "ru": "**Продлеваемая модель.** В этой модели каждое событие, пришедшее в мёртвое время, не регистрируется, но заново запускает мёртвое время. Событие регистрируется, только если после предыдущего события прошло больше $\\tau$; в пуассоновском потоке вероятность этого $e^{-R\\tau}$ (B2-L34, время ожидания). Измеренная скорость достигает максимума $\\frac{1}{e\\tau}$ при $R=\\frac{1}{\\tau}$, затем убывает: около очень сильного источника счётчик «парализуется» и почти ничего не считает. Поэтому одному $R'$ соответствуют два $R$ — малое и большое; какое именно, можно проверить, отодвинув источник. Счётчик Гейгера ближе к продлеваемой модели.",
+  "en": "**The paralyzable model.** In this model every event arriving during the dead time is not recorded but restarts the dead time. An event is recorded only if more than $\\tau$ has passed since the previous event; in a Poisson stream the probability of this is $e^{-R\\tau}$ (B2-L34, the waiting time). The measured rate reaches a maximum of $\\frac{1}{e\\tau}$ at $R=\\frac{1}{\\tau}$ and then decreases: next to a very strong source the counter is \"paralyzed\" and counts almost nothing. So one value of $R'$ corresponds to two values of $R$ — a small one and a large one; which one it is can be checked by moving the source away. A Geiger counter is closer to the paralyzable model."
+ },
+ {
+  "t": "m",
+  "m": "R'=Re^{-R\\tau},\\qquad R'_{max}=\\frac{1}{e\\tau}\\quad\\left(R=\\frac{1}{\\tau}\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Kichik yuklama va tuzatish.** $R\\tau\\ll1$ bo'lsa ikkala model bir xil natija beradi: $R'\\approx R\\left(1-R\\tau\\right)$, yo'qotishlar ulushi $R\\tau$ ga teng. Masalan, $\\tau=200\\ \\mu\\mathrm{s}$ li Geyger hisoblagichi $R'=500\\ \\mathrm{s^{-1}}$ ko'rsatsa, $R'\\tau=0.1$ va falajlanmaydigan model bo'yicha $R=\\frac{500}{0.9}\\approx556\\ \\mathrm{s^{-1}}$ — o'n foiz yo'qotish. O'lik vaqtni **ikki manba usuli** bilan o'lchash mumkin: manbalarni alohida ($R'_1$, $R'_2$) va birgalikda ($R'_{12}$) o'lchab, birinchi tartibda quyidagini olamiz (fon hisobga olinmagan). Mos tushishlardan farqli ravishda o'lik vaqt yo'qotishlari ham yuklama oshishi bilan tez ortadi; kuchli manbalarni o'lchashda manbani uzoqlashtirish yoki tezroq detektor tanlash kerak.",
+  "ru": "**Малая загрузка и поправка.** При $R\\tau\\ll1$ обе модели дают одинаковый результат: $R'\\approx R\\left(1-R\\tau\\right)$, доля потерь равна $R\\tau$. Например, если счётчик Гейгера с $\\tau=200\\ \\mu\\mathrm{s}$ показывает $R'=500\\ \\mathrm{s^{-1}}$, то $R'\\tau=0.1$ и по непродлеваемой модели $R=\\frac{500}{0.9}\\approx556\\ \\mathrm{s^{-1}}$ — потеря десять процентов. Мёртвое время можно измерить **методом двух источников**: измерив источники отдельно ($R'_1$, $R'_2$) и вместе ($R'_{12}$), в первом порядке получаем следующее (фон не учтён). Как и случайные совпадения, потери на мёртвое время быстро растут с загрузкой; при измерении сильных источников нужно отодвинуть источник или выбрать более быстрый детектор.",
+  "en": "**Low load and the correction.** For $R\\tau\\ll1$ both models give the same result: $R'\\approx R\\left(1-R\\tau\\right)$, and the fraction lost equals $R\\tau$. For example, if a Geiger counter with $\\tau=200\\ \\mu\\mathrm{s}$ reads $R'=500\\ \\mathrm{s^{-1}}$, then $R'\\tau=0.1$ and by the non-paralyzable model $R=\\frac{500}{0.9}\\approx556\\ \\mathrm{s^{-1}}$ — a ten percent loss. The dead time can be measured by the **two-source method**: measuring the sources separately ($R'_1$, $R'_2$) and together ($R'_{12}$) gives, to first order, the following (background neglected). Like accidental coincidences, dead-time losses grow quickly with load; when measuring strong sources one should move the source away or choose a faster detector."
+ },
+ {
+  "t": "m",
+  "m": "\\tau\\approx\\frac{R'_1+R'_2-R'_{12}}{2R'_1R'_2}"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L37-F06.png",
+   "ru": "figures/B2-L37-F06-ru.png",
+   "en": "figures/B2-L37-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Yuqori energiyalar detektorlari: impuls, tezlik va energiyani o'lchash",
+  "ru": "8. Детекторы высоких энергий: измерение импульса, скорости и энергии",
+  "en": "8. High-energy detectors: measuring momentum, velocity and energy"
+ },
+ {
+  "t": "li",
+  "uz": "**Magnit spektrometr.** Magnit maydonda zaryadli zarra radiusi $r=\\frac{p}{qB}$ bo'lgan yoy chizadi (B1-L39). Elementar zaryadli zarra uchun amaliy birliklarda quyidagi formula qulay. Trek detektorlari (bulutli va pufakli kameralar — B2-L33, dreyf kameralari, kremniy detektorlari) trayektoriya nuqtalarini o'lchaydi. Uzunligi $L$ bo'lgan trek yoyi uchun **sagitta** — vatar o'rtasidan yoygacha bo'lgan masofa $s$ o'lchanadi; $L\\ll r$ da $s\\approx\\frac{L^2}{8r}$. Impuls qancha katta bo'lsa, trek shuncha to'g'ri va $s$ shuncha kichik, shuning uchun impulsning nisbiy xatoligi $p$ ga proporsional o'sadi: yuqori energiyalarda kuchli maydon va uzun treklar kerak. Egrilik yo'nalishi zaryad ishorasini beradi.",
+  "ru": "**Магнитный спектрометр.** В магнитном поле заряженная частица описывает дугу радиуса $r=\\frac{p}{qB}$ (B1-L39). Для частицы с элементарным зарядом удобна следующая формула в практических единицах. Трековые детекторы (камеры Вильсона и пузырьковые камеры — B2-L33, дрейфовые камеры, кремниевые детекторы) измеряют точки траектории. Для дуги трека длиной $L$ измеряют **стрелу прогиба** (сагитту) — расстояние $s$ от середины хорды до дуги; при $L\\ll r$ имеем $s\\approx\\frac{L^2}{8r}$. Чем больше импульс, тем прямее трек и тем меньше $s$, поэтому относительная погрешность импульса растёт пропорционально $p$: при высоких энергиях нужны сильное поле и длинные треки. Направление кривизны даёт знак заряда.",
+  "en": "**The magnetic spectrometer.** In a magnetic field a charged particle follows an arc of radius $r=\\frac{p}{qB}$ (B1-L39). For a particle with the elementary charge the following formula in practical units is convenient. Tracking detectors (cloud and bubble chambers — B2-L33, drift chambers, silicon detectors) measure points of the trajectory. For a track arc of length $L$ one measures the **sagitta** — the distance $s$ from the middle of the chord to the arc; for $L\\ll r$ we have $s\\approx\\frac{L^2}{8r}$. The larger the momentum, the straighter the track and the smaller $s$, so the relative error of the momentum grows in proportion to $p$: at high energies a strong field and long tracks are needed. The direction of curvature gives the sign of the charge."
+ },
+ {
+  "t": "m",
+  "m": "p\\left[\\mathrm{GeV}/c\\right]=0.3B\\left[\\mathrm{T}\\right]r\\left[\\mathrm{m}\\right],\\qquad s\\approx\\frac{L^2}{8r},\\qquad \\frac{\\delta p}{p}=\\frac{\\delta s}{s}\\propto\\frac{p}{BL^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchish vaqti.** Impuls ma'lum bo'lsa, tezlikni o'lchab massani topish mumkin: $m=\\frac{p}{c}\\sqrt{\\frac{1}{\\beta^2}-1}$. Ikki plastik ssintillyator orasidagi $L$ masofani uchib o'tish vaqti o'lchanadi. Bir xil impulsli ikki zarra uchun vaqtlar farqi $pc\\gg mc^2$ da taxminan $\\frac{L\\left(m_2^2-m_1^2\\right)c}{2p^2}$ — impuls kvadratiga teskari proporsional. Shuning uchun uchish vaqti usuli past impulslarda (bir necha $\\mathrm{GeV}/c$ gacha) samarali; vaqt aniqligi $100\\ \\mathrm{ps}$ atrofida.",
+  "ru": "**Время пролёта.** Если импульс известен, измерив скорость, можно найти массу: $m=\\frac{p}{c}\\sqrt{\\frac{1}{\\beta^2}-1}$. Измеряют время пролёта расстояния $L$ между двумя пластиковыми сцинтилляторами. Для двух частиц с одинаковым импульсом разность времён при $pc\\gg mc^2$ примерно равна $\\frac{L\\left(m_2^2-m_1^2\\right)c}{2p^2}$ — обратно пропорциональна квадрату импульса. Поэтому времяпролётный метод эффективен при малых импульсах (до нескольких $\\mathrm{GeV}/c$); точность по времени около $100\\ \\mathrm{ps}$.",
+  "en": "**Time of flight.** If the momentum is known, measuring the speed gives the mass: $m=\\frac{p}{c}\\sqrt{\\frac{1}{\\beta^2}-1}$. One measures the time to fly a distance $L$ between two plastic scintillators. For two particles with the same momentum the difference in times for $pc\\gg mc^2$ is about $\\frac{L\\left(m_2^2-m_1^2\\right)c}{2p^2}$ — inversely proportional to the square of the momentum. So the time-of-flight method works at low momenta (up to a few $\\mathrm{GeV}/c$); the timing precision is around $100\\ \\mathrm{ps}$."
+ },
+ {
+  "t": "m",
+  "m": "t=\\frac{L}{\\beta c},\\qquad \\beta=\\frac{pc}{\\sqrt{p^2c^2+m^2c^4}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Cherenkov sanagichi.** Zaryadli zarra muhitda yorug'likning shu muhitdagi tezligi $\\frac{c}{n}$ dan tezroq harakatlansa, **Cherenkov nurlanishi** chiqaradi (B2-L23): to'lqin frontlari konus hosil qiladi, xuddi tovushdan tez uchayotgan samolyotning zarb to'lqini kabi ([[F08]]). Konus burchagi faqat $\\beta$ ga bog'liq. Nurlanish bo'sag'asi $\\beta>\\frac{1}{n}$; berilgan impulsda bo'sag'a massaga bog'liq. **Bo'sag'aviy sanagich** «nurlandi yoki yo'q» degan javob bilan yengil va og'ir zarralarni ajratadi; RICH detektorlari halqa radiusidan burchakni, demak tezlikni o'lchaydi. Misol: aerogel ($n=1.03$) uchun $\\theta_{max}=\\arccos\\frac{1}{1.03}\\approx13.9^\\circ$, bo'sag'aviy impulslar pion uchun $0.57\\ \\mathrm{GeV}/c$, kaon uchun $2.0\\ \\mathrm{GeV}/c$, proton uchun $3.8\\ \\mathrm{GeV}/c$: $1\\ \\mathrm{GeV}/c$ da faqat pion nurlanadi. Fotonlar soni $\\sin^2\\theta$ ga proporsional va ionlanish yo'qotishiga nisbatan juda kam.",
+  "ru": "**Черенковский счётчик.** Если заряженная частица движется в среде быстрее скорости света в этой среде $\\frac{c}{n}$, она испускает **черенковское излучение** (B2-L23): волновые фронты образуют конус, как ударная волна от сверхзвукового самолёта ([[F08]]). Угол конуса зависит только от $\\beta$. Порог излучения $\\beta>\\frac{1}{n}$; при заданном импульсе порог зависит от массы. **Пороговый счётчик** ответом «излучила или нет» различает лёгкие и тяжёлые частицы; детекторы RICH измеряют угол, а значит и скорость, по радиусу кольца. Пример: для аэрогеля ($n=1.03$) $\\theta_{max}=\\arccos\\frac{1}{1.03}\\approx13.9^\\circ$, пороговые импульсы для пиона $0.57\\ \\mathrm{GeV}/c$, для каона $2.0\\ \\mathrm{GeV}/c$, для протона $3.8\\ \\mathrm{GeV}/c$: при $1\\ \\mathrm{GeV}/c$ излучает только пион. Число фотонов пропорционально $\\sin^2\\theta$ и очень мало по сравнению с ионизационными потерями.",
+  "en": "**The Cherenkov counter.** If a charged particle moves through a medium faster than the speed of light in that medium $\\frac{c}{n}$, it emits **Cherenkov radiation** (B2-L23): the wavefronts form a cone, like the shock wave of a supersonic aircraft ([[F08]]). The cone angle depends only on $\\beta$. The threshold for radiation is $\\beta>\\frac{1}{n}$; at a given momentum the threshold depends on the mass. A **threshold counter** separates light and heavy particles with a \"radiated or not\" answer; RICH detectors measure the angle, and hence the speed, from the radius of a ring. Example: for aerogel ($n=1.03$) $\\theta_{max}=\\arccos\\frac{1}{1.03}\\approx13.9^\\circ$, and the threshold momenta are $0.57\\ \\mathrm{GeV}/c$ for a pion, $2.0\\ \\mathrm{GeV}/c$ for a kaon and $3.8\\ \\mathrm{GeV}/c$ for a proton: at $1\\ \\mathrm{GeV}/c$ only the pion radiates. The number of photons is proportional to $\\sin^2\\theta$ and very small compared with the ionization loss."
+ },
+ {
+  "t": "m",
+  "m": "\\cos\\theta=\\frac{1}{n\\beta},\\qquad \\beta>\\frac{1}{n},\\qquad p_{min}=\\frac{mc}{\\sqrt{n^2-1}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kalorimetrlar va elektromagnit kaskad.** Kalorimetr zarrani butunlay yutib, uning energiyasini o'lchaydi. Yuqori energiyali elektron tormozlanish fotoni chiqaradi, foton juftga aylanadi, ular yana foton chiqaradi — **elektromagnit kaskad** (jala) hosil bo'ladi. Oddiy Xaytler modelida har bir radiatsion uzunlik $X_0$ da zarralar soni ikki marta oshadi va energiya teng bo'linadi; ko'payish zarra energiyasi kritik energiya $E_c$ ga tushganda to'xtaydi. Natija: zarralar maksimal soni energiyaga proporsional, kaskad chuqurligi esa energiyaning logarifmi bilan sekin o'sadi — shuning uchun kalorimetrlar ixcham. Energiyaning nisbiy xatoligi statistik sabablarga ko'ra $\\frac{a}{\\sqrt E}$ ($a$ — elektromagnit kalorimetrlar uchun $\\sqrt{\\mathrm{GeV}}$ ga bir necha foiz) — energiya oshgan sari yaxshilanadi, spektrometrda esa yomonlashadi. Adronlar yadro o'zaro ta'siri orqali ancha uzunroq **adron kaskadini** beradi (temirda yadro o'zaro ta'sir uzunligi $17\\ \\mathrm{cm}$, radiatsion uzunlik esa $1.8\\ \\mathrm{cm}$).",
+  "ru": "**Калориметры и электромагнитный ливень.** Калориметр полностью поглощает частицу и измеряет её энергию. Электрон высокой энергии испускает тормозной фотон, фотон превращается в пару, они снова испускают фотоны — образуется **электромагнитный ливень** (каскад). В простой модели Гайтлера на каждой радиационной длине $X_0$ число частиц удваивается, а энергия делится поровну; размножение прекращается, когда энергия частицы падает до критической энергии $E_c$. Итог: максимальное число частиц пропорционально энергии, а глубина ливня медленно растёт с логарифмом энергии — поэтому калориметры компактны. Относительная погрешность энергии по статистическим причинам равна $\\frac{a}{\\sqrt E}$ ($a$ — несколько процентов на $\\sqrt{\\mathrm{GeV}}$ для электромагнитных калориметров) — с ростом энергии она улучшается, а в спектрометре ухудшается. Адроны через ядерные взаимодействия дают гораздо более длинный **адронный ливень** (в железе длина ядерного взаимодействия $17\\ \\mathrm{cm}$, а радиационная длина $1.8\\ \\mathrm{cm}$).",
+  "en": "**Calorimeters and the electromagnetic shower.** A calorimeter absorbs a particle completely and measures its energy. A high-energy electron emits a bremsstrahlung photon, the photon turns into a pair, they emit photons again — an **electromagnetic shower** (a cascade) forms. In the simple Heitler model the number of particles doubles in each radiation length $X_0$ and the energy is shared equally; the multiplication stops when the particle energy falls to the critical energy $E_c$. The result: the maximum number of particles is proportional to the energy, while the shower depth grows slowly with the logarithm of the energy — which is why calorimeters are compact. The relative error of the energy is, for statistical reasons, $\\frac{a}{\\sqrt E}$ ($a$ is a few percent per $\\sqrt{\\mathrm{GeV}}$ for electromagnetic calorimeters) — it improves as the energy grows, whereas in a spectrometer it gets worse. Hadrons give a much longer **hadronic shower** through nuclear interactions (in iron the nuclear interaction length is $17\\ \\mathrm{cm}$, while the radiation length is $1.8\\ \\mathrm{cm}$)."
+ },
+ {
+  "t": "m",
+  "m": "N_{max}\\approx\\frac{E_0}{E_c},\\qquad x_{max}\\approx X_0\\frac{\\ln\\frac{E_0}{E_c}}{\\ln2},\\qquad \\frac{\\sigma_E}{E}=\\frac{a}{\\sqrt E}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kollayder detektori va zarralarni aniqlash.** Zamonaviy detektor piyoz kabi qatlamlardan iborat ([[F07]]): markazda magnit maydondagi trek detektori, keyin elektromagnit kalorimetr, adron kalorimetri va eng tashqarida myuon kameralari. Har bir zarra o'z «imzosini» qoldiradi: **foton** — trek yo'q, elektromagnit kaskad bor; **elektron** — egri trek va elektromagnit kaskad, energiya impulsga teng ($E\\approx pc$); **zaryadli adron** (pion, proton) — trek va adron kaskadi; **neytral adron** (neytron) — faqat adron kaskadi; **myuon** — og'ir bo'lgani uchun deyarli nurlanmaydi va hamma qatlamlardan o'tib, faqat minimal ionlash izini qoldiradi; **neytrino** — hech narsa qoldirmaydi, ko'ndalang impulsning saqlanishidan yetishmayotgan impuls sifatida topiladi.",
+  "ru": "**Детектор на коллайдере и идентификация частиц.** Современный детектор состоит из слоёв, как луковица ([[F07]]): в центре трековый детектор в магнитном поле, затем электромагнитный калориметр, адронный калориметр и снаружи мюонные камеры. Каждая частица оставляет свою «подпись»: **фотон** — трека нет, есть электромагнитный ливень; **электрон** — изогнутый трек и электромагнитный ливень, энергия равна импульсу ($E\\approx pc$); **заряженный адрон** (пион, протон) — трек и адронный ливень; **нейтральный адрон** (нейтрон) — только адронный ливень; **мюон** — из-за большой массы почти не излучает, проходит все слои и оставляет лишь след минимальной ионизации; **нейтрино** — не оставляет ничего, находится из сохранения поперечного импульса как недостающий импульс.",
+  "en": "**A collider detector and particle identification.** A modern detector consists of layers like an onion ([[F07]]): in the centre a tracking detector in a magnetic field, then an electromagnetic calorimeter, a hadronic calorimeter and, outermost, muon chambers. Each particle leaves its own \"signature\": a **photon** — no track, an electromagnetic shower; an **electron** — a curved track and an electromagnetic shower, with energy equal to momentum ($E\\approx pc$); a **charged hadron** (a pion, a proton) — a track and a hadronic shower; a **neutral hadron** (a neutron) — a hadronic shower only; a **muon** — being heavy, it hardly radiates, passes through all the layers and leaves only a minimum-ionizing trace; a **neutrino** — leaves nothing and is found from the conservation of transverse momentum as missing momentum."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L37-F07.png",
+   "ru": "figures/B2-L37-F07-ru.png",
+   "en": "figures/B2-L37-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L37-F08.png",
+   "ru": "figures/B2-L37-F08-ru.png",
+   "en": "figures/B2-L37-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. Elektr o'lchov asboblari va ossillograf",
+  "ru": "9. Электроизмерительные приборы и осциллограф",
+  "en": "9. Electrical measuring instruments and the oscilloscope"
+ },
+ {
+  "t": "li",
+  "uz": "**Galvanometrdan ampermetr va voltmetrga.** Magnitoelektrik galvanometrning strelkasi tokka proporsional og'adi (B2-L15); uning ichki qarshiligi $R_0$, to'liq og'ish toki $I_0$. Katta tokni o'lchash uchun galvanometrga parallel kichik **shunt** $R_s$ ulanadi: tokning asosiy qismi shunt orqali o'tadi. Kuchlanishni o'lchash uchun esa unga ketma-ket katta **qo'shimcha qarshilik** $R_d$ ulanadi. Voltmetrning sifati «voltga om» bilan baholanadi, u $\\frac{1}{I_0}$ ga teng: $I_0=50\\ \\mu\\mathrm{A}$ da $20\\ \\mathrm{k}\\Omega$ ga $1\\ \\mathrm{V}$. Ideal ampermetrning qarshiligi nol, ideal voltmetrniki cheksiz; real asboblar zanjirni o'zgartiradi — bu B2-L36 dagi yuklanish effekti. Zamonaviy raqamli multimetr ichida ARO' bor (B2-L36), kirish qarshiligi odatda $10\\ \\mathrm{M}\\Omega$.",
+  "ru": "**От гальванометра к амперметру и вольтметру.** Стрелка магнитоэлектрического гальванометра отклоняется пропорционально току (B2-L15); его внутреннее сопротивление $R_0$, ток полного отклонения $I_0$. Для измерения большого тока параллельно гальванометру включают малый **шунт** $R_s$: основная часть тока идёт через шунт. Для измерения напряжения последовательно с ним включают большое **добавочное сопротивление** $R_d$. Качество вольтметра оценивают величиной «ом на вольт», она равна $\\frac{1}{I_0}$: при $I_0=50\\ \\mu\\mathrm{A}$ это $20\\ \\mathrm{k}\\Omega$ на $1\\ \\mathrm{V}$. Сопротивление идеального амперметра равно нулю, идеального вольтметра — бесконечности; реальные приборы изменяют цепь — это эффект нагрузки из B2-L36. Внутри современного цифрового мультиметра стоит АЦП (B2-L36), входное сопротивление обычно $10\\ \\mathrm{M}\\Omega$.",
+  "en": "**From galvanometer to ammeter and voltmeter.** The needle of a moving-coil galvanometer deflects in proportion to the current (B2-L15); its internal resistance is $R_0$ and its full-scale current $I_0$. To measure a large current a small **shunt** $R_s$ is connected in parallel with the galvanometer: most of the current goes through the shunt. To measure voltage a large **series resistor** $R_d$ is connected in series with it. A voltmeter's quality is rated in \"ohms per volt\", which equals $\\frac{1}{I_0}$: for $I_0=50\\ \\mu\\mathrm{A}$ it is $20\\ \\mathrm{k}\\Omega$ per $1\\ \\mathrm{V}$. An ideal ammeter has zero resistance and an ideal voltmeter infinite resistance; real meters change the circuit — this is the loading effect of B2-L36. A modern digital multimeter has an ADC inside (B2-L36), with an input resistance of typically $10\\ \\mathrm{M}\\Omega$."
+ },
+ {
+  "t": "m",
+  "m": "R_s=\\frac{R_0I_0}{I-I_0},\\qquad R_d=\\frac{U}{I_0}-R_0"
+ },
+ {
+  "t": "li",
+  "uz": "**Ampermetr–voltmetr usuli.** Qarshilikni $R=\\frac{U}{I}$ bo'yicha o'lchashda ikki sxema bor. Voltmetr bevosita $R$ ga ulansa, ampermetr voltmetr tokini ham o'lchaydi va natija $R$ va $R_V$ ning parallel ulanishi bo'lib chiqadi — kichik qarshiliklar uchun yaxshi. Voltmetr $R$ va ampermetrga birga ulansa, ampermetr qarshiligi qo'shiladi — katta qarshiliklar uchun yaxshi. Chegara taxminan $R\\approx\\sqrt{R_AR_V}$. Juda kichik qarshiliklar (simlar, kontaktlar) **to'rt simli** (Kelvin) usulda o'lchanadi: tok bir juft sim orqali beriladi, kuchlanish esa boshqa juft orqali olinadi, shunda ulovchi simlarning qarshiligi o'lchovga kirmaydi. **Nol usullari** — Uitston ko'prigi (B2-L15) va kompensatsiya (potensiometr) usuli — muvozanatda o'lchanayotgan zanjirdan tok olmaydi, shuning uchun manba EYKni aniq o'lchaydi.",
+  "ru": "**Метод амперметра и вольтметра.** При измерении сопротивления по $R=\\frac{U}{I}$ есть две схемы. Если вольтметр подключён непосредственно к $R$, амперметр измеряет и ток вольтметра, и результат оказывается параллельным соединением $R$ и $R_V$ — хорошо для малых сопротивлений. Если вольтметр подключён к $R$ вместе с амперметром, прибавляется сопротивление амперметра — хорошо для больших сопротивлений. Граница примерно $R\\approx\\sqrt{R_AR_V}$. Очень малые сопротивления (провода, контакты) измеряют **четырёхпроводным** (кельвиновским) методом: ток подают по одной паре проводов, а напряжение снимают по другой, тогда сопротивление соединительных проводов не входит в измерение. **Нулевые методы** — мост Уитстона (B2-L15) и метод компенсации (потенциометр) — в равновесии не отбирают ток от измеряемой цепи, поэтому точно измеряют ЭДС источника.",
+  "en": "**The ammeter–voltmeter method.** When measuring a resistance via $R=\\frac{U}{I}$ there are two circuits. If the voltmeter is connected directly across $R$, the ammeter also measures the voltmeter current, and the result is $R$ and $R_V$ in parallel — good for small resistances. If the voltmeter is connected across $R$ together with the ammeter, the ammeter's resistance is added — good for large resistances. The boundary is about $R\\approx\\sqrt{R_AR_V}$. Very small resistances (wires, contacts) are measured by the **four-wire** (Kelvin) method: the current is supplied through one pair of wires and the voltage is taken through another pair, so the resistance of the connecting wires does not enter the measurement. **Null methods** — the Wheatstone bridge (B2-L15) and the compensation (potentiometer) method — draw no current from the circuit being measured at balance, so they measure a source's EMF accurately."
+ },
+ {
+  "t": "m",
+  "m": "R_1=\\frac{RR_V}{R+R_V},\\qquad R_2=R+R_A"
+ },
+ {
+  "t": "li",
+  "uz": "**Ossillograf.** Ossillograf kuchlanishning vaqtga bog'liqligini ekranda ko'rsatadi. Klassik elektron-nurli trubkada $U_a$ kuchlanish bilan tezlashtirilgan elektronlar dastasi uzunligi $l$, orasi $d$ bo'lgan og'diruvchi plastinkalardan o'tadi va ulardan $L$ masofadagi ekranda quyidagi siljishni beradi. Siljish og'diruvchi kuchlanishga proporsional va elektronning $\\frac{e}{m}$ nisbatiga bog'liq emas. Gorizontal plastinkalarga arrasimon **yoyish** kuchlanishi beriladi — nuqta ekran bo'ylab o'zgarmas tezlikda yuguradi. Zamonaviy raqamli ossillografda signal ARO' bilan diskretlanadi. Ekran katakchalarga bo'lingan: vertikal sezgirlik $k_y$ — bir bo'limga to'g'ri keladigan voltlar, gorizontal yoyish $k_x$ — bir bo'limga to'g'ri keladigan vaqt; davr $N_x$ bo'lim, amplituda $N_y$ bo'lim bo'lsa, quyidagi formulalar o'rinli. Masalan, signal davri $4$ bo'lim, yoyish bir bo'limga $5\\ \\mu\\mathrm{s}$ bo'lsa, $T=20\\ \\mu\\mathrm{s}$ va $f=50\\ \\mathrm{kHz}$.",
+  "ru": "**Осциллограф.** Осциллограф показывает на экране зависимость напряжения от времени. В классической электронно-лучевой трубке пучок электронов, ускоренных напряжением $U_a$, проходит между отклоняющими пластинами длины $l$ с зазором $d$ и даёт на экране на расстоянии $L$ от них следующее смещение. Смещение пропорционально отклоняющему напряжению и не зависит от отношения $\\frac{e}{m}$ электрона. На горизонтальные пластины подаётся пилообразное напряжение **развёртки** — пятно бежит по экрану с постоянной скоростью. В современном цифровом осциллографе сигнал дискретизируется АЦП. Экран разбит на клетки: вертикальная чувствительность $k_y$ — число вольт на одно деление, горизонтальная развёртка $k_x$ — время на одно деление; если период занимает $N_x$ делений, а амплитуда $N_y$ делений, справедливы формулы ниже. Например, если период сигнала $4$ деления, а развёртка $5\\ \\mu\\mathrm{s}$ на деление, то $T=20\\ \\mu\\mathrm{s}$ и $f=50\\ \\mathrm{kHz}$.",
+  "en": "**The oscilloscope.** An oscilloscope displays voltage versus time on a screen. In a classical cathode-ray tube a beam of electrons accelerated by a voltage $U_a$ passes between deflecting plates of length $l$ and gap $d$ and gives the following displacement on a screen a distance $L$ from them. The displacement is proportional to the deflecting voltage and does not depend on the electron's $\\frac{e}{m}$ ratio. A sawtooth **time-base** (sweep) voltage is applied to the horizontal plates — the spot runs across the screen at constant speed. In a modern digital oscilloscope the signal is sampled by an ADC. The screen is divided into a grid: the vertical sensitivity $k_y$ is the number of volts per division and the horizontal time base $k_x$ the time per division; if the period spans $N_x$ divisions and the amplitude $N_y$ divisions, the formulas below hold. For example, if the signal period is $4$ divisions and the time base is $5\\ \\mu\\mathrm{s}$ per division, then $T=20\\ \\mu\\mathrm{s}$ and $f=50\\ \\mathrm{kHz}$."
+ },
+ {
+  "t": "m",
+  "m": "y=\\frac{lLU_y}{2dU_a},\\qquad T=k_xN_x,\\qquad U_m=k_yN_y"
+ },
+ {
+  "t": "li",
+  "uz": "**Sinxronlash, kirish va zond.** Barqaror tasvir uchun yoyish har safar signal belgilangan sathni belgilangan yo'nalishda kesib o'tganda boshlanadi — bu **sinxronlash** (trigger). **DC rejimi** signalni to'liq, **AC rejimi** esa ketma-ket kondensator orqali (yuqori chastotalar filtri) faqat o'zgaruvchan tashkil etuvchini ko'rsatadi. Ossillograf kirishi taxminan $1\\ \\mathrm{M}\\Omega$ qarshilik va unga parallel $15\\ \\mathrm{pF}$ sig'imga teng. **$10:1$ zondi** kirish qarshiligini $10\\ \\mathrm{M}\\Omega$ ga oshiradi va zanjirni kamroq yuklaydi, lekin signalni $10$ marta kamaytiradi — o'qilgan qiymatni $10$ ga ko'paytirish kerak. O'tkazish kengligi $f$ bo'lgan ossillograf keskin frontni o'sish vaqti $t_r\\approx\\frac{0.35}{f}$ bilan ko'rsatadi: $100\\ \\mathrm{MHz}$ da $3.5\\ \\mathrm{ns}$.",
+  "ru": "**Синхронизация, вход и щуп.** Для устойчивого изображения развёртка запускается каждый раз, когда сигнал пересекает заданный уровень в заданном направлении, — это **синхронизация** (запуск). Режим **DC** показывает сигнал полностью, режим **AC** — через последовательный конденсатор (фильтр верхних частот) только переменную составляющую. Вход осциллографа эквивалентен сопротивлению около $1\\ \\mathrm{M}\\Omega$ с параллельной ёмкостью $15\\ \\mathrm{pF}$. **Щуп $10:1$** повышает входное сопротивление до $10\\ \\mathrm{M}\\Omega$ и меньше нагружает цепь, но ослабляет сигнал в $10$ раз — показание нужно умножить на $10$. Осциллограф с полосой $f$ показывает резкий фронт со временем нарастания $t_r\\approx\\frac{0.35}{f}$: при $100\\ \\mathrm{MHz}$ это $3.5\\ \\mathrm{ns}$.",
+  "en": "**Triggering, input and probe.** For a stable picture the sweep starts each time the signal crosses a set level in a set direction — this is **triggering**. **DC coupling** shows the whole signal, **AC coupling** shows only the alternating component, through a series capacitor (a high-pass filter). The oscilloscope input is equivalent to a resistance of about $1\\ \\mathrm{M}\\Omega$ in parallel with $15\\ \\mathrm{pF}$. A **$10:1$ probe** raises the input resistance to $10\\ \\mathrm{M}\\Omega$ and loads the circuit less, but attenuates the signal $10$ times — the reading must be multiplied by $10$. An oscilloscope of bandwidth $f$ shows a sharp edge with a rise time $t_r\\approx\\frac{0.35}{f}$: $3.5\\ \\mathrm{ns}$ at $100\\ \\mathrm{MHz}$."
+ },
+ {
+  "t": "li",
+  "uz": "**XY rejimi va Lissaju figuralari.** Yoyish o'rniga gorizontal kanalga ikkinchi signal berilsa, ekranda $x=A\\sin\\omega_xt$, $y=B\\sin\\left(\\omega_yt+\\varphi\\right)$ egri chizig'i — **Lissaju figurasi** chiziladi ([[F09]]). Agar figura chegaraviy to'rtburchakning gorizontal tomoniga $n_1$ marta, vertikal tomoniga $n_2$ marta tegsa, chastotalar nisbati quyidagicha: chunki umumiy davr ichida $y$ maksimumi $f_yT$ marta, $x$ maksimumi $f_xT$ marta keladi. Bir xil chastotalarda figura ellips bo'ladi; uning $y$ o'qini kesgan nuqtasi $b$ va eng katta balandligi $B$ bo'yicha fazalar farqi topiladi ($\\varphi=0$ da kesma, $\\varphi=\\frac{\\pi}{2}$ da o'qlarga parallel ellips yoki $A=B$ da aylana).",
+  "ru": "**Режим XY и фигуры Лиссажу.** Если вместо развёртки на горизонтальный канал подать второй сигнал, на экране рисуется кривая $x=A\\sin\\omega_xt$, $y=B\\sin\\left(\\omega_yt+\\varphi\\right)$ — **фигура Лиссажу** ([[F09]]). Если фигура касается горизонтальной стороны ограничивающего прямоугольника $n_1$ раз, а вертикальной — $n_2$ раз, отношение частот таково, как ниже: за общий период максимум $y$ наступает $f_yT$ раз, а максимум $x$ — $f_xT$ раз. При одинаковых частотах фигура — эллипс; по точке $b$ пересечения им оси $y$ и наибольшей высоте $B$ находят разность фаз (при $\\varphi=0$ — отрезок, при $\\varphi=\\frac{\\pi}{2}$ — эллипс, параллельный осям, или окружность при $A=B$).",
+  "en": "**XY mode and Lissajous figures.** If a second signal is applied to the horizontal channel instead of the sweep, the screen draws the curve $x=A\\sin\\omega_xt$, $y=B\\sin\\left(\\omega_yt+\\varphi\\right)$ — a **Lissajous figure** ([[F09]]). If the figure touches a horizontal side of the bounding rectangle $n_1$ times and a vertical side $n_2$ times, the frequency ratio is as below: in a common period the maximum of $y$ occurs $f_yT$ times and the maximum of $x$ occurs $f_xT$ times. At equal frequencies the figure is an ellipse; the phase difference is found from the point $b$ where it crosses the $y$ axis and its greatest height $B$ (a line segment for $\\varphi=0$, an ellipse parallel to the axes for $\\varphi=\\frac{\\pi}{2}$, or a circle if $A=B$)."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{f_y}{f_x}=\\frac{n_1}{n_2},\\qquad \\sin\\varphi=\\frac{b}{B}"
+ },
+ {
+  "t": "fig",
+  "fig": "F09",
+  "src": {
+   "uz": "figures/B2-L37-F09.png",
+   "ru": "figures/B2-L37-F09-ru.png",
+   "en": "figures/B2-L37-F09-en.png"
+  },
+  "cap": {
+   "uz": "9-rasm",
+   "ru": "Рис. 9",
+   "en": "Fig. 9"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Shovqin, signal/shovqin nisbati va lock-in kuchaytirgich",
+  "ru": "10. Шум, отношение сигнал/шум и синхронный усилитель",
+  "en": "10. Noise, the signal-to-noise ratio and the lock-in amplifier"
+ },
+ {
+  "t": "li",
+  "uz": "**Issiqlik (Jonson) shovqini.** Har qanday rezistorda elektronlarning issiqlik harakati tasodifiy kuchlanish hosil qiladi. Uning o'rtacha kvadrati harorat, qarshilik va o'lchov o'tkazish kengligi $\\Delta f$ ga proporsional (Naykvist formulasi): masalan, $1\\ \\mathrm{k}\\Omega$ rezistor $300\\ \\mathrm{K}$ da $1\\ \\mathrm{Hz}$ kenglikda $4.1\\ \\mathrm{nV}$ shovqin beradi. Shovqin barcha chastotalarda bir xil zichlikka ega («oq shovqin»), shuning uchun u o'tkazish kengligining ildiziga proporsional. Kamaytirish usullari: kenglikni toraytirish, qarshilikni kamaytirish, sovitish (bolometrlar va radioteleskop kuchaytirgichlari suyuq geliyda ishlaydi).",
+  "ru": "**Тепловой шум (шум Джонсона).** В любом резисторе тепловое движение электронов создаёт случайное напряжение. Его средний квадрат пропорционален температуре, сопротивлению и ширине полосы измерения $\\Delta f$ (формула Найквиста): например, резистор $1\\ \\mathrm{k}\\Omega$ при $300\\ \\mathrm{K}$ в полосе $1\\ \\mathrm{Hz}$ даёт шум $4.1\\ \\mathrm{nV}$. Шум имеет одинаковую плотность на всех частотах («белый шум»), поэтому он пропорционален корню из ширины полосы. Способы уменьшения: сужение полосы, уменьшение сопротивления, охлаждение (болометры и усилители радиотелескопов работают в жидком гелии).",
+  "en": "**Thermal (Johnson) noise.** In any resistor the thermal motion of the electrons produces a random voltage. Its mean square is proportional to the temperature, the resistance and the measurement bandwidth $\\Delta f$ (the Nyquist formula): for example, a $1\\ \\mathrm{k}\\Omega$ resistor at $300\\ \\mathrm{K}$ gives $4.1\\ \\mathrm{nV}$ of noise in a $1\\ \\mathrm{Hz}$ bandwidth. The noise has the same density at all frequencies (\"white noise\"), so it is proportional to the square root of the bandwidth. Ways to reduce it: narrowing the bandwidth, lowering the resistance, cooling (bolometers and radio-telescope amplifiers work in liquid helium)."
+ },
+ {
+  "t": "m",
+  "m": "\\delta U=\\sqrt{4kTR\\Delta f},\\qquad \\delta I=\\sqrt{2eI\\Delta f}"
+ },
+ {
+  "t": "li",
+  "uz": "**Drob shovqini va $\\frac{1}{f}$ shovqin.** Tok alohida zaryadlardan iborat va ular tasodifiy vaqtlarda keladi; Puasson tebranishlari **drob shovqinini** beradi — bu B2-L34 dagi $\\sqrt N$ qoidasining elektr ko'rinishi: $1\\ \\mathrm{mA}$ tokda $1\\ \\mathrm{Hz}$ kenglikda $18\\ \\mathrm{pA}$. U fotodiodlar, FEK va vakuum asboblarida muhim. Uchinchi tur — past chastotalarda kuchayadigan **$\\frac{1}{f}$ shovqin** (milt-milt shovqini, o'zgarmas tok va harorat dreyfi). Shuning uchun kuchsiz signalni past chastotada emas, balki modulyatsiya qilib, yuqoriroq chastotada o'lchash foydali. Tashqi xalaqitlar — tarmoqning $50\\ \\mathrm{Hz}$ chastotasi, radiostansiyalar — ekranlash (Faradey qafasi), o'ralgan simlar juftligi va to'g'ri yerga ulash bilan kamaytiriladi.",
+  "ru": "**Дробовой шум и шум $\\frac{1}{f}$.** Ток состоит из отдельных зарядов, приходящих в случайные моменты; пуассоновские флуктуации дают **дробовой шум** — электрический вид правила $\\sqrt N$ из B2-L34: при токе $1\\ \\mathrm{mA}$ в полосе $1\\ \\mathrm{Hz}$ это $18\\ \\mathrm{pA}$. Он важен в фотодиодах, ФЭУ и вакуумных приборах. Третий вид — **шум $\\frac{1}{f}$** (фликкер-шум, дрейф постоянного тока и температуры), растущий на низких частотах. Поэтому слабый сигнал выгодно измерять не на низкой частоте, а промодулировав его, на более высокой частоте. Внешние наводки — сетевая частота $50\\ \\mathrm{Hz}$, радиостанции — уменьшают экранированием (клетка Фарадея), витой парой проводов и правильным заземлением.",
+  "en": "**Shot noise and $\\frac{1}{f}$ noise.** A current consists of separate charges arriving at random times; the Poisson fluctuations give **shot noise** — the electrical form of the $\\sqrt N$ rule of B2-L34: $18\\ \\mathrm{pA}$ for a $1\\ \\mathrm{mA}$ current in a $1\\ \\mathrm{Hz}$ bandwidth. It matters in photodiodes, PMTs and vacuum devices. The third kind is **$\\frac{1}{f}$ noise** (flicker noise, drift of DC levels and temperature), which grows at low frequencies. So a weak signal is better measured not at low frequency but modulated, at a higher frequency. External interference — the $50\\ \\mathrm{Hz}$ mains frequency, radio stations — is reduced by shielding (a Faraday cage), twisted pairs of wires and proper grounding."
+ },
+ {
+  "t": "li",
+  "uz": "**Signal/shovqin nisbati va o'rtachalash.** Signal amplitudasining shovqinning o'rtacha kvadratik qiymatiga nisbati **signal/shovqin nisbati** deyiladi (detsibellarda $20\\lg$). Signal har safar bir xil takrorlanib, shovqin tasodifiy bo'lsa, $N$ ta yozuvni o'rtachalaganda signal o'zgarmaydi, shovqin esa $\\sqrt N$ marta kamayadi: nisbat $\\sqrt N$ marta yaxshilanadi. Xuddi shunday, oq shovqin uchun o'tkazish kengligini $k$ marta toraytirish nisbatni $\\sqrt k$ marta yaxshilaydi — bu o'lchash vaqtini $k$ marta uzaytirishga teng. Ikkala qoida ham B2-L34 dagi «aniqlik o'lchash vaqtining ildizi bilan o'sadi» qoidasining ko'rinishlari.",
+  "ru": "**Отношение сигнал/шум и усреднение.** Отношение амплитуды сигнала к среднеквадратичному значению шума называется **отношением сигнал/шум** (в децибелах $20\\lg$). Если сигнал каждый раз повторяется одинаково, а шум случаен, при усреднении $N$ записей сигнал не меняется, а шум уменьшается в $\\sqrt N$ раз: отношение улучшается в $\\sqrt N$ раз. Аналогично для белого шума сужение полосы в $k$ раз улучшает отношение в $\\sqrt k$ раз — это равносильно увеличению времени измерения в $k$ раз. Оба правила — проявления правила B2-L34 «точность растёт как корень из времени измерения».",
+  "en": "**The signal-to-noise ratio and averaging.** The ratio of the signal amplitude to the rms value of the noise is called the **signal-to-noise ratio** ($20\\lg$ in decibels). If the signal repeats identically each time and the noise is random, averaging $N$ records leaves the signal unchanged and reduces the noise $\\sqrt N$ times: the ratio improves $\\sqrt N$ times. Likewise, for white noise narrowing the bandwidth $k$ times improves the ratio $\\sqrt k$ times — equivalent to measuring $k$ times longer. Both rules are forms of the rule of B2-L34 \"precision grows as the square root of the measuring time\"."
+ },
+ {
+  "t": "li",
+  "uz": "**Lock-in (sinxron) kuchaytirgich.** Kuchsiz signal shovqinga botib ketgan bo'lsa, uni ma'lum **tayanch chastota** $\\omega$ da modulyatsiya qilishadi (masalan, yorug'lik dastasini aylanuvchi disk bilan uzib-uzib). Lock-in kuchaytirgich kirish signalini tayanch signal $\\cos\\omega t$ ga ko'paytiradi va natijani vaqt doimiysi $\\tau$ bo'lgan past chastotalar filtridan o'tkazadi. Ko'paytmada $2\\omega$ chastotali had va o'zgarmas had bor: $A\\cos\\left(\\omega t+\\varphi\\right)\\cos\\omega t=\\frac{A}{2}\\left[\\cos\\varphi+\\cos\\left(2\\omega t+\\varphi\\right)\\right]$. Filtr faqat o'zgarmas hadni o'tkazadi; boshqa chastotali shovqin tashkil etuvchilari esa tez tebranadi va o'rtachada nolga teng bo'ladi ([[F10]]). Amalda lock-in markazi $\\omega$ da, kengligi $\\Delta f\\approx\\frac{1}{4\\tau}$ bo'lgan juda tor filtrdek ishlaydi: $\\tau=1\\ \\mathrm{s}$ da $\\Delta f=0.25\\ \\mathrm{Hz}$.",
+  "ru": "**Синхронный усилитель (lock-in).** Если слабый сигнал утонул в шуме, его модулируют на известной **опорной частоте** $\\omega$ (например, прерывая световой пучок вращающимся диском). Синхронный усилитель умножает входной сигнал на опорный сигнал $\\cos\\omega t$ и пропускает результат через фильтр нижних частот с постоянной времени $\\tau$. В произведении есть член с частотой $2\\omega$ и постоянный член: $A\\cos\\left(\\omega t+\\varphi\\right)\\cos\\omega t=\\frac{A}{2}\\left[\\cos\\varphi+\\cos\\left(2\\omega t+\\varphi\\right)\\right]$. Фильтр пропускает только постоянный член; составляющие шума с другими частотами быстро осциллируют и в среднем дают нуль ([[F10]]). На практике синхронный усилитель работает как очень узкий фильтр с центром $\\omega$ и шириной $\\Delta f\\approx\\frac{1}{4\\tau}$: при $\\tau=1\\ \\mathrm{s}$ имеем $\\Delta f=0.25\\ \\mathrm{Hz}$.",
+  "en": "**The lock-in (synchronous) amplifier.** If a weak signal is buried in noise, it is modulated at a known **reference frequency** $\\omega$ (for example, by chopping a light beam with a rotating disc). A lock-in amplifier multiplies the input signal by the reference signal $\\cos\\omega t$ and passes the result through a low-pass filter of time constant $\\tau$. The product contains a term at frequency $2\\omega$ and a constant term: $A\\cos\\left(\\omega t+\\varphi\\right)\\cos\\omega t=\\frac{A}{2}\\left[\\cos\\varphi+\\cos\\left(2\\omega t+\\varphi\\right)\\right]$. The filter passes only the constant term; noise components at other frequencies oscillate quickly and average to zero ([[F10]]). In practice a lock-in works as a very narrow filter centred on $\\omega$ with a width $\\Delta f\\approx\\frac{1}{4\\tau}$: $\\Delta f=0.25\\ \\mathrm{Hz}$ for $\\tau=1\\ \\mathrm{s}$."
+ },
+ {
+  "t": "m",
+  "m": "X=\\frac{A}{2}\\cos\\varphi,\\qquad Y=\\frac{A}{2}\\sin\\varphi,\\qquad A=2\\sqrt{X^2+Y^2},\\qquad \\tan\\varphi=\\frac{Y}{X}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki fazali lock-in.** Bitta chiqish $\\frac{A}{2}\\cos\\varphi$ fazaga bog'liq: $\\varphi=90^\\circ$ da signal bo'lsa ham nol chiqadi. Shuning uchun ikki fazali asbob kirishni $\\cos\\omega t$ ga ham, $\\sin\\omega t$ ga ham ko'paytiradi va ikki chiqish — $X$ va $Y$ ni beradi, ulardan amplituda va faza topiladi. Bu yerda tayanch signal amplitudasi $1$ deb olingan; real asboblar ko'pincha signalning o'rtacha kvadratik qiymatini ko'rsatadi — bu faqat doimiy ko'paytuvchi. Lock-in kuchaytirgich optikada (modulyatsiyalangan yorug'lik), magnit rezonansda va ko'priklarda nanovoltli signallarni o'lchaydi.",
+  "ru": "**Двухфазный синхронный усилитель.** Один выход $\\frac{A}{2}\\cos\\varphi$ зависит от фазы: при $\\varphi=90^\\circ$ он даёт нуль, даже если сигнал есть. Поэтому двухфазный прибор умножает вход и на $\\cos\\omega t$, и на $\\sin\\omega t$ и даёт два выхода — $X$ и $Y$, по которым находят амплитуду и фазу. Здесь амплитуда опорного сигнала принята равной $1$; реальные приборы часто показывают среднеквадратичное значение сигнала — это лишь постоянный множитель. Синхронный усилитель измеряет нановольтовые сигналы в оптике (модулированный свет), магнитном резонансе и мостах.",
+  "en": "**The two-phase lock-in.** A single output $\\frac{A}{2}\\cos\\varphi$ depends on the phase: at $\\varphi=90^\\circ$ it gives zero even if a signal is present. So a two-phase instrument multiplies the input by both $\\cos\\omega t$ and $\\sin\\omega t$ and gives two outputs, $X$ and $Y$, from which the amplitude and phase are found. Here the reference amplitude is taken as $1$; real instruments often display the rms value of the signal — only a constant factor. Lock-in amplifiers measure nanovolt signals in optics (modulated light), magnetic resonance and bridges."
+ },
+ {
+  "t": "fig",
+  "fig": "F10",
+  "src": {
+   "uz": "figures/B2-L37-F10.png",
+   "ru": "figures/B2-L37-F10-ru.png",
+   "en": "figures/B2-L37-F10-en.png"
+  },
+  "cap": {
+   "uz": "10-rasm",
+   "ru": "Рис. 10",
+   "en": "Fig. 10"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "11. Optik o'lchov asboblari va interferometrlar",
+  "ru": "11. Оптические измерительные приборы и интерферометры",
+  "en": "11. Optical measuring instruments and interferometers"
+ },
+ {
+  "t": "li",
+  "uz": "**Maykelson interferometri.** Ko'zgulardan biri $d$ ga siljisa, optik yo'llar farqi $2d$ ga o'zgaradi va ko'rish maydonidan $N=\\frac{2d}{\\lambda}$ ta interferension yo'l o'tadi (B2-L25). Yo'llarni sanab, to'lqin uzunligini yoki juda kichik siljishlarni o'lchash mumkin. Eng katta Maykelson interferometrlari — LIGO kabi gravitatsion to'lqin detektorlari: yelkalar uzunligi $4\\ \\mathrm{km}$, nisbiy deformatsiya $h\\sim10^{-21}$ bo'lganda yelka atigi $4\\cdot10^{-18}\\ \\mathrm{m}$ ga o'zgaradi — protondan ming marta kichik. Interferensiya kuzatilishi uchun yo'llar farqi manbaning **kogerentlik uzunligi** $l_c\\approx\\frac{c}{\\Delta\\nu}$ dan kichik bo'lishi kerak: oq yorug'likda bir necha mikrometr, bir modali lazerda yuzlab metr.",
+  "ru": "**Интерферометр Майкельсона.** Если одно из зеркал сдвинуть на $d$, оптическая разность хода меняется на $2d$ и через поле зрения проходит $N=\\frac{2d}{\\lambda}$ интерференционных полос (B2-L25). Считая полосы, можно измерять длину волны или очень малые смещения. Крупнейшие интерферометры Майкельсона — детекторы гравитационных волн, такие как LIGO: длина плеч $4\\ \\mathrm{km}$, при относительной деформации $h\\sim10^{-21}$ плечо меняется всего на $4\\cdot10^{-18}\\ \\mathrm{m}$ — в тысячу раз меньше протона. Чтобы наблюдалась интерференция, разность хода должна быть меньше **длины когерентности** источника $l_c\\approx\\frac{c}{\\Delta\\nu}$: для белого света несколько микрометров, для одномодового лазера сотни метров.",
+  "en": "**The Michelson interferometer.** If one of the mirrors moves by $d$, the optical path difference changes by $2d$ and $N=\\frac{2d}{\\lambda}$ interference fringes cross the field of view (B2-L25). Counting fringes, one can measure the wavelength or very small displacements. The largest Michelson interferometers are gravitational-wave detectors such as LIGO: with arms $4\\ \\mathrm{km}$ long, a strain $h\\sim10^{-21}$ changes an arm by only $4\\cdot10^{-18}\\ \\mathrm{m}$ — a thousand times smaller than a proton. For interference to be seen, the path difference must be smaller than the source's **coherence length** $l_c\\approx\\frac{c}{\\Delta\\nu}$: a few micrometres for white light, hundreds of metres for a single-mode laser."
+ },
+ {
+  "t": "m",
+  "m": "N=\\frac{2d}{\\lambda},\\qquad l_c\\approx\\frac{c}{\\Delta\\nu},\\qquad \\Delta L=hL"
+ },
+ {
+  "t": "li",
+  "uz": "**Fabri–Pero interferometri va spektrometrlar.** Qaytarish koeffitsiyenti $\\mathcal R$ katta bo'lgan ikki parallel ko'zgu orasida yorug'lik ko'p marta qaytadi; o'tish maksimumlari $2d\\cos\\theta=m\\lambda$ shartida juda ingichka bo'ladi. Ularning keskinligi **nozikligi** (finesse) $\\mathcal F$ bilan o'lchanadi, ajrata olish kuchi esa $m\\mathcal F$ ga teng: masalan, $\\mathcal R=0.9$ da $\\mathcal F\\approx30$. Difraksion panjarali spektrometrning ajrata olish kuchi $mN$ ga teng (B2-L26), $N$ — yoritilgan chiziqlar soni. Fabri–Pero rezonatori lazerning asosiy qismi ham hisoblanadi.",
+  "ru": "**Интерферометр Фабри–Перо и спектрометры.** Между двумя параллельными зеркалами с большим коэффициентом отражения $\\mathcal R$ свет многократно отражается; максимумы пропускания при условии $2d\\cos\\theta=m\\lambda$ становятся очень узкими. Их резкость измеряется **резкостью** (finesse) $\\mathcal F$, а разрешающая способность равна $m\\mathcal F$: например, при $\\mathcal R=0.9$ имеем $\\mathcal F\\approx30$. Разрешающая способность спектрометра с дифракционной решёткой равна $mN$ (B2-L26), $N$ — число освещённых штрихов. Резонатор Фабри–Перо — также основная часть лазера.",
+  "en": "**The Fabry–Pérot interferometer and spectrometers.** Between two parallel mirrors of high reflectance $\\mathcal R$ light is reflected many times; the transmission maxima at the condition $2d\\cos\\theta=m\\lambda$ become very narrow. Their sharpness is measured by the **finesse** $\\mathcal F$, and the resolving power equals $m\\mathcal F$: for example, $\\mathcal R=0.9$ gives $\\mathcal F\\approx30$. The resolving power of a diffraction-grating spectrometer equals $mN$ (B2-L26), where $N$ is the number of illuminated lines. A Fabry–Pérot resonator is also the main part of a laser."
+ },
+ {
+  "t": "m",
+  "m": "\\mathcal F=\\frac{\\pi\\sqrt{\\mathcal R}}{1-\\mathcal R},\\qquad \\frac{\\lambda}{\\Delta\\lambda}=m\\mathcal F,\\qquad \\frac{\\lambda}{\\Delta\\lambda}=mN"
+ },
+ {
+  "t": "li",
+  "uz": "**Yorug'lik detektorlari.** **Fotodiod** — teskari ulangan p–n o'tish (B2-L36), foton juft hosil qiladi; kvant samaradorligi yuqori ($0.6\\ldots0.9$), lekin ichki kuchaytirish yo'q. **FEK** va **SiPM** — yakka fotonlarni sanaydi (4-bo'lim). **PZS (CCD)** va CMOS matritsalari — millionlab kichik fotodiodlar (piksel o'lchami $5\\ldots15\\ \\mu\\mathrm{m}$), astronomiya va kameralarda ishlatiladi. **Bolometr** yutilgan quvvatni harorat o'zgarishi $\\Delta T=\\frac{P}{G}$ orqali o'lchaydi ($G$ — issiqlik o'tkazuvchanlik); u istalgan to'lqin uzunligiga sezgir (infraqizil, millimetrli to'lqinlar, relikt nurlanish). **Termojuft** harorat farqini termoEYK ga aylantiradi. To'g'ri detektor tanlash: yakka fotonlar — FEK yoki SiPM; tasvir — CCD; uzun to'lqinlar — bolometr.",
+  "ru": "**Детекторы света.** **Фотодиод** — обратно включённый p–n-переход (B2-L36), фотон рождает пару; квантовая эффективность высокая ($0.6\\ldots0.9$), но внутреннего усиления нет. **ФЭУ** и **SiPM** считают отдельные фотоны (раздел 4). Матрицы **ПЗС (CCD)** и КМОП — миллионы маленьких фотодиодов (размер пикселя $5\\ldots15\\ \\mu\\mathrm{m}$), используются в астрономии и камерах. **Болометр** измеряет поглощённую мощность по изменению температуры $\\Delta T=\\frac{P}{G}$ ($G$ — теплопроводность); он чувствителен к любой длине волны (инфракрасное излучение, миллиметровые волны, реликтовое излучение). **Термопара** превращает разность температур в термоЭДС. Правильный выбор детектора: отдельные фотоны — ФЭУ или SiPM; изображение — CCD; длинные волны — болометр.",
+  "en": "**Light detectors.** A **photodiode** is a reverse-biased p–n junction (B2-L36) in which a photon creates a pair; its quantum efficiency is high ($0.6\\ldots0.9$) but it has no internal gain. **PMTs** and **SiPMs** count individual photons (section 4). **CCD** and CMOS arrays are millions of small photodiodes (pixel size $5\\ldots15\\ \\mu\\mathrm{m}$) used in astronomy and cameras. A **bolometer** measures absorbed power through the temperature change $\\Delta T=\\frac{P}{G}$ ($G$ is the thermal conductance); it is sensitive to any wavelength (infrared, millimetre waves, the cosmic background radiation). A **thermocouple** turns a temperature difference into a thermoelectric EMF. Choosing the right detector: single photons — a PMT or SiPM; images — a CCD; long wavelengths — a bolometer."
+ },
+ {
+  "t": "h2",
+  "uz": "12. GRE usullari va tipik xatolar",
+  "ru": "12. Приёмы для GRE и типичные ошибки",
+  "en": "12. GRE techniques and typical mistakes"
+ },
+ {
+  "t": "li",
+  "uz": "**Detektor tanlash savollari.** Energiyani aniq o'lchash — germaniy (sovitilgan); arzon va samarali gamma-detektor — $\\mathrm{NaI}\\left(\\mathrm{Tl}\\right)$; tez vaqt va katta yuza — plastik ssintillyator; faqat sanash — Geyger hisoblagichi; trek va impuls — magnit maydondagi trek detektori; yakka fotonlar — FEK. Geyger hisoblagichi energiyani o'lchamaydi — bu eng ko'p so'raladigan fakt.",
+  "ru": "**Вопросы о выборе детектора.** Точное измерение энергии — германий (охлаждаемый); дешёвый и эффективный гамма-детектор — $\\mathrm{NaI}\\left(\\mathrm{Tl}\\right)$; быстрое время и большая площадь — пластиковый сцинтиллятор; только счёт — счётчик Гейгера; трек и импульс — трековый детектор в магнитном поле; отдельные фотоны — ФЭУ. Счётчик Гейгера не измеряет энергию — самый частый вопрос.",
+  "en": "**Detector-choice questions.** Precise energy measurement — germanium (cooled); a cheap and efficient gamma detector — $\\mathrm{NaI}\\left(\\mathrm{Tl}\\right)$; fast timing and large areas — a plastic scintillator; counting only — a Geiger counter; tracks and momentum — a tracking detector in a magnetic field; single photons — a PMT. A Geiger counter does not measure energy — the most frequently asked fact."
+ },
+ {
+  "t": "li",
+  "uz": "**Masshtablash va ildizlar.** $\\frac{dE}{dx}\\propto\\frac{z^2}{v^2}$; bir xil tezlikda yugurish masofasi $\\frac{M}{z^2}$ ga proporsional. Ajrata olish $\\frac{1}{\\sqrt E}$ kabi, signal/shovqin $\\sqrt N$ va $\\sqrt{\\Delta f}$ kabi, issiqlik shovqini $\\sqrt{TR\\Delta f}$ kabi o'zgaradi. Kalorimetr aniqligi energiya bilan yaxshilanadi, spektrometrniki esa yomonlashadi.",
+  "ru": "**Масштабирование и корни.** $\\frac{dE}{dx}\\propto\\frac{z^2}{v^2}$; при одинаковой скорости пробег пропорционален $\\frac{M}{z^2}$. Разрешение меняется как $\\frac{1}{\\sqrt E}$, отношение сигнал/шум — как $\\sqrt N$ и $\\sqrt{\\Delta f}$, тепловой шум — как $\\sqrt{TR\\Delta f}$. Точность калориметра с энергией улучшается, а спектрометра ухудшается.",
+  "en": "**Scaling and square roots.** $\\frac{dE}{dx}\\propto\\frac{z^2}{v^2}$; at the same speed the range is proportional to $\\frac{M}{z^2}$. The resolution changes as $\\frac{1}{\\sqrt E}$, the signal-to-noise ratio as $\\sqrt N$ and $\\sqrt{\\Delta f}$, thermal noise as $\\sqrt{TR\\Delta f}$. A calorimeter's precision improves with energy, while a spectrometer's gets worse."
+ },
+ {
+  "t": "li",
+  "uz": "**Tipik xatolar.** 1) Fotonga yugurish masofasi berish — foton eksponensial susayadi. 2) Kompton qirrasini foton energiyasiga tenglashtirish — elektron hech qachon hammasini olmaydi. 3) Juft hosil bo'lishi bo'sag'asini $m_ec^2$ deb olish — kerakligi $2m_ec^2$. 4) O'lik vaqt tuzatishida $R$ va $R'$ ni almashtirish — haqiqiy tezlik doim o'lchangandan katta. 5) Cherenkov formulasida $\\cos\\theta=n\\beta$ yozish — to'g'risi $\\frac{1}{n\\beta}$, shuning uchun $\\beta>\\frac{1}{n}$. 6) Ossillograf zondining $10:1$ bo'linishini unutish. 7) Tasodifiy mos tushishlarda $2$ ko'paytuvchini tushirib qoldirish.",
+  "ru": "**Типичные ошибки.** 1) Приписывать фотону пробег — фотон ослабляется экспоненциально. 2) Приравнивать комптоновский край энергии фотона — электрон никогда не получает всё. 3) Брать порог рождения пары равным $m_ec^2$ — нужно $2m_ec^2$. 4) Путать $R$ и $R'$ в поправке на мёртвое время — истинная скорость всегда больше измеренной. 5) Писать в формуле Черенкова $\\cos\\theta=n\\beta$ — правильно $\\frac{1}{n\\beta}$, поэтому $\\beta>\\frac{1}{n}$. 6) Забывать деление $10:1$ щупа осциллографа. 7) Терять множитель $2$ в случайных совпадениях.",
+  "en": "**Typical mistakes.** 1) Giving a photon a range — a photon is attenuated exponentially. 2) Equating the Compton edge with the photon energy — the electron never gets it all. 3) Taking the pair-production threshold as $m_ec^2$ — it is $2m_ec^2$. 4) Swapping $R$ and $R'$ in the dead-time correction — the true rate is always larger than the measured one. 5) Writing $\\cos\\theta=n\\beta$ in the Cherenkov formula — the correct form is $\\frac{1}{n\\beta}$, hence $\\beta>\\frac{1}{n}$. 6) Forgetting the $10:1$ division of an oscilloscope probe. 7) Dropping the factor $2$ in accidental coincidences."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Bete formulasi (asosiy qism)",
+    "ru": "Формула Бете (главная часть)",
+    "en": "Bethe formula (main part)",
+    "m": "-\\frac{dE}{dx}\\propto\\frac{z^2}{v^2}"
+   },
+   {
+    "uz": "Yugurish masofasi masshtabi",
+    "ru": "Масштаб пробега",
+    "en": "Range scaling",
+    "m": "l\\propto\\frac{M}{z^2}\\quad\\left(v=\\mathrm{const}\\right)"
+   },
+   {
+    "uz": "Radiatsion yo'qotish",
+    "ru": "Радиационные потери",
+    "en": "Radiation loss",
+    "m": "\\left(\\frac{dE}{dx}\\right)_{rad}=\\frac{E}{X_0}"
+   },
+   {
+    "uz": "Susayish qonuni",
+    "ru": "Закон ослабления",
+    "en": "Attenuation law",
+    "m": "I=I_0e^{-\\mu x},\\quad \\mu=n_0\\sigma,\\quad x_{1/2}=\\frac{\\ln2}{\\mu}"
+   },
+   {
+    "uz": "Kompton qirrasi",
+    "ru": "Комптоновский край",
+    "en": "Compton edge",
+    "m": "E_{max}=E\\frac{2\\varepsilon}{1+2\\varepsilon},\\quad \\varepsilon=\\frac{E}{m_ec^2}"
+   },
+   {
+    "uz": "Juftlar soni va zaryad",
+    "ru": "Число пар и заряд",
+    "en": "Number of pairs and charge",
+    "m": "N_0=\\frac{E}{W},\\quad Q=MN_0e,\\quad U=\\frac{Q}{C}"
+   },
+   {
+    "uz": "Silindrik hisoblagich maydoni",
+    "ru": "Поле цилиндрического счётчика",
+    "en": "Field of a cylindrical counter",
+    "m": "E\\left(r\\right)=\\frac{U}{r\\ln\\frac{b}{a}}"
+   },
+   {
+    "uz": "FEK kuchaytirishi",
+    "ru": "Усиление ФЭУ",
+    "en": "PMT gain",
+    "m": "M=\\delta^n,\\quad N_e=\\eta N_{\\gamma}"
+   },
+   {
+    "uz": "Energiya ajrata olishi",
+    "ru": "Энергетическое разрешение",
+    "en": "Energy resolution",
+    "m": "\\frac{\\Delta E}{E}=2.355\\sqrt{\\frac{FW}{E}}"
+   },
+   {
+    "uz": "Geometrik samaradorlik",
+    "ru": "Геометрическая эффективность",
+    "en": "Geometric efficiency",
+    "m": "\\frac{\\Omega}{4\\pi}=\\frac{1}{2}\\left(1-\\frac{d}{\\sqrt{d^2+a^2}}\\right)"
+   },
+   {
+    "uz": "Tasodifiy mos tushishlar",
+    "ru": "Случайные совпадения",
+    "en": "Accidental coincidences",
+    "m": "R_{12}=2\\Delta t\\,R_1R_2"
+   },
+   {
+    "uz": "O'lik vaqt (falajlanmaydigan)",
+    "ru": "Мёртвое время (непродлеваемое)",
+    "en": "Dead time (non-paralyzable)",
+    "m": "R=\\frac{R'}{1-R'\\tau}"
+   },
+   {
+    "uz": "O'lik vaqt (falajlanuvchi)",
+    "ru": "Мёртвое время (продлеваемое)",
+    "en": "Dead time (paralyzable)",
+    "m": "R'=Re^{-R\\tau},\\quad R'_{max}=\\frac{1}{e\\tau}"
+   },
+   {
+    "uz": "Magnit spektrometr",
+    "ru": "Магнитный спектрометр",
+    "en": "Magnetic spectrometer",
+    "m": "p=qBr,\\quad s\\approx\\frac{L^2}{8r}"
+   },
+   {
+    "uz": "Cherenkov sharti",
+    "ru": "Условие Черенкова",
+    "en": "Cherenkov condition",
+    "m": "\\cos\\theta=\\frac{1}{n\\beta},\\quad p_{min}=\\frac{mc}{\\sqrt{n^2-1}}"
+   },
+   {
+    "uz": "Elektromagnit kaskad",
+    "ru": "Электромагнитный ливень",
+    "en": "Electromagnetic shower",
+    "m": "N_{max}\\approx\\frac{E_0}{E_c},\\quad \\frac{\\sigma_E}{E}=\\frac{a}{\\sqrt E}"
+   },
+   {
+    "uz": "Shunt va qo'shimcha qarshilik",
+    "ru": "Шунт и добавочное сопротивление",
+    "en": "Shunt and series resistor",
+    "m": "R_s=\\frac{R_0I_0}{I-I_0},\\quad R_d=\\frac{U}{I_0}-R_0"
+   },
+   {
+    "uz": "Lissaju figuralari",
+    "ru": "Фигуры Лиссажу",
+    "en": "Lissajous figures",
+    "m": "\\frac{f_y}{f_x}=\\frac{n_1}{n_2},\\quad \\sin\\varphi=\\frac{b}{B}"
+   },
+   {
+    "uz": "Issiqlik va drob shovqini",
+    "ru": "Тепловой и дробовой шум",
+    "en": "Thermal and shot noise",
+    "m": "\\delta U=\\sqrt{4kTR\\Delta f},\\quad \\delta I=\\sqrt{2eI\\Delta f}"
+   },
+   {
+    "uz": "Lock-in kuchaytirgich",
+    "ru": "Синхронный усилитель",
+    "en": "Lock-in amplifier",
+    "m": "X=\\frac{A}{2}\\cos\\varphi,\\quad Y=\\frac{A}{2}\\sin\\varphi"
+   }
+  ]
+ }
+]
