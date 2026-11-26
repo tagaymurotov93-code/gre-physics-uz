@@ -1,0 +1,856 @@
+[
+ {
+  "id": "B2-L34-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Mayatnik davri besh marta o'lchandi: $2.03$, $1.98$, $2.01$, $2.05$, $1.99\\ \\mathrm{s}$. O'rtacha qiymatni, standart chetlanishni va o'rtachaning xatoligini toping; natijani yozing.",
+   "ru": "Период маятника измерен пять раз: $2.03$, $1.98$, $2.01$, $2.05$, $1.99\\ \\mathrm{s}$. Найдите среднее, стандартное отклонение и погрешность среднего; запишите результат.",
+   "en": "A pendulum period is measured five times: $2.03$, $1.98$, $2.01$, $2.05$, $1.99\\ \\mathrm{s}$. Find the mean, the standard deviation and the standard error of the mean; write down the result."
+  },
+  "figure": "figures/B2-L34-S01.png",
+  "solution": {
+   "uz": [
+    "O'rtacha: $$\\bar T=\\frac{10.06}{5}=2.012\\ \\mathrm{s}$$",
+    "Chetlanishlar kvadratlari yig'indisi va standart chetlanish: $$\\sum\\left(T_i-\\bar T\\right)^2=3.28\\cdot10^{-3},\\qquad s=\\sqrt{\\frac{3.28\\cdot10^{-3}}{4}}\\approx0.029\\ \\mathrm{s}$$",
+    "O'rtachaning xatoligi: $$\\sigma_{\\bar T}=\\frac{0.029}{\\sqrt5}\\approx0.013\\ \\mathrm{s}$$",
+    "Natija: $$T=2.012\\pm0.013\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Среднее: $$\\bar T=\\frac{10.06}{5}=2.012\\ \\mathrm{s}$$",
+    "Сумма квадратов отклонений и стандартное отклонение: $$\\sum\\left(T_i-\\bar T\\right)^2=3.28\\cdot10^{-3},\\qquad s=\\sqrt{\\frac{3.28\\cdot10^{-3}}{4}}\\approx0.029\\ \\mathrm{s}$$",
+    "Погрешность среднего: $$\\sigma_{\\bar T}=\\frac{0.029}{\\sqrt5}\\approx0.013\\ \\mathrm{s}$$",
+    "Результат: $$T=2.012\\pm0.013\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The mean: $$\\bar T=\\frac{10.06}{5}=2.012\\ \\mathrm{s}$$",
+    "The sum of squared deviations and the standard deviation: $$\\sum\\left(T_i-\\bar T\\right)^2=3.28\\cdot10^{-3},\\qquad s=\\sqrt{\\frac{3.28\\cdot10^{-3}}{4}}\\approx0.029\\ \\mathrm{s}$$",
+    "The error of the mean: $$\\sigma_{\\bar T}=\\frac{0.029}{\\sqrt5}\\approx0.013\\ \\mathrm{s}$$",
+    "The result: $$T=2.012\\pm0.013\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "O'rtacha va standart chetlanish: $\\bar x=\\frac{1}{N}\\sum x_i$, $s=\\sqrt{\\frac{\\sum\\left(x_i-\\bar x\\right)^2}{N-1}}$",
+    "ru": "Среднее и стандартное отклонение: $\\bar x=\\frac{1}{N}\\sum x_i$, $s=\\sqrt{\\frac{\\sum\\left(x_i-\\bar x\\right)^2}{N-1}}$",
+    "en": "Mean and standard deviation: $\\bar x=\\frac{1}{N}\\sum x_i$, $s=\\sqrt{\\frac{\\sum\\left(x_i-\\bar x\\right)^2}{N-1}}$"
+   },
+   {
+    "uz": "O'rtachaning xatoligi: $\\sigma_{\\bar x}=\\frac{s}{\\sqrt N}$",
+    "ru": "Погрешность среднего: $\\sigma_{\\bar x}=\\frac{s}{\\sqrt N}$",
+    "en": "Standard error of the mean: $\\sigma_{\\bar x}=\\frac{s}{\\sqrt N}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Takroriy o'lchashlar",
+   "ru": "Повторные измерения",
+   "en": "Repeated measurements"
+  },
+  "answer": "\\bar T=2.012\\ \\mathrm{s};\\ s\\approx0.029\\ \\mathrm{s};\\ T=2.012\\pm0.013\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original (B2-L34, o'rtacha)"
+ },
+ {
+  "id": "B2-L34-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Hisob natijasi $l=1.2345\\ \\mathrm{m}$, $\\delta l=0.0123\\ \\mathrm{m}$. Natijani qiymatli raqamlar qoidasi bilan yozing va nisbiy xatolikni toping.",
+   "ru": "Расчёт дал $l=1.2345\\ \\mathrm{m}$, $\\delta l=0.0123\\ \\mathrm{m}$. Запишите результат по правилам значащих цифр и найдите относительную погрешность.",
+   "en": "A calculation gives $l=1.2345\\ \\mathrm{m}$, $\\delta l=0.0123\\ \\mathrm{m}$. Write the result by the significant-figure rules and find the relative error."
+  },
+  "figure": "figures/B2-L34-S02.png",
+  "solution": {
+   "uz": [
+    "Xatolikning birinchi raqami $1$ — ikki qiymatli raqam qoldiramiz: $$\\delta l\\approx0.012\\ \\mathrm{m}$$",
+    "Natijani shu razryadgacha yaxlitlaymiz: $$l=1.234\\pm0.012\\ \\mathrm{m}$$",
+    "Nisbiy xatolik: $$\\frac{\\delta l}{l}=\\frac{0.012}{1.234}\\approx1.0\\%$$"
+   ],
+   "ru": [
+    "Первая цифра погрешности $1$ — оставляем две значащие цифры: $$\\delta l\\approx0.012\\ \\mathrm{m}$$",
+    "Округляем результат до того же разряда: $$l=1.234\\pm0.012\\ \\mathrm{m}$$",
+    "Относительная погрешность: $$\\frac{\\delta l}{l}=\\frac{0.012}{1.234}\\approx1.0\\%$$"
+   ],
+   "en": [
+    "The first digit of the error is $1$ — keep two significant figures: $$\\delta l\\approx0.012\\ \\mathrm{m}$$",
+    "Round the result to the same place: $$l=1.234\\pm0.012\\ \\mathrm{m}$$",
+    "The relative error: $$\\frac{\\delta l}{l}=\\frac{0.012}{1.234}\\approx1.0\\%$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qiymatli raqamlar: $x\\pm\\delta x$",
+    "ru": "Значащие цифры: $x\\pm\\delta x$",
+    "en": "Significant figures: $x\\pm\\delta x$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Qiymatli raqamlar",
+   "ru": "Значащие цифры",
+   "en": "Significant figures"
+  },
+  "answer": "l=1.234\\pm0.012\\ \\mathrm{m};\\ 1.0\\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original (B2-L34, qiymatli raqamlar)"
+ },
+ {
+  "id": "B2-L34-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "To'g'ri to'rtburchak tomonlari millimetrli chizg'ich bilan o'lchandi: $25.0\\ \\mathrm{cm}$ va $12.0\\ \\mathrm{cm}$. Yuzani va uning xatoligini toping.",
+   "ru": "Стороны прямоугольника измерены миллиметровой линейкой: $25.0\\ \\mathrm{cm}$ и $12.0\\ \\mathrm{cm}$. Найдите площадь и её погрешность.",
+   "en": "The sides of a rectangle are measured with a millimetre ruler: $25.0\\ \\mathrm{cm}$ and $12.0\\ \\mathrm{cm}$. Find the area and its error."
+  },
+  "figure": "figures/B2-L34-S03.png",
+  "solution": {
+   "uz": [
+    "Asbob xatoligi — bo'lim qiymatining yarmi: $$\\delta a=\\delta b=0.05\\ \\mathrm{cm}$$",
+    "Ko'paytmaning nisbiy xatoligi: $$\\frac{\\delta S}{S}=\\sqrt{\\left(\\frac{0.05}{25}\\right)^2+\\left(\\frac{0.05}{12}\\right)^2}\\approx0.46\\%$$",
+    "Natija: $$S=300.0\\pm1.4\\ \\mathrm{cm^2}$$"
+   ],
+   "ru": [
+    "Погрешность прибора — половина цены деления: $$\\delta a=\\delta b=0.05\\ \\mathrm{cm}$$",
+    "Относительная погрешность произведения: $$\\frac{\\delta S}{S}=\\sqrt{\\left(\\frac{0.05}{25}\\right)^2+\\left(\\frac{0.05}{12}\\right)^2}\\approx0.46\\%$$",
+    "Результат: $$S=300.0\\pm1.4\\ \\mathrm{cm^2}$$"
+   ],
+   "en": [
+    "The instrument error is half a scale division: $$\\delta a=\\delta b=0.05\\ \\mathrm{cm}$$",
+    "The relative error of the product: $$\\frac{\\delta S}{S}=\\sqrt{\\left(\\frac{0.05}{25}\\right)^2+\\left(\\frac{0.05}{12}\\right)^2}\\approx0.46\\%$$",
+    "The result: $$S=300.0\\pm1.4\\ \\mathrm{cm^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Asbob xatoligi: $\\delta x=\\frac{1}{2}\\Delta$",
+    "ru": "Погрешность прибора: $\\delta x=\\frac{1}{2}\\Delta$",
+    "en": "Instrument error: $\\delta x=\\frac{1}{2}\\Delta$"
+   },
+   {
+    "uz": "Ko'paytma va bo'linma: $\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{\\delta A}{A}\\right)^2+\\left(\\frac{\\delta B}{B}\\right)^2}$",
+    "ru": "Произведение и частное: $\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{\\delta A}{A}\\right)^2+\\left(\\frac{\\delta B}{B}\\right)^2}$",
+    "en": "Product and quotient: $\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{\\delta A}{A}\\right)^2+\\left(\\frac{\\delta B}{B}\\right)^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Ko'paytma xatoligi",
+   "ru": "Погрешность произведения",
+   "en": "Error of a product"
+  },
+  "answer": "S=300.0\\pm1.4\\ \\mathrm{cm^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original (B2-L34, asbob xatoligi)"
+ },
+ {
+  "id": "B2-L34-S04",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Idishli suyuqlik massasi $152.3\\pm0.2\\ \\mathrm{g}$, bo'sh idish massasi $48.7\\pm0.2\\ \\mathrm{g}$. Suyuqlik massasini toping. Shu usul bilan qalinlik $10.05\\pm0.02\\ \\mathrm{mm}$ va $9.95\\pm0.02\\ \\mathrm{mm}$ o'lchamlar ayirmasidan topilsa, nisbiy xatolik qancha bo'ladi?",
+   "ru": "Масса сосуда с жидкостью $152.3\\pm0.2\\ \\mathrm{g}$, пустого сосуда $48.7\\pm0.2\\ \\mathrm{g}$. Найдите массу жидкости. Какой будет относительная погрешность, если тем же способом толщину находят как разность размеров $10.05\\pm0.02\\ \\mathrm{mm}$ и $9.95\\pm0.02\\ \\mathrm{mm}$?",
+   "en": "A vessel with liquid has mass $152.3\\pm0.2\\ \\mathrm{g}$, the empty vessel $48.7\\pm0.2\\ \\mathrm{g}$. Find the mass of the liquid. What is the relative error if, in the same way, a thickness is found as the difference of dimensions $10.05\\pm0.02\\ \\mathrm{mm}$ and $9.95\\pm0.02\\ \\mathrm{mm}$?"
+  },
+  "figure": "figures/B2-L34-S04.png",
+  "solution": {
+   "uz": [
+    "Ayirma va uning xatoligi: $$m=103.6\\ \\mathrm{g},\\qquad \\delta m=\\sqrt{0.2^2+0.2^2}\\approx0.3\\ \\mathrm{g}$$",
+    "Massa uchun nisbiy xatolik kichik: $$\\frac{0.28}{103.6}\\approx0.3\\%$$",
+    "Qalinlik — yaqin sonlar ayirmasi: $$d=0.10\\pm0.03\\ \\mathrm{mm},\\qquad \\frac{\\delta d}{d}\\approx28\\%$$"
+   ],
+   "ru": [
+    "Разность и её погрешность: $$m=103.6\\ \\mathrm{g},\\qquad \\delta m=\\sqrt{0.2^2+0.2^2}\\approx0.3\\ \\mathrm{g}$$",
+    "Для массы относительная погрешность мала: $$\\frac{0.28}{103.6}\\approx0.3\\%$$",
+    "Толщина — разность близких чисел: $$d=0.10\\pm0.03\\ \\mathrm{mm},\\qquad \\frac{\\delta d}{d}\\approx28\\%$$"
+   ],
+   "en": [
+    "The difference and its error: $$m=103.6\\ \\mathrm{g},\\qquad \\delta m=\\sqrt{0.2^2+0.2^2}\\approx0.3\\ \\mathrm{g}$$",
+    "For the mass the relative error is small: $$\\frac{0.28}{103.6}\\approx0.3\\%$$",
+    "The thickness is a difference of close numbers: $$d=0.10\\pm0.03\\ \\mathrm{mm},\\qquad \\frac{\\delta d}{d}\\approx28\\%$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yig'indi va ayirma: $\\delta f=\\sqrt{\\left(\\delta A\\right)^2+\\left(\\delta B\\right)^2}$",
+    "ru": "Сумма и разность: $\\delta f=\\sqrt{\\left(\\delta A\\right)^2+\\left(\\delta B\\right)^2}$",
+    "en": "Sum and difference: $\\delta f=\\sqrt{\\left(\\delta A\\right)^2+\\left(\\delta B\\right)^2}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Ayirma xatoligi",
+   "ru": "Погрешность разности",
+   "en": "Error of a difference"
+  },
+  "answer": "m=103.6\\pm0.3\\ \\mathrm{g};\\ \\frac{\\delta d}{d}\\approx28\\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "original (B2-L34, ayirma)"
+ },
+ {
+  "id": "B2-L34-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Jism massasi $25.0\\pm0.1\\ \\mathrm{g}$, menzurka bilan o'lchangan hajmi $10.0\\pm0.2\\ \\mathrm{cm^3}$. Zichlikni va uning xatoligini toping. Qaysi o'lchash ustun xatolik manbai?",
+   "ru": "Масса тела $25.0\\pm0.1\\ \\mathrm{g}$, объём, измеренный мензуркой, $10.0\\pm0.2\\ \\mathrm{cm^3}$. Найдите плотность и её погрешность. Какое измерение — доминирующий источник погрешности?",
+   "en": "A body has mass $25.0\\pm0.1\\ \\mathrm{g}$ and volume, measured with a measuring cylinder, $10.0\\pm0.2\\ \\mathrm{cm^3}$. Find the density and its error. Which measurement is the dominant source of error?"
+  },
+  "figure": "figures/B2-L34-S05.png",
+  "solution": {
+   "uz": [
+    "Nisbiy xatoliklar: $$\\frac{\\delta m}{m}=0.4\\%,\\qquad \\frac{\\delta V}{V}=2\\%$$",
+    "Bo'linma: $$\\frac{\\delta\\rho}{\\rho}=\\sqrt{0.4^2+2^2}\\,\\%\\approx2.04\\%$$",
+    "Natija — hajm xatoligi ustun: $$\\rho=2.50\\pm0.05\\ \\mathrm{g/cm^3}$$"
+   ],
+   "ru": [
+    "Относительные погрешности: $$\\frac{\\delta m}{m}=0.4\\%,\\qquad \\frac{\\delta V}{V}=2\\%$$",
+    "Частное: $$\\frac{\\delta\\rho}{\\rho}=\\sqrt{0.4^2+2^2}\\,\\%\\approx2.04\\%$$",
+    "Результат — доминирует погрешность объёма: $$\\rho=2.50\\pm0.05\\ \\mathrm{g/cm^3}$$"
+   ],
+   "en": [
+    "The relative errors: $$\\frac{\\delta m}{m}=0.4\\%,\\qquad \\frac{\\delta V}{V}=2\\%$$",
+    "The quotient: $$\\frac{\\delta\\rho}{\\rho}=\\sqrt{0.4^2+2^2}\\,\\%\\approx2.04\\%$$",
+    "The result — the volume error dominates: $$\\rho=2.50\\pm0.05\\ \\mathrm{g/cm^3}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Ko'paytma va bo'linma: $\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{\\delta A}{A}\\right)^2+\\left(\\frac{\\delta B}{B}\\right)^2}$",
+    "ru": "Произведение и частное: $\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{\\delta A}{A}\\right)^2+\\left(\\frac{\\delta B}{B}\\right)^2}$",
+    "en": "Product and quotient: $\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{\\delta A}{A}\\right)^2+\\left(\\frac{\\delta B}{B}\\right)^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Bo'linma xatoligi",
+   "ru": "Погрешность частного",
+   "en": "Error of a quotient"
+  },
+  "answer": "\\rho=2.50\\pm0.05\\ \\mathrm{g/cm^3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B2-L34, zichlik)"
+ },
+ {
+  "id": "B2-L34-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Mayatnik uzunligi $l=1.000\\pm0.002\\ \\mathrm{m}$, davri $T=2.006\\pm0.004\\ \\mathrm{s}$. $g=\\frac{4\\pi^2l}{T^2}$ ni va uning xatoligini toping.",
+   "ru": "Длина маятника $l=1.000\\pm0.002\\ \\mathrm{m}$, период $T=2.006\\pm0.004\\ \\mathrm{s}$. Найдите $g=\\frac{4\\pi^2l}{T^2}$ и его погрешность.",
+   "en": "A pendulum has length $l=1.000\\pm0.002\\ \\mathrm{m}$ and period $T=2.006\\pm0.004\\ \\mathrm{s}$. Find $g=\\frac{4\\pi^2l}{T^2}$ and its error."
+  },
+  "figure": "figures/B2-L34-S06.png",
+  "solution": {
+   "uz": [
+    "Qiymat: $$g=\\frac{4\\pi^2\\cdot1.000}{2.006^2}\\approx9.811\\ \\mathrm{m/s^2}$$",
+    "Davr kvadratda — nisbiy xatolik ikki marta: $$2\\frac{\\delta T}{T}=2\\cdot0.20\\%=0.40\\%,\\qquad \\frac{\\delta l}{l}=0.20\\%$$",
+    "Birlashtiramiz: $$\\frac{\\delta g}{g}=\\sqrt{0.20^2+0.40^2}\\,\\%\\approx0.45\\%$$",
+    "Natija: $$g=9.81\\pm0.04\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Значение: $$g=\\frac{4\\pi^2\\cdot1.000}{2.006^2}\\approx9.811\\ \\mathrm{m/s^2}$$",
+    "Период в квадрате — относительная погрешность удваивается: $$2\\frac{\\delta T}{T}=2\\cdot0.20\\%=0.40\\%,\\qquad \\frac{\\delta l}{l}=0.20\\%$$",
+    "Объединяем: $$\\frac{\\delta g}{g}=\\sqrt{0.20^2+0.40^2}\\,\\%\\approx0.45\\%$$",
+    "Результат: $$g=9.81\\pm0.04\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "The value: $$g=\\frac{4\\pi^2\\cdot1.000}{2.006^2}\\approx9.811\\ \\mathrm{m/s^2}$$",
+    "The period is squared — its relative error doubles: $$2\\frac{\\delta T}{T}=2\\cdot0.20\\%=0.40\\%,\\qquad \\frac{\\delta l}{l}=0.20\\%$$",
+    "Combine: $$\\frac{\\delta g}{g}=\\sqrt{0.20^2+0.40^2}\\,\\%\\approx0.45\\%$$",
+    "The result: $$g=9.81\\pm0.04\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Daraja: $\\frac{\\delta f}{f}=\\left|n\\right|\\frac{\\delta A}{A}$",
+    "ru": "Степень: $\\frac{\\delta f}{f}=\\left|n\\right|\\frac{\\delta A}{A}$",
+    "en": "Power: $\\frac{\\delta f}{f}=\\left|n\\right|\\frac{\\delta A}{A}$"
+   },
+   {
+    "uz": "Ko'paytma va bo'linma: $\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{\\delta A}{A}\\right)^2+\\left(\\frac{\\delta B}{B}\\right)^2}$",
+    "ru": "Произведение и частное: $\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{\\delta A}{A}\\right)^2+\\left(\\frac{\\delta B}{B}\\right)^2}$",
+    "en": "Product and quotient: $\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{\\delta A}{A}\\right)^2+\\left(\\frac{\\delta B}{B}\\right)^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Darajali formula xatoligi",
+   "ru": "Погрешность формулы со степенью",
+   "en": "Error of a formula with a power"
+  },
+  "answer": "g=9.81\\pm0.04\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 7.2.1 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L34-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Po'lat sharcha diametri $d=2.00\\pm0.02\\ \\mathrm{cm}$. Hajmini va uning xatoligini toping. Diametr xatoligi $1\\%$ bo'lsa-yu, massa $0.1\\%$ aniqlikda o'lchansa, zichlikning nisbiy xatoligi qancha bo'ladi?",
+   "ru": "Диаметр стального шарика $d=2.00\\pm0.02\\ \\mathrm{cm}$. Найдите объём и его погрешность. Какой будет относительная погрешность плотности, если погрешность диаметра $1\\%$, а масса измерена с точностью $0.1\\%$?",
+   "en": "A steel ball has diameter $d=2.00\\pm0.02\\ \\mathrm{cm}$. Find its volume and the error. If the diameter error is $1\\%$ and the mass is measured to $0.1\\%$, what is the relative error of the density?"
+  },
+  "figure": "figures/B2-L34-S07.png",
+  "solution": {
+   "uz": [
+    "Hajm: $$V=\\frac{\\pi d^3}{6}\\approx4.19\\ \\mathrm{cm^3}$$",
+    "Kub — nisbiy xatolik uch marta: $$\\frac{\\delta V}{V}=3\\cdot1\\%=3\\%,\\qquad \\delta V\\approx0.13\\ \\mathrm{cm^3}$$",
+    "Zichlik: $$\\frac{\\delta\\rho}{\\rho}=\\sqrt{0.1^2+3^2}\\,\\%\\approx3\\%$$"
+   ],
+   "ru": [
+    "Объём: $$V=\\frac{\\pi d^3}{6}\\approx4.19\\ \\mathrm{cm^3}$$",
+    "Куб — относительная погрешность утраивается: $$\\frac{\\delta V}{V}=3\\cdot1\\%=3\\%,\\qquad \\delta V\\approx0.13\\ \\mathrm{cm^3}$$",
+    "Плотность: $$\\frac{\\delta\\rho}{\\rho}=\\sqrt{0.1^2+3^2}\\,\\%\\approx3\\%$$"
+   ],
+   "en": [
+    "The volume: $$V=\\frac{\\pi d^3}{6}\\approx4.19\\ \\mathrm{cm^3}$$",
+    "A cube — the relative error triples: $$\\frac{\\delta V}{V}=3\\cdot1\\%=3\\%,\\qquad \\delta V\\approx0.13\\ \\mathrm{cm^3}$$",
+    "The density: $$\\frac{\\delta\\rho}{\\rho}=\\sqrt{0.1^2+3^2}\\,\\%\\approx3\\%$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Daraja: $\\frac{\\delta f}{f}=\\left|n\\right|\\frac{\\delta A}{A}$",
+    "ru": "Степень: $\\frac{\\delta f}{f}=\\left|n\\right|\\frac{\\delta A}{A}$",
+    "en": "Power: $\\frac{\\delta f}{f}=\\left|n\\right|\\frac{\\delta A}{A}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kubning xatoligi",
+   "ru": "Погрешность куба",
+   "en": "Error of a cube"
+  },
+  "answer": "V=4.19\\pm0.13\\ \\mathrm{cm^3};\\ \\frac{\\delta\\rho}{\\rho}\\approx3\\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "original (B2-L34, sharcha)"
+ },
+ {
+  "id": "B2-L34-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Sindirish ko'rsatkichi $n=\\frac{\\sin\\alpha}{\\sin\\beta}$ formula bilan topiladi; $\\alpha=45^\\circ$, $\\beta=28^\\circ$, har bir burchak xatoligi $0.5^\\circ$. $n$ ni va uning xatoligini toping.",
+   "ru": "Показатель преломления находят по формуле $n=\\frac{\\sin\\alpha}{\\sin\\beta}$; $\\alpha=45^\\circ$, $\\beta=28^\\circ$, погрешность каждого угла $0.5^\\circ$. Найдите $n$ и его погрешность.",
+   "en": "The refractive index is found from $n=\\frac{\\sin\\alpha}{\\sin\\beta}$; $\\alpha=45^\\circ$, $\\beta=28^\\circ$, with an error of $0.5^\\circ$ in each angle. Find $n$ and its error."
+  },
+  "figure": "figures/B2-L34-S08.png",
+  "solution": {
+   "uz": [
+    "Qiymat: $$n=\\frac{0.7071}{0.4695}\\approx1.506$$",
+    "Burchak xatoligi radianda va logarifmik hosilalar: $$\\delta\\alpha=8.73\\cdot10^{-3},\\qquad \\frac{\\delta n}{n}=\\sqrt{\\left(\\cot\\alpha\\,\\delta\\alpha\\right)^2+\\left(\\cot\\beta\\,\\delta\\beta\\right)^2}$$",
+    "Sonlar: $$\\frac{\\delta n}{n}=\\sqrt{\\left(1\\cdot0.0087\\right)^2+\\left(1.88\\cdot0.0087\\right)^2}\\approx1.86\\%$$",
+    "Natija: $$n=1.51\\pm0.03$$"
+   ],
+   "ru": [
+    "Значение: $$n=\\frac{0.7071}{0.4695}\\approx1.506$$",
+    "Погрешность угла в радианах и логарифмические производные: $$\\delta\\alpha=8.73\\cdot10^{-3},\\qquad \\frac{\\delta n}{n}=\\sqrt{\\left(\\cot\\alpha\\,\\delta\\alpha\\right)^2+\\left(\\cot\\beta\\,\\delta\\beta\\right)^2}$$",
+    "Числа: $$\\frac{\\delta n}{n}=\\sqrt{\\left(1\\cdot0.0087\\right)^2+\\left(1.88\\cdot0.0087\\right)^2}\\approx1.86\\%$$",
+    "Результат: $$n=1.51\\pm0.03$$"
+   ],
+   "en": [
+    "The value: $$n=\\frac{0.7071}{0.4695}\\approx1.506$$",
+    "The angle error in radians and the logarithmic derivatives: $$\\delta\\alpha=8.73\\cdot10^{-3},\\qquad \\frac{\\delta n}{n}=\\sqrt{\\left(\\cot\\alpha\\,\\delta\\alpha\\right)^2+\\left(\\cot\\beta\\,\\delta\\beta\\right)^2}$$",
+    "The numbers: $$\\frac{\\delta n}{n}=\\sqrt{\\left(1\\cdot0.0087\\right)^2+\\left(1.88\\cdot0.0087\\right)^2}\\approx1.86\\%$$",
+    "The result: $$n=1.51\\pm0.03$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Umumiy formula: $\\delta f=\\sqrt{\\sum\\left(\\frac{\\partial f}{\\partial x_i}\\delta x_i\\right)^2}$",
+    "ru": "Общая формула: $\\delta f=\\sqrt{\\sum\\left(\\frac{\\partial f}{\\partial x_i}\\delta x_i\\right)^2}$",
+    "en": "General formula: $\\delta f=\\sqrt{\\sum\\left(\\frac{\\partial f}{\\partial x_i}\\delta x_i\\right)^2}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Trigonometrik funksiya xatoligi",
+   "ru": "Погрешность тригонометрической функции",
+   "en": "Error of a trigonometric function"
+  },
+  "answer": "n=1.51\\pm0.03",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original (B2-L34, sindirish ko'rsatkichi)"
+ },
+ {
+  "id": "B2-L34-S09",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "$x=10\\pm1$ va $y=30\\pm1$ mustaqil o'lchangan. $f=\\frac{x}{x+y}$ ning xatoligini toping. Surat va maxrajni mustaqil deb hisoblash qanday xato beradi?",
+   "ru": "Величины $x=10\\pm1$ и $y=30\\pm1$ измерены независимо. Найдите погрешность $f=\\frac{x}{x+y}$. Какую ошибку даёт подход, где числитель и знаменатель считаются независимыми?",
+   "en": "The quantities $x=10\\pm1$ and $y=30\\pm1$ are measured independently. Find the error of $f=\\frac{x}{x+y}$. What error results from treating the numerator and denominator as independent?"
+  },
+  "figure": "figures/B2-L34-S09.png",
+  "solution": {
+   "uz": [
+    "Xususiy hosilalar: $$\\frac{\\partial f}{\\partial x}=\\frac{y}{\\left(x+y\\right)^2}=\\frac{30}{1600},\\qquad \\frac{\\partial f}{\\partial y}=-\\frac{x}{\\left(x+y\\right)^2}=-\\frac{10}{1600}$$",
+    "Umumiy formula: $$\\delta f=\\frac{\\sqrt{30^2+10^2}}{1600}\\approx0.020,\\qquad f=0.250\\pm0.020$$",
+    "Noto'g'ri usul ($x$ ikki joyda — xatoliklar bog'liq): $$\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{1}{10}\\right)^2+\\left(\\frac{\\sqrt2}{40}\\right)^2}\\approx10.6\\%,\\qquad \\delta f\\approx0.027$$"
+   ],
+   "ru": [
+    "Частные производные: $$\\frac{\\partial f}{\\partial x}=\\frac{y}{\\left(x+y\\right)^2}=\\frac{30}{1600},\\qquad \\frac{\\partial f}{\\partial y}=-\\frac{x}{\\left(x+y\\right)^2}=-\\frac{10}{1600}$$",
+    "Общая формула: $$\\delta f=\\frac{\\sqrt{30^2+10^2}}{1600}\\approx0.020,\\qquad f=0.250\\pm0.020$$",
+    "Неверный подход ($x$ в двух местах — погрешности связаны): $$\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{1}{10}\\right)^2+\\left(\\frac{\\sqrt2}{40}\\right)^2}\\approx10.6\\%,\\qquad \\delta f\\approx0.027$$"
+   ],
+   "en": [
+    "The partial derivatives: $$\\frac{\\partial f}{\\partial x}=\\frac{y}{\\left(x+y\\right)^2}=\\frac{30}{1600},\\qquad \\frac{\\partial f}{\\partial y}=-\\frac{x}{\\left(x+y\\right)^2}=-\\frac{10}{1600}$$",
+    "The general formula: $$\\delta f=\\frac{\\sqrt{30^2+10^2}}{1600}\\approx0.020,\\qquad f=0.250\\pm0.020$$",
+    "The wrong approach ($x$ appears twice — the errors are correlated): $$\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{1}{10}\\right)^2+\\left(\\frac{\\sqrt2}{40}\\right)^2}\\approx10.6\\%,\\qquad \\delta f\\approx0.027$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Umumiy formula: $\\delta f=\\sqrt{\\sum\\left(\\frac{\\partial f}{\\partial x_i}\\delta x_i\\right)^2}$",
+    "ru": "Общая формула: $\\delta f=\\sqrt{\\sum\\left(\\frac{\\partial f}{\\partial x_i}\\delta x_i\\right)^2}$",
+    "en": "General formula: $\\delta f=\\sqrt{\\sum\\left(\\frac{\\partial f}{\\partial x_i}\\delta x_i\\right)^2}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Bog'liq xatoliklar",
+   "ru": "Коррелированные погрешности",
+   "en": "Correlated errors"
+  },
+  "answer": "f=0.250\\pm0.020",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original (B2-L34, korrelyatsiya)"
+ },
+ {
+  "id": "B2-L34-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Natijaning statistik xatoligi $0.3$, sistematik xatoligi $0.4$ (bir xil birlikda). Umumiy xatolikni toping. Umumiy xatolikni $0.45$ gacha kamaytirish uchun o'lchashlar sonini necha marta oshirish kerak?",
+   "ru": "Статистическая погрешность результата $0.3$, систематическая $0.4$ (в одних единицах). Найдите полную погрешность. Во сколько раз надо увеличить число измерений, чтобы уменьшить полную погрешность до $0.45$?",
+   "en": "A result has a statistical error of $0.3$ and a systematic error of $0.4$ (in the same units). Find the total error. By what factor must the number of measurements be increased to reduce the total error to $0.45$?"
+  },
+  "figure": "figures/B2-L34-S10.png",
+  "solution": {
+   "uz": [
+    "Kvadratlar orqali: $$\\sigma=\\sqrt{0.3^2+0.4^2}=0.5$$",
+    "Kerakli statistik xatolik (sistematik o'zgarmaydi): $$\\sigma_1=\\sqrt{0.45^2-0.4^2}\\approx0.206$$",
+    "$\\frac{1}{\\sqrt N}$ qonuni: $$\\frac{N'}{N}=\\left(\\frac{0.3}{0.206}\\right)^2\\approx2.1$$"
+   ],
+   "ru": [
+    "В квадратах: $$\\sigma=\\sqrt{0.3^2+0.4^2}=0.5$$",
+    "Нужная статистическая погрешность (систематическая не меняется): $$\\sigma_1=\\sqrt{0.45^2-0.4^2}\\approx0.206$$",
+    "Закон $\\frac{1}{\\sqrt N}$: $$\\frac{N'}{N}=\\left(\\frac{0.3}{0.206}\\right)^2\\approx2.1$$"
+   ],
+   "en": [
+    "In quadrature: $$\\sigma=\\sqrt{0.3^2+0.4^2}=0.5$$",
+    "The required statistical error (the systematic one is unchanged): $$\\sigma_1=\\sqrt{0.45^2-0.4^2}\\approx0.206$$",
+    "The $\\frac{1}{\\sqrt N}$ law: $$\\frac{N'}{N}=\\left(\\frac{0.3}{0.206}\\right)^2\\approx2.1$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Xatoliklarni birlashtirish: $\\sigma=\\sqrt{\\sigma_1^2+\\sigma_2^2}$",
+    "ru": "Сложение погрешностей: $\\sigma=\\sqrt{\\sigma_1^2+\\sigma_2^2}$",
+    "en": "Combining errors: $\\sigma=\\sqrt{\\sigma_1^2+\\sigma_2^2}$"
+   },
+   null,
+   {
+    "uz": "O'rtachaning xatoligi: $\\sigma_{\\bar x}=\\frac{s}{\\sqrt N}$",
+    "ru": "Погрешность среднего: $\\sigma_{\\bar x}=\\frac{s}{\\sqrt N}$",
+    "en": "Standard error of the mean: $\\sigma_{\\bar x}=\\frac{s}{\\sqrt N}$"
+   }
+  ],
+  "basis": {
+   "uz": "Xatoliklar budjeti",
+   "ru": "Бюджет погрешностей",
+   "en": "Error budget"
+  },
+  "answer": "\\sigma=0.5;\\ \\approx2.1",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 7.2.1 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L34-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Mayatnik davri ~$2\\ \\mathrm{s}$, qo'lda ishlatiladigan sekundomerning xatoligi $0.2\\ \\mathrm{s}$. $20$ ta tebranish vaqti o'lchansa, davrning nisbiy xatoligi qancha? $0.1\\%$ aniqlik uchun nechta tebranish sanash kerak?",
+   "ru": "Период маятника ~$2\\ \\mathrm{s}$, погрешность ручного секундомера $0.2\\ \\mathrm{s}$. Какова относительная погрешность периода, если измерить время $20$ колебаний? Сколько колебаний надо отсчитать для точности $0.1\\%$?",
+   "en": "A pendulum period is ~$2\\ \\mathrm{s}$ and a hand-operated stopwatch has an error of $0.2\\ \\mathrm{s}$. What is the relative error of the period if the time of $20$ oscillations is measured? How many oscillations must be counted for $0.1\\%$ precision?"
+  },
+  "figure": "figures/B2-L34-S11.png",
+  "solution": {
+   "uz": [
+    "Sekundomer xatoligi bitta — $n$ ga bo'linadi: $$\\delta T=\\frac{0.2}{20}=0.01\\ \\mathrm{s}$$",
+    "Nisbiy xatolik: $$\\frac{\\delta T}{T}=\\frac{0.01}{2}=0.5\\%$$",
+    "$0.1\\%$ uchun: $$n=\\frac{0.2}{0.001\\cdot2}=100$$"
+   ],
+   "ru": [
+    "Погрешность секундомера одна — делится на $n$: $$\\delta T=\\frac{0.2}{20}=0.01\\ \\mathrm{s}$$",
+    "Относительная погрешность: $$\\frac{\\delta T}{T}=\\frac{0.01}{2}=0.5\\%$$",
+    "Для $0.1\\%$: $$n=\\frac{0.2}{0.001\\cdot2}=100$$"
+   ],
+   "en": [
+    "The stopwatch error occurs once — it is divided by $n$: $$\\delta T=\\frac{0.2}{20}=0.01\\ \\mathrm{s}$$",
+    "The relative error: $$\\frac{\\delta T}{T}=\\frac{0.01}{2}=0.5\\%$$",
+    "For $0.1\\%$: $$n=\\frac{0.2}{0.001\\cdot2}=100$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ko'p davrni o'lchash: $\\delta T=\\frac{\\delta t}{n}$",
+    "ru": "Измерение многих периодов: $\\delta T=\\frac{\\delta t}{n}$",
+    "en": "Timing many periods: $\\delta T=\\frac{\\delta t}{n}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Tajribani rejalashtirish",
+   "ru": "Планирование опыта",
+   "en": "Planning an experiment"
+  },
+  "answer": "0.5\\%;\\ n=100",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "original (B2-L34, ko'p davr)"
+ },
+ {
+  "id": "B2-L34-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$g$ uch usulda o'lchangan: $9.79\\pm0.02$, $9.83\\pm0.04$, $9.81\\pm0.01\\ \\mathrm{m/s^2}$. Vaznli o'rtachani va uning xatoligini toping.",
+   "ru": "$g$ измерено тремя методами: $9.79\\pm0.02$, $9.83\\pm0.04$, $9.81\\pm0.01\\ \\mathrm{m/s^2}$. Найдите взвешенное среднее и его погрешность.",
+   "en": "$g$ has been measured by three methods: $9.79\\pm0.02$, $9.83\\pm0.04$, $9.81\\pm0.01\\ \\mathrm{m/s^2}$. Find the weighted average and its error."
+  },
+  "figure": "figures/B2-L34-S12.png",
+  "solution": {
+   "uz": [
+    "Vaznlar: $$w=\\frac{1}{\\sigma^2}:\\qquad 2500,\\ 625,\\ 10000$$",
+    "O'rtacha: $$\\bar g=\\frac{2500\\cdot9.79+625\\cdot9.83+10000\\cdot9.81}{13125}\\approx9.807$$",
+    "Xatolik: $$\\sigma_{\\bar g}=\\frac{1}{\\sqrt{13125}}\\approx0.009$$",
+    "Natija: $$\\bar g=9.807\\pm0.009\\ \\mathrm{m/s^2}$$"
+   ],
+   "ru": [
+    "Веса: $$w=\\frac{1}{\\sigma^2}:\\qquad 2500,\\ 625,\\ 10000$$",
+    "Среднее: $$\\bar g=\\frac{2500\\cdot9.79+625\\cdot9.83+10000\\cdot9.81}{13125}\\approx9.807$$",
+    "Погрешность: $$\\sigma_{\\bar g}=\\frac{1}{\\sqrt{13125}}\\approx0.009$$",
+    "Результат: $$\\bar g=9.807\\pm0.009\\ \\mathrm{m/s^2}$$"
+   ],
+   "en": [
+    "The weights: $$w=\\frac{1}{\\sigma^2}:\\qquad 2500,\\ 625,\\ 10000$$",
+    "The mean: $$\\bar g=\\frac{2500\\cdot9.79+625\\cdot9.83+10000\\cdot9.81}{13125}\\approx9.807$$",
+    "The error: $$\\sigma_{\\bar g}=\\frac{1}{\\sqrt{13125}}\\approx0.009$$",
+    "The result: $$\\bar g=9.807\\pm0.009\\ \\mathrm{m/s^2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Vaznli o'rtacha: $\\bar x=\\frac{\\sum w_ix_i}{\\sum w_i}$, $w_i=\\frac{1}{\\sigma_i^2}$",
+    "ru": "Взвешенное среднее: $\\bar x=\\frac{\\sum w_ix_i}{\\sum w_i}$, $w_i=\\frac{1}{\\sigma_i^2}$",
+    "en": "Weighted average: $\\bar x=\\frac{\\sum w_ix_i}{\\sum w_i}$, $w_i=\\frac{1}{\\sigma_i^2}$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Vaznli o'rtacha",
+   "ru": "Взвешенное среднее",
+   "en": "Weighted average"
+  },
+  "answer": "\\bar g=9.807\\pm0.009\\ \\mathrm{m/s^2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 7.2.1 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L34-S13",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ikki laboratoriya bir kattalik uchun $10.4\\pm0.3$ va $9.6\\pm0.4$ natijani olgan. Ular mosmi? Faqat tasodifiy xatoliklar tufayli shunday yoki undan katta farq paydo bo'lish ehtimolligini baholang.",
+   "ru": "Две лаборатории получили для одной величины $10.4\\pm0.3$ и $9.6\\pm0.4$. Согласуются ли они? Оцените вероятность того, что только из-за случайных погрешностей возникнет такое или большее различие.",
+   "en": "Two laboratories obtained $10.4\\pm0.3$ and $9.6\\pm0.4$ for the same quantity. Are they consistent? Estimate the probability that random errors alone produce a difference this large or larger."
+  },
+  "figure": "figures/B2-L34-S13.png",
+  "solution": {
+   "uz": [
+    "Ayirma va uning xatoligi: $$\\Delta=0.8,\\qquad \\sigma_{\\Delta}=\\sqrt{0.3^2+0.4^2}=0.5$$",
+    "Xatolik birligida: $$z=\\frac{0.8}{0.5}=1.6$$",
+    "Normal taqsimotdan ikki tomonlama ehtimollik: $$P\\left(\\left|z\\right|>1.6\\right)\\approx11\\%$$"
+   ],
+   "ru": [
+    "Разность и её погрешность: $$\\Delta=0.8,\\qquad \\sigma_{\\Delta}=\\sqrt{0.3^2+0.4^2}=0.5$$",
+    "В единицах погрешности: $$z=\\frac{0.8}{0.5}=1.6$$",
+    "Двусторонняя вероятность по нормальному распределению: $$P\\left(\\left|z\\right|>1.6\\right)\\approx11\\%$$"
+   ],
+   "en": [
+    "The difference and its error: $$\\Delta=0.8,\\qquad \\sigma_{\\Delta}=\\sqrt{0.3^2+0.4^2}=0.5$$",
+    "In units of the error: $$z=\\frac{0.8}{0.5}=1.6$$",
+    "The two-sided probability from the normal distribution: $$P\\left(\\left|z\\right|>1.6\\right)\\approx11\\%$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Yig'indi va ayirma: $\\delta f=\\sqrt{\\left(\\delta A\\right)^2+\\left(\\delta B\\right)^2}$",
+    "ru": "Сумма и разность: $\\delta f=\\sqrt{\\left(\\delta A\\right)^2+\\left(\\delta B\\right)^2}$",
+    "en": "Sum and difference: $\\delta f=\\sqrt{\\left(\\delta A\\right)^2+\\left(\\delta B\\right)^2}$"
+   },
+   {
+    "uz": "Natijalar mosligi: $z=\\frac{\\left|x_1-x_2\\right|}{\\sqrt{\\sigma_1^2+\\sigma_2^2}}$",
+    "ru": "Согласие результатов: $z=\\frac{\\left|x_1-x_2\\right|}{\\sqrt{\\sigma_1^2+\\sigma_2^2}}$",
+    "en": "Consistency: $z=\\frac{\\left|x_1-x_2\\right|}{\\sqrt{\\sigma_1^2+\\sigma_2^2}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Natijalar mosligi",
+   "ru": "Согласие результатов",
+   "en": "Consistency of results"
+  },
+  "answer": "z=1.6;\\ \\approx11\\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B2-L34, moslik)"
+ },
+ {
+  "id": "B2-L34-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Rezistorlar qarshiligi normal taqsimlangan: o'rtacha $100\\ \\Omega$, standart chetlanish $2\\ \\Omega$. Rezistorlarning qanday qismi $\\pm5\\%$ chegarasiga sig'adi? Qanchasining qarshiligi $104\\ \\Omega$ dan katta?",
+   "ru": "Сопротивления резисторов распределены нормально: среднее $100\\ \\Omega$, стандартное отклонение $2\\ \\Omega$. Какая доля резисторов укладывается в допуск $\\pm5\\%$? У какой доли сопротивление больше $104\\ \\Omega$?",
+   "en": "Resistor values are normally distributed: mean $100\\ \\Omega$, standard deviation $2\\ \\Omega$. What fraction of the resistors lie within a $\\pm5\\%$ tolerance? What fraction have a resistance above $104\\ \\Omega$?"
+  },
+  "figure": "figures/B2-L34-S14.png",
+  "solution": {
+   "uz": [
+    "$\\pm5\\%$ — bu $\\pm5\\ \\Omega$, ya'ni $\\pm2.5\\sigma$: $$P\\left(\\left|z\\right|<2.5\\right)\\approx98.8\\%$$",
+    "$104\\ \\Omega$ — bu $\\mu+2\\sigma$: $$P\\left(z>2\\right)=\\frac{1-0.954}{2}\\approx2.3\\%$$",
+    "Chegaradan tashqaridagilar ikki tomonga teng bo'linadi ($R>105\\ \\Omega$): $$\\frac{1-0.988}{2}\\approx0.6\\%$$"
+   ],
+   "ru": [
+    "$\\pm5\\%$ — это $\\pm5\\ \\Omega$, то есть $\\pm2.5\\sigma$: $$P\\left(\\left|z\\right|<2.5\\right)\\approx98.8\\%$$",
+    "$104\\ \\Omega$ — это $\\mu+2\\sigma$: $$P\\left(z>2\\right)=\\frac{1-0.954}{2}\\approx2.3\\%$$",
+    "Вышедшие за допуск делятся поровну на две стороны ($R>105\\ \\Omega$): $$\\frac{1-0.988}{2}\\approx0.6\\%$$"
+   ],
+   "en": [
+    "$\\pm5\\%$ is $\\pm5\\ \\Omega$, that is $\\pm2.5\\sigma$: $$P\\left(\\left|z\\right|<2.5\\right)\\approx98.8\\%$$",
+    "$104\\ \\Omega$ is $\\mu+2\\sigma$: $$P\\left(z>2\\right)=\\frac{1-0.954}{2}\\approx2.3\\%$$",
+    "Those outside the tolerance split equally between the two sides ($R>105\\ \\Omega$): $$\\frac{1-0.988}{2}\\approx0.6\\%$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Normal taqsimot: $1\\sigma:\\ 68.3\\%$, $2\\sigma:\\ 95.4\\%$, $3\\sigma:\\ 99.7\\%$",
+    "ru": "Нормальное распределение: $1\\sigma:\\ 68.3\\%$, $2\\sigma:\\ 95.4\\%$, $3\\sigma:\\ 99.7\\%$",
+    "en": "Normal distribution: $1\\sigma:\\ 68.3\\%$, $2\\sigma:\\ 95.4\\%$, $3\\sigma:\\ 99.7\\%$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Normal taqsimot",
+   "ru": "Нормальное распределение",
+   "en": "Normal distribution"
+  },
+  "answer": "\\approx98.8\\%;\\ \\approx2.3\\%",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "original (B2-L34, normal taqsimot)"
+ },
+ {
+  "id": "B2-L34-S15",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Hisoblagich o'rtacha minutiga $3$ ta zarra qayd etadi. Bir minutda: (a) birorta ham zarra qayd etilmasligi; (b) aynan $3$ ta; (c) kamida $2$ ta zarra qayd etilishi ehtimolligini toping.",
+   "ru": "Счётчик регистрирует в среднем $3$ частицы в минуту. Найдите вероятность того, что за минуту: (a) не будет ни одной частицы; (b) будет ровно $3$; (c) будет не меньше $2$ частиц.",
+   "en": "A counter records on average $3$ particles per minute. Find the probability that in one minute (a) no particle is recorded; (b) exactly $3$ are; (c) at least $2$ are."
+  },
+  "figure": "figures/B2-L34-S15.png",
+  "solution": {
+   "uz": [
+    "Puasson taqsimoti, $\\lambda=3$: $$P\\left(0\\right)=e^{-3}\\approx0.050$$",
+    "Aynan uchta: $$P\\left(3\\right)=\\frac{3^3e^{-3}}{3!}=4.5e^{-3}\\approx0.224$$",
+    "Qarama-qarshi hodisa orqali: $$P\\left(n\\geq2\\right)=1-e^{-3}\\left(1+3\\right)\\approx0.801$$"
+   ],
+   "ru": [
+    "Распределение Пуассона, $\\lambda=3$: $$P\\left(0\\right)=e^{-3}\\approx0.050$$",
+    "Ровно три: $$P\\left(3\\right)=\\frac{3^3e^{-3}}{3!}=4.5e^{-3}\\approx0.224$$",
+    "Через противоположное событие: $$P\\left(n\\geq2\\right)=1-e^{-3}\\left(1+3\\right)\\approx0.801$$"
+   ],
+   "en": [
+    "The Poisson distribution, $\\lambda=3$: $$P\\left(0\\right)=e^{-3}\\approx0.050$$",
+    "Exactly three: $$P\\left(3\\right)=\\frac{3^3e^{-3}}{3!}=4.5e^{-3}\\approx0.224$$",
+    "Via the complementary event: $$P\\left(n\\geq2\\right)=1-e^{-3}\\left(1+3\\right)\\approx0.801$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Puasson taqsimoti: $P\\left(n\\right)=\\frac{\\lambda^ne^{-\\lambda}}{n!}$",
+    "ru": "Распределение Пуассона: $P\\left(n\\right)=\\frac{\\lambda^ne^{-\\lambda}}{n!}$",
+    "en": "Poisson distribution: $P\\left(n\\right)=\\frac{\\lambda^ne^{-\\lambda}}{n!}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Puasson taqsimoti",
+   "ru": "Распределение Пуассона",
+   "en": "Poisson distribution"
+  },
+  "answer": "0.050;\\ 0.224;\\ 0.801",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 7.2.2 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L34-S16",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Radioaktiv manba sanoq tezligi taxminan $50\\ \\mathrm{s^{-1}}$. Tezlikni $1\\%$ aniqlikda o'lchash uchun qancha vaqt sanash kerak? $0.5\\%$ aniqlik uchun-chi?",
+   "ru": "Скорость счёта радиоактивного источника примерно $50\\ \\mathrm{s^{-1}}$. Сколько времени нужно считать, чтобы измерить скорость с точностью $1\\%$? А с точностью $0.5\\%$?",
+   "en": "A radioactive source gives about $50\\ \\mathrm{s^{-1}}$. How long must one count to measure the rate to $1\\%$? And to $0.5\\%$?"
+  },
+  "figure": "figures/B2-L34-S16.png",
+  "solution": {
+   "uz": [
+    "Kerakli sanoq: $$\\frac{1}{\\sqrt N}=0.01\\ \\Rightarrow\\ N=10^4$$",
+    "Vaqt: $$t=\\frac{N}{R}=\\frac{10^4}{50}=200\\ \\mathrm{s}$$",
+    "Aniqlik ikki marta — vaqt to'rt marta: $$t=800\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Нужный счёт: $$\\frac{1}{\\sqrt N}=0.01\\ \\Rightarrow\\ N=10^4$$",
+    "Время: $$t=\\frac{N}{R}=\\frac{10^4}{50}=200\\ \\mathrm{s}$$",
+    "Точность вдвое — время вчетверо: $$t=800\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The required count: $$\\frac{1}{\\sqrt N}=0.01\\ \\Rightarrow\\ N=10^4$$",
+    "The time: $$t=\\frac{N}{R}=\\frac{10^4}{50}=200\\ \\mathrm{s}$$",
+    "Twice the precision — four times the time: $$t=800\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sanash statistikasi: $\\delta N=\\sqrt N$, $\\frac{\\delta N}{N}=\\frac{1}{\\sqrt N}$",
+    "ru": "Статистика счёта: $\\delta N=\\sqrt N$, $\\frac{\\delta N}{N}=\\frac{1}{\\sqrt N}$",
+    "en": "Counting statistics: $\\delta N=\\sqrt N$, $\\frac{\\delta N}{N}=\\frac{1}{\\sqrt N}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Sanash vaqti",
+   "ru": "Время счёта",
+   "en": "Counting time"
+  },
+  "answer": "200\\ \\mathrm{s};\\ 800\\ \\mathrm{s}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 7.2.2 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L34-S17",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Manba bilan $100\\ \\mathrm{s}$ da $1200$ ta, manbasiz (fon) yana $100\\ \\mathrm{s}$ da $400$ ta impuls sanalgan. Manbaning sof sanoq tezligini va uning xatoligini toping.",
+   "ru": "С источником за $100\\ \\mathrm{s}$ сосчитано $1200$ импульсов, без источника (фон) ещё за $100\\ \\mathrm{s}$ — $400$. Найдите чистую скорость счёта источника и её погрешность.",
+   "en": "With the source, $1200$ counts are recorded in $100\\ \\mathrm{s}$; without it (background), $400$ counts in another $100\\ \\mathrm{s}$. Find the net counting rate of the source and its error."
+  },
+  "figure": "figures/B2-L34-S17.png",
+  "solution": {
+   "uz": [
+    "Sof sanoq: $$N=1200-400=800$$",
+    "Xatolik — umumiy sanoqlar yig'indisining ildizi: $$\\delta N=\\sqrt{1200+400}=40$$",
+    "Tezlik: $$R=\\frac{800\\pm40}{100}=8.0\\pm0.4\\ \\mathrm{s^{-1}}$$"
+   ],
+   "ru": [
+    "Чистый счёт: $$N=1200-400=800$$",
+    "Погрешность — корень из суммы полных счётов: $$\\delta N=\\sqrt{1200+400}=40$$",
+    "Скорость: $$R=\\frac{800\\pm40}{100}=8.0\\pm0.4\\ \\mathrm{s^{-1}}$$"
+   ],
+   "en": [
+    "The net count: $$N=1200-400=800$$",
+    "The error is the square root of the sum of the total counts: $$\\delta N=\\sqrt{1200+400}=40$$",
+    "The rate: $$R=\\frac{800\\pm40}{100}=8.0\\pm0.4\\ \\mathrm{s^{-1}}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Fonni ayirish: $\\delta R=\\sqrt{\\frac{R_1}{t_1}+\\frac{R_2}{t_2}}$",
+    "ru": "Вычитание фона: $\\delta R=\\sqrt{\\frac{R_1}{t_1}+\\frac{R_2}{t_2}}$",
+    "en": "Background subtraction: $\\delta R=\\sqrt{\\frac{R_1}{t_1}+\\frac{R_2}{t_2}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Fonni ayirish",
+   "ru": "Вычитание фона",
+   "en": "Background subtraction"
+  },
+  "answer": "R=8.0\\pm0.4\\ \\mathrm{s^{-1}}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 7.2.2 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B2-L34-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Manba bilan sanoq tezligi ~$9\\ \\mathrm{s^{-1}}$, fon ~$1\\ \\mathrm{s^{-1}}$. Jami $1000\\ \\mathrm{s}$ vaqt bor. Uni manba bilan va fon o'lchashlari orasida qanday taqsimlash kerak? Sof tezlik xatoligini teng taqsimlash bilan solishtiring.",
+   "ru": "Скорость счёта с источником ~$9\\ \\mathrm{s^{-1}}$, фона ~$1\\ \\mathrm{s^{-1}}$. Всего есть $1000\\ \\mathrm{s}$. Как разделить время между измерениями с источником и фона? Сравните погрешность чистой скорости с равным делением.",
+   "en": "The counting rate with the source is ~$9\\ \\mathrm{s^{-1}}$ and the background ~$1\\ \\mathrm{s^{-1}}$. There are $1000\\ \\mathrm{s}$ in total. How should the time be divided between the source and background measurements? Compare the error of the net rate with an equal split."
+  },
+  "figure": "figures/B2-L34-S18.png",
+  "solution": {
+   "uz": [
+    "Minimallashtiramiz $t_1+t_2=1000$ shartida: $$\\left(\\delta R\\right)^2=\\frac{9}{t_1}+\\frac{1}{t_2}\\ \\Rightarrow\\ \\frac{t_1}{t_2}=\\sqrt{\\frac{9}{1}}=3$$",
+    "Vaqtlar: $$t_1=750\\ \\mathrm{s},\\qquad t_2=250\\ \\mathrm{s}$$",
+    "Xatolik: $$\\delta R=\\sqrt{\\frac{9}{750}+\\frac{1}{250}}\\approx0.126\\ \\mathrm{s^{-1}}$$",
+    "Teng taqsimlashda: $$\\delta R=\\sqrt{\\frac{9}{500}+\\frac{1}{500}}\\approx0.141\\ \\mathrm{s^{-1}}$$"
+   ],
+   "ru": [
+    "Минимизируем при условии $t_1+t_2=1000$: $$\\left(\\delta R\\right)^2=\\frac{9}{t_1}+\\frac{1}{t_2}\\ \\Rightarrow\\ \\frac{t_1}{t_2}=\\sqrt{\\frac{9}{1}}=3$$",
+    "Времена: $$t_1=750\\ \\mathrm{s},\\qquad t_2=250\\ \\mathrm{s}$$",
+    "Погрешность: $$\\delta R=\\sqrt{\\frac{9}{750}+\\frac{1}{250}}\\approx0.126\\ \\mathrm{s^{-1}}$$",
+    "При равном делении: $$\\delta R=\\sqrt{\\frac{9}{500}+\\frac{1}{500}}\\approx0.141\\ \\mathrm{s^{-1}}$$"
+   ],
+   "en": [
+    "Minimise subject to $t_1+t_2=1000$: $$\\left(\\delta R\\right)^2=\\frac{9}{t_1}+\\frac{1}{t_2}\\ \\Rightarrow\\ \\frac{t_1}{t_2}=\\sqrt{\\frac{9}{1}}=3$$",
+    "The times: $$t_1=750\\ \\mathrm{s},\\qquad t_2=250\\ \\mathrm{s}$$",
+    "The error: $$\\delta R=\\sqrt{\\frac{9}{750}+\\frac{1}{250}}\\approx0.126\\ \\mathrm{s^{-1}}$$",
+    "With an equal split: $$\\delta R=\\sqrt{\\frac{9}{500}+\\frac{1}{500}}\\approx0.141\\ \\mathrm{s^{-1}}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Vaqtni taqsimlash: $\\frac{t_1}{t_2}=\\sqrt{\\frac{R_1}{R_2}}$",
+    "ru": "Распределение времени: $\\frac{t_1}{t_2}=\\sqrt{\\frac{R_1}{R_2}}$",
+    "en": "Division of time: $\\frac{t_1}{t_2}=\\sqrt{\\frac{R_1}{R_2}}$"
+   },
+   null,
+   {
+    "uz": "Fonni ayirish: $\\delta R=\\sqrt{\\frac{R_1}{t_1}+\\frac{R_2}{t_2}}$",
+    "ru": "Вычитание фона: $\\delta R=\\sqrt{\\frac{R_1}{t_1}+\\frac{R_2}{t_2}}$",
+    "en": "Background subtraction: $\\delta R=\\sqrt{\\frac{R_1}{t_1}+\\frac{R_2}{t_2}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Vaqtni optimal taqsimlash",
+   "ru": "Оптимальное распределение времени",
+   "en": "Optimal division of time"
+  },
+  "answer": "t_1=750\\ \\mathrm{s};\\ t_2=250\\ \\mathrm{s};\\ 0.126\\ \\mathrm{s^{-1}}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B2-L34, optimal vaqt)"
+ }
+]

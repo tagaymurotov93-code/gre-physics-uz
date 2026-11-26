@@ -1,0 +1,629 @@
+[
+ {
+  "t": "h1",
+  "uz": "O'lchash xatolari va ularning tarqalishi (Measurement errors and their propagation)",
+  "ru": "Погрешности измерений и их распространение",
+  "en": "Measurement errors and their propagation"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz sistematik va tasodifiy xatoliklarni, to'g'rilik va aniqlikni ajratasiz; asbob xatoligini baholaysiz va natijani qiymatli raqamlar qoidasi bilan yozasiz; takroriy o'lchashlardan o'rtacha qiymat, standart chetlanish va o'rtachaning xatoligini hisoblaysiz; normal taqsimotdan ehtimolliklarni topasiz; yig'indi, ko'paytma, daraja va ixtiyoriy funksiya uchun xatolar tarqalishini hisoblaysiz; xatoliklar «budjeti»ni tuzib, qaysi kattalikni aniqroq o'lchash kerakligini aniqlaysiz; vaznli o'rtacha bilan natijalarni birlashtirasiz va ularning mosligini tekshirasiz; Puasson taqsimoti va sanash statistikasi bilan radioaktiv yoki foton hisoblash tajribalarini, shu jumladan fonni ayirishni tahlil qilasiz.",
+  "ru": "**Цель.** После урока вы будете различать систематические и случайные погрешности, правильность и прецизионность; оценивать погрешность прибора и записывать результат по правилам значащих цифр; вычислять по повторным измерениям среднее, стандартное отклонение и погрешность среднего; находить вероятности по нормальному распределению; рассчитывать распространение погрешностей для суммы, произведения, степени и произвольной функции; составлять «бюджет» погрешностей и определять, какую величину надо измерять точнее; объединять результаты взвешенным средним и проверять их согласие; анализировать опыты со счётом радиоактивных распадов или фотонов с помощью распределения Пуассона и статистики счёта, включая вычитание фона.",
+  "en": "**Goal.** After this lesson you will distinguish systematic from random errors and accuracy from precision; estimate instrument error and write results by the significant-figure rules; compute the mean, standard deviation and standard error of the mean from repeated measurements; find probabilities from the normal distribution; propagate errors through sums, products, powers and arbitrary functions; draw up an error \"budget\" and decide which quantity must be measured more precisely; combine results with a weighted average and test their consistency; and analyse counting experiments with radioactive decays or photons using the Poisson distribution and counting statistics, including background subtraction."
+ },
+ {
+  "t": "p",
+  "uz": "Bu dars laboratoriya metodlari blokini (GRE dagi savollarning ~6%) ochadi. Har qanday o'lchash natijasi — son emas, balki **son va uning xatoligi**: «$g=9.8\\ \\mathrm{m/s^2}$» yozuvi «$9.8\\pm0.1$» yoki «$9.8\\pm2$» bo'lishi mumkin, va bu ikki natija mutlaqo turlicha ma'noga ega. Xatolik nazariya bilan tajribani solishtirishga imkon beradi: yangi zarra kashf qilindimi yoki bu tasodifiy tebranishmi — javob xatolikka bog'liq. B0 dagi matematik apparat (hosila, taqribiy hisoblash) va B1 dagi radioaktivlik shu yerda ishlatiladi; grafiklar va to'g'ri chiziq bo'yicha moslashtirish — B2-L35 da.",
+  "ru": "Этот урок открывает блок лабораторных методов (~6% вопросов GRE). Любой результат измерения — не число, а **число и его погрешность**: запись «$g=9.8\\ \\mathrm{m/s^2}$» может означать «$9.8\\pm0.1$» или «$9.8\\pm2$», и эти два результата имеют совершенно разный смысл. Погрешность позволяет сравнивать теорию и опыт: открыта ли новая частица или это случайная флуктуация — ответ зависит от погрешности. Здесь используются математический аппарат из B0 (производная, приближённые вычисления) и радиоактивность из B1; графики и подгонка прямой — в B2-L35.",
+  "en": "This lesson opens the laboratory-methods block (~6% of GRE questions). Every measurement result is not a number but **a number and its uncertainty**: \"$g=9.8\\ \\mathrm{m/s^2}$\" might mean \"$9.8\\pm0.1$\" or \"$9.8\\pm2$\", and these two results mean entirely different things. Uncertainty is what lets us compare theory with experiment: whether a new particle has been discovered or we are seeing a random fluctuation depends on the error. The mathematical toolkit of B0 (derivatives, approximations) and the radioactivity of B1 are used here; graphs and straight-line fitting come in B2-L35."
+ },
+ {
+  "t": "h2",
+  "uz": "1. O'lchash va xatolik turlari",
+  "ru": "1. Измерение и виды погрешностей",
+  "en": "1. Measurement and kinds of error"
+ },
+ {
+  "t": "li",
+  "uz": "**Xatolik nima.** O'lchanayotgan kattalikning haqiqiy qiymati $x_0$ bizga noma'lum; o'lchash natijasi $x$ undan farq qiladi. **Xatolik** (uncertainty, error) — bu farqning ehtimoliy kattaligi haqidagi baho: natija $x\\pm\\delta x$ ko'rinishida yoziladi va haqiqiy qiymat yuqori ehtimollik bilan shu oraliqda yotadi, degan ma'noni beradi. Xatolik — «xato qilish» emas: eng ehtiyotkor o'lchash ham xatoliksiz bo'lmaydi.",
+  "ru": "**Что такое погрешность.** Истинное значение измеряемой величины $x_0$ нам неизвестно; результат измерения $x$ от него отличается. **Погрешность** — оценка вероятной величины этого отличия: результат записывают как $x\\pm\\delta x$, что означает, что истинное значение с высокой вероятностью лежит в этом интервале. Погрешность — не «ошибка» в смысле промаха: даже самое аккуратное измерение не бывает без погрешности.",
+  "en": "**What an error is.** The true value $x_0$ of the measured quantity is unknown to us; the measured result $x$ differs from it. The **uncertainty** (error) is an estimate of the likely size of this difference: the result is written $x\\pm\\delta x$, meaning that the true value lies in this interval with high probability. An error is not a \"mistake\": even the most careful measurement is never free of uncertainty."
+ },
+ {
+  "t": "li",
+  "uz": "**Sistematik xatolik (systematic error).** Har bir o'lchashda bir xil ishorali va deyarli bir xil kattalikdagi siljish: noto'g'ri kalibrlangan asbob, nol nuqtaning siljishi, hisobga olinmagan ishqalanish yoki havo qarshiligi, sekundomerni har doim kech bosish. Takroriy o'lchashlar uni kamaytirmaydi va o'zi ko'rsatmaydi — uni faqat boshqa usul yoki boshqa asbob bilan solishtirib topish mumkin. Ma'lum bo'lgan sistematik xatolik tuzatma kiritib yo'qotiladi.",
+  "ru": "**Систематическая погрешность.** Сдвиг одного знака и почти одной величины в каждом измерении: неверно откалиброванный прибор, смещение нуля, неучтённое трение или сопротивление воздуха, всегда запаздывающее нажатие секундомера. Повторные измерения её не уменьшают и сами не обнаруживают — её можно найти только сравнением с другим методом или прибором. Известную систематическую погрешность устраняют поправкой.",
+  "en": "**Systematic error.** A shift of the same sign and nearly the same size in every measurement: a badly calibrated instrument, a zero offset, unaccounted friction or air resistance, always pressing the stopwatch late. Repeating the measurement neither reduces it nor reveals it — it can be found only by comparison with another method or instrument. A known systematic error is removed by applying a correction."
+ },
+ {
+  "t": "li",
+  "uz": "**Tasodifiy xatolik (random error).** Har bir o'lchashda ishorasi va kattaligi oldindan aytib bo'lmaydigan tebranishlar: shkalani o'qishdagi noaniqlik, temperatura va kuchlanishning tebranishi, elektronika shovqini, radioaktiv yemirilishlarning tabiiy statistikasi. U natijalarning **tarqoqligi** sifatida ko'rinadi va takroriy o'lchashlarni o'rtachalash bilan kamayadi (3-bo'lim).",
+  "ru": "**Случайная погрешность.** Колебания, знак и величину которых в каждом измерении нельзя предсказать: неточность отсчёта по шкале, колебания температуры и напряжения, шум электроники, естественная статистика радиоактивных распадов. Она проявляется как **разброс** результатов и уменьшается усреднением повторных измерений (раздел 3).",
+  "en": "**Random error.** Fluctuations whose sign and size in each measurement cannot be predicted: uncertainty in reading a scale, fluctuations of temperature and voltage, electronic noise, the natural statistics of radioactive decays. It shows up as the **scatter** of the results and is reduced by averaging repeated measurements (section 3)."
+ },
+ {
+  "t": "li",
+  "uz": "**To'g'rilik va aniqlik ([[F01]]).** **To'g'rilik** (accuracy) — natijalarning haqiqiy qiymatga yaqinligi, u sistematik xatolik kichik bo'lganda yuqori. **Aniqlik** (precision) — natijalarning bir-biriga yaqinligi, ya'ni tarqoqlikning kichikligi, u tasodifiy xatolik kichik bo'lganda yuqori. Nishonga otish o'xshatmasi: o'qlar zich, lekin markazdan chetda — aniq, ammo noto'g'ri; o'qlar markaz atrofida, lekin keng sochilgan — o'rtacha to'g'ri, ammo noaniq. Ikkala xususiyatning to'rt kombinatsiyasi ham uchraydi.",
+  "ru": "**Правильность и прецизионность ([[F01]]).** **Правильность** (accuracy) — близость результатов к истинному значению; она высока, когда мала систематическая погрешность. **Прецизионность** (precision) — близость результатов друг к другу, то есть малость разброса; она высока, когда мала случайная погрешность. Аналогия со стрельбой по мишени: пули кучно, но в стороне от центра — прецизионно, но неправильно; пули вокруг центра, но с большим разбросом — в среднем правильно, но не прецизионно. Встречаются все четыре сочетания.",
+  "en": "**Accuracy and precision ([[F01]]).** **Accuracy** is the closeness of the results to the true value; it is high when the systematic error is small. **Precision** is the closeness of the results to one another, i.e. a small scatter; it is high when the random error is small. In the target-shooting analogy: shots tightly grouped but off-centre are precise but inaccurate; shots around the centre but widely spread are accurate on average but imprecise. All four combinations occur."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B2-L34-F01.png",
+   "ru": "figures/B2-L34-F01-ru.png",
+   "en": "figures/B2-L34-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Qo'pol xato (outlier).** Ba'zan bitta natija boshqalaridan keskin farq qiladi: noto'g'ri yozilgan raqam, asbob shkalasining almashtirilishi, uzilgan kontakt. Uni statistik xatolik deb hisoblash mumkin emas; lekin natijani «yoqmagani uchun» tashlab yuborish ham noto'g'ri. Odatda o'rtachadan $3\\sigma$ dan ko'p chetlangan natija sababini aniqlab, so'ng hisobdan chiqariladi (4-bo'limga qarang).",
+  "ru": "**Промах.** Иногда один результат резко отличается от остальных: неверно записанная цифра, переключённая шкала прибора, нарушенный контакт. Его нельзя считать статистической погрешностью; но и отбрасывать результат потому, что он «не нравится», неверно. Обычно результат, отклонившийся от среднего более чем на $3\\sigma$, исключают, выяснив причину (см. раздел 4).",
+  "en": "**Blunders (outliers).** Sometimes one result differs sharply from the rest: a digit written wrongly, an instrument range switched, a broken contact. It cannot be treated as a statistical error; but discarding a result because one \"dislikes\" it is also wrong. Usually a result lying more than $3\\sigma$ from the mean is excluded after its cause has been identified (see section 4)."
+ },
+ {
+  "t": "h2",
+  "uz": "2. Absolyut va nisbiy xatolik, qiymatli raqamlar",
+  "ru": "2. Абсолютная и относительная погрешность, значащие цифры",
+  "en": "2. Absolute and relative error, significant figures"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki xil yozuv.** **Absolyut xatolik** $\\delta x$ — kattalik bilan bir xil birlikda; **nisbiy xatolik** $\\frac{\\delta x}{x}$ — o'lchamsiz, ko'pincha foizda. Masalan, $l=50.0\\pm0.5\\ \\mathrm{cm}$ uchun absolyut xatolik $0.5\\ \\mathrm{cm}$, nisbiy xatolik $1\\%$. Nisbiy xatolik o'lchash sifatini turli kattaliklar uchun solishtirishga imkon beradi: $1\\ \\mathrm{mm}$ xatolik stol uzunligi uchun yaxshi, qog'oz qalinligi uchun esa juda yomon.",
+  "ru": "**Две формы записи.** **Абсолютная погрешность** $\\delta x$ — в тех же единицах, что и величина; **относительная погрешность** $\\frac{\\delta x}{x}$ — безразмерная, часто в процентах. Например, для $l=50.0\\pm0.5\\ \\mathrm{cm}$ абсолютная погрешность $0.5\\ \\mathrm{cm}$, относительная $1\\%$. Относительная погрешность позволяет сравнивать качество измерения разных величин: погрешность $1\\ \\mathrm{mm}$ хороша для длины стола и очень плоха для толщины бумаги.",
+  "en": "**Two forms.** The **absolute error** $\\delta x$ has the same units as the quantity; the **relative error** $\\frac{\\delta x}{x}$ is dimensionless, often given in per cent. For example, for $l=50.0\\pm0.5\\ \\mathrm{cm}$ the absolute error is $0.5\\ \\mathrm{cm}$ and the relative error $1\\%$. The relative error lets us compare the quality of measurements of different quantities: an error of $1\\ \\mathrm{mm}$ is good for the length of a table and very poor for the thickness of a sheet of paper."
+ },
+ {
+  "t": "li",
+  "uz": "**Asbob xatoligi.** Bitta o'lchashda xatolik asbobning o'zi bilan cheklanadi. Analog shkala (chizg'ich, termometr) uchun odatda **bo'lim qiymatining yarmi** olinadi: millimetrli chizg'ich bilan $\\pm0.5\\ \\mathrm{mm}$. Raqamli asbobda — oxirgi ko'rsatilgan raqamning birligi (yoki pasportdagi aniqlik). Elektr o'lchov asboblarida **aniqlik sinfi** ko'rsatiladi: $1.5$ sinfli voltmetr shkalasi $100\\ \\mathrm{V}$ bo'lsa, xatolik shkala chegarasining $1.5\\%$ i, ya'ni $\\pm1.5\\ \\mathrm{V}$ — shuning uchun kichik kuchlanishni katta shkalada o'lchash noqulay. Sekundomer bilan qo'lda vaqt o'lchashda asosiy xatolik — odam reaksiyasi (~$0.1$–$0.2\\ \\mathrm{s}$).",
+  "ru": "**Погрешность прибора.** В однократном измерении погрешность ограничена самим прибором. Для аналоговой шкалы (линейка, термометр) обычно берут **половину цены деления**: для миллиметровой линейки $\\pm0.5\\ \\mathrm{mm}$. У цифрового прибора — единица последнего отображаемого разряда (или точность по паспорту). У электроизмерительных приборов указывают **класс точности**: если у вольтметра класса $1.5$ шкала $100\\ \\mathrm{V}$, погрешность — $1.5\\%$ от предела шкалы, то есть $\\pm1.5\\ \\mathrm{V}$, — поэтому малое напряжение неудобно мерить на большой шкале. При ручном измерении времени секундомером основная погрешность — реакция человека (~$0.1$–$0.2\\ \\mathrm{s}$).",
+  "en": "**Instrument error.** In a single measurement the error is limited by the instrument itself. For an analogue scale (ruler, thermometer) one usually takes **half the scale division**: $\\pm0.5\\ \\mathrm{mm}$ for a millimetre ruler. For a digital instrument — one unit of the last displayed digit (or the specified accuracy). Electrical meters state an **accuracy class**: for a class-$1.5$ voltmeter with a $100\\ \\mathrm{V}$ range, the error is $1.5\\%$ of full scale, i.e. $\\pm1.5\\ \\mathrm{V}$ — which is why a small voltage is awkward to measure on a large range. When timing by hand with a stopwatch, the main error is human reaction time (~$0.1$–$0.2\\ \\mathrm{s}$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Qiymatli raqamlar (significant figures).** Xatolikning o'zi taxminiy, shuning uchun u **bir yoki ikki** qiymatli raqam bilan yoziladi (birinchi raqam $1$ yoki $2$ bo'lsa — ikkita). Natija xatolik bilan **bir xil razryadgacha** yaxlitlanadi. Masalan, hisob $v=3.4567\\ \\mathrm{m/s}$, $\\delta v=0.0832\\ \\mathrm{m/s}$ bersa, yozuv $v=3.46\\pm0.08\\ \\mathrm{m/s}$; xatolikdan ortiq raqamlar hech qanday ma'lumot bermaydi. Juda katta yoki kichik sonlar uchun umumiy ko'paytuvchi chiqariladi: $\\left(6.67\\pm0.02\\right)\\cdot10^{-11}$. Oraliq hisoblarda esa bir-ikki ortiqcha raqam saqlanadi — yaxlitlash faqat oxirida.",
+  "ru": "**Значащие цифры.** Погрешность сама приближённа, поэтому её записывают **одной или двумя** значащими цифрами (если первая цифра $1$ или $2$ — двумя). Результат округляют **до того же разряда**, что и погрешность. Например, если расчёт дал $v=3.4567\\ \\mathrm{m/s}$, $\\delta v=0.0832\\ \\mathrm{m/s}$, запись — $v=3.46\\pm0.08\\ \\mathrm{m/s}$; цифры дальше погрешности не несут информации. Для очень больших или малых чисел выносят общий множитель: $\\left(6.67\\pm0.02\\right)\\cdot10^{-11}$. В промежуточных вычислениях сохраняют одну-две лишние цифры — округляют только в конце.",
+  "en": "**Significant figures.** The error is itself approximate, so it is written with **one or two** significant figures (two if the first digit is $1$ or $2$). The result is rounded **to the same decimal place** as the error. For example, if a calculation gives $v=3.4567\\ \\mathrm{m/s}$ and $\\delta v=0.0832\\ \\mathrm{m/s}$, the result is written $v=3.46\\pm0.08\\ \\mathrm{m/s}$; digits beyond the error carry no information. For very large or small numbers a common factor is taken out: $\\left(6.67\\pm0.02\\right)\\cdot10^{-11}$. In intermediate steps one or two extra digits are kept — rounding is done only at the end."
+ },
+ {
+  "t": "li",
+  "uz": "**Xatoliksiz yozilgan son.** Agar xatolik ko'rsatilmagan bo'lsa, oxirgi qiymatli raqamda yarim birlik atrofida noaniqlik bor deb tushuniladi: «$2.50\\ \\mathrm{kg}$» yozuvi «$2.5\\ \\mathrm{kg}$» dan aniqroq. Shuning uchun nol raqamlar ham ma'noga ega va ularni tashlab yubormaslik kerak. Aniq sonlar (oddiy koeffitsiyentlar, $\\pi$, ta'rif bo'yicha aniqlangan birliklar) xatolikka ega emas.",
+  "ru": "**Число без указанной погрешности.** Если погрешность не указана, подразумевается неточность около половины единицы последнего значащего разряда: запись «$2.50\\ \\mathrm{kg}$» точнее, чем «$2.5\\ \\mathrm{kg}$». Поэтому нули тоже несут смысл, и их нельзя отбрасывать. Точные числа (простые коэффициенты, $\\pi$, единицы, заданные определением) погрешности не имеют.",
+  "en": "**A number written without an error.** If no error is given, an uncertainty of about half a unit in the last significant digit is implied: \"$2.50\\ \\mathrm{kg}$\" is more precise than \"$2.5\\ \\mathrm{kg}$\". So zeros carry meaning too and must not be dropped. Exact numbers (simple coefficients, $\\pi$, units fixed by definition) have no error."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Takroriy o'lchashlar statistikasi",
+  "ru": "3. Статистика повторных измерений",
+  "en": "3. Statistics of repeated measurements"
+ },
+ {
+  "t": "li",
+  "uz": "**O'rtacha va standart chetlanish.** Bir kattalik $N$ marta o'lchanib $x_1,\\dots,x_N$ natijalar olingan bo'lsin. Eng yaxshi baho — **o'rtacha qiymat** $\\bar x$. Bitta o'lchashning tarqoqligini **standart chetlanish** $s$ tavsiflaydi; uning kvadrati — **dispersiya**. Maxrajdagi $N-1$ shuning uchunki chetlanishlar haqiqiy qiymatdan emas, ma'lumotlarning o'zidan topilgan $\\bar x$ dan hisoblanadi va bitta «erkinlik darajasi» sarflanadi; katta $N$ da farq sezilmaydi.",
+  "ru": "**Среднее и стандартное отклонение.** Пусть величина измерена $N$ раз, получены $x_1,\\dots,x_N$. Лучшая оценка — **среднее значение** $\\bar x$. Разброс отдельного измерения характеризует **стандартное отклонение** $s$; его квадрат — **дисперсия**. $N-1$ в знаменателе потому, что отклонения считают не от истинного значения, а от найденного из самих данных $\\bar x$, и одна «степень свободы» расходуется; при больших $N$ разница незаметна.",
+  "en": "**Mean and standard deviation.** Suppose a quantity is measured $N$ times, giving $x_1,\\dots,x_N$. The best estimate is the **mean** $\\bar x$. The scatter of a single measurement is characterised by the **standard deviation** $s$; its square is the **variance**. The $N-1$ in the denominator appears because deviations are taken not from the true value but from $\\bar x$, found from the data themselves, which uses up one \"degree of freedom\"; for large $N$ the difference is negligible."
+ },
+ {
+  "t": "m",
+  "m": "\\bar x=\\frac{1}{N}\\sum_{i=1}^Nx_i,\\qquad s=\\sqrt{\\frac{1}{N-1}\\sum_{i=1}^N\\left(x_i-\\bar x\\right)^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**O'rtachaning xatoligi (standard error of the mean).** $\\bar x$ ning o'zi ham tasodifiy kattalik, lekin u bitta o'lchashdan ancha kam tebranadi. $N$ ta mustaqil o'lchash yig'indisining dispersiyasi $N\\sigma^2$ (dispersiyalar qo'shiladi, 5-bo'lim), demak $\\bar x$ ning dispersiyasi $\\frac{\\sigma^2}{N}$:",
+  "ru": "**Погрешность среднего.** Само $\\bar x$ тоже случайная величина, но она колеблется гораздо меньше, чем отдельное измерение. Дисперсия суммы $N$ независимых измерений равна $N\\sigma^2$ (дисперсии складываются, раздел 5), значит, дисперсия $\\bar x$ равна $\\frac{\\sigma^2}{N}$:",
+  "en": "**Standard error of the mean.** $\\bar x$ itself is a random quantity, but it fluctuates much less than a single measurement. The variance of the sum of $N$ independent measurements is $N\\sigma^2$ (variances add, section 5), so the variance of $\\bar x$ is $\\frac{\\sigma^2}{N}$:"
+ },
+ {
+  "t": "m",
+  "m": "\\sigma_{\\bar x}=\\frac{s}{\\sqrt N}"
+ },
+ {
+  "t": "li",
+  "uz": "**$\\sqrt N$ qonuni ([[F02]]).** O'lchashlar sonini oshirganda $s$ o'zgarmaydi (u asbob va usulning xossasi), o'rtachaning xatoligi esa $\\frac{1}{\\sqrt N}$ kabi kamayadi: xatolikni $10$ marta kamaytirish uchun $100$ marta ko'p o'lchash kerak. Bu «kamayuvchi daromad» qonuni: ma'lum chegaradan keyin o'lchashlarni ko'paytirgandan ko'ra usulni yaxshilash foydaliroq. Va eng muhimi: o'rtachalash **faqat tasodifiy** xatolikni kamaytiradi, sistematik xatolik $\\bar x$ da to'liq qoladi.",
+  "ru": "**Закон $\\sqrt N$ ([[F02]]).** При увеличении числа измерений $s$ не меняется (это свойство прибора и метода), а погрешность среднего убывает как $\\frac{1}{\\sqrt N}$: чтобы уменьшить погрешность в $10$ раз, нужно в $100$ раз больше измерений. Это закон «убывающей отдачи»: после некоторого предела выгоднее улучшить метод, чем умножать измерения. И главное: усреднение уменьшает **только случайную** погрешность, систематическая полностью остаётся в $\\bar x$.",
+  "en": "**The $\\sqrt N$ law ([[F02]]).** Increasing the number of measurements does not change $s$ (it is a property of the instrument and method), while the error of the mean falls as $\\frac{1}{\\sqrt N}$: to reduce the error by a factor of $10$, $100$ times as many measurements are needed. This is a law of \"diminishing returns\": beyond some point it pays more to improve the method than to multiply measurements. Most importantly, averaging reduces **only the random** error; the systematic error remains in $\\bar x$ in full."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B2-L34-F02.png",
+   "ru": "figures/B2-L34-F02-ru.png",
+   "en": "figures/B2-L34-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Natija qanday yoziladi.** Takroriy o'lchashlarda yakuniy natija $\\bar x\\pm\\sigma_{\\bar x}$ ko'rinishida beriladi (bitta yangi o'lchashning kutilgan tarqoqligi $s$ emas!). Agar o'rtachaning xatoligi asbob xatoligidan kichik chiqsa, ikkalasi birlashtiriladi (7-bo'lim) — asbobning cheklangan aniqligini hech qanday o'rtachalash yengib o'tolmaydi.",
+  "ru": "**Как записывают результат.** При повторных измерениях итог дают в виде $\\bar x\\pm\\sigma_{\\bar x}$ (а не $s$ — ожидаемого разброса одного нового измерения!). Если погрешность среднего получилась меньше погрешности прибора, их объединяют (раздел 7) — ограниченную точность прибора никакое усреднение не преодолеет.",
+  "en": "**How the result is written.** For repeated measurements the final result is given as $\\bar x\\pm\\sigma_{\\bar x}$ (not $s$, the expected scatter of one new measurement!). If the error of the mean comes out smaller than the instrument error, the two are combined (section 7) — no amount of averaging overcomes the limited resolution of an instrument."
+ },
+ {
+  "t": "h2",
+  "uz": "4. Normal (Gauss) taqsimot",
+  "ru": "4. Нормальное (гауссово) распределение",
+  "en": "4. The normal (Gaussian) distribution"
+ },
+ {
+  "t": "li",
+  "uz": "**Nima uchun Gauss.** Tasodifiy xatolik ko'p sonli kichik mustaqil sabablar yig'indisi bo'lsa, uning taqsimoti sabablarning o'z taqsimotidan qat'i nazar **normal taqsimotga** intiladi — bu **markaziy limit teoremasi**. Shuning uchun ko'p o'lchashlarning gistogrammasi qo'ng'iroqsimon shaklga ega. O'rtachasi $\\mu$ va standart chetlanishi $\\sigma$ bo'lgan normal taqsimotning ehtimollik zichligi:",
+  "ru": "**Почему Гаусс.** Если случайная погрешность — сумма многих малых независимых причин, её распределение стремится к **нормальному** независимо от распределений самих причин — это **центральная предельная теорема**. Поэтому гистограмма многих измерений имеет колоколообразную форму. Плотность вероятности нормального распределения со средним $\\mu$ и стандартным отклонением $\\sigma$:",
+  "en": "**Why Gaussian.** If a random error is the sum of many small independent causes, its distribution tends to the **normal** distribution whatever the distributions of the individual causes — this is the **central limit theorem**. That is why the histogram of many measurements is bell-shaped. The probability density of the normal distribution with mean $\\mu$ and standard deviation $\\sigma$ is:"
+ },
+ {
+  "t": "m",
+  "m": "f\\left(x\\right)=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{\\left(x-\\mu\\right)^2}{2\\sigma^2}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Yodda tutiladigan sonlar ([[F03]]).** Natijaning $\\mu\\pm\\sigma$ oralig'iga tushish ehtimolligi $68.3\\%$, $\\mu\\pm2\\sigma$ — $95.4\\%$, $\\mu\\pm3\\sigma$ — $99.7\\%$. Demak «$x\\pm\\sigma$» yozuvi «haqiqiy qiymat oraliqdan tashqarida bo'lishi ehtimolligi taxminan uchdan bir» degani. Egri chiziqning yarim balandlikdagi to'liq kengligi $2\\sqrt{2\\ln2}\\,\\sigma\\approx2.355\\sigma$ — grafikdan $\\sigma$ ni tez baholash uchun qulay. Taqsimot simmetrik bo'lgani uchun $\\mu+\\sigma$ dan katta qiymat ehtimolligi $\\frac{1-0.683}{2}\\approx16\\%$.",
+  "ru": "**Числа, которые надо помнить ([[F03]]).** Вероятность попадания результата в интервал $\\mu\\pm\\sigma$ равна $68.3\\%$, в $\\mu\\pm2\\sigma$ — $95.4\\%$, в $\\mu\\pm3\\sigma$ — $99.7\\%$. Значит, запись «$x\\pm\\sigma$» означает «вероятность, что истинное значение вне интервала, — около трети». Полная ширина кривой на половине высоты $2\\sqrt{2\\ln2}\\,\\sigma\\approx2.355\\sigma$ — удобна для быстрой оценки $\\sigma$ по графику. Так как распределение симметрично, вероятность значения больше $\\mu+\\sigma$ равна $\\frac{1-0.683}{2}\\approx16\\%$.",
+  "en": "**Numbers to remember ([[F03]]).** The probability that a result falls in $\\mu\\pm\\sigma$ is $68.3\\%$, in $\\mu\\pm2\\sigma$ — $95.4\\%$, in $\\mu\\pm3\\sigma$ — $99.7\\%$. So \"$x\\pm\\sigma$\" means \"the probability that the true value lies outside the interval is about one third\". The full width of the curve at half maximum is $2\\sqrt{2\\ln2}\\,\\sigma\\approx2.355\\sigma$ — handy for estimating $\\sigma$ from a graph. Since the distribution is symmetric, the probability of a value above $\\mu+\\sigma$ is $\\frac{1-0.683}{2}\\approx16\\%$."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B2-L34-F03.png",
+   "ru": "figures/B2-L34-F03-ru.png",
+   "en": "figures/B2-L34-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Natijani nazariya bilan solishtirish.** O'lchangan $x\\pm\\sigma$ va kutilgan $x_0$ orasidagi farqni xatolik birligida ifodalaymiz: $z=\\frac{\\left|x-x_0\\right|}{\\sigma}$. $z\\lesssim2$ bo'lsa natija nazariyaga **mos** deyiladi (shunday yoki undan katta tasodifiy chetlanish ~$5\\%$ hollarda uchraydi); $z\\approx3$ — shubhali; $z\\gtrsim5$ — farq real. Zarralar fizikasida yangi hodisa kashf qilindi deyish uchun $5\\sigma$ talab qilinadi (tasodifan bunday chetlanish ehtimolligi ~$3\\cdot10^{-7}$). Ehtiyot bo'ling: juda kichik $z$ ham shubhali — xatoliklar oshirib baholangan bo'lishi mumkin.",
+  "ru": "**Сравнение результата с теорией.** Выразим разность между измеренным $x\\pm\\sigma$ и ожидаемым $x_0$ в единицах погрешности: $z=\\frac{\\left|x-x_0\\right|}{\\sigma}$. При $z\\lesssim2$ говорят, что результат **согласуется** с теорией (случайное отклонение такого или большего размера бывает в ~$5\\%$ случаев); $z\\approx3$ — сомнительно; $z\\gtrsim5$ — различие реально. В физике частиц для заявления об открытии требуют $5\\sigma$ (вероятность случайно получить такое отклонение ~$3\\cdot10^{-7}$). Осторожно: слишком малое $z$ тоже подозрительно — погрешности могли быть завышены.",
+  "en": "**Comparing a result with theory.** Express the difference between the measured $x\\pm\\sigma$ and the expected $x_0$ in units of the error: $z=\\frac{\\left|x-x_0\\right|}{\\sigma}$. For $z\\lesssim2$ the result is said to be **consistent** with theory (a random deviation this large or larger occurs in ~$5\\%$ of cases); $z\\approx3$ is doubtful; $z\\gtrsim5$ means the difference is real. In particle physics $5\\sigma$ is required to claim a discovery (the chance of such a deviation by accident is ~$3\\cdot10^{-7}$). Beware: a very small $z$ is also suspicious — the errors may have been overestimated."
+ },
+ {
+  "t": "h2",
+  "uz": "5. Xatolar tarqalishi: yig'indi va ko'paytma",
+  "ru": "5. Распространение погрешностей: сумма и произведение",
+  "en": "5. Error propagation: sums and products"
+ },
+ {
+  "t": "li",
+  "uz": "**Masala qo'yilishi.** Ko'pincha kerakli kattalik bevosita o'lchanmaydi, balki o'lchangan kattaliklardan hisoblanadi: zichlik — massa va hajmdan, erkin tushish tezlanishi — mayatnik uzunligi va davridan. Kiruvchi kattaliklar xatoliklari natijaga qanday o'tadi — bu **xatolar tarqalishi** (error propagation) masalasi. Bu yerda xatoliklar **bog'liq emas** (independent) deb hisoblanadi: birining tasodifiy chetlanishi boshqasiga ta'sir qilmaydi.",
+  "ru": "**Постановка задачи.** Часто нужная величина не измеряется прямо, а вычисляется из измеренных: плотность — из массы и объёма, ускорение свободного падения — из длины и периода маятника. Как погрешности исходных величин переходят в результат — задача **распространения погрешностей**. Здесь погрешности считаются **независимыми**: случайное отклонение одной не влияет на другую.",
+  "en": "**The problem.** Often the desired quantity is not measured directly but computed from measured ones: density from mass and volume, the free-fall acceleration from the length and period of a pendulum. How the errors of the inputs carry over to the result is the problem of **error propagation**. Here the errors are taken to be **independent**: a random deviation of one does not affect another."
+ },
+ {
+  "t": "li",
+  "uz": "**Yig'indi va ayirma.** $f=A\\pm B$ bo'lsa, $f$ ning chetlanishi $\\delta A\\pm\\delta B$. Bog'liq bo'lmagan tasodifiy chetlanishlarning **dispersiyalari qo'shiladi**: o'zaro ko'paytma hadi $\\langle\\delta A\\,\\delta B\\rangle$ o'rtacha nolga teng, chunki ishoralar tasodifiy. Natijada xatoliklar **kvadratlar orqali qo'shiladi** (add in quadrature) — xuddi to'g'ri burchakli uchburchak katetlaridan gipotenuza topilganidek ([[F04]]). Ayirmada ham ishora «$+$»: ayirish xatolikni kamaytirmaydi.",
+  "ru": "**Сумма и разность.** Если $f=A\\pm B$, отклонение $f$ равно $\\delta A\\pm\\delta B$. У независимых случайных отклонений **складываются дисперсии**: перекрёстный член $\\langle\\delta A\\,\\delta B\\rangle$ в среднем равен нулю, так как знаки случайны. В итоге погрешности **складываются в квадратах** — как гипотенуза по катетам прямоугольного треугольника ([[F04]]). И при вычитании знак «$+$»: вычитание погрешность не уменьшает.",
+  "en": "**Sum and difference.** If $f=A\\pm B$, the deviation of $f$ is $\\delta A\\pm\\delta B$. For independent random deviations the **variances add**: the cross term $\\langle\\delta A\\,\\delta B\\rangle$ averages to zero because the signs are random. As a result the errors **add in quadrature** — like the hypotenuse from the legs of a right triangle ([[F04]]). For a difference the sign is \"$+$\" too: subtracting does not reduce the error."
+ },
+ {
+  "t": "m",
+  "m": "f=A\\pm B:\\qquad \\delta f=\\sqrt{\\left(\\delta A\\right)^2+\\left(\\delta B\\right)^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Yaqin sonlarni ayirish xavfi.** Ayirmaning absolyut xatoligi kamaymaydi, ayirmaning o'zi esa kichik bo'lishi mumkin — nisbiy xatolik keskin ortadi. Masalan, devor qalinligini tashqi va ichki o'lchamlar ayirmasi sifatida topish yoki ikki yaqin to'lqin uzunligi ayirmasini o'lchash — har biri $0.1\\%$ aniqlikda o'lchansa ham, natija o'nlab foiz xatolikka ega bo'lishi mumkin. Bunday hollarda ayirmani to'g'ridan-to'g'ri o'lchaydigan usul (masalan, interferometrik) afzal.",
+  "ru": "**Опасность вычитания близких чисел.** Абсолютная погрешность разности не уменьшается, а сама разность может быть мала — относительная погрешность резко растёт. Например, толщина стенки как разность внешнего и внутреннего размеров или разность двух близких длин волн: даже если каждое измерено с точностью $0.1\\%$, результат может иметь погрешность в десятки процентов. В таких случаях предпочтителен метод, измеряющий разность прямо (например, интерферометрический).",
+  "en": "**The danger of subtracting close numbers.** The absolute error of a difference does not decrease, while the difference itself may be small — so the relative error grows sharply. For example, a wall thickness found as the difference of outer and inner dimensions, or the difference of two close wavelengths: even if each is measured to $0.1\\%$, the result may carry an error of tens of per cent. In such cases a method that measures the difference directly (for example, interferometrically) is preferable."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'paytma va bo'linma.** $f=AB$ yoki $f=\\frac{A}{B}$ uchun logarifm olamiz: $\\ln f=\\ln A\\pm\\ln B$, $d\\left(\\ln f\\right)=\\frac{df}{f}$. Demak ko'paytma va bo'linmada **nisbiy** xatoliklar kvadratlar orqali qo'shiladi. Konstantaga ko'paytirishda ($f=aA$, $a$ aniq) absolyut xatolik ham $a$ marta oshadi, nisbiy xatolik o'zgarmaydi.",
+  "ru": "**Произведение и частное.** Для $f=AB$ или $f=\\frac{A}{B}$ возьмём логарифм: $\\ln f=\\ln A\\pm\\ln B$, $d\\left(\\ln f\\right)=\\frac{df}{f}$. Значит, в произведении и частном в квадратах складываются **относительные** погрешности. При умножении на константу ($f=aA$, $a$ точное) абсолютная погрешность тоже растёт в $a$ раз, относительная не меняется.",
+  "en": "**Product and quotient.** For $f=AB$ or $f=\\frac{A}{B}$, take logarithms: $\\ln f=\\ln A\\pm\\ln B$, $d\\left(\\ln f\\right)=\\frac{df}{f}$. So for products and quotients the **relative** errors add in quadrature. Multiplying by a constant ($f=aA$, $a$ exact) multiplies the absolute error by $a$ and leaves the relative error unchanged."
+ },
+ {
+  "t": "m",
+  "m": "f=AB,\\ \\frac{A}{B}:\\qquad \\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{\\delta A}{A}\\right)^2+\\left(\\frac{\\delta B}{B}\\right)^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Daraja.** $f=A^n$ uchun $\\frac{\\delta f}{f}=\\left|n\\right|\\frac{\\delta A}{A}$: kvadratga ko'tarish nisbiy xatolikni ikki, kubga ko'tarish — uch marta oshiradi; kvadrat ildiz esa ikki marta kamaytiradi. Diqqat: $A^2=A\\cdot A$ ni ikki mustaqil ko'paytuvchi deb hisoblab, $\\sqrt2\\frac{\\delta A}{A}$ olish **noto'g'ri** — ikkala ko'paytuvchining chetlanishi bir xil, ular bog'liq (6-bo'lim). Formuladagi yuqori darajali kattalik natija xatoligini eng ko'p belgilaydi: sharning hajmi diametrdan $d^3$ orqali hisoblansa, diametrni ayniqsa aniq o'lchash kerak.",
+  "ru": "**Степень.** Для $f=A^n$ $\\frac{\\delta f}{f}=\\left|n\\right|\\frac{\\delta A}{A}$: возведение в квадрат удваивает относительную погрешность, в куб — утраивает; квадратный корень уменьшает её вдвое. Внимание: считать $A^2=A\\cdot A$ произведением двух независимых множителей и получать $\\sqrt2\\frac{\\delta A}{A}$ **неверно** — отклонения обоих множителей одинаковы, они связаны (раздел 6). Величина с наибольшей степенью в формуле сильнее всего определяет погрешность результата: если объём шара вычисляют по диаметру через $d^3$, диаметр нужно измерять особенно точно.",
+  "en": "**Powers.** For $f=A^n$, $\\frac{\\delta f}{f}=\\left|n\\right|\\frac{\\delta A}{A}$: squaring doubles the relative error, cubing triples it; a square root halves it. Caution: treating $A^2=A\\cdot A$ as a product of two independent factors and getting $\\sqrt2\\frac{\\delta A}{A}$ is **wrong** — the deviations of the two factors are identical; they are correlated (section 6). The quantity with the highest power in a formula dominates the error of the result: if the volume of a sphere is computed from its diameter via $d^3$, the diameter must be measured especially precisely."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B2-L34-F04.png",
+   "ru": "figures/B2-L34-F04-ru.png",
+   "en": "figures/B2-L34-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Eng katta (chegaraviy) xatolik.** Ba'zan xatoliklar kvadratlar orqali emas, oddiy qo'shiladi: $\\delta f=\\delta A+\\delta B$. Bu — barcha chetlanishlar bir tomonga ketgan eng yomon hol, ya'ni yuqori chegara. Agar xatoliklar haqiqatan bog'liq bo'lmasa, kvadratlar orqali qo'shish real tarqoqlikni to'g'ri beradi; chegaraviy baho esa ortiqcha ehtiyotkor. GRE da standart — kvadratlar orqali qo'shish.",
+  "ru": "**Наибольшая (предельная) погрешность.** Иногда погрешности складывают не в квадратах, а просто: $\\delta f=\\delta A+\\delta B$. Это худший случай, когда все отклонения в одну сторону, то есть верхняя граница. Если погрешности действительно независимы, сложение в квадратах верно даёт реальный разброс, а предельная оценка излишне осторожна. На GRE стандарт — сложение в квадратах.",
+  "en": "**Maximum (limiting) error.** Sometimes errors are added not in quadrature but linearly: $\\delta f=\\delta A+\\delta B$. This is the worst case, with all deviations in the same direction — an upper bound. If the errors really are independent, adding in quadrature correctly gives the actual scatter, while the limiting estimate is overly cautious. On the GRE the standard is addition in quadrature."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Umumiy formula va bog'liq xatoliklar",
+  "ru": "6. Общая формула и коррелированные погрешности",
+  "en": "6. The general formula and correlated errors"
+ },
+ {
+  "t": "li",
+  "uz": "**Chiziqlashtirish.** Xatoliklar kichik bo'lsa, $f\\left(x,y,\\dots\\right)$ ni o'lchangan qiymat atrofida Teylor qatoriga yoyib, birinchi tartibli hadlarni qoldiramiz (B0): $\\delta f\\approx\\frac{\\partial f}{\\partial x}\\delta x+\\frac{\\partial f}{\\partial y}\\delta y+\\dots$ Har bir had — bitta kattalik xatoligining hissasi; mustaqil hissalar kvadratlar orqali qo'shiladi:",
+  "ru": "**Линеаризация.** Если погрешности малы, разложим $f\\left(x,y,\\dots\\right)$ в ряд Тейлора около измеренного значения и оставим члены первого порядка (B0): $\\delta f\\approx\\frac{\\partial f}{\\partial x}\\delta x+\\frac{\\partial f}{\\partial y}\\delta y+\\dots$ Каждый член — вклад погрешности одной величины; независимые вклады складываются в квадратах:",
+  "en": "**Linearisation.** If the errors are small, expand $f\\left(x,y,\\dots\\right)$ in a Taylor series about the measured values and keep the first-order terms (B0): $\\delta f\\approx\\frac{\\partial f}{\\partial x}\\delta x+\\frac{\\partial f}{\\partial y}\\delta y+\\dots$ Each term is the contribution of one quantity's error; independent contributions add in quadrature:"
+ },
+ {
+  "t": "m",
+  "m": "\\delta f=\\sqrt{\\left(\\frac{\\partial f}{\\partial x}\\delta x\\right)^2+\\left(\\frac{\\partial f}{\\partial y}\\delta y\\right)^2+\\dots}"
+ },
+ {
+  "t": "li",
+  "uz": "**Xususiy hollar.** 5-bo'limdagi qoidalar shu formuladan kelib chiqadi. Bir o'zgaruvchili funksiyalar uchun: $f=\\ln x$ — $\\delta f=\\frac{\\delta x}{x}$ (logarifmning absolyut xatoligi kattalikning nisbiy xatoligiga teng); $f=e^x$ — $\\frac{\\delta f}{f}=\\delta x$; $f=\\sin\\theta$ — $\\delta f=\\left|\\cos\\theta\\right|\\delta\\theta$, bunda $\\delta\\theta$ **radianda**. Geometrik ma'no ([[F04]]): $\\delta f$ — grafikka urinmaning $\\delta x$ kenglikdagi «balandligi»; funksiya tik bo'lgan joyda xatolik kuchayadi, tekis joyda (masalan, $\\sin\\theta$ ning $90^\\circ$ atrofida) — susayadi.",
+  "ru": "**Частные случаи.** Правила раздела 5 вытекают из этой формулы. Для функций одной переменной: $f=\\ln x$ — $\\delta f=\\frac{\\delta x}{x}$ (абсолютная погрешность логарифма равна относительной погрешности величины); $f=e^x$ — $\\frac{\\delta f}{f}=\\delta x$; $f=\\sin\\theta$ — $\\delta f=\\left|\\cos\\theta\\right|\\delta\\theta$, где $\\delta\\theta$ **в радианах**. Геометрический смысл ([[F04]]): $\\delta f$ — «высота» касательной к графику на ширине $\\delta x$; где функция круто меняется, погрешность усиливается, где полого (например, $\\sin\\theta$ около $90^\\circ$) — ослабляется.",
+  "en": "**Special cases.** The rules of section 5 follow from this formula. For functions of one variable: $f=\\ln x$ — $\\delta f=\\frac{\\delta x}{x}$ (the absolute error of a logarithm equals the relative error of the quantity); $f=e^x$ — $\\frac{\\delta f}{f}=\\delta x$; $f=\\sin\\theta$ — $\\delta f=\\left|\\cos\\theta\\right|\\delta\\theta$, with $\\delta\\theta$ **in radians**. Geometric meaning ([[F04]]): $\\delta f$ is the \"rise\" of the tangent to the graph over a width $\\delta x$; where the function is steep the error is amplified, where it is flat (for example $\\sin\\theta$ near $90^\\circ$) it is suppressed."
+ },
+ {
+  "t": "li",
+  "uz": "**Bog'liq (korrelyatsiyalangan) xatoliklar.** Formulaning asosiy sharti — o'zgaruvchilar xatoliklari mustaqil. Agar bitta o'lchangan kattalik formulaga bir necha marta kirsa, uni alohida mustaqil ko'paytuvchilar deb qarash xato beradi. Eng oddiy misol: $f=x-x$ aniq nol, lekin «kvadratlar qoidasi» $\\sqrt2\\,\\delta x$ beradi. To'g'ri usul — $f$ ni mustaqil o'lchangan kattaliklar orqali yozib, umumiy formulani qo'llash (xususiy hosilalar o'zaro bog'liqlikni avtomatik hisobga oladi). Masalan, $f=\\frac{x}{x+y}$ da $x$ surat va maxrajda — $\\frac{\\partial f}{\\partial x}=\\frac{y}{\\left(x+y\\right)^2}$ dan foydalaniladi.",
+  "ru": "**Коррелированные погрешности.** Главное условие формулы — погрешности переменных независимы. Если одна измеренная величина входит в формулу несколько раз, считать её независимыми множителями ошибочно. Простейший пример: $f=x-x$ точно равно нулю, а «правило квадратов» даёт $\\sqrt2\\,\\delta x$. Правильный путь — записать $f$ через независимо измеренные величины и применить общую формулу (частные производные автоматически учитывают связь). Например, в $f=\\frac{x}{x+y}$ величина $x$ стоит в числителе и знаменателе — используют $\\frac{\\partial f}{\\partial x}=\\frac{y}{\\left(x+y\\right)^2}$.",
+  "en": "**Correlated errors.** The key assumption of the formula is that the errors of the variables are independent. If one measured quantity appears in a formula several times, treating its appearances as independent factors gives a wrong answer. The simplest example: $f=x-x$ is exactly zero, but the \"quadrature rule\" gives $\\sqrt2\\,\\delta x$. The right way is to write $f$ in terms of independently measured quantities and apply the general formula (the partial derivatives take the dependence into account automatically). For example, in $f=\\frac{x}{x+y}$, $x$ appears in both numerator and denominator — one uses $\\frac{\\partial f}{\\partial x}=\\frac{y}{\\left(x+y\\right)^2}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Kompyuterda tekshirish ([[F05]]).** Murakkab formulalar uchun natijani **Monte-Karlo usuli** bilan tekshirish qulay: har bir kiruvchi kattalik uchun normal taqsimotdan minglab tasodifiy qiymat olinadi, har biridan $f$ hisoblanadi va $f$ qiymatlari gistogrammasining standart chetlanishi topiladi. Kichik xatoliklarda u chiziqli formula bilan mos keladi; katta nisbiy xatoliklarda (o'nlab foiz) taqsimot nosimmetrik bo'lib qoladi va chiziqli yaqinlashish buziladi.",
+  "ru": "**Проверка на компьютере ([[F05]]).** Для сложных формул результат удобно проверять **методом Монте-Карло**: для каждой исходной величины берут тысячи случайных значений из нормального распределения, по каждому набору вычисляют $f$ и находят стандартное отклонение гистограммы значений $f$. При малых погрешностях оно совпадает с линейной формулой; при больших относительных погрешностях (десятки процентов) распределение становится несимметричным, и линейное приближение нарушается.",
+  "en": "**Checking on a computer ([[F05]]).** For complicated formulas it is convenient to check the result by the **Monte Carlo method**: for each input, thousands of random values are drawn from a normal distribution, $f$ is computed for each set, and the standard deviation of the histogram of $f$ values is found. For small errors it agrees with the linear formula; for large relative errors (tens of per cent) the distribution becomes asymmetric and the linear approximation breaks down."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B2-L34-F05.png",
+   "ru": "figures/B2-L34-F05-ru.png",
+   "en": "figures/B2-L34-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Xatoliklar budjeti va tajribani rejalashtirish",
+  "ru": "7. Бюджет погрешностей и планирование опыта",
+  "en": "7. The error budget and planning an experiment"
+ },
+ {
+  "t": "li",
+  "uz": "**Statistik va sistematik qismlar.** Yakuniy natijada odatda ikki xil xatolik bor: o'rtachalash bilan kamayadigan statistik (tasodifiy) va kamaymaydigan sistematik. Ular mustaqil bo'lsa, umumiy xatolik kvadratlar orqali qo'shiladi. Ko'pincha ular alohida yoziladi, masalan $m=125.10\\pm0.11\\pm0.09\\ \\mathrm{GeV}$ (birinchisi statistik, ikkinchisi sistematik) — o'quvchi qaysi biri ustun ekanini ko'radi.",
+  "ru": "**Статистическая и систематическая части.** В итоговом результате обычно есть погрешности двух типов: статистическая (случайная), уменьшающаяся усреднением, и систематическая, не уменьшающаяся. Если они независимы, полная погрешность складывается в квадратах. Часто их пишут раздельно, например $m=125.10\\pm0.11\\pm0.09\\ \\mathrm{GeV}$ (первая статистическая, вторая систематическая) — читатель видит, какая преобладает.",
+  "en": "**Statistical and systematic parts.** A final result usually carries two kinds of error: a statistical (random) one that averaging reduces, and a systematic one that it does not. If they are independent, the total error adds in quadrature. They are often quoted separately, for example $m=125.10\\pm0.11\\pm0.09\\ \\mathrm{GeV}$ (statistical first, systematic second) — so the reader sees which dominates."
+ },
+ {
+  "t": "m",
+  "m": "\\sigma=\\sqrt{\\sigma_1^2+\\sigma_2^2+\\dots}"
+ },
+ {
+  "t": "li",
+  "uz": "**Ustun xatolik.** Kvadratlar orqali qo'shishning muhim natijasi: eng katta hissa umumiy xatolikni deyarli to'liq belgilaydi. Agar bir hissa boshqasidan $3$ marta kichik bo'lsa, u umumiy xatolikka atigi ~$5\\%$ qo'shadi. Shuning uchun tajribani yaxshilashda **ustun xatolikni** kamaytirish kerak; kichik hissalarni yanada kamaytirish deyarli foyda bermaydi. Xatoliklar budjeti — har bir manbaning hissasi ro'yxati — buni darhol ko'rsatadi.",
+  "ru": "**Доминирующая погрешность.** Важное следствие сложения в квадратах: наибольший вклад почти полностью определяет полную погрешность. Если один вклад в $3$ раза меньше другого, он добавляет к полной погрешности всего ~$5\\%$. Поэтому, улучшая опыт, нужно уменьшать **доминирующую** погрешность; дальнейшее уменьшение малых вкладов почти ничего не даёт. Бюджет погрешностей — перечень вкладов всех источников — сразу это показывает.",
+  "en": "**The dominant error.** An important consequence of adding in quadrature: the largest contribution almost entirely determines the total error. If one contribution is $3$ times smaller than another, it adds only ~$5\\%$ to the total. So when improving an experiment one must reduce the **dominant** error; reducing the small contributions further gains almost nothing. An error budget — a list of the contributions of all sources — shows this at once."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'p davrlarni o'lchash.** Mayatnik davrini qo'lda o'lchashda sekundomer xatoligi $\\delta t$ bitta davrda ham, ko'p davrda ham bir xil (boshlash va to'xtatishdagi reaksiya). Shuning uchun $n$ ta davr vaqtini o'lchab, $n$ ga bo'lish kerak: $\\delta T=\\frac{\\delta t}{n}$. Bu takroriy o'lchashdan ($\\frac{1}{\\sqrt n}$) ancha samarali, chunki xatolik bitta va u $n$ ga bo'linadi. Xuddi shunday, qog'oz qalinligini o'lchash uchun yuz varaq taxlami qalinligi o'lchanadi.",
+  "ru": "**Измерение многих периодов.** При ручном измерении периода маятника погрешность секундомера $\\delta t$ одинакова и для одного, и для многих периодов (реакция при пуске и остановке). Поэтому надо измерить время $n$ периодов и поделить на $n$: $\\delta T=\\frac{\\delta t}{n}$. Это гораздо эффективнее повторных измерений ($\\frac{1}{\\sqrt n}$), так как погрешность одна и она делится на $n$. Так же для измерения толщины бумаги измеряют толщину пачки из ста листов.",
+  "en": "**Measuring many periods.** When timing a pendulum by hand, the stopwatch error $\\delta t$ is the same for one period as for many (reaction time at start and stop). So one should time $n$ periods and divide by $n$: $\\delta T=\\frac{\\delta t}{n}$. This is far more effective than repeating measurements ($\\frac{1}{\\sqrt n}$), because there is a single error and it is divided by $n$. Likewise, to measure the thickness of paper one measures a stack of a hundred sheets."
+ },
+ {
+  "t": "li",
+  "uz": "**Formula tuzilishiga qarab rejalashtirish.** Mayatnik uchun $g=\\frac{4\\pi^2l}{T^2}$: davr ikkinchi darajada kiradi, shuning uchun $\\frac{\\delta g}{g}=\\sqrt{\\left(\\frac{\\delta l}{l}\\right)^2+\\left(2\\frac{\\delta T}{T}\\right)^2}$. Nisbiy xatoliklarni oldindan baholab, qaysi kattalikka ko'proq kuch sarflash kerakligi aniqlanadi: odatda uzunlikni $0.1\\%$ aniqlikda o'lchash oson, davr esa qo'lda o'lchanganda ustun xatolik manbai bo'ladi.",
+  "ru": "**Планирование по структуре формулы.** Для маятника $g=\\frac{4\\pi^2l}{T^2}$: период входит во второй степени, поэтому $\\frac{\\delta g}{g}=\\sqrt{\\left(\\frac{\\delta l}{l}\\right)^2+\\left(2\\frac{\\delta T}{T}\\right)^2}$. Оценив заранее относительные погрешности, определяют, на какую величину тратить больше усилий: длину обычно легко измерить с точностью $0.1\\%$, а период при ручном измерении становится доминирующим источником погрешности.",
+  "en": "**Planning by the structure of the formula.** For a pendulum $g=\\frac{4\\pi^2l}{T^2}$: the period enters squared, so $\\frac{\\delta g}{g}=\\sqrt{\\left(\\frac{\\delta l}{l}\\right)^2+\\left(2\\frac{\\delta T}{T}\\right)^2}$. Estimating the relative errors in advance shows which quantity deserves more effort: the length is usually easy to measure to $0.1\\%$, while the period, timed by hand, becomes the dominant source of error."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Vaznli o'rtacha va natijalar mosligi",
+  "ru": "8. Взвешенное среднее и согласие результатов",
+  "en": "8. The weighted average and consistency of results"
+ },
+ {
+  "t": "li",
+  "uz": "**Turli aniqlikdagi natijalar.** Bir kattalik turli usullar bilan o'lchanib $x_i\\pm\\sigma_i$ natijalar olingan bo'lsa, oddiy o'rtacha noto'g'ri — aniqroq natija ko'proq hisobga olinishi kerak. Eng yaxshi baho — **vaznli o'rtacha**, vazn xatolik kvadratiga teskari proporsional: $w_i=\\frac{1}{\\sigma_i^2}$. Natija xatoligi har bir alohida xatolikdan kichik:",
+  "ru": "**Результаты разной точности.** Если одна величина измерена разными методами и получены $x_i\\pm\\sigma_i$, простое среднее неверно — более точный результат должен учитываться сильнее. Лучшая оценка — **взвешенное среднее** с весами, обратно пропорциональными квадрату погрешности: $w_i=\\frac{1}{\\sigma_i^2}$. Погрешность результата меньше каждой отдельной:",
+  "en": "**Results of different precision.** If one quantity has been measured by different methods, giving $x_i\\pm\\sigma_i$, a plain average is wrong — the more precise result should count for more. The best estimate is the **weighted average**, with weights inversely proportional to the squared error, $w_i=\\frac{1}{\\sigma_i^2}$. The error of the result is smaller than each individual error:"
+ },
+ {
+  "t": "m",
+  "m": "\\bar x=\\frac{\\sum w_ix_i}{\\sum w_i},\\qquad \\sigma_{\\bar x}=\\frac{1}{\\sqrt{\\sum w_i}},\\qquad w_i=\\frac{1}{\\sigma_i^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tekshiruv va talqin ([[F06]]).** Barcha $\\sigma_i$ teng bo'lsa, formula oddiy o'rtacha va $\\frac{\\sigma}{\\sqrt N}$ ga aylanadi. Xatoligi boshqasidan $3$ marta katta natijaning vazni $9$ marta kichik — u natijani deyarli o'zgartirmaydi. Shuning uchun aniqligi past o'lchashni aniq o'lchashga qo'shish kam foyda beradi. Vaznli o'rtacha faqat natijalar bir-biriga **mos** bo'lsa ma'noga ega.",
+  "ru": "**Проверка и толкование ([[F06]]).** Если все $\\sigma_i$ равны, формула переходит в простое среднее и $\\frac{\\sigma}{\\sqrt N}$. У результата с погрешностью в $3$ раза больше другой вес в $9$ раз меньше — он почти не меняет итог. Поэтому добавлять малоточное измерение к точному мало пользы. Взвешенное среднее имеет смысл, только если результаты **согласуются** друг с другом.",
+  "en": "**Checks and interpretation ([[F06]]).** If all $\\sigma_i$ are equal, the formula reduces to the plain average and $\\frac{\\sigma}{\\sqrt N}$. A result whose error is $3$ times larger than another's has $9$ times less weight — it hardly changes the outcome. So adding a low-precision measurement to a precise one helps little. A weighted average makes sense only if the results are **consistent** with one another."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B2-L34-F06.png",
+   "ru": "figures/B2-L34-F06-ru.png",
+   "en": "figures/B2-L34-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki natijaning mosligi.** $x_1\\pm\\sigma_1$ va $x_2\\pm\\sigma_2$ mosmi? Ayirma $x_1-x_2$ ning xatoligi $\\sqrt{\\sigma_1^2+\\sigma_2^2}$ (5-bo'lim); ayirmani shu xatolik birligida ifodalab, 4-bo'limdagi mezon qo'llaniladi. Farq $2$–$3$ dan katta bo'lsa, natijalarni birlashtirishdan oldin sababini izlash kerak — ehtimol, biror o'lchashda hisobga olinmagan sistematik xatolik bor. Ko'p natijalar mosligini umumlashgan $\\chi^2$ mezoni tekshiradi (B2-L35).",
+  "ru": "**Согласие двух результатов.** Согласуются ли $x_1\\pm\\sigma_1$ и $x_2\\pm\\sigma_2$? Погрешность разности $x_1-x_2$ равна $\\sqrt{\\sigma_1^2+\\sigma_2^2}$ (раздел 5); выразив разность в этих единицах, применяют критерий раздела 4. Если различие больше $2$–$3$, прежде чем объединять результаты, нужно искать причину — вероятно, в каком-то измерении есть неучтённая систематическая погрешность. Согласие многих результатов проверяет обобщённый критерий $\\chi^2$ (B2-L35).",
+  "en": "**Consistency of two results.** Are $x_1\\pm\\sigma_1$ and $x_2\\pm\\sigma_2$ consistent? The error of the difference $x_1-x_2$ is $\\sqrt{\\sigma_1^2+\\sigma_2^2}$ (section 5); expressing the difference in these units, one applies the criterion of section 4. If the discrepancy exceeds $2$–$3$, its cause must be sought before combining the results — probably one measurement has an unaccounted systematic error. The consistency of many results is tested by the generalised $\\chi^2$ criterion (B2-L35)."
+ },
+ {
+  "t": "m",
+  "m": "z=\\frac{\\left|x_1-x_2\\right|}{\\sqrt{\\sigma_1^2+\\sigma_2^2}}"
+ },
+ {
+  "t": "h2",
+  "uz": "9. Puasson taqsimoti",
+  "ru": "9. Распределение Пуассона",
+  "en": "9. The Poisson distribution"
+ },
+ {
+  "t": "li",
+  "uz": "**Qayerda uchraydi.** Hodisalar bir-biridan mustaqil va o'rtacha o'zgarmas tezlik bilan tasodifiy yuz bersa — radioaktiv yadrolar yemirilishi, Geyger hisoblagichi chiqillashi, teleskopga tushgan fotonlar, detektordan o'tgan kosmik zarralar — berilgan vaqt oralig'ida aniq $n$ ta hodisa qayd etilish ehtimolligi **Puasson taqsimoti** bilan beriladi. $\\lambda$ — shu oraliqdagi kutilgan (o'rtacha) hodisalar soni:",
+  "ru": "**Где встречается.** Если события независимы и происходят случайно с постоянной средней скоростью — распады радиоактивных ядер, щелчки счётчика Гейгера, фотоны, попавшие в телескоп, космические частицы, прошедшие через детектор, — вероятность зарегистрировать ровно $n$ событий за заданный интервал даёт **распределение Пуассона**. $\\lambda$ — ожидаемое (среднее) число событий за этот интервал:",
+  "en": "**Where it appears.** If events are independent and occur at random with a constant mean rate — decays of radioactive nuclei, clicks of a Geiger counter, photons reaching a telescope, cosmic particles crossing a detector — the probability of recording exactly $n$ events in a given interval is given by the **Poisson distribution**. $\\lambda$ is the expected (mean) number of events in that interval:"
+ },
+ {
+  "t": "m",
+  "m": "P\\left(n\\right)=\\frac{\\lambda^ne^{-\\lambda}}{n!},\\qquad \\sum_{n=0}^{\\infty}P\\left(n\\right)=1"
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy xossalar ([[F07]]).** Normallash $e^{\\lambda}$ ning Teylor qatoridan kelib chiqadi. O'rtacha qiymat $\\lambda$ ga, **dispersiya ham $\\lambda$ ga** teng — Puasson taqsimotining eng muhim xossasi: standart chetlanish $\\sigma=\\sqrt\\lambda$. Hech bir hodisa bo'lmaslik ehtimolligi $P\\left(0\\right)=e^{-\\lambda}$. Kichik $\\lambda$ da taqsimot nosimmetrik (nolga yopishgan), katta $\\lambda$ da ($\\lambda\\gtrsim20$) u o'rtachasi $\\lambda$ va standart chetlanishi $\\sqrt\\lambda$ bo'lgan normal taqsimotga yaqinlashadi.",
+  "ru": "**Основные свойства ([[F07]]).** Нормировка следует из ряда Тейлора для $e^{\\lambda}$. Среднее равно $\\lambda$, **дисперсия тоже равна $\\lambda$** — важнейшее свойство распределения Пуассона: стандартное отклонение $\\sigma=\\sqrt\\lambda$. Вероятность того, что не будет ни одного события, $P\\left(0\\right)=e^{-\\lambda}$. При малых $\\lambda$ распределение несимметрично (прижато к нулю), при больших $\\lambda$ ($\\lambda\\gtrsim20$) оно приближается к нормальному со средним $\\lambda$ и стандартным отклонением $\\sqrt\\lambda$.",
+  "en": "**Main properties ([[F07]]).** The normalisation follows from the Taylor series of $e^{\\lambda}$. The mean is $\\lambda$ and **the variance is also $\\lambda$** — the most important property of the Poisson distribution: the standard deviation is $\\sigma=\\sqrt\\lambda$. The probability of no events at all is $P\\left(0\\right)=e^{-\\lambda}$. For small $\\lambda$ the distribution is asymmetric (pressed against zero); for large $\\lambda$ ($\\lambda\\gtrsim20$) it approaches a normal distribution of mean $\\lambda$ and standard deviation $\\sqrt\\lambda$."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B2-L34-F07.png",
+   "ru": "figures/B2-L34-F07-ru.png",
+   "en": "figures/B2-L34-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Binomial taqsimotdan.** Puasson taqsimoti binomial taqsimotning chegaraviy holi: $N$ ta mustaqil «sinov»ning har birida hodisa ehtimolligi $p$ bo'lsa, $n$ ta muvaffaqiyat ehtimolligi $\\binom{N}{n}p^n\\left(1-p\\right)^{N-n}$, o'rtachasi $Np$, dispersiyasi $Np\\left(1-p\\right)$. $N\\to\\infty$, $p\\to0$, $Np=\\lambda$ bo'lganda Puasson taqsimoti chiqadi: masalan, $10^{20}$ ta yadrodan har birining bir soniyada yemirilish ehtimolligi juda kichik, lekin jami kutilgan soni chekli.",
+  "ru": "**Из биномиального распределения.** Распределение Пуассона — предельный случай биномиального: если в каждом из $N$ независимых «испытаний» вероятность события $p$, вероятность $n$ успехов равна $\\binom{N}{n}p^n\\left(1-p\\right)^{N-n}$, среднее $Np$, дисперсия $Np\\left(1-p\\right)$. При $N\\to\\infty$, $p\\to0$, $Np=\\lambda$ получается распределение Пуассона: например, из $10^{20}$ ядер каждое распадается за секунду с очень малой вероятностью, но ожидаемое общее число конечно.",
+  "en": "**From the binomial distribution.** The Poisson distribution is a limiting case of the binomial: if in each of $N$ independent \"trials\" an event has probability $p$, the probability of $n$ successes is $\\binom{N}{n}p^n\\left(1-p\\right)^{N-n}$, with mean $Np$ and variance $Np\\left(1-p\\right)$. For $N\\to\\infty$, $p\\to0$, $Np=\\lambda$, the Poisson distribution results: for example, each of $10^{20}$ nuclei decays in a second with a tiny probability, but the expected total number is finite."
+ },
+ {
+  "t": "h2",
+  "uz": "10. Sanash tajribalari",
+  "ru": "10. Счётные эксперименты",
+  "en": "10. Counting experiments"
+ },
+ {
+  "t": "li",
+  "uz": "**$\\sqrt N$ qoidasi.** Tajribada bitta o'lchashda $N$ ta hodisa sanalgan bo'lsa, $\\lambda$ ning eng yaxshi bahosi $N$, uning xatoligi esa $\\sqrt N$ (**sanash statistikasi**). Bu ajoyib xossa: xatolikni bilish uchun o'lchashni takrorlash shart emas. Nisbiy xatolik $\\frac{1}{\\sqrt N}$: $1\\%$ aniqlik uchun $10^4$ ta hodisa kerak. $t$ vaqtda $N$ ta hodisa sanalgan bo'lsa, sanoq tezligi:",
+  "ru": "**Правило $\\sqrt N$.** Если в одном измерении сосчитано $N$ событий, лучшая оценка $\\lambda$ — это $N$, а её погрешность — $\\sqrt N$ (**статистика счёта**). Замечательное свойство: чтобы знать погрешность, не нужно повторять измерение. Относительная погрешность $\\frac{1}{\\sqrt N}$: для точности $1\\%$ нужно $10^4$ событий. Если за время $t$ сосчитано $N$ событий, скорость счёта:",
+  "en": "**The $\\sqrt N$ rule.** If $N$ events are counted in a single measurement, the best estimate of $\\lambda$ is $N$ and its error is $\\sqrt N$ (**counting statistics**). A remarkable property: one need not repeat the measurement to know its error. The relative error is $\\frac{1}{\\sqrt N}$: $1\\%$ precision needs $10^4$ events. If $N$ events are counted in a time $t$, the counting rate is:"
+ },
+ {
+  "t": "m",
+  "m": "R=\\frac{N}{t}\\pm\\frac{\\sqrt N}{t}=R\\pm\\sqrt{\\frac{R}{t}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kerakli vaqt.** Tezligi $R$ bo'lgan manba uchun $\\frac{\\delta R}{R}=\\frac{1}{\\sqrt{Rt}}$; berilgan nisbiy aniqlik $\\eta$ uchun vaqt $t=\\frac{1}{R\\eta^2}$. Aniqlikni ikki marta oshirish o'lchash vaqtini to'rt marta oshirishni talab qiladi. Bitta uzun o'lchash va bir xil umumiy vaqtdagi ko'p qisqa o'lchashlar bir xil aniqlik beradi — muhimi umumiy sanoq.",
+  "ru": "**Необходимое время.** Для источника со скоростью $R$ $\\frac{\\delta R}{R}=\\frac{1}{\\sqrt{Rt}}$; для заданной относительной точности $\\eta$ время $t=\\frac{1}{R\\eta^2}$. Чтобы вдвое повысить точность, время измерения надо увеличить вчетверо. Одно длинное измерение и много коротких с тем же общим временем дают одинаковую точность — важен полный счёт.",
+  "en": "**The time required.** For a source of rate $R$, $\\frac{\\delta R}{R}=\\frac{1}{\\sqrt{Rt}}$; for a required relative precision $\\eta$ the time is $t=\\frac{1}{R\\eta^2}$. Doubling the precision requires four times the counting time. One long measurement and many short ones with the same total time give the same precision — what matters is the total count."
+ },
+ {
+  "t": "li",
+  "uz": "**Fonni ayirish.** Detektor manbasiz ham hodisalarni sanaydi (kosmik nurlar, atrofdagi radioaktivlik) — bu **fon**. Manba bilan $t_1$ vaqtda $N_1$, manbasiz $t_2$ vaqtda $N_2$ hodisa sanalsa, manbaning sof tezligi $R=\\frac{N_1}{t_1}-\\frac{N_2}{t_2}$. Ayirma bo'lgani uchun xatoliklar kvadratlar orqali qo'shiladi — fon «sof» signalni ham shovqinli qiladi, garchi ayirilsa ham:",
+  "ru": "**Вычитание фона.** Детектор считает события и без источника (космические лучи, окружающая радиоактивность) — это **фон**. Если с источником за время $t_1$ сосчитано $N_1$ событий, без источника за $t_2$ — $N_2$, чистая скорость источника $R=\\frac{N_1}{t_1}-\\frac{N_2}{t_2}$. Поскольку это разность, погрешности складываются в квадратах — фон делает шумным и «чистый» сигнал, хотя его и вычитают:",
+  "en": "**Background subtraction.** A detector counts events even without a source (cosmic rays, ambient radioactivity) — this is the **background**. If $N_1$ events are counted with the source in a time $t_1$, and $N_2$ without it in a time $t_2$, the net rate of the source is $R=\\frac{N_1}{t_1}-\\frac{N_2}{t_2}$. Since this is a difference, the errors add in quadrature — the background makes even the \"net\" signal noisy, although it is subtracted:"
+ },
+ {
+  "t": "m",
+  "m": "\\delta R=\\sqrt{\\frac{N_1}{t_1^2}+\\frac{N_2}{t_2^2}}=\\sqrt{\\frac{R_1}{t_1}+\\frac{R_2}{t_2}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Vaqtni optimal taqsimlash ([[F08]]).** Umumiy vaqt $t_1+t_2$ berilgan bo'lsa, qanday taqsimlash kerak? $\\frac{R_1}{t_1}+\\frac{R_2}{t_2}$ ni shart ostida minimallashtirsak (B0, Lagranj ko'paytuvchisi yoki to'g'ridan-to'g'ri hosila), $\\frac{t_1}{t_2}=\\sqrt{\\frac{R_1}{R_2}}$ chiqadi: manba bilan o'lchashga ko'proq vaqt ajratiladi, lekin tezliklar nisbatiga emas, uning kvadrat ildiziga proporsional. Fon kuchsiz bo'lsa, unga ozgina vaqt yetarli.",
+  "ru": "**Оптимальное распределение времени ([[F08]]).** Как разделить заданное общее время $t_1+t_2$? Минимизируя $\\frac{R_1}{t_1}+\\frac{R_2}{t_2}$ при этом условии (B0, множитель Лагранжа или прямое дифференцирование), получим $\\frac{t_1}{t_2}=\\sqrt{\\frac{R_1}{R_2}}$: на измерение с источником отводят больше времени, но пропорционально не отношению скоростей, а корню из него. Если фон слабый, на него достаточно немного времени.",
+  "en": "**Optimal division of time ([[F08]]).** How should a given total time $t_1+t_2$ be divided? Minimising $\\frac{R_1}{t_1}+\\frac{R_2}{t_2}$ under this constraint (B0, a Lagrange multiplier or direct differentiation) gives $\\frac{t_1}{t_2}=\\sqrt{\\frac{R_1}{R_2}}$: more time goes to the measurement with the source, but in proportion not to the ratio of the rates but to its square root. If the background is weak, a little time on it is enough."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B2-L34-F08.png",
+   "ru": "figures/B2-L34-F08-ru.png",
+   "en": "figures/B2-L34-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "li",
+  "uz": "**Detektor samaradorligi.** Detektorga $N$ ta zarra tushib, $k$ tasi qayd etilgan bo'lsa, samaradorlik $\\varepsilon=\\frac{k}{N}$. Bu yerda $\\sqrt k$ qoidasi noto'g'ri: har bir zarra «qayd etildi yoki yo'q» — binomial sinov, shuning uchun $\\delta\\varepsilon=\\sqrt{\\frac{\\varepsilon\\left(1-\\varepsilon\\right)}{N}}$. Samaradorlik $1$ ga yaqin bo'lsa, xatolik kichrayadi — Puasson formulasi uni ancha oshirib ko'rsatgan bo'lardi.",
+  "ru": "**Эффективность детектора.** Если на детектор попало $N$ частиц и $k$ из них зарегистрированы, эффективность $\\varepsilon=\\frac{k}{N}$. Правило $\\sqrt k$ здесь неверно: каждая частица «зарегистрирована или нет» — биномиальное испытание, поэтому $\\delta\\varepsilon=\\sqrt{\\frac{\\varepsilon\\left(1-\\varepsilon\\right)}{N}}$. Когда эффективность близка к $1$, погрешность уменьшается — формула Пуассона сильно бы её завысила.",
+  "en": "**Detector efficiency.** If $N$ particles reach a detector and $k$ of them are recorded, the efficiency is $\\varepsilon=\\frac{k}{N}$. The $\\sqrt k$ rule is wrong here: each particle is \"recorded or not\" — a binomial trial — so $\\delta\\varepsilon=\\sqrt{\\frac{\\varepsilon\\left(1-\\varepsilon\\right)}{N}}$. When the efficiency is close to $1$ the error shrinks — the Poisson formula would overestimate it badly."
+ },
+ {
+  "t": "li",
+  "uz": "**Kutish vaqti.** Puasson jarayonida $t$ vaqt ichida birorta hodisa bo'lmaslik ehtimolligi $P\\left(0\\right)=e^{-Rt}$. Demak navbatdagi hodisagacha kutish vaqti **eksponensial taqsimot**ga bo'ysunadi: ehtimollik zichligi $Re^{-Rt}$, o'rtacha kutish vaqti $\\frac{1}{R}$. Bu radioaktiv yemirilish qonunining o'zi (B1): yadro «qarimaydi» — qancha kutgan bo'lmasin, keyingi soniyada yemirilish ehtimolligi bir xil.",
+  "ru": "**Время ожидания.** В пуассоновском процессе вероятность того, что за время $t$ не будет ни одного события, $P\\left(0\\right)=e^{-Rt}$. Значит, время ожидания следующего события подчиняется **экспоненциальному распределению**: плотность вероятности $Re^{-Rt}$, среднее время ожидания $\\frac{1}{R}$. Это и есть закон радиоактивного распада (B1): ядро «не стареет» — сколько бы оно ни ждало, вероятность распасться в следующую секунду одна и та же.",
+  "en": "**Waiting time.** In a Poisson process the probability of no event in a time $t$ is $P\\left(0\\right)=e^{-Rt}$. So the waiting time until the next event obeys the **exponential distribution**: probability density $Re^{-Rt}$, mean waiting time $\\frac{1}{R}$. This is the law of radioactive decay itself (B1): a nucleus \"does not age\" — however long it has waited, its probability of decaying in the next second is the same."
+ },
+ {
+  "t": "h2",
+  "uz": "11. GRE usullari",
+  "ru": "11. Приёмы для GRE",
+  "en": "11. GRE techniques"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchta qoida yetarli.** (1) Yig'indi va ayirmada absolyut xatoliklar, ko'paytma va bo'linmada nisbiy xatoliklar kvadratlar orqali qo'shiladi; (2) daraja nisbiy xatolikni $\\left|n\\right|$ marta oshiradi; (3) sanashda $\\sigma=\\sqrt N$. Qolgan deyarli hamma narsa shulardan chiqadi. Variantlar orasida chiziqli yig'indi ($\\delta A+\\delta B$) — eng ko'p uchraydigan tuzoq.",
+  "ru": "**Хватает трёх правил.** (1) В сумме и разности в квадратах складываются абсолютные погрешности, в произведении и частном — относительные; (2) степень увеличивает относительную погрешность в $\\left|n\\right|$ раз; (3) при счёте $\\sigma=\\sqrt N$. Почти всё остальное следует из них. Среди вариантов линейная сумма ($\\delta A+\\delta B$) — самая частая ловушка.",
+  "en": "**Three rules are enough.** (1) For sums and differences the absolute errors add in quadrature, for products and quotients the relative errors do; (2) a power multiplies the relative error by $\\left|n\\right|$; (3) in counting, $\\sigma=\\sqrt N$. Almost everything else follows from these. Among the options, the linear sum ($\\delta A+\\delta B$) is the most common trap."
+ },
+ {
+  "t": "li",
+  "uz": "**Tezkor hisob.** Kvadratlar orqali qo'shishda Pifagor uchliklarini eslang: $3$ va $4$ dan $5$, $5$ va $12$ dan $13$, $6$ va $8$ dan $10$. Biri ikkinchisidan ancha kichik bo'lsa, kattasini oling. O'rtachaning xatoligi uchun $\\frac{\\sigma}{\\sqrt N}$ — $N=100$ da o'n marta kichik. Normal taqsimot uchun $68$–$95$–$99.7$ ni yodda tuting.",
+  "ru": "**Быстрый счёт.** При сложении в квадратах вспоминайте пифагоровы тройки: из $3$ и $4$ — $5$, из $5$ и $12$ — $13$, из $6$ и $8$ — $10$. Если одна много меньше другой, берите большую. Для погрешности среднего $\\frac{\\sigma}{\\sqrt N}$ — при $N=100$ в десять раз меньше. Для нормального распределения помните $68$–$95$–$99.7$.",
+  "en": "**Quick arithmetic.** When adding in quadrature, remember Pythagorean triples: $3$ and $4$ give $5$, $5$ and $12$ give $13$, $6$ and $8$ give $10$. If one is much smaller than the other, take the larger. For the error of the mean, $\\frac{\\sigma}{\\sqrt N}$ — ten times smaller at $N=100$. For the normal distribution remember $68$–$95$–$99.7$."
+ },
+ {
+  "t": "li",
+  "uz": "**Birliklar va burchaklar.** $\\sin$, $\\cos$ uchun burchak xatoligi radianga o'tkaziladi ($1^\\circ\\approx0.0175$). Nisbiy xatolikni foizda, absolyutni kattalik birligida bering; natija va xatolik bir xil razryadgacha yaxlitlanadi. Fonli masalada sof sanoqning xatoligi umumiy sanoqlar yig'indisining ildizi — ayirmaning ildizi emas.",
+  "ru": "**Единицы и углы.** Для $\\sin$, $\\cos$ погрешность угла переводят в радианы ($1^\\circ\\approx0.0175$). Относительную погрешность давайте в процентах, абсолютную — в единицах величины; результат и погрешность округляют до одного разряда. В задаче с фоном погрешность чистого счёта — корень из суммы полных счётов, а не из разности.",
+  "en": "**Units and angles.** For $\\sin$ and $\\cos$, convert the angle error to radians ($1^\\circ\\approx0.0175$). Give relative errors in per cent and absolute errors in the units of the quantity; round the result and its error to the same decimal place. In a background problem the error of the net count is the square root of the sum of the total counts — not of their difference."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar (Key formulas)",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "O'rtacha qiymat",
+    "ru": "Среднее значение",
+    "en": "Mean",
+    "m": "\\bar x=\\frac{1}{N}\\sum x_i"
+   },
+   {
+    "uz": "Standart chetlanish",
+    "ru": "Стандартное отклонение",
+    "en": "Standard deviation",
+    "m": "s=\\sqrt{\\frac{\\sum\\left(x_i-\\bar x\\right)^2}{N-1}}"
+   },
+   {
+    "uz": "O'rtachaning xatoligi",
+    "ru": "Погрешность среднего",
+    "en": "Standard error of the mean",
+    "m": "\\sigma_{\\bar x}=\\frac{s}{\\sqrt N}"
+   },
+   {
+    "uz": "Normal taqsimot",
+    "ru": "Нормальное распределение",
+    "en": "Normal distribution",
+    "m": "f=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{\\left(x-\\mu\\right)^2}{2\\sigma^2}}"
+   },
+   {
+    "uz": "Ehtimolliklar",
+    "ru": "Вероятности",
+    "en": "Probabilities",
+    "m": "1\\sigma:\\ 68.3\\%,\\quad 2\\sigma:\\ 95.4\\%,\\quad 3\\sigma:\\ 99.7\\%"
+   },
+   {
+    "uz": "Yarim balandlik kengligi",
+    "ru": "Ширина на полувысоте",
+    "en": "Full width at half maximum",
+    "m": "2\\sqrt{2\\ln2}\\,\\sigma\\approx2.355\\sigma"
+   },
+   {
+    "uz": "Yig'indi, ayirma",
+    "ru": "Сумма, разность",
+    "en": "Sum, difference",
+    "m": "\\delta f=\\sqrt{\\left(\\delta A\\right)^2+\\left(\\delta B\\right)^2}"
+   },
+   {
+    "uz": "Ko'paytma, bo'linma",
+    "ru": "Произведение, частное",
+    "en": "Product, quotient",
+    "m": "\\frac{\\delta f}{f}=\\sqrt{\\left(\\frac{\\delta A}{A}\\right)^2+\\left(\\frac{\\delta B}{B}\\right)^2}"
+   },
+   {
+    "uz": "Daraja",
+    "ru": "Степень",
+    "en": "Power",
+    "m": "\\frac{\\delta f}{f}=\\left|n\\right|\\frac{\\delta A}{A}"
+   },
+   {
+    "uz": "Umumiy formula",
+    "ru": "Общая формула",
+    "en": "General formula",
+    "m": "\\delta f=\\sqrt{\\sum\\left(\\frac{\\partial f}{\\partial x_i}\\delta x_i\\right)^2}"
+   },
+   {
+    "uz": "Vaznli o'rtacha",
+    "ru": "Взвешенное среднее",
+    "en": "Weighted average",
+    "m": "\\bar x=\\frac{\\sum x_i\\sigma_i^{-2}}{\\sum\\sigma_i^{-2}},\\quad \\sigma_{\\bar x}=\\frac{1}{\\sqrt{\\sum\\sigma_i^{-2}}}"
+   },
+   {
+    "uz": "Natijalar mosligi",
+    "ru": "Согласие результатов",
+    "en": "Consistency",
+    "m": "z=\\frac{\\left|x_1-x_2\\right|}{\\sqrt{\\sigma_1^2+\\sigma_2^2}}"
+   },
+   {
+    "uz": "Puasson taqsimoti",
+    "ru": "Распределение Пуассона",
+    "en": "Poisson distribution",
+    "m": "P\\left(n\\right)=\\frac{\\lambda^ne^{-\\lambda}}{n!},\\quad \\sigma=\\sqrt\\lambda"
+   },
+   {
+    "uz": "Sanoq tezligi",
+    "ru": "Скорость счёта",
+    "en": "Counting rate",
+    "m": "R=\\frac{N}{t}\\pm\\frac{\\sqrt N}{t}"
+   },
+   {
+    "uz": "Fonni ayirish",
+    "ru": "Вычитание фона",
+    "en": "Background subtraction",
+    "m": "\\delta R=\\sqrt{\\frac{R_1}{t_1}+\\frac{R_2}{t_2}},\\quad \\frac{t_1}{t_2}=\\sqrt{\\frac{R_1}{R_2}}"
+   },
+   {
+    "uz": "Samaradorlik",
+    "ru": "Эффективность",
+    "en": "Efficiency",
+    "m": "\\delta\\varepsilon=\\sqrt{\\frac{\\varepsilon\\left(1-\\varepsilon\\right)}{N}}"
+   },
+   {
+    "uz": "Kutish vaqti",
+    "ru": "Время ожидания",
+    "en": "Waiting time",
+    "m": "P\\left(0\\right)=e^{-Rt},\\quad \\langle t\\rangle=\\frac{1}{R}"
+   }
+  ]
+ }
+]
