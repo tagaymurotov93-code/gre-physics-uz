@@ -1,0 +1,693 @@
+[
+ {
+  "t": "h1",
+  "uz": "Kvant garmonik ossilyatori (The quantum harmonic oscillator)",
+  "ru": "Квантовый гармонический осциллятор",
+  "en": "The quantum harmonic oscillator"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz garmonik ossilyator uchun statsionar Shredinger tenglamasini o'lchamsiz ko'rinishga keltirib, energiya sathlari $E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega$ ni ham analitik (Ermit ko'phadlari), ham algebraik (narvon operatorlari) usulda chiqarasiz; to'lqin funksiyalarining xossalarini (juftlik, tugunlar, qaytish nuqtalari, taqiqlangan sohadagi ehtimollik, klassik chegara) bilasiz; $a$ va $a^{\\dagger}$ yordamida $\\langle x^2\\rangle$, $\\langle p^2\\rangle$, matritsa elementlari va noaniqliklarni integralsiz hisoblaysiz; tanlash qoidasi $\\Delta n=\\pm1$ ni, superpozitsiya va kogerent holatlar evolyutsiyasini, ikki va uch o'lchovli ossilyator aynishini tahlil qilasiz; molekula tebranish spektrlari, izotop siljishi, issiqlik muvozanatidagi o'rtacha energiya va Landau sathlari kabi tatbiqlarni baholaysiz.",
+  "ru": "**Цель.** После урока вы сможете привести стационарное уравнение Шрёдингера для гармонического осциллятора к безразмерному виду и получить уровни энергии $E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega$ как аналитически (многочлены Эрмита), так и алгебраически (лестничные операторы); будете знать свойства волновых функций (чётность, узлы, точки поворота, вероятность в запрещённой области, классический предел); вычислять с помощью $a$ и $a^{\\dagger}$ величины $\\langle x^2\\rangle$, $\\langle p^2\\rangle$, матричные элементы и неопределённости без интегралов; анализировать правило отбора $\\Delta n=\\pm1$, эволюцию суперпозиций и когерентных состояний, вырождение двумерного и трёхмерного осциллятора; оценивать такие применения, как колебательные спектры молекул, изотопический сдвиг, средняя энергия в тепловом равновесии и уровни Ландау.",
+  "en": "**Goal.** After this lesson you will be able to bring the time-independent Schrödinger equation of the harmonic oscillator to dimensionless form and obtain the energy levels $E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega$ both analytically (Hermite polynomials) and algebraically (ladder operators); know the properties of the wave functions (parity, nodes, turning points, the probability in the forbidden region, the classical limit); compute $\\langle x^2\\rangle$, $\\langle p^2\\rangle$, matrix elements and uncertainties without integrals using $a$ and $a^{\\dagger}$; analyse the selection rule $\\Delta n=\\pm1$, the evolution of superpositions and coherent states, and the degeneracy of the two- and three-dimensional oscillator; and estimate applications such as molecular vibrational spectra, the isotope shift, the mean energy in thermal equilibrium and Landau levels."
+ },
+ {
+  "t": "p",
+  "uz": "Garmonik ossilyator — fizikadagi eng muhim model. Istalgan silliq potensial o'z minimumi atrofida parabolaga yaqin: $V\\left(x\\right)\\approx V\\left(x_0\\right)+\\frac{1}{2}V''\\left(x_0\\right)\\left(x-x_0\\right)^2$, shuning uchun kichik tebranishlar — molekulalardagi atomlar, kristall panjarasi, yadro sirti — ossilyator kabi. Bundan tashqari, elektromagnit maydonning har bir modasi, $LC$ zanjir va magnit maydondagi zaryad ham matematik jihatdan aynan ossilyator. Kvant ossilyatori to'liq yechiladigan kam sonli masalalardan biri, uning sathlari teng oraliqli — bu Plank kvantlash g'oyasining asosi (B3-L01). GRE da ossilyator deyarli har yili: sathlar, nolinchi energiya, $\\psi_0$ va $\\psi_1$ shakli, $\\langle x^2\\rangle$, narvon operatorlari, 3D aynish, molekula chastotasi. **Avval takrorlang:** B2-L07 (klassik ossilyator), B3-L02 (operatorlar, kommutatorlar, Gauss integrallari), B3-L03 (statsionar tenglama, virial teoremasi, Erenfest teoremasi), B3-L04 (o'ralar, tugunlar, juftlik).",
+  "ru": "Гармонический осциллятор — важнейшая модель физики. Любой гладкий потенциал вблизи своего минимума близок к параболе: $V\\left(x\\right)\\approx V\\left(x_0\\right)+\\frac{1}{2}V''\\left(x_0\\right)\\left(x-x_0\\right)^2$, поэтому малые колебания — атомов в молекулах, кристаллической решётки, поверхности ядра — подобны осциллятору. Кроме того, каждая мода электромагнитного поля, $LC$-цепь и заряд в магнитном поле математически — тоже осцилляторы. Квантовый осциллятор — одна из немногих точно решаемых задач, его уровни эквидистантны — это основа идеи квантования Планка (B3-L01). В GRE осциллятор встречается почти каждый год: уровни, нулевая энергия, форма $\\psi_0$ и $\\psi_1$, $\\langle x^2\\rangle$, лестничные операторы, вырождение в 3D, частота молекулы. **Сначала повторите:** B2-L07 (классический осциллятор), B3-L02 (операторы, коммутаторы, гауссовы интегралы), B3-L03 (стационарное уравнение, теорема вириала, теорема Эренфеста), B3-L04 (ямы, узлы, чётность).",
+  "en": "The harmonic oscillator is the most important model in physics. Any smooth potential is close to a parabola near its minimum: $V\\left(x\\right)\\approx V\\left(x_0\\right)+\\frac{1}{2}V''\\left(x_0\\right)\\left(x-x_0\\right)^2$, so small oscillations — of atoms in molecules, of a crystal lattice, of a nuclear surface — behave like an oscillator. Moreover, each mode of the electromagnetic field, an $LC$ circuit and a charge in a magnetic field are mathematically oscillators too. The quantum oscillator is one of the few exactly solvable problems, and its levels are equally spaced — the basis of Planck's quantization idea (B3-L01). On the GRE the oscillator appears almost every year: the levels, the zero-point energy, the shapes of $\\psi_0$ and $\\psi_1$, $\\langle x^2\\rangle$, ladder operators, degeneracy in 3D, the frequency of a molecule. **Review first:** B2-L07 (the classical oscillator), B3-L02 (operators, commutators, Gaussian integrals), B3-L03 (the time-independent equation, the virial theorem, Ehrenfest's theorem), B3-L04 (wells, nodes, parity)."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Masalaning qo'yilishi va tabiiy birliklar",
+  "ru": "1. Постановка задачи и естественные единицы",
+  "en": "1. Setting up the problem and natural units"
+ },
+ {
+  "t": "li",
+  "uz": "**Gamiltonian.** Massasi $m$, bikrligi $k$ bo'lgan ossilyatorda $V=\\frac{1}{2}kx^2=\\frac{1}{2}m\\omega^2x^2$, $\\omega=\\sqrt{\\frac{k}{m}}$ — klassik xususiy chastota. Kvant masalasida $\\hat H=\\frac{\\hat p^2}{2m}+\\frac{1}{2}m\\omega^2\\hat x^2$ va statsionar tenglama $-\\frac{\\hbar^2}{2m}\\psi''+\\frac{1}{2}m\\omega^2x^2\\psi=E\\psi$. Potensial cheksizlikda cheksiz o'sadi, shuning uchun barcha holatlar bog'langan va spektr to'liq diskret.",
+  "ru": "**Гамильтониан.** У осциллятора массы $m$ и жёсткости $k$ $V=\\frac{1}{2}kx^2=\\frac{1}{2}m\\omega^2x^2$, $\\omega=\\sqrt{\\frac{k}{m}}$ — классическая собственная частота. В квантовой задаче $\\hat H=\\frac{\\hat p^2}{2m}+\\frac{1}{2}m\\omega^2\\hat x^2$, а стационарное уравнение $-\\frac{\\hbar^2}{2m}\\psi''+\\frac{1}{2}m\\omega^2x^2\\psi=E\\psi$. Потенциал неограниченно растёт на бесконечности, поэтому все состояния связанные и спектр полностью дискретен.",
+  "en": "**The Hamiltonian.** For an oscillator of mass $m$ and stiffness $k$, $V=\\frac{1}{2}kx^2=\\frac{1}{2}m\\omega^2x^2$, where $\\omega=\\sqrt{\\frac{k}{m}}$ is the classical natural frequency. In the quantum problem $\\hat H=\\frac{\\hat p^2}{2m}+\\frac{1}{2}m\\omega^2\\hat x^2$, and the time-independent equation is $-\\frac{\\hbar^2}{2m}\\psi''+\\frac{1}{2}m\\omega^2x^2\\psi=E\\psi$. The potential grows without bound at infinity, so all states are bound and the spectrum is entirely discrete."
+ },
+ {
+  "t": "li",
+  "uz": "**Tabiiy birliklar.** $\\hbar$, $m$, $\\omega$ dan yagona uzunlik $x_0=\\sqrt{\\frac{\\hbar}{m\\omega}}$ va yagona energiya $\\hbar\\omega$ yasaladi (o'lchamlar tahlili, B3-L03). O'lchamsiz $\\xi=\\frac{x}{x_0}$ va $\\varepsilon=\\frac{2E}{\\hbar\\omega}$ kiritsak, tenglama universal ko'rinishga keladi: $\\psi''\\left(\\xi\\right)+\\left(\\varepsilon-\\xi^2\\right)\\psi=0$. Demak, barcha ossilyatorlar bir xil — faqat uzunlik va energiya birliklari farq qiladi: elektron uchun $\\hbar\\omega\\sim0.1$–$1\\ \\mathrm{eV}$ bo'lsa $x_0\\sim0.2$–$0.6\\ \\mathrm{nm}$, molekuladagi atomlar uchun $x_0\\sim0.01\\ \\mathrm{nm}$.",
+  "ru": "**Естественные единицы.** Из $\\hbar$, $m$, $\\omega$ строится единственная длина $x_0=\\sqrt{\\frac{\\hbar}{m\\omega}}$ и единственная энергия $\\hbar\\omega$ (анализ размерностей, B3-L03). Введя безразмерные $\\xi=\\frac{x}{x_0}$ и $\\varepsilon=\\frac{2E}{\\hbar\\omega}$, приводим уравнение к универсальному виду: $\\psi''\\left(\\xi\\right)+\\left(\\varepsilon-\\xi^2\\right)\\psi=0$. Значит, все осцилляторы одинаковы — различаются лишь единицы длины и энергии: для электрона при $\\hbar\\omega\\sim0.1$–$1\\ \\mathrm{eV}$ $x_0\\sim0.2$–$0.6\\ \\mathrm{nm}$, для атомов в молекуле $x_0\\sim0.01\\ \\mathrm{nm}$.",
+  "en": "**Natural units.** From $\\hbar$, $m$, $\\omega$ one can build a unique length $x_0=\\sqrt{\\frac{\\hbar}{m\\omega}}$ and a unique energy $\\hbar\\omega$ (dimensional analysis, B3-L03). Introducing the dimensionless $\\xi=\\frac{x}{x_0}$ and $\\varepsilon=\\frac{2E}{\\hbar\\omega}$, the equation takes a universal form: $\\psi''\\left(\\xi\\right)+\\left(\\varepsilon-\\xi^2\\right)\\psi=0$. So all oscillators are the same — only the units of length and energy differ: for an electron with $\\hbar\\omega\\sim0.1$–$1\\ \\mathrm{eV}$, $x_0\\sim0.2$–$0.6\\ \\mathrm{nm}$; for atoms in a molecule, $x_0\\sim0.01\\ \\mathrm{nm}$."
+ },
+ {
+  "t": "m",
+  "m": "\\hat H=\\frac{\\hat p^2}{2m}+\\frac{1}{2}m\\omega^2\\hat x^2,\\qquad x_0=\\sqrt{\\frac{\\hbar}{m\\omega}},\\qquad \\xi=\\frac{x}{x_0}:\\quad \\psi''+\\left(\\varepsilon-\\xi^2\\right)\\psi=0,\\quad \\varepsilon=\\frac{2E}{\\hbar\\omega}"
+ },
+ {
+  "t": "h2",
+  "uz": "2. Energiya sathlari va nolinchi energiya",
+  "ru": "2. Уровни энергии и нулевая энергия",
+  "en": "2. Energy levels and the zero-point energy"
+ },
+ {
+  "t": "li",
+  "uz": "**Natija.** Normallanuvchi yechimlar faqat $\\varepsilon=2n+1$ da mavjud (3-bo'lim), ya'ni $E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega$, $n=0,1,2,\\ldots$. Sathlar **teng oraliqli**: $E_{n+1}-E_n=\\hbar\\omega$ — klassik chastota bilan aniq mos. Bu cheksiz o'radagi $E\\propto n^2$ va vodoroddagi $E\\propto-\\frac{1}{n^2}$ dan farq qiladi; GRE da sathlar nisbatlari bo'yicha potensialni aniqlash so'raladi: $E_3:E_1=7:3$ — ossilyator ([[F01]]).",
+  "ru": "**Результат.** Нормируемые решения существуют только при $\\varepsilon=2n+1$ (раздел 3), то есть $E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega$, $n=0,1,2,\\ldots$. Уровни **эквидистантны**: $E_{n+1}-E_n=\\hbar\\omega$ — точно совпадает с классической частотой. Это отличается от $E\\propto n^2$ в бесконечной яме и $E\\propto-\\frac{1}{n^2}$ в водороде; в GRE спрашивают определить потенциал по отношениям уровней: $E_3:E_1=7:3$ — осциллятор ([[F01]]).",
+  "en": "**The result.** Normalizable solutions exist only for $\\varepsilon=2n+1$ (section 3), that is $E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega$, $n=0,1,2,\\ldots$. The levels are **equally spaced**: $E_{n+1}-E_n=\\hbar\\omega$ — exactly matching the classical frequency. This differs from $E\\propto n^2$ in the infinite well and $E\\propto-\\frac{1}{n^2}$ in hydrogen; on the GRE you may be asked to identify the potential from level ratios: $E_3:E_1=7:3$ — an oscillator ([[F01]])."
+ },
+ {
+  "t": "m",
+  "m": "E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega,\\qquad n=0,1,2,\\ldots,\\qquad E_{n+1}-E_n=\\hbar\\omega,\\qquad E_0=\\frac{\\hbar\\omega}{2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Nolinchi energiya** (nol tebranishlar energiyasi, zero-point energy). Eng past energiya $E_0=\\frac{\\hbar\\omega}{2}\\neq0$. Uni noaniqlik munosabatidan ham baholash mumkin: koordinata noaniqligi $\\sigma$ bo'lgan holatda $\\langle x^2\\rangle\\geq\\sigma^2$, $\\langle p^2\\rangle\\geq\\frac{\\hbar^2}{4\\sigma^2}$, demak, $E\\geq\\frac{\\hbar^2}{8m\\sigma^2}+\\frac{1}{2}m\\omega^2\\sigma^2$. Bu ifodaning minimumi $\\sigma^2=\\frac{\\hbar}{2m\\omega}$ da va aynan $\\frac{\\hbar\\omega}{2}$ ga teng — ossilyatorda baholash aniq javob beradi, chunki asosiy holat Gauss funksiyasi, u esa noaniqlikning minimumini beradi ([[F04]]). Nolinchi tebranishlar real: past temperaturada ham kristall atomlari tebranadi, geliy normal bosimda qotmaydi, molekulalarning izotop siljishi va Kazimir effekti shundan kelib chiqadi.",
+  "ru": "**Нулевая энергия** (энергия нулевых колебаний). Наименьшая энергия $E_0=\\frac{\\hbar\\omega}{2}\\neq0$. Её можно оценить и из соотношения неопределённостей: в состоянии с неопределённостью координаты $\\sigma$ имеем $\\langle x^2\\rangle\\geq\\sigma^2$, $\\langle p^2\\rangle\\geq\\frac{\\hbar^2}{4\\sigma^2}$, значит, $E\\geq\\frac{\\hbar^2}{8m\\sigma^2}+\\frac{1}{2}m\\omega^2\\sigma^2$. Минимум этого выражения достигается при $\\sigma^2=\\frac{\\hbar}{2m\\omega}$ и равен ровно $\\frac{\\hbar\\omega}{2}$ — для осциллятора оценка даёт точный ответ, поскольку основное состояние гауссово, а гауссиана даёт минимум неопределённости ([[F04]]). Нулевые колебания реальны: и при низкой температуре атомы кристалла колеблются, гелий не затвердевает при нормальном давлении, отсюда изотопические сдвиги молекул и эффект Казимира.",
+  "en": "**The zero-point energy.** The lowest energy is $E_0=\\frac{\\hbar\\omega}{2}\\neq0$. It can also be estimated from the uncertainty relation: in a state with position uncertainty $\\sigma$, $\\langle x^2\\rangle\\geq\\sigma^2$ and $\\langle p^2\\rangle\\geq\\frac{\\hbar^2}{4\\sigma^2}$, so $E\\geq\\frac{\\hbar^2}{8m\\sigma^2}+\\frac{1}{2}m\\omega^2\\sigma^2$. The minimum of this expression is reached at $\\sigma^2=\\frac{\\hbar}{2m\\omega}$ and equals exactly $\\frac{\\hbar\\omega}{2}$ — for the oscillator the estimate gives the exact answer, because the ground state is a Gaussian, and the Gaussian gives the minimum uncertainty ([[F04]]). Zero-point oscillations are real: crystal atoms vibrate even at low temperature, helium does not solidify at normal pressure, and the isotope shifts of molecules and the Casimir effect follow from them."
+ },
+ {
+  "t": "m",
+  "m": "E\\geq\\frac{\\hbar^2}{8m\\sigma^2}+\\frac{1}{2}m\\omega^2\\sigma^2\\ \\Rightarrow\\ \\sigma^2=\\frac{\\hbar}{2m\\omega},\\qquad E_{min}=\\frac{\\hbar\\omega}{2}"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B3-L06-F01.png",
+   "ru": "figures/B3-L06-F01-ru.png",
+   "en": "figures/B3-L06-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Analitik yechim: Ermit ko'phadlari",
+  "ru": "3. Аналитическое решение: многочлены Эрмита",
+  "en": "3. The analytic solution: Hermite polynomials"
+ },
+ {
+  "t": "li",
+  "uz": "**Asimptotika.** Katta $\\left|\\xi\\right|$ da $\\varepsilon$ ni $\\xi^2$ yonida tashlash mumkin: $\\psi''\\approx\\xi^2\\psi$, yechimlari $e^{\\pm\\xi^2/2}$; normallanuvchisi — $e^{-\\xi^2/2}$. Shuning uchun $\\psi=h\\left(\\xi\\right)e^{-\\xi^2/2}$ ko'rinishda izlaymiz va $h$ uchun **Ermit tenglamasi** chiqadi: $h''-2\\xi h'+\\left(\\varepsilon-1\\right)h=0$.",
+  "ru": "**Асимптотика.** При больших $\\left|\\xi\\right|$ можно отбросить $\\varepsilon$ рядом с $\\xi^2$: $\\psi''\\approx\\xi^2\\psi$, решения $e^{\\pm\\xi^2/2}$; нормируемое — $e^{-\\xi^2/2}$. Поэтому ищем решение в виде $\\psi=h\\left(\\xi\\right)e^{-\\xi^2/2}$, и для $h$ получаем **уравнение Эрмита**: $h''-2\\xi h'+\\left(\\varepsilon-1\\right)h=0$.",
+  "en": "**Asymptotics.** For large $\\left|\\xi\\right|$ one can drop $\\varepsilon$ next to $\\xi^2$: $\\psi''\\approx\\xi^2\\psi$, with solutions $e^{\\pm\\xi^2/2}$; the normalizable one is $e^{-\\xi^2/2}$. So we seek $\\psi=h\\left(\\xi\\right)e^{-\\xi^2/2}$, and $h$ satisfies the **Hermite equation**: $h''-2\\xi h'+\\left(\\varepsilon-1\\right)h=0$."
+ },
+ {
+  "t": "li",
+  "uz": "**Darajali qator va kvantlanish.** $h=\\sum c_j\\xi^j$ qo'ysak, rekursiya $c_{j+2}=\\frac{2j+1-\\varepsilon}{\\left(j+1\\right)\\left(j+2\\right)}c_j$ chiqadi. Katta $j$ da $\\frac{c_{j+2}}{c_j}\\approx\\frac{2}{j}$ — bu $e^{\\xi^2}$ qatorining xatti-harakati, natijada $\\psi\\sim e^{\\xi^2/2}$ cheksiz o'sadi. Normallanuvchi yechim uchun qator uzilishi kerak: biror $j=n$ da $2n+1-\\varepsilon=0$. Kvantlanish $\\varepsilon=2n+1$ aynan shundan kelib chiqadi — xuddi o'radagi kabi, energiya chegaraviy shartdan (bu yerda — cheksizlikda so'nish shartidan) kvantlanadi.",
+  "ru": "**Степенной ряд и квантование.** Подставив $h=\\sum c_j\\xi^j$, получаем рекуррентное соотношение $c_{j+2}=\\frac{2j+1-\\varepsilon}{\\left(j+1\\right)\\left(j+2\\right)}c_j$. При больших $j$ $\\frac{c_{j+2}}{c_j}\\approx\\frac{2}{j}$ — так ведёт себя ряд $e^{\\xi^2}$, и тогда $\\psi\\sim e^{\\xi^2/2}$ неограниченно растёт. Для нормируемого решения ряд должен оборваться: при некотором $j=n$ $2n+1-\\varepsilon=0$. Отсюда и квантование $\\varepsilon=2n+1$ — как в яме, энергия квантуется граничным условием (здесь — условием затухания на бесконечности).",
+  "en": "**Power series and quantization.** Substituting $h=\\sum c_j\\xi^j$ gives the recursion $c_{j+2}=\\frac{2j+1-\\varepsilon}{\\left(j+1\\right)\\left(j+2\\right)}c_j$. For large $j$, $\\frac{c_{j+2}}{c_j}\\approx\\frac{2}{j}$ — the behaviour of the series for $e^{\\xi^2}$, so that $\\psi\\sim e^{\\xi^2/2}$ grows without bound. For a normalizable solution the series must terminate: $2n+1-\\varepsilon=0$ for some $j=n$. This is exactly where the quantization $\\varepsilon=2n+1$ comes from — as in a well, the energy is quantized by a boundary condition (here, by the condition of decay at infinity)."
+ },
+ {
+  "t": "m",
+  "m": "c_{j+2}=\\frac{2j+1-\\varepsilon}{\\left(j+1\\right)\\left(j+2\\right)}c_j,\\qquad \\varepsilon=2n+1\\ \\Rightarrow\\ E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega"
+ },
+ {
+  "t": "li",
+  "uz": "**Ermit ko'phadlari.** Uzilgan qatorlar — $n$-darajali **Ermit ko'phadlari** $H_n\\left(\\xi\\right)$: $H_0=1$, $H_1=2\\xi$, $H_2=4\\xi^2-2$, $H_3=8\\xi^3-12\\xi$. Ular rekursiyani qanoatlantiradi: $H_{n+1}=2\\xi H_n-2nH_{n-1}$ va Rodrig formulasi $H_n=\\left(-1\\right)^ne^{\\xi^2}\\frac{d^n}{d\\xi^n}e^{-\\xi^2}$ bilan beriladi. Normallangan to'lqin funksiyalari: $\\psi_n\\left(x\\right)=\\frac{1}{\\sqrt{2^nn!}}\\left(\\frac{m\\omega}{\\pi\\hbar}\\right)^{1/4}H_n\\left(\\xi\\right)e^{-\\xi^2/2}$.",
+  "ru": "**Многочлены Эрмита.** Оборванные ряды — **многочлены Эрмита** $H_n\\left(\\xi\\right)$ степени $n$: $H_0=1$, $H_1=2\\xi$, $H_2=4\\xi^2-2$, $H_3=8\\xi^3-12\\xi$. Они удовлетворяют рекуррентному соотношению $H_{n+1}=2\\xi H_n-2nH_{n-1}$ и задаются формулой Родрига $H_n=\\left(-1\\right)^ne^{\\xi^2}\\frac{d^n}{d\\xi^n}e^{-\\xi^2}$. Нормированные волновые функции: $\\psi_n\\left(x\\right)=\\frac{1}{\\sqrt{2^nn!}}\\left(\\frac{m\\omega}{\\pi\\hbar}\\right)^{1/4}H_n\\left(\\xi\\right)e^{-\\xi^2/2}$.",
+  "en": "**Hermite polynomials.** The terminated series are the **Hermite polynomials** $H_n\\left(\\xi\\right)$ of degree $n$: $H_0=1$, $H_1=2\\xi$, $H_2=4\\xi^2-2$, $H_3=8\\xi^3-12\\xi$. They satisfy the recursion $H_{n+1}=2\\xi H_n-2nH_{n-1}$ and are given by the Rodrigues formula $H_n=\\left(-1\\right)^ne^{\\xi^2}\\frac{d^n}{d\\xi^n}e^{-\\xi^2}$. The normalized wave functions are $\\psi_n\\left(x\\right)=\\frac{1}{\\sqrt{2^nn!}}\\left(\\frac{m\\omega}{\\pi\\hbar}\\right)^{1/4}H_n\\left(\\xi\\right)e^{-\\xi^2/2}$."
+ },
+ {
+  "t": "m",
+  "m": "\\psi_n=\\frac{1}{\\sqrt{2^nn!}}\\left(\\frac{m\\omega}{\\pi\\hbar}\\right)^{1/4}H_n\\left(\\xi\\right)e^{-\\xi^2/2},\\qquad H_0=1,\\quad H_1=2\\xi,\\quad H_2=4\\xi^2-2,\\quad H_3=8\\xi^3-12\\xi"
+ },
+ {
+  "t": "h2",
+  "uz": "4. To'lqin funksiyalarining xossalari",
+  "ru": "4. Свойства волновых функций",
+  "en": "4. Properties of the wave functions"
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy holat.** $\\psi_0=\\left(\\frac{m\\omega}{\\pi\\hbar}\\right)^{1/4}e^{-m\\omega x^2/2\\hbar}$ — Gauss funksiyasi, tugunsiz va juft. Uning dispersiyasi $\\sigma_x^2=\\frac{x_0^2}{2}=\\frac{\\hbar}{2m\\omega}$. Birinchi uyg'ongan holat $\\psi_1\\propto xe^{-m\\omega x^2/2\\hbar}$ — toq, koordinata boshida tugun. GRE da ko'pincha shu ikki funksiya shaklini tanib olish so'raladi: «Gauss» — asosiy holat, «$x$ ga ko'paytirilgan Gauss» — birinchi uyg'ongan holat.",
+  "ru": "**Основное состояние.** $\\psi_0=\\left(\\frac{m\\omega}{\\pi\\hbar}\\right)^{1/4}e^{-m\\omega x^2/2\\hbar}$ — гауссова функция, без узлов и чётная. Её дисперсия $\\sigma_x^2=\\frac{x_0^2}{2}=\\frac{\\hbar}{2m\\omega}$. Первое возбуждённое состояние $\\psi_1\\propto xe^{-m\\omega x^2/2\\hbar}$ — нечётное, с узлом в начале координат. В GRE часто просят узнать форму этих двух функций: «гауссиана» — основное состояние, «гауссиана, умноженная на $x$» — первое возбуждённое.",
+  "en": "**The ground state.** $\\psi_0=\\left(\\frac{m\\omega}{\\pi\\hbar}\\right)^{1/4}e^{-m\\omega x^2/2\\hbar}$ is a Gaussian, nodeless and even. Its variance is $\\sigma_x^2=\\frac{x_0^2}{2}=\\frac{\\hbar}{2m\\omega}$. The first excited state $\\psi_1\\propto xe^{-m\\omega x^2/2\\hbar}$ is odd, with a node at the origin. The GRE often asks you to recognize the shapes of these two functions: «a Gaussian» is the ground state, «a Gaussian times $x$» is the first excited state."
+ },
+ {
+  "t": "m",
+  "m": "\\psi_0=\\left(\\frac{m\\omega}{\\pi\\hbar}\\right)^{1/4}e^{-m\\omega x^2/2\\hbar},\\qquad \\psi_1=\\left(\\frac{m\\omega}{\\pi\\hbar}\\right)^{1/4}\\sqrt{2}\\,\\frac{x}{x_0}e^{-m\\omega x^2/2\\hbar}"
+ },
+ {
+  "t": "li",
+  "uz": "**Juftlik va tugunlar.** $H_n$ faqat juft yoki faqat toq darajalarni o'z ichiga oladi, shuning uchun $\\psi_n\\left(-x\\right)=\\left(-1\\right)^n\\psi_n\\left(x\\right)$. $\\psi_n$ ning aynan $n$ ta tuguni bor (tugunlar teoremasi, B3-L03; nomerlash $0$ dan boshlanadi). Turli $n$ li funksiyalar ortonormal: $\\int\\psi_m\\psi_ndx=\\delta_{mn}$.",
+  "ru": "**Чётность и узлы.** $H_n$ содержит только чётные или только нечётные степени, поэтому $\\psi_n\\left(-x\\right)=\\left(-1\\right)^n\\psi_n\\left(x\\right)$. У $\\psi_n$ ровно $n$ узлов (осцилляционная теорема, B3-L03; нумерация начинается с $0$). Функции с разными $n$ ортонормированы: $\\int\\psi_m\\psi_ndx=\\delta_{mn}$.",
+  "en": "**Parity and nodes.** $H_n$ contains only even or only odd powers, so $\\psi_n\\left(-x\\right)=\\left(-1\\right)^n\\psi_n\\left(x\\right)$. $\\psi_n$ has exactly $n$ nodes (the node theorem, B3-L03; the numbering starts at $0$). Functions with different $n$ are orthonormal: $\\int\\psi_m\\psi_ndx=\\delta_{mn}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Qaytish nuqtalari va taqiqlangan soha.** Klassik zarra $E_n=\\frac{1}{2}m\\omega^2A^2$ da $\\left|x\\right|\\leq A_n=x_0\\sqrt{2n+1}$ oralig'ida tebranadi. Kvant zarra bu sohadan tashqarida ham topiladi: asosiy holatda $A_0=x_0$ va $P\\left(\\left|x\\right|>x_0\\right)=\\mathrm{erfc}\\left(1\\right)\\approx0.157$ — deyarli har oltinchi o'lchashda zarra «klassik taqiqlangan» joyda. $n$ ortishi bilan bu ulush kamayadi.",
+  "ru": "**Точки поворота и запрещённая область.** Классическая частица при $E_n=\\frac{1}{2}m\\omega^2A^2$ колеблется в пределах $\\left|x\\right|\\leq A_n=x_0\\sqrt{2n+1}$. Квантовая частица обнаруживается и вне этой области: в основном состоянии $A_0=x_0$ и $P\\left(\\left|x\\right|>x_0\\right)=\\mathrm{erfc}\\left(1\\right)\\approx0.157$ — почти при каждом шестом измерении частица оказывается в «классически запрещённом» месте. С ростом $n$ эта доля уменьшается.",
+  "en": "**Turning points and the forbidden region.** A classical particle with $E_n=\\frac{1}{2}m\\omega^2A^2$ oscillates within $\\left|x\\right|\\leq A_n=x_0\\sqrt{2n+1}$. A quantum particle is also found outside this region: in the ground state $A_0=x_0$ and $P\\left(\\left|x\\right|>x_0\\right)=\\mathrm{erfc}\\left(1\\right)\\approx0.157$ — in almost one measurement out of six the particle is in a «classically forbidden» place. This fraction decreases as $n$ grows."
+ },
+ {
+  "t": "m",
+  "m": "\\psi_n\\left(-x\\right)=\\left(-1\\right)^n\\psi_n\\left(x\\right),\\qquad A_n=x_0\\sqrt{2n+1},\\qquad P_0\\left(\\left|x\\right|>x_0\\right)=\\mathrm{erfc}\\left(1\\right)\\approx0.157"
+ },
+ {
+  "t": "li",
+  "uz": "**Klassik chegara.** Klassik ossilyator chetki nuqtalarda sekinlashadi va u yerda ko'proq vaqt o'tkazadi: zichlik $P_{\\infty}\\left(x\\right)=\\frac{1}{\\pi\\sqrt{A^2-x^2}}$, markazda minimal, chetlarda cheksiz. Katta $n$ da $\\left|\\psi_n\\right|^2$ tez tebranadi, lekin uning o'rtachasi aynan shu klassik egri chiziqqa yaqinlashadi va eng katta cho'qqilar qaytish nuqtalari yonida bo'ladi. Asosiy holat esa butunlay boshqacha — maksimum markazda. Bu moslik prinsipining yana bir ko'rinishi ([[F02]]).",
+  "ru": "**Классический предел.** Классический осциллятор замедляется в крайних точках и проводит там больше времени: плотность $P_{\\infty}\\left(x\\right)=\\frac{1}{\\pi\\sqrt{A^2-x^2}}$ минимальна в центре и бесконечна по краям. При больших $n$ $\\left|\\psi_n\\right|^2$ быстро осциллирует, но её среднее приближается именно к этой классической кривой, а наибольшие пики находятся у точек поворота. Основное же состояние совсем другое — максимум в центре. Это ещё одно проявление принципа соответствия ([[F02]]).",
+  "en": "**The classical limit.** A classical oscillator slows down near the turning points and spends more time there: its density $P_{\\infty}\\left(x\\right)=\\frac{1}{\\pi\\sqrt{A^2-x^2}}$ is smallest at the centre and infinite at the edges. At large $n$, $\\left|\\psi_n\\right|^2$ oscillates rapidly, but its average approaches exactly this classical curve, and the largest peaks lie near the turning points. The ground state is completely different — its maximum is at the centre. This is yet another manifestation of the correspondence principle ([[F02]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B3-L06-F02.png",
+   "ru": "figures/B3-L06-F02-ru.png",
+   "en": "figures/B3-L06-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Narvon operatorlari: algebraik usul",
+  "ru": "5. Лестничные операторы: алгебраический метод",
+  "en": "5. Ladder operators: the algebraic method"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif.** Gamiltonianni ikki ko'paytuvchiga «ajratamiz». **Pasaytiruvchi** (yo'qotish) va **ko'taruvchi** (tug'ilish) operatorlar (ladder operators): $a=\\sqrt{\\frac{m\\omega}{2\\hbar}}\\left(\\hat x+\\frac{i\\hat p}{m\\omega}\\right)$, $a^{\\dagger}=\\sqrt{\\frac{m\\omega}{2\\hbar}}\\left(\\hat x-\\frac{i\\hat p}{m\\omega}\\right)$. $\\left[\\hat x,\\hat p\\right]=i\\hbar$ dan $\\left[a,a^{\\dagger}\\right]=1$ va $\\hat H=\\hbar\\omega\\left(a^{\\dagger}a+\\frac{1}{2}\\right)=\\hbar\\omega\\left(\\hat N+\\frac{1}{2}\\right)$, bu yerda $\\hat N=a^{\\dagger}a$ — **sonlar operatori** (number operator).",
+  "ru": "**Определение.** «Разложим» гамильтониан на два множителя. **Понижающий** (уничтожения) и **повышающий** (рождения) операторы: $a=\\sqrt{\\frac{m\\omega}{2\\hbar}}\\left(\\hat x+\\frac{i\\hat p}{m\\omega}\\right)$, $a^{\\dagger}=\\sqrt{\\frac{m\\omega}{2\\hbar}}\\left(\\hat x-\\frac{i\\hat p}{m\\omega}\\right)$. Из $\\left[\\hat x,\\hat p\\right]=i\\hbar$ следует $\\left[a,a^{\\dagger}\\right]=1$ и $\\hat H=\\hbar\\omega\\left(a^{\\dagger}a+\\frac{1}{2}\\right)=\\hbar\\omega\\left(\\hat N+\\frac{1}{2}\\right)$, где $\\hat N=a^{\\dagger}a$ — **оператор числа**.",
+  "en": "**Definition.** We «factor» the Hamiltonian into two factors. The **lowering** (annihilation) and **raising** (creation) operators (ladder operators) are $a=\\sqrt{\\frac{m\\omega}{2\\hbar}}\\left(\\hat x+\\frac{i\\hat p}{m\\omega}\\right)$, $a^{\\dagger}=\\sqrt{\\frac{m\\omega}{2\\hbar}}\\left(\\hat x-\\frac{i\\hat p}{m\\omega}\\right)$. From $\\left[\\hat x,\\hat p\\right]=i\\hbar$ it follows that $\\left[a,a^{\\dagger}\\right]=1$ and $\\hat H=\\hbar\\omega\\left(a^{\\dagger}a+\\frac{1}{2}\\right)=\\hbar\\omega\\left(\\hat N+\\frac{1}{2}\\right)$, where $\\hat N=a^{\\dagger}a$ is the **number operator**."
+ },
+ {
+  "t": "m",
+  "m": "a=\\sqrt{\\frac{m\\omega}{2\\hbar}}\\left(\\hat x+\\frac{i\\hat p}{m\\omega}\\right),\\qquad \\left[a,a^{\\dagger}\\right]=1,\\qquad \\hat H=\\hbar\\omega\\left(a^{\\dagger}a+\\frac{1}{2}\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Narvon.** Kommutatorlardan $\\left[\\hat H,a^{\\dagger}\\right]=\\hbar\\omega a^{\\dagger}$ va $\\left[\\hat H,a\\right]=-\\hbar\\omega a$. Demak, agar $\\hat H\\psi=E\\psi$ bo'lsa, $\\hat H\\left(a^{\\dagger}\\psi\\right)=\\left(E+\\hbar\\omega\\right)a^{\\dagger}\\psi$ va $\\hat H\\left(a\\psi\\right)=\\left(E-\\hbar\\omega\\right)a\\psi$: $a^{\\dagger}$ energiyani bir pog'onaga ko'taradi, $a$ tushiradi. Energiya $\\geq0$ bo'lgani uchun narvon pastdan uziladi: $a\\psi_0=0$. Bu birinchi tartibli tenglama $\\left(\\xi+\\frac{d}{d\\xi}\\right)\\psi_0=0$ — uning yechimi darhol Gauss funksiyasi $e^{-\\xi^2/2}$ va $E_0=\\frac{\\hbar\\omega}{2}$ ([[F03]]).",
+  "ru": "**Лестница.** Из коммутаторов $\\left[\\hat H,a^{\\dagger}\\right]=\\hbar\\omega a^{\\dagger}$ и $\\left[\\hat H,a\\right]=-\\hbar\\omega a$. Значит, если $\\hat H\\psi=E\\psi$, то $\\hat H\\left(a^{\\dagger}\\psi\\right)=\\left(E+\\hbar\\omega\\right)a^{\\dagger}\\psi$ и $\\hat H\\left(a\\psi\\right)=\\left(E-\\hbar\\omega\\right)a\\psi$: $a^{\\dagger}$ поднимает энергию на одну ступень, $a$ опускает. Поскольку энергия $\\geq0$, лестница обрывается снизу: $a\\psi_0=0$. Это уравнение первого порядка $\\left(\\xi+\\frac{d}{d\\xi}\\right)\\psi_0=0$ — его решение сразу гауссиана $e^{-\\xi^2/2}$ и $E_0=\\frac{\\hbar\\omega}{2}$ ([[F03]]).",
+  "en": "**The ladder.** The commutators give $\\left[\\hat H,a^{\\dagger}\\right]=\\hbar\\omega a^{\\dagger}$ and $\\left[\\hat H,a\\right]=-\\hbar\\omega a$. So if $\\hat H\\psi=E\\psi$, then $\\hat H\\left(a^{\\dagger}\\psi\\right)=\\left(E+\\hbar\\omega\\right)a^{\\dagger}\\psi$ and $\\hat H\\left(a\\psi\\right)=\\left(E-\\hbar\\omega\\right)a\\psi$: $a^{\\dagger}$ raises the energy by one rung and $a$ lowers it. Since the energy is $\\geq0$, the ladder must end at the bottom: $a\\psi_0=0$. This first-order equation $\\left(\\xi+\\frac{d}{d\\xi}\\right)\\psi_0=0$ immediately gives the Gaussian $e^{-\\xi^2/2}$ and $E_0=\\frac{\\hbar\\omega}{2}$ ([[F03]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Normallash koeffitsiyentlari.** Dirak belgilarida (B3-L02) $\\left|n\\right\\rangle\\equiv\\psi_n$: $a\\left|n\\right\\rangle=\\sqrt{n}\\left|n-1\\right\\rangle$, $a^{\\dagger}\\left|n\\right\\rangle=\\sqrt{n+1}\\left|n+1\\right\\rangle$, $\\hat N\\left|n\\right\\rangle=n\\left|n\\right\\rangle$. Istalgan holat asosiy holatdan quriladi: $\\left|n\\right\\rangle=\\frac{\\left(a^{\\dagger}\\right)^n}{\\sqrt{n!}}\\left|0\\right\\rangle$. Ildizlar oson eslab qolinadi: ko'taruvchi operator kattaroq sonning ildizini, pasaytiruvchi — o'z sonining ildizini beradi. Kvant maydon nazariyasida xuddi shu operatorlar zarralarni (fotonlar, fononlarni) yaratadi va yo'qotadi.",
+  "ru": "**Нормировочные коэффициенты.** В обозначениях Дирака (B3-L02) $\\left|n\\right\\rangle\\equiv\\psi_n$: $a\\left|n\\right\\rangle=\\sqrt{n}\\left|n-1\\right\\rangle$, $a^{\\dagger}\\left|n\\right\\rangle=\\sqrt{n+1}\\left|n+1\\right\\rangle$, $\\hat N\\left|n\\right\\rangle=n\\left|n\\right\\rangle$. Любое состояние строится из основного: $\\left|n\\right\\rangle=\\frac{\\left(a^{\\dagger}\\right)^n}{\\sqrt{n!}}\\left|0\\right\\rangle$. Корни легко запомнить: повышающий оператор даёт корень из большего числа, понижающий — корень из своего. В квантовой теории поля те же операторы рождают и уничтожают частицы (фотоны, фононы).",
+  "en": "**Normalization coefficients.** In Dirac notation (B3-L02) $\\left|n\\right\\rangle\\equiv\\psi_n$: $a\\left|n\\right\\rangle=\\sqrt{n}\\left|n-1\\right\\rangle$, $a^{\\dagger}\\left|n\\right\\rangle=\\sqrt{n+1}\\left|n+1\\right\\rangle$, $\\hat N\\left|n\\right\\rangle=n\\left|n\\right\\rangle$. Any state is built from the ground state: $\\left|n\\right\\rangle=\\frac{\\left(a^{\\dagger}\\right)^n}{\\sqrt{n!}}\\left|0\\right\\rangle$. The roots are easy to remember: the raising operator gives the root of the larger number, the lowering operator the root of its own. In quantum field theory the same operators create and annihilate particles (photons, phonons)."
+ },
+ {
+  "t": "m",
+  "m": "a\\left|n\\right\\rangle=\\sqrt{n}\\left|n-1\\right\\rangle,\\qquad a^{\\dagger}\\left|n\\right\\rangle=\\sqrt{n+1}\\left|n+1\\right\\rangle,\\qquad \\left|n\\right\\rangle=\\frac{\\left(a^{\\dagger}\\right)^n}{\\sqrt{n!}}\\left|0\\right\\rangle"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B3-L06-F03.png",
+   "ru": "figures/B3-L06-F03-ru.png",
+   "en": "figures/B3-L06-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Kutilgan qiymatlar integralsiz",
+  "ru": "6. Средние значения без интегралов",
+  "en": "6. Expectation values without integrals"
+ },
+ {
+  "t": "li",
+  "uz": "**Teskari ifodalar.** Ta'riflardan $\\hat x=\\frac{x_0}{\\sqrt{2}}\\left(a+a^{\\dagger}\\right)$ va $\\hat p=\\frac{i\\hbar}{\\sqrt{2}x_0}\\left(a^{\\dagger}-a\\right)$. Endi har qanday $\\hat x^k\\hat p^l$ ko'paytmani $a$, $a^{\\dagger}$ larning ko'paytmalariga yoyib, $\\left|n\\right\\rangle$ da ta'sir ettiramiz va ortonormallikdan foydalanamiz: faqat ko'taruvchi va pasaytiruvchilar soni teng bo'lgan hadlar diagonal elementga hissa qo'shadi. Masalan, $\\left\\langle n\\right|\\hat x\\left|n\\right\\rangle=0$, chunki $a\\left|n\\right\\rangle$ va $a^{\\dagger}\\left|n\\right\\rangle$ ikkalasi ham $\\left|n\\right\\rangle$ ga ortogonal; shu sababli $\\left\\langle p\\right\\rangle=0$ ham.",
+  "ru": "**Обратные выражения.** Из определений $\\hat x=\\frac{x_0}{\\sqrt{2}}\\left(a+a^{\\dagger}\\right)$ и $\\hat p=\\frac{i\\hbar}{\\sqrt{2}x_0}\\left(a^{\\dagger}-a\\right)$. Теперь любое произведение $\\hat x^k\\hat p^l$ раскладываем на произведения $a$, $a^{\\dagger}$, действуем на $\\left|n\\right\\rangle$ и пользуемся ортонормированностью: в диагональный элемент вносят вклад только слагаемые с равным числом повышающих и понижающих операторов. Например, $\\left\\langle n\\right|\\hat x\\left|n\\right\\rangle=0$, так как $a\\left|n\\right\\rangle$ и $a^{\\dagger}\\left|n\\right\\rangle$ оба ортогональны $\\left|n\\right\\rangle$; по той же причине и $\\left\\langle p\\right\\rangle=0$.",
+  "en": "**Inverse expressions.** From the definitions, $\\hat x=\\frac{x_0}{\\sqrt{2}}\\left(a+a^{\\dagger}\\right)$ and $\\hat p=\\frac{i\\hbar}{\\sqrt{2}x_0}\\left(a^{\\dagger}-a\\right)$. Now any product $\\hat x^k\\hat p^l$ is expanded into products of $a$ and $a^{\\dagger}$, applied to $\\left|n\\right\\rangle$, and orthonormality is used: only terms with equal numbers of raising and lowering operators contribute to a diagonal element. For example, $\\left\\langle n\\right|\\hat x\\left|n\\right\\rangle=0$, because $a\\left|n\\right\\rangle$ and $a^{\\dagger}\\left|n\\right\\rangle$ are both orthogonal to $\\left|n\\right\\rangle$; for the same reason $\\left\\langle p\\right\\rangle=0$ too."
+ },
+ {
+  "t": "m",
+  "m": "\\hat x=\\frac{x_0}{\\sqrt{2}}\\left(a+a^{\\dagger}\\right),\\qquad \\hat p=\\frac{i\\hbar}{\\sqrt{2}x_0}\\left(a^{\\dagger}-a\\right),\\qquad x_0=\\sqrt{\\frac{\\hbar}{m\\omega}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kvadratlar.** $\\left(a+a^{\\dagger}\\right)^2=a^2+\\left(a^{\\dagger}\\right)^2+aa^{\\dagger}+a^{\\dagger}a$, diagonal hadlar $aa^{\\dagger}+a^{\\dagger}a=2\\hat N+1$. Shuning uchun $\\left\\langle x^2\\right\\rangle_n=\\left(n+\\frac{1}{2}\\right)\\frac{\\hbar}{m\\omega}$ va xuddi shunday $\\left\\langle p^2\\right\\rangle_n=\\left(n+\\frac{1}{2}\\right)m\\hbar\\omega$. Natijada $\\left\\langle T\\right\\rangle=\\left\\langle V\\right\\rangle=\\frac{E_n}{2}$ — virial teoremasi (B3-L03) bilan mos, va $\\sigma_x\\sigma_p=\\left(n+\\frac{1}{2}\\right)\\hbar$. Faqat $n=0$ da noaniqlik minimal ($\\frac{\\hbar}{2}$); yuqori holatlar «kengroq» — ham koordinata, ham impuls bo'yicha.",
+  "ru": "**Квадраты.** $\\left(a+a^{\\dagger}\\right)^2=a^2+\\left(a^{\\dagger}\\right)^2+aa^{\\dagger}+a^{\\dagger}a$, диагональные слагаемые $aa^{\\dagger}+a^{\\dagger}a=2\\hat N+1$. Поэтому $\\left\\langle x^2\\right\\rangle_n=\\left(n+\\frac{1}{2}\\right)\\frac{\\hbar}{m\\omega}$ и аналогично $\\left\\langle p^2\\right\\rangle_n=\\left(n+\\frac{1}{2}\\right)m\\hbar\\omega$. В результате $\\left\\langle T\\right\\rangle=\\left\\langle V\\right\\rangle=\\frac{E_n}{2}$ — в согласии с теоремой вириала (B3-L03), и $\\sigma_x\\sigma_p=\\left(n+\\frac{1}{2}\\right)\\hbar$. Только при $n=0$ неопределённость минимальна ($\\frac{\\hbar}{2}$); высшие состояния «шире» — и по координате, и по импульсу.",
+  "en": "**Squares.** $\\left(a+a^{\\dagger}\\right)^2=a^2+\\left(a^{\\dagger}\\right)^2+aa^{\\dagger}+a^{\\dagger}a$, and the diagonal terms are $aa^{\\dagger}+a^{\\dagger}a=2\\hat N+1$. Therefore $\\left\\langle x^2\\right\\rangle_n=\\left(n+\\frac{1}{2}\\right)\\frac{\\hbar}{m\\omega}$ and similarly $\\left\\langle p^2\\right\\rangle_n=\\left(n+\\frac{1}{2}\\right)m\\hbar\\omega$. As a result $\\left\\langle T\\right\\rangle=\\left\\langle V\\right\\rangle=\\frac{E_n}{2}$ — in agreement with the virial theorem (B3-L03), and $\\sigma_x\\sigma_p=\\left(n+\\frac{1}{2}\\right)\\hbar$. Only for $n=0$ is the uncertainty minimal ($\\frac{\\hbar}{2}$); higher states are «wider» — in both position and momentum."
+ },
+ {
+  "t": "m",
+  "m": "\\left\\langle x^2\\right\\rangle_n=\\left(n+\\frac{1}{2}\\right)\\frac{\\hbar}{m\\omega},\\qquad \\left\\langle p^2\\right\\rangle_n=\\left(n+\\frac{1}{2}\\right)m\\hbar\\omega,\\qquad \\sigma_x\\sigma_p=\\left(n+\\frac{1}{2}\\right)\\hbar"
+ },
+ {
+  "t": "li",
+  "uz": "**Yuqori darajalar.** Xuddi shu usul bilan $\\left\\langle x^4\\right\\rangle$ ham hisoblanadi: $\\left(a+a^{\\dagger}\\right)^4$ ning $16$ ta hadidan faqat ikki ko'taruvchi va ikki pasaytiruvchili $6$ tasi qoladi. Bu ishlarni integral bilan bajarish ancha uzun; GRE da «integralsiz» usulni bilish vaqtni tejaydi. Foydali qoida: $\\left\\langle n\\right|\\left(a^{\\dagger}\\right)^ka^l\\left|n\\right\\rangle=0$, agar $k\\neq l$.",
+  "ru": "**Высшие степени.** Тем же способом вычисляется и $\\left\\langle x^4\\right\\rangle$: из $16$ слагаемых $\\left(a+a^{\\dagger}\\right)^4$ остаются только $6$ с двумя повышающими и двумя понижающими операторами. Делать это интегралами намного дольше; в GRE знание «безынтегрального» способа экономит время. Полезное правило: $\\left\\langle n\\right|\\left(a^{\\dagger}\\right)^ka^l\\left|n\\right\\rangle=0$, если $k\\neq l$.",
+  "en": "**Higher powers.** The same method gives $\\left\\langle x^4\\right\\rangle$: of the $16$ terms of $\\left(a+a^{\\dagger}\\right)^4$ only the $6$ with two raising and two lowering operators remain. Doing this with integrals takes much longer; on the GRE knowing the «integral-free» method saves time. A useful rule: $\\left\\langle n\\right|\\left(a^{\\dagger}\\right)^ka^l\\left|n\\right\\rangle=0$ if $k\\neq l$."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B3-L06-F04.png",
+   "ru": "figures/B3-L06-F04-ru.png",
+   "en": "figures/B3-L06-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "7. Matritsa elementlari va tanlash qoidasi",
+  "ru": "7. Матричные элементы и правило отбора",
+  "en": "7. Matrix elements and the selection rule"
+ },
+ {
+  "t": "li",
+  "uz": "**Koordinata matritsasi.** $\\left\\langle m\\right|\\hat x\\left|n\\right\\rangle=\\frac{x_0}{\\sqrt{2}}\\left(\\sqrt{n}\\,\\delta_{m,n-1}+\\sqrt{n+1}\\,\\delta_{m,n+1}\\right)$ — noldan farqli elementlar faqat bosh diagonal yonidagi ikki diagonalda. Elektr dipol o'tish ehtimolligi $\\left|\\left\\langle m\\right|\\hat x\\left|n\\right\\rangle\\right|^2$ ga proporsional, shuning uchun **tanlash qoidasi** $\\Delta n=\\pm1$: ideal ossilyator faqat $\\hbar\\omega$ kvantlarni yutadi va chiqaradi — spektrda bitta chiziq, chastotasi klassik tebranish chastotasiga teng. $n\\to n+1$ o'tish kuchi $n+1$ ga proporsional: yuqori holatlar kuchliroq nurlanadi ([[F03]]).",
+  "ru": "**Матрица координаты.** $\\left\\langle m\\right|\\hat x\\left|n\\right\\rangle=\\frac{x_0}{\\sqrt{2}}\\left(\\sqrt{n}\\,\\delta_{m,n-1}+\\sqrt{n+1}\\,\\delta_{m,n+1}\\right)$ — ненулевые элементы только на двух диагоналях рядом с главной. Вероятность электрического дипольного перехода пропорциональна $\\left|\\left\\langle m\\right|\\hat x\\left|n\\right\\rangle\\right|^2$, поэтому **правило отбора** $\\Delta n=\\pm1$: идеальный осциллятор поглощает и излучает только кванты $\\hbar\\omega$ — в спектре одна линия, её частота равна классической частоте колебаний. Сила перехода $n\\to n+1$ пропорциональна $n+1$: высшие состояния излучают сильнее ([[F03]]).",
+  "en": "**The position matrix.** $\\left\\langle m\\right|\\hat x\\left|n\\right\\rangle=\\frac{x_0}{\\sqrt{2}}\\left(\\sqrt{n}\\,\\delta_{m,n-1}+\\sqrt{n+1}\\,\\delta_{m,n+1}\\right)$ — the nonzero elements lie only on the two diagonals next to the main one. The electric dipole transition probability is proportional to $\\left|\\left\\langle m\\right|\\hat x\\left|n\\right\\rangle\\right|^2$, hence the **selection rule** $\\Delta n=\\pm1$: an ideal oscillator absorbs and emits only quanta $\\hbar\\omega$ — the spectrum has a single line whose frequency equals the classical oscillation frequency. The strength of the $n\\to n+1$ transition is proportional to $n+1$: higher states radiate more strongly ([[F03]])."
+ },
+ {
+  "t": "m",
+  "m": "\\left\\langle m\\right|\\hat x\\left|n\\right\\rangle=\\frac{x_0}{\\sqrt{2}}\\left(\\sqrt{n}\\,\\delta_{m,n-1}+\\sqrt{n+1}\\,\\delta_{m,n+1}\\right),\\qquad \\Delta n=\\pm1,\\qquad \\hbar\\omega_{\\gamma}=\\hbar\\omega"
+ },
+ {
+  "t": "li",
+  "uz": "**Boshqa operatorlar.** $\\hat x^2$ uchun $\\Delta n=0,\\pm2$; $\\hat x^3$ uchun $\\Delta n=\\pm1,\\pm3$ — umuman, $\\hat x^k$ juftligi $\\left(-1\\right)^k$ bo'lgani uchun $\\Delta n$ ning juftligi $k$ niki bilan bir xil. Real molekulalarda potensial nogarmonik va dipol momenti $x$ ga chiziqli bog'liq emas, shuning uchun kuchsiz **obertonlar** $\\Delta n=\\pm2,\\pm3$ ham kuzatiladi; ularning chastotasi $2\\omega$ dan sal kichik.",
+  "ru": "**Другие операторы.** Для $\\hat x^2$ $\\Delta n=0,\\pm2$; для $\\hat x^3$ $\\Delta n=\\pm1,\\pm3$ — вообще, поскольку чётность $\\hat x^k$ равна $\\left(-1\\right)^k$, чётность $\\Delta n$ совпадает с чётностью $k$. В реальных молекулах потенциал ангармоничен, а дипольный момент нелинейно зависит от $x$, поэтому наблюдаются и слабые **обертоны** $\\Delta n=\\pm2,\\pm3$; их частота чуть меньше $2\\omega$.",
+  "en": "**Other operators.** For $\\hat x^2$, $\\Delta n=0,\\pm2$; for $\\hat x^3$, $\\Delta n=\\pm1,\\pm3$ — in general, since the parity of $\\hat x^k$ is $\\left(-1\\right)^k$, the parity of $\\Delta n$ matches that of $k$. In real molecules the potential is anharmonic and the dipole moment depends nonlinearly on $x$, so weak **overtones** $\\Delta n=\\pm2,\\pm3$ are also observed; their frequency is slightly below $2\\omega$."
+ },
+ {
+  "t": "h2",
+  "uz": "8. Vaqt evolyutsiyasi va kogerent holatlar",
+  "ru": "8. Эволюция во времени и когерентные состояния",
+  "en": "8. Time evolution and coherent states"
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy holat.** $\\Psi\\left(x,0\\right)=\\sum c_n\\psi_n$ bo'lsa, $\\Psi\\left(x,t\\right)=\\sum c_n\\psi_ne^{-i\\left(n+1/2\\right)\\omega t}$. Barcha fazalar $\\omega$ ning butun karralari bilan aylanadi, shuning uchun $T=\\frac{2\\pi}{\\omega}$ davrdan keyin holat umumiy faza aniqligida aynan qaytadi — ossilyatorda istalgan paket davriy. Erenfest tenglamalari $\\frac{d\\left\\langle x\\right\\rangle}{dt}=\\frac{\\left\\langle p\\right\\rangle}{m}$, $\\frac{d\\left\\langle p\\right\\rangle}{dt}=-m\\omega^2\\left\\langle x\\right\\rangle$ bu yerda aniq yopiq: o'rtachalar klassik ossilyator kabi harakatlanadi, chunki kuch $x$ ga chiziqli.",
+  "ru": "**Общее состояние.** Если $\\Psi\\left(x,0\\right)=\\sum c_n\\psi_n$, то $\\Psi\\left(x,t\\right)=\\sum c_n\\psi_ne^{-i\\left(n+1/2\\right)\\omega t}$. Все фазы вращаются с целыми кратными $\\omega$, поэтому через период $T=\\frac{2\\pi}{\\omega}$ состояние в точности возвращается с точностью до общей фазы — в осцилляторе любой пакет периодичен. Уравнения Эренфеста $\\frac{d\\left\\langle x\\right\\rangle}{dt}=\\frac{\\left\\langle p\\right\\rangle}{m}$, $\\frac{d\\left\\langle p\\right\\rangle}{dt}=-m\\omega^2\\left\\langle x\\right\\rangle$ здесь точно замкнуты: средние движутся как классический осциллятор, поскольку сила линейна по $x$.",
+  "en": "**A general state.** If $\\Psi\\left(x,0\\right)=\\sum c_n\\psi_n$, then $\\Psi\\left(x,t\\right)=\\sum c_n\\psi_ne^{-i\\left(n+1/2\\right)\\omega t}$. All phases rotate at integer multiples of $\\omega$, so after the period $T=\\frac{2\\pi}{\\omega}$ the state returns exactly, up to an overall phase — in an oscillator every packet is periodic. Ehrenfest's equations $\\frac{d\\left\\langle x\\right\\rangle}{dt}=\\frac{\\left\\langle p\\right\\rangle}{m}$, $\\frac{d\\left\\langle p\\right\\rangle}{dt}=-m\\omega^2\\left\\langle x\\right\\rangle$ are exactly closed here: the averages move like a classical oscillator, because the force is linear in $x$."
+ },
+ {
+  "t": "m",
+  "m": "\\Psi\\left(x,t\\right)=\\sum c_n\\psi_ne^{-i\\left(n+1/2\\right)\\omega t},\\qquad \\frac{d^2\\left\\langle x\\right\\rangle}{dt^2}=-\\omega^2\\left\\langle x\\right\\rangle"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki holat superpozitsiyasi.** Faqat qo'shni holatlar ($\\Delta n=\\pm1$) aralashgandagina $\\left\\langle x\\right\\rangle$ tebranadi, chunki $\\hat x$ faqat ularni bog'laydi. Masalan, $c_0\\psi_0+c_2\\psi_2$ da $\\left\\langle x\\right\\rangle=0$ doimo, lekin $\\left\\langle x^2\\right\\rangle$ $2\\omega$ chastota bilan tebranadi («nafas oluvchi» paket). Energiya o'lchansa, faqat $E_n$ qiymatlaridan biri chiqadi, ehtimolligi $\\left|c_n\\right|^2$; o'rtacha $\\left\\langle E\\right\\rangle=\\sum\\left|c_n\\right|^2E_n$ vaqtga bog'liq emas.",
+  "ru": "**Суперпозиция двух состояний.** $\\left\\langle x\\right\\rangle$ колеблется, только если смешаны соседние состояния ($\\Delta n=\\pm1$), потому что $\\hat x$ связывает только их. Например, в $c_0\\psi_0+c_2\\psi_2$ всегда $\\left\\langle x\\right\\rangle=0$, но $\\left\\langle x^2\\right\\rangle$ колеблется с частотой $2\\omega$ («дышащий» пакет). При измерении энергии получается одно из значений $E_n$ с вероятностью $\\left|c_n\\right|^2$; среднее $\\left\\langle E\\right\\rangle=\\sum\\left|c_n\\right|^2E_n$ от времени не зависит.",
+  "en": "**A superposition of two states.** $\\left\\langle x\\right\\rangle$ oscillates only if neighbouring states ($\\Delta n=\\pm1$) are mixed, because $\\hat x$ connects only them. For example, in $c_0\\psi_0+c_2\\psi_2$ always $\\left\\langle x\\right\\rangle=0$, but $\\left\\langle x^2\\right\\rangle$ oscillates at frequency $2\\omega$ (a «breathing» packet). A measurement of energy yields one of the values $E_n$ with probability $\\left|c_n\\right|^2$; the mean $\\left\\langle E\\right\\rangle=\\sum\\left|c_n\\right|^2E_n$ does not depend on time."
+ },
+ {
+  "t": "li",
+  "uz": "**Kogerent holat.** Pasaytiruvchi operatorning xususiy holati $a\\left|\\alpha\\right\\rangle=\\alpha\\left|\\alpha\\right\\rangle$ ($\\alpha$ — kompleks son): $\\left|\\alpha\\right\\rangle=e^{-\\left|\\alpha\\right|^2/2}\\sum\\frac{\\alpha^n}{\\sqrt{n!}}\\left|n\\right\\rangle$. Unda kvantlar soni **Puasson taqsimotiga** bo'ysunadi: $P_n=e^{-\\bar n}\\frac{\\bar n^n}{n!}$, $\\bar n=\\left|\\alpha\\right|^2$, $\\Delta n=\\sqrt{\\bar n}$, nisbiy tebranish $\\frac{1}{\\sqrt{\\bar n}}$ katta $\\bar n$ da kichik. Vaqt o'tishi bilan $\\alpha\\to\\alpha e^{-i\\omega t}$: paket shakli o'zgarmaydi — asosiy holatning Gauss funksiyasi kengligi $\\sigma_x=\\frac{x_0}{\\sqrt{2}}$ saqlangan holda klassik amplituda $\\sqrt{2}x_0\\left|\\alpha\\right|$ bilan tebranadi, yoyilmaydi ([[F05]]). Kogerent holat — klassik to'lqinga eng yaqin kvant holat; lazer nurlanishi va klassik radioto'lqinlar shunday tavsiflanadi.",
+  "ru": "**Когерентное состояние.** Собственное состояние понижающего оператора $a\\left|\\alpha\\right\\rangle=\\alpha\\left|\\alpha\\right\\rangle$ ($\\alpha$ — комплексное число): $\\left|\\alpha\\right\\rangle=e^{-\\left|\\alpha\\right|^2/2}\\sum\\frac{\\alpha^n}{\\sqrt{n!}}\\left|n\\right\\rangle$. В нём число квантов подчиняется **распределению Пуассона**: $P_n=e^{-\\bar n}\\frac{\\bar n^n}{n!}$, $\\bar n=\\left|\\alpha\\right|^2$, $\\Delta n=\\sqrt{\\bar n}$, относительная флуктуация $\\frac{1}{\\sqrt{\\bar n}}$ мала при больших $\\bar n$. Со временем $\\alpha\\to\\alpha e^{-i\\omega t}$: форма пакета не меняется — гауссиана основного состояния с сохраняющейся шириной $\\sigma_x=\\frac{x_0}{\\sqrt{2}}$ колеблется с классической амплитудой $\\sqrt{2}x_0\\left|\\alpha\\right|$ и не расплывается ([[F05]]). Когерентное состояние — ближайшее к классической волне квантовое состояние; так описываются лазерное излучение и классические радиоволны.",
+  "en": "**The coherent state.** The eigenstate of the lowering operator, $a\\left|\\alpha\\right\\rangle=\\alpha\\left|\\alpha\\right\\rangle$ ($\\alpha$ a complex number), is $\\left|\\alpha\\right\\rangle=e^{-\\left|\\alpha\\right|^2/2}\\sum\\frac{\\alpha^n}{\\sqrt{n!}}\\left|n\\right\\rangle$. In it the number of quanta follows the **Poisson distribution**: $P_n=e^{-\\bar n}\\frac{\\bar n^n}{n!}$, $\\bar n=\\left|\\alpha\\right|^2$, $\\Delta n=\\sqrt{\\bar n}$, and the relative fluctuation $\\frac{1}{\\sqrt{\\bar n}}$ is small for large $\\bar n$. In time $\\alpha\\to\\alpha e^{-i\\omega t}$: the shape of the packet does not change — the ground-state Gaussian, keeping its width $\\sigma_x=\\frac{x_0}{\\sqrt{2}}$, oscillates with the classical amplitude $\\sqrt{2}x_0\\left|\\alpha\\right|$ and does not spread ([[F05]]). The coherent state is the quantum state closest to a classical wave; laser light and classical radio waves are described this way."
+ },
+ {
+  "t": "m",
+  "m": "\\left|\\alpha\\right\\rangle=e^{-\\left|\\alpha\\right|^2/2}\\sum\\frac{\\alpha^n}{\\sqrt{n!}}\\left|n\\right\\rangle,\\qquad P_n=e^{-\\bar n}\\frac{\\bar n^n}{n!},\\qquad \\bar n=\\left|\\alpha\\right|^2,\\qquad \\Delta n=\\sqrt{\\bar n}"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B3-L06-F05.png",
+   "ru": "figures/B3-L06-F05-ru.png",
+   "en": "figures/B3-L06-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. Ikki va uch o'lchovli ossilyator",
+  "ru": "9. Двумерный и трёхмерный осциллятор",
+  "en": "9. The two- and three-dimensional oscillator"
+ },
+ {
+  "t": "li",
+  "uz": "**O'zgaruvchilarni ajratish.** Potensial yo'nalishlar bo'yicha yig'indidan iborat bo'lsin: $V=\\frac{1}{2}m\\left(\\omega_x^2x^2+\\omega_y^2y^2+\\omega_z^2z^2\\right)$. Unda to'lqin funksiyasi ko'paytmaga ajraladi: $\\psi=\\psi_{n_x}\\left(x\\right)\\psi_{n_y}\\left(y\\right)\\psi_{n_z}\\left(z\\right)$, energiya esa har bir yo'nalish hissalarining yig'indisi (quyidagi formula). Nolinchi energiya har bir erkinlik darajasidan $\\frac{\\hbar\\omega_i}{2}$ — izotrop 3D holatda $\\frac{3}{2}\\hbar\\omega$.",
+  "ru": "**Разделение переменных.** При $V=\\frac{1}{2}m\\left(\\omega_x^2x^2+\\omega_y^2y^2+\\omega_z^2z^2\\right)$ имеем $\\psi=\\psi_{n_x}\\left(x\\right)\\psi_{n_y}\\left(y\\right)\\psi_{n_z}\\left(z\\right)$, а энергия — сумма вкладов каждого направления (формула ниже). Нулевая энергия — по $\\frac{\\hbar\\omega_i}{2}$ от каждой степени свободы, в изотропном 3D-случае $\\frac{3}{2}\\hbar\\omega$.",
+  "en": "**Separation of variables.** For $V=\\frac{1}{2}m\\left(\\omega_x^2x^2+\\omega_y^2y^2+\\omega_z^2z^2\\right)$ we have $\\psi=\\psi_{n_x}\\left(x\\right)\\psi_{n_y}\\left(y\\right)\\psi_{n_z}\\left(z\\right)$, and the energy is the sum of the contributions of each direction (formula below). The zero-point energy is $\\frac{\\hbar\\omega_i}{2}$ from each degree of freedom, $\\frac{3}{2}\\hbar\\omega$ in the isotropic 3D case."
+ },
+ {
+  "t": "m",
+  "m": "E=\\left(n_x+\\frac{1}{2}\\right)\\hbar\\omega_x+\\left(n_y+\\frac{1}{2}\\right)\\hbar\\omega_y+\\left(n_z+\\frac{1}{2}\\right)\\hbar\\omega_z"
+ },
+ {
+  "t": "li",
+  "uz": "**Aynish.** Izotrop holatda $E_N=\\left(N+\\frac{3}{2}\\right)\\hbar\\omega$, $N=n_x+n_y+n_z$. $N$ ni uchta manfiy bo'lmagan butun songa bo'lish usullari soni $g_N=\\frac{\\left(N+1\\right)\\left(N+2\\right)}{2}$: $1,3,6,10,15,\\ldots$. Ikki o'lchovda $E_N=\\left(N+1\\right)\\hbar\\omega$ va $g_N=N+1$. Bu aynish cheksiz o'radagi «tasodifiy» aynishdan farqli: u yashirin simmetriyaning natijasi. $N$-qobiqda orbital moment $l=N,N-2,\\ldots$ (oxiri $1$ yoki $0$) qiymatlarni oladi, juftlik $\\left(-1\\right)^N$ ([[F06]]).",
+  "ru": "**Вырождение.** В изотропном случае $E_N=\\left(N+\\frac{3}{2}\\right)\\hbar\\omega$, $N=n_x+n_y+n_z$. Число способов разбить $N$ на три неотрицательных целых $g_N=\\frac{\\left(N+1\\right)\\left(N+2\\right)}{2}$: $1,3,6,10,15,\\ldots$. В двумерном случае $E_N=\\left(N+1\\right)\\hbar\\omega$ и $g_N=N+1$. Это вырождение, в отличие от «случайного» вырождения бесконечной ямы, — следствие скрытой симметрии. В $N$-й оболочке орбитальный момент принимает значения $l=N,N-2,\\ldots$ (до $1$ или $0$), чётность $\\left(-1\\right)^N$ ([[F06]]).",
+  "en": "**Degeneracy.** In the isotropic case $E_N=\\left(N+\\frac{3}{2}\\right)\\hbar\\omega$, $N=n_x+n_y+n_z$. The number of ways to split $N$ into three non-negative integers is $g_N=\\frac{\\left(N+1\\right)\\left(N+2\\right)}{2}$: $1,3,6,10,15,\\ldots$. In two dimensions $E_N=\\left(N+1\\right)\\hbar\\omega$ and $g_N=N+1$. This degeneracy, unlike the «accidental» degeneracy of the infinite well, is a consequence of a hidden symmetry. In the $N$-th shell the orbital angular momentum takes the values $l=N,N-2,\\ldots$ (down to $1$ or $0$), with parity $\\left(-1\\right)^N$ ([[F06]])."
+ },
+ {
+  "t": "m",
+  "m": "E_N=\\left(N+\\frac{3}{2}\\right)\\hbar\\omega,\\qquad g_N=\\frac{\\left(N+1\\right)\\left(N+2\\right)}{2},\\qquad E_N^{\\left(2\\right)}=\\left(N+1\\right)\\hbar\\omega,\\quad g_N^{\\left(2\\right)}=N+1"
+ },
+ {
+  "t": "li",
+  "uz": "**Sehrli sonlar.** Spin bilan har bir holatga $2$ ta fermion sig'adi: qobiqlar sig'imi $2,6,12,20,30$, to'liq qobiqlar yig'indisi $2,8,20,40,70$. Yadroning qobiqlar modelida yengil yadrolarning sehrli sonlari $2$, $8$, $20$ aynan shundan; $28$, $50$, $82$, $126$ ni olish uchun spin-orbital ta'sir qo'shiladi (B6 modul). Shu model kvant nuqtalari va metall klasterlaridagi elektron qobiqlarini ham taxminan tavsiflaydi. Anizotrop tuzoqda ($\\omega_x\\neq\\omega_z$) aynish qisman yo'qoladi.",
+  "ru": "**Магические числа.** Со спином в каждое состояние помещаются $2$ фермиона: ёмкости оболочек $2,6,12,20,30$, суммы заполненных оболочек $2,8,20,40,70$. Отсюда магические числа лёгких ядер $2$, $8$, $20$ в оболочечной модели ядра; чтобы получить $28$, $50$, $82$, $126$, добавляют спин-орбитальное взаимодействие (модуль B6). Та же модель приближённо описывает электронные оболочки квантовых точек и металлических кластеров. В анизотропной ловушке ($\\omega_x\\neq\\omega_z$) вырождение частично снимается.",
+  "en": "**Magic numbers.** With spin, each state holds $2$ fermions: the shell capacities are $2,6,12,20,30$, and the totals for filled shells are $2,8,20,40,70$. This is where the magic numbers $2$, $8$, $20$ of light nuclei in the nuclear shell model come from; to get $28$, $50$, $82$, $126$ the spin–orbit interaction is added (module B6). The same model roughly describes the electron shells of quantum dots and metal clusters. In an anisotropic trap ($\\omega_x\\neq\\omega_z$) the degeneracy is partly lifted."
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B3-L06-F06.png",
+   "ru": "figures/B3-L06-F06-ru.png",
+   "en": "figures/B3-L06-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Molekula tebranishlari",
+  "ru": "10. Колебания молекул",
+  "en": "10. Molecular vibrations"
+ },
+ {
+  "t": "li",
+  "uz": "**Ikki atomli molekula.** Atomlar orasidagi masofa $r$ muvozanat $r_e$ atrofida tebranadi; massa o'rnida **keltirilgan massa** $\\mu=\\frac{m_1m_2}{m_1+m_2}$, bikrlik $k=V''\\left(r_e\\right)$, chastota $\\omega=\\sqrt{\\frac{k}{\\mu}}$. Spektroskopiyada to'lqin soni $\\tilde\\nu=\\frac{\\omega}{2\\pi c}$ ishlatiladi ($\\mathrm{cm^{-1}}$): $1\\ \\mathrm{eV}$ ga $8066\\ \\mathrm{cm^{-1}}$ mos. Masalan, CO uchun $\\tilde\\nu\\approx2143\\ \\mathrm{cm^{-1}}$, ya'ni $\\hbar\\omega\\approx0.266\\ \\mathrm{eV}$, infraqizil soha. Xona temperaturasida $kT\\approx0.025\\ \\mathrm{eV}\\ll\\hbar\\omega$, shuning uchun deyarli barcha molekulalar tebranish asosiy holatida.",
+  "ru": "**Двухатомная молекула.** Межатомное расстояние $r$ колеблется около равновесного $r_e$; вместо массы — **приведённая масса** $\\mu=\\frac{m_1m_2}{m_1+m_2}$, жёсткость $k=V''\\left(r_e\\right)$, частота $\\omega=\\sqrt{\\frac{k}{\\mu}}$. В спектроскопии используют волновое число $\\tilde\\nu=\\frac{\\omega}{2\\pi c}$ (в $\\mathrm{cm^{-1}}$): $1\\ \\mathrm{eV}$ соответствует $8066\\ \\mathrm{cm^{-1}}$. Например, для CO $\\tilde\\nu\\approx2143\\ \\mathrm{cm^{-1}}$, то есть $\\hbar\\omega\\approx0.266\\ \\mathrm{eV}$, инфракрасная область. При комнатной температуре $kT\\approx0.025\\ \\mathrm{eV}\\ll\\hbar\\omega$, поэтому почти все молекулы находятся в основном колебательном состоянии.",
+  "en": "**A diatomic molecule.** The interatomic distance $r$ oscillates about the equilibrium $r_e$; the mass is replaced by the **reduced mass** $\\mu=\\frac{m_1m_2}{m_1+m_2}$, the stiffness is $k=V''\\left(r_e\\right)$, and the frequency is $\\omega=\\sqrt{\\frac{k}{\\mu}}$. Spectroscopy uses the wavenumber $\\tilde\\nu=\\frac{\\omega}{2\\pi c}$ (in $\\mathrm{cm^{-1}}$): $1\\ \\mathrm{eV}$ corresponds to $8066\\ \\mathrm{cm^{-1}}$. For example, for CO $\\tilde\\nu\\approx2143\\ \\mathrm{cm^{-1}}$, i.e. $\\hbar\\omega\\approx0.266\\ \\mathrm{eV}$, in the infrared. At room temperature $kT\\approx0.025\\ \\mathrm{eV}\\ll\\hbar\\omega$, so almost all molecules are in the vibrational ground state."
+ },
+ {
+  "t": "m",
+  "m": "\\omega=\\sqrt{\\frac{k}{\\mu}},\\qquad \\mu=\\frac{m_1m_2}{m_1+m_2},\\qquad \\tilde\\nu=\\frac{\\omega}{2\\pi c},\\qquad 1\\ \\mathrm{eV}=8066\\ \\mathrm{cm^{-1}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Izotop siljishi.** Bikrlik elektron buluti bilan aniqlanadi, shuning uchun izotop almashtirilganda $k$ o'zgarmaydi, faqat $\\mu$ o'zgaradi: $\\frac{\\omega'}{\\omega}=\\sqrt{\\frac{\\mu}{\\mu'}}$. Vodorodni deyteriyga almashtirish chastotani taxminan $\\sqrt{2}$ marta kamaytiradi (og'ir sherik atom bilan). Nolinchi energiya ham kamayadi, shuning uchun og'ir izotopli bog' biroz mustahkamroq — kimyoviy reaksiyalar tezligidagi izotop effektlari shundan.",
+  "ru": "**Изотопический сдвиг.** Жёсткость определяется электронным облаком, поэтому при замене изотопа $k$ не меняется, меняется только $\\mu$: $\\frac{\\omega'}{\\omega}=\\sqrt{\\frac{\\mu}{\\mu'}}$. Замена водорода дейтерием уменьшает частоту примерно в $\\sqrt{2}$ раз (при тяжёлом партнёре). Нулевая энергия тоже уменьшается, поэтому связь с тяжёлым изотопом немного прочнее — отсюда изотопные эффекты в скоростях химических реакций.",
+  "en": "**The isotope shift.** The stiffness is set by the electron cloud, so on isotope substitution $k$ does not change, only $\\mu$ does: $\\frac{\\omega'}{\\omega}=\\sqrt{\\frac{\\mu}{\\mu'}}$. Replacing hydrogen with deuterium lowers the frequency by about $\\sqrt{2}$ (with a heavy partner atom). The zero-point energy also decreases, so a bond with the heavy isotope is slightly stronger — hence the isotope effects in chemical reaction rates."
+ },
+ {
+  "t": "li",
+  "uz": "**Nogarmoniklik.** Real potensial katta $r$ da tekislanadi (dissotsiatsiya). Yaxshi model — **Morze potensiali** $V=D_e\\left(1-e^{-b\\left(r-r_e\\right)}\\right)^2$; uning sathlari $E_n=\\hbar\\omega\\left(n+\\frac{1}{2}\\right)-\\frac{\\left[\\hbar\\omega\\left(n+\\frac{1}{2}\\right)\\right]^2}{4D_e}$ yuqoriga qarab zichlashadi va chekli sonda. Muhim farq: o'ra chuqurligi $D_e$ va o'lchanadigan dissotsiatsiya energiyasi $D_0$ nolinchi energiya qadar farq qiladi: $D_0\\approx D_e-\\frac{\\hbar\\omega}{2}$ ([[F07]]). Kichik $n$ da Morze sathlari harmonik sathlarga yaqin — shuning uchun ossilyator modeli spektrning pastki qismini yaxshi tasvirlaydi.",
+  "ru": "**Ангармонизм.** Реальный потенциал выполаживается при больших $r$ (диссоциация). Хорошая модель — **потенциал Морзе** $V=D_e\\left(1-e^{-b\\left(r-r_e\\right)}\\right)^2$; его уровни $E_n=\\hbar\\omega\\left(n+\\frac{1}{2}\\right)-\\frac{\\left[\\hbar\\omega\\left(n+\\frac{1}{2}\\right)\\right]^2}{4D_e}$ сгущаются кверху, и их число конечно. Важное различие: глубина ямы $D_e$ и измеряемая энергия диссоциации $D_0$ отличаются на нулевую энергию: $D_0\\approx D_e-\\frac{\\hbar\\omega}{2}$ ([[F07]]). При малых $n$ уровни Морзе близки к гармоническим — поэтому модель осциллятора хорошо описывает нижнюю часть спектра.",
+  "en": "**Anharmonicity.** The real potential flattens at large $r$ (dissociation). A good model is the **Morse potential** $V=D_e\\left(1-e^{-b\\left(r-r_e\\right)}\\right)^2$; its levels $E_n=\\hbar\\omega\\left(n+\\frac{1}{2}\\right)-\\frac{\\left[\\hbar\\omega\\left(n+\\frac{1}{2}\\right)\\right]^2}{4D_e}$ crowd together towards the top and are finite in number. An important distinction: the well depth $D_e$ and the measured dissociation energy $D_0$ differ by the zero-point energy: $D_0\\approx D_e-\\frac{\\hbar\\omega}{2}$ ([[F07]]). At small $n$ the Morse levels are close to the harmonic ones — which is why the oscillator model describes the lower part of the spectrum well."
+ },
+ {
+  "t": "m",
+  "m": "V=D_e\\left(1-e^{-b\\left(r-r_e\\right)}\\right)^2,\\qquad E_n=\\hbar\\omega\\left(n+\\frac{1}{2}\\right)-\\frac{\\left[\\hbar\\omega\\left(n+\\frac{1}{2}\\right)\\right]^2}{4D_e},\\qquad D_0\\approx D_e-\\frac{\\hbar\\omega}{2}"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B3-L06-F07.png",
+   "ru": "figures/B3-L06-F07-ru.png",
+   "en": "figures/B3-L06-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "11. Issiqlik muvozanatidagi ossilyator",
+  "ru": "11. Осциллятор в тепловом равновесии",
+  "en": "11. The oscillator in thermal equilibrium"
+ },
+ {
+  "t": "li",
+  "uz": "**Bolsman taqsimoti.** Temperatura $T$ da $n$-holat ehtimolligi $P_n\\propto e^{-E_n/kT}$. Teng oraliqli sathlar uchun statistik yig'indi geometrik qator: $Z=\\sum e^{-\\left(n+1/2\\right)x}=\\frac{e^{-x/2}}{1-e^{-x}}$, bu yerda $x=\\frac{\\hbar\\omega}{kT}$. Natijada $P_n=\\left(1-e^{-x}\\right)e^{-nx}$ va o'rtacha kvantlar soni — **Plank taqsimoti** $\\left\\langle n\\right\\rangle=\\frac{1}{e^{x}-1}$ (B3-L01 dagi qora jism nurlanishining asosi).",
+  "ru": "**Распределение Больцмана.** При температуре $T$ вероятность $n$-го состояния $P_n\\propto e^{-E_n/kT}$. Для эквидистантных уровней статистическая сумма — геометрический ряд: $Z=\\sum e^{-\\left(n+1/2\\right)x}=\\frac{e^{-x/2}}{1-e^{-x}}$, где $x=\\frac{\\hbar\\omega}{kT}$. В итоге $P_n=\\left(1-e^{-x}\\right)e^{-nx}$, а среднее число квантов — **распределение Планка** $\\left\\langle n\\right\\rangle=\\frac{1}{e^{x}-1}$ (основа излучения чёрного тела из B3-L01).",
+  "en": "**The Boltzmann distribution.** At temperature $T$ the probability of the $n$-th state is $P_n\\propto e^{-E_n/kT}$. For equally spaced levels the partition function is a geometric series: $Z=\\sum e^{-\\left(n+1/2\\right)x}=\\frac{e^{-x/2}}{1-e^{-x}}$, where $x=\\frac{\\hbar\\omega}{kT}$. As a result $P_n=\\left(1-e^{-x}\\right)e^{-nx}$, and the mean number of quanta is the **Planck distribution** $\\left\\langle n\\right\\rangle=\\frac{1}{e^{x}-1}$ (the basis of black-body radiation in B3-L01)."
+ },
+ {
+  "t": "m",
+  "m": "Z=\\frac{e^{-x/2}}{1-e^{-x}},\\qquad P_n=\\left(1-e^{-x}\\right)e^{-nx},\\qquad \\left\\langle n\\right\\rangle=\\frac{1}{e^{x}-1},\\qquad x=\\frac{\\hbar\\omega}{kT}"
+ },
+ {
+  "t": "li",
+  "uz": "**O'rtacha energiya.** $\\left\\langle E\\right\\rangle=\\frac{\\hbar\\omega}{2}+\\frac{\\hbar\\omega}{e^{x}-1}$. Chegaralar: past temperaturada ($kT\\ll\\hbar\\omega$) $\\left\\langle E\\right\\rangle\\to\\frac{\\hbar\\omega}{2}$ — tebranish «muzlagan», faqat nolinchi energiya qoladi; yuqori temperaturada ($kT\\gg\\hbar\\omega$) $\\left\\langle E\\right\\rangle\\to kT$ — klassik teng taqsimlanish: $\\frac{1}{2}kT$ kinetik va $\\frac{1}{2}kT$ potensial energiya ([[F08]]). Shuning uchun xona temperaturasida ikki atomli gazning issiqlik sig'imida tebranish hissasi deyarli yo'q: $C_V\\approx\\frac{5}{2}R$, $\\frac{7}{2}R$ emas.",
+  "ru": "**Средняя энергия.** $\\left\\langle E\\right\\rangle=\\frac{\\hbar\\omega}{2}+\\frac{\\hbar\\omega}{e^{x}-1}$. Пределы: при низкой температуре ($kT\\ll\\hbar\\omega$) $\\left\\langle E\\right\\rangle\\to\\frac{\\hbar\\omega}{2}$ — колебание «заморожено», остаётся только нулевая энергия; при высокой ($kT\\gg\\hbar\\omega$) $\\left\\langle E\\right\\rangle\\to kT$ — классическое равнораспределение: $\\frac{1}{2}kT$ кинетической и $\\frac{1}{2}kT$ потенциальной энергии ([[F08]]). Поэтому при комнатной температуре колебательного вклада в теплоёмкость двухатомного газа почти нет: $C_V\\approx\\frac{5}{2}R$, а не $\\frac{7}{2}R$.",
+  "en": "**The mean energy.** $\\left\\langle E\\right\\rangle=\\frac{\\hbar\\omega}{2}+\\frac{\\hbar\\omega}{e^{x}-1}$. Limits: at low temperature ($kT\\ll\\hbar\\omega$) $\\left\\langle E\\right\\rangle\\to\\frac{\\hbar\\omega}{2}$ — the vibration is «frozen», only the zero-point energy remains; at high temperature ($kT\\gg\\hbar\\omega$) $\\left\\langle E\\right\\rangle\\to kT$ — classical equipartition: $\\frac{1}{2}kT$ of kinetic and $\\frac{1}{2}kT$ of potential energy ([[F08]]). That is why at room temperature the vibrational contribution to the heat capacity of a diatomic gas is almost absent: $C_V\\approx\\frac{5}{2}R$, not $\\frac{7}{2}R$."
+ },
+ {
+  "t": "m",
+  "m": "\\left\\langle E\\right\\rangle=\\frac{\\hbar\\omega}{2}+\\frac{\\hbar\\omega}{e^{\\hbar\\omega/kT}-1}\\ \\xrightarrow{kT\\gg\\hbar\\omega}\\ kT,\\qquad C=k\\frac{x^2e^{x}}{\\left(e^{x}-1\\right)^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Eynshteyn modeli.** Kristallni $3N$ ta bir xil chastotali mustaqil ossilyator deb qarasak, issiqlik sig'imi $C=3Nk\\frac{x^2e^{x}}{\\left(e^{x}-1\\right)^2}$. Yuqori temperaturada $C\\to3Nk$ (Dyulong–Pti qonuni), past temperaturada eksponensial kamayadi. Bu klassik fizika tushuntira olmagan sig'im kamayishining birinchi kvant izohi bo'ldi; tajribadagi $T^3$ qonunini Debay modeli (chastotalar spektri) beradi.",
+  "ru": "**Модель Эйнштейна.** Если считать кристалл набором $3N$ независимых осцилляторов одной частоты, теплоёмкость $C=3Nk\\frac{x^2e^{x}}{\\left(e^{x}-1\\right)^2}$. При высокой температуре $C\\to3Nk$ (закон Дюлонга–Пти), при низкой — экспоненциально убывает. Это было первое квантовое объяснение падения теплоёмкости, которое не могла объяснить классическая физика; экспериментальный закон $T^3$ даёт модель Дебая (спектр частот).",
+  "en": "**The Einstein model.** Treating a crystal as $3N$ independent oscillators of the same frequency, the heat capacity is $C=3Nk\\frac{x^2e^{x}}{\\left(e^{x}-1\\right)^2}$. At high temperature $C\\to3Nk$ (the Dulong–Petit law); at low temperature it falls exponentially. This was the first quantum explanation of the drop in heat capacity that classical physics could not explain; the experimental $T^3$ law comes from the Debye model (a spectrum of frequencies)."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B3-L06-F08.png",
+   "ru": "figures/B3-L06-F08-ru.png",
+   "en": "figures/B3-L06-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "12. Tatbiqlar: fononlar, fotonlar, LC zanjir, Landau sathlari",
+  "ru": "12. Применения: фононы, фотоны, LC-цепь, уровни Ландау",
+  "en": "12. Applications: phonons, photons, LC circuits, Landau levels"
+ },
+ {
+  "t": "li",
+  "uz": "**Fononlar va fotonlar.** Kristall panjarasining har bir normal modasi — alohida ossilyator; uning kvanti $\\hbar\\omega$ — **fonon**. Elektromagnit maydonning har bir modasi ham ossilyator: $n$-holat — modada $n$ ta foton. Vakuumda ham har bir moda $\\frac{\\hbar\\omega}{2}$ energiyaga ega; bu «vakuum energiyasi» ikki parallel o'tkazgich plastinka orasidagi modalar sonini o'zgartirib, ularni bir-biriga tortadi (**Kazimir effekti**).",
+  "ru": "**Фононы и фотоны.** Каждая нормальная мода кристаллической решётки — отдельный осциллятор; её квант $\\hbar\\omega$ — **фонон**. Каждая мода электромагнитного поля тоже осциллятор: $n$-е состояние — $n$ фотонов в моде. И в вакууме каждая мода обладает энергией $\\frac{\\hbar\\omega}{2}$; эта «энергия вакуума», изменяя число мод между двумя параллельными проводящими пластинами, притягивает их друг к другу (**эффект Казимира**).",
+  "en": "**Phonons and photons.** Each normal mode of a crystal lattice is a separate oscillator; its quantum $\\hbar\\omega$ is a **phonon**. Each mode of the electromagnetic field is also an oscillator: the $n$-th state means $n$ photons in the mode. Even in vacuum each mode has energy $\\frac{\\hbar\\omega}{2}$; this «vacuum energy», by changing the number of modes between two parallel conducting plates, pulls them together (the **Casimir effect**)."
+ },
+ {
+  "t": "li",
+  "uz": "**Kvant LC zanjir.** Zanjir energiyasi $\\frac{LI^2}{2}+\\frac{q^2}{2C}$: $q\\leftrightarrow x$, $L\\leftrightarrow m$, $\\frac{1}{C}\\leftrightarrow k$, $\\omega=\\frac{1}{\\sqrt{LC}}$. Sathlar orasidagi masofa $\\hbar\\omega$ issiqlik energiyasidan katta bo'lishi kerak: $\\hbar\\omega\\gg kT$. GHz chastotalar uchun bu o'nlab millikelvin demak — o'ta o'tkazuvchan kubitlar shunday sovutgichlarda ishlaydi; kubit uchun nogarmoniklik (Jozefson kontakti) zarur, aks holda teng oraliqli sathlarni ajratib bo'lmaydi.",
+  "ru": "**Квантовая LC-цепь.** Энергия цепи $\\frac{LI^2}{2}+\\frac{q^2}{2C}$: $q\\leftrightarrow x$, $L\\leftrightarrow m$, $\\frac{1}{C}\\leftrightarrow k$, $\\omega=\\frac{1}{\\sqrt{LC}}$. Расстояние между уровнями $\\hbar\\omega$ должно превышать тепловую энергию: $\\hbar\\omega\\gg kT$. Для частот порядка ГГц это десятки милликельвин — сверхпроводящие кубиты работают в таких рефрижераторах; для кубита нужен ангармонизм (джозефсоновский контакт), иначе эквидистантные уровни не разделить.",
+  "en": "**The quantum LC circuit.** The energy of the circuit is $\\frac{LI^2}{2}+\\frac{q^2}{2C}$: $q\\leftrightarrow x$, $L\\leftrightarrow m$, $\\frac{1}{C}\\leftrightarrow k$, $\\omega=\\frac{1}{\\sqrt{LC}}$. The level spacing $\\hbar\\omega$ must exceed the thermal energy: $\\hbar\\omega\\gg kT$. For GHz frequencies this means tens of millikelvin — superconducting qubits work in such refrigerators; a qubit needs anharmonicity (a Josephson junction), otherwise the equally spaced levels cannot be told apart."
+ },
+ {
+  "t": "li",
+  "uz": "**Landau sathlari.** Bir jinsli $B$ maydondagi zaryadli zarraning maydonga perpendikulyar harakati — chastotasi $\\omega_c=\\frac{\\left|q\\right|B}{m}$ bo'lgan ossilyator. Sathlar $E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega_c+\\frac{p_z^2}{2m}$; sathlar orasidagi masofa $B$ ga chiziqli proporsional. Erkin elektron uchun $\\hbar\\omega_c\\approx0.116\\ \\mathrm{meV}$ har bir tesla uchun. Har bir Landau sathi juda ko'p karrali aynigan (birlik yuzaga $\\frac{\\left|q\\right|B}{h}$ holat) — kvant Holl effektining asosi. Ionlar tuzog'i va optomexanik rezonatorlar ham yuqori aniqlikdagi kvant ossilyatorlardir.",
+  "ru": "**Уровни Ландау.** Движение заряженной частицы в однородном поле $B$ поперёк поля — осциллятор с частотой $\\omega_c=\\frac{\\left|q\\right|B}{m}$. Уровни $E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega_c+\\frac{p_z^2}{2m}$; расстояние между уровнями линейно пропорционально $B$. Для свободного электрона $\\hbar\\omega_c\\approx0.116\\ \\mathrm{meV}$ на каждый тесла. Каждый уровень Ландау сильно вырожден ($\\frac{\\left|q\\right|B}{h}$ состояний на единицу площади) — основа квантового эффекта Холла. Ионные ловушки и оптомеханические резонаторы — тоже высокоточные квантовые осцилляторы.",
+  "en": "**Landau levels.** The motion of a charged particle in a uniform field $B$, perpendicular to the field, is an oscillator of frequency $\\omega_c=\\frac{\\left|q\\right|B}{m}$. The levels are $E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega_c+\\frac{p_z^2}{2m}$; the level spacing is linearly proportional to $B$. For a free electron $\\hbar\\omega_c\\approx0.116\\ \\mathrm{meV}$ per tesla. Each Landau level is highly degenerate ($\\frac{\\left|q\\right|B}{h}$ states per unit area) — the basis of the quantum Hall effect. Ion traps and optomechanical resonators are also high-precision quantum oscillators."
+ },
+ {
+  "t": "m",
+  "m": "\\omega=\\frac{1}{\\sqrt{LC}},\\qquad E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega_c+\\frac{p_z^2}{2m},\\qquad \\omega_c=\\frac{\\left|q\\right|B}{m}"
+ },
+ {
+  "t": "h2",
+  "uz": "13. O'zgartirilgan ossilyatorlar",
+  "ru": "13. Видоизменённые осцилляторы",
+  "en": "13. Modified oscillators"
+ },
+ {
+  "t": "li",
+  "uz": "**Yarim ossilyator.** $x<0$ da $V=\\infty$, $x>0$ da $V=\\frac{1}{2}m\\omega^2x^2$. Devorda $\\psi\\left(0\\right)=0$ bo'lishi kerak; to'liq ossilyatorning shu shartni qanoatlantiradigan funksiyalari — faqat toq $\\psi_n$ ($n=1,3,5,\\ldots$). Ular $x>0$ da tenglamani ham qanoatlantiradi, shuning uchun sathlar $E=\\frac{3}{2}\\hbar\\omega,\\frac{7}{2}\\hbar\\omega,\\frac{11}{2}\\hbar\\omega,\\ldots$ — oraliq $2\\hbar\\omega$. Bu «simmetriya usuli» B3-L04 dagi yarim o'ralar bilan bir xil.",
+  "ru": "**Полуосциллятор.** При $x<0$ $V=\\infty$, при $x>0$ $V=\\frac{1}{2}m\\omega^2x^2$. На стенке должно быть $\\psi\\left(0\\right)=0$; этому условию удовлетворяют только нечётные функции полного осциллятора $\\psi_n$ ($n=1,3,5,\\ldots$). Они удовлетворяют и уравнению при $x>0$, поэтому уровни $E=\\frac{3}{2}\\hbar\\omega,\\frac{7}{2}\\hbar\\omega,\\frac{11}{2}\\hbar\\omega,\\ldots$ — интервал $2\\hbar\\omega$. Этот «метод симметрии» тот же, что для полуям в B3-L04.",
+  "en": "**The half oscillator.** For $x<0$, $V=\\infty$; for $x>0$, $V=\\frac{1}{2}m\\omega^2x^2$. At the wall we need $\\psi\\left(0\\right)=0$; the only functions of the full oscillator satisfying this condition are the odd $\\psi_n$ ($n=1,3,5,\\ldots$). They also satisfy the equation for $x>0$, so the levels are $E=\\frac{3}{2}\\hbar\\omega,\\frac{7}{2}\\hbar\\omega,\\frac{11}{2}\\hbar\\omega,\\ldots$ — spacing $2\\hbar\\omega$. This «symmetry method» is the same as for the half wells in B3-L04."
+ },
+ {
+  "t": "li",
+  "uz": "**Siljigan ossilyator.** Doimiy kuch $F$ qo'shilsa (masalan, zaryad elektr maydonida, $F=q\\mathcal{E}$), to'liq kvadratga keltiramiz: $\\frac{1}{2}m\\omega^2x^2-Fx=\\frac{1}{2}m\\omega^2\\left(x-x_s\\right)^2-\\frac{F^2}{2m\\omega^2}$, $x_s=\\frac{F}{m\\omega^2}$. Funksiyalar shunchaki siljiydi, barcha sathlar bir xil miqdorga pasayadi, oraliq $\\hbar\\omega$ o'zgarmaydi. Bu tasodif emas: kuch $x$ ga bog'liq bo'lmasa, chastota o'zgarmaydi.",
+  "ru": "**Сдвинутый осциллятор.** Если добавить постоянную силу $F$ (например, заряд в электрическом поле, $F=q\\mathcal{E}$), выделяем полный квадрат: $\\frac{1}{2}m\\omega^2x^2-Fx=\\frac{1}{2}m\\omega^2\\left(x-x_s\\right)^2-\\frac{F^2}{2m\\omega^2}$, $x_s=\\frac{F}{m\\omega^2}$. Функции просто сдвигаются, все уровни опускаются на одну и ту же величину, интервал $\\hbar\\omega$ не меняется. Это не случайно: если сила не зависит от $x$, частота не меняется.",
+  "en": "**The shifted oscillator.** If a constant force $F$ is added (for example, a charge in an electric field, $F=q\\mathcal{E}$), we complete the square: $\\frac{1}{2}m\\omega^2x^2-Fx=\\frac{1}{2}m\\omega^2\\left(x-x_s\\right)^2-\\frac{F^2}{2m\\omega^2}$, $x_s=\\frac{F}{m\\omega^2}$. The functions are simply shifted, all levels drop by the same amount, and the spacing $\\hbar\\omega$ does not change. This is no accident: if the force does not depend on $x$, the frequency does not change."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{1}{2}m\\omega^2x^2-Fx=\\frac{1}{2}m\\omega^2\\left(x-x_s\\right)^2-\\frac{F^2}{2m\\omega^2},\\qquad x_s=\\frac{F}{m\\omega^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Bikrlikning keskin o'zgarishi.** Agar $\\omega$ bir zumda $\\omega'$ ga o'zgarsa, to'lqin funksiyasi o'zgarishga ulgurmaydi (keskin o'zgarish taqribi): yangi holatlardagi ehtimolliklar $P_n=\\left|\\langle n'|\\Psi\\rangle\\right|^2$. Eski asosiy holat uchun $P_0=\\frac{2\\sqrt{\\omega\\omega'}}{\\omega+\\omega'}$, juftlik saqlangani uchun faqat juft $n'$ ga o'tish mumkin. Agar o'zgarish sekin (adiabatik) bo'lsa, zarra $n$-holatda qoladi va energiya $\\omega$ ga proporsional o'zgaradi: $\\frac{E}{\\omega}$ — adiabatik invariant.",
+  "ru": "**Резкое изменение жёсткости.** Если $\\omega$ мгновенно меняется на $\\omega'$, волновая функция не успевает измениться (внезапное приближение): вероятности в новых состояниях $P_n=\\left|\\langle n'|\\Psi\\rangle\\right|^2$. Для старого основного состояния $P_0=\\frac{2\\sqrt{\\omega\\omega'}}{\\omega+\\omega'}$, а поскольку чётность сохраняется, переходы возможны только в чётные $n'$. Если изменение медленное (адиабатическое), частица остаётся в $n$-м состоянии, а энергия меняется пропорционально $\\omega$: $\\frac{E}{\\omega}$ — адиабатический инвариант.",
+  "en": "**A sudden change of stiffness.** If $\\omega$ changes instantly to $\\omega'$, the wave function has no time to change (the sudden approximation): the probabilities in the new states are $P_n=\\left|\\langle n'|\\Psi\\rangle\\right|^2$. For the old ground state $P_0=\\frac{2\\sqrt{\\omega\\omega'}}{\\omega+\\omega'}$, and since parity is conserved, transitions are possible only to even $n'$. If the change is slow (adiabatic), the particle stays in the $n$-th state and the energy changes in proportion to $\\omega$: $\\frac{E}{\\omega}$ is an adiabatic invariant."
+ },
+ {
+  "t": "li",
+  "uz": "**Kichik qo'shimcha potensial.** Ossilyatorga kichik $\\lambda x^4$ yoki $\\lambda x^3$ qo'shilsa, birinchi tartibli tuzatish $\\Delta E_n=\\left\\langle n\\right|V'\\left|n\\right\\rangle$ (B4 modul). Narvon operatorlari bilan $\\left\\langle n\\right|x^3\\left|n\\right\\rangle=0$ darhol ko'rinadi (toq daraja), $x^4$ tuzatish esa noldan farqli va $n$ bilan o'sadi — sathlar endi teng oraliqli emas.",
+  "ru": "**Малый добавочный потенциал.** Если к осциллятору добавить малый $\\lambda x^4$ или $\\lambda x^3$, поправка первого порядка $\\Delta E_n=\\left\\langle n\\right|V'\\left|n\\right\\rangle$ (модуль B4). С лестничными операторами сразу видно, что $\\left\\langle n\\right|x^3\\left|n\\right\\rangle=0$ (нечётная степень), а поправка от $x^4$ ненулевая и растёт с $n$ — уровни уже не эквидистантны.",
+  "en": "**A small extra potential.** If a small $\\lambda x^4$ or $\\lambda x^3$ is added to the oscillator, the first-order correction is $\\Delta E_n=\\left\\langle n\\right|V'\\left|n\\right\\rangle$ (module B4). With ladder operators one sees at once that $\\left\\langle n\\right|x^3\\left|n\\right\\rangle=0$ (an odd power), while the $x^4$ correction is nonzero and grows with $n$ — the levels are no longer equally spaced."
+ },
+ {
+  "t": "h2",
+  "uz": "14. GRE tuzoqlari va tezkor baholash",
+  "ru": "14. Ловушки GRE и быстрые оценки",
+  "en": "14. GRE traps and quick estimates"
+ },
+ {
+  "t": "li",
+  "uz": "**Sathlar.** 1) $E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega$, $n$ noldan boshlanadi; $E_0=\\frac{\\hbar\\omega}{2}$, nol emas. 2) Oraliq har doim $\\hbar\\omega$ — $n$ ga bog'liq emas; nisbatlar $1:3:5:7$. 3) $\\omega=\\sqrt{\\frac{k}{m}}$: massa $4$ marta ortsa, sathlar oralig'i ikki marta kamayadi; molekulada $m$ o'rnida $\\mu$. 4) Foton faqat $\\hbar\\omega$ energiyali ($\\Delta n=\\pm1$), $2\\hbar\\omega$ emas. 5) 3D: $E_0=\\frac{3}{2}\\hbar\\omega$ va aynish $\\frac{\\left(N+1\\right)\\left(N+2\\right)}{2}$; 2D: $E_0=\\hbar\\omega$, aynish $N+1$. 6) Yarim ossilyator: faqat toq $n$, asosiy sath $\\frac{3}{2}\\hbar\\omega$.",
+  "ru": "**Уровни.** 1) $E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega$, $n$ начинается с нуля; $E_0=\\frac{\\hbar\\omega}{2}$, а не ноль. 2) Интервал всегда $\\hbar\\omega$ — не зависит от $n$; отношения $1:3:5:7$. 3) $\\omega=\\sqrt{\\frac{k}{m}}$: при увеличении массы в $4$ раза интервал уменьшается вдвое; в молекуле вместо $m$ — $\\mu$. 4) Фотон только с энергией $\\hbar\\omega$ ($\\Delta n=\\pm1$), а не $2\\hbar\\omega$. 5) 3D: $E_0=\\frac{3}{2}\\hbar\\omega$ и вырождение $\\frac{\\left(N+1\\right)\\left(N+2\\right)}{2}$; 2D: $E_0=\\hbar\\omega$, вырождение $N+1$. 6) Полуосциллятор: только нечётные $n$, основной уровень $\\frac{3}{2}\\hbar\\omega$.",
+  "en": "**Levels.** 1) $E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega$, $n$ starts at zero; $E_0=\\frac{\\hbar\\omega}{2}$, not zero. 2) The spacing is always $\\hbar\\omega$ — independent of $n$; the ratios are $1:3:5:7$. 3) $\\omega=\\sqrt{\\frac{k}{m}}$: if the mass grows $4$ times, the spacing halves; in a molecule $\\mu$ replaces $m$. 4) A photon has only the energy $\\hbar\\omega$ ($\\Delta n=\\pm1$), not $2\\hbar\\omega$. 5) 3D: $E_0=\\frac{3}{2}\\hbar\\omega$ and degeneracy $\\frac{\\left(N+1\\right)\\left(N+2\\right)}{2}$; 2D: $E_0=\\hbar\\omega$, degeneracy $N+1$. 6) The half oscillator: only odd $n$, ground level $\\frac{3}{2}\\hbar\\omega$."
+ },
+ {
+  "t": "li",
+  "uz": "**Funksiyalar va operatorlar.** 7) $\\psi_0$ — Gauss, tugunsiz; $\\psi_1$ — toq, $x=0$ da tugun; $\\psi_n$ da $n$ ta tugun, juftlik $\\left(-1\\right)^n$. 8) Katta $n$ da ehtimollik chetlarda (qaytish nuqtalari yonida) katta, markazda emas. 9) $a\\left|n\\right\\rangle=\\sqrt{n}\\left|n-1\\right\\rangle$, $a^{\\dagger}\\left|n\\right\\rangle=\\sqrt{n+1}\\left|n+1\\right\\rangle$, $a\\left|0\\right\\rangle=0$ — nol vektor, $\\left|0\\right\\rangle$ emas. 10) $\\left[a,a^{\\dagger}\\right]=1$, $\\hat N=a^{\\dagger}a$ (tartib muhim: $aa^{\\dagger}=\\hat N+1$). 11) Statsionar holatda $\\left\\langle x\\right\\rangle=\\left\\langle p\\right\\rangle=0$, lekin $\\left\\langle x^2\\right\\rangle\\neq0$. 12) $\\sigma_x\\sigma_p=\\left(n+\\frac{1}{2}\\right)\\hbar$ — minimum faqat $n=0$ da.",
+  "ru": "**Функции и операторы.** 7) $\\psi_0$ — гауссиана, без узлов; $\\psi_1$ — нечётная, узел при $x=0$; у $\\psi_n$ $n$ узлов, чётность $\\left(-1\\right)^n$. 8) При больших $n$ вероятность велика по краям (у точек поворота), а не в центре. 9) $a\\left|n\\right\\rangle=\\sqrt{n}\\left|n-1\\right\\rangle$, $a^{\\dagger}\\left|n\\right\\rangle=\\sqrt{n+1}\\left|n+1\\right\\rangle$, $a\\left|0\\right\\rangle=0$ — нулевой вектор, а не $\\left|0\\right\\rangle$. 10) $\\left[a,a^{\\dagger}\\right]=1$, $\\hat N=a^{\\dagger}a$ (порядок важен: $aa^{\\dagger}=\\hat N+1$). 11) В стационарном состоянии $\\left\\langle x\\right\\rangle=\\left\\langle p\\right\\rangle=0$, но $\\left\\langle x^2\\right\\rangle\\neq0$. 12) $\\sigma_x\\sigma_p=\\left(n+\\frac{1}{2}\\right)\\hbar$ — минимум только при $n=0$.",
+  "en": "**Functions and operators.** 7) $\\psi_0$ is a Gaussian with no nodes; $\\psi_1$ is odd with a node at $x=0$; $\\psi_n$ has $n$ nodes and parity $\\left(-1\\right)^n$. 8) At large $n$ the probability is large near the edges (near the turning points), not at the centre. 9) $a\\left|n\\right\\rangle=\\sqrt{n}\\left|n-1\\right\\rangle$, $a^{\\dagger}\\left|n\\right\\rangle=\\sqrt{n+1}\\left|n+1\\right\\rangle$, $a\\left|0\\right\\rangle=0$ — the zero vector, not $\\left|0\\right\\rangle$. 10) $\\left[a,a^{\\dagger}\\right]=1$, $\\hat N=a^{\\dagger}a$ (the order matters: $aa^{\\dagger}=\\hat N+1$). 11) In a stationary state $\\left\\langle x\\right\\rangle=\\left\\langle p\\right\\rangle=0$, but $\\left\\langle x^2\\right\\rangle\\neq0$. 12) $\\sigma_x\\sigma_p=\\left(n+\\frac{1}{2}\\right)\\hbar$ — the minimum only for $n=0$."
+ },
+ {
+  "t": "li",
+  "uz": "**Dinamika va tatbiqlar.** 13) $\\left\\langle x\\right\\rangle$ faqat qo'shni holatlar aralashganda tebranadi, chastotasi $\\omega$ (sathlar farqi $\\hbar\\omega$ dan). 14) Kogerent holat yoyilmaydi; $\\Delta n=\\sqrt{\\bar n}$, $\\bar n$ emas. 15) Izotop almashganda $k$ o'zgarmaydi, $\\omega\\propto\\frac{1}{\\sqrt{\\mu}}$. 16) $D_0=D_e-\\frac{\\hbar\\omega}{2}$: o'lchangan dissotsiatsiya energiyasi o'ra chuqurligidan kichik. 17) $kT\\ll\\hbar\\omega$ da $\\left\\langle E\\right\\rangle\\to\\frac{\\hbar\\omega}{2}$, nol emas; $kT\\gg\\hbar\\omega$ da $kT$, $\\frac{1}{2}kT$ emas. 18) Landau oralig'i $\\hbar\\omega_c\\propto B$, massa bilan teskari. 19) Doimiy kuch sathlar oralig'ini o'zgartirmaydi, faqat hammasini siljitadi. 20) Taqiqlangan sohada topilish ehtimolligi asosiy holatda taxminan $16$ foiz — nol emas.",
+  "ru": "**Динамика и применения.** 13) $\\left\\langle x\\right\\rangle$ колеблется только при смешивании соседних состояний, с частотой $\\omega$ (из разности уровней $\\hbar\\omega$). 14) Когерентное состояние не расплывается; $\\Delta n=\\sqrt{\\bar n}$, а не $\\bar n$. 15) При замене изотопа $k$ не меняется, $\\omega\\propto\\frac{1}{\\sqrt{\\mu}}$. 16) $D_0=D_e-\\frac{\\hbar\\omega}{2}$: измеренная энергия диссоциации меньше глубины ямы. 17) При $kT\\ll\\hbar\\omega$ $\\left\\langle E\\right\\rangle\\to\\frac{\\hbar\\omega}{2}$, а не ноль; при $kT\\gg\\hbar\\omega$ — $kT$, а не $\\frac{1}{2}kT$. 18) Интервал Ландау $\\hbar\\omega_c\\propto B$, обратно пропорционален массе. 19) Постоянная сила не меняет интервала между уровнями, а лишь сдвигает их все. 20) Вероятность найти частицу в запрещённой области в основном состоянии около $16$ процентов — не ноль.",
+  "en": "**Dynamics and applications.** 13) $\\left\\langle x\\right\\rangle$ oscillates only when neighbouring states are mixed, at frequency $\\omega$ (from the level difference $\\hbar\\omega$). 14) A coherent state does not spread; $\\Delta n=\\sqrt{\\bar n}$, not $\\bar n$. 15) On isotope substitution $k$ does not change, $\\omega\\propto\\frac{1}{\\sqrt{\\mu}}$. 16) $D_0=D_e-\\frac{\\hbar\\omega}{2}$: the measured dissociation energy is smaller than the well depth. 17) For $kT\\ll\\hbar\\omega$, $\\left\\langle E\\right\\rangle\\to\\frac{\\hbar\\omega}{2}$, not zero; for $kT\\gg\\hbar\\omega$ it is $kT$, not $\\frac{1}{2}kT$. 18) The Landau spacing $\\hbar\\omega_c\\propto B$, inversely proportional to the mass. 19) A constant force does not change the level spacing, it only shifts all the levels. 20) The probability of finding the particle in the forbidden region in the ground state is about $16$ percent — not zero."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Gamiltonian",
+    "ru": "Гамильтониан",
+    "en": "Hamiltonian",
+    "m": "\\hat H=\\frac{\\hat p^2}{2m}+\\frac{1}{2}m\\omega^2\\hat x^2"
+   },
+   {
+    "uz": "Xarakterli uzunlik",
+    "ru": "Характерная длина",
+    "en": "Characteristic length",
+    "m": "x_0=\\sqrt{\\frac{\\hbar}{m\\omega}},\\quad \\xi=\\frac{x}{x_0}"
+   },
+   {
+    "uz": "Energiya sathlari",
+    "ru": "Уровни энергии",
+    "en": "Energy levels",
+    "m": "E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega"
+   },
+   {
+    "uz": "Ermit ko'phadlari",
+    "ru": "Многочлены Эрмита",
+    "en": "Hermite polynomials",
+    "m": "H_{n+1}=2\\xi H_n-2nH_{n-1}"
+   },
+   {
+    "uz": "To'lqin funksiyalari",
+    "ru": "Волновые функции",
+    "en": "Wave functions",
+    "m": "\\psi_n=\\frac{1}{\\sqrt{2^nn!}}\\left(\\frac{m\\omega}{\\pi\\hbar}\\right)^{1/4}H_ne^{-\\xi^2/2}"
+   },
+   {
+    "uz": "Qaytish nuqtalari",
+    "ru": "Точки поворота",
+    "en": "Turning points",
+    "m": "A_n=x_0\\sqrt{2n+1}"
+   },
+   {
+    "uz": "Narvon operatorlari",
+    "ru": "Лестничные операторы",
+    "en": "Ladder operators",
+    "m": "a=\\frac{1}{\\sqrt{2}}\\left(\\xi+\\frac{d}{d\\xi}\\right),\\quad \\left[a,a^{\\dagger}\\right]=1"
+   },
+   {
+    "uz": "Gamiltonian a orqali",
+    "ru": "Гамильтониан через a",
+    "en": "Hamiltonian via a",
+    "m": "\\hat H=\\hbar\\omega\\left(\\hat N+\\frac{1}{2}\\right),\\quad \\hat N=a^{\\dagger}a"
+   },
+   {
+    "uz": "Narvon qoidalari",
+    "ru": "Лестничные правила",
+    "en": "Ladder rules",
+    "m": "a\\left|n\\right\\rangle=\\sqrt{n}\\left|n-1\\right\\rangle,\\quad a^{\\dagger}\\left|n\\right\\rangle=\\sqrt{n+1}\\left|n+1\\right\\rangle"
+   },
+   {
+    "uz": "Koordinata va impuls",
+    "ru": "Координата и импульс",
+    "en": "Position and momentum",
+    "m": "\\hat x=\\frac{x_0}{\\sqrt{2}}\\left(a+a^{\\dagger}\\right),\\quad \\hat p=\\frac{i\\hbar}{\\sqrt{2}x_0}\\left(a^{\\dagger}-a\\right)"
+   },
+   {
+    "uz": "Kvadratlar o'rtachasi",
+    "ru": "Средние квадраты",
+    "en": "Mean squares",
+    "m": "\\left\\langle x^2\\right\\rangle=\\left(n+\\frac{1}{2}\\right)x_0^2,\\quad \\left\\langle p^2\\right\\rangle=\\left(n+\\frac{1}{2}\\right)\\frac{\\hbar^2}{x_0^2}"
+   },
+   {
+    "uz": "Noaniqlik",
+    "ru": "Неопределённость",
+    "en": "Uncertainty",
+    "m": "\\sigma_x\\sigma_p=\\left(n+\\frac{1}{2}\\right)\\hbar"
+   },
+   {
+    "uz": "Tanlash qoidasi",
+    "ru": "Правило отбора",
+    "en": "Selection rule",
+    "m": "\\left\\langle m\\right|\\hat x\\left|n\\right\\rangle\\neq0\\ \\Leftrightarrow\\ m=n\\pm1"
+   },
+   {
+    "uz": "Kogerent holat",
+    "ru": "Когерентное состояние",
+    "en": "Coherent state",
+    "m": "a\\left|\\alpha\\right\\rangle=\\alpha\\left|\\alpha\\right\\rangle,\\quad P_n=e^{-\\bar n}\\frac{\\bar n^n}{n!}"
+   },
+   {
+    "uz": "3D izotrop ossilyator",
+    "ru": "Изотропный 3D-осциллятор",
+    "en": "Isotropic 3D oscillator",
+    "m": "E_N=\\left(N+\\frac{3}{2}\\right)\\hbar\\omega,\\quad g_N=\\frac{\\left(N+1\\right)\\left(N+2\\right)}{2}"
+   },
+   {
+    "uz": "Molekula chastotasi",
+    "ru": "Частота молекулы",
+    "en": "Molecular frequency",
+    "m": "\\omega=\\sqrt{\\frac{k}{\\mu}},\\quad \\mu=\\frac{m_1m_2}{m_1+m_2}"
+   },
+   {
+    "uz": "Morze sathlari",
+    "ru": "Уровни Морзе",
+    "en": "Morse levels",
+    "m": "E_n=\\hbar\\omega\\left(n+\\frac{1}{2}\\right)-\\frac{\\left[\\hbar\\omega\\left(n+\\frac{1}{2}\\right)\\right]^2}{4D_e}"
+   },
+   {
+    "uz": "Plank taqsimoti",
+    "ru": "Распределение Планка",
+    "en": "Planck distribution",
+    "m": "\\left\\langle n\\right\\rangle=\\frac{1}{e^{\\hbar\\omega/kT}-1}"
+   },
+   {
+    "uz": "Issiqlik sig'imi",
+    "ru": "Теплоёмкость",
+    "en": "Heat capacity",
+    "m": "C=k\\frac{x^2e^{x}}{\\left(e^{x}-1\\right)^2},\\quad x=\\frac{\\hbar\\omega}{kT}"
+   },
+   {
+    "uz": "Landau sathlari",
+    "ru": "Уровни Ландау",
+    "en": "Landau levels",
+    "m": "E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega_c,\\quad \\omega_c=\\frac{\\left|q\\right|B}{m}"
+   },
+   {
+    "uz": "Siljigan ossilyator",
+    "ru": "Сдвинутый осциллятор",
+    "en": "Shifted oscillator",
+    "m": "E_n=\\left(n+\\frac{1}{2}\\right)\\hbar\\omega-\\frac{F^2}{2m\\omega^2}"
+   },
+   {
+    "uz": "Keskin o'zgarish",
+    "ru": "Внезапное изменение",
+    "en": "Sudden change",
+    "m": "P_0=\\frac{2\\sqrt{\\omega\\omega'}}{\\omega+\\omega'}"
+   }
+  ]
+ }
+]
