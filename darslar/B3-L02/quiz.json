@@ -1,0 +1,1102 @@
+[
+ {
+  "id": "B3-L02-Q01",
+  "question_en": "Which matrices are Hermitian? 1) $\\begin{pmatrix}1&i\\\\-i&2\\end{pmatrix}$; 2) $\\begin{pmatrix}0&i\\\\i&0\\end{pmatrix}$; 3) $\\begin{pmatrix}2&1+i\\\\1+i&3\\end{pmatrix}$; 4) $\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}$.",
+  "question_uz": "Qaysi matritsalar Ermit? 1) $\\begin{pmatrix}1&i\\\\-i&2\\end{pmatrix}$; 2) $\\begin{pmatrix}0&i\\\\i&0\\end{pmatrix}$; 3) $\\begin{pmatrix}2&1+i\\\\1+i&3\\end{pmatrix}$; 4) $\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}$.",
+  "question_ru": "Какие матрицы эрмитовы? 1) $\\begin{pmatrix}1&i\\\\-i&2\\end{pmatrix}$; 2) $\\begin{pmatrix}0&i\\\\i&0\\end{pmatrix}$; 3) $\\begin{pmatrix}2&1+i\\\\1+i&3\\end{pmatrix}$; 4) $\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}$.",
+  "options": [
+   "(A) $1,\\ 2$",
+   "(B) $1,\\ 4$",
+   "(C) $2,\\ 3$",
+   "(D) $3,\\ 4$",
+   "(E) $1,\\ 3,\\ 4$"
+  ],
+  "correct": 1,
+  "explanation_200": "To'g'ri: B. Ermit shart: A21 = A12*. 1 va 4 da bajariladi; 2 da i ≠ (i)*, 3 da 1+i ≠ (1+i)* = 1−i.\nAsos: A† = A.",
+  "full_solution": {
+   "uz": [
+    "Diagonalga simmetrik elementlar qo'shma bo'lishi kerak: $$1:\\ -i=i^*;\\quad 2:\\ i\\neq\\left(i\\right)^*;\\quad 3:\\ 1+i\\neq1-i;\\quad 4:\\ i=\\left(-i\\right)^*$$"
+   ],
+   "ru": [
+    "Элементы, симметричные относительно диагонали, должны быть сопряжены: $$1:\\ -i=i^*;\\quad 2:\\ i\\neq\\left(i\\right)^*;\\quad 3:\\ 1+i\\neq1-i;\\quad 4:\\ i=\\left(-i\\right)^*$$"
+   ],
+   "en": [
+    "Elements symmetric about the diagonal must be conjugate: $$1:\\ -i=i^*;\\quad 2:\\ i\\neq\\left(i\\right)^*;\\quad 3:\\ 1+i\\neq1-i;\\quad 4:\\ i=\\left(-i\\right)^*$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ermit matritsa: $A_{21}=A_{12}^*$",
+    "ru": "Эрмитова матрица: $A_{21}=A_{12}^*$",
+    "en": "Hermitian matrix: $A_{21}=A_{12}^*$"
+   }
+  ],
+  "distractors": {
+   "A": "2-matritsa anti-Ermit",
+   "C": "simmetrik, lekin qo'shma emas",
+   "D": "3-matritsada qo'shma olinmagan",
+   "E": "3-matritsa Ermit emas"
+  },
+  "distractors_ru": {
+   "A": "матрица 2 антиэрмитова",
+   "C": "симметричны, но не сопряжены",
+   "D": "в матрице 3 нет сопряжения",
+   "E": "матрица 3 не эрмитова"
+  },
+  "distractors_en": {
+   "A": "matrix 2 is anti-Hermitian",
+   "C": "symmetric but not conjugate",
+   "D": "matrix 3 lacks conjugation",
+   "E": "matrix 3 is not Hermitian"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q01",
+  "source": "original (B3-L02, Q01)"
+ },
+ {
+  "id": "B3-L02-Q02",
+  "question_en": "What are the eigenvalues of the matrix $\\begin{pmatrix}1&2\\\\2&1\\end{pmatrix}$?",
+  "question_uz": "Matritsa $\\begin{pmatrix}1&2\\\\2&1\\end{pmatrix}$ ning xos qiymatlari qaysilar?",
+  "question_ru": "Каковы собственные значения матрицы $\\begin{pmatrix}1&2\\\\2&1\\end{pmatrix}$?",
+  "options": [
+   "(A) $1,\\ 1$",
+   "(B) $2,\\ -2$",
+   "(C) $3,\\ -1$",
+   "(D) $2,\\ 0$",
+   "(E) $3,\\ 1$"
+  ],
+  "correct": 2,
+  "explanation_200": "To'g'ri: C. Iz 2, determinant 1 − 4 = −3; yig'indisi 2, ko'paytmasi −3 bo'lgan sonlar 3 va −1.\nAsos: iz va determinant.",
+  "full_solution": {
+   "uz": [
+    "Iz va determinant: $$\\lambda_1+\\lambda_2=2,\\quad \\lambda_1\\lambda_2=1-4=-3\\ \\Rightarrow\\ \\lambda=3,\\ -1$$"
+   ],
+   "ru": [
+    "След и определитель: $$\\lambda_1+\\lambda_2=2,\\quad \\lambda_1\\lambda_2=1-4=-3\\ \\Rightarrow\\ \\lambda=3,\\ -1$$"
+   ],
+   "en": [
+    "Trace and determinant: $$\\lambda_1+\\lambda_2=2,\\quad \\lambda_1\\lambda_2=1-4=-3\\ \\Rightarrow\\ \\lambda=3,\\ -1$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Iz va determinant: $\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\ \\lambda_1\\lambda_2=\\det A$",
+    "ru": "След и определитель: $\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\ \\lambda_1\\lambda_2=\\det A$",
+    "en": "Trace and determinant: $\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\ \\lambda_1\\lambda_2=\\det A$"
+   }
+  ],
+  "distractors": {
+   "A": "diagonal elementlar olingan",
+   "B": "diagonaldan tashqari elementlar olingan",
+   "D": "iz to'g'ri, determinant noto'g'ri",
+   "E": "determinant ishorasi xato"
+  },
+  "distractors_ru": {
+   "A": "взяты диагональные элементы",
+   "B": "взяты внедиагональные элементы",
+   "D": "след верен, определитель нет",
+   "E": "ошибка в знаке определителя"
+  },
+  "distractors_en": {
+   "A": "the diagonal elements",
+   "B": "the off-diagonal elements",
+   "D": "right trace, wrong determinant",
+   "E": "sign error in the determinant"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q02",
+  "source": "original (B3-L02, Q02)"
+ },
+ {
+  "id": "B3-L02-Q03",
+  "question_en": "The wave function is $\\psi=Ax^2e^{-x/a}$ for $x\\geq0$ and zero for $x<0$. What is the normalization constant $A$? $\\int_0^{\\infty}x^ne^{-x/c}dx=n!\\,c^{n+1}$.",
+  "question_uz": "To'lqin funksiyasi $x\\geq0$ da $\\psi=Ax^2e^{-x/a}$, $x<0$ da nol. Normallash konstantasi $A$ qanday? $\\int_0^{\\infty}x^ne^{-x/c}dx=n!\\,c^{n+1}$.",
+  "question_ru": "Волновая функция $\\psi=Ax^2e^{-x/a}$ при $x\\geq0$ и нуль при $x<0$. Какова нормировочная константа $A$? $\\int_0^{\\infty}x^ne^{-x/c}dx=n!\\,c^{n+1}$.",
+  "options": [
+   "(A) $\\frac{2}{\\sqrt3\\,a^{5/2}}$",
+   "(B) $\\frac{4}{a^{5/2}}$",
+   "(C) $\\sqrt{\\frac{2}{a}}$",
+   "(D) $\\frac{4}{3a^5}$",
+   "(E) $\\frac{\\sqrt3}{2a^{5/2}}$"
+  ],
+  "correct": 0,
+  "explanation_200": "To'g'ri: A. ∫x⁴·exp(−2x/a)dx = 4!·(a/2)⁵ = 3a⁵/4; A² = 4/(3a⁵), A = 2/(√3·a²·√a).\nAsos: normallash sharti.",
+  "full_solution": {
+   "uz": [
+    "$\\left|\\psi\\right|^2=A^2x^4e^{-2x/a}$, $c=\\frac{a}{2}$, $n=4$: $$A^2\\cdot4!\\left(\\frac{a}{2}\\right)^5=A^2\\frac{3a^5}{4}=1\\ \\Rightarrow\\ A=\\frac{2}{\\sqrt3\\,a^{5/2}}$$"
+   ],
+   "ru": [
+    "$\\left|\\psi\\right|^2=A^2x^4e^{-2x/a}$, $c=\\frac{a}{2}$, $n=4$: $$A^2\\cdot4!\\left(\\frac{a}{2}\\right)^5=A^2\\frac{3a^5}{4}=1\\ \\Rightarrow\\ A=\\frac{2}{\\sqrt3\\,a^{5/2}}$$"
+   ],
+   "en": [
+    "$\\left|\\psi\\right|^2=A^2x^4e^{-2x/a}$, $c=\\frac{a}{2}$, $n=4$: $$A^2\\cdot4!\\left(\\frac{a}{2}\\right)^5=A^2\\frac{3a^5}{4}=1\\ \\Rightarrow\\ A=\\frac{2}{\\sqrt3\\,a^{5/2}}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Normallash sharti: $\\int\\left|\\psi\\right|^2dx=1$",
+    "ru": "Условие нормировки: $\\int\\left|\\psi\\right|^2dx=1$",
+    "en": "Normalization condition: $\\int\\left|\\psi\\right|^2dx=1$"
+   }
+  ],
+  "distractors": {
+   "B": "4! o'rniga 2! olingan",
+   "C": "x kvadrati tashlab yuborilgan",
+   "D": "ildiz olinmagan",
+   "E": "nisbat teskari olingan"
+  },
+  "distractors_ru": {
+   "B": "взято 2! вместо 4!",
+   "C": "отброшен множитель x в квадрате",
+   "D": "не извлечён корень",
+   "E": "отношение перевёрнуто"
+  },
+  "distractors_en": {
+   "B": "2! used instead of 4!",
+   "C": "the x squared factor dropped",
+   "D": "square root not taken",
+   "E": "the ratio inverted"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q03",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.2 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-Q04",
+  "question_en": "The probability density is $\\left|\\psi\\right|^2\\propto e^{-x^2/b^2}$. What is $\\langle x^4\\rangle$? Hint: differentiate $\\int e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}}$ with respect to $\\alpha$.",
+  "question_uz": "Ehtimollik zichligi $\\left|\\psi\\right|^2\\propto e^{-x^2/b^2}$. $\\langle x^4\\rangle$ nimaga teng? Ko'rsatma: $\\int e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}}$ ni $\\alpha$ bo'yicha differensiallang.",
+  "question_ru": "Плотность вероятности $\\left|\\psi\\right|^2\\propto e^{-x^2/b^2}$. Чему равно $\\langle x^4\\rangle$? Указание: продифференцируйте $\\int e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}}$ по $\\alpha$.",
+  "options": [
+   "(A) $\\frac{b^4}{4}$",
+   "(B) $\\frac{3b^4}{2}$",
+   "(C) $\\frac{b^4}{2}$",
+   "(D) $\\frac{3b^4}{4}$",
+   "(E) $3b^4$"
+  ],
+  "correct": 3,
+  "explanation_200": "To'g'ri: D. Ikki marta differensiallab ∫x⁴·exp(−αx²)dx = (3/4α²)√(π/α); ⟨x⁴⟩ = 3/(4α²) = 3b⁴/4.\nAsos: Gauss integrali.",
+  "full_solution": {
+   "uz": [
+    "Ikki marta $\\alpha$ bo'yicha differensiallaymiz va normallaymiz, $\\alpha=\\frac{1}{b^2}$: $$\\langle x^4\\rangle=\\frac{3}{4\\alpha^2}=\\frac{3b^4}{4}$$"
+   ],
+   "ru": [
+    "Дважды дифференцируем по $\\alpha$ и нормируем, $\\alpha=\\frac{1}{b^2}$: $$\\langle x^4\\rangle=\\frac{3}{4\\alpha^2}=\\frac{3b^4}{4}$$"
+   ],
+   "en": [
+    "Differentiate twice with respect to $\\alpha$ and normalize, $\\alpha=\\frac{1}{b^2}$: $$\\langle x^4\\rangle=\\frac{3}{4\\alpha^2}=\\frac{3b^4}{4}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gauss integrali: $\\int e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}}$",
+    "ru": "Гауссов интеграл: $\\int e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}}$",
+    "en": "Gaussian integral: $\\int e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}}$"
+   }
+  ],
+  "distractors": {
+   "A": "⟨x²⟩ kvadrati olingan",
+   "B": "bitta 1/2 ko'paytuvchi tushib qolgan",
+   "C": "faqat bir marta differensiallangan",
+   "E": "σ² = b² deb olingan"
+  },
+  "distractors_ru": {
+   "A": "взят квадрат ⟨x²⟩",
+   "B": "потерян один множитель 1/2",
+   "C": "продифференцировано один раз",
+   "E": "принято σ² = b²"
+  },
+  "distractors_en": {
+   "A": "the square of ⟨x²⟩",
+   "B": "one factor 1/2 dropped",
+   "C": "differentiated only once",
+   "E": "assumed σ² = b²"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q04",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.2 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-Q05",
+  "question_en": "What is the commutator $\\left[\\hat x,\\hat p^2\\right]$?",
+  "question_uz": "Kommutator $\\left[\\hat x,\\hat p^2\\right]$ nimaga teng?",
+  "question_ru": "Чему равен коммутатор $\\left[\\hat x,\\hat p^2\\right]$?",
+  "options": [
+   "(A) $0$",
+   "(B) $i\\hbar$",
+   "(C) $-2i\\hbar\\hat p$",
+   "(D) $i\\hbar\\hat p^2$",
+   "(E) $2i\\hbar\\hat p$"
+  ],
+  "correct": 4,
+  "explanation_200": "To'g'ri: E. Leybnits qoidasi: [x,p²] = [x,p]p + p[x,p] = 2iħp.\nAsos: [x, p] = iħ.",
+  "full_solution": {
+   "uz": [
+    "Leybnits qoidasi: $$\\left[\\hat x,\\hat p^2\\right]=\\left[\\hat x,\\hat p\\right]\\hat p+\\hat p\\left[\\hat x,\\hat p\\right]=2i\\hbar\\hat p$$"
+   ],
+   "ru": [
+    "Правило Лейбница: $$\\left[\\hat x,\\hat p^2\\right]=\\left[\\hat x,\\hat p\\right]\\hat p+\\hat p\\left[\\hat x,\\hat p\\right]=2i\\hbar\\hat p$$"
+   ],
+   "en": [
+    "The Leibniz rule: $$\\left[\\hat x,\\hat p^2\\right]=\\left[\\hat x,\\hat p\\right]\\hat p+\\hat p\\left[\\hat x,\\hat p\\right]=2i\\hbar\\hat p$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Leybnits qoidasi: $\\left[\\hat A,\\hat B\\hat C\\right]=\\left[\\hat A,\\hat B\\right]\\hat C+\\hat B\\left[\\hat A,\\hat C\\right]$",
+    "ru": "Правило Лейбница: $\\left[\\hat A,\\hat B\\hat C\\right]=\\left[\\hat A,\\hat B\\right]\\hat C+\\hat B\\left[\\hat A,\\hat C\\right]$",
+    "en": "Leibniz rule: $\\left[\\hat A,\\hat B\\hat C\\right]=\\left[\\hat A,\\hat B\\right]\\hat C+\\hat B\\left[\\hat A,\\hat C\\right]$"
+   }
+  ],
+  "distractors": {
+   "A": "operatorlar kommutativ deb olingan",
+   "B": "faqat [x, p] olingan",
+   "C": "ishora xato",
+   "D": "p² ko'paytirilgan"
+  },
+  "distractors_ru": {
+   "A": "операторы считаются коммутирующими",
+   "B": "взят только [x, p]",
+   "C": "ошибка в знаке",
+   "D": "умножено на p²"
+  },
+  "distractors_en": {
+   "A": "assumes the operators commute",
+   "B": "only [x, p] taken",
+   "C": "sign error",
+   "D": "multiplied by p²"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q05",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.3 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-Q06",
+  "question_en": "A particle in the infinite well is in the state $\\psi=\\frac{1}{\\sqrt6}\\left(2\\psi_1-i\\psi_2+\\psi_3\\right)$, $E_n=n^2E_1$. What is the average energy $\\langle E\\rangle$?",
+  "question_uz": "Cheksiz o'radagi zarra holati $\\psi=\\frac{1}{\\sqrt6}\\left(2\\psi_1-i\\psi_2+\\psi_3\\right)$, $E_n=n^2E_1$. O'rtacha energiya $\\langle E\\rangle$ qancha?",
+  "question_ru": "Состояние частицы в бесконечной яме $\\psi=\\frac{1}{\\sqrt6}\\left(2\\psi_1-i\\psi_2+\\psi_3\\right)$, $E_n=n^2E_1$. Какова средняя энергия $\\langle E\\rangle$?",
+  "options": [
+   "(A) $\\frac{5}{2}E_1$",
+   "(B) $\\frac{17}{6}E_1$",
+   "(C) $\\frac{9}{4}E_1$",
+   "(D) $\\frac{3}{2}E_1$",
+   "(E) $\\frac{17}{3}E_1$"
+  ],
+  "correct": 1,
+  "explanation_200": "To'g'ri: B. Ehtimolliklar 4/6, 1/6, 1/6; ⟨E⟩ = (4·1 + 1·4 + 1·9)/6 E1 = 17/6 E1.\nAsos: P = |c|².",
+  "full_solution": {
+   "uz": [
+    "Ehtimolliklar $\\left|c_n\\right|^2$ va o'rtacha: $$\\langle E\\rangle=\\frac{4\\cdot1+1\\cdot4+1\\cdot9}{6}E_1=\\frac{17}{6}E_1$$"
+   ],
+   "ru": [
+    "Вероятности $\\left|c_n\\right|^2$ и среднее: $$\\langle E\\rangle=\\frac{4\\cdot1+1\\cdot4+1\\cdot9}{6}E_1=\\frac{17}{6}E_1$$"
+   ],
+   "en": [
+    "Probabilities $\\left|c_n\\right|^2$ and the average: $$\\langle E\\rangle=\\frac{4\\cdot1+1\\cdot4+1\\cdot9}{6}E_1=\\frac{17}{6}E_1$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Koeffitsiyent ehtimolligi: $P_n=\\left|c_n\\right|^2$",
+    "ru": "Вероятность коэффициента: $P_n=\\left|c_n\\right|^2$",
+    "en": "Probability of a coefficient: $P_n=\\left|c_n\\right|^2$"
+   }
+  ],
+  "distractors": {
+   "A": "koeffitsiyentlar kvadratga ko'tarilmagan",
+   "C": "|−i|² = −1 deb olingan",
+   "D": "energiya n ga proporsional deb olingan",
+   "E": "6 o'rniga 3 ga bo'lingan"
+  },
+  "distractors_ru": {
+   "A": "коэффициенты не возведены в квадрат",
+   "C": "принято |−i|² = −1",
+   "D": "энергия считается пропорциональной n",
+   "E": "поделено на 3 вместо 6"
+  },
+  "distractors_en": {
+   "A": "coefficients not squared",
+   "C": "took |−i|² = −1",
+   "D": "energy taken proportional to n",
+   "E": "divided by 3 instead of 6"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q06",
+  "source": "original (B3-L02, Q06)"
+ },
+ {
+  "id": "B3-L02-Q07",
+  "question_en": "The Fourier transform of $\\psi_0\\left(x\\right)$ is $\\phi_0\\left(k\\right)$. What is the Fourier transform of the shifted function $\\psi\\left(x\\right)=\\psi_0\\left(x-x_0\\right)$? ($\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx$)",
+  "question_uz": "$\\psi_0\\left(x\\right)$ ning Furye obrazi $\\phi_0\\left(k\\right)$. Siljigan funksiya $\\psi\\left(x\\right)=\\psi_0\\left(x-x_0\\right)$ ning Furye obrazi qanday? ($\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx$)",
+  "question_ru": "Образ Фурье функции $\\psi_0\\left(x\\right)$ равен $\\phi_0\\left(k\\right)$. Каков образ Фурье сдвинутой функции $\\psi\\left(x\\right)=\\psi_0\\left(x-x_0\\right)$? ($\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx$)",
+  "options": [
+   "(A) $\\phi_0\\left(k\\right)$",
+   "(B) $e^{ikx_0}\\phi_0\\left(k\\right)$",
+   "(C) $e^{-ikx_0}\\phi_0\\left(k\\right)$",
+   "(D) $\\phi_0\\left(k-x_0\\right)$",
+   "(E) $\\phi_0\\left(k+x_0\\right)$"
+  ],
+  "correct": 2,
+  "explanation_200": "To'g'ri: C. u = x − x0 almashtirish: exp(−ikx) = exp(−ikx0)·exp(−iku). Siljish faza beradi, |φ|² o'zgarmaydi.\nAsos: Furye almashtirishi.",
+  "full_solution": {
+   "uz": [
+    "$u=x-x_0$ almashtirish: $$\\phi=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi_0\\left(u\\right)e^{-ik\\left(u+x_0\\right)}du=e^{-ikx_0}\\phi_0\\left(k\\right)$$"
+   ],
+   "ru": [
+    "Замена $u=x-x_0$: $$\\phi=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi_0\\left(u\\right)e^{-ik\\left(u+x_0\\right)}du=e^{-ikx_0}\\phi_0\\left(k\\right)$$"
+   ],
+   "en": [
+    "The substitution $u=x-x_0$: $$\\phi=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi_0\\left(u\\right)e^{-ik\\left(u+x_0\\right)}du=e^{-ikx_0}\\phi_0\\left(k\\right)$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Furye almashtirishi: $\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx$",
+    "ru": "Преобразование Фурье: $\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx$",
+    "en": "Fourier transform: $\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx$"
+   }
+  ],
+  "distractors": {
+   "A": "faza ko'paytuvchisi unutilgan",
+   "B": "faza ishorasi xato",
+   "D": "siljish k fazosiga ko'chirilgan",
+   "E": "siljish k fazosiga, ishora xato"
+  },
+  "distractors_ru": {
+   "A": "забыт фазовый множитель",
+   "B": "неверный знак фазы",
+   "D": "сдвиг перенесён в k",
+   "E": "сдвиг в k со знаком"
+  },
+  "distractors_en": {
+   "A": "the phase factor forgotten",
+   "B": "wrong sign of the phase",
+   "D": "shift moved into k-space",
+   "E": "shift in k, sign error"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q07",
+  "source": "original (B3-L02, Q07)"
+ },
+ {
+  "id": "B3-L02-Q08",
+  "question_en": "What is $\\int_{-\\infty}^{\\infty}\\delta\\left(2x-3\\right)\\left(x^2+1\\right)dx$?",
+  "question_uz": "$\\int_{-\\infty}^{\\infty}\\delta\\left(2x-3\\right)\\left(x^2+1\\right)dx$ nimaga teng?",
+  "question_ru": "Чему равен $\\int_{-\\infty}^{\\infty}\\delta\\left(2x-3\\right)\\left(x^2+1\\right)dx$?",
+  "options": [
+   "(A) $\\frac{13}{8}$",
+   "(B) $\\frac{13}{4}$",
+   "(C) $10$",
+   "(D) $5$",
+   "(E) $\\frac{13}{2}$"
+  ],
+  "correct": 0,
+  "explanation_200": "To'g'ri: A. δ(2x − 3) = δ(x − 3/2)/2; (9/4 + 1)/2 = 13/8.\nAsos: δ(ax) = δ(x)/|a|.",
+  "full_solution": {
+   "uz": [
+    "Masshtab qoidasi va filtrlash: $$\\delta\\left(2x-3\\right)=\\frac{1}{2}\\delta\\left(x-\\frac{3}{2}\\right)\\ \\Rightarrow\\ \\frac{1}{2}\\left(\\frac{9}{4}+1\\right)=\\frac{13}{8}$$"
+   ],
+   "ru": [
+    "Правило масштаба и фильтрация: $$\\delta\\left(2x-3\\right)=\\frac{1}{2}\\delta\\left(x-\\frac{3}{2}\\right)\\ \\Rightarrow\\ \\frac{1}{2}\\left(\\frac{9}{4}+1\\right)=\\frac{13}{8}$$"
+   ],
+   "en": [
+    "The scaling rule and sifting: $$\\delta\\left(2x-3\\right)=\\frac{1}{2}\\delta\\left(x-\\frac{3}{2}\\right)\\ \\Rightarrow\\ \\frac{1}{2}\\left(\\frac{9}{4}+1\\right)=\\frac{13}{8}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Delta funksiya masshtabi: $\\delta\\left(ax\\right)=\\frac{\\delta\\left(x\\right)}{\\left|a\\right|}$",
+    "ru": "Масштаб дельта-функции: $\\delta\\left(ax\\right)=\\frac{\\delta\\left(x\\right)}{\\left|a\\right|}$",
+    "en": "Delta-function scaling: $\\delta\\left(ax\\right)=\\frac{\\delta\\left(x\\right)}{\\left|a\\right|}$"
+   }
+  ],
+  "distractors": {
+   "B": "1/2 ko'paytuvchi unutilgan",
+   "C": "x = 3 da hisoblangan",
+   "D": "x = 3 da va 1/2 bilan",
+   "E": "2 ga bo'lish o'rniga ko'paytirilgan"
+  },
+  "distractors_ru": {
+   "B": "забыт множитель 1/2",
+   "C": "посчитано при x = 3",
+   "D": "при x = 3 и с 1/2",
+   "E": "умножено на 2 вместо деления"
+  },
+  "distractors_en": {
+   "B": "the factor 1/2 forgotten",
+   "C": "evaluated at x = 3",
+   "D": "at x = 3 with 1/2",
+   "E": "multiplied by 2 instead of dividing"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q08",
+  "source": "original (B3-L02, Q08)"
+ },
+ {
+  "id": "B3-L02-Q09",
+  "question_en": "A $2\\times2$ Hermitian matrix has trace $5$ and determinant $6$. What are its eigenvalues?",
+  "question_uz": "$2\\times2$ Ermit matritsaning izi $5$, determinanti $6$. Uning xos qiymatlari qaysilar?",
+  "question_ru": "След эрмитовой матрицы $2\\times2$ равен $5$, определитель $6$. Каковы её собственные значения?",
+  "options": [
+   "(A) $1,\\ 4$",
+   "(B) $5,\\ 6$",
+   "(C) $-2,\\ -3$",
+   "(D) $2,\\ 3$",
+   "(E) $1,\\ 6$"
+  ],
+  "correct": 3,
+  "explanation_200": "To'g'ri: D. λ² − 5λ + 6 = 0, λ = 2 va 3: yig'indi 5, ko'paytma 6.\nAsos: λ1 + λ2 = tr A, λ1·λ2 = det A.",
+  "full_solution": {
+   "uz": [
+    "Xarakteristik tenglama iz va determinant orqali: $$\\lambda^2-5\\lambda+6=0\\ \\Rightarrow\\ \\lambda=2,\\ 3$$"
+   ],
+   "ru": [
+    "Характеристическое уравнение через след и определитель: $$\\lambda^2-5\\lambda+6=0\\ \\Rightarrow\\ \\lambda=2,\\ 3$$"
+   ],
+   "en": [
+    "The characteristic equation via trace and determinant: $$\\lambda^2-5\\lambda+6=0\\ \\Rightarrow\\ \\lambda=2,\\ 3$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Iz va determinant: $\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\ \\lambda_1\\lambda_2=\\det A$",
+    "ru": "След и определитель: $\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\ \\lambda_1\\lambda_2=\\det A$",
+    "en": "Trace and determinant: $\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\ \\lambda_1\\lambda_2=\\det A$"
+   }
+  ],
+  "distractors": {
+   "A": "yig'indi 5, lekin ko'paytma 4",
+   "B": "iz va determinant xos qiymat deb olingan",
+   "C": "ishora xato",
+   "E": "ko'paytma 6, lekin yig'indi 7"
+  },
+  "distractors_ru": {
+   "A": "сумма 5, но произведение 4",
+   "B": "след и определитель приняты за собств. значения",
+   "C": "ошибка в знаке",
+   "E": "произведение 6, но сумма 7"
+  },
+  "distractors_en": {
+   "A": "sum 5 but product 4",
+   "B": "trace and determinant taken as eigenvalues",
+   "C": "sign error",
+   "E": "product 6 but sum 7"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q09",
+  "source": "original (B3-L02, Q09)"
+ },
+ {
+  "id": "B3-L02-Q10",
+  "question_en": "A spin state is $|\\psi\\rangle=\\frac{1}{2}\\begin{pmatrix}\\sqrt3\\\\i\\end{pmatrix}$. What is $\\langle\\sigma_y\\rangle$? $\\sigma_y=\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}$.",
+  "question_uz": "Spin holati $|\\psi\\rangle=\\frac{1}{2}\\begin{pmatrix}\\sqrt3\\\\i\\end{pmatrix}$. $\\langle\\sigma_y\\rangle$ qancha? $\\sigma_y=\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}$.",
+  "question_ru": "Спиновое состояние $|\\psi\\rangle=\\frac{1}{2}\\begin{pmatrix}\\sqrt3\\\\i\\end{pmatrix}$. Чему равно $\\langle\\sigma_y\\rangle$? $\\sigma_y=\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}$.",
+  "options": [
+   "(A) $0$",
+   "(B) $\\frac{1}{2}$",
+   "(C) $-\\frac{\\sqrt3}{2}$",
+   "(D) $i\\frac{\\sqrt3}{2}$",
+   "(E) $\\frac{\\sqrt3}{2}$"
+  ],
+  "correct": 4,
+  "explanation_200": "To'g'ri: E. σy|ψ⟩ = (1, i√3)/2; ⟨ψ|σy|ψ⟩ = (√3·1 + (−i)(i√3))/4 = √3/2 — haqiqiy, chunki σy Ermit.\nAsos: ⟨A⟩ = ⟨ψ|A|ψ⟩.",
+  "full_solution": {
+   "uz": [
+    "$\\sigma_y$ ni ta'sir ettiramiz va bra bilan ko'paytiramiz: $$\\langle\\sigma_y\\rangle=\\frac{1}{4}\\left(\\sqrt3\\cdot1+\\left(-i\\right)\\cdot i\\sqrt3\\right)=\\frac{\\sqrt3}{2}$$"
+   ],
+   "ru": [
+    "Действуем $\\sigma_y$ и умножаем на бра: $$\\langle\\sigma_y\\rangle=\\frac{1}{4}\\left(\\sqrt3\\cdot1+\\left(-i\\right)\\cdot i\\sqrt3\\right)=\\frac{\\sqrt3}{2}$$"
+   ],
+   "en": [
+    "Apply $\\sigma_y$ and multiply by the bra: $$\\langle\\sigma_y\\rangle=\\frac{1}{4}\\left(\\sqrt3\\cdot1+\\left(-i\\right)\\cdot i\\sqrt3\\right)=\\frac{\\sqrt3}{2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "O'rtacha qiymat: $\\langle A\\rangle=\\langle\\psi|\\hat A|\\psi\\rangle$",
+    "ru": "Среднее значение: $\\langle A\\rangle=\\langle\\psi|\\hat A|\\psi\\rangle$",
+    "en": "Average value: $\\langle A\\rangle=\\langle\\psi|\\hat A|\\psi\\rangle$"
+   }
+  ],
+  "distractors": {
+   "A": "⟨σx⟩ hisoblangan",
+   "B": "⟨σz⟩ hisoblangan",
+   "C": "bra da qo'shma olinmagan",
+   "D": "o'rtacha kompleks chiqmaydi"
+  },
+  "distractors_ru": {
+   "A": "вычислено ⟨σx⟩",
+   "B": "вычислено ⟨σz⟩",
+   "C": "в бра нет сопряжения",
+   "D": "среднее не бывает комплексным"
+  },
+  "distractors_en": {
+   "A": "⟨σx⟩ was computed",
+   "B": "⟨σz⟩ was computed",
+   "C": "no conjugation in the bra",
+   "D": "the average cannot be complex"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q10",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.4 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-Q11",
+  "question_en": "A particle in the infinite well is in its ground state. Approximately what is the probability of finding it in the middle third ($\\frac{L}{3}<x<\\frac{2L}{3}$)?",
+  "question_uz": "Cheksiz o'radagi zarra asosiy holatda. Uni o'rta uchdan birda ($\\frac{L}{3}<x<\\frac{2L}{3}$) topish ehtimolligi taxminan qancha?",
+  "question_ru": "Частица в бесконечной яме находится в основном состоянии. Какова примерно вероятность найти её в средней трети ($\\frac{L}{3}<x<\\frac{2L}{3}$)?",
+  "options": [
+   "(A) $0.33$",
+   "(B) $0.61$",
+   "(C) $0.50$",
+   "(D) $0.88$",
+   "(E) $0.20$"
+  ],
+  "correct": 1,
+  "explanation_200": "To'g'ri: B. P = (2/L)∫sin²(πx/L)dx = 1/3 + √3/(2π) ≈ 0.61 — klassik 1/3 dan katta, zarra markazda ko'proq.\nAsos: P = ∫|ψ|²dx.",
+  "full_solution": {
+   "uz": [
+    "Integral: $$P=\\frac{2}{L}\\int_{L/3}^{2L/3}\\sin^2\\frac{\\pi x}{L}dx=\\frac{1}{3}+\\frac{\\sqrt3}{2\\pi}\\approx0.61$$"
+   ],
+   "ru": [
+    "Интеграл: $$P=\\frac{2}{L}\\int_{L/3}^{2L/3}\\sin^2\\frac{\\pi x}{L}dx=\\frac{1}{3}+\\frac{\\sqrt3}{2\\pi}\\approx0.61$$"
+   ],
+   "en": [
+    "The integral: $$P=\\frac{2}{L}\\int_{L/3}^{2L/3}\\sin^2\\frac{\\pi x}{L}dx=\\frac{1}{3}+\\frac{\\sqrt3}{2\\pi}\\approx0.61$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ehtimollik: $P=\\int_a^b\\left|\\psi\\right|^2dx$",
+    "ru": "Вероятность: $P=\\int_a^b\\left|\\psi\\right|^2dx$",
+    "en": "Probability: $P=\\int_a^b\\left|\\psi\\right|^2dx$"
+   }
+  ],
+  "distractors": {
+   "A": "klassik tekis taqsimot",
+   "C": "yarim o'ra olingan",
+   "D": "1/2 ko'paytuvchi tushib qolgan",
+   "E": "chekkadagi uchdan bir olingan"
+  },
+  "distractors_ru": {
+   "A": "классическое равномерное распределение",
+   "C": "взята половина ямы",
+   "D": "потерян множитель 1/2",
+   "E": "взята крайняя треть"
+  },
+  "distractors_en": {
+   "A": "the classical uniform distribution",
+   "C": "half of the well",
+   "D": "a factor 1/2 dropped",
+   "E": "an end third"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q11",
+  "source": "OpenStax University Physics, 3-jild, 7-bob, 7.29 masalasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-Q12",
+  "question_en": "For a free particle $\\hat H=\\frac{\\hat p^2}{2m}$. What is the commutator $\\left[\\hat H,\\hat x\\right]$?",
+  "question_uz": "Erkin zarra uchun $\\hat H=\\frac{\\hat p^2}{2m}$. Kommutator $\\left[\\hat H,\\hat x\\right]$ nimaga teng?",
+  "question_ru": "Для свободной частицы $\\hat H=\\frac{\\hat p^2}{2m}$. Чему равен коммутатор $\\left[\\hat H,\\hat x\\right]$?",
+  "options": [
+   "(A) $0$",
+   "(B) $i\\hbar$",
+   "(C) $-\\frac{i\\hbar}{m}\\hat p$",
+   "(D) $\\frac{i\\hbar}{m}\\hat p$",
+   "(E) $\\frac{i\\hbar}{2m}\\hat p$"
+  ],
+  "correct": 2,
+  "explanation_200": "To'g'ri: C. [p², x] = −[x, p²] = −2iħp; bo'lib: [H, x] = −iħp/m.\nAsos: Leybnits qoidasi.",
+  "full_solution": {
+   "uz": [
+    "$\\left[\\hat p^2,\\hat x\\right]=-\\left[\\hat x,\\hat p^2\\right]$: $$\\left[\\hat H,\\hat x\\right]=\\frac{1}{2m}\\left(-2i\\hbar\\hat p\\right)=-\\frac{i\\hbar}{m}\\hat p$$"
+   ],
+   "ru": [
+    "$\\left[\\hat p^2,\\hat x\\right]=-\\left[\\hat x,\\hat p^2\\right]$: $$\\left[\\hat H,\\hat x\\right]=\\frac{1}{2m}\\left(-2i\\hbar\\hat p\\right)=-\\frac{i\\hbar}{m}\\hat p$$"
+   ],
+   "en": [
+    "$\\left[\\hat p^2,\\hat x\\right]=-\\left[\\hat x,\\hat p^2\\right]$: $$\\left[\\hat H,\\hat x\\right]=\\frac{1}{2m}\\left(-2i\\hbar\\hat p\\right)=-\\frac{i\\hbar}{m}\\hat p$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Leybnits qoidasi: $\\left[\\hat A,\\hat B\\hat C\\right]=\\left[\\hat A,\\hat B\\right]\\hat C+\\hat B\\left[\\hat A,\\hat C\\right]$",
+    "ru": "Правило Лейбница: $\\left[\\hat A,\\hat B\\hat C\\right]=\\left[\\hat A,\\hat B\\right]\\hat C+\\hat B\\left[\\hat A,\\hat C\\right]$",
+    "en": "Leibniz rule: $\\left[\\hat A,\\hat B\\hat C\\right]=\\left[\\hat A,\\hat B\\right]\\hat C+\\hat B\\left[\\hat A,\\hat C\\right]$"
+   }
+  ],
+  "distractors": {
+   "A": "H va x kommutativ deb olingan",
+   "B": "[x, p] olingan",
+   "D": "antisimmetriya unutilgan",
+   "E": "2 ko'paytuvchi unutilgan"
+  },
+  "distractors_ru": {
+   "A": "H и x считаются коммутирующими",
+   "B": "взят [x, p]",
+   "D": "забыта антисимметрия",
+   "E": "забыт множитель 2"
+  },
+  "distractors_en": {
+   "A": "assumes H and x commute",
+   "B": "took [x, p]",
+   "D": "antisymmetry forgotten",
+   "E": "the factor 2 forgotten"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q12",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.3 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-Q13",
+  "question_en": "The figure shows the probability density $\\rho\\left(x\\right)$ of a particle on $0\\leq x\\leq L$ (a triangle with its peak at $x=\\frac{L}{4}$). What is $\\langle x\\rangle$?",
+  "question_uz": "Rasmda zarraning $0\\leq x\\leq L$ oraliqdagi ehtimollik zichligi $\\rho\\left(x\\right)$ berilgan (uchburchak, cho'qqisi $x=\\frac{L}{4}$ da). $\\langle x\\rangle$ nimaga teng?",
+  "question_ru": "На рисунке дана плотность вероятности частицы $\\rho\\left(x\\right)$ на отрезке $0\\leq x\\leq L$ (треугольник с вершиной при $x=\\frac{L}{4}$). Чему равно $\\langle x\\rangle$?",
+  "options": [
+   "(A) $\\frac{5L}{12}$",
+   "(B) $\\frac{L}{4}$",
+   "(C) $\\frac{L}{2}$",
+   "(D) $\\frac{L}{3}$",
+   "(E) $\\frac{3L}{8}$"
+  ],
+  "correct": 0,
+  "explanation_200": "To'g'ri: A. Uchburchak zichlikning o'rtachasi uchlar abssissalarining o'rtachasi: (0 + L/4 + L)/3 = 5L/12.\nAsos: ⟨x⟩ = ∫xρdx.",
+  "full_solution": {
+   "uz": [
+    "Uchburchak taqsimotning o'rtachasi: $$\\langle x\\rangle=\\frac{0+\\frac{L}{4}+L}{3}=\\frac{5L}{12}$$"
+   ],
+   "ru": [
+    "Среднее треугольного распределения: $$\\langle x\\rangle=\\frac{0+\\frac{L}{4}+L}{3}=\\frac{5L}{12}$$"
+   ],
+   "en": [
+    "The mean of a triangular distribution: $$\\langle x\\rangle=\\frac{0+\\frac{L}{4}+L}{3}=\\frac{5L}{12}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kutilgan qiymat: $\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx$",
+    "ru": "Среднее значение: $\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx$",
+    "en": "Expectation value: $\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx$"
+   }
+  ],
+  "distractors": {
+   "B": "eng ehtimolli qiymat olingan",
+   "C": "oraliq o'rtasi olingan",
+   "D": "cho'qqi hisobga olinmagan",
+   "E": "cho'qqi va o'rtaning o'rtachasi"
+  },
+  "distractors_ru": {
+   "B": "взято наиболее вероятное значение",
+   "C": "взята середина отрезка",
+   "D": "не учтена вершина",
+   "E": "среднее вершины и середины"
+  },
+  "distractors_en": {
+   "B": "the most probable value",
+   "C": "the midpoint of the interval",
+   "D": "the peak ignored",
+   "E": "average of peak and midpoint"
+  },
+  "figure": "figures/B3-L02-Q13.png",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q13",
+  "source": "original (B3-L02, Q13 grafik)"
+ },
+ {
+  "id": "B3-L02-Q14",
+  "question_en": "The state is $|\\psi\\rangle=A\\left[\\left(1+i\\right)|1\\rangle+2|2\\rangle+i|3\\rangle\\right]$ (the $|n\\rangle$ are orthonormal). What is the probability of finding the system in $|2\\rangle$?",
+  "question_uz": "Holat $|\\psi\\rangle=A\\left[\\left(1+i\\right)|1\\rangle+2|2\\rangle+i|3\\rangle\\right]$ ($|n\\rangle$ — ortonormal). Sistemani $|2\\rangle$ holatda topish ehtimolligi qancha?",
+  "question_ru": "Состояние $|\\psi\\rangle=A\\left[\\left(1+i\\right)|1\\rangle+2|2\\rangle+i|3\\rangle\\right]$ ($|n\\rangle$ — ортонормированы). Какова вероятность найти систему в состоянии $|2\\rangle$?",
+  "options": [
+   "(A) $\\frac{2}{3}$",
+   "(B) $\\frac{4}{9}$",
+   "(C) $\\frac{2}{7}$",
+   "(D) $\\frac{4}{7}$",
+   "(E) $\\frac{4}{5}$"
+  ],
+  "correct": 3,
+  "explanation_200": "To'g'ri: D. Norma kvadrati |1+i|² + 4 + |i|² = 2 + 4 + 1 = 7; P = 4/7.\nAsos: P = |c|².",
+  "full_solution": {
+   "uz": [
+    "Normallash va ehtimollik: $$\\left|A\\right|^2\\left(2+4+1\\right)=1,\\qquad P_2=\\frac{4}{7}$$"
+   ],
+   "ru": [
+    "Нормировка и вероятность: $$\\left|A\\right|^2\\left(2+4+1\\right)=1,\\qquad P_2=\\frac{4}{7}$$"
+   ],
+   "en": [
+    "Normalization and probability: $$\\left|A\\right|^2\\left(2+4+1\\right)=1,\\qquad P_2=\\frac{4}{7}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Koeffitsiyent ehtimolligi: $P_n=\\left|c_n\\right|^2$",
+    "ru": "Вероятность коэффициента: $P_n=\\left|c_n\\right|^2$",
+    "en": "Probability of a coefficient: $P_n=\\left|c_n\\right|^2$"
+   }
+  ],
+  "distractors": {
+   "A": "|1+i|² = 1 deb olingan",
+   "B": "|1+i|² = 4 deb olingan",
+   "C": "amplituda kvadratga ko'tarilmagan",
+   "E": "|i|² = −1 deb olingan"
+  },
+  "distractors_ru": {
+   "A": "принято |1+i|² = 1",
+   "B": "принято |1+i|² = 4",
+   "C": "амплитуда не возведена в квадрат",
+   "E": "принято |i|² = −1"
+  },
+  "distractors_en": {
+   "A": "took |1+i|² = 1",
+   "B": "took |1+i|² = 4",
+   "C": "amplitude not squared",
+   "E": "took |i|² = −1"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q14",
+  "source": "original (B3-L02, Q14)"
+ },
+ {
+  "id": "B3-L02-Q15",
+  "question_en": "A particle is in a superposition of two stationary states with $E_1=1.0\\ \\mathrm{eV}$ and $E_2=4.0\\ \\mathrm{eV}$. With what period does $\\left|\\Psi\\left(x,t\\right)\\right|^2$ oscillate (in fs)? $h=4.14\\cdot10^{-15}\\ \\mathrm{eV\\cdot s}$.",
+  "question_uz": "Zarra ikki statsionar holat superpozitsiyasida: $E_1=1.0\\ \\mathrm{eV}$, $E_2=4.0\\ \\mathrm{eV}$. $\\left|\\Psi\\left(x,t\\right)\\right|^2$ qanday davr bilan tebranadi (fs da)? $h=4.14\\cdot10^{-15}\\ \\mathrm{eV\\cdot s}$.",
+  "question_ru": "Частица в суперпозиции двух стационарных состояний: $E_1=1.0\\ \\mathrm{eV}$, $E_2=4.0\\ \\mathrm{eV}$. С каким периодом колеблется $\\left|\\Psi\\left(x,t\\right)\\right|^2$ (в фс)? $h=4.14\\cdot10^{-15}\\ \\mathrm{eV\\cdot s}$.",
+  "options": [
+   "(A) $4.1$",
+   "(B) $0.83$",
+   "(C) $2.8$",
+   "(D) $1.0$",
+   "(E) $1.4$"
+  ],
+  "correct": 4,
+  "explanation_200": "To'g'ri: E. Aralash had cos((E2 − E1)t/ħ) bilan tebranadi; T = h/(E2 − E1) = 4.14/3 ≈ 1.4 fs.\nAsos: statsionar holat fazasi exp(−iEt/ħ).",
+  "full_solution": {
+   "uz": [
+    "Aralash hadning chastotasi energiyalar farqi bilan aniqlanadi: $$T=\\frac{h}{E_2-E_1}=\\frac{4.14\\cdot10^{-15}}{3.0}\\approx1.4\\cdot10^{-15}\\ \\mathrm{s}$$"
+   ],
+   "ru": [
+    "Частота перекрёстного члена задаётся разностью энергий: $$T=\\frac{h}{E_2-E_1}=\\frac{4.14\\cdot10^{-15}}{3.0}\\approx1.4\\cdot10^{-15}\\ \\mathrm{s}$$"
+   ],
+   "en": [
+    "The frequency of the cross term is set by the energy difference: $$T=\\frac{h}{E_2-E_1}=\\frac{4.14\\cdot10^{-15}}{3.0}\\approx1.4\\cdot10^{-15}\\ \\mathrm{s}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Statsionar holatlar evolyutsiyasi: $\\Psi=\\sum c_n\\psi_ne^{-iE_nt/\\hbar}$",
+    "ru": "Эволюция стационарных состояний: $\\Psi=\\sum c_n\\psi_ne^{-iE_nt/\\hbar}$",
+    "en": "Evolution of stationary states: $\\Psi=\\sum c_n\\psi_ne^{-iE_nt/\\hbar}$"
+   }
+  ],
+  "distractors": {
+   "A": "faqat E1 olingan",
+   "B": "energiyalar yig'indisi olingan",
+   "C": "davr ikki marta katta olingan",
+   "D": "faqat E2 olingan"
+  },
+  "distractors_ru": {
+   "A": "взята только E1",
+   "B": "взята сумма энергий",
+   "C": "период удвоен",
+   "D": "взята только E2"
+  },
+  "distractors_en": {
+   "A": "only E1 used",
+   "B": "the sum of energies used",
+   "C": "the period doubled",
+   "D": "only E2 used"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q15",
+  "source": "original (B3-L02, Q15)"
+ },
+ {
+  "id": "B3-L02-Q16",
+  "question_en": "$\\psi\\left(x\\right)$ is a real, even, normalized function. Which of the following integrals is **not** zero?",
+  "question_uz": "$\\psi\\left(x\\right)$ — haqiqiy, juft va normallangan funksiya. Quyidagi integrallardan qaysi biri nolga teng **emas**?",
+  "question_ru": "$\\psi\\left(x\\right)$ — действительная, чётная и нормированная функция. Какой из интегралов **не** равен нулю?",
+  "options": [
+   "(A) $\\int x\\psi^2dx$",
+   "(B) $\\int x^2\\psi^2dx$",
+   "(C) $\\int x^3\\psi^2dx$",
+   "(D) $\\int\\psi\\frac{d\\psi}{dx}dx$",
+   "(E) $\\int x\\psi^2\\cos x\\,dx$"
+  ],
+  "correct": 1,
+  "explanation_200": "To'g'ri: B. x²ψ² juft va musbat; qolgan integrallar ostidagi funksiyalar toq (ψψ′ ham toq) — nolga teng.\nAsos: toq funksiya integrali.",
+  "full_solution": {
+   "uz": [
+    "Juftlikni tekshiramiz: $x$, $x^3$, $\\psi'$, $x\\cos x$ toq; $x^2$ juft: $$\\int x^2\\psi^2dx=\\langle x^2\\rangle>0$$"
+   ],
+   "ru": [
+    "Проверяем чётность: $x$, $x^3$, $\\psi'$, $x\\cos x$ нечётны; $x^2$ чётна: $$\\int x^2\\psi^2dx=\\langle x^2\\rangle>0$$"
+   ],
+   "en": [
+    "Check parity: $x$, $x^3$, $\\psi'$, $x\\cos x$ are odd; $x^2$ is even: $$\\int x^2\\psi^2dx=\\langle x^2\\rangle>0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Toq funksiya integrali: $\\int_{-a}^{a}f\\,dx=0$",
+    "ru": "Интеграл нечётной функции: $\\int_{-a}^{a}f\\,dx=0$",
+    "en": "Integral of an odd function: $\\int_{-a}^{a}f\\,dx=0$"
+   }
+  ],
+  "distractors": {
+   "A": "toq: ⟨x⟩ = 0",
+   "C": "toq: ⟨x³⟩ = 0",
+   "D": "ψψ′ toq",
+   "E": "x cos x toq"
+  },
+  "distractors_ru": {
+   "A": "нечётная: ⟨x⟩ = 0",
+   "C": "нечётная: ⟨x³⟩ = 0",
+   "D": "ψψ′ нечётна",
+   "E": "x cos x нечётна"
+  },
+  "distractors_en": {
+   "A": "odd: ⟨x⟩ = 0",
+   "C": "odd: ⟨x³⟩ = 0",
+   "D": "ψψ′ is odd",
+   "E": "x cos x is odd"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q16",
+  "source": "original (B3-L02, Q16)"
+ },
+ {
+  "id": "B3-L02-Q17",
+  "question_en": "$\\hat A$ and $\\hat B$ are non-commuting Hermitian operators. Which of the following is necessarily Hermitian?",
+  "question_uz": "$\\hat A$ va $\\hat B$ — kommutatsiyalanmaydigan Ermit operatorlar. Quyidagilardan qaysi biri albatta Ermit?",
+  "question_ru": "$\\hat A$ и $\\hat B$ — некоммутирующие эрмитовы операторы. Какой из операторов обязательно эрмитов?",
+  "options": [
+   "(A) $\\hat A\\hat B$",
+   "(B) $\\left[\\hat A,\\hat B\\right]$",
+   "(C) $i\\left[\\hat A,\\hat B\\right]$",
+   "(D) $i\\hat A$",
+   "(E) $\\hat A+i\\hat B$"
+  ],
+  "correct": 2,
+  "explanation_200": "To'g'ri: C. (AB)† = BA, demak [A,B]† = −[A,B] (anti-Ermit); i ko'paytuvchi uni Ermitga aylantiradi.\nAsos: (AB)† = B†A†.",
+  "full_solution": {
+   "uz": [
+    "Qo'shma olishda tartib almashadi: $$\\left(i\\left[\\hat A,\\hat B\\right]\\right)^\\dagger=-i\\left(\\hat B\\hat A-\\hat A\\hat B\\right)=i\\left[\\hat A,\\hat B\\right]$$"
+   ],
+   "ru": [
+    "При сопряжении порядок меняется: $$\\left(i\\left[\\hat A,\\hat B\\right]\\right)^\\dagger=-i\\left(\\hat B\\hat A-\\hat A\\hat B\\right)=i\\left[\\hat A,\\hat B\\right]$$"
+   ],
+   "en": [
+    "Conjugation reverses the order: $$\\left(i\\left[\\hat A,\\hat B\\right]\\right)^\\dagger=-i\\left(\\hat B\\hat A-\\hat A\\hat B\\right)=i\\left[\\hat A,\\hat B\\right]$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ermit matritsa: $A_{21}=A_{12}^*$",
+    "ru": "Эрмитова матрица: $A_{21}=A_{12}^*$",
+    "en": "Hermitian matrix: $A_{21}=A_{12}^*$"
+   }
+  ],
+  "distractors": {
+   "A": "faqat kommutatsiyalansa Ermit",
+   "B": "kommutator anti-Ermit",
+   "D": "iA anti-Ermit",
+   "E": "iB qismi anti-Ermit"
+  },
+  "distractors_ru": {
+   "A": "эрмитов лишь при коммутации",
+   "B": "коммутатор антиэрмитов",
+   "D": "iA антиэрмитов",
+   "E": "часть iB антиэрмитова"
+  },
+  "distractors_en": {
+   "A": "Hermitian only if they commute",
+   "B": "the commutator is anti-Hermitian",
+   "D": "iA is anti-Hermitian",
+   "E": "the iB part is anti-Hermitian"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q17",
+  "source": "original (B3-L02, Q17)"
+ },
+ {
+  "id": "B3-L02-Q18",
+  "question_en": "An electron has kinetic energy $E_k=0.01\\,m_ec^2$. By approximately what percentage does the non-relativistic formula $v=c\\sqrt{\\frac{2E_k}{mc^2}}$ overestimate the speed?",
+  "question_uz": "Elektron kinetik energiyasi $E_k=0.01\\,m_ec^2$. Norelyativistik formula $v=c\\sqrt{\\frac{2E_k}{mc^2}}$ tezlikni taxminan necha foiz oshirib ko'rsatadi?",
+  "question_ru": "Кинетическая энергия электрона $E_k=0.01\\,m_ec^2$. Примерно на сколько процентов нерелятивистская формула $v=c\\sqrt{\\frac{2E_k}{mc^2}}$ завышает скорость?",
+  "options": [
+   "(A) $0.75$",
+   "(B) $1.0$",
+   "(C) $0.5$",
+   "(D) $1.5$",
+   "(E) $0.25$"
+  ],
+  "correct": 0,
+  "explanation_200": "To'g'ri: A. ε = Ek/mc²; β² = 1 − 1/(1+ε)² ≈ 2ε − 3ε², β ≈ √(2ε)(1 − 3ε/4): ortiqcha 3ε/4 = 0.75 foiz.\nAsos: binomial yoyish.",
+  "full_solution": {
+   "uz": [
+    "$\\varepsilon=\\frac{E_k}{mc^2}$, $\\gamma=1+\\varepsilon$; binomial yoyish: $$\\beta=\\sqrt{1-\\left(1+\\varepsilon\\right)^{-2}}\\approx\\sqrt{2\\varepsilon}\\left(1-\\frac{3\\varepsilon}{4}\\right)\\ \\Rightarrow\\ \\frac{3}{4}\\cdot0.01$$"
+   ],
+   "ru": [
+    "$\\varepsilon=\\frac{E_k}{mc^2}$, $\\gamma=1+\\varepsilon$; биномиальное разложение: $$\\beta=\\sqrt{1-\\left(1+\\varepsilon\\right)^{-2}}\\approx\\sqrt{2\\varepsilon}\\left(1-\\frac{3\\varepsilon}{4}\\right)\\ \\Rightarrow\\ \\frac{3}{4}\\cdot0.01$$"
+   ],
+   "en": [
+    "$\\varepsilon=\\frac{E_k}{mc^2}$, $\\gamma=1+\\varepsilon$; binomial expansion: $$\\beta=\\sqrt{1-\\left(1+\\varepsilon\\right)^{-2}}\\approx\\sqrt{2\\varepsilon}\\left(1-\\frac{3\\varepsilon}{4}\\right)\\ \\Rightarrow\\ \\frac{3}{4}\\cdot0.01$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Binomial yoyish: $\\left(1+x\\right)^n\\approx1+nx+\\frac{n\\left(n-1\\right)}{2}x^2$",
+    "ru": "Биномиальное разложение: $\\left(1+x\\right)^n\\approx1+nx+\\frac{n\\left(n-1\\right)}{2}x^2$",
+    "en": "Binomial expansion: $\\left(1+x\\right)^n\\approx1+nx+\\frac{n\\left(n-1\\right)}{2}x^2$"
+   }
+  ],
+  "distractors": {
+   "B": "ε ning o'zi olingan",
+   "C": "ε/2 olingan",
+   "D": "3ε/2 olingan",
+   "E": "ε/4 olingan"
+  },
+  "distractors_ru": {
+   "B": "взято само ε",
+   "C": "взято ε/2",
+   "D": "взято 3ε/2",
+   "E": "взято ε/4"
+  },
+  "distractors_en": {
+   "B": "ε itself",
+   "C": "ε/2 taken",
+   "D": "3ε/2 taken",
+   "E": "ε/4 taken"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q18",
+  "source": "original (B3-L02, Q18)"
+ },
+ {
+  "id": "B3-L02-Q19",
+  "question_en": "Which function is an eigenfunction of $\\frac{d^2}{dx^2}$ but not of $\\frac{d}{dx}$?",
+  "question_uz": "Qaysi funksiya $\\frac{d^2}{dx^2}$ ning xos funksiyasi, lekin $\\frac{d}{dx}$ ning xos funksiyasi emas?",
+  "question_ru": "Какая функция является собственной функцией $\\frac{d^2}{dx^2}$, но не $\\frac{d}{dx}$?",
+  "options": [
+   "(A) $e^{ikx}$",
+   "(B) $e^{-kx}$",
+   "(C) $x^2$",
+   "(D) $\\cos kx$",
+   "(E) $xe^{x}$"
+  ],
+  "correct": 3,
+  "explanation_200": "To'g'ri: D. (cos kx)″ = −k²cos kx, lekin (cos kx)′ = −k sin kx ∝ cos kx emas. Bunday holatda kinetik energiya aniq, impuls aniq emas.\nAsos: xos funksiya.",
+  "full_solution": {
+   "uz": [
+    "Hosilalarni tekshiramiz: $$\\frac{d^2}{dx^2}\\cos kx=-k^2\\cos kx,\\qquad \\frac{d}{dx}\\cos kx=-k\\sin kx$$"
+   ],
+   "ru": [
+    "Проверяем производные: $$\\frac{d^2}{dx^2}\\cos kx=-k^2\\cos kx,\\qquad \\frac{d}{dx}\\cos kx=-k\\sin kx$$"
+   ],
+   "en": [
+    "Check the derivatives: $$\\frac{d^2}{dx^2}\\cos kx=-k^2\\cos kx,\\qquad \\frac{d}{dx}\\cos kx=-k\\sin kx$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Chegaraviy shartlar: $\\sin kL=0\\Rightarrow k_n=\\frac{n\\pi}{L}$",
+    "ru": "Граничные условия: $\\sin kL=0\\Rightarrow k_n=\\frac{n\\pi}{L}$",
+    "en": "Boundary conditions: $\\sin kL=0\\Rightarrow k_n=\\frac{n\\pi}{L}$"
+   }
+  ],
+  "distractors": {
+   "A": "ikkalasining ham xos funksiyasi",
+   "B": "ikkalasining ham xos funksiyasi",
+   "C": "hech birining xos funksiyasi emas",
+   "E": "hech birining xos funksiyasi emas"
+  },
+  "distractors_ru": {
+   "A": "собственная для обоих",
+   "B": "собственная для обоих",
+   "C": "не собственная ни для одного",
+   "E": "не собственная ни для одного"
+  },
+  "distractors_en": {
+   "A": "an eigenfunction of both",
+   "B": "an eigenfunction of both",
+   "C": "an eigenfunction of neither",
+   "E": "an eigenfunction of neither"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q19",
+  "source": "original (B3-L02, Q19)"
+ },
+ {
+  "id": "B3-L02-Q20",
+  "question_en": "An electron wave packet has width $\\sigma_x=0.20\\ \\mathrm{nm}$. According to the uncertainty relation, what is the smallest possible momentum spread $\\sigma_pc$ (in eV)? $\\hbar c=197\\ \\mathrm{eV\\cdot nm}$.",
+  "question_uz": "Elektron to'lqin paketining kengligi $\\sigma_x=0.20\\ \\mathrm{nm}$. Noaniqlik munosabatiga ko'ra impuls tarqoqligining eng kichik qiymati $\\sigma_pc$ qancha (eV da)? $\\hbar c=197\\ \\mathrm{eV\\cdot nm}$.",
+  "question_ru": "Ширина волнового пакета электрона $\\sigma_x=0.20\\ \\mathrm{nm}$. Каково наименьшее значение разброса импульса $\\sigma_pc$ (в эВ) по соотношению неопределённостей? $\\hbar c=197\\ \\mathrm{eV\\cdot nm}$.",
+  "options": [
+   "(A) $247$",
+   "(B) $986$",
+   "(C) $3100$",
+   "(D) $6200$",
+   "(E) $493$"
+  ],
+  "correct": 4,
+  "explanation_200": "To'g'ri: E. σp ≥ ħ/(2σx): σpc ≥ 197/(2·0.20) ≈ 493 eV (tenglik Gauss paketida).\nAsos: σx·σk ≥ 1/2.",
+  "full_solution": {
+   "uz": [
+    "Eng kichik qiymat — Gauss paketi: $$\\sigma_pc=\\frac{\\hbar c}{2\\sigma_x}=\\frac{197}{0.40}\\approx493\\ \\mathrm{eV}$$"
+   ],
+   "ru": [
+    "Наименьшее значение — гауссов пакет: $$\\sigma_pc=\\frac{\\hbar c}{2\\sigma_x}=\\frac{197}{0.40}\\approx493\\ \\mathrm{eV}$$"
+   ],
+   "en": [
+    "The minimum is reached by a Gaussian packet: $$\\sigma_pc=\\frac{\\hbar c}{2\\sigma_x}=\\frac{197}{0.40}\\approx493\\ \\mathrm{eV}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Kengliklar ko'paytmasi: $\\sigma_x\\sigma_k=\\frac{1}{2}$",
+    "ru": "Произведение ширин: $\\sigma_x\\sigma_k=\\frac{1}{2}$",
+    "en": "Product of widths: $\\sigma_x\\sigma_k=\\frac{1}{2}$"
+   }
+  ],
+  "distractors": {
+   "A": "ħ/(4σx) olingan",
+   "B": "1/2 ko'paytuvchi unutilgan",
+   "C": "ħ o'rniga h olingan",
+   "D": "h va 1/2 yo'q"
+  },
+  "distractors_ru": {
+   "A": "взято ħ/(4σx)",
+   "B": "забыт множитель 1/2",
+   "C": "взято h вместо ħ",
+   "D": "h и без 1/2"
+  },
+  "distractors_en": {
+   "A": "took ħ/(4σx)",
+   "B": "the factor 1/2 forgotten",
+   "C": "h used instead of ħ",
+   "D": "h and no 1/2"
+  },
+  "figure": null,
+  "verified_by_code": true,
+  "check": "_build/content.py::check_Q20",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.2 g'oyasi asosida; sharti o'zgartirilgan"
+ }
+]

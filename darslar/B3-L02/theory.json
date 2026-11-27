@@ -1,0 +1,677 @@
+[
+ {
+  "t": "h1",
+  "uz": "Kvant mexanikasining matematik apparati (Mathematical tools of quantum mechanics)",
+  "ru": "Математический аппарат квантовой механики",
+  "en": "Mathematical tools of quantum mechanics"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz kompleks sonlar va kompleks funksiyalar bilan erkin ishlaysiz; to'lqin funksiyasini normallaysiz, kutilgan qiymat, dispersiya va ehtimolliklarni hisoblaysiz; Gauss integrallari va juft-toq simmetriya yordamida integrallarni bir qatorda topasiz; funksiyalarni vektor deb qarab, skalyar ko'paytma, ortogonallik va bazis bo'yicha yoyishni qo'llaysiz; Ermit va unitar operatorlarni taniysiz, kommutatorlarni hisoblaysiz; $2\\times2$ va $3\\times3$ matritsalarning xos qiymat va xos vektorlarini topasiz; differensial operatorning chegaraviy shartli xos qiymat masalasini yechasiz; Furye almashtirishi va delta funksiyadan foydalanasiz; kichik parametr bo'yicha yoyish bilan taqribiy baholaysiz.",
+  "ru": "**Цель.** После урока вы будете свободно работать с комплексными числами и комплексными функциями; нормировать волновую функцию, вычислять средние значения, дисперсию и вероятности; находить интегралы в одну строку с помощью гауссовых интегралов и чётно-нечётной симметрии; рассматривая функции как векторы, применять скалярное произведение, ортогональность и разложение по базису; узнавать эрмитовы и унитарные операторы и вычислять коммутаторы; находить собственные значения и собственные векторы матриц $2\\times2$ и $3\\times3$; решать задачу на собственные значения дифференциального оператора с граничными условиями; пользоваться преобразованием Фурье и дельта-функцией; делать приближённые оценки разложением по малому параметру.",
+  "en": "**Goal.** After this lesson you will work freely with complex numbers and complex functions; normalize a wave function and compute expectation values, variances and probabilities; evaluate integrals in one line using Gaussian integrals and even–odd symmetry; treat functions as vectors and use the inner product, orthogonality and expansion in a basis; recognize Hermitian and unitary operators and compute commutators; find the eigenvalues and eigenvectors of $2\\times2$ and $3\\times3$ matrices; solve the eigenvalue problem of a differential operator with boundary conditions; use the Fourier transform and the delta function; and make approximate estimates by expanding in a small parameter."
+ },
+ {
+  "t": "p",
+  "uz": "Kvant mexanikasi fizik g'oyalari jihatidan qanchalik g'ayrioddiy bo'lsa, matematik jihatdan shunchalik tartibli: uning butun apparati **chiziqli algebra** (vektorlar, operatorlar, xos qiymatlar), **kompleks sonlar** va **ehtimollik**dan iborat. GRE savollarining katta qismi aynan shu ko'nikmalarni tekshiradi: normallash konstantasini toping, $\\langle x\\rangle$ ni hisoblang, matritsaning xos qiymatlari qaysi, kommutator nimaga teng. Bu dars B3-L03 … B3-L11 darslarining «asboblar qutisi»: bu yerda o'rganilgan har bir usul keyin bir necha marta qo'llanadi. Asosiy matematik ma'lumotlar 0-bosqichda berilgan edi; endi ular kvant mexanikasi tilida takrorlanadi va GRE darajasiga olib chiqiladi. **Avval takrorlang:** B0-L07 (kompleks sonlar, Eyler formulasi), B0-L09 (matritsalar, xos qiymatlar), B0-L10 (ehtimollik, Gauss taqsimoti), B0-L06 (differensial tenglamalar), B3-L01 (to'lqin funksiyasi va Born talqini). Belgi haqida: kvant mexanikasida operatorlar qalpoqcha bilan yoziladi, masalan $\\hat x$, $\\hat p$, $\\hat H$ — bu kursda qalpoqcha faqat shu maqsadda ishlatiladi.",
+  "ru": "Насколько квантовая механика необычна по физическим идеям, настолько она упорядочена математически: весь её аппарат состоит из **линейной алгебры** (векторы, операторы, собственные значения), **комплексных чисел** и **вероятности**. Значительная часть вопросов GRE проверяет именно эти навыки: найдите нормировочную константу, вычислите $\\langle x\\rangle$, каковы собственные значения матрицы, чему равен коммутатор. Этот урок — «набор инструментов» для уроков B3-L03 … B3-L11: каждый изученный здесь приём потом применяется многократно. Основные математические сведения были даны на 0-м этапе; теперь они повторяются на языке квантовой механики и доводятся до уровня GRE. **Сначала повторите:** B0-L07 (комплексные числа, формула Эйлера), B0-L09 (матрицы, собственные значения), B0-L10 (вероятность, распределение Гаусса), B0-L06 (дифференциальные уравнения), B3-L01 (волновая функция и интерпретация Борна). Об обозначениях: в квантовой механике операторы пишутся со шляпкой, например $\\hat x$, $\\hat p$, $\\hat H$ — в этом курсе шляпка используется только для этой цели.",
+  "en": "However unusual quantum mechanics is in its physical ideas, it is just as orderly mathematically: its whole apparatus consists of **linear algebra** (vectors, operators, eigenvalues), **complex numbers** and **probability**. A large share of GRE questions test exactly these skills: find the normalization constant, compute $\\langle x\\rangle$, what are the eigenvalues of the matrix, what does the commutator equal. This lesson is the \"toolbox\" for lessons B3-L03 … B3-L11: every technique learned here is used again many times. The basic mathematical facts were given in stage 0; now they are revisited in the language of quantum mechanics and taken to the GRE level. **Review first:** B0-L07 (complex numbers, Euler's formula), B0-L09 (matrices, eigenvalues), B0-L10 (probability, the Gaussian distribution), B0-L06 (differential equations), B3-L01 (the wave function and Born's interpretation). A note on notation: in quantum mechanics operators are written with a hat, for example $\\hat x$, $\\hat p$, $\\hat H$ — in this course the hat is used only for this purpose."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Kompleks sonlar va kompleks funksiyalar",
+  "ru": "1. Комплексные числа и комплексные функции",
+  "en": "1. Complex numbers and complex functions"
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy munosabatlar.** Kompleks son $z=x+iy$ ni kompleks tekislikdagi nuqta yoki vektor deb qarash mumkin ([[F01]]): moduli $\\left|z\\right|=r=\\sqrt{x^2+y^2}$, argumenti $\\varphi$, ko'rsatkichli shakli $z=re^{i\\varphi}$ (Eyler formulasi $e^{i\\varphi}=\\cos\\varphi+i\\sin\\varphi$). Qo'shma son $z^*=x-iy=re^{-i\\varphi}$ — haqiqiy o'qqa nisbatan ko'zgu aksi. Kvant mexanikasida eng ko'p ishlatiladigan munosabat — $\\left|z\\right|^2=z^*z$: u har doim haqiqiy va manfiy emas, shuning uchun ehtimollik sifatida ishlatiladi. Bo'lishni kasrni qo'shma songa ko'paytirib bajarish qulay: $\\frac{1}{z}=\\frac{z^*}{\\left|z\\right|^2}$. Ko'paytirishda modullar ko'paytiriladi, argumentlar qo'shiladi: $\\left|z_1z_2\\right|=\\left|z_1\\right|\\left|z_2\\right|$.",
+  "ru": "**Основные соотношения.** Комплексное число $z=x+iy$ можно рассматривать как точку или вектор на комплексной плоскости ([[F01]]): модуль $\\left|z\\right|=r=\\sqrt{x^2+y^2}$, аргумент $\\varphi$, показательная форма $z=re^{i\\varphi}$ (формула Эйлера $e^{i\\varphi}=\\cos\\varphi+i\\sin\\varphi$). Сопряжённое число $z^*=x-iy=re^{-i\\varphi}$ — зеркальное отражение относительно действительной оси. Самое употребительное в квантовой механике соотношение — $\\left|z\\right|^2=z^*z$: оно всегда действительно и неотрицательно, поэтому используется как вероятность. Деление удобно выполнять, домножая дробь на сопряжённое: $\\frac{1}{z}=\\frac{z^*}{\\left|z\\right|^2}$. При умножении модули перемножаются, аргументы складываются: $\\left|z_1z_2\\right|=\\left|z_1\\right|\\left|z_2\\right|$.",
+  "en": "**Basic relations.** A complex number $z=x+iy$ can be viewed as a point or a vector in the complex plane ([[F01]]): its modulus is $\\left|z\\right|=r=\\sqrt{x^2+y^2}$, its argument is $\\varphi$, and its exponential form is $z=re^{i\\varphi}$ (Euler's formula $e^{i\\varphi}=\\cos\\varphi+i\\sin\\varphi$). The conjugate $z^*=x-iy=re^{-i\\varphi}$ is the mirror image in the real axis. The relation used most in quantum mechanics is $\\left|z\\right|^2=z^*z$: it is always real and non-negative, which is why it serves as a probability. Division is best done by multiplying by the conjugate: $\\frac{1}{z}=\\frac{z^*}{\\left|z\\right|^2}$. In a product the moduli multiply and the arguments add: $\\left|z_1z_2\\right|=\\left|z_1\\right|\\left|z_2\\right|$."
+ },
+ {
+  "t": "m",
+  "m": "z=x+iy=re^{i\\varphi},\\qquad z^*=re^{-i\\varphi},\\qquad \\left|z\\right|^2=z^*z=x^2+y^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Faza va interferensiya.** Ikki amplituda qo'shilganda ehtimollik $\\left|z_1+z_2\\right|^2=\\left|z_1\\right|^2+\\left|z_2\\right|^2+2\\,\\mathrm{Re}\\left(z_1^*z_2\\right)$ — oxirgi had **interferension had**; u amplitudalar orasidagi faza farqiga bog'liq: $2\\left|z_1\\right|\\left|z_2\\right|\\cos\\Delta\\varphi$ (B3-L01, ikki tirqish). Muhim xulosa: butun to'lqin funksiyasini $e^{i\\alpha}$ ga ko'paytirish (**global faza**) hech bir o'lchanadigan kattalikni o'zgartirmaydi, chunki $\\left|e^{i\\alpha}\\psi\\right|^2=\\left|\\psi\\right|^2$. Lekin superpozitsiya qismlari orasidagi **nisbiy faza** fizik ma'noga ega: $\\psi_1+\\psi_2$ va $\\psi_1-\\psi_2$ turli holatlardir. GRE da «qaysi o'zgartirish fizik holatni o'zgartirmaydi?» degan savol ko'p uchraydi.",
+  "ru": "**Фаза и интерференция.** При сложении двух амплитуд вероятность $\\left|z_1+z_2\\right|^2=\\left|z_1\\right|^2+\\left|z_2\\right|^2+2\\,\\mathrm{Re}\\left(z_1^*z_2\\right)$ — последний член **интерференционный**; он зависит от разности фаз амплитуд: $2\\left|z_1\\right|\\left|z_2\\right|\\cos\\Delta\\varphi$ (B3-L01, две щели). Важный вывод: умножение всей волновой функции на $e^{i\\alpha}$ (**глобальная фаза**) не меняет ни одной измеряемой величины, так как $\\left|e^{i\\alpha}\\psi\\right|^2=\\left|\\psi\\right|^2$. Но **относительная фаза** между частями суперпозиции имеет физический смысл: $\\psi_1+\\psi_2$ и $\\psi_1-\\psi_2$ — разные состояния. В GRE часто встречается вопрос «какое преобразование не меняет физическое состояние?».",
+  "en": "**Phase and interference.** When two amplitudes add, the probability $\\left|z_1+z_2\\right|^2=\\left|z_1\\right|^2+\\left|z_2\\right|^2+2\\,\\mathrm{Re}\\left(z_1^*z_2\\right)$ — the last term is the **interference term**; it depends on the phase difference of the amplitudes: $2\\left|z_1\\right|\\left|z_2\\right|\\cos\\Delta\\varphi$ (B3-L01, two slits). An important conclusion: multiplying the whole wave function by $e^{i\\alpha}$ (a **global phase**) changes no measurable quantity, since $\\left|e^{i\\alpha}\\psi\\right|^2=\\left|\\psi\\right|^2$. But the **relative phase** between the parts of a superposition has physical meaning: $\\psi_1+\\psi_2$ and $\\psi_1-\\psi_2$ are different states. The GRE often asks \"which transformation does not change the physical state?\"."
+ },
+ {
+  "t": "li",
+  "uz": "**Kompleks to'lqin.** Erkin zarraning yassi to'lqini $\\psi=Ae^{i\\left(kx-\\omega t\\right)}$ ko'rinishida yoziladi; uning haqiqiy va mavhum qismlari $\\cos$ va $\\sin$ to'lqinlari, moduli esa hamma joyda bir xil: $\\left|\\psi\\right|^2=\\left|A\\right|^2$ — zarra fazoning istalgan joyida bir xil ehtimollik bilan topiladi (impulsi aniq, o'rni butunlay noaniq). Vaqt bo'yicha $e^{-i\\omega t}$ ko'paytuvchi kompleks tekislikda soat strelkasiga teskari emas, **soat strelkasi bo'yicha** aylanadigan birlik vektor ([[F01]]). Statsionar holatlar aynan shunday vaqtga bog'liq: $\\psi\\left(x,t\\right)=\\psi\\left(x\\right)e^{-iEt/\\hbar}$, shuning uchun ularning ehtimollik zichligi vaqtga bog'liq emas (B3-L03).",
+  "ru": "**Комплексная волна.** Плоская волна свободной частицы записывается в виде $\\psi=Ae^{i\\left(kx-\\omega t\\right)}$; её действительная и мнимая части — волны $\\cos$ и $\\sin$, а модуль всюду одинаков: $\\left|\\psi\\right|^2=\\left|A\\right|^2$ — частица с одинаковой вероятностью находится в любой точке пространства (импульс точен, положение совсем не определено). Множитель $e^{-i\\omega t}$ во времени — единичный вектор, вращающийся на комплексной плоскости **по часовой стрелке** ([[F01]]). Именно так зависят от времени стационарные состояния: $\\psi\\left(x,t\\right)=\\psi\\left(x\\right)e^{-iEt/\\hbar}$, поэтому их плотность вероятности от времени не зависит (B3-L03).",
+  "en": "**A complex wave.** The plane wave of a free particle is written $\\psi=Ae^{i\\left(kx-\\omega t\\right)}$; its real and imaginary parts are $\\cos$ and $\\sin$ waves, while its modulus is the same everywhere: $\\left|\\psi\\right|^2=\\left|A\\right|^2$ — the particle is equally likely to be found anywhere in space (the momentum is exact, the position completely undetermined). The factor $e^{-i\\omega t}$ is a unit vector rotating **clockwise** in the complex plane ([[F01]]). Stationary states depend on time in exactly this way: $\\psi\\left(x,t\\right)=\\psi\\left(x\\right)e^{-iEt/\\hbar}$, so their probability density does not depend on time (B3-L03)."
+ },
+ {
+  "t": "m",
+  "m": "\\left|z_1+z_2\\right|^2=\\left|z_1\\right|^2+\\left|z_2\\right|^2+2\\,\\mathrm{Re}\\left(z_1^*z_2\\right),\\qquad \\left|e^{i\\alpha}\\psi\\right|^2=\\left|\\psi\\right|^2"
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B3-L02-F01.png",
+   "ru": "figures/B3-L02-F01-ru.png",
+   "en": "figures/B3-L02-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Ehtimollik zichligi, normallash va kutilgan qiymatlar",
+  "ru": "2. Плотность вероятности, нормировка и средние значения",
+  "en": "2. Probability density, normalization and expectation values"
+ },
+ {
+  "t": "li",
+  "uz": "**Normallash.** Born talqiniga ko'ra $\\rho\\left(x\\right)=\\left|\\psi\\left(x\\right)\\right|^2$ — ehtimollik zichligi: zarrani $\\left[a,b\\right]$ oraliqda topish ehtimolligi $P=\\int_a^b\\left|\\psi\\right|^2dx$. Zarra qayerdadir albatta bor, shuning uchun butun o'q bo'yicha ehtimollik birga teng — bu **normallash sharti**. Undan normallash konstantasi topiladi; masalan, $\\psi=Ae^{-\\left|x\\right|/a}$ uchun $\\left|A\\right|^2\\cdot2\\cdot\\frac{a}{2}=1$, ya'ni $A=\\frac{1}{\\sqrt a}$. Normallash shartidan o'lcham ham kelib chiqadi: bir o'lchovli to'lqin funksiyasining birligi $\\mathrm{m^{-1/2}}$, uch o'lchovlisiniki $\\mathrm{m^{-3/2}}$. Bu o'lchamlar tahlili uchun foydali: agar variantdagi $A$ ning o'lchami $a^{-1/2}$ bo'lmasa, u noto'g'ri. Faqat normallanadigan ($\\int\\left|\\psi\\right|^2dx$ chekli) funksiyalar fizik holatlarni ifodalaydi.",
+  "ru": "**Нормировка.** Согласно интерпретации Борна, $\\rho\\left(x\\right)=\\left|\\psi\\left(x\\right)\\right|^2$ — плотность вероятности: вероятность найти частицу на отрезке $\\left[a,b\\right]$ равна $P=\\int_a^b\\left|\\psi\\right|^2dx$. Частица где-то обязательно есть, поэтому вероятность по всей оси равна единице — это **условие нормировки**. Из него находится нормировочная константа; например, для $\\psi=Ae^{-\\left|x\\right|/a}$ имеем $\\left|A\\right|^2\\cdot2\\cdot\\frac{a}{2}=1$, то есть $A=\\frac{1}{\\sqrt a}$. Из условия нормировки следует и размерность: одномерная волновая функция имеет единицу $\\mathrm{m^{-1/2}}$, трёхмерная — $\\mathrm{m^{-3/2}}$. Это полезно для анализа размерностей: если размерность $A$ в варианте не $a^{-1/2}$, вариант неверен. Физические состояния описывают только нормируемые функции (с конечным $\\int\\left|\\psi\\right|^2dx$).",
+  "en": "**Normalization.** According to Born's interpretation, $\\rho\\left(x\\right)=\\left|\\psi\\left(x\\right)\\right|^2$ is a probability density: the probability of finding the particle in the interval $\\left[a,b\\right]$ is $P=\\int_a^b\\left|\\psi\\right|^2dx$. The particle is certainly somewhere, so the probability over the whole axis equals one — this is the **normalization condition**. It gives the normalization constant; for example, for $\\psi=Ae^{-\\left|x\\right|/a}$ we get $\\left|A\\right|^2\\cdot2\\cdot\\frac{a}{2}=1$, so $A=\\frac{1}{\\sqrt a}$. The normalization condition also fixes the dimensions: a one-dimensional wave function has units $\\mathrm{m^{-1/2}}$, a three-dimensional one $\\mathrm{m^{-3/2}}$. This is useful for dimensional analysis: if the dimension of $A$ in a choice is not $a^{-1/2}$, the choice is wrong. Only normalizable functions (with finite $\\int\\left|\\psi\\right|^2dx$) describe physical states."
+ },
+ {
+  "t": "m",
+  "m": "\\int_{-\\infty}^{\\infty}\\left|\\psi\\left(x\\right)\\right|^2dx=1,\\qquad P\\left(a<x<b\\right)=\\int_a^b\\left|\\psi\\right|^2dx"
+ },
+ {
+  "t": "li",
+  "uz": "**Kutilgan qiymat va dispersiya.** Koordinataning **kutilgan qiymati** (expectation value) — ko'p marta takrorlangan o'lchashlarning o'rtachasi: $\\langle x\\rangle=\\int x\\left|\\psi\\right|^2dx$; istalgan $f\\left(x\\right)$ funksiya uchun ham xuddi shunday. Taqsimotning kengligi **standart chetlanish** bilan o'lchanadi: $\\sigma^2=\\langle x^2\\rangle-\\langle x\\rangle^2\\geq0$. Diqqat: kutilgan qiymat — eng ehtimolli qiymat emas! Masalan, bir-biridan uzoq ikkita tor cho'qqidan iborat taqsimotda $\\langle x\\rangle$ cho'qqilar orasida, zarra esa u yerda deyarli hech qachon topilmaydi. Uchburchak shaklidagi zichlik uchun o'rtacha qiymat uchburchak uchlari abssissalarining o'rtachasiga teng — bu grafikli GRE savollarida qo'l keladi ([[F02]]).",
+  "ru": "**Среднее значение и дисперсия.** **Среднее (ожидаемое) значение** координаты — среднее многократно повторённых измерений: $\\langle x\\rangle=\\int x\\left|\\psi\\right|^2dx$; так же для любой функции $f\\left(x\\right)$. Ширина распределения измеряется **стандартным отклонением**: $\\sigma^2=\\langle x^2\\rangle-\\langle x\\rangle^2\\geq0$. Внимание: среднее значение — не наиболее вероятное! Например, для распределения из двух далёких узких пиков $\\langle x\\rangle$ лежит между пиками, а частицу там почти никогда не находят. Для плотности треугольной формы среднее равно среднему абсцисс вершин треугольника — это пригодится в графических вопросах GRE ([[F02]]).",
+  "en": "**Expectation value and variance.** The **expectation value** of position is the average of many repeated measurements: $\\langle x\\rangle=\\int x\\left|\\psi\\right|^2dx$; likewise for any function $f\\left(x\\right)$. The width of the distribution is measured by the **standard deviation**: $\\sigma^2=\\langle x^2\\rangle-\\langle x\\rangle^2\\geq0$. Note: the expectation value is not the most probable value! For example, for a distribution made of two distant narrow peaks $\\langle x\\rangle$ lies between the peaks, where the particle is almost never found. For a triangular density the mean equals the average of the abscissas of the triangle's vertices — handy in graphical GRE questions ([[F02]])."
+ },
+ {
+  "t": "m",
+  "m": "\\langle f\\rangle=\\int f\\left(x\\right)\\left|\\psi\\right|^2dx,\\qquad \\sigma^2=\\langle x^2\\rangle-\\langle x\\rangle^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Diskret holat: koeffitsiyentlar kvadrati — ehtimollik.** Agar holat ortonormal holatlar superpozitsiyasi bo'lsa, $\\psi=\\sum c_n\\psi_n$, energiyani o'lchashda $E_n$ natijaning chiqish ehtimolligi $P_n=\\left|c_n\\right|^2$, normallash esa $\\sum\\left|c_n\\right|^2=1$ (4-bo'lim). O'rtacha energiya $\\langle E\\rangle=\\sum\\left|c_n\\right|^2E_n$. Masalan, $\\psi=\\frac{1}{\\sqrt6}\\left(\\psi_1+2\\psi_2-i\\psi_3\\right)$ uchun ehtimolliklar $\\frac{1}{6}$, $\\frac{4}{6}$, $\\frac{1}{6}$ — $i$ koeffitsiyentining moduli $1$. Tipik xato — koeffitsiyentlarni kvadratga ko'tarmasdan qo'shish yoki kompleks koeffitsiyentni $i^2=-1$ bilan «kvadratlash»: $\\left|i\\right|^2=i^*i=1$, $-1$ emas.",
+  "ru": "**Дискретный случай: квадрат коэффициента — вероятность.** Если состояние — суперпозиция ортонормированных состояний, $\\psi=\\sum c_n\\psi_n$, то вероятность получить при измерении энергии результат $E_n$ равна $P_n=\\left|c_n\\right|^2$, а нормировка — $\\sum\\left|c_n\\right|^2=1$ (раздел 4). Средняя энергия $\\langle E\\rangle=\\sum\\left|c_n\\right|^2E_n$. Например, для $\\psi=\\frac{1}{\\sqrt6}\\left(\\psi_1+2\\psi_2-i\\psi_3\\right)$ вероятности $\\frac{1}{6}$, $\\frac{4}{6}$, $\\frac{1}{6}$ — модуль коэффициента $i$ равен $1$. Типичная ошибка — складывать коэффициенты, не возводя в квадрат, или «возводить в квадрат» комплексный коэффициент через $i^2=-1$: $\\left|i\\right|^2=i^*i=1$, а не $-1$.",
+  "en": "**The discrete case: squared coefficients are probabilities.** If a state is a superposition of orthonormal states, $\\psi=\\sum c_n\\psi_n$, the probability of getting the result $E_n$ when measuring the energy is $P_n=\\left|c_n\\right|^2$, and normalization reads $\\sum\\left|c_n\\right|^2=1$ (section 4). The average energy is $\\langle E\\rangle=\\sum\\left|c_n\\right|^2E_n$. For example, for $\\psi=\\frac{1}{\\sqrt6}\\left(\\psi_1+2\\psi_2-i\\psi_3\\right)$ the probabilities are $\\frac{1}{6}$, $\\frac{4}{6}$, $\\frac{1}{6}$ — the coefficient $i$ has modulus $1$. A typical mistake is adding coefficients without squaring them, or \"squaring\" a complex coefficient as $i^2=-1$: $\\left|i\\right|^2=i^*i=1$, not $-1$."
+ },
+ {
+  "t": "m",
+  "m": "\\psi=\\sum_nc_n\\psi_n,\\qquad P_n=\\left|c_n\\right|^2,\\qquad \\langle E\\rangle=\\sum_n\\left|c_n\\right|^2E_n"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B3-L02-F02.png",
+   "ru": "figures/B3-L02-F02-ru.png",
+   "en": "figures/B3-L02-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "3. Gauss integrallari va simmetriya",
+  "ru": "3. Гауссовы интегралы и симметрия",
+  "en": "3. Gaussian integrals and symmetry"
+ },
+ {
+  "t": "li",
+  "uz": "**Asosiy Gauss integrali.** Kvant mexanikasida (ossillyator, to'lqin paketlari, vodorod atomi) eng ko'p uchraydigan integral — $\\int_{-\\infty}^{\\infty}e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}}$. Uni yodda saqlash va undan boshqalarini **$\\alpha$ bo'yicha differensiallash** bilan olish kerak: $\\int x^2e^{-\\alpha x^2}dx=-\\frac{d}{d\\alpha}\\sqrt{\\frac{\\pi}{\\alpha}}=\\frac{1}{2\\alpha}\\sqrt{\\frac{\\pi}{\\alpha}}$. Bundan foydali xulosa: $\\left|\\psi\\right|^2\\propto e^{-\\alpha x^2}$ Gauss taqsimotida $\\langle x^2\\rangle=\\frac{1}{2\\alpha}$. Agar $\\left|\\psi\\right|^2\\propto e^{-x^2/\\left(2\\sigma^2\\right)}$ deb yozilsa, $\\langle x^2\\rangle=\\sigma^2$ — standart chetlanish to'g'ridan-to'g'ri ko'rinadi ([[F03]]).",
+  "ru": "**Основной гауссов интеграл.** Интеграл, чаще всего встречающийся в квантовой механике (осциллятор, волновые пакеты, атом водорода), — $\\int_{-\\infty}^{\\infty}e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}}$. Его нужно помнить, а остальные получать из него **дифференцированием по $\\alpha$**: $\\int x^2e^{-\\alpha x^2}dx=-\\frac{d}{d\\alpha}\\sqrt{\\frac{\\pi}{\\alpha}}=\\frac{1}{2\\alpha}\\sqrt{\\frac{\\pi}{\\alpha}}$. Отсюда полезный вывод: для гауссова распределения $\\left|\\psi\\right|^2\\propto e^{-\\alpha x^2}$ $\\langle x^2\\rangle=\\frac{1}{2\\alpha}$. Если записать $\\left|\\psi\\right|^2\\propto e^{-x^2/\\left(2\\sigma^2\\right)}$, то $\\langle x^2\\rangle=\\sigma^2$ — стандартное отклонение видно сразу ([[F03]]).",
+  "en": "**The basic Gaussian integral.** The integral met most often in quantum mechanics (the oscillator, wave packets, the hydrogen atom) is $\\int_{-\\infty}^{\\infty}e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}}$. Memorize it and get the others from it by **differentiating with respect to $\\alpha$**: $\\int x^2e^{-\\alpha x^2}dx=-\\frac{d}{d\\alpha}\\sqrt{\\frac{\\pi}{\\alpha}}=\\frac{1}{2\\alpha}\\sqrt{\\frac{\\pi}{\\alpha}}$. A useful conclusion follows: for a Gaussian distribution $\\left|\\psi\\right|^2\\propto e^{-\\alpha x^2}$, $\\langle x^2\\rangle=\\frac{1}{2\\alpha}$. If one writes $\\left|\\psi\\right|^2\\propto e^{-x^2/\\left(2\\sigma^2\\right)}$, then $\\langle x^2\\rangle=\\sigma^2$ — the standard deviation is visible at once ([[F03]])."
+ },
+ {
+  "t": "m",
+  "m": "\\int_{-\\infty}^{\\infty}e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}},\\qquad \\int_{-\\infty}^{\\infty}x^2e^{-\\alpha x^2}dx=\\frac{1}{2\\alpha}\\sqrt{\\frac{\\pi}{\\alpha}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Eksponensial integrallar va gamma funksiya.** Yarim o'qdagi integrallar uchun $\\int_0^{\\infty}x^ne^{-x/a}dx=n!\\,a^{n+1}$ formulasi yetarli (vodorod atomida $r^2e^{-2r/a_0}$ ko'rinishidagi integrallar shunday hisoblanadi, B3-L09). Masalan, $\\psi=Axe^{-x/a}$ ($x\\geq0$) uchun normallash: $\\left|A\\right|^2\\int_0^{\\infty}x^2e^{-2x/a}dx=\\left|A\\right|^2\\cdot2!\\left(\\frac{a}{2}\\right)^3=1$, ya'ni $A=\\frac{2}{a^{3/2}}$. Umumiy holda $\\int_0^{\\infty}x^{s-1}e^{-x}dx=\\Gamma\\left(s\\right)$, $\\Gamma\\left(n+1\\right)=n!$, $\\Gamma\\left(\\frac{1}{2}\\right)=\\sqrt{\\pi}$ — oxirgisi Gauss integralining boshqa ko'rinishi.",
+  "ru": "**Экспоненциальные интегралы и гамма-функция.** Для интегралов по полуоси достаточно формулы $\\int_0^{\\infty}x^ne^{-x/a}dx=n!\\,a^{n+1}$ (так вычисляются интегралы вида $r^2e^{-2r/a_0}$ в атоме водорода, B3-L09). Например, нормировка для $\\psi=Axe^{-x/a}$ ($x\\geq0$): $\\left|A\\right|^2\\int_0^{\\infty}x^2e^{-2x/a}dx=\\left|A\\right|^2\\cdot2!\\left(\\frac{a}{2}\\right)^3=1$, то есть $A=\\frac{2}{a^{3/2}}$. В общем случае $\\int_0^{\\infty}x^{s-1}e^{-x}dx=\\Gamma\\left(s\\right)$, $\\Gamma\\left(n+1\\right)=n!$, $\\Gamma\\left(\\frac{1}{2}\\right)=\\sqrt{\\pi}$ — последнее есть другая форма гауссова интеграла.",
+  "en": "**Exponential integrals and the gamma function.** For integrals over a half-axis the formula $\\int_0^{\\infty}x^ne^{-x/a}dx=n!\\,a^{n+1}$ is enough (integrals like $r^2e^{-2r/a_0}$ in the hydrogen atom are done this way, B3-L09). For example, normalizing $\\psi=Axe^{-x/a}$ ($x\\geq0$): $\\left|A\\right|^2\\int_0^{\\infty}x^2e^{-2x/a}dx=\\left|A\\right|^2\\cdot2!\\left(\\frac{a}{2}\\right)^3=1$, so $A=\\frac{2}{a^{3/2}}$. In general $\\int_0^{\\infty}x^{s-1}e^{-x}dx=\\Gamma\\left(s\\right)$, $\\Gamma\\left(n+1\\right)=n!$, $\\Gamma\\left(\\frac{1}{2}\\right)=\\sqrt{\\pi}$ — the last is another form of the Gaussian integral."
+ },
+ {
+  "t": "m",
+  "m": "\\int_0^{\\infty}x^ne^{-x/a}dx=n!\\,a^{n+1},\\qquad \\Gamma\\left(n+1\\right)=n!,\\qquad \\Gamma\\left(\\frac{1}{2}\\right)=\\sqrt{\\pi}"
+ },
+ {
+  "t": "li",
+  "uz": "**Juft-toq simmetriya — eng tez usul.** Simmetrik oraliq $\\left[-a,a\\right]$ bo'yicha toq funksiyaning integrali nolga teng ([[F03]], o'ng). Shuning uchun juft $\\left|\\psi\\right|^2$ uchun $\\langle x\\rangle=0$, $\\langle x^3\\rangle=0$ hisoblashsiz chiqadi; haqiqiy juft $\\psi$ uchun $\\int\\psi\\frac{d\\psi}{dx}dx=0$, chunki $\\psi\\psi'$ toq. Qoidalar: juft·juft = juft, toq·toq = juft, juft·toq = toq; hosila juftlikni almashtiradi. GRE da ko'p integrallar bir qarashda nolga teng — avval simmetriyani tekshiring. Cheksiz o'rada esa simmetriya markazi $\\frac{L}{2}$ da: $\\sin^2\\frac{n\\pi x}{L}$ markazga nisbatan simmetrik, shuning uchun $\\langle x\\rangle=\\frac{L}{2}$ har qanday $n$ da.",
+  "ru": "**Чётно-нечётная симметрия — самый быстрый приём.** Интеграл от нечётной функции по симметричному отрезку $\\left[-a,a\\right]$ равен нулю ([[F03]], справа). Поэтому для чётной $\\left|\\psi\\right|^2$ $\\langle x\\rangle=0$, $\\langle x^3\\rangle=0$ получаются без вычислений; для действительной чётной $\\psi$ $\\int\\psi\\frac{d\\psi}{dx}dx=0$, так как $\\psi\\psi'$ нечётна. Правила: чёт·чёт = чёт, нечёт·нечёт = чёт, чёт·нечёт = нечёт; производная меняет чётность. В GRE многие интегралы с первого взгляда равны нулю — сначала проверьте симметрию. В бесконечной яме центр симметрии в $\\frac{L}{2}$: $\\sin^2\\frac{n\\pi x}{L}$ симметрична относительно центра, поэтому $\\langle x\\rangle=\\frac{L}{2}$ при любом $n$.",
+  "en": "**Even–odd symmetry — the fastest trick.** The integral of an odd function over a symmetric interval $\\left[-a,a\\right]$ is zero ([[F03]], right). So for an even $\\left|\\psi\\right|^2$, $\\langle x\\rangle=0$ and $\\langle x^3\\rangle=0$ come out without calculation; for a real even $\\psi$, $\\int\\psi\\frac{d\\psi}{dx}dx=0$, since $\\psi\\psi'$ is odd. Rules: even·even = even, odd·odd = even, even·odd = odd; differentiation switches parity. On the GRE many integrals are zero at first glance — check the symmetry first. In the infinite well the centre of symmetry is at $\\frac{L}{2}$: $\\sin^2\\frac{n\\pi x}{L}$ is symmetric about the centre, so $\\langle x\\rangle=\\frac{L}{2}$ for every $n$."
+ },
+ {
+  "t": "m",
+  "m": "\\int_{-a}^{a}f\\left(x\\right)dx=0\\ \\ \\left(f\\left(-x\\right)=-f\\left(x\\right)\\right),\\qquad \\int_0^L\\sin^2\\frac{n\\pi x}{L}dx=\\frac{L}{2}"
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B3-L02-F03.png",
+   "ru": "figures/B3-L02-F03-ru.png",
+   "en": "figures/B3-L02-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Funksiyalar — vektor: skalyar ko'paytma, ortogonallik, bazis",
+  "ru": "4. Функции как векторы: скалярное произведение, ортогональность, базис",
+  "en": "4. Functions as vectors: inner product, orthogonality, basis"
+ },
+ {
+  "t": "li",
+  "uz": "**Analogiya.** Uch o'lchovli vektor $\\vec v=v_x\\vec i+v_y\\vec j+v_z\\vec k$ uchta son bilan beriladi; funksiya $f\\left(x\\right)$ esa har bir $x$ dagi qiymati bilan — u «cheksiz o'lchovli vektor». Vektorlar uchun $\\vec a\\cdot\\vec b=\\sum a_ib_i$ bo'lganidek, funksiyalar uchun **skalyar ko'paytma** (inner product) — integral, kompleks funksiyalarda birinchisi qo'shma olinadi. Ortogonallik: $\\langle f|g\\rangle=0$; norma: $\\left\\|f\\right\\|^2=\\langle f|f\\rangle$. Kvadrati integrallanuvchi funksiyalarning bunday fazosi **Gilbert fazosi** deyiladi. Dirak belgilashida holat — «ket» $|\\psi\\rangle$, unga qo'shma «bra» $\\langle\\psi|$, skalyar ko'paytma — «bra-ket» $\\langle\\phi|\\psi\\rangle$. Xossa: $\\langle g|f\\rangle=\\langle f|g\\rangle^*$, shuning uchun $\\langle f|f\\rangle$ har doim haqiqiy.",
+  "ru": "**Аналогия.** Трёхмерный вектор $\\vec v=v_x\\vec i+v_y\\vec j+v_z\\vec k$ задаётся тремя числами; функция $f\\left(x\\right)$ — своим значением при каждом $x$, это «бесконечномерный вектор». Как для векторов $\\vec a\\cdot\\vec b=\\sum a_ib_i$, так для функций **скалярное произведение** — интеграл, причём для комплексных функций первая берётся сопряжённой. Ортогональность: $\\langle f|g\\rangle=0$; норма: $\\left\\|f\\right\\|^2=\\langle f|f\\rangle$. Такое пространство функций с интегрируемым квадратом называется **гильбертовым пространством**. В обозначениях Дирака состояние — «кет» $|\\psi\\rangle$, сопряжённый к нему «бра» $\\langle\\psi|$, скалярное произведение — «бра-кет» $\\langle\\phi|\\psi\\rangle$. Свойство: $\\langle g|f\\rangle=\\langle f|g\\rangle^*$, поэтому $\\langle f|f\\rangle$ всегда действительно.",
+  "en": "**The analogy.** A three-dimensional vector $\\vec v=v_x\\vec i+v_y\\vec j+v_z\\vec k$ is given by three numbers; a function $f\\left(x\\right)$ by its value at every $x$ — it is an \"infinite-dimensional vector\". Just as $\\vec a\\cdot\\vec b=\\sum a_ib_i$ for vectors, for functions the **inner product** is an integral, with the first function conjugated in the complex case. Orthogonality: $\\langle f|g\\rangle=0$; norm: $\\left\\|f\\right\\|^2=\\langle f|f\\rangle$. Such a space of square-integrable functions is called a **Hilbert space**. In Dirac notation a state is a \"ket\" $|\\psi\\rangle$, its conjugate is a \"bra\" $\\langle\\psi|$, and the inner product is a \"bra-ket\" $\\langle\\phi|\\psi\\rangle$. Property: $\\langle g|f\\rangle=\\langle f|g\\rangle^*$, so $\\langle f|f\\rangle$ is always real."
+ },
+ {
+  "t": "m",
+  "m": "\\langle f|g\\rangle=\\int f^*\\left(x\\right)g\\left(x\\right)dx,\\qquad \\langle g|f\\rangle=\\langle f|g\\rangle^*,\\qquad \\left\\|f\\right\\|^2=\\langle f|f\\rangle"
+ },
+ {
+  "t": "li",
+  "uz": "**Ortonormal bazis va yoyish.** $\\langle\\psi_m|\\psi_n\\rangle=\\delta_{mn}$ (Kroneker belgisi: $m=n$ da $1$, aks holda $0$) bo'lgan funksiyalar to'plami **ortonormal bazis**. Eng muhim misol — cheksiz o'radagi $\\psi_n=\\sqrt{\\frac{2}{L}}\\sin\\frac{n\\pi x}{L}$ ([[F04]]): $\\sin\\frac{\\pi x}{L}\\sin\\frac{2\\pi x}{L}$ ko'paytmaning musbat va manfiy yuzalari teng va integral nolga teng. To'liq bazis bo'yicha istalgan funksiya yoyiladi: $\\psi=\\sum c_n\\psi_n$, koeffitsiyent esa vektor proyeksiyasi kabi topiladi — $c_n=\\langle\\psi_n|\\psi\\rangle$ ([[F05]]). Parseval tengligi: $\\sum\\left|c_n\\right|^2=\\langle\\psi|\\psi\\rangle$ — normallangan holat uchun $1$, bu esa $P_n=\\left|c_n\\right|^2$ ehtimolliklar yig'indisi birga teng ekanini bildiradi.",
+  "ru": "**Ортонормированный базис и разложение.** Набор функций с $\\langle\\psi_m|\\psi_n\\rangle=\\delta_{mn}$ (символ Кронекера: $1$ при $m=n$, иначе $0$) — **ортонормированный базис**. Важнейший пример — функции бесконечной ямы $\\psi_n=\\sqrt{\\frac{2}{L}}\\sin\\frac{n\\pi x}{L}$ ([[F04]]): у произведения $\\sin\\frac{\\pi x}{L}\\sin\\frac{2\\pi x}{L}$ положительная и отрицательная площади равны, и интеграл равен нулю. По полному базису раскладывается любая функция: $\\psi=\\sum c_n\\psi_n$, а коэффициент находится как проекция вектора — $c_n=\\langle\\psi_n|\\psi\\rangle$ ([[F05]]). Равенство Парсеваля: $\\sum\\left|c_n\\right|^2=\\langle\\psi|\\psi\\rangle$ — для нормированного состояния $1$, что означает: сумма вероятностей $P_n=\\left|c_n\\right|^2$ равна единице.",
+  "en": "**Orthonormal basis and expansion.** A set of functions with $\\langle\\psi_m|\\psi_n\\rangle=\\delta_{mn}$ (the Kronecker delta: $1$ for $m=n$, otherwise $0$) is an **orthonormal basis**. The most important example is the infinite-well functions $\\psi_n=\\sqrt{\\frac{2}{L}}\\sin\\frac{n\\pi x}{L}$ ([[F04]]): the product $\\sin\\frac{\\pi x}{L}\\sin\\frac{2\\pi x}{L}$ has equal positive and negative areas, and its integral is zero. Any function can be expanded in a complete basis: $\\psi=\\sum c_n\\psi_n$, and a coefficient is found like a vector projection — $c_n=\\langle\\psi_n|\\psi\\rangle$ ([[F05]]). Parseval's equality: $\\sum\\left|c_n\\right|^2=\\langle\\psi|\\psi\\rangle$ — equal to $1$ for a normalized state, which means that the probabilities $P_n=\\left|c_n\\right|^2$ add up to one."
+ },
+ {
+  "t": "m",
+  "m": "\\langle\\psi_m|\\psi_n\\rangle=\\delta_{mn},\\qquad c_n=\\langle\\psi_n|\\psi\\rangle=\\int\\psi_n^*\\psi\\,dx,\\qquad \\sum_n\\left|c_n\\right|^2=1"
+ },
+ {
+  "t": "li",
+  "uz": "**Koshi–Shvars tengsizligi va superpozitsiya.** Vektorlar uchun $\\left|\\vec a\\cdot\\vec b\\right|\\leq ab$ bo'lgani kabi, $\\left|\\langle f|g\\rangle\\right|^2\\leq\\langle f|f\\rangle\\langle g|g\\rangle$. Bu tengsizlik noaniqlik munosabatining matematik asosi (B3-L07). Superpozitsiyada ehtimollik zichligi aralash hadga ega: $\\psi=\\frac{1}{\\sqrt2}\\left(\\psi_1+\\psi_2\\right)$ uchun $\\left|\\psi\\right|^2=\\frac{1}{2}\\left(\\psi_1^2+\\psi_2^2\\right)+\\psi_1\\psi_2$. Ortogonallik tufayli aralash had normallashga hissa qo'shmaydi, lekin $\\langle x\\rangle$ ga qo'shadi: cheksiz o'rada $\\langle x\\rangle=\\frac{L}{2}-\\frac{16L}{9\\pi^2}$ — zarra chap yarimda ko'proq (S07). Vaqt o'tishi bilan bu aralash had $\\cos\\frac{\\left(E_2-E_1\\right)t}{\\hbar}$ bilan tebranadi.",
+  "ru": "**Неравенство Коши–Шварца и суперпозиция.** Как для векторов $\\left|\\vec a\\cdot\\vec b\\right|\\leq ab$, так $\\left|\\langle f|g\\rangle\\right|^2\\leq\\langle f|f\\rangle\\langle g|g\\rangle$. Это неравенство — математическая основа соотношения неопределённостей (B3-L07). В суперпозиции плотность вероятности содержит перекрёстный член: для $\\psi=\\frac{1}{\\sqrt2}\\left(\\psi_1+\\psi_2\\right)$ $\\left|\\psi\\right|^2=\\frac{1}{2}\\left(\\psi_1^2+\\psi_2^2\\right)+\\psi_1\\psi_2$. Благодаря ортогональности перекрёстный член не вносит вклада в нормировку, но вносит в $\\langle x\\rangle$: в бесконечной яме $\\langle x\\rangle=\\frac{L}{2}-\\frac{16L}{9\\pi^2}$ — частица чаще в левой половине (S07). Со временем этот перекрёстный член колеблется как $\\cos\\frac{\\left(E_2-E_1\\right)t}{\\hbar}$.",
+  "en": "**The Cauchy–Schwarz inequality and superposition.** Just as $\\left|\\vec a\\cdot\\vec b\\right|\\leq ab$ for vectors, $\\left|\\langle f|g\\rangle\\right|^2\\leq\\langle f|f\\rangle\\langle g|g\\rangle$. This inequality is the mathematical basis of the uncertainty relation (B3-L07). In a superposition the probability density has a cross term: for $\\psi=\\frac{1}{\\sqrt2}\\left(\\psi_1+\\psi_2\\right)$, $\\left|\\psi\\right|^2=\\frac{1}{2}\\left(\\psi_1^2+\\psi_2^2\\right)+\\psi_1\\psi_2$. Because of orthogonality the cross term does not contribute to the normalization, but it does contribute to $\\langle x\\rangle$: in the infinite well $\\langle x\\rangle=\\frac{L}{2}-\\frac{16L}{9\\pi^2}$ — the particle is more often in the left half (S07). With time this cross term oscillates as $\\cos\\frac{\\left(E_2-E_1\\right)t}{\\hbar}$."
+ },
+ {
+  "t": "m",
+  "m": "\\left|\\langle f|g\\rangle\\right|^2\\leq\\langle f|f\\rangle\\langle g|g\\rangle"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B3-L02-F04.png",
+   "ru": "figures/B3-L02-F04-ru.png",
+   "en": "figures/B3-L02-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B3-L02-F05.png",
+   "ru": "figures/B3-L02-F05-ru.png",
+   "en": "figures/B3-L02-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Chiziqli operatorlar: Ermit va unitar operatorlar",
+  "ru": "5. Линейные операторы: эрмитовы и унитарные операторы",
+  "en": "5. Linear operators: Hermitian and unitary operators"
+ },
+ {
+  "t": "li",
+  "uz": "**Operator va uning matritsasi.** Operator bitta funksiyani (vektorni) boshqasiga aylantiradi: $\\hat Af=g$. Chiziqli operator uchun $\\hat A\\left(af+bg\\right)=a\\hat Af+b\\hat Ag$. Kvant mexanikasining asosiy operatorlari: koordinata $\\hat x$ (funksiyani $x$ ga ko'paytiradi), impuls $\\hat p=-i\\hbar\\frac{d}{dx}$, energiya (Gamilton operatori) $\\hat H=\\frac{\\hat p^2}{2m}+V\\left(x\\right)$. Ortonormal bazisda operator **matritsa** bilan beriladi: $A_{mn}=\\langle\\psi_m|\\hat A|\\psi_n\\rangle$; shunda operatorning vektorga ta'siri matritsaning ustunga ko'paytirilishiga aylanadi (B0-L09). Masalan, spin-$\\frac{1}{2}$ uchun barcha operatorlar $2\\times2$ matritsalar (B3-L08).",
+  "ru": "**Оператор и его матрица.** Оператор переводит одну функцию (вектор) в другую: $\\hat Af=g$. Для линейного оператора $\\hat A\\left(af+bg\\right)=a\\hat Af+b\\hat Ag$. Основные операторы квантовой механики: координата $\\hat x$ (умножает функцию на $x$), импульс $\\hat p=-i\\hbar\\frac{d}{dx}$, энергия (оператор Гамильтона) $\\hat H=\\frac{\\hat p^2}{2m}+V\\left(x\\right)$. В ортонормированном базисе оператор задаётся **матрицей**: $A_{mn}=\\langle\\psi_m|\\hat A|\\psi_n\\rangle$; тогда действие оператора на вектор превращается в умножение матрицы на столбец (B0-L09). Например, для спина $\\frac{1}{2}$ все операторы — матрицы $2\\times2$ (B3-L08).",
+  "en": "**An operator and its matrix.** An operator turns one function (vector) into another: $\\hat Af=g$. For a linear operator $\\hat A\\left(af+bg\\right)=a\\hat Af+b\\hat Ag$. The basic operators of quantum mechanics are position $\\hat x$ (multiplies the function by $x$), momentum $\\hat p=-i\\hbar\\frac{d}{dx}$ and energy (the Hamiltonian) $\\hat H=\\frac{\\hat p^2}{2m}+V\\left(x\\right)$. In an orthonormal basis an operator is given by a **matrix**: $A_{mn}=\\langle\\psi_m|\\hat A|\\psi_n\\rangle$; then the action of the operator on a vector becomes multiplication of the matrix by a column (B0-L09). For example, for spin $\\frac{1}{2}$ all operators are $2\\times2$ matrices (B3-L08)."
+ },
+ {
+  "t": "m",
+  "m": "\\hat p=-i\\hbar\\frac{d}{dx},\\qquad \\hat H=-\\frac{\\hbar^2}{2m}\\frac{d^2}{dx^2}+V\\left(x\\right),\\qquad A_{mn}=\\langle\\psi_m|\\hat A|\\psi_n\\rangle"
+ },
+ {
+  "t": "li",
+  "uz": "**Ermit operatorlari.** Operatorning Ermit qo'shmasi $\\hat A^\\dagger$ shunday aniqlanadi: $\\langle f|\\hat Ag\\rangle=\\langle\\hat A^\\dagger f|g\\rangle$; matritsada bu **transponirlash va kompleks qo'shma olish**: $\\left(A^\\dagger\\right)_{mn}=A_{nm}^*$. Agar $\\hat A^\\dagger=\\hat A$ bo'lsa, operator **Ermit** (o'z-o'ziga qo'shma) deyiladi. Uchta asosiy xossa: 1) xos qiymatlari **haqiqiy**; 2) turli xos qiymatlarga mos xos vektorlari **ortogonal**; 3) xos vektorlari to'liq bazis hosil qiladi. Shuning uchun barcha **kuzatiladigan kattaliklar** (o'lchash natijalari — haqiqiy sonlar) Ermit operatorlar bilan ifodalanadi. Matritsa Ermit ekanini tekshirish oson: diagonal elementlar haqiqiy, diagonalga simmetrik elementlar o'zaro qo'shma: $A_{21}=A_{12}^*$.",
+  "ru": "**Эрмитовы операторы.** Эрмитово сопряжённый оператор $\\hat A^\\dagger$ определяется так: $\\langle f|\\hat Ag\\rangle=\\langle\\hat A^\\dagger f|g\\rangle$; для матрицы это **транспонирование и комплексное сопряжение**: $\\left(A^\\dagger\\right)_{mn}=A_{nm}^*$. Если $\\hat A^\\dagger=\\hat A$, оператор называется **эрмитовым** (самосопряжённым). Три главных свойства: 1) его собственные значения **действительны**; 2) собственные векторы, отвечающие разным собственным значениям, **ортогональны**; 3) собственные векторы образуют полный базис. Поэтому все **наблюдаемые величины** (результаты измерений — действительные числа) описываются эрмитовыми операторами. Проверить эрмитовость матрицы легко: диагональные элементы действительны, симметричные относительно диагонали элементы взаимно сопряжены: $A_{21}=A_{12}^*$.",
+  "en": "**Hermitian operators.** The Hermitian conjugate $\\hat A^\\dagger$ of an operator is defined by $\\langle f|\\hat Ag\\rangle=\\langle\\hat A^\\dagger f|g\\rangle$; for a matrix it means **transposing and taking the complex conjugate**: $\\left(A^\\dagger\\right)_{mn}=A_{nm}^*$. If $\\hat A^\\dagger=\\hat A$, the operator is called **Hermitian** (self-adjoint). Three main properties: 1) its eigenvalues are **real**; 2) eigenvectors belonging to different eigenvalues are **orthogonal**; 3) its eigenvectors form a complete basis. That is why all **observables** (measurement results are real numbers) are represented by Hermitian operators. Checking whether a matrix is Hermitian is easy: the diagonal elements are real, and elements symmetric about the diagonal are complex conjugates: $A_{21}=A_{12}^*$."
+ },
+ {
+  "t": "m",
+  "m": "\\left(A^\\dagger\\right)_{mn}=A_{nm}^*,\\qquad \\hat A^\\dagger=\\hat A\\ \\Rightarrow\\ \\lambda\\in\\mathbb{R},\\quad \\langle v_1|v_2\\rangle=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls operatori Ermit.** $\\langle f|\\hat pg\\rangle=\\int f^*\\left(-i\\hbar g'\\right)dx$ ni bo'laklab integrallaymiz: chegaraviy had $-i\\hbar f^*g$ cheksizlikda nolga teng (normallangan funksiyalar), qolgani $\\int\\left(-i\\hbar f'\\right)^*g\\,dx=\\langle\\hat pf|g\\rangle$. Demak $\\hat p^\\dagger=\\hat p$. $-i$ ko'paytuvchi aynan shu uchun kerak: $\\frac{d}{dx}$ ning o'zi **anti-Ermit** ($\\left(\\frac{d}{dx}\\right)^\\dagger=-\\frac{d}{dx}$). Shuningdek: $\\left(\\hat A\\hat B\\right)^\\dagger=\\hat B^\\dagger\\hat A^\\dagger$ (tartib almashadi), shuning uchun ikki Ermit operatorning ko'paytmasi faqat ular kommutatsiyalanganda Ermit bo'ladi; $i\\left[\\hat A,\\hat B\\right]$ esa har doim Ermit.",
+  "ru": "**Оператор импульса эрмитов.** Интегрируем $\\langle f|\\hat pg\\rangle=\\int f^*\\left(-i\\hbar g'\\right)dx$ по частям: граничный член $-i\\hbar f^*g$ на бесконечности равен нулю (нормируемые функции), остаётся $\\int\\left(-i\\hbar f'\\right)^*g\\,dx=\\langle\\hat pf|g\\rangle$. Значит, $\\hat p^\\dagger=\\hat p$. Множитель $-i$ нужен именно для этого: сам $\\frac{d}{dx}$ **антиэрмитов** ($\\left(\\frac{d}{dx}\\right)^\\dagger=-\\frac{d}{dx}$). Также: $\\left(\\hat A\\hat B\\right)^\\dagger=\\hat B^\\dagger\\hat A^\\dagger$ (порядок меняется), поэтому произведение двух эрмитовых операторов эрмитово, только если они коммутируют; а $i\\left[\\hat A,\\hat B\\right]$ эрмитов всегда.",
+  "en": "**The momentum operator is Hermitian.** Integrate $\\langle f|\\hat pg\\rangle=\\int f^*\\left(-i\\hbar g'\\right)dx$ by parts: the boundary term $-i\\hbar f^*g$ vanishes at infinity (normalizable functions), leaving $\\int\\left(-i\\hbar f'\\right)^*g\\,dx=\\langle\\hat pf|g\\rangle$. So $\\hat p^\\dagger=\\hat p$. The factor $-i$ is needed exactly for this: $\\frac{d}{dx}$ itself is **anti-Hermitian** ($\\left(\\frac{d}{dx}\\right)^\\dagger=-\\frac{d}{dx}$). Also $\\left(\\hat A\\hat B\\right)^\\dagger=\\hat B^\\dagger\\hat A^\\dagger$ (the order reverses), so the product of two Hermitian operators is Hermitian only if they commute, while $i\\left[\\hat A,\\hat B\\right]$ is always Hermitian."
+ },
+ {
+  "t": "li",
+  "uz": "**Unitar operatorlar.** $\\hat U^\\dagger\\hat U=\\hat 1$ bo'lgan operator **unitar**: u skalyar ko'paytmani, demak normallash va ehtimolliklarni saqlaydi — «kompleks burish». Unitar matritsaning ustunlari ortonormal, xos qiymatlari modul bo'yicha birga teng ($e^{i\\theta}$), $\\left|\\det U\\right|=1$. Vaqt bo'yicha evolyutsiya $\\hat U\\left(t\\right)=e^{-i\\hat Ht/\\hbar}$ unitar — shuning uchun to'liq ehtimollik vaqt o'tishi bilan saqlanadi. Ermit operatordan unitar operator $e^{i\\hat A}$ kabi hosil qilinadi. Xulosa: kuzatiladigan kattaliklar — Ermit, o'zgartirishlar (aylantirish, siljitish, evolyutsiya) — unitar.",
+  "ru": "**Унитарные операторы.** Оператор с $\\hat U^\\dagger\\hat U=\\hat 1$ называется **унитарным**: он сохраняет скалярное произведение, а значит, нормировку и вероятности — «комплексный поворот». Столбцы унитарной матрицы ортонормированы, её собственные значения по модулю равны единице ($e^{i\\theta}$), $\\left|\\det U\\right|=1$. Эволюция во времени $\\hat U\\left(t\\right)=e^{-i\\hat Ht/\\hbar}$ унитарна — поэтому полная вероятность со временем сохраняется. Из эрмитова оператора унитарный получается как $e^{i\\hat A}$. Итог: наблюдаемые — эрмитовы, преобразования (повороты, сдвиги, эволюция) — унитарны.",
+  "en": "**Unitary operators.** An operator with $\\hat U^\\dagger\\hat U=\\hat 1$ is **unitary**: it preserves the inner product, and hence normalization and probabilities — a \"complex rotation\". The columns of a unitary matrix are orthonormal, its eigenvalues have modulus one ($e^{i\\theta}$), and $\\left|\\det U\\right|=1$. Time evolution $\\hat U\\left(t\\right)=e^{-i\\hat Ht/\\hbar}$ is unitary — that is why the total probability is conserved in time. A unitary operator is obtained from a Hermitian one as $e^{i\\hat A}$. In short: observables are Hermitian, transformations (rotations, translations, evolution) are unitary."
+ },
+ {
+  "t": "m",
+  "m": "\\hat U^\\dagger\\hat U=\\hat 1,\\qquad \\left|\\lambda\\right|=1,\\qquad \\hat U\\left(t\\right)=e^{-i\\hat Ht/\\hbar}"
+ },
+ {
+  "t": "h2",
+  "uz": "6. Kommutatorlar",
+  "ru": "6. Коммутаторы",
+  "en": "6. Commutators"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif va asosiy kommutator.** Operatorlar umuman kommutativ emas: $\\hat A\\hat B\\neq\\hat B\\hat A$. Farqi **kommutator** deyiladi: $\\left[\\hat A,\\hat B\\right]=\\hat A\\hat B-\\hat B\\hat A$. Kvant mexanikasining asosiy kommutatori — kanonik munosabat. Uni hisoblash usuli: kommutatorni ixtiyoriy «sinov funksiyasi» $f$ ga ta'sir ettirish. $\\hat x\\hat pf=-i\\hbar xf'$, $\\hat p\\hat xf=-i\\hbar\\left(f+xf'\\right)$; ayirmasi $i\\hbar f$. Demak $\\left[\\hat x,\\hat p\\right]=i\\hbar$ — aynan shu munosabat noaniqlik munosabati $\\sigma_x\\sigma_p\\geq\\frac{\\hbar}{2}$ ga olib keladi (B3-L07). Umumiy qoida: kommutatsiyalanadigan operatorlar umumiy xos vektorlarga ega va ularni bir vaqtda aniq o'lchash mumkin.",
+  "ru": "**Определение и основной коммутатор.** Операторы, вообще говоря, не коммутируют: $\\hat A\\hat B\\neq\\hat B\\hat A$. Разность называется **коммутатором**: $\\left[\\hat A,\\hat B\\right]=\\hat A\\hat B-\\hat B\\hat A$. Основной коммутатор квантовой механики — каноническое соотношение. Способ вычисления: подействовать коммутатором на произвольную «пробную функцию» $f$. $\\hat x\\hat pf=-i\\hbar xf'$, $\\hat p\\hat xf=-i\\hbar\\left(f+xf'\\right)$; разность $i\\hbar f$. Значит, $\\left[\\hat x,\\hat p\\right]=i\\hbar$ — именно это соотношение приводит к соотношению неопределённостей $\\sigma_x\\sigma_p\\geq\\frac{\\hbar}{2}$ (B3-L07). Общее правило: коммутирующие операторы имеют общие собственные векторы, и их можно одновременно точно измерить.",
+  "en": "**Definition and the fundamental commutator.** Operators in general do not commute: $\\hat A\\hat B\\neq\\hat B\\hat A$. The difference is called the **commutator**: $\\left[\\hat A,\\hat B\\right]=\\hat A\\hat B-\\hat B\\hat A$. The fundamental commutator of quantum mechanics is the canonical relation. The way to compute it: let the commutator act on an arbitrary \"test function\" $f$. $\\hat x\\hat pf=-i\\hbar xf'$ and $\\hat p\\hat xf=-i\\hbar\\left(f+xf'\\right)$; the difference is $i\\hbar f$. So $\\left[\\hat x,\\hat p\\right]=i\\hbar$ — exactly this relation leads to the uncertainty relation $\\sigma_x\\sigma_p\\geq\\frac{\\hbar}{2}$ (B3-L07). The general rule: commuting operators have common eigenvectors and can be measured precisely at the same time."
+ },
+ {
+  "t": "m",
+  "m": "\\left[\\hat A,\\hat B\\right]=\\hat A\\hat B-\\hat B\\hat A,\\qquad \\left[\\hat x,\\hat p\\right]=i\\hbar"
+ },
+ {
+  "t": "li",
+  "uz": "**Hisoblash qoidalari.** Kommutatorlar algebrasi bir nechta qoida bilan quriladi: antisimmetriya $\\left[\\hat A,\\hat B\\right]=-\\left[\\hat B,\\hat A\\right]$; chiziqlilik; **Leybnits qoidasi** $\\left[\\hat A,\\hat B\\hat C\\right]=\\left[\\hat A,\\hat B\\right]\\hat C+\\hat B\\left[\\hat A,\\hat C\\right]$. Ulardan GRE da tez-tez kerak bo'ladigan natijalar: $\\left[\\hat x,\\hat p^2\\right]=2i\\hbar\\hat p$, $\\left[\\hat x^2,\\hat p\\right]=2i\\hbar\\hat x$, umuman $\\left[\\hat x,\\hat p^n\\right]=i\\hbar n\\hat p^{n-1}$ va $\\left[f\\left(\\hat x\\right),\\hat p\\right]=i\\hbar f'\\left(\\hat x\\right)$ — kommutator $\\hat p$ ni «hosila oluvchi»ga aylantiradi. Gamilton operatori bilan: $\\left[\\hat H,\\hat x\\right]=-\\frac{i\\hbar}{m}\\hat p$, $\\left[\\hat H,\\hat p\\right]=i\\hbar V'\\left(x\\right)$ — bulardan Erenfest teoremasi kelib chiqadi (B3-L07).",
+  "ru": "**Правила вычисления.** Алгебра коммутаторов строится на нескольких правилах: антисимметрия $\\left[\\hat A,\\hat B\\right]=-\\left[\\hat B,\\hat A\\right]$; линейность; **правило Лейбница** $\\left[\\hat A,\\hat B\\hat C\\right]=\\left[\\hat A,\\hat B\\right]\\hat C+\\hat B\\left[\\hat A,\\hat C\\right]$. Из них — результаты, часто нужные в GRE: $\\left[\\hat x,\\hat p^2\\right]=2i\\hbar\\hat p$, $\\left[\\hat x^2,\\hat p\\right]=2i\\hbar\\hat x$, вообще $\\left[\\hat x,\\hat p^n\\right]=i\\hbar n\\hat p^{n-1}$ и $\\left[f\\left(\\hat x\\right),\\hat p\\right]=i\\hbar f'\\left(\\hat x\\right)$ — коммутатор превращает $\\hat p$ в «взятие производной». С гамильтонианом: $\\left[\\hat H,\\hat x\\right]=-\\frac{i\\hbar}{m}\\hat p$, $\\left[\\hat H,\\hat p\\right]=i\\hbar V'\\left(x\\right)$ — отсюда следует теорема Эренфеста (B3-L07).",
+  "en": "**Rules of calculation.** Commutator algebra rests on a few rules: antisymmetry $\\left[\\hat A,\\hat B\\right]=-\\left[\\hat B,\\hat A\\right]$; linearity; and the **Leibniz rule** $\\left[\\hat A,\\hat B\\hat C\\right]=\\left[\\hat A,\\hat B\\right]\\hat C+\\hat B\\left[\\hat A,\\hat C\\right]$. They give results often needed on the GRE: $\\left[\\hat x,\\hat p^2\\right]=2i\\hbar\\hat p$, $\\left[\\hat x^2,\\hat p\\right]=2i\\hbar\\hat x$, in general $\\left[\\hat x,\\hat p^n\\right]=i\\hbar n\\hat p^{n-1}$ and $\\left[f\\left(\\hat x\\right),\\hat p\\right]=i\\hbar f'\\left(\\hat x\\right)$ — the commutator turns $\\hat p$ into \"taking a derivative\". With the Hamiltonian: $\\left[\\hat H,\\hat x\\right]=-\\frac{i\\hbar}{m}\\hat p$ and $\\left[\\hat H,\\hat p\\right]=i\\hbar V'\\left(x\\right)$ — Ehrenfest's theorem follows from these (B3-L07)."
+ },
+ {
+  "t": "m",
+  "m": "\\left[\\hat A,\\hat B\\hat C\\right]=\\left[\\hat A,\\hat B\\right]\\hat C+\\hat B\\left[\\hat A,\\hat C\\right],\\qquad \\left[f\\left(\\hat x\\right),\\hat p\\right]=i\\hbar f'\\left(\\hat x\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Pauli matritsalari.** Spin-$\\frac{1}{2}$ ning kuzatiladigan kattaliklari uchta Ermit matritsa bilan ifodalanadi: $\\sigma_x$, $\\sigma_y$, $\\sigma_z$; spin operatori $\\hat S_i=\\frac{\\hbar}{2}\\sigma_i$ (B3-L08). Ularning xossalari ko'p GRE savollarining kaliti: har biri kvadratda birlik matritsa ($\\sigma_i^2=I$, demak xos qiymatlar $\\pm1$), izi nol, determinanti $-1$; kommutatorlar $\\left[\\sigma_x,\\sigma_y\\right]=2i\\sigma_z$ (va siklik almashtirishlar), antikommutatorlar $\\sigma_x\\sigma_y+\\sigma_y\\sigma_x=0$. Turli komponentalar kommutatsiyalanmagani uchun spinning ikki proyeksiyasini bir vaqtda aniq o'lchab bo'lmaydi.",
+  "ru": "**Матрицы Паули.** Наблюдаемые спина $\\frac{1}{2}$ описываются тремя эрмитовыми матрицами: $\\sigma_x$, $\\sigma_y$, $\\sigma_z$; оператор спина $\\hat S_i=\\frac{\\hbar}{2}\\sigma_i$ (B3-L08). Их свойства — ключ ко многим вопросам GRE: квадрат каждой — единичная матрица ($\\sigma_i^2=I$, значит, собственные значения $\\pm1$), след нулевой, определитель $-1$; коммутаторы $\\left[\\sigma_x,\\sigma_y\\right]=2i\\sigma_z$ (и циклические перестановки), антикоммутаторы $\\sigma_x\\sigma_y+\\sigma_y\\sigma_x=0$. Так как разные компоненты не коммутируют, две проекции спина нельзя одновременно точно измерить.",
+  "en": "**The Pauli matrices.** The observables of spin $\\frac{1}{2}$ are represented by three Hermitian matrices $\\sigma_x$, $\\sigma_y$, $\\sigma_z$; the spin operator is $\\hat S_i=\\frac{\\hbar}{2}\\sigma_i$ (B3-L08). Their properties are the key to many GRE questions: each squares to the identity ($\\sigma_i^2=I$, so the eigenvalues are $\\pm1$), has zero trace and determinant $-1$; the commutators are $\\left[\\sigma_x,\\sigma_y\\right]=2i\\sigma_z$ (and cyclic permutations), and the anticommutators $\\sigma_x\\sigma_y+\\sigma_y\\sigma_x=0$. Since different components do not commute, two spin projections cannot be measured precisely at the same time."
+ },
+ {
+  "t": "m",
+  "m": "\\sigma_x=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix},\\quad \\sigma_y=\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix},\\quad \\sigma_z=\\begin{pmatrix}1&0\\\\0&-1\\end{pmatrix},\\quad \\left[\\sigma_x,\\sigma_y\\right]=2i\\sigma_z"
+ },
+ {
+  "t": "h2",
+  "uz": "7. Xos qiymat masalasi va o'lchash",
+  "ru": "7. Задача на собственные значения и измерение",
+  "en": "7. The eigenvalue problem and measurement"
+ },
+ {
+  "t": "li",
+  "uz": "**Matritsaning xos qiymatlari.** $\\hat Av=\\lambda v$ tenglamasi nol bo'lmagan yechimga ega bo'lishi uchun $\\det\\left(A-\\lambda I\\right)=0$ (xarakteristik tenglama). $2\\times2$ matritsa uchun bu kvadrat tenglama: $\\lambda^2-\\left(\\mathrm{tr}\\,A\\right)\\lambda+\\det A=0$. Eng tez tekshiruv: xos qiymatlar yig'indisi = iz, ko'paytmasi = determinant. Ermit $2\\times2$ matritsa $\\begin{pmatrix}a&b\\\\b^*&d\\end{pmatrix}$ uchun yopiq formula bor. Masalan, $\\begin{pmatrix}2&1-i\\\\1+i&3\\end{pmatrix}$: iz $5$, determinant $6-2=4$, xos qiymatlar $4$ va $1$. Geometrik ma'nosi ([[F06]]): simmetrik matritsa birlik aylanani ellipsga aylantiradi, xos vektorlar esa yo'nalishini o'zgartirmaydigan, faqat cho'ziladigan yo'nalishlardir.",
+  "ru": "**Собственные значения матрицы.** Чтобы уравнение $\\hat Av=\\lambda v$ имело ненулевое решение, нужно $\\det\\left(A-\\lambda I\\right)=0$ (характеристическое уравнение). Для матрицы $2\\times2$ это квадратное уравнение: $\\lambda^2-\\left(\\mathrm{tr}\\,A\\right)\\lambda+\\det A=0$. Самая быстрая проверка: сумма собственных значений = след, произведение = определитель. Для эрмитовой матрицы $2\\times2$ $\\begin{pmatrix}a&b\\\\b^*&d\\end{pmatrix}$ есть замкнутая формула. Например, $\\begin{pmatrix}2&1-i\\\\1+i&3\\end{pmatrix}$: след $5$, определитель $6-2=4$, собственные значения $4$ и $1$. Геометрический смысл ([[F06]]): симметричная матрица переводит единичную окружность в эллипс, а собственные векторы — направления, которые не поворачиваются, а только растягиваются.",
+  "en": "**Eigenvalues of a matrix.** For the equation $\\hat Av=\\lambda v$ to have a non-zero solution we need $\\det\\left(A-\\lambda I\\right)=0$ (the characteristic equation). For a $2\\times2$ matrix this is a quadratic: $\\lambda^2-\\left(\\mathrm{tr}\\,A\\right)\\lambda+\\det A=0$. The fastest check: the sum of the eigenvalues equals the trace, their product the determinant. For a Hermitian $2\\times2$ matrix $\\begin{pmatrix}a&b\\\\b^*&d\\end{pmatrix}$ there is a closed formula. For example, $\\begin{pmatrix}2&1-i\\\\1+i&3\\end{pmatrix}$: trace $5$, determinant $6-2=4$, eigenvalues $4$ and $1$. The geometric meaning ([[F06]]): a symmetric matrix maps the unit circle to an ellipse, and the eigenvectors are the directions that are not rotated, only stretched."
+ },
+ {
+  "t": "m",
+  "m": "\\det\\left(A-\\lambda I\\right)=0,\\qquad \\lambda_{\\pm}=\\frac{a+d}{2}\\pm\\sqrt{\\left(\\frac{a-d}{2}\\right)^2+\\left|b\\right|^2},\\qquad \\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\quad \\lambda_1\\lambda_2=\\det A"
+ },
+ {
+  "t": "li",
+  "uz": "**Xos vektorlar.** Har bir $\\lambda$ uchun $\\left(A-\\lambda I\\right)v=0$ dan vektor topiladi va normallanadi. $\\sigma_x$ uchun: $\\lambda=+1$ da $\\frac{1}{\\sqrt2}\\left(1,1\\right)$, $\\lambda=-1$ da $\\frac{1}{\\sqrt2}\\left(1,-1\\right)$; $\\sigma_y$ uchun $\\frac{1}{\\sqrt2}\\left(1,\\pm i\\right)$. Xos qiymat **karrali** (aynigan) bo'lsa, unga bir nechta mustaqil xos vektor mos keladi va ularni istalgan ortonormal kombinatsiya bilan tanlash mumkin. $3\\times3$ matritsalarda ko'pincha bitta xos qiymat ko'rinib turadi (masalan, nolga teng satrlar), qolganlari iz va determinantdan topiladi.",
+  "ru": "**Собственные векторы.** Для каждого $\\lambda$ вектор находят из $\\left(A-\\lambda I\\right)v=0$ и нормируют. Для $\\sigma_x$: при $\\lambda=+1$ $\\frac{1}{\\sqrt2}\\left(1,1\\right)$, при $\\lambda=-1$ $\\frac{1}{\\sqrt2}\\left(1,-1\\right)$; для $\\sigma_y$ $\\frac{1}{\\sqrt2}\\left(1,\\pm i\\right)$. Если собственное значение **кратное** (вырожденное), ему отвечают несколько независимых собственных векторов, и их можно выбрать любой ортонормированной комбинацией. В матрицах $3\\times3$ одно собственное значение часто видно сразу (например, из одинаковых строк), остальные находят по следу и определителю.",
+  "en": "**Eigenvectors.** For each $\\lambda$ the vector is found from $\\left(A-\\lambda I\\right)v=0$ and normalized. For $\\sigma_x$: $\\frac{1}{\\sqrt2}\\left(1,1\\right)$ for $\\lambda=+1$ and $\\frac{1}{\\sqrt2}\\left(1,-1\\right)$ for $\\lambda=-1$; for $\\sigma_y$ $\\frac{1}{\\sqrt2}\\left(1,\\pm i\\right)$. If an eigenvalue is **repeated** (degenerate), several independent eigenvectors belong to it, and they may be chosen as any orthonormal combination. In $3\\times3$ matrices one eigenvalue is often visible at once (for example, from identical rows), and the others follow from the trace and determinant."
+ },
+ {
+  "t": "li",
+  "uz": "**O'lchash postulati.** Kvant mexanikasining markaziy g'oyasi aynan xos qiymat masalasi orqali ifodalanadi: kattalik $\\hat A$ ni o'lchashda faqat uning **xos qiymatlaridan biri** chiqishi mumkin; holat $|\\psi\\rangle$ da $a_n$ natijaning ehtimolligi $P_n=\\left|\\langle v_n|\\psi\\rangle\\right|^2$, bunda $v_n$ — mos normallangan xos vektor; o'lchashdan keyin holat $v_n$ ga o'tadi. O'rtacha qiymatni ikki usulda hisoblash mumkin: $\\langle A\\rangle=\\sum P_na_n=\\langle\\psi|\\hat A|\\psi\\rangle$. Masalan, $|\\psi\\rangle=\\frac{1}{5}\\left(3,4\\right)$ holatda $\\sigma_x$ ni o'lchasak: $P_+=\\frac{\\left(3+4\\right)^2}{50}=\\frac{49}{50}$, $P_-=\\frac{1}{50}$, $\\langle\\sigma_x\\rangle=\\frac{48}{50}$.",
+  "ru": "**Постулат измерения.** Центральная идея квантовой механики выражается именно через задачу на собственные значения: при измерении величины $\\hat A$ может получиться только **одно из её собственных значений**; в состоянии $|\\psi\\rangle$ вероятность результата $a_n$ равна $P_n=\\left|\\langle v_n|\\psi\\rangle\\right|^2$, где $v_n$ — соответствующий нормированный собственный вектор; после измерения состояние переходит в $v_n$. Среднее можно вычислить двумя способами: $\\langle A\\rangle=\\sum P_na_n=\\langle\\psi|\\hat A|\\psi\\rangle$. Например, при измерении $\\sigma_x$ в состоянии $|\\psi\\rangle=\\frac{1}{5}\\left(3,4\\right)$: $P_+=\\frac{\\left(3+4\\right)^2}{50}=\\frac{49}{50}$, $P_-=\\frac{1}{50}$, $\\langle\\sigma_x\\rangle=\\frac{48}{50}$.",
+  "en": "**The measurement postulate.** The central idea of quantum mechanics is expressed exactly through the eigenvalue problem: measuring a quantity $\\hat A$ can give only **one of its eigenvalues**; in the state $|\\psi\\rangle$ the probability of the result $a_n$ is $P_n=\\left|\\langle v_n|\\psi\\rangle\\right|^2$, where $v_n$ is the corresponding normalized eigenvector; after the measurement the state becomes $v_n$. The average can be computed in two ways: $\\langle A\\rangle=\\sum P_na_n=\\langle\\psi|\\hat A|\\psi\\rangle$. For example, measuring $\\sigma_x$ in the state $|\\psi\\rangle=\\frac{1}{5}\\left(3,4\\right)$: $P_+=\\frac{\\left(3+4\\right)^2}{50}=\\frac{49}{50}$, $P_-=\\frac{1}{50}$, $\\langle\\sigma_x\\rangle=\\frac{48}{50}$."
+ },
+ {
+  "t": "m",
+  "m": "P_n=\\left|\\langle v_n|\\psi\\rangle\\right|^2,\\qquad \\langle A\\rangle=\\sum_nP_na_n=\\langle\\psi|\\hat A|\\psi\\rangle"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B3-L02-F06.png",
+   "ru": "figures/B3-L02-F06-ru.png",
+   "en": "figures/B3-L02-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Differensial operatorlarning xos funksiyalari",
+  "ru": "8. Собственные функции дифференциальных операторов",
+  "en": "8. Eigenfunctions of differential operators"
+ },
+ {
+  "t": "li",
+  "uz": "**Hosila operatorlari.** $\\frac{d}{dx}$ ning xos funksiyalari — eksponentalar: $\\frac{d}{dx}e^{\\lambda x}=\\lambda e^{\\lambda x}$. Shuning uchun $\\hat p$ ning xos funksiyalari yassi to'lqinlar: $\\hat pe^{ikx}=\\hbar ke^{ikx}$, xos qiymati $p=\\hbar k$ — bu de Broyl munosabatining matematik ifodasi (B3-L01). $\\frac{d^2}{dx^2}$ ning xos funksiyalari kengroq: $e^{\\pm ikx}$, $\\cos kx$, $\\sin kx$ (xos qiymat $-k^2$) va $e^{\\pm\\kappa x}$ (xos qiymat $\\kappa^2$). Diqqat: $\\cos kx$ — $\\frac{d^2}{dx^2}$ ning xos funksiyasi, lekin $\\frac{d}{dx}$ niki emas; ya'ni $\\cos kx$ holatda impuls aniq emas ($\\pm\\hbar k$ ning superpozitsiyasi), kinetik energiya esa aniq.",
+  "ru": "**Операторы производной.** Собственные функции $\\frac{d}{dx}$ — экспоненты: $\\frac{d}{dx}e^{\\lambda x}=\\lambda e^{\\lambda x}$. Поэтому собственные функции $\\hat p$ — плоские волны: $\\hat pe^{ikx}=\\hbar ke^{ikx}$, собственное значение $p=\\hbar k$ — математическое выражение соотношения де Бройля (B3-L01). У $\\frac{d^2}{dx^2}$ собственных функций больше: $e^{\\pm ikx}$, $\\cos kx$, $\\sin kx$ (собственное значение $-k^2$) и $e^{\\pm\\kappa x}$ (собственное значение $\\kappa^2$). Внимание: $\\cos kx$ — собственная функция $\\frac{d^2}{dx^2}$, но не $\\frac{d}{dx}$; то есть в состоянии $\\cos kx$ импульс не определён (суперпозиция $\\pm\\hbar k$), а кинетическая энергия определена.",
+  "en": "**Derivative operators.** The eigenfunctions of $\\frac{d}{dx}$ are exponentials: $\\frac{d}{dx}e^{\\lambda x}=\\lambda e^{\\lambda x}$. So the eigenfunctions of $\\hat p$ are plane waves: $\\hat pe^{ikx}=\\hbar ke^{ikx}$, with eigenvalue $p=\\hbar k$ — the mathematical form of the de Broglie relation (B3-L01). $\\frac{d^2}{dx^2}$ has more eigenfunctions: $e^{\\pm ikx}$, $\\cos kx$, $\\sin kx$ (eigenvalue $-k^2$) and $e^{\\pm\\kappa x}$ (eigenvalue $\\kappa^2$). Note: $\\cos kx$ is an eigenfunction of $\\frac{d^2}{dx^2}$ but not of $\\frac{d}{dx}$; that is, in the state $\\cos kx$ the momentum is not definite (a superposition of $\\pm\\hbar k$), while the kinetic energy is."
+ },
+ {
+  "t": "m",
+  "m": "\\hat pe^{ikx}=\\hbar ke^{ikx},\\qquad \\frac{d^2}{dx^2}\\sin kx=-k^2\\sin kx,\\qquad \\frac{d^2}{dx^2}e^{\\pm\\kappa x}=\\kappa^2e^{\\pm\\kappa x}"
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaraviy shartlar kvantlashni beradi.** Matritsadan farqli ravishda differensial tenglama istalgan $\\lambda$ da yechimga ega; xos qiymatlarni **chegaraviy shartlar** tanlaydi. Misol: $f''=\\lambda f$, $f\\left(0\\right)=f\\left(L\\right)=0$. $\\lambda>0$ va $\\lambda=0$ da faqat nol yechim bor; $\\lambda=-k^2$ da $f=\\sin kx$, va $\\sin kL=0$ shartidan $k_n=\\frac{n\\pi}{L}$, $n=1,2,3,\\ldots$. Demak xos qiymatlar diskret: $\\lambda_n=-\\left(\\frac{n\\pi}{L}\\right)^2$. Bu — cheksiz chuqur o'radagi zarra energiyasining kvantlanishi: $E_n=\\frac{\\hbar^2k_n^2}{2m}=n^2E_1$ (B3-L04); elektron uchun $L=1\\ \\mathrm{nm}$ da $E_1\\approx0.38\\ \\mathrm{eV}$. Davriy shart $f\\left(x+L\\right)=f\\left(x\\right)$ esa $e^{2\\pi inx/L}$ ni beradi — har bir $n\\neq0$ uchun ikki karrali aynish ($\\pm n$).",
+  "ru": "**Граничные условия дают квантование.** В отличие от матрицы, дифференциальное уравнение имеет решение при любом $\\lambda$; собственные значения отбирают **граничные условия**. Пример: $f''=\\lambda f$, $f\\left(0\\right)=f\\left(L\\right)=0$. При $\\lambda>0$ и $\\lambda=0$ есть только нулевое решение; при $\\lambda=-k^2$ $f=\\sin kx$, и из условия $\\sin kL=0$ $k_n=\\frac{n\\pi}{L}$, $n=1,2,3,\\ldots$. Значит, собственные значения дискретны: $\\lambda_n=-\\left(\\frac{n\\pi}{L}\\right)^2$. Это квантование энергии частицы в бесконечно глубокой яме: $E_n=\\frac{\\hbar^2k_n^2}{2m}=n^2E_1$ (B3-L04); для электрона при $L=1\\ \\mathrm{nm}$ $E_1\\approx0.38\\ \\mathrm{eV}$. Периодическое условие $f\\left(x+L\\right)=f\\left(x\\right)$ даёт $e^{2\\pi inx/L}$ — для каждого $n\\neq0$ двукратное вырождение ($\\pm n$).",
+  "en": "**Boundary conditions produce quantization.** Unlike a matrix, a differential equation has a solution for any $\\lambda$; the eigenvalues are selected by the **boundary conditions**. Example: $f''=\\lambda f$ with $f\\left(0\\right)=f\\left(L\\right)=0$. For $\\lambda>0$ and $\\lambda=0$ only the zero solution exists; for $\\lambda=-k^2$, $f=\\sin kx$, and the condition $\\sin kL=0$ gives $k_n=\\frac{n\\pi}{L}$, $n=1,2,3,\\ldots$. So the eigenvalues are discrete: $\\lambda_n=-\\left(\\frac{n\\pi}{L}\\right)^2$. This is the energy quantization of a particle in an infinitely deep well: $E_n=\\frac{\\hbar^2k_n^2}{2m}=n^2E_1$ (B3-L04); for an electron with $L=1\\ \\mathrm{nm}$, $E_1\\approx0.38\\ \\mathrm{eV}$. The periodic condition $f\\left(x+L\\right)=f\\left(x\\right)$ gives $e^{2\\pi inx/L}$ — a twofold degeneracy ($\\pm n$) for each $n\\neq0$."
+ },
+ {
+  "t": "m",
+  "m": "f''=\\lambda f,\\ f\\left(0\\right)=f\\left(L\\right)=0\\ \\Rightarrow\\ f_n=\\sin\\frac{n\\pi x}{L},\\quad \\lambda_n=-\\left(\\frac{n\\pi}{L}\\right)^2"
+ },
+ {
+  "t": "li",
+  "uz": "**Statsionar holatlar va o'zgaruvchilarni ajratish.** Vaqtga bog'liq Shredinger tenglamasi $i\\hbar\\frac{\\partial\\Psi}{\\partial t}=\\hat H\\Psi$ da o'zgaruvchilarni ajratamiz: $\\Psi=\\psi\\left(x\\right)T\\left(t\\right)$. Natijada vaqt qismi $T=e^{-iEt/\\hbar}$, fazoviy qismi esa xos qiymat masalasi $\\hat H\\psi=E\\psi$ — **statsionar Shredinger tenglamasi** (B3-L03). Uch o'lchovli sferik simmetrik masalalarda xuddi shu usul burchak qismini — sferik garmonikalarni — ajratadi (B3-L08, B3-L09). Umumiy yechim — statsionar holatlarning superpozitsiyasi: $\\Psi=\\sum c_n\\psi_ne^{-iE_nt/\\hbar}$; har bir koeffitsiyentning moduli o'zgarmaydi, faqat nisbiy fazalar aylanadi.",
+  "ru": "**Стационарные состояния и разделение переменных.** В нестационарном уравнении Шрёдингера $i\\hbar\\frac{\\partial\\Psi}{\\partial t}=\\hat H\\Psi$ разделим переменные: $\\Psi=\\psi\\left(x\\right)T\\left(t\\right)$. В результате временная часть $T=e^{-iEt/\\hbar}$, а пространственная — задача на собственные значения $\\hat H\\psi=E\\psi$ — **стационарное уравнение Шрёдингера** (B3-L03). В трёхмерных сферически симметричных задачах тот же метод отделяет угловую часть — сферические гармоники (B3-L08, B3-L09). Общее решение — суперпозиция стационарных состояний: $\\Psi=\\sum c_n\\psi_ne^{-iE_nt/\\hbar}$; модуль каждого коэффициента не меняется, вращаются лишь относительные фазы.",
+  "en": "**Stationary states and separation of variables.** In the time-dependent Schrödinger equation $i\\hbar\\frac{\\partial\\Psi}{\\partial t}=\\hat H\\Psi$ we separate the variables: $\\Psi=\\psi\\left(x\\right)T\\left(t\\right)$. The time part is then $T=e^{-iEt/\\hbar}$, and the spatial part is the eigenvalue problem $\\hat H\\psi=E\\psi$ — the **time-independent Schrödinger equation** (B3-L03). In three-dimensional spherically symmetric problems the same method separates the angular part — the spherical harmonics (B3-L08, B3-L09). The general solution is a superposition of stationary states: $\\Psi=\\sum c_n\\psi_ne^{-iE_nt/\\hbar}$; the modulus of each coefficient does not change, only the relative phases rotate."
+ },
+ {
+  "t": "m",
+  "m": "i\\hbar\\frac{\\partial\\Psi}{\\partial t}=\\hat H\\Psi,\\qquad \\Psi=\\sum_nc_n\\psi_n\\left(x\\right)e^{-iE_nt/\\hbar},\\qquad \\hat H\\psi_n=E_n\\psi_n"
+ },
+ {
+  "t": "h2",
+  "uz": "9. Furye qatorlari va Furye almashtirishi",
+  "ru": "9. Ряды Фурье и преобразование Фурье",
+  "en": "9. Fourier series and the Fourier transform"
+ },
+ {
+  "t": "li",
+  "uz": "**Furye qatori.** $L$ davrli (yoki $\\left[0,L\\right]$ oraliqda berilgan) funksiya garmonikalar yig'indisiga yoyiladi: $f=\\sum c_ne^{2\\pi inx/L}$. Bu 4-bo'limdagi ortonormal bazis bo'yicha yoyishning o'zi — $\\frac{1}{\\sqrt L}e^{2\\pi inx/L}$ funksiyalar ortonormal. Cheksiz o'rada sinuslar bazisi ishlatiladi: $\\psi=\\sum c_n\\sqrt{\\frac{2}{L}}\\sin\\frac{n\\pi x}{L}$. Koeffitsiyentlar qanchalik tez kamaysa, funksiya shunchalik silliq: sakrashi bor funksiyada $c_n\\propto\\frac{1}{n}$, sinishi (burchagi) bor funksiyada $c_n\\propto\\frac{1}{n^2}$. [[F05]] da uchburchak funksiyaning sinus qatori ko'rsatilgan: uchta had bilanoq yaqinlashish yaxshi.",
+  "ru": "**Ряд Фурье.** Функция периода $L$ (или заданная на отрезке $\\left[0,L\\right]$) раскладывается в сумму гармоник: $f=\\sum c_ne^{2\\pi inx/L}$. Это то же разложение по ортонормированному базису из раздела 4 — функции $\\frac{1}{\\sqrt L}e^{2\\pi inx/L}$ ортонормированы. В бесконечной яме используется базис синусов: $\\psi=\\sum c_n\\sqrt{\\frac{2}{L}}\\sin\\frac{n\\pi x}{L}$. Чем быстрее убывают коэффициенты, тем глаже функция: у функции со скачком $c_n\\propto\\frac{1}{n}$, с изломом (углом) $c_n\\propto\\frac{1}{n^2}$. На [[F05]] показан ряд по синусам для треугольной функции: уже с тремя членами приближение хорошее.",
+  "en": "**The Fourier series.** A function of period $L$ (or one given on $\\left[0,L\\right]$) expands into a sum of harmonics: $f=\\sum c_ne^{2\\pi inx/L}$. This is exactly the expansion in an orthonormal basis of section 4 — the functions $\\frac{1}{\\sqrt L}e^{2\\pi inx/L}$ are orthonormal. In the infinite well the sine basis is used: $\\psi=\\sum c_n\\sqrt{\\frac{2}{L}}\\sin\\frac{n\\pi x}{L}$. The faster the coefficients decrease, the smoother the function: a function with a jump has $c_n\\propto\\frac{1}{n}$, one with a kink (corner) has $c_n\\propto\\frac{1}{n^2}$. [[F05]] shows the sine series of a triangular function: already with three terms the approximation is good."
+ },
+ {
+  "t": "m",
+  "m": "f\\left(x\\right)=\\sum_nc_ne^{2\\pi inx/L},\\qquad c_n=\\frac{1}{L}\\int_0^Lf\\left(x\\right)e^{-2\\pi inx/L}dx"
+ },
+ {
+  "t": "li",
+  "uz": "**Furye almashtirishi va impuls fazosi.** Davriy bo'lmagan funksiya uchun yig'indi integralga aylanadi: $\\psi\\left(x\\right)$ yassi to'lqinlar $e^{ikx}$ superpozitsiyasi, ularning amplitudasi $\\phi\\left(k\\right)$ — **Furye obrazi**. Fizik ma'nosi: $\\left|\\phi\\left(k\\right)\\right|^2$ — zarraning to'lqin soni $k$ (ya'ni impulsi $p=\\hbar k$) bo'yicha ehtimollik zichligi; $\\phi$ — **impuls fazosidagi to'lqin funksiyasi**. Plansherel tengligi $\\int\\left|\\psi\\right|^2dx=\\int\\left|\\phi\\right|^2dk$ normallashni saqlaydi. Foydali juftliklar: Gauss ↔ Gauss; to'g'ri burchakli «quti» ↔ $\\frac{\\sin u}{u}$; $e^{-\\left|x\\right|/a}$ ↔ $\\frac{1}{1+k^2a^2}$ (Lorens shakli); $e^{ik_0x}$ ↔ $\\delta\\left(k-k_0\\right)$.",
+  "ru": "**Преобразование Фурье и импульсное пространство.** Для непериодической функции сумма превращается в интеграл: $\\psi\\left(x\\right)$ — суперпозиция плоских волн $e^{ikx}$ с амплитудой $\\phi\\left(k\\right)$ — **образом Фурье**. Физический смысл: $\\left|\\phi\\left(k\\right)\\right|^2$ — плотность вероятности по волновому числу $k$ (то есть по импульсу $p=\\hbar k$); $\\phi$ — **волновая функция в импульсном пространстве**. Равенство Планшереля $\\int\\left|\\psi\\right|^2dx=\\int\\left|\\phi\\right|^2dk$ сохраняет нормировку. Полезные пары: гаусс ↔ гаусс; прямоугольный «ящик» ↔ $\\frac{\\sin u}{u}$; $e^{-\\left|x\\right|/a}$ ↔ $\\frac{1}{1+k^2a^2}$ (лоренцева форма); $e^{ik_0x}$ ↔ $\\delta\\left(k-k_0\\right)$.",
+  "en": "**The Fourier transform and momentum space.** For a non-periodic function the sum becomes an integral: $\\psi\\left(x\\right)$ is a superposition of plane waves $e^{ikx}$ with amplitude $\\phi\\left(k\\right)$ — the **Fourier transform**. Physical meaning: $\\left|\\phi\\left(k\\right)\\right|^2$ is the probability density in the wave number $k$ (that is, in the momentum $p=\\hbar k$); $\\phi$ is the **momentum-space wave function**. Plancherel's equality $\\int\\left|\\psi\\right|^2dx=\\int\\left|\\phi\\right|^2dk$ preserves normalization. Useful pairs: Gaussian ↔ Gaussian; a rectangular \"box\" ↔ $\\frac{\\sin u}{u}$; $e^{-\\left|x\\right|/a}$ ↔ $\\frac{1}{1+k^2a^2}$ (a Lorentzian); $e^{ik_0x}$ ↔ $\\delta\\left(k-k_0\\right)$."
+ },
+ {
+  "t": "m",
+  "m": "\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi\\left(x\\right)e^{-ikx}dx,\\qquad \\psi\\left(x\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\phi\\left(k\\right)e^{ikx}dk"
+ },
+ {
+  "t": "li",
+  "uz": "**Kengliklar teskari proporsional.** Funksiya $x$ bo'yicha qanchalik tor bo'lsa, uning Furye obrazi $k$ bo'yicha shunchalik keng ([[F07]]). Gauss paketi $\\left|\\psi\\right|^2\\propto e^{-x^2/\\left(2\\sigma_x^2\\right)}$ uchun $\\left|\\phi\\right|^2\\propto e^{-k^2/\\left(2\\sigma_k^2\\right)}$, bunda $\\sigma_x\\sigma_k=\\frac{1}{2}$ — Gauss eng kichik ko'paytmani beradi. Boshqa har qanday shakl uchun $\\sigma_x\\sigma_k>\\frac{1}{2}$. $p=\\hbar k$ bilan bu $\\sigma_x\\sigma_p\\geq\\frac{\\hbar}{2}$ — noaniqlik munosabatining to'lqin tabiatidan kelib chiqishi: u o'lchash asbobining kamchiligi emas, Furye tahlilining teoremasi. Kengligi $a$ bo'lgan quti uchun $\\phi$ ning birinchi noli $k=\\frac{2\\pi}{a}$ da — B3-L01 dagi tirqish difraksiyasi xuddi shu natija.",
+  "ru": "**Ширины обратно пропорциональны.** Чем уже функция по $x$, тем шире её образ Фурье по $k$ ([[F07]]). Для гауссова пакета $\\left|\\psi\\right|^2\\propto e^{-x^2/\\left(2\\sigma_x^2\\right)}$ $\\left|\\phi\\right|^2\\propto e^{-k^2/\\left(2\\sigma_k^2\\right)}$, где $\\sigma_x\\sigma_k=\\frac{1}{2}$ — гаусс даёт наименьшее произведение. Для любой другой формы $\\sigma_x\\sigma_k>\\frac{1}{2}$. С $p=\\hbar k$ это $\\sigma_x\\sigma_p\\geq\\frac{\\hbar}{2}$ — соотношение неопределённостей следует из волновой природы: это не недостаток прибора, а теорема фурье-анализа. Для ящика ширины $a$ первый нуль $\\phi$ при $k=\\frac{2\\pi}{a}$ — тот же результат, что и дифракция на щели в B3-L01.",
+  "en": "**The widths are inversely proportional.** The narrower a function is in $x$, the wider its Fourier transform in $k$ ([[F07]]). For a Gaussian packet $\\left|\\psi\\right|^2\\propto e^{-x^2/\\left(2\\sigma_x^2\\right)}$ we get $\\left|\\phi\\right|^2\\propto e^{-k^2/\\left(2\\sigma_k^2\\right)}$ with $\\sigma_x\\sigma_k=\\frac{1}{2}$ — the Gaussian gives the smallest product. For any other shape $\\sigma_x\\sigma_k>\\frac{1}{2}$. With $p=\\hbar k$ this is $\\sigma_x\\sigma_p\\geq\\frac{\\hbar}{2}$ — the uncertainty relation follows from the wave nature: it is not a defect of the instrument but a theorem of Fourier analysis. For a box of width $a$ the first zero of $\\phi$ is at $k=\\frac{2\\pi}{a}$ — the same result as slit diffraction in B3-L01."
+ },
+ {
+  "t": "m",
+  "m": "\\sigma_x\\sigma_k\\geq\\frac{1}{2}\\ \\Rightarrow\\ \\sigma_x\\sigma_p\\geq\\frac{\\hbar}{2}"
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B3-L02-F07.png",
+   "ru": "figures/B3-L02-F07-ru.png",
+   "en": "figures/B3-L02-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Dirak delta funksiyasi",
+  "ru": "10. Дельта-функция Дирака",
+  "en": "10. The Dirac delta function"
+ },
+ {
+  "t": "li",
+  "uz": "**Ta'rif va asosiy xossa.** $\\delta\\left(x\\right)$ — nuqtada joylashgan «cheksiz tor va baland» cho'qqi: $x\\neq0$ da nol, integrali esa birga teng. Uni kengligi nolga intiladigan Gauss funksiyalari ketma-ketligining limiti deb tasavvur qilish mumkin ([[F08]]). Asosiy xossa — **filtrlash** (sifting): $\\int f\\left(x\\right)\\delta\\left(x-a\\right)dx=f\\left(a\\right)$ — delta funksiya integral ostidan funksiyaning bitta nuqtadagi qiymatini «chiqarib oladi». Delta funksiyaning o'lchami — argumentiga teskari: $x$ uzunlik bo'lsa, $\\delta\\left(x\\right)$ ning birligi $\\mathrm{m^{-1}}$.",
+  "ru": "**Определение и основное свойство.** $\\delta\\left(x\\right)$ — сосредоточенный в точке «бесконечно узкий и высокий» пик: нуль при $x\\neq0$, а интеграл равен единице. Её можно представлять как предел последовательности гауссианов, ширина которых стремится к нулю ([[F08]]). Основное свойство — **фильтрующее**: $\\int f\\left(x\\right)\\delta\\left(x-a\\right)dx=f\\left(a\\right)$ — дельта-функция «вынимает» из-под интеграла значение функции в одной точке. Размерность дельта-функции обратна размерности аргумента: если $x$ — длина, то $\\delta\\left(x\\right)$ имеет единицу $\\mathrm{m^{-1}}$.",
+  "en": "**Definition and the main property.** $\\delta\\left(x\\right)$ is an \"infinitely narrow and tall\" spike located at a point: zero for $x\\neq0$, with unit integral. It can be pictured as the limit of a sequence of Gaussians whose width tends to zero ([[F08]]). The main property is **sifting**: $\\int f\\left(x\\right)\\delta\\left(x-a\\right)dx=f\\left(a\\right)$ — the delta function \"pulls out\" from under the integral the value of the function at one point. The dimension of the delta function is the inverse of its argument's: if $x$ is a length, $\\delta\\left(x\\right)$ has units $\\mathrm{m^{-1}}$."
+ },
+ {
+  "t": "m",
+  "m": "\\int_{-\\infty}^{\\infty}\\delta\\left(x\\right)dx=1,\\qquad \\int f\\left(x\\right)\\delta\\left(x-a\\right)dx=f\\left(a\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Hisoblash qoidalari.** 1) Masshtab: $\\delta\\left(ax\\right)=\\frac{\\delta\\left(x\\right)}{\\left|a\\right|}$ — bu ko'paytuvchini unutish GRE dagi eng ko'p uchraydigan xato. 2) Murakkab argument: $\\delta\\left(g\\left(x\\right)\\right)=\\sum\\frac{\\delta\\left(x-x_i\\right)}{\\left|g'\\left(x_i\\right)\\right|}$, $x_i$ — $g$ ning nollari. 3) Pog'ona funksiyasining hosilasi: $\\frac{d}{dx}\\theta\\left(x\\right)=\\delta\\left(x\\right)$ ([[F08]], o'ng). 4) Furye ko'rinishi: $\\int e^{ikx}dk=2\\pi\\delta\\left(x\\right)$ — yassi to'lqinlar «delta funksiyaga normallanadi». Fizikada: nuqtaviy zaryad zichligi $q\\delta^3\\left(\\vec r\\right)$, delta potensial o'ra $V=-\\alpha\\delta\\left(x\\right)$ (B3-L04), aniq impulsli holatning impuls fazosidagi to'lqin funksiyasi.",
+  "ru": "**Правила вычисления.** 1) Масштаб: $\\delta\\left(ax\\right)=\\frac{\\delta\\left(x\\right)}{\\left|a\\right|}$ — забыть этот множитель — самая частая ошибка в GRE. 2) Сложный аргумент: $\\delta\\left(g\\left(x\\right)\\right)=\\sum\\frac{\\delta\\left(x-x_i\\right)}{\\left|g'\\left(x_i\\right)\\right|}$, $x_i$ — нули $g$. 3) Производная ступенчатой функции: $\\frac{d}{dx}\\theta\\left(x\\right)=\\delta\\left(x\\right)$ ([[F08]], справа). 4) Фурье-представление: $\\int e^{ikx}dk=2\\pi\\delta\\left(x\\right)$ — плоские волны «нормируются на дельта-функцию». В физике: плотность точечного заряда $q\\delta^3\\left(\\vec r\\right)$, дельта-яма $V=-\\alpha\\delta\\left(x\\right)$ (B3-L04), волновая функция состояния с точным импульсом в импульсном пространстве.",
+  "en": "**Rules of calculation.** 1) Scaling: $\\delta\\left(ax\\right)=\\frac{\\delta\\left(x\\right)}{\\left|a\\right|}$ — forgetting this factor is the most common GRE mistake. 2) A composite argument: $\\delta\\left(g\\left(x\\right)\\right)=\\sum\\frac{\\delta\\left(x-x_i\\right)}{\\left|g'\\left(x_i\\right)\\right|}$, where $x_i$ are the zeros of $g$. 3) The derivative of the step function: $\\frac{d}{dx}\\theta\\left(x\\right)=\\delta\\left(x\\right)$ ([[F08]], right). 4) The Fourier representation: $\\int e^{ikx}dk=2\\pi\\delta\\left(x\\right)$ — plane waves are \"delta-normalized\". In physics: the density of a point charge $q\\delta^3\\left(\\vec r\\right)$, the delta well $V=-\\alpha\\delta\\left(x\\right)$ (B3-L04), the momentum-space wave function of a state with definite momentum."
+ },
+ {
+  "t": "m",
+  "m": "\\delta\\left(ax\\right)=\\frac{\\delta\\left(x\\right)}{\\left|a\\right|},\\qquad \\delta\\left(g\\left(x\\right)\\right)=\\sum_i\\frac{\\delta\\left(x-x_i\\right)}{\\left|g'\\left(x_i\\right)\\right|},\\qquad \\theta'\\left(x\\right)=\\delta\\left(x\\right)"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B3-L02-F08.png",
+   "ru": "figures/B3-L02-F08-ru.png",
+   "en": "figures/B3-L02-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "11. Maxsus funksiyalar: qisqacha ma'lumot",
+  "ru": "11. Специальные функции: краткие сведения",
+  "en": "11. Special functions: a brief guide"
+ },
+ {
+  "t": "li",
+  "uz": "**Ermit polinomlari** kvant ossillyatorining to'lqin funksiyalarida uchraydi: $\\psi_n\\propto H_n\\left(\\xi\\right)e^{-\\xi^2/2}$ (B3-L06); $H_0=1$, $H_1=2\\xi$, $H_2=4\\xi^2-2$. Ular navbatma-navbat juft va toq, $H_n$ ning $n$ ta noli bor — xos funksiyaning tugunlari soni sath raqamiga teng. **Lejandr polinomlari** — burchak qismida (B3-L08) va elektrostatikada (multipol yoyish, B2-L22): $P_0=1$, $P_1=\\cos\\theta$, $P_2=\\frac{3\\cos^2\\theta-1}{2}$; ular $\\left[-1,1\\right]$ da ortogonal. **Lagerr polinomlari** — vodorod atomining radial funksiyalarida (B3-L09). GRE bu funksiyalarning formulasini yoddan so'ramaydi, lekin juftligi, tugunlari soni va ortogonalligini bilishni talab qiladi.",
+  "ru": "**Полиномы Эрмита** — в волновых функциях квантового осциллятора $\\psi_n\\propto H_n\\left(\\xi\\right)e^{-\\xi^2/2}$ (B3-L06): $H_0=1$, $H_1=2\\xi$, $H_2=4\\xi^2-2$. Они поочерёдно чётные и нечётные, у $H_n$ $n$ нулей — число узлов собственной функции равно номеру уровня. **Полиномы Лежандра** — в угловой части (B3-L08) и в электростатике (мультипольное разложение, B2-L22): $P_0=1$, $P_1=\\cos\\theta$, $P_2=\\frac{3\\cos^2\\theta-1}{2}$; они ортогональны на $\\left[-1,1\\right]$. **Полиномы Лагерра** — в радиальных функциях атома водорода (B3-L09). GRE не требует помнить формулы этих функций, но требует знать их чётность, число узлов и ортогональность.",
+  "en": "**Hermite polynomials** appear in the quantum oscillator wave functions $\\psi_n\\propto H_n\\left(\\xi\\right)e^{-\\xi^2/2}$ (B3-L06): $H_0=1$, $H_1=2\\xi$, $H_2=4\\xi^2-2$. They are alternately even and odd, and $H_n$ has $n$ zeros — the number of nodes of an eigenfunction equals the level number. **Legendre polynomials** appear in the angular part (B3-L08) and in electrostatics (the multipole expansion, B2-L22): $P_0=1$, $P_1=\\cos\\theta$, $P_2=\\frac{3\\cos^2\\theta-1}{2}$; they are orthogonal on $\\left[-1,1\\right]$. **Laguerre polynomials** appear in the radial functions of the hydrogen atom (B3-L09). The GRE does not ask you to remember the formulas of these functions, but it does require knowing their parity, number of nodes and orthogonality."
+ },
+ {
+  "t": "m",
+  "m": "H_0=1,\\quad H_1=2\\xi,\\quad H_2=4\\xi^2-2;\\qquad P_0=1,\\quad P_1=\\cos\\theta,\\quad P_2=\\frac{3\\cos^2\\theta-1}{2}"
+ },
+ {
+  "t": "h2",
+  "uz": "12. Taqribiy usullar: kichik parametr bo'yicha yoyish",
+  "ru": "12. Приближённые методы: разложение по малому параметру",
+  "en": "12. Approximation methods: expansion in a small parameter"
+ },
+ {
+  "t": "li",
+  "uz": "**Teylor qatori va binomial yoyish** (B0-L08) — GRE dagi eng foydali taqribiy usul: $\\left(1+x\\right)^n\\approx1+nx+\\frac{n\\left(n-1\\right)}{2}x^2$, $e^x\\approx1+x+\\frac{x^2}{2}$, $\\ln\\left(1+x\\right)\\approx x-\\frac{x^2}{2}$, $\\cos x\\approx1-\\frac{x^2}{2}$. Kvant fizikasida: relyativistik energiyani kichik impuls bo'yicha yoysak, $E=\\sqrt{\\left(pc\\right)^2+\\left(mc^2\\right)^2}\\approx mc^2+\\frac{p^2}{2m}-\\frac{p^4}{8m^3c^2}$ — birinchi tuzatma nisbiy tartibda $\\frac{E_k}{2mc^2}$ (B3-L13 dagi nozik struktura shu haddan chiqadi). Har qanday silliq potensial minimum yaqinida parabolaga yoyiladi: $V\\approx V_0+\\frac{1}{2}V''\\left(x_0\\right)\\left(x-x_0\\right)^2$ — shuning uchun garmonik ossillyator hamma joyda uchraydi (B3-L06).",
+  "ru": "**Ряд Тейлора и биномиальное разложение** (B0-L08) — самый полезный приближённый метод в GRE: $\\left(1+x\\right)^n\\approx1+nx+\\frac{n\\left(n-1\\right)}{2}x^2$, $e^x\\approx1+x+\\frac{x^2}{2}$, $\\ln\\left(1+x\\right)\\approx x-\\frac{x^2}{2}$, $\\cos x\\approx1-\\frac{x^2}{2}$. В квантовой физике: разложив релятивистскую энергию по малому импульсу, $E=\\sqrt{\\left(pc\\right)^2+\\left(mc^2\\right)^2}\\approx mc^2+\\frac{p^2}{2m}-\\frac{p^4}{8m^3c^2}$ — первая поправка по относительному порядку $\\frac{E_k}{2mc^2}$ (из этого члена получается тонкая структура в B3-L13). Любой гладкий потенциал вблизи минимума раскладывается в параболу: $V\\approx V_0+\\frac{1}{2}V''\\left(x_0\\right)\\left(x-x_0\\right)^2$ — поэтому гармонический осциллятор встречается повсюду (B3-L06).",
+  "en": "**The Taylor series and the binomial expansion** (B0-L08) are the most useful approximation methods on the GRE: $\\left(1+x\\right)^n\\approx1+nx+\\frac{n\\left(n-1\\right)}{2}x^2$, $e^x\\approx1+x+\\frac{x^2}{2}$, $\\ln\\left(1+x\\right)\\approx x-\\frac{x^2}{2}$, $\\cos x\\approx1-\\frac{x^2}{2}$. In quantum physics: expanding the relativistic energy in small momentum, $E=\\sqrt{\\left(pc\\right)^2+\\left(mc^2\\right)^2}\\approx mc^2+\\frac{p^2}{2m}-\\frac{p^4}{8m^3c^2}$ — the first correction is of relative order $\\frac{E_k}{2mc^2}$ (the fine structure of B3-L13 comes from this term). Any smooth potential near a minimum expands into a parabola: $V\\approx V_0+\\frac{1}{2}V''\\left(x_0\\right)\\left(x-x_0\\right)^2$ — which is why the harmonic oscillator turns up everywhere (B3-L06)."
+ },
+ {
+  "t": "m",
+  "m": "\\left(1+x\\right)^n\\approx1+nx,\\qquad \\sqrt{\\left(pc\\right)^2+\\left(mc^2\\right)^2}\\approx mc^2+\\frac{p^2}{2m}-\\frac{p^4}{8m^3c^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Stirling formulasi** — katta sonlar faktorialini baholash: $\\ln N!\\approx N\\ln N-N$. Statistik fizikada (B3-L16, B3-L17) entropiya va taqsimotlarni keltirib chiqarishda doim ishlatiladi; $N=100$ da ham xato atigi bir foiz atrofida. **Variatsion g'oya** — B3-L01 dagi vodorod atomi bahosida biz energiyani parametr bo'yicha minimalladik; to'g'ri tanlangan sinov funksiyasi bilan bu usul asosiy holat energiyasining yuqori chegarasini beradi (B3-L11). **G'alayonlar nazariyasi** — kichik qo'shimcha $\\hat H'$ uchun birinchi tuzatma $E_n^{\\left(1\\right)}=\\langle\\psi_n|\\hat H'|\\psi_n\\rangle$ — matritsa elementi, ya'ni 5-bo'limdagi apparatning to'g'ridan-to'g'ri qo'llanishi (B3-L11).",
+  "ru": "**Формула Стирлинга** — оценка факториала больших чисел: $\\ln N!\\approx N\\ln N-N$. В статистической физике (B3-L16, B3-L17) постоянно используется при выводе энтропии и распределений; даже при $N=100$ ошибка всего около процента. **Вариационная идея** — в оценке атома водорода в B3-L01 мы минимизировали энергию по параметру; с правильно выбранной пробной функцией этот метод даёт верхнюю границу энергии основного состояния (B3-L11). **Теория возмущений** — для малой добавки $\\hat H'$ первая поправка $E_n^{\\left(1\\right)}=\\langle\\psi_n|\\hat H'|\\psi_n\\rangle$ — матричный элемент, то есть прямое применение аппарата раздела 5 (B3-L11).",
+  "en": "**Stirling's formula** estimates factorials of large numbers: $\\ln N!\\approx N\\ln N-N$. In statistical physics (B3-L16, B3-L17) it is used constantly when deriving entropy and distributions; even for $N=100$ the error is only about a percent. **The variational idea** — in the hydrogen-atom estimate of B3-L01 we minimized the energy over a parameter; with a well-chosen trial function this method gives an upper bound on the ground-state energy (B3-L11). **Perturbation theory** — for a small addition $\\hat H'$ the first correction $E_n^{\\left(1\\right)}=\\langle\\psi_n|\\hat H'|\\psi_n\\rangle$ is a matrix element, a direct application of the machinery of section 5 (B3-L11)."
+ },
+ {
+  "t": "m",
+  "m": "\\ln N!\\approx N\\ln N-N,\\qquad E_n^{\\left(1\\right)}=\\langle\\psi_n|\\hat H'|\\psi_n\\rangle"
+ },
+ {
+  "t": "h2",
+  "uz": "13. GRE usullari va tipik tuzoqlar",
+  "ru": "13. Приёмы GRE и типичные ловушки",
+  "en": "13. GRE techniques and typical traps"
+ },
+ {
+  "t": "li",
+  "uz": "**Integrallar va normallash.** 1) Avval simmetriya: toq integral nolga teng. 2) Gauss integrali va $\\int_0^{\\infty}x^ne^{-x/a}dx=n!\\,a^{n+1}$ ni yod biling; qolganini $\\alpha$ bo'yicha differensiallash bilan oling. 3) Normallash konstantasining o'lchamini tekshiring: bir o'lchovda $\\left[\\psi\\right]=\\mathrm{m^{-1/2}}$. 4) Koeffitsiyentlar ehtimolligi — **modul kvadrati**: $\\left|1+i\\right|^2=2$, $\\left|i\\right|^2=1$. 5) Cheksiz o'rada simmetrik holatlar uchun $\\langle x\\rangle=\\frac{L}{2}$ — hisoblashsiz.",
+  "ru": "**Интегралы и нормировка.** 1) Сначала симметрия: нечётный интеграл равен нулю. 2) Помните гауссов интеграл и $\\int_0^{\\infty}x^ne^{-x/a}dx=n!\\,a^{n+1}$; остальное получайте дифференцированием по $\\alpha$. 3) Проверяйте размерность нормировочной константы: в одномерном случае $\\left[\\psi\\right]=\\mathrm{m^{-1/2}}$. 4) Вероятность коэффициента — **квадрат модуля**: $\\left|1+i\\right|^2=2$, $\\left|i\\right|^2=1$. 5) В бесконечной яме для симметричных состояний $\\langle x\\rangle=\\frac{L}{2}$ — без вычислений.",
+  "en": "**Integrals and normalization.** 1) Symmetry first: an odd integral is zero. 2) Know the Gaussian integral and $\\int_0^{\\infty}x^ne^{-x/a}dx=n!\\,a^{n+1}$; get the rest by differentiating with respect to $\\alpha$. 3) Check the dimension of the normalization constant: in one dimension $\\left[\\psi\\right]=\\mathrm{m^{-1/2}}$. 4) The probability of a coefficient is its **squared modulus**: $\\left|1+i\\right|^2=2$, $\\left|i\\right|^2=1$. 5) In the infinite well $\\langle x\\rangle=\\frac{L}{2}$ for symmetric states — no calculation needed."
+ },
+ {
+  "t": "li",
+  "uz": "**Matritsalar va operatorlar.** 6) Xos qiymatlar: yig'indi = iz, ko'paytma = determinant — variantlarni bir zumda tekshiring. 7) Ermit matritsaning xos qiymatlari haqiqiy: kompleks xos qiymatli variant Ermit matritsa uchun noto'g'ri. 8) Kutilgan qiymat $\\langle\\psi|\\hat A|\\psi\\rangle$ Ermit operator uchun haqiqiy; javob kompleks chiqsa, xato bor. 9) Kommutatorni hisoblashda sinov funksiyasidan foydalaning va Leybnits qoidasini qo'llang; $\\left[\\hat x,\\hat p\\right]=i\\hbar$ ni hech qachon unutmang. 10) $\\left(\\hat A\\hat B\\right)^\\dagger=\\hat B^\\dagger\\hat A^\\dagger$ — tartib almashadi.",
+  "ru": "**Матрицы и операторы.** 6) Собственные значения: сумма = след, произведение = определитель — проверяйте варианты мгновенно. 7) Собственные значения эрмитовой матрицы действительны: вариант с комплексными собственными значениями для эрмитовой матрицы неверен. 8) Среднее $\\langle\\psi|\\hat A|\\psi\\rangle$ для эрмитова оператора действительно; если ответ получился комплексным — есть ошибка. 9) При вычислении коммутатора используйте пробную функцию и правило Лейбница; никогда не забывайте $\\left[\\hat x,\\hat p\\right]=i\\hbar$. 10) $\\left(\\hat A\\hat B\\right)^\\dagger=\\hat B^\\dagger\\hat A^\\dagger$ — порядок меняется.",
+  "en": "**Matrices and operators.** 6) Eigenvalues: sum = trace, product = determinant — check the choices instantly. 7) The eigenvalues of a Hermitian matrix are real: a choice with complex eigenvalues for a Hermitian matrix is wrong. 8) The expectation value $\\langle\\psi|\\hat A|\\psi\\rangle$ of a Hermitian operator is real; if your answer comes out complex, there is a mistake. 9) To compute a commutator use a test function and the Leibniz rule; never forget $\\left[\\hat x,\\hat p\\right]=i\\hbar$. 10) $\\left(\\hat A\\hat B\\right)^\\dagger=\\hat B^\\dagger\\hat A^\\dagger$ — the order reverses."
+ },
+ {
+  "t": "li",
+  "uz": "**Furye va delta.** 11) Tor ↔ keng: $x$ dagi kenglikni $n$ marta kamaytirsangiz, $k$ dagi kenglik $n$ marta ortadi. 12) $\\delta\\left(ax\\right)$ da $\\frac{1}{\\left|a\\right|}$ ko'paytuvchini unutmang; $\\delta\\left(x^2-a^2\\right)$ ikki nuqtada «ishlaydi». 13) Chegaraviy shartlar xos qiymatlarni tanlaydi: devorlari qattiq o'rada sinuslar, davriy shartda $e^{2\\pi inx/L}$ (ikki karrali aynish). 14) Taqribiy hisobda kichik parametrni aniq ajrating va birinchi tartibli hadni saqlang — GRE javoblari ko'pincha shu tartibda farq qiladi.",
+  "ru": "**Фурье и дельта.** 11) Узкое ↔ широкое: уменьшив ширину по $x$ в $n$ раз, увеличите ширину по $k$ в $n$ раз. 12) В $\\delta\\left(ax\\right)$ не забывайте множитель $\\frac{1}{\\left|a\\right|}$; $\\delta\\left(x^2-a^2\\right)$ «срабатывает» в двух точках. 13) Граничные условия отбирают собственные значения: в яме с жёсткими стенками — синусы, при периодическом условии — $e^{2\\pi inx/L}$ (двукратное вырождение). 14) В приближённом расчёте чётко выделяйте малый параметр и сохраняйте член первого порядка — ответы GRE часто различаются именно в этом порядке.",
+  "en": "**Fourier and delta.** 11) Narrow ↔ wide: reduce the width in $x$ by a factor $n$ and the width in $k$ grows by $n$. 12) In $\\delta\\left(ax\\right)$ do not forget the factor $\\frac{1}{\\left|a\\right|}$; $\\delta\\left(x^2-a^2\\right)$ \"fires\" at two points. 13) Boundary conditions select the eigenvalues: sines in a well with hard walls, $e^{2\\pi inx/L}$ for the periodic condition (twofold degeneracy). 14) In an approximate calculation separate the small parameter clearly and keep the first-order term — GRE answers often differ exactly at this order."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Kompleks son",
+    "ru": "Комплексное число",
+    "en": "Complex number",
+    "m": "z=re^{i\\varphi},\\quad \\left|z\\right|^2=z^*z"
+   },
+   {
+    "uz": "Interferension had",
+    "ru": "Интерференционный член",
+    "en": "Interference term",
+    "m": "\\left|z_1+z_2\\right|^2=\\left|z_1\\right|^2+\\left|z_2\\right|^2+2\\,\\mathrm{Re}\\left(z_1^*z_2\\right)"
+   },
+   {
+    "uz": "Normallash",
+    "ru": "Нормировка",
+    "en": "Normalization",
+    "m": "\\int\\left|\\psi\\right|^2dx=1"
+   },
+   {
+    "uz": "Kutilgan qiymat",
+    "ru": "Среднее значение",
+    "en": "Expectation value",
+    "m": "\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx"
+   },
+   {
+    "uz": "Dispersiya",
+    "ru": "Дисперсия",
+    "en": "Variance",
+    "m": "\\sigma^2=\\langle x^2\\rangle-\\langle x\\rangle^2"
+   },
+   {
+    "uz": "Diskret ehtimolliklar",
+    "ru": "Дискретные вероятности",
+    "en": "Discrete probabilities",
+    "m": "P_n=\\left|c_n\\right|^2,\\quad \\langle E\\rangle=\\sum\\left|c_n\\right|^2E_n"
+   },
+   {
+    "uz": "Gauss integrali",
+    "ru": "Гауссов интеграл",
+    "en": "Gaussian integral",
+    "m": "\\int e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}},\\quad \\langle x^2\\rangle=\\frac{1}{2\\alpha}"
+   },
+   {
+    "uz": "Eksponensial integral",
+    "ru": "Экспоненциальный интеграл",
+    "en": "Exponential integral",
+    "m": "\\int_0^{\\infty}x^ne^{-x/a}dx=n!\\,a^{n+1}"
+   },
+   {
+    "uz": "Skalyar ko'paytma",
+    "ru": "Скалярное произведение",
+    "en": "Inner product",
+    "m": "\\langle f|g\\rangle=\\int f^*g\\,dx"
+   },
+   {
+    "uz": "Bazis bo'yicha yoyish",
+    "ru": "Разложение по базису",
+    "en": "Expansion in a basis",
+    "m": "c_n=\\langle\\psi_n|\\psi\\rangle,\\quad \\sum\\left|c_n\\right|^2=1"
+   },
+   {
+    "uz": "Ermit qo'shma",
+    "ru": "Эрмитово сопряжение",
+    "en": "Hermitian conjugate",
+    "m": "\\left(A^\\dagger\\right)_{mn}=A_{nm}^*"
+   },
+   {
+    "uz": "Unitar operator",
+    "ru": "Унитарный оператор",
+    "en": "Unitary operator",
+    "m": "\\hat U^\\dagger\\hat U=\\hat 1"
+   },
+   {
+    "uz": "Kanonik kommutator",
+    "ru": "Канонический коммутатор",
+    "en": "Canonical commutator",
+    "m": "\\left[\\hat x,\\hat p\\right]=i\\hbar,\\quad \\left[f\\left(\\hat x\\right),\\hat p\\right]=i\\hbar f'"
+   },
+   {
+    "uz": "Leybnits qoidasi",
+    "ru": "Правило Лейбница",
+    "en": "Leibniz rule",
+    "m": "\\left[\\hat A,\\hat B\\hat C\\right]=\\left[\\hat A,\\hat B\\right]\\hat C+\\hat B\\left[\\hat A,\\hat C\\right]"
+   },
+   {
+    "uz": "Xos qiymatlar ($2\\times2$)",
+    "ru": "Собственные значения ($2\\times2$)",
+    "en": "Eigenvalues ($2\\times2$)",
+    "m": "\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\quad \\lambda_1\\lambda_2=\\det A"
+   },
+   {
+    "uz": "O'lchash ehtimolligi",
+    "ru": "Вероятность измерения",
+    "en": "Measurement probability",
+    "m": "P_n=\\left|\\langle v_n|\\psi\\rangle\\right|^2"
+   },
+   {
+    "uz": "Impuls xos funksiyasi",
+    "ru": "Собственная функция импульса",
+    "en": "Momentum eigenfunction",
+    "m": "\\hat pe^{ikx}=\\hbar ke^{ikx}"
+   },
+   {
+    "uz": "Furye almashtirishi",
+    "ru": "Преобразование Фурье",
+    "en": "Fourier transform",
+    "m": "\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx"
+   },
+   {
+    "uz": "Delta funksiya",
+    "ru": "Дельта-функция",
+    "en": "Delta function",
+    "m": "\\int f\\delta\\left(x-a\\right)dx=f\\left(a\\right),\\quad \\delta\\left(ax\\right)=\\frac{\\delta\\left(x\\right)}{\\left|a\\right|}"
+   },
+   {
+    "uz": "Binomial yoyish",
+    "ru": "Биномиальное разложение",
+    "en": "Binomial expansion",
+    "m": "\\left(1+x\\right)^n\\approx1+nx"
+   }
+  ]
+ }
+]

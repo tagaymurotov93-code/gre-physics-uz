@@ -1,0 +1,972 @@
+[
+ {
+  "id": "B3-L02-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Kompleks son $z=1+i\\sqrt{3}$ berilgan. Uning modulini, argumentini, ko'rsatkichli shaklini, $\\left|z\\right|^2$ ni, $\\frac{z}{z^*}$ ni va $z^6$ ni toping.",
+   "ru": "Дано комплексное число $z=1+i\\sqrt{3}$. Найдите его модуль, аргумент, показательную форму, $\\left|z\\right|^2$, $\\frac{z}{z^*}$ и $z^6$.",
+   "en": "Given the complex number $z=1+i\\sqrt{3}$, find its modulus, argument, exponential form, $\\left|z\\right|^2$, $\\frac{z}{z^*}$ and $z^6$."
+  },
+  "figure": "figures/B3-L02-S01.png",
+  "solution": {
+   "uz": [
+    "Modul va argument: $$r=\\sqrt{1+3}=2,\\qquad \\tan\\varphi=\\sqrt{3}\\ \\Rightarrow\\ \\varphi=\\frac{\\pi}{3}$$",
+    "Ko'rsatkichli shakl va modul kvadrati: $$z=2e^{i\\pi/3},\\qquad \\left|z\\right|^2=z^*z=\\left(1-i\\sqrt{3}\\right)\\left(1+i\\sqrt{3}\\right)=4$$",
+    "Bo'lishda modullar bo'linadi, argumentlar ayiriladi: $$\\frac{z}{z^*}=\\frac{2e^{i\\pi/3}}{2e^{-i\\pi/3}}=e^{2i\\pi/3}$$",
+    "Darajaga ko'tarish: $$z^6=2^6e^{2\\pi i}=64$$"
+   ],
+   "ru": [
+    "Модуль и аргумент: $$r=\\sqrt{1+3}=2,\\qquad \\tan\\varphi=\\sqrt{3}\\ \\Rightarrow\\ \\varphi=\\frac{\\pi}{3}$$",
+    "Показательная форма и квадрат модуля: $$z=2e^{i\\pi/3},\\qquad \\left|z\\right|^2=z^*z=\\left(1-i\\sqrt{3}\\right)\\left(1+i\\sqrt{3}\\right)=4$$",
+    "При делении модули делятся, аргументы вычитаются: $$\\frac{z}{z^*}=\\frac{2e^{i\\pi/3}}{2e^{-i\\pi/3}}=e^{2i\\pi/3}$$",
+    "Возведение в степень: $$z^6=2^6e^{2\\pi i}=64$$"
+   ],
+   "en": [
+    "Modulus and argument: $$r=\\sqrt{1+3}=2,\\qquad \\tan\\varphi=\\sqrt{3}\\ \\Rightarrow\\ \\varphi=\\frac{\\pi}{3}$$",
+    "The exponential form and the squared modulus: $$z=2e^{i\\pi/3},\\qquad \\left|z\\right|^2=z^*z=\\left(1-i\\sqrt{3}\\right)\\left(1+i\\sqrt{3}\\right)=4$$",
+    "In division the moduli divide and the arguments subtract: $$\\frac{z}{z^*}=\\frac{2e^{i\\pi/3}}{2e^{-i\\pi/3}}=e^{2i\\pi/3}$$",
+    "Raising to a power: $$z^6=2^6e^{2\\pi i}=64$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Kompleks son moduli: $\\left|z\\right|^2=z^*z$",
+    "ru": "Модуль комплексного числа: $\\left|z\\right|^2=z^*z$",
+    "en": "Modulus of a complex number: $\\left|z\\right|^2=z^*z$"
+   },
+   {
+    "uz": "Eyler formulasi: $z=re^{i\\varphi}$",
+    "ru": "Формула Эйлера: $z=re^{i\\varphi}$",
+    "en": "Euler's formula: $z=re^{i\\varphi}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kompleks sonlar ustida amallar",
+   "ru": "Действия с комплексными числами",
+   "en": "Operations with complex numbers"
+  },
+  "answer": "\\left|z\\right|=2;\\ \\varphi=\\frac{\\pi}{3};\\ \\left|z\\right|^2=4;\\ \\frac{z}{z^*}=e^{2i\\pi/3};\\ z^6=64",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "original (B3-L02, S01)"
+ },
+ {
+  "id": "B3-L02-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Kvant sistemaning holati uchta ortonormal bazis holat orqali $|\\psi\\rangle=A\\left(|1\\rangle+2i|2\\rangle+2|3\\rangle\\right)$ ko'rinishida berilgan. $A$ ni toping va har bir bazis holatda topilish ehtimolligini hisoblang.",
+   "ru": "Состояние квантовой системы задано через три ортонормированных базисных состояния: $|\\psi\\rangle=A\\left(|1\\rangle+2i|2\\rangle+2|3\\rangle\\right)$. Найдите $A$ и вычислите вероятность найти систему в каждом базисном состоянии.",
+   "en": "The state of a quantum system is given in terms of three orthonormal basis states as $|\\psi\\rangle=A\\left(|1\\rangle+2i|2\\rangle+2|3\\rangle\\right)$. Find $A$ and compute the probability of finding the system in each basis state."
+  },
+  "figure": "figures/B3-L02-S02.png",
+  "solution": {
+   "uz": [
+    "Normallash: koeffitsiyentlar modul kvadratlarining yig'indisi $1$ ga teng ($\\left|2i\\right|^2=4$): $$\\left|A\\right|^2\\left(1+4+4\\right)=1\\ \\Rightarrow\\ A=\\frac{1}{3}$$",
+    "Ehtimolliklar: $$P_1=\\frac{1}{9},\\qquad P_2=\\frac{4}{9},\\qquad P_3=\\frac{4}{9}$$",
+    "Tekshiruv: $$P_1+P_2+P_3=1$$"
+   ],
+   "ru": [
+    "Нормировка: сумма квадратов модулей коэффициентов равна $1$ ($\\left|2i\\right|^2=4$): $$\\left|A\\right|^2\\left(1+4+4\\right)=1\\ \\Rightarrow\\ A=\\frac{1}{3}$$",
+    "Вероятности: $$P_1=\\frac{1}{9},\\qquad P_2=\\frac{4}{9},\\qquad P_3=\\frac{4}{9}$$",
+    "Проверка: $$P_1+P_2+P_3=1$$"
+   ],
+   "en": [
+    "Normalization: the sum of the squared moduli of the coefficients equals $1$ ($\\left|2i\\right|^2=4$): $$\\left|A\\right|^2\\left(1+4+4\\right)=1\\ \\Rightarrow\\ A=\\frac{1}{3}$$",
+    "The probabilities: $$P_1=\\frac{1}{9},\\qquad P_2=\\frac{4}{9},\\qquad P_3=\\frac{4}{9}$$",
+    "Check: $$P_1+P_2+P_3=1$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Normallash sharti: $\\int\\left|\\psi\\right|^2dx=1$",
+    "ru": "Условие нормировки: $\\int\\left|\\psi\\right|^2dx=1$",
+    "en": "Normalization condition: $\\int\\left|\\psi\\right|^2dx=1$"
+   },
+   {
+    "uz": "Koeffitsiyent ehtimolligi: $P_n=\\left|c_n\\right|^2$",
+    "ru": "Вероятность коэффициента: $P_n=\\left|c_n\\right|^2$",
+    "en": "Probability of a coefficient: $P_n=\\left|c_n\\right|^2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Holat vektorini normallash",
+   "ru": "Нормировка вектора состояния",
+   "en": "Normalizing a state vector"
+  },
+  "answer": "A=\\frac{1}{3};\\ P_1=\\frac{1}{9},\\ P_2=\\frac{4}{9},\\ P_3=\\frac{4}{9}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original (B3-L02, S02)"
+ },
+ {
+  "id": "B3-L02-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "$0\\leq x\\leq L$ oraliqdagi zarraning to'lqin funksiyasi $\\psi=A\\sin\\frac{\\pi x}{L}$ (oraliqdan tashqarida nol). $A$ ni toping. Zarrani chap yarimda ($0<x<\\frac{L}{2}$) topish ehtimolligi qancha?",
+   "ru": "Волновая функция частицы на отрезке $0\\leq x\\leq L$: $\\psi=A\\sin\\frac{\\pi x}{L}$ (вне отрезка нуль). Найдите $A$. Какова вероятность найти частицу в левой половине ($0<x<\\frac{L}{2}$)?",
+   "en": "The wave function of a particle on $0\\leq x\\leq L$ is $\\psi=A\\sin\\frac{\\pi x}{L}$ (zero outside). Find $A$. What is the probability of finding the particle in the left half ($0<x<\\frac{L}{2}$)?"
+  },
+  "figure": "figures/B3-L02-S03.png",
+  "solution": {
+   "uz": [
+    "$\\sin^2u=\\frac{1-\\cos2u}{2}$; kosinusning to'liq davrlar bo'yicha integrali nol: $$\\int_0^L\\sin^2\\frac{\\pi x}{L}dx=\\frac{L}{2}$$",
+    "Normallash: $$\\left|A\\right|^2\\frac{L}{2}=1\\ \\Rightarrow\\ A=\\sqrt{\\frac{2}{L}}$$",
+    "$\\left|\\psi\\right|^2$ markaz $\\frac{L}{2}$ ga nisbatan simmetrik, shuning uchun: $$P\\left(0<x<\\frac{L}{2}\\right)=\\frac{1}{2}$$"
+   ],
+   "ru": [
+    "$\\sin^2u=\\frac{1-\\cos2u}{2}$; интеграл косинуса по целым периодам равен нулю: $$\\int_0^L\\sin^2\\frac{\\pi x}{L}dx=\\frac{L}{2}$$",
+    "Нормировка: $$\\left|A\\right|^2\\frac{L}{2}=1\\ \\Rightarrow\\ A=\\sqrt{\\frac{2}{L}}$$",
+    "$\\left|\\psi\\right|^2$ симметрична относительно центра $\\frac{L}{2}$, поэтому: $$P\\left(0<x<\\frac{L}{2}\\right)=\\frac{1}{2}$$"
+   ],
+   "en": [
+    "$\\sin^2u=\\frac{1-\\cos2u}{2}$; the integral of the cosine over whole periods is zero: $$\\int_0^L\\sin^2\\frac{\\pi x}{L}dx=\\frac{L}{2}$$",
+    "Normalization: $$\\left|A\\right|^2\\frac{L}{2}=1\\ \\Rightarrow\\ A=\\sqrt{\\frac{2}{L}}$$",
+    "$\\left|\\psi\\right|^2$ is symmetric about the centre $\\frac{L}{2}$, so: $$P\\left(0<x<\\frac{L}{2}\\right)=\\frac{1}{2}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Sinus kvadrati integrali: $\\int_0^L\\sin^2\\frac{n\\pi x}{L}dx=\\frac{L}{2}$",
+    "ru": "Интеграл квадрата синуса: $\\int_0^L\\sin^2\\frac{n\\pi x}{L}dx=\\frac{L}{2}$",
+    "en": "Integral of sine squared: $\\int_0^L\\sin^2\\frac{n\\pi x}{L}dx=\\frac{L}{2}$"
+   },
+   {
+    "uz": "Normallash sharti: $\\int\\left|\\psi\\right|^2dx=1$",
+    "ru": "Условие нормировки: $\\int\\left|\\psi\\right|^2dx=1$",
+    "en": "Normalization condition: $\\int\\left|\\psi\\right|^2dx=1$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Normallash va simmetriya",
+   "ru": "Нормировка и симметрия",
+   "en": "Normalization and symmetry"
+  },
+  "answer": "A=\\sqrt{\\frac{2}{L}};\\ P=\\frac{1}{2}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "OpenStax University Physics, 3-jild, 7-bob, 7.15 masalasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Zarraning to'lqin funksiyasi «chodir» shaklida: $\\left|x\\right|<a$ da $\\psi=A\\left(a-\\left|x\\right|\\right)$, qolgan joyda nol. $A$ ni, $\\langle x\\rangle$, $\\langle x^2\\rangle$, $\\sigma_x$ ni va zarrani $\\left|x\\right|<\\frac{a}{2}$ oraliqda topish ehtimolligini toping.",
+   "ru": "Волновая функция частицы имеет форму «палатки»: $\\psi=A\\left(a-\\left|x\\right|\\right)$ при $\\left|x\\right|<a$, в остальных точках нуль. Найдите $A$, $\\langle x\\rangle$, $\\langle x^2\\rangle$, $\\sigma_x$ и вероятность найти частицу в области $\\left|x\\right|<\\frac{a}{2}$.",
+   "en": "A particle's wave function has a «tent» shape: $\\psi=A\\left(a-\\left|x\\right|\\right)$ for $\\left|x\\right|<a$ and zero elsewhere. Find $A$, $\\langle x\\rangle$, $\\langle x^2\\rangle$, $\\sigma_x$ and the probability of finding the particle in $\\left|x\\right|<\\frac{a}{2}$."
+  },
+  "figure": "figures/B3-L02-S04.png",
+  "solution": {
+   "uz": [
+    "Funksiya juft — yarim o'q bo'yicha integralni ikkiga ko'paytiramiz: $$2\\left|A\\right|^2\\int_0^a\\left(a-x\\right)^2dx=\\frac{2a^3}{3}\\left|A\\right|^2=1\\ \\Rightarrow\\ A=\\sqrt{\\frac{3}{2a^3}}$$",
+    "$\\left|\\psi\\right|^2$ juft, $x\\left|\\psi\\right|^2$ toq: $$\\langle x\\rangle=0$$",
+    "Ikkinchi moment: $$\\langle x^2\\rangle=2\\cdot\\frac{3}{2a^3}\\int_0^ax^2\\left(a-x\\right)^2dx=\\frac{3}{a^3}\\cdot\\frac{a^5}{30}=\\frac{a^2}{10}$$",
+    "Standart chetlanish: $$\\sigma_x=\\sqrt{\\langle x^2\\rangle-\\langle x\\rangle^2}=\\frac{a}{\\sqrt{10}}\\approx0.32a$$",
+    "Markaziy sohadagi ehtimollik: $$P=2\\cdot\\frac{3}{2a^3}\\int_0^{a/2}\\left(a-x\\right)^2dx=\\frac{3}{a^3}\\cdot\\frac{7a^3}{24}=\\frac{7}{8}$$"
+   ],
+   "ru": [
+    "Функция чётная — удваиваем интеграл по полуоси: $$2\\left|A\\right|^2\\int_0^a\\left(a-x\\right)^2dx=\\frac{2a^3}{3}\\left|A\\right|^2=1\\ \\Rightarrow\\ A=\\sqrt{\\frac{3}{2a^3}}$$",
+    "$\\left|\\psi\\right|^2$ чётна, $x\\left|\\psi\\right|^2$ нечётна: $$\\langle x\\rangle=0$$",
+    "Второй момент: $$\\langle x^2\\rangle=2\\cdot\\frac{3}{2a^3}\\int_0^ax^2\\left(a-x\\right)^2dx=\\frac{3}{a^3}\\cdot\\frac{a^5}{30}=\\frac{a^2}{10}$$",
+    "Стандартное отклонение: $$\\sigma_x=\\sqrt{\\langle x^2\\rangle-\\langle x\\rangle^2}=\\frac{a}{\\sqrt{10}}\\approx0.32a$$",
+    "Вероятность в центральной области: $$P=2\\cdot\\frac{3}{2a^3}\\int_0^{a/2}\\left(a-x\\right)^2dx=\\frac{3}{a^3}\\cdot\\frac{7a^3}{24}=\\frac{7}{8}$$"
+   ],
+   "en": [
+    "The function is even — double the integral over the half-axis: $$2\\left|A\\right|^2\\int_0^a\\left(a-x\\right)^2dx=\\frac{2a^3}{3}\\left|A\\right|^2=1\\ \\Rightarrow\\ A=\\sqrt{\\frac{3}{2a^3}}$$",
+    "$\\left|\\psi\\right|^2$ is even and $x\\left|\\psi\\right|^2$ is odd: $$\\langle x\\rangle=0$$",
+    "The second moment: $$\\langle x^2\\rangle=2\\cdot\\frac{3}{2a^3}\\int_0^ax^2\\left(a-x\\right)^2dx=\\frac{3}{a^3}\\cdot\\frac{a^5}{30}=\\frac{a^2}{10}$$",
+    "The standard deviation: $$\\sigma_x=\\sqrt{\\langle x^2\\rangle-\\langle x\\rangle^2}=\\frac{a}{\\sqrt{10}}\\approx0.32a$$",
+    "The probability in the central region: $$P=2\\cdot\\frac{3}{2a^3}\\int_0^{a/2}\\left(a-x\\right)^2dx=\\frac{3}{a^3}\\cdot\\frac{7a^3}{24}=\\frac{7}{8}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Normallash sharti: $\\int\\left|\\psi\\right|^2dx=1$",
+    "ru": "Условие нормировки: $\\int\\left|\\psi\\right|^2dx=1$",
+    "en": "Normalization condition: $\\int\\left|\\psi\\right|^2dx=1$"
+   },
+   {
+    "uz": "Toq funksiya integrali: $\\int_{-a}^{a}f\\,dx=0$",
+    "ru": "Интеграл нечётной функции: $\\int_{-a}^{a}f\\,dx=0$",
+    "en": "Integral of an odd function: $\\int_{-a}^{a}f\\,dx=0$"
+   },
+   {
+    "uz": "Kutilgan qiymat: $\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx$",
+    "ru": "Среднее значение: $\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx$",
+    "en": "Expectation value: $\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx$"
+   },
+   {
+    "uz": "Dispersiya: $\\sigma^2=\\langle x^2\\rangle-\\langle x\\rangle^2$",
+    "ru": "Дисперсия: $\\sigma^2=\\langle x^2\\rangle-\\langle x\\rangle^2$",
+    "en": "Variance: $\\sigma^2=\\langle x^2\\rangle-\\langle x\\rangle^2$"
+   },
+   {
+    "uz": "Ehtimollik: $P=\\int_a^b\\left|\\psi\\right|^2dx$",
+    "ru": "Вероятность: $P=\\int_a^b\\left|\\psi\\right|^2dx$",
+    "en": "Probability: $P=\\int_a^b\\left|\\psi\\right|^2dx$"
+   }
+  ],
+  "basis": {
+   "uz": "Normallash, kutilgan qiymat va dispersiya",
+   "ru": "Нормировка, среднее и дисперсия",
+   "en": "Normalization, expectation value and variance"
+  },
+  "answer": "A=\\sqrt{\\frac{3}{2a^3}};\\ \\langle x\\rangle=0;\\ \\langle x^2\\rangle=\\frac{a^2}{10};\\ \\sigma_x\\approx0.32a;\\ P=\\frac{7}{8}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "OpenStax University Physics, 3-jild, 7-bob, 7.20 masalasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "To'lqin funksiyasi $\\psi=Ae^{-x^2/\\left(2b^2\\right)}$. Gauss integrallari yordamida $A$ ni, $\\langle x\\rangle$, $\\langle x^2\\rangle$ va $\\sigma_x$ ni toping.",
+   "ru": "Волновая функция $\\psi=Ae^{-x^2/\\left(2b^2\\right)}$. С помощью гауссовых интегралов найдите $A$, $\\langle x\\rangle$, $\\langle x^2\\rangle$ и $\\sigma_x$.",
+   "en": "The wave function is $\\psi=Ae^{-x^2/\\left(2b^2\\right)}$. Using Gaussian integrals, find $A$, $\\langle x\\rangle$, $\\langle x^2\\rangle$ and $\\sigma_x$."
+  },
+  "figure": "figures/B3-L02-S05.png",
+  "solution": {
+   "uz": [
+    "$\\left|\\psi\\right|^2=\\left|A\\right|^2e^{-\\alpha x^2}$, bunda $\\alpha=\\frac{1}{b^2}$. Normallash: $$\\left|A\\right|^2\\sqrt{\\pi b^2}=1\\ \\Rightarrow\\ A=\\left(\\pi b^2\\right)^{-1/4}$$",
+    "Simmetriya: $$\\langle x\\rangle=0$$",
+    "Ikkinchi moment: $$\\langle x^2\\rangle=\\frac{1}{2\\alpha}=\\frac{b^2}{2}$$",
+    "Standart chetlanish: $$\\sigma_x=\\frac{b}{\\sqrt{2}}$$"
+   ],
+   "ru": [
+    "$\\left|\\psi\\right|^2=\\left|A\\right|^2e^{-\\alpha x^2}$, где $\\alpha=\\frac{1}{b^2}$. Нормировка: $$\\left|A\\right|^2\\sqrt{\\pi b^2}=1\\ \\Rightarrow\\ A=\\left(\\pi b^2\\right)^{-1/4}$$",
+    "Симметрия: $$\\langle x\\rangle=0$$",
+    "Второй момент: $$\\langle x^2\\rangle=\\frac{1}{2\\alpha}=\\frac{b^2}{2}$$",
+    "Стандартное отклонение: $$\\sigma_x=\\frac{b}{\\sqrt{2}}$$"
+   ],
+   "en": [
+    "$\\left|\\psi\\right|^2=\\left|A\\right|^2e^{-\\alpha x^2}$ with $\\alpha=\\frac{1}{b^2}$. Normalization: $$\\left|A\\right|^2\\sqrt{\\pi b^2}=1\\ \\Rightarrow\\ A=\\left(\\pi b^2\\right)^{-1/4}$$",
+    "Symmetry: $$\\langle x\\rangle=0$$",
+    "The second moment: $$\\langle x^2\\rangle=\\frac{1}{2\\alpha}=\\frac{b^2}{2}$$",
+    "The standard deviation: $$\\sigma_x=\\frac{b}{\\sqrt{2}}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gauss integrali: $\\int e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}}$",
+    "ru": "Гауссов интеграл: $\\int e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}}$",
+    "en": "Gaussian integral: $\\int e^{-\\alpha x^2}dx=\\sqrt{\\frac{\\pi}{\\alpha}}$"
+   },
+   {
+    "uz": "Toq funksiya integrali: $\\int_{-a}^{a}f\\,dx=0$",
+    "ru": "Интеграл нечётной функции: $\\int_{-a}^{a}f\\,dx=0$",
+    "en": "Integral of an odd function: $\\int_{-a}^{a}f\\,dx=0$"
+   },
+   {
+    "uz": "Gauss integrali (ikkinchi moment): $\\langle x^2\\rangle=\\frac{1}{2\\alpha}$",
+    "ru": "Гауссов интеграл (второй момент): $\\langle x^2\\rangle=\\frac{1}{2\\alpha}$",
+    "en": "Gaussian integral (second moment): $\\langle x^2\\rangle=\\frac{1}{2\\alpha}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Gauss integrallari",
+   "ru": "Гауссовы интегралы",
+   "en": "Gaussian integrals"
+  },
+  "answer": "A=\\left(\\pi b^2\\right)^{-1/4};\\ \\langle x\\rangle=0;\\ \\langle x^2\\rangle=\\frac{b^2}{2};\\ \\sigma_x=\\frac{b}{\\sqrt{2}}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.2 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Cheksiz chuqur o'radagi zarra asosiy holatda: $\\psi_1=\\sqrt{\\frac{2}{L}}\\sin\\frac{\\pi x}{L}$. $\\langle x\\rangle$, $\\langle x^2\\rangle$, $\\sigma_x$ ni va zarrani $0<x<\\frac{L}{4}$ oraliqda topish ehtimolligini toping.",
+   "ru": "Частица в бесконечно глубокой яме находится в основном состоянии: $\\psi_1=\\sqrt{\\frac{2}{L}}\\sin\\frac{\\pi x}{L}$. Найдите $\\langle x\\rangle$, $\\langle x^2\\rangle$, $\\sigma_x$ и вероятность найти частицу на отрезке $0<x<\\frac{L}{4}$.",
+   "en": "A particle in an infinitely deep well is in its ground state $\\psi_1=\\sqrt{\\frac{2}{L}}\\sin\\frac{\\pi x}{L}$. Find $\\langle x\\rangle$, $\\langle x^2\\rangle$, $\\sigma_x$ and the probability of finding the particle in $0<x<\\frac{L}{4}$."
+  },
+  "figure": "figures/B3-L02-S06.png",
+  "solution": {
+   "uz": [
+    "$\\left|\\psi_1\\right|^2$ markazga nisbatan simmetrik: $$\\langle x\\rangle=\\frac{L}{2}$$",
+    "Ikkinchi moment (bo'laklab integrallash bilan): $$\\langle x^2\\rangle=\\frac{2}{L}\\int_0^Lx^2\\sin^2\\frac{\\pi x}{L}dx=L^2\\left(\\frac{1}{3}-\\frac{1}{2\\pi^2}\\right)$$",
+    "Standart chetlanish: $$\\sigma_x=L\\sqrt{\\frac{1}{12}-\\frac{1}{2\\pi^2}}\\approx0.181L$$",
+    "Chetdagi chorakdagi ehtimollik: $$P=\\frac{2}{L}\\int_0^{L/4}\\sin^2\\frac{\\pi x}{L}dx=\\frac{1}{4}-\\frac{1}{2\\pi}\\approx0.091$$"
+   ],
+   "ru": [
+    "$\\left|\\psi_1\\right|^2$ симметрична относительно центра: $$\\langle x\\rangle=\\frac{L}{2}$$",
+    "Второй момент (интегрированием по частям): $$\\langle x^2\\rangle=\\frac{2}{L}\\int_0^Lx^2\\sin^2\\frac{\\pi x}{L}dx=L^2\\left(\\frac{1}{3}-\\frac{1}{2\\pi^2}\\right)$$",
+    "Стандартное отклонение: $$\\sigma_x=L\\sqrt{\\frac{1}{12}-\\frac{1}{2\\pi^2}}\\approx0.181L$$",
+    "Вероятность в крайней четверти: $$P=\\frac{2}{L}\\int_0^{L/4}\\sin^2\\frac{\\pi x}{L}dx=\\frac{1}{4}-\\frac{1}{2\\pi}\\approx0.091$$"
+   ],
+   "en": [
+    "$\\left|\\psi_1\\right|^2$ is symmetric about the centre: $$\\langle x\\rangle=\\frac{L}{2}$$",
+    "The second moment (by integration by parts): $$\\langle x^2\\rangle=\\frac{2}{L}\\int_0^Lx^2\\sin^2\\frac{\\pi x}{L}dx=L^2\\left(\\frac{1}{3}-\\frac{1}{2\\pi^2}\\right)$$",
+    "The standard deviation: $$\\sigma_x=L\\sqrt{\\frac{1}{12}-\\frac{1}{2\\pi^2}}\\approx0.181L$$",
+    "The probability in the end quarter: $$P=\\frac{2}{L}\\int_0^{L/4}\\sin^2\\frac{\\pi x}{L}dx=\\frac{1}{4}-\\frac{1}{2\\pi}\\approx0.091$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Toq funksiya integrali: $\\int_{-a}^{a}f\\,dx=0$",
+    "ru": "Интеграл нечётной функции: $\\int_{-a}^{a}f\\,dx=0$",
+    "en": "Integral of an odd function: $\\int_{-a}^{a}f\\,dx=0$"
+   },
+   {
+    "uz": "Kutilgan qiymat: $\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx$",
+    "ru": "Среднее значение: $\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx$",
+    "en": "Expectation value: $\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx$"
+   },
+   {
+    "uz": "Dispersiya: $\\sigma^2=\\langle x^2\\rangle-\\langle x\\rangle^2$",
+    "ru": "Дисперсия: $\\sigma^2=\\langle x^2\\rangle-\\langle x\\rangle^2$",
+    "en": "Variance: $\\sigma^2=\\langle x^2\\rangle-\\langle x\\rangle^2$"
+   },
+   {
+    "uz": "Ehtimollik: $P=\\int_a^b\\left|\\psi\\right|^2dx$",
+    "ru": "Вероятность: $P=\\int_a^b\\left|\\psi\\right|^2dx$",
+    "en": "Probability: $P=\\int_a^b\\left|\\psi\\right|^2dx$"
+   }
+  ],
+  "basis": {
+   "uz": "Cheksiz o'radagi kutilgan qiymatlar",
+   "ru": "Средние значения в бесконечной яме",
+   "en": "Expectation values in the infinite well"
+  },
+  "answer": "\\langle x\\rangle=\\frac{L}{2};\\ \\langle x^2\\rangle=L^2\\left(\\frac{1}{3}-\\frac{1}{2\\pi^2}\\right);\\ \\sigma_x\\approx0.181L;\\ P\\approx0.091",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "OpenStax University Physics, 3-jild, 7-bob, 7.27 masalasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-S07",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Cheksiz o'radagi zarra holati $\\psi=\\frac{1}{\\sqrt2}\\left(\\psi_1+\\psi_2\\right)$, $\\psi_n=\\sqrt{\\frac{2}{L}}\\sin\\frac{n\\pi x}{L}$. Holat normallanganini ko'rsating va $\\langle x\\rangle$ ni toping. Nima uchun u $\\frac{L}{2}$ dan farq qiladi?",
+   "ru": "Состояние частицы в бесконечной яме $\\psi=\\frac{1}{\\sqrt2}\\left(\\psi_1+\\psi_2\\right)$, $\\psi_n=\\sqrt{\\frac{2}{L}}\\sin\\frac{n\\pi x}{L}$. Покажите, что состояние нормировано, и найдите $\\langle x\\rangle$. Почему оно отличается от $\\frac{L}{2}$?",
+   "en": "A particle in the infinite well is in the state $\\psi=\\frac{1}{\\sqrt2}\\left(\\psi_1+\\psi_2\\right)$, $\\psi_n=\\sqrt{\\frac{2}{L}}\\sin\\frac{n\\pi x}{L}$. Show that the state is normalized and find $\\langle x\\rangle$. Why does it differ from $\\frac{L}{2}$?"
+  },
+  "figure": "figures/B3-L02-S07.png",
+  "solution": {
+   "uz": [
+    "Ortonormallik tufayli aralash hadlar normallashga hissa qo'shmaydi: $$\\langle\\psi|\\psi\\rangle=\\frac{1}{2}\\left(1+1+2\\langle\\psi_1|\\psi_2\\rangle\\right)=1$$",
+    "Kutilgan qiymat — diagonal hadlar va aralash had: $$\\langle x\\rangle=\\frac{1}{2}\\left(\\frac{L}{2}+\\frac{L}{2}\\right)+\\int_0^Lx\\psi_1\\psi_2dx$$",
+    "Aralash integral ($\\sin u\\sin2u$ ko'paytmani kosinuslar ayirmasiga aylantirib): $$\\int_0^Lx\\psi_1\\psi_2dx=-\\frac{16L}{9\\pi^2}$$",
+    "Natija: aralash had $\\left|\\psi\\right|^2$ ni chap tomonga suradi: $$\\langle x\\rangle=\\frac{L}{2}-\\frac{16L}{9\\pi^2}\\approx0.320L$$"
+   ],
+   "ru": [
+    "Из-за ортонормированности перекрёстные члены не дают вклада в нормировку: $$\\langle\\psi|\\psi\\rangle=\\frac{1}{2}\\left(1+1+2\\langle\\psi_1|\\psi_2\\rangle\\right)=1$$",
+    "Среднее — диагональные члены и перекрёстный член: $$\\langle x\\rangle=\\frac{1}{2}\\left(\\frac{L}{2}+\\frac{L}{2}\\right)+\\int_0^Lx\\psi_1\\psi_2dx$$",
+    "Перекрёстный интеграл (произведение $\\sin u\\sin2u$ переводим в разность косинусов): $$\\int_0^Lx\\psi_1\\psi_2dx=-\\frac{16L}{9\\pi^2}$$",
+    "Итог: перекрёстный член сдвигает $\\left|\\psi\\right|^2$ влево: $$\\langle x\\rangle=\\frac{L}{2}-\\frac{16L}{9\\pi^2}\\approx0.320L$$"
+   ],
+   "en": [
+    "Because of orthonormality the cross terms do not contribute to normalization: $$\\langle\\psi|\\psi\\rangle=\\frac{1}{2}\\left(1+1+2\\langle\\psi_1|\\psi_2\\rangle\\right)=1$$",
+    "The expectation value — diagonal terms and the cross term: $$\\langle x\\rangle=\\frac{1}{2}\\left(\\frac{L}{2}+\\frac{L}{2}\\right)+\\int_0^Lx\\psi_1\\psi_2dx$$",
+    "The cross integral (turn the product $\\sin u\\sin2u$ into a difference of cosines): $$\\int_0^Lx\\psi_1\\psi_2dx=-\\frac{16L}{9\\pi^2}$$",
+    "The result: the cross term shifts $\\left|\\psi\\right|^2$ to the left: $$\\langle x\\rangle=\\frac{L}{2}-\\frac{16L}{9\\pi^2}\\approx0.320L$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ortonormallik: $\\langle\\psi_m|\\psi_n\\rangle=\\delta_{mn}$",
+    "ru": "Ортонормированность: $\\langle\\psi_m|\\psi_n\\rangle=\\delta_{mn}$",
+    "en": "Orthonormality: $\\langle\\psi_m|\\psi_n\\rangle=\\delta_{mn}$"
+   },
+   {
+    "uz": "Kutilgan qiymat: $\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx$",
+    "ru": "Среднее значение: $\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx$",
+    "en": "Expectation value: $\\langle f\\rangle=\\int f\\left|\\psi\\right|^2dx$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Superpozitsiya va interferension had",
+   "ru": "Суперпозиция и интерференционный член",
+   "en": "Superposition and the interference term"
+  },
+  "answer": "\\langle x\\rangle=\\frac{L}{2}-\\frac{16L}{9\\pi^2}\\approx0.320L",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.2 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Vektorlar $|a\\rangle=\\begin{pmatrix}1+i\\\\2\\end{pmatrix}$ va $|b\\rangle=\\begin{pmatrix}1\\\\i\\end{pmatrix}$. $\\langle a|b\\rangle$, $\\langle b|a\\rangle$, normalarni toping va Koshi–Shvars tengsizligini tekshiring. Normallangan holatlar orasidagi «o'tish ehtimolligi» $\\frac{\\left|\\langle a|b\\rangle\\right|^2}{\\langle a|a\\rangle\\langle b|b\\rangle}$ qancha?",
+   "ru": "Векторы $|a\\rangle=\\begin{pmatrix}1+i\\\\2\\end{pmatrix}$ и $|b\\rangle=\\begin{pmatrix}1\\\\i\\end{pmatrix}$. Найдите $\\langle a|b\\rangle$, $\\langle b|a\\rangle$, нормы и проверьте неравенство Коши–Шварца. Какова «вероятность перехода» между нормированными состояниями $\\frac{\\left|\\langle a|b\\rangle\\right|^2}{\\langle a|a\\rangle\\langle b|b\\rangle}$?",
+   "en": "The vectors are $|a\\rangle=\\begin{pmatrix}1+i\\\\2\\end{pmatrix}$ and $|b\\rangle=\\begin{pmatrix}1\\\\i\\end{pmatrix}$. Find $\\langle a|b\\rangle$, $\\langle b|a\\rangle$ and the norms, and check the Cauchy–Schwarz inequality. What is the «transition probability» between the normalized states, $\\frac{\\left|\\langle a|b\\rangle\\right|^2}{\\langle a|a\\rangle\\langle b|b\\rangle}$?"
+  },
+  "figure": "figures/B3-L02-S08.png",
+  "solution": {
+   "uz": [
+    "Bra-vektor — qo'shma qator; birinchi vektor komponentalari qo'shma olinadi: $$\\langle a|b\\rangle=\\left(1-i\\right)\\cdot1+2\\cdot i=1+i,\\qquad \\langle b|a\\rangle=\\langle a|b\\rangle^*=1-i$$",
+    "Normalar: $$\\langle a|a\\rangle=\\left|1+i\\right|^2+4=6,\\qquad \\langle b|b\\rangle=1+1=2$$",
+    "Koshi–Shvars: $$\\left|\\langle a|b\\rangle\\right|^2=2\\leq6\\cdot2=12$$",
+    "O'tish ehtimolligi: $$\\frac{2}{12}=\\frac{1}{6}$$"
+   ],
+   "ru": [
+    "Бра-вектор — сопряжённая строка; компоненты первого вектора сопрягаются: $$\\langle a|b\\rangle=\\left(1-i\\right)\\cdot1+2\\cdot i=1+i,\\qquad \\langle b|a\\rangle=\\langle a|b\\rangle^*=1-i$$",
+    "Нормы: $$\\langle a|a\\rangle=\\left|1+i\\right|^2+4=6,\\qquad \\langle b|b\\rangle=1+1=2$$",
+    "Коши–Шварц: $$\\left|\\langle a|b\\rangle\\right|^2=2\\leq6\\cdot2=12$$",
+    "Вероятность перехода: $$\\frac{2}{12}=\\frac{1}{6}$$"
+   ],
+   "en": [
+    "The bra is the conjugate row; the components of the first vector are conjugated: $$\\langle a|b\\rangle=\\left(1-i\\right)\\cdot1+2\\cdot i=1+i,\\qquad \\langle b|a\\rangle=\\langle a|b\\rangle^*=1-i$$",
+    "The norms: $$\\langle a|a\\rangle=\\left|1+i\\right|^2+4=6,\\qquad \\langle b|b\\rangle=1+1=2$$",
+    "Cauchy–Schwarz: $$\\left|\\langle a|b\\rangle\\right|^2=2\\leq6\\cdot2=12$$",
+    "The transition probability: $$\\frac{2}{12}=\\frac{1}{6}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Skalyar ko'paytma: $\\langle f|g\\rangle=\\int f^*g\\,dx$",
+    "ru": "Скалярное произведение: $\\langle f|g\\rangle=\\int f^*g\\,dx$",
+    "en": "Inner product: $\\langle f|g\\rangle=\\int f^*g\\,dx$"
+   },
+   {
+    "uz": "Kompleks son moduli: $\\left|z\\right|^2=z^*z$",
+    "ru": "Модуль комплексного числа: $\\left|z\\right|^2=z^*z$",
+    "en": "Modulus of a complex number: $\\left|z\\right|^2=z^*z$"
+   },
+   {
+    "uz": "Koshi–Shvars tengsizligi: $\\left|\\langle f|g\\rangle\\right|^2\\leq\\langle f|f\\rangle\\langle g|g\\rangle$",
+    "ru": "Неравенство Коши–Шварца: $\\left|\\langle f|g\\rangle\\right|^2\\leq\\langle f|f\\rangle\\langle g|g\\rangle$",
+    "en": "Cauchy–Schwarz inequality: $\\left|\\langle f|g\\rangle\\right|^2\\leq\\langle f|f\\rangle\\langle g|g\\rangle$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Skalyar ko'paytma va Koshi–Shvars tengsizligi",
+   "ru": "Скалярное произведение и неравенство Коши–Шварца",
+   "en": "Inner product and the Cauchy–Schwarz inequality"
+  },
+  "answer": "\\langle a|b\\rangle=1+i;\\ \\langle b|a\\rangle=1-i;\\ \\langle a|a\\rangle=6;\\ \\langle b|b\\rangle=2;\\ \\frac{1}{6}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original (B3-L02, S08)"
+ },
+ {
+  "id": "B3-L02-S09",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Matritsa $A=\\begin{pmatrix}1&2i\\\\-2i&4\\end{pmatrix}$. U Ermit ekanini ko'rsating, xos qiymatlari va normallangan xos vektorlarini toping, xos vektorlar ortogonalligini tekshiring.",
+   "ru": "Матрица $A=\\begin{pmatrix}1&2i\\\\-2i&4\\end{pmatrix}$. Покажите, что она эрмитова, найдите собственные значения и нормированные собственные векторы, проверьте ортогональность собственных векторов.",
+   "en": "The matrix is $A=\\begin{pmatrix}1&2i\\\\-2i&4\\end{pmatrix}$. Show that it is Hermitian, find its eigenvalues and normalized eigenvectors, and check that the eigenvectors are orthogonal."
+  },
+  "figure": "figures/B3-L02-S09.png",
+  "solution": {
+   "uz": [
+    "Diagonal haqiqiy, $A_{21}=-2i=\\left(2i\\right)^*=A_{12}^*$ — Ermit: $$A^\\dagger=A$$",
+    "Iz va determinant: $$\\mathrm{tr}\\,A=5,\\quad \\det A=4-\\left(2i\\right)\\left(-2i\\right)=4-4=0\\ \\Rightarrow\\ \\lambda_1=0,\\ \\lambda_2=5$$",
+    "$\\lambda=0$: $x+2iy=0$: $$v_0=\\frac{1}{\\sqrt5}\\begin{pmatrix}-2i\\\\1\\end{pmatrix}$$",
+    "$\\lambda=5$: $-4x+2iy=0$: $$v_5=\\frac{1}{\\sqrt5}\\begin{pmatrix}1\\\\-2i\\end{pmatrix}$$",
+    "Ortogonallik: $$\\langle v_0|v_5\\rangle=\\frac{1}{5}\\left(2i\\cdot1+1\\cdot\\left(-2i\\right)\\right)=0$$"
+   ],
+   "ru": [
+    "Диагональ действительна, $A_{21}=-2i=\\left(2i\\right)^*=A_{12}^*$ — эрмитова: $$A^\\dagger=A$$",
+    "След и определитель: $$\\mathrm{tr}\\,A=5,\\quad \\det A=4-\\left(2i\\right)\\left(-2i\\right)=4-4=0\\ \\Rightarrow\\ \\lambda_1=0,\\ \\lambda_2=5$$",
+    "$\\lambda=0$: $x+2iy=0$: $$v_0=\\frac{1}{\\sqrt5}\\begin{pmatrix}-2i\\\\1\\end{pmatrix}$$",
+    "$\\lambda=5$: $-4x+2iy=0$: $$v_5=\\frac{1}{\\sqrt5}\\begin{pmatrix}1\\\\-2i\\end{pmatrix}$$",
+    "Ортогональность: $$\\langle v_0|v_5\\rangle=\\frac{1}{5}\\left(2i\\cdot1+1\\cdot\\left(-2i\\right)\\right)=0$$"
+   ],
+   "en": [
+    "The diagonal is real and $A_{21}=-2i=\\left(2i\\right)^*=A_{12}^*$ — Hermitian: $$A^\\dagger=A$$",
+    "Trace and determinant: $$\\mathrm{tr}\\,A=5,\\quad \\det A=4-\\left(2i\\right)\\left(-2i\\right)=4-4=0\\ \\Rightarrow\\ \\lambda_1=0,\\ \\lambda_2=5$$",
+    "$\\lambda=0$: $x+2iy=0$: $$v_0=\\frac{1}{\\sqrt5}\\begin{pmatrix}-2i\\\\1\\end{pmatrix}$$",
+    "$\\lambda=5$: $-4x+2iy=0$: $$v_5=\\frac{1}{\\sqrt5}\\begin{pmatrix}1\\\\-2i\\end{pmatrix}$$",
+    "Orthogonality: $$\\langle v_0|v_5\\rangle=\\frac{1}{5}\\left(2i\\cdot1+1\\cdot\\left(-2i\\right)\\right)=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ermit matritsa: $A_{21}=A_{12}^*$",
+    "ru": "Эрмитова матрица: $A_{21}=A_{12}^*$",
+    "en": "Hermitian matrix: $A_{21}=A_{12}^*$"
+   },
+   {
+    "uz": "Iz va determinant: $\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\ \\lambda_1\\lambda_2=\\det A$",
+    "ru": "След и определитель: $\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\ \\lambda_1\\lambda_2=\\det A$",
+    "en": "Trace and determinant: $\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\ \\lambda_1\\lambda_2=\\det A$"
+   },
+   {
+    "uz": "Xarakteristik tenglama: $\\det\\left(A-\\lambda I\\right)=0$",
+    "ru": "Характеристическое уравнение: $\\det\\left(A-\\lambda I\\right)=0$",
+    "en": "Characteristic equation: $\\det\\left(A-\\lambda I\\right)=0$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Ermit matritsaning xos qiymatlari",
+   "ru": "Собственные значения эрмитовой матрицы",
+   "en": "Eigenvalues of a Hermitian matrix"
+  },
+  "answer": "\\lambda=0,\\ 5;\\ v_0=\\frac{1}{\\sqrt5}\\left(-2i,\\ 1\\right);\\ v_5=\\frac{1}{\\sqrt5}\\left(1,\\ -2i\\right)",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original (B3-L02, S09)"
+ },
+ {
+  "id": "B3-L02-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Pauli matritsalari uchun $\\sigma_x\\sigma_y$, $\\left[\\sigma_x,\\sigma_y\\right]$, $\\sigma_x\\sigma_y+\\sigma_y\\sigma_x$ va $\\sigma_x^2$ ni hisoblang. $\\sigma_y$ ning xos qiymatlari va xos vektorlarini toping.",
+   "ru": "Для матриц Паули вычислите $\\sigma_x\\sigma_y$, $\\left[\\sigma_x,\\sigma_y\\right]$, $\\sigma_x\\sigma_y+\\sigma_y\\sigma_x$ и $\\sigma_x^2$. Найдите собственные значения и собственные векторы $\\sigma_y$.",
+   "en": "For the Pauli matrices compute $\\sigma_x\\sigma_y$, $\\left[\\sigma_x,\\sigma_y\\right]$, $\\sigma_x\\sigma_y+\\sigma_y\\sigma_x$ and $\\sigma_x^2$. Find the eigenvalues and eigenvectors of $\\sigma_y$."
+  },
+  "figure": "figures/B3-L02-S10.png",
+  "solution": {
+   "uz": [
+    "Ko'paytma (qator × ustun): $$\\sigma_x\\sigma_y=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}=\\begin{pmatrix}i&0\\\\0&-i\\end{pmatrix}=i\\sigma_z$$",
+    "Teskari tartibda $\\sigma_y\\sigma_x=-i\\sigma_z$, demak: $$\\left[\\sigma_x,\\sigma_y\\right]=2i\\sigma_z,\\qquad \\sigma_x\\sigma_y+\\sigma_y\\sigma_x=0$$",
+    "Kvadrat: $$\\sigma_x^2=I$$",
+    "$\\sigma_y$: iz $0$, determinant $-1$ — xos qiymatlar $\\pm1$; vektorlar: $$\\lambda=\\pm1:\\quad \\frac{1}{\\sqrt2}\\begin{pmatrix}1\\\\\\pm i\\end{pmatrix}$$"
+   ],
+   "ru": [
+    "Произведение (строка × столбец): $$\\sigma_x\\sigma_y=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}=\\begin{pmatrix}i&0\\\\0&-i\\end{pmatrix}=i\\sigma_z$$",
+    "В обратном порядке $\\sigma_y\\sigma_x=-i\\sigma_z$, значит: $$\\left[\\sigma_x,\\sigma_y\\right]=2i\\sigma_z,\\qquad \\sigma_x\\sigma_y+\\sigma_y\\sigma_x=0$$",
+    "Квадрат: $$\\sigma_x^2=I$$",
+    "$\\sigma_y$: след $0$, определитель $-1$ — собственные значения $\\pm1$; векторы: $$\\lambda=\\pm1:\\quad \\frac{1}{\\sqrt2}\\begin{pmatrix}1\\\\\\pm i\\end{pmatrix}$$"
+   ],
+   "en": [
+    "The product (row × column): $$\\sigma_x\\sigma_y=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix}=\\begin{pmatrix}i&0\\\\0&-i\\end{pmatrix}=i\\sigma_z$$",
+    "In the reverse order $\\sigma_y\\sigma_x=-i\\sigma_z$, so: $$\\left[\\sigma_x,\\sigma_y\\right]=2i\\sigma_z,\\qquad \\sigma_x\\sigma_y+\\sigma_y\\sigma_x=0$$",
+    "The square: $$\\sigma_x^2=I$$",
+    "$\\sigma_y$: trace $0$, determinant $-1$ — eigenvalues $\\pm1$; vectors: $$\\lambda=\\pm1:\\quad \\frac{1}{\\sqrt2}\\begin{pmatrix}1\\\\\\pm i\\end{pmatrix}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Pauli matritsalari: $\\left[\\sigma_x,\\sigma_y\\right]=2i\\sigma_z$",
+    "ru": "Матрицы Паули: $\\left[\\sigma_x,\\sigma_y\\right]=2i\\sigma_z$",
+    "en": "Pauli matrices: $\\left[\\sigma_x,\\sigma_y\\right]=2i\\sigma_z$"
+   },
+   null,
+   {
+    "uz": "Iz va determinant: $\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\ \\lambda_1\\lambda_2=\\det A$",
+    "ru": "След и определитель: $\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\ \\lambda_1\\lambda_2=\\det A$",
+    "en": "Trace and determinant: $\\lambda_1+\\lambda_2=\\mathrm{tr}\\,A,\\ \\lambda_1\\lambda_2=\\det A$"
+   }
+  ],
+  "basis": {
+   "uz": "Pauli matritsalari algebrasi",
+   "ru": "Алгебра матриц Паули",
+   "en": "Algebra of the Pauli matrices"
+  },
+  "answer": "\\sigma_x\\sigma_y=i\\sigma_z;\\ \\left[\\sigma_x,\\sigma_y\\right]=2i\\sigma_z;\\ \\left\\{\\sigma_x,\\sigma_y\\right\\}=0;\\ \\sigma_x^2=I;\\ \\lambda=\\pm1",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.4 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-S11",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Spin-$\\frac{1}{2}$ holati $|\\psi\\rangle=\\frac{1}{\\sqrt5}\\begin{pmatrix}2\\\\i\\end{pmatrix}$ ($\\sigma_z$ bazisida). $\\langle\\sigma_x\\rangle$, $\\langle\\sigma_y\\rangle$, $\\langle\\sigma_z\\rangle$ ni toping. $\\sigma_y$ o'lchanganda $+1$ natija chiqish ehtimolligi qancha?",
+   "ru": "Состояние спина $\\frac{1}{2}$ $|\\psi\\rangle=\\frac{1}{\\sqrt5}\\begin{pmatrix}2\\\\i\\end{pmatrix}$ (в базисе $\\sigma_z$). Найдите $\\langle\\sigma_x\\rangle$, $\\langle\\sigma_y\\rangle$, $\\langle\\sigma_z\\rangle$. Какова вероятность результата $+1$ при измерении $\\sigma_y$?",
+   "en": "A spin-$\\frac{1}{2}$ state is $|\\psi\\rangle=\\frac{1}{\\sqrt5}\\begin{pmatrix}2\\\\i\\end{pmatrix}$ (in the $\\sigma_z$ basis). Find $\\langle\\sigma_x\\rangle$, $\\langle\\sigma_y\\rangle$, $\\langle\\sigma_z\\rangle$. What is the probability of the result $+1$ when $\\sigma_y$ is measured?"
+  },
+  "figure": "figures/B3-L02-S11.png",
+  "solution": {
+   "uz": [
+    "$\\sigma_z$ uchun ehtimolliklar $\\frac{4}{5}$ va $\\frac{1}{5}$: $$\\langle\\sigma_z\\rangle=\\frac{4}{5}-\\frac{1}{5}=\\frac{3}{5}$$",
+    "$\\sigma_x|\\psi\\rangle=\\frac{1}{\\sqrt5}\\left(i,\\ 2\\right)$: $$\\langle\\sigma_x\\rangle=\\frac{1}{5}\\left(2\\cdot i+\\left(-i\\right)\\cdot2\\right)=0$$",
+    "$\\sigma_y|\\psi\\rangle=\\frac{1}{\\sqrt5}\\left(1,\\ 2i\\right)$: $$\\langle\\sigma_y\\rangle=\\frac{1}{5}\\left(2\\cdot1+\\left(-i\\right)\\cdot2i\\right)=\\frac{4}{5}$$",
+    "Xos vektor $\\frac{1}{\\sqrt2}\\left(1,\\ i\\right)$ ga proyeksiya: $$P_+=\\left|\\frac{1\\cdot2+\\left(-i\\right)\\cdot i}{\\sqrt{10}}\\right|^2=\\frac{9}{10}$$",
+    "Tekshiruv: $\\langle\\sigma_y\\rangle=P_+-P_-$: $$\\frac{9}{10}-\\frac{1}{10}=\\frac{4}{5}$$"
+   ],
+   "ru": [
+    "Для $\\sigma_z$ вероятности $\\frac{4}{5}$ и $\\frac{1}{5}$: $$\\langle\\sigma_z\\rangle=\\frac{4}{5}-\\frac{1}{5}=\\frac{3}{5}$$",
+    "$\\sigma_x|\\psi\\rangle=\\frac{1}{\\sqrt5}\\left(i,\\ 2\\right)$: $$\\langle\\sigma_x\\rangle=\\frac{1}{5}\\left(2\\cdot i+\\left(-i\\right)\\cdot2\\right)=0$$",
+    "$\\sigma_y|\\psi\\rangle=\\frac{1}{\\sqrt5}\\left(1,\\ 2i\\right)$: $$\\langle\\sigma_y\\rangle=\\frac{1}{5}\\left(2\\cdot1+\\left(-i\\right)\\cdot2i\\right)=\\frac{4}{5}$$",
+    "Проекция на собственный вектор $\\frac{1}{\\sqrt2}\\left(1,\\ i\\right)$: $$P_+=\\left|\\frac{1\\cdot2+\\left(-i\\right)\\cdot i}{\\sqrt{10}}\\right|^2=\\frac{9}{10}$$",
+    "Проверка: $\\langle\\sigma_y\\rangle=P_+-P_-$: $$\\frac{9}{10}-\\frac{1}{10}=\\frac{4}{5}$$"
+   ],
+   "en": [
+    "For $\\sigma_z$ the probabilities are $\\frac{4}{5}$ and $\\frac{1}{5}$: $$\\langle\\sigma_z\\rangle=\\frac{4}{5}-\\frac{1}{5}=\\frac{3}{5}$$",
+    "$\\sigma_x|\\psi\\rangle=\\frac{1}{\\sqrt5}\\left(i,\\ 2\\right)$: $$\\langle\\sigma_x\\rangle=\\frac{1}{5}\\left(2\\cdot i+\\left(-i\\right)\\cdot2\\right)=0$$",
+    "$\\sigma_y|\\psi\\rangle=\\frac{1}{\\sqrt5}\\left(1,\\ 2i\\right)$: $$\\langle\\sigma_y\\rangle=\\frac{1}{5}\\left(2\\cdot1+\\left(-i\\right)\\cdot2i\\right)=\\frac{4}{5}$$",
+    "Projection onto the eigenvector $\\frac{1}{\\sqrt2}\\left(1,\\ i\\right)$: $$P_+=\\left|\\frac{1\\cdot2+\\left(-i\\right)\\cdot i}{\\sqrt{10}}\\right|^2=\\frac{9}{10}$$",
+    "Check: $\\langle\\sigma_y\\rangle=P_+-P_-$: $$\\frac{9}{10}-\\frac{1}{10}=\\frac{4}{5}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "O'rtacha qiymat: $\\langle A\\rangle=\\langle\\psi|\\hat A|\\psi\\rangle$",
+    "ru": "Среднее значение: $\\langle A\\rangle=\\langle\\psi|\\hat A|\\psi\\rangle$",
+    "en": "Average value: $\\langle A\\rangle=\\langle\\psi|\\hat A|\\psi\\rangle$"
+   },
+   null,
+   {
+    "uz": "O'lchash ehtimolligi: $P_n=\\left|\\langle v_n|\\psi\\rangle\\right|^2$",
+    "ru": "Вероятность измерения: $P_n=\\left|\\langle v_n|\\psi\\rangle\\right|^2$",
+    "en": "Measurement probability: $P_n=\\left|\\langle v_n|\\psi\\rangle\\right|^2$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Spin o'lchashi: kutilgan qiymatlar va ehtimolliklar",
+   "ru": "Измерение спина: средние и вероятности",
+   "en": "Spin measurement: expectation values and probabilities"
+  },
+  "answer": "\\langle\\sigma_x\\rangle=0;\\ \\langle\\sigma_y\\rangle=\\frac{4}{5};\\ \\langle\\sigma_z\\rangle=\\frac{3}{5};\\ P_+=\\frac{9}{10}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.4 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-S12",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Ixtiyoriy sinov funksiyasiga ta'sir ettirib, $\\left[\\hat x,\\hat p\\right]$ va $\\left[\\hat p,f\\left(\\hat x\\right)\\right]$ ni hisoblang. Natijadan $\\left[\\hat p,\\hat x^2\\right]$ ni toping.",
+   "ru": "Действуя на произвольную пробную функцию, вычислите $\\left[\\hat x,\\hat p\\right]$ и $\\left[\\hat p,f\\left(\\hat x\\right)\\right]$. Из результата найдите $\\left[\\hat p,\\hat x^2\\right]$.",
+   "en": "By acting on an arbitrary test function, compute $\\left[\\hat x,\\hat p\\right]$ and $\\left[\\hat p,f\\left(\\hat x\\right)\\right]$. From the result find $\\left[\\hat p,\\hat x^2\\right]$."
+  },
+  "figure": "figures/B3-L02-S12.png",
+  "solution": {
+   "uz": [
+    "Sinov funksiyasi $g\\left(x\\right)$, $\\hat p=-i\\hbar\\frac{d}{dx}$: $$\\hat x\\hat pg=-i\\hbar xg',\\qquad \\hat p\\hat xg=-i\\hbar\\left(g+xg'\\right)$$",
+    "Ayirma: $$\\left[\\hat x,\\hat p\\right]g=i\\hbar g\\ \\Rightarrow\\ \\left[\\hat x,\\hat p\\right]=i\\hbar$$",
+    "Ko'paytmaning hosilasi: $$\\hat p\\left(fg\\right)-f\\hat pg=-i\\hbar f'g\\ \\Rightarrow\\ \\left[\\hat p,f\\left(\\hat x\\right)\\right]=-i\\hbar f'$$",
+    "$f=x^2$ uchun: $$\\left[\\hat p,\\hat x^2\\right]=-2i\\hbar\\hat x$$"
+   ],
+   "ru": [
+    "Пробная функция $g\\left(x\\right)$, $\\hat p=-i\\hbar\\frac{d}{dx}$: $$\\hat x\\hat pg=-i\\hbar xg',\\qquad \\hat p\\hat xg=-i\\hbar\\left(g+xg'\\right)$$",
+    "Разность: $$\\left[\\hat x,\\hat p\\right]g=i\\hbar g\\ \\Rightarrow\\ \\left[\\hat x,\\hat p\\right]=i\\hbar$$",
+    "Производная произведения: $$\\hat p\\left(fg\\right)-f\\hat pg=-i\\hbar f'g\\ \\Rightarrow\\ \\left[\\hat p,f\\left(\\hat x\\right)\\right]=-i\\hbar f'$$",
+    "Для $f=x^2$: $$\\left[\\hat p,\\hat x^2\\right]=-2i\\hbar\\hat x$$"
+   ],
+   "en": [
+    "Test function $g\\left(x\\right)$, $\\hat p=-i\\hbar\\frac{d}{dx}$: $$\\hat x\\hat pg=-i\\hbar xg',\\qquad \\hat p\\hat xg=-i\\hbar\\left(g+xg'\\right)$$",
+    "The difference: $$\\left[\\hat x,\\hat p\\right]g=i\\hbar g\\ \\Rightarrow\\ \\left[\\hat x,\\hat p\\right]=i\\hbar$$",
+    "The derivative of a product: $$\\hat p\\left(fg\\right)-f\\hat pg=-i\\hbar f'g\\ \\Rightarrow\\ \\left[\\hat p,f\\left(\\hat x\\right)\\right]=-i\\hbar f'$$",
+    "For $f=x^2$: $$\\left[\\hat p,\\hat x^2\\right]=-2i\\hbar\\hat x$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Kanonik kommutator: $\\left[\\hat x,\\hat p\\right]=i\\hbar$",
+    "ru": "Канонический коммутатор: $\\left[\\hat x,\\hat p\\right]=i\\hbar$",
+    "en": "Canonical commutator: $\\left[\\hat x,\\hat p\\right]=i\\hbar$"
+   },
+   {
+    "uz": "Funksiya va impuls kommutatori: $\\left[\\hat p,f\\left(\\hat x\\right)\\right]=-i\\hbar f'$",
+    "ru": "Коммутатор функции и импульса: $\\left[\\hat p,f\\left(\\hat x\\right)\\right]=-i\\hbar f'$",
+    "en": "Commutator of a function with momentum: $\\left[\\hat p,f\\left(\\hat x\\right)\\right]=-i\\hbar f'$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Kanonik kommutator",
+   "ru": "Канонический коммутатор",
+   "en": "The canonical commutator"
+  },
+  "answer": "\\left[\\hat x,\\hat p\\right]=i\\hbar;\\ \\left[\\hat p,f\\right]=-i\\hbar f';\\ \\left[\\hat p,\\hat x^2\\right]=-2i\\hbar\\hat x",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.3 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Bo'laklab integrallash orqali impuls operatori $\\hat p=-i\\hbar\\frac{d}{dx}$ Ermit ekanini ko'rsating. Shundan foydalanib, istalgan **haqiqiy** normallangan to'lqin funksiyasi uchun $\\langle p\\rangle=0$ ekanini isbotlang.",
+   "ru": "Интегрированием по частям покажите, что оператор импульса $\\hat p=-i\\hbar\\frac{d}{dx}$ эрмитов. Используя это, докажите, что для любой **действительной** нормированной волновой функции $\\langle p\\rangle=0$.",
+   "en": "Using integration by parts, show that the momentum operator $\\hat p=-i\\hbar\\frac{d}{dx}$ is Hermitian. Using this, prove that $\\langle p\\rangle=0$ for any **real** normalized wave function."
+  },
+  "figure": "figures/B3-L02-S13.png",
+  "solution": {
+   "uz": [
+    "Bo'laklab integrallaymiz; chegaraviy had cheksizlikda nolga teng: $$\\int f^*\\left(-i\\hbar g'\\right)dx=\\int\\left(-i\\hbar f'\\right)^*g\\,dx$$",
+    "Demak ta'rif bo'yicha: $$\\langle f|\\hat pg\\rangle=\\langle\\hat pf|g\\rangle\\ \\Rightarrow\\ \\hat p^\\dagger=\\hat p$$",
+    "Haqiqiy $\\psi$ uchun integral sof mavhum son: $$\\langle p\\rangle=-i\\hbar\\int\\psi\\psi'dx=-\\frac{i\\hbar}{2}\\left[\\psi^2\\right]_{-\\infty}^{\\infty}=0$$",
+    "Ermit operatorning o'rtachasi haqiqiy bo'lishi kerak — bu ham xulosani tasdiqlaydi: $$\\langle p\\rangle\\in\\mathbb{R}\\ \\Rightarrow\\ \\langle p\\rangle=0$$"
+   ],
+   "ru": [
+    "Интегрируем по частям; граничный член на бесконечности равен нулю: $$\\int f^*\\left(-i\\hbar g'\\right)dx=\\int\\left(-i\\hbar f'\\right)^*g\\,dx$$",
+    "Значит, по определению: $$\\langle f|\\hat pg\\rangle=\\langle\\hat pf|g\\rangle\\ \\Rightarrow\\ \\hat p^\\dagger=\\hat p$$",
+    "Для действительной $\\psi$ интеграл — чисто мнимое число: $$\\langle p\\rangle=-i\\hbar\\int\\psi\\psi'dx=-\\frac{i\\hbar}{2}\\left[\\psi^2\\right]_{-\\infty}^{\\infty}=0$$",
+    "Среднее эрмитова оператора должно быть действительным — это тоже подтверждает вывод: $$\\langle p\\rangle\\in\\mathbb{R}\\ \\Rightarrow\\ \\langle p\\rangle=0$$"
+   ],
+   "en": [
+    "Integrate by parts; the boundary term vanishes at infinity: $$\\int f^*\\left(-i\\hbar g'\\right)dx=\\int\\left(-i\\hbar f'\\right)^*g\\,dx$$",
+    "So by definition: $$\\langle f|\\hat pg\\rangle=\\langle\\hat pf|g\\rangle\\ \\Rightarrow\\ \\hat p^\\dagger=\\hat p$$",
+    "For a real $\\psi$ the integral is purely imaginary: $$\\langle p\\rangle=-i\\hbar\\int\\psi\\psi'dx=-\\frac{i\\hbar}{2}\\left[\\psi^2\\right]_{-\\infty}^{\\infty}=0$$",
+    "The average of a Hermitian operator must be real — which also confirms the result: $$\\langle p\\rangle\\in\\mathbb{R}\\ \\Rightarrow\\ \\langle p\\rangle=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Bo'laklab integrallash: $\\int f^*g'dx=-\\int f'^*g\\,dx$",
+    "ru": "Интегрирование по частям: $\\int f^*g'dx=-\\int f'^*g\\,dx$",
+    "en": "Integration by parts: $\\int f^*g'dx=-\\int f'^*g\\,dx$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Impuls operatorining Ermitligi",
+   "ru": "Эрмитовость оператора импульса",
+   "en": "Hermiticity of the momentum operator"
+  },
+  "answer": "\\hat p^\\dagger=\\hat p;\\ \\langle p\\rangle=0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "original (B3-L02, S13)"
+ },
+ {
+  "id": "B3-L02-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "$f''=\\lambda f$ tenglamaning $f\\left(0\\right)=f\\left(L\\right)=0$ shartlardagi xos qiymatlari va xos funksiyalarini toping. Kengligi $L=0.50\\ \\mathrm{nm}$ bo'lgan cheksiz o'radagi elektron uchun $E_n=-\\frac{\\hbar^2}{2m}\\lambda_n$; $E_1$, $E_2$ ni va $2\\to1$ o'tishda chiqadigan foton to'lqin uzunligini toping. $\\hbar c=197.3\\ \\mathrm{eV\\cdot nm}$, $m_ec^2=511\\ \\mathrm{keV}$.",
+   "ru": "Найдите собственные значения и собственные функции уравнения $f''=\\lambda f$ при условиях $f\\left(0\\right)=f\\left(L\\right)=0$. Для электрона в бесконечной яме ширины $L=0.50\\ \\mathrm{nm}$ $E_n=-\\frac{\\hbar^2}{2m}\\lambda_n$; найдите $E_1$, $E_2$ и длину волны фотона при переходе $2\\to1$. $\\hbar c=197.3\\ \\mathrm{eV\\cdot nm}$, $m_ec^2=511\\ \\mathrm{keV}$.",
+   "en": "Find the eigenvalues and eigenfunctions of $f''=\\lambda f$ with $f\\left(0\\right)=f\\left(L\\right)=0$. For an electron in an infinite well of width $L=0.50\\ \\mathrm{nm}$, $E_n=-\\frac{\\hbar^2}{2m}\\lambda_n$; find $E_1$, $E_2$ and the wavelength of the photon emitted in the $2\\to1$ transition. $\\hbar c=197.3\\ \\mathrm{eV\\cdot nm}$, $m_ec^2=511\\ \\mathrm{keV}$."
+  },
+  "figure": "figures/B3-L02-S14.png",
+  "solution": {
+   "uz": [
+    "$\\lambda=-k^2$ da umumiy yechim $f=A\\sin kx+B\\cos kx$; $f\\left(0\\right)=0$ dan $B=0$: $$f=A\\sin kx$$",
+    "$f\\left(L\\right)=0$: $$\\sin kL=0\\ \\Rightarrow\\ k_n=\\frac{n\\pi}{L},\\quad \\lambda_n=-\\left(\\frac{n\\pi}{L}\\right)^2$$",
+    "Energiya: $$E_1=\\frac{\\left(\\hbar c\\right)^2\\pi^2}{2mc^2L^2}=\\frac{197.3^2\\cdot9.87}{2\\cdot511000\\cdot0.25}\\approx1.50\\ \\mathrm{eV},\\quad E_2=4E_1\\approx6.0\\ \\mathrm{eV}$$",
+    "Foton: $$\\lambda=\\frac{hc}{E_2-E_1}=\\frac{1240}{4.51}\\approx275\\ \\mathrm{nm}$$"
+   ],
+   "ru": [
+    "При $\\lambda=-k^2$ общее решение $f=A\\sin kx+B\\cos kx$; из $f\\left(0\\right)=0$ $B=0$: $$f=A\\sin kx$$",
+    "$f\\left(L\\right)=0$: $$\\sin kL=0\\ \\Rightarrow\\ k_n=\\frac{n\\pi}{L},\\quad \\lambda_n=-\\left(\\frac{n\\pi}{L}\\right)^2$$",
+    "Энергия: $$E_1=\\frac{\\left(\\hbar c\\right)^2\\pi^2}{2mc^2L^2}=\\frac{197.3^2\\cdot9.87}{2\\cdot511000\\cdot0.25}\\approx1.50\\ \\mathrm{eV},\\quad E_2=4E_1\\approx6.0\\ \\mathrm{eV}$$",
+    "Фотон: $$\\lambda=\\frac{hc}{E_2-E_1}=\\frac{1240}{4.51}\\approx275\\ \\mathrm{nm}$$"
+   ],
+   "en": [
+    "For $\\lambda=-k^2$ the general solution is $f=A\\sin kx+B\\cos kx$; $f\\left(0\\right)=0$ gives $B=0$: $$f=A\\sin kx$$",
+    "$f\\left(L\\right)=0$: $$\\sin kL=0\\ \\Rightarrow\\ k_n=\\frac{n\\pi}{L},\\quad \\lambda_n=-\\left(\\frac{n\\pi}{L}\\right)^2$$",
+    "The energy: $$E_1=\\frac{\\left(\\hbar c\\right)^2\\pi^2}{2mc^2L^2}=\\frac{197.3^2\\cdot9.87}{2\\cdot511000\\cdot0.25}\\approx1.50\\ \\mathrm{eV},\\quad E_2=4E_1\\approx6.0\\ \\mathrm{eV}$$",
+    "The photon: $$\\lambda=\\frac{hc}{E_2-E_1}=\\frac{1240}{4.51}\\approx275\\ \\mathrm{nm}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Chegaraviy shartlar: $\\sin kL=0\\Rightarrow k_n=\\frac{n\\pi}{L}$",
+    "ru": "Граничные условия: $\\sin kL=0\\Rightarrow k_n=\\frac{n\\pi}{L}$",
+    "en": "Boundary conditions: $\\sin kL=0\\Rightarrow k_n=\\frac{n\\pi}{L}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Chegaraviy shartli xos qiymat masalasi",
+   "ru": "Задача на собственные значения с граничными условиями",
+   "en": "An eigenvalue problem with boundary conditions"
+  },
+  "answer": "\\lambda_n=-\\left(\\frac{n\\pi}{L}\\right)^2,\\ f_n=\\sin\\frac{n\\pi x}{L};\\ E_1\\approx1.50\\ \\mathrm{eV};\\ E_2\\approx6.0\\ \\mathrm{eV};\\ \\lambda\\approx275\\ \\mathrm{nm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "OpenStax University Physics, 3-jild, 7-bob, 7.47 masalasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-S15",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Gauss to'lqin paketi $\\psi=\\left(2\\pi\\sigma^2\\right)^{-1/4}e^{-x^2/\\left(4\\sigma^2\\right)}$ ($\\sigma_x=\\sigma$). Uning Furye obrazini toping va $\\sigma_x\\sigma_k=\\frac{1}{2}$ ekanini ko'rsating. $\\sigma_x=0.050\\ \\mathrm{nm}$ bo'lgan elektron uchun $\\sigma_p$ ($\\sigma_pc$ ko'rinishida) va kinetik energiya shkalasi $\\frac{\\sigma_p^2}{2m}$ ni baholang. $\\hbar c=197.3\\ \\mathrm{eV\\cdot nm}$, $m_ec^2=511\\ \\mathrm{keV}$.",
+   "ru": "Гауссов волновой пакет $\\psi=\\left(2\\pi\\sigma^2\\right)^{-1/4}e^{-x^2/\\left(4\\sigma^2\\right)}$ ($\\sigma_x=\\sigma$). Найдите его образ Фурье и покажите, что $\\sigma_x\\sigma_k=\\frac{1}{2}$. Для электрона с $\\sigma_x=0.050\\ \\mathrm{nm}$ оцените $\\sigma_p$ (в виде $\\sigma_pc$) и масштаб кинетической энергии $\\frac{\\sigma_p^2}{2m}$. $\\hbar c=197.3\\ \\mathrm{eV\\cdot nm}$, $m_ec^2=511\\ \\mathrm{keV}$.",
+   "en": "A Gaussian wave packet is $\\psi=\\left(2\\pi\\sigma^2\\right)^{-1/4}e^{-x^2/\\left(4\\sigma^2\\right)}$ ($\\sigma_x=\\sigma$). Find its Fourier transform and show that $\\sigma_x\\sigma_k=\\frac{1}{2}$. For an electron with $\\sigma_x=0.050\\ \\mathrm{nm}$ estimate $\\sigma_p$ (as $\\sigma_pc$) and the kinetic-energy scale $\\frac{\\sigma_p^2}{2m}$. $\\hbar c=197.3\\ \\mathrm{eV\\cdot nm}$, $m_ec^2=511\\ \\mathrm{keV}$."
+  },
+  "figure": "figures/B3-L02-S15.png",
+  "solution": {
+   "uz": [
+    "Daraja ko'rsatkichida to'liq kvadrat ajratamiz va Gauss integralini olamiz: $$\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx=\\left(\\frac{2\\sigma^2}{\\pi}\\right)^{1/4}e^{-\\sigma^2k^2}$$",
+    "$\\left|\\phi\\right|^2\\propto e^{-2\\sigma^2k^2}=e^{-k^2/\\left(2\\sigma_k^2\\right)}$, demak: $$\\sigma_k=\\frac{1}{2\\sigma},\\qquad \\sigma_x\\sigma_k=\\frac{1}{2}$$",
+    "Impuls tarqoqligi: $$\\sigma_pc=\\frac{\\hbar c}{2\\sigma_x}=\\frac{197.3}{0.10}\\approx2.0\\ \\mathrm{keV}$$",
+    "Kinetik energiya shkalasi: $$\\frac{\\left(\\sigma_pc\\right)^2}{2mc^2}=\\frac{1973^2}{1.022\\cdot10^6}\\approx3.8\\ \\mathrm{eV}$$"
+   ],
+   "ru": [
+    "Выделяем полный квадрат в показателе и берём гауссов интеграл: $$\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx=\\left(\\frac{2\\sigma^2}{\\pi}\\right)^{1/4}e^{-\\sigma^2k^2}$$",
+    "$\\left|\\phi\\right|^2\\propto e^{-2\\sigma^2k^2}=e^{-k^2/\\left(2\\sigma_k^2\\right)}$, значит: $$\\sigma_k=\\frac{1}{2\\sigma},\\qquad \\sigma_x\\sigma_k=\\frac{1}{2}$$",
+    "Разброс импульса: $$\\sigma_pc=\\frac{\\hbar c}{2\\sigma_x}=\\frac{197.3}{0.10}\\approx2.0\\ \\mathrm{keV}$$",
+    "Масштаб кинетической энергии: $$\\frac{\\left(\\sigma_pc\\right)^2}{2mc^2}=\\frac{1973^2}{1.022\\cdot10^6}\\approx3.8\\ \\mathrm{eV}$$"
+   ],
+   "en": [
+    "Complete the square in the exponent and take the Gaussian integral: $$\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx=\\left(\\frac{2\\sigma^2}{\\pi}\\right)^{1/4}e^{-\\sigma^2k^2}$$",
+    "$\\left|\\phi\\right|^2\\propto e^{-2\\sigma^2k^2}=e^{-k^2/\\left(2\\sigma_k^2\\right)}$, so: $$\\sigma_k=\\frac{1}{2\\sigma},\\qquad \\sigma_x\\sigma_k=\\frac{1}{2}$$",
+    "The momentum spread: $$\\sigma_pc=\\frac{\\hbar c}{2\\sigma_x}=\\frac{197.3}{0.10}\\approx2.0\\ \\mathrm{keV}$$",
+    "The kinetic-energy scale: $$\\frac{\\left(\\sigma_pc\\right)^2}{2mc^2}=\\frac{1973^2}{1.022\\cdot10^6}\\approx3.8\\ \\mathrm{eV}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Furye almashtirishi: $\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx$",
+    "ru": "Преобразование Фурье: $\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx$",
+    "en": "Fourier transform: $\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx$"
+   },
+   {
+    "uz": "Kengliklar ko'paytmasi: $\\sigma_x\\sigma_k=\\frac{1}{2}$",
+    "ru": "Произведение ширин: $\\sigma_x\\sigma_k=\\frac{1}{2}$",
+    "en": "Product of widths: $\\sigma_x\\sigma_k=\\frac{1}{2}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Gauss paketining Furye obrazi",
+   "ru": "Образ Фурье гауссова пакета",
+   "en": "The Fourier transform of a Gaussian packet"
+  },
+  "answer": "\\phi\\propto e^{-\\sigma^2k^2};\\ \\sigma_x\\sigma_k=\\frac{1}{2};\\ \\sigma_pc\\approx2.0\\ \\mathrm{keV};\\ \\frac{\\sigma_p^2}{2m}\\approx3.8\\ \\mathrm{eV}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.2 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L02-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "To'lqin funksiyasi $\\psi=\\frac{1}{\\sqrt a}e^{-\\left|x\\right|/a}$. Uning Furye obrazini $\\phi\\left(k\\right)$ toping, Plansherel tengligini tekshiring va $\\left|\\phi\\right|^2$ ning yarim balandlikdagi yarim kengligini toping.",
+   "ru": "Волновая функция $\\psi=\\frac{1}{\\sqrt a}e^{-\\left|x\\right|/a}$. Найдите её образ Фурье $\\phi\\left(k\\right)$, проверьте равенство Планшереля и найдите полуширину $\\left|\\phi\\right|^2$ на половине высоты.",
+   "en": "The wave function is $\\psi=\\frac{1}{\\sqrt a}e^{-\\left|x\\right|/a}$. Find its Fourier transform $\\phi\\left(k\\right)$, check Plancherel's equality and find the half-width at half-maximum of $\\left|\\phi\\right|^2$."
+  },
+  "figure": "figures/B3-L02-S16.png",
+  "solution": {
+   "uz": [
+    "$\\psi$ juft, shuning uchun $e^{-ikx}$ dan faqat $\\cos kx$ qoladi: $$\\phi=\\frac{2}{\\sqrt{2\\pi a}}\\int_0^{\\infty}e^{-x/a}\\cos kx\\,dx=\\frac{2}{\\sqrt{2\\pi a}}\\cdot\\frac{a}{1+k^2a^2}$$",
+    "Soddalashtiramiz — Lorens shakli: $$\\phi\\left(k\\right)=\\sqrt{\\frac{2a}{\\pi}}\\frac{1}{1+k^2a^2}$$",
+    "Plansherel tengligi: $$\\int\\left|\\phi\\right|^2dk=\\frac{2a}{\\pi}\\int\\frac{dk}{\\left(1+k^2a^2\\right)^2}=\\frac{2a}{\\pi}\\cdot\\frac{\\pi}{2a}=1$$",
+    "Yarim balandlik: $\\left(1+k^2a^2\\right)^2=2$: $$k_{1/2}=\\frac{\\sqrt{\\sqrt2-1}}{a}\\approx\\frac{0.64}{a}$$"
+   ],
+   "ru": [
+    "$\\psi$ чётна, поэтому от $e^{-ikx}$ остаётся только $\\cos kx$: $$\\phi=\\frac{2}{\\sqrt{2\\pi a}}\\int_0^{\\infty}e^{-x/a}\\cos kx\\,dx=\\frac{2}{\\sqrt{2\\pi a}}\\cdot\\frac{a}{1+k^2a^2}$$",
+    "Упрощаем — лоренцева форма: $$\\phi\\left(k\\right)=\\sqrt{\\frac{2a}{\\pi}}\\frac{1}{1+k^2a^2}$$",
+    "Равенство Планшереля: $$\\int\\left|\\phi\\right|^2dk=\\frac{2a}{\\pi}\\int\\frac{dk}{\\left(1+k^2a^2\\right)^2}=\\frac{2a}{\\pi}\\cdot\\frac{\\pi}{2a}=1$$",
+    "Половина высоты: $\\left(1+k^2a^2\\right)^2=2$: $$k_{1/2}=\\frac{\\sqrt{\\sqrt2-1}}{a}\\approx\\frac{0.64}{a}$$"
+   ],
+   "en": [
+    "$\\psi$ is even, so only $\\cos kx$ survives from $e^{-ikx}$: $$\\phi=\\frac{2}{\\sqrt{2\\pi a}}\\int_0^{\\infty}e^{-x/a}\\cos kx\\,dx=\\frac{2}{\\sqrt{2\\pi a}}\\cdot\\frac{a}{1+k^2a^2}$$",
+    "Simplify — a Lorentzian: $$\\phi\\left(k\\right)=\\sqrt{\\frac{2a}{\\pi}}\\frac{1}{1+k^2a^2}$$",
+    "Plancherel's equality: $$\\int\\left|\\phi\\right|^2dk=\\frac{2a}{\\pi}\\int\\frac{dk}{\\left(1+k^2a^2\\right)^2}=\\frac{2a}{\\pi}\\cdot\\frac{\\pi}{2a}=1$$",
+    "Half maximum: $\\left(1+k^2a^2\\right)^2=2$: $$k_{1/2}=\\frac{\\sqrt{\\sqrt2-1}}{a}\\approx\\frac{0.64}{a}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Furye almashtirishi: $\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx$",
+    "ru": "Преобразование Фурье: $\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx$",
+    "en": "Fourier transform: $\\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\psi e^{-ikx}dx$"
+   },
+   null,
+   {
+    "uz": "Normallash sharti: $\\int\\left|\\psi\\right|^2dx=1$",
+    "ru": "Условие нормировки: $\\int\\left|\\psi\\right|^2dx=1$",
+    "en": "Normalization condition: $\\int\\left|\\psi\\right|^2dx=1$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Eksponensial funksiyaning Furye obrazi",
+   "ru": "Образ Фурье экспоненциальной функции",
+   "en": "The Fourier transform of an exponential"
+  },
+  "answer": "\\phi=\\sqrt{\\frac{2a}{\\pi}}\\frac{1}{1+k^2a^2};\\ \\int\\left|\\phi\\right|^2dk=1;\\ k_{1/2}\\approx\\frac{0.64}{a}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "original (B3-L02, S16)"
+ },
+ {
+  "id": "B3-L02-S17",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Integrallarni hisoblang: a) $\\int_{-\\infty}^{\\infty}\\delta\\left(3x-\\pi\\right)\\sin x\\,dx$; b) $\\int_{-\\infty}^{\\infty}\\delta\\left(x^2-1\\right)e^x\\,dx$; c) $\\int_0^{\\infty}\\delta\\left(x+2\\right)x^2\\,dx$.",
+   "ru": "Вычислите интегралы: а) $\\int_{-\\infty}^{\\infty}\\delta\\left(3x-\\pi\\right)\\sin x\\,dx$; б) $\\int_{-\\infty}^{\\infty}\\delta\\left(x^2-1\\right)e^x\\,dx$; в) $\\int_0^{\\infty}\\delta\\left(x+2\\right)x^2\\,dx$.",
+   "en": "Evaluate the integrals: a) $\\int_{-\\infty}^{\\infty}\\delta\\left(3x-\\pi\\right)\\sin x\\,dx$; b) $\\int_{-\\infty}^{\\infty}\\delta\\left(x^2-1\\right)e^x\\,dx$; c) $\\int_0^{\\infty}\\delta\\left(x+2\\right)x^2\\,dx$."
+  },
+  "figure": "figures/B3-L02-S17.png",
+  "solution": {
+   "uz": [
+    "a) $\\delta\\left(3x-\\pi\\right)=\\frac{1}{3}\\delta\\left(x-\\frac{\\pi}{3}\\right)$: $$\\frac{1}{3}\\sin\\frac{\\pi}{3}=\\frac{\\sqrt3}{6}\\approx0.289$$",
+    "b) $x^2-1$ ning nollari $\\pm1$, $\\left|g'\\right|=2$ ikkalasida: $$\\frac{e^1}{2}+\\frac{e^{-1}}{2}=\\cosh1\\approx1.54$$",
+    "c) $x=-2$ nuqta integrallash sohasidan tashqarida: $$\\int_0^{\\infty}\\delta\\left(x+2\\right)x^2dx=0$$"
+   ],
+   "ru": [
+    "а) $\\delta\\left(3x-\\pi\\right)=\\frac{1}{3}\\delta\\left(x-\\frac{\\pi}{3}\\right)$: $$\\frac{1}{3}\\sin\\frac{\\pi}{3}=\\frac{\\sqrt3}{6}\\approx0.289$$",
+    "б) нули $x^2-1$ — $\\pm1$, $\\left|g'\\right|=2$ в обоих: $$\\frac{e^1}{2}+\\frac{e^{-1}}{2}=\\cosh1\\approx1.54$$",
+    "в) точка $x=-2$ вне области интегрирования: $$\\int_0^{\\infty}\\delta\\left(x+2\\right)x^2dx=0$$"
+   ],
+   "en": [
+    "a) $\\delta\\left(3x-\\pi\\right)=\\frac{1}{3}\\delta\\left(x-\\frac{\\pi}{3}\\right)$: $$\\frac{1}{3}\\sin\\frac{\\pi}{3}=\\frac{\\sqrt3}{6}\\approx0.289$$",
+    "b) the zeros of $x^2-1$ are $\\pm1$, with $\\left|g'\\right|=2$ at both: $$\\frac{e^1}{2}+\\frac{e^{-1}}{2}=\\cosh1\\approx1.54$$",
+    "c) the point $x=-2$ lies outside the integration range: $$\\int_0^{\\infty}\\delta\\left(x+2\\right)x^2dx=0$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Delta funksiya masshtabi: $\\delta\\left(ax\\right)=\\frac{\\delta\\left(x\\right)}{\\left|a\\right|}$",
+    "ru": "Масштаб дельта-функции: $\\delta\\left(ax\\right)=\\frac{\\delta\\left(x\\right)}{\\left|a\\right|}$",
+    "en": "Delta-function scaling: $\\delta\\left(ax\\right)=\\frac{\\delta\\left(x\\right)}{\\left|a\\right|}$"
+   },
+   {
+    "uz": "Delta funksiya xossasi: $\\int f\\delta\\left(x-a\\right)dx=f\\left(a\\right)$",
+    "ru": "Свойство дельта-функции: $\\int f\\delta\\left(x-a\\right)dx=f\\left(a\\right)$",
+    "en": "Delta-function property: $\\int f\\delta\\left(x-a\\right)dx=f\\left(a\\right)$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Delta funksiya bilan integrallar",
+   "ru": "Интегралы с дельта-функцией",
+   "en": "Integrals with the delta function"
+  },
+  "answer": "\\frac{\\sqrt3}{6};\\ \\cosh1\\approx1.54;\\ 0",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B3-L02, S17)"
+ },
+ {
+  "id": "B3-L02-S18",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Elektron uchun $\\frac{p^2}{2m}=10.0\\ \\mathrm{keV}$. $E=\\sqrt{\\left(pc\\right)^2+\\left(mc^2\\right)^2}$ ni binomial qatorga yoyib, kinetik energiyaga birinchi relyativistik tuzatmani va norelyativistik formulaning nisbiy xatosini toping. $m_ec^2=511\\ \\mathrm{keV}$.",
+   "ru": "Для электрона $\\frac{p^2}{2m}=10.0\\ \\mathrm{keV}$. Разложив $E=\\sqrt{\\left(pc\\right)^2+\\left(mc^2\\right)^2}$ в биномиальный ряд, найдите первую релятивистскую поправку к кинетической энергии и относительную ошибку нерелятивистской формулы. $m_ec^2=511\\ \\mathrm{keV}$.",
+   "en": "For an electron $\\frac{p^2}{2m}=10.0\\ \\mathrm{keV}$. Expanding $E=\\sqrt{\\left(pc\\right)^2+\\left(mc^2\\right)^2}$ in a binomial series, find the first relativistic correction to the kinetic energy and the relative error of the non-relativistic formula. $m_ec^2=511\\ \\mathrm{keV}$."
+  },
+  "figure": "figures/B3-L02-S18.png",
+  "solution": {
+   "uz": [
+    "Kichik parametr $u=\\frac{\\left(pc\\right)^2}{\\left(mc^2\\right)^2}$, $\\sqrt{1+u}\\approx1+\\frac{u}{2}-\\frac{u^2}{8}$: $$E\\approx mc^2+\\frac{p^2}{2m}-\\frac{p^4}{8m^3c^2}$$",
+    "Tuzatmani $\\frac{p^2}{2m}$ orqali yozamiz: $$\\Delta E=-\\frac{\\left(p^2/2m\\right)^2}{2mc^2}=-\\frac{10.0^2}{1022}\\approx-0.098\\ \\mathrm{keV}$$",
+    "Nisbiy xato: $$\\frac{\\left|\\Delta E\\right|}{p^2/2m}=\\frac{p^2/2m}{2mc^2}\\approx0.0098$$"
+   ],
+   "ru": [
+    "Малый параметр $u=\\frac{\\left(pc\\right)^2}{\\left(mc^2\\right)^2}$, $\\sqrt{1+u}\\approx1+\\frac{u}{2}-\\frac{u^2}{8}$: $$E\\approx mc^2+\\frac{p^2}{2m}-\\frac{p^4}{8m^3c^2}$$",
+    "Записываем поправку через $\\frac{p^2}{2m}$: $$\\Delta E=-\\frac{\\left(p^2/2m\\right)^2}{2mc^2}=-\\frac{10.0^2}{1022}\\approx-0.098\\ \\mathrm{keV}$$",
+    "Относительная ошибка: $$\\frac{\\left|\\Delta E\\right|}{p^2/2m}=\\frac{p^2/2m}{2mc^2}\\approx0.0098$$"
+   ],
+   "en": [
+    "The small parameter is $u=\\frac{\\left(pc\\right)^2}{\\left(mc^2\\right)^2}$, with $\\sqrt{1+u}\\approx1+\\frac{u}{2}-\\frac{u^2}{8}$: $$E\\approx mc^2+\\frac{p^2}{2m}-\\frac{p^4}{8m^3c^2}$$",
+    "Write the correction in terms of $\\frac{p^2}{2m}$: $$\\Delta E=-\\frac{\\left(p^2/2m\\right)^2}{2mc^2}=-\\frac{10.0^2}{1022}\\approx-0.098\\ \\mathrm{keV}$$",
+    "The relative error: $$\\frac{\\left|\\Delta E\\right|}{p^2/2m}=\\frac{p^2/2m}{2mc^2}\\approx0.0098$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Binomial yoyish: $\\left(1+x\\right)^n\\approx1+nx+\\frac{n\\left(n-1\\right)}{2}x^2$",
+    "ru": "Биномиальное разложение: $\\left(1+x\\right)^n\\approx1+nx+\\frac{n\\left(n-1\\right)}{2}x^2$",
+    "en": "Binomial expansion: $\\left(1+x\\right)^n\\approx1+nx+\\frac{n\\left(n-1\\right)}{2}x^2$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Kichik parametr bo'yicha yoyish",
+   "ru": "Разложение по малому параметру",
+   "en": "Expansion in a small parameter"
+  },
+  "answer": "\\Delta E\\approx-98\\ \\mathrm{eV};\\ \\frac{\\left|\\Delta E\\right|}{E_k}\\approx0.01",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B3-L02, S18)"
+ }
+]
