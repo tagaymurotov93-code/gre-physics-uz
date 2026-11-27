@@ -1,0 +1,657 @@
+[
+ {
+  "t": "h1",
+  "uz": "Shredinger tenglamasi (The Schrödinger equation)",
+  "ru": "Уравнение Шрёдингера",
+  "en": "The Schrödinger equation"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz Shredinger tenglamasini de Broyl munosabatlaridan «topa» olasiz va uning har bir hadining ma'nosini tushuntirasiz; to'lqin funksiyasining statistik talqinini va unga qo'yiladigan talablarni bilasiz; ehtimollik oqimini hisoblaysiz va uzluksizlik tenglamasini qo'llaysiz; o'zgaruvchilarni ajratib statsionar holatlarni topasiz, istalgan boshlang'ich holatni ular bo'yicha yoyib, vaqt bo'yicha evolyutsiyasini yozasiz; Erenfest va virial teoremalaridan foydalanasiz; erkin zarra to'lqin paketining harakati va yoyilishini baholaysiz; statsionar tenglama yechimlarini sifat jihatdan (tugunlar, egrilik, qaytish nuqtalari) tahlil qilasiz; chegaraviy shartlarni, shu jumladan delta potensialdagi hosila sakrashini qo'llaysiz; uch o'lchovli tenglamani ajratasiz va GRE uchun zarur masshtab hamda o'lchamlar tahlilini bajarasiz.",
+  "ru": "**Цель.** После урока вы сможете «получить» уравнение Шрёдингера из соотношений де Бройля и объяснить смысл каждого его члена; будете знать статистическую интерпретацию волновой функции и требования к ней; вычислять поток вероятности и применять уравнение непрерывности; находить стационарные состояния разделением переменных, раскладывать по ним любое начальное состояние и записывать его эволюцию во времени; пользоваться теоремами Эренфеста и вириала; оценивать движение и расплывание волнового пакета свободной частицы; качественно анализировать решения стационарного уравнения (узлы, кривизна, точки поворота); применять граничные условия, в том числе скачок производной на дельта-потенциале; разделять переменные в трёхмерном уравнении и выполнять необходимый для GRE анализ масштабов и размерностей.",
+  "en": "**Goal.** After this lesson you will be able to «derive» the Schrödinger equation from the de Broglie relations and explain the meaning of each of its terms; know the statistical interpretation of the wave function and the requirements on it; compute the probability current and apply the continuity equation; find stationary states by separation of variables, expand any initial state in them and write its time evolution; use the Ehrenfest and virial theorems; estimate the motion and spreading of a free-particle wave packet; analyse solutions of the time-independent equation qualitatively (nodes, curvature, turning points); apply boundary conditions, including the derivative jump at a delta potential; separate variables in the three-dimensional equation and carry out the scale and dimensional analysis the GRE requires."
+ },
+ {
+  "t": "p",
+  "uz": "Klassik mexanikada zarra holati koordinata va impuls bilan, harakati esa Nyuton tenglamasi bilan beriladi. Kvant mexanikasida holat **to'lqin funksiyasi** $\\Psi\\left(x,t\\right)$ bilan beriladi, uning vaqt bo'yicha o'zgarishini esa **Shredinger tenglamasi** (Schrödinger equation) aniqlaydi — bu kvant mexanikasining «Nyuton qonuni». Tenglama chiziqli, vaqt bo'yicha birinchi tartibli va mavhum birlik $i$ ni o'z ichiga oladi; bu uchta xossadan superpozitsiya, normallashning saqlanishi va statsionar holatlarning mavjudligi kelib chiqadi. GRE kvant mexanikasi savollarining (taxminan 13 foiz) katta qismi aynan shu darsdagi g'oyalarga tayanadi: superpozitsiyaning vaqt bo'yicha evolyutsiyasi, energiyani o'lchash ehtimolliklari, chegaraviy shartlar, oqim, masshtab tahlili. Keyingi darslar (potensial o'ra, to'siq, ossillyator, vodorod atomi) — shu tenglamaning konkret potensiallardagi yechimlari. **Avval takrorlang:** B3-L01 (de Broyl to'lqinlari, fazaviy va guruh tezligi), B3-L02 (normallash, operatorlar, xos qiymatlar, Furye almashtirishi, delta funksiya), B2-L24 (to'lqin tenglamasi, superpozitsiya), B2-L10 (Gamilton funksiyasi $H=T+V$).",
+  "ru": "В классической механике состояние частицы задаётся координатой и импульсом, а движение — уравнением Ньютона. В квантовой механике состояние задаётся **волновой функцией** $\\Psi\\left(x,t\\right)$, а её изменение во времени определяет **уравнение Шрёдингера** — «закон Ньютона» квантовой механики. Уравнение линейно, первого порядка по времени и содержит мнимую единицу $i$; из этих трёх свойств следуют суперпозиция, сохранение нормировки и существование стационарных состояний. Большая часть вопросов GRE по квантовой механике (около 13 процентов) опирается именно на идеи этого урока: эволюция суперпозиции во времени, вероятности результатов измерения энергии, граничные условия, поток, анализ масштабов. Следующие уроки (потенциальная яма, барьер, осциллятор, атом водорода) — решения этого уравнения в конкретных потенциалах. **Сначала повторите:** B3-L01 (волны де Бройля, фазовая и групповая скорости), B3-L02 (нормировка, операторы, собственные значения, преобразование Фурье, дельта-функция), B2-L24 (волновое уравнение, суперпозиция), B2-L10 (функция Гамильтона $H=T+V$).",
+  "en": "In classical mechanics the state of a particle is given by its position and momentum, and its motion by Newton's equation. In quantum mechanics the state is given by the **wave function** $\\Psi\\left(x,t\\right)$, and its change in time is governed by the **Schrödinger equation** — the «Newton's law» of quantum mechanics. The equation is linear, first order in time and contains the imaginary unit $i$; from these three properties follow superposition, conservation of normalization and the existence of stationary states. Most GRE quantum mechanics questions (about 13 percent) rest on the ideas of this lesson: time evolution of a superposition, probabilities of energy measurements, boundary conditions, current, scale analysis. The next lessons (potential well, barrier, oscillator, hydrogen atom) are solutions of this equation for specific potentials. **Review first:** B3-L01 (de Broglie waves, phase and group velocity), B3-L02 (normalization, operators, eigenvalues, the Fourier transform, the delta function), B2-L24 (the wave equation, superposition), B2-L10 (the Hamiltonian $H=T+V$)."
+ },
+ {
+  "t": "h2",
+  "uz": "1. De Broyl munosabatlaridan Shredinger tenglamasigacha",
+  "ru": "1. От соотношений де Бройля к уравнению Шрёдингера",
+  "en": "1. From the de Broglie relations to the Schrödinger equation"
+ },
+ {
+  "t": "li",
+  "uz": "**Erkin zarra to'lqini.** Shredinger tenglamasi boshqa qonunlardan keltirib chiqarilmaydi — u postulat. Lekin uni de Broyl g'oyasidan «topish» mumkin. Aniq impulsli erkin zarraga yassi to'lqin $\\Psi=Ae^{i\\left(kx-\\omega t\\right)}$ mos keladi, bunda $E=\\hbar\\omega$ va $p=\\hbar k$ (B3-L01). Vaqt bo'yicha hosila $\\frac{\\partial\\Psi}{\\partial t}=-i\\omega\\Psi$ energiyani, koordinata bo'yicha hosila $\\frac{\\partial\\Psi}{\\partial x}=ik\\Psi$ impulsni «chiqarib» beradi: $i\\hbar\\frac{\\partial\\Psi}{\\partial t}=E\\Psi$, $-i\\hbar\\frac{\\partial\\Psi}{\\partial x}=p\\Psi$. Norelyativistik zarra uchun $E=\\frac{p^2}{2m}$; bu tenglikni hosilalar tilida yozsak, erkin zarra uchun Shredinger tenglamasi hosil bo'ladi. Kuch maydonida $E=\\frac{p^2}{2m}+V\\left(x\\right)$, shuning uchun o'ng tomonga $V\\Psi$ qo'shiladi. Natija — **vaqtga bog'liq Shredinger tenglamasi** (time-dependent Schrödinger equation).",
+  "ru": "**Волна свободной частицы.** Уравнение Шрёдингера не выводится из других законов — это постулат. Но его можно «угадать» из идеи де Бройля. Свободной частице с определённым импульсом соответствует плоская волна $\\Psi=Ae^{i\\left(kx-\\omega t\\right)}$, где $E=\\hbar\\omega$ и $p=\\hbar k$ (B3-L01). Производная по времени $\\frac{\\partial\\Psi}{\\partial t}=-i\\omega\\Psi$ «извлекает» энергию, производная по координате $\\frac{\\partial\\Psi}{\\partial x}=ik\\Psi$ — импульс: $i\\hbar\\frac{\\partial\\Psi}{\\partial t}=E\\Psi$, $-i\\hbar\\frac{\\partial\\Psi}{\\partial x}=p\\Psi$. Для нерелятивистской частицы $E=\\frac{p^2}{2m}$; записав это равенство на языке производных, получаем уравнение Шрёдингера для свободной частицы. В силовом поле $E=\\frac{p^2}{2m}+V\\left(x\\right)$, поэтому в правую часть добавляется $V\\Psi$. Результат — **нестационарное (зависящее от времени) уравнение Шрёдингера**.",
+  "en": "**The free-particle wave.** The Schrödinger equation is not derived from other laws — it is a postulate. But it can be «guessed» from de Broglie's idea. A free particle with definite momentum corresponds to a plane wave $\\Psi=Ae^{i\\left(kx-\\omega t\\right)}$, where $E=\\hbar\\omega$ and $p=\\hbar k$ (B3-L01). The time derivative $\\frac{\\partial\\Psi}{\\partial t}=-i\\omega\\Psi$ «extracts» the energy, and the space derivative $\\frac{\\partial\\Psi}{\\partial x}=ik\\Psi$ the momentum: $i\\hbar\\frac{\\partial\\Psi}{\\partial t}=E\\Psi$, $-i\\hbar\\frac{\\partial\\Psi}{\\partial x}=p\\Psi$. For a non-relativistic particle $E=\\frac{p^2}{2m}$; writing this equality in the language of derivatives gives the Schrödinger equation of a free particle. In a force field $E=\\frac{p^2}{2m}+V\\left(x\\right)$, so $V\\Psi$ is added to the right side. The result is the **time-dependent Schrödinger equation**."
+ },
+ {
+  "t": "m",
+  "m": "i\\hbar\\frac{\\partial\\Psi}{\\partial t}=-\\frac{\\hbar^2}{2m}\\frac{\\partial^2\\Psi}{\\partial x^2}+V\\left(x\\right)\\Psi\\equiv\\hat H\\Psi,\\qquad \\hat H=\\frac{\\hat p^2}{2m}+V,\\quad \\hat p=-i\\hbar\\frac{\\partial}{\\partial x}"
+ },
+ {
+  "t": "li",
+  "uz": "**Hadlarning ma'nosi.** Chap tomon — energiya operatori ($i\\hbar\\frac{\\partial}{\\partial t}$), o'ng tomon — **Gamilton operatori** (Hamiltonian) $\\hat H$: kinetik energiya $\\frac{\\hat p^2}{2m}=-\\frac{\\hbar^2}{2m}\\frac{\\partial^2}{\\partial x^2}$ va potensial energiya $V$. Kinetik had to'lqin funksiyasining **egriligi** bilan bog'liq: $\\Psi$ qanchalik tez tebransa (to'lqin uzunligi qisqa), kinetik energiya shunchalik katta. Bu GRE uchun asosiy sifat qoidasi: qisqa to'lqin — katta $E-V$. Erkin zarra uchun tenglama **dispersiya qonuni** $\\omega=\\frac{\\hbar k^2}{2m}$ ni beradi ([[F01]]): u kvadratik, shuning uchun fazaviy tezlik $v_p=\\frac{\\omega}{k}=\\frac{\\hbar k}{2m}$ klassik tezlikning yarmiga, guruh tezligi $v_g=\\frac{d\\omega}{dk}=\\frac{\\hbar k}{m}$ esa klassik tezlik $v=\\frac{p}{m}$ ga teng. Zarra bilan birga guruh tezligi harakatlanadi, fazaviy tezlik kuzatilmaydi.",
+  "ru": "**Смысл членов.** Левая часть — оператор энергии ($i\\hbar\\frac{\\partial}{\\partial t}$), правая — **оператор Гамильтона (гамильтониан)** $\\hat H$: кинетическая энергия $\\frac{\\hat p^2}{2m}=-\\frac{\\hbar^2}{2m}\\frac{\\partial^2}{\\partial x^2}$ и потенциальная энергия $V$. Кинетический член связан с **кривизной** волновой функции: чем быстрее осциллирует $\\Psi$ (короче длина волны), тем больше кинетическая энергия. Это главное качественное правило для GRE: короткая волна — большое $E-V$. Для свободной частицы уравнение даёт **закон дисперсии** $\\omega=\\frac{\\hbar k^2}{2m}$ ([[F01]]): он квадратичен, поэтому фазовая скорость $v_p=\\frac{\\omega}{k}=\\frac{\\hbar k}{2m}$ равна половине классической, а групповая скорость $v_g=\\frac{d\\omega}{dk}=\\frac{\\hbar k}{m}$ — классической скорости $v=\\frac{p}{m}$. Вместе с частицей движется групповая скорость, фазовая не наблюдается.",
+  "en": "**Meaning of the terms.** The left side is the energy operator ($i\\hbar\\frac{\\partial}{\\partial t}$), the right side the **Hamiltonian** $\\hat H$: the kinetic energy $\\frac{\\hat p^2}{2m}=-\\frac{\\hbar^2}{2m}\\frac{\\partial^2}{\\partial x^2}$ and the potential energy $V$. The kinetic term is tied to the **curvature** of the wave function: the faster $\\Psi$ oscillates (the shorter the wavelength), the larger the kinetic energy. This is the main qualitative rule for the GRE: a short wave means a large $E-V$. For a free particle the equation gives the **dispersion law** $\\omega=\\frac{\\hbar k^2}{2m}$ ([[F01]]): it is quadratic, so the phase velocity $v_p=\\frac{\\omega}{k}=\\frac{\\hbar k}{2m}$ is half the classical speed, while the group velocity $v_g=\\frac{d\\omega}{dk}=\\frac{\\hbar k}{m}$ equals the classical speed $v=\\frac{p}{m}$. It is the group velocity that moves with the particle; the phase velocity is not observed."
+ },
+ {
+  "t": "m",
+  "m": "\\omega=\\frac{\\hbar k^2}{2m},\\qquad v_p=\\frac{\\omega}{k}=\\frac{v}{2},\\qquad v_g=\\frac{d\\omega}{dk}=\\frac{\\hbar k}{m}=v"
+ },
+ {
+  "t": "li",
+  "uz": "**Uchta tuzilish xossasi.** 1) **Chiziqlilik:** agar $\\Psi_1$ va $\\Psi_2$ yechim bo'lsa, $c_1\\Psi_1+c_2\\Psi_2$ ham yechim — superpozitsiya prinsipi va interferensiyaning manbai; ko'paytma $\\Psi_1\\Psi_2$ esa umuman olganda yechim emas. 2) **Vaqt bo'yicha birinchi tartib:** boshlang'ich $\\Psi\\left(x,0\\right)$ butun kelajakni aniqlaydi (klassik to'lqin tenglamasida qo'shimcha $\\frac{\\partial\\Psi}{\\partial t}$ ham kerak edi). 3) **Mavhum birlik:** to'lqin funksiyasi kompleks bo'lishi shart. Haqiqiy yuguruvchi to'lqin $A\\cos\\left(kx-\\omega t\\right)$ tenglamani qanoatlantirmaydi: chap tomon mavhum sinus, o'ng tomon haqiqiy kosinus beradi. $e^{i\\left(kx+\\omega t\\right)}$ esa $\\omega>0$ da yechim emas — u manfiy energiyani talab qiladi. Shuning uchun chapga yuguruvchi to'lqin $e^{i\\left(-kx-\\omega t\\right)}$ ko'rinishida yoziladi: vaqt ko'paytuvchisi doim $e^{-i\\omega t}$.",
+  "ru": "**Три структурных свойства.** 1) **Линейность:** если $\\Psi_1$ и $\\Psi_2$ — решения, то и $c_1\\Psi_1+c_2\\Psi_2$ — решение; это принцип суперпозиции и источник интерференции; произведение $\\Psi_1\\Psi_2$ же, вообще говоря, решением не является. 2) **Первый порядок по времени:** начальная $\\Psi\\left(x,0\\right)$ определяет всё будущее (в классическом волновом уравнении нужна была ещё $\\frac{\\partial\\Psi}{\\partial t}$). 3) **Мнимая единица:** волновая функция обязана быть комплексной. Действительная бегущая волна $A\\cos\\left(kx-\\omega t\\right)$ уравнению не удовлетворяет: левая часть даёт мнимый синус, правая — действительный косинус. А $e^{i\\left(kx+\\omega t\\right)}$ при $\\omega>0$ не решение — она требует отрицательной энергии. Поэтому волна, бегущая влево, записывается как $e^{i\\left(-kx-\\omega t\\right)}$: временной множитель всегда $e^{-i\\omega t}$.",
+  "en": "**Three structural properties.** 1) **Linearity:** if $\\Psi_1$ and $\\Psi_2$ are solutions, so is $c_1\\Psi_1+c_2\\Psi_2$ — the superposition principle and the source of interference; the product $\\Psi_1\\Psi_2$, however, is in general not a solution. 2) **First order in time:** the initial $\\Psi\\left(x,0\\right)$ determines the whole future (the classical wave equation also needed $\\frac{\\partial\\Psi}{\\partial t}$). 3) **The imaginary unit:** the wave function must be complex. A real travelling wave $A\\cos\\left(kx-\\omega t\\right)$ does not satisfy the equation: the left side gives an imaginary sine, the right side a real cosine. And $e^{i\\left(kx+\\omega t\\right)}$ is not a solution for $\\omega>0$ — it requires a negative energy. That is why a wave moving to the left is written $e^{i\\left(-kx-\\omega t\\right)}$: the time factor is always $e^{-i\\omega t}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B3-L03-F01.png",
+   "ru": "figures/B3-L03-F01-ru.png",
+   "en": "figures/B3-L03-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. To'lqin funksiyasining statistik talqini",
+  "ru": "2. Статистическая интерпретация волновой функции",
+  "en": "2. The statistical interpretation of the wave function"
+ },
+ {
+  "t": "li",
+  "uz": "**Born talqini.** $\\left|\\Psi\\left(x,t\\right)\\right|^2dx$ — $t$ paytda zarrani $\\left[x,x+dx\\right]$ oraliqda topish ehtimolligi; $\\rho=\\left|\\Psi\\right|^2=\\Psi^*\\Psi$ — **ehtimollik zichligi** (probability density). To'lqin funksiyasining o'zi o'lchanmaydi: uni $e^{i\\alpha}$ ga ko'paytirish (global faza) hech narsani o'zgartirmaydi, nisbiy fazalar esa interferensiya orqali kuzatiladi (B3-L02). Normallash sharti $\\int\\left|\\Psi\\right|^2dx=1$ — zarra albatta qayerdadir bor. Muhim savol: agar $\\Psi$ $t=0$ da normallangan bo'lsa, keyin ham normallangan bo'lib qoladimi? Ha: Shredinger tenglamasidan $\\frac{d}{dt}\\int\\left|\\Psi\\right|^2dx=0$ kelib chiqadi. Buning sababi — $\\hat H$ ning ermitligi (haqiqiy $V$); agar $V$ kompleks bo'lsa ($V=V_1-i\\Gamma$), ehtimollik so'nadi — bu yemirilish yoki yutilishning fenomenologik modeli.",
+  "ru": "**Интерпретация Борна.** $\\left|\\Psi\\left(x,t\\right)\\right|^2dx$ — вероятность найти частицу в момент $t$ на отрезке $\\left[x,x+dx\\right]$; $\\rho=\\left|\\Psi\\right|^2=\\Psi^*\\Psi$ — **плотность вероятности**. Сама волновая функция не измеряется: умножение её на $e^{i\\alpha}$ (глобальная фаза) ничего не меняет, а относительные фазы наблюдаются через интерференцию (B3-L02). Условие нормировки $\\int\\left|\\Psi\\right|^2dx=1$ — частица обязательно где-то есть. Важный вопрос: если $\\Psi$ нормирована при $t=0$, останется ли она нормированной позже? Да: из уравнения Шрёдингера следует $\\frac{d}{dt}\\int\\left|\\Psi\\right|^2dx=0$. Причина — эрмитовость $\\hat H$ (действительный $V$); если $V$ комплексен ($V=V_1-i\\Gamma$), вероятность затухает — это феноменологическая модель распада или поглощения.",
+  "en": "**Born's interpretation.** $\\left|\\Psi\\left(x,t\\right)\\right|^2dx$ is the probability of finding the particle in $\\left[x,x+dx\\right]$ at time $t$; $\\rho=\\left|\\Psi\\right|^2=\\Psi^*\\Psi$ is the **probability density**. The wave function itself is not measured: multiplying it by $e^{i\\alpha}$ (a global phase) changes nothing, while relative phases are observed through interference (B3-L02). The normalization condition $\\int\\left|\\Psi\\right|^2dx=1$ says the particle is certainly somewhere. An important question: if $\\Psi$ is normalized at $t=0$, does it stay normalized later? Yes: the Schrödinger equation implies $\\frac{d}{dt}\\int\\left|\\Psi\\right|^2dx=0$. The reason is the hermiticity of $\\hat H$ (a real $V$); if $V$ is complex ($V=V_1-i\\Gamma$), the probability decays — a phenomenological model of decay or absorption."
+ },
+ {
+  "t": "m",
+  "m": "\\rho=\\left|\\Psi\\right|^2,\\qquad \\int_{-\\infty}^{\\infty}\\left|\\Psi\\left(x,t\\right)\\right|^2dx=1,\\qquad \\frac{d}{dt}\\int\\left|\\Psi\\right|^2dx=0"
+ },
+ {
+  "t": "li",
+  "uz": "**Fizik to'lqin funksiyasiga talablar.** 1) **Normallanuvchanlik:** $\\int\\left|\\Psi\\right|^2dx$ chekli, demak $\\left|x\\right|\\to\\infty$ da $\\Psi\\to0$ (bog'langan holatlar uchun). Yassi to'lqin $e^{ikx}$ normallanmaydi — u ideallashtirish, real zarra to'lqin paketi bilan ifodalanadi (8-bo'lim). 2) **Bir qiymatlilik va cheklilik.** 3) **Uzluksizlik:** $\\Psi$ hamma joyda uzluksiz. 4) **Hosilaning uzluksizligi:** $V$ chekli bo'lgan joyda $\\Psi'$ ham uzluksiz, chunki $\\Psi''=\\frac{2m}{\\hbar^2}\\left(V-E\\right)\\Psi$ chekli. $V$ cheksiz sakragan joyda (cheksiz devor) $\\Psi=0$ bo'ladi va $\\Psi'$ sakraydi; $V$ da delta funksiya bo'lsa, $\\Psi'$ ma'lum miqdorga sakraydi (10-bo'lim). GRE savoli: «qaysi funksiya chekli potensialdagi statsionar holat bo'la olmaydi?» — sinig'i (kink) bor yoki normallanmaydigan funksiya.",
+  "ru": "**Требования к физической волновой функции.** 1) **Нормируемость:** $\\int\\left|\\Psi\\right|^2dx$ конечен, значит, при $\\left|x\\right|\\to\\infty$ $\\Psi\\to0$ (для связанных состояний). Плоская волна $e^{ikx}$ не нормируема — это идеализация, реальная частица описывается волновым пакетом (раздел 8). 2) **Однозначность и конечность.** 3) **Непрерывность:** $\\Psi$ всюду непрерывна. 4) **Непрерывность производной:** там, где $V$ конечен, непрерывна и $\\Psi'$, так как $\\Psi''=\\frac{2m}{\\hbar^2}\\left(V-E\\right)\\Psi$ конечна. Там, где $V$ скачком обращается в бесконечность (бесконечная стенка), $\\Psi=0$, а $\\Psi'$ испытывает скачок; если в $V$ есть дельта-функция, $\\Psi'$ скачет на определённую величину (раздел 10). Вопрос GRE: «какая функция не может быть стационарным состоянием в конечном потенциале?» — функция с изломом или ненормируемая.",
+  "en": "**Requirements on a physical wave function.** 1) **Normalizability:** $\\int\\left|\\Psi\\right|^2dx$ is finite, so $\\Psi\\to0$ as $\\left|x\\right|\\to\\infty$ (for bound states). A plane wave $e^{ikx}$ is not normalizable — it is an idealization; a real particle is described by a wave packet (section 8). 2) **Single-valuedness and finiteness.** 3) **Continuity:** $\\Psi$ is continuous everywhere. 4) **Continuity of the derivative:** wherever $V$ is finite, $\\Psi'$ is continuous too, because $\\Psi''=\\frac{2m}{\\hbar^2}\\left(V-E\\right)\\Psi$ is finite. Where $V$ jumps to infinity (an infinite wall), $\\Psi=0$ and $\\Psi'$ jumps; if $V$ contains a delta function, $\\Psi'$ jumps by a definite amount (section 10). A GRE question: «which function cannot be a stationary state in a finite potential?» — one with a kink, or one that cannot be normalized."
+ },
+ {
+  "t": "li",
+  "uz": "**O'lchash va to'lqin funksiyasining «qisqarishi».** Born talqini ehtimollik haqida: bitta zarra uchun natijani oldindan aytib bo'lmaydi, faqat ko'p o'lchashlar statistikasi bashorat qilinadi. Zarra $x_0$ nuqtada topilgach, uning to'lqin funksiyasi shu zahoti $x_0$ atrofida tor cho'qqiga aylanadi (**to'lqin funksiyasining reduksiyasi** — collapse); darhol takroriy o'lchash yana $x_0$ ni beradi. Shundan keyin tor cho'qqi Shredinger tenglamasi bo'yicha yana yoyila boshlaydi. Demak, kvant mexanikasida ikki xil o'zgarish bor: o'lchashlar orasida — determinik (Shredinger tenglamasi), o'lchashda — ehtimoliy. Kutilgan qiymat $\\langle x\\rangle=\\int x\\left|\\Psi\\right|^2dx$ — bitta zarraning emas, bir xil tayyorlangan ko'p sistemalar ustida o'lchashlarning o'rtachasi.",
+  "ru": "**Измерение и «редукция» волновой функции.** Интерпретация Борна говорит о вероятности: для одной частицы результат предсказать нельзя, предсказывается лишь статистика многих измерений. После того как частица обнаружена в точке $x_0$, её волновая функция мгновенно превращается в узкий пик около $x_0$ (**редукция волновой функции** — коллапс); немедленное повторное измерение снова даёт $x_0$. После этого узкий пик снова начинает расплываться по уравнению Шрёдингера. Итак, в квантовой механике два вида изменения: между измерениями — детерминированное (уравнение Шрёдингера), при измерении — вероятностное. Среднее значение $\\langle x\\rangle=\\int x\\left|\\Psi\\right|^2dx$ — среднее не по одной частице, а по измерениям над многими одинаково приготовленными системами.",
+  "en": "**Measurement and the «collapse» of the wave function.** Born's interpretation is about probability: for a single particle the result cannot be predicted; only the statistics of many measurements are predicted. Once the particle is found at $x_0$, its wave function instantly becomes a narrow peak around $x_0$ (the **collapse of the wave function**); an immediate repeated measurement gives $x_0$ again. After that the narrow peak begins to spread again according to the Schrödinger equation. So quantum mechanics has two kinds of change: deterministic between measurements (the Schrödinger equation) and probabilistic at a measurement. The expectation value $\\langle x\\rangle=\\int x\\left|\\Psi\\right|^2dx$ is an average not over one particle but over measurements on many identically prepared systems."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Ehtimollik oqimi va uzluksizlik tenglamasi",
+  "ru": "3. Поток вероятности и уравнение непрерывности",
+  "en": "3. Probability current and the continuity equation"
+ },
+ {
+  "t": "li",
+  "uz": "**Ehtimollik qanday «oqadi».** Normallash butun o'q bo'yicha saqlanadi, lekin ehtimollik bir joydan boshqasiga ko'chishi mumkin. Shredinger tenglamasini $\\Psi^*$ ga, qo'shma tenglamani $\\Psi$ ga ko'paytirib ayirsak, **uzluksizlik tenglamasi** (continuity equation) hosil bo'ladi; unda **ehtimollik oqimi zichligi** (probability current) $j$ qatnashadi. Ma'nosi elektr zaryadining saqlanishi bilan bir xil: $\\left[a,b\\right]$ oraliqdagi ehtimollik faqat chegaralardan oqim orqali o'zgaradi: $\\frac{dP_{ab}}{dt}=j\\left(a\\right)-j\\left(b\\right)$ ([[F02]]). Bir o'lchovda $j$ ning birligi $\\mathrm{s^{-1}}$ — vaqt birligida nuqtadan o'tadigan ehtimollik; uch o'lchovda $\\vec j=\\frac{\\hbar}{m}\\mathrm{Im}\\left(\\Psi^*\\nabla\\Psi\\right)$, birligi $\\mathrm{m^{-2}s^{-1}}$.",
+  "ru": "**Как «течёт» вероятность.** Нормировка сохраняется по всей оси, но вероятность может перетекать из одного места в другое. Умножив уравнение Шрёдингера на $\\Psi^*$, сопряжённое — на $\\Psi$, и вычтя, получаем **уравнение непрерывности**; в нём участвует **плотность потока вероятности** $j$. Смысл тот же, что у сохранения электрического заряда: вероятность на отрезке $\\left[a,b\\right]$ меняется только за счёт потока через границы: $\\frac{dP_{ab}}{dt}=j\\left(a\\right)-j\\left(b\\right)$ ([[F02]]). В одномерном случае единица $j$ — $\\mathrm{s^{-1}}$: вероятность, проходящая через точку за единицу времени; в трёхмерном $\\vec j=\\frac{\\hbar}{m}\\mathrm{Im}\\left(\\Psi^*\\nabla\\Psi\\right)$, единица $\\mathrm{m^{-2}s^{-1}}$.",
+  "en": "**How probability «flows».** Normalization is conserved over the whole axis, but probability can move from one place to another. Multiplying the Schrödinger equation by $\\Psi^*$ and its conjugate by $\\Psi$ and subtracting gives the **continuity equation**; it contains the **probability current density** $j$. The meaning is the same as for conservation of electric charge: the probability in $\\left[a,b\\right]$ changes only through the current across the ends: $\\frac{dP_{ab}}{dt}=j\\left(a\\right)-j\\left(b\\right)$ ([[F02]]). In one dimension $j$ has units $\\mathrm{s^{-1}}$ — the probability passing a point per unit time; in three dimensions $\\vec j=\\frac{\\hbar}{m}\\mathrm{Im}\\left(\\Psi^*\\nabla\\Psi\\right)$ with units $\\mathrm{m^{-2}s^{-1}}$."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{\\partial\\rho}{\\partial t}+\\frac{\\partial j}{\\partial x}=0,\\qquad j=\\frac{\\hbar}{2mi}\\left(\\Psi^*\\frac{\\partial\\Psi}{\\partial x}-\\Psi\\frac{\\partial\\Psi^*}{\\partial x}\\right)=\\frac{\\hbar}{m}\\mathrm{Im}\\left(\\Psi^*\\frac{\\partial\\Psi}{\\partial x}\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Tez hisoblash qoidalari.** 1) Yassi to'lqin $Ae^{ikx}$: $j=\\left|A\\right|^2\\frac{\\hbar k}{m}=\\rho v$ — oqim zichlik ko'paytirilgan tezlik, xuddi elektr toki kabi. 2) Qarama-qarshi to'lqinlar $Ae^{ikx}+Be^{-ikx}$: $j=\\frac{\\hbar k}{m}\\left(\\left|A\\right|^2-\\left|B\\right|^2\\right)$ — aralash (interferension) hadlar zichlikni modullaydi, lekin oqimga hissa qo'shmaydi. 3) **Haqiqiy** to'lqin funksiyasi (yoki haqiqiy funksiya ko'paytirilgan o'zgarmas faza) uchun $j=0$: turg'un to'lqinlar, bog'langan statsionar holatlar oqim tashimaydi. 4) Statsionar holatda $\\frac{\\partial\\rho}{\\partial t}=0$, demak $j$ $x$ ga bog'liq emas — bu chegaraviy masalalarda $R+T=1$ ning asosi. 5) So'nuvchi eksponenta $Ce^{-\\kappa x}$ oqim bermaydi; oqim faqat $e^{-\\kappa x}$ va $e^{\\kappa x}$ birga, faza farqi bilan qatnashganda paydo bo'ladi (tunnel effekti, B3-L05).",
+  "ru": "**Правила быстрого расчёта.** 1) Плоская волна $Ae^{ikx}$: $j=\\left|A\\right|^2\\frac{\\hbar k}{m}=\\rho v$ — поток равен плотности, умноженной на скорость, как электрический ток. 2) Встречные волны $Ae^{ikx}+Be^{-ikx}$: $j=\\frac{\\hbar k}{m}\\left(\\left|A\\right|^2-\\left|B\\right|^2\\right)$ — перекрёстные (интерференционные) члены модулируют плотность, но в поток не входят. 3) Для **действительной** волновой функции (или действительной функции, умноженной на постоянную фазу) $j=0$: стоячие волны и связанные стационарные состояния потока не несут. 4) В стационарном состоянии $\\frac{\\partial\\rho}{\\partial t}=0$, значит, $j$ не зависит от $x$ — это основа равенства $R+T=1$ в задачах с границами. 5) Затухающая экспонента $Ce^{-\\kappa x}$ потока не даёт; поток появляется, только когда $e^{-\\kappa x}$ и $e^{\\kappa x}$ присутствуют вместе и с разностью фаз (туннельный эффект, B3-L05).",
+  "en": "**Quick-calculation rules.** 1) A plane wave $Ae^{ikx}$: $j=\\left|A\\right|^2\\frac{\\hbar k}{m}=\\rho v$ — the current is density times velocity, like an electric current. 2) Opposite waves $Ae^{ikx}+Be^{-ikx}$: $j=\\frac{\\hbar k}{m}\\left(\\left|A\\right|^2-\\left|B\\right|^2\\right)$ — the cross (interference) terms modulate the density but do not enter the current. 3) For a **real** wave function (or a real function times a constant phase) $j=0$: standing waves and bound stationary states carry no current. 4) In a stationary state $\\frac{\\partial\\rho}{\\partial t}=0$, so $j$ does not depend on $x$ — the basis of $R+T=1$ in boundary problems. 5) A decaying exponential $Ce^{-\\kappa x}$ carries no current; a current appears only when $e^{-\\kappa x}$ and $e^{\\kappa x}$ are present together with a phase difference (the tunnel effect, B3-L05)."
+ },
+ {
+  "t": "m",
+  "m": "Ae^{ikx}+Be^{-ikx}:\\quad j=\\frac{\\hbar k}{m}\\left(\\left|A\\right|^2-\\left|B\\right|^2\\right),\\qquad \\Psi^*=\\Psi\\ \\Rightarrow\\ j=0"
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B3-L03-F02.png",
+   "ru": "figures/B3-L03-F02-ru.png",
+   "en": "figures/B3-L03-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Statsionar holatlar: o'zgaruvchilarni ajratish",
+  "ru": "4. Стационарные состояния: разделение переменных",
+  "en": "4. Stationary states: separation of variables"
+ },
+ {
+  "t": "li",
+  "uz": "**Ajratish.** Agar $V$ vaqtga bog'liq bo'lmasa, yechimni $\\Psi\\left(x,t\\right)=\\psi\\left(x\\right)\\varphi\\left(t\\right)$ ko'rinishda qidiramiz. Tenglamaga qo'yib, ikkala tomonni $\\psi\\varphi$ ga bo'lsak, chap tomon faqat $t$ ga, o'ng tomon faqat $x$ ga bog'liq bo'ladi; ular teng bo'lishi uchun ikkalasi ham bir xil o'zgarmasga teng bo'lishi kerak — uni $E$ deb belgilaymiz. Vaqt qismi $\\varphi=e^{-iEt/\\hbar}$ — har doim bir xil; fazoviy qism esa **statsionar Shredinger tenglamasini** (time-independent Schrödinger equation) qanoatlantiradi. Bu $\\hat H$ ning xos qiymat masalasi (B3-L02): xos qiymatlar $E_n$ — ruxsat etilgan energiyalar, xos funksiyalar $\\psi_n$ — statsionar holatlar. Chegaraviy shartlar qaysi $E$ larga ruxsat berilishini tanlaydi.",
+  "ru": "**Разделение.** Если $V$ не зависит от времени, ищем решение в виде $\\Psi\\left(x,t\\right)=\\psi\\left(x\\right)\\varphi\\left(t\\right)$. Подставив в уравнение и разделив обе части на $\\psi\\varphi$, получим: левая часть зависит только от $t$, правая — только от $x$; чтобы они были равны, обе должны равняться одной и той же постоянной — обозначим её $E$. Временная часть $\\varphi=e^{-iEt/\\hbar}$ всегда одна и та же; пространственная же удовлетворяет **стационарному уравнению Шрёдингера**. Это задача на собственные значения $\\hat H$ (B3-L02): собственные значения $E_n$ — разрешённые энергии, собственные функции $\\psi_n$ — стационарные состояния. Граничные условия отбирают, какие $E$ разрешены.",
+  "en": "**Separation.** If $V$ does not depend on time, we seek the solution in the form $\\Psi\\left(x,t\\right)=\\psi\\left(x\\right)\\varphi\\left(t\\right)$. Substituting and dividing both sides by $\\psi\\varphi$, the left side depends only on $t$ and the right side only on $x$; for them to be equal both must equal the same constant — call it $E$. The time part $\\varphi=e^{-iEt/\\hbar}$ is always the same; the spatial part satisfies the **time-independent Schrödinger equation**. This is the eigenvalue problem of $\\hat H$ (B3-L02): the eigenvalues $E_n$ are the allowed energies and the eigenfunctions $\\psi_n$ are the stationary states. The boundary conditions select which values of $E$ are allowed."
+ },
+ {
+  "t": "m",
+  "m": "i\\hbar\\frac{1}{\\varphi}\\frac{d\\varphi}{dt}=\\frac{1}{\\psi}\\hat H\\psi=E\\ \\Rightarrow\\ \\varphi=e^{-iEt/\\hbar},\\qquad -\\frac{\\hbar^2}{2m}\\psi''+V\\psi=E\\psi"
+ },
+ {
+  "t": "li",
+  "uz": "**Nima uchun «statsionar».** 1) Ehtimollik zichligi vaqtga bog'liq emas: $\\left|\\Psi\\right|^2=\\left|\\psi\\right|^2\\left|e^{-iEt/\\hbar}\\right|^2=\\left|\\psi\\right|^2$. 2) Istalgan kattalikning kutilgan qiymati o'zgarmas, xususan $\\frac{d\\langle x\\rangle}{dt}=0$ va $\\langle p\\rangle=m\\frac{d\\langle x\\rangle}{dt}=0$ (bog'langan holat uchun). 3) Energiya **aniq**: $\\hat H\\Psi=E\\Psi$, energiya o'lchansa har doim $E$ chiqadi, $\\sigma_E=0$. 4) Holatning o'zi vaqt bilan o'zgaradi — global faza aylanadi, lekin bu kuzatilmaydi. Muhim: statsionar holatda zarra «tinch turmaydi» — kinetik energiya $\\langle T\\rangle>0$, faqat ehtimollik taqsimoti o'zgarmaydi. Atomlar barqarorligining kvant tushuntirishi shu: statsionar holatdagi elektron nurlanmaydi.",
+  "ru": "**Почему «стационарные».** 1) Плотность вероятности не зависит от времени: $\\left|\\Psi\\right|^2=\\left|\\psi\\right|^2\\left|e^{-iEt/\\hbar}\\right|^2=\\left|\\psi\\right|^2$. 2) Среднее значение любой величины постоянно, в частности $\\frac{d\\langle x\\rangle}{dt}=0$ и $\\langle p\\rangle=m\\frac{d\\langle x\\rangle}{dt}=0$ (для связанного состояния). 3) Энергия **определённа**: $\\hat H\\Psi=E\\Psi$, при измерении энергии всегда получается $E$, $\\sigma_E=0$. 4) Само состояние меняется со временем — вращается глобальная фаза, но это ненаблюдаемо. Важно: в стационарном состоянии частица «не покоится» — кинетическая энергия $\\langle T\\rangle>0$, неизменно лишь распределение вероятности. Это и есть квантовое объяснение устойчивости атомов: электрон в стационарном состоянии не излучает.",
+  "en": "**Why «stationary».** 1) The probability density does not depend on time: $\\left|\\Psi\\right|^2=\\left|\\psi\\right|^2\\left|e^{-iEt/\\hbar}\\right|^2=\\left|\\psi\\right|^2$. 2) The expectation value of any quantity is constant, in particular $\\frac{d\\langle x\\rangle}{dt}=0$ and $\\langle p\\rangle=m\\frac{d\\langle x\\rangle}{dt}=0$ (for a bound state). 3) The energy is **definite**: $\\hat H\\Psi=E\\Psi$, an energy measurement always gives $E$, $\\sigma_E=0$. 4) The state itself changes in time — the global phase rotates, but this is unobservable. Important: in a stationary state the particle is «not at rest» — the kinetic energy $\\langle T\\rangle>0$; only the probability distribution is unchanged. This is the quantum explanation of the stability of atoms: an electron in a stationary state does not radiate."
+ },
+ {
+  "t": "li",
+  "uz": "**Statsionar holatlarning umumiy xossalari** (haqiqiy $V$ uchun). 1) $E$ haqiqiy — aks holda $\\left|e^{-iEt/\\hbar}\\right|^2$ vaqt bilan o'sardi yoki so'nardi va normallash buzilardi. 2) Bog'langan holatlarda $\\psi$ ni haqiqiy qilib tanlash mumkin: $\\psi$ yechim bo'lsa, $\\psi^*$ ham yechim, demak $\\mathrm{Re}\\,\\psi$ ham. 3) $E$ potensialning eng kichik qiymatidan katta: $E>V_{min}$, chunki $\\langle T\\rangle=\\frac{\\hbar^2}{2m}\\int\\left|\\psi'\\right|^2dx>0$. 4) Turli energiyali holatlar ortogonal: $\\int\\psi_m^*\\psi_ndx=\\delta_{mn}$ (ermit operator xossasi). 5) Juft potensialda $V\\left(-x\\right)=V\\left(x\\right)$ statsionar holatlarni juft yoki toq qilib tanlash mumkin; bir o'lchovda bog'langan sathlar aynimagan bo'lgani uchun ular avtomatik ravishda juft yoki toq.",
+  "ru": "**Общие свойства стационарных состояний** (для действительного $V$). 1) $E$ действительно — иначе $\\left|e^{-iEt/\\hbar}\\right|^2$ росло бы или затухало со временем и нормировка нарушалась бы. 2) В связанных состояниях $\\psi$ можно выбрать действительной: если $\\psi$ — решение, то и $\\psi^*$, а значит, и $\\mathrm{Re}\\,\\psi$. 3) $E$ больше наименьшего значения потенциала: $E>V_{min}$, так как $\\langle T\\rangle=\\frac{\\hbar^2}{2m}\\int\\left|\\psi'\\right|^2dx>0$. 4) Состояния с разными энергиями ортогональны: $\\int\\psi_m^*\\psi_ndx=\\delta_{mn}$ (свойство эрмитова оператора). 5) В чётном потенциале $V\\left(-x\\right)=V\\left(x\\right)$ стационарные состояния можно выбрать чётными или нечётными; в одномерном случае связанные уровни невырождены, поэтому они автоматически чётные или нечётные.",
+  "en": "**General properties of stationary states** (for a real $V$). 1) $E$ is real — otherwise $\\left|e^{-iEt/\\hbar}\\right|^2$ would grow or decay in time and normalization would fail. 2) In bound states $\\psi$ can be chosen real: if $\\psi$ is a solution, so is $\\psi^*$, and hence $\\mathrm{Re}\\,\\psi$. 3) $E$ exceeds the minimum of the potential: $E>V_{min}$, because $\\langle T\\rangle=\\frac{\\hbar^2}{2m}\\int\\left|\\psi'\\right|^2dx>0$. 4) States of different energy are orthogonal: $\\int\\psi_m^*\\psi_ndx=\\delta_{mn}$ (a property of Hermitian operators). 5) In an even potential $V\\left(-x\\right)=V\\left(x\\right)$ the stationary states can be chosen even or odd; in one dimension bound levels are non-degenerate, so they are automatically even or odd."
+ },
+ {
+  "t": "m",
+  "m": "\\Psi_n\\left(x,t\\right)=\\psi_n\\left(x\\right)e^{-iE_nt/\\hbar},\\qquad \\left|\\Psi_n\\right|^2=\\left|\\psi_n\\right|^2,\\qquad E_n>V_{min}"
+ },
+ {
+  "t": "h2",
+  "uz": "5. Umumiy yechim: statsionar holatlar superpozitsiyasi",
+  "ru": "5. Общее решение: суперпозиция стационарных состояний",
+  "en": "5. The general solution: a superposition of stationary states"
+ },
+ {
+  "t": "li",
+  "uz": "**Uch qadamli algoritm.** Statsionar holatlar to'liq ortonormal bazis tashkil qiladi, shuning uchun istalgan boshlang'ich holatni ular bo'yicha yoyish mumkin. Vaqtga bog'liq masala quyidagicha yechiladi: 1) statsionar tenglamani yechib, $E_n$ va $\\psi_n$ ni topamiz; 2) boshlang'ich holatni yoyamiz: $c_n=\\int\\psi_n^*\\Psi\\left(x,0\\right)dx$; 3) har bir hadga o'z faza ko'paytuvchisini qo'shamiz. Bu GRE ning eng ko'p uchraydigan sxemasi. Ko'pincha integral shart emas: $\\Psi\\left(x,0\\right)$ ni trigonometrik ayniyatlar bilan sinuslarga ajratish kifoya, masalan $\\sin^3\\theta=\\frac{3\\sin\\theta-\\sin3\\theta}{4}$ yoki $2\\sin\\theta\\cos\\theta=\\sin2\\theta$ (S05, Q05).",
+  "ru": "**Алгоритм из трёх шагов.** Стационарные состояния образуют полный ортонормированный базис, поэтому любое начальное состояние можно разложить по ним. Нестационарная задача решается так: 1) решаем стационарное уравнение и находим $E_n$ и $\\psi_n$; 2) раскладываем начальное состояние: $c_n=\\int\\psi_n^*\\Psi\\left(x,0\\right)dx$; 3) к каждому члену добавляем свой фазовый множитель. Это самая частая схема GRE. Часто интеграл не нужен: достаточно разложить $\\Psi\\left(x,0\\right)$ на синусы тригонометрическими тождествами, например $\\sin^3\\theta=\\frac{3\\sin\\theta-\\sin3\\theta}{4}$ или $2\\sin\\theta\\cos\\theta=\\sin2\\theta$ (S05, Q05).",
+  "en": "**A three-step algorithm.** The stationary states form a complete orthonormal basis, so any initial state can be expanded in them. The time-dependent problem is solved as follows: 1) solve the time-independent equation to find $E_n$ and $\\psi_n$; 2) expand the initial state: $c_n=\\int\\psi_n^*\\Psi\\left(x,0\\right)dx$; 3) attach to each term its own phase factor. This is the most frequent GRE scheme. Often no integral is needed: it is enough to split $\\Psi\\left(x,0\\right)$ into sines with trigonometric identities, for example $\\sin^3\\theta=\\frac{3\\sin\\theta-\\sin3\\theta}{4}$ or $2\\sin\\theta\\cos\\theta=\\sin2\\theta$ (S05, Q05)."
+ },
+ {
+  "t": "m",
+  "m": "\\Psi\\left(x,t\\right)=\\sum_nc_n\\psi_n\\left(x\\right)e^{-iE_nt/\\hbar},\\qquad c_n=\\int\\psi_n^*\\Psi\\left(x,0\\right)dx,\\qquad \\sum_n\\left|c_n\\right|^2=1"
+ },
+ {
+  "t": "li",
+  "uz": "**O'lchash ehtimolliklari vaqtga bog'liq emas.** Energiya o'lchanganda $E_n$ chiqish ehtimolligi $P_n=\\left|c_ne^{-iE_nt/\\hbar}\\right|^2=\\left|c_n\\right|^2$ — fazalar modulni o'zgartirmaydi. Shuning uchun $\\langle E\\rangle=\\sum\\left|c_n\\right|^2E_n$ ham saqlanadi (energiyaning saqlanish qonunining kvant shakli). O'lchashdan keyin holat mos $\\psi_n$ ga «qisqaradi» va keyinchalik statsionar bo'lib qoladi. Tuzoqlar: 1) koeffitsiyentni kvadratga ko'tarmaslik; 2) normallanmagan holatda ehtimollikni $\\left|c_n\\right|^2$ deb olish — avval $\\sum\\left|c_n\\right|^2$ ga bo'lish kerak; 3) chiqishi mumkin bo'lgan natijalar faqat $E_n$ lar, $\\langle E\\rangle$ esa umuman olganda ular orasidagi son va hech qachon o'lchanmaydi.",
+  "ru": "**Вероятности измерения не зависят от времени.** Вероятность получить при измерении энергии $E_n$ равна $P_n=\\left|c_ne^{-iE_nt/\\hbar}\\right|^2=\\left|c_n\\right|^2$ — фазы не меняют модуль. Поэтому сохраняется и $\\langle E\\rangle=\\sum\\left|c_n\\right|^2E_n$ (квантовая форма закона сохранения энергии). После измерения состояние «редуцируется» к соответствующей $\\psi_n$ и далее остаётся стационарным. Ловушки: 1) не возвести коэффициент в квадрат; 2) для ненормированного состояния принять вероятность за $\\left|c_n\\right|^2$ — сначала нужно разделить на $\\sum\\left|c_n\\right|^2$; 3) возможны лишь результаты $E_n$, а $\\langle E\\rangle$ — вообще говоря, число между ними, которое никогда не измеряется.",
+  "en": "**Measurement probabilities do not depend on time.** The probability of getting $E_n$ in an energy measurement is $P_n=\\left|c_ne^{-iE_nt/\\hbar}\\right|^2=\\left|c_n\\right|^2$ — the phases do not change the modulus. Hence $\\langle E\\rangle=\\sum\\left|c_n\\right|^2E_n$ is conserved too (the quantum form of energy conservation). After the measurement the state «collapses» to the corresponding $\\psi_n$ and stays stationary afterwards. Traps: 1) forgetting to square the coefficient; 2) taking the probability as $\\left|c_n\\right|^2$ for an unnormalized state — first divide by $\\sum\\left|c_n\\right|^2$; 3) only the values $E_n$ can be obtained, while $\\langle E\\rangle$ is in general a number between them that is never measured."
+ },
+ {
+  "t": "li",
+  "uz": "**Kvant urishlari.** Ikki holat superpozitsiyasida $\\Psi=c_1\\psi_1e^{-iE_1t/\\hbar}+c_2\\psi_2e^{-iE_2t/\\hbar}$ ehtimollik zichligida aralash had paydo bo'ladi: $\\left|\\Psi\\right|^2=\\left|c_1\\psi_1\\right|^2+\\left|c_2\\psi_2\\right|^2+2\\left|c_1c_2\\right|\\psi_1\\psi_2\\cos\\left(\\omega_{21}t-\\delta\\right)$, bunda **Bor chastotasi** $\\omega_{21}=\\frac{E_2-E_1}{\\hbar}$. Zichlik $T=\\frac{2\\pi\\hbar}{E_2-E_1}=\\frac{h}{E_2-E_1}$ davr bilan «chayqaladi» ([[F03]]); xuddi shu chastota bilan $\\langle x\\rangle$ ham tebranadi — bu atom nurlanishining klassik tasviri: foton chastotasi $\\nu=\\frac{E_2-E_1}{h}$. Diqqat: agar $\\int\\psi_1x\\psi_2dx=0$ bo'lsa (masalan, ikkala holat markazga nisbatan bir xil juftlikda — cheksiz o'rada $\\psi_1$ va $\\psi_3$), zichlik tebranadi, lekin $\\langle x\\rangle$ o'zgarmaydi (Q04).",
+  "ru": "**Квантовые биения.** В суперпозиции двух состояний $\\Psi=c_1\\psi_1e^{-iE_1t/\\hbar}+c_2\\psi_2e^{-iE_2t/\\hbar}$ в плотности вероятности появляется перекрёстный член: $\\left|\\Psi\\right|^2=\\left|c_1\\psi_1\\right|^2+\\left|c_2\\psi_2\\right|^2+2\\left|c_1c_2\\right|\\psi_1\\psi_2\\cos\\left(\\omega_{21}t-\\delta\\right)$, где **боровская частота** $\\omega_{21}=\\frac{E_2-E_1}{\\hbar}$. Плотность «плещется» с периодом $T=\\frac{2\\pi\\hbar}{E_2-E_1}=\\frac{h}{E_2-E_1}$ ([[F03]]); с той же частотой колеблется и $\\langle x\\rangle$ — это классическая картина излучения атома: частота фотона $\\nu=\\frac{E_2-E_1}{h}$. Внимание: если $\\int\\psi_1x\\psi_2dx=0$ (например, оба состояния одной чётности относительно центра — в бесконечной яме $\\psi_1$ и $\\psi_3$), плотность колеблется, а $\\langle x\\rangle$ не меняется (Q04).",
+  "en": "**Quantum beats.** In a superposition of two states $\\Psi=c_1\\psi_1e^{-iE_1t/\\hbar}+c_2\\psi_2e^{-iE_2t/\\hbar}$ a cross term appears in the probability density: $\\left|\\Psi\\right|^2=\\left|c_1\\psi_1\\right|^2+\\left|c_2\\psi_2\\right|^2+2\\left|c_1c_2\\right|\\psi_1\\psi_2\\cos\\left(\\omega_{21}t-\\delta\\right)$, where the **Bohr frequency** is $\\omega_{21}=\\frac{E_2-E_1}{\\hbar}$. The density «sloshes» with period $T=\\frac{2\\pi\\hbar}{E_2-E_1}=\\frac{h}{E_2-E_1}$ ([[F03]]); $\\langle x\\rangle$ oscillates at the same frequency — the classical picture of atomic radiation: the photon frequency is $\\nu=\\frac{E_2-E_1}{h}$. Note: if $\\int\\psi_1x\\psi_2dx=0$ (for example, both states have the same parity about the centre — $\\psi_1$ and $\\psi_3$ in an infinite well), the density oscillates but $\\langle x\\rangle$ does not change (Q04)."
+ },
+ {
+  "t": "m",
+  "m": "\\left|\\Psi\\right|^2=\\left|c_1\\psi_1\\right|^2+\\left|c_2\\psi_2\\right|^2+2\\left|c_1c_2\\right|\\psi_1\\psi_2\\cos\\left(\\omega_{21}t-\\delta\\right),\\qquad \\omega_{21}=\\frac{E_2-E_1}{\\hbar}"
+ },
+ {
+  "t": "li",
+  "uz": "**Kvant qaytishi va keskin o'zgarish.** Cheksiz o'rada $E_n=n^2E_1$, shuning uchun barcha fazalar $e^{-in^2\\omega_1t}$ ko'rinishida va $T=\\frac{2\\pi\\hbar}{E_1}=\\frac{4mL^2}{\\pi\\hbar}$ vaqtdan keyin **istalgan** holat aynan qaytadi, $\\frac{T}{2}$ da esa o'ra markaziga nisbatan ko'zgu aksiga aylanadi (S17). Teng oraliqli spektrda (ossillyator, B3-L06) ham xuddi shunday davriylik bor. **Keskin (sudden) o'zgarishda** — potensial zarra «ulgurmaydigan» darajada tez o'zgarsa — to'lqin funksiyasi o'zgarmay qoladi va yangi Gamiltonianning statsionar holatlari bo'yicha yoyiladi: $P_n'=\\left|\\int\\psi_n'^*\\Psi\\,dx\\right|^2$. O'ra kengligi bir zumda $L\\to2L$ bo'lsa, yangi asosiy holat ehtimolligi $\\frac{32}{9\\pi^2}\\approx0.36$, eng ehtimolli natija esa $E_2'=E_1$ (S18).",
+  "ru": "**Квантовое возрождение и внезапное изменение.** В бесконечной яме $E_n=n^2E_1$, поэтому все фазы имеют вид $e^{-in^2\\omega_1t}$, и через время $T=\\frac{2\\pi\\hbar}{E_1}=\\frac{4mL^2}{\\pi\\hbar}$ **любое** состояние в точности возвращается, а при $\\frac{T}{2}$ превращается в зеркальное отражение относительно центра ямы (S17). В эквидистантном спектре (осциллятор, B3-L06) такая же периодичность. При **внезапном изменении** — если потенциал меняется так быстро, что частица «не успевает» — волновая функция остаётся прежней и раскладывается по стационарным состояниям нового гамильтониана: $P_n'=\\left|\\int\\psi_n'^*\\Psi\\,dx\\right|^2$. Если ширина ямы мгновенно меняется $L\\to2L$, вероятность нового основного состояния $\\frac{32}{9\\pi^2}\\approx0.36$, а наиболее вероятный результат — $E_2'=E_1$ (S18).",
+  "en": "**Quantum revival and sudden change.** In an infinite well $E_n=n^2E_1$, so all phases have the form $e^{-in^2\\omega_1t}$, and after the time $T=\\frac{2\\pi\\hbar}{E_1}=\\frac{4mL^2}{\\pi\\hbar}$ **any** state returns exactly, while at $\\frac{T}{2}$ it becomes its mirror image about the centre of the well (S17). An equally spaced spectrum (the oscillator, B3-L06) has the same periodicity. In a **sudden change** — when the potential changes so fast that the particle «has no time» to respond — the wave function stays the same and is expanded in the stationary states of the new Hamiltonian: $P_n'=\\left|\\int\\psi_n'^*\\Psi\\,dx\\right|^2$. If the width of the well changes instantly $L\\to2L$, the probability of the new ground state is $\\frac{32}{9\\pi^2}\\approx0.36$, and the most probable result is $E_2'=E_1$ (S18)."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B3-L03-F03.png",
+   "ru": "figures/B3-L03-F03-ru.png",
+   "en": "figures/B3-L03-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "6. Kutilgan qiymatlar evolyutsiyasi va Erenfest teoremasi",
+  "ru": "6. Эволюция средних значений и теорема Эренфеста",
+  "en": "6. Evolution of expectation values and Ehrenfest's theorem"
+ },
+ {
+  "t": "li",
+  "uz": "**Umumiy formula.** Shredinger tenglamasi va $\\hat H$ ning ermitligidan istalgan $\\hat Q$ kattalik o'rtachasining o'zgarish tezligi kelib chiqadi: u $\\hat H$ bilan kommutatorga bog'liq. Xulosalar: 1) $\\hat H$ bilan kommutatsiyalanadigan va vaqtga oshkor bog'liq bo'lmagan kattalik — **harakat integrali**, uning o'rtachasi va ehtimollik taqsimoti saqlanadi; xususan $\\langle H\\rangle$ doim saqlanadi. 2) Erkin zarrada $\\left[\\hat H,\\hat p\\right]=0$ — impuls saqlanadi; juft potensialda juftlik saqlanadi. 3) Statsionar holatda istalgan $\\hat Q$ uchun $\\frac{d\\langle Q\\rangle}{dt}=0$ — bundan virial teoremasi chiqadi (7-bo'lim).",
+  "ru": "**Общая формула.** Из уравнения Шрёдингера и эрмитовости $\\hat H$ следует скорость изменения среднего любой величины $\\hat Q$: она определяется коммутатором с $\\hat H$. Выводы: 1) величина, коммутирующая с $\\hat H$ и не зависящая явно от времени, — **интеграл движения**, её среднее и распределение вероятности сохраняются; в частности, $\\langle H\\rangle$ сохраняется всегда. 2) У свободной частицы $\\left[\\hat H,\\hat p\\right]=0$ — импульс сохраняется; в чётном потенциале сохраняется чётность. 3) В стационарном состоянии для любой $\\hat Q$ имеем $\\frac{d\\langle Q\\rangle}{dt}=0$ — отсюда следует теорема вириала (раздел 7).",
+  "en": "**The general formula.** The Schrödinger equation and the hermiticity of $\\hat H$ give the rate of change of the average of any quantity $\\hat Q$: it is fixed by the commutator with $\\hat H$. Consequences: 1) a quantity that commutes with $\\hat H$ and has no explicit time dependence is a **constant of motion**; its average and probability distribution are conserved; in particular $\\langle H\\rangle$ is always conserved. 2) For a free particle $\\left[\\hat H,\\hat p\\right]=0$ — momentum is conserved; in an even potential parity is conserved. 3) In a stationary state $\\frac{d\\langle Q\\rangle}{dt}=0$ for any $\\hat Q$ — this gives the virial theorem (section 7)."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{d\\langle Q\\rangle}{dt}=\\frac{i}{\\hbar}\\left\\langle\\left[\\hat H,\\hat Q\\right]\\right\\rangle+\\left\\langle\\frac{\\partial\\hat Q}{\\partial t}\\right\\rangle"
+ },
+ {
+  "t": "li",
+  "uz": "**Erenfest teoremasi.** $\\hat Q=\\hat x$ va $\\hat Q=\\hat p$ ni qo'ysak ($\\left[\\hat H,\\hat x\\right]=-\\frac{i\\hbar}{m}\\hat p$, $\\left[\\hat H,\\hat p\\right]=i\\hbar V'$), kvant o'rtachalari klassik ko'rinishdagi tenglamalarni qanoatlantiradi: tezlik — impuls bo'lingan massa, impuls o'zgarishi — **o'rtacha** kuch. Bu klassik mexanikaga o'tishning asosi. Lekin bu yerda nozik joy bor: $\\langle V'\\left(x\\right)\\rangle\\neq V'\\left(\\langle x\\rangle\\right)$ umuman olganda. Ular faqat kuch chiziqli bo'lganda teng: $V=ax$ (bir jinsli maydon) va $V=bx^2$ (ossillyator) — bu potensiallarda $\\langle x\\rangle$ istalgan holat uchun aynan klassik trayektoriya bo'ylab harakatlanadi. $V=\\lambda x^4$ da esa Gauss paketi uchun $\\frac{d\\langle p\\rangle}{dt}=-4\\lambda\\left(x_0^3+3x_0\\sigma^2\\right)$, klassik kuchdan farq paket kengligiga bog'liq (S07).",
+  "ru": "**Теорема Эренфеста.** Подставив $\\hat Q=\\hat x$ и $\\hat Q=\\hat p$ ($\\left[\\hat H,\\hat x\\right]=-\\frac{i\\hbar}{m}\\hat p$, $\\left[\\hat H,\\hat p\\right]=i\\hbar V'$), получим, что квантовые средние удовлетворяют уравнениям классического вида: скорость — импульс, делённый на массу, изменение импульса — **средняя** сила. Это основа перехода к классической механике. Но здесь есть тонкость: вообще говоря, $\\langle V'\\left(x\\right)\\rangle\\neq V'\\left(\\langle x\\rangle\\right)$. Они равны лишь при линейной силе: $V=ax$ (однородное поле) и $V=bx^2$ (осциллятор) — в этих потенциалах $\\langle x\\rangle$ для любого состояния движется точно по классической траектории. А при $V=\\lambda x^4$ для гауссова пакета $\\frac{d\\langle p\\rangle}{dt}=-4\\lambda\\left(x_0^3+3x_0\\sigma^2\\right)$, и отличие от классической силы зависит от ширины пакета (S07).",
+  "en": "**Ehrenfest's theorem.** Setting $\\hat Q=\\hat x$ and $\\hat Q=\\hat p$ ($\\left[\\hat H,\\hat x\\right]=-\\frac{i\\hbar}{m}\\hat p$, $\\left[\\hat H,\\hat p\\right]=i\\hbar V'$), we find that the quantum averages obey equations of classical form: velocity is momentum divided by mass, and the change of momentum is the **average** force. This is the basis of the transition to classical mechanics. But there is a subtlety: in general $\\langle V'\\left(x\\right)\\rangle\\neq V'\\left(\\langle x\\rangle\\right)$. They are equal only for a linear force: $V=ax$ (a uniform field) and $V=bx^2$ (the oscillator) — in these potentials $\\langle x\\rangle$ follows the classical trajectory exactly for any state. For $V=\\lambda x^4$, however, a Gaussian packet gives $\\frac{d\\langle p\\rangle}{dt}=-4\\lambda\\left(x_0^3+3x_0\\sigma^2\\right)$, and the deviation from the classical force depends on the packet width (S07)."
+ },
+ {
+  "t": "m",
+  "m": "\\frac{d\\langle x\\rangle}{dt}=\\frac{\\langle p\\rangle}{m},\\qquad \\frac{d\\langle p\\rangle}{dt}=-\\left\\langle\\frac{dV}{dx}\\right\\rangle"
+ },
+ {
+  "t": "h2",
+  "uz": "7. Virial teoremasi va energiya balansi",
+  "ru": "7. Теорема вириала и баланс энергии",
+  "en": "7. The virial theorem and the energy balance"
+ },
+ {
+  "t": "li",
+  "uz": "**Keltirib chiqarish.** Umumiy formulani $\\hat Q=\\hat x\\hat p$ ga qo'llaymiz: $\\left[\\hat H,\\hat x\\hat p\\right]=\\left[\\hat H,\\hat x\\right]\\hat p+\\hat x\\left[\\hat H,\\hat p\\right]=-\\frac{i\\hbar}{m}\\hat p^2+i\\hbar\\hat xV'$, demak $\\frac{d\\langle xp\\rangle}{dt}=2\\langle T\\rangle-\\langle xV'\\rangle$. Statsionar holatda chap tomon nolga teng va **virial teoremasi** hosil bo'ladi. Darajali potensial $V=\\lambda\\left|x\\right|^{\\nu}$ uchun $xV'=\\nu V$, shuning uchun $2\\langle T\\rangle=\\nu\\langle V\\rangle$. Uch o'lchovda $xV'$ o'rniga $\\vec r\\cdot\\nabla V$ yoziladi, natija xuddi shunday. Teorema ixtiyoriy statsionar holat uchun, to'lqin funksiyasini bilmasdan ham ishlaydi — GRE da juda qulay.",
+  "ru": "**Вывод.** Применим общую формулу к $\\hat Q=\\hat x\\hat p$: $\\left[\\hat H,\\hat x\\hat p\\right]=\\left[\\hat H,\\hat x\\right]\\hat p+\\hat x\\left[\\hat H,\\hat p\\right]=-\\frac{i\\hbar}{m}\\hat p^2+i\\hbar\\hat xV'$, значит, $\\frac{d\\langle xp\\rangle}{dt}=2\\langle T\\rangle-\\langle xV'\\rangle$. В стационарном состоянии левая часть равна нулю, и получается **теорема вириала**. Для степенного потенциала $V=\\lambda\\left|x\\right|^{\\nu}$ имеем $xV'=\\nu V$, поэтому $2\\langle T\\rangle=\\nu\\langle V\\rangle$. В трёхмерном случае вместо $xV'$ пишется $\\vec r\\cdot\\nabla V$, результат тот же. Теорема работает для любого стационарного состояния даже без знания волновой функции — очень удобно на GRE.",
+  "en": "**Derivation.** Apply the general formula to $\\hat Q=\\hat x\\hat p$: $\\left[\\hat H,\\hat x\\hat p\\right]=\\left[\\hat H,\\hat x\\right]\\hat p+\\hat x\\left[\\hat H,\\hat p\\right]=-\\frac{i\\hbar}{m}\\hat p^2+i\\hbar\\hat xV'$, so $\\frac{d\\langle xp\\rangle}{dt}=2\\langle T\\rangle-\\langle xV'\\rangle$. In a stationary state the left side vanishes, which gives the **virial theorem**. For a power-law potential $V=\\lambda\\left|x\\right|^{\\nu}$ we have $xV'=\\nu V$, so $2\\langle T\\rangle=\\nu\\langle V\\rangle$. In three dimensions $xV'$ is replaced by $\\vec r\\cdot\\nabla V$ with the same result. The theorem works for any stationary state even without knowing the wave function — very handy on the GRE."
+ },
+ {
+  "t": "m",
+  "m": "2\\langle T\\rangle=\\left\\langle x\\frac{dV}{dx}\\right\\rangle,\\qquad V=\\lambda\\left|x\\right|^{\\nu}:\\ \\langle T\\rangle=\\frac{\\nu}{\\nu+2}E,\\quad \\langle V\\rangle=\\frac{2}{\\nu+2}E"
+ },
+ {
+  "t": "li",
+  "uz": "**Tayyor natijalar.** Ossillyator ($\\nu=2$): $\\langle T\\rangle=\\langle V\\rangle=\\frac{E}{2}$ — har bir statsionar holatda energiya teng bo'linadi. Kulon potensiali ($\\nu=-1$): $\\langle T\\rangle=-E$, $\\langle V\\rangle=2E$; vodorodning asosiy holatida $E=-13.6\\ \\mathrm{eV}$, demak $\\langle T\\rangle=13.6\\ \\mathrm{eV}$, $\\langle V\\rangle=-27.2\\ \\mathrm{eV}$ (S08, Q08). Chiziqli potensial $V=F\\left|x\\right|$ ($\\nu=1$): $\\langle T\\rangle=\\frac{E}{3}$. Delta-o'ra ham $\\nu=-1$ kabi ishlaydi, chunki $\\delta\\left(x\\right)$ ning o'lchami $\\frac{1}{x}$: $\\langle T\\rangle=-E$, $\\langle V\\rangle=2E$ (S11). Tekshiruv usuli: $\\nu>0$ da $\\langle T\\rangle$ va $E$ bir ishorali; $\\nu<0$ da bog'langan holat $E<0$ va $\\langle T\\rangle=-E>0$ — kinetik energiya hech qachon manfiy emas.",
+  "ru": "**Готовые результаты.** Осциллятор ($\\nu=2$): $\\langle T\\rangle=\\langle V\\rangle=\\frac{E}{2}$ — в каждом стационарном состоянии энергия делится поровну. Кулоновский потенциал ($\\nu=-1$): $\\langle T\\rangle=-E$, $\\langle V\\rangle=2E$; в основном состоянии водорода $E=-13.6\\ \\mathrm{eV}$, значит, $\\langle T\\rangle=13.6\\ \\mathrm{eV}$, $\\langle V\\rangle=-27.2\\ \\mathrm{eV}$ (S08, Q08). Линейный потенциал $V=F\\left|x\\right|$ ($\\nu=1$): $\\langle T\\rangle=\\frac{E}{3}$. Дельта-яма работает как $\\nu=-1$, так как размерность $\\delta\\left(x\\right)$ — $\\frac{1}{x}$: $\\langle T\\rangle=-E$, $\\langle V\\rangle=2E$ (S11). Способ проверки: при $\\nu>0$ $\\langle T\\rangle$ и $E$ одного знака; при $\\nu<0$ связанное состояние имеет $E<0$ и $\\langle T\\rangle=-E>0$ — кинетическая энергия никогда не отрицательна.",
+  "en": "**Ready results.** Oscillator ($\\nu=2$): $\\langle T\\rangle=\\langle V\\rangle=\\frac{E}{2}$ — in every stationary state the energy is split equally. Coulomb potential ($\\nu=-1$): $\\langle T\\rangle=-E$, $\\langle V\\rangle=2E$; in the hydrogen ground state $E=-13.6\\ \\mathrm{eV}$, so $\\langle T\\rangle=13.6\\ \\mathrm{eV}$ and $\\langle V\\rangle=-27.2\\ \\mathrm{eV}$ (S08, Q08). Linear potential $V=F\\left|x\\right|$ ($\\nu=1$): $\\langle T\\rangle=\\frac{E}{3}$. A delta well behaves like $\\nu=-1$, since $\\delta\\left(x\\right)$ has dimension $\\frac{1}{x}$: $\\langle T\\rangle=-E$, $\\langle V\\rangle=2E$ (S11). A check: for $\\nu>0$, $\\langle T\\rangle$ and $E$ have the same sign; for $\\nu<0$ a bound state has $E<0$ and $\\langle T\\rangle=-E>0$ — kinetic energy is never negative."
+ },
+ {
+  "t": "li",
+  "uz": "**Kinetik energiyani to'g'ri hisoblash.** $\\langle T\\rangle=-\\frac{\\hbar^2}{2m}\\int\\psi^*\\psi''dx$ ni bo'laklab integrallasak, $\\langle T\\rangle=\\frac{\\hbar^2}{2m}\\int\\left|\\psi'\\right|^2dx\\geq0$ hosil bo'ladi. Ikkinchi shakl ishonchliroq: agar $\\psi$ da sinik bo'lsa (delta potensial, «uchburchak» holat), $\\psi''$ da delta funksiya paydo bo'ladi va uni tashlab yuborish noto'g'ri, hatto manfiy natija beradi (S11, H10). Bundan tashqari, **variatsion prinsip**: istalgan normallangan sinov funksiyasi uchun $\\langle H\\rangle\\geq E_1$, tenglik faqat asosiy holatda. Masalan, cheksiz o'rada $\\psi\\propto x\\left(L-x\\right)$ uchun $\\langle H\\rangle=\\frac{5\\hbar^2}{mL^2}=\\frac{10}{\\pi^2}E_1\\approx1.013E_1$ — asosiy holatga juda yaqin, chunki $\\left|c_1\\right|^2\\approx0.9986$ (S06).",
+  "ru": "**Правильный расчёт кинетической энергии.** Проинтегрировав по частям $\\langle T\\rangle=-\\frac{\\hbar^2}{2m}\\int\\psi^*\\psi''dx$, получим $\\langle T\\rangle=\\frac{\\hbar^2}{2m}\\int\\left|\\psi'\\right|^2dx\\geq0$. Вторая форма надёжнее: если у $\\psi$ есть излом (дельта-потенциал, «треугольное» состояние), в $\\psi''$ появляется дельта-функция, и её отбрасывание даёт неверный, даже отрицательный результат (S11, H10). Кроме того, **вариационный принцип**: для любой нормированной пробной функции $\\langle H\\rangle\\geq E_1$, равенство — только в основном состоянии. Например, в бесконечной яме для $\\psi\\propto x\\left(L-x\\right)$ имеем $\\langle H\\rangle=\\frac{5\\hbar^2}{mL^2}=\\frac{10}{\\pi^2}E_1\\approx1.013E_1$ — очень близко к основному состоянию, так как $\\left|c_1\\right|^2\\approx0.9986$ (S06).",
+  "en": "**Computing the kinetic energy correctly.** Integrating $\\langle T\\rangle=-\\frac{\\hbar^2}{2m}\\int\\psi^*\\psi''dx$ by parts gives $\\langle T\\rangle=\\frac{\\hbar^2}{2m}\\int\\left|\\psi'\\right|^2dx\\geq0$. The second form is more reliable: if $\\psi$ has a kink (a delta potential, a «triangle» state), $\\psi''$ contains a delta function, and dropping it gives a wrong, even negative, result (S11, H10). In addition, the **variational principle**: for any normalized trial function $\\langle H\\rangle\\geq E_1$, with equality only for the ground state. For example, in an infinite well $\\psi\\propto x\\left(L-x\\right)$ gives $\\langle H\\rangle=\\frac{5\\hbar^2}{mL^2}=\\frac{10}{\\pi^2}E_1\\approx1.013E_1$ — very close to the ground state, since $\\left|c_1\\right|^2\\approx0.9986$ (S06)."
+ },
+ {
+  "t": "m",
+  "m": "\\langle T\\rangle=-\\frac{\\hbar^2}{2m}\\int\\psi^*\\psi''dx=\\frac{\\hbar^2}{2m}\\int\\left|\\psi'\\right|^2dx\\geq0,\\qquad \\langle H\\rangle\\geq E_1"
+ },
+ {
+  "t": "h2",
+  "uz": "8. Erkin zarra va to'lqin paketlari",
+  "ru": "8. Свободная частица и волновые пакеты",
+  "en": "8. The free particle and wave packets"
+ },
+ {
+  "t": "li",
+  "uz": "**Normallanadigan erkin holat.** Erkin zarrada ($V=0$) statsionar holatlar $e^{ikx}$ — istalgan haqiqiy $k$ uchun, spektr uzluksiz va har bir $E>0$ ikki karrali ($\\pm k$). Ular normallanmaydi, shuning uchun real zarra **to'lqin paketi** — yassi to'lqinlarning integral superpozitsiyasi bilan ifodalanadi; $\\phi\\left(k\\right)$ — boshlang'ich holatning Furye obrazi (B3-L02), har bir komponent o'z chastotasi $\\omega\\left(k\\right)=\\frac{\\hbar k^2}{2m}$ bilan aylanadi. Paket markazi guruh tezligi $v_g=\\frac{\\hbar k_0}{m}$ bilan harakatlanadi (S15); bu Erenfest teoremasi bilan mos: $\\frac{d\\langle x\\rangle}{dt}=\\frac{\\langle p\\rangle}{m}$, $\\langle p\\rangle$ esa saqlanadi.",
+  "ru": "**Нормируемое свободное состояние.** У свободной частицы ($V=0$) стационарные состояния — $e^{ikx}$ при любом действительном $k$, спектр непрерывен и каждое $E>0$ дважды вырождено ($\\pm k$). Они не нормируемы, поэтому реальная частица описывается **волновым пакетом** — интегральной суперпозицией плоских волн; $\\phi\\left(k\\right)$ — фурье-образ начального состояния (B3-L02), каждая компонента вращается со своей частотой $\\omega\\left(k\\right)=\\frac{\\hbar k^2}{2m}$. Центр пакета движется с групповой скоростью $v_g=\\frac{\\hbar k_0}{m}$ (S15); это согласуется с теоремой Эренфеста: $\\frac{d\\langle x\\rangle}{dt}=\\frac{\\langle p\\rangle}{m}$, а $\\langle p\\rangle$ сохраняется.",
+  "en": "**A normalizable free state.** For a free particle ($V=0$) the stationary states are $e^{ikx}$ for any real $k$; the spectrum is continuous and every $E>0$ is doubly degenerate ($\\pm k$). They are not normalizable, so a real particle is described by a **wave packet** — an integral superposition of plane waves; $\\phi\\left(k\\right)$ is the Fourier transform of the initial state (B3-L02), and each component rotates with its own frequency $\\omega\\left(k\\right)=\\frac{\\hbar k^2}{2m}$. The centre of the packet moves with the group velocity $v_g=\\frac{\\hbar k_0}{m}$ (S15); this agrees with Ehrenfest's theorem: $\\frac{d\\langle x\\rangle}{dt}=\\frac{\\langle p\\rangle}{m}$, and $\\langle p\\rangle$ is conserved."
+ },
+ {
+  "t": "m",
+  "m": "\\Psi\\left(x,t\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\phi\\left(k\\right)e^{i\\left(kx-\\hbar k^2t/2m\\right)}dk,\\qquad \\phi\\left(k\\right)=\\frac{1}{\\sqrt{2\\pi}}\\int\\Psi\\left(x,0\\right)e^{-ikx}dx"
+ },
+ {
+  "t": "li",
+  "uz": "**Paketning yoyilishi.** Dispersiya kvadratik bo'lgani uchun turli $k$ li komponentlar turli tezlikda yuguradi va paket kengayadi ([[F04]]). Boshlang'ich kengligi $\\sigma_0$ bo'lgan minimal Gauss paketi uchun aniq natija ma'lum: $\\sigma\\left(t\\right)=\\sigma_0\\sqrt{1+\\left(\\frac{t}{\\tau}\\right)^2}$, $\\tau=\\frac{2m\\sigma_0^2}{\\hbar}$. Katta $t$ da $\\sigma\\approx\\frac{\\sigma_pt}{m}$, $\\sigma_p=\\frac{\\hbar}{2\\sigma_0}$ — klassik ma'no: tezliklar tarqoqligi $\\frac{\\sigma_p}{m}$. Paradoks: **tor** paket **tezroq** yoyiladi ($\\tau\\sim\\sigma_0^2$). Raqamlar: $\\sigma_0=0.10\\ \\mathrm{nm}$ elektron uchun $\\tau\\approx1.7\\cdot10^{-16}\\ \\mathrm{s}$; $1\\ \\mu\\mathrm{g}$ chang zarrasi uchun ($\\sigma_0=1\\ \\mu\\mathrm{m}$) $\\tau\\approx2\\cdot10^{13}\\ \\mathrm{s}$ — makroskopik jismlarda yoyilish sezilmaydi (S09). Umumiy dalil: erkin zarra uchun $\\frac{d^2\\langle x^2\\rangle}{dt^2}=\\frac{2\\langle p^2\\rangle}{m^2}$ — $\\langle x^2\\rangle$ vaqtning kvadratik funksiyasi (H12).",
+  "ru": "**Расплывание пакета.** Поскольку дисперсия квадратична, компоненты с разными $k$ бегут с разными скоростями, и пакет расширяется ([[F04]]). Для минимального гауссова пакета с начальной шириной $\\sigma_0$ известен точный результат: $\\sigma\\left(t\\right)=\\sigma_0\\sqrt{1+\\left(\\frac{t}{\\tau}\\right)^2}$, $\\tau=\\frac{2m\\sigma_0^2}{\\hbar}$. При больших $t$ $\\sigma\\approx\\frac{\\sigma_pt}{m}$, $\\sigma_p=\\frac{\\hbar}{2\\sigma_0}$ — классический смысл: разброс скоростей $\\frac{\\sigma_p}{m}$. Парадокс: **узкий** пакет расплывается **быстрее** ($\\tau\\sim\\sigma_0^2$). Числа: для электрона с $\\sigma_0=0.10\\ \\mathrm{nm}$ $\\tau\\approx1.7\\cdot10^{-16}\\ \\mathrm{s}$; для пылинки $1\\ \\mu\\mathrm{g}$ ($\\sigma_0=1\\ \\mu\\mathrm{m}$) $\\tau\\approx2\\cdot10^{13}\\ \\mathrm{s}$ — у макроскопических тел расплывание незаметно (S09). Общий довод: для свободной частицы $\\frac{d^2\\langle x^2\\rangle}{dt^2}=\\frac{2\\langle p^2\\rangle}{m^2}$ — $\\langle x^2\\rangle$ квадратично зависит от времени (H12).",
+  "en": "**Spreading of the packet.** Since the dispersion is quadratic, components with different $k$ run at different speeds and the packet widens ([[F04]]). For a minimum Gaussian packet of initial width $\\sigma_0$ the exact result is known: $\\sigma\\left(t\\right)=\\sigma_0\\sqrt{1+\\left(\\frac{t}{\\tau}\\right)^2}$, $\\tau=\\frac{2m\\sigma_0^2}{\\hbar}$. At large $t$, $\\sigma\\approx\\frac{\\sigma_pt}{m}$ with $\\sigma_p=\\frac{\\hbar}{2\\sigma_0}$ — the classical meaning: a spread of velocities $\\frac{\\sigma_p}{m}$. A paradox: a **narrow** packet spreads **faster** ($\\tau\\sim\\sigma_0^2$). Numbers: for an electron with $\\sigma_0=0.10\\ \\mathrm{nm}$, $\\tau\\approx1.7\\cdot10^{-16}\\ \\mathrm{s}$; for a $1\\ \\mu\\mathrm{g}$ dust grain ($\\sigma_0=1\\ \\mu\\mathrm{m}$), $\\tau\\approx2\\cdot10^{13}\\ \\mathrm{s}$ — spreading is unnoticeable for macroscopic bodies (S09). A general argument: for a free particle $\\frac{d^2\\langle x^2\\rangle}{dt^2}=\\frac{2\\langle p^2\\rangle}{m^2}$ — $\\langle x^2\\rangle$ is a quadratic function of time (H12)."
+ },
+ {
+  "t": "m",
+  "m": "\\sigma\\left(t\\right)=\\sigma_0\\sqrt{1+\\left(\\frac{t}{\\tau}\\right)^2},\\qquad \\tau=\\frac{2m\\sigma_0^2}{\\hbar},\\qquad v_g=\\frac{\\hbar k_0}{m}"
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B3-L03-F04.png",
+   "ru": "figures/B3-L03-F04-ru.png",
+   "en": "figures/B3-L03-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. Statsionar tenglamaning sifat tahlili",
+  "ru": "9. Качественный анализ стационарного уравнения",
+  "en": "9. Qualitative analysis of the time-independent equation"
+ },
+ {
+  "t": "li",
+  "uz": "**Egrilik qoidasi.** Statsionar tenglamani $\\psi''=\\frac{2m}{\\hbar^2}\\left(V-E\\right)\\psi$ ko'rinishda yozamiz. **Klassik ruxsat etilgan sohada** ($E>V$) $\\psi''$ va $\\psi$ ishoralari qarama-qarshi — funksiya o'q tomon egiladi va tebranadi; mahalliy to'lqin uzunligi $\\lambda\\left(x\\right)=\\frac{h}{\\sqrt{2m\\left(E-V\\right)}}$. **Klassik taqiqlangan sohada** ($E<V$) $\\psi''$ va $\\psi$ bir ishorali — funksiya o'qdan uzoqlashadi, eksponensial ($e^{\\pm\\kappa x}$, $\\kappa=\\frac{\\sqrt{2m\\left(V-E\\right)}}{\\hbar}$). Chegarada — **qaytish nuqtalarida** $E=V$ — $\\psi''=0$, egilish nuqtasi ([[F05]]). Kvant zarrasi taqiqlangan sohaga kirib boradi: $\\psi$ u yerda nol emas, ehtimollik $e^{-2\\kappa x}$ kabi kamayadi.",
+  "ru": "**Правило кривизны.** Запишем стационарное уравнение в виде $\\psi''=\\frac{2m}{\\hbar^2}\\left(V-E\\right)\\psi$. В **классически разрешённой области** ($E>V$) знаки $\\psi''$ и $\\psi$ противоположны — функция изгибается к оси и осциллирует; локальная длина волны $\\lambda\\left(x\\right)=\\frac{h}{\\sqrt{2m\\left(E-V\\right)}}$. В **классически запрещённой области** ($E<V$) $\\psi''$ и $\\psi$ одного знака — функция изгибается от оси, экспоненциальна ($e^{\\pm\\kappa x}$, $\\kappa=\\frac{\\sqrt{2m\\left(V-E\\right)}}{\\hbar}$). На границе — в **точках поворота** $E=V$ — $\\psi''=0$, точка перегиба ([[F05]]). Квантовая частица проникает в запрещённую область: $\\psi$ там не равна нулю, вероятность убывает как $e^{-2\\kappa x}$.",
+  "en": "**The curvature rule.** Write the time-independent equation as $\\psi''=\\frac{2m}{\\hbar^2}\\left(V-E\\right)\\psi$. In a **classically allowed region** ($E>V$), $\\psi''$ and $\\psi$ have opposite signs — the function bends toward the axis and oscillates; the local wavelength is $\\lambda\\left(x\\right)=\\frac{h}{\\sqrt{2m\\left(E-V\\right)}}$. In a **classically forbidden region** ($E<V$), $\\psi''$ and $\\psi$ have the same sign — the function bends away from the axis and is exponential ($e^{\\pm\\kappa x}$, $\\kappa=\\frac{\\sqrt{2m\\left(V-E\\right)}}{\\hbar}$). At the boundary — the **turning points** where $E=V$ — $\\psi''=0$, an inflection point ([[F05]]). A quantum particle penetrates the forbidden region: $\\psi$ is nonzero there and the probability falls off like $e^{-2\\kappa x}$."
+ },
+ {
+  "t": "m",
+  "m": "\\psi''=\\frac{2m}{\\hbar^2}\\left(V-E\\right)\\psi:\\qquad E>V\\ \\Rightarrow\\ \\lambda\\left(x\\right)=\\frac{h}{\\sqrt{2m\\left(E-V\\right)}},\\qquad E<V\\ \\Rightarrow\\ \\psi\\sim e^{\\pm\\kappa x}"
+ },
+ {
+  "t": "li",
+  "uz": "**Grafikni «o'qish».** 1) $V$ past bo'lgan joyda kinetik energiya katta — to'lqin **qisqa** va amplituda **kichik**; $V$ baland joyda to'lqin uzun va amplituda katta. Amplituda kvaziklassik taqribda $\\frac{1}{\\sqrt{p\\left(x\\right)}}$ ga proporsional: zarra sekin harakatlanadigan joyda ko'proq vaqt bo'ladi — klassik ehtimollik bilan mos (Q12). 2) Pog'onali potensialda $\\psi$ va $\\psi'$ uzluksiz, faqat egrilik sakraydi. 3) Taqiqlangan sohada $\\psi$ so'nish uzunligi $\\frac{1}{\\kappa}$ — to'siq qanchalik baland, kirish shunchalik sayoz. 4) Agar grafikda $\\psi$ cheksizlikka qarab o'smasdan so'nsa va ikki tomonda ham eksponensial dumlar bo'lsa, holat bog'langan va $E<V\\left(\\pm\\infty\\right)$.",
+  "ru": "**«Чтение» графика.** 1) Там, где $V$ низок, кинетическая энергия велика — волна **короткая**, амплитуда **малая**; где $V$ высок — волна длинная, амплитуда большая. В квазиклассическом приближении амплитуда пропорциональна $\\frac{1}{\\sqrt{p\\left(x\\right)}}$: частица дольше находится там, где движется медленно — согласие с классической вероятностью (Q12). 2) В ступенчатом потенциале $\\psi$ и $\\psi'$ непрерывны, скачет лишь кривизна. 3) В запрещённой области длина затухания $\\psi$ равна $\\frac{1}{\\kappa}$ — чем выше барьер, тем мельче проникновение. 4) Если на графике $\\psi$ затухает, а не растёт к бесконечности, и с обеих сторон есть экспоненциальные хвосты, состояние связанное и $E<V\\left(\\pm\\infty\\right)$.",
+  "en": "**«Reading» a graph.** 1) Where $V$ is low the kinetic energy is large — the wave is **short** and the amplitude **small**; where $V$ is high the wave is long and the amplitude large. In the semiclassical approximation the amplitude is proportional to $\\frac{1}{\\sqrt{p\\left(x\\right)}}$: the particle spends more time where it moves slowly — in agreement with the classical probability (Q12). 2) In a stepwise potential $\\psi$ and $\\psi'$ are continuous; only the curvature jumps. 3) In a forbidden region the decay length of $\\psi$ is $\\frac{1}{\\kappa}$ — the higher the barrier, the shallower the penetration. 4) If on a graph $\\psi$ decays rather than grows toward infinity and has exponential tails on both sides, the state is bound and $E<V\\left(\\pm\\infty\\right)$."
+ },
+ {
+  "t": "li",
+  "uz": "**Nega energiya kvantlanadi: «otish usuli».** Statsionar tenglamani chapdan, so'nuvchi eksponentadan boshlab integrallaymiz. Ixtiyoriy $E$ da o'ngda yechim $+\\infty$ yoki $-\\infty$ ga ketadi — normallanmaydi; faqat alohida $E_n$ larda dum ikkala tomonda so'nadi ([[F06]]). Shuning uchun **bog'langan holatlar spektri diskret**, $E>V\\left(\\pm\\infty\\right)$ da esa yechim cheksizlikda tebranadi va istalgan $E$ ruxsat — **uzluksiz spektr** (sochilish holatlari). **Tugunlar teoremasi:** bir o'lchovda $n$-sath to'lqin funksiyasi $n-1$ ta tugunga ega; asosiy holatda tugun yo'q. Juft potensialda holatlar navbatma-navbat juft va toq: $P=\\left(-1\\right)^{n-1}$ (Q11). Bir o'lchovli bog'langan sathlar aynimagan.",
+  "ru": "**Почему энергия квантуется: «метод стрельбы».** Интегрируем стационарное уравнение слева, начиная с затухающей экспоненты. При произвольном $E$ решение справа уходит в $+\\infty$ или $-\\infty$ — оно не нормируемо; лишь при отдельных $E_n$ хвост затухает с обеих сторон ([[F06]]). Поэтому **спектр связанных состояний дискретен**, а при $E>V\\left(\\pm\\infty\\right)$ решение осциллирует на бесконечности и разрешено любое $E$ — **непрерывный спектр** (состояния рассеяния). **Осцилляционная теорема:** в одномерном случае волновая функция $n$-го уровня имеет $n-1$ узлов; у основного состояния узлов нет. В чётном потенциале состояния поочерёдно чётные и нечётные: $P=\\left(-1\\right)^{n-1}$ (Q11). Одномерные связанные уровни невырождены.",
+  "en": "**Why energy is quantized: the «shooting method».** Integrate the time-independent equation from the left, starting with a decaying exponential. For an arbitrary $E$ the solution on the right runs off to $+\\infty$ or $-\\infty$ — it is not normalizable; only for particular $E_n$ does the tail decay on both sides ([[F06]]). That is why the **spectrum of bound states is discrete**, while for $E>V\\left(\\pm\\infty\\right)$ the solution oscillates at infinity and any $E$ is allowed — the **continuous spectrum** (scattering states). **Node theorem:** in one dimension the wave function of the $n$th level has $n-1$ nodes; the ground state has none. In an even potential the states are alternately even and odd: $P=\\left(-1\\right)^{n-1}$ (Q11). One-dimensional bound levels are non-degenerate."
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B3-L03-F05.png",
+   "ru": "figures/B3-L03-F05-ru.png",
+   "en": "figures/B3-L03-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B3-L03-F06.png",
+   "ru": "figures/B3-L03-F06-ru.png",
+   "en": "figures/B3-L03-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "10. Chegaraviy shartlar, potensial sakrashlari va delta potensial",
+  "ru": "10. Граничные условия, скачки потенциала и дельта-потенциал",
+  "en": "10. Boundary conditions, potential steps and the delta potential"
+ },
+ {
+  "t": "li",
+  "uz": "**Chekli sakrash.** Potensial $x=0$ da chekli $V_0$ ga sakrasa, har bir sohada tenglama oddiy yechiladi, keyin yechimlar **tikiladi**: $\\psi$ va $\\psi'$ uzluksiz. Masalan, pog'onaga $E>V_0$ energiyali zarra tushsa: chapda $e^{ik_1x}+re^{-ik_1x}$, o'ngda $te^{ik_2x}$; tikish $r=\\frac{k_1-k_2}{k_1+k_2}$, $t=\\frac{2k_1}{k_1+k_2}$ ni beradi ([[F07]]). Kvant xossasi: zarra energiyasi to'siqdan katta bo'lsa ham qisman **qaytadi**. Koeffitsiyentlar oqimlar nisbati: $R=\\left|r\\right|^2$, $T=\\frac{k_2}{k_1}\\left|t\\right|^2$, va $R+T=1$. $E=\\frac{4}{3}V_0$ da $k_2=\\frac{k_1}{2}$, $R=\\frac{1}{9}$, $T=\\frac{8}{9}$ (S12); $t>1$ bo'lishi mumkin — bu xato emas, chunki o'ngda zarra sekinroq. $E<V_0$ da o'ngda so'nuvchi eksponenta, $R=1$ (H18). Batafsil — B3-L05.",
+  "ru": "**Конечный скачок.** Если потенциал при $x=0$ скачком меняется на конечную величину $V_0$, в каждой области уравнение решается просто, а затем решения **сшиваются**: $\\psi$ и $\\psi'$ непрерывны. Например, если на ступеньку падает частица с $E>V_0$: слева $e^{ik_1x}+re^{-ik_1x}$, справа $te^{ik_2x}$; сшивка даёт $r=\\frac{k_1-k_2}{k_1+k_2}$, $t=\\frac{2k_1}{k_1+k_2}$ ([[F07]]). Квантовое свойство: частица частично **отражается**, даже если её энергия больше барьера. Коэффициенты — отношения потоков: $R=\\left|r\\right|^2$, $T=\\frac{k_2}{k_1}\\left|t\\right|^2$, и $R+T=1$. При $E=\\frac{4}{3}V_0$ имеем $k_2=\\frac{k_1}{2}$, $R=\\frac{1}{9}$, $T=\\frac{8}{9}$ (S12); возможно $t>1$ — это не ошибка, так как справа частица медленнее. При $E<V_0$ справа затухающая экспонента, $R=1$ (H18). Подробно — B3-L05.",
+  "en": "**A finite step.** If the potential jumps by a finite $V_0$ at $x=0$, the equation is solved simply in each region and the solutions are then **matched**: $\\psi$ and $\\psi'$ are continuous. For example, if a particle with $E>V_0$ falls on a step: on the left $e^{ik_1x}+re^{-ik_1x}$, on the right $te^{ik_2x}$; matching gives $r=\\frac{k_1-k_2}{k_1+k_2}$, $t=\\frac{2k_1}{k_1+k_2}$ ([[F07]]). A quantum property: the particle is partly **reflected** even though its energy exceeds the barrier. The coefficients are ratios of currents: $R=\\left|r\\right|^2$, $T=\\frac{k_2}{k_1}\\left|t\\right|^2$, and $R+T=1$. For $E=\\frac{4}{3}V_0$ we get $k_2=\\frac{k_1}{2}$, $R=\\frac{1}{9}$, $T=\\frac{8}{9}$ (S12); $t>1$ is possible — not an error, since the particle is slower on the right. For $E<V_0$ there is a decaying exponential on the right and $R=1$ (H18). Details in B3-L05."
+ },
+ {
+  "t": "m",
+  "m": "r=\\frac{k_1-k_2}{k_1+k_2},\\qquad t=\\frac{2k_1}{k_1+k_2},\\qquad R=\\left|r\\right|^2,\\quad T=\\frac{k_2}{k_1}\\left|t\\right|^2,\\quad R+T=1"
+ },
+ {
+  "t": "li",
+  "uz": "**Cheksiz devor va delta potensial.** Devor cheksiz baland bo'lsa, zarra u yerga kira olmaydi: $\\psi=0$, $\\psi'$ esa sakraydi (cheksiz o'ra, B3-L04). $V=-\\alpha\\delta\\left(x\\right)$ da tenglamani $x=0$ atrofidagi kichik oraliq bo'yicha integrallasak, $\\psi$ uzluksiz qoladi, $\\psi'$ esa ma'lum miqdorga sakraydi. Delta-o'rada aynan **bitta** bog'langan holat bor: $\\psi=\\sqrt{\\kappa}e^{-\\kappa\\left|x\\right|}$, $\\kappa=\\frac{m\\alpha}{\\hbar^2}$, $E=-\\frac{m\\alpha^2}{2\\hbar^2}$ (S10); $\\psi$ ning uchida sinik bor. Elektron va $\\alpha=0.50\\ \\mathrm{eV\\cdot nm}$ uchun $\\frac{1}{\\kappa}\\approx0.15\\ \\mathrm{nm}$, $E\\approx-1.64\\ \\mathrm{eV}$. Delta-to'siq $V=+\\alpha\\delta\\left(x\\right)$ da bog'langan holat yo'q, o'tish koeffitsiyenti $T=\\frac{1}{1+\\beta^2}$, $\\beta=\\frac{m\\alpha}{\\hbar^2k}$ (H17) — yuqori energiyada to'siq «shaffof».",
+  "ru": "**Бесконечная стенка и дельта-потенциал.** Если стенка бесконечно высока, частица туда не проникает: $\\psi=0$, а $\\psi'$ испытывает скачок (бесконечная яма, B3-L04). При $V=-\\alpha\\delta\\left(x\\right)$, проинтегрировав уравнение по малому отрезку около $x=0$, получаем: $\\psi$ остаётся непрерывной, а $\\psi'$ скачет на определённую величину. В дельта-яме ровно **одно** связанное состояние: $\\psi=\\sqrt{\\kappa}e^{-\\kappa\\left|x\\right|}$, $\\kappa=\\frac{m\\alpha}{\\hbar^2}$, $E=-\\frac{m\\alpha^2}{2\\hbar^2}$ (S10); у $\\psi$ на вершине излом. Для электрона и $\\alpha=0.50\\ \\mathrm{eV\\cdot nm}$ имеем $\\frac{1}{\\kappa}\\approx0.15\\ \\mathrm{nm}$, $E\\approx-1.64\\ \\mathrm{eV}$. У дельта-барьера $V=+\\alpha\\delta\\left(x\\right)$ связанных состояний нет, коэффициент прохождения $T=\\frac{1}{1+\\beta^2}$, $\\beta=\\frac{m\\alpha}{\\hbar^2k}$ (H17) — при большой энергии барьер «прозрачен».",
+  "en": "**An infinite wall and the delta potential.** If a wall is infinitely high, the particle cannot enter it: $\\psi=0$, while $\\psi'$ jumps (the infinite well, B3-L04). For $V=-\\alpha\\delta\\left(x\\right)$, integrating the equation over a small interval around $x=0$ shows that $\\psi$ stays continuous while $\\psi'$ jumps by a definite amount. A delta well has exactly **one** bound state: $\\psi=\\sqrt{\\kappa}e^{-\\kappa\\left|x\\right|}$, $\\kappa=\\frac{m\\alpha}{\\hbar^2}$, $E=-\\frac{m\\alpha^2}{2\\hbar^2}$ (S10); $\\psi$ has a kink at its peak. For an electron and $\\alpha=0.50\\ \\mathrm{eV\\cdot nm}$ we get $\\frac{1}{\\kappa}\\approx0.15\\ \\mathrm{nm}$, $E\\approx-1.64\\ \\mathrm{eV}$. A delta barrier $V=+\\alpha\\delta\\left(x\\right)$ has no bound state; its transmission coefficient is $T=\\frac{1}{1+\\beta^2}$, $\\beta=\\frac{m\\alpha}{\\hbar^2k}$ (H17) — at high energy the barrier becomes «transparent»."
+ },
+ {
+  "t": "m",
+  "m": "V=-\\alpha\\delta\\left(x\\right):\\quad \\psi'\\left(0^+\\right)-\\psi'\\left(0^-\\right)=-\\frac{2m\\alpha}{\\hbar^2}\\psi\\left(0\\right),\\qquad \\kappa=\\frac{m\\alpha}{\\hbar^2},\\quad E=-\\frac{m\\alpha^2}{2\\hbar^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Tikish bo'yicha amaliy maslahatlar.** 1) Avval har bir sohada yechimning **fizik** ko'rinishini tanlang: cheksizlikda so'nadigan eksponenta, kelayotgan va qaytgan to'lqin, faqat ketayotgan to'lqin. 2) Noma'lumlar soni tikish shartlari soniga teng bo'lishi kerak; bog'langan holatda shartlar bitta ortiq bo'ladi — u energiyani kvantlaydi. 3) Juft potensialda juft va toq yechimlarni alohida qarash hisobni ikki marta qisqartiradi (B3-L04). 4) Logarifmik hosila $\\frac{\\psi'}{\\psi}$ ning uzluksizligi — normallashdan qutuladigan qulay shart. 5) Javobni oqim saqlanishi ($R+T=1$) va chegaraviy holatlar ($V_0\\to0$ da $R\\to0$, $E\\to V_0$ da $T\\to0$) bilan tekshiring.",
+  "ru": "**Практические советы по сшивке.** 1) Сначала выберите в каждой области **физический** вид решения: экспоненту, затухающую на бесконечности, падающую и отражённую волны, только уходящую волну. 2) Число неизвестных должно равняться числу условий сшивки; в связанном состоянии условий на одно больше — оно квантует энергию. 3) В чётном потенциале отдельное рассмотрение чётных и нечётных решений вдвое сокращает расчёт (B3-L04). 4) Непрерывность логарифмической производной $\\frac{\\psi'}{\\psi}$ — удобное условие, избавляющее от нормировки. 5) Проверяйте ответ сохранением потока ($R+T=1$) и предельными случаями ($R\\to0$ при $V_0\\to0$, $T\\to0$ при $E\\to V_0$).",
+  "en": "**Practical tips on matching.** 1) First choose the **physical** form of the solution in each region: an exponential decaying at infinity, incident and reflected waves, only an outgoing wave. 2) The number of unknowns must equal the number of matching conditions; for a bound state there is one condition too many — it quantizes the energy. 3) In an even potential, treating even and odd solutions separately halves the work (B3-L04). 4) Continuity of the logarithmic derivative $\\frac{\\psi'}{\\psi}$ is a convenient condition that removes the normalization. 5) Check the answer with current conservation ($R+T=1$) and limiting cases ($R\\to0$ as $V_0\\to0$, $T\\to0$ as $E\\to V_0$)."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B3-L03-F07.png",
+   "ru": "figures/B3-L03-F07-ru.png",
+   "en": "figures/B3-L03-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "11. Uch o'lchovli Shredinger tenglamasi",
+  "ru": "11. Трёхмерное уравнение Шрёдингера",
+  "en": "11. The three-dimensional Schrödinger equation"
+ },
+ {
+  "t": "li",
+  "uz": "**Dekart koordinatalarida ajratish.** Uch o'lchovda $\\frac{\\partial^2}{\\partial x^2}$ o'rniga Laplas operatori $\\nabla^2$ yoziladi, $\\left|\\psi\\right|^2d^3r$ — ehtimollik, $\\psi$ ning birligi $\\mathrm{m^{-3/2}}$. Agar $V=V_1\\left(x\\right)+V_2\\left(y\\right)+V_3\\left(z\\right)$ bo'lsa, $\\psi=X\\left(x\\right)Y\\left(y\\right)Z\\left(z\\right)$ va energiyalar qo'shiladi. Qirrasi $L$ bo'lgan kubik qutida $E=\\varepsilon\\left(n_x^2+n_y^2+n_z^2\\right)$, $\\varepsilon=\\frac{\\pi^2\\hbar^2}{2mL^2}$ (S13). Yangi hodisa — **aynish** (degeneracy): turli holatlar bir xil energiyaga ega. Sathlar $3\\varepsilon$, $6\\varepsilon$, $9\\varepsilon$, $11\\varepsilon$, $12\\varepsilon$, $14\\varepsilon$ ning karraliligi $1$, $3$, $3$, $3$, $1$, $6$ ([[F08]]). Simmetriya aynishi o'rin almashtirishlardan; **tasodifiy** aynish — sonlar nazariyasidan: $27=3^2+3^2+3^2=5^2+1^2+1^2$, karralilik $4$ (Q13). Simmetriya buzilsa (to'g'ri burchakli quti), aynish yo'qoladi yoki boshqacha bo'ladi (H21).",
+  "ru": "**Разделение в декартовых координатах.** В трёхмерном случае вместо $\\frac{\\partial^2}{\\partial x^2}$ пишется оператор Лапласа $\\nabla^2$, $\\left|\\psi\\right|^2d^3r$ — вероятность, единица $\\psi$ — $\\mathrm{m^{-3/2}}$. Если $V=V_1\\left(x\\right)+V_2\\left(y\\right)+V_3\\left(z\\right)$, то $\\psi=X\\left(x\\right)Y\\left(y\\right)Z\\left(z\\right)$, а энергии складываются. В кубическом ящике с ребром $L$ имеем $E=\\varepsilon\\left(n_x^2+n_y^2+n_z^2\\right)$, $\\varepsilon=\\frac{\\pi^2\\hbar^2}{2mL^2}$ (S13). Новое явление — **вырождение**: разные состояния имеют одинаковую энергию. Кратности уровней $3\\varepsilon$, $6\\varepsilon$, $9\\varepsilon$, $11\\varepsilon$, $12\\varepsilon$, $14\\varepsilon$ равны $1$, $3$, $3$, $3$, $1$, $6$ ([[F08]]). Симметрийное вырождение — от перестановок; **случайное** — из теории чисел: $27=3^2+3^2+3^2=5^2+1^2+1^2$, кратность $4$ (Q13). При нарушении симметрии (прямоугольный ящик) вырождение исчезает или становится иным (H21).",
+  "en": "**Separation in Cartesian coordinates.** In three dimensions $\\frac{\\partial^2}{\\partial x^2}$ is replaced by the Laplacian $\\nabla^2$, $\\left|\\psi\\right|^2d^3r$ is a probability, and $\\psi$ has units $\\mathrm{m^{-3/2}}$. If $V=V_1\\left(x\\right)+V_2\\left(y\\right)+V_3\\left(z\\right)$, then $\\psi=X\\left(x\\right)Y\\left(y\\right)Z\\left(z\\right)$ and the energies add. In a cubic box of edge $L$, $E=\\varepsilon\\left(n_x^2+n_y^2+n_z^2\\right)$ with $\\varepsilon=\\frac{\\pi^2\\hbar^2}{2mL^2}$ (S13). A new phenomenon is **degeneracy**: different states share the same energy. The levels $3\\varepsilon$, $6\\varepsilon$, $9\\varepsilon$, $11\\varepsilon$, $12\\varepsilon$, $14\\varepsilon$ have degeneracies $1$, $3$, $3$, $3$, $1$, $6$ ([[F08]]). Symmetry degeneracy comes from permutations; **accidental** degeneracy comes from number theory: $27=3^2+3^2+3^2=5^2+1^2+1^2$, degeneracy $4$ (Q13). When the symmetry is broken (a rectangular box), the degeneracy disappears or changes (H21)."
+ },
+ {
+  "t": "m",
+  "m": "-\\frac{\\hbar^2}{2m}\\nabla^2\\psi+V\\psi=E\\psi,\\qquad E=\\frac{\\pi^2\\hbar^2}{2mL^2}\\left(n_x^2+n_y^2+n_z^2\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Markaziy potensial va radial tenglama.** $V=V\\left(r\\right)$ da $\\psi=R\\left(r\\right)Y_{lm}\\left(\\theta,\\varphi\\right)$; burchak qismi — sferik funksiyalar (B3-L08). $u=rR$ almashtirishi radial tenglamani bir o'lchovli ko'rinishga keltiradi, faqat potensialga **markazdan qochma had** $\\frac{\\hbar^2l\\left(l+1\\right)}{2mr^2}$ qo'shiladi ([[F08]]). Normallash $\\int_0^{\\infty}\\left|u\\right|^2dr=1$, va $R$ markazda chekli bo'lishi uchun $u\\left(0\\right)=0$ — ya'ni $r=0$ da «cheksiz devor». Shuning uchun $l=0$ holatlari $\\left[0,\\infty\\right)$ dagi bir o'lchovli masalaning **toq** yechimlariga mos. Misol: radiusi $a$ bo'lgan cheksiz sferik o'rada $l=0$ sathlari $E_n=\\frac{n^2\\pi^2\\hbar^2}{2ma^2}$; $l=1$ da eng past sath $\\left(\\frac{4.49}{\\pi}\\right)^2\\approx2.05$ marta baland (S14).",
+  "ru": "**Центральный потенциал и радиальное уравнение.** При $V=V\\left(r\\right)$ имеем $\\psi=R\\left(r\\right)Y_{lm}\\left(\\theta,\\varphi\\right)$; угловая часть — сферические функции (B3-L08). Замена $u=rR$ приводит радиальное уравнение к одномерному виду, только к потенциалу добавляется **центробежный член** $\\frac{\\hbar^2l\\left(l+1\\right)}{2mr^2}$ ([[F08]]). Нормировка $\\int_0^{\\infty}\\left|u\\right|^2dr=1$, и чтобы $R$ была конечна в центре, нужно $u\\left(0\\right)=0$ — то есть при $r=0$ «бесконечная стенка». Поэтому состояния с $l=0$ соответствуют **нечётным** решениям одномерной задачи на $\\left[0,\\infty\\right)$. Пример: в бесконечной сферической яме радиуса $a$ уровни $l=0$ равны $E_n=\\frac{n^2\\pi^2\\hbar^2}{2ma^2}$; при $l=1$ низший уровень в $\\left(\\frac{4.49}{\\pi}\\right)^2\\approx2.05$ раза выше (S14).",
+  "en": "**A central potential and the radial equation.** For $V=V\\left(r\\right)$ we have $\\psi=R\\left(r\\right)Y_{lm}\\left(\\theta,\\varphi\\right)$; the angular part is the spherical harmonics (B3-L08). The substitution $u=rR$ brings the radial equation to one-dimensional form, except that a **centrifugal term** $\\frac{\\hbar^2l\\left(l+1\\right)}{2mr^2}$ is added to the potential ([[F08]]). Normalization reads $\\int_0^{\\infty}\\left|u\\right|^2dr=1$, and for $R$ to be finite at the centre we need $u\\left(0\\right)=0$ — an «infinite wall» at $r=0$. That is why the $l=0$ states correspond to the **odd** solutions of a one-dimensional problem on $\\left[0,\\infty\\right)$. Example: in an infinite spherical well of radius $a$ the $l=0$ levels are $E_n=\\frac{n^2\\pi^2\\hbar^2}{2ma^2}$; for $l=1$ the lowest level is $\\left(\\frac{4.49}{\\pi}\\right)^2\\approx2.05$ times higher (S14)."
+ },
+ {
+  "t": "m",
+  "m": "u=rR:\\qquad -\\frac{\\hbar^2}{2m}u''+\\left[V\\left(r\\right)+\\frac{\\hbar^2l\\left(l+1\\right)}{2mr^2}\\right]u=Eu,\\qquad u\\left(0\\right)=0"
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B3-L03-F08.png",
+   "ru": "figures/B3-L03-F08-ru.png",
+   "en": "figures/B3-L03-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "12. Impuls fazosi, masshtablar va birliklar",
+  "ru": "12. Импульсное пространство, масштабы и единицы",
+  "en": "12. Momentum space, scales and units"
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls fazosidagi to'lqin funksiyasi.** $\\Phi\\left(p\\right)$ — $\\psi$ ning Furye obrazi (pastdagi formula, $p=\\hbar k$); $\\left|\\Phi\\left(p\\right)\\right|^2dp$ — impuls o'lchanganda $\\left[p,p+dp\\right]$ natija ehtimolligi. Ikki tasvir teng huquqli: $\\int\\left|\\Phi\\right|^2dp=\\int\\left|\\psi\\right|^2dx$. Foydali qoidalar: 1) haqiqiy $\\psi$ uchun $\\langle p\\rangle=0$ (B3-L02, S13); 2) $\\psi\\to\\psi e^{ip_0x/\\hbar}$ — **impulsni siljitish** (Galiley almashtirishi): zichlik o'zgarmaydi, $\\langle p\\rangle$ ga $p_0$ qo'shiladi, kinetik energiyaga $\\frac{p_0^2}{2m}$ qo'shiladi (haqiqiy $\\psi$ uchun), oqim $j=\\frac{p_0}{m}\\rho$ paydo bo'ladi (S15, Q14); 3) koordinatada tor — impulsda keng: $\\sigma_x\\sigma_p\\geq\\frac{\\hbar}{2}$ (B3-L07).",
+  "ru": "**Волновая функция в импульсном пространстве.** $\\Phi\\left(p\\right)$ — фурье-образ $\\psi$ (формула ниже, $p=\\hbar k$); $\\left|\\Phi\\left(p\\right)\\right|^2dp$ — вероятность получить при измерении импульса результат в $\\left[p,p+dp\\right]$. Оба представления равноправны: $\\int\\left|\\Phi\\right|^2dp=\\int\\left|\\psi\\right|^2dx$. Полезные правила: 1) для действительной $\\psi$ $\\langle p\\rangle=0$ (B3-L02, S13); 2) $\\psi\\to\\psi e^{ip_0x/\\hbar}$ — **сдвиг импульса** (преобразование Галилея): плотность не меняется, к $\\langle p\\rangle$ добавляется $p_0$, к кинетической энергии — $\\frac{p_0^2}{2m}$ (для действительной $\\psi$), появляется поток $j=\\frac{p_0}{m}\\rho$ (S15, Q14); 3) узкое по координате — широкое по импульсу: $\\sigma_x\\sigma_p\\geq\\frac{\\hbar}{2}$ (B3-L07).",
+  "en": "**The wave function in momentum space.** $\\Phi\\left(p\\right)$ is the Fourier transform of $\\psi$ (formula below, $p=\\hbar k$); $\\left|\\Phi\\left(p\\right)\\right|^2dp$ is the probability that a momentum measurement gives a result in $\\left[p,p+dp\\right]$. The two representations are equivalent: $\\int\\left|\\Phi\\right|^2dp=\\int\\left|\\psi\\right|^2dx$. Useful rules: 1) for a real $\\psi$, $\\langle p\\rangle=0$ (B3-L02, S13); 2) $\\psi\\to\\psi e^{ip_0x/\\hbar}$ is a **momentum boost** (Galilean transformation): the density is unchanged, $p_0$ is added to $\\langle p\\rangle$, $\\frac{p_0^2}{2m}$ is added to the kinetic energy (for a real $\\psi$), and a current $j=\\frac{p_0}{m}\\rho$ appears (S15, Q14); 3) narrow in position means wide in momentum: $\\sigma_x\\sigma_p\\geq\\frac{\\hbar}{2}$ (B3-L07)."
+ },
+ {
+  "t": "m",
+  "m": "\\Phi\\left(p\\right)=\\frac{1}{\\sqrt{2\\pi\\hbar}}\\int\\psi\\left(x\\right)e^{-ipx/\\hbar}dx,\\qquad \\psi e^{ip_0x/\\hbar}:\\ \\langle p\\rangle\\to\\langle p\\rangle+p_0"
+ },
+ {
+  "t": "li",
+  "uz": "**Kalkulyatorsiz birliklar.** GRE da kalkulyator yo'q, shuning uchun hisob $\\mathrm{eV}$ va $\\mathrm{nm}$ da olib boriladi: $hc=1240\\ \\mathrm{eV\\cdot nm}$, $\\hbar c=197\\ \\mathrm{eV\\cdot nm}$, $m_ec^2=511\\ \\mathrm{keV}$, $m_pc^2\\approx938\\ \\mathrm{MeV}$. Kinetik energiya formulasining kombinatsiyasi: $\\frac{\\hbar^2}{2m_e}=\\frac{\\left(\\hbar c\\right)^2}{2m_ec^2}\\approx0.0381\\ \\mathrm{eV\\cdot nm^2}$, $\\frac{h^2}{2m_e}=\\frac{\\left(hc\\right)^2}{2m_ec^2}\\approx1.50\\ \\mathrm{eV\\cdot nm^2}$. Shundan: de Broyl to'lqin uzunligi $\\lambda=1\\ \\mathrm{nm}$ bo'lgan elektron energiyasi $1.5\\ \\mathrm{eV}$; kengligi $1\\ \\mathrm{nm}$ o'radagi elektronning asosiy sathi $E_1=\\pi^2\\cdot0.0381\\approx0.38\\ \\mathrm{eV}$. Vaqtlar uchun $\\hbar\\approx6.58\\cdot10^{-16}\\ \\mathrm{eV\\cdot s}$: $1\\ \\mathrm{eV}$ energiya farqi $\\sim4\\ \\mathrm{fs}$ davrga mos.",
+  "ru": "**Единицы без калькулятора.** На GRE калькулятора нет, поэтому расчёт ведётся в $\\mathrm{eV}$ и $\\mathrm{nm}$: $hc=1240\\ \\mathrm{eV\\cdot nm}$, $\\hbar c=197\\ \\mathrm{eV\\cdot nm}$, $m_ec^2=511\\ \\mathrm{keV}$, $m_pc^2\\approx938\\ \\mathrm{MeV}$. Комбинация из формулы кинетической энергии: $\\frac{\\hbar^2}{2m_e}=\\frac{\\left(\\hbar c\\right)^2}{2m_ec^2}\\approx0.0381\\ \\mathrm{eV\\cdot nm^2}$, $\\frac{h^2}{2m_e}=\\frac{\\left(hc\\right)^2}{2m_ec^2}\\approx1.50\\ \\mathrm{eV\\cdot nm^2}$. Отсюда: электрон с длиной волны де Бройля $\\lambda=1\\ \\mathrm{nm}$ имеет энергию $1.5\\ \\mathrm{eV}$; основной уровень электрона в яме шириной $1\\ \\mathrm{nm}$ — $E_1=\\pi^2\\cdot0.0381\\approx0.38\\ \\mathrm{eV}$. Для времён $\\hbar\\approx6.58\\cdot10^{-16}\\ \\mathrm{eV\\cdot s}$: разности энергий $1\\ \\mathrm{eV}$ соответствует период $\\sim4\\ \\mathrm{fs}$.",
+  "en": "**Units without a calculator.** The GRE has no calculator, so calculations are done in $\\mathrm{eV}$ and $\\mathrm{nm}$: $hc=1240\\ \\mathrm{eV\\cdot nm}$, $\\hbar c=197\\ \\mathrm{eV\\cdot nm}$, $m_ec^2=511\\ \\mathrm{keV}$, $m_pc^2\\approx938\\ \\mathrm{MeV}$. The combination from the kinetic-energy formula: $\\frac{\\hbar^2}{2m_e}=\\frac{\\left(\\hbar c\\right)^2}{2m_ec^2}\\approx0.0381\\ \\mathrm{eV\\cdot nm^2}$, $\\frac{h^2}{2m_e}=\\frac{\\left(hc\\right)^2}{2m_ec^2}\\approx1.50\\ \\mathrm{eV\\cdot nm^2}$. Hence an electron with de Broglie wavelength $\\lambda=1\\ \\mathrm{nm}$ has energy $1.5\\ \\mathrm{eV}$, and the ground level of an electron in a well of width $1\\ \\mathrm{nm}$ is $E_1=\\pi^2\\cdot0.0381\\approx0.38\\ \\mathrm{eV}$. For times, $\\hbar\\approx6.58\\cdot10^{-16}\\ \\mathrm{eV\\cdot s}$: an energy difference of $1\\ \\mathrm{eV}$ corresponds to a period of $\\sim4\\ \\mathrm{fs}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Masshtab tahlili.** Potensial bitta parametr bilan berilsa, javob o'lchamlar tahlilidan, tenglama yechmasdan, o'lchamsiz ko'paytuvchigacha aniqlanadi. Kinetik va potensial energiya bir tartibda bo'ladigan uzunlik: $\\frac{\\hbar^2}{m\\ell^2}\\sim\\lambda\\ell^{\\nu}$. Natija: $V=\\lambda\\left|x\\right|^{\\nu}$ uchun $E\\sim\\left(\\frac{\\hbar^2}{m}\\right)^{\\nu/\\left(\\nu+2\\right)}\\lambda^{2/\\left(\\nu+2\\right)}$ (S16). Tekshiruvlar: $\\nu=2$ — $E\\sim\\hbar\\omega$; $\\nu=-1$ (kulon, $\\lambda=ke^2$) — $E\\sim\\frac{mk^2e^4}{\\hbar^2}$, Ridberg energiyasi; $\\nu\\to\\infty$ (quti) — $E\\sim\\frac{\\hbar^2}{mL^2}$; delta-o'ra ($\\nu=-1$ kabi) — $E\\sim\\frac{m\\alpha^2}{\\hbar^2}$. GRE savollari: «massa $8$ marta oshsa, $V=\\lambda\\left|x\\right|$ da $E$ qanday o'zgaradi?» — $E\\sim m^{-1/3}$, demak $2$ marta kamayadi.",
+  "ru": "**Масштабный анализ.** Если потенциал задан одним параметром, ответ находится из анализа размерностей без решения уравнения — с точностью до безразмерного множителя. Длина, на которой кинетическая и потенциальная энергии одного порядка: $\\frac{\\hbar^2}{m\\ell^2}\\sim\\lambda\\ell^{\\nu}$. Результат: для $V=\\lambda\\left|x\\right|^{\\nu}$ имеем $E\\sim\\left(\\frac{\\hbar^2}{m}\\right)^{\\nu/\\left(\\nu+2\\right)}\\lambda^{2/\\left(\\nu+2\\right)}$ (S16). Проверки: $\\nu=2$ — $E\\sim\\hbar\\omega$; $\\nu=-1$ (кулон, $\\lambda=ke^2$) — $E\\sim\\frac{mk^2e^4}{\\hbar^2}$, энергия Ридберга; $\\nu\\to\\infty$ (ящик) — $E\\sim\\frac{\\hbar^2}{mL^2}$; дельта-яма (как $\\nu=-1$) — $E\\sim\\frac{m\\alpha^2}{\\hbar^2}$. Вопросы GRE: «как изменится $E$ при $V=\\lambda\\left|x\\right|$, если массу увеличить в $8$ раз?» — $E\\sim m^{-1/3}$, значит, уменьшится в $2$ раза.",
+  "en": "**Scale analysis.** If the potential is given by a single parameter, the answer follows from dimensional analysis without solving the equation — up to a dimensionless factor. The length at which the kinetic and potential energies are of the same order: $\\frac{\\hbar^2}{m\\ell^2}\\sim\\lambda\\ell^{\\nu}$. The result: for $V=\\lambda\\left|x\\right|^{\\nu}$, $E\\sim\\left(\\frac{\\hbar^2}{m}\\right)^{\\nu/\\left(\\nu+2\\right)}\\lambda^{2/\\left(\\nu+2\\right)}$ (S16). Checks: $\\nu=2$ — $E\\sim\\hbar\\omega$; $\\nu=-1$ (Coulomb, $\\lambda=ke^2$) — $E\\sim\\frac{mk^2e^4}{\\hbar^2}$, the Rydberg energy; $\\nu\\to\\infty$ (a box) — $E\\sim\\frac{\\hbar^2}{mL^2}$; a delta well (like $\\nu=-1$) — $E\\sim\\frac{m\\alpha^2}{\\hbar^2}$. GRE questions: «how does $E$ change for $V=\\lambda\\left|x\\right|$ if the mass grows $8$ times?» — $E\\sim m^{-1/3}$, so it decreases $2$ times."
+ },
+ {
+  "t": "m",
+  "m": "V=\\lambda\\left|x\\right|^{\\nu}:\\quad E\\sim\\left(\\frac{\\hbar^2}{m}\\right)^{\\nu/\\left(\\nu+2\\right)}\\lambda^{2/\\left(\\nu+2\\right)},\\qquad \\frac{\\hbar^2}{2m_e}\\approx0.0381\\ \\mathrm{eV\\cdot nm^2}"
+ },
+ {
+  "t": "h2",
+  "uz": "13. GRE usullari va tipik tuzoqlar",
+  "ru": "13. Приёмы GRE и типичные ловушки",
+  "en": "13. GRE techniques and typical traps"
+ },
+ {
+  "t": "li",
+  "uz": "**Tenglama va talqin.** 1) Vaqt ko'paytuvchisi $e^{-iEt/\\hbar}$ — ishorasi minus; $e^{+iEt/\\hbar}$ bilan yozilgan «yechim» manfiy energiya beradi. 2) Haqiqiy yuguruvchi to'lqin yechim emas; turg'un to'lqin $\\cos kx\\,e^{-i\\omega t}$ — yechim. 3) Statsionar holatda zichlik va barcha o'rtachalar o'zgarmas, lekin to'lqin funksiyaning o'zi o'zgaradi. 4) Global faza kuzatilmaydi, nisbiy faza — kuzatiladi (zichlik, $\\langle x\\rangle$). 5) Fazaviy tezlik $\\frac{v}{2}$, guruh tezligi $v$ — «de Broyl to'lqini zarradan sekin yuguradi» degan variantni tanlamang: fazaviy tezlik uchun bu to'g'ri, lekin kuzatiladigani — guruh tezligi.",
+  "ru": "**Уравнение и интерпретация.** 1) Временной множитель $e^{-iEt/\\hbar}$ — со знаком минус; «решение», записанное с $e^{+iEt/\\hbar}$, даёт отрицательную энергию. 2) Действительная бегущая волна не является решением; стоячая волна $\\cos kx\\,e^{-i\\omega t}$ — решение. 3) В стационарном состоянии плотность и все средние постоянны, но сама волновая функция меняется. 4) Глобальная фаза ненаблюдаема, относительная — наблюдаема (плотность, $\\langle x\\rangle$). 5) Фазовая скорость $\\frac{v}{2}$, групповая $v$ — не выбирайте вариант «волна де Бройля бежит медленнее частицы»: для фазовой скорости это верно, но наблюдаема групповая.",
+  "en": "**The equation and its interpretation.** 1) The time factor is $e^{-iEt/\\hbar}$ — with a minus sign; a «solution» written with $e^{+iEt/\\hbar}$ gives a negative energy. 2) A real travelling wave is not a solution; the standing wave $\\cos kx\\,e^{-i\\omega t}$ is. 3) In a stationary state the density and all averages are constant, but the wave function itself changes. 4) A global phase is unobservable; a relative phase is observable (the density, $\\langle x\\rangle$). 5) The phase velocity is $\\frac{v}{2}$ and the group velocity is $v$ — do not pick «the de Broglie wave runs slower than the particle»: it is true of the phase velocity, but it is the group velocity that is observed."
+ },
+ {
+  "t": "li",
+  "uz": "**Superpozitsiya va o'lchash.** 6) Ehtimollik — $\\left|c_n\\right|^2$, holat normallanmagan bo'lsa, $\\sum\\left|c_n\\right|^2$ ga bo'ling. 7) Energiya o'lchashda faqat $E_n$ chiqadi; $\\langle E\\rangle$ — o'rtacha va vaqt bo'yicha saqlanadi. 8) Zichlik tebranish davri $\\frac{h}{E_2-E_1}$, $\\frac{h}{E_1}$ yoki $\\frac{h}{E_2}$ emas. 9) Bir xil juftlikdagi holatlar superpozitsiyasida $\\langle x\\rangle$ tebranmaydi. 10) Keskin o'zgarishda to'lqin funksiyasi o'zgarmaydi, $\\langle E\\rangle$ (agar o'ra ichida $\\hat H$ o'zgarmasa) saqlanadi. 11) Cheksiz o'radagi istalgan holat $T=\\frac{4mL^2}{\\pi\\hbar}$ dan keyin qaytadi.",
+  "ru": "**Суперпозиция и измерение.** 6) Вероятность — $\\left|c_n\\right|^2$; если состояние не нормировано, делите на $\\sum\\left|c_n\\right|^2$. 7) При измерении энергии получается только $E_n$; $\\langle E\\rangle$ — среднее и сохраняется во времени. 8) Период колебаний плотности — $\\frac{h}{E_2-E_1}$, а не $\\frac{h}{E_1}$ или $\\frac{h}{E_2}$. 9) В суперпозиции состояний одной чётности $\\langle x\\rangle$ не колеблется. 10) При внезапном изменении волновая функция не меняется, $\\langle E\\rangle$ (если внутри ямы $\\hat H$ прежний) сохраняется. 11) Любое состояние в бесконечной яме возвращается через $T=\\frac{4mL^2}{\\pi\\hbar}$.",
+  "en": "**Superposition and measurement.** 6) The probability is $\\left|c_n\\right|^2$; if the state is not normalized, divide by $\\sum\\left|c_n\\right|^2$. 7) An energy measurement gives only $E_n$; $\\langle E\\rangle$ is an average and is conserved in time. 8) The period of the density oscillation is $\\frac{h}{E_2-E_1}$, not $\\frac{h}{E_1}$ or $\\frac{h}{E_2}$. 9) In a superposition of states of the same parity, $\\langle x\\rangle$ does not oscillate. 10) In a sudden change the wave function does not change, and $\\langle E\\rangle$ is conserved (if $\\hat H$ is unchanged inside the well). 11) Any state in an infinite well returns after $T=\\frac{4mL^2}{\\pi\\hbar}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaralar, oqim va masshtab.** 12) Chekli $V$ da $\\psi$ va $\\psi'$ uzluksiz; sinik faqat delta potensialda yoki cheksiz devorda. 13) $T=\\frac{k_2}{k_1}\\left|t\\right|^2$, $\\left|t\\right|^2$ emas; $R+T=1$ bilan tekshiring. 14) Haqiqiy funksiya oqim tashimaydi; so'nuvchi eksponenta ham. 15) $\\langle T\\rangle$ ni $\\int\\left|\\psi'\\right|^2$ orqali hisoblang — sinikdagi delta hadni yo'qotmaysiz. 16) Virial: ossillyatorda $\\langle T\\rangle=\\langle V\\rangle$, kulonda $\\langle T\\rangle=-E$. 17) Erenfest klassik trayektoriyani faqat chiziqli kuchda aniq beradi. 18) Tor paket tez yoyiladi: $\\tau\\sim m\\sigma_0^2$. 19) Masshtab: $V=\\lambda\\left|x\\right|^{\\nu}$ da $E\\sim m^{-\\nu/\\left(\\nu+2\\right)}$. 20) O'lcham tekshiruvi: 1D da $\\psi$ ning birligi $\\mathrm{m^{-1/2}}$, 3D da $\\mathrm{m^{-3/2}}$.",
+  "ru": "**Границы, поток и масштаб.** 12) При конечном $V$ функции $\\psi$ и $\\psi'$ непрерывны; излом — только на дельта-потенциале или бесконечной стенке. 13) $T=\\frac{k_2}{k_1}\\left|t\\right|^2$, а не $\\left|t\\right|^2$; проверяйте $R+T=1$. 14) Действительная функция потока не несёт; затухающая экспонента — тоже. 15) Считайте $\\langle T\\rangle$ через $\\int\\left|\\psi'\\right|^2$ — не потеряете дельта-член в изломе. 16) Вириал: у осциллятора $\\langle T\\rangle=\\langle V\\rangle$, у кулона $\\langle T\\rangle=-E$. 17) Эренфест даёт классическую траекторию точно лишь при линейной силе. 18) Узкий пакет быстро расплывается: $\\tau\\sim m\\sigma_0^2$. 19) Масштаб: при $V=\\lambda\\left|x\\right|^{\\nu}$ имеем $E\\sim m^{-\\nu/\\left(\\nu+2\\right)}$. 20) Проверка размерности: в 1D единица $\\psi$ — $\\mathrm{m^{-1/2}}$, в 3D — $\\mathrm{m^{-3/2}}$.",
+  "en": "**Boundaries, current and scale.** 12) For a finite $V$, $\\psi$ and $\\psi'$ are continuous; a kink occurs only at a delta potential or an infinite wall. 13) $T=\\frac{k_2}{k_1}\\left|t\\right|^2$, not $\\left|t\\right|^2$; check $R+T=1$. 14) A real function carries no current; neither does a decaying exponential. 15) Compute $\\langle T\\rangle$ via $\\int\\left|\\psi'\\right|^2$ — you will not lose the delta term at a kink. 16) Virial: for the oscillator $\\langle T\\rangle=\\langle V\\rangle$, for Coulomb $\\langle T\\rangle=-E$. 17) Ehrenfest gives the classical trajectory exactly only for a linear force. 18) A narrow packet spreads fast: $\\tau\\sim m\\sigma_0^2$. 19) Scaling: for $V=\\lambda\\left|x\\right|^{\\nu}$, $E\\sim m^{-\\nu/\\left(\\nu+2\\right)}$. 20) Dimension check: in 1D the unit of $\\psi$ is $\\mathrm{m^{-1/2}}$, in 3D $\\mathrm{m^{-3/2}}$."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Shredinger tenglamasi",
+    "ru": "Уравнение Шрёдингера",
+    "en": "Schrödinger equation",
+    "m": "i\\hbar\\frac{\\partial\\Psi}{\\partial t}=-\\frac{\\hbar^2}{2m}\\frac{\\partial^2\\Psi}{\\partial x^2}+V\\Psi"
+   },
+   {
+    "uz": "Gamilton operatori",
+    "ru": "Гамильтониан",
+    "en": "Hamiltonian",
+    "m": "\\hat H=\\frac{\\hat p^2}{2m}+V,\\quad \\hat p=-i\\hbar\\frac{\\partial}{\\partial x}"
+   },
+   {
+    "uz": "Erkin zarra dispersiyasi",
+    "ru": "Дисперсия свободной частицы",
+    "en": "Free-particle dispersion",
+    "m": "\\omega=\\frac{\\hbar k^2}{2m},\\quad v_g=2v_p=\\frac{\\hbar k}{m}"
+   },
+   {
+    "uz": "Born talqini",
+    "ru": "Интерпретация Борна",
+    "en": "Born interpretation",
+    "m": "\\rho=\\left|\\Psi\\right|^2,\\quad \\int\\left|\\Psi\\right|^2dx=1"
+   },
+   {
+    "uz": "Ehtimollik oqimi",
+    "ru": "Поток вероятности",
+    "en": "Probability current",
+    "m": "j=\\frac{\\hbar}{m}\\mathrm{Im}\\left(\\Psi^*\\frac{\\partial\\Psi}{\\partial x}\\right)"
+   },
+   {
+    "uz": "Uzluksizlik tenglamasi",
+    "ru": "Уравнение непрерывности",
+    "en": "Continuity equation",
+    "m": "\\frac{\\partial\\rho}{\\partial t}+\\frac{\\partial j}{\\partial x}=0"
+   },
+   {
+    "uz": "Ikki to'lqin oqimi",
+    "ru": "Поток двух волн",
+    "en": "Current of two waves",
+    "m": "j=\\frac{\\hbar k}{m}\\left(\\left|A\\right|^2-\\left|B\\right|^2\\right)"
+   },
+   {
+    "uz": "Statsionar tenglama",
+    "ru": "Стационарное уравнение",
+    "en": "Time-independent equation",
+    "m": "-\\frac{\\hbar^2}{2m}\\psi''+V\\psi=E\\psi"
+   },
+   {
+    "uz": "Statsionar holat",
+    "ru": "Стационарное состояние",
+    "en": "Stationary state",
+    "m": "\\Psi=\\psi\\left(x\\right)e^{-iEt/\\hbar}"
+   },
+   {
+    "uz": "Umumiy yechim",
+    "ru": "Общее решение",
+    "en": "General solution",
+    "m": "\\Psi=\\sum c_n\\psi_ne^{-iE_nt/\\hbar},\\quad c_n=\\int\\psi_n^*\\Psi\\left(x,0\\right)dx"
+   },
+   {
+    "uz": "O'lchash ehtimolligi",
+    "ru": "Вероятность измерения",
+    "en": "Measurement probability",
+    "m": "P_n=\\left|c_n\\right|^2,\\quad \\langle E\\rangle=\\sum\\left|c_n\\right|^2E_n"
+   },
+   {
+    "uz": "Bor chastotasi",
+    "ru": "Боровская частота",
+    "en": "Bohr frequency",
+    "m": "\\omega_{21}=\\frac{E_2-E_1}{\\hbar},\\quad T=\\frac{h}{E_2-E_1}"
+   },
+   {
+    "uz": "O'rtacha evolyutsiyasi",
+    "ru": "Эволюция среднего",
+    "en": "Evolution of an average",
+    "m": "\\frac{d\\langle Q\\rangle}{dt}=\\frac{i}{\\hbar}\\langle\\left[\\hat H,\\hat Q\\right]\\rangle"
+   },
+   {
+    "uz": "Erenfest teoremasi",
+    "ru": "Теорема Эренфеста",
+    "en": "Ehrenfest's theorem",
+    "m": "\\frac{d\\langle x\\rangle}{dt}=\\frac{\\langle p\\rangle}{m},\\quad \\frac{d\\langle p\\rangle}{dt}=-\\langle V'\\rangle"
+   },
+   {
+    "uz": "Virial teoremasi",
+    "ru": "Теорема вириала",
+    "en": "Virial theorem",
+    "m": "2\\langle T\\rangle=\\langle xV'\\rangle,\\quad V\\sim\\left|x\\right|^{\\nu}:\\ 2\\langle T\\rangle=\\nu\\langle V\\rangle"
+   },
+   {
+    "uz": "Gauss paketi yoyilishi",
+    "ru": "Расплывание гауссова пакета",
+    "en": "Gaussian packet spreading",
+    "m": "\\sigma=\\sigma_0\\sqrt{1+\\left(\\frac{t}{\\tau}\\right)^2},\\quad \\tau=\\frac{2m\\sigma_0^2}{\\hbar}"
+   },
+   {
+    "uz": "Egrilik qoidasi",
+    "ru": "Правило кривизны",
+    "en": "Curvature rule",
+    "m": "\\psi''=\\frac{2m}{\\hbar^2}\\left(V-E\\right)\\psi"
+   },
+   {
+    "uz": "Pog'ona koeffitsiyentlari",
+    "ru": "Коэффициенты ступеньки",
+    "en": "Step coefficients",
+    "m": "R=\\left(\\frac{k_1-k_2}{k_1+k_2}\\right)^2,\\quad T=\\frac{4k_1k_2}{\\left(k_1+k_2\\right)^2}"
+   },
+   {
+    "uz": "Delta-o'ra",
+    "ru": "Дельта-яма",
+    "en": "Delta well",
+    "m": "\\Delta\\psi'=-\\frac{2m\\alpha}{\\hbar^2}\\psi\\left(0\\right),\\quad E=-\\frac{m\\alpha^2}{2\\hbar^2}"
+   },
+   {
+    "uz": "Kubik quti",
+    "ru": "Кубический ящик",
+    "en": "Cubic box",
+    "m": "E=\\frac{\\pi^2\\hbar^2}{2mL^2}\\left(n_x^2+n_y^2+n_z^2\\right)"
+   },
+   {
+    "uz": "Radial tenglama",
+    "ru": "Радиальное уравнение",
+    "en": "Radial equation",
+    "m": "-\\frac{\\hbar^2}{2m}u''+\\left[V+\\frac{\\hbar^2l\\left(l+1\\right)}{2mr^2}\\right]u=Eu"
+   },
+   {
+    "uz": "Masshtab",
+    "ru": "Масштаб",
+    "en": "Scaling",
+    "m": "E\\sim\\left(\\frac{\\hbar^2}{m}\\right)^{\\nu/\\left(\\nu+2\\right)}\\lambda^{2/\\left(\\nu+2\\right)}"
+   }
+  ]
+ }
+]
