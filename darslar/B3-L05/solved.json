@@ -1,0 +1,1000 @@
+[
+ {
+  "id": "B3-L05-S01",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Energiyasi $E=25\\ \\mathrm{eV}$ bo'lgan elektronlar balandligi $V_0=16\\ \\mathrm{eV}$ bo'lgan potensial pog'onaga chapdan tushadi. a) Pog'onadan oldin va keyingi to'lqin sonlari nisbatini toping. b) Qaytish va o'tish ehtimolliklarini toping. c) Klassik natija bilan solishtiring.",
+   "ru": "Электроны с энергией $E=25\\ \\mathrm{eV}$ падают слева на потенциальную ступеньку высотой $V_0=16\\ \\mathrm{eV}$. а) Найдите отношение волновых чисел до и после ступеньки. б) Найдите вероятности отражения и прохождения. в) Сравните с классическим результатом.",
+   "en": "Electrons of energy $E=25\\ \\mathrm{eV}$ are incident from the left on a potential step of height $V_0=16\\ \\mathrm{eV}$. a) Find the ratio of the wave numbers before and after the step. b) Find the reflection and transmission probabilities. c) Compare with the classical result."
+  },
+  "figure": "figures/B3-L05-S01.png",
+  "solution": {
+   "uz": [
+    "To'lqin sonlari kinetik energiya ildiziga proporsional: $$\\frac{k_2}{k_1}=\\sqrt{\\frac{E-V_0}{E}}=\\sqrt{\\frac{9}{25}}=\\frac{3}{5}$$",
+    "$x=0$ da $\\psi$ va $\\psi'$ tikiladi — amplitudalar: $$r=\\frac{k_1-k_2}{k_1+k_2}=\\frac{5-3}{5+3}=\\frac{1}{4}$$",
+    "b) Qaytish ehtimolligi: $$R=\\left|r\\right|^2=\\frac{1}{16}\\approx0.063$$",
+    "O'tish — oqimlar nisbati ($T=\\frac{k_2}{k_1}\\left|t\\right|^2$): $$T=\\frac{4k_1k_2}{\\left(k_1+k_2\\right)^2}=\\frac{60}{64}=\\frac{15}{16},\\qquad R+T=1$$",
+    "c) Klassik zarra $E>V_0$ da albatta o'tadi; kvant zarraning har $16$ tasidan bittasi qaytadi:"
+   ],
+   "ru": [
+    "Волновые числа пропорциональны корню из кинетической энергии: $$\\frac{k_2}{k_1}=\\sqrt{\\frac{E-V_0}{E}}=\\sqrt{\\frac{9}{25}}=\\frac{3}{5}$$",
+    "Сшиваем $\\psi$ и $\\psi'$ при $x=0$ — амплитуды: $$r=\\frac{k_1-k_2}{k_1+k_2}=\\frac{5-3}{5+3}=\\frac{1}{4}$$",
+    "б) Вероятность отражения: $$R=\\left|r\\right|^2=\\frac{1}{16}\\approx0.063$$",
+    "Прохождение — отношение потоков ($T=\\frac{k_2}{k_1}\\left|t\\right|^2$): $$T=\\frac{4k_1k_2}{\\left(k_1+k_2\\right)^2}=\\frac{60}{64}=\\frac{15}{16},\\qquad R+T=1$$",
+    "в) Классическая частица при $E>V_0$ обязательно проходит; у квантовой отражается одна из $16$:"
+   ],
+   "en": [
+    "The wave numbers are proportional to the root of the kinetic energy: $$\\frac{k_2}{k_1}=\\sqrt{\\frac{E-V_0}{E}}=\\sqrt{\\frac{9}{25}}=\\frac{3}{5}$$",
+    "Match $\\psi$ and $\\psi'$ at $x=0$ — the amplitudes: $$r=\\frac{k_1-k_2}{k_1+k_2}=\\frac{5-3}{5+3}=\\frac{1}{4}$$",
+    "b) The reflection probability: $$R=\\left|r\\right|^2=\\frac{1}{16}\\approx0.063$$",
+    "Transmission is the ratio of currents ($T=\\frac{k_2}{k_1}\\left|t\\right|^2$): $$T=\\frac{4k_1k_2}{\\left(k_1+k_2\\right)^2}=\\frac{60}{64}=\\frac{15}{16},\\qquad R+T=1$$",
+    "c) A classical particle with $E>V_0$ always gets through; one in $16$ quantum particles is reflected:"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Chegaraviy shartlar: $\\psi$ va $\\psi'$ uzluksiz",
+    "ru": "Граничные условия: $\\psi$ и $\\psi'$ непрерывны",
+    "en": "Boundary conditions: $\\psi$ and $\\psi'$ are continuous"
+   },
+   {
+    "uz": "Pog'onada qaytish: $R=\\left(\\frac{k_1-k_2}{k_1+k_2}\\right)^2$",
+    "ru": "Отражение на ступеньке: $R=\\left(\\frac{k_1-k_2}{k_1+k_2}\\right)^2$",
+    "en": "Reflection at a step: $R=\\left(\\frac{k_1-k_2}{k_1+k_2}\\right)^2$"
+   },
+   {
+    "uz": "Qaytish va o'tish: $R+T=1$",
+    "ru": "Отражение и прохождение: $R+T=1$",
+    "en": "Reflection and transmission: $R+T=1$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Potensial pog'onada qaytish; oqimlar orqali ehtimolliklar",
+   "ru": "Отражение на потенциальной ступеньке; вероятности через потоки",
+   "en": "Reflection at a potential step; probabilities through currents"
+  },
+  "answer": "\\frac{k_2}{k_1}=\\frac{3}{5};\\ R=\\frac{1}{16};\\ T=\\frac{15}{16}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S01",
+  "source": "OpenStax University Physics, 3-jild, 7.6 bo'limi, 7.6 bo'limi 1- masalasi g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L05-S02",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Energiyasi $E=3.0\\ \\mathrm{eV}$ bo'lgan elektron balandligi $V_0=5.0\\ \\mathrm{eV}$ bo'lgan pog'onaga tushadi. a) Qaytish ehtimolligini toping. b) Qaytgan to'lqinning faza siljishini toping. c) Elektron pog'ona ichiga qancha chuqurlikda kirib boradi? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "ru": "Электрон с энергией $E=3.0\\ \\mathrm{eV}$ падает на ступеньку высотой $V_0=5.0\\ \\mathrm{eV}$. а) Найдите вероятность отражения. б) Найдите сдвиг фазы отражённой волны. в) На какую глубину электрон проникает в ступеньку? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "en": "An electron of energy $E=3.0\\ \\mathrm{eV}$ is incident on a step of height $V_0=5.0\\ \\mathrm{eV}$. a) Find the reflection probability. b) Find the phase shift of the reflected wave. c) How deep does the electron penetrate into the step? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$."
+  },
+  "figure": "figures/B3-L05-S02.png",
+  "solution": {
+   "uz": [
+    "O'ngda $E<V_0$ — so'nuvchi eksponenta, tikishdan: $$\\psi=Ce^{-\\kappa x},\\qquad r=\\frac{k-i\\kappa}{k+i\\kappa}$$",
+    "a) Surat va maxraj qo'shma — modul $1$, o'tgan oqim nol: $$R=\\left|r\\right|^2=1,\\qquad T=0$$",
+    "b) Faza: $r=e^{-2i\\theta}$, $\\tan\\theta=\\frac{\\kappa}{k}=\\sqrt{\\frac{V_0-E}{E}}$: $$\\theta=\\arctan\\sqrt{\\frac{2}{3}}\\approx39.2^{\\circ},\\qquad \\Delta\\phi=-2\\theta\\approx-78.5^{\\circ}$$",
+    "c) So'nish koeffitsiyenti va kirib borish chuqurligi: $$\\kappa=\\sqrt{\\frac{2.0}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx7.25\\ \\mathrm{nm^{-1}},\\qquad \\delta=\\frac{1}{\\kappa}\\approx0.138\\ \\mathrm{nm}$$"
+   ],
+   "ru": [
+    "Справа $E<V_0$ — затухающая экспонента, из сшивки: $$\\psi=Ce^{-\\kappa x},\\qquad r=\\frac{k-i\\kappa}{k+i\\kappa}$$",
+    "а) Числитель и знаменатель сопряжены — модуль $1$, прошедший поток равен нулю: $$R=\\left|r\\right|^2=1,\\qquad T=0$$",
+    "б) Фаза: $r=e^{-2i\\theta}$, $\\tan\\theta=\\frac{\\kappa}{k}=\\sqrt{\\frac{V_0-E}{E}}$: $$\\theta=\\arctan\\sqrt{\\frac{2}{3}}\\approx39.2^{\\circ},\\qquad \\Delta\\phi=-2\\theta\\approx-78.5^{\\circ}$$",
+    "в) Коэффициент затухания и глубина проникновения: $$\\kappa=\\sqrt{\\frac{2.0}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx7.25\\ \\mathrm{nm^{-1}},\\qquad \\delta=\\frac{1}{\\kappa}\\approx0.138\\ \\mathrm{nm}$$"
+   ],
+   "en": [
+    "On the right $E<V_0$ — a decaying exponential; from matching: $$\\psi=Ce^{-\\kappa x},\\qquad r=\\frac{k-i\\kappa}{k+i\\kappa}$$",
+    "a) The numerator and denominator are conjugate — modulus $1$, zero transmitted current: $$R=\\left|r\\right|^2=1,\\qquad T=0$$",
+    "b) The phase: $r=e^{-2i\\theta}$, $\\tan\\theta=\\frac{\\kappa}{k}=\\sqrt{\\frac{V_0-E}{E}}$: $$\\theta=\\arctan\\sqrt{\\frac{2}{3}}\\approx39.2^{\\circ},\\qquad \\Delta\\phi=-2\\theta\\approx-78.5^{\\circ}$$",
+    "c) The decay constant and penetration depth: $$\\kappa=\\sqrt{\\frac{2.0}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx7.25\\ \\mathrm{nm^{-1}},\\qquad \\delta=\\frac{1}{\\kappa}\\approx0.138\\ \\mathrm{nm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Chegaraviy shartlar: $\\psi$ va $\\psi'$ uzluksiz",
+    "ru": "Граничные условия: $\\psi$ и $\\psi'$ непрерывны",
+    "en": "Boundary conditions: $\\psi$ and $\\psi'$ are continuous"
+   },
+   {
+    "uz": "Qaytish va o'tish: $R+T=1$",
+    "ru": "Отражение и прохождение: $R+T=1$",
+    "en": "Reflection and transmission: $R+T=1$"
+   },
+   null,
+   {
+    "uz": "Kirib borish chuqurligi: $\\delta=\\frac{1}{\\kappa}$",
+    "ru": "Глубина проникновения: $\\delta=\\frac{1}{\\kappa}$",
+    "en": "Penetration depth: $\\delta=\\frac{1}{\\kappa}$"
+   }
+  ],
+  "basis": {
+   "uz": "Pog'onada to'liq qaytish, faza siljishi, kirib borish",
+   "ru": "Полное отражение на ступеньке, сдвиг фазы, проникновение",
+   "en": "Total reflection at a step, phase shift, penetration"
+  },
+  "answer": "R=1;\\ \\Delta\\phi\\approx-78.5^{\\circ};\\ \\delta\\approx0.138\\ \\mathrm{nm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S02",
+  "source": "original (B3-L05, S02)"
+ },
+ {
+  "id": "B3-L05-S03",
+  "difficulty": "easy",
+  "statement": {
+   "uz": "Energiyasi $E=1.0\\ \\mathrm{eV}$ bo'lgan elektron chuqurligi $8.0\\ \\mathrm{eV}$ bo'lgan pastga tushuvchi pog'onaga («jarlik»ka) yaqinlashadi: $x<0$ da $V=0$, $x>0$ da $V=-8.0\\ \\mathrm{eV}$. Qaytish va o'tish ehtimolliklarini toping. Klassik zarra qanday harakatlanardi?",
+   "ru": "Электрон с энергией $E=1.0\\ \\mathrm{eV}$ подходит к ступеньке вниз («обрыву») глубиной $8.0\\ \\mathrm{eV}$: $V=0$ при $x<0$, $V=-8.0\\ \\mathrm{eV}$ при $x>0$. Найдите вероятности отражения и прохождения. Как двигалась бы классическая частица?",
+   "en": "An electron of energy $E=1.0\\ \\mathrm{eV}$ approaches a downward step (a «cliff») of depth $8.0\\ \\mathrm{eV}$: $V=0$ for $x<0$, $V=-8.0\\ \\mathrm{eV}$ for $x>0$. Find the reflection and transmission probabilities. How would a classical particle move?"
+  },
+  "figure": "figures/B3-L05-S03.png",
+  "solution": {
+   "uz": [
+    "O'ngda kinetik energiya $E+8.0=9.0\\ \\mathrm{eV}$: $$\\frac{k_2}{k_1}=\\sqrt{\\frac{9.0}{1.0}}=3$$",
+    "Pog'ona formulasi $V_0<0$ da ham o'rinli: $$R=\\left(\\frac{1-3}{1+3}\\right)^2=\\frac{1}{4}$$",
+    "O'tish: $$T=\\frac{4\\cdot1\\cdot3}{\\left(1+3\\right)^2}=\\frac{3}{4},\\qquad R+T=1$$",
+    "Klassik zarra jarlikdan albatta o'tib, tezlanadi ($R=0$); kvant zarraning chorak qismi qaytadi — keskin o'zgarishda to'lqin qaytadi:"
+   ],
+   "ru": [
+    "Справа кинетическая энергия $E+8.0=9.0\\ \\mathrm{eV}$: $$\\frac{k_2}{k_1}=\\sqrt{\\frac{9.0}{1.0}}=3$$",
+    "Формула ступеньки верна и при $V_0<0$: $$R=\\left(\\frac{1-3}{1+3}\\right)^2=\\frac{1}{4}$$",
+    "Прохождение: $$T=\\frac{4\\cdot1\\cdot3}{\\left(1+3\\right)^2}=\\frac{3}{4},\\qquad R+T=1$$",
+    "Классическая частица обязательно проходит обрыв и ускоряется ($R=0$); у квантовой четверть отражается — волна отражается от резкого перепада:"
+   ],
+   "en": [
+    "On the right the kinetic energy is $E+8.0=9.0\\ \\mathrm{eV}$: $$\\frac{k_2}{k_1}=\\sqrt{\\frac{9.0}{1.0}}=3$$",
+    "The step formula also holds for $V_0<0$: $$R=\\left(\\frac{1-3}{1+3}\\right)^2=\\frac{1}{4}$$",
+    "Transmission: $$T=\\frac{4\\cdot1\\cdot3}{\\left(1+3\\right)^2}=\\frac{3}{4},\\qquad R+T=1$$",
+    "A classical particle always passes the cliff and speeds up ($R=0$); a quarter of the quantum particles are reflected — a wave reflects from a sharp change:"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "Pog'onada qaytish: $R=\\left(\\frac{k_1-k_2}{k_1+k_2}\\right)^2$",
+    "ru": "Отражение на ступеньке: $R=\\left(\\frac{k_1-k_2}{k_1+k_2}\\right)^2$",
+    "en": "Reflection at a step: $R=\\left(\\frac{k_1-k_2}{k_1+k_2}\\right)^2$"
+   },
+   {
+    "uz": "Qaytish va o'tish: $R+T=1$",
+    "ru": "Отражение и прохождение: $R+T=1$",
+    "en": "Reflection and transmission: $R+T=1$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Pastga tushuvchi pog'onadan kvant qaytish",
+   "ru": "Квантовое отражение от ступеньки вниз",
+   "en": "Quantum reflection from a downward step"
+  },
+  "answer": "R=\\frac{1}{4};\\ T=\\frac{3}{4}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S03",
+  "source": "original (B3-L05, S03)"
+ },
+ {
+  "id": "B3-L05-S04",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Energiyasi $E=1.0\\ \\mathrm{eV}$ bo'lgan elektron balandligi $V_0=2.0\\ \\mathrm{eV}$, kengligi $a=0.50\\ \\mathrm{nm}$ bo'lgan to'g'ri burchakli to'siqqa tushadi. a) $\\kappa$ va $\\kappa a$ ni toping. b) Aniq formuladan o'tish ehtimolligini toping. c) Qaytish ehtimolligi qancha? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "ru": "Электрон с энергией $E=1.0\\ \\mathrm{eV}$ падает на прямоугольный барьер высотой $V_0=2.0\\ \\mathrm{eV}$ и шириной $a=0.50\\ \\mathrm{nm}$. а) Найдите $\\kappa$ и $\\kappa a$. б) Найдите вероятность прохождения по точной формуле. в) Какова вероятность отражения? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "en": "An electron of energy $E=1.0\\ \\mathrm{eV}$ is incident on a rectangular barrier of height $V_0=2.0\\ \\mathrm{eV}$ and width $a=0.50\\ \\mathrm{nm}$. a) Find $\\kappa$ and $\\kappa a$. b) Find the transmission probability from the exact formula. c) What is the reflection probability? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$."
+  },
+  "figure": "figures/B3-L05-S04.png",
+  "solution": {
+   "uz": [
+    "To'siq ichida so'nish koeffitsiyenti: $$\\kappa=\\sqrt{\\frac{V_0-E}{0.0381}}\\ \\mathrm{nm^{-1}}=\\sqrt{\\frac{1.0}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx5.12\\ \\mathrm{nm^{-1}}$$",
+    "O'lchamsiz ko'rsatkich: $$\\kappa a\\approx5.12\\cdot0.50\\approx2.56$$",
+    "b) Uch sohadagi yechimlarni $x=0$ va $x=a$ da tikish aniq formulani beradi: $$T=\\left[1+\\frac{V_0^2\\sinh^2\\kappa a}{4E\\left(V_0-E\\right)}\\right]^{-1}$$",
+    "$E=\\frac{V_0}{2}$ da kasr birga teng, $1+\\sinh^2=\\cosh^2$: $$T=\\frac{1}{\\cosh^2\\kappa a}=\\frac{1}{\\cosh^22.56}\\approx0.0235$$",
+    "c) Zarralar saqlanadi: $$R=1-T\\approx0.976$$"
+   ],
+   "ru": [
+    "Коэффициент затухания внутри барьера: $$\\kappa=\\sqrt{\\frac{V_0-E}{0.0381}}\\ \\mathrm{nm^{-1}}=\\sqrt{\\frac{1.0}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx5.12\\ \\mathrm{nm^{-1}}$$",
+    "Безразмерный показатель: $$\\kappa a\\approx5.12\\cdot0.50\\approx2.56$$",
+    "б) Сшивка решений трёх областей при $x=0$ и $x=a$ даёт точную формулу: $$T=\\left[1+\\frac{V_0^2\\sinh^2\\kappa a}{4E\\left(V_0-E\\right)}\\right]^{-1}$$",
+    "При $E=\\frac{V_0}{2}$ дробь равна единице, $1+\\sinh^2=\\cosh^2$: $$T=\\frac{1}{\\cosh^2\\kappa a}=\\frac{1}{\\cosh^22.56}\\approx0.0235$$",
+    "в) Частицы сохраняются: $$R=1-T\\approx0.976$$"
+   ],
+   "en": [
+    "The decay constant inside the barrier: $$\\kappa=\\sqrt{\\frac{V_0-E}{0.0381}}\\ \\mathrm{nm^{-1}}=\\sqrt{\\frac{1.0}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx5.12\\ \\mathrm{nm^{-1}}$$",
+    "The dimensionless exponent: $$\\kappa a\\approx5.12\\cdot0.50\\approx2.56$$",
+    "b) Matching the three regional solutions at $x=0$ and $x=a$ gives the exact formula: $$T=\\left[1+\\frac{V_0^2\\sinh^2\\kappa a}{4E\\left(V_0-E\\right)}\\right]^{-1}$$",
+    "For $E=\\frac{V_0}{2}$ the fraction equals one, $1+\\sinh^2=\\cosh^2$: $$T=\\frac{1}{\\cosh^2\\kappa a}=\\frac{1}{\\cosh^22.56}\\approx0.0235$$",
+    "c) Particles are conserved: $$R=1-T\\approx0.976$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Elektron uchun: $\\kappa=\\sqrt{\\frac{V_0-E}{0.0381}}\\ \\mathrm{nm^{-1}}$",
+    "ru": "Для электрона: $\\kappa=\\sqrt{\\frac{V_0-E}{0.0381}}\\ \\mathrm{nm^{-1}}$",
+    "en": "For an electron: $\\kappa=\\sqrt{\\frac{V_0-E}{0.0381}}\\ \\mathrm{nm^{-1}}$"
+   },
+   null,
+   {
+    "uz": "To'g'ri burchakli to'siq: $T=\\left[1+\\frac{V_0^2\\sinh^2\\kappa a}{4E\\left(V_0-E\\right)}\\right]^{-1}$",
+    "ru": "Прямоугольный барьер: $T=\\left[1+\\frac{V_0^2\\sinh^2\\kappa a}{4E\\left(V_0-E\\right)}\\right]^{-1}$",
+    "en": "Rectangular barrier: $T=\\left[1+\\frac{V_0^2\\sinh^2\\kappa a}{4E\\left(V_0-E\\right)}\\right]^{-1}$"
+   },
+   null,
+   {
+    "uz": "Qaytish va o'tish: $R+T=1$",
+    "ru": "Отражение и прохождение: $R+T=1$",
+    "en": "Reflection and transmission: $R+T=1$"
+   }
+  ],
+  "basis": {
+   "uz": "To'g'ri burchakli to'siq orqali tunnel: aniq formula",
+   "ru": "Туннелирование через прямоугольный барьер: точная формула",
+   "en": "Tunneling through a rectangular barrier: the exact formula"
+  },
+  "answer": "\\kappa\\approx5.12\\ \\mathrm{nm^{-1}};\\ \\kappa a\\approx2.56;\\ T\\approx0.0235;\\ R\\approx0.976",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S04",
+  "source": "OpenStax University Physics, 3-jild, 7.6 bo'limi, 7.6 bo'limi 2- masalasi g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L05-S05",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "S04 dagi to'siq kengligi ikki marta oshirildi: $a=1.0\\ \\mathrm{nm}$ ($E=1.0\\ \\mathrm{eV}$, $V_0=2.0\\ \\mathrm{eV}$). a) Qalin to'siq yaqinlashuvi qo'llanishini tekshiring va $T$ ni toping. b) $T$ necha marta kamaydi? c) Nega javob «ikki marta» emas?",
+   "ru": "Ширину барьера из S04 удвоили: $a=1.0\\ \\mathrm{nm}$ ($E=1.0\\ \\mathrm{eV}$, $V_0=2.0\\ \\mathrm{eV}$). а) Проверьте применимость приближения толстого барьера и найдите $T$. б) Во сколько раз уменьшилось $T$? в) Почему ответ не «в два раза»?",
+   "en": "The width of the barrier of S04 is doubled: $a=1.0\\ \\mathrm{nm}$ ($E=1.0\\ \\mathrm{eV}$, $V_0=2.0\\ \\mathrm{eV}$). a) Check that the thick-barrier approximation applies and find $T$. b) By what factor did $T$ decrease? c) Why is the answer not «twice»?"
+  },
+  "figure": "figures/B3-L05-S05.png",
+  "solution": {
+   "uz": [
+    "$\\kappa a\\approx5.12\\gg1$ — qalin to'siq: $$\\sinh\\kappa a\\approx\\frac{1}{2}e^{\\kappa a}\\ \\Rightarrow\\ T\\approx16\\frac{E}{V_0}\\left(1-\\frac{E}{V_0}\\right)e^{-2\\kappa a}$$",
+    "a) $\\frac{E}{V_0}=\\frac{1}{2}$ da oldingi ko'paytuvchi $4$: $$T\\approx4e^{-10.25}\\approx1.42\\cdot10^{-4}$$",
+    "b) Aniq qiymatlar nisbati (S04: $0.0235$): $$\\frac{T\\left(1.0\\right)}{T\\left(0.50\\right)}\\approx\\frac{1.42\\cdot10^{-4}}{0.0235}\\approx6.0\\cdot10^{-3}$$",
+    "c) Kenglik ko'rsatkichda turadi: qo'shilgan $0.50\\ \\mathrm{nm}$ $T$ ni $e^{-2\\kappa\\Delta a}$ marta kamaytiradi — taxminan $170$ marta: $$e^{-2\\kappa\\Delta a}=e^{-5.12}\\approx6.0\\cdot10^{-3}$$"
+   ],
+   "ru": [
+    "$\\kappa a\\approx5.12\\gg1$ — толстый барьер: $$\\sinh\\kappa a\\approx\\frac{1}{2}e^{\\kappa a}\\ \\Rightarrow\\ T\\approx16\\frac{E}{V_0}\\left(1-\\frac{E}{V_0}\\right)e^{-2\\kappa a}$$",
+    "а) При $\\frac{E}{V_0}=\\frac{1}{2}$ предмножитель равен $4$: $$T\\approx4e^{-10.25}\\approx1.42\\cdot10^{-4}$$",
+    "б) Отношение точных значений (S04: $0.0235$): $$\\frac{T\\left(1.0\\right)}{T\\left(0.50\\right)}\\approx\\frac{1.42\\cdot10^{-4}}{0.0235}\\approx6.0\\cdot10^{-3}$$",
+    "в) Ширина стоит в показателе: добавленные $0.50\\ \\mathrm{nm}$ уменьшают $T$ в $e^{-2\\kappa\\Delta a}$ раз — примерно в $170$ раз: $$e^{-2\\kappa\\Delta a}=e^{-5.12}\\approx6.0\\cdot10^{-3}$$"
+   ],
+   "en": [
+    "$\\kappa a\\approx5.12\\gg1$ — a thick barrier: $$\\sinh\\kappa a\\approx\\frac{1}{2}e^{\\kappa a}\\ \\Rightarrow\\ T\\approx16\\frac{E}{V_0}\\left(1-\\frac{E}{V_0}\\right)e^{-2\\kappa a}$$",
+    "a) For $\\frac{E}{V_0}=\\frac{1}{2}$ the prefactor is $4$: $$T\\approx4e^{-10.25}\\approx1.42\\cdot10^{-4}$$",
+    "b) The ratio of the exact values (S04: $0.0235$): $$\\frac{T\\left(1.0\\right)}{T\\left(0.50\\right)}\\approx\\frac{1.42\\cdot10^{-4}}{0.0235}\\approx6.0\\cdot10^{-3}$$",
+    "c) The width sits in the exponent: the added $0.50\\ \\mathrm{nm}$ reduces $T$ by a factor $e^{-2\\kappa\\Delta a}$ — about $170$ times: $$e^{-2\\kappa\\Delta a}=e^{-5.12}\\approx6.0\\cdot10^{-3}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Qalin to'siq: $T\\approx16\\frac{E}{V_0}\\left(1-\\frac{E}{V_0}\\right)e^{-2\\kappa a}$",
+    "ru": "Толстый барьер: $T\\approx16\\frac{E}{V_0}\\left(1-\\frac{E}{V_0}\\right)e^{-2\\kappa a}$",
+    "en": "Thick barrier: $T\\approx16\\frac{E}{V_0}\\left(1-\\frac{E}{V_0}\\right)e^{-2\\kappa a}$"
+   },
+   null,
+   null,
+   {
+    "uz": "Eksponensial baho: $T\\sim e^{-2\\kappa a}$",
+    "ru": "Экспоненциальная оценка: $T\\sim e^{-2\\kappa a}$",
+    "en": "Exponential estimate: $T\\sim e^{-2\\kappa a}$"
+   }
+  ],
+  "basis": {
+   "uz": "Qalin to'siq yaqinlashuvi va kenglikka eksponensial sezgirlik",
+   "ru": "Приближение толстого барьера и экспоненциальная чувствительность к ширине",
+   "en": "The thick-barrier approximation and exponential sensitivity to width"
+  },
+  "answer": "T\\approx1.42\\cdot10^{-4};\\ \\frac{T_2}{T_1}\\approx6.0\\cdot10^{-3}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S05",
+  "source": "original (B3-L05, S05)"
+ },
+ {
+  "id": "B3-L05-S06",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Elektronlar balandligi $V_0=2.0\\ \\mathrm{eV}$, kengligi $a=1.0\\ \\mathrm{nm}$ bo'lgan to'siq ustidan o'tadi ($E>V_0$). a) To'siq to'liq shaffof bo'ladigan dastlabki uchta energiyani toping. b) $E=3.0\\ \\mathrm{eV}$ da o'tish ehtimolligi qancha? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "ru": "Электроны проходят над барьером высотой $V_0=2.0\\ \\mathrm{eV}$ и шириной $a=1.0\\ \\mathrm{nm}$ ($E>V_0$). а) Найдите первые три энергии, при которых барьер полностью прозрачен. б) Какова вероятность прохождения при $E=3.0\\ \\mathrm{eV}$? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "en": "Electrons pass over a barrier of height $V_0=2.0\\ \\mathrm{eV}$ and width $a=1.0\\ \\mathrm{nm}$ ($E>V_0$). a) Find the first three energies at which the barrier is completely transparent. b) What is the transmission probability at $E=3.0\\ \\mathrm{eV}$? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$."
+  },
+  "figure": "figures/B3-L05-S06.png",
+  "solution": {
+   "uz": [
+    "$E>V_0$ da to'siq ichida to'lqin tebranadi: $$T=\\left[1+\\frac{V_0^2\\sin^2k'a}{4E\\left(E-V_0\\right)}\\right]^{-1},\\qquad k'=\\sqrt{\\frac{E-V_0}{0.0381}}\\ \\mathrm{nm^{-1}}$$",
+    "$T=1$, agar $\\sin k'a=0$: $$k'a=n\\pi\\ \\Rightarrow\\ E_n=V_0+\\frac{n^2\\pi^2\\cdot0.0381}{a^2}$$",
+    "a) Sonlar ($\\pi^2\\cdot0.0381\\approx0.376$): $$E_1\\approx2.38\\ \\mathrm{eV},\\qquad E_2\\approx3.50\\ \\mathrm{eV},\\qquad E_3\\approx5.38\\ \\mathrm{eV}$$",
+    "b) $E=3.0\\ \\mathrm{eV}$ da $k'a=\\sqrt{\\frac{1.0}{0.0381}}\\approx5.12$, $\\sin^2k'a\\approx0.84$: $$T=\\left[1+\\frac{4\\cdot0.84}{4\\cdot3.0\\cdot1.0}\\right]^{-1}\\approx0.78$$",
+    "Klassik zarra albatta o'tardi; kvantda har beshtadan taxminan bittasi qaytadi."
+   ],
+   "ru": [
+    "При $E>V_0$ волна внутри барьера осциллирует: $$T=\\left[1+\\frac{V_0^2\\sin^2k'a}{4E\\left(E-V_0\\right)}\\right]^{-1},\\qquad k'=\\sqrt{\\frac{E-V_0}{0.0381}}\\ \\mathrm{nm^{-1}}$$",
+    "$T=1$, если $\\sin k'a=0$: $$k'a=n\\pi\\ \\Rightarrow\\ E_n=V_0+\\frac{n^2\\pi^2\\cdot0.0381}{a^2}$$",
+    "а) Числа ($\\pi^2\\cdot0.0381\\approx0.376$): $$E_1\\approx2.38\\ \\mathrm{eV},\\qquad E_2\\approx3.50\\ \\mathrm{eV},\\qquad E_3\\approx5.38\\ \\mathrm{eV}$$",
+    "б) При $E=3.0\\ \\mathrm{eV}$ $k'a=\\sqrt{\\frac{1.0}{0.0381}}\\approx5.12$, $\\sin^2k'a\\approx0.84$: $$T=\\left[1+\\frac{4\\cdot0.84}{4\\cdot3.0\\cdot1.0}\\right]^{-1}\\approx0.78$$",
+    "Классическая частица обязательно прошла бы; в квантовом случае примерно каждая пятая отражается."
+   ],
+   "en": [
+    "For $E>V_0$ the wave oscillates inside the barrier: $$T=\\left[1+\\frac{V_0^2\\sin^2k'a}{4E\\left(E-V_0\\right)}\\right]^{-1},\\qquad k'=\\sqrt{\\frac{E-V_0}{0.0381}}\\ \\mathrm{nm^{-1}}$$",
+    "$T=1$ if $\\sin k'a=0$: $$k'a=n\\pi\\ \\Rightarrow\\ E_n=V_0+\\frac{n^2\\pi^2\\cdot0.0381}{a^2}$$",
+    "a) The numbers ($\\pi^2\\cdot0.0381\\approx0.376$): $$E_1\\approx2.38\\ \\mathrm{eV},\\qquad E_2\\approx3.50\\ \\mathrm{eV},\\qquad E_3\\approx5.38\\ \\mathrm{eV}$$",
+    "b) At $E=3.0\\ \\mathrm{eV}$, $k'a=\\sqrt{\\frac{1.0}{0.0381}}\\approx5.12$ and $\\sin^2k'a\\approx0.84$: $$T=\\left[1+\\frac{4\\cdot0.84}{4\\cdot3.0\\cdot1.0}\\right]^{-1}\\approx0.78$$",
+    "A classical particle would always pass; quantum mechanically about one in five is reflected."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'siq ustidan o'tish: $T=\\left[1+\\frac{V_0^2\\sin^2k'a}{4E\\left(E-V_0\\right)}\\right]^{-1}$",
+    "ru": "Прохождение над барьером: $T=\\left[1+\\frac{V_0^2\\sin^2k'a}{4E\\left(E-V_0\\right)}\\right]^{-1}$",
+    "en": "Transmission over a barrier: $T=\\left[1+\\frac{V_0^2\\sin^2k'a}{4E\\left(E-V_0\\right)}\\right]^{-1}$"
+   },
+   {
+    "uz": "Shaffoflik rezonansi: $k'a=n\\pi$",
+    "ru": "Резонанс прозрачности: $k'a=n\\pi$",
+    "en": "Transparency resonance: $k'a=n\\pi$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "To'siq ustidan o'tishdagi shaffoflik rezonanslari",
+   "ru": "Резонансы прозрачности при прохождении над барьером",
+   "en": "Transparency resonances in transmission over a barrier"
+  },
+  "answer": "E_n\\approx2.38;\\ 3.50;\\ 5.38\\ \\mathrm{eV};\\ T\\left(3.0\\right)\\approx0.78",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S06",
+  "source": "original (B3-L05, S06)"
+ },
+ {
+  "id": "B3-L05-S07",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Sekin elektronlar uchun atomni chuqurligi $V_0=9.0\\ \\mathrm{eV}$, kengligi $a=0.40\\ \\mathrm{nm}$ bo'lgan bir o'lchovli to'rtburchak o'ra deb modellashtiramiz. a) Elektronlar o'radan qaytmay o'tadigan eng kichik energiyani toping. b) Keyingi shunday energiya qancha? c) Bu qaysi tajriba effektini tushuntiradi? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "ru": "Для медленных электронов моделируем атом одномерной прямоугольной ямой глубиной $V_0=9.0\\ \\mathrm{eV}$ и шириной $a=0.40\\ \\mathrm{nm}$. а) Найдите наименьшую энергию, при которой электроны проходят над ямой без отражения. б) Какова следующая такая энергия? в) Какой экспериментальный эффект это объясняет? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "en": "For slow electrons we model an atom as a one-dimensional square well of depth $V_0=9.0\\ \\mathrm{eV}$ and width $a=0.40\\ \\mathrm{nm}$. a) Find the lowest energy at which electrons pass over the well without reflection. b) What is the next such energy? c) Which experimental effect does this explain? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$."
+  },
+  "figure": "figures/B3-L05-S07.png",
+  "solution": {
+   "uz": [
+    "O'ra ustida to'lqin soni kattaroq: $$k'=\\sqrt{\\frac{E+V_0}{0.0381}}\\ \\mathrm{nm^{-1}},\\qquad T=\\left[1+\\frac{V_0^2\\sin^2k'a}{4E\\left(E+V_0\\right)}\\right]^{-1}$$",
+    "$T=1$ sharti: $$k'a=n\\pi\\ \\Rightarrow\\ E_n=\\frac{n^2\\pi^2\\cdot0.0381}{a^2}-V_0=n^2\\cdot2.35\\ \\mathrm{eV}-9.0\\ \\mathrm{eV}$$",
+    "a) $n=1$ manfiy ($2.35<9.0$) — fizik emas; birinchi yechim $n=2$: $$E_2=4\\cdot2.35-9.0\\approx0.40\\ \\mathrm{eV}$$",
+    "b) Keyingisi $n=3$: $$E_3=9\\cdot2.35-9.0\\approx12.2\\ \\mathrm{eV}$$",
+    "c) Ramzauer–Taunsend effekti: inert gaz atomlari past energiyali elektronlar uchun deyarli «shaffof»."
+   ],
+   "ru": [
+    "Над ямой волновое число больше: $$k'=\\sqrt{\\frac{E+V_0}{0.0381}}\\ \\mathrm{nm^{-1}},\\qquad T=\\left[1+\\frac{V_0^2\\sin^2k'a}{4E\\left(E+V_0\\right)}\\right]^{-1}$$",
+    "Условие $T=1$: $$k'a=n\\pi\\ \\Rightarrow\\ E_n=\\frac{n^2\\pi^2\\cdot0.0381}{a^2}-V_0=n^2\\cdot2.35\\ \\mathrm{eV}-9.0\\ \\mathrm{eV}$$",
+    "а) $n=1$ даёт отрицательное значение ($2.35<9.0$) — не физично; первое решение $n=2$: $$E_2=4\\cdot2.35-9.0\\approx0.40\\ \\mathrm{eV}$$",
+    "б) Следующее $n=3$: $$E_3=9\\cdot2.35-9.0\\approx12.2\\ \\mathrm{eV}$$",
+    "в) Эффект Рамзауэра–Таунсенда: атомы инертных газов почти «прозрачны» для медленных электронов."
+   ],
+   "en": [
+    "Above the well the wave number is larger: $$k'=\\sqrt{\\frac{E+V_0}{0.0381}}\\ \\mathrm{nm^{-1}},\\qquad T=\\left[1+\\frac{V_0^2\\sin^2k'a}{4E\\left(E+V_0\\right)}\\right]^{-1}$$",
+    "The condition $T=1$: $$k'a=n\\pi\\ \\Rightarrow\\ E_n=\\frac{n^2\\pi^2\\cdot0.0381}{a^2}-V_0=n^2\\cdot2.35\\ \\mathrm{eV}-9.0\\ \\mathrm{eV}$$",
+    "a) $n=1$ gives a negative value ($2.35<9.0$) — unphysical; the first solution is $n=2$: $$E_2=4\\cdot2.35-9.0\\approx0.40\\ \\mathrm{eV}$$",
+    "b) The next one is $n=3$: $$E_3=9\\cdot2.35-9.0\\approx12.2\\ \\mathrm{eV}$$",
+    "c) The Ramsauer–Townsend effect: noble-gas atoms are almost «transparent» to slow electrons."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "O'ra ustidan o'tish: $k'=\\frac{\\sqrt{2m\\left(E+V_0\\right)}}{\\hbar}$",
+    "ru": "Прохождение над ямой: $k'=\\frac{\\sqrt{2m\\left(E+V_0\\right)}}{\\hbar}$",
+    "en": "Transmission over a well: $k'=\\frac{\\sqrt{2m\\left(E+V_0\\right)}}{\\hbar}$"
+   },
+   {
+    "uz": "Shaffoflik rezonansi: $k'a=n\\pi$",
+    "ru": "Резонанс прозрачности: $k'a=n\\pi$",
+    "en": "Transparency resonance: $k'a=n\\pi$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "O'ra ustidan o'tishdagi rezonans va Ramzauer effekti",
+   "ru": "Резонанс при прохождении над ямой и эффект Рамзауэра",
+   "en": "Resonance in transmission over a well and the Ramsauer effect"
+  },
+  "answer": "E\\approx0.40\\ \\mathrm{eV};\\ E'\\approx12.2\\ \\mathrm{eV}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S07",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 5.6 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L05-S08",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Elektron kuchi $\\alpha=0.20\\ \\mathrm{eV\\cdot nm}$ bo'lgan delta to'siqqa ($V=\\alpha\\delta\\left(x\\right)$) tushadi. a) $E=1.0\\ \\mathrm{eV}$ da o'tish ehtimolligini toping. b) Qaysi energiyada $T=\\frac{1}{2}$? c) Energiya ortganda $T$ qanday o'zgaradi? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "ru": "Электрон падает на дельта-барьер ($V=\\alpha\\delta\\left(x\\right)$) силы $\\alpha=0.20\\ \\mathrm{eV\\cdot nm}$. а) Найдите вероятность прохождения при $E=1.0\\ \\mathrm{eV}$. б) При какой энергии $T=\\frac{1}{2}$? в) Как меняется $T$ с ростом энергии? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "en": "An electron is incident on a delta barrier ($V=\\alpha\\delta\\left(x\\right)$) of strength $\\alpha=0.20\\ \\mathrm{eV\\cdot nm}$. a) Find the transmission probability at $E=1.0\\ \\mathrm{eV}$. b) At what energy is $T=\\frac{1}{2}$? c) How does $T$ change as the energy grows? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$."
+  },
+  "figure": "figures/B3-L05-S08.png",
+  "solution": {
+   "uz": [
+    "Hosila sakrashidan (B3-L03): $$T=\\frac{1}{1+\\beta^2},\\qquad \\beta^2=\\frac{m^2\\alpha^2}{\\hbar^4k^2}=\\frac{m\\alpha^2}{2\\hbar^2E}=\\frac{\\alpha^2}{4\\cdot0.0381\\cdot E}$$",
+    "a) Sonlar: $$\\beta^2=\\frac{0.20^2}{4\\cdot0.0381\\cdot1.0}\\approx0.262,\\qquad T\\approx\\frac{1}{1.262}\\approx0.79$$",
+    "b) $T=\\frac{1}{2}$ da $\\beta^2=1$: $$E=\\frac{\\alpha^2}{4\\cdot0.0381}\\approx0.26\\ \\mathrm{eV}$$",
+    "c) $\\beta^2\\propto\\frac{1}{E}$ — $T$ monoton ortib, $1$ ga intiladi; eksponenta yo'q: $$E\\to\\infty:\\ T\\to1$$"
+   ],
+   "ru": [
+    "Из скачка производной (B3-L03): $$T=\\frac{1}{1+\\beta^2},\\qquad \\beta^2=\\frac{m^2\\alpha^2}{\\hbar^4k^2}=\\frac{m\\alpha^2}{2\\hbar^2E}=\\frac{\\alpha^2}{4\\cdot0.0381\\cdot E}$$",
+    "а) Числа: $$\\beta^2=\\frac{0.20^2}{4\\cdot0.0381\\cdot1.0}\\approx0.262,\\qquad T\\approx\\frac{1}{1.262}\\approx0.79$$",
+    "б) При $T=\\frac{1}{2}$ $\\beta^2=1$: $$E=\\frac{\\alpha^2}{4\\cdot0.0381}\\approx0.26\\ \\mathrm{eV}$$",
+    "в) $\\beta^2\\propto\\frac{1}{E}$ — $T$ монотонно растёт к $1$; экспоненты нет: $$E\\to\\infty:\\ T\\to1$$"
+   ],
+   "en": [
+    "From the derivative jump (B3-L03): $$T=\\frac{1}{1+\\beta^2},\\qquad \\beta^2=\\frac{m^2\\alpha^2}{\\hbar^4k^2}=\\frac{m\\alpha^2}{2\\hbar^2E}=\\frac{\\alpha^2}{4\\cdot0.0381\\cdot E}$$",
+    "a) The numbers: $$\\beta^2=\\frac{0.20^2}{4\\cdot0.0381\\cdot1.0}\\approx0.262,\\qquad T\\approx\\frac{1}{1.262}\\approx0.79$$",
+    "b) For $T=\\frac{1}{2}$, $\\beta^2=1$: $$E=\\frac{\\alpha^2}{4\\cdot0.0381}\\approx0.26\\ \\mathrm{eV}$$",
+    "c) $\\beta^2\\propto\\frac{1}{E}$ — $T$ grows monotonically toward $1$; there is no exponential: $$E\\to\\infty:\\ T\\to1$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Delta to'siq: $T=\\left(1+\\frac{m\\alpha^2}{2\\hbar^2E}\\right)^{-1}$",
+    "ru": "Дельта-барьер: $T=\\left(1+\\frac{m\\alpha^2}{2\\hbar^2E}\\right)^{-1}$",
+    "en": "Delta barrier: $T=\\left(1+\\frac{m\\alpha^2}{2\\hbar^2E}\\right)^{-1}$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Delta to'siq orqali o'tish",
+   "ru": "Прохождение через дельта-барьер",
+   "en": "Transmission through a delta barrier"
+  },
+  "answer": "T\\left(1.0\\ \\mathrm{eV}\\right)\\approx0.79;\\ E_{1/2}\\approx0.26\\ \\mathrm{eV}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S08",
+  "source": "original (B3-L05, S08)"
+ },
+ {
+  "id": "B3-L05-S09",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Rezonans tunnel diodda kengligi $L=5.0\\ \\mathrm{nm}$ bo'lgan $\\mathrm{GaAs}$ o'ra ikki yupqa $\\mathrm{AlGaAs}$ to'siq bilan o'ralgan; $m^*=0.067m_e$. a) Kuchli to'siqlar yaqinlashuvida dastlabki ikki kvazibog'langan sathni toping. b) Har bir to'siqda $T_1=0.01$ bo'lsa, rezonansda tizimning o'tish ehtimolligi qancha? To'siqlar $0.01$ va $0.04$ bo'lsachi? c) Emitter elektronlari energiyasi $\\approx0$ bo'lsa, birinchi tok cho'qqisi taxminan qanday kuchlanishda bo'ladi (kuchlanishning yarmi o'raga qadar tushadi deb hisoblang)? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "ru": "В резонансно-туннельном диоде яма $\\mathrm{GaAs}$ шириной $L=5.0\\ \\mathrm{nm}$ окружена двумя тонкими барьерами $\\mathrm{AlGaAs}$; $m^*=0.067m_e$. а) В приближении сильных барьеров найдите первые два квазисвязанных уровня. б) Если для каждого барьера $T_1=0.01$, какова вероятность прохождения системы на резонансе? А если барьеры $0.01$ и $0.04$? в) Если энергия электронов эмиттера $\\approx0$, при каком примерно напряжении будет первый пик тока (считайте, что до ямы падает половина напряжения)? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "en": "In a resonant tunneling diode a $\\mathrm{GaAs}$ well of width $L=5.0\\ \\mathrm{nm}$ is surrounded by two thin $\\mathrm{AlGaAs}$ barriers; $m^*=0.067m_e$. a) In the strong-barrier approximation find the first two quasi-bound levels. b) If each barrier has $T_1=0.01$, what is the transmission probability of the system at resonance? What if the barriers are $0.01$ and $0.04$? c) If the emitter electrons have energy $\\approx0$, at roughly what voltage is the first current peak (assume half the voltage drops before the well)? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$."
+  },
+  "figure": "figures/B3-L05-S09.png",
+  "solution": {
+   "uz": [
+    "Kuchli to'siqlar orasidagi o'ra — deyarli cheksiz o'ra, effektiv massa bilan: $$E_n\\approx\\frac{n^2\\pi^2\\hbar^2}{2m^*L^2}=\\frac{n^2\\pi^2\\cdot0.0381}{0.067\\cdot5.0^2}\\ \\mathrm{eV}$$",
+    "a) Sathlar: $$E_1\\approx0.22\\ \\mathrm{eV},\\qquad E_2\\approx0.90\\ \\mathrm{eV}$$",
+    "b) Simmetrik tizimda ko'p marta qaytgan to'lqinlar konstruktiv qo'shiladi: $$T_{max}=\\frac{4T_1T_2}{\\left(T_1+T_2\\right)^2}=\\frac{4\\cdot0.01^2}{0.02^2}=1$$",
+    "Nosimmetrik to'siqlarda: $$T_{max}=\\frac{4\\cdot0.01\\cdot0.04}{0.05^2}=0.64$$",
+    "c) Rezonans — emitter sathi $E_1$ ga tenglashganda: $\\frac{eU}{2}\\approx E_1$: $$U\\approx\\frac{2E_1}{e}\\approx0.45\\ \\mathrm{V}$$"
+   ],
+   "ru": [
+    "Яма между сильными барьерами — почти бесконечная яма, с эффективной массой: $$E_n\\approx\\frac{n^2\\pi^2\\hbar^2}{2m^*L^2}=\\frac{n^2\\pi^2\\cdot0.0381}{0.067\\cdot5.0^2}\\ \\mathrm{eV}$$",
+    "а) Уровни: $$E_1\\approx0.22\\ \\mathrm{eV},\\qquad E_2\\approx0.90\\ \\mathrm{eV}$$",
+    "б) В симметричной системе многократно отражённые волны складываются конструктивно: $$T_{max}=\\frac{4T_1T_2}{\\left(T_1+T_2\\right)^2}=\\frac{4\\cdot0.01^2}{0.02^2}=1$$",
+    "Для несимметричных барьеров: $$T_{max}=\\frac{4\\cdot0.01\\cdot0.04}{0.05^2}=0.64$$",
+    "в) Резонанс — когда уровень эмиттера сравняется с $E_1$: $\\frac{eU}{2}\\approx E_1$: $$U\\approx\\frac{2E_1}{e}\\approx0.45\\ \\mathrm{V}$$"
+   ],
+   "en": [
+    "The well between strong barriers is almost an infinite well, with the effective mass: $$E_n\\approx\\frac{n^2\\pi^2\\hbar^2}{2m^*L^2}=\\frac{n^2\\pi^2\\cdot0.0381}{0.067\\cdot5.0^2}\\ \\mathrm{eV}$$",
+    "a) The levels: $$E_1\\approx0.22\\ \\mathrm{eV},\\qquad E_2\\approx0.90\\ \\mathrm{eV}$$",
+    "b) In a symmetric system the multiply reflected waves add constructively: $$T_{max}=\\frac{4T_1T_2}{\\left(T_1+T_2\\right)^2}=\\frac{4\\cdot0.01^2}{0.02^2}=1$$",
+    "For asymmetric barriers: $$T_{max}=\\frac{4\\cdot0.01\\cdot0.04}{0.05^2}=0.64$$",
+    "c) Resonance occurs when the emitter level aligns with $E_1$: $\\frac{eU}{2}\\approx E_1$: $$U\\approx\\frac{2E_1}{e}\\approx0.45\\ \\mathrm{V}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Ikki to'siqli rezonans: $E_n\\approx\\frac{n^2\\pi^2\\hbar^2}{2mL^2}$",
+    "ru": "Резонанс двойного барьера: $E_n\\approx\\frac{n^2\\pi^2\\hbar^2}{2mL^2}$",
+    "en": "Double-barrier resonance: $E_n\\approx\\frac{n^2\\pi^2\\hbar^2}{2mL^2}$"
+   },
+   null,
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Ikki to'siqli rezonans tunnel, kvazibog'langan sathlar",
+   "ru": "Резонансное туннелирование через двойной барьер, квазисвязанные уровни",
+   "en": "Resonant tunneling through a double barrier, quasi-bound levels"
+  },
+  "answer": "E_1\\approx0.22\\ \\mathrm{eV};\\ E_2\\approx0.90\\ \\mathrm{eV};\\ T_{max}=1;\\ 0.64;\\ U\\approx0.45\\ \\mathrm{V}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S09",
+  "source": "original (B3-L05, S09)"
+ },
+ {
+  "id": "B3-L05-S10",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Volfram sirtida ($\\varphi=4.5\\ \\mathrm{eV}$) elektr maydon $F=5.0\\ \\mathrm{V/nm}$. a) Fermi sathidagi elektron uchun to'siq shakli va kengligini toping. b) VKB yaqinlashuvida tunnel ehtimolligini baholang. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "ru": "У поверхности вольфрама ($\\varphi=4.5\\ \\mathrm{eV}$) электрическое поле $F=5.0\\ \\mathrm{V/nm}$. а) Найдите форму и ширину барьера для электрона на уровне Ферми. б) Оцените вероятность туннелирования в приближении ВКБ. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "en": "At a tungsten surface ($\\varphi=4.5\\ \\mathrm{eV}$) the electric field is $F=5.0\\ \\mathrm{V/nm}$. a) Find the shape and width of the barrier for an electron at the Fermi level. b) Estimate the tunneling probability in the WKB approximation. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$."
+  },
+  "figure": "figures/B3-L05-S10.png",
+  "solution": {
+   "uz": [
+    "Tashqarida maydon potensial energiyani chiziqli kamaytiradi — uchburchak to'siq: $$V-E=\\varphi-eFx,\\qquad d=\\frac{\\varphi}{eF}=\\frac{4.5}{5.0}\\ \\mathrm{nm}=0.90\\ \\mathrm{nm}$$",
+    "b) VKB integrali qaytish nuqtalari $0$ va $d$ orasida: $$2\\gamma=2\\int_0^d\\sqrt{\\frac{\\varphi-eFx}{0.0381}}dx=\\frac{4}{3}\\frac{\\varphi^{3/2}}{\\sqrt{0.0381}\\,eF}$$",
+    "Sonlar ($4.5^{3/2}\\approx9.55$, $\\sqrt{0.0381}\\approx0.195$): $$2\\gamma\\approx\\frac{4}{3}\\cdot\\frac{9.55}{0.195\\cdot5.0}\\approx13.0$$",
+    "Tunnel ehtimolligi: $$T\\approx e^{-13.0}\\approx2.2\\cdot10^{-6}$$"
+   ],
+   "ru": [
+    "Снаружи поле линейно уменьшает потенциальную энергию — треугольный барьер: $$V-E=\\varphi-eFx,\\qquad d=\\frac{\\varphi}{eF}=\\frac{4.5}{5.0}\\ \\mathrm{nm}=0.90\\ \\mathrm{nm}$$",
+    "б) Интеграл ВКБ между точками поворота $0$ и $d$: $$2\\gamma=2\\int_0^d\\sqrt{\\frac{\\varphi-eFx}{0.0381}}dx=\\frac{4}{3}\\frac{\\varphi^{3/2}}{\\sqrt{0.0381}\\,eF}$$",
+    "Числа ($4.5^{3/2}\\approx9.55$, $\\sqrt{0.0381}\\approx0.195$): $$2\\gamma\\approx\\frac{4}{3}\\cdot\\frac{9.55}{0.195\\cdot5.0}\\approx13.0$$",
+    "Вероятность туннелирования: $$T\\approx e^{-13.0}\\approx2.2\\cdot10^{-6}$$"
+   ],
+   "en": [
+    "Outside, the field lowers the potential energy linearly — a triangular barrier: $$V-E=\\varphi-eFx,\\qquad d=\\frac{\\varphi}{eF}=\\frac{4.5}{5.0}\\ \\mathrm{nm}=0.90\\ \\mathrm{nm}$$",
+    "b) The WKB integral between the turning points $0$ and $d$: $$2\\gamma=2\\int_0^d\\sqrt{\\frac{\\varphi-eFx}{0.0381}}dx=\\frac{4}{3}\\frac{\\varphi^{3/2}}{\\sqrt{0.0381}\\,eF}$$",
+    "The numbers ($4.5^{3/2}\\approx9.55$, $\\sqrt{0.0381}\\approx0.195$): $$2\\gamma\\approx\\frac{4}{3}\\cdot\\frac{9.55}{0.195\\cdot5.0}\\approx13.0$$",
+    "The tunneling probability: $$T\\approx e^{-13.0}\\approx2.2\\cdot10^{-6}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "VKB yaqinlashuvi: $T\\approx\\exp\\left(-2\\int_{x_1}^{x_2}\\kappa\\,dx\\right)$",
+    "ru": "Приближение ВКБ: $T\\approx\\exp\\left(-2\\int_{x_1}^{x_2}\\kappa\\,dx\\right)$",
+    "en": "WKB approximation: $T\\approx\\exp\\left(-2\\int_{x_1}^{x_2}\\kappa\\,dx\\right)$"
+   },
+   {
+    "uz": "Fauler–Nordgeym ko'rsatkichi: $2\\gamma=\\frac{4\\sqrt{2m}\\,\\varphi^{3/2}}{3\\hbar eF}$",
+    "ru": "Показатель Фаулера–Нордгейма: $2\\gamma=\\frac{4\\sqrt{2m}\\,\\varphi^{3/2}}{3\\hbar eF}$",
+    "en": "Fowler–Nordheim exponent: $2\\gamma=\\frac{4\\sqrt{2m}\\,\\varphi^{3/2}}{3\\hbar eF}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Maydon emissiyasi: uchburchak to'siq va VKB",
+   "ru": "Полевая эмиссия: треугольный барьер и ВКБ",
+   "en": "Field emission: a triangular barrier and WKB"
+  },
+  "answer": "d=0.90\\ \\mathrm{nm};\\ 2\\gamma\\approx13.0;\\ T\\approx2.2\\cdot10^{-6}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S10",
+  "source": "original (B3-L05, S10)"
+ },
+ {
+  "id": "B3-L05-S11",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Skanerlovchi tunnel mikroskopda vakuum to'sig'ining balandligi taxminan $\\varphi=4.0\\ \\mathrm{eV}$. a) $\\kappa$ ni toping. b) Uch sirtga $0.10\\ \\mathrm{nm}$ yaqinlashganda tok necha marta ortadi? c) Asbob tokni $1$ foiz aniqlikda o'lchasa, qanday balandlik o'zgarishini sezadi? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "ru": "В сканирующем туннельном микроскопе высота вакуумного барьера примерно $\\varphi=4.0\\ \\mathrm{eV}$. а) Найдите $\\kappa$. б) Во сколько раз растёт ток при приближении острия к поверхности на $0.10\\ \\mathrm{nm}$? в) Если прибор измеряет ток с точностью $1$ процент, какое изменение высоты он чувствует? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "en": "In a scanning tunneling microscope the vacuum barrier height is about $\\varphi=4.0\\ \\mathrm{eV}$. a) Find $\\kappa$. b) By what factor does the current grow when the tip moves $0.10\\ \\mathrm{nm}$ closer to the surface? c) If the instrument measures the current to $1$ percent, what height change can it sense? $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$."
+  },
+  "figure": "figures/B3-L05-S11.png",
+  "solution": {
+   "uz": [
+    "a) Fermi sathidagi elektron uchun to'siq ustida $\\varphi$: $$\\kappa=\\sqrt{\\frac{4.0}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx10.2\\ \\mathrm{nm^{-1}}$$",
+    "Tok tunnel ehtimolligiga proporsional: $$I\\propto e^{-2\\kappa d}$$",
+    "b) Masofa kamayganda: $$\\frac{I_2}{I_1}=e^{2\\kappa\\Delta d}=e^{2\\cdot10.2\\cdot0.10}=e^{2.05}\\approx7.8$$",
+    "c) Logarifmik hosila: $\\frac{\\Delta I}{I}=2\\kappa\\Delta d$: $$\\Delta d=\\frac{0.01}{2\\cdot10.2}\\ \\mathrm{nm}\\approx4.9\\cdot10^{-4}\\ \\mathrm{nm}\\approx0.5\\ \\mathrm{pm}$$"
+   ],
+   "ru": [
+    "а) Для электрона на уровне Ферми превышение барьера $\\varphi$: $$\\kappa=\\sqrt{\\frac{4.0}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx10.2\\ \\mathrm{nm^{-1}}$$",
+    "Ток пропорционален вероятности туннелирования: $$I\\propto e^{-2\\kappa d}$$",
+    "б) При уменьшении расстояния: $$\\frac{I_2}{I_1}=e^{2\\kappa\\Delta d}=e^{2\\cdot10.2\\cdot0.10}=e^{2.05}\\approx7.8$$",
+    "в) Логарифмическая производная: $\\frac{\\Delta I}{I}=2\\kappa\\Delta d$: $$\\Delta d=\\frac{0.01}{2\\cdot10.2}\\ \\mathrm{nm}\\approx4.9\\cdot10^{-4}\\ \\mathrm{nm}\\approx0.5\\ \\mathrm{pm}$$"
+   ],
+   "en": [
+    "a) For an electron at the Fermi level the barrier excess is $\\varphi$: $$\\kappa=\\sqrt{\\frac{4.0}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx10.2\\ \\mathrm{nm^{-1}}$$",
+    "The current is proportional to the tunneling probability: $$I\\propto e^{-2\\kappa d}$$",
+    "b) When the distance decreases: $$\\frac{I_2}{I_1}=e^{2\\kappa\\Delta d}=e^{2\\cdot10.2\\cdot0.10}=e^{2.05}\\approx7.8$$",
+    "c) The logarithmic derivative: $\\frac{\\Delta I}{I}=2\\kappa\\Delta d$: $$\\Delta d=\\frac{0.01}{2\\cdot10.2}\\ \\mathrm{nm}\\approx4.9\\cdot10^{-4}\\ \\mathrm{nm}\\approx0.5\\ \\mathrm{pm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Elektron uchun: $\\kappa=\\sqrt{\\frac{V_0-E}{0.0381}}\\ \\mathrm{nm^{-1}}$",
+    "ru": "Для электрона: $\\kappa=\\sqrt{\\frac{V_0-E}{0.0381}}\\ \\mathrm{nm^{-1}}$",
+    "en": "For an electron: $\\kappa=\\sqrt{\\frac{V_0-E}{0.0381}}\\ \\mathrm{nm^{-1}}$"
+   },
+   {
+    "uz": "Tunnel mikroskop toki: $I\\propto e^{-2\\kappa d}$",
+    "ru": "Ток туннельного микроскопа: $I\\propto e^{-2\\kappa d}$",
+    "en": "Tunneling-microscope current: $I\\propto e^{-2\\kappa d}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Tunnel mikroskop: tokning masofaga eksponensial bog'liqligi",
+   "ru": "Туннельный микроскоп: экспоненциальная зависимость тока от расстояния",
+   "en": "The tunneling microscope: exponential dependence of current on distance"
+  },
+  "answer": "\\kappa\\approx10.2\\ \\mathrm{nm^{-1}};\\ \\frac{I_2}{I_1}\\approx7.8;\\ \\Delta d\\approx0.5\\ \\mathrm{pm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S11",
+  "source": "OpenStax University Physics, 3-jild, 7.6 bo'limi, 7.6 bo'limi 3- masalasi g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L05-S12",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Qiz yadro zaryadi $Z_d=88$ bo'lgan ikki alfa-yemirilishda alfa-zarra energiyalari $4.0\\ \\mathrm{MeV}$ va $5.0\\ \\mathrm{MeV}$. Kulon to'sig'ini yupqa yadro yaqinlashuvida ($b\\gg R$) hisoblab, Gamov ko'rsatkichini toping va yarim yemirilish davrlari nisbatini baholang. $m_{\\alpha}c^2=3727\\ \\mathrm{MeV}$, $\\alpha=\\frac{1}{137}$.",
+   "ru": "В двух альфа-распадах с зарядом дочернего ядра $Z_d=88$ энергии альфа-частиц $4.0\\ \\mathrm{MeV}$ и $5.0\\ \\mathrm{MeV}$. Считая кулоновский барьер в приближении точечного ядра ($b\\gg R$), найдите показатель Гамова и оцените отношение периодов полураспада. $m_{\\alpha}c^2=3727\\ \\mathrm{MeV}$, $\\alpha=\\frac{1}{137}$.",
+   "en": "In two alpha decays with daughter charge $Z_d=88$ the alpha-particle energies are $4.0\\ \\mathrm{MeV}$ and $5.0\\ \\mathrm{MeV}$. Treating the Coulomb barrier in the point-nucleus approximation ($b\\gg R$), find the Gamow exponent and estimate the ratio of the half-lives. $m_{\\alpha}c^2=3727\\ \\mathrm{MeV}$, $\\alpha=\\frac{1}{137}$."
+  },
+  "figure": "figures/B3-L05-S12.png",
+  "solution": {
+   "uz": [
+    "Kulon to'sig'i uchun VKB ($b\\gg R$): $$2\\gamma\\approx2\\pi\\cdot2Z_d\\alpha\\frac{c}{v},\\qquad \\frac{c}{v}=\\sqrt{\\frac{m_{\\alpha}c^2}{2E}}$$",
+    "Tezliklar: $$\\frac{c}{v_1}=\\sqrt{\\frac{3727}{8.0}}\\approx21.6,\\qquad \\frac{c}{v_2}=\\sqrt{\\frac{3727}{10}}\\approx19.3$$",
+    "Ko'rsatkichlar ($2\\pi\\cdot2\\cdot88\\cdot\\frac{1}{137}\\approx8.07$): $$2\\gamma_1\\approx174,\\qquad 2\\gamma_2\\approx156$$",
+    "Urilish chastotasi yaqin, shuning uchun davrlar nisbati $e^{2\\gamma_1-2\\gamma_2}$: $$\\frac{t_1}{t_2}\\approx e^{18.4}\\approx10^{8}$$",
+    "Energiya $25$ foizga o'zgarganda umr $10^8$ marta o'zgaradi — Geyger–Nettol qonunining mohiyati ($b\\gg R$ yaqinlashuvi aniq son emas, tartibni beradi)."
+   ],
+   "ru": [
+    "ВКБ для кулоновского барьера ($b\\gg R$): $$2\\gamma\\approx2\\pi\\cdot2Z_d\\alpha\\frac{c}{v},\\qquad \\frac{c}{v}=\\sqrt{\\frac{m_{\\alpha}c^2}{2E}}$$",
+    "Скорости: $$\\frac{c}{v_1}=\\sqrt{\\frac{3727}{8.0}}\\approx21.6,\\qquad \\frac{c}{v_2}=\\sqrt{\\frac{3727}{10}}\\approx19.3$$",
+    "Показатели ($2\\pi\\cdot2\\cdot88\\cdot\\frac{1}{137}\\approx8.07$): $$2\\gamma_1\\approx174,\\qquad 2\\gamma_2\\approx156$$",
+    "Частоты ударов близки, поэтому отношение периодов $e^{2\\gamma_1-2\\gamma_2}$: $$\\frac{t_1}{t_2}\\approx e^{18.4}\\approx10^{8}$$",
+    "При изменении энергии на $25$ процентов время жизни меняется в $10^8$ раз — суть закона Гейгера–Нэттола (приближение $b\\gg R$ даёт не точное число, а порядок)."
+   ],
+   "en": [
+    "WKB for the Coulomb barrier ($b\\gg R$): $$2\\gamma\\approx2\\pi\\cdot2Z_d\\alpha\\frac{c}{v},\\qquad \\frac{c}{v}=\\sqrt{\\frac{m_{\\alpha}c^2}{2E}}$$",
+    "The speeds: $$\\frac{c}{v_1}=\\sqrt{\\frac{3727}{8.0}}\\approx21.6,\\qquad \\frac{c}{v_2}=\\sqrt{\\frac{3727}{10}}\\approx19.3$$",
+    "The exponents ($2\\pi\\cdot2\\cdot88\\cdot\\frac{1}{137}\\approx8.07$): $$2\\gamma_1\\approx174,\\qquad 2\\gamma_2\\approx156$$",
+    "The hit frequencies are similar, so the half-life ratio is $e^{2\\gamma_1-2\\gamma_2}$: $$\\frac{t_1}{t_2}\\approx e^{18.4}\\approx10^{8}$$",
+    "A $25$ percent change in energy changes the lifetime by $10^8$ — the essence of the Geiger–Nuttall law (the $b\\gg R$ approximation gives the order of magnitude, not an exact number)."
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Gamov ko'rsatkichi: $2\\gamma\\approx2\\pi\\cdot2Z_d\\alpha\\frac{c}{v}$",
+    "ru": "Показатель Гамова: $2\\gamma\\approx2\\pi\\cdot2Z_d\\alpha\\frac{c}{v}$",
+    "en": "Gamow exponent: $2\\gamma\\approx2\\pi\\cdot2Z_d\\alpha\\frac{c}{v}$"
+   },
+   null,
+   null,
+   {
+    "uz": "Geyger–Nettol qonuni: $\\ln t_{1/2}=a\\frac{Z_d}{\\sqrt{E}}+b$",
+    "ru": "Закон Гейгера–Нэттола: $\\ln t_{1/2}=a\\frac{Z_d}{\\sqrt{E}}+b$",
+    "en": "Geiger–Nuttall law: $\\ln t_{1/2}=a\\frac{Z_d}{\\sqrt{E}}+b$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Alfa-yemirilishda Gamov ko'rsatkichi va Geyger–Nettol qonuni",
+   "ru": "Показатель Гамова при альфа-распаде и закон Гейгера–Нэттола",
+   "en": "The Gamow exponent in alpha decay and the Geiger–Nuttall law"
+  },
+  "answer": "2\\gamma_1\\approx174;\\ 2\\gamma_2\\approx156;\\ \\frac{t_1}{t_2}\\approx10^{8}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S12",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 12.3 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L05-S13",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Quyosh markazida ($kT\\approx1.3\\ \\mathrm{keV}$) ikki proton qo'shiladi. a) Proton–proton uchun Gamov energiyasini toping. b) $E=kT$ energiyali juftlik uchun tunnel ehtimolligini baholang. c) Gamov cho'qqisi energiyasini toping. d) Klassik yaqinlashish masofasi $r=\\frac{ke^2}{E}$ ni $E=kT$ da toping. $m_pc^2=938\\ \\mathrm{MeV}$, $\\alpha=\\frac{1}{137}$, $ke^2=1.44\\ \\mathrm{MeV\\cdot fm}$.",
+   "ru": "В центре Солнца ($kT\\approx1.3\\ \\mathrm{keV}$) сливаются два протона. а) Найдите энергию Гамова для протон–протон. б) Оцените вероятность туннелирования для пары с энергией $E=kT$. в) Найдите энергию гамовского пика. г) Найдите классическое расстояние сближения $r=\\frac{ke^2}{E}$ при $E=kT$. $m_pc^2=938\\ \\mathrm{MeV}$, $\\alpha=\\frac{1}{137}$, $ke^2=1.44\\ \\mathrm{MeV\\cdot fm}$.",
+   "en": "At the centre of the Sun ($kT\\approx1.3\\ \\mathrm{keV}$) two protons fuse. a) Find the Gamow energy for proton–proton. b) Estimate the tunneling probability for a pair with energy $E=kT$. c) Find the energy of the Gamow peak. d) Find the classical distance of closest approach $r=\\frac{ke^2}{E}$ at $E=kT$. $m_pc^2=938\\ \\mathrm{MeV}$, $\\alpha=\\frac{1}{137}$, $ke^2=1.44\\ \\mathrm{MeV\\cdot fm}$."
+  },
+  "figure": "figures/B3-L05-S13.png",
+  "solution": {
+   "uz": [
+    "Ikki jism — keltirilgan massa: $$m_rc^2=\\frac{938}{2}\\ \\mathrm{MeV}=469\\ \\mathrm{MeV}$$",
+    "a) $Z_1=Z_2=1$: $$E_G=2m_rc^2\\left(\\pi\\alpha\\right)^2=938\\cdot\\left(\\frac{\\pi}{137}\\right)^2\\ \\mathrm{MeV}\\approx0.493\\ \\mathrm{MeV}$$",
+    "b) Ko'rsatkich va ehtimollik: $$\\sqrt{\\frac{E_G}{E}}=\\sqrt{\\frac{493}{1.3}}\\approx19.5,\\qquad P\\approx e^{-19.5}\\approx3.5\\cdot10^{-9}$$",
+    "c) $e^{-E/kT}e^{-\\sqrt{E_G/E}}$ ning maksimumi: $$E_0=\\left(\\frac{493\\cdot1.3^2}{4}\\right)^{1/3}\\ \\mathrm{keV}\\approx5.9\\ \\mathrm{keV}\\approx4.6kT$$",
+    "d) Klassik zarra to'siqning faqat chetigacha yetadi — yadro kuchlari masofasidan ming marta uzoqda: $$r=\\frac{1.44\\ \\mathrm{MeV\\cdot fm}}{1.3\\cdot10^{-3}\\ \\mathrm{MeV}}\\approx1.1\\cdot10^{3}\\ \\mathrm{fm}$$"
+   ],
+   "ru": [
+    "Два тела — приведённая масса: $$m_rc^2=\\frac{938}{2}\\ \\mathrm{MeV}=469\\ \\mathrm{MeV}$$",
+    "а) $Z_1=Z_2=1$: $$E_G=2m_rc^2\\left(\\pi\\alpha\\right)^2=938\\cdot\\left(\\frac{\\pi}{137}\\right)^2\\ \\mathrm{MeV}\\approx0.493\\ \\mathrm{MeV}$$",
+    "б) Показатель и вероятность: $$\\sqrt{\\frac{E_G}{E}}=\\sqrt{\\frac{493}{1.3}}\\approx19.5,\\qquad P\\approx e^{-19.5}\\approx3.5\\cdot10^{-9}$$",
+    "в) Максимум $e^{-E/kT}e^{-\\sqrt{E_G/E}}$: $$E_0=\\left(\\frac{493\\cdot1.3^2}{4}\\right)^{1/3}\\ \\mathrm{keV}\\approx5.9\\ \\mathrm{keV}\\approx4.6kT$$",
+    "г) Классическая частица доходит лишь до края барьера — в тысячу раз дальше радиуса ядерных сил: $$r=\\frac{1.44\\ \\mathrm{MeV\\cdot fm}}{1.3\\cdot10^{-3}\\ \\mathrm{MeV}}\\approx1.1\\cdot10^{3}\\ \\mathrm{fm}$$"
+   ],
+   "en": [
+    "Two bodies — the reduced mass: $$m_rc^2=\\frac{938}{2}\\ \\mathrm{MeV}=469\\ \\mathrm{MeV}$$",
+    "a) $Z_1=Z_2=1$: $$E_G=2m_rc^2\\left(\\pi\\alpha\\right)^2=938\\cdot\\left(\\frac{\\pi}{137}\\right)^2\\ \\mathrm{MeV}\\approx0.493\\ \\mathrm{MeV}$$",
+    "b) The exponent and the probability: $$\\sqrt{\\frac{E_G}{E}}=\\sqrt{\\frac{493}{1.3}}\\approx19.5,\\qquad P\\approx e^{-19.5}\\approx3.5\\cdot10^{-9}$$",
+    "c) The maximum of $e^{-E/kT}e^{-\\sqrt{E_G/E}}$: $$E_0=\\left(\\frac{493\\cdot1.3^2}{4}\\right)^{1/3}\\ \\mathrm{keV}\\approx5.9\\ \\mathrm{keV}\\approx4.6kT$$",
+    "d) A classical particle reaches only the edge of the barrier — a thousand times farther than the range of nuclear forces: $$r=\\frac{1.44\\ \\mathrm{MeV\\cdot fm}}{1.3\\cdot10^{-3}\\ \\mathrm{MeV}}\\approx1.1\\cdot10^{3}\\ \\mathrm{fm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Keltirilgan massa: $m_r=\\frac{m_1m_2}{m_1+m_2}$",
+    "ru": "Приведённая масса: $m_r=\\frac{m_1m_2}{m_1+m_2}$",
+    "en": "Reduced mass: $m_r=\\frac{m_1m_2}{m_1+m_2}$"
+   },
+   {
+    "uz": "Gamov energiyasi: $E_G=2m_rc^2\\left(\\pi\\alpha Z_1Z_2\\right)^2$",
+    "ru": "Энергия Гамова: $E_G=2m_rc^2\\left(\\pi\\alpha Z_1Z_2\\right)^2$",
+    "en": "Gamow energy: $E_G=2m_rc^2\\left(\\pi\\alpha Z_1Z_2\\right)^2$"
+   },
+   null,
+   {
+    "uz": "Gamov cho'qqisi: $E_0=\\left(\\frac{E_G\\left(kT\\right)^2}{4}\\right)^{1/3}$",
+    "ru": "Гамовский пик: $E_0=\\left(\\frac{E_G\\left(kT\\right)^2}{4}\\right)^{1/3}$",
+    "en": "Gamow peak: $E_0=\\left(\\frac{E_G\\left(kT\\right)^2}{4}\\right)^{1/3}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Quyoshda termoyadro sintezi: Gamov energiyasi va cho'qqisi",
+   "ru": "Термоядерный синтез в Солнце: энергия и пик Гамова",
+   "en": "Fusion in the Sun: the Gamow energy and peak"
+  },
+  "answer": "E_G\\approx0.49\\ \\mathrm{MeV};\\ P\\approx3.5\\cdot10^{-9};\\ E_0\\approx5.9\\ \\mathrm{keV};\\ r\\approx1.1\\cdot10^{3}\\ \\mathrm{fm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S13",
+  "source": "Kahn & Anderson, «Conquering the Physics GRE», 12.4 g'oyasi asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L05-S14",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Balandligi $V_0=2.0\\ \\mathrm{eV}$, kengligi $a=0.10\\ \\mathrm{nm}$ bo'lgan to'siqqa $E=1.0\\ \\mathrm{eV}$ energiyali a) elektron, b) proton tushadi. O'tish ehtimolliklarini toping va solishtiring. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$, $\\frac{m_p}{m_e}=1836$.",
+   "ru": "На барьер высотой $V_0=2.0\\ \\mathrm{eV}$ и шириной $a=0.10\\ \\mathrm{nm}$ падает с энергией $E=1.0\\ \\mathrm{eV}$ а) электрон, б) протон. Найдите и сравните вероятности прохождения. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$, $\\frac{m_p}{m_e}=1836$.",
+   "en": "A barrier of height $V_0=2.0\\ \\mathrm{eV}$ and width $a=0.10\\ \\mathrm{nm}$ is hit at energy $E=1.0\\ \\mathrm{eV}$ by a) an electron, b) a proton. Find and compare the transmission probabilities. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$, $\\frac{m_p}{m_e}=1836$."
+  },
+  "figure": "figures/B3-L05-S14.png",
+  "solution": {
+   "uz": [
+    "a) Elektron: to'siq yupqa ($\\kappa a\\approx0.51$) — aniq formula, $E=\\frac{V_0}{2}$: $$T_e=\\frac{1}{\\cosh^2\\left(5.12\\cdot0.10\\right)}\\approx0.78$$",
+    "b) Proton uchun $\\kappa$ $\\sqrt{1836}\\approx42.8$ marta katta: $$\\kappa_p=5.12\\cdot42.8\\ \\mathrm{nm^{-1}}\\approx219\\ \\mathrm{nm^{-1}},\\qquad 2\\kappa_pa\\approx43.9$$",
+    "Proton uchun to'siq qalin: $$T_p\\approx4e^{-43.9}\\approx3.4\\cdot10^{-19}$$",
+    "Nisbat — bir xil to'siq, energiya, faqat massa farq qiladi: $$\\frac{T_p}{T_e}\\approx4\\cdot10^{-19}$$"
+   ],
+   "ru": [
+    "а) Электрон: барьер тонкий ($\\kappa a\\approx0.51$) — точная формула, $E=\\frac{V_0}{2}$: $$T_e=\\frac{1}{\\cosh^2\\left(5.12\\cdot0.10\\right)}\\approx0.78$$",
+    "б) У протона $\\kappa$ больше в $\\sqrt{1836}\\approx42.8$ раза: $$\\kappa_p=5.12\\cdot42.8\\ \\mathrm{nm^{-1}}\\approx219\\ \\mathrm{nm^{-1}},\\qquad 2\\kappa_pa\\approx43.9$$",
+    "Для протона барьер толстый: $$T_p\\approx4e^{-43.9}\\approx3.4\\cdot10^{-19}$$",
+    "Отношение — тот же барьер, та же энергия, отличается только масса: $$\\frac{T_p}{T_e}\\approx4\\cdot10^{-19}$$"
+   ],
+   "en": [
+    "a) Electron: the barrier is thin ($\\kappa a\\approx0.51$) — the exact formula, $E=\\frac{V_0}{2}$: $$T_e=\\frac{1}{\\cosh^2\\left(5.12\\cdot0.10\\right)}\\approx0.78$$",
+    "b) For the proton $\\kappa$ is $\\sqrt{1836}\\approx42.8$ times larger: $$\\kappa_p=5.12\\cdot42.8\\ \\mathrm{nm^{-1}}\\approx219\\ \\mathrm{nm^{-1}},\\qquad 2\\kappa_pa\\approx43.9$$",
+    "For the proton the barrier is thick: $$T_p\\approx4e^{-43.9}\\approx3.4\\cdot10^{-19}$$",
+    "The ratio — the same barrier and energy, only the mass differs: $$\\frac{T_p}{T_e}\\approx4\\cdot10^{-19}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "To'g'ri burchakli to'siq: $T=\\left[1+\\frac{V_0^2\\sinh^2\\kappa a}{4E\\left(V_0-E\\right)}\\right]^{-1}$",
+    "ru": "Прямоугольный барьер: $T=\\left[1+\\frac{V_0^2\\sinh^2\\kappa a}{4E\\left(V_0-E\\right)}\\right]^{-1}$",
+    "en": "Rectangular barrier: $T=\\left[1+\\frac{V_0^2\\sinh^2\\kappa a}{4E\\left(V_0-E\\right)}\\right]^{-1}$"
+   },
+   {
+    "uz": "Massaga bog'liqlik: $\\kappa\\propto\\sqrt{m}$",
+    "ru": "Зависимость от массы: $\\kappa\\propto\\sqrt{m}$",
+    "en": "Mass dependence: $\\kappa\\propto\\sqrt{m}$"
+   },
+   {
+    "uz": "Qalin to'siq: $T\\approx16\\frac{E}{V_0}\\left(1-\\frac{E}{V_0}\\right)e^{-2\\kappa a}$",
+    "ru": "Толстый барьер: $T\\approx16\\frac{E}{V_0}\\left(1-\\frac{E}{V_0}\\right)e^{-2\\kappa a}$",
+    "en": "Thick barrier: $T\\approx16\\frac{E}{V_0}\\left(1-\\frac{E}{V_0}\\right)e^{-2\\kappa a}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Tunnel ehtimolligining massaga eksponensial bog'liqligi",
+   "ru": "Экспоненциальная зависимость вероятности туннелирования от массы",
+   "en": "Exponential dependence of the tunneling probability on mass"
+  },
+  "answer": "T_e\\approx0.78;\\ T_p\\approx3.4\\cdot10^{-19}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S14",
+  "source": "original (B3-L05, S14)"
+ },
+ {
+  "id": "B3-L05-S15",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "Tranzistor zatvoridagi oksid elektron uchun balandligi $V_0-E=3.0\\ \\mathrm{eV}$ bo'lgan to'siq. Oksid qalinligi $2.0\\ \\mathrm{nm}$ dan $1.5\\ \\mathrm{nm}$ gacha yupqalashtirildi. a) Sizish toki necha marta ortadi? b) Tokni $10$ marta kamaytirish uchun qalinlikni qanchaga oshirish kerak? Oldingi ko'paytuvchining o'zgarishini hisobga olmang. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "ru": "Подзатворный оксид транзистора — барьер для электрона высотой $V_0-E=3.0\\ \\mathrm{eV}$. Толщину оксида уменьшили с $2.0\\ \\mathrm{nm}$ до $1.5\\ \\mathrm{nm}$. а) Во сколько раз растёт ток утечки? б) На сколько нужно увеличить толщину, чтобы уменьшить ток в $10$ раз? Изменением предмножителя пренебречь. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "en": "The gate oxide of a transistor is a barrier of height $V_0-E=3.0\\ \\mathrm{eV}$ for an electron. The oxide thickness was reduced from $2.0\\ \\mathrm{nm}$ to $1.5\\ \\mathrm{nm}$. a) By what factor does the leakage current grow? b) By how much must the thickness be increased to reduce the current $10$ times? Neglect the change of the prefactor. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$."
+  },
+  "figure": "figures/B3-L05-S15.png",
+  "solution": {
+   "uz": [
+    "So'nish koeffitsiyenti: $$\\kappa=\\sqrt{\\frac{3.0}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx8.87\\ \\mathrm{nm^{-1}}$$",
+    "Tok tunnel ehtimolligiga proporsional, $T\\sim e^{-2\\kappa a}$: $$\\frac{I_2}{I_1}=e^{2\\kappa\\left(a_1-a_2\\right)}=e^{2\\cdot8.87\\cdot0.50}=e^{8.87}$$",
+    "a) Natija: $$\\frac{I_2}{I_1}\\approx7.1\\cdot10^{3}$$",
+    "b) $10$ marta kamaytirish: $$\\Delta a=\\frac{\\ln10}{2\\kappa}=\\frac{2.30}{17.7}\\ \\mathrm{nm}\\approx0.13\\ \\mathrm{nm}$$"
+   ],
+   "ru": [
+    "Коэффициент затухания: $$\\kappa=\\sqrt{\\frac{3.0}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx8.87\\ \\mathrm{nm^{-1}}$$",
+    "Ток пропорционален вероятности туннелирования, $T\\sim e^{-2\\kappa a}$: $$\\frac{I_2}{I_1}=e^{2\\kappa\\left(a_1-a_2\\right)}=e^{2\\cdot8.87\\cdot0.50}=e^{8.87}$$",
+    "а) Результат: $$\\frac{I_2}{I_1}\\approx7.1\\cdot10^{3}$$",
+    "б) Уменьшение в $10$ раз: $$\\Delta a=\\frac{\\ln10}{2\\kappa}=\\frac{2.30}{17.7}\\ \\mathrm{nm}\\approx0.13\\ \\mathrm{nm}$$"
+   ],
+   "en": [
+    "The decay constant: $$\\kappa=\\sqrt{\\frac{3.0}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx8.87\\ \\mathrm{nm^{-1}}$$",
+    "The current is proportional to the tunneling probability, $T\\sim e^{-2\\kappa a}$: $$\\frac{I_2}{I_1}=e^{2\\kappa\\left(a_1-a_2\\right)}=e^{2\\cdot8.87\\cdot0.50}=e^{8.87}$$",
+    "a) The result: $$\\frac{I_2}{I_1}\\approx7.1\\cdot10^{3}$$",
+    "b) A reduction by a factor of $10$: $$\\Delta a=\\frac{\\ln10}{2\\kappa}=\\frac{2.30}{17.7}\\ \\mathrm{nm}\\approx0.13\\ \\mathrm{nm}$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Elektron uchun: $\\kappa=\\sqrt{\\frac{V_0-E}{0.0381}}\\ \\mathrm{nm^{-1}}$",
+    "ru": "Для электрона: $\\kappa=\\sqrt{\\frac{V_0-E}{0.0381}}\\ \\mathrm{nm^{-1}}$",
+    "en": "For an electron: $\\kappa=\\sqrt{\\frac{V_0-E}{0.0381}}\\ \\mathrm{nm^{-1}}$"
+   },
+   {
+    "uz": "Eksponensial baho: $T\\sim e^{-2\\kappa a}$",
+    "ru": "Экспоненциальная оценка: $T\\sim e^{-2\\kappa a}$",
+    "en": "Exponential estimate: $T\\sim e^{-2\\kappa a}$"
+   },
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Zatvor oksidi orqali sizish: qalinlikka eksponensial bog'liqlik",
+   "ru": "Утечка через подзатворный оксид: экспоненциальная зависимость от толщины",
+   "en": "Leakage through a gate oxide: exponential dependence on thickness"
+  },
+  "answer": "\\frac{I_2}{I_1}\\approx7.1\\cdot10^{3};\\ \\Delta a\\approx0.13\\ \\mathrm{nm}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S15",
+  "source": "original (B3-L05, S15)"
+ },
+ {
+  "id": "B3-L05-S16",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Elektron parabolik to'siqqa tushadi: $\\left|x\\right|<b$ da $V=V_0\\left(1-\\frac{x^2}{b^2}\\right)$, $V_0=1.0\\ \\mathrm{eV}$, $b=1.0\\ \\mathrm{nm}$; $E=0.50\\ \\mathrm{eV}$. a) Qaytish nuqtalarini toping. b) VKB integralini hisoblang. c) O'tish ehtimolligini baholang. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "ru": "Электрон падает на параболический барьер: $V=V_0\\left(1-\\frac{x^2}{b^2}\\right)$ при $\\left|x\\right|<b$, $V_0=1.0\\ \\mathrm{eV}$, $b=1.0\\ \\mathrm{nm}$; $E=0.50\\ \\mathrm{eV}$. а) Найдите точки поворота. б) Вычислите интеграл ВКБ. в) Оцените вероятность прохождения. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "en": "An electron is incident on a parabolic barrier: $V=V_0\\left(1-\\frac{x^2}{b^2}\\right)$ for $\\left|x\\right|<b$, $V_0=1.0\\ \\mathrm{eV}$, $b=1.0\\ \\mathrm{nm}$; $E=0.50\\ \\mathrm{eV}$. a) Find the turning points. b) Compute the WKB integral. c) Estimate the transmission probability. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$."
+  },
+  "figure": "figures/B3-L05-S16.png",
+  "solution": {
+   "uz": [
+    "a) $V\\left(x\\right)=E$: $$x_{1,2}=\\pm b\\sqrt{1-\\frac{E}{V_0}}=\\pm\\frac{1}{\\sqrt{2}}\\ \\mathrm{nm}\\approx\\pm0.71\\ \\mathrm{nm}$$",
+    "b) $\\kappa\\left(x\\right)$ — ildiz ostida parabola, integral yarim ellips yuzasi: $$\\gamma=\\int_{x_1}^{x_2}\\sqrt{\\frac{V_0-E}{0.0381}\\left(1-\\frac{x^2}{x_2^2}\\right)}dx=\\frac{\\pi x_2}{2}\\sqrt{\\frac{V_0-E}{0.0381}}$$",
+    "Umumiy ko'rinish va sonlar: $$\\gamma=\\frac{\\pi b\\left(V_0-E\\right)}{2\\hbar}\\sqrt{\\frac{2m}{V_0}}=\\frac{\\pi\\cdot1.0\\cdot0.50}{2\\sqrt{0.0381}}\\approx4.02$$",
+    "c) O'tish ehtimolligi: $$T\\approx e^{-2\\gamma}=e^{-8.05}\\approx3.2\\cdot10^{-4}$$"
+   ],
+   "ru": [
+    "а) $V\\left(x\\right)=E$: $$x_{1,2}=\\pm b\\sqrt{1-\\frac{E}{V_0}}=\\pm\\frac{1}{\\sqrt{2}}\\ \\mathrm{nm}\\approx\\pm0.71\\ \\mathrm{nm}$$",
+    "б) $\\kappa\\left(x\\right)$ — под корнем парабола, интеграл — площадь полуэллипса: $$\\gamma=\\int_{x_1}^{x_2}\\sqrt{\\frac{V_0-E}{0.0381}\\left(1-\\frac{x^2}{x_2^2}\\right)}dx=\\frac{\\pi x_2}{2}\\sqrt{\\frac{V_0-E}{0.0381}}$$",
+    "Общий вид и числа: $$\\gamma=\\frac{\\pi b\\left(V_0-E\\right)}{2\\hbar}\\sqrt{\\frac{2m}{V_0}}=\\frac{\\pi\\cdot1.0\\cdot0.50}{2\\sqrt{0.0381}}\\approx4.02$$",
+    "в) Вероятность прохождения: $$T\\approx e^{-2\\gamma}=e^{-8.05}\\approx3.2\\cdot10^{-4}$$"
+   ],
+   "en": [
+    "a) $V\\left(x\\right)=E$: $$x_{1,2}=\\pm b\\sqrt{1-\\frac{E}{V_0}}=\\pm\\frac{1}{\\sqrt{2}}\\ \\mathrm{nm}\\approx\\pm0.71\\ \\mathrm{nm}$$",
+    "b) $\\kappa\\left(x\\right)$ has a parabola under the root; the integral is the area of a half-ellipse: $$\\gamma=\\int_{x_1}^{x_2}\\sqrt{\\frac{V_0-E}{0.0381}\\left(1-\\frac{x^2}{x_2^2}\\right)}dx=\\frac{\\pi x_2}{2}\\sqrt{\\frac{V_0-E}{0.0381}}$$",
+    "The general form and the numbers: $$\\gamma=\\frac{\\pi b\\left(V_0-E\\right)}{2\\hbar}\\sqrt{\\frac{2m}{V_0}}=\\frac{\\pi\\cdot1.0\\cdot0.50}{2\\sqrt{0.0381}}\\approx4.02$$",
+    "c) The transmission probability: $$T\\approx e^{-2\\gamma}=e^{-8.05}\\approx3.2\\cdot10^{-4}$$"
+   ]
+  },
+  "rules": [
+   null,
+   {
+    "uz": "VKB yaqinlashuvi: $T\\approx\\exp\\left(-2\\int_{x_1}^{x_2}\\kappa\\,dx\\right)$",
+    "ru": "Приближение ВКБ: $T\\approx\\exp\\left(-2\\int_{x_1}^{x_2}\\kappa\\,dx\\right)$",
+    "en": "WKB approximation: $T\\approx\\exp\\left(-2\\int_{x_1}^{x_2}\\kappa\\,dx\\right)$"
+   },
+   {
+    "uz": "Parabolik to'siq: $\\gamma=\\frac{\\pi b\\left(V_0-E\\right)}{2\\hbar}\\sqrt{\\frac{2m}{V_0}}$",
+    "ru": "Параболический барьер: $\\gamma=\\frac{\\pi b\\left(V_0-E\\right)}{2\\hbar}\\sqrt{\\frac{2m}{V_0}}$",
+    "en": "Parabolic barrier: $\\gamma=\\frac{\\pi b\\left(V_0-E\\right)}{2\\hbar}\\sqrt{\\frac{2m}{V_0}}$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "VKB yaqinlashuvi: parabolik to'siq",
+   "ru": "Приближение ВКБ: параболический барьер",
+   "en": "The WKB approximation: a parabolic barrier"
+  },
+  "answer": "x_{1,2}\\approx\\pm0.71\\ \\mathrm{nm};\\ \\gamma\\approx4.02;\\ T\\approx3.2\\cdot10^{-4}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S16",
+  "source": "Irodov, 6.3 asosida; sharti o'zgartirilgan"
+ },
+ {
+  "id": "B3-L05-S17",
+  "difficulty": "medium",
+  "statement": {
+   "uz": "S10 dagi emitterda ($\\varphi=4.5\\ \\mathrm{eV}$) maydon $5.0\\ \\mathrm{V/nm}$ dan $6.0\\ \\mathrm{V/nm}$ gacha oshirildi. Fauler–Nordgeym formulasi bo'yicha tok zichligi necha marta ortadi? S10 natijasidan foydalaning ($2\\gamma\\approx13.0$).",
+   "ru": "В эмиттере из S10 ($\\varphi=4.5\\ \\mathrm{eV}$) поле увеличили с $5.0\\ \\mathrm{V/nm}$ до $6.0\\ \\mathrm{V/nm}$. Во сколько раз по формуле Фаулера–Нордгейма растёт плотность тока? Используйте результат S10 ($2\\gamma\\approx13.0$).",
+   "en": "In the emitter of S10 ($\\varphi=4.5\\ \\mathrm{eV}$) the field is raised from $5.0\\ \\mathrm{V/nm}$ to $6.0\\ \\mathrm{V/nm}$. By what factor does the current density grow according to the Fowler–Nordheim formula? Use the result of S10 ($2\\gamma\\approx13.0$)."
+  },
+  "figure": "figures/B3-L05-S17.png",
+  "solution": {
+   "uz": [
+    "Tok zichligi: $$j\\propto F^2e^{-2\\gamma},\\qquad 2\\gamma=\\frac{4\\sqrt{2m}\\,\\varphi^{3/2}}{3\\hbar eF}\\propto\\frac{1}{F}$$",
+    "Yangi ko'rsatkich: $$2\\gamma'=13.0\\cdot\\frac{5.0}{6.0}\\approx10.9$$",
+    "Eksponenta va oldingi ko'paytuvchi: $$e^{13.0-10.9}=e^{2.17}\\approx8.8,\\qquad \\left(\\frac{6.0}{5.0}\\right)^2=1.44$$",
+    "Natija — maydon $20$ foiz ortganda tok o'n martadan ko'proq ortadi: $$\\frac{j'}{j}\\approx1.44\\cdot8.8\\approx12.7$$"
+   ],
+   "ru": [
+    "Плотность тока: $$j\\propto F^2e^{-2\\gamma},\\qquad 2\\gamma=\\frac{4\\sqrt{2m}\\,\\varphi^{3/2}}{3\\hbar eF}\\propto\\frac{1}{F}$$",
+    "Новый показатель: $$2\\gamma'=13.0\\cdot\\frac{5.0}{6.0}\\approx10.9$$",
+    "Экспонента и предмножитель: $$e^{13.0-10.9}=e^{2.17}\\approx8.8,\\qquad \\left(\\frac{6.0}{5.0}\\right)^2=1.44$$",
+    "Результат — при росте поля на $20$ процентов ток растёт более чем в десять раз: $$\\frac{j'}{j}\\approx1.44\\cdot8.8\\approx12.7$$"
+   ],
+   "en": [
+    "The current density: $$j\\propto F^2e^{-2\\gamma},\\qquad 2\\gamma=\\frac{4\\sqrt{2m}\\,\\varphi^{3/2}}{3\\hbar eF}\\propto\\frac{1}{F}$$",
+    "The new exponent: $$2\\gamma'=13.0\\cdot\\frac{5.0}{6.0}\\approx10.9$$",
+    "The exponential and the prefactor: $$e^{13.0-10.9}=e^{2.17}\\approx8.8,\\qquad \\left(\\frac{6.0}{5.0}\\right)^2=1.44$$",
+    "The result — a $20$ percent rise in field makes the current grow more than tenfold: $$\\frac{j'}{j}\\approx1.44\\cdot8.8\\approx12.7$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "Fauler–Nordgeym ko'rsatkichi: $2\\gamma=\\frac{4\\sqrt{2m}\\,\\varphi^{3/2}}{3\\hbar eF}$",
+    "ru": "Показатель Фаулера–Нордгейма: $2\\gamma=\\frac{4\\sqrt{2m}\\,\\varphi^{3/2}}{3\\hbar eF}$",
+    "en": "Fowler–Nordheim exponent: $2\\gamma=\\frac{4\\sqrt{2m}\\,\\varphi^{3/2}}{3\\hbar eF}$"
+   },
+   null,
+   null,
+   null
+  ],
+  "basis": {
+   "uz": "Maydon emissiyasi tokining maydonga sezgirligi",
+   "ru": "Чувствительность тока полевой эмиссии к полю",
+   "en": "Sensitivity of the field-emission current to the field"
+  },
+  "answer": "\\frac{j'}{j}\\approx12.7",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S17",
+  "source": "original (B3-L05, S17)"
+ },
+ {
+  "id": "B3-L05-S18",
+  "difficulty": "hard",
+  "statement": {
+   "uz": "Elektron ($E=0.40\\ \\mathrm{eV}$) balandligi $V_0=1.0\\ \\mathrm{eV}$, kengligi $a=1.0\\ \\mathrm{nm}$ bo'lgan to'siqqa tushadi. $T$ ni uch usulda toping: a) aniq formula; b) qalin to'siq formulasi; c) VKB. Natijalarni solishtiring va farq sababini tushuntiring. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "ru": "Электрон ($E=0.40\\ \\mathrm{eV}$) падает на барьер высотой $V_0=1.0\\ \\mathrm{eV}$ и шириной $a=1.0\\ \\mathrm{nm}$. Найдите $T$ тремя способами: а) по точной формуле; б) по формуле толстого барьера; в) по ВКБ. Сравните результаты и объясните причину различия. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$.",
+   "en": "An electron ($E=0.40\\ \\mathrm{eV}$) is incident on a barrier of height $V_0=1.0\\ \\mathrm{eV}$ and width $a=1.0\\ \\mathrm{nm}$. Find $T$ in three ways: a) the exact formula; b) the thick-barrier formula; c) WKB. Compare the results and explain the difference. $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$."
+  },
+  "figure": "figures/B3-L05-S18.png",
+  "solution": {
+   "uz": [
+    "So'nish koeffitsiyenti: $$\\kappa=\\sqrt{\\frac{0.60}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx3.97\\ \\mathrm{nm^{-1}},\\qquad 2\\kappa a\\approx7.94$$",
+    "a) Aniq ($\\sinh^2\\kappa a\\approx700$, $\\frac{V_0^2}{4E\\left(V_0-E\\right)}\\approx1.04$): $$T=\\left[1+1.04\\cdot700\\right]^{-1}\\approx1.37\\cdot10^{-3}$$",
+    "b) Qalin to'siq ($16\\cdot0.40\\cdot0.60\\approx3.84$): $$T\\approx3.84e^{-7.94}\\approx1.37\\cdot10^{-3}$$",
+    "c) VKB — faqat eksponenta: $$T\\approx e^{-2\\kappa a}=e^{-7.94}\\approx3.6\\cdot10^{-4}$$",
+    "Qalin to'siq formulasi aniq natijani deyarli beradi; VKB $3.8$ marta kam — u oldingi ko'paytuvchini bermaydi (keskin chegaralarda VKB sharti buziladi), lekin tartibni to'g'ri ko'rsatadi: $$\\frac{T}{e^{-2\\kappa a}}\\approx3.8$$"
+   ],
+   "ru": [
+    "Коэффициент затухания: $$\\kappa=\\sqrt{\\frac{0.60}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx3.97\\ \\mathrm{nm^{-1}},\\qquad 2\\kappa a\\approx7.94$$",
+    "а) Точно ($\\sinh^2\\kappa a\\approx700$, $\\frac{V_0^2}{4E\\left(V_0-E\\right)}\\approx1.04$): $$T=\\left[1+1.04\\cdot700\\right]^{-1}\\approx1.37\\cdot10^{-3}$$",
+    "б) Толстый барьер ($16\\cdot0.40\\cdot0.60\\approx3.84$): $$T\\approx3.84e^{-7.94}\\approx1.37\\cdot10^{-3}$$",
+    "в) ВКБ — только экспонента: $$T\\approx e^{-2\\kappa a}=e^{-7.94}\\approx3.6\\cdot10^{-4}$$",
+    "Формула толстого барьера почти совпадает с точной; ВКБ меньше в $3.8$ раза — оно не даёт предмножителя (на резких границах условие ВКБ нарушается), но порядок верен: $$\\frac{T}{e^{-2\\kappa a}}\\approx3.8$$"
+   ],
+   "en": [
+    "The decay constant: $$\\kappa=\\sqrt{\\frac{0.60}{0.0381}}\\ \\mathrm{nm^{-1}}\\approx3.97\\ \\mathrm{nm^{-1}},\\qquad 2\\kappa a\\approx7.94$$",
+    "a) Exact ($\\sinh^2\\kappa a\\approx700$, $\\frac{V_0^2}{4E\\left(V_0-E\\right)}\\approx1.04$): $$T=\\left[1+1.04\\cdot700\\right]^{-1}\\approx1.37\\cdot10^{-3}$$",
+    "b) Thick barrier ($16\\cdot0.40\\cdot0.60\\approx3.84$): $$T\\approx3.84e^{-7.94}\\approx1.37\\cdot10^{-3}$$",
+    "c) WKB — the exponential only: $$T\\approx e^{-2\\kappa a}=e^{-7.94}\\approx3.6\\cdot10^{-4}$$",
+    "The thick-barrier formula almost reproduces the exact result; WKB is $3.8$ times smaller — it lacks the prefactor (the WKB condition fails at sharp edges), but the order of magnitude is right: $$\\frac{T}{e^{-2\\kappa a}}\\approx3.8$$"
+   ]
+  },
+  "rules": [
+   {
+    "uz": "So'nish koeffitsiyenti: $\\kappa=\\frac{\\sqrt{2m\\left(V_0-E\\right)}}{\\hbar}$",
+    "ru": "Коэффициент затухания: $\\kappa=\\frac{\\sqrt{2m\\left(V_0-E\\right)}}{\\hbar}$",
+    "en": "Attenuation constant: $\\kappa=\\frac{\\sqrt{2m\\left(V_0-E\\right)}}{\\hbar}$"
+   },
+   {
+    "uz": "To'g'ri burchakli to'siq: $T=\\left[1+\\frac{V_0^2\\sinh^2\\kappa a}{4E\\left(V_0-E\\right)}\\right]^{-1}$",
+    "ru": "Прямоугольный барьер: $T=\\left[1+\\frac{V_0^2\\sinh^2\\kappa a}{4E\\left(V_0-E\\right)}\\right]^{-1}$",
+    "en": "Rectangular barrier: $T=\\left[1+\\frac{V_0^2\\sinh^2\\kappa a}{4E\\left(V_0-E\\right)}\\right]^{-1}$"
+   },
+   null,
+   {
+    "uz": "VKB yaqinlashuvi: $T\\approx\\exp\\left(-2\\int_{x_1}^{x_2}\\kappa\\,dx\\right)$",
+    "ru": "Приближение ВКБ: $T\\approx\\exp\\left(-2\\int_{x_1}^{x_2}\\kappa\\,dx\\right)$",
+    "en": "WKB approximation: $T\\approx\\exp\\left(-2\\int_{x_1}^{x_2}\\kappa\\,dx\\right)$"
+   },
+   null
+  ],
+  "basis": {
+   "uz": "Aniq formula, qalin to'siq va VKB solishtirmasi",
+   "ru": "Сравнение точной формулы, толстого барьера и ВКБ",
+   "en": "Comparing the exact formula, the thick barrier and WKB"
+  },
+  "answer": "T\\approx1.37\\cdot10^{-3};\\ 1.37\\cdot10^{-3};\\ e^{-2\\kappa a}\\approx3.6\\cdot10^{-4}",
+  "verified_by_code": true,
+  "check": "_build/content.py::check_S18",
+  "source": "original (B3-L05, S18)"
+ }
+]
