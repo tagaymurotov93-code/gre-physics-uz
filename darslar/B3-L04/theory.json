@@ -1,0 +1,735 @@
+[
+ {
+  "t": "h1",
+  "uz": "Potensial o'ra (Potential wells)",
+  "ru": "Потенциальная яма",
+  "en": "Potential wells"
+ },
+ {
+  "t": "p",
+  "uz": "**Maqsad.** Dars oxirida siz cheksiz chuqur o'ra uchun statsionar Shredinger tenglamasini to'liq yechasiz va energiya kvantlanishini turg'un to'lqin shartidan ham chiqarasiz; o'ra holatlarining xossalarini (ortonormallik, tugunlar, juftlik, sathlar oralig'i) va kutilgan qiymatlarni ($\\langle x\\rangle$, $\\langle x^2\\rangle$, $\\langle p^2\\rangle$, noaniqliklar ko'paytmasi) bilasiz; foton o'tishlari va tanlash qoidasini qo'llaysiz; chekli o'ra uchun juft va toq yechimlarni tikib, transsendent tenglamani grafik usulda yechasiz va bog'langan holatlar sonini topasiz; kirib borish chuqurligini, sayoz o'ra va delta potensial chegarasini, yarim cheksiz va sferik o'rani tahlil qilasiz; ikki va uch o'lchovli qutilarda aynishni sanaysiz; kvant o'ralar, kvant nuqtalar va bo'yoq molekulalari spektrini baholaysiz hamda ikki o'radagi tunnel bo'linishini tushuntirasiz.",
+  "ru": "**Цель.** После урока вы сможете полностью решить стационарное уравнение Шрёдингера для бесконечно глубокой ямы и получить квантование энергии также из условия стоячей волны; будете знать свойства состояний ямы (ортонормированность, узлы, чётность, расстояния между уровнями) и средние значения ($\\langle x\\rangle$, $\\langle x^2\\rangle$, $\\langle p^2\\rangle$, произведение неопределённостей); применять правило отбора для фотонных переходов; сшивать чётные и нечётные решения для конечной ямы, решать трансцендентное уравнение графически и находить число связанных состояний; анализировать глубину проникновения, предел мелкой ямы и дельта-потенциала, полубесконечную и сферическую ямы; подсчитывать вырождение в двух- и трёхмерных ящиках; оценивать спектры квантовых ям, квантовых точек и молекул красителей и объяснять туннельное расщепление в двойной яме.",
+  "en": "**Goal.** After this lesson you will be able to solve the time-independent Schrödinger equation for the infinitely deep well completely and also obtain energy quantization from the standing-wave condition; know the properties of the well states (orthonormality, nodes, parity, level spacings) and the expectation values ($\\langle x\\rangle$, $\\langle x^2\\rangle$, $\\langle p^2\\rangle$, the uncertainty product); apply the selection rule for photon transitions; match the even and odd solutions of the finite well, solve the transcendental equation graphically and find the number of bound states; analyse the penetration depth, the limit of a shallow well and of the delta potential, the half-infinite and spherical wells; count degeneracies in two- and three-dimensional boxes; estimate the spectra of quantum wells, quantum dots and dye molecules and explain the tunnelling splitting in a double well."
+ },
+ {
+  "t": "p",
+  "uz": "Potensial o'ra — zarra ma'lum sohada «qamalib» qoladigan, chetlarida esa potensial energiyasi baland bo'lgan eng sodda model. Klassik zarra o'ra ichida istalgan energiya bilan devordan devorga uriladi; kvant zarrada esa chegaraviy shartlar faqat ayrim energiyalarga ruxsat beradi — **diskret spektr** (discrete spectrum) paydo bo'ladi. O'ra modellari kvant mexanikasining «laboratoriyasi»: ularda kvantlanish, nolinchi energiya, tugunlar, juftlik, tunnel dumlari va aynish kabi barcha asosiy g'oyalar oddiy formulalar bilan ko'rinadi. Ular real tizimlarni ham yaxshi tasvirlaydi: yarimo'tkazgich kvant o'ralari va kvant nuqtalar, uzun molekulalardagi elektronlar, yadrodagi nuklonlar, ammiak molekulasi. GRE da qutidagi zarra deyarli har bir variantda uchraydi — sathlar nisbati, o'tish to'lqin uzunligi, $\\left|\\psi\\right|^2$ grafigi, kenglik yoki massa o'zgarganda energiya qanday o'zgarishi. **Avval takrorlang:** B3-L03 (statsionar tenglama, chegaraviy shartlar, delta-o'ra, tugunlar teoremasi, sifat tahlil), B3-L02 (ortonormallik, yoyish, kutilgan qiymatlar), B3-L01 (de Broyl to'lqin uzunligi), B2-L24 (turg'un to'lqinlar).",
+  "ru": "Потенциальная яма — простейшая модель, в которой частица «заперта» в некоторой области, а по краям её потенциальная энергия велика. Классическая частица в яме с любой энергией ударяется от стенки к стенке; у квантовой частицы граничные условия разрешают лишь отдельные энергии — возникает **дискретный спектр**. Модели ям — «лаборатория» квантовой механики: в них все основные идеи — квантование, нулевая энергия, узлы, чётность, туннельные хвосты, вырождение — видны в простых формулах. Они хорошо описывают и реальные системы: полупроводниковые квантовые ямы и квантовые точки, электроны в длинных молекулах, нуклоны в ядре, молекулу аммиака. В GRE частица в ящике встречается почти в каждом варианте — отношения уровней, длина волны перехода, график $\\left|\\psi\\right|^2$, как меняется энергия при изменении ширины или массы. **Сначала повторите:** B3-L03 (стационарное уравнение, граничные условия, дельта-яма, осцилляционная теорема, качественный анализ), B3-L02 (ортонормированность, разложение, средние значения), B3-L01 (длина волны де Бройля), B2-L24 (стоячие волны).",
+  "en": "A potential well is the simplest model in which a particle is «trapped» in some region while its potential energy at the edges is high. A classical particle in a well bounces from wall to wall with any energy; for a quantum particle the boundary conditions allow only certain energies — a **discrete spectrum** appears. Well models are the «laboratory» of quantum mechanics: all the basic ideas — quantization, zero-point energy, nodes, parity, tunnelling tails, degeneracy — show up in simple formulas. They also describe real systems well: semiconductor quantum wells and quantum dots, electrons in long molecules, nucleons in a nucleus, the ammonia molecule. On the GRE the particle in a box appears in almost every test — ratios of levels, the wavelength of a transition, the graph of $\\left|\\psi\\right|^2$, how the energy changes when the width or the mass changes. **Review first:** B3-L03 (the time-independent equation, boundary conditions, the delta well, the node theorem, qualitative analysis), B3-L02 (orthonormality, expansion, expectation values), B3-L01 (the de Broglie wavelength), B2-L24 (standing waves)."
+ },
+ {
+  "t": "h2",
+  "uz": "1. Cheksiz chuqur o'ra: yechim va kvantlanish",
+  "ru": "1. Бесконечно глубокая яма: решение и квантование",
+  "en": "1. The infinitely deep well: solution and quantization"
+ },
+ {
+  "t": "li",
+  "uz": "**Model.** **Cheksiz chuqur o'ra** (infinite square well, «qutidagi zarra») da $0<x<L$ ichida $V=0$, tashqarida $V=\\infty$. Devorlar cheksiz bo'lgani uchun zarra tashqarida bo'la olmaydi: $\\psi=0$. Buni chekli o'raning chegarasi sifatida ham tushunish mumkin — tashqaridagi so'nish koeffitsiyenti $\\kappa\\to\\infty$, dum nolga qisqaradi (8-bo'lim). Ichida statsionar tenglama erkin zarranikidek: $\\psi''=-k^2\\psi$, bunda $k=\\frac{\\sqrt{2mE}}{\\hbar}$; umumiy yechim $\\psi=A\\sin kx+B\\cos kx$.",
+  "ru": "**Модель.** В **бесконечно глубокой яме** («частица в ящике») внутри $0<x<L$ потенциал $V=0$, снаружи $V=\\infty$. Поскольку стенки бесконечны, частица не может находиться снаружи: $\\psi=0$. Это можно понимать и как предел конечной ямы — коэффициент затухания снаружи $\\kappa\\to\\infty$, хвост стягивается к нулю (раздел 8). Внутри стационарное уравнение такое же, как для свободной частицы: $\\psi''=-k^2\\psi$, где $k=\\frac{\\sqrt{2mE}}{\\hbar}$; общее решение $\\psi=A\\sin kx+B\\cos kx$.",
+  "en": "**The model.** In the **infinite square well** («particle in a box») the potential is $V=0$ inside $0<x<L$ and $V=\\infty$ outside. Because the walls are infinite, the particle cannot be outside: $\\psi=0$. This can also be understood as the limit of a finite well — the decay coefficient outside $\\kappa\\to\\infty$, and the tail shrinks to zero (section 8). Inside, the time-independent equation is that of a free particle: $\\psi''=-k^2\\psi$, where $k=\\frac{\\sqrt{2mE}}{\\hbar}$; the general solution is $\\psi=A\\sin kx+B\\cos kx$."
+ },
+ {
+  "t": "li",
+  "uz": "**Chegaraviy shartlar va kvantlanish.** $\\psi$ uzluksiz bo'lishi kerak: $\\psi\\left(0\\right)=0$ dan $B=0$, $\\psi\\left(L\\right)=0$ dan $\\sin kL=0$, ya'ni $kL=n\\pi$. $n=0$ da $\\psi\\equiv0$ — holat yo'q; manfiy $n$ faqat ishorani o'zgartiradi — yangi holat bermaydi. Demak, $n=1,2,3,\\ldots$ va energiya faqat diskret qiymatlarni oladi. Devorda $\\psi'$ uzilishga ega (sinik) — bu faqat cheksiz potensialda mumkin (B3-L03). Normallash $\\int_0^L A^2\\sin^2\\frac{n\\pi x}{L}dx=\\frac{A^2L}{2}=1$ dan $A=\\sqrt{\\frac{2}{L}}$:",
+  "ru": "**Граничные условия и квантование.** Функция $\\psi$ должна быть непрерывной: из $\\psi\\left(0\\right)=0$ следует $B=0$, из $\\psi\\left(L\\right)=0$ — $\\sin kL=0$, то есть $kL=n\\pi$. При $n=0$ получаем $\\psi\\equiv0$ — состояния нет; отрицательные $n$ лишь меняют знак — нового состояния не дают. Значит, $n=1,2,3,\\ldots$ и энергия принимает только дискретные значения. На стенке $\\psi'$ терпит разрыв (излом) — это возможно лишь при бесконечном потенциале (B3-L03). Из нормировки $\\int_0^L A^2\\sin^2\\frac{n\\pi x}{L}dx=\\frac{A^2L}{2}=1$ получаем $A=\\sqrt{\\frac{2}{L}}$:",
+  "en": "**Boundary conditions and quantization.** The function $\\psi$ must be continuous: $\\psi\\left(0\\right)=0$ gives $B=0$, and $\\psi\\left(L\\right)=0$ gives $\\sin kL=0$, that is $kL=n\\pi$. For $n=0$ we get $\\psi\\equiv0$ — no state; negative $n$ only change the sign — they give no new state. Hence $n=1,2,3,\\ldots$ and the energy takes only discrete values. At a wall $\\psi'$ is discontinuous (a kink) — possible only for an infinite potential (B3-L03). Normalization $\\int_0^L A^2\\sin^2\\frac{n\\pi x}{L}dx=\\frac{A^2L}{2}=1$ gives $A=\\sqrt{\\frac{2}{L}}$:"
+ },
+ {
+  "t": "m",
+  "m": "\\psi_n\\left(x\\right)=\\sqrt{\\frac{2}{L}}\\sin\\frac{n\\pi x}{L},\\qquad E_n=\\frac{\\hbar^2k_n^2}{2m}=\\frac{n^2\\pi^2\\hbar^2}{2mL^2}=\\frac{n^2h^2}{8mL^2},\\qquad n=1,2,3,\\ldots"
+ },
+ {
+  "t": "li",
+  "uz": "**Turg'un to'lqin talqini.** Xuddi ikki uchi mahkamlangan tordagi kabi (B2-L24), o'ra kengligiga butun son yarim to'lqin joylashadi: $L=n\\frac{\\lambda_n}{2}$. De Broyl munosabatidan $p_n=\\frac{h}{\\lambda_n}=\\frac{nh}{2L}$ va $E_n=\\frac{p_n^2}{2m}=\\frac{n^2h^2}{8mL^2}$ — yuqoridagi natija. Bu «tez yo'l» GRE da formulani eslab qolmasdan tiklashga yordam beradi. Zarra o'ra ichida «chapga» va «o'ngga» yuguruvchi to'lqinlar superpozitsiyasida: $\\sin k_nx=\\frac{e^{ik_nx}-e^{-ik_nx}}{2i}$.",
+  "ru": "**Интерпретация стоячей волны.** Как в струне, закреплённой с двух концов (B2-L24), на ширине ямы укладывается целое число полуволн: $L=n\\frac{\\lambda_n}{2}$. Из соотношения де Бройля $p_n=\\frac{h}{\\lambda_n}=\\frac{nh}{2L}$ и $E_n=\\frac{p_n^2}{2m}=\\frac{n^2h^2}{8mL^2}$ — результат выше. Этот «быстрый путь» помогает в GRE восстановить формулу, не запоминая её. Частица в яме находится в суперпозиции волн, бегущих «влево» и «вправо»: $\\sin k_nx=\\frac{e^{ik_nx}-e^{-ik_nx}}{2i}$.",
+  "en": "**The standing-wave picture.** As on a string fixed at both ends (B2-L24), a whole number of half-waves fits into the width of the well: $L=n\\frac{\\lambda_n}{2}$. From the de Broglie relation $p_n=\\frac{h}{\\lambda_n}=\\frac{nh}{2L}$ and $E_n=\\frac{p_n^2}{2m}=\\frac{n^2h^2}{8mL^2}$ — the result above. This «shortcut» helps you rebuild the formula on the GRE without memorizing it. The particle in the well is in a superposition of waves running «left» and «right»: $\\sin k_nx=\\frac{e^{ik_nx}-e^{-ik_nx}}{2i}$."
+ },
+ {
+  "t": "li",
+  "uz": "**Nolinchi energiya va birliklar.** Eng past energiya $E_1=\\frac{\\pi^2\\hbar^2}{2mL^2}$ noldan katta — **nolinchi energiya** (nol tebranishlar energiyasi, zero-point energy). Zarra tinch tura olmaydi: koordinata noaniqligi $\\sim L$ bo'lsa, noaniqlik munosabatidan impuls $\\gtrsim\\frac{\\hbar}{L}$ va energiya $\\gtrsim\\frac{\\hbar^2}{mL^2}$. Kalkulyatorsiz hisob uchun $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$ dan elektron uchun $E_1\\approx\\frac{0.376}{L^2}$ ($E_1$ — $\\mathrm{eV}$ da, $L$ — $\\mathrm{nm}$ da) — atom o'lchamidagi qutida elektron-volt tartibi; nuklon uchun ($m_pc^2=938\\ \\mathrm{MeV}$, $hc=1240\\ \\mathrm{MeV\\cdot fm}$) yadro o'lchamidagi qutida megaelektron-volt tartibi. Shuning uchun kimyoviy energiyalar $\\mathrm{eV}$, yadro energiyalari $\\mathrm{MeV}$ tartibida ([[F01]]).",
+  "ru": "**Нулевая энергия и единицы.** Наименьшая энергия $E_1=\\frac{\\pi^2\\hbar^2}{2mL^2}$ больше нуля — **нулевая энергия** (энергия нулевых колебаний). Частица не может покоиться: если неопределённость координаты $\\sim L$, то из соотношения неопределённостей импульс $\\gtrsim\\frac{\\hbar}{L}$, а энергия $\\gtrsim\\frac{\\hbar^2}{mL^2}$. Для счёта без калькулятора из $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$ для электрона $E_1\\approx\\frac{0.376}{L^2}$ ($E_1$ — в $\\mathrm{eV}$, $L$ — в $\\mathrm{nm}$) — в ящике атомного размера порядок электронвольта; для нуклона ($m_pc^2=938\\ \\mathrm{MeV}$, $hc=1240\\ \\mathrm{MeV\\cdot fm}$) в ящике размера ядра — порядок мегаэлектронвольта. Поэтому химические энергии порядка $\\mathrm{eV}$, ядерные — порядка $\\mathrm{MeV}$ ([[F01]]).",
+  "en": "**Zero-point energy and units.** The lowest energy $E_1=\\frac{\\pi^2\\hbar^2}{2mL^2}$ is greater than zero — the **zero-point energy**. The particle cannot be at rest: if the position uncertainty is $\\sim L$, the uncertainty relation gives a momentum $\\gtrsim\\frac{\\hbar}{L}$ and an energy $\\gtrsim\\frac{\\hbar^2}{mL^2}$. For calculator-free work, $\\frac{\\hbar^2}{2m_e}=0.0381\\ \\mathrm{eV\\cdot nm^2}$ gives for an electron $E_1\\approx\\frac{0.376}{L^2}$ ($E_1$ in $\\mathrm{eV}$, $L$ in $\\mathrm{nm}$) — of the order of an electron-volt in a box of atomic size; for a nucleon ($m_pc^2=938\\ \\mathrm{MeV}$, $hc=1240\\ \\mathrm{MeV\\cdot fm}$) in a box of nuclear size — of the order of a mega-electron-volt. That is why chemical energies are of order $\\mathrm{eV}$ and nuclear ones of order $\\mathrm{MeV}$ ([[F01]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F01",
+  "src": {
+   "uz": "figures/B3-L04-F01.png",
+   "ru": "figures/B3-L04-F01-ru.png",
+   "en": "figures/B3-L04-F01-en.png"
+  },
+  "cap": {
+   "uz": "1-rasm",
+   "ru": "Рис. 1",
+   "en": "Fig. 1"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "2. Cheksiz o'ra holatlarining xossalari",
+  "ru": "2. Свойства состояний бесконечной ямы",
+  "en": "2. Properties of the infinite-well states"
+ },
+ {
+  "t": "li",
+  "uz": "**Ortonormallik va to'liqlik.** Turli sathlar funksiyalari bir-biriga ortogonal, ya'ni $\\int_0^L\\psi_m\\psi_ndx=\\delta_{mn}$ (B3-L02). To'plam to'liq: $\\psi\\left(0\\right)=\\psi\\left(L\\right)=0$ ni qanoatlantiruvchi istalgan funksiya sinuslar bo'yicha Furye qatoriga yoyiladi, $\\Psi\\left(x,0\\right)=\\sum c_n\\psi_n$, $c_n=\\int_0^L\\psi_n\\Psi\\left(x,0\\right)dx$. Energiya o'lchanganda $E_n$ ehtimolligi $\\left|c_n\\right|^2$ (B3-L03).",
+  "ru": "**Ортонормированность и полнота.** Функции разных уровней ортогональны: $\\int_0^L\\psi_m\\psi_ndx=\\delta_{mn}$ (B3-L02). Набор полон: любая функция, удовлетворяющая $\\psi\\left(0\\right)=\\psi\\left(L\\right)=0$, раскладывается в ряд Фурье по синусам, $\\Psi\\left(x,0\\right)=\\sum c_n\\psi_n$, $c_n=\\int_0^L\\psi_n\\Psi\\left(x,0\\right)dx$. При измерении энергии вероятность $E_n$ равна $\\left|c_n\\right|^2$ (B3-L03).",
+  "en": "**Orthonormality and completeness.** The functions of different levels are orthogonal: $\\int_0^L\\psi_m\\psi_ndx=\\delta_{mn}$ (B3-L02). The set is complete: any function satisfying $\\psi\\left(0\\right)=\\psi\\left(L\\right)=0$ expands in a Fourier sine series, $\\Psi\\left(x,0\\right)=\\sum c_n\\psi_n$, $c_n=\\int_0^L\\psi_n\\Psi\\left(x,0\\right)dx$. In an energy measurement the probability of $E_n$ is $\\left|c_n\\right|^2$ (B3-L03)."
+ },
+ {
+  "t": "li",
+  "uz": "**Tugunlar va juftlik.** $\\psi_n$ ning o'ra ichida $n-1$ ta tuguni bor (tugunlar teoremasi, B3-L03): asosiy holatda tugun yo'q, har bir keyingi sathda bittadan qo'shiladi. O'ra markaziga nisbatan holatlar navbatma-navbat simmetrik va antisimmetrik: $\\psi_n\\left(L-x\\right)=\\left(-1\\right)^{n+1}\\psi_n\\left(x\\right)$. Toq $n$ da $\\left|\\psi_n\\right|^2$ markazda maksimum, juft $n$ da markazda tugun — zarra o'rtada hech qachon topilmaydi.",
+  "ru": "**Узлы и чётность.** У $\\psi_n$ внутри ямы $n-1$ узлов (осцилляционная теорема, B3-L03): в основном состоянии узлов нет, на каждом следующем уровне добавляется по одному. Относительно центра ямы состояния поочерёдно симметричны и антисимметричны: $\\psi_n\\left(L-x\\right)=\\left(-1\\right)^{n+1}\\psi_n\\left(x\\right)$. При нечётном $n$ у $\\left|\\psi_n\\right|^2$ в центре максимум, при чётном $n$ в центре узел — частица в середине никогда не обнаруживается.",
+  "en": "**Nodes and parity.** Inside the well $\\psi_n$ has $n-1$ nodes (the node theorem, B3-L03): the ground state has no node, and each next level adds one. With respect to the centre of the well the states are alternately symmetric and antisymmetric: $\\psi_n\\left(L-x\\right)=\\left(-1\\right)^{n+1}\\psi_n\\left(x\\right)$. For odd $n$, $\\left|\\psi_n\\right|^2$ has a maximum at the centre; for even $n$ there is a node at the centre — the particle is never found in the middle."
+ },
+ {
+  "t": "li",
+  "uz": "**Sathlar oralig'i va moslik prinsipi.** $E_n=n^2E_1$, shuning uchun qo'shni sathlar oralig'i o'sadi: $E_{n+1}-E_n=\\left(2n+1\\right)E_1$. Nisbiy oraliq esa kamayadi: $\\frac{E_{n+1}-E_n}{E_n}=\\frac{2n+1}{n^2}\\to0$. Katta $n$ da spektr deyarli uzluksiz ko'rinadi va kvant natijalar klassikaga yaqinlashadi (**moslik prinsipi**, correspondence principle). Uch asosiy spektrni farqlang: qutida $E\\propto n^2$ (oraliqlar o'sadi), ossillyatorda $E\\propto n+\\frac{1}{2}$ (teng oraliqlar, B3-L06), vodorodda $E\\propto-\\frac{1}{n^2}$ (oraliqlar kamayadi, B3-L09).",
+  "ru": "**Расстояния между уровнями и принцип соответствия.** $E_n=n^2E_1$, поэтому расстояние между соседними уровнями растёт: $E_{n+1}-E_n=\\left(2n+1\\right)E_1$. Относительное же расстояние убывает: $\\frac{E_{n+1}-E_n}{E_n}=\\frac{2n+1}{n^2}\\to0$. При больших $n$ спектр выглядит почти непрерывным, и квантовые результаты приближаются к классическим (**принцип соответствия**). Различайте три основных спектра: в ящике $E\\propto n^2$ (расстояния растут), в осцилляторе $E\\propto n+\\frac{1}{2}$ (равные расстояния, B3-L06), в водороде $E\\propto-\\frac{1}{n^2}$ (расстояния убывают, B3-L09).",
+  "en": "**Level spacing and the correspondence principle.** $E_n=n^2E_1$, so the spacing of neighbouring levels grows: $E_{n+1}-E_n=\\left(2n+1\\right)E_1$. The relative spacing, however, decreases: $\\frac{E_{n+1}-E_n}{E_n}=\\frac{2n+1}{n^2}\\to0$. At large $n$ the spectrum looks almost continuous and the quantum results approach the classical ones (the **correspondence principle**). Distinguish the three basic spectra: in a box $E\\propto n^2$ (spacings grow), in the oscillator $E\\propto n+\\frac{1}{2}$ (equal spacings, B3-L06), in hydrogen $E\\propto-\\frac{1}{n^2}$ (spacings shrink, B3-L09)."
+ },
+ {
+  "t": "m",
+  "m": "\\int_0^L\\psi_m\\psi_ndx=\\delta_{mn},\\qquad \\psi_n\\left(L-x\\right)=\\left(-1\\right)^{n+1}\\psi_n\\left(x\\right),\\qquad E_{n+1}-E_n=\\left(2n+1\\right)E_1"
+ },
+ {
+  "t": "li",
+  "uz": "**Vaqt bo'yicha evolyutsiya.** To'liq yechim $\\Psi\\left(x,t\\right)=\\sum c_n\\psi_n\\left(x\\right)e^{-iE_nt/\\hbar}$. Barcha chastotalar $\\frac{E_1}{\\hbar}$ ning butun karralisi ($n^2$) bo'lgani uchun istalgan holat $T=\\frac{2\\pi\\hbar}{E_1}=\\frac{4mL^2}{\\pi\\hbar}$ vaqtdan keyin aynan qaytadi (kvant qaytishi, B3-L03). Ikki sath superpozitsiyasida zichlik $\\frac{h}{E_2-E_1}$ davr bilan chayqaladi.",
+  "ru": "**Эволюция во времени.** Полное решение $\\Psi\\left(x,t\\right)=\\sum c_n\\psi_n\\left(x\\right)e^{-iE_nt/\\hbar}$. Поскольку все частоты — целые кратные ($n^2$) от $\\frac{E_1}{\\hbar}$, любое состояние точно возвращается через время $T=\\frac{2\\pi\\hbar}{E_1}=\\frac{4mL^2}{\\pi\\hbar}$ (квантовое возрождение, B3-L03). В суперпозиции двух уровней плотность колеблется с периодом $\\frac{h}{E_2-E_1}$.",
+  "en": "**Time evolution.** The full solution is $\\Psi\\left(x,t\\right)=\\sum c_n\\psi_n\\left(x\\right)e^{-iE_nt/\\hbar}$. Since all frequencies are integer multiples ($n^2$) of $\\frac{E_1}{\\hbar}$, any state returns exactly after the time $T=\\frac{2\\pi\\hbar}{E_1}=\\frac{4mL^2}{\\pi\\hbar}$ (quantum revival, B3-L03). In a superposition of two levels the density sloshes with the period $\\frac{h}{E_2-E_1}$."
+ },
+ {
+  "t": "h2",
+  "uz": "3. Kutilgan qiymatlar va noaniqlik munosabati",
+  "ru": "3. Средние значения и соотношение неопределённостей",
+  "en": "3. Expectation values and the uncertainty relation"
+ },
+ {
+  "t": "li",
+  "uz": "**Koordinata.** $\\left|\\psi_n\\right|^2$ markazga nisbatan simmetrik, shuning uchun har bir statsionar holatda $\\langle x\\rangle=\\frac{L}{2}$. Ikkinchi moment $\\int_0^Lx^2\\frac{2}{L}\\sin^2\\frac{n\\pi x}{L}dx$ ni bo'laklab integrallash beradi: $\\langle x^2\\rangle=L^2\\left(\\frac{1}{3}-\\frac{1}{2n^2\\pi^2}\\right)$. Demak, $\\sigma_x^2=\\langle x^2\\rangle-\\langle x\\rangle^2=L^2\\left(\\frac{1}{12}-\\frac{1}{2n^2\\pi^2}\\right)$. Katta $n$ da $\\sigma_x\\to\\frac{L}{\\sqrt{12}}$ — tekis klassik taqsimotning dispersiyasi.",
+  "ru": "**Координата.** $\\left|\\psi_n\\right|^2$ симметрична относительно центра, поэтому в каждом стационарном состоянии $\\langle x\\rangle=\\frac{L}{2}$. Второй момент $\\int_0^Lx^2\\frac{2}{L}\\sin^2\\frac{n\\pi x}{L}dx$ интегрированием по частям даёт: $\\langle x^2\\rangle=L^2\\left(\\frac{1}{3}-\\frac{1}{2n^2\\pi^2}\\right)$. Значит, $\\sigma_x^2=\\langle x^2\\rangle-\\langle x\\rangle^2=L^2\\left(\\frac{1}{12}-\\frac{1}{2n^2\\pi^2}\\right)$. При больших $n$ получаем $\\sigma_x\\to\\frac{L}{\\sqrt{12}}$ — дисперсию равномерного классического распределения.",
+  "en": "**Position.** $\\left|\\psi_n\\right|^2$ is symmetric about the centre, so in every stationary state $\\langle x\\rangle=\\frac{L}{2}$. Integrating the second moment $\\int_0^Lx^2\\frac{2}{L}\\sin^2\\frac{n\\pi x}{L}dx$ by parts gives $\\langle x^2\\rangle=L^2\\left(\\frac{1}{3}-\\frac{1}{2n^2\\pi^2}\\right)$. Hence $\\sigma_x^2=\\langle x^2\\rangle-\\langle x\\rangle^2=L^2\\left(\\frac{1}{12}-\\frac{1}{2n^2\\pi^2}\\right)$. At large $n$, $\\sigma_x\\to\\frac{L}{\\sqrt{12}}$ — the variance of the uniform classical distribution."
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls.** $\\psi_n$ haqiqiy funksiya, shuning uchun $\\langle p\\rangle=0$ (zarra chapga va o'ngga teng ehtimollik bilan harakatlanadi). O'ra ichida $V=0$, demak, butun energiya kinetik: $\\langle p^2\\rangle=2mE_n=\\left(\\frac{n\\pi\\hbar}{L}\\right)^2$ va $\\sigma_p=\\frac{n\\pi\\hbar}{L}$. Noaniqliklar ko'paytmasi $\\sigma_x\\sigma_p=\\frac{\\hbar}{2}\\sqrt{\\frac{n^2\\pi^2}{3}-2}$; asosiy holatda bu $\\approx0.568\\hbar$ — Geyzenberg chegarasi $\\frac{\\hbar}{2}$ dan biroz katta va $n$ bilan chiziqli o'sadi.",
+  "ru": "**Импульс.** $\\psi_n$ — действительная функция, поэтому $\\langle p\\rangle=0$ (частица движется влево и вправо с равной вероятностью). Внутри ямы $V=0$, значит, вся энергия кинетическая: $\\langle p^2\\rangle=2mE_n=\\left(\\frac{n\\pi\\hbar}{L}\\right)^2$ и $\\sigma_p=\\frac{n\\pi\\hbar}{L}$. Произведение неопределённостей $\\sigma_x\\sigma_p=\\frac{\\hbar}{2}\\sqrt{\\frac{n^2\\pi^2}{3}-2}$; в основном состоянии это $\\approx0.568\\hbar$ — немного больше гейзенберговской границы $\\frac{\\hbar}{2}$ и линейно растёт с $n$.",
+  "en": "**Momentum.** $\\psi_n$ is a real function, so $\\langle p\\rangle=0$ (the particle moves left and right with equal probability). Inside the well $V=0$, so all the energy is kinetic: $\\langle p^2\\rangle=2mE_n=\\left(\\frac{n\\pi\\hbar}{L}\\right)^2$ and $\\sigma_p=\\frac{n\\pi\\hbar}{L}$. The uncertainty product is $\\sigma_x\\sigma_p=\\frac{\\hbar}{2}\\sqrt{\\frac{n^2\\pi^2}{3}-2}$; in the ground state this is $\\approx0.568\\hbar$ — slightly above the Heisenberg bound $\\frac{\\hbar}{2}$ — and it grows linearly with $n$."
+ },
+ {
+  "t": "m",
+  "m": "\\langle x\\rangle=\\frac{L}{2},\\qquad \\langle x^2\\rangle=L^2\\left(\\frac{1}{3}-\\frac{1}{2n^2\\pi^2}\\right),\\qquad \\langle p^2\\rangle=\\left(\\frac{n\\pi\\hbar}{L}\\right)^2,\\qquad \\sigma_x\\sigma_p=\\frac{\\hbar}{2}\\sqrt{\\frac{n^2\\pi^2}{3}-2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Sohada topish ehtimolligi.** $\\left[0,b\\right]$ oraliqda $P=\\int_0^b\\frac{2}{L}\\sin^2\\frac{n\\pi x}{L}dx=\\frac{b}{L}-\\frac{1}{2n\\pi}\\sin\\frac{2n\\pi b}{L}$. Birinchi had — klassik javob (tekis taqsimot), ikkinchisi — kvant tuzatma, $n$ ortishi bilan $\\frac{1}{n}$ kabi so'nadi. Masalan, asosiy holatda chekka chorakda zarra klassikdagidan ancha kam bo'ladi ($P<\\frac{1}{4}$), chunki devor yonida $\\psi\\to0$. Agar $b$ butun son yarim to'lqinlarni o'z ichiga olsa ($\\frac{2nb}{L}$ butun), tuzatma nol — har bir «do'nglik» teng ehtimollik oladi.",
+  "ru": "**Вероятность обнаружения в области.** На отрезке $\\left[0,b\\right]$ имеем $P=\\int_0^b\\frac{2}{L}\\sin^2\\frac{n\\pi x}{L}dx=\\frac{b}{L}-\\frac{1}{2n\\pi}\\sin\\frac{2n\\pi b}{L}$. Первый член — классический ответ (равномерное распределение), второй — квантовая поправка, убывающая с ростом $n$ как $\\frac{1}{n}$. Например, в основном состоянии в крайней четверти частица бывает гораздо реже, чем классически ($P<\\frac{1}{4}$), поскольку у стенки $\\psi\\to0$. Если на $b$ укладывается целое число полуволн ($\\frac{2nb}{L}$ целое), поправка равна нулю — каждая «пучность» получает равную вероятность.",
+  "en": "**Probability of finding the particle in a region.** On the interval $\\left[0,b\\right]$, $P=\\int_0^b\\frac{2}{L}\\sin^2\\frac{n\\pi x}{L}dx=\\frac{b}{L}-\\frac{1}{2n\\pi}\\sin\\frac{2n\\pi b}{L}$. The first term is the classical answer (a uniform distribution), the second is the quantum correction, which falls off as $\\frac{1}{n}$ with growing $n$. For example, in the ground state the particle is found in the outer quarter much less often than classically ($P<\\frac{1}{4}$), because $\\psi\\to0$ near a wall. If a whole number of half-waves fits into $b$ ($\\frac{2nb}{L}$ an integer), the correction vanishes — every «lobe» gets equal probability."
+ },
+ {
+  "t": "m",
+  "m": "P\\left(0<x<b\\right)=\\frac{b}{L}-\\frac{1}{2n\\pi}\\sin\\frac{2n\\pi b}{L},\\qquad \\sigma_x\\xrightarrow{n\\to\\infty}\\frac{L}{\\sqrt{12}}"
+ },
+ {
+  "t": "li",
+  "uz": "**Klassik chegara.** Katta $n$ da $\\left|\\psi_n\\right|^2=\\frac{2}{L}\\sin^2\\frac{n\\pi x}{L}$ juda tez tebranadi; uni har qanday chekli oraliq bo'yicha o'rtacha olsak, $\\sin^2$ ning o'rtachasi $\\frac{1}{2}$ bo'lib, klassik tekis zichlik $\\frac{1}{L}$ qoladi. Lekin «nuqtama-nuqta» kvant zichlik nol va $\\frac{2}{L}$ orasida o'zgaradi — moslik faqat o'rtacha ma'noda ([[F02]]).",
+  "ru": "**Классический предел.** При больших $n$ функция $\\left|\\psi_n\\right|^2=\\frac{2}{L}\\sin^2\\frac{n\\pi x}{L}$ очень быстро осциллирует; если усреднить её по любому конечному отрезку, среднее $\\sin^2$ равно $\\frac{1}{2}$ и остаётся классическая равномерная плотность $\\frac{1}{L}$. Но «поточечно» квантовая плотность меняется между нулём и $\\frac{2}{L}$ — соответствие лишь в среднем ([[F02]]).",
+  "en": "**The classical limit.** At large $n$ the function $\\left|\\psi_n\\right|^2=\\frac{2}{L}\\sin^2\\frac{n\\pi x}{L}$ oscillates very rapidly; averaging it over any finite interval, the mean of $\\sin^2$ is $\\frac{1}{2}$ and the classical uniform density $\\frac{1}{L}$ remains. But «point by point» the quantum density varies between zero and $\\frac{2}{L}$ — the correspondence holds only on average ([[F02]])."
+ },
+ {
+  "t": "fig",
+  "fig": "F02",
+  "src": {
+   "uz": "figures/B3-L04-F02.png",
+   "ru": "figures/B3-L04-F02-ru.png",
+   "en": "figures/B3-L04-F02-en.png"
+  },
+  "cap": {
+   "uz": "2-rasm",
+   "ru": "Рис. 2",
+   "en": "Fig. 2"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "4. Spektr, o'tishlar va tanlash qoidasi",
+  "ru": "4. Спектр, переходы и правило отбора",
+  "en": "4. Spectrum, transitions and the selection rule"
+ },
+ {
+  "t": "li",
+  "uz": "**Foton energiyasi.** Zaryadli zarra $n_i$ sathdan $n_f$ sathga o'tganda foton chiqaradi yoki yutadi: $h\\nu=\\left|E_{n_i}-E_{n_f}\\right|=\\left|n_i^2-n_f^2\\right|E_1$. To'lqin uzunligi $\\lambda=\\frac{hc}{\\Delta E}=\\frac{8mcL^2}{h\\left|n_i^2-n_f^2\\right|}$ — kenglik kvadratiga proporsional: quti ikki marta kengaysa, spektr to'rt marta «qizaradi». Eng uzun to'lqin — $2\\to1$ o'tish ($\\Delta E=3E_1$).",
+  "ru": "**Энергия фотона.** При переходе заряженной частицы с уровня $n_i$ на уровень $n_f$ испускается или поглощается фотон: $h\\nu=\\left|E_{n_i}-E_{n_f}\\right|=\\left|n_i^2-n_f^2\\right|E_1$. Длина волны $\\lambda=\\frac{hc}{\\Delta E}=\\frac{8mcL^2}{h\\left|n_i^2-n_f^2\\right|}$ пропорциональна квадрату ширины: если ящик вдвое шире, спектр «краснеет» в четыре раза. Самая длинная волна — переход $2\\to1$ ($\\Delta E=3E_1$).",
+  "en": "**Photon energy.** When a charged particle goes from level $n_i$ to level $n_f$ it emits or absorbs a photon: $h\\nu=\\left|E_{n_i}-E_{n_f}\\right|=\\left|n_i^2-n_f^2\\right|E_1$. The wavelength $\\lambda=\\frac{hc}{\\Delta E}=\\frac{8mcL^2}{h\\left|n_i^2-n_f^2\\right|}$ is proportional to the square of the width: if the box is twice as wide, the spectrum «reddens» four times. The longest wavelength is the $2\\to1$ transition ($\\Delta E=3E_1$)."
+ },
+ {
+  "t": "li",
+  "uz": "**Tanlash qoidasi** (selection rule). Elektr dipol o'tish tezligi matritsa elementi $x_{mn}=\\int\\psi_mx\\psi_ndx$ kvadratiga proporsional (B3-L11, B3-L12). Koordinatani markazdan o'lchasak ($x\\to x-\\frac{L}{2}$, $\\psi_m\\psi_n$ ko'paytma markazga nisbatan juft bo'lsa) integral nolga teng. Shuning uchun faqat **juftligi har xil** holatlar orasida o'tish bor: $m+n$ toq, ya'ni $\\Delta n$ toq. Hisob beradi: $x_{mn}=-\\frac{8Lmn}{\\pi^2\\left(m^2-n^2\\right)^2}$ ($m+n$ toq), $x_{mn}=0$ ($m+n$ juft, $m\\neq n$). Masalan, $\\left|x_{12}\\right|=\\frac{16L}{9\\pi^2}\\approx0.18L$, $3\\to1$ o'tish taqiqlangan, $3\\to2\\to1$ kaskad esa ruxsat etilgan.",
+  "ru": "**Правило отбора.** Скорость электрического дипольного перехода пропорциональна квадрату матричного элемента $x_{mn}=\\int\\psi_mx\\psi_ndx$ (B3-L11, B3-L12). Если отсчитывать координату от центра ($x\\to x-\\frac{L}{2}$) и произведение $\\psi_m\\psi_n$ чётно относительно центра, интеграл равен нулю. Поэтому переходы есть только между состояниями **разной чётности**: $m+n$ нечётно, то есть $\\Delta n$ нечётно. Вычисление даёт: $x_{mn}=-\\frac{8Lmn}{\\pi^2\\left(m^2-n^2\\right)^2}$ ($m+n$ нечётно), $x_{mn}=0$ ($m+n$ чётно, $m\\neq n$). Например, $\\left|x_{12}\\right|=\\frac{16L}{9\\pi^2}\\approx0.18L$, переход $3\\to1$ запрещён, а каскад $3\\to2\\to1$ разрешён.",
+  "en": "**The selection rule.** The rate of an electric dipole transition is proportional to the square of the matrix element $x_{mn}=\\int\\psi_mx\\psi_ndx$ (B3-L11, B3-L12). If we measure the position from the centre ($x\\to x-\\frac{L}{2}$) and the product $\\psi_m\\psi_n$ is even about the centre, the integral vanishes. Therefore transitions occur only between states of **different parity**: $m+n$ odd, that is $\\Delta n$ odd. The calculation gives $x_{mn}=-\\frac{8Lmn}{\\pi^2\\left(m^2-n^2\\right)^2}$ ($m+n$ odd), $x_{mn}=0$ ($m+n$ even, $m\\neq n$). For example, $\\left|x_{12}\\right|=\\frac{16L}{9\\pi^2}\\approx0.18L$, the $3\\to1$ transition is forbidden, while the cascade $3\\to2\\to1$ is allowed."
+ },
+ {
+  "t": "m",
+  "m": "h\\nu=\\left|n_i^2-n_f^2\\right|E_1,\\qquad x_{mn}=-\\frac{8Lmn}{\\pi^2\\left(m^2-n^2\\right)^2},\\quad m+n=2j+1"
+ },
+ {
+  "t": "li",
+  "uz": "**Yutilish spektri.** Asosiy holatdan faqat juft sathlarga ($n=2,4,6,\\ldots$) yutilish bo'ladi, chiziq intensivligi $\\left|x_{1n}\\right|^2\\propto\\frac{n^2}{\\left(n^2-1\\right)^4}$ — juda tez kamayadi: $2\\leftarrow1$ chiziq $4\\leftarrow1$ dan taxminan $156$ marta kuchli. Shuning uchun amalda spektrni bitta kuchli chiziq belgilaydi ([[F03]]). Bu qoida faqat simmetrik o'ra uchun aniq; o'ra assimmetrik bo'lsa (masalan, elektr maydonda), taqiqlangan chiziqlar kuchsiz paydo bo'ladi.",
+  "ru": "**Спектр поглощения.** Из основного состояния поглощение идёт только на чётные уровни ($n=2,4,6,\\ldots$), интенсивность линии $\\left|x_{1n}\\right|^2\\propto\\frac{n^2}{\\left(n^2-1\\right)^4}$ убывает очень быстро: линия $2\\leftarrow1$ примерно в $156$ раз сильнее линии $4\\leftarrow1$. Поэтому на практике спектр определяется одной сильной линией ([[F03]]). Правило точно только для симметричной ямы; если яма несимметрична (например, в электрическом поле), запрещённые линии слабо появляются.",
+  "en": "**The absorption spectrum.** From the ground state, absorption goes only to even levels ($n=2,4,6,\\ldots$), and the line intensity $\\left|x_{1n}\\right|^2\\propto\\frac{n^2}{\\left(n^2-1\\right)^4}$ falls off very fast: the $2\\leftarrow1$ line is about $156$ times stronger than the $4\\leftarrow1$ line. So in practice the spectrum is set by a single strong line ([[F03]]). The rule is exact only for a symmetric well; if the well is asymmetric (for example, in an electric field), the forbidden lines appear weakly."
+ },
+ {
+  "t": "fig",
+  "fig": "F03",
+  "src": {
+   "uz": "figures/B3-L04-F03.png",
+   "ru": "figures/B3-L04-F03-ru.png",
+   "en": "figures/B3-L04-F03-en.png"
+  },
+  "cap": {
+   "uz": "3-rasm",
+   "ru": "Рис. 3",
+   "en": "Fig. 3"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "5. Simmetrik o'ra, masshtab va impuls taqsimoti",
+  "ru": "5. Симметричная яма, масштаб и распределение импульса",
+  "en": "5. The symmetric well, scaling and the momentum distribution"
+ },
+ {
+  "t": "li",
+  "uz": "**Koordinata boshini markazga ko'chirish.** O'ra $-a<x<a$ da bo'lsin (kenglik $2a$). Energiya o'zgarmaydi, $E_n=\\frac{n^2\\pi^2\\hbar^2}{8ma^2}$, lekin funksiyalar ko'rinishi o'zgaradi: toq $n$ da $\\psi_n=\\frac{1}{\\sqrt{a}}\\cos\\frac{n\\pi x}{2a}$ (juft funksiya), juft $n$ da $\\psi_n=\\frac{1}{\\sqrt{a}}\\sin\\frac{n\\pi x}{2a}$ (toq funksiya). Juftlik navbatlashadi va asosiy holat har doim juft — bu simmetrik potensialning umumiy xossasi; chekli o'rada ham aynan shunday bo'ladi (6-bo'lim).",
+  "ru": "**Перенос начала координат в центр.** Пусть яма занимает $-a<x<a$ (ширина $2a$). Энергия не меняется, $E_n=\\frac{n^2\\pi^2\\hbar^2}{8ma^2}$, но вид функций меняется: при нечётном $n$ $\\psi_n=\\frac{1}{\\sqrt{a}}\\cos\\frac{n\\pi x}{2a}$ (чётная функция), при чётном $n$ $\\psi_n=\\frac{1}{\\sqrt{a}}\\sin\\frac{n\\pi x}{2a}$ (нечётная функция). Чётность чередуется, и основное состояние всегда чётное — это общее свойство симметричного потенциала; в конечной яме будет точно так же (раздел 6).",
+  "en": "**Moving the origin to the centre.** Let the well occupy $-a<x<a$ (width $2a$). The energy does not change, $E_n=\\frac{n^2\\pi^2\\hbar^2}{8ma^2}$, but the form of the functions does: for odd $n$, $\\psi_n=\\frac{1}{\\sqrt{a}}\\cos\\frac{n\\pi x}{2a}$ (an even function), for even $n$, $\\psi_n=\\frac{1}{\\sqrt{a}}\\sin\\frac{n\\pi x}{2a}$ (an odd function). The parity alternates and the ground state is always even — a general property of a symmetric potential; the finite well behaves exactly the same way (section 6)."
+ },
+ {
+  "t": "m",
+  "m": "-a<x<a:\\qquad \\psi_n=\\frac{1}{\\sqrt{a}}\\cos\\frac{n\\pi x}{2a}\\ \\left(n=1,3,\\ldots\\right),\\qquad \\psi_n=\\frac{1}{\\sqrt{a}}\\sin\\frac{n\\pi x}{2a}\\ \\left(n=2,4,\\ldots\\right)"
+ },
+ {
+  "t": "li",
+  "uz": "**Masshtab tahlili.** $E_n\\propto\\frac{n^2}{mL^2}$: massa ortsa yoki o'ra kengaysa, sathlar pastga tushadi va zichlashadi. Bir xil qutida proton sathlari elektronnikidan $\\frac{m_p}{m_e}\\approx1836$ marta past. O'lchamlar tahlili ham shu natijani beradi: $\\hbar$, $m$, $L$ dan yasaladigan yagona energiya — $\\frac{\\hbar^2}{mL^2}$ (B3-L03). Kvant zarra devorlarga bosim beradi: kenglik sekin (adiabatik) o'zgarganda zarra o'z sathida qoladi va devorga ta'sir kuchi $F=-\\frac{dE_n}{dL}=\\frac{2E_n}{L}$.",
+  "ru": "**Анализ масштаба.** $E_n\\propto\\frac{n^2}{mL^2}$: при увеличении массы или ширины ямы уровни опускаются и сгущаются. В одинаковом ящике уровни протона в $\\frac{m_p}{m_e}\\approx1836$ раз ниже уровней электрона. Анализ размерностей даёт тот же результат: единственная энергия, составленная из $\\hbar$, $m$, $L$, — это $\\frac{\\hbar^2}{mL^2}$ (B3-L03). Квантовая частица давит на стенки: при медленном (адиабатическом) изменении ширины частица остаётся на своём уровне, и сила, действующая на стенку, $F=-\\frac{dE_n}{dL}=\\frac{2E_n}{L}$.",
+  "en": "**Scaling analysis.** $E_n\\propto\\frac{n^2}{mL^2}$: when the mass grows or the well widens, the levels go down and crowd together. In the same box the proton levels are $\\frac{m_p}{m_e}\\approx1836$ times lower than the electron ones. Dimensional analysis gives the same result: the only energy built from $\\hbar$, $m$, $L$ is $\\frac{\\hbar^2}{mL^2}$ (B3-L03). A quantum particle exerts pressure on the walls: when the width changes slowly (adiabatically), the particle stays in its level and the force on a wall is $F=-\\frac{dE_n}{dL}=\\frac{2E_n}{L}$."
+ },
+ {
+  "t": "m",
+  "m": "E_n\\propto\\frac{n^2}{mL^2},\\qquad F=-\\frac{dE_n}{dL}=\\frac{2E_n}{L}"
+ },
+ {
+  "t": "li",
+  "uz": "**Impuls taqsimoti.** $\\psi_n$ — $\\hat H$ ning xos funksiyasi, lekin $\\hat p$ ning xos funksiyasi emas. U $\\pm\\hbar k_n$ impulsli ikki to'lqin superpozitsiyasi, ammo cheklangan $L$ oraliqda kesilgan; shuning uchun impuls o'lchanganda natijalar $p=\\pm\\frac{n\\pi\\hbar}{L}$ atrofida, kengligi $\\sim\\frac{h}{L}$ bo'lgan ikki cho'qqi bo'yicha taqsimlanadi (impuls fazosi, B3-L03). Energiya o'lchansa aniq $E_n$ chiqadi, impulsning kvadrati o'rtacha $\\langle p^2\\rangle=2mE_n$, lekin impulsning o'zi aniq emas — GRE da «impuls aniq $\\pm\\sqrt{2mE_n}$» varianti noto'g'ri.",
+  "ru": "**Распределение импульса.** $\\psi_n$ — собственная функция $\\hat H$, но не собственная функция $\\hat p$. Это суперпозиция двух волн с импульсами $\\pm\\hbar k_n$, обрезанная на конечном отрезке $L$; поэтому при измерении импульса результаты распределены по двум пикам около $p=\\pm\\frac{n\\pi\\hbar}{L}$ шириной $\\sim\\frac{h}{L}$ (импульсное пространство, B3-L03). При измерении энергии получается точно $E_n$, среднее квадрата импульса $\\langle p^2\\rangle=2mE_n$, но сам импульс не определён — в GRE вариант «импульс точно равен $\\pm\\sqrt{2mE_n}$» неверен.",
+  "en": "**The momentum distribution.** $\\psi_n$ is an eigenfunction of $\\hat H$ but not of $\\hat p$. It is a superposition of two waves with momenta $\\pm\\hbar k_n$, cut off on the finite interval $L$; so in a momentum measurement the results are distributed over two peaks near $p=\\pm\\frac{n\\pi\\hbar}{L}$ with a width $\\sim\\frac{h}{L}$ (momentum space, B3-L03). An energy measurement gives exactly $E_n$, the mean square momentum is $\\langle p^2\\rangle=2mE_n$, but the momentum itself is not definite — on the GRE the option «the momentum is exactly $\\pm\\sqrt{2mE_n}$» is wrong."
+ },
+ {
+  "t": "h2",
+  "uz": "6. Chekli o'ra: tenglama va tikish shartlari",
+  "ru": "6. Конечная яма: уравнение и условия сшивки",
+  "en": "6. The finite well: the equation and matching conditions"
+ },
+ {
+  "t": "li",
+  "uz": "**Model va sohalar.** **Chekli o'ra** (finite square well): $\\left|x\\right|<a$ da $V=0$, $\\left|x\\right|>a$ da $V=V_0$. Bog'langan holatlarda $0<E<V_0$. Ichida $\\psi''=-k^2\\psi$, $k=\\frac{\\sqrt{2mE}}{\\hbar}$ — tebranish; tashqarida $\\psi''=\\kappa^2\\psi$, $\\kappa=\\frac{\\sqrt{2m\\left(V_0-E\\right)}}{\\hbar}$ — klassik taqiqlangan soha, normallanuvchi yechim faqat so'nuvchi eksponenta $e^{-\\kappa\\left|x\\right|}$. Muhim ayniyat: $k^2+\\kappa^2=\\frac{2mV_0}{\\hbar^2}$ — energiyaga bog'liq emas.",
+  "ru": "**Модель и области.** **Конечная яма**: при $\\left|x\\right|<a$ потенциал $V=0$, при $\\left|x\\right|>a$ — $V=V_0$. Для связанных состояний $0<E<V_0$. Внутри $\\psi''=-k^2\\psi$, $k=\\frac{\\sqrt{2mE}}{\\hbar}$ — осцилляция; снаружи $\\psi''=\\kappa^2\\psi$, $\\kappa=\\frac{\\sqrt{2m\\left(V_0-E\\right)}}{\\hbar}$ — классически запрещённая область, нормируемое решение — только затухающая экспонента $e^{-\\kappa\\left|x\\right|}$. Важное тождество: $k^2+\\kappa^2=\\frac{2mV_0}{\\hbar^2}$ — не зависит от энергии.",
+  "en": "**The model and the regions.** The **finite square well**: $V=0$ for $\\left|x\\right|<a$ and $V=V_0$ for $\\left|x\\right|>a$. For bound states $0<E<V_0$. Inside, $\\psi''=-k^2\\psi$ with $k=\\frac{\\sqrt{2mE}}{\\hbar}$ — oscillation; outside, $\\psi''=\\kappa^2\\psi$ with $\\kappa=\\frac{\\sqrt{2m\\left(V_0-E\\right)}}{\\hbar}$ — the classically forbidden region, where the only normalizable solution is the decaying exponential $e^{-\\kappa\\left|x\\right|}$. An important identity: $k^2+\\kappa^2=\\frac{2mV_0}{\\hbar^2}$ — independent of the energy."
+ },
+ {
+  "t": "li",
+  "uz": "**Juft va toq yechimlar.** Potensial juft, shuning uchun xos funksiyalarni juft yoki toq qilib tanlash mumkin (B3-L03). Juft holat: ichida $A\\cos kx$, tashqarida $Ce^{-\\kappa\\left|x\\right|}$. $x=a$ da $\\psi$ uzluksiz: $A\\cos ka=Ce^{-\\kappa a}$; $\\psi'$ uzluksiz: $-Ak\\sin ka=-\\kappa Ce^{-\\kappa a}$. Bo'lsak, $C$ va $A$ qisqaradi — logarifmik hosila $\\frac{\\psi'}{\\psi}$ tikiladi: $k\\tan ka=\\kappa$. Toq holat ($B\\sin kx$ ichida) uchun xuddi shunday: $-k\\cot ka=\\kappa$. $x=-a$ dagi shart simmetriya tufayli avtomatik bajariladi.",
+  "ru": "**Чётные и нечётные решения.** Потенциал чётный, поэтому собственные функции можно выбрать чётными или нечётными (B3-L03). Чётное состояние: внутри $A\\cos kx$, снаружи $Ce^{-\\kappa\\left|x\\right|}$. При $x=a$ непрерывна $\\psi$: $A\\cos ka=Ce^{-\\kappa a}$; непрерывна $\\psi'$: $-Ak\\sin ka=-\\kappa Ce^{-\\kappa a}$. Деля, сокращаем $C$ и $A$ — сшивается логарифмическая производная $\\frac{\\psi'}{\\psi}$: $k\\tan ka=\\kappa$. Для нечётного состояния ($B\\sin kx$ внутри) аналогично: $-k\\cot ka=\\kappa$. Условие при $x=-a$ выполняется автоматически в силу симметрии.",
+  "en": "**Even and odd solutions.** The potential is even, so the eigenfunctions can be chosen even or odd (B3-L03). An even state: $A\\cos kx$ inside, $Ce^{-\\kappa\\left|x\\right|}$ outside. At $x=a$, $\\psi$ is continuous: $A\\cos ka=Ce^{-\\kappa a}$; $\\psi'$ is continuous: $-Ak\\sin ka=-\\kappa Ce^{-\\kappa a}$. Dividing, $C$ and $A$ cancel — the logarithmic derivative $\\frac{\\psi'}{\\psi}$ is matched: $k\\tan ka=\\kappa$. For an odd state ($B\\sin kx$ inside) likewise: $-k\\cot ka=\\kappa$. The condition at $x=-a$ holds automatically by symmetry."
+ },
+ {
+  "t": "m",
+  "m": "\\psi\\left(-x\\right)=\\psi\\left(x\\right):\\ k\\tan ka=\\kappa,\\qquad \\psi\\left(-x\\right)=-\\psi\\left(x\\right):\\ -k\\cot ka=\\kappa,\\qquad k^2+\\kappa^2=\\frac{2mV_0}{\\hbar^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**O'lchamsiz o'zgaruvchilar.** $z=ka$, $\\eta=\\kappa a$ va o'ra «kuchi» $z_0=\\frac{a\\sqrt{2mV_0}}{\\hbar}$ kiritamiz. U holda $z^2+\\eta^2=z_0^2$ va shartlar: juft holatlar uchun $\\eta=z\\tan z$, toq holatlar uchun $\\eta=-z\\cot z$. Energiya ichki to'lqin sonidan topiladi: $E=\\frac{\\hbar^2z^2}{2ma^2}=\\left(\\frac{z}{z_0}\\right)^2V_0$. Butun fizika bitta parametr $z_0$ da: $V_0a^2$ ko'paytmasi bir xil bo'lgan barcha o'ralar bir xil $\\frac{E}{V_0}$ spektrga ega.",
+  "ru": "**Безразмерные переменные.** Введём $z=ka$, $\\eta=\\kappa a$ и «силу» ямы $z_0=\\frac{a\\sqrt{2mV_0}}{\\hbar}$. Тогда $z^2+\\eta^2=z_0^2$, а условия: для чётных состояний $\\eta=z\\tan z$, для нечётных $\\eta=-z\\cot z$. Энергия находится по внутреннему волновому числу: $E=\\frac{\\hbar^2z^2}{2ma^2}=\\left(\\frac{z}{z_0}\\right)^2V_0$. Вся физика — в одном параметре $z_0$: все ямы с одинаковым произведением $V_0a^2$ имеют одинаковый спектр $\\frac{E}{V_0}$.",
+  "en": "**Dimensionless variables.** Introduce $z=ka$, $\\eta=\\kappa a$ and the well «strength» $z_0=\\frac{a\\sqrt{2mV_0}}{\\hbar}$. Then $z^2+\\eta^2=z_0^2$, and the conditions are $\\eta=z\\tan z$ for even states and $\\eta=-z\\cot z$ for odd states. The energy follows from the internal wave number: $E=\\frac{\\hbar^2z^2}{2ma^2}=\\left(\\frac{z}{z_0}\\right)^2V_0$. All the physics is in one parameter $z_0$: all wells with the same product $V_0a^2$ have the same spectrum $\\frac{E}{V_0}$."
+ },
+ {
+  "t": "m",
+  "m": "z=ka,\\quad \\eta=\\kappa a,\\quad z_0=\\frac{a\\sqrt{2mV_0}}{\\hbar}:\\qquad z^2+\\eta^2=z_0^2,\\qquad \\eta=z\\tan z,\\quad \\eta=-z\\cot z,\\qquad E=\\left(\\frac{z}{z_0}\\right)^2V_0"
+ },
+ {
+  "t": "h2",
+  "uz": "7. Grafik yechim va bog'langan holatlar soni",
+  "ru": "7. Графическое решение и число связанных состояний",
+  "en": "7. Graphical solution and the number of bound states"
+ },
+ {
+  "t": "li",
+  "uz": "**Kesishishlar.** Transsendent tenglamalarni analitik yechib bo'lmaydi, lekin $\\left(z,\\eta\\right)$ tekisligida grafik yechim juda ravshan: radiusi $z_0$ bo'lgan chorak aylana $\\eta=\\sqrt{z_0^2-z^2}$ ni $\\eta=z\\tan z$ (juft) va $\\eta=-z\\cot z$ (toq) egri chiziqlari bilan kesishtiramiz. Har bir kesishish — bitta bog'langan holat. Juft tarmoqlar $z\\in\\left(0,\\frac{\\pi}{2}\\right),\\left(\\pi,\\frac{3\\pi}{2}\\right),\\ldots$ da, toq tarmoqlar $z\\in\\left(\\frac{\\pi}{2},\\pi\\right),\\left(\\frac{3\\pi}{2},2\\pi\\right),\\ldots$ da musbat va ular navbatlashadi — demak, chekli o'rada ham juftlik navbatlashadi va $n$-holatda $n-1$ tugun bor ([[F04]]).",
+  "ru": "**Пересечения.** Трансцендентные уравнения аналитически не решаются, но графическое решение в плоскости $\\left(z,\\eta\\right)$ очень наглядно: пересекаем четверть окружности радиуса $z_0$, $\\eta=\\sqrt{z_0^2-z^2}$, с кривыми $\\eta=z\\tan z$ (чётные) и $\\eta=-z\\cot z$ (нечётные). Каждое пересечение — одно связанное состояние. Чётные ветви положительны при $z\\in\\left(0,\\frac{\\pi}{2}\\right),\\left(\\pi,\\frac{3\\pi}{2}\\right),\\ldots$, нечётные — при $z\\in\\left(\\frac{\\pi}{2},\\pi\\right),\\left(\\frac{3\\pi}{2},2\\pi\\right),\\ldots$, и они чередуются — значит, и в конечной яме чётность чередуется, а у $n$-го состояния $n-1$ узлов ([[F04]]).",
+  "en": "**Intersections.** The transcendental equations cannot be solved analytically, but the graphical solution in the $\\left(z,\\eta\\right)$ plane is very clear: intersect the quarter circle of radius $z_0$, $\\eta=\\sqrt{z_0^2-z^2}$, with the curves $\\eta=z\\tan z$ (even) and $\\eta=-z\\cot z$ (odd). Each intersection is one bound state. The even branches are positive for $z\\in\\left(0,\\frac{\\pi}{2}\\right),\\left(\\pi,\\frac{3\\pi}{2}\\right),\\ldots$, the odd ones for $z\\in\\left(\\frac{\\pi}{2},\\pi\\right),\\left(\\frac{3\\pi}{2},2\\pi\\right),\\ldots$, and they alternate — so in the finite well the parity also alternates and the $n$th state has $n-1$ nodes ([[F04]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Holatlar soni.** $j$-tarmoq ($j=1,2,\\ldots$) $z=\\left(j-1\\right)\\frac{\\pi}{2}$ da $\\eta=0$ dan boshlanib cheksizlikka ko'tariladi, shuning uchun aylana uni faqat $z_0>\\left(j-1\\right)\\frac{\\pi}{2}$ bo'lsa kesadi. Demak, bog'langan holatlar soni $N=1+\\left[\\frac{2z_0}{\\pi}\\right]$ (kvadrat qavs — butun qism). Birinchi juft tarmoq $z=0$ dan boshlangani uchun **har qanday** bir o'lchovli simmetrik o'rada kamida bitta bog'langan holat bor — o'ra qanchalik sayoz yoki tor bo'lmasin. Yangi holat $z_0$ navbatdagi $\\frac{\\pi}{2}$ karralisidan o'tganda $E=V_0$ da ($\\eta=0$, dum cheksiz uzun) «tug'iladi».",
+  "ru": "**Число состояний.** $j$-я ветвь ($j=1,2,\\ldots$) начинается при $z=\\left(j-1\\right)\\frac{\\pi}{2}$ с $\\eta=0$ и уходит в бесконечность, поэтому окружность пересекает её только при $z_0>\\left(j-1\\right)\\frac{\\pi}{2}$. Значит, число связанных состояний $N=1+\\left[\\frac{2z_0}{\\pi}\\right]$ (квадратные скобки — целая часть). Поскольку первая чётная ветвь начинается при $z=0$, в **любой** одномерной симметричной яме есть хотя бы одно связанное состояние — сколь угодно мелкой или узкой. Новое состояние «рождается» при $E=V_0$ ($\\eta=0$, бесконечно длинный хвост), когда $z_0$ проходит очередное кратное $\\frac{\\pi}{2}$.",
+  "en": "**The number of states.** The $j$th branch ($j=1,2,\\ldots$) starts at $z=\\left(j-1\\right)\\frac{\\pi}{2}$ with $\\eta=0$ and rises to infinity, so the circle crosses it only if $z_0>\\left(j-1\\right)\\frac{\\pi}{2}$. Hence the number of bound states is $N=1+\\left[\\frac{2z_0}{\\pi}\\right]$ (square brackets denote the integer part). Since the first even branch starts at $z=0$, **any** one-dimensional symmetric well has at least one bound state — however shallow or narrow. A new state is «born» at $E=V_0$ ($\\eta=0$, an infinitely long tail) when $z_0$ passes the next multiple of $\\frac{\\pi}{2}$."
+ },
+ {
+  "t": "m",
+  "m": "N=1+\\left[\\frac{2z_0}{\\pi}\\right],\\qquad z_n<\\frac{n\\pi}{2}\\ \\Rightarrow\\ E_n<\\frac{n^2\\pi^2\\hbar^2}{2m\\left(2a\\right)^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misol.** $z_0=4$ da $N=1+\\left[\\frac{8}{\\pi}\\right]=3$. Grafikdan $z_1\\approx1.25$, $z_2\\approx2.47$, $z_3\\approx3.60$, ya'ni $\\frac{E}{V_0}\\approx0.098;\\ 0.383;\\ 0.808$. Shu kenglikdagi cheksiz o'rada $\\frac{E_n}{V_0}=\\left(\\frac{n\\pi}{2z_0}\\right)^2\\approx0.154;\\ 0.617;\\ 1.39$ bo'lar edi — chekli o'ra sathlari pastroq, uchinchi «cheksiz» sath esa o'radan tashqariga chiqib ketardi. Har bir $z_n$ o'zining tarmog'ida yotadi: $\\left(n-1\\right)\\frac{\\pi}{2}<z_n<\\frac{n\\pi}{2}$.",
+  "ru": "**Пример.** При $z_0=4$ имеем $N=1+\\left[\\frac{8}{\\pi}\\right]=3$. Из графика $z_1\\approx1.25$, $z_2\\approx2.47$, $z_3\\approx3.60$, то есть $\\frac{E}{V_0}\\approx0.098;\\ 0.383;\\ 0.808$. В бесконечной яме той же ширины было бы $\\frac{E_n}{V_0}=\\left(\\frac{n\\pi}{2z_0}\\right)^2\\approx0.154;\\ 0.617;\\ 1.39$ — уровни конечной ямы ниже, а третий «бесконечный» уровень вышел бы за пределы ямы. Каждое $z_n$ лежит на своей ветви: $\\left(n-1\\right)\\frac{\\pi}{2}<z_n<\\frac{n\\pi}{2}$.",
+  "en": "**Example.** For $z_0=4$, $N=1+\\left[\\frac{8}{\\pi}\\right]=3$. From the graph $z_1\\approx1.25$, $z_2\\approx2.47$, $z_3\\approx3.60$, that is $\\frac{E}{V_0}\\approx0.098;\\ 0.383;\\ 0.808$. In an infinite well of the same width we would have $\\frac{E_n}{V_0}=\\left(\\frac{n\\pi}{2z_0}\\right)^2\\approx0.154;\\ 0.617;\\ 1.39$ — the finite-well levels are lower, and the third «infinite» level would lie outside the well. Each $z_n$ lies on its own branch: $\\left(n-1\\right)\\frac{\\pi}{2}<z_n<\\frac{n\\pi}{2}$."
+ },
+ {
+  "t": "fig",
+  "fig": "F04",
+  "src": {
+   "uz": "figures/B3-L04-F04.png",
+   "ru": "figures/B3-L04-F04-ru.png",
+   "en": "figures/B3-L04-F04-en.png"
+  },
+  "cap": {
+   "uz": "4-rasm",
+   "ru": "Рис. 4",
+   "en": "Fig. 4"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "8. Kirib borish chuqurligi va chuqur o'ra chegarasi",
+  "ru": "8. Глубина проникновения и предел глубокой ямы",
+  "en": "8. Penetration depth and the deep-well limit"
+ },
+ {
+  "t": "li",
+  "uz": "**Klassik taqiqlangan sohadagi dum.** Tashqarida $\\psi\\propto e^{-\\kappa\\left(\\left|x\\right|-a\\right)}$, zichlik $e^{-2\\kappa\\left(\\left|x\\right|-a\\right)}$ kabi so'nadi. **Kirib borish chuqurligi** (penetration depth) $\\delta=\\frac{1}{\\kappa}=\\frac{\\hbar}{\\sqrt{2m\\left(V_0-E\\right)}}$ — $\\psi$ $e$ marta kamayadigan masofa. Elektron uchun $\\delta=\\sqrt{\\frac{0.0381}{V_0-E}}$ ($\\delta$ — $\\mathrm{nm}$ da, $V_0-E$ — $\\mathrm{eV}$ da): bir necha $\\mathrm{eV}$ to'siqda dum angstrem tartibida. Og'ir zarrada dum $\\sqrt{m}$ marta qisqa, sathga yaqinlashganda ($E\\to V_0$) esa cheksiz uzayadi. Klassik zarra bu sohaga umuman kira olmaydi; kvant zarraning u yerda topilish ehtimolligi chekli, lekin kinetik energiya manfiy bo'lib qolmaydi — o'lchash zarrani lokallab, unga energiya beradi.",
+  "ru": "**Хвост в классически запрещённой области.** Снаружи $\\psi\\propto e^{-\\kappa\\left(\\left|x\\right|-a\\right)}$, плотность затухает как $e^{-2\\kappa\\left(\\left|x\\right|-a\\right)}$. **Глубина проникновения** $\\delta=\\frac{1}{\\kappa}=\\frac{\\hbar}{\\sqrt{2m\\left(V_0-E\\right)}}$ — расстояние, на котором $\\psi$ убывает в $e$ раз. Для электрона $\\delta=\\sqrt{\\frac{0.0381}{V_0-E}}$ ($\\delta$ — в $\\mathrm{nm}$, $V_0-E$ — в $\\mathrm{eV}$): при барьере в несколько $\\mathrm{eV}$ хвост порядка ангстрема. У тяжёлой частицы хвост в $\\sqrt{m}$ раз короче, а при приближении к краю ($E\\to V_0$) он неограниченно удлиняется. Классическая частица в эту область вообще не попадает; у квантовой вероятность обнаружения там конечна, но кинетическая энергия не становится отрицательной — измерение локализует частицу и сообщает ей энергию.",
+  "en": "**The tail in the classically forbidden region.** Outside, $\\psi\\propto e^{-\\kappa\\left(\\left|x\\right|-a\\right)}$ and the density decays as $e^{-2\\kappa\\left(\\left|x\\right|-a\\right)}$. The **penetration depth** $\\delta=\\frac{1}{\\kappa}=\\frac{\\hbar}{\\sqrt{2m\\left(V_0-E\\right)}}$ is the distance over which $\\psi$ drops by a factor $e$. For an electron $\\delta=\\sqrt{\\frac{0.0381}{V_0-E}}$ ($\\delta$ in $\\mathrm{nm}$, $V_0-E$ in $\\mathrm{eV}$): for a barrier of a few $\\mathrm{eV}$ the tail is of the order of an angstrom. For a heavy particle the tail is $\\sqrt{m}$ times shorter, and as the level approaches the top ($E\\to V_0$) it grows without bound. A classical particle never enters this region at all; for a quantum particle the probability of being found there is finite, but the kinetic energy does not become negative — the measurement localizes the particle and gives it energy."
+ },
+ {
+  "t": "m",
+  "m": "\\delta=\\frac{1}{\\kappa}=\\frac{\\hbar}{\\sqrt{2m\\left(V_0-E\\right)}},\\qquad \\left|\\psi\\right|^2\\propto e^{-2\\left(\\left|x\\right|-a\\right)/\\delta}"
+ },
+ {
+  "t": "li",
+  "uz": "**Nima uchun chekli o'ra sathlari pastroq.** Dum tufayli to'lqin funksiyasi kengroq sohaga yoyiladi — go'yo o'ra kengligi taxminan $2a+2\\delta$ ga oshgandek. Kengroq «effektiv quti» kichikroq egrilik va kichikroq energiya beradi: har doim $E_n<E_n^{\\infty}$ (bir xil kenglikda). Masalan, $z_0=4$ asosiy holatida zarra o'radan tashqarida taxminan $2$ foiz ehtimollik bilan topiladi; yuqori sathlarda bu ulush ancha katta ([[F05]]).",
+  "ru": "**Почему уровни конечной ямы ниже.** Из-за хвоста волновая функция распространяется на более широкую область — как будто ширина ямы увеличилась примерно до $2a+2\\delta$. Более широкий «эффективный ящик» даёт меньшую кривизну и меньшую энергию: всегда $E_n<E_n^{\\infty}$ (при одинаковой ширине). Например, в основном состоянии при $z_0=4$ частица находится вне ямы с вероятностью около $2$ процентов; на верхних уровнях эта доля гораздо больше ([[F05]]).",
+  "en": "**Why the finite-well levels are lower.** Because of the tail the wave function spreads over a wider region — as if the width of the well grew to about $2a+2\\delta$. A wider «effective box» gives a smaller curvature and a smaller energy: always $E_n<E_n^{\\infty}$ (for the same width). For example, in the ground state for $z_0=4$ the particle is found outside the well with a probability of about $2$ percent; on the upper levels this fraction is much larger ([[F05]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Chuqur o'ra ($z_0\\gg1$).** Pastki sathlarda $\\eta\\approx z_0$ va $z$ tarmoq chegarasi $\\frac{n\\pi}{2}$ ga yaqin. $\\varepsilon=\\frac{n\\pi}{2}-z$ deb, juft holat uchun $\\tan z\\approx\\frac{1}{\\varepsilon}$ (toq holat uchun $-\\cot z$ ham xuddi shunday): $\\frac{z}{\\varepsilon}\\approx z_0$, ya'ni $\\varepsilon\\approx\\frac{z}{z_0}$. Bundan $z_n\\approx\\frac{n\\pi}{2}\\frac{z_0}{z_0+1}$ va $E_n\\approx E_n^{\\infty}\\left(\\frac{z_0}{z_0+1}\\right)^2$. Bu aynan kengligi $2a\\left(1+\\frac{1}{z_0}\\right)=2a+2\\delta_0$ bo'lgan cheksiz o'ra, bunda $\\delta_0=\\frac{a}{z_0}=\\frac{\\hbar}{\\sqrt{2mV_0}}$ — «effektiv kenglik» g'oyasining aniq ifodasi. $z_0\\to\\infty$ da cheksiz o'ra natijasi tiklanadi.",
+  "ru": "**Глубокая яма ($z_0\\gg1$).** На нижних уровнях $\\eta\\approx z_0$, а $z$ близко к границе ветви $\\frac{n\\pi}{2}$. Положив $\\varepsilon=\\frac{n\\pi}{2}-z$, для чётного состояния $\\tan z\\approx\\frac{1}{\\varepsilon}$ (для нечётного $-\\cot z$ так же): $\\frac{z}{\\varepsilon}\\approx z_0$, то есть $\\varepsilon\\approx\\frac{z}{z_0}$. Отсюда $z_n\\approx\\frac{n\\pi}{2}\\frac{z_0}{z_0+1}$ и $E_n\\approx E_n^{\\infty}\\left(\\frac{z_0}{z_0+1}\\right)^2$. Это в точности бесконечная яма шириной $2a\\left(1+\\frac{1}{z_0}\\right)=2a+2\\delta_0$, где $\\delta_0=\\frac{a}{z_0}=\\frac{\\hbar}{\\sqrt{2mV_0}}$ — точное выражение идеи «эффективной ширины». При $z_0\\to\\infty$ восстанавливается результат бесконечной ямы.",
+  "en": "**The deep well ($z_0\\gg1$).** On the lower levels $\\eta\\approx z_0$ and $z$ is close to the branch boundary $\\frac{n\\pi}{2}$. Setting $\\varepsilon=\\frac{n\\pi}{2}-z$, for an even state $\\tan z\\approx\\frac{1}{\\varepsilon}$ (for an odd state $-\\cot z$ behaves the same way): $\\frac{z}{\\varepsilon}\\approx z_0$, that is $\\varepsilon\\approx\\frac{z}{z_0}$. Hence $z_n\\approx\\frac{n\\pi}{2}\\frac{z_0}{z_0+1}$ and $E_n\\approx E_n^{\\infty}\\left(\\frac{z_0}{z_0+1}\\right)^2$. This is exactly an infinite well of width $2a\\left(1+\\frac{1}{z_0}\\right)=2a+2\\delta_0$, where $\\delta_0=\\frac{a}{z_0}=\\frac{\\hbar}{\\sqrt{2mV_0}}$ — a precise statement of the «effective width» idea. For $z_0\\to\\infty$ the infinite-well result is recovered."
+ },
+ {
+  "t": "m",
+  "m": "z_0\\gg1:\\qquad z_n\\approx\\frac{n\\pi}{2}\\frac{z_0}{z_0+1},\\qquad E_n\\approx E_n^{\\infty}\\left(\\frac{z_0}{z_0+1}\\right)^2"
+ },
+ {
+  "t": "fig",
+  "fig": "F05",
+  "src": {
+   "uz": "figures/B3-L04-F05.png",
+   "ru": "figures/B3-L04-F05-ru.png",
+   "en": "figures/B3-L04-F05-en.png"
+  },
+  "cap": {
+   "uz": "5-rasm",
+   "ru": "Рис. 5",
+   "en": "Fig. 5"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "9. Sayoz o'ra va delta potensial chegarasi",
+  "ru": "9. Мелкая яма и предел дельта-потенциала",
+  "en": "9. The shallow well and the delta-potential limit"
+ },
+ {
+  "t": "li",
+  "uz": "**Sayoz o'ra ($z_0\\ll1$).** Faqat bitta (juft) holat bor va u deyarli o'ra tepasida: $z\\approx z_0$, $\\eta$ kichik. $\\eta=z\\tan z\\approx z^2\\approx z_0^2$ dan $\\kappa=\\frac{z_0^2}{a}$ va bog'lanish energiyasi $E_b=V_0-E=\\frac{\\hbar^2\\kappa^2}{2m}=V_0z_0^2=\\frac{2ma^2V_0^2}{\\hbar^2}$. Diqqat: $E_b\\propto V_0^2$ — chuqurlik ikki marta ortsa, bog'lanish to'rt marta kuchayadi. Dum uzunligi $\\delta=\\frac{a}{z_0^2}\\gg a$: zarra deyarli butun vaqtini o'radan tashqarida o'tkazadi — «kuchsiz bog'langan» holat.",
+  "ru": "**Мелкая яма ($z_0\\ll1$).** Есть только одно (чётное) состояние, и оно почти у края ямы: $z\\approx z_0$, $\\eta$ мало. Из $\\eta=z\\tan z\\approx z^2\\approx z_0^2$ получаем $\\kappa=\\frac{z_0^2}{a}$ и энергию связи $E_b=V_0-E=\\frac{\\hbar^2\\kappa^2}{2m}=V_0z_0^2=\\frac{2ma^2V_0^2}{\\hbar^2}$. Внимание: $E_b\\propto V_0^2$ — при удвоении глубины связь усиливается в четыре раза. Длина хвоста $\\delta=\\frac{a}{z_0^2}\\gg a$: частица почти всё время проводит вне ямы — «слабосвязанное» состояние.",
+  "en": "**The shallow well ($z_0\\ll1$).** There is only one (even) state, and it lies almost at the top of the well: $z\\approx z_0$ and $\\eta$ is small. From $\\eta=z\\tan z\\approx z^2\\approx z_0^2$ we get $\\kappa=\\frac{z_0^2}{a}$ and the binding energy $E_b=V_0-E=\\frac{\\hbar^2\\kappa^2}{2m}=V_0z_0^2=\\frac{2ma^2V_0^2}{\\hbar^2}$. Note: $E_b\\propto V_0^2$ — doubling the depth makes the binding four times stronger. The tail length is $\\delta=\\frac{a}{z_0^2}\\gg a$: the particle spends almost all its time outside the well — a «weakly bound» state."
+ },
+ {
+  "t": "li",
+  "uz": "**Delta o'ra bilan bog'lanish.** Juda tor va chuqur o'rani $V=-\\alpha\\delta\\left(x\\right)$ bilan almashtirish mumkin, bunda $\\alpha=2aV_0$ — o'raning «yuzasi» ($\\int\\left(V-V_0\\right)dx$ ning moduli). Delta o'ra uchun B3-L03 da $E_b=\\frac{m\\alpha^2}{2\\hbar^2}$ topilgan edi; $\\alpha=2aV_0$ qo'ysak, aynan $\\frac{2ma^2V_0^2}{\\hbar^2}$ chiqadi. Demak, kuchsiz bog'langan holat o'raning shakliga emas, faqat yuzasiga bog'liq — bu past energiyali fizikaning umumiy xulosasi.",
+  "ru": "**Связь с дельта-ямой.** Очень узкую и глубокую яму можно заменить на $V=-\\alpha\\delta\\left(x\\right)$, где $\\alpha=2aV_0$ — «площадь» ямы (модуль $\\int\\left(V-V_0\\right)dx$). Для дельта-ямы в B3-L03 найдено $E_b=\\frac{m\\alpha^2}{2\\hbar^2}$; подставив $\\alpha=2aV_0$, получаем ровно $\\frac{2ma^2V_0^2}{\\hbar^2}$. Значит, слабосвязанное состояние зависит не от формы ямы, а только от её площади — общий вывод физики низких энергий.",
+  "en": "**Connection with the delta well.** A very narrow and deep well can be replaced by $V=-\\alpha\\delta\\left(x\\right)$, where $\\alpha=2aV_0$ is the «area» of the well (the modulus of $\\int\\left(V-V_0\\right)dx$). For the delta well B3-L03 found $E_b=\\frac{m\\alpha^2}{2\\hbar^2}$; inserting $\\alpha=2aV_0$ gives exactly $\\frac{2ma^2V_0^2}{\\hbar^2}$. So a weakly bound state depends not on the shape of the well but only on its area — a general conclusion of low-energy physics."
+ },
+ {
+  "t": "m",
+  "m": "z_0\\ll1:\\qquad E_b=V_0z_0^2=\\frac{2ma^2V_0^2}{\\hbar^2}=\\frac{m\\alpha^2}{2\\hbar^2},\\qquad \\alpha=2aV_0,\\qquad \\delta=\\frac{a}{z_0^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**O'lchamning roli.** Bir o'lchovli istalgan tortishuvchi o'rada bog'langan holat bor; ikki o'lchovda ham bor, lekin bog'lanish energiyasi $e^{-\\mathrm{const}/V_0}$ kabi juda kichik; uch o'lchovda esa sayoz o'rada bog'langan holat **umuman bo'lmaydi** — chuqurlik ostona qiymatdan oshishi kerak (10-bo'lim). GRE da «har qanday o'rada bog'langan holat bor» degan fikr faqat 1D uchun to'g'ri.",
+  "ru": "**Роль размерности.** В одномерной любой притягивающей яме есть связанное состояние; в двумерной тоже есть, но энергия связи очень мала, как $e^{-\\mathrm{const}/V_0}$; в трёхмерной же мелкой яме связанного состояния **вообще нет** — глубина должна превысить пороговое значение (раздел 10). В GRE утверждение «в любой яме есть связанное состояние» верно только для 1D.",
+  "en": "**The role of dimension.** Any attractive one-dimensional well has a bound state; a two-dimensional one has too, but the binding energy is very small, like $e^{-\\mathrm{const}/V_0}$; a shallow three-dimensional well has **no** bound state at all — the depth must exceed a threshold value (section 10). On the GRE the statement «every well has a bound state» is true only in 1D."
+ },
+ {
+  "t": "h2",
+  "uz": "10. Yarim cheksiz o'ra va sferik o'ra",
+  "ru": "10. Полубесконечная и сферическая ямы",
+  "en": "10. The half-infinite and spherical wells"
+ },
+ {
+  "t": "li",
+  "uz": "**Yarim cheksiz o'ra.** $x<0$ da $V=\\infty$, $0<x<a$ da $V=0$, $x>a$ da $V=V_0$. Shart $\\psi\\left(0\\right)=0$ ichki yechimni $\\sin kx$ ga cheklaydi — simmetrik chekli o'raning faqat **toq** yechimlari qoladi: $-k\\cot ka=\\kappa$, ya'ni $\\eta=-z\\cot z$. Toq tarmoq $z=\\frac{\\pi}{2}$ dan boshlanadi, shuning uchun bog'langan holat faqat $z_0>\\frac{\\pi}{2}$ da bor: $V_0a^2>\\frac{\\pi^2\\hbar^2}{8m}$. Holatlar soni $N=\\left[\\frac{z_0}{\\pi}+\\frac{1}{2}\\right]$. Cheksiz devor sathlarni ko'taradi — juft yechimlar yo'qoladi.",
+  "ru": "**Полубесконечная яма.** При $x<0$ потенциал $V=\\infty$, при $0<x<a$ — $V=0$, при $x>a$ — $V=V_0$. Условие $\\psi\\left(0\\right)=0$ ограничивает внутреннее решение до $\\sin kx$ — остаются только **нечётные** решения симметричной конечной ямы: $-k\\cot ka=\\kappa$, то есть $\\eta=-z\\cot z$. Нечётная ветвь начинается при $z=\\frac{\\pi}{2}$, поэтому связанное состояние есть только при $z_0>\\frac{\\pi}{2}$: $V_0a^2>\\frac{\\pi^2\\hbar^2}{8m}$. Число состояний $N=\\left[\\frac{z_0}{\\pi}+\\frac{1}{2}\\right]$. Бесконечная стенка поднимает уровни — чётные решения исчезают.",
+  "en": "**The half-infinite well.** $V=\\infty$ for $x<0$, $V=0$ for $0<x<a$, and $V=V_0$ for $x>a$. The condition $\\psi\\left(0\\right)=0$ restricts the inside solution to $\\sin kx$ — only the **odd** solutions of the symmetric finite well remain: $-k\\cot ka=\\kappa$, that is $\\eta=-z\\cot z$. The odd branch starts at $z=\\frac{\\pi}{2}$, so a bound state exists only for $z_0>\\frac{\\pi}{2}$: $V_0a^2>\\frac{\\pi^2\\hbar^2}{8m}$. The number of states is $N=\\left[\\frac{z_0}{\\pi}+\\frac{1}{2}\\right]$. The infinite wall raises the levels — the even solutions disappear."
+ },
+ {
+  "t": "m",
+  "m": "\\psi\\left(0\\right)=0:\\quad \\eta=-z\\cot z,\\qquad V_0a^2>\\frac{\\pi^2\\hbar^2}{8m},\\qquad N=\\left[\\frac{z_0}{\\pi}+\\frac{1}{2}\\right]"
+ },
+ {
+  "t": "li",
+  "uz": "**Sferik o'ra, $l=0$.** Uch o'lchovli o'rada ($r<a$ da $V=0$, $r>a$ da $V=V_0$) $l=0$ holatlar uchun $u=rR$ funksiya bir o'lchovli tenglamani $u\\left(0\\right)=0$ sharti bilan qanoatlantiradi (B3-L03, radial tenglama). Bu — aynan yarim cheksiz o'ra! Demak, 3D o'rada bog'langan $s$-holat faqat $V_0a^2>\\frac{\\pi^2\\hbar^2}{8m}$ da paydo bo'ladi — 9-bo'limdagi «uch o'lchovli ostona». Klassik misol — **deytron** (deuteron): proton va neytron (keltirilgan massa $\\frac{m_p}{2}$) yagona, kuchsiz bog'langan holatda ($2.22\\ \\mathrm{MeV}$), uyg'ongan bog'langan holati yo'q ([[F06]]).",
+  "ru": "**Сферическая яма, $l=0$.** В трёхмерной яме ($V=0$ при $r<a$, $V=V_0$ при $r>a$) для состояний с $l=0$ функция $u=rR$ удовлетворяет одномерному уравнению с условием $u\\left(0\\right)=0$ (B3-L03, радиальное уравнение). Это и есть полубесконечная яма! Значит, в 3D-яме связанное $s$-состояние появляется только при $V_0a^2>\\frac{\\pi^2\\hbar^2}{8m}$ — «трёхмерный порог» раздела 9. Классический пример — **дейтрон**: протон и нейтрон (приведённая масса $\\frac{m_p}{2}$) в единственном слабосвязанном состоянии ($2.22\\ \\mathrm{MeV}$), возбуждённого связанного состояния нет ([[F06]]).",
+  "en": "**The spherical well, $l=0$.** In a three-dimensional well ($V=0$ for $r<a$, $V=V_0$ for $r>a$) the function $u=rR$ of the $l=0$ states satisfies the one-dimensional equation with the condition $u\\left(0\\right)=0$ (B3-L03, the radial equation). This is exactly the half-infinite well! So in a 3D well a bound $s$ state appears only for $V_0a^2>\\frac{\\pi^2\\hbar^2}{8m}$ — the «three-dimensional threshold» of section 9. The classic example is the **deuteron**: a proton and a neutron (reduced mass $\\frac{m_p}{2}$) in a single weakly bound state ($2.22\\ \\mathrm{MeV}$), with no excited bound state ([[F06]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Cheksiz sferik o'ra.** $r<R$ da $V=0$, $r=R$ da cheksiz devor. $l=0$ da $u=\\sin kr$, $u\\left(R\\right)=0$: $E_{n0}=\\frac{n^2\\pi^2\\hbar^2}{2mR^2}$ — kengligi $R$ bo'lgan 1D quti bilan bir xil. $l\\geq1$ da sathlar sferik Bessel funksiyalarining nollari $x_{nl}$ bilan beriladi: $E_{nl}=\\frac{\\hbar^2x_{nl}^2}{2mR^2}$, $x_{10}=\\pi\\approx3.14$, $x_{11}\\approx4.49$, $x_{12}\\approx5.76$, $x_{20}=2\\pi\\approx6.28$. Tartib $1s,\\ 1p,\\ 1d,\\ 2s$ — vodoroddagidan farqli; bu yadro qobiq modelining boshlang'ich nuqtasi (B3-L23).",
+  "ru": "**Бесконечная сферическая яма.** $V=0$ при $r<R$, бесконечная стенка при $r=R$. При $l=0$ $u=\\sin kr$, $u\\left(R\\right)=0$: $E_{n0}=\\frac{n^2\\pi^2\\hbar^2}{2mR^2}$ — как в одномерном ящике ширины $R$. При $l\\geq1$ уровни задаются нулями $x_{nl}$ сферических функций Бесселя: $E_{nl}=\\frac{\\hbar^2x_{nl}^2}{2mR^2}$, $x_{10}=\\pi\\approx3.14$, $x_{11}\\approx4.49$, $x_{12}\\approx5.76$, $x_{20}=2\\pi\\approx6.28$. Порядок $1s,\\ 1p,\\ 1d,\\ 2s$ — отличный от водородного; это отправная точка оболочечной модели ядра (B3-L23).",
+  "en": "**The infinite spherical well.** $V=0$ for $r<R$, an infinite wall at $r=R$. For $l=0$, $u=\\sin kr$ and $u\\left(R\\right)=0$: $E_{n0}=\\frac{n^2\\pi^2\\hbar^2}{2mR^2}$ — the same as a one-dimensional box of width $R$. For $l\\geq1$ the levels are given by the zeros $x_{nl}$ of the spherical Bessel functions: $E_{nl}=\\frac{\\hbar^2x_{nl}^2}{2mR^2}$, with $x_{10}=\\pi\\approx3.14$, $x_{11}\\approx4.49$, $x_{12}\\approx5.76$, $x_{20}=2\\pi\\approx6.28$. The order $1s,\\ 1p,\\ 1d,\\ 2s$ differs from hydrogen; this is the starting point of the nuclear shell model (B3-L23)."
+ },
+ {
+  "t": "m",
+  "m": "E_{nl}=\\frac{\\hbar^2x_{nl}^2}{2mR^2},\\qquad x_{n0}=n\\pi,\\quad x_{11}\\approx4.49,\\quad x_{12}\\approx5.76"
+ },
+ {
+  "t": "fig",
+  "fig": "F06",
+  "src": {
+   "uz": "figures/B3-L04-F06.png",
+   "ru": "figures/B3-L04-F06-ru.png",
+   "en": "figures/B3-L04-F06-en.png"
+  },
+  "cap": {
+   "uz": "6-rasm",
+   "ru": "Рис. 6",
+   "en": "Fig. 6"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "11. Ikki va uch o'lchovli qutilar, aynish",
+  "ru": "11. Двух- и трёхмерные ящики, вырождение",
+  "en": "11. Two- and three-dimensional boxes, degeneracy"
+ },
+ {
+  "t": "li",
+  "uz": "**O'zgaruvchilarni ajratish.** To'g'ri burchakli qutida ($0<x<L_x$, $0<y<L_y$, ichida $V=0$) potensial koordinatalar bo'yicha yig'indiga ajraladi, shuning uchun $\\psi=\\psi_{n_x}\\left(x\\right)\\psi_{n_y}\\left(y\\right)$ va energiyalar qo'shiladi. Har bir yo'nalish o'zining kvant sonini oladi, hammasi $\\geq1$. Holat $\\left(n_x,n_y\\right)$ juftligi bilan, uch o'lchovda $\\left(n_x,n_y,n_z\\right)$ uchligi bilan belgilanadi; asosiy holat $\\left(1,1\\right)$ yoki $\\left(1,1,1\\right)$ — hech bir kvant soni nol bo'lmaydi.",
+  "ru": "**Разделение переменных.** В прямоугольном ящике ($0<x<L_x$, $0<y<L_y$, внутри $V=0$) потенциал раскладывается в сумму по координатам, поэтому $\\psi=\\psi_{n_x}\\left(x\\right)\\psi_{n_y}\\left(y\\right)$ и энергии складываются. Каждое направление получает своё квантовое число, все $\\geq1$. Состояние задаётся парой $\\left(n_x,n_y\\right)$, в трёх измерениях — тройкой $\\left(n_x,n_y,n_z\\right)$; основное состояние $\\left(1,1\\right)$ или $\\left(1,1,1\\right)$ — ни одно квантовое число не равно нулю.",
+  "en": "**Separation of variables.** In a rectangular box ($0<x<L_x$, $0<y<L_y$, $V=0$ inside) the potential splits into a sum over coordinates, so $\\psi=\\psi_{n_x}\\left(x\\right)\\psi_{n_y}\\left(y\\right)$ and the energies add. Each direction gets its own quantum number, all $\\geq1$. A state is labelled by the pair $\\left(n_x,n_y\\right)$, in three dimensions by the triple $\\left(n_x,n_y,n_z\\right)$; the ground state is $\\left(1,1\\right)$ or $\\left(1,1,1\\right)$ — no quantum number is zero."
+ },
+ {
+  "t": "m",
+  "m": "E=\\frac{\\pi^2\\hbar^2}{2m}\\left(\\frac{n_x^2}{L_x^2}+\\frac{n_y^2}{L_y^2}+\\frac{n_z^2}{L_z^2}\\right),\\qquad \\psi=\\sqrt{\\frac{8}{L_xL_yL_z}}\\sin\\frac{n_x\\pi x}{L_x}\\sin\\frac{n_y\\pi y}{L_y}\\sin\\frac{n_z\\pi z}{L_z}"
+ },
+ {
+  "t": "li",
+  "uz": "**Simmetriya aynishi.** Kvadrat qutida ($L_x=L_y=L$) $E=E_0\\left(n_x^2+n_y^2\\right)$, $E_0=\\frac{\\pi^2\\hbar^2}{2mL^2}$. $n_x\\neq n_y$ bo'lsa, $\\left(n_x,n_y\\right)$ va $\\left(n_y,n_x\\right)$ bir xil energiyaga ega — **aynish** (degeneracy) karraliligi $g=2$; $n_x=n_y$ da $g=1$. Sathlar: $2E_0\\ \\left(g=1\\right)$, $5E_0\\ \\left(2\\right)$, $8E_0\\ \\left(1\\right)$, $10E_0\\ \\left(2\\right)$, $13E_0\\ \\left(2\\right)$. Kubda (B3-L03): $3\\ \\left(1\\right)$, $6\\ \\left(3\\right)$, $9\\ \\left(3\\right)$, $11\\ \\left(3\\right)$, $12\\ \\left(1\\right)$, $14\\ \\left(6\\right)$ — $E_0$ birligida. Aynish simmetriyadan kelib chiqadi: qutini biroz cho'zsak, u yo'qoladi (sathlar ajraladi).",
+  "ru": "**Вырождение по симметрии.** В квадратном ящике ($L_x=L_y=L$) $E=E_0\\left(n_x^2+n_y^2\\right)$, $E_0=\\frac{\\pi^2\\hbar^2}{2mL^2}$. При $n_x\\neq n_y$ состояния $\\left(n_x,n_y\\right)$ и $\\left(n_y,n_x\\right)$ имеют одинаковую энергию — **вырождение** кратности $g=2$; при $n_x=n_y$ $g=1$. Уровни: $2E_0\\ \\left(g=1\\right)$, $5E_0\\ \\left(2\\right)$, $8E_0\\ \\left(1\\right)$, $10E_0\\ \\left(2\\right)$, $13E_0\\ \\left(2\\right)$. В кубе (B3-L03): $3\\ \\left(1\\right)$, $6\\ \\left(3\\right)$, $9\\ \\left(3\\right)$, $11\\ \\left(3\\right)$, $12\\ \\left(1\\right)$, $14\\ \\left(6\\right)$ — в единицах $E_0$. Вырождение следует из симметрии: если немного растянуть ящик, оно исчезает (уровни расщепляются).",
+  "en": "**Symmetry degeneracy.** In a square box ($L_x=L_y=L$), $E=E_0\\left(n_x^2+n_y^2\\right)$ with $E_0=\\frac{\\pi^2\\hbar^2}{2mL^2}$. For $n_x\\neq n_y$ the states $\\left(n_x,n_y\\right)$ and $\\left(n_y,n_x\\right)$ have the same energy — a **degeneracy** of multiplicity $g=2$; for $n_x=n_y$, $g=1$. Levels: $2E_0\\ \\left(g=1\\right)$, $5E_0\\ \\left(2\\right)$, $8E_0\\ \\left(1\\right)$, $10E_0\\ \\left(2\\right)$, $13E_0\\ \\left(2\\right)$. In a cube (B3-L03): $3\\ \\left(1\\right)$, $6\\ \\left(3\\right)$, $9\\ \\left(3\\right)$, $11\\ \\left(3\\right)$, $12\\ \\left(1\\right)$, $14\\ \\left(6\\right)$ — in units of $E_0$. Degeneracy comes from symmetry: stretch the box slightly and it disappears (the levels split)."
+ },
+ {
+  "t": "li",
+  "uz": "**Tasodifiy aynish.** Ba'zan simmetriya bilan bog'liq bo'lmagan tengliklar ham uchraydi: kvadratda $1^2+7^2=5^2+5^2=50$, shuning uchun $50E_0$ sathi uch karrali: $\\left(1,7\\right),\\ \\left(7,1\\right),\\ \\left(5,5\\right)$. Tomonlari $L_x=2L_y$ bo'lgan qutida $E\\propto\\frac{n_x^2}{4}+n_y^2$ va $\\left(4,1\\right)$ hamda $\\left(2,2\\right)$ holatlar bir xil energiyaga ega. Aynishni sanash GRE da tez-tez so'raladi: $n_x^2+n_y^2+n_z^2=N$ ni qanoatlantiruvchi barcha tartiblangan uchliklarni sanang (aralashtirishlarni ham).",
+  "ru": "**Случайное вырождение.** Иногда встречаются равенства, не связанные с симметрией: в квадрате $1^2+7^2=5^2+5^2=50$, поэтому уровень $50E_0$ трёхкратен: $\\left(1,7\\right),\\ \\left(7,1\\right),\\ \\left(5,5\\right)$. В ящике со сторонами $L_x=2L_y$ $E\\propto\\frac{n_x^2}{4}+n_y^2$, и состояния $\\left(4,1\\right)$ и $\\left(2,2\\right)$ имеют одинаковую энергию. Подсчёт вырождения часто встречается в GRE: считайте все упорядоченные тройки, удовлетворяющие $n_x^2+n_y^2+n_z^2=N$ (включая перестановки).",
+  "en": "**Accidental degeneracy.** Sometimes equalities unrelated to symmetry occur: in a square $1^2+7^2=5^2+5^2=50$, so the level $50E_0$ is threefold: $\\left(1,7\\right),\\ \\left(7,1\\right),\\ \\left(5,5\\right)$. In a box with sides $L_x=2L_y$, $E\\propto\\frac{n_x^2}{4}+n_y^2$, and the states $\\left(4,1\\right)$ and $\\left(2,2\\right)$ have the same energy. Counting degeneracies is a frequent GRE task: count all ordered triples satisfying $n_x^2+n_y^2+n_z^2=N$ (permutations included)."
+ },
+ {
+  "t": "li",
+  "uz": "**Ko'p zarra va sathlarni to'ldirish.** O'zaro ta'sirlashmaydigan elektronlar qutiga solinsa, Pauli prinsipi (B3-L10) bo'yicha har bir fazoviy holatga spini qarama-qarshi ikkitadan elektron joylashadi; umumiy energiya — band sathlar energiyalari yig'indisi. Katta qutida elektronlar sathlarni Fermi energiyasigacha to'ldiradi — metallardagi erkin elektronlar modeli (B3-L17, B3-L26).",
+  "ru": "**Много частиц и заполнение уровней.** Если в ящик поместить невзаимодействующие электроны, по принципу Паули (B3-L10) в каждое пространственное состояние помещается по два электрона с противоположными спинами; полная энергия — сумма энергий занятых уровней. В большом ящике электроны заполняют уровни до энергии Ферми — модель свободных электронов в металлах (B3-L17, B3-L26).",
+  "en": "**Many particles and filling the levels.** If non-interacting electrons are put into a box, by the Pauli principle (B3-L10) each spatial state takes two electrons with opposite spins; the total energy is the sum of the energies of the occupied levels. In a large box the electrons fill the levels up to the Fermi energy — the free-electron model of metals (B3-L17, B3-L26)."
+ },
+ {
+  "t": "h2",
+  "uz": "12. Qo'llanishlar: kvant o'ralar, nuqtalar, molekulalar",
+  "ru": "12. Применения: квантовые ямы, точки, молекулы",
+  "en": "12. Applications: quantum wells, dots, molecules"
+ },
+ {
+  "t": "li",
+  "uz": "**Yarimo'tkazgich kvant o'ralari.** Ikki keng zonali qatlam orasidagi yupqa tor zonali qatlamda (masalan, $\\mathrm{AlGaAs}$ orasidagi $\\mathrm{GaAs}$) elektron bir yo'nalishda qamaladi. Kristalldagi elektron **effektiv massa** (effective mass) $m^*$ bilan harakat qiladi; $\\mathrm{GaAs}$ da $m^*\\approx0.067m_e$. Sathlar $E_n=\\frac{n^2\\pi^2\\hbar^2}{2m^*L^2}$, kichik $m^*$ tufayli $L\\sim10\\ \\mathrm{nm}$ da o'nlab $\\mathrm{meV}$ — infraqizil diapazon. Zona ichidagi o'tishlar infraqizil detektorlar va kvant kaskad lazerlarida ishlatiladi; o'tish energiyasini qatlam qalinligi bilan «loyihalash» mumkin.",
+  "ru": "**Полупроводниковые квантовые ямы.** В тонком узкозонном слое между двумя широкозонными (например, $\\mathrm{GaAs}$ между $\\mathrm{AlGaAs}$) электрон заперт в одном направлении. Электрон в кристалле движется с **эффективной массой** $m^*$; в $\\mathrm{GaAs}$ $m^*\\approx0.067m_e$. Уровни $E_n=\\frac{n^2\\pi^2\\hbar^2}{2m^*L^2}$; из-за малой $m^*$ при $L\\sim10\\ \\mathrm{nm}$ это десятки $\\mathrm{meV}$ — инфракрасный диапазон. Внутризонные переходы используются в инфракрасных детекторах и квантовых каскадных лазерах; энергию перехода можно «проектировать» толщиной слоя.",
+  "en": "**Semiconductor quantum wells.** In a thin narrow-gap layer between two wide-gap ones (for example, $\\mathrm{GaAs}$ between $\\mathrm{AlGaAs}$) an electron is confined in one direction. An electron in a crystal moves with an **effective mass** $m^*$; in $\\mathrm{GaAs}$, $m^*\\approx0.067m_e$. The levels are $E_n=\\frac{n^2\\pi^2\\hbar^2}{2m^*L^2}$; because $m^*$ is small, for $L\\sim10\\ \\mathrm{nm}$ they are tens of $\\mathrm{meV}$ — the infrared range. Intersubband transitions are used in infrared detectors and quantum cascade lasers; the transition energy can be «engineered» through the layer thickness."
+ },
+ {
+  "t": "li",
+  "uz": "**Kvant nuqtalar.** Nanokristall (masalan, $\\mathrm{CdSe}$) elektron va kovakni uch yo'nalishda qamaydi — «sun'iy atom». Nurlanish energiyasi taqiqlangan zona kengligi va qamash energiyasidan iborat: $h\\nu\\approx E_g+\\frac{\\hbar^2\\pi^2}{2\\mu R^2}$, bunda $\\mu$ — elektron va kovakning keltirilgan massasi (kulon tortishish hisobga olinmagan). Nuqta kichiklashgan sari rang ko'kka siljiydi: bir xil moddadan faqat o'lchamni o'zgartirib, qizildan ko'kgacha nurlanuvchi nuqtalar olinadi (displeylar, biologik belgilar; 2023 yilgi Nobel mukofoti). $\\mathrm{CdSe}$ uchun $E_g\\approx1.74\\ \\mathrm{eV}$, $\\mu\\approx0.1m_e$ ([[F07]]).",
+  "ru": "**Квантовые точки.** Нанокристалл (например, $\\mathrm{CdSe}$) запирает электрон и дырку по трём направлениям — «искусственный атом». Энергия излучения складывается из ширины запрещённой зоны и энергии конфайнмента: $h\\nu\\approx E_g+\\frac{\\hbar^2\\pi^2}{2\\mu R^2}$, где $\\mu$ — приведённая масса электрона и дырки (кулоновское притяжение не учтено). С уменьшением точки цвет смещается в синюю сторону: из одного вещества, меняя лишь размер, получают точки, излучающие от красного до синего (дисплеи, биологические метки; Нобелевская премия 2023 года). Для $\\mathrm{CdSe}$ $E_g\\approx1.74\\ \\mathrm{eV}$, $\\mu\\approx0.1m_e$ ([[F07]]).",
+  "en": "**Quantum dots.** A nanocrystal (for example, $\\mathrm{CdSe}$) confines an electron and a hole in three directions — an «artificial atom». The emitted energy is the band gap plus the confinement energy: $h\\nu\\approx E_g+\\frac{\\hbar^2\\pi^2}{2\\mu R^2}$, where $\\mu$ is the reduced mass of the electron and the hole (the Coulomb attraction is neglected). As the dot shrinks, the colour shifts toward blue: from one material, by changing only the size, one obtains dots emitting from red to blue (displays, biological labels; the 2023 Nobel Prize). For $\\mathrm{CdSe}$, $E_g\\approx1.74\\ \\mathrm{eV}$ and $\\mu\\approx0.1m_e$ ([[F07]])."
+ },
+ {
+  "t": "m",
+  "m": "h\\nu\\approx E_g+\\frac{\\hbar^2\\pi^2}{2\\mu R^2},\\qquad E_n=\\frac{n^2\\pi^2\\hbar^2}{2m^*L^2}"
+ },
+ {
+  "t": "li",
+  "uz": "**Bo'yoq molekulalari (erkin elektron modeli).** Konjugatsiyalangan zanjirda (navbatlashgan bir va ikki karrali bog'lar) $\\pi$-elektronlar butun zanjir bo'ylab erkin harakatlanadi — uzunligi $L$ bo'lgan quti. $N$ ta $\\pi$-elektron (juft son) Pauli prinsipi bo'yicha $\\frac{N}{2}$ ta pastki sathni to'ldiradi. Eng uzun to'lqinli yutilish — eng yuqori band sathdan ($n=\\frac{N}{2}$) eng pastki bo'sh sathga ($n=\\frac{N}{2}+1$) o'tish: $\\Delta E=\\left(N+1\\right)\\frac{h^2}{8mL^2}$, $\\lambda=\\frac{8mcL^2}{h\\left(N+1\\right)}$. Zanjir uzaygan sari ($L\\propto N$) $\\lambda\\propto N$ o'sadi — uzun molekulalar ko'rinadigan yorug'likni yutadi (karotin — sabzi rangi).",
+  "ru": "**Молекулы красителей (модель свободных электронов).** В сопряжённой цепочке (чередующиеся одинарные и двойные связи) $\\pi$-электроны свободно движутся вдоль всей цепочки — ящик длины $L$. $N$ $\\pi$-электронов (чётное число) по принципу Паули заполняют $\\frac{N}{2}$ нижних уровней. Самое длинноволновое поглощение — переход с верхнего занятого уровня ($n=\\frac{N}{2}$) на нижний свободный ($n=\\frac{N}{2}+1$): $\\Delta E=\\left(N+1\\right)\\frac{h^2}{8mL^2}$, $\\lambda=\\frac{8mcL^2}{h\\left(N+1\\right)}$. С удлинением цепочки ($L\\propto N$) растёт $\\lambda\\propto N$ — длинные молекулы поглощают видимый свет (каротин — цвет моркови).",
+  "en": "**Dye molecules (the free-electron model).** In a conjugated chain (alternating single and double bonds) the $\\pi$ electrons move freely along the whole chain — a box of length $L$. $N$ $\\pi$ electrons (an even number) fill the $\\frac{N}{2}$ lowest levels by the Pauli principle. The longest-wavelength absorption is the transition from the highest occupied level ($n=\\frac{N}{2}$) to the lowest empty one ($n=\\frac{N}{2}+1$): $\\Delta E=\\left(N+1\\right)\\frac{h^2}{8mL^2}$, $\\lambda=\\frac{8mcL^2}{h\\left(N+1\\right)}$. As the chain grows ($L\\propto N$), $\\lambda\\propto N$ increases — long molecules absorb visible light (carotene — the colour of carrots)."
+ },
+ {
+  "t": "m",
+  "m": "\\Delta E=E_{N/2+1}-E_{N/2}=\\left(N+1\\right)\\frac{h^2}{8mL^2},\\qquad \\lambda=\\frac{8mcL^2}{h\\left(N+1\\right)}"
+ },
+ {
+  "t": "li",
+  "uz": "**Yadro va boshqa misollar.** Yadroda nuklonlar o'lchami $\\sim10\\ \\mathrm{fm}$ bo'lgan o'rada; qutidagi zarra baholashi har bir sath uchun bir necha $\\mathrm{MeV}$ beradi, ko'p nuklon sathlarni to'ldirganda esa yuqori sathlar o'nlab $\\mathrm{MeV}$ ga yetadi — yadro o'rasining chuqurligi ($\\sim50\\ \\mathrm{MeV}$) bilan mos. Xuddi shu baho elektron yadroda bo'la olmasligini ham ko'rsatadi: relyativistik baho $pc\\approx\\frac{hc}{2L}\\sim60\\ \\mathrm{MeV}$ — elektronni ushlab turadigan kuch yo'q. Nanosimlar (2D qamash) va grafen lentalar — boshqa zamonaviy misollar.",
+  "ru": "**Ядро и другие примеры.** В ядре нуклоны находятся в яме размера $\\sim10\\ \\mathrm{fm}$; оценка «частица в ящике» даёт несколько $\\mathrm{MeV}$ на уровень, а при заполнении уровней многими нуклонами верхние уровни достигают десятков $\\mathrm{MeV}$ — в согласии с глубиной ядерной ямы ($\\sim50\\ \\mathrm{MeV}$). Та же оценка показывает, что электрон не может находиться в ядре: релятивистская оценка $pc\\approx\\frac{hc}{2L}\\sim60\\ \\mathrm{MeV}$ — силы, удерживающей электрон, нет. Нанопроволоки (2D-конфайнмент) и графеновые ленты — другие современные примеры.",
+  "en": "**The nucleus and other examples.** In a nucleus the nucleons sit in a well of size $\\sim10\\ \\mathrm{fm}$; the particle-in-a-box estimate gives a few $\\mathrm{MeV}$ per level, and when many nucleons fill the levels the upper ones reach tens of $\\mathrm{MeV}$ — consistent with the depth of the nuclear well ($\\sim50\\ \\mathrm{MeV}$). The same estimate shows that an electron cannot live in a nucleus: the relativistic estimate $pc\\approx\\frac{hc}{2L}\\sim60\\ \\mathrm{MeV}$ — there is no force to hold the electron. Nanowires (2D confinement) and graphene ribbons are other modern examples."
+ },
+ {
+  "t": "fig",
+  "fig": "F07",
+  "src": {
+   "uz": "figures/B3-L04-F07.png",
+   "ru": "figures/B3-L04-F07-ru.png",
+   "en": "figures/B3-L04-F07-en.png"
+  },
+  "cap": {
+   "uz": "7-rasm",
+   "ru": "Рис. 7",
+   "en": "Fig. 7"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "13. Ikki o'ra va tunnel bo'linishi",
+  "ru": "13. Двойная яма и туннельное расщепление",
+  "en": "13. The double well and tunnelling splitting"
+ },
+ {
+  "t": "li",
+  "uz": "**Sathning ikkiga bo'linishi.** Ikki bir xil o'ra kengligi $b$ bo'lgan to'siq bilan ajratilgan bo'lsin. Agar to'siq cheksiz bo'lsa, har bir o'rada $E_0$ sath bor va u ikki karrali aynigan (zarra chapda yoki o'ngda). Chekli to'siqda dumlar ustma-ust tushadi va aynish yo'qoladi: potensial simmetrik, shuning uchun xos holatlar juft $\\psi_+\\approx\\frac{\\psi_L+\\psi_R}{\\sqrt{2}}$ va toq $\\psi_-\\approx\\frac{\\psi_L-\\psi_R}{\\sqrt{2}}$. Juft holatda tugun yo'q va o'rtada $\\psi\\neq0$, shuning uchun uning energiyasi pastroq: $E_+<E_0<E_-$. Bo'linish $\\Delta E=E_--E_+\\propto e^{-\\kappa b}$ — to'siq kengligi bilan eksponensial kamayadi ([[F08]]).",
+  "ru": "**Расщепление уровня надвое.** Пусть две одинаковые ямы разделены барьером ширины $b$. Если барьер бесконечен, в каждой яме есть уровень $E_0$, и он двукратно вырожден (частица слева или справа). При конечном барьере хвосты перекрываются, и вырождение снимается: потенциал симметричен, поэтому собственные состояния — чётное $\\psi_+\\approx\\frac{\\psi_L+\\psi_R}{\\sqrt{2}}$ и нечётное $\\psi_-\\approx\\frac{\\psi_L-\\psi_R}{\\sqrt{2}}$. У чётного состояния нет узла и в середине $\\psi\\neq0$, поэтому его энергия ниже: $E_+<E_0<E_-$. Расщепление $\\Delta E=E_--E_+\\propto e^{-\\kappa b}$ экспоненциально убывает с шириной барьера ([[F08]]).",
+  "en": "**A level splits in two.** Let two identical wells be separated by a barrier of width $b$. If the barrier were infinite, each well would have a level $E_0$, doubly degenerate (the particle on the left or on the right). With a finite barrier the tails overlap and the degeneracy is lifted: the potential is symmetric, so the eigenstates are the even $\\psi_+\\approx\\frac{\\psi_L+\\psi_R}{\\sqrt{2}}$ and the odd $\\psi_-\\approx\\frac{\\psi_L-\\psi_R}{\\sqrt{2}}$. The even state has no node and $\\psi\\neq0$ in the middle, so its energy is lower: $E_+<E_0<E_-$. The splitting $\\Delta E=E_--E_+\\propto e^{-\\kappa b}$ decreases exponentially with the barrier width ([[F08]])."
+ },
+ {
+  "t": "li",
+  "uz": "**Tunnel tebranishlari.** Zarra boshida chap o'rada bo'lsin: $\\Psi\\left(0\\right)=\\psi_L=\\frac{\\psi_++\\psi_-}{\\sqrt{2}}$. Ikki statsionar holatning fazalari har xil tezlikda aylanadi va (B3-L03 dagi kvant urishlari kabi) $P_L\\left(t\\right)=\\cos^2\\frac{\\Delta Et}{2\\hbar}$, $P_R\\left(t\\right)=\\sin^2\\frac{\\Delta Et}{2\\hbar}$. Zarra $t=\\frac{\\pi\\hbar}{\\Delta E}=\\frac{h}{2\\Delta E}$ vaqtda to'liq o'ng o'raga o'tadi va $\\frac{h}{\\Delta E}$ davr bilan qaytadi. Klassik zarra (energiyasi to'siqdan past bo'lsa) hech qachon o'tmaydi.",
+  "ru": "**Туннельные осцилляции.** Пусть вначале частица в левой яме: $\\Psi\\left(0\\right)=\\psi_L=\\frac{\\psi_++\\psi_-}{\\sqrt{2}}$. Фазы двух стационарных состояний вращаются с разной скоростью, и (как квантовые биения в B3-L03) $P_L\\left(t\\right)=\\cos^2\\frac{\\Delta Et}{2\\hbar}$, $P_R\\left(t\\right)=\\sin^2\\frac{\\Delta Et}{2\\hbar}$. Частица полностью переходит в правую яму за время $t=\\frac{\\pi\\hbar}{\\Delta E}=\\frac{h}{2\\Delta E}$ и возвращается с периодом $\\frac{h}{\\Delta E}$. Классическая частица (с энергией ниже барьера) не переходит никогда.",
+  "en": "**Tunnelling oscillations.** Let the particle start in the left well: $\\Psi\\left(0\\right)=\\psi_L=\\frac{\\psi_++\\psi_-}{\\sqrt{2}}$. The phases of the two stationary states rotate at different rates and (like the quantum beats of B3-L03) $P_L\\left(t\\right)=\\cos^2\\frac{\\Delta Et}{2\\hbar}$, $P_R\\left(t\\right)=\\sin^2\\frac{\\Delta Et}{2\\hbar}$. The particle moves completely into the right well in the time $t=\\frac{\\pi\\hbar}{\\Delta E}=\\frac{h}{2\\Delta E}$ and comes back with the period $\\frac{h}{\\Delta E}$. A classical particle (with energy below the barrier) never crosses."
+ },
+ {
+  "t": "m",
+  "m": "\\psi_{\\pm}=\\frac{\\psi_L\\pm\\psi_R}{\\sqrt{2}},\\qquad \\Delta E=E_--E_+\\propto e^{-\\kappa b},\\qquad P_R\\left(t\\right)=\\sin^2\\frac{\\Delta Et}{2\\hbar},\\qquad t=\\frac{\\pi\\hbar}{\\Delta E}"
+ },
+ {
+  "t": "li",
+  "uz": "**Misollar.** Ammiak molekulasida ($\\mathrm{NH_3}$) azot atomi vodorodlar tekisligining ikki tomonidagi ikki o'rada bo'ladi; tunnel bo'linishi $\\nu=23.9\\ \\mathrm{GHz}$ chastotaga mos keladi — birinchi mazer va atom soatlarining asosi. $\\mathrm{H_2^+}$ ionidagi bog'lovchi va bo'shashtiruvchi orbitallar — xuddi shu juft/toq juftlik (kimyoviy bog'). Ko'p o'ralar zanjirida har bir sath $N$ ta yaqin sathga bo'linib, **energetik zona** hosil qiladi — qattiq jismlar zona nazariyasi (B3-L26). Qo'sh kvant nuqtalar — kvant kompyuterlar uchun kubit.",
+  "ru": "**Примеры.** В молекуле аммиака ($\\mathrm{NH_3}$) атом азота находится в двух ямах по обе стороны плоскости водородов; туннельному расщеплению соответствует частота $\\nu=23.9\\ \\mathrm{GHz}$ — основа первого мазера и атомных часов. Связывающая и разрыхляющая орбитали иона $\\mathrm{H_2^+}$ — та же чётная/нечётная пара (химическая связь). В цепочке многих ям каждый уровень расщепляется на $N$ близких уровней, образуя **энергетическую зону** — зонная теория твёрдых тел (B3-L26). Двойные квантовые точки — кубиты для квантовых компьютеров.",
+  "en": "**Examples.** In the ammonia molecule ($\\mathrm{NH_3}$) the nitrogen atom sits in two wells on either side of the plane of the hydrogens; the tunnelling splitting corresponds to the frequency $\\nu=23.9\\ \\mathrm{GHz}$ — the basis of the first maser and of atomic clocks. The bonding and antibonding orbitals of the $\\mathrm{H_2^+}$ ion are the same even/odd pair (the chemical bond). In a chain of many wells each level splits into $N$ close levels, forming an **energy band** — the band theory of solids (B3-L26). Double quantum dots serve as qubits for quantum computers."
+ },
+ {
+  "t": "fig",
+  "fig": "F08",
+  "src": {
+   "uz": "figures/B3-L04-F08.png",
+   "ru": "figures/B3-L04-F08-ru.png",
+   "en": "figures/B3-L04-F08-en.png"
+  },
+  "cap": {
+   "uz": "8-rasm",
+   "ru": "Рис. 8",
+   "en": "Fig. 8"
+  }
+ },
+ {
+  "t": "h2",
+  "uz": "14. GRE usullari va tipik tuzoqlar",
+  "ru": "14. Приёмы GRE и типичные ловушки",
+  "en": "14. GRE techniques and typical traps"
+ },
+ {
+  "t": "li",
+  "uz": "**Cheksiz o'ra.** 1) $E_n\\propto\\frac{n^2}{mL^2}$: kenglik ikki marta ortsa — energiya to'rt marta kamayadi; massa bo'yicha teskari proporsional. 2) $n$ noldan emas, $1$ dan boshlanadi; asosiy energiya nol emas. 3) Sathlar oralig'i $\\left(2n+1\\right)E_1$ — teng oraliq ossillyatorda, qutida emas. 4) $E_1$ ni eslay olmasangiz, $L=n\\frac{\\lambda}{2}$ va $E=\\frac{p^2}{2m}$ dan tiklang; $h$ bilan yozilsa maxrajda $8$, $\\hbar$ bilan yozilsa $2$ va $\\pi^2$. 5) Koordinata boshi markazda bo'lsa, energiya o'zgarmaydi, funksiyalar $\\cos$ va $\\sin$ navbatlashadi. 6) Juft $n$ da markazda tugun. 7) $\\langle x\\rangle=\\frac{L}{2}$ har bir statsionar holatda, $\\langle p\\rangle=0$, lekin $\\langle p^2\\rangle\\neq0$.",
+  "ru": "**Бесконечная яма.** 1) $E_n\\propto\\frac{n^2}{mL^2}$: при удвоении ширины энергия уменьшается в четыре раза; по массе — обратно пропорционально. 2) $n$ начинается с $1$, а не с нуля; основная энергия не равна нулю. 3) Расстояние между уровнями $\\left(2n+1\\right)E_1$ — равные расстояния у осциллятора, а не у ящика. 4) Если не помните $E_1$, восстановите из $L=n\\frac{\\lambda}{2}$ и $E=\\frac{p^2}{2m}$; в записи через $h$ в знаменателе $8$, через $\\hbar$ — $2$ и $\\pi^2$. 5) Если начало координат в центре, энергия не меняется, функции чередуются: $\\cos$ и $\\sin$. 6) При чётном $n$ в центре узел. 7) $\\langle x\\rangle=\\frac{L}{2}$ в каждом стационарном состоянии, $\\langle p\\rangle=0$, но $\\langle p^2\\rangle\\neq0$.",
+  "en": "**The infinite well.** 1) $E_n\\propto\\frac{n^2}{mL^2}$: doubling the width lowers the energy four times; it is inversely proportional to the mass. 2) $n$ starts at $1$, not at zero; the ground energy is not zero. 3) The level spacing is $\\left(2n+1\\right)E_1$ — equal spacings belong to the oscillator, not the box. 4) If you forget $E_1$, rebuild it from $L=n\\frac{\\lambda}{2}$ and $E=\\frac{p^2}{2m}$; written with $h$ the denominator has $8$, with $\\hbar$ it has $2$ and $\\pi^2$. 5) With the origin at the centre the energy does not change; the functions alternate between $\\cos$ and $\\sin$. 6) For even $n$ there is a node at the centre. 7) $\\langle x\\rangle=\\frac{L}{2}$ in every stationary state, $\\langle p\\rangle=0$, but $\\langle p^2\\rangle\\neq0$."
+ },
+ {
+  "t": "li",
+  "uz": "**O'tishlar va o'lchash.** 8) Foton energiyasi $\\left(n_i^2-n_f^2\\right)E_1$, $\\left(n_i-n_f\\right)^2E_1$ emas. 9) Simmetrik o'rada dipol o'tishlar faqat toq $\\Delta n$ da; $3\\to1$ taqiqlangan. 10) $\\lambda\\propto L^2$: «quti ikki marta kengaydi» — to'lqin uzunligi to'rt marta. 11) Superpozitsiyada energiya o'lchansa faqat $E_n$ lardan biri chiqadi, $\\langle E\\rangle=\\sum\\left|c_n\\right|^2E_n$ — o'rtacha. 12) Impuls o'lchansa natija aniq $\\pm\\frac{n\\pi\\hbar}{L}$ emas — taqsimot. 13) Bo'yoq molekulasida yutilish — $\\frac{N}{2}\\to\\frac{N}{2}+1$, $1\\to2$ emas; har sathda ikkita elektron.",
+  "ru": "**Переходы и измерение.** 8) Энергия фотона $\\left(n_i^2-n_f^2\\right)E_1$, а не $\\left(n_i-n_f\\right)^2E_1$. 9) В симметричной яме дипольные переходы только при нечётном $\\Delta n$; $3\\to1$ запрещён. 10) $\\lambda\\propto L^2$: «ящик стал вдвое шире» — длина волны вчетверо больше. 11) При измерении энергии в суперпозиции получается только одно из $E_n$, $\\langle E\\rangle=\\sum\\left|c_n\\right|^2E_n$ — среднее. 12) При измерении импульса результат не равен точно $\\pm\\frac{n\\pi\\hbar}{L}$ — это распределение. 13) В молекуле красителя поглощение — $\\frac{N}{2}\\to\\frac{N}{2}+1$, а не $1\\to2$; на каждом уровне два электрона.",
+  "en": "**Transitions and measurement.** 8) The photon energy is $\\left(n_i^2-n_f^2\\right)E_1$, not $\\left(n_i-n_f\\right)^2E_1$. 9) In a symmetric well dipole transitions occur only for odd $\\Delta n$; $3\\to1$ is forbidden. 10) $\\lambda\\propto L^2$: «the box became twice as wide» — the wavelength is four times longer. 11) An energy measurement on a superposition gives only one of the $E_n$; $\\langle E\\rangle=\\sum\\left|c_n\\right|^2E_n$ is the average. 12) A momentum measurement does not give exactly $\\pm\\frac{n\\pi\\hbar}{L}$ — it is a distribution. 13) In a dye molecule the absorption is $\\frac{N}{2}\\to\\frac{N}{2}+1$, not $1\\to2$; each level holds two electrons."
+ },
+ {
+  "t": "li",
+  "uz": "**Chekli o'ra va boshqalar.** 14) Chekli o'ra sathlari shu kenglikdagi cheksiz o'ranikidan past, dumlar tufayli. 15) Holatlar soni $1+\\left[\\frac{2z_0}{\\pi}\\right]$; 1D simmetrik o'rada kamida bitta holat har doim bor, 3D va yarim cheksiz o'rada esa ostona bor ($z_0>\\frac{\\pi}{2}$). 16) $\\delta=\\frac{\\hbar}{\\sqrt{2m\\left(V_0-E\\right)}}$: $V_0-E$ to'rt marta ortsa, dum ikki marta qisqaradi. 17) Sayoz o'rada $E_b\\propto V_0^2a^2$ — delta o'ra bilan $\\alpha=2aV_0$. 18) Kvadratda aynish: $\\left(n_x,n_y\\right)$ va $\\left(n_y,n_x\\right)$ ni alohida sanang; tasodifiy aynishni unutmang. 19) Kvant nuqta kichiklashsa — ko'k siljish ($\\propto\\frac{1}{R^2}$). 20) Ikki o'rada asosiy holat juft va pastroq; tunnel o'tish vaqti $\\frac{h}{2\\Delta E}$, davr $\\frac{h}{\\Delta E}$.",
+  "ru": "**Конечная яма и прочее.** 14) Уровни конечной ямы ниже уровней бесконечной ямы той же ширины — из-за хвостов. 15) Число состояний $1+\\left[\\frac{2z_0}{\\pi}\\right]$; в 1D симметричной яме хотя бы одно состояние есть всегда, а в 3D и в полубесконечной яме есть порог ($z_0>\\frac{\\pi}{2}$). 16) $\\delta=\\frac{\\hbar}{\\sqrt{2m\\left(V_0-E\\right)}}$: при увеличении $V_0-E$ в четыре раза хвост вдвое короче. 17) В мелкой яме $E_b\\propto V_0^2a^2$ — дельта-яма с $\\alpha=2aV_0$. 18) Вырождение в квадрате: считайте $\\left(n_x,n_y\\right)$ и $\\left(n_y,n_x\\right)$ отдельно; не забывайте о случайном вырождении. 19) Уменьшение квантовой точки — синий сдвиг ($\\propto\\frac{1}{R^2}$). 20) В двойной яме основное состояние чётное и ниже; время туннельного перехода $\\frac{h}{2\\Delta E}$, период $\\frac{h}{\\Delta E}$.",
+  "en": "**The finite well and the rest.** 14) The finite-well levels are below those of the infinite well of the same width — because of the tails. 15) The number of states is $1+\\left[\\frac{2z_0}{\\pi}\\right]$; a 1D symmetric well always has at least one state, while a 3D and a half-infinite well have a threshold ($z_0>\\frac{\\pi}{2}$). 16) $\\delta=\\frac{\\hbar}{\\sqrt{2m\\left(V_0-E\\right)}}$: when $V_0-E$ grows four times, the tail becomes twice as short. 17) In a shallow well $E_b\\propto V_0^2a^2$ — a delta well with $\\alpha=2aV_0$. 18) Degeneracy in a square: count $\\left(n_x,n_y\\right)$ and $\\left(n_y,n_x\\right)$ separately; do not forget accidental degeneracy. 19) A shrinking quantum dot — a blue shift ($\\propto\\frac{1}{R^2}$). 20) In a double well the ground state is even and lower; the tunnelling transfer time is $\\frac{h}{2\\Delta E}$ and the period $\\frac{h}{\\Delta E}$."
+ },
+ {
+  "t": "h2",
+  "uz": "Asosiy formulalar",
+  "ru": "Основные формулы",
+  "en": "Key formulas"
+ },
+ {
+  "t": "tbl",
+  "rows": [
+   {
+    "uz": "Cheksiz o'ra sathlari",
+    "ru": "Уровни бесконечной ямы",
+    "en": "Infinite-well levels",
+    "m": "E_n=\\frac{n^2\\pi^2\\hbar^2}{2mL^2}=\\frac{n^2h^2}{8mL^2}"
+   },
+   {
+    "uz": "Cheksiz o'ra funksiyalari",
+    "ru": "Функции бесконечной ямы",
+    "en": "Infinite-well functions",
+    "m": "\\psi_n=\\sqrt{\\frac{2}{L}}\\sin\\frac{n\\pi x}{L}"
+   },
+   {
+    "uz": "Turg'un to'lqin sharti",
+    "ru": "Условие стоячей волны",
+    "en": "Standing-wave condition",
+    "m": "L=n\\frac{\\lambda_n}{2},\\quad p_n=\\frac{nh}{2L}"
+   },
+   {
+    "uz": "Sathlar oralig'i",
+    "ru": "Расстояние между уровнями",
+    "en": "Level spacing",
+    "m": "E_{n+1}-E_n=\\left(2n+1\\right)E_1"
+   },
+   {
+    "uz": "Markazga nisbatan juftlik",
+    "ru": "Чётность относительно центра",
+    "en": "Parity about the centre",
+    "m": "\\psi_n\\left(L-x\\right)=\\left(-1\\right)^{n+1}\\psi_n\\left(x\\right)"
+   },
+   {
+    "uz": "Koordinata momentlari",
+    "ru": "Моменты координаты",
+    "en": "Position moments",
+    "m": "\\langle x\\rangle=\\frac{L}{2},\\quad \\langle x^2\\rangle=L^2\\left(\\frac{1}{3}-\\frac{1}{2n^2\\pi^2}\\right)"
+   },
+   {
+    "uz": "Impuls momentlari",
+    "ru": "Моменты импульса",
+    "en": "Momentum moments",
+    "m": "\\langle p\\rangle=0,\\quad \\langle p^2\\rangle=\\left(\\frac{n\\pi\\hbar}{L}\\right)^2"
+   },
+   {
+    "uz": "Noaniqliklar ko'paytmasi",
+    "ru": "Произведение неопределённостей",
+    "en": "Uncertainty product",
+    "m": "\\sigma_x\\sigma_p=\\frac{\\hbar}{2}\\sqrt{\\frac{n^2\\pi^2}{3}-2}"
+   },
+   {
+    "uz": "Sohada topish ehtimolligi",
+    "ru": "Вероятность в области",
+    "en": "Probability in a region",
+    "m": "P\\left(0,b\\right)=\\frac{b}{L}-\\frac{1}{2n\\pi}\\sin\\frac{2n\\pi b}{L}"
+   },
+   {
+    "uz": "Foton energiyasi",
+    "ru": "Энергия фотона",
+    "en": "Photon energy",
+    "m": "h\\nu=\\left|n_i^2-n_f^2\\right|E_1"
+   },
+   {
+    "uz": "Dipol matritsa elementi",
+    "ru": "Дипольный матричный элемент",
+    "en": "Dipole matrix element",
+    "m": "x_{mn}=-\\frac{8Lmn}{\\pi^2\\left(m^2-n^2\\right)^2},\\quad m+n=2j+1"
+   },
+   {
+    "uz": "Devorga ta'sir kuchi",
+    "ru": "Сила давления на стенку",
+    "en": "Force on a wall",
+    "m": "F=\\frac{2E_n}{L}"
+   },
+   {
+    "uz": "Chekli o'ra: juft holatlar",
+    "ru": "Конечная яма: чётные",
+    "en": "Finite well: even states",
+    "m": "k\\tan ka=\\kappa,\\quad \\eta=z\\tan z"
+   },
+   {
+    "uz": "Chekli o'ra: toq holatlar",
+    "ru": "Конечная яма: нечётные",
+    "en": "Finite well: odd states",
+    "m": "-k\\cot ka=\\kappa,\\quad \\eta=-z\\cot z"
+   },
+   {
+    "uz": "O'ra kuchi",
+    "ru": "Сила ямы",
+    "en": "Well strength",
+    "m": "z_0=\\frac{a\\sqrt{2mV_0}}{\\hbar},\\quad z^2+\\eta^2=z_0^2"
+   },
+   {
+    "uz": "Bog'langan holatlar soni",
+    "ru": "Число связанных состояний",
+    "en": "Number of bound states",
+    "m": "N=1+\\left[\\frac{2z_0}{\\pi}\\right]"
+   },
+   {
+    "uz": "Kirib borish chuqurligi",
+    "ru": "Глубина проникновения",
+    "en": "Penetration depth",
+    "m": "\\delta=\\frac{\\hbar}{\\sqrt{2m\\left(V_0-E\\right)}}"
+   },
+   {
+    "uz": "Chuqur o'ra",
+    "ru": "Глубокая яма",
+    "en": "Deep well",
+    "m": "E_n\\approx E_n^{\\infty}\\left(\\frac{z_0}{z_0+1}\\right)^2"
+   },
+   {
+    "uz": "Sayoz o'ra",
+    "ru": "Мелкая яма",
+    "en": "Shallow well",
+    "m": "E_b=\\frac{2ma^2V_0^2}{\\hbar^2},\\quad \\alpha=2aV_0"
+   },
+   {
+    "uz": "Yarim cheksiz va 3D o'ra ostonasi",
+    "ru": "Порог полубесконечной и 3D ямы",
+    "en": "Half-infinite and 3D threshold",
+    "m": "V_0a^2>\\frac{\\pi^2\\hbar^2}{8m}"
+   },
+   {
+    "uz": "Sferik cheksiz o'ra",
+    "ru": "Сферическая бесконечная яма",
+    "en": "Infinite spherical well",
+    "m": "E_{nl}=\\frac{\\hbar^2x_{nl}^2}{2mR^2},\\quad x_{n0}=n\\pi"
+   },
+   {
+    "uz": "3D quti",
+    "ru": "3D-ящик",
+    "en": "3D box",
+    "m": "E=\\frac{\\pi^2\\hbar^2}{2m}\\left(\\frac{n_x^2}{L_x^2}+\\frac{n_y^2}{L_y^2}+\\frac{n_z^2}{L_z^2}\\right)"
+   },
+   {
+    "uz": "Kvant nuqta",
+    "ru": "Квантовая точка",
+    "en": "Quantum dot",
+    "m": "h\\nu\\approx E_g+\\frac{\\hbar^2\\pi^2}{2\\mu R^2}"
+   },
+   {
+    "uz": "Bo'yoq molekulasi",
+    "ru": "Молекула красителя",
+    "en": "Dye molecule",
+    "m": "\\lambda=\\frac{8mcL^2}{h\\left(N+1\\right)}"
+   },
+   {
+    "uz": "Ikki o'ra",
+    "ru": "Двойная яма",
+    "en": "Double well",
+    "m": "P_R=\\sin^2\\frac{\\Delta Et}{2\\hbar},\\quad t=\\frac{\\pi\\hbar}{\\Delta E}"
+   }
+  ]
+ }
+]
