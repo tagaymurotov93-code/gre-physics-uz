@@ -79,6 +79,19 @@
                  en: "Mark this when you have worked through the homework problems." },
     parts:     { nazariya: { uz: "Nazariya", ru: "Теория", en: "Theory" }, masalalar: { uz: "Masalalar", ru: "Задачи", en: "Problems" },
                  test: { uz: "Test", ru: "Тест", en: "Quiz" }, mustaqil: { uz: "Mustaqil", ru: "Сам. работа", en: "Homework" } },
+    privT:     { uz: "Ma'lumotlaringiz", ru: "Ваши данные", en: "Your data" },
+    privTxt:   { uz: "Telegram ichida Mini App serverda faqat Telegram ismingiz, nickname (username) va ID'ingizni saqlaydi; ular siz bilan qayta aloqa uchun kerak. Bundan tashqari darslardagi progress, faol kunlar va o'qish vaqti saqlanadi — progressingiz boshqa qurilmada ham ko'rinishi va kursni yaxshilash uchun. Telefon raqam va boshqa ma'lumotlar olinmaydi.",
+                 ru: "Внутри Telegram Mini App хранит на сервере только ваше имя в Telegram, никнейм (username) и ID — они нужны, чтобы связаться с вами. Кроме того, сохраняются прогресс по урокам, дни активности и время занятий — чтобы прогресс был виден на других устройствах и чтобы улучшать курс. Номер телефона и другие данные не собираются.",
+                 en: "Inside Telegram, the Mini App stores on its server only your Telegram name, username and ID, which are needed to get back in touch with you. It also stores your lesson progress, active days and study time, so your progress shows on other devices and the course can be improved. Your phone number and other data are not collected." },
+    privDel:   { uz: "Ma'lumotlarimni o'chirish", ru: "Удалить мои данные", en: "Delete my data" },
+    privAsk:   { uz: "Yana bir marta bosing — serverdagi ma'lumotlaringiz va progress o'chadi", ru: "Нажмите ещё раз — ваши данные на сервере и прогресс будут удалены",
+                 en: "Tap again — your data on the server and your progress will be erased" },
+    privDone:  { uz: "Ma'lumotlaringiz o'chirildi. Ilovadan foydalanishda davom etsangiz, yangi ma'lumotlar yana saqlanadi.",
+                 ru: "Ваши данные удалены. Если продолжите пользоваться приложением, новые данные снова будут сохраняться.",
+                 en: "Your data has been deleted. If you keep using the app, new data will be stored again." },
+    privErr:   { uz: "O'chirib bo'lmadi — internetni tekshirib, qayta urinib ko'ring.", ru: "Не удалось удалить — проверьте интернет и попробуйте снова.",
+                 en: "Could not delete — check your connection and try again." },
+    admin:     { uz: "📊 Admin panel", ru: "📊 Админ-панель", en: "📊 Admin panel" },
     synced:    { uz: "Progress Telegram hisobingizga bog'langan — boshqa qurilmada ham ko'rinadi.",
                  ru: "Прогресс привязан к вашему аккаунту Telegram — виден и на других устройствах.",
                  en: "Progress is linked to your Telegram account and shows on your other devices." },
@@ -138,10 +151,20 @@
     const API = String(window.PROGRESS_API || "").replace(/\/+$/, "");
     const initData = () => { const w = G.tg() || (window.Telegram && window.Telegram.WebApp); return (w && w.initData) || ""; };
     let off = false, timer = null, busy = false, pulled = false;
+    // faol o'qish vaqti: sahifa ko'rinib turgan va oxirgi 2 daqiqada teginish/aylantirish bo'lgan har 15 s hisoblanadi
+    const SK = "pgsec";
+    let secs = Number(G.store.get(SK, 0)) || 0, lastAct = Date.now(), lastPush = Date.now();
+    ["pointerdown", "touchstart", "scroll", "keydown", "wheel"].forEach((ev) => window.addEventListener(ev, () => { lastAct = Date.now(); }, { passive: true, capture: true }));
+    setInterval(() => {
+      if (document.visibilityState !== "visible" || Date.now() - lastAct > 120000) return;
+      secs += 15; G.store.set(SK, secs);
+      if (secs >= 60 && Date.now() - lastPush > 180000) push();      // uzoq o'qishda ham 3 daqiqada bir yuboriladi
+    }, 15000);
     const on = () => !!API && !off && !!initData();
-    async function req(path, body, keepalive) {
+    async function req(path, body, keepalive, raw) {
       const r = await fetch(API + path, { method: body ? "POST" : "GET", keepalive: !!keepalive,
         headers: { "Content-Type": "application/json", "X-Init-Data": initData() }, body: body ? JSON.stringify(body) : undefined });
+      if (raw) return r;
       if (r.status === 404 || r.status === 401 || r.status === 403) { off = true; throw new Error("off"); }
       if (!r.ok) throw new Error("http " + r.status);
       return r.json();
@@ -151,6 +174,7 @@
       try {
         const j = await req("/api/progress");
         pulled = true;
+        if (j && j.admin && !G.isAdmin) { G.isAdmin = true; G.emit("admin"); }
         if (j && j.doc) { mergeDoc(j.doc); flushLocal(); redraw(); }
         // serverda yo'q, lekin qurilmada bor narsalarni yuborish (birinchi ulanish)
         Object.keys(doc.L).forEach((id) => dirty.add(id)); metaDirty = true;
@@ -158,20 +182,32 @@
       } catch { /* keyin */ }
     }
     async function push(keepalive) {
-      if (!on() || busy || !pulled || (!dirty.size && !metaDirty)) return;
+      if (!on() || busy || !pulled || (!dirty.size && !metaDirty && secs < 15)) return;
       const ids = [...dirty]; dirty.clear();
       const meta = metaDirty; metaDirty = false;
-      const body = { L: Object.fromEntries(ids.map((id) => [id, doc.L[id]]).filter((x) => x[1])), last: doc.last, d: doc.d.slice(-120), u: doc.u };
-      busy = true;
-      try { await req("/api/progress", body, keepalive); }
+      const s = Math.min(secs, 1800);
+      const L = Object.fromEntries(ids.map((id) => [id, doc.L[id]]).filter((x) => x[1]));
+      // dars foizi va tugatilgan qismlar (admin statistikasi uchun; hisob Mini App'dagi bilan bir xil)
+      const m = {};
+      if (IDX) Object.keys(L).forEach((id) => { const p = parts(id);
+        m[id] = { f: pct(p.frac), p: (p.nazariya >= 1 ? 1 : 0) | (p.masalalar >= 1 ? 2 : 0) | (p.test >= 1 ? 4 : 0) | (p.mustaqil >= 1 ? 8 : 0) }; });
+      const body = { L, m, last: doc.last, d: doc.d.slice(-120), u: doc.u, s };
+      busy = true; lastPush = Date.now();
+      try { await req("/api/progress", body, keepalive); secs = Math.max(0, secs - s); G.store.set(SK, secs); }
       catch { ids.forEach((id) => dirty.add(id)); metaDirty = metaDirty || meta; }
       finally { busy = false; }
     }
     function schedule() { if (!on()) return; clearTimeout(timer); timer = setTimeout(() => push(), 4000); }
     async function reset() { if (on()) { try { await req("/api/progress/reset", {}); } catch { } } }
+    // serverdagi barcha shaxsiy ma'lumotni o'chirish; true — o'chirildi (yoki server ulanmagan, o'chiradigan narsa yo'q)
+    async function forget() {
+      if (!API || !initData()) return true;
+      try { const r = await req("/api/men/ochirish", {}, false, true); if (!r.ok) return false; secs = 0; G.store.set(SK, 0); return true; }
+      catch { return false; }
+    }
     document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") { flushLocal(); push(true); } });
     window.addEventListener("pagehide", () => { flushLocal(); push(true); });
-    return { pull, push, schedule, reset, on, enabled: () => !!API && !!initData() };
+    return { pull, push, schedule, reset, forget, on, enabled: () => !!API && !!initData() };
   })();
 
   function mergeEntry(a, b) {
@@ -583,8 +619,35 @@
       ${weakHtml}
       <section class="card"><h2>${esc(t(T.modules))}</h2>${mods}</section>
       <section class="card"><h2>${esc(t(T.activity))}</h2>${heat()}</section>
+      ${G.isAdmin ? `<p><button class="btn wide" id="pgAdmin">${esc(t(T.admin))}</button></p>` : ""}
       <div class="muted pg-note">${esc(t(Sync.enabled() ? T.synced : T.local))}</div>
-      <p><button class="btn ghost wide pg-reset" id="pgReset">${esc(t(T.reset))}</button></p>`;
+      <p><button class="btn ghost wide pg-reset" id="pgReset">${esc(t(T.reset))}</button></p>
+      ${Sync.enabled() ? `<section class="card pg-priv"><h2>🔒 ${esc(t(T.privT))}</h2><div class="muted">${esc(t(T.privTxt))}</div>
+        <div class="pg-privmsg" id="pgPrivMsg" hidden></div>
+        <button class="btn ghost wide pg-reset" id="pgForget">${esc(t(T.privDel))}</button></section>` : ""}`;
+    const ab = $("#pgAdmin"); if (ab) ab.addEventListener("click", () => G.go({ view: "admin" }));
+    const fb = $("#pgForget");
+    if (fb) {
+      let armedF = false;
+      fb.addEventListener("click", async (ev) => {
+        const btn = ev.currentTarget;
+        if (!armedF) { armedF = true; btn.textContent = t(T.privAsk); btn.classList.add("pg-danger");
+          setTimeout(() => { armedF = false; const b = $("#pgForget"); if (b && !b.disabled) { b.textContent = t(T.privDel); b.classList.remove("pg-danger"); } }, 4000); return; }
+        btn.disabled = true;
+        const ok = await Sync.forget();
+        const msg = $("#pgPrivMsg");
+        if (ok) {
+          doc = empty(); dirty.clear(); metaDirty = false; flushLocal();
+          try { Object.keys(localStorage).filter((k) => /^gre:B\d+-L\d+:quiz$/.test(k)).forEach((k) => localStorage.removeItem(k)); } catch { }
+          G.haptic("warning");
+          await G.render();
+          const m2 = $("#pgPrivMsg"); if (m2) { m2.hidden = false; m2.textContent = t(T.privDone); m2.scrollIntoView({ block: "center" }); }
+        } else {
+          btn.disabled = false; armedF = false; btn.textContent = t(T.privDel); btn.classList.remove("pg-danger");
+          if (msg) { msg.hidden = false; msg.textContent = t(T.privErr); }
+        }
+      });
+    }
     v.querySelectorAll("[data-res]").forEach((b) => b.addEventListener("click", () => {
       const id = b.dataset.res, p = parts(id);
       const tab = ["nazariya", "masalalar", "test", "mustaqil"].find((k) => p[k] < 1) || "nazariya";
@@ -668,5 +731,6 @@
     Sync.pull();
   }).catch(() => { });
   window.addEventListener("load", () => Sync.pull());
-  G.progress = { doc: () => doc, parts, totals, mistakes, resumeTarget };
+  G.on("admin", () => { if (G.state.view === "profil") G.render(); });
+  G.progress = { doc: () => doc, parts, totals, mistakes, resumeTarget, info, order, meta };
 })();

@@ -5,3 +5,5 @@
  */
 window.IZOH_API = "https://gre-izoh.tagaymurotov93.workers.dev";
 window.IZOH_BOT = "https://t.me/GREPhysicsUz_bot/darslar";
+/* PROGRESS_API — progress, faollik va Admin panel serveri (o'sha Worker). Bo'sh qolsa progress faqat qurilmada saqlanadi. */
+window.PROGRESS_API = "https://gre-izoh.tagaymurotov93.workers.dev";

@@ -101,9 +101,11 @@
     if (!sp) return null;
     const p = sp.split("__");
     if (p[0] === "izoh") return { izoh: p[1] };
+    if (p[0] === "admin") return { view: "admin" };
     return { view: "lesson", id: p[0].toUpperCase().replace(/_/g, "-"), tab: p[1] || "nazariya", joy: p[2] || null };
   }
   if (qs.get("izoh")) state.izoh = qs.get("izoh");
+  if (qs.get("sahifa") === "admin") state.view = "admin";
 
   // ------------------------------------------------------------------ Telegram
   let tg = null;
@@ -219,10 +221,11 @@
       else if (state.view === "home") await home();
       else if (state.view === "module") await moduleView(state.mod);
       else if (state.view === "about") await about();
-      else {
+      else if (state.view === "lesson") {
         await lesson(state.id, TAB_ORDER.includes(state.tab) ? state.tab : "nazariya");
         if (state.view === "lesson") { focusJoy(); window.GRE.emit("render", state); }
       }
+      else { $("#tabs").hidden = true; view.innerHTML = `<div class="card muted">…</div>`; }   // kengaytma sahifa (admin.js) hali yuklanmagan
       window.GRE.emit("view", state);     // har qanday sahifa chizilgandan keyin (progress.js)
     } catch (e) { console.error(e); fail(); }
   }
