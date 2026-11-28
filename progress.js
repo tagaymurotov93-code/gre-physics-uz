@@ -401,7 +401,8 @@
     }
     // mustaqil ish: "Bajardim"
     if (tab === "mustaqil" && !$("#pgHw", v)) {
-      v.insertAdjacentHTML("beforeend", `<section class="card pg-hw" id="pgHw"><div class="muted">${esc(t(T.hwAsk))}</div>
+      const lnav = $("#lessonNav", v);   // "Oldingi / Keyingi" tugmalari eng pastda qolsin
+      (lnav || v).insertAdjacentHTML(lnav ? "beforebegin" : "beforeend", `<section class="card pg-hw" id="pgHw"><div class="muted">${esc(t(T.hwAsk))}</div>
         <button class="btn wide ${e.h ? "pg-on" : ""}" id="pgHwBtn">${esc(t(e.h ? T.hwDoneOn : T.hwDone))}</button></section>`);
       $("#pgHwBtn").addEventListener("click", (ev) => {
         e.h = e.h ? 0 : 1; active(id); save(id);

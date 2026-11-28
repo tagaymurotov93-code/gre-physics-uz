@@ -50,6 +50,10 @@
                 en: "Solutions are not provided — post your answers in the channel comments." },
     counts:   { solved: { uz: "masala", ru: "задач", en: "problems" }, quiz: { uz: "test", ru: "тестов", en: "quiz items" },
                 homework: { uz: "mustaqil", ru: "сам. задач", en: "homework" }, glossary: { uz: "atama", ru: "терминов", en: "terms" } },
+    prevLesson: { uz: "Oldingi dars", ru: "Предыдущий урок", en: "Previous lesson" },
+    nextLesson: { uz: "Keyingi dars", ru: "Следующий урок", en: "Next lesson" },
+    prevMod:  { uz: "Oldingi modul", ru: "Предыдущий модуль", en: "Previous module" },
+    nextMod:  { uz: "Keyingi modul", ru: "Следующий модуль", en: "Next module" },
     loadErr:  { uz: "Ma'lumotni yuklab bo'lmadi. Internetni tekshirib, qayta oching.", ru: "Не удалось загрузить данные. Проверьте интернет и откройте снова.",
                 en: "Could not load data. Check your connection and reopen." },
   };
@@ -463,6 +467,42 @@
     view.innerHTML = `<section class="card"><div class="muted" style="margin-bottom:6px">${esc(t(T.hwnote))}</div>
       <ol class="hw">${H.map((h) => `<li data-a="${sid(h.id)}">${bi(h.statement, "div")}${h.figure ? `<img class="fig" data-a="${sid(h.id)}f" src="${base(id)}${h.figure}?v=${VER}" alt="${h.id}">` : ""} <span class="chip ${h.difficulty}">${esc(t(T.diff[h.difficulty]))}</span></li>`).join("")}</ol></section>`;
     zoomable(view);
+    await lessonNav(id);
+  }
+
+  // ------------------------------------------------------------------ oldingi / keyingi dars (mustaqil ish oxirida)
+  // Tartib: moduller.json dagi modullar ketma-ketligi, modul ichida `plan` tartibi; faqat tayyor (index.json dagi) darslar.
+  // Modul chegarasida qo'shni modulning birinchi/oxirgi tayyor darsiga o'tadi (tugmada "Keyingi modul" deb yoziladi).
+  async function lessonSeq() {
+    const [M, idx] = await Promise.all([getJSON("moduller.json"), getJSON("darslar/index.json")]);
+    const ready = Object.fromEntries(idx.map((L) => [L.id, L]));
+    const seq = [];
+    M.modules.forEach((m) => {
+      if (m.about) return;
+      const ids = (m.plan || []).map((p) => p.id).filter((x) => ready[x] && ready[x].module === m.id);
+      idx.forEach((L) => { if (L.module === m.id && !ids.includes(L.id)) ids.push(L.id); });
+      ids.forEach((x) => seq.push(ready[x]));
+    });
+    return seq;
+  }
+  async function lessonNav(id) {
+    const seq = await lessonSeq();
+    const i = seq.findIndex((L) => L.id === id);
+    if (i < 0) return;
+    const cur = seq[i], prev = seq[i - 1], next = seq[i + 1];
+    const btn = (L, dir) => {
+      if (!L) return `<div class="lnav-b off" aria-hidden="true"></div>`;
+      const other = L.module !== cur.module;
+      const k = dir < 0 ? `‹ ${t(other ? T.prevMod : T.prevLesson)}` : `${t(other ? T.nextMod : T.nextLesson)} ›`;
+      return `<button class="lnav-b ${dir < 0 ? "prev" : "next"}" data-id="${L.id}" data-m="${L.module}">
+          <span class="lnav-k">${esc(k)}</span><span class="code">${L.id}</span><span class="lnav-t">${esc(t(L.title))}</span></button>`;
+    };
+    if (state.view !== "lesson" || state.id !== id || state.tab !== "mustaqil") return;   // foydalanuvchi bu orada boshqa joyga o'tgan
+    const old = $("#lessonNav"); if (old) old.remove();
+    view.insertAdjacentHTML("beforeend", `<nav class="lnav" id="lessonNav">${btn(prev, -1)}${btn(next, 1)}</nav>`);
+    view.querySelectorAll(".lnav-b[data-id]").forEach((b) => b.addEventListener("click", () => {
+      go({ view: "lesson", id: b.dataset.id, tab: "nazariya", mod: b.dataset.m, joy: null });
+    }));
   }
 
   // ------------------------------------------------------------------ start
