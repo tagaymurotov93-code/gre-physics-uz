@@ -16,7 +16,7 @@
   const initData = () => { const w = G.tg() || (window.Telegram && window.Telegram.WebApp); return (w && w.initData) || ""; };
   const uz = (o) => (o && (o.uz || o.en)) || "";
 
-  const A = { tab: "umumiy", kun: 30, user: null, lesson: null, q: "", sort: "oxirgi", qsort: "tartib", lsort: "tartib" };
+  const A = { tab: "umumiy", kun: 30, user: null, bc: null, lesson: null, q: "", sort: "oxirgi", qsort: "tartib", lsort: "tartib" };
   const cache = new Map();
   async function api(path, fresh) {
     if (!fresh && cache.has(path)) return cache.get(path);
@@ -95,24 +95,25 @@
     const v = G.view;
     if (!initData()) { v.innerHTML = `<div class="card">Admin panel faqat Telegram ichida ochiladi (@GREPhysicsUz_bot → Darslar).</div>`; return; }
     if (G.progress) await G.progress.meta().catch(() => { });
-    const segs = [["umumiy", "Umumiy"], ["oquvchilar", "O'quvchilar"], ["darslar", "Darslar"], ["testlar", "Testlar"]];
-    const cur = A.user ? "oquvchilar" : A.tab;
+    const segs = [["umumiy", "Umumiy"], ["oquvchilar", "O'quvchilar"], ["darslar", "Darslar"], ["testlar", "Testlar"], ["xabarlar", "Xabarlar"]];
+    const cur = A.user ? "oquvchilar" : A.bc ? "xabarlar" : A.tab;
     v.innerHTML = `<div class="ad-seg">${segs.map(([k, l]) => `<button data-k="${k}" class="${k === cur ? "on" : ""}">${l}</button>`).join("")}</div>
       <div id="adBody"><div class="card muted">Yuklanmoqda…</div></div>`;
     v.querySelectorAll(".ad-seg button").forEach((b) => b.addEventListener("click", () => {
-      A.tab = b.dataset.k; A.user = null; G.render(); window.scrollTo(0, 0);
+      A.tab = b.dataset.k; A.user = null; A.bc = null; G.render(); window.scrollTo(0, 0);
     }));
     const body = $("#adBody");
     try {
       if (A.user) await userCard(body, A.user);
-      else await ({ umumiy: overview, oquvchilar: users, darslar: lessons, testlar: quiz })[A.tab](body);
+      else if (A.bc) await bcCard(body, A.bc);
+      else await ({ umumiy: overview, oquvchilar: users, darslar: lessons, testlar: quiz, xabarlar: bcList })[A.tab](body);
     } catch (e) {
       body.innerHTML = e.message === "ruxsat"
         ? `<div class="card">⛔ Bu sahifa faqat admin uchun. Admin — «GRE izohlar» guruhining administratorlari (yoki serverdagi ADMIN_IDS).</div>`
         : `<div class="card err">Ma'lumotni yuklab bo'lmadi (${esc(e.message)}). <button class="btn ghost" id="adRetry">Qayta urinish</button></div>`;
       const rb = $("#adRetry"); if (rb) rb.addEventListener("click", () => { cache.clear(); G.render(); });
     }
-  }, () => (A.user ? (A.user = null, { view: "admin" }) : { view: "profil" }));
+  }, () => (A.user ? (A.user = null, { view: "admin" }) : A.bc ? (A.bc = null, { view: "admin" }) : { view: "profil" }));
 
   const refreshBtn = () => `<p><button class="btn ghost wide" id="adRef">↻ Yangilash</button></p>`;
   function bindRefresh(el) { const b = $("#adRef", el); if (b) b.addEventListener("click", () => { cache.clear(); G.render(); }); }
@@ -154,6 +155,9 @@
       <section class="card"><h2>Izohlar</h2>
         <div class="ad-kv"><span>Javob kutayotgan</span><b>${num(d.comments.open)}</b></div>
         <div class="ad-kv"><span>${A.kun} kunda yozilgan</span><b>${num(d.comments.recent)}</b></div></section>
+      <section class="card"><h2>Maxfiylik</h2>
+        <div class="ad-kv"><span>Ma'lumotini o'chirganlar (${A.kun} kun)</span><b>${num(d.deleted || 0)}</b></div>
+        <div class="muted ad-sub">Profildagi «Ma'lumotlarimni o'chirish» tugmasi necha marta ishlatilgani (kim ekani saqlanmaydi). Son katta bo'lsa — o'chirilganlar statistikadan tushib qolgan.</div></section>
       ${refreshBtn()}`;
     el.querySelectorAll(".ad-per button").forEach((b) => b.addEventListener("click", () => { A.kun = +b.dataset.k; G.render(); }));
     const hr = $("#adHr");
@@ -274,6 +278,43 @@
     $("#adLs").addEventListener("change", (ev) => { A.lsort = ev.target.value; G.render(); });
     el.querySelectorAll(".ad-lb").forEach((b) => b.addEventListener("click", () => { A.lesson = b.dataset.id; A.tab = "testlar"; G.render(); window.scrollTo(0, 0); }));
     bindRefresh(el);
+  }
+
+  // ------------------------------------------------------------------ Xabarlar (ommaviy xabar natijalari)
+  const BST = { sending: "yuborilmoqda", sent: "yuborildi", cancelled: "bekor qilingan" };
+  const starsTxt = (n) => "★".repeat(n) + "☆".repeat(5 - n);
+  async function bcList(el) {
+    const d = await api("/api/admin/xabarlar");
+    const row = (b) => `<button class="ad-bc" data-id="${b.id}">
+        <div class="ad-lh"><span class="code">#X-${b.id}</span><span class="ad-lt">${esc(dt(b.sent_at || b.created_at))} · ${esc(BST[b.status] || b.status)}</span></div>
+        <div class="ad-bct">${b.text ? esc(b.text) : "📷"}</div>
+        <div class="muted ad-ul">👥 ${num(b.ok)} / ${num(b.total)}${b.fail ? ` · yetmadi ${b.fail}` : ""}${b.rate ? ` · ⭐ ${b.avg ? b.avg.toFixed(1) : "—"} (${b.rated})` : ""} · ✍️ ${b.answers} javob${b.dismissed ? ` · yopgan ${b.dismissed}` : ""}</div></button>`;
+    el.innerHTML = `<section class="card"><h2>Ommaviy xabarlar</h2>
+        <div class="muted ad-sub">Yangi xabar: admin guruhda xabar yozib, unga Reply qilib <b>/yubor</b>. Yo'riqnoma — <b>/xabar</b>. Hozir bot orqali yetadi: <b>${num(d.reach)}</b> kishi.</div>
+        ${d.items.length ? d.items.map(row).join("") : `<div class="muted">Hali ommaviy xabar yuborilmagan.</div>`}</section>${refreshBtn()}`;
+    el.querySelectorAll(".ad-bc").forEach((b) => b.addEventListener("click", () => { A.bc = +b.dataset.id; G.render(); window.scrollTo(0, 0); }));
+    bindRefresh(el);
+  }
+  async function bcCard(el, id) {
+    const d = await api(`/api/admin/xabar?id=${id}`);
+    const b = d.item, rated = d.dist.reduce((s2, x) => s2 + x, 0), mx = Math.max(1, ...d.dist);
+    const avg = rated ? d.dist.reduce((s2, x, k) => s2 + x * (k + 1), 0) / rated : 0;
+    const resp = d.items.filter((r) => r.stars || r.text);
+    el.innerHTML = `<section class="card"><h2>#X-${b.id}</h2>
+        <div class="muted ad-sub">${esc(dt(b.sent_at || b.created_at))} · ${esc(BST[b.status] || b.status)}</div>
+        <div class="ad-bct" style="-webkit-line-clamp:unset">${b.text ? esc(b.text) : "📷 (matnsiz)"}</div>
+        <div class="ad-kv"><span>Bot orqali yetkazildi</span><b>${num(b.ok)} / ${num(b.total)}</b>${b.fail ? `<small>yetmadi ${b.fail}</small>` : ""}</div>
+        <div class="ad-kv"><span>Javob yozganlar</span><b>${num(d.items.filter((r) => r.text).length)}</b></div>
+        <div class="ad-kv"><span>Kartani yopganlar (Mini App)</span><b>${num(d.items.filter((r) => r.dismissed).length)}</b></div></section>
+      ${b.rate ? `<section class="card"><h2>Baholar</h2><div class="muted ad-sub">o'rtacha <b>${rated ? avg.toFixed(2) : "—"}</b> · ${rated} baho</div>
+        ${[5, 4, 3, 2, 1].map((n) => `<div class="ad-opt"><span>${n} ★</span>${meter(d.dist[n - 1] / mx)}<small>${d.dist[n - 1]}</small></div>`).join("")}</section>` : ""}
+      <section class="card"><h2>Javoblar</h2>
+        ${resp.length ? resp.map((r) => `<div class="ad-resp"><div class="ad-lh"><b>${esc(r.name || "—")}</b>${r.username ? `<span class="muted">@${esc(r.username)}</span>` : ""}
+            <span class="ad-lt muted">${r.via === "app" ? "Mini App" : "bot"} · ${esc(ago(r.updated_at))}</span>${r.stars ? `<span class="ad-stars">${starsTxt(r.stars)}</span>` : ""}</div>
+            ${r.text ? `<div class="ad-rt">${esc(r.text)}</div>` : ""}</div>`).join("") : `<div class="muted">Hali javob yo'q.</div>`}
+        <div class="muted ad-sub" style="margin-top:8px">Javob yozish: admin guruhdagi «📬 Javoblar» mavzusida o'quvchi xabariga Reply qiling.</div></section>
+      <p><button class="btn ghost wide" id="adBack">‹ Xabarlar ro'yxati</button></p>`;
+    $("#adBack").addEventListener("click", () => { A.bc = null; G.render(); });
   }
 
   // matnni qisqartirish: formula ($...$) o'rtasidan kesilmaydi
