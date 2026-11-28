@@ -56,6 +56,7 @@
     ready:     { uz: "tayyor", ru: "готово", en: "ready" },
     planned:   { uz: "dars rejada", ru: "уроков в плане", en: "lessons planned" },
     activity:  { uz: "Faollik (8 hafta)", ru: "Активность (8 недель)", en: "Activity (8 weeks)" },
+    nLessons:  { uz: (n) => `${n} ta dars`, ru: (n) => `уроков: ${n}`, en: (n) => `${n} ${n === 1 ? "lesson" : "lessons"}` },
     inprog:    { uz: "Davom etayotgan darslar", ru: "Уроки в процессе", en: "Lessons in progress" },
     weak:      { uz: "E'tibor talab qiladigan darslar", ru: "Уроки, требующие внимания", en: "Lessons to review" },
     weakNote:  { uz: "1-urinishdagi aniqlik eng past bo'lgan testlar.", ru: "Тесты с самой низкой точностью с 1-й попытки.",
@@ -586,13 +587,20 @@
         <span class="muted">${mi.length ? `✓ ${dn} / ${mi.length}` : `${m.planned || 0} ${esc(t(T.planned))}`}</span></div>${mi.length ? bar(f, "thin") : ""}</div>`;
     }).join("");
 
+    // davom etayotgan darslar — modullar bo'yicha yig'ilgan (yopiq) guruhlar; guruh ichida oxirgi ochilgani tepada
     const prog = ids.filter((id) => { const p = parts(id); return p.any && p.frac < 1; })
-      .sort((a, b) => ((doc.L[b] || {}).u || 0) - ((doc.L[a] || {}).u || 0)).slice(0, 5);
-    const progHtml = prog.length ? prog.map((id) => { const p = parts(id); return `<button class="lrow pg-row" data-res="${id}">
+      .sort((a, b) => ((doc.L[b] || {}).u || 0) - ((doc.L[a] || {}).u || 0));
+    const progRow = (id) => { const p = parts(id); return `<button class="lrow pg-row" data-res="${id}">
         <div class="lnum pg-part" ${ring(p.frac)}></div><div class="lbody"><div class="lhead"><span class="code">${id}</span>
         <span class="chip">${pct(p.frac)}%</span></div><div class="lt">${esc(t(info(id).title))}</div>
-        <div class="muted pg-sub">${partsLine(id)}</div></div><div class="chev">›</div></button>`; }).join("")
-      : `<div class="muted">${esc(t(T.nothing))}</div>`;
+        <div class="muted pg-sub">${partsLine(id)}</div></div><div class="chev">›</div></button>`; };
+    const progHtml = prog.length ? MODS.modules.filter((m) => !m.about).map((m) => {
+      const g = prog.filter((id) => info(id).module === m.id);
+      if (!g.length) return "";
+      const avg = g.reduce((s, id) => s + parts(id).frac, 0) / g.length;
+      return `<details class="pg-grp"><summary><span class="pg-gt">${m.icon || ""} ${esc(t(m.title))}</span>
+          <span class="chip">${esc(tf(T.nLessons, g.length))} · ${pct(avg)}%</span></summary>${g.map(progRow).join("")}</details>`;
+    }).join("") : `<div class="muted">${esc(t(T.nothing))}</div>`;
 
     const weak = ids.map((id) => ({ id, a: accOf((doc.L[id] || {}).q) })).filter((x) => x.a.n >= 5 && x.a.p < 0.7)
       .sort((a, b) => a.a.p - b.a.p).slice(0, 3);
@@ -732,5 +740,5 @@
   }).catch(() => { });
   window.addEventListener("load", () => Sync.pull());
   G.on("admin", () => { if (G.state.view === "profil") G.render(); });
-  G.progress = { doc: () => doc, parts, totals, mistakes, resumeTarget, info, order, meta };
+  G.progress = { doc: () => doc, parts, totals, mistakes, resumeTarget, info, order, meta, mods: () => MODS };
 })();

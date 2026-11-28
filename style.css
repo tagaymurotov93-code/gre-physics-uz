@@ -450,3 +450,16 @@ body.iz-lock { overflow: hidden; }
 .ad-opt.ok span { color: var(--ok); }
 .ad-opt small { text-align: right; color: var(--hint); font-variant-numeric: tabular-nums; }
 .ad-warn { margin-top: 8px; font-size: 12.5px; padding: 6px 9px; border-radius: 8px; background: color-mix(in srgb, var(--accent) 12%, transparent); }
+
+/* ---- modullar bo'yicha yig'ilgan guruhlar (profil: davom etayotgan darslar; admin: karta, darslar) ---- */
+.pg-grp { border-top: 1px solid var(--line); }
+.card h2 + .pg-grp, .ad-sub + .pg-grp { border-top: 0; }
+.pg-grp > summary { display: flex; align-items: center; gap: 8px; padding: 12px 0; cursor: pointer; list-style: none; user-select: none; }
+.pg-grp > summary::-webkit-details-marker { display: none; }
+.pg-grp > summary::after { content: "›"; font-size: 20px; line-height: 1; color: var(--hint); transition: transform .15s; }
+.pg-grp[open] > summary::after { transform: rotate(90deg); }
+.pg-grp > summary { flex-wrap: wrap; row-gap: 4px; }
+.pg-gt { flex: 1 1 60%; min-width: 0; font-weight: 600; line-height: 1.3; }
+.pg-grp > summary .chip { flex: none; }
+.pg-grp > .lrow:first-of-type, .pg-grp > .ad-lr:first-of-type { border-top: 1px solid var(--line); }
+.pg-grp[open] { padding-bottom: 4px; }

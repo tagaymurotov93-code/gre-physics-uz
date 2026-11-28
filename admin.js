@@ -75,6 +75,17 @@
       <div class="ad-plot"><span class="ad-max">${esc(fmt(max))}</span><div class="ad-cols" style="grid-template-columns:repeat(${n},1fr)">${cols}</div></div>
       <div class="ad-ticks">${ticks}</div></div>`;
   }
+  // ro'yxatni modullar bo'yicha yopiq guruhlarga bo'lish (darslar ichki tartibi saqlanadi)
+  function byModule(ids, rowFn, head) {
+    const M = (window.GRE.progress && window.GRE.progress.mods && window.GRE.progress.mods()) || null;
+    const mods = M ? M.modules.filter((m) => !m.about) : [];
+    const modOf = (id) => { const L = G.progress && G.progress.info(id); return L ? L.module : ""; };
+    const groups = mods.map((m) => ({ key: m.id, name: `${m.icon || ""} ${uz(m.title)}`, ids: ids.filter((id) => modOf(id) === m.id) }));
+    const rest = ids.filter((id) => !mods.some((m) => m.id === modOf(id)));
+    if (rest.length) groups.push({ key: "", name: "Boshqa", ids: rest });
+    return groups.filter((g) => g.ids.length).map((g) => `<details class="pg-grp ad-grp"><summary><span class="pg-gt">${esc(g.name)}</span>
+        <span class="chip">${head ? head(g.ids) : `${g.ids.length} ta dars`}</span></summary>${g.ids.map(rowFn).join("")}</details>`).join("");
+  }
   const tile = (v, l, sub) => `<div class="card ad-tile"><b>${v}</b><span>${esc(l)}</span>${sub ? `<small>${esc(sub)}</small>` : ""}</div>`;
   const meter = (f, cls = "") => `<div class="ad-meter ${cls}"><i style="width:${Math.round(100 * Math.min(1, Math.max(0, f)))}%"></i></div>`;
 
@@ -224,7 +235,9 @@
       <section class="card"><h2>So'nggi 30 kun</h2><div class="muted ad-sub">kuniga o'qish vaqti, daqiqa</div>
         ${bars(D, (x) => Math.round(x.secs / 60), (x) => dd(x.day), (v) => `${num(v)} daq`, { extra: (x) => `kirish ${x.opens || 0}` })}</section>
       <section class="card"><h2>Darslar</h2><div class="muted ad-sub">N — nazariya, M — masalalar, T — test, S — mustaqil (yashil — tugatilgan qism)</div>
-        ${d.lessons.length ? d.lessons.map(lrow).join("") : `<div class="muted">Hali dars boshlanmagan.</div>`}</section>
+        ${d.lessons.length ? byModule(d.lessons.map((x) => x.lesson_id), (id) => lrow(d.lessons.find((x) => x.lesson_id === id)),
+          (g) => { const ls = g.map((id) => d.lessons.find((x) => x.lesson_id === id)); return `${ls.length} ta dars · ✓ ${ls.filter((x) => x.pct >= 100).length}`; })
+          : `<div class="muted">Hali dars boshlanmagan.</div>`}</section>
       ${d.comments.length ? `<section class="card"><h2>Izohlari</h2>${d.comments.map((c) => `<div class="ad-kv"><span>${KIND[c.kind] || "💬"} #A-${c.id} · ${esc(c.lesson)}</span><small>${esc(STAT[c.status] || c.status)} · ${esc(dt(c.created_at).slice(0, 10))}</small></div>`).join("")}</section>` : ""}
       <p><button class="btn ghost wide" id="adBack">‹ O'quvchilar ro'yxati</button></p>`;
     $("#adBack").addEventListener("click", () => { A.user = null; G.render(); });
@@ -256,7 +269,8 @@
     };
     el.innerHTML = `<div class="ad-tools"><select id="adLs">${SORTS.map(([k, l]) => `<option value="${k}" ${k === A.lsort ? "selected" : ""}>${l}</option>`).join("")}</select></div>
       <section class="card"><div class="muted ad-sub">Raqam — darsni boshlagan o'quvchilar. N/M/T/S — shu qismni tugatganlar soni (qayerda tashlab ketilayotgani ko'rinadi). Bosing — test tahlili.</div>
-        ${ids.length ? ids.map(row).join("") : `<div class="muted">Bu saralash uchun ma'lumot yetarli emas.</div>`}</section>${refreshBtn()}`;
+        ${ids.length ? byModule(ids, row, (g) => { const n = g.reduce((s2, id) => s2 + st(id).started, 0); return `${g.length} ta dars · ${n} boshlash`; })
+          : `<div class="muted">Bu saralash uchun ma'lumot yetarli emas.</div>`}</section>${refreshBtn()}`;
     $("#adLs").addEventListener("change", (ev) => { A.lsort = ev.target.value; G.render(); });
     el.querySelectorAll(".ad-lb").forEach((b) => b.addEventListener("click", () => { A.lesson = b.dataset.id; A.tab = "testlar"; G.render(); window.scrollTo(0, 0); }));
     bindRefresh(el);
